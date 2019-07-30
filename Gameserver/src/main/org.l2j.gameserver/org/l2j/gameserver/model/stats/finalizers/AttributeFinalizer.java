@@ -26,6 +26,8 @@ import org.l2j.gameserver.model.stats.Stats;
 
 import java.util.Optional;
 
+import static org.l2j.gameserver.util.GameUtils.isPlayable;
+
 /**
  * @author UnAfraid
  */
@@ -43,7 +45,7 @@ public class AttributeFinalizer implements IStatsFunction {
         throwIfPresent(base);
 
         double baseValue = creature.getTemplate().getBaseValue(stat, 0);
-        if (creature.isPlayable()) {
+        if (isPlayable(creature)) {
             if (_isWeapon) {
                 final Item weapon = creature.getActiveWeaponInstance();
                 if (weapon != null) {

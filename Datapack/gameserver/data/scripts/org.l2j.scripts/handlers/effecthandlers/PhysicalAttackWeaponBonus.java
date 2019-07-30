@@ -18,8 +18,8 @@ package handlers.effecthandlers;
 
 import org.l2j.gameserver.enums.ShotType;
 import org.l2j.gameserver.model.StatsSet;
-import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.Attackable;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.effects.AbstractEffect;
 import org.l2j.gameserver.model.effects.EffectType;
 import org.l2j.gameserver.model.items.instance.Item;
@@ -31,6 +31,7 @@ import org.l2j.gameserver.model.stats.Stats;
 import java.util.HashMap;
 import java.util.Map;
 
+import static org.l2j.gameserver.util.GameUtils.isAttackable;
 import static org.l2j.gameserver.util.GameUtils.isPlayer;
 
 /**
@@ -97,12 +98,12 @@ public final class PhysicalAttackWeaponBonus extends AbstractEffect
 			effected.stopFakeDeath(true);
 		}
 		
-		if (_overHit && effected.isAttackable())
+		if (_overHit && isAttackable(effected))
 		{
 			((Attackable) effected).overhitEnabled(true);
 		}
 		
-		if (_overHit && effected.isAttackable())
+		if (_overHit && isAttackable(effected))
 		{
 			((Attackable) effected).overhitEnabled(true);
 		}

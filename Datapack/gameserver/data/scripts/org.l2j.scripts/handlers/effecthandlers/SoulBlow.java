@@ -26,6 +26,9 @@ import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.model.stats.Formulas;
 
+import static org.l2j.gameserver.util.GameUtils.isAttackable;
+import static org.l2j.gameserver.util.GameUtils.isPlayer;
+
 /**
  * Soul Blow effect implementation.
  * @author Adry_85
@@ -75,7 +78,7 @@ public final class SoulBlow extends AbstractEffect
 			return;
 		}
 		
-		if (_overHit && effected.isAttackable())
+		if (_overHit && isAttackable(effected))
 		{
 			((Attackable) effected).overhitEnabled(true);
 		}
@@ -83,10 +86,10 @@ public final class SoulBlow extends AbstractEffect
 		final boolean ss = skill.useSoulShot() && (effector.isChargedShot(ShotType.SOULSHOTS) || effector.isChargedShot(ShotType.BLESSED_SOULSHOTS));
 		final byte shld = Formulas.calcShldUse(effector, effected);
 		double damage = Formulas.calcBlowDamage(effector, effected, skill, false, _power, shld, ss);
-		if ((skill.getMaxSoulConsumeCount() > 0) && effector.isPlayer())
+		if ((skill.getMaxSoulConsumeCount() > 0) && isPlayer(effector))
 		{
 			// Souls Formula (each soul increase +4%)
-			final int chargedSouls = (effector.getActingPlayer().getChargedSouls() <= skill.getMaxSoulConsumeCount()) ? effector.getActingPlayer().getChargedSouls() : skill.getMaxSoulConsumeCount();
+			final int chargedSouls = Math.min(effector.getActingPlayer().getChargedSouls(), skill.getMaxSoulConsumeCount());
 			damage *= 1 + (chargedSouls * 0.04);
 		}
 		

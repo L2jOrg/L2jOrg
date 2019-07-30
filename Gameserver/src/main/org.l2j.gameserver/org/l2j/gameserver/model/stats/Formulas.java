@@ -32,7 +32,7 @@ import org.l2j.gameserver.util.MathUtil;
 import java.util.ArrayList;
 import java.util.List;
 
-import static org.l2j.gameserver.util.GameUtils.isPlayer;
+import static org.l2j.gameserver.util.GameUtils.*;
 import static org.l2j.gameserver.util.MathUtil.convertHeadingToDegree;
 
 /**
@@ -56,7 +56,7 @@ public final class Formulas {
      * @return
      */
     public static int getRegeneratePeriod(Creature cha) {
-        return cha.isDoor() ? HP_REGENERATE_PERIOD * 100 : HP_REGENERATE_PERIOD;
+        return isDoor(cha) ? HP_REGENERATE_PERIOD * 100 : HP_REGENERATE_PERIOD;
     }
 
     public static double calcBlowDamage(Creature attacker, Creature target, Skill skill, boolean backstab, double power, byte shld, boolean ss) {
@@ -394,7 +394,7 @@ public final class Formulas {
             factor = creature.getAttackSpeedMultiplier();
         }
 
-        if (creature.isNpc()) {
+        if (isNpc(creature)) {
             double npcFactor = ((Npc) creature).getTemplate().getHitTimeFactorSkill();
             if (npcFactor > 0) {
                 factor /= npcFactor;
@@ -527,7 +527,7 @@ public final class Formulas {
      */
     public static boolean calcEffectSuccess(Creature attacker, Creature target, Skill skill) {
         // StaticObjects can not receive continuous effects.
-        if (target.isDoor() || (target instanceof SiegeFlag) || (target instanceof StaticWorldObject)) {
+        if (isDoor(target) || (target instanceof SiegeFlag) || (target instanceof StaticWorldObject)) {
             return false;
         }
 
@@ -657,7 +657,7 @@ public final class Formulas {
         }
 
         float targetModifier = 1;
-        if (target.isAttackable() && !target.isRaid() && !target.isRaidMinion() && (target.getLevel() >= Config.MIN_NPC_LVL_MAGIC_PENALTY) && (attacker.getActingPlayer() != null) && ((target.getLevel() - attacker.getActingPlayer().getLevel()) >= 3)) {
+        if (isAttackable(target) && !target.isRaid() && !target.isRaidMinion() && (target.getLevel() >= Config.MIN_NPC_LVL_MAGIC_PENALTY) && (attacker.getActingPlayer() != null) && ((target.getLevel() - attacker.getActingPlayer().getLevel()) >= 3)) {
             final int lvlDiff = target.getLevel() - attacker.getActingPlayer().getLevel() - 2;
             if (lvlDiff >= Config.NPC_SKILL_CHANCE_PENALTY.size()) {
                 targetModifier = Config.NPC_SKILL_CHANCE_PENALTY.get(Config.NPC_SKILL_CHANCE_PENALTY.size() - 1);
@@ -1219,7 +1219,7 @@ public final class Formulas {
     }
 
     public static double calcPveDamagePenalty(Creature attacker, Creature target, Skill skill, boolean crit) {
-        if (target.isAttackable() && (target.getLevel() >= Config.MIN_NPC_LVL_DMG_PENALTY) && (attacker.getActingPlayer() != null) && ((target.getLevel() - attacker.getActingPlayer().getLevel()) > 1)) {
+        if (isAttackable(target) && (target.getLevel() >= Config.MIN_NPC_LVL_DMG_PENALTY) && (attacker.getActingPlayer() != null) && ((target.getLevel() - attacker.getActingPlayer().getLevel()) > 1)) {
             final int lvlDiff = target.getLevel() - attacker.getActingPlayer().getLevel() - 1;
             if (skill != null) {
                 return Config.NPC_SKILL_DMG_PENALTY.get(Math.min(lvlDiff, Config.NPC_SKILL_DMG_PENALTY.size() - 1));
@@ -1333,7 +1333,7 @@ public final class Formulas {
 
     public static double calculatePvpPveBonus(Creature attacker, Creature target, Skill skill, boolean crit) {
         // PvP bonus
-        if (attacker.isPlayable() && target.isPlayable()) {
+        if (isPlayable(attacker) && isPlayable(target)) {
             double pvpAttack;
             final double pvpDefense;
             if (skill != null) {
@@ -1355,7 +1355,7 @@ public final class Formulas {
         }
 
         // PvE Bonus
-        if (target.isAttackable() || attacker.isAttackable()) {
+        if (isAttackable(target) || isAttackable(attacker)) {
             double pveAttack;
             final double pveDefense;
             final double pveRaidDefense;

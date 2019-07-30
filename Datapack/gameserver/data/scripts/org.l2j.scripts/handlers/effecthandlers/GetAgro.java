@@ -17,8 +17,8 @@
 package handlers.effecthandlers;
 
 import org.l2j.gameserver.ai.CtrlIntention;
-import org.l2j.gameserver.model.World;
 import org.l2j.gameserver.model.StatsSet;
+import org.l2j.gameserver.model.World;
 import org.l2j.gameserver.model.actor.Attackable;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.templates.NpcTemplate;
@@ -28,6 +28,8 @@ import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.skills.Skill;
 
 import java.util.Set;
+
+import static org.l2j.gameserver.util.GameUtils.isAttackable;
 
 /**
  * Get Agro effect implementation.
@@ -54,7 +56,7 @@ public final class GetAgro extends AbstractEffect
 	@Override
 	public void instant(Creature effector, Creature effected, Skill skill, Item item)
 	{
-		if ((effected != null) && effected.isAttackable())
+		if (isAttackable(effected))
 		{
 			effected.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, effector);
 			

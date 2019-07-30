@@ -29,6 +29,9 @@ import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
 
+import static org.l2j.gameserver.util.GameUtils.isMonster;
+import static org.l2j.gameserver.util.GameUtils.isPlayer;
+
 /**
  * Harvesting effect implementation.
  * @author l3x, Zoey76
@@ -48,7 +51,7 @@ public final class Harvesting extends AbstractEffect
 	@Override
 	public void instant(Creature effector, Creature effected, Skill skill, Item item)
 	{
-		if (!effector.isPlayer() || !effected.isMonster() || !effected.isDead())
+		if (!isPlayer(effector) || !isMonster(effected) || !effected.isDead())
 		{
 			return;
 		}

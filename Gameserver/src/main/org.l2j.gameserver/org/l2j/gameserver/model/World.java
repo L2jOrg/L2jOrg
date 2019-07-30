@@ -274,11 +274,11 @@ public final class World {
         describeObjectToOther(wo, object);
 
         if (isNpc(wo) && isCreature(object)) {
-            EventDispatcher.getInstance().notifyEventAsync(new OnNpcCreatureSee((Npc) wo, (Creature) object, object.isSummon()), (Npc) wo);
+            EventDispatcher.getInstance().notifyEventAsync(new OnNpcCreatureSee((Npc) wo, (Creature) object, isSummon(object)), wo);
         }
 
         if (isNpc(object) && isCreature(wo)) {
-            EventDispatcher.getInstance().notifyEventAsync(new OnNpcCreatureSee((Npc) object, (Creature) wo, wo.isSummon()), (Npc) object);
+            EventDispatcher.getInstance().notifyEventAsync(new OnNpcCreatureSee((Npc) object, (Creature) wo, isSummon(wo)), object);
         }
     }
 

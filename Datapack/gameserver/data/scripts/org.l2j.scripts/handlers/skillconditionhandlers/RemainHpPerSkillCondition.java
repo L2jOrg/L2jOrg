@@ -18,11 +18,13 @@ package handlers.skillconditionhandlers;
 
 import org.l2j.gameserver.enums.SkillConditionAffectType;
 import org.l2j.gameserver.enums.SkillConditionPercentType;
-import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.StatsSet;
+import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.skills.ISkillCondition;
 import org.l2j.gameserver.model.skills.Skill;
+
+import static org.l2j.gameserver.util.GameUtils.isCreature;
 
 /**
  * @author UnAfraid
@@ -51,7 +53,7 @@ public class RemainHpPerSkillCondition implements ISkillCondition
 			}
 			case TARGET:
 			{
-				if ((target != null) && target.isCharacter())
+				if (isCreature(target))
 				{
 					return _percentType.test(((Creature) target).getCurrentHpPercent(), _amount);
 				}

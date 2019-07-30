@@ -21,6 +21,8 @@ import org.l2j.gameserver.model.actor.Creature;
 
 import java.lang.ref.WeakReference;
 
+import static org.l2j.gameserver.util.GameUtils.isCreature;
+
 /**
  * @author UnAfraid
  */
@@ -50,7 +52,7 @@ public class Hit {
             addMask(AttackType.SHOT_USED);
         }
 
-        if ((target.isCharacter() && ((Creature) target).isHpBlocked()) || (shld > 0)) {
+        if ((isCreature(target) && ((Creature) target).isHpBlocked()) || (shld > 0)) {
             addMask(AttackType.BLOCKED);
         }
     }

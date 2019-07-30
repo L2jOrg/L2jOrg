@@ -16,8 +16,6 @@
  */
 package handlers.targethandlers.affectscope;
 
-import java.util.function.Consumer;
-
 import org.l2j.gameserver.handler.AffectObjectHandler;
 import org.l2j.gameserver.handler.IAffectObjectHandler;
 import org.l2j.gameserver.handler.IAffectScopeHandler;
@@ -26,6 +24,11 @@ import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.model.skills.targets.AffectScope;
 import org.l2j.gameserver.model.skills.targets.TargetType;
+
+import java.util.function.Consumer;
+
+import static org.l2j.gameserver.util.GameUtils.isCreature;
+import static org.l2j.gameserver.util.GameUtils.isItem;
 
 /**
  * Single target affect scope implementation.
@@ -38,7 +41,7 @@ public class Single implements IAffectScopeHandler
 	{
 		final IAffectObjectHandler affectObject = AffectObjectHandler.getInstance().getHandler(skill.getAffectObject());
 		
-		if (target.isCharacter())
+		if (isCreature(target))
 		{
 			if (skill.getTargetType() == TargetType.GROUND)
 			{
@@ -49,7 +52,7 @@ public class Single implements IAffectScopeHandler
 				action.accept(target); // Return yourself to mark that effects can use your current skill's world position.
 			}
 		}
-		else if (target.isItem())
+		else if (isItem(target))
 		{
 			action.accept(target); // Return yourself to mark that effects can use your current skill's world position.
 		}

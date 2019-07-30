@@ -18,11 +18,13 @@ package handlers.skillconditionhandlers;
 
 import org.l2j.gameserver.enums.SkillConditionAffectType;
 import org.l2j.gameserver.enums.SkillConditionAlignment;
-import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.StatsSet;
+import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.skills.ISkillCondition;
 import org.l2j.gameserver.model.skills.Skill;
+
+import static org.l2j.gameserver.util.GameUtils.isPlayer;
 
 /**
  * @author Sdw
@@ -49,7 +51,7 @@ public class OpAlignmentSkillCondition implements ISkillCondition
 			}
 			case TARGET:
 			{
-				if ((target != null) && target.isPlayer())
+				if (isPlayer(target))
 				{
 					return _alignment.test(target.getActingPlayer());
 				}

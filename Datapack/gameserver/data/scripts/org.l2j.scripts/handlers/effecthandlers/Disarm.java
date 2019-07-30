@@ -24,6 +24,8 @@ import org.l2j.gameserver.model.effects.EffectFlag;
 import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.skills.Skill;
 
+import static org.l2j.gameserver.util.GameUtils.isPlayer;
+
 /**
  * Disarm effect implementation.
  * @author nBd
@@ -37,7 +39,7 @@ public final class Disarm extends AbstractEffect
 	@Override
 	public boolean canStart(Creature effector, Creature effected, Skill skill)
 	{
-		return effected.isPlayer();
+		return isPlayer(effected);
 	}
 	
 	@Override

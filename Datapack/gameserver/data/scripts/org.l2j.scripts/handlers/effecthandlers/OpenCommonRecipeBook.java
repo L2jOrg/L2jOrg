@@ -26,6 +26,8 @@ import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.network.SystemMessageId;
 
+import static org.l2j.gameserver.util.GameUtils.isPlayer;
+
 /**
  * Open Common Recipe Book effect implementation.
  * @author Adry_85
@@ -45,7 +47,7 @@ public final class OpenCommonRecipeBook extends AbstractEffect
 	@Override
 	public void instant(Creature effector, Creature effected, Skill skill, Item item)
 	{
-		if (!effector.isPlayer())
+		if (!isPlayer(effector))
 		{
 			return;
 		}

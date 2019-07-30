@@ -46,6 +46,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import static org.l2j.commons.util.Util.isDigit;
+import static org.l2j.gameserver.util.GameUtils.isNpc;
 
 /**
  * This class handles following admin commands: - show_spawns = shows menu - spawn_index lvl = shows menu for monsters with respective level - spawn_monster id = spawns monster id on target
@@ -233,7 +234,7 @@ public class AdminSpawn implements IAdminCommandHandler
 			DBSpawnManager.getInstance().cleanUp();
 			for (WorldObject obj : World.getInstance().getVisibleObjects())
 			{
-				if ((obj != null) && obj.isNpc())
+				if (isNpc(obj))
 				{
 					final Npc target = (Npc) obj;
 					target.deleteMe();
@@ -268,7 +269,7 @@ public class AdminSpawn implements IAdminCommandHandler
 			DBSpawnManager.getInstance().cleanUp();
 			for (WorldObject obj : World.getInstance().getVisibleObjects())
 			{
-				if ((obj != null) && obj.isNpc())
+				if (isNpc(obj))
 				{
 					final Npc target = (Npc) obj;
 					target.deleteMe();
@@ -393,7 +394,7 @@ public class AdminSpawn implements IAdminCommandHandler
 			final Map<Integer, Integer> npcsFound = new HashMap<>();
 			for (WorldObject obj : World.getInstance().getVisibleObjects())
 			{
-				if (!obj.isNpc())
+				if (!isNpc(obj))
 				{
 					continue;
 				}

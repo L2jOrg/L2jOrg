@@ -31,6 +31,9 @@ import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
 
+import static org.l2j.gameserver.util.GameUtils.isMonster;
+import static org.l2j.gameserver.util.GameUtils.isPlayer;
+
 /**
  * Sow effect implementation.
  * @author Adry_85, l3x
@@ -50,7 +53,7 @@ public final class Sow extends AbstractEffect
 	@Override
 	public void instant(Creature effector, Creature effected, Skill skill, Item item)
 	{
-		if (!effector.isPlayer() || !effected.isMonster())
+		if (!isPlayer(effector) || !isMonster(effected))
 		{
 			return;
 		}

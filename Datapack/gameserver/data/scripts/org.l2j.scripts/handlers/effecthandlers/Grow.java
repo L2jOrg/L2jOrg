@@ -23,6 +23,8 @@ import org.l2j.gameserver.model.effects.AbstractEffect;
 import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.skills.Skill;
 
+import static org.l2j.gameserver.util.GameUtils.isNpc;
+
 /**
  * Grow effect implementation.
  */
@@ -35,7 +37,7 @@ public final class Grow extends AbstractEffect
 	@Override
 	public void onStart(Creature effector, Creature effected, Skill skill, Item item)
 	{
-		if (effected.isNpc())
+		if (isNpc(effected))
 		{
 			final Npc npc = (Npc) effected;
 			npc.setCollisionHeight(npc.getTemplate().getCollisionHeightGrown());
@@ -46,7 +48,7 @@ public final class Grow extends AbstractEffect
 	@Override
 	public void onExit(Creature effector, Creature effected, Skill skill)
 	{
-		if (effected.isNpc())
+		if (isNpc(effected))
 		{
 			final Npc npc = (Npc) effected;
 			npc.setCollisionHeight(npc.getTemplate().getCollisionHeight());

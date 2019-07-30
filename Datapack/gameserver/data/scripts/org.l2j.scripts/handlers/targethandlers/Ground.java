@@ -19,14 +19,15 @@ package handlers.targethandlers;
 import org.l2j.gameserver.geoengine.GeoEngine;
 import org.l2j.gameserver.handler.ITargetTypeHandler;
 import org.l2j.gameserver.instancemanager.ZoneManager;
-import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.Location;
+import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.model.skills.targets.TargetType;
 import org.l2j.gameserver.model.zone.ZoneRegion;
 import org.l2j.gameserver.network.SystemMessageId;
 
+import static org.l2j.gameserver.util.GameUtils.isPlayer;
 import static org.l2j.gameserver.util.MathUtil.isInsideRadius2D;
 
 /**
@@ -44,7 +45,7 @@ public class Ground implements ITargetTypeHandler
 	@Override
 	public WorldObject getTarget(Creature activeChar, WorldObject selectedTarget, Skill skill, boolean forceUse, boolean dontMove, boolean sendMessage)
 	{
-		if (activeChar.isPlayer())
+		if (isPlayer(activeChar))
 		{
 			final Location worldPosition = activeChar.getActingPlayer().getCurrentSkillWorldPosition();
 			if (worldPosition != null)

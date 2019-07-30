@@ -23,6 +23,8 @@ import org.l2j.gameserver.model.effects.AbstractEffect;
 import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.skills.Skill;
 
+import static org.l2j.gameserver.util.GameUtils.isDoor;
+
 /**
  * An effect that sets the current hp to the given amount.
  * @author Nik
@@ -47,7 +49,7 @@ public final class SetHp extends AbstractEffect
 	@Override
 	public void instant(Creature effector, Creature effected, Skill skill, Item item)
 	{
-		if (effected.isDead() || effected.isDoor())
+		if (effected.isDead() || isDoor(effected))
 		{
 			return;
 		}

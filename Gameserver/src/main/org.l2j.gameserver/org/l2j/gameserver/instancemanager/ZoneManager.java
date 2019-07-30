@@ -28,6 +28,8 @@ import java.lang.reflect.Constructor;
 import java.nio.file.Path;
 import java.util.*;
 
+import static org.l2j.gameserver.util.GameUtils.isCreature;
+
 /**
  * This class manages the zones
  *
@@ -88,7 +90,7 @@ public final class ZoneManager extends GameXmlReader {
 
         // Re-validate all characters in zones.
         for (WorldObject obj : World.getInstance().getVisibleObjects()) {
-            if (obj.isCharacter()) {
+            if (isCreature(obj)) {
                 ((Creature) obj).revalidateZone(true);
             }
         }

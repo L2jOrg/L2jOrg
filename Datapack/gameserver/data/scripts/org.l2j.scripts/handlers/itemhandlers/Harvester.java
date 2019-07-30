@@ -16,8 +16,6 @@
  */
 package handlers.itemhandlers;
 
-import java.util.List;
-
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.enums.ItemSkillType;
 import org.l2j.gameserver.handler.IItemHandler;
@@ -29,6 +27,11 @@ import org.l2j.gameserver.model.holders.ItemSkillHolder;
 import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ActionFailed;
+
+import java.util.List;
+
+import static org.l2j.gameserver.util.GameUtils.isMonster;
+import static org.l2j.gameserver.util.GameUtils.isPlayer;
 
 /**
  * @author l3x
@@ -42,7 +45,7 @@ public final class Harvester implements IItemHandler
 		{
 			return false;
 		}
-		else if (!playable.isPlayer())
+		else if (!isPlayer(playable))
 		{
 			playable.sendPacket(SystemMessageId.YOUR_PET_CANNOT_CARRY_THIS_ITEM);
 			return false;
@@ -57,7 +60,7 @@ public final class Harvester implements IItemHandler
 		
 		final Player activeChar = playable.getActingPlayer();
 		final WorldObject target = activeChar.getTarget();
-		if ((target == null) || !target.isMonster() || !((Creature) target).isDead())
+		if (!isMonster(target) || !((Creature) target).isDead())
 		{
 			activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
 			activeChar.sendPacket(ActionFailed.STATIC_PACKET);

@@ -29,6 +29,9 @@ import org.l2j.gameserver.util.BuilderUtil;
 
 import java.util.StringTokenizer;
 
+import static org.l2j.gameserver.util.GameUtils.isCreature;
+import static org.l2j.gameserver.util.GameUtils.isPlayer;
+
 /**
  * This class handles following admin commands: - kill = kills target Creature - kill_monster = kills target non-player - kill <radius> = If radius is specified, then ALL players only in that radius will be killed. - kill_monster <radius> = If radius is specified, then ALL non-players only in
  * that radius will be killed.
@@ -110,7 +113,7 @@ public class AdminKill implements IAdminCommandHandler
 			else
 			{
 				final WorldObject obj = activeChar.getTarget();
-				if ((obj instanceof ControllableMob) || !obj.isCharacter())
+				if ((obj instanceof ControllableMob) || !isCreature(obj))
 				{
 					activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
 				}
@@ -125,7 +128,7 @@ public class AdminKill implements IAdminCommandHandler
 	
 	private void kill(Player activeChar, Creature target)
 	{
-		if (target.isPlayer())
+		if (isPlayer(target))
 		{
 			if (!target.isGM())
 			{

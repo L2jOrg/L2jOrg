@@ -23,6 +23,8 @@ import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.skills.CommonSkill;
 import org.l2j.gameserver.model.skills.SkillCaster;
 
+import static org.l2j.gameserver.util.GameUtils.isNpc;
+
 public class SupportBlessing implements IBypassHandler
 {
 	private static final String[] COMMANDS =
@@ -33,7 +35,7 @@ public class SupportBlessing implements IBypassHandler
 	@Override
 	public boolean useBypass(String command, Player activeChar, Creature target)
 	{
-		if (!target.isNpc())
+		if (!isNpc(target))
 		{
 			return false;
 		}

@@ -24,6 +24,8 @@ import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.skills.targets.AffectObject;
 import org.l2j.gameserver.model.zone.ZoneId;
 
+import static org.l2j.gameserver.util.GameUtils.isSummon;
+
 /**
  * Not Friend affect object implementation. Based on Gracia Final retail tests.<br>
  * Such are considered flagged/karma players (except party/clan/ally). Doesn't matter if in command channel.<br>
@@ -121,7 +123,7 @@ public class NotFriend implements IAffectObjectHandler
 			}
 
 			// At this point summon should be prevented from attacking friendly targets.
-			if (activeChar.isSummon() && (target == activeChar.getTarget()))
+			if (isSummon(activeChar) && (target == activeChar.getTarget()))
 			{
 				return true;
 			}

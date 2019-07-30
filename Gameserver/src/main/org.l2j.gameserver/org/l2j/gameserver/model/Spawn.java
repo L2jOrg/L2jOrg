@@ -22,6 +22,9 @@ import java.util.Deque;
 import java.util.Objects;
 import java.util.concurrent.ConcurrentLinkedDeque;
 
+import static org.l2j.gameserver.util.GameUtils.isMonster;
+import static org.l2j.gameserver.util.GameUtils.isWalker;
+
 
 /**
  * This class manages the spawn and respawn of a group of Folk that are in the same are and have the same type.<br>
@@ -389,7 +392,7 @@ public class Spawn extends Location implements IIdentifiable, INamable {
             final int randX = newlocx + Rnd.get(Config.MOB_MIN_SPAWN_RANGE, Config.MOB_MAX_SPAWN_RANGE);
             final int randY = newlocy + Rnd.get(Config.MOB_MIN_SPAWN_RANGE, Config.MOB_MAX_SPAWN_RANGE);
 
-            if (npc.isMonster() && !npc.isQuestMonster() && !npc.isWalker() && !npc.isInsideZone(ZoneId.NO_BOOKMARK) && (getInstanceId() == 0) && GeoEngine.getInstance().canMoveToTarget(newlocx, newlocy, newlocz, randX, randY, newlocz, npc.getInstanceWorld()) && !getTemplate().isUndying() && !npc.isRaid() && !npc.isRaidMinion() && !Config.MOBS_LIST_NOT_RANDOM.contains(npc.getId())) {
+            if (isMonster(npc) && !npc.isQuestMonster() && !isWalker(npc) && !npc.isInsideZone(ZoneId.NO_BOOKMARK) && (getInstanceId() == 0) && GeoEngine.getInstance().canMoveToTarget(newlocx, newlocy, newlocz, randX, randY, newlocz, npc.getInstanceWorld()) && !getTemplate().isUndying() && !npc.isRaid() && !npc.isRaidMinion() && !Config.MOBS_LIST_NOT_RANDOM.contains(npc.getId())) {
                 newlocx = randX;
                 newlocy = randY;
             }
@@ -432,7 +435,7 @@ public class Spawn extends Location implements IIdentifiable, INamable {
         _currentCount++;
 
         // Minions
-        if (npc.isMonster() && NpcData.getMasterMonsterIDs().contains(npc.getId())) {
+        if (isMonster(npc) && NpcData.getMasterMonsterIDs().contains(npc.getId())) {
             ((Monster) npc).getMinionList().spawnMinions(npc.getParameters().getMinionList("Privates"));
         }
 

@@ -9,6 +9,7 @@ import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.model.skills.targets.TargetType;
 import org.l2j.gameserver.network.serverpackets.DeleteObject;
 
+import static org.l2j.gameserver.util.GameUtils.isCreature;
 import static org.l2j.gameserver.util.GameUtils.isPlayer;
 
 public class PlayerAI extends PlayableAI {
@@ -199,7 +200,7 @@ public class PlayerAI extends PlayableAI {
 
     private void thinkAttack() {
         final WorldObject target = getTarget();
-        if ((target == null) || !target.isCharacter()) {
+        if (!isCreature(target)) {
             return;
         }
         if (checkTargetLostOrDead((Creature) target)) {

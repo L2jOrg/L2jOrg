@@ -17,11 +17,13 @@
 package handlers.targethandlers;
 
 import org.l2j.gameserver.handler.ITargetTypeHandler;
-import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.Party;
+import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.model.skills.targets.TargetType;
+
+import static org.l2j.gameserver.util.GameUtils.isPlayer;
 
 /**
  * Something like target self, but party. Used in aura skills.
@@ -38,7 +40,7 @@ public class MyParty implements ITargetTypeHandler
 	@Override
 	public WorldObject getTarget(Creature activeChar, WorldObject selectedTarget, Skill skill, boolean forceUse, boolean dontMove, boolean sendMessage)
 	{
-		if ((selectedTarget != null) && selectedTarget.isPlayer() && (selectedTarget != activeChar))
+		if (isPlayer(selectedTarget) && (selectedTarget != activeChar))
 		{
 			final Party party = activeChar.getParty();
 			final Party targetParty = selectedTarget.getActingPlayer().getParty();

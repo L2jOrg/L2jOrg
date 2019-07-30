@@ -27,6 +27,8 @@ import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.EtcStatusUpdate;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
 
+import static org.l2j.gameserver.util.GameUtils.isPlayer;
+
 /**
  * Focus Energy effect implementation.
  * @author DS
@@ -51,7 +53,7 @@ public final class FocusMomentum extends AbstractEffect
 	@Override
 	public void instant(Creature effector, Creature effected, Skill skill, Item item)
 	{
-		if (!effected.isPlayer())
+		if (!isPlayer(effected))
 		{
 			return;
 		}

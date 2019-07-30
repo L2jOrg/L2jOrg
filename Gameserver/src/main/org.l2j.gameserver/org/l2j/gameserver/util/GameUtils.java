@@ -5,6 +5,7 @@ import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.enums.HtmlActionScope;
 import org.l2j.gameserver.enums.IllegalActionPunishmentType;
+import org.l2j.gameserver.instancemanager.WalkingManager;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.World;
 import org.l2j.gameserver.model.WorldObject;
@@ -474,8 +475,21 @@ public final class GameUtils {
         return object instanceof Playable;
     }
 
+    public static boolean isWalker(WorldObject creature) {
+        if(isMonster(creature)) {
+            Monster monster = (Monster) creature;
+            Monster leader;
+            return nonNull(leader = monster.getLeader()) ? isWalker(leader) : WalkingManager.getInstance().isRegistered(monster);
+        }
+        return isNpc(creature) &&  WalkingManager.getInstance().isRegistered((Npc) creature);
+    }
+
     public static boolean isSummon(WorldObject object) {
         return object instanceof Summon;
+    }
+
+    public static boolean isServitor(WorldObject object) {
+        return object instanceof Servitor;
     }
 
     public static boolean isAttackable(WorldObject object) {

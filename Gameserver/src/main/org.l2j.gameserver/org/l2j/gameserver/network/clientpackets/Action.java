@@ -13,6 +13,8 @@ import org.l2j.gameserver.network.serverpackets.ActionFailed;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import static org.l2j.gameserver.util.GameUtils.isNpc;
+
 public final class Action extends ClientPacket {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(Action.class);
@@ -106,7 +108,7 @@ public final class Action extends ClientPacket {
                 break;
             }
             case 1: {
-                if (!activeChar.isGM() && (!(obj.isNpc() && Config.ALT_GAME_VIEWNPC))) {
+                if (!activeChar.isGM() && (!( isNpc(obj) && Config.ALT_GAME_VIEWNPC))) {
                     obj.onAction(activeChar, false);
                 } else {
                     obj.onActionShift(activeChar);

@@ -28,7 +28,6 @@ import org.l2j.gameserver.model.quest.QuestTimer;
 import org.l2j.gameserver.network.serverpackets.NpcHtmlMessage;
 import org.l2j.gameserver.scripting.ScriptEngineManager;
 import org.l2j.gameserver.util.BuilderUtil;
-import org.l2j.gameserver.util.GameUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -37,6 +36,7 @@ import java.nio.file.Paths;
 import java.util.*;
 
 import static org.l2j.commons.util.Util.isDigit;
+import static org.l2j.gameserver.util.GameUtils.isCreature;
 
 
 public class AdminQuest implements IAdminCommandHandler
@@ -156,7 +156,7 @@ public class AdminQuest implements IAdminCommandHandler
 			{
 				BuilderUtil.sendSysMessage(activeChar, "Get a target first.");
 			}
-			else if (!activeChar.getTarget().isCharacter())
+			else if (!isCreature(activeChar.getTarget()))
 			{
 				BuilderUtil.sendSysMessage(activeChar, "Invalid Target.");
 			}

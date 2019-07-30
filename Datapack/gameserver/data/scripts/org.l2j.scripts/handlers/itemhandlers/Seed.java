@@ -16,8 +16,6 @@
  */
 package handlers.itemhandlers;
 
-import java.util.List;
-
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.enums.ItemSkillType;
 import org.l2j.gameserver.handler.IItemHandler;
@@ -33,6 +31,10 @@ import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ActionFailed;
 
+import java.util.List;
+
+import static org.l2j.gameserver.util.GameUtils.*;
+
 /**
  * @author l3x
  */
@@ -45,19 +47,19 @@ public class Seed implements IItemHandler
 		{
 			return false;
 		}
-		else if (!playable.isPlayer())
+		else if (!isPlayer(playable))
 		{
 			playable.sendPacket(SystemMessageId.YOUR_PET_CANNOT_CARRY_THIS_ITEM);
 			return false;
 		}
 		
 		final WorldObject tgt = playable.getTarget();
-		if (!tgt.isNpc())
+		if (!isNpc(tgt))
 		{
 			playable.sendPacket(SystemMessageId.INVALID_TARGET);
 			return false;
 		}
-		else if (!tgt.isMonster() || ((Monster) tgt).isRaid() || (tgt instanceof Chest))
+		else if (!isMonster(tgt) || ((Monster) tgt).isRaid() || (tgt instanceof Chest))
 		{
 			playable.sendPacket(SystemMessageId.THE_TARGET_IS_UNAVAILABLE_FOR_SEEDING);
 			return false;

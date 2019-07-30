@@ -16,9 +16,6 @@
  */
 package handlers.effecthandlers;
 
-import java.util.Map;
-import java.util.concurrent.ConcurrentHashMap;
-
 import org.l2j.gameserver.datatables.ItemTable;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Creature;
@@ -30,6 +27,11 @@ import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.InventoryUpdate;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
+
+import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
+
+import static org.l2j.gameserver.util.GameUtils.isPlayer;
 
 /**
  * Disarm by inventory slot effect implementation. At end of effect, it re-equips that item.
@@ -55,13 +57,13 @@ public final class Disarmor extends AbstractEffect
 	@Override
 	public boolean canStart(Creature effector, Creature effected, Skill skill)
 	{
-		return (_slot != ItemTemplate.SLOT_NONE) && effected.isPlayer();
+		return (_slot != ItemTemplate.SLOT_NONE) && isPlayer(effected);
 	}
 	
 	@Override
 	public void continuousInstant(Creature effector, Creature effected, Skill skill, Item item)
 	{
-		if (!effected.isPlayer())
+		if (!isPlayer(effected))
 		{
 			return;
 		}
@@ -99,7 +101,7 @@ public final class Disarmor extends AbstractEffect
 	@Override
 	public void onExit(Creature effector, Creature effected, Skill skill)
 	{
-		if (!effected.isPlayer())
+		if (!isPlayer(effected))
 		{
 			return;
 		}

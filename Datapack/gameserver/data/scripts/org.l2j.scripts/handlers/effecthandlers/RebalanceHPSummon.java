@@ -25,6 +25,8 @@ import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.util.GameUtils;
 
+import static org.l2j.gameserver.util.GameUtils.isPlayer;
+
 /**
  * Rebalance HP effect implementation.
  * @author Adry_85, earendil
@@ -50,7 +52,7 @@ public class RebalanceHPSummon extends AbstractEffect
 	@Override
 	public void instant(Creature effector, Creature effected, Skill skill, Item item)
 	{
-		if (!effector.isPlayer())
+		if (!isPlayer(effector))
 		{
 			return;
 		}

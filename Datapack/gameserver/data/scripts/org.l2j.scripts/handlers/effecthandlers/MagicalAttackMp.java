@@ -28,6 +28,8 @@ import org.l2j.gameserver.model.stats.Formulas;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
 
+import static org.l2j.gameserver.util.GameUtils.isPlayer;
+
 /**
  * Magical Attack MP effect.
  * @author Adry_85
@@ -53,18 +55,18 @@ public final class MagicalAttackMp extends AbstractEffect
 			return false;
 		}
 		
-		if (effector.isPlayer() && effected.isPlayer() && effected.isAffected(EffectFlag.DUELIST_FURY) && !effector.isAffected(EffectFlag.DUELIST_FURY))
+		if (isPlayer(effector) && isPlayer(effected) && effected.isAffected(EffectFlag.DUELIST_FURY) && !effector.isAffected(EffectFlag.DUELIST_FURY))
 		{
 			return false;
 		}
 		
 		if (!Formulas.calcMagicAffected(effector, effected, skill))
 		{
-			if (effector.isPlayer())
+			if (isPlayer(effector))
 			{
 				effector.sendPacket(SystemMessageId.YOUR_ATTACK_HAS_FAILED);
 			}
-			if (effected.isPlayer())
+			if (isPlayer(effected))
 			{
 				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_RESISTED_C2_S_DRAIN);
 				sm.addString(effected.getName());
@@ -99,7 +101,7 @@ public final class MagicalAttackMp extends AbstractEffect
 		final boolean sps = skill.useSpiritShot() && effector.isChargedShot(ShotType.SPIRITSHOTS);
 		final boolean bss = skill.useSpiritShot() && effector.isChargedShot(ShotType.BLESSED_SPIRITSHOTS);
 		final byte shld = Formulas.calcShldUse(effector, effected);
-		final boolean mcrit = _critical ? Formulas.calcCrit(skill.getMagicCriticalRate(), effector, effected, skill) : false;
+		final boolean mcrit = _critical && Formulas.calcCrit(skill.getMagicCriticalRate(), effector, effected, skill);
 		final double damage = Formulas.calcManaDam(effector, effected, skill, _power, shld, sps, bss, mcrit, _criticalLimit);
 		final double mp = Math.min(effected.getCurrentMp(), damage);
 		
@@ -109,7 +111,7 @@ public final class MagicalAttackMp extends AbstractEffect
 			effected.setCurrentMp(effected.getCurrentMp() - mp);
 		}
 		
-		if (effected.isPlayer())
+		if (isPlayer(effected))
 		{
 			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S2_S_MP_HAS_BEEN_DRAINED_BY_C1);
 			sm.addString(effector.getName());
@@ -117,7 +119,7 @@ public final class MagicalAttackMp extends AbstractEffect
 			effected.sendPacket(sm);
 		}
 		
-		if (effector.isPlayer())
+		if (isPlayer(effector))
 		{
 			final SystemMessage sm2 = SystemMessage.getSystemMessage(SystemMessageId.YOUR_OPPONENT_S_MP_WAS_REDUCED_BY_S1);
 			sm2.addInt((int) mp);

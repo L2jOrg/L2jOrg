@@ -34,7 +34,7 @@ public final class Disconnection {
         AntiFeedManager.getInstance().onDisconnect(_client);
 
         if (_client != null) {
-            _client.setActiveChar(null);
+            _client.setPlayer(null);
         }
 
         if (_activeChar != null) {

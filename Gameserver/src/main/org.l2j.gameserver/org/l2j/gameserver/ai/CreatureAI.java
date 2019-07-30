@@ -836,7 +836,7 @@ public class CreatureAI extends AbstractAI {
             }
 
             stopFollow();
-            if (target.isCharacter() && !target.isDoor()) {
+            if (isCreature(target) && !isDoor(target)) {
                 if (((Creature) target).isMoving()) {
                     offset -= 100;
                 }
@@ -1039,7 +1039,7 @@ public class CreatureAI extends AbstractAI {
                 }
             }
             // water movement analysis
-            if (actor.isNpc()) {
+            if (isNpc(actor)) {
                 switch (actor.getId()) {
                     case 20314: // great white shark
                     case 20849: // Light Worm

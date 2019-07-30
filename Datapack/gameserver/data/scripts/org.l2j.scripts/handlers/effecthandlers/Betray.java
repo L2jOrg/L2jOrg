@@ -24,6 +24,9 @@ import org.l2j.gameserver.model.effects.EffectFlag;
 import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.skills.Skill;
 
+import static org.l2j.gameserver.util.GameUtils.isPlayer;
+import static org.l2j.gameserver.util.GameUtils.isSummon;
+
 /**
  * Betray effect implementation.
  * @author decad
@@ -37,7 +40,7 @@ public final class Betray extends AbstractEffect
 	@Override
 	public boolean canStart(Creature effector, Creature effected, Skill skill)
 	{
-		return effector.isPlayer() && effected.isSummon();
+		return isPlayer(effector) && isSummon(effected);
 	}
 	
 	@Override

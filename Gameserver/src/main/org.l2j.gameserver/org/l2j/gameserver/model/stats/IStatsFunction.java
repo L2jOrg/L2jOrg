@@ -11,7 +11,7 @@ import org.l2j.gameserver.model.items.instance.Item;
 
 import java.util.Optional;
 
-import static org.l2j.gameserver.util.GameUtils.isPlayer;
+import static org.l2j.gameserver.util.GameUtils.*;
 
 /**
  * @author UnAfraid
@@ -148,7 +148,7 @@ public interface IStatsFunction {
     default double calcWeaponBaseValue(Creature creature, Stats stat) {
         final double baseTemplateValue = creature.getTemplate().getBaseValue(stat, 0);
         double baseValue = creature.getTransformation().map(transform -> transform.getStats(creature, stat, baseTemplateValue)).orElse(baseTemplateValue);
-        if (creature.isPet()) {
+        if (isPet(creature)) {
             final Pet pet = (Pet) creature;
             final Item weapon = pet.getActiveWeaponInstance();
             final double baseVal = stat == Stats.PHYSICAL_ATTACK ? pet.getPetLevelData().getPetPAtk() : stat == Stats.MAGIC_ATTACK ? pet.getPetLevelData().getPetMAtk() : baseTemplateValue;
@@ -165,7 +165,7 @@ public interface IStatsFunction {
         final double baseTemplateValue = creature.getTemplate().getBaseValue(stat, 0);
         double baseValue = creature.getTransformation().filter(transform -> !transform.isStance()).map(transform -> transform.getStats(creature, stat, baseTemplateValue)).orElse(baseTemplateValue);
 
-        if (creature.isPlayable()) {
+        if (isPlayable(creature)) {
             final Inventory inv = creature.getInventory();
             if (inv != null) {
                 for (Item item : inv.getPaperdollItems(Item::isEquipped)) {

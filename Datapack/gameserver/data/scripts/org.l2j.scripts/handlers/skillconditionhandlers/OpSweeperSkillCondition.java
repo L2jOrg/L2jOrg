@@ -16,17 +16,19 @@
  */
 package handlers.skillconditionhandlers;
 
-import java.util.concurrent.atomic.AtomicBoolean;
-
 import org.l2j.gameserver.Config;
-import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.StatsSet;
-import org.l2j.gameserver.model.actor.Creature;
+import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.Attackable;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.skills.ISkillCondition;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.network.SystemMessageId;
+
+import java.util.concurrent.atomic.AtomicBoolean;
+
+import static org.l2j.gameserver.util.GameUtils.isAttackable;
 
 /**
  * @author Sdw
@@ -49,7 +51,7 @@ public class OpSweeperSkillCondition implements ISkillCondition
 			{
 				skill.forEachTargetAffected(sweeper, target, o ->
 				{
-					if (o.isAttackable())
+					if (isAttackable(o))
 					{
 						final Attackable a = (Attackable) o;
 						if (a.isDead())

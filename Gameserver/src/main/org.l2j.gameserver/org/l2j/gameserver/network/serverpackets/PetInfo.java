@@ -103,7 +103,7 @@ public class PetInfo extends ServerPacket {
 
         writeByte((byte) (_summon.isShowSummonAnimation() ? 0x02 : _val)); // 0=teleported 1=default 2=summoned
         writeInt(-1); // High Five NPCString ID
-        if (_summon.isPet()) {
+        if (isPet(_summon)) {
             writeString(_summon.getName()); // Pet name.
         } else {
             writeString(_summon.getTemplate().isUsingServerSideName() ? _summon.getName() : ""); // Summon name.
@@ -133,7 +133,7 @@ public class PetInfo extends ServerPacket {
 
         writeLong(_summon.getExpForNextLevel()); // 100% absoulte value
 
-        writeInt(_summon.isPet() ? _summon.getInventory().getTotalWeight() : 0); // weight
+        writeInt(isPet(_summon) ? _summon.getInventory().getTotalWeight() : 0); // weight
         writeInt(_summon.getMaxLoad()); // max weight it can carry
         writeInt(_summon.getPAtk()); // patk
         writeInt(_summon.getPDef()); // pdef

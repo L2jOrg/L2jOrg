@@ -8,6 +8,8 @@ import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.model.zone.ZoneId;
 import org.l2j.gameserver.network.SystemMessageId;
 
+import static org.l2j.gameserver.util.GameUtils.isPlayable;
+
 /**
  * This class manages AI of Playable.<br>
  * PlayableAI :
@@ -23,7 +25,7 @@ public abstract class PlayableAI extends CreatureAI {
 
     @Override
     protected void onIntentionAttack(Creature target) {
-        if ((target != null) && target.isPlayable()) {
+        if (isPlayable(target)) {
             if (target.getActingPlayer().isProtectionBlessingAffected() && ((actor.getActingPlayer().getLevel() - target.getActingPlayer().getLevel()) >= 10) && (actor.getActingPlayer().getReputation() < 0) && !(target.isInsideZone(ZoneId.PVP))) {
                 // If attacker have karma and have level >= 10 than his target and target have
                 // Newbie Protection Buff,
@@ -57,7 +59,7 @@ public abstract class PlayableAI extends CreatureAI {
 
     @Override
     protected void onIntentionCast(Skill skill, WorldObject target, Item item, boolean forceUse, boolean dontMove) {
-        if ((target != null) && (target.isPlayable()) && skill.isBad()) {
+        if ((isPlayable(target)) && skill.isBad()) {
             if (target.getActingPlayer().isProtectionBlessingAffected() && ((actor.getActingPlayer().getLevel() - target.getActingPlayer().getLevel()) >= 10) && (actor.getActingPlayer().getReputation() < 0) && !target.isInsideZone(ZoneId.PVP)) {
                 // If attacker have karma and have level >= 10 than his target and target have
                 // Newbie Protection Buff,

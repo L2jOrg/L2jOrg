@@ -23,6 +23,8 @@ import org.l2j.gameserver.model.effects.AbstractEffect;
 import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.skills.Skill;
 
+import static org.l2j.gameserver.util.GameUtils.isPlayer;
+
 /**
  * Change Face effect implementation.
  * @author Zoey76
@@ -45,7 +47,7 @@ public final class ChangeFace extends AbstractEffect
 	@Override
 	public void instant(Creature effector, Creature effected, Skill skill, Item item)
 	{
-		if (!effected.isPlayer())
+		if (!isPlayer(effected))
 		{
 			return;
 		}

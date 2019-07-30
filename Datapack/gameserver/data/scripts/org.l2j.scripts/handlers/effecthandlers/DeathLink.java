@@ -25,6 +25,8 @@ import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.model.stats.Formulas;
 
+import static org.l2j.gameserver.util.GameUtils.isPlayer;
+
 /**
  * Death Link effect implementation.
  * @author Adry_85
@@ -61,7 +63,7 @@ public final class DeathLink extends AbstractEffect
 		final boolean sps = skill.useSpiritShot() && effector.isChargedShot(ShotType.SPIRITSHOTS);
 		final boolean bss = skill.useSpiritShot() && effector.isChargedShot(ShotType.BLESSED_SPIRITSHOTS);
 		
-		if (effected.isPlayer() && effected.getActingPlayer().isFakeDeath())
+		if (isPlayer(effected) && effected.getActingPlayer().isFakeDeath())
 		{
 			effected.stopFakeDeath(true);
 		}

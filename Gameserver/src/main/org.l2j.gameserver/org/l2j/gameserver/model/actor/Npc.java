@@ -1058,23 +1058,11 @@ public class Npc extends Creature {
     }
 
     @Override
-    public boolean isNpc() {
-        return true;
-    }
-
-    @Override
     public void setTeam(Team team) {
         super.setTeam(team);
         broadcastInfo();
     }
 
-    /**
-     * @return {@code true} if this Npc is registered in WalkingManager
-     */
-    @Override
-    public boolean isWalker() {
-        return WalkingManager.getInstance().isRegistered(this);
-    }
 
     @Override
     public void rechargeShots(boolean physical, boolean magic, boolean fish) {

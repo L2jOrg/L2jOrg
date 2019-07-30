@@ -281,7 +281,7 @@ public class OfflineTradersTable {
                     final GameClient client = new GameClient(null);
                     client.setDetached(true);
                     player = Player.load(rs.getInt("charId"));
-                    client.setActiveChar(player);
+                    client.setPlayer(player);
                     player.setOnlineStatus(true, false);
                     client.setAccountName(player.getAccountNamePlayer());
                     player.setClient(client);

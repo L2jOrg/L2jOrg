@@ -21,6 +21,8 @@ import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.items.ItemTemplate;
 import org.l2j.gameserver.model.skills.Skill;
 
+import static org.l2j.gameserver.util.GameUtils.isNpc;
+
 /**
  * @author Sdw
  */
@@ -33,10 +35,9 @@ public class ConditionTargetCheckCrtEffect extends Condition {
 
     @Override
     public boolean testImpl(Creature effector, Creature effected, Skill skill, ItemTemplate item) {
-        if (effected.isNpc()) {
+        if (isNpc(effected)) {
             return ((Npc) effected).getTemplate().canBeCrt() == _isCrtEffect;
         }
-
         return true;
     }
 

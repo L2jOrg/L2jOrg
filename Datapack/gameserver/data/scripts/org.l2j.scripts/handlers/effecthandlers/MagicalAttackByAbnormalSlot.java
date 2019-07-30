@@ -16,10 +16,6 @@
  */
 package handlers.effecthandlers;
 
-import java.util.Collections;
-import java.util.HashSet;
-import java.util.Set;
-
 import org.l2j.gameserver.enums.ShotType;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Creature;
@@ -29,6 +25,12 @@ import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.skills.AbnormalType;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.model.stats.Formulas;
+
+import java.util.Collections;
+import java.util.HashSet;
+import java.util.Set;
+
+import static org.l2j.gameserver.util.GameUtils.isPlayer;
 
 /**
  * Magical Attack By Abnormal Slot effect implementation.
@@ -78,7 +80,7 @@ public final class MagicalAttackByAbnormalSlot extends AbstractEffect
 			return;
 		}
 		
-		if (effected.isPlayer() && effected.getActingPlayer().isFakeDeath())
+		if (isPlayer(effected) && effected.getActingPlayer().isFakeDeath())
 		{
 			effected.stopFakeDeath(true);
 		}

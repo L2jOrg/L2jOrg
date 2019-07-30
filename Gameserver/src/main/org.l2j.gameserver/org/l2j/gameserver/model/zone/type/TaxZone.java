@@ -7,6 +7,8 @@ import org.l2j.gameserver.model.entity.Castle;
 import org.l2j.gameserver.model.zone.Zone;
 import org.l2j.gameserver.model.zone.ZoneId;
 
+import static org.l2j.gameserver.util.GameUtils.isNpc;
+
 /**
  * Tax zone type.
  *
@@ -32,7 +34,7 @@ public class TaxZone extends Zone {
     @Override
     protected void onEnter(Creature character) {
         character.setInsideZone(ZoneId.TAX, true);
-        if (character.isNpc()) {
+        if (isNpc(character)) {
             ((Npc) character).setTaxZone(this);
         }
     }
@@ -40,7 +42,7 @@ public class TaxZone extends Zone {
     @Override
     protected void onExit(Creature character) {
         character.setInsideZone(ZoneId.TAX, false);
-        if (character.isNpc()) {
+        if (isNpc(character)) {
             ((Npc) character).setTaxZone(null);
         }
     }

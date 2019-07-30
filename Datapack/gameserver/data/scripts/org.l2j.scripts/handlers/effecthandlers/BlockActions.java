@@ -31,6 +31,9 @@ import java.util.Arrays;
 import java.util.Set;
 import java.util.stream.Collectors;
 
+import static org.l2j.gameserver.util.GameUtils.isPlayable;
+import static org.l2j.gameserver.util.GameUtils.isSummon;
+
 /**
  * Block Actions effect implementation.
  * @author mkizub
@@ -67,10 +70,10 @@ public final class BlockActions extends AbstractEffect
 	@Override
 	public void onExit(Creature effector, Creature effected, Skill skill)
 	{
-		_allowedSkills.stream().forEach(effected::removeBlockActionsAllowedSkill);
-		if (effected.isPlayable())
+		_allowedSkills.forEach(effected::removeBlockActionsAllowedSkill);
+		if (isPlayable(effected))
 		{
-			if (effected.isSummon())
+			if (isSummon(effected))
 			{
 				if ((effector != null) && !effector.isDead())
 				{

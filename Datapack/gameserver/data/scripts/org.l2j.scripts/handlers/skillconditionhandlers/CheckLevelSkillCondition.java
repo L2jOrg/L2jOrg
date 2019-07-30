@@ -17,11 +17,13 @@
 package handlers.skillconditionhandlers;
 
 import org.l2j.gameserver.enums.SkillConditionAffectType;
-import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.StatsSet;
+import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.skills.ISkillCondition;
 import org.l2j.gameserver.model.skills.Skill;
+
+import static org.l2j.gameserver.util.GameUtils.isPlayer;
 
 /**
  * @author UnAfraid
@@ -50,7 +52,7 @@ public class CheckLevelSkillCondition implements ISkillCondition
 			}
 			case TARGET:
 			{
-				if ((target != null) && target.isPlayer())
+				if ((target != null) && isPlayer(target))
 				{
 					return (target.getActingPlayer().getLevel() >= _minLevel) && (target.getActingPlayer().getLevel() <= _maxLevel);
 				}

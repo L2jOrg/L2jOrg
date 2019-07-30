@@ -16,8 +16,8 @@
  */
 package handlers.skillconditionhandlers;
 
-import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.StatsSet;
+import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.Summon;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -25,6 +25,9 @@ import org.l2j.gameserver.model.skills.ISkillCondition;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
+
+import static org.l2j.gameserver.util.GameUtils.isPlayer;
+import static org.l2j.gameserver.util.GameUtils.isSummon;
 
 /**
  * @author Sdw
@@ -51,13 +54,13 @@ public class OpResurrectionSkillCondition implements ISkillCondition
 			return false;
 		}
 		
-		if (target.isPlayer())
+		if (isPlayer(target))
 		{
 			final Player player = target.getActingPlayer();
 			if (!player.isDead())
 			{
 				canResurrect = false;
-				if (caster.isPlayer())
+				if (isPlayer(caster))
 				{
 					final SystemMessage msg = SystemMessage.getSystemMessage(SystemMessageId.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS);
 					msg.addSkillName(skill);
@@ -67,7 +70,7 @@ public class OpResurrectionSkillCondition implements ISkillCondition
 			else if (player.isResurrectionBlocked())
 			{
 				canResurrect = false;
-				if (caster.isPlayer())
+				if (isPlayer(caster))
 				{
 					caster.sendPacket(SystemMessageId.REJECT_RESURRECTION);
 				}
@@ -75,20 +78,20 @@ public class OpResurrectionSkillCondition implements ISkillCondition
 			else if (player.isReviveRequested())
 			{
 				canResurrect = false;
-				if (caster.isPlayer())
+				if (isPlayer(caster))
 				{
 					caster.sendPacket(SystemMessageId.RESURRECTION_HAS_ALREADY_BEEN_PROPOSED);
 				}
 			}
 		}
-		else if (target.isSummon())
+		else if (isSummon(target))
 		{
 			final Summon summon = (Summon) target;
 			final Player player = target.getActingPlayer();
 			if (!summon.isDead())
 			{
 				canResurrect = false;
-				if (caster.isPlayer())
+				if (isPlayer(caster))
 				{
 					final SystemMessage msg = SystemMessage.getSystemMessage(SystemMessageId.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS);
 					msg.addSkillName(skill);
@@ -98,7 +101,7 @@ public class OpResurrectionSkillCondition implements ISkillCondition
 			else if (summon.isResurrectionBlocked())
 			{
 				canResurrect = false;
-				if (caster.isPlayer())
+				if (isPlayer(caster))
 				{
 					caster.sendPacket(SystemMessageId.REJECT_RESURRECTION);
 				}
@@ -106,7 +109,7 @@ public class OpResurrectionSkillCondition implements ISkillCondition
 			else if ((player != null) && player.isRevivingPet())
 			{
 				canResurrect = false;
-				if (caster.isPlayer())
+				if (isPlayer(caster))
 				{
 					caster.sendPacket(SystemMessageId.RESURRECTION_HAS_ALREADY_BEEN_PROPOSED);
 				}

@@ -16,8 +16,6 @@
  */
 package handlers.itemhandlers;
 
-import java.util.List;
-
 import org.l2j.gameserver.data.xml.impl.PetDataTable;
 import org.l2j.gameserver.data.xml.impl.SkillData;
 import org.l2j.gameserver.enums.ItemSkillType;
@@ -32,6 +30,11 @@ import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.MagicSkillUse;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
 
+import java.util.List;
+
+import static org.l2j.gameserver.util.GameUtils.isPet;
+import static org.l2j.gameserver.util.GameUtils.isPlayer;
+
 /**
  * @author Kerberos, Zoey76
  */
@@ -40,7 +43,7 @@ public class PetFood implements IItemHandler
 	@Override
 	public boolean useItem(Playable playable, Item item, boolean forceUse)
 	{
-		if (playable.isPet() && !((Pet) playable).canEatFoodId(item.getId()))
+		if (isPet(playable) && !((Pet) playable).canEatFoodId(item.getId()))
 		{
 			playable.sendPacket(SystemMessageId.THIS_PET_CANNOT_USE_THIS_ITEM);
 			return false;
@@ -59,7 +62,7 @@ public class PetFood implements IItemHandler
 		final Skill skill = SkillData.getInstance().getSkill(skillId, skillLevel);
 		if (skill != null)
 		{
-			if (activeChar.isPet())
+			if (isPet(activeChar))
 			{
 				final Pet pet = (Pet) activeChar;
 				if (pet.destroyItem("Consume", item.getObjectId(), 1, null, false))
@@ -74,13 +77,13 @@ public class PetFood implements IItemHandler
 					return true;
 				}
 			}
-			else if (activeChar.isPlayer())
+			else if (isPlayer(activeChar))
 			{
 				final Player player = activeChar.getActingPlayer();
 				if (player.isMounted())
 				{
 					final List<Integer> foodIds = PetDataTable.getInstance().getPetData(player.getMountNpcId()).getFood();
-					if (foodIds.contains(Integer.valueOf(item.getId())))
+					if (foodIds.contains(item.getId()))
 					{
 						if (player.destroyItem("Consume", item.getObjectId(), 1, null, false))
 						{

@@ -26,6 +26,8 @@ import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.network.SystemMessageId;
 
+import static org.l2j.gameserver.util.GameUtils.isPlayer;
+
 /**
  * Relax effect implementation.
  */
@@ -54,7 +56,7 @@ public final class Relax extends AbstractEffect
 	@Override
 	public void onStart(Creature effector, Creature effected, Skill skill, Item item)
 	{
-		if (effected.isPlayer())
+		if (isPlayer(effected))
 		{
 			effected.getActingPlayer().sitDown(false);
 		}
@@ -72,7 +74,7 @@ public final class Relax extends AbstractEffect
 			return false;
 		}
 		
-		if (effected.isPlayer())
+		if (isPlayer(effected))
 		{
 			if (!effected.getActingPlayer().isSitting())
 			{

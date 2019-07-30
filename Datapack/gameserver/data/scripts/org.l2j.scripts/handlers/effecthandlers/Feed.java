@@ -26,6 +26,9 @@ import org.l2j.gameserver.model.effects.AbstractEffect;
 import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.skills.Skill;
 
+import static org.l2j.gameserver.util.GameUtils.isPet;
+import static org.l2j.gameserver.util.GameUtils.isPlayer;
+
 /**
  * @author Sdw
  */
@@ -51,12 +54,12 @@ public class Feed extends AbstractEffect
 	@Override
 	public void instant(Creature effector, Creature effected, Skill skill, Item item)
 	{
-		if (effected.isPet())
+		if (isPet(effected))
 		{
 			final Pet pet = (Pet) effected;
 			pet.setCurrentFed(pet.getCurrentFed() + (_normal * Config.PET_FOOD_RATE));
 		}
-		else if (effected.isPlayer())
+		else if (isPlayer(effected))
 		{
 			final Player player = effected.getActingPlayer();
 			if (player.getMountType() == MountType.WYVERN)

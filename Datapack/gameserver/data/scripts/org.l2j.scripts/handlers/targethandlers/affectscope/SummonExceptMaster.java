@@ -16,8 +16,6 @@
  */
 package handlers.targethandlers.affectscope;
 
-import java.util.function.Consumer;
-
 import org.l2j.gameserver.handler.AffectObjectHandler;
 import org.l2j.gameserver.handler.IAffectObjectHandler;
 import org.l2j.gameserver.handler.IAffectScopeHandler;
@@ -27,6 +25,10 @@ import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.model.skills.targets.AffectScope;
 import org.l2j.gameserver.util.GameUtils;
+
+import java.util.function.Consumer;
+
+import static org.l2j.gameserver.util.GameUtils.isPlayable;
 
 /**
  * @author Nik
@@ -40,13 +42,13 @@ public class SummonExceptMaster implements IAffectScopeHandler
 		final int affectRange = skill.getAffectRange();
 		final int affectLimit = skill.getAffectLimit();
 		
-		if (target.isPlayable())
+		if (isPlayable(target))
 		{
 			final Player player = target.getActingPlayer();
 			//@formatter:off
 			player.getServitorsAndPets().stream()
 			.filter(c -> !c.isDead())
-			.filter(c -> affectRange > 0 ? GameUtils.checkIfInRange(affectRange, c, target, true) : true)
+			.filter(c -> affectRange <= 0 || GameUtils.checkIfInRange(affectRange, c, target, true))
 			.filter(c -> (affectObject == null) || affectObject.checkAffectedObject(activeChar, c))
 			.limit(affectLimit > 0 ? affectLimit : Long.MAX_VALUE)
 			.forEach(action);

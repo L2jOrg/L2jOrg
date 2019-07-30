@@ -16,8 +16,6 @@
  */
 package handlers.admincommandhandlers;
 
-import java.util.StringTokenizer;
-
 import org.l2j.commons.util.Util;
 import org.l2j.gameserver.cache.HtmCache;
 import org.l2j.gameserver.data.sql.impl.ClanTable;
@@ -33,6 +31,10 @@ import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.NpcHtmlMessage;
 import org.l2j.gameserver.util.BuilderUtil;
+
+import java.util.StringTokenizer;
+
+import static org.l2j.gameserver.util.GameUtils.isPlayer;
 
 /**
  * @author UnAfraid, Zoey76
@@ -201,7 +203,7 @@ public class AdminClan implements IAdminCommandHandler
 		else
 		{
 			final WorldObject targetObj = activeChar.getTarget();
-			if ((targetObj == null) || !targetObj.isPlayer())
+			if (!isPlayer(targetObj))
 			{
 				activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
 				return null;

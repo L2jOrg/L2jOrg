@@ -10,6 +10,8 @@ import org.l2j.gameserver.network.SystemMessageId;
 
 import java.util.concurrent.atomic.AtomicBoolean;
 
+import static org.l2j.gameserver.util.GameUtils.isAttackable;
+
 /**
  * Checks Sweeper conditions:
  * <ul>
@@ -38,7 +40,7 @@ public class ConditionPlayerCanSweep extends Condition {
             if (skill != null) {
                 skill.forEachTargetAffected(sweeper, effected, o ->
                 {
-                    if ((o != null) && o.isAttackable()) {
+                    if (isAttackable(o)) {
                         final Attackable target = (Attackable) o;
                         if (target.isDead()) {
                             if (target.isSpoiled()) {

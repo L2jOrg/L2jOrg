@@ -23,10 +23,10 @@ import org.l2j.gameserver.ai.CtrlIntention;
 import org.l2j.gameserver.enums.MountType;
 import org.l2j.gameserver.instancemanager.GrandBossManager;
 import org.l2j.gameserver.instancemanager.ZoneManager;
-import org.l2j.gameserver.model.Party;
-import org.l2j.gameserver.model.World;
 import org.l2j.gameserver.model.Location;
+import org.l2j.gameserver.model.Party;
 import org.l2j.gameserver.model.StatsSet;
+import org.l2j.gameserver.model.World;
 import org.l2j.gameserver.model.actor.Attackable;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.Npc;
@@ -44,6 +44,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import static org.l2j.gameserver.util.GameUtils.isNpc;
+import static org.l2j.gameserver.util.GameUtils.isPlayer;
 import static org.l2j.gameserver.util.MathUtil.calculateDistance3D;
 import static org.l2j.gameserver.util.MathUtil.isInsideRadius3D;
 
@@ -365,7 +367,7 @@ public final class Antharas extends AbstractNpcAI
 					{
 						if (charInside != null)
 						{
-							if (charInside.isNpc())
+							if (isNpc(charInside))
 							{
 								if (charInside.getId() == ANTHARAS)
 								{
@@ -376,7 +378,7 @@ public final class Antharas extends AbstractNpcAI
 									charInside.deleteMe();
 								}
 							}
-							else if (charInside.isPlayer())
+							else if (isPlayer(charInside))
 							{
 								charInside.teleToLocation(79800 + getRandom(600), 151200 + getRandom(1100), -3534);
 							}
@@ -440,11 +442,11 @@ public final class Antharas extends AbstractNpcAI
 				{
 					if (charInside != null)
 					{
-						if (charInside.isNpc())
+						if (isNpc(charInside))
 						{
 							charInside.deleteMe();
 						}
-						else if (charInside.isPlayer())
+						else if (isPlayer(charInside))
 						{
 							charInside.teleToLocation(79800 + getRandom(600), 151200 + getRandom(1100), -3534);
 						}
@@ -538,7 +540,7 @@ public final class Antharas extends AbstractNpcAI
 					_minionCount = 0;
 					for (Creature charInside : zone.getCharactersInside())
 					{
-						if ((charInside != null) && charInside.isNpc() && ((charInside.getId() == BEHEMOTH) || (charInside.getId() == TERASQUE)))
+						if ((charInside != null) && isNpc(charInside) && ((charInside.getId() == BEHEMOTH) || (charInside.getId() == TERASQUE)))
 						{
 							charInside.deleteMe();
 						}
@@ -565,7 +567,7 @@ public final class Antharas extends AbstractNpcAI
 					{
 						if (charInside != null)
 						{
-							if (charInside.isNpc())
+							if (isNpc(charInside))
 							{
 								if (charInside.getId() == ANTHARAS)
 								{
@@ -576,7 +578,7 @@ public final class Antharas extends AbstractNpcAI
 									charInside.deleteMe();
 								}
 							}
-							else if (charInside.isPlayer() && !charInside.isGM())
+							else if (isPlayer(charInside) && !charInside.isGM())
 							{
 								charInside.teleToLocation(79800 + getRandom(600), 151200 + getRandom(1100), -3534);
 							}

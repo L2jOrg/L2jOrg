@@ -1,24 +1,4 @@
-/*
- * This file is part of the L2J Mobius project.
- * 
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- * 
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
- * General Public License for more details.
- * 
- * You should have received a copy of the GNU General Public License
- * along with this program. If not, see <http://www.gnu.org/licenses/>.
- */
 package handlers.admincommandhandlers;
-
-import java.util.EnumSet;
-import java.util.Set;
-import java.util.StringTokenizer;
 
 import org.l2j.commons.util.Util;
 import org.l2j.gameserver.Config;
@@ -29,7 +9,13 @@ import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.stats.Stats;
 import org.l2j.gameserver.util.BuilderUtil;
-import org.l2j.gameserver.util.GameUtils;
+
+import java.util.EnumSet;
+import java.util.Set;
+import java.util.StringTokenizer;
+
+import static org.l2j.gameserver.util.GameUtils.isCreature;
+import static org.l2j.gameserver.util.GameUtils.isPlayer;
 
 /**
  * A retail-like implementation of //gmspeed builder command.
@@ -81,7 +67,7 @@ public final class AdminGmSpeed implements IAdminCommandHandler
 			
 			final Creature targetCharacter;
 			final WorldObject target = player.getTarget();
-			if ((target != null) && target.isCharacter())
+			if (isCreature(target))
 			{
 				targetCharacter = (Creature) target;
 			}
@@ -98,7 +84,7 @@ public final class AdminGmSpeed implements IAdminCommandHandler
 			}
 			
 			targetCharacter.getStat().recalculateStats(false);
-			if (targetCharacter.isPlayer())
+			if (isPlayer(targetCharacter))
 			{
 				((Player) targetCharacter).broadcastUserInfo();
 			}

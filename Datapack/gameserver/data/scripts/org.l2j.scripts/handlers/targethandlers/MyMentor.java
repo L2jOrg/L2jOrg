@@ -24,6 +24,8 @@ import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.model.skills.targets.TargetType;
 
+import static org.l2j.gameserver.util.GameUtils.isPlayer;
+
 /**
  * Target my mentor.
  * @author Nik
@@ -39,7 +41,7 @@ public class MyMentor implements ITargetTypeHandler
 	@Override
 	public WorldObject getTarget(Creature activeChar, WorldObject selectedTarget, Skill skill, boolean forceUse, boolean dontMove, boolean sendMessage)
 	{
-		if (activeChar.isPlayer())
+		if (isPlayer(activeChar))
 		{
 			final Mentee mentor = MentorManager.getInstance().getMentor(activeChar.getObjectId());
 			if (mentor != null)

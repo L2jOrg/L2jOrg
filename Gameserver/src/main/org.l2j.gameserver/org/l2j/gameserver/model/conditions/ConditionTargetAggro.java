@@ -21,6 +21,7 @@ import org.l2j.gameserver.model.actor.instance.Monster;
 import org.l2j.gameserver.model.items.ItemTemplate;
 import org.l2j.gameserver.model.skills.Skill;
 
+import static org.l2j.gameserver.util.GameUtils.isMonster;
 import static org.l2j.gameserver.util.GameUtils.isPlayer;
 
 /**
@@ -42,13 +43,11 @@ public class ConditionTargetAggro extends Condition {
 
     @Override
     public boolean testImpl(Creature effector, Creature effected, Skill skill, ItemTemplate item) {
-        if (effected != null) {
-            if (effected.isMonster()) {
-                return ((Monster) effected).isAggressive() == _isAggro;
-            }
-            if (isPlayer(effected)) {
-                return effected.getReputation() < 0;
-            }
+        if (isMonster(effected)) {
+            return ((Monster) effected).isAggressive() == _isAggro;
+        }
+        if (isPlayer(effected)) {
+            return effected.getReputation() < 0;
         }
         return false;
     }

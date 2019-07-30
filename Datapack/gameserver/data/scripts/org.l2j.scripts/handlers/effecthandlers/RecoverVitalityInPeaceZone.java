@@ -25,6 +25,8 @@ import org.l2j.gameserver.model.skills.BuffInfo;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.model.zone.ZoneId;
 
+import static org.l2j.gameserver.util.GameUtils.isPlayer;
+
 /**
  * Recover Vitality in Peace Zone effect implementation.
  * @author Mobius
@@ -51,7 +53,7 @@ public final class RecoverVitalityInPeaceZone extends AbstractEffect
 	{
 		if ((effected == null) //
 			|| effected.isDead() //
-			|| !effected.isPlayer() //
+			|| !isPlayer(effected) //
 			|| !effected.isInsideZone(ZoneId.PEACE))
 		{
 			return false;
@@ -71,8 +73,8 @@ public final class RecoverVitalityInPeaceZone extends AbstractEffect
 	@Override
 	public void onExit(Creature effector, Creature effected, Skill skill)
 	{
-		if ((effected != null) //
-			&& effected.isPlayer())
+		//
+		if (isPlayer(effected))
 		{
 			final BuffInfo info = effected.getEffectList().getBuffInfoBySkillId(skill.getId());
 			if ((info != null) && !info.isRemoved())

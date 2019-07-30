@@ -26,6 +26,8 @@ import org.l2j.gameserver.model.effects.AbstractEffect;
 import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.skills.Skill;
 
+import static org.l2j.gameserver.util.GameUtils.isPlayer;
+
 /**
  * Flip Block effect implementation.
  * @author Mobius
@@ -46,7 +48,7 @@ public final class FlipBlock extends AbstractEffect
 	public void instant(Creature effector, Creature effected, Skill skill, Item item)
 	{
 		final Block block = effected instanceof Block ? (Block) effected : null;
-		final Player player = effector.isPlayer() ? (Player) effector : null;
+		final Player player = isPlayer(effector) ? (Player) effector : null;
 		if ((block == null) || (player == null))
 		{
 			return;

@@ -19,14 +19,17 @@ package handlers.admincommandhandlers;
 
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.handler.IAdminCommandHandler;
-import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.World;
+import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.util.BuilderUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import static org.l2j.gameserver.util.GameUtils.isCreature;
+import static org.l2j.gameserver.util.GameUtils.isPlayer;
 
 /**
  * This class handles following admin commands: - heal = restores HP/MP/CP on target, name or radius
@@ -98,7 +101,7 @@ public class AdminHeal implements IAdminCommandHandler
 					World.getInstance().forEachVisibleObject(activeChar, Creature.class, character ->
 					{
 						character.setCurrentHpMp(character.getMaxHp(), character.getMaxMp());
-						if (character.isPlayer())
+						if (isPlayer(character))
 						{
 							character.setCurrentCp(character.getMaxCp());
 						}
@@ -116,11 +119,11 @@ public class AdminHeal implements IAdminCommandHandler
 		{
 			obj = activeChar;
 		}
-		if (obj.isCharacter())
+		if (isCreature(obj))
 		{
 			final Creature target = (Creature) obj;
 			target.setCurrentHpMp(target.getMaxHp(), target.getMaxMp());
-			if (target.isPlayer())
+			if (isPlayer(target))
 			{
 				target.setCurrentCp(target.getMaxCp());
 			}

@@ -25,6 +25,8 @@ import org.l2j.gameserver.model.entity.Castle;
 import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.skills.Skill;
 
+import static org.l2j.gameserver.util.GameUtils.isPlayer;
+
 /**
  * Take Castle effect implementation.
  * @author Adry_85, St3eT
@@ -47,7 +49,7 @@ public final class TakeCastle extends AbstractEffect
 	@Override
 	public void instant(Creature effector, Creature effected, Skill skill, Item item)
 	{
-		if (!effector.isPlayer())
+		if (!isPlayer(effector))
 		{
 			return;
 		}

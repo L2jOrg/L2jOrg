@@ -36,6 +36,7 @@ import java.util.Set;
 import java.util.concurrent.Future;
 import java.util.stream.Stream;
 
+import static org.l2j.gameserver.util.GameUtils.*;
 import static org.l2j.gameserver.util.MathUtil.*;
 
 /**
@@ -87,7 +88,7 @@ public class AttackableAI extends CreatureAI {
         }
 
         // Check if the target isn't a Folk or a Door
-        if (target.isDoor()) {
+        if (isDoor(target)) {
             return false;
         }
 
@@ -99,7 +100,7 @@ public class AttackableAI extends CreatureAI {
         }
 
         // Check if the target is a Playable
-        if (target.isPlayable()) {
+        if (isPlayable(target)) {
             // Check if the AI isn't a Raid Boss, can See Silent Moving players and the target isn't in silent move mode
             if (!(me.isRaid()) && !(me.canSeeThroughSilentMove()) && ((Playable) target).isSilentMovingAffected()) {
                 return false;
@@ -131,7 +132,7 @@ public class AttackableAI extends CreatureAI {
                     return true;
                 }
             }
-        } else if (me.isMonster()) {
+        } else if (isMonster(me)) {
             // depending on config, do not allow mobs to attack _new_ players in peacezones,
             // unless they are already following those players from outside the peacezone.
             if (!Config.ALT_MOB_AGRO_IN_PEACEZONE && target.isInsideZone(ZoneId.PEACE)) {
@@ -290,8 +291,8 @@ public class AttackableAI extends CreatureAI {
                     // For each Creature check if the target is autoattackable
                     if (isAggressiveTowards(t)) // check aggression
                     {
-                        if (t.isPlayable()) {
-                            final TerminateReturn term = EventDispatcher.getInstance().notifyEvent(new OnAttackableHate(getActiveChar(), t.getActingPlayer(), t.isSummon()), getActiveChar(), TerminateReturn.class);
+                        if (isPlayable(t)) {
+                            final TerminateReturn term = EventDispatcher.getInstance().notifyEvent(new OnAttackableHate(getActiveChar(), t.getActingPlayer(), isSummon(t)), getActiveChar(), TerminateReturn.class);
                             if ((term != null) && term.terminate()) {
                                 return;
                             }
@@ -316,7 +317,7 @@ public class AttackableAI extends CreatureAI {
 
             // Chose a target from its aggroList
             Creature hated;
-            if (npc.isConfused() && (target != null) && target.isCharacter()) {
+            if (npc.isConfused() && isCreature(target)) {
                 hated = (Creature) target; // effect handles selection
             } else {
                 hated = npc.getMostHated();
@@ -353,7 +354,7 @@ public class AttackableAI extends CreatureAI {
         }
 
         // Check if the actor is a guard
-        if (((npc instanceof Guard) || (npc instanceof Defender)) && !npc.isWalker() && !npc.isRandomWalkingEnabled()) {
+        if (((npc instanceof Guard) || (npc instanceof Defender)) && !isWalker(npc) && !npc.isRandomWalkingEnabled()) {
             // Order to the Guard to return to its home location because there's no target to attack
             npc.returnHome();
         }
@@ -479,7 +480,7 @@ public class AttackableAI extends CreatureAI {
             npc.setWalking();
 
             // Monster teleport to spawn
-            if (npc.isMonster() && (npc.getSpawn() != null) && !npc.isInInstance()) {
+            if (isMonster(npc) && (npc.getSpawn() != null) && !npc.isInInstance()) {
                 npc.teleToLocation(npc.getSpawn(), false);
             }
             return;
@@ -504,12 +505,12 @@ public class AttackableAI extends CreatureAI {
                     // Check if the WorldObject is inside the Faction Range of the actor
                     if (called.hasAI()) {
                         if ((Math.abs(finalTarget.getZ() - called.getZ()) < 600) && npc.getAttackByList().stream().anyMatch(o -> o.get() == finalTarget) && ((called.getAI().intention == CtrlIntention.AI_INTENTION_IDLE) || (called.getAI().intention == CtrlIntention.AI_INTENTION_ACTIVE))) {
-                            if (finalTarget.isPlayable()) {
+                            if (isPlayable(finalTarget)) {
                                 // By default, when a faction member calls for help, attack the caller's attacker.
                                 // Notify the AI with EVT_AGGRESSION
                                 called.getAI().notifyEvent(CtrlEvent.EVT_AGGRESSION, finalTarget, 1);
-                                EventDispatcher.getInstance().notifyEventAsync(new OnAttackableFactionCall(called, getActiveChar(), finalTarget.getActingPlayer(), finalTarget.isSummon()), called);
-                            } else if (called.isAttackable() && (called.getAI().intention != CtrlIntention.AI_INTENTION_ATTACK)) {
+                                EventDispatcher.getInstance().notifyEventAsync(new OnAttackableFactionCall(called, getActiveChar(), finalTarget.getActingPlayer(), isSummon(finalTarget)), called);
+                            } else if (isAttackable(called) && (called.getAI().intention != CtrlIntention.AI_INTENTION_ATTACK)) {
                                 ((Attackable) called).addDamageHate(finalTarget, 0, npc.getHating(finalTarget));
                                 called.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, finalTarget);
                             }
@@ -748,7 +749,7 @@ public class AttackableAI extends CreatureAI {
             return false;
         }
 
-        if (target.isCharacter()) {
+        if (isCreature(target)) {
             // Skip if target is already affected by such skill.
             if (skill.isContinuous()) {
                 if (((Creature) target).getEffectList().hasAbnormalType(skill.getAbnormalType(), i -> (i.getSkill().getAbnormalLvl() >= skill.getAbnormalLvl()))) {
@@ -785,7 +786,7 @@ public class AttackableAI extends CreatureAI {
         }
 
         final Attackable npc = getActiveChar();
-        if (target.isCharacter()) {
+        if (isCreature(target)) {
             if (((Creature) target).isDead()) {
                 return false;
             }
@@ -939,7 +940,7 @@ public class AttackableAI extends CreatureAI {
             }
         }
 
-        if (me.isMonster()) {
+        if (isMonster(me)) {
             Monster master = (Monster) me;
 
             if (master.hasMinions()) {
@@ -986,7 +987,7 @@ public class AttackableAI extends CreatureAI {
                 setIntention(CtrlIntention.AI_INTENTION_ATTACK, target);
             }
 
-            if (me.isMonster()) {
+            if (isMonster(me)) {
                 Monster master = (Monster) me;
 
                 if (master.hasMinions()) {

@@ -12,6 +12,8 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.concurrent.ConcurrentHashMap;
 
+import static org.l2j.gameserver.util.GameUtils.isAttackable;
+
 
 /**
  * @author NosBit
@@ -56,7 +58,7 @@ public final class DecayTaskManager {
             delay = Config.DEFAULT_CORPSE_TIME;
         }
 
-        if (character.isAttackable() && (((Attackable) character).isSpoiled() || ((Attackable) character).isSeeded())) {
+        if (isAttackable(character) && (((Attackable) character).isSpoiled() || ((Attackable) character).isSeeded())) {
             delay += Config.SPOILED_CORPSE_EXTEND_TIME;
         }
 

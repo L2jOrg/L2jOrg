@@ -16,9 +16,6 @@
  */
 package handlers.admincommandhandlers;
 
-import java.util.Collection;
-import java.util.StringTokenizer;
-
 import org.l2j.gameserver.handler.IAdminCommandHandler;
 import org.l2j.gameserver.instancemanager.FortDataManager;
 import org.l2j.gameserver.model.Clan;
@@ -29,6 +26,11 @@ import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.NpcHtmlMessage;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
 import org.l2j.gameserver.util.BuilderUtil;
+
+import java.util.Collection;
+import java.util.StringTokenizer;
+
+import static org.l2j.gameserver.util.GameUtils.isPlayer;
 
 /**
  * This class handles all siege commands: Todo: change the class name, and neaten it up
@@ -72,7 +74,7 @@ public class AdminFortSiege implements IAdminCommandHandler
 		{
 			final WorldObject target = activeChar.getTarget();
 			Player player = null;
-			if ((target != null) && target.isPlayer())
+			if (isPlayer(target))
 			{
 				player = (Player) target;
 			}

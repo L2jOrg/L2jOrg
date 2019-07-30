@@ -19,6 +19,7 @@ package org.l2j.gameserver.model.actor.instance;
 import org.l2j.gameserver.enums.InstanceType;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.templates.NpcTemplate;
+import org.l2j.gameserver.util.GameUtils;
 
 public class Warehouse extends Folk {
     public Warehouse(NpcTemplate template) {
@@ -28,7 +29,7 @@ public class Warehouse extends Folk {
 
     @Override
     public boolean isAutoAttackable(Creature attacker) {
-        if (attacker.isMonster()) {
+        if (GameUtils.isMonster(attacker)) {
             return true;
         }
 

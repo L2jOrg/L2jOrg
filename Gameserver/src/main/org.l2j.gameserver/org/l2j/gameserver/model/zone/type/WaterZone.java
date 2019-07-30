@@ -9,6 +9,7 @@ import org.l2j.gameserver.model.zone.ZoneId;
 import org.l2j.gameserver.network.serverpackets.NpcInfo;
 import org.l2j.gameserver.network.serverpackets.ServerObjectInfo;
 
+import static org.l2j.gameserver.util.GameUtils.isNpc;
 import static org.l2j.gameserver.util.GameUtils.isPlayer;
 
 public class WaterZone extends Zone {
@@ -28,7 +29,7 @@ public class WaterZone extends Zone {
             } else {
                 player.broadcastUserInfo();
             }
-        } else if (character.isNpc()) {
+        } else if (isNpc(character)) {
             World.getInstance().forEachVisibleObject(character, Player.class, player ->
             {
                 if (character.getRunSpeed() == 0) {
@@ -51,7 +52,7 @@ public class WaterZone extends Zone {
                 ((Player) character).stopWaterTask();
             }
             character.getActingPlayer().broadcastUserInfo();
-        } else if (character.isNpc()) {
+        } else if (isNpc(character)) {
             World.getInstance().forEachVisibleObject(character, Player.class, player ->
             {
                 if (character.getRunSpeed() == 0) {

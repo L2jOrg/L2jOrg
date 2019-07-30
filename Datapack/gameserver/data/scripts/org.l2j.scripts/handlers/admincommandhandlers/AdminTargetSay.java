@@ -26,6 +26,9 @@ import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.CreatureSay;
 import org.l2j.gameserver.util.BuilderUtil;
 
+import static org.l2j.gameserver.util.GameUtils.isCreature;
+import static org.l2j.gameserver.util.GameUtils.isPlayer;
+
 /**
  * This class handles following admin commands: - targetsay <message> = makes talk a Creature
  * @author nonom
@@ -45,7 +48,7 @@ public class AdminTargetSay implements IAdminCommandHandler
 			try
 			{
 				final WorldObject obj = activeChar.getTarget();
-				if ((obj instanceof StaticWorldObject) || !obj.isCharacter())
+				if ((obj instanceof StaticWorldObject) || !isCreature(obj))
 				{
 					activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
 					return false;
@@ -53,7 +56,7 @@ public class AdminTargetSay implements IAdminCommandHandler
 				
 				final String message = command.substring(16);
 				final Creature target = (Creature) obj;
-				target.broadcastPacket(new CreatureSay(target.getObjectId(), target.isPlayer() ? ChatType.GENERAL : ChatType.NPC_GENERAL, target.getName(), message));
+				target.broadcastPacket(new CreatureSay(target.getObjectId(), isPlayer(target) ? ChatType.GENERAL : ChatType.NPC_GENERAL, target.getName(), message));
 			}
 			catch (StringIndexOutOfBoundsException e)
 			{

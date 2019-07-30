@@ -38,6 +38,7 @@ import org.l2j.gameserver.util.GMAudit;
 
 import java.util.*;
 
+import static org.l2j.gameserver.util.GameUtils.isCreature;
 import static org.l2j.gameserver.util.GameUtils.isPlayer;
 
 public class AdminBuffs implements IAdminCommandHandler
@@ -63,7 +64,7 @@ public class AdminBuffs implements IAdminCommandHandler
 	{
 		if (command.startsWith("admin_buff"))
 		{
-			if ((activeChar.getTarget() == null) || !activeChar.getTarget().isCharacter())
+			if ( !isCreature(activeChar.getTarget()))
 			{
 				activeChar.sendPacket(SystemMessageId.THAT_IS_AN_INCORRECT_TARGET);
 				return false;
@@ -122,7 +123,7 @@ public class AdminBuffs implements IAdminCommandHandler
 				BuilderUtil.sendSysMessage(activeChar, "The player " + playername + " is not online.");
 				return false;
 			}
-			else if ((activeChar.getTarget() != null) && activeChar.getTarget().isCharacter())
+			else if (isCreature(activeChar.getTarget()))
 			{
 				showBuffs(activeChar, (Creature) activeChar.getTarget(), 0, command.endsWith("_ps"));
 				return true;
@@ -421,7 +422,7 @@ public class AdminBuffs implements IAdminCommandHandler
 			final StringBuilder html = new StringBuilder(500 + (blockedAbnormalsSize * 50));
 			html.append("<html><table width=\"100%\"><tr><td width=45><button value=\"Main\" action=\"bypass -h admin_admin\" width=45 height=21 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td><td width=180><center><font color=\"LEVEL\">Blocked effects of ");
 			html.append(target.getName());
-			html.append("</font></td><td width=45><button value=\"Back\" action=\"bypass -h admin_getbuffs" + (target.isPlayer() ? (" " + target.getName()) : "") + "\" width=45 height=21 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td></tr></table><br>");
+			html.append("</font></td><td width=45><button value=\"Back\" action=\"bypass -h admin_getbuffs" + (isPlayer(target) ? (" " + target.getName()) : "") + "\" width=45 height=21 back=\"L2UI_ct1.button_df\" fore=\"L2UI_ct1.button_df\"></td></tr></table><br>");
 			
 			if ((blockedAbnormals != null) && !blockedAbnormals.isEmpty())
 			{

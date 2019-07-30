@@ -18,9 +18,11 @@ package handlers.playeractions;
 
 import org.l2j.gameserver.handler.IPlayerActionHandler;
 import org.l2j.gameserver.model.ActionDataHolder;
-import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.instance.Pet;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.SystemMessageId;
+
+import static org.l2j.gameserver.util.GameUtils.isPet;
 
 /**
  * Pet stop action player action handler.
@@ -31,7 +33,7 @@ public final class PetStop implements IPlayerActionHandler
 	@Override
 	public void useAction(Player activeChar, ActionDataHolder data, boolean ctrlPressed, boolean shiftPressed)
 	{
-		if ((activeChar.getPet() == null) || !activeChar.getPet().isPet())
+		if (!isPet(activeChar.getPet()))
 		{
 			activeChar.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_A_PET);
 			return;

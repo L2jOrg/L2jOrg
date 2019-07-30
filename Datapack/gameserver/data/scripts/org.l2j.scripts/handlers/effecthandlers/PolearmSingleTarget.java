@@ -23,6 +23,8 @@ import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.model.stats.Stats;
 
+import static org.l2j.gameserver.util.GameUtils.isPlayer;
+
 /**
  * @author Sdw
  */
@@ -35,7 +37,7 @@ public class PolearmSingleTarget extends AbstractEffect
 	@Override
 	public void onStart(Creature effector, Creature effected, Skill skill, Item item)
 	{
-		if (effected.isPlayer())
+		if (isPlayer(effected))
 		{
 			effected.getStat().addFixedValue(Stats.PHYSICAL_POLEARM_TARGET_SINGLE, 1.0);
 		}
@@ -44,7 +46,7 @@ public class PolearmSingleTarget extends AbstractEffect
 	@Override
 	public void onExit(Creature effector, Creature effected, Skill skill)
 	{
-		if (effected.isPlayer())
+		if (isPlayer(effected))
 		{
 			effected.getStat().removeFixedValue(Stats.PHYSICAL_POLEARM_TARGET_SINGLE);
 		}

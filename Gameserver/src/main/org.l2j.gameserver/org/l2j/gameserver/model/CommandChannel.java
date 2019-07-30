@@ -14,6 +14,8 @@ import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.function.Function;
 
+import static org.l2j.gameserver.util.GameUtils.isCreature;
+
 /**
  * This class serves as a container for command channels.
  *
@@ -148,7 +150,7 @@ public class CommandChannel extends AbstractPlayerGroup {
      * @return true if proper condition for RaidWar
      */
     public boolean meetRaidWarCondition(WorldObject obj) {
-        if (!(obj.isCharacter() && ((Creature) obj).isRaid())) {
+        if (!(isCreature(obj) && ((Creature) obj).isRaid())) {
             return false;
         }
         return (getMemberCount() >= Config.LOOT_RAIDS_PRIVILEGE_CC_SIZE);

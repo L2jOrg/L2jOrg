@@ -46,7 +46,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.util.*;
 
-import static org.l2j.gameserver.util.GameUtils.isPlayer;
+import static org.l2j.gameserver.util.GameUtils.*;
 
 
 /**
@@ -230,7 +230,7 @@ public class AdminEditChar implements IAdminCommandHandler
 				final String val = command.substring(12);
 				final int pk = Integer.parseInt(val);
 				final WorldObject target = activeChar.getTarget();
-				if (target.isPlayer())
+				if (isPlayer(target))
 				{
 					final Player player = target.getActingPlayer();
 					player.setPkKills(pk);
@@ -260,7 +260,7 @@ public class AdminEditChar implements IAdminCommandHandler
 				final String val = command.substring(13);
 				final int pvp = Integer.parseInt(val);
 				final WorldObject target = activeChar.getTarget();
-				if ((target != null) && target.isPlayer())
+				if ((target != null) && isPlayer(target))
 				{
 					final Player player = (Player) target;
 					player.setPvpKills(pvp);
@@ -291,7 +291,7 @@ public class AdminEditChar implements IAdminCommandHandler
 				final String val = command.substring(14);
 				final int fame = Integer.parseInt(val);
 				final WorldObject target = activeChar.getTarget();
-				if ((target != null) && target.isPlayer())
+				if ((target != null) && isPlayer(target))
 				{
 					final Player player = (Player) target;
 					player.setFame(fame);
@@ -321,7 +321,7 @@ public class AdminEditChar implements IAdminCommandHandler
 				final String val = command.substring(10);
 				final int recVal = Integer.parseInt(val);
 				final WorldObject target = activeChar.getTarget();
-				if ((target != null) && target.isPlayer())
+				if ((target != null) && isPlayer(target))
 				{
 					final Player player = (Player) target;
 					player.setRecomHave(recVal);
@@ -348,7 +348,7 @@ public class AdminEditChar implements IAdminCommandHandler
 				final String val = command.substring(15).trim();
 				final int classidval = Integer.parseInt(val);
 				final WorldObject target = activeChar.getTarget();
-				if ((target == null) || !target.isPlayer())
+				if ((target == null) || !isPlayer(target))
 				{
 					return false;
 				}
@@ -399,7 +399,7 @@ public class AdminEditChar implements IAdminCommandHandler
 				final String val = command.substring(15);
 				final WorldObject target = activeChar.getTarget();
 				Player player = null;
-				if ((target != null) && target.isPlayer())
+				if ((target != null) && isPlayer(target))
 				{
 					player = (Player) target;
 				}
@@ -423,7 +423,7 @@ public class AdminEditChar implements IAdminCommandHandler
 				final String val = command.substring(17);
 				final WorldObject target = activeChar.getTarget();
 				Player player = null;
-				if ((target != null) && target.isPlayer())
+				if ((target != null) && isPlayer(target))
 				{
 					player = (Player) target;
 				}
@@ -474,7 +474,7 @@ public class AdminEditChar implements IAdminCommandHandler
 		{
 			final WorldObject target = activeChar.getTarget();
 			Player player = null;
-			if ((target != null) && target.isPlayer())
+			if ((target != null) && isPlayer(target))
 			{
 				player = (Player) target;
 			}
@@ -493,7 +493,7 @@ public class AdminEditChar implements IAdminCommandHandler
 				final String val = command.substring(15);
 				final WorldObject target = activeChar.getTarget();
 				Player player = null;
-				if ((target != null) && target.isPlayer())
+				if ((target != null) && isPlayer(target))
 				{
 					player = (Player) target;
 				}
@@ -517,7 +517,7 @@ public class AdminEditChar implements IAdminCommandHandler
 				final String val = command.substring(16);
 				final WorldObject target = activeChar.getTarget();
 				Player player = null;
-				if ((target != null) && target.isPlayer())
+				if ((target != null) && isPlayer(target))
 				{
 					player = (Player) target;
 				}
@@ -537,7 +537,7 @@ public class AdminEditChar implements IAdminCommandHandler
 		else if (command.startsWith("admin_fullfood"))
 		{
 			final WorldObject target = activeChar.getTarget();
-			if ((target != null) && target.isPet())
+			if ((target != null) && isPet(target))
 			{
 				final Pet targetPet = (Pet) target;
 				targetPet.setCurrentFed(targetPet.getMaxFed());
@@ -638,7 +638,7 @@ public class AdminEditChar implements IAdminCommandHandler
 			else
 			{
 				final WorldObject target = activeChar.getTarget();
-				if ((target != null) && target.isPlayer())
+				if ((target != null) && isPlayer(target))
 				{
 					pl = (Player) target;
 				}
@@ -682,7 +682,7 @@ public class AdminEditChar implements IAdminCommandHandler
 		else if (command.startsWith("admin_summon_info"))
 		{
 			final WorldObject target = activeChar.getTarget();
-			if ((target != null) && target.isSummon())
+			if ((target != null) && isSummon(target))
 			{
 				gatherSummonInfo((Summon) target, activeChar);
 			}
@@ -694,7 +694,7 @@ public class AdminEditChar implements IAdminCommandHandler
 		else if (command.startsWith("admin_unsummon"))
 		{
 			final WorldObject target = activeChar.getTarget();
-			if ((target != null) && target.isSummon())
+			if ((target != null) && isSummon(target))
 			{
 				((Summon) target).unSummon(((Summon) target).getOwner());
 			}
@@ -706,7 +706,7 @@ public class AdminEditChar implements IAdminCommandHandler
 		else if (command.startsWith("admin_summon_setlvl"))
 		{
 			final WorldObject target = activeChar.getTarget();
-			if ((target != null) && target.isPet())
+			if ((target != null) && isPet(target))
 			{
 				final Pet pet = (Pet) target;
 				try
@@ -747,7 +747,7 @@ public class AdminEditChar implements IAdminCommandHandler
 				target = activeChar.getTarget();
 			}
 			
-			if ((target != null) && target.isPet())
+			if ((target != null) && isPet(target))
 			{
 				activeChar.sendPacket(new GMViewItemList(1, (Pet) target));
 			}
@@ -774,7 +774,7 @@ public class AdminEditChar implements IAdminCommandHandler
 				target = activeChar.getTarget();
 			}
 			
-			if (target.isPlayer())
+			if (isPlayer(target))
 			{
 				if (((Player) target).isInParty())
 				{
@@ -818,7 +818,7 @@ public class AdminEditChar implements IAdminCommandHandler
 			try
 			{
 				final WorldObject target = activeChar.getTarget();
-				if ((target == null) || !target.isCharacter())
+				if (!isCreature(target))
 				{
 					activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
 					return false;
@@ -836,7 +836,7 @@ public class AdminEditChar implements IAdminCommandHandler
 			try
 			{
 				final WorldObject target = activeChar.getTarget();
-				if ((target == null) || !target.isCharacter())
+				if (!isCreature(target))
 				{
 					activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
 					return false;
@@ -854,7 +854,7 @@ public class AdminEditChar implements IAdminCommandHandler
 			try
 			{
 				final WorldObject target = activeChar.getTarget();
-				if ((target == null) || !target.isCharacter())
+				if (!isCreature(target))
 				{
 					activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
 					return false;
@@ -871,7 +871,7 @@ public class AdminEditChar implements IAdminCommandHandler
 			try
 			{
 				final WorldObject target = activeChar.getTarget();
-				if ((target == null) || !target.isPlayable())
+				if (!isPlayable(target))
 				{
 					activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
 					return false;
@@ -887,7 +887,7 @@ public class AdminEditChar implements IAdminCommandHandler
 		else if (command.startsWith("admin_setparam"))
 		{
 			final WorldObject target = activeChar.getTarget();
-			if ((target == null) || !target.isCharacter())
+			if (!isCreature(target))
 			{
 				activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
 				return false;
@@ -945,7 +945,7 @@ public class AdminEditChar implements IAdminCommandHandler
 		else if (command.startsWith("admin_unsetparam"))
 		{
 			final WorldObject target = activeChar.getTarget();
-			if ((target == null) || !target.isCharacter())
+			if (!isCreature(target))
 			{
 				activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
 				return false;
@@ -1022,7 +1022,7 @@ public class AdminEditChar implements IAdminCommandHandler
 		if (player == null)
 		{
 			final WorldObject target = activeChar.getTarget();
-			if ((target != null) && target.isPlayer())
+			if ((target != null) && isPlayer(target))
 			{
 				player = (Player) target;
 			}
@@ -1120,7 +1120,7 @@ public class AdminEditChar implements IAdminCommandHandler
 	{
 		final WorldObject target = activeChar.getTarget();
 		Player player = null;
-		if (target.isPlayer())
+		if (isPlayer(target))
 		{
 			player = (Player) target;
 		}
@@ -1154,7 +1154,7 @@ public class AdminEditChar implements IAdminCommandHandler
 			target = activeChar.getTarget();
 		}
 		
-		if ((target != null) && target.isPlayer())
+		if ((target != null) && isPlayer(target))
 		{
 			final Player player = (Player) target;
 			gatherCharacterInfo(activeChar, player, "charedit.htm");
@@ -1552,7 +1552,7 @@ public class AdminEditChar implements IAdminCommandHandler
 		html.replace("%mp%", (int) target.getStatus().getCurrentMp() + "/" + target.getStat().getMaxMp());
 		html.replace("%karma%", Integer.toString(target.getReputation()));
 		html.replace("%race%", target.getTemplate().getRace().toString());
-		if (target.isPet())
+		if (isPet(target))
 		{
 			final int objId = target.getActingPlayer().getObjectId();
 			html.replace("%inv%", " <a action=\"bypass admin_show_pet_inv " + objId + "\">view</a>");
@@ -1561,7 +1561,7 @@ public class AdminEditChar implements IAdminCommandHandler
 		{
 			html.replace("%inv%", "none");
 		}
-		if (target.isPet())
+		if (isPet(target))
 		{
 			html.replace("%food%", ((Pet) target).getCurrentFed() + "/" + ((Pet) target).getPetLevelData().getPetMaxFeed());
 			html.replace("%load%", target.getInventory().getTotalWeight() + "/" + target.getMaxLoad());

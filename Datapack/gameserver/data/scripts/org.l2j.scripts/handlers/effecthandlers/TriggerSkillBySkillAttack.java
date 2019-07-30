@@ -21,8 +21,8 @@ import org.l2j.gameserver.data.xml.impl.SkillData;
 import org.l2j.gameserver.enums.InstanceType;
 import org.l2j.gameserver.handler.ITargetTypeHandler;
 import org.l2j.gameserver.handler.TargetHandler;
-import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.StatsSet;
+import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.effects.AbstractEffect;
 import org.l2j.gameserver.model.events.EventType;
@@ -34,6 +34,8 @@ import org.l2j.gameserver.model.skills.BuffInfo;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.model.skills.SkillCaster;
 import org.l2j.gameserver.model.skills.targets.TargetType;
+
+import static org.l2j.gameserver.util.GameUtils.isCreature;
 
 /**
  * Trigger Skill By Skill Attack effect implementation.
@@ -126,7 +128,7 @@ public final class TriggerSkillBySkillAttack extends AbstractEffect
 			LOGGER.warn("Exception in ITargetTypeHandler.getTarget(): " + e.getMessage(), e);
 		}
 		
-		if ((target != null) && target.isCharacter())
+		if (isCreature(target))
 		{
 			if (_skillLevelScaleTo > 0)
 			{

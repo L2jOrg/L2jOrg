@@ -26,6 +26,8 @@ import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.holders.SkillHolder;
 import org.l2j.gameserver.model.skills.SkillCaster;
 
+import static org.l2j.gameserver.util.GameUtils.isNpc;
+
 public class SupportMagic implements IBypassHandler
 {
 	private static final String[] COMMANDS =
@@ -80,7 +82,7 @@ public class SupportMagic implements IBypassHandler
 	@Override
 	public boolean useBypass(String command, Player activeChar, Creature target)
 	{
-		if (!target.isNpc() || activeChar.isCursedWeaponEquipped())
+		if (!isNpc(target) || activeChar.isCursedWeaponEquipped())
 		{
 			return false;
 		}

@@ -31,6 +31,9 @@ import org.l2j.gameserver.model.stats.Stats;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ExSpawnEmitter;
 
+import static org.l2j.gameserver.util.GameUtils.isNpc;
+import static org.l2j.gameserver.util.GameUtils.isPlayer;
+
 /**
  * Soul Eating effect implementation.
  * @author UnAfraid
@@ -49,7 +52,7 @@ public final class SoulEating extends AbstractEffect
 	@Override
 	public void onStart(Creature effector, Creature effected, Skill skill, Item item)
 	{
-		if (effected.isPlayer())
+		if (isPlayer(effected))
 		{
 			effected.addListener(new ConsumerEventListener(effected, EventType.ON_PLAYABLE_EXP_CHANGED, (OnPlayableExpChanged event) -> onExperienceReceived(event.getActiveChar(), (event.getNewExp() - event.getOldExp())), this));
 		}
@@ -58,7 +61,7 @@ public final class SoulEating extends AbstractEffect
 	@Override
 	public void onExit(Creature effector, Creature effected, Skill skill)
 	{
-		if (effected.isPlayer())
+		if (isPlayer(effected))
 		{
 			effected.removeListenerIf(EventType.ON_PLAYABLE_EXP_CHANGED, listener -> listener.getOwner() == this);
 		}
@@ -73,7 +76,7 @@ public final class SoulEating extends AbstractEffect
 	private void onExperienceReceived(Playable playable, long exp)
 	{
 		// TODO: Verify logic.
-		if (playable.isPlayer() && (exp >= _expNeeded))
+		if (isPlayer(playable) && (exp >= _expNeeded))
 		{
 			final Player player = playable.getActingPlayer();
 			final int maxSouls = (int) player.getStat().getValue(Stats.MAX_SOULS, 0);
@@ -85,7 +88,7 @@ public final class SoulEating extends AbstractEffect
 			
 			player.increaseSouls(1);
 			
-			if ((player.getTarget() != null) && player.getTarget().isNpc())
+			if (isNpc(player.getTarget()))
 			{
 				final Npc npc = (Npc) playable.getTarget();
 				player.broadcastPacket(new ExSpawnEmitter(player, npc), 500);

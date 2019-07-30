@@ -31,6 +31,8 @@ import java.util.Collections;
 import java.util.HashSet;
 import java.util.Set;
 
+import static org.l2j.gameserver.util.GameUtils.isAttackable;
+
 /**
  * Fatal Blow effect implementation.
  * @author Adry_85
@@ -93,7 +95,7 @@ public final class FatalBlow extends AbstractEffect
 			return;
 		}
 
-		if (_overHit && effected.isAttackable())
+		if (_overHit && isAttackable(effected))
 		{
 			((Attackable) effected).overhitEnabled(true);
 		}

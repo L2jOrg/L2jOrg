@@ -26,6 +26,8 @@ import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.model.stats.Formulas;
 
+import static org.l2j.gameserver.util.GameUtils.isAttackable;
+
 /**
  * @author Sdw
  */
@@ -59,7 +61,7 @@ public class DeleteTopAgro extends AbstractEffect
 	@Override
 	public void instant(Creature effector, Creature effected, Skill skill, Item item)
 	{
-		if (!effected.isAttackable())
+		if (!isAttackable(effected))
 		{
 			return;
 		}

@@ -16,9 +16,7 @@
  */
 package handlers.itemhandlers;
 
-import java.util.Map;
-import java.util.concurrent.ConcurrentHashMap;
-
+import ai.AbstractNpcAI;
 import org.l2j.gameserver.enums.PlayerAction;
 import org.l2j.gameserver.handler.IItemHandler;
 import org.l2j.gameserver.instancemanager.CastleManager;
@@ -37,7 +35,10 @@ import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ConfirmDlg;
 
-import ai.AbstractNpcAI;
+import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
+
+import static org.l2j.gameserver.util.GameUtils.isPlayer;
 
 /**
  * Mercenary Ticket Item Handler.
@@ -54,7 +55,7 @@ public final class MercTicket extends AbstractNpcAI implements IItemHandler
 	@Override
 	public boolean useItem(Playable playable, Item item, boolean forceUse)
 	{
-		if (!playable.isPlayer())
+		if (!isPlayer(playable))
 		{
 			playable.sendPacket(SystemMessageId.YOUR_PET_CANNOT_CARRY_THIS_ITEM);
 			return false;

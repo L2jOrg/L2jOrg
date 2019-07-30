@@ -24,6 +24,8 @@ import org.l2j.gameserver.model.holders.PetItemHolder;
 import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.network.SystemMessageId;
 
+import static org.l2j.gameserver.util.GameUtils.isPlayer;
+
 /**
  * @author HorridoJoho, UnAfraid
  */
@@ -32,7 +34,7 @@ public class SummonItems extends ItemSkillsTemplate
 	@Override
 	public boolean useItem(Playable playable, Item item, boolean forceUse)
 	{
-		if (!playable.isPlayer())
+		if (!isPlayer(playable))
 		{
 			playable.sendPacket(SystemMessageId.YOUR_PET_CANNOT_CARRY_THIS_ITEM);
 			return false;

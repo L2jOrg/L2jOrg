@@ -24,6 +24,8 @@ import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.model.skills.targets.TargetType;
 import org.l2j.gameserver.network.SystemMessageId;
 
+import static org.l2j.gameserver.util.GameUtils.isDoor;
+
 /**
  * Target door or treasure chest.
  * @author UnAfraid
@@ -40,7 +42,7 @@ public class DoorTreasure implements ITargetTypeHandler
 	public WorldObject getTarget(Creature activeChar, WorldObject selectedTarget, Skill skill, boolean forceUse, boolean dontMove, boolean sendMessage)
 	{
 		final WorldObject target = activeChar.getTarget();
-		if ((target != null) && (target.isDoor() || (target instanceof Chest)))
+		if ((target != null) && (isDoor(target) || (target instanceof Chest)))
 		{
 			return target;
 		}

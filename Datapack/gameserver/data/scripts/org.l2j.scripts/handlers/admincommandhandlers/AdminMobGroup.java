@@ -18,9 +18,9 @@ package handlers.admincommandhandlers;
 
 import org.l2j.gameserver.data.xml.impl.NpcData;
 import org.l2j.gameserver.handler.IAdminCommandHandler;
-import org.l2j.gameserver.model.World;
 import org.l2j.gameserver.model.MobGroup;
 import org.l2j.gameserver.model.MobGroupTable;
+import org.l2j.gameserver.model.World;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.templates.NpcTemplate;
@@ -29,6 +29,8 @@ import org.l2j.gameserver.network.serverpackets.MagicSkillUse;
 import org.l2j.gameserver.network.serverpackets.SetupGauge;
 import org.l2j.gameserver.util.Broadcast;
 import org.l2j.gameserver.util.BuilderUtil;
+
+import static org.l2j.gameserver.util.GameUtils.isCreature;
 
 /**
  * @author littlecrow Admin commands handler for controllable mobs
@@ -94,7 +96,7 @@ public class AdminMobGroup implements IAdminCommandHandler
 		}
 		else if (command.startsWith("admin_mobgroup_attack"))
 		{
-			if (activeChar.getTarget().isCharacter())
+			if (isCreature(activeChar.getTarget()))
 			{
 				final Creature target = (Creature) activeChar.getTarget();
 				attack(command, activeChar, target);

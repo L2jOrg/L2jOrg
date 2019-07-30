@@ -167,19 +167,6 @@ public class Monster extends Attackable {
         return _minionList;
     }
 
-    @Override
-    public boolean isMonster() {
-        return true;
-    }
-
-    /**
-     * @return true if this Monster (or its master) is registered in WalkingManager
-     */
-    @Override
-    public boolean isWalker() {
-        return ((_master == null) ? super.isWalker() : _master.isWalker());
-    }
-
     /**
      * @return {@code true} if this Monster is not raid minion, master state otherwise.
      */

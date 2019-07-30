@@ -33,6 +33,8 @@ import org.l2j.gameserver.util.Broadcast;
 
 import java.util.List;
 
+import static org.l2j.gameserver.util.GameUtils.isPlayer;
+
 /**
  * @author -Nemesiss-
  */
@@ -41,7 +43,7 @@ public class FishShots implements IItemHandler
 	@Override
 	public boolean useItem(Playable playable, Item item, boolean forceUse)
 	{
-		if (!playable.isPlayer())
+		if (!isPlayer(playable))
 		{
 			playable.sendPacket(SystemMessageId.YOUR_PET_CANNOT_CARRY_THIS_ITEM);
 			return false;

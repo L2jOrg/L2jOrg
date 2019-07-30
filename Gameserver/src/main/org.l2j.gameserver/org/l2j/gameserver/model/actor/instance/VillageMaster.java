@@ -328,7 +328,7 @@ public class VillageMaster extends Folk {
 
     @Override
     public boolean isAutoAttackable(Creature attacker) {
-        if (attacker.isMonster()) {
+        if (GameUtils.isMonster(attacker)) {
             return true;
         }
 

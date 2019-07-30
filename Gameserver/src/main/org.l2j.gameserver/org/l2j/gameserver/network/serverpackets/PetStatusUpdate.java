@@ -6,6 +6,8 @@ import org.l2j.gameserver.model.actor.instance.Servitor;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
 
+import static org.l2j.gameserver.util.GameUtils.isPet;
+
 /**
  * This class ...
  *
@@ -18,7 +20,7 @@ public class PetStatusUpdate extends ServerPacket {
 
     public PetStatusUpdate(Summon summon) {
         _summon = summon;
-        if (_summon.isPet()) {
+        if (isPet(_summon)) {
             final Pet pet = (Pet) _summon;
             _curFed = pet.getCurrentFed(); // how fed it is
             _maxFed = pet.getMaxFed(); // max fed it can be

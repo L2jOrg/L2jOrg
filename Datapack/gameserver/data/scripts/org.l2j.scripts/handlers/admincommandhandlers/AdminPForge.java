@@ -32,6 +32,9 @@ import java.util.Collection;
 import java.util.LinkedList;
 import java.util.StringTokenizer;
 
+import static org.l2j.gameserver.util.GameUtils.isCreature;
+import static org.l2j.gameserver.util.GameUtils.isPlayable;
+
 /**
  * This class handles commands for gm to forge packets
  * @author Maktakien, HorridoJoho
@@ -466,7 +469,7 @@ public final class AdminPForge implements IAdminCommandHandler
 							case "$tboid":
 							{
 								target = activeChar.getTarget();
-								if ((target != null) && target.isPlayable())
+								if (isPlayable(target))
 								{
 									boat = target.getActingPlayer().getBoat();
 									if (boat != null)
@@ -483,7 +486,7 @@ public final class AdminPForge implements IAdminCommandHandler
 							case "$ttitle":
 							{
 								target = activeChar.getTarget();
-								if ((target != null) && target.isCharacter())
+								if (isCreature(target))
 								{
 									value = ((Creature) target).getTitle();
 								}

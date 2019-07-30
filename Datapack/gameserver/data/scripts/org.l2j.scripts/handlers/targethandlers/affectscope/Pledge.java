@@ -16,20 +16,22 @@
  */
 package handlers.targethandlers.affectscope;
 
-import java.util.concurrent.atomic.AtomicInteger;
-import java.util.function.Consumer;
-import java.util.function.Predicate;
-
 import org.l2j.gameserver.handler.AffectObjectHandler;
 import org.l2j.gameserver.handler.IAffectObjectHandler;
 import org.l2j.gameserver.handler.IAffectScopeHandler;
-import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.World;
+import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.Playable;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.model.skills.targets.AffectScope;
+
+import java.util.concurrent.atomic.AtomicInteger;
+import java.util.function.Consumer;
+import java.util.function.Predicate;
+
+import static org.l2j.gameserver.util.GameUtils.isPlayable;
 
 /**
  * @author Nik
@@ -43,7 +45,7 @@ public class Pledge implements IAffectScopeHandler
 		final int affectRange = skill.getAffectRange();
 		final int affectLimit = skill.getAffectLimit();
 		
-		if (target.isPlayable())
+		if (isPlayable(target))
 		{
 			final Playable playable = (Playable) target;
 			final Player player = playable.getActingPlayer();

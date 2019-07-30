@@ -23,6 +23,8 @@ import org.l2j.gameserver.model.effects.AbstractEffect;
 import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.skills.Skill;
 
+import static org.l2j.gameserver.util.GameUtils.isAttackable;
+
 /**
  * Add Hate effect implementation.
  * @author Adry_85
@@ -52,7 +54,7 @@ public final class AddHate extends AbstractEffect
 			effector = effector.getSummoner();
 		}
 		
-		if (!effected.isAttackable())
+		if (!isAttackable(effected))
 		{
 			return;
 		}

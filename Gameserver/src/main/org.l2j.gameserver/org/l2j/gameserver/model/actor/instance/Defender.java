@@ -44,7 +44,7 @@ public class Defender extends Attackable {
     @Override
     public boolean isAutoAttackable(Creature attacker) {
         // Attackable during siege by all except defenders
-        if (!attacker.isPlayable()) {
+        if (!GameUtils.isPlayable(attacker)) {
             return false;
         }
 
@@ -166,7 +166,7 @@ public class Defender extends Attackable {
         }
 
         if (!(attacker instanceof Defender)) {
-            if ((damage == 0) && (aggro <= 1) && (attacker.isPlayable())) {
+            if ((damage == 0) && (aggro <= 1) && (GameUtils.isPlayable(attacker))) {
                 final Player player = attacker.getActingPlayer();
                 // Check if siege is in progress
                 if (((_fort != null) && _fort.getZone().isActive()) || ((_castle != null) && _castle.getZone().isActive())) {

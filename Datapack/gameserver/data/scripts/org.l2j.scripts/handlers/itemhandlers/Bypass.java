@@ -23,6 +23,8 @@ import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.network.serverpackets.NpcHtmlMessage;
 
+import static org.l2j.gameserver.util.GameUtils.isPlayer;
+
 /**
  * @author JIV
  */
@@ -31,7 +33,7 @@ public class Bypass implements IItemHandler
 	@Override
 	public boolean useItem(Playable playable, Item item, boolean forceUse)
 	{
-		if (!playable.isPlayer())
+		if (!isPlayer(playable))
 		{
 			return false;
 		}

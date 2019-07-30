@@ -21,8 +21,8 @@ import org.l2j.gameserver.ai.CtrlIntention;
 import org.l2j.gameserver.enums.Movie;
 import org.l2j.gameserver.enums.Team;
 import org.l2j.gameserver.handler.IAdminCommandHandler;
-import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.World;
+import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Chest;
@@ -41,6 +41,7 @@ import java.util.Arrays;
 import java.util.StringTokenizer;
 
 import static org.l2j.commons.util.Util.isDigit;
+import static org.l2j.gameserver.util.GameUtils.*;
 
 /**
  * This class handles following admin commands:
@@ -164,7 +165,7 @@ public class AdminEffects implements IAdminCommandHandler
 		}
 		else if (command.startsWith("admin_setinvis"))
 		{
-			if ((activeChar.getTarget() == null) || !activeChar.getTarget().isCharacter())
+			if (!isCreature(activeChar.getTarget()))
 			{
 				activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
 				return false;
@@ -173,7 +174,7 @@ public class AdminEffects implements IAdminCommandHandler
 			target.setInvisible(!target.isInvisible());
 			BuilderUtil.sendSysMessage(activeChar, "You've made " + target.getName() + " " + (target.isInvisible() ? "invisible" : "visible") + ".");
 			
-			if (target.isPlayer())
+			if (isPlayer(target))
 			{
 				((Player) target).broadcastUserInfo();
 			}
@@ -270,8 +271,8 @@ public class AdminEffects implements IAdminCommandHandler
 			try
 			{
 				final WorldObject target = activeChar.getTarget();
-				Creature player = null;
-				if (target.isCharacter())
+				Creature player;
+				if (isCreature(target))
 				{
 					player = (Creature) target;
 					if (type.equals("1"))
@@ -305,7 +306,7 @@ public class AdminEffects implements IAdminCommandHandler
 			{
 				final WorldObject target = activeChar.getTarget();
 				Creature player = null;
-				if (target.isCharacter())
+				if (isCreature(target))
 				{
 					player = (Creature) target;
 					if (type.equals("1"))
@@ -330,7 +331,7 @@ public class AdminEffects implements IAdminCommandHandler
 			{
 				final WorldObject target = activeChar.getTarget();
 				Creature player = null;
-				if (target.isCharacter())
+				if (isCreature(target))
 				{
 					player = (Creature) target;
 					player.getEffectList().startAbnormalVisualEffect(AbnormalVisualEffect.BIG_HEAD);
@@ -346,7 +347,7 @@ public class AdminEffects implements IAdminCommandHandler
 			{
 				final WorldObject target = activeChar.getTarget();
 				Creature player = null;
-				if (target.isCharacter())
+				if (isCreature(target))
 				{
 					player = (Creature) target;
 					player.getEffectList().stopAbnormalVisualEffect(AbnormalVisualEffect.BIG_HEAD);
@@ -389,7 +390,7 @@ public class AdminEffects implements IAdminCommandHandler
 			{
 				final Team team = Team.valueOf(st.nextToken().toUpperCase());
 				Creature target = null;
-				if (activeChar.getTarget().isCharacter())
+				if (isCreature(activeChar.getTarget()))
 				{
 					target = (Creature) activeChar.getTarget();
 				}
@@ -570,7 +571,7 @@ public class AdminEffects implements IAdminCommandHandler
 				if (obj == null) {
 					obj = activeChar;
 				}
-				if (!obj.isCharacter()) {
+				if (!isCreature(obj)) {
 					activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
 				}
 				else
@@ -650,7 +651,7 @@ public class AdminEffects implements IAdminCommandHandler
 	 */
 	private boolean performAbnormalVisualEffect(AbnormalVisualEffect ave, WorldObject target)
 	{
-		if (target.isCharacter())
+		if (isCreature(target))
 		{
 			final Creature character = (Creature) target;
 			if (!character.getEffectList().hasAbnormalVisualEffect(ave))
@@ -670,19 +671,19 @@ public class AdminEffects implements IAdminCommandHandler
 	{
 		try
 		{
-			if (target.isCharacter())
+			if (isCreature(target))
 			{
 				if (target instanceof Chest)
 				{
 					activeChar.sendPacket(SystemMessageId.NOTHING_HAPPENED);
 					return false;
 				}
-				if ((target.isNpc()) && ((action < 1) || (action > 20)))
+				if ((isNpc(target)) && ((action < 1) || (action > 20)))
 				{
 					activeChar.sendPacket(SystemMessageId.NOTHING_HAPPENED);
 					return false;
 				}
-				if ((target.isPlayer()) && ((action < 2) || ((action > 18) && (action != SocialAction.LEVEL_UP))))
+				if ((isPlayer(target)) && ((action < 2) || ((action > 18) && (action != SocialAction.LEVEL_UP))))
 				{
 					activeChar.sendPacket(SystemMessageId.NOTHING_HAPPENED);
 					return false;

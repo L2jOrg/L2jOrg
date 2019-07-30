@@ -25,6 +25,8 @@ import org.l2j.gameserver.model.skills.targets.TargetType;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.util.MathUtil;
 
+import static org.l2j.gameserver.util.GameUtils.isCreature;
+
 /**
  * Any friendly selected target or enemy if force use. Works on dead targets or doors as well.
  * @author Nik
@@ -45,7 +47,7 @@ public class Target implements ITargetTypeHandler
 			return null;
 		}
 		
-		if (!selectedTarget.isCharacter())
+		if (!isCreature(selectedTarget))
 		{
 			if (sendMessage)
 			{

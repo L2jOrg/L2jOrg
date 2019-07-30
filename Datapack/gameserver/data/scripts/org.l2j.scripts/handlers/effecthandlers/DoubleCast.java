@@ -29,6 +29,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import static org.l2j.gameserver.util.GameUtils.isPlayer;
+
 /**
  * Double Casting effect implementation.
  * @author Nik
@@ -59,7 +61,7 @@ public final class DoubleCast extends AbstractEffect
 	@Override
 	public void onStart(Creature effector, Creature effected, Skill skill, Item item)
 	{
-		if (effected.isPlayer())
+		if (isPlayer(effected))
 		{
 			for (SkillHolder holder : TOGGLE_SKILLS)
 			{
@@ -77,7 +79,7 @@ public final class DoubleCast extends AbstractEffect
 	@Override
 	public void onExit(Creature effector, Creature effected, Skill skill)
 	{
-		if (effected.isPlayer())
+		if (isPlayer(effected))
 		{
 			_addedToggles.computeIfPresent(effected.getObjectId(), (k, v) ->
 			{

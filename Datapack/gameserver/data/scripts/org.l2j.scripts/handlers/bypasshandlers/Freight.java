@@ -25,6 +25,8 @@ import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.PackageToList;
 import org.l2j.gameserver.network.serverpackets.WareHouseWithdrawalList;
 
+import static org.l2j.gameserver.util.GameUtils.isNpc;
+
 /**
  * @author UnAfraid
  */
@@ -39,7 +41,7 @@ public class Freight implements IBypassHandler
 	@Override
 	public boolean useBypass(String command, Player activeChar, Creature target)
 	{
-		if (!target.isNpc())
+		if (!isNpc(target))
 		{
 			return false;
 		}

@@ -1,19 +1,3 @@
-/*
- * This file is part of the L2J Mobius project.
- * 
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- * 
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
- * General Public License for more details.
- * 
- * You should have received a copy of the GNU General Public License
- * along with this program. If not, see <http://www.gnu.org/licenses/>.
- */
 package handlers.effecthandlers;
 
 import org.l2j.gameserver.enums.TrapAction;
@@ -26,6 +10,9 @@ import org.l2j.gameserver.model.events.impl.character.player.OnTrapAction;
 import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.network.SystemMessageId;
+
+import static org.l2j.gameserver.util.GameUtils.isPlayer;
+import static org.l2j.gameserver.util.GameUtils.isTrap;
 
 /**
  * Trap Remove effect implementation.
@@ -54,7 +41,7 @@ public final class TrapRemove extends AbstractEffect
 	@Override
 	public void instant(Creature effector, Creature effected, Skill skill, Item item)
 	{
-		if (!effected.isTrap())
+		if (!isTrap(effected))
 		{
 			return;
 		}
@@ -67,7 +54,7 @@ public final class TrapRemove extends AbstractEffect
 		final Trap trap = (Trap) effected;
 		if (!trap.canBeSeen(effector))
 		{
-			if (effector.isPlayer())
+			if (isPlayer(effector))
 			{
 				effector.sendPacket(SystemMessageId.INVALID_TARGET);
 			}
@@ -83,7 +70,7 @@ public final class TrapRemove extends AbstractEffect
 		EventDispatcher.getInstance().notifyEventAsync(new OnTrapAction(trap, effector, TrapAction.TRAP_DISARMED), trap);
 		
 		trap.unSummon();
-		if (effector.isPlayer())
+		if (isPlayer(effector))
 		{
 			effector.sendPacket(SystemMessageId.THE_TRAP_DEVICE_HAS_BEEN_STOPPED);
 		}

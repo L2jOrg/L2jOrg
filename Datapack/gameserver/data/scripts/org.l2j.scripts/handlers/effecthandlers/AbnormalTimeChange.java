@@ -16,7 +16,6 @@
  */
 package handlers.effecthandlers;
 
-import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.effects.AbstractEffect;
@@ -25,11 +24,14 @@ import org.l2j.gameserver.model.skills.AbnormalType;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.network.serverpackets.AbnormalStatusUpdate;
 import org.l2j.gameserver.network.serverpackets.ExAbnormalStatusUpdateFromTarget;
+import org.l2j.gameserver.util.GameUtils;
 
 import java.util.Collections;
 import java.util.HashSet;
 import java.util.Objects;
 import java.util.Set;
+
+import static org.l2j.gameserver.util.GameUtils.isPlayer;
 
 /**
  * @author Sdw
@@ -139,12 +141,12 @@ public class AbnormalTimeChange extends AbstractEffect
 		// @formatter:off
 		effected.getStatus().getStatusListener().stream()
 			.filter(Objects::nonNull)
-			.filter(WorldObject::isPlayer)
+			.filter(GameUtils::isPlayer)
 			.map(Creature::getActingPlayer)
 			.forEach(upd::sendTo);
 		// @formatter:on
 		
-		if (effected.isPlayer() && (effected.getTarget() == effected))
+		if (isPlayer(effected) && (effected.getTarget() == effected))
 		{
 			effected.sendPacket(upd);
 		}

@@ -13,6 +13,7 @@ import org.l2j.gameserver.network.serverpackets.ActionFailed;
 
 import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;
+import static org.l2j.gameserver.util.GameUtils.isPlayable;
 
 /**
  * TODO: This class is a copy of AttackRequest, we should get proper structure for both.
@@ -46,7 +47,7 @@ public final class Attack extends ClientPacket {
         }
 
         // Avoid Attacks in Boat.
-        if (activeChar.isPlayable() && activeChar.isInBoat()) {
+        if (isPlayable(activeChar) && activeChar.isInBoat()) {
             activeChar.sendPacket(SystemMessageId.THIS_IS_NOT_ALLOWED_WHILE_RIDING_A_FERRY_OR_BOAT);
             activeChar.sendPacket(ActionFailed.STATIC_PACKET);
             return;

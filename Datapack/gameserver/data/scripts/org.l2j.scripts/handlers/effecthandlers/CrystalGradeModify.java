@@ -23,6 +23,8 @@ import org.l2j.gameserver.model.effects.AbstractEffect;
 import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.skills.Skill;
 
+import static org.l2j.gameserver.util.GameUtils.isPlayer;
+
 /**
  * Crystal Grade Modify effect implementation.
  * @author Zoey76
@@ -39,7 +41,7 @@ public final class CrystalGradeModify extends AbstractEffect
 	@Override
 	public boolean canStart(Creature effector, Creature effected, Skill skill)
 	{
-		return effected.isPlayer();
+		return isPlayer(effected);
 	}
 	
 	@Override

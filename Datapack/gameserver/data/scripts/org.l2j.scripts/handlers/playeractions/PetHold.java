@@ -23,6 +23,8 @@ import org.l2j.gameserver.model.actor.instance.Pet;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.SystemMessageId;
 
+import static org.l2j.gameserver.util.GameUtils.isPet;
+
 /**
  * Pet hold position player action handler.
  * @author Nik
@@ -32,7 +34,7 @@ public final class PetHold implements IPlayerActionHandler
 	@Override
 	public void useAction(Player activeChar, ActionDataHolder data, boolean ctrlPressed, boolean shiftPressed)
 	{
-		if ((activeChar.getPet() == null) || !activeChar.getPet().isPet())
+		if (!isPet(activeChar.getPet()))
 		{
 			activeChar.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_A_PET);
 			return;

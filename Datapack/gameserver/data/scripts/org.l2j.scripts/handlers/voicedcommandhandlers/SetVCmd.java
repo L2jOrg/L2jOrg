@@ -21,6 +21,8 @@ import org.l2j.gameserver.handler.IVoicedCommandHandler;
 import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.instance.Player;
 
+import static org.l2j.gameserver.util.GameUtils.isPlayer;
+
 /**
  * @author Zoey76
  */
@@ -39,7 +41,7 @@ public class SetVCmd implements IVoicedCommandHandler
 		if (command.equals("set"))
 		{
 			final WorldObject target = activeChar.getTarget();
-			if ((target == null) || !target.isPlayer())
+			if (!isPlayer(target))
 			{
 				return false;
 			}

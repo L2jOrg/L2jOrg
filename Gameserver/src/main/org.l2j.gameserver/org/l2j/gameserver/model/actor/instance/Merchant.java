@@ -25,6 +25,7 @@ import org.l2j.gameserver.model.buylist.ProductList;
 import org.l2j.gameserver.network.serverpackets.ActionFailed;
 import org.l2j.gameserver.network.serverpackets.BuyList;
 import org.l2j.gameserver.network.serverpackets.ExBuySellList;
+import org.l2j.gameserver.util.GameUtils;
 
 /**
  * This class ...
@@ -39,7 +40,7 @@ public class Merchant extends Folk {
 
     @Override
     public boolean isAutoAttackable(Creature attacker) {
-        if (attacker.isMonster()) {
+        if (GameUtils.isMonster(attacker)) {
             return true;
         }
 

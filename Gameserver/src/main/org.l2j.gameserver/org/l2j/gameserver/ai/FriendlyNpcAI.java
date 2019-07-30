@@ -9,6 +9,7 @@ import org.l2j.gameserver.model.actor.Attackable;
 import org.l2j.gameserver.model.actor.Creature;
 
 import static org.l2j.gameserver.ai.CtrlIntention.*;
+import static org.l2j.gameserver.util.GameUtils.isCreature;
 import static org.l2j.gameserver.util.MathUtil.calculateDistance2D;
 import static org.l2j.gameserver.util.MathUtil.isInsideRadius2D;
 
@@ -68,7 +69,7 @@ public class FriendlyNpcAI extends AttackableAI {
         }
 
         final WorldObject target = getTarget();
-        final Creature originalAttackTarget = (target != null) && target.isCharacter() ? (Creature) target : null;
+        final Creature originalAttackTarget = isCreature(target) ? (Creature) target : null;
         // Check if target is dead or if timeout is expired to stop this attack
         if ((originalAttackTarget == null) || originalAttackTarget.isAlikeDead()) {
             // Stop hating this target after the attack timeout or if target is dead

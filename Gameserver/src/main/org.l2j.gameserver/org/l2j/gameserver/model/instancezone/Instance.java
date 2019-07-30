@@ -36,6 +36,7 @@ import java.util.concurrent.ScheduledFuture;
 import java.util.concurrent.TimeUnit;
 import java.util.stream.Collectors;
 
+import static org.l2j.gameserver.util.GameUtils.isNpc;
 import static org.l2j.gameserver.util.GameUtils.isPlayer;
 
 /**
@@ -651,7 +652,7 @@ public final class Instance implements IIdentifiable, INamable {
                     EventDispatcher.getInstance().notifyEventAsync(new OnInstanceLeave(player, this), _template);
                 }
             }
-        } else if (object.isNpc()) {
+        } else if (isNpc(object)) {
             final Npc npc = (Npc) object;
             if (enter) {
                 addNpc(npc);

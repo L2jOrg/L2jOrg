@@ -27,6 +27,9 @@ import org.l2j.gameserver.network.serverpackets.FlyToLocation;
 import org.l2j.gameserver.network.serverpackets.FlyToLocation.FlyType;
 import org.l2j.gameserver.network.serverpackets.ValidateLocation;
 
+import static org.l2j.gameserver.util.GameUtils.isMonster;
+import static org.l2j.gameserver.util.GameUtils.isPlayable;
+
 /**
  * An effect that pulls effected target back to the effector.
  * @author Nik
@@ -68,7 +71,7 @@ public final class PullBack extends AbstractEffect
 		}
 
 		// Prevent pulling NPCs.
-		if (!effected.isPlayable() && !effected.isMonster())
+		if (!isPlayable(effected) && !isMonster(effected))
 		{
 			return;
 		}

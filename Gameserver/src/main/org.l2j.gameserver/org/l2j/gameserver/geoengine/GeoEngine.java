@@ -20,6 +20,9 @@ import java.nio.MappedByteBuffer;
 import java.nio.channels.FileChannel;
 import java.util.List;
 
+import static org.l2j.gameserver.util.GameUtils.isCreature;
+import static org.l2j.gameserver.util.GameUtils.isDoor;
+
 
 /**
  * @author Hasha
@@ -326,7 +329,7 @@ public class GeoEngine {
      * @return {@code boolean} : True if origin can see target
      */
     public final boolean canSeeTarget(WorldObject origin, WorldObject target) {
-        if (target.isDoor() || (target.isCharacter() && ((Creature) target).isFlying())) {
+        if (isDoor(target) || (isCreature(target) && ((Creature) target).isFlying())) {
             return true;
         }
 
@@ -371,12 +374,12 @@ public class GeoEngine {
 
         // get origin and target height, real height = collision height * 2
         double oheight = 0;
-        if (origin.isCharacter()) {
+        if (isCreature(origin)) {
             oheight = ((Creature) origin).getCollisionHeight() * 2;
         }
 
         double theight = 0;
-        if (target.isCharacter()) {
+        if (isCreature(target)) {
             theight = ((Creature) target).getCollisionHeight() * 2;
         }
 
@@ -432,7 +435,7 @@ public class GeoEngine {
 
         // get origin and target height, real height = collision height * 2
         double oheight = 0;
-        if (origin.isCharacter()) {
+        if (isCreature(origin)) {
             oheight = ((Creature) origin).getTemplate().getCollisionHeight();
         }
 

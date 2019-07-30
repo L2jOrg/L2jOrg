@@ -25,6 +25,8 @@ import org.l2j.gameserver.network.serverpackets.ActionFailed;
 import org.l2j.gameserver.network.serverpackets.WareHouseDepositList;
 import org.l2j.gameserver.network.serverpackets.WareHouseWithdrawalList;
 
+import static org.l2j.gameserver.util.GameUtils.isNpc;
+
 public class PrivateWarehouse implements IBypassHandler
 {
 	private static final String[] COMMANDS =
@@ -41,7 +43,7 @@ public class PrivateWarehouse implements IBypassHandler
 			return false;
 		}
 		
-		if (!target.isNpc())
+		if (!isNpc(target))
 		{
 			return false;
 		}

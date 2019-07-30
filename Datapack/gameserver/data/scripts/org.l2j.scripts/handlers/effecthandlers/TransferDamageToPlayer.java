@@ -23,6 +23,9 @@ import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.model.stats.Stats;
 
+import static org.l2j.gameserver.util.GameUtils.isPlayable;
+import static org.l2j.gameserver.util.GameUtils.isPlayer;
+
 /**
  * Transfer Damage effect implementation.
  * @author UnAfraid
@@ -37,7 +40,7 @@ public final class TransferDamageToPlayer extends AbstractStatAddEffect
 	@Override
 	public void onExit(Creature effector, Creature effected, Skill skill)
 	{
-		if (effected.isPlayable() && effector.isPlayer())
+		if (isPlayable(effected) && isPlayer(effector))
 		{
 			((Playable) effected).setTransferDamageTo(null);
 		}
@@ -46,7 +49,7 @@ public final class TransferDamageToPlayer extends AbstractStatAddEffect
 	@Override
 	public void onStart(Creature effector, Creature effected, Skill skill, Item item)
 	{
-		if (effected.isPlayable() && effector.isPlayer())
+		if (isPlayable(effected) && isPlayer(effector))
 		{
 			((Playable) effected).setTransferDamageTo(effector.getActingPlayer());
 		}

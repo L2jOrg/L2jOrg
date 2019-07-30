@@ -27,6 +27,8 @@ import org.l2j.gameserver.network.serverpackets.ShopPreviewList;
 
 import java.util.StringTokenizer;
 
+import static org.l2j.gameserver.util.GameUtils.isNpc;
+
 public class Wear implements IBypassHandler
 {
 	private static final String[] COMMANDS =
@@ -37,7 +39,7 @@ public class Wear implements IBypassHandler
 	@Override
 	public boolean useBypass(String command, Player activeChar, Creature target)
 	{
-		if (!target.isNpc())
+		if (!isNpc(target))
 		{
 			return false;
 		}

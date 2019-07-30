@@ -14,6 +14,7 @@ import org.l2j.gameserver.network.serverpackets.ExAskCoupleAction;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
 import org.l2j.gameserver.taskmanager.AttackStanceTaskManager;
 
+import static org.l2j.gameserver.util.GameUtils.isPlayer;
 import static org.l2j.gameserver.util.MathUtil.calculateDistance2D;
 
 /**
@@ -106,7 +107,7 @@ public final class SocialAction implements IPlayerActionHandler
 			return;
 		}
 		
-		if (!target.isPlayer())
+		if (!isPlayer(target))
 		{
 			player.sendPacket(SystemMessageId.INVALID_TARGET);
 			return;

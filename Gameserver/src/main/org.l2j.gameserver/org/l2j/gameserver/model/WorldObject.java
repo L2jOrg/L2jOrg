@@ -223,88 +223,6 @@ public abstract class WorldObject extends ListenersContainer implements IIdentif
     }
 
     /**
-     * Verify if object is instance of Attackable.
-     *
-     * @return {@code true} if object is instance of Attackable, {@code false} otherwise
-     */
-    @Deprecated
-    public boolean isAttackable() {
-        return false;
-    }
-
-    /**
-     * Verify if object is instance of Creature.
-     *
-     * @return {@code true} if object is instance of Creature, {@code false} otherwise
-     */
-    @Deprecated
-    public boolean isCharacter() {
-        return false;
-    }
-
-    /**
-     * Verify if object is instance of Door.
-     *
-     * @return {@code true} if object is instance of Door, {@code false} otherwise
-     */
-    @Deprecated
-    public boolean isDoor() {
-        return false;
-    }
-
-    /**
-     * Verify if object is instance of Monster.
-     *
-     * @return {@code true} if object is instance of Monster, {@code false} otherwise
-     */
-    @Deprecated
-    public boolean isMonster() {
-        return false;
-    }
-
-    /**
-     * Verify if object is instance of Npc.
-     *
-     * @return {@code true} if object is instance of Npc, {@code false} otherwise
-     */
-    @Deprecated
-    public boolean isNpc() {
-        return false;
-    }
-
-    /**
-     * Verify if object is instance of Pet.
-     *
-     * @return {@code true} if object is instance of Pet, {@code false} otherwise
-     */
-    @Deprecated
-    public boolean isPet() {
-        return false;
-    }
-
-    /**
-     * Verify if object is instance of Player.
-     *
-     * @return {@code true} if object is instance of Player, {@code false} otherwise
-     */
-    @Deprecated
-    public boolean isPlayer() {
-        return false;
-    }
-
-    /**
-     * Verify if object is instance of Playable.
-     *
-     * @return {@code true} if object is instance of Playable, {@code false} otherwise
-     *
-     */
-    @Deprecated
-    public boolean isPlayable() {
-        return false;
-    }
-
-
-    /**
      * Verify if object is instance of Servitor.
      *
      * @return {@code true} if object is instance of Servitor, {@code false} otherwise
@@ -313,35 +231,6 @@ public abstract class WorldObject extends ListenersContainer implements IIdentif
         return false;
     }
 
-    /**
-     * Verify if object is instance of Summon.
-     *
-     * @return {@code true} if object is instance of Summon, {@code false} otherwise
-     */
-    @Deprecated
-    public boolean isSummon() {
-        return false;
-    }
-
-    /**
-     * Verify if object is instance of Trap.
-     *
-     * @return {@code true} if object is instance of Trap, {@code false} otherwise
-     */
-    @Deprecated
-    public boolean isTrap() {
-        return false;
-    }
-
-    /**
-     * Verify if object is instance of Item.
-     *
-     * @return {@code true} if object is instance of Item, {@code false} otherwise
-     */
-    @Deprecated
-    public boolean isItem() {
-        return false;
-    }
 
     /**
      * Verifies if the object is a walker NPC.

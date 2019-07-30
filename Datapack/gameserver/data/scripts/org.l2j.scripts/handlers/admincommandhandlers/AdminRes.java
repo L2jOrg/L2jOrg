@@ -26,6 +26,8 @@ import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.taskmanager.DecayTaskManager;
 import org.l2j.gameserver.util.BuilderUtil;
 
+import static org.l2j.gameserver.util.GameUtils.isPlayer;
+
 /**
  * This class handles following admin commands: - res = resurrects target Creature
  * @version $Revision: 1.2.4.5 $ $Date: 2005/04/11 10:06:06 $
@@ -92,10 +94,7 @@ public class AdminRes implements IAdminCommandHandler
 				{
 					final int radius = Integer.parseInt(resParam);
 					
-					World.getInstance().forEachVisibleObjectInRange(activeChar, Player.class, radius, knownPlayer ->
-					{
-						doResurrect(knownPlayer);
-					});
+					World.getInstance().forEachVisibleObjectInRange(activeChar, Player.class, radius, this::doResurrect);
 					
 					BuilderUtil.sendSysMessage(activeChar, "Resurrected all players within a " + radius + " unit radius.");
 					return;
@@ -141,7 +140,7 @@ public class AdminRes implements IAdminCommandHandler
 				
 				World.getInstance().forEachVisibleObjectInRange(activeChar, Creature.class, radius, knownChar ->
 				{
-					if (!knownChar.isPlayer() && !(knownChar instanceof ControllableMob))
+					if (!isPlayer(knownChar) && !(knownChar instanceof ControllableMob))
 					{
 						doResurrect(knownChar);
 					}
@@ -156,7 +155,7 @@ public class AdminRes implements IAdminCommandHandler
 			return;
 		}
 		
-		if ((obj == null) || (obj.isPlayer()) || (obj instanceof ControllableMob))
+		if ((obj == null) || (isPlayer(obj)) || (obj instanceof ControllableMob))
 		{
 			activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
 			return;
@@ -173,7 +172,7 @@ public class AdminRes implements IAdminCommandHandler
 		}
 		
 		// If the target is a player, then restore the XP lost on death.
-		if (targetChar.isPlayer())
+		if (isPlayer(targetChar))
 		{
 			((Player) targetChar).restoreExp(100.0);
 		}

@@ -27,6 +27,7 @@ import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.model.stats.Formulas;
 import org.l2j.gameserver.model.stats.Stats;
 
+import static org.l2j.gameserver.util.GameUtils.isAttackable;
 import static org.l2j.gameserver.util.GameUtils.isPlayer;
 
 /**
@@ -82,7 +83,7 @@ public final class PhysicalAttackSaveHp extends AbstractEffect
 			effected.stopFakeDeath(true);
 		}
 		
-		if (_overHit && effected.isAttackable())
+		if (_overHit && isAttackable(effected))
 		{
 			((Attackable) effected).overhitEnabled(true);
 		}

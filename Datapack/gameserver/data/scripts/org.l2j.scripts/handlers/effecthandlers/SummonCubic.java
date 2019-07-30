@@ -31,6 +31,8 @@ import org.l2j.gameserver.network.serverpackets.ExUserInfoCubic;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import static org.l2j.gameserver.util.GameUtils.isPlayer;
+
 
 /**
  * Summon Cubic effect implementation.
@@ -58,7 +60,7 @@ public final class SummonCubic extends AbstractEffect
 	@Override
 	public void instant(Creature effector, Creature effected, Skill skill, Item item)
 	{
-		if (!effected.isPlayer() || effected.isAlikeDead() || effected.getActingPlayer().inObserverMode())
+		if (!isPlayer(effected) || effected.isAlikeDead() || effected.getActingPlayer().inObserverMode())
 		{
 			return;
 		}

@@ -33,6 +33,7 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ScheduledFuture;
 
 import static org.l2j.commons.configuration.Configurator.getSettings;
+import static org.l2j.gameserver.util.GameUtils.isMonster;
 import static org.l2j.gameserver.util.MathUtil.calculateDistance3D;
 import static org.l2j.gameserver.util.MathUtil.isInsideRadius2D;
 
@@ -176,7 +177,7 @@ public final class WalkingManager extends GameXmlReader {
     public boolean isOnWalk(Npc npc) {
         Monster monster = null;
 
-        if (npc.isMonster()) {
+        if (isMonster(npc)) {
             if (((Monster) npc).getLeader() == null) {
                 monster = (Monster) npc;
             } else {
@@ -330,7 +331,7 @@ public final class WalkingManager extends GameXmlReader {
     public void stopMoving(Npc npc, boolean suspend, boolean stoppedByAttack) {
         Monster monster = null;
 
-        if (npc.isMonster()) {
+        if (isMonster(npc)) {
             if (((Monster) npc).getLeader() == null) {
                 monster = (Monster) npc;
             } else {

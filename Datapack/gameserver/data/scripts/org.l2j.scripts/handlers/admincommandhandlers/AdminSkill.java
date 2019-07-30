@@ -21,9 +21,8 @@ import org.l2j.gameserver.data.xml.impl.SkillData;
 import org.l2j.gameserver.data.xml.impl.SkillTreesData;
 import org.l2j.gameserver.handler.IAdminCommandHandler;
 import org.l2j.gameserver.model.Clan;
-import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.SkillLearn;
-import org.l2j.gameserver.model.actor.Creature;
+import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.network.SystemMessageId;
@@ -37,6 +36,9 @@ import org.slf4j.LoggerFactory;
 
 import java.util.Map;
 import java.util.StringTokenizer;
+
+import static org.l2j.gameserver.util.GameUtils.isCreature;
+import static org.l2j.gameserver.util.GameUtils.isPlayer;
 
 /**
  * This class handles following admin commands:
@@ -170,7 +172,7 @@ public class AdminSkill implements IAdminCommandHandler
 		else if (command.equals("admin_remove_all_skills"))
 		{
 			final WorldObject target = activeChar.getTarget();
-			if ((target == null) || !target.isPlayer())
+			if (!isPlayer(target))
 			{
 				activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
 				return false;
@@ -246,9 +248,9 @@ public class AdminSkill implements IAdminCommandHandler
 					{
 						skill.forEachTargetAffected(activeChar, target, o ->
 						{
-							if (o.isCharacter())
+							if (isCreature(o))
 							{
-								skill.activateSkill(activeChar, (Creature) o);
+								skill.activateSkill(activeChar, o);
 							}
 						});
 					}
@@ -279,7 +281,7 @@ public class AdminSkill implements IAdminCommandHandler
 	private void adminGiveAllSkills(Player activeChar, boolean includedByFs)
 	{
 		final WorldObject target = activeChar.getTarget();
-		if ((target == null) || !target.isPlayer())
+		if (!isPlayer(target))
 		{
 			activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
 			return;
@@ -300,7 +302,7 @@ public class AdminSkill implements IAdminCommandHandler
 	private void adminGiveClanSkills(Player activeChar, boolean includeSquad)
 	{
 		final WorldObject target = activeChar.getTarget();
-		if ((target == null) || !target.isPlayer())
+		if ((target == null) || !isPlayer(target))
 		{
 			activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
 			return;
@@ -347,7 +349,7 @@ public class AdminSkill implements IAdminCommandHandler
 	private void removeSkillsPage(Player activeChar, int page)
 	{
 		final WorldObject target = activeChar.getTarget();
-		if ((target == null) || !target.isPlayer())
+		if ((target == null) || !isPlayer(target))
 		{
 			activeChar.sendPacket(SystemMessageId.THAT_IS_AN_INCORRECT_TARGET);
 			return;
@@ -403,7 +405,7 @@ public class AdminSkill implements IAdminCommandHandler
 	private void showMainPage(Player activeChar)
 	{
 		final WorldObject target = activeChar.getTarget();
-		if ((target == null) || !target.isPlayer())
+		if ((target == null) || !isPlayer(target))
 		{
 			activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
 			return;
@@ -423,7 +425,7 @@ public class AdminSkill implements IAdminCommandHandler
 	private void adminGetSkills(Player activeChar)
 	{
 		final WorldObject target = activeChar.getTarget();
-		if ((target == null) || !target.isPlayer())
+		if ((target == null) || !isPlayer(target))
 		{
 			activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
 			return;
@@ -457,7 +459,7 @@ public class AdminSkill implements IAdminCommandHandler
 	private void adminResetSkills(Player activeChar)
 	{
 		final WorldObject target = activeChar.getTarget();
-		if ((target == null) || !target.isPlayer())
+		if ((target == null) || !isPlayer(target))
 		{
 			activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
 			return;
@@ -502,7 +504,7 @@ public class AdminSkill implements IAdminCommandHandler
 	private void adminAddSkill(Player activeChar, String val)
 	{
 		final WorldObject target = activeChar.getTarget();
-		if ((target == null) || !target.isPlayer())
+		if ((target == null) || !isPlayer(target))
 		{
 			activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
 			showMainPage(activeChar);
@@ -555,7 +557,7 @@ public class AdminSkill implements IAdminCommandHandler
 	private void adminRemoveSkill(Player activeChar, int idval)
 	{
 		final WorldObject target = activeChar.getTarget();
-		if ((target == null) || !target.isPlayer())
+		if ((target == null) || !isPlayer(target))
 		{
 			activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
 			return;
@@ -586,7 +588,7 @@ public class AdminSkill implements IAdminCommandHandler
 	private void adminAddClanSkill(Player activeChar, int id, int level)
 	{
 		final WorldObject target = activeChar.getTarget();
-		if ((target == null) || !target.isPlayer())
+		if ((target == null) || !isPlayer(target))
 		{
 			activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
 			showMainPage(activeChar);

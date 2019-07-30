@@ -30,6 +30,7 @@ import org.l2j.gameserver.model.effects.EffectFlag;
 import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.skills.Skill;
 
+import static org.l2j.gameserver.util.GameUtils.*;
 import static org.l2j.gameserver.util.MathUtil.calculateAngleFrom;
 import static org.l2j.gameserver.util.MathUtil.convertHeadingToDegree;
 
@@ -60,7 +61,7 @@ public final class Fear extends AbstractEffect
 			return false;
 		}
 
-		return effected.isPlayer() || effected.isSummon() || effected.isAttackable() && !(effected instanceof Defender || effected instanceof SiegeFlag || effected.getTemplate().getRace() == Race.SIEGE_WEAPON);
+		return isPlayer(effected) || isSummon(effected) || isAttackable(effected) && !(effected instanceof Defender || effected instanceof SiegeFlag || effected.getTemplate().getRace() == Race.SIEGE_WEAPON);
 	}
 	
 	@Override
@@ -86,7 +87,7 @@ public final class Fear extends AbstractEffect
 	@Override
 	public void onExit(Creature effector, Creature effected, Skill skill)
 	{
-		if (!effected.isPlayer())
+		if (!isPlayer(effected))
 		{
 			effected.getAI().notifyEvent(CtrlEvent.EVT_THINK);
 		}

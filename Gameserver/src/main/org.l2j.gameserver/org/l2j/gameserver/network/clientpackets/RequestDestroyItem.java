@@ -21,6 +21,8 @@ import org.slf4j.LoggerFactory;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 
+import static org.l2j.gameserver.util.GameUtils.isItem;
+
 /**
  * This class ...
  *
@@ -75,7 +77,7 @@ public final class RequestDestroyItem extends ClientPacket {
             // gm can destroy other player items
             if (activeChar.isGM()) {
                 final WorldObject obj = World.getInstance().findObject(_objectId);
-                if (obj.isItem()) {
+                if (isItem(obj)) {
                     if (_count > ((Item) obj).getCount()) {
                         count = ((Item) obj).getCount();
                     }

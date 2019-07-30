@@ -13,6 +13,7 @@ import org.l2j.gameserver.model.skills.SkillCaster;
 import java.util.concurrent.Future;
 
 import static org.l2j.gameserver.ai.CtrlIntention.*;
+import static org.l2j.gameserver.util.GameUtils.isCreature;
 import static org.l2j.gameserver.util.MathUtil.isInsideRadius3D;
 
 public class SummonAI extends PlayableAI implements Runnable {
@@ -65,7 +66,7 @@ public class SummonAI extends PlayableAI implements Runnable {
 
     private void thinkAttack() {
         final WorldObject target = getTarget();
-        final Creature attackTarget = (target != null) && target.isCharacter() ? (Creature) target : null;
+        final Creature attackTarget = isCreature(target) ? (Creature) target : null;
 
         if (checkTargetLostOrDead(attackTarget)) {
             setTarget(null);
@@ -250,7 +251,7 @@ public class SummonAI extends PlayableAI implements Runnable {
     @Override
     protected void onIntentionCast(Skill skill, WorldObject target, Item item, boolean forceUse, boolean dontMove) {
         if (getIntention() == AI_INTENTION_ATTACK) {
-            _lastAttack = (getTarget() != null) && getTarget().isCharacter() ? (Creature) getTarget() : null;
+            _lastAttack = (getTarget() != null) && isCreature(getTarget()) ? (Creature) getTarget() : null;
         } else {
             _lastAttack = null;
         }
@@ -259,7 +260,7 @@ public class SummonAI extends PlayableAI implements Runnable {
 
     private void startAvoidTask() {
         if (_avoidTask == null) {
-            _avoidTask = ThreadPoolManager.getInstance().scheduleAtFixedRate(this, 100, 100);
+            _avoidTask = ThreadPoolManager.scheduleAtFixedRate(this, 100, 100);
         }
     }
 

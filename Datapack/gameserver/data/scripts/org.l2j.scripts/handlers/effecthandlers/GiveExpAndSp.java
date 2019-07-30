@@ -8,6 +8,8 @@ import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
 
+import static org.l2j.gameserver.util.GameUtils.isPlayer;
+
 /**
  * Give XP and SP effect implementation.
  * @author quangnguyen
@@ -32,7 +34,7 @@ public final class GiveExpAndSp extends AbstractEffect
     @Override
     public void instant(Creature effector, Creature effected, Skill skill, Item item)
     {
-        if (!effector.isPlayer() || !effected.isPlayer() || effected.isAlikeDead())
+        if (!isPlayer(effector) || !isPlayer(effected) || effected.isAlikeDead())
         {
             return;
         }

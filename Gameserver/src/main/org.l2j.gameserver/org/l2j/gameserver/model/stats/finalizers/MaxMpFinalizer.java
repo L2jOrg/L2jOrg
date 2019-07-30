@@ -25,6 +25,7 @@ import org.l2j.gameserver.model.stats.Stats;
 
 import java.util.Optional;
 
+import static org.l2j.gameserver.util.GameUtils.isPet;
 import static org.l2j.gameserver.util.GameUtils.isPlayer;
 
 /**
@@ -36,7 +37,7 @@ public class MaxMpFinalizer implements IStatsFunction {
         throwIfPresent(base);
 
         double baseValue = creature.getStat().getValue(stat, calcWeaponPlusBaseValue(creature, stat));
-        if (creature.isPet()) {
+        if (isPet(creature)) {
             final Pet pet = (Pet) creature;
             baseValue += pet.getPetLevelData().getPetMaxMP();
         } else if (isPlayer(creature)) {

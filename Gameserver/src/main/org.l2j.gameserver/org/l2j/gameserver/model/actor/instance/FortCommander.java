@@ -96,7 +96,7 @@ public class FortCommander extends Defender {
                             break;
                         }
                         case 2: {
-                            if (attacker.isSummon()) {
+                            if (GameUtils.isSummon(attacker)) {
                                 attacker = ((Summon) attacker).getOwner();
                             }
                             npcString = NpcStringId.EVERYONE_CONCENTRATE_YOUR_ATTACKS_ON_S1_SHOW_THE_ENEMY_YOUR_RESOLVE;
@@ -110,7 +110,7 @@ public class FortCommander extends Defender {
                     if (npcString != null) {
                         broadcastSay(ChatType.NPC_SHOUT, npcString, npcString.getParamCount() == 1 ? attacker.getName() : null);
                         setCanTalk(false);
-                        ThreadPoolManager.getInstance().schedule(new ScheduleTalkTask(), 10000);
+                        ThreadPoolManager.schedule(new ScheduleTalkTask(), 10000);
                     }
                 }
             }

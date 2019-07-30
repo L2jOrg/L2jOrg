@@ -22,6 +22,8 @@ import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.model.skills.targets.TargetType;
 
+import static org.l2j.gameserver.util.GameUtils.isPlayer;
+
 /**
  * Target automatically one of my summons.
  * @author Nik
@@ -37,7 +39,7 @@ public class Summon implements ITargetTypeHandler
 	@Override
 	public WorldObject getTarget(Creature activeChar, WorldObject selectedTarget, Skill skill, boolean forceUse, boolean dontMove, boolean sendMessage)
 	{
-		if (activeChar.isPlayer() && activeChar.hasSummon())
+		if (isPlayer(activeChar) && activeChar.hasSummon())
 		{
 			return activeChar.getActingPlayer().getAnyServitor();
 		}

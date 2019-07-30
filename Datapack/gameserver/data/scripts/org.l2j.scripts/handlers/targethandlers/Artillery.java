@@ -24,6 +24,8 @@ import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.model.skills.targets.TargetType;
 import org.l2j.gameserver.network.SystemMessageId;
 
+import static org.l2j.gameserver.util.GameUtils.isDoor;
+
 /**
  * Target siege doors and walls.
  * @author Nik
@@ -40,7 +42,7 @@ public class Artillery implements ITargetTypeHandler
 	public WorldObject getTarget(Creature activeChar, WorldObject selectedTarget, Skill skill, boolean forceUse, boolean dontMove, boolean sendMessage)
 	{
 		final WorldObject target = activeChar.getTarget();
-		if ((target != null) && target.isDoor())
+		if (isDoor(target))
 		{
 			final Door targetDoor = (Door) target;
 			if (!targetDoor.isDead() && targetDoor.isAutoAttackable(activeChar) && targetDoor.isEnemy())

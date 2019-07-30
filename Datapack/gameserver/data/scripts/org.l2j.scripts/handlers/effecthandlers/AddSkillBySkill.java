@@ -23,6 +23,8 @@ import org.l2j.gameserver.model.effects.AbstractEffect;
 import org.l2j.gameserver.model.holders.SkillHolder;
 import org.l2j.gameserver.model.skills.Skill;
 
+import static org.l2j.gameserver.util.GameUtils.isPlayer;
+
 /**
  * @author Mobius
  */
@@ -42,13 +44,13 @@ public class AddSkillBySkill extends AbstractEffect
 	@Override
 	public boolean canPump(Creature effector, Creature effected, Skill skill)
 	{
-		return effector.isPlayer() && (effector.getSkillLevel(_existingSkillId) == _existingSkillLevel);
+		return isPlayer(effector) && (effector.getSkillLevel(_existingSkillId) == _existingSkillLevel);
 	}
 	
 	@Override
 	public void pump(Creature effected, Skill skill)
 	{
-		if (effected.isPlayer())
+		if (isPlayer(effected))
 		{
 			((Player) effected).addSkill(_addedSkill.getSkill(), false);
 		}

@@ -24,6 +24,8 @@ import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.network.SystemMessageId;
 
+import static org.l2j.gameserver.util.GameUtils.isSummon;
+
 /**
  * @author Mobius
  */
@@ -36,7 +38,7 @@ public final class SacrificeSummon extends AbstractEffect
 	@Override
 	public boolean canStart(Creature effector, Creature effected, Skill skill)
 	{
-		return effected.isSummon();
+		return isSummon(effected);
 	}
 	
 	@Override

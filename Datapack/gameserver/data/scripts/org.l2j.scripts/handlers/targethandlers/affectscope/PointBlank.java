@@ -33,6 +33,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 import java.util.function.Consumer;
 import java.util.function.Predicate;
 
+import static org.l2j.gameserver.util.GameUtils.isPlayable;
 import static org.l2j.gameserver.util.MathUtil.calculateDistance2D;
 import static org.l2j.gameserver.util.MathUtil.isInsideRadius3D;
 
@@ -80,7 +81,7 @@ public class PointBlank implements IAffectScopeHandler
 		// Check and add targets.
 		if (skill.getTargetType() == TargetType.GROUND)
 		{
-			if (activeChar.isPlayable())
+			if (isPlayable(activeChar))
 			{
 				final Location worldPosition = activeChar.getActingPlayer().getCurrentSkillWorldPosition();
 				if (worldPosition != null)

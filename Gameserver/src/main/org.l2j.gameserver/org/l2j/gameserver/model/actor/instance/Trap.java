@@ -183,11 +183,6 @@ public final class Trap extends Npc {
         return !canBeSeen(attacker);
     }
 
-    @Override
-    public boolean isTrap() {
-        return true;
-    }
-
     /**
      * Checks is triggered
      *
@@ -220,7 +215,7 @@ public final class Trap extends Npc {
             OlympiadGameManager.getInstance().notifyCompetitorDamage(getOwner(), damage);
         }
 
-        if (target.isHpBlocked() && !target.isNpc()) {
+        if (target.isHpBlocked() && !GameUtils.isNpc(target)) {
             _owner.sendPacket(SystemMessageId.THE_ATTACK_HAS_BEEN_BLOCKED);
         } else {
             final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_INFLICTED_S3_DAMAGE_ON_C2);
@@ -241,7 +236,7 @@ public final class Trap extends Npc {
 
     public void setDetected(Creature detector) {
         if (_isInArena) {
-            if (detector.isPlayable()) {
+            if (GameUtils.isPlayable(detector)) {
                 sendInfo(detector.getActingPlayer());
             }
             return;
@@ -256,7 +251,7 @@ public final class Trap extends Npc {
         // Notify to scripts
         EventDispatcher.getInstance().notifyEventAsync(new OnTrapAction(this, detector, TrapAction.TRAP_DETECTED), this);
 
-        if (detector.isPlayable()) {
+        if (GameUtils.isPlayable(detector)) {
             sendInfo(detector.getActingPlayer());
         }
     }

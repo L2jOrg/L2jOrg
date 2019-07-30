@@ -27,6 +27,8 @@ import org.l2j.gameserver.network.serverpackets.ExVoteSystemInfo;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
 import org.l2j.gameserver.network.serverpackets.UserInfo;
 
+import static org.l2j.gameserver.util.GameUtils.isPlayer;
+
 /**
  * Give Recommendation effect implementation.
  * @author NosBit
@@ -53,7 +55,7 @@ public final class GiveRecommendation extends AbstractEffect
 	@Override
 	public void instant(Creature effector, Creature effected, Skill skill, Item item)
 	{
-		final Player target = (effected != null) && effected.isPlayer() ? (Player) effected : null;
+		final Player target = isPlayer(effected) ? (Player) effected : null;
 		if (target != null)
 		{
 			int recommendationsGiven = _amount;
@@ -74,7 +76,7 @@ public final class GiveRecommendation extends AbstractEffect
 			}
 			else
 			{
-				final Player player = (effector != null) && effector.isPlayer() ? (Player) effector : null;
+				final Player player = isPlayer(effector) ? (Player) effector : null;
 				if (player != null)
 				{
 					player.sendPacket(SystemMessageId.NOTHING_HAPPENED);

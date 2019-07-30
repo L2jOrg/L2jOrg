@@ -25,6 +25,8 @@ import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.model.stats.Stats;
 import org.l2j.gameserver.network.SystemMessageId;
 
+import static org.l2j.gameserver.util.GameUtils.isPlayer;
+
 /**
  * Focus Souls effect implementation.
  * @author nBd, Adry_85
@@ -47,7 +49,7 @@ public final class FocusSouls extends AbstractEffect
 	@Override
 	public void instant(Creature effector, Creature effected, Skill skill, Item item)
 	{
-		if (!effected.isPlayer() || effected.isAlikeDead())
+		if (!isPlayer(effected) || effected.isAlikeDead())
 		{
 			return;
 		}

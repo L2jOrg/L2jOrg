@@ -17,11 +17,13 @@
 package handlers.skillconditionhandlers;
 
 import org.l2j.gameserver.enums.SkillConditionAffectType;
-import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.StatsSet;
+import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.skills.ISkillCondition;
 import org.l2j.gameserver.model.skills.Skill;
+
+import static org.l2j.gameserver.util.GameUtils.isPlayer;
 
 /**
  * @author UnAfraid
@@ -42,11 +44,11 @@ public class OpPkcountSkillCondition implements ISkillCondition
 		{
 			case CASTER:
 			{
-				return caster.isPlayer() && (caster.getActingPlayer().getPkKills() > 0);
+				return isPlayer(caster) && (caster.getActingPlayer().getPkKills() > 0);
 			}
 			case TARGET:
 			{
-				if ((target != null) && target.isPlayer())
+				if (isPlayer(target))
 				{
 					return target.getActingPlayer().getPkKills() > 0;
 				}

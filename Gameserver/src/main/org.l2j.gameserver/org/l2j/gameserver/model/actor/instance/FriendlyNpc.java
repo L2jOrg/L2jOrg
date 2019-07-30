@@ -30,6 +30,7 @@ import org.l2j.gameserver.model.events.impl.character.npc.OnAttackableKill;
 import org.l2j.gameserver.model.events.impl.character.npc.OnNpcFirstTalk;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.network.serverpackets.ActionFailed;
+import org.l2j.gameserver.util.GameUtils;
 
 /**
  * @author GKR, Sdw
@@ -43,13 +44,8 @@ public class FriendlyNpc extends Attackable {
     }
 
     @Override
-    public boolean isAttackable() {
-        return false;
-    }
-
-    @Override
     public boolean isAutoAttackable(Creature attacker) {
-        return _isAutoAttackable && !attacker.isPlayable() && !(attacker instanceof FriendlyNpc);
+        return _isAutoAttackable && !GameUtils.isPlayable(attacker) && !(attacker instanceof FriendlyNpc);
     }
 
     @Override
@@ -59,18 +55,18 @@ public class FriendlyNpc extends Attackable {
 
     @Override
     public void addDamage(Creature attacker, int damage, Skill skill) {
-        if (!attacker.isPlayable() && !(attacker instanceof FriendlyNpc)) {
+        if (!GameUtils.isPlayable(attacker) && !(attacker instanceof FriendlyNpc)) {
             super.addDamage(attacker, damage, skill);
         }
 
-        if (attacker.isAttackable()) {
+        if (GameUtils.isAttackable(attacker)) {
             EventDispatcher.getInstance().notifyEventAsync(new OnAttackableAttack(null, this, damage, skill, false), this);
         }
     }
 
     @Override
     public void addDamageHate(Creature attacker, int damage, int aggro) {
-        if (!attacker.isPlayable() && !(attacker instanceof FriendlyNpc)) {
+        if (!GameUtils.isPlayable(attacker) && !(attacker instanceof FriendlyNpc)) {
             super.addDamageHate(attacker, damage, aggro);
         }
     }
@@ -82,7 +78,7 @@ public class FriendlyNpc extends Attackable {
             return false;
         }
 
-        if (killer != null && killer.isAttackable()) {
+        if (GameUtils.isAttackable(killer)) {
             // Delayed notification
             EventDispatcher.getInstance().notifyEventAsync(new OnAttackableKill(null, this, false), this);
         }

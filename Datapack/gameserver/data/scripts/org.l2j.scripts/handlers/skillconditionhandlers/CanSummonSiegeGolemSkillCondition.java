@@ -18,8 +18,8 @@ package handlers.skillconditionhandlers;
 
 import org.l2j.gameserver.instancemanager.CastleManager;
 import org.l2j.gameserver.instancemanager.FortDataManager;
-import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.StatsSet;
+import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.entity.Castle;
@@ -27,6 +27,8 @@ import org.l2j.gameserver.model.entity.Fort;
 import org.l2j.gameserver.model.skills.ISkillCondition;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.network.SystemMessageId;
+
+import static org.l2j.gameserver.util.GameUtils.isPlayer;
 
 /**
  * @author Sdw
@@ -41,7 +43,7 @@ public class CanSummonSiegeGolemSkillCondition implements ISkillCondition
 	@Override
 	public boolean canUse(Creature caster, Skill skill, WorldObject target)
 	{
-		if ((caster == null) || !caster.isPlayer())
+		if (!isPlayer(caster))
 		{
 			return false;
 		}

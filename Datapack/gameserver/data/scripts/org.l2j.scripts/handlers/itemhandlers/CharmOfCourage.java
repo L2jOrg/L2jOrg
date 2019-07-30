@@ -24,6 +24,8 @@ import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.EtcStatusUpdate;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
 
+import static org.l2j.gameserver.util.GameUtils.isPlayer;
+
 /**
  * Charm Of Courage Handler
  * @author Zealar
@@ -34,7 +36,7 @@ public class CharmOfCourage implements IItemHandler
 	public boolean useItem(Playable playable, Item item, boolean forceUse)
 	{
 		
-		if (!playable.isPlayer())
+		if (!isPlayer(playable))
 		{
 			return false;
 		}

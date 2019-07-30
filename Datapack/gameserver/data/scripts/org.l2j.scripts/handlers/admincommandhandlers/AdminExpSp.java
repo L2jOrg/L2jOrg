@@ -16,8 +16,6 @@
  */
 package handlers.admincommandhandlers;
 
-import java.util.StringTokenizer;
-
 import org.l2j.gameserver.data.xml.impl.ClassListData;
 import org.l2j.gameserver.handler.IAdminCommandHandler;
 import org.l2j.gameserver.model.WorldObject;
@@ -25,6 +23,10 @@ import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.NpcHtmlMessage;
 import org.l2j.gameserver.util.BuilderUtil;
+
+import java.util.StringTokenizer;
+
+import static org.l2j.gameserver.util.GameUtils.isPlayer;
 
 /**
  * This class handles following admin commands:
@@ -89,7 +91,7 @@ public class AdminExpSp implements IAdminCommandHandler
 	{
 		final WorldObject target = activeChar.getTarget();
 		Player player = null;
-		if ((target != null) && target.isPlayer())
+		if (isPlayer(target))
 		{
 			player = (Player) target;
 		}
@@ -112,7 +114,7 @@ public class AdminExpSp implements IAdminCommandHandler
 	{
 		final WorldObject target = activeChar.getTarget();
 		Player player = null;
-		if ((target != null) && target.isPlayer())
+		if (isPlayer(target))
 		{
 			player = (Player) target;
 		}
@@ -155,7 +157,7 @@ public class AdminExpSp implements IAdminCommandHandler
 	{
 		final WorldObject target = activeChar.getTarget();
 		Player player = null;
-		if ((target != null) && target.isPlayer())
+		if ((target != null) && isPlayer(target))
 		{
 			player = (Player) target;
 		}

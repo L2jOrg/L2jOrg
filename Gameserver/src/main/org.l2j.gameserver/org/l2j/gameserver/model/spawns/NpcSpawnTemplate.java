@@ -32,6 +32,7 @@ import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;
 import static org.l2j.commons.util.Util.isNullOrEmpty;
 import static org.l2j.commons.util.Util.zeroIfNullOrElse;
+import static org.l2j.gameserver.util.GameUtils.isMonster;
 
 
 /**
@@ -303,7 +304,7 @@ public class NpcSpawnTemplate implements Cloneable, IParameterized<StatsSet> {
         if (saveInDB) {
             if (!DBSpawnManager.getInstance().isDefined(id)) {
                 final Npc spawnedNpc = DBSpawnManager.getInstance().addNewSpawn(spawn, true);
-                if ((spawnedNpc != null) && spawnedNpc.isMonster() && (_minions != null)) {
+                if (isMonster(spawnedNpc) && (_minions != null)) {
                     ((Monster) spawnedNpc).getMinionList().spawnMinions(_minions);
                 }
 
@@ -311,7 +312,7 @@ public class NpcSpawnTemplate implements Cloneable, IParameterized<StatsSet> {
             }
         } else {
             final Npc npc = spawn.doSpawn(_spawnAnimation);
-            if (npc.isMonster() && (_minions != null)) {
+            if (isMonster(npc) && (_minions != null)) {
                 ((Monster) npc).getMinionList().spawnMinions(_minions);
             }
             _spawnedNpcs.add(npc);

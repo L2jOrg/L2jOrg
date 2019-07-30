@@ -30,6 +30,8 @@ import org.l2j.gameserver.model.skills.Skill;
 import java.util.HashSet;
 import java.util.Set;
 
+import static org.l2j.gameserver.util.GameUtils.isPlayer;
+
 /**
  * Block Action effect implementation.
  * @author BiggBoss
@@ -50,7 +52,7 @@ public final class BlockAction extends AbstractEffect
 	@Override
 	public boolean canStart(Creature effector, Creature effected, Skill skill)
 	{
-		return (effected != null) && effected.isPlayer();
+		return isPlayer(effected);
 	}
 	
 	@Override

@@ -24,6 +24,8 @@ import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.util.BuilderUtil;
 
 import static org.l2j.commons.util.Util.isDigit;
+import static org.l2j.gameserver.util.GameUtils.isCreature;
+import static org.l2j.gameserver.util.GameUtils.isPlayer;
 
 /**
  * @author Mobius
@@ -48,7 +50,7 @@ public class AdminTransform implements IAdminCommandHandler
 		else if (command.startsWith("admin_untransform"))
 		{
 			final WorldObject obj = activeChar.getTarget() == null ? activeChar : activeChar.getTarget();
-			if (!obj.isCharacter() || !((Creature) obj).isTransformed())
+			if (!isCreature(obj) || !((Creature) obj).isTransformed())
 			{
 				activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
 				return false;
@@ -59,7 +61,7 @@ public class AdminTransform implements IAdminCommandHandler
 		else if (command.startsWith("admin_transform"))
 		{
 			final WorldObject obj = activeChar.getTarget();
-			if ((obj == null) || !obj.isPlayer())
+			if (!isPlayer(obj))
 			{
 				activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
 				return false;

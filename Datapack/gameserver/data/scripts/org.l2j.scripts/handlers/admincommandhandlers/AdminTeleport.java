@@ -9,10 +9,10 @@ import org.l2j.gameserver.geoengine.GeoEngine;
 import org.l2j.gameserver.handler.IAdminCommandHandler;
 import org.l2j.gameserver.instancemanager.DBSpawnManager;
 import org.l2j.gameserver.instancemanager.MapRegionManager;
+import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.Spawn;
 import org.l2j.gameserver.model.World;
 import org.l2j.gameserver.model.WorldObject;
-import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.GrandBoss;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -29,6 +29,8 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.util.NoSuchElementException;
 import java.util.StringTokenizer;
+
+import static org.l2j.gameserver.util.GameUtils.isPlayer;
 
 /**
  * This class handles following admin commands: - show_moves - show_teleport - teleport_to_character - move_to - teleport_character
@@ -277,7 +279,7 @@ public class AdminTeleport implements IAdminCommandHandler
 			else
 			{
 				final WorldObject target = activeChar.getTarget();
-				if ((target != null) && target.isPlayer())
+				if (isPlayer(target))
 				{
 					teleportHome(target.getActingPlayer());
 				}
@@ -363,7 +365,7 @@ public class AdminTeleport implements IAdminCommandHandler
 	{
 		final WorldObject target = activeChar.getTarget();
 		Player player = null;
-		if ((target != null) && target.isPlayer())
+		if ((target != null) && isPlayer(target))
 		{
 			player = (Player) target;
 		}
@@ -383,7 +385,7 @@ public class AdminTeleport implements IAdminCommandHandler
 	{
 		final WorldObject target = activeChar.getTarget();
 		Player player = null;
-		if ((target != null) && target.isPlayer())
+		if ((target != null) && isPlayer(target))
 		{
 			player = (Player) target;
 		}
@@ -442,7 +444,7 @@ public class AdminTeleport implements IAdminCommandHandler
 	
 	private void teleportToCharacter(Player activeChar, WorldObject target)
 	{
-		if ((target == null) || !target.isPlayer())
+		if ((target == null) || !isPlayer(target))
 		{
 			activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
 			return;

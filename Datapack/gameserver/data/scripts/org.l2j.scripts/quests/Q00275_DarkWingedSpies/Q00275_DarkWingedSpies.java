@@ -19,14 +19,16 @@ package quests.Q00275_DarkWingedSpies;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.ai.CtrlIntention;
 import org.l2j.gameserver.enums.Race;
-import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.Attackable;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.quest.Quest;
 import org.l2j.gameserver.model.quest.QuestState;
 import org.l2j.gameserver.model.quest.State;
 import org.l2j.gameserver.util.GameUtils;
+
+import static org.l2j.gameserver.util.GameUtils.isPlayer;
 
 /**
  * Dark Winged Spies (275)
@@ -114,7 +116,7 @@ public final class Q00275_DarkWingedSpies extends Quest
 	@Override
 	public String onSeeCreature(Npc npc, Creature creature, boolean isSummon)
 	{
-		if (creature.isPlayer())
+		if (isPlayer(creature))
 		{
 			npc.setRunning();
 			((Attackable) npc).addDamageHate(creature, 0, 1);

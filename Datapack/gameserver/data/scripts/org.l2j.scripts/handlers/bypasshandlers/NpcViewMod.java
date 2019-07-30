@@ -23,9 +23,9 @@ import org.l2j.gameserver.datatables.ItemTable;
 import org.l2j.gameserver.enums.AttributeType;
 import org.l2j.gameserver.enums.DropType;
 import org.l2j.gameserver.handler.IBypassHandler;
-import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.Spawn;
 import org.l2j.gameserver.model.World;
+import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.Attackable;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.Npc;
@@ -34,13 +34,15 @@ import org.l2j.gameserver.model.holders.DropHolder;
 import org.l2j.gameserver.model.items.ItemTemplate;
 import org.l2j.gameserver.model.stats.Stats;
 import org.l2j.gameserver.network.serverpackets.NpcHtmlMessage;
-import org.l2j.gameserver.util.HtmlUtil;
 import org.l2j.gameserver.util.GameUtils;
+import org.l2j.gameserver.util.HtmlUtil;
 
 import java.text.DecimalFormat;
 import java.util.List;
 import java.util.StringTokenizer;
 import java.util.concurrent.TimeUnit;
+
+import static org.l2j.gameserver.util.GameUtils.isAttackable;
 
 /**
  * @author NosBit
@@ -310,7 +312,7 @@ public class NpcViewMod implements IBypassHandler
 		
 		final StringBuilder sb = new StringBuilder();
 		
-		if (npc.isAttackable())
+		if (isAttackable(npc))
 		{
 			((Attackable) npc).getAggroList().values().forEach(a ->
 			{

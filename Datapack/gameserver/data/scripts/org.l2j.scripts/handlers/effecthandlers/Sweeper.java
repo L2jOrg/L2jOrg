@@ -16,17 +16,20 @@
  */
 package handlers.effecthandlers;
 
-import java.util.Collection;
-
 import org.l2j.gameserver.model.Party;
 import org.l2j.gameserver.model.StatsSet;
-import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.Attackable;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.effects.AbstractEffect;
 import org.l2j.gameserver.model.holders.ItemHolder;
 import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.skills.Skill;
+
+import java.util.Collection;
+
+import static org.l2j.gameserver.util.GameUtils.isAttackable;
+import static org.l2j.gameserver.util.GameUtils.isPlayer;
 
 /**
  * Sweeper effect implementation.
@@ -47,7 +50,7 @@ public final class Sweeper extends AbstractEffect
 	@Override
 	public void instant(Creature effector, Creature effected, Skill skill, Item item)
 	{
-		if (!effector.isPlayer() || !effected.isAttackable())
+		if (!isPlayer(effector) || !isAttackable(effected))
 		{
 			return;
 		}

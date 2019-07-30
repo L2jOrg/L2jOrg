@@ -7,6 +7,8 @@ import org.l2j.gameserver.model.entity.Duel;
 import org.l2j.gameserver.model.stats.Stats;
 import org.l2j.gameserver.util.GameUtils;
 
+import static org.l2j.gameserver.util.GameUtils.isPlayable;
+
 public class SummonStatus extends PlayableStatus {
     public SummonStatus(Summon activeChar) {
         super(activeChar);
@@ -40,7 +42,7 @@ public class SummonStatus extends PlayableStatus {
                             membersInRange++;
                         }
                     }
-                    if (attacker.isPlayable() && (caster.getCurrentCp() > 0)) {
+                    if (isPlayable(attacker) && (caster.getCurrentCp() > 0)) {
                         if (caster.getCurrentCp() > transferDmg) {
                             caster.getStatus().reduceCp(transferDmg);
                         } else {
@@ -59,7 +61,7 @@ public class SummonStatus extends PlayableStatus {
             int transferDmg = ((int) value * (int) getActiveChar().getStat().getValue(Stats.TRANSFER_DAMAGE_TO_PLAYER, 0)) / 100;
             transferDmg = Math.min((int) caster.getCurrentHp() - 1, transferDmg);
             if (transferDmg > 0) {
-                if (attacker.isPlayable() && (caster.getCurrentCp() > 0)) {
+                if (isPlayable(attacker) && (caster.getCurrentCp() > 0)) {
                     if (caster.getCurrentCp() > transferDmg) {
                         caster.getStatus().reduceCp(transferDmg);
                     } else {

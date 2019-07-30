@@ -28,6 +28,8 @@ import org.l2j.gameserver.model.zone.ZoneId;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.util.MathUtil;
 
+import static org.l2j.gameserver.util.GameUtils.*;
+
 /**
  * Target dead player or pet.
  * @author Nik
@@ -49,12 +51,12 @@ public class PcBody implements ITargetTypeHandler
 			return null;
 		}
 		
-		if (!selectedTarget.isCharacter())
+		if (!isCreature(selectedTarget))
 		{
 			return null;
 		}
 		
-		if (!selectedTarget.isPlayer() && !selectedTarget.isPet())
+		if (!isPlayer(selectedTarget) && !isPet(selectedTarget))
 		{
 			if (sendMessage)
 			{
@@ -82,7 +84,7 @@ public class PcBody implements ITargetTypeHandler
 				}
 				
 				// check target is not in a active siege zone
-				if (target.isPlayer() && target.isInsideZone(ZoneId.SIEGE) && !target.getActingPlayer().isInSiege())
+				if (isPlayer(target) && target.isInsideZone(ZoneId.SIEGE) && !target.getActingPlayer().isInSiege())
 				{
 					if (sendMessage)
 					{

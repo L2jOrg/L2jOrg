@@ -5,6 +5,8 @@ import org.l2j.gameserver.model.actor.Summon;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.SystemMessageId;
 
+import static org.l2j.gameserver.util.GameUtils.isPet;
+
 /**
  * This class ...
  *
@@ -26,11 +28,8 @@ public final class RequestChangePetName extends ClientPacket {
         }
 
         final Summon pet = activeChar.getPet();
-        if (pet == null) {
-            return;
-        }
 
-        if (!pet.isPet()) {
+        if (!isPet(pet)) {
             activeChar.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_A_PET);
             return;
         }

@@ -16,16 +16,18 @@
  */
 package handlers.effecthandlers;
 
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Map.Entry;
-
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.effects.AbstractEffect;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.model.stats.Stats;
+
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Map.Entry;
+
+import static org.l2j.gameserver.util.GameUtils.isSummon;
 
 /**
  * Servitor Share effect implementation.
@@ -50,7 +52,7 @@ public final class ServitorShare extends AbstractEffect
 	@Override
 	public boolean canPump(Creature effector, Creature effected, Skill skill)
 	{
-		return effected.isSummon();
+		return isSummon(effected);
 	}
 	
 	@Override

@@ -22,6 +22,8 @@ import org.l2j.gameserver.model.effects.AbstractEffect;
 import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.skills.Skill;
 
+import static org.l2j.gameserver.util.GameUtils.isPlayer;
+
 /**
  * @author Sdw
  */
@@ -44,7 +46,7 @@ public class RealDamage extends AbstractEffect
 	public void instant(Creature effector, Creature effected, Skill skill, Item item)
 	{
 		effected.reduceCurrentHp(_power, effector, skill, false, false, false, false);
-		if (effector.isPlayer())
+		if (isPlayer(effector))
 		{
 			effector.sendDamageMessage(effected, skill, (int) _power, 0, false, false);
 		}

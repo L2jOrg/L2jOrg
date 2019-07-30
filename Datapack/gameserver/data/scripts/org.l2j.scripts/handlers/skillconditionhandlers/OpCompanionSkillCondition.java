@@ -17,11 +17,14 @@
 package handlers.skillconditionhandlers;
 
 import org.l2j.gameserver.enums.SkillConditionCompanionType;
-import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.StatsSet;
+import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.skills.ISkillCondition;
 import org.l2j.gameserver.model.skills.Skill;
+
+import static org.l2j.gameserver.util.GameUtils.isPet;
+import static org.l2j.gameserver.util.GameUtils.isSummon;
 
 /**
  * @author Sdw
@@ -44,11 +47,11 @@ public class OpCompanionSkillCondition implements ISkillCondition
 			{
 				case PET:
 				{
-					return target.isPet();
+					return isPet(target);
 				}
 				case MY_SUMMON:
 				{
-					return target.isSummon() && (caster.getServitor(target.getObjectId()) != null);
+					return isSummon(target) && (caster.getServitor(target.getObjectId()) != null);
 				}
 			}
 		}

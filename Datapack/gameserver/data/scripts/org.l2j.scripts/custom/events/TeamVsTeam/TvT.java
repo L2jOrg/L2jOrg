@@ -22,8 +22,8 @@ import org.l2j.gameserver.enums.Team;
 import org.l2j.gameserver.instancemanager.InstanceManager;
 import org.l2j.gameserver.instancemanager.ZoneManager;
 import org.l2j.gameserver.model.CommandChannel;
-import org.l2j.gameserver.model.Party;
 import org.l2j.gameserver.model.Location;
+import org.l2j.gameserver.model.Party;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.Summon;
@@ -58,6 +58,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
+import static org.l2j.gameserver.util.GameUtils.isPlayable;
 import static org.l2j.gameserver.util.GameUtils.isPlayer;
 
 /**
@@ -566,7 +567,7 @@ public class TvT extends Event implements ScriptEvent
 	@Override
 	public String onEnterZone(Creature character, Zone zone)
 	{
-		if (character.isPlayable() && character.getActingPlayer().isOnCustomEvent())
+		if (isPlayable(character) && character.getActingPlayer().isOnCustomEvent())
 		{
 			// Kick enemy players.
 			if ((zone == BLUE_PEACE_ZONE) && (character.getTeam() == Team.RED))
@@ -580,7 +581,7 @@ public class TvT extends Event implements ScriptEvent
 				sendScreenMessage(character.getActingPlayer(), "Entering the enemy headquarters is prohibited!", 10);
 			}
 			// Start inactivity check.
-			if (character.isPlayer() && //
+			if (isPlayer(character) && //
 				((((zone == BLUE_PEACE_ZONE) && (character.getTeam() == Team.BLUE)) || //
 					((zone == RED_PEACE_ZONE) && (character.getTeam() == Team.RED)))))
 			{
@@ -593,7 +594,7 @@ public class TvT extends Event implements ScriptEvent
 	@Override
 	public String onExitZone(Creature character, Zone zone)
 	{
-		if (character.isPlayer() && character.getActingPlayer().isOnCustomEvent())
+		if (isPlayer(character) && character.getActingPlayer().isOnCustomEvent())
 		{
 			final Player player = character.getActingPlayer();
 			cancelQuestTimer("KickPlayer" + character.getObjectId(), null, player);

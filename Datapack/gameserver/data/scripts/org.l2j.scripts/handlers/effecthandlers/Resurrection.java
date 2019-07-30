@@ -26,6 +26,9 @@ import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.model.stats.Formulas;
 import org.l2j.gameserver.taskmanager.DecayTaskManager;
 
+import static org.l2j.gameserver.util.GameUtils.isPet;
+import static org.l2j.gameserver.util.GameUtils.isPlayer;
+
 /**
  * Resurrection effect implementation.
  * @author Adry_85
@@ -54,12 +57,12 @@ public final class Resurrection extends AbstractEffect
 	@Override
 	public void instant(Creature effector, Creature effected, Skill skill, Item item)
 	{
-		if (effector.isPlayer())
+		if (isPlayer(effector))
 		{
 			final Player player = effected.getActingPlayer();
 			if (!player.isResurrectionBlocked() && !player.isReviveRequested())
 			{
-				effected.getActingPlayer().reviveRequest(effector.getActingPlayer(), skill, effected.isPet(), _power);
+				effected.getActingPlayer().reviveRequest(effector.getActingPlayer(), skill, isPet(effected), _power);
 			}
 		}
 		else

@@ -18,13 +18,15 @@ package handlers.effecthandlers;
 
 import org.l2j.gameserver.ai.CtrlIntention;
 import org.l2j.gameserver.model.StatsSet;
-import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.Attackable;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.effects.AbstractEffect;
 import org.l2j.gameserver.model.effects.EffectType;
 import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.model.stats.Formulas;
+
+import static org.l2j.gameserver.util.GameUtils.isAttackable;
 
 /**
  * Delete Hate effect implementation.
@@ -60,7 +62,7 @@ public final class DeleteHate extends AbstractEffect
 	@Override
 	public void instant(Creature effector, Creature effected, Skill skill, Item item)
 	{
-		if (!effected.isAttackable())
+		if (!isAttackable(effected))
 		{
 			return;
 		}

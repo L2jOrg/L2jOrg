@@ -27,6 +27,8 @@ import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.EtcStatusUpdate;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
 
+import static org.l2j.gameserver.util.GameUtils.isPlayer;
+
 /**
  * @author Sdw, Mobius
  */
@@ -48,7 +50,7 @@ public class GetMomentum extends AbstractEffect
 	@Override
 	public boolean onActionTime(Creature effector, Creature effected, Skill skill, Item item)
 	{
-		if (effected.isPlayer())
+		if (isPlayer(effected))
 		{
 			final Player player = effected.getActingPlayer();
 			final int maxCharge = (int) player.getStat().getValue(Stats.MAX_MOMENTUM, 0);

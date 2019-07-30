@@ -35,6 +35,7 @@ import java.util.function.BiPredicate;
 import java.util.function.Predicate;
 
 import static org.l2j.commons.database.DatabaseAccess.getDAO;
+import static org.l2j.gameserver.util.GameUtils.isSummon;
 
 /**
  * Home board.
@@ -197,7 +198,7 @@ public final class HomeBoard implements IParseBoardHandler {
 					{
 						continue;
 					}
-					targets.stream().filter(target -> !target.isSummon() || !skill.isSharedWithSummon()).forEach(target ->
+					targets.stream().filter(target -> !isSummon(target) || !skill.isSharedWithSummon()).forEach(target ->
 					{
 						skill.applyEffects(activeChar, target);
 						if (Config.COMMUNITYBOARD_CAST_ANIMATIONS)

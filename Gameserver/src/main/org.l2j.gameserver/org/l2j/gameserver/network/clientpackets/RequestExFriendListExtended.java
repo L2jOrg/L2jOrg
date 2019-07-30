@@ -2,7 +2,7 @@ package org.l2j.gameserver.network.clientpackets;
 
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.network.serverpackets.friend.FriendList;
+import org.l2j.gameserver.network.serverpackets.friend.FriendListPacket;
 
 /**
  * @author mrTJO & UnAfraid
@@ -24,6 +24,6 @@ public final class RequestExFriendListExtended extends ClientPacket {
             return;
         }
 
-        client.sendPacket(new FriendList(activeChar));
+        client.sendPacket(new FriendListPacket(activeChar));
     }
 }

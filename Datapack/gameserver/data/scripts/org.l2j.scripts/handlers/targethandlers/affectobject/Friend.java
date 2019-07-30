@@ -24,6 +24,8 @@ import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.skills.targets.AffectObject;
 import org.l2j.gameserver.model.zone.ZoneId;
 
+import static org.l2j.gameserver.util.GameUtils.isMonster;
+
 /**
  * @author Nik
  */
@@ -116,7 +118,7 @@ public class Friend implements IAffectObjectHandler
 			}
 			
 			// By default any npc that isnt mob is considered friend.
-			return !target.isMonster() && !target.isAutoAttackable(player);
+			return !isMonster(target) && !target.isAutoAttackable(player);
 		}
 		
 		return !target.isAutoAttackable(activeChar);

@@ -16,12 +16,14 @@
  */
 package handlers.skillconditionhandlers;
 
-import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.StatsSet;
+import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.skills.ISkillCondition;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.network.SystemMessageId;
+
+import static org.l2j.gameserver.util.GameUtils.*;
 
 /**
  * @author UnAfraid
@@ -35,7 +37,7 @@ public class ConsumeBodySkillCondition implements ISkillCondition
 	@Override
 	public boolean canUse(Creature caster, Skill skill, WorldObject target)
 	{
-		if ((target != null) && (target.isMonster() || target.isSummon()))
+		if ((isMonster(target) || isSummon(target)))
 		{
 			final Creature character = (Creature) target;
 			if (character.isDead() && character.isSpawned())
@@ -44,7 +46,7 @@ public class ConsumeBodySkillCondition implements ISkillCondition
 			}
 		}
 		
-		if (caster.isPlayer())
+		if (isPlayer(caster))
 		{
 			caster.sendPacket(SystemMessageId.INVALID_TARGET);
 		}

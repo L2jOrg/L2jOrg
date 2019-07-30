@@ -5,6 +5,8 @@ import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.network.serverpackets.ExRpItemLink;
 
+import static org.l2j.gameserver.util.GameUtils.isItem;
+
 /**
  * @author KenM
  */
@@ -19,7 +21,7 @@ public class RequestExRqItemLink extends ClientPacket {
     @Override
     public void runImpl() {
         final WorldObject object = World.getInstance().findObject(_objectId);
-        if ((object != null) && object.isItem()) {
+        if (isItem(object)) {
             final Item item = (Item) object;
             if (item.isPublished()) {
                 client.sendPacket(new ExRpItemLink(item));

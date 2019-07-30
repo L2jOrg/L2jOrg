@@ -27,6 +27,8 @@ import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
 
+import static org.l2j.gameserver.util.GameUtils.isPlayer;
+
 /**
  * Take Fort Start effect implementation.
  * @author UnAfraid
@@ -46,7 +48,7 @@ public final class TakeFortStart extends AbstractEffect
 	@Override
 	public void instant(Creature effector, Creature effected, Skill skill, Item item)
 	{
-		if (effector.isPlayer())
+		if (isPlayer(effector))
 		{
 			final Fort fort = FortDataManager.getInstance().getFort(effector);
 			final Clan clan = effector.getClan();

@@ -20,9 +20,9 @@ import org.l2j.gameserver.Config;
 import org.l2j.gameserver.handler.AdminCommandHandler;
 import org.l2j.gameserver.handler.IAdminCommandHandler;
 import org.l2j.gameserver.model.Clan;
+import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.World;
 import org.l2j.gameserver.model.WorldObject;
-import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.Disconnection;
@@ -32,6 +32,8 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.util.StringTokenizer;
+
+import static org.l2j.gameserver.util.GameUtils.isPlayer;
 
 
 /**
@@ -232,7 +234,7 @@ public class AdminMenu implements IAdminCommandHandler
 		}
 		if (target != null)
 		{
-			if (target.isPlayer())
+			if (isPlayer(target))
 			{
 				target.reduceCurrentHp(target.getMaxHp() + target.getMaxCp() + 1, activeChar, null);
 				filename = "charmanage.htm";
@@ -265,7 +267,7 @@ public class AdminMenu implements IAdminCommandHandler
 	
 	private void teleportToCharacter(Player activeChar, WorldObject target)
 	{
-		if (!target.isPlayer())
+		if (!isPlayer(target))
 		{
 			activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
 			return;

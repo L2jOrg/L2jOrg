@@ -20,9 +20,9 @@ import org.l2j.gameserver.geoengine.GeoEngine;
 import org.l2j.gameserver.handler.AffectObjectHandler;
 import org.l2j.gameserver.handler.IAffectObjectHandler;
 import org.l2j.gameserver.handler.IAffectScopeHandler;
-import org.l2j.gameserver.model.WorldObject;
-import org.l2j.gameserver.model.World;
 import org.l2j.gameserver.model.Location;
+import org.l2j.gameserver.model.World;
+import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.model.skills.targets.AffectScope;
@@ -32,6 +32,8 @@ import java.util.concurrent.atomic.AtomicInteger;
 import java.util.function.Consumer;
 import java.util.function.Predicate;
 
+import static org.l2j.gameserver.util.GameUtils.isCreature;
+import static org.l2j.gameserver.util.GameUtils.isPlayable;
 import static org.l2j.gameserver.util.MathUtil.calculateDistance2D;
 import static org.l2j.gameserver.util.MathUtil.isInsideRadius3D;
 
@@ -81,7 +83,7 @@ public class Range implements IAffectScopeHandler
 		// Check and add targets.
 		if (targetType == TargetType.GROUND)
 		{
-			if (activeChar.isPlayable())
+			if (isPlayable(activeChar))
 			{
 				final Location worldPosition = activeChar.getActingPlayer().getCurrentSkillWorldPosition();
 				if (worldPosition != null)
@@ -103,7 +105,7 @@ public class Range implements IAffectScopeHandler
 		else
 		{
 			// Add object of origin since its skipped in the forEachVisibleObjectInRange method.
-			if (target.isCharacter() && filter.test((Creature) target))
+			if (isCreature(target) && filter.test((Creature) target))
 			{
 				action.accept(target);
 			}

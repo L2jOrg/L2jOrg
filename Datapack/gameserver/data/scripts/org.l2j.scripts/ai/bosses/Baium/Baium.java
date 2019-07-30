@@ -45,6 +45,8 @@ import org.l2j.gameserver.network.serverpackets.ExShowScreenMessage;
 import org.l2j.gameserver.network.serverpackets.PlaySound;
 import org.l2j.gameserver.network.serverpackets.SocialAction;
 
+import static org.l2j.gameserver.util.GameUtils.isNpc;
+import static org.l2j.gameserver.util.GameUtils.isPlayer;
 import static org.l2j.gameserver.util.MathUtil.isInsideRadius3D;
 
 /**
@@ -319,7 +321,7 @@ public final class Baium extends AbstractNpcAI
                         break;
                     }
 
-                    if ((mostHated != null) && mostHated.isPlayer() && zone.isInsideZone(mostHated))
+                    if (isPlayer(mostHated) && zone.isInsideZone(mostHated))
                     {
                         if (mob.getTarget() != mostHated)
                         {
@@ -394,11 +396,11 @@ public final class Baium extends AbstractNpcAI
                 {
                     if (charInside != null)
                     {
-                        if (charInside.isNpc())
+                        if (isNpc(charInside))
                         {
                             charInside.deleteMe();
                         }
-                        else if (charInside.isPlayer())
+                        else if (isPlayer(charInside))
                         {
                             notifyEvent("teleportOut", null, (Player) charInside);
                         }
@@ -443,7 +445,7 @@ public final class Baium extends AbstractNpcAI
                 {
                     for (Creature charInside : zone.getCharactersInside())
                     {
-                        if ((charInside != null) && charInside.isNpc() && (charInside.getId() == ARCHANGEL))
+                        if (isNpc(charInside) && (charInside.getId() == ARCHANGEL))
                         {
                             charInside.deleteMe();
                         }
@@ -467,6 +469,8 @@ public final class Baium extends AbstractNpcAI
                 }
                 break;
             }
+            default:
+                throw new IllegalStateException("Unexpected value: " + event);
         }
         return super.onAdvEvent(event, npc, player);
     }
@@ -557,12 +561,12 @@ public final class Baium extends AbstractNpcAI
     @Override
     public String onSeeCreature(Npc npc, Creature creature, boolean isSummon)
     {
-        if (!zone.isInsideZone(creature) || (creature.isNpc() && (creature.getId() == BAIUM_STONE)))
+        if (!zone.isInsideZone(creature) || (isNpc(creature) && (creature.getId() == BAIUM_STONE)))
         {
             return super.onSeeCreature(npc, creature, isSummon);
         }
 
-        if (creature.isPlayer() && !creature.isDead() && (_standbyPlayer == null))
+        if (isPlayer(creature) && !creature.isDead() && (_standbyPlayer == null))
         {
             _standbyPlayer = (Player) creature;
         }

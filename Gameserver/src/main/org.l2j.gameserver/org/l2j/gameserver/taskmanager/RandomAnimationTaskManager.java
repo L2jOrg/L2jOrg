@@ -9,6 +9,8 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.concurrent.ConcurrentHashMap;
 
+import static org.l2j.gameserver.util.GameUtils.isAttackable;
+
 /**
  * @author Mobius
  */
@@ -31,7 +33,7 @@ public class RandomAnimationTaskManager
                         npc.onRandomAnimation(Rnd.get(2, 3));
                     }
 
-                    PENDING_ANIMATIONS.put(npc, time + (Rnd.get((npc.isAttackable() ? Config.MIN_MONSTER_ANIMATION : Config.MIN_NPC_ANIMATION), (npc.isAttackable() ? Config.MAX_MONSTER_ANIMATION : Config.MAX_NPC_ANIMATION)) * 1000));
+                    PENDING_ANIMATIONS.put(npc, time + (Rnd.get((isAttackable(npc) ? Config.MIN_MONSTER_ANIMATION : Config.MIN_NPC_ANIMATION), (isAttackable(npc) ? Config.MAX_MONSTER_ANIMATION : Config.MAX_NPC_ANIMATION)) * 1000));
                 }
             }
         }, 0, 1000);
@@ -41,7 +43,7 @@ public class RandomAnimationTaskManager
     {
         if (npc.hasRandomAnimation())
         {
-            PENDING_ANIMATIONS.putIfAbsent(npc, System.currentTimeMillis() + (Rnd.get((npc.isAttackable() ? Config.MIN_MONSTER_ANIMATION : Config.MIN_NPC_ANIMATION), (npc.isAttackable() ? Config.MAX_MONSTER_ANIMATION : Config.MAX_NPC_ANIMATION)) * 1000));
+            PENDING_ANIMATIONS.putIfAbsent(npc, System.currentTimeMillis() + (Rnd.get((isAttackable(npc) ? Config.MIN_MONSTER_ANIMATION : Config.MIN_NPC_ANIMATION), (isAttackable(npc) ? Config.MAX_MONSTER_ANIMATION : Config.MAX_NPC_ANIMATION)) * 1000));
         }
     }
 

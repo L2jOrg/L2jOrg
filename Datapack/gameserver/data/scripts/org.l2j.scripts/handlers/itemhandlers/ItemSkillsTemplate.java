@@ -15,6 +15,7 @@ import org.l2j.gameserver.network.serverpackets.SystemMessage;
 
 import java.util.List;
 
+import static org.l2j.gameserver.util.GameUtils.isPet;
 import static org.l2j.gameserver.util.GameUtils.isPlayer;
 
 /**
@@ -26,13 +27,13 @@ public class ItemSkillsTemplate implements IItemHandler
     @Override
     public boolean useItem(Playable playable, Item item, boolean forceUse)
     {
-        if (!isPlayer(playable) && !playable.isPet())
+        if (!isPlayer(playable) && !isPet(playable))
         {
             return false;
         }
 
         // Pets can use items only when they are tradable.
-        if (playable.isPet() && !item.isTradeable())
+        if (isPet(playable) && !item.isTradeable())
         {
             playable.sendPacket(SystemMessageId.YOUR_PET_CANNOT_CARRY_THIS_ITEM);
             return false;
@@ -98,14 +99,14 @@ public class ItemSkillsTemplate implements IItemHandler
                 }
 
                 // Send message to the master.
-                if (playable.isPet())
+                if (isPet(playable))
                 {
                     final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOUR_PET_USES_S1);
                     sm.addSkillName(itemSkill);
                     playable.sendPacket(sm);
                 }
 
-                if (playable.isPlayer() && itemSkill.hasEffectType(EffectType.SUMMON_PET))
+                if (isPlayer(playable) && itemSkill.hasEffectType(EffectType.SUMMON_PET))
                 {
                     playable.doCast(itemSkill);
                     successfulUse = true;
@@ -183,7 +184,7 @@ public class ItemSkillsTemplate implements IItemHandler
     {
         final long remainingTime = (skill != null) ? playable.getSkillRemainingReuseTime(skill.getReuseHashCode()) : playable.getItemRemainingReuseTime(item.getObjectId());
         final boolean isAvailable = remainingTime <= 0;
-        if (playable.isPlayer())
+        if (isPlayer(playable))
         {
             if (!isAvailable)
             {

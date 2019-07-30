@@ -25,6 +25,8 @@ import org.l2j.gameserver.model.effects.EffectType;
 import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.skills.Skill;
 
+import static org.l2j.gameserver.util.GameUtils.isPlayer;
+
 /**
  * Root effect implementation.
  * @author mkizub
@@ -50,7 +52,7 @@ public final class Root extends AbstractEffect
 	@Override
 	public void onExit(Creature effector, Creature effected, Skill skill)
 	{
-		if (!effected.isPlayer())
+		if (!isPlayer(effected))
 		{
 			effected.getAI().notifyEvent(CtrlEvent.EVT_THINK);
 		}

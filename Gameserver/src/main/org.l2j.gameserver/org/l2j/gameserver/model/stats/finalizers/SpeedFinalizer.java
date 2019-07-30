@@ -31,6 +31,7 @@ import org.l2j.gameserver.model.zone.type.SwampZone;
 
 import java.util.Optional;
 
+import static org.l2j.gameserver.util.GameUtils.isPlayable;
 import static org.l2j.gameserver.util.GameUtils.isPlayer;
 
 /**
@@ -87,7 +88,7 @@ public class SpeedFinalizer implements IStatsFunction {
             }
             baseValue += Config.RUN_SPD_BOOST;
         }
-        if (creature.isPlayable() && creature.isInsideZone(ZoneId.SWAMP)) {
+        if (isPlayable(creature) && creature.isInsideZone(ZoneId.SWAMP)) {
             final SwampZone zone = ZoneManager.getInstance().getZone(creature, SwampZone.class);
             if (zone != null) {
                 baseValue *= zone.getMoveBonus();

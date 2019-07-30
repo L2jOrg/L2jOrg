@@ -29,6 +29,8 @@ import org.slf4j.LoggerFactory;
 
 import java.util.StringTokenizer;
 
+import static org.l2j.gameserver.util.GameUtils.isCreature;
+import static org.l2j.gameserver.util.GameUtils.isNpc;
 import static org.l2j.gameserver.util.MathUtil.isInsideRadius2D;
 
 /**
@@ -57,18 +59,12 @@ public final class RequestBypassToServer extends ClientPacket {
     // S
     private String _command;
 
-    /**
-     * @param activeChar
-     */
-    private static void comeHere(Player activeChar) {
-        final WorldObject obj = activeChar.getTarget();
-        if (obj == null) {
-            return;
-        }
-        if (obj.isNpc()) {
+    private static void comeHere(Player player) {
+        final WorldObject obj = player.getTarget();
+        if (isNpc(obj)) {
             final Npc temp = (Npc) obj;
-            temp.setTarget(activeChar);
-            temp.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, activeChar.getLocation());
+            temp.setTarget(player);
+            temp.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, player.getLocation());
         }
     }
 
@@ -140,7 +136,7 @@ public final class RequestBypassToServer extends ClientPacket {
                 if (Util.isInteger(id)) {
                     final WorldObject object = World.getInstance().findObject(Integer.parseInt(id));
 
-                    if ((object != null) && object.isNpc() && (endOfId > 0) && isInsideRadius2D(activeChar, object, Npc.INTERACTION_DISTANCE)) {
+                    if (isNpc(object) && (endOfId > 0) && isInsideRadius2D(activeChar, object, Npc.INTERACTION_DISTANCE)) {
                         ((Npc) object).onBypassFeedback(activeChar, _command.substring(endOfId + 1));
                     }
                 }
@@ -217,7 +213,7 @@ public final class RequestBypassToServer extends ClientPacket {
                 if (handler != null) {
                     if (bypassOriginId > 0) {
                         final WorldObject bypassOrigin = World.getInstance().findObject(bypassOriginId);
-                        if ((bypassOrigin != null) && bypassOrigin.isCharacter()) {
+                        if (isCreature(bypassOrigin)) {
                             handler.useBypass(_command, activeChar, (Creature) bypassOrigin);
                         } else {
                             handler.useBypass(_command, activeChar, null);

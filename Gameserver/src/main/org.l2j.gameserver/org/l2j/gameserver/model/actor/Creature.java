@@ -1348,7 +1348,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
         // Stop HP/MP/CP Regeneration task
         _status.stopHpMpRegeneration();
 
-        if (isMonster()) {
+        if (GameUtils.isMonster(this)) {
             final Spawn spawn = ((Npc) this).getSpawn();
             if ((spawn != null) && spawn.isRespawnEnabled())
             {
@@ -1498,7 +1498,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
     }
 
     public void detachAI() {
-        if (isWalker()) {
+        if (GameUtils.isWalker(this)) {
             return;
         }
         setAI(null);
@@ -1709,9 +1709,9 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
         }
         if (GameUtils.isPlayer(this)) {
             getActingPlayer().broadcastUserInfo();
-        } else if (isSummon()) {
+        } else if (GameUtils.isSummon(this)) {
             broadcastStatusUpdate();
-        } else if (isNpc()) {
+        } else if (GameUtils.isNpc(this)) {
             World.getInstance().forEachVisibleObject(this, Player.class, player ->
             {
                 if (!isVisibleFor(player)) {
@@ -3193,31 +3193,23 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
     @Override
     public void onForcedAttack(Player player) {
         if (isInsidePeaceZone(player)) {
-            // If Creature or target is in a peace zone, send a system message TARGET_IN_PEACEZONE a Server->Client packet ActionFailed
             player.sendPacket(SystemMessageId.YOU_MAY_NOT_ATTACK_THIS_TARGET_IN_A_PEACEFUL_ZONE);
             player.sendPacket(ActionFailed.STATIC_PACKET);
             return;
         }
-        if (player.isInOlympiadMode() && (player.getTarget() != null) && player.getTarget().isPlayable()) {
-            Player target = null;
-            final WorldObject object = player.getTarget();
-            if (GameUtils.isPlayable(object)) {
-                target = object.getActingPlayer();
-            }
+        if (player.isInOlympiadMode() && GameUtils.isPlayable(player.getTarget())) {
+            Player target = player.getTarget().getActingPlayer();
 
-            if ((target == null) || (target.isInOlympiadMode() && (!player.isOlympiadStart() || (player.getOlympiadGameId() != target.getOlympiadGameId())))) {
-                // if Player is in Olympia and the match isn't already start, send a Server->Client packet ActionFailed
+            if ((target.isInOlympiadMode() && (!player.isOlympiadStart() || (player.getOlympiadGameId() != target.getOlympiadGameId())))) {
                 player.sendPacket(ActionFailed.STATIC_PACKET);
                 return;
             }
         }
         if ((player.getTarget() != null) && !player.getTarget().canBeAttacked() && !player.getAccessLevel().allowPeaceAttack()) {
-            // If target is not attackable, send a Server->Client packet ActionFailed
             player.sendPacket(ActionFailed.STATIC_PACKET);
             return;
         }
         if (player.isConfused()) {
-            // If target is confused, send a Server->Client packet ActionFailed
             player.sendPacket(ActionFailed.STATIC_PACKET);
             return;
         }
@@ -3245,7 +3237,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 
     public boolean isInsidePeaceZone(WorldObject attacker, WorldObject target) {
         final Instance instanceWorld = getInstanceWorld();
-        if ((target == null) || !( target.isPlayable() && attacker.isPlayable()) || ((instanceWorld != null) && instanceWorld.isPvP())) {
+        if ((target == null) || !( GameUtils.isPlayable(target) && GameUtils.isPlayable(attacker)) || ((instanceWorld != null) && instanceWorld.isPvP())) {
             return false;
         }
 
@@ -3844,7 +3836,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
      * @return the current weight of the Creature.
      */
     public int getCurrentLoad() {
-        if (GameUtils.isPlayer(this) || isPet()) {
+        if (GameUtils.isPlayer(this) || GameUtils.isPet(this)) {
             return getInventory().getTotalWeight();
         }
         return 0;
@@ -4173,12 +4165,6 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
         }
     }
 
-    @Override
-    public boolean isCharacter() {
-        return true;
-    }
-
-
     public Collection<SkillCaster> getSkillCasters() {
         return _skillCasters.values();
     }
@@ -4276,7 +4262,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
     public Queue<AbstractEventListener> getListeners(EventType type) {
         final Queue<AbstractEventListener> objectListenres = super.getListeners(type);
         final Queue<AbstractEventListener> templateListeners = _template.getListeners(type);
-        final Queue<AbstractEventListener> globalListeners = isNpc() && !isMonster() ? Containers.Npcs().getListeners(type) : isMonster() ? Containers.Monsters().getListeners(type) : GameUtils.isPlayer(this) ? Containers.Players().getListeners(type) : EmptyQueue.emptyQueue();
+        final Queue<AbstractEventListener> globalListeners = GameUtils.isNpc(this) && !GameUtils.isMonster(this) ? Containers.Npcs().getListeners(type) : GameUtils.isMonster(this) ? Containers.Monsters().getListeners(type) : GameUtils.isPlayer(this) ? Containers.Players().getListeners(type) : EmptyQueue.emptyQueue();
 
         // Attempt to do not create collection
         if (objectListenres.isEmpty() && templateListeners.isEmpty() && globalListeners.isEmpty()) {

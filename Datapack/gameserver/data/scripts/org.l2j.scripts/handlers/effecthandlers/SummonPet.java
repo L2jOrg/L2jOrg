@@ -21,8 +21,8 @@ import org.l2j.gameserver.data.xml.impl.PetDataTable;
 import org.l2j.gameserver.model.PetData;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Creature;
-import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.instance.Pet;
+import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.templates.NpcTemplate;
 import org.l2j.gameserver.model.effects.AbstractEffect;
 import org.l2j.gameserver.model.effects.EffectType;
@@ -31,6 +31,8 @@ import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.PetItemList;
+
+import static org.l2j.gameserver.util.GameUtils.isPlayer;
 
 /**
  * Summon Pet effect implementation.
@@ -57,7 +59,7 @@ public final class SummonPet extends AbstractEffect
 	@Override
 	public void instant(Creature effector, Creature effected, Skill skill, Item item)
 	{
-		if (!effector.isPlayer() || !effected.isPlayer() || effected.isAlikeDead())
+		if (!isPlayer(effector) || !isPlayer(effected) || effected.isAlikeDead())
 		{
 			return;
 		}

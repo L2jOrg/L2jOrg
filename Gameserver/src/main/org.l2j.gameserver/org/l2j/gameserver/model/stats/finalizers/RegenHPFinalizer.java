@@ -29,6 +29,7 @@ import org.l2j.gameserver.util.GameUtils;
 
 import java.util.Optional;
 
+import static org.l2j.gameserver.util.GameUtils.isPet;
 import static org.l2j.gameserver.util.GameUtils.isPlayer;
 
 /**
@@ -135,7 +136,7 @@ public class RegenHPFinalizer implements IStatsFunction {
 
             // Add CON bonus
             baseValue *= creature.getLevelMod() * BaseStats.CON.calcBonus(creature);
-        } else if (creature.isPet()) {
+        } else if (isPet(creature)) {
             baseValue = ((Pet) creature).getPetLevelData().getPetRegenHP() * Config.PET_HP_REGEN_MULTIPLIER;
         }
 

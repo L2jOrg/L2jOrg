@@ -12,6 +12,7 @@ import org.l2j.gameserver.model.stats.Stats;
 
 import java.util.Optional;
 
+import static org.l2j.gameserver.util.GameUtils.isPet;
 import static org.l2j.gameserver.util.GameUtils.isPlayer;
 
 /**
@@ -31,7 +32,7 @@ public class MDefenseFinalizer implements IStatsFunction {
     public double calc(Creature creature, Optional<Double> base, Stats stat) {
         throwIfPresent(base);
         double baseValue = creature.getTemplate().getBaseValue(stat, 0);
-        if (creature.isPet()) {
+        if (isPet(creature)) {
             final Pet pet = (Pet) creature;
             baseValue = pet.getPetLevelData().getPetMDef();
         }
@@ -52,7 +53,7 @@ public class MDefenseFinalizer implements IStatsFunction {
                     baseValue -= creature.getTransformation().map(transform -> transform.getBaseDefBySlot(player, slot)).orElse(defaultStatValue);
                 }
             }
-        } else if (creature.isPet() && (creature.getInventory().getPaperdollObjectId(Inventory.PAPERDOLL_NECK) != 0)) {
+        } else if (isPet(creature) && (creature.getInventory().getPaperdollObjectId(Inventory.PAPERDOLL_NECK) != 0)) {
             baseValue -= 13;
         }
         if (creature.isRaid()) {

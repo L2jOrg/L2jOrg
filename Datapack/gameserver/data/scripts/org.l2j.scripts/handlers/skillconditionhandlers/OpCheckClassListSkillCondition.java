@@ -16,15 +16,17 @@
  */
 package handlers.skillconditionhandlers;
 
-import java.util.List;
-
 import org.l2j.gameserver.enums.SkillConditionAffectType;
-import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.StatsSet;
+import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.base.ClassId;
 import org.l2j.gameserver.model.skills.ISkillCondition;
 import org.l2j.gameserver.model.skills.Skill;
+
+import java.util.List;
+
+import static org.l2j.gameserver.util.GameUtils.isPlayer;
 
 /**
  * @author UnAfraid
@@ -49,11 +51,11 @@ public class OpCheckClassListSkillCondition implements ISkillCondition
 		{
 			case CASTER:
 			{
-				return caster.isPlayer() && (_isWithin == _classIds.stream().anyMatch(classId -> classId == caster.getActingPlayer().getClassId()));
+				return isPlayer(caster) && (_isWithin == _classIds.stream().anyMatch(classId -> classId == caster.getActingPlayer().getClassId()));
 			}
 			case TARGET:
 			{
-				if ((target != null) && target.isPlayer())
+				if (isPlayer(target))
 				{
 					return _isWithin == _classIds.stream().anyMatch(classId -> classId.getId() == target.getActingPlayer().getClassId().getId());
 				}

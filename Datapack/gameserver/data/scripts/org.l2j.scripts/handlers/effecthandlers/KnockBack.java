@@ -31,6 +31,7 @@ import org.l2j.gameserver.network.serverpackets.FlyToLocation;
 import org.l2j.gameserver.network.serverpackets.FlyToLocation.FlyType;
 import org.l2j.gameserver.network.serverpackets.ValidateLocation;
 
+import static org.l2j.gameserver.util.GameUtils.isPlayer;
 import static org.l2j.gameserver.util.MathUtil.calculateAngleFrom;
 import static org.l2j.gameserver.util.MathUtil.calculateHeadingFrom;
 
@@ -96,7 +97,7 @@ public final class KnockBack extends AbstractEffect
 	@Override
 	public void onExit(Creature effector, Creature effected, Skill skill)
 	{
-		if (!effected.isPlayer())
+		if (!isPlayer(effected))
 		{
 			effected.getAI().notifyEvent(CtrlEvent.EVT_THINK);
 		}

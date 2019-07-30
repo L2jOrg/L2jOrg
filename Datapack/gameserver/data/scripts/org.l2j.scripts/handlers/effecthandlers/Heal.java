@@ -14,6 +14,8 @@ import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ExMagicAttackInfo;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
 
+import static org.l2j.gameserver.util.GameUtils.*;
+
 /**
  * Heal effect implementation.
  * @author UnAfraid
@@ -42,7 +44,7 @@ public final class Heal extends AbstractEffect
 	@Override
 	public void instant(Creature effector, Creature effected, Skill skill, Item item)
 	{
-		if (effected.isDead() || effected.isDoor() || effected.isHpBlocked())
+		if (effected.isDead() || isDoor(effected) || effected.isHpBlocked())
 		{
 			return;
 		}
@@ -64,13 +66,13 @@ public final class Heal extends AbstractEffect
 		final boolean sps = skill.isMagic() && effector.isChargedShot(ShotType.SPIRITSHOTS);
 		final boolean bss = skill.isMagic() && effector.isChargedShot(ShotType.BLESSED_SPIRITSHOTS);
 		final double shotsBonus = effector.getStat().getValue(Stats.SHOTS_BONUS);
-		if (((sps || bss) && (effector.isPlayer() && effector.getActingPlayer().isMageClass())) || effector.isSummon())
+		if (((sps || bss) && (isPlayer(effector) && effector.getActingPlayer().isMageClass())) || isSummon(effector))
 		{
 			staticShotBonus = skill.getMpConsume(); // static bonus for spiritshots
 			mAtkMul = bss ? 4 * shotsBonus : 2 * shotsBonus;
 			staticShotBonus *= bss ? 2.4 : 1.0;
 		}
-		else if ((sps || bss) && effector.isNpc())
+		else if ((sps || bss) && isNpc(effector))
 		{
 			staticShotBonus = 2.4 * skill.getMpConsume(); // always blessed spiritshots
 			mAtkMul = 4 * shotsBonus;
@@ -92,7 +94,7 @@ public final class Heal extends AbstractEffect
 				amount *= 3;
 				effector.sendPacket(SystemMessageId.M_CRITICAL);
 				effector.sendPacket(new ExMagicAttackInfo(effector.getObjectId(), effected.getObjectId(), ExMagicAttackInfo.CRITICAL_HEAL));
-				if (effected.isPlayer() && (effected != effector))
+				if (isPlayer(effected) && (effected != effector))
 				{
 					effected.sendPacket(new ExMagicAttackInfo(effector.getObjectId(), effected.getObjectId(), ExMagicAttackInfo.CRITICAL_HEAL));
 				}
@@ -108,13 +110,13 @@ public final class Heal extends AbstractEffect
 			effected.broadcastStatusUpdate(effector);
 		}
 		
-		if (effected.isPlayer())
+		if (isPlayer(effected))
 		{
 			if (skill.getId() == 4051)
 			{
 				effected.sendPacket(SystemMessageId.REJUVENATING_HP);
 			}
-			else if (effector.isPlayer() && (effector != effected))
+			else if (isPlayer(effector) && (effector != effected))
 			{
 				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S2_HP_HAS_BEEN_RESTORED_BY_C1);
 				sm.addString(effector.getName());

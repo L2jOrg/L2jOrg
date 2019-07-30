@@ -3812,7 +3812,7 @@ public final class Player extends Playable {
         getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
 
         // Check if the WorldObject to pick up is a Item
-        if (!object.isItem()) {
+        if (!GameUtils.isItem(object)) {
             // dont try to pickup anything that is not an item :)
             LOGGER.warn(this + " trying to pickup wrong target." + getTarget());
             return;
@@ -4584,7 +4584,7 @@ public final class Player extends Playable {
                 percentLost *= getStat().getValue(Stats.REDUCE_EXP_LOST_BY_RAID, 1);
             } else if (GameUtils.isMonster(killer)) {
                 percentLost *= getStat().getValue(Stats.REDUCE_EXP_LOST_BY_MOB, 1);
-            } else if (killer.isPlayable()) {
+            } else if (GameUtils.isPlayable(killer)) {
                 percentLost *= getStat().getValue(Stats.REDUCE_EXP_LOST_BY_PVP, 1);
             }
         }
@@ -4604,7 +4604,7 @@ public final class Player extends Playable {
             }
         }
 
-        if ((killer != null) && killer.isPlayable() && atWarWith(killer.getActingPlayer())) {
+        if (GameUtils.isPlayable(killer) && atWarWith(killer.getActingPlayer())) {
             lostExp /= 4.0;
         }
 
@@ -4680,7 +4680,7 @@ public final class Player extends Playable {
      * @return any summoned trap by this player or null.
      */
     public Trap getTrap() {
-        return getSummonedNpcs().stream().filter(Npc::isTrap).map(Trap.class::cast).findAny().orElse(null);
+        return getSummonedNpcs().stream().filter(GameUtils::isTrap).map(Trap.class::cast).findAny().orElse(null);
     }
 
     public void addServitor(Summon servitor) {
@@ -10594,11 +10594,6 @@ public final class Player extends Playable {
 
     public void updateNotMoveUntil() {
         _notMoveUntil = System.currentTimeMillis() + Config.PLAYER_MOVEMENT_BLOCK_TIME;
-    }
-
-    @Override
-    public boolean isPlayer() {
-        return true;
     }
 
     /**

@@ -22,6 +22,8 @@ import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ShowMiniMap;
 
+import static org.l2j.gameserver.util.GameUtils.isPlayer;
+
 /**
  * This class provides handling for items that should display a map when double clicked.
  */
@@ -30,7 +32,7 @@ public class Maps implements IItemHandler
 	@Override
 	public boolean useItem(Playable playable, Item item, boolean forceUse)
 	{
-		if (!playable.isPlayer())
+		if (!isPlayer(playable))
 		{
 			playable.sendPacket(SystemMessageId.YOUR_PET_CANNOT_CARRY_THIS_ITEM);
 			return false;

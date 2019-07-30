@@ -25,6 +25,8 @@ import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.PetItemList;
 
+import static org.l2j.gameserver.util.GameUtils.*;
+
 /**
  * Restoration effect implementation.
  * @author Zoey76, Mobius
@@ -51,7 +53,7 @@ public final class Restoration extends AbstractEffect
 	@Override
 	public void instant(Creature effector, Creature effected, Skill skill, Item item)
 	{
-		if (!effected.isPlayable())
+		if (!isPlayable(effected))
 		{
 			return;
 		}
@@ -63,7 +65,7 @@ public final class Restoration extends AbstractEffect
 			return;
 		}
 		
-		if (effected.isPlayer())
+		if (isPlayer(effected))
 		{
 			final Item newItem = effected.getActingPlayer().addItem("Skill", _itemId, _itemCount, effector, true);
 			if (_itemEnchantmentLevel > 0)
@@ -71,7 +73,7 @@ public final class Restoration extends AbstractEffect
 				newItem.setEnchantLevel(_itemEnchantmentLevel);
 			}
 		}
-		else if (effected.isPet())
+		else if (isPet(effected))
 		{
 			final Item newItem = effected.getInventory().addItem("Skill", _itemId, _itemCount, effected.getActingPlayer(), effector);
 			if (_itemEnchantmentLevel > 0)

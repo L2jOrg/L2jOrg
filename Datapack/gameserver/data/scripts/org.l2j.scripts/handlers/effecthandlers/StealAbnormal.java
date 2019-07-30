@@ -16,8 +16,6 @@
  */
 package handlers.effecthandlers;
 
-import java.util.List;
-
 import org.l2j.gameserver.enums.DispelSlotType;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Creature;
@@ -28,6 +26,10 @@ import org.l2j.gameserver.model.skills.BuffInfo;
 import org.l2j.gameserver.model.skills.EffectScope;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.model.stats.Formulas;
+
+import java.util.List;
+
+import static org.l2j.gameserver.util.GameUtils.isPlayer;
 
 /**
  * Steal Abnormal effect implementation.
@@ -61,7 +63,7 @@ public final class StealAbnormal extends AbstractEffect
 	@Override
 	public void instant(Creature effector, Creature effected, Skill skill, Item item)
 	{
-		if (effected.isPlayer() && (effector != effected))
+		if (isPlayer(effected) && (effector != effected))
 		{
 			final List<BuffInfo> toSteal = Formulas.calcCancelStealEffects(effector, effected, skill, _slot, _rate, _max);
 			if (toSteal.isEmpty())

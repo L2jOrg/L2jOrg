@@ -501,7 +501,7 @@ public abstract class AbstractAI implements Ctrl {
     }
 
     public void setAutoAttacking(boolean isAutoAttacking) {
-        if (actor.isSummon()) {
+        if (isSummon(actor)) {
             final Summon summon = (Summon) actor;
             if (summon.getOwner() != null) {
                 summon.getOwner().getAI().setAutoAttacking(isAutoAttacking);

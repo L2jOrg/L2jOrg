@@ -13,6 +13,8 @@ import org.l2j.gameserver.network.serverpackets.ExAcquireSkillInfo;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import static org.l2j.gameserver.util.GameUtils.isNpc;
+
 /**
  * Request Acquire Skill Info client packet implementation.
  *
@@ -44,7 +46,7 @@ public final class RequestAcquireSkillInfo extends ClientPacket {
         }
 
         final Npc trainer = activeChar.getLastFolkNPC();
-        if ((_skillType != AcquireSkillType.CLASS) && ((trainer == null) || !trainer.isNpc() || (!trainer.canInteract(activeChar) && !activeChar.isGM()))) {
+        if ((_skillType != AcquireSkillType.CLASS) && (!isNpc(trainer) || (!trainer.canInteract(activeChar) && !activeChar.isGM()))) {
             return;
         }
 

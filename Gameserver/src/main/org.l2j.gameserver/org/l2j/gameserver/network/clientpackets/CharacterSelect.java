@@ -66,7 +66,7 @@ public class CharacterSelect extends ClientPacket {
 
         // We should always be able to acquire the lock
         // But if we can't lock then nothing should be done (i.e. repeated packet)
-        if (client.getActiveCharLock().tryLock()) {
+        if (client.getActivePlayerLock().tryLock()) {
             try {
                 // should always be null
                 // but if not then this is repeated packet and nothing should be done here
@@ -97,32 +97,32 @@ public class CharacterSelect extends ClientPacket {
                     }
 
                     // load up character from disk
-                    final Player cha = client.load(_charSlot);
-                    if (cha == null) {
+                    final Player player = client.load(_charSlot);
+                    if (player == null) {
                         return; // handled in GameClient
                     }
 
-                    PlayerNameTable.getInstance().addName(cha);
+                    PlayerNameTable.getInstance().addName(player);
 
-                    cha.setClient(client);
-                    client.setActiveChar(cha);
-                    cha.setOnlineStatus(true, true);
-                    cha.setVipTier(VipData.getInstance().getVipTier(cha));
+                    player.setClient(client);
+                    client.setPlayer(player);
+                    player.setOnlineStatus(true, true);
+                    player.setVipTier(VipData.getInstance().getVipTier(player));
 
-                    final TerminateReturn terminate = EventDispatcher.getInstance().notifyEvent(new OnPlayerSelect(cha, cha.getObjectId(), cha.getName(), client), Containers.Players(), TerminateReturn.class);
+                    final TerminateReturn terminate = EventDispatcher.getInstance().notifyEvent(new OnPlayerSelect(player, player.getObjectId(), player.getName(), client), Containers.Players(), TerminateReturn.class);
                     if ((terminate != null) && terminate.terminate()) {
-                        Disconnection.of(cha).defaultSequence(false);
+                        Disconnection.of(player).defaultSequence(false);
                         return;
                     }
 
                     client.setConnectionState(ConnectionState.JOINING_GAME);
-                    client.sendPacket(new CharSelected(cha, client.getSessionId().getGameServerSessionId()));
+                    client.sendPacket(new CharSelected(player, client.getSessionId().getGameServerSessionId()));
                 }
             } finally {
-                client.getActiveCharLock().unlock();
+                client.getActivePlayerLock().unlock();
             }
 
-            LOGGER_ACCOUNTING.info("Logged in, " + client);
+            LOGGER_ACCOUNTING.info("{} Logged in", client);
         }
     }
 }

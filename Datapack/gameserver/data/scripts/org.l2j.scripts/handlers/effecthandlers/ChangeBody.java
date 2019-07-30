@@ -27,6 +27,8 @@ import org.l2j.gameserver.model.skills.Skill;
 import java.util.HashSet;
 import java.util.Set;
 
+import static org.l2j.gameserver.util.GameUtils.isDoor;
+
 /**
  * Transformation type effect, which disables attack or use of skills.
  * @author Nik
@@ -46,7 +48,7 @@ public final class ChangeBody extends AbstractEffect
 	@Override
 	public boolean canStart(Creature effector, Creature effected, Skill skill)
 	{
-		return !effected.isDoor();
+		return !isDoor(effected);
 	}
 	
 	@Override

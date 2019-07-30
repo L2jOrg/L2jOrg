@@ -22,6 +22,8 @@ import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.Disconnection;
 import org.l2j.gameserver.util.BuilderUtil;
 
+import static org.l2j.gameserver.util.GameUtils.isPlayer;
+
 /**
  * This class handles following admin commands: - character_disconnect = disconnects target player
  * @version $Revision: 1.2.4.4 $ $Date: 2005/04/11 10:06:00 $
@@ -53,7 +55,7 @@ public class AdminDisconnect implements IAdminCommandHandler
 	{
 		final WorldObject target = activeChar.getTarget();
 		Player player = null;
-		if ((target != null) && target.isPlayer())
+		if (isPlayer(target))
 		{
 			player = (Player) target;
 		}

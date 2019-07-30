@@ -30,6 +30,8 @@ import org.l2j.gameserver.network.serverpackets.AcquireSkillList;
 import org.l2j.gameserver.network.serverpackets.ExSubjobInfo;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
 
+import static org.l2j.gameserver.util.GameUtils.isPlayer;
+
 /**
  * @author Sdw
  */
@@ -52,7 +54,7 @@ public class ClassChange extends AbstractEffect
 	@Override
 	public void instant(Creature effector, Creature effected, Skill skill, Item item)
 	{
-		if (effected.isPlayer())
+		if (isPlayer(effected))
 		{
 			final Player player = effected.getActingPlayer();
 			// TODO: FIX ME - Executing 1 second later otherwise interupted exception during storeCharBase()

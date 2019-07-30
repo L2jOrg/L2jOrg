@@ -17,13 +17,15 @@
 package handlers.effecthandlers;
 
 import org.l2j.gameserver.ai.CtrlIntention;
-import org.l2j.gameserver.model.World;
 import org.l2j.gameserver.model.StatsSet;
+import org.l2j.gameserver.model.World;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.effects.AbstractEffect;
 import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.skills.Skill;
+
+import static org.l2j.gameserver.util.GameUtils.isPlayer;
 
 /**
  * Hide effect implementation.
@@ -38,7 +40,7 @@ public final class Hide extends AbstractEffect
 	@Override
 	public void onStart(Creature effector, Creature effected, Skill skill, Item item)
 	{
-		if (effected.isPlayer())
+		if (isPlayer(effected))
 		{
 			effected.setInvisible(true);
 			
@@ -63,7 +65,7 @@ public final class Hide extends AbstractEffect
 	@Override
 	public void onExit(Creature effector, Creature effected, Skill skill)
 	{
-		if (effected.isPlayer())
+		if (isPlayer(effected))
 		{
 			final Player activeChar = effected.getActingPlayer();
 			if (!activeChar.inObserverMode())

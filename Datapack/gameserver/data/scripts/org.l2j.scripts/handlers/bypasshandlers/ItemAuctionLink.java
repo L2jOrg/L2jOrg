@@ -30,6 +30,8 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.StringTokenizer;
 
+import static org.l2j.gameserver.util.GameUtils.isNpc;
+
 public class ItemAuctionLink implements IBypassHandler
 {
 	private static final SimpleDateFormat fmt = new SimpleDateFormat("HH:mm:ss dd.MM.yyyy");
@@ -42,7 +44,7 @@ public class ItemAuctionLink implements IBypassHandler
 	@Override
 	public boolean useBypass(String command, Player activeChar, Creature target)
 	{
-		if (!target.isNpc())
+		if (!isNpc(target))
 		{
 			return false;
 		}

@@ -11,6 +11,8 @@ import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.model.skills.SkillCaster;
 import org.l2j.gameserver.network.serverpackets.MoveToLocation;
 
+import static org.l2j.gameserver.util.GameUtils.isCreature;
+
 public class DoppelgangerAI extends CreatureAI {
     private volatile boolean _thinking; // to prevent recursive thinking
     private volatile boolean _startFollow;
@@ -38,7 +40,7 @@ public class DoppelgangerAI extends CreatureAI {
 
     private void thinkAttack() {
         final WorldObject target = getTarget();
-        final Creature attackTarget = (target != null) && target.isCharacter() ? (Creature) target : null;
+        final Creature attackTarget = isCreature(target) ? (Creature) target : null;
 
         if (checkTargetLostOrDead(attackTarget)) {
             setTarget(null);
@@ -139,7 +141,7 @@ public class DoppelgangerAI extends CreatureAI {
     @Override
     protected void onIntentionCast(Skill skill, WorldObject target, Item item, boolean forceUse, boolean dontMove) {
         if (getIntention() == CtrlIntention.AI_INTENTION_ATTACK) {
-            _lastAttack = (getTarget() != null) && getTarget().isCharacter() ? (Creature) getTarget() : null;
+            _lastAttack = isCreature(getTarget()) ? (Creature) getTarget() : null;
         } else {
             _lastAttack = null;
         }

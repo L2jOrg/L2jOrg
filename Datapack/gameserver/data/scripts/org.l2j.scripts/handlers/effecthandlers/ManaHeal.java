@@ -26,6 +26,8 @@ import org.l2j.gameserver.model.stats.Stats;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
 
+import static org.l2j.gameserver.util.GameUtils.isDoor;
+
 /**
  * Mana Heal effect implementation.
  * @author UnAfraid
@@ -48,7 +50,7 @@ public final class ManaHeal extends AbstractEffect
 	@Override
 	public void instant(Creature effector, Creature effected, Skill skill, Item item)
 	{
-		if (effected.isDead() || effected.isDoor() || effected.isMpBlocked())
+		if (effected.isDead() || isDoor(effected) || effected.isMpBlocked())
 		{
 			return;
 		}

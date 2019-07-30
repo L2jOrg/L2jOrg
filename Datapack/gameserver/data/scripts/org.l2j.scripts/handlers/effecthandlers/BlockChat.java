@@ -27,6 +27,8 @@ import org.l2j.gameserver.model.punishment.PunishmentTask;
 import org.l2j.gameserver.model.punishment.PunishmentType;
 import org.l2j.gameserver.model.skills.Skill;
 
+import static org.l2j.gameserver.util.GameUtils.isPlayer;
+
 /**
  * Block Chat effect implementation.
  * @author BiggBoss
@@ -40,7 +42,7 @@ public final class BlockChat extends AbstractEffect
 	@Override
 	public boolean canStart(Creature effector, Creature effected, Skill skill)
 	{
-		return (effected != null) && effected.isPlayer();
+		return isPlayer(effected);
 	}
 	
 	@Override

@@ -20,8 +20,8 @@ import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.gameserver.enums.QuestType;
 import org.l2j.gameserver.handler.IAdminCommandHandler;
 import org.l2j.gameserver.instancemanager.QuestManager;
-import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.World;
+import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.quest.Quest;
 import org.l2j.gameserver.model.quest.QuestState;
@@ -36,6 +36,8 @@ import org.slf4j.LoggerFactory;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+
+import static org.l2j.gameserver.util.GameUtils.isPlayer;
 
 /**
  * TODO: Rework and cleanup.
@@ -110,7 +112,7 @@ public class AdminShowQuests implements IAdminCommandHandler
 		{
 			targetObject = activeChar.getTarget();
 			
-			if ((targetObject != null) && targetObject.isPlayer())
+			if (isPlayer(targetObject))
 			{
 				target = targetObject.getActingPlayer();
 			}

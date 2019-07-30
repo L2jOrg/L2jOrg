@@ -27,6 +27,9 @@ import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.network.SystemMessageId;
 
+import static org.l2j.gameserver.util.GameUtils.isAttackable;
+import static org.l2j.gameserver.util.GameUtils.isMonster;
+
 /**
  * Spoil effect implementation.
  * @author _drunk_, Ahmed, Zoey76
@@ -43,7 +46,7 @@ public final class Spoil extends AbstractEffect
 		final int lvlDifference = (effected.getLevel() - (skill.getMagicLevel() > 0 ? skill.getMagicLevel() : effector.getLevel()));
 		final double lvlModifier = Math.pow(1.3, lvlDifference);
 		float targetModifier = 1;
-		if (effected.isAttackable() && !effected.isRaid() && !effected.isRaidMinion() && (effected.getLevel() >= Config.MIN_NPC_LVL_MAGIC_PENALTY) && (effector.getActingPlayer() != null) && ((effected.getLevel() - effector.getActingPlayer().getLevel()) >= 3))
+		if (isAttackable(effected) && !effected.isRaid() && !effected.isRaidMinion() && (effected.getLevel() >= Config.MIN_NPC_LVL_MAGIC_PENALTY) && (effector.getActingPlayer() != null) && ((effected.getLevel() - effector.getActingPlayer().getLevel()) >= 3))
 		{
 			final int lvlDiff = effected.getLevel() - effector.getActingPlayer().getLevel() - 2;
 			if (lvlDiff >= Config.NPC_SKILL_CHANCE_PENALTY.size())
@@ -67,7 +70,7 @@ public final class Spoil extends AbstractEffect
 	@Override
 	public void instant(Creature effector, Creature effected, Skill skill, Item item)
 	{
-		if (!effected.isMonster() || effected.isDead())
+		if (!isMonster(effected) || effected.isDead())
 		{
 			effector.sendPacket(SystemMessageId.INVALID_TARGET);
 			return;

@@ -48,7 +48,7 @@ import java.util.Objects;
 import java.util.concurrent.ScheduledFuture;
 
 import static org.l2j.gameserver.ai.CtrlIntention.AI_INTENTION_ATTACK;
-import static org.l2j.gameserver.util.GameUtils.isPlayer;
+import static org.l2j.gameserver.util.GameUtils.*;
 import static org.l2j.gameserver.util.MathUtil.calculateHeadingFrom;
 import static org.l2j.gameserver.util.MathUtil.convertHeadingToDegree;
 
@@ -129,7 +129,7 @@ public class SkillCaster implements Runnable {
         }
 
         // You should not heal/buff monsters without pressing the ctrl button.
-        if (isPlayer(caster) && target.isMonster() && (skill.getEffectPoint() > 0) && !ctrlPressed) {
+        if (isPlayer(caster) && isMonster(target) && (skill.getEffectPoint() > 0) && !ctrlPressed) {
             caster.sendPacket(SystemMessageId.INVALID_TARGET);
             return null;
         }
@@ -159,7 +159,7 @@ public class SkillCaster implements Runnable {
 
             // Initial checks
             for (WorldObject obj : targets) {
-                if ((obj == null) || !obj.isCharacter()) {
+                if (!isCreature(obj)) {
                     continue;
                 }
 
@@ -203,19 +203,19 @@ public class SkillCaster implements Runnable {
             final Player player = caster.getActingPlayer();
             if (player != null) {
                 for (WorldObject obj : targets) {
-                    if (!obj.isCharacter()) {
+                    if (!isCreature(obj)) {
                         continue;
                     }
 
                     if (skill.isBad()) {
-                        if (obj.isPlayable()) {
+                        if (isPlayable(obj)) {
                             // Update pvpflag.
                             player.updatePvPStatus((Creature) obj);
 
-                            if (obj.isSummon()) {
+                            if (isSummon(obj)) {
                                 ((Summon) obj).updateAndBroadcastStatus(1);
                             }
-                        } else if (obj.isAttackable()) {
+                        } else if (isAttackable(obj)) {
                             // Add hate to the attackable, and put it in the attack list.
                             ((Attackable) obj).addDamageHate(caster, 0, -skill.getEffectPoint());
                             ((Creature) obj).addAttackerToAttackByList(caster);
@@ -230,8 +230,8 @@ public class SkillCaster implements Runnable {
                     else if (obj != player)
                     {
                         // Supporting monsters or players results in pvpflag.
-                        if (((skill.getEffectPoint() > 0) && obj.isMonster()) //
-                                || (obj.isPlayable() && ((obj.getActingPlayer().getPvpFlag() > 0) //
+                        if (((skill.getEffectPoint() > 0) && isMonster(obj)) //
+                                || (isPlayable(obj) && ((obj.getActingPlayer().getPvpFlag() > 0) //
                                 || (((Creature) obj).getReputation() < 0) //
                         )))
                         {
@@ -243,10 +243,10 @@ public class SkillCaster implements Runnable {
                 // Mobs in range 1000 see spell
                 World.getInstance().forEachVisibleObjectInRange(player, Npc.class, 1000, npcMob ->
                 {
-                    EventDispatcher.getInstance().notifyEventAsync(new OnNpcSkillSee(npcMob, player, skill, caster.isSummon(), targets.toArray(new WorldObject[0])), npcMob);
+                    EventDispatcher.getInstance().notifyEventAsync(new OnNpcSkillSee(npcMob, player, skill, isSummon(caster), targets.toArray(WorldObject[]::new)), npcMob);
 
                     // On Skill See logic
-                    if (npcMob.isAttackable()) {
+                    if (isAttackable(npcMob)) {
                         final Attackable attackable = (Attackable) npcMob;
 
                         if (skill.getEffectPoint() > 0) {
@@ -254,7 +254,7 @@ public class SkillCaster implements Runnable {
                                 final WorldObject npcTarget = attackable.getTarget();
                                 for (WorldObject skillTarget : targets) {
                                     if ((npcTarget == skillTarget) || (npcMob == skillTarget)) {
-                                        final Creature originalCaster = caster.isSummon() ? caster : player;
+                                        final Creature originalCaster = isSummon(caster) ? caster : player;
                                         attackable.addDamageHate(originalCaster, 0, (skill.getEffectPoint() * 150) / (attackable.getLevel() + 7));
                                     }
                                 }
@@ -289,7 +289,7 @@ public class SkillCaster implements Runnable {
 
                 if (!ignoreTargetType) {
                     final WorldObject objTarget = skill.getTarget(activeChar, false, false, false);
-                    if (objTarget != null && objTarget.isCharacter()) {
+                    if (isCreature(objTarget)) {
                         target = objTarget;
                     }
                 }
@@ -542,7 +542,7 @@ public class SkillCaster implements Runnable {
             caster.broadcastPacket(new ExRotation(caster.getObjectId(), caster.getHeading())); // TODO: Not sent in retail. Probably moveToPawn is enough
 
             // Send MoveToPawn packet to trigger Blue Bubbles on target become Red, but don't do it while (double) casting, because that will screw up animation... some fucked up stuff, right?
-            if (isPlayer(caster) && !caster.isCastingNow() && target.isCharacter()) {
+            if (isPlayer(caster) && !caster.isCastingNow() && isCreature(target)) {
                 caster.sendPacket(new MoveToPawn(caster, target, (int) MathUtil.calculateDistance2D(caster, target)));
                 caster.sendPacket(ActionFailed.STATIC_PACKET);
             }
@@ -568,7 +568,7 @@ public class SkillCaster implements Runnable {
         }
 
         // Send a packet starting the casting.
-        final int actionId = caster.isSummon() ? ActionData.getInstance().getSkillActionId(_skill.getId()) : -1;
+        final int actionId = isSummon(caster) ? ActionData.getInstance().getSkillActionId(_skill.getId()) : -1;
         if (!_skill.isNotBroadcastable()) {
             caster.broadcastPacket(new MagicSkillUse(caster, target, _skill.getDisplayId(), _skill.getDisplayLevel(), displayedCastTime, reuseDelay, _skill.getReuseDelayGroup(), actionId, _castingType));
         }
@@ -623,7 +623,7 @@ public class SkillCaster implements Runnable {
         }
 
         // Trigger any skill cast start effects.
-        if (target.isCharacter()) {
+        if (isCreature(target)) {
             _skill.applyEffectScope(EffectScope.START, new BuffInfo(caster, (Creature) target, _skill, false, _item, null), true, false);
         }
 
@@ -899,7 +899,7 @@ public class SkillCaster implements Runnable {
                 final double course = _skill.getOperateType() == SkillOperateType.DA4 ? Math.toRadians(270) : Math.toRadians(90);
                 final double radian = Math.toRadians(convertHeadingToDegree(target.getHeading()));
                 double nRadius = creature.getCollisionRadius();
-                if (target.isCharacter()) {
+                if (isCreature(target)) {
                     nRadius += ((Creature) target).getCollisionRadius();
                 }
                 x = target.getX() + (int) (Math.cos(Math.PI + radian + course) * nRadius);
@@ -928,7 +928,7 @@ public class SkillCaster implements Runnable {
                     final int dy = target.getY() - creature.getY();
                     final double distance = Math.sqrt((dx * dx) + (dy * dy));
                     double nRadius = creature.getCollisionRadius();
-                    if (target.isCharacter()) {
+                    if (isCreature(target)) {
                         nRadius += ((Creature) target).getCollisionRadius();
                     }
                     x = (int) (target.getX() - (nRadius * (dx / distance)));

@@ -22,6 +22,7 @@ import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.util.BuilderUtil;
 
+import static org.l2j.gameserver.util.GameUtils.isCreature;
 import static org.l2j.gameserver.util.GameUtils.isPlayer;
 
 /**
@@ -64,7 +65,7 @@ public class AdminInvul implements IAdminCommandHandler
 		else if (command.equals("admin_setundying"))
 		{
 			final WorldObject target = activeChar.getTarget();
-			if (target.isCharacter())
+			if (isCreature(target))
 			{
 				handleUndying(activeChar, (Creature) target);
 			}

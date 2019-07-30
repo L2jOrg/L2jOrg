@@ -25,6 +25,8 @@ import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.model.stats.Stats;
 import org.l2j.gameserver.network.serverpackets.ExStorageMaxCount;
 
+import static org.l2j.gameserver.util.GameUtils.isPlayer;
+
 /**
  * @author Sdw
  */
@@ -73,7 +75,7 @@ public class EnlargeSlot extends AbstractEffect
 			}
 		}
 		effected.getStat().mergeAdd(stat, _amount);
-		if (effected.isPlayer())
+		if (isPlayer(effected))
 		{
 			effected.sendPacket(new ExStorageMaxCount((Player) effected));
 		}

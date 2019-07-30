@@ -19,8 +19,8 @@ package handlers.effecthandlers;
 import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.enums.InstanceType;
 import org.l2j.gameserver.handler.TargetHandler;
-import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.StatsSet;
+import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.effects.AbstractEffect;
 import org.l2j.gameserver.model.events.EventType;
@@ -31,6 +31,8 @@ import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.model.skills.SkillCaster;
 import org.l2j.gameserver.model.skills.targets.TargetType;
+
+import static org.l2j.gameserver.util.GameUtils.isCreature;
 
 /**
  * Trigger Skill By Damage effect implementation.
@@ -90,7 +92,7 @@ public final class TriggerSkillByDamage extends AbstractEffect
 			LOGGER.warn("Exception in ITargetTypeHandler.getTarget(): " + e.getMessage(), e);
 		}
 		
-		if ((target != null) && target.isCharacter())
+		if (isCreature(target))
 		{
 			SkillCaster.triggerCast(event.getTarget(), (Creature) target, triggerSkill);
 		}

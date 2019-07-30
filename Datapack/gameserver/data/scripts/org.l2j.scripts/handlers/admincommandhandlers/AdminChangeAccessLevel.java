@@ -16,10 +16,6 @@
  */
 package handlers.admincommandhandlers;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
-
 import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.gameserver.data.xml.impl.AdminData;
 import org.l2j.gameserver.handler.IAdminCommandHandler;
@@ -30,6 +26,12 @@ import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.Disconnection;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.util.BuilderUtil;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+
+import static org.l2j.gameserver.util.GameUtils.isPlayer;
 
 /**
  * Change access level command handler.
@@ -51,7 +53,7 @@ public final class AdminChangeAccessLevel implements IAdminCommandHandler
 			{
 				final int lvl = Integer.parseInt(parts[1]);
 				final WorldObject target = activeChar.getTarget();
-				if ((target == null) || !target.isPlayer())
+				if (!isPlayer(target))
 				{
 					activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
 				}

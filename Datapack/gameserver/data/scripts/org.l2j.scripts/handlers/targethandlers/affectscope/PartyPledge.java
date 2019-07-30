@@ -16,6 +16,8 @@ import java.util.concurrent.atomic.AtomicInteger;
 import java.util.function.Consumer;
 import java.util.function.Predicate;
 
+import static org.l2j.gameserver.util.GameUtils.isPlayable;
+
 /**
  * Party and Clan affect scope implementation.
  * @author Nik
@@ -29,8 +31,7 @@ public class PartyPledge implements IAffectScopeHandler
 		final int affectRange = skill.getAffectRange();
 		final int affectLimit = skill.getAffectLimit();
 		
-		if (target.isPlayable())
-		{
+		if (isPlayable(target)) {
 			final Playable playable = (Playable) target;
 			final Player player = playable.getActingPlayer();
 			final Party party = player.getParty();

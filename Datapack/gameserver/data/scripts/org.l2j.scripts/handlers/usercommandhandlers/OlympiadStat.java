@@ -23,6 +23,8 @@ import org.l2j.gameserver.model.olympiad.Olympiad;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
 
+import static org.l2j.gameserver.util.GameUtils.isPlayer;
+
 /**
  * Olympiad Stat user command.
  * @author kamy, Zoey76
@@ -44,7 +46,7 @@ public class OlympiadStat implements IUserCommandHandler
 		
 		final int nobleObjId = activeChar.getObjectId();
 		final WorldObject target = activeChar.getTarget();
-		if ((target == null) || !target.isPlayer() || (target.getActingPlayer().getClassId().level() < 2))
+		if (!isPlayer(target) || (target.getActingPlayer().getClassId().level() < 2))
 		{
 			activeChar.sendPacket(SystemMessageId.COMMAND_AVAILABLE_FOR_THOSE_WHO_HAVE_COMPLETED_2ND_CLASS_TRANSFER);
 			return false;

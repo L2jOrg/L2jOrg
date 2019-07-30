@@ -28,6 +28,7 @@ import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
 
 import static org.l2j.gameserver.util.GameUtils.isPlayer;
+import static org.l2j.gameserver.util.GameUtils.isSummon;
 
 /**
  * Player Can Resurrect condition implementation.
@@ -99,7 +100,7 @@ public class ConditionPlayerCanResurrect extends Condition {
                     }
                 }
             }
-        } else if (effected.isSummon()) {
+        } else if (isSummon(effected)) {
             final Summon summon = (Summon) effected;
             final Player player = summon.getOwner();
             if (!summon.isDead()) {

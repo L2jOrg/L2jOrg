@@ -15,6 +15,8 @@ import org.l2j.gameserver.network.ServerPacketId;
 
 import java.util.Set;
 
+import static org.l2j.gameserver.util.GameUtils.*;
+
 /**
  * @author UnAfraid
  */
@@ -100,7 +102,7 @@ public class NpcInfo extends AbstractMaskPacket<NpcInfoType> {
             addComponentType(NpcInfoType.NAME);
         }
 
-        if (npc.getTemplate().isUsingServerSideTitle() || (Config.SHOW_NPC_LVL && npc.isMonster()) || npc.isChampion() || npc.isTrap()) {
+        if (npc.getTemplate().isUsingServerSideTitle() || (Config.SHOW_NPC_LVL && isMonster(npc)) || npc.isChampion() || isTrap(npc)) {
             addComponentType(NpcInfoType.TITLE);
         }
 
@@ -215,7 +217,7 @@ public class NpcInfo extends AbstractMaskPacket<NpcInfoType> {
         writeByte((byte) _initSize);
 
         if (containsMask(NpcInfoType.ATTACKABLE)) {
-            writeByte((byte)(_npc.isAttackable() && !(_npc instanceof Guard) ? 0x01 : 0x00));
+            writeByte((byte)(isAttackable(_npc) && !(_npc instanceof Guard) ? 0x01 : 0x00));
         }
         if (containsMask(NpcInfoType.UNKNOWN1)) {
             writeInt(0x00); // unknown

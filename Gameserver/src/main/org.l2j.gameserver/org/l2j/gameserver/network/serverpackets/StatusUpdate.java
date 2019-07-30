@@ -9,6 +9,8 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.Map.Entry;
 
+import static org.l2j.gameserver.util.GameUtils.isPlayable;
+
 public final class StatusUpdate extends ServerPacket {
     private final int _objectId;
     private final boolean _isPlayable;
@@ -23,7 +25,7 @@ public final class StatusUpdate extends ServerPacket {
      */
     public StatusUpdate(WorldObject object) {
         _objectId = object.getObjectId();
-        _isPlayable = object.isPlayable();
+        _isPlayable = isPlayable(object);
     }
 
     public void addUpdate(StatusUpdateType type, int level) {

@@ -24,6 +24,8 @@ import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.skills.AbnormalType;
 import org.l2j.gameserver.model.skills.Skill;
 
+import static org.l2j.gameserver.util.GameUtils.isPlayer;
+
 /**
  * Detection effect implementation.
  * @author UnAfraid
@@ -43,7 +45,7 @@ public final class Detection extends AbstractEffect
 	@Override
 	public void instant(Creature effector, Creature effected, Skill skill, Item item)
 	{
-		if (!effector.isPlayer() || !effected.isPlayer())
+		if (!isPlayer(effector) || !isPlayer(effected))
 		{
 			return;
 		}

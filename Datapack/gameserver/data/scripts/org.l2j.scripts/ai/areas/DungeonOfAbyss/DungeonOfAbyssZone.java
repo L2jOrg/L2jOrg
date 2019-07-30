@@ -16,6 +16,7 @@
  */
 package ai.areas.DungeonOfAbyss;
 
+import ai.AbstractNpcAI;
 import org.l2j.gameserver.instancemanager.ZoneManager;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.actor.Creature;
@@ -23,7 +24,7 @@ import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.zone.Zone;
 
-import ai.AbstractNpcAI;
+import static org.l2j.gameserver.util.GameUtils.isPlayer;
 
 /**
  * @author Mobius
@@ -97,7 +98,7 @@ public class DungeonOfAbyssZone extends AbstractNpcAI
 	@Override
 	public String onEnterZone(Creature creature, Zone zone)
 	{
-		if (creature.isPlayer())
+		if (isPlayer(creature))
 		{
 			final Player player = creature.getActingPlayer();
 			cancelQuestTimer("EXIT_PLAYER" + ABYSS_WEST_ZONE_1.getName() + player.getObjectId(), null, player);

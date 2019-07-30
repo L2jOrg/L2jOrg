@@ -29,6 +29,8 @@ import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.InventoryUpdate;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
 
+import static org.l2j.gameserver.util.GameUtils.isPlayer;
+
 /**
  * Convert Item effect implementation.
  * @author Zoey76
@@ -48,7 +50,7 @@ public final class ConvertItem extends AbstractEffect
 	@Override
 	public void instant(Creature effector, Creature effected, Skill skill, Item item)
 	{
-		if (effected.isAlikeDead() || !effected.isPlayer())
+		if (effected.isAlikeDead() || !isPlayer(effected))
 		{
 			return;
 		}

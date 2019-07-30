@@ -16,10 +16,6 @@
  */
 package handlers.targethandlers.affectscope;
 
-import java.util.concurrent.atomic.AtomicInteger;
-import java.util.function.Consumer;
-import java.util.function.Predicate;
-
 import org.l2j.gameserver.handler.AffectObjectHandler;
 import org.l2j.gameserver.handler.IAffectObjectHandler;
 import org.l2j.gameserver.handler.IAffectScopeHandler;
@@ -29,6 +25,13 @@ import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.StaticWorldObject;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.model.skills.targets.AffectScope;
+
+import java.util.concurrent.atomic.AtomicInteger;
+import java.util.function.Consumer;
+import java.util.function.Predicate;
+
+import static org.l2j.gameserver.util.GameUtils.isCreature;
+import static org.l2j.gameserver.util.GameUtils.isDoor;
 
 /**
  * Static Object affect scope implementation. Used to detect hidden doors.
@@ -56,7 +59,7 @@ public class StaticObjectScope implements IAffectScopeHandler
 				return false;
 			}
 			
-			if (!c.isDoor() && !(c instanceof StaticWorldObject))
+			if (!isDoor(c) && !(c instanceof StaticWorldObject))
 			{
 				return false;
 			}
@@ -71,7 +74,7 @@ public class StaticObjectScope implements IAffectScopeHandler
 		};
 		
 		// Add object of origin since its skipped in the forEachVisibleObjectInRange method.
-		if (target.isCharacter() && filter.test((Creature) target))
+		if (isCreature(target) && filter.test((Creature) target))
 		{
 			action.accept(target);
 		}

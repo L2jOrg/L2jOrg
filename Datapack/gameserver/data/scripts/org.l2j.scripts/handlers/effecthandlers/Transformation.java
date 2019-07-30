@@ -27,6 +27,8 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+import static org.l2j.gameserver.util.GameUtils.isDoor;
+
 /**
  * Transformation effect implementation.
  * @author nBd
@@ -55,7 +57,7 @@ public final class Transformation extends AbstractEffect
 	@Override
 	public boolean canStart(Creature effector, Creature effected, Skill skill)
 	{
-		return !effected.isDoor();
+		return !isDoor(effected);
 	}
 	
 	@Override

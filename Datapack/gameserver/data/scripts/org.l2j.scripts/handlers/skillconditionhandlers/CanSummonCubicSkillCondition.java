@@ -16,12 +16,14 @@
  */
 package handlers.skillconditionhandlers;
 
-import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.StatsSet;
+import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.skills.ISkillCondition;
 import org.l2j.gameserver.model.skills.Skill;
+
+import static org.l2j.gameserver.util.GameUtils.isPlayer;
 
 /**
  * @author UnAfraid
@@ -35,7 +37,7 @@ public class CanSummonCubicSkillCondition implements ISkillCondition
 	@Override
 	public boolean canUse(Creature caster, Skill skill, WorldObject target)
 	{
-		if (!caster.isPlayer() || caster.isAlikeDead() || caster.getActingPlayer().inObserverMode())
+		if (!isPlayer(caster) || caster.isAlikeDead() || caster.getActingPlayer().inObserverMode())
 		{
 			return false;
 		}

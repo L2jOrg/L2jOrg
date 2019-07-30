@@ -16,10 +16,6 @@
  */
 package handlers.effecthandlers;
 
-import java.util.Collections;
-import java.util.HashSet;
-import java.util.Set;
-
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Pet;
@@ -29,6 +25,13 @@ import org.l2j.gameserver.model.effects.EffectFlag;
 import org.l2j.gameserver.model.effects.EffectType;
 import org.l2j.gameserver.model.instancezone.Instance;
 import org.l2j.gameserver.model.skills.Skill;
+
+import java.util.Collections;
+import java.util.HashSet;
+import java.util.Set;
+
+import static org.l2j.gameserver.util.GameUtils.isPet;
+import static org.l2j.gameserver.util.GameUtils.isPlayer;
 
 /**
  * Resurrection Special effect implementation.
@@ -73,7 +76,7 @@ public final class ResurrectionSpecial extends AbstractEffect
 	@Override
 	public void onExit(Creature effector, Creature effected, Skill skill)
 	{
-		if (!effected.isPlayer() && !effected.isPet())
+		if (!isPlayer(effected) && !isPet(effected))
 		{
 			return;
 		}
@@ -85,11 +88,11 @@ public final class ResurrectionSpecial extends AbstractEffect
 			return;
 		}
 		
-		if (effected.isPlayer())
+		if (isPlayer(effected))
 		{
 			effected.getActingPlayer().reviveRequest(caster, skill, false, _power);
 		}
-		else if (effected.isPet())
+		else if (isPet(effected))
 		{
 			final Pet pet = (Pet) effected;
 			effected.getActingPlayer().reviveRequest(pet.getActingPlayer(), skill, true, _power);

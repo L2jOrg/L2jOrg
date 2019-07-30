@@ -25,6 +25,8 @@ import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.model.stats.Formulas;
 
+import static org.l2j.gameserver.util.GameUtils.isPlayer;
+
 /**
  * Magical Attack By Abnormal effect implementation.
  * @author Adry_85
@@ -58,7 +60,7 @@ public final class MagicalAttackByAbnormal extends AbstractEffect
 			return;
 		}
 		
-		if (effected.isPlayer() && effected.getActingPlayer().isFakeDeath())
+		if (isPlayer(effected) && effected.getActingPlayer().isFakeDeath())
 		{
 			effected.stopFakeDeath(true);
 		}

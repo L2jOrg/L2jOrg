@@ -26,6 +26,8 @@ import org.l2j.gameserver.model.skills.AbnormalType;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.model.stats.Formulas;
 
+import static org.l2j.gameserver.util.GameUtils.isPlayer;
+
 /**
  * Magical Abnormal-depending dispel Attack effect implementation.
  * @author Nik
@@ -62,7 +64,7 @@ public final class MagicalAbnormalDispelAttack extends AbstractEffect
 			return;
 		}
 		
-		if (effected.isPlayer() && effected.getActingPlayer().isFakeDeath())
+		if (isPlayer(effected) && effected.getActingPlayer().isFakeDeath())
 		{
 			effected.stopFakeDeath(true);
 		}

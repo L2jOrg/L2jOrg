@@ -344,7 +344,7 @@ public class AdminAdmin implements IAdminCommandHandler
 				case "set":
 				{
 					final WorldObject target = activeChar.getTarget();
-					if ((target == null) || !target.isPlayer())
+					if ((target == null) || !isPlayer(target))
 					{
 						activeChar.sendPacket(SystemMessageId.THAT_IS_AN_INCORRECT_TARGET);
 						break;

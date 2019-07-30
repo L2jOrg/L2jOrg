@@ -154,7 +154,7 @@ public abstract class Playable extends Creature {
 
         if (killer != null) {
             final Player killerPlayer = killer.getActingPlayer();
-            if ((killerPlayer != null) && isPlayable()) {
+            if ((killerPlayer != null)) {
                 killerPlayer.onPlayerKill(this);
             }
         }
@@ -257,9 +257,4 @@ public abstract class Playable extends Creature {
     public abstract void storeEffect(boolean storeEffects);
 
     public abstract void restoreEffects();
-
-    @Override
-    public boolean isPlayable() {
-        return true;
-    }
 }

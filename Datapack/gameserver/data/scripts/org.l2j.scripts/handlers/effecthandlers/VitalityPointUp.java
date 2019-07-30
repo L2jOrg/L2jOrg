@@ -23,6 +23,8 @@ import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.network.serverpackets.UserInfo;
 
+import static org.l2j.gameserver.util.GameUtils.isPlayer;
+
 /**
  * Vitality Point Up effect implementation.
  * @author Adry_85
@@ -39,7 +41,7 @@ public final class VitalityPointUp extends AbstractEffect
 	@Override
 	public boolean canStart(Creature effector, Creature effected, Skill skill)
 	{
-		return (effected != null) && effected.isPlayer();
+		return isPlayer(effected);
 	}
 	
 	@Override

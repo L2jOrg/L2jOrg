@@ -23,6 +23,8 @@ import org.l2j.gameserver.model.effects.AbstractEffect;
 import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.skills.Skill;
 
+import static org.l2j.gameserver.util.GameUtils.isTrap;
+
 /**
  * Trap Detect effect implementation.
  * @author UnAfraid
@@ -50,7 +52,7 @@ public final class TrapDetect extends AbstractEffect
 	@Override
 	public void instant(Creature effector, Creature effected, Skill skill, Item item)
 	{
-		if (!effected.isTrap() || effected.isAlikeDead())
+		if (!isTrap(effected) || effected.isAlikeDead())
 		{
 			return;
 		}

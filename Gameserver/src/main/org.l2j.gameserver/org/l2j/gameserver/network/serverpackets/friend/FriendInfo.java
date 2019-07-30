@@ -10,7 +10,7 @@ class FriendInfo {
     boolean online;
 
     FriendInfo(int friendId, CharacterData friendData) {
-        this(friendId, friendData.getName(), false, friendData.getLevel(), friendData.getLevel());
+        this(friendId, friendData.getName(), false, friendData.getLevel(), friendData.getClassId());
     }
 
     FriendInfo(int objId, String name, boolean online, int level, int classId) {

@@ -40,6 +40,7 @@ import org.l2j.gameserver.model.zone.type.ClanHallZone;
 
 import java.util.Optional;
 
+import static org.l2j.gameserver.util.GameUtils.isPet;
 import static org.l2j.gameserver.util.GameUtils.isPlayer;
 
 /**
@@ -119,7 +120,7 @@ public class RegenMPFinalizer implements IStatsFunction {
 
             // Add MEN bonus
             baseValue *= creature.getLevelMod() * BaseStats.MEN.calcBonus(creature);
-        } else if (creature.isPet()) {
+        } else if (isPet(creature)) {
             baseValue = ((Pet) creature).getPetLevelData().getPetRegenMP() * Config.PET_MP_REGEN_MULTIPLIER;
         }
 

@@ -17,6 +17,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.ScheduledFuture;
 
+import static org.l2j.gameserver.util.GameUtils.isCreature;
 import static org.l2j.gameserver.util.GameUtils.isPlayer;
 
 
@@ -123,7 +124,7 @@ public class SkillChannelizer implements Runnable {
             if (target != null) {
                 skill.forEachTargetAffected(_channelizer, target, o ->
                 {
-                    if (o.isCharacter()) {
+                    if (isCreature(o)) {
                         targetList.add((Creature) o);
                         ((Creature) o).getSkillChannelized().addChannelizer(skill.getChannelingSkillId(), _channelizer);
                     }

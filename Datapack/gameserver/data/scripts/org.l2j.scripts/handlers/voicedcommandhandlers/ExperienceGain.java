@@ -24,6 +24,8 @@ import org.l2j.gameserver.model.events.impl.character.player.OnPlayableExpChange
 import org.l2j.gameserver.model.events.listeners.FunctionEventListener;
 import org.l2j.gameserver.model.events.returns.TerminateReturn;
 
+import static org.l2j.gameserver.util.GameUtils.isPlayer;
+
 /**
  * @author xban1x
  */
@@ -61,7 +63,7 @@ public final class ExperienceGain implements IVoicedCommandHandler
 	
 	private TerminateReturn onExperienceReceived(Playable playable, long exp)
 	{
-		if (playable.isPlayer() && playable.getActingPlayer().isDead())
+		if (isPlayer(playable) && playable.getActingPlayer().isDead())
 		{
 			return new TerminateReturn(false, false, false);
 		}

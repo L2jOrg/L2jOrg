@@ -22,6 +22,7 @@ import org.l2j.gameserver.network.serverpackets.SkillCoolTime;
 import java.util.ArrayList;
 import java.util.List;
 
+import static org.l2j.gameserver.util.GameUtils.isNpc;
 import static org.l2j.gameserver.util.GameUtils.isPlayer;
 
 /**
@@ -98,7 +99,7 @@ public final class Transform implements IIdentifiable {
     private TransformTemplate getTemplate(Creature creature) {
         if (isPlayer(creature)) {
             return (creature.getActingPlayer().getAppearance().getSex() ? _femaleTemplate : _maleTemplate);
-        } else if (creature.isNpc()) {
+        } else if (isNpc(creature)) {
             return ((Npc) creature).getTemplate().getSex() == Sex.FEMALE ? _femaleTemplate : _maleTemplate;
         }
 

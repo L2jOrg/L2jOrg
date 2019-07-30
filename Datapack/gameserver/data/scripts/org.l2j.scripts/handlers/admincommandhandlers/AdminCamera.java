@@ -23,6 +23,8 @@ import org.l2j.gameserver.model.events.AbstractScript;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.util.BuilderUtil;
 
+import static org.l2j.gameserver.util.GameUtils.isCreature;
+
 /**
  * Camera commands.
  * @author Zoey76
@@ -39,7 +41,7 @@ public class AdminCamera implements IAdminCommandHandler
 	@Override
 	public boolean useAdminCommand(String command, Player activeChar)
 	{
-		if ((activeChar.getTarget() == null) || !activeChar.getTarget().isCharacter())
+		if (!isCreature(activeChar.getTarget()))
 		{
 			activeChar.sendPacket(SystemMessageId.YOUR_TARGET_CANNOT_BE_FOUND);
 			return false;

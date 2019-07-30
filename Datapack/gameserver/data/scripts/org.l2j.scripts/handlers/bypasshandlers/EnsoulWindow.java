@@ -22,6 +22,8 @@ import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.serverpackets.ensoul.ExShowEnsoulExtractionWindow;
 import org.l2j.gameserver.network.serverpackets.ensoul.ExShowEnsoulWindow;
 
+import static org.l2j.gameserver.util.GameUtils.isNpc;
+
 /**
  * @author St3eT
  */
@@ -36,7 +38,7 @@ public class EnsoulWindow implements IBypassHandler
 	@Override
 	public boolean useBypass(String command, Player activeChar, Creature target)
 	{
-		if (!target.isNpc())
+		if (!isNpc(target))
 		{
 			return false;
 		}

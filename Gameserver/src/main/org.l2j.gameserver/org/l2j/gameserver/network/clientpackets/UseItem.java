@@ -31,6 +31,7 @@ import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import static java.util.Objects.isNull;
+import static org.l2j.gameserver.util.GameUtils.isItem;
 
 public final class UseItem extends ClientPacket {
 
@@ -72,7 +73,7 @@ public final class UseItem extends ClientPacket {
             // gm can use other player item
             if (activeChar.isGM()) {
                 final WorldObject obj = World.getInstance().findObject(_objectId);
-                if (obj.isItem()) {
+                if (isItem(obj)) {
                     AdminCommandHandler.getInstance().useAdminCommand(activeChar, "admin_use_item " + _objectId, true);
                 }
             }

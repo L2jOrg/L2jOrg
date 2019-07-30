@@ -17,12 +17,14 @@
 package handlers.skillconditionhandlers;
 
 import org.l2j.gameserver.enums.SkillConditionAffectType;
-import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.StatsSet;
+import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.skills.AbnormalType;
 import org.l2j.gameserver.model.skills.ISkillCondition;
 import org.l2j.gameserver.model.skills.Skill;
+
+import static org.l2j.gameserver.util.GameUtils.isCreature;
 
 /**
  * @author UnAfraid
@@ -53,7 +55,7 @@ public class OpCheckAbnormalSkillCondition implements ISkillCondition
 			}
 			case TARGET:
 			{
-				if ((target != null) && target.isCharacter())
+				if (isCreature(target))
 				{
 					return ((Creature) target).getEffectList().hasAbnormalType(_type, info -> (info.getSkill().getAbnormalLvl() >= _level)) == _hasAbnormal;
 				}

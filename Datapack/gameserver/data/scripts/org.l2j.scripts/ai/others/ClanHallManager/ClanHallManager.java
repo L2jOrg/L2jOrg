@@ -16,10 +16,7 @@
  */
 package ai.others.ClanHallManager;
 
-import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.StringTokenizer;
-
+import ai.AbstractNpcAI;
 import org.l2j.commons.util.CommonUtil;
 import org.l2j.gameserver.data.xml.impl.ResidenceFunctionsData;
 import org.l2j.gameserver.data.xml.impl.TeleportersData;
@@ -39,7 +36,11 @@ import org.l2j.gameserver.model.teleporter.TeleportHolder;
 import org.l2j.gameserver.network.NpcStringId;
 import org.l2j.gameserver.network.serverpackets.AgitDecoInfo;
 
-import ai.AbstractNpcAI;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.StringTokenizer;
+
+import static org.l2j.gameserver.util.GameUtils.isPlayer;
 
 /**
  * Clan Hall Manager AI.
@@ -450,7 +451,7 @@ public final class ClanHallManager extends AbstractNpcAI
 	@Override
 	public String onSeeCreature(Npc npc, Creature creature, boolean isSummon)
 	{
-		if (creature.isPlayer())
+		if (isPlayer(creature))
 		{
 			final ClanHall clanHall = npc.getClanHall();
 			if (clanHall != null)

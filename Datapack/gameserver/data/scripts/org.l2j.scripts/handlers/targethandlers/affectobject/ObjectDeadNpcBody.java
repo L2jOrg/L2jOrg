@@ -20,6 +20,8 @@ import org.l2j.gameserver.handler.IAffectObjectHandler;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.skills.targets.AffectObject;
 
+import static org.l2j.gameserver.util.GameUtils.isNpc;
+
 /**
  * @author Nik
  */
@@ -33,7 +35,7 @@ public class ObjectDeadNpcBody implements IAffectObjectHandler
 			return false;
 		}
 		
-		return target.isNpc() && target.isDead();
+		return isNpc(target) && target.isDead();
 	}
 	
 	@Override

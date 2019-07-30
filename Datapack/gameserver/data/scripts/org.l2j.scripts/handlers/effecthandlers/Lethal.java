@@ -29,6 +29,8 @@ import org.l2j.gameserver.model.stats.Stats;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
 
+import static org.l2j.gameserver.util.GameUtils.*;
+
 /**
  * Lethal effect implementation.
  * @author Adry_85
@@ -59,7 +61,7 @@ public final class Lethal extends AbstractEffect
 	@Override
 	public void instant(Creature effector, Creature effected, Skill skill, Item item)
 	{
-		if (effector.isPlayer() && !effector.getAccessLevel().canGiveDamage())
+		if (isPlayer(effector) && !effector.getAccessLevel().canGiveDamage())
 		{
 			return;
 		}
@@ -74,7 +76,7 @@ public final class Lethal extends AbstractEffect
 			return;
 		}
 		
-		if (effector.isPlayer() && effected.isPlayer() && effected.isAffected(EffectFlag.DUELIST_FURY) && !effector.isAffected(EffectFlag.DUELIST_FURY))
+		if (isPlayer(effector) && isPlayer(effected) && effected.isAffected(EffectFlag.DUELIST_FURY) && !effector.isAffected(EffectFlag.DUELIST_FURY))
 		{
 			return;
 		}
@@ -96,14 +98,14 @@ public final class Lethal extends AbstractEffect
 		else if (Rnd.get(100) < (_fullLethal * chanceMultiplier))
 		{
 			// for Players CP and HP is set to 1.
-			if (effected.isPlayer())
+			if (isPlayer(effected))
 			{
 				effected.setCurrentCp(1);
 				effected.setCurrentHp(1);
 				effected.sendPacket(SystemMessageId.LETHAL_STRIKE);
 			}
 			// for Monsters HP is set to 1.
-			else if (effected.isMonster() || effected.isSummon())
+			else if (isMonster(effected) || isSummon(effected))
 			{
 				effected.setCurrentHp(1);
 			}
@@ -113,14 +115,14 @@ public final class Lethal extends AbstractEffect
 		else if (Rnd.get(100) < (_halfLethal * chanceMultiplier))
 		{
 			// for Players CP is set to 1.
-			if (effected.isPlayer())
+			if (isPlayer(effected))
 			{
 				effected.setCurrentCp(1);
 				effected.sendPacket(SystemMessageId.HALF_KILL);
 				effected.sendPacket(SystemMessageId.YOUR_CP_WAS_DRAINED_BECAUSE_YOU_WERE_HIT_WITH_A_HALF_KILL_SKILL);
 			}
 			// for Monsters HP is set to 50%.
-			else if (effected.isMonster() || effected.isSummon())
+			else if (isMonster(effected) || isSummon(effected))
 			{
 				effected.setCurrentHp(effected.getCurrentHp() * 0.5);
 			}

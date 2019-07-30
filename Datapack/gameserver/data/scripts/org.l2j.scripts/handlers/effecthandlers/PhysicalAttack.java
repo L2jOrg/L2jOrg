@@ -32,6 +32,7 @@ import java.util.Collections;
 import java.util.HashSet;
 import java.util.Set;
 
+import static org.l2j.gameserver.util.GameUtils.isAttackable;
 import static org.l2j.gameserver.util.GameUtils.isPlayer;
 
 /**
@@ -109,7 +110,7 @@ public final class PhysicalAttack extends AbstractEffect
 			effected.stopFakeDeath(true);
 		}
 		
-		if (_overHit && effected.isAttackable())
+		if (_overHit && isAttackable(effected))
 		{
 			((Attackable) effected).overhitEnabled(true);
 		}

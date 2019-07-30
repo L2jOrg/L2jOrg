@@ -16,9 +16,6 @@
  */
 package handlers.admincommandhandlers;
 
-import java.util.Collection;
-import java.util.StringTokenizer;
-
 import org.l2j.gameserver.handler.IAdminCommandHandler;
 import org.l2j.gameserver.instancemanager.CursedWeaponsManager;
 import org.l2j.gameserver.model.CursedWeapon;
@@ -27,6 +24,11 @@ import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.NpcHtmlMessage;
 import org.l2j.gameserver.util.BuilderUtil;
+
+import java.util.Collection;
+import java.util.StringTokenizer;
+
+import static org.l2j.gameserver.util.GameUtils.isPlayer;
 
 /**
  * This class handles following admin commands: - cw_info = displays cursed weapon status - cw_remove = removes a cursed weapon from the world, item id or name must be provided - cw_add = adds a cursed weapon into the world, item id or name must be provided. Target will be the weilder - cw_goto =
@@ -205,7 +207,7 @@ public class AdminCursedWeapons implements IAdminCommandHandler
 				else
 				{
 					final WorldObject target = activeChar.getTarget();
-					if ((target != null) && target.isPlayer())
+					if (isPlayer(target))
 					{
 						((Player) target).addItem("AdminCursedWeaponAdd", id, 1, target, true);
 					}

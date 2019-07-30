@@ -26,6 +26,9 @@ import org.l2j.gameserver.model.zone.ZoneId;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.util.MathUtil;
 
+import static org.l2j.gameserver.util.GameUtils.isCreature;
+import static org.l2j.gameserver.util.GameUtils.isDoor;
+
 /**
  * Target enemy or ally if force attacking.
  * @author Nik
@@ -41,12 +44,8 @@ public class Enemy implements ITargetTypeHandler
 	@Override
 	public WorldObject getTarget(Creature activeChar, WorldObject selectedTarget, Skill skill, boolean forceUse, boolean dontMove, boolean sendMessage)
 	{
-		if (selectedTarget == null)
-		{
-			return null;
-		}
-		
-		if (!selectedTarget.isCharacter())
+
+		if (!isCreature(selectedTarget))
 		{
 			return null;
 		}
@@ -76,7 +75,7 @@ public class Enemy implements ITargetTypeHandler
 		}
 		
 		// Doors do not care about force attack.
-		if (target.isDoor() && !target.isAutoAttackable(activeChar))
+		if (isDoor(target) && !target.isAutoAttackable(activeChar))
 		{
 			if (sendMessage)
 			{

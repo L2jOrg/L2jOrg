@@ -562,7 +562,7 @@ public class Attackable extends Npc {
         if (!isDead()) {
             try {
                 // If monster is on walk - stop it
-                if (isWalker() && !isCoreAIDisabled() && WalkingManager.getInstance().isOnWalk(this)) {
+                if (GameUtils.isWalker(this) && !isCoreAIDisabled() && WalkingManager.getInstance().isOnWalk(this)) {
                     WalkingManager.getInstance().stopMoving(this, false, true);
                 }
 
@@ -1449,11 +1449,6 @@ public class Attackable extends Npc {
     @Override
     public boolean isChampion() {
         return _champion;
-    }
-
-    @Override
-    public boolean isAttackable() {
-        return true;
     }
 
     @Override

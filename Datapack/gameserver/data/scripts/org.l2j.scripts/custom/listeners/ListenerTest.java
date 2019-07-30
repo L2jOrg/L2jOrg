@@ -16,17 +16,13 @@
  */
 package custom.listeners;
 
+import ai.AbstractNpcAI;
 import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.model.actor.Attackable;
 import org.l2j.gameserver.model.events.Containers;
 import org.l2j.gameserver.model.events.EventType;
 import org.l2j.gameserver.model.events.ListenerRegisterType;
-import org.l2j.gameserver.model.events.annotations.Id;
-import org.l2j.gameserver.model.events.annotations.NpcLevelRange;
-import org.l2j.gameserver.model.events.annotations.Priority;
-import org.l2j.gameserver.model.events.annotations.Range;
-import org.l2j.gameserver.model.events.annotations.RegisterEvent;
-import org.l2j.gameserver.model.events.annotations.RegisterType;
+import org.l2j.gameserver.model.events.annotations.*;
 import org.l2j.gameserver.model.events.impl.character.OnCreatureDeath;
 import org.l2j.gameserver.model.events.impl.character.npc.OnAttackableAttack;
 import org.l2j.gameserver.model.events.impl.character.player.OnPlayerDlgAnswer;
@@ -38,7 +34,8 @@ import org.l2j.gameserver.model.events.returns.TerminateReturn;
 import org.l2j.gameserver.model.holders.ItemHolder;
 import org.l2j.gameserver.scripting.annotations.Disabled;
 
-import ai.AbstractNpcAI;
+import static org.l2j.gameserver.util.GameUtils.isAttackable;
+import static org.l2j.gameserver.util.GameUtils.isPlayable;
 
 /**
  * An example usage of Listeners.
@@ -134,7 +131,7 @@ public class ListenerTest extends AbstractNpcAI
 		}
 		
 		// Make sure a player killed this monster.
-		if ((event.getAttacker() != null) && event.getAttacker().isPlayable() && event.getTarget().isAttackable())
+		if ((event.getAttacker() != null) && isPlayable(event.getAttacker()) && isAttackable(event.getTarget()))
 		{
 			final Attackable monster = (Attackable) event.getTarget();
 			monster.dropItem(event.getAttacker().getActingPlayer(), new ItemHolder(57, Rnd.get(100, 1000)));

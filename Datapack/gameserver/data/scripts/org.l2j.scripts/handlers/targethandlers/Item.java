@@ -22,6 +22,8 @@ import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.model.skills.targets.TargetType;
 
+import static org.l2j.gameserver.util.GameUtils.isItem;
+
 /**
  * TODO: Target item.
  * @author Nik
@@ -37,6 +39,6 @@ public class Item implements ITargetTypeHandler
 	@Override
 	public WorldObject getTarget(Creature activeChar, WorldObject selectedTarget, Skill skill, boolean forceUse, boolean dontMove, boolean sendMessage)
 	{
-		return (selectedTarget != null) && selectedTarget.isItem() ? selectedTarget : null;
+		return isItem(selectedTarget) ? selectedTarget : null;
 	}
 }

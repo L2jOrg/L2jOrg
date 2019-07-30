@@ -29,6 +29,8 @@ import org.l2j.gameserver.util.BuilderUtil;
 
 import java.awt.*;
 
+import static org.l2j.gameserver.util.GameUtils.isDoor;
+
 /**
  * This class handles following admin commands: - open1 = open coloseum door 24190001 - open2 = open coloseum door 24190002 - open3 = open coloseum door 24190003 - open4 = open coloseum door 24190004 - openall = open all coloseum door - close1 = close coloseum door 24190001 - close2 = close coloseum
  * door 24190002 - close3 = close coloseum door 24190003 - close4 = close coloseum door 24190004 - closeall = close all coloseum door - open = open selected door - close = close selected door
@@ -118,7 +120,7 @@ public class AdminDoorControl implements IAdminCommandHandler
 			else if (command.equals("admin_open"))
 			{
 				final WorldObject target = activeChar.getTarget();
-				if ((target != null) && target.isDoor())
+				if (isDoor(target))
 				{
 					((Door) target).openMe();
 				}
@@ -130,7 +132,7 @@ public class AdminDoorControl implements IAdminCommandHandler
 			else if (command.equals("admin_close"))
 			{
 				final WorldObject target = activeChar.getTarget();
-				if ((target != null) && target.isDoor())
+				if (isDoor(target))
 				{
 					((Door) target).closeMe();
 				}

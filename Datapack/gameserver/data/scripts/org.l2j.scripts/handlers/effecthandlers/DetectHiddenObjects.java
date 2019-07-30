@@ -24,6 +24,8 @@ import org.l2j.gameserver.model.effects.AbstractEffect;
 import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.skills.Skill;
 
+import static org.l2j.gameserver.util.GameUtils.isDoor;
+
 /**
  * Detect Hidden Objects effect implementation.
  * @author UnAfraid
@@ -43,7 +45,7 @@ public final class DetectHiddenObjects extends AbstractEffect
 	@Override
 	public void instant(Creature effector, Creature effected, Skill skill, Item item)
 	{
-		if (!effected.isDoor())
+		if (!isDoor(effected))
 		{
 			return;
 		}

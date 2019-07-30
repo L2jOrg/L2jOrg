@@ -5,9 +5,12 @@ import org.l2j.gameserver.model.skills.BuffInfo;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
+import org.l2j.gameserver.util.GameUtils;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import static org.l2j.gameserver.util.GameUtils.isPet;
 
 public class PartySpelled extends ServerPacket {
     private final List<BuffInfo> _effects = new ArrayList<>();
@@ -30,7 +33,7 @@ public class PartySpelled extends ServerPacket {
     public void writeImpl(GameClient client) {
         writeId(ServerPacketId.PARTY_SPELLED);
 
-        writeInt(_activeChar.isServitor() ? 2 : _activeChar.isPet() ? 1 : 0);
+        writeInt(GameUtils.isServitor(_activeChar) ? 2 : isPet(_activeChar) ? 1 : 0);
         writeInt(_activeChar.getObjectId());
         writeInt(_effects.size() + _effects2.size());
         for (BuffInfo info : _effects) {

@@ -19,7 +19,7 @@ import java.util.List;
 
 import static org.l2j.gameserver.ai.CtrlIntention.AI_INTENTION_ACTIVE;
 import static org.l2j.gameserver.ai.CtrlIntention.AI_INTENTION_ATTACK;
-import static org.l2j.gameserver.util.GameUtils.isPlayer;
+import static org.l2j.gameserver.util.GameUtils.*;
 import static org.l2j.gameserver.util.MathUtil.*;
 
 /**
@@ -110,7 +110,7 @@ public final class ControllableMobAI extends AttackableAI {
     @Override
     protected void thinkCast() {
         WorldObject target = _skill.getTarget(actor, _forceUse, _dontMove, false);
-        if ((target == null) || !target.isCharacter() || ((Creature) target).isAlikeDead()) {
+        if (!isCreature(target) || ((Creature) target).isAlikeDead()) {
             target = _skill.getTarget(actor, findNextRndTarget(), _forceUse, _dontMove, false);
         }
 
@@ -310,7 +310,7 @@ public final class ControllableMobAI extends AttackableAI {
             hated = findNextRndTarget();
         } else {
             final WorldObject target = actor.getTarget();
-            hated = (target != null) && target.isCharacter() ? (Creature) target : null;
+            hated = isCreature(target) ? (Creature) target : null;
         }
 
         if (hated != null) {
@@ -320,12 +320,12 @@ public final class ControllableMobAI extends AttackableAI {
     }
 
     private boolean checkAutoAttackCondition(Creature target) {
-        if ((target == null) || !actor.isAttackable()) {
+        if (!isAttackable(actor)) {
             return false;
         }
         final Attackable me = (Attackable) actor;
 
-        if (target.isNpc() || target.isDoor()) {
+        if (isNpc(target) || isDoor(target)) {
             return false;
         }
 
@@ -344,14 +344,14 @@ public final class ControllableMobAI extends AttackableAI {
         }
 
         // Check if the target is a Playable
-        if (target.isPlayable()) {
+        if (isPlayable(target)) {
             // Check if the target isn't in silent move mode
             if (((Playable) target).isSilentMovingAffected()) {
                 return false;
             }
         }
 
-        if (target.isNpc()) {
+        if (isNpc(target)) {
             return false;
         }
 

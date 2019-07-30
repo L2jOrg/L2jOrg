@@ -27,6 +27,8 @@ import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.InventoryUpdate;
 import org.l2j.gameserver.util.BuilderUtil;
 
+import static org.l2j.gameserver.util.GameUtils.isPlayer;
+
 /**
  * This class handles following admin commands: - delete = deletes target
  * @version $Revision: 1.2.2.1.2.4 $ $Date: 2005/04/11 10:05:56 $
@@ -119,7 +121,7 @@ public class AdminElement implements IAdminCommandHandler
 			target = activeChar;
 		}
 		Player player = null;
-		if (target.isPlayer())
+		if (isPlayer(target))
 		{
 			player = (Player) target;
 		}

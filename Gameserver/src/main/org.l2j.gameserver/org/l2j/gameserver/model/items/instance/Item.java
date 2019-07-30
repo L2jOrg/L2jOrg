@@ -1629,11 +1629,6 @@ public final class Item extends WorldObject {
     }
 
     @Override
-    public boolean isItem() {
-        return true;
-    }
-
-    @Override
     public Player getActingPlayer() {
         return World.getInstance().findPlayer(getOwnerId());
     }

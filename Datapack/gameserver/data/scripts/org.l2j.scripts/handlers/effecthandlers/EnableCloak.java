@@ -22,6 +22,8 @@ import org.l2j.gameserver.model.effects.AbstractEffect;
 import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.skills.Skill;
 
+import static org.l2j.gameserver.util.GameUtils.isPlayer;
+
 /**
  * Enable Cloak effect implementation.
  * @author Adry_85
@@ -35,7 +37,7 @@ public final class EnableCloak extends AbstractEffect
 	@Override
 	public boolean canStart(Creature effector, Creature effected, Skill skill)
 	{
-		return (effector != null) && (effected != null) && effected.isPlayer();
+		return (effector != null) && isPlayer(effected);
 	}
 	
 	@Override

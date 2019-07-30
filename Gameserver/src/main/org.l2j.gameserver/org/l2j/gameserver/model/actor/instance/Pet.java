@@ -1083,11 +1083,6 @@ public class Pet extends Summon {
     }
 
     @Override
-    public boolean isPet() {
-        return true;
-    }
-
-    @Override
     public final double getRunSpeed() {
         return super.getRunSpeed() * (isUncontrollable() ? 0.5d : 1.0d);
     }

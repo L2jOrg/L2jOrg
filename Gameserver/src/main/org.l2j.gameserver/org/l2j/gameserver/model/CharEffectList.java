@@ -38,7 +38,7 @@ import java.util.function.Predicate;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-import static org.l2j.gameserver.util.GameUtils.isPlayer;
+import static org.l2j.gameserver.util.GameUtils.*;
 
 /**
  * Effect lists.<br>
@@ -649,7 +649,7 @@ public final class CharEffectList {
         } else {
             // Remove active effect.
             removeActive(info, removed);
-            if (_owner.isNpc()) // Fix for all NPC debuff animations removed.
+            if (isNpc(_owner)) // Fix for all NPC debuff animations removed.
             {
                 updateEffectList(broadcast);
             }
@@ -883,7 +883,7 @@ public final class CharEffectList {
         if (player != null) {
             final Party party = player.getParty();
             final Optional<AbnormalStatusUpdate> asu = (isPlayer(_owner) && !partyOnly) ? Optional.of(new AbnormalStatusUpdate()) : Optional.empty();
-            final Optional<PartySpelled> ps = ((party != null) || _owner.isSummon()) ? Optional.of(new PartySpelled(_owner)) : Optional.empty();
+            final Optional<PartySpelled> ps = ((party != null) || isSummon(_owner)) ? Optional.of(new PartySpelled(_owner)) : Optional.empty();
             final Optional<ExOlympiadSpelledInfo> os = (player.isInOlympiadMode() && player.isOlympiadStart()) ? Optional.of(new ExOlympiadSpelledInfo(player)) : Optional.empty();
 
             if (!_actives.isEmpty()) {

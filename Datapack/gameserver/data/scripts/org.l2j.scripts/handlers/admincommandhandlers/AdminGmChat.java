@@ -19,11 +19,13 @@ package handlers.admincommandhandlers;
 import org.l2j.gameserver.data.xml.impl.AdminData;
 import org.l2j.gameserver.enums.ChatType;
 import org.l2j.gameserver.handler.IAdminCommandHandler;
-import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.World;
+import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.CreatureSay;
+
+import static org.l2j.gameserver.util.GameUtils.isPlayer;
 
 /**
  * This class handles following admin commands: - gmchat text = sends text to all online GM's - gmchat_menu text = same as gmchat, displays the admin panel after chat
@@ -78,7 +80,7 @@ public class AdminGmChat implements IAdminCommandHandler
 			activeChar.sendPacket(SystemMessageId.SELECT_TARGET);
 			return;
 		}
-		if (!target.isPlayer())
+		if (!isPlayer(target))
 		{
 			activeChar.sendPacket(SystemMessageId.INVALID_TARGET);
 			return;

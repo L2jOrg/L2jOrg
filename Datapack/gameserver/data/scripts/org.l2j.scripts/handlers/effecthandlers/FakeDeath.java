@@ -26,6 +26,8 @@ import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ChangeWaitType;
 import org.l2j.gameserver.network.serverpackets.Revive;
 
+import static org.l2j.gameserver.util.GameUtils.isPlayer;
+
 /**
  * Fake Death effect implementation.
  * @author mkizub
@@ -72,7 +74,7 @@ public final class FakeDeath extends AbstractEffect
 	@Override
 	public void onExit(Creature effector, Creature effected, Skill skill)
 	{
-		if (effected.isPlayer())
+		if (isPlayer(effected))
 		{
 			effected.getActingPlayer().setRecentFakeDeath(true);
 		}

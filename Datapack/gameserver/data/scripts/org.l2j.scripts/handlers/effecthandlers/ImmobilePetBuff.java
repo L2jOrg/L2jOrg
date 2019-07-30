@@ -23,6 +23,9 @@ import org.l2j.gameserver.model.effects.AbstractEffect;
 import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.skills.Skill;
 
+import static org.l2j.gameserver.util.GameUtils.isPlayer;
+import static org.l2j.gameserver.util.GameUtils.isSummon;
+
 /**
  * Immobile Pet Buff effect implementation.
  * @author demonia
@@ -42,7 +45,7 @@ public final class ImmobilePetBuff extends AbstractEffect
 	@Override
 	public void onStart(Creature effector, Creature effected, Skill skill, Item item)
 	{
-		if (effected.isSummon() && effector.isPlayer() && (((Summon) effected).getOwner() == effector))
+		if (isSummon(effected) && isPlayer(effector) && (((Summon) effected).getOwner() == effector))
 		{
 			effected.setIsImmobilized(true);
 		}

@@ -28,6 +28,7 @@ import org.l2j.gameserver.network.serverpackets.DoorStatusUpdate;
 import org.l2j.gameserver.network.serverpackets.OnEventTrigger;
 import org.l2j.gameserver.network.serverpackets.StaticObject;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
+import org.l2j.gameserver.util.GameUtils;
 
 import java.util.Set;
 import java.util.concurrent.Future;
@@ -230,7 +231,7 @@ public final class Door extends Creature {
     @Override
     public boolean isAutoAttackable(Creature attacker) {
         // Doors can`t be attacked by NPCs
-        if (!attacker.isPlayable()) {
+        if (!GameUtils.isPlayable(attacker)) {
             return false;
         } else if (_isAttackableDoor) {
             return true;
@@ -500,11 +501,6 @@ public final class Door extends Creature {
             oldTask.cancel(false);
         }
         _autoCloseTask = ThreadPoolManager.schedule(new AutoClose(), getTemplate().getCloseTime() * 1000);
-    }
-
-    @Override
-    public boolean isDoor() {
-        return true;
     }
 
     class AutoClose implements Runnable {

@@ -13,6 +13,7 @@ import java.util.Map.Entry;
 import java.util.concurrent.ConcurrentHashMap;
 
 import static org.l2j.gameserver.util.GameUtils.isPlayer;
+import static org.l2j.gameserver.util.GameUtils.isSummon;
 
 
 /**
@@ -50,7 +51,7 @@ public class AttackStanceTaskManager {
      */
     public void removeAttackStanceTask(Creature actor) {
         if (actor != null) {
-            if (actor.isSummon()) {
+            if (isSummon(actor)) {
                 actor = actor.getActingPlayer();
             }
             _attackStanceTasks.remove(actor);
@@ -65,7 +66,7 @@ public class AttackStanceTaskManager {
      */
     public boolean hasAttackStanceTask(Creature actor) {
         if (actor != null) {
-            if (actor.isSummon()) {
+            if (isSummon(actor)) {
                 actor = actor.getActingPlayer();
             }
             return _attackStanceTasks.containsKey(actor);

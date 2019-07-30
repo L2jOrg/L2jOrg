@@ -22,6 +22,8 @@ import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
 
+import static org.l2j.gameserver.util.GameUtils.isNpc;
+
 public class Multisell implements IBypassHandler
 {
 	private static final String[] COMMANDS =
@@ -33,7 +35,7 @@ public class Multisell implements IBypassHandler
 	@Override
 	public boolean useBypass(String command, Player activeChar, Creature target)
 	{
-		if (!target.isNpc())
+		if (!isNpc(target))
 		{
 			return false;
 		}

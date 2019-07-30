@@ -22,6 +22,8 @@ import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.serverpackets.ActionFailed;
 
+import static org.l2j.gameserver.util.GameUtils.isCreature;
+
 /**
  * Tactical Signs setting player action handler.
  * @author Nik
@@ -31,7 +33,7 @@ public final class TacticalSignUse implements IPlayerActionHandler
 	@Override
 	public void useAction(Player activeChar, ActionDataHolder data, boolean ctrlPressed, boolean shiftPressed)
 	{
-		if ((!activeChar.isInParty() || (activeChar.getTarget() == null) || !activeChar.getTarget().isCharacter()))
+		if ((!activeChar.isInParty() || !isCreature(activeChar.getTarget())))
 		{
 			activeChar.sendPacket(ActionFailed.STATIC_PACKET);
 			return;

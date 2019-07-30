@@ -25,6 +25,9 @@ import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.model.stats.Stats;
 import org.l2j.gameserver.network.serverpackets.ExRegenMax;
 
+import static org.l2j.gameserver.util.GameUtils.isDoor;
+import static org.l2j.gameserver.util.GameUtils.isPlayer;
+
 /**
  * Heal Over Time effect implementation.
  */
@@ -41,7 +44,7 @@ public final class HealOverTime extends AbstractEffect
 	@Override
 	public boolean onActionTime(Creature effector, Creature effected, Skill skill, Item item)
 	{
-		if (effected.isDead() || effected.isDoor())
+		if (effected.isDead() || isDoor(effected))
 		{
 			return false;
 		}
@@ -67,11 +70,11 @@ public final class HealOverTime extends AbstractEffect
 		effected.broadcastStatusUpdate(effector);
 		return skill.isToggle();
 	}
-	
+
 	@Override
 	public void onStart(Creature effector, Creature effected, Skill skill, Item item)
 	{
-		if (effected.isPlayer() && (getTicks() > 0) && (skill.getAbnormalType() == AbnormalType.HP_RECOVER))
+		if (isPlayer(effected) && (getTicks() > 0) && (skill.getAbnormalType() == AbnormalType.HP_RECOVER))
 		{
 			double power = _power;
 			if ((item != null) && (item.isPotion() || item.isElixir()))

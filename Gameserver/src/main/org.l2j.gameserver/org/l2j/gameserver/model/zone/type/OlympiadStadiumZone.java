@@ -20,6 +20,7 @@ import org.l2j.gameserver.network.serverpackets.ExOlympiadMatchEnd;
 import java.util.ArrayList;
 import java.util.List;
 
+import static org.l2j.gameserver.util.GameUtils.isPlayable;
 import static org.l2j.gameserver.util.GameUtils.isPlayer;
 
 /**
@@ -71,7 +72,7 @@ public class OlympiadStadiumZone extends ZoneRespawn {
             }
         }
 
-        if (character.isPlayable()) {
+        if (isPlayable(character)) {
             final Player player = character.getActingPlayer();
             if (player != null) {
                 // only participants, observers and GMs allowed

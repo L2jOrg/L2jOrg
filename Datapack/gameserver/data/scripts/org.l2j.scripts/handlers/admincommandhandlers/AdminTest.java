@@ -29,6 +29,8 @@ import org.l2j.gameserver.util.BuilderUtil;
 import java.util.NoSuchElementException;
 import java.util.StringTokenizer;
 
+import static org.l2j.gameserver.util.GameUtils.isCreature;
+
 /**
  * @version $Revision: 1.2 $ $Date: 2004/06/27 08:12:59 $
  */
@@ -84,7 +86,7 @@ public class AdminTest implements IAdminCommandHandler
 	{
 		Creature caster;
 		final WorldObject target = activeChar.getTarget();
-		if (!target.isCharacter())
+		if (!isCreature(target))
 		{
 			caster = activeChar;
 		}

@@ -23,6 +23,8 @@ import org.l2j.gameserver.model.effects.EffectFlag;
 import org.l2j.gameserver.model.effects.EffectType;
 import org.l2j.gameserver.model.skills.Skill;
 
+import static org.l2j.gameserver.util.GameUtils.isPlayable;
+
 /**
  * Noblesse Blessing effect implementation.
  * @author earendil
@@ -36,7 +38,7 @@ public final class NoblesseBless extends AbstractEffect
 	@Override
 	public boolean canStart(Creature effector, Creature effected, Skill skill)
 	{
-		return (effector != null) && (effected != null) && effected.isPlayable();
+		return (effector != null) && isPlayable(effected);
 	}
 	
 	@Override

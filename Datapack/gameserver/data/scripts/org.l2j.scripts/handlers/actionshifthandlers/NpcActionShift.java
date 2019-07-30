@@ -22,6 +22,8 @@ import org.l2j.gameserver.network.serverpackets.NpcHtmlMessage;
 
 import java.util.Set;
 
+import static org.l2j.gameserver.util.GameUtils.isAttackable;
+import static org.l2j.gameserver.util.GameUtils.isNpc;
 import static org.l2j.gameserver.util.MathUtil.calculateDistance2D;
 import static org.l2j.gameserver.util.MathUtil.calculateDistance3D;
 
@@ -48,7 +50,7 @@ public class NpcActionShift implements IActionShiftHandler
 			html.replace("%lvl%", String.valueOf(npc.getTemplate().getLevel()));
 			html.replace("%name%", npc.getTemplate().getName());
 			html.replace("%tmplid%", String.valueOf(npc.getTemplate().getId()));
-			html.replace("%aggro%", String.valueOf(target.isAttackable() ? ((Attackable) target).getAggroRange() : 0));
+			html.replace("%aggro%", String.valueOf(isAttackable(target) ? ((Attackable) target).getAggroRange() : 0));
 			html.replace("%hp%", String.valueOf((int) npc.getCurrentHp()));
 			html.replace("%hpmax%", String.valueOf(npc.getMaxHp()));
 			html.replace("%mp%", String.valueOf((int) npc.getCurrentMp()));
@@ -175,7 +177,7 @@ public class NpcActionShift implements IActionShiftHandler
 		}
 		else if (Config.ALT_GAME_VIEWNPC)
 		{
-			if (!target.isNpc())
+			if (!isNpc(target))
 			{
 				return false;
 			}

@@ -16,9 +16,9 @@
  */
 package handlers.effecthandlers;
 
-import org.l2j.gameserver.model.WorldObject;
-import org.l2j.gameserver.model.World;
 import org.l2j.gameserver.model.StatsSet;
+import org.l2j.gameserver.model.World;
+import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.effects.AbstractEffect;
 import org.l2j.gameserver.model.holders.SkillHolder;
@@ -27,6 +27,8 @@ import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.model.skills.SkillCaster;
 
 import java.util.Collections;
+
+import static org.l2j.gameserver.util.GameUtils.isCreature;
 
 /**
  * Dam Over Time effect implementation.
@@ -74,7 +76,7 @@ public final class CallSkillOnActionTime extends AbstractEffect
 			{
 				final WorldObject target = triggerSkill.getTarget(effector, c, false, false, false);
 				
-				if ((target != null) && target.isCharacter())
+				if (isCreature(target))
 				{
 					SkillCaster.triggerCast(effector, (Creature) target, triggerSkill);
 				}

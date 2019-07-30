@@ -25,6 +25,8 @@ import org.l2j.gameserver.model.skills.targets.TargetType;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.util.MathUtil;
 
+import static org.l2j.gameserver.util.GameUtils.*;
+
 /**
  * Target dead monster.
  * @author Nik
@@ -41,17 +43,12 @@ public class NpcBody implements ITargetTypeHandler
 	@Override
 	public WorldObject getTarget(Creature activeChar, WorldObject selectedTarget, Skill skill, boolean forceUse, boolean dontMove, boolean sendMessage)
 	{
-		if (selectedTarget == null)
+		if (!isCreature(selectedTarget))
 		{
 			return null;
 		}
 		
-		if (!selectedTarget.isCharacter())
-		{
-			return null;
-		}
-		
-		if (!selectedTarget.isNpc() && !selectedTarget.isSummon())
+		if (!isNpc(selectedTarget) && !isSummon(selectedTarget))
 		{
 			if (sendMessage)
 			{

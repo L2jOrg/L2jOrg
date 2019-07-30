@@ -22,6 +22,8 @@ import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.skills.targets.AffectObject;
 
+import static org.l2j.gameserver.util.GameUtils.isNpc;
+
 /**
  * @author Nik
  */
@@ -44,7 +46,7 @@ public class Clan implements IAffectObjectHandler
 				return clan == target.getClan();
 			}
 		}
-		else if (activeChar.isNpc() && target.isNpc())
+		else if (isNpc(activeChar) && isNpc(target))
 		{
 			return ((Npc) activeChar).isInMyClan(((Npc) target));
 		}

@@ -14,6 +14,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+import static org.l2j.gameserver.util.GameUtils.isAttackable;
 import static org.l2j.gameserver.util.GameUtils.isPlayer;
 
 /**
@@ -58,7 +59,7 @@ public class Die extends ServerPacket {
             _toFortress = ((clan != null) && (clan.getFortId() > 0)) || isInFortDefense;
         }
 
-        _isSweepable = activeChar.isAttackable() && activeChar.isSweepActive();
+        _isSweepable = isAttackable(activeChar) && activeChar.isSweepActive();
     }
 
     public void setHideAnimation(boolean val) {

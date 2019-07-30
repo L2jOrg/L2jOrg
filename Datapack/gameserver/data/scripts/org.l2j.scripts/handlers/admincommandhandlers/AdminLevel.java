@@ -16,8 +16,6 @@
  */
 package handlers.admincommandhandlers;
 
-import java.util.StringTokenizer;
-
 import org.l2j.gameserver.data.xml.impl.ExperienceData;
 import org.l2j.gameserver.handler.IAdminCommandHandler;
 import org.l2j.gameserver.model.WorldObject;
@@ -25,6 +23,11 @@ import org.l2j.gameserver.model.actor.Playable;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.util.BuilderUtil;
+
+import java.util.StringTokenizer;
+
+import static org.l2j.gameserver.util.GameUtils.isPlayable;
+import static org.l2j.gameserver.util.GameUtils.isPlayer;
 
 public class AdminLevel implements IAdminCommandHandler
 {
@@ -51,7 +54,7 @@ public class AdminLevel implements IAdminCommandHandler
 		{
 			try
 			{
-				if ((targetChar != null) && targetChar.isPlayable())
+				if (isPlayable(targetChar))
 				{
 					((Playable) targetChar).getStat().addLevel(Byte.parseByte(val));
 				}
@@ -66,7 +69,7 @@ public class AdminLevel implements IAdminCommandHandler
 			final int maxLevel = ExperienceData.getInstance().getMaxLevel();
 			try
 			{
-				if ((targetChar == null) || !targetChar.isPlayer())
+				if (!isPlayer(targetChar))
 				{
 					activeChar.sendPacket(SystemMessageId.THAT_IS_AN_INCORRECT_TARGET); // incorrect target!
 					return false;

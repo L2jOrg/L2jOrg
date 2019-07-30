@@ -16,18 +16,20 @@
  */
 package handlers.effecthandlers;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import org.l2j.commons.util.Rnd;
-import org.l2j.gameserver.model.World;
 import org.l2j.gameserver.model.StatsSet;
+import org.l2j.gameserver.model.World;
 import org.l2j.gameserver.model.actor.Attackable;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.effects.AbstractEffect;
 import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.model.stats.Formulas;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import static org.l2j.gameserver.util.GameUtils.isAttackable;
 
 /**
  * Randomize Hate effect implementation.
@@ -56,7 +58,7 @@ public final class RandomizeHate extends AbstractEffect
 	@Override
 	public void instant(Creature effector, Creature effected, Skill skill, Item item)
 	{
-		if ((effected == effector) || !effected.isAttackable())
+		if ((effected == effector) || !isAttackable(effected))
 		{
 			return;
 		}
@@ -68,7 +70,7 @@ public final class RandomizeHate extends AbstractEffect
 			if ((cha != effectedMob) && (cha != effector))
 			{
 				// Aggro cannot be transfered to a mob of the same faction.
-				if (cha.isAttackable() && ((Attackable) cha).isInMyClan(effectedMob))
+				if (isAttackable(cha) && ((Attackable) cha).isInMyClan(effectedMob))
 				{
 					return;
 				}

@@ -24,6 +24,8 @@ import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.skills.targets.AffectObject;
 import org.l2j.gameserver.model.zone.ZoneId;
 
+import static org.l2j.gameserver.util.GameUtils.isPlayer;
+
 /**
  * @author Nik
  */
@@ -32,7 +34,7 @@ public class NotFriendPc implements IAffectObjectHandler
 	@Override
 	public boolean checkAffectedObject(Creature activeChar, Creature target)
 	{
-		if (!target.isPlayer())
+		if (!isPlayer(target))
 		{
 			return false;
 		}

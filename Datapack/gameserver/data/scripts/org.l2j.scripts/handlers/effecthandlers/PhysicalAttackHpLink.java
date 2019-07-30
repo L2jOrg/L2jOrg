@@ -27,6 +27,8 @@ import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.model.stats.Formulas;
 import org.l2j.gameserver.model.stats.Stats;
 
+import static org.l2j.gameserver.util.GameUtils.isAttackable;
+
 /**
  * Physical Attack HP Link effect implementation.<br>
  * <b>Note</b>: Initial formula taken from PhysicalAttack.
@@ -71,7 +73,7 @@ public final class PhysicalAttackHpLink extends AbstractEffect
 			return;
 		}
 		
-		if (_overHit && effected.isAttackable())
+		if (_overHit && isAttackable(effected))
 		{
 			((Attackable) effected).overhitEnabled(true);
 		}

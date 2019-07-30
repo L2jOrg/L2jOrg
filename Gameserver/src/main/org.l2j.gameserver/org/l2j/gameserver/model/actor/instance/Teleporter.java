@@ -26,6 +26,7 @@ import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.templates.NpcTemplate;
 import org.l2j.gameserver.model.teleporter.TeleportHolder;
 import org.l2j.gameserver.network.serverpackets.NpcHtmlMessage;
+import org.l2j.gameserver.util.GameUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -45,7 +46,7 @@ public final class Teleporter extends Npc {
 
     @Override
     public boolean isAutoAttackable(Creature attacker) {
-        return attacker.isMonster() || super.isAutoAttackable(attacker);
+        return GameUtils.isMonster(attacker) || super.isAutoAttackable(attacker);
     }
 
     @Override
