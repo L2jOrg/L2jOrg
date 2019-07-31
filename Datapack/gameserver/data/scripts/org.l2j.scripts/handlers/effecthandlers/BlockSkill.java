@@ -16,7 +16,7 @@
  */
 package handlers.effecthandlers;
 
-import org.l2j.commons.util.CommonUtil;
+import org.l2j.commons.util.Util;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.effects.AbstractEffect;
@@ -42,7 +42,7 @@ public final class BlockSkill extends AbstractEffect
 	
 	private TerminateReturn onSkillUseEvent(OnCreatureSkillUse event)
 	{
-		if (CommonUtil.contains(_magicTypes, event.getSkill().getMagicType()))
+		if (Util.contains(_magicTypes, event.getSkill().getMagicType()))
 		{
 			return new TerminateReturn(true, true, true);
 		}

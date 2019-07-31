@@ -186,7 +186,7 @@ public class PcStat extends PlayableStat {
             getActiveChar().setCurrentCp(getMaxCp());
             getActiveChar().broadcastPacket(new SocialAction(getActiveChar().getObjectId(), SocialAction.LEVEL_UP));
             getActiveChar().sendPacket(SystemMessageId.YOUR_LEVEL_HAS_INCREASED);
-            getActiveChar().notifyFriends(FriendStatus.MODE_LEVEL);
+            getActiveChar().notifyFriends(FriendStatus.LEVEL);
         }
 
         // Notify to scripts

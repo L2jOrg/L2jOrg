@@ -22,10 +22,10 @@ public class FriendList extends AbstractFriendListPacket {
 
         writeInt(info.size());
         for (FriendInfo info : info) {
-            writeInt(info.objId);
+            writeInt(info.objectId);
             writeString(info.name);
             writeInt(info.online);
-            writeInt(info.online ? info.objId : 0x00); // object id if online
+            writeInt(info.online ? info.objectId : 0x00); // object id if online
             writeInt(info.classId);
             writeInt(info.level);
         }

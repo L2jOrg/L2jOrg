@@ -16,16 +16,15 @@
  */
 package ai.others.WyvernManager;
 
-import java.util.HashMap;
-import java.util.Map;
-
+import ai.AbstractNpcAI;
+import org.l2j.commons.util.Util;
 import org.l2j.gameserver.Config;
-import org.l2j.commons.util.CommonUtil;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.entity.Fort;
 
-import ai.AbstractNpcAI;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * Wyvern Manager
@@ -82,7 +81,7 @@ public final class WyvernManager extends AbstractNpcAI
 	
 	private String mountWyvern(Npc npc, Player player)
 	{
-		if (player.isMounted() && (player.getMountLevel() >= STRIDER_LVL) && CommonUtil.contains(STRIDERS, player.getMountNpcId()))
+		if (player.isMounted() && (player.getMountLevel() >= STRIDER_LVL) && Util.contains(STRIDERS, player.getMountNpcId()))
 		{
 			if (isOwnerClan(npc, player) && (getQuestItemsCount(player, CRYSTAL_B_GRADE) >= WYVERN_FEE))
 			{

@@ -1,7 +1,9 @@
 package org.l2j.gameserver.network.serverpackets.friend;
 
 import org.l2j.gameserver.data.database.dao.CharacterDAO;
+import org.l2j.gameserver.data.sql.impl.ClanTable;
 import org.l2j.gameserver.data.sql.impl.PlayerNameTable;
+import org.l2j.gameserver.model.Clan;
 import org.l2j.gameserver.model.World;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.GameClient;
@@ -10,6 +12,7 @@ import org.l2j.gameserver.network.serverpackets.ServerPacket;
 
 import java.util.Calendar;
 
+import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;
 import static org.l2j.commons.database.DatabaseAccess.getDAO;
 
@@ -18,9 +21,9 @@ import static org.l2j.commons.database.DatabaseAccess.getDAO;
  */
 public class ExFriendDetailInfo extends ServerPacket {
     private final int _objectId;
-    private final Player friend;
+    private Player friend;
+    private FriendInfo info;
     private final String _name;
-    private final int lastAccess;
 
     public ExFriendDetailInfo(Player player, String name) {
         _objectId = player.getObjectId();
@@ -29,12 +32,9 @@ public class ExFriendDetailInfo extends ServerPacket {
         var friendId = PlayerNameTable.getInstance().getIdByName(name);
 
         friend = World.getInstance().findPlayer(friendId);
-        if(nonNull(friend)) {
-            lastAccess = friend.isBlocked(player) ? 0 : friend.isOnline() ? -1 : (int) (System.currentTimeMillis() - friend.getLastAccess()) / 1000;
-        } else {
-            lastAccess = !player.getFriendList().contains(friendId) ? 0 : (int) (System.currentTimeMillis() - getDAO(CharacterDAO.class).findFriendData(friendId).getLastAccess() / 1000);
+        if(isNull(friend)) {
+            info = new FriendInfo(friendId, getDAO(CharacterDAO.class).findFriendData(friendId));
         }
-
     }
 
     @Override
@@ -43,37 +43,65 @@ public class ExFriendDetailInfo extends ServerPacket {
 
         writeInt(_objectId);
 
-        if (friend == null) {
-            writeString(_name);
-            writeInt(0);
-            writeInt(0);
-            writeShort((short) 0);
-            writeShort((short) 0);
-            writeInt(0);
-            writeInt(0);
-            writeString("");
-            writeInt(0);
-            writeInt(0);
-            writeString("");
-            writeInt(1);
-            writeString(""); // memo
+        if (isNull(friend)) {
+            WriteFriendInfo();
         } else {
-            writeString(friend.getName());
-            writeInt(friend.isOnline());
-            writeInt(friend.isOnline() ? friend.getObjectId() : 0);
-            writeShort(friend.getLevel());
-            writeShort(friend.getClassId().getId());
-            writeInt(friend.getClanId());
-            writeInt(friend.getClanCrestId());
-            writeString(friend.getClan() != null ? friend.getClan().getName() : "");
-            writeInt(friend.getAllyId());
-            writeInt(friend.getAllyCrestId());
-            writeString(friend.getClan() != null ? friend.getClan().getAllyName() : "");
-            final Calendar createDate = friend.getCreateDate();
-            writeByte((byte) (createDate.get(Calendar.MONTH) + 1));
-            writeByte((byte) createDate.get(Calendar.DAY_OF_MONTH));
-            writeInt(lastAccess);
-            writeString(""); // memo
+            writePlayerInfo();
         }
+    }
+
+    private void writePlayerInfo() {
+        writeString(friend.getName());
+        writeInt(friend.isOnline());
+        writeInt(friend.isOnline() ? friend.getObjectId() : 0);
+        writeShort(friend.getLevel());
+        writeShort(friend.getClassId().getId());
+        writeInt(friend.getClanId());
+        writeInt(friend.getClanCrestId());
+        writeString(friend.getClan() != null ? friend.getClan().getName() : "");
+        writeInt(friend.getAllyId());
+        writeInt(friend.getAllyCrestId());
+        writeString(friend.getClan() != null ? friend.getClan().getAllyName() : "");
+
+        final Calendar createDate = friend.getCreateDate();
+        writeByte((byte) (createDate.get(Calendar.MONTH) + 1));
+        writeByte((byte) createDate.get(Calendar.DAY_OF_MONTH));
+
+        writeInt(-1);
+        writeString(""); //TODO  memo
+    }
+
+    private void WriteFriendInfo() {
+        writeString(_name);
+        writeInt(info.online);
+        writeInt(info.online ? info.objectId : 0);
+        writeShort(info.level);
+        writeShort(info.classId);
+        writeInt(info.clanId);
+
+        Clan clan;
+        if(info.clanId > 0 && nonNull(clan = ClanTable.getInstance().getClan(info.clanId))) {
+            writeInt(clan.getCrestId());
+            writeString(clan.getName());
+            writeInt(clan.getAllyId());
+            writeInt(clan.getAllyCrestId());
+            writeString(clan.getAllyName());
+        } else {
+            writeInt(0);
+            writeString("");
+            writeInt(0);
+            writeInt(0);
+            writeString("");
+        }
+
+        if(nonNull(info.createDate)) {
+            writeByte(info.createDate.getMonthValue());
+            writeByte(info.createDate.getDayOfMonth());
+        } else  {
+            writeByte(0);
+            writeByte(0);
+        }
+        writeInt((int) ((System.currentTimeMillis() - info.lastAccess) / 1000));
+        writeString(""); //TODO  memo
     }
 }

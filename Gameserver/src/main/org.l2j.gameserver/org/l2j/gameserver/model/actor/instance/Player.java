@@ -2180,7 +2180,7 @@ public final class Player extends Playable {
                 checkPlayerSkills();
             }
 
-            notifyFriends(FriendStatus.MODE_CLASS);
+            notifyFriends(FriendStatus.CLASS);
         } finally {
             _subclassLock.unlock();
         }
@@ -8296,7 +8296,7 @@ public final class Player extends Playable {
 
         revalidateZone(true);
 
-        notifyFriends(FriendStatus.MODE_ONLINE);
+        notifyFriends(FriendStatus.ONLINE);
         if (!canOverrideCond(PcCondOverride.SKILL_CONDITIONS) && Config.DECREASE_SKILL_LEVEL) {
             checkPlayerSkills();
         }
@@ -9080,7 +9080,7 @@ public final class Player extends Playable {
         }
 
         try {
-            notifyFriends(FriendStatus.MODE_OFFLINE);
+            notifyFriends(FriendStatus.OFFLINE);
             _blockList.playerLogout();
         } catch (Exception e) {
             LOGGER.warn("Exception on deleteMe() notifyFriends: " + e.getMessage(), e);

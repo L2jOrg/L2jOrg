@@ -51,6 +51,6 @@ public interface CharacterDAO extends DAO<CharacterData> {
     @Query("DELETE FROM character_relationship WHERE char_id=:playerId: AND friend_id=:blockedId: AND relation='BLOCK'")
     void deleteBlockedPlayer(int playerId, int blockedId);
 
-    @Query("SELECT char_name, classid, level, lastAccess FROM characters WHERE charId = :friendId:")
+    @Query("SELECT char_name, classid, level, lastAccess, clanid, createDate FROM characters WHERE charId = :friendId:")
     CharacterData findFriendData(int friendId);
 }

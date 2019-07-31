@@ -16,13 +16,12 @@
  */
 package ai.others.Servitors;
 
-import org.l2j.commons.util.CommonUtil;
+import ai.AbstractNpcAI;
+import org.l2j.commons.util.Util;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.Summon;
 import org.l2j.gameserver.model.actor.instance.Player;
-
-import ai.AbstractNpcAI;
 
 /**
  * Tree of Life AI.
@@ -57,7 +56,7 @@ public final class TreeOfLife extends AbstractNpcAI
 		if (player != null)
 		{
 			final Summon summon = player.getFirstServitor();
-			if (event.equals("HEAL") && (summon != null) && CommonUtil.contains(TREE_OF_LIFE, summon.getId()))
+			if (event.equals("HEAL") && (summon != null) && Util.contains(TREE_OF_LIFE, summon.getId()))
 			{
 				summon.doCast(summon.getTemplate().getParameters().getSkillHolder("s_tree_heal").getSkill(), null, false, false);
 				getTimers().addTimer("HEAL", 8000, null, player);

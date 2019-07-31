@@ -11,6 +11,8 @@ interface PacketFactory {
 
     Supplier<ClientPacket> NULL_PACKET_SUPLIER = () -> null;
     PacketFactory NULLABLE_PACKET_FACTORY = () -> null;
+    DiscardPacket DISCARD_PACKET = new DiscardPacket();
+    Supplier<ClientPacket> DISCARD = () -> DISCARD_PACKET;
 
     default int getPacketId() {
         return -1;

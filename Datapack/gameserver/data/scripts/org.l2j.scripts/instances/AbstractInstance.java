@@ -16,9 +16,8 @@
  */
 package instances;
 
-import java.util.List;
-
-import org.l2j.commons.util.CommonUtil;
+import ai.AbstractNpcAI;
+import org.l2j.commons.util.Util;
 import org.l2j.gameserver.enums.InstanceReenterType;
 import org.l2j.gameserver.instancemanager.InstanceManager;
 import org.l2j.gameserver.model.Location;
@@ -32,7 +31,7 @@ import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ExShowScreenMessage;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
 
-import ai.AbstractNpcAI;
+import java.util.List;
 
 /**
  * Abstract class for Instances.
@@ -58,7 +57,7 @@ public abstract class AbstractInstance extends AbstractNpcAI
 	
 	public boolean isInInstance(Instance instance)
 	{
-		return (instance != null) && CommonUtil.contains(_templateIds, instance.getTemplateId());
+		return (instance != null) && Util.contains(_templateIds, instance.getTemplateId());
 	}
 	
 	/**

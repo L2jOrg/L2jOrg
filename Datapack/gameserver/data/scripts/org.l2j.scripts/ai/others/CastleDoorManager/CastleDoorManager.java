@@ -16,16 +16,15 @@
  */
 package ai.others.CastleDoorManager;
 
-import java.util.StringTokenizer;
-
-import org.l2j.commons.util.CommonUtil;
+import ai.AbstractNpcAI;
+import org.l2j.commons.util.Util;
 import org.l2j.gameserver.model.ClanPrivilege;
 import org.l2j.gameserver.model.PcCondOverride;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.entity.Castle;
 
-import ai.AbstractNpcAI;
+import java.util.StringTokenizer;
 
 /**
  * Castle Door Manager AI.
@@ -144,7 +143,7 @@ public final class CastleDoorManager extends AbstractNpcAI
 	
 	private String getHtmlName(Npc npc)
 	{
-		return CommonUtil.contains(DOORMENS_INNER, npc.getId()) ? "CastleDoorManager-Inner" : "CastleDoorManager-Outter";
+		return Util.contains(DOORMENS_INNER, npc.getId()) ? "CastleDoorManager-Inner" : "CastleDoorManager-Outter";
 	}
 	
 	private boolean isOwningClan(Player player, Npc npc)

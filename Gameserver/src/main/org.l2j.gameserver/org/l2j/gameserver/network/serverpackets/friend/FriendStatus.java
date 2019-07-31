@@ -12,10 +12,10 @@ import org.l2j.gameserver.network.serverpackets.ServerPacket;
  * @author JIV
  */
 public class FriendStatus extends ServerPacket {
-    public static final int MODE_OFFLINE = 0;
-    public static final int MODE_ONLINE = 1;
-    public static final int MODE_LEVEL = 2;
-    public static final int MODE_CLASS = 3;
+    public static final int OFFLINE = 0;
+    public static final int ONLINE = 1;
+    public static final int LEVEL = 2;
+    public static final int CLASS = 3;
 
     private final int _type;
     private final int _objectId;
@@ -38,9 +38,9 @@ public class FriendStatus extends ServerPacket {
         writeInt(_type);
         writeString(_name);
         switch (_type) {
-            case MODE_OFFLINE -> writeInt(_objectId);
-            case MODE_LEVEL -> writeInt(_level);
-            case MODE_CLASS -> writeInt(_classId);
+            case OFFLINE -> writeInt(_objectId);
+            case LEVEL -> writeInt(_level);
+            case CLASS -> writeInt(_classId);
         }
     }
 

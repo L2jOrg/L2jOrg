@@ -36,7 +36,7 @@ public abstract class WorldObject extends ListenersContainer implements IIdentif
     /**
      * Object ID
      */
-    private int _objectId;
+    protected int objectId;
     /**
      * World Region
      */
@@ -72,7 +72,7 @@ public abstract class WorldObject extends ListenersContainer implements IIdentif
 
     public WorldObject(int objectId) {
         setInstanceType(InstanceType.L2Object);
-        _objectId = objectId;
+        this.objectId = objectId;
     }
 
     /**
@@ -144,7 +144,7 @@ public abstract class WorldObject extends ListenersContainer implements IIdentif
     public void refreshID() {
         World.getInstance().removeObject(this);
         IdFactory.getInstance().releaseId(getObjectId());
-        _objectId = IdFactory.getInstance().getNextId();
+        objectId = IdFactory.getInstance().getNextId();
     }
 
     @Override
@@ -207,7 +207,7 @@ public abstract class WorldObject extends ListenersContainer implements IIdentif
 
     @Override
     public final int getObjectId() {
-        return _objectId;
+        return objectId;
     }
 
     public abstract void sendInfo(Player activeChar);
@@ -613,6 +613,6 @@ public abstract class WorldObject extends ListenersContainer implements IIdentif
 
     @Override
     public String toString() {
-        return getClass().getSimpleName() + ":" + _name + "[" + _objectId + "]";
+        return getClass().getSimpleName() + ":" + _name + "[" + objectId + "]";
     }
 }

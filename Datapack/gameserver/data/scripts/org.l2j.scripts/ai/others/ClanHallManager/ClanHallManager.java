@@ -18,6 +18,7 @@ package ai.others.ClanHallManager;
 
 import ai.AbstractNpcAI;
 import org.l2j.commons.util.CommonUtil;
+import org.l2j.commons.util.Util;
 import org.l2j.gameserver.data.xml.impl.ResidenceFunctionsData;
 import org.l2j.gameserver.data.xml.impl.TeleportersData;
 import org.l2j.gameserver.enums.ClanHallGrade;
@@ -216,7 +217,7 @@ public final class ClanHallManager extends AbstractNpcAI
 										{
 											final String[] skillData = st.nextToken().split("_");
 											final SkillHolder skill = new SkillHolder(Integer.parseInt(skillData[0]), Integer.parseInt(skillData[1]));
-											if (CommonUtil.contains(ALLOWED_BUFFS, skill.getSkillId()))
+											if (Util.contains(ALLOWED_BUFFS, skill.getSkillId()))
 											{
 												if (npc.getCurrentMp() < (npc.getStat().getMpConsume(skill.getSkill()) + npc.getStat().getMpInitialConsume(skill.getSkill())))
 												{
