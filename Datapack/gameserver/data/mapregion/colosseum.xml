@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- TODO: Remove "castle" attributes from here, it should be loaded from TaxZones -->
+
 <list enabled="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	  xmlns="http://l2j.org"
 	  xsi:schemaLocation="http://l2j.org MapRegion.xsd">
 	<!-- Colosseum -->
-	<region name="colosseum" town="Coliseum" castle="5" locId="925" bbs="13">
+	<region name="colosseum" town="Coliseum" locId="925" bbs="13">
 		<respawnPoint x="147420" y="46378" z="-3350" />
 		<respawnPoint x="147696" y="46416" z="-3350" />
 		<respawnPoint x="147248" y="47048" z="-3350" />

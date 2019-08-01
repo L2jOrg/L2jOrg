@@ -25,14 +25,6 @@
 								</xs:complexType>
 							</xs:element>
 						</xs:sequence>
-						<xs:attribute name="castle" use="required">
-							<xs:simpleType>
-								<xs:restriction base="xs:nonNegativeInteger">
-									<xs:minInclusive value="0" />
-									<xs:maxInclusive value="9" />
-								</xs:restriction>
-							</xs:simpleType>
-						</xs:attribute>
 						<xs:attribute name="bbs" type="xs:token" use="required" />
 						<xs:attribute name="locId" type="xs:positiveInteger" use="required" />
 						<xs:attribute name="name" type="xs:token" use="required" />

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- TODO: Remove "castle" attributes from here, it should be loaded from TaxZones -->
+
 <list enabled="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	  xmlns="http://l2j.org"
 	  xsi:schemaLocation="http://l2j.org MapRegion.xsd">
 	<!-- Monster Race -->
-	<region name="monster_race" town="Floran Town" castle="2" locId="917" bbs="5">
+	<region name="monster_race" town="Floran Town" locId="917" bbs="5">
 		<respawnPoint x="11892" y="181700" z="-3560" />
 		<respawnPoint x="14028" y="181695" z="-3560" />
 		<respawnPoint x="13111" y="181695" z="-3560" />
@@ -39,7 +39,7 @@
 		<respawnPoint x="11824" y="182172" z="-3560" isChaotic="true" />
 	</region>
 	<!-- Monster Race PVP -->
-	<region name="monster_race_PVP" town="Floran Town" castle="2" locId="917" bbs="5">
+	<region name="monster_race_PVP" town="Floran Town" locId="917" bbs="5">
 		<respawnPoint x="11817" y="182897" z="-3560" />
 		<respawnPoint x="12438" y="182887" z="-3560" />
 		<respawnPoint x="13047" y="182902" z="-3560" />

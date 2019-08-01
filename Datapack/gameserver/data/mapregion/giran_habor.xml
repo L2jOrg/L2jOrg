@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- TODO: Remove "castle" attributes from here, it should be loaded from TaxZones -->
+
 
 <list enabled="true"
 	  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -7,7 +7,7 @@
 	  xsi:schemaLocation="http://l2j.org MapRegion.xsd" >
 
 	<!-- Giran Habor -->
-	<region name="giran_habor" town="Giran Habor" castle="3" locId="919" bbs="6">
+	<region name="giran_habor" town="Giran Habor" locId="919" bbs="6">
 		<respawnPoint x="46763" y="187041" z="-3451" />
 		<respawnPoint x="46471" y="186666" z="-3451" />
 		<respawnPoint x="47290" y="186842" z="-3451" />

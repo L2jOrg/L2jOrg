@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- TODO: Remove "castle" attributes from here, it should be loaded from TaxZones -->
+
 <list enabled="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xmlns="http://l2j.org"
       xsi:schemaLocation="http://l2j.org MapRegion.xsd">
-	<region name="dwarf_town" town="Dwarven Town" castle="9" locId="921" bbs="9">
+	<region name="dwarf_town" town="Dwarven Town" locId="921" bbs="9">
 		<respawnPoint x="116176" y="-182448" z="-1400" />
 		<respawnPoint x="116476" y="-182904" z="-1500" />
 		<respawnPoint x="115248" y="-178816" z="-850" />
@@ -40,7 +40,7 @@
 		<map X="25" Y="12" />
 	</region>
 	<!-- Quarry -->
-	<region name="Quarry" town="Dwarven Town" castle="9" locId="921" bbs="9">
+	<region name="Quarry" town="Dwarven Town" locId="921" bbs="9">
 		<respawnPoint x="108644" y="-173947" z="-400" />
 		<respawnPoint x="108678" y="-174002" z="-400" />
 		<respawnPoint x="108505" y="-173964" z="-400" />

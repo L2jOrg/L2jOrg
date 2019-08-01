@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- TODO: Remove "castle" attributes from here, it should be loaded from TaxZones -->
+
 <list enabled="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xmlns="http://l2j.org"
       xsi:schemaLocation="http://l2j.org MapRegion.xsd">
 	<!-- Elf Town -->
-	<region name="elf_town" town="Elven Town" castle="4" locId="914" bbs="4">
+	<region name="elf_town" town="Elven Town" locId="914" bbs="4">
 		<respawnPoint x="45487" y="49767" z="-2950" />
 		<respawnPoint x="45080" y="49614" z="-2950" />
 		<respawnPoint x="45284" y="49309" z="-2950" />
@@ -44,7 +44,7 @@
 		<banned race="DARK_ELF" point="darkelf_town" />
 	</region>
 	<!-- Mothertree Glade -->
-	<region name="Mothertree_Glade" town="Elven Town" castle="4" locId="914" bbs="4">
+	<region name="Mothertree_Glade" town="Elven Town" locId="914" bbs="4">
 		<respawnPoint x="46045" y="41251" z="-3440" />
 		<respawnPoint x="46117" y="41247" z="-3440" />
 		<respawnPoint x="46182" y="41198" z="-3440" />

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- TODO: Remove "castle" attributes from here, it should be loaded from TaxZones -->
+
 <list enabled="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	  xmlns="http://l2j.org"
 	  xsi:schemaLocation="http://l2j.org MapRegion.xsd">
 	<!-- Rune Town -->
-	<region name="rune_town" town="Rune Town" castle="8" locId="1537" bbs="14">
+	<region name="rune_town" town="Rune Town" locId="1537" bbs="14">
 		<respawnPoint x="38096" y="-46976" z="899" />
 		<respawnPoint x="38608" y="-47168" z="899" />
 		<respawnPoint x="38752" y="-47792" z="899" />
@@ -48,7 +48,7 @@
 		<map X="19" Y="16" />
 	</region>
 	<!-- Olympiad Stadium02 -->
-	<region name="olympiad_stadium02" town="Rune Town" castle="8" locId="1537" bbs="14">
+	<region name="olympiad_stadium02" town="Rune Town" locId="1537" bbs="14">
 		<respawnPoint x="38096" y="-46976" z="899" />
 		<respawnPoint x="38608" y="-47168" z="899" />
 		<respawnPoint x="38752" y="-47792" z="899" />
@@ -81,7 +81,7 @@
 	</region>
 
 	<!-- Olympiad Stadium03 -->
-	<region name="olympiad_stadium03" town="Rune Town" castle="8" locId="1537" bbs="14">
+	<region name="olympiad_stadium03" town="Rune Town" locId="1537" bbs="14">
 		<respawnPoint x="38096" y="-46976" z="899" />
 		<respawnPoint x="38608" y="-47168" z="899" />
 		<respawnPoint x="38752" y="-47792" z="899" />
@@ -114,7 +114,7 @@
 	</region>
 
 	<!-- Olympiad Stadium04 -->
-	<region name="olympiad_stadium04" town="Rune Town" castle="8" locId="1537" bbs="14">
+	<region name="olympiad_stadium04" town="Rune Town" locId="1537" bbs="14">
 		<respawnPoint x="38096" y="-46976" z="899" />
 		<respawnPoint x="38608" y="-47168" z="899" />
 		<respawnPoint x="38752" y="-47792" z="899" />

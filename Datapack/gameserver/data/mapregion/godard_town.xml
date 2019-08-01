@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- TODO: Remove "castle" attributes from here, it should be loaded from TaxZones -->
+
 <list enabled="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	  xmlns="http://l2j.org"
 	  xsi:schemaLocation="http://l2j.org MapRegion.xsd">
 	<!-- Godard Town -->
-	<region name="godard_town" town="Goddard Town" castle="7" locId="1538" bbs="15">
+	<region name="godard_town" town="Goddard Town" locId="1538" bbs="15">
 		<respawnPoint x="148560" y="-55904" z="-2779" />
 		<respawnPoint x="150704" y="-55744" z="-2979" />
 		<respawnPoint x="150400" y="-56752" z="-2979" />

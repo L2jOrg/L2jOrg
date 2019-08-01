@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- TODO: Remove "castle" attributes from here, it should be loaded from TaxZones -->
+
 <list enabled="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	  xmlns="http://l2j.org"
 	  xsi:schemaLocation="http://l2j.org MapRegion.xsd">
 	<!-- Darkelf Town -->
-	<region name="darkelf_town" town="Darkelven Town" castle="4" locId="915" bbs="3">
+	<region name="darkelf_town" town="Darkelven Town" locId="915" bbs="3">
 		<respawnPoint x="12501" y="16768" z="-4500" />
 		<respawnPoint x="12104" y="17385" z="-4500" />
 		<respawnPoint x="12519" y="16376" z="-4500" />
@@ -41,7 +41,7 @@
 		<banned race="ELF" point="elf_town" />
 	</region>
 	<!-- Temple Of Shilen -->
-	<region name="Temple_of_Shilen" town="Darkelven Town" castle="4" locId="915" bbs="3">
+	<region name="Temple_of_Shilen" town="Darkelven Town" locId="915" bbs="3">
 		<respawnPoint x="28295" y="11063" z="-4224" />
 		<respawnPoint x="28302" y="11008" z="-4224" />
 		<respawnPoint x="28377" y="10916" z="-4224" />

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- TODO: Remove "castle" attributes from here, it should be loaded from TaxZones -->
+
 <list enabled="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	  xmlns="http://l2j.org"
 	  xsi:schemaLocation="http://l2j.org MapRegion.xsd">
 	<!-- Rift Bitween Worlds -->
-	<region name="rift_bitween_worlds" town="Dimensional Rift" castle="0" locId="1643" bbs="100">
+	<region name="rift_bitween_worlds" town="Dimensional Rift" locId="1643" bbs="100">
 		<respawnPoint x="146950" y="26754" z="-2198" />
 		<respawnPoint x="136398" y="28901" z="-3582" isChaotic="true" />
 		<respawnPoint x="137292" y="28485" z="-3290" isChaotic="true" />

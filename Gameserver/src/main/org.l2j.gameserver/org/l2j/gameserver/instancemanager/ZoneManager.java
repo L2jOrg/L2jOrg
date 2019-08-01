@@ -27,7 +27,10 @@ import java.io.File;
 import java.lang.reflect.Constructor;
 import java.nio.file.Path;
 import java.util.*;
+import java.util.stream.Collectors;
 
+import static java.util.Objects.isNull;
+import static java.util.Objects.nonNull;
 import static org.l2j.gameserver.util.GameUtils.isCreature;
 
 /**
@@ -457,10 +460,7 @@ public final class ZoneManager extends GameXmlReader {
      * @return zone from where the object is located by type
      */
     public <T extends Zone> T getZone(ILocational locational, Class<T> type) {
-        if (locational == null) {
-            return null;
-        }
-        return getZone(locational.getX(), locational.getY(), locational.getZ(), type);
+        return isNull(locational) ?  null : getZone(locational.getX(), locational.getY(), locational.getZ(), type);
     }
 
     /**
@@ -471,13 +471,8 @@ public final class ZoneManager extends GameXmlReader {
      * @return zones
      */
     public List<Zone> getZones(int x, int y) {
-        final List<Zone> temp = new ArrayList<>();
-        for (Zone zone : getRegion(x, y).getZones().values()) {
-            if (zone.isInsideZone(x, y)) {
-                temp.add(zone);
-            }
-        }
-        return temp;
+        var region = getRegion(x, y);
+        return isNull(region) ? Collections.emptyList() : region.getZones().values().stream().filter(z -> z.isInsideZone(x, y)).collect(Collectors.toList());
     }
 
     /**
@@ -508,12 +503,10 @@ public final class ZoneManager extends GameXmlReader {
      * @param type the type
      * @return zone from given coordinates
      */
-    @SuppressWarnings("unchecked")
     private <T extends Zone> T getZone(int x, int y, int z, Class<T> type) {
-        for (Zone zone : getRegion(x, y).getZones().values()) {
-            if (zone.isInsideZone(x, y, z) && type.isInstance(zone)) {
-                return (T) zone;
-            }
+        var region = getRegion(x, y);
+        if(nonNull(region)) {
+            return region.getZones().values().stream().filter(zone -> type.isInstance(zone) && zone.isInsideZone(x, y, z)).map(type::cast).findFirst().orElse(null);
         }
         return null;
     }

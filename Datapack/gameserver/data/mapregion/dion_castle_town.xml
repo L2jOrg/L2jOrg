@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- TODO: Remove "castle" attributes from here, it should be loaded from TaxZones -->
+
 <list enabled="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	  xmlns="http://l2j.org"
 	  xsi:schemaLocation="http://l2j.org MapRegion.xsd">
 	<!-- Dion Castle Town -->
-	<region name="dion_castle_town" town="Dion Castle Town" castle="2" locId="916" bbs="5">
+	<region name="dion_castle_town" town="Dion Castle Town" locId="916" bbs="5">
 		<respawnPoint x="19025" y="145245" z="-3107" />
 		<respawnPoint x="18576" y="145136" z="-3104" />
 		<respawnPoint x="18717" y="145711" z="-3097" />

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- TODO: Remove "castle" attributes from here, it should be loaded from TaxZones -->
+
 <list enabled="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	  xmlns="http://l2j.org"
 	  xsi:schemaLocation="http://l2j.org MapRegion.xsd">
 	<!-- Oren Castle Town -->
-	<region name="oren_castle_town" town="Oren Castle Town" castle="4" locId="922" bbs="10">
+	<region name="oren_castle_town" town="Oren Castle Town" locId="922" bbs="10">
 		<respawnPoint x="80304" y="56241" z="-1500" />
 		<respawnPoint x="80594" y="55837" z="-1500" />
 		<respawnPoint x="79933" y="55752" z="-1500" />

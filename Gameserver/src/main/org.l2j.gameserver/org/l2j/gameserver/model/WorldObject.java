@@ -21,6 +21,7 @@ import org.l2j.gameserver.network.serverpackets.ServerPacket;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
+import static java.util.Objects.nonNull;
 import static org.l2j.commons.util.Util.zeroIfNullOrElse;
 import static org.l2j.gameserver.util.MathUtil.calculateHeadingFrom;
 import static org.l2j.gameserver.util.MathUtil.convertHeadingToDegree;
@@ -29,46 +30,29 @@ import static org.l2j.gameserver.util.MathUtil.convertHeadingToDegree;
  * Base class for all interactive objects.
  */
 public abstract class WorldObject extends ListenersContainer implements IIdentifiable, INamable, ISpawnable, IUniqueId, IDecayable, IPositionable {
-    /**
-     * Name
-     */
-    private String _name;
-    /**
-     * Object ID
-     */
+
+    private String name;
+
     protected int objectId;
-    /**
-     * World Region
-     */
-    private WorldRegion _worldRegion;
-    /**
-     * Instance type
-     */
-    private InstanceType _instanceType;
-    private volatile Map<String, Object> _scripts;
-    /**
-     * X coordinate
-     */
-    private volatile int _x = 0;
-    /**
-     * Y coordinate
-     */
-    private volatile int _y = 0;
-    /**
-     * Z coordinate
-     */
-    private volatile int _z = 0;
-    /**
-     * Orientation
-     */
+
+    private WorldRegion worldRegion;
+
+    private InstanceType instanceType;
+
+    private volatile Map<String, Object> scripts;
+
+    private volatile int x = 0;
+
+    private volatile int y = 0;
+
+    private volatile int z = 0;
+
     private volatile int _heading = 0;
-    /**
-     * Instance id of object. 0 - Global
-     */
-    private Instance _instance;
-    private boolean _isSpawned;
-    private boolean _isInvisible;
-    private boolean _isTargetable = true;
+
+    private Instance instance;
+    private boolean spawned;
+    private boolean invisible;
+    private boolean targetable = true;
 
     public WorldObject(int objectId) {
         setInstanceType(InstanceType.L2Object);
@@ -81,7 +65,7 @@ public abstract class WorldObject extends ListenersContainer implements IIdentif
      * @return the instance type
      */
     public final InstanceType getInstanceType() {
-        return _instanceType;
+        return instanceType;
     }
 
     /**
@@ -90,7 +74,7 @@ public abstract class WorldObject extends ListenersContainer implements IIdentif
      * @param newInstanceType the instance type to set
      */
     protected final void setInstanceType(InstanceType newInstanceType) {
-        _instanceType = newInstanceType;
+        instanceType = newInstanceType;
     }
 
     /**
@@ -100,7 +84,7 @@ public abstract class WorldObject extends ListenersContainer implements IIdentif
      * @return {@code true} if object is of any given instance types, {@code false} otherwise
      */
     public final boolean isInstanceTypes(InstanceType... instanceTypes) {
-        return _instanceType.isTypes(instanceTypes);
+        return instanceType.isTypes(instanceTypes);
     }
 
     public final void onAction(Player player) {
@@ -109,7 +93,7 @@ public abstract class WorldObject extends ListenersContainer implements IIdentif
 
     public void onAction(Player player, boolean interact) {
         final IActionHandler handler = ActionHandler.getInstance().getHandler(getInstanceType());
-        if (handler != null) {
+        if (nonNull(handler)) {
             handler.action(player, this, interact);
         }
 
@@ -118,7 +102,7 @@ public abstract class WorldObject extends ListenersContainer implements IIdentif
 
     public void onActionShift(Player player) {
         final IActionShiftHandler handler = ActionShiftHandler.getInstance().getHandler(getInstanceType());
-        if (handler != null) {
+        if (nonNull(handler)) {
             handler.action(player, this, true);
         }
 
@@ -135,8 +119,8 @@ public abstract class WorldObject extends ListenersContainer implements IIdentif
 
     @Override
     public boolean decayMe() {
-        _isSpawned = false;
-        World.getInstance().removeVisibleObject(this, _worldRegion);
+        spawned = false;
+        World.getInstance().removeVisibleObject(this, worldRegion);
         World.getInstance().removeObject(this);
         return true;
     }
@@ -150,14 +134,14 @@ public abstract class WorldObject extends ListenersContainer implements IIdentif
     @Override
     public final boolean spawnMe() {
         synchronized (this) {
-            _isSpawned = true;
+            spawned = true;
             setWorldRegion(World.getInstance().getRegion(this));
 
             // Add the WorldObject spawn in the _allobjects of World
             World.getInstance().addObject(this);
 
             // Add the WorldObject spawn to _visibleObjects and if necessary to _allplayers of its WorldRegion
-            _worldRegion.addVisibleObject(this);
+            worldRegion.addVisibleObject(this);
         }
 
         // this can synchronize on others instances, so it's out of synchronized, to avoid deadlocks
@@ -189,20 +173,20 @@ public abstract class WorldObject extends ListenersContainer implements IIdentif
     public abstract boolean isAutoAttackable(Creature attacker);
 
     public final boolean isSpawned() {
-        return _isSpawned;
+        return spawned;
     }
 
     public final void setSpawned(boolean value) {
-        _isSpawned = value;
+        spawned = value;
     }
 
     @Override
     public String getName() {
-        return _name;
+        return name;
     }
 
     public void setName(String value) {
-        _name = value;
+        name = value;
     }
 
     @Override
@@ -255,12 +239,12 @@ public abstract class WorldObject extends ListenersContainer implements IIdentif
      * @return {@code true} if the object can be targetted by other players, {@code false} otherwise.
      */
     public boolean isTargetable() {
-        return _isTargetable;
+        return targetable;
     }
 
     public void setTargetable(boolean targetable) {
-        if (_isTargetable != targetable) {
-            _isTargetable = targetable;
+        if (this.targetable != targetable) {
+            this.targetable = targetable;
             if (!targetable) {
                 World.getInstance().forEachVisibleObject(this, Creature.class, Creature::forgetTarget,  creature -> this == creature.getTarget());
             }
@@ -284,15 +268,15 @@ public abstract class WorldObject extends ListenersContainer implements IIdentif
      * @return
      */
     public final <T> T addScript(T script) {
-        if (_scripts == null) {
+        if (scripts == null) {
             // Double-checked locking
             synchronized (this) {
-                if (_scripts == null) {
-                    _scripts = new ConcurrentHashMap<>();
+                if (scripts == null) {
+                    scripts = new ConcurrentHashMap<>();
                 }
             }
         }
-        _scripts.put(script.getClass().getName(), script);
+        scripts.put(script.getClass().getName(), script);
         return script;
     }
 
@@ -303,10 +287,10 @@ public abstract class WorldObject extends ListenersContainer implements IIdentif
      */
     @SuppressWarnings("unchecked")
     public final <T> T removeScript(Class<T> script) {
-        if (_scripts == null) {
+        if (scripts == null) {
             return null;
         }
-        return (T) _scripts.remove(script.getName());
+        return (T) scripts.remove(script.getName());
     }
 
     /**
@@ -316,10 +300,10 @@ public abstract class WorldObject extends ListenersContainer implements IIdentif
      */
     @SuppressWarnings("unchecked")
     public final <T> T getScript(Class<T> script) {
-        if (_scripts == null) {
+        if (scripts == null) {
             return null;
         }
-        return (T) _scripts.get(script.getName());
+        return (T) scripts.get(script.getName());
     }
 
     public void removeStatusListener(Creature object) {
@@ -336,11 +320,11 @@ public abstract class WorldObject extends ListenersContainer implements IIdentif
     }
 
     public final WorldRegion getWorldRegion() {
-        return _worldRegion;
+        return worldRegion;
     }
 
     public void setWorldRegion(WorldRegion value) {
-        _worldRegion = value;
+        worldRegion = value;
     }
 
     /**
@@ -350,7 +334,7 @@ public abstract class WorldObject extends ListenersContainer implements IIdentif
      */
     @Override
     public int getX() {
-        return _x;
+        return x;
     }
 
     /**
@@ -360,7 +344,7 @@ public abstract class WorldObject extends ListenersContainer implements IIdentif
      */
     @Override
     public int getY() {
-        return _y;
+        return y;
     }
 
     /**
@@ -370,7 +354,7 @@ public abstract class WorldObject extends ListenersContainer implements IIdentif
      */
     @Override
     public int getZ() {
-        return _z;
+        return z;
     }
 
     /**
@@ -399,7 +383,7 @@ public abstract class WorldObject extends ListenersContainer implements IIdentif
      * @return the instance ID
      */
     public int getInstanceId() {
-        return zeroIfNullOrElse(_instance, Instance::getId);
+        return zeroIfNullOrElse(instance, Instance::getId);
     }
 
     /**
@@ -408,7 +392,7 @@ public abstract class WorldObject extends ListenersContainer implements IIdentif
      * @return {@code true} when object is inside any instance world, otherwise {@code false}
      */
     public boolean isInInstance() {
-        return _instance != null;
+        return instance != null;
     }
 
     /**
@@ -417,7 +401,7 @@ public abstract class WorldObject extends ListenersContainer implements IIdentif
      * @return {@link Instance} if object is inside instance world, otherwise {@code null}
      */
     public Instance getInstanceWorld() {
-        return _instance;
+        return instance;
     }
 
     /**
@@ -427,7 +411,7 @@ public abstract class WorldObject extends ListenersContainer implements IIdentif
      */
     @Override
     public Location getLocation() {
-        return new Location(_x, _y, _z, _heading);
+        return new Location(x, y, z, _heading);
     }
 
     /**
@@ -437,9 +421,9 @@ public abstract class WorldObject extends ListenersContainer implements IIdentif
      */
     @Override
     public void setLocation(Location loc) {
-        _x = loc.getX();
-        _y = loc.getY();
-        _z = loc.getZ();
+        x = loc.getX();
+        y = loc.getY();
+        z = loc.getZ();
         _heading = loc.getHeading();
     }
 
@@ -464,11 +448,11 @@ public abstract class WorldObject extends ListenersContainer implements IIdentif
         if (y < World.MAP_MIN_Y) {
             y = World.MAP_MIN_Y + 5000;
         }
-        _x = x;
-        _y = y;
-        _z = z;
+        this.x = x;
+        this.y = y;
+        this.z = z;
 
-        if (_isSpawned) {
+        if (spawned) {
             World.getInstance().switchRegionIfNeed(this);
         }
     }
@@ -503,17 +487,17 @@ public abstract class WorldObject extends ListenersContainer implements IIdentif
      */
     public synchronized void setInstance(Instance newInstance) {
         // Check if new and old instances are identical
-        if (_instance == newInstance) {
+        if (instance == newInstance) {
             return;
         }
 
         // Leave old instance
-        if (_instance != null) {
-            _instance.onInstanceChange(this, false);
+        if (instance != null) {
+            instance.onInstanceChange(this, false);
         }
 
         // Set new instance
-        _instance = newInstance;
+        instance = newInstance;
 
         // Enter into new instance
         if (newInstance != null) {
@@ -541,7 +525,7 @@ public abstract class WorldObject extends ListenersContainer implements IIdentif
      * @return {@code true} if this object is invisible, {@code false} otherwise.
      */
     public boolean isInvisible() {
-        return _isInvisible;
+        return invisible;
     }
 
     /**
@@ -550,7 +534,7 @@ public abstract class WorldObject extends ListenersContainer implements IIdentif
      * @param invis
      */
     public void setInvisible(boolean invis) {
-        _isInvisible = invis;
+        invisible = invis;
         if (invis) {
             final DeleteObject deletePacket = new DeleteObject(this);
             World.getInstance().forEachVisibleObject(this, Player.class, player ->
@@ -570,7 +554,7 @@ public abstract class WorldObject extends ListenersContainer implements IIdentif
      * @return {@code true} if player can see an invisible object if it's invisible, {@code false} otherwise.
      */
     public boolean isVisibleFor(Player player) {
-        return !_isInvisible || player.canOverrideCond(PcCondOverride.SEE_ALL_PLAYERS);
+        return !invisible || player.canOverrideCond(PcCondOverride.SEE_ALL_PLAYERS);
     }
 
     /**
@@ -599,11 +583,11 @@ public abstract class WorldObject extends ListenersContainer implements IIdentif
             return false;
         }
 
-        if (_worldRegion == null) {
+        if (this.worldRegion == null) {
             return false;
         }
 
-        return worldRegion.isSurroundingRegion(_worldRegion);
+        return worldRegion.isSurroundingRegion(this.worldRegion);
     }
 
     @Override
@@ -613,6 +597,6 @@ public abstract class WorldObject extends ListenersContainer implements IIdentif
 
     @Override
     public String toString() {
-        return getClass().getSimpleName() + ":" + _name + "[" + objectId + "]";
+        return getClass().getSimpleName() + ":" + name + "[" + objectId + "]";
     }
 }

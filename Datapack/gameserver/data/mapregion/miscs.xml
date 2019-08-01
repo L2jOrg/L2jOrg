@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- TODO: Remove "castle" attributes from here, it should be loaded from TaxZones -->
+
 <list enabled="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	  xmlns="http://l2j.org"
 	  xsi:schemaLocation="http://l2j.org MapRegion.xsd">
 	<!-- The Royal Family's Catacomb -->
-	<region name="the_royal_family's_catacomb" town="The Royal Family's Catacomb" castle="0" locId="1659" bbs="15">
+	<region name="the_royal_family's_catacomb" town="The Royal Family's Catacomb" locId="1659" bbs="15">
 		<respawnPoint x="181544" y="-80897" z="-2728" />
 		<respawnPoint x="181415" y="-80791" z="-2728" />
 		<respawnPoint x="181383" y="-80984" z="-2728" />
@@ -36,7 +36,7 @@
 	</region>
 
 	<!-- Spirit Cave -->
-	<region name="spirit_cave" town="Soul Island" castle="0" locId="2189" bbs="13">
+	<region name="spirit_cave" town="Soul Island" locId="2189" bbs="13">
 		<respawnPoint x="-125607" y="38452" z="1152" />
 		<respawnPoint x="-125472" y="38450" z="1152" />
 		<respawnPoint x="-125615" y="37771" z="1152" />
@@ -51,7 +51,7 @@
 	</region>
 
 	<!-- Southern Wasteland -->
-	<region name="southern_wasteland" town="Southern Wasteland" castle="0" locId="2190" bbs="2">
+	<region name="southern_wasteland" town="Southern Wasteland" locId="2190" bbs="2">
 		<respawnPoint x="-16434" y="208803" z="-3691" />
 		<respawnPoint x="-16929" y="209712" z="-3691" />
 		<respawnPoint x="-16219" y="210056" z="-3691" />
@@ -69,7 +69,7 @@
 	</region>
 
 	<!-- Ironcastle Inner Oasis -->
-	<region name="ironcastle_inner_oasis" town="Ironcastle Inner Oasis" castle="0" locId="2293" bbs="2">
+	<region name="ironcastle_inner_oasis" town="Ironcastle Inner Oasis" locId="2293" bbs="2">
 		<respawnPoint x="9155" y="252241" z="-1976" />
 		<respawnPoint x="9264" y="252432" z="-1936" />
 		<respawnPoint x="9360" y="252256" z="-2000" />
@@ -86,7 +86,7 @@
 	</region>
 
 	<!-- Kamaroka -->
-	<region name="kamaroka" town="Kamaloka" castle="0" locId="2321" bbs="7">
+	<region name="kamaroka" town="Kamaloka" locId="2321" bbs="7">
 		<respawnPoint x="19025" y="145245" z="-3107" />
 		<respawnPoint x="18576" y="145136" z="-3104" />
 		<respawnPoint x="18717" y="145711" z="-3097" />
@@ -114,7 +114,7 @@
 	</region>
 
 	<!-- Near Kamaroka -->
-	<region name="near_kamaroka" town="Nia Kamaloka" castle="0" locId="2322" bbs="7">
+	<region name="near_kamaroka" town="Nia Kamaloka" locId="2322" bbs="7">
 		<respawnPoint x="19025" y="145245" z="-3107" />
 		<respawnPoint x="18576" y="145136" z="-3104" />
 		<respawnPoint x="18717" y="145711" z="-3097" />
@@ -142,7 +142,7 @@
 	</region>
 
 	<!-- Rim Kamaroka -->
-	<region name="rim_kamaroka" town="Rim Kamaroka" castle="0" locId="2323" bbs="7">
+	<region name="rim_kamaroka" town="Rim Kamaroka" locId="2323" bbs="7">
 		<respawnPoint x="19025" y="145245" z="-3107" />
 		<respawnPoint x="18576" y="145136" z="-3104" />
 		<respawnPoint x="18717" y="145711" z="-3097" />
@@ -170,7 +170,7 @@
 	</region>
 
 	<!-- Union Base Of Kserth -->
-	<region name="union_base_of_kserth" town="Union Base Of Kserth" castle="0" locId="2710" bbs="2">
+	<region name="union_base_of_kserth" town="Union Base Of Kserth" locId="2710" bbs="2">
 		<respawnPoint x="-184072" y="242773" z="1576" />
 		<respawnPoint x="-184588" y="242604" z="1576" />
 		<respawnPoint x="-184793" y="243268" z="1576" />
@@ -196,19 +196,19 @@
 	</region>
 
 	<!-- Inner Undying01 -->
-	<region name="inner_undying01" town="Seed of Infinity" castle="0" locId="2711" bbs="2">
+	<region name="inner_undying01" town="Seed of Infinity" locId="2711" bbs="2">
 		<respawnPoint x="-183285" y="205996" z="-12896" />
 		<respawnPoint x="-183285" y="205996" z="-12896" isChaotic="true" />
 	</region>
 
 	<!-- Inner Destruction01 -->
-	<region name="inner_destruction01" town="Seed of Destruction" castle="0" locId="2712" bbs="2">
+	<region name="inner_destruction01" town="Seed of Destruction" locId="2712" bbs="2">
 		<respawnPoint x="-248373" y="250442" z="4318" />
 		<respawnPoint x="-248373" y="250442" z="4318" isChaotic="true" />
 	</region>
 
 	<!-- Cleft -->
-	<region name="cleft" town="Aerial Cleft" castle="0" locId="2716" bbs="2">
+	<region name="cleft" town="Aerial Cleft" locId="2716" bbs="2">
 		<respawnPoint x="-223701" y="247795" z="1744" />
 		<respawnPoint x="-223780" y="247661" z="1744" />
 		<respawnPoint x="-223776" y="247914" z="1744" />
@@ -224,7 +224,7 @@
 	</region>
 
 	<!-- Border Of Nightmare -->
-	<region name="border_of_nightmare" town="Border of Nightmare" castle="0" locId="3065" bbs="7">
+	<region name="border_of_nightmare" town="Border of Nightmare" locId="3065" bbs="7">
 		<respawnPoint x="-114633" y="-154243" z="-6720" />
 		<respawnPoint x="-114619" y="-153720" z="-6720" />
 		<respawnPoint x="-114595" y="-153080" z="-6720" />

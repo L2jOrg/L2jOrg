@@ -44,9 +44,9 @@ public class AdminZone implements IAdminCommandHandler
 	};
 	
 	@Override
-	public boolean useAdminCommand(String command, Player activeChar)
+	public boolean useAdminCommand(String command, Player player)
 	{
-		if (activeChar == null)
+		if (player == null)
 		{
 			return false;
 		}
@@ -59,27 +59,27 @@ public class AdminZone implements IAdminCommandHandler
 		
 		if (actualCommand.equalsIgnoreCase("admin_zone_check"))
 		{
-			showHtml(activeChar);
-			BuilderUtil.sendSysMessage(activeChar, "MapRegion: x:" + MapRegionManager.getInstance().getMapRegionX(activeChar.getX()) + " y:" + MapRegionManager.getInstance().getMapRegionY(activeChar.getY()) + " (" + MapRegionManager.getInstance().getMapRegionLocId(activeChar) + ")");
-			getGeoRegionXY(activeChar);
-			BuilderUtil.sendSysMessage(activeChar, "Closest Town: " + MapRegionManager.getInstance().getClosestTownName(activeChar));
+			showHtml(player);
+			BuilderUtil.sendSysMessage(player, "MapRegion: x:" + MapRegionManager.getInstance().getMapRegionX(player.getX()) + " y:" + MapRegionManager.getInstance().getMapRegionY(player.getY()) + " (" + MapRegionManager.getInstance().getMapRegionLocId(player) + ")");
+			getGeoRegionXY(player);
+			BuilderUtil.sendSysMessage(player, "Closest Town: " + MapRegionManager.getInstance().getClosestTownName(player));
 			
 			// Prevent exit instance variable deletion.
-			if (!activeChar.isInInstance())
+			if (!player.isInInstance())
 			{
 				Location loc;
 				
-				loc = MapRegionManager.getInstance().getTeleToLocation(activeChar, TeleportWhereType.CASTLE);
-				BuilderUtil.sendSysMessage(activeChar, "TeleToLocation (Castle): x:" + loc.getX() + " y:" + loc.getY() + " z:" + loc.getZ());
+				loc = MapRegionManager.getInstance().getTeleToLocation(player, TeleportWhereType.CASTLE);
+				BuilderUtil.sendSysMessage(player, "TeleToLocation (Castle): x:" + loc.getX() + " y:" + loc.getY() + " z:" + loc.getZ());
 				
-				loc = MapRegionManager.getInstance().getTeleToLocation(activeChar, TeleportWhereType.CLANHALL);
-				BuilderUtil.sendSysMessage(activeChar, "TeleToLocation (ClanHall): x:" + loc.getX() + " y:" + loc.getY() + " z:" + loc.getZ());
+				loc = MapRegionManager.getInstance().getTeleToLocation(player, TeleportWhereType.CLANHALL);
+				BuilderUtil.sendSysMessage(player, "TeleToLocation (ClanHall): x:" + loc.getX() + " y:" + loc.getY() + " z:" + loc.getZ());
 				
-				loc = MapRegionManager.getInstance().getTeleToLocation(activeChar, TeleportWhereType.SIEGEFLAG);
-				BuilderUtil.sendSysMessage(activeChar, "TeleToLocation (SiegeFlag): x:" + loc.getX() + " y:" + loc.getY() + " z:" + loc.getZ());
+				loc = MapRegionManager.getInstance().getTeleToLocation(player, TeleportWhereType.SIEGEFLAG);
+				BuilderUtil.sendSysMessage(player, "TeleToLocation (SiegeFlag): x:" + loc.getX() + " y:" + loc.getY() + " z:" + loc.getZ());
 				
-				loc = MapRegionManager.getInstance().getTeleToLocation(activeChar, TeleportWhereType.TOWN);
-				BuilderUtil.sendSysMessage(activeChar, "TeleToLocation (Town): x:" + loc.getX() + " y:" + loc.getY() + " z:" + loc.getZ());
+				loc = MapRegionManager.getInstance().getTeleToLocation(player, TeleportWhereType.TOWN);
+				BuilderUtil.sendSysMessage(player, "TeleToLocation (Town): x:" + loc.getX() + " y:" + loc.getY() + " z:" + loc.getZ());
 			}
 		}
 		else if (actualCommand.equalsIgnoreCase("admin_zone_visual"))
@@ -87,26 +87,26 @@ public class AdminZone implements IAdminCommandHandler
 			final String next = st.nextToken();
 			if (next.equalsIgnoreCase("all"))
 			{
-				for (Zone zone : ZoneManager.getInstance().getZones(activeChar))
+				for (Zone zone : ZoneManager.getInstance().getZones(player))
 				{
-					zone.visualizeZone(activeChar.getZ());
+					zone.visualizeZone(player.getZ());
 				}
-				for (SpawnTerritory territory : ZoneManager.getInstance().getSpawnTerritories(activeChar))
+				for (SpawnTerritory territory : ZoneManager.getInstance().getSpawnTerritories(player))
 				{
-					territory.visualizeZone(activeChar.getZ());
+					territory.visualizeZone(player.getZ());
 				}
-				showHtml(activeChar);
+				showHtml(player);
 			}
 			else
 			{
 				final int zoneId = Integer.parseInt(next);
-				ZoneManager.getInstance().getZoneById(zoneId).visualizeZone(activeChar.getZ());
+				ZoneManager.getInstance().getZoneById(zoneId).visualizeZone(player.getZ());
 			}
 		}
 		else if (actualCommand.equalsIgnoreCase("admin_zone_visual_clear"))
 		{
 			ZoneManager.getInstance().clearDebugItems();
-			showHtml(activeChar);
+			showHtml(player);
 		}
 		return true;
 	}

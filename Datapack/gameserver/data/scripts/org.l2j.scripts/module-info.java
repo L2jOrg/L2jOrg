@@ -403,6 +403,11 @@ open module org.l2j.scripts {
             handlers.targethandlers.affectscope.FanPB,
             handlers.targethandlers.affectscope.DeadUnion,
             handlers.targethandlers.affectscope.DeadPledge,
+            handlers.targethandlers.affectscope.DeadParty,
+            handlers.targethandlers.affectscope.Square,
+            handlers.targethandlers.affectscope.Fan,
+            handlers.targethandlers.affectscope.Party,
+            handlers.targethandlers.affectscope.Range,
             handlers.targethandlers.affectscope.DeadPartyPledge;
 
     provides org.l2j.gameserver.handler.IPlayerActionHandler

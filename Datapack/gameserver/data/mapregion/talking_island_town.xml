@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- TODO: Remove "castle" attributes from here, it should be loaded from TaxZones -->
+
 <list enabled="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	  xmlns="http://l2j.org"
 	  xsi:schemaLocation="http://l2j.org MapRegion.xsd">
 	<!-- Talking Island Town -->
-	<region name="talking_island_town" town="Talking Island Town" castle="1" locId="910" bbs="1">
+	<region name="talking_island_town" town="Talking Island Town" locId="910" bbs="1">
 		<respawnPoint x="-83990" y="243336" z="-3700" />
 		<respawnPoint x="-83964" y="242680" z="-3700" />
 		<respawnPoint x="-84512" y="242679" z="-3700" />
@@ -50,7 +50,7 @@
 		<map X="18" Y="25" />
 	</region>
 	<!-- Cedric's Training Hall -->
-	<region name="Cedric's_Training_Hall" town="Talking Island Town" castle="1" locId="910" bbs="1">
+	<region name="Cedric's_Training_Hall" town="Talking Island Town" locId="910" bbs="1">
 		<respawnPoint x="-71338" y="258271" z="-3104" />
 		<respawnPoint x="-71417" y="258270" z="-3104" />
 		<respawnPoint x="-71453" y="258305" z="-3104" />
@@ -77,7 +77,7 @@
 		<respawnPoint x="-91296" y="236272" z="-3690" isChaotic="true" />
 	</region>
 	<!-- Einhovant's School Of Magic -->
-	<region name="Einhovant's_School_of_Magic" town="Talking Island Town" castle="1" locId="910" bbs="1">
+	<region name="Einhovant's_School_of_Magic" town="Talking Island Town" locId="910" bbs="1">
 		<respawnPoint x="-90875" y="248162" z="-3570" />
 		<respawnPoint x="-90954" y="248118" z="-3570" />
 		<respawnPoint x="-90918" y="248070" z="-3570" />

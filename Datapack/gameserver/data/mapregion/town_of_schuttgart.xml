@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- TODO: Remove "castle" attributes from here, it should be loaded from TaxZones -->
+
 <list enabled="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	  xmlns="http://l2j.org"
 	  xsi:schemaLocation="http://l2j.org MapRegion.xsd">
 	<!-- Town Of Schuttgart -->
-	<region name="town_of_schuttgart" town="Town of Schuttgart" castle="9" locId="1714" bbs="9">
+	<region name="town_of_schuttgart" town="Town of Schuttgart" locId="1714" bbs="9">
 		<respawnPoint x="88240" y="-142736" z="-1341" />
 		<respawnPoint x="88624" y="-142480" z="-1344" />
 		<respawnPoint x="87408" y="-142304" z="-1341" />
