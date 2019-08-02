@@ -16,7 +16,6 @@ module org.l2j.commons {
     exports org.l2j.commons.configuration;
     exports org.l2j.commons.threading;
     exports org.l2j.commons.cache;
-    exports org.l2j.commons.database.handler;
     exports org.l2j.commons.network;
     exports org.l2j.commons.util.filter;
 

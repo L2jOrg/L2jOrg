@@ -4,7 +4,7 @@ import io.github.joealisson.primitive.IntSet;
 import org.l2j.commons.database.DAO;
 import org.l2j.commons.database.annotation.Query;
 
-public interface IdFactoryDAO extends DAO {
+public interface IdFactoryDAO extends DAO<Object> {
 
     @Query("SELECT charId AS id FROM characters " +
             "UNION SELECT object_id AS id FROM items " +

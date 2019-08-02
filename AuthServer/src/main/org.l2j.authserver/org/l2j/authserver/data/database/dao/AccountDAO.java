@@ -5,7 +5,7 @@ import org.l2j.authserver.data.database.Account;
 import org.l2j.commons.database.DAO;
 import org.l2j.commons.database.annotation.Query;
 
-public interface AccountDAO extends DAO {
+public interface AccountDAO extends DAO<Account> {
 
     @Query("SELECT * FROM accounts WHERE login=:login:")
     Account findById(String login);

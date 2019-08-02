@@ -1,11 +1,11 @@
 module org.l2j.gameserver {
-    requires org.l2j.commons;
+    requires transitive org.l2j.commons;
 
     requires java.sql;
     requires java.desktop;
     requires org.slf4j;
-    requires io.github.joealisson.mmocore;
-    requires io.github.joealisson.primitive;
+    requires transitive io.github.joealisson.mmocore;
+    requires transitive io.github.joealisson.primitive;
     requires cache.api;
     requires jdk.unsupported;
     requires java.management;

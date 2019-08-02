@@ -6,7 +6,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-public class EnumHandler implements TypeHandler<Enum<? extends  Enum>> {
+public class EnumHandler implements TypeHandler<Enum<?>> {
 
     @Override
     public Enum<?> defaultValue() {
@@ -28,7 +28,7 @@ public class EnumHandler implements TypeHandler<Enum<? extends  Enum>> {
     }
 
     @Override
-    @SuppressWarnings("unchecked")
+    @SuppressWarnings({"unchecked", "rawtypes"})
     public Enum<?> handleColumn(ResultSet resultSet, int column, Class type) throws SQLException {
         return Enum.valueOf(type, resultSet.getString(column));
     }

@@ -11,16 +11,16 @@ import java.util.List;
 
 import static java.util.Objects.isNull;
 
-public class ListHandler implements TypeHandler<List> {
+public class ListHandler implements TypeHandler<List<?>> {
 
     @Override
-    public List defaultValue() {
-        return new ArrayList();
+    public List<?> defaultValue() {
+        return new ArrayList<>();
     }
 
     @Override
     @SuppressWarnings("unchecked")
-    public List handleResult(QueryDescriptor queryDescriptor) throws SQLException {
+    public List<?> handleResult(QueryDescriptor queryDescriptor) throws SQLException {
         Class<?> genericType = (Class<?>) ((ParameterizedType)queryDescriptor.getGenericReturnType()).getActualTypeArguments()[0];
 
         var handler = MAP.getOrDefault(genericType.getName(), MAP.get(Object.class.getName()));
@@ -36,17 +36,17 @@ public class ListHandler implements TypeHandler<List> {
     }
 
     @Override
-    public List handleType(ResultSet resultSet, Class<?> type) {
-        return new ArrayList();
+    public List<?> handleType(ResultSet resultSet, Class<?> type) {
+        return new ArrayList<>();
     }
 
     @Override
-    public List handleColumn(ResultSet resultSet, int column) {
-        return new ArrayList();
+    public List<?> handleColumn(ResultSet resultSet, int column) {
+        return new ArrayList<>();
     }
 
     @Override
-    public void setParameter(PreparedStatement statement, int parameterIndex, List arg) throws SQLException {
+    public void setParameter(PreparedStatement statement, int parameterIndex, List arg) {
         throw new UnsupportedOperationException();
     }
 

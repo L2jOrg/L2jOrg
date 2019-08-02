@@ -13,6 +13,7 @@ public class DatabaseAccess {
     private static final Logger LOGGER = LoggerFactory.getLogger(DatabaseAccess.class);
     private static boolean initialized = false;
 
+    @SuppressWarnings("rawtypes")
     private static Cache<Class, DAO> cache = CacheFactory.getInstance().getCache("dao", Class.class, DAO.class);
     private static JDBCInvocation handler = new JDBCInvocation();
 
@@ -30,7 +31,7 @@ public class DatabaseAccess {
         return false;
     }
 
-    public static <T extends DAO> T getDAO(Class<T> daoClass) {
+    public static <T extends DAO<?>> T getDAO(Class<T> daoClass) {
         if(cache.containsKey(daoClass)) {
             return daoClass.cast(cache.get(daoClass));
         }

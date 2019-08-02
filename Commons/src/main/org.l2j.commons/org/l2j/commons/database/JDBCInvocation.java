@@ -36,7 +36,7 @@ class JDBCInvocation implements InvocationHandler {
     private static final String REPLACE_TEMPLATE = "REPLACE INTO %s %s VALUES %s";
 
     private static final Cache<Method, QueryDescriptor> descriptors = CacheFactory.getInstance().getCache("sql-descriptors");
-    private static final Cache<Class, QueryDescriptor> saveDescriptors = CacheFactory.getInstance().getCache("sql-save-descriptors");
+    private static final Cache<Class<?>, QueryDescriptor> saveDescriptors = CacheFactory.getInstance().getCache("sql-save-descriptors");
 
     JDBCInvocation() {
         for (TypeHandler typeHandler : ServiceLoader.load(TypeHandler.class)) {

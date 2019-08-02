@@ -6,7 +6,7 @@ import org.l2j.commons.database.annotation.Query;
 
 import java.util.List;
 
-public interface GameserverDAO extends DAO {
+public interface GameserverDAO extends DAO<ServerInfo> {
 
     @Query("SELECT * FROM gameservers")
     List<ServerInfo> findAll();

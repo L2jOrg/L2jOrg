@@ -3,7 +3,7 @@ package org.l2j.gameserver.data.database.dao;
 import org.l2j.commons.database.DAO;
 import org.l2j.commons.database.annotation.Query;
 
-public interface ClanDAO extends DAO {
+public interface ClanDAO extends DAO<Object> {
 
     @Query("DELETE FROM clan_data WHERE clan_data.clan_id NOT IN (SELECT clanid FROM characters)")
     int deleteWithoutMembers();

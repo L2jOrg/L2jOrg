@@ -65,9 +65,9 @@ public final class MailManager {
                 final long expiration = msg.getExpiration();
 
                 if (expiration < System.currentTimeMillis()) {
-                    ThreadPoolManager.getInstance().schedule(new MessageDeletionTask(msgId), 10000);
+                    ThreadPoolManager.schedule(new MessageDeletionTask(msgId), 10000);
                 } else {
-                    ThreadPoolManager.getInstance().schedule(new MessageDeletionTask(msgId), expiration - System.currentTimeMillis());
+                    ThreadPoolManager.schedule(new MessageDeletionTask(msgId), expiration - System.currentTimeMillis());
                 }
             }
         } catch (SQLException e) {
