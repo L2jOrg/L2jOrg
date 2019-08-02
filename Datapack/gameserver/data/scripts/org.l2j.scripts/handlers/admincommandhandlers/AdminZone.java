@@ -18,14 +18,14 @@ package handlers.admincommandhandlers;
 
 import org.l2j.gameserver.cache.HtmCache;
 import org.l2j.gameserver.handler.IAdminCommandHandler;
-import org.l2j.gameserver.instancemanager.MapRegionManager;
-import org.l2j.gameserver.instancemanager.ZoneManager;
+import org.l2j.gameserver.world.MapRegionManager;
+import org.l2j.gameserver.world.zone.ZoneManager;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.TeleportWhereType;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.zone.Zone;
-import org.l2j.gameserver.model.zone.ZoneId;
-import org.l2j.gameserver.model.zone.type.SpawnTerritory;
+import org.l2j.gameserver.world.zone.Zone;
+import org.l2j.gameserver.world.zone.ZoneId;
+import org.l2j.gameserver.world.zone.type.SpawnTerritory;
 import org.l2j.gameserver.network.serverpackets.NpcHtmlMessage;
 import org.l2j.gameserver.util.BuilderUtil;
 

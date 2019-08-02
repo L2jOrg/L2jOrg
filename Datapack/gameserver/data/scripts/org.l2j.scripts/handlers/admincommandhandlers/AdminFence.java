@@ -19,7 +19,7 @@ package handlers.admincommandhandlers;
 import org.l2j.gameserver.data.xml.impl.FenceData;
 import org.l2j.gameserver.enums.FenceState;
 import org.l2j.gameserver.handler.IAdminCommandHandler;
-import org.l2j.gameserver.model.World;
+import org.l2j.gameserver.world.World;
 import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.instance.Fence;
 import org.l2j.gameserver.model.actor.instance.Player;

@@ -2,9 +2,9 @@ package org.l2j.gameserver.network.clientpackets;
 
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.xml.impl.DoorData;
-import org.l2j.gameserver.model.World;
+import org.l2j.gameserver.world.World;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.zone.ZoneId;
+import org.l2j.gameserver.world.zone.ZoneId;
 import org.l2j.gameserver.network.serverpackets.GetOnVehicle;
 import org.l2j.gameserver.network.serverpackets.ValidateLocation;
 import org.slf4j.Logger;

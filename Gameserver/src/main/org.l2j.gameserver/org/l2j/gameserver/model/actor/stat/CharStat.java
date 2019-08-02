@@ -11,7 +11,7 @@ import org.l2j.gameserver.model.skills.BuffInfo;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.model.skills.SkillConditionScope;
 import org.l2j.gameserver.model.stats.*;
-import org.l2j.gameserver.model.zone.ZoneId;
+import org.l2j.gameserver.world.zone.ZoneId;
 import org.l2j.gameserver.util.MathUtil;
 
 import java.util.*;

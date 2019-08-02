@@ -2,7 +2,7 @@ package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.enums.ExManagePartyRoomMemberType;
 import org.l2j.gameserver.enums.MatchingMemberType;
-import org.l2j.gameserver.instancemanager.MapRegionManager;
+import org.l2j.gameserver.world.MapRegionManager;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.matching.CommandChannelMatchingRoom;
 import org.l2j.gameserver.network.GameClient;

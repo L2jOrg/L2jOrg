@@ -10,7 +10,7 @@ import org.l2j.gameserver.model.ceremonyofchaos.CeremonyOfChaosMember;
 import org.l2j.gameserver.model.interfaces.ILocational;
 import org.l2j.gameserver.model.itemcontainer.Inventory;
 import org.l2j.gameserver.model.skills.AbnormalVisualEffect;
-import org.l2j.gameserver.model.zone.ZoneId;
+import org.l2j.gameserver.world.zone.ZoneId;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
 

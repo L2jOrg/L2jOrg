@@ -1,7 +1,7 @@
 package org.l2j.gameserver.network.clientpackets;
 
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.zone.ZoneId;
+import org.l2j.gameserver.world.zone.ZoneId;
 import org.l2j.gameserver.network.serverpackets.ActionFailed;
 import org.l2j.gameserver.network.serverpackets.GetOffVehicle;
 import org.l2j.gameserver.network.serverpackets.StopMoveInVehicle;

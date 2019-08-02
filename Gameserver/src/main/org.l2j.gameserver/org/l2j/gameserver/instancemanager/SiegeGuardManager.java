@@ -5,7 +5,7 @@ import org.l2j.gameserver.data.xml.impl.CastleData;
 import org.l2j.gameserver.data.xml.impl.NpcData;
 import org.l2j.gameserver.enums.ItemLocation;
 import org.l2j.gameserver.model.Spawn;
-import org.l2j.gameserver.model.World;
+import org.l2j.gameserver.world.World;
 import org.l2j.gameserver.model.actor.instance.Defender;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.templates.NpcTemplate;

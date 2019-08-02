@@ -6,7 +6,7 @@ import org.l2j.gameserver.data.sql.impl.PlayerNameTable;
 import org.l2j.gameserver.data.xml.impl.*;
 import org.l2j.gameserver.idfactory.IdFactory;
 import org.l2j.gameserver.model.SkillLearn;
-import org.l2j.gameserver.model.World;
+import org.l2j.gameserver.world.World;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.stat.PcStat;
@@ -22,7 +22,6 @@ import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.serverpackets.CharCreateFail;
 import org.l2j.gameserver.network.serverpackets.CharCreateOk;
 import org.l2j.gameserver.network.serverpackets.CharSelectionInfo;
-import org.l2j.gameserver.util.GameUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

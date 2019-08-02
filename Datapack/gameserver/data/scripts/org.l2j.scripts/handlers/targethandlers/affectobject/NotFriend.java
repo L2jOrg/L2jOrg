@@ -22,7 +22,7 @@ import org.l2j.gameserver.model.Party;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.skills.targets.AffectObject;
-import org.l2j.gameserver.model.zone.ZoneId;
+import org.l2j.gameserver.world.zone.ZoneId;
 
 import static org.l2j.gameserver.util.GameUtils.isSummon;
 

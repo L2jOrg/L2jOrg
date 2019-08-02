@@ -4,7 +4,7 @@ import org.l2j.gameserver.Config;
 import org.l2j.gameserver.enums.PartyDistributionType;
 import org.l2j.gameserver.model.BlockList;
 import org.l2j.gameserver.model.Party;
-import org.l2j.gameserver.model.World;
+import org.l2j.gameserver.world.World;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.request.PartyRequest;
 import org.l2j.gameserver.model.ceremonyofchaos.CeremonyOfChaosEvent;

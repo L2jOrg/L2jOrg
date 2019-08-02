@@ -23,11 +23,11 @@ import java.util.StringTokenizer;
 import org.l2j.gameserver.cache.HtmCache;
 import org.l2j.gameserver.handler.IAdminCommandHandler;
 import org.l2j.gameserver.instancemanager.GrandBossManager;
-import org.l2j.gameserver.instancemanager.ZoneManager;
+import org.l2j.gameserver.world.zone.ZoneManager;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.quest.Quest;
-import org.l2j.gameserver.model.zone.type.NoRestartZone;
+import org.l2j.gameserver.world.zone.type.NoRestartZone;
 import org.l2j.gameserver.network.serverpackets.NpcHtmlMessage;
 import org.l2j.gameserver.util.BuilderUtil;
 

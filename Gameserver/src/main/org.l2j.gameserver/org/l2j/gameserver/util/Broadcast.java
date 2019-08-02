@@ -1,7 +1,7 @@
 package org.l2j.gameserver.util;
 
 import org.l2j.gameserver.enums.ChatType;
-import org.l2j.gameserver.model.World;
+import org.l2j.gameserver.world.World;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.Summon;
 import org.l2j.gameserver.model.actor.instance.Player;

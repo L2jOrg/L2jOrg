@@ -20,7 +20,7 @@ import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.xml.impl.ClanHallData;
 import org.l2j.gameserver.instancemanager.CastleManager;
 import org.l2j.gameserver.instancemanager.FortDataManager;
-import org.l2j.gameserver.instancemanager.ZoneManager;
+import org.l2j.gameserver.world.zone.ZoneManager;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.instance.Pet;
@@ -33,10 +33,10 @@ import org.l2j.gameserver.model.residences.ResidenceFunctionType;
 import org.l2j.gameserver.model.stats.BaseStats;
 import org.l2j.gameserver.model.stats.IStatsFunction;
 import org.l2j.gameserver.model.stats.Stats;
-import org.l2j.gameserver.model.zone.ZoneId;
-import org.l2j.gameserver.model.zone.type.*;
-import org.l2j.gameserver.model.zone.type.CastleZone;
-import org.l2j.gameserver.model.zone.type.ClanHallZone;
+import org.l2j.gameserver.world.zone.ZoneId;
+import org.l2j.gameserver.world.zone.type.*;
+import org.l2j.gameserver.world.zone.type.CastleZone;
+import org.l2j.gameserver.world.zone.type.ClanHallZone;
 
 import java.util.Optional;
 

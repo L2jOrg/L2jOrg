@@ -8,7 +8,7 @@ import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.base.SocialClass;
 import org.l2j.gameserver.model.events.ListenersContainer;
 import org.l2j.gameserver.model.interfaces.INamable;
-import org.l2j.gameserver.model.zone.type.ResidenceZone;
+import org.l2j.gameserver.world.zone.type.ResidenceZone;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

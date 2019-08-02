@@ -21,7 +21,8 @@ import org.l2j.gameserver.handler.EffectHandler;
 import org.l2j.gameserver.handler.SkillConditionHandler;
 import org.l2j.gameserver.idfactory.IdFactory;
 import org.l2j.gameserver.instancemanager.*;
-import org.l2j.gameserver.model.World;
+import org.l2j.gameserver.world.MapRegionManager;
+import org.l2j.gameserver.world.World;
 import org.l2j.gameserver.model.entity.Hero;
 import org.l2j.gameserver.model.olympiad.Olympiad;
 import org.l2j.gameserver.model.votereward.VoteSystem;
@@ -31,6 +32,7 @@ import org.l2j.gameserver.network.authcomm.AuthServerCommunication;
 import org.l2j.gameserver.scripting.ScriptEngineManager;
 import org.l2j.gameserver.taskmanager.TaskManager;
 import org.l2j.gameserver.util.Broadcast;
+import org.l2j.gameserver.world.zone.ZoneManager;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -72,12 +74,12 @@ public class GameServer {
         World.getInstance();
         MapRegionManager.getInstance();
         ZoneManager.getInstance();
+
+        printSection("Server Data");
         DoorData.getInstance();
         FenceData.getInstance();
         AnnouncementsTable.getInstance();
         GlobalVariablesManager.getInstance();
-
-        printSection("Server Data");
         ActionData.getInstance();
         CategoryData.getInstance();
         SecondaryAuthData.getInstance();

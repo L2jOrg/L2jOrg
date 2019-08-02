@@ -1,7 +1,7 @@
 package org.l2j.gameserver.network.serverpackets.friend;
 
 import org.l2j.gameserver.data.sql.impl.PlayerNameTable;
-import org.l2j.gameserver.model.World;
+import org.l2j.gameserver.world.World;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
 import org.l2j.gameserver.network.serverpackets.ServerPacket;

@@ -21,7 +21,7 @@ import org.l2j.gameserver.Config;
 import org.l2j.gameserver.ai.CtrlIntention;
 import org.l2j.gameserver.enums.ChatType;
 import org.l2j.gameserver.instancemanager.GrandBossManager;
-import org.l2j.gameserver.instancemanager.ZoneManager;
+import org.l2j.gameserver.world.zone.ZoneManager;
 import org.l2j.gameserver.model.Spawn;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.StatsSet;
@@ -34,7 +34,7 @@ import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.holders.SkillHolder;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.model.skills.SkillCaster;
-import org.l2j.gameserver.model.zone.Zone;
+import org.l2j.gameserver.world.zone.Zone;
 import org.l2j.gameserver.network.NpcStringId;
 import org.l2j.gameserver.network.serverpackets.PlaySound;
 

@@ -83,9 +83,9 @@ import org.l2j.gameserver.model.stats.MoveType;
 import org.l2j.gameserver.model.stats.Stats;
 import org.l2j.gameserver.model.variables.AccountVariables;
 import org.l2j.gameserver.model.variables.PlayerVariables;
-import org.l2j.gameserver.model.zone.Zone;
-import org.l2j.gameserver.model.zone.ZoneId;
-import org.l2j.gameserver.model.zone.type.WaterZone;
+import org.l2j.gameserver.world.zone.Zone;
+import org.l2j.gameserver.world.zone.ZoneId;
+import org.l2j.gameserver.world.zone.type.WaterZone;
 import org.l2j.gameserver.network.Disconnection;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.SystemMessageId;
@@ -96,6 +96,8 @@ import org.l2j.gameserver.network.serverpackets.commission.ExResponseCommissionI
 import org.l2j.gameserver.network.serverpackets.friend.FriendStatus;
 import org.l2j.gameserver.taskmanager.AttackStanceTaskManager;
 import org.l2j.gameserver.util.*;
+import org.l2j.gameserver.world.World;
+import org.l2j.gameserver.world.zone.ZoneManager;
 
 import java.sql.Date;
 import java.sql.*;

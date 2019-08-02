@@ -32,8 +32,8 @@ import org.l2j.gameserver.model.olympiad.Olympiad;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.model.spawns.NpcSpawnTemplate;
 import org.l2j.gameserver.model.variables.NpcVariables;
-import org.l2j.gameserver.model.zone.ZoneId;
-import org.l2j.gameserver.model.zone.type.TaxZone;
+import org.l2j.gameserver.world.zone.ZoneId;
+import org.l2j.gameserver.world.zone.type.TaxZone;
 import org.l2j.gameserver.network.NpcStringId;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.*;
@@ -41,6 +41,8 @@ import org.l2j.gameserver.taskmanager.DecayTaskManager;
 import org.l2j.gameserver.util.Broadcast;
 import org.l2j.gameserver.util.GameUtils;
 import org.l2j.gameserver.util.MathUtil;
+import org.l2j.gameserver.world.World;
+import org.l2j.gameserver.world.zone.ZoneManager;
 
 import java.util.List;
 

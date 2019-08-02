@@ -12,11 +12,13 @@ import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.events.ListenersContainer;
 import org.l2j.gameserver.model.instancezone.Instance;
 import org.l2j.gameserver.model.interfaces.*;
-import org.l2j.gameserver.model.zone.ZoneId;
+import org.l2j.gameserver.world.zone.ZoneId;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ActionFailed;
 import org.l2j.gameserver.network.serverpackets.DeleteObject;
 import org.l2j.gameserver.network.serverpackets.ServerPacket;
+import org.l2j.gameserver.world.World;
+import org.l2j.gameserver.world.WorldRegion;
 
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
@@ -574,20 +576,7 @@ public abstract class WorldObject extends ListenersContainer implements IIdentif
     }
 
     public boolean isInSurroundingRegion(WorldObject worldObject) {
-        if (worldObject == null) {
-            return false;
-        }
-
-        final WorldRegion worldRegion = worldObject.getWorldRegion();
-        if (worldRegion == null) {
-            return false;
-        }
-
-        if (this.worldRegion == null) {
-            return false;
-        }
-
-        return worldRegion.isSurroundingRegion(this.worldRegion);
+        return nonNull(worldRegion) && worldRegion.isInSurroundingRegion(worldObject);
     }
 
     @Override

@@ -7,7 +7,7 @@ import org.l2j.gameserver.data.xml.impl.NpcData;
 import org.l2j.gameserver.datatables.EventDroplist;
 import org.l2j.gameserver.datatables.ItemTable;
 import org.l2j.gameserver.instancemanager.EventShrineManager;
-import org.l2j.gameserver.model.World;
+import org.l2j.gameserver.world.World;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.announce.EventAnnouncement;

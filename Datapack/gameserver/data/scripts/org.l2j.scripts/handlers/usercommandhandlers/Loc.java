@@ -2,10 +2,10 @@ package handlers.usercommandhandlers;
 
 import org.l2j.gameserver.enums.Race;
 import org.l2j.gameserver.handler.IUserCommandHandler;
-import org.l2j.gameserver.instancemanager.MapRegionManager;
-import org.l2j.gameserver.instancemanager.ZoneManager;
+import org.l2j.gameserver.world.MapRegionManager;
+import org.l2j.gameserver.world.zone.ZoneManager;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.zone.type.RespawnZone;
+import org.l2j.gameserver.world.zone.type.RespawnZone;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
 

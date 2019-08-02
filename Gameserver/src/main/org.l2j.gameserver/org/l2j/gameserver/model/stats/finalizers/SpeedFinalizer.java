@@ -18,7 +18,7 @@ package org.l2j.gameserver.model.stats.finalizers;
 
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.xml.impl.PetDataTable;
-import org.l2j.gameserver.instancemanager.ZoneManager;
+import org.l2j.gameserver.world.zone.ZoneManager;
 import org.l2j.gameserver.model.PetLevelData;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -26,8 +26,8 @@ import org.l2j.gameserver.model.items.ItemTemplate;
 import org.l2j.gameserver.model.stats.BaseStats;
 import org.l2j.gameserver.model.stats.IStatsFunction;
 import org.l2j.gameserver.model.stats.Stats;
-import org.l2j.gameserver.model.zone.ZoneId;
-import org.l2j.gameserver.model.zone.type.SwampZone;
+import org.l2j.gameserver.world.zone.ZoneId;
+import org.l2j.gameserver.world.zone.type.SwampZone;
 
 import java.util.Optional;
 

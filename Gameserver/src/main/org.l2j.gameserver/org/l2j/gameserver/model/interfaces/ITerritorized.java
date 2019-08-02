@@ -1,7 +1,7 @@
 package org.l2j.gameserver.model.interfaces;
 
-import org.l2j.gameserver.model.zone.type.BannedSpawnTerritory;
-import org.l2j.gameserver.model.zone.type.SpawnTerritory;
+import org.l2j.gameserver.world.zone.type.BannedSpawnTerritory;
+import org.l2j.gameserver.world.zone.type.SpawnTerritory;
 
 import java.util.List;
 

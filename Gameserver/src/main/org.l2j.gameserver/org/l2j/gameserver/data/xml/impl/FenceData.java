@@ -1,8 +1,8 @@
 package org.l2j.gameserver.data.xml.impl;
 
 import org.l2j.gameserver.enums.FenceState;
-import org.l2j.gameserver.model.World;
-import org.l2j.gameserver.model.WorldRegion;
+import org.l2j.gameserver.world.World;
+import org.l2j.gameserver.world.WorldRegion;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.instance.Fence;
 import org.l2j.gameserver.model.instancezone.Instance;

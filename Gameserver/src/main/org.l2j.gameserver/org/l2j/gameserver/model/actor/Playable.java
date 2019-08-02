@@ -3,7 +3,7 @@ package org.l2j.gameserver.model.actor;
 import org.l2j.gameserver.ai.CtrlEvent;
 import org.l2j.gameserver.enums.ClanWarState;
 import org.l2j.gameserver.enums.InstanceType;
-import org.l2j.gameserver.instancemanager.ZoneManager;
+import org.l2j.gameserver.world.zone.ZoneManager;
 import org.l2j.gameserver.model.ClanWar;
 import org.l2j.gameserver.model.Clan;
 import org.l2j.gameserver.model.WorldObject;

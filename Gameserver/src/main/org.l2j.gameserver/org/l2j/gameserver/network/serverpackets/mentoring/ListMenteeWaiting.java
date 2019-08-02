@@ -1,7 +1,7 @@
 package org.l2j.gameserver.network.serverpackets.mentoring;
 
 import org.l2j.gameserver.enums.CategoryType;
-import org.l2j.gameserver.model.World;
+import org.l2j.gameserver.world.World;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;

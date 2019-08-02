@@ -1,9 +1,9 @@
 package org.l2j.gameserver.model.olympiad;
 
-import org.l2j.gameserver.instancemanager.ZoneManager;
-import org.l2j.gameserver.model.World;
+import org.l2j.gameserver.world.zone.ZoneManager;
+import org.l2j.gameserver.world.World;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.zone.type.OlympiadStadiumZone;
+import org.l2j.gameserver.world.zone.type.OlympiadStadiumZone;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
 import org.slf4j.Logger;

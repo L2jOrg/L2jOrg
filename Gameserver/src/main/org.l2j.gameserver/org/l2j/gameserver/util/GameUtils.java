@@ -7,7 +7,7 @@ import org.l2j.gameserver.enums.HtmlActionScope;
 import org.l2j.gameserver.enums.IllegalActionPunishmentType;
 import org.l2j.gameserver.instancemanager.WalkingManager;
 import org.l2j.gameserver.model.Location;
-import org.l2j.gameserver.model.World;
+import org.l2j.gameserver.world.World;
 import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.*;
 import org.l2j.gameserver.model.actor.instance.*;

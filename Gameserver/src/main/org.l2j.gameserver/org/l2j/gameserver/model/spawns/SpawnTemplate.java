@@ -6,8 +6,8 @@ import org.l2j.gameserver.model.instancezone.Instance;
 import org.l2j.gameserver.model.interfaces.IParameterized;
 import org.l2j.gameserver.model.interfaces.ITerritorized;
 import org.l2j.gameserver.model.quest.Quest;
-import org.l2j.gameserver.model.zone.type.BannedSpawnTerritory;
-import org.l2j.gameserver.model.zone.type.SpawnTerritory;
+import org.l2j.gameserver.world.zone.type.BannedSpawnTerritory;
+import org.l2j.gameserver.world.zone.type.SpawnTerritory;
 
 import java.util.ArrayList;
 import java.util.Collections;

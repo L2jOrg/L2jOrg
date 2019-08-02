@@ -16,7 +16,7 @@
  */
 package org.l2j.gameserver.model.itemauction;
 
-import org.l2j.gameserver.model.World;
+import org.l2j.gameserver.world.World;
 import org.l2j.gameserver.model.actor.instance.Player;
 
 /**

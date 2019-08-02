@@ -4,6 +4,7 @@ import org.l2j.commons.threading.ThreadPoolManager;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.events.EventDispatcher;
 import org.l2j.gameserver.model.events.impl.character.OnCreatureSee;
+import org.l2j.gameserver.world.World;
 
 import java.util.HashSet;
 import java.util.Set;

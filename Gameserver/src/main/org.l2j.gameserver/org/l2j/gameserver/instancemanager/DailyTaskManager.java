@@ -23,7 +23,7 @@ import org.l2j.gameserver.data.xml.impl.DailyMissionData;
 import org.l2j.gameserver.data.xml.impl.VipData;
 import org.l2j.gameserver.model.Clan;
 import org.l2j.gameserver.model.ClanMember;
-import org.l2j.gameserver.model.World;
+import org.l2j.gameserver.world.World;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.stat.PcStat;
 import org.l2j.gameserver.model.base.SubClass;

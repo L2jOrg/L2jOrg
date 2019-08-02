@@ -63,8 +63,8 @@ module org.l2j.gameserver {
     exports org.l2j.gameserver.model.events.listeners;
     exports org.l2j.gameserver.scripting;
     exports org.l2j.gameserver.model.instancezone;
-    exports org.l2j.gameserver.model.zone;
-    exports org.l2j.gameserver.model.zone.type;
+    exports org.l2j.gameserver.world.zone;
+    exports org.l2j.gameserver.world.zone.type;
     exports org.l2j.gameserver.network.serverpackets.ensoul;
     exports org.l2j.gameserver.model.itemauction;
     exports org.l2j.gameserver.model.events.impl.olympiad;
@@ -82,7 +82,7 @@ module org.l2j.gameserver {
     exports org.l2j.gameserver.scripting.annotations;
     exports org.l2j.gameserver.network.serverpackets.luckygame;
     exports org.l2j.gameserver.model.announce;
-    exports org.l2j.gameserver.model.zone.form;
+    exports org.l2j.gameserver.world.zone.form;
     exports org.l2j.gameserver.model.matching;
     exports org.l2j.gameserver.model.events.impl.ceremonyofchaos;
     exports org.l2j.gameserver.model.ceremonyofchaos;
@@ -101,6 +101,7 @@ module org.l2j.gameserver {
     exports org.l2j.gameserver.data.elemental;
     exports org.l2j.gameserver.network.serverpackets.elementalspirits;
     exports org.l2j.gameserver.network.serverpackets.equipmentupgrade;
+    exports org.l2j.gameserver.world;
 
     uses org.l2j.gameserver.scripting.IScriptingEngine;
     provides org.l2j.gameserver.scripting.IScriptingEngine

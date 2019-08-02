@@ -3,7 +3,7 @@ package org.l2j.gameserver.model.events.impl.character;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.events.EventType;
 import org.l2j.gameserver.model.events.impl.IBaseEvent;
-import org.l2j.gameserver.model.zone.Zone;
+import org.l2j.gameserver.world.zone.Zone;
 
 /**
  * @author UnAfraid

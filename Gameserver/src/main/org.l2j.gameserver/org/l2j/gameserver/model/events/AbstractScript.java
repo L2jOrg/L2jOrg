@@ -60,12 +60,13 @@ import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.model.spawns.SpawnGroup;
 import org.l2j.gameserver.model.spawns.SpawnTemplate;
 import org.l2j.gameserver.model.stats.Stats;
-import org.l2j.gameserver.model.zone.Zone;
+import org.l2j.gameserver.world.zone.Zone;
 import org.l2j.gameserver.network.NpcStringId;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.*;
 import org.l2j.gameserver.scripting.ManagedScript;
 import org.l2j.gameserver.util.MinionList;
+import org.l2j.gameserver.world.zone.ZoneManager;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

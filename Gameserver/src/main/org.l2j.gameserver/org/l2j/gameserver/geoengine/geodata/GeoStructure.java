@@ -16,7 +16,7 @@
  */
 package org.l2j.gameserver.geoengine.geodata;
 
-import org.l2j.gameserver.model.World;
+import org.l2j.gameserver.world.World;
 
 /**
  * @author Hasha

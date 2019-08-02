@@ -3,7 +3,7 @@ package org.l2j.gameserver.datatables;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.xml.impl.NpcData;
 import org.l2j.gameserver.model.Spawn;
-import org.l2j.gameserver.model.World;
+import org.l2j.gameserver.world.World;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

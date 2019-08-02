@@ -4,7 +4,7 @@ import org.l2j.commons.threading.ThreadPoolManager;
 import org.l2j.gameserver.data.xml.impl.ClanHallData;
 import org.l2j.gameserver.instancemanager.CastleManager;
 import org.l2j.gameserver.instancemanager.FortDataManager;
-import org.l2j.gameserver.instancemanager.MapRegionManager;
+import org.l2j.gameserver.world.MapRegionManager;
 import org.l2j.gameserver.model.Clan;
 import org.l2j.gameserver.model.SiegeClan;
 import org.l2j.gameserver.model.Location;
