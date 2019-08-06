@@ -4,7 +4,7 @@ import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.geoengine.GeoEngine;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.items.CommonItem;
-import org.l2j.gameserver.world.zone.ZoneForm;
+import org.l2j.gameserver.world.zone.ZoneArea;
 
 import java.awt.*;
 
@@ -13,12 +13,12 @@ import java.awt.*;
  *
  * @author durgus
  */
-public class ZonePolygonForm extends ZoneForm {
+public class ZonePolygonArea extends ZoneArea {
     private final Polygon polygon;
     private final int minZ;
     private final int maxZ;
 
-    public ZonePolygonForm(int[] x, int[] y, int minZ, int maxZ) {
+    public ZonePolygonArea(int[] x, int[] y, int minZ, int maxZ) {
         polygon = new Polygon(x, y, x.length);
 
         this.minZ = Math.min(minZ, maxZ);

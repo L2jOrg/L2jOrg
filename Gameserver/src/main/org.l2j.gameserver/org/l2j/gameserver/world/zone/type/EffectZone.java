@@ -153,7 +153,7 @@ public final class EffectZone extends Zone {
             }
         }
 
-        if (_characterList.isEmpty() && (getSettings().getTask() != null)) {
+        if (creatures.isEmpty() && (getSettings().getTask() != null)) {
             getSettings().clear();
         }
     }

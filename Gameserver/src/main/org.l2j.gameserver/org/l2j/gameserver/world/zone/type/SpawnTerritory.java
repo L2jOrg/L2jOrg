@@ -1,7 +1,7 @@
 package org.l2j.gameserver.world.zone.type;
 
 import org.l2j.gameserver.model.Location;
-import org.l2j.gameserver.world.zone.ZoneForm;
+import org.l2j.gameserver.world.zone.ZoneArea;
 
 /**
  * Just dummy zone, needs only for geometry calculations
@@ -10,9 +10,9 @@ import org.l2j.gameserver.world.zone.ZoneForm;
  */
 public class SpawnTerritory {
     private final String _name;
-    private final ZoneForm _territory;
+    private final ZoneArea _territory;
 
-    public SpawnTerritory(String name, ZoneForm territory) {
+    public SpawnTerritory(String name, ZoneArea territory) {
         _name = name;
         _territory = territory;
     }

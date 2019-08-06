@@ -81,7 +81,7 @@ public class MoveBackwardToLocation extends ClientPacket {
             {
                 for (Zone zone : ZoneManager.getInstance().getZones(_originX, _originY))
                 {
-                    if ((zone instanceof WaterZone) && ((zone.getForm().getHighZ() + activeChar.getCollisionHeight()) > _originZ))
+                    if ((zone instanceof WaterZone) && ((zone.getArea().getHighZ() + activeChar.getCollisionHeight()) > _originZ))
                     {
                         waterContact = true;
                         break;

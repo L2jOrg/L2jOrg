@@ -12,9 +12,9 @@ import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.util.GameXmlReader;
 import org.l2j.gameserver.world.World;
-import org.l2j.gameserver.world.zone.form.ZoneCubeForm;
-import org.l2j.gameserver.world.zone.form.ZoneCylinderForm;
-import org.l2j.gameserver.world.zone.form.ZonePolygonForm;
+import org.l2j.gameserver.world.zone.form.ZoneCubeArea;
+import org.l2j.gameserver.world.zone.form.ZoneCylinderArea;
+import org.l2j.gameserver.world.zone.form.ZonePolygonArea;
 import org.l2j.gameserver.world.zone.type.OlympiadStadiumZone;
 import org.l2j.gameserver.world.zone.type.RespawnZone;
 import org.l2j.gameserver.world.zone.type.SpawnTerritory;
@@ -146,7 +146,7 @@ public final class ZoneManager extends GameXmlReader {
     private void addZone(Node zoneNode, Class<?> zoneClass, String file) throws NoSuchMethodException, InvalidZoneException, InstantiationException, IllegalAccessException, InvocationTargetException {
         var attributes = zoneNode.getAttributes();
         var constructor = zoneClass.asSubclass(Zone.class).getConstructor(int.class);
-        ZoneForm form = parseZoneForm(zoneNode);
+        ZoneArea form = parseZoneForm(zoneNode);
 
         var zoneId = parseInteger(attributes, "id");
         if(isNull(zoneId)) {
@@ -154,16 +154,14 @@ public final class ZoneManager extends GameXmlReader {
         }
 
         var zone = constructor.newInstance(zoneId);
-        zone.setForm(form);
+        zone.setArea(form);
         zone.setName(parseString(attributes, "name"));
 
         parseZoneProperties(zoneNode, zone);
 
-        if (checkId(zoneId)) {
+        if(nonNull(addZone(zoneId, zone))) {
             LOGGER.warn("Zone ({}) from file: {} overrides previous definition.", zoneId, file);
         }
-
-        addZone(zoneId, zone);
         registerIntoWorldRegion(zone);
 
     }
@@ -180,7 +178,7 @@ public final class ZoneManager extends GameXmlReader {
                 final int ay = (y - OFFSET_Y) << SHIFT_BY;
                 final int by = ((y + 1) - OFFSET_Y) << SHIFT_BY;
 
-                if (zone.getForm().intersectsRectangle(ax, bx, ay, by)) {
+                if (zone.getArea().intersectsRectangle(ax, bx, ay, by)) {
                     zoneRegions[x][y].getZones().put(zone.getId(), zone);
                 }
             }
@@ -221,7 +219,7 @@ public final class ZoneManager extends GameXmlReader {
         }
     }
 
-    private ZoneForm parseZoneForm(Node zoneNode) throws InvalidZoneException {
+    private ZoneArea parseZoneForm(Node zoneNode) throws InvalidZoneException {
         var form = parseString(zoneNode.getAttributes(), "form");
         return switch (form) {
             default -> null;
@@ -231,7 +229,7 @@ public final class ZoneManager extends GameXmlReader {
         };
     }
 
-    private ZoneForm parsePolygon(Node zoneNode) throws InvalidZoneException {
+    private ZoneArea parsePolygon(Node zoneNode) throws InvalidZoneException {
         var attributes = zoneNode.getAttributes();
         IntList xPoints = new ArrayIntList();
         IntList yPoints = new ArrayIntList();
@@ -249,10 +247,10 @@ public final class ZoneManager extends GameXmlReader {
 
         var minZ = parseInteger(attributes, "minZ");
         var maxZ = parseInteger(attributes, "maxZ");
-        return new ZonePolygonForm(xPoints.toArray(int[]::new), yPoints.toArray(int[]::new), minZ, maxZ);
+        return new ZonePolygonArea(xPoints.toArray(int[]::new), yPoints.toArray(int[]::new), minZ, maxZ);
     }
 
-    private ZoneForm parseCylinder(Node zoneNode) throws InvalidZoneException {
+    private ZoneArea parseCylinder(Node zoneNode) throws InvalidZoneException {
         var attributes = zoneNode.getAttributes();
         for (Node node = zoneNode.getFirstChild(); node != null; node = node.getNextSibling()) {
             if ("point".equalsIgnoreCase(node.getNodeName())) {
@@ -267,13 +265,13 @@ public final class ZoneManager extends GameXmlReader {
                 int y = parseInteger(attr, "y");
                 var minZ = parseInteger(attributes, "minZ");
                 var maxZ = parseInteger(attributes, "maxZ");
-                return new ZoneCylinderForm(x, y, minZ, maxZ, radius);
+                return new ZoneCylinderArea(x, y, minZ, maxZ, radius);
             }
         }
         throw new InvalidZoneException("The Zone with Cylinder form must have 1 point");
     }
 
-    private ZoneForm parseCube(Node zoneNode) throws InvalidZoneException {
+    private ZoneArea parseCube(Node zoneNode) throws InvalidZoneException {
         var attributes = zoneNode.getAttributes();
         int[] points = new int[4];
         var point = 0;
@@ -289,7 +287,7 @@ public final class ZoneManager extends GameXmlReader {
                 if(point > 3) {
                     var minZ = parseInteger(attributes, "minZ");
                     var maxZ = parseInteger(attributes, "maxZ");
-                    return new ZoneCubeForm(points[0], points[2], points[1], points[3], minZ, maxZ);
+                    return new ZoneCubeArea(points[0], points[2], points[1], points[3], minZ, maxZ);
                 }
             }
         }
@@ -307,32 +305,15 @@ public final class ZoneManager extends GameXmlReader {
     }
 
     /**
-     * Check id.
-     *
-     * @param id the id
-     * @return true, if successful
-     */
-    private boolean checkId(int id) {
-        return classZones.values().stream().anyMatch(map -> map.containsKey(id));
-    }
-
-    /**
      * Add new zone.
-     *
-     * @param <T>  the generic type
+     *  @param <T>  the generic type
      * @param id   the id
      * @param zone the zone
+     * @return the old zone related to id
      */
     @SuppressWarnings("unchecked")
-    private <T extends Zone> void addZone(int id, T zone) {
-        IntMap<T> map = (IntMap<T>) classZones.get(zone.getClass());
-        if (map == null) {
-            map = new HashIntMap<>();
-            map.put(id, zone);
-            classZones.put(zone.getClass(), map);
-        } else {
-            map.put(id, zone);
-        }
+    private <T extends Zone> T addZone(int id, T zone) {
+        return ((IntMap<T>) classZones.computeIfAbsent(zone.getClass(), k -> new HashIntMap<T>())).put(id, zone);
     }
 
     /**
@@ -355,12 +336,7 @@ public final class ZoneManager extends GameXmlReader {
      * @see #getZoneById(int, Class)
      */
     public Zone getZoneById(int id) {
-        for (IntMap<? extends Zone> map : classZones.values()) {
-            if (map.containsKey(id)) {
-                return map.get(id);
-            }
-        }
-        return null;
+        return classZones.values().stream().filter(m -> m.containsKey(id)).map(m -> m.get(id)).findAny().orElse(null);
     }
 
     /**
@@ -370,13 +346,7 @@ public final class ZoneManager extends GameXmlReader {
      * @return the zone by name
      */
     public Zone getZoneByName(String name) {
-        for (IntMap<? extends Zone> map : classZones.values()) {
-            final Optional<? extends Zone> zoneType = map.values().stream().filter(z -> (z.getName() != null) && z.getName().equals(name)).findAny();
-            if (zoneType.isPresent()) {
-                return zoneType.get();
-            }
-        }
-        return null;
+        return classZones.values().stream().flatMap(m -> m.values().stream()).filter(z -> Objects.equals(name, z.getName())).findAny().orElse(null);
     }
 
     /**
@@ -435,13 +405,8 @@ public final class ZoneManager extends GameXmlReader {
      * @return zones
      */
     public List<Zone> getZones(int x, int y, int z) {
-        final List<Zone> temp = new ArrayList<>();
-        for (Zone zone : getRegion(x, y).getZones().values()) {
-            if (zone.isInsideZone(x, y, z)) {
-                temp.add(zone);
-            }
-        }
-        return temp;
+        var region = getRegion(x, y);
+        return isNull(region) ? Collections.emptyList() : region.getZones().values().stream().filter(zone -> zone.isInsideZone(x, y, z)).collect(Collectors.toList());
     }
 
     /**
@@ -456,10 +421,7 @@ public final class ZoneManager extends GameXmlReader {
      */
     private <T extends Zone> T getZone(int x, int y, int z, Class<T> type) {
         var region = getRegion(x, y);
-        if(nonNull(region)) {
-            return region.getZones().values().stream().filter(zone -> type.isInstance(zone) && zone.isInsideZone(x, y, z)).map(type::cast).findFirst().orElse(null);
-        }
-        return null;
+        return isNull(region) ? null : region.getZones().values().stream().filter(zone -> type.isInstance(zone) && zone.isInsideZone(x, y, z)).map(type::cast).findFirst().orElse(null);
     }
 
     /**
@@ -469,43 +431,27 @@ public final class ZoneManager extends GameXmlReader {
      * @return link to zone form
      */
     public SpawnTerritory getSpawnTerritory(String name) {
-        return spawnTerritories.getOrDefault(name, null);
+        return spawnTerritories.get(name);
     }
 
     /**
      * Returns all spawm territories from where the object is located
      *
-     * @param object
+     * @param object the reference object
      * @return zones
      */
     public List<SpawnTerritory> getSpawnTerritories(WorldObject object) {
-        final List<SpawnTerritory> temp = new ArrayList<>();
-        for (SpawnTerritory territory : spawnTerritories.values()) {
-            if (territory.isInsideZone(object.getX(), object.getY(), object.getZ())) {
-                temp.add(territory);
-            }
-        }
-
-        return temp;
+        return spawnTerritories.values().stream().filter(t -> t.isInsideZone(object.getX(), object.getY(), object.getZ())).collect(Collectors.toList());
     }
 
     /**
      * Gets the olympiad stadium.
      *
-     * @param character the character
+     * @param creature the character
      * @return the olympiad stadium
      */
-    public final OlympiadStadiumZone getOlympiadStadium(Creature character) {
-        if (character == null) {
-            return null;
-        }
-
-        for (Zone temp : getInstance().getZones(character.getX(), character.getY(), character.getZ())) {
-            if ((temp instanceof OlympiadStadiumZone) && temp.isCharacterInZone(character)) {
-                return (OlympiadStadiumZone) temp;
-            }
-        }
-        return null;
+    public final OlympiadStadiumZone getOlympiadStadium(Creature creature) {
+        return isNull(creature) ? null : getZones(creature).stream().filter(z -> z instanceof OlympiadStadiumZone && z.isCreatureInZone(creature)).map(OlympiadStadiumZone.class::cast).findAny().orElse(null);
     }
 
     /**
@@ -513,7 +459,7 @@ public final class ZoneManager extends GameXmlReader {
      *
      * @return list of items
      */
-    public List<Item> getDebugItems() {
+    List<Item> getDebugItems() {
         if (_debugItems == null) {
             _debugItems = new ArrayList<>();
         }

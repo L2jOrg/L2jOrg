@@ -110,7 +110,7 @@ public class DamageZone extends Zone {
 
     @Override
     protected void onExit(Creature character) {
-        if (_characterList.isEmpty() && (getSettings().getTask() != null)) {
+        if (creatures.isEmpty() && (getSettings().getTask() != null)) {
             getSettings().clear();
         }
     }

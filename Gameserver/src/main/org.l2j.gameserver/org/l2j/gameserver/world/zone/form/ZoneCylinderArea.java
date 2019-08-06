@@ -4,14 +4,14 @@ import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.geoengine.GeoEngine;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.items.CommonItem;
-import org.l2j.gameserver.world.zone.ZoneForm;
+import org.l2j.gameserver.world.zone.ZoneArea;
 
 /**
  * A primitive circular zone
  *
  * @author durgus
  */
-public class ZoneCylinderForm extends ZoneForm {
+public class ZoneCylinderArea extends ZoneArea {
     private final int centerX;
     private final int centerY;
     private final int minZ;
@@ -19,7 +19,7 @@ public class ZoneCylinderForm extends ZoneForm {
     private final int radius;
     private final int _radS;
 
-    public ZoneCylinderForm(int x, int y, int minZ, int maxZ, int radius) {
+    public ZoneCylinderArea(int x, int y, int minZ, int maxZ, int radius) {
         centerX = x;
         centerY = y;
         this.minZ = minZ;

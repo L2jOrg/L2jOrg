@@ -4,7 +4,7 @@ import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.geoengine.GeoEngine;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.items.CommonItem;
-import org.l2j.gameserver.world.zone.ZoneForm;
+import org.l2j.gameserver.world.zone.ZoneArea;
 
 import java.awt.*;
 
@@ -13,12 +13,12 @@ import java.awt.*;
  *
  * @author durgus
  */
-public class ZoneCubeForm extends ZoneForm {
+public class ZoneCubeArea extends ZoneArea {
     private final int _z1;
     private final int _z2;
     private final Rectangle _r;
 
-    public ZoneCubeForm(int x1, int x2, int y1, int y2, int z1, int z2) {
+    public ZoneCubeArea(int x1, int x2, int y1, int y2, int z1, int z2) {
         final int _x1 = Math.min(x1, x2);
         final int _x2 = Math.max(x1, x2);
         final int _y1 = Math.min(y1, y2);

@@ -1,5 +1,7 @@
 package org.l2j.gameserver.world.zone;
 
+import io.github.joealisson.primitive.CHashIntMap;
+import io.github.joealisson.primitive.IntMap;
 import org.l2j.gameserver.enums.InstanceType;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.TeleportWhereType;
@@ -19,10 +21,9 @@ import org.slf4j.LoggerFactory;
 
 import java.util.Collection;
 import java.util.List;
-import java.util.Map;
-import java.util.concurrent.ConcurrentHashMap;
 import java.util.stream.Collectors;
 
+import static java.util.Objects.nonNull;
 import static org.l2j.gameserver.util.GameUtils.isPlayer;
 
 /**
@@ -33,46 +34,41 @@ import static org.l2j.gameserver.util.GameUtils.isPlayer;
 public abstract class Zone extends ListenersContainer {
     protected static final Logger LOGGER = LoggerFactory.getLogger(Zone.class.getName());
 
-    private final int _id;
-    protected ZoneForm form;
-    protected List<ZoneForm> _blockedZone;
-    protected Map<Integer, Creature> _characterList = new ConcurrentHashMap<>();
-    protected boolean _enabled;
+    private final int id;
+    private List<ZoneArea> blockedZones;
+    private boolean enabled;
     /**
      * Parameters to affect specific characters
      */
-    private boolean _checkAffected = false;
-    private String _name = null;
-    private int _minLvl;
-    private int _maxLvl;
-    private int[] _race;
-    private int[] _class;
-    private char _classType;
-    private InstanceType _target = InstanceType.Creature; // default all chars
-    private boolean _allowStore;
-    private AbstractZoneSettings _settings;
-    private int _instanceTemplateId;
-    private Map<Integer, Boolean> _enabledInInstance;
+    private boolean checkAffected = false;
+    private String name = null;
+    private int minLvl;
+    private int maxLvl;
+    private int[] races;
+    private int[] classes;
+    private char classType;
+    private InstanceType target = InstanceType.Creature; // default all chars
+    private boolean allowStore;
+    private AbstractZoneSettings settings;
+    private int instanceTemplateId;
+    private IntMap<Boolean> enabledInInstance;
+
+    protected ZoneArea area;
+    protected IntMap<Creature> creatures = new CHashIntMap<>();
 
     protected Zone(int id) {
-        _id = id;
+        this.id = id;
+        maxLvl = 0xFF;
 
-        _minLvl = 0;
-        _maxLvl = 0xFF;
-
-        _classType = 0;
-
-        _race = null;
-        _class = null;
-        _allowStore = true;
-        _enabled = true;
+        allowStore = true;
+        enabled = true;
     }
 
     /**
      * @return Returns the id.
      */
     public int getId() {
-        return _id;
+        return id;
     }
 
     /**
@@ -82,75 +78,82 @@ public abstract class Zone extends ListenersContainer {
      * @param value
      */
     public void setParameter(String name, String value) {
-        _checkAffected = true;
+        checkAffected = true;
 
         // Zone name
-        if (name.equals("name")) {
-            _name = value;
-        }
-        // Minimum level
-        else if (name.equals("affectedLvlMin")) {
-            _minLvl = Integer.parseInt(value);
-        }
-        // Maximum level
-        else if (name.equals("affectedLvlMax")) {
-            _maxLvl = Integer.parseInt(value);
-        }
-        // Affected Races
-        else if (name.equals("affectedRace")) {
-            // Create a new array holding the affected race
-            if (_race == null) {
-                _race = new int[1];
-                _race[0] = Integer.parseInt(value);
-            } else {
-                final int[] temp = new int[_race.length + 1];
+        switch (name) {
+            case "name":
+                this.name = value;
+                break;
+            // Minimum level
+            case "affectedLvlMin":
+                minLvl = Integer.parseInt(value);
+                break;
+            // Maximum level
+            case "affectedLvlMax":
+                maxLvl = Integer.parseInt(value);
+                break;
+            // Affected Races
+            case "affectedRace":
+                // Create a new array holding the affected race
+                if (races == null) {
+                    races = new int[1];
+                    races[0] = Integer.parseInt(value);
+                } else {
+                    final int[] temp = new int[races.length + 1];
 
-                int i = 0;
-                for (; i < _race.length; i++) {
-                    temp[i] = _race[i];
+                    int i = 0;
+                    for (; i < races.length; i++) {
+                        temp[i] = races[i];
+                    }
+
+                    temp[i] = Integer.parseInt(value);
+
+                    races = temp;
                 }
+                break;
+            // Affected classes
+            case "affectedClassId":
+                // Create a new array holding the affected classIds
+                if (classes == null) {
+                    classes = new int[1];
+                    classes[0] = Integer.parseInt(value);
+                } else {
+                    final int[] temp = new int[classes.length + 1];
 
-                temp[i] = Integer.parseInt(value);
+                    int i = 0;
+                    for (; i < classes.length; i++) {
+                        temp[i] = classes[i];
+                    }
 
-                _race = temp;
-            }
-        }
-        // Affected classes
-        else if (name.equals("affectedClassId")) {
-            // Create a new array holding the affected classIds
-            if (_class == null) {
-                _class = new int[1];
-                _class[0] = Integer.parseInt(value);
-            } else {
-                final int[] temp = new int[_class.length + 1];
+                    temp[i] = Integer.parseInt(value);
 
-                int i = 0;
-                for (; i < _class.length; i++) {
-                    temp[i] = _class[i];
+                    classes = temp;
                 }
-
-                temp[i] = Integer.parseInt(value);
-
-                _class = temp;
-            }
-        }
-        // Affected class type
-        else if (name.equals("affectedClassType")) {
-            if (value.equals("Fighter")) {
-                _classType = 1;
-            } else {
-                _classType = 2;
-            }
-        } else if (name.equals("targetClass")) {
-            _target = Enum.valueOf(InstanceType.class, value);
-        } else if (name.equals("allowStore")) {
-            _allowStore = Boolean.parseBoolean(value);
-        } else if (name.equals("default_enabled")) {
-            _enabled = Boolean.parseBoolean(value);
-        } else if (name.equals("instanceId")) {
-            _instanceTemplateId = Integer.parseInt(value);
-        } else {
-            LOGGER.info(getClass().getSimpleName() + ": Unknown parameter - " + name + " in zone: " + _id);
+                break;
+            // Affected class type
+            case "affectedClassType":
+                if (value.equals("Fighter")) {
+                    classType = 1;
+                } else {
+                    classType = 2;
+                }
+                break;
+            case "targetClass":
+                target = Enum.valueOf(InstanceType.class, value);
+                break;
+            case "allowStore":
+                allowStore = Boolean.parseBoolean(value);
+                break;
+            case "default_enabled":
+                enabled = Boolean.parseBoolean(value);
+                break;
+            case "instanceId":
+                instanceTemplateId = Integer.parseInt(value);
+                break;
+            default:
+                LOGGER.info("Unknown parameter - {} in zone: {}", name, id);
+                break;
         }
     }
 
@@ -161,44 +164,44 @@ public abstract class Zone extends ListenersContainer {
     private boolean isAffected(Creature character) {
         // Check instance
         final Instance world = character.getInstanceWorld();
-        if (world != null) {
-            if (world.getTemplateId() != _instanceTemplateId) {
+        if (nonNull(world)) {
+            if (world.getTemplateId() != instanceTemplateId) {
                 return false;
             }
             if (!isEnabled(character.getInstanceId())) {
                 return false;
             }
-        } else if (_instanceTemplateId > 0) {
+        } else if (instanceTemplateId > 0) {
             return false;
         }
 
         // Check lvl
-        if ((character.getLevel() < _minLvl) || (character.getLevel() > _maxLvl)) {
+        if ((character.getLevel() < minLvl) || (character.getLevel() > maxLvl)) {
             return false;
         }
 
         // check obj class
-        if (!character.isInstanceTypes(_target)) {
+        if (!character.isInstanceTypes(target)) {
             return false;
         }
 
         if (isPlayer(character)) {
             // Check class type
-            if (_classType != 0) {
+            if (classType != 0) {
                 if (((Player) character).isMageClass()) {
-                    if (_classType == 1) {
+                    if (classType == 1) {
                         return false;
                     }
-                } else if (_classType == 2) {
+                } else if (classType == 2) {
                     return false;
                 }
             }
 
             // Check race
-            if (_race != null) {
+            if (races != null) {
                 boolean ok = false;
 
-                for (int element : _race) {
+                for (int element : races) {
                     if (character.getRace().ordinal() == element) {
                         ok = true;
                         break;
@@ -211,19 +214,17 @@ public abstract class Zone extends ListenersContainer {
             }
 
             // Check class
-            if (_class != null) {
+            if (classes != null) {
                 boolean ok = false;
 
-                for (int _clas : _class) {
+                for (int _clas : classes) {
                     if (((Player) character).getClassId().ordinal() == _clas) {
                         ok = true;
                         break;
                     }
                 }
 
-                if (!ok) {
-                    return false;
-                }
+                return ok;
             }
         }
         return true;
@@ -232,10 +233,10 @@ public abstract class Zone extends ListenersContainer {
     /**
      * Returns this zones zone form.
      *
-     * @return {@link #form}
+     * @return {@link #area}
      */
-    public ZoneForm getForm() {
-        return form;
+    public ZoneArea getArea() {
+        return area;
     }
 
     /**
@@ -243,22 +244,22 @@ public abstract class Zone extends ListenersContainer {
      *
      * @param zone
      */
-    public void setForm(ZoneForm zone) {
-        if (form != null) {
+    public void setArea(ZoneArea zone) {
+        if (area != null) {
             throw new IllegalStateException("Zone already set");
         }
-        form = zone;
+        area = zone;
     }
 
-    public List<ZoneForm> getBlockedZones() {
-        return _blockedZone;
+    public List<ZoneArea> getBlockedZones() {
+        return blockedZones;
     }
 
-    public void setBlockedZones(List<ZoneForm> blockedZones) {
-        if (_blockedZone != null) {
+    public void setBlockedZones(List<ZoneArea> blockedZones) {
+        if (this.blockedZones != null) {
             throw new IllegalStateException("Blocked zone already set");
         }
-        _blockedZone = blockedZones;
+        this.blockedZones = blockedZones;
     }
 
     /**
@@ -267,7 +268,7 @@ public abstract class Zone extends ListenersContainer {
      * @return
      */
     public String getName() {
-        return _name;
+        return name;
     }
 
     /**
@@ -276,7 +277,7 @@ public abstract class Zone extends ListenersContainer {
      * @param name
      */
     public void setName(String name) {
-        _name = name;
+        this.name = name;
     }
 
     /**
@@ -288,7 +289,7 @@ public abstract class Zone extends ListenersContainer {
      * @return
      */
     public boolean isInsideZone(int x, int y, int z) {
-        return form.isInsideZone(x, y, z) && !isInsideBannedZone(x, y, z);
+        return area.isInsideZone(x, y, z) && !isInsideBannedZone(x, y, z);
     }
 
     /**
@@ -298,7 +299,7 @@ public abstract class Zone extends ListenersContainer {
      * @return {@code true} if this location is within banned zone boundaries, {@code false} otherwise
      */
     public boolean isInsideBannedZone(int x, int y, int z) {
-        return (_blockedZone != null) && _blockedZone.stream().allMatch(zone -> !zone.isInsideZone(x, y, z));
+        return (blockedZones != null) && blockedZones.stream().allMatch(zone -> !zone.isInsideZone(x, y, z));
     }
 
     /**
@@ -309,7 +310,7 @@ public abstract class Zone extends ListenersContainer {
      * @return
      */
     public boolean isInsideZone(int x, int y) {
-        return isInsideZone(x, y, form.getHighZ());
+        return isInsideZone(x, y, area.getHighZ());
     }
 
     /**
@@ -333,22 +334,22 @@ public abstract class Zone extends ListenersContainer {
     }
 
     public double getDistanceToZone(int x, int y) {
-        return form.getDistanceToZone(x, y);
+        return area.getDistanceToZone(x, y);
     }
 
     public double getDistanceToZone(WorldObject object) {
-        return form.getDistanceToZone(object.getX(), object.getY());
+        return area.getDistanceToZone(object.getX(), object.getY());
     }
 
     public void revalidateInZone(Creature character) {
         // If the object is inside the zone...
         if (isInsideZone(character)) {
             // If the character can't be affected by this zone return
-            if (_checkAffected && !isAffected(character)) {
+            if (checkAffected && !isAffected(character)) {
                 return;
             }
 
-            if (_characterList.putIfAbsent(character.getObjectId(), character) == null) {
+            if (creatures.putIfAbsent(character.getObjectId(), character) == null) {
                 // Notify to scripts.
                 EventDispatcher.getInstance().notifyEventAsync(new OnCreatureZoneEnter(character, this), this);
                 // Notify Zone implementation.
@@ -366,12 +367,12 @@ public abstract class Zone extends ListenersContainer {
      */
     public void removeCharacter(Creature character) {
         // Was the character inside this zone?
-        if (_characterList.containsKey(character.getObjectId())) {
+        if (creatures.containsKey(character.getObjectId())) {
             // Notify to scripts.
             EventDispatcher.getInstance().notifyEventAsync(new OnCreatureZoneExit(character, this), this);
 
             // Unregister player.
-            _characterList.remove(character.getObjectId());
+            creatures.remove(character.getObjectId());
 
             // Notify Zone implementation.
             onExit(character);
@@ -384,19 +385,19 @@ public abstract class Zone extends ListenersContainer {
      * @param character
      * @return
      */
-    public boolean isCharacterInZone(Creature character) {
-        return _characterList.containsKey(character.getObjectId());
+    public boolean isCreatureInZone(Creature character) {
+        return creatures.containsKey(character.getObjectId());
     }
 
     public AbstractZoneSettings getSettings() {
-        return _settings;
+        return settings;
     }
 
     public void setSettings(AbstractZoneSettings settings) {
-        if (_settings != null) {
-            _settings.clear();
+        if (this.settings != null) {
+            this.settings.clear();
         }
-        _settings = settings;
+        this.settings = settings;
     }
 
     protected abstract void onEnter(Creature character);
@@ -415,16 +416,16 @@ public abstract class Zone extends ListenersContainer {
     public void onPlayerLogoutInside(Player player) {
     }
 
-    public Map<Integer, Creature> getCharacters() {
-        return _characterList;
+    public IntMap<Creature> getCharacters() {
+        return creatures;
     }
 
     public Collection<Creature> getCharactersInside() {
-        return _characterList.values();
+        return creatures.values();
     }
 
     public List<Player> getPlayersInside() {
-        return _characterList.values().stream().filter(GameUtils::isPlayer).map(WorldObject::getActingPlayer).collect(Collectors.toList());
+        return creatures.values().stream().filter(GameUtils::isPlayer).map(WorldObject::getActingPlayer).collect(Collectors.toList());
     }
 
     /**
@@ -433,70 +434,74 @@ public abstract class Zone extends ListenersContainer {
      * @param packet
      */
     public void broadcastPacket(ServerPacket packet) {
-        if (_characterList.isEmpty()) {
+        if (creatures.isEmpty()) {
             return;
         }
 
-        _characterList.values().parallelStream().filter(GameUtils::isPlayer).map(WorldObject::getActingPlayer).forEach(packet::sendTo);
+        creatures.values().parallelStream().filter(GameUtils::isPlayer).map(WorldObject::getActingPlayer).forEach(packet::sendTo);
     }
 
     public InstanceType getTargetType() {
-        return _target;
+        return target;
     }
 
     public void setTargetType(InstanceType type) {
-        _target = type;
-        _checkAffected = true;
+        target = type;
+        checkAffected = true;
     }
 
-    public boolean getAllowStore() {
-        return _allowStore;
+    protected boolean getAllowStore() {
+        return allowStore;
     }
 
     public int getInstanceTemplateId() {
-        return _instanceTemplateId;
+        return instanceTemplateId;
     }
 
     @Override
     public String toString() {
-        return getClass().getSimpleName() + "[" + _id + "]";
+        return getClass().getSimpleName() + "[" + id + "]";
     }
 
     public void visualizeZone(int z) {
-        form.visualizeZone(z);
+        area.visualizeZone(z);
     }
 
     public boolean isEnabled() {
-        return _enabled;
+        return enabled;
     }
 
     public void setEnabled(boolean state) {
-        _enabled = state;
+        enabled = state;
     }
 
     public void setEnabled(boolean state, int instanceId) {
-        if (_enabledInInstance == null) {
+        if (enabledInInstance == null) {
             synchronized (this) {
-                if (_enabledInInstance == null) {
-                    _enabledInInstance = new ConcurrentHashMap<>();
+                if (enabledInInstance == null) {
+                    enabledInInstance = new CHashIntMap<>();
                 }
             }
         }
 
-        _enabledInInstance.put(instanceId, state);
+        enabledInInstance.put(instanceId, state);
     }
 
     public boolean isEnabled(int instanceId) {
-        if (_enabledInInstance != null) {
-            return _enabledInInstance.getOrDefault(instanceId, _enabled);
+        if (nonNull(enabledInInstance)) {
+            return enabledInInstance.getOrDefault(instanceId, enabled);
         }
 
-        return _enabled;
+        return enabled;
     }
 
     public void oustAllPlayers() {
+        if(creatures.isEmpty()) {
+            return;
+        }
+
         //@formatter:off
-        _characterList.values().parallelStream()
+        creatures.values().parallelStream()
                 .filter(GameUtils::isPlayer)
                 .map(WorldObject::getActingPlayer)
                 .filter(Player::isOnline)
@@ -504,14 +509,11 @@ public abstract class Zone extends ListenersContainer {
         //@formatter:off
     }
 
-    /**
-     * @param loc
-     */
     public void movePlayersTo(Location loc) {
-        if (_characterList.isEmpty()) {
+        if (creatures.isEmpty()) {
             return;
         }
 
-        _characterList.values().parallelStream().filter(p -> GameUtils.isPlayer(p) && ((Player)p).isOnline()).forEach(p -> p.teleToLocation(loc));
+        creatures.values().parallelStream().filter(p -> GameUtils.isPlayer(p) && ((Player)p).isOnline()).forEach(p -> p.teleToLocation(loc));
     }
 }

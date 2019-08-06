@@ -520,12 +520,12 @@ public final class Baium extends AbstractNpcAI
 
             if ((getRandom(100) < 10) && SkillCaster.checkUseConditions(mob, SPEAR_ATTACK.getSkill()))
             {
-                if ((mostHated != null) && isInsideRadius3D(npc, mostHated, 1000) && zone.isCharacterInZone(mostHated))
+                if ((mostHated != null) && isInsideRadius3D(npc, mostHated, 1000) && zone.isCreatureInZone(mostHated))
                 {
                     mob.setTarget(mostHated);
                     mob.doCast(SPEAR_ATTACK.getSkill());
                 }
-                else if (zone.isCharacterInZone(attacker))
+                else if (zone.isCreatureInZone(attacker))
                 {
                     mob.setTarget(attacker);
                     mob.doCast(SPEAR_ATTACK.getSkill());
@@ -544,7 +544,7 @@ public final class Baium extends AbstractNpcAI
     @Override
     public String onKill(Npc npc, Player killer, boolean isSummon)
     {
-        if (zone.isCharacterInZone(killer))
+        if (zone.isCreatureInZone(killer))
         {
             setStatus(DEAD);
             addSpawn(TELE_CUBE, TELEPORT_CUBIC_LOC, false, 900000);
@@ -603,7 +603,7 @@ public final class Baium extends AbstractNpcAI
     {
         startQuestTimer("MANAGE_SKILLS", 1000, npc, null);
 
-        if (!zone.isCharacterInZone(npc) && (_baium != null))
+        if (!zone.isCreatureInZone(npc) && (_baium != null))
         {
             _baium.teleToLocation(BAIUM_LOC);
         }

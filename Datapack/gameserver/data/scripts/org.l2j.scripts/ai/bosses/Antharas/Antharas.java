@@ -624,7 +624,7 @@ public final class Antharas extends AbstractNpcAI
 		}
 		else if (npc.getId() == ANTHARAS)
 		{
-			if (!zone.isCharacterInZone(attacker) || (getStatus() != IN_FIGHT))
+			if (!zone.isCreatureInZone(attacker) || (getStatus() != IN_FIGHT))
 			{
 				LOGGER.warn(": Player " + attacker.getName() + " attacked Antharas in invalid conditions!");
 				attacker.teleToLocation(80464, 152294, -3534);
@@ -667,7 +667,7 @@ public final class Antharas extends AbstractNpcAI
 	@Override
 	public String onKill(Npc npc, Player killer, boolean isSummon)
 	{
-		if (zone.isCharacterInZone(killer))
+		if (zone.isCreatureInZone(killer))
 		{
 			if (npc.getId() == ANTHARAS)
 			{
