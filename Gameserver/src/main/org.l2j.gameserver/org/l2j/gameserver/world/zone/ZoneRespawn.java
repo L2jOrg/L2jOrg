@@ -27,21 +27,10 @@ public abstract class ZoneRespawn extends Zone {
             addSpawn(x, y, z);
         } else {
             switch (type) {
-                case "other": {
-                    addOtherSpawn(x, y, z);
-                    break;
-                }
-                case "chaotic": {
-                    addChaoticSpawn(x, y, z);
-                    break;
-                }
-                case "banish": {
-                    addBanishSpawn(x, y, z);
-                    break;
-                }
-                default: {
-                    LOGGER.warn("Unknown location type: {}", type);
-                }
+                case "other" -> addOtherSpawn(x, y, z);
+                case "chaotic" -> addChaoticSpawn(x, y, z);
+                case "banish" -> addBanishSpawn(x, y, z);
+                default -> LOGGER.warn("Unknown location type: {}", type);
             }
         }
     }
@@ -54,7 +43,7 @@ public abstract class ZoneRespawn extends Zone {
         _spawnLocs.add(new Location(x, y, z));
     }
 
-    public final void addOtherSpawn(int x, int y, int z) {
+    private void addOtherSpawn(int x, int y, int z) {
         if (_otherSpawnLocs == null) {
             _otherSpawnLocs = new ArrayList<>();
         }
@@ -62,7 +51,7 @@ public abstract class ZoneRespawn extends Zone {
         _otherSpawnLocs.add(new Location(x, y, z));
     }
 
-    public final void addChaoticSpawn(int x, int y, int z) {
+    private void addChaoticSpawn(int x, int y, int z) {
         if (_chaoticSpawnLocs == null) {
             _chaoticSpawnLocs = new ArrayList<>();
         }
@@ -70,7 +59,7 @@ public abstract class ZoneRespawn extends Zone {
         _chaoticSpawnLocs.add(new Location(x, y, z));
     }
 
-    public final void addBanishSpawn(int x, int y, int z) {
+    private void addBanishSpawn(int x, int y, int z) {
         if (_banishSpawnLocs == null) {
             _banishSpawnLocs = new ArrayList<>();
         }
