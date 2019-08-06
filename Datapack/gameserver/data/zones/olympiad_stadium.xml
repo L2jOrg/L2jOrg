@@ -6,15 +6,15 @@
 		<point x="-90200" y="-251085" />
 		<point x="-85825" y="-254465" />
 		<!-- point1 -->
-		<spawn X="-89597" Y="-252841" Z="-3320" />
-		<spawn X="-89578" Y="-252826" Z="-3320" />
-		<spawn X="-89558" Y="-252858" Z="-3320" />
+		<spawn x="-89597" y="-252841" z="-3320" />
+		<spawn x="-89578" y="-252826" z="-3320" />
+		<spawn x="-89558" y="-252858" z="-3320" />
 		<!-- point2 -->
-		<spawn X="-86544" Y="-252846" Z="-3320" />
-		<spawn X="-86565" Y="-252863" Z="-3320" />
-		<spawn X="-86580" Y="-252824" Z="-3320" />
+		<spawn x="-86544" y="-252846" z="-3320" />
+		<spawn x="-86565" y="-252863" z="-3320" />
+		<spawn x="-86580" y="-252824" z="-3320" />
 		<!-- Observer -->
-		<spawn X="-88077" Y="-252849" Z="-3020" type="org.l2j.gameserver.world.zone.type.spectatorSpawn" />
+		<spawn x="-88077" y="-252849" z="-3020" type="spectatorSpawn" />
 	</zone>
 
 	<zone name="olimpiad_stadium_h5_2" id="312" type="org.l2j.gameserver.world.zone.type.OlympiadStadiumZone" form="Cube" minZ="-8000" maxZ="-6500">
@@ -22,15 +22,15 @@
 		<point x="-77302" y="-250871" />
 		<point x="-73770" y="-253917" />
 		<!-- point1 -->
-		<spawn X="-76949" Y="-252459" Z="-7720" />
-		<spawn X="-76930" Y="-252476" Z="-7720" />
-		<spawn X="-76887" Y="-252497" Z="-7720" />
+		<spawn x="-76949" y="-252459" z="-7720" />
+		<spawn x="-76930" y="-252476" z="-7720" />
+		<spawn x="-76887" y="-252497" z="-7720" />
 		<!-- point2 -->
-		<spawn X="-73995" Y="-252460" Z="-7720" />
-		<spawn X="-74019" Y="-252479" Z="-7720" />
-		<spawn X="-74011" Y="-252440" Z="-7720" />
+		<spawn x="-73995" y="-252460" z="-7720" />
+		<spawn x="-74019" y="-252479" z="-7720" />
+		<spawn x="-74011" y="-252440" z="-7720" />
 		<!-- Observer -->
-		<spawn X="-75503" Y="-252463" Z="-7400" type="org.l2j.gameserver.world.zone.type.spectatorSpawn" />
+		<spawn x="-75503" y="-252463" z="-7400" type="spectatorSpawn" />
 	</zone>
 
 	<zone name="olimpiad_stadium_h5_3" id="313" type="org.l2j.gameserver.world.zone.type.OlympiadStadiumZone" form="Cube" minZ="-8600" maxZ="-7300">
@@ -38,15 +38,15 @@
 		<point x="-89727" y="-237729" />
 		<point x="-86464" y="-240971" />
 		<!-- point1 -->
-		<spawn X="-89480" Y="-239358" Z="-8450" />
-		<spawn X="-89451" Y="-239343" Z="-8450" />
-		<spawn X="-89411" Y="-239372" Z="-8450" />
+		<spawn x="-89480" y="-239358" z="-8450" />
+		<spawn x="-89451" y="-239343" z="-8450" />
+		<spawn x="-89411" y="-239372" z="-8450" />
 		<!-- point2 -->
-		<spawn X="-86729" Y="-239349" Z="-8450" />
-		<spawn X="-86758" Y="-239366" Z="-8450" />
-		<spawn X="-86781" Y="-239337" Z="-8450" />
+		<spawn x="-86729" y="-239349" z="-8450" />
+		<spawn x="-86758" y="-239366" z="-8450" />
+		<spawn x="-86781" y="-239337" z="-8450" />
 		<!-- Observer -->
-		<spawn X="-88099" Y="-239359" Z="-8150" type="org.l2j.gameserver.world.zone.type.spectatorSpawn" />
+		<spawn x="-88099" y="-239359" z="-8150" type="spectatorSpawn" />
 	</zone>
 
 	<zone name="olimpiad_stadium_h5_4" id="314" type="org.l2j.gameserver.world.zone.type.OlympiadStadiumZone" form="Cube" minZ="-8400" maxZ="-7100">
@@ -54,14 +54,14 @@
 		<point x="-77066" y="-237599" />
 		<point x="-73837" y="-240764" />
 		<!-- point1 -->
-		<spawn X="-76817" Y="-239184" Z="-8192" />
-		<spawn X="-76793" Y="-239205" Z="-8192" />
-		<spawn X="-76795" Y="-239168" Z="-8192" />
+		<spawn x="-76817" y="-239184" z="-8192" />
+		<spawn x="-76793" y="-239205" z="-8192" />
+		<spawn x="-76795" y="-239168" z="-8192" />
 		<!-- point2 -->
-		<spawn X="-74086" Y="-239183" Z="-8192" />
-		<spawn X="-74104" Y="-239200" Z="-8192" />
-		<spawn X="-74116" Y="-239156" Z="-8192" />
+		<spawn x="-74086" y="-239183" z="-8192" />
+		<spawn x="-74104" y="-239200" z="-8192" />
+		<spawn x="-74116" y="-239156" z="-8192" />
 		<!-- Observer -->
-		<spawn X="-75455" Y="-239607" Z="-7850" type="org.l2j.gameserver.world.zone.type.spectatorSpawn" />
+		<spawn x="-75455" y="-239607" z="-7850" type="spectatorSpawn" />
 	</zone>
 </list>

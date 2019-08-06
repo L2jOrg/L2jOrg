@@ -81,7 +81,7 @@ public final class ZoneManager extends GameXmlReader {
 
     @Override
     protected Path getSchemaFilePath() {
-        return Configurator.getSettings(ServerSettings.class).dataPackDirectory().resolve("data/xsd/zones.xsd");
+        return Configurator.getSettings(ServerSettings.class).dataPackDirectory().resolve("data/zones/zones.xsd");
     }
 
     /**
@@ -253,17 +253,18 @@ public final class ZoneManager extends GameXmlReader {
     }
 
     private ZoneForm parseCylinder(Node zoneNode) throws InvalidZoneException {
+        var attributes = zoneNode.getAttributes();
         for (Node node = zoneNode.getFirstChild(); node != null; node = node.getNextSibling()) {
             if ("point".equalsIgnoreCase(node.getNodeName())) {
-                var attributes = node.getAttributes();
+                var attr = node.getAttributes();
                 int radius = parseInteger(attributes, "radius");
 
                 if(radius < 0) {
                     throw new  InvalidZoneException("The Zone with Cylinder form must have a radius");
                 }
 
-                int x = parseInteger(attributes, "x");
-                int y = parseInteger(attributes, "y");
+                int x = parseInteger(attr, "x");
+                int y = parseInteger(attr, "y");
                 var minZ = parseInteger(attributes, "minZ");
                 var maxZ = parseInteger(attributes, "maxZ");
                 return new ZoneCylinderForm(x, y, minZ, maxZ, radius);
@@ -273,14 +274,15 @@ public final class ZoneManager extends GameXmlReader {
     }
 
     private ZoneForm parseCube(Node zoneNode) throws InvalidZoneException {
+        var attributes = zoneNode.getAttributes();
         int[] points = new int[4];
         var point = 0;
         for (Node node = zoneNode.getFirstChild(); node != null; node = node.getNextSibling()) {
             if ("point".equalsIgnoreCase(node.getNodeName())) {
-                var attributes = node.getAttributes();
+                var attr = node.getAttributes();
 
-                int x = parseInteger(attributes, "x");
-                int y = parseInteger(attributes, "y");
+                int x = parseInteger(attr, "x");
+                int y = parseInteger(attr, "y");
                 points[point++] = x;
                 points[point++] = y;
 
