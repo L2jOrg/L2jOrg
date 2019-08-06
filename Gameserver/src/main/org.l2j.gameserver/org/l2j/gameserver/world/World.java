@@ -17,6 +17,7 @@ import org.l2j.gameserver.model.events.EventDispatcher;
 import org.l2j.gameserver.model.events.impl.character.npc.OnNpcCreatureSee;
 import org.l2j.gameserver.network.Disconnection;
 import org.l2j.gameserver.settings.CharacterSettings;
+import org.l2j.gameserver.util.GameUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -383,6 +384,11 @@ public final class World {
 
         return region.findObjectInSurrounding(reference, objectId, getSettings(CharacterSettings.class).partyRange());
     }
+
+    public void forEachCreature(Consumer<Creature> action) {
+        objects.values().stream().filter(GameUtils::isCreature).map(Creature.class::cast).forEach(action);
+    }
+
 
     public <T extends WorldObject> T findAnyVisibleObject(WorldObject reference, Class<T> clazz, int range, boolean includeReference, Predicate<T> filter) {
         var region = getRegion(reference);

@@ -1,457 +1,457 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<list enabled="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/zones.xsd">
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org zones.xsd" >
 	<!-- Landing Zones -->
 	<!-- 14_24_seed_of_infinity -->
-	<zone name="14_24_seed_of_infinity_1" type="LandingZone" shape="NPoly" minZ="4251" maxZ="4601">
-		<node X="-213203" Y="209447" />
-		<node X="-212467" Y="209446" />
-		<node X="-212468" Y="210183" />
-		<node X="-213203" Y="210185" />
+	<zone name="14_24_seed_of_infinity_1" type="org.l2j.gameserver.world.zone.type.LandingZone" form="Polygon" minZ="4251" maxZ="4601">
+		<point x="-213203" y="209447" />
+		<point x="-212467" y="209446" />
+		<point x="-212468" y="210183" />
+		<point x="-213203" y="210185" />
 	</zone>
 	<!-- 14_25_keucereus alliance base -->
-	<zone name="14_25_keucereus alliance base_1" type="LandingZone" shape="NPoly" minZ="1341" maxZ="1691">
-		<node X="-186340" Y="245594" />
-		<node X="-186132" Y="245657" />
-		<node X="-186557" Y="246967" />
-		<node X="-186731" Y="186731" />
+	<zone name="14_25_keucereus alliance base_1" type="org.l2j.gameserver.world.zone.type.LandingZone" form="Polygon" minZ="1341" maxZ="1691">
+		<point x="-186340" y="245594" />
+		<point x="-186132" y="245657" />
+		<point x="-186557" y="246967" />
+		<point x="-186731" y="186731" />
 	</zone>
-	<zone name="14_25_keucereus alliance base_2" type="LandingZone" shape="NPoly" minZ="1247" maxZ="1597">
-		<node X="-187105" Y="245922" />
-		<node X="-185682" Y="246358" />
-		<node X="-185731" Y="246500" />
-		<node X="-187153" Y="246066" />
+	<zone name="14_25_keucereus alliance base_2" type="org.l2j.gameserver.world.zone.type.LandingZone" form="Polygon" minZ="1247" maxZ="1597">
+		<point x="-187105" y="245922" />
+		<point x="-185682" y="246358" />
+		<point x="-185731" y="246500" />
+		<point x="-187153" y="246066" />
 	</zone>
-	<zone name="14_25_keucereus alliance base_3" type="LandingZone" shape="NPoly" minZ="1281" maxZ="1631">
-		<node X="-184162" Y="238475" />
-		<node X="-183993" Y="238529" />
-		<node X="-184372" Y="239849" />
-		<node X="-184592" Y="239784" />
+	<zone name="14_25_keucereus alliance base_3" type="org.l2j.gameserver.world.zone.type.LandingZone" form="Polygon" minZ="1281" maxZ="1631">
+		<point x="-184162" y="238475" />
+		<point x="-183993" y="238529" />
+		<point x="-184372" y="239849" />
+		<point x="-184592" y="239784" />
 	</zone>
-	<zone name="14_25_keucereus alliance base_4" type="LandingZone" shape="NPoly" minZ="1231" maxZ="1581">
-		<node X="-184991" Y="238956" />
-		<node X="-183568" Y="239392" />
-		<node X="-183617" Y="239535" />
-		<node X="-185039" Y="239100" />
+	<zone name="14_25_keucereus alliance base_4" type="org.l2j.gameserver.world.zone.type.LandingZone" form="Polygon" minZ="1231" maxZ="1581">
+		<point x="-184991" y="238956" />
+		<point x="-183568" y="239392" />
+		<point x="-183617" y="239535" />
+		<point x="-185039" y="239100" />
 	</zone>
-	<zone name="14_25_keucereus alliance base_5" type="LandingZone" shape="NPoly" minZ="2777" maxZ="3127">
-		<node X="-186159" Y="240220" />
-		<node X="-185413" Y="240447" />
-		<node X="-185454" Y="240583" />
-		<node X="-186207" Y="240357" />
+	<zone name="14_25_keucereus alliance base_5" type="org.l2j.gameserver.world.zone.type.LandingZone" form="Polygon" minZ="2777" maxZ="3127">
+		<point x="-186159" y="240220" />
+		<point x="-185413" y="240447" />
+		<point x="-185454" y="240583" />
+		<point x="-186207" y="240357" />
 	</zone>
-	<zone name="14_25_keucereus alliance base_6" type="LandingZone" shape="NPoly" minZ="2758" maxZ="3108">
-		<node X="-185773" Y="240404" />
-		<node X="-185623" Y="240452" />
-		<node X="-185683" Y="240643" />
-		<node X="-185840" Y="240596" />
+	<zone name="14_25_keucereus alliance base_6" type="org.l2j.gameserver.world.zone.type.LandingZone" form="Polygon" minZ="2758" maxZ="3108">
+		<point x="-185773" y="240404" />
+		<point x="-185623" y="240452" />
+		<point x="-185683" y="240643" />
+		<point x="-185840" y="240596" />
 	</zone>
-	<zone name="14_25_keucereus alliance base_7" type="LandingZone" shape="NPoly" minZ="1341" maxZ="1691">
-		<node X="-186340" Y="245594" />
-		<node X="-186132" Y="245657" />
-		<node X="-186557" Y="246967" />
-		<node X="-186731" Y="246909" />
+	<zone name="14_25_keucereus alliance base_7" type="org.l2j.gameserver.world.zone.type.LandingZone" form="Polygon" minZ="1341" maxZ="1691">
+		<point x="-186340" y="245594" />
+		<point x="-186132" y="245657" />
+		<point x="-186557" y="246967" />
+		<point x="-186731" y="246909" />
 	</zone>
-	<zone name="14_25_keucereus alliance base_8" type="LandingZone" shape="NPoly" minZ="1247" maxZ="1597">
-		<node X="-187105" Y="245922" />
-		<node X="-185682" Y="246358" />
-		<node X="-185731" Y="246500" />
-		<node X="-187153" Y="246066" />
+	<zone name="14_25_keucereus alliance base_8" type="org.l2j.gameserver.world.zone.type.LandingZone" form="Polygon" minZ="1247" maxZ="1597">
+		<point x="-187105" y="245922" />
+		<point x="-185682" y="246358" />
+		<point x="-185731" y="246500" />
+		<point x="-187153" y="246066" />
 	</zone>
-	<zone name="14_25_keucereus alliance base_9" type="LandingZone" shape="NPoly" minZ="1281" maxZ="1631">
-		<node X="-184162" Y="238475" />
-		<node X="-183993" Y="238529" />
-		<node X="-184372" Y="239849" />
-		<node X="-184592" Y="239784" />
+	<zone name="14_25_keucereus alliance base_9" type="org.l2j.gameserver.world.zone.type.LandingZone" form="Polygon" minZ="1281" maxZ="1631">
+		<point x="-184162" y="238475" />
+		<point x="-183993" y="238529" />
+		<point x="-184372" y="239849" />
+		<point x="-184592" y="239784" />
 	</zone>
-	<zone name="14_25_keucereus alliance base_10" type="LandingZone" shape="NPoly" minZ="1231" maxZ="1581">
-		<node X="-184991" Y="238956" />
-		<node X="-183568" Y="239392" />
-		<node X="-183617" Y="239535" />
-		<node X="-185039" Y="239100" />
+	<zone name="14_25_keucereus alliance base_10" type="org.l2j.gameserver.world.zone.type.LandingZone" form="Polygon" minZ="1231" maxZ="1581">
+		<point x="-184991" y="238956" />
+		<point x="-183568" y="239392" />
+		<point x="-183617" y="239535" />
+		<point x="-185039" y="239100" />
 	</zone>
-	<zone name="14_25_keucereus alliance base_11" type="LandingZone" shape="NPoly" minZ="2777" maxZ="3127">
-		<node X="-186159" Y="240220" />
-		<node X="-185413" Y="240447" />
-		<node X="-185454" Y="240583" />
-		<node X="-186207" Y="240357" />
+	<zone name="14_25_keucereus alliance base_11" type="org.l2j.gameserver.world.zone.type.LandingZone" form="Polygon" minZ="2777" maxZ="3127">
+		<point x="-186159" y="240220" />
+		<point x="-185413" y="240447" />
+		<point x="-185454" y="240583" />
+		<point x="-186207" y="240357" />
 	</zone>
-	<zone name="14_25_keucereus alliance base_12" type="LandingZone" shape="NPoly" minZ="2758" maxZ="3108">
-		<node X="-185773" Y="240404" />
-		<node X="-185623" Y="240452" />
-		<node X="-185683" Y="240643" />
-		<node X="-185840" Y="240596" />
+	<zone name="14_25_keucereus alliance base_12" type="org.l2j.gameserver.world.zone.type.LandingZone" form="Polygon" minZ="2758" maxZ="3108">
+		<point x="-185773" y="240404" />
+		<point x="-185623" y="240452" />
+		<point x="-185683" y="240643" />
+		<point x="-185840" y="240596" />
 	</zone>
-	<zone name="14_25_keucereus alliance base_13" type="LandingZone" shape="NPoly" minZ="2512" maxZ="2862">
-		<node X="-186399" Y="241771" />
-		<node X="-185651" Y="242002" />
-		<node X="-186028" Y="243186" />
-		<node X="-186770" Y="242973" />
+	<zone name="14_25_keucereus alliance base_13" type="org.l2j.gameserver.world.zone.type.LandingZone" form="Polygon" minZ="2512" maxZ="2862">
+		<point x="-186399" y="241771" />
+		<point x="-185651" y="242002" />
+		<point x="-186028" y="243186" />
+		<point x="-186770" y="242973" />
 	</zone>
-	<zone name="14_25_keucereus alliance base_14" type="LandingZone" shape="NPoly" minZ="2584" maxZ="2934">
-		<node X="-186176" Y="241050" />
-		<node X="-185383" Y="241287" />
-		<node X="-185503" Y="241690" />
-		<node X="-186313" Y="241440" />
+	<zone name="14_25_keucereus alliance base_14" type="org.l2j.gameserver.world.zone.type.LandingZone" form="Polygon" minZ="2584" maxZ="2934">
+		<point x="-186176" y="241050" />
+		<point x="-185383" y="241287" />
+		<point x="-185503" y="241690" />
+		<point x="-186313" y="241440" />
 	</zone>
-	<zone name="14_25_keucereus alliance base_15" type="LandingZone" shape="NPoly" minZ="2572" maxZ="2922">
-		<node X="-186866" Y="243248" />
-		<node X="-186068" Y="243492" />
-		<node X="-186205" Y="243928" />
-		<node X="-187003" Y="243678" />
+	<zone name="14_25_keucereus alliance base_15" type="org.l2j.gameserver.world.zone.type.LandingZone" form="Polygon" minZ="2572" maxZ="2922">
+		<point x="-186866" y="243248" />
+		<point x="-186068" y="243492" />
+		<point x="-186205" y="243928" />
+		<point x="-187003" y="243678" />
 	</zone>
-	<zone name="14_25_keucereus alliance base_16" type="LandingZone" shape="NPoly" minZ="2504" maxZ="2854">
-		<node X="-186993" Y="242155" />
-		<node X="-186545" Y="242296" />
-		<node X="-186587" Y="242427" />
-		<node X="-187041" Y="242295" />
+	<zone name="14_25_keucereus alliance base_16" type="org.l2j.gameserver.world.zone.type.LandingZone" form="Polygon" minZ="2504" maxZ="2854">
+		<point x="-186993" y="242155" />
+		<point x="-186545" y="242296" />
+		<point x="-186587" y="242427" />
+		<point x="-187041" y="242295" />
 	</zone>
-	<zone name="14_25_keucereus alliance base_17" type="LandingZone" shape="NPoly" minZ="2116" maxZ="2466">
-		<node X="-187557" Y="244115" />
-		<node X="-187210" Y="244222" />
-		<node X="-187260" Y="244377" />
-		<node X="-187607" Y="244271" />
+	<zone name="14_25_keucereus alliance base_17" type="org.l2j.gameserver.world.zone.type.LandingZone" form="Polygon" minZ="2116" maxZ="2466">
+		<point x="-187557" y="244115" />
+		<point x="-187210" y="244222" />
+		<point x="-187260" y="244377" />
+		<point x="-187607" y="244271" />
 	</zone>
-	<zone name="14_25_keucereus alliance base_18" type="LandingZone" shape="NPoly" minZ="2120" maxZ="2470">
-		<node X="-186368" Y="240196" />
-		<node X="-186021" Y="240301" />
-		<node X="-186068" Y="240461" />
-		<node X="-186418" Y="240344" />
+	<zone name="14_25_keucereus alliance base_18" type="org.l2j.gameserver.world.zone.type.LandingZone" form="Polygon" minZ="2120" maxZ="2470">
+		<point x="-186368" y="240196" />
+		<point x="-186021" y="240301" />
+		<point x="-186068" y="240461" />
+		<point x="-186418" y="240344" />
 	</zone>
-	<zone name="14_25_keucereus alliance base_19" type="LandingZone" shape="NPoly" minZ="1648" maxZ="1818">
-		<node X="-186750" Y="242241" />
-		<node X="-186196" Y="242418" />
-		<node X="-186232" Y="242529" />
-		<node X="-186783" Y="242358" />
+	<zone name="14_25_keucereus alliance base_19" type="org.l2j.gameserver.world.zone.type.LandingZone" form="Polygon" minZ="1648" maxZ="1818">
+		<point x="-186750" y="242241" />
+		<point x="-186196" y="242418" />
+		<point x="-186232" y="242529" />
+		<point x="-186783" y="242358" />
 	</zone>
-	<zone name="14_25_keucereus alliance base_20" type="LandingZone" shape="NPoly" minZ="1636" maxZ="1986">
-		<node X="-186049" Y="241847" />
-		<node X="-185073" Y="242132" />
-		<node X="-185437" Y="243377" />
-		<node X="-186420" Y="243106" />
+	<zone name="14_25_keucereus alliance base_20" type="org.l2j.gameserver.world.zone.type.LandingZone" form="Polygon" minZ="1636" maxZ="1986">
+		<point x="-186049" y="241847" />
+		<point x="-185073" y="242132" />
+		<point x="-185437" y="243377" />
+		<point x="-186420" y="243106" />
 	</zone>
-	<zone name="14_25_keucereus alliance base_21" type="LandingZone" shape="NPoly" minZ="1540" maxZ="1890">
-		<node X="-185124" Y="242249" />
-		<node X="-183820" Y="242643" />
-		<node X="-184113" Y="243651" />
-		<node X="-185424" Y="243257" />
+	<zone name="14_25_keucereus alliance base_21" type="org.l2j.gameserver.world.zone.type.LandingZone" form="Polygon" minZ="1540" maxZ="1890">
+		<point x="-185124" y="242249" />
+		<point x="-183820" y="242643" />
+		<point x="-184113" y="243651" />
+		<point x="-185424" y="243257" />
 	</zone>
-	<zone name="14_25_keucereus alliance base_22" type="LandingZone" shape="NPoly" minZ="1496" maxZ="1846">
-		<node X="-185257" Y="243953" />
-		<node X="-184566" Y="244156" />
-		<node X="-184958" Y="245462" />
-		<node X="-185664" Y="245254" />
+	<zone name="14_25_keucereus alliance base_22" type="org.l2j.gameserver.world.zone.type.LandingZone" form="Polygon" minZ="1496" maxZ="1846">
+		<point x="-185257" y="243953" />
+		<point x="-184566" y="244156" />
+		<point x="-184958" y="245462" />
+		<point x="-185664" y="245254" />
 	</zone>
-	<zone name="14_25_keucereus alliance base_23" type="LandingZone" shape="NPoly" minZ="1532" maxZ="1882">
-		<node X="-186768" Y="243511" />
-		<node X="-185236" Y="243954" />
-		<node X="-185619" Y="245241" />
-		<node X="-187144" Y="244768" />
+	<zone name="14_25_keucereus alliance base_23" type="org.l2j.gameserver.world.zone.type.LandingZone" form="Polygon" minZ="1532" maxZ="1882">
+		<point x="-186768" y="243511" />
+		<point x="-185236" y="243954" />
+		<point x="-185619" y="245241" />
+		<point x="-187144" y="244768" />
 	</zone>
-	<zone name="14_25_keucereus alliance base_24" type="LandingZone" shape="NPoly" minZ="1504" maxZ="1854">
-		<node X="-184240" Y="240456" />
-		<node X="-183536" Y="240664" />
-		<node X="-183931" Y="241966" />
-		<node X="-184630" Y="241758" />
+	<zone name="14_25_keucereus alliance base_24" type="org.l2j.gameserver.world.zone.type.LandingZone" form="Polygon" minZ="1504" maxZ="1854">
+		<point x="-184240" y="240456" />
+		<point x="-183536" y="240664" />
+		<point x="-183931" y="241966" />
+		<point x="-184630" y="241758" />
 	</zone>
-	<zone name="14_25_keucereus alliance base_25" type="LandingZone" shape="NPoly" minZ="1540" maxZ="1890">
-		<node X="-185715" Y="240080" />
-		<node X="-184242" Y="240529" />
-		<node X="-184610" Y="241743" />
-		<node X="-186079" Y="241297" />
+	<zone name="14_25_keucereus alliance base_25" type="org.l2j.gameserver.world.zone.type.LandingZone" form="Polygon" minZ="1540" maxZ="1890">
+		<point x="-185715" y="240080" />
+		<point x="-184242" y="240529" />
+		<point x="-184610" y="241743" />
+		<point x="-186079" y="241297" />
 	</zone>
-	<zone name="14_25_keucereus alliance base_26" type="LandingZone" shape="NPoly" minZ="1412" maxZ="1762">
-		<node X="-183713" Y="241188" />
-		<node X="-182861" Y="241456" />
-		<node X="-182933" Y="241685" />
-		<node X="-183785" Y="241440" />
+	<zone name="14_25_keucereus alliance base_26" type="org.l2j.gameserver.world.zone.type.LandingZone" form="Polygon" minZ="1412" maxZ="1762">
+		<point x="-183713" y="241188" />
+		<point x="-182861" y="241456" />
+		<point x="-182933" y="241685" />
+		<point x="-183785" y="241440" />
 	</zone>
-	<zone name="14_25_keucereus alliance base_27" type="LandingZone" shape="NPoly" minZ="1420" maxZ="1770">
-		<node X="-183970" Y="243070" />
-		<node X="-183192" Y="243307" />
-		<node X="-183234" Y="243436" />
-		<node X="-184012" Y="243212" />
+	<zone name="14_25_keucereus alliance base_27" type="org.l2j.gameserver.world.zone.type.LandingZone" form="Polygon" minZ="1420" maxZ="1770">
+		<point x="-183970" y="243070" />
+		<point x="-183192" y="243307" />
+		<point x="-183234" y="243436" />
+		<point x="-184012" y="243212" />
 	</zone>
-	<zone name="14_25_keucereus alliance base_28" type="LandingZone" shape="NPoly" minZ="1400" maxZ="1750">
-		<node X="-183705" Y="243014" />
-		<node X="-182918" Y="243257" />
-		<node X="-183037" Y="243636" />
-		<node X="-183829" Y="243425" />
+	<zone name="14_25_keucereus alliance base_28" type="org.l2j.gameserver.world.zone.type.LandingZone" form="Polygon" minZ="1400" maxZ="1750">
+		<point x="-183705" y="243014" />
+		<point x="-182918" y="243257" />
+		<point x="-183037" y="243636" />
+		<point x="-183829" y="243425" />
 	</zone>
-	<zone name="14_25_keucereus alliance base_29" type="LandingZone" shape="NPoly" minZ="1416" maxZ="1766">
-		<node X="-184756" Y="244675" />
-		<node X="-183905" Y="244939" />
-		<node X="-183978" Y="245176" />
-		<node X="-184834" Y="244930" />
+	<zone name="14_25_keucereus alliance base_29" type="org.l2j.gameserver.world.zone.type.LandingZone" form="Polygon" minZ="1416" maxZ="1766">
+		<point x="-184756" y="244675" />
+		<point x="-183905" y="244939" />
+		<point x="-183978" y="245176" />
+		<point x="-184834" y="244930" />
 	</zone>
-	<zone name="14_25_keucereus alliance base_30" type="LandingZone" shape="NPoly" minZ="1500" maxZ="1850">
-		<node X="-184243" Y="241780" />
-		<node X="-183975" Y="241853" />
-		<node X="-184190" Y="242553" />
-		<node X="-184454" Y="242489" />
+	<zone name="14_25_keucereus alliance base_30" type="org.l2j.gameserver.world.zone.type.LandingZone" form="Polygon" minZ="1500" maxZ="1850">
+		<point x="-184243" y="241780" />
+		<point x="-183975" y="241853" />
+		<point x="-184190" y="242553" />
+		<point x="-184454" y="242489" />
 	</zone>
-	<zone name="14_25_keucereus alliance base_31" type="LandingZone" shape="NPoly" minZ="1504" maxZ="1854">
-		<node X="-184742" Y="243451" />
-		<node X="-184484" Y="243522" />
-		<node X="-184676" Y="244154" />
-		<node X="-184929" Y="244069" />
+	<zone name="14_25_keucereus alliance base_31" type="org.l2j.gameserver.world.zone.type.LandingZone" form="Polygon" minZ="1504" maxZ="1854">
+		<point x="-184742" y="243451" />
+		<point x="-184484" y="243522" />
+		<point x="-184676" y="244154" />
+		<point x="-184929" y="244069" />
 	</zone>
-	<zone name="14_25_keucereus alliance base_32" type="LandingZone" shape="NPoly" minZ="1544" maxZ="1844">
-		<node X="-186154" Y="243161" />
-		<node X="-185876" Y="243242" />
-		<node X="-186038" Y="243744" />
-		<node X="-186298" Y="243669" />
+	<zone name="14_25_keucereus alliance base_32" type="org.l2j.gameserver.world.zone.type.LandingZone" form="Polygon" minZ="1544" maxZ="1844">
+		<point x="-186154" y="243161" />
+		<point x="-185876" y="243242" />
+		<point x="-186038" y="243744" />
+		<point x="-186298" y="243669" />
 	</zone>
-	<zone name="14_25_keucereus alliance base_33" type="LandingZone" shape="NPoly" minZ="1548" maxZ="1848">
-		<node X="-185619" Y="241435" />
-		<node X="-185359" Y="241501" />
-		<node X="-185499" Y="241995" />
-		<node X="-185772" Y="241918" />
+	<zone name="14_25_keucereus alliance base_33" type="org.l2j.gameserver.world.zone.type.LandingZone" form="Polygon" minZ="1548" maxZ="1848">
+		<point x="-185619" y="241435" />
+		<point x="-185359" y="241501" />
+		<point x="-185499" y="241995" />
+		<point x="-185772" y="241918" />
 	</zone>
-	<zone name="14_25_keucereus alliance base_34" type="LandingZone" shape="NPoly" minZ="2516" maxZ="2716">
-		<node X="-186102" Y="241478" />
-		<node X="-185706" Y="241597" />
-		<node X="-185810" Y="241922" />
-		<node X="-186200" Y="241806" />
+	<zone name="14_25_keucereus alliance base_34" type="org.l2j.gameserver.world.zone.type.LandingZone" form="Polygon" minZ="2516" maxZ="2716">
+		<point x="-186102" y="241478" />
+		<point x="-185706" y="241597" />
+		<point x="-185810" y="241922" />
+		<point x="-186200" y="241806" />
 	</zone>
-	<zone name="14_25_keucereus alliance base_35" type="LandingZone" shape="NPoly" minZ="2520" maxZ="2720">
-		<node X="-186562" Y="243015" />
-		<node X="-186176" Y="243125" />
-		<node X="-186273" Y="243451" />
-		<node X="-186663" Y="243329" />
+	<zone name="14_25_keucereus alliance base_35" type="org.l2j.gameserver.world.zone.type.LandingZone" form="Polygon" minZ="2520" maxZ="2720">
+		<point x="-186562" y="243015" />
+		<point x="-186176" y="243125" />
+		<point x="-186273" y="243451" />
+		<point x="-186663" y="243329" />
 	</zone>
 	<!-- cleft -->
-	<zone name="cleft_1" type="LandingZone" shape="NPoly" minZ="1675" maxZ="2025">
-		<node X="-205564" Y="241662" />
-		<node X="-204114" Y="241660" />
-		<node X="-204114" Y="242624" />
-		<node X="-205574" Y="242624" />
+	<zone name="cleft_1" type="org.l2j.gameserver.world.zone.type.LandingZone" form="Polygon" minZ="1675" maxZ="2025">
+		<point x="-205564" y="241662" />
+		<point x="-204114" y="241660" />
+		<point x="-204114" y="242624" />
+		<point x="-205574" y="242624" />
 	</zone>
-	<zone name="cleft_2" type="LandingZone" shape="NPoly" minZ="1700" maxZ="2050">
-		<node X="-205399" Y="241341" />
-		<node X="-205037" Y="241338" />
-		<node X="-205039" Y="242943" />
-		<node X="-205387" Y="242945" />
+	<zone name="cleft_2" type="org.l2j.gameserver.world.zone.type.LandingZone" form="Polygon" minZ="1700" maxZ="2050">
+		<point x="-205399" y="241341" />
+		<point x="-205037" y="241338" />
+		<point x="-205039" y="242943" />
+		<point x="-205387" y="242945" />
 	</zone>
-	<zone name="cleft_3" type="LandingZone" shape="NPoly" minZ="1699" maxZ="2049">
-		<node X="-204644" Y="241347" />
-		<node X="-204282" Y="241344" />
-		<node X="-204284" Y="242950" />
-		<node X="-204632" Y="242951" />
+	<zone name="cleft_3" type="org.l2j.gameserver.world.zone.type.LandingZone" form="Polygon" minZ="1699" maxZ="2049">
+		<point x="-204644" y="241347" />
+		<point x="-204282" y="241344" />
+		<point x="-204284" y="242950" />
+		<point x="-204632" y="242951" />
 	</zone>
-	<zone name="cleft_4" type="LandingZone" shape="NPoly" minZ="1755" maxZ="2105">
-		<node X="-206487" Y="241622" />
-		<node X="-206310" Y="241621" />
-		<node X="-206313" Y="242671" />
-		<node X="-206487" Y="242664" />
+	<zone name="cleft_4" type="org.l2j.gameserver.world.zone.type.LandingZone" form="Polygon" minZ="1755" maxZ="2105">
+		<point x="-206487" y="241622" />
+		<point x="-206310" y="241621" />
+		<point x="-206313" y="242671" />
+		<point x="-206487" y="242664" />
 	</zone>
-	<zone name="cleft_5" type="LandingZone" shape="NPoly" minZ="1703" maxZ="2053">
-		<node X="-206703" Y="242001" />
-		<node X="-202998" Y="242004" />
-		<node X="-202994" Y="242281" />
-		<node X="-206694" Y="242293" />
+	<zone name="cleft_5" type="org.l2j.gameserver.world.zone.type.LandingZone" form="Polygon" minZ="1703" maxZ="2053">
+		<point x="-206703" y="242001" />
+		<point x="-202998" y="242004" />
+		<point x="-202994" y="242281" />
+		<point x="-206694" y="242293" />
 	</zone>
-	<zone name="cleft_6" type="LandingZone" shape="NPoly" minZ="1752" maxZ="2102">
-		<node X="-203372" Y="241620" />
-		<node X="-203196" Y="241620" />
-		<node X="-203198" Y="242669" />
-		<node X="-203372" Y="242662" />
+	<zone name="cleft_6" type="org.l2j.gameserver.world.zone.type.LandingZone" form="Polygon" minZ="1752" maxZ="2102">
+		<point x="-203372" y="241620" />
+		<point x="-203196" y="241620" />
+		<point x="-203198" y="242669" />
+		<point x="-203372" y="242662" />
 	</zone>
-	<zone name="cleft_7" type="LandingZone" shape="NPoly" minZ="1695" maxZ="2045">
-		<node X="-223923" Y="247315" />
-		<node X="-222474" Y="247313" />
-		<node X="-222474" Y="248278" />
-		<node X="-223934" Y="248278" />
+	<zone name="cleft_7" type="org.l2j.gameserver.world.zone.type.LandingZone" form="Polygon" minZ="1695" maxZ="2045">
+		<point x="-223923" y="247315" />
+		<point x="-222474" y="247313" />
+		<point x="-222474" y="248278" />
+		<point x="-223934" y="248278" />
 	</zone>
-	<zone name="cleft_8" type="LandingZone" shape="NPoly" minZ="1696" maxZ="2046">
-		<node X="-223759" Y="246994" />
-		<node X="-223397" Y="246991" />
-		<node X="-223398" Y="248597" />
-		<node X="-223746" Y="248598" />
+	<zone name="cleft_8" type="org.l2j.gameserver.world.zone.type.LandingZone" form="Polygon" minZ="1696" maxZ="2046">
+		<point x="-223759" y="246994" />
+		<point x="-223397" y="246991" />
+		<point x="-223398" y="248597" />
+		<point x="-223746" y="248598" />
 	</zone>
-	<zone name="cleft_9" type="LandingZone" shape="NPoly" minZ="1688" maxZ="2038">
-		<node X="-223004" Y="247000" />
-		<node X="-222642" Y="246998" />
-		<node X="-222643" Y="248603" />
-		<node X="-222991" Y="248605" />
+	<zone name="cleft_9" type="org.l2j.gameserver.world.zone.type.LandingZone" form="Polygon" minZ="1688" maxZ="2038">
+		<point x="-223004" y="247000" />
+		<point x="-222642" y="246998" />
+		<point x="-222643" y="248603" />
+		<point x="-222991" y="248605" />
 	</zone>
-	<zone name="cleft_10" type="LandingZone" shape="NPoly" minZ="1753" maxZ="2103">
-		<node X="-224846" Y="247275" />
-		<node X="-224669" Y="247275" />
-		<node X="-224672" Y="248324" />
-		<node X="-224846" Y="248317" />
+	<zone name="cleft_10" type="org.l2j.gameserver.world.zone.type.LandingZone" form="Polygon" minZ="1753" maxZ="2103">
+		<point x="-224846" y="247275" />
+		<point x="-224669" y="247275" />
+		<point x="-224672" y="248324" />
+		<point x="-224846" y="248317" />
 	</zone>
-	<zone name="cleft_11" type="LandingZone" shape="NPoly" minZ="1699" maxZ="2049">
-		<node X="-225062" Y="247655" />
-		<node X="-221357" Y="247657" />
-		<node X="-221353" Y="247934" />
-		<node X="-225053" Y="247947" />
+	<zone name="cleft_11" type="org.l2j.gameserver.world.zone.type.LandingZone" form="Polygon" minZ="1699" maxZ="2049">
+		<point x="-225062" y="247655" />
+		<point x="-221357" y="247657" />
+		<point x="-221353" y="247934" />
+		<point x="-225053" y="247947" />
 	</zone>
-	<zone name="cleft_12" type="LandingZone" shape="NPoly" minZ="1755" maxZ="2105">
-		<node X="-221732" Y="247274" />
-		<node X="-221555" Y="247273" />
-		<node X="-221557" Y="248323" />
-		<node X="-221731" Y="248316" />
+	<zone name="cleft_12" type="org.l2j.gameserver.world.zone.type.LandingZone" form="Polygon" minZ="1755" maxZ="2105">
+		<point x="-221732" y="247274" />
+		<point x="-221555" y="247273" />
+		<point x="-221557" y="248323" />
+		<point x="-221731" y="248316" />
 	</zone>
-	<zone name="cleft_13" type="LandingZone" shape="NPoly" minZ="1983" maxZ="2333">
-		<node X="-214062" Y="243920" />
-		<node X="-212870" Y="243919" />
-		<node X="-212503" Y="244307" />
-		<node X="-212500" Y="245482" />
-		<node X="-212875" Y="245869" />
-		<node X="-214060" Y="245875" />
-		<node X="-214437" Y="245483" />
-		<node X="-214445" Y="244301" />
+	<zone name="cleft_13" type="org.l2j.gameserver.world.zone.type.LandingZone" form="Polygon" minZ="1983" maxZ="2333">
+		<point x="-214062" y="243920" />
+		<point x="-212870" y="243919" />
+		<point x="-212503" y="244307" />
+		<point x="-212500" y="245482" />
+		<point x="-212875" y="245869" />
+		<point x="-214060" y="245875" />
+		<point x="-214437" y="245483" />
+		<point x="-214445" y="244301" />
 	</zone>
-	<zone name="cleft_14" type="LandingZone" shape="NPoly" minZ="1992" maxZ="2342">
-		<node X="-215300" Y="244340" />
-		<node X="-211862" Y="244334" />
-		<node X="-211865" Y="245471" />
-		<node X="-215293" Y="245475" />
+	<zone name="cleft_14" type="org.l2j.gameserver.world.zone.type.LandingZone" form="Polygon" minZ="1992" maxZ="2342">
+		<point x="-215300" y="244340" />
+		<point x="-211862" y="244334" />
+		<point x="-211865" y="245471" />
+		<point x="-215293" y="245475" />
 	</zone>
-	<zone name="cleft_15" type="LandingZone" shape="NPoly" minZ="1944" maxZ="2294">
-		<node X="-213698" Y="243218" />
-		<node X="-213250" Y="243220" />
-		<node X="-213242" Y="246566" />
-		<node X="-213695" Y="246569" />
+	<zone name="cleft_15" type="org.l2j.gameserver.world.zone.type.LandingZone" form="Polygon" minZ="1944" maxZ="2294">
+		<point x="-213698" y="243218" />
+		<point x="-213250" y="243220" />
+		<point x="-213242" y="246566" />
+		<point x="-213695" y="246569" />
 	</zone>
-	<zone name="cleft_16" type="LandingZone" shape="NPoly" minZ="1957" maxZ="2307">
-		<node X="-214092" Y="243211" />
-		<node X="-212847" Y="243210" />
-		<node X="-212849" Y="243473" />
-		<node X="-214092" Y="243478" />
+	<zone name="cleft_16" type="org.l2j.gameserver.world.zone.type.LandingZone" form="Polygon" minZ="1957" maxZ="2307">
+		<point x="-214092" y="243211" />
+		<point x="-212847" y="243210" />
+		<point x="-212849" y="243473" />
+		<point x="-214092" y="243478" />
 	</zone>
-	<zone name="cleft_17" type="LandingZone" shape="NPoly" minZ="1951" maxZ="2301">
-		<node X="-214096" Y="246311" />
-		<node X="-212900" Y="246312" />
-		<node X="-212900" Y="246576" />
-		<node X="-214096" Y="246578" />
+	<zone name="cleft_17" type="org.l2j.gameserver.world.zone.type.LandingZone" form="Polygon" minZ="1951" maxZ="2301">
+		<point x="-214096" y="246311" />
+		<point x="-212900" y="246312" />
+		<point x="-212900" y="246576" />
+		<point x="-214096" y="246578" />
 	</zone>
-	<zone name="cleft_18" type="LandingZone" shape="NPoly" minZ="2879" maxZ="3229">
-		<node X="-219037" Y="242331" />
-		<node X="-218482" Y="242118" />
-		<node X="-217681" Y="242649" />
-		<node X="-217563" Y="243254" />
-		<node X="-218003" Y="243900" />
-		<node X="-218618" Y="244023" />
-		<node X="-219406" Y="243507" />
-		<node X="-219428" Y="242908" />
+	<zone name="cleft_18" type="org.l2j.gameserver.world.zone.type.LandingZone" form="Polygon" minZ="2879" maxZ="3229">
+		<point x="-219037" y="242331" />
+		<point x="-218482" y="242118" />
+		<point x="-217681" y="242649" />
+		<point x="-217563" y="243254" />
+		<point x="-218003" y="243900" />
+		<point x="-218618" y="244023" />
+		<point x="-219406" y="243507" />
+		<point x="-219428" y="242908" />
 	</zone>
-	<zone name="cleft_19" type="LandingZone" shape="NPoly" minZ="2861" maxZ="3211">
-		<node X="-219493" Y="243890" />
-		<node X="-218147" Y="241907" />
-		<node X="-217706" Y="242194" />
-		<node X="-217686" Y="242424" />
-		<node X="-218817" Y="244122" />
-		<node X="-219054" Y="244176" />
+	<zone name="cleft_19" type="org.l2j.gameserver.world.zone.type.LandingZone" form="Polygon" minZ="2861" maxZ="3211">
+		<point x="-219493" y="243890" />
+		<point x="-218147" y="241907" />
+		<point x="-217706" y="242194" />
+		<point x="-217686" y="242424" />
+		<point x="-218817" y="244122" />
+		<point x="-219054" y="244176" />
 	</zone>
-	<zone name="cleft_20" type="LandingZone" shape="NPoly" minZ="2869" maxZ="3219">
-		<node X="-217775" Y="243337" />
-		<node X="-217446" Y="243545" />
-		<node X="-217443" Y="243739" />
-		<node X="-217222" Y="243877" />
-		<node X="-217300" Y="243991" />
-		<node X="-217521" Y="243853" />
-		<node X="-217695" Y="243900" />
-		<node X="-218044" Y="243709" />
+	<zone name="cleft_20" type="org.l2j.gameserver.world.zone.type.LandingZone" form="Polygon" minZ="2869" maxZ="3219">
+		<point x="-217775" y="243337" />
+		<point x="-217446" y="243545" />
+		<point x="-217443" y="243739" />
+		<point x="-217222" y="243877" />
+		<point x="-217300" y="243991" />
+		<point x="-217521" y="243853" />
+		<point x="-217695" y="243900" />
+		<point x="-218044" y="243709" />
 	</zone>
-	<zone name="cleft_21" type="LandingZone" shape="NPoly" minZ="3413" maxZ="3763">
-		<node X="-212478" Y="248995" />
-		<node X="-211744" Y="248769" />
-		<node X="-211188" Y="249063" />
-		<node X="-210898" Y="249982" />
-		<node X="-211286" Y="250454" />
-		<node X="-211928" Y="250648" />
-		<node X="-212490" Y="250465" />
-		<node X="-212774" Y="249547" />
+	<zone name="cleft_21" type="org.l2j.gameserver.world.zone.type.LandingZone" form="Polygon" minZ="3413" maxZ="3763">
+		<point x="-212478" y="248995" />
+		<point x="-211744" y="248769" />
+		<point x="-211188" y="249063" />
+		<point x="-210898" y="249982" />
+		<point x="-211286" y="250454" />
+		<point x="-211928" y="250648" />
+		<point x="-212490" y="250465" />
+		<point x="-212774" y="249547" />
 	</zone>
-	<zone name="cleft_22" type="LandingZone" shape="NPoly" minZ="3404" maxZ="3754">
-		<node X="-212931" Y="249715" />
-		<node X="-210973" Y="249125" />
-		<node X="-210744" Y="249241" />
-		<node X="-210602" Y="249737" />
-		<node X="-212888" Y="250435" />
-		<node X="-213055" Y="249935" />
+	<zone name="cleft_22" type="org.l2j.gameserver.world.zone.type.LandingZone" form="Polygon" minZ="3404" maxZ="3754">
+		<point x="-212931" y="249715" />
+		<point x="-210973" y="249125" />
+		<point x="-210744" y="249241" />
+		<point x="-210602" y="249737" />
+		<point x="-212888" y="250435" />
+		<point x="-213055" y="249935" />
 	</zone>
-	<zone name="cleft_23" type="LandingZone" shape="NPoly" minZ="3419" maxZ="3769">
-		<node X="-212227" Y="248278" />
-		<node X="-212137" Y="248535" />
-		<node X="-211975" Y="248601" />
-		<node X="-211847" Y="248959" />
-		<node X="-212274" Y="249077" />
-		<node X="-212390" Y="248728" />
-		<node X="-212288" Y="248565" />
-		<node X="-212366" Y="248319" />
+	<zone name="cleft_23" type="org.l2j.gameserver.world.zone.type.LandingZone" form="Polygon" minZ="3419" maxZ="3769">
+		<point x="-212227" y="248278" />
+		<point x="-212137" y="248535" />
+		<point x="-211975" y="248601" />
+		<point x="-211847" y="248959" />
+		<point x="-212274" y="249077" />
+		<point x="-212390" y="248728" />
+		<point x="-212288" y="248565" />
+		<point x="-212366" y="248319" />
 	</zone>
-	<zone name="cleft_24" type="LandingZone" shape="NPoly" minZ="1754" maxZ="2104">
-		<node X="-212619" Y="238892" />
-		<node X="-212062" Y="238639" />
-		<node X="-211396" Y="238789" />
-		<node X="-210988" Y="239223" />
-		<node X="-211173" Y="240141" />
-		<node X="-211699" Y="240501" />
-		<node X="-212469" Y="240338" />
-		<node X="-212811" Y="239825" />
+	<zone name="cleft_24" type="org.l2j.gameserver.world.zone.type.LandingZone" form="Polygon" minZ="1754" maxZ="2104">
+		<point x="-212619" y="238892" />
+		<point x="-212062" y="238639" />
+		<point x="-211396" y="238789" />
+		<point x="-210988" y="239223" />
+		<point x="-211173" y="240141" />
+		<point x="-211699" y="240501" />
+		<point x="-212469" y="240338" />
+		<point x="-212811" y="239825" />
 	</zone>
-	<zone name="cleft_25" type="LandingZone" shape="NPoly" minZ="1745" maxZ="2095">
-		<node X="-213116" Y="239464" />
-		<node X="-213020" Y="238961" />
-		<node X="-210656" Y="239429" />
-		<node X="-210759" Y="239939" />
-		<node X="-210991" Y="240073" />
-		<node X="-212979" Y="239671" />
+	<zone name="cleft_25" type="org.l2j.gameserver.world.zone.type.LandingZone" form="Polygon" minZ="1745" maxZ="2095">
+		<point x="-213116" y="239464" />
+		<point x="-213020" y="238961" />
+		<point x="-210656" y="239429" />
+		<point x="-210759" y="239939" />
+		<point x="-210991" y="240073" />
+		<point x="-212979" y="239671" />
 	</zone>
-	<zone name="cleft_26" type="LandingZone" shape="NPoly" minZ="1770" maxZ="2120">
-		<node X="-211819" Y="240375" />
-		<node X="-211913" Y="240702" />
-		<node X="-212078" Y="240794" />
-		<node X="-212133" Y="241054" />
-		<node X="-212278" Y="241026" />
-		<node X="-212218" Y="240759" />
-		<node X="-212346" Y="240616" />
-		<node X="-212270" Y="240262" />
+	<zone name="cleft_26" type="org.l2j.gameserver.world.zone.type.LandingZone" form="Polygon" minZ="1770" maxZ="2120">
+		<point x="-211819" y="240375" />
+		<point x="-211913" y="240702" />
+		<point x="-212078" y="240794" />
+		<point x="-212133" y="241054" />
+		<point x="-212278" y="241026" />
+		<point x="-212218" y="240759" />
+		<point x="-212346" y="240616" />
+		<point x="-212270" y="240262" />
 	</zone>
 	<!-- seed_of_destruction -->
-	<zone name="seed_of_destruction_1" type="LandingZone" shape="NPoly" minZ="4290" maxZ="4640">
-		<node X="-246954" Y="251950" />
-		<node X="-246868" Y="251850" />
-		<node X="-246750" Y="251890" />
-		<node X="-246832" Y="252063" />
+	<zone name="seed_of_destruction_1" type="org.l2j.gameserver.world.zone.type.LandingZone" form="Polygon" minZ="4290" maxZ="4640">
+		<point x="-246954" y="251950" />
+		<point x="-246868" y="251850" />
+		<point x="-246750" y="251890" />
+		<point x="-246832" y="252063" />
 	</zone>
-	<zone name="seed_of_destruction_2" type="LandingZone" shape="NPoly" minZ="4291" maxZ="4641">
-		<node X="-246841" Y="245601" />
-		<node X="-246745" Y="245680" />
-		<node X="-246963" Y="245702" />
-		<node X="-246868" Y="245815" />
+	<zone name="seed_of_destruction_2" type="org.l2j.gameserver.world.zone.type.LandingZone" form="Polygon" minZ="4291" maxZ="4641">
+		<point x="-246841" y="245601" />
+		<point x="-246745" y="245680" />
+		<point x="-246963" y="245702" />
+		<point x="-246868" y="245815" />
 	</zone>
-	<zone name="seed_of_destruction_3" type="LandingZone" shape="NPoly" minZ="4295" maxZ="4645">
-		<node X="-253223" Y="245678" />
-		<node X="-253142" Y="245586" />
-		<node X="-253127" Y="245866" />
-		<node X="-252963" Y="245695" />
+	<zone name="seed_of_destruction_3" type="org.l2j.gameserver.world.zone.type.LandingZone" form="Polygon" minZ="4295" maxZ="4645">
+		<point x="-253223" y="245678" />
+		<point x="-253142" y="245586" />
+		<point x="-253127" y="245866" />
+		<point x="-252963" y="245695" />
 	</zone>
-	<zone name="seed_of_destruction_4" type="LandingZone" shape="NPoly" minZ="4336" maxZ="4686">
-		<node X="-252970" Y="251941" />
-		<node X="-253076" Y="251824" />
-		<node X="-253137" Y="252071" />
-		<node X="-253225" Y="251978" />
+	<zone name="seed_of_destruction_4" type="org.l2j.gameserver.world.zone.type.LandingZone" form="Polygon" minZ="4336" maxZ="4686">
+		<point x="-252970" y="251941" />
+		<point x="-253076" y="251824" />
+		<point x="-253137" y="252071" />
+		<point x="-253225" y="251978" />
 	</zone>
 	<!-- seed_of_destruction_dock -->
-	<zone name="seed_of_destruction_dock_1" type="LandingZone" shape="NPoly" minZ="2671" maxZ="2871">
-		<node X="-176056" Y="154696" />
-		<node X="-174986" Y="154629" />
-		<node X="-175058" Y="155005" />
-		<node X="-175920" Y="155084" />
+	<zone name="seed_of_destruction_dock_1" type="org.l2j.gameserver.world.zone.type.LandingZone" form="Polygon" minZ="2671" maxZ="2871">
+		<point x="-176056" y="154696" />
+		<point x="-174986" y="154629" />
+		<point x="-175058" y="155005" />
+		<point x="-175920" y="155084" />
 	</zone>
-	<zone name="seed_of_destruction_dock_2" type="LandingZone" shape="NPoly" minZ="2448" maxZ="2648">
-		<node X="-178925" Y="154441" />
-		<node X="-177993" Y="154373" />
-		<node X="-178137" Y="154749" />
-		<node X="-178737" Y="154828" />
+	<zone name="seed_of_destruction_dock_2" type="org.l2j.gameserver.world.zone.type.LandingZone" form="Polygon" minZ="2448" maxZ="2648">
+		<point x="-178925" y="154441" />
+		<point x="-177993" y="154373" />
+		<point x="-178137" y="154749" />
+		<point x="-178737" y="154828" />
 	</zone>
-	<zone name="seed_of_destruction_dock_3" type="LandingZone" shape="NPoly" minZ="2659" maxZ="2859">
-		<node X="-181955" Y="154345" />
-		<node X="-180740" Y="154669" />
-		<node X="-181056" Y="155158" />
-		<node X="-181934" Y="154931" />
+	<zone name="seed_of_destruction_dock_3" type="org.l2j.gameserver.world.zone.type.LandingZone" form="Polygon" minZ="2659" maxZ="2859">
+		<point x="-181955" y="154345" />
+		<point x="-180740" y="154669" />
+		<point x="-181056" y="155158" />
+		<point x="-181934" y="154931" />
 	</zone>
 </list>

@@ -1,333 +1,333 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<list enabled="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/zones.xsd">
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org zones.xsd" >
 	<!-- SSQ Main Event -->
 	<!-- Oracle of Dusk (No Restart Zones) -->
-	<zone name="ssq_no_res_1720_01" type="NoRestartZone" shape="NPoly" minZ="-5200" maxZ="-5000">
-		<stat name="restartTime" val="0" />
-		<node X="-79735" Y="85612" />
-		<node X="-78957" Y="85605" />
-		<node X="-78957" Y="85690" />
-		<node X="-79735" Y="85700" />
+	<zone name="ssq_no_res_1720_01" type="org.l2j.gameserver.world.zone.type.NoRestartZone" form="Polygon" minZ="-5200" maxZ="-5000">
+		<property name="restartTime" value="0" />
+		<point x="-79735" y="85612" />
+		<point x="-78957" y="85605" />
+		<point x="-78957" y="85690" />
+		<point x="-79735" y="85700" />
 	</zone>
-	<zone name="ssq_no_res_1720_02" type="NoRestartZone" shape="NPoly" minZ="-5200" maxZ="-5000">
-		<stat name="restartTime" val="0" />
-		<node X="-80952" Y="85605" />
-		<node X="-80139" Y="85597" />
-		<node X="-80139" Y="85696" />
-		<node X="-80952" Y="85690" />
+	<zone name="ssq_no_res_1720_02" type="org.l2j.gameserver.world.zone.type.NoRestartZone" form="Polygon" minZ="-5200" maxZ="-5000">
+		<property name="restartTime" value="0" />
+		<point x="-80952" y="85605" />
+		<point x="-80139" y="85597" />
+		<point x="-80139" y="85696" />
+		<point x="-80952" y="85690" />
 	</zone>
-	<zone name="ssq_no_res_1720_03" type="NoRestartZone" shape="NPoly" minZ="-5192" maxZ="-4992">
-		<stat name="restartTime" val="0" />
-		<node X="-80962" Y="83695" />
-		<node X="-78946" Y="83691" />
-		<node X="-78959" Y="85626" />
-		<node X="-80947" Y="85625" />
+	<zone name="ssq_no_res_1720_03" type="org.l2j.gameserver.world.zone.type.NoRestartZone" form="Polygon" minZ="-5192" maxZ="-4992">
+		<property name="restartTime" value="0" />
+		<point x="-80962" y="83695" />
+		<point x="-78946" y="83691" />
+		<point x="-78959" y="85626" />
+		<point x="-80947" y="85625" />
 	</zone>
-	<zone name="ssq_no_res_1720_04" type="NoRestartZone" shape="NPoly" minZ="-5196" maxZ="-4996">
-		<stat name="restartTime" val="0" />
-		<node X="-81199" Y="87363" />
-		<node X="-80386" Y="87358" />
-		<node X="-80386" Y="87449" />
-		<node X="-81203" Y="87454" />
+	<zone name="ssq_no_res_1720_04" type="org.l2j.gameserver.world.zone.type.NoRestartZone" form="Polygon" minZ="-5196" maxZ="-4996">
+		<property name="restartTime" value="0" />
+		<point x="-81199" y="87363" />
+		<point x="-80386" y="87358" />
+		<point x="-80386" y="87449" />
+		<point x="-81203" y="87454" />
 	</zone>
-	<zone name="ssq_no_res_1720_05" type="NoRestartZone" shape="NPoly" minZ="-5196" maxZ="-4996">
-		<stat name="restartTime" val="0" />
-		<node X="-79990" Y="87361" />
-		<node X="-79212" Y="87360" />
-		<node X="-79212" Y="87460" />
-		<node X="-79989" Y="87446" />
+	<zone name="ssq_no_res_1720_05" type="org.l2j.gameserver.world.zone.type.NoRestartZone" form="Polygon" minZ="-5196" maxZ="-4996">
+		<property name="restartTime" value="0" />
+		<point x="-79990" y="87361" />
+		<point x="-79212" y="87360" />
+		<point x="-79212" y="87460" />
+		<point x="-79989" y="87446" />
 	</zone>
-	<zone name="ssq_no_res_1720_06" type="NoRestartZone" shape="NPoly" minZ="-5200" maxZ="-5000">
-		<stat name="restartTime" val="0" />
-		<node X="-81205" Y="87433" />
-		<node X="-79212" Y="87432" />
-		<node X="-79208" Y="89361" />
-		<node X="-81207" Y="89361" />
+	<zone name="ssq_no_res_1720_06" type="org.l2j.gameserver.world.zone.type.NoRestartZone" form="Polygon" minZ="-5200" maxZ="-5000">
+		<property name="restartTime" value="0" />
+		<point x="-81205" y="87433" />
+		<point x="-79212" y="87432" />
+		<point x="-79208" y="89361" />
+		<point x="-81207" y="89361" />
 	</zone>
-	<zone name="ssq_no_res_1720_07" type="NoRestartZone" shape="NPoly" minZ="-5200" maxZ="-5000">
-		<stat name="restartTime" val="0" />
-		<node X="-78197" Y="87968" />
-		<node X="-77373" Y="87961" />
-		<node X="-77365" Y="88060" />
-		<node X="-78197" Y="88060" />
+	<zone name="ssq_no_res_1720_07" type="org.l2j.gameserver.world.zone.type.NoRestartZone" form="Polygon" minZ="-5200" maxZ="-5000">
+		<property name="restartTime" value="0" />
+		<point x="-78197" y="87968" />
+		<point x="-77373" y="87961" />
+		<point x="-77365" y="88060" />
+		<point x="-78197" y="88060" />
 	</zone>
-	<zone name="ssq_no_res_1720_08" type="NoRestartZone" shape="NPoly" minZ="-5200" maxZ="-5000">
-		<stat name="restartTime" val="0" />
-		<node X="-77025" Y="87959" />
-		<node X="-76209" Y="87969" />
-		<node X="-76202" Y="88069" />
-		<node X="-77026" Y="88061" />
+	<zone name="ssq_no_res_1720_08" type="org.l2j.gameserver.world.zone.type.NoRestartZone" form="Polygon" minZ="-5200" maxZ="-5000">
+		<property name="restartTime" value="0" />
+		<point x="-77025" y="87959" />
+		<point x="-76209" y="87969" />
+		<point x="-76202" y="88069" />
+		<point x="-77026" y="88061" />
 	</zone>
-	<zone name="ssq_no_res_1720_09" type="NoRestartZone" shape="NPoly" minZ="-5196" maxZ="-4996">
-		<stat name="restartTime" val="0" />
-		<node X="-78196" Y="88060" />
-		<node X="-76200" Y="88068" />
-		<node X="-76192" Y="89970" />
-		<node X="-78196" Y="89970" />
+	<zone name="ssq_no_res_1720_09" type="org.l2j.gameserver.world.zone.type.NoRestartZone" form="Polygon" minZ="-5196" maxZ="-4996">
+		<property name="restartTime" value="0" />
+		<point x="-78196" y="88060" />
+		<point x="-76200" y="88068" />
+		<point x="-76192" y="89970" />
+		<point x="-78196" y="89970" />
 	</zone>
-	<zone name="ssq_no_res_1720_10" type="NoRestartZone" shape="NPoly" minZ="-5204" maxZ="-5004">
-		<stat name="restartTime" val="0" />
-		<node X="-76797" Y="86142" />
-		<node X="-75947" Y="86147" />
-		<node X="-75945" Y="86304" />
-		<node X="-76794" Y="86298" />
+	<zone name="ssq_no_res_1720_10" type="org.l2j.gameserver.world.zone.type.NoRestartZone" form="Polygon" minZ="-5204" maxZ="-5004">
+		<property name="restartTime" value="0" />
+		<point x="-76797" y="86142" />
+		<point x="-75947" y="86147" />
+		<point x="-75945" y="86304" />
+		<point x="-76794" y="86298" />
 	</zone>
-	<zone name="ssq_no_res_1720_11" type="NoRestartZone" shape="NPoly" minZ="-5196" maxZ="-4996">
-		<stat name="restartTime" val="0" />
-		<node X="-77944" Y="86148" />
-		<node X="-77189" Y="86148" />
-		<node X="-77194" Y="86291" />
-		<node X="-77942" Y="86295" />
+	<zone name="ssq_no_res_1720_11" type="org.l2j.gameserver.world.zone.type.NoRestartZone" form="Polygon" minZ="-5196" maxZ="-4996">
+		<property name="restartTime" value="0" />
+		<point x="-77944" y="86148" />
+		<point x="-77189" y="86148" />
+		<point x="-77194" y="86291" />
+		<point x="-77942" y="86295" />
 	</zone>
-	<zone name="ssq_no_res_1720_12" type="NoRestartZone" shape="NPoly" minZ="-5196" maxZ="-4996">
-		<stat name="restartTime" val="0" />
-		<node X="-77949" Y="84300" />
-		<node X="-75940" Y="84300" />
-		<node X="-75943" Y="86185" />
-		<node X="-77939" Y="86187" />
+	<zone name="ssq_no_res_1720_12" type="org.l2j.gameserver.world.zone.type.NoRestartZone" form="Polygon" minZ="-5196" maxZ="-4996">
+		<property name="restartTime" value="0" />
+		<point x="-77949" y="84300" />
+		<point x="-75940" y="84300" />
+		<point x="-75943" y="86185" />
+		<point x="-77939" y="86187" />
 	</zone>
-	<zone name="ssq_no_res_1720_13" type="NoRestartZone" shape="NPoly" minZ="-5200" maxZ="-5000">
-		<stat name="restartTime" val="0" />
-		<node X="-75870" Y="87311" />
-		<node X="-75738" Y="87309" />
-		<node X="-75738" Y="88130" />
-		<node X="-75870" Y="88125" />
+	<zone name="ssq_no_res_1720_13" type="org.l2j.gameserver.world.zone.type.NoRestartZone" form="Polygon" minZ="-5200" maxZ="-5000">
+		<property name="restartTime" value="0" />
+		<point x="-75870" y="87311" />
+		<point x="-75738" y="87309" />
+		<point x="-75738" y="88130" />
+		<point x="-75870" y="88125" />
 	</zone>
-	<zone name="ssq_no_res_1720_14" type="NoRestartZone" shape="NPoly" minZ="-5200" maxZ="-5000">
-		<stat name="restartTime" val="0" />
-		<node X="-75865" Y="86137" />
-		<node X="-75747" Y="86134" />
-		<node X="-75740" Y="86958" />
-		<node X="-75865" Y="86963" />
+	<zone name="ssq_no_res_1720_14" type="org.l2j.gameserver.world.zone.type.NoRestartZone" form="Polygon" minZ="-5200" maxZ="-5000">
+		<property name="restartTime" value="0" />
+		<point x="-75865" y="86137" />
+		<point x="-75747" y="86134" />
+		<point x="-75740" y="86958" />
+		<point x="-75865" y="86963" />
 	</zone>
-	<zone name="ssq_no_res_1720_15" type="NoRestartZone" shape="NPoly" minZ="-5200" maxZ="-5000">
-		<stat name="restartTime" val="0" />
-		<node X="-75758" Y="86126" />
-		<node X="-73857" Y="86139" />
-		<node X="-73855" Y="88140" />
-		<node X="-75769" Y="88133" />
+	<zone name="ssq_no_res_1720_15" type="org.l2j.gameserver.world.zone.type.NoRestartZone" form="Polygon" minZ="-5200" maxZ="-5000">
+		<property name="restartTime" value="0" />
+		<point x="-75758" y="86126" />
+		<point x="-73857" y="86139" />
+		<point x="-73855" y="88140" />
+		<point x="-75769" y="88133" />
 	</zone>
 	<!-- Oracle of Dawn (No Restart Zones) -->
-	<zone name="ssq_no_res_1721_01" type="NoRestartZone" shape="NPoly" minZ="-4948" maxZ="-4748">
-		<stat name="restartTime" val="0" />
-		<node X="-78713" Y="110409" />
-		<node X="-77923" Y="110423" />
-		<node X="-77923" Y="110522" />
-		<node X="-78708" Y="110515" />
+	<zone name="ssq_no_res_1721_01" type="org.l2j.gameserver.world.zone.type.NoRestartZone" form="Polygon" minZ="-4948" maxZ="-4748">
+		<property name="restartTime" value="0" />
+		<point x="-78713" y="110409" />
+		<point x="-77923" y="110423" />
+		<point x="-77923" y="110522" />
+		<point x="-78708" y="110515" />
 	</zone>
-	<zone name="ssq_no_res_1721_02" type="NoRestartZone" shape="NPoly" minZ="-4940" maxZ="-4740">
-		<stat name="restartTime" val="0" />
-		<node X="-79923" Y="110427" />
-		<node X="-79109" Y="110432" />
-		<node X="-79105" Y="110524" />
-		<node X="-79923" Y="110528" />
+	<zone name="ssq_no_res_1721_02" type="org.l2j.gameserver.world.zone.type.NoRestartZone" form="Polygon" minZ="-4940" maxZ="-4740">
+		<property name="restartTime" value="0" />
+		<point x="-79923" y="110427" />
+		<point x="-79109" y="110432" />
+		<point x="-79105" y="110524" />
+		<point x="-79923" y="110528" />
 	</zone>
-	<zone name="ssq_no_res_1721_03" type="NoRestartZone" shape="NPoly" minZ="-4944" maxZ="-4744">
-		<stat name="restartTime" val="0" />
-		<node X="-79931" Y="108523" />
-		<node X="-77928" Y="108523" />
-		<node X="-77932" Y="110445" />
-		<node X="-79925" Y="110453" />
+	<zone name="ssq_no_res_1721_03" type="org.l2j.gameserver.world.zone.type.NoRestartZone" form="Polygon" minZ="-4944" maxZ="-4744">
+		<property name="restartTime" value="0" />
+		<point x="-79931" y="108523" />
+		<point x="-77928" y="108523" />
+		<point x="-77932" y="110445" />
+		<point x="-79925" y="110453" />
 	</zone>
-	<zone name="ssq_no_res_1721_04" type="NoRestartZone" shape="NPoly" minZ="-4940" maxZ="-4740">
-		<stat name="restartTime" val="0" />
-		<node X="-75761" Y="111051" />
-		<node X="-74921" Y="111033" />
-		<node X="-74921" Y="111142" />
-		<node X="-75757" Y="111151" />
+	<zone name="ssq_no_res_1721_04" type="org.l2j.gameserver.world.zone.type.NoRestartZone" form="Polygon" minZ="-4940" maxZ="-4740">
+		<property name="restartTime" value="0" />
+		<point x="-75761" y="111051" />
+		<point x="-74921" y="111033" />
+		<point x="-74921" y="111142" />
+		<point x="-75757" y="111151" />
 	</zone>
-	<zone name="ssq_no_res_1721_05" type="NoRestartZone" shape="NPoly" minZ="-4940" maxZ="-4740">
-		<stat name="restartTime" val="0" />
-		<node X="-76920" Y="111022" />
-		<node X="-76089" Y="111022" />
-		<node X="-76085" Y="111105" />
-		<node X="-76920" Y="111097" />
+	<zone name="ssq_no_res_1721_05" type="org.l2j.gameserver.world.zone.type.NoRestartZone" form="Polygon" minZ="-4940" maxZ="-4740">
+		<property name="restartTime" value="0" />
+		<point x="-76920" y="111022" />
+		<point x="-76089" y="111022" />
+		<point x="-76085" y="111105" />
+		<point x="-76920" y="111097" />
 	</zone>
-	<zone name="ssq_no_res_1721_06" type="NoRestartZone" shape="NPoly" minZ="-4932" maxZ="-4732">
-		<stat name="restartTime" val="0" />
-		<node X="-76920" Y="109134" />
-		<node X="-74928" Y="109134" />
-		<node X="-74920" Y="111099" />
-		<node X="-76920" Y="111087" />
+	<zone name="ssq_no_res_1721_06" type="org.l2j.gameserver.world.zone.type.NoRestartZone" form="Polygon" minZ="-4932" maxZ="-4732">
+		<property name="restartTime" value="0" />
+		<point x="-76920" y="109134" />
+		<point x="-74928" y="109134" />
+		<point x="-74920" y="111099" />
+		<point x="-76920" y="111087" />
 	</zone>
-	<zone name="ssq_no_res_1721_07" type="NoRestartZone" shape="NPoly" minZ="-4944" maxZ="-4744">
-		<stat name="restartTime" val="0" />
-		<node X="-77176" Y="112795" />
-		<node X="-76350" Y="112795" />
-		<node X="-76344" Y="112897" />
-		<node X="-77176" Y="112903" />
+	<zone name="ssq_no_res_1721_07" type="org.l2j.gameserver.world.zone.type.NoRestartZone" form="Polygon" minZ="-4944" maxZ="-4744">
+		<property name="restartTime" value="0" />
+		<point x="-77176" y="112795" />
+		<point x="-76350" y="112795" />
+		<point x="-76344" y="112897" />
+		<point x="-77176" y="112903" />
 	</zone>
-	<zone name="ssq_no_res_1721_08" type="NoRestartZone" shape="NPoly" minZ="-4940" maxZ="-4740">
-		<stat name="restartTime" val="0" />
-		<node X="-76002" Y="112810" />
-		<node X="-75182" Y="112806" />
-		<node X="-75176" Y="112904" />
-		<node X="-76002" Y="112898" />
+	<zone name="ssq_no_res_1721_08" type="org.l2j.gameserver.world.zone.type.NoRestartZone" form="Polygon" minZ="-4940" maxZ="-4740">
+		<property name="restartTime" value="0" />
+		<point x="-76002" y="112810" />
+		<point x="-75182" y="112806" />
+		<point x="-75176" y="112904" />
+		<point x="-76002" y="112898" />
 	</zone>
-	<zone name="ssq_no_res_1721_09" type="NoRestartZone" shape="NPoly" minZ="-4944" maxZ="-4744">
-		<stat name="restartTime" val="0" />
-		<node X="-77174" Y="112902" />
-		<node X="-75172" Y="112902" />
-		<node X="-75167" Y="114798" />
-		<node X="-77173" Y="114806" />
+	<zone name="ssq_no_res_1721_09" type="org.l2j.gameserver.world.zone.type.NoRestartZone" form="Polygon" minZ="-4944" maxZ="-4744">
+		<property name="restartTime" value="0" />
+		<point x="-77174" y="112902" />
+		<point x="-75172" y="112902" />
+		<point x="-75167" y="114798" />
+		<point x="-77173" y="114806" />
 	</zone>
-	<zone name="ssq_no_res_1721_10" type="NoRestartZone" shape="NPoly" minZ="-4940" maxZ="-4740">
-		<stat name="restartTime" val="0" />
-		<node X="-80178" Y="112233" />
-		<node X="-79362" Y="112250" />
-		<node X="-79356" Y="112294" />
-		<node X="-80190" Y="112301" />
+	<zone name="ssq_no_res_1721_10" type="org.l2j.gameserver.world.zone.type.NoRestartZone" form="Polygon" minZ="-4940" maxZ="-4740">
+		<property name="restartTime" value="0" />
+		<point x="-80178" y="112233" />
+		<point x="-79362" y="112250" />
+		<point x="-79356" y="112294" />
+		<point x="-80190" y="112301" />
 	</zone>
-	<zone name="ssq_no_res_1721_11" type="NoRestartZone" shape="NPoly" minZ="-4940" maxZ="-4740">
-		<stat name="restartTime" val="0" />
-		<node X="-78861" Y="112220" />
-		<node X="-78196" Y="112201" />
-		<node X="-78178" Y="112294" />
-		<node X="-78994" Y="112294" />
+	<zone name="ssq_no_res_1721_11" type="org.l2j.gameserver.world.zone.type.NoRestartZone" form="Polygon" minZ="-4940" maxZ="-4740">
+		<property name="restartTime" value="0" />
+		<point x="-78861" y="112220" />
+		<point x="-78196" y="112201" />
+		<point x="-78178" y="112294" />
+		<point x="-78994" y="112294" />
 	</zone>
-	<zone name="ssq_no_res_1721_12" type="NoRestartZone" shape="NPoly" minZ="-4940" maxZ="-4740">
-		<stat name="restartTime" val="0" />
-		<node X="-80184" Y="112276" />
-		<node X="-78188" Y="112262" />
-		<node X="-78176" Y="114188" />
-		<node X="-80190" Y="114196" />
+	<zone name="ssq_no_res_1721_12" type="org.l2j.gameserver.world.zone.type.NoRestartZone" form="Polygon" minZ="-4940" maxZ="-4740">
+		<property name="restartTime" value="0" />
+		<point x="-80184" y="112276" />
+		<point x="-78188" y="112262" />
+		<point x="-78176" y="114188" />
+		<point x="-80190" y="114196" />
 	</zone>
-	<zone name="ssq_no_res_1721_13" type="NoRestartZone" shape="NPoly" minZ="-4940" maxZ="-4740">
-		<stat name="restartTime" val="0" />
-		<node X="-74840" Y="112152" />
-		<node X="-74704" Y="112157" />
-		<node X="-74707" Y="112966" />
-		<node X="-74840" Y="112966" />
+	<zone name="ssq_no_res_1721_13" type="org.l2j.gameserver.world.zone.type.NoRestartZone" form="Polygon" minZ="-4940" maxZ="-4740">
+		<property name="restartTime" value="0" />
+		<point x="-74840" y="112152" />
+		<point x="-74704" y="112157" />
+		<point x="-74707" y="112966" />
+		<point x="-74840" y="112966" />
 	</zone>
-	<zone name="ssq_no_res_1721_14" type="NoRestartZone" shape="NPoly" minZ="-4948" maxZ="-4748">
-		<stat name="restartTime" val="0" />
-		<node X="-74840" Y="110962" />
-		<node X="-74737" Y="110962" />
-		<node X="-74741" Y="111793" />
-		<node X="-74840" Y="111796" />
+	<zone name="ssq_no_res_1721_14" type="org.l2j.gameserver.world.zone.type.NoRestartZone" form="Polygon" minZ="-4948" maxZ="-4748">
+		<property name="restartTime" value="0" />
+		<point x="-74840" y="110962" />
+		<point x="-74737" y="110962" />
+		<point x="-74741" y="111793" />
+		<point x="-74840" y="111796" />
 	</zone>
-	<zone name="ssq_no_res_1721_15" type="NoRestartZone" shape="NPoly" minZ="-4936" maxZ="-4736">
-		<stat name="restartTime" val="0" />
-		<node X="-74737" Y="110969" />
-		<node X="-72838" Y="110964" />
-		<node X="-72830" Y="112974" />
-		<node X="-74740" Y="112965" />
+	<zone name="ssq_no_res_1721_15" type="org.l2j.gameserver.world.zone.type.NoRestartZone" form="Polygon" minZ="-4936" maxZ="-4736">
+		<property name="restartTime" value="0" />
+		<point x="-74737" y="110969" />
+		<point x="-72838" y="110964" />
+		<point x="-72830" y="112974" />
+		<point x="-74740" y="112965" />
 	</zone>
 	<!-- Oracle of Dusk (Mp Regen Zones) -->
-	<zone name="ssq_main_event_17_20_01" type="MotherTreeZone" shape="NPoly" minZ="-5168" maxZ="-4968">
-		<stat name="MpRegenBonus" val="2" />
-		<stat name="enterMsgId" val="1054" />
-		<stat name="leaveMsgId" val="1055" />
-		<node X="-79956" Y="84556" />
-		<node X="-79832" Y="84620" />
-		<node X="-79824" Y="84772" />
-		<node X="-79956" Y="84844" />
-		<node X="-80080" Y="84772" />
-		<node X="-80076" Y="84620" />
+	<zone name="ssq_main_event_17_20_01" type="org.l2j.gameserver.world.zone.type.MotherTreeZone" form="Polygon" minZ="-5168" maxZ="-4968">
+		<property name="MpRegenBonus" value="2" />
+		<property name="enterMsgId" value="1054" />
+		<property name="leaveMsgId" value="1055" />
+		<point x="-79956" y="84556" />
+		<point x="-79832" y="84620" />
+		<point x="-79824" y="84772" />
+		<point x="-79956" y="84844" />
+		<point x="-80080" y="84772" />
+		<point x="-80076" y="84620" />
 	</zone>
-	<zone name="ssq_main_event_17_20_04" type="MotherTreeZone" shape="NPoly" minZ="-5164" maxZ="-4964">
-		<stat name="MpRegenBonus" val="2" />
-		<stat name="enterMsgId" val="1054" />
-		<stat name="leaveMsgId" val="1055" />
-		<node X="-76936" Y="85164" />
-		<node X="-76820" Y="85232" />
-		<node X="-76816" Y="85380" />
-		<node X="-76948" Y="85444" />
-		<node X="-77068" Y="85376" />
-		<node X="-77068" Y="85236" />
+	<zone name="ssq_main_event_17_20_04" type="org.l2j.gameserver.world.zone.type.MotherTreeZone" form="Polygon" minZ="-5164" maxZ="-4964">
+		<property name="MpRegenBonus" value="2" />
+		<property name="enterMsgId" value="1054" />
+		<property name="leaveMsgId" value="1055" />
+		<point x="-76936" y="85164" />
+		<point x="-76820" y="85232" />
+		<point x="-76816" y="85380" />
+		<point x="-76948" y="85444" />
+		<point x="-77068" y="85376" />
+		<point x="-77068" y="85236" />
 	</zone>
-	<zone name="ssq_main_event_17_20_05" type="MotherTreeZone" shape="NPoly" minZ="-5164" maxZ="-4964">
-		<stat name="MpRegenBonus" val="3" />
-		<stat name="enterMsgId" val="1054" />
-		<stat name="leaveMsgId" val="1055" />
-		<node X="-74924" Y="87012" />
-		<node X="-74784" Y="87008" />
-		<node X="-74712" Y="87132" />
-		<node X="-74780" Y="87256" />
-		<node X="-74924" Y="87260" />
-		<node X="-75000" Y="87140" />
+	<zone name="ssq_main_event_17_20_05" type="org.l2j.gameserver.world.zone.type.MotherTreeZone" form="Polygon" minZ="-5164" maxZ="-4964">
+		<property name="MpRegenBonus" value="3" />
+		<property name="enterMsgId" value="1054" />
+		<property name="leaveMsgId" value="1055" />
+		<point x="-74924" y="87012" />
+		<point x="-74784" y="87008" />
+		<point x="-74712" y="87132" />
+		<point x="-74780" y="87256" />
+		<point x="-74924" y="87260" />
+		<point x="-75000" y="87140" />
 	</zone>
-	<zone name="ssq_main_event_17_20_03" type="MotherTreeZone" shape="NPoly" minZ="-5176" maxZ="-4976">
-		<stat name="MpRegenBonus" val="3" />
-		<stat name="enterMsgId" val="1054" />
-		<stat name="leaveMsgId" val="1055" />
-		<node X="-77200" Y="88820" />
-		<node X="-77076" Y="88896" />
-		<node X="-77076" Y="89040" />
-		<node X="-77204" Y="89108" />
-		<node X="-77328" Y="89044" />
-		<node X="-77328" Y="88892" />
+	<zone name="ssq_main_event_17_20_03" type="org.l2j.gameserver.world.zone.type.MotherTreeZone" form="Polygon" minZ="-5176" maxZ="-4976">
+		<property name="MpRegenBonus" value="3" />
+		<property name="enterMsgId" value="1054" />
+		<property name="leaveMsgId" value="1055" />
+		<point x="-77200" y="88820" />
+		<point x="-77076" y="88896" />
+		<point x="-77076" y="89040" />
+		<point x="-77204" y="89108" />
+		<point x="-77328" y="89044" />
+		<point x="-77328" y="88892" />
 	</zone>
-	<zone name="ssq_main_event_17_20_02" type="MotherTreeZone" shape="NPoly" minZ="-5172" maxZ="-4972">
-		<stat name="MpRegenBonus" val="4" />
-		<stat name="enterMsgId" val="1054" />
-		<stat name="leaveMsgId" val="1055" />
-		<node X="-80204" Y="88220" />
-		<node X="-80080" Y="88288" />
-		<node X="-80080" Y="88428" />
-		<node X="-80208" Y="88504" />
-		<node X="-80336" Y="88428" />
-		<node X="-80328" Y="88292" />
+	<zone name="ssq_main_event_17_20_02" type="org.l2j.gameserver.world.zone.type.MotherTreeZone" form="Polygon" minZ="-5172" maxZ="-4972">
+		<property name="MpRegenBonus" value="4" />
+		<property name="enterMsgId" value="1054" />
+		<property name="leaveMsgId" value="1055" />
+		<point x="-80204" y="88220" />
+		<point x="-80080" y="88288" />
+		<point x="-80080" y="88428" />
+		<point x="-80208" y="88504" />
+		<point x="-80336" y="88428" />
+		<point x="-80328" y="88292" />
 	</zone>
 	<!-- Oracle of Dawn (Mp Regen Zones) -->
-	<zone name="ssq_main_event_17_21_01" type="MotherTreeZone" shape="NPoly" minZ="-4916" maxZ="-4716">
-		<stat name="MpRegenBonus" val="2" />
-		<stat name="enterMsgId" val="1054" />
-		<stat name="leaveMsgId" val="1055" />
-		<node X="-78796" Y="109452" />
-		<node X="-78804" Y="109608" />
-		<node X="-78924" Y="109672" />
-		<node X="-79056" Y="109600" />
-		<node X="-79056" Y="109456" />
-		<node X="-78932" Y="109380" />
+	<zone name="ssq_main_event_17_21_01" type="org.l2j.gameserver.world.zone.type.MotherTreeZone" form="Polygon" minZ="-4916" maxZ="-4716">
+		<property name="MpRegenBonus" value="2" />
+		<property name="enterMsgId" value="1054" />
+		<property name="leaveMsgId" value="1055" />
+		<point x="-78796" y="109452" />
+		<point x="-78804" y="109608" />
+		<point x="-78924" y="109672" />
+		<point x="-79056" y="109600" />
+		<point x="-79056" y="109456" />
+		<point x="-78932" y="109380" />
 	</zone>
-	<zone name="ssq_main_event_17_21_02" type="MotherTreeZone" shape="NPoly" minZ="-4908" maxZ="-4708">
-		<stat name="MpRegenBonus" val="2" />
-		<stat name="enterMsgId" val="1054" />
-		<stat name="leaveMsgId" val="1055" />
-		<node X="-75920" Y="109992" />
-		<node X="-75792" Y="110068" />
-		<node X="-75792" Y="110220" />
-		<node X="-75912" Y="110288" />
-		<node X="-76048" Y="110212" />
-		<node X="-76044" Y="110068" />
+	<zone name="ssq_main_event_17_21_02" type="org.l2j.gameserver.world.zone.type.MotherTreeZone" form="Polygon" minZ="-4908" maxZ="-4708">
+		<property name="MpRegenBonus" value="2" />
+		<property name="enterMsgId" value="1054" />
+		<property name="leaveMsgId" value="1055" />
+		<point x="-75920" y="109992" />
+		<point x="-75792" y="110068" />
+		<point x="-75792" y="110220" />
+		<point x="-75912" y="110288" />
+		<point x="-76048" y="110212" />
+		<point x="-76044" y="110068" />
 	</zone>
-	<zone name="ssq_main_event_17_21_05" type="MotherTreeZone" shape="NPoly" minZ="-4916" maxZ="-4716">
-		<stat name="MpRegenBonus" val="3" />
-		<stat name="enterMsgId" val="1054" />
-		<stat name="leaveMsgId" val="1055" />
-		<node X="-73900" Y="111844" />
-		<node X="-73752" Y="111840" />
-		<node X="-73688" Y="111976" />
-		<node X="-73760" Y="112092" />
-		<node X="-73904" Y="112092" />
-		<node X="-73976" Y="111968" />
+	<zone name="ssq_main_event_17_21_05" type="org.l2j.gameserver.world.zone.type.MotherTreeZone" form="Polygon" minZ="-4916" maxZ="-4716">
+		<property name="MpRegenBonus" value="3" />
+		<property name="enterMsgId" value="1054" />
+		<property name="leaveMsgId" value="1055" />
+		<point x="-73900" y="111844" />
+		<point x="-73752" y="111840" />
+		<point x="-73688" y="111976" />
+		<point x="-73760" y="112092" />
+		<point x="-73904" y="112092" />
+		<point x="-73976" y="111968" />
 	</zone>
-	<zone name="ssq_main_event_17_21_03" type="MotherTreeZone" shape="NPoly" minZ="-4912" maxZ="-4712">
-		<stat name="MpRegenBonus" val="3" />
-		<stat name="enterMsgId" val="1054" />
-		<stat name="leaveMsgId" val="1055" />
-		<node X="-76172" Y="113656" />
-		<node X="-76052" Y="113728" />
-		<node X="-76048" Y="113872" />
-		<node X="-76172" Y="113944" />
-		<node X="-76308" Y="113876" />
-		<node X="-76304" Y="113728" />
+	<zone name="ssq_main_event_17_21_03" type="org.l2j.gameserver.world.zone.type.MotherTreeZone" form="Polygon" minZ="-4912" maxZ="-4712">
+		<property name="MpRegenBonus" value="3" />
+		<property name="enterMsgId" value="1054" />
+		<property name="leaveMsgId" value="1055" />
+		<point x="-76172" y="113656" />
+		<point x="-76052" y="113728" />
+		<point x="-76048" y="113872" />
+		<point x="-76172" y="113944" />
+		<point x="-76308" y="113876" />
+		<point x="-76304" y="113728" />
 	</zone>
-	<zone name="ssq_main_event_17_21_04" type="MotherTreeZone" shape="NPoly" minZ="-4908" maxZ="-4708">
-		<stat name="MpRegenBonus" val="4" />
-		<stat name="enterMsgId" val="1054" />
-		<stat name="leaveMsgId" val="1055" />
-		<node X="-79184" Y="113040" />
-		<node X="-79060" Y="113116" />
-		<node X="-79052" Y="113268" />
-		<node X="-79184" Y="113336" />
-		<node X="-79304" Y="113260" />
-		<node X="-79304" Y="113116" />
+	<zone name="ssq_main_event_17_21_04" type="org.l2j.gameserver.world.zone.type.MotherTreeZone" form="Polygon" minZ="-4908" maxZ="-4708">
+		<property name="MpRegenBonus" value="4" />
+		<property name="enterMsgId" value="1054" />
+		<property name="leaveMsgId" value="1055" />
+		<point x="-79184" y="113040" />
+		<point x="-79060" y="113116" />
+		<point x="-79052" y="113268" />
+		<point x="-79184" y="113336" />
+		<point x="-79304" y="113260" />
+		<point x="-79304" y="113116" />
 	</zone>
 	<!-- Oracle of Dusk (SSQ Zones) -->
 	<!-- TODO: Require Support -->
-	<!-- zone name="ssq_main_pvp_1720_01" type="SSQZone" shape="NPoly" minZ="-5200" maxZ="-5000" -->
+	<!-- zone name="ssq_main_pvp_1720_01" type="org.l2j.gameserver.world.zone.type.SSQZone" shape="Poly" minZ="-5200" maxZ="-5000" -->
 	<!-- stat name="expPenaltyPercent" val="25" / -->
 	<!-- stat name="allowItemDrop" val="false" / -->
 	<!-- node X="-79735" Y="85612" / -->
@@ -335,7 +335,7 @@
 	<!-- node X="-78957" Y="85690" / -->
 	<!-- node X="-79735" Y="85700" / -->
 	<!-- /zone -->
-	<!-- zone name="ssq_main_pvp_1720_02" type="SSQZone" shape="NPoly" minZ="-5200" maxZ="-5000" -->
+	<!-- zone name="ssq_main_pvp_1720_02" type="org.l2j.gameserver.world.zone.type.SSQZone" shape="Poly" minZ="-5200" maxZ="-5000" -->
 	<!-- stat name="expPenaltyPercent" val="25" / -->
 	<!-- stat name="allowItemDrop" val="false" / -->
 	<!-- node X="-80952" Y="85605" / -->
@@ -343,7 +343,7 @@
 	<!-- node X="-80139" Y="85696" / -->
 	<!-- node X="-80952" Y="85690" / -->
 	<!-- /zone -->
-	<!-- zone name="ssq_main_pvp_1720_03" type="SSQZone" shape="NPoly" minZ="-5192" maxZ="-4992" -->
+	<!-- zone name="ssq_main_pvp_1720_03" type="org.l2j.gameserver.world.zone.type.SSQZone" shape="Poly" minZ="-5192" maxZ="-4992" -->
 	<!-- stat name="expPenaltyPercent" val="25" / -->
 	<!-- stat name="allowItemDrop" val="false" / -->
 	<!-- node X="-80962" Y="83695" / -->
@@ -351,7 +351,7 @@
 	<!-- node X="-78959" Y="85626" / -->
 	<!-- node X="-80947" Y="85625" / -->
 	<!-- /zone -->
-	<!-- zone name="ssq_main_pvp_1720_04" type="SSQZone" shape="NPoly" minZ="-5196" maxZ="-4996" -->
+	<!-- zone name="ssq_main_pvp_1720_04" type="org.l2j.gameserver.world.zone.type.SSQZone" shape="Poly" minZ="-5196" maxZ="-4996" -->
 	<!-- stat name="expPenaltyPercent" val="25" / -->
 	<!-- stat name="allowItemDrop" val="false" / -->
 	<!-- node X="-81199" Y="87363" / -->
@@ -359,7 +359,7 @@
 	<!-- node X="-80386" Y="87449" / -->
 	<!-- node X="-81203" Y="87454" / -->
 	<!-- /zone -->
-	<!-- zone name="ssq_main_pvp_1720_05" type="SSQZone" shape="NPoly" minZ="-5196" maxZ="-4996" -->
+	<!-- zone name="ssq_main_pvp_1720_05" type="org.l2j.gameserver.world.zone.type.SSQZone" shape="Poly" minZ="-5196" maxZ="-4996" -->
 	<!-- stat name="expPenaltyPercent" val="25" / -->
 	<!-- stat name="allowItemDrop" val="false" / -->
 	<!-- node X="-79990" Y="87361" / -->
@@ -367,7 +367,7 @@
 	<!-- node X="-79212" Y="87460" / -->
 	<!-- node X="-79989" Y="87446" / -->
 	<!-- /zone -->
-	<!-- zone name="ssq_main_pvp_1720_06" type="SSQZone" shape="NPoly" minZ="-5200" maxZ="-5000" -->
+	<!-- zone name="ssq_main_pvp_1720_06" type="org.l2j.gameserver.world.zone.type.SSQZone" shape="Poly" minZ="-5200" maxZ="-5000" -->
 	<!-- stat name="expPenaltyPercent" val="25" / -->
 	<!-- stat name="allowItemDrop" val="false" / -->
 	<!-- node X="-81205" Y="87433" / -->
@@ -375,7 +375,7 @@
 	<!-- node X="-79208" Y="89361" / -->
 	<!-- node X="-81207" Y="89361" / -->
 	<!-- /zone -->
-	<!-- zone name="ssq_main_pvp_1720_07" type="SSQZone" shape="NPoly" minZ="-5200" maxZ="-5000" -->
+	<!-- zone name="ssq_main_pvp_1720_07" type="org.l2j.gameserver.world.zone.type.SSQZone" shape="Poly" minZ="-5200" maxZ="-5000" -->
 	<!-- stat name="expPenaltyPercent" val="25" / -->
 	<!-- stat name="allowItemDrop" val="false" / -->
 	<!-- node X="-78197" Y="87968" / -->
@@ -383,7 +383,7 @@
 	<!-- node X="-77365" Y="88060" / -->
 	<!-- node X="-78197" Y="88060" / -->
 	<!-- /zone -->
-	<!-- zone name="ssq_main_pvp_1720_08" type="SSQZone" shape="NPoly" minZ="-5200" maxZ="-5000" -->
+	<!-- zone name="ssq_main_pvp_1720_08" type="org.l2j.gameserver.world.zone.type.SSQZone" shape="Poly" minZ="-5200" maxZ="-5000" -->
 	<!-- stat name="expPenaltyPercent" val="25" / -->
 	<!-- stat name="allowItemDrop" val="false" / -->
 	<!-- node X="-77025" Y="87959" / -->
@@ -391,7 +391,7 @@
 	<!-- node X="-76202" Y="88069" / -->
 	<!-- node X="-77026" Y="88061" / -->
 	<!-- /zone -->
-	<!-- zone name="ssq_main_pvp_1720_09" type="SSQZone" shape="NPoly" minZ="-5196" maxZ="-4996" -->
+	<!-- zone name="ssq_main_pvp_1720_09" type="org.l2j.gameserver.world.zone.type.SSQZone" shape="Poly" minZ="-5196" maxZ="-4996" -->
 	<!-- stat name="expPenaltyPercent" val="25" / -->
 	<!-- stat name="allowItemDrop" val="false" / -->
 	<!-- node X="-78196" Y="88060" / -->
@@ -399,7 +399,7 @@
 	<!-- node X="-76192" Y="89970" / -->
 	<!-- node X="-78196" Y="89970" / -->
 	<!-- /zone -->
-	<!-- zone name="ssq_main_pvp_1720_10" type="SSQZone" shape="NPoly" minZ="-5204" maxZ="-5004" -->
+	<!-- zone name="ssq_main_pvp_1720_10" type="org.l2j.gameserver.world.zone.type.SSQZone" shape="Poly" minZ="-5204" maxZ="-5004" -->
 	<!-- stat name="expPenaltyPercent" val="25" / -->
 	<!-- stat name="allowItemDrop" val="false" / -->
 	<!-- node X="-76797" Y="86142" / -->
@@ -407,7 +407,7 @@
 	<!-- node X="-75945" Y="86304" / -->
 	<!-- node X="-76794" Y="86298" / -->
 	<!-- /zone -->
-	<!-- zone name="ssq_main_pvp_1720_11" type="SSQZone" shape="NPoly" minZ="-5196" maxZ="-4996" -->
+	<!-- zone name="ssq_main_pvp_1720_11" type="org.l2j.gameserver.world.zone.type.SSQZone" shape="Poly" minZ="-5196" maxZ="-4996" -->
 	<!-- stat name="expPenaltyPercent" val="25" / -->
 	<!-- stat name="allowItemDrop" val="false" / -->
 	<!-- node X="-77944" Y="86148" / -->
@@ -415,7 +415,7 @@
 	<!-- node X="-77194" Y="86291" / -->
 	<!-- node X="-77942" Y="86295" / -->
 	<!-- /zone -->
-	<!-- zone name="ssq_main_pvp_1720_12" type="SSQZone" shape="NPoly" minZ="-5196" maxZ="-4996" -->
+	<!-- zone name="ssq_main_pvp_1720_12" type="org.l2j.gameserver.world.zone.type.SSQZone" shape="Poly" minZ="-5196" maxZ="-4996" -->
 	<!-- stat name="expPenaltyPercent" val="25" / -->
 	<!-- stat name="allowItemDrop" val="false" / -->
 	<!-- node X="-77949" Y="84300" / -->
@@ -423,7 +423,7 @@
 	<!-- node X="-75943" Y="86185" / -->
 	<!-- node X="-77939" Y="86187" / -->
 	<!-- /zone -->
-	<!-- zone name="ssq_main_pvp_1720_13" type="SSQZone" shape="NPoly" minZ="-5200" maxZ="-5000" -->
+	<!-- zone name="ssq_main_pvp_1720_13" type="org.l2j.gameserver.world.zone.type.SSQZone" shape="Poly" minZ="-5200" maxZ="-5000" -->
 	<!-- stat name="expPenaltyPercent" val="25" / -->
 	<!-- stat name="allowItemDrop" val="false" / -->
 	<!-- node X="-75870" Y="87311" / -->
@@ -431,7 +431,7 @@
 	<!-- node X="-75738" Y="88130" / -->
 	<!-- node X="-75870" Y="88125" / -->
 	<!-- /zone -->
-	<!-- zone name="ssq_main_pvp_1720_14" type="SSQZone" shape="NPoly" minZ="-5200" maxZ="-5000" -->
+	<!-- zone name="ssq_main_pvp_1720_14" type="org.l2j.gameserver.world.zone.type.SSQZone" shape="Poly" minZ="-5200" maxZ="-5000" -->
 	<!-- stat name="expPenaltyPercent" val="25" / -->
 	<!-- stat name="allowItemDrop" val="false" / -->
 	<!-- node X="-75865" Y="86137" / -->
@@ -439,7 +439,7 @@
 	<!-- node X="-75740" Y="86958" / -->
 	<!-- node X="-75865" Y="86963" / -->
 	<!-- /zone -->
-	<!-- zone name="ssq_main_pvp_1720_15" type="SSQZone" shape="NPoly" minZ="-5200" maxZ="-5000" -->
+	<!-- zone name="ssq_main_pvp_1720_15" type="org.l2j.gameserver.world.zone.type.SSQZone" shape="Poly" minZ="-5200" maxZ="-5000" -->
 	<!-- stat name="expPenaltyPercent" val="25" / -->
 	<!-- stat name="allowItemDrop" val="false" / -->
 	<!-- node X="-75758" Y="86126" / -->
@@ -448,7 +448,7 @@
 	<!-- node X="-75769" Y="88133" / -->
 	<!-- /zone -->
 	<!-- Oracle of Dawn (SSQ Zones) -->
-	<!-- zone name="ssq_main_pvp_1721_01" type="SSQZone" shape="NPoly" minZ="-4948" maxZ="-4748" -->
+	<!-- zone name="ssq_main_pvp_1721_01" type="org.l2j.gameserver.world.zone.type.SSQZone" shape="Poly" minZ="-4948" maxZ="-4748" -->
 	<!-- stat name="expPenaltyPercent" val="25" / -->
 	<!-- stat name="allowItemDrop" val="false" / -->
 	<!-- node X="-78713" Y="110409" / -->
@@ -456,7 +456,7 @@
 	<!-- node X="-77923" Y="110522" / -->
 	<!-- node X="-78708" Y="110515" / -->
 	<!-- /zone -->
-	<!-- zone name="ssq_main_pvp_1721_02" type="SSQZone" shape="NPoly" minZ="-4940" maxZ="-4740" -->
+	<!-- zone name="ssq_main_pvp_1721_02" type="org.l2j.gameserver.world.zone.type.SSQZone" shape="Poly" minZ="-4940" maxZ="-4740" -->
 	<!-- stat name="expPenaltyPercent" val="25" / -->
 	<!-- stat name="allowItemDrop" val="false" / -->
 	<!-- node X="-79923" Y="110427" / -->
@@ -464,7 +464,7 @@
 	<!-- node X="-79105" Y="110524" / -->
 	<!-- node X="-79923" Y="110528" / -->
 	<!-- /zone -->
-	<!-- zone name="ssq_main_pvp_1721_03" type="SSQZone" shape="NPoly" minZ="-4944" maxZ="-4744" -->
+	<!-- zone name="ssq_main_pvp_1721_03" type="org.l2j.gameserver.world.zone.type.SSQZone" shape="Poly" minZ="-4944" maxZ="-4744" -->
 	<!-- stat name="expPenaltyPercent" val="25" / -->
 	<!-- stat name="allowItemDrop" val="false" / -->
 	<!-- node X="-79931" Y="108523" / -->
@@ -472,7 +472,7 @@
 	<!-- node X="-77932" Y="110445" / -->
 	<!-- node X="-79925" Y="110453" / -->
 	<!-- /zone -->
-	<!-- zone name="ssq_main_pvp_1721_04" type="SSQZone" shape="NPoly" minZ="-4940" maxZ="-4740" -->
+	<!-- zone name="ssq_main_pvp_1721_04" type="org.l2j.gameserver.world.zone.type.SSQZone" shape="Poly" minZ="-4940" maxZ="-4740" -->
 	<!-- stat name="expPenaltyPercent" val="25" / -->
 	<!-- stat name="allowItemDrop" val="false" / -->
 	<!-- node X="-75761" Y="111051" / -->
@@ -480,7 +480,7 @@
 	<!-- node X="-74921" Y="111142" / -->
 	<!-- node X="-75757" Y="111151" / -->
 	<!-- /zone -->
-	<!-- zone name="ssq_main_pvp_1721_05" type="SSQZone" shape="NPoly" minZ="-4940" maxZ="-4740" -->
+	<!-- zone name="ssq_main_pvp_1721_05" type="org.l2j.gameserver.world.zone.type.SSQZone" shape="Poly" minZ="-4940" maxZ="-4740" -->
 	<!-- stat name="expPenaltyPercent" val="25" / -->
 	<!-- stat name="allowItemDrop" val="false" / -->
 	<!-- node X="-76920" Y="111022" / -->
@@ -488,7 +488,7 @@
 	<!-- node X="-76085" Y="111105" / -->
 	<!-- node X="-76920" Y="111097" / -->
 	<!-- /zone -->
-	<!-- zone name="ssq_main_pvp_1721_06" type="SSQZone" shape="NPoly" minZ="-4932" maxZ="-4732" -->
+	<!-- zone name="ssq_main_pvp_1721_06" type="org.l2j.gameserver.world.zone.type.SSQZone" shape="Poly" minZ="-4932" maxZ="-4732" -->
 	<!-- stat name="expPenaltyPercent" val="25" / -->
 	<!-- stat name="allowItemDrop" val="false" / -->
 	<!-- node X="-76920" Y="109134" / -->
@@ -496,7 +496,7 @@
 	<!-- node X="-74920" Y="111099" / -->
 	<!-- node X="-76920" Y="111087" / -->
 	<!-- /zone -->
-	<!-- zone name="ssq_main_pvp_1721_07" type="SSQZone" shape="NPoly" minZ="-4944" maxZ="-4744" -->
+	<!-- zone name="ssq_main_pvp_1721_07" type="org.l2j.gameserver.world.zone.type.SSQZone" shape="Poly" minZ="-4944" maxZ="-4744" -->
 	<!-- stat name="expPenaltyPercent" val="25" / -->
 	<!-- stat name="allowItemDrop" val="false" / -->
 	<!-- node X="-77176" Y="112795" / -->
@@ -504,7 +504,7 @@
 	<!-- node X="-76344" Y="112897" / -->
 	<!-- node X="-77176" Y="112903" / -->
 	<!-- /zone -->
-	<!-- zone name="ssq_main_pvp_1721_08" type="SSQZone" shape="NPoly" minZ="-4940" maxZ="-4740" -->
+	<!-- zone name="ssq_main_pvp_1721_08" type="org.l2j.gameserver.world.zone.type.SSQZone" shape="Poly" minZ="-4940" maxZ="-4740" -->
 	<!-- stat name="expPenaltyPercent" val="25" / -->
 	<!-- stat name="allowItemDrop" val="false" / -->
 	<!-- node X="-76002" Y="112810" / -->
@@ -512,7 +512,7 @@
 	<!-- node X="-75176" Y="112904" / -->
 	<!-- node X="-76002" Y="112898" / -->
 	<!-- /zone -->
-	<!-- zone name="ssq_main_pvp_1721_09" type="SSQZone" shape="NPoly" minZ="-4944" maxZ="-4744" -->
+	<!-- zone name="ssq_main_pvp_1721_09" type="org.l2j.gameserver.world.zone.type.SSQZone" shape="Poly" minZ="-4944" maxZ="-4744" -->
 	<!-- stat name="expPenaltyPercent" val="25" / -->
 	<!-- stat name="allowItemDrop" val="false" / -->
 	<!-- node X="-77174" Y="112902" / -->
@@ -520,7 +520,7 @@
 	<!-- node X="-75167" Y="114798" / -->
 	<!-- node X="-77173" Y="114806" / -->
 	<!-- /zone -->
-	<!-- zone name="ssq_main_pvp_1721_10" type="SSQZone" shape="NPoly" minZ="-4940" maxZ="-4740" -->
+	<!-- zone name="ssq_main_pvp_1721_10" type="org.l2j.gameserver.world.zone.type.SSQZone" shape="Poly" minZ="-4940" maxZ="-4740" -->
 	<!-- stat name="expPenaltyPercent" val="25" / -->
 	<!-- stat name="allowItemDrop" val="false" / -->
 	<!-- node X="-80178" Y="112233" / -->
@@ -528,7 +528,7 @@
 	<!-- node X="-79356" Y="112294" / -->
 	<!-- node X="-80190" Y="112301" / -->
 	<!-- /zone -->
-	<!-- zone name="ssq_main_pvp_1721_11" type="SSQZone" shape="NPoly" minZ="-4940" maxZ="-4740" -->
+	<!-- zone name="ssq_main_pvp_1721_11" type="org.l2j.gameserver.world.zone.type.SSQZone" shape="Poly" minZ="-4940" maxZ="-4740" -->
 	<!-- stat name="expPenaltyPercent" val="25" / -->
 	<!-- stat name="allowItemDrop" val="false" / -->
 	<!-- node X="-78861" Y="112220" / -->
@@ -536,7 +536,7 @@
 	<!-- node X="-78178" Y="112294" / -->
 	<!-- node X="-78994" Y="112294" / -->
 	<!-- /zone -->
-	<!-- zone name="ssq_main_pvp_1721_12" type="SSQZone" shape="NPoly" minZ="-4940" maxZ="-4740" -->
+	<!-- zone name="ssq_main_pvp_1721_12" type="org.l2j.gameserver.world.zone.type.SSQZone" shape="Poly" minZ="-4940" maxZ="-4740" -->
 	<!-- stat name="expPenaltyPercent" val="25" / -->
 	<!-- stat name="allowItemDrop" val="false" / -->
 	<!-- node X="-80184" Y="112276" / -->
@@ -544,7 +544,7 @@
 	<!-- node X="-78176" Y="114188" / -->
 	<!-- node X="-80190" Y="114196" / -->
 	<!-- /zone -->
-	<!-- zone name="ssq_main_pvp_1721_13" type="SSQZone" shape="NPoly" minZ="-4940" maxZ="-4740" -->
+	<!-- zone name="ssq_main_pvp_1721_13" type="org.l2j.gameserver.world.zone.type.SSQZone" shape="Poly" minZ="-4940" maxZ="-4740" -->
 	<!-- stat name="expPenaltyPercent" val="25" / -->
 	<!-- stat name="allowItemDrop" val="false" / -->
 	<!-- node X="-74840" Y="112152" / -->
@@ -552,7 +552,7 @@
 	<!-- node X="-74707" Y="112966" / -->
 	<!-- node X="-74840" Y="112966" / -->
 	<!-- /zone -->
-	<!-- zone name="ssq_main_pvp_1721_14" type="SSQZone" shape="NPoly" minZ="-4948" maxZ="-4748" -->
+	<!-- zone name="ssq_main_pvp_1721_14" type="org.l2j.gameserver.world.zone.type.SSQZone" shape="Poly" minZ="-4948" maxZ="-4748" -->
 	<!-- stat name="expPenaltyPercent" val="25" / -->
 	<!-- stat name="allowItemDrop" val="false" / -->
 	<!-- node X="-74840" Y="110962" / -->
@@ -560,7 +560,7 @@
 	<!-- node X="-74741" Y="111793" / -->
 	<!-- node X="-74840" Y="111796" / -->
 	<!-- /zone -->
-	<!-- zone name="ssq_main_pvp_1721_15" type="SSQZone" shape="NPoly" minZ="-4936" maxZ="-4736" -->
+	<!-- zone name="ssq_main_pvp_1721_15" type="org.l2j.gameserver.world.zone.type.SSQZone" shape="Poly" minZ="-4936" maxZ="-4736" -->
 	<!-- stat name="expPenaltyPercent" val="25" / -->
 	<!-- stat name="allowItemDrop" val="false" / -->
 	<!-- node X="-74737" Y="110969" / -->
@@ -568,7 +568,7 @@
 	<!-- node X="-72830" Y="112974" / -->
 	<!-- node X="-74740" Y="112965" / -->
 	<!-- /zone -->
-	<!-- zone name="ssq_main_pvp_1721_16" type="SSQZone" shape="NPoly" minZ="-4912" maxZ="-4712" -->
+	<!-- zone name="ssq_main_pvp_1721_16" type="org.l2j.gameserver.world.zone.type.SSQZone" shape="Poly" minZ="-4912" maxZ="-4712" -->
 	<!-- stat name="expPenaltyPercent" val="25" / -->
 	<!-- stat name="allowItemDrop" val="false" / -->
 	<!-- node X="-76922" Y="110997" / -->
@@ -577,7 +577,7 @@
 	<!-- node X="-76917" Y="111133" / -->
 	<!-- /zone -->
 	<!-- Dimensinal Rift (SSQ Zones) -->
-	<!-- zone name="space_of_dimension_ssq1" type="SSQZone" shape="NPoly" minZ="-6964" maxZ="-6064" -->
+	<!-- zone name="space_of_dimension_ssq1" type="org.l2j.gameserver.world.zone.type.SSQZone" shape="Poly" minZ="-6964" maxZ="-6064" -->
 	<!-- stat name="expPenaltyPercent" val="100" / -->
 	<!-- stat name="allowItemDrop" val="false" / -->
 	<!-- node X="-120682" Y="-182923" / -->
@@ -585,7 +585,7 @@
 	<!-- node X="-115515" Y="-180121" / -->
 	<!-- node X="-120682" Y="-180121" / -->
 	<!-- /zone -->
-	<!-- zone name="space_of_dimension_ssq2" type="SSQZone" shape="NPoly" minZ="-6964" maxZ="-6064" -->
+	<!-- zone name="space_of_dimension_ssq2" type="org.l2j.gameserver.world.zone.type.SSQZone" shape="Poly" minZ="-6964" maxZ="-6064" -->
 	<!-- stat name="expPenaltyPercent" val="100" / -->
 	<!-- stat name="allowItemDrop" val="false" / -->
 	<!-- node X="-120677" Y="-180093" / -->
@@ -593,7 +593,7 @@
 	<!-- node X="-115510" Y="-177291" / -->
 	<!-- node X="-120677" Y="-177291" / -->
 	<!-- /zone -->
-	<!-- zone name="space_of_dimension_ssq3" type="SSQZone" shape="NPoly" minZ="-6964" maxZ="-6064" -->
+	<!-- zone name="space_of_dimension_ssq3" type="org.l2j.gameserver.world.zone.type.SSQZone" shape="Poly" minZ="-6964" maxZ="-6064" -->
 	<!-- stat name="expPenaltyPercent" val="100" / -->
 	<!-- stat name="allowItemDrop" val="false" / -->
 	<!-- node X="-114045" Y="-182907" / -->
@@ -601,7 +601,7 @@
 	<!-- node X="-108878" Y="-180105" / -->
 	<!-- node X="-114045" Y="-180105" / -->
 	<!-- /zone -->
-	<!-- zone name="space_of_dimension_ssq4" type="SSQZone" shape="NPoly" minZ="-6964" maxZ="-6064" -->
+	<!-- zone name="space_of_dimension_ssq4" type="org.l2j.gameserver.world.zone.type.SSQZone" shape="Poly" minZ="-6964" maxZ="-6064" -->
 	<!-- stat name="expPenaltyPercent" val="100" / -->
 	<!-- stat name="allowItemDrop" val="false" / -->
 	<!-- node X="-114040" Y="-180077" / -->
@@ -609,7 +609,7 @@
 	<!-- node X="-108873" Y="-177275" / -->
 	<!-- node X="-114040" Y="-177275" / -->
 	<!-- /zone -->
-	<!-- zone name="space_of_dimension_ssq5" type="SSQZone" shape="NPoly" minZ="-6964" maxZ="-6064" -->
+	<!-- zone name="space_of_dimension_ssq5" type="org.l2j.gameserver.world.zone.type.SSQZone" shape="Poly" minZ="-6964" maxZ="-6064" -->
 	<!-- stat name="expPenaltyPercent" val="100" / -->
 	<!-- stat name="allowItemDrop" val="false" / -->
 	<!-- node X="-116267" Y="-177955" / -->
@@ -617,7 +617,7 @@
 	<!-- node X="-113344" Y="-172772" / -->
 	<!-- node X="-116267" Y="-172773" / -->
 	<!-- /zone -->
-	<!-- zone name="space_of_dimension_ssq6" type="SSQZone" shape="NPoly" minZ="-6964" maxZ="-6064" -->
+	<!-- zone name="space_of_dimension_ssq6" type="org.l2j.gameserver.world.zone.type.SSQZone" shape="Poly" minZ="-6964" maxZ="-6064" -->
 	<!-- stat name="expPenaltyPercent" val="100" / -->
 	<!-- stat name="allowItemDrop" val="false" / -->
 	<!-- node X="-116217" Y="-187430" / -->
@@ -626,7 +626,7 @@
 	<!-- node X="-116217" Y="-182247" / -->
 	<!-- /zone -->
 	<!-- Imperial Tomb (SSQ Zones) -->
-	<!-- zone name="royal_rush_ssq1" type="SSQZone" shape="NPoly" minZ="-7263" maxZ="-7063" -->
+	<!-- zone name="royal_rush_ssq1" type="org.l2j.gameserver.world.zone.type.SSQZone" shape="Poly" minZ="-7263" maxZ="-7063" -->
 	<!-- stat name="expPenaltyPercent" val="100" / -->
 	<!-- stat name="allowItemDrop" val="false" / -->
 	<!-- node X="181198" Y="-86516" / -->
@@ -634,7 +634,7 @@
 	<!-- node X="192391" Y="-84626" / -->
 	<!-- node X="181193" Y="-84622" / -->
 	<!-- /zone -->
-	<!-- zone name="royal_rush_ssq2" type="SSQZone" shape="NPoly" minZ="-7263" maxZ="-7063" -->
+	<!-- zone name="royal_rush_ssq2" type="org.l2j.gameserver.world.zone.type.SSQZone" shape="Poly" minZ="-7263" maxZ="-7063" -->
 	<!-- stat name="expPenaltyPercent" val="100" / -->
 	<!-- stat name="allowItemDrop" val="false" / -->
 	<!-- node X="179511" Y="-89903" / -->
@@ -642,7 +642,7 @@
 	<!-- node X="190704" Y="-88013" / -->
 	<!-- node X="179506" Y="-88009" / -->
 	<!-- /zone -->
-	<!-- zone name="royal_rush_ssq3" type="SSQZone" shape="NPoly" minZ="-7263" maxZ="-7063" -->
+	<!-- zone name="royal_rush_ssq3" type="org.l2j.gameserver.world.zone.type.SSQZone" shape="Poly" minZ="-7263" maxZ="-7063" -->
 	<!-- stat name="expPenaltyPercent" val="100" / -->
 	<!-- stat name="allowItemDrop" val="false" / -->
 	<!-- node X="174498" Y="-82751" / -->
@@ -650,7 +650,7 @@
 	<!-- node X="176616" Y="-71304" / -->
 	<!-- node X="174489" Y="-71303" / -->
 	<!-- /zone -->
-	<!-- zone name="royal_rush_ssq4" type="SSQZone" shape="NPoly" minZ="-7263" maxZ="-7063" -->
+	<!-- zone name="royal_rush_ssq4" type="org.l2j.gameserver.world.zone.type.SSQZone" shape="Poly" minZ="-7263" maxZ="-7063" -->
 	<!-- stat name="expPenaltyPercent" val="100" / -->
 	<!-- stat name="allowItemDrop" val="false" / -->
 	<!-- node X="172183" Y="-86660" / -->
@@ -659,47 +659,47 @@
 	<!-- node X="172174" Y="-75213" / -->
 	<!-- /zone -->
 	<!-- Oracle of Dusk (Peace Zones) -->
-	<zone name="ssq_peace_1720_01" type="PeaceZone" shape="NPoly" minZ="-5208" maxZ="-5008">
-		<stat name="allowStore" val="false" />
-		<node X="-78118" Y="86296" />
-		<node X="-75860" Y="86294" />
-		<node X="-75853" Y="87965" />
-		<node X="-78156" Y="87967" />
+	<zone name="ssq_peace_1720_01" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-5208" maxZ="-5008">
+		<property name="allowStore" value="false" />
+		<point x="-78118" y="86296" />
+		<point x="-75860" y="86294" />
+		<point x="-75853" y="87965" />
+		<point x="-78156" y="87967" />
 	</zone>
-	<zone name="ssq_peace_1720_02" type="PeaceZone" shape="NPoly" minZ="-5200" maxZ="-5000">
-		<stat name="allowStore" val="false" />
-		<node X="-81169" Y="85693" />
-		<node X="-78118" Y="85690" />
-		<node X="-78134" Y="87364" />
-		<node X="-81187" Y="87364" />
+	<zone name="ssq_peace_1720_02" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-5200" maxZ="-5000">
+		<property name="allowStore" value="false" />
+		<point x="-81169" y="85693" />
+		<point x="-78118" y="85690" />
+		<point x="-78134" y="87364" />
+		<point x="-81187" y="87364" />
 	</zone>
-	<zone name="ssq_peace_1720_03" type="PeaceZone" shape="NPoly" minZ="-5200" maxZ="-5000">
-		<stat name="allowStore" val="false" />
-		<node X="-81549" Y="86361" />
-		<node X="-80995" Y="86367" />
-		<node X="-80995" Y="86688" />
-		<node X="-81549" Y="86688" />
+	<zone name="ssq_peace_1720_03" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-5200" maxZ="-5000">
+		<property name="allowStore" value="false" />
+		<point x="-81549" y="86361" />
+		<point x="-80995" y="86367" />
+		<point x="-80995" y="86688" />
+		<point x="-81549" y="86688" />
 	</zone>
 	<!-- Oracle of Dawn (Peace Zones) -->
-	<zone name="ssq_peace_1721_01" type="PeaceZone" shape="NPoly" minZ="-4952" maxZ="-4752">
-		<stat name="allowStore" val="false" />
-		<node X="-77077" Y="111140" />
-		<node X="-74838" Y="111140" />
-		<node X="-74842" Y="112806" />
-		<node X="-77104" Y="112779" />
+	<zone name="ssq_peace_1721_01" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-4952" maxZ="-4752">
+		<property name="allowStore" value="false" />
+		<point x="-77077" y="111140" />
+		<point x="-74838" y="111140" />
+		<point x="-74842" y="112806" />
+		<point x="-77104" y="112779" />
 	</zone>
-	<zone name="ssq_peace_1721_02" type="PeaceZone" shape="NPoly" minZ="-4956" maxZ="-4756">
-		<stat name="allowStore" val="false" />
-		<node X="-80075" Y="110530" />
-		<node X="-77066" Y="110552" />
-		<node X="-77092" Y="112188" />
-		<node X="-80089" Y="112184" />
+	<zone name="ssq_peace_1721_02" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-4956" maxZ="-4756">
+		<property name="allowStore" value="false" />
+		<point x="-80075" y="110530" />
+		<point x="-77066" y="110552" />
+		<point x="-77092" y="112188" />
+		<point x="-80089" y="112184" />
 	</zone>
-	<zone name="ssq_peace_1721_03" type="PeaceZone" shape="NPoly" minZ="-4944" maxZ="-4744">
-		<stat name="allowStore" val="false" />
-		<node X="-80536" Y="111192" />
-		<node X="-79984" Y="111196" />
-		<node X="-79984" Y="111517" />
-		<node X="-80532" Y="111517" />
+	<zone name="ssq_peace_1721_03" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-4944" maxZ="-4744">
+		<property name="allowStore" value="false" />
+		<point x="-80536" y="111192" />
+		<point x="-79984" y="111196" />
+		<point x="-79984" y="111517" />
+		<point x="-80532" y="111517" />
 	</zone>
 </list>

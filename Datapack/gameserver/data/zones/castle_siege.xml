@@ -1,75 +1,75 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<list enabled="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/zones.xsd">
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org zones.xsd" >
 	<!-- Castle Siege Zones -->
-	<zone name="gludio_castle_battlefield_territory " type="SiegeZone" shape="NPoly" minZ="-4448" maxZ="3551">
-		<stat name="castleId" val="1" />
-		<node X="-22615" Y="104510" />
-		<node X="-13290" Y="104564" />
-		<node X="-13313" Y="116950" />
-		<node X="-22638" Y="116896" />
+	<zone name="gludio_castle_battlefield_territory " type="org.l2j.gameserver.world.zone.type.SiegeZone" form="Polygon" minZ="-4448" maxZ="3551">
+		<property name="castleId" value="1" />
+		<point x="-22615" y="104510" />
+		<point x="-13290" y="104564" />
+		<point x="-13313" y="116950" />
+		<point x="-22638" y="116896" />
 	</zone>
-	<zone name="dion_castle_battlefield_territory" type="SiegeZone" shape="NPoly" minZ="-4642" maxZ="4000">
-		<stat name="castleId" val="2" />
-		<node X="26575" Y="165240" />
-		<node X="17250" Y="165186" />
-		<node X="17273" Y="152800" />
-		<node X="26598" Y="152854" />
+	<zone name="dion_castle_battlefield_territory" type="org.l2j.gameserver.world.zone.type.SiegeZone" form="Polygon" minZ="-4642" maxZ="4000">
+		<property name="castleId" value="2" />
+		<point x="26575" y="165240" />
+		<point x="17250" y="165186" />
+		<point x="17273" y="152800" />
+		<point x="26598" y="152854" />
 	</zone>
-	<zone name="giran_castle_battlefield_territory" type="SiegeZone" shape="NPoly" minZ="-4515" maxZ="19935">
-		<stat name="castleId" val="3" />
-		<node X="121412" Y="140594" />
-		<node X="121358" Y="149919" />
-		<node X="108972" Y="149896" />
-		<node X="109026" Y="140571" />
+	<zone name="giran_castle_battlefield_territory" type="org.l2j.gameserver.world.zone.type.SiegeZone" form="Polygon" minZ="-4515" maxZ="19935">
+		<property name="castleId" value="3" />
+		<point x="121412" y="140594" />
+		<point x="121358" y="149919" />
+		<point x="108972" y="149896" />
+		<point x="109026" y="140571" />
 	</zone>
-	<zone name="oren_castle_battlefield_territory" type="SiegeZone" shape="NPoly" minZ="-4242" maxZ="19935">
-		<stat name="castleId" val="4" />
-		<node X="87488" Y="32689" />
-		<node X="87434" Y="42014" />
-		<node X="75048" Y="41991" />
-		<node X="75102" Y="32666" />
+	<zone name="oren_castle_battlefield_territory" type="org.l2j.gameserver.world.zone.type.SiegeZone" form="Polygon" minZ="-4242" maxZ="19935">
+		<property name="castleId" value="4" />
+		<point x="87488" y="32689" />
+		<point x="87434" y="42014" />
+		<point x="75048" y="41991" />
+		<point x="75102" y="32666" />
 	</zone>
-	<zone name="aden_castle_battlefield_territory" type="SiegeZone" shape="NPoly" minZ="-3184" maxZ="6816">
-		<stat name="castleId" val="5" />
-		<node X="142431" Y="362" />
-		<node X="152319" Y="344" />
-		<node X="152282" Y="15197" />
-		<node X="142393" Y="15215" />
+	<zone name="aden_castle_battlefield_territory" type="org.l2j.gameserver.world.zone.type.SiegeZone" form="Polygon" minZ="-3184" maxZ="6816">
+		<property name="castleId" value="5" />
+		<point x="142431" y="362" />
+		<point x="152319" y="344" />
+		<point x="152282" y="15197" />
+		<point x="142393" y="15215" />
 	</zone>
-	<zone name="innadrile_castle_battlefield_territory" type="SiegeZone" shape="NPoly" minZ="-2738" maxZ="4000">
-		<stat name="castleId" val="6" />
-		<node X="120526" Y="254019" />
-		<node X="111201" Y="253965" />
-		<node X="111224" Y="241579" />
-		<node X="120549" Y="241633" />
+	<zone name="innadrile_castle_battlefield_territory" type="org.l2j.gameserver.world.zone.type.SiegeZone" form="Polygon" minZ="-2738" maxZ="4000">
+		<property name="castleId" value="6" />
+		<point x="120526" y="254019" />
+		<point x="111201" y="253965" />
+		<point x="111224" y="241579" />
+		<point x="120549" y="241633" />
 	</zone>
-	<zone name="godad_castle_battlefield_territory" type="SiegeZone" shape="NPoly" minZ="-3397" maxZ="5100">
-		<stat name="castleId" val="7" />
-		<node X="143023" Y="-53210" /> <!-- TODO: Needs Support for minZ/maxZ for each node, due minZ in this node should be -2300 -->
-		<node X="151893" Y="-53210" /> <!-- TODO: Needs Support for minZ/maxZ for each node, due minZ in this node should be -2300 -->
-		<node X="151949" Y="-39107" />
-		<node X="145899" Y="-39107" />
-		<node X="141457" Y="-44407" />
+	<zone name="godad_castle_battlefield_territory" type="org.l2j.gameserver.world.zone.type.SiegeZone" form="Polygon" minZ="-3397" maxZ="5100">
+		<property name="castleId" value="7" />
+		<point x="143023" y="-53210" /> <!-- TODO: Needs Support for minZ/maxZ for each node, due minZ in this node should be -2300 -->
+		<point x="151893" y="-53210" /> <!-- TODO: Needs Support for minZ/maxZ for each node, due minZ in this node should be -2300 -->
+		<point x="151949" y="-39107" />
+		<point x="145899" y="-39107" />
+		<point x="141457" y="-44407" />
 	</zone>
-	<zone name="rune_castle_battlefield_territory" type="SiegeZone" shape="NPoly" minZ="-4350" maxZ="10030">
-		<stat name="castleId" val="8" />
-		<node X="6015" Y="-56316" />
-		<node X="17343" Y="-53750" />
-		<node X="19486" Y="-52556" />
-		<node X="23783" Y="-52570" />
-		<node X="27027" Y="-49433" />
-		<node X="27020" Y="-48831" />
-		<node X="23887" Y="-45218" />
-		<node X="19385" Y="-45203" />
-		<node X="17413" Y="-44022" />
-		<node X="6015" Y="-41600" />
+	<zone name="rune_castle_battlefield_territory" type="org.l2j.gameserver.world.zone.type.SiegeZone" form="Polygon" minZ="-4350" maxZ="10030">
+		<property name="castleId" value="8" />
+		<point x="6015" y="-56316" />
+		<point x="17343" y="-53750" />
+		<point x="19486" y="-52556" />
+		<point x="23783" y="-52570" />
+		<point x="27027" y="-49433" />
+		<point x="27020" y="-48831" />
+		<point x="23887" y="-45218" />
+		<point x="19385" y="-45203" />
+		<point x="17413" y="-44022" />
+		<point x="6015" y="-41600" />
 	</zone>
-	<zone name="schuttgart_castle_battlefield_territory" type="SiegeZone" shape="NPoly" minZ="-3997" maxZ="8503">
-		<stat name="castleId" val="9" />
-		<node X="71420" Y="-159445" />
-		<node X="83119" Y="-159442" />
-		<node X="83122" Y="-150000" />
-		<node X="77897" Y="-143861" />
-		<node X="71420" Y="-148782" />
+	<zone name="schuttgart_castle_battlefield_territory" type="org.l2j.gameserver.world.zone.type.SiegeZone" form="Polygon" minZ="-3997" maxZ="8503">
+		<property name="castleId" value="9" />
+		<point x="71420" y="-159445" />
+		<point x="83119" y="-159442" />
+		<point x="83122" y="-150000" />
+		<point x="77897" y="-143861" />
+		<point x="71420" y="-148782" />
 	</zone>
 </list>

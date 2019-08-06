@@ -1,98 +1,98 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<list enabled="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/zones.xsd">
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org zones.xsd" >
 	<!-- Elven Mother Tree Zones -->
-	<zone name="mother_tree_start_zone" type="MotherTreeZone" shape="NPoly" minZ="-3550" maxZ="-3350"> <!-- [21_19] -->
-		<stat name="HpRegenBonus" val="2" />
-		<stat name="MpRegenBonus" val="1" />
-		<stat name="affectedRace" val="1" /> <!-- Elf -->
-		<stat name="enterMsgId" val="114" />
-		<stat name="leaveMsgId" val="115" />
-		<node X="45889" Y="41890" />
-		<node X="45277" Y="41672" />
-		<node X="45028" Y="41478" />
-		<node X="44809" Y="41230" />
-		<node X="44522" Y="40689" />
-		<node X="44501" Y="39970" />
-		<node X="44725" Y="39407" />
-		<node X="44930" Y="39145" />
-		<node X="45447" Y="38764" />
-		<node X="46073" Y="38618" />
-		<node X="46710" Y="38716" />
-		<node X="47255" Y="39049" />
-		<node X="47743" Y="39834" />
-		<node X="47772" Y="40568" />
-		<node X="47545" Y="41125" />
-		<node X="47108" Y="41599" />
-		<node X="46531" Y="41868" />
+	<zone name="mother_tree_start_zone" type="org.l2j.gameserver.world.zone.type.MotherTreeZone" form="Polygon" minZ="-3550" maxZ="-3350"> <!-- [21_19] -->
+		<property name="HpRegenBonus" value="2" />
+		<property name="MpRegenBonus" value="1" />
+		<property name="affectedRace" value="1" /> <!-- Elf -->
+		<property name="enterMsgId" value="114" />
+		<property name="leaveMsgId" value="115" />
+		<point x="45889" y="41890" />
+		<point x="45277" y="41672" />
+		<point x="45028" y="41478" />
+		<point x="44809" y="41230" />
+		<point x="44522" y="40689" />
+		<point x="44501" y="39970" />
+		<point x="44725" y="39407" />
+		<point x="44930" y="39145" />
+		<point x="45447" y="38764" />
+		<point x="46073" y="38618" />
+		<point x="46710" y="38716" />
+		<point x="47255" y="39049" />
+		<point x="47743" y="39834" />
+		<point x="47772" y="40568" />
+		<point x="47545" y="41125" />
+		<point x="47108" y="41599" />
+		<point x="46531" y="41868" />
 	</zone>
-	<zone name="mother_tree_town" type="MotherTreeZone" shape="NPoly" minZ="-3121" maxZ="-2921"> <!-- [21_19] -->
-		<stat name="HpRegenBonus" val="2" />
-		<stat name="MpRegenBonus" val="1" />
-		<stat name="affectedRace" val="1" /> <!-- Elf -->
-		<stat name="enterMsgId" val="114" />
-		<stat name="leaveMsgId" val="115" />
-		<node X="45234" Y="49892" />
-		<node X="45117" Y="49826" />
-		<node X="45031" Y="49722" />
-		<node X="44986" Y="49597" />
-		<node X="44985" Y="49462" />
-		<node X="45032" Y="49336" />
-		<node X="45116" Y="49233" />
-		<node X="45233" Y="49165" />
-		<node X="45365" Y="49143" />
-		<node X="45498" Y="49166" />
-		<node X="45614" Y="49235" />
-		<node X="45700" Y="49336" />
-		<node X="45746" Y="49462" />
-		<node X="45747" Y="49596" />
-		<node X="45699" Y="49723" />
-		<node X="45614" Y="49825" />
-		<node X="45498" Y="49893" />
-		<node X="45366" Y="49914" />
+	<zone name="mother_tree_town" type="org.l2j.gameserver.world.zone.type.MotherTreeZone" form="Polygon" minZ="-3121" maxZ="-2921"> <!-- [21_19] -->
+		<property name="HpRegenBonus" value="2" />
+		<property name="MpRegenBonus" value="1" />
+		<property name="affectedRace" value="1" /> <!-- Elf -->
+		<property name="enterMsgId" value="114" />
+		<property name="leaveMsgId" value="115" />
+		<point x="45234" y="49892" />
+		<point x="45117" y="49826" />
+		<point x="45031" y="49722" />
+		<point x="44986" y="49597" />
+		<point x="44985" y="49462" />
+		<point x="45032" y="49336" />
+		<point x="45116" y="49233" />
+		<point x="45233" y="49165" />
+		<point x="45365" y="49143" />
+		<point x="45498" y="49166" />
+		<point x="45614" y="49235" />
+		<point x="45700" y="49336" />
+		<point x="45746" y="49462" />
+		<point x="45747" y="49596" />
+		<point x="45699" y="49723" />
+		<point x="45614" y="49825" />
+		<point x="45498" y="49893" />
+		<point x="45366" y="49914" />
 	</zone>
-	<zone name="20_19_worldtree" type="MotherTreeZone" shape="NPoly" minZ="-3745" maxZ="-3545">
-		<stat name="HpRegenBonus" val="2" />
-		<stat name="MpRegenBonus" val="1" />
-		<stat name="affectedRace" val="1" /> <!-- Elf -->
-		<stat name="enterMsgId" val="114" />
-		<stat name="leaveMsgId" val="115" />
-		<node X="21101" Y="50538" />
-		<node X="21511" Y="50683" />
-		<node X="21642" Y="51005" />
-		<node X="21583" Y="51349" />
-		<node X="21255" Y="51581" />
-		<node X="20852" Y="51473" />
-		<node X="20627" Y="51121" />
-		<node X="20728" Y="50743" />
+	<zone name="20_19_worldtree" type="org.l2j.gameserver.world.zone.type.MotherTreeZone" form="Polygon" minZ="-3745" maxZ="-3545">
+		<property name="HpRegenBonus" value="2" />
+		<property name="MpRegenBonus" value="1" />
+		<property name="affectedRace" value="1" /> <!-- Elf -->
+		<property name="enterMsgId" value="114" />
+		<property name="leaveMsgId" value="115" />
+		<point x="21101" y="50538" />
+		<point x="21511" y="50683" />
+		<point x="21642" y="51005" />
+		<point x="21583" y="51349" />
+		<point x="21255" y="51581" />
+		<point x="20852" y="51473" />
+		<point x="20627" y="51121" />
+		<point x="20728" y="50743" />
 	</zone>
-	<zone name="20_20_worldtree" type="MotherTreeZone" shape="NPoly" minZ="-3260" maxZ="-3060">
-		<stat name="HpRegenBonus" val="2" />
-		<stat name="MpRegenBonus" val="1" />
-		<stat name="affectedRace" val="1" /> <!-- Elf -->
-		<stat name="enterMsgId" val="114" />
-		<stat name="leaveMsgId" val="115" />
-		<node X="25548" Y="81124" />
-		<node X="25660" Y="81548" />
-		<node X="25380" Y="81884" />
-		<node X="24960" Y="81972" />
-		<node X="24660" Y="81716" />
-		<node X="24604" Y="81324" />
-		<node X="24816" Y="81012" />
-		<node X="25248" Y="80944" />
+	<zone name="20_20_worldtree" type="org.l2j.gameserver.world.zone.type.MotherTreeZone" form="Polygon" minZ="-3260" maxZ="-3060">
+		<property name="HpRegenBonus" value="2" />
+		<property name="MpRegenBonus" value="1" />
+		<property name="affectedRace" value="1" /> <!-- Elf -->
+		<property name="enterMsgId" value="114" />
+		<property name="leaveMsgId" value="115" />
+		<point x="25548" y="81124" />
+		<point x="25660" y="81548" />
+		<point x="25380" y="81884" />
+		<point x="24960" y="81972" />
+		<point x="24660" y="81716" />
+		<point x="24604" y="81324" />
+		<point x="24816" y="81012" />
+		<point x="25248" y="80944" />
 	</zone>
-	<zone name="21_20_worldtree" type="MotherTreeZone" shape="NPoly" minZ="-3775" maxZ="-3575">
-		<stat name="HpRegenBonus" val="2" />
-		<stat name="MpRegenBonus" val="1" />
-		<stat name="affectedRace" val="1" /> <!-- Elf -->
-		<stat name="enterMsgId" val="114" />
-		<stat name="leaveMsgId" val="115" />
-		<node X="57755" Y="85802" />
-		<node X="57974" Y="86079" />
-		<node X="57953" Y="86404" />
-		<node X="57711" Y="86683" />
-		<node X="57324" Y="86686" />
-		<node X="57105" Y="86436" />
-		<node X="57088" Y="86061" />
-		<node X="57404" Y="85785" />
+	<zone name="21_20_worldtree" type="org.l2j.gameserver.world.zone.type.MotherTreeZone" form="Polygon" minZ="-3775" maxZ="-3575">
+		<property name="HpRegenBonus" value="2" />
+		<property name="MpRegenBonus" value="1" />
+		<property name="affectedRace" value="1" /> <!-- Elf -->
+		<property name="enterMsgId" value="114" />
+		<property name="leaveMsgId" value="115" />
+		<point x="57755" y="85802" />
+		<point x="57974" y="86079" />
+		<point x="57953" y="86404" />
+		<point x="57711" y="86683" />
+		<point x="57324" y="86686" />
+		<point x="57105" y="86436" />
+		<point x="57088" y="86061" />
+		<point x="57404" y="85785" />
 	</zone>
 </list>

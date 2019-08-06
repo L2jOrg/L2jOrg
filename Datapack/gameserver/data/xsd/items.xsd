@@ -223,7 +223,7 @@
 	</xs:complexType>
 	<xs:complexType name="enchantType">
 		<xs:attribute name="order" type="xs:byte" use="optional" />
-		<xs:attribute name="stat" use="required" type="statType" />
+		<xs:attribute name="stat" use="required" type="Stat" />
 		<xs:attribute name="val" type="xs:integer" fixed="0" use="required" />
 	</xs:complexType>
 	<xs:complexType name="condType">
@@ -244,7 +244,7 @@
 				<xs:complexType>
 					<xs:simpleContent>
 						<xs:extension base="xs:string">
-							<xs:attribute type="statType" name="type" use="required" />
+							<xs:attribute type="Stat" name="type" use="required" />
 						</xs:extension>
 					</xs:simpleContent>
 				</xs:complexType>

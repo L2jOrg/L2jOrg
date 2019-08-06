@@ -34,7 +34,7 @@ public abstract class Zone extends ListenersContainer {
     protected static final Logger LOGGER = LoggerFactory.getLogger(Zone.class.getName());
 
     private final int _id;
-    protected ZoneForm _zone;
+    protected ZoneForm form;
     protected List<ZoneForm> _blockedZone;
     protected Map<Integer, Creature> _characterList = new ConcurrentHashMap<>();
     protected boolean _enabled;
@@ -232,10 +232,10 @@ public abstract class Zone extends ListenersContainer {
     /**
      * Returns this zones zone form.
      *
-     * @return {@link #_zone}
+     * @return {@link #form}
      */
-    public ZoneForm getZone() {
-        return _zone;
+    public ZoneForm getForm() {
+        return form;
     }
 
     /**
@@ -243,11 +243,11 @@ public abstract class Zone extends ListenersContainer {
      *
      * @param zone
      */
-    public void setZone(ZoneForm zone) {
-        if (_zone != null) {
+    public void setForm(ZoneForm zone) {
+        if (form != null) {
             throw new IllegalStateException("Zone already set");
         }
-        _zone = zone;
+        form = zone;
     }
 
     public List<ZoneForm> getBlockedZones() {
@@ -288,7 +288,7 @@ public abstract class Zone extends ListenersContainer {
      * @return
      */
     public boolean isInsideZone(int x, int y, int z) {
-        return _zone.isInsideZone(x, y, z) && !isInsideBannedZone(x, y, z);
+        return form.isInsideZone(x, y, z) && !isInsideBannedZone(x, y, z);
     }
 
     /**
@@ -309,7 +309,7 @@ public abstract class Zone extends ListenersContainer {
      * @return
      */
     public boolean isInsideZone(int x, int y) {
-        return isInsideZone(x, y, _zone.getHighZ());
+        return isInsideZone(x, y, form.getHighZ());
     }
 
     /**
@@ -333,11 +333,11 @@ public abstract class Zone extends ListenersContainer {
     }
 
     public double getDistanceToZone(int x, int y) {
-        return _zone.getDistanceToZone(x, y);
+        return form.getDistanceToZone(x, y);
     }
 
     public double getDistanceToZone(WorldObject object) {
-        return _zone.getDistanceToZone(object.getX(), object.getY());
+        return form.getDistanceToZone(object.getX(), object.getY());
     }
 
     public void revalidateInZone(Creature character) {
@@ -463,7 +463,7 @@ public abstract class Zone extends ListenersContainer {
     }
 
     public void visualizeZone(int z) {
-        _zone.visualizeZone(z);
+        form.visualizeZone(z);
     }
 
     public boolean isEnabled() {

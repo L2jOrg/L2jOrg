@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+		   targetNamespace="http://l2j.org"
+		   xmlns="http://l2j.org"
+		   elementFormDefault="qualified">
+
+	<xs:include schemaLocation="../xsd/common.xsd"/>
+
+	<xs:element name="list">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="zone" type="Zone" maxOccurs="unbounded"/>
+			</xs:sequence>
+			<xs:attribute name="enabled" type="xs:boolean" default="true" />
+		</xs:complexType>
+	</xs:element>
+
+	<xs:complexType name="Zone">
+		<xs:sequence>
+			<xs:element name="property" type="Property" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="point" type="Location" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="respawn" type="Respawn" maxOccurs="unbounded" minOccurs="0"/>
+			<xs:element name="spawn" type="Spawn" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+		<xs:attribute name="id" type="xs:positiveInteger" />
+		<xs:attribute name="name" type="xs:normalizedString"/>
+		<xs:attribute name="maxZ" type="xs:integer" use="required" />
+		<xs:attribute name="minZ" type="xs:integer" use="required" />
+		<xs:attribute name="form" type="ZoneForm" use="required"/>
+		<xs:attribute name="type" type="xs:token" use="required"/>
+		<xs:attribute name="radius" type="xs:positiveInteger" />
+	</xs:complexType>
+
+	<xs:complexType name="Property">
+		<xs:attribute name="name" use="required">
+			<xs:simpleType>
+				<xs:restriction base="xs:token">
+					<xs:enumeration value="affectedLvlMin" />
+					<xs:enumeration value="affectedRace" />
+					<xs:enumeration value="allowStore" />
+					<xs:enumeration value="castleId" />
+					<xs:enumeration value="chance" />
+					<xs:enumeration value="clanHallId" />
+					<xs:enumeration value="dmgHPSec" />
+					<xs:enumeration value="default_enabled" />
+					<xs:enumeration value="domainId" />
+					<xs:enumeration value="enterMsgId" />
+					<xs:enumeration value="eventId" />
+					<xs:enumeration value="fortId" />
+					<xs:enumeration value="HpRegenBonus" />
+					<xs:enumeration value="initialDelay" />
+					<xs:enumeration value="instanceId" />
+					<xs:enumeration value="instanceTemplate" />
+					<xs:enumeration value="InvadeTime" />
+					<xs:enumeration value="leaveMsgId" />
+					<xs:enumeration value="maxDynamicSkillCount" />
+					<xs:enumeration value="move_bonus" />
+					<xs:enumeration value="MpRegenBonus" />
+					<xs:enumeration value="NoBookmark" />
+					<xs:enumeration value="NoItemDrop" />
+					<xs:enumeration value="oustX" />
+					<xs:enumeration value="oustY" />
+					<xs:enumeration value="oustZ" />
+					<xs:enumeration value="residenceId" />
+					<xs:enumeration value="residenceZoneId" />
+					<xs:enumeration value="restartAllowedTime" />
+					<xs:enumeration value="restartTime" />
+					<xs:enumeration value="reuse" />
+					<xs:enumeration value="showDangerIcon" />
+					<xs:enumeration value="skillIdLvl" />
+					<xs:enumeration value="spawnMaxX" />
+					<xs:enumeration value="spawnMaxY" />
+					<xs:enumeration value="spawnMaxZ" />
+					<xs:enumeration value="spawnMinX" />
+					<xs:enumeration value="spawnMinY" />
+					<xs:enumeration value="spawnMinZ" />
+					<xs:enumeration value="spawnZ" />
+					<xs:enumeration value="targetClass" />
+					<xs:enumeration value="taxById" />
+					<xs:enumeration value="territoryId" />
+					<xs:enumeration value="townId" />
+					<xs:enumeration value="mapId" />
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name="value" type="xs:token" use="required" />
+	</xs:complexType>
+
+	<xs:complexType name="Spawn">
+		<xs:complexContent>
+			<xs:extension base="Location">
+				<xs:attribute name="type" type="SpawnType" />
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<xs:simpleType name="SpawnType">
+		<xs:restriction base="xs:token">
+			<xs:enumeration value="banish" />
+			<xs:enumeration value="blueBanishPoint" />
+			<xs:enumeration value="blueStartPoint" />
+			<xs:enumeration value="challenger" />
+			<xs:enumeration value="chaotic" />
+			<xs:enumeration value="entrance" />
+			<xs:enumeration value="other" />
+			<xs:enumeration value="redBanishPoint" />
+			<xs:enumeration value="redStartPoint" />
+			<xs:enumeration value="spectatorSpawn" />
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="ZoneForm">
+		<xs:restriction base="xs:token">
+			<xs:enumeration value="Cube" />
+			<xs:enumeration value="Cylinder" />
+			<xs:enumeration value="Polygon" />
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:complexType name="Respawn">
+		<xs:attribute name="region" type="xs:token" use="required" />
+		<xs:attribute name="race" type="Race" use="required" />
+	</xs:complexType>
+
+</xs:schema>

@@ -16,7 +16,7 @@
         <xs:attribute type="xs:int" name="count" default="1"/>
     </xs:complexType>
 
-    <xs:simpleType name="ElementalType">
+    <xs:simpleType name="Element">
         <xs:restriction base="xs:token">
             <xs:enumeration value="NONE"/>
             <xs:enumeration value="FIRE"/>
@@ -26,7 +26,23 @@
         </xs:restriction>
     </xs:simpleType>
 
-    <xs:simpleType name="statType">
+    <xs:simpleType name="Race">
+        <xs:restriction base="xs:token">
+            <xs:enumeration value="DARK_ELF" />
+            <xs:enumeration value="DWARF" />
+            <xs:enumeration value="ELF" />
+            <xs:enumeration value="HUMAN" />
+            <xs:enumeration value="ORC" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:complexType name="Location">
+        <xs:attribute name="x" type="xs:int" use="required"/>
+        <xs:attribute name="y" type="xs:int" use="required"/>
+        <xs:attribute name="z" type="xs:int"  default="0"/>
+    </xs:complexType>
+
+    <xs:simpleType name="Stat">
         <xs:restriction base="xs:token">
             <xs:enumeration value="mAtk" />
             <xs:enumeration value="mDef" />

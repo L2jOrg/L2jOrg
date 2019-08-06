@@ -65,6 +65,6 @@ public class WaterZone extends Zone {
     }
 
     public int getWaterZ() {
-        return getZone().getHighZ();
+        return getForm().getHighZ();
     }
 }

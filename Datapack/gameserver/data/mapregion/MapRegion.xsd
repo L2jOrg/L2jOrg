@@ -5,13 +5,15 @@
 		   xmlns="http://l2j.org"
 		   elementFormDefault="qualified">
 
+	<xs:include schemaLocation="../xsd/common.xsd"/>
+
 	<xs:element name="list">
 		<xs:complexType>
 			<xs:sequence>
 				<xs:element name="region" maxOccurs="unbounded">
 					<xs:complexType>
 						<xs:sequence>
-							<xs:element name="respawnPoint" type="RespawnType" maxOccurs="unbounded"/>
+							<xs:element name="respawnPoint" type="Respawn" maxOccurs="unbounded"/>
 							<xs:element name="map" minOccurs="0" maxOccurs="unbounded">
 								<xs:complexType>
 									<xs:attribute name="X" type="xs:integer" use="required" />
@@ -21,7 +23,7 @@
 							<xs:element name="banned" minOccurs="0" maxOccurs="unbounded">
 								<xs:complexType>
 									<xs:attribute name="point" type="xs:token" use="required" />
-									<xs:attribute name="race" type="RaceType" use="required"/>
+									<xs:attribute name="race" type="Race" use="required"/>
 								</xs:complexType>
 							</xs:element>
 						</xs:sequence>
@@ -36,26 +38,10 @@
 		</xs:complexType>
 	</xs:element>
 
-	<xs:simpleType name="RaceType">
-		<xs:restriction base="xs:token">
-			<xs:enumeration value="DARK_ELF" />
-			<xs:enumeration value="DWARF" />
-			<xs:enumeration value="ELF" />
-			<xs:enumeration value="HUMAN" />
-			<xs:enumeration value="ORC" />
-		</xs:restriction>
-	</xs:simpleType>
-
-	<xs:complexType name="Location">
-		<xs:attribute name="x" type="xs:int" use="required"/>
-		<xs:attribute name="y" type="xs:int" use="required"/>
-		<xs:attribute name="z" type="xs:int" use="required"/>
-	</xs:complexType>
-
-	<xs:complexType name="RespawnType">
+	<xs:complexType name="Respawn">
 		<xs:complexContent>
 			<xs:extension base="Location">
-				<xs:attribute name="isChaotic" type="xs:boolean" default="false"/>
+				<xs:attribute name="chaotic" type="xs:boolean" default="false"/>
 			</xs:extension>
 		</xs:complexContent>
 	</xs:complexType>

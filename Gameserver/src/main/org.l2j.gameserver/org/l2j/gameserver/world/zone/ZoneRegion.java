@@ -15,7 +15,7 @@ public class ZoneRegion {
     private final int _regionY;
     private final Map<Integer, Zone> _zones = new ConcurrentHashMap<>();
 
-    public ZoneRegion(int regionX, int regionY) {
+    ZoneRegion(int regionX, int regionY) {
         _regionX = regionX;
         _regionY = regionY;
     }

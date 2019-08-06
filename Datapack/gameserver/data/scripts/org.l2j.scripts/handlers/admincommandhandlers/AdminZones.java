@@ -38,7 +38,7 @@ import org.l2j.gameserver.model.events.returns.TerminateReturn;
 import org.l2j.gameserver.model.html.PageBuilder;
 import org.l2j.gameserver.model.html.PageResult;
 import org.l2j.gameserver.world.zone.Zone;
-import org.l2j.gameserver.world.zone.form.ZoneNPoly;
+import org.l2j.gameserver.world.zone.form.ZonePolygonForm;
 import org.l2j.gameserver.network.serverpackets.ConfirmDlg;
 import org.l2j.gameserver.network.serverpackets.ExServerPrimitive;
 import org.l2j.gameserver.network.serverpackets.ExShowTerritory;
@@ -256,7 +256,7 @@ public class AdminZones extends AbstractNpcAI implements IAdminCommandHandler
 		final List<Zone> zones = ZoneManager.getInstance().getZones(activeChar);
 		for (Zone zone : zones)
 		{
-			if (zone.getZone() instanceof ZoneNPoly)
+			if (zone.getForm() instanceof ZonePolygonForm)
 			{
 				sb.append("<tr>");
 				sb.append("<td fixwidth=200><a action=\"bypass -h admin_zones load " + zone.getName() + "\">" + zone.getName() + "</a></td>");
@@ -289,9 +289,9 @@ public class AdminZones extends AbstractNpcAI implements IAdminCommandHandler
 			}
 		}
 		
-		if ((zoneType != null) && (zoneType.getZone() instanceof ZoneNPoly))
+		if ((zoneType != null) && (zoneType.getForm() instanceof ZonePolygonForm))
 		{
-			final ZoneNPoly zone = (ZoneNPoly) zoneType.getZone();
+			final ZonePolygonForm zone = (ZonePolygonForm) zoneType.getForm();
 			final ZoneNodeHolder holder = _zones.computeIfAbsent(activeChar.getObjectId(), val -> new ZoneNodeHolder(activeChar));
 			holder.getNodes().clear();
 			holder.setName(zoneType.getName());

@@ -1,2264 +1,2264 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<list enabled="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/zones.xsd">
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org zones.xsd" >
 	<!-- Effect Zones -->
 	<!-- Sea of Spores -->
-	<zone name="spore_boss_poison_zone" type="EffectZone" shape="NPoly" minZ="-4468" maxZ="-4118"> <!-- [21_18] -->
-		<stat name="skillIdLvl" val="4070-1;" /> <!-- s_area_a_speed_down -->
-		<stat name="reuse" val="6000" /> <!-- Guess -->
-		<node X="43084" Y="15944" />
-		<node X="45140" Y="15816" />
-		<node X="45748" Y="17200" />
-		<node X="44504" Y="18780" />
-		<node X="43284" Y="18952" />
-		<node X="42476" Y="18164" />
-		<node X="42480" Y="16448" />
+	<zone name="spore_boss_poison_zone" type="org.l2j.gameserver.world.zone.type.EffectZone" form="Polygon" minZ="-4468" maxZ="-4118"> <!-- [21_18] -->
+		<property name="skillIdLvl" value="4070-1;" /> <!-- s_area_a_speed_down -->
+		<property name="reuse" value="6000" /> <!-- Guess -->
+		<point x="43084" y="15944" />
+		<point x="45140" y="15816" />
+		<point x="45748" y="17200" />
+		<point x="44504" y="18780" />
+		<point x="43284" y="18952" />
+		<point x="42476" y="18164" />
+		<point x="42480" y="16448" />
 	</zone>
 	<!-- Blazing Swamp -->
-	<zone name="fireswamp_1" type="EffectZone" shape="NPoly" minZ="-4752" maxZ="-4352"> <!-- [24_17] -->
-		<stat name="skillIdLvl" val="4150-1;" /> <!-- s_area_fire1 -->
+	<zone name="fireswamp_1" type="org.l2j.gameserver.world.zone.type.EffectZone" form="Polygon" minZ="-4752" maxZ="-4352"> <!-- [24_17] -->
+		<property name="skillIdLvl" value="4150-1;" /> <!-- s_area_fire1 -->
 		<!-- stat name="unitTick" val="30" / -->
-		<stat name="chance" val="50" />
-		<stat name="initialDelay" val="1000" />
-		<stat name="default_enabled" val="true" />
+		<property name="chance" value="50" />
+		<property name="initialDelay" value="1000" />
+		<property name="default_enabled" value="true" />
 		<!-- stat name="onTime" val="120" / -->
 		<!-- stat name="offTime" val="5" / -->
 		<!-- stat name="randomTime" val="15" / -->
-		<stat name="reuse" val="6000" /> <!-- Guess -->
-		<node X="141408" Y="-9676" />
-		<node X="142248" Y="-9284" />
-		<node X="142428" Y="-8732" />
-		<node X="142344" Y="-8256" />
-		<node X="142096" Y="-8136" />
-		<node X="141600" Y="-8444" />
-		<node X="141264" Y="-9352" />
+		<property name="reuse" value="6000" /> <!-- Guess -->
+		<point x="141408" y="-9676" />
+		<point x="142248" y="-9284" />
+		<point x="142428" y="-8732" />
+		<point x="142344" y="-8256" />
+		<point x="142096" y="-8136" />
+		<point x="141600" y="-8444" />
+		<point x="141264" y="-9352" />
 	</zone>
-	<zone name="fireswamp_2" type="EffectZone" shape="NPoly" minZ="-4908" maxZ="-4508"> <!-- [24_17] -->
-		<stat name="skillIdLvl" val="4150-1;" /> <!-- s_area_fire1 -->
+	<zone name="fireswamp_2" type="org.l2j.gameserver.world.zone.type.EffectZone" form="Polygon" minZ="-4908" maxZ="-4508"> <!-- [24_17] -->
+		<property name="skillIdLvl" value="4150-1;" /> <!-- s_area_fire1 -->
 		<!-- stat name="unitTick" val="30" / -->
-		<stat name="chance" val="50" />
-		<stat name="initialDelay" val="1000" />
-		<stat name="default_enabled" val="true" />
+		<property name="chance" value="50" />
+		<property name="initialDelay" value="1000" />
+		<property name="default_enabled" value="true" />
 		<!-- stat name="onTime" val="120" / -->
 		<!-- stat name="offTime" val="5" / -->
 		<!-- stat name="randomTime" val="15" / -->
-		<stat name="reuse" val="6000" /> <!-- Guess -->
-		<node X="143780" Y="-8144" />
-		<node X="144504" Y="-8484" />
-		<node X="145000" Y="-8064" />
-		<node X="144948" Y="-7372" />
-		<node X="144552" Y="-6872" />
-		<node X="144120" Y="-7076" />
-		<node X="143716" Y="-7672" />
+		<property name="reuse" value="6000" /> <!-- Guess -->
+		<point x="143780" y="-8144" />
+		<point x="144504" y="-8484" />
+		<point x="145000" y="-8064" />
+		<point x="144948" y="-7372" />
+		<point x="144552" y="-6872" />
+		<point x="144120" y="-7076" />
+		<point x="143716" y="-7672" />
 	</zone>
-	<zone name="fireswamp_3" type="EffectZone" shape="NPoly" minZ="-4776" maxZ="-4376"> <!-- [24_17] -->
-		<stat name="skillIdLvl" val="4150-1;" /> <!-- s_area_fire1 -->
+	<zone name="fireswamp_3" type="org.l2j.gameserver.world.zone.type.EffectZone" form="Polygon" minZ="-4776" maxZ="-4376"> <!-- [24_17] -->
+		<property name="skillIdLvl" value="4150-1;" /> <!-- s_area_fire1 -->
 		<!-- stat name="unitTick" val="30" / -->
-		<stat name="chance" val="50" />
-		<stat name="initialDelay" val="1000" />
-		<stat name="default_enabled" val="true" />
+		<property name="chance" value="50" />
+		<property name="initialDelay" value="1000" />
+		<property name="default_enabled" value="true" />
 		<!-- stat name="onTime" val="120" / -->
 		<!-- stat name="offTime" val="5" / -->
 		<!-- stat name="randomTime" val="15" / -->
-		<stat name="reuse" val="6000" /> <!-- Guess -->
-		<node X="144144" Y="-7020" />
-		<node X="144552" Y="-6836" />
-		<node X="144564" Y="-6324" />
-		<node X="144072" Y="-6280" />
+		<property name="reuse" value="6000" /> <!-- Guess -->
+		<point x="144144" y="-7020" />
+		<point x="144552" y="-6836" />
+		<point x="144564" y="-6324" />
+		<point x="144072" y="-6280" />
 	</zone>
-	<zone name="fireswamp_4" type="EffectZone" shape="NPoly" minZ="-4888" maxZ="-4288"> <!-- [24_17] -->
-		<stat name="skillIdLvl" val="4150-1;" /> <!-- s_area_fire1 -->
+	<zone name="fireswamp_4" type="org.l2j.gameserver.world.zone.type.EffectZone" form="Polygon" minZ="-4888" maxZ="-4288"> <!-- [24_17] -->
+		<property name="skillIdLvl" value="4150-1;" /> <!-- s_area_fire1 -->
 		<!-- stat name="unitTick" val="30" / -->
-		<stat name="chance" val="50" />
-		<stat name="initialDelay" val="1000" />
-		<stat name="default_enabled" val="true" />
+		<property name="chance" value="50" />
+		<property name="initialDelay" value="1000" />
+		<property name="default_enabled" value="true" />
 		<!-- stat name="onTime" val="120" / -->
 		<!-- stat name="offTime" val="5" / -->
 		<!-- stat name="randomTime" val="15" / -->
-		<stat name="reuse" val="6000" /> <!-- Guess -->
-		<node X="144060" Y="-6240" />
-		<node X="144548" Y="-6276" />
-		<node X="145416" Y="-5772" />
-		<node X="145292" Y="-4940" />
-		<node X="144208" Y="-5076" />
-		<node X="143920" Y="-5540" />
+		<property name="reuse" value="6000" /> <!-- Guess -->
+		<point x="144060" y="-6240" />
+		<point x="144548" y="-6276" />
+		<point x="145416" y="-5772" />
+		<point x="145292" y="-4940" />
+		<point x="144208" y="-5076" />
+		<point x="143920" y="-5540" />
 	</zone>
-	<zone name="fireswamp_5" type="EffectZone" shape="NPoly" minZ="-4672" maxZ="-4272"> <!-- [24_17] -->
-		<stat name="skillIdLvl" val="4150-1;" /> <!-- s_area_fire1 -->
+	<zone name="fireswamp_5" type="org.l2j.gameserver.world.zone.type.EffectZone" form="Polygon" minZ="-4672" maxZ="-4272"> <!-- [24_17] -->
+		<property name="skillIdLvl" value="4150-1;" /> <!-- s_area_fire1 -->
 		<!-- stat name="unitTick" val="30" / -->
-		<stat name="chance" val="50" />
-		<stat name="initialDelay" val="1000" />
-		<stat name="default_enabled" val="true" />
+		<property name="chance" value="50" />
+		<property name="initialDelay" value="1000" />
+		<property name="default_enabled" value="true" />
 		<!-- stat name="onTime" val="120" / -->
 		<!-- stat name="offTime" val="5" / -->
 		<!-- stat name="randomTime" val="15" / -->
-		<stat name="reuse" val="6000" /> <!-- Guess -->
-		<node X="148616" Y="-9208" />
-		<node X="149200" Y="-9492" />
-		<node X="149992" Y="-9472" />
-		<node X="149880" Y="-8348" />
-		<node X="148452" Y="-8308" />
-		<node X="148340" Y="-8600" />
+		<property name="reuse" value="6000" /> <!-- Guess -->
+		<point x="148616" y="-9208" />
+		<point x="149200" y="-9492" />
+		<point x="149992" y="-9472" />
+		<point x="149880" y="-8348" />
+		<point x="148452" y="-8308" />
+		<point x="148340" y="-8600" />
 	</zone>
-	<zone name="fireswamp_6" type="EffectZone" shape="NPoly" minZ="-4676" maxZ="-4276"> <!-- [24_17] -->
-		<stat name="skillIdLvl" val="4150-1;" /> <!-- s_area_fire1 -->
+	<zone name="fireswamp_6" type="org.l2j.gameserver.world.zone.type.EffectZone" form="Polygon" minZ="-4676" maxZ="-4276"> <!-- [24_17] -->
+		<property name="skillIdLvl" value="4150-1;" /> <!-- s_area_fire1 -->
 		<!-- stat name="unitTick" val="30" / -->
-		<stat name="chance" val="50" />
-		<stat name="initialDelay" val="1000" />
-		<stat name="default_enabled" val="true" />
+		<property name="chance" value="50" />
+		<property name="initialDelay" value="1000" />
+		<property name="default_enabled" value="true" />
 		<!-- stat name="onTime" val="120" / -->
 		<!-- stat name="offTime" val="5" / -->
 		<!-- stat name="randomTime" val="15" / -->
-		<stat name="reuse" val="6000" /> <!-- Guess -->
-		<node X="151636" Y="-8512" />
-		<node X="151592" Y="-8196" />
-		<node X="150644" Y="-7904" />
-		<node X="149912" Y="-8420" />
-		<node X="150040" Y="-9404" />
+		<property name="reuse" value="6000" /> <!-- Guess -->
+		<point x="151636" y="-8512" />
+		<point x="151592" y="-8196" />
+		<point x="150644" y="-7904" />
+		<point x="149912" y="-8420" />
+		<point x="150040" y="-9404" />
 	</zone>
-	<zone name="fireswamp_7" type="EffectZone" shape="NPoly" minZ="-4728" maxZ="-4328"> <!-- [24_17] -->
-		<stat name="skillIdLvl" val="4150-1;" /> <!-- s_area_fire1 -->
+	<zone name="fireswamp_7" type="org.l2j.gameserver.world.zone.type.EffectZone" form="Polygon" minZ="-4728" maxZ="-4328"> <!-- [24_17] -->
+		<property name="skillIdLvl" value="4150-1;" /> <!-- s_area_fire1 -->
 		<!-- stat name="unitTick" val="30" / -->
-		<stat name="chance" val="50" />
-		<stat name="initialDelay" val="1000" />
-		<stat name="default_enabled" val="true" />
+		<property name="chance" value="50" />
+		<property name="initialDelay" value="1000" />
+		<property name="default_enabled" value="true" />
 		<!-- stat name="onTime" val="120" / -->
 		<!-- stat name="offTime" val="5" / -->
 		<!-- stat name="randomTime" val="15" / -->
-		<stat name="reuse" val="6000" /> <!-- Guess -->
-		<node X="150728" Y="-10176" />
-		<node X="151352" Y="-10536" />
-		<node X="150404" Y="-9264" />
-		<node X="150072" Y="-9444" />
+		<property name="reuse" value="6000" /> <!-- Guess -->
+		<point x="150728" y="-10176" />
+		<point x="151352" y="-10536" />
+		<point x="150404" y="-9264" />
+		<point x="150072" y="-9444" />
 	</zone>
-	<zone name="fireswamp_8" type="EffectZone" shape="NPoly" minZ="-4636" maxZ="-4036"> <!-- [24_17] -->
-		<stat name="skillIdLvl" val="4150-1;" /> <!-- s_area_fire1 -->
+	<zone name="fireswamp_8" type="org.l2j.gameserver.world.zone.type.EffectZone" form="Polygon" minZ="-4636" maxZ="-4036"> <!-- [24_17] -->
+		<property name="skillIdLvl" value="4150-1;" /> <!-- s_area_fire1 -->
 		<!-- stat name="unitTick" val="30" / -->
-		<stat name="chance" val="50" />
-		<stat name="initialDelay" val="1000" />
-		<stat name="default_enabled" val="true" />
+		<property name="chance" value="50" />
+		<property name="initialDelay" value="1000" />
+		<property name="default_enabled" value="true" />
 		<!-- stat name="onTime" val="120" / -->
 		<!-- stat name="offTime" val="5" / -->
 		<!-- stat name="randomTime" val="15" / -->
-		<stat name="reuse" val="6000" /> <!-- Guess -->
-		<node X="151192" Y="-12588" />
-		<node X="151612" Y="-11884" />
-		<node X="151772" Y="-11248" />
-		<node X="151572" Y="-10860" />
+		<property name="reuse" value="6000" /> <!-- Guess -->
+		<point x="151192" y="-12588" />
+		<point x="151612" y="-11884" />
+		<point x="151772" y="-11248" />
+		<point x="151572" y="-10860" />
 	</zone>
-	<zone name="fireswamp_9" type="EffectZone" shape="NPoly" minZ="-4700" maxZ="-4300"> <!-- [24_17] -->
-		<stat name="skillIdLvl" val="4150-1;" /> <!-- s_area_fire1 -->
+	<zone name="fireswamp_9" type="org.l2j.gameserver.world.zone.type.EffectZone" form="Polygon" minZ="-4700" maxZ="-4300"> <!-- [24_17] -->
+		<property name="skillIdLvl" value="4150-1;" /> <!-- s_area_fire1 -->
 		<!-- stat name="unitTick" val="30" / -->
-		<stat name="chance" val="50" />
-		<stat name="initialDelay" val="1000" />
-		<stat name="default_enabled" val="true" />
+		<property name="chance" value="50" />
+		<property name="initialDelay" value="1000" />
+		<property name="default_enabled" value="true" />
 		<!-- stat name="onTime" val="120" / -->
 		<!-- stat name="offTime" val="5" / -->
 		<!-- stat name="randomTime" val="15" / -->
-		<stat name="reuse" val="6000" /> <!-- Guess -->
-		<node X="150456" Y="-15148" />
-		<node X="151760" Y="-15072" />
-		<node X="151556" Y="-13400" />
-		<node X="151148" Y="-12856" />
-		<node X="150384" Y="-13904" />
+		<property name="reuse" value="6000" /> <!-- Guess -->
+		<point x="150456" y="-15148" />
+		<point x="151760" y="-15072" />
+		<point x="151556" y="-13400" />
+		<point x="151148" y="-12856" />
+		<point x="150384" y="-13904" />
 	</zone>
-	<zone name="fireswamp_10" type="EffectZone" shape="NPoly" minZ="-4572" maxZ="-3972"> <!-- [24_17] -->
-		<stat name="skillIdLvl" val="4150-1;" /> <!-- s_area_fire1 -->
+	<zone name="fireswamp_10" type="org.l2j.gameserver.world.zone.type.EffectZone" form="Polygon" minZ="-4572" maxZ="-3972"> <!-- [24_17] -->
+		<property name="skillIdLvl" value="4150-1;" /> <!-- s_area_fire1 -->
 		<!-- stat name="unitTick" val="30" / -->
-		<stat name="chance" val="50" />
-		<stat name="initialDelay" val="1000" />
-		<stat name="default_enabled" val="true" />
+		<property name="chance" value="50" />
+		<property name="initialDelay" value="1000" />
+		<property name="default_enabled" value="true" />
 		<!-- stat name="onTime" val="120" / -->
 		<!-- stat name="offTime" val="5" / -->
 		<!-- stat name="randomTime" val="15" / -->
-		<stat name="reuse" val="6000" /> <!-- Guess -->
-		<node X="145032" Y="-15132" />
-		<node X="146108" Y="-15008" />
-		<node X="148212" Y="-11784" />
-		<node X="147528" Y="-10992" />
-		<node X="146000" Y="-11072" />
+		<property name="reuse" value="6000" /> <!-- Guess -->
+		<point x="145032" y="-15132" />
+		<point x="146108" y="-15008" />
+		<point x="148212" y="-11784" />
+		<point x="147528" y="-10992" />
+		<point x="146000" y="-11072" />
 	</zone>
-	<zone name="fireswamp_11" type="EffectZone" shape="NPoly" minZ="-4572" maxZ="-4172"> <!-- [24_17] -->
-		<stat name="skillIdLvl" val="4150-1;" /> <!-- s_area_fire1 -->
+	<zone name="fireswamp_11" type="org.l2j.gameserver.world.zone.type.EffectZone" form="Polygon" minZ="-4572" maxZ="-4172"> <!-- [24_17] -->
+		<property name="skillIdLvl" value="4150-1;" /> <!-- s_area_fire1 -->
 		<!-- stat name="unitTick" val="30" / -->
-		<stat name="chance" val="50" />
-		<stat name="initialDelay" val="1000" />
-		<stat name="default_enabled" val="true" />
+		<property name="chance" value="50" />
+		<property name="initialDelay" value="1000" />
+		<property name="default_enabled" value="true" />
 		<!-- stat name="onTime" val="120" / -->
 		<!-- stat name="offTime" val="5" / -->
 		<!-- stat name="randomTime" val="15" / -->
-		<stat name="reuse" val="6000" /> <!-- Guess -->
-		<node X="148288" Y="-14420" />
-		<node X="148432" Y="-14428" />
-		<node X="147984" Y="-12448" />
-		<node X="147228" Y="-13572" />
+		<property name="reuse" value="6000" /> <!-- Guess -->
+		<point x="148288" y="-14420" />
+		<point x="148432" y="-14428" />
+		<point x="147984" y="-12448" />
+		<point x="147228" y="-13572" />
 	</zone>
-	<zone name="fireswamp_12" type="EffectZone" shape="NPoly" minZ="-4476" maxZ="-2976"> <!-- [24_17] -->
-		<stat name="skillIdLvl" val="4150-1;" /> <!-- s_area_fire1 -->
+	<zone name="fireswamp_12" type="org.l2j.gameserver.world.zone.type.EffectZone" form="Polygon" minZ="-4476" maxZ="-2976"> <!-- [24_17] -->
+		<property name="skillIdLvl" value="4150-1;" /> <!-- s_area_fire1 -->
 		<!-- stat name="unitTick" val="30" / -->
-		<stat name="chance" val="50" />
-		<stat name="initialDelay" val="1000" />
-		<stat name="default_enabled" val="true" />
+		<property name="chance" value="50" />
+		<property name="initialDelay" value="1000" />
+		<property name="default_enabled" value="true" />
 		<!-- stat name="onTime" val="120" / -->
 		<!-- stat name="offTime" val="5" / -->
 		<!-- stat name="randomTime" val="15" / -->
-		<stat name="reuse" val="6000" /> <!-- Guess -->
-		<node X="146120" Y="-18720" />
-		<node X="146276" Y="-18884" />
-		<node X="145976" Y="-15072" />
-		<node X="145056" Y="-15200" />
+		<property name="reuse" value="6000" /> <!-- Guess -->
+		<point x="146120" y="-18720" />
+		<point x="146276" y="-18884" />
+		<point x="145976" y="-15072" />
+		<point x="145056" y="-15200" />
 	</zone>
-	<zone name="fireswamp_13" type="EffectZone" shape="NPoly" minZ="-4604" maxZ="-4204"> <!-- [24_17] -->
-		<stat name="skillIdLvl" val="4150-1;" /> <!-- s_area_fire1 -->
+	<zone name="fireswamp_13" type="org.l2j.gameserver.world.zone.type.EffectZone" form="Polygon" minZ="-4604" maxZ="-4204"> <!-- [24_17] -->
+		<property name="skillIdLvl" value="4150-1;" /> <!-- s_area_fire1 -->
 		<!-- stat name="unitTick" val="30" / -->
-		<stat name="chance" val="50" />
-		<stat name="initialDelay" val="1000" />
-		<stat name="default_enabled" val="true" />
+		<property name="chance" value="50" />
+		<property name="initialDelay" value="1000" />
+		<property name="default_enabled" value="true" />
 		<!-- stat name="onTime" val="120" / -->
 		<!-- stat name="offTime" val="5" / -->
 		<!-- stat name="randomTime" val="15" / -->
-		<stat name="reuse" val="6000" /> <!-- Guess -->
-		<node X="140616" Y="-16808" />
-		<node X="143708" Y="-17160" />
-		<node X="143152" Y="-16000" />
-		<node X="141268" Y="-15872" />
+		<property name="reuse" value="6000" /> <!-- Guess -->
+		<point x="140616" y="-16808" />
+		<point x="143708" y="-17160" />
+		<point x="143152" y="-16000" />
+		<point x="141268" y="-15872" />
 	</zone>
-	<zone name="fireswamp_14" type="EffectZone" shape="NPoly" minZ="-3476" maxZ="-3076"> <!-- [24_17] -->
-		<stat name="skillIdLvl" val="4150-1;" /> <!-- s_area_fire1 -->
+	<zone name="fireswamp_14" type="org.l2j.gameserver.world.zone.type.EffectZone" form="Polygon" minZ="-3476" maxZ="-3076"> <!-- [24_17] -->
+		<property name="skillIdLvl" value="4150-1;" /> <!-- s_area_fire1 -->
 		<!-- stat name="unitTick" val="30" / -->
-		<stat name="chance" val="50" />
-		<stat name="initialDelay" val="1000" />
-		<stat name="default_enabled" val="true" />
+		<property name="chance" value="50" />
+		<property name="initialDelay" value="1000" />
+		<property name="default_enabled" value="true" />
 		<!-- stat name="onTime" val="120" / -->
 		<!-- stat name="offTime" val="5" / -->
 		<!-- stat name="randomTime" val="15" / -->
-		<stat name="reuse" val="6000" /> <!-- Guess -->
-		<node X="148892" Y="-23044" />
-		<node X="149160" Y="-22280" />
-		<node X="148292" Y="-21148" />
-		<node X="148080" Y="-21508" />
-		<node X="147584" Y="-24204" />
-		<node X="147948" Y="-24056" />
+		<property name="reuse" value="6000" /> <!-- Guess -->
+		<point x="148892" y="-23044" />
+		<point x="149160" y="-22280" />
+		<point x="148292" y="-21148" />
+		<point x="148080" y="-21508" />
+		<point x="147584" y="-24204" />
+		<point x="147948" y="-24056" />
 	</zone>
-	<zone name="fireswamp_15" type="EffectZone" shape="NPoly" minZ="-3208" maxZ="-1608"> <!-- [24_17] -->
-		<stat name="skillIdLvl" val="4150-1;" /> <!-- s_area_fire1 -->
+	<zone name="fireswamp_15" type="org.l2j.gameserver.world.zone.type.EffectZone" form="Polygon" minZ="-3208" maxZ="-1608"> <!-- [24_17] -->
+		<property name="skillIdLvl" value="4150-1;" /> <!-- s_area_fire1 -->
 		<!-- stat name="unitTick" val="30" / -->
-		<stat name="chance" val="50" />
-		<stat name="initialDelay" val="1000" />
-		<stat name="default_enabled" val="true" />
+		<property name="chance" value="50" />
+		<property name="initialDelay" value="1000" />
+		<property name="default_enabled" value="true" />
 		<!-- stat name="onTime" val="120" / -->
 		<!-- stat name="offTime" val="5" / -->
 		<!-- stat name="randomTime" val="15" / -->
-		<stat name="reuse" val="6000" /> <!-- Guess -->
-		<node X="143804" Y="-27456" />
-		<node X="147168" Y="-25768" />
-		<node X="147164" Y="-25372" />
-		<node X="143308" Y="-26812" />
+		<property name="reuse" value="6000" /> <!-- Guess -->
+		<point x="143804" y="-27456" />
+		<point x="147168" y="-25768" />
+		<point x="147164" y="-25372" />
+		<point x="143308" y="-26812" />
 	</zone>
 	<!-- 4 Sepulchers -->
-	<zone name="conquerors_weakness" type="EffectZone" shape="NPoly" minZ="-7260" maxZ="-7010"> <!-- [25_15] -->
-		<stat name="skillIdLvl" val="4146-3;" /> <!-- s_area_pd_down3 -->
-		<stat name="chance" val="70" />
+	<zone name="conquerors_weakness" type="org.l2j.gameserver.world.zone.type.EffectZone" form="Polygon" minZ="-7260" maxZ="-7010"> <!-- [25_15] -->
+		<property name="skillIdLvl" value="4146-3;" /> <!-- s_area_pd_down3 -->
+		<property name="chance" value="70" />
 		<!-- stat name="unitTick" val="5" / -->
-		<stat name="default_enabled" val="false" />
-		<stat name="reuse" val="5000" /> <!-- Guess -->
-		<node X="186739" Y="-86322" />
-		<node X="190108" Y="-86335" />
-		<node X="190110" Y="-84794" />
-		<node X="186736" Y="-84786" />
+		<property name="default_enabled" value="false" />
+		<property name="reuse" value="5000" /> <!-- Guess -->
+		<point x="186739" y="-86322" />
+		<point x="190108" y="-86335" />
+		<point x="190110" y="-84794" />
+		<point x="186736" y="-84786" />
 	</zone>
-	<zone name="conquerors_pddown" type="EffectZone" shape="NPoly" minZ="-7260" maxZ="-7010"> <!-- [25_15] -->
-		<stat name="skillIdLvl" val="4145-3;" /> <!-- s_area_pa_down3 -->
-		<stat name="chance" val="70" />
+	<zone name="conquerors_pddown" type="org.l2j.gameserver.world.zone.type.EffectZone" form="Polygon" minZ="-7260" maxZ="-7010"> <!-- [25_15] -->
+		<property name="skillIdLvl" value="4145-3;" /> <!-- s_area_pa_down3 -->
+		<property name="chance" value="70" />
 		<!-- stat name="unitTick" val="5" / -->
-		<stat name="default_enabled" val="false" />
-		<stat name="reuse" val="5000" /> <!-- Guess -->
-		<node X="186739" Y="-86322" />
-		<node X="190108" Y="-86335" />
-		<node X="190110" Y="-84794" />
-		<node X="186736" Y="-84786" />
+		<property name="default_enabled" value="false" />
+		<property name="reuse" value="5000" /> <!-- Guess -->
+		<point x="186739" y="-86322" />
+		<point x="190108" y="-86335" />
+		<point x="190110" y="-84794" />
+		<point x="186736" y="-84786" />
 	</zone>
-	<zone name="conquerors_poison" type="EffectZone" shape="NPoly" minZ="-7260" maxZ="-7010"> <!-- [25_15] -->
-		<stat name="skillIdLvl" val="4148-9;" /> <!-- s_area_poison9 -->
-		<stat name="chance" val="70" />
+	<zone name="conquerors_poison" type="org.l2j.gameserver.world.zone.type.EffectZone" form="Polygon" minZ="-7260" maxZ="-7010"> <!-- [25_15] -->
+		<property name="skillIdLvl" value="4148-9;" /> <!-- s_area_poison9 -->
+		<property name="chance" value="70" />
 		<!-- stat name="unitTick" val="5" / -->
-		<stat name="default_enabled" val="false" />
-		<stat name="reuse" val="5000" /> <!-- Guess -->
-		<node X="186739" Y="-86322" />
-		<node X="190108" Y="-86335" />
-		<node X="190110" Y="-84794" />
-		<node X="186736" Y="-84786" />
+		<property name="default_enabled" value="false" />
+		<property name="reuse" value="5000" /> <!-- Guess -->
+		<point x="186739" y="-86322" />
+		<point x="190108" y="-86335" />
+		<point x="190110" y="-84794" />
+		<point x="186736" y="-84786" />
 	</zone>
-	<zone name="conquerors_nonheal" type="EffectZone" shape="NPoly" minZ="-7260" maxZ="-7010"> <!-- [25_15] -->
-		<stat name="skillIdLvl" val="4624-9;" /> <!-- s_area_disease9 -->
-		<stat name="chance" val="70" />
+	<zone name="conquerors_nonheal" type="org.l2j.gameserver.world.zone.type.EffectZone" form="Polygon" minZ="-7260" maxZ="-7010"> <!-- [25_15] -->
+		<property name="skillIdLvl" value="4624-9;" /> <!-- s_area_disease9 -->
+		<property name="chance" value="70" />
 		<!-- stat name="unitTick" val="5" / -->
-		<stat name="default_enabled" val="false" />
-		<stat name="reuse" val="5000" /> <!-- Guess -->
-		<node X="186739" Y="-86322" />
-		<node X="190108" Y="-86335" />
-		<node X="190110" Y="-84794" />
-		<node X="186736" Y="-84786" />
+		<property name="default_enabled" value="false" />
+		<property name="reuse" value="5000" /> <!-- Guess -->
+		<point x="186739" y="-86322" />
+		<point x="190108" y="-86335" />
+		<point x="190110" y="-84794" />
+		<point x="186736" y="-84786" />
 	</zone>
-	<zone name="lords_weakness" type="EffectZone" shape="NPoly" minZ="-7265" maxZ="-7015"> <!-- [25_15] -->
-		<stat name="skillIdLvl" val="4146-3;" /> <!-- s_area_pd_down3 -->
-		<stat name="chance" val="70" />
+	<zone name="lords_weakness" type="org.l2j.gameserver.world.zone.type.EffectZone" form="Polygon" minZ="-7265" maxZ="-7015"> <!-- [25_15] -->
+		<property name="skillIdLvl" value="4146-3;" /> <!-- s_area_pd_down3 -->
+		<property name="chance" value="70" />
 		<!-- stat name="unitTick" val="5" / -->
-		<stat name="default_enabled" val="false" />
-		<stat name="reuse" val="5000" /> <!-- Guess -->
-		<node X="185028" Y="-89729" />
-		<node X="188398" Y="-89741" />
-		<node X="188400" Y="-88200" />
-		<node X="185026" Y="-88192" />
+		<property name="default_enabled" value="false" />
+		<property name="reuse" value="5000" /> <!-- Guess -->
+		<point x="185028" y="-89729" />
+		<point x="188398" y="-89741" />
+		<point x="188400" y="-88200" />
+		<point x="185026" y="-88192" />
 	</zone>
-	<zone name="lords_pddown" type="EffectZone" shape="NPoly" minZ="-7265" maxZ="-7015"> <!-- [25_15] -->
-		<stat name="skillIdLvl" val="4145-3;" /> <!-- s_area_pa_down3 -->
-		<stat name="chance" val="70" />
+	<zone name="lords_pddown" type="org.l2j.gameserver.world.zone.type.EffectZone" form="Polygon" minZ="-7265" maxZ="-7015"> <!-- [25_15] -->
+		<property name="skillIdLvl" value="4145-3;" /> <!-- s_area_pa_down3 -->
+		<property name="chance" value="70" />
 		<!-- stat name="unitTick" val="5" / -->
-		<stat name="default_enabled" val="false" />
-		<stat name="reuse" val="5000" /> <!-- Guess -->
-		<node X="185028" Y="-89729" />
-		<node X="188398" Y="-89741" />
-		<node X="188400" Y="-88200" />
-		<node X="185026" Y="-88192" />
+		<property name="default_enabled" value="false" />
+		<property name="reuse" value="5000" /> <!-- Guess -->
+		<point x="185028" y="-89729" />
+		<point x="188398" y="-89741" />
+		<point x="188400" y="-88200" />
+		<point x="185026" y="-88192" />
 	</zone>
-	<zone name="lords_poison" type="EffectZone" shape="NPoly" minZ="-7265" maxZ="-7015"> <!-- [25_15] -->
-		<stat name="skillIdLvl" val="4148-9;" /> <!-- s_area_poison9 -->
-		<stat name="chance" val="70" />
+	<zone name="lords_poison" type="org.l2j.gameserver.world.zone.type.EffectZone" form="Polygon" minZ="-7265" maxZ="-7015"> <!-- [25_15] -->
+		<property name="skillIdLvl" value="4148-9;" /> <!-- s_area_poison9 -->
+		<property name="chance" value="70" />
 		<!-- stat name="unitTick" val="5" / -->
-		<stat name="default_enabled" val="false" />
-		<stat name="reuse" val="5000" /> <!-- Guess -->
-		<node X="185028" Y="-89729" />
-		<node X="188398" Y="-89741" />
-		<node X="188400" Y="-88200" />
-		<node X="185026" Y="-88192" />
+		<property name="default_enabled" value="false" />
+		<property name="reuse" value="5000" /> <!-- Guess -->
+		<point x="185028" y="-89729" />
+		<point x="188398" y="-89741" />
+		<point x="188400" y="-88200" />
+		<point x="185026" y="-88192" />
 	</zone>
-	<zone name="lords_nonheal" type="EffectZone" shape="NPoly" minZ="-7265" maxZ="-7015"> <!-- [25_15] -->
-		<stat name="skillIdLvl" val="4624-9;" /> <!-- s_area_disease9 -->
-		<stat name="chance" val="70" />
+	<zone name="lords_nonheal" type="org.l2j.gameserver.world.zone.type.EffectZone" form="Polygon" minZ="-7265" maxZ="-7015"> <!-- [25_15] -->
+		<property name="skillIdLvl" value="4624-9;" /> <!-- s_area_disease9 -->
+		<property name="chance" value="70" />
 		<!-- stat name="unitTick" val="5" / -->
-		<stat name="default_enabled" val="false" />
-		<stat name="reuse" val="5000" /> <!-- Guess -->
-		<node X="185028" Y="-89729" />
-		<node X="188398" Y="-89741" />
-		<node X="188400" Y="-88200" />
-		<node X="185026" Y="-88192" />
+		<property name="default_enabled" value="false" />
+		<property name="reuse" value="5000" /> <!-- Guess -->
+		<point x="185028" y="-89729" />
+		<point x="188398" y="-89741" />
+		<point x="188400" y="-88200" />
+		<point x="185026" y="-88192" />
 	</zone>
-	<zone name="savants_weakness" type="EffectZone" shape="NPoly" minZ="-7262" maxZ="-7012"> <!-- [25_15] -->
-		<stat name="skillIdLvl" val="4146-3;" /> <!-- s_area_pd_down3 -->
-		<stat name="chance" val="70" />
+	<zone name="savants_weakness" type="org.l2j.gameserver.world.zone.type.EffectZone" form="Polygon" minZ="-7262" maxZ="-7012"> <!-- [25_15] -->
+		<property name="skillIdLvl" value="4146-3;" /> <!-- s_area_pd_down3 -->
+		<property name="chance" value="70" />
 		<!-- stat name="unitTick" val="5" / -->
-		<stat name="default_enabled" val="false" />
-		<stat name="reuse" val="5000" /> <!-- Guess -->
-		<node X="172411" Y="-81083" />
-		<node X="173942" Y="-81073" />
-		<node X="173931" Y="-77639" />
-		<node X="172418" Y="-77644" />
+		<property name="default_enabled" value="false" />
+		<property name="reuse" value="5000" /> <!-- Guess -->
+		<point x="172411" y="-81083" />
+		<point x="173942" y="-81073" />
+		<point x="173931" y="-77639" />
+		<point x="172418" y="-77644" />
 	</zone>
-	<zone name="savants_pddown" type="EffectZone" shape="NPoly" minZ="-7262" maxZ="-7012"> <!-- [25_15] -->
-		<stat name="skillIdLvl" val="4145-3;" /> <!-- s_area_pa_down3 -->
-		<stat name="chance" val="70" />
+	<zone name="savants_pddown" type="org.l2j.gameserver.world.zone.type.EffectZone" form="Polygon" minZ="-7262" maxZ="-7012"> <!-- [25_15] -->
+		<property name="skillIdLvl" value="4145-3;" /> <!-- s_area_pa_down3 -->
+		<property name="chance" value="70" />
 		<!-- stat name="unitTick" val="5" / -->
-		<stat name="default_enabled" val="false" />
-		<stat name="reuse" val="5000" /> <!-- Guess -->
-		<node X="172411" Y="-81083" />
-		<node X="173942" Y="-81073" />
-		<node X="173931" Y="-77639" />
-		<node X="172418" Y="-77644" />
+		<property name="default_enabled" value="false" />
+		<property name="reuse" value="5000" /> <!-- Guess -->
+		<point x="172411" y="-81083" />
+		<point x="173942" y="-81073" />
+		<point x="173931" y="-77639" />
+		<point x="172418" y="-77644" />
 	</zone>
-	<zone name="savants_poison" type="EffectZone" shape="NPoly" minZ="-7262" maxZ="-7012"> <!-- [25_15] -->
-		<stat name="skillIdLvl" val="4148-9;" /> <!-- s_area_poison9 -->
-		<stat name="chance" val="70" />
+	<zone name="savants_poison" type="org.l2j.gameserver.world.zone.type.EffectZone" form="Polygon" minZ="-7262" maxZ="-7012"> <!-- [25_15] -->
+		<property name="skillIdLvl" value="4148-9;" /> <!-- s_area_poison9 -->
+		<property name="chance" value="70" />
 		<!-- stat name="unitTick" val="5" / -->
-		<stat name="default_enabled" val="false" />
-		<stat name="reuse" val="5000" /> <!-- Guess -->
-		<node X="172411" Y="-81083" />
-		<node X="173942" Y="-81073" />
-		<node X="173931" Y="-77639" />
-		<node X="172418" Y="-77644" />
+		<property name="default_enabled" value="false" />
+		<property name="reuse" value="5000" /> <!-- Guess -->
+		<point x="172411" y="-81083" />
+		<point x="173942" y="-81073" />
+		<point x="173931" y="-77639" />
+		<point x="172418" y="-77644" />
 	</zone>
-	<zone name="savants_nonheal" type="EffectZone" shape="NPoly" minZ="-7262" maxZ="-7012"> <!-- [25_15] -->
-		<stat name="skillIdLvl" val="4624-9;" /> <!-- s_area_disease9 -->
-		<stat name="chance" val="70" />
+	<zone name="savants_nonheal" type="org.l2j.gameserver.world.zone.type.EffectZone" form="Polygon" minZ="-7262" maxZ="-7012"> <!-- [25_15] -->
+		<property name="skillIdLvl" value="4624-9;" /> <!-- s_area_disease9 -->
+		<property name="chance" value="70" />
 		<!-- stat name="unitTick" val="5" / -->
-		<stat name="default_enabled" val="false" />
-		<stat name="reuse" val="5000" /> <!-- Guess -->
-		<node X="172411" Y="-81083" />
-		<node X="173942" Y="-81073" />
-		<node X="173931" Y="-77639" />
-		<node X="172418" Y="-77644" />
+		<property name="default_enabled" value="false" />
+		<property name="reuse" value="5000" /> <!-- Guess -->
+		<point x="172411" y="-81083" />
+		<point x="173942" y="-81073" />
+		<point x="173931" y="-77639" />
+		<point x="172418" y="-77644" />
 	</zone>
-	<zone name="magistrates_weakness" type="EffectZone" shape="NPoly" minZ="-7262" maxZ="-7012"> <!-- [25_15] -->
-		<stat name="skillIdLvl" val="4146-3;" /> <!-- s_area_pd_down3 -->
-		<stat name="chance" val="70" />
+	<zone name="magistrates_weakness" type="org.l2j.gameserver.world.zone.type.EffectZone" form="Polygon" minZ="-7262" maxZ="-7012"> <!-- [25_15] -->
+		<property name="skillIdLvl" value="4146-3;" /> <!-- s_area_pd_down3 -->
+		<property name="chance" value="70" />
 		<!-- stat name="unitTick" val="5" / -->
-		<stat name="default_enabled" val="false" />
-		<stat name="reuse" val="5000" /> <!-- Guess -->
-		<node X="174822" Y="-77261" />
-		<node X="176354" Y="-77251" />
-		<node X="176342" Y="-73817" />
-		<node X="174829" Y="-73822" />
+		<property name="default_enabled" value="false" />
+		<property name="reuse" value="5000" /> <!-- Guess -->
+		<point x="174822" y="-77261" />
+		<point x="176354" y="-77251" />
+		<point x="176342" y="-73817" />
+		<point x="174829" y="-73822" />
 	</zone>
-	<zone name="magistrates_pddown" type="EffectZone" shape="NPoly" minZ="-7262" maxZ="-7012"> <!-- [25_15] -->
-		<stat name="skillIdLvl" val="4145-3;" /> <!-- s_area_pa_down3 -->
-		<stat name="chance" val="70" />
+	<zone name="magistrates_pddown" type="org.l2j.gameserver.world.zone.type.EffectZone" form="Polygon" minZ="-7262" maxZ="-7012"> <!-- [25_15] -->
+		<property name="skillIdLvl" value="4145-3;" /> <!-- s_area_pa_down3 -->
+		<property name="chance" value="70" />
 		<!-- stat name="unitTick" val="5" / -->
-		<stat name="default_enabled" val="false" />
-		<stat name="reuse" val="5000" /> <!-- Guess -->
-		<node X="174822" Y="-77261" />
-		<node X="176354" Y="-77251" />
-		<node X="176342" Y="-73817" />
-		<node X="174829" Y="-73822" />
+		<property name="default_enabled" value="false" />
+		<property name="reuse" value="5000" /> <!-- Guess -->
+		<point x="174822" y="-77261" />
+		<point x="176354" y="-77251" />
+		<point x="176342" y="-73817" />
+		<point x="174829" y="-73822" />
 	</zone>
-	<zone name="magistrates_poison" type="EffectZone" shape="NPoly" minZ="-7262" maxZ="-7012"> <!-- [25_15] -->
-		<stat name="skillIdLvl" val="4148-9;" /> <!-- s_area_poison9 -->
-		<stat name="chance" val="70" />
+	<zone name="magistrates_poison" type="org.l2j.gameserver.world.zone.type.EffectZone" form="Polygon" minZ="-7262" maxZ="-7012"> <!-- [25_15] -->
+		<property name="skillIdLvl" value="4148-9;" /> <!-- s_area_poison9 -->
+		<property name="chance" value="70" />
 		<!-- stat name="unitTick" val="5" / -->
-		<stat name="default_enabled" val="false" />
-		<stat name="reuse" val="5000" /> <!-- Guess -->
-		<node X="174822" Y="-77261" />
-		<node X="176354" Y="-77251" />
-		<node X="176342" Y="-73817" />
-		<node X="174829" Y="-73822" />
+		<property name="default_enabled" value="false" />
+		<property name="reuse" value="5000" /> <!-- Guess -->
+		<point x="174822" y="-77261" />
+		<point x="176354" y="-77251" />
+		<point x="176342" y="-73817" />
+		<point x="174829" y="-73822" />
 	</zone>
-	<zone name="magistrates_nonheal" type="EffectZone" shape="NPoly" minZ="-7262" maxZ="-7012"> <!-- [25_15] -->
-		<stat name="skillIdLvl" val="4624-9;" /> <!-- s_area_disease9 -->
-		<stat name="chance" val="70" />
+	<zone name="magistrates_nonheal" type="org.l2j.gameserver.world.zone.type.EffectZone" form="Polygon" minZ="-7262" maxZ="-7012"> <!-- [25_15] -->
+		<property name="skillIdLvl" value="4624-9;" /> <!-- s_area_disease9 -->
+		<property name="chance" value="70" />
 		<!-- stat name="unitTick" val="5" / -->
-		<stat name="default_enabled" val="false" />
-		<stat name="reuse" val="5000" /> <!-- Guess -->
-		<node X="174822" Y="-77261" />
-		<node X="176354" Y="-77251" />
-		<node X="176342" Y="-73817" />
-		<node X="174829" Y="-73822" />
+		<property name="default_enabled" value="false" />
+		<property name="reuse" value="5000" /> <!-- Guess -->
+		<point x="174822" y="-77261" />
+		<point x="176354" y="-77251" />
+		<point x="176342" y="-73817" />
+		<point x="174829" y="-73822" />
 	</zone>
 	<!-- Hot Springs -->
 	<!-- Hot Fantasy -->
-	<zone name="spa_11" type="EffectZone" shape="NPoly" minZ="-3634" maxZ="-3434"> <!-- [24_14] -->
-		<stat name="skillIdLvl" val="4559-1;" /> <!-- s_spa_big_head -->
-		<stat name="chance" val="100" />
+	<zone name="spa_11" type="org.l2j.gameserver.world.zone.type.EffectZone" form="Polygon" minZ="-3634" maxZ="-3434"> <!-- [24_14] -->
+		<property name="skillIdLvl" value="4559-1;" /> <!-- s_spa_big_head -->
+		<property name="chance" value="100" />
 		<!-- stat name="unitTick" val="5" / -->
-		<stat name="initialDelay" val="1000" />
-		<stat name="default_enabled" val="true" />
-		<stat name="reuse" val="3000" /> <!-- Guess -->
-		<node X="141249" Y="-109636" />
-		<node X="141473" Y="-109798" />
-		<node X="141739" Y="-109821" />
-		<node X="141924" Y="-109669" />
-		<node X="142038" Y="-109397" />
-		<node X="141852" Y="-109130" />
-		<node X="141604" Y="-109051" />
-		<node X="141321" Y="-109091" />
-		<node X="141213" Y="-109266" />
+		<property name="initialDelay" value="1000" />
+		<property name="default_enabled" value="true" />
+		<property name="reuse" value="3000" /> <!-- Guess -->
+		<point x="141249" y="-109636" />
+		<point x="141473" y="-109798" />
+		<point x="141739" y="-109821" />
+		<point x="141924" y="-109669" />
+		<point x="142038" y="-109397" />
+		<point x="141852" y="-109130" />
+		<point x="141604" y="-109051" />
+		<point x="141321" y="-109091" />
+		<point x="141213" y="-109266" />
 	</zone>
-	<zone name="spa_21" type="EffectZone" shape="NPoly" minZ="-3668" maxZ="-3468"> <!-- [24_14] -->
-		<stat name="skillIdLvl" val="4559-1;" /> <!-- s_spa_big_head -->
-		<stat name="chance" val="70" />
+	<zone name="spa_21" type="org.l2j.gameserver.world.zone.type.EffectZone" form="Polygon" minZ="-3668" maxZ="-3468"> <!-- [24_14] -->
+		<property name="skillIdLvl" value="4559-1;" /> <!-- s_spa_big_head -->
+		<property name="chance" value="70" />
 		<!-- stat name="unitTick" val="5" / -->
-		<stat name="initialDelay" val="1000" />
-		<stat name="default_enabled" val="true" />
-		<stat name="reuse" val="3000" /> <!-- Guess -->
-		<node X="140174" Y="-105832" />
-		<node X="140490" Y="-105875" />
-		<node X="140962" Y="-105738" />
-		<node X="141039" Y="-105378" />
-		<node X="140872" Y="-105119" />
-		<node X="140081" Y="-105295" />
+		<property name="initialDelay" value="1000" />
+		<property name="default_enabled" value="true" />
+		<property name="reuse" value="3000" /> <!-- Guess -->
+		<point x="140174" y="-105832" />
+		<point x="140490" y="-105875" />
+		<point x="140962" y="-105738" />
+		<point x="141039" y="-105378" />
+		<point x="140872" y="-105119" />
+		<point x="140081" y="-105295" />
 	</zone>
-	<zone name="spa_31" type="EffectZone" shape="NPoly" minZ="-3724" maxZ="-3524"> <!-- [24_14] -->
-		<stat name="skillIdLvl" val="4559-1;" /> <!-- s_spa_big_head -->
-		<stat name="chance" val="70" />
+	<zone name="spa_31" type="org.l2j.gameserver.world.zone.type.EffectZone" form="Polygon" minZ="-3724" maxZ="-3524"> <!-- [24_14] -->
+		<property name="skillIdLvl" value="4559-1;" /> <!-- s_spa_big_head -->
+		<property name="chance" value="70" />
 		<!-- stat name="unitTick" val="5" / -->
-		<stat name="initialDelay" val="1000" />
-		<stat name="default_enabled" val="true" />
-		<stat name="reuse" val="3000" /> <!-- Guess -->
-		<node X="144927" Y="-105193" />
-		<node X="145226" Y="-105412" />
-		<node X="145576" Y="-105344" />
-		<node X="145819" Y="-104976" />
-		<node X="145575" Y="-104555" />
-		<node X="145217" Y="-104490" />
-		<node X="144935" Y="-104684" />
-		<node X="144832" Y="-104959" />
+		<property name="initialDelay" value="1000" />
+		<property name="default_enabled" value="true" />
+		<property name="reuse" value="3000" /> <!-- Guess -->
+		<point x="144927" y="-105193" />
+		<point x="145226" y="-105412" />
+		<point x="145576" y="-105344" />
+		<point x="145819" y="-104976" />
+		<point x="145575" y="-104555" />
+		<point x="145217" y="-104490" />
+		<point x="144935" y="-104684" />
+		<point x="144832" y="-104959" />
 
 	</zone>
-	<zone name="spa_41" type="EffectZone" shape="NPoly" minZ="-2871" maxZ="-2671"> <!-- [24_14] -->
-		<stat name="skillIdLvl" val="4559-1;" /> <!-- s_spa_big_head -->
-		<stat name="chance" val="70" />
+	<zone name="spa_41" type="org.l2j.gameserver.world.zone.type.EffectZone" form="Polygon" minZ="-2871" maxZ="-2671"> <!-- [24_14] -->
+		<property name="skillIdLvl" value="4559-1;" /> <!-- s_spa_big_head -->
+		<property name="chance" value="70" />
 		<!-- stat name="unitTick" val="5" / -->
-		<stat name="initialDelay" val="1000" />
-		<stat name="default_enabled" val="true" />
-		<stat name="reuse" val="3000" /> <!-- Guess -->
-		<node X="152081" Y="-108262" />
-		<node X="152455" Y="-108588" />
-		<node X="152835" Y="-108448" />
-		<node X="152992" Y="-108120" />
-		<node X="152817" Y="-107670" />
-		<node X="152310" Y="-107632" />
-		<node X="152069" Y="-107905" />
+		<property name="initialDelay" value="1000" />
+		<property name="default_enabled" value="true" />
+		<property name="reuse" value="3000" /> <!-- Guess -->
+		<point x="152081" y="-108262" />
+		<point x="152455" y="-108588" />
+		<point x="152835" y="-108448" />
+		<point x="152992" y="-108120" />
+		<point x="152817" y="-107670" />
+		<point x="152310" y="-107632" />
+		<point x="152069" y="-107905" />
 	</zone>
-	<zone name="spa_51" type="EffectZone" shape="NPoly" minZ="-2787" maxZ="-2587"> <!-- [24_14] -->
-		<stat name="skillIdLvl" val="4559-1;" /> <!-- s_spa_big_head -->
-		<stat name="chance" val="70" />
+	<zone name="spa_51" type="org.l2j.gameserver.world.zone.type.EffectZone" form="Polygon" minZ="-2787" maxZ="-2587"> <!-- [24_14] -->
+		<property name="skillIdLvl" value="4559-1;" /> <!-- s_spa_big_head -->
+		<property name="chance" value="70" />
 		<!-- stat name="unitTick" val="5" / -->
-		<stat name="initialDelay" val="1000" />
-		<stat name="default_enabled" val="true" />
-		<stat name="reuse" val="3000" /> <!-- Guess -->
-		<node X="155279" Y="-105735" />
-		<node X="155448" Y="-105880" />
-		<node X="155992" Y="-105963" />
-		<node X="156201" Y="-105790" />
-		<node X="156133" Y="-105320" />
-		<node X="155896" Y="-105229" />
-		<node X="155459" Y="-105254" />
-		<node X="155283" Y="-105478" />
+		<property name="initialDelay" value="1000" />
+		<property name="default_enabled" value="true" />
+		<property name="reuse" value="3000" /> <!-- Guess -->
+		<point x="155279" y="-105735" />
+		<point x="155448" y="-105880" />
+		<point x="155992" y="-105963" />
+		<point x="156201" y="-105790" />
+		<point x="156133" y="-105320" />
+		<point x="155896" y="-105229" />
+		<point x="155459" y="-105254" />
+		<point x="155283" y="-105478" />
 	</zone>
-	<zone name="spa_61" type="EffectZone" shape="NPoly" minZ="-2717" maxZ="-2517"> <!-- [24_14] -->
-		<stat name="skillIdLvl" val="4559-1;" /> <!-- s_spa_big_head -->
-		<stat name="chance" val="70" />
+	<zone name="spa_61" type="org.l2j.gameserver.world.zone.type.EffectZone" form="Polygon" minZ="-2717" maxZ="-2517"> <!-- [24_14] -->
+		<property name="skillIdLvl" value="4559-1;" /> <!-- s_spa_big_head -->
+		<property name="chance" value="70" />
 		<!-- stat name="unitTick" val="5" / -->
-		<stat name="initialDelay" val="1000" />
-		<stat name="default_enabled" val="true" />
-		<stat name="reuse" val="3000" /> <!-- Guess -->
-		<node X="156838" Y="-109948" />
-		<node X="157133" Y="-110046" />
-		<node X="157436" Y="-109918" />
-		<node X="157491" Y="-109405" />
-		<node X="157197" Y="-109197" />
-		<node X="156843" Y="-109261" />
-		<node X="156683" Y="-109569" />
+		<property name="initialDelay" value="1000" />
+		<property name="default_enabled" value="true" />
+		<property name="reuse" value="3000" /> <!-- Guess -->
+		<point x="156838" y="-109948" />
+		<point x="157133" y="-110046" />
+		<point x="157436" y="-109918" />
+		<point x="157491" y="-109405" />
+		<point x="157197" y="-109197" />
+		<point x="156843" y="-109261" />
+		<point x="156683" y="-109569" />
 	</zone>
-	<zone name="spa_71" type="EffectZone" shape="NPoly" minZ="-1609" maxZ="-1409"> <!-- [24_14] -->
-		<stat name="skillIdLvl" val="4559-1;" /> <!-- s_spa_big_head -->
-		<stat name="chance" val="70" />
+	<zone name="spa_71" type="org.l2j.gameserver.world.zone.type.EffectZone" form="Polygon" minZ="-1609" maxZ="-1409"> <!-- [24_14] -->
+		<property name="skillIdLvl" value="4559-1;" /> <!-- s_spa_big_head -->
+		<property name="chance" value="70" />
 		<!-- stat name="unitTick" val="5" / -->
-		<stat name="initialDelay" val="1000" />
-		<stat name="default_enabled" val="true" />
-		<stat name="reuse" val="3000" /> <!-- Guess -->
-		<node X="152063" Y="-116732" />
-		<node X="152505" Y="-116982" />
-		<node X="152904" Y="-116927" />
-		<node X="153020" Y="-116469" />
-		<node X="152881" Y="-116221" />
-		<node X="152555" Y="-116100" />
-		<node X="152285" Y="-116160" />
-		<node X="152099" Y="-116415" />
+		<property name="initialDelay" value="1000" />
+		<property name="default_enabled" value="true" />
+		<property name="reuse" value="3000" /> <!-- Guess -->
+		<point x="152063" y="-116732" />
+		<point x="152505" y="-116982" />
+		<point x="152904" y="-116927" />
+		<point x="153020" y="-116469" />
+		<point x="152881" y="-116221" />
+		<point x="152555" y="-116100" />
+		<point x="152285" y="-116160" />
+		<point x="152099" y="-116415" />
 	</zone>
-	<zone name="spa_81" type="EffectZone" shape="NPoly" minZ="-1694" maxZ="-1494"> <!-- [24_14] -->
-		<stat name="skillIdLvl" val="4559-1;" /> <!-- s_spa_big_head -->
-		<stat name="chance" val="70" />
+	<zone name="spa_81" type="org.l2j.gameserver.world.zone.type.EffectZone" form="Polygon" minZ="-1694" maxZ="-1494"> <!-- [24_14] -->
+		<property name="skillIdLvl" value="4559-1;" /> <!-- s_spa_big_head -->
+		<property name="chance" value="70" />
 		<!-- stat name="unitTick" val="5" / -->
-		<stat name="initialDelay" val="1000" />
-		<stat name="default_enabled" val="true" />
-		<stat name="reuse" val="3000" /> <!-- Guess -->
-		<node X="152683" Y="-112829" />
-		<node X="152796" Y="-113129" />
-		<node X="153125" Y="-113339" />
-		<node X="153557" Y="-113190" />
-		<node X="153649" Y="-112721" />
-		<node X="153344" Y="-112385" />
-		<node X="152937" Y="-112409" />
+		<property name="initialDelay" value="1000" />
+		<property name="default_enabled" value="true" />
+		<property name="reuse" value="3000" /> <!-- Guess -->
+		<point x="152683" y="-112829" />
+		<point x="152796" y="-113129" />
+		<point x="153125" y="-113339" />
+		<point x="153557" y="-113190" />
+		<point x="153649" y="-112721" />
+		<point x="153344" y="-112385" />
+		<point x="152937" y="-112409" />
 	</zone>
-	<zone name="spa_91" type="EffectZone" shape="NPoly" minZ="-1979" maxZ="-1779"> <!-- [24_14] -->
-		<stat name="skillIdLvl" val="4559-1;" /> <!-- s_spa_big_head -->
-		<stat name="chance" val="70" />
+	<zone name="spa_91" type="org.l2j.gameserver.world.zone.type.EffectZone" form="Polygon" minZ="-1979" maxZ="-1779"> <!-- [24_14] -->
+		<property name="skillIdLvl" value="4559-1;" /> <!-- s_spa_big_head -->
+		<property name="chance" value="70" />
 		<!-- stat name="unitTick" val="5" / -->
-		<stat name="initialDelay" val="1000" />
-		<stat name="default_enabled" val="true" />
-		<stat name="reuse" val="3000" /> <!-- Guess -->
-		<node X="157444" Y="-115790" />
-		<node X="157774" Y="-115907" />
-		<node X="158174" Y="-115759" />
-		<node X="158017" Y="-114971" />
-		<node X="157625" Y="-114984" />
-		<node X="157439" Y="-115101" />
+		<property name="initialDelay" value="1000" />
+		<property name="default_enabled" value="true" />
+		<property name="reuse" value="3000" /> <!-- Guess -->
+		<point x="157444" y="-115790" />
+		<point x="157774" y="-115907" />
+		<point x="158174" y="-115759" />
+		<point x="158017" y="-114971" />
+		<point x="157625" y="-114984" />
+		<point x="157439" y="-115101" />
 	</zone>
-	<zone name="spa_101" type="EffectZone" shape="NPoly" minZ="-2152" maxZ="-1952"> <!-- [24_14] -->
-		<stat name="skillIdLvl" val="4559-1;" /> <!-- s_spa_big_head -->
-		<stat name="chance" val="70" />
+	<zone name="spa_101" type="org.l2j.gameserver.world.zone.type.EffectZone" form="Polygon" minZ="-2152" maxZ="-1952"> <!-- [24_14] -->
+		<property name="skillIdLvl" value="4559-1;" /> <!-- s_spa_big_head -->
+		<property name="chance" value="70" />
 		<!-- stat name="unitTick" val="5" / -->
-		<stat name="initialDelay" val="1000" />
-		<stat name="default_enabled" val="true" />
-		<stat name="reuse" val="3000" /> <!-- Guess -->
-		<node X="147182" Y="-113255" />
-		<node X="147194" Y="-113430" />
-		<node X="147312" Y="-113584" />
-		<node X="147467" Y="-113630" />
-		<node X="147748" Y="-113523" />
-		<node X="147816" Y="-113273" />
-		<node X="147723" Y="-113074" />
-		<node X="147512" Y="-112956" />
-		<node X="147258" Y="-113048" />
+		<property name="initialDelay" value="1000" />
+		<property name="default_enabled" value="true" />
+		<property name="reuse" value="3000" /> <!-- Guess -->
+		<point x="147182" y="-113255" />
+		<point x="147194" y="-113430" />
+		<point x="147312" y="-113584" />
+		<point x="147467" y="-113630" />
+		<point x="147748" y="-113523" />
+		<point x="147816" y="-113273" />
+		<point x="147723" y="-113074" />
+		<point x="147512" y="-112956" />
+		<point x="147258" y="-113048" />
 	</zone>
 	<!-- Medical treatment -->
-	<zone name="spa_12" type="EffectZone" shape="NPoly" minZ="-3634" maxZ="-3434"> <!-- [24_14] -->
-		<stat name="skillIdLvl" val="4557-1;" /> <!-- s_dispel_spa_disease_bd -->
-		<stat name="chance" val="100" />
+	<zone name="spa_12" type="org.l2j.gameserver.world.zone.type.EffectZone" form="Polygon" minZ="-3634" maxZ="-3434"> <!-- [24_14] -->
+		<property name="skillIdLvl" value="4557-1;" /> <!-- s_dispel_spa_disease_bd -->
+		<property name="chance" value="100" />
 		<!-- stat name="unitTick" val="5" / -->
-		<stat name="initialDelay" val="1000" />
-		<stat name="default_enabled" val="true" />
-		<stat name="reuse" val="3000" /> <!-- Guess -->
-		<node X="141249" Y="-109636" />
-		<node X="141473" Y="-109798" />
-		<node X="141739" Y="-109821" />
-		<node X="141924" Y="-109669" />
-		<node X="142038" Y="-109397" />
-		<node X="141852" Y="-109130" />
-		<node X="141604" Y="-109051" />
-		<node X="141321" Y="-109091" />
-		<node X="141213" Y="-109266" />
+		<property name="initialDelay" value="1000" />
+		<property name="default_enabled" value="true" />
+		<property name="reuse" value="3000" /> <!-- Guess -->
+		<point x="141249" y="-109636" />
+		<point x="141473" y="-109798" />
+		<point x="141739" y="-109821" />
+		<point x="141924" y="-109669" />
+		<point x="142038" y="-109397" />
+		<point x="141852" y="-109130" />
+		<point x="141604" y="-109051" />
+		<point x="141321" y="-109091" />
+		<point x="141213" y="-109266" />
 	</zone>
-	<zone name="spa_22" type="EffectZone" shape="NPoly" minZ="-3668" maxZ="-3468"> <!-- [24_14] -->
-		<stat name="skillIdLvl" val="4556-1;" /> <!-- s_dispel_spa_disease_ad -->
-		<stat name="chance" val="70" />
+	<zone name="spa_22" type="org.l2j.gameserver.world.zone.type.EffectZone" form="Polygon" minZ="-3668" maxZ="-3468"> <!-- [24_14] -->
+		<property name="skillIdLvl" value="4556-1;" /> <!-- s_dispel_spa_disease_ad -->
+		<property name="chance" value="70" />
 		<!-- stat name="unitTick" val="5" / -->
-		<stat name="initialDelay" val="1000" />
-		<stat name="default_enabled" val="true" />
-		<stat name="reuse" val="3000" /> <!-- Guess -->
-		<node X="140174" Y="-105832" />
-		<node X="140490" Y="-105875" />
-		<node X="140962" Y="-105738" />
-		<node X="141039" Y="-105378" />
-		<node X="140872" Y="-105119" />
-		<node X="140081" Y="-105295" />
+		<property name="initialDelay" value="1000" />
+		<property name="default_enabled" value="true" />
+		<property name="reuse" value="3000" /> <!-- Guess -->
+		<point x="140174" y="-105832" />
+		<point x="140490" y="-105875" />
+		<point x="140962" y="-105738" />
+		<point x="141039" y="-105378" />
+		<point x="140872" y="-105119" />
+		<point x="140081" y="-105295" />
 	</zone>
-	<zone name="spa_32" type="EffectZone" shape="NPoly" minZ="-3724" maxZ="-3524"> <!-- [24_14] -->
-		<stat name="skillIdLvl" val="4558-1;" /> <!-- s_dispel_spa_disease_cd -->
-		<stat name="chance" val="70" />
+	<zone name="spa_32" type="org.l2j.gameserver.world.zone.type.EffectZone" form="Polygon" minZ="-3724" maxZ="-3524"> <!-- [24_14] -->
+		<property name="skillIdLvl" value="4558-1;" /> <!-- s_dispel_spa_disease_cd -->
+		<property name="chance" value="70" />
 		<!-- stat name="unitTick" val="5" / -->
-		<stat name="initialDelay" val="1000" />
-		<stat name="default_enabled" val="true" />
-		<stat name="reuse" val="3000" /> <!-- Guess -->
-		<node X="144927" Y="-105193" />
-		<node X="145226" Y="-105412" />
-		<node X="145576" Y="-105344" />
-		<node X="145819" Y="-104976" />
-		<node X="145575" Y="-104555" />
-		<node X="145217" Y="-104490" />
-		<node X="144935" Y="-104684" />
-		<node X="144832" Y="-104959" />
+		<property name="initialDelay" value="1000" />
+		<property name="default_enabled" value="true" />
+		<property name="reuse" value="3000" /> <!-- Guess -->
+		<point x="144927" y="-105193" />
+		<point x="145226" y="-105412" />
+		<point x="145576" y="-105344" />
+		<point x="145819" y="-104976" />
+		<point x="145575" y="-104555" />
+		<point x="145217" y="-104490" />
+		<point x="144935" y="-104684" />
+		<point x="144832" y="-104959" />
 	</zone>
-	<zone name="spa_42" type="EffectZone" shape="NPoly" minZ="-2871" maxZ="-2671"> <!-- [24_14] -->
-		<stat name="skillIdLvl" val="4556-1;" /> <!-- s_dispel_spa_disease_ad -->
-		<stat name="chance" val="70" />
+	<zone name="spa_42" type="org.l2j.gameserver.world.zone.type.EffectZone" form="Polygon" minZ="-2871" maxZ="-2671"> <!-- [24_14] -->
+		<property name="skillIdLvl" value="4556-1;" /> <!-- s_dispel_spa_disease_ad -->
+		<property name="chance" value="70" />
 		<!-- stat name="unitTick" val="5" / -->
-		<stat name="initialDelay" val="1000" />
-		<stat name="default_enabled" val="true" />
-		<stat name="reuse" val="3000" /> <!-- Guess -->
-		<node X="152081" Y="-108262" />
-		<node X="152455" Y="-108588" />
-		<node X="152835" Y="-108448" />
-		<node X="152992" Y="-108120" />
-		<node X="152817" Y="-107670" />
-		<node X="152310" Y="-107632" />
-		<node X="152069" Y="-107905" />
+		<property name="initialDelay" value="1000" />
+		<property name="default_enabled" value="true" />
+		<property name="reuse" value="3000" /> <!-- Guess -->
+		<point x="152081" y="-108262" />
+		<point x="152455" y="-108588" />
+		<point x="152835" y="-108448" />
+		<point x="152992" y="-108120" />
+		<point x="152817" y="-107670" />
+		<point x="152310" y="-107632" />
+		<point x="152069" y="-107905" />
 	</zone>
-	<zone name="spa_52" type="EffectZone" shape="NPoly" minZ="-2787" maxZ="-2587"> <!-- [24_14] -->
-		<stat name="skillIdLvl" val="4558-1;" /> <!-- s_dispel_spa_disease_cd -->
-		<stat name="chance" val="70" />
+	<zone name="spa_52" type="org.l2j.gameserver.world.zone.type.EffectZone" form="Polygon" minZ="-2787" maxZ="-2587"> <!-- [24_14] -->
+		<property name="skillIdLvl" value="4558-1;" /> <!-- s_dispel_spa_disease_cd -->
+		<property name="chance" value="70" />
 		<!-- stat name="unitTick" val="5" / -->
-		<stat name="initialDelay" val="1000" />
-		<stat name="default_enabled" val="true" />
-		<stat name="reuse" val="3000" /> <!-- Guess -->
-		<node X="155279" Y="-105735" />
-		<node X="155448" Y="-105880" />
-		<node X="155992" Y="-105963" />
-		<node X="156201" Y="-105790" />
-		<node X="156133" Y="-105320" />
-		<node X="155896" Y="-105229" />
-		<node X="155459" Y="-105254" />
-		<node X="155283" Y="-105478" />
+		<property name="initialDelay" value="1000" />
+		<property name="default_enabled" value="true" />
+		<property name="reuse" value="3000" /> <!-- Guess -->
+		<point x="155279" y="-105735" />
+		<point x="155448" y="-105880" />
+		<point x="155992" y="-105963" />
+		<point x="156201" y="-105790" />
+		<point x="156133" y="-105320" />
+		<point x="155896" y="-105229" />
+		<point x="155459" y="-105254" />
+		<point x="155283" y="-105478" />
 	</zone>
-	<zone name="spa_62" type="EffectZone" shape="NPoly" minZ="-2717" maxZ="-2517"> <!-- [24_14] -->
-		<stat name="skillIdLvl" val="4557-1;" /> <!-- s_dispel_spa_disease_bd -->
-		<stat name="chance" val="70" />
+	<zone name="spa_62" type="org.l2j.gameserver.world.zone.type.EffectZone" form="Polygon" minZ="-2717" maxZ="-2517"> <!-- [24_14] -->
+		<property name="skillIdLvl" value="4557-1;" /> <!-- s_dispel_spa_disease_bd -->
+		<property name="chance" value="70" />
 		<!-- stat name="unitTick" val="5" / -->
-		<stat name="initialDelay" val="1000" />
-		<stat name="default_enabled" val="true" />
-		<stat name="reuse" val="3000" /> <!-- Guess -->
-		<node X="156838" Y="-109948" />
-		<node X="157133" Y="-110046" />
-		<node X="157436" Y="-109918" />
-		<node X="157491" Y="-109405" />
-		<node X="157197" Y="-109197" />
-		<node X="156843" Y="-109261" />
-		<node X="156683" Y="-109569" />
+		<property name="initialDelay" value="1000" />
+		<property name="default_enabled" value="true" />
+		<property name="reuse" value="3000" /> <!-- Guess -->
+		<point x="156838" y="-109948" />
+		<point x="157133" y="-110046" />
+		<point x="157436" y="-109918" />
+		<point x="157491" y="-109405" />
+		<point x="157197" y="-109197" />
+		<point x="156843" y="-109261" />
+		<point x="156683" y="-109569" />
 	</zone>
-	<zone name="spa_72" type="EffectZone" shape="NPoly" minZ="-1609" maxZ="-1409"> <!-- [24_14] -->
-		<stat name="skillIdLvl" val="4556-1;" /> <!-- s_dispel_spa_disease_ad -->
-		<stat name="chance" val="70" />
+	<zone name="spa_72" type="org.l2j.gameserver.world.zone.type.EffectZone" form="Polygon" minZ="-1609" maxZ="-1409"> <!-- [24_14] -->
+		<property name="skillIdLvl" value="4556-1;" /> <!-- s_dispel_spa_disease_ad -->
+		<property name="chance" value="70" />
 		<!-- stat name="unitTick" val="5" / -->
-		<stat name="initialDelay" val="1000" />
-		<stat name="default_enabled" val="true" />
-		<stat name="reuse" val="3000" /> <!-- Guess -->
-		<node X="152063" Y="-116732" />
-		<node X="152505" Y="-116982" />
-		<node X="152904" Y="-116927" />
-		<node X="153020" Y="-116469" />
-		<node X="152881" Y="-116221" />
-		<node X="152555" Y="-116100" />
-		<node X="152285" Y="-116160" />
-		<node X="152099" Y="-116415" />
+		<property name="initialDelay" value="1000" />
+		<property name="default_enabled" value="true" />
+		<property name="reuse" value="3000" /> <!-- Guess -->
+		<point x="152063" y="-116732" />
+		<point x="152505" y="-116982" />
+		<point x="152904" y="-116927" />
+		<point x="153020" y="-116469" />
+		<point x="152881" y="-116221" />
+		<point x="152555" y="-116100" />
+		<point x="152285" y="-116160" />
+		<point x="152099" y="-116415" />
 	</zone>
-	<zone name="spa_82" type="EffectZone" shape="NPoly" minZ="-1694" maxZ="-1494"> <!-- [24_14] -->
-		<stat name="skillIdLvl" val="4558-1;" /> <!-- s_dispel_spa_disease_cd -->
-		<stat name="chance" val="70" />
+	<zone name="spa_82" type="org.l2j.gameserver.world.zone.type.EffectZone" form="Polygon" minZ="-1694" maxZ="-1494"> <!-- [24_14] -->
+		<property name="skillIdLvl" value="4558-1;" /> <!-- s_dispel_spa_disease_cd -->
+		<property name="chance" value="70" />
 		<!-- stat name="unitTick" val="5" / -->
-		<stat name="initialDelay" val="1000" />
-		<stat name="default_enabled" val="true" />
-		<stat name="reuse" val="3000" /> <!-- Guess -->
-		<node X="152683" Y="-112829" />
-		<node X="152796" Y="-113129" />
-		<node X="153125" Y="-113339" />
-		<node X="153557" Y="-113190" />
-		<node X="153649" Y="-112721" />
-		<node X="153344" Y="-112385" />
-		<node X="152937" Y="-112409" />
+		<property name="initialDelay" value="1000" />
+		<property name="default_enabled" value="true" />
+		<property name="reuse" value="3000" /> <!-- Guess -->
+		<point x="152683" y="-112829" />
+		<point x="152796" y="-113129" />
+		<point x="153125" y="-113339" />
+		<point x="153557" y="-113190" />
+		<point x="153649" y="-112721" />
+		<point x="153344" y="-112385" />
+		<point x="152937" y="-112409" />
 	</zone>
-	<zone name="spa_92" type="EffectZone" shape="NPoly" minZ="-1979" maxZ="-1779"> <!-- [24_14] -->
-		<stat name="skillIdLvl" val="4557-1;" /> <!-- s_dispel_spa_disease_bd -->
-		<stat name="chance" val="70" />
+	<zone name="spa_92" type="org.l2j.gameserver.world.zone.type.EffectZone" form="Polygon" minZ="-1979" maxZ="-1779"> <!-- [24_14] -->
+		<property name="skillIdLvl" value="4557-1;" /> <!-- s_dispel_spa_disease_bd -->
+		<property name="chance" value="70" />
 		<!-- stat name="unitTick" val="5" / -->
-		<stat name="initialDelay" val="1000" />
-		<stat name="default_enabled" val="true" />
-		<stat name="reuse" val="3000" /> <!-- Guess -->
-		<node X="157444" Y="-115790" />
-		<node X="157774" Y="-115907" />
-		<node X="158174" Y="-115759" />
-		<node X="158017" Y="-114971" />
-		<node X="157625" Y="-114984" />
-		<node X="157439" Y="-115101" />
+		<property name="initialDelay" value="1000" />
+		<property name="default_enabled" value="true" />
+		<property name="reuse" value="3000" /> <!-- Guess -->
+		<point x="157444" y="-115790" />
+		<point x="157774" y="-115907" />
+		<point x="158174" y="-115759" />
+		<point x="158017" y="-114971" />
+		<point x="157625" y="-114984" />
+		<point x="157439" y="-115101" />
 	</zone>
-	<zone name="spa_102" type="EffectZone" shape="NPoly" minZ="-2152" maxZ="-1952"> <!-- [24_14] -->
-		<stat name="skillIdLvl" val="4557-1;" /> <!-- s_dispel_spa_disease_bd -->
-		<stat name="chance" val="70" />
+	<zone name="spa_102" type="org.l2j.gameserver.world.zone.type.EffectZone" form="Polygon" minZ="-2152" maxZ="-1952"> <!-- [24_14] -->
+		<property name="skillIdLvl" value="4557-1;" /> <!-- s_dispel_spa_disease_bd -->
+		<property name="chance" value="70" />
 		<!-- stat name="unitTick" val="5" / -->
-		<stat name="initialDelay" val="1000" />
-		<stat name="default_enabled" val="true" />
-		<stat name="reuse" val="3000" /> <!-- Guess -->
-		<node X="147182" Y="-113255" />
-		<node X="147194" Y="-113430" />
-		<node X="147312" Y="-113584" />
-		<node X="147467" Y="-113630" />
-		<node X="147748" Y="-113523" />
-		<node X="147816" Y="-113273" />
-		<node X="147723" Y="-113074" />
-		<node X="147512" Y="-112956" />
-		<node X="147258" Y="-113048" />
+		<property name="initialDelay" value="1000" />
+		<property name="default_enabled" value="true" />
+		<property name="reuse" value="3000" /> <!-- Guess -->
+		<point x="147182" y="-113255" />
+		<point x="147194" y="-113430" />
+		<point x="147312" y="-113584" />
+		<point x="147467" y="-113630" />
+		<point x="147748" y="-113523" />
+		<point x="147816" y="-113273" />
+		<point x="147723" y="-113074" />
+		<point x="147512" y="-112956" />
+		<point x="147258" y="-113048" />
 	</zone>
 	<!-- Hall of Flames -->
-	<zone name="godad_fire_zone1" type="EffectZone" shape="NPoly" minZ="-1896" maxZ="-1696"> <!-- [25_14] -->
-		<stat name="skillIdLvl" val="4150-5;" /> <!-- s_area_fire5 -->
-		<stat name="chance" val="100" />
+	<zone name="godad_fire_zone1" type="org.l2j.gameserver.world.zone.type.EffectZone" form="Polygon" minZ="-1896" maxZ="-1696"> <!-- [25_14] -->
+		<property name="skillIdLvl" value="4150-5;" /> <!-- s_area_fire5 -->
+		<property name="chance" value="100" />
 		<!-- stat name="unitTick" val="5" / -->
-		<stat name="initialDelay" val="1000" />
-		<stat name="default_enabled" val="true" />
-		<stat name="reuse" val="5000" /> <!-- Guess -->
-		<node X="192073" Y="-118243" />
-		<node X="192185" Y="-116883" />
-		<node X="191921" Y="-116651" />
-		<node X="191330" Y="-116793" />
-		<node X="190997" Y="-118195" />
+		<property name="initialDelay" value="1000" />
+		<property name="default_enabled" value="true" />
+		<property name="reuse" value="5000" /> <!-- Guess -->
+		<point x="192073" y="-118243" />
+		<point x="192185" y="-116883" />
+		<point x="191921" y="-116651" />
+		<point x="191330" y="-116793" />
+		<point x="190997" y="-118195" />
 	</zone>
-	<zone name="godad_fire_zone2" type="EffectZone" shape="NPoly" minZ="-3384" maxZ="-3184"> <!-- [25_14] -->
-		<stat name="skillIdLvl" val="4150-5;" /> <!-- s_area_fire5 -->
-		<stat name="chance" val="100" />
+	<zone name="godad_fire_zone2" type="org.l2j.gameserver.world.zone.type.EffectZone" form="Polygon" minZ="-3384" maxZ="-3184"> <!-- [25_14] -->
+		<property name="skillIdLvl" value="4150-5;" /> <!-- s_area_fire5 -->
+		<property name="chance" value="100" />
 		<!-- stat name="unitTick" val="5" / -->
-		<stat name="initialDelay" val="1000" />
-		<stat name="default_enabled" val="true" />
-		<stat name="reuse" val="5000" /> <!-- Guess -->
-		<node X="183700" Y="-114976" />
-		<node X="183996" Y="-115008" />
-		<node X="183988" Y="-114940" />
-		<node X="183892" Y="-114896" />
-		<node X="183768" Y="-114912" />
+		<property name="initialDelay" value="1000" />
+		<property name="default_enabled" value="true" />
+		<property name="reuse" value="5000" /> <!-- Guess -->
+		<point x="183700" y="-114976" />
+		<point x="183996" y="-115008" />
+		<point x="183988" y="-114940" />
+		<point x="183892" y="-114896" />
+		<point x="183768" y="-114912" />
 	</zone>
-	<zone name="godad_fire_zone3" type="EffectZone" shape="NPoly" minZ="-4728" maxZ="-4028"> <!-- [25_14] -->
-		<stat name="skillIdLvl" val="4150-5;" /> <!-- s_area_fire5 -->
-		<stat name="chance" val="100" />
+	<zone name="godad_fire_zone3" type="org.l2j.gameserver.world.zone.type.EffectZone" form="Polygon" minZ="-4728" maxZ="-4028"> <!-- [25_14] -->
+		<property name="skillIdLvl" value="4150-5;" /> <!-- s_area_fire5 -->
+		<property name="chance" value="100" />
 		<!-- stat name="unitTick" val="5" / -->
-		<stat name="initialDelay" val="1000" />
-		<stat name="default_enabled" val="true" />
-		<stat name="reuse" val="5000" /> <!-- Guess -->
-		<node X="170882" Y="-116919" />
-		<node X="173775" Y="-116885" />
-		<node X="173761" Y="-113989" />
-		<node X="170896" Y="-113924" />
+		<property name="initialDelay" value="1000" />
+		<property name="default_enabled" value="true" />
+		<property name="reuse" value="5000" /> <!-- Guess -->
+		<point x="170882" y="-116919" />
+		<point x="173775" y="-116885" />
+		<point x="173761" y="-113989" />
+		<point x="170896" y="-113924" />
 	</zone>
-	<zone name="godad_fire_zone4" type="EffectZone" shape="NPoly" minZ="-6160" maxZ="-5260"> <!-- [25_14] -->
-		<stat name="skillIdLvl" val="4150-5;" /> <!-- s_area_fire5 -->
-		<stat name="chance" val="100" />
+	<zone name="godad_fire_zone4" type="org.l2j.gameserver.world.zone.type.EffectZone" form="Polygon" minZ="-6160" maxZ="-5260"> <!-- [25_14] -->
+		<property name="skillIdLvl" value="4150-5;" /> <!-- s_area_fire5 -->
+		<property name="chance" value="100" />
 		<!-- stat name="unitTick" val="5" / -->
-		<stat name="initialDelay" val="1000" />
-		<stat name="default_enabled" val="true" />
-		<stat name="reuse" val="5000" /> <!-- Guess -->
-		<node X="170947" Y="-113900" />
-		<node X="173759" Y="-113954" />
-		<node X="173776" Y="-111044" />
-		<node X="170920" Y="-111048" />
+		<property name="initialDelay" value="1000" />
+		<property name="default_enabled" value="true" />
+		<property name="reuse" value="5000" /> <!-- Guess -->
+		<point x="170947" y="-113900" />
+		<point x="173759" y="-113954" />
+		<point x="173776" y="-111044" />
+		<point x="170920" y="-111048" />
 	</zone>
 	<!-- Swamp of Screams (Monsters Buffs) -->
-	<zone name="godad_swamp_monster1" type="EffectZone" shape="NPoly" minZ="-3375" maxZ="-2975"> <!-- [22_16] -->
-		<stat name="targetClass" val="L2Npc" />
-		<stat name="skillIdLvl" val="4644-2;4645-3;4647-3;" /> <!-- @s_area_haste2;@s_area_focus3;@s_area_might3 -->
-		<stat name="chance" val="70" />
+	<zone name="godad_swamp_monster1" type="org.l2j.gameserver.world.zone.type.EffectZone" form="Polygon" minZ="-3375" maxZ="-2975"> <!-- [22_16] -->
+		<property name="targetClass" value="L2Npc" />
+		<property name="skillIdLvl" value="4644-2;4645-3;4647-3;" /> <!-- @s_area_haste2;@s_area_focus3;@s_area_might3 -->
+		<property name="chance" value="70" />
 		<!-- stat name="unitTick" val="9" / -->
-		<stat name="initialDelay" val="1000" />
-		<stat name="default_enabled" val="true" />
-		<stat name="reuse" val="6000" /> <!-- Guess -->
-		<node X="71030" Y="-60113" />
-		<node X="70966" Y="-59549" />
-		<node X="70250" Y="-59173" />
-		<node X="69622" Y="-59597" />
-		<node X="69634" Y="-60261" />
-		<node X="70026" Y="-60593" />
-		<node X="70566" Y="-60601" />
+		<property name="initialDelay" value="1000" />
+		<property name="default_enabled" value="true" />
+		<property name="reuse" value="6000" /> <!-- Guess -->
+		<point x="71030" y="-60113" />
+		<point x="70966" y="-59549" />
+		<point x="70250" y="-59173" />
+		<point x="69622" y="-59597" />
+		<point x="69634" y="-60261" />
+		<point x="70026" y="-60593" />
+		<point x="70566" y="-60601" />
 	</zone>
-	<zone name="godad_swamp_monster2" type="EffectZone" shape="NPoly" minZ="-3191" maxZ="-2991"> <!-- [22_16] -->
-		<stat name="targetClass" val="L2Npc" />
-		<stat name="skillIdLvl" val="4644-2;4645-3;4647-3;" /> <!-- @s_area_haste2;@s_area_focus3;@s_area_might3 -->
-		<stat name="chance" val="70" />
+	<zone name="godad_swamp_monster2" type="org.l2j.gameserver.world.zone.type.EffectZone" form="Polygon" minZ="-3191" maxZ="-2991"> <!-- [22_16] -->
+		<property name="targetClass" value="L2Npc" />
+		<property name="skillIdLvl" value="4644-2;4645-3;4647-3;" /> <!-- @s_area_haste2;@s_area_focus3;@s_area_might3 -->
+		<property name="chance" value="70" />
 		<!-- stat name="unitTick" val="9" / -->
-		<stat name="initialDelay" val="1000" />
-		<stat name="default_enabled" val="true" />
-		<stat name="reuse" val="6000" /> <!-- Guess -->
-		<node X="73522" Y="-59473" />
-		<node X="73454" Y="-58861" />
-		<node X="73194" Y="-58629" />
-		<node X="72642" Y="-58433" />
-		<node X="72110" Y="-58501" />
-		<node X="71782" Y="-59013" />
-		<node X="71922" Y="-59817" />
-		<node X="72482" Y="-60149" />
-		<node X="72986" Y="-60085" />
+		<property name="initialDelay" value="1000" />
+		<property name="default_enabled" value="true" />
+		<property name="reuse" value="6000" /> <!-- Guess -->
+		<point x="73522" y="-59473" />
+		<point x="73454" y="-58861" />
+		<point x="73194" y="-58629" />
+		<point x="72642" y="-58433" />
+		<point x="72110" y="-58501" />
+		<point x="71782" y="-59013" />
+		<point x="71922" y="-59817" />
+		<point x="72482" y="-60149" />
+		<point x="72986" y="-60085" />
 	</zone>
-	<zone name="godad_swamp_monster3" type="EffectZone" shape="NPoly" minZ="-3335" maxZ="-2935"> <!-- [22_16] -->
-		<stat name="targetClass" val="L2Npc" />
-		<stat name="skillIdLvl" val="4644-2;4645-3;4647-3;" /> <!-- @s_area_haste2;@s_area_focus3;@s_area_might3 -->
-		<stat name="chance" val="70" />
+	<zone name="godad_swamp_monster3" type="org.l2j.gameserver.world.zone.type.EffectZone" form="Polygon" minZ="-3335" maxZ="-2935"> <!-- [22_16] -->
+		<property name="targetClass" value="L2Npc" />
+		<property name="skillIdLvl" value="4644-2;4645-3;4647-3;" /> <!-- @s_area_haste2;@s_area_focus3;@s_area_might3 -->
+		<property name="chance" value="70" />
 		<!-- stat name="unitTick" val="9" / -->
-		<stat name="initialDelay" val="1000" />
-		<stat name="default_enabled" val="true" />
-		<stat name="reuse" val="6000" /> <!-- Guess -->
-		<node X="72376" Y="-55558" />
-		<node X="72036" Y="-54506" />
-		<node X="71188" Y="-54130" />
-		<node X="70264" Y="-54442" />
-		<node X="69748" Y="-55206" />
-		<node X="69860" Y="-56066" />
-		<node X="70708" Y="-56830" />
-		<node X="71632" Y="-56706" />
-		<node X="72132" Y="-56258" />
+		<property name="initialDelay" value="1000" />
+		<property name="default_enabled" value="true" />
+		<property name="reuse" value="6000" /> <!-- Guess -->
+		<point x="72376" y="-55558" />
+		<point x="72036" y="-54506" />
+		<point x="71188" y="-54130" />
+		<point x="70264" y="-54442" />
+		<point x="69748" y="-55206" />
+		<point x="69860" y="-56066" />
+		<point x="70708" y="-56830" />
+		<point x="71632" y="-56706" />
+		<point x="72132" y="-56258" />
 	</zone>
-	<zone name="godad_swamp_monster4" type="EffectZone" shape="NPoly" minZ="-3179" maxZ="-2979"> <!-- [22_16] -->
-		<stat name="targetClass" val="L2Npc" />
-		<stat name="skillIdLvl" val="4644-2;4645-3;4647-3;" /> <!-- @s_area_haste2;@s_area_focus3;@s_area_might3 -->
-		<stat name="chance" val="70" />
+	<zone name="godad_swamp_monster4" type="org.l2j.gameserver.world.zone.type.EffectZone" form="Polygon" minZ="-3179" maxZ="-2979"> <!-- [22_16] -->
+		<property name="targetClass" value="L2Npc" />
+		<property name="skillIdLvl" value="4644-2;4645-3;4647-3;" /> <!-- @s_area_haste2;@s_area_focus3;@s_area_might3 -->
+		<property name="chance" value="70" />
 		<!-- stat name="unitTick" val="9" / -->
-		<stat name="initialDelay" val="1000" />
-		<stat name="default_enabled" val="true" />
-		<stat name="reuse" val="6000" /> <!-- Guess -->
-		<node X="76091" Y="-53873" />
-		<node X="75447" Y="-53721" />
-		<node X="75135" Y="-54069" />
-		<node X="75047" Y="-54749" />
-		<node X="75491" Y="-55125" />
-		<node X="76171" Y="-54993" />
-		<node X="76323" Y="-54677" />
-		<node X="76339" Y="-54281" />
+		<property name="initialDelay" value="1000" />
+		<property name="default_enabled" value="true" />
+		<property name="reuse" value="6000" /> <!-- Guess -->
+		<point x="76091" y="-53873" />
+		<point x="75447" y="-53721" />
+		<point x="75135" y="-54069" />
+		<point x="75047" y="-54749" />
+		<point x="75491" y="-55125" />
+		<point x="76171" y="-54993" />
+		<point x="76323" y="-54677" />
+		<point x="76339" y="-54281" />
 	</zone>
-	<zone name="godad_swamp_monster5" type="EffectZone" shape="NPoly" minZ="-3255" maxZ="-2955"> <!-- [22_16] -->
-		<stat name="targetClass" val="L2Npc" />
-		<stat name="skillIdLvl" val="4644-2;4645-3;4647-3;" /> <!-- @s_area_haste2;@s_area_focus3;@s_area_might3 -->
-		<stat name="chance" val="70" />
+	<zone name="godad_swamp_monster5" type="org.l2j.gameserver.world.zone.type.EffectZone" form="Polygon" minZ="-3255" maxZ="-2955"> <!-- [22_16] -->
+		<property name="targetClass" value="L2Npc" />
+		<property name="skillIdLvl" value="4644-2;4645-3;4647-3;" /> <!-- @s_area_haste2;@s_area_focus3;@s_area_might3 -->
+		<property name="chance" value="70" />
 		<!-- stat name="unitTick" val="9" / -->
-		<stat name="initialDelay" val="1000" />
-		<stat name="default_enabled" val="true" />
-		<stat name="reuse" val="6000" /> <!-- Guess -->
-		<node X="74415" Y="-51769" />
-		<node X="74351" Y="-51081" />
-		<node X="74075" Y="-50837" />
-		<node X="74007" Y="-50597" />
-		<node X="73335" Y="-50669" />
-		<node X="72983" Y="-51393" />
-		<node X="73167" Y="-51845" />
-		<node X="73995" Y="-52025" />
+		<property name="initialDelay" value="1000" />
+		<property name="default_enabled" value="true" />
+		<property name="reuse" value="6000" /> <!-- Guess -->
+		<point x="74415" y="-51769" />
+		<point x="74351" y="-51081" />
+		<point x="74075" y="-50837" />
+		<point x="74007" y="-50597" />
+		<point x="73335" y="-50669" />
+		<point x="72983" y="-51393" />
+		<point x="73167" y="-51845" />
+		<point x="73995" y="-52025" />
 	</zone>
-	<zone name="godad_swamp_monster6" type="EffectZone" shape="NPoly" minZ="-3458" maxZ="-3158"> <!-- [22_16] -->
-		<stat name="targetClass" val="L2Npc" />
-		<stat name="skillIdLvl" val="4644-2;4645-3;4647-3;" /> <!-- @s_area_haste2;@s_area_focus3;@s_area_might3 -->
-		<stat name="chance" val="70" />
+	<zone name="godad_swamp_monster6" type="org.l2j.gameserver.world.zone.type.EffectZone" form="Polygon" minZ="-3458" maxZ="-3158"> <!-- [22_16] -->
+		<property name="targetClass" value="L2Npc" />
+		<property name="skillIdLvl" value="4644-2;4645-3;4647-3;" /> <!-- @s_area_haste2;@s_area_focus3;@s_area_might3 -->
+		<property name="chance" value="70" />
 		<!-- stat name="unitTick" val="9" / -->
-		<stat name="initialDelay" val="1000" />
-		<stat name="default_enabled" val="true" />
-		<stat name="reuse" val="6000" /> <!-- Guess -->
-		<node X="73198" Y="-44860" />
-		<node X="72682" Y="-44392" />
-		<node X="71766" Y="-44416" />
-		<node X="71314" Y="-44836" />
-		<node X="71378" Y="-45248" />
-		<node X="71430" Y="-45960" />
-		<node X="71850" Y="-46264" />
-		<node X="72594" Y="-46236" />
-		<node X="73034" Y="-45800" />
+		<property name="initialDelay" value="1000" />
+		<property name="default_enabled" value="true" />
+		<property name="reuse" value="6000" /> <!-- Guess -->
+		<point x="73198" y="-44860" />
+		<point x="72682" y="-44392" />
+		<point x="71766" y="-44416" />
+		<point x="71314" y="-44836" />
+		<point x="71378" y="-45248" />
+		<point x="71430" y="-45960" />
+		<point x="71850" y="-46264" />
+		<point x="72594" y="-46236" />
+		<point x="73034" y="-45800" />
 	</zone>
-	<zone name="godad_swamp_monster7" type="EffectZone" shape="NPoly" minZ="-3418" maxZ="-3118"> <!-- [22_16] -->
-		<stat name="targetClass" val="L2Npc" />
-		<stat name="skillIdLvl" val="4644-2;4645-3;4647-3;" /> <!-- @s_area_haste2;@s_area_focus3;@s_area_might3 -->
-		<stat name="chance" val="70" />
+	<zone name="godad_swamp_monster7" type="org.l2j.gameserver.world.zone.type.EffectZone" form="Polygon" minZ="-3418" maxZ="-3118"> <!-- [22_16] -->
+		<property name="targetClass" value="L2Npc" />
+		<property name="skillIdLvl" value="4644-2;4645-3;4647-3;" /> <!-- @s_area_haste2;@s_area_focus3;@s_area_might3 -->
+		<property name="chance" value="70" />
 		<!-- stat name="unitTick" val="9" / -->
-		<stat name="initialDelay" val="1000" />
-		<stat name="default_enabled" val="true" />
-		<stat name="reuse" val="6000" /> <!-- Guess -->
-		<node X="74049" Y="-42558" />
-		<node X="73997" Y="-41998" />
-		<node X="73513" Y="-41622" />
-		<node X="73093" Y="-41610" />
-		<node X="72537" Y="-42338" />
-		<node X="72661" Y="-42830" />
-		<node X="73325" Y="-43018" />
-		<node X="73641" Y="-42942" />
+		<property name="initialDelay" value="1000" />
+		<property name="default_enabled" value="true" />
+		<property name="reuse" value="6000" /> <!-- Guess -->
+		<point x="74049" y="-42558" />
+		<point x="73997" y="-41998" />
+		<point x="73513" y="-41622" />
+		<point x="73093" y="-41610" />
+		<point x="72537" y="-42338" />
+		<point x="72661" y="-42830" />
+		<point x="73325" y="-43018" />
+		<point x="73641" y="-42942" />
 	</zone>
-	<zone name="godad_swamp_monster8" type="EffectZone" shape="NPoly" minZ="-3410" maxZ="-3110"> <!-- [22_16] -->
-		<stat name="targetClass" val="L2Npc" />
-		<stat name="skillIdLvl" val="4644-2;4645-3;4647-3;" /> <!-- @s_area_haste2;@s_area_focus3;@s_area_might3 -->
-		<stat name="chance" val="70" />
+	<zone name="godad_swamp_monster8" type="org.l2j.gameserver.world.zone.type.EffectZone" form="Polygon" minZ="-3410" maxZ="-3110"> <!-- [22_16] -->
+		<property name="targetClass" value="L2Npc" />
+		<property name="skillIdLvl" value="4644-2;4645-3;4647-3;" /> <!-- @s_area_haste2;@s_area_focus3;@s_area_might3 -->
+		<property name="chance" value="70" />
 		<!-- stat name="unitTick" val="9" / -->
-		<stat name="initialDelay" val="1000" />
-		<stat name="default_enabled" val="true" />
-		<stat name="reuse" val="6000" /> <!-- Guess -->
-		<node X="77309" Y="-42410" />
-		<node X="76629" Y="-41878" />
-		<node X="75557" Y="-41990" />
-		<node X="74781" Y="-42802" />
-		<node X="74745" Y="-43802" />
-		<node X="75581" Y="-44790" />
-		<node X="76761" Y="-44770" />
-		<node X="77597" Y="-44062" />
-		<node X="77641" Y="-43006" />
+		<property name="initialDelay" value="1000" />
+		<property name="default_enabled" value="true" />
+		<property name="reuse" value="6000" /> <!-- Guess -->
+		<point x="77309" y="-42410" />
+		<point x="76629" y="-41878" />
+		<point x="75557" y="-41990" />
+		<point x="74781" y="-42802" />
+		<point x="74745" y="-43802" />
+		<point x="75581" y="-44790" />
+		<point x="76761" y="-44770" />
+		<point x="77597" y="-44062" />
+		<point x="77641" y="-43006" />
 	</zone>
-	<zone name="godad_swamp_monster9" type="EffectZone" shape="NPoly" minZ="-3422" maxZ="-3122"> <!-- [22_16] -->
-		<stat name="targetClass" val="L2Npc" />
-		<stat name="skillIdLvl" val="4644-2;4645-3;4647-3;" /> <!-- @s_area_haste2;@s_area_focus3;@s_area_might3 -->
-		<stat name="chance" val="70" />
+	<zone name="godad_swamp_monster9" type="org.l2j.gameserver.world.zone.type.EffectZone" form="Polygon" minZ="-3422" maxZ="-3122"> <!-- [22_16] -->
+		<property name="targetClass" value="L2Npc" />
+		<property name="skillIdLvl" value="4644-2;4645-3;4647-3;" /> <!-- @s_area_haste2;@s_area_focus3;@s_area_might3 -->
+		<property name="chance" value="70" />
 		<!-- stat name="unitTick" val="9" / -->
-		<stat name="initialDelay" val="1000" />
-		<stat name="default_enabled" val="true" />
-		<stat name="reuse" val="6000" /> <!-- Guess -->
-		<node X="80214" Y="-42670" />
-		<node X="80438" Y="-42094" />
-		<node X="80314" Y="-41546" />
-		<node X="79614" Y="-41342" />
-		<node X="78754" Y="-41710" />
-		<node X="78662" Y="-42230" />
-		<node X="79062" Y="-42894" />
-		<node X="79758" Y="-43070" />
-		<node X="79930" Y="-42834" />
+		<property name="initialDelay" value="1000" />
+		<property name="default_enabled" value="true" />
+		<property name="reuse" value="6000" /> <!-- Guess -->
+		<point x="80214" y="-42670" />
+		<point x="80438" y="-42094" />
+		<point x="80314" y="-41546" />
+		<point x="79614" y="-41342" />
+		<point x="78754" y="-41710" />
+		<point x="78662" y="-42230" />
+		<point x="79062" y="-42894" />
+		<point x="79758" y="-43070" />
+		<point x="79930" y="-42834" />
 	</zone>
-	<zone name="godad_swamp_monster10" type="EffectZone" shape="NPoly" minZ="-3370" maxZ="-3070"> <!-- [22_16] -->
-		<stat name="targetClass" val="L2Npc" />
-		<stat name="skillIdLvl" val="4644-2;4645-3;4647-3;" /> <!-- @s_area_haste2;@s_area_focus3;@s_area_might3 -->
-		<stat name="chance" val="70" />
+	<zone name="godad_swamp_monster10" type="org.l2j.gameserver.world.zone.type.EffectZone" form="Polygon" minZ="-3370" maxZ="-3070"> <!-- [22_16] -->
+		<property name="targetClass" value="L2Npc" />
+		<property name="skillIdLvl" value="4644-2;4645-3;4647-3;" /> <!-- @s_area_haste2;@s_area_focus3;@s_area_might3 -->
+		<property name="chance" value="70" />
 		<!-- stat name="unitTick" val="9" / -->
-		<stat name="initialDelay" val="1000" />
-		<stat name="default_enabled" val="true" />
-		<stat name="reuse" val="6000" /> <!-- Guess -->
-		<node X="83118" Y="-41483" />
-		<node X="82686" Y="-40931" />
-		<node X="82046" Y="-40887" />
-		<node X="82050" Y="-41079" />
-		<node X="81734" Y="-41263" />
-		<node X="81610" Y="-41879" />
-		<node X="82366" Y="-42299" />
-		<node X="82758" Y="-42155" />
-		<node X="82910" Y="-41879" />
-		<node X="83086" Y="-41823" />
+		<property name="initialDelay" value="1000" />
+		<property name="default_enabled" value="true" />
+		<property name="reuse" value="6000" /> <!-- Guess -->
+		<point x="83118" y="-41483" />
+		<point x="82686" y="-40931" />
+		<point x="82046" y="-40887" />
+		<point x="82050" y="-41079" />
+		<point x="81734" y="-41263" />
+		<point x="81610" y="-41879" />
+		<point x="82366" y="-42299" />
+		<point x="82758" y="-42155" />
+		<point x="82910" y="-41879" />
+		<point x="83086" y="-41823" />
 	</zone>
-	<zone name="godad_swamp_monster11" type="EffectZone" shape="NPoly" minZ="-3366" maxZ="-3066"> <!-- [22_16] -->
-		<stat name="targetClass" val="L2Npc" />
-		<stat name="skillIdLvl" val="4644-2;4645-3;4647-3;" /> <!-- @s_area_haste2;@s_area_focus3;@s_area_might3 -->
-		<stat name="chance" val="70" />
+	<zone name="godad_swamp_monster11" type="org.l2j.gameserver.world.zone.type.EffectZone" form="Polygon" minZ="-3366" maxZ="-3066"> <!-- [22_16] -->
+		<property name="targetClass" value="L2Npc" />
+		<property name="skillIdLvl" value="4644-2;4645-3;4647-3;" /> <!-- @s_area_haste2;@s_area_focus3;@s_area_might3 -->
+		<property name="chance" value="70" />
 		<!-- stat name="unitTick" val="9" / -->
-		<stat name="initialDelay" val="1000" />
-		<stat name="default_enabled" val="true" />
-		<stat name="reuse" val="6000" /> <!-- Guess -->
-		<node X="81654" Y="-45503" />
-		<node X="81886" Y="-45267" />
-		<node X="82222" Y="-44899" />
-		<node X="82266" Y="-44547" />
-		<node X="82098" Y="-44207" />
-		<node X="81506" Y="-44063" />
-		<node X="80846" Y="-44375" />
-		<node X="80786" Y="-44795" />
-		<node X="81094" Y="-45271" />
+		<property name="initialDelay" value="1000" />
+		<property name="default_enabled" value="true" />
+		<property name="reuse" value="6000" /> <!-- Guess -->
+		<point x="81654" y="-45503" />
+		<point x="81886" y="-45267" />
+		<point x="82222" y="-44899" />
+		<point x="82266" y="-44547" />
+		<point x="82098" y="-44207" />
+		<point x="81506" y="-44063" />
+		<point x="80846" y="-44375" />
+		<point x="80786" y="-44795" />
+		<point x="81094" y="-45271" />
 	</zone>
-	<zone name="godad_swamp_monster12" type="EffectZone" shape="NPoly" minZ="-2522" maxZ="-2222"> <!-- [22_16] -->
-		<stat name="targetClass" val="L2Npc" />
-		<stat name="skillIdLvl" val="4644-2;4645-3;4647-3;" /> <!-- @s_area_haste2;@s_area_focus3;@s_area_might3 -->
-		<stat name="chance" val="70" />
+	<zone name="godad_swamp_monster12" type="org.l2j.gameserver.world.zone.type.EffectZone" form="Polygon" minZ="-2522" maxZ="-2222"> <!-- [22_16] -->
+		<property name="targetClass" value="L2Npc" />
+		<property name="skillIdLvl" value="4644-2;4645-3;4647-3;" /> <!-- @s_area_haste2;@s_area_focus3;@s_area_might3 -->
+		<property name="chance" value="70" />
 		<!-- stat name="unitTick" val="9" / -->
-		<stat name="initialDelay" val="1000" />
-		<stat name="default_enabled" val="true" />
-		<stat name="reuse" val="6000" /> <!-- Guess -->
-		<node X="79526" Y="-51746" />
-		<node X="79638" Y="-51098" />
-		<node X="79190" Y="-50458" />
-		<node X="78398" Y="-50694" />
-		<node X="78158" Y="-51298" />
-		<node X="78570" Y="-51934" />
-		<node X="79214" Y="-51898" />
+		<property name="initialDelay" value="1000" />
+		<property name="default_enabled" value="true" />
+		<property name="reuse" value="6000" /> <!-- Guess -->
+		<point x="79526" y="-51746" />
+		<point x="79638" y="-51098" />
+		<point x="79190" y="-50458" />
+		<point x="78398" y="-50694" />
+		<point x="78158" y="-51298" />
+		<point x="78570" y="-51934" />
+		<point x="79214" y="-51898" />
 	</zone>
-	<zone name="godad_swamp_monster13" type="EffectZone" shape="NPoly" minZ="-2470" maxZ="-2170"> <!-- [22_16] -->
-		<stat name="targetClass" val="L2Npc" />
-		<stat name="skillIdLvl" val="4644-2;4645-3;4647-3;" /> <!-- @s_area_haste2;@s_area_focus3;@s_area_might3 -->
-		<stat name="chance" val="70" />
+	<zone name="godad_swamp_monster13" type="org.l2j.gameserver.world.zone.type.EffectZone" form="Polygon" minZ="-2470" maxZ="-2170"> <!-- [22_16] -->
+		<property name="targetClass" value="L2Npc" />
+		<property name="skillIdLvl" value="4644-2;4645-3;4647-3;" /> <!-- @s_area_haste2;@s_area_focus3;@s_area_might3 -->
+		<property name="chance" value="70" />
 		<!-- stat name="unitTick" val="9" / -->
-		<stat name="initialDelay" val="1000" />
-		<stat name="default_enabled" val="true" />
-		<stat name="reuse" val="6000" /> <!-- Guess -->
-		<node X="83615" Y="-50828" />
-		<node X="83507" Y="-50428" />
-		<node X="83115" Y="-50032" />
-		<node X="82447" Y="-50180" />
-		<node X="82231" Y="-50752" />
-		<node X="82535" Y="-51328" />
-		<node X="82855" Y="-51444" />
-		<node X="83535" Y="-51204" />
+		<property name="initialDelay" value="1000" />
+		<property name="default_enabled" value="true" />
+		<property name="reuse" value="6000" /> <!-- Guess -->
+		<point x="83615" y="-50828" />
+		<point x="83507" y="-50428" />
+		<point x="83115" y="-50032" />
+		<point x="82447" y="-50180" />
+		<point x="82231" y="-50752" />
+		<point x="82535" y="-51328" />
+		<point x="82855" y="-51444" />
+		<point x="83535" y="-51204" />
 	</zone>
-	<zone name="godad_swamp_monster14" type="EffectZone" shape="NPoly" minZ="-2458" maxZ="-2158"> <!-- [22_16] -->
-		<stat name="targetClass" val="L2Npc" />
-		<stat name="skillIdLvl" val="4644-2;4645-3;4647-3;" /> <!-- @s_area_haste2;@s_area_focus3;@s_area_might3 -->
-		<stat name="chance" val="70" />
+	<zone name="godad_swamp_monster14" type="org.l2j.gameserver.world.zone.type.EffectZone" form="Polygon" minZ="-2458" maxZ="-2158"> <!-- [22_16] -->
+		<property name="targetClass" value="L2Npc" />
+		<property name="skillIdLvl" value="4644-2;4645-3;4647-3;" /> <!-- @s_area_haste2;@s_area_focus3;@s_area_might3 -->
+		<property name="chance" value="70" />
 		<!-- stat name="unitTick" val="9" / -->
-		<stat name="initialDelay" val="1000" />
-		<stat name="default_enabled" val="true" />
-		<stat name="reuse" val="6000" /> <!-- Guess -->
-		<node X="81946" Y="-53719" />
-		<node X="81398" Y="-53767" />
-		<node X="80642" Y="-53691" />
-		<node X="79554" Y="-54587" />
-		<node X="79782" Y="-55123" />
-		<node X="79886" Y="-56423" />
-		<node X="81054" Y="-57231" />
-		<node X="81802" Y="-57111" />
-		<node X="82970" Y="-56139" />
-		<node X="82738" Y="-54227" />
+		<property name="initialDelay" value="1000" />
+		<property name="default_enabled" value="true" />
+		<property name="reuse" value="6000" /> <!-- Guess -->
+		<point x="81946" y="-53719" />
+		<point x="81398" y="-53767" />
+		<point x="80642" y="-53691" />
+		<point x="79554" y="-54587" />
+		<point x="79782" y="-55123" />
+		<point x="79886" y="-56423" />
+		<point x="81054" y="-57231" />
+		<point x="81802" y="-57111" />
+		<point x="82970" y="-56139" />
+		<point x="82738" y="-54227" />
 	</zone>
-	<zone name="godad_swamp_monster15" type="EffectZone" shape="NPoly" minZ="-2542" maxZ="-2242"> <!-- [22_16] -->
-		<stat name="targetClass" val="L2Npc" />
-		<stat name="skillIdLvl" val="4644-2;4645-3;4647-3;" /> <!-- @s_area_haste2;@s_area_focus3;@s_area_might3 -->
-		<stat name="chance" val="70" />
+	<zone name="godad_swamp_monster15" type="org.l2j.gameserver.world.zone.type.EffectZone" form="Polygon" minZ="-2542" maxZ="-2242"> <!-- [22_16] -->
+		<property name="targetClass" value="L2Npc" />
+		<property name="skillIdLvl" value="4644-2;4645-3;4647-3;" /> <!-- @s_area_haste2;@s_area_focus3;@s_area_might3 -->
+		<property name="chance" value="70" />
 		<!-- stat name="unitTick" val="9" / -->
-		<stat name="initialDelay" val="1000" />
-		<stat name="default_enabled" val="true" />
-		<stat name="reuse" val="6000" /> <!-- Guess -->
-		<node X="78226" Y="-58454" />
-		<node X="78206" Y="-58026" />
-		<node X="77858" Y="-57766" />
-		<node X="77370" Y="-57814" />
-		<node X="77058" Y="-58266" />
-		<node X="77374" Y="-58806" />
-		<node X="77966" Y="-58870" />
+		<property name="initialDelay" value="1000" />
+		<property name="default_enabled" value="true" />
+		<property name="reuse" value="6000" /> <!-- Guess -->
+		<point x="78226" y="-58454" />
+		<point x="78206" y="-58026" />
+		<point x="77858" y="-57766" />
+		<point x="77370" y="-57814" />
+		<point x="77058" y="-58266" />
+		<point x="77374" y="-58806" />
+		<point x="77966" y="-58870" />
 	</zone>
-	<zone name="godad_swamp_monster16" type="EffectZone" shape="NPoly" minZ="-2558" maxZ="-2258"> <!-- [22_16] -->
-		<stat name="targetClass" val="L2Npc" />
-		<stat name="skillIdLvl" val="4644-2;4645-3;4647-3;" /> <!-- @s_area_haste2;@s_area_focus3;@s_area_might3 -->
-		<stat name="chance" val="70" />
+	<zone name="godad_swamp_monster16" type="org.l2j.gameserver.world.zone.type.EffectZone" form="Polygon" minZ="-2558" maxZ="-2258"> <!-- [22_16] -->
+		<property name="targetClass" value="L2Npc" />
+		<property name="skillIdLvl" value="4644-2;4645-3;4647-3;" /> <!-- @s_area_haste2;@s_area_focus3;@s_area_might3 -->
+		<property name="chance" value="70" />
 		<!-- stat name="unitTick" val="9" / -->
-		<stat name="initialDelay" val="1000" />
-		<stat name="default_enabled" val="true" />
-		<stat name="reuse" val="6000" /> <!-- Guess -->
-		<node X="77796" Y="-61961" />
-		<node X="77836" Y="-61333" />
-		<node X="77524" Y="-60969" />
-		<node X="77100" Y="-61041" />
-		<node X="76796" Y="-61233" />
-		<node X="76728" Y="-61865" />
-		<node X="77368" Y="-62213" />
+		<property name="initialDelay" value="1000" />
+		<property name="default_enabled" value="true" />
+		<property name="reuse" value="6000" /> <!-- Guess -->
+		<point x="77796" y="-61961" />
+		<point x="77836" y="-61333" />
+		<point x="77524" y="-60969" />
+		<point x="77100" y="-61041" />
+		<point x="76796" y="-61233" />
+		<point x="76728" y="-61865" />
+		<point x="77368" y="-62213" />
 	</zone>
-	<zone name="godad_swamp_monster17" type="EffectZone" shape="NPoly" minZ="-2414" maxZ="-2114"> <!-- [22_16] -->
-		<stat name="targetClass" val="L2Npc" />
-		<stat name="skillIdLvl" val="4644-2;4645-3;4647-3;" /> <!-- @s_area_haste2;@s_area_focus3;@s_area_might3 -->
-		<stat name="chance" val="70" />
+	<zone name="godad_swamp_monster17" type="org.l2j.gameserver.world.zone.type.EffectZone" form="Polygon" minZ="-2414" maxZ="-2114"> <!-- [22_16] -->
+		<property name="targetClass" value="L2Npc" />
+		<property name="skillIdLvl" value="4644-2;4645-3;4647-3;" /> <!-- @s_area_haste2;@s_area_focus3;@s_area_might3 -->
+		<property name="chance" value="70" />
 		<!-- stat name="unitTick" val="9" / -->
-		<stat name="initialDelay" val="1000" />
-		<stat name="default_enabled" val="true" />
-		<stat name="reuse" val="6000" /> <!-- Guess -->
-		<node X="82052" Y="-59979" />
-		<node X="81588" Y="-59123" />
-		<node X="80692" Y="-59059" />
-		<node X="80152" Y="-59707" />
-		<node X="80172" Y="-60535" />
-		<node X="80824" Y="-61043" />
-		<node X="81552" Y="-60955" />
+		<property name="initialDelay" value="1000" />
+		<property name="default_enabled" value="true" />
+		<property name="reuse" value="6000" /> <!-- Guess -->
+		<point x="82052" y="-59979" />
+		<point x="81588" y="-59123" />
+		<point x="80692" y="-59059" />
+		<point x="80152" y="-59707" />
+		<point x="80172" y="-60535" />
+		<point x="80824" y="-61043" />
+		<point x="81552" y="-60955" />
 	</zone>
-	<zone name="godad_swamp_monster18" type="EffectZone" shape="NPoly" minZ="-2522" maxZ="-2222"> <!-- [22_16] -->
-		<stat name="targetClass" val="L2Npc" />
-		<stat name="skillIdLvl" val="4644-2;4645-3;4647-3;" /> <!-- @s_area_haste2;@s_area_focus3;@s_area_might3 -->
-		<stat name="chance" val="70" />
+	<zone name="godad_swamp_monster18" type="org.l2j.gameserver.world.zone.type.EffectZone" form="Polygon" minZ="-2522" maxZ="-2222"> <!-- [22_16] -->
+		<property name="targetClass" value="L2Npc" />
+		<property name="skillIdLvl" value="4644-2;4645-3;4647-3;" /> <!-- @s_area_haste2;@s_area_focus3;@s_area_might3 -->
+		<property name="chance" value="70" />
 		<!-- stat name="unitTick" val="9" / -->
-		<stat name="initialDelay" val="1000" />
-		<stat name="default_enabled" val="true" />
-		<stat name="reuse" val="6000" /> <!-- Guess -->
-		<node X="85533" Y="-63207" />
-		<node X="85685" Y="-62647" />
-		<node X="85249" Y="-62239" />
-		<node X="84589" Y="-62535" />
-		<node X="84549" Y="-63151" />
-		<node X="85101" Y="-63443" />
+		<property name="initialDelay" value="1000" />
+		<property name="default_enabled" value="true" />
+		<property name="reuse" value="6000" /> <!-- Guess -->
+		<point x="85533" y="-63207" />
+		<point x="85685" y="-62647" />
+		<point x="85249" y="-62239" />
+		<point x="84589" y="-62535" />
+		<point x="84549" y="-63151" />
+		<point x="85101" y="-63443" />
 	</zone>
-	<zone name="godad_swamp_monster19" type="EffectZone" shape="NPoly" minZ="-2462" maxZ="-2162"> <!-- [22_16] -->
-		<stat name="targetClass" val="L2Npc" />
-		<stat name="skillIdLvl" val="4644-2;4645-3;4647-3;" /> <!-- @s_area_haste2;@s_area_focus3;@s_area_might3 -->
-		<stat name="chance" val="70" />
+	<zone name="godad_swamp_monster19" type="org.l2j.gameserver.world.zone.type.EffectZone" form="Polygon" minZ="-2462" maxZ="-2162"> <!-- [22_16] -->
+		<property name="targetClass" value="L2Npc" />
+		<property name="skillIdLvl" value="4644-2;4645-3;4647-3;" /> <!-- @s_area_haste2;@s_area_focus3;@s_area_might3 -->
+		<property name="chance" value="70" />
 		<!-- stat name="unitTick" val="9" / -->
-		<stat name="initialDelay" val="1000" />
-		<stat name="default_enabled" val="true" />
-		<stat name="reuse" val="6000" /> <!-- Guess -->
-		<node X="89512" Y="-60985" />
-		<node X="89712" Y="-60141" />
-		<node X="88888" Y="-59441" />
-		<node X="87948" Y="-59557" />
-		<node X="87620" Y="-60545" />
-		<node X="88136" Y="-61165" />
-		<node X="88544" Y="-61437" />
+		<property name="initialDelay" value="1000" />
+		<property name="default_enabled" value="true" />
+		<property name="reuse" value="6000" /> <!-- Guess -->
+		<point x="89512" y="-60985" />
+		<point x="89712" y="-60141" />
+		<point x="88888" y="-59441" />
+		<point x="87948" y="-59557" />
+		<point x="87620" y="-60545" />
+		<point x="88136" y="-61165" />
+		<point x="88544" y="-61437" />
 	</zone>
-	<zone name="godad_swamp_monster20" type="EffectZone" shape="NPoly" minZ="-2574" maxZ="-2274"> <!-- [22_16] -->
-		<stat name="targetClass" val="L2Npc" />
-		<stat name="skillIdLvl" val="4644-2;4645-3;4647-3;" /> <!-- @s_area_haste2;@s_area_focus3;@s_area_might3 -->
-		<stat name="chance" val="70" />
+	<zone name="godad_swamp_monster20" type="org.l2j.gameserver.world.zone.type.EffectZone" form="Polygon" minZ="-2574" maxZ="-2274"> <!-- [22_16] -->
+		<property name="targetClass" value="L2Npc" />
+		<property name="skillIdLvl" value="4644-2;4645-3;4647-3;" /> <!-- @s_area_haste2;@s_area_focus3;@s_area_might3 -->
+		<property name="chance" value="70" />
 		<!-- stat name="unitTick" val="9" / -->
-		<stat name="initialDelay" val="1000" />
-		<stat name="default_enabled" val="true" />
-		<stat name="reuse" val="6000" /> <!-- Guess -->
-		<node X="86034" Y="-54576" />
-		<node X="85642" Y="-54220" />
-		<node X="85238" Y="-54224" />
-		<node X="84862" Y="-54636" />
-		<node X="85082" Y="-55248" />
-		<node X="85526" Y="-55364" />
-		<node X="85950" Y="-55020" />
+		<property name="initialDelay" value="1000" />
+		<property name="default_enabled" value="true" />
+		<property name="reuse" value="6000" /> <!-- Guess -->
+		<point x="86034" y="-54576" />
+		<point x="85642" y="-54220" />
+		<point x="85238" y="-54224" />
+		<point x="84862" y="-54636" />
+		<point x="85082" y="-55248" />
+		<point x="85526" y="-55364" />
+		<point x="85950" y="-55020" />
 	</zone>
-	<zone name="godad_swamp_monster21" type="EffectZone" shape="NPoly" minZ="-2727" maxZ="-2427"> <!-- [22_16] -->
-		<stat name="targetClass" val="L2Npc" />
-		<stat name="skillIdLvl" val="4644-2;4645-3;4647-3;" /> <!-- @s_area_haste2;@s_area_focus3;@s_area_might3 -->
-		<stat name="chance" val="70" />
+	<zone name="godad_swamp_monster21" type="org.l2j.gameserver.world.zone.type.EffectZone" form="Polygon" minZ="-2727" maxZ="-2427"> <!-- [22_16] -->
+		<property name="targetClass" value="L2Npc" />
+		<property name="skillIdLvl" value="4644-2;4645-3;4647-3;" /> <!-- @s_area_haste2;@s_area_focus3;@s_area_might3 -->
+		<property name="chance" value="70" />
 		<!-- stat name="unitTick" val="9" / -->
-		<stat name="initialDelay" val="1000" />
-		<stat name="default_enabled" val="true" />
-		<stat name="reuse" val="6000" /> <!-- Guess -->
-		<node X="90080" Y="-52443" />
-		<node X="90212" Y="-51947" />
-		<node X="89700" Y="-51239" />
-		<node X="88928" Y="-51583" />
-		<node X="88764" Y="-51991" />
-		<node X="89008" Y="-52687" />
-		<node X="89688" Y="-52723" />
+		<property name="initialDelay" value="1000" />
+		<property name="default_enabled" value="true" />
+		<property name="reuse" value="6000" /> <!-- Guess -->
+		<point x="90080" y="-52443" />
+		<point x="90212" y="-51947" />
+		<point x="89700" y="-51239" />
+		<point x="88928" y="-51583" />
+		<point x="88764" y="-51991" />
+		<point x="89008" y="-52687" />
+		<point x="89688" y="-52723" />
 	</zone>
-	<zone name="godad_swamp_monster22" type="EffectZone" shape="NPoly" minZ="-2767" maxZ="-2467"> <!-- [22_16] -->
-		<stat name="targetClass" val="L2Npc" />
-		<stat name="skillIdLvl" val="4644-2;4645-3;4647-3;" /> <!-- @s_area_haste2;@s_area_focus3;@s_area_might3 -->
-		<stat name="chance" val="70" />
+	<zone name="godad_swamp_monster22" type="org.l2j.gameserver.world.zone.type.EffectZone" form="Polygon" minZ="-2767" maxZ="-2467"> <!-- [22_16] -->
+		<property name="targetClass" value="L2Npc" />
+		<property name="skillIdLvl" value="4644-2;4645-3;4647-3;" /> <!-- @s_area_haste2;@s_area_focus3;@s_area_might3 -->
+		<property name="chance" value="70" />
 		<!-- stat name="unitTick" val="9" / -->
-		<stat name="initialDelay" val="1000" />
-		<stat name="default_enabled" val="true" />
-		<stat name="reuse" val="6000" /> <!-- Guess -->
-		<node X="92777" Y="-52363" />
-		<node X="91981" Y="-51967" />
-		<node X="91281" Y="-52519" />
-		<node X="91229" Y="-53299" />
-		<node X="91385" Y="-53679" />
-		<node X="92405" Y="-53943" />
-		<node X="93025" Y="-53439" />
+		<property name="initialDelay" value="1000" />
+		<property name="default_enabled" value="true" />
+		<property name="reuse" value="6000" /> <!-- Guess -->
+		<point x="92777" y="-52363" />
+		<point x="91981" y="-51967" />
+		<point x="91281" y="-52519" />
+		<point x="91229" y="-53299" />
+		<point x="91385" y="-53679" />
+		<point x="92405" y="-53943" />
+		<point x="93025" y="-53439" />
 	</zone>
-	<zone name="godad_swamp_monster23" type="EffectZone" shape="NPoly" minZ="-2763" maxZ="-2463"> <!-- [22_16] -->
-		<stat name="targetClass" val="L2Npc" />
-		<stat name="skillIdLvl" val="4644-2;4645-3;4647-3;" /> <!-- @s_area_haste2;@s_area_focus3;@s_area_might3 -->
-		<stat name="chance" val="70" />
+	<zone name="godad_swamp_monster23" type="org.l2j.gameserver.world.zone.type.EffectZone" form="Polygon" minZ="-2763" maxZ="-2463"> <!-- [22_16] -->
+		<property name="targetClass" value="L2Npc" />
+		<property name="skillIdLvl" value="4644-2;4645-3;4647-3;" /> <!-- @s_area_haste2;@s_area_focus3;@s_area_might3 -->
+		<property name="chance" value="70" />
 		<!-- stat name="unitTick" val="9" / -->
-		<stat name="initialDelay" val="1000" />
-		<stat name="default_enabled" val="true" />
-		<stat name="reuse" val="6000" /> <!-- Guess -->
-		<node X="95179" Y="-52286" />
-		<node X="94747" Y="-51982" />
-		<node X="94303" Y="-52062" />
-		<node X="93927" Y="-52458" />
-		<node X="94187" Y="-53042" />
-		<node X="94707" Y="-53150" />
-		<node X="95043" Y="-53058" />
-		<node X="95211" Y="-52546" />
+		<property name="initialDelay" value="1000" />
+		<property name="default_enabled" value="true" />
+		<property name="reuse" value="6000" /> <!-- Guess -->
+		<point x="95179" y="-52286" />
+		<point x="94747" y="-51982" />
+		<point x="94303" y="-52062" />
+		<point x="93927" y="-52458" />
+		<point x="94187" y="-53042" />
+		<point x="94707" y="-53150" />
+		<point x="95043" y="-53058" />
+		<point x="95211" y="-52546" />
 	</zone>
-	<zone name="godad_swamp_monster24" type="EffectZone" shape="NPoly" minZ="-2550" maxZ="-2150"> <!-- [22_16] -->
-		<stat name="targetClass" val="L2Npc" />
-		<stat name="skillIdLvl" val="4644-2;4645-3;4647-3;" /> <!-- @s_area_haste2;@s_area_focus3;@s_area_might3 -->
-		<stat name="chance" val="70" />
+	<zone name="godad_swamp_monster24" type="org.l2j.gameserver.world.zone.type.EffectZone" form="Polygon" minZ="-2550" maxZ="-2150"> <!-- [22_16] -->
+		<property name="targetClass" value="L2Npc" />
+		<property name="skillIdLvl" value="4644-2;4645-3;4647-3;" /> <!-- @s_area_haste2;@s_area_focus3;@s_area_might3 -->
+		<property name="chance" value="70" />
 		<!-- stat name="unitTick" val="9" / -->
-		<stat name="initialDelay" val="1000" />
-		<stat name="default_enabled" val="true" />
-		<stat name="reuse" val="6000" /> <!-- Guess -->
-		<node X="85757" Y="-59957" />
-		<node X="86073" Y="-59585" />
-		<node X="86085" Y="-59117" />
-		<node X="85761" Y="-58801" />
-		<node X="85177" Y="-58893" />
-		<node X="84905" Y="-59329" />
-		<node X="85229" Y="-59869" />
+		<property name="initialDelay" value="1000" />
+		<property name="default_enabled" value="true" />
+		<property name="reuse" value="6000" /> <!-- Guess -->
+		<point x="85757" y="-59957" />
+		<point x="86073" y="-59585" />
+		<point x="86085" y="-59117" />
+		<point x="85761" y="-58801" />
+		<point x="85177" y="-58893" />
+		<point x="84905" y="-59329" />
+		<point x="85229" y="-59869" />
 	</zone>
-	<zone name="godad_swamp_monster25" type="EffectZone" shape="NPoly" minZ="-2486" maxZ="-2286"> <!-- [22_16] -->
-		<stat name="targetClass" val="L2Npc" />
-		<stat name="skillIdLvl" val="4644-2;4645-3;4647-3;" /> <!-- @s_area_haste2;@s_area_focus3;@s_area_might3 -->
-		<stat name="chance" val="70" />
+	<zone name="godad_swamp_monster25" type="org.l2j.gameserver.world.zone.type.EffectZone" form="Polygon" minZ="-2486" maxZ="-2286"> <!-- [22_16] -->
+		<property name="targetClass" value="L2Npc" />
+		<property name="skillIdLvl" value="4644-2;4645-3;4647-3;" /> <!-- @s_area_haste2;@s_area_focus3;@s_area_might3 -->
+		<property name="chance" value="70" />
 		<!-- stat name="unitTick" val="9" / -->
-		<stat name="initialDelay" val="1000" />
-		<stat name="default_enabled" val="true" />
-		<stat name="reuse" val="6000" /> <!-- Guess -->
-		<node X="81382" Y="-63921" />
-		<node X="81826" Y="-63537" />
-		<node X="81834" Y="-62985" />
-		<node X="81298" Y="-62773" />
-		<node X="80870" Y="-62985" />
-		<node X="80798" Y="-63309" />
-		<node X="80946" Y="-63769" />
+		<property name="initialDelay" value="1000" />
+		<property name="default_enabled" value="true" />
+		<property name="reuse" value="6000" /> <!-- Guess -->
+		<point x="81382" y="-63921" />
+		<point x="81826" y="-63537" />
+		<point x="81834" y="-62985" />
+		<point x="81298" y="-62773" />
+		<point x="80870" y="-62985" />
+		<point x="80798" y="-63309" />
+		<point x="80946" y="-63769" />
 	</zone>
-	<zone name="godad_swamp_monster26" type="EffectZone" shape="NPoly" minZ="-2819" maxZ="-2619"> <!-- [22_16] -->
-		<stat name="targetClass" val="L2Npc" />
-		<stat name="skillIdLvl" val="4644-2;4645-3;4647-3;" /> <!-- @s_area_haste2;@s_area_focus3;@s_area_might3 -->
-		<stat name="chance" val="70" />
+	<zone name="godad_swamp_monster26" type="org.l2j.gameserver.world.zone.type.EffectZone" form="Polygon" minZ="-2819" maxZ="-2619"> <!-- [22_16] -->
+		<property name="targetClass" value="L2Npc" />
+		<property name="skillIdLvl" value="4644-2;4645-3;4647-3;" /> <!-- @s_area_haste2;@s_area_focus3;@s_area_might3 -->
+		<property name="chance" value="70" />
 		<!-- stat name="unitTick" val="9" / -->
-		<stat name="initialDelay" val="1000" />
-		<stat name="default_enabled" val="true" />
-		<stat name="reuse" val="6000" /> <!-- Guess -->
-		<node X="93421" Y="-55220" />
-		<node X="94109" Y="-55536" />
-		<node X="94601" Y="-55164" />
-		<node X="94581" Y="-54740" />
-		<node X="94185" Y="-54360" />
-		<node X="93565" Y="-54344" />
-		<node X="93365" Y="-54760" />
+		<property name="initialDelay" value="1000" />
+		<property name="default_enabled" value="true" />
+		<property name="reuse" value="6000" /> <!-- Guess -->
+		<point x="93421" y="-55220" />
+		<point x="94109" y="-55536" />
+		<point x="94601" y="-55164" />
+		<point x="94581" y="-54740" />
+		<point x="94185" y="-54360" />
+		<point x="93565" y="-54344" />
+		<point x="93365" y="-54760" />
 	</zone>
 	<!-- Valakas Nest Lava -->
-	<zone name="balakas_lava_1" type="EffectZone" shape="NPoly" minZ="-1700" maxZ="-1500"> <!-- [26_14] -->
-		<stat name="skillIdLvl" val="4150-7;" /> <!-- s_area_fire7 -->
-		<stat name="chance" val="50" />
+	<zone name="balakas_lava_1" type="org.l2j.gameserver.world.zone.type.EffectZone" form="Polygon" minZ="-1700" maxZ="-1500"> <!-- [26_14] -->
+		<property name="skillIdLvl" value="4150-7;" /> <!-- s_area_fire7 -->
+		<property name="chance" value="50" />
 		<!-- stat name="unitTick" val="9" / -->
-		<stat name="initialDelay" val="1000" />
-		<stat name="default_enabled" val="true" />
-		<stat name="reuse" val="6000" /> <!-- Guess -->
-		<node X="212916" Y="-117204" />
-		<node X="213404" Y="-117248" />
-		<node X="213444" Y="-116584" />
-		<node X="213012" Y="-116444" />
-		<node X="212828" Y="-116928" />
+		<property name="initialDelay" value="1000" />
+		<property name="default_enabled" value="true" />
+		<property name="reuse" value="6000" /> <!-- Guess -->
+		<point x="212916" y="-117204" />
+		<point x="213404" y="-117248" />
+		<point x="213444" y="-116584" />
+		<point x="213012" y="-116444" />
+		<point x="212828" y="-116928" />
 	</zone>
-	<zone name="balakas_lava_2" type="EffectZone" shape="NPoly" minZ="-1800" maxZ="-1600"> <!-- [26_14] -->
-		<stat name="skillIdLvl" val="4150-7;" /> <!-- s_area_fire7 -->
-		<stat name="chance" val="50" />
+	<zone name="balakas_lava_2" type="org.l2j.gameserver.world.zone.type.EffectZone" form="Polygon" minZ="-1800" maxZ="-1600"> <!-- [26_14] -->
+		<property name="skillIdLvl" value="4150-7;" /> <!-- s_area_fire7 -->
+		<property name="chance" value="50" />
 		<!-- stat name="unitTick" val="9" / -->
-		<stat name="initialDelay" val="1000" />
-		<stat name="default_enabled" val="true" />
-		<stat name="reuse" val="6000" /> <!-- Guess -->
-		<node X="212304" Y="-116608" />
-		<node X="212708" Y="-116660" />
-		<node X="212820" Y="-116300" />
-		<node X="212416" Y="-116144" />
-		<node X="212140" Y="-116336" />
+		<property name="initialDelay" value="1000" />
+		<property name="default_enabled" value="true" />
+		<property name="reuse" value="6000" /> <!-- Guess -->
+		<point x="212304" y="-116608" />
+		<point x="212708" y="-116660" />
+		<point x="212820" y="-116300" />
+		<point x="212416" y="-116144" />
+		<point x="212140" y="-116336" />
 	</zone>
-	<zone name="balakas_lava_3" type="EffectZone" shape="NPoly" minZ="-1772" maxZ="-1572"> <!-- [26_14] -->
-		<stat name="skillIdLvl" val="4150-7;" /> <!-- s_area_fire7 -->
-		<stat name="chance" val="50" />
+	<zone name="balakas_lava_3" type="org.l2j.gameserver.world.zone.type.EffectZone" form="Polygon" minZ="-1772" maxZ="-1572"> <!-- [26_14] -->
+		<property name="skillIdLvl" value="4150-7;" /> <!-- s_area_fire7 -->
+		<property name="chance" value="50" />
 		<!-- stat name="unitTick" val="9" / -->
-		<stat name="initialDelay" val="1000" />
-		<stat name="default_enabled" val="true" />
-		<stat name="reuse" val="6000" /> <!-- Guess -->
-		<node X="214032" Y="-116748" />
-		<node X="214488" Y="-116652" />
-		<node X="214548" Y="-116352" />
-		<node X="214064" Y="-116232" />
+		<property name="initialDelay" value="1000" />
+		<property name="default_enabled" value="true" />
+		<property name="reuse" value="6000" /> <!-- Guess -->
+		<point x="214032" y="-116748" />
+		<point x="214488" y="-116652" />
+		<point x="214548" y="-116352" />
+		<point x="214064" y="-116232" />
 	</zone>
-	<zone name="balakas_lava_4" type="EffectZone" shape="NPoly" minZ="-1800" maxZ="-1600"> <!-- [26_14] -->
-		<stat name="skillIdLvl" val="4150-7;" /> <!-- s_area_fire7 -->
-		<stat name="chance" val="50" />
+	<zone name="balakas_lava_4" type="org.l2j.gameserver.world.zone.type.EffectZone" form="Polygon" minZ="-1800" maxZ="-1600"> <!-- [26_14] -->
+		<property name="skillIdLvl" value="4150-7;" /> <!-- s_area_fire7 -->
+		<property name="chance" value="50" />
 		<!-- stat name="unitTick" val="9" / -->
-		<stat name="initialDelay" val="1000" />
-		<stat name="default_enabled" val="true" />
-		<stat name="reuse" val="6000" /> <!-- Guess -->
-		<node X="214424" Y="-115452" />
-		<node X="214776" Y="-115520" />
-		<node X="214944" Y="-115248" />
-		<node X="214652" Y="-114784" />
-		<node X="214460" Y="-114824" />
-		<node X="214412" Y="-115080" />
+		<property name="initialDelay" value="1000" />
+		<property name="default_enabled" value="true" />
+		<property name="reuse" value="6000" /> <!-- Guess -->
+		<point x="214424" y="-115452" />
+		<point x="214776" y="-115520" />
+		<point x="214944" y="-115248" />
+		<point x="214652" y="-114784" />
+		<point x="214460" y="-114824" />
+		<point x="214412" y="-115080" />
 	</zone>
-	<zone name="balakas_lava_5" type="EffectZone" shape="NPoly" minZ="-1820" maxZ="-1620"> <!-- [26_14] -->
-		<stat name="skillIdLvl" val="4150-7;" /> <!-- s_area_fire7 -->
-		<stat name="chance" val="50" />
+	<zone name="balakas_lava_5" type="org.l2j.gameserver.world.zone.type.EffectZone" form="Polygon" minZ="-1820" maxZ="-1620"> <!-- [26_14] -->
+		<property name="skillIdLvl" value="4150-7;" /> <!-- s_area_fire7 -->
+		<property name="chance" value="50" />
 		<!-- stat name="unitTick" val="9" / -->
-		<stat name="initialDelay" val="1000" />
-		<stat name="default_enabled" val="true" />
-		<stat name="reuse" val="6000" /> <!-- Guess -->
-		<node X="214668" Y="-114276" />
-		<node X="214948" Y="-113876" />
-		<node X="214612" Y="-113588" />
-		<node X="214228" Y="-113884" />
-		<node X="214340" Y="-114148" />
+		<property name="initialDelay" value="1000" />
+		<property name="default_enabled" value="true" />
+		<property name="reuse" value="6000" /> <!-- Guess -->
+		<point x="214668" y="-114276" />
+		<point x="214948" y="-113876" />
+		<point x="214612" y="-113588" />
+		<point x="214228" y="-113884" />
+		<point x="214340" y="-114148" />
 	</zone>
-	<zone name="balakas_lava_6" type="EffectZone" shape="NPoly" minZ="-1768" maxZ="-1568"> <!-- [26_14] -->
-		<stat name="skillIdLvl" val="4150-7;" /> <!-- s_area_fire7 -->
-		<stat name="chance" val="50" />
+	<zone name="balakas_lava_6" type="org.l2j.gameserver.world.zone.type.EffectZone" form="Polygon" minZ="-1768" maxZ="-1568"> <!-- [26_14] -->
+		<property name="skillIdLvl" value="4150-7;" /> <!-- s_area_fire7 -->
+		<property name="chance" value="50" />
 		<!-- stat name="unitTick" val="9" / -->
-		<stat name="initialDelay" val="1000" />
-		<stat name="default_enabled" val="true" />
-		<stat name="reuse" val="6000" /> <!-- Guess -->
-		<node X="213916" Y="-115660" />
-		<node X="214220" Y="-114648" />
-		<node X="213392" Y="-113112" />
-		<node X="212100" Y="-113460" />
-		<node X="211292" Y="-115164" />
-		<node X="211948" Y="-115196" />
-		<node X="211976" Y="-115628" />
-		<node X="212696" Y="-116036" />
-		<node X="213200" Y="-116136" />
+		<property name="initialDelay" value="1000" />
+		<property name="default_enabled" value="true" />
+		<property name="reuse" value="6000" /> <!-- Guess -->
+		<point x="213916" y="-115660" />
+		<point x="214220" y="-114648" />
+		<point x="213392" y="-113112" />
+		<point x="212100" y="-113460" />
+		<point x="211292" y="-115164" />
+		<point x="211948" y="-115196" />
+		<point x="211976" y="-115628" />
+		<point x="212696" y="-116036" />
+		<point x="213200" y="-116136" />
 	</zone>
-	<zone name="balakas_lava_7" type="EffectZone" shape="NPoly" minZ="-1764" maxZ="-1564"> <!-- [26_14] -->
-		<stat name="skillIdLvl" val="4150-7;" /> <!-- s_area_fire7 -->
-		<stat name="chance" val="50" />
+	<zone name="balakas_lava_7" type="org.l2j.gameserver.world.zone.type.EffectZone" form="Polygon" minZ="-1764" maxZ="-1564"> <!-- [26_14] -->
+		<property name="skillIdLvl" value="4150-7;" /> <!-- s_area_fire7 -->
+		<property name="chance" value="50" />
 		<!-- stat name="unitTick" val="9" / -->
-		<stat name="initialDelay" val="1000" />
-		<stat name="default_enabled" val="true" />
-		<stat name="reuse" val="6000" /> <!-- Guess -->
-		<node X="210524" Y="-114376" />
-		<node X="211144" Y="-114604" />
-		<node X="211148" Y="-114340" />
-		<node X="210764" Y="-114116" />
+		<property name="initialDelay" value="1000" />
+		<property name="default_enabled" value="true" />
+		<property name="reuse" value="6000" /> <!-- Guess -->
+		<point x="210524" y="-114376" />
+		<point x="211144" y="-114604" />
+		<point x="211148" y="-114340" />
+		<point x="210764" y="-114116" />
 	</zone>
-	<zone name="balakas_lava_8" type="EffectZone" shape="NPoly" minZ="-1716" maxZ="-1516"> <!-- [26_14] -->
-		<stat name="skillIdLvl" val="4150-7;" /> <!-- s_area_fire7 -->
-		<stat name="chance" val="50" />
+	<zone name="balakas_lava_8" type="org.l2j.gameserver.world.zone.type.EffectZone" form="Polygon" minZ="-1716" maxZ="-1516"> <!-- [26_14] -->
+		<property name="skillIdLvl" value="4150-7;" /> <!-- s_area_fire7 -->
+		<property name="chance" value="50" />
 		<!-- stat name="unitTick" val="9" / -->
-		<stat name="initialDelay" val="1000" />
-		<stat name="default_enabled" val="true" />
-		<stat name="reuse" val="6000" /> <!-- Guess -->
-		<node X="212276" Y="-113016" />
-		<node X="212932" Y="-112836" />
-		<node X="212860" Y="-112600" />
-		<node X="212616" Y="-112488" />
-		<node X="212188" Y="-112604" />
-		<node X="212144" Y="-112820" />
+		<property name="initialDelay" value="1000" />
+		<property name="default_enabled" value="true" />
+		<property name="reuse" value="6000" /> <!-- Guess -->
+		<point x="212276" y="-113016" />
+		<point x="212932" y="-112836" />
+		<point x="212860" y="-112600" />
+		<point x="212616" y="-112488" />
+		<point x="212188" y="-112604" />
+		<point x="212144" y="-112820" />
 	</zone>
-	<zone name="balakas_lava_9" type="EffectZone" shape="NPoly" minZ="-1720" maxZ="-1520"> <!-- [26_14] -->
-		<stat name="skillIdLvl" val="4150-7;" /> <!-- s_area_fire7 -->
-		<stat name="chance" val="50" />
+	<zone name="balakas_lava_9" type="org.l2j.gameserver.world.zone.type.EffectZone" form="Polygon" minZ="-1720" maxZ="-1520"> <!-- [26_14] -->
+		<property name="skillIdLvl" value="4150-7;" /> <!-- s_area_fire7 -->
+		<property name="chance" value="50" />
 		<!-- stat name="unitTick" val="9" / -->
-		<stat name="initialDelay" val="1000" />
-		<stat name="default_enabled" val="true" />
-		<stat name="reuse" val="6000" /> <!-- Guess -->
-		<node X="211608" Y="-113560" />
-		<node X="211944" Y="-113408" />
-		<node X="211880" Y="-112888" />
-		<node X="211220" Y="-112780" />
-		<node X="211204" Y="-113400" />
+		<property name="initialDelay" value="1000" />
+		<property name="default_enabled" value="true" />
+		<property name="reuse" value="6000" /> <!-- Guess -->
+		<point x="211608" y="-113560" />
+		<point x="211944" y="-113408" />
+		<point x="211880" y="-112888" />
+		<point x="211220" y="-112780" />
+		<point x="211204" y="-113400" />
 	</zone>
-	<zone name="balakas_lava_10" type="EffectZone" shape="NPoly" minZ="-1732" maxZ="-1532"> <!-- [26_14] -->
-		<stat name="skillIdLvl" val="4150-7;" /> <!-- s_area_fire7 -->
-		<stat name="chance" val="50" />
+	<zone name="balakas_lava_10" type="org.l2j.gameserver.world.zone.type.EffectZone" form="Polygon" minZ="-1732" maxZ="-1532"> <!-- [26_14] -->
+		<property name="skillIdLvl" value="4150-7;" /> <!-- s_area_fire7 -->
+		<property name="chance" value="50" />
 		<!-- stat name="unitTick" val="9" / -->
-		<stat name="initialDelay" val="1000" />
-		<stat name="default_enabled" val="true" />
-		<stat name="reuse" val="6000" /> <!-- Guess -->
-		<node X="210596" Y="-116292" />
-		<node X="210904" Y="-116088" />
-		<node X="210972" Y="-115760" />
-		<node X="210784" Y="-115612" />
-		<node X="210308" Y="-115904" />
+		<property name="initialDelay" value="1000" />
+		<property name="default_enabled" value="true" />
+		<property name="reuse" value="6000" /> <!-- Guess -->
+		<point x="210596" y="-116292" />
+		<point x="210904" y="-116088" />
+		<point x="210972" y="-115760" />
+		<point x="210784" y="-115612" />
+		<point x="210308" y="-115904" />
 	</zone>
-	<zone name="balakas_lava_11" type="EffectZone" shape="NPoly" minZ="-1736" maxZ="-1536"> <!-- [26_14] -->
-		<stat name="skillIdLvl" val="4150-7;" /> <!-- s_area_fire7 -->
-		<stat name="chance" val="50" />
+	<zone name="balakas_lava_11" type="org.l2j.gameserver.world.zone.type.EffectZone" form="Polygon" minZ="-1736" maxZ="-1536"> <!-- [26_14] -->
+		<property name="skillIdLvl" value="4150-7;" /> <!-- s_area_fire7 -->
+		<property name="chance" value="50" />
 		<!-- stat name="unitTick" val="9" / -->
-		<stat name="initialDelay" val="1000" />
-		<stat name="default_enabled" val="true" />
-		<stat name="reuse" val="6000" /> <!-- Guess -->
-		<node X="211272" Y="-117352" />
-		<node X="211660" Y="-117220" />
-		<node X="211552" Y="-117000" />
-		<node X="211792" Y="-116936" />
-		<node X="212072" Y="-116412" />
-		<node X="211916" Y="-115952" />
-		<node X="211600" Y="-115956" />
-		<node X="211356" Y="-116588" />
-		<node X="210928" Y="-116296" />
-		<node X="210872" Y="-117028" />
+		<property name="initialDelay" value="1000" />
+		<property name="default_enabled" value="true" />
+		<property name="reuse" value="6000" /> <!-- Guess -->
+		<point x="211272" y="-117352" />
+		<point x="211660" y="-117220" />
+		<point x="211552" y="-117000" />
+		<point x="211792" y="-116936" />
+		<point x="212072" y="-116412" />
+		<point x="211916" y="-115952" />
+		<point x="211600" y="-115956" />
+		<point x="211356" y="-116588" />
+		<point x="210928" y="-116296" />
+		<point x="210872" y="-117028" />
 	</zone>
-	<zone name="balakas_lava_12" type="EffectZone" shape="NPoly" minZ="-1748" maxZ="-1548"> <!-- [26_14] -->
-		<stat name="skillIdLvl" val="4150-7;" /> <!-- s_area_fire7 -->
-		<stat name="chance" val="50" />
+	<zone name="balakas_lava_12" type="org.l2j.gameserver.world.zone.type.EffectZone" form="Polygon" minZ="-1748" maxZ="-1548"> <!-- [26_14] -->
+		<property name="skillIdLvl" value="4150-7;" /> <!-- s_area_fire7 -->
+		<property name="chance" value="50" />
 		<!-- stat name="unitTick" val="9" / -->
-		<stat name="initialDelay" val="1000" />
-		<stat name="default_enabled" val="true" />
-		<stat name="reuse" val="6000" /> <!-- Guess -->
-		<node X="211528" Y="-117312" />
-		<node X="212828" Y="-117884" />
-		<node X="212756" Y="-117068" />
-		<node X="212584" Y="-116828" />
-		<node X="212300" Y="-116812" />
-		<node X="211796" Y="-117168" />
+		<property name="initialDelay" value="1000" />
+		<property name="default_enabled" value="true" />
+		<property name="reuse" value="6000" /> <!-- Guess -->
+		<point x="211528" y="-117312" />
+		<point x="212828" y="-117884" />
+		<point x="212756" y="-117068" />
+		<point x="212584" y="-116828" />
+		<point x="212300" y="-116812" />
+		<point x="211796" y="-117168" />
 	</zone>
-	<zone name="balakas_lava_13" type="EffectZone" shape="NPoly" minZ="-1792" maxZ="-1592"> <!-- [26_14] -->
-		<stat name="skillIdLvl" val="4150-7;" /> <!-- s_area_fire7 -->
-		<stat name="chance" val="50" />
+	<zone name="balakas_lava_13" type="org.l2j.gameserver.world.zone.type.EffectZone" form="Polygon" minZ="-1792" maxZ="-1592"> <!-- [26_14] -->
+		<property name="skillIdLvl" value="4150-7;" /> <!-- s_area_fire7 -->
+		<property name="chance" value="50" />
 		<!-- stat name="unitTick" val="9" / -->
-		<stat name="initialDelay" val="1000" />
-		<stat name="default_enabled" val="true" />
-		<stat name="reuse" val="6000" /> <!-- Guess -->
-		<node X="213224" Y="-117956" />
-		<node X="213204" Y="-117548" />
-		<node X="213016" Y="-117412" />
-		<node X="212792" Y="-117456" />
-		<node X="212836" Y="-117916" />
+		<property name="initialDelay" value="1000" />
+		<property name="default_enabled" value="true" />
+		<property name="reuse" value="6000" /> <!-- Guess -->
+		<point x="213224" y="-117956" />
+		<point x="213204" y="-117548" />
+		<point x="213016" y="-117412" />
+		<point x="212792" y="-117456" />
+		<point x="212836" y="-117916" />
 	</zone>
-	<zone name="balakas_lava_14" type="EffectZone" shape="NPoly" minZ="-1812" maxZ="-1612"> <!-- [26_14] -->
-		<stat name="skillIdLvl" val="4150-7;" /> <!-- s_area_fire7 -->
-		<stat name="chance" val="50" />
+	<zone name="balakas_lava_14" type="org.l2j.gameserver.world.zone.type.EffectZone" form="Polygon" minZ="-1812" maxZ="-1612"> <!-- [26_14] -->
+		<property name="skillIdLvl" value="4150-7;" /> <!-- s_area_fire7 -->
+		<property name="chance" value="50" />
 		<!-- stat name="unitTick" val="9" / -->
-		<stat name="initialDelay" val="1000" />
-		<stat name="default_enabled" val="true" />
-		<stat name="reuse" val="6000" /> <!-- Guess -->
-		<node X="213440" Y="-118004" />
-		<node X="213852" Y="-118004" />
-		<node X="213728" Y="-117728" />
-		<node X="213584" Y="-117748" />
+		<property name="initialDelay" value="1000" />
+		<property name="default_enabled" value="true" />
+		<property name="reuse" value="6000" /> <!-- Guess -->
+		<point x="213440" y="-118004" />
+		<point x="213852" y="-118004" />
+		<point x="213728" y="-117728" />
+		<point x="213584" y="-117748" />
 	</zone>
-	<zone name="balakas_lava_15" type="EffectZone" shape="NPoly" minZ="-1764" maxZ="-1564"> <!-- [26_14] -->
-		<stat name="skillIdLvl" val="4150-7;" /> <!-- s_area_fire7 -->
-		<stat name="chance" val="50" />
+	<zone name="balakas_lava_15" type="org.l2j.gameserver.world.zone.type.EffectZone" form="Polygon" minZ="-1764" maxZ="-1564"> <!-- [26_14] -->
+		<property name="skillIdLvl" value="4150-7;" /> <!-- s_area_fire7 -->
+		<property name="chance" value="50" />
 		<!-- stat name="unitTick" val="9" / -->
-		<stat name="initialDelay" val="1000" />
-		<stat name="default_enabled" val="true" />
-		<stat name="reuse" val="6000" /> <!-- Guess -->
-		<node X="213988" Y="-117184" />
-		<node X="213808" Y="-117232" />
-		<node X="213952" Y="-117772" />
-		<node X="213636" Y="-118036" />
-		<node X="214660" Y="-117924" />
-		<node X="214232" Y="-117560" />
-		<node X="214224" Y="-117412" />
+		<property name="initialDelay" value="1000" />
+		<property name="default_enabled" value="true" />
+		<property name="reuse" value="6000" /> <!-- Guess -->
+		<point x="213988" y="-117184" />
+		<point x="213808" y="-117232" />
+		<point x="213952" y="-117772" />
+		<point x="213636" y="-118036" />
+		<point x="214660" y="-117924" />
+		<point x="214232" y="-117560" />
+		<point x="214224" y="-117412" />
 	</zone>
-	<zone name="balakas_lava_16" type="EffectZone" shape="NPoly" minZ="-1716" maxZ="-1516"> <!-- [26_14] -->
-		<stat name="skillIdLvl" val="4150-7;" /> <!-- s_area_fire7 -->
-		<stat name="chance" val="50" />
+	<zone name="balakas_lava_16" type="org.l2j.gameserver.world.zone.type.EffectZone" form="Polygon" minZ="-1716" maxZ="-1516"> <!-- [26_14] -->
+		<property name="skillIdLvl" value="4150-7;" /> <!-- s_area_fire7 -->
+		<property name="chance" value="50" />
 		<!-- stat name="unitTick" val="9" / -->
-		<stat name="initialDelay" val="1000" />
-		<stat name="default_enabled" val="true" />
-		<stat name="reuse" val="6000" /> <!-- Guess -->
-		<node X="214564" Y="-117840" />
-		<node X="214844" Y="-117352" />
-		<node X="214616" Y="-117172" />
-		<node X="214436" Y="-117300" />
-		<node X="214304" Y="-117592" />
+		<property name="initialDelay" value="1000" />
+		<property name="default_enabled" value="true" />
+		<property name="reuse" value="6000" /> <!-- Guess -->
+		<point x="214564" y="-117840" />
+		<point x="214844" y="-117352" />
+		<point x="214616" y="-117172" />
+		<point x="214436" y="-117300" />
+		<point x="214304" y="-117592" />
 	</zone>
-	<zone name="balakas_lava_17" type="EffectZone" shape="NPoly" minZ="-1700" maxZ="-1500"> <!-- [26_14] -->
-		<stat name="skillIdLvl" val="4150-7;" /> <!-- s_area_fire7 -->
-		<stat name="chance" val="50" />
+	<zone name="balakas_lava_17" type="org.l2j.gameserver.world.zone.type.EffectZone" form="Polygon" minZ="-1700" maxZ="-1500"> <!-- [26_14] -->
+		<property name="skillIdLvl" value="4150-7;" /> <!-- s_area_fire7 -->
+		<property name="chance" value="50" />
 		<!-- stat name="unitTick" val="9" / -->
-		<stat name="initialDelay" val="1000" />
-		<stat name="default_enabled" val="true" />
-		<stat name="reuse" val="6000" /> <!-- Guess -->
-		<node X="215148" Y="-117144" />
-		<node X="215300" Y="-117208" />
-		<node X="215516" Y="-116568" />
-		<node X="215296" Y="-116592" />
+		<property name="initialDelay" value="1000" />
+		<property name="default_enabled" value="true" />
+		<property name="reuse" value="6000" /> <!-- Guess -->
+		<point x="215148" y="-117144" />
+		<point x="215300" y="-117208" />
+		<point x="215516" y="-116568" />
+		<point x="215296" y="-116592" />
 	</zone>
-	<zone name="balakas_lava_18" type="EffectZone" shape="NPoly" minZ="-1684" maxZ="-1484"> <!-- [26_14] -->
-		<stat name="skillIdLvl" val="4150-7;" /> <!-- s_area_fire7 -->
-		<stat name="chance" val="50" />
+	<zone name="balakas_lava_18" type="org.l2j.gameserver.world.zone.type.EffectZone" form="Polygon" minZ="-1684" maxZ="-1484"> <!-- [26_14] -->
+		<property name="skillIdLvl" value="4150-7;" /> <!-- s_area_fire7 -->
+		<property name="chance" value="50" />
 		<!-- stat name="unitTick" val="9" / -->
-		<stat name="initialDelay" val="1000" />
-		<stat name="default_enabled" val="true" />
-		<stat name="reuse" val="6000" /> <!-- Guess -->
-		<node X="215356" Y="-116304" />
-		<node X="215584" Y="-116508" />
-		<node X="216472" Y="-114732" />
-		<node X="215428" Y="-114700" />
-		<node X="215204" Y="-114556" />
-		<node X="214916" Y="-114664" />
-		<node X="214932" Y="-114920" />
-		<node X="215244" Y="-115184" />
-		<node X="215116" Y="-115408" />
-		<node X="215420" Y="-115756" />
-		<node X="215296" Y="-115852" />
+		<property name="initialDelay" value="1000" />
+		<property name="default_enabled" value="true" />
+		<property name="reuse" value="6000" /> <!-- Guess -->
+		<point x="215356" y="-116304" />
+		<point x="215584" y="-116508" />
+		<point x="216472" y="-114732" />
+		<point x="215428" y="-114700" />
+		<point x="215204" y="-114556" />
+		<point x="214916" y="-114664" />
+		<point x="214932" y="-114920" />
+		<point x="215244" y="-115184" />
+		<point x="215116" y="-115408" />
+		<point x="215420" y="-115756" />
+		<point x="215296" y="-115852" />
 	</zone>
-	<zone name="balakas_lava_19" type="EffectZone" shape="NPoly" minZ="-1740" maxZ="-1540"> <!-- [26_14] -->
-		<stat name="skillIdLvl" val="4150-7;" /> <!-- s_area_fire7 -->
-		<stat name="chance" val="50" />
+	<zone name="balakas_lava_19" type="org.l2j.gameserver.world.zone.type.EffectZone" form="Polygon" minZ="-1740" maxZ="-1540"> <!-- [26_14] -->
+		<property name="skillIdLvl" value="4150-7;" /> <!-- s_area_fire7 -->
+		<property name="chance" value="50" />
 		<!-- stat name="unitTick" val="9" / -->
-		<stat name="initialDelay" val="1000" />
-		<stat name="default_enabled" val="true" />
-		<stat name="reuse" val="6000" /> <!-- Guess -->
-		<node X="214888" Y="-114200" />
-		<node X="216164" Y="-114560" />
-		<node X="216120" Y="-113212" />
-		<node X="215380" Y="-112272" />
-		<node X="214240" Y="-113388" />
-		<node X="215420" Y="-113568" />
+		<property name="initialDelay" value="1000" />
+		<property name="default_enabled" value="true" />
+		<property name="reuse" value="6000" /> <!-- Guess -->
+		<point x="214888" y="-114200" />
+		<point x="216164" y="-114560" />
+		<point x="216120" y="-113212" />
+		<point x="215380" y="-112272" />
+		<point x="214240" y="-113388" />
+		<point x="215420" y="-113568" />
 	</zone>
-	<zone name="balakas_lava_20" type="EffectZone" shape="NPoly" minZ="-1792" maxZ="-1592"> <!-- [26_14] -->
-		<stat name="skillIdLvl" val="4150-7;" /> <!-- s_area_fire7 -->
-		<stat name="chance" val="50" />
+	<zone name="balakas_lava_20" type="org.l2j.gameserver.world.zone.type.EffectZone" form="Polygon" minZ="-1792" maxZ="-1592"> <!-- [26_14] -->
+		<property name="skillIdLvl" value="4150-7;" /> <!-- s_area_fire7 -->
+		<property name="chance" value="50" />
 		<!-- stat name="unitTick" val="9" / -->
-		<stat name="initialDelay" val="1000" />
-		<stat name="default_enabled" val="true" />
-		<stat name="reuse" val="6000" /> <!-- Guess -->
-		<node X="213792" Y="-112592" />
-		<node X="214948" Y="-111748" />
-		<node X="213932" Y="-111516" />
-		<node X="213624" Y="-112404" />
+		<property name="initialDelay" value="1000" />
+		<property name="default_enabled" value="true" />
+		<property name="reuse" value="6000" /> <!-- Guess -->
+		<point x="213792" y="-112592" />
+		<point x="214948" y="-111748" />
+		<point x="213932" y="-111516" />
+		<point x="213624" y="-112404" />
 	</zone>
-	<zone name="balakas_lava_21" type="EffectZone" shape="NPoly" minZ="-1772" maxZ="-1572"> <!-- [26_14] -->
-		<stat name="skillIdLvl" val="4150-7;" /> <!-- s_area_fire7 -->
-		<stat name="chance" val="50" />
+	<zone name="balakas_lava_21" type="org.l2j.gameserver.world.zone.type.EffectZone" form="Polygon" minZ="-1772" maxZ="-1572"> <!-- [26_14] -->
+		<property name="skillIdLvl" value="4150-7;" /> <!-- s_area_fire7 -->
+		<property name="chance" value="50" />
 		<!-- stat name="unitTick" val="9" / -->
-		<stat name="initialDelay" val="1000" />
-		<stat name="default_enabled" val="true" />
-		<stat name="reuse" val="6000" /> <!-- Guess -->
-		<node X="212408" Y="-112372" />
-		<node X="212800" Y="-111924" />
-		<node X="212656" Y="-111156" />
-		<node X="211096" Y="-111788" />
-		<node X="211460" Y="-112196" />
-		<node X="211904" Y="-112736" />
-		<node X="212280" Y="-112092" />
+		<property name="initialDelay" value="1000" />
+		<property name="default_enabled" value="true" />
+		<property name="reuse" value="6000" /> <!-- Guess -->
+		<point x="212408" y="-112372" />
+		<point x="212800" y="-111924" />
+		<point x="212656" y="-111156" />
+		<point x="211096" y="-111788" />
+		<point x="211460" y="-112196" />
+		<point x="211904" y="-112736" />
+		<point x="212280" y="-112092" />
 	</zone>
-	<zone name="balakas_lava_22" type="EffectZone" shape="NPoly" minZ="-1744" maxZ="-1544"> <!-- [26_14] -->
-		<stat name="skillIdLvl" val="4150-7;" /> <!-- s_area_fire7 -->
-		<stat name="chance" val="50" />
+	<zone name="balakas_lava_22" type="org.l2j.gameserver.world.zone.type.EffectZone" form="Polygon" minZ="-1744" maxZ="-1544"> <!-- [26_14] -->
+		<property name="skillIdLvl" value="4150-7;" /> <!-- s_area_fire7 -->
+		<property name="chance" value="50" />
 		<!-- stat name="unitTick" val="9" / -->
-		<stat name="initialDelay" val="1000" />
-		<stat name="default_enabled" val="true" />
-		<stat name="reuse" val="6000" /> <!-- Guess -->
-		<node X="211120" Y="-112784" />
-		<node X="211300" Y="-112484" />
-		<node X="211116" Y="-112048" />
-		<node X="209044" Y="-113592" />
-		<node X="209900" Y="-113652" />
-		<node X="210020" Y="-113412" />
-		<node X="210812" Y="-113544" />
-		<node X="211088" Y="-113220" />
-		<node X="210720" Y="-112888" />
+		<property name="initialDelay" value="1000" />
+		<property name="default_enabled" value="true" />
+		<property name="reuse" value="6000" /> <!-- Guess -->
+		<point x="211120" y="-112784" />
+		<point x="211300" y="-112484" />
+		<point x="211116" y="-112048" />
+		<point x="209044" y="-113592" />
+		<point x="209900" y="-113652" />
+		<point x="210020" y="-113412" />
+		<point x="210812" y="-113544" />
+		<point x="211088" y="-113220" />
+		<point x="210720" y="-112888" />
 	</zone>
-	<zone name="balakas_lava_23" type="EffectZone" shape="NPoly" minZ="-1600" maxZ="-1400"> <!-- [26_14] -->
-		<stat name="skillIdLvl" val="4150-7;" /> <!-- s_area_fire7 -->
-		<stat name="chance" val="50" />
+	<zone name="balakas_lava_23" type="org.l2j.gameserver.world.zone.type.EffectZone" form="Polygon" minZ="-1600" maxZ="-1400"> <!-- [26_14] -->
+		<property name="skillIdLvl" value="4150-7;" /> <!-- s_area_fire7 -->
+		<property name="chance" value="50" />
 		<!-- stat name="unitTick" val="9" / -->
-		<stat name="initialDelay" val="1000" />
-		<stat name="default_enabled" val="true" />
-		<stat name="reuse" val="6000" /> <!-- Guess -->
-		<node X="209504" Y="-113076" />
-		<node X="209808" Y="-113412" />
-		<node X="210004" Y="-112864" />
-		<node X="209596" Y="-112916" />
+		<property name="initialDelay" value="1000" />
+		<property name="default_enabled" value="true" />
+		<property name="reuse" value="6000" /> <!-- Guess -->
+		<point x="209504" y="-113076" />
+		<point x="209808" y="-113412" />
+		<point x="210004" y="-112864" />
+		<point x="209596" y="-112916" />
 	</zone>
-	<zone name="balakas_lava_24" type="EffectZone" shape="NPoly" minZ="-1528" maxZ="-1328"> <!-- [26_14] -->
-		<stat name="skillIdLvl" val="4150-7;" /> <!-- s_area_fire7 -->
-		<stat name="chance" val="50" />
+	<zone name="balakas_lava_24" type="org.l2j.gameserver.world.zone.type.EffectZone" form="Polygon" minZ="-1528" maxZ="-1328"> <!-- [26_14] -->
+		<property name="skillIdLvl" value="4150-7;" /> <!-- s_area_fire7 -->
+		<property name="chance" value="50" />
 		<!-- stat name="unitTick" val="9" / -->
-		<stat name="initialDelay" val="1000" />
-		<stat name="default_enabled" val="true" />
-		<stat name="reuse" val="6000" /> <!-- Guess -->
-		<node X="210400" Y="-112656" />
-		<node X="210308" Y="-112356" />
-		<node X="210152" Y="-112260" />
-		<node X="209944" Y="-112384" />
-		<node X="209804" Y="-112308" />
-		<node X="209688" Y="-112448" />
-		<node X="209804" Y="-112564" />
-		<node X="209772" Y="-112672" />
-		<node X="209968" Y="-112884" />
+		<property name="initialDelay" value="1000" />
+		<property name="default_enabled" value="true" />
+		<property name="reuse" value="6000" /> <!-- Guess -->
+		<point x="210400" y="-112656" />
+		<point x="210308" y="-112356" />
+		<point x="210152" y="-112260" />
+		<point x="209944" y="-112384" />
+		<point x="209804" y="-112308" />
+		<point x="209688" y="-112448" />
+		<point x="209804" y="-112564" />
+		<point x="209772" y="-112672" />
+		<point x="209968" y="-112884" />
 	</zone>
-	<zone name="balakas_lava_25" type="EffectZone" shape="NPoly" minZ="-1564" maxZ="-1364"> <!-- [26_14] -->
-		<stat name="skillIdLvl" val="4150-7;" /> <!-- s_area_fire7 -->
-		<stat name="chance" val="50" />
+	<zone name="balakas_lava_25" type="org.l2j.gameserver.world.zone.type.EffectZone" form="Polygon" minZ="-1564" maxZ="-1364"> <!-- [26_14] -->
+		<property name="skillIdLvl" value="4150-7;" /> <!-- s_area_fire7 -->
+		<property name="chance" value="50" />
 		<!-- stat name="unitTick" val="9" / -->
-		<stat name="initialDelay" val="1000" />
-		<stat name="default_enabled" val="true" />
-		<stat name="reuse" val="6000" /> <!-- Guess -->
-		<node X="210032" Y="-112148" />
-		<node X="210392" Y="-112060" />
-		<node X="210104" Y="-111444" />
-		<node X="209496" Y="-112008" />
+		<property name="initialDelay" value="1000" />
+		<property name="default_enabled" value="true" />
+		<property name="reuse" value="6000" /> <!-- Guess -->
+		<point x="210032" y="-112148" />
+		<point x="210392" y="-112060" />
+		<point x="210104" y="-111444" />
+		<point x="209496" y="-112008" />
 	</zone>
-	<zone name="balakas_lava_26" type="EffectZone" shape="NPoly" minZ="-1572" maxZ="-1372"> <!-- [26_14] -->
-		<stat name="skillIdLvl" val="4150-7;" /> <!-- s_area_fire7 -->
-		<stat name="chance" val="50" />
+	<zone name="balakas_lava_26" type="org.l2j.gameserver.world.zone.type.EffectZone" form="Polygon" minZ="-1572" maxZ="-1372"> <!-- [26_14] -->
+		<property name="skillIdLvl" value="4150-7;" /> <!-- s_area_fire7 -->
+		<property name="chance" value="50" />
 		<!-- stat name="unitTick" val="9" / -->
-		<stat name="initialDelay" val="1000" />
-		<stat name="default_enabled" val="true" />
-		<stat name="reuse" val="6000" /> <!-- Guess -->
-		<node X="211096" Y="-112400" />
-		<node X="211436" Y="-111804" />
-		<node X="210812" Y="-111712" />
-		<node X="210628" Y="-111792" />
-		<node X="210600" Y="-112004" />
+		<property name="initialDelay" value="1000" />
+		<property name="default_enabled" value="true" />
+		<property name="reuse" value="6000" /> <!-- Guess -->
+		<point x="211096" y="-112400" />
+		<point x="211436" y="-111804" />
+		<point x="210812" y="-111712" />
+		<point x="210628" y="-111792" />
+		<point x="210600" y="-112004" />
 	</zone>
-	<zone name="balakas_lava_27" type="EffectZone" shape="NPoly" minZ="-1488" maxZ="-1288"> <!-- [26_14] -->
-		<stat name="skillIdLvl" val="4150-7;" /> <!-- s_area_fire7 -->
-		<stat name="chance" val="50" />
+	<zone name="balakas_lava_27" type="org.l2j.gameserver.world.zone.type.EffectZone" form="Polygon" minZ="-1488" maxZ="-1288"> <!-- [26_14] -->
+		<property name="skillIdLvl" value="4150-7;" /> <!-- s_area_fire7 -->
+		<property name="chance" value="50" />
 		<!-- stat name="unitTick" val="9" / -->
-		<stat name="initialDelay" val="1000" />
-		<stat name="default_enabled" val="true" />
-		<stat name="reuse" val="6000" /> <!-- Guess -->
-		<node X="210552" Y="-111368" />
-		<node X="210904" Y="-111412" />
-		<node X="210864" Y="-111236" />
-		<node X="210492" Y="-111100" />
-		<node X="210100" Y="-111432" />
-		<node X="210408" Y="-111488" />
+		<property name="initialDelay" value="1000" />
+		<property name="default_enabled" value="true" />
+		<property name="reuse" value="6000" /> <!-- Guess -->
+		<point x="210552" y="-111368" />
+		<point x="210904" y="-111412" />
+		<point x="210864" y="-111236" />
+		<point x="210492" y="-111100" />
+		<point x="210100" y="-111432" />
+		<point x="210408" y="-111488" />
 	</zone>
-	<zone name="balakas_lava_28" type="EffectZone" shape="NPoly" minZ="-1492" maxZ="-1292"> <!-- [26_14] -->
-		<stat name="skillIdLvl" val="4150-7;" /> <!-- s_area_fire7 -->
-		<stat name="chance" val="50" />
+	<zone name="balakas_lava_28" type="org.l2j.gameserver.world.zone.type.EffectZone" form="Polygon" minZ="-1492" maxZ="-1292"> <!-- [26_14] -->
+		<property name="skillIdLvl" value="4150-7;" /> <!-- s_area_fire7 -->
+		<property name="chance" value="50" />
 		<!-- stat name="unitTick" val="9" / -->
-		<stat name="initialDelay" val="1000" />
-		<stat name="default_enabled" val="true" />
-		<stat name="reuse" val="6000" /> <!-- Guess -->
-		<node X="212136" Y="-110836" />
-		<node X="212552" Y="-110896" />
-		<node X="212704" Y="-110776" />
-		<node X="212724" Y="-110460" />
-		<node X="212064" Y="-110576" />
+		<property name="initialDelay" value="1000" />
+		<property name="default_enabled" value="true" />
+		<property name="reuse" value="6000" /> <!-- Guess -->
+		<point x="212136" y="-110836" />
+		<point x="212552" y="-110896" />
+		<point x="212704" y="-110776" />
+		<point x="212724" y="-110460" />
+		<point x="212064" y="-110576" />
 	</zone>
-	<zone name="balakas_lava_29" type="EffectZone" shape="NPoly" minZ="-1476" maxZ="-1276"> <!-- [26_14] -->
-		<stat name="skillIdLvl" val="4150-7;" /> <!-- s_area_fire7 -->
-		<stat name="chance" val="50" />
+	<zone name="balakas_lava_29" type="org.l2j.gameserver.world.zone.type.EffectZone" form="Polygon" minZ="-1476" maxZ="-1276"> <!-- [26_14] -->
+		<property name="skillIdLvl" value="4150-7;" /> <!-- s_area_fire7 -->
+		<property name="chance" value="50" />
 		<!-- stat name="unitTick" val="9" / -->
-		<stat name="initialDelay" val="1000" />
-		<stat name="default_enabled" val="true" />
-		<stat name="reuse" val="6000" /> <!-- Guess -->
-		<node X="212620" Y="-111604" />
-		<node X="213060" Y="-111604" />
-		<node X="212740" Y="-111304" />
-		<node X="212436" Y="-111620" />
+		<property name="initialDelay" value="1000" />
+		<property name="default_enabled" value="true" />
+		<property name="reuse" value="6000" /> <!-- Guess -->
+		<point x="212620" y="-111604" />
+		<point x="213060" y="-111604" />
+		<point x="212740" y="-111304" />
+		<point x="212436" y="-111620" />
 	</zone>
-	<zone name="balakas_lava_30" type="EffectZone" shape="NPoly" minZ="-1452" maxZ="-1252"> <!-- [26_14] -->
-		<stat name="skillIdLvl" val="4150-7;" /> <!-- s_area_fire7 -->
-		<stat name="chance" val="50" />
+	<zone name="balakas_lava_30" type="org.l2j.gameserver.world.zone.type.EffectZone" form="Polygon" minZ="-1452" maxZ="-1252"> <!-- [26_14] -->
+		<property name="skillIdLvl" value="4150-7;" /> <!-- s_area_fire7 -->
+		<property name="chance" value="50" />
 		<!-- stat name="unitTick" val="9" / -->
-		<stat name="initialDelay" val="1000" />
-		<stat name="default_enabled" val="true" />
-		<stat name="reuse" val="6000" /> <!-- Guess -->
-		<node X="213416" Y="-110968" />
-		<node X="213716" Y="-110772" />
-		<node X="213752" Y="-110376" />
-		<node X="213356" Y="-110388" />
-		<node X="213328" Y="-110760" />
+		<property name="initialDelay" value="1000" />
+		<property name="default_enabled" value="true" />
+		<property name="reuse" value="6000" /> <!-- Guess -->
+		<point x="213416" y="-110968" />
+		<point x="213716" y="-110772" />
+		<point x="213752" y="-110376" />
+		<point x="213356" y="-110388" />
+		<point x="213328" y="-110760" />
 	</zone>
-	<zone name="balakas_lava_31" type="EffectZone" shape="NPoly" minZ="-1548" maxZ="-1348"> <!-- [26_14] -->
-		<stat name="skillIdLvl" val="4150-7;" /> <!-- s_area_fire7 -->
-		<stat name="chance" val="50" />
+	<zone name="balakas_lava_31" type="org.l2j.gameserver.world.zone.type.EffectZone" form="Polygon" minZ="-1548" maxZ="-1348"> <!-- [26_14] -->
+		<property name="skillIdLvl" value="4150-7;" /> <!-- s_area_fire7 -->
+		<property name="chance" value="50" />
 		<!-- stat name="unitTick" val="9" / -->
-		<stat name="initialDelay" val="1000" />
-		<stat name="default_enabled" val="true" />
-		<stat name="reuse" val="6000" /> <!-- Guess -->
-		<node X="214228" Y="-111556" />
-		<node X="214196" Y="-111120" />
-		<node X="213972" Y="-111020" />
-		<node X="213624" Y="-111248" />
+		<property name="initialDelay" value="1000" />
+		<property name="default_enabled" value="true" />
+		<property name="reuse" value="6000" /> <!-- Guess -->
+		<point x="214228" y="-111556" />
+		<point x="214196" y="-111120" />
+		<point x="213972" y="-111020" />
+		<point x="213624" y="-111248" />
 	</zone>
-	<zone name="balakas_lava_32" type="EffectZone" shape="NPoly" minZ="-1484" maxZ="-1284"> <!-- [26_14] -->
-		<stat name="skillIdLvl" val="4150-7;" /> <!-- s_area_fire7 -->
-		<stat name="chance" val="50" />
+	<zone name="balakas_lava_32" type="org.l2j.gameserver.world.zone.type.EffectZone" form="Polygon" minZ="-1484" maxZ="-1284"> <!-- [26_14] -->
+		<property name="skillIdLvl" value="4150-7;" /> <!-- s_area_fire7 -->
+		<property name="chance" value="50" />
 		<!-- stat name="unitTick" val="9" / -->
-		<stat name="initialDelay" val="1000" />
-		<stat name="default_enabled" val="true" />
-		<stat name="reuse" val="6000" /> <!-- Guess -->
-		<node X="215120" Y="-112132" />
-		<node X="215460" Y="-112124" />
-		<node X="215564" Y="-111836" />
-		<node X="215376" Y="-111736" />
-		<node X="214924" Y="-111792" />
+		<property name="initialDelay" value="1000" />
+		<property name="default_enabled" value="true" />
+		<property name="reuse" value="6000" /> <!-- Guess -->
+		<point x="215120" y="-112132" />
+		<point x="215460" y="-112124" />
+		<point x="215564" y="-111836" />
+		<point x="215376" y="-111736" />
+		<point x="214924" y="-111792" />
 	</zone>
-	<zone name="balakas_lava_33" type="EffectZone" shape="NPoly" minZ="-1456" maxZ="-1256"> <!-- [26_14] -->
-		<stat name="skillIdLvl" val="4150-7;" /> <!-- s_area_fire7 -->
-		<stat name="chance" val="50" />
+	<zone name="balakas_lava_33" type="org.l2j.gameserver.world.zone.type.EffectZone" form="Polygon" minZ="-1456" maxZ="-1256"> <!-- [26_14] -->
+		<property name="skillIdLvl" value="4150-7;" /> <!-- s_area_fire7 -->
+		<property name="chance" value="50" />
 		<!-- stat name="unitTick" val="9" / -->
-		<stat name="initialDelay" val="1000" />
-		<stat name="default_enabled" val="true" />
-		<stat name="reuse" val="6000" /> <!-- Guess -->
-		<node X="215564" Y="-111380" />
-		<node X="215764" Y="-111380" />
-		<node X="215764" Y="-111180" />
-		<node X="215564" Y="-111180" />
+		<property name="initialDelay" value="1000" />
+		<property name="default_enabled" value="true" />
+		<property name="reuse" value="6000" /> <!-- Guess -->
+		<point x="215564" y="-111380" />
+		<point x="215764" y="-111380" />
+		<point x="215764" y="-111180" />
+		<point x="215564" y="-111180" />
 	</zone>
-	<zone name="balakas_lava_34" type="EffectZone" shape="NPoly" minZ="-1616" maxZ="-1416"> <!-- [26_14] -->
-		<stat name="skillIdLvl" val="4150-7;" /> <!-- s_area_fire7 -->
-		<stat name="chance" val="50" />
+	<zone name="balakas_lava_34" type="org.l2j.gameserver.world.zone.type.EffectZone" form="Polygon" minZ="-1616" maxZ="-1416"> <!-- [26_14] -->
+		<property name="skillIdLvl" value="4150-7;" /> <!-- s_area_fire7 -->
+		<property name="chance" value="50" />
 		<!-- stat name="unitTick" val="9" / -->
-		<stat name="initialDelay" val="1000" />
-		<stat name="default_enabled" val="true" />
-		<stat name="reuse" val="6000" /> <!-- Guess -->
-		<node X="215776" Y="-112812" />
-		<node X="216348" Y="-112536" />
-		<node X="216268" Y="-112392" />
-		<node X="215684" Y="-112660" />
+		<property name="initialDelay" value="1000" />
+		<property name="default_enabled" value="true" />
+		<property name="reuse" value="6000" /> <!-- Guess -->
+		<point x="215776" y="-112812" />
+		<point x="216348" y="-112536" />
+		<point x="216268" y="-112392" />
+		<point x="215684" y="-112660" />
 	</zone>
-	<zone name="balakas_lava_35" type="EffectZone" shape="NPoly" minZ="-1480" maxZ="-1280"> <!-- [26_14] -->
-		<stat name="skillIdLvl" val="4150-7;" /> <!-- s_area_fire7 -->
-		<stat name="chance" val="50" />
+	<zone name="balakas_lava_35" type="org.l2j.gameserver.world.zone.type.EffectZone" form="Polygon" minZ="-1480" maxZ="-1280"> <!-- [26_14] -->
+		<property name="skillIdLvl" value="4150-7;" /> <!-- s_area_fire7 -->
+		<property name="chance" value="50" />
 		<!-- stat name="unitTick" val="9" / -->
-		<stat name="initialDelay" val="1000" />
-		<stat name="default_enabled" val="true" />
-		<stat name="reuse" val="6000" /> <!-- Guess -->
-		<node X="216040" Y="-114340" />
-		<node X="216868" Y="-114436" />
-		<node X="216648" Y="-112948" />
-		<node X="216148" Y="-113132" />
-		<node X="215996" Y="-113324" />
+		<property name="initialDelay" value="1000" />
+		<property name="default_enabled" value="true" />
+		<property name="reuse" value="6000" /> <!-- Guess -->
+		<point x="216040" y="-114340" />
+		<point x="216868" y="-114436" />
+		<point x="216648" y="-112948" />
+		<point x="216148" y="-113132" />
+		<point x="215996" y="-113324" />
 	</zone>
-	<zone name="balakas_lava_36" type="EffectZone" shape="NPoly" minZ="-1520" maxZ="-1320"> <!-- [26_14] -->
-		<stat name="skillIdLvl" val="4150-7;" /> <!-- s_area_fire7 -->
-		<stat name="chance" val="50" />
+	<zone name="balakas_lava_36" type="org.l2j.gameserver.world.zone.type.EffectZone" form="Polygon" minZ="-1520" maxZ="-1320"> <!-- [26_14] -->
+		<property name="skillIdLvl" value="4150-7;" /> <!-- s_area_fire7 -->
+		<property name="chance" value="50" />
 		<!-- stat name="unitTick" val="9" / -->
-		<stat name="initialDelay" val="1000" />
-		<stat name="default_enabled" val="true" />
-		<stat name="reuse" val="6000" /> <!-- Guess -->
-		<node X="216136" Y="-115280" />
-		<node X="216760" Y="-115372" />
-		<node X="216880" Y="-114792" />
-		<node X="216636" Y="-114964" />
-		<node X="216428" Y="-114976" />
-		<node X="216364" Y="-114832" />
-		<node X="216068" Y="-114768" />
+		<property name="initialDelay" value="1000" />
+		<property name="default_enabled" value="true" />
+		<property name="reuse" value="6000" /> <!-- Guess -->
+		<point x="216136" y="-115280" />
+		<point x="216760" y="-115372" />
+		<point x="216880" y="-114792" />
+		<point x="216636" y="-114964" />
+		<point x="216428" y="-114976" />
+		<point x="216364" y="-114832" />
+		<point x="216068" y="-114768" />
 	</zone>
-	<zone name="balakas_lava_37" type="EffectZone" shape="NPoly" minZ="-1568" maxZ="-1368"> <!-- [26_14] -->
-		<stat name="skillIdLvl" val="4150-7;" /> <!-- s_area_fire7 -->
-		<stat name="chance" val="50" />
+	<zone name="balakas_lava_37" type="org.l2j.gameserver.world.zone.type.EffectZone" form="Polygon" minZ="-1568" maxZ="-1368"> <!-- [26_14] -->
+		<property name="skillIdLvl" value="4150-7;" /> <!-- s_area_fire7 -->
+		<property name="chance" value="50" />
 		<!-- stat name="unitTick" val="9" / -->
-		<stat name="initialDelay" val="1000" />
-		<stat name="default_enabled" val="true" />
-		<stat name="reuse" val="6000" /> <!-- Guess -->
-		<node X="215964" Y="-115796" />
-		<node X="216592" Y="-115892" />
-		<node X="216592" Y="-115580" />
-		<node X="216032" Y="-115452" />
+		<property name="initialDelay" value="1000" />
+		<property name="default_enabled" value="true" />
+		<property name="reuse" value="6000" /> <!-- Guess -->
+		<point x="215964" y="-115796" />
+		<point x="216592" y="-115892" />
+		<point x="216592" y="-115580" />
+		<point x="216032" y="-115452" />
 	</zone>
-	<zone name="balakas_lava_38" type="EffectZone" shape="NPoly" minZ="-1444" maxZ="-1244"> <!-- [26_14] -->
-		<stat name="skillIdLvl" val="4150-7;" /> <!-- s_area_fire7 -->
-		<stat name="chance" val="50" />
+	<zone name="balakas_lava_38" type="org.l2j.gameserver.world.zone.type.EffectZone" form="Polygon" minZ="-1444" maxZ="-1244"> <!-- [26_14] -->
+		<property name="skillIdLvl" value="4150-7;" /> <!-- s_area_fire7 -->
+		<property name="chance" value="50" />
 		<!-- stat name="unitTick" val="9" / -->
-		<stat name="initialDelay" val="1000" />
-		<stat name="default_enabled" val="true" />
-		<stat name="reuse" val="6000" /> <!-- Guess -->
-		<node X="216040" Y="-117792" />
-		<node X="216088" Y="-117536" />
-		<node X="215972" Y="-117352" />
-		<node X="215812" Y="-117256" />
-		<node X="215600" Y="-117324" />
-		<node X="215692" Y="-117736" />
+		<property name="initialDelay" value="1000" />
+		<property name="default_enabled" value="true" />
+		<property name="reuse" value="6000" /> <!-- Guess -->
+		<point x="216040" y="-117792" />
+		<point x="216088" y="-117536" />
+		<point x="215972" y="-117352" />
+		<point x="215812" y="-117256" />
+		<point x="215600" y="-117324" />
+		<point x="215692" y="-117736" />
 	</zone>
-	<zone name="balakas_lava_39" type="EffectZone" shape="NPoly" minZ="-1448" maxZ="-1248"> <!-- [26_14] -->
-		<stat name="skillIdLvl" val="4150-7;" /> <!-- s_area_fire7 -->
-		<stat name="chance" val="50" />
+	<zone name="balakas_lava_39" type="org.l2j.gameserver.world.zone.type.EffectZone" form="Polygon" minZ="-1448" maxZ="-1248"> <!-- [26_14] -->
+		<property name="skillIdLvl" value="4150-7;" /> <!-- s_area_fire7 -->
+		<property name="chance" value="50" />
 		<!-- stat name="unitTick" val="9" / -->
-		<stat name="initialDelay" val="1000" />
-		<stat name="default_enabled" val="true" />
-		<stat name="reuse" val="6000" /> <!-- Guess -->
-		<node X="214896" Y="-117908" />
-		<node X="215156" Y="-118020" />
-		<node X="215396" Y="-117668" />
-		<node X="215204" Y="-117084" />
-		<node X="214744" Y="-117508" />
+		<property name="initialDelay" value="1000" />
+		<property name="default_enabled" value="true" />
+		<property name="reuse" value="6000" /> <!-- Guess -->
+		<point x="214896" y="-117908" />
+		<point x="215156" y="-118020" />
+		<point x="215396" y="-117668" />
+		<point x="215204" y="-117084" />
+		<point x="214744" y="-117508" />
 	</zone>
-	<zone name="balakas_lava_40" type="EffectZone" shape="NPoly" minZ="-1516" maxZ="-1316"> <!-- [26_14] -->
-		<stat name="skillIdLvl" val="4150-7;" /> <!-- s_area_fire7 -->
-		<stat name="chance" val="50" />
+	<zone name="balakas_lava_40" type="org.l2j.gameserver.world.zone.type.EffectZone" form="Polygon" minZ="-1516" maxZ="-1316"> <!-- [26_14] -->
+		<property name="skillIdLvl" value="4150-7;" /> <!-- s_area_fire7 -->
+		<property name="chance" value="50" />
 		<!-- stat name="unitTick" val="9" / -->
-		<stat name="initialDelay" val="1000" />
-		<stat name="default_enabled" val="true" />
-		<stat name="reuse" val="6000" /> <!-- Guess -->
-		<node X="214468" Y="-118700" />
-		<node X="214748" Y="-118780" />
-		<node X="214484" Y="-117908" />
-		<node X="214188" Y="-118000" />
+		<property name="initialDelay" value="1000" />
+		<property name="default_enabled" value="true" />
+		<property name="reuse" value="6000" /> <!-- Guess -->
+		<point x="214468" y="-118700" />
+		<point x="214748" y="-118780" />
+		<point x="214484" y="-117908" />
+		<point x="214188" y="-118000" />
 	</zone>
-	<zone name="balakas_lava_41" type="EffectZone" shape="NPoly" minZ="-1508" maxZ="-1308"> <!-- [26_14] -->
-		<stat name="skillIdLvl" val="4150-7" /> <!-- s_area_fire7 -->
-		<stat name="chance" val="50" />
+	<zone name="balakas_lava_41" type="org.l2j.gameserver.world.zone.type.EffectZone" form="Polygon" minZ="-1508" maxZ="-1308"> <!-- [26_14] -->
+		<property name="skillIdLvl" value="4150-7" /> <!-- s_area_fire7 -->
+		<property name="chance" value="50" />
 		<!-- stat name="unitTick" val="9" / -->
-		<stat name="initialDelay" val="1000" />
-		<stat name="default_enabled" val="true" />
-		<stat name="reuse" val="6000" /> <!-- Guess -->
-		<node X="213396" Y="-118452" />
-		<node X="213652" Y="-118588" />
-		<node X="213832" Y="-118492" />
-		<node X="213776" Y="-118092" />
-		<node X="213312" Y="-118056" />
+		<property name="initialDelay" value="1000" />
+		<property name="default_enabled" value="true" />
+		<property name="reuse" value="6000" /> <!-- Guess -->
+		<point x="213396" y="-118452" />
+		<point x="213652" y="-118588" />
+		<point x="213832" y="-118492" />
+		<point x="213776" y="-118092" />
+		<point x="213312" y="-118056" />
 	</zone>
-	<zone name="balakas_lava_42" type="EffectZone" shape="NPoly" minZ="-1480" maxZ="-1280"> <!-- [26_14] -->
-		<stat name="skillIdLvl" val="4150-7;" /> <!-- s_area_fire7 -->
-		<stat name="chance" val="50" />
+	<zone name="balakas_lava_42" type="org.l2j.gameserver.world.zone.type.EffectZone" form="Polygon" minZ="-1480" maxZ="-1280"> <!-- [26_14] -->
+		<property name="skillIdLvl" value="4150-7;" /> <!-- s_area_fire7 -->
+		<property name="chance" value="50" />
 		<!-- stat name="unitTick" val="9" / -->
-		<stat name="initialDelay" val="1000" />
-		<stat name="default_enabled" val="true" />
-		<stat name="reuse" val="6000" /> <!-- Guess -->
-		<node X="212684" Y="-118456" />
-		<node X="213148" Y="-118436" />
-		<node X="213168" Y="-118308" />
-		<node X="213008" Y="-118204" />
-		<node X="212668" Y="-118300" />
+		<property name="initialDelay" value="1000" />
+		<property name="default_enabled" value="true" />
+		<property name="reuse" value="6000" /> <!-- Guess -->
+		<point x="212684" y="-118456" />
+		<point x="213148" y="-118436" />
+		<point x="213168" y="-118308" />
+		<point x="213008" y="-118204" />
+		<point x="212668" y="-118300" />
 	</zone>
-	<zone name="balakas_lava_43" type="EffectZone" shape="NPoly" minZ="-1500" maxZ="-1300"> <!-- [26_14] -->
-		<stat name="skillIdLvl" val="4150-7;" /> <!-- s_area_fire7 -->
-		<stat name="chance" val="50" />
+	<zone name="balakas_lava_43" type="org.l2j.gameserver.world.zone.type.EffectZone" form="Polygon" minZ="-1500" maxZ="-1300"> <!-- [26_14] -->
+		<property name="skillIdLvl" value="4150-7;" /> <!-- s_area_fire7 -->
+		<property name="chance" value="50" />
 		<!-- stat name="unitTick" val="9" / -->
-		<stat name="initialDelay" val="1000" />
-		<stat name="default_enabled" val="true" />
-		<stat name="reuse" val="6000" /> <!-- Guess -->
-		<node X="212156" Y="-118020" />
-		<node X="212424" Y="-118208" />
-		<node X="213256" Y="-118080" />
-		<node X="211416" Y="-117244" />
-		<node X="211676" Y="-118104" />
-		<node X="211880" Y="-118132" />
+		<property name="initialDelay" value="1000" />
+		<property name="default_enabled" value="true" />
+		<property name="reuse" value="6000" /> <!-- Guess -->
+		<point x="212156" y="-118020" />
+		<point x="212424" y="-118208" />
+		<point x="213256" y="-118080" />
+		<point x="211416" y="-117244" />
+		<point x="211676" y="-118104" />
+		<point x="211880" y="-118132" />
 	</zone>
-	<zone name="balakas_lava_44" type="EffectZone" shape="NPoly" minZ="-1576" maxZ="-1376"> <!-- [26_14] -->
-		<stat name="skillIdLvl" val="4150-7;" /> <!-- s_area_fire7 -->
-		<stat name="chance" val="50" />
+	<zone name="balakas_lava_44" type="org.l2j.gameserver.world.zone.type.EffectZone" form="Polygon" minZ="-1576" maxZ="-1376"> <!-- [26_14] -->
+		<property name="skillIdLvl" value="4150-7;" /> <!-- s_area_fire7 -->
+		<property name="chance" value="50" />
 		<!-- stat name="unitTick" val="9" / -->
-		<stat name="initialDelay" val="1000" />
-		<stat name="default_enabled" val="true" />
-		<stat name="reuse" val="6000" /> <!-- Guess -->
-		<node X="210792" Y="-117952" />
-		<node X="211464" Y="-117376" />
-		<node X="210832" Y="-116852" />
-		<node X="210296" Y="-117456" />
+		<property name="initialDelay" value="1000" />
+		<property name="default_enabled" value="true" />
+		<property name="reuse" value="6000" /> <!-- Guess -->
+		<point x="210792" y="-117952" />
+		<point x="211464" y="-117376" />
+		<point x="210832" y="-116852" />
+		<point x="210296" y="-117456" />
 	</zone>
-	<zone name="balakas_lava_45" type="EffectZone" shape="NPoly" minZ="-1556" maxZ="-1356"> <!-- [26_14] -->
-		<stat name="skillIdLvl" val="4150-7;" /> <!-- s_area_fire7 -->
-		<stat name="chance" val="50" />
+	<zone name="balakas_lava_45" type="org.l2j.gameserver.world.zone.type.EffectZone" form="Polygon" minZ="-1556" maxZ="-1356"> <!-- [26_14] -->
+		<property name="skillIdLvl" value="4150-7;" /> <!-- s_area_fire7 -->
+		<property name="chance" value="50" />
 		<!-- stat name="unitTick" val="9" / -->
-		<stat name="initialDelay" val="1000" />
-		<stat name="default_enabled" val="true" />
-		<stat name="reuse" val="6000" /> <!-- Guess -->
-		<node X="209932" Y="-116124" />
-		<node X="210112" Y="-116340" />
-		<node X="210756" Y="-116432" />
-		<node X="210080" Y="-115704" />
+		<property name="initialDelay" value="1000" />
+		<property name="default_enabled" value="true" />
+		<property name="reuse" value="6000" /> <!-- Guess -->
+		<point x="209932" y="-116124" />
+		<point x="210112" y="-116340" />
+		<point x="210756" y="-116432" />
+		<point x="210080" y="-115704" />
 	</zone>
-	<zone name="balakas_lava_46" type="EffectZone" shape="NPoly" minZ="-1508" maxZ="-1308"> <!-- [26_14] -->
-		<stat name="skillIdLvl" val="4150-7;" /> <!-- s_area_fire7 -->
-		<stat name="chance" val="50" />
+	<zone name="balakas_lava_46" type="org.l2j.gameserver.world.zone.type.EffectZone" form="Polygon" minZ="-1508" maxZ="-1308"> <!-- [26_14] -->
+		<property name="skillIdLvl" value="4150-7;" /> <!-- s_area_fire7 -->
+		<property name="chance" value="50" />
 		<!-- stat name="unitTick" val="9" / -->
-		<stat name="initialDelay" val="1000" />
-		<stat name="default_enabled" val="true" />
-		<stat name="reuse" val="6000" /> <!-- Guess -->
-		<node X="209604" Y="-115832" />
-		<node X="209676" Y="-115672" />
-		<node X="209480" Y="-115472" />
-		<node X="209064" Y="-115396" />
-		<node X="209064" Y="-116060" />
+		<property name="initialDelay" value="1000" />
+		<property name="default_enabled" value="true" />
+		<property name="reuse" value="6000" /> <!-- Guess -->
+		<point x="209604" y="-115832" />
+		<point x="209676" y="-115672" />
+		<point x="209480" y="-115472" />
+		<point x="209064" y="-115396" />
+		<point x="209064" y="-116060" />
 	</zone>
-	<zone name="balakas_lava_47" type="EffectZone" shape="NPoly" minZ="-1544" maxZ="-1344"> <!-- [26_14] -->
-		<stat name="skillIdLvl" val="4150-7;" /> <!-- s_area_fire7 -->
-		<stat name="chance" val="50" />
+	<zone name="balakas_lava_47" type="org.l2j.gameserver.world.zone.type.EffectZone" form="Polygon" minZ="-1544" maxZ="-1344"> <!-- [26_14] -->
+		<property name="skillIdLvl" value="4150-7;" /> <!-- s_area_fire7 -->
+		<property name="chance" value="50" />
 		<!-- stat name="unitTick" val="9" / -->
-		<stat name="initialDelay" val="1000" />
-		<stat name="default_enabled" val="true" />
-		<stat name="reuse" val="6000" /> <!-- Guess -->
-		<node X="209596" Y="-114804" />
-		<node X="209880" Y="-114812" />
-		<node X="209852" Y="-114156" />
-		<node X="209528" Y="-114576" />
+		<property name="initialDelay" value="1000" />
+		<property name="default_enabled" value="true" />
+		<property name="reuse" value="6000" /> <!-- Guess -->
+		<point x="209596" y="-114804" />
+		<point x="209880" y="-114812" />
+		<point x="209852" y="-114156" />
+		<point x="209528" y="-114576" />
 	</zone>
-	<zone name="balakas_lava_48" type="EffectZone" shape="NPoly" minZ="-1656" maxZ="-1456"> <!-- [26_14] -->
-		<stat name="skillIdLvl" val="4150-7;" /> <!-- s_area_fire7 -->
-		<stat name="chance" val="50" />
+	<zone name="balakas_lava_48" type="org.l2j.gameserver.world.zone.type.EffectZone" form="Polygon" minZ="-1656" maxZ="-1456"> <!-- [26_14] -->
+		<property name="skillIdLvl" value="4150-7;" /> <!-- s_area_fire7 -->
+		<property name="chance" value="50" />
 		<!-- stat name="unitTick" val="9" / -->
-		<stat name="initialDelay" val="1000" />
-		<stat name="default_enabled" val="true" />
-		<stat name="reuse" val="6000" /> <!-- Guess -->
-		<node X="209452" Y="-113908" />
-		<node X="209720" Y="-114032" />
-		<node X="209648" Y="-113588" />
-		<node X="209452" Y="-113708" />
+		<property name="initialDelay" value="1000" />
+		<property name="default_enabled" value="true" />
+		<property name="reuse" value="6000" /> <!-- Guess -->
+		<point x="209452" y="-113908" />
+		<point x="209720" y="-114032" />
+		<point x="209648" y="-113588" />
+		<point x="209452" y="-113708" />
 	</zone>
-	<zone name="balakas_lava_49" type="EffectZone" shape="NPoly" minZ="-1608" maxZ="-1408"> <!-- [26_14] -->
-		<stat name="skillIdLvl" val="4150-7;" /> <!-- s_area_fire7 -->
-		<stat name="chance" val="50" />
+	<zone name="balakas_lava_49" type="org.l2j.gameserver.world.zone.type.EffectZone" form="Polygon" minZ="-1608" maxZ="-1408"> <!-- [26_14] -->
+		<property name="skillIdLvl" value="4150-7;" /> <!-- s_area_fire7 -->
+		<property name="chance" value="50" />
 		<!-- stat name="unitTick" val="9" / -->
-		<stat name="initialDelay" val="1000" />
-		<stat name="default_enabled" val="true" />
-		<stat name="reuse" val="6000" /> <!-- Guess -->
-		<node X="211652" Y="-111708" />
-		<node X="212000" Y="-111640" />
-		<node X="211652" Y="-110812" />
-		<node X="211420" Y="-110828" />
+		<property name="initialDelay" value="1000" />
+		<property name="default_enabled" value="true" />
+		<property name="reuse" value="6000" /> <!-- Guess -->
+		<point x="211652" y="-111708" />
+		<point x="212000" y="-111640" />
+		<point x="211652" y="-110812" />
+		<point x="211420" y="-110828" />
 	</zone>
 	<!-- Valakas Nest Critical Lava -->
-	<zone name="godard11_2614_area_01" type="EffectZone" shape="NPoly" minZ="-1426" maxZ="-1226">
-		<stat name="skillIdLvl" val="5596-1;" /> <!-- s_area_critical_fire1 -->
-		<stat name="chance" val="50" />
+	<zone name="godard11_2614_area_01" type="org.l2j.gameserver.world.zone.type.EffectZone" form="Polygon" minZ="-1426" maxZ="-1226">
+		<property name="skillIdLvl" value="5596-1;" /> <!-- s_area_critical_fire1 -->
+		<property name="chance" value="50" />
 		<!-- stat name="unitTick" val="9" / -->
-		<stat name="initialDelay" val="1000" />
-		<stat name="default_enabled" val="true" />
-		<stat name="reuse" val="6000" /> <!-- Guess -->
-		<node X="209812" Y="-111845" />
-		<node X="210096" Y="-112047" />
-		<node X="210461" Y="-111499" />
-		<node X="210031" Y="-111287" />
+		<property name="initialDelay" value="1000" />
+		<property name="default_enabled" value="true" />
+		<property name="reuse" value="6000" /> <!-- Guess -->
+		<point x="209812" y="-111845" />
+		<point x="210096" y="-112047" />
+		<point x="210461" y="-111499" />
+		<point x="210031" y="-111287" />
 	</zone>
-	<zone name="godard11_2614_area_02" type="EffectZone" shape="NPoly" minZ="-1236" maxZ="-1036">
-		<stat name="skillIdLvl" val="5596-1;" /> <!-- s_area_critical_fire1 -->
-		<stat name="chance" val="50" />
+	<zone name="godard11_2614_area_02" type="org.l2j.gameserver.world.zone.type.EffectZone" form="Polygon" minZ="-1236" maxZ="-1036">
+		<property name="skillIdLvl" value="5596-1;" /> <!-- s_area_critical_fire1 -->
+		<property name="chance" value="50" />
 		<!-- stat name="unitTick" val="9" / -->
-		<stat name="initialDelay" val="1000" />
-		<stat name="default_enabled" val="true" />
-		<stat name="reuse" val="6000" /> <!-- Guess -->
-		<node X="209392" Y="-111958" />
-		<node X="209726" Y="-112241" />
-		<node X="210070" Y="-111714" />
-		<node X="209779" Y="-111464" />
+		<property name="initialDelay" value="1000" />
+		<property name="default_enabled" value="true" />
+		<property name="reuse" value="6000" /> <!-- Guess -->
+		<point x="209392" y="-111958" />
+		<point x="209726" y="-112241" />
+		<point x="210070" y="-111714" />
+		<point x="209779" y="-111464" />
 	</zone>
-	<zone name="godard11_2614_area_03" type="EffectZone" shape="NPoly" minZ="-1519" maxZ="-1319">
-		<stat name="skillIdLvl" val="5596-1;" /> <!-- s_area_critical_fire1 -->
-		<stat name="chance" val="50" />
+	<zone name="godard11_2614_area_03" type="org.l2j.gameserver.world.zone.type.EffectZone" form="Polygon" minZ="-1519" maxZ="-1319">
+		<property name="skillIdLvl" value="5596-1;" /> <!-- s_area_critical_fire1 -->
+		<property name="chance" value="50" />
 		<!-- stat name="unitTick" val="9" / -->
-		<stat name="initialDelay" val="1000" />
-		<stat name="default_enabled" val="true" />
-		<stat name="reuse" val="6000" /> <!-- Guess -->
-		<node X="209284" Y="-116186" />
-		<node X="209691" Y="-116033" />
-		<node X="209370" Y="-115300" />
-		<node X="208910" Y="-115598" />
+		<property name="initialDelay" value="1000" />
+		<property name="default_enabled" value="true" />
+		<property name="reuse" value="6000" /> <!-- Guess -->
+		<point x="209284" y="-116186" />
+		<point x="209691" y="-116033" />
+		<point x="209370" y="-115300" />
+		<point x="208910" y="-115598" />
 	</zone>
-	<zone name="godard11_2614_area_04" type="EffectZone" shape="NPoly" minZ="-1220" maxZ="-1020">
-		<stat name="skillIdLvl" val="5596-1;" /> <!-- s_area_critical_fire1 -->
-		<stat name="chance" val="50" />
+	<zone name="godard11_2614_area_04" type="org.l2j.gameserver.world.zone.type.EffectZone" form="Polygon" minZ="-1220" maxZ="-1020">
+		<property name="skillIdLvl" value="5596-1;" /> <!-- s_area_critical_fire1 -->
+		<property name="chance" value="50" />
 		<!-- stat name="unitTick" val="9" / -->
-		<stat name="initialDelay" val="1000" />
-		<stat name="default_enabled" val="true" />
-		<stat name="reuse" val="6000" /> <!-- Guess -->
-		<node X="209088" Y="-116419" />
-		<node X="209511" Y="-116247" />
-		<node X="209405" Y="-115798" />
-		<node X="209059" Y="-115803" />
+		<property name="initialDelay" value="1000" />
+		<property name="default_enabled" value="true" />
+		<property name="reuse" value="6000" /> <!-- Guess -->
+		<point x="209088" y="-116419" />
+		<point x="209511" y="-116247" />
+		<point x="209405" y="-115798" />
+		<point x="209059" y="-115803" />
 	</zone>
 	<!-- Effect zones for Tower of Naia -->
 	<!-- Poison Zone for Naia's door -->
-	<zone name="18_25_core_naia" id="200100" type="EffectZone" shape="NPoly" minZ="-14240" maxZ="-13340">
-		<stat name="chance" val="100" />
-		<stat name="default_enabled" val="false" />
-		<stat name="initialDelay" val="1000" />
-		<stat name="reuse" val="5000" />
-		<stat name="skillIdLvl" val="4148-12;" /> <!-- s_area_poison12 -->
-		<node X="-46980" Y="245979" />
-		<node X="-43925" Y="245982" />
-		<node X="-43925" Y="248990" />
-		<node X="-46986" Y="248990" />
+	<zone name="18_25_core_naia" id="200100" type="org.l2j.gameserver.world.zone.type.EffectZone" form="Polygon" minZ="-14240" maxZ="-13340">
+		<property name="chance" value="100" />
+		<property name="default_enabled" value="false" />
+		<property name="initialDelay" value="1000" />
+		<property name="reuse" value="5000" />
+		<property name="skillIdLvl" value="4148-12;" /> <!-- s_area_poison12 -->
+		<point x="-46980" y="245979" />
+		<point x="-43925" y="245982" />
+		<point x="-43925" y="248990" />
+		<point x="-46986" y="248990" />
 	</zone>
-	<zone name="18_25_naia_pillar_green" id="200101" type="EffectZone" shape="NPoly" minZ="-12440" maxZ="-12240">
-		<stat name="chance" val="100" />
-		<stat name="default_enabled" val="false" />
-		<stat name="initialDelay" val="1000" />
-		<stat name="reuse" val="10000" />
-		<stat name="skillIdLvl" val="4625-8;" /> <!-- s_area_slow8 -->
-		<node X="-45029" Y="247050" />
-		<node X="-45009" Y="247046" />
-		<node X="-45008" Y="247062" />
-		<node X="-45026" Y="247065" />
+	<zone name="18_25_naia_pillar_green" id="200101" type="org.l2j.gameserver.world.zone.type.EffectZone" form="Polygon" minZ="-12440" maxZ="-12240">
+		<property name="chance" value="100" />
+		<property name="default_enabled" value="false" />
+		<property name="initialDelay" value="1000" />
+		<property name="reuse" value="10000" />
+		<property name="skillIdLvl" value="4625-8;" /> <!-- s_area_slow8 -->
+		<point x="-45029" y="247050" />
+		<point x="-45009" y="247046" />
+		<point x="-45008" y="247062" />
+		<point x="-45026" y="247065" />
 	</zone>
-	<zone name="18_25_naia_pillar_red" id="200102" type="EffectZone" shape="NPoly" minZ="-12440" maxZ="-12240">
-		<stat name="chance" val="100" />
-		<stat name="default_enabled" val="true" />
-		<stat name="initialDelay" val="1000" />
-		<stat name="reuse" val="10000" />
-		<stat name="skillIdLvl" val="4625-8;" /> <!-- s_area_slow8 -->
-		<node X="-45029" Y="247050" />
-		<node X="-45009" Y="247046" />
-		<node X="-45008" Y="247062" />
-		<node X="-45026" Y="247065" />
+	<zone name="18_25_naia_pillar_red" id="200102" type="org.l2j.gameserver.world.zone.type.EffectZone" form="Polygon" minZ="-12440" maxZ="-12240">
+		<property name="chance" value="100" />
+		<property name="default_enabled" value="true" />
+		<property name="initialDelay" value="1000" />
+		<property name="reuse" value="10000" />
+		<property name="skillIdLvl" value="4625-8;" /> <!-- s_area_slow8 -->
+		<point x="-45029" y="247050" />
+		<point x="-45009" y="247046" />
+		<point x="-45008" y="247062" />
+		<point x="-45026" y="247065" />
 	</zone>
 	<!-- Hellbound Anomic Foundry Lava -->
-	<zone name="20_25_factory_lava01" type="EffectZone" shape="NPoly" minZ="-2916" maxZ="-2266">
-		<stat name="skillIdLvl" val="4150-7;" /> <!-- s_area_fire7 -->
-		<stat name="chance" val="50" />
+	<zone name="20_25_factory_lava01" type="org.l2j.gameserver.world.zone.type.EffectZone" form="Polygon" minZ="-2916" maxZ="-2266">
+		<property name="skillIdLvl" value="4150-7;" /> <!-- s_area_fire7 -->
+		<property name="chance" value="50" />
 		<!-- stat name="unitTick" val="5" / -->
-		<stat name="reuse" val="5000" /> <!-- Guess -->
-		<node X="25385" Y="248647" />
-		<node X="25560" Y="248478" />
-		<node X="26089" Y="248776" />
-		<node X="26626" Y="248852" />
-		<node X="26720" Y="249103" />
-		<node X="26634" Y="249333" />
-		<node X="25960" Y="249587" />
-		<node X="25637" Y="249450" />
+		<property name="reuse" value="5000" /> <!-- Guess -->
+		<point x="25385" y="248647" />
+		<point x="25560" y="248478" />
+		<point x="26089" y="248776" />
+		<point x="26626" y="248852" />
+		<point x="26720" y="249103" />
+		<point x="26634" y="249333" />
+		<point x="25960" y="249587" />
+		<point x="25637" y="249450" />
 	</zone>
-	<zone name="20_25_factory_lava02" type="EffectZone" shape="NPoly" minZ="-2004" maxZ="-1704">
-		<stat name="skillIdLvl" val="4150-7;" /> <!-- s_area_fire7 -->
-		<stat name="chance" val="50" />
+	<zone name="20_25_factory_lava02" type="org.l2j.gameserver.world.zone.type.EffectZone" form="Polygon" minZ="-2004" maxZ="-1704">
+		<property name="skillIdLvl" value="4150-7;" /> <!-- s_area_fire7 -->
+		<property name="chance" value="50" />
 		<!-- stat name="unitTick" val="5" / -->
-		<stat name="reuse" val="5000" /> <!-- Guess -->
-		<node X="24695" Y="249093" />
-		<node X="26502" Y="252842" />
-		<node X="25614" Y="253321" />
-		<node X="23873" Y="252774" />
-		<node X="23275" Y="252071" />
-		<node X="23112" Y="251737" />
-		<node X="23227" Y="250934" />
-		<node X="23533" Y="249958" />
+		<property name="reuse" value="5000" /> <!-- Guess -->
+		<point x="24695" y="249093" />
+		<point x="26502" y="252842" />
+		<point x="25614" y="253321" />
+		<point x="23873" y="252774" />
+		<point x="23275" y="252071" />
+		<point x="23112" y="251737" />
+		<point x="23227" y="250934" />
+		<point x="23533" y="249958" />
 	</zone>
-	<zone name="20_25_factory_lava03" type="EffectZone" shape="NPoly" minZ="-3220" maxZ="-3120">
-		<stat name="skillIdLvl" val="4150-7;" /> <!-- s_area_fire7 -->
-		<stat name="chance" val="50" />
+	<zone name="20_25_factory_lava03" type="org.l2j.gameserver.world.zone.type.EffectZone" form="Polygon" minZ="-3220" maxZ="-3120">
+		<property name="skillIdLvl" value="4150-7;" /> <!-- s_area_fire7 -->
+		<property name="chance" value="50" />
 		<!-- stat name="unitTick" val="5" / -->
-		<stat name="reuse" val="5000" /> <!-- Guess -->
-		<node X="27681" Y="248719" />
-		<node X="27733" Y="248777" />
-		<node X="27685" Y="248814" />
-		<node X="27638" Y="248758" />
+		<property name="reuse" value="5000" /> <!-- Guess -->
+		<point x="27681" y="248719" />
+		<point x="27733" y="248777" />
+		<point x="27685" y="248814" />
+		<point x="27638" y="248758" />
 	</zone>
-	<zone name="20_25_factory_lava04" type="EffectZone" shape="NPoly" minZ="-3212" maxZ="-3112">
-		<stat name="skillIdLvl" val="4150-7;" /> <!-- s_area_fire7 -->
-		<stat name="chance" val="50" />
+	<zone name="20_25_factory_lava04" type="org.l2j.gameserver.world.zone.type.EffectZone" form="Polygon" minZ="-3212" maxZ="-3112">
+		<property name="skillIdLvl" value="4150-7;" /> <!-- s_area_fire7 -->
+		<property name="chance" value="50" />
 		<!-- stat name="unitTick" val="5" / -->
-		<stat name="reuse" val="5000" /> <!-- Guess -->
-		<node X="25946" Y="246597" />
-		<node X="25995" Y="246650" />
-		<node X="25953" Y="246689" />
-		<node X="25907" Y="246642" />
+		<property name="reuse" value="5000" /> <!-- Guess -->
+		<point x="25946" y="246597" />
+		<point x="25995" y="246650" />
+		<point x="25953" y="246689" />
+		<point x="25907" y="246642" />
 	</zone>
-	<zone name="20_25_factory_lava05" type="EffectZone" shape="NPoly" minZ="-3704" maxZ="-3604">
-		<stat name="skillIdLvl" val="4150-7;" /> <!-- s_area_fire7 -->
-		<stat name="chance" val="50" />
+	<zone name="20_25_factory_lava05" type="org.l2j.gameserver.world.zone.type.EffectZone" form="Polygon" minZ="-3704" maxZ="-3604">
+		<property name="skillIdLvl" value="4150-7;" /> <!-- s_area_fire7 -->
+		<property name="chance" value="50" />
 		<!-- stat name="unitTick" val="5" / -->
-		<stat name="reuse" val="5000" /> <!-- Guess -->
-		<node X="27167" Y="246294" />
-		<node X="27201" Y="246351" />
-		<node X="27153" Y="246383" />
-		<node X="27116" Y="246329" />
+		<property name="reuse" value="5000" /> <!-- Guess -->
+		<point x="27167" y="246294" />
+		<point x="27201" y="246351" />
+		<point x="27153" y="246383" />
+		<point x="27116" y="246329" />
 	</zone>
-	<zone name="area_dehydration_var" type="EffectZone" shape="NPoly" minZ="-5980" maxZ="1020"> <!-- [20_25] -->
-		<stat name="skillIdLvl" val="5399-1;" /> <!-- s_area_hot_ground1 -->
-		<stat name="chance" val="100" />
+	<zone name="area_dehydration_var" type="org.l2j.gameserver.world.zone.type.EffectZone" form="Polygon" minZ="-5980" maxZ="1020"> <!-- [20_25] -->
+		<property name="skillIdLvl" value="5399-1;" /> <!-- s_area_hot_ground1 -->
+		<property name="chance" value="100" />
 		<!-- stat name="unitTick" val="10" / -->
-		<stat name="default_enabled" val="true" />
-		<stat name="reuse" val="5000" /> <!-- Guess -->
-		<node X="243" Y="231758" />
-		<node X="13742" Y="233542" />
-		<node X="13620" Y="242495" />
-		<node X="131" Y="242444" />
+		<property name="default_enabled" value="true" />
+		<property name="reuse" value="5000" /> <!-- Guess -->
+		<point x="243" y="231758" />
+		<point x="13742" y="233542" />
+		<point x="13620" y="242495" />
+		<point x="131" y="242444" />
 	</zone>
 	<!-- Stakato Nest Buff -->
-	<zone name="22_16_stakato_mob_buff" id="200103" type="EffectZone" shape="NPoly" minZ="-6368" maxZ="-3296">
-		<stat name="skillIdLvl" val="6170-1;" /> <!-- s_area_stakato_nest_fury -->
-		<stat name="chance" val="100" />
+	<zone name="22_16_stakato_mob_buff" id="200103" type="org.l2j.gameserver.world.zone.type.EffectZone" form="Polygon" minZ="-6368" maxZ="-3296">
+		<property name="skillIdLvl" value="6170-1;" /> <!-- s_area_stakato_nest_fury -->
+		<property name="chance" value="100" />
 		<!-- stat name="unitTick" val="90" / -->
-		<stat name="targetClass" val="L2Npc" />
-		<stat name="default_enabled" val="false" />
-		<stat name="reuse" val="3000" /> <!-- Guess -->
-		<stat name="showDangerIcon" val="false" /> <!-- Guess -->
-		<node X="73945" Y="-57263" />
-		<node X="90046" Y="-57259" />
-		<node X="89999" Y="-41698" />
-		<node X="73982" Y="-41655" />
+		<property name="targetClass" value="L2Npc" />
+		<property name="default_enabled" value="false" />
+		<property name="reuse" value="3000" /> <!-- Guess -->
+		<property name="showDangerIcon" value="false" /> <!-- Guess -->
+		<point x="73945" y="-57263" />
+		<point x="90046" y="-57259" />
+		<point x="89999" y="-41698" />
+		<point x="73982" y="-41655" />
 	</zone>
-	<zone name="22_16_stakato_mob_buff_display" id="200104" type="EffectZone" shape="NPoly" minZ="-6368" maxZ="-3296">
-		<stat name="skillIdLvl" val="6169-1;" /> <!-- s_area_stakato_nest_fury_for_pc -->
-		<stat name="chance" val="100" />
+	<zone name="22_16_stakato_mob_buff_display" id="200104" type="org.l2j.gameserver.world.zone.type.EffectZone" form="Polygon" minZ="-6368" maxZ="-3296">
+		<property name="skillIdLvl" value="6169-1;" /> <!-- s_area_stakato_nest_fury_for_pc -->
+		<property name="chance" value="100" />
 		<!-- stat name="unitTick" val="90" / -->
-		<stat name="default_enabled" val="false" />
-		<stat name="reuse" val="3000" /> <!-- Guess -->
-		<stat name="showDangerIcon" val="false" /> <!-- Guess -->
-		<node X="73945" Y="-57263" />
-		<node X="90046" Y="-57259" />
-		<node X="89999" Y="-41698" />
-		<node X="73982" Y="-41655" />
+		<property name="default_enabled" value="false" />
+		<property name="reuse" value="3000" /> <!-- Guess -->
+		<property name="showDangerIcon" value="false" /> <!-- Guess -->
+		<point x="73945" y="-57263" />
+		<point x="90046" y="-57259" />
+		<point x="89999" y="-41698" />
+		<point x="73982" y="-41655" />
 	</zone>
-	<zone name="22_16_stakato_pc_buff" id="200105" type="EffectZone" shape="NPoly" minZ="-6368" maxZ="-3296">
-		<stat name="skillIdLvl" val="6171-1;" /> <!-- s_area_stakato_nest_replete_power -->
-		<stat name="chance" val="100" />
+	<zone name="22_16_stakato_pc_buff" id="200105" type="org.l2j.gameserver.world.zone.type.EffectZone" form="Polygon" minZ="-6368" maxZ="-3296">
+		<property name="skillIdLvl" value="6171-1;" /> <!-- s_area_stakato_nest_replete_power -->
+		<property name="chance" value="100" />
 		<!-- stat name="unitTick" val="90" / -->
-		<stat name="default_enabled" val="false" />
-		<stat name="reuse" val="3000" /> <!-- Guess -->
-		<stat name="showDangerIcon" val="false" /> <!-- Guess -->
-		<node X="73945" Y="-57263" />
-		<node X="90046" Y="-57259" />
-		<node X="89999" Y="-41698" />
-		<node X="73982" Y="-41655" />
+		<property name="default_enabled" value="false" />
+		<property name="reuse" value="3000" /> <!-- Guess -->
+		<property name="showDangerIcon" value="false" /> <!-- Guess -->
+		<point x="73945" y="-57263" />
+		<point x="90046" y="-57259" />
+		<point x="89999" y="-41698" />
+		<point x="73982" y="-41655" />
 	</zone>
 	<!-- Primeval Isle - Lost Nest (Recharge Buff) -->
-	<zone name="20_17_ancient_tree_1" type="EffectZone" shape="NPoly" minZ="-3160" maxZ="-2660">
-		<stat name="skillIdLvl" val="5621-9;" /> <!-- s_area_recharge9 -->
-		<stat name="chance" val="100" />
+	<zone name="20_17_ancient_tree_1" type="org.l2j.gameserver.world.zone.type.EffectZone" form="Polygon" minZ="-3160" maxZ="-2660">
+		<property name="skillIdLvl" value="5621-9;" /> <!-- s_area_recharge9 -->
+		<property name="chance" value="100" />
 		<!-- stat name="unitTick" val="5" / -->
-		<stat name="initialDelay" val="1000" />
-		<stat name="default_enabled" val="true" />
-		<stat name="reuse" val="5000" /> <!-- Guess -->
-		<node X="20481" Y="-17577" />
-		<node X="21868" Y="-17768" />
-		<node X="22728" Y="-16287" />
-		<node X="21422" Y="-15075" />
-		<node X="20282" Y="-15490" />
-		<node X="19965" Y="-16508" />
+		<property name="initialDelay" value="1000" />
+		<property name="default_enabled" value="true" />
+		<property name="reuse" value="5000" /> <!-- Guess -->
+		<point x="20481" y="-17577" />
+		<point x="21868" y="-17768" />
+		<point x="22728" y="-16287" />
+		<point x="21422" y="-15075" />
+		<point x="20282" y="-15490" />
+		<point x="19965" y="-16508" />
 	</zone>
-	<zone name="20_17_ancient_tree_2" type="EffectZone" shape="NPoly" minZ="-3296" maxZ="-2596">
-		<stat name="skillIdLvl" val="5621-9;" /> <!-- s_area_recharge9 -->
-		<stat name="chance" val="100" />
+	<zone name="20_17_ancient_tree_2" type="org.l2j.gameserver.world.zone.type.EffectZone" form="Polygon" minZ="-3296" maxZ="-2596">
+		<property name="skillIdLvl" value="5621-9;" /> <!-- s_area_recharge9 -->
+		<property name="chance" value="100" />
 		<!-- stat name="unitTick" val="5" / -->
-		<stat name="initialDelay" val="1000" />
-		<stat name="default_enabled" val="true" />
-		<stat name="reuse" val="5000" /> <!-- Guess -->
-		<node X="16927" Y="-20305" />
-		<node X="18216" Y="-19597" />
-		<node X="18131" Y="-18320" />
-		<node X="17290" Y="-17980" />
-		<node X="16457" Y="-18612" />
-		<node X="16310" Y="-19917" />
+		<property name="initialDelay" value="1000" />
+		<property name="default_enabled" value="true" />
+		<property name="reuse" value="5000" /> <!-- Guess -->
+		<point x="16927" y="-20305" />
+		<point x="18216" y="-19597" />
+		<point x="18131" y="-18320" />
+		<point x="17290" y="-17980" />
+		<point x="16457" y="-18612" />
+		<point x="16310" y="-19917" />
 	</zone>
-	<zone name="20_17_ancient_tree_3" type="EffectZone" shape="NPoly" minZ="-3320" maxZ="-2620">
-		<stat name="skillIdLvl" val="5621-9;" /> <!-- s_area_recharge9 -->
-		<stat name="chance" val="100" />
+	<zone name="20_17_ancient_tree_3" type="org.l2j.gameserver.world.zone.type.EffectZone" form="Polygon" minZ="-3320" maxZ="-2620">
+		<property name="skillIdLvl" value="5621-9;" /> <!-- s_area_recharge9 -->
+		<property name="chance" value="100" />
 		<!-- stat name="unitTick" val="5" / -->
-		<stat name="initialDelay" val="1000" />
-		<stat name="default_enabled" val="true" />
-		<stat name="reuse" val="5000" /> <!-- Guess -->
-		<node X="14312" Y="-17248" />
-		<node X="15048" Y="-16780" />
-		<node X="15348" Y="-16056" />
-		<node X="15140" Y="-15352" />
-		<node X="14212" Y="-15048" />
-		<node X="13584" Y="-15512" />
+		<property name="initialDelay" value="1000" />
+		<property name="default_enabled" value="true" />
+		<property name="reuse" value="5000" /> <!-- Guess -->
+		<point x="14312" y="-17248" />
+		<point x="15048" y="-16780" />
+		<point x="15348" y="-16056" />
+		<point x="15140" y="-15352" />
+		<point x="14212" y="-15048" />
+		<point x="13584" y="-15512" />
 	</zone>
-	<zone name="20_17_ancient_tree_4" type="EffectZone" shape="NPoly" minZ="-2992" maxZ="-2292">
-		<stat name="skillIdLvl" val="5621-9;" /> <!-- s_area_recharge9 -->
-		<stat name="chance" val="100" />
+	<zone name="20_17_ancient_tree_4" type="org.l2j.gameserver.world.zone.type.EffectZone" form="Polygon" minZ="-2992" maxZ="-2292">
+		<property name="skillIdLvl" value="5621-9;" /> <!-- s_area_recharge9 -->
+		<property name="chance" value="100" />
 		<!-- stat name="unitTick" val="5" / -->
-		<stat name="initialDelay" val="1000" />
-		<stat name="default_enabled" val="true" />
-		<stat name="reuse" val="5000" /> <!-- Guess -->
-		<node X="18804" Y="-10888" />
-		<node X="19520" Y="-10108" />
-		<node X="18924" Y="-9308" />
-		<node X="17628" Y="-9444" />
-		<node X="17480" Y="-10268" />
-		<node X="18000" Y="-10884" />
+		<property name="initialDelay" value="1000" />
+		<property name="default_enabled" value="true" />
+		<property name="reuse" value="5000" /> <!-- Guess -->
+		<point x="18804" y="-10888" />
+		<point x="19520" y="-10108" />
+		<point x="18924" y="-9308" />
+		<point x="17628" y="-9444" />
+		<point x="17480" y="-10268" />
+		<point x="18000" y="-10884" />
 	</zone>
-	<zone name="20_17_ancient_tree_5" type="EffectZone" shape="NPoly" minZ="-3084" maxZ="-2384">
-		<stat name="skillIdLvl" val="5621-9;" /> <!-- s_area_recharge9 -->
-		<stat name="chance" val="100" />
+	<zone name="20_17_ancient_tree_5" type="org.l2j.gameserver.world.zone.type.EffectZone" form="Polygon" minZ="-3084" maxZ="-2384">
+		<property name="skillIdLvl" value="5621-9;" /> <!-- s_area_recharge9 -->
+		<property name="chance" value="100" />
 		<!-- stat name="unitTick" val="5" / -->
-		<stat name="initialDelay" val="1000" />
-		<stat name="default_enabled" val="true" />
-		<stat name="reuse" val="5000" /> <!-- Guess -->
-		<node X="20096" Y="-13772" />
-		<node X="20812" Y="-12992" />
-		<node X="20216" Y="-12192" />
-		<node X="18920" Y="-12328" />
-		<node X="18772" Y="-13152" />
-		<node X="19292" Y="-13768" />
+		<property name="initialDelay" value="1000" />
+		<property name="default_enabled" value="true" />
+		<property name="reuse" value="5000" /> <!-- Guess -->
+		<point x="20096" y="-13772" />
+		<point x="20812" y="-12992" />
+		<point x="20216" y="-12192" />
+		<point x="18920" y="-12328" />
+		<point x="18772" y="-13152" />
+		<point x="19292" y="-13768" />
 	</zone>
-	<zone name="20_17_ancient_tree_6" type="EffectZone" shape="NPoly" minZ="-2616" maxZ="-1916">
-		<stat name="skillIdLvl" val="5621-9;" /> <!-- s_area_recharge9 -->
-		<stat name="chance" val="100" />
+	<zone name="20_17_ancient_tree_6" type="org.l2j.gameserver.world.zone.type.EffectZone" form="Polygon" minZ="-2616" maxZ="-1916">
+		<property name="skillIdLvl" value="5621-9;" /> <!-- s_area_recharge9 -->
+		<property name="chance" value="100" />
 		<!-- stat name="unitTick" val="5" / -->
-		<stat name="initialDelay" val="1000" />
-		<stat name="default_enabled" val="true" />
-		<stat name="reuse" val="5000" /> <!-- Guess -->
-		<node X="24012" Y="-13092" />
-		<node X="24476" Y="-12324" />
-		<node X="24132" Y="-11512" />
-		<node X="22836" Y="-11648" />
-		<node X="22688" Y="-12472" />
-		<node X="23208" Y="-13088" />
+		<property name="initialDelay" value="1000" />
+		<property name="default_enabled" value="true" />
+		<property name="reuse" value="5000" /> <!-- Guess -->
+		<point x="24012" y="-13092" />
+		<point x="24476" y="-12324" />
+		<point x="24132" y="-11512" />
+		<point x="22836" y="-11648" />
+		<point x="22688" y="-12472" />
+		<point x="23208" y="-13088" />
 	</zone>
-	<zone name="20_17_ancient_tree_7" type="EffectZone" shape="NPoly" minZ="-2888" maxZ="-2188">
-		<stat name="skillIdLvl" val="5621-9;" /> <!-- s_area_recharge9 -->
-		<stat name="chance" val="100" />
+	<zone name="20_17_ancient_tree_7" type="org.l2j.gameserver.world.zone.type.EffectZone" form="Polygon" minZ="-2888" maxZ="-2188">
+		<property name="skillIdLvl" value="5621-9;" /> <!-- s_area_recharge9 -->
+		<property name="chance" value="100" />
 		<!-- stat name="unitTick" val="5" / -->
-		<stat name="initialDelay" val="1000" />
-		<stat name="default_enabled" val="true" />
-		<stat name="reuse" val="5000" /> <!-- Guess -->
-		<node X="23608" Y="-19512" />
-		<node X="23736" Y="-18792" />
-		<node X="23236" Y="-18164" />
-		<node X="22700" Y="-18300" />
-		<node X="22552" Y="-19124" />
-		<node X="23072" Y="-19740" />
+		<property name="initialDelay" value="1000" />
+		<property name="default_enabled" value="true" />
+		<property name="reuse" value="5000" /> <!-- Guess -->
+		<point x="23608" y="-19512" />
+		<point x="23736" y="-18792" />
+		<point x="23236" y="-18164" />
+		<point x="22700" y="-18300" />
+		<point x="22552" y="-19124" />
+		<point x="23072" y="-19740" />
 	</zone>
-	<zone name="20_17_ancient_tree_8" type="EffectZone" shape="NPoly" minZ="-2856" maxZ="-2156">
-		<stat name="skillIdLvl" val="5621-9;" /> <!-- s_area_recharge9 -->
-		<stat name="chance" val="100" />
+	<zone name="20_17_ancient_tree_8" type="org.l2j.gameserver.world.zone.type.EffectZone" form="Polygon" minZ="-2856" maxZ="-2156">
+		<property name="skillIdLvl" value="5621-9;" /> <!-- s_area_recharge9 -->
+		<property name="chance" value="100" />
 		<!-- stat name="unitTick" val="5" / -->
-		<stat name="initialDelay" val="1000" />
-		<stat name="default_enabled" val="true" />
-		<stat name="reuse" val="5000" /> <!-- Guess -->
-		<node X="27128" Y="-15708" />
-		<node X="27592" Y="-14940" />
-		<node X="27248" Y="-14128" />
-		<node X="25952" Y="-14264" />
-		<node X="25804" Y="-15088" />
-		<node X="26324" Y="-15704" />
+		<property name="initialDelay" value="1000" />
+		<property name="default_enabled" value="true" />
+		<property name="reuse" value="5000" /> <!-- Guess -->
+		<point x="27128" y="-15708" />
+		<point x="27592" y="-14940" />
+		<point x="27248" y="-14128" />
+		<point x="25952" y="-14264" />
+		<point x="25804" y="-15088" />
+		<point x="26324" y="-15704" />
 	</zone>
-	<zone name="19_25_hellbound_oasis" type="EffectZone" shape="NPoly" minZ="-3658" maxZ="-3258">
-		<stat name="skillIdLvl" val="16130-1;" /> <!-- Oasis Energy -->
-		<stat name="chance" val="100" />
+	<zone name="19_25_hellbound_oasis" type="org.l2j.gameserver.world.zone.type.EffectZone" form="Polygon" minZ="-3658" maxZ="-3258">
+		<property name="skillIdLvl" value="16130-1;" /> <!-- Oasis Energy -->
+		<property name="chance" value="100" />
 		<!-- stat name="unitTick" val="5" / -->
-		<stat name="initialDelay" val="1000" />
-		<stat name="default_enabled" val="true" />
-		<stat name="reuse" val="5000" /> <!-- Guess -->
-		<node X="-15152" Y="254031" />
-		<node X="-15083" Y="253576" />
-		<node X="-14940" Y="253209" />
-		<node X="-14674" Y="252617" />
-		<node X="-14618" Y="252384" />
-		<node X="-14714" Y="252136" />
-		<node X="-14871" Y="251823" />
-		<node X="-15095" Y="251604" />
-		<node X="-15577" Y="251211" />
-		<node X="-16021" Y="250571" />
-		<node X="-15727" Y="250232" />
-		<node X="-15967" Y="249977" />
-		<node X="-15760" Y="249973" />
-		<node X="-15645" Y="250050" />
-		<node X="-15387" Y="250186" />
-		<node X="-15204" Y="250112" />
-		<node X="-15152" Y="250169" />
-		<node X="-15099" Y="250359" />
-		<node X="-14787" Y="250323" />
-		<node X="-14775" Y="250342" />
-		<node X="-14925" Y="250461" />
-		<node X="-14805" Y="250674" />
-		<node X="-14577" Y="251052" />
-		<node X="-14226" Y="251114" />
-		<node X="-14027" Y="251075" />
-		<node X="-13855" Y="251212" />
-		<node X="-13579" Y="251535" />
-		<node X="-13422" Y="251790" />
-		<node X="-13494" Y="252025" />
-		<node X="-13854" Y="252527" />
-		<node X="-13880" Y="252892" />
-		<node X="-13729" Y="253180" />
-		<node X="-13486" Y="253415" />
-		<node X="-13355" Y="253390" />
-		<node X="-13377" Y="253210" />
-		<node X="-13296" Y="253126" />
-		<node X="-13107" Y="253106" />
-		<node X="-12921" Y="252991" />
-		<node X="-12874" Y="252790" />
-		<node X="-12885" Y="252507" />
-		<node X="-12985" Y="252142" />
-		<node X="-12839" Y="251938" />
-		<node X="-12581" Y="251554" />
-		<node X="-12419" Y="251366" />
-		<node X="-12099" Y="251595" />
-		<node X="-12012" Y="251927" />
-		<node X="-12029" Y="252274" />
-		<node X="-12363" Y="252647" />
-		<node X="-12515" Y="252990" />
-		<node X="-12548" Y="253238" />
-		<node X="-12541" Y="253481" />
-		<node X="-12670" Y="253700" />
-		<node X="-12749" Y="253846" />
-		<node X="-13011" Y="254157" />
-		<node X="-13452" Y="254422" />
-		<node X="-14188" Y="254493" />
-		<node X="-14650" Y="254393" />
+		<property name="initialDelay" value="1000" />
+		<property name="default_enabled" value="true" />
+		<property name="reuse" value="5000" /> <!-- Guess -->
+		<point x="-15152" y="254031" />
+		<point x="-15083" y="253576" />
+		<point x="-14940" y="253209" />
+		<point x="-14674" y="252617" />
+		<point x="-14618" y="252384" />
+		<point x="-14714" y="252136" />
+		<point x="-14871" y="251823" />
+		<point x="-15095" y="251604" />
+		<point x="-15577" y="251211" />
+		<point x="-16021" y="250571" />
+		<point x="-15727" y="250232" />
+		<point x="-15967" y="249977" />
+		<point x="-15760" y="249973" />
+		<point x="-15645" y="250050" />
+		<point x="-15387" y="250186" />
+		<point x="-15204" y="250112" />
+		<point x="-15152" y="250169" />
+		<point x="-15099" y="250359" />
+		<point x="-14787" y="250323" />
+		<point x="-14775" y="250342" />
+		<point x="-14925" y="250461" />
+		<point x="-14805" y="250674" />
+		<point x="-14577" y="251052" />
+		<point x="-14226" y="251114" />
+		<point x="-14027" y="251075" />
+		<point x="-13855" y="251212" />
+		<point x="-13579" y="251535" />
+		<point x="-13422" y="251790" />
+		<point x="-13494" y="252025" />
+		<point x="-13854" y="252527" />
+		<point x="-13880" y="252892" />
+		<point x="-13729" y="253180" />
+		<point x="-13486" y="253415" />
+		<point x="-13355" y="253390" />
+		<point x="-13377" y="253210" />
+		<point x="-13296" y="253126" />
+		<point x="-13107" y="253106" />
+		<point x="-12921" y="252991" />
+		<point x="-12874" y="252790" />
+		<point x="-12885" y="252507" />
+		<point x="-12985" y="252142" />
+		<point x="-12839" y="251938" />
+		<point x="-12581" y="251554" />
+		<point x="-12419" y="251366" />
+		<point x="-12099" y="251595" />
+		<point x="-12012" y="251927" />
+		<point x="-12029" y="252274" />
+		<point x="-12363" y="252647" />
+		<point x="-12515" y="252990" />
+		<point x="-12548" y="253238" />
+		<point x="-12541" y="253481" />
+		<point x="-12670" y="253700" />
+		<point x="-12749" y="253846" />
+		<point x="-13011" y="254157" />
+		<point x="-13452" y="254422" />
+		<point x="-14188" y="254493" />
+		<point x="-14650" y="254393" />
 	</zone>
 </list>

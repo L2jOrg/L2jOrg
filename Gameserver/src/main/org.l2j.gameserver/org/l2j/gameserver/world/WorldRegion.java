@@ -86,20 +86,15 @@ public final class WorldRegion {
         startNeighborsTask(true, Config.GRID_NEIGHBOR_TURNON_TIME);
     }
 
-    /**
-     * this function turns this region's AI and geodata on or off
-     *
-     * @param value
-     */
-    private void setActive(boolean value) {
-        if (active == value) {
+    private void setActive(boolean active) {
+        if (this.active == active) {
             return;
         }
 
-        active = value;
+        this.active = active;
 
         // Turn the AI on or off to match the region's activation.
-        switchAI(value);
+        switchAI(active);
     }
 
     private void switchAI(boolean isOn) {
@@ -158,9 +153,6 @@ public final class WorldRegion {
         }
     }
 
-    /**
-     * starts a timer to set neighbors (including self) as inactive this timer is to avoid turning off neighbors in the case when a person just moved out of a region that he may very soon return to. There is no reason to turn self & neighbors off in that case.
-     */
     private void startDeactivation() {
         startNeighborsTask(false, Config.GRID_NEIGHBOR_TURNOFF_TIME);
     }

@@ -1,201 +1,201 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<list enabled="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/zones.xsd">
-	<zone name="fishing_giran_1" type="FishingZone" shape="NPoly" minZ="-3600" maxZ="-3350">
-		<node X="85091" Y="150247" />
-		<node X="85630" Y="150238" />
-		<node X="85639" Y="152251" />
-		<node X="84852" Y="152251" />
-		<node X="84855" Y="152399" />
-		<node X="86774" Y="152407" />
-		<node X="86777" Y="152250" />
-		<node X="85990" Y="152255" />
-		<node X="85990" Y="150243" />
-		<node X="86488" Y="150249" />
-		<node X="86489" Y="150163" />
-		<node X="85087" Y="150138" />
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org zones.xsd" >
+	<zone name="fishing_giran_1" type="org.l2j.gameserver.world.zone.type.FishingZone" form="Polygon" minZ="-3600" maxZ="-3350">
+		<point x="85091" y="150247" />
+		<point x="85630" y="150238" />
+		<point x="85639" y="152251" />
+		<point x="84852" y="152251" />
+		<point x="84855" y="152399" />
+		<point x="86774" y="152407" />
+		<point x="86777" y="152250" />
+		<point x="85990" y="152255" />
+		<point x="85990" y="150243" />
+		<point x="86488" y="150249" />
+		<point x="86489" y="150163" />
+		<point x="85087" y="150138" />
 	</zone>
-	<zone name="fishing_giran_2" type="FishingZone" shape="NPoly" minZ="-3550" maxZ="-3500">
-		<node X="88666" Y="147527" />
-		<node X="90406" Y="147527" />
-		<node X="90406" Y="147185" />
-		<node X="88680" Y="147185" />
+	<zone name="fishing_giran_2" type="org.l2j.gameserver.world.zone.type.FishingZone" form="Polygon" minZ="-3550" maxZ="-3500">
+		<point x="88666" y="147527" />
+		<point x="90406" y="147527" />
+		<point x="90406" y="147185" />
+		<point x="88680" y="147185" />
 	</zone>
-	<zone name="fishing_giran_3" type="FishingZone" shape="NPoly" minZ="-3550" maxZ="-3500">
-		<node X="84068" Y="143243" />
-		<node X="84069" Y="141532" />
-		<node X="83707" Y="141527" />
-		<node X="83703" Y="143244" />
+	<zone name="fishing_giran_3" type="org.l2j.gameserver.world.zone.type.FishingZone" form="Polygon" minZ="-3550" maxZ="-3500">
+		<point x="84068" y="143243" />
+		<point x="84069" y="141532" />
+		<point x="83707" y="141527" />
+		<point x="83703" y="143244" />
 	</zone>
-	<zone name="fishing_giran_harbor" type="FishingZone" shape="NPoly" minZ="-3700" maxZ="-3300">
-		<node X="50727" Y="184858" />
-		<node X="48874" Y="186940" />
-		<node X="46463" Y="188239" />
-		<node X="45663" Y="186532" />
-		<node X="43848" Y="187494" />
-		<node X="44631" Y="188770" />
-		<node X="42568" Y="189871" />
-		<node X="44155" Y="193268" />
-		<node X="50252" Y="190691" />
-		<node X="53136" Y="186640" />
+	<zone name="fishing_giran_harbor" type="org.l2j.gameserver.world.zone.type.FishingZone" form="Polygon" minZ="-3700" maxZ="-3300">
+		<point x="50727" y="184858" />
+		<point x="48874" y="186940" />
+		<point x="46463" y="188239" />
+		<point x="45663" y="186532" />
+		<point x="43848" y="187494" />
+		<point x="44631" y="188770" />
+		<point x="42568" y="189871" />
+		<point x="44155" y="193268" />
+		<point x="50252" y="190691" />
+		<point x="53136" y="186640" />
 	</zone>
-	<zone name="fishing_fellmere_lake" type="FishingZone" shape="NPoly" minZ="-3650" maxZ="-2200">
-		<node X="-55351" Y="128912" />
-		<node X="-55974" Y="131960" />
-		<node X="-61124" Y="133034" />
-		<node X="-63346" Y="132706" />
-		<node X="-63622" Y="137127" />
-		<node X="-63943" Y="139991" />
-		<node X="-66278" Y="138637" />
-		<node X="-70269" Y="133704" />
-		<node X="-68687" Y="129352" />
-		<node X="-61255" Y="125857" />
-		<node X="-61634" Y="122648" />
-		<node X="-64758" Y="120838" />
-		<node X="-65553" Y="115366" />
-		<node X="-63965" Y="112894" />
-		<node X="-62075" Y="113109" />
-		<node X="-60208" Y="114967" />
-		<node X="-58091" Y="120419" />
-		<node X="-58399" Y="122746" />
-		<node X="-55645" Y="122787" />
-		<node X="-52452" Y="124898" />
-		<node X="-52589" Y="127015" />
+	<zone name="fishing_fellmere_lake" type="org.l2j.gameserver.world.zone.type.FishingZone" form="Polygon" minZ="-3650" maxZ="-2200">
+		<point x="-55351" y="128912" />
+		<point x="-55974" y="131960" />
+		<point x="-61124" y="133034" />
+		<point x="-63346" y="132706" />
+		<point x="-63622" y="137127" />
+		<point x="-63943" y="139991" />
+		<point x="-66278" y="138637" />
+		<point x="-70269" y="133704" />
+		<point x="-68687" y="129352" />
+		<point x="-61255" y="125857" />
+		<point x="-61634" y="122648" />
+		<point x="-64758" y="120838" />
+		<point x="-65553" y="115366" />
+		<point x="-63965" y="112894" />
+		<point x="-62075" y="113109" />
+		<point x="-60208" y="114967" />
+		<point x="-58091" y="120419" />
+		<point x="-58399" y="122746" />
+		<point x="-55645" y="122787" />
+		<point x="-52452" y="124898" />
+		<point x="-52589" y="127015" />
 	</zone>
-	<zone name="fishing_narsell_lake" type="FishingZone" shape="NPoly" minZ="-3750" maxZ="-3200">
-		<node X="143476" Y="46677" />
-		<node X="143378" Y="47597" />
-		<node X="141912" Y="48300" />
-		<node X="140149" Y="46938" />
-		<node X="137895" Y="47855" />
-		<node X="137190" Y="50320" />
-		<node X="137840" Y="51469" />
-		<node X="139300" Y="52548" />
-		<node X="137961" Y="54671" />
-		<node X="136828" Y="57481" />
-		<node X="138792" Y="59808" />
-		<node X="143935" Y="59893" />
-		<node X="148324" Y="59026" />
-		<node X="149082" Y="58032" />
-		<node X="151890" Y="58634" />
-		<node X="153262" Y="57498" />
-		<node X="152659" Y="55271" />
-		<node X="153196" Y="54110" />
-		<node X="154187" Y="53247" />
-		<node X="155423" Y="53209" />
-		<node X="157125" Y="54176" />
-		<node X="158716" Y="53215" />
-		<node X="158622" Y="52273" />
-		<node X="160864" Y="51337" />
-		<node X="161582" Y="50347" />
-		<node X="161667" Y="48356" />
-		<node X="159959" Y="45092" />
-		<node X="157666" Y="45539" />
-		<node X="157071" Y="47916" />
-		<node X="155858" Y="47763" />
-		<node X="155654" Y="46743" />
-		<node X="155780" Y="42906" />
-		<node X="157608" Y="42222" />
-		<node X="158460" Y="40748" />
-		<node X="158487" Y="39104" />
-		<node X="156930" Y="37678" />
-		<node X="152085" Y="36185" />
-		<node X="146922" Y="37298" />
-		<node X="144899" Y="36565" />
-		<node X="141637" Y="37684" />
-		<node X="138935" Y="39332" />
-		<node X="137809" Y="40536" />
-		<node X="138040" Y="41586" />
-		<node X="139209" Y="42805" />
-		<node X="141751" Y="43654" />
-		<node X="142611" Y="44584" />
-		<node X="143468" Y="46767" />
-		<node X="146394" Y="46766" />
-		<node X="146387" Y="48012" />
-		<node X="147497" Y="49447" />
-		<node X="151510" Y="49446" />
-		<node X="152585" Y="48008" />
-		<node X="152590" Y="45439" />
-		<node X="151506" Y="43999" />
-		<node X="147503" Y="43998" />
-		<node X="146384" Y="45443" />
-		<node X="146389" Y="46695" />
+	<zone name="fishing_narsell_lake" type="org.l2j.gameserver.world.zone.type.FishingZone" form="Polygon" minZ="-3750" maxZ="-3200">
+		<point x="143476" y="46677" />
+		<point x="143378" y="47597" />
+		<point x="141912" y="48300" />
+		<point x="140149" y="46938" />
+		<point x="137895" y="47855" />
+		<point x="137190" y="50320" />
+		<point x="137840" y="51469" />
+		<point x="139300" y="52548" />
+		<point x="137961" y="54671" />
+		<point x="136828" y="57481" />
+		<point x="138792" y="59808" />
+		<point x="143935" y="59893" />
+		<point x="148324" y="59026" />
+		<point x="149082" y="58032" />
+		<point x="151890" y="58634" />
+		<point x="153262" y="57498" />
+		<point x="152659" y="55271" />
+		<point x="153196" y="54110" />
+		<point x="154187" y="53247" />
+		<point x="155423" y="53209" />
+		<point x="157125" y="54176" />
+		<point x="158716" y="53215" />
+		<point x="158622" y="52273" />
+		<point x="160864" y="51337" />
+		<point x="161582" y="50347" />
+		<point x="161667" y="48356" />
+		<point x="159959" y="45092" />
+		<point x="157666" y="45539" />
+		<point x="157071" y="47916" />
+		<point x="155858" y="47763" />
+		<point x="155654" y="46743" />
+		<point x="155780" y="42906" />
+		<point x="157608" y="42222" />
+		<point x="158460" y="40748" />
+		<point x="158487" y="39104" />
+		<point x="156930" y="37678" />
+		<point x="152085" y="36185" />
+		<point x="146922" y="37298" />
+		<point x="144899" y="36565" />
+		<point x="141637" y="37684" />
+		<point x="138935" y="39332" />
+		<point x="137809" y="40536" />
+		<point x="138040" y="41586" />
+		<point x="139209" y="42805" />
+		<point x="141751" y="43654" />
+		<point x="142611" y="44584" />
+		<point x="143468" y="46767" />
+		<point x="146394" y="46766" />
+		<point x="146387" y="48012" />
+		<point x="147497" y="49447" />
+		<point x="151510" y="49446" />
+		<point x="152585" y="48008" />
+		<point x="152590" y="45439" />
+		<point x="151506" y="43999" />
+		<point x="147503" y="43998" />
+		<point x="146384" y="45443" />
+		<point x="146389" y="46695" />
 	</zone>
-	<zone name="fishing_iris_lake" type="FishingZone" shape="NPoly" minZ="-3800" maxZ="-3250">
-		<node X="37154" Y="68179" />
-		<node X="38801" Y="68085" />
-		<node X="40777" Y="71129" />
-		<node X="46441" Y="70716" />
-		<node X="51580" Y="71869" />
-		<node X="52781" Y="73455" />
-		<node X="52551" Y="75206" />
-		<node X="54933" Y="76938" />
-		<node X="54396" Y="79397" />
-		<node X="55784" Y="80902" />
-		<node X="55439" Y="83143" />
-		<node X="53122" Y="83309" />
-		<node X="54339" Y="85836" />
-		<node X="53134" Y="88170" />
-		<node X="49728" Y="88941" />
-		<node X="46450" Y="86985" />
-		<node X="43025" Y="88687" />
-		<node X="41242" Y="87297" />
-		<node X="42002" Y="83559" />
-		<node X="38737" Y="83170" />
-		<node X="37219" Y="81068" />
-		<node X="37592" Y="79682" />
-		<node X="39704" Y="75696" />
-		<node X="36919" Y="70835" />
+	<zone name="fishing_iris_lake" type="org.l2j.gameserver.world.zone.type.FishingZone" form="Polygon" minZ="-3800" maxZ="-3250">
+		<point x="37154" y="68179" />
+		<point x="38801" y="68085" />
+		<point x="40777" y="71129" />
+		<point x="46441" y="70716" />
+		<point x="51580" y="71869" />
+		<point x="52781" y="73455" />
+		<point x="52551" y="75206" />
+		<point x="54933" y="76938" />
+		<point x="54396" y="79397" />
+		<point x="55784" y="80902" />
+		<point x="55439" y="83143" />
+		<point x="53122" y="83309" />
+		<point x="54339" y="85836" />
+		<point x="53134" y="88170" />
+		<point x="49728" y="88941" />
+		<point x="46450" y="86985" />
+		<point x="43025" y="88687" />
+		<point x="41242" y="87297" />
+		<point x="42002" y="83559" />
+		<point x="38737" y="83170" />
+		<point x="37219" y="81068" />
+		<point x="37592" y="79682" />
+		<point x="39704" y="75696" />
+		<point x="36919" y="70835" />
 	</zone>
-	<zone name="fishing_aden_1" type="FishingZone" shape="NPoly" minZ="-4500" maxZ="-2050">
-		<node X="149133" Y="25824" />
-		<node X="149130" Y="29255" />
-		<node X="147936" Y="29238" />
-		<node X="147946" Y="30010" />
-		<node X="149362" Y="30002" />
-		<node X="149889" Y="29497" />
-		<node X="149890" Y="25892" />
+	<zone name="fishing_aden_1" type="org.l2j.gameserver.world.zone.type.FishingZone" form="Polygon" minZ="-4500" maxZ="-2050">
+		<point x="149133" y="25824" />
+		<point x="149130" y="29255" />
+		<point x="147936" y="29238" />
+		<point x="147946" y="30010" />
+		<point x="149362" y="30002" />
+		<point x="149889" y="29497" />
+		<point x="149890" y="25892" />
 	</zone>
-	<zone name="fishing_aden_2" type="FishingZone" shape="NPoly" minZ="-4500" maxZ="-2050">
-		<node X="145797" Y="25836" />
-		<node X="145790" Y="29230" />
-		<node X="146979" Y="29234" />
-		<node X="146963" Y="30018" />
-		<node X="145527" Y="30008" />
-		<node X="145011" Y="29491" />
-		<node X="144999" Y="25810" />
+	<zone name="fishing_aden_2" type="org.l2j.gameserver.world.zone.type.FishingZone" form="Polygon" minZ="-4500" maxZ="-2050">
+		<point x="145797" y="25836" />
+		<point x="145790" y="29230" />
+		<point x="146979" y="29234" />
+		<point x="146963" y="30018" />
+		<point x="145527" y="30008" />
+		<point x="145011" y="29491" />
+		<point x="144999" y="25810" />
 	</zone>
-	<zone name="fishing_plains_of_the_lizardmen" type="FishingZone" shape="NPoly" minZ="-3900" maxZ="-3550">
-		<node X="83659" Y="97107" />
-		<node X="86433" Y="97824" />
-		<node X="91779" Y="96034" />
-		<node X="92898" Y="93824" />
-		<node X="91352" Y="93609" />
-		<node X="84221" Y="95305" />
+	<zone name="fishing_plains_of_the_lizardmen" type="org.l2j.gameserver.world.zone.type.FishingZone" form="Polygon" minZ="-3900" maxZ="-3550">
+		<point x="83659" y="97107" />
+		<point x="86433" y="97824" />
+		<point x="91779" y="96034" />
+		<point x="92898" y="93824" />
+		<point x="91352" y="93609" />
+		<point x="84221" y="95305" />
 	</zone>
-	<zone name="fishing_floran" type="FishingZone" shape="NPoly" minZ="-3900" maxZ="-3500">
-		<node X="6322" Y="171259" />
-		<node X="7522" Y="167364" />
-		<node X="8320" Y="166440" />
-		<node X="10542" Y="167917" />
-		<node X="11834" Y="166749" />
-		<node X="13465" Y="167197" />
-		<node X="14056" Y="169657" />
-		<node X="11602" Y="171827" />
-		<node X="12727" Y="173552" />
-		<node X="11917" Y="175123" />
-		<node X="7791" Y="173888" />
+	<zone name="fishing_floran" type="org.l2j.gameserver.world.zone.type.FishingZone" form="Polygon" minZ="-3900" maxZ="-3500">
+		<point x="6322" y="171259" />
+		<point x="7522" y="167364" />
+		<point x="8320" y="166440" />
+		<point x="10542" y="167917" />
+		<point x="11834" y="166749" />
+		<point x="13465" y="167197" />
+		<point x="14056" y="169657" />
+		<point x="11602" y="171827" />
+		<point x="12727" y="173552" />
+		<point x="11917" y="175123" />
+		<point x="7791" y="173888" />
 	</zone>
-	<zone name="fishing_ol_mahum" type="FishingZone" shape="NPoly" minZ="-3900" maxZ="-3600">
-		<node X="-9684" Y="209598" />
-		<node X="-14801" Y="213962" />
-		<node X="-11899" Y="215713" />
-		<node X="-8636" Y="211047" />
+	<zone name="fishing_ol_mahum" type="org.l2j.gameserver.world.zone.type.FishingZone" form="Polygon" minZ="-3900" maxZ="-3600">
+		<point x="-9684" y="209598" />
+		<point x="-14801" y="213962" />
+		<point x="-11899" y="215713" />
+		<point x="-8636" y="211047" />
 	</zone>
-	<zone name="fishing_gludin_harbor" type="FishingZone" shape="NPoly" minZ="-3700" maxZ="-3500">
-		<node X="-96248" Y="147885" />
-		<node X="-96122" Y="151413" />
-		<node X="-93793" Y="153291" />
-		<node X="-91458" Y="153347" />
-		<node X="-91451" Y="148441" />
+	<zone name="fishing_gludin_harbor" type="org.l2j.gameserver.world.zone.type.FishingZone" form="Polygon" minZ="-3700" maxZ="-3500">
+		<point x="-96248" y="147885" />
+		<point x="-96122" y="151413" />
+		<point x="-93793" y="153291" />
+		<point x="-91458" y="153347" />
+		<point x="-91451" y="148441" />
 	</zone>
 </list>

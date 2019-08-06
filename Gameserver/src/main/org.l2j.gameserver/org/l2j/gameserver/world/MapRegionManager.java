@@ -39,6 +39,7 @@ import static org.l2j.gameserver.util.GameUtils.isPlayer;
  * Map Region Manager.
  *
  * @author Nyaran
+ * @author joeAllisson
  */
 public final class MapRegionManager extends GameXmlReader {
     private static final Logger LOGGER = LoggerFactory.getLogger(MapRegionManager.class);
@@ -85,7 +86,7 @@ public final class MapRegionManager extends GameXmlReader {
                  final int spawnY = parseInteger(attributes, "y");
                  final int spawnZ = parseInteger(attributes, "z");
 
-                 if (parseBoolean(attributes, "isChaotic")) {
+                 if (parseBoolean(attributes, "chaotic")) {
                      region.addChaoticSpawn(spawnX, spawnY, spawnZ);
                  } else {
                      region.addSpawn(spawnX, spawnY, spawnZ);
@@ -304,7 +305,6 @@ public final class MapRegionManager extends GameXmlReader {
         final MapRegion region = getMapRegion(loc.getX(), loc.getY());
         return nonNull(region) ? region.getBbs() : regions.get(defaultRespawn).getBbs();
     }
-
 
     public static MapRegionManager getInstance() {
         return Singleton.INSTANCE;

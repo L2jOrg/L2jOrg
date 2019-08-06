@@ -1,327 +1,327 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<list enabled="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/zones.xsd">
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org zones.xsd" >
 	<!-- Plains of the Lizardmen Zones -->
-	<zone name="oren21_2220_a01_1" type="EffectZone" shape="NPoly" minZ="-3764" maxZ="-3464">
-		<stat name="chance" val="100" />
+	<zone name="oren21_2220_a01_1" type="org.l2j.gameserver.world.zone.type.EffectZone" form="Polygon" minZ="-3764" maxZ="-3464">
+		<property name="chance" value="100" />
 		<!-- stat name="unitTick" val="5" / -->
-		<stat name="skillIdLvl" val="6435-3;" /> <!-- s_area_poison_bow3 -->
-		<stat name="default_enabled" val="true" />
-		<stat name="reuse" val="5000" /> <!-- Guess -->
-		<node X="83885" Y="80497" />
-		<node X="83325" Y="80678" />
-		<node X="82690" Y="80480" />
-		<node X="82628" Y="79804" />
-		<node X="82713" Y="79397" />
-		<node X="82713" Y="79397" />
-		<node X="82025" Y="78227" />
-		<node X="81718" Y="77815" />
-		<node X="81959" Y="77379" />
-		<node X="82656" Y="77511" />
-		<node X="82656" Y="77511" />
-		<node X="83152" Y="77939" />
-		<node X="83913" Y="78957" />
-		<node X="84190" Y="79474" />
-		<node X="84276" Y="80099" />
+		<property name="skillIdLvl" value="6435-3;" /> <!-- s_area_poison_bow3 -->
+		<property name="default_enabled" value="true" />
+		<property name="reuse" value="5000" /> <!-- Guess -->
+		<point x="83885" y="80497" />
+		<point x="83325" y="80678" />
+		<point x="82690" y="80480" />
+		<point x="82628" y="79804" />
+		<point x="82713" y="79397" />
+		<point x="82713" y="79397" />
+		<point x="82025" y="78227" />
+		<point x="81718" y="77815" />
+		<point x="81959" y="77379" />
+		<point x="82656" y="77511" />
+		<point x="82656" y="77511" />
+		<point x="83152" y="77939" />
+		<point x="83913" y="78957" />
+		<point x="84190" y="79474" />
+		<point x="84276" y="80099" />
 	</zone>
-	<zone name="oren21_2220_a01_2" type="EffectZone" shape="NPoly" minZ="-3740" maxZ="-3240">
-		<stat name="chance" val="100" />
+	<zone name="oren21_2220_a01_2" type="org.l2j.gameserver.world.zone.type.EffectZone" form="Polygon" minZ="-3740" maxZ="-3240">
+		<property name="chance" value="100" />
 		<!-- stat name="unitTick" val="5" / -->
-		<stat name="skillIdLvl" val="6435-2;" /> <!-- s_area_poison_bow2 -->
-		<stat name="default_enabled" val="true" />
-		<stat name="reuse" val="5000" /> <!-- Guess -->
-		<node X="82755" Y="81625" />
-		<node X="82309" Y="81855" />
-		<node X="81625" Y="81248" />
-		<node X="81626" Y="80626" />
-		<node X="82228" Y="79566" />
-		<node X="82228" Y="79566" />
-		<node X="81220" Y="78236" />
-		<node X="81030" Y="77077" />
-		<node X="82472" Y="76149" />
-		<node X="83270" Y="76354" />
-		<node X="83589" Y="77629" />
-		<node X="84703" Y="78917" />
-		<node X="84777" Y="79993" />
-		<node X="84676" Y="80864" />
-		<node X="84018" Y="81088" />
-		<node X="83337" Y="81240" />
+		<property name="skillIdLvl" value="6435-2;" /> <!-- s_area_poison_bow2 -->
+		<property name="default_enabled" value="true" />
+		<property name="reuse" value="5000" /> <!-- Guess -->
+		<point x="82755" y="81625" />
+		<point x="82309" y="81855" />
+		<point x="81625" y="81248" />
+		<point x="81626" y="80626" />
+		<point x="82228" y="79566" />
+		<point x="82228" y="79566" />
+		<point x="81220" y="78236" />
+		<point x="81030" y="77077" />
+		<point x="82472" y="76149" />
+		<point x="83270" y="76354" />
+		<point x="83589" y="77629" />
+		<point x="84703" y="78917" />
+		<point x="84777" y="79993" />
+		<point x="84676" y="80864" />
+		<point x="84018" y="81088" />
+		<point x="83337" y="81240" />
 		<!-- stat name="bannedZoneRange" val="oren21_2220_a01_1" / -->
 	</zone>
-	<zone name="oren21_2220_a01_3" type="EffectZone" shape="NPoly" minZ="-3744" maxZ="-3044">
-		<stat name="chance" val="100" />
+	<zone name="oren21_2220_a01_3" type="org.l2j.gameserver.world.zone.type.EffectZone" form="Polygon" minZ="-3744" maxZ="-3044">
+		<property name="chance" value="100" />
 		<!-- stat name="unitTick" val="5" / -->
-		<stat name="skillIdLvl" val="6435-1;" /> <!-- s_area_poison_bow1 -->
-		<stat name="default_enabled" val="true" />
-		<stat name="reuse" val="5000" /> <!-- Guess -->
-		<node X="80948" Y="81704" />
-		<node X="80002" Y="80533" />
-		<node X="80106" Y="79870" />
-		<node X="81333" Y="80359" />
-		<node X="81434" Y="79192" />
-		<node X="79905" Y="78427" />
-		<node X="80363" Y="76612" />
-		<node X="80879" Y="75452" />
-		<node X="83080" Y="74980" />
-		<node X="85000" Y="73955" />
-		<node X="85759" Y="75136" />
-		<node X="84154" Y="77015" />
-		<node X="84228" Y="77737" />
-		<node X="85242" Y="78306" />
-		<node X="85692" Y="81525" />
-		<node X="84399" Y="82252" />
-		<node X="83365" Y="81953" />
-		<node X="81610" Y="83388" />
-		<node X="80473" Y="82612" />
+		<property name="skillIdLvl" value="6435-1;" /> <!-- s_area_poison_bow1 -->
+		<property name="default_enabled" value="true" />
+		<property name="reuse" value="5000" /> <!-- Guess -->
+		<point x="80948" y="81704" />
+		<point x="80002" y="80533" />
+		<point x="80106" y="79870" />
+		<point x="81333" y="80359" />
+		<point x="81434" y="79192" />
+		<point x="79905" y="78427" />
+		<point x="80363" y="76612" />
+		<point x="80879" y="75452" />
+		<point x="83080" y="74980" />
+		<point x="85000" y="73955" />
+		<point x="85759" y="75136" />
+		<point x="84154" y="77015" />
+		<point x="84228" y="77737" />
+		<point x="85242" y="78306" />
+		<point x="85692" y="81525" />
+		<point x="84399" y="82252" />
+		<point x="83365" y="81953" />
+		<point x="81610" y="83388" />
+		<point x="80473" y="82612" />
 		<!-- stat name="bannedZoneRange" val="oren21_2220_a01_2" / -->
 	</zone>
-	<zone name="oren21_2220_a02_1" type="EffectZone" shape="NPoly" minZ="-3344" maxZ="-3044">
-		<stat name="chance" val="100" />
+	<zone name="oren21_2220_a02_1" type="org.l2j.gameserver.world.zone.type.EffectZone" form="Polygon" minZ="-3344" maxZ="-3044">
+		<property name="chance" value="100" />
 		<!-- stat name="unitTick" val="5" / -->
-		<stat name="skillIdLvl" val="6435-3;" /> <!-- s_area_poison_bow3 -->
-		<stat name="default_enabled" val="true" />
-		<stat name="reuse" val="5000" /> <!-- Guess -->
-		<node X="91337" Y="77665" />
-		<node X="92093" Y="78507" />
-		<node X="92023" Y="79105" />
-		<node X="90291" Y="79743" />
-		<node X="89466" Y="79279" />
-		<node X="89466" Y="79279" />
-		<node X="89600" Y="77834" />
-		<node X="88778" Y="76650" />
-		<node X="89692" Y="76002" />
-		<node X="90764" Y="77561" />
+		<property name="skillIdLvl" value="6435-3;" /> <!-- s_area_poison_bow3 -->
+		<property name="default_enabled" value="true" />
+		<property name="reuse" value="5000" /> <!-- Guess -->
+		<point x="91337" y="77665" />
+		<point x="92093" y="78507" />
+		<point x="92023" y="79105" />
+		<point x="90291" y="79743" />
+		<point x="89466" y="79279" />
+		<point x="89466" y="79279" />
+		<point x="89600" y="77834" />
+		<point x="88778" y="76650" />
+		<point x="89692" y="76002" />
+		<point x="90764" y="77561" />
 	</zone>
-	<zone name="oren21_2220_a02_2" type="EffectZone" shape="NPoly" minZ="-3432" maxZ="-3032">
-		<stat name="chance" val="100" />
+	<zone name="oren21_2220_a02_2" type="org.l2j.gameserver.world.zone.type.EffectZone" form="Polygon" minZ="-3432" maxZ="-3032">
+		<property name="chance" value="100" />
 		<!-- stat name="unitTick" val="5" / -->
-		<stat name="skillIdLvl" val="6435-2;" /> <!-- s_area_poison_bow2 -->
-		<stat name="default_enabled" val="true" />
-		<stat name="reuse" val="5000" /> <!-- Guess -->
-		<node X="90731" Y="76824" />
-		<node X="91716" Y="77112" />
-		<node X="93656" Y="79500" />
-		<node X="91801" Y="80446" />
-		<node X="88992" Y="80261" />
-		<node X="88992" Y="80261" />
-		<node X="88408" Y="79497" />
-		<node X="89140" Y="78440" />
-		<node X="87884" Y="75539" />
-		<node X="89076" Y="74755" />
-		<node X="90815" Y="76046" />
+		<property name="skillIdLvl" value="6435-2;" /> <!-- s_area_poison_bow2 -->
+		<property name="default_enabled" value="true" />
+		<property name="reuse" value="5000" /> <!-- Guess -->
+		<point x="90731" y="76824" />
+		<point x="91716" y="77112" />
+		<point x="93656" y="79500" />
+		<point x="91801" y="80446" />
+		<point x="88992" y="80261" />
+		<point x="88992" y="80261" />
+		<point x="88408" y="79497" />
+		<point x="89140" y="78440" />
+		<point x="87884" y="75539" />
+		<point x="89076" y="74755" />
+		<point x="90815" y="76046" />
 		<!-- stat name="bannedZoneRange" val="oren21_2220_a02_1" / -->
 	</zone>
-	<zone name="oren21_2220_a02_3" type="EffectZone" shape="NPoly" minZ="-3600" maxZ="-3200">
-		<stat name="chance" val="100" />
+	<zone name="oren21_2220_a02_3" type="org.l2j.gameserver.world.zone.type.EffectZone" form="Polygon" minZ="-3600" maxZ="-3200">
+		<property name="chance" value="100" />
 		<!-- stat name="unitTick" val="5" / -->
-		<stat name="skillIdLvl" val="6435-1;" /> <!-- s_area_poison_bow1 -->
-		<stat name="default_enabled" val="true" />
-		<stat name="reuse" val="5000" /> <!-- Guess -->
-		<node X="88436" Y="81303" />
-		<node X="87307" Y="79562" />
-		<node X="88166" Y="78344" />
-		<node X="86441" Y="78316" />
-		<node X="86179" Y="77546" />
-		<node X="87330" Y="75984" />
-		<node X="86509" Y="74262" />
-		<node X="88049" Y="72874" />
-		<node X="89061" Y="74238" />
-		<node X="91577" Y="75214" />
-		<node X="92445" Y="74710" />
-		<node X="92777" Y="75434" />
-		<node X="92125" Y="76318" />
-		<node X="92587" Y="76918" />
-		<node X="94066" Y="76677" />
-		<node X="94437" Y="79460" />
-		<node X="93369" Y="81194" />
-		<node X="91425" Y="81782" />
-		<node X="90501" Y="81054" />
+		<property name="skillIdLvl" value="6435-1;" /> <!-- s_area_poison_bow1 -->
+		<property name="default_enabled" value="true" />
+		<property name="reuse" value="5000" /> <!-- Guess -->
+		<point x="88436" y="81303" />
+		<point x="87307" y="79562" />
+		<point x="88166" y="78344" />
+		<point x="86441" y="78316" />
+		<point x="86179" y="77546" />
+		<point x="87330" y="75984" />
+		<point x="86509" y="74262" />
+		<point x="88049" y="72874" />
+		<point x="89061" y="74238" />
+		<point x="91577" y="75214" />
+		<point x="92445" y="74710" />
+		<point x="92777" y="75434" />
+		<point x="92125" y="76318" />
+		<point x="92587" y="76918" />
+		<point x="94066" y="76677" />
+		<point x="94437" y="79460" />
+		<point x="93369" y="81194" />
+		<point x="91425" y="81782" />
+		<point x="90501" y="81054" />
 		<!-- stat name="bannedZoneRange" val="oren21_2220_a02_2" / -->
 	</zone>
-	<zone name="oren21_2220_a03_1" type="EffectZone" shape="NPoly" minZ="-3744" maxZ="-3444">
-		<stat name="chance" val="100" />
+	<zone name="oren21_2220_a03_1" type="org.l2j.gameserver.world.zone.type.EffectZone" form="Polygon" minZ="-3744" maxZ="-3444">
+		<property name="chance" value="100" />
 		<!-- stat name="unitTick" val="5" / -->
-		<stat name="skillIdLvl" val="6435-3;" /> <!-- s_area_poison_bow3 -->
-		<stat name="default_enabled" val="true" />
-		<stat name="reuse" val="5000" /> <!-- Guess -->
-		<node X="92254" Y="83601" />
-		<node X="92513" Y="84114" />
-		<node X="92406" Y="84883" />
-		<node X="92553" Y="85384" />
-		<node X="91805" Y="85573" />
-		<node X="91805" Y="85573" />
-		<node X="91193" Y="84531" />
-		<node X="91293" Y="83868" />
+		<property name="skillIdLvl" value="6435-3;" /> <!-- s_area_poison_bow3 -->
+		<property name="default_enabled" value="true" />
+		<property name="reuse" value="5000" /> <!-- Guess -->
+		<point x="92254" y="83601" />
+		<point x="92513" y="84114" />
+		<point x="92406" y="84883" />
+		<point x="92553" y="85384" />
+		<point x="91805" y="85573" />
+		<point x="91805" y="85573" />
+		<point x="91193" y="84531" />
+		<point x="91293" y="83868" />
 	</zone>
-	<zone name="oren21_2220_a03_2" type="EffectZone" shape="NPoly" minZ="-3728" maxZ="-3428">
-		<stat name="chance" val="100" />
+	<zone name="oren21_2220_a03_2" type="org.l2j.gameserver.world.zone.type.EffectZone" form="Polygon" minZ="-3728" maxZ="-3428">
+		<property name="chance" value="100" />
 		<!-- stat name="unitTick" val="5" / -->
-		<stat name="skillIdLvl" val="6435-2;" /> <!-- s_area_poison_bow2 -->
-		<stat name="default_enabled" val="true" />
-		<stat name="reuse" val="5000" /> <!-- Guess -->
-		<node X="92437" Y="83030" />
-		<node X="93139" Y="83525" />
-		<node X="92934" Y="85775" />
-		<node X="92261" Y="86141" />
-		<node X="90864" Y="85353" />
-		<node X="90864" Y="85353" />
-		<node X="90622" Y="83941" />
-		<node X="91126" Y="83342" />
-		<node X="91818" Y="83153" />
+		<property name="skillIdLvl" value="6435-2;" /> <!-- s_area_poison_bow2 -->
+		<property name="default_enabled" value="true" />
+		<property name="reuse" value="5000" /> <!-- Guess -->
+		<point x="92437" y="83030" />
+		<point x="93139" y="83525" />
+		<point x="92934" y="85775" />
+		<point x="92261" y="86141" />
+		<point x="90864" y="85353" />
+		<point x="90864" y="85353" />
+		<point x="90622" y="83941" />
+		<point x="91126" y="83342" />
+		<point x="91818" y="83153" />
 		<!-- stat name="bannedZoneRange" val="oren21_2220_a03_1" / -->
 	</zone>
-	<zone name="oren21_2220_a03_3" type="EffectZone" shape="NPoly" minZ="-3700" maxZ="-3400">
-		<stat name="chance" val="100" />
+	<zone name="oren21_2220_a03_3" type="org.l2j.gameserver.world.zone.type.EffectZone" form="Polygon" minZ="-3700" maxZ="-3400">
+		<property name="chance" value="100" />
 		<!-- stat name="unitTick" val="5" / -->
-		<stat name="skillIdLvl" val="6435-1;" /> <!-- s_area_poison_bow1 -->
-		<stat name="default_enabled" val="true" />
-		<stat name="reuse" val="5000" /> <!-- Guess -->
-		<node X="94254" Y="83444" />
-		<node X="93570" Y="83984" />
-		<node X="93445" Y="86178" />
-		<node X="91313" Y="86422" />
-		<node X="90275" Y="86358" />
-		<node X="89791" Y="85414" />
-		<node X="90219" Y="83874" />
-		<node X="89607" Y="83262" />
-		<node X="90015" Y="82634" />
-		<node X="92143" Y="82182" />
-		<node X="94099" Y="82550" />
+		<property name="skillIdLvl" value="6435-1;" /> <!-- s_area_poison_bow1 -->
+		<property name="default_enabled" value="true" />
+		<property name="reuse" value="5000" /> <!-- Guess -->
+		<point x="94254" y="83444" />
+		<point x="93570" y="83984" />
+		<point x="93445" y="86178" />
+		<point x="91313" y="86422" />
+		<point x="90275" y="86358" />
+		<point x="89791" y="85414" />
+		<point x="90219" y="83874" />
+		<point x="89607" y="83262" />
+		<point x="90015" y="82634" />
+		<point x="92143" y="82182" />
+		<point x="94099" y="82550" />
 		<!-- stat name="bannedZoneRange" val="oren21_2220_a03_2" / -->
 	</zone>
-	<zone name="oren21_2220_a04_1" type="EffectZone" shape="NPoly" minZ="-3584" maxZ="-3184">
-		<stat name="chance" val="100" />
+	<zone name="oren21_2220_a04_1" type="org.l2j.gameserver.world.zone.type.EffectZone" form="Polygon" minZ="-3584" maxZ="-3184">
+		<property name="chance" value="100" />
 		<!-- stat name="unitTick" val="5" / -->
-		<stat name="skillIdLvl" val="6435-3;" /> <!-- s_area_poison_bow3 -->
-		<stat name="default_enabled" val="true" />
-		<stat name="reuse" val="5000" /> <!-- Guess -->
-		<node X="93513" Y="87903" />
-		<node X="93911" Y="88740" />
-		<node X="93830" Y="89533" />
-		<node X="93276" Y="89513" />
-		<node X="92059" Y="88226" />
-		<node X="92059" Y="88226" />
-		<node X="91971" Y="87777" />
-		<node X="92480" Y="87548" />
-		<node X="92795" Y="87327" />
-		<node X="93262" Y="87501" />
+		<property name="skillIdLvl" value="6435-3;" /> <!-- s_area_poison_bow3 -->
+		<property name="default_enabled" value="true" />
+		<property name="reuse" value="5000" /> <!-- Guess -->
+		<point x="93513" y="87903" />
+		<point x="93911" y="88740" />
+		<point x="93830" y="89533" />
+		<point x="93276" y="89513" />
+		<point x="92059" y="88226" />
+		<point x="92059" y="88226" />
+		<point x="91971" y="87777" />
+		<point x="92480" y="87548" />
+		<point x="92795" y="87327" />
+		<point x="93262" y="87501" />
 	</zone>
-	<zone name="oren21_2220_a04_2" type="EffectZone" shape="NPoly" minZ="-3620" maxZ="-3220">
-		<stat name="chance" val="100" />
+	<zone name="oren21_2220_a04_2" type="org.l2j.gameserver.world.zone.type.EffectZone" form="Polygon" minZ="-3620" maxZ="-3220">
+		<property name="chance" value="100" />
 		<!-- stat name="unitTick" val="5" / -->
-		<stat name="skillIdLvl" val="6435-2;" /> <!-- s_area_poison_bow2 -->
-		<stat name="default_enabled" val="true" />
-		<stat name="reuse" val="5000" /> <!-- Guess -->
-		<node X="92727" Y="86380" />
-		<node X="94103" Y="87753" />
-		<node X="94451" Y="89784" />
-		<node X="93104" Y="90072" />
-		<node X="91228" Y="88097" />
-		<node X="91228" Y="88097" />
-		<node X="91568" Y="87205" />
-		<node X="92330" Y="86409" />
+		<property name="skillIdLvl" value="6435-2;" /> <!-- s_area_poison_bow2 -->
+		<property name="default_enabled" value="true" />
+		<property name="reuse" value="5000" /> <!-- Guess -->
+		<point x="92727" y="86380" />
+		<point x="94103" y="87753" />
+		<point x="94451" y="89784" />
+		<point x="93104" y="90072" />
+		<point x="91228" y="88097" />
+		<point x="91228" y="88097" />
+		<point x="91568" y="87205" />
+		<point x="92330" y="86409" />
 		<!-- stat name="bannedZoneRange" val="oren21_2220_a04_1" / -->
 	</zone>
-	<zone name="oren21_2220_a04_3" type="EffectZone" shape="NPoly" minZ="-3640" maxZ="-3140">
-		<stat name="chance" val="100" />
+	<zone name="oren21_2220_a04_3" type="org.l2j.gameserver.world.zone.type.EffectZone" form="Polygon" minZ="-3640" maxZ="-3140">
+		<property name="chance" value="100" />
 		<!-- stat name="unitTick" val="5" / -->
-		<stat name="skillIdLvl" val="6435-1;" /> <!-- s_area_poison_bow1 -->
-		<stat name="default_enabled" val="true" />
-		<stat name="reuse" val="5000" /> <!-- Guess -->
-		<node X="94664" Y="90851" />
-		<node X="93241" Y="91517" />
-		<node X="92850" Y="90548" />
-		<node X="91950" Y="90369" />
-		<node X="91525" Y="89361" />
-		<node X="90345" Y="88918" />
-		<node X="91377" Y="86446" />
-		<node X="93171" Y="86240" />
-		<node X="94273" Y="87094" />
-		<node X="94625" Y="87946" />
-		<node X="95849" Y="89386" />
-		<node X="95401" Y="90138" />
-		<node X="94917" Y="90406" />
+		<property name="skillIdLvl" value="6435-1;" /> <!-- s_area_poison_bow1 -->
+		<property name="default_enabled" value="true" />
+		<property name="reuse" value="5000" /> <!-- Guess -->
+		<point x="94664" y="90851" />
+		<point x="93241" y="91517" />
+		<point x="92850" y="90548" />
+		<point x="91950" y="90369" />
+		<point x="91525" y="89361" />
+		<point x="90345" y="88918" />
+		<point x="91377" y="86446" />
+		<point x="93171" y="86240" />
+		<point x="94273" y="87094" />
+		<point x="94625" y="87946" />
+		<point x="95849" y="89386" />
+		<point x="95401" y="90138" />
+		<point x="94917" y="90406" />
 		<!-- stat name="bannedZoneRange" val="oren21_2220_a04_2" / -->
 	</zone>
-	<zone name="oren21_2220_a05_1" type="EffectZone" shape="NPoly" minZ="-3288" maxZ="-2788">
-		<stat name="chance" val="100" />
+	<zone name="oren21_2220_a05_1" type="org.l2j.gameserver.world.zone.type.EffectZone" form="Polygon" minZ="-3288" maxZ="-2788">
+		<property name="chance" value="100" />
 		<!-- stat name="unitTick" val="5" / -->
-		<stat name="skillIdLvl" val="6435-3;" /> <!-- s_area_poison_bow3 -->
-		<stat name="default_enabled" val="true" />
-		<stat name="reuse" val="5000" /> <!-- Guess -->
-		<node X="88568" Y="92008" />
-		<node X="90012" Y="92048" />
-		<node X="90093" Y="92642" />
-		<node X="88464" Y="92784" />
-		<node X="87451" Y="93745" />
-		<node X="87451" Y="93745" />
-		<node X="86372" Y="92881" />
-		<node X="87136" Y="92149" />
+		<property name="skillIdLvl" value="6435-3;" /> <!-- s_area_poison_bow3 -->
+		<property name="default_enabled" value="true" />
+		<property name="reuse" value="5000" /> <!-- Guess -->
+		<point x="88568" y="92008" />
+		<point x="90012" y="92048" />
+		<point x="90093" y="92642" />
+		<point x="88464" y="92784" />
+		<point x="87451" y="93745" />
+		<point x="87451" y="93745" />
+		<point x="86372" y="92881" />
+		<point x="87136" y="92149" />
 	</zone>
-	<zone name="oren21_2220_a05_2" type="EffectZone" shape="NPoly" minZ="-3476" maxZ="-2976">
-		<stat name="chance" val="100" />
+	<zone name="oren21_2220_a05_2" type="org.l2j.gameserver.world.zone.type.EffectZone" form="Polygon" minZ="-3476" maxZ="-2976">
+		<property name="chance" value="100" />
 		<!-- stat name="unitTick" val="5" / -->
-		<stat name="skillIdLvl" val="6435-2;" /> <!-- s_area_poison_bow2 -->
-		<stat name="default_enabled" val="true" />
-		<stat name="reuse" val="5000" /> <!-- Guess -->
-		<node X="87196" Y="94553" />
-		<node X="86308" Y="93675" />
-		<node X="85314" Y="94270" />
-		<node X="84520" Y="93898" />
-		<node X="85968" Y="92702" />
-		<node X="85968" Y="92702" />
-		<node X="86478" Y="91730" />
-		<node X="88406" Y="91514" />
-		<node X="90392" Y="91279" />
-		<node X="90923" Y="92101" />
-		<node X="90953" Y="92766" />
-		<node X="89935" Y="93237" />
-		<node X="88741" Y="93082" />
-		<node X="88416" Y="93943" />
+		<property name="skillIdLvl" value="6435-2;" /> <!-- s_area_poison_bow2 -->
+		<property name="default_enabled" value="true" />
+		<property name="reuse" value="5000" /> <!-- Guess -->
+		<point x="87196" y="94553" />
+		<point x="86308" y="93675" />
+		<point x="85314" y="94270" />
+		<point x="84520" y="93898" />
+		<point x="85968" y="92702" />
+		<point x="85968" y="92702" />
+		<point x="86478" y="91730" />
+		<point x="88406" y="91514" />
+		<point x="90392" y="91279" />
+		<point x="90923" y="92101" />
+		<point x="90953" y="92766" />
+		<point x="89935" y="93237" />
+		<point x="88741" y="93082" />
+		<point x="88416" y="93943" />
 		<!-- stat name="bannedZoneRange" val="oren21_2220_a05_1" / -->
 	</zone>
-	<zone name="oren21_2220_a05_3" type="EffectZone" shape="NPoly" minZ="-3600" maxZ="-3000">
-		<stat name="chance" val="100" />
+	<zone name="oren21_2220_a05_3" type="org.l2j.gameserver.world.zone.type.EffectZone" form="Polygon" minZ="-3600" maxZ="-3000">
+		<property name="chance" value="100" />
 		<!-- stat name="unitTick" val="5" / -->
-		<stat name="skillIdLvl" val="6435-1;" /> <!-- s_area_poison_bow1 -->
-		<stat name="default_enabled" val="true" />
-		<stat name="reuse" val="5000" /> <!-- Guess -->
-		<node X="90965" Y="93248" />
-		<node X="86669" Y="95030" />
-		<node X="86060" Y="94247" />
-		<node X="85132" Y="95244" />
-		<node X="83537" Y="94333" />
-		<node X="84037" Y="93518" />
-		<node X="85621" Y="92454" />
-		<node X="86735" Y="90612" />
-		<node X="90830" Y="90531" />
-		<node X="91352" Y="91601" />
-		<node X="92529" Y="92534" />
-		<node X="92241" Y="93634" />
+		<property name="skillIdLvl" value="6435-1;" /> <!-- s_area_poison_bow1 -->
+		<property name="default_enabled" value="true" />
+		<property name="reuse" value="5000" /> <!-- Guess -->
+		<point x="90965" y="93248" />
+		<point x="86669" y="95030" />
+		<point x="86060" y="94247" />
+		<point x="85132" y="95244" />
+		<point x="83537" y="94333" />
+		<point x="84037" y="93518" />
+		<point x="85621" y="92454" />
+		<point x="86735" y="90612" />
+		<point x="90830" y="90531" />
+		<point x="91352" y="91601" />
+		<point x="92529" y="92534" />
+		<point x="92241" y="93634" />
 		<!-- stat name="bannedZoneRange" val="oren21_2220_a05_2" / -->
 	</zone>
-	<zone id="70307" name="oren21_mb2220_ugoz01" type="EffectZone" shape="NPoly" minZ="-3792" maxZ="-3292">
-		<stat name="chance" val="100" />
+	<zone id="70307" name="oren21_mb2220_ugoz01" type="org.l2j.gameserver.world.zone.type.EffectZone" form="Polygon" minZ="-3792" maxZ="-3292">
+		<property name="chance" value="100" />
 		<!-- stat name="unitTick" val="5" / -->
-		<stat name="skillIdLvl" val="6436-1;" /> <!-- s_area_poison_ugoros -->
-		<stat name="default_enabled" val="true" />
-		<stat name="reuse" val="5000" /> <!-- Guess -->
-		<node X="96971" Y="84648" />
-		<node X="97842" Y="86047" />
-		<node X="97803" Y="86717" />
-		<node X="95982" Y="86676" />
-		<node X="95046" Y="85676" />
-		<node X="95166" Y="84573" />
-		<node X="96095" Y="84213" />
+		<property name="skillIdLvl" value="6436-1;" /> <!-- s_area_poison_ugoros -->
+		<property name="default_enabled" value="true" />
+		<property name="reuse" value="5000" /> <!-- Guess -->
+		<point x="96971" y="84648" />
+		<point x="97842" y="86047" />
+		<point x="97803" y="86717" />
+		<point x="95982" y="86676" />
+		<point x="95046" y="85676" />
+		<point x="95166" y="84573" />
+		<point x="96095" y="84213" />
 	</zone>
-	<zone name="oren21_mb2220_ugoz01" type="NoRestartZone" shape="NPoly" minZ="-3758" maxZ="-2758">
-		<stat name="restartTime" val="1800" />
-		<stat name="restartAllowedTime" val="1" />
-		<node X="97040" Y="84524" />
-		<node X="98383" Y="85869" />
-		<node X="98344" Y="87269" />
-		<node X="95708" Y="87235" />
-		<node X="94661" Y="85673" />
-		<node X="95107" Y="84457" />
-		<node X="96094" Y="84094" />
+	<zone name="oren21_mb2220_ugoz01" type="org.l2j.gameserver.world.zone.type.NoRestartZone" form="Polygon" minZ="-3758" maxZ="-2758">
+		<property name="restartTime" value="1800" />
+		<property name="restartAllowedTime" value="1" />
+		<point x="97040" y="84524" />
+		<point x="98383" y="85869" />
+		<point x="98344" y="87269" />
+		<point x="95708" y="87235" />
+		<point x="94661" y="85673" />
+		<point x="95107" y="84457" />
+		<point x="96094" y="84094" />
 	</zone>
 </list>

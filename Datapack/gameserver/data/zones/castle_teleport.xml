@@ -1,93 +1,93 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<list enabled="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/zones.xsd">
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org zones.xsd" >
 	<!-- Castle Teleport Zones -->
-	<zone name="gludio_castle_owner_restart_territory" type="ResidenceTeleportZone" shape="NPoly" minZ="-1840" maxZ="-1540">
-		<stat name="residenceId" val="1" />
+	<zone name="gludio_castle_owner_restart_territory" type="org.l2j.gameserver.world.zone.type.ResidenceTeleportZone" form="Polygon" minZ="-1840" maxZ="-1540">
+		<property name="residenceId" value="1" />
 		<!-- owner_restart_territory -->
-		<node X="-17242" Y="109135" />
-		<node X="-16215" Y="109135" />
-		<node X="-16217" Y="109588" />
-		<node X="-17246" Y="109587" />
+		<point x="-17242" y="109135" />
+		<point x="-16215" y="109135" />
+		<point x="-16217" y="109588" />
+		<point x="-17246" y="109587" />
 		<!-- gk_teleport_points -->
 		<spawn X="-18099" Y="109297" Z="-2475" />
 	</zone>
-	<zone name="dion_castle_owner_restart_territory" type="ResidenceTeleportZone" shape="NPoly" minZ="-2034" maxZ="-1734">
-		<stat name="residenceId" val="2" />
+	<zone name="dion_castle_owner_restart_territory" type="org.l2j.gameserver.world.zone.type.ResidenceTeleportZone" form="Polygon" minZ="-2034" maxZ="-1734">
+		<property name="residenceId" value="2" />
 		<!-- owner_restart_territory -->
-		<node X="20177" Y="160155" />
-		<node X="21205" Y="160155" />
-		<node X="21203" Y="160608" />
-		<node X="20175" Y="160607" />
+		<point x="20177" y="160155" />
+		<point x="21205" y="160155" />
+		<point x="21203" y="160608" />
+		<point x="20175" y="160607" />
 		<!-- gk_teleport_points -->
 		<spawn X="22070" Y="160524" Z="-2669" />
 	</zone>
-	<zone name="giran_castle_owner_restart_territory" type="ResidenceTeleportZone" shape="NPoly" minZ="-1940" maxZ="-1640">
-		<stat name="residenceId" val="3" />
+	<zone name="giran_castle_owner_restart_territory" type="org.l2j.gameserver.world.zone.type.ResidenceTeleportZone" form="Polygon" minZ="-1940" maxZ="-1640">
+		<property name="residenceId" value="3" />
 		<!-- owner_restart_territory -->
-		<node X="116345" Y="145985" />
-		<node X="116777" Y="145982" />
-		<node X="116771" Y="146975" />
-		<node X="116353" Y="146975" />
+		<point x="116345" y="145985" />
+		<point x="116777" y="145982" />
+		<point x="116771" y="146975" />
+		<point x="116353" y="146975" />
 		<!-- gk_teleport_points -->
 		<spawn X="116629" Y="145055" Z="-2544" />
 	</zone>
-	<zone name="oren_castle_owner_restart_territory" type="ResidenceTeleportZone" shape="NPoly" minZ="-1630" maxZ="-1330">
-		<stat name="residenceId" val="4" />
+	<zone name="oren_castle_owner_restart_territory" type="org.l2j.gameserver.world.zone.type.ResidenceTeleportZone" form="Polygon" minZ="-1630" maxZ="-1330">
+		<property name="residenceId" value="4" />
 		<!-- owner_restart_territory -->
-		<node X="82421" Y="38078" />
-		<node X="82853" Y="38076" />
-		<node X="82847" Y="39069" />
-		<node X="82429" Y="39069" />
+		<point x="82421" y="38078" />
+		<point x="82853" y="38076" />
+		<point x="82847" y="39069" />
+		<point x="82429" y="39069" />
 		<!-- gk_teleport_points -->
 		<spawn X="82707" Y="37203" Z="-2265" />
 	</zone>
-	<zone name="aden_castle_owner_restart_territory" type="ResidenceTeleportZone" shape="NPoly" minZ="-2844" maxZ="-2444">
-		<stat name="residenceId" val="5" />
+	<zone name="aden_castle_owner_restart_territory" type="org.l2j.gameserver.world.zone.type.ResidenceTeleportZone" form="Polygon" minZ="-2844" maxZ="-2444">
+		<property name="residenceId" value="5" />
 		<!-- owner_restart_territory -->
-		<node X="146867" Y="4019" />
-		<node X="148033" Y="4018" />
-		<node X="148033" Y="5174" />
-		<node X="146869" Y="5174" />
+		<point x="146867" y="4019" />
+		<point x="148033" y="4018" />
+		<point x="148033" y="5174" />
+		<point x="146869" y="5174" />
 		<!-- gk_teleport_points -->
 		<spawn X="147452" Y="4842" Z="-341" />
 	</zone>
-	<zone name="innadrile_castle_owner_restart_territory" type="ResidenceTeleportZone" shape="NPoly" minZ="-150" maxZ="150">
-		<stat name="residenceId" val="6" />
+	<zone name="innadrile_castle_owner_restart_territory" type="org.l2j.gameserver.world.zone.type.ResidenceTeleportZone" form="Polygon" minZ="-150" maxZ="150">
+		<property name="residenceId" value="6" />
 		<!-- owner_restart_territory -->
-		<node X="114153" Y="248974" />
-		<node X="115131" Y="248973" />
-		<node X="115130" Y="249360" />
-		<node X="114152" Y="249362" />
+		<point x="114153" y="248974" />
+		<point x="115131" y="248973" />
+		<point x="115130" y="249360" />
+		<point x="114152" y="249362" />
 		<!-- gk_teleport_points -->
 		<spawn X="116010" Y="249232" Z="-765" />
 	</zone>
-	<zone name="godad_castle_owner_restart_territory" type="ResidenceTeleportZone" shape="NPoly" minZ="-1050" maxZ="-850">
-		<stat name="residenceId" val="7" />
+	<zone name="godad_castle_owner_restart_territory" type="org.l2j.gameserver.world.zone.type.ResidenceTeleportZone" form="Polygon" minZ="-1050" maxZ="-850">
+		<property name="residenceId" value="7" />
 		<!-- owner_restart_territory -->
-		<node X="147223" Y="-47258" />
-		<node X="147710" Y="-47258" />
-		<node X="147711" Y="-46224" />
-		<node X="147224" Y="-46224" />
+		<point x="147223" y="-47258" />
+		<point x="147710" y="-47258" />
+		<point x="147711" y="-46224" />
+		<point x="147224" y="-46224" />
 		<!-- gk_teleport_points -->
 		<spawn X="147458" Y="-48500" Z="-2272" />
 	</zone>
-	<zone name="rune_castle_owner_restart_territory" type="ResidenceTeleportZone" shape="NPoly" minZ="3750" maxZ="4250">
-		<stat name="residenceId" val="8" />
+	<zone name="rune_castle_owner_restart_territory" type="org.l2j.gameserver.world.zone.type.ResidenceTeleportZone" form="Polygon" minZ="3750" maxZ="4250">
+		<property name="residenceId" value="8" />
 		<!-- owner_restart_territory -->
-		<node X="9073" Y="-49855" />
-		<node X="11506" Y="-49386" />
-		<node X="11516" Y="-48965" />
-		<node X="9074" Y="-48437" />
+		<point x="9073" y="-49855" />
+		<point x="11506" y="-49386" />
+		<point x="11516" y="-48965" />
+		<point x="9074" y="-48437" />
 		<!-- gk_teleport_points -->
 		<spawn X="11493" Y="-49153" Z="-536" />
 	</zone>
-	<zone name="schuttgart_castle_owner_restart_territory" type="ResidenceTeleportZone" shape="NPoly" minZ="668" maxZ="968">
-		<stat name="residenceId" val="9" />
+	<zone name="schuttgart_castle_owner_restart_territory" type="org.l2j.gameserver.world.zone.type.ResidenceTeleportZone" form="Polygon" minZ="668" maxZ="968">
+		<property name="residenceId" value="9" />
 		<!-- owner_restart_territory -->
-		<node X="77313" Y="-151322" />
-		<node X="77800" Y="-151322" />
-		<node X="77801" Y="-150287" />
-		<node X="77314" Y="-150287" />
+		<point x="77313" y="-151322" />
+		<point x="77800" y="-151322" />
+		<point x="77801" y="-150287" />
+		<point x="77314" y="-150287" />
 		<!-- gk_teleport_points -->
 		<spawn X="77552" Y="-152557" Z="-536" />
 	</zone>

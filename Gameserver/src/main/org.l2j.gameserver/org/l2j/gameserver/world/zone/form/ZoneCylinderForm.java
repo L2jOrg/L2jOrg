@@ -11,63 +11,63 @@ import org.l2j.gameserver.world.zone.ZoneForm;
  *
  * @author durgus
  */
-public class ZoneCylinder extends ZoneForm {
-    private final int _x;
-    private final int _y;
-    private final int _z1;
-    private final int _z2;
-    private final int _rad;
+public class ZoneCylinderForm extends ZoneForm {
+    private final int centerX;
+    private final int centerY;
+    private final int minZ;
+    private final int maxZ;
+    private final int radius;
     private final int _radS;
 
-    public ZoneCylinder(int x, int y, int z1, int z2, int rad) {
-        _x = x;
-        _y = y;
-        _z1 = z1;
-        _z2 = z2;
-        _rad = rad;
-        _radS = rad * rad;
+    public ZoneCylinderForm(int x, int y, int minZ, int maxZ, int radius) {
+        centerX = x;
+        centerY = y;
+        this.minZ = minZ;
+        this.maxZ = maxZ;
+        this.radius = radius;
+        _radS = radius * radius;
     }
 
     @Override
     public boolean isInsideZone(int x, int y, int z) {
-        return ((Math.pow(_x - x, 2) + Math.pow(_y - y, 2)) <= _radS) && (z >= _z1) && (z <= _z2);
+        return ((Math.pow(centerX - x, 2) + Math.pow(centerY - y, 2)) <= _radS) && (z >= minZ) && (z <= maxZ);
     }
 
     @Override
     public boolean intersectsRectangle(int ax1, int ax2, int ay1, int ay2) {
         // Circles point inside the rectangle?
-        if ((_x > ax1) && (_x < ax2) && (_y > ay1) && (_y < ay2)) {
+        if ((centerX > ax1) && (centerX < ax2) && (centerY > ay1) && (centerY < ay2)) {
             return true;
         }
 
         // Any point of the rectangle intersecting the Circle?
-        if ((Math.pow(ax1 - _x, 2) + Math.pow(ay1 - _y, 2)) < _radS) {
+        if ((Math.pow(ax1 - centerX, 2) + Math.pow(ay1 - centerY, 2)) < _radS) {
             return true;
         }
-        if ((Math.pow(ax1 - _x, 2) + Math.pow(ay2 - _y, 2)) < _radS) {
+        if ((Math.pow(ax1 - centerX, 2) + Math.pow(ay2 - centerY, 2)) < _radS) {
             return true;
         }
-        if ((Math.pow(ax2 - _x, 2) + Math.pow(ay1 - _y, 2)) < _radS) {
+        if ((Math.pow(ax2 - centerX, 2) + Math.pow(ay1 - centerY, 2)) < _radS) {
             return true;
         }
-        if ((Math.pow(ax2 - _x, 2) + Math.pow(ay2 - _y, 2)) < _radS) {
+        if ((Math.pow(ax2 - centerX, 2) + Math.pow(ay2 - centerY, 2)) < _radS) {
             return true;
         }
 
         // Collision on any side of the rectangle?
-        if ((_x > ax1) && (_x < ax2)) {
-            if (Math.abs(_y - ay2) < _rad) {
+        if ((centerX > ax1) && (centerX < ax2)) {
+            if (Math.abs(centerY - ay2) < radius) {
                 return true;
             }
-            if (Math.abs(_y - ay1) < _rad) {
+            if (Math.abs(centerY - ay1) < radius) {
                 return true;
             }
         }
-        if ((_y > ay1) && (_y < ay2)) {
-            if (Math.abs(_x - ax2) < _rad) {
+        if ((centerY > ay1) && (centerY < ay2)) {
+            if (Math.abs(centerX - ax2) < radius) {
                 return true;
             }
-            if (Math.abs(_x - ax1) < _rad) {
+            if (Math.abs(centerX - ax1) < radius) {
                 return true;
             }
         }
@@ -77,26 +77,26 @@ public class ZoneCylinder extends ZoneForm {
 
     @Override
     public double getDistanceToZone(int x, int y) {
-        return Math.hypot(_x - x, _y - y) - _rad;
+        return Math.hypot(centerX - x, centerY - y) - radius;
     }
 
     // getLowZ() / getHighZ() - These two functions were added to cope with the demand of the new fishing algorithms, wich are now able to correctly place the hook in the water, thanks to getHighZ(). getLowZ() was added, considering potential future modifications.
     @Override
     public int getLowZ() {
-        return _z1;
+        return minZ;
     }
 
     @Override
     public int getHighZ() {
-        return _z2;
+        return maxZ;
     }
 
     @Override
     public void visualizeZone(int z) {
-        final int count = (int) ((2 * Math.PI * _rad) / STEP);
+        final int count = (int) ((2 * Math.PI * radius) / STEP);
         final double angle = (2 * Math.PI) / count;
         for (int i = 0; i < count; i++) {
-            dropDebugItem(CommonItem.ADENA, 1, _x + (int) (Math.cos(angle * i) * _rad), _y + (int) (Math.sin(angle * i) * _rad), z);
+            dropDebugItem(CommonItem.ADENA, 1, centerX + (int) (Math.cos(angle * i) * radius), centerY + (int) (Math.sin(angle * i) * radius), z);
         }
     }
 
@@ -104,9 +104,9 @@ public class ZoneCylinder extends ZoneForm {
     public Location getRandomPoint() {
         final int q = (int) (Rnd.nextDouble() * 2 * Math.PI);
         final int r = (int) Math.sqrt(Rnd.nextDouble());
-        final int x = (int) ((_rad * r * Math.cos(q)) + _x);
-        final int y = (int) ((_rad * r * Math.sin(q)) + _y);
+        final int x = (int) ((radius * r * Math.cos(q)) + centerX);
+        final int y = (int) ((radius * r * Math.sin(q)) + centerY);
 
-        return new Location(x, y, GeoEngine.getInstance().getHeight(x, y, _z1));
+        return new Location(x, y, GeoEngine.getInstance().getHeight(x, y, minZ));
     }
 }

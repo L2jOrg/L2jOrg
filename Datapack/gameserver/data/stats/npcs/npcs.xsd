@@ -296,7 +296,7 @@
 						<xs:attribute name="usingServerSideName" type="xs:boolean" />
 						<xs:attribute name="title" type="xs:string" />
 						<xs:attribute name="usingServerSideTitle" type="xs:boolean" />
-						<xs:attribute name="element" type="ElementalType" default="NONE"/>
+						<xs:attribute name="element" type="Element" default="NONE"/>
 					</xs:complexType>
 				</xs:element>
 			</xs:sequence>

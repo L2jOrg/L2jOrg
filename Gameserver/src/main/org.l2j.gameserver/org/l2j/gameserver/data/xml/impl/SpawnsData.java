@@ -11,7 +11,7 @@ import org.l2j.gameserver.model.interfaces.ITerritorized;
 import org.l2j.gameserver.model.spawns.NpcSpawnTemplate;
 import org.l2j.gameserver.model.spawns.SpawnGroup;
 import org.l2j.gameserver.model.spawns.SpawnTemplate;
-import org.l2j.gameserver.world.zone.form.ZoneNPoly;
+import org.l2j.gameserver.world.zone.form.ZonePolygonForm;
 import org.l2j.gameserver.world.zone.type.BannedSpawnTerritory;
 import org.l2j.gameserver.world.zone.type.SpawnTerritory;
 import org.l2j.gameserver.settings.ServerSettings;
@@ -135,8 +135,8 @@ public class SpawnsData extends GameXmlReader {
             final int[] y = yNodes.stream().mapToInt(Integer::valueOf).toArray();
 
             switch (territoryNode.getNodeName()) {
-                case "territory" -> spawnTemplate.addTerritory(new SpawnTerritory(name, new ZoneNPoly(x, y, minZ, maxZ)));
-                case "banned_territory" -> spawnTemplate.addBannedTerritory(new BannedSpawnTerritory(name, new ZoneNPoly(x, y, minZ, maxZ)));
+                case "territory" -> spawnTemplate.addTerritory(new SpawnTerritory(name, new ZonePolygonForm(x, y, minZ, maxZ)));
+                case "banned_territory" -> spawnTemplate.addBannedTerritory(new BannedSpawnTerritory(name, new ZonePolygonForm(x, y, minZ, maxZ)));
             }
         });
     }
