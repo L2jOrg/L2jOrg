@@ -16,7 +16,7 @@ import org.l2j.gameserver.model.skills.BuffInfo;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.world.zone.AbstractZoneSettings;
 import org.l2j.gameserver.world.zone.Zone;
-import org.l2j.gameserver.world.zone.ZoneId;
+import org.l2j.gameserver.world.zone.ZoneType;
 import org.l2j.gameserver.network.SystemMessageId;
 
 import static org.l2j.gameserver.util.GameUtils.isPlayer;
@@ -63,9 +63,9 @@ public class SiegeZone extends Zone {
     @Override
     protected void onEnter(Creature character) {
         if (getSettings().isActiveSiege()) {
-            character.setInsideZone(ZoneId.PVP, true);
-            character.setInsideZone(ZoneId.SIEGE, true);
-            character.setInsideZone(ZoneId.NO_SUMMON_FRIEND, true); // FIXME: Custom ?
+            character.setInsideZone(ZoneType.PVP, true);
+            character.setInsideZone(ZoneType.SIEGE, true);
+            character.setInsideZone(ZoneType.NO_SUMMON_FRIEND, true); // FIXME: Custom ?
 
             if (isPlayer(character)) {
                 final Player plyer = character.getActingPlayer();
@@ -95,9 +95,9 @@ public class SiegeZone extends Zone {
 
     @Override
     protected void onExit(Creature character) {
-        character.setInsideZone(ZoneId.PVP, false);
-        character.setInsideZone(ZoneId.SIEGE, false);
-        character.setInsideZone(ZoneId.NO_SUMMON_FRIEND, false); // FIXME: Custom ?
+        character.setInsideZone(ZoneType.PVP, false);
+        character.setInsideZone(ZoneType.SIEGE, false);
+        character.setInsideZone(ZoneType.NO_SUMMON_FRIEND, false); // FIXME: Custom ?
         if (getSettings().isActiveSiege()) {
             if (isPlayer(character)) {
                 final Player player = character.getActingPlayer();
@@ -170,9 +170,9 @@ public class SiegeZone extends Zone {
                     continue;
                 }
 
-                character.setInsideZone(ZoneId.PVP, false);
-                character.setInsideZone(ZoneId.SIEGE, false);
-                character.setInsideZone(ZoneId.NO_SUMMON_FRIEND, false);
+                character.setInsideZone(ZoneType.PVP, false);
+                character.setInsideZone(ZoneType.SIEGE, false);
+                character.setInsideZone(ZoneType.NO_SUMMON_FRIEND, false);
 
                 if (isPlayer(character)) {
                     player = character.getActingPlayer();

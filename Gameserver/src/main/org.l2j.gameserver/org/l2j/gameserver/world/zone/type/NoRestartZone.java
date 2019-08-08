@@ -4,7 +4,7 @@ import org.l2j.gameserver.model.TeleportWhereType;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.world.zone.Zone;
-import org.l2j.gameserver.world.zone.ZoneId;
+import org.l2j.gameserver.world.zone.ZoneType;
 
 import static org.l2j.gameserver.util.GameUtils.isPlayer;
 
@@ -44,7 +44,7 @@ public class NoRestartZone extends Zone {
         }
 
         if (isPlayer(character)) {
-            character.setInsideZone(ZoneId.NO_RESTART, true);
+            character.setInsideZone(ZoneType.NO_RESTART, true);
         }
     }
 
@@ -55,7 +55,7 @@ public class NoRestartZone extends Zone {
         }
 
         if (isPlayer(character)) {
-            character.setInsideZone(ZoneId.NO_RESTART, false);
+            character.setInsideZone(ZoneType.NO_RESTART, false);
         }
     }
 

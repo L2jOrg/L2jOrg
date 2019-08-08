@@ -20,7 +20,7 @@ import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.items.ItemTemplate;
 import org.l2j.gameserver.model.skills.Skill;
-import org.l2j.gameserver.world.zone.ZoneId;
+import org.l2j.gameserver.world.zone.ZoneType;
 import org.l2j.gameserver.network.SystemMessageId;
 
 /**
@@ -46,7 +46,7 @@ public class ConditionPlayerCallPc extends Condition {
             canCallPlayer = false;
         } else if (player.inObserverMode()) {
             canCallPlayer = false;
-        } else if (player.isInsideZone(ZoneId.NO_SUMMON_FRIEND) || player.isInsideZone(ZoneId.JAIL) || player.isFlyingMounted()) {
+        } else if (player.isInsideZone(ZoneType.NO_SUMMON_FRIEND) || player.isInsideZone(ZoneType.JAIL) || player.isFlyingMounted()) {
             player.sendPacket(SystemMessageId.YOU_CANNOT_USE_SUMMONING_OR_TELEPORTING_IN_THIS_AREA);
             canCallPlayer = false;
         }

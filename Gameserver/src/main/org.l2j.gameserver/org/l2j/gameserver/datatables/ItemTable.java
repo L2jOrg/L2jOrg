@@ -7,6 +7,7 @@ import org.l2j.gameserver.data.xml.impl.EnchantItemHPBonusData;
 import org.l2j.gameserver.engines.DocumentEngine;
 import org.l2j.gameserver.enums.ItemLocation;
 import org.l2j.gameserver.idfactory.IdFactory;
+import org.l2j.gameserver.settings.GeneralSettings;
 import org.l2j.gameserver.world.World;
 import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.Attackable;
@@ -26,6 +27,8 @@ import java.sql.PreparedStatement;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.ScheduledFuture;
+
+import static org.l2j.commons.configuration.Configurator.getSettings;
 
 /**
  * This class serves as a container for all item templates in the game.
@@ -224,7 +227,7 @@ public class ItemTable {
                 referenceName = (String) reference;
             }
             final String targetName = (actor.getTarget() != null ? actor.getTarget().getName() : "no-target");
-            if (Config.GMAUDIT) {
+            if (getSettings(GeneralSettings.class).auditGM()) {
                 GMAudit.auditGMAction(actor.getName() + " [" + actor.getObjectId() + "]" //
                         , String.valueOf(process) // in case of null
                                 + "(id: " + itemId //
@@ -301,7 +304,7 @@ public class ItemTable {
                     referenceName = (String) reference;
                 }
                 final String targetName = (actor.getTarget() != null ? actor.getTarget().getName() : "no-target");
-                if (Config.GMAUDIT) {
+                if (getSettings(GeneralSettings.class).auditGM()) {
                     GMAudit.auditGMAction(actor.getName() + " [" + actor.getObjectId() + "]" //
                             , String.valueOf(process) // in case of null
                                     + "(id: " + item.getId() //

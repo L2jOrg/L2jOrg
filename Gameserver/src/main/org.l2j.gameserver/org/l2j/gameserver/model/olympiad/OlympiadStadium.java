@@ -8,7 +8,7 @@ import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Door;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.instancezone.Instance;
-import org.l2j.gameserver.world.zone.ZoneId;
+import org.l2j.gameserver.world.zone.ZoneType;
 import org.l2j.gameserver.world.zone.type.OlympiadStadiumZone;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ExOlympiadMatchEnd;
@@ -113,10 +113,10 @@ public class OlympiadStadium {
             }
 
             if (battleStarted) {
-                player.setInsideZone(ZoneId.PVP, true);
+                player.setInsideZone(ZoneType.PVP, true);
                 player.sendPacket(sm);
             } else {
-                player.setInsideZone(ZoneId.PVP, false);
+                player.setInsideZone(ZoneType.PVP, false);
                 player.sendPacket(sm);
                 player.sendPacket(ExOlympiadMatchEnd.STATIC_PACKET);
             }

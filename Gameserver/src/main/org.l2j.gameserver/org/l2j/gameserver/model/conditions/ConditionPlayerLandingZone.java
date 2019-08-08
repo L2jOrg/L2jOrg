@@ -19,7 +19,7 @@ package org.l2j.gameserver.model.conditions;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.items.ItemTemplate;
 import org.l2j.gameserver.model.skills.Skill;
-import org.l2j.gameserver.world.zone.ZoneId;
+import org.l2j.gameserver.world.zone.ZoneType;
 
 /**
  * The Class ConditionPlayerLandingZone.
@@ -40,6 +40,6 @@ public class ConditionPlayerLandingZone extends Condition {
 
     @Override
     public boolean testImpl(Creature effector, Creature effected, Skill skill, ItemTemplate item) {
-        return effector.isInsideZone(ZoneId.LANDING) == _val;
+        return effector.isInsideZone(ZoneType.LANDING) == _val;
     }
 }

@@ -23,7 +23,7 @@ import org.l2j.gameserver.model.effects.AbstractEffect;
 import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.skills.BuffInfo;
 import org.l2j.gameserver.model.skills.Skill;
-import org.l2j.gameserver.world.zone.ZoneId;
+import org.l2j.gameserver.world.zone.ZoneType;
 
 import static org.l2j.gameserver.util.GameUtils.isPlayer;
 
@@ -54,7 +54,7 @@ public final class RecoverVitalityInPeaceZone extends AbstractEffect
 		if ((effected == null) //
 			|| effected.isDead() //
 			|| !isPlayer(effected) //
-			|| !effected.isInsideZone(ZoneId.PEACE))
+			|| !effected.isInsideZone(ZoneType.PEACE))
 		{
 			return false;
 		}

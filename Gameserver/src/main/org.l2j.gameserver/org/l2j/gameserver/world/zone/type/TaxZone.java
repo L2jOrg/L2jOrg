@@ -5,7 +5,7 @@ import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.entity.Castle;
 import org.l2j.gameserver.world.zone.Zone;
-import org.l2j.gameserver.world.zone.ZoneId;
+import org.l2j.gameserver.world.zone.ZoneType;
 
 import static org.l2j.gameserver.util.GameUtils.isNpc;
 
@@ -33,7 +33,7 @@ public class TaxZone extends Zone {
 
     @Override
     protected void onEnter(Creature character) {
-        character.setInsideZone(ZoneId.TAX, true);
+        character.setInsideZone(ZoneType.TAX, true);
         if (isNpc(character)) {
             ((Npc) character).setTaxZone(this);
         }
@@ -41,7 +41,7 @@ public class TaxZone extends Zone {
 
     @Override
     protected void onExit(Creature character) {
-        character.setInsideZone(ZoneId.TAX, false);
+        character.setInsideZone(ZoneType.TAX, false);
         if (isNpc(character)) {
             ((Npc) character).setTaxZone(null);
         }

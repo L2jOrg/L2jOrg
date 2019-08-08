@@ -22,7 +22,7 @@ import org.l2j.gameserver.model.Party;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.skills.targets.AffectObject;
-import org.l2j.gameserver.world.zone.ZoneId;
+import org.l2j.gameserver.world.zone.ZoneType;
 
 import static org.l2j.gameserver.util.GameUtils.isPlayer;
 
@@ -70,7 +70,7 @@ public class NotFriendPc implements IAffectObjectHandler
 			}
 			
 			// Arena.
-			if (activeChar.isInsideZone(ZoneId.PVP) && target.isInsideZone(ZoneId.PVP))
+			if (activeChar.isInsideZone(ZoneType.PVP) && target.isInsideZone(ZoneType.PVP))
 			{
 				return true;
 			}
@@ -111,7 +111,7 @@ public class NotFriendPc implements IAffectObjectHandler
 			}
 			
 			// Siege.
-			if (target.isInsideZone(ZoneId.SIEGE))
+			if (target.isInsideZone(ZoneType.SIEGE))
 			{
 				// Players in the same siege side at the same castle are considered friends.
 				if ((player.getSiegeState() > 0) && (player.getSiegeState() == targetPlayer.getSiegeState()) && (player.getSiegeSide() == targetPlayer.getSiegeSide()))

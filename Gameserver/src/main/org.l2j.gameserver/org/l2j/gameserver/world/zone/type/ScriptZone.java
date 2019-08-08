@@ -18,7 +18,7 @@ package org.l2j.gameserver.world.zone.type;
 
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.world.zone.Zone;
-import org.l2j.gameserver.world.zone.ZoneId;
+import org.l2j.gameserver.world.zone.ZoneType;
 
 /**
  * A scripted zone... Creation of such a zone should require somekind of script reference which can handle onEnter() / onExit()
@@ -32,11 +32,11 @@ public class ScriptZone extends Zone {
 
     @Override
     protected void onEnter(Creature character) {
-        character.setInsideZone(ZoneId.SCRIPT, true);
+        character.setInsideZone(ZoneType.SCRIPT, true);
     }
 
     @Override
     protected void onExit(Creature character) {
-        character.setInsideZone(ZoneId.SCRIPT, false);
+        character.setInsideZone(ZoneType.SCRIPT, false);
     }
 }

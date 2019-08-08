@@ -25,7 +25,7 @@ import org.l2j.gameserver.model.olympiad.OlympiadManager;
 import org.l2j.gameserver.model.punishment.PunishmentAffect;
 import org.l2j.gameserver.model.punishment.PunishmentType;
 import org.l2j.gameserver.model.variables.PlayerVariables;
-import org.l2j.gameserver.world.zone.ZoneId;
+import org.l2j.gameserver.world.zone.ZoneType;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ServerPacket;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
@@ -274,7 +274,7 @@ public class CeremonyOfChaosManager extends AbstractEventManager<CeremonyOfChaos
         } else if (player.isInSiege()) {
             sm = SystemMessageId.YOU_CANNOT_REGISTER_FOR_THE_WAITING_LIST_ON_THE_BATTLEFIELD_CASTLE_SIEGE_FORTRESS_SIEGE;
             canRegister = false;
-        } else if (player.isInsideZone(ZoneId.SIEGE)) {
+        } else if (player.isInsideZone(ZoneType.SIEGE)) {
             sm = SystemMessageId.YOU_CANNOT_REGISTER_IN_THE_WAITING_LIST_WHILE_BEING_INSIDE_OF_A_BATTLEGROUND_CASTLE_SIEGE_FORTRESS_SIEGE;
             canRegister = false;
         } else if (player.isFlyingMounted()) {

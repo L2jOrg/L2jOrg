@@ -24,7 +24,7 @@ import org.l2j.gameserver.model.ArenaParticipantsHolder;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.itemcontainer.PcInventory;
 import org.l2j.gameserver.model.olympiad.OlympiadManager;
-import org.l2j.gameserver.world.zone.ZoneId;
+import org.l2j.gameserver.world.zone.ZoneType;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ExCubeGameAddPlayer;
 import org.l2j.gameserver.network.serverpackets.ExCubeGameChangeTeam;
@@ -316,7 +316,7 @@ public final class HandysBlockCheckerManager {
                 final long count = inv.getInventoryItemCount(13788, 0);
                 inv.destroyItemByItemId("Handys Block Checker", 13788, count, player, player);
             }
-            player.setInsideZone(ZoneId.PVP, false);
+            player.setInsideZone(ZoneType.PVP, false);
             // Teleport Back
             player.teleToLocation(-57478, -60367, -2370);
         }

@@ -17,7 +17,7 @@
 package org.l2j.gameserver.world.zone.type;
 
 import org.l2j.gameserver.model.actor.Creature;
-import org.l2j.gameserver.world.zone.ZoneId;
+import org.l2j.gameserver.world.zone.ZoneType;
 
 /**
  * A castle zone
@@ -40,11 +40,11 @@ public final class FortZone extends ResidenceZone {
 
     @Override
     protected void onEnter(Creature character) {
-        character.setInsideZone(ZoneId.FORT, true);
+        character.setInsideZone(ZoneType.FORT, true);
     }
 
     @Override
     protected void onExit(Creature character) {
-        character.setInsideZone(ZoneId.FORT, false);
+        character.setInsideZone(ZoneType.FORT, false);
     }
 }

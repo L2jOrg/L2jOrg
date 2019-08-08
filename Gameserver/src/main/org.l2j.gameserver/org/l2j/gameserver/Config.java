@@ -383,7 +383,7 @@ public final class Config {
     public static boolean LOG_ITEMS_SMALL_LOG;
     public static boolean LOG_ITEM_ENCHANTS;
     public static boolean LOG_SKILL_ENCHANTS;
-    public static boolean GMAUDIT;
+
     public static boolean SKILL_CHECK_ENABLE;
     public static boolean SKILL_CHECK_REMOVE;
     public static boolean SKILL_CHECK_GM;
@@ -1469,7 +1469,7 @@ public final class Config {
         LOG_ITEMS_SMALL_LOG = General.getBoolean("LogItemsSmallLog", false);
         LOG_ITEM_ENCHANTS = General.getBoolean("LogItemEnchants", false);
         LOG_SKILL_ENCHANTS = General.getBoolean("LogSkillEnchants", false);
-        GMAUDIT = General.getBoolean("GMAudit", false);
+
         SKILL_CHECK_ENABLE = General.getBoolean("SkillCheckEnable", false);
         SKILL_CHECK_REMOVE = General.getBoolean("SkillCheckRemove", false);
         SKILL_CHECK_GM = General.getBoolean("SkillCheckGM", true);

@@ -80,7 +80,6 @@ public class ZoneCylinderArea extends ZoneArea {
         return Math.hypot(centerX - x, centerY - y) - radius;
     }
 
-    // getLowZ() / getHighZ() - These two functions were added to cope with the demand of the new fishing algorithms, wich are now able to correctly place the hook in the water, thanks to getHighZ(). getLowZ() was added, considering potential future modifications.
     @Override
     public int getLowZ() {
         return minZ;

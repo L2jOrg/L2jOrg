@@ -5,7 +5,7 @@ import org.l2j.gameserver.enums.Team;
 import org.l2j.gameserver.model.actor.Summon;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.skills.AbnormalVisualEffect;
-import org.l2j.gameserver.world.zone.ZoneId;
+import org.l2j.gameserver.world.zone.ZoneType;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
 
@@ -70,7 +70,7 @@ public class ExPetInfo extends AbstractMaskPacket<NpcInfoType> {
             addComponentType(NpcInfoType.TEAM);
         }
 
-        if (summon.isInsideZone(ZoneId.WATER) || summon.isFlying()) {
+        if (summon.isInsideZone(ZoneType.WATER) || summon.isFlying()) {
             addComponentType(NpcInfoType.SWIM_OR_FLY);
         }
 
@@ -234,7 +234,7 @@ public class ExPetInfo extends AbstractMaskPacket<NpcInfoType> {
             writeByte((byte)(_summon.isRunning() ? 0x01 : 0x00));
         }
         if (containsMask(NpcInfoType.SWIM_OR_FLY)) {
-            writeByte((byte) (_summon.isInsideZone(ZoneId.WATER) ? 0x01 : _summon.isFlying() ? 0x02 : 0x00));
+            writeByte((byte) (_summon.isInsideZone(ZoneType.WATER) ? 0x01 : _summon.isFlying() ? 0x02 : 0x00));
         }
         if (containsMask(NpcInfoType.TEAM)) {
             writeByte((byte) _summon.getTeam().getId());

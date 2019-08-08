@@ -26,6 +26,7 @@ public abstract class ZoneArea {
 
     // TODO Drop this
     protected final void dropDebugItem(int itemId, int num, int x, int y, int z) {
+
         final Item item = new Item(IdFactory.getInstance().getNextId(), itemId);
         item.setCount(num);
         item.spawnMe(x, y, z + 5);

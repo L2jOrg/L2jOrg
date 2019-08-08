@@ -19,7 +19,7 @@ import org.l2j.gameserver.model.punishment.PunishmentTask;
 import org.l2j.gameserver.model.punishment.PunishmentType;
 import org.l2j.gameserver.model.skills.CommonSkill;
 import org.l2j.gameserver.model.skills.Skill;
-import org.l2j.gameserver.world.zone.ZoneId;
+import org.l2j.gameserver.world.zone.ZoneType;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
 import org.l2j.gameserver.network.serverpackets.captcha.ReceiveBotCaptchaImage;
@@ -152,7 +152,7 @@ public final class ReportTable {
 
         final Player bot = ((Player) target);
 
-        if (bot.isInsideZone(ZoneId.PEACE) || bot.isInsideZone(ZoneId.PVP)) {
+        if (bot.isInsideZone(ZoneType.PEACE) || bot.isInsideZone(ZoneType.PVP)) {
             reporter.sendPacket(SystemMessageId.YOU_CANNOT_REPORT_A_CHARACTER_WHO_IS_IN_A_PEACE_ZONE_OR_A_BATTLEGROUND);
             return false;
         }

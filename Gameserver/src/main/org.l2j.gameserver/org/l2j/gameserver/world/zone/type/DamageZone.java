@@ -1,32 +1,18 @@
-/*
- * This file is part of the L2J Mobius project.
- *
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
- * General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this program. If not, see <http://www.gnu.org/licenses/>.
- */
 package org.l2j.gameserver.world.zone.type;
 
 import org.l2j.commons.threading.ThreadPoolManager;
 import org.l2j.gameserver.enums.InstanceType;
 import org.l2j.gameserver.instancemanager.CastleManager;
-import org.l2j.gameserver.world.zone.ZoneManager;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.entity.Castle;
 import org.l2j.gameserver.model.stats.Stats;
 import org.l2j.gameserver.world.zone.AbstractZoneSettings;
-import org.l2j.gameserver.world.zone.Zone;
 import org.l2j.gameserver.world.zone.TaskZoneSettings;
+import org.l2j.gameserver.world.zone.Zone;
+import org.l2j.gameserver.world.zone.ZoneManager;
+
+import static java.util.Objects.requireNonNullElseGet;
 
 /**
  * A damage zone
@@ -34,35 +20,27 @@ import org.l2j.gameserver.world.zone.TaskZoneSettings;
  * @author durgus
  */
 public class DamageZone extends Zone {
-    private int _damageHPPerSec;
-    private int _damageMPPerSec;
+    private int damageHPPerSec;
+    private int damageMPPerSec;
 
-    private int _castleId;
-    private Castle _castle;
+    private int castleId;
+    private Castle castle;
 
-    private int _startTask;
-    private int _reuseTask;
+    private int startTask;
+    private int reuseTask;
 
     public DamageZone(int id) {
         super(id);
 
         // Setup default damage
-        _damageHPPerSec = 200;
-        _damageMPPerSec = 0;
+        damageHPPerSec = 200;
 
         // Setup default start / reuse time
-        _startTask = 10;
-        _reuseTask = 5000;
-
-        // no castle by default
-        _castleId = 0;
-        _castle = null;
+        startTask = 10;
+        reuseTask = 5000;
 
         setTargetType(InstanceType.Playable); // default only playabale
-        AbstractZoneSettings settings = ZoneManager.getSettings(getName());
-        if (settings == null) {
-            settings = new TaskZoneSettings();
-        }
+        AbstractZoneSettings settings = requireNonNullElseGet(ZoneManager.getSettings(getName()), TaskZoneSettings::new);
         setSettings(settings);
     }
 
@@ -74,24 +52,24 @@ public class DamageZone extends Zone {
     @Override
     public void setParameter(String name, String value) {
         if (name.equals("dmgHPSec")) {
-            _damageHPPerSec = Integer.parseInt(value);
+            damageHPPerSec = Integer.parseInt(value);
         } else if (name.equals("dmgMPSec")) {
-            _damageMPPerSec = Integer.parseInt(value);
+            damageMPPerSec = Integer.parseInt(value);
         } else if (name.equals("castleId")) {
-            _castleId = Integer.parseInt(value);
+            castleId = Integer.parseInt(value);
         } else if (name.equalsIgnoreCase("initialDelay")) {
-            _startTask = Integer.parseInt(value);
+            startTask = Integer.parseInt(value);
         } else if (name.equalsIgnoreCase("reuse")) {
-            _reuseTask = Integer.parseInt(value);
+            reuseTask = Integer.parseInt(value);
         } else {
             super.setParameter(name, value);
         }
     }
 
     @Override
-    protected void onEnter(Creature character) {
-        if ((getSettings().getTask() == null) && ((_damageHPPerSec != 0) || (_damageMPPerSec != 0))) {
-            final Player player = character.getActingPlayer();
+    protected void onEnter(Creature creature) {
+        if ((getSettings().getTask() == null) && ((damageHPPerSec != 0) || (damageMPPerSec != 0))) {
+            final Player player = creature.getActingPlayer();
             if (getCastle() != null) // Castle zone
             {
                 if (!(getCastle().getSiege().isInProgress() && (player != null) && (player.getSiegeState() != 2))) // Siege and no defender
@@ -102,7 +80,7 @@ public class DamageZone extends Zone {
 
             synchronized (this) {
                 if (getSettings().getTask() == null) {
-                    getSettings().setTask(ThreadPoolManager.getInstance().scheduleAtFixedRate(new ApplyDamage(this), _startTask, _reuseTask));
+                    getSettings().setTask(ThreadPoolManager.scheduleAtFixedRate(new ApplyDamage(), startTask, reuseTask));
                 }
             }
         }
@@ -115,30 +93,15 @@ public class DamageZone extends Zone {
         }
     }
 
-    protected int getHPDamagePerSecond() {
-        return _damageHPPerSec;
-    }
-
-    protected int getMPDamagePerSecond() {
-        return _damageMPPerSec;
-    }
-
     protected Castle getCastle() {
-        if ((_castleId > 0) && (_castle == null)) {
-            _castle = CastleManager.getInstance().getCastleById(_castleId);
+        if ((castleId > 0) && (castle == null)) {
+            castle = CastleManager.getInstance().getCastleById(castleId);
         }
 
-        return _castle;
+        return castle;
     }
 
     private final class ApplyDamage implements Runnable {
-        private final DamageZone _dmgZone;
-        private final Castle _castle;
-
-        protected ApplyDamage(DamageZone zone) {
-            _dmgZone = zone;
-            _castle = zone.getCastle();
-        }
 
         @Override
         public void run() {
@@ -148,16 +111,16 @@ public class DamageZone extends Zone {
 
             boolean siege = false;
 
-            if (_castle != null) {
-                siege = _castle.getSiege().isInProgress();
+            if (getCastle() != null) {
+                siege = castle.getSiege().isInProgress();
                 // castle zones active only during siege
                 if (!siege) {
-                    _dmgZone.getSettings().clear();
+                    getSettings().clear();
                     return;
                 }
             }
 
-            for (Creature temp : _dmgZone.getCharactersInside()) {
+            for (Creature temp : getCharactersInside()) {
                 if ((temp != null) && !temp.isDead()) {
                     if (siege) {
                         // during siege defenders not affected
@@ -169,11 +132,11 @@ public class DamageZone extends Zone {
 
                     final double multiplier = 1 + (temp.getStat().getValue(Stats.DAMAGE_ZONE_VULN, 0) / 100);
 
-                    if (getHPDamagePerSecond() != 0) {
-                        temp.reduceCurrentHp(_dmgZone.getHPDamagePerSecond() * multiplier, temp, null);
+                    if (damageHPPerSec != 0) {
+                        temp.reduceCurrentHp(damageHPPerSec * multiplier, temp, null);
                     }
-                    if (getMPDamagePerSecond() != 0) {
-                        temp.reduceCurrentMp(_dmgZone.getMPDamagePerSecond() * multiplier);
+                    if (damageMPPerSec != 0) {
+                        temp.reduceCurrentMp(damageMPPerSec * multiplier);
                     }
                 }
             }

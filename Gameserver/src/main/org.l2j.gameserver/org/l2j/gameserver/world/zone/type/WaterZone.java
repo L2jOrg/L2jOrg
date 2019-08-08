@@ -5,7 +5,7 @@ import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.world.zone.Zone;
-import org.l2j.gameserver.world.zone.ZoneId;
+import org.l2j.gameserver.world.zone.ZoneType;
 import org.l2j.gameserver.network.serverpackets.NpcInfo;
 import org.l2j.gameserver.network.serverpackets.ServerObjectInfo;
 
@@ -19,7 +19,7 @@ public class WaterZone extends Zone {
 
     @Override
     protected void onEnter(Creature character) {
-        character.setInsideZone(ZoneId.WATER, true);
+        character.setInsideZone(ZoneType.WATER, true);
 
         // TODO: update to only send speed status when that packet is known
         if (isPlayer(character)) {
@@ -43,12 +43,12 @@ public class WaterZone extends Zone {
 
     @Override
     protected void onExit(Creature character) {
-        character.setInsideZone(ZoneId.WATER, false);
+        character.setInsideZone(ZoneType.WATER, false);
 
         // TODO: update to only send speed status when that packet is known
         if (isPlayer(character)) {
             // Mobius: Attempt to stop water task.
-            if (!character.isInsideZone(ZoneId.WATER)) {
+            if (!character.isInsideZone(ZoneType.WATER)) {
                 ((Player) character).stopWaterTask();
             }
             character.getActingPlayer().broadcastUserInfo();

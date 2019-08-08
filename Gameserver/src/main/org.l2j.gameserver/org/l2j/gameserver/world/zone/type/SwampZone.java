@@ -21,7 +21,7 @@ import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.entity.Castle;
 import org.l2j.gameserver.world.zone.Zone;
-import org.l2j.gameserver.world.zone.ZoneId;
+import org.l2j.gameserver.world.zone.ZoneType;
 import org.l2j.gameserver.network.serverpackets.OnEventTrigger;
 
 import static org.l2j.gameserver.util.GameUtils.isPlayer;
@@ -87,7 +87,7 @@ public class SwampZone extends Zone {
             }
         }
 
-        character.setInsideZone(ZoneId.SWAMP, true);
+        character.setInsideZone(ZoneType.SWAMP, true);
         if (isPlayer(character)) {
             if (_eventId > 0) {
                 character.sendPacket(new OnEventTrigger(_eventId, true));
@@ -99,8 +99,8 @@ public class SwampZone extends Zone {
     @Override
     protected void onExit(Creature character) {
         // don't broadcast info if not needed
-        if (character.isInsideZone(ZoneId.SWAMP)) {
-            character.setInsideZone(ZoneId.SWAMP, false);
+        if (character.isInsideZone(ZoneType.SWAMP)) {
+            character.setInsideZone(ZoneType.SWAMP, false);
             if (isPlayer(character)) {
                 if (_eventId > 0) {
                     character.sendPacket(new OnEventTrigger(_eventId, false));

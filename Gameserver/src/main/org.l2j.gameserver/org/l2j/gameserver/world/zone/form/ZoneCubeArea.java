@@ -66,9 +66,6 @@ public class ZoneCubeArea extends ZoneArea {
         return Math.sqrt(shortestDist);
     }
 
-    /*
-     * getLowZ() / getHighZ() - These two functions were added to cope with the demand of the new fishing algorithms, which are now able to correctly place the hook in the water, thanks to getHighZ(). getLowZ() was added, considering potential future modifications.
-     */
     @Override
     public int getLowZ() {
         return _z1;

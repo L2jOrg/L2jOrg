@@ -20,6 +20,7 @@ import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.xml.impl.SkillData;
 import org.l2j.gameserver.data.xml.impl.SkillTreesData;
 import org.l2j.gameserver.handler.IAdminCommandHandler;
+import org.l2j.gameserver.settings.GeneralSettings;
 import org.l2j.gameserver.world.World;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -38,6 +39,7 @@ import org.l2j.gameserver.util.GMAudit;
 
 import java.util.*;
 
+import static org.l2j.commons.configuration.Configurator.getSettings;
 import static org.l2j.gameserver.util.GameUtils.isCreature;
 import static org.l2j.gameserver.util.GameUtils.isPlayer;
 
@@ -346,7 +348,7 @@ public class AdminBuffs implements IAdminCommandHandler
 		html.replace("%effectSize%", effects.size());
 		activeChar.sendPacket(html);
 		
-		if (Config.GMAUDIT)
+		if (getSettings(GeneralSettings.class).auditGM())
 		{
 			GMAudit.auditGMAction(activeChar.getName() + " [" + activeChar.getObjectId() + "]", "getbuffs", target.getName() + " (" + target.getObjectId() + ")", "");
 		}
@@ -372,7 +374,7 @@ public class AdminBuffs implements IAdminCommandHandler
 			}
 			
 			showBuffs(activeChar, target, 0, false);
-			if (Config.GMAUDIT)
+			if (getSettings(GeneralSettings.class).auditGM())
 			{
 				GMAudit.auditGMAction(activeChar.getName() + " [" + activeChar.getObjectId() + "]", "stopbuff", target.getName() + " (" + objId + ")", Integer.toString(skillId));
 			}
@@ -395,7 +397,7 @@ public class AdminBuffs implements IAdminCommandHandler
 			target.stopAllEffects();
 			BuilderUtil.sendSysMessage(activeChar, "Removed all effects from " + target.getName() + " (" + objId + ")");
 			showBuffs(activeChar, target, 0, false);
-			if (Config.GMAUDIT)
+			if (getSettings(GeneralSettings.class).auditGM())
 			{
 				GMAudit.auditGMAction(activeChar.getName() + " [" + activeChar.getObjectId() + "]", "stopallbuffs", target.getName() + " (" + objId + ")", "");
 			}
@@ -438,7 +440,7 @@ public class AdminBuffs implements IAdminCommandHandler
 			// Send the packet
 			activeChar.sendPacket(new NpcHtmlMessage(0, 1, html.toString()));
 			
-			if (Config.GMAUDIT)
+			if (getSettings(GeneralSettings.class).auditGM())
 			{
 				GMAudit.auditGMAction(activeChar.getName() + " [" + activeChar.getObjectId() + "]", "viewblockedeffects", target.getName() + " (" + Integer.toString(target.getObjectId()) + ")", "");
 			}

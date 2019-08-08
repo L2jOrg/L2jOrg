@@ -24,7 +24,7 @@ import org.l2j.gameserver.model.entity.Castle;
 import org.l2j.gameserver.model.entity.Fort;
 import org.l2j.gameserver.model.items.ItemTemplate;
 import org.l2j.gameserver.model.skills.Skill;
-import org.l2j.gameserver.world.zone.ZoneId;
+import org.l2j.gameserver.world.zone.ZoneType;
 import org.l2j.gameserver.network.SystemMessageId;
 
 import static org.l2j.gameserver.util.GameUtils.isPlayer;
@@ -68,7 +68,7 @@ public class ConditionPlayerCanCreateOutpost extends Condition {
         } else if (!player.isClanLeader()) {
             player.sendMessage("You must be a clan leader to construct an outpost or flag.");
             canCreateOutpost = false;
-        } else if (!player.isInsideZone(ZoneId.HQ)) {
+        } else if (!player.isInsideZone(ZoneType.HQ)) {
             player.sendPacket(SystemMessageId.YOU_CAN_T_BUILD_HEADQUARTERS_HERE);
             canCreateOutpost = false;
         }

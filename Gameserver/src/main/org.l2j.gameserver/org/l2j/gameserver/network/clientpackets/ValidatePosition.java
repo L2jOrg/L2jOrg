@@ -4,7 +4,7 @@ import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.xml.impl.DoorData;
 import org.l2j.gameserver.world.World;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.world.zone.ZoneId;
+import org.l2j.gameserver.world.zone.ZoneType;
 import org.l2j.gameserver.network.serverpackets.GetOnVehicle;
 import org.l2j.gameserver.network.serverpackets.ValidateLocation;
 import org.slf4j.Logger;
@@ -109,7 +109,7 @@ public class ValidatePosition extends ClientPacket {
             activeChar.untransform();
         }
 
-        if (activeChar.isFlying() || activeChar.isInsideZone(ZoneId.WATER)) {
+        if (activeChar.isFlying() || activeChar.isInsideZone(ZoneType.WATER)) {
             activeChar.setXYZ(realX, realY, _z);
             if (diffSq > 90000) {
                 activeChar.sendPacket(new ValidateLocation(activeChar));

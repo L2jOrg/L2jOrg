@@ -17,7 +17,7 @@ import org.l2j.gameserver.model.items.Weapon;
 import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.olympiad.OlympiadGameManager;
 import org.l2j.gameserver.model.skills.Skill;
-import org.l2j.gameserver.world.zone.ZoneId;
+import org.l2j.gameserver.world.zone.ZoneType;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ServerPacket;
 import org.l2j.gameserver.network.serverpackets.NpcInfo;
@@ -195,7 +195,7 @@ public final class Trap extends Npc {
     @Override
     public void onSpawn() {
         super.onSpawn();
-        _isInArena = isInsideZone(ZoneId.PVP) && !isInsideZone(ZoneId.SIEGE);
+        _isInArena = isInsideZone(ZoneType.PVP) && !isInsideZone(ZoneType.SIEGE);
         _playersWhoDetectedMe.clear();
     }
 

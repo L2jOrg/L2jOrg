@@ -84,7 +84,7 @@ import org.l2j.gameserver.model.stats.Stats;
 import org.l2j.gameserver.model.variables.AccountVariables;
 import org.l2j.gameserver.model.variables.PlayerVariables;
 import org.l2j.gameserver.world.zone.Zone;
-import org.l2j.gameserver.world.zone.ZoneId;
+import org.l2j.gameserver.world.zone.ZoneType;
 import org.l2j.gameserver.world.zone.type.WaterZone;
 import org.l2j.gameserver.network.Disconnection;
 import org.l2j.gameserver.network.GameClient;
@@ -1688,28 +1688,28 @@ public final class Player extends Playable {
             checkWaterState();
         }
 
-        if (isInsideZone(ZoneId.ALTERED)) {
+        if (isInsideZone(ZoneType.ALTERED)) {
             if (_lastCompassZone == ExSetCompassZoneCode.ALTEREDZONE) {
                 return;
             }
             _lastCompassZone = ExSetCompassZoneCode.ALTEREDZONE;
             final ExSetCompassZoneCode cz = new ExSetCompassZoneCode(ExSetCompassZoneCode.ALTEREDZONE);
             sendPacket(cz);
-        } else if (isInsideZone(ZoneId.SIEGE)) {
+        } else if (isInsideZone(ZoneType.SIEGE)) {
             if (_lastCompassZone == ExSetCompassZoneCode.SIEGEWARZONE2) {
                 return;
             }
             _lastCompassZone = ExSetCompassZoneCode.SIEGEWARZONE2;
             final ExSetCompassZoneCode cz = new ExSetCompassZoneCode(ExSetCompassZoneCode.SIEGEWARZONE2);
             sendPacket(cz);
-        } else if (isInsideZone(ZoneId.PVP)) {
+        } else if (isInsideZone(ZoneType.PVP)) {
             if (_lastCompassZone == ExSetCompassZoneCode.PVPZONE) {
                 return;
             }
             _lastCompassZone = ExSetCompassZoneCode.PVPZONE;
             final ExSetCompassZoneCode cz = new ExSetCompassZoneCode(ExSetCompassZoneCode.PVPZONE);
             sendPacket(cz);
-        } else if (isInsideZone(ZoneId.PEACE)) {
+        } else if (isInsideZone(ZoneType.PEACE)) {
             if (_lastCompassZone == ExSetCompassZoneCode.PEACEZONE) {
                 return;
             }
@@ -3963,7 +3963,7 @@ public final class Player extends Playable {
     }
 
     public boolean canOpenPrivateStore() {
-        return !_isSellingBuffs && !isAlikeDead() && !_inOlympiadMode && !isMounted() && !isInsideZone(ZoneId.NO_STORE) && !isCastingNow();
+        return !_isSellingBuffs && !isAlikeDead() && !_inOlympiadMode && !isMounted() && !isInsideZone(ZoneType.NO_STORE) && !isCastingNow();
     }
 
     public void tryOpenPrivateBuyStore() {
@@ -3981,7 +3981,7 @@ public final class Player extends Playable {
                 sendPacket(new PrivateStoreManageListBuy(2, this));
             }
         } else {
-            if (isInsideZone(ZoneId.NO_STORE)) {
+            if (isInsideZone(ZoneType.NO_STORE)) {
                 sendPacket(SystemMessageId.YOU_CANNOT_OPEN_A_PRIVATE_STORE_HERE);
             }
             sendPacket(ActionFailed.STATIC_PACKET);
@@ -4224,7 +4224,7 @@ public final class Player extends Playable {
 
                 // pvp/pk item rewards
                 if (!(Config.DISABLE_REWARDS_IN_INSTANCES && (getInstanceId() != 0)) && //
-                        !(Config.DISABLE_REWARDS_IN_PVP_ZONES && isInsideZone(ZoneId.PVP))) {
+                        !(Config.DISABLE_REWARDS_IN_PVP_ZONES && isInsideZone(ZoneType.PVP))) {
                     // pvp
                     if (Config.REWARD_PVP_ITEM && (_pvpFlag != 0)) {
                         pk.addItem("PvP Item Reward", Config.REWARD_PVP_ITEM_ID, Config.REWARD_PVP_ITEM_AMOUNT, this, Config.REWARD_PVP_ITEM_MESSAGE);
@@ -4282,7 +4282,7 @@ public final class Player extends Playable {
                     destroyItem("CombatFlag", _inventory.getItemByItemId(9819), null, true);
                 }
             } else {
-                final boolean insidePvpZone = isInsideZone(ZoneId.PVP) || isInsideZone(ZoneId.SIEGE);
+                final boolean insidePvpZone = isInsideZone(ZoneType.PVP) || isInsideZone(ZoneType.SIEGE);
                 if ((pk == null) || !pk.isCursedWeaponEquipped()) {
                     onDieDropItem(killer); // Check if any item should be dropped
 
@@ -4352,7 +4352,7 @@ public final class Player extends Playable {
             return;
         }
 
-        if ((!isInsideZone(ZoneId.PVP) || (pk == null)) && (!isGM() || Config.KARMA_DROP_GM)) {
+        if ((!isInsideZone(ZoneType.PVP) || (pk == null)) && (!isGM() || Config.KARMA_DROP_GM)) {
             boolean isKarmaDrop = false;
             int dropEquip = 0;
             int dropEquipWeapon = 0;
@@ -4441,12 +4441,12 @@ public final class Player extends Playable {
         }
 
         // Do nothing if both players are in PVP zone
-        if (isInsideZone(ZoneId.PVP) && killedPlayer.isInsideZone(ZoneId.PVP)) {
+        if (isInsideZone(ZoneType.PVP) && killedPlayer.isInsideZone(ZoneType.PVP)) {
             return;
         }
 
         // If both players are in SIEGE zone just increase siege kills/deaths
-        if (isInsideZone(ZoneId.SIEGE) && killedPlayer.isInsideZone(ZoneId.SIEGE)) {
+        if (isInsideZone(ZoneType.SIEGE) && killedPlayer.isInsideZone(ZoneType.SIEGE)) {
             if ((getSiegeState() > 0) && (killedPlayer.getSiegeState() > 0) && (getSiegeState() != killedPlayer.getSiegeState())) {
                 final Clan targetClan = killedPlayer.getClan();
                 if ((_clan != null) && (targetClan != null)) {
@@ -4512,7 +4512,7 @@ public final class Player extends Playable {
     }
 
     public void updatePvPStatus() {
-        if (isInsideZone(ZoneId.PVP)) {
+        if (isInsideZone(ZoneType.PVP)) {
             return;
         }
         setPvpFlagLasts(System.currentTimeMillis() + Config.PVP_NORMAL_TIME);
@@ -4535,7 +4535,7 @@ public final class Player extends Playable {
         if (_isInDuel && (player_target.getDuelId() == getDuelId())) {
             return;
         }
-        if ((!isInsideZone(ZoneId.PVP) || !player_target.isInsideZone(ZoneId.PVP)) && (player_target.getReputation() >= 0)) {
+        if ((!isInsideZone(ZoneType.PVP) || !player_target.isInsideZone(ZoneType.PVP)) && (player_target.getReputation() >= 0)) {
             if (checkIfPvP(player_target)) {
                 setPvpFlagLasts(System.currentTimeMillis() + Config.PVP_PVP_TIME);
             } else {
@@ -5138,7 +5138,7 @@ public final class Player extends Playable {
     }
 
     public boolean mount(Summon pet) {
-        if (!Config.ALLOW_MOUNTS_DURING_SIEGE && isInsideZone(ZoneId.SIEGE)) {
+        if (!Config.ALLOW_MOUNTS_DURING_SIEGE && isInsideZone(ZoneType.SIEGE)) {
             return false;
         }
 
@@ -5235,7 +5235,7 @@ public final class Player extends Playable {
         } else if (isRentedPet()) {
             stopRentPet();
         } else if (isMounted()) {
-            if ((_mountType == MountType.WYVERN) && isInsideZone(ZoneId.NO_LANDING)) {
+            if ((_mountType == MountType.WYVERN) && isInsideZone(ZoneType.NO_LANDING)) {
                 sendPacket(ActionFailed.STATIC_PACKET);
                 sendPacket(SystemMessageId.YOU_ARE_NOT_ALLOWED_TO_DISMOUNT_IN_THIS_LOCATION);
                 return false;
@@ -6722,7 +6722,7 @@ public final class Player extends Playable {
 
         // Check if the attacker is a Playable
         if (GameUtils.isPlayable(attacker)) {
-            if (isInsideZone(ZoneId.PEACE)) {
+            if (isInsideZone(ZoneType.PEACE)) {
                 return false;
             }
 
@@ -6755,7 +6755,7 @@ public final class Player extends Playable {
 
             // Check if the Player is in an arena, but NOT siege zone. NOTE: This check comes before clan/ally checks, but after party checks.
             // This is done because in arenas, clan/ally members can autoattack if they arent in party.
-            if ((isInsideZone(ZoneId.PVP) && attackerPlayer.isInsideZone(ZoneId.PVP)) && !(isInsideZone(ZoneId.SIEGE) && attackerPlayer.isInsideZone(ZoneId.SIEGE))) {
+            if ((isInsideZone(ZoneType.PVP) && attackerPlayer.isInsideZone(ZoneType.PVP)) && !(isInsideZone(ZoneType.SIEGE) && attackerPlayer.isInsideZone(ZoneType.SIEGE))) {
                 return true;
             }
 
@@ -6770,7 +6770,7 @@ public final class Player extends Playable {
             }
 
             // Now check again if the Player is in pvp zone, but this time at siege PvP zone, applying clan/ally checks
-            if (isInsideZone(ZoneId.PVP) && attackerPlayer.isInsideZone(ZoneId.PVP) && isInsideZone(ZoneId.SIEGE) && attackerPlayer.isInsideZone(ZoneId.SIEGE)) {
+            if (isInsideZone(ZoneType.PVP) && attackerPlayer.isInsideZone(ZoneType.PVP) && isInsideZone(ZoneType.SIEGE) && attackerPlayer.isInsideZone(ZoneType.SIEGE)) {
                 return true;
             }
         }
@@ -7010,13 +7010,13 @@ public final class Player extends Playable {
 
     public boolean checkLandingState() {
         // Check if char is in a no landing zone
-        if (isInsideZone(ZoneId.NO_LANDING)) {
+        if (isInsideZone(ZoneType.NO_LANDING)) {
             return true;
         } else
             // if this is a castle that is currently being sieged, and the rider is NOT a castle owner
             // he cannot land.
             // castle owner is the leader of the clan that owns the castle where the pc is
-            if (isInsideZone(ZoneId.SIEGE) && !((getClan() != null) && (CastleManager.getInstance().getCastle(this) == CastleManager.getInstance().getCastleByOwner(getClan())) && (this == getClan().getLeader().getPlayerInstance()))) {
+            if (isInsideZone(ZoneType.SIEGE) && !((getClan() != null) && (CastleManager.getInstance().getCastle(this) == CastleManager.getInstance().getCastleByOwner(getClan())) && (this == getClan().getLeader().getPlayerInstance()))) {
                 return true;
             }
 
@@ -7734,7 +7734,7 @@ public final class Player extends Playable {
             _noDuelReason = SystemMessageId.C1_CANNOT_DUEL_BECAUSE_C1_IS_CURRENTLY_FISHING;
             return false;
         }
-        if (isInsideZone(ZoneId.PVP) || isInsideZone(ZoneId.PEACE) || isInsideZone(ZoneId.SIEGE)) {
+        if (isInsideZone(ZoneType.PVP) || isInsideZone(ZoneType.PEACE) || isInsideZone(ZoneType.SIEGE)) {
             _noDuelReason = SystemMessageId.C1_IS_IN_AN_AREA_WHERE_DUEL_IS_NOT_ALLOWED_AND_YOU_CANNOT_APPLY_FOR_A_DUEL;
             return false;
         }
@@ -8261,7 +8261,7 @@ public final class Player extends Playable {
     }
 
     public void checkWaterState() {
-        if (isInsideZone(ZoneId.WATER)) {
+        if (isInsideZone(ZoneType.WATER)) {
             startWaterTask();
         } else {
             stopWaterTask();
@@ -8427,7 +8427,7 @@ public final class Player extends Playable {
     public void onActionRequest() {
         if (isSpawnProtected()) {
             setSpawnProtection(false);
-            if (!isInsideZone(ZoneId.PEACE)) {
+            if (!isInsideZone(ZoneType.PEACE)) {
                 sendPacket(SystemMessageId.YOU_ARE_NO_LONGER_PROTECTED_FROM_AGGRESSIVE_MONSTERS);
             }
             if (Config.RESTORE_SERVITOR_ON_RECONNECT && !hasSummon() && CharSummonTable.getInstance().getServitors().containsKey(getObjectId())) {
@@ -8439,7 +8439,7 @@ public final class Player extends Playable {
         }
         if (isTeleportProtected()) {
             setTeleportProtection(false);
-            if (!isInsideZone(ZoneId.PEACE)) {
+            if (!isInsideZone(ZoneType.PEACE)) {
                 sendMessage("Teleport spawn protection ended.");
             }
         }
@@ -9832,10 +9832,10 @@ public final class Player extends Playable {
         } else if (isInWater()) {
             sendPacket(SystemMessageId.YOU_CANNOT_USE_MY_TELEPORTS_UNDERWATER);
             return false;
-        } else if ((type == 1) && (isInsideZone(ZoneId.SIEGE) || isInsideZone(ZoneId.CLAN_HALL) || isInsideZone(ZoneId.JAIL) || isInsideZone(ZoneId.CASTLE) || isInsideZone(ZoneId.NO_SUMMON_FRIEND) || isInsideZone(ZoneId.FORT))) {
+        } else if ((type == 1) && (isInsideZone(ZoneType.SIEGE) || isInsideZone(ZoneType.CLAN_HALL) || isInsideZone(ZoneType.JAIL) || isInsideZone(ZoneType.CASTLE) || isInsideZone(ZoneType.NO_SUMMON_FRIEND) || isInsideZone(ZoneType.FORT))) {
             sendPacket(SystemMessageId.YOU_CANNOT_USE_MY_TELEPORTS_TO_REACH_THIS_AREA);
             return false;
-        } else if (isInsideZone(ZoneId.NO_BOOKMARK) || isInBoat() || isInAirShip()) {
+        } else if (isInsideZone(ZoneType.NO_BOOKMARK) || isInBoat() || isInAirShip()) {
             if (type == 0) {
                 sendPacket(SystemMessageId.YOU_CANNOT_USE_MY_TELEPORTS_IN_THIS_AREA);
             } else if (type == 1) {
@@ -10220,7 +10220,7 @@ public final class Player extends Playable {
      * @return true if character falling now on the start of fall return false for correct coord sync!
      */
     public final boolean isFalling(int z) {
-        if (isDead() || isFlying() || isFlyingMounted() || isInsideZone(ZoneId.WATER)) {
+        if (isDead() || isFlying() || isFlyingMounted() || isInsideZone(ZoneType.WATER)) {
             return false;
         }
 
@@ -10416,7 +10416,7 @@ public final class Player extends Playable {
         if (GameUtils.isAttackable(cha)) {
             return true;
         } else if (GameUtils.isPlayable(cha)) {
-            if (cha.isInsideZone(ZoneId.PVP) && !cha.isInsideZone(ZoneId.SIEGE)) {
+            if (cha.isInsideZone(ZoneType.PVP) && !cha.isInsideZone(ZoneType.SIEGE)) {
                 return true;
             }
 

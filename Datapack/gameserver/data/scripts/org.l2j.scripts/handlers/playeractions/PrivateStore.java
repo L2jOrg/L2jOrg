@@ -21,7 +21,7 @@ import org.l2j.gameserver.enums.PrivateStoreType;
 import org.l2j.gameserver.handler.IPlayerActionHandler;
 import org.l2j.gameserver.model.ActionDataHolder;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.world.zone.ZoneId;
+import org.l2j.gameserver.world.zone.ZoneType;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ActionFailed;
 import org.l2j.gameserver.network.serverpackets.PrivateStoreManageListBuy;
@@ -51,7 +51,7 @@ public final class PrivateStore implements IPlayerActionHandler
 		// Player shouldn't be able to set stores if he/she is alike dead (dead or fake death)
 		if (!activeChar.canOpenPrivateStore())
 		{
-			if (activeChar.isInsideZone(ZoneId.NO_STORE))
+			if (activeChar.isInsideZone(ZoneType.NO_STORE))
 			{
 				activeChar.sendPacket(SystemMessageId.YOU_CANNOT_OPEN_A_PRIVATE_STORE_HERE);
 			}

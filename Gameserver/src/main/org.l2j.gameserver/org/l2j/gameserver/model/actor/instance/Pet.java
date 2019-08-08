@@ -38,7 +38,7 @@ import org.l2j.gameserver.model.skills.AbnormalType;
 import org.l2j.gameserver.model.skills.BuffInfo;
 import org.l2j.gameserver.model.skills.EffectScope;
 import org.l2j.gameserver.model.skills.Skill;
-import org.l2j.gameserver.world.zone.ZoneId;
+import org.l2j.gameserver.world.zone.ZoneType;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.*;
 import org.l2j.gameserver.taskmanager.DecayTaskManager;
@@ -506,7 +506,7 @@ public class Pet extends Summon {
     @Override
     public boolean doDie(Creature killer) {
         final Player owner = getOwner();
-        if ((owner != null) && !owner.isInDuel() && (!isInsideZone(ZoneId.PVP) || isInsideZone(ZoneId.SIEGE))) {
+        if ((owner != null) && !owner.isInDuel() && (!isInsideZone(ZoneType.PVP) || isInsideZone(ZoneType.SIEGE))) {
             deathPenalty();
         }
         if (!super.doDie(killer, true)) {
@@ -1099,7 +1099,7 @@ public class Pet extends Summon {
 
     @Override
     public final double getMoveSpeed() {
-        if (isInsideZone(ZoneId.WATER)) {
+        if (isInsideZone(ZoneType.WATER)) {
             return isRunning() ? getSwimRunSpeed() : getSwimWalkSpeed();
         }
         return isRunning() ? getRunSpeed() : getWalkSpeed();

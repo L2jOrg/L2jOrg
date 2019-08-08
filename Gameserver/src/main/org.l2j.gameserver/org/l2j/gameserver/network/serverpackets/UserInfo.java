@@ -8,7 +8,7 @@ import org.l2j.gameserver.model.Clan;
 import org.l2j.gameserver.model.Party;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.base.ClassId;
-import org.l2j.gameserver.world.zone.ZoneId;
+import org.l2j.gameserver.world.zone.ZoneType;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
 
@@ -286,7 +286,7 @@ public class UserInfo extends AbstractMaskPacket<UserInfoType> {
 
         if (containsMask(UserInfoType.MOVEMENTS)) {
             writeShort((short) 4);
-            writeByte((byte) (activeChar.isInsideZone(ZoneId.WATER) ? 1 : activeChar.isFlyingMounted() ? 2 : 0));
+            writeByte((byte) (activeChar.isInsideZone(ZoneType.WATER) ? 1 : activeChar.isFlyingMounted() ? 2 : 0));
             writeByte((byte) (activeChar.isRunning() ? 0x01 : 0x00));
         }
 

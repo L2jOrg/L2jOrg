@@ -17,7 +17,7 @@ import org.l2j.gameserver.model.items.type.WeaponType;
 import org.l2j.gameserver.model.skills.AbnormalType;
 import org.l2j.gameserver.model.stats.Formulas;
 import org.l2j.gameserver.model.stats.Stats;
-import org.l2j.gameserver.world.zone.ZoneId;
+import org.l2j.gameserver.world.zone.ZoneType;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.*;
 import org.l2j.gameserver.network.serverpackets.dailymission.ExOneDayReceiveRewardList;
@@ -58,7 +58,7 @@ public class PcStat extends PlayableStat {
         }
 
         // Set new karma
-        if (!activeChar.isCursedWeaponEquipped() && (activeChar.getReputation() < 0) && (activeChar.isGM() || !activeChar.isInsideZone(ZoneId.PVP))) {
+        if (!activeChar.isCursedWeaponEquipped() && (activeChar.getReputation() < 0) && (activeChar.isGM() || !activeChar.isInsideZone(ZoneType.PVP))) {
             final int karmaLost = Formulas.calculateKarmaLost(activeChar, value);
             if (karmaLost > 0) {
                 activeChar.setReputation(Math.min((activeChar.getReputation() + karmaLost), 0));

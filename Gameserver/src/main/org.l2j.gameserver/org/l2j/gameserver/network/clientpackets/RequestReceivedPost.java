@@ -4,7 +4,7 @@ import org.l2j.gameserver.Config;
 import org.l2j.gameserver.instancemanager.MailManager;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.entity.Message;
-import org.l2j.gameserver.world.zone.ZoneId;
+import org.l2j.gameserver.world.zone.ZoneType;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ExChangePostState;
 import org.l2j.gameserver.network.serverpackets.ExReplyReceivedPost;
@@ -33,7 +33,7 @@ public final class RequestReceivedPost extends ClientPacket {
             return;
         }
 
-        if (!activeChar.isInsideZone(ZoneId.PEACE) && msg.hasAttachments()) {
+        if (!activeChar.isInsideZone(ZoneType.PEACE) && msg.hasAttachments()) {
             client.sendPacket(SystemMessageId.YOU_CANNOT_RECEIVE_OR_SEND_MAIL_WITH_ATTACHED_ITEMS_IN_NON_PEACE_ZONE_REGIONS);
             return;
         }

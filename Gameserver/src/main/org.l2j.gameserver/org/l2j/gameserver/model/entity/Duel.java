@@ -13,7 +13,7 @@ import org.l2j.gameserver.model.actor.instance.Door;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.instancezone.Instance;
 import org.l2j.gameserver.model.skills.Skill;
-import org.l2j.gameserver.world.zone.ZoneId;
+import org.l2j.gameserver.world.zone.ZoneType;
 import org.l2j.gameserver.world.zone.type.OlympiadStadiumZone;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.*;
@@ -607,7 +607,7 @@ public class Duel {
             }
 
             // is one of the players in a Siege, Peace or PvP zone?
-            if (_playerA.isInsideZone(ZoneId.PEACE) || _playerB.isInsideZone(ZoneId.PEACE) || _playerA.isInsideZone(ZoneId.SIEGE) || _playerB.isInsideZone(ZoneId.SIEGE) || _playerA.isInsideZone(ZoneId.PVP) || _playerB.isInsideZone(ZoneId.PVP)) {
+            if (_playerA.isInsideZone(ZoneType.PEACE) || _playerB.isInsideZone(ZoneType.PEACE) || _playerA.isInsideZone(ZoneType.SIEGE) || _playerB.isInsideZone(ZoneType.SIEGE) || _playerA.isInsideZone(ZoneType.PVP) || _playerB.isInsideZone(ZoneType.PVP)) {
                 return DuelResult.CANCELED;
             }
         }

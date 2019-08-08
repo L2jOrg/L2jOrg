@@ -10,6 +10,7 @@ public class GeneralSettings implements Settings {
     private int shoutChatLevel;
     private int tradeChatLevel;
     private int banChatAdenaAdsReportCount;
+    private boolean auditGM;
 
     @Override
     public void load(SettingsFile settingsFile) {
@@ -19,6 +20,8 @@ public class GeneralSettings implements Settings {
         tradeChatLevel = settingsFile.getInteger("MinimumTradeChatLevel", 15);
 
         banChatAdenaAdsReportCount = settingsFile.getInteger("BanChatAdenaADSReportCount", 10);
+
+        auditGM = settingsFile.getBoolean("AuditGM", false);
     }
 
     public int generalChatLevel() {
@@ -40,4 +43,9 @@ public class GeneralSettings implements Settings {
     public int banChatAdenaAdsReportCount() {
         return banChatAdenaAdsReportCount;
     }
+
+    public boolean auditGM() {
+        return auditGM;
+    }
+
 }

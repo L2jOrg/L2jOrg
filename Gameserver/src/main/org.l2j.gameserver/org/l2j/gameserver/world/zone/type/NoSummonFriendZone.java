@@ -18,7 +18,7 @@ package org.l2j.gameserver.world.zone.type;
 
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.world.zone.Zone;
-import org.l2j.gameserver.world.zone.ZoneId;
+import org.l2j.gameserver.world.zone.ZoneType;
 
 /**
  * A simple no summon zone
@@ -32,11 +32,11 @@ public class NoSummonFriendZone extends Zone {
 
     @Override
     protected void onEnter(Creature character) {
-        character.setInsideZone(ZoneId.NO_SUMMON_FRIEND, true);
+        character.setInsideZone(ZoneType.NO_SUMMON_FRIEND, true);
     }
 
     @Override
     protected void onExit(Creature character) {
-        character.setInsideZone(ZoneId.NO_SUMMON_FRIEND, false);
+        character.setInsideZone(ZoneType.NO_SUMMON_FRIEND, false);
     }
 }

@@ -2,7 +2,7 @@ package org.l2j.gameserver.network.clientpackets;
 
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.world.zone.ZoneId;
+import org.l2j.gameserver.world.zone.ZoneType;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ExReplyPostItemList;
 
@@ -26,7 +26,7 @@ public final class RequestPostItemList extends ClientPacket {
             return;
         }
 
-        if (!activeChar.isInsideZone(ZoneId.PEACE)) {
+        if (!activeChar.isInsideZone(ZoneType.PEACE)) {
             client.sendPacket(SystemMessageId.YOU_CANNOT_RECEIVE_OR_SEND_MAIL_WITH_ATTACHED_ITEMS_IN_NON_PEACE_ZONE_REGIONS);
             return;
         }

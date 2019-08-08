@@ -42,17 +42,19 @@ public class Configurator {
         return getSettings(settingsClass, false);
     }
 
-    public static <T extends Settings> T getSettings(Class<T> settingsClass, boolean forceReload) {
+    public static <T extends Settings> T getSettings(final Class<T> settingsClass, boolean forceReload) {
         if(isNull(settingsClass)) {
             throw new IllegalArgumentException("Can't load settings from Null class");
         }
 
         var instance = getInstance();
 
-        if(!forceReload && instance.hasSettings(settingsClass)) {
-            return instance.get(settingsClass);
+        synchronized (settingsClass) {
+            if (!forceReload && instance.hasSettings(settingsClass)) {
+                return instance.get(settingsClass);
+            }
+            return instance.getFromLoader(settingsClass);
         }
-        return instance.getFromLoader(settingsClass);
     }
 
     private <T extends Settings> T getFromLoader(Class<T> settingsClass) {

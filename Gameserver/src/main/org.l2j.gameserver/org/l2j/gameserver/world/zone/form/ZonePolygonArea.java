@@ -52,7 +52,6 @@ public class ZonePolygonArea extends ZoneArea {
         return Math.sqrt(shortestDist);
     }
 
-    // getLowZ() / getHighZ() - These two functions were added to cope with the demand of the new fishing algorithms, wich are now able to correctly place the hook in the water, thanks to getHighZ(). getLowZ() was added, considering potential future modifications.
     @Override
     public int getLowZ() {
         return minZ;
@@ -69,9 +68,9 @@ public class ZonePolygonArea extends ZoneArea {
             final int nextIndex = (i + 1) == polygon.xpoints.length ? 0 : i + 1;
             final int vx = polygon.xpoints[nextIndex] - polygon.xpoints[i];
             final int vy = polygon.ypoints[nextIndex] - polygon.ypoints[i];
-            final float lenght = (float) Math.sqrt((vx * vx) + (vy * vy)) / STEP;
-            for (int o = 1; o <= lenght; o++) {
-                dropDebugItem(CommonItem.ADENA, 1, (int) (polygon.xpoints[i] + ((o / lenght) * vx)), (int) (polygon.ypoints[i] + ((o / lenght) * vy)), z);
+            final float length = (float) Math.sqrt((vx * vx) + (vy * vy)) / STEP;
+            for (int o = 1; o <= length; o++) {
+                dropDebugItem(CommonItem.ADENA, 1, (int) (polygon.xpoints[i] + ((o / length) * vx)), (int) (polygon.ypoints[i] + ((o / length) * vy)), z);
             }
         }
     }

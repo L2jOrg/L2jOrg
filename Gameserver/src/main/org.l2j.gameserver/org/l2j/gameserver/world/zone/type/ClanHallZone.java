@@ -1,27 +1,12 @@
-/*
- * This file is part of the L2J Mobius project.
- *
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
- * General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this program. If not, see <http://www.gnu.org/licenses/>.
- */
 package org.l2j.gameserver.world.zone.type;
 
 import org.l2j.gameserver.data.xml.impl.ClanHallData;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.entity.ClanHall;
-import org.l2j.gameserver.world.zone.ZoneId;
+import org.l2j.gameserver.world.zone.ZoneType;
 
+import static java.util.Objects.isNull;
 import static org.l2j.gameserver.util.GameUtils.isPlayer;
 
 /**
@@ -30,6 +15,7 @@ import static org.l2j.gameserver.util.GameUtils.isPlayer;
  * @author durgus
  */
 public class ClanHallZone extends ResidenceZone {
+
     public ClanHallZone(int id) {
         super(id);
     }
@@ -46,23 +32,20 @@ public class ClanHallZone extends ResidenceZone {
     @Override
     protected void onEnter(Creature character) {
         if (isPlayer(character)) {
-            character.setInsideZone(ZoneId.CLAN_HALL, true);
+            character.setInsideZone(ZoneType.CLAN_HALL, true);
         }
     }
 
     @Override
     protected void onExit(Creature character) {
         if (isPlayer(character)) {
-            character.setInsideZone(ZoneId.CLAN_HALL, false);
+            character.setInsideZone(ZoneType.CLAN_HALL, false);
         }
     }
 
     @Override
     public final Location getBanishSpawnLoc() {
         final ClanHall clanHall = ClanHallData.getInstance().getClanHallById(getResidenceId());
-        if (clanHall == null) {
-            return null;
-        }
-        return clanHall.getBanishLocation();
+        return isNull(clanHall) ? null : clanHall.getBanishLocation();
     }
 }

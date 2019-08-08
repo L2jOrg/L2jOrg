@@ -9,7 +9,7 @@ import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.entity.Message;
 import org.l2j.gameserver.model.itemcontainer.ItemContainer;
 import org.l2j.gameserver.model.items.instance.Item;
-import org.l2j.gameserver.world.zone.ZoneId;
+import org.l2j.gameserver.world.zone.ZoneType;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ExChangePostState;
 import org.l2j.gameserver.network.serverpackets.InventoryUpdate;
@@ -47,7 +47,7 @@ public final class RequestCancelPostAttachment extends ClientPacket {
             return;
         }
 
-        if (!activeChar.isInsideZone(ZoneId.PEACE)) {
+        if (!activeChar.isInsideZone(ZoneType.PEACE)) {
             activeChar.sendPacket(SystemMessageId.YOU_CANNOT_CANCEL_IN_A_NON_PEACE_ZONE_LOCATION);
             return;
         }

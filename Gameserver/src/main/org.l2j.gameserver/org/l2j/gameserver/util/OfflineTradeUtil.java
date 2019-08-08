@@ -21,7 +21,7 @@ import org.l2j.gameserver.data.sql.impl.OfflineTradersTable;
 import org.l2j.gameserver.model.actor.Summon;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.olympiad.OlympiadManager;
-import org.l2j.gameserver.world.zone.ZoneId;
+import org.l2j.gameserver.world.zone.ZoneType;
 import org.l2j.gameserver.network.GameClient;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -66,7 +66,7 @@ public final class OfflineTradeUtil {
             }
         }
 
-        if (Config.OFFLINE_MODE_IN_PEACE_ZONE && !player.isInsideZone(ZoneId.PEACE)) {
+        if (Config.OFFLINE_MODE_IN_PEACE_ZONE && !player.isInsideZone(ZoneType.PEACE)) {
             canSetShop = false;
         }
 

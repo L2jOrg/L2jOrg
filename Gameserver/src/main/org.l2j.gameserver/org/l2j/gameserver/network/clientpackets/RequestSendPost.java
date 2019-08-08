@@ -13,7 +13,7 @@ import org.l2j.gameserver.model.itemcontainer.Inventory;
 import org.l2j.gameserver.model.itemcontainer.Mail;
 import org.l2j.gameserver.model.items.CommonItem;
 import org.l2j.gameserver.model.items.instance.Item;
-import org.l2j.gameserver.world.zone.ZoneId;
+import org.l2j.gameserver.world.zone.ZoneType;
 import org.l2j.gameserver.network.InvalidDataPacketException;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ExNoticePostSent;
@@ -99,7 +99,7 @@ public final class RequestSendPost extends ClientPacket {
             return;
         }
 
-        if (!activeChar.isInsideZone(ZoneId.PEACE) && (_items != null)) {
+        if (!activeChar.isInsideZone(ZoneType.PEACE) && (_items != null)) {
             activeChar.sendPacket(SystemMessageId.YOU_CANNOT_FORWARD_IN_A_NON_PEACE_ZONE_LOCATION);
             return;
         }

@@ -15,7 +15,7 @@ import org.l2j.gameserver.model.itemcontainer.Inventory;
 import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.items.type.WeaponType;
 import org.l2j.gameserver.world.zone.Zone;
-import org.l2j.gameserver.world.zone.ZoneId;
+import org.l2j.gameserver.world.zone.ZoneType;
 import org.l2j.gameserver.world.zone.type.FishingZone;
 import org.l2j.gameserver.world.zone.type.WaterZone;
 import org.l2j.gameserver.network.SystemMessageId;
@@ -90,7 +90,7 @@ public class Fishing {
 
     public boolean isAtValidLocation() {
         // TODO: implement checking direction
-        return _player.isInsideZone(ZoneId.FISHING);
+        return _player.isInsideZone(ZoneType.FISHING);
     }
 
     public boolean canFish() {
@@ -183,7 +183,7 @@ public class Fishing {
             return;
         }
 
-        if (_player.isInsideZone(ZoneId.WATER) || _player.isInWater()) {
+        if (_player.isInsideZone(ZoneType.WATER) || _player.isInWater()) {
             _player.sendPacket(SystemMessageId.YOU_CANNOT_FISH_WHILE_UNDER_WATER);
             _player.sendPacket(ActionFailed.STATIC_PACKET);
             stopFishing(FishingEndType.ERROR);
@@ -191,7 +191,7 @@ public class Fishing {
         }
 
         _baitLocation = calculateBaitLocation();
-        if (!_player.isInsideZone(ZoneId.FISHING) || (_baitLocation == null)) {
+        if (!_player.isInsideZone(ZoneType.FISHING) || (_baitLocation == null)) {
             if (_isFishing) {
                 // _player.sendPacket(SystemMessageId.YOUR_ATTEMPT_AT_FISHING_HAS_BEEN_CANCELLED);
                 _player.sendPacket(ActionFailed.STATIC_PACKET);

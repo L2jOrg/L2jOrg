@@ -11,7 +11,7 @@ import org.l2j.gameserver.model.skills.BuffInfo;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.model.skills.SkillConditionScope;
 import org.l2j.gameserver.model.stats.*;
-import org.l2j.gameserver.world.zone.ZoneId;
+import org.l2j.gameserver.world.zone.ZoneType;
 import org.l2j.gameserver.util.MathUtil;
 
 import java.util.*;
@@ -240,7 +240,7 @@ public class CharStat {
 
     public double getMovementSpeedMultiplier() {
         double baseSpeed;
-        if (_activeChar.isInsideZone(ZoneId.WATER)) {
+        if (_activeChar.isInsideZone(ZoneType.WATER)) {
             baseSpeed = _activeChar.getTemplate().getBaseValue(_activeChar.isRunning() ? Stats.SWIM_RUN_SPEED : Stats.SWIM_WALK_SPEED, 0);
         } else {
             baseSpeed = _activeChar.getTemplate().getBaseValue(_activeChar.isRunning() ? Stats.RUN_SPEED : Stats.WALK_SPEED, 0);
@@ -252,14 +252,14 @@ public class CharStat {
      * @return the RunSpeed (base+modifier) of the Creature in function of the Armour Expertise Penalty.
      */
     public double getRunSpeed() {
-        return getValue(_activeChar.isInsideZone(ZoneId.WATER) ? Stats.SWIM_RUN_SPEED : Stats.RUN_SPEED);
+        return getValue(_activeChar.isInsideZone(ZoneType.WATER) ? Stats.SWIM_RUN_SPEED : Stats.RUN_SPEED);
     }
 
     /**
      * @return the WalkSpeed (base+modifier) of the Creature.
      */
     public double getWalkSpeed() {
-        return getValue(_activeChar.isInsideZone(ZoneId.WATER) ? Stats.SWIM_WALK_SPEED : Stats.WALK_SPEED);
+        return getValue(_activeChar.isInsideZone(ZoneType.WATER) ? Stats.SWIM_WALK_SPEED : Stats.WALK_SPEED);
     }
 
     /**
@@ -280,7 +280,7 @@ public class CharStat {
      * @return the RunSpeed (base+modifier) or WalkSpeed (base+modifier) of the Creature in function of the movement type.
      */
     public double getMoveSpeed() {
-        if (_activeChar.isInsideZone(ZoneId.WATER)) {
+        if (_activeChar.isInsideZone(ZoneType.WATER)) {
             return _activeChar.isRunning() ? getSwimRunSpeed() : getSwimWalkSpeed();
         }
         return _activeChar.isRunning() ? getRunSpeed() : getWalkSpeed();

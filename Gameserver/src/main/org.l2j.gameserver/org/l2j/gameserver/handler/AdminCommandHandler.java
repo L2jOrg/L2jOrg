@@ -1,12 +1,12 @@
 package org.l2j.gameserver.handler;
 
 import org.l2j.commons.threading.ThreadPoolManager;
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.xml.impl.AdminData;
 import org.l2j.gameserver.enums.PlayerAction;
 import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.serverpackets.ConfirmDlg;
+import org.l2j.gameserver.settings.GeneralSettings;
 import org.l2j.gameserver.util.GMAudit;
 import org.l2j.gameserver.util.TimeAmountInterpreter;
 import org.slf4j.Logger;
@@ -14,6 +14,9 @@ import org.slf4j.LoggerFactory;
 
 import java.util.HashMap;
 import java.util.Map;
+
+import static java.util.Objects.isNull;
+import static org.l2j.commons.configuration.Configurator.getSettings;
 
 /**
  * @author UnAfraid
@@ -57,18 +60,15 @@ public class AdminCommandHandler implements IHandler<IAdminCommandHandler, Strin
         final String command = fullCommand.split(" ")[0];
         final String commandNoPrefix = command.substring(6);
 
-        final IAdminCommandHandler handler = getHandler(command);
-        if (handler == null) {
-            if (player.isGM()) {
-                player.sendMessage("The command '" + commandNoPrefix + "' does not exist!");
-            }
-            LOGGER.warn("No handler registered for admin command '" + command + "'");
+        if (!AdminData.getInstance().hasAccess(command, player.getAccessLevel())) {
+            LOGGER.warn("Player {} tried to use admin command '{}', without proper access level!", player.getName(), command);
             return;
         }
 
-        if (!AdminData.getInstance().hasAccess(command, player.getAccessLevel())) {
-            player.sendMessage("You don't have the access rights to use this command!");
-            LOGGER.warn("Player " + player.getName() + " tried to use admin command '" + command + "', without proper access level!");
+        final IAdminCommandHandler handler = getHandler(command);
+        if (isNull(handler)) {
+            player.sendMessage("The command '" + commandNoPrefix + "' does not exist!");
+            LOGGER.warn("No handler registered for admin command '{}'", command);
             return;
         }
 
@@ -83,7 +83,7 @@ public class AdminCommandHandler implements IHandler<IAdminCommandHandler, Strin
             {
                 final long begin = System.currentTimeMillis();
                 try {
-                    if (Config.GMAUDIT) {
+                    if (getSettings(GeneralSettings.class).auditGM()) {
                         final WorldObject target = player.getTarget();
                         GMAudit.auditGMAction(player.getName() + " [" + player.getObjectId() + "]", fullCommand, (target != null ? target.getName() : "no-target"));
                     }
@@ -91,7 +91,7 @@ public class AdminCommandHandler implements IHandler<IAdminCommandHandler, Strin
                     handler.useAdminCommand(fullCommand, player);
                 } catch (RuntimeException e) {
                     player.sendMessage("Exception during execution of  '" + fullCommand + "': " + e.toString());
-                    LOGGER.warn("Exception during execution of " + fullCommand + " " + e);
+                    LOGGER.warn("Exception during execution of " + fullCommand, e);
                 } finally {
                     final long runtime = System.currentTimeMillis() - begin;
                     player.sendMessage("The execution of '" + fullCommand + "' took " + TimeAmountInterpreter.consolidateMillis(runtime) + ".");

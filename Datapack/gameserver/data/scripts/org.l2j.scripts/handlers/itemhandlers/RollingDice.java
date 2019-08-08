@@ -23,7 +23,7 @@ import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.actor.Playable;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.items.instance.Item;
-import org.l2j.gameserver.world.zone.ZoneId;
+import org.l2j.gameserver.world.zone.ZoneType;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.Dice;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
@@ -77,7 +77,7 @@ public class RollingDice implements IItemHandler
 		sm.addInt(number);
 		
 		activeChar.sendPacket(sm);
-		if (activeChar.isInsideZone(ZoneId.PEACE))
+		if (activeChar.isInsideZone(ZoneType.PEACE))
 		{
 			Broadcast.toKnownPlayers(activeChar, sm);
 		}

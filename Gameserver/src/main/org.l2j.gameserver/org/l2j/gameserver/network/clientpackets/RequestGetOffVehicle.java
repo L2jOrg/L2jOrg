@@ -1,7 +1,7 @@
 package org.l2j.gameserver.network.clientpackets;
 
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.world.zone.ZoneId;
+import org.l2j.gameserver.world.zone.ZoneType;
 import org.l2j.gameserver.network.serverpackets.ActionFailed;
 import org.l2j.gameserver.network.serverpackets.GetOffVehicle;
 import org.l2j.gameserver.network.serverpackets.StopMoveInVehicle;
@@ -42,7 +42,7 @@ public final class RequestGetOffVehicle extends ClientPacket {
         client.sendPacket(ActionFailed.STATIC_PACKET);
         activeChar.broadcastPacket(new GetOffVehicle(activeChar.getObjectId(), _boatId, _x, _y, _z));
         activeChar.setXYZ(_x, _y, _z);
-        activeChar.setInsideZone(ZoneId.PEACE, false);
+        activeChar.setInsideZone(ZoneType.PEACE, false);
         activeChar.revalidateZone(true);
     }
 }

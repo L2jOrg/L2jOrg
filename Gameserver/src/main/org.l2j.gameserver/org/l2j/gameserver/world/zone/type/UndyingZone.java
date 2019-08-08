@@ -18,7 +18,7 @@ package org.l2j.gameserver.world.zone.type;
 
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.world.zone.Zone;
-import org.l2j.gameserver.world.zone.ZoneId;
+import org.l2j.gameserver.world.zone.ZoneType;
 
 /**
  * An Undying Zone
@@ -32,11 +32,11 @@ public class UndyingZone extends Zone {
 
     @Override
     protected void onEnter(Creature character) {
-        character.setInsideZone(ZoneId.UNDYING, true);
+        character.setInsideZone(ZoneType.UNDYING, true);
     }
 
     @Override
     protected void onExit(Creature character) {
-        character.setInsideZone(ZoneId.UNDYING, false);
+        character.setInsideZone(ZoneType.UNDYING, false);
     }
 }

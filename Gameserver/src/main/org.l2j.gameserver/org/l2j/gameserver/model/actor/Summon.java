@@ -33,7 +33,7 @@ import org.l2j.gameserver.model.olympiad.OlympiadGameManager;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.model.skills.SkillCaster;
 import org.l2j.gameserver.model.skills.targets.TargetType;
-import org.l2j.gameserver.world.zone.ZoneId;
+import org.l2j.gameserver.world.zone.ZoneType;
 import org.l2j.gameserver.world.zone.ZoneRegion;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.*;
@@ -496,7 +496,7 @@ public abstract class Summon extends Playable {
             final WorldObject currentTarget = _owner.getTarget();
             if (currentTarget != null)
             {
-                target = skill.getTarget(this, forceUse && (!GameUtils.isPlayable(currentTarget) || !currentTarget.isInsideZone(ZoneId.PEACE)), dontMove, false);
+                target = skill.getTarget(this, forceUse && (!GameUtils.isPlayable(currentTarget) || !currentTarget.isInsideZone(ZoneType.PEACE)), dontMove, false);
                 final Player currentTargetPlayer = currentTarget.getActingPlayer();
                 if (!forceUse && (currentTargetPlayer != null) && !currentTargetPlayer.isAutoAttackable(_owner))
                 {
@@ -793,7 +793,7 @@ public abstract class Summon extends Playable {
             return false;
         }
 
-        if ((target.getActingPlayer() != null) && (_owner.getSiegeState() > 0) && _owner.isInsideZone(ZoneId.SIEGE) && (target.getActingPlayer().getSiegeSide() == _owner.getSiegeSide())) {
+        if ((target.getActingPlayer() != null) && (_owner.getSiegeState() > 0) && _owner.isInsideZone(ZoneType.SIEGE) && (target.getActingPlayer().getSiegeSide() == _owner.getSiegeSide())) {
             sendPacket(SystemMessageId.FORCE_ATTACK_IS_IMPOSSIBLE_AGAINST_A_TEMPORARY_ALLIED_MEMBER_DURING_A_SIEGE);
             sendPacket(ActionFailed.STATIC_PACKET);
             return false;

@@ -8,7 +8,7 @@ import org.l2j.gameserver.model.Clan;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Guard;
 import org.l2j.gameserver.model.skills.AbnormalVisualEffect;
-import org.l2j.gameserver.world.zone.ZoneId;
+import org.l2j.gameserver.world.zone.ZoneType;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.NpcStringId;
 import org.l2j.gameserver.network.ServerPacketId;
@@ -70,7 +70,7 @@ public class NpcInfo extends AbstractMaskPacket<NpcInfoType> {
             addComponentType(NpcInfoType.DISPLAY_EFFECT);
         }
 
-        if (npc.isInsideZone(ZoneId.WATER) || npc.isFlying()) {
+        if (npc.isInsideZone(ZoneType.WATER) || npc.isFlying()) {
             addComponentType(NpcInfoType.SWIM_OR_FLY);
         }
 
@@ -262,7 +262,7 @@ public class NpcInfo extends AbstractMaskPacket<NpcInfoType> {
             writeByte((byte) (_npc.isRunning() ? 0x01 : 0x00));
         }
         if (containsMask(NpcInfoType.SWIM_OR_FLY)) {
-            writeByte((byte) (_npc.isInsideZone(ZoneId.WATER) ? 0x01 : _npc.isFlying() ? 0x02 : 0x00));
+            writeByte((byte) (_npc.isInsideZone(ZoneType.WATER) ? 0x01 : _npc.isFlying() ? 0x02 : 0x00));
         }
         if (containsMask(NpcInfoType.TEAM)) {
             writeByte((byte) _npc.getTeam().getId());

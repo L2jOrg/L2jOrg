@@ -53,7 +53,7 @@ import org.l2j.gameserver.model.options.OptionsSkillHolder;
 import org.l2j.gameserver.model.options.OptionsSkillType;
 import org.l2j.gameserver.model.skills.*;
 import org.l2j.gameserver.model.stats.*;
-import org.l2j.gameserver.world.zone.ZoneId;
+import org.l2j.gameserver.world.zone.ZoneType;
 import org.l2j.gameserver.world.zone.ZoneRegion;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.*;
@@ -104,7 +104,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
      * Map containing all skills of this character.
      */
     private final Map<Integer, Skill> _skills = new ConcurrentSkipListMap<>();
-    private final byte[] _zones = new byte[ZoneId.getZoneCount()];
+    private final byte[] _zones = new byte[ZoneType.getZoneCount()];
     private final StampedLock _attackLock = new StampedLock();
     /**
      * Creatures effect list.
@@ -287,14 +287,14 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
      * @return {code true} if the character is in that zone
      */
     @Override
-    public final boolean isInsideZone(ZoneId zone) {
+    public final boolean isInsideZone(ZoneType zone) {
         final Instance instance = getInstanceWorld();
         switch (zone) {
             case PVP: {
                 if ((instance != null) && instance.isPvP()) {
                     return true;
                 }
-                return (_zones[ZoneId.PVP.ordinal()] > 0) && (_zones[ZoneId.PEACE.ordinal()] == 0);
+                return (_zones[ZoneType.PVP.ordinal()] > 0) && (_zones[ZoneType.PEACE.ordinal()] == 0);
             }
             case PEACE: {
                 if ((instance != null) && instance.isPvP()) {
@@ -309,7 +309,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
      * @param zone
      * @param state
      */
-    public final void setInsideZone(ZoneId zone, boolean state) {
+    public final void setInsideZone(ZoneType zone, boolean state) {
         synchronized (_zones) {
             if (state) {
                 _zones[zone.ordinal()]++;
@@ -352,7 +352,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
     }
 
     public void transform(Transform transformation, boolean addSkills) {
-        if (!Config.ALLOW_MOUNTS_DURING_SIEGE && transformation.isRiding() && isInsideZone(ZoneId.SIEGE)) {
+        if (!Config.ALLOW_MOUNTS_DURING_SIEGE && transformation.isRiding() && isInsideZone(ZoneType.SIEGE)) {
             return;
         }
 
@@ -770,7 +770,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
                     sendPacket(SystemMessageId.OBSERVERS_CANNOT_PARTICIPATE);
                     sendPacket(ActionFailed.STATIC_PACKET);
                     return;
-                } else if ((target.getActingPlayer() != null) && (getActingPlayer().getSiegeState() > 0) && isInsideZone(ZoneId.SIEGE) && (target.getActingPlayer().getSiegeState() == getActingPlayer().getSiegeState()) && (target.getActingPlayer() != this) && (target.getActingPlayer().getSiegeSide() == getActingPlayer().getSiegeSide())) {
+                } else if ((target.getActingPlayer() != null) && (getActingPlayer().getSiegeState() > 0) && isInsideZone(ZoneType.SIEGE) && (target.getActingPlayer().getSiegeState() == getActingPlayer().getSiegeState()) && (target.getActingPlayer() != this) && (target.getActingPlayer().getSiegeSide() == getActingPlayer().getSiegeSide())) {
                     sendPacket(SystemMessageId.FORCE_ATTACK_IS_IMPOSSIBLE_AGAINST_A_TEMPORARY_ALLIED_MEMBER_DURING_A_SIEGE);
                     sendPacket(ActionFailed.STATIC_PACKET);
                     return;
@@ -1766,7 +1766,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
     }
 
     public boolean isUndying() {
-        return _isUndying || isInvul() || isAffected(EffectFlag.IGNORE_DEATH) || isInsideZone(ZoneId.UNDYING);
+        return _isUndying || isInvul() || isAffected(EffectFlag.IGNORE_DEATH) || isInsideZone(ZoneType.UNDYING);
     }
 
     public void setUndying(boolean undying) {
@@ -2483,7 +2483,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
             }
         }
 
-        final boolean isFloating = _isFlying || isInsideZone(ZoneId.WATER);
+        final boolean isFloating = _isFlying || isInsideZone(ZoneType.WATER);
         double delta = (dx * dx) + (dy * dy);
         if ((delta < 10000) && ((dz * dz) > 2500) // close enough, allows error between client and server geodata if it cannot be avoided
                 && !isFloating) {
@@ -2683,7 +2683,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
         }
 
         // Make water move short and use no geodata checks for swimming chars distance in a click can easily be over 3000.
-        final boolean isInWater = isInsideZone(ZoneId.WATER);
+        final boolean isInWater = isInsideZone(ZoneType.WATER);
         if (isInWater && (distance > 700)) {
             final double divider = 700 / distance;
             x = curX + (int) (divider * dx);
@@ -3257,7 +3257,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
             return false;
         }
 
-        return (target.isInsideZone(ZoneId.PEACE) || attacker.isInsideZone(ZoneId.PEACE));
+        return (target.isInsideZone(ZoneType.PEACE) || attacker.isInsideZone(ZoneType.PEACE));
     }
 
     /**

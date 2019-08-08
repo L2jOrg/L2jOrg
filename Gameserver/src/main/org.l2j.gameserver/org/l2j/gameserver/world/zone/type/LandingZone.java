@@ -2,7 +2,7 @@ package org.l2j.gameserver.world.zone.type;
 
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.world.zone.Zone;
-import org.l2j.gameserver.world.zone.ZoneId;
+import org.l2j.gameserver.world.zone.ZoneType;
 
 import static org.l2j.gameserver.util.GameUtils.isPlayer;
 
@@ -19,14 +19,14 @@ public class LandingZone extends Zone {
     @Override
     protected void onEnter(Creature character) {
         if (isPlayer(character)) {
-            character.setInsideZone(ZoneId.LANDING, true);
+            character.setInsideZone(ZoneType.LANDING, true);
         }
     }
 
     @Override
     protected void onExit(Creature character) {
         if (isPlayer(character)) {
-            character.setInsideZone(ZoneId.LANDING, false);
+            character.setInsideZone(ZoneType.LANDING, false);
         }
     }
 }

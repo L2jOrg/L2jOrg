@@ -21,7 +21,7 @@ import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.model.skills.targets.TargetType;
-import org.l2j.gameserver.world.zone.ZoneId;
+import org.l2j.gameserver.world.zone.ZoneType;
 import org.l2j.gameserver.network.SystemMessageId;
 
 /**
@@ -39,7 +39,7 @@ public class Self implements ITargetTypeHandler
 	@Override
 	public WorldObject getTarget(Creature activeChar, WorldObject selectedTarget, Skill skill, boolean forceUse, boolean dontMove, boolean sendMessage)
 	{
-		if (activeChar.isInsideZone(ZoneId.PEACE) && skill.isBad())
+		if (activeChar.isInsideZone(ZoneType.PEACE) && skill.isBad())
 		{
 			if (sendMessage)
 			{

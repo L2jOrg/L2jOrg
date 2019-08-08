@@ -28,6 +28,10 @@ public final class BuilderUtil {
         }
     }
 
+    public static void sendSystemMessage(Player player, String message, Object... args) {
+        sendSysMessage(player, String.format(message, args));
+    }
+
     /**
      * Sends builder html message to the player.
      *

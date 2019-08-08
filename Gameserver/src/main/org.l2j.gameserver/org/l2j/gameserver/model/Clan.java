@@ -30,7 +30,7 @@ import org.l2j.gameserver.model.pledge.ClanRewardBonus;
 import org.l2j.gameserver.model.skills.CommonSkill;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.model.variables.ClanVariables;
-import org.l2j.gameserver.world.zone.ZoneId;
+import org.l2j.gameserver.world.zone.ZoneType;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.*;
 import org.l2j.gameserver.network.serverpackets.PledgeSkillList.SubPledgeSkill;
@@ -1755,7 +1755,7 @@ public class Clan implements IIdentifiable, INamable {
                 return false;
             }
         }
-        if (activeChar.isInsideZone(ZoneId.SIEGE) && target.isInsideZone(ZoneId.SIEGE)) {
+        if (activeChar.isInsideZone(ZoneType.SIEGE) && target.isInsideZone(ZoneType.SIEGE)) {
             activeChar.sendPacket(SystemMessageId.THE_OPPOSING_CLAN_IS_PARTICIPATING_IN_A_SIEGE_BATTLE);
             return false;
         }
@@ -1859,7 +1859,7 @@ public class Clan implements IIdentifiable, INamable {
             player.sendPacket(SystemMessageId.THIS_FEATURE_IS_ONLY_AVAILABLE_TO_ALLIANCE_LEADERS);
             return;
         }
-        if (player.isInsideZone(ZoneId.SIEGE)) {
+        if (player.isInsideZone(ZoneType.SIEGE)) {
             player.sendPacket(SystemMessageId.YOU_CANNOT_DISSOLVE_AN_ALLIANCE_WHILE_AN_AFFILIATED_CLAN_IS_PARTICIPATING_IN_A_SIEGE_BATTLE);
             return;
         }

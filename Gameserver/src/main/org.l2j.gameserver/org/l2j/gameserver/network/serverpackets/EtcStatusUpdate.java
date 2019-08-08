@@ -1,7 +1,7 @@
 package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.world.zone.ZoneId;
+import org.l2j.gameserver.world.zone.ZoneType;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
 
@@ -15,7 +15,7 @@ public class EtcStatusUpdate extends ServerPacket {
     public EtcStatusUpdate(Player activeChar) {
         _activeChar = activeChar;
         _mask = _activeChar.getMessageRefusal() || _activeChar.isChatBanned() || _activeChar.isSilenceMode() ? 1 : 0;
-        _mask |= _activeChar.isInsideZone(ZoneId.DANGER_AREA) ? 2 : 0;
+        _mask |= _activeChar.isInsideZone(ZoneType.DANGER_AREA) ? 2 : 0;
         _mask |= _activeChar.hasCharmOfCourage() ? 4 : 0;
     }
 

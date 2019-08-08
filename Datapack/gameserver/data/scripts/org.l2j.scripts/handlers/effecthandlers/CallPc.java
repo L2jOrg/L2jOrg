@@ -25,7 +25,7 @@ import org.l2j.gameserver.model.instancezone.Instance;
 import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.olympiad.OlympiadManager;
 import org.l2j.gameserver.model.skills.Skill;
-import org.l2j.gameserver.world.zone.ZoneId;
+import org.l2j.gameserver.world.zone.ZoneType;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ConfirmDlg;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
@@ -139,7 +139,7 @@ public final class CallPc extends AbstractEffect
 			return false;
 		}
 		
-		if (target.isInsideZone(ZoneId.NO_SUMMON_FRIEND) || target.isInsideZone(ZoneId.JAIL))
+		if (target.isInsideZone(ZoneType.NO_SUMMON_FRIEND) || target.isInsideZone(ZoneType.JAIL))
 		{
 			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_IN_AN_AREA_WHICH_BLOCKS_SUMMONING_OR_TELEPORTING);
 			sm.addString(target.getName());

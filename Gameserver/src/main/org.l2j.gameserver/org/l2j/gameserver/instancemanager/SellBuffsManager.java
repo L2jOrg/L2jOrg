@@ -11,7 +11,7 @@ import org.l2j.gameserver.model.holders.SellBuffHolder;
 import org.l2j.gameserver.model.items.ItemTemplate;
 import org.l2j.gameserver.model.olympiad.OlympiadManager;
 import org.l2j.gameserver.model.skills.Skill;
-import org.l2j.gameserver.world.zone.ZoneId;
+import org.l2j.gameserver.world.zone.ZoneType;
 import org.l2j.gameserver.network.serverpackets.ExPrivateStoreSetWholeMsg;
 import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.util.GameUtils;
@@ -367,7 +367,7 @@ public final class SellBuffsManager extends GameXmlReader {
         } else if (player.isTransformed()) {
             player.sendMessage("You can't sell buffs in Transform state!");
             return false;
-        } else if (player.isInsideZone(ZoneId.NO_STORE) || !player.isInsideZone(ZoneId.PEACE) || player.isJailed()) {
+        } else if (player.isInsideZone(ZoneType.NO_STORE) || !player.isInsideZone(ZoneType.PEACE) || player.isJailed()) {
             player.sendMessage("You can't sell buffs here!");
             return false;
         }

@@ -29,7 +29,7 @@ import org.l2j.gameserver.model.events.listeners.ConsumerEventListener;
 import org.l2j.gameserver.model.olympiad.OlympiadManager;
 import org.l2j.gameserver.model.punishment.PunishmentTask;
 import org.l2j.gameserver.model.punishment.PunishmentType;
-import org.l2j.gameserver.world.zone.ZoneId;
+import org.l2j.gameserver.world.zone.ZoneType;
 import org.l2j.gameserver.world.zone.type.JailZone;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.authcomm.AuthServerCommunication;
@@ -50,11 +50,11 @@ public class JailHandler implements IPunishmentHandler
 	private void onPlayerLogin(OnPlayerLogin event)
 	{
 		final Player activeChar = event.getActiveChar();
-		if (activeChar.isJailed() && !activeChar.isInsideZone(ZoneId.JAIL))
+		if (activeChar.isJailed() && !activeChar.isInsideZone(ZoneType.JAIL))
 		{
 			applyToPlayer(null, activeChar);
 		}
-		else if (!activeChar.isJailed() && activeChar.isInsideZone(ZoneId.JAIL) && !activeChar.isGM())
+		else if (!activeChar.isJailed() && activeChar.isInsideZone(ZoneType.JAIL) && !activeChar.isGM())
 		{
 			removeFromPlayer(activeChar);
 		}

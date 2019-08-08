@@ -40,6 +40,7 @@ import org.l2j.gameserver.model.options.Options;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.*;
+import org.l2j.gameserver.settings.GeneralSettings;
 import org.l2j.gameserver.util.GMAudit;
 import org.l2j.gameserver.util.GameUtils;
 import org.l2j.gameserver.world.World;
@@ -55,6 +56,8 @@ import java.util.*;
 import java.util.Map.Entry;
 import java.util.concurrent.ScheduledFuture;
 import java.util.concurrent.locks.ReentrantLock;
+
+import static org.l2j.commons.configuration.Configurator.getSettings;
 
 
 /**
@@ -314,7 +317,7 @@ public final class Item extends WorldObject {
                 referenceName = (String) reference;
             }
             final String targetName = (creator.getTarget() != null ? creator.getTarget().getName() : "no-target");
-            if (Config.GMAUDIT) {
+            if (getSettings(GeneralSettings.class).auditGM()) {
                 GMAudit.auditGMAction(creator.getName() + " [" + creator.getObjectId() + "]", process + "(id: " + _itemId + " name: " + getName() + ")", targetName, "WorldObject referencing this action is: " + referenceName);
             }
         }
@@ -470,7 +473,7 @@ public final class Item extends WorldObject {
                 referenceName = (String) reference;
             }
             final String targetName = (creator.getTarget() != null ? creator.getTarget().getName() : "no-target");
-            if (Config.GMAUDIT) {
+            if (getSettings(GeneralSettings.class).auditGM()) {
                 GMAudit.auditGMAction(creator.getName() + " [" + creator.getObjectId() + "]", process + "(id: " + _itemId + " objId: " + getObjectId() + " name: " + getName() + " count: " + count + ")", targetName, "WorldObject referencing this action is: " + referenceName);
             }
         }

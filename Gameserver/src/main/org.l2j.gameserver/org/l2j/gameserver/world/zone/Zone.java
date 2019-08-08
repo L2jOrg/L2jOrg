@@ -35,7 +35,6 @@ public abstract class Zone extends ListenersContainer {
     protected static final Logger LOGGER = LoggerFactory.getLogger(Zone.class.getName());
 
     private final int id;
-    private List<ZoneArea> blockedZones;
     private boolean enabled;
     /**
      * Parameters to affect specific characters
@@ -251,17 +250,6 @@ public abstract class Zone extends ListenersContainer {
         area = zone;
     }
 
-    public List<ZoneArea> getBlockedZones() {
-        return blockedZones;
-    }
-
-    public void setBlockedZones(List<ZoneArea> blockedZones) {
-        if (this.blockedZones != null) {
-            throw new IllegalStateException("Blocked zone already set");
-        }
-        this.blockedZones = blockedZones;
-    }
-
     /**
      * Returns zone name
      *
@@ -289,17 +277,7 @@ public abstract class Zone extends ListenersContainer {
      * @return
      */
     public boolean isInsideZone(int x, int y, int z) {
-        return area.isInsideZone(x, y, z) && !isInsideBannedZone(x, y, z);
-    }
-
-    /**
-     * @param x
-     * @param y
-     * @param z
-     * @return {@code true} if this location is within banned zone boundaries, {@code false} otherwise
-     */
-    public boolean isInsideBannedZone(int x, int y, int z) {
-        return (blockedZones != null) && blockedZones.stream().allMatch(zone -> !zone.isInsideZone(x, y, z));
+        return area.isInsideZone(x, y, z);
     }
 
     /**
@@ -333,10 +311,6 @@ public abstract class Zone extends ListenersContainer {
         return isInsideZone(object.getX(), object.getY(), object.getZ());
     }
 
-    public double getDistanceToZone(int x, int y) {
-        return area.getDistanceToZone(x, y);
-    }
-
     public double getDistanceToZone(WorldObject object) {
         return area.getDistanceToZone(object.getX(), object.getY());
     }
@@ -356,7 +330,7 @@ public abstract class Zone extends ListenersContainer {
                 onEnter(character);
             }
         } else {
-            removeCharacter(character);
+            removeCreature(character);
         }
     }
 
@@ -365,7 +339,7 @@ public abstract class Zone extends ListenersContainer {
      *
      * @param character
      */
-    public void removeCharacter(Creature character) {
+    public void removeCreature(Creature character) {
         // Was the character inside this zone?
         if (creatures.containsKey(character.getObjectId())) {
             // Notify to scripts.

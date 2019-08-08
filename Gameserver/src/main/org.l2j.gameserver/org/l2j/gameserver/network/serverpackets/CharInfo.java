@@ -10,7 +10,7 @@ import org.l2j.gameserver.model.ceremonyofchaos.CeremonyOfChaosMember;
 import org.l2j.gameserver.model.interfaces.ILocational;
 import org.l2j.gameserver.model.itemcontainer.Inventory;
 import org.l2j.gameserver.model.skills.AbnormalVisualEffect;
-import org.l2j.gameserver.world.zone.ZoneId;
+import org.l2j.gameserver.world.zone.ZoneType;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
 
@@ -178,7 +178,7 @@ public class CharInfo extends ServerPacket {
 
         writeByte((byte) (_activeChar.isInMatchingRoom() ? 0x01 : 0x00)); // Confirmed
 
-        writeByte((byte) (_activeChar.isInsideZone(ZoneId.WATER) ? 1 : _activeChar.isFlyingMounted() ? 2 : 0));
+        writeByte((byte) (_activeChar.isInsideZone(ZoneType.WATER) ? 1 : _activeChar.isFlyingMounted() ? 2 : 0));
         writeShort((short) _activeChar.getRecomHave()); // Confirmed
         writeInt(_activeChar.getMountNpcId() == 0 ? 0 : _activeChar.getMountNpcId() + 1000000);
 

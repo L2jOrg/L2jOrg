@@ -19,7 +19,7 @@ package org.l2j.gameserver.world.zone.type;
 import org.l2j.gameserver.enums.MountType;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.world.zone.Zone;
-import org.l2j.gameserver.world.zone.ZoneId;
+import org.l2j.gameserver.world.zone.ZoneType;
 import org.l2j.gameserver.network.SystemMessageId;
 
 import static org.l2j.gameserver.util.GameUtils.isPlayer;
@@ -48,7 +48,7 @@ public class NoLandingZone extends Zone {
     @Override
     protected void onEnter(Creature character) {
         if (isPlayer(character)) {
-            character.setInsideZone(ZoneId.NO_LANDING, true);
+            character.setInsideZone(ZoneType.NO_LANDING, true);
             if (character.getActingPlayer().getMountType() == MountType.WYVERN) {
                 character.sendPacket(SystemMessageId.THIS_AREA_CANNOT_BE_ENTERED_WHILE_MOUNTED_ATOP_OF_A_WYVERN_YOU_WILL_BE_DISMOUNTED_FROM_YOUR_WYVERN_IF_YOU_DO_NOT_LEAVE);
                 character.getActingPlayer().enteredNoLanding(dismountDelay);
@@ -59,7 +59,7 @@ public class NoLandingZone extends Zone {
     @Override
     protected void onExit(Creature character) {
         if (isPlayer(character)) {
-            character.setInsideZone(ZoneId.NO_LANDING, false);
+            character.setInsideZone(ZoneType.NO_LANDING, false);
             if (character.getActingPlayer().getMountType() == MountType.WYVERN) {
                 character.getActingPlayer().exitedNoLanding();
             }

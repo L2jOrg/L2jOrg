@@ -13,7 +13,7 @@ import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.olympiad.OlympiadGameTask;
 import org.l2j.gameserver.world.zone.AbstractZoneSettings;
 import org.l2j.gameserver.world.zone.ZoneRespawn;
-import org.l2j.gameserver.world.zone.ZoneId;
+import org.l2j.gameserver.world.zone.ZoneType;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ExOlympiadMatchEnd;
 
@@ -64,7 +64,7 @@ public class OlympiadStadiumZone extends ZoneRespawn {
     protected final void onEnter(Creature character) {
         if (getSettings().getOlympiadTask() != null) {
             if (getSettings().getOlympiadTask().isBattleStarted()) {
-                character.setInsideZone(ZoneId.PVP, true);
+                character.setInsideZone(ZoneType.PVP, true);
                 if (isPlayer(character)) {
                     character.sendPacket(SystemMessageId.YOU_HAVE_ENTERED_A_COMBAT_ZONE);
                     getSettings().getOlympiadTask().getGame().sendOlympiadInfo(character);
@@ -93,7 +93,7 @@ public class OlympiadStadiumZone extends ZoneRespawn {
     protected final void onExit(Creature character) {
         if (getSettings().getOlympiadTask() != null) {
             if (getSettings().getOlympiadTask().isBattleStarted()) {
-                character.setInsideZone(ZoneId.PVP, false);
+                character.setInsideZone(ZoneType.PVP, false);
                 if (isPlayer(character)) {
                     character.sendPacket(SystemMessageId.YOU_HAVE_LEFT_A_COMBAT_ZONE);
                     character.sendPacket(ExOlympiadMatchEnd.STATIC_PACKET);

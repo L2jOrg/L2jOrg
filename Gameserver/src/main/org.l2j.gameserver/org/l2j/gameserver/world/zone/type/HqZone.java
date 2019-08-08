@@ -18,7 +18,7 @@ package org.l2j.gameserver.world.zone.type;
 
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.world.zone.Zone;
-import org.l2j.gameserver.world.zone.ZoneId;
+import org.l2j.gameserver.world.zone.ZoneType;
 
 import static org.l2j.gameserver.util.GameUtils.isPlayer;
 
@@ -50,14 +50,14 @@ public class HqZone extends Zone {
     @Override
     protected void onEnter(Creature character) {
         if (isPlayer(character)) {
-            character.setInsideZone(ZoneId.HQ, true);
+            character.setInsideZone(ZoneType.HQ, true);
         }
     }
 
     @Override
     protected void onExit(Creature character) {
         if (isPlayer(character)) {
-            character.setInsideZone(ZoneId.HQ, false);
+            character.setInsideZone(ZoneType.HQ, false);
         }
     }
 }

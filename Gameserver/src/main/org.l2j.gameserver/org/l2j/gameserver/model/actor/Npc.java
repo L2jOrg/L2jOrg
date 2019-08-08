@@ -32,7 +32,7 @@ import org.l2j.gameserver.model.olympiad.Olympiad;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.model.spawns.NpcSpawnTemplate;
 import org.l2j.gameserver.model.variables.NpcVariables;
-import org.l2j.gameserver.world.zone.ZoneId;
+import org.l2j.gameserver.world.zone.ZoneType;
 import org.l2j.gameserver.world.zone.type.TaxZone;
 import org.l2j.gameserver.network.NpcStringId;
 import org.l2j.gameserver.network.SystemMessageId;
@@ -811,7 +811,7 @@ public class Npc extends Creature {
             WalkingManager.getInstance().onSpawn(this);
         }
 
-        if (isInsideZone(ZoneId.TAX) && (getCastle() != null) && (Config.SHOW_CREST_WITHOUT_QUEST || getCastle().getShowNpcCrest()) && (getCastle().getOwnerId() != 0)) {
+        if (isInsideZone(ZoneType.TAX) && (getCastle() != null) && (Config.SHOW_CREST_WITHOUT_QUEST || getCastle().getShowNpcCrest()) && (getCastle().getOwnerId() != 0)) {
             setClanId(getCastle().getOwnerId());
         }
     }

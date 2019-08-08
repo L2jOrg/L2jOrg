@@ -11,7 +11,7 @@ import org.l2j.gameserver.model.entity.Message;
 import org.l2j.gameserver.model.itemcontainer.ItemContainer;
 import org.l2j.gameserver.model.items.CommonItem;
 import org.l2j.gameserver.model.items.instance.Item;
-import org.l2j.gameserver.world.zone.ZoneId;
+import org.l2j.gameserver.world.zone.ZoneType;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ExChangePostState;
 import org.l2j.gameserver.network.serverpackets.InventoryUpdate;
@@ -49,7 +49,7 @@ public final class RequestPostAttachment extends ClientPacket {
             return;
         }
 
-        if (!activeChar.isInsideZone(ZoneId.PEACE)) {
+        if (!activeChar.isInsideZone(ZoneType.PEACE)) {
             client.sendPacket(SystemMessageId.YOU_CANNOT_RECEIVE_IN_A_NON_PEACE_ZONE_LOCATION);
             return;
         }

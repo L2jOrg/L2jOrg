@@ -6,7 +6,7 @@ import org.l2j.gameserver.enums.PrivateStoreType;
 import org.l2j.gameserver.model.ManufactureItem;
 import org.l2j.gameserver.model.RecipeList;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.world.zone.ZoneId;
+import org.l2j.gameserver.world.zone.ZoneType;
 import org.l2j.gameserver.network.InvalidDataPacketException;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ActionFailed;
@@ -66,7 +66,7 @@ public final class RequestRecipeShopListSet extends ClientPacket {
             return;
         }
 
-        if (player.isInsideZone(ZoneId.NO_STORE)) {
+        if (player.isInsideZone(ZoneType.NO_STORE)) {
             client.sendPacket(SystemMessageId.YOU_CANNOT_OPEN_A_PRIVATE_WORKSHOP_HERE);
             client.sendPacket(ActionFailed.STATIC_PACKET);
             return;

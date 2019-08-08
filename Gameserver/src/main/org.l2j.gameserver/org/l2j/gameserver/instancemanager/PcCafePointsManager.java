@@ -3,7 +3,7 @@ package org.l2j.gameserver.instancemanager;
 import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.world.zone.ZoneId;
+import org.l2j.gameserver.world.zone.ZoneType;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ExPCCafePointInfo;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
@@ -15,7 +15,7 @@ public final class PcCafePointsManager {
     }
 
     public void givePcCafePoint(Player player, double exp) {
-        if (!Config.PC_CAFE_ENABLED || player.isInsideZone(ZoneId.PEACE) || player.isInsideZone(ZoneId.PVP) || player.isInsideZone(ZoneId.SIEGE) || (player.isOnlineInt() == 0) || player.isJailed()) {
+        if (!Config.PC_CAFE_ENABLED || player.isInsideZone(ZoneType.PEACE) || player.isInsideZone(ZoneType.PVP) || player.isInsideZone(ZoneType.SIEGE) || (player.isOnlineInt() == 0) || player.isJailed()) {
             return;
         }
 

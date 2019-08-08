@@ -4,7 +4,7 @@ import org.l2j.gameserver.instancemanager.BoatManager;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.actor.instance.Boat;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.world.zone.ZoneId;
+import org.l2j.gameserver.world.zone.ZoneType;
 import org.l2j.gameserver.network.serverpackets.ActionFailed;
 import org.l2j.gameserver.network.serverpackets.GetOnVehicle;
 
@@ -52,7 +52,7 @@ public final class RequestGetOnVehicle extends ClientPacket {
         activeChar.broadcastPacket(new GetOnVehicle(activeChar.getObjectId(), boat.getObjectId(), _pos));
 
         activeChar.setXYZ(boat.getX(), boat.getY(), boat.getZ());
-        activeChar.setInsideZone(ZoneId.PEACE, true);
+        activeChar.setInsideZone(ZoneType.PEACE, true);
         activeChar.revalidateZone(true);
     }
 }

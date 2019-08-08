@@ -378,32 +378,28 @@ public class ExServerPrimitive extends ServerPacket {
 
         for (Point point : _points) {
             writeByte((byte) 1); // Its the type in this case Point
-            writeString(point.getName());
-            final int color = point.getColor();
-            writeInt((color >> 16) & 0xFF); // R
-            writeInt((color >> 8) & 0xFF); // G
-            writeInt(color & 0xFF); // B
-            writeInt(point.isNameColored() ? 1 : 0);
-            writeInt(point.getX());
-            writeInt(point.getY());
-            writeInt(point.getZ());
+            writePoint(point);
         }
 
         for (Line line : _lines) {
             writeByte((byte) 2); // Its the type in this case Line
-            writeString(line.getName());
-            final int color = line.getColor();
-            writeInt((color >> 16) & 0xFF); // R
-            writeInt((color >> 8) & 0xFF); // G
-            writeInt(color & 0xFF); // B
-            writeInt(line.isNameColored() ? 1 : 0);
-            writeInt(line.getX());
-            writeInt(line.getY());
-            writeInt(line.getZ());
+            writePoint(line);
             writeInt(line.getX2());
             writeInt(line.getY2());
             writeInt(line.getZ2());
         }
+    }
+
+    private void writePoint(Point line) {
+        writeString(line.getName());
+        final int color = line.getColor();
+        writeInt((color >> 16) & 0xFF); // R
+        writeInt((color >> 8) & 0xFF); // G
+        writeInt(color & 0xFF); // B
+        writeInt(line.isNameColored() ? 1 : 0);
+        writeInt(line.getX());
+        writeInt(line.getY());
+        writeInt(line.getZ());
     }
 
 

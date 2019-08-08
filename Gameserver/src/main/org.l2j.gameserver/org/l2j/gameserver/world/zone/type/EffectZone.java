@@ -1,38 +1,20 @@
-/*
- * This file is part of the L2J Mobius project.
- *
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
- * General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this program. If not, see <http://www.gnu.org/licenses/>.
- */
 package org.l2j.gameserver.world.zone.type;
 
-import org.l2j.commons.util.Rnd;
 import org.l2j.commons.threading.ThreadPoolManager;
+import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.data.xml.impl.SkillData;
 import org.l2j.gameserver.enums.InstanceType;
-import org.l2j.gameserver.world.zone.ZoneManager;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.skills.Skill;
-import org.l2j.gameserver.world.zone.AbstractZoneSettings;
-import org.l2j.gameserver.world.zone.Zone;
-import org.l2j.gameserver.world.zone.TaskZoneSettings;
-import org.l2j.gameserver.world.zone.ZoneId;
 import org.l2j.gameserver.network.serverpackets.EtcStatusUpdate;
+import org.l2j.gameserver.world.zone.*;
 
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.concurrent.ConcurrentHashMap;
 
+import static java.util.Objects.nonNull;
+import static java.util.Objects.requireNonNullElseGet;
 import static org.l2j.gameserver.util.GameUtils.isPlayer;
 
 /**
@@ -41,25 +23,24 @@ import static org.l2j.gameserver.util.GameUtils.isPlayer;
  * @author kerberos
  */
 public final class EffectZone extends Zone {
-    protected boolean _bypassConditions;
-    protected volatile Map<Integer, Integer> _skills;
-    int _chance;
+
+    protected boolean bypassConditions;
+    protected volatile Map<Integer, Integer> skills;
+    private int chance;
     private int _initialDelay;
-    private int _reuse;
-    private boolean _isShowDangerIcon;
+    private int reuse;
+    private boolean isShowDangerIcon;
 
     public EffectZone(int id) {
         super(id);
-        _chance = 100;
-        _initialDelay = 0;
-        _reuse = 30000;
+
+        chance = 100;
+        reuse = 30000;
+
         setTargetType(InstanceType.Playable); // default only playable
-        _bypassConditions = false;
-        _isShowDangerIcon = true;
-        AbstractZoneSettings settings = ZoneManager.getSettings(getName());
-        if (settings == null) {
-            settings = new TaskZoneSettings();
-        }
+
+        isShowDangerIcon = true;
+        AbstractZoneSettings settings = requireNonNullElseGet(ZoneManager.getSettings(getName()), TaskZoneSettings::new);
         setSettings(settings);
     }
 
@@ -71,71 +52,53 @@ public final class EffectZone extends Zone {
     @Override
     public void setParameter(String name, String value) {
         switch (name) {
-            case "chance": {
-                _chance = Integer.parseInt(value);
-                break;
-            }
-            case "initialDelay": {
-                _initialDelay = Integer.parseInt(value);
-                break;
-            }
-            case "reuse": {
-                _reuse = Integer.parseInt(value);
-                break;
-            }
-            case "bypassSkillConditions": {
-                _bypassConditions = Boolean.parseBoolean(value);
-                break;
-            }
-            case "maxDynamicSkillCount": {
-                _skills = new ConcurrentHashMap<>(Integer.parseInt(value));
-                break;
-            }
-            case "showDangerIcon": {
-                _isShowDangerIcon = Boolean.parseBoolean(value);
-                break;
-            }
-            case "skillIdLvl": {
-                final String[] propertySplit = value.split(";");
-                _skills = new ConcurrentHashMap<>(propertySplit.length);
-                for (String skill : propertySplit) {
-                    final String[] skillSplit = skill.split("-");
-                    if (skillSplit.length != 2) {
-                        LOGGER.warn(getClass().getSimpleName() + ": invalid config property -> skillsIdLvl \"" + skill + "\"");
-                    } else {
-                        try {
-                            _skills.put(Integer.parseInt(skillSplit[0]), Integer.parseInt(skillSplit[1]));
-                        } catch (NumberFormatException nfe) {
-                            if (!skill.isEmpty()) {
-                                LOGGER.warn(getClass().getSimpleName() + ": invalid config property -> skillsIdLvl \"" + skillSplit[0] + "\"" + skillSplit[1]);
-                            }
-                        }
+            case "chance" -> chance = Integer.parseInt(value);
+            case "initialDelay" -> _initialDelay = Integer.parseInt(value);
+            case "reuse" -> reuse = Integer.parseInt(value);
+            case "bypassSkillConditions" -> bypassConditions = Boolean.parseBoolean(value);
+            case "maxDynamicSkillCount" -> skills = new ConcurrentHashMap<>(Integer.parseInt(value));
+            case "showDangerIcon" -> isShowDangerIcon = Boolean.parseBoolean(value);
+            case "skillIdLvl" -> parseSkills(value);
+            default -> super.setParameter(name, value);
+        }
+    }
+
+    private void parseSkills(String value) {
+        final String[] propertySplit = value.split(";");
+        skills = new ConcurrentHashMap<>(propertySplit.length);
+
+        for (String skill : propertySplit) {
+            final String[] skillSplit = skill.split("-");
+            if (skillSplit.length != 2) {
+                LOGGER.warn("invalid config property -> skillsIdLvl '{}'", skill);
+            } else {
+                try {
+                    skills.put(Integer.parseInt(skillSplit[0]), Integer.parseInt(skillSplit[1]));
+                } catch (NumberFormatException nfe) {
+                    if (!skill.isEmpty()) {
+                        LOGGER.warn("invalid config property -> skillsIdLvl '{}' '{}'", skillSplit[0], skillSplit[1]);
                     }
                 }
-                break;
-            }
-            default: {
-                super.setParameter(name, value);
             }
         }
     }
 
     @Override
     protected void onEnter(Creature character) {
-        if (_skills != null) {
+        if (nonNull(skills)) {
             if (getSettings().getTask() == null) {
                 synchronized (this) {
                     if (getSettings().getTask() == null) {
-                        getSettings().setTask(ThreadPoolManager.scheduleAtFixedRate(new ApplySkill(), _initialDelay, _reuse));
+                        getSettings().setTask(ThreadPoolManager.scheduleAtFixedRate(new ApplySkill(), _initialDelay, reuse));
                     }
                 }
             }
         }
 
         if (isPlayer(character)) {
-            character.setInsideZone(ZoneId.ALTERED, true);
-            if (_isShowDangerIcon) {
-                character.setInsideZone(ZoneId.DANGER_AREA, true);
+            character.setInsideZone(ZoneType.ALTERED, true);
+            if (isShowDangerIcon) {
+                character.setInsideZone(ZoneType.DANGER_AREA, true);
                 character.sendPacket(new EtcStatusUpdate(character.getActingPlayer()));
             }
         }
@@ -144,10 +107,10 @@ public final class EffectZone extends Zone {
     @Override
     protected void onExit(Creature character) {
         if (isPlayer(character)) {
-            character.setInsideZone(ZoneId.ALTERED, false);
-            if (_isShowDangerIcon) {
-                character.setInsideZone(ZoneId.DANGER_AREA, false);
-                if (!character.isInsideZone(ZoneId.DANGER_AREA)) {
+            character.setInsideZone(ZoneType.ALTERED, false);
+            if (isShowDangerIcon) {
+                character.setInsideZone(ZoneType.DANGER_AREA, false);
+                if (!character.isInsideZone(ZoneType.DANGER_AREA)) {
                     character.sendPacket(new EtcStatusUpdate(character.getActingPlayer()));
                 }
             }
@@ -159,7 +122,7 @@ public final class EffectZone extends Zone {
     }
 
     public int getChance() {
-        return _chance;
+        return chance;
     }
 
     public void addSkill(int skillId, int skillLvL) {
@@ -169,38 +132,38 @@ public final class EffectZone extends Zone {
             return;
         }
 
-        if (_skills == null) {
+        if (skills == null) {
             synchronized (this) {
-                if (_skills == null) {
-                    _skills = new ConcurrentHashMap<>(3);
+                if (skills == null) {
+                    skills = new ConcurrentHashMap<>(3);
                 }
             }
         }
-        _skills.put(skillId, skillLvL);
+        skills.put(skillId, skillLvL);
     }
 
     public void removeSkill(int skillId) {
-        if (_skills != null) {
-            _skills.remove(skillId);
+        if (skills != null) {
+            skills.remove(skillId);
         }
     }
 
     public void clearSkills() {
-        if (_skills != null) {
-            _skills.clear();
+        if (skills != null) {
+            skills.clear();
         }
     }
 
     public int getSkillLevel(int skillId) {
-        if ((_skills == null) || !_skills.containsKey(skillId)) {
+        if ((skills == null) || !skills.containsKey(skillId)) {
             return 0;
         }
-        return _skills.get(skillId);
+        return skills.get(skillId);
     }
 
     private final class ApplySkill implements Runnable {
         protected ApplySkill() {
-            if (_skills == null) {
+            if (skills == null) {
                 throw new IllegalStateException("No skills defined.");
             }
         }
@@ -210,10 +173,10 @@ public final class EffectZone extends Zone {
             if (isEnabled()) {
                 getCharactersInside().forEach(character ->
                 {
-                    if ((character != null) && !character.isDead() && (Rnd.get(100) < _chance)) {
-                        for (Entry<Integer, Integer> e : _skills.entrySet()) {
+                    if ((character != null) && !character.isDead() && (Rnd.get(100) < chance)) {
+                        for (Entry<Integer, Integer> e : skills.entrySet()) {
                             final Skill skill = SkillData.getInstance().getSkill(e.getKey(), e.getValue());
-                            if ((skill != null) && (_bypassConditions || skill.checkCondition(character, character))) {
+                            if ((skill != null) && (bypassConditions || skill.checkCondition(character, character))) {
                                 if (character.getAffectedSkillLevel(skill.getId()) < skill.getLevel()) {
                                     skill.activateSkill(character, character);
                                 }

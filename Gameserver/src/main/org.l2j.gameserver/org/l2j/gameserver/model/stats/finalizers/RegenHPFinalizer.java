@@ -21,7 +21,7 @@ import org.l2j.gameserver.model.residences.ResidenceFunctionType;
 import org.l2j.gameserver.model.stats.BaseStats;
 import org.l2j.gameserver.model.stats.IStatsFunction;
 import org.l2j.gameserver.model.stats.Stats;
-import org.l2j.gameserver.world.zone.ZoneId;
+import org.l2j.gameserver.world.zone.ZoneType;
 import org.l2j.gameserver.world.zone.type.*;
 import org.l2j.gameserver.world.zone.type.CastleZone;
 import org.l2j.gameserver.world.zone.type.FortZone;
@@ -73,7 +73,7 @@ public class RegenHPFinalizer implements IStatsFunction {
                 baseValue *= siegeModifier;
             }
 
-            if (player.isInsideZone(ZoneId.CLAN_HALL) && (player.getClan() != null) && (player.getClan().getHideoutId() > 0)) {
+            if (player.isInsideZone(ZoneType.CLAN_HALL) && (player.getClan() != null) && (player.getClan().getHideoutId() > 0)) {
                 final ClanHallZone zone = ZoneManager.getInstance().getZone(player, ClanHallZone.class);
                 final int posChIndex = zone == null ? -1 : zone.getResidenceId();
                 final int clanHallIndex = player.getClan().getHideoutId();
@@ -88,7 +88,7 @@ public class RegenHPFinalizer implements IStatsFunction {
                 }
             }
 
-            if (player.isInsideZone(ZoneId.CASTLE) && (player.getClan() != null) && (player.getClan().getCastleId() > 0)) {
+            if (player.isInsideZone(ZoneType.CASTLE) && (player.getClan() != null) && (player.getClan().getCastleId() > 0)) {
                 final CastleZone zone = ZoneManager.getInstance().getZone(player, CastleZone.class);
                 final int posCastleIndex = zone == null ? -1 : zone.getResidenceId();
                 final int castleIndex = player.getClan().getCastleId();
@@ -103,7 +103,7 @@ public class RegenHPFinalizer implements IStatsFunction {
                 }
             }
 
-            if (player.isInsideZone(ZoneId.FORT) && (player.getClan() != null) && (player.getClan().getFortId() > 0)) {
+            if (player.isInsideZone(ZoneType.FORT) && (player.getClan() != null) && (player.getClan().getFortId() > 0)) {
                 final FortZone zone = ZoneManager.getInstance().getZone(player, FortZone.class);
                 final int posFortIndex = zone == null ? -1 : zone.getResidenceId();
                 final int fortIndex = player.getClan().getFortId();
@@ -119,7 +119,7 @@ public class RegenHPFinalizer implements IStatsFunction {
             }
 
             // Mother Tree effect is calculated at last
-            if (player.isInsideZone(ZoneId.MOTHER_TREE)) {
+            if (player.isInsideZone(ZoneType.MOTHER_TREE)) {
                 final MotherTreeZone zone = ZoneManager.getInstance().getZone(player, MotherTreeZone.class);
                 final int hpBonus = zone == null ? 0 : zone.getHpRegenBonus();
                 baseValue += hpBonus;

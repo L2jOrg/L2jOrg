@@ -1,6 +1,5 @@
 package org.l2j.gameserver.world.zone.type;
 
-import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.world.zone.ZoneArea;
 
 /**
@@ -9,27 +8,19 @@ import org.l2j.gameserver.world.zone.ZoneArea;
  * @author UnAfraid
  */
 public class BannedSpawnTerritory {
-    private final String _name;
-    private final ZoneArea _territory;
+    private final String name;
+    private final ZoneArea area;
 
-    public BannedSpawnTerritory(String name, ZoneArea territory) {
-        _name = name;
-        _territory = territory;
+    public BannedSpawnTerritory(String name, ZoneArea area) {
+        this.name = name;
+        this.area = area;
     }
 
     public String getName() {
-        return _name;
-    }
-
-    public Location getRandomPoint() {
-        return _territory.getRandomPoint();
+        return name;
     }
 
     public boolean isInsideZone(int x, int y, int z) {
-        return _territory.isInsideZone(x, y, z);
-    }
-
-    public void visualizeZone(int z) {
-        _territory.visualizeZone(z);
+        return area.isInsideZone(x, y, z);
     }
 }

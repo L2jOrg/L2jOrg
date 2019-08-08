@@ -16,7 +16,7 @@ import org.l2j.gameserver.model.actor.templates.NpcTemplate;
 import org.l2j.gameserver.model.itemcontainer.PcInventory;
 import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.skills.Skill;
-import org.l2j.gameserver.world.zone.ZoneId;
+import org.l2j.gameserver.world.zone.ZoneType;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.*;
 import org.slf4j.Logger;
@@ -348,7 +348,7 @@ public final class BlockCheckerEngine {
                 }
                 // Set the current player arena
                 player.setBlockCheckerArena((byte) _arena);
-                player.setInsideZone(ZoneId.PVP, true);
+                player.setInsideZone(ZoneType.PVP, true);
                 // Send needed packets
                 player.sendPacket(initialPoints);
                 player.sendPacket(_closeUserInterface);
@@ -645,7 +645,7 @@ public final class BlockCheckerEngine {
                 broadcastRelationChanged(player);
                 // Teleport Back
                 player.teleToLocation(-57478, -60367, -2370);
-                player.setInsideZone(ZoneId.PVP, false);
+                player.setInsideZone(ZoneType.PVP, false);
                 // Send end packet
                 player.sendPacket(end);
                 player.broadcastUserInfo();

@@ -7,7 +7,7 @@ import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.tasks.player.TeleportTask;
 import org.l2j.gameserver.world.zone.Zone;
-import org.l2j.gameserver.world.zone.ZoneId;
+import org.l2j.gameserver.world.zone.ZoneType;
 import org.l2j.gameserver.network.SystemMessageId;
 
 import static org.l2j.gameserver.util.GameUtils.isPlayer;
@@ -36,14 +36,14 @@ public class JailZone extends Zone {
     @Override
     protected void onEnter(Creature character) {
         if (isPlayer(character)) {
-            character.setInsideZone(ZoneId.JAIL, true);
-            character.setInsideZone(ZoneId.NO_SUMMON_FRIEND, true);
+            character.setInsideZone(ZoneType.JAIL, true);
+            character.setInsideZone(ZoneType.NO_SUMMON_FRIEND, true);
             if (Config.JAIL_IS_PVP) {
-                character.setInsideZone(ZoneId.PVP, true);
+                character.setInsideZone(ZoneType.PVP, true);
                 character.sendPacket(SystemMessageId.YOU_HAVE_ENTERED_A_COMBAT_ZONE);
             }
             if (Config.JAIL_DISABLE_TRANSACTION) {
-                character.setInsideZone(ZoneId.NO_STORE, true);
+                character.setInsideZone(ZoneType.NO_STORE, true);
             }
         }
     }
@@ -52,11 +52,11 @@ public class JailZone extends Zone {
     protected void onExit(Creature character) {
         if (isPlayer(character)) {
             final Player player = character.getActingPlayer();
-            player.setInsideZone(ZoneId.JAIL, false);
-            player.setInsideZone(ZoneId.NO_SUMMON_FRIEND, false);
+            player.setInsideZone(ZoneType.JAIL, false);
+            player.setInsideZone(ZoneType.NO_SUMMON_FRIEND, false);
 
             if (Config.JAIL_IS_PVP) {
-                character.setInsideZone(ZoneId.PVP, false);
+                character.setInsideZone(ZoneType.PVP, false);
                 character.sendPacket(SystemMessageId.YOU_HAVE_LEFT_A_COMBAT_ZONE);
             }
 
@@ -66,7 +66,7 @@ public class JailZone extends Zone {
                 character.sendMessage("You cannot cheat your way out of here. You must wait until your jail time is over.");
             }
             if (Config.JAIL_DISABLE_TRANSACTION) {
-                character.setInsideZone(ZoneId.NO_STORE, false);
+                character.setInsideZone(ZoneType.NO_STORE, false);
             }
         }
     }

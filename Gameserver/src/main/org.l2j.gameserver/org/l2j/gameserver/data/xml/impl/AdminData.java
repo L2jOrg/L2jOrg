@@ -23,6 +23,8 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.concurrent.ConcurrentHashMap;
 
+import static java.util.Objects.isNull;
+
 
 /**
  * Loads administrator access levels and commands.
@@ -133,16 +135,15 @@ public final class AdminData extends GameXmlReader {
      */
     public boolean hasAccess(String adminCommand, AccessLevel accessLevel) {
         AdminCommandAccessRight acar = _adminCommandAccessRights.get(adminCommand);
-        if (acar == null) {
-            // Trying to avoid the spam for next time when the gm would try to use the same command
-            if ((accessLevel.getLevel() > 0) && (accessLevel.getLevel() == _highestLevel)) {
-                acar = new AdminCommandAccessRight(adminCommand, true, accessLevel.getLevel());
-                _adminCommandAccessRights.put(adminCommand, acar);
-                LOGGER.info(getClass().getSimpleName() + ": No rights defined for admin command " + adminCommand + " auto setting accesslevel: " + accessLevel.getLevel() + " !");
-            } else {
-                LOGGER.info(getClass().getSimpleName() + ": No rights defined for admin command " + adminCommand + " !");
+        if (isNull(acar)) {
+            if (accessLevel.getLevel() < _highestLevel) {
+                LOGGER.info("No rights defined for admin command {}!", adminCommand);
                 return false;
             }
+
+            acar = new AdminCommandAccessRight(adminCommand, true, accessLevel.getLevel());
+            _adminCommandAccessRights.put(adminCommand, acar);
+            LOGGER.info("No rights defined for admin command '{}' auto setting accesslevel: '{}'!", adminCommand, accessLevel.getLevel());
         }
         return acar.hasAccess(accessLevel);
     }
@@ -156,7 +157,7 @@ public final class AdminData extends GameXmlReader {
     public boolean requireConfirm(String command) {
         final AdminCommandAccessRight acar = _adminCommandAccessRights.get(command);
         if (acar == null) {
-            LOGGER.info(getClass().getSimpleName() + ": No rights defined for admin command " + command + ".");
+            LOGGER.info("No rights defined for admin command '{}'.", command);
             return false;
         }
         return acar.getRequireConfirm();

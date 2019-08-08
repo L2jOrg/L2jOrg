@@ -20,7 +20,7 @@ import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.items.ItemTemplate;
 import org.l2j.gameserver.model.skills.Skill;
-import org.l2j.gameserver.world.zone.ZoneId;
+import org.l2j.gameserver.world.zone.ZoneType;
 import org.l2j.gameserver.network.SystemMessageId;
 
 /**
@@ -43,7 +43,7 @@ public class ConditionPlayerCanUntransform extends Condition {
             canUntransform = false;
         } else if (player.isAlikeDead() || player.isCursedWeaponEquipped()) {
             canUntransform = false;
-        } else if (player.isFlyingMounted() && !player.isInsideZone(ZoneId.LANDING)) {
+        } else if (player.isFlyingMounted() && !player.isInsideZone(ZoneType.LANDING)) {
             player.sendPacket(SystemMessageId.YOU_ARE_TOO_HIGH_TO_PERFORM_THIS_ACTION_PLEASE_LOWER_YOUR_ALTITUDE_AND_TRY_AGAIN); // TODO: check if message is retail like.
             canUntransform = false;
         }

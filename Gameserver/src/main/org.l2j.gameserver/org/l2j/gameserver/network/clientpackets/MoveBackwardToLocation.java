@@ -12,7 +12,7 @@ import org.l2j.gameserver.model.events.EventDispatcher;
 import org.l2j.gameserver.model.events.impl.character.player.OnPlayerMoveRequest;
 import org.l2j.gameserver.model.events.returns.TerminateReturn;
 import org.l2j.gameserver.world.zone.Zone;
-import org.l2j.gameserver.world.zone.ZoneId;
+import org.l2j.gameserver.world.zone.ZoneType;
 import org.l2j.gameserver.world.zone.type.CastleZone;
 import org.l2j.gameserver.world.zone.type.FortZone;
 import org.l2j.gameserver.world.zone.type.HqZone;
@@ -75,8 +75,8 @@ public class MoveBackwardToLocation extends ClientPacket {
         final AdminTeleportType teleMode = activeChar.getTeleMode();
         if (!activeChar.isFlying() && (teleMode == AdminTeleportType.NORMAL))
         {
-            final boolean siegable = activeChar.isInsideZone(ZoneId.CASTLE) || activeChar.isInsideZone(ZoneId.FORT);
-            boolean waterContact = activeChar.isInsideZone(ZoneId.WATER);
+            final boolean siegable = activeChar.isInsideZone(ZoneType.CASTLE) || activeChar.isInsideZone(ZoneType.FORT);
+            boolean waterContact = activeChar.isInsideZone(ZoneType.WATER);
             if (siegable && !waterContact) // Need to know if activeChar is over water only when siegable.
             {
                 for (Zone zone : ZoneManager.getInstance().getZones(_originX, _originY))
@@ -88,7 +88,7 @@ public class MoveBackwardToLocation extends ClientPacket {
                     }
                 }
             }
-            if (activeChar.isInsideZone(ZoneId.HQ) || (siegable && waterContact))
+            if (activeChar.isInsideZone(ZoneType.HQ) || (siegable && waterContact))
             {
                 boolean limited = false;
                 boolean water = false;

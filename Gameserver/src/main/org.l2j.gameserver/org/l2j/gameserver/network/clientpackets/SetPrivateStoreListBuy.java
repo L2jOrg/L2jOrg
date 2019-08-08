@@ -11,7 +11,7 @@ import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.ensoul.EnsoulOption;
 import org.l2j.gameserver.model.itemcontainer.Inventory;
 import org.l2j.gameserver.model.items.ItemTemplate;
-import org.l2j.gameserver.world.zone.ZoneId;
+import org.l2j.gameserver.world.zone.ZoneType;
 import org.l2j.gameserver.network.InvalidDataPacketException;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ActionFailed;
@@ -118,7 +118,7 @@ public final class SetPrivateStoreListBuy extends ClientPacket {
             return;
         }
 
-        if (player.isInsideZone(ZoneId.NO_STORE)) {
+        if (player.isInsideZone(ZoneType.NO_STORE)) {
             player.sendPacket(new PrivateStoreManageListBuy(1, player));
             player.sendPacket(new PrivateStoreManageListBuy(2, player));
             player.sendPacket(SystemMessageId.YOU_CANNOT_OPEN_A_PRIVATE_STORE_HERE);

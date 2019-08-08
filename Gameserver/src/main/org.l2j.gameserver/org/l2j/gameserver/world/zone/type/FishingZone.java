@@ -7,7 +7,7 @@ import org.l2j.gameserver.model.PcCondOverride;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.world.zone.Zone;
-import org.l2j.gameserver.world.zone.ZoneId;
+import org.l2j.gameserver.world.zone.ZoneType;
 import org.l2j.gameserver.network.serverpackets.fishing.ExAutoFishAvailable;
 
 import java.lang.ref.WeakReference;
@@ -27,7 +27,7 @@ public class FishingZone extends Zone {
     @Override
     protected void onEnter(Creature character) {
         if (isPlayer(character)) {
-            if ((Config.ALLOW_FISHING || character.canOverrideCond(PcCondOverride.ZONE_CONDITIONS)) && !character.isInsideZone(ZoneId.FISHING)) {
+            if ((Config.ALLOW_FISHING || character.canOverrideCond(PcCondOverride.ZONE_CONDITIONS)) && !character.isInsideZone(ZoneType.FISHING)) {
                 final WeakReference<Player> weakPlayer = new WeakReference<>(character.getActingPlayer());
                 ThreadPoolManager.execute(new Runnable() {
                     @Override
@@ -35,7 +35,7 @@ public class FishingZone extends Zone {
                         final Player player = weakPlayer.get();
                         if (player != null) {
                             final Fishing fishing = player.getFishing();
-                            if (player.isInsideZone(ZoneId.FISHING)) {
+                            if (player.isInsideZone(ZoneType.FISHING)) {
                                 if (fishing.canFish() && !fishing.isFishing()) {
                                     if (fishing.isAtValidLocation()) {
                                         player.sendPacket(ExAutoFishAvailable.YES);
@@ -51,14 +51,14 @@ public class FishingZone extends Zone {
                     }
                 });
             }
-            character.setInsideZone(ZoneId.FISHING, true);
+            character.setInsideZone(ZoneType.FISHING, true);
         }
     }
 
     @Override
     protected void onExit(Creature character) {
         if (isPlayer(character)) {
-            character.setInsideZone(ZoneId.FISHING, false);
+            character.setInsideZone(ZoneType.FISHING, false);
             character.sendPacket(ExAutoFishAvailable.NO);
         }
     }

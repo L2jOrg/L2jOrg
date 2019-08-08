@@ -12,7 +12,7 @@ import org.l2j.gameserver.model.instancezone.Instance;
 import org.l2j.gameserver.model.interfaces.IIdentifiable;
 import org.l2j.gameserver.model.interfaces.INamable;
 import org.l2j.gameserver.model.spawns.NpcSpawnTemplate;
-import org.l2j.gameserver.world.zone.ZoneId;
+import org.l2j.gameserver.world.zone.ZoneType;
 import org.l2j.gameserver.taskmanager.RespawnTaskManager;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -392,7 +392,7 @@ public class Spawn extends Location implements IIdentifiable, INamable {
             final int randX = newlocx + Rnd.get(Config.MOB_MIN_SPAWN_RANGE, Config.MOB_MAX_SPAWN_RANGE);
             final int randY = newlocy + Rnd.get(Config.MOB_MIN_SPAWN_RANGE, Config.MOB_MAX_SPAWN_RANGE);
 
-            if (isMonster(npc) && !npc.isQuestMonster() && !isWalker(npc) && !npc.isInsideZone(ZoneId.NO_BOOKMARK) && (getInstanceId() == 0) && GeoEngine.getInstance().canMoveToTarget(newlocx, newlocy, newlocz, randX, randY, newlocz, npc.getInstanceWorld()) && !getTemplate().isUndying() && !npc.isRaid() && !npc.isRaidMinion() && !Config.MOBS_LIST_NOT_RANDOM.contains(npc.getId())) {
+            if (isMonster(npc) && !npc.isQuestMonster() && !isWalker(npc) && !npc.isInsideZone(ZoneType.NO_BOOKMARK) && (getInstanceId() == 0) && GeoEngine.getInstance().canMoveToTarget(newlocx, newlocy, newlocz, randX, randY, newlocz, npc.getInstanceWorld()) && !getTemplate().isUndying() && !npc.isRaid() && !npc.isRaidMinion() && !Config.MOBS_LIST_NOT_RANDOM.contains(npc.getId())) {
                 newlocx = randX;
                 newlocy = randY;
             }

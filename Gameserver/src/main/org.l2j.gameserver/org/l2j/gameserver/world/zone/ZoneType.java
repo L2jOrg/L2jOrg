@@ -5,7 +5,7 @@ package org.l2j.gameserver.world.zone;
  *
  * @author Zoey76
  */
-public enum ZoneId {
+public enum ZoneType {
     PVP,
     PEACE,
     SIEGE,

@@ -19,7 +19,7 @@ package org.l2j.gameserver.world.zone.type;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.world.zone.ZoneRespawn;
-import org.l2j.gameserver.world.zone.ZoneId;
+import org.l2j.gameserver.world.zone.ZoneType;
 
 /**
  * based on Kerberos work for custom L2CastleTeleportZone
@@ -44,12 +44,12 @@ public class ResidenceTeleportZone extends ZoneRespawn {
 
     @Override
     protected void onEnter(Creature character) {
-        character.setInsideZone(ZoneId.NO_SUMMON_FRIEND, true); // FIXME: Custom ?
+        character.setInsideZone(ZoneType.NO_SUMMON_FRIEND, true); // FIXME: Custom ?
     }
 
     @Override
     protected void onExit(Creature character) {
-        character.setInsideZone(ZoneId.NO_SUMMON_FRIEND, false); // FIXME: Custom ?
+        character.setInsideZone(ZoneType.NO_SUMMON_FRIEND, false); // FIXME: Custom ?
     }
 
     @Override

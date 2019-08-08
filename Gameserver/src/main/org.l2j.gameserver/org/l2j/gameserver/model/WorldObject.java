@@ -12,7 +12,7 @@ import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.events.ListenersContainer;
 import org.l2j.gameserver.model.instancezone.Instance;
 import org.l2j.gameserver.model.interfaces.*;
-import org.l2j.gameserver.world.zone.ZoneId;
+import org.l2j.gameserver.world.zone.ZoneType;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ActionFailed;
 import org.l2j.gameserver.network.serverpackets.DeleteObject;
@@ -260,7 +260,7 @@ public abstract class WorldObject extends ListenersContainer implements IIdentif
      * @param zone the zone Id to check
      * @return {@code true} if the object is in that zone Id
      */
-    public boolean isInsideZone(ZoneId zone) {
+    public boolean isInsideZone(ZoneType zone) {
         return false;
     }
 

@@ -6,7 +6,7 @@ import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.Summon;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.world.zone.Zone;
-import org.l2j.gameserver.world.zone.ZoneId;
+import org.l2j.gameserver.world.zone.ZoneType;
 
 import static org.l2j.gameserver.util.GameUtils.isPlayer;
 
@@ -36,22 +36,22 @@ public class PeaceZone extends Zone {
         }
 
         if (Config.PEACE_ZONE_MODE != 2) {
-            character.setInsideZone(ZoneId.PEACE, true);
+            character.setInsideZone(ZoneType.PEACE, true);
         }
 
         if (!getAllowStore()) {
-            character.setInsideZone(ZoneId.NO_STORE, true);
+            character.setInsideZone(ZoneType.NO_STORE, true);
         }
     }
 
     @Override
     protected void onExit(Creature character) {
         if (Config.PEACE_ZONE_MODE != 2) {
-            character.setInsideZone(ZoneId.PEACE, false);
+            character.setInsideZone(ZoneType.PEACE, false);
         }
 
         if (!getAllowStore()) {
-            character.setInsideZone(ZoneId.NO_STORE, false);
+            character.setInsideZone(ZoneType.NO_STORE, false);
         }
     }
 
@@ -75,7 +75,7 @@ public class PeaceZone extends Zone {
         } else {
             for (Creature character : getCharactersInside()) {
                 if (character != null) {
-                    removeCharacter(character);
+                    removeCreature(character);
                 }
             }
         }

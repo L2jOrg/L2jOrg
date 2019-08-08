@@ -45,7 +45,7 @@ import org.l2j.gameserver.model.skills.CommonSkill;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.model.skills.SkillCaster;
 import org.l2j.gameserver.world.zone.Zone;
-import org.l2j.gameserver.world.zone.ZoneId;
+import org.l2j.gameserver.world.zone.ZoneType;
 import org.l2j.gameserver.network.serverpackets.ExPVPMatchCCRecord;
 import org.l2j.gameserver.network.serverpackets.ExShowScreenMessage;
 import org.l2j.gameserver.network.serverpackets.MagicSkillUse;
@@ -677,7 +677,7 @@ public class TvT extends Event implements ScriptEvent
 			player.sendMessage("You cannot register while in an instance.");
 			return false;
 		}
-		if (player.isInSiege() || player.isInsideZone(ZoneId.SIEGE))
+		if (player.isInSiege() || player.isInsideZone(ZoneType.SIEGE))
 		{
 			player.sendMessage("You cannot register while on a siege.");
 			return false;

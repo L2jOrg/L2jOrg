@@ -21,7 +21,7 @@ import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.model.skills.targets.TargetType;
-import org.l2j.gameserver.world.zone.ZoneId;
+import org.l2j.gameserver.world.zone.ZoneType;
 import org.l2j.gameserver.network.SystemMessageId;
 
 import static org.l2j.gameserver.util.GameUtils.isPlayable;
@@ -42,7 +42,7 @@ public class FortressFlagpole implements ITargetTypeHandler
 	public WorldObject getTarget(Creature activeChar, WorldObject selectedTarget, Skill skill, boolean forceUse, boolean dontMove, boolean sendMessage)
 	{
 		final WorldObject target = activeChar.getTarget();
-		if ((target != null) && activeChar.isInsideZone(ZoneId.HQ) && activeChar.isInsideZone(ZoneId.FORT) && !isPlayable(target) && target.getName().toLowerCase().contains("flagpole"))
+		if ((target != null) && activeChar.isInsideZone(ZoneType.HQ) && activeChar.isInsideZone(ZoneType.FORT) && !isPlayable(target) && target.getName().toLowerCase().contains("flagpole"))
 		{
 			return target;
 		}

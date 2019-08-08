@@ -21,7 +21,7 @@ import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.quest.Quest;
 import org.l2j.gameserver.model.skills.AbnormalVisualEffect;
 import org.l2j.gameserver.model.variables.PlayerVariables;
-import org.l2j.gameserver.world.zone.ZoneId;
+import org.l2j.gameserver.world.zone.ZoneType;
 import org.l2j.gameserver.network.ConnectionState;
 import org.l2j.gameserver.network.Disconnection;
 import org.l2j.gameserver.network.SystemMessageId;
@@ -342,7 +342,7 @@ public class EnterWorld extends ClientPacket {
 
         // Attacker or spectator logging in to a siege zone.
         // Actually should be checked for inside castle only?
-        if (!player.canOverrideCond(PcCondOverride.ZONE_CONDITIONS) && player.isInsideZone(ZoneId.SIEGE) && (!player.isInSiege() || (player.getSiegeState() < 2))) {
+        if (!player.canOverrideCond(PcCondOverride.ZONE_CONDITIONS) && player.isInsideZone(ZoneType.SIEGE) && (!player.isInSiege() || (player.getSiegeState() < 2))) {
             player.teleToLocation(TeleportWhereType.TOWN);
         }
 
