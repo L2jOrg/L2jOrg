@@ -12,7 +12,6 @@ import org.l2j.gameserver.model.actor.instance.Door;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.olympiad.OlympiadGameTask;
 import org.l2j.gameserver.world.zone.AbstractZoneSettings;
-import org.l2j.gameserver.world.zone.ZoneRespawn;
 import org.l2j.gameserver.world.zone.ZoneType;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ExOlympiadMatchEnd;

@@ -1,9 +1,9 @@
 package org.l2j.gameserver.world.zone;
 
+import io.github.joealisson.primitive.ArrayIntList;
 import io.github.joealisson.primitive.HashIntMap;
+import io.github.joealisson.primitive.IntList;
 import io.github.joealisson.primitive.IntMap;
-import io.github.joealisson.primitive.lists.IntList;
-import io.github.joealisson.primitive.lists.impl.ArrayIntList;
 import org.l2j.commons.configuration.Configurator;
 import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.Creature;
@@ -18,6 +18,7 @@ import org.l2j.gameserver.world.zone.form.ZonePolygonArea;
 import org.l2j.gameserver.world.zone.type.OlympiadStadiumZone;
 import org.l2j.gameserver.world.zone.type.RespawnZone;
 import org.l2j.gameserver.world.zone.type.SpawnTerritory;
+import org.l2j.gameserver.world.zone.type.ZoneRespawn;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
@@ -60,7 +61,7 @@ public final class ZoneManager extends GameXmlReader {
         zoneRegions = new ZoneRegion[regionsX][regionsY];
         for (int x = 0; x < regionsX; x++) {
             for (int y = 0; y < regionsY; y++) {
-                zoneRegions[x][y] = new ZoneRegion(x, y);
+                zoneRegions[x][y] = new ZoneRegion();
             }
         }
         LOGGER.info("Zone Region Grid set up: {} by {}", regionsX, regionsY);

@@ -1471,7 +1471,7 @@ public class Clan implements IIdentifiable, INamable {
 
     private void restoreRankPrivs() {
         try (Connection con = DatabaseFactory.getInstance().getConnection();
-             PreparedStatement ps = con.prepareStatement("SELECT privs,rank,party FROM clan_privs WHERE clan_id=?")) {
+             PreparedStatement ps = con.prepareStatement("SELECT privs,`rank`,party FROM clan_privs WHERE clan_id=?")) {
             // Retrieve all skills of this Player from the database
             ps.setInt(1, _clanId);
             // LOGGER.warn("clanPrivs restore for ClanId : "+getClanId());
@@ -1509,7 +1509,7 @@ public class Clan implements IIdentifiable, INamable {
             _privs.get(rank).setPrivs(privs);
 
             try (Connection con = DatabaseFactory.getInstance().getConnection();
-                 PreparedStatement ps = con.prepareStatement("INSERT INTO clan_privs (clan_id,rank,party,privs) VALUES (?,?,?,?) ON DUPLICATE KEY UPDATE privs = ?")) {
+                 PreparedStatement ps = con.prepareStatement("INSERT INTO clan_privs (clan_id,`rank`,party,privs) VALUES (?,?,?,?) ON DUPLICATE KEY UPDATE privs = ?")) {
                 // Retrieve all skills of this Player from the database
                 ps.setInt(1, _clanId);
                 ps.setInt(2, rank);
@@ -1536,7 +1536,7 @@ public class Clan implements IIdentifiable, INamable {
             _privs.put(rank, new RankPrivs(rank, 0, privs));
 
             try (Connection con = DatabaseFactory.getInstance().getConnection();
-                 PreparedStatement ps = con.prepareStatement("INSERT INTO clan_privs (clan_id,rank,party,privs) VALUES (?,?,?,?)")) {
+                 PreparedStatement ps = con.prepareStatement("INSERT INTO clan_privs (clan_id,`rank`,party,privs) VALUES (?,?,?,?)")) {
                 // Retrieve all skills of this Player from the database
                 ps.setInt(1, _clanId);
                 ps.setInt(2, rank);

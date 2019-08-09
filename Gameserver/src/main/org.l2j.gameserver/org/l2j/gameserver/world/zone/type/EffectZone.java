@@ -24,7 +24,7 @@ import static org.l2j.gameserver.util.GameUtils.isPlayer;
  */
 public final class EffectZone extends Zone {
 
-    protected boolean bypassConditions;
+    private boolean bypassConditions;
     protected volatile Map<Integer, Integer> skills;
     private int chance;
     private int _initialDelay;
