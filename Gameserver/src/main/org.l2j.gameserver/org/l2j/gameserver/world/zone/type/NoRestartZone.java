@@ -14,9 +14,9 @@ import static org.l2j.gameserver.util.GameUtils.isPlayer;
  * @author GKR
  */
 public class NoRestartZone extends Zone {
-    private int _restartAllowedTime = 0;
-    private int _restartTime = 0;
-    private boolean _enabled = true;
+    private int restartAllowedTime = 0;
+    private int restartTime = 0;
+    private boolean enabled = true;
 
     public NoRestartZone(int id) {
         super(id);
@@ -25,64 +25,46 @@ public class NoRestartZone extends Zone {
     @Override
     public void setParameter(String name, String value) {
         if (name.equalsIgnoreCase("default_enabled")) {
-            _enabled = Boolean.parseBoolean(value);
+            enabled = Boolean.parseBoolean(value);
         } else if (name.equalsIgnoreCase("restartAllowedTime")) {
-            _restartAllowedTime = Integer.parseInt(value) * 1000;
+            restartAllowedTime = Integer.parseInt(value) * 1000;
         } else if (name.equalsIgnoreCase("restartTime")) {
-            _restartTime = Integer.parseInt(value) * 1000;
-        } else if (name.equalsIgnoreCase("instanceId")) {
-            // Do nothing.
-        } else {
+            restartTime = Integer.parseInt(value) * 1000;
+        } else if (!name.equalsIgnoreCase("instanceId")) {
             super.setParameter(name, value);
         }
     }
 
     @Override
-    protected void onEnter(Creature character) {
-        if (!_enabled) {
+    protected void onEnter(Creature creature) {
+        if (!enabled) {
             return;
         }
 
-        if (isPlayer(character)) {
-            character.setInsideZone(ZoneType.NO_RESTART, true);
+        if (isPlayer(creature)) {
+            creature.setInsideZone(ZoneType.NO_RESTART, true);
         }
     }
 
     @Override
-    protected void onExit(Creature character) {
-        if (!_enabled) {
+    protected void onExit(Creature creature) {
+        if (!enabled) {
             return;
         }
 
-        if (isPlayer(character)) {
-            character.setInsideZone(ZoneType.NO_RESTART, false);
+        if (isPlayer(creature)) {
+            creature.setInsideZone(ZoneType.NO_RESTART, false);
         }
     }
 
     @Override
     public void onPlayerLoginInside(Player player) {
-        if (!_enabled) {
+        if (!enabled) {
             return;
         }
 
-        if (((System.currentTimeMillis() - player.getLastAccess()) > _restartTime) && ((System.currentTimeMillis() - player.getLastAccess()) > _restartAllowedTime)) {
+        if (((System.currentTimeMillis() - player.getLastAccess()) > restartTime) && ((System.currentTimeMillis() - player.getLastAccess()) > restartAllowedTime)) {
             player.teleToLocation(TeleportWhereType.TOWN);
         }
-    }
-
-    public int getRestartAllowedTime() {
-        return _restartAllowedTime;
-    }
-
-    public void setRestartAllowedTime(int time) {
-        _restartAllowedTime = time;
-    }
-
-    public int getRestartTime() {
-        return _restartTime;
-    }
-
-    public void setRestartTime(int time) {
-        _restartTime = time;
     }
 }

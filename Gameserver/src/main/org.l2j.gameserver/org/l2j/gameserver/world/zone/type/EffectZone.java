@@ -2,19 +2,20 @@ package org.l2j.gameserver.world.zone.type;
 
 import org.l2j.commons.threading.ThreadPoolManager;
 import org.l2j.commons.util.Rnd;
-import org.l2j.gameserver.data.xml.impl.SkillData;
 import org.l2j.gameserver.enums.InstanceType;
 import org.l2j.gameserver.model.actor.Creature;
+import org.l2j.gameserver.model.holders.SkillHolder;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.network.serverpackets.EtcStatusUpdate;
 import org.l2j.gameserver.world.zone.*;
 
-import java.util.Map;
-import java.util.Map.Entry;
-import java.util.concurrent.ConcurrentHashMap;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.stream.Collectors;
 
-import static java.util.Objects.nonNull;
-import static java.util.Objects.requireNonNullElseGet;
+import static java.util.Objects.*;
+import static org.l2j.commons.util.Util.isInteger;
 import static org.l2j.gameserver.util.GameUtils.isPlayer;
 
 /**
@@ -24,10 +25,11 @@ import static org.l2j.gameserver.util.GameUtils.isPlayer;
  */
 public final class EffectZone extends Zone {
 
+    private final Object taskLock = new Object();
     private boolean bypassConditions;
-    protected volatile Map<Integer, Integer> skills;
+    private List<SkillHolder> skills;
     private int chance;
-    private int _initialDelay;
+    private int initialDelay;
     private int reuse;
     private boolean isShowDangerIcon;
 
@@ -53,10 +55,10 @@ public final class EffectZone extends Zone {
     public void setParameter(String name, String value) {
         switch (name) {
             case "chance" -> chance = Integer.parseInt(value);
-            case "initialDelay" -> _initialDelay = Integer.parseInt(value);
+            case "initialDelay" -> initialDelay = Integer.parseInt(value);
             case "reuse" -> reuse = Integer.parseInt(value);
             case "bypassSkillConditions" -> bypassConditions = Boolean.parseBoolean(value);
-            case "maxDynamicSkillCount" -> skills = new ConcurrentHashMap<>(Integer.parseInt(value));
+            case "maxDynamicSkillCount" -> skills = new ArrayList<>(Integer.parseInt(value));
             case "showDangerIcon" -> isShowDangerIcon = Boolean.parseBoolean(value);
             case "skillIdLvl" -> parseSkills(value);
             default -> super.setParameter(name, value);
@@ -65,105 +67,61 @@ public final class EffectZone extends Zone {
 
     private void parseSkills(String value) {
         final String[] propertySplit = value.split(";");
-        skills = new ConcurrentHashMap<>(propertySplit.length);
 
-        for (String skill : propertySplit) {
-            final String[] skillSplit = skill.split("-");
-            if (skillSplit.length != 2) {
-                LOGGER.warn("invalid config property -> skillsIdLvl '{}'", skill);
-            } else {
-                try {
-                    skills.put(Integer.parseInt(skillSplit[0]), Integer.parseInt(skillSplit[1]));
-                } catch (NumberFormatException nfe) {
-                    if (!skill.isEmpty()) {
-                        LOGGER.warn("invalid config property -> skillsIdLvl '{}' '{}'", skillSplit[0], skillSplit[1]);
-                    }
+        skills = Arrays.stream(propertySplit)
+                .map(s -> s.split("-"))
+                .filter(this::validSkillProperty)
+                .map(s -> new SkillHolder(Integer.parseInt(s[0]), Integer.parseInt(s[1])))
+                .collect(Collectors.toList());
+    }
+
+    private boolean validSkillProperty(String[] skillIdLvl) {
+        if (skillIdLvl.length != 2 || !isInteger(skillIdLvl[0]) || !isInteger(skillIdLvl[1])) {
+            LOGGER.warn("invalid config property -> skillsIdLvl '{}'", (Object) skillIdLvl);
+            return false;
+        }
+        return true;
+    }
+
+    @Override
+    protected void onEnter(Creature creature) {
+        if (nonNull(skills) && isNull(getSettings().getTask())) {
+            synchronized (taskLock) {
+                if (getSettings().getTask() == null) {
+                    getSettings().setTask(ThreadPoolManager.scheduleAtFixedRate(new ApplySkill(), initialDelay, reuse));
                 }
+            }
+        }
+
+        if (isPlayer(creature)) {
+            creature.setInsideZone(ZoneType.ALTERED, true);
+            if (isShowDangerIcon) {
+                creature.setInsideZone(ZoneType.DANGER_AREA, true);
+                creature.sendPacket(new EtcStatusUpdate(creature.getActingPlayer()));
             }
         }
     }
 
     @Override
-    protected void onEnter(Creature character) {
-        if (nonNull(skills)) {
-            if (getSettings().getTask() == null) {
-                synchronized (this) {
-                    if (getSettings().getTask() == null) {
-                        getSettings().setTask(ThreadPoolManager.scheduleAtFixedRate(new ApplySkill(), _initialDelay, reuse));
-                    }
+    protected void onExit(Creature creature) {
+        if (isPlayer(creature)) {
+            creature.setInsideZone(ZoneType.ALTERED, false);
+            if (isShowDangerIcon) {
+                creature.setInsideZone(ZoneType.DANGER_AREA, false);
+                if (!creature.isInsideZone(ZoneType.DANGER_AREA)) {
+                    creature.sendPacket(new EtcStatusUpdate(creature.getActingPlayer()));
                 }
             }
         }
 
-        if (isPlayer(character)) {
-            character.setInsideZone(ZoneType.ALTERED, true);
-            if (isShowDangerIcon) {
-                character.setInsideZone(ZoneType.DANGER_AREA, true);
-                character.sendPacket(new EtcStatusUpdate(character.getActingPlayer()));
-            }
-        }
-    }
-
-    @Override
-    protected void onExit(Creature character) {
-        if (isPlayer(character)) {
-            character.setInsideZone(ZoneType.ALTERED, false);
-            if (isShowDangerIcon) {
-                character.setInsideZone(ZoneType.DANGER_AREA, false);
-                if (!character.isInsideZone(ZoneType.DANGER_AREA)) {
-                    character.sendPacket(new EtcStatusUpdate(character.getActingPlayer()));
-                }
-            }
-        }
-
-        if (creatures.isEmpty() && (getSettings().getTask() != null)) {
+        if (creatures.isEmpty() && nonNull(getSettings().getTask())) {
             getSettings().clear();
         }
     }
 
-    public int getChance() {
-        return chance;
-    }
-
-    public void addSkill(int skillId, int skillLvL) {
-        if (skillLvL < 1) // remove skill
-        {
-            removeSkill(skillId);
-            return;
-        }
-
-        if (skills == null) {
-            synchronized (this) {
-                if (skills == null) {
-                    skills = new ConcurrentHashMap<>(3);
-                }
-            }
-        }
-        skills.put(skillId, skillLvL);
-    }
-
-    public void removeSkill(int skillId) {
-        if (skills != null) {
-            skills.remove(skillId);
-        }
-    }
-
-    public void clearSkills() {
-        if (skills != null) {
-            skills.clear();
-        }
-    }
-
-    public int getSkillLevel(int skillId) {
-        if ((skills == null) || !skills.containsKey(skillId)) {
-            return 0;
-        }
-        return skills.get(skillId);
-    }
-
     private final class ApplySkill implements Runnable {
-        protected ApplySkill() {
-            if (skills == null) {
+        ApplySkill() {
+            if (isNull(skills)) {
                 throw new IllegalStateException("No skills defined.");
             }
         }
@@ -171,20 +129,21 @@ public final class EffectZone extends Zone {
         @Override
         public void run() {
             if (isEnabled()) {
-                getCharactersInside().forEach(character ->
-                {
-                    if ((character != null) && !character.isDead() && (Rnd.get(100) < chance)) {
-                        for (Entry<Integer, Integer> e : skills.entrySet()) {
-                            final Skill skill = SkillData.getInstance().getSkill(e.getKey(), e.getValue());
-                            if ((skill != null) && (bypassConditions || skill.checkCondition(character, character))) {
-                                if (character.getAffectedSkillLevel(skill.getId()) < skill.getLevel()) {
-                                    skill.activateSkill(character, character);
-                                }
-                            }
-                        }
-                    }
-                });
+                skills.stream()
+                        .map(SkillHolder::getSkill)
+                        .forEach(s -> getCreaturesInside().stream().
+                                filter(c -> canApplySkill(c) && checkSkillCondition(s, c))
+                                .forEach(c -> s.activateSkill(c, c)) );
+
             }
+        }
+
+        private boolean checkSkillCondition(Skill skill, Creature creature) {
+            return nonNull(skill) && (bypassConditions || skill.checkCondition(creature, creature)) && creature.getAffectedSkillLevel(skill.getId()) < skill.getLevel();
+        }
+
+        private boolean canApplySkill(Creature creature) {
+            return nonNull(creature) && !creature.isDead() && Rnd.chance(chance);
         }
     }
 }

@@ -1,13 +1,12 @@
 package org.l2j.gameserver.world.zone.type;
 
 import org.l2j.gameserver.Config;
-import org.l2j.gameserver.world.World;
 import org.l2j.gameserver.model.actor.Creature;
-import org.l2j.gameserver.model.actor.Summon;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.world.zone.Zone;
 import org.l2j.gameserver.world.zone.ZoneType;
 
+import static java.util.Objects.nonNull;
 import static org.l2j.gameserver.util.GameUtils.isPlayer;
 
 /**
@@ -21,13 +20,13 @@ public class PeaceZone extends Zone {
     }
 
     @Override
-    protected void onEnter(Creature character) {
+    protected void onEnter(Creature creature) {
         if (!isEnabled()) {
             return;
         }
 
-        if (isPlayer(character)) {
-            final Player player = character.getActingPlayer();
+        if (isPlayer(creature)) {
+            final Player player = creature.getActingPlayer();
             // PVP possible during siege, now for siege participants only
             // Could also check if this town is in siege, or if any siege is going on
             if ((player.getSiegeState() != 0) && (Config.PEACE_ZONE_MODE == 1)) {
@@ -36,22 +35,22 @@ public class PeaceZone extends Zone {
         }
 
         if (Config.PEACE_ZONE_MODE != 2) {
-            character.setInsideZone(ZoneType.PEACE, true);
+            creature.setInsideZone(ZoneType.PEACE, true);
         }
 
         if (!getAllowStore()) {
-            character.setInsideZone(ZoneType.NO_STORE, true);
+            creature.setInsideZone(ZoneType.NO_STORE, true);
         }
     }
 
     @Override
-    protected void onExit(Creature character) {
+    protected void onExit(Creature creature) {
         if (Config.PEACE_ZONE_MODE != 2) {
-            character.setInsideZone(ZoneType.PEACE, false);
+            creature.setInsideZone(ZoneType.PEACE, false);
         }
 
         if (!getAllowStore()) {
-            character.setInsideZone(ZoneType.NO_STORE, false);
+            creature.setInsideZone(ZoneType.NO_STORE, false);
         }
     }
 
@@ -59,25 +58,17 @@ public class PeaceZone extends Zone {
     public void setEnabled(boolean state) {
         super.setEnabled(state);
         if (state) {
-            for (Player player : World.getInstance().getPlayers()) {
-                if ((player != null) && isInsideZone(player)) {
-                    revalidateInZone(player);
+            getPlayersInside().forEach(player -> {
+                revalidateInZone(player);
 
-                    if (player.getPet() != null) {
-                        revalidateInZone(player.getPet());
-                    }
-
-                    for (Summon summon : player.getServitors().values()) {
-                        revalidateInZone(summon);
-                    }
+                if(nonNull(player.getPet())) {
+                    revalidateInZone(player.getPet());
                 }
-            }
+
+                player.getServitors().values().forEach(this::revalidateInZone);
+            });
         } else {
-            for (Creature character : getCharactersInside()) {
-                if (character != null) {
-                    removeCreature(character);
-                }
-            }
+            getCreaturesInside().forEach(this::removeCreature);
         }
     }
 }

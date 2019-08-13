@@ -1,19 +1,3 @@
-/*
- * This file is part of the L2J Mobius project.
- *
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
- * General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this program. If not, see <http://www.gnu.org/licenses/>.
- */
 package org.l2j.gameserver.world.zone.type;
 
 import org.l2j.gameserver.enums.MountType;
@@ -46,22 +30,22 @@ public class NoLandingZone extends Zone {
     }
 
     @Override
-    protected void onEnter(Creature character) {
-        if (isPlayer(character)) {
-            character.setInsideZone(ZoneType.NO_LANDING, true);
-            if (character.getActingPlayer().getMountType() == MountType.WYVERN) {
-                character.sendPacket(SystemMessageId.THIS_AREA_CANNOT_BE_ENTERED_WHILE_MOUNTED_ATOP_OF_A_WYVERN_YOU_WILL_BE_DISMOUNTED_FROM_YOUR_WYVERN_IF_YOU_DO_NOT_LEAVE);
-                character.getActingPlayer().enteredNoLanding(dismountDelay);
+    protected void onEnter(Creature creature) {
+        if (isPlayer(creature)) {
+            creature.setInsideZone(ZoneType.NO_LANDING, true);
+            if (creature.getActingPlayer().getMountType() == MountType.WYVERN) {
+                creature.sendPacket(SystemMessageId.THIS_AREA_CANNOT_BE_ENTERED_WHILE_MOUNTED_ATOP_OF_A_WYVERN_YOU_WILL_BE_DISMOUNTED_FROM_YOUR_WYVERN_IF_YOU_DO_NOT_LEAVE);
+                creature.getActingPlayer().enteredNoLanding(dismountDelay);
             }
         }
     }
 
     @Override
-    protected void onExit(Creature character) {
-        if (isPlayer(character)) {
-            character.setInsideZone(ZoneType.NO_LANDING, false);
-            if (character.getActingPlayer().getMountType() == MountType.WYVERN) {
-                character.getActingPlayer().exitedNoLanding();
+    protected void onExit(Creature creature) {
+        if (isPlayer(creature)) {
+            creature.setInsideZone(ZoneType.NO_LANDING, false);
+            if (creature.getActingPlayer().getMountType() == MountType.WYVERN) {
+                creature.getActingPlayer().exitedNoLanding();
             }
         }
     }

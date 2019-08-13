@@ -34,39 +34,39 @@ public class JailZone extends Zone {
     }
 
     @Override
-    protected void onEnter(Creature character) {
-        if (isPlayer(character)) {
-            character.setInsideZone(ZoneType.JAIL, true);
-            character.setInsideZone(ZoneType.NO_SUMMON_FRIEND, true);
+    protected void onEnter(Creature creature) {
+        if (isPlayer(creature)) {
+            creature.setInsideZone(ZoneType.JAIL, true);
+            creature.setInsideZone(ZoneType.NO_SUMMON_FRIEND, true);
             if (Config.JAIL_IS_PVP) {
-                character.setInsideZone(ZoneType.PVP, true);
-                character.sendPacket(SystemMessageId.YOU_HAVE_ENTERED_A_COMBAT_ZONE);
+                creature.setInsideZone(ZoneType.PVP, true);
+                creature.sendPacket(SystemMessageId.YOU_HAVE_ENTERED_A_COMBAT_ZONE);
             }
             if (Config.JAIL_DISABLE_TRANSACTION) {
-                character.setInsideZone(ZoneType.NO_STORE, true);
+                creature.setInsideZone(ZoneType.NO_STORE, true);
             }
         }
     }
 
     @Override
-    protected void onExit(Creature character) {
-        if (isPlayer(character)) {
-            final Player player = character.getActingPlayer();
+    protected void onExit(Creature creature) {
+        if (isPlayer(creature)) {
+            final Player player = creature.getActingPlayer();
             player.setInsideZone(ZoneType.JAIL, false);
             player.setInsideZone(ZoneType.NO_SUMMON_FRIEND, false);
 
             if (Config.JAIL_IS_PVP) {
-                character.setInsideZone(ZoneType.PVP, false);
-                character.sendPacket(SystemMessageId.YOU_HAVE_LEFT_A_COMBAT_ZONE);
+                creature.setInsideZone(ZoneType.PVP, false);
+                creature.sendPacket(SystemMessageId.YOU_HAVE_LEFT_A_COMBAT_ZONE);
             }
 
             if (player.isJailed()) {
                 // when a player wants to exit jail even if he is still jailed, teleport him back to jail
                 ThreadPoolManager.schedule(new TeleportTask(player, JAIL_IN_LOC), 2000);
-                character.sendMessage("You cannot cheat your way out of here. You must wait until your jail time is over.");
+                creature.sendMessage("You cannot cheat your way out of here. You must wait until your jail time is over.");
             }
             if (Config.JAIL_DISABLE_TRANSACTION) {
-                character.setInsideZone(ZoneType.NO_STORE, false);
+                creature.setInsideZone(ZoneType.NO_STORE, false);
             }
         }
     }

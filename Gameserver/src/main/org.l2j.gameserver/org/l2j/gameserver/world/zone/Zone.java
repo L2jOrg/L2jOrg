@@ -394,7 +394,7 @@ public abstract class Zone extends ListenersContainer {
         return creatures;
     }
 
-    public Collection<Creature> getCharactersInside() {
+    public Collection<Creature> getCreaturesInside() {
         return creatures.values();
     }
 

@@ -17,16 +17,16 @@ public class LandingZone extends Zone {
     }
 
     @Override
-    protected void onEnter(Creature character) {
-        if (isPlayer(character)) {
-            character.setInsideZone(ZoneType.LANDING, true);
+    protected void onEnter(Creature creature) {
+        if (isPlayer(creature)) {
+            creature.setInsideZone(ZoneType.LANDING, true);
         }
     }
 
     @Override
-    protected void onExit(Creature character) {
-        if (isPlayer(character)) {
-            character.setInsideZone(ZoneType.LANDING, false);
+    protected void onExit(Creature creature) {
+        if (isPlayer(creature)) {
+            creature.setInsideZone(ZoneType.LANDING, false);
         }
     }
 }

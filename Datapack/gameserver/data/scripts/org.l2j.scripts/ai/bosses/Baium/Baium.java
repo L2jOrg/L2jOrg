@@ -392,7 +392,7 @@ public final class Baium extends AbstractNpcAI
             }
             case "CLEAR_ZONE":
             {
-                for (Creature charInside : zone.getCharactersInside())
+                for (Creature charInside : zone.getCreaturesInside())
                 {
                     if (charInside != null)
                     {
@@ -443,7 +443,7 @@ public final class Baium extends AbstractNpcAI
             {
                 if (getStatus() == IN_FIGHT)
                 {
-                    for (Creature charInside : zone.getCharactersInside())
+                    for (Creature charInside : zone.getCreaturesInside())
                     {
                         if (isNpc(charInside) && (charInside.getId() == ARCHANGEL))
                         {

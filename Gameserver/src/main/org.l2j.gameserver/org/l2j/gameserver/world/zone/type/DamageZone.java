@@ -120,7 +120,7 @@ public class DamageZone extends Zone {
                 }
             }
 
-            for (Creature temp : getCharactersInside()) {
+            for (Creature temp : getCreaturesInside()) {
                 if ((temp != null) && !temp.isDead()) {
                     if (siege) {
                         // during siege defenders not affected

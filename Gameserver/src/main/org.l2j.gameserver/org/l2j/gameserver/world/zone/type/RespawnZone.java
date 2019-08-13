@@ -13,29 +13,29 @@ import java.util.Map;
  * @author Nyaran
  */
 public class RespawnZone extends ZoneRespawn {
-    private final Map<Race, String> _raceRespawnPoint = new HashMap<>();
+    private final Map<Race, String> raceRespawnPoint = new HashMap<>();
 
     public RespawnZone(int id) {
         super(id);
     }
 
     @Override
-    protected void onEnter(Creature character) {
+    protected void onEnter(Creature creature) {
     }
 
     @Override
-    protected void onExit(Creature character) {
+    protected void onExit(Creature creature) {
     }
 
     public void addRaceRespawnPoint(String race, String point) {
-        _raceRespawnPoint.put(Race.valueOf(race), point);
+        raceRespawnPoint.put(Race.valueOf(race), point);
     }
 
     public Map<Race, String> getAllRespawnPoints() {
-        return _raceRespawnPoint;
+        return raceRespawnPoint;
     }
 
-    public String getRespawnPoint(Player activeChar) {
-        return _raceRespawnPoint.get(activeChar.getRace());
+    public String getRespawnPoint(Player player) {
+        return raceRespawnPoint.get(player.getRace());
     }
 }

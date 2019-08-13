@@ -5,6 +5,7 @@ import org.l2j.gameserver.data.xml.impl.SkillData;
 import org.l2j.gameserver.enums.MountType;
 import org.l2j.gameserver.instancemanager.FortDataManager;
 import org.l2j.gameserver.instancemanager.FortSiegeManager;
+import org.l2j.gameserver.model.actor.transform.Transform;
 import org.l2j.gameserver.world.zone.ZoneManager;
 import org.l2j.gameserver.model.TeleportWhereType;
 import org.l2j.gameserver.model.actor.Creature;
@@ -19,6 +20,7 @@ import org.l2j.gameserver.world.zone.Zone;
 import org.l2j.gameserver.world.zone.ZoneType;
 import org.l2j.gameserver.network.SystemMessageId;
 
+import static java.util.Objects.isNull;
 import static org.l2j.gameserver.util.GameUtils.isPlayer;
 
 /**
@@ -32,7 +34,7 @@ public class SiegeZone extends Zone {
     public SiegeZone(int id) {
         super(id);
         AbstractZoneSettings settings = ZoneManager.getSettings(getName());
-        if (settings == null) {
+        if (isNull(settings)) {
             settings = new Settings();
         }
         setSettings(settings);
@@ -61,22 +63,23 @@ public class SiegeZone extends Zone {
     }
 
     @Override
-    protected void onEnter(Creature character) {
+    protected void onEnter(Creature creature) {
         if (getSettings().isActiveSiege()) {
-            character.setInsideZone(ZoneType.PVP, true);
-            character.setInsideZone(ZoneType.SIEGE, true);
-            character.setInsideZone(ZoneType.NO_SUMMON_FRIEND, true); // FIXME: Custom ?
+            creature.setInsideZone(ZoneType.PVP, true);
+            creature.setInsideZone(ZoneType.SIEGE, true);
+            creature.setInsideZone(ZoneType.NO_SUMMON_FRIEND, true); // FIXME: Custom ?
 
-            if (isPlayer(character)) {
-                final Player plyer = character.getActingPlayer();
+            if (isPlayer(creature)) {
+                final Player plyer = creature.getActingPlayer();
                 if (plyer.isRegisteredOnThisSiegeField(getSettings().getSiegeableId())) {
                     plyer.setIsInSiege(true); // in siege
-                    if (getSettings().getSiege().giveFame() && (getSettings().getSiege().getFameFrequency() > 0)) {
-                        plyer.startFameTask(getSettings().getSiege().getFameFrequency() * 1000, getSettings().getSiege().getFameAmount());
+                    Siegable siegable;
+                    if ((siegable = getSettings().getSiege()).giveFame() && (siegable.getFameFrequency() > 0)) {
+                        plyer.startFameTask(siegable.getFameFrequency() * 1000, siegable.getFameAmount());
                     }
                 }
 
-                character.sendPacket(SystemMessageId.YOU_HAVE_ENTERED_A_COMBAT_ZONE);
+                creature.sendPacket(SystemMessageId.YOU_HAVE_ENTERED_A_COMBAT_ZONE);
                 if (!Config.ALLOW_WYVERN_DURING_SIEGE && (plyer.getMountType() == MountType.WYVERN)) {
                     plyer.sendPacket(SystemMessageId.THIS_AREA_CANNOT_BE_ENTERED_WHILE_MOUNTED_ATOP_OF_A_WYVERN_YOU_WILL_BE_DISMOUNTED_FROM_YOUR_WYVERN_IF_YOU_DO_NOT_LEAVE);
                     plyer.enteredNoLanding(DISMOUNT_DELAY);
@@ -86,7 +89,7 @@ public class SiegeZone extends Zone {
                     plyer.dismount();
                 }
 
-                if (!Config.ALLOW_MOUNTS_DURING_SIEGE && plyer.isTransformed() && plyer.getTransformation().get().isRiding()) {
+                if (!Config.ALLOW_MOUNTS_DURING_SIEGE && plyer.getTransformation().map(Transform::isRiding).orElse(false)) {
                     plyer.untransform();
                 }
             }
@@ -94,14 +97,15 @@ public class SiegeZone extends Zone {
     }
 
     @Override
-    protected void onExit(Creature character) {
-        character.setInsideZone(ZoneType.PVP, false);
-        character.setInsideZone(ZoneType.SIEGE, false);
-        character.setInsideZone(ZoneType.NO_SUMMON_FRIEND, false); // FIXME: Custom ?
+    protected void onExit(Creature creature) {
+        creature.setInsideZone(ZoneType.PVP, false);
+        creature.setInsideZone(ZoneType.SIEGE, false);
+        creature.setInsideZone(ZoneType.NO_SUMMON_FRIEND, false); // FIXME: Custom ?
+
         if (getSettings().isActiveSiege()) {
-            if (isPlayer(character)) {
-                final Player player = character.getActingPlayer();
-                character.sendPacket(SystemMessageId.YOU_HAVE_LEFT_A_COMBAT_ZONE);
+            if (isPlayer(creature)) {
+                final Player player = creature.getActingPlayer();
+                creature.sendPacket(SystemMessageId.YOU_HAVE_LEFT_A_COMBAT_ZONE);
                 if (player.getMountType() == MountType.WYVERN) {
                     player.exitedNoLanding();
                 }
@@ -111,8 +115,9 @@ public class SiegeZone extends Zone {
                 }
             }
         }
-        if (isPlayer(character)) {
-            final Player activeChar = character.getActingPlayer();
+
+        if (isPlayer(creature)) {
+            final Player activeChar = creature.getActingPlayer();
             activeChar.stopFameTask();
             activeChar.setIsInSiege(false);
 
@@ -158,14 +163,14 @@ public class SiegeZone extends Zone {
 
     public void updateZoneStatusForCharactersInside() {
         if (getSettings().isActiveSiege()) {
-            for (Creature character : getCharactersInside()) {
+            for (Creature character : getCreaturesInside()) {
                 if (character != null) {
                     onEnter(character);
                 }
             }
         } else {
             Player player;
-            for (Creature character : getCharactersInside()) {
+            for (Creature character : getCreaturesInside()) {
                 if (character == null) {
                     continue;
                 }
@@ -229,7 +234,7 @@ public class SiegeZone extends Zone {
         }
     }
 
-    public final class Settings extends AbstractZoneSettings {
+    public static final class Settings extends AbstractZoneSettings {
         private int _siegableId = -1;
         private Siegable _siege = null;
         private boolean _isActiveSiege = false;

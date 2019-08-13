@@ -363,7 +363,7 @@ public final class Antharas extends AbstractNpcAI
 				if ((npc != null) && ((_lastAttack + 900000) < System.currentTimeMillis()))
 				{
 					setStatus(ALIVE);
-					for (Creature charInside : zone.getCharactersInside())
+					for (Creature charInside : zone.getCreaturesInside())
 					{
 						if (charInside != null)
 						{
@@ -438,7 +438,7 @@ public final class Antharas extends AbstractNpcAI
 			}
 			case "CLEAR_ZONE":
 			{
-				for (Creature charInside : zone.getCharactersInside())
+				for (Creature charInside : zone.getCreaturesInside())
 				{
 					if (charInside != null)
 					{
@@ -538,7 +538,7 @@ public final class Antharas extends AbstractNpcAI
 				if (getStatus() == IN_FIGHT)
 				{
 					_minionCount = 0;
-					for (Creature charInside : zone.getCharactersInside())
+					for (Creature charInside : zone.getCreaturesInside())
 					{
 						if ((charInside != null) && isNpc(charInside) && ((charInside.getId() == BEHEMOTH) || (charInside.getId() == TERASQUE)))
 						{
@@ -563,7 +563,7 @@ public final class Antharas extends AbstractNpcAI
 					setStatus(ALIVE);
 					cancelQuestTimer("CHECK_ATTACK", _antharas, null);
 					cancelQuestTimer("SPAWN_MINION", _antharas, null);
-					for (Creature charInside : zone.getCharactersInside())
+					for (Creature charInside : zone.getCreaturesInside())
 					{
 						if (charInside != null)
 						{

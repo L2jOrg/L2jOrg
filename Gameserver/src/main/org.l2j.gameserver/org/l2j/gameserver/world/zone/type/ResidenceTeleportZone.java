@@ -10,7 +10,7 @@ import org.l2j.gameserver.world.zone.ZoneType;
  * @author Nyaran
  */
 public class ResidenceTeleportZone extends ZoneRespawn {
-    private int _residenceId;
+    private int residenceId;
 
     public ResidenceTeleportZone(int id) {
         super(id);
@@ -19,32 +19,28 @@ public class ResidenceTeleportZone extends ZoneRespawn {
     @Override
     public void setParameter(String name, String value) {
         if (name.equals("residenceId")) {
-            _residenceId = Integer.parseInt(value);
+            residenceId = Integer.parseInt(value);
         } else {
             super.setParameter(name, value);
         }
     }
 
     @Override
-    protected void onEnter(Creature character) {
-        character.setInsideZone(ZoneType.NO_SUMMON_FRIEND, true); // FIXME: Custom ?
+    protected void onEnter(Creature creature) {
+        creature.setInsideZone(ZoneType.NO_SUMMON_FRIEND, true); // FIXME: Custom ?
     }
 
     @Override
-    protected void onExit(Creature character) {
-        character.setInsideZone(ZoneType.NO_SUMMON_FRIEND, false); // FIXME: Custom ?
+    protected void onExit(Creature creature) {
+        creature.setInsideZone(ZoneType.NO_SUMMON_FRIEND, false); // FIXME: Custom ?
     }
 
     @Override
     public void oustAllPlayers() {
-        for (Player player : getPlayersInside()) {
-            if ((player != null) && player.isOnline()) {
-                player.teleToLocation(getSpawnLoc(), 200);
-            }
-        }
+        getPlayersInside().stream().filter(Player::isOnline).forEach(player -> player.teleToLocation(getSpawnLoc(), 200));
     }
 
     public int getResidenceId() {
-        return _residenceId;
+        return residenceId;
     }
 }
