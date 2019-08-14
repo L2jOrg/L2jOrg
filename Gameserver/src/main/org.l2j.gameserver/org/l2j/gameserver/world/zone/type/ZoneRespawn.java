@@ -14,12 +14,12 @@ import java.util.List;
  * @author DS, Nyaran (rework 10/07/2011)
  */
 public abstract class ZoneRespawn extends Zone {
-    private List<Location> _spawnLocs = null;
-    private List<Location> _otherSpawnLocs = null;
-    private List<Location> _chaoticSpawnLocs = null;
-    private List<Location> _banishSpawnLocs = null;
+    private List<Location> spawnLocs = null;
+    private List<Location> otherSpawnLocs = null;
+    private List<Location> chaoticSpawnLocs = null;
+    private List<Location> banishSpawnLocs = null;
 
-    protected ZoneRespawn(int id) {
+    ZoneRespawn(int id) {
         super(id);
     }
 
@@ -37,74 +37,74 @@ public abstract class ZoneRespawn extends Zone {
     }
 
     public final void addSpawn(int x, int y, int z) {
-        if (_spawnLocs == null) {
-            _spawnLocs = new ArrayList<>();
+        if (spawnLocs == null) {
+            spawnLocs = new ArrayList<>();
         }
 
-        _spawnLocs.add(new Location(x, y, z));
+        spawnLocs.add(new Location(x, y, z));
     }
 
     private void addOtherSpawn(int x, int y, int z) {
-        if (_otherSpawnLocs == null) {
-            _otherSpawnLocs = new ArrayList<>();
+        if (otherSpawnLocs == null) {
+            otherSpawnLocs = new ArrayList<>();
         }
 
-        _otherSpawnLocs.add(new Location(x, y, z));
+        otherSpawnLocs.add(new Location(x, y, z));
     }
 
     private void addChaoticSpawn(int x, int y, int z) {
-        if (_chaoticSpawnLocs == null) {
-            _chaoticSpawnLocs = new ArrayList<>();
+        if (chaoticSpawnLocs == null) {
+            chaoticSpawnLocs = new ArrayList<>();
         }
 
-        _chaoticSpawnLocs.add(new Location(x, y, z));
+        chaoticSpawnLocs.add(new Location(x, y, z));
     }
 
     private void addBanishSpawn(int x, int y, int z) {
-        if (_banishSpawnLocs == null) {
-            _banishSpawnLocs = new ArrayList<>();
+        if (banishSpawnLocs == null) {
+            banishSpawnLocs = new ArrayList<>();
         }
 
-        _banishSpawnLocs.add(new Location(x, y, z));
+        banishSpawnLocs.add(new Location(x, y, z));
     }
 
     public final List<Location> getSpawns() {
-        return _spawnLocs;
+        return spawnLocs;
     }
 
     public final Location getSpawnLoc() {
         if (Config.RANDOM_RESPAWN_IN_TOWN_ENABLED) {
-            return _spawnLocs.get(Rnd.get(_spawnLocs.size()));
+            return spawnLocs.get(Rnd.get(spawnLocs.size()));
         }
-        return _spawnLocs.get(0);
+        return spawnLocs.get(0);
     }
 
     public final Location getOtherSpawnLoc() {
-        if (_otherSpawnLocs != null) {
+        if (otherSpawnLocs != null) {
             if (Config.RANDOM_RESPAWN_IN_TOWN_ENABLED) {
-                return _otherSpawnLocs.get(Rnd.get(_otherSpawnLocs.size()));
+                return otherSpawnLocs.get(Rnd.get(otherSpawnLocs.size()));
             }
-            return _otherSpawnLocs.get(0);
+            return otherSpawnLocs.get(0);
         }
         return getSpawnLoc();
     }
 
     public final Location getChaoticSpawnLoc() {
-        if (_chaoticSpawnLocs != null) {
+        if (chaoticSpawnLocs != null) {
             if (Config.RANDOM_RESPAWN_IN_TOWN_ENABLED) {
-                return _chaoticSpawnLocs.get(Rnd.get(_chaoticSpawnLocs.size()));
+                return chaoticSpawnLocs.get(Rnd.get(chaoticSpawnLocs.size()));
             }
-            return _chaoticSpawnLocs.get(0);
+            return chaoticSpawnLocs.get(0);
         }
         return getSpawnLoc();
     }
 
     public Location getBanishSpawnLoc() {
-        if (_banishSpawnLocs != null) {
+        if (banishSpawnLocs != null) {
             if (Config.RANDOM_RESPAWN_IN_TOWN_ENABLED) {
-                return _banishSpawnLocs.get(Rnd.get(_banishSpawnLocs.size()));
+                return banishSpawnLocs.get(Rnd.get(banishSpawnLocs.size()));
             }
-            return _banishSpawnLocs.get(0);
+            return banishSpawnLocs.get(0);
         }
         return getSpawnLoc();
     }

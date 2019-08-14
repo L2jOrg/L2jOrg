@@ -16,7 +16,7 @@
  */
 package org.l2j.gameserver.model.stats.finalizers;
 
-import org.l2j.gameserver.GameTimeController;
+import org.l2j.gameserver.world.WorldTimeController;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.items.ItemTemplate;
 import org.l2j.gameserver.model.stats.IStatsFunction;
@@ -64,7 +64,7 @@ public class PAccuracyFinalizer implements IStatsFunction {
         }
 
         // Shadow sense
-        if (GameTimeController.getInstance().isNight()) {
+        if (WorldTimeController.getInstance().isNight()) {
             baseValue += creature.getStat().getAdd(Stats.HIT_AT_NIGHT, 0);
         }
 

@@ -70,27 +70,27 @@ public class SiegeZone extends Zone {
             creature.setInsideZone(ZoneType.NO_SUMMON_FRIEND, true); // FIXME: Custom ?
 
             if (isPlayer(creature)) {
-                final Player plyer = creature.getActingPlayer();
-                if (plyer.isRegisteredOnThisSiegeField(getSettings().getSiegeableId())) {
-                    plyer.setIsInSiege(true); // in siege
+                final Player player = creature.getActingPlayer();
+                if (player.isRegisteredOnThisSiegeField(getSettings().getSiegeableId())) {
+                    player.setIsInSiege(true); // in siege
                     Siegable siegable;
                     if ((siegable = getSettings().getSiege()).giveFame() && (siegable.getFameFrequency() > 0)) {
-                        plyer.startFameTask(siegable.getFameFrequency() * 1000, siegable.getFameAmount());
+                        player.startFameTask(siegable.getFameFrequency() * 1000, siegable.getFameAmount());
                     }
                 }
 
                 creature.sendPacket(SystemMessageId.YOU_HAVE_ENTERED_A_COMBAT_ZONE);
-                if (!Config.ALLOW_WYVERN_DURING_SIEGE && (plyer.getMountType() == MountType.WYVERN)) {
-                    plyer.sendPacket(SystemMessageId.THIS_AREA_CANNOT_BE_ENTERED_WHILE_MOUNTED_ATOP_OF_A_WYVERN_YOU_WILL_BE_DISMOUNTED_FROM_YOUR_WYVERN_IF_YOU_DO_NOT_LEAVE);
-                    plyer.enteredNoLanding(DISMOUNT_DELAY);
+                if (!Config.ALLOW_WYVERN_DURING_SIEGE && (player.getMountType() == MountType.WYVERN)) {
+                    player.sendPacket(SystemMessageId.THIS_AREA_CANNOT_BE_ENTERED_WHILE_MOUNTED_ATOP_OF_A_WYVERN_YOU_WILL_BE_DISMOUNTED_FROM_YOUR_WYVERN_IF_YOU_DO_NOT_LEAVE);
+                    player.enteredNoLanding(DISMOUNT_DELAY);
                 }
 
-                if (!Config.ALLOW_MOUNTS_DURING_SIEGE && plyer.isMounted()) {
-                    plyer.dismount();
+                if (!Config.ALLOW_MOUNTS_DURING_SIEGE && player.isMounted()) {
+                    player.dismount();
                 }
 
-                if (!Config.ALLOW_MOUNTS_DURING_SIEGE && plyer.getTransformation().map(Transform::isRiding).orElse(false)) {
-                    plyer.untransform();
+                if (!Config.ALLOW_MOUNTS_DURING_SIEGE && player.getTransformation().map(Transform::isRiding).orElse(false)) {
+                    player.untransform();
                 }
             }
         }
@@ -136,19 +136,19 @@ public class SiegeZone extends Zone {
     }
 
     @Override
-    public void onDieInside(Creature character) {
+    public void onDieInside(Creature creature) {
         if (getSettings().isActiveSiege()) {
             // debuff participants only if they die inside siege zone
-            if (isPlayer(character) && character.getActingPlayer().isRegisteredOnThisSiegeField(getSettings().getSiegeableId())) {
+            if (isPlayer(creature) && creature.getActingPlayer().isRegisteredOnThisSiegeField(getSettings().getSiegeableId())) {
                 int lvl = 1;
-                final BuffInfo info = character.getEffectList().getBuffInfoBySkillId(5660);
+                final BuffInfo info = creature.getEffectList().getBuffInfoBySkillId(5660);
                 if (info != null) {
                     lvl = Math.min(lvl + info.getSkill().getLevel(), 5);
                 }
 
                 final Skill skill = SkillData.getInstance().getSkill(5660, lvl);
                 if (skill != null) {
-                    skill.applyEffects(character, character);
+                    skill.applyEffects(creature, creature);
                 }
             }
         }
@@ -191,19 +191,6 @@ public class SiegeZone extends Zone {
         }
     }
 
-    /**
-     * Sends a message to all players in this zone
-     *
-     * @param message
-     */
-    public void announceToPlayers(String message) {
-        for (Player player : getPlayersInside()) {
-            if (player != null) {
-                player.sendMessage(message);
-            }
-        }
-    }
-
     public int getSiegeObjectId() {
         return getSettings().getSiegeableId();
     }
@@ -235,42 +222,42 @@ public class SiegeZone extends Zone {
     }
 
     public static final class Settings extends AbstractZoneSettings {
-        private int _siegableId = -1;
-        private Siegable _siege = null;
-        private boolean _isActiveSiege = false;
+        private int siegableId = -1;
+        private Siegable siege = null;
+        private boolean isActiveSiege = false;
 
         protected Settings() {
         }
 
         public int getSiegeableId() {
-            return _siegableId;
+            return siegableId;
         }
 
         protected void setSiegeableId(int id) {
-            _siegableId = id;
+            siegableId = id;
         }
 
         public Siegable getSiege() {
-            return _siege;
+            return siege;
         }
 
         public void setSiege(Siegable s) {
-            _siege = s;
+            siege = s;
         }
 
         public boolean isActiveSiege() {
-            return _isActiveSiege;
+            return isActiveSiege;
         }
 
         public void setActiveSiege(boolean val) {
-            _isActiveSiege = val;
+            isActiveSiege = val;
         }
 
         @Override
         public void clear() {
-            _siegableId = -1;
-            _siege = null;
-            _isActiveSiege = false;
+            siegableId = -1;
+            siege = null;
+            isActiveSiege = false;
         }
     }
 }

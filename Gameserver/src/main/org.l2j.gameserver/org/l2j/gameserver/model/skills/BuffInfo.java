@@ -1,7 +1,7 @@
 package org.l2j.gameserver.model.skills;
 
 import org.l2j.gameserver.Config;
-import org.l2j.gameserver.GameTimeController;
+import org.l2j.gameserver.world.WorldTimeController;
 import org.l2j.commons.threading.ThreadPoolManager;
 import org.l2j.gameserver.model.CharEffectList;
 import org.l2j.gameserver.model.actor.Creature;
@@ -86,7 +86,7 @@ public final class BuffInfo {
         _effected = effected;
         _skill = skill;
         _abnormalTime = Formulas.calcEffectAbnormalTime(effector, effected, skill);
-        _periodStartTicks = GameTimeController.getInstance().getGameTicks();
+        _periodStartTicks = WorldTimeController.getInstance().getGameTicks();
         _hideStartMessage = hideStartMessage;
         _item = item;
         _option = option;
@@ -194,7 +194,7 @@ public final class BuffInfo {
      * @return the elapsed time
      */
     public int getTime() {
-        return _abnormalTime - ((GameTimeController.getInstance().getGameTicks() - _periodStartTicks) / GameTimeController.TICKS_PER_SECOND);
+        return _abnormalTime - ((WorldTimeController.getInstance().getGameTicks() - _periodStartTicks) / WorldTimeController.TICKS_PER_SECOND);
     }
 
     /**
@@ -404,7 +404,7 @@ public final class BuffInfo {
 
     public void resetAbnormalTime(int abnormalTime) {
         if (_abnormalTime > 0) {
-            _periodStartTicks = GameTimeController.getInstance().getGameTicks();
+            _periodStartTicks = WorldTimeController.getInstance().getGameTicks();
             _abnormalTime = abnormalTime;
             _effected.removeBuffInfoTime(this);
             _effected.addBuffInfoTime(this);

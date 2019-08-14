@@ -18,6 +18,7 @@ import org.l2j.gameserver.model.events.impl.character.npc.OnNpcCreatureSee;
 import org.l2j.gameserver.network.Disconnection;
 import org.l2j.gameserver.settings.CharacterSettings;
 import org.l2j.gameserver.util.GameUtils;
+import org.l2j.gameserver.world.zone.ZoneManager;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -89,8 +90,8 @@ public final class World {
     private final WorldRegion[][] regions = new WorldRegion[REGIONS_X + 1][REGIONS_Y + 1];
 
     private World() {
-        initRegions();
     }
+
 
     private void initRegions() {
 
@@ -606,6 +607,13 @@ public final class World {
 
     public static <T extends WorldObject> Predicate<T> and(Predicate<T> p1, Predicate<T> p2) {
         return p1.and(p2);
+    }
+
+    public static void init() {
+        getInstance().initRegions();
+        MapRegionManager.init();
+        ZoneManager.init();
+        WorldTimeController.init();
     }
 
     public static World getInstance() {

@@ -1,6 +1,6 @@
 package org.l2j.gameserver.data.xml.impl;
 
-import org.l2j.gameserver.GameTimeController;
+import org.l2j.gameserver.world.WorldTimeController;
 import org.l2j.gameserver.enums.Position;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.settings.ServerSettings;
@@ -103,7 +103,7 @@ public final class HitConditionBonusData extends GameXmlReader {
         }
 
         // Get weather bonus
-        if (GameTimeController.getInstance().isNight()) {
+        if (WorldTimeController.getInstance().isNight()) {
             mod += darkBonus;
             // else if () No rain support yet.
             // chance += hitConditionBonus.rainBonus;

@@ -1,6 +1,6 @@
 package org.l2j.gameserver.network.serverpackets;
 
-import org.l2j.gameserver.GameTimeController;
+import org.l2j.gameserver.world.WorldTimeController;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
@@ -38,7 +38,7 @@ public class CharSelected extends ServerPacket {
         writeInt(_activeChar.getLevel());
         writeInt(_activeChar.getReputation());
         writeInt(_activeChar.getPkKills());
-        writeInt(GameTimeController.getInstance().getGameTime() % (24 * 60)); // "reset" on 24th hour
+        writeInt(WorldTimeController.getInstance().getGameTime() % (24 * 60)); // "reset" on 24th hour
         writeInt(0x00);
         writeInt(_activeChar.getClassId().getId());
 

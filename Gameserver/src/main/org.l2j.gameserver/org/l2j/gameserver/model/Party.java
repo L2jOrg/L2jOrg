@@ -3,7 +3,7 @@ package org.l2j.gameserver.model;
 import org.l2j.commons.threading.ThreadPoolManager;
 import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.Config;
-import org.l2j.gameserver.GameTimeController;
+import org.l2j.gameserver.world.WorldTimeController;
 import org.l2j.gameserver.datatables.ItemTable;
 import org.l2j.gameserver.enums.PartyDistributionType;
 import org.l2j.gameserver.enums.StatusUpdateType;
@@ -102,7 +102,7 @@ public class Party extends AbstractPlayerGroup {
      */
     public void setPendingInvitation(boolean val) {
         _pendingInvitation = val;
-        _pendingInviteTimeout = GameTimeController.getInstance().getGameTicks() + (Player.REQUEST_TIMEOUT * GameTimeController.TICKS_PER_SECOND);
+        _pendingInviteTimeout = WorldTimeController.getInstance().getGameTicks() + (Player.REQUEST_TIMEOUT * WorldTimeController.TICKS_PER_SECOND);
     }
 
     /**
@@ -112,7 +112,7 @@ public class Party extends AbstractPlayerGroup {
      * @see Player#isRequestExpired()
      */
     public boolean isInvitationRequestExpired() {
-        return (_pendingInviteTimeout <= GameTimeController.getInstance().getGameTicks());
+        return (_pendingInviteTimeout <= WorldTimeController.getInstance().getGameTicks());
     }
 
     /**

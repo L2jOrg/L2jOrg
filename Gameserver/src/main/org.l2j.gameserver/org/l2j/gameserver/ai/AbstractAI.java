@@ -1,7 +1,7 @@
 package org.l2j.gameserver.ai;
 
 import org.l2j.commons.util.Rnd;
-import org.l2j.gameserver.GameTimeController;
+import org.l2j.gameserver.world.WorldTimeController;
 import org.l2j.commons.threading.ThreadPoolManager;
 import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.Location;
@@ -393,12 +393,12 @@ public abstract class AbstractAI implements Ctrl {
             // also don't send movetopawn packets too often
             if (_clientMoving && (_target == pawn)) {
                 if (_clientMovingToPawnOffset == offset) {
-                    if (GameTimeController.getInstance().getGameTicks() < _moveToPawnTimeout) {
+                    if (WorldTimeController.getInstance().getGameTicks() < _moveToPawnTimeout) {
                         return;
                     }
                 } else if (actor.isOnGeodataPath()) {
                     // minimum time to calculate new route is 2 seconds
-                    if (GameTimeController.getInstance().getGameTicks() < (_moveToPawnTimeout + 10)) {
+                    if (WorldTimeController.getInstance().getGameTicks() < (_moveToPawnTimeout + 10)) {
                         return;
                     }
                 }
@@ -408,8 +408,8 @@ public abstract class AbstractAI implements Ctrl {
             _clientMoving = true;
             _clientMovingToPawnOffset = offset;
             _target = pawn;
-            _moveToPawnTimeout = GameTimeController.getInstance().getGameTicks();
-            _moveToPawnTimeout += 1000 / GameTimeController.MILLIS_IN_TICK;
+            _moveToPawnTimeout = WorldTimeController.getInstance().getGameTicks();
+            _moveToPawnTimeout += 1000 / WorldTimeController.MILLIS_IN_TICK;
 
             if (pawn == null) {
                 return;

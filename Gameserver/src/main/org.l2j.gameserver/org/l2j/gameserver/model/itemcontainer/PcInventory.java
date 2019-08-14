@@ -2,7 +2,7 @@ package org.l2j.gameserver.model.itemcontainer;
 
 import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.gameserver.Config;
-import org.l2j.gameserver.GameTimeController;
+import org.l2j.gameserver.world.WorldTimeController;
 import org.l2j.gameserver.datatables.ItemTable;
 import org.l2j.gameserver.enums.InventoryBlockType;
 import org.l2j.gameserver.enums.ItemLocation;
@@ -854,7 +854,7 @@ public class PcInventory extends Inventory {
             return;
         }
 
-        if ((GameTimeController.getInstance().getGameTicks() % 10) == 0) {
+        if ((WorldTimeController.getInstance().getGameTicks() % 10) == 0) {
             updateItemCount(null, arrows, -1, _owner, null);
         } else {
             updateItemCountNoDbUpdate(null, arrows, -1, _owner, null);

@@ -7,7 +7,7 @@ import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.commons.threading.ThreadPoolManager;
 import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.Config;
-import org.l2j.gameserver.GameTimeController;
+import org.l2j.gameserver.world.WorldTimeController;
 import org.l2j.gameserver.ItemsAutoDestroy;
 import org.l2j.gameserver.RecipeController;
 import org.l2j.gameserver.ai.CreatureAI;
@@ -3414,7 +3414,7 @@ public final class Player extends Playable {
     }
 
     public boolean isRecentFakeDeath() {
-        return _recentFakeDeathEndTime > GameTimeController.getInstance().getGameTicks();
+        return _recentFakeDeathEndTime > WorldTimeController.getInstance().getGameTicks();
     }
 
     /**
@@ -3423,7 +3423,7 @@ public final class Player extends Playable {
      * @param protect
      */
     public void setRecentFakeDeath(boolean protect) {
-        _recentFakeDeathEndTime = protect ? GameTimeController.getInstance().getGameTicks() + (Config.PLAYER_FAKEDEATH_UP_PROTECTION * GameTimeController.TICKS_PER_SECOND) : 0;
+        _recentFakeDeathEndTime = protect ? WorldTimeController.getInstance().getGameTicks() + (Config.PLAYER_FAKEDEATH_UP_PROTECTION * WorldTimeController.TICKS_PER_SECOND) : 0;
     }
 
     public final boolean isFakeDeath() {
@@ -4752,18 +4752,18 @@ public final class Player extends Playable {
      * @return True if a transaction is in progress.
      */
     public boolean isProcessingRequest() {
-        return (getActiveRequester() != null) || (_requestExpireTime > GameTimeController.getInstance().getGameTicks());
+        return (getActiveRequester() != null) || (_requestExpireTime > WorldTimeController.getInstance().getGameTicks());
     }
 
     /**
      * @return True if a transaction is in progress.
      */
     public boolean isProcessingTransaction() {
-        return (getActiveRequester() != null) || (_activeTradeList != null) || (_requestExpireTime > GameTimeController.getInstance().getGameTicks());
+        return (getActiveRequester() != null) || (_activeTradeList != null) || (_requestExpireTime > WorldTimeController.getInstance().getGameTicks());
     }
 
     public void blockRequest() {
-        _requestExpireTime = GameTimeController.getInstance().getGameTicks() + (REQUEST_TIMEOUT * GameTimeController.TICKS_PER_SECOND);
+        _requestExpireTime = WorldTimeController.getInstance().getGameTicks() + (REQUEST_TIMEOUT * WorldTimeController.TICKS_PER_SECOND);
     }
 
     /**
@@ -4772,7 +4772,7 @@ public final class Player extends Playable {
      * @param partner
      */
     public void onTransactionRequest(Player partner) {
-        _requestExpireTime = GameTimeController.getInstance().getGameTicks() + (REQUEST_TIMEOUT * GameTimeController.TICKS_PER_SECOND);
+        _requestExpireTime = WorldTimeController.getInstance().getGameTicks() + (REQUEST_TIMEOUT * WorldTimeController.TICKS_PER_SECOND);
         partner.setActiveRequester(this);
     }
 
@@ -4782,7 +4782,7 @@ public final class Player extends Playable {
      * @return
      */
     public boolean isRequestExpired() {
-        return !(_requestExpireTime > GameTimeController.getInstance().getGameTicks());
+        return !(_requestExpireTime > WorldTimeController.getInstance().getGameTicks());
     }
 
     /**

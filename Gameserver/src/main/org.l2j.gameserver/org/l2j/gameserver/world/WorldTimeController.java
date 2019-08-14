@@ -1,4 +1,4 @@
-package org.l2j.gameserver;
+package org.l2j.gameserver.world;
 
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.events.EventDispatcher;
@@ -17,28 +17,28 @@ import java.util.concurrent.ConcurrentHashMap;
 import static java.lang.System.currentTimeMillis;
 
 /**
- * Game Time controller class.
+ * World Time controller class.
  *
  * @author Forsaiken
  */
-public final class GameTimeController extends Thread {
+public final class WorldTimeController extends Thread {
     
-    private static final Logger LOGGER = LoggerFactory.getLogger(GameTimeController.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(WorldTimeController.class);
 
     public static final int TICKS_PER_SECOND = 10; // not able to change this without checking through code
     public static final int MILLIS_IN_TICK = 1000 / TICKS_PER_SECOND;
-    public static final int IN_GAME_DAYS_PER_DAY = 6;
-    public static final int MILLIS_PER_IN_GAME_DAY = (3600000 * 24) / IN_GAME_DAYS_PER_DAY;
-    public static final int SECONDS_PER_IN_GAME_DAY = MILLIS_PER_IN_GAME_DAY / 1000;
-    public static final int TICKS_PER_IN_GAME_DAY = SECONDS_PER_IN_GAME_DAY * TICKS_PER_SECOND;
+    private static final int IN_GAME_DAYS_PER_DAY = 6;
+    private static final int MILLIS_PER_IN_GAME_DAY = (3600000 * 24) / IN_GAME_DAYS_PER_DAY;
+    private static final int SECONDS_PER_IN_GAME_DAY = MILLIS_PER_IN_GAME_DAY / 1000;
+    private static final int TICKS_PER_IN_GAME_DAY = SECONDS_PER_IN_GAME_DAY * TICKS_PER_SECOND;
 
     private final Set<Creature> movingObjects = ConcurrentHashMap.newKeySet();
-    private final Set<Creature> _shadowSenseCharacters = ConcurrentHashMap.newKeySet();
+    private final Set<Creature> shadowSenseCharacters = ConcurrentHashMap.newKeySet();
 
     private final long referenceTime;
     private volatile boolean shutdown = false;
 
-    private GameTimeController() {
+    private WorldTimeController() {
         super("GameTimeController");
         super.setDaemon(true);
         super.setPriority(MAX_PRIORITY);
@@ -142,8 +142,8 @@ public final class GameTimeController extends Thread {
     }
 
     public synchronized void addShadowSenseCharacter(Creature character) {
-        if (!_shadowSenseCharacters.contains(character)) {
-            _shadowSenseCharacters.add(character);
+        if (!shadowSenseCharacters.contains(character)) {
+            shadowSenseCharacters.add(character);
             if (isNight()) {
                 final SystemMessage msg = SystemMessage.getSystemMessage(SystemMessageId.IT_IS_NOW_MIDNIGHT_AND_THE_EFFECT_OF_S1_CAN_BE_FELT);
                 msg.addSkillName(CommonSkill.SHADOW_SENSE_ID.getId());
@@ -153,23 +153,23 @@ public final class GameTimeController extends Thread {
     }
 
     public void removeShadowSenseCharacter(Creature character) {
-        _shadowSenseCharacters.remove(character);
+        shadowSenseCharacters.remove(character);
     }
 
     private void notifyShadowSense() {
         final SystemMessage msg = SystemMessage.getSystemMessage(isNight() ? SystemMessageId.IT_IS_NOW_MIDNIGHT_AND_THE_EFFECT_OF_S1_CAN_BE_FELT : SystemMessageId.IT_IS_DAWN_AND_THE_EFFECT_OF_S1_WILL_NOW_DISAPPEAR);
         msg.addSkillName(CommonSkill.SHADOW_SENSE_ID.getId());
-        for (Creature character : _shadowSenseCharacters) {
+        for (Creature character : shadowSenseCharacters) {
             character.getStat().recalculateStats(true);
             character.sendPacket(msg);
         }
     }
 
-    public static GameTimeController getInstance() {
+    public static WorldTimeController getInstance() {
         return Singleton.INSTANCE;
     }
 
     private static class Singleton {
-        private static final GameTimeController INSTANCE = new GameTimeController();
+        private static final WorldTimeController INSTANCE = new WorldTimeController();
     }
 }

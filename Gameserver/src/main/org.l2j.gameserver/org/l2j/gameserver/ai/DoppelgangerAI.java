@@ -1,7 +1,7 @@
 package org.l2j.gameserver.ai;
 
 import org.l2j.commons.util.Rnd;
-import org.l2j.gameserver.GameTimeController;
+import org.l2j.gameserver.world.WorldTimeController;
 import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.actor.Creature;
@@ -161,13 +161,13 @@ public class DoppelgangerAI extends CreatureAI {
             boolean sendPacket = true;
             if (_clientMoving && (getTarget() == pawn)) {
                 if (_clientMovingToPawnOffset == offset) {
-                    if (GameTimeController.getInstance().getGameTicks() < _moveToPawnTimeout) {
+                    if (WorldTimeController.getInstance().getGameTicks() < _moveToPawnTimeout) {
                         return;
                     }
                     sendPacket = false;
                 } else if (actor.isOnGeodataPath()) {
                     // minimum time to calculate new route is 2 seconds
-                    if (GameTimeController.getInstance().getGameTicks() < (_moveToPawnTimeout + 10)) {
+                    if (WorldTimeController.getInstance().getGameTicks() < (_moveToPawnTimeout + 10)) {
                         return;
                     }
                 }
@@ -177,8 +177,8 @@ public class DoppelgangerAI extends CreatureAI {
             _clientMoving = true;
             _clientMovingToPawnOffset = offset;
             setTarget(pawn);
-            _moveToPawnTimeout = GameTimeController.getInstance().getGameTicks();
-            _moveToPawnTimeout += 1000 / GameTimeController.MILLIS_IN_TICK;
+            _moveToPawnTimeout = WorldTimeController.getInstance().getGameTicks();
+            _moveToPawnTimeout += 1000 / WorldTimeController.MILLIS_IN_TICK;
 
             if (pawn == null) {
                 return;

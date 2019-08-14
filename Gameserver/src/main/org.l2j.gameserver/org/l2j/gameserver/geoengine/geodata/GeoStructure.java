@@ -1,19 +1,3 @@
-/*
- * This file is part of the L2J Mobius project.
- *
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
- * General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this program. If not, see <http://www.gnu.org/licenses/>.
- */
 package org.l2j.gameserver.geoengine.geodata;
 
 import org.l2j.gameserver.world.World;
@@ -23,7 +7,7 @@ import org.l2j.gameserver.world.World;
  */
 public final class GeoStructure {
     // cells
-    public static final byte CELL_FLAG_E = 1 << 0;
+    public static final byte CELL_FLAG_E = 1;
     public static final byte CELL_FLAG_W = 1 << 1;
     public static final byte CELL_FLAG_S = 1 << 2;
     public static final byte CELL_FLAG_N = 1 << 3;
@@ -55,9 +39,10 @@ public final class GeoStructure {
     public static final int REGION_BLOCKS = REGION_BLOCKS_X * REGION_BLOCKS_Y;
 
     // global geodata
-    private static final int GEO_REGIONS_X = ((World.TILE_X_MAX - World.TILE_X_MIN) + 1);
+    private static final int GEO_REGIONS_X = World.TILE_X_MAX - World.TILE_X_MIN + 1;
     public static final int GEO_BLOCKS_X = GEO_REGIONS_X * REGION_BLOCKS_X;
-    private static final int GEO_REGIONS_Y = ((World.TILE_Y_MAX - World.TILE_Y_MIN) + 1);
+
+    private static final int GEO_REGIONS_Y = World.TILE_Y_MAX - World.TILE_Y_MIN + 1;
     public static final int GEO_BLOCKS_Y = GEO_REGIONS_Y * REGION_BLOCKS_Y;
 
     public static final int REGION_CELLS_X = REGION_BLOCKS_X * BLOCK_CELLS_X;

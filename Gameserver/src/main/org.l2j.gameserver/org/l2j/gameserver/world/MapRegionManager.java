@@ -48,7 +48,6 @@ public final class MapRegionManager extends GameXmlReader {
     private final String defaultRespawn = "talking_island_town";
 
     private MapRegionManager() {
-        load();
     }
 
     @Override
@@ -304,6 +303,10 @@ public final class MapRegionManager extends GameXmlReader {
     public int getBBs(ILocational loc) {
         final MapRegion region = getMapRegion(loc.getX(), loc.getY());
         return nonNull(region) ? region.getBbs() : regions.get(defaultRespawn).getBbs();
+    }
+
+    public static void init() {
+        getInstance().load();
     }
 
     public static MapRegionManager getInstance() {

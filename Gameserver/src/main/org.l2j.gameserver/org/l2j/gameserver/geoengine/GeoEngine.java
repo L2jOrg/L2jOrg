@@ -23,24 +23,23 @@ import java.util.List;
 import static org.l2j.gameserver.util.GameUtils.isCreature;
 import static org.l2j.gameserver.util.GameUtils.isDoor;
 
-
 /**
  * @author Hasha
  */
 public class GeoEngine {
     protected static final Logger LOGGER = LoggerFactory.getLogger(GeoEngine.class);
 
-    private final ABlock[][] _blocks;
-    private final BlockNull _nullBlock;
+    private final ABlock[][] blocks;
+    private final BlockNull nullBlock;
 
     GeoEngine() {
         LOGGER.info("GeoEngine: Initializing...");
 
         // initialize block container
-        _blocks = new ABlock[GeoStructure.GEO_BLOCKS_X][GeoStructure.GEO_BLOCKS_Y];
+        blocks = new ABlock[GeoStructure.GEO_BLOCKS_X][GeoStructure.GEO_BLOCKS_Y];
 
         // load null block
-        _nullBlock = new BlockNull();
+        nullBlock = new BlockNull();
 
         // initialize multilayer temporarily buffer
         BlockMultilayer.initialize();
@@ -176,15 +175,15 @@ public class GeoEngine {
                     // load block according to block type
                     switch (type) {
                         case GeoStructure.TYPE_FLAT_L2D: {
-                            _blocks[blockX + ix][blockY + iy] = new BlockFlat(buffer, GeoFormat.L2D);
+                            blocks[blockX + ix][blockY + iy] = new BlockFlat(buffer, GeoFormat.L2D);
                             break;
                         }
                         case GeoStructure.TYPE_COMPLEX_L2D: {
-                            _blocks[blockX + ix][blockY + iy] = new BlockComplex(buffer, GeoFormat.L2D);
+                            blocks[blockX + ix][blockY + iy] = new BlockComplex(buffer, GeoFormat.L2D);
                             break;
                         }
                         case GeoStructure.TYPE_MULTILAYER_L2D: {
-                            _blocks[blockX + ix][blockY + iy] = new BlockMultilayer(buffer, GeoFormat.L2D);
+                            blocks[blockX + ix][blockY + iy] = new BlockMultilayer(buffer, GeoFormat.L2D);
                             break;
                         }
                         default: {
@@ -229,7 +228,7 @@ public class GeoEngine {
         // load all null blocks
         for (int ix = 0; ix < GeoStructure.REGION_BLOCKS_X; ix++) {
             for (int iy = 0; iy < GeoStructure.REGION_BLOCKS_Y; iy++) {
-                _blocks[blockX + ix][blockY + iy] = _nullBlock;
+                blocks[blockX + ix][blockY + iy] = nullBlock;
             }
         }
     }
@@ -247,7 +246,7 @@ public class GeoEngine {
 
         // if x or y is out of array return null
         if ((x > -1) && (y > -1) && (x < GeoStructure.GEO_BLOCKS_X) && (y < GeoStructure.GEO_BLOCKS_Y)) {
-            return _blocks[x][y];
+            return blocks[x][y];
         }
         return null;
     }

@@ -20,7 +20,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 import org.l2j.gameserver.Config;
-import org.l2j.gameserver.GameTimeController;
+import org.l2j.gameserver.world.WorldTimeController;
 import org.l2j.gameserver.handler.IUserCommandHandler;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.SystemMessageId;
@@ -46,7 +46,7 @@ public class Time implements IUserCommandHandler
 			return false;
 		}
 		
-		final int t = GameTimeController.getInstance().getGameTime();
+		final int t = WorldTimeController.getInstance().getGameTime();
 		final String h = Integer.toString(((t / 60) % 24));
 		String m;
 		if ((t % 60) < 10)
@@ -59,7 +59,7 @@ public class Time implements IUserCommandHandler
 		}
 		
 		SystemMessage sm;
-		if (GameTimeController.getInstance().isNight())
+		if (WorldTimeController.getInstance().isNight())
 		{
 			sm = SystemMessage.getSystemMessage(SystemMessageId.THE_CURRENT_TIME_IS_S1_S2_2);
 			sm.addString(h);

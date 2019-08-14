@@ -2,7 +2,7 @@ package org.l2j.gameserver.model.itemcontainer;
 
 import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.gameserver.Config;
-import org.l2j.gameserver.GameTimeController;
+import org.l2j.gameserver.world.WorldTimeController;
 import org.l2j.gameserver.datatables.ItemTable;
 import org.l2j.gameserver.enums.ItemLocation;
 import org.l2j.gameserver.world.World;
@@ -185,7 +185,7 @@ public abstract class ItemContainer {
             final float adenaRate = Config.RATE_DROP_AMOUNT_BY_ID.getOrDefault(CommonItem.ADENA, 1f);
             if ((item.getId() == CommonItem.ADENA) && (count < (10000 * adenaRate))) {
                 // Small adena changes won't be saved to database all the time
-                if ((GameTimeController.getInstance().getGameTicks() % 5) == 0) {
+                if ((WorldTimeController.getInstance().getGameTicks() % 5) == 0) {
                     item.updateDatabase();
                 }
             } else {
@@ -231,7 +231,7 @@ public abstract class ItemContainer {
             final float adenaRate = Config.RATE_DROP_AMOUNT_BY_ID.getOrDefault(CommonItem.ADENA, 1f);
             if ((itemId == CommonItem.ADENA) && (count < (10000 * adenaRate))) {
                 // Small adena changes won't be saved to database all the time
-                if ((GameTimeController.getInstance().getGameTicks() % 5) == 0) {
+                if ((WorldTimeController.getInstance().getGameTicks() % 5) == 0) {
                     item.updateDatabase();
                 }
             } else {
@@ -434,7 +434,7 @@ public abstract class ItemContainer {
                 item.setLastChange(Item.MODIFIED);
 
                 // don't update often for untraced items
-                if ((process != null) || ((GameTimeController.getInstance().getGameTicks() % 10) == 0)) {
+                if ((process != null) || ((WorldTimeController.getInstance().getGameTicks() % 10) == 0)) {
                     item.updateDatabase();
                 }
 

@@ -1,7 +1,7 @@
 package org.l2j.gameserver.model.actor;
 
 import org.l2j.commons.threading.ThreadPoolManager;
-import org.l2j.gameserver.GameTimeController;
+import org.l2j.gameserver.world.WorldTimeController;
 import org.l2j.gameserver.ai.CtrlIntention;
 import org.l2j.gameserver.enums.InstanceType;
 import org.l2j.gameserver.world.MapRegionManager;
@@ -120,10 +120,10 @@ public abstract class Vehicle extends Creature {
                             setHeading(calculateHeadingFrom(this, point));
                         }
 
-                        m._moveStartTime = GameTimeController.getInstance().getGameTicks();
+                        m._moveStartTime = WorldTimeController.getInstance().getGameTicks();
                         _move = m;
 
-                        GameTimeController.getInstance().registerMovingObject(this);
+                        WorldTimeController.getInstance().registerMovingObject(this);
                         return true;
                     }
                 }

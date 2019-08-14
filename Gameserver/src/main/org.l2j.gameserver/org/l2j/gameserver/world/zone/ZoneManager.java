@@ -65,8 +65,10 @@ public final class ZoneManager extends GameXmlReader {
             }
         }
         LOGGER.info("Zone Region Grid set up: {} by {}", regionsX, regionsY);
+    }
 
-        load();
+    public static void init() {
+        getInstance().load();
     }
 
     @Override

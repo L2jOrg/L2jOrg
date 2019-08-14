@@ -15,8 +15,8 @@ import static org.l2j.gameserver.util.GameUtils.isNpc;
  * @author malyelfik
  */
 public class TaxZone extends Zone {
-    private int _domainId;
-    private Castle _castle;
+    private int domainId;
+    private Castle castle;
 
     public TaxZone(int id) {
         super(id);
@@ -25,25 +25,25 @@ public class TaxZone extends Zone {
     @Override
     public void setParameter(String name, String value) {
         if (name.equalsIgnoreCase("domainId")) {
-            _domainId = Integer.parseInt(value);
+            domainId = Integer.parseInt(value);
         } else {
             super.setParameter(name, value);
         }
     }
 
     @Override
-    protected void onEnter(Creature character) {
-        character.setInsideZone(ZoneType.TAX, true);
-        if (isNpc(character)) {
-            ((Npc) character).setTaxZone(this);
+    protected void onEnter(Creature creature) {
+        creature.setInsideZone(ZoneType.TAX, true);
+        if (isNpc(creature)) {
+            ((Npc) creature).setTaxZone(this);
         }
     }
 
     @Override
-    protected void onExit(Creature character) {
-        character.setInsideZone(ZoneType.TAX, false);
-        if (isNpc(character)) {
-            ((Npc) character).setTaxZone(null);
+    protected void onExit(Creature creature) {
+        creature.setInsideZone(ZoneType.TAX, false);
+        if (isNpc(creature)) {
+            ((Npc) creature).setTaxZone(null);
         }
     }
 
@@ -54,9 +54,9 @@ public class TaxZone extends Zone {
      */
     public Castle getCastle() {
         // Lazy loading is used because zone is loaded before residence
-        if (_castle == null) {
-            _castle = CastleManager.getInstance().getCastleById(_domainId);
+        if (castle == null) {
+            castle = CastleManager.getInstance().getCastleById(domainId);
         }
-        return _castle;
+        return castle;
     }
 }

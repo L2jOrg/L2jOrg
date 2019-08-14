@@ -3,7 +3,7 @@ package org.l2j.gameserver.ai;
 
 import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.Config;
-import org.l2j.gameserver.GameTimeController;
+import org.l2j.gameserver.world.WorldTimeController;
 import org.l2j.commons.threading.ThreadPoolManager;
 import org.l2j.gameserver.enums.AISkillScope;
 import org.l2j.gameserver.geoengine.GeoEngine;
@@ -228,10 +228,10 @@ public class AttackableAI extends CreatureAI {
     @Override
     protected void onIntentionAttack(Creature target) {
         // Calculate the attack timeout
-        _attackTimeout = MAX_ATTACK_TIMEOUT + GameTimeController.getInstance().getGameTicks();
+        _attackTimeout = MAX_ATTACK_TIMEOUT + WorldTimeController.getInstance().getGameTicks();
 
         // self and buffs
-        if ((lastBuffTick + 30) < GameTimeController.getInstance().getGameTicks()) {
+        if ((lastBuffTick + 30) < WorldTimeController.getInstance().getGameTicks()) {
             for (Skill buff : getActiveChar().getTemplate().getAISkills(AISkillScope.BUFF)) {
                 target = skillTargetReconsider(buff, true);
                 if (target != null) {
@@ -241,7 +241,7 @@ public class AttackableAI extends CreatureAI {
                     break;
                 }
             }
-            lastBuffTick = GameTimeController.getInstance().getGameTicks();
+            lastBuffTick = WorldTimeController.getInstance().getGameTicks();
         }
 
         // Manage the Attack Intention : Stop current Attack (if necessary), Start a new Attack and Launch Think Event
@@ -473,7 +473,7 @@ public class AttackableAI extends CreatureAI {
             return;
         }
 
-        if (_attackTimeout < GameTimeController.getInstance().getGameTicks()) {
+        if (_attackTimeout < WorldTimeController.getInstance().getGameTicks()) {
             // Set the AI Intention to AI_INTENTION_ACTIVE
             setIntention(CtrlIntention.AI_INTENTION_ACTIVE);
 
@@ -916,7 +916,7 @@ public class AttackableAI extends CreatureAI {
         final Attackable me = getActiveChar();
         final WorldObject target = getTarget();
         // Calculate the attack timeout
-        _attackTimeout = MAX_ATTACK_TIMEOUT + GameTimeController.getInstance().getGameTicks();
+        _attackTimeout = MAX_ATTACK_TIMEOUT + WorldTimeController.getInstance().getGameTicks();
 
         // Set the _globalAggro to 0 to permit attack even just after spawn
         if (_globalAggro < 0) {

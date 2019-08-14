@@ -1,6 +1,6 @@
 package handlers.effecthandlers;
 
-import org.l2j.gameserver.GameTimeController;
+import org.l2j.gameserver.world.WorldTimeController;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.items.instance.Item;
@@ -20,12 +20,12 @@ public class HitAtNight extends AbstractStatEffect
 	@Override
 	public void onStart(Creature effector, Creature effected, Skill skill, Item item)
 	{
-		GameTimeController.getInstance().addShadowSenseCharacter(effected);
+		WorldTimeController.getInstance().addShadowSenseCharacter(effected);
 	}
 	
 	@Override
 	public void onExit(Creature effector, Creature effected, Skill skill)
 	{
-		GameTimeController.getInstance().removeShadowSenseCharacter(effected);
+		WorldTimeController.getInstance().removeShadowSenseCharacter(effected);
 	}
 }

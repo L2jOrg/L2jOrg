@@ -17,7 +17,7 @@
 package ai.others.Spawns;
 
 import ai.AbstractNpcAI;
-import org.l2j.gameserver.GameTimeController;
+import org.l2j.gameserver.world.WorldTimeController;
 import org.l2j.gameserver.model.events.EventType;
 import org.l2j.gameserver.model.events.ListenerRegisterType;
 import org.l2j.gameserver.model.events.annotations.RegisterEvent;
@@ -46,7 +46,7 @@ public final class DayNightSpawns extends AbstractNpcAI
 	{
 		if (_templates.add(template))
 		{
-			manageSpawns(template, GameTimeController.getInstance().isNight());
+			manageSpawns(template, WorldTimeController.getInstance().isNight());
 		}
 	}
 	

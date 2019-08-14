@@ -28,7 +28,7 @@ import java.util.Arrays;
 public class BlockMultilayer extends ABlock {
     private static final int MAX_LAYERS = Byte.MAX_VALUE;
 
-    private static ByteBuffer _temp;
+    private static ByteBuffer temp;
     protected byte[] _buffer;
 
     /**
@@ -55,7 +55,7 @@ public class BlockMultilayer extends ABlock {
             }
 
             // add layers count
-            _temp.put(layers);
+            temp.put(layers);
 
             // loop over layers
             for (byte layer = 0; layer < layers; layer++) {
@@ -64,23 +64,23 @@ public class BlockMultilayer extends ABlock {
                     short data = bb.getShort();
 
                     // add nswe and height
-                    _temp.put((byte) (data & 0x000F));
-                    _temp.putShort((short) ((short) (data & 0xFFF0) >> 1));
+                    temp.put((byte) (data & 0x000F));
+                    temp.putShort((short) ((short) (data & 0xFFF0) >> 1));
                 } else {
                     // add nswe
-                    _temp.put(bb.get());
+                    temp.put(bb.get());
 
                     // add height
-                    _temp.putShort(bb.getShort());
+                    temp.putShort(bb.getShort());
                 }
             }
         }
 
         // initialize buffer
-        _buffer = Arrays.copyOf(_temp.array(), _temp.position());
+        _buffer = Arrays.copyOf(temp.array(), temp.position());
 
         // clear temp buffer
-        _temp.clear();
+        temp.clear();
     }
 
     /**
@@ -88,15 +88,14 @@ public class BlockMultilayer extends ABlock {
      */
     public static void initialize() {
         // initialize temporarily buffer and sorting mechanism
-        _temp = ByteBuffer.allocate(GeoStructure.BLOCK_CELLS * MAX_LAYERS * 3);
-        _temp.order(ByteOrder.LITTLE_ENDIAN);
+        temp = ByteBuffer.allocate(GeoStructure.BLOCK_CELLS * MAX_LAYERS * 3).order(ByteOrder.LITTLE_ENDIAN);
     }
 
     /**
      * Releases temporarily buffer.
      */
     public static void release() {
-        _temp = null;
+        temp = null;
     }
 
     @Override

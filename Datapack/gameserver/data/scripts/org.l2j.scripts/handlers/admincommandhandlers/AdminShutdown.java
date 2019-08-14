@@ -20,7 +20,7 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
 import org.l2j.commons.util.Util;
-import org.l2j.gameserver.GameTimeController;
+import org.l2j.gameserver.world.WorldTimeController;
 import org.l2j.gameserver.Shutdown;
 import org.l2j.gameserver.handler.IAdminCommandHandler;
 import org.l2j.gameserver.world.World;
@@ -100,7 +100,7 @@ public class AdminShutdown implements IAdminCommandHandler
 	private void sendHtmlForm(Player activeChar)
 	{
 		final NpcHtmlMessage adminReply = new NpcHtmlMessage(0, 1);
-		final int t = GameTimeController.getInstance().getGameTime();
+		final int t = WorldTimeController.getInstance().getGameTime();
 		final int h = t / 60;
 		final int m = t % 60;
 		final SimpleDateFormat format = new SimpleDateFormat("h:mm a");

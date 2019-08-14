@@ -7,6 +7,7 @@ import org.l2j.gameserver.data.sql.impl.OfflineTradersTable;
 import org.l2j.gameserver.datatables.ReportTable;
 import org.l2j.gameserver.datatables.SchemeBufferTable;
 import org.l2j.gameserver.instancemanager.*;
+import org.l2j.gameserver.world.WorldTimeController;
 import org.l2j.gameserver.world.World;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.entity.Hero;
@@ -117,7 +118,7 @@ public class Shutdown extends Thread {
 
             // ensure all services are stopped
             try {
-                GameTimeController.getInstance().stopTimer();
+                WorldTimeController.getInstance().stopTimer();
                 LOGGER.info("Game Time Controller: Timer stopped(" + tc.getEstimatedTimeAndRestartCounter() + "ms).");
             } catch (Throwable t) {
                 // ignore

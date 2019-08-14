@@ -18,47 +18,46 @@ public class WaterZone extends Zone {
     }
 
     @Override
-    protected void onEnter(Creature character) {
-        character.setInsideZone(ZoneType.WATER, true);
+    protected void onEnter(Creature creature) {
+        creature.setInsideZone(ZoneType.WATER, true);
 
         // TODO: update to only send speed status when that packet is known
-        if (isPlayer(character)) {
-            final Player player = character.getActingPlayer();
+        if (isPlayer(creature)) {
+            final Player player = creature.getActingPlayer();
             if (player.checkTransformed(transform -> !transform.canSwim())) {
-                character.stopTransformation(true);
+                creature.stopTransformation(true);
             } else {
                 player.broadcastUserInfo();
             }
-        } else if (isNpc(character)) {
-            World.getInstance().forEachVisibleObject(character, Player.class, player ->
+        } else if (isNpc(creature)) {
+            World.getInstance().forEachVisibleObject(creature, Player.class, player ->
             {
-                if (character.getRunSpeed() == 0) {
-                    player.sendPacket(new ServerObjectInfo((Npc) character, player));
+                if (creature.getRunSpeed() == 0) {
+                    player.sendPacket(new ServerObjectInfo((Npc) creature, player));
                 } else {
-                    player.sendPacket(new NpcInfo((Npc) character));
+                    player.sendPacket(new NpcInfo((Npc) creature));
                 }
             });
         }
     }
 
     @Override
-    protected void onExit(Creature character) {
-        character.setInsideZone(ZoneType.WATER, false);
+    protected void onExit(Creature creature) {
+        creature.setInsideZone(ZoneType.WATER, false);
 
         // TODO: update to only send speed status when that packet is known
-        if (isPlayer(character)) {
-            // Mobius: Attempt to stop water task.
-            if (!character.isInsideZone(ZoneType.WATER)) {
-                ((Player) character).stopWaterTask();
+        if (isPlayer(creature)) {
+            if (!creature.isInsideZone(ZoneType.WATER)) {
+                ((Player) creature).stopWaterTask();
             }
-            character.getActingPlayer().broadcastUserInfo();
-        } else if (isNpc(character)) {
-            World.getInstance().forEachVisibleObject(character, Player.class, player ->
+            creature.getActingPlayer().broadcastUserInfo();
+        } else if (isNpc(creature)) {
+            World.getInstance().forEachVisibleObject(creature, Player.class, player ->
             {
-                if (character.getRunSpeed() == 0) {
-                    player.sendPacket(new ServerObjectInfo((Npc) character, player));
+                if (creature.getRunSpeed() == 0) {
+                    player.sendPacket(new ServerObjectInfo((Npc) creature, player));
                 } else {
-                    player.sendPacket(new NpcInfo((Npc) character));
+                    player.sendPacket(new NpcInfo((Npc) creature));
                 }
             });
         }

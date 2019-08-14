@@ -1,6 +1,6 @@
 package org.l2j.gameserver.util;
 
-import org.l2j.gameserver.GameTimeController;
+import org.l2j.gameserver.world.WorldTimeController;
 import org.l2j.gameserver.instancemanager.PunishmentManager;
 import org.l2j.gameserver.model.PcCondOverride;
 import org.l2j.gameserver.model.punishment.PunishmentAffect;
@@ -41,7 +41,7 @@ public final class FloodProtectorAction {
     /**
      * Next game tick when new request is allowed.
      */
-    private volatile int _nextGameTick = GameTimeController.getInstance().getGameTicks();
+    private volatile int _nextGameTick = WorldTimeController.getInstance().getGameTicks();
     /**
      * Flag determining whether exceeding request has been logged.
      */
@@ -70,7 +70,7 @@ public final class FloodProtectorAction {
      * @return true if action is allowed, otherwise false
      */
     public boolean tryPerformAction(String command) {
-        final int curTick = GameTimeController.getInstance().getGameTicks();
+        final int curTick = WorldTimeController.getInstance().getGameTicks();
 
         if ((_client.getPlayer() != null) && _client.getPlayer().canOverrideCond(PcCondOverride.FLOOD_CONDITIONS)) {
             return true;
@@ -78,7 +78,7 @@ public final class FloodProtectorAction {
 
         if ((curTick < _nextGameTick) || _punishmentInProgress) {
             if (_config.LOG_FLOODING && !_logged) {
-                log(" called command ", command, " ~", String.valueOf((_config.FLOOD_PROTECTION_INTERVAL - (_nextGameTick - curTick)) * GameTimeController.MILLIS_IN_TICK), " ms after previous command");
+                log(" called command ", command, " ~", String.valueOf((_config.FLOOD_PROTECTION_INTERVAL - (_nextGameTick - curTick)) * WorldTimeController.MILLIS_IN_TICK), " ms after previous command");
                 _logged = true;
             }
 
@@ -101,7 +101,7 @@ public final class FloodProtectorAction {
         }
 
         if ((_count.get() > 0) && _config.LOG_FLOODING) {
-            log(" issued ", String.valueOf(_count), " extra requests within ~", String.valueOf(_config.FLOOD_PROTECTION_INTERVAL * GameTimeController.MILLIS_IN_TICK), " ms");
+            log(" issued ", String.valueOf(_count), " extra requests within ~", String.valueOf(_config.FLOOD_PROTECTION_INTERVAL * WorldTimeController.MILLIS_IN_TICK), " ms");
         }
 
         _nextGameTick = curTick + _config.FLOOD_PROTECTION_INTERVAL;

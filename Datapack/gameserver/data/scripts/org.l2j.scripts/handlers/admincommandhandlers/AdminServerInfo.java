@@ -18,7 +18,7 @@ package handlers.admincommandhandlers;
 
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.GameServer;
-import org.l2j.gameserver.GameTimeController;
+import org.l2j.gameserver.world.WorldTimeController;
 import org.l2j.gameserver.cache.HtmCache;
 import org.l2j.gameserver.data.xml.impl.AdminData;
 import org.l2j.gameserver.handler.IAdminCommandHandler;
@@ -57,8 +57,8 @@ public class AdminServerInfo implements IAdminCommandHandler
 			html.replace("%os_name%", System.getProperty("os.name"));
 			html.replace("%os_ver%", System.getProperty("os.version"));
 			html.replace("%slots%", getPlayersCount("ALL") + "/" + Config.MAXIMUM_ONLINE_USERS);
-			html.replace("%gameTime%", GameTimeController.getInstance().getGameHour() + ":" + GameTimeController.getInstance().getGameMinute());
-			html.replace("%dayNight%", GameTimeController.getInstance().isNight() ? "Night" : "Day");
+			html.replace("%gameTime%", WorldTimeController.getInstance().getGameHour() + ":" + WorldTimeController.getInstance().getGameMinute());
+			html.replace("%dayNight%", WorldTimeController.getInstance().isNight() ? "Night" : "Day");
 			html.replace("%geodata%", Config.PATHFINDING ? "Enabled" : "Disabled");
 			html.replace("%serverTime%", fmt.format(new Date(System.currentTimeMillis())));
 			html.replace("%serverUpTime%", GameServer.getInstance().getUptime());

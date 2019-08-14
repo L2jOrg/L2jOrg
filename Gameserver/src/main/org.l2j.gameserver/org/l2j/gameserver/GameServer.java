@@ -21,8 +21,6 @@ import org.l2j.gameserver.handler.EffectHandler;
 import org.l2j.gameserver.handler.SkillConditionHandler;
 import org.l2j.gameserver.idfactory.IdFactory;
 import org.l2j.gameserver.instancemanager.*;
-import org.l2j.gameserver.world.MapRegionManager;
-import org.l2j.gameserver.world.World;
 import org.l2j.gameserver.model.entity.Hero;
 import org.l2j.gameserver.model.olympiad.Olympiad;
 import org.l2j.gameserver.model.votereward.VoteSystem;
@@ -32,7 +30,7 @@ import org.l2j.gameserver.network.authcomm.AuthServerCommunication;
 import org.l2j.gameserver.scripting.ScriptEngineManager;
 import org.l2j.gameserver.taskmanager.TaskManager;
 import org.l2j.gameserver.util.Broadcast;
-import org.l2j.gameserver.world.zone.ZoneManager;
+import org.l2j.gameserver.world.World;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -51,7 +49,7 @@ import static org.l2j.commons.util.Util.isNullOrEmpty;
 
 public class GameServer {
 
-    public static final String UPDATE_NAME = "Classic - Secret of Empire";
+    private static final String UPDATE_NAME = "Classic - Secret of Empire";
     private static final String LOG4J_CONFIGURATION_FILE = "log4j.configurationFile";
 
     private static Logger LOGGER;
@@ -70,10 +68,10 @@ public class GameServer {
         }
 
         printSection("Lineage II World");
-        GameTimeController.init(); // start game time control early
-        World.getInstance();
-        MapRegionManager.getInstance();
-        ZoneManager.getInstance();
+        World.init();
+
+        printSection("Geodata");
+        GeoEngine.getInstance();
 
         printSection("Server Data");
         DoorData.getInstance();
@@ -144,14 +142,6 @@ public class GameServer {
         ClanHallData.getInstance();
         ClanHallAuctionManager.getInstance();
         ClanEntryManager.getInstance();
-
-        printSection("Geodata");
-        long geodataMemory = getUsedMemoryMB();
-        GeoEngine.getInstance();
-        geodataMemory = getUsedMemoryMB() - geodataMemory;
-        if (geodataMemory < 0) {
-            geodataMemory = 0;
-        }
 
         printSection("NPCs");
         NpcData.getInstance();
@@ -261,7 +251,6 @@ public class GameServer {
         System.gc();
         final long totalMem = Runtime.getRuntime().maxMemory() / 1048576;
         LOGGER.info("Started, using {} of {} MB total memory", getUsedMemoryMB(), totalMem);
-        LOGGER.info("Geodata use {} MB of memory", geodataMemory);
         LOGGER.info("Maximum number of connected players is {}", Config.MAXIMUM_ONLINE_USERS);
         LOGGER.info("Server loaded in {} seconds", serverLoadStart.until(Instant.now(), ChronoUnit.SECONDS));
 

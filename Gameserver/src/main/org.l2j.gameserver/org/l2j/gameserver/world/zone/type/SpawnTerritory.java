@@ -9,27 +9,27 @@ import org.l2j.gameserver.world.zone.ZoneArea;
  * @author GKR
  */
 public class SpawnTerritory {
-    private final String _name;
-    private final ZoneArea _territory;
+    private final String name;
+    private final ZoneArea territory;
 
     public SpawnTerritory(String name, ZoneArea territory) {
-        _name = name;
-        _territory = territory;
+        this.name = name;
+        this.territory = territory;
     }
 
     public String getName() {
-        return _name;
+        return name;
     }
 
     public Location getRandomPoint() {
-        return _territory.getRandomPoint();
+        return territory.getRandomPoint();
     }
 
     public boolean isInsideZone(int x, int y, int z) {
-        return _territory.isInsideZone(x, y, z);
+        return territory.isInsideZone(x, y, z);
     }
 
     public void visualizeZone(int z) {
-        _territory.visualizeZone(z);
+        territory.visualizeZone(z);
     }
 }

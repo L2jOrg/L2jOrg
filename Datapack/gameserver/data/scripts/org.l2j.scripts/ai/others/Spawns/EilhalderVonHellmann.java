@@ -1,7 +1,7 @@
 package ai.others.Spawns;
 
 import ai.AbstractNpcAI;
-import org.l2j.gameserver.GameTimeController;
+import org.l2j.gameserver.world.WorldTimeController;
 import org.l2j.gameserver.instancemanager.DBSpawnManager;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -79,7 +79,7 @@ public final class EilhalderVonHellmann extends AbstractNpcAI
 			}
 		}
 		
-		handleBoss(GameTimeController.getInstance().isNight());
+		handleBoss(WorldTimeController.getInstance().isNight());
 	}
 	
 	@RegisterEvent(EventType.ON_DAY_NIGHT_CHANGE)

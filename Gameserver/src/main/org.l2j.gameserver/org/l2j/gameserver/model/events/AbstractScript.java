@@ -2,7 +2,7 @@ package org.l2j.gameserver.model.events;
 
 import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.Config;
-import org.l2j.gameserver.GameTimeController;
+import org.l2j.gameserver.world.WorldTimeController;
 import org.l2j.gameserver.ai.CtrlIntention;
 import org.l2j.gameserver.data.xml.impl.DoorData;
 import org.l2j.gameserver.data.xml.impl.NpcData;
@@ -1054,10 +1054,10 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
     }
 
     /**
-     * @return the number of ticks from the {@link GameTimeController}.
+     * @return the number of ticks from the {@link WorldTimeController}.
      */
     public static int getGameTicks() {
-        return GameTimeController.getInstance().getGameTicks();
+        return WorldTimeController.getInstance().getGameTicks();
     }
 
     /**

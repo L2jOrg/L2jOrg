@@ -86,14 +86,6 @@ class TextureBlock {
         return minColor;
     }
 
-    int  getMaxColorIndex() {
-        return maxColorIndex;
-    }
-
-    int getMinColorIndex() {
-        return minColorIndex;
-    }
-
     ARGB colorAt(int index) {
         return colors[index];
     }
@@ -102,7 +94,7 @@ class TextureBlock {
         return palette;
     }
 
-    class ARGB {
+    static class ARGB {
         int a;
         int r;
         int g;
