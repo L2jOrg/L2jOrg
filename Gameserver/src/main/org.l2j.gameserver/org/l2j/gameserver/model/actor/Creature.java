@@ -2201,7 +2201,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
                         case ELEMENTAL_SPIRIT_WATER_DEFENSE:
                         case ELEMENTAL_SPIRIT_WIND_ATTACK:
                         case ELEMENTAL_SPIRIT_WIND_DEFENSE:
-                            info.addComponentType(UserInfoType.ATT_SPIRITS);
+                            info.addComponentType(UserInfoType.SPIRITS);
                             break;
                     }
                 }

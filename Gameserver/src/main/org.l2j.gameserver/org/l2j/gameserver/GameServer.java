@@ -49,7 +49,7 @@ import static org.l2j.commons.util.Util.isNullOrEmpty;
 
 public class GameServer {
 
-    private static final String UPDATE_NAME = "Classic - Secret of Empire";
+    private static final String UPDATE_NAME = "Classic - Kamael";
     private static final String LOG4J_CONFIGURATION_FILE = "log4j.configurationFile";
 
     private static Logger LOGGER;

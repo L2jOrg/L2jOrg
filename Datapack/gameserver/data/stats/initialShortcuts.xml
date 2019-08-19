@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../xsd/initialShortcuts.xsd">
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org ../xsd/initialShortcuts.xsd">
 	<!-- Global shortcuts -->
 	<shortcuts>
 		<page pageId="0">
 			<slot slotId="0" shortcutType="ACTION" shortcutId="2" /> <!-- Attack -->
 			<slot slotId="3" shortcutType="ACTION" shortcutId="5" /> <!-- Pick Up -->
 			<slot slotId="4" shortcutType="ACTION" shortcutId="4" /> <!-- Next Target -->
+			<slot slotId="5" shortcutType="ACTION" shortcutId="93" />
 			<slot slotId="10" shortcutType="ACTION" shortcutId="0" /> <!-- Sit/Stand -->
 		</page>
 		<!-- Custom example. -->
@@ -38,6 +39,12 @@
 	<shortcuts classId="49">
 		<page pageId="0">
 			<slot slotId="1" shortcutType="SKILL" shortcutId="1001" shortcutLevel="1" /> <!-- Soul Cry -->
+		</page>
+	</shortcuts>
+
+	<shortcuts classId="192">
+		<page pageId="20">
+			<slot slotId="0" shortcutType="SKILL" shortcutId="911" shortcutLevel="1"/>
 		</page>
 	</shortcuts>
 	<!-- Macro presets -->

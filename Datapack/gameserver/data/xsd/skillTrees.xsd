@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+		   targetNamespace="http://l2j.org"
+		   xmlns="http://l2j.org"
+		   elementFormDefault="qualified">
+
+	<xs:include schemaLocation="common.xsd"/>
+
 	<xs:element name="list">
 		<xs:complexType>
 			<xs:sequence>
@@ -12,22 +18,8 @@
 		<xs:sequence>
 			<xs:element name="skill" type="SkillType" maxOccurs="unbounded"/>
 		</xs:sequence>
-		<xs:attribute name="classId">
-			<xs:simpleType>
-				<xs:restriction base="xs:nonNegativeInteger">
-					<xs:minInclusive value="0" />
-					<xs:maxInclusive value="189" />
-				</xs:restriction>
-			</xs:simpleType>
-		</xs:attribute>
-		<xs:attribute name="parentClassId">
-			<xs:simpleType>
-				<xs:restriction base="xs:nonNegativeInteger">
-					<xs:minInclusive value="0" />
-					<xs:maxInclusive value="189" />
-				</xs:restriction>
-			</xs:simpleType>
-		</xs:attribute>
+		<xs:attribute name="classId" type="ClassId"/>
+		<xs:attribute name="parentClassId" type="ClassId"/>
 		<xs:attribute name="type" use="required">
 			<xs:simpleType>
 				<xs:restriction base="xs:token">
@@ -53,20 +45,8 @@
 				</xs:restriction>
 			</xs:simpleType>
 		</xs:attribute>
-		<xs:attribute name="race" use="optional">
-			<xs:simpleType>
-				<xs:restriction base="xs:token">
-					<xs:enumeration value="HUMAN" />
-					<xs:enumeration value="ELF" />
-					<xs:enumeration value="DARK_ELF" />
-					<xs:enumeration value="ORC" />
-					<xs:enumeration value="DWARF" />
-					<xs:enumeration value="KAMAEL" />
-					<xs:enumeration value="ERTHEIA" />
-				</xs:restriction>
-			</xs:simpleType>
-		</xs:attribute>
-		<xs:attribute name="subType" use="optional">
+		<xs:attribute name="race" type="Race"/>
+		<xs:attribute name="subType">
 			<xs:simpleType>
 				<xs:restriction base="xs:token">
 					<xs:enumeration value="BASECLASS" />
@@ -77,7 +57,7 @@
 	</xs:complexType>
 
 	<xs:complexType name="SkillType">
-		<xs:sequence minOccurs="1" maxOccurs="1">
+		<xs:sequence>
 			<xs:element name="subClassConditions" minOccurs="0" maxOccurs="unbounded">
 				<xs:complexType>
 					<xs:attribute name="slot" use="required">
@@ -103,7 +83,7 @@
 					<xs:attribute name="id" type="xs:positiveInteger" use="required" />
 				</xs:complexType>
 			</xs:element>
-			<xs:element name="socialClass" minOccurs="0" maxOccurs="1">
+			<xs:element name="socialClass" minOccurs="0">
 				<xs:simpleType>
 					<xs:restriction base="xs:token">
 						<xs:enumeration value="VAGABOND" />
@@ -131,19 +111,7 @@
 					</xs:restriction>
 				</xs:simpleType>
 			</xs:element>
-			<xs:element name="race" minOccurs="0" maxOccurs="unbounded">
-				<xs:simpleType>
-					<xs:restriction base="xs:token">
-						<xs:enumeration value="HUMAN" />
-						<xs:enumeration value="ELF" />
-						<xs:enumeration value="DARK_ELF" />
-						<xs:enumeration value="ORC" />
-						<xs:enumeration value="DWARF" />
-						<xs:enumeration value="KAMAEL" />
-						<xs:enumeration value="ERTHEIA" />
-					</xs:restriction>
-				</xs:simpleType>
-			</xs:element>
+			<xs:element name="race" type="Race" minOccurs="0" maxOccurs="unbounded"/>
 			<xs:element name="preRequisiteSkill" minOccurs="0" maxOccurs="unbounded">
 				<xs:complexType>
 					<xs:attribute name="id" type="xs:positiveInteger" use="required" />

@@ -44,7 +44,7 @@ public class AttributeMaster extends AbstractNpcAI {
                 }
             }
             UserInfo userInfo = new UserInfo(player);
-            userInfo.addComponentType(UserInfoType.ATT_SPIRITS);
+            userInfo.addComponentType(UserInfoType.SPIRITS);
             player.sendPacket(userInfo);
             player.sendPacket(new ElementalSpiritInfo(player.getActiveElementalSpiritType(), (byte) 0x01));
             EventDispatcher.getInstance().notifyEventAsync(new OnElementalSpiritLearn(player), player);

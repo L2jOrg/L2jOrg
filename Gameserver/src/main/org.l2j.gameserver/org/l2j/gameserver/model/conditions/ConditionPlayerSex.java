@@ -41,6 +41,6 @@ public class ConditionPlayerSex extends Condition {
         if (effector.getActingPlayer() == null) {
             return false;
         }
-        return (effector.getActingPlayer().getAppearance().getSex() ? 1 : 0) == _sex;
+        return (effector.getActingPlayer().getAppearance().isFemale() ? 1 : 0) == _sex;
     }
 }

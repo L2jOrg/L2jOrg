@@ -6,24 +6,26 @@ import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
 
 public final class ShortCutInit extends ServerPacket {
-    private Shortcut[] _shortCuts;
+    private Shortcut[] shortCuts;
 
-    public ShortCutInit(Player activeChar) {
-        if (activeChar == null) {
+    public ShortCutInit(Player player) {
+        if (player == null) {
             return;
         }
 
-        _shortCuts = activeChar.getAllShortCuts();
+        shortCuts = player.getAllShortCuts();
     }
 
     @Override
     public void writeImpl(GameClient client) {
         writeId(ServerPacketId.SHORT_CUT_INIT);
 
-        writeInt(_shortCuts.length);
-        for (Shortcut sc : _shortCuts) {
+        writeInt(shortCuts.length);
+        for (Shortcut sc : shortCuts) {
             writeInt(sc.getType().ordinal());
             writeInt(sc.getSlot() + (sc.getPage() * 12));
+            writeByte(0x00); // 228
+
             switch (sc.getType()) {
                 case ITEM: {
                     writeInt(sc.getId());
@@ -41,8 +43,8 @@ public final class ShortCutInit extends ServerPacket {
                     writeShort((short) sc.getLevel());
                     writeShort((short) sc.getSubLevel());
                     writeInt(sc.getSharedReuseGroup());
-                    writeByte((byte) 0x00); // C5
-                    writeInt(0x01); // C6
+                    writeByte((byte) 0x00);
+                    writeInt(0x01);
                     break;
                 }
                 case ACTION:
@@ -50,7 +52,7 @@ public final class ShortCutInit extends ServerPacket {
                 case RECIPE:
                 case BOOKMARK: {
                     writeInt(sc.getId());
-                    writeInt(0x01); // C6
+                    writeInt(0x01);
                 }
             }
         }

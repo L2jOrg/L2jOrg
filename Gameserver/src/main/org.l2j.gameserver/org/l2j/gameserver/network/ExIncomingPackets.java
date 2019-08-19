@@ -303,8 +303,8 @@ public enum ExIncomingPackets implements PacketFactory {
     REQUEST_ALCHEMY_SKILL_LIST(0x100, null, ConnectionState.IN_GAME), // RequestAlchemySkillList not exists on Classic
     REQUEST_ALCHEMY_TRY_MIX_CUBE(0x101, null, ConnectionState.IN_GAME),
     REQUEST_ALCHEMY_CONVERSION(0x102, null, ConnectionState.IN_GAME),
-    SEND_EXECUTED_UI_EVENTS_COUNT(0x103, null, ConnectionState.IN_GAME),
-    EX_SEND_CLIENT_INI(0x104, DISCARD, ConnectionState.AUTHENTICATED),
+    EX_SEND_CLIENT_INI(0x103, DISCARD, ConnectionState.AUTHENTICATED),
+    SEND_EXECUTED_UI_EVENTS_COUNT(0x104, null, ConnectionState.IN_GAME),
     REQUEST_EX_AUTO_FISH(0x105, ExRequestAutoFish::new, ConnectionState.IN_GAME),
     REQUEST_VIP_ATTENDANCE_ITEM_LIST(0x106, RequestVipAttendanceItemList::new, ConnectionState.IN_GAME),
     REQUEST_VIP_ATTENDANCE_CHECK(0x107, RequestVipAttendanceCheck::new, ConnectionState.IN_GAME),
@@ -394,11 +394,12 @@ public enum ExIncomingPackets implements PacketFactory {
     EX_LOCKED_ITEM_CANCEL(0x15B, null, ConnectionState.IN_GAME),
     EX_UNLOCKED_ITEM_CANCEL(0x15C, null, ConnectionState.IN_GAME),
     EX_ELEMENTAL_SPIRIT_CHANGE_TYPE(0x15D, ExElementalSpiritChangeType::new, ConnectionState.IN_GAME),
-    REQUEST_BLOCK_LIST_FOR_AD(0x15E, ExRequestBlockListForAD::new, ConnectionState.IN_GAME),
-    REQUEST_USER_BAN_INFO(0x15F, null, ConnectionState.IN_GAME),
+    REQUEST_USER_BAN_INFO(0x15E, null, ConnectionState.IN_GAME),
+    REQUEST_BLOCK_LIST_FOR_AD(0x15F, ExRequestBlockListForAD::new, ConnectionState.IN_GAME),
     EX_INTERACT_MODIFY(0x160, null, ConnectionState.IN_GAME), // 152
     EX_TRY_ENCHANT_ARTIFACT(0x161, null, ConnectionState.IN_GAME), // 152
-    EX_XIGN_CODE(0x162, null, ConnectionState.IN_GAME); // 152
+    EX_XIGN_CODE(0x162, null, ConnectionState.IN_GAME), // 152
+    UNK_165(0x165, null, ConnectionState.IN_GAME); // 228
 
     public static final ExIncomingPackets[] PACKET_ARRAY;
 

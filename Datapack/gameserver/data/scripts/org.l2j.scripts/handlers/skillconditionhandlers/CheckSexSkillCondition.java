@@ -39,6 +39,6 @@ public class CheckSexSkillCondition implements ISkillCondition
 	@Override
 	public boolean canUse(Creature caster, Skill skill, WorldObject target)
 	{
-		return isPlayer(caster) && (caster.getActingPlayer().getAppearance().getSex() == _isFemale);
+		return isPlayer(caster) && (caster.getActingPlayer().getAppearance().isFemale() == _isFemale);
 	}
 }

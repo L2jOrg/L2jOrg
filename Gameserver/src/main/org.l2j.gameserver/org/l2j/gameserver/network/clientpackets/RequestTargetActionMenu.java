@@ -15,7 +15,6 @@ public class RequestTargetActionMenu extends ClientPacket {
     @Override
     public void readImpl() {
         _objectId = readInt();
-        _type = readShort(); // action?
     }
 
     @Override

@@ -36,18 +36,18 @@ public class ShortCuts implements IRestorable {
     private static final int MAX_SHORTCUTS_PER_BAR = 12;
     private static final Logger LOGGER = LoggerFactory.getLogger(ShortCuts.class);
     private final Player _owner;
-    private final Map<Integer, Shortcut> _shortCuts = new TreeMap<>();
+    private final Map<Integer, Shortcut> shortCuts = new TreeMap<>();
 
     public ShortCuts(Player owner) {
         _owner = owner;
     }
 
     public Shortcut[] getAllShortCuts() {
-        return _shortCuts.values().toArray(new Shortcut[_shortCuts.values().size()]);
+        return shortCuts.values().toArray(new Shortcut[0]);
     }
 
     public Shortcut getShortCut(int slot, int page) {
-        Shortcut sc = _shortCuts.get(slot + (page * MAX_SHORTCUTS_PER_BAR));
+        Shortcut sc = shortCuts.get(slot + (page * MAX_SHORTCUTS_PER_BAR));
         // Verify shortcut
         if ((sc != null) && (sc.getType() == ShortcutType.ITEM) && (_owner.getInventory().getItemByObjectId(sc.getId()) == null)) {
             deleteShortCut(sc.getSlot(), sc.getPage());
@@ -65,7 +65,7 @@ public class ShortCuts implements IRestorable {
             }
             shortcut.setSharedReuseGroup(item.getSharedReuseGroup());
         }
-        registerShortCutInDb(shortcut, _shortCuts.put(shortcut.getSlot() + (shortcut.getPage() * MAX_SHORTCUTS_PER_BAR), shortcut));
+        registerShortCutInDb(shortcut, shortCuts.put(shortcut.getSlot() + (shortcut.getPage() * MAX_SHORTCUTS_PER_BAR), shortcut));
     }
 
     private void registerShortCutInDb(Shortcut shortcut, Shortcut oldShortCut) {
@@ -94,7 +94,7 @@ public class ShortCuts implements IRestorable {
      * @param page
      */
     public synchronized void deleteShortCut(int slot, int page) {
-        final Shortcut old = _shortCuts.remove(slot + (page * MAX_SHORTCUTS_PER_BAR));
+        final Shortcut old = shortCuts.remove(slot + (page * MAX_SHORTCUTS_PER_BAR));
         if ((old == null) || (_owner == null)) {
             return;
         }
@@ -102,7 +102,7 @@ public class ShortCuts implements IRestorable {
     }
 
     public synchronized void deleteShortCutByObjectId(int objectId) {
-        for (Shortcut shortcut : _shortCuts.values()) {
+        for (Shortcut shortcut : shortCuts.values()) {
             if ((shortcut.getType() == ShortcutType.ITEM) && (shortcut.getId() == objectId)) {
                 deleteShortCut(shortcut.getSlot(), shortcut.getPage());
                 break;
@@ -128,7 +128,7 @@ public class ShortCuts implements IRestorable {
 
     @Override
     public boolean restoreMe() {
-        _shortCuts.clear();
+        shortCuts.clear();
         try (Connection con = DatabaseFactory.getInstance().getConnection();
              PreparedStatement statement = con.prepareStatement("SELECT charId, slot, page, type, shortcut_id, level, sub_level FROM character_shortcuts WHERE charId=? AND class_index=?")) {
             statement.setInt(1, _owner.getObjectId());
@@ -142,7 +142,7 @@ public class ShortCuts implements IRestorable {
                     final int id = rset.getInt("shortcut_id");
                     final int level = rset.getInt("level");
                     final int subLevel = rset.getInt("sub_level");
-                    _shortCuts.put(slot + (page * MAX_SHORTCUTS_PER_BAR), new Shortcut(slot, page, ShortcutType.values()[type], id, level, subLevel, 1));
+                    shortCuts.put(slot + (page * MAX_SHORTCUTS_PER_BAR), new Shortcut(slot, page, ShortcutType.values()[type], id, level, subLevel, 1));
                 }
             }
         } catch (Exception e) {
@@ -174,7 +174,7 @@ public class ShortCuts implements IRestorable {
      */
     public synchronized void updateShortCuts(int skillId, int skillLevel, int skillSubLevel) {
         // Update all the shortcuts for this skill
-        for (Shortcut sc : _shortCuts.values()) {
+        for (Shortcut sc : shortCuts.values()) {
             if ((sc.getId() == skillId) && (sc.getType() == ShortcutType.SKILL)) {
                 final Shortcut newsc = new Shortcut(sc.getSlot(), sc.getPage(), sc.getType(), sc.getId(), skillLevel, skillSubLevel, 1);
                 _owner.sendPacket(new ShortCutRegister(newsc));

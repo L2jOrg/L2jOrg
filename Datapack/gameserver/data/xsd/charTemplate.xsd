@@ -2,12 +2,12 @@
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
 	<xs:element name="list">
 		<xs:complexType>
-			<xs:sequence minOccurs="1" maxOccurs="1">
-				<xs:element name="classId" minOccurs="1" maxOccurs="1">
+			<xs:sequence>
+				<xs:element name="classId">
 					<xs:simpleType>
 						<xs:restriction base="xs:nonNegativeInteger">
 							<xs:minInclusive value="0" />
-							<xs:maxInclusive value="189" />
+							<xs:maxInclusive value="201" />
 						</xs:restriction>
 					</xs:simpleType>
 				</xs:element>

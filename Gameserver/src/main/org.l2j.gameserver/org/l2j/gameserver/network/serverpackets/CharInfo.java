@@ -106,7 +106,7 @@ public class CharInfo extends ServerPacket {
         writeString(_activeChar.getAppearance().getVisibleName()); // Confirmed
 
         writeShort((short) _activeChar.getRace().ordinal()); // Confirmed
-        writeByte((byte) (_activeChar.getAppearance().getSex() ? 0x01 : 0x00)); // Confirmed
+        writeByte((byte) (_activeChar.getAppearance().isFemale() ? 0x01 : 0x00)); // Confirmed
         writeInt(_activeChar.getBaseClass()); // Confirmed
 
         for (int slot : getPaperdollOrder()) {

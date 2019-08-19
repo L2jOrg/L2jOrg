@@ -1,26 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+		   targetNamespace="http://l2j.org"
+		   xmlns="http://l2j.org"
+		   elementFormDefault="qualified">
+
+	<xs:include schemaLocation="common.xsd"/>
 	<xs:element name="list">
 		<xs:complexType>
-			<xs:sequence minOccurs="1" maxOccurs="1">
-				<xs:element name="class" minOccurs="1" maxOccurs="189">
+			<xs:sequence>
+				<xs:element name="class" maxOccurs="189">
 					<xs:complexType>
-						<xs:attribute name="classId" use="required">
-							<xs:simpleType>
-								<xs:restriction base="xs:nonNegativeInteger">
-									<xs:minInclusive value="0" />
-									<xs:maxInclusive value="189" />
-								</xs:restriction>
-							</xs:simpleType>
-						</xs:attribute>
-						<xs:attribute name="parentClassId">
-							<xs:simpleType>
-								<xs:restriction base="xs:nonNegativeInteger">
-									<xs:minInclusive value="0" />
-									<xs:maxInclusive value="189" />
-								</xs:restriction>
-							</xs:simpleType>
-						</xs:attribute>
+						<xs:attribute name="classId" type="ClassId" use="required"/>
+						<xs:attribute name="parentClassId" type="ClassId"/>
 						<xs:attribute name="name" type="xs:token" use="required" />
 					</xs:complexType>
 				</xs:element>

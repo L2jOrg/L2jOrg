@@ -641,7 +641,7 @@ public class StatsSet implements IParserAdvUtils {
     @SuppressWarnings("unchecked")
     public <T extends Enum<T>> List<T> getEnumList(String key, Class<T> clazz) {
         final Object obj = _set.get(key);
-        if ((obj == null) || !(obj instanceof List<?>)) {
+        if (!(obj instanceof List<?>)) {
             return null;
         }
 

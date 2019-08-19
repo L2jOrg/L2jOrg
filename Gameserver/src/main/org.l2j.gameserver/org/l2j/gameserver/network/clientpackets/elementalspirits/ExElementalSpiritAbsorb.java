@@ -50,7 +50,7 @@ public class ExElementalSpiritAbsorb extends ClientPacket {
             client.sendPacket(SUCCESFUL_ABSORPTION);
             spirit.addExperience(absorbItem.getExperience() * amount);
             var userInfo = new UserInfo(player);
-            userInfo.addComponentType(UserInfoType.ATT_SPIRITS);
+            userInfo.addComponentType(UserInfoType.SPIRITS);
             client.sendPacket(userInfo);
         }
         client.sendPacket(new ElementalSpiritAbsorb(type, canAbsorb));

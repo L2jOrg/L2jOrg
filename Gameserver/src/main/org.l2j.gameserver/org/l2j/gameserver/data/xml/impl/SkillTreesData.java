@@ -128,10 +128,10 @@ public final class SkillTreesData extends GameXmlReader {
         var cId = parseInteger(attributes, "classId", -1);
         var parentId = parseInteger(attributes, "parentClassId", -1);
 
-        ClassId classId = cId > -1 ? ClassId.values()[cId] : null;
+        ClassId classId = ClassId.getClassId(cId);
 
         if(nonNull(classId) && parentId > -1 && !cId.equals(parentId)) {
-            parentClassMap.putIfAbsent(classId, ClassId.values()[parentId]);
+            parentClassMap.putIfAbsent(classId, ClassId.getClassId(parentId));
         }
 
         final LongMap<SkillLearn> classSkillTree = new HashLongMap<>();

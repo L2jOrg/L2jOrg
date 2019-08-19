@@ -42,7 +42,7 @@ public class ExElementalSpiritExtract extends ClientPacket {
             player.addItem("Extract", spirit.getExtractItem(), amount, player, true);
 
             var userInfo = new UserInfo(player);
-            userInfo.addComponentType(UserInfoType.ATT_SPIRITS);
+            userInfo.addComponentType(UserInfoType.SPIRITS);
             client.sendPacket(userInfo);
         }
 

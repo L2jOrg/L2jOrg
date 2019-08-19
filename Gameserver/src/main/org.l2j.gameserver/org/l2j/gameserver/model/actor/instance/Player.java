@@ -249,7 +249,7 @@ public final class Player extends Playable {
     public void changeElementalSpirit(byte element) {
         activeElementalSpiritType = ElementalType.of(element);
         var userInfo =  new UserInfo(this, false);
-        userInfo.addComponentType(UserInfoType.ATT_SPIRITS);
+        userInfo.addComponentType(UserInfoType.SPIRITS);
         sendPacket(userInfo);
     }
 
@@ -394,7 +394,7 @@ public final class Player extends Playable {
     /**
      * The list containing all shortCuts of this player.
      */
-    private final ShortCuts _shortCuts = new ShortCuts(this);
+    private final ShortCuts shortCuts = new ShortCuts(this);
     /**
      * The list containing all macros of this player.
      */
@@ -1316,7 +1316,7 @@ public final class Player extends Playable {
             LOGGER.warn("Attempted to remove unknown RecipeList: " + recipeId);
         }
 
-        for (Shortcut sc : _shortCuts.getAllShortCuts()) {
+        for (Shortcut sc : shortCuts.getAllShortCuts()) {
             if ((sc != null) && (sc.getId() == recipeId) && (sc.getType() == ShortcutType.RECIPE)) {
                 deleteShortCut(sc.getSlot(), sc.getPage());
             }
@@ -1495,7 +1495,7 @@ public final class Player extends Playable {
      * @return a table containing all L2ShortCut of the Player.
      */
     public Shortcut[] getAllShortCuts() {
-        return _shortCuts.getAllShortCuts();
+        return shortCuts.getAllShortCuts();
     }
 
     /**
@@ -1504,7 +1504,7 @@ public final class Player extends Playable {
      * @return the L2ShortCut of the Player corresponding to the position (page-slot).
      */
     public Shortcut getShortCut(int slot, int page) {
-        return _shortCuts.getShortCut(slot, page);
+        return shortCuts.getShortCut(slot, page);
     }
 
     /**
@@ -1513,7 +1513,7 @@ public final class Player extends Playable {
      * @param shortcut
      */
     public void registerShortCut(Shortcut shortcut) {
-        _shortCuts.registerShortCut(shortcut);
+        shortCuts.registerShortCut(shortcut);
     }
 
     /**
@@ -1524,7 +1524,7 @@ public final class Player extends Playable {
      * @param skillSubLevel the skill sub level to update.
      */
     public void updateShortCuts(int skillId, int skillLevel, int skillSubLevel) {
-        _shortCuts.updateShortCuts(skillId, skillLevel, skillSubLevel);
+        shortCuts.updateShortCuts(skillId, skillLevel, skillSubLevel);
     }
 
     /**
@@ -1534,7 +1534,7 @@ public final class Player extends Playable {
      * @param page
      */
     public void deleteShortCut(int slot, int page) {
-        _shortCuts.deleteShortCut(slot, page);
+        shortCuts.deleteShortCut(slot, page);
     }
 
     /**
@@ -2508,7 +2508,7 @@ public final class Player extends Playable {
     }
 
     public void removeItemFromShortCut(int objectId) {
-        _shortCuts.deleteShortCutByObjectId(objectId);
+        shortCuts.deleteShortCutByObjectId(objectId);
     }
 
     /**
@@ -5539,7 +5539,7 @@ public final class Player extends Playable {
             statement.setInt(11, appearance.getFace());
             statement.setInt(12, appearance.getHairStyle());
             statement.setInt(13, appearance.getHairColor());
-            statement.setInt(14, appearance.getSex() ? 1 : 0);
+            statement.setInt(14, appearance.isFemale() ? 1 : 0);
             statement.setLong(15, getExp());
             statement.setLong(16, getSp());
             statement.setInt(17, getReputation());
@@ -5661,7 +5661,7 @@ public final class Player extends Playable {
      */
     private void restoreShortCuts() {
         // Retrieve from the database all shortCuts of this Player and add them to _shortCuts.
-        _shortCuts.restoreMe();
+        shortCuts.restoreMe();
     }
 
     /**
@@ -5808,7 +5808,7 @@ public final class Player extends Playable {
             statement.setInt(8, appearance.getFace());
             statement.setInt(9, appearance.getHairStyle());
             statement.setInt(10, appearance.getHairColor());
-            statement.setInt(11, appearance.getSex() ? 1 : 0);
+            statement.setInt(11, appearance.isFemale() ? 1 : 0);
             statement.setInt(12, getHeading());
             statement.setInt(13, _lastLoc != null ? _lastLoc.getX() : getX());
             statement.setInt(14, _lastLoc != null ? _lastLoc.getY() : getY());
@@ -6112,7 +6112,7 @@ public final class Player extends Playable {
         }
 
         if (skill != null) {
-            for (Shortcut sc : _shortCuts.getAllShortCuts()) {
+            for (Shortcut sc : shortCuts.getAllShortCuts()) {
                 if ((sc != null) && (sc.getId() == skill.getId()) && (sc.getType() == ShortcutType.SKILL) && !((skill.getId() >= 3080) && (skill.getId() <= 3259))) {
                     deleteShortCut(sc.getSlot(), sc.getPage());
                 }
@@ -8021,7 +8021,7 @@ public final class Player extends Playable {
     }
 
     public void setBaseClass(ClassId classId) {
-        _baseClass = classId.ordinal();
+        _baseClass = classId.getId();
     }
 
     public int getActiveClass() {
@@ -8175,7 +8175,7 @@ public final class Player extends Playable {
             // Clear resurrect xp calculation
             model.setExpBeforeDeath(0);
 
-            _shortCuts.restoreMe();
+            shortCuts.restoreMe();
             sendPacket(new ShortCutInit(this));
 
             broadcastPacket(new SocialAction(getObjectId(), SocialAction.LEVEL_UP));
@@ -10169,7 +10169,7 @@ public final class Player extends Playable {
             return NpcData.getInstance().getTemplate(getMountNpcId()).getfCollisionRadius();
         }
 
-        final double defaultCollisionRadius = appearance.getSex() ? getBaseTemplate().getFCollisionRadiusFemale() : getBaseTemplate().getfCollisionRadius();
+        final double defaultCollisionRadius = appearance.isFemale() ? getBaseTemplate().getFCollisionRadiusFemale() : getBaseTemplate().getfCollisionRadius();
         return getTransformation().map(transform -> transform.getCollisionRadius(this, defaultCollisionRadius)).orElse(defaultCollisionRadius);
     }
 
@@ -10179,7 +10179,7 @@ public final class Player extends Playable {
             return NpcData.getInstance().getTemplate(getMountNpcId()).getfCollisionHeight();
         }
 
-        final double defaultCollisionHeight = appearance.getSex() ? getBaseTemplate().getFCollisionHeightFemale() : getBaseTemplate().getfCollisionHeight();
+        final double defaultCollisionHeight = appearance.isFemale() ? getBaseTemplate().getFCollisionHeightFemale() : getBaseTemplate().getfCollisionHeight();
         return getTransformation().map(transform -> transform.getCollisionHeight(this, defaultCollisionHeight)).orElse(defaultCollisionHeight);
     }
 

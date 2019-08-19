@@ -39,7 +39,7 @@ public class GMViewCharacterInfo extends ServerPacket {
         writeInt(_activeChar.getObjectId());
         writeString(_activeChar.getName());
         writeInt(_activeChar.getRace().ordinal());
-        writeInt(_activeChar.getAppearance().getSex() ? 1 : 0);
+        writeInt(_activeChar.getAppearance().isFemale() ? 1 : 0);
         writeInt(_activeChar.getClassId().getId());
         writeInt(_activeChar.getLevel());
         writeLong(_activeChar.getExp());

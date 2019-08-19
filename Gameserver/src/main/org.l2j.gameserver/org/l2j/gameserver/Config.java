@@ -1044,7 +1044,7 @@ public final class Config {
         HARDWARE_INFO_ENABLED = serverSettings.getBoolean("EnableHardwareInfo", false);
         MAX_PLAYERS_PER_HWID = serverSettings.getInt("MaxPlayersPerHWID", 0);
 
-        final String[] protocols = serverSettings.getString("AllowedProtocolRevisions", "603;606;607").split(";");
+        final String[] protocols = serverSettings.getString("AllowedProtocolRevisions", "166").split(";");
         PROTOCOL_LIST = new ArrayList<>(protocols.length);
         for (String protocol : protocols) {
             try {

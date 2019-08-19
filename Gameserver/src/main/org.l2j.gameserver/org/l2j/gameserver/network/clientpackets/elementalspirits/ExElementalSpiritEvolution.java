@@ -42,7 +42,7 @@ public class ExElementalSpiritEvolution extends ClientPacket {
             spirit.upgrade();
             client.sendPacket(SystemMessage.getSystemMessage(S1_EVOLVED_TO_S2_STAR).addElementalSpirit(type).addInt(spirit.getStage()));
             var userInfo = new UserInfo(player);
-            userInfo.addComponentType(UserInfoType.ATT_SPIRITS);
+            userInfo.addComponentType(UserInfoType.SPIRITS);
             client.sendPacket(userInfo);
         }
          client.sendPacket(new ElementalSpiritEvolution(type, canEvolve));

@@ -78,7 +78,7 @@ public class PledgeShowMemberListAll extends ServerPacket {
             writeInt(m.getClassId());
             final Player player = m.getPlayerInstance();
             if (player != null) {
-                writeInt(player.getAppearance().getSex() ? 1 : 0); // no visible effect
+                writeInt(player.getAppearance().isFemale() ? 1 : 0); // no visible effect
                 writeInt(player.getRace().ordinal()); // packet.putInt(1);
             } else {
                 writeInt(0x01); // no visible effect

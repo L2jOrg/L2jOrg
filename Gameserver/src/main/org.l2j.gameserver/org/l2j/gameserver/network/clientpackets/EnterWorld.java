@@ -134,12 +134,6 @@ public class EnterWorld extends ClientPacket {
         client.sendPacket(new ExQuestItemList(1, player));
         client.sendPacket(new ExQuestItemList(2, player));
 
-        // Send Adena and Inventory Count
-        client.sendPacket(new ExAdenaInvenCount(player));
-
-        // Send Shortcuts
-        client.sendPacket(new ShortCutInit(player));
-
         // Send Action list
         player.sendPacket(ExBasicActionList.STATIC_PACKET);
 
@@ -223,13 +217,14 @@ public class EnterWorld extends ClientPacket {
         }
 
         // Send SubClass Info
-        player.sendPacket(new ExSubjobInfo(player, SubclassInfoType.NO_CHANGES));
-
-        // Send Inventory Info
-        player.sendPacket(new ExUserInfoInvenWeight(player));
-
-        // Send Adena / Inventory Count Info
-        player.sendPacket(new ExAdenaInvenCount(player));
+        client.sendPacket(new ExSubjobInfo(player, SubclassInfoType.NO_CHANGES));
+        client.sendPacket(new ExUserInfoInvenWeight(player));
+        client.sendPacket(new ExAdenaInvenCount(player));
+        client.sendPacket(new ExUnk209());
+        client.sendPacket(new ShortCutInit(player));
+        client.sendPacket(new ExUnk235());
+        client.sendPacket(new ExDressRoomUiOpen());
+        client.sendPacket(new ExUnk20F());
 
         // Send Unread Mail Count
         if (MailManager.getInstance().hasUnreadPost(player)) {

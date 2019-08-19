@@ -24,7 +24,7 @@ public class CharSelected extends ServerPacket {
         writeInt(_sessionId);
         writeInt(_activeChar.getClanId());
         writeInt(0x00); // ??
-        writeInt(_activeChar.getAppearance().getSex() ? 1 : 0);
+        writeInt(_activeChar.getAppearance().isFemale() ? 1 : 0);
         writeInt(_activeChar.getRace().ordinal());
         writeInt(_activeChar.getClassId().getId());
         writeInt(0x01); // active ??

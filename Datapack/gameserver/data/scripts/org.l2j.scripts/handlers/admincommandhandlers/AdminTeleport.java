@@ -302,37 +302,16 @@ public class AdminTeleport implements IAdminCommandHandler
 	 * This method sends a player to it's home town.
 	 * @param player the player to teleport.
 	 */
-	private void teleportHome(Player player)
-	{
-		String regionName;
-		switch (player.getRace())
-		{
-			case ELF:
-			{
-				regionName = "elf_town";
-				break;
-			}
-			case DARK_ELF:
-			{
-				regionName = "darkelf_town";
-				break;
-			}
-			case ORC:
-			{
-				regionName = "orc_town";
-				break;
-			}
-			case DWARF:
-			{
-				regionName = "dwarf_town";
-				break;
-			}
-			case HUMAN:
-			default:
-			{
-				regionName = "talking_island_town";
-			}
-		}
+	private void teleportHome(Player player) {
+
+		String regionName = switch (player.getRace()) {
+			case ELF -> "elf_town";
+			case DARK_ELF -> "darkelf_town";
+			case ORC -> "orc_town";
+			case DWARF -> "dwarf_town";
+			case JIN_KAMAEL -> "kamael_town";
+			default-> "talking_island_town";
+		};
 		
 		player.teleToLocation(MapRegionManager.getInstance().getMapRegionByName(regionName).getSpawnLoc(), true, null);
 	}

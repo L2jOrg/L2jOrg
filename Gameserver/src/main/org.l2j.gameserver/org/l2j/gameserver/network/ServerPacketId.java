@@ -828,8 +828,12 @@ public enum ServerPacketId {
     EX_TRY_ENCHANT_ARTIFACT_RESULT(0xFE, 0x202), // 152
     EX_XIGN_CODE(0xFE, 0x203), // 152
     EX_MAX(0xFE, 0x204), // 152
-    EX_UNK_209(0XFE, 0X209),
-    EX_UNK_225(0XFE, 0X225);
+    EX_UNK_209(0xFE, 0x209),
+    EX_UNK_20F(0xFE, 0x20F),
+    EX_UNK_215(0xFE, 0x215),
+    EX_UNK_221(0xFE, 0x221),
+    EX_UNK_225(0xFE, 0x225),
+    EX_UNK_235(0xFE, 0x235);
 
     private final int id;
     private final int extId;

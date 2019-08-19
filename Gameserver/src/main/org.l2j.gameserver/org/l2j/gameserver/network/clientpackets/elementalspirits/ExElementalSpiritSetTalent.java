@@ -66,7 +66,7 @@ public class ExElementalSpiritSetTalent extends ClientPacket {
 
         if(result) {
             var userInfo = new UserInfo(client.getPlayer());
-            userInfo.addComponentType(UserInfoType.ATT_SPIRITS);
+            userInfo.addComponentType(UserInfoType.SPIRITS);
             client.sendPacket(userInfo);
             client.sendPacket(SystemMessage.getSystemMessage(CHARACTERISTICS_WERE_APPLIED_SUCCESSFULLY));
         }

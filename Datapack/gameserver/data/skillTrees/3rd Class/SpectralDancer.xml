@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skillTrees.xsd">
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org ../../xsd/skillTrees.xsd">
 	<skillTree type="classSkillTree" classId="107" parentClassId="34">
 		<skill skillName="Arrest" skillId="402" skillLvl="11" getLevel="76" levelUpSp="7600000" />
 		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="3" getLevel="76" levelUpSp="7600000">

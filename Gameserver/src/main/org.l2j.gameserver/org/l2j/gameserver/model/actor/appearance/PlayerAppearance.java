@@ -123,7 +123,7 @@ public class PlayerAppearance {
     /**
      * @return true if char is female
      */
-    public final boolean getSex() {
+    public final boolean isFemale() {
         return female;
     }
 

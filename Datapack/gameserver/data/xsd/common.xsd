@@ -33,6 +33,14 @@
             <xs:enumeration value="ELF" />
             <xs:enumeration value="HUMAN" />
             <xs:enumeration value="ORC" />
+            <xs:enumeration value="JIN_KAMAEL"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="ClassId">
+        <xs:restriction base="xs:nonNegativeInteger">
+            <xs:minInclusive value="0" />
+            <xs:maxInclusive value="201" />
         </xs:restriction>
     </xs:simpleType>
 

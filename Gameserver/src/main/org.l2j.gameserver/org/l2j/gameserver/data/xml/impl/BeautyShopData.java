@@ -31,14 +31,14 @@ public final class BeautyShopData extends GameXmlReader {
 
     @Override
     protected Path getSchemaFilePath() {
-        return getSettings(ServerSettings.class).dataPackDirectory().resolve("data/xsd/BeautyShop.xsd");
+        return getSettings(ServerSettings.class).dataPackDirectory().resolve("data/xsd/beautyShop.xsd");
     }
 
     @Override
     public synchronized void load() {
         _beautyList.clear();
         _beautyData.clear();
-        parseDatapackFile("data/BeautyShop.xml");
+        parseDatapackFile("data/beautyShop.xml");
     }
 
     @Override

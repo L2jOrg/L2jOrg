@@ -22,6 +22,7 @@ public final class ShortCutRegister extends ServerPacket {
 
         writeInt(_shortcut.getType().ordinal());
         writeInt(_shortcut.getSlot() + (_shortcut.getPage() * 12)); // C4 Client
+        writeByte(0);
         switch (_shortcut.getType()) {
             case ITEM: {
                 writeInt(_shortcut.getId());

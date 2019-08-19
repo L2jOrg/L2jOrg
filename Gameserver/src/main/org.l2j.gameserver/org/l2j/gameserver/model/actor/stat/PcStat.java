@@ -555,7 +555,7 @@ public class PcStat extends PlayableStat {
     }
 
     public double getElementalSpiritPower(ElementalType type, double base) {
-        return isNull(type)  ? 0 : getValue(type.getAttackStat(), base);
+        return isNull(type) ? 0 : getValue(type.getAttackStat(), base);
     }
 
     public double getElementalSpiritCriticalRate(int base) {

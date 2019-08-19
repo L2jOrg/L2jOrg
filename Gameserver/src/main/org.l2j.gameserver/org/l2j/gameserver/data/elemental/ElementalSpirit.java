@@ -45,7 +45,7 @@ public class ElementalSpirit {
             owner.sendPacket(SystemMessage.getSystemMessage(S1_ATTRIBUTE_SPIRIT_BECAME_LEVEL_S2).addElementalSpirit(getType()).addByte(data.getLevel()));
             owner.sendPacket(new ElementalSpiritInfo(owner.getActiveElementalSpiritType(), (byte) 0));
             var userInfo = new UserInfo(owner);
-            userInfo.addComponentType(UserInfoType.ATT_SPIRITS);
+            userInfo.addComponentType(UserInfoType.SPIRITS);
             owner.sendPacket(userInfo);
 
         }
