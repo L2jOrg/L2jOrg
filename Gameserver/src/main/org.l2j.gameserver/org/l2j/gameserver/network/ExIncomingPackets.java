@@ -399,7 +399,8 @@ public enum ExIncomingPackets implements PacketFactory {
     EX_INTERACT_MODIFY(0x160, null, ConnectionState.IN_GAME), // 152
     EX_TRY_ENCHANT_ARTIFACT(0x161, null, ConnectionState.IN_GAME), // 152
     EX_XIGN_CODE(0x162, null, ConnectionState.IN_GAME), // 152
-    UNK_165(0x165, null, ConnectionState.IN_GAME); // 228
+    UNK_165(0x165, null, ConnectionState.IN_GAME), // 228
+    EX_REQUEST_TELEPORT(0x167, ExRequestTeleport::new, ConnectionState.IN_GAME);
 
     public static final ExIncomingPackets[] PACKET_ARRAY;
 

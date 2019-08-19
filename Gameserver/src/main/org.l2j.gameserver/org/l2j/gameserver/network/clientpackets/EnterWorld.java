@@ -120,6 +120,8 @@ public class EnterWorld extends ClientPacket {
             player.sendPacket(new ExVitalityEffectInfo(player));
         }
 
+        client.sendPacket(new ExEnterWorld());
+
         // Send Macro List
         player.getMacros().sendAllMacros();
 

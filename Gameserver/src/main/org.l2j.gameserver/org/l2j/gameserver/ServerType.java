@@ -12,14 +12,16 @@ public enum ServerType
 	NORMAL,
 	RELAX,
 	TEST,
-	UNK_3,
+	BROAD,
 	RESTRICTED,
 	EVENT,
 	FREE,
 	UNK_7,
-	UNK_8,
+	WORLD,
 	NEW,
-	CLASSIC;
+	CLASSIC,
+	ARENA,
+	BLOODY;
 
 	private int mask;
 

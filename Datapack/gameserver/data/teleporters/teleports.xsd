@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://l2j.org" xmlns="http://l2j.org" elementFormDefault="qualified">
+
+    <xs:include schemaLocation="../xsd/common.xsd"/>
+
+    <xs:element name="list">
+        <xs:complexType>
+            <xs:sequence minOccurs="0" maxOccurs="unbounded">
+                <xs:element name="teleport" type="TeleportInfo"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="TeleportInfo">
+        <xs:sequence>
+            <xs:element name="location" type="Location"/>
+        </xs:sequence>
+        <xs:attribute name="id" type="xs:integer" use="required"/>
+        <xs:attribute name="price" type="xs:integer" use="required"/>
+    </xs:complexType>
+</xs:schema>
