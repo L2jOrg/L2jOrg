@@ -6,7 +6,7 @@ import org.l2j.gameserver.model.entity.Fort;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
 
-import java.util.List;
+import java.util.Collection;
 
 /**
  * TODO: Rewrite!!!
@@ -22,7 +22,7 @@ public class ExShowFortressSiegeInfo extends ServerPacket {
     public ExShowFortressSiegeInfo(Fort fort) {
         _fortId = fort.getResidenceId();
         _size = fort.getFortSize();
-        final List<FortSiegeSpawn> commanders = FortSiegeManager.getInstance().getCommanderSpawnList(_fortId);
+        final Collection<FortSiegeSpawn> commanders = FortSiegeManager.getInstance().getCommanderSpawnList(_fortId);
         _csize = ((commanders == null) ? 0 : commanders.size());
         _csize2 = fort.getSiege().getCommanders().size();
     }

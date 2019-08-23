@@ -1,20 +1,20 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org npcs.xsd">
-	<npc id="159" level="80" type="Folk" name="Tame Princess Ant">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<sex>MALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="2444" mp="40" />
-			<attack physical="500" magical="500" attackSpeed="278" range="40" />
-			<defence physical="500" magical="500" />
-			<speed>
-				<walk ground="41" />
-				<run ground="250" />
-			</speed>
-		</stats>
-		<collision>
-			<radius normal="42" />
-			<height normal="40" />
-		</collision>
-	</npc>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org npcs.xsd">
+    <npc id="159" level="80" type="Folk" name="Tame Princess Ant">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <sex>MALE</sex>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+            <vitals hp="2444" mp="40"/>
+            <attack physical="500" magical="500" attackSpeed="278" range="40"/>
+            <defence physical="500" magical="500"/>
+            <speed>
+                <walk ground="41"/>
+                <run ground="250"/>
+            </speed>
+        </stats>
+        <collision>
+            <radius normal="42"/>
+            <height normal="40"/>
+        </collision>
+    </npc>
 </list>

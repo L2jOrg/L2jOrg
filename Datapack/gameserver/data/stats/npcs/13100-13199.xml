@@ -1,24 +1,24 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org npcs.xsd">
-	<npc id="13146" level="70" type="Folk" name="Tawny-maned Lion">
-		<!-- Todo: Need Confirmation -->
-		<race>ETC</race>
-		<sex>ETC</sex>
-		<acquire exp="490" sp="10" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2444.46819" hpRegen="7.5" mp="889" mpRegen="2.7" />
-			<attack physical="688.86373" magical="470.40463" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="295.91597" magical="216.53847" />
-			<speed>
-				<walk ground="43" />
-				<run ground="180" />
-			</speed>
-			<abnormalResist physical="10" magical="10" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="25" />
-			<height normal="22.5" />
-		</collision>
-	</npc>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org npcs.xsd">
+    <npc id="13146" level="70" type="Folk" name="Tawny-maned Lion">
+        <!-- Todo: Need Confirmation -->
+        <race>ETC</race>
+        <sex>ETC</sex>
+        <acquire exp="490" sp="10"/>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="2444.46819" hpRegen="7.5" mp="889" mpRegen="2.7"/>
+            <attack physical="688.86373" magical="470.40463" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
+            <defence physical="295.91597" magical="216.53847"/>
+            <speed>
+                <walk ground="43"/>
+                <run ground="180"/>
+            </speed>
+            <abnormalResist physical="10" magical="10"/>
+        </stats>
+        <status attackable="false"/>
+        <collision>
+            <radius normal="25"/>
+            <height normal="22.5"/>
+        </collision>
+    </npc>
 </list>

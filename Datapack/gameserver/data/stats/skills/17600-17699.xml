@@ -1,96 +1,94 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-	<skill id="17608" toLevel="1" name="Energy of Delusion">
-		<!-- Fishing place, filled with Fantastical Energy. -->
-		<icon>icon.etc_dragons_blood_i03</icon>
-		<operateType>A2</operateType>
-		<isMagic>4</isMagic>
-	</skill>
-	<skill id="17613" toLevel="1" name="Agathion - Aries">
-		<!-- Summon Agathion -->
-		<icon>icon.etc_summon_aga_agit_i00</icon>
-		<operateType>A1</operateType>
-		<hitTime>3000</hitTime>
-		<isMagic>2</isMagic>
-		<magicLvl>85</magicLvl>
-		<targetType>SELF</targetType>
-		<affectScope>SINGLE</affectScope>
-		<effects>
-			<effect name="SummonAgathion">
-				<npcId>13411</npcId> <!-- Aries -->
-			</effect>
-		</effects>
-	</skill>
-	<skill id="17619" toLevel="1" name="Release Agathion's Seal - Pisces">
-		<!-- Summon Agathion -->
-		<icon>icon.etc_summon_aga_agit_i00</icon>
-		<operateType>A1</operateType>
-		<hitTime>3000</hitTime>
-		<isMagic>2</isMagic>
-		<magicLvl>85</magicLvl>
-		<targetType>SELF</targetType>
-		<affectScope>SINGLE</affectScope>
-		<effects>
-			<effect name="SummonAgathion">
-				<npcId>13407</npcId> <!-- Pierce -->
-			</effect>
-		</effects>
-	</skill>
-	<skill id="17621" toLevel="1" name="Release Agathion's Seal - Cancer">
-		<!-- Summon Agathion -->
-		<icon>icon.etc_summon_aga_agit_i00</icon>
-		<operateType>A1</operateType>
-		<hitTime>3000</hitTime>
-		<isMagic>2</isMagic>
-		<magicLvl>85</magicLvl>
-		<targetType>SELF</targetType>
-		<affectScope>SINGLE</affectScope>
-		<effects>
-			<effect name="SummonAgathion">
-				<npcId>13409</npcId> <!-- Cat -->
-			</effect>
-		</effects>
-	</skill>
-	<skill id="17625" toLevel="1" name="Agathion Cute Trick - Aries">
-		<!-- See Agathion's cute trick. -->
-		<icon>icon.skill_agathion_cute</icon>
-		<operateType>A1</operateType>
-		<hitTime>3000</hitTime>
-	</skill>
-	<skill id="17685" toLevel="1" name="Uldie's Gift">
-		<operateType>A1</operateType>
-		<effectPoint>1</effectPoint>
-	</skill>
-	<skill id="17686" toLevel="4" name="Uldie's Effect">
-		<!-- Buff from Uldie. For 2 hr., acquired XP/ SP +$s1, P. Atk./ M. Atk. +$s2, Atk. Spd./ Casting Spd. +$s3. A chance to receive an Elite Gift from the Captain of Lara's Team when removing the Buff. <Warning> You cannot receive the gift if your character dies when receiving or if there is no empty slot in your Inventory. -->
-		<icon>BranchSys.icon.br_sevenlove_girlpresent_i00</icon>
-		<operateType>A2</operateType>
-		<castRange>
-			<value level="1">900</value>
-			<value level="2">-1</value>
-			<value level="3">-1</value>
-			<value level="4">-1</value>
-		</castRange>
-		<effectPoint>1</effectPoint>
-		<isMagic>4</isMagic>
-	</skill>
-	<skill id="17689" toLevel="1" name="Uldie's Valuable Gift">
-		<operateType>A1</operateType>
-	</skill>
-	<skill id="17695" toLevel="1" name="Summon Squash">
-		<!-- Skill for summoning a Pumpkin for an anniversary. -->
-		<icon>icon.skill17695</icon>
-		<operateType>A1</operateType>
-		<hitTime>1000</hitTime>
-		<coolTime>500</coolTime>
-		<reuseDelay>10000</reuseDelay>
-	</skill>
-	<skill id="17696" toLevel="1" name="Summon Large Squash">
-		<!-- Skill for summoning a Pumpkin for an anniversary. -->
-		<icon>icon.skill17696</icon>
-		<operateType>A1</operateType>
-		<hitTime>1000</hitTime>
-		<coolTime>500</coolTime>
-		<reuseDelay>10000</reuseDelay>
-	</skill>
+    <skill id="17608" toLevel="1" name="Energy of Delusion">
+        <!-- Fishing place, filled with Fantastical Energy. -->
+        <icon>icon.etc_dragons_blood_i03</icon>
+        <operateType>A2</operateType>
+        <isMagic>4</isMagic>
+    </skill>
+    <skill id="17613" toLevel="1" name="Agathion - Aries">
+        <!-- Summon Agathion -->
+        <icon>icon.etc_summon_aga_agit_i00</icon>
+        <operateType>A1</operateType>
+        <hitTime>3000</hitTime>
+        <isMagic>2</isMagic>
+        <magicLvl>85</magicLvl>
+        <targetType>SELF</targetType>
+        <affectScope>SINGLE</affectScope>
+        <effects>
+            <effect name="SummonAgathion">
+                <npcId>13411</npcId> <!-- Aries -->
+            </effect>
+        </effects>
+    </skill>
+    <skill id="17619" toLevel="1" name="Release Agathion's Seal - Pisces">
+        <!-- Summon Agathion -->
+        <icon>icon.etc_summon_aga_agit_i00</icon>
+        <operateType>A1</operateType>
+        <hitTime>3000</hitTime>
+        <isMagic>2</isMagic>
+        <magicLvl>85</magicLvl>
+        <targetType>SELF</targetType>
+        <affectScope>SINGLE</affectScope>
+        <effects>
+            <effect name="SummonAgathion">
+                <npcId>13407</npcId> <!-- Pierce -->
+            </effect>
+        </effects>
+    </skill>
+    <skill id="17621" toLevel="1" name="Release Agathion's Seal - Cancer">
+        <!-- Summon Agathion -->
+        <icon>icon.etc_summon_aga_agit_i00</icon>
+        <operateType>A1</operateType>
+        <hitTime>3000</hitTime>
+        <isMagic>2</isMagic>
+        <magicLvl>85</magicLvl>
+        <targetType>SELF</targetType>
+        <affectScope>SINGLE</affectScope>
+        <effects>
+            <effect name="SummonAgathion">
+                <npcId>13409</npcId> <!-- Cat -->
+            </effect>
+        </effects>
+    </skill>
+    <skill id="17625" toLevel="1" name="Agathion Cute Trick - Aries">
+        <!-- See Agathion's cute trick. -->
+        <icon>icon.skill_agathion_cute</icon>
+        <operateType>A1</operateType>
+        <hitTime>3000</hitTime>
+    </skill>
+    <skill id="17685" toLevel="1" name="Uldie's Gift">
+        <operateType>A1</operateType>
+        <effectPoint>1</effectPoint>
+    </skill>
+    <skill id="17686" toLevel="2" name="Uldie's Energy">
+        <!-- Buff from Uldie. For 2 h., acquired XP/ SP +$s1, P. Atk./ M. Atk. +$s2, Atk. Spd./ Casting Spd. +$s3. A chance to receive an Elite Gift from the Captain of Lara's Team when removing the Buff. <Warning> You cannot receive the gift if your character dies when receiving or if there is no empty slot in your Inventory. -->
+        <icon>BranchSys.icon.br_sevenlove_girlpresent_i00</icon>
+        <operateType>A2</operateType>
+        <castRange>
+            <value level="1">900</value>
+            <value level="2">-1</value>
+        </castRange>
+        <effectPoint>1</effectPoint>
+        <isMagic>4</isMagic>
+    </skill>
+    <skill id="17689" toLevel="1" name="Uldie's Valuable Gift">
+        <operateType>A1</operateType>
+    </skill>
+    <skill id="17695" toLevel="1" name="Summon Squash">
+        <!-- Skill for summoning a Pumpkin for an anniversary. -->
+        <icon>icon.skill17695</icon>
+        <operateType>A1</operateType>
+        <hitTime>1000</hitTime>
+        <coolTime>500</coolTime>
+        <reuseDelay>5000</reuseDelay>
+    </skill>
+    <skill id="17696" toLevel="1" name="Summon Large Squash">
+        <!-- Skill for summoning a Pumpkin for an anniversary. -->
+        <icon>icon.skill17696</icon>
+        <operateType>A1</operateType>
+        <hitTime>1000</hitTime>
+        <coolTime>500</coolTime>
+        <reuseDelay>5000</reuseDelay>
+    </skill>
 </list>

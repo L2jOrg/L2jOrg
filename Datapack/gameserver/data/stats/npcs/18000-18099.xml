@@ -1,1590 +1,1590 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org npcs.xsd">
-	<npc id="18001" level="60" type="Monster" name="">
-		<parameters>
-			<param name="MoveAroundSocial" value="60" />
-			<param name="MoveAroundSocial1" value="60" />
-			<param name="MoveAroundSocial2" value="60" />
-			<skill name="DDMagic1" id="4039" level="6" />
-			<skill name="DDMagic2" id="4002" level="6" />
-			<skill name="DeBuff" id="4035" level="6" />
-		</parameters>
-		<race>DEMONIC</race>
-		<sex>FEMALE</sex>
-		<acquire exp="6804" sp="1" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="4234" hpRegen="6.5" mp="1846" mpRegen="2.4" />
-			<attack physical="481.34551" magical="328.69659" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="247.65008" magical="181.21958" />
-			<speed>
-				<walk ground="1" />
-				<run ground="1" />
-			</speed>
-			<hitTime>500</hitTime>
-			<abnormalResist physical="10" magical="10" />
-		</stats>
-		<status undying="false" canBeSown="true" />
-		<skillList>
-			<skill id="4002" level="6" /> <!-- NPC HP Drain -->
-			<skill id="4035" level="6" /> <!-- Poison -->
-			<skill id="4039" level="6" /> <!-- NPC MP Drain -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4441" level="5" /> <!-- Greater Mental Attack Resistance -->
-			<skill id="4416" level="9" /> <!-- Demons -->
-			<skill id="4278" level="1" /> <!-- Dark Attack -->
-			<skill id="4333" level="5" /> <!-- Dark Attack Resistance -->
-		</skillList>
-		<exCrtEffect>true</exCrtEffect>
-		<ai aggroRange="450" clanHelpRange="400" isAggressive="true">
-			<clanList>
-				<clan>CAVE_SERVANT</clan>
-				<ignoreNpcId>20134</ignoreNpcId> <!-- Cave Maiden -->
-				<ignoreNpcId>20236</ignoreNpcId> <!-- Cave Servant -->
-				<ignoreNpcId>20237</ignoreNpcId> <!-- Cave Servant Archer -->
-				<ignoreNpcId>20238</ignoreNpcId> <!-- Cave Servant Warrior -->
-				<ignoreNpcId>20239</ignoreNpcId> <!-- Cave Servant Captain -->
-				<ignoreNpcId>20240</ignoreNpcId> <!-- Royal Cave Servant -->
-				<ignoreNpcId>20246</ignoreNpcId> <!-- Cave Keeper -->
-				<ignoreNpcId>20272</ignoreNpcId> <!-- Cave Servant -->
-				<ignoreNpcId>20273</ignoreNpcId> <!-- Cave Servant Archer -->
-				<ignoreNpcId>20274</ignoreNpcId> <!-- Cave Servant Warrior -->
-				<ignoreNpcId>20275</ignoreNpcId> <!-- Cave Servant Captain -->
-				<ignoreNpcId>20276</ignoreNpcId> <!-- Royal Cave Servant -->
-				<ignoreNpcId>20277</ignoreNpcId> <!-- Cave Keeper -->
-				<ignoreNpcId>20287</ignoreNpcId> <!-- Cave Maiden -->
-			</clanList>
-		</ai>
-		<collision>
-			<radius normal="0.1" />
-			<height normal="0.1" />
-		</collision>
-	</npc>
-	<npc id="18002" level="60" type="Monster" name="Scarecrow">
-		<parameters>
-			<param name="MoveAroundSocial" value="60" />
-			<param name="MoveAroundSocial1" value="60" />
-			<param name="MoveAroundSocial2" value="60" />
-			<skill name="DDMagic1" id="4039" level="6" />
-			<skill name="DDMagic2" id="4002" level="6" />
-			<skill name="DeBuff" id="4035" level="6" />
-		</parameters>
-		<race>DEMONIC</race>
-		<sex>FEMALE</sex>
-		<acquire exp="6480" sp="1" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="1933" hpRegen="6.5" mp="40" mpRegen="2.4" />
-			<attack physical="529.48" magical="328.7" random="30" critical="4" accuracy="3.75" attackSpeed="257" type="FIST" range="40" distance="80" width="120" />
-			<defence physical="247.65" magical="181.22" />
-			<speed>
-				<walk ground="1" />
-				<run ground="1" />
-			</speed>
-			<hitTime>500</hitTime>
-			<abnormalResist physical="10" magical="10" />
-		</stats>
-		<status undying="false" />
-		<skillList>
-			<skill id="4002" level="6" /> <!-- NPC HP Drain -->
-			<skill id="4035" level="6" /> <!-- Poison -->
-			<skill id="4039" level="6" /> <!-- NPC MP Drain -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="9" /> <!-- Demons -->
-			<skill id="4278" level="1" /> <!-- Dark Attack -->
-			<skill id="4333" level="5" /> <!-- Dark Attack Resistance -->
-		</skillList>
-		<exCrtEffect>true</exCrtEffect>
-		<ai aggroRange="450" clanHelpRange="300" isAggressive="true">
-			<clanList>
-				<clan>CAVE_SERVANT</clan>
-				<ignoreNpcId>20134</ignoreNpcId> <!-- Cave Maiden -->
-				<ignoreNpcId>20236</ignoreNpcId> <!-- Cave Servant -->
-				<ignoreNpcId>20237</ignoreNpcId> <!-- Cave Servant Archer -->
-				<ignoreNpcId>20238</ignoreNpcId> <!-- Cave Servant Warrior -->
-				<ignoreNpcId>20239</ignoreNpcId> <!-- Cave Servant Captain -->
-				<ignoreNpcId>20240</ignoreNpcId> <!-- Royal Cave Servant -->
-				<ignoreNpcId>20246</ignoreNpcId> <!-- Cave Keeper -->
-				<ignoreNpcId>20272</ignoreNpcId> <!-- Cave Servant -->
-				<ignoreNpcId>20273</ignoreNpcId> <!-- Cave Servant Archer -->
-				<ignoreNpcId>20274</ignoreNpcId> <!-- Cave Servant Warrior -->
-				<ignoreNpcId>20275</ignoreNpcId> <!-- Cave Servant Captain -->
-				<ignoreNpcId>20276</ignoreNpcId> <!-- Royal Cave Servant -->
-				<ignoreNpcId>20277</ignoreNpcId> <!-- Cave Keeper -->
-				<ignoreNpcId>20287</ignoreNpcId> <!-- Cave Maiden -->
-			</clanList>
-		</ai>
-		<collision>
-			<radius normal="27" />
-			<height normal="37.5" />
-		</collision>
-	</npc>
-	<npc id="18003" level="1" type="Monster" name="Bomb">
-		<parameters>
-			<param name="MoveAroundSocial" value="0" />
-			<param name="MoveAroundSocial1" value="0" />
-			<param name="MoveAroundSocial2" value="0" />
-		</parameters>
-		<race>ANIMAL</race>
-		<sex>MALE</sex>
-		<acquire exp="44" sp="2" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="39" hpRegen="2" mp="1345" mpRegen="0.9" />
-			<attack physical="4" magical="5.79" random="30" critical="8" accuracy="0" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
-			<defence physical="44.44" magical="32.52" />
-			<speed>
-				<walk ground="1" />
-				<run ground="1" />
-			</speed>
-			<hitTime>370</hitTime>
-			<abnormalResist physical="10" magical="10" />
-		</stats>
-		<status undying="false" />
-		<skillList>
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="4" /> <!-- Animals -->
-		</skillList>
-		<exCrtEffect>true</exCrtEffect>
-		<ai type="BALANCED" clanHelpRange="300" aggroRange="450" />
-		<collision>
-			<radius normal="22" />
-			<height normal="30" />
-		</collision>
-	</npc>
-	<npc id="18004" level="49" type="Monster" name="Tower">
-		<race>CONSTRUCT</race>
-		<sex>MALE</sex>
-		<acquire sp="1" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="1372" hpRegen="5.5" mp="1345" mpRegen="2.1" />
-			<attack physical="290.45" magical="198.34" random="30" critical="4" accuracy="20" attackSpeed="257" type="BOW" range="50" distance="80" width="120" />
-			<defence physical="195.66" magical="143.18" />
-			<speed>
-				<walk ground="50" />
-				<run ground="120" />
-			</speed>
-			<hitTime>520</hitTime>
-			<abnormalResist physical="10" magical="10" />
-		</stats>
-		<status undying="false" />
-		<skillList>
-			<skill id="4273" level="3" /> <!-- Resist Daggers/Rapier Weapon -->
-			<skill id="4274" level="1" /> <!-- Blunt Weapon Weak Point -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="9" /> <!-- Bows -->
-			<skill id="4416" level="2" /> <!-- Magic Creatures -->
-			<skill id="4444" level="2" /> <!-- Higher Resist Bow/Crossbow Weapons -->
-		</skillList>
-		<exCrtEffect>true</exCrtEffect>
-		<ai clanHelpRange="300" aggroRange="450" />
-		<collision>
-			<radius normal="7" />
-			<height normal="35" />
-		</collision>
-	</npc>
-	<npc id="18005" level="52" type="Monster" name="">
-		<race>CONSTRUCT</race>
-		<sex>MALE</sex>
-		<acquire exp="4867" sp="1" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="1569" hpRegen="6.5" mp="1507" mpRegen="2.4" />
-			<attack physical="348.07" magical="230.26" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
-			<defence physical="216.26" magical="153.3" />
-			<speed>
-				<walk ground="1" />
-				<run ground="1" />
-			</speed>
-			<hitTime>560</hitTime>
-			<abnormalResist physical="10" magical="10" />
-		</stats>
-		<status undying="false" />
-		<skillList>
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="2" /> <!-- Magic Creatures -->
-		</skillList>
-		<exCrtEffect>true</exCrtEffect>
-		<ai clanHelpRange="300" aggroRange="450" />
-		<collision>
-			<radius normal="0.1" />
-			<height normal="0.1" />
-		</collision>
-	</npc>
-	<npc id="18006" level="68" type="Monster" name="">
-		<parameters>
-			<param name="MoveAroundSocial" value="80" />
-			<param name="MoveAroundSocial1" value="80" />
-			<param name="MoveAroundSocial2" value="80" />
-			<skill name="DDMagic" id="4002" level="6" />
-			<skill name="CancelMagic" id="4094" level="6" />
-			<skill name="CheckMagic" id="4098" level="6" />
-			<skill name="SleepMagic" id="4046" level="6" />
-		</parameters>
-		<race>UNDEAD</race>
-		<sex>MALE</sex>
-		<equipment rhand="1472" /> <!-- Dreadbane -->
-		<acquire exp="9086" sp="2" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2421" hpRegen="7.5" mp="1507" mpRegen="2.7" />
-			<attack physical="667.04" magical="441.26" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="295.61" magical="209.55" />
-			<speed>
-				<walk ground="1" />
-				<run ground="1" />
-			</speed>
-			<hitTime>450</hitTime>
-			<abnormalResist physical="10" magical="10" />
-		</stats>
-		<status undying="false" />
-		<skillList>
-			<skill id="4002" level="6" /> <!-- NPC HP Drain -->
-			<skill id="4046" level="6" /> <!-- Sleep -->
-			<skill id="4094" level="6" /> <!-- NPC Cancel Magic -->
-			<skill id="4098" level="6" /> <!-- Silence -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="1" /> <!-- Undead -->
-			<skill id="4278" level="1" /> <!-- Dark Attack -->
-			<skill id="4275" level="2" /> <!-- Holy Attack Vulnerability -->
-		</skillList>
-		<exCrtEffect>true</exCrtEffect>
-		<ai aggroRange="450" clanHelpRange="300" isAggressive="true">
-			<clanList>
-				<clan>MALRUK</clan>
-			</clanList>
-		</ai>
-		<collision>
-			<radius normal="0.1" />
-			<height normal="0.1" />
-		</collision>
-	</npc>
-	<npc id="18007" level="70" type="Monster" name="Captain of Blood Knights" title="Chaos Decoy">
-		<parameters>
-			<param name="MoveAroundSocial" value="60" />
-			<param name="MoveAroundSocial1" value="60" />
-			<param name="MoveAroundSocial2" value="60" />
-			<skill name="DDMagic" id="4002" level="6" />
-			<skill name="DeBuff" id="4118" level="6" />
-			<skill name="HoldMagic" id="4047" level="6" />
-		</parameters>
-		<race>DEMONIC</race>
-		<sex>FEMALE</sex>
-		<acquire exp="9189932" sp="275697" />
-		<equipment rhand="5800" lhand="5799" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="1241577.52641" hpRegen="7.5" mp="2284.185" mpRegen="2.7" />
-			<attack physical="734.25" magical="501.4" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
-			<defence physical="291.15" magical="213.05" />
-			<speed>
-				<walk ground="56" />
-				<run ground="200" />
-			</speed>
-			<hitTime>500</hitTime>
-			<abnormalResist physical="10" magical="10" />
-		</stats>
-		<status undying="false" />
-		<skillList>
-			<skill id="4002" level="6" /> <!-- NPC HP Drain -->
-			<skill id="4118" level="6" /> <!-- Paralysis -->
-			<skill id="4416" level="9" /> <!-- Demons -->
-			<skill id="5467" level="1" /> <!-- Darkness Protection -->
-			<skill id="4278" level="1" /> <!-- Dark Attack -->
-			<skill id="4287" level="3" /> <!-- Hold Resistance -->
-			<skill id="4285" level="3" /> <!-- Sleep Resistance -->
-		</skillList>
-		<exCrtEffect>true</exCrtEffect>
-		<ai aggroRange="450" clanHelpRange="300" isAggressive="true">
-			<clanList>
-				<clan>MALRUK</clan>
-			</clanList>
-		</ai>
-		<collision>
-			<radius normal="13" />
-			<height normal="55" />
-		</collision>
-	</npc>
-	<npc id="18008" level="70" type="Monster" name="">
-		<!-- Todo: Karik Does not exist -->
-		<parameters>
-			<param name="MoveAroundSocial" value="140" />
-			<param name="MoveAroundSocial1" value="140" />
-			<param name="MoveAroundSocial2" value="140" />
-			<skill name="HoldMagic" id="4047" level="7" />
-		</parameters>
-		<race>DEMONIC</race>
-		<sex>MALE</sex>
-		<acquire exp="9555" sp="2" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2444" hpRegen="7.5" mp="1507" mpRegen="2.7" />
-			<attack physical="757.75" magical="517.45" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="295.92" magical="216.54" />
-			<speed>
-				<walk ground="1" />
-				<run ground="1" />
-			</speed>
-			<hitTime>450</hitTime>
-			<abnormalResist physical="10" magical="10" />
-		</stats>
-		<status undying="false" />
-		<skillList>
-			<skill id="4047" level="7" /> <!-- Hold -->
-			<skill id="4071" level="5" /> <!-- Resist Bow/Crossbow Weapons -->
-			<skill id="4085" level="1" /> <!-- Critical Damage -->
-			<skill id="4086" level="1" /> <!-- Critical Chance -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="14" /> <!-- Strong P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="9" /> <!-- Demons -->
-			<skill id="4278" level="1" /> <!-- Dark Attack -->
-			<skill id="4333" level="5" /> <!-- Dark Attack Resistance -->
-		</skillList>
-		<exCrtEffect>true</exCrtEffect>
-		<ai aggroRange="450" clanHelpRange="300" isAggressive="true">
-			<clanList>
-				<clan>ALL</clan>
-			</clanList>
-		</ai>
-		<collision>
-			<radius normal="25" grown="30" />
-			<height normal="90" grown="109" />
-		</collision>
-	</npc>
-	<npc id="18009" level="34" type="FestivalMonster" name="">
-		<parameters>
-			<param name="RoomIndex" value="1" />
-			<param name="SSQPart" value="TWILIGHT" />
-			<minions name="Privates">
-				<npc id="18010" count="2" respawnTime="120" weightPoint="0" />
-			</minions>
-			<skill name="DDMagic" id="4078" level="3" />
-		</parameters>
-		<race>HUMANOID</race>
-		<sex>MALE</sex>
-		<equipment rhand="127" /> <!-- Crimson Sword -->
-		<acquire exp="2630" sp="102" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2823" hpRegen="4.5" mp="1507" mpRegen="1.8" />
-			<attack physical="121.20802" magical="82.76936" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="132.9486" magical="97.28601" />
-			<speed>
-				<walk ground="1" />
-				<run ground="1" />
-			</speed>
-			<hitTime>460</hitTime>
-			<abnormalResist physical="10" magical="10" />
-		</stats>
-		<status undying="false" />
-		<skillList>
-			<skill id="4078" level="3" /> <!-- NPC Flamestrike -->
-			<skill id="4273" level="3" /> <!-- Resist Daggers/Rapier Weapon -->
-			<skill id="4274" level="1" /> <!-- Blunt Weapon Weak Point -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="4438" level="2" /> <!-- Greater Resist Sleep -->
-			<skill id="4439" level="2" /> <!-- Greater Resist Hold -->
-			<skill id="4444" level="2" /> <!-- Higher Resist Bow/Crossbow Weapons -->
-		</skillList>
-		<corpseTime>3</corpseTime>
-		<exCrtEffect>true</exCrtEffect>
-		<ai aggroRange="450" clanHelpRange="500" isAggressive="true">
-			<clanList>
-				<clan>DOOR</clan>
-				<clan>MERCENARY_SIEGE</clan>
-			</clanList>
-		</ai>
-		<collision>
-			<radius normal="0.1" />
-			<height normal="0.1" />
-		</collision>
-	</npc>
-	<npc id="18010" level="32" type="FestivalMonster" name="">
-		<parameters>
-			<param name="RoomIndex" value="1" />
-			<param name="SSQPart" value="TWILIGHT" />
-		</parameters>
-		<race>HUMANOID</race>
-		<sex>MALE</sex>
-		<equipment rhand="218" /> <!-- Throwing Knife -->
-		<acquire exp="2285" sp="86" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2823" hpRegen="4.5" mp="1507" mpRegen="1.8" />
-			<attack physical="92.89459375" magical="72.49711" random="10" critical="8" accuracy="0" attackSpeed="216" type="DAGGER" range="40" distance="80" width="120" />
-			<defence physical="106.7406795" magical="91.89199" evasion="10" />
-			<speed>
-				<walk ground="1" />
-				<run ground="1" />
-			</speed>
-			<hitTime>480</hitTime>
-			<abnormalResist physical="10" magical="10" />
-		</stats>
-		<status undying="false" />
-		<skillList>
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="3" /> <!-- Light Armor Type -->
-			<skill id="4415" level="7" /> <!-- Daggers -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="4438" level="2" /> <!-- Greater Resist Sleep -->
-			<skill id="4439" level="2" /> <!-- Greater Resist Hold -->
-			<skill id="4444" level="2" /> <!-- Higher Resist Bow/Crossbow Weapons -->
-			<skill id="4445" level="2" /> <!-- Greater Resist Spear Weapons -->
-		</skillList>
-		<corpseTime>3</corpseTime>
-		<exCrtEffect>true</exCrtEffect>
-		<ai aggroRange="450" clanHelpRange="500" isAggressive="true" />
-		<collision>
-			<radius normal="0.1" />
-			<height normal="0.1" />
-		</collision>
-	</npc>
-	<npc id="18011" level="28" type="FestivalMonster" name="">
-		<parameters>
-			<param name="RoomIndex" value="1" />
-			<param name="SSQPart" value="TWILIGHT" />
-		</parameters>
-		<race>HUMANOID</race>
-		<sex>MALE</sex>
-		<equipment rhand="14" /> <!-- Bow -->
-		<acquire exp="1500" sp="53" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2823" hpRegen="3.5" mp="1507" mpRegen="1.5" />
-			<attack physical="178.9611243" magical="54.99876" random="10" critical="8" accuracy="0" attackSpeed="227" reuseDelay="1500" type="BOW" range="500" distance="10" width="0" />
-			<defence physical="94.871628" magical="81.67405" evasion="10" />
-			<speed>
-				<walk ground="1" />
-				<run ground="1" />
-			</speed>
-			<hitTime>800</hitTime>
-			<abnormalResist physical="10" magical="10" />
-		</stats>
-		<status undying="false" />
-		<skillList>
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="3" /> <!-- Light Armor Type -->
-			<skill id="4415" level="9" /> <!-- Bows -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="4438" level="2" /> <!-- Greater Resist Sleep -->
-			<skill id="4439" level="2" /> <!-- Greater Resist Hold -->
-		</skillList>
-		<corpseTime>3</corpseTime>
-		<exCrtEffect>true</exCrtEffect>
-		<ai type="ARCHER" aggroRange="450" clanHelpRange="500" dodge="15" isAggressive="true" />
-		<collision>
-			<radius normal="0.1" />
-			<height normal="0.1" />
-		</collision>
-	</npc>
-	<npc id="18012" level="29" type="FestivalMonster" name="">
-		<parameters>
-			<param name="RoomIndex" value="1" />
-			<param name="SSQPart" value="TWILIGHT" />
-			<skill name="DDMagic" id="4087" level="3" />
-		</parameters>
-		<race>HUMANOID</race>
-		<sex>MALE</sex>
-		<equipment rhand="125" /> <!-- Spinebone Sword -->
-		<acquire exp="1538" sp="55" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2823" hpRegen="3.5" mp="1507" mpRegen="1.5" />
-			<attack physical="86.42002" magical="59.01367" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="115.00598" magical="84.15638" />
-			<speed>
-				<walk ground="1" />
-				<run ground="1" />
-			</speed>
-			<hitTime>760</hitTime>
-			<abnormalResist physical="10" magical="10" />
-		</stats>
-		<status undying="false" />
-		<skillList>
-			<skill id="4071" level="5" /> <!-- Resist Bow/Crossbow Weapons -->
-			<skill id="4087" level="3" /> <!-- NPC Blaze -->
-			<skill id="4273" level="3" /> <!-- Resist Daggers/Rapier Weapon -->
-			<skill id="4274" level="1" /> <!-- Blunt Weapon Weak Point -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="4438" level="2" /> <!-- Greater Resist Sleep -->
-			<skill id="4439" level="2" /> <!-- Greater Resist Hold -->
-		</skillList>
-		<corpseTime>3</corpseTime>
-		<exCrtEffect>true</exCrtEffect>
-		<ai aggroRange="450" clanHelpRange="500" isAggressive="true" />
-		<collision>
-			<radius normal="10" grown="12" />
-			<height normal="23" grown="27.6" />
-		</collision>
-	</npc>
-	<npc id="18013" level="29" type="FestivalMonster" name="">
-		<parameters>
-			<param name="RoomIndex" value="1" />
-			<param name="SSQPart" value="TWILIGHT" />
-			<param name="private_name" value="18300" />
-			<param name="private_ai" value="dusk_1_2_light_prv" />
-			<skill name="W_LongRangeDDMagic" id="4151" level="2" />
-			<skill name="W_ShortRangeDDMagic" id="4160" level="2" />
-		</parameters>
-		<race>HUMANOID</race>
-		<sex>MALE</sex>
-		<equipment rhand="316" /> <!-- Sage's Blood -->
-		<acquire exp="1840" sp="66" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2823" hpRegen="3.5" mp="1507" mpRegen="1.5" />
-			<attack physical="75.6175175" magical="59.01367" random="10" critical="8" accuracy="0" attackSpeed="216" type="DAGGER" range="40" distance="80" width="120" />
-			<defence physical="97.755083" magical="84.15638" evasion="10" />
-			<speed>
-				<walk ground="1" />
-				<run ground="1" />
-			</speed>
-			<hitTime>260</hitTime>
-			<abnormalResist physical="10" magical="10" />
-		</stats>
-		<status undying="false" />
-		<skillList>
-			<skill id="4151" level="2" /> <!-- NPC Windstrike - Magic -->
-			<skill id="4160" level="2" /> <!-- NPC Aura Burn - Magic -->
-			<skill id="4225" level="5" /> <!-- Resist Stun Attacks -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="15" /> <!-- Strong M. Def. -->
-			<skill id="4414" level="3" /> <!-- Light Armor Type -->
-			<skill id="4415" level="7" /> <!-- Daggers -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="4438" level="2" /> <!-- Greater Resist Sleep -->
-			<skill id="4439" level="2" /> <!-- Greater Resist Hold -->
-			<skill id="4445" level="2" /> <!-- Greater Resist Spear Weapons -->
-		</skillList>
-		<corpseTime>3</corpseTime>
-		<exCrtEffect>true</exCrtEffect>
-		<ai type="BALANCED" aggroRange="450" clanHelpRange="500" isAggressive="true" />
-		<collision>
-			<radius normal="0.1" />
-			<height normal="0.1" />
-		</collision>
-	</npc>
-	<npc id="18014" level="37" type="FestivalMonster" name="">
-		<!-- Todo:Does Not exist -->
-		<parameters>
-			<param name="RoomIndex" value="1" />
-			<param name="SSQPart" value="TWILIGHT" />
-			<param name="IsStrong" value="1" />
-			<skill name="DDMagic" id="4244" level="3" />
-		</parameters>
-		<race>HUMANOID</race>
-		<sex>MALE</sex>
-		<equipment rhand="292" /> <!-- Pike -->
-		<acquire exp="3414" sp="140" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2823" hpRegen="4.5" mp="1507" mpRegen="1.8" />
-			<attack physical="146.82587" magical="100.26304" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="144.47758" magical="105.72243" />
-			<speed>
-				<walk ground="1" />
-				<run ground="1" />
-			</speed>
-			<hitTime>480</hitTime>
-			<abnormalResist physical="10" magical="10" />
-		</stats>
-		<status undying="false" />
-		<skillList>
-			<skill id="4071" level="5" /> <!-- Resist Bow/Crossbow Weapons -->
-			<skill id="4244" level="3" /> <!-- NPC Wild Sweep -->
-			<skill id="4273" level="3" /> <!-- Resist Daggers/Rapier Weapon -->
-			<skill id="4274" level="1" /> <!-- Blunt Weapon Weak Point -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="15" /> <!-- Strong M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="4438" level="2" /> <!-- Greater Resist Sleep -->
-			<skill id="4439" level="2" /> <!-- Greater Resist Hold -->
-		</skillList>
-		<corpseTime>3</corpseTime>
-		<exCrtEffect>true</exCrtEffect>
-		<ai aggroRange="450" clanHelpRange="500" isAggressive="true" />
-		<collision>
-			<radius normal="0.1" />
-			<height normal="0.1" />
-		</collision>
-	</npc>
-	<npc id="18015" level="70" type="FestivalMonster" name="Blood Knight" title="Chaos Decoy">
-		<parameters>
-			<param name="RoomIndex" value="1" />
-			<param name="SSQPart" value="TWILIGHT" />
-			<param name="private_name" value="18300" />
-			<param name="private_ai" value="dusk_1_2_light_prv" />
-			<skill name="PhysicalSpecial" id="4032" level="3" />
-		</parameters>
-		<race>HUMANOID</race>
-		<sex>MALE</sex>
-		<equipment rhand="5800" /> <!-- Tarbar -->
-		<acquire exp="163287" sp="4898" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="4394.90933" hpRegen="7.5" mp="1643.445" mpRegen="2.7" />
-			<attack physical="106.0570175" magical="82.76936" random="10" critical="8" accuracy="0" attackSpeed="216" type="DAGGER" range="40" distance="80" width="120" />
-			<defence physical="113.00631" magical="97.28601" evasion="10" />
-			<speed>
-				<walk ground="56" />
-				<run ground="200" />
-			</speed>
-			<hitTime>460</hitTime>
-			<abnormalResist physical="10" magical="10" />
-		</stats>
-		<status undying="false" />
-		<skillList>
-			<skill id="4032" level="3" /> <!-- NPC Strike -->
-			<skill id="4416" level="9" /> <!-- Demons -->
-			<skill id="5467" level="1" /> <!-- Darkness Protection -->
-			<skill id="4278" level="1" /> <!-- Dark Attack -->
-			<skill id="4287" level="3" /> <!-- Hold Resistance -->
-			<skill id="4285" level="3" /> <!-- Sleep Resistance -->
-		</skillList>
-		<corpseTime>3</corpseTime>
-		<exCrtEffect>true</exCrtEffect>
-		<ai aggroRange="450" clanHelpRange="500" isAggressive="true" />
-		<collision>
-			<radius normal="13" />
-			<height normal="55" />
-		</collision>
-	</npc>
-	<npc id="18016" level="62" type="FestivalMonster" name="Treasure Chest" title="Gludio">
-		<parameters>
-			<param name="RoomIndex" value="1" />
-			<param name="SSQPart" value="TWILIGHT" />
-		</parameters>
-		<race>HUMANOID</race>
-		<sex>MALE</sex>
-		<equipment rhand="273" /> <!-- Compound Bow -->
-		<acquire exp="0" sp="0" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2845.61943" hpRegen="7.5" mp="3197.505" mpRegen="2.7" />
-			<attack physical="235.8991855" magical="72.49711" random="10" critical="8" accuracy="0" attackSpeed="227" reuseDelay="1500" type="BOW" range="500" distance="10" width="0" />
-			<defence physical="106.7406795" magical="91.89199" evasion="10" />
-			<speed>
-				<walk ground="80" />
-				<run ground="1" />
-			</speed>
-			<hitTime>800</hitTime>
-			<abnormalResist physical="10" magical="10" />
-		</stats>
-		<status undying="false" />
-		<corpseTime>3</corpseTime>
-		<exCrtEffect>true</exCrtEffect>
-		<ai type="ARCHER" aggroRange="450" clanHelpRange="500" dodge="15" isAggressive="true" />
-		<collision>
-			<radius normal="8.5" />
-			<height normal="8.5" />
-		</collision>
-		<dropLists>
-			<drop>
-				<item id="49758" min="1" max="9" chance="92.105" /> <!-- Blood Crystal -->
-				<item id="49664" min="1" max="1" chance="1.945" /> <!-- Weapon Supply Box (B-grade) -->
-				<item id="49665" min="1" max="1" chance="0.75" /> <!-- Armor Supply Box (B-grade) -->
-			</drop>
-		</dropLists>
-	</npc>
-	<npc id="18017" level="80" type="Folk" name="Teleport" title="Giant's Cave">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="1507" mpRegen="3.6" />
-			<speed>
-				<walk ground="50" />
-				<run ground="1" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="14.5" />
-			<height normal="30" />
-		</collision>
-	</npc>
-	<npc id="18018" level="80" type="Folk" name="">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="1507" mpRegen="3.6" />
-			<speed>
-				<walk ground="1" />
-				<run ground="1" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="0.1" />
-			<height normal="0.1" />
-		</collision>
-	</npc>
-	<npc id="18019" level="80" type="Folk" name="">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="1507" mpRegen="3.6" />
-			<speed>
-				<walk ground="1" />
-				<run ground="1" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="0.1" />
-			<height normal="0.1" />
-		</collision>
-	</npc>
-	<npc id="18020" level="80" type="Folk" name="Queen Ant">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="300" mpRegen="3.6" />
-			<speed>
-				<walk ground="80" />
-				<run ground="230" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="45" />
-			<height normal="53" />
-		</collision>
-	</npc>
-	<npc id="18021" level="80" type="Folk" name="Queen Ant Larva">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="591" hpRegen="10.5" mp="315" mpRegen="3.6" />
-			<speed>
-				<walk ground="40" />
-				<run ground="60" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="12" />
-			<height normal="8" />
-		</collision>
-	</npc>
-	<npc id="18022" level="80" type="Folk" name="Nurse Ant">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="4000" hpRegen="10.5" mp="402" mpRegen="3.6" />
-			<speed>
-				<walk ground="40" />
-				<run ground="130" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="26" />
-			<height normal="15" />
-		</collision>
-	</npc>
-	<npc id="18023" level="80" type="Folk" name="Escort Ant">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="4343" hpRegen="10.5" mp="432" mpRegen="3.6" />
-			<speed>
-				<walk ground="40" />
-				<run ground="230" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="26" />
-			<height normal="15" />
-		</collision>
-	</npc>
-	<npc id="18024" level="80" type="Folk" name="Royal Guard Ant">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="7051" hpRegen="10.5" mp="463" mpRegen="3.6" />
-			<speed>
-				<walk ground="40" />
-				<run ground="230" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="26" />
-			<height normal="15" />
-		</collision>
-	</npc>
-	<npc id="18025" level="80" type="Folk" name="Nakondas" title="Raid Boss">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="478" mpRegen="3.6" />
-			<speed>
-				<walk ground="70" />
-				<run ground="190" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="37" />
-			<height normal="125" />
-		</collision>
-	</npc>
-	<npc id="18026" level="80" type="Folk" name="Nakondas' Slave" title="Raid Fighter">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="463" mpRegen="3.6" />
-			<speed>
-				<walk ground="70" />
-				<run ground="190" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="29" />
-			<height normal="72" />
-		</collision>
-	</npc>
-	<npc id="18027" level="80" type="Folk" name="Nakondas' Chain" title="Raid Boss">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="463" mpRegen="3.6" />
-			<speed>
-				<walk ground="60" />
-				<run ground="190" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="10" />
-			<height normal="36" />
-		</collision>
-	</npc>
-	<npc id="18028" level="80" type="Folk" name="Crazy Mechanic Golem" title="Raid Fighter">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="557" mpRegen="3.6" />
-			<speed>
-				<walk ground="30" />
-				<run ground="150" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="15" />
-			<height normal="63" />
-		</collision>
-	</npc>
-	<npc id="18029" level="80" type="Folk" name="Orfen">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="36939" mpRegen="3.6" />
-			<speed>
-				<walk ground="60" />
-				<run ground="230" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="35" />
-			<height normal="143" />
-		</collision>
-	</npc>
-	<npc id="18030" level="80" type="Folk" name="Laikel">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="10619" hpRegen="10.5" mp="36936" mpRegen="3.6" />
-			<speed>
-				<walk ground="60" />
-				<run ground="230" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="37" />
-			<height normal="64" />
-		</collision>
-	</npc>
-	<npc id="18031" level="80" type="Folk" name="Laikel Leos">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="10619" hpRegen="10.5" mp="36936" mpRegen="3.6" />
-			<speed>
-				<walk ground="60" />
-				<run ground="230" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="37" />
-			<height normal="64" />
-		</collision>
-	</npc>
-	<npc id="18032" level="80" type="Folk" name="Riba">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="10619" hpRegen="10.5" mp="36936" mpRegen="3.6" />
-			<speed>
-				<walk ground="60" />
-				<run ground="230" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="25" />
-			<height normal="72" />
-		</collision>
-	</npc>
-	<npc id="18033" level="80" type="Folk" name="Riba Iren">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="10619" hpRegen="10.5" mp="36936" mpRegen="3.6" />
-			<speed>
-				<walk ground="60" />
-				<run ground="230" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="25" />
-			<height normal="72" />
-		</collision>
-	</npc>
-	<npc id="18034" level="80" type="Folk" name="Beleth' Seer Sephia" title="Raid Boss">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="889" mpRegen="3.6" />
-			<speed>
-				<walk ground="80" />
-				<run ground="170" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="28" />
-			<height normal="85" />
-		</collision>
-	</npc>
-	<npc id="18035" level="80" type="Folk" name="Soul Drinker" title="Raid Fighter">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="861" mpRegen="3.6" />
-			<speed>
-				<walk ground="90" />
-				<run ground="170" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="11" />
-			<height normal="20" />
-		</collision>
-	</npc>
-	<npc id="18036" level="80" type="Folk" name="Sephia's Salve" title="Raid Fighter">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="861" mpRegen="3.6" />
-			<speed>
-				<walk ground="37" />
-				<run ground="170" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="24" />
-			<height normal="40" />
-		</collision>
-	</npc>
-	<npc id="18037" level="80" type="Folk" name="Timak Priest Ragoth" title="Raid Boss">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<equipment rhand="201" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="948" mpRegen="3.6" />
-			<speed>
-				<walk ground="50" />
-				<run ground="160" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="15" />
-			<height normal="25" />
-		</collision>
-	</npc>
-	<npc id="18038" level="80" type="Folk" name="Ragoth' Escort" title="Raid Fighter">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<equipment rhand="74" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="918" mpRegen="3.6" />
-			<speed>
-				<walk ground="80" />
-				<run ground="175" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="10" />
-			<height normal="20" />
-		</collision>
-	</npc>
-	<npc id="18039" level="80" type="Folk" name="Ragoth' Herald" title="Raid Fighter">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<equipment rhand="74" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="918" mpRegen="3.6" />
-			<speed>
-				<walk ground="80" />
-				<run ground="165" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="9" />
-			<height normal="21.5" />
-		</collision>
-	</npc>
-	<npc id="18040" level="80" type="Folk" name="Lord Ishka" title="Raid Boss">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<equipment rhand="1472" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="1036" mpRegen="3.6" />
-			<speed>
-				<walk ground="100" />
-				<run ground="190" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="22" />
-			<height normal="67" />
-		</collision>
-	</npc>
-	<npc id="18041" level="80" type="Folk" name="Ishka's Elite Officer" title="Raid Fighter">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<equipment rhand="946" lhand="945" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="1007" mpRegen="3.6" />
-			<speed>
-				<walk ground="80" />
-				<run ground="190" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="11" />
-			<height normal="28.5" />
-		</collision>
-	</npc>
-	<npc id="18042" level="80" type="Folk" name="Ishka's Elite Soldier" title="Raid Fighter">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<equipment rhand="148" lhand="103" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="1007" mpRegen="3.6" />
-			<speed>
-				<walk ground="40" />
-				<run ground="190" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="12" />
-			<height normal="30.5" />
-		</collision>
-	</npc>
-	<npc id="18043" level="80" type="Folk" name="Taik High Prefect Arak" title="Raid Boss">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<equipment rhand="71" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="1036" mpRegen="3.6" />
-			<speed>
-				<walk ground="36" />
-				<run ground="175" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="18" />
-			<height normal="37" />
-		</collision>
-	</npc>
-	<npc id="18044" level="80" type="Folk" name="Arak's Archer" title="Raid Fighter">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<equipment rhand="283" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="1007" mpRegen="3.6" />
-			<speed>
-				<walk ground="45" />
-				<run ground="160" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="12" />
-			<height normal="27" />
-		</collision>
-	</npc>
-	<npc id="18045" level="80" type="Folk" name="Arak's Footman" title="Raid Fighter">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<equipment rhand="127" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="1007" mpRegen="3.6" />
-			<speed>
-				<walk ground="45" />
-				<run ground="175" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="12" />
-			<height normal="29" />
-		</collision>
-	</npc>
-	<npc id="18046" level="80" type="Folk" name="Roaring Lord Kastor" title="Raid Boss">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<equipment rhand="186" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="1097" mpRegen="3.6" />
-			<speed>
-				<walk ground="70" />
-				<run ground="180" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="22.5" />
-			<height normal="54" />
-		</collision>
-	</npc>
-	<npc id="18047" level="80" type="Folk" name="Kastor's Priest" title="Raid Fighter">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<equipment rhand="9" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="1066" mpRegen="3.6" />
-			<speed>
-				<walk ground="70" />
-				<run ground="170" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="15" />
-			<height normal="34" />
-		</collision>
-	</npc>
-	<npc id="18048" level="80" type="Folk" name="Kastor's Prefect" title="Raid Fighter">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<equipment rhand="79" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="1066" mpRegen="3.6" />
-			<speed>
-				<walk ground="70" />
-				<run ground="190" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="20" />
-			<height normal="38" />
-		</collision>
-	</npc>
-	<npc id="18049" level="80" type="Folk" name="Shilen's Messenger Cabrio" title="Raid Boss">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<equipment rhand="189" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="1345" mpRegen="3.6" />
-			<speed>
-				<walk ground="70" />
-				<run ground="170" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="18" />
-			<height normal="63" />
-		</collision>
-	</npc>
-	<npc id="18050" level="80" type="Folk" name="Cabrio Captor" title="Raid Fighter">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<equipment rhand="279" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="1314" mpRegen="3.6" />
-			<speed>
-				<walk ground="40" />
-				<run ground="170" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="11" />
-			<height normal="27" />
-		</collision>
-	</npc>
-	<npc id="18051" level="80" type="Folk" name="Cabrio Blader" title="Raid Fighter">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<equipment rhand="5129" lhand="5129" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="1314" mpRegen="3.6" />
-			<speed>
-				<walk ground="22" />
-				<run ground="170" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="6" />
-			<height normal="12" />
-		</collision>
-	</npc>
-	<npc id="18052" level="80" type="Folk" name="Priest of Core Decar" title="Raid Boss">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="3015" mpRegen="3.6" />
-			<speed>
-				<walk ground="30" />
-				<run ground="140" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="90" />
-			<height normal="81.6" />
-		</collision>
-	</npc>
-	<npc id="18053" level="80" type="Folk" name="Baium">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="53342293" hpRegen="10.5" mp="18000" mpRegen="3.6" />
-			<speed>
-				<walk ground="80" />
-				<run ground="120" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="65" />
-			<height normal="174" />
-		</collision>
-	</npc>
-	<npc id="18054" level="80" type="Folk" name="Archangel">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<equipment rhand="93" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="186915" hpRegen="10.5" mp="1475" mpRegen="3.6" />
-			<speed>
-				<walk ground="50" />
-				<run ground="170" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="15" />
-			<height normal="80" />
-		</collision>
-	</npc>
-	<npc id="18055" level="80" type="Folk" name="">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="1507" mpRegen="3.6" />
-			<speed>
-				<walk ground="1" />
-				<run ground="1" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="0.1" />
-			<height normal="0.1" />
-		</collision>
-	</npc>
-	<npc id="18056" level="80" type="Folk" name="Dancing Bard" title="Raid Boss">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="712533" mpRegen="3.6" />
-			<speed>
-				<walk ground="15" />
-				<run ground="120" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="39" />
-			<height normal="61.5" />
-		</collision>
-	</npc>
-	<npc id="18057" level="80" type="Folk" name="Golden Bat Dandy" title="Raid Boss">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="712533" mpRegen="3.6" />
-			<speed>
-				<walk ground="50" />
-				<run ground="120" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="40" />
-			<height normal="63" />
-		</collision>
-	</npc>
-	<npc id="18058" level="80" type="Folk" name="Super Mew the Cat" title="Raid Boss">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="712533" mpRegen="3.6" />
-			<speed>
-				<walk ground="60" />
-				<run ground="120" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="40" />
-			<height normal="53" />
-		</collision>
-	</npc>
-	<npc id="18059" level="80" type="Folk" name="Snowman" title="Raid Boss">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="712533" mpRegen="3.6" />
-			<speed>
-				<walk ground="20" />
-				<run ground="120" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="56" />
-			<height normal="63" />
-		</collision>
-	</npc>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org npcs.xsd">
+    <npc id="18001" level="60" type="Monster" name="">
+        <parameters>
+            <param name="MoveAroundSocial" value="60"/>
+            <param name="MoveAroundSocial1" value="60"/>
+            <param name="MoveAroundSocial2" value="60"/>
+            <skill name="DDMagic1" id="4039" level="6"/>
+            <skill name="DDMagic2" id="4002" level="6"/>
+            <skill name="DeBuff" id="4035" level="6"/>
+        </parameters>
+        <race>DEMONIC</race>
+        <sex>FEMALE</sex>
+        <acquire exp="6804" sp="1"/>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="4234" hpRegen="6.5" mp="1846" mpRegen="2.4"/>
+            <attack physical="481.34551" magical="328.69659" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
+            <defence physical="247.65008" magical="181.21958"/>
+            <speed>
+                <walk ground="1"/>
+                <run ground="1"/>
+            </speed>
+            <hitTime>500</hitTime>
+            <abnormalResist physical="10" magical="10"/>
+        </stats>
+        <status undying="false" canBeSown="true"/>
+        <skillList>
+            <skill id="4002" level="6"/> <!-- NPC HP Drain -->
+            <skill id="4035" level="6"/> <!-- Poison -->
+            <skill id="4039" level="6"/> <!-- NPC MP Drain -->
+            <skill id="4408" level="1"/> <!-- HP Increase (1x) -->
+            <skill id="4409" level="1"/> <!-- MP Increase (1x) -->
+            <skill id="4410" level="11"/> <!-- Average P. Atk. -->
+            <skill id="4411" level="11"/> <!-- Average M. Atk. -->
+            <skill id="4412" level="11"/> <!-- Average P. Def. -->
+            <skill id="4413" level="11"/> <!-- Average M. Def. -->
+            <skill id="4414" level="2"/> <!-- Standard Type -->
+            <skill id="4415" level="3"/> <!-- One-handed Sword -->
+            <skill id="4441" level="5"/> <!-- Greater Mental Attack Resistance -->
+            <skill id="4416" level="9"/> <!-- Demons -->
+            <skill id="4278" level="1"/> <!-- Dark Attack -->
+            <skill id="4333" level="5"/> <!-- Dark Attack Resistance -->
+        </skillList>
+        <exCrtEffect>true</exCrtEffect>
+        <ai aggroRange="450" clanHelpRange="400" isAggressive="true">
+            <clanList>
+                <clan>CAVE_SERVANT</clan>
+                <ignoreNpcId>20134</ignoreNpcId> <!-- Cave Maiden -->
+                <ignoreNpcId>20236</ignoreNpcId> <!-- Cave Servant -->
+                <ignoreNpcId>20237</ignoreNpcId> <!-- Cave Servant Archer -->
+                <ignoreNpcId>20238</ignoreNpcId> <!-- Cave Servant Warrior -->
+                <ignoreNpcId>20239</ignoreNpcId> <!-- Cave Servant Captain -->
+                <ignoreNpcId>20240</ignoreNpcId> <!-- Royal Cave Servant -->
+                <ignoreNpcId>20246</ignoreNpcId> <!-- Cave Keeper -->
+                <ignoreNpcId>20272</ignoreNpcId> <!-- Cave Servant -->
+                <ignoreNpcId>20273</ignoreNpcId> <!-- Cave Servant Archer -->
+                <ignoreNpcId>20274</ignoreNpcId> <!-- Cave Servant Warrior -->
+                <ignoreNpcId>20275</ignoreNpcId> <!-- Cave Servant Captain -->
+                <ignoreNpcId>20276</ignoreNpcId> <!-- Royal Cave Servant -->
+                <ignoreNpcId>20277</ignoreNpcId> <!-- Cave Keeper -->
+                <ignoreNpcId>20287</ignoreNpcId> <!-- Cave Maiden -->
+            </clanList>
+        </ai>
+        <collision>
+            <radius normal="0.1"/>
+            <height normal="0.1"/>
+        </collision>
+    </npc>
+    <npc id="18002" level="60" type="Monster" name="Scarecrow">
+        <parameters>
+            <param name="MoveAroundSocial" value="60"/>
+            <param name="MoveAroundSocial1" value="60"/>
+            <param name="MoveAroundSocial2" value="60"/>
+            <skill name="DDMagic1" id="4039" level="6"/>
+            <skill name="DDMagic2" id="4002" level="6"/>
+            <skill name="DeBuff" id="4035" level="6"/>
+        </parameters>
+        <race>DEMONIC</race>
+        <sex>FEMALE</sex>
+        <acquire exp="6480" sp="1"/>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="1933" hpRegen="6.5" mp="40" mpRegen="2.4"/>
+            <attack physical="529.48" magical="328.7" random="30" critical="4" accuracy="3.75" attackSpeed="257" type="FIST" range="40" distance="80" width="120"/>
+            <defence physical="247.65" magical="181.22"/>
+            <speed>
+                <walk ground="1"/>
+                <run ground="1"/>
+            </speed>
+            <hitTime>500</hitTime>
+            <abnormalResist physical="10" magical="10"/>
+        </stats>
+        <status undying="false"/>
+        <skillList>
+            <skill id="4002" level="6"/> <!-- NPC HP Drain -->
+            <skill id="4035" level="6"/> <!-- Poison -->
+            <skill id="4039" level="6"/> <!-- NPC MP Drain -->
+            <skill id="4408" level="1"/> <!-- HP Increase (1x) -->
+            <skill id="4409" level="1"/> <!-- MP Increase (1x) -->
+            <skill id="4410" level="11"/> <!-- Average P. Atk. -->
+            <skill id="4411" level="11"/> <!-- Average M. Atk. -->
+            <skill id="4412" level="11"/> <!-- Average P. Def. -->
+            <skill id="4413" level="11"/> <!-- Average M. Def. -->
+            <skill id="4414" level="2"/> <!-- Standard Type -->
+            <skill id="4415" level="3"/> <!-- One-handed Sword -->
+            <skill id="4416" level="9"/> <!-- Demons -->
+            <skill id="4278" level="1"/> <!-- Dark Attack -->
+            <skill id="4333" level="5"/> <!-- Dark Attack Resistance -->
+        </skillList>
+        <exCrtEffect>true</exCrtEffect>
+        <ai aggroRange="450" clanHelpRange="300" isAggressive="true">
+            <clanList>
+                <clan>CAVE_SERVANT</clan>
+                <ignoreNpcId>20134</ignoreNpcId> <!-- Cave Maiden -->
+                <ignoreNpcId>20236</ignoreNpcId> <!-- Cave Servant -->
+                <ignoreNpcId>20237</ignoreNpcId> <!-- Cave Servant Archer -->
+                <ignoreNpcId>20238</ignoreNpcId> <!-- Cave Servant Warrior -->
+                <ignoreNpcId>20239</ignoreNpcId> <!-- Cave Servant Captain -->
+                <ignoreNpcId>20240</ignoreNpcId> <!-- Royal Cave Servant -->
+                <ignoreNpcId>20246</ignoreNpcId> <!-- Cave Keeper -->
+                <ignoreNpcId>20272</ignoreNpcId> <!-- Cave Servant -->
+                <ignoreNpcId>20273</ignoreNpcId> <!-- Cave Servant Archer -->
+                <ignoreNpcId>20274</ignoreNpcId> <!-- Cave Servant Warrior -->
+                <ignoreNpcId>20275</ignoreNpcId> <!-- Cave Servant Captain -->
+                <ignoreNpcId>20276</ignoreNpcId> <!-- Royal Cave Servant -->
+                <ignoreNpcId>20277</ignoreNpcId> <!-- Cave Keeper -->
+                <ignoreNpcId>20287</ignoreNpcId> <!-- Cave Maiden -->
+            </clanList>
+        </ai>
+        <collision>
+            <radius normal="27"/>
+            <height normal="37.5"/>
+        </collision>
+    </npc>
+    <npc id="18003" level="1" type="Monster" name="Bomb">
+        <parameters>
+            <param name="MoveAroundSocial" value="0"/>
+            <param name="MoveAroundSocial1" value="0"/>
+            <param name="MoveAroundSocial2" value="0"/>
+        </parameters>
+        <race>ANIMAL</race>
+        <sex>MALE</sex>
+        <acquire exp="44" sp="2"/>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="39" hpRegen="2" mp="1345" mpRegen="0.9"/>
+            <attack physical="4" magical="5.79" random="30" critical="8" accuracy="0" attackSpeed="253" type="FIST" range="40" distance="80" width="120"/>
+            <defence physical="44.44" magical="32.52"/>
+            <speed>
+                <walk ground="1"/>
+                <run ground="1"/>
+            </speed>
+            <hitTime>370</hitTime>
+            <abnormalResist physical="10" magical="10"/>
+        </stats>
+        <status undying="false"/>
+        <skillList>
+            <skill id="4408" level="1"/> <!-- HP Increase (1x) -->
+            <skill id="4409" level="1"/> <!-- MP Increase (1x) -->
+            <skill id="4410" level="11"/> <!-- Average P. Atk. -->
+            <skill id="4411" level="11"/> <!-- Average M. Atk. -->
+            <skill id="4412" level="11"/> <!-- Average P. Def. -->
+            <skill id="4413" level="11"/> <!-- Average M. Def. -->
+            <skill id="4414" level="2"/> <!-- Standard Type -->
+            <skill id="4415" level="3"/> <!-- One-handed Sword -->
+            <skill id="4416" level="4"/> <!-- Animals -->
+        </skillList>
+        <exCrtEffect>true</exCrtEffect>
+        <ai type="BALANCED" clanHelpRange="300" aggroRange="450"/>
+        <collision>
+            <radius normal="22"/>
+            <height normal="30"/>
+        </collision>
+    </npc>
+    <npc id="18004" level="49" type="Monster" name="Tower">
+        <race>CONSTRUCT</race>
+        <sex>MALE</sex>
+        <acquire sp="1"/>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="1372" hpRegen="5.5" mp="1345" mpRegen="2.1"/>
+            <attack physical="290.45" magical="198.34" random="30" critical="4" accuracy="20" attackSpeed="257" type="BOW" range="50" distance="80" width="120"/>
+            <defence physical="195.66" magical="143.18"/>
+            <speed>
+                <walk ground="50"/>
+                <run ground="120"/>
+            </speed>
+            <hitTime>520</hitTime>
+            <abnormalResist physical="10" magical="10"/>
+        </stats>
+        <status undying="false"/>
+        <skillList>
+            <skill id="4273" level="3"/> <!-- Resist Daggers/Rapier Weapon -->
+            <skill id="4274" level="1"/> <!-- Blunt Weapon Weak Point -->
+            <skill id="4408" level="1"/> <!-- HP Increase (1x) -->
+            <skill id="4409" level="1"/> <!-- MP Increase (1x) -->
+            <skill id="4410" level="11"/> <!-- Average P. Atk. -->
+            <skill id="4411" level="11"/> <!-- Average M. Atk. -->
+            <skill id="4412" level="11"/> <!-- Average P. Def. -->
+            <skill id="4413" level="11"/> <!-- Average M. Def. -->
+            <skill id="4414" level="2"/> <!-- Standard Type -->
+            <skill id="4415" level="9"/> <!-- Bows -->
+            <skill id="4416" level="2"/> <!-- Magic Creatures -->
+            <skill id="4444" level="2"/> <!-- Higher Resist Bow/Crossbow Weapons -->
+        </skillList>
+        <exCrtEffect>true</exCrtEffect>
+        <ai clanHelpRange="300" aggroRange="450"/>
+        <collision>
+            <radius normal="7"/>
+            <height normal="35"/>
+        </collision>
+    </npc>
+    <npc id="18005" level="52" type="Monster" name="">
+        <race>CONSTRUCT</race>
+        <sex>MALE</sex>
+        <acquire exp="4867" sp="1"/>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="1569" hpRegen="6.5" mp="1507" mpRegen="2.4"/>
+            <attack physical="348.07" magical="230.26" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120"/>
+            <defence physical="216.26" magical="153.3"/>
+            <speed>
+                <walk ground="1"/>
+                <run ground="1"/>
+            </speed>
+            <hitTime>560</hitTime>
+            <abnormalResist physical="10" magical="10"/>
+        </stats>
+        <status undying="false"/>
+        <skillList>
+            <skill id="4408" level="1"/> <!-- HP Increase (1x) -->
+            <skill id="4409" level="1"/> <!-- MP Increase (1x) -->
+            <skill id="4410" level="11"/> <!-- Average P. Atk. -->
+            <skill id="4411" level="11"/> <!-- Average M. Atk. -->
+            <skill id="4412" level="11"/> <!-- Average P. Def. -->
+            <skill id="4413" level="11"/> <!-- Average M. Def. -->
+            <skill id="4414" level="2"/> <!-- Standard Type -->
+            <skill id="4415" level="3"/> <!-- One-handed Sword -->
+            <skill id="4416" level="2"/> <!-- Magic Creatures -->
+        </skillList>
+        <exCrtEffect>true</exCrtEffect>
+        <ai clanHelpRange="300" aggroRange="450"/>
+        <collision>
+            <radius normal="0.1"/>
+            <height normal="0.1"/>
+        </collision>
+    </npc>
+    <npc id="18006" level="68" type="Monster" name="">
+        <parameters>
+            <param name="MoveAroundSocial" value="80"/>
+            <param name="MoveAroundSocial1" value="80"/>
+            <param name="MoveAroundSocial2" value="80"/>
+            <skill name="DDMagic" id="4002" level="6"/>
+            <skill name="CancelMagic" id="4094" level="6"/>
+            <skill name="CheckMagic" id="4098" level="6"/>
+            <skill name="SleepMagic" id="4046" level="6"/>
+        </parameters>
+        <race>UNDEAD</race>
+        <sex>MALE</sex>
+        <equipment rhand="1472"/> <!-- Dreadbane -->
+        <acquire exp="9086" sp="2"/>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="2421" hpRegen="7.5" mp="1507" mpRegen="2.7"/>
+            <attack physical="667.04" magical="441.26" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
+            <defence physical="295.61" magical="209.55"/>
+            <speed>
+                <walk ground="1"/>
+                <run ground="1"/>
+            </speed>
+            <hitTime>450</hitTime>
+            <abnormalResist physical="10" magical="10"/>
+        </stats>
+        <status undying="false"/>
+        <skillList>
+            <skill id="4002" level="6"/> <!-- NPC HP Drain -->
+            <skill id="4046" level="6"/> <!-- Sleep -->
+            <skill id="4094" level="6"/> <!-- NPC Cancel Magic -->
+            <skill id="4098" level="6"/> <!-- Silence -->
+            <skill id="4408" level="1"/> <!-- HP Increase (1x) -->
+            <skill id="4409" level="1"/> <!-- MP Increase (1x) -->
+            <skill id="4410" level="11"/> <!-- Average P. Atk. -->
+            <skill id="4411" level="11"/> <!-- Average M. Atk. -->
+            <skill id="4412" level="11"/> <!-- Average P. Def. -->
+            <skill id="4413" level="11"/> <!-- Average M. Def. -->
+            <skill id="4414" level="2"/> <!-- Standard Type -->
+            <skill id="4415" level="3"/> <!-- One-handed Sword -->
+            <skill id="4416" level="1"/> <!-- Undead -->
+            <skill id="4278" level="1"/> <!-- Dark Attack -->
+            <skill id="4275" level="2"/> <!-- Holy Attack Vulnerability -->
+        </skillList>
+        <exCrtEffect>true</exCrtEffect>
+        <ai aggroRange="450" clanHelpRange="300" isAggressive="true">
+            <clanList>
+                <clan>MALRUK</clan>
+            </clanList>
+        </ai>
+        <collision>
+            <radius normal="0.1"/>
+            <height normal="0.1"/>
+        </collision>
+    </npc>
+    <npc id="18007" level="70" type="Monster" name="Captain of Blood Knights" title="Chaos Decoy">
+        <parameters>
+            <param name="MoveAroundSocial" value="60"/>
+            <param name="MoveAroundSocial1" value="60"/>
+            <param name="MoveAroundSocial2" value="60"/>
+            <skill name="DDMagic" id="4002" level="6"/>
+            <skill name="DeBuff" id="4118" level="6"/>
+            <skill name="HoldMagic" id="4047" level="6"/>
+        </parameters>
+        <race>DEMONIC</race>
+        <sex>FEMALE</sex>
+        <acquire exp="9189932" sp="275697"/>
+        <equipment rhand="5800" lhand="5799"/>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="1241577.52641" hpRegen="7.5" mp="2284.185" mpRegen="2.7"/>
+            <attack physical="734.25" magical="501.4" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120"/>
+            <defence physical="291.15" magical="213.05"/>
+            <speed>
+                <walk ground="56"/>
+                <run ground="200"/>
+            </speed>
+            <hitTime>500</hitTime>
+            <abnormalResist physical="10" magical="10"/>
+        </stats>
+        <status undying="false"/>
+        <skillList>
+            <skill id="4002" level="6"/> <!-- NPC HP Drain -->
+            <skill id="4118" level="6"/> <!-- Paralysis -->
+            <skill id="4416" level="9"/> <!-- Demons -->
+            <skill id="5467" level="1"/> <!-- Darkness Protection -->
+            <skill id="4278" level="1"/> <!-- Dark Attack -->
+            <skill id="4287" level="3"/> <!-- Hold Resistance -->
+            <skill id="4285" level="3"/> <!-- Sleep Resistance -->
+        </skillList>
+        <exCrtEffect>true</exCrtEffect>
+        <ai aggroRange="450" clanHelpRange="300" isAggressive="true">
+            <clanList>
+                <clan>MALRUK</clan>
+            </clanList>
+        </ai>
+        <collision>
+            <radius normal="13"/>
+            <height normal="55"/>
+        </collision>
+    </npc>
+    <npc id="18008" level="70" type="Monster" name="">
+        <!-- Todo: Karik Does not exist -->
+        <parameters>
+            <param name="MoveAroundSocial" value="140"/>
+            <param name="MoveAroundSocial1" value="140"/>
+            <param name="MoveAroundSocial2" value="140"/>
+            <skill name="HoldMagic" id="4047" level="7"/>
+        </parameters>
+        <race>DEMONIC</race>
+        <sex>MALE</sex>
+        <acquire exp="9555" sp="2"/>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="2444" hpRegen="7.5" mp="1507" mpRegen="2.7"/>
+            <attack physical="757.75" magical="517.45" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
+            <defence physical="295.92" magical="216.54"/>
+            <speed>
+                <walk ground="1"/>
+                <run ground="1"/>
+            </speed>
+            <hitTime>450</hitTime>
+            <abnormalResist physical="10" magical="10"/>
+        </stats>
+        <status undying="false"/>
+        <skillList>
+            <skill id="4047" level="7"/> <!-- Hold -->
+            <skill id="4071" level="5"/> <!-- Resist Bow/Crossbow Weapons -->
+            <skill id="4085" level="1"/> <!-- Critical Damage -->
+            <skill id="4086" level="1"/> <!-- Critical Chance -->
+            <skill id="4408" level="1"/> <!-- HP Increase (1x) -->
+            <skill id="4409" level="1"/> <!-- MP Increase (1x) -->
+            <skill id="4410" level="11"/> <!-- Average P. Atk. -->
+            <skill id="4411" level="11"/> <!-- Average M. Atk. -->
+            <skill id="4412" level="14"/> <!-- Strong P. Def. -->
+            <skill id="4413" level="11"/> <!-- Average M. Def. -->
+            <skill id="4414" level="2"/> <!-- Standard Type -->
+            <skill id="4415" level="3"/> <!-- One-handed Sword -->
+            <skill id="4416" level="9"/> <!-- Demons -->
+            <skill id="4278" level="1"/> <!-- Dark Attack -->
+            <skill id="4333" level="5"/> <!-- Dark Attack Resistance -->
+        </skillList>
+        <exCrtEffect>true</exCrtEffect>
+        <ai aggroRange="450" clanHelpRange="300" isAggressive="true">
+            <clanList>
+                <clan>ALL</clan>
+            </clanList>
+        </ai>
+        <collision>
+            <radius normal="25" grown="30"/>
+            <height normal="90" grown="109"/>
+        </collision>
+    </npc>
+    <npc id="18009" level="34" type="FestivalMonster" name="">
+        <parameters>
+            <param name="RoomIndex" value="1"/>
+            <param name="SSQPart" value="TWILIGHT"/>
+            <minions name="Privates">
+                <npc id="18010" count="2" respawnTime="120" weightPoint="0"/>
+            </minions>
+            <skill name="DDMagic" id="4078" level="3"/>
+        </parameters>
+        <race>HUMANOID</race>
+        <sex>MALE</sex>
+        <equipment rhand="127"/> <!-- Crimson Sword -->
+        <acquire exp="2630" sp="102"/>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="2823" hpRegen="4.5" mp="1507" mpRegen="1.8"/>
+            <attack physical="121.20802" magical="82.76936" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
+            <defence physical="132.9486" magical="97.28601"/>
+            <speed>
+                <walk ground="1"/>
+                <run ground="1"/>
+            </speed>
+            <hitTime>460</hitTime>
+            <abnormalResist physical="10" magical="10"/>
+        </stats>
+        <status undying="false"/>
+        <skillList>
+            <skill id="4078" level="3"/> <!-- NPC Flamestrike -->
+            <skill id="4273" level="3"/> <!-- Resist Daggers/Rapier Weapon -->
+            <skill id="4274" level="1"/> <!-- Blunt Weapon Weak Point -->
+            <skill id="4408" level="1"/> <!-- HP Increase (1x) -->
+            <skill id="4409" level="1"/> <!-- MP Increase (1x) -->
+            <skill id="4410" level="11"/> <!-- Average P. Atk. -->
+            <skill id="4411" level="11"/> <!-- Average M. Atk. -->
+            <skill id="4412" level="11"/> <!-- Average P. Def. -->
+            <skill id="4413" level="11"/> <!-- Average M. Def. -->
+            <skill id="4414" level="2"/> <!-- Standard Type -->
+            <skill id="4415" level="3"/> <!-- One-handed Sword -->
+            <skill id="4416" level="6"/> <!-- Humanoids -->
+            <skill id="4438" level="2"/> <!-- Greater Resist Sleep -->
+            <skill id="4439" level="2"/> <!-- Greater Resist Hold -->
+            <skill id="4444" level="2"/> <!-- Higher Resist Bow/Crossbow Weapons -->
+        </skillList>
+        <corpseTime>3</corpseTime>
+        <exCrtEffect>true</exCrtEffect>
+        <ai aggroRange="450" clanHelpRange="500" isAggressive="true">
+            <clanList>
+                <clan>DOOR</clan>
+                <clan>MERCENARY_SIEGE</clan>
+            </clanList>
+        </ai>
+        <collision>
+            <radius normal="0.1"/>
+            <height normal="0.1"/>
+        </collision>
+    </npc>
+    <npc id="18010" level="32" type="FestivalMonster" name="">
+        <parameters>
+            <param name="RoomIndex" value="1"/>
+            <param name="SSQPart" value="TWILIGHT"/>
+        </parameters>
+        <race>HUMANOID</race>
+        <sex>MALE</sex>
+        <equipment rhand="218"/> <!-- Throwing Knife -->
+        <acquire exp="2285" sp="86"/>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="2823" hpRegen="4.5" mp="1507" mpRegen="1.8"/>
+            <attack physical="92.89459375" magical="72.49711" random="10" critical="8" accuracy="0" attackSpeed="216" type="DAGGER" range="40" distance="80" width="120"/>
+            <defence physical="106.7406795" magical="91.89199" evasion="10"/>
+            <speed>
+                <walk ground="1"/>
+                <run ground="1"/>
+            </speed>
+            <hitTime>480</hitTime>
+            <abnormalResist physical="10" magical="10"/>
+        </stats>
+        <status undying="false"/>
+        <skillList>
+            <skill id="4408" level="1"/> <!-- HP Increase (1x) -->
+            <skill id="4409" level="1"/> <!-- MP Increase (1x) -->
+            <skill id="4410" level="11"/> <!-- Average P. Atk. -->
+            <skill id="4411" level="11"/> <!-- Average M. Atk. -->
+            <skill id="4412" level="11"/> <!-- Average P. Def. -->
+            <skill id="4413" level="11"/> <!-- Average M. Def. -->
+            <skill id="4414" level="3"/> <!-- Light Armor Type -->
+            <skill id="4415" level="7"/> <!-- Daggers -->
+            <skill id="4416" level="6"/> <!-- Humanoids -->
+            <skill id="4438" level="2"/> <!-- Greater Resist Sleep -->
+            <skill id="4439" level="2"/> <!-- Greater Resist Hold -->
+            <skill id="4444" level="2"/> <!-- Higher Resist Bow/Crossbow Weapons -->
+            <skill id="4445" level="2"/> <!-- Greater Resist Spear Weapons -->
+        </skillList>
+        <corpseTime>3</corpseTime>
+        <exCrtEffect>true</exCrtEffect>
+        <ai aggroRange="450" clanHelpRange="500" isAggressive="true"/>
+        <collision>
+            <radius normal="0.1"/>
+            <height normal="0.1"/>
+        </collision>
+    </npc>
+    <npc id="18011" level="28" type="FestivalMonster" name="">
+        <parameters>
+            <param name="RoomIndex" value="1"/>
+            <param name="SSQPart" value="TWILIGHT"/>
+        </parameters>
+        <race>HUMANOID</race>
+        <sex>MALE</sex>
+        <equipment rhand="14"/> <!-- Bow -->
+        <acquire exp="1500" sp="53"/>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="2823" hpRegen="3.5" mp="1507" mpRegen="1.5"/>
+            <attack physical="178.9611243" magical="54.99876" random="10" critical="8" accuracy="0" attackSpeed="227" reuseDelay="1500" type="BOW" range="500" distance="10" width="0"/>
+            <defence physical="94.871628" magical="81.67405" evasion="10"/>
+            <speed>
+                <walk ground="1"/>
+                <run ground="1"/>
+            </speed>
+            <hitTime>800</hitTime>
+            <abnormalResist physical="10" magical="10"/>
+        </stats>
+        <status undying="false"/>
+        <skillList>
+            <skill id="4408" level="1"/> <!-- HP Increase (1x) -->
+            <skill id="4409" level="1"/> <!-- MP Increase (1x) -->
+            <skill id="4410" level="11"/> <!-- Average P. Atk. -->
+            <skill id="4411" level="11"/> <!-- Average M. Atk. -->
+            <skill id="4412" level="11"/> <!-- Average P. Def. -->
+            <skill id="4413" level="11"/> <!-- Average M. Def. -->
+            <skill id="4414" level="3"/> <!-- Light Armor Type -->
+            <skill id="4415" level="9"/> <!-- Bows -->
+            <skill id="4416" level="6"/> <!-- Humanoids -->
+            <skill id="4438" level="2"/> <!-- Greater Resist Sleep -->
+            <skill id="4439" level="2"/> <!-- Greater Resist Hold -->
+        </skillList>
+        <corpseTime>3</corpseTime>
+        <exCrtEffect>true</exCrtEffect>
+        <ai type="ARCHER" aggroRange="450" clanHelpRange="500" dodge="15" isAggressive="true"/>
+        <collision>
+            <radius normal="0.1"/>
+            <height normal="0.1"/>
+        </collision>
+    </npc>
+    <npc id="18012" level="29" type="FestivalMonster" name="">
+        <parameters>
+            <param name="RoomIndex" value="1"/>
+            <param name="SSQPart" value="TWILIGHT"/>
+            <skill name="DDMagic" id="4087" level="3"/>
+        </parameters>
+        <race>HUMANOID</race>
+        <sex>MALE</sex>
+        <equipment rhand="125"/> <!-- Spinebone Sword -->
+        <acquire exp="1538" sp="55"/>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="2823" hpRegen="3.5" mp="1507" mpRegen="1.5"/>
+            <attack physical="86.42002" magical="59.01367" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
+            <defence physical="115.00598" magical="84.15638"/>
+            <speed>
+                <walk ground="1"/>
+                <run ground="1"/>
+            </speed>
+            <hitTime>760</hitTime>
+            <abnormalResist physical="10" magical="10"/>
+        </stats>
+        <status undying="false"/>
+        <skillList>
+            <skill id="4071" level="5"/> <!-- Resist Bow/Crossbow Weapons -->
+            <skill id="4087" level="3"/> <!-- NPC Blaze -->
+            <skill id="4273" level="3"/> <!-- Resist Daggers/Rapier Weapon -->
+            <skill id="4274" level="1"/> <!-- Blunt Weapon Weak Point -->
+            <skill id="4408" level="1"/> <!-- HP Increase (1x) -->
+            <skill id="4409" level="1"/> <!-- MP Increase (1x) -->
+            <skill id="4410" level="11"/> <!-- Average P. Atk. -->
+            <skill id="4411" level="11"/> <!-- Average M. Atk. -->
+            <skill id="4412" level="11"/> <!-- Average P. Def. -->
+            <skill id="4413" level="11"/> <!-- Average M. Def. -->
+            <skill id="4414" level="2"/> <!-- Standard Type -->
+            <skill id="4415" level="3"/> <!-- One-handed Sword -->
+            <skill id="4416" level="6"/> <!-- Humanoids -->
+            <skill id="4438" level="2"/> <!-- Greater Resist Sleep -->
+            <skill id="4439" level="2"/> <!-- Greater Resist Hold -->
+        </skillList>
+        <corpseTime>3</corpseTime>
+        <exCrtEffect>true</exCrtEffect>
+        <ai aggroRange="450" clanHelpRange="500" isAggressive="true"/>
+        <collision>
+            <radius normal="10" grown="12"/>
+            <height normal="23" grown="27.6"/>
+        </collision>
+    </npc>
+    <npc id="18013" level="29" type="FestivalMonster" name="">
+        <parameters>
+            <param name="RoomIndex" value="1"/>
+            <param name="SSQPart" value="TWILIGHT"/>
+            <param name="private_name" value="18300"/>
+            <param name="private_ai" value="dusk_1_2_light_prv"/>
+            <skill name="W_LongRangeDDMagic" id="4151" level="2"/>
+            <skill name="W_ShortRangeDDMagic" id="4160" level="2"/>
+        </parameters>
+        <race>HUMANOID</race>
+        <sex>MALE</sex>
+        <equipment rhand="316"/> <!-- Sage's Blood -->
+        <acquire exp="1840" sp="66"/>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="2823" hpRegen="3.5" mp="1507" mpRegen="1.5"/>
+            <attack physical="75.6175175" magical="59.01367" random="10" critical="8" accuracy="0" attackSpeed="216" type="DAGGER" range="40" distance="80" width="120"/>
+            <defence physical="97.755083" magical="84.15638" evasion="10"/>
+            <speed>
+                <walk ground="1"/>
+                <run ground="1"/>
+            </speed>
+            <hitTime>260</hitTime>
+            <abnormalResist physical="10" magical="10"/>
+        </stats>
+        <status undying="false"/>
+        <skillList>
+            <skill id="4151" level="2"/> <!-- NPC Windstrike - Magic -->
+            <skill id="4160" level="2"/> <!-- NPC Aura Burn - Magic -->
+            <skill id="4225" level="5"/> <!-- Resist Stun Attacks -->
+            <skill id="4408" level="1"/> <!-- HP Increase (1x) -->
+            <skill id="4409" level="1"/> <!-- MP Increase (1x) -->
+            <skill id="4410" level="11"/> <!-- Average P. Atk. -->
+            <skill id="4411" level="11"/> <!-- Average M. Atk. -->
+            <skill id="4412" level="11"/> <!-- Average P. Def. -->
+            <skill id="4413" level="15"/> <!-- Strong M. Def. -->
+            <skill id="4414" level="3"/> <!-- Light Armor Type -->
+            <skill id="4415" level="7"/> <!-- Daggers -->
+            <skill id="4416" level="6"/> <!-- Humanoids -->
+            <skill id="4438" level="2"/> <!-- Greater Resist Sleep -->
+            <skill id="4439" level="2"/> <!-- Greater Resist Hold -->
+            <skill id="4445" level="2"/> <!-- Greater Resist Spear Weapons -->
+        </skillList>
+        <corpseTime>3</corpseTime>
+        <exCrtEffect>true</exCrtEffect>
+        <ai type="BALANCED" aggroRange="450" clanHelpRange="500" isAggressive="true"/>
+        <collision>
+            <radius normal="0.1"/>
+            <height normal="0.1"/>
+        </collision>
+    </npc>
+    <npc id="18014" level="37" type="FestivalMonster" name="">
+        <!-- Todo:Does Not exist -->
+        <parameters>
+            <param name="RoomIndex" value="1"/>
+            <param name="SSQPart" value="TWILIGHT"/>
+            <param name="IsStrong" value="1"/>
+            <skill name="DDMagic" id="4244" level="3"/>
+        </parameters>
+        <race>HUMANOID</race>
+        <sex>MALE</sex>
+        <equipment rhand="292"/> <!-- Pike -->
+        <acquire exp="3414" sp="140"/>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="2823" hpRegen="4.5" mp="1507" mpRegen="1.8"/>
+            <attack physical="146.82587" magical="100.26304" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
+            <defence physical="144.47758" magical="105.72243"/>
+            <speed>
+                <walk ground="1"/>
+                <run ground="1"/>
+            </speed>
+            <hitTime>480</hitTime>
+            <abnormalResist physical="10" magical="10"/>
+        </stats>
+        <status undying="false"/>
+        <skillList>
+            <skill id="4071" level="5"/> <!-- Resist Bow/Crossbow Weapons -->
+            <skill id="4244" level="3"/> <!-- NPC Wild Sweep -->
+            <skill id="4273" level="3"/> <!-- Resist Daggers/Rapier Weapon -->
+            <skill id="4274" level="1"/> <!-- Blunt Weapon Weak Point -->
+            <skill id="4408" level="1"/> <!-- HP Increase (1x) -->
+            <skill id="4409" level="1"/> <!-- MP Increase (1x) -->
+            <skill id="4410" level="11"/> <!-- Average P. Atk. -->
+            <skill id="4411" level="11"/> <!-- Average M. Atk. -->
+            <skill id="4412" level="11"/> <!-- Average P. Def. -->
+            <skill id="4413" level="15"/> <!-- Strong M. Def. -->
+            <skill id="4414" level="2"/> <!-- Standard Type -->
+            <skill id="4415" level="3"/> <!-- One-handed Sword -->
+            <skill id="4416" level="6"/> <!-- Humanoids -->
+            <skill id="4438" level="2"/> <!-- Greater Resist Sleep -->
+            <skill id="4439" level="2"/> <!-- Greater Resist Hold -->
+        </skillList>
+        <corpseTime>3</corpseTime>
+        <exCrtEffect>true</exCrtEffect>
+        <ai aggroRange="450" clanHelpRange="500" isAggressive="true"/>
+        <collision>
+            <radius normal="0.1"/>
+            <height normal="0.1"/>
+        </collision>
+    </npc>
+    <npc id="18015" level="70" type="FestivalMonster" name="Blood Knight" title="Chaos Decoy">
+        <parameters>
+            <param name="RoomIndex" value="1"/>
+            <param name="SSQPart" value="TWILIGHT"/>
+            <param name="private_name" value="18300"/>
+            <param name="private_ai" value="dusk_1_2_light_prv"/>
+            <skill name="PhysicalSpecial" id="4032" level="3"/>
+        </parameters>
+        <race>HUMANOID</race>
+        <sex>MALE</sex>
+        <equipment rhand="5800"/> <!-- Tarbar -->
+        <acquire exp="163287" sp="4898"/>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="4394.90933" hpRegen="7.5" mp="1643.445" mpRegen="2.7"/>
+            <attack physical="106.0570175" magical="82.76936" random="10" critical="8" accuracy="0" attackSpeed="216" type="DAGGER" range="40" distance="80" width="120"/>
+            <defence physical="113.00631" magical="97.28601" evasion="10"/>
+            <speed>
+                <walk ground="56"/>
+                <run ground="200"/>
+            </speed>
+            <hitTime>460</hitTime>
+            <abnormalResist physical="10" magical="10"/>
+        </stats>
+        <status undying="false"/>
+        <skillList>
+            <skill id="4032" level="3"/> <!-- NPC Strike -->
+            <skill id="4416" level="9"/> <!-- Demons -->
+            <skill id="5467" level="1"/> <!-- Darkness Protection -->
+            <skill id="4278" level="1"/> <!-- Dark Attack -->
+            <skill id="4287" level="3"/> <!-- Hold Resistance -->
+            <skill id="4285" level="3"/> <!-- Sleep Resistance -->
+        </skillList>
+        <corpseTime>3</corpseTime>
+        <exCrtEffect>true</exCrtEffect>
+        <ai aggroRange="450" clanHelpRange="500" isAggressive="true"/>
+        <collision>
+            <radius normal="13"/>
+            <height normal="55"/>
+        </collision>
+    </npc>
+    <npc id="18016" level="62" type="FestivalMonster" name="Treasure Chest" title="Gludio">
+        <parameters>
+            <param name="RoomIndex" value="1"/>
+            <param name="SSQPart" value="TWILIGHT"/>
+        </parameters>
+        <race>HUMANOID</race>
+        <sex>MALE</sex>
+        <equipment rhand="273"/> <!-- Compound Bow -->
+        <acquire exp="0" sp="0"/>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="2845.61943" hpRegen="7.5" mp="3197.505" mpRegen="2.7"/>
+            <attack physical="235.8991855" magical="72.49711" random="10" critical="8" accuracy="0" attackSpeed="227" reuseDelay="1500" type="BOW" range="500" distance="10" width="0"/>
+            <defence physical="106.7406795" magical="91.89199" evasion="10"/>
+            <speed>
+                <walk ground="80"/>
+                <run ground="1"/>
+            </speed>
+            <hitTime>800</hitTime>
+            <abnormalResist physical="10" magical="10"/>
+        </stats>
+        <status undying="false"/>
+        <corpseTime>3</corpseTime>
+        <exCrtEffect>true</exCrtEffect>
+        <ai type="ARCHER" aggroRange="450" clanHelpRange="500" dodge="15" isAggressive="true"/>
+        <collision>
+            <radius normal="8.5"/>
+            <height normal="8.5"/>
+        </collision>
+        <dropLists>
+            <drop>
+                <item id="49758" min="1" max="9" chance="92.105"/> <!-- Blood Crystal -->
+                <item id="49664" min="1" max="1" chance="1.945"/> <!-- Weapon Supply Box (B-grade) -->
+                <item id="49665" min="1" max="1" chance="0.75"/> <!-- Armor Supply Box (B-grade) -->
+            </drop>
+        </dropLists>
+    </npc>
+    <npc id="18017" level="80" type="Folk" name="Teleport" title="Giant's Cave">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+            <vitals hp="8446" hpRegen="10.5" mp="1507" mpRegen="3.6"/>
+            <speed>
+                <walk ground="50"/>
+                <run ground="1"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <collision>
+            <radius normal="14.5"/>
+            <height normal="30"/>
+        </collision>
+    </npc>
+    <npc id="18018" level="80" type="Folk" name="">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+            <vitals hp="8446" hpRegen="10.5" mp="1507" mpRegen="3.6"/>
+            <speed>
+                <walk ground="1"/>
+                <run ground="1"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <collision>
+            <radius normal="0.1"/>
+            <height normal="0.1"/>
+        </collision>
+    </npc>
+    <npc id="18019" level="80" type="Folk" name="">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+            <vitals hp="8446" hpRegen="10.5" mp="1507" mpRegen="3.6"/>
+            <speed>
+                <walk ground="1"/>
+                <run ground="1"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <collision>
+            <radius normal="0.1"/>
+            <height normal="0.1"/>
+        </collision>
+    </npc>
+    <npc id="18020" level="80" type="Folk" name="Queen Ant">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+            <vitals hp="8446" hpRegen="10.5" mp="300" mpRegen="3.6"/>
+            <speed>
+                <walk ground="80"/>
+                <run ground="230"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <collision>
+            <radius normal="45"/>
+            <height normal="53"/>
+        </collision>
+    </npc>
+    <npc id="18021" level="80" type="Folk" name="Queen Ant Larva">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+            <vitals hp="591" hpRegen="10.5" mp="315" mpRegen="3.6"/>
+            <speed>
+                <walk ground="40"/>
+                <run ground="60"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <collision>
+            <radius normal="12"/>
+            <height normal="8"/>
+        </collision>
+    </npc>
+    <npc id="18022" level="80" type="Folk" name="Nurse Ant">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+            <vitals hp="4000" hpRegen="10.5" mp="402" mpRegen="3.6"/>
+            <speed>
+                <walk ground="40"/>
+                <run ground="130"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <collision>
+            <radius normal="26"/>
+            <height normal="15"/>
+        </collision>
+    </npc>
+    <npc id="18023" level="80" type="Folk" name="Escort Ant">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+            <vitals hp="4343" hpRegen="10.5" mp="432" mpRegen="3.6"/>
+            <speed>
+                <walk ground="40"/>
+                <run ground="230"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <collision>
+            <radius normal="26"/>
+            <height normal="15"/>
+        </collision>
+    </npc>
+    <npc id="18024" level="80" type="Folk" name="Royal Guard Ant">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+            <vitals hp="7051" hpRegen="10.5" mp="463" mpRegen="3.6"/>
+            <speed>
+                <walk ground="40"/>
+                <run ground="230"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <collision>
+            <radius normal="26"/>
+            <height normal="15"/>
+        </collision>
+    </npc>
+    <npc id="18025" level="80" type="Folk" name="Nakondas" title="Raid Boss">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+            <vitals hp="8446" hpRegen="10.5" mp="478" mpRegen="3.6"/>
+            <speed>
+                <walk ground="70"/>
+                <run ground="190"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <collision>
+            <radius normal="37"/>
+            <height normal="125"/>
+        </collision>
+    </npc>
+    <npc id="18026" level="80" type="Folk" name="Nakondas' Slave" title="Raid Fighter">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+            <vitals hp="8446" hpRegen="10.5" mp="463" mpRegen="3.6"/>
+            <speed>
+                <walk ground="70"/>
+                <run ground="190"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <collision>
+            <radius normal="29"/>
+            <height normal="72"/>
+        </collision>
+    </npc>
+    <npc id="18027" level="80" type="Folk" name="Nakondas' Chain" title="Raid Boss">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+            <vitals hp="8446" hpRegen="10.5" mp="463" mpRegen="3.6"/>
+            <speed>
+                <walk ground="60"/>
+                <run ground="190"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <collision>
+            <radius normal="10"/>
+            <height normal="36"/>
+        </collision>
+    </npc>
+    <npc id="18028" level="80" type="Folk" name="Crazy Mechanic Golem" title="Raid Fighter">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+            <vitals hp="8446" hpRegen="10.5" mp="557" mpRegen="3.6"/>
+            <speed>
+                <walk ground="30"/>
+                <run ground="150"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <collision>
+            <radius normal="15"/>
+            <height normal="63"/>
+        </collision>
+    </npc>
+    <npc id="18029" level="80" type="Folk" name="Orfen">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+            <vitals hp="8446" hpRegen="10.5" mp="36939" mpRegen="3.6"/>
+            <speed>
+                <walk ground="60"/>
+                <run ground="230"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <collision>
+            <radius normal="35"/>
+            <height normal="143"/>
+        </collision>
+    </npc>
+    <npc id="18030" level="80" type="Folk" name="Laikel">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+            <vitals hp="10619" hpRegen="10.5" mp="36936" mpRegen="3.6"/>
+            <speed>
+                <walk ground="60"/>
+                <run ground="230"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <collision>
+            <radius normal="37"/>
+            <height normal="64"/>
+        </collision>
+    </npc>
+    <npc id="18031" level="80" type="Folk" name="Laikel Leos">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+            <vitals hp="10619" hpRegen="10.5" mp="36936" mpRegen="3.6"/>
+            <speed>
+                <walk ground="60"/>
+                <run ground="230"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <collision>
+            <radius normal="37"/>
+            <height normal="64"/>
+        </collision>
+    </npc>
+    <npc id="18032" level="80" type="Folk" name="Riba">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+            <vitals hp="10619" hpRegen="10.5" mp="36936" mpRegen="3.6"/>
+            <speed>
+                <walk ground="60"/>
+                <run ground="230"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <collision>
+            <radius normal="25"/>
+            <height normal="72"/>
+        </collision>
+    </npc>
+    <npc id="18033" level="80" type="Folk" name="Riba Iren">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+            <vitals hp="10619" hpRegen="10.5" mp="36936" mpRegen="3.6"/>
+            <speed>
+                <walk ground="60"/>
+                <run ground="230"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <collision>
+            <radius normal="25"/>
+            <height normal="72"/>
+        </collision>
+    </npc>
+    <npc id="18034" level="80" type="Folk" name="Beleth' Seer Sephia" title="Raid Boss">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+            <vitals hp="8446" hpRegen="10.5" mp="889" mpRegen="3.6"/>
+            <speed>
+                <walk ground="80"/>
+                <run ground="170"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <collision>
+            <radius normal="28"/>
+            <height normal="85"/>
+        </collision>
+    </npc>
+    <npc id="18035" level="80" type="Folk" name="Soul Drinker" title="Raid Fighter">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+            <vitals hp="8446" hpRegen="10.5" mp="861" mpRegen="3.6"/>
+            <speed>
+                <walk ground="90"/>
+                <run ground="170"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <collision>
+            <radius normal="11"/>
+            <height normal="20"/>
+        </collision>
+    </npc>
+    <npc id="18036" level="80" type="Folk" name="Sephia's Salve" title="Raid Fighter">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+            <vitals hp="8446" hpRegen="10.5" mp="861" mpRegen="3.6"/>
+            <speed>
+                <walk ground="37"/>
+                <run ground="170"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <collision>
+            <radius normal="24"/>
+            <height normal="40"/>
+        </collision>
+    </npc>
+    <npc id="18037" level="80" type="Folk" name="Timak Priest Ragoth" title="Raid Boss">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <equipment rhand="201"/>
+        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+            <vitals hp="8446" hpRegen="10.5" mp="948" mpRegen="3.6"/>
+            <speed>
+                <walk ground="50"/>
+                <run ground="160"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <collision>
+            <radius normal="15"/>
+            <height normal="25"/>
+        </collision>
+    </npc>
+    <npc id="18038" level="80" type="Folk" name="Ragoth' Escort" title="Raid Fighter">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <equipment rhand="74"/>
+        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+            <vitals hp="8446" hpRegen="10.5" mp="918" mpRegen="3.6"/>
+            <speed>
+                <walk ground="80"/>
+                <run ground="175"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <collision>
+            <radius normal="10"/>
+            <height normal="20"/>
+        </collision>
+    </npc>
+    <npc id="18039" level="80" type="Folk" name="Ragoth' Herald" title="Raid Fighter">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <equipment rhand="74"/>
+        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+            <vitals hp="8446" hpRegen="10.5" mp="918" mpRegen="3.6"/>
+            <speed>
+                <walk ground="80"/>
+                <run ground="165"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <collision>
+            <radius normal="9"/>
+            <height normal="21.5"/>
+        </collision>
+    </npc>
+    <npc id="18040" level="80" type="Folk" name="Lord Ishka" title="Raid Boss">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <equipment rhand="1472"/>
+        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+            <vitals hp="8446" hpRegen="10.5" mp="1036" mpRegen="3.6"/>
+            <speed>
+                <walk ground="100"/>
+                <run ground="190"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <collision>
+            <radius normal="22"/>
+            <height normal="67"/>
+        </collision>
+    </npc>
+    <npc id="18041" level="80" type="Folk" name="Ishka's Elite Officer" title="Raid Fighter">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <equipment rhand="946" lhand="945"/>
+        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+            <vitals hp="8446" hpRegen="10.5" mp="1007" mpRegen="3.6"/>
+            <speed>
+                <walk ground="80"/>
+                <run ground="190"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <collision>
+            <radius normal="11"/>
+            <height normal="28.5"/>
+        </collision>
+    </npc>
+    <npc id="18042" level="80" type="Folk" name="Ishka's Elite Soldier" title="Raid Fighter">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <equipment rhand="148" lhand="103"/>
+        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+            <vitals hp="8446" hpRegen="10.5" mp="1007" mpRegen="3.6"/>
+            <speed>
+                <walk ground="40"/>
+                <run ground="190"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <collision>
+            <radius normal="12"/>
+            <height normal="30.5"/>
+        </collision>
+    </npc>
+    <npc id="18043" level="80" type="Folk" name="Taik High Prefect Arak" title="Raid Boss">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <equipment rhand="71"/>
+        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+            <vitals hp="8446" hpRegen="10.5" mp="1036" mpRegen="3.6"/>
+            <speed>
+                <walk ground="36"/>
+                <run ground="175"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <collision>
+            <radius normal="18"/>
+            <height normal="37"/>
+        </collision>
+    </npc>
+    <npc id="18044" level="80" type="Folk" name="Arak's Archer" title="Raid Fighter">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <equipment rhand="283"/>
+        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+            <vitals hp="8446" hpRegen="10.5" mp="1007" mpRegen="3.6"/>
+            <speed>
+                <walk ground="45"/>
+                <run ground="160"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <collision>
+            <radius normal="12"/>
+            <height normal="27"/>
+        </collision>
+    </npc>
+    <npc id="18045" level="80" type="Folk" name="Arak's Footman" title="Raid Fighter">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <equipment rhand="127"/>
+        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+            <vitals hp="8446" hpRegen="10.5" mp="1007" mpRegen="3.6"/>
+            <speed>
+                <walk ground="45"/>
+                <run ground="175"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <collision>
+            <radius normal="12"/>
+            <height normal="29"/>
+        </collision>
+    </npc>
+    <npc id="18046" level="80" type="Folk" name="Roaring Lord Kastor" title="Raid Boss">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <equipment rhand="186"/>
+        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+            <vitals hp="8446" hpRegen="10.5" mp="1097" mpRegen="3.6"/>
+            <speed>
+                <walk ground="70"/>
+                <run ground="180"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <collision>
+            <radius normal="22.5"/>
+            <height normal="54"/>
+        </collision>
+    </npc>
+    <npc id="18047" level="80" type="Folk" name="Kastor's Priest" title="Raid Fighter">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <equipment rhand="9"/>
+        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+            <vitals hp="8446" hpRegen="10.5" mp="1066" mpRegen="3.6"/>
+            <speed>
+                <walk ground="70"/>
+                <run ground="170"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <collision>
+            <radius normal="15"/>
+            <height normal="34"/>
+        </collision>
+    </npc>
+    <npc id="18048" level="80" type="Folk" name="Kastor's Prefect" title="Raid Fighter">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <equipment rhand="79"/>
+        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+            <vitals hp="8446" hpRegen="10.5" mp="1066" mpRegen="3.6"/>
+            <speed>
+                <walk ground="70"/>
+                <run ground="190"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <collision>
+            <radius normal="20"/>
+            <height normal="38"/>
+        </collision>
+    </npc>
+    <npc id="18049" level="80" type="Folk" name="Shilen's Messenger Cabrio" title="Raid Boss">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <equipment rhand="189"/>
+        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+            <vitals hp="8446" hpRegen="10.5" mp="1345" mpRegen="3.6"/>
+            <speed>
+                <walk ground="70"/>
+                <run ground="170"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <collision>
+            <radius normal="18"/>
+            <height normal="63"/>
+        </collision>
+    </npc>
+    <npc id="18050" level="80" type="Folk" name="Cabrio Captor" title="Raid Fighter">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <equipment rhand="279"/>
+        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+            <vitals hp="8446" hpRegen="10.5" mp="1314" mpRegen="3.6"/>
+            <speed>
+                <walk ground="40"/>
+                <run ground="170"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <collision>
+            <radius normal="11"/>
+            <height normal="27"/>
+        </collision>
+    </npc>
+    <npc id="18051" level="80" type="Folk" name="Cabrio Blader" title="Raid Fighter">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <equipment rhand="5129" lhand="5129"/>
+        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+            <vitals hp="8446" hpRegen="10.5" mp="1314" mpRegen="3.6"/>
+            <speed>
+                <walk ground="22"/>
+                <run ground="170"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <collision>
+            <radius normal="6"/>
+            <height normal="12"/>
+        </collision>
+    </npc>
+    <npc id="18052" level="80" type="Folk" name="Priest of Core Decar" title="Raid Boss">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+            <vitals hp="8446" hpRegen="10.5" mp="3015" mpRegen="3.6"/>
+            <speed>
+                <walk ground="30"/>
+                <run ground="140"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <collision>
+            <radius normal="90"/>
+            <height normal="81.6"/>
+        </collision>
+    </npc>
+    <npc id="18053" level="80" type="Folk" name="Baium">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+            <vitals hp="53342293" hpRegen="10.5" mp="18000" mpRegen="3.6"/>
+            <speed>
+                <walk ground="80"/>
+                <run ground="120"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <collision>
+            <radius normal="65"/>
+            <height normal="174"/>
+        </collision>
+    </npc>
+    <npc id="18054" level="80" type="Folk" name="Archangel">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <equipment rhand="93"/>
+        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+            <vitals hp="186915" hpRegen="10.5" mp="1475" mpRegen="3.6"/>
+            <speed>
+                <walk ground="50"/>
+                <run ground="170"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <collision>
+            <radius normal="15"/>
+            <height normal="80"/>
+        </collision>
+    </npc>
+    <npc id="18055" level="80" type="Folk" name="">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+            <vitals hp="8446" hpRegen="10.5" mp="1507" mpRegen="3.6"/>
+            <speed>
+                <walk ground="1"/>
+                <run ground="1"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <collision>
+            <radius normal="0.1"/>
+            <height normal="0.1"/>
+        </collision>
+    </npc>
+    <npc id="18056" level="80" type="Folk" name="Dancing Bard" title="Raid Boss">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+            <vitals hp="8446" hpRegen="10.5" mp="712533" mpRegen="3.6"/>
+            <speed>
+                <walk ground="15"/>
+                <run ground="120"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <collision>
+            <radius normal="39"/>
+            <height normal="61.5"/>
+        </collision>
+    </npc>
+    <npc id="18057" level="80" type="Folk" name="Golden Bat Dandy" title="Raid Boss">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+            <vitals hp="8446" hpRegen="10.5" mp="712533" mpRegen="3.6"/>
+            <speed>
+                <walk ground="50"/>
+                <run ground="120"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <collision>
+            <radius normal="40"/>
+            <height normal="63"/>
+        </collision>
+    </npc>
+    <npc id="18058" level="80" type="Folk" name="Super Mew the Cat" title="Raid Boss">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+            <vitals hp="8446" hpRegen="10.5" mp="712533" mpRegen="3.6"/>
+            <speed>
+                <walk ground="60"/>
+                <run ground="120"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <collision>
+            <radius normal="40"/>
+            <height normal="53"/>
+        </collision>
+    </npc>
+    <npc id="18059" level="80" type="Folk" name="Snowman" title="Raid Boss">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+            <vitals hp="8446" hpRegen="10.5" mp="712533" mpRegen="3.6"/>
+            <speed>
+                <walk ground="20"/>
+                <run ground="120"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <collision>
+            <radius normal="56"/>
+            <height normal="63"/>
+        </collision>
+    </npc>
 </list>

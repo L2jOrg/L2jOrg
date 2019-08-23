@@ -1,22 +1,22 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org ../../xsd/items.xsd" >
-	<item id="48765" name="Cat Outfit" type="Armor">
-		<set name="icon" val="icon.sayha2017_cat" />
-		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="rfinger;lfinger" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="GOLD" />
-		<set name="weight" val="150" />
-		<set name="is_sellable" val="false" />
-	</item>
-	<item id="48766" name="Panda Outfit" type="Armor">
-		<set name="icon" val="icon.sayha2017_panda" />
-		<set name="default_action" val="EQUIP" />
-		<set name="armor_type" val="HEAVY" />
-		<set name="bodypart" val="alldress" />
-		<set name="immediate_effect" val="true" />
-		<set name="material" val="CLOTH" />
-		<set name="weight" val="1000" />
-		<set name="is_sellable" val="false" />
-	</item>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org ../../xsd/items.xsd">
+    <item id="48765" name="Cat Outfit" type="Armor">
+        <set name="icon" val="icon.sayha2017_cat"/>
+        <set name="default_action" val="EQUIP"/>
+        <set name="bodypart" val="rfinger;lfinger"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="material" val="GOLD"/>
+        <set name="weight" val="150"/>
+        <set name="is_sellable" val="false"/>
+    </item>
+    <item id="48766" name="Panda Outfit" type="Armor">
+        <set name="icon" val="icon.sayha2017_panda"/>
+        <set name="default_action" val="EQUIP"/>
+        <set name="armor_type" val="HEAVY"/>
+        <set name="bodypart" val="alldress"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="material" val="CLOTH"/>
+        <set name="weight" val="1000"/>
+        <set name="is_sellable" val="false"/>
+    </item>
 </list>

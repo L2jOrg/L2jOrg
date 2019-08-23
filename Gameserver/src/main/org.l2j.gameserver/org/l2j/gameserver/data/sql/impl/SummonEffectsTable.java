@@ -19,8 +19,8 @@ package org.l2j.gameserver.data.sql.impl;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.skills.Skill;
 
+import java.util.Collection;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 /**
@@ -34,28 +34,28 @@ public class SummonEffectsTable {
     // -> key: charObjectId, value: classIndex Map
     // --> key: classIndex, value: servitors Map
     // ---> key: servitorSkillId, value: Effects list
-    private final Map<Integer, Map<Integer, Map<Integer, List<SummonEffect>>>> _servitorEffects = new HashMap<>();
+    private final Map<Integer, Map<Integer, Map<Integer, Collection<SummonEffect>>>> _servitorEffects = new HashMap<>();
     /**
      * Pets
      **/
-    private final Map<Integer, List<SummonEffect>> _petEffects = new HashMap<>(); // key: petItemObjectId, value: Effects list
+    private final Map<Integer, Collection<SummonEffect>> _petEffects = new HashMap<>(); // key: petItemObjectId, value: Effects list
 
     private SummonEffectsTable() {
     }
 
-    public Map<Integer, Map<Integer, Map<Integer, List<SummonEffect>>>> getServitorEffectsOwner() {
+    public Map<Integer, Map<Integer, Map<Integer, Collection<SummonEffect>>>> getServitorEffectsOwner() {
         return _servitorEffects;
     }
 
-    public Map<Integer, List<SummonEffect>> getServitorEffects(Player owner) {
-        final Map<Integer, Map<Integer, List<SummonEffect>>> servitorMap = _servitorEffects.get(owner.getObjectId());
+    public Map<Integer, Collection<SummonEffect>> getServitorEffects(Player owner) {
+        final Map<Integer, Map<Integer, Collection<SummonEffect>>> servitorMap = _servitorEffects.get(owner.getObjectId());
         if (servitorMap == null) {
             return null;
         }
         return servitorMap.get(owner.getClassIndex());
     }
 
-    public Map<Integer, List<SummonEffect>> getPetEffects() {
+    public Map<Integer, Collection<SummonEffect>> getPetEffects() {
         return _petEffects;
     }
 

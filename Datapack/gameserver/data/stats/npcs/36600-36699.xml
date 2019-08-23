@@ -1,1185 +1,1185 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org npcs.xsd">
-	<npc id="36609" level="80" type="Folk" name="Proclaimer" title="Gludio">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ELF</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="8446" hpRegen="8.5" mp="2355" mpRegen="3" />
-			<speed>
-				<walk ground="50" />
-				<run ground="40" />
-			</speed>
-			<attack physical="1949.95411856464" magical="1331.56588332443" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
-			<defence physical="405.66735" magical="296.84976" />
-			<abnormalResist physical="0" magical="0" />
-		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="4390" level="1" /> <!-- NPC Abnormal Immunity -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4416" level="15" /> <!-- Elves -->
-		</skillList>
-		<ai clanHelpRange="300" aggroRange="300" />
-		<collision>
-			<radius normal="8.5" />
-			<height normal="23.5" />
-		</collision>
-	</npc>
-	<npc id="36610" level="80" type="Folk" name="Proclaimer" title="Dion">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ELF</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="8446" hpRegen="8.5" mp="2355" mpRegen="3" />
-			<speed>
-				<walk ground="50" />
-				<run ground="40" />
-			</speed>
-			<attack physical="1949.95411856464" magical="1331.56588332443" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
-			<defence physical="405.66735" magical="296.84976" />
-			<abnormalResist physical="0" magical="0" />
-		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="4390" level="1" /> <!-- NPC Abnormal Immunity -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4416" level="15" /> <!-- Elves -->
-		</skillList>
-		<ai clanHelpRange="300" aggroRange="300" />
-		<collision>
-			<radius normal="8.5" />
-			<height normal="23.5" />
-		</collision>
-	</npc>
-	<npc id="36611" level="80" type="Folk" name="Proclaimer" title="Giran">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ELF</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="8446" hpRegen="8.5" mp="2355" mpRegen="3" />
-			<speed>
-				<walk ground="50" />
-				<run ground="40" />
-			</speed>
-			<attack physical="1949.95411856464" magical="1331.56588332443" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
-			<defence physical="405.66735" magical="296.84976" />
-			<abnormalResist physical="0" magical="0" />
-		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="4390" level="1" /> <!-- NPC Abnormal Immunity -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4416" level="15" /> <!-- Elves -->
-		</skillList>
-		<ai clanHelpRange="300" aggroRange="300" />
-		<collision>
-			<radius normal="8.5" />
-			<height normal="23.5" />
-		</collision>
-	</npc>
-	<npc id="36612" level="80" type="Folk" name="Proclaimer" title="Oren">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ELF</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="8446" hpRegen="8.5" mp="2355" mpRegen="3" />
-			<speed>
-				<walk ground="50" />
-				<run ground="40" />
-			</speed>
-			<attack physical="1949.95411856464" magical="1331.56588332443" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
-			<defence physical="405.66735" magical="296.84976" />
-			<abnormalResist physical="0" magical="0" />
-		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="4390" level="1" /> <!-- NPC Abnormal Immunity -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4416" level="15" /> <!-- Elves -->
-		</skillList>
-		<ai clanHelpRange="300" aggroRange="300" />
-		<collision>
-			<radius normal="8.5" />
-			<height normal="23.5" />
-		</collision>
-	</npc>
-	<npc id="36613" level="80" type="Folk" name="Proclaimer" title="Aden">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ELF</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="8446" hpRegen="8.5" mp="2355" mpRegen="3" />
-			<speed>
-				<walk ground="50" />
-				<run ground="40" />
-			</speed>
-			<attack physical="1949.95411856464" magical="1331.56588332443" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
-			<defence physical="405.66735" magical="296.84976" />
-			<abnormalResist physical="0" magical="0" />
-		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="4390" level="1" /> <!-- NPC Abnormal Immunity -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4416" level="15" /> <!-- Elves -->
-		</skillList>
-		<ai clanHelpRange="300" aggroRange="300" />
-		<collision>
-			<radius normal="8.5" />
-			<height normal="23.5" />
-		</collision>
-	</npc>
-	<npc id="36614" level="80" type="Folk" name="Proclaimer" title="Innadril">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ELF</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="8446" hpRegen="8.5" mp="2355" mpRegen="3" />
-			<speed>
-				<walk ground="50" />
-				<run ground="40" />
-			</speed>
-			<attack physical="1949.95411856464" magical="1331.56588332443" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
-			<defence physical="405.66735" magical="296.84976" />
-			<abnormalResist physical="0" magical="0" />
-		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="4390" level="1" /> <!-- NPC Abnormal Immunity -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4416" level="15" /> <!-- Elves -->
-		</skillList>
-		<ai clanHelpRange="300" aggroRange="300" />
-		<collision>
-			<radius normal="8.5" />
-			<height normal="23.5" />
-		</collision>
-	</npc>
-	<npc id="36615" level="80" type="Folk" name="Proclaimer" title="Goddard">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ELF</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="8446" hpRegen="8.5" mp="2355" mpRegen="3" />
-			<speed>
-				<walk ground="50" />
-				<run ground="40" />
-			</speed>
-			<attack physical="1949.95411856464" magical="1331.56588332443" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
-			<defence physical="405.66735" magical="296.84976" />
-			<abnormalResist physical="0" magical="0" />
-		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="4390" level="1" /> <!-- NPC Abnormal Immunity -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4416" level="15" /> <!-- Elves -->
-		</skillList>
-		<ai clanHelpRange="300" aggroRange="300" />
-		<collision>
-			<radius normal="8.5" />
-			<height normal="23.5" />
-		</collision>
-	</npc>
-	<npc id="36616" level="80" type="Folk" name="Proclaimer" title="Rune">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ELF</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="8446" hpRegen="8.5" mp="2355" mpRegen="3" />
-			<speed>
-				<walk ground="50" />
-				<run ground="40" />
-			</speed>
-			<attack physical="1949.95411856464" magical="1331.56588332443" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
-			<defence physical="405.66735" magical="296.84976" />
-			<abnormalResist physical="0" magical="0" />
-		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="4390" level="1" /> <!-- NPC Abnormal Immunity -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4416" level="15" /> <!-- Elves -->
-		</skillList>
-		<ai clanHelpRange="300" aggroRange="300" />
-		<collision>
-			<radius normal="8.5" />
-			<height normal="23.5" />
-		</collision>
-	</npc>
-	<npc id="36617" level="80" type="Folk" name="Proclaimer" title="Schuttgart">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ELF</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="8446" hpRegen="8.5" mp="2355" mpRegen="3" />
-			<speed>
-				<walk ground="50" />
-				<run ground="40" />
-			</speed>
-			<attack physical="1949.95411856464" magical="1331.56588332443" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
-			<defence physical="405.66735" magical="296.84976" />
-			<abnormalResist physical="0" magical="0" />
-		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="4390" level="1" /> <!-- NPC Abnormal Immunity -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4416" level="15" /> <!-- Elves -->
-		</skillList>
-		<ai clanHelpRange="300" aggroRange="300" />
-		<collision>
-			<radius normal="8.5" />
-			<height normal="23.5" />
-		</collision>
-	</npc>
-	<npc id="36653" level="80" type="Merchant" name="Chamberlain of Darkness">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<parameters>
-			<param name="fnAgitBuff" value="castlebuff" />
-			<param name="DDoorName1_1" value="gludio_castle_outter_001" />
-			<param name="DDoorName1_2" value="gludio_castle_outter_002" />
-			<param name="DDoorName2_1" value="gludio_castle_inner_001" />
-			<param name="DDoorName2_2" value="gludio_castle_inner_002" />
-			<param name="SDoorName1" value="gludio_castle_station" />
-			<param name="WallName1" value="gludio_castle_wall_001" />
-			<param name="WallName2" value="gludio_castle_wall_002" />
-			<param name="dmgzonename1" value="gludio_damage1_ctrltower" />
-			<param name="dmgzonename2" value="gludio_damage2_ctrltower" />
-			<param name="ppSetGate" value="PP_OPEN_CASTLE_DOOR" />
-			<param name="ppDecoFunction" value="PP_USE_CASTLE_FUNC" />
-			<param name="ppManage" value="PP_CONTROL_CASTLE_FUNC" />
-			<param name="fortress_id1" value="101" />
-			<param name="fortress_id2" value="102" />
-			<param name="fortress_id3" value="112" />
-			<param name="fortress_id4" value="113" />
-			<param name="dominion_id" value="81" />
-		</parameters>
-		<race>DEMONIC</race>
-		<sex>FEMALE</sex>
-		<mpReward value="20" type="PER" ticks="10" affects="PARTY" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="8446" hpRegen="8.5" mp="2355" mpRegen="3" />
-			<speed>
-				<walk ground="50" />
-				<run ground="40" />
-			</speed>
-			<attack physical="1949.95411856464" magical="1331.56588332443" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
-			<defence physical="405.66735" magical="296.84976" />
-			<abnormalResist physical="0" magical="0" />
-		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="4416" level="9" /> <!-- Demons -->
-			<skill id="4390" level="1" /> <!-- NPC Abnormal Immunity -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-		</skillList>
-		<ai clanHelpRange="300" aggroRange="300" />
-		<collision>
-			<radius normal="9" />
-			<height normal="34" />
-		</collision>
-	</npc>
-	<npc id="36654" level="80" type="Merchant" name="Chamberlain of Darkness">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<parameters>
-			<param name="fnAgitBuff" value="castlebuff" />
-			<param name="DDoorName1_1" value="dion_castle_outter_001" />
-			<param name="DDoorName1_2" value="dion_castle_outter_002" />
-			<param name="DDoorName2_1" value="dion_castle_inner_001" />
-			<param name="DDoorName2_2" value="dion_castle_inner_002" />
-			<param name="SDoorName1" value="dion_castle_station" />
-			<param name="WallName1" value="dion_castle_wall_001" />
-			<param name="WallName2" value="dion_castle_wall_002" />
-			<param name="dmgzonename1" value="dion_damage1_ctrltower" />
-			<param name="dmgzonename2" value="dion_damage2_ctrltower" />
-			<param name="ppSetGate" value="PP_OPEN_CASTLE_DOOR" />
-			<param name="ppDecoFunction" value="PP_USE_CASTLE_FUNC" />
-			<param name="ppManage" value="PP_CONTROL_CASTLE_FUNC" />
-			<param name="fortress_id1" value="103" />
-			<param name="fortress_id2" value="112" />
-			<param name="fortress_id3" value="114" />
-			<param name="fortress_id4" value="115" />
-			<param name="dominion_id" value="82" />
-		</parameters>
-		<race>DEMONIC</race>
-		<sex>FEMALE</sex>
-		<mpReward value="20" type="PER" ticks="10" affects="PARTY" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="8446" hpRegen="8.5" mp="2355" mpRegen="3" />
-			<speed>
-				<walk ground="50" />
-				<run ground="40" />
-			</speed>
-			<attack physical="1949.95411856464" magical="1331.56588332443" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
-			<defence physical="405.66735" magical="296.84976" />
-			<abnormalResist physical="0" magical="0" />
-		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="4416" level="9" /> <!-- Demons -->
-			<skill id="4390" level="1" /> <!-- NPC Abnormal Immunity -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-		</skillList>
-		<ai clanHelpRange="300" aggroRange="300" />
-		<collision>
-			<radius normal="9" />
-			<height normal="34" />
-		</collision>
-	</npc>
-	<npc id="36655" level="80" type="Merchant" name="Chamberlain of Darkness">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<parameters>
-			<param name="fnAgitBuff" value="castlebuff" />
-			<param name="DDoorName1_1" value="giran_castle_outter_001" />
-			<param name="DDoorName1_2" value="giran_castle_outter_002" />
-			<param name="DDoorName2_1" value="giran_castle_inner_001" />
-			<param name="DDoorName2_2" value="giran_castle_inner_002" />
-			<param name="SDoorName1" value="giran_castle_station" />
-			<param name="WallName1" value="giran_castle_wall_001" />
-			<param name="WallName2" value="giran_castle_wall_002" />
-			<param name="dmgzonename1" value="giran_damage1_ctrltower" />
-			<param name="dmgzonename2" value="giran_damage2_ctrltower" />
-			<param name="ppSetGate" value="PP_OPEN_CASTLE_DOOR" />
-			<param name="ppDecoFunction" value="PP_USE_CASTLE_FUNC" />
-			<param name="ppManage" value="PP_CONTROL_CASTLE_FUNC" />
-			<param name="fortress_id1" value="104" />
-			<param name="fortress_id2" value="114" />
-			<param name="fortress_id3" value="116" />
-			<param name="fortress_id4" value="118" />
-			<param name="fortress_id5" value="119" />
-			<param name="dominion_id" value="83" />
-		</parameters>
-		<race>DEMONIC</race>
-		<sex>FEMALE</sex>
-		<mpReward value="20" type="PER" ticks="10" affects="PARTY" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="8446" hpRegen="8.5" mp="2355" mpRegen="3" />
-			<speed>
-				<walk ground="50" />
-				<run ground="40" />
-			</speed>
-			<attack physical="1949.95411856464" magical="1331.56588332443" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
-			<defence physical="405.66735" magical="296.84976" />
-			<abnormalResist physical="0" magical="0" />
-		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="4416" level="9" /> <!-- Demons -->
-			<skill id="4390" level="1" /> <!-- NPC Abnormal Immunity -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-		</skillList>
-		<ai clanHelpRange="300" aggroRange="300" />
-		<collision>
-			<radius normal="9" />
-			<height normal="34" />
-		</collision>
-	</npc>
-	<npc id="36656" level="80" type="Merchant" name="Chamberlain of Darkness">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<parameters>
-			<param name="fnAgitBuff" value="castlebuff" />
-			<param name="DDoorName1_1" value="oren_castle_outter_001" />
-			<param name="DDoorName1_2" value="oren_castle_outter_002" />
-			<param name="DDoorName2_1" value="oren_castle_inner_001" />
-			<param name="DDoorName2_2" value="oren_castle_inner_002" />
-			<param name="SDoorName1" value="oren_castle_station" />
-			<param name="WallName1" value="oren_castle_wall_001" />
-			<param name="WallName2" value="oren_castle_wall_002" />
-			<param name="dmgzonename1" value="oren_damage1_ctrltower" />
-			<param name="dmgzonename2" value="oren_damage2_ctrltower" />
-			<param name="ppSetGate" value="PP_OPEN_CASTLE_DOOR" />
-			<param name="ppDecoFunction" value="PP_USE_CASTLE_FUNC" />
-			<param name="ppManage" value="PP_CONTROL_CASTLE_FUNC" />
-			<param name="fortress_id1" value="105" />
-			<param name="fortress_id2" value="113" />
-			<param name="fortress_id3" value="115" />
-			<param name="fortress_id4" value="116" />
-			<param name="fortress_id5" value="117" />
-			<param name="dominion_id" value="84" />
-		</parameters>
-		<race>DEMONIC</race>
-		<sex>FEMALE</sex>
-		<mpReward value="20" type="PER" ticks="10" affects="PARTY" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="8446" hpRegen="8.5" mp="2355" mpRegen="3" />
-			<speed>
-				<walk ground="50" />
-				<run ground="40" />
-			</speed>
-			<attack physical="1949.95411856464" magical="1331.56588332443" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
-			<defence physical="405.66735" magical="296.84976" />
-			<abnormalResist physical="0" magical="0" />
-		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="4416" level="9" /> <!-- Demons -->
-			<skill id="4390" level="1" /> <!-- NPC Abnormal Immunity -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-		</skillList>
-		<ai clanHelpRange="300" aggroRange="300" />
-		<collision>
-			<radius normal="9" />
-			<height normal="34" />
-		</collision>
-	</npc>
-	<npc id="36657" level="80" type="Merchant" name="Chamberlain of Darkness">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<parameters>
-			<param name="fnAgitBuff" value="castlebuff" />
-			<param name="DDoorName1_1" value="aden_castle_outter_001" />
-			<param name="DDoorName1_2" value="aden_castle_outter_002" />
-			<param name="DDoorName2_1" value="aden_castle_left_001" />
-			<param name="DDoorName2_2" value="aden_castle_left_002" />
-			<param name="DDoorName3_1" value="aden_castle_right_001" />
-			<param name="DDoorName3_2" value="aden_castle_right_002" />
-			<param name="DDoorName4_1" value="aden_castle_inner_001" />
-			<param name="DDoorName4_2" value="aden_castle_inner_002" />
-			<param name="DDoorName5_1" value="aden_castle_left_003" />
-			<param name="DDoorName5_2" value="aden_castle_left_004" />
-			<param name="DDoorName6_1" value="aden_castle_right_003" />
-			<param name="DDoorName6_2" value="aden_castle_right_004" />
-			<param name="SDoorName1" value="aden_castle_terrace" />
-			<param name="WallName1" value="aden_castle_wall_right" />
-			<param name="WallName2" value="aden_castle_wall_left" />
-			<param name="WallName3" value="aden_castle_wall_in" />
-			<param name="dmgzonename1" value="aden_damage1_ctrltower" />
-			<param name="dmgzonename2" value="aden_damage2_ctrltower" />
-			<param name="ppSetGate" value="PP_OPEN_CASTLE_DOOR" />
-			<param name="ppDecoFunction" value="PP_USE_CASTLE_FUNC" />
-			<param name="ppManage" value="PP_CONTROL_CASTLE_FUNC" />
-			<param name="fortress_id1" value="106" />
-			<param name="fortress_id2" value="107" />
-			<param name="fortress_id3" value="117" />
-			<param name="fortress_id4" value="118" />
-			<param name="dominion_id" value="85" />
-		</parameters>
-		<race>DEMONIC</race>
-		<sex>FEMALE</sex>
-		<mpReward value="20" type="PER" ticks="10" affects="PARTY" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="8446" hpRegen="8.5" mp="2355" mpRegen="3" />
-			<speed>
-				<walk ground="50" />
-				<run ground="40" />
-			</speed>
-			<attack physical="1949.95411856464" magical="1331.56588332443" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
-			<defence physical="405.66735" magical="296.84976" />
-			<abnormalResist physical="0" magical="0" />
-		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="4416" level="9" /> <!-- Demons -->
-			<skill id="4390" level="1" /> <!-- NPC Abnormal Immunity -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-		</skillList>
-		<ai clanHelpRange="300" aggroRange="300" />
-		<collision>
-			<radius normal="9" />
-			<height normal="34" />
-		</collision>
-	</npc>
-	<npc id="36658" level="80" type="Merchant" name="Chamberlain of Darkness">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<parameters>
-			<param name="fnAgitBuff" value="castlebuff" />
-			<param name="DDoorName1_1" value="innadrile_castle_outter_001" />
-			<param name="DDoorName1_2" value="innadrile_castle_outter_002" />
-			<param name="DDoorName2_1" value="innadrile_castle_inner_001" />
-			<param name="DDoorName2_2" value="innadrile_castle_inner_002" />
-			<param name="SDoorName1" value="innadrile_castle_station" />
-			<param name="WallName1" value="innadrile_castle_wall_001" />
-			<param name="WallName2" value="innadrile_castle_wall_002" />
-			<param name="dmgzonename1" value="innadrile_damage1_ctrltower" />
-			<param name="dmgzonename2" value="innadrile_damage2_ctrltower" />
-			<param name="ppSetGate" value="PP_OPEN_CASTLE_DOOR" />
-			<param name="ppDecoFunction" value="PP_USE_CASTLE_FUNC" />
-			<param name="ppManage" value="PP_CONTROL_CASTLE_FUNC" />
-			<param name="fortress_id1" value="108" />
-			<param name="fortress_id2" value="119" />
-			<param name="dominion_id" value="86" />
-		</parameters>
-		<race>DEMONIC</race>
-		<sex>FEMALE</sex>
-		<mpReward value="20" type="PER" ticks="10" affects="PARTY" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="8446" hpRegen="8.5" mp="2355" mpRegen="3" />
-			<speed>
-				<walk ground="50" />
-				<run ground="40" />
-			</speed>
-			<attack physical="1949.95411856464" magical="1331.56588332443" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
-			<defence physical="405.66735" magical="296.84976" />
-			<abnormalResist physical="0" magical="0" />
-		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="4416" level="9" /> <!-- Demons -->
-			<skill id="4390" level="1" /> <!-- NPC Abnormal Immunity -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-		</skillList>
-		<ai clanHelpRange="300" aggroRange="300" />
-		<collision>
-			<radius normal="9" />
-			<height normal="34" />
-		</collision>
-	</npc>
-	<npc id="36659" level="80" type="Merchant" name="Chamberlain of Darkness">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<parameters>
-			<param name="fnAgitBuff" value="castlebuff" />
-			<param name="DDoorName1_1" value="godad_castle_outter_001" />
-			<param name="DDoorName1_2" value="godad_castle_outter_002" />
-			<param name="DDoorName2_1" value="godad_castle_side_door_001" />
-			<param name="DDoorName2_2" value="godad_castle_side_door_002" />
-			<param name="DDoorName3_1" value="godad_castle_side_door_003" />
-			<param name="DDoorName3_2" value="godad_castle_side_door_004" />
-			<param name="DDoorName4_1" value="godad_castle_station_001" />
-			<param name="DDoorName4_2" value="godad_castle_station_002" />
-			<param name="WallName1" value="godad_castle_wall_001" />
-			<param name="WallName2" value="godad_castle_wall_002" />
-			<param name="dmgzonename1" value="godad_damage1_ctrltower" />
-			<param name="dmgzonename2" value="godad_damage2_ctrltower" />
-			<param name="ppSetGate" value="PP_OPEN_CASTLE_DOOR" />
-			<param name="ppDecoFunction" value="PP_USE_CASTLE_FUNC" />
-			<param name="ppManage" value="PP_CONTROL_CASTLE_FUNC" />
-			<param name="fortress_id1" value="109" />
-			<param name="fortress_id2" value="117" />
-			<param name="fortress_id3" value="120" />
-			<param name="dominion_id" value="87" />
-		</parameters>
-		<race>DEMONIC</race>
-		<sex>FEMALE</sex>
-		<mpReward value="20" type="PER" ticks="10" affects="PARTY" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="8446" hpRegen="8.5" mp="2355" mpRegen="3" />
-			<speed>
-				<walk ground="50" />
-				<run ground="40" />
-			</speed>
-			<attack physical="1949.95411856464" magical="1331.56588332443" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
-			<defence physical="405.66735" magical="296.84976" />
-			<abnormalResist physical="0" magical="0" />
-		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="4416" level="9" /> <!-- Demons -->
-			<skill id="4390" level="1" /> <!-- NPC Abnormal Immunity -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-		</skillList>
-		<ai clanHelpRange="300" aggroRange="300" />
-		<collision>
-			<radius normal="9" />
-			<height normal="34" />
-		</collision>
-	</npc>
-	<npc id="36660" level="80" type="Merchant" name="Chamberlain of Darkness">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<parameters>
-			<param name="fnAgitBuff" value="castlebuff" />
-			<param name="DDoorName1_1" value="rune_castle_outter_001" />
-			<param name="DDoorName1_2" value="rune_castle_outter_002" />
-			<param name="DDoorName2_1" value="rune_castle_inner_001" />
-			<param name="DDoorName2_2" value="rune_castle_inner_002" />
-			<param name="DDoorName3_1" value="rune_castle_side_door_001" />
-			<param name="WallName1" value="rune_castle_wall_001" />
-			<param name="WallName2" value="rune_castle_wall_002" />
-			<param name="WallName3" value="rune_castle_wall_003" />
-			<param name="dmgzonename1" value="rune_damage1_ctrltower" />
-			<param name="dmgzonename2" value="rune_damage2_ctrltower" />
-			<param name="ppSetGate" value="PP_OPEN_CASTLE_DOOR" />
-			<param name="ppDecoFunction" value="PP_USE_CASTLE_FUNC" />
-			<param name="ppManage" value="PP_CONTROL_CASTLE_FUNC" />
-			<param name="fortress_id1" value="110" />
-			<param name="fortress_id2" value="120" />
-			<param name="fortress_id3" value="121" />
-			<param name="dominion_id" value="88" />
-		</parameters>
-		<race>DEMONIC</race>
-		<sex>FEMALE</sex>
-		<mpReward value="20" type="PER" ticks="10" affects="PARTY" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="8446" hpRegen="8.5" mp="2355" mpRegen="3" />
-			<speed>
-				<walk ground="50" />
-				<run ground="40" />
-			</speed>
-			<attack physical="1949.95411856464" magical="1331.56588332443" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
-			<defence physical="405.66735" magical="296.84976" />
-			<abnormalResist physical="0" magical="0" />
-		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="4416" level="9" /> <!-- Demons -->
-			<skill id="4390" level="1" /> <!-- NPC Abnormal Immunity -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-		</skillList>
-		<ai clanHelpRange="300" aggroRange="300" />
-		<collision>
-			<radius normal="9" />
-			<height normal="34" />
-		</collision>
-	</npc>
-	<npc id="36661" level="80" type="Merchant" name="Chamberlain of Darkness">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<parameters>
-			<param name="fnAgitBuff" value="castlebuff" />
-			<param name="DDoorName1_1" value="schutt_castle_outter_001" />
-			<param name="DDoorName1_2" value="schutt_castle_outter_002" />
-			<param name="DDoorName2_1" value="schutt_castle_side_door_001" />
-			<param name="DDoorName2_2" value="schutt_castle_side_door_002" />
-			<param name="DDoorName3_1" value="schutt_castle_side_door_003" />
-			<param name="DDoorName3_2" value="schutt_castle_side_door_004" />
-			<param name="DDoorName4_1" value="schutt_castle_station_001" />
-			<param name="DDoorName4_2" value="schutt_castle_station_002" />
-			<param name="WallName1" value="schutt_castle_wall_001" />
-			<param name="WallName2" value="schutt_castle_wall_002" />
-			<param name="dmgzonename1" value="schutt_damage1_ctrltower" />
-			<param name="dmgzonename2" value="schutt_damage2_ctrltower" />
-			<param name="ppSetGate" value="PP_OPEN_CASTLE_DOOR" />
-			<param name="ppDecoFunction" value="PP_USE_CASTLE_FUNC" />
-			<param name="ppManage" value="PP_CONTROL_CASTLE_FUNC" />
-			<param name="fortress_id1" value="111" />
-			<param name="fortress_id2" value="121" />
-			<param name="dominion_id" value="89" />
-		</parameters>
-		<race>DEMONIC</race>
-		<sex>FEMALE</sex>
-		<mpReward value="20" type="PER" ticks="10" affects="PARTY" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="8446" hpRegen="8.5" mp="2355" mpRegen="3" />
-			<speed>
-				<walk ground="50" />
-				<run ground="40" />
-			</speed>
-			<attack physical="1949.95411856464" magical="1331.56588332443" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
-			<defence physical="405.66735" magical="296.84976" />
-			<abnormalResist physical="0" magical="0" />
-		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="4416" level="9" /> <!-- Demons -->
-			<skill id="4390" level="1" /> <!-- NPC Abnormal Immunity -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-		</skillList>
-		<ai clanHelpRange="300" aggroRange="300" />
-		<collision>
-			<radius normal="9" />
-			<height normal="34" />
-		</collision>
-	</npc>
-	<npc id="36664" level="75" type="Folk" name="Herald of Light">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ELF</race>
-		<sex>FEMALE</sex>
-		<mpReward value="20" type="PER" ticks="10" affects="PARTY" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2676" hpRegen="8.5" mp="1507" mpRegen="3" />
-			<speed>
-				<walk ground="50" />
-				<run ground="120" />
-			</speed>
-			<attack physical="794.70901" magical="542.68324" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
-			<defence physical="319.24623" magical="233.61053" />
-			<abnormalResist physical="0" magical="0" />
-		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="4390" level="1" /> <!-- NPC Abnormal Immunity -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4416" level="15" /> <!-- Elves -->
-		</skillList>
-		<ai clanHelpRange="300" aggroRange="300" />
-		<collision>
-			<radius normal="8.5" />
-			<height normal="23.5" />
-		</collision>
-	</npc>
-	<npc id="36665" level="75" type="Folk" name="Herald of Light">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ELF</race>
-		<sex>FEMALE</sex>
-		<mpReward value="20" type="PER" ticks="10" affects="PARTY" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2676" hpRegen="8.5" mp="1507" mpRegen="3" />
-			<speed>
-				<walk ground="50" />
-				<run ground="120" />
-			</speed>
-			<attack physical="794.70901" magical="542.68324" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
-			<defence physical="319.24623" magical="233.61053" />
-			<abnormalResist physical="0" magical="0" />
-		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="4390" level="1" /> <!-- NPC Abnormal Immunity -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4416" level="15" /> <!-- Elves -->
-		</skillList>
-		<ai clanHelpRange="300" aggroRange="300" />
-		<collision>
-			<radius normal="8.5" />
-			<height normal="23.5" />
-		</collision>
-	</npc>
-	<npc id="36666" level="75" type="Folk" name="Herald of Light">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ELF</race>
-		<sex>FEMALE</sex>
-		<mpReward value="20" type="PER" ticks="10" affects="PARTY" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2676" hpRegen="8.5" mp="1507" mpRegen="3" />
-			<speed>
-				<walk ground="50" />
-				<run ground="120" />
-			</speed>
-			<attack physical="794.70901" magical="542.68324" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
-			<defence physical="319.24623" magical="233.61053" />
-			<abnormalResist physical="0" magical="0" />
-		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="4390" level="1" /> <!-- NPC Abnormal Immunity -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4416" level="15" /> <!-- Elves -->
-		</skillList>
-		<ai clanHelpRange="300" aggroRange="300" />
-		<collision>
-			<radius normal="8.5" />
-			<height normal="23.5" />
-		</collision>
-	</npc>
-	<npc id="36667" level="75" type="Folk" name="Herald of Light">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ELF</race>
-		<sex>FEMALE</sex>
-		<mpReward value="20" type="PER" ticks="10" affects="PARTY" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2676" hpRegen="8.5" mp="1507" mpRegen="3" />
-			<speed>
-				<walk ground="50" />
-				<run ground="120" />
-			</speed>
-			<attack physical="794.70901" magical="542.68324" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
-			<defence physical="319.24623" magical="233.61053" />
-			<abnormalResist physical="0" magical="0" />
-		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="4390" level="1" /> <!-- NPC Abnormal Immunity -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4416" level="15" /> <!-- Elves -->
-		</skillList>
-		<ai clanHelpRange="300" aggroRange="300" />
-		<collision>
-			<radius normal="8.5" />
-			<height normal="23.5" />
-		</collision>
-	</npc>
-	<npc id="36668" level="75" type="Folk" name="Herald of Light">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ELF</race>
-		<sex>FEMALE</sex>
-		<mpReward value="20" type="PER" ticks="10" affects="PARTY" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2676" hpRegen="8.5" mp="1507" mpRegen="3" />
-			<speed>
-				<walk ground="50" />
-				<run ground="120" />
-			</speed>
-			<attack physical="794.70901" magical="542.68324" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
-			<defence physical="319.24623" magical="233.61053" />
-			<abnormalResist physical="0" magical="0" />
-		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="4390" level="1" /> <!-- NPC Abnormal Immunity -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4416" level="15" /> <!-- Elves -->
-		</skillList>
-		<ai clanHelpRange="300" aggroRange="300" />
-		<collision>
-			<radius normal="8.5" />
-			<height normal="23.5" />
-		</collision>
-	</npc>
-	<npc id="36669" level="75" type="Folk" name="Herald of Light">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ELF</race>
-		<sex>FEMALE</sex>
-		<mpReward value="20" type="PER" ticks="10" affects="PARTY" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2676" hpRegen="8.5" mp="1507" mpRegen="3" />
-			<speed>
-				<walk ground="50" />
-				<run ground="120" />
-			</speed>
-			<attack physical="794.70901" magical="542.68324" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
-			<defence physical="319.24623" magical="233.61053" />
-			<abnormalResist physical="0" magical="0" />
-		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="4390" level="1" /> <!-- NPC Abnormal Immunity -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4416" level="15" /> <!-- Elves -->
-		</skillList>
-		<ai clanHelpRange="300" aggroRange="300" />
-		<collision>
-			<radius normal="8.5" />
-			<height normal="23.5" />
-		</collision>
-	</npc>
-	<npc id="36670" level="75" type="Folk" name="Herald of Light">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ELF</race>
-		<sex>FEMALE</sex>
-		<mpReward value="20" type="PER" ticks="10" affects="PARTY" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2676" hpRegen="8.5" mp="1507" mpRegen="3" />
-			<speed>
-				<walk ground="50" />
-				<run ground="120" />
-			</speed>
-			<attack physical="794.70901" magical="542.68324" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
-			<defence physical="319.24623" magical="233.61053" />
-			<abnormalResist physical="0" magical="0" />
-		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="4390" level="1" /> <!-- NPC Abnormal Immunity -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4416" level="15" /> <!-- Elves -->
-		</skillList>
-		<ai clanHelpRange="300" aggroRange="300" />
-		<collision>
-			<radius normal="8.5" />
-			<height normal="23.5" />
-		</collision>
-	</npc>
-	<npc id="36671" level="75" type="Folk" name="Herald of Light">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ELF</race>
-		<sex>FEMALE</sex>
-		<mpReward value="20" type="PER" ticks="10" affects="PARTY" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2676" hpRegen="8.5" mp="1507" mpRegen="3" />
-			<speed>
-				<walk ground="50" />
-				<run ground="120" />
-			</speed>
-			<attack physical="794.70901" magical="542.68324" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
-			<defence physical="319.24623" magical="233.61053" />
-			<abnormalResist physical="0" magical="0" />
-		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="4390" level="1" /> <!-- NPC Abnormal Immunity -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4416" level="15" /> <!-- Elves -->
-		</skillList>
-		<ai clanHelpRange="300" aggroRange="300" />
-		<collision>
-			<radius normal="8.5" />
-			<height normal="23.5" />
-		</collision>
-	</npc>
-	<npc id="36672" level="75" type="Folk" name="Herald of Light">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ELF</race>
-		<sex>FEMALE</sex>
-		<mpReward value="20" type="PER" ticks="10" affects="PARTY" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2676" hpRegen="8.5" mp="1507" mpRegen="3" />
-			<speed>
-				<walk ground="50" />
-				<run ground="120" />
-			</speed>
-			<attack physical="794.70901" magical="542.68324" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
-			<defence physical="319.24623" magical="233.61053" />
-			<abnormalResist physical="0" magical="0" />
-		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="4390" level="1" /> <!-- NPC Abnormal Immunity -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4416" level="15" /> <!-- Elves -->
-		</skillList>
-		<ai clanHelpRange="300" aggroRange="300" />
-		<collision>
-			<radius normal="8.5" />
-			<height normal="23.5" />
-		</collision>
-	</npc>
-	<npc id="36673" level="75" type="Monster" name="Herald of Darkness">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>DEMONIC</race>
-		<sex>FEMALE</sex>
-		<mpReward value="20" type="PER" ticks="10" affects="PARTY" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2676" hpRegen="8.5" mp="1507" mpRegen="3" />
-			<speed>
-				<walk ground="50" />
-				<run ground="120" />
-			</speed>
-			<attack physical="794.70901" magical="542.68324" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
-			<defence physical="319.24623" magical="233.61053" />
-			<abnormalResist physical="0" magical="0" />
-		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="4416" level="20" /> <!-- Non-living Beings -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-		</skillList>
-		<ai clanHelpRange="300" aggroRange="1000" />
-		<collision>
-			<radius normal="9" />
-			<height normal="34" />
-		</collision>
-	</npc>
-	<npc id="36674" level="75" type="Monster" name="Herald of Darkness">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>DEMONIC</race>
-		<sex>FEMALE</sex>
-		<mpReward value="20" type="PER" ticks="10" affects="PARTY" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2676" hpRegen="8.5" mp="1507" mpRegen="3" />
-			<speed>
-				<walk ground="50" />
-				<run ground="120" />
-			</speed>
-			<attack physical="794.70901" magical="542.68324" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
-			<defence physical="319.24623" magical="233.61053" />
-			<abnormalResist physical="0" magical="0" />
-		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="4416" level="20" /> <!-- Non-living Beings -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-		</skillList>
-		<ai clanHelpRange="300" aggroRange="1000" />
-		<collision>
-			<radius normal="9" />
-			<height normal="34" />
-		</collision>
-	</npc>
-	<npc id="36675" level="75" type="Monster" name="Herald of Darkness">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>DEMONIC</race>
-		<sex>FEMALE</sex>
-		<mpReward value="20" type="PER" ticks="10" affects="PARTY" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2676" hpRegen="8.5" mp="1507" mpRegen="3" />
-			<speed>
-				<walk ground="50" />
-				<run ground="120" />
-			</speed>
-			<attack physical="794.70901" magical="542.68324" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
-			<defence physical="319.24623" magical="233.61053" />
-			<abnormalResist physical="0" magical="0" />
-		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="4416" level="20" /> <!-- Non-living Beings -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-		</skillList>
-		<ai clanHelpRange="300" aggroRange="1000" />
-		<collision>
-			<radius normal="9" />
-			<height normal="34" />
-		</collision>
-	</npc>
-	<npc id="36676" level="75" type="Monster" name="Herald of Darkness">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>DEMONIC</race>
-		<sex>FEMALE</sex>
-		<mpReward value="20" type="PER" ticks="10" affects="PARTY" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2676" hpRegen="8.5" mp="1507" mpRegen="3" />
-			<speed>
-				<walk ground="50" />
-				<run ground="120" />
-			</speed>
-			<attack physical="794.70901" magical="542.68324" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
-			<defence physical="319.24623" magical="233.61053" />
-			<abnormalResist physical="0" magical="0" />
-		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="4416" level="20" /> <!-- Non-living Beings -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-		</skillList>
-		<ai clanHelpRange="300" aggroRange="1000" />
-		<collision>
-			<radius normal="9" />
-			<height normal="34" />
-		</collision>
-	</npc>
-	<npc id="36677" level="75" type="Monster" name="Herald of Darkness">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>DEMONIC</race>
-		<sex>FEMALE</sex>
-		<mpReward value="20" type="PER" ticks="10" affects="PARTY" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2676" hpRegen="8.5" mp="1507" mpRegen="3" />
-			<speed>
-				<walk ground="50" />
-				<run ground="120" />
-			</speed>
-			<attack physical="794.70901" magical="542.68324" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
-			<defence physical="319.24623" magical="233.61053" />
-			<abnormalResist physical="0" magical="0" />
-		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="4416" level="20" /> <!-- Non-living Beings -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-		</skillList>
-		<ai clanHelpRange="300" aggroRange="1000" />
-		<collision>
-			<radius normal="9" />
-			<height normal="34" />
-		</collision>
-	</npc>
-	<npc id="36678" level="75" type="Monster" name="Herald of Darkness">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>DEMONIC</race>
-		<sex>FEMALE</sex>
-		<mpReward value="20" type="PER" ticks="10" affects="PARTY" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2676" hpRegen="8.5" mp="1507" mpRegen="3" />
-			<speed>
-				<walk ground="50" />
-				<run ground="120" />
-			</speed>
-			<attack physical="794.70901" magical="542.68324" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
-			<defence physical="319.24623" magical="233.61053" />
-			<abnormalResist physical="0" magical="0" />
-		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="4416" level="20" /> <!-- Non-living Beings -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-		</skillList>
-		<ai clanHelpRange="300" aggroRange="1000" />
-		<collision>
-			<radius normal="9" />
-			<height normal="34" />
-		</collision>
-	</npc>
-	<npc id="36679" level="75" type="Monster" name="Herald of Darkness">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>DEMONIC</race>
-		<sex>FEMALE</sex>
-		<mpReward value="20" type="PER" ticks="10" affects="PARTY" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2676" hpRegen="8.5" mp="1507" mpRegen="3" />
-			<speed>
-				<walk ground="50" />
-				<run ground="120" />
-			</speed>
-			<attack physical="794.70901" magical="542.68324" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
-			<defence physical="319.24623" magical="233.61053" />
-			<abnormalResist physical="0" magical="0" />
-		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="4416" level="20" /> <!-- Non-living Beings -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-		</skillList>
-		<ai clanHelpRange="300" aggroRange="1000" />
-		<collision>
-			<radius normal="9" />
-			<height normal="34" />
-		</collision>
-	</npc>
-	<npc id="36680" level="75" type="Monster" name="Herald of Darkness">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>DEMONIC</race>
-		<sex>FEMALE</sex>
-		<mpReward value="20" type="PER" ticks="10" affects="PARTY" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2676" hpRegen="8.5" mp="1507" mpRegen="3" />
-			<speed>
-				<walk ground="50" />
-				<run ground="120" />
-			</speed>
-			<attack physical="794.70901" magical="542.68324" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
-			<defence physical="319.24623" magical="233.61053" />
-			<abnormalResist physical="0" magical="0" />
-		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="4416" level="20" /> <!-- Non-living Beings -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-		</skillList>
-		<ai clanHelpRange="300" aggroRange="1000" />
-		<collision>
-			<radius normal="9" />
-			<height normal="34" />
-		</collision>
-	</npc>
-	<npc id="36681" level="75" type="Monster" name="Herald of Darkness">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>DEMONIC</race>
-		<sex>FEMALE</sex>
-		<mpReward value="20" type="PER" ticks="10" affects="PARTY" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2676" hpRegen="8.5" mp="1507" mpRegen="3" />
-			<speed>
-				<walk ground="50" />
-				<run ground="120" />
-			</speed>
-			<attack physical="794.70901" magical="542.68324" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
-			<defence physical="319.24623" magical="233.61053" />
-			<abnormalResist physical="0" magical="0" />
-		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="4416" level="20" /> <!-- Non-living Beings -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-		</skillList>
-		<ai clanHelpRange="300" aggroRange="1000" />
-		<collision>
-			<radius normal="9" />
-			<height normal="34" />
-		</collision>
-	</npc>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org npcs.xsd">
+    <npc id="36609" level="80" type="Folk" name="Proclaimer" title="Gludio">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>ELF</race>
+        <sex>FEMALE</sex>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="8446" hpRegen="8.5" mp="2355" mpRegen="3"/>
+            <speed>
+                <walk ground="50"/>
+                <run ground="40"/>
+            </speed>
+            <attack physical="1949.95411856464" magical="1331.56588332443" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5"/>
+            <defence physical="405.66735" magical="296.84976"/>
+            <abnormalResist physical="0" magical="0"/>
+        </stats>
+        <status attackable="false"/>
+        <skillList>
+            <skill id="4390" level="1"/> <!-- NPC Abnormal Immunity -->
+            <skill id="4415" level="3"/> <!-- One-handed Sword -->
+            <skill id="4045" level="1"/> <!-- Resist Full Magic Attack -->
+            <skill id="4416" level="15"/> <!-- Elves -->
+        </skillList>
+        <ai clanHelpRange="300" aggroRange="300"/>
+        <collision>
+            <radius normal="8.5"/>
+            <height normal="23.5"/>
+        </collision>
+    </npc>
+    <npc id="36610" level="80" type="Folk" name="Proclaimer" title="Dion">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>ELF</race>
+        <sex>FEMALE</sex>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="8446" hpRegen="8.5" mp="2355" mpRegen="3"/>
+            <speed>
+                <walk ground="50"/>
+                <run ground="40"/>
+            </speed>
+            <attack physical="1949.95411856464" magical="1331.56588332443" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5"/>
+            <defence physical="405.66735" magical="296.84976"/>
+            <abnormalResist physical="0" magical="0"/>
+        </stats>
+        <status attackable="false"/>
+        <skillList>
+            <skill id="4390" level="1"/> <!-- NPC Abnormal Immunity -->
+            <skill id="4415" level="3"/> <!-- One-handed Sword -->
+            <skill id="4045" level="1"/> <!-- Resist Full Magic Attack -->
+            <skill id="4416" level="15"/> <!-- Elves -->
+        </skillList>
+        <ai clanHelpRange="300" aggroRange="300"/>
+        <collision>
+            <radius normal="8.5"/>
+            <height normal="23.5"/>
+        </collision>
+    </npc>
+    <npc id="36611" level="80" type="Folk" name="Proclaimer" title="Giran">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>ELF</race>
+        <sex>FEMALE</sex>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="8446" hpRegen="8.5" mp="2355" mpRegen="3"/>
+            <speed>
+                <walk ground="50"/>
+                <run ground="40"/>
+            </speed>
+            <attack physical="1949.95411856464" magical="1331.56588332443" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5"/>
+            <defence physical="405.66735" magical="296.84976"/>
+            <abnormalResist physical="0" magical="0"/>
+        </stats>
+        <status attackable="false"/>
+        <skillList>
+            <skill id="4390" level="1"/> <!-- NPC Abnormal Immunity -->
+            <skill id="4415" level="3"/> <!-- One-handed Sword -->
+            <skill id="4045" level="1"/> <!-- Resist Full Magic Attack -->
+            <skill id="4416" level="15"/> <!-- Elves -->
+        </skillList>
+        <ai clanHelpRange="300" aggroRange="300"/>
+        <collision>
+            <radius normal="8.5"/>
+            <height normal="23.5"/>
+        </collision>
+    </npc>
+    <npc id="36612" level="80" type="Folk" name="Proclaimer" title="Oren">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>ELF</race>
+        <sex>FEMALE</sex>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="8446" hpRegen="8.5" mp="2355" mpRegen="3"/>
+            <speed>
+                <walk ground="50"/>
+                <run ground="40"/>
+            </speed>
+            <attack physical="1949.95411856464" magical="1331.56588332443" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5"/>
+            <defence physical="405.66735" magical="296.84976"/>
+            <abnormalResist physical="0" magical="0"/>
+        </stats>
+        <status attackable="false"/>
+        <skillList>
+            <skill id="4390" level="1"/> <!-- NPC Abnormal Immunity -->
+            <skill id="4415" level="3"/> <!-- One-handed Sword -->
+            <skill id="4045" level="1"/> <!-- Resist Full Magic Attack -->
+            <skill id="4416" level="15"/> <!-- Elves -->
+        </skillList>
+        <ai clanHelpRange="300" aggroRange="300"/>
+        <collision>
+            <radius normal="8.5"/>
+            <height normal="23.5"/>
+        </collision>
+    </npc>
+    <npc id="36613" level="80" type="Folk" name="Proclaimer" title="Aden">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>ELF</race>
+        <sex>FEMALE</sex>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="8446" hpRegen="8.5" mp="2355" mpRegen="3"/>
+            <speed>
+                <walk ground="50"/>
+                <run ground="40"/>
+            </speed>
+            <attack physical="1949.95411856464" magical="1331.56588332443" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5"/>
+            <defence physical="405.66735" magical="296.84976"/>
+            <abnormalResist physical="0" magical="0"/>
+        </stats>
+        <status attackable="false"/>
+        <skillList>
+            <skill id="4390" level="1"/> <!-- NPC Abnormal Immunity -->
+            <skill id="4415" level="3"/> <!-- One-handed Sword -->
+            <skill id="4045" level="1"/> <!-- Resist Full Magic Attack -->
+            <skill id="4416" level="15"/> <!-- Elves -->
+        </skillList>
+        <ai clanHelpRange="300" aggroRange="300"/>
+        <collision>
+            <radius normal="8.5"/>
+            <height normal="23.5"/>
+        </collision>
+    </npc>
+    <npc id="36614" level="80" type="Folk" name="Proclaimer" title="Innadril">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>ELF</race>
+        <sex>FEMALE</sex>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="8446" hpRegen="8.5" mp="2355" mpRegen="3"/>
+            <speed>
+                <walk ground="50"/>
+                <run ground="40"/>
+            </speed>
+            <attack physical="1949.95411856464" magical="1331.56588332443" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5"/>
+            <defence physical="405.66735" magical="296.84976"/>
+            <abnormalResist physical="0" magical="0"/>
+        </stats>
+        <status attackable="false"/>
+        <skillList>
+            <skill id="4390" level="1"/> <!-- NPC Abnormal Immunity -->
+            <skill id="4415" level="3"/> <!-- One-handed Sword -->
+            <skill id="4045" level="1"/> <!-- Resist Full Magic Attack -->
+            <skill id="4416" level="15"/> <!-- Elves -->
+        </skillList>
+        <ai clanHelpRange="300" aggroRange="300"/>
+        <collision>
+            <radius normal="8.5"/>
+            <height normal="23.5"/>
+        </collision>
+    </npc>
+    <npc id="36615" level="80" type="Folk" name="Proclaimer" title="Goddard">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>ELF</race>
+        <sex>FEMALE</sex>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="8446" hpRegen="8.5" mp="2355" mpRegen="3"/>
+            <speed>
+                <walk ground="50"/>
+                <run ground="40"/>
+            </speed>
+            <attack physical="1949.95411856464" magical="1331.56588332443" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5"/>
+            <defence physical="405.66735" magical="296.84976"/>
+            <abnormalResist physical="0" magical="0"/>
+        </stats>
+        <status attackable="false"/>
+        <skillList>
+            <skill id="4390" level="1"/> <!-- NPC Abnormal Immunity -->
+            <skill id="4415" level="3"/> <!-- One-handed Sword -->
+            <skill id="4045" level="1"/> <!-- Resist Full Magic Attack -->
+            <skill id="4416" level="15"/> <!-- Elves -->
+        </skillList>
+        <ai clanHelpRange="300" aggroRange="300"/>
+        <collision>
+            <radius normal="8.5"/>
+            <height normal="23.5"/>
+        </collision>
+    </npc>
+    <npc id="36616" level="80" type="Folk" name="Proclaimer" title="Rune">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>ELF</race>
+        <sex>FEMALE</sex>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="8446" hpRegen="8.5" mp="2355" mpRegen="3"/>
+            <speed>
+                <walk ground="50"/>
+                <run ground="40"/>
+            </speed>
+            <attack physical="1949.95411856464" magical="1331.56588332443" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5"/>
+            <defence physical="405.66735" magical="296.84976"/>
+            <abnormalResist physical="0" magical="0"/>
+        </stats>
+        <status attackable="false"/>
+        <skillList>
+            <skill id="4390" level="1"/> <!-- NPC Abnormal Immunity -->
+            <skill id="4415" level="3"/> <!-- One-handed Sword -->
+            <skill id="4045" level="1"/> <!-- Resist Full Magic Attack -->
+            <skill id="4416" level="15"/> <!-- Elves -->
+        </skillList>
+        <ai clanHelpRange="300" aggroRange="300"/>
+        <collision>
+            <radius normal="8.5"/>
+            <height normal="23.5"/>
+        </collision>
+    </npc>
+    <npc id="36617" level="80" type="Folk" name="Proclaimer" title="Schuttgart">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>ELF</race>
+        <sex>FEMALE</sex>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="8446" hpRegen="8.5" mp="2355" mpRegen="3"/>
+            <speed>
+                <walk ground="50"/>
+                <run ground="40"/>
+            </speed>
+            <attack physical="1949.95411856464" magical="1331.56588332443" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5"/>
+            <defence physical="405.66735" magical="296.84976"/>
+            <abnormalResist physical="0" magical="0"/>
+        </stats>
+        <status attackable="false"/>
+        <skillList>
+            <skill id="4390" level="1"/> <!-- NPC Abnormal Immunity -->
+            <skill id="4415" level="3"/> <!-- One-handed Sword -->
+            <skill id="4045" level="1"/> <!-- Resist Full Magic Attack -->
+            <skill id="4416" level="15"/> <!-- Elves -->
+        </skillList>
+        <ai clanHelpRange="300" aggroRange="300"/>
+        <collision>
+            <radius normal="8.5"/>
+            <height normal="23.5"/>
+        </collision>
+    </npc>
+    <npc id="36653" level="80" type="Merchant" name="Chamberlain of Darkness">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <parameters>
+            <param name="fnAgitBuff" value="castlebuff"/>
+            <param name="DDoorName1_1" value="gludio_castle_outter_001"/>
+            <param name="DDoorName1_2" value="gludio_castle_outter_002"/>
+            <param name="DDoorName2_1" value="gludio_castle_inner_001"/>
+            <param name="DDoorName2_2" value="gludio_castle_inner_002"/>
+            <param name="SDoorName1" value="gludio_castle_station"/>
+            <param name="WallName1" value="gludio_castle_wall_001"/>
+            <param name="WallName2" value="gludio_castle_wall_002"/>
+            <param name="dmgzonename1" value="gludio_damage1_ctrltower"/>
+            <param name="dmgzonename2" value="gludio_damage2_ctrltower"/>
+            <param name="ppSetGate" value="PP_OPEN_CASTLE_DOOR"/>
+            <param name="ppDecoFunction" value="PP_USE_CASTLE_FUNC"/>
+            <param name="ppManage" value="PP_CONTROL_CASTLE_FUNC"/>
+            <param name="fortress_id1" value="101"/>
+            <param name="fortress_id2" value="102"/>
+            <param name="fortress_id3" value="112"/>
+            <param name="fortress_id4" value="113"/>
+            <param name="dominion_id" value="81"/>
+        </parameters>
+        <race>DEMONIC</race>
+        <sex>FEMALE</sex>
+        <mpReward value="20" type="PER" ticks="10" affects="PARTY"/>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="8446" hpRegen="8.5" mp="2355" mpRegen="3"/>
+            <speed>
+                <walk ground="50"/>
+                <run ground="40"/>
+            </speed>
+            <attack physical="1949.95411856464" magical="1331.56588332443" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5"/>
+            <defence physical="405.66735" magical="296.84976"/>
+            <abnormalResist physical="0" magical="0"/>
+        </stats>
+        <status attackable="false"/>
+        <skillList>
+            <skill id="4416" level="9"/> <!-- Demons -->
+            <skill id="4390" level="1"/> <!-- NPC Abnormal Immunity -->
+            <skill id="4415" level="3"/> <!-- One-handed Sword -->
+            <skill id="4045" level="1"/> <!-- Resist Full Magic Attack -->
+        </skillList>
+        <ai clanHelpRange="300" aggroRange="300"/>
+        <collision>
+            <radius normal="9"/>
+            <height normal="34"/>
+        </collision>
+    </npc>
+    <npc id="36654" level="80" type="Merchant" name="Chamberlain of Darkness">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <parameters>
+            <param name="fnAgitBuff" value="castlebuff"/>
+            <param name="DDoorName1_1" value="dion_castle_outter_001"/>
+            <param name="DDoorName1_2" value="dion_castle_outter_002"/>
+            <param name="DDoorName2_1" value="dion_castle_inner_001"/>
+            <param name="DDoorName2_2" value="dion_castle_inner_002"/>
+            <param name="SDoorName1" value="dion_castle_station"/>
+            <param name="WallName1" value="dion_castle_wall_001"/>
+            <param name="WallName2" value="dion_castle_wall_002"/>
+            <param name="dmgzonename1" value="dion_damage1_ctrltower"/>
+            <param name="dmgzonename2" value="dion_damage2_ctrltower"/>
+            <param name="ppSetGate" value="PP_OPEN_CASTLE_DOOR"/>
+            <param name="ppDecoFunction" value="PP_USE_CASTLE_FUNC"/>
+            <param name="ppManage" value="PP_CONTROL_CASTLE_FUNC"/>
+            <param name="fortress_id1" value="103"/>
+            <param name="fortress_id2" value="112"/>
+            <param name="fortress_id3" value="114"/>
+            <param name="fortress_id4" value="115"/>
+            <param name="dominion_id" value="82"/>
+        </parameters>
+        <race>DEMONIC</race>
+        <sex>FEMALE</sex>
+        <mpReward value="20" type="PER" ticks="10" affects="PARTY"/>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="8446" hpRegen="8.5" mp="2355" mpRegen="3"/>
+            <speed>
+                <walk ground="50"/>
+                <run ground="40"/>
+            </speed>
+            <attack physical="1949.95411856464" magical="1331.56588332443" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5"/>
+            <defence physical="405.66735" magical="296.84976"/>
+            <abnormalResist physical="0" magical="0"/>
+        </stats>
+        <status attackable="false"/>
+        <skillList>
+            <skill id="4416" level="9"/> <!-- Demons -->
+            <skill id="4390" level="1"/> <!-- NPC Abnormal Immunity -->
+            <skill id="4415" level="3"/> <!-- One-handed Sword -->
+            <skill id="4045" level="1"/> <!-- Resist Full Magic Attack -->
+        </skillList>
+        <ai clanHelpRange="300" aggroRange="300"/>
+        <collision>
+            <radius normal="9"/>
+            <height normal="34"/>
+        </collision>
+    </npc>
+    <npc id="36655" level="80" type="Merchant" name="Chamberlain of Darkness">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <parameters>
+            <param name="fnAgitBuff" value="castlebuff"/>
+            <param name="DDoorName1_1" value="giran_castle_outter_001"/>
+            <param name="DDoorName1_2" value="giran_castle_outter_002"/>
+            <param name="DDoorName2_1" value="giran_castle_inner_001"/>
+            <param name="DDoorName2_2" value="giran_castle_inner_002"/>
+            <param name="SDoorName1" value="giran_castle_station"/>
+            <param name="WallName1" value="giran_castle_wall_001"/>
+            <param name="WallName2" value="giran_castle_wall_002"/>
+            <param name="dmgzonename1" value="giran_damage1_ctrltower"/>
+            <param name="dmgzonename2" value="giran_damage2_ctrltower"/>
+            <param name="ppSetGate" value="PP_OPEN_CASTLE_DOOR"/>
+            <param name="ppDecoFunction" value="PP_USE_CASTLE_FUNC"/>
+            <param name="ppManage" value="PP_CONTROL_CASTLE_FUNC"/>
+            <param name="fortress_id1" value="104"/>
+            <param name="fortress_id2" value="114"/>
+            <param name="fortress_id3" value="116"/>
+            <param name="fortress_id4" value="118"/>
+            <param name="fortress_id5" value="119"/>
+            <param name="dominion_id" value="83"/>
+        </parameters>
+        <race>DEMONIC</race>
+        <sex>FEMALE</sex>
+        <mpReward value="20" type="PER" ticks="10" affects="PARTY"/>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="8446" hpRegen="8.5" mp="2355" mpRegen="3"/>
+            <speed>
+                <walk ground="50"/>
+                <run ground="40"/>
+            </speed>
+            <attack physical="1949.95411856464" magical="1331.56588332443" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5"/>
+            <defence physical="405.66735" magical="296.84976"/>
+            <abnormalResist physical="0" magical="0"/>
+        </stats>
+        <status attackable="false"/>
+        <skillList>
+            <skill id="4416" level="9"/> <!-- Demons -->
+            <skill id="4390" level="1"/> <!-- NPC Abnormal Immunity -->
+            <skill id="4415" level="3"/> <!-- One-handed Sword -->
+            <skill id="4045" level="1"/> <!-- Resist Full Magic Attack -->
+        </skillList>
+        <ai clanHelpRange="300" aggroRange="300"/>
+        <collision>
+            <radius normal="9"/>
+            <height normal="34"/>
+        </collision>
+    </npc>
+    <npc id="36656" level="80" type="Merchant" name="Chamberlain of Darkness">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <parameters>
+            <param name="fnAgitBuff" value="castlebuff"/>
+            <param name="DDoorName1_1" value="oren_castle_outter_001"/>
+            <param name="DDoorName1_2" value="oren_castle_outter_002"/>
+            <param name="DDoorName2_1" value="oren_castle_inner_001"/>
+            <param name="DDoorName2_2" value="oren_castle_inner_002"/>
+            <param name="SDoorName1" value="oren_castle_station"/>
+            <param name="WallName1" value="oren_castle_wall_001"/>
+            <param name="WallName2" value="oren_castle_wall_002"/>
+            <param name="dmgzonename1" value="oren_damage1_ctrltower"/>
+            <param name="dmgzonename2" value="oren_damage2_ctrltower"/>
+            <param name="ppSetGate" value="PP_OPEN_CASTLE_DOOR"/>
+            <param name="ppDecoFunction" value="PP_USE_CASTLE_FUNC"/>
+            <param name="ppManage" value="PP_CONTROL_CASTLE_FUNC"/>
+            <param name="fortress_id1" value="105"/>
+            <param name="fortress_id2" value="113"/>
+            <param name="fortress_id3" value="115"/>
+            <param name="fortress_id4" value="116"/>
+            <param name="fortress_id5" value="117"/>
+            <param name="dominion_id" value="84"/>
+        </parameters>
+        <race>DEMONIC</race>
+        <sex>FEMALE</sex>
+        <mpReward value="20" type="PER" ticks="10" affects="PARTY"/>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="8446" hpRegen="8.5" mp="2355" mpRegen="3"/>
+            <speed>
+                <walk ground="50"/>
+                <run ground="40"/>
+            </speed>
+            <attack physical="1949.95411856464" magical="1331.56588332443" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5"/>
+            <defence physical="405.66735" magical="296.84976"/>
+            <abnormalResist physical="0" magical="0"/>
+        </stats>
+        <status attackable="false"/>
+        <skillList>
+            <skill id="4416" level="9"/> <!-- Demons -->
+            <skill id="4390" level="1"/> <!-- NPC Abnormal Immunity -->
+            <skill id="4415" level="3"/> <!-- One-handed Sword -->
+            <skill id="4045" level="1"/> <!-- Resist Full Magic Attack -->
+        </skillList>
+        <ai clanHelpRange="300" aggroRange="300"/>
+        <collision>
+            <radius normal="9"/>
+            <height normal="34"/>
+        </collision>
+    </npc>
+    <npc id="36657" level="80" type="Merchant" name="Chamberlain of Darkness">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <parameters>
+            <param name="fnAgitBuff" value="castlebuff"/>
+            <param name="DDoorName1_1" value="aden_castle_outter_001"/>
+            <param name="DDoorName1_2" value="aden_castle_outter_002"/>
+            <param name="DDoorName2_1" value="aden_castle_left_001"/>
+            <param name="DDoorName2_2" value="aden_castle_left_002"/>
+            <param name="DDoorName3_1" value="aden_castle_right_001"/>
+            <param name="DDoorName3_2" value="aden_castle_right_002"/>
+            <param name="DDoorName4_1" value="aden_castle_inner_001"/>
+            <param name="DDoorName4_2" value="aden_castle_inner_002"/>
+            <param name="DDoorName5_1" value="aden_castle_left_003"/>
+            <param name="DDoorName5_2" value="aden_castle_left_004"/>
+            <param name="DDoorName6_1" value="aden_castle_right_003"/>
+            <param name="DDoorName6_2" value="aden_castle_right_004"/>
+            <param name="SDoorName1" value="aden_castle_terrace"/>
+            <param name="WallName1" value="aden_castle_wall_right"/>
+            <param name="WallName2" value="aden_castle_wall_left"/>
+            <param name="WallName3" value="aden_castle_wall_in"/>
+            <param name="dmgzonename1" value="aden_damage1_ctrltower"/>
+            <param name="dmgzonename2" value="aden_damage2_ctrltower"/>
+            <param name="ppSetGate" value="PP_OPEN_CASTLE_DOOR"/>
+            <param name="ppDecoFunction" value="PP_USE_CASTLE_FUNC"/>
+            <param name="ppManage" value="PP_CONTROL_CASTLE_FUNC"/>
+            <param name="fortress_id1" value="106"/>
+            <param name="fortress_id2" value="107"/>
+            <param name="fortress_id3" value="117"/>
+            <param name="fortress_id4" value="118"/>
+            <param name="dominion_id" value="85"/>
+        </parameters>
+        <race>DEMONIC</race>
+        <sex>FEMALE</sex>
+        <mpReward value="20" type="PER" ticks="10" affects="PARTY"/>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="8446" hpRegen="8.5" mp="2355" mpRegen="3"/>
+            <speed>
+                <walk ground="50"/>
+                <run ground="40"/>
+            </speed>
+            <attack physical="1949.95411856464" magical="1331.56588332443" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5"/>
+            <defence physical="405.66735" magical="296.84976"/>
+            <abnormalResist physical="0" magical="0"/>
+        </stats>
+        <status attackable="false"/>
+        <skillList>
+            <skill id="4416" level="9"/> <!-- Demons -->
+            <skill id="4390" level="1"/> <!-- NPC Abnormal Immunity -->
+            <skill id="4415" level="3"/> <!-- One-handed Sword -->
+            <skill id="4045" level="1"/> <!-- Resist Full Magic Attack -->
+        </skillList>
+        <ai clanHelpRange="300" aggroRange="300"/>
+        <collision>
+            <radius normal="9"/>
+            <height normal="34"/>
+        </collision>
+    </npc>
+    <npc id="36658" level="80" type="Merchant" name="Chamberlain of Darkness">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <parameters>
+            <param name="fnAgitBuff" value="castlebuff"/>
+            <param name="DDoorName1_1" value="innadrile_castle_outter_001"/>
+            <param name="DDoorName1_2" value="innadrile_castle_outter_002"/>
+            <param name="DDoorName2_1" value="innadrile_castle_inner_001"/>
+            <param name="DDoorName2_2" value="innadrile_castle_inner_002"/>
+            <param name="SDoorName1" value="innadrile_castle_station"/>
+            <param name="WallName1" value="innadrile_castle_wall_001"/>
+            <param name="WallName2" value="innadrile_castle_wall_002"/>
+            <param name="dmgzonename1" value="innadrile_damage1_ctrltower"/>
+            <param name="dmgzonename2" value="innadrile_damage2_ctrltower"/>
+            <param name="ppSetGate" value="PP_OPEN_CASTLE_DOOR"/>
+            <param name="ppDecoFunction" value="PP_USE_CASTLE_FUNC"/>
+            <param name="ppManage" value="PP_CONTROL_CASTLE_FUNC"/>
+            <param name="fortress_id1" value="108"/>
+            <param name="fortress_id2" value="119"/>
+            <param name="dominion_id" value="86"/>
+        </parameters>
+        <race>DEMONIC</race>
+        <sex>FEMALE</sex>
+        <mpReward value="20" type="PER" ticks="10" affects="PARTY"/>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="8446" hpRegen="8.5" mp="2355" mpRegen="3"/>
+            <speed>
+                <walk ground="50"/>
+                <run ground="40"/>
+            </speed>
+            <attack physical="1949.95411856464" magical="1331.56588332443" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5"/>
+            <defence physical="405.66735" magical="296.84976"/>
+            <abnormalResist physical="0" magical="0"/>
+        </stats>
+        <status attackable="false"/>
+        <skillList>
+            <skill id="4416" level="9"/> <!-- Demons -->
+            <skill id="4390" level="1"/> <!-- NPC Abnormal Immunity -->
+            <skill id="4415" level="3"/> <!-- One-handed Sword -->
+            <skill id="4045" level="1"/> <!-- Resist Full Magic Attack -->
+        </skillList>
+        <ai clanHelpRange="300" aggroRange="300"/>
+        <collision>
+            <radius normal="9"/>
+            <height normal="34"/>
+        </collision>
+    </npc>
+    <npc id="36659" level="80" type="Merchant" name="Chamberlain of Darkness">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <parameters>
+            <param name="fnAgitBuff" value="castlebuff"/>
+            <param name="DDoorName1_1" value="godad_castle_outter_001"/>
+            <param name="DDoorName1_2" value="godad_castle_outter_002"/>
+            <param name="DDoorName2_1" value="godad_castle_side_door_001"/>
+            <param name="DDoorName2_2" value="godad_castle_side_door_002"/>
+            <param name="DDoorName3_1" value="godad_castle_side_door_003"/>
+            <param name="DDoorName3_2" value="godad_castle_side_door_004"/>
+            <param name="DDoorName4_1" value="godad_castle_station_001"/>
+            <param name="DDoorName4_2" value="godad_castle_station_002"/>
+            <param name="WallName1" value="godad_castle_wall_001"/>
+            <param name="WallName2" value="godad_castle_wall_002"/>
+            <param name="dmgzonename1" value="godad_damage1_ctrltower"/>
+            <param name="dmgzonename2" value="godad_damage2_ctrltower"/>
+            <param name="ppSetGate" value="PP_OPEN_CASTLE_DOOR"/>
+            <param name="ppDecoFunction" value="PP_USE_CASTLE_FUNC"/>
+            <param name="ppManage" value="PP_CONTROL_CASTLE_FUNC"/>
+            <param name="fortress_id1" value="109"/>
+            <param name="fortress_id2" value="117"/>
+            <param name="fortress_id3" value="120"/>
+            <param name="dominion_id" value="87"/>
+        </parameters>
+        <race>DEMONIC</race>
+        <sex>FEMALE</sex>
+        <mpReward value="20" type="PER" ticks="10" affects="PARTY"/>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="8446" hpRegen="8.5" mp="2355" mpRegen="3"/>
+            <speed>
+                <walk ground="50"/>
+                <run ground="40"/>
+            </speed>
+            <attack physical="1949.95411856464" magical="1331.56588332443" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5"/>
+            <defence physical="405.66735" magical="296.84976"/>
+            <abnormalResist physical="0" magical="0"/>
+        </stats>
+        <status attackable="false"/>
+        <skillList>
+            <skill id="4416" level="9"/> <!-- Demons -->
+            <skill id="4390" level="1"/> <!-- NPC Abnormal Immunity -->
+            <skill id="4415" level="3"/> <!-- One-handed Sword -->
+            <skill id="4045" level="1"/> <!-- Resist Full Magic Attack -->
+        </skillList>
+        <ai clanHelpRange="300" aggroRange="300"/>
+        <collision>
+            <radius normal="9"/>
+            <height normal="34"/>
+        </collision>
+    </npc>
+    <npc id="36660" level="80" type="Merchant" name="Chamberlain of Darkness">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <parameters>
+            <param name="fnAgitBuff" value="castlebuff"/>
+            <param name="DDoorName1_1" value="rune_castle_outter_001"/>
+            <param name="DDoorName1_2" value="rune_castle_outter_002"/>
+            <param name="DDoorName2_1" value="rune_castle_inner_001"/>
+            <param name="DDoorName2_2" value="rune_castle_inner_002"/>
+            <param name="DDoorName3_1" value="rune_castle_side_door_001"/>
+            <param name="WallName1" value="rune_castle_wall_001"/>
+            <param name="WallName2" value="rune_castle_wall_002"/>
+            <param name="WallName3" value="rune_castle_wall_003"/>
+            <param name="dmgzonename1" value="rune_damage1_ctrltower"/>
+            <param name="dmgzonename2" value="rune_damage2_ctrltower"/>
+            <param name="ppSetGate" value="PP_OPEN_CASTLE_DOOR"/>
+            <param name="ppDecoFunction" value="PP_USE_CASTLE_FUNC"/>
+            <param name="ppManage" value="PP_CONTROL_CASTLE_FUNC"/>
+            <param name="fortress_id1" value="110"/>
+            <param name="fortress_id2" value="120"/>
+            <param name="fortress_id3" value="121"/>
+            <param name="dominion_id" value="88"/>
+        </parameters>
+        <race>DEMONIC</race>
+        <sex>FEMALE</sex>
+        <mpReward value="20" type="PER" ticks="10" affects="PARTY"/>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="8446" hpRegen="8.5" mp="2355" mpRegen="3"/>
+            <speed>
+                <walk ground="50"/>
+                <run ground="40"/>
+            </speed>
+            <attack physical="1949.95411856464" magical="1331.56588332443" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5"/>
+            <defence physical="405.66735" magical="296.84976"/>
+            <abnormalResist physical="0" magical="0"/>
+        </stats>
+        <status attackable="false"/>
+        <skillList>
+            <skill id="4416" level="9"/> <!-- Demons -->
+            <skill id="4390" level="1"/> <!-- NPC Abnormal Immunity -->
+            <skill id="4415" level="3"/> <!-- One-handed Sword -->
+            <skill id="4045" level="1"/> <!-- Resist Full Magic Attack -->
+        </skillList>
+        <ai clanHelpRange="300" aggroRange="300"/>
+        <collision>
+            <radius normal="9"/>
+            <height normal="34"/>
+        </collision>
+    </npc>
+    <npc id="36661" level="80" type="Merchant" name="Chamberlain of Darkness">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <parameters>
+            <param name="fnAgitBuff" value="castlebuff"/>
+            <param name="DDoorName1_1" value="schutt_castle_outter_001"/>
+            <param name="DDoorName1_2" value="schutt_castle_outter_002"/>
+            <param name="DDoorName2_1" value="schutt_castle_side_door_001"/>
+            <param name="DDoorName2_2" value="schutt_castle_side_door_002"/>
+            <param name="DDoorName3_1" value="schutt_castle_side_door_003"/>
+            <param name="DDoorName3_2" value="schutt_castle_side_door_004"/>
+            <param name="DDoorName4_1" value="schutt_castle_station_001"/>
+            <param name="DDoorName4_2" value="schutt_castle_station_002"/>
+            <param name="WallName1" value="schutt_castle_wall_001"/>
+            <param name="WallName2" value="schutt_castle_wall_002"/>
+            <param name="dmgzonename1" value="schutt_damage1_ctrltower"/>
+            <param name="dmgzonename2" value="schutt_damage2_ctrltower"/>
+            <param name="ppSetGate" value="PP_OPEN_CASTLE_DOOR"/>
+            <param name="ppDecoFunction" value="PP_USE_CASTLE_FUNC"/>
+            <param name="ppManage" value="PP_CONTROL_CASTLE_FUNC"/>
+            <param name="fortress_id1" value="111"/>
+            <param name="fortress_id2" value="121"/>
+            <param name="dominion_id" value="89"/>
+        </parameters>
+        <race>DEMONIC</race>
+        <sex>FEMALE</sex>
+        <mpReward value="20" type="PER" ticks="10" affects="PARTY"/>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="8446" hpRegen="8.5" mp="2355" mpRegen="3"/>
+            <speed>
+                <walk ground="50"/>
+                <run ground="40"/>
+            </speed>
+            <attack physical="1949.95411856464" magical="1331.56588332443" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5"/>
+            <defence physical="405.66735" magical="296.84976"/>
+            <abnormalResist physical="0" magical="0"/>
+        </stats>
+        <status attackable="false"/>
+        <skillList>
+            <skill id="4416" level="9"/> <!-- Demons -->
+            <skill id="4390" level="1"/> <!-- NPC Abnormal Immunity -->
+            <skill id="4415" level="3"/> <!-- One-handed Sword -->
+            <skill id="4045" level="1"/> <!-- Resist Full Magic Attack -->
+        </skillList>
+        <ai clanHelpRange="300" aggroRange="300"/>
+        <collision>
+            <radius normal="9"/>
+            <height normal="34"/>
+        </collision>
+    </npc>
+    <npc id="36664" level="75" type="Folk" name="Herald of Light">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>ELF</race>
+        <sex>FEMALE</sex>
+        <mpReward value="20" type="PER" ticks="10" affects="PARTY"/>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="2676" hpRegen="8.5" mp="1507" mpRegen="3"/>
+            <speed>
+                <walk ground="50"/>
+                <run ground="120"/>
+            </speed>
+            <attack physical="794.70901" magical="542.68324" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5"/>
+            <defence physical="319.24623" magical="233.61053"/>
+            <abnormalResist physical="0" magical="0"/>
+        </stats>
+        <status attackable="false"/>
+        <skillList>
+            <skill id="4390" level="1"/> <!-- NPC Abnormal Immunity -->
+            <skill id="4415" level="3"/> <!-- One-handed Sword -->
+            <skill id="4045" level="1"/> <!-- Resist Full Magic Attack -->
+            <skill id="4416" level="15"/> <!-- Elves -->
+        </skillList>
+        <ai clanHelpRange="300" aggroRange="300"/>
+        <collision>
+            <radius normal="8.5"/>
+            <height normal="23.5"/>
+        </collision>
+    </npc>
+    <npc id="36665" level="75" type="Folk" name="Herald of Light">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>ELF</race>
+        <sex>FEMALE</sex>
+        <mpReward value="20" type="PER" ticks="10" affects="PARTY"/>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="2676" hpRegen="8.5" mp="1507" mpRegen="3"/>
+            <speed>
+                <walk ground="50"/>
+                <run ground="120"/>
+            </speed>
+            <attack physical="794.70901" magical="542.68324" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5"/>
+            <defence physical="319.24623" magical="233.61053"/>
+            <abnormalResist physical="0" magical="0"/>
+        </stats>
+        <status attackable="false"/>
+        <skillList>
+            <skill id="4390" level="1"/> <!-- NPC Abnormal Immunity -->
+            <skill id="4415" level="3"/> <!-- One-handed Sword -->
+            <skill id="4045" level="1"/> <!-- Resist Full Magic Attack -->
+            <skill id="4416" level="15"/> <!-- Elves -->
+        </skillList>
+        <ai clanHelpRange="300" aggroRange="300"/>
+        <collision>
+            <radius normal="8.5"/>
+            <height normal="23.5"/>
+        </collision>
+    </npc>
+    <npc id="36666" level="75" type="Folk" name="Herald of Light">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>ELF</race>
+        <sex>FEMALE</sex>
+        <mpReward value="20" type="PER" ticks="10" affects="PARTY"/>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="2676" hpRegen="8.5" mp="1507" mpRegen="3"/>
+            <speed>
+                <walk ground="50"/>
+                <run ground="120"/>
+            </speed>
+            <attack physical="794.70901" magical="542.68324" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5"/>
+            <defence physical="319.24623" magical="233.61053"/>
+            <abnormalResist physical="0" magical="0"/>
+        </stats>
+        <status attackable="false"/>
+        <skillList>
+            <skill id="4390" level="1"/> <!-- NPC Abnormal Immunity -->
+            <skill id="4415" level="3"/> <!-- One-handed Sword -->
+            <skill id="4045" level="1"/> <!-- Resist Full Magic Attack -->
+            <skill id="4416" level="15"/> <!-- Elves -->
+        </skillList>
+        <ai clanHelpRange="300" aggroRange="300"/>
+        <collision>
+            <radius normal="8.5"/>
+            <height normal="23.5"/>
+        </collision>
+    </npc>
+    <npc id="36667" level="75" type="Folk" name="Herald of Light">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>ELF</race>
+        <sex>FEMALE</sex>
+        <mpReward value="20" type="PER" ticks="10" affects="PARTY"/>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="2676" hpRegen="8.5" mp="1507" mpRegen="3"/>
+            <speed>
+                <walk ground="50"/>
+                <run ground="120"/>
+            </speed>
+            <attack physical="794.70901" magical="542.68324" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5"/>
+            <defence physical="319.24623" magical="233.61053"/>
+            <abnormalResist physical="0" magical="0"/>
+        </stats>
+        <status attackable="false"/>
+        <skillList>
+            <skill id="4390" level="1"/> <!-- NPC Abnormal Immunity -->
+            <skill id="4415" level="3"/> <!-- One-handed Sword -->
+            <skill id="4045" level="1"/> <!-- Resist Full Magic Attack -->
+            <skill id="4416" level="15"/> <!-- Elves -->
+        </skillList>
+        <ai clanHelpRange="300" aggroRange="300"/>
+        <collision>
+            <radius normal="8.5"/>
+            <height normal="23.5"/>
+        </collision>
+    </npc>
+    <npc id="36668" level="75" type="Folk" name="Herald of Light">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>ELF</race>
+        <sex>FEMALE</sex>
+        <mpReward value="20" type="PER" ticks="10" affects="PARTY"/>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="2676" hpRegen="8.5" mp="1507" mpRegen="3"/>
+            <speed>
+                <walk ground="50"/>
+                <run ground="120"/>
+            </speed>
+            <attack physical="794.70901" magical="542.68324" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5"/>
+            <defence physical="319.24623" magical="233.61053"/>
+            <abnormalResist physical="0" magical="0"/>
+        </stats>
+        <status attackable="false"/>
+        <skillList>
+            <skill id="4390" level="1"/> <!-- NPC Abnormal Immunity -->
+            <skill id="4415" level="3"/> <!-- One-handed Sword -->
+            <skill id="4045" level="1"/> <!-- Resist Full Magic Attack -->
+            <skill id="4416" level="15"/> <!-- Elves -->
+        </skillList>
+        <ai clanHelpRange="300" aggroRange="300"/>
+        <collision>
+            <radius normal="8.5"/>
+            <height normal="23.5"/>
+        </collision>
+    </npc>
+    <npc id="36669" level="75" type="Folk" name="Herald of Light">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>ELF</race>
+        <sex>FEMALE</sex>
+        <mpReward value="20" type="PER" ticks="10" affects="PARTY"/>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="2676" hpRegen="8.5" mp="1507" mpRegen="3"/>
+            <speed>
+                <walk ground="50"/>
+                <run ground="120"/>
+            </speed>
+            <attack physical="794.70901" magical="542.68324" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5"/>
+            <defence physical="319.24623" magical="233.61053"/>
+            <abnormalResist physical="0" magical="0"/>
+        </stats>
+        <status attackable="false"/>
+        <skillList>
+            <skill id="4390" level="1"/> <!-- NPC Abnormal Immunity -->
+            <skill id="4415" level="3"/> <!-- One-handed Sword -->
+            <skill id="4045" level="1"/> <!-- Resist Full Magic Attack -->
+            <skill id="4416" level="15"/> <!-- Elves -->
+        </skillList>
+        <ai clanHelpRange="300" aggroRange="300"/>
+        <collision>
+            <radius normal="8.5"/>
+            <height normal="23.5"/>
+        </collision>
+    </npc>
+    <npc id="36670" level="75" type="Folk" name="Herald of Light">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>ELF</race>
+        <sex>FEMALE</sex>
+        <mpReward value="20" type="PER" ticks="10" affects="PARTY"/>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="2676" hpRegen="8.5" mp="1507" mpRegen="3"/>
+            <speed>
+                <walk ground="50"/>
+                <run ground="120"/>
+            </speed>
+            <attack physical="794.70901" magical="542.68324" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5"/>
+            <defence physical="319.24623" magical="233.61053"/>
+            <abnormalResist physical="0" magical="0"/>
+        </stats>
+        <status attackable="false"/>
+        <skillList>
+            <skill id="4390" level="1"/> <!-- NPC Abnormal Immunity -->
+            <skill id="4415" level="3"/> <!-- One-handed Sword -->
+            <skill id="4045" level="1"/> <!-- Resist Full Magic Attack -->
+            <skill id="4416" level="15"/> <!-- Elves -->
+        </skillList>
+        <ai clanHelpRange="300" aggroRange="300"/>
+        <collision>
+            <radius normal="8.5"/>
+            <height normal="23.5"/>
+        </collision>
+    </npc>
+    <npc id="36671" level="75" type="Folk" name="Herald of Light">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>ELF</race>
+        <sex>FEMALE</sex>
+        <mpReward value="20" type="PER" ticks="10" affects="PARTY"/>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="2676" hpRegen="8.5" mp="1507" mpRegen="3"/>
+            <speed>
+                <walk ground="50"/>
+                <run ground="120"/>
+            </speed>
+            <attack physical="794.70901" magical="542.68324" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5"/>
+            <defence physical="319.24623" magical="233.61053"/>
+            <abnormalResist physical="0" magical="0"/>
+        </stats>
+        <status attackable="false"/>
+        <skillList>
+            <skill id="4390" level="1"/> <!-- NPC Abnormal Immunity -->
+            <skill id="4415" level="3"/> <!-- One-handed Sword -->
+            <skill id="4045" level="1"/> <!-- Resist Full Magic Attack -->
+            <skill id="4416" level="15"/> <!-- Elves -->
+        </skillList>
+        <ai clanHelpRange="300" aggroRange="300"/>
+        <collision>
+            <radius normal="8.5"/>
+            <height normal="23.5"/>
+        </collision>
+    </npc>
+    <npc id="36672" level="75" type="Folk" name="Herald of Light">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>ELF</race>
+        <sex>FEMALE</sex>
+        <mpReward value="20" type="PER" ticks="10" affects="PARTY"/>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="2676" hpRegen="8.5" mp="1507" mpRegen="3"/>
+            <speed>
+                <walk ground="50"/>
+                <run ground="120"/>
+            </speed>
+            <attack physical="794.70901" magical="542.68324" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5"/>
+            <defence physical="319.24623" magical="233.61053"/>
+            <abnormalResist physical="0" magical="0"/>
+        </stats>
+        <status attackable="false"/>
+        <skillList>
+            <skill id="4390" level="1"/> <!-- NPC Abnormal Immunity -->
+            <skill id="4415" level="3"/> <!-- One-handed Sword -->
+            <skill id="4045" level="1"/> <!-- Resist Full Magic Attack -->
+            <skill id="4416" level="15"/> <!-- Elves -->
+        </skillList>
+        <ai clanHelpRange="300" aggroRange="300"/>
+        <collision>
+            <radius normal="8.5"/>
+            <height normal="23.5"/>
+        </collision>
+    </npc>
+    <npc id="36673" level="75" type="Monster" name="Herald of Darkness">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>DEMONIC</race>
+        <sex>FEMALE</sex>
+        <mpReward value="20" type="PER" ticks="10" affects="PARTY"/>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="2676" hpRegen="8.5" mp="1507" mpRegen="3"/>
+            <speed>
+                <walk ground="50"/>
+                <run ground="120"/>
+            </speed>
+            <attack physical="794.70901" magical="542.68324" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5"/>
+            <defence physical="319.24623" magical="233.61053"/>
+            <abnormalResist physical="0" magical="0"/>
+        </stats>
+        <status attackable="false"/>
+        <skillList>
+            <skill id="4416" level="20"/> <!-- Non-living Beings -->
+            <skill id="4415" level="3"/> <!-- One-handed Sword -->
+            <skill id="4045" level="1"/> <!-- Resist Full Magic Attack -->
+        </skillList>
+        <ai clanHelpRange="300" aggroRange="1000"/>
+        <collision>
+            <radius normal="9"/>
+            <height normal="34"/>
+        </collision>
+    </npc>
+    <npc id="36674" level="75" type="Monster" name="Herald of Darkness">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>DEMONIC</race>
+        <sex>FEMALE</sex>
+        <mpReward value="20" type="PER" ticks="10" affects="PARTY"/>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="2676" hpRegen="8.5" mp="1507" mpRegen="3"/>
+            <speed>
+                <walk ground="50"/>
+                <run ground="120"/>
+            </speed>
+            <attack physical="794.70901" magical="542.68324" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5"/>
+            <defence physical="319.24623" magical="233.61053"/>
+            <abnormalResist physical="0" magical="0"/>
+        </stats>
+        <status attackable="false"/>
+        <skillList>
+            <skill id="4416" level="20"/> <!-- Non-living Beings -->
+            <skill id="4415" level="3"/> <!-- One-handed Sword -->
+            <skill id="4045" level="1"/> <!-- Resist Full Magic Attack -->
+        </skillList>
+        <ai clanHelpRange="300" aggroRange="1000"/>
+        <collision>
+            <radius normal="9"/>
+            <height normal="34"/>
+        </collision>
+    </npc>
+    <npc id="36675" level="75" type="Monster" name="Herald of Darkness">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>DEMONIC</race>
+        <sex>FEMALE</sex>
+        <mpReward value="20" type="PER" ticks="10" affects="PARTY"/>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="2676" hpRegen="8.5" mp="1507" mpRegen="3"/>
+            <speed>
+                <walk ground="50"/>
+                <run ground="120"/>
+            </speed>
+            <attack physical="794.70901" magical="542.68324" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5"/>
+            <defence physical="319.24623" magical="233.61053"/>
+            <abnormalResist physical="0" magical="0"/>
+        </stats>
+        <status attackable="false"/>
+        <skillList>
+            <skill id="4416" level="20"/> <!-- Non-living Beings -->
+            <skill id="4415" level="3"/> <!-- One-handed Sword -->
+            <skill id="4045" level="1"/> <!-- Resist Full Magic Attack -->
+        </skillList>
+        <ai clanHelpRange="300" aggroRange="1000"/>
+        <collision>
+            <radius normal="9"/>
+            <height normal="34"/>
+        </collision>
+    </npc>
+    <npc id="36676" level="75" type="Monster" name="Herald of Darkness">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>DEMONIC</race>
+        <sex>FEMALE</sex>
+        <mpReward value="20" type="PER" ticks="10" affects="PARTY"/>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="2676" hpRegen="8.5" mp="1507" mpRegen="3"/>
+            <speed>
+                <walk ground="50"/>
+                <run ground="120"/>
+            </speed>
+            <attack physical="794.70901" magical="542.68324" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5"/>
+            <defence physical="319.24623" magical="233.61053"/>
+            <abnormalResist physical="0" magical="0"/>
+        </stats>
+        <status attackable="false"/>
+        <skillList>
+            <skill id="4416" level="20"/> <!-- Non-living Beings -->
+            <skill id="4415" level="3"/> <!-- One-handed Sword -->
+            <skill id="4045" level="1"/> <!-- Resist Full Magic Attack -->
+        </skillList>
+        <ai clanHelpRange="300" aggroRange="1000"/>
+        <collision>
+            <radius normal="9"/>
+            <height normal="34"/>
+        </collision>
+    </npc>
+    <npc id="36677" level="75" type="Monster" name="Herald of Darkness">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>DEMONIC</race>
+        <sex>FEMALE</sex>
+        <mpReward value="20" type="PER" ticks="10" affects="PARTY"/>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="2676" hpRegen="8.5" mp="1507" mpRegen="3"/>
+            <speed>
+                <walk ground="50"/>
+                <run ground="120"/>
+            </speed>
+            <attack physical="794.70901" magical="542.68324" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5"/>
+            <defence physical="319.24623" magical="233.61053"/>
+            <abnormalResist physical="0" magical="0"/>
+        </stats>
+        <status attackable="false"/>
+        <skillList>
+            <skill id="4416" level="20"/> <!-- Non-living Beings -->
+            <skill id="4415" level="3"/> <!-- One-handed Sword -->
+            <skill id="4045" level="1"/> <!-- Resist Full Magic Attack -->
+        </skillList>
+        <ai clanHelpRange="300" aggroRange="1000"/>
+        <collision>
+            <radius normal="9"/>
+            <height normal="34"/>
+        </collision>
+    </npc>
+    <npc id="36678" level="75" type="Monster" name="Herald of Darkness">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>DEMONIC</race>
+        <sex>FEMALE</sex>
+        <mpReward value="20" type="PER" ticks="10" affects="PARTY"/>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="2676" hpRegen="8.5" mp="1507" mpRegen="3"/>
+            <speed>
+                <walk ground="50"/>
+                <run ground="120"/>
+            </speed>
+            <attack physical="794.70901" magical="542.68324" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5"/>
+            <defence physical="319.24623" magical="233.61053"/>
+            <abnormalResist physical="0" magical="0"/>
+        </stats>
+        <status attackable="false"/>
+        <skillList>
+            <skill id="4416" level="20"/> <!-- Non-living Beings -->
+            <skill id="4415" level="3"/> <!-- One-handed Sword -->
+            <skill id="4045" level="1"/> <!-- Resist Full Magic Attack -->
+        </skillList>
+        <ai clanHelpRange="300" aggroRange="1000"/>
+        <collision>
+            <radius normal="9"/>
+            <height normal="34"/>
+        </collision>
+    </npc>
+    <npc id="36679" level="75" type="Monster" name="Herald of Darkness">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>DEMONIC</race>
+        <sex>FEMALE</sex>
+        <mpReward value="20" type="PER" ticks="10" affects="PARTY"/>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="2676" hpRegen="8.5" mp="1507" mpRegen="3"/>
+            <speed>
+                <walk ground="50"/>
+                <run ground="120"/>
+            </speed>
+            <attack physical="794.70901" magical="542.68324" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5"/>
+            <defence physical="319.24623" magical="233.61053"/>
+            <abnormalResist physical="0" magical="0"/>
+        </stats>
+        <status attackable="false"/>
+        <skillList>
+            <skill id="4416" level="20"/> <!-- Non-living Beings -->
+            <skill id="4415" level="3"/> <!-- One-handed Sword -->
+            <skill id="4045" level="1"/> <!-- Resist Full Magic Attack -->
+        </skillList>
+        <ai clanHelpRange="300" aggroRange="1000"/>
+        <collision>
+            <radius normal="9"/>
+            <height normal="34"/>
+        </collision>
+    </npc>
+    <npc id="36680" level="75" type="Monster" name="Herald of Darkness">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>DEMONIC</race>
+        <sex>FEMALE</sex>
+        <mpReward value="20" type="PER" ticks="10" affects="PARTY"/>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="2676" hpRegen="8.5" mp="1507" mpRegen="3"/>
+            <speed>
+                <walk ground="50"/>
+                <run ground="120"/>
+            </speed>
+            <attack physical="794.70901" magical="542.68324" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5"/>
+            <defence physical="319.24623" magical="233.61053"/>
+            <abnormalResist physical="0" magical="0"/>
+        </stats>
+        <status attackable="false"/>
+        <skillList>
+            <skill id="4416" level="20"/> <!-- Non-living Beings -->
+            <skill id="4415" level="3"/> <!-- One-handed Sword -->
+            <skill id="4045" level="1"/> <!-- Resist Full Magic Attack -->
+        </skillList>
+        <ai clanHelpRange="300" aggroRange="1000"/>
+        <collision>
+            <radius normal="9"/>
+            <height normal="34"/>
+        </collision>
+    </npc>
+    <npc id="36681" level="75" type="Monster" name="Herald of Darkness">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>DEMONIC</race>
+        <sex>FEMALE</sex>
+        <mpReward value="20" type="PER" ticks="10" affects="PARTY"/>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="2676" hpRegen="8.5" mp="1507" mpRegen="3"/>
+            <speed>
+                <walk ground="50"/>
+                <run ground="120"/>
+            </speed>
+            <attack physical="794.70901" magical="542.68324" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5"/>
+            <defence physical="319.24623" magical="233.61053"/>
+            <abnormalResist physical="0" magical="0"/>
+        </stats>
+        <status attackable="false"/>
+        <skillList>
+            <skill id="4416" level="20"/> <!-- Non-living Beings -->
+            <skill id="4415" level="3"/> <!-- One-handed Sword -->
+            <skill id="4045" level="1"/> <!-- Resist Full Magic Attack -->
+        </skillList>
+        <ai clanHelpRange="300" aggroRange="1000"/>
+        <collision>
+            <radius normal="9"/>
+            <height normal="34"/>
+        </collision>
+    </npc>
 </list>

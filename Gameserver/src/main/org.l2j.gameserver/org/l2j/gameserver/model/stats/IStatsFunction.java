@@ -8,6 +8,7 @@ import org.l2j.gameserver.model.actor.transform.TransformType;
 import org.l2j.gameserver.model.itemcontainer.Inventory;
 import org.l2j.gameserver.model.items.ItemTemplate;
 import org.l2j.gameserver.model.items.instance.Item;
+import org.l2j.gameserver.model.items.type.WeaponType;
 
 import java.util.Optional;
 
@@ -65,7 +66,7 @@ public interface IStatsFunction {
     static double calcEnchantedPAtkBonus(Item item, double blessedBonus, int enchant) {
         switch (item.getItem().getCrystalType()) {
             case S: {
-                if (item.getWeaponItem().getBodyPart() == ItemTemplate.SLOT_LR_HAND) {
+                if (item.getWeaponItem().getBodyPart() == ItemTemplate.SLOT_LR_HAND && (item.getWeaponItem().getItemType() != WeaponType.POLE)) {
                     if (item.getWeaponItem().getItemType().isRanged()) {
                         // P. Atk. increases by 10 for bows.
                         // Starting at +4, P. Atk. bonus double.
@@ -80,7 +81,7 @@ public interface IStatsFunction {
                 return (5 * enchant) + (10 * Math.max(0, enchant - 3));
             }
             case A: {
-                if (item.getWeaponItem().getBodyPart() == ItemTemplate.SLOT_LR_HAND) {
+                if (item.getWeaponItem().getBodyPart() == ItemTemplate.SLOT_LR_HAND && (item.getWeaponItem().getItemType() != WeaponType.POLE)) {
                     if (item.getWeaponItem().getItemType().isRanged()) {
                         // P. Atk. increases by 8 for bows.
                         // Starting at +4, P. Atk. bonus double.
@@ -96,7 +97,7 @@ public interface IStatsFunction {
             }
             case B:
             case C: {
-                if (item.getWeaponItem().getBodyPart() == ItemTemplate.SLOT_LR_HAND) {
+                if (item.getWeaponItem().getBodyPart() == ItemTemplate.SLOT_LR_HAND && (item.getWeaponItem().getItemType() != WeaponType.POLE)) {
                     if (item.getWeaponItem().getItemType().isRanged()) {
                         // P. Atk. increases by 6 for bows.
                         // Starting at +4, P. Atk. bonus double.

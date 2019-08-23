@@ -26,9 +26,9 @@
 		<xs:sequence>
 			<xs:element name="slot" maxOccurs="12">
 				<xs:complexType>
-					<xs:attribute type="xs:byte" name="slotId" use="required">
+					<xs:attribute name="slotId" use="required">
 						<xs:simpleType>
-							<xs:restriction base="xs:int">
+							<xs:restriction base="xs:byte">
 								<xs:minInclusive value="0"/>
 								<xs:maxInclusive value="12"/>
 							</xs:restriction>

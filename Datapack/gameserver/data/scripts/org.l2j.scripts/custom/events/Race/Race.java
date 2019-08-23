@@ -1,24 +1,8 @@
-/*
- * This file is part of the L2J Mobius project.
- * 
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- * 
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
- * General Public License for more details.
- * 
- * You should have received a copy of the GNU General Public License
- * along with this program. If not, see <http://www.gnu.org/licenses/>.
- */
 package custom.events.Race;
 
 import events.ScriptEvent;
-import org.l2j.gameserver.Config;
 import org.l2j.commons.threading.ThreadPoolManager;
+import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.xml.impl.SkillData;
 import org.l2j.gameserver.enums.ChatType;
 import org.l2j.gameserver.model.actor.Npc;
@@ -32,8 +16,9 @@ import org.l2j.gameserver.network.serverpackets.NpcHtmlMessage;
 import org.l2j.gameserver.util.Broadcast;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
-import java.util.concurrent.CopyOnWriteArrayList;
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ScheduledFuture;
 
 import static org.l2j.gameserver.util.MathUtil.isInsideRadius2D;
@@ -48,7 +33,7 @@ public final class Race extends Event implements ScriptEvent
 	// Npc
 	private Npc _npc;
 	// Player list
-	private List<Player> _players;
+	private Collection<Player> _players;
 	// Event Task
 	ScheduledFuture<?> _eventTask = null;
 	// Event state
@@ -130,7 +115,7 @@ public final class Race extends Event implements ScriptEvent
 		}
 		// Initialize list
 		_npclist = new ArrayList<>();
-		_players = new CopyOnWriteArrayList<>();
+		_players = ConcurrentHashMap.newKeySet();
 		// Set Event active
 		_isactive = true;
 		// Spawn Manager
@@ -141,7 +126,7 @@ public final class Race extends Event implements ScriptEvent
 		Broadcast.toAllOnlinePlayers("Visit Event Manager in Dion village and signup, you have " + _time_register + " min before Race Start...");
 		
 		// Schedule Event end
-		_eventTask = ThreadPoolManager.getInstance().schedule(() -> StartRace(), _time_register * 60 * 1000);
+		_eventTask = ThreadPoolManager.schedule(this::StartRace, _time_register * 60 * 1000);
 		
 		return true;
 		

@@ -1,34 +1,832 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org npcs.xsd">
-	<npc id="18342" level="1" type="Monster" name="Gremlin">
-		<parameters>
-			<param name="MoveAroundSocial" value="0" />
-			<param name="MoveAroundSocial1" value="0" />
-			<param name="MoveAroundSocial2" value="0" />
-		</parameters>
-		<race>FAIRY</race>
-		<sex>MALE</sex>
-		<acquire exp="44" sp="0" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="15.27122" hpRegen="2" mp="43.365" mpRegen="0.9" />
-			<attack physical="8.47458" magical="5.78704" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="44.44444" magical="32.52252" />
-			<speed>
-				<walk ground="20" />
-				<run ground="50" />
-			</speed>
-			<hitTime>370</hitTime>
-			<abnormalResist physical="10" magical="10" />
-		</stats>
-		<status undying="false" />
-		<skillList>
-			<skill id="4416" level="13" /> <!-- Fairies -->
-		</skillList>
-		<exCrtEffect>true</exCrtEffect>
-		<ai clanHelpRange="300" aggroRange="450" />
-		<collision>
-			<radius normal="10" />
-			<height normal="15" />
-		</collision>
-	</npc>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org npcs.xsd">
+    <npc id="18328" level="85" type="Folk" name="Hall Alarm">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+            <vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+            <speed>
+                <walk ground="60" />
+                <run ground="120" />
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+            <defence physical="405.85106382979" magical="297.0297029703" />
+        </stats>
+        <status attackable="false" />
+        <collision>
+            <radius normal="5" />
+            <height normal="12" />
+        </collision>
+    </npc>
+    <npc id="18342" level="1" type="Monster" name="Gremlin">
+        <parameters>
+            <param name="MoveAroundSocial" value="0"/>
+            <param name="MoveAroundSocial1" value="0"/>
+            <param name="MoveAroundSocial2" value="0"/>
+        </parameters>
+        <race>FAIRY</race>
+        <sex>MALE</sex>
+        <acquire exp="44" sp="0"/>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="15.27122" hpRegen="2" mp="43.365" mpRegen="0.9"/>
+            <attack physical="8.47458" magical="5.78704" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
+            <defence physical="44.44444" magical="32.52252"/>
+            <speed>
+                <walk ground="20"/>
+                <run ground="50"/>
+            </speed>
+            <hitTime>370</hitTime>
+            <abnormalResist physical="10" magical="10"/>
+        </stats>
+        <status undying="false"/>
+        <skillList>
+            <skill id="4416" level="13"/> <!-- Fairies -->
+        </skillList>
+        <exCrtEffect>true</exCrtEffect>
+        <ai clanHelpRange="300" aggroRange="450"/>
+        <collision>
+            <radius normal="10"/>
+            <height normal="15"/>
+        </collision>
+    </npc>
+    <npc id="18329" level="85" type="Folk" name="Hall Keeper Captain">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+            <vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+            <speed>
+                <walk ground="60" />
+                <run ground="120" />
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+            <defence physical="405.85106382979" magical="297.0297029703" />
+        </stats>
+        <status attackable="false" />
+        <collision>
+            <radius normal="5" />
+            <height normal="12" />
+        </collision>
+    </npc>
+    <npc id="18330" level="85" type="Folk" name="Hall Keeper Wizard">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+            <vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+            <speed>
+                <walk ground="60" />
+                <run ground="120" />
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+            <defence physical="405.85106382979" magical="297.0297029703" />
+        </stats>
+        <status attackable="false" />
+        <collision>
+            <radius normal="5" />
+            <height normal="12" />
+        </collision>
+    </npc>
+    <npc id="18331" level="85" type="Folk" name="Hall Keeper Guard">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+            <vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+            <speed>
+                <walk ground="60" />
+                <run ground="120" />
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+            <defence physical="405.85106382979" magical="297.0297029703" />
+        </stats>
+        <status attackable="false" />
+        <collision>
+            <radius normal="5" />
+            <height normal="12" />
+        </collision>
+    </npc>
+    <npc id="18332" level="85" type="Folk" name="Hall Keeper Patrol">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+            <vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+            <speed>
+                <walk ground="60" />
+                <run ground="120" />
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+            <defence physical="405.85106382979" magical="297.0297029703" />
+        </stats>
+        <status attackable="false" />
+        <collision>
+            <radius normal="5" />
+            <height normal="12" />
+        </collision>
+    </npc>
+    <npc id="18333" level="85" type="Folk" name="Hall Keeper Suicidal Soldier">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+            <vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+            <speed>
+                <walk ground="60" />
+                <run ground="120" />
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+            <defence physical="405.85106382979" magical="297.0297029703" />
+        </stats>
+        <status attackable="false" />
+        <collision>
+            <radius normal="5" />
+            <height normal="12" />
+        </collision>
+    </npc>
+    <npc id="18334" level="85" type="Folk" name="Dark Choir Captain">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+            <vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+            <speed>
+                <walk ground="60" />
+                <run ground="120" />
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+            <defence physical="405.85106382979" magical="297.0297029703" />
+        </stats>
+        <status attackable="false" />
+        <collision>
+            <radius normal="5" />
+            <height normal="12" />
+        </collision>
+    </npc>
+    <npc id="18335" level="85" type="Folk" name="Dark Choir Prima Donna">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+            <vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+            <speed>
+                <walk ground="60" />
+                <run ground="120" />
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+            <defence physical="405.85106382979" magical="297.0297029703" />
+        </stats>
+        <status attackable="false" />
+        <collision>
+            <radius normal="5" />
+            <height normal="12" />
+        </collision>
+    </npc>
+    <npc id="18336" level="85" type="Folk" name="Dark Choir Lancer">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+            <vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+            <speed>
+                <walk ground="60" />
+                <run ground="120" />
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+            <defence physical="405.85106382979" magical="297.0297029703" />
+        </stats>
+        <status attackable="false" />
+        <collision>
+            <radius normal="5" />
+            <height normal="12" />
+        </collision>
+    </npc>
+    <npc id="18337" level="85" type="Folk" name="Dark Choir Archer">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+            <vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+            <speed>
+                <walk ground="60" />
+                <run ground="120" />
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+            <defence physical="405.85106382979" magical="297.0297029703" />
+        </stats>
+        <status attackable="false" />
+        <collision>
+            <radius normal="5" />
+            <height normal="12" />
+        </collision>
+    </npc>
+    <npc id="18338" level="85" type="Folk" name="Dark Choir Shaman">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+            <vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+            <speed>
+                <walk ground="60" />
+                <run ground="120" />
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+            <defence physical="405.85106382979" magical="297.0297029703" />
+        </stats>
+        <status attackable="false" />
+        <collision>
+            <radius normal="5" />
+            <height normal="12" />
+        </collision>
+    </npc>
+    <npc id="18339" level="85" type="Folk" name="Dark Choir Player">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+            <vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+            <speed>
+                <walk ground="60" />
+                <run ground="120" />
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+            <defence physical="405.85106382979" magical="297.0297029703" />
+        </stats>
+        <status attackable="false" />
+        <collision>
+            <radius normal="5" />
+            <height normal="12" />
+        </collision>
+    </npc>
+    <npc id="18340" level="85" type="Folk" name="Hall Keeper Suicidal Soldier">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+            <vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+            <speed>
+                <walk ground="60" />
+                <run ground="120" />
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+            <defence physical="405.85106382979" magical="297.0297029703" />
+        </stats>
+        <status attackable="false" />
+        <collision>
+            <radius normal="5" />
+            <height normal="12" />
+        </collision>
+    </npc>
+    <npc id="18341" level="85" type="Folk" name="Hall Keeper Suicidal Soldier">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+            <vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+            <speed>
+                <walk ground="60" />
+                <run ground="120" />
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+            <defence physical="405.85106382979" magical="297.0297029703" />
+        </stats>
+        <status attackable="false" />
+        <collision>
+            <radius normal="5" />
+            <height normal="12" />
+        </collision>
+    </npc>
+    <npc id="18343" level="85" type="Folk" name="">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+            <vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+            <speed>
+                <walk ground="60" />
+                <run ground="120" />
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+            <defence physical="405.85106382979" magical="297.0297029703" />
+        </stats>
+        <status attackable="false" />
+        <collision>
+            <radius normal="5" />
+            <height normal="12" />
+        </collision>
+    </npc>
+    <npc id="18344" level="85" type="Folk" name="Ol Mahum Commander">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+            <vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+            <speed>
+                <walk ground="60" />
+                <run ground="120" />
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+            <defence physical="405.85106382979" magical="297.0297029703" />
+        </stats>
+        <status attackable="false" />
+        <collision>
+            <radius normal="5" />
+            <height normal="12" />
+        </collision>
+    </npc>
+    <npc id="18345" level="85" type="Folk" name="Turek Orc Prefect">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+            <vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+            <speed>
+                <walk ground="60" />
+                <run ground="120" />
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+            <defence physical="405.85106382979" magical="297.0297029703" />
+        </stats>
+        <status attackable="false" />
+        <collision>
+            <radius normal="5" />
+            <height normal="12" />
+        </collision>
+    </npc>
+    <npc id="18346" level="85" type="Folk" name="Dark Lord">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+            <vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+            <speed>
+                <walk ground="60" />
+                <run ground="120" />
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+            <defence physical="405.85106382979" magical="297.0297029703" />
+        </stats>
+        <status attackable="false" />
+        <collision>
+            <radius normal="5" />
+            <height normal="12" />
+        </collision>
+    </npc>
+    <npc id="18347" level="85" type="Folk" name="Nos">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+            <vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+            <speed>
+                <walk ground="60" />
+                <run ground="120" />
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+            <defence physical="405.85106382979" magical="297.0297029703" />
+        </stats>
+        <status attackable="false" />
+        <collision>
+            <radius normal="5" />
+            <height normal="12" />
+        </collision>
+    </npc>
+    <npc id="18348" level="85" type="Folk" name="Carinkain">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+            <vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+            <speed>
+                <walk ground="60" />
+                <run ground="120" />
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+            <defence physical="405.85106382979" magical="297.0297029703" />
+        </stats>
+        <status attackable="false" />
+        <collision>
+            <radius normal="5" />
+            <height normal="12" />
+        </collision>
+    </npc>
+    <npc id="18349" level="85" type="Folk" name="Sharp Talon Tiger">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+            <vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+            <speed>
+                <walk ground="60" />
+                <run ground="120" />
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+            <defence physical="405.85106382979" magical="297.0297029703" />
+        </stats>
+        <status attackable="false" />
+        <collision>
+            <radius normal="5" />
+            <height normal="12" />
+        </collision>
+    </npc>
+    <npc id="18350" level="85" type="Folk" name="Lesser Giant Warrior">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+            <vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+            <speed>
+                <walk ground="60" />
+                <run ground="120" />
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+            <defence physical="405.85106382979" magical="297.0297029703" />
+        </stats>
+        <status attackable="false" />
+        <collision>
+            <radius normal="5" />
+            <height normal="12" />
+        </collision>
+    </npc>
+    <npc id="18351" level="85" type="Folk" name="Blood Priest">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+            <vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+            <speed>
+                <walk ground="60" />
+                <run ground="120" />
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+            <defence physical="405.85106382979" magical="297.0297029703" />
+        </stats>
+        <status attackable="false" />
+        <collision>
+            <radius normal="5" />
+            <height normal="12" />
+        </collision>
+    </npc>
+    <npc id="18352" level="85" type="Folk" name="">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+            <vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+            <speed>
+                <walk ground="60" />
+                <run ground="120" />
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+            <defence physical="405.85106382979" magical="297.0297029703" />
+        </stats>
+        <status attackable="false" />
+        <collision>
+            <radius normal="5" />
+            <height normal="12" />
+        </collision>
+    </npc>
+    <npc id="18353" level="85" type="Folk" name="">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+            <vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+            <speed>
+                <walk ground="60" />
+                <run ground="120" />
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+            <defence physical="405.85106382979" magical="297.0297029703" />
+        </stats>
+        <status attackable="false" />
+        <collision>
+            <radius normal="5" />
+            <height normal="12" />
+        </collision>
+    </npc>
+    <npc id="18354" level="85" type="Folk" name="">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+            <vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+            <speed>
+                <walk ground="60" />
+                <run ground="120" />
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+            <defence physical="405.85106382979" magical="297.0297029703" />
+        </stats>
+        <status attackable="false" />
+        <collision>
+            <radius normal="5" />
+            <height normal="12" />
+        </collision>
+    </npc>
+    <npc id="18355" level="85" type="Folk" name="">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+            <vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+            <speed>
+                <walk ground="60" />
+                <run ground="120" />
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+            <defence physical="405.85106382979" magical="297.0297029703" />
+        </stats>
+        <status attackable="false" />
+        <collision>
+            <radius normal="5" />
+            <height normal="12" />
+        </collision>
+    </npc>
+    <npc id="18356" level="85" type="Folk" name="">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+            <vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+            <speed>
+                <walk ground="60" />
+                <run ground="120" />
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+            <defence physical="405.85106382979" magical="297.0297029703" />
+        </stats>
+        <status attackable="false" />
+        <collision>
+            <radius normal="5" />
+            <height normal="12" />
+        </collision>
+    </npc>
+    <npc id="18357" level="85" type="Folk" name="Goldberg's Treasure Chest">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+            <vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+            <speed>
+                <walk ground="60" />
+                <run ground="120" />
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+            <defence physical="405.85106382979" magical="297.0297029703" />
+        </stats>
+        <status attackable="false" />
+        <collision>
+            <radius normal="5" />
+            <height normal="12" />
+        </collision>
+    </npc>
+    <npc id="18358" level="85" type="Folk" name="Goldberg's Steward">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+            <vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+            <speed>
+                <walk ground="60" />
+                <run ground="120" />
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+            <defence physical="405.85106382979" magical="297.0297029703" />
+        </stats>
+        <status attackable="false" />
+        <collision>
+            <radius normal="5" />
+            <height normal="12" />
+        </collision>
+    </npc>
+    <npc id="18359" level="85" type="Folk" name="Goldberg" title="Ancient Pirate Captain">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+            <vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+            <speed>
+                <walk ground="60" />
+                <run ground="120" />
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+            <defence physical="405.85106382979" magical="297.0297029703" />
+        </stats>
+        <status attackable="false" />
+        <collision>
+            <radius normal="5" />
+            <height normal="12" />
+        </collision>
+    </npc>
+    <npc id="18360" level="85" type="Folk" name="Sayha's Dor">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+            <vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+            <speed>
+                <walk ground="60" />
+                <run ground="120" />
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+            <defence physical="405.85106382979" magical="297.0297029703" />
+        </stats>
+        <status attackable="false" />
+        <collision>
+            <radius normal="5" />
+            <height normal="12" />
+        </collision>
+    </npc>
+    <npc id="18361" level="85" type="Folk" name="Sayha's Sylph">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+            <vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+            <speed>
+                <walk ground="60" />
+                <run ground="120" />
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+            <defence physical="405.85106382979" magical="297.0297029703" />
+        </stats>
+        <status attackable="false" />
+        <collision>
+            <radius normal="5" />
+            <height normal="12" />
+        </collision>
+    </npc>
+    <npc id="18362" level="85" type="Folk" name="Sayha's Ent">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+            <vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+            <speed>
+                <walk ground="60" />
+                <run ground="120" />
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+            <defence physical="405.85106382979" magical="297.0297029703" />
+        </stats>
+        <status attackable="false" />
+        <collision>
+            <radius normal="5" />
+            <height normal="12" />
+        </collision>
+    </npc>
+    <npc id="18363" level="85" type="Folk" name="Sayha's Rifia">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+            <vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+            <speed>
+                <walk ground="60" />
+                <run ground="120" />
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+            <defence physical="405.85106382979" magical="297.0297029703" />
+        </stats>
+        <status attackable="false" />
+        <collision>
+            <radius normal="5" />
+            <height normal="12" />
+        </collision>
+    </npc>
+    <npc id="18364" level="85" type="Folk" name="Sayha's Guardian">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+            <vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+            <speed>
+                <walk ground="60" />
+                <run ground="120" />
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+            <defence physical="405.85106382979" magical="297.0297029703" />
+        </stats>
+        <status attackable="false" />
+        <collision>
+            <radius normal="5" />
+            <height normal="12" />
+        </collision>
+    </npc>
+    <npc id="18365" level="85" type="Folk" name="Sayha's Procella">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+            <vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+            <speed>
+                <walk ground="60" />
+                <run ground="120" />
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+            <defence physical="405.85106382979" magical="297.0297029703" />
+        </stats>
+        <status attackable="false" />
+        <collision>
+            <radius normal="5" />
+            <height normal="12" />
+        </collision>
+    </npc>
+    <npc id="18366" level="85" type="Folk" name="">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+            <vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+            <speed>
+                <walk ground="60" />
+                <run ground="120" />
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+            <defence physical="405.85106382979" magical="297.0297029703" />
+        </stats>
+        <status attackable="false" />
+        <collision>
+            <radius normal="5" />
+            <height normal="12" />
+        </collision>
+    </npc>
+    <npc id="18367" level="85" type="Folk" name="Wild Orc" title="King of Destruction">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+            <vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+            <speed>
+                <walk ground="60" />
+                <run ground="120" />
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+            <defence physical="405.85106382979" magical="297.0297029703" />
+        </stats>
+        <status attackable="false" />
+        <collision>
+            <radius normal="5" />
+            <height normal="12" />
+        </collision>
+    </npc>
+    <npc id="18368" level="85" type="Folk" name="Orc Hero of Pa'agrio">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+            <vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+            <speed>
+                <walk ground="60" />
+                <run ground="120" />
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+            <defence physical="405.85106382979" magical="297.0297029703" />
+        </stats>
+        <status attackable="false" />
+        <collision>
+            <radius normal="5" />
+            <height normal="12" />
+        </collision>
+    </npc>
+    <npc id="18369" level="85" type="Folk" name="Orc of Pa'agrio">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+            <vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+            <speed>
+                <walk ground="60" />
+                <run ground="120" />
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+            <defence physical="405.85106382979" magical="297.0297029703" />
+        </stats>
+        <status attackable="false" />
+        <collision>
+            <radius normal="5" />
+            <height normal="12" />
+        </collision>
+    </npc>
+    <npc id="18370" level="85" type="Folk" name="">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+            <vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+            <speed>
+                <walk ground="60" />
+                <run ground="120" />
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+            <defence physical="405.85106382979" magical="297.0297029703" />
+        </stats>
+        <status attackable="false" />
+        <collision>
+            <radius normal="5" />
+            <height normal="12" />
+        </collision>
+    </npc>
 </list>

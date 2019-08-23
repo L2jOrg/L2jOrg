@@ -268,7 +268,7 @@ public final class Baium extends AbstractNpcAI
                 if ((player != null) && isInsideRadius3D(player, npc, 16000))
                 {
                     zone.broadcastPacket(new SocialAction(npc.getObjectId(), 1));
-                    npc.broadcastSay(ChatType.NPC_GENERAL, player.getName() + ", How dare you wake me! Now you shall die!"); // TODO: replace with NpcStringId when are done core support
+                    npc.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.HOW_DARE_YOU_WAKE_ME_NOW_YOU_SHALL_DIE);
                     npc.setTarget(player);
                     npc.doCast(BAIUM_PRESENT.getSkill());
                 }

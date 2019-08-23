@@ -1,748 +1,1014 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org npcs.xsd">
-	<npc id="29100" level="80" type="Monster" name="Archangel">
-		<race>DIVINE</race>
-		<sex>MALE</sex>
-		<equipment rhand="93" />
-		<acquire exp="0" sp="0" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="290966.74193" hpRegen="8.5" mp="1608.045" mpRegen="3" />
-			<attack physical="970.5375485" magical="662.7513291" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="341.375" magical="249.80341" />
-			<speed>
-				<walk ground="50" />
-				<run ground="170" />
-			</speed>
-		</stats>
-		<status attackable="true" />
-		<collision>
-			<radius normal="15" />
-			<height normal="80" />
-		</collision>
-		<skillList>
-			<skill id="4416" level="8" /> <!-- Angel -->
-		</skillList>
-	</npc>
-	<npc id="29101" level="80" type="Folk" name="Baium">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="1709400" hpRegen="10.5" mp="18000" mpRegen="3.6" />
-			<speed>
-				<walk ground="50" />
-				<run ground="120" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="65" />
-			<height normal="82" />
-		</collision>
-	</npc>
-	<npc id="29102" level="84" type="RaidBoss" name="Antharas" title="Land Dragon">
-		<race>DRAGON</race>
-		<sex>MALE</sex>
-		<acquire exp="0" sp="0" raidPoints="1000" />
-		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
-			<vitals hp="24630999.75369" hpRegen="319.2293199" mp="3440344.575" mpRegen="3" />
-			<attack physical="3152.927754" magical="1289.681983" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="3500.450389" magical="1707.68215" />
-			<speed>
-				<walk ground="50" />
-				<run ground="279" />
-			</speed>
-		</stats>
-		<status attackable="true" />
-		<collision>
-			<radius normal="300" />
-			<height normal="300" />
-		</collision>
-		<skillList>
-			<skill id="4416" level="10" /> <!-- Dragons -->
-			<skill id="4122" level="1" /> <!-- Antharas -->
-		</skillList>
-	</npc>
-	<npc id="29103" level="84" type="Monster" name="Behemoth Dragon">
-		<race>DRAGON</race>
-		<sex>MALE</sex>
-		<acquire exp="0" sp="0" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="197048" hpRegen="8.5" mp="24863.19" mpRegen="3" />
-			<attack physical="1144.731301" magical="781.7030834" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="357.86723" magical="261.87171" />
-			<speed>
-				<walk ground="55" />
-				<run ground="180" />
-			</speed>
-		</stats>
-		<status attackable="true" />
-		<collision>
-			<radius normal="63" />
-			<height normal="54" />
-		</collision>
-		<skillList>
-			<skill id="4416" level="10" /> <!-- Dragons -->
-		</skillList>
-	</npc>
-	<npc id="29104" level="84" type="Monster" name="Tarask Dragon">
-		<race>DRAGON</race>
-		<sex>MALE</sex>
-		<acquire exp="0" sp="0" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="394096" hpRegen="8.5" mp="24863.19" mpRegen="3" />
-			<attack physical="1144.731301" magical="781.7030834" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="357.86723" magical="261.87171" />
-			<speed>
-				<walk ground="55" />
-				<run ground="180" />
-			</speed>
-		</stats>
-		<status attackable="true" />
-		<collision>
-			<radius normal="63" />
-			<height normal="54" />
-		</collision>
-		<skillList>
-			<skill id="4416" level="10" /> <!-- Dragons -->
-		</skillList>
-	</npc>
-	<npc id="29105" level="82" type="RaidBoss" name="King Ignis">
-		<race>ELEMENTAL</race>
-		<sex>MALE</sex>
-		<acquire exp="806880000" sp="21785760" raidPoints="0" />
-		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
-			<vitals hp="13854937.5" hpRegen="319.2293199" mp="30569.67" mpRegen="3" />
-			<attack physical="4522.433913" magical="3088.236091" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="3335.250614" magical="1627.090034" />
-			<speed>
-				<walk ground="60" />
-				<run ground="190" />
-			</speed>
-		</stats>
-		<status attackable="true" />
-		<collision>
-			<radius normal="40" />
-			<height normal="102" />
-		</collision>
-		<skillList>
-			<skill id="50079" level="1" /> <!-- 82 Lv. Raid Boss -->
-			<skill id="4416" level="7" /> <!-- Spirits -->
-			<skill id="5620" level="2" /> <!-- Melee Attack Vulnerability -->
-		</skillList>
-		<dropLists>
-			<drop>
-				<item id="91119" min="1" max="1" chance="5.048" /> <!-- Ignis' Necklace -->
-				<item id="289" min="1" max="1" chance="0.3" /> <!-- Soul Bow -->
-				<item id="305" min="1" max="1" chance="0.3" /> <!-- Tallum Glaive -->
-				<item id="2500" min="1" max="1" chance="0.3" /> <!-- Dark Legion's Edge -->
-				<item id="2504" min="1" max="1" chance="0.3" /> <!-- Meteor Shower -->
-				<item id="7884" min="1" max="1" chance="0.3" /> <!-- Infernal Master -->
-				<item id="7894" min="1" max="1" chance="0.3" /> <!-- Spiritual Eye -->
-				<item id="7895" min="1" max="1" chance="0.3" /> <!-- Flaming Dragon Skull -->
-				<item id="7899" min="1" max="1" chance="0.3" /> <!-- Destroyer Hammer -->
-				<item id="7902" min="1" max="1" chance="0.3" /> <!-- Doom Crusher -->
-				<item id="288" min="1" max="1" chance="0.3" /> <!-- Carnage Bow -->
-				<item id="270" min="1" max="1" chance="0.3" /> <!-- Dragon Grinder -->
-				<item id="269" min="1" max="1" chance="0.3" /> <!-- Blood Tornado -->
-				<item id="80" min="1" max="1" chance="0.3" /> <!-- Tallum Blade -->
-				<item id="81" min="1" max="1" chance="0.3" /> <!-- Dragon Slayer -->
-				<item id="98" min="1" max="1" chance="0.3" /> <!-- Halberd -->
-				<item id="150" min="1" max="1" chance="0.3" /> <!-- Elemental Sword -->
-				<item id="151" min="1" max="1" chance="0.3" /> <!-- Sword of Miracles -->
-				<item id="164" min="1" max="1" chance="0.3" /> <!-- Elysian -->
-				<item id="236" min="1" max="1" chance="0.3" /> <!-- Soul Separator -->
-				<item id="235" min="1" max="1" chance="0.3" /> <!-- Bloody Orchid -->
-				<item id="213" min="1" max="1" chance="0.3" /> <!-- Branch of the Mother Tree -->
-				<item id="212" min="1" max="1" chance="0.3" /> <!-- Dasparion's Staff -->
-				<item id="8688" min="1" max="1" chance="0.075" /> <!-- Daimon Crystal -->
-				<item id="8687" min="1" max="1" chance="0.075" /> <!-- Cabrio's Hand -->
-				<item id="8686" min="1" max="1" chance="0.075" /> <!-- Themis' Tongue -->
-				<item id="8685" min="1" max="1" chance="0.075" /> <!-- Sobekk's Hurricane -->
-				<item id="8684" min="1" max="1" chance="0.075" /> <!-- Shyeed's Bow -->
-				<item id="8683" min="1" max="1" chance="0.075" /> <!-- Tiphon's Spear -->
-				<item id="8682" min="1" max="1" chance="0.075" /> <!-- Naga Storm -->
-				<item id="8681" min="1" max="1" chance="0.075" /> <!-- Behemoth' Tuning Fork -->
-				<item id="8680" min="1" max="1" chance="0.075" /> <!-- Barakiel's Axe -->
-				<item id="8678" min="1" max="1" chance="0.075" /> <!-- Sirra's Blade -->
-				<item id="8679" min="1" max="1" chance="0.075" /> <!-- Sword of Ipos -->
-				<item id="730" min="1" max="1" chance="100" /> <!-- Scroll: Enchant Armor (A-grade) -->
-				<item id="70000" min="19" max="57" chance="100" /> <!-- Sealed Rune - Stage 1 -->
-				<item id="91546" min="1" max="1" chance="50.77" /> <!-- Accessory Varnish (A-grade) -->
-				<item id="91532" min="1" max="1" chance="49.73" /> <!-- Weapon Varnish (A-grade) -->
-				<item id="91539" min="1" max="1" chance="49.16" /> <!-- Armor Varnish (A-grade) -->
-				<item id="729" min="1" max="1" chance="30.57" /> <!-- Scroll: Enchant Weapon (A-grade) -->
-				<item id="91395" min="1" max="1" chance="10.024" /> <!-- Forgotten Manuscript - Page 3 -->
-				<item id="49756" min="1" max="1" chance="9.978" /> <!-- Cloth Piece -->
-				<item id="8619" min="1" max="1" chance="9.939" /> <!-- Ancient Book: Divine Inspiration (Original Language Version) -->
-				<item id="8620" min="1" max="1" chance="5.044" /> <!-- Ancient Book: Divine Inspiration (Manuscript) -->
-				<item id="91124" min="1" max="1" chance="2.036" /> <!-- Radiant Spirit's Varnish -->
-				<item id="49961" min="1" max="1" chance="1.72" /> <!-- Best Dye of CON (CON 3 STR -1) -->
-				<item id="49960" min="1" max="1" chance="1.714" /> <!-- Best Dye of STR (STR 3 DEX -1) -->
-				<item id="49968" min="1" max="1" chance="1.706" /> <!-- Best Dye of MEN (MEN 3 WIT -1) -->
-				<item id="49967" min="1" max="1" chance="1.698" /> <!-- Best Dye of MEN (MEN 3 INT -1) -->
-				<item id="49964" min="1" max="1" chance="1.692" /> <!-- Best Dye of DEX (DEX 3 CON -1) -->
-				<item id="49963" min="1" max="1" chance="1.673" /> <!-- Best Dye of DEX (DEX 3 STR -1) -->
-				<item id="49969" min="1" max="1" chance="1.668" /> <!-- Best Dye of WIT (WIT 3 INT -1) -->
-				<item id="49959" min="1" max="1" chance="1.665" /> <!-- Best Dye of STR (STR 3 CON -1) -->
-				<item id="49965" min="1" max="1" chance="1.645" /> <!-- Best Dye of INT (INT 3 MEN -1) -->
-				<item id="49970" min="1" max="1" chance="1.62" /> <!-- Best Dye of WIT (WIT 2 MEN -1) -->
-				<item id="49962" min="1" max="1" chance="1.614" /> <!-- Best Dye of CON (CON 3 DEX -1) -->
-				<item id="49966" min="1" max="1" chance="1.596" /> <!-- Best Dye of INT (INT 3 WIT -1) -->
-				<item id="90898" min="1" max="1" chance="0.3" /> <!-- Agathion's Soul -->
-				<item id="90006" min="1" max="1" chance="0.3" /> <!-- Best Dye of WIT (WIT 4 MEN -2) -->
-				<item id="90005" min="1" max="1" chance="0.3" /> <!-- Best Dye of WIT (WIT 4 INT -2) -->
-				<item id="90004" min="1" max="1" chance="0.3" /> <!-- Best Dye of MEN (MEN 4 WIT -2) -->
-				<item id="90003" min="1" max="1" chance="0.3" /> <!-- Best Dye of MEN (MEN 4 INT -2) -->
-				<item id="90002" min="1" max="1" chance="0.3" /> <!-- Best Dye of INT (INT 4 WIT -2) -->
-				<item id="90001" min="1" max="1" chance="0.3" /> <!-- Best Dye of INT (INT 4 MEN -2) -->
-				<item id="90000" min="1" max="1" chance="0.3" /> <!-- Best Dye of DEX (DEX 4 CON -2) -->
-				<item id="49999" min="1" max="1" chance="0.3" /> <!-- Best Dye of DEX (DEX 4 STR -2) -->
-				<item id="49998" min="1" max="1" chance="0.3" /> <!-- Best Dye of CON (CON 4 DEX -2) -->
-				<item id="49997" min="1" max="1" chance="0.3" /> <!-- Best Dye of CON (CON 4 STR -2) -->
-				<item id="49995" min="1" max="1" chance="0.3" /> <!-- Best Dye of STR (STR 4 CON -2) -->
-				<item id="49996" min="1" max="1" chance="0.3" /> <!-- Best Dye of STR (STR 4 DEX -2) -->
-			</drop>
-		</dropLists>
-	</npc>
-	<npc id="29106" level="82" type="RaidBoss" name="Queen Nebula">
-		<race>ELEMENTAL</race>
-		<sex>MALE</sex>
-		<acquire exp="806880000" sp="21785760" raidPoints="0" />
-		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
-			<vitals hp="13854937.5" hpRegen="319.2293199" mp="30569.67" mpRegen="3" />
-			<attack physical="4522.433913" magical="3088.236091" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="3335.250614" magical="1627.090034" />
-			<speed>
-				<walk ground="80" />
-				<run ground="190" />
-			</speed>
-		</stats>
-		<status attackable="true" />
-		<collision>
-			<radius normal="42" />
-			<height normal="88.5" />
-		</collision>
-		<skillList>
-			<skill id="50080" level="1" /> <!-- 82 Lv. Raid Boss -->
-			<skill id="4416" level="7" /> <!-- Spirits -->
-			<skill id="5620" level="2" /> <!-- Melee Attack Vulnerability -->
-		</skillList>
-		<dropLists>
-			<drop>
-				<item id="91117" min="1" max="1" chance="4.937" /> <!-- Nebula's Necklace -->
-				<item id="289" min="1" max="1" chance="0.3" /> <!-- Soul Bow -->
-				<item id="305" min="1" max="1" chance="0.3" /> <!-- Tallum Glaive -->
-				<item id="2500" min="1" max="1" chance="0.3" /> <!-- Dark Legion's Edge -->
-				<item id="2504" min="1" max="1" chance="0.3" /> <!-- Meteor Shower -->
-				<item id="7884" min="1" max="1" chance="0.3" /> <!-- Infernal Master -->
-				<item id="7894" min="1" max="1" chance="0.3" /> <!-- Spiritual Eye -->
-				<item id="7895" min="1" max="1" chance="0.3" /> <!-- Flaming Dragon Skull -->
-				<item id="7899" min="1" max="1" chance="0.3" /> <!-- Destroyer Hammer -->
-				<item id="7902" min="1" max="1" chance="0.3" /> <!-- Doom Crusher -->
-				<item id="288" min="1" max="1" chance="0.3" /> <!-- Carnage Bow -->
-				<item id="270" min="1" max="1" chance="0.3" /> <!-- Dragon Grinder -->
-				<item id="269" min="1" max="1" chance="0.3" /> <!-- Blood Tornado -->
-				<item id="80" min="1" max="1" chance="0.3" /> <!-- Tallum Blade -->
-				<item id="81" min="1" max="1" chance="0.3" /> <!-- Dragon Slayer -->
-				<item id="98" min="1" max="1" chance="0.3" /> <!-- Halberd -->
-				<item id="150" min="1" max="1" chance="0.3" /> <!-- Elemental Sword -->
-				<item id="151" min="1" max="1" chance="0.3" /> <!-- Sword of Miracles -->
-				<item id="164" min="1" max="1" chance="0.3" /> <!-- Elysian -->
-				<item id="236" min="1" max="1" chance="0.3" /> <!-- Soul Separator -->
-				<item id="235" min="1" max="1" chance="0.3" /> <!-- Bloody Orchid -->
-				<item id="213" min="1" max="1" chance="0.3" /> <!-- Branch of the Mother Tree -->
-				<item id="212" min="1" max="1" chance="0.3" /> <!-- Dasparion's Staff -->
-				<item id="8688" min="1" max="1" chance="0.075" /> <!-- Daimon Crystal -->
-				<item id="8687" min="1" max="1" chance="0.075" /> <!-- Cabrio's Hand -->
-				<item id="8686" min="1" max="1" chance="0.075" /> <!-- Themis' Tongue -->
-				<item id="8685" min="1" max="1" chance="0.075" /> <!-- Sobekk's Hurricane -->
-				<item id="8684" min="1" max="1" chance="0.075" /> <!-- Shyeed's Bow -->
-				<item id="8683" min="1" max="1" chance="0.075" /> <!-- Tiphon's Spear -->
-				<item id="8682" min="1" max="1" chance="0.075" /> <!-- Naga Storm -->
-				<item id="8681" min="1" max="1" chance="0.075" /> <!-- Behemoth' Tuning Fork -->
-				<item id="8680" min="1" max="1" chance="0.075" /> <!-- Barakiel's Axe -->
-				<item id="8678" min="1" max="1" chance="0.075" /> <!-- Sirra's Blade -->
-				<item id="8679" min="1" max="1" chance="0.075" /> <!-- Sword of Ipos -->
-				<item id="730" min="1" max="1" chance="100" /> <!-- Scroll: Enchant Armor (A-grade) -->
-				<item id="70000" min="19" max="57" chance="100" /> <!-- Sealed Rune - Stage 1 -->
-				<item id="91532" min="1" max="1" chance="50.93" /> <!-- Weapon Varnish (A-grade) -->
-				<item id="91546" min="1" max="1" chance="50.23" /> <!-- Accessory Varnish (A-grade) -->
-				<item id="91539" min="1" max="1" chance="49.28" /> <!-- Armor Varnish (A-grade) -->
-				<item id="729" min="1" max="1" chance="30.6" /> <!-- Scroll: Enchant Weapon (A-grade) -->
-				<item id="8619" min="1" max="1" chance="10.053" /> <!-- Ancient Book: Divine Inspiration (Original Language Version) -->
-				<item id="49756" min="1" max="1" chance="9.995" /> <!-- Cloth Piece -->
-				<item id="91395" min="1" max="1" chance="9.93" /> <!-- Forgotten Manuscript - Page 3 -->
-				<item id="8620" min="1" max="1" chance="5.061" /> <!-- Ancient Book: Divine Inspiration (Manuscript) -->
-				<item id="91124" min="1" max="1" chance="1.968" /> <!-- Radiant Spirit's Varnish -->
-				<item id="49970" min="1" max="1" chance="1.721" /> <!-- Best Dye of WIT (WIT 2 MEN -1) -->
-				<item id="49967" min="1" max="1" chance="1.715" /> <!-- Best Dye of MEN (MEN 3 INT -1) -->
-				<item id="49961" min="1" max="1" chance="1.709" /> <!-- Best Dye of CON (CON 3 STR -1) -->
-				<item id="49966" min="1" max="1" chance="1.699" /> <!-- Best Dye of INT (INT 3 WIT -1) -->
-				<item id="49964" min="1" max="1" chance="1.689" /> <!-- Best Dye of DEX (DEX 3 CON -1) -->
-				<item id="49963" min="1" max="1" chance="1.655" /> <!-- Best Dye of DEX (DEX 3 STR -1) -->
-				<item id="49968" min="1" max="1" chance="1.653" /> <!-- Best Dye of MEN (MEN 3 WIT -1) -->
-				<item id="49969" min="1" max="1" chance="1.65" /> <!-- Best Dye of WIT (WIT 3 INT -1) -->
-				<item id="49960" min="1" max="1" chance="1.647" /> <!-- Best Dye of STR (STR 3 DEX -1) -->
-				<item id="49959" min="1" max="1" chance="1.638" /> <!-- Best Dye of STR (STR 3 CON -1) -->
-				<item id="49962" min="1" max="1" chance="1.627" /> <!-- Best Dye of CON (CON 3 DEX -1) -->
-				<item id="49965" min="1" max="1" chance="1.621" /> <!-- Best Dye of INT (INT 3 MEN -1) -->
-				<item id="90898" min="1" max="1" chance="0.3" /> <!-- Agathion's Soul -->
-				<item id="90006" min="1" max="1" chance="0.3" /> <!-- Best Dye of WIT (WIT 4 MEN -2) -->
-				<item id="90005" min="1" max="1" chance="0.3" /> <!-- Best Dye of WIT (WIT 4 INT -2) -->
-				<item id="90004" min="1" max="1" chance="0.3" /> <!-- Best Dye of MEN (MEN 4 WIT -2) -->
-				<item id="90003" min="1" max="1" chance="0.3" /> <!-- Best Dye of MEN (MEN 4 INT -2) -->
-				<item id="90002" min="1" max="1" chance="0.3" /> <!-- Best Dye of INT (INT 4 WIT -2) -->
-				<item id="90001" min="1" max="1" chance="0.3" /> <!-- Best Dye of INT (INT 4 MEN -2) -->
-				<item id="90000" min="1" max="1" chance="0.3" /> <!-- Best Dye of DEX (DEX 4 CON -2) -->
-				<item id="49999" min="1" max="1" chance="0.3" /> <!-- Best Dye of DEX (DEX 4 STR -2) -->
-				<item id="49998" min="1" max="1" chance="0.3" /> <!-- Best Dye of CON (CON 4 DEX -2) -->
-				<item id="49997" min="1" max="1" chance="0.3" /> <!-- Best Dye of CON (CON 4 STR -2) -->
-				<item id="49995" min="1" max="1" chance="0.3" /> <!-- Best Dye of STR (STR 4 CON -2) -->
-				<item id="49996" min="1" max="1" chance="0.3" /> <!-- Best Dye of STR (STR 4 DEX -2) -->
-			</drop>
-		</dropLists>
-	</npc>
-	<npc id="29107" level="82" type="RaidBoss" name="King Procella">
-		<race>ELEMENTAL</race>
-		<sex>MALE</sex>
-		<acquire exp="806880000" sp="21785760" raidPoints="0" />
-		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
-			<vitals hp="13854937.5" hpRegen="319.2293199" mp="30569.67" mpRegen="3" />
-			<attack physical="4522.433913" magical="3088.236091" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="3335.250614" magical="1627.090034" />
-			<speed>
-				<walk ground="60" />
-				<run ground="190" />
-			</speed>
-		</stats>
-		<status attackable="true" />
-		<collision>
-			<radius normal="40" />
-			<height normal="133" />
-		</collision>
-		<skillList>
-			<skill id="50081" level="1" /> <!-- 82 Lv. Raid Boss -->
-			<skill id="4416" level="7" /> <!-- Spirits -->
-			<skill id="5620" level="2" /> <!-- Melee Attack Vulnerability -->
-		</skillList>
-		<dropLists>
-			<drop>
-				<item id="91121" min="1" max="1" chance="5.049" /> <!-- Procella's Necklace -->
-				<item id="289" min="1" max="1" chance="0.3" /> <!-- Soul Bow -->
-				<item id="305" min="1" max="1" chance="0.3" /> <!-- Tallum Glaive -->
-				<item id="2500" min="1" max="1" chance="0.3" /> <!-- Dark Legion's Edge -->
-				<item id="2504" min="1" max="1" chance="0.3" /> <!-- Meteor Shower -->
-				<item id="7884" min="1" max="1" chance="0.3" /> <!-- Infernal Master -->
-				<item id="7894" min="1" max="1" chance="0.3" /> <!-- Spiritual Eye -->
-				<item id="7895" min="1" max="1" chance="0.3" /> <!-- Flaming Dragon Skull -->
-				<item id="7899" min="1" max="1" chance="0.3" /> <!-- Destroyer Hammer -->
-				<item id="7902" min="1" max="1" chance="0.3" /> <!-- Doom Crusher -->
-				<item id="288" min="1" max="1" chance="0.3" /> <!-- Carnage Bow -->
-				<item id="270" min="1" max="1" chance="0.3" /> <!-- Dragon Grinder -->
-				<item id="269" min="1" max="1" chance="0.3" /> <!-- Blood Tornado -->
-				<item id="80" min="1" max="1" chance="0.3" /> <!-- Tallum Blade -->
-				<item id="81" min="1" max="1" chance="0.3" /> <!-- Dragon Slayer -->
-				<item id="98" min="1" max="1" chance="0.3" /> <!-- Halberd -->
-				<item id="150" min="1" max="1" chance="0.3" /> <!-- Elemental Sword -->
-				<item id="151" min="1" max="1" chance="0.3" /> <!-- Sword of Miracles -->
-				<item id="164" min="1" max="1" chance="0.3" /> <!-- Elysian -->
-				<item id="236" min="1" max="1" chance="0.3" /> <!-- Soul Separator -->
-				<item id="235" min="1" max="1" chance="0.3" /> <!-- Bloody Orchid -->
-				<item id="213" min="1" max="1" chance="0.3" /> <!-- Branch of the Mother Tree -->
-				<item id="212" min="1" max="1" chance="0.3" /> <!-- Dasparion's Staff -->
-				<item id="8688" min="1" max="1" chance="0.075" /> <!-- Daimon Crystal -->
-				<item id="8687" min="1" max="1" chance="0.075" /> <!-- Cabrio's Hand -->
-				<item id="8686" min="1" max="1" chance="0.075" /> <!-- Themis' Tongue -->
-				<item id="8685" min="1" max="1" chance="0.075" /> <!-- Sobekk's Hurricane -->
-				<item id="8684" min="1" max="1" chance="0.075" /> <!-- Shyeed's Bow -->
-				<item id="8683" min="1" max="1" chance="0.075" /> <!-- Tiphon's Spear -->
-				<item id="8682" min="1" max="1" chance="0.075" /> <!-- Naga Storm -->
-				<item id="8681" min="1" max="1" chance="0.075" /> <!-- Behemoth' Tuning Fork -->
-				<item id="8680" min="1" max="1" chance="0.075" /> <!-- Barakiel's Axe -->
-				<item id="8678" min="1" max="1" chance="0.075" /> <!-- Sirra's Blade -->
-				<item id="8679" min="1" max="1" chance="0.075" /> <!-- Sword of Ipos -->
-				<item id="730" min="1" max="1" chance="100" /> <!-- Scroll: Enchant Armor (A-grade) -->
-				<item id="70000" min="19" max="57" chance="100" /> <!-- Sealed Rune - Stage 1 -->
-				<item id="91532" min="1" max="1" chance="49.78" /> <!-- Weapon Varnish (A-grade) -->
-				<item id="91546" min="1" max="1" chance="49.17" /> <!-- Accessory Varnish (A-grade) -->
-				<item id="91539" min="1" max="1" chance="48.81" /> <!-- Armor Varnish (A-grade) -->
-				<item id="729" min="1" max="1" chance="28.92" /> <!-- Scroll: Enchant Weapon (A-grade) -->
-				<item id="8619" min="1" max="1" chance="10.045" /> <!-- Ancient Book: Divine Inspiration (Original Language Version) -->
-				<item id="49756" min="1" max="1" chance="9.989" /> <!-- Cloth Piece -->
-				<item id="91395" min="1" max="1" chance="9.95" /> <!-- Forgotten Manuscript - Page 3 -->
-				<item id="8620" min="1" max="1" chance="4.958" /> <!-- Ancient Book: Divine Inspiration (Manuscript) -->
-				<item id="91124" min="1" max="1" chance="2.039" /> <!-- Radiant Spirit's Varnish -->
-				<item id="49964" min="1" max="1" chance="1.714" /> <!-- Best Dye of DEX (DEX 3 CON -1) -->
-				<item id="49966" min="1" max="1" chance="1.712" /> <!-- Best Dye of INT (INT 3 WIT -1) -->
-				<item id="49967" min="1" max="1" chance="1.703" /> <!-- Best Dye of MEN (MEN 3 INT -1) -->
-				<item id="49965" min="1" max="1" chance="1.673" /> <!-- Best Dye of INT (INT 3 MEN -1) -->
-				<item id="49968" min="1" max="1" chance="1.672" /> <!-- Best Dye of MEN (MEN 3 WIT -1) -->
-				<item id="49969" min="1" max="1" chance="1.646" /> <!-- Best Dye of WIT (WIT 3 INT -1) -->
-				<item id="49959" min="1" max="1" chance="1.644" /> <!-- Best Dye of STR (STR 3 CON -1) -->
-				<item id="49961" min="1" max="1" chance="1.641" /> <!-- Best Dye of CON (CON 3 STR -1) -->
-				<item id="49963" min="1" max="1" chance="1.639" /> <!-- Best Dye of DEX (DEX 3 STR -1) -->
-				<item id="49970" min="1" max="1" chance="1.632" /> <!-- Best Dye of WIT (WIT 2 MEN -1) -->
-				<item id="49960" min="1" max="1" chance="1.63" /> <!-- Best Dye of STR (STR 3 DEX -1) -->
-				<item id="49962" min="1" max="1" chance="1.62" /> <!-- Best Dye of CON (CON 3 DEX -1) -->
-				<item id="90898" min="1" max="1" chance="0.3" /> <!-- Agathion's Soul -->
-				<item id="90006" min="1" max="1" chance="0.3" /> <!-- Best Dye of WIT (WIT 4 MEN -2) -->
-				<item id="90005" min="1" max="1" chance="0.3" /> <!-- Best Dye of WIT (WIT 4 INT -2) -->
-				<item id="90004" min="1" max="1" chance="0.3" /> <!-- Best Dye of MEN (MEN 4 WIT -2) -->
-				<item id="90003" min="1" max="1" chance="0.3" /> <!-- Best Dye of MEN (MEN 4 INT -2) -->
-				<item id="90002" min="1" max="1" chance="0.3" /> <!-- Best Dye of INT (INT 4 WIT -2) -->
-				<item id="90001" min="1" max="1" chance="0.3" /> <!-- Best Dye of INT (INT 4 MEN -2) -->
-				<item id="90000" min="1" max="1" chance="0.3" /> <!-- Best Dye of DEX (DEX 4 CON -2) -->
-				<item id="49999" min="1" max="1" chance="0.3" /> <!-- Best Dye of DEX (DEX 4 STR -2) -->
-				<item id="49998" min="1" max="1" chance="0.3" /> <!-- Best Dye of CON (CON 4 DEX -2) -->
-				<item id="49997" min="1" max="1" chance="0.3" /> <!-- Best Dye of CON (CON 4 STR -2) -->
-				<item id="49995" min="1" max="1" chance="0.3" /> <!-- Best Dye of STR (STR 4 CON -2) -->
-				<item id="49996" min="1" max="1" chance="0.3" /> <!-- Best Dye of STR (STR 4 DEX -2) -->
-			</drop>
-		</dropLists>
-	</npc>
-	<npc id="29108" level="82" type="RaidBoss" name="King Petram">
-		<race>ELEMENTAL</race>
-		<sex>MALE</sex>
-		<acquire exp="806880000" sp="21785760" raidPoints="0" />
-		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
-			<vitals hp="13854937.5" hpRegen="319.2293199" mp="30569.67" mpRegen="3" />
-			<attack physical="4522.433913" magical="3088.236091" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="3335.250614" magical="1627.090034" />
-			<speed>
-				<walk ground="40" />
-				<run ground="190" />
-			</speed>
-		</stats>
-		<status attackable="true" />
-		<collision>
-			<radius normal="80" />
-			<height normal="125" />
-		</collision>
-		<skillList>
-			<skill id="50082" level="1" /> <!-- 82 Lv. Raid Boss -->
-			<skill id="4416" level="7" /> <!-- Spirits -->
-			<skill id="5620" level="2" /> <!-- Melee Attack Vulnerability -->
-		</skillList>
-		<dropLists>
-			<drop>
-				<item id="91123" min="1" max="1" chance="5.043" /> <!-- Petram's Necklace -->
-				<item id="289" min="1" max="1" chance="0.3" /> <!-- Soul Bow -->
-				<item id="305" min="1" max="1" chance="0.3" /> <!-- Tallum Glaive -->
-				<item id="2500" min="1" max="1" chance="0.3" /> <!-- Dark Legion's Edge -->
-				<item id="2504" min="1" max="1" chance="0.3" /> <!-- Meteor Shower -->
-				<item id="7884" min="1" max="1" chance="0.3" /> <!-- Infernal Master -->
-				<item id="7894" min="1" max="1" chance="0.3" /> <!-- Spiritual Eye -->
-				<item id="7895" min="1" max="1" chance="0.3" /> <!-- Flaming Dragon Skull -->
-				<item id="7899" min="1" max="1" chance="0.3" /> <!-- Destroyer Hammer -->
-				<item id="7902" min="1" max="1" chance="0.3" /> <!-- Doom Crusher -->
-				<item id="288" min="1" max="1" chance="0.3" /> <!-- Carnage Bow -->
-				<item id="270" min="1" max="1" chance="0.3" /> <!-- Dragon Grinder -->
-				<item id="269" min="1" max="1" chance="0.3" /> <!-- Blood Tornado -->
-				<item id="80" min="1" max="1" chance="0.3" /> <!-- Tallum Blade -->
-				<item id="81" min="1" max="1" chance="0.3" /> <!-- Dragon Slayer -->
-				<item id="98" min="1" max="1" chance="0.3" /> <!-- Halberd -->
-				<item id="150" min="1" max="1" chance="0.3" /> <!-- Elemental Sword -->
-				<item id="151" min="1" max="1" chance="0.3" /> <!-- Sword of Miracles -->
-				<item id="164" min="1" max="1" chance="0.3" /> <!-- Elysian -->
-				<item id="236" min="1" max="1" chance="0.3" /> <!-- Soul Separator -->
-				<item id="235" min="1" max="1" chance="0.3" /> <!-- Bloody Orchid -->
-				<item id="213" min="1" max="1" chance="0.3" /> <!-- Branch of the Mother Tree -->
-				<item id="212" min="1" max="1" chance="0.3" /> <!-- Dasparion's Staff -->
-				<item id="8688" min="1" max="1" chance="0.075" /> <!-- Daimon Crystal -->
-				<item id="8687" min="1" max="1" chance="0.075" /> <!-- Cabrio's Hand -->
-				<item id="8686" min="1" max="1" chance="0.075" /> <!-- Themis' Tongue -->
-				<item id="8685" min="1" max="1" chance="0.075" /> <!-- Sobekk's Hurricane -->
-				<item id="8684" min="1" max="1" chance="0.075" /> <!-- Shyeed's Bow -->
-				<item id="8683" min="1" max="1" chance="0.075" /> <!-- Tiphon's Spear -->
-				<item id="8682" min="1" max="1" chance="0.075" /> <!-- Naga Storm -->
-				<item id="8681" min="1" max="1" chance="0.075" /> <!-- Behemoth' Tuning Fork -->
-				<item id="8680" min="1" max="1" chance="0.075" /> <!-- Barakiel's Axe -->
-				<item id="8678" min="1" max="1" chance="0.075" /> <!-- Sirra's Blade -->
-				<item id="8679" min="1" max="1" chance="0.075" /> <!-- Sword of Ipos -->
-				<item id="730" min="1" max="1" chance="100" /> <!-- Scroll: Enchant Armor (A-grade) -->
-				<item id="70000" min="19" max="57" chance="100" /> <!-- Sealed Rune - Stage 1 -->
-				<item id="91546" min="1" max="1" chance="50.95" /> <!-- Accessory Varnish (A-grade) -->
-				<item id="91532" min="1" max="1" chance="50.35" /> <!-- Weapon Varnish (A-grade) -->
-				<item id="91539" min="1" max="1" chance="50.26" /> <!-- Armor Varnish (A-grade) -->
-				<item id="729" min="1" max="1" chance="30.92" /> <!-- Scroll: Enchant Weapon (A-grade) -->
-				<item id="8619" min="1" max="1" chance="10.067" /> <!-- Ancient Book: Divine Inspiration (Original Language Version) -->
-				<item id="49756" min="1" max="1" chance="10.066" /> <!-- Cloth Piece -->
-				<item id="91395" min="1" max="1" chance="9.971" /> <!-- Forgotten Manuscript - Page 3 -->
-				<item id="8620" min="1" max="1" chance="4.94" /> <!-- Ancient Book: Divine Inspiration (Manuscript) -->
-				<item id="91124" min="1" max="1" chance="1.948" /> <!-- Radiant Spirit's Varnish -->
-				<item id="49962" min="1" max="1" chance="1.729" /> <!-- Best Dye of CON (CON 3 DEX -1) -->
-				<item id="49964" min="1" max="1" chance="1.727" /> <!-- Best Dye of DEX (DEX 3 CON -1) -->
-				<item id="49961" min="1" max="1" chance="1.723" /> <!-- Best Dye of CON (CON 3 STR -1) -->
-				<item id="49959" min="1" max="1" chance="1.718" /> <!-- Best Dye of STR (STR 3 CON -1) -->
-				<item id="49966" min="1" max="1" chance="1.711" /> <!-- Best Dye of INT (INT 3 WIT -1) -->
-				<item id="49965" min="1" max="1" chance="1.7" /> <!-- Best Dye of INT (INT 3 MEN -1) -->
-				<item id="49967" min="1" max="1" chance="1.696" /> <!-- Best Dye of MEN (MEN 3 INT -1) -->
-				<item id="49969" min="1" max="1" chance="1.652" /> <!-- Best Dye of WIT (WIT 3 INT -1) -->
-				<item id="49968" min="1" max="1" chance="1.652" /> <!-- Best Dye of MEN (MEN 3 WIT -1) -->
-				<item id="49970" min="1" max="1" chance="1.618" /> <!-- Best Dye of WIT (WIT 2 MEN -1) -->
-				<item id="49963" min="1" max="1" chance="1.601" /> <!-- Best Dye of DEX (DEX 3 STR -1) -->
-				<item id="49960" min="1" max="1" chance="1.6" /> <!-- Best Dye of STR (STR 3 DEX -1) -->
-				<item id="90898" min="1" max="1" chance="0.3" /> <!-- Agathion's Soul -->
-				<item id="90006" min="1" max="1" chance="0.3" /> <!-- Best Dye of WIT (WIT 4 MEN -2) -->
-				<item id="90005" min="1" max="1" chance="0.3" /> <!-- Best Dye of WIT (WIT 4 INT -2) -->
-				<item id="90004" min="1" max="1" chance="0.3" /> <!-- Best Dye of MEN (MEN 4 WIT -2) -->
-				<item id="90003" min="1" max="1" chance="0.3" /> <!-- Best Dye of MEN (MEN 4 INT -2) -->
-				<item id="90002" min="1" max="1" chance="0.3" /> <!-- Best Dye of INT (INT 4 WIT -2) -->
-				<item id="90001" min="1" max="1" chance="0.3" /> <!-- Best Dye of INT (INT 4 MEN -2) -->
-				<item id="90000" min="1" max="1" chance="0.3" /> <!-- Best Dye of DEX (DEX 4 CON -2) -->
-				<item id="49999" min="1" max="1" chance="0.3" /> <!-- Best Dye of DEX (DEX 4 STR -2) -->
-				<item id="49998" min="1" max="1" chance="0.3" /> <!-- Best Dye of CON (CON 4 DEX -2) -->
-				<item id="49997" min="1" max="1" chance="0.3" /> <!-- Best Dye of CON (CON 4 STR -2) -->
-				<item id="49995" min="1" max="1" chance="0.3" /> <!-- Best Dye of STR (STR 4 CON -2) -->
-				<item id="49996" min="1" max="1" chance="0.3" /> <!-- Best Dye of STR (STR 4 DEX -2) -->
-			</drop>
-		</dropLists>
-	</npc>
-	<npc id="29109" level="80" type="Folk" name="Freya" title="Ice Queen">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="12680" hpRegen="10.5" mp="18000" mpRegen="3.6" />
-			<speed>
-				<walk ground="54" />
-				<run ground="190" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="22" />
-			<height normal="55" />
-		</collision>
-	</npc>
-	<npc id="29110" level="80" type="Folk" name="Safe Zone">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="12680640" hpRegen="10.5" mp="18000" mpRegen="3.6" />
-			<speed>
-				<walk ground="50" />
-				<run ground="190" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="0.001" />
-			<height normal="0.001" />
-		</collision>
-	</npc>
-	<npc id="29111" level="80" type="Folk" name="Water Slime">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="50000" hpRegen="10.5" mp="18000" mpRegen="3.6" />
-			<speed>
-				<walk ground="36" />
-				<run ground="36" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="36" />
-			<height normal="39" />
-		</collision>
-	</npc>
-	<npc id="29112" level="80" type="Folk" name="Procella's Guardian">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="18000" mpRegen="3.6" />
-			<speed>
-				<walk ground="60" />
-				<run ground="190" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="40" />
-			<height normal="133" />
-		</collision>
-	</npc>
-	<npc id="29113" level="80" type="Folk" name="Procella's Guardian">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="18000" mpRegen="3.6" />
-			<speed>
-				<walk ground="60" />
-				<run ground="190" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="40" />
-			<height normal="133" />
-		</collision>
-	</npc>
-	<npc id="29114" level="80" type="Folk" name="Procella's Guardian">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="18000" mpRegen="3.6" />
-			<speed>
-				<walk ground="60" />
-				<run ground="190" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="40" />
-			<height normal="133" />
-		</collision>
-	</npc>
-	<npc id="29115" level="80" type="Folk" name="Procella's Storm">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="18000" mpRegen="3.6" />
-			<speed>
-				<walk ground="50" />
-				<run ground="50" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="50" />
-			<height normal="100" />
-		</collision>
-	</npc>
-	<npc id="29116" level="80" type="Folk" name="Petram Piece">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="18000" mpRegen="3.6" />
-			<speed>
-				<walk ground="40" />
-				<run ground="190" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="40" />
-			<height normal="61" />
-		</collision>
-	</npc>
-	<npc id="29117" level="80" type="Folk" name="Petram Fragment">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="18000" mpRegen="3.6" />
-			<speed>
-				<walk ground="40" />
-				<run ground="190" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="40" />
-			<height normal="61" />
-		</collision>
-	</npc>
-	<npc id="29118" level="80" type="Folk" name="Spirit King's Magic">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="18000" mpRegen="3.6" />
-			<speed>
-				<walk ground="45" />
-				<run ground="190" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="18" />
-			<height normal="27.5" />
-		</collision>
-	</npc>
-	<npc id="29119" level="75" type="RaidBoss" name="Zaken">
-		<race>UNDEAD</race>
-		<sex>MALE</sex>
-		<acquire exp="0" sp="0" raidPoints="0" />
-		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
-			<vitals hp="11083949.50738" hpRegen="310.756323" mp="20787.765" mpRegen="3" />
-			<attack physical="2451.22348" magical="868.8760268" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="2788.494256" magical="1360.356908" />
-			<speed>
-				<walk ground="42" />
-				<run ground="190" />
-			</speed>
-		</stats>
-		<status attackable="true" />
-		<collision>
-			<radius normal="19.2" />
-			<height normal="39" />
-		</collision>
-		<skillList>
-			<skill id="4416" level="1" /> <!-- Undead -->
-		</skillList>
-	</npc>
-	<npc id="29190" level="84" type="Monster" name="Tarask Dragon">
-		<!-- Todo: CT2.5 -->
-		<parameters>
-			<skill name="Skill01_ID" id="5095" level="1" />
-			<skill name="Skill02_ID" id="5096" level="1" />
-		</parameters>
-		<race>DRAGON</race>
-		<sex>MALE</sex>
-		<stats str="40" int="41" dex="30" wit="20" con="43" men="10">
-			<vitals hp="738930" hpRegen="8.5" mp="24863.19" mpRegen="3" />
-			<attack physical="3584.56902102981" magical="1386.66000087809" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="1071.29474264312" magical="522.626863116263" />
-			<speed>
-				<walk ground="55" />
-				<run ground="180" />
-			</speed>
-			<abnormalResist physical="10" magical="10" />
-		</stats>
-		<status undying="false" />
-		<skillList>
-			<skill id="5095" level="1" /> <!-- Antharas Subordinate Melee Attack -->
-			<skill id="5096" level="1" /> <!-- Antharas Subordinate Remote Attack -->
-			<skill id="4416" level="10" /> <!-- Dragons -->
-			<skill id="5465" level="1" /> <!-- Earth Attack -->
-		</skillList>
-		<exCrtEffect>true</exCrtEffect>
-		<ai aggroRange="300" clanHelpRange="300" isAggressive="true" />
-		<collision>
-			<radius normal="63" />
-			<height normal="54" />
-		</collision>
-	</npc>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org npcs.xsd">
+    <npc id="29100" level="80" type="Monster" name="Archangel">
+        <race>DIVINE</race>
+        <sex>MALE</sex>
+        <equipment rhand="93"/>
+        <acquire exp="0" sp="0"/>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="290966.74193" hpRegen="8.5" mp="1608.045" mpRegen="3"/>
+            <attack physical="970.5375485" magical="662.7513291" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120"/>
+            <defence physical="341.375" magical="249.80341"/>
+            <speed>
+                <walk ground="50"/>
+                <run ground="170"/>
+            </speed>
+        </stats>
+        <status attackable="true"/>
+        <collision>
+            <radius normal="15"/>
+            <height normal="80"/>
+        </collision>
+        <skillList>
+            <skill id="4416" level="8"/> <!-- Angel -->
+        </skillList>
+    </npc>
+    <npc id="29101" level="80" type="Folk" name="Baium">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+            <vitals hp="1709400" hpRegen="10.5" mp="18000" mpRegen="3.6"/>
+            <speed>
+                <walk ground="50"/>
+                <run ground="120"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <collision>
+            <radius normal="65"/>
+            <height normal="82"/>
+        </collision>
+    </npc>
+    <npc id="29102" level="84" type="RaidBoss" name="Antharas" title="Land Dragon">
+        <race>DRAGON</race>
+        <sex>MALE</sex>
+        <acquire exp="0" sp="0" raidPoints="1000"/>
+        <stats str="60" int="76" dex="73" wit="70" con="57" men="80">
+            <vitals hp="24630999.75369" hpRegen="319.2293199" mp="3440344.575" mpRegen="3"/>
+            <attack physical="3152.927754" magical="1289.681983" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120"/>
+            <defence physical="3500.450389" magical="1707.68215"/>
+            <speed>
+                <walk ground="50"/>
+                <run ground="279"/>
+            </speed>
+        </stats>
+        <status attackable="true"/>
+        <collision>
+            <radius normal="300"/>
+            <height normal="300"/>
+        </collision>
+        <skillList>
+            <skill id="4416" level="10"/> <!-- Dragons -->
+            <skill id="4122" level="1"/> <!-- Antharas -->
+        </skillList>
+    </npc>
+    <npc id="29103" level="84" type="Monster" name="Behemoth Dragon">
+        <race>DRAGON</race>
+        <sex>MALE</sex>
+        <acquire exp="0" sp="0"/>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="197048" hpRegen="8.5" mp="24863.19" mpRegen="3"/>
+            <attack physical="1144.731301" magical="781.7030834" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120"/>
+            <defence physical="357.86723" magical="261.87171"/>
+            <speed>
+                <walk ground="55"/>
+                <run ground="180"/>
+            </speed>
+        </stats>
+        <status attackable="true"/>
+        <collision>
+            <radius normal="63"/>
+            <height normal="54"/>
+        </collision>
+        <skillList>
+            <skill id="4416" level="10"/> <!-- Dragons -->
+        </skillList>
+    </npc>
+    <npc id="29104" level="84" type="Monster" name="Tarask Dragon">
+        <race>DRAGON</race>
+        <sex>MALE</sex>
+        <acquire exp="0" sp="0"/>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="394096" hpRegen="8.5" mp="24863.19" mpRegen="3"/>
+            <attack physical="1144.731301" magical="781.7030834" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120"/>
+            <defence physical="357.86723" magical="261.87171"/>
+            <speed>
+                <walk ground="55"/>
+                <run ground="180"/>
+            </speed>
+        </stats>
+        <status attackable="true"/>
+        <collision>
+            <radius normal="63"/>
+            <height normal="54"/>
+        </collision>
+        <skillList>
+            <skill id="4416" level="10"/> <!-- Dragons -->
+        </skillList>
+    </npc>
+    <npc id="29105" level="82" type="RaidBoss" name="King Ignis">
+        <race>ELEMENTAL</race>
+        <sex>MALE</sex>
+        <acquire exp="806880000" sp="21785760" raidPoints="0"/>
+        <stats str="60" int="76" dex="73" wit="70" con="57" men="80">
+            <vitals hp="13854937.5" hpRegen="319.2293199" mp="30569.67" mpRegen="3"/>
+            <attack physical="4522.433913" magical="3088.236091" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120"/>
+            <defence physical="3335.250614" magical="1627.090034"/>
+            <speed>
+                <walk ground="60"/>
+                <run ground="190"/>
+            </speed>
+        </stats>
+        <status attackable="true"/>
+        <collision>
+            <radius normal="40"/>
+            <height normal="102"/>
+        </collision>
+        <skillList>
+            <skill id="50079" level="1"/> <!-- 82 Lv. Raid Boss -->
+            <skill id="4416" level="7"/> <!-- Spirits -->
+            <skill id="5620" level="2"/> <!-- Melee Attack Vulnerability -->
+        </skillList>
+        <dropLists>
+            <drop>
+                <item id="91119" min="1" max="1" chance="5.048"/> <!-- Ignis' Necklace -->
+                <item id="289" min="1" max="1" chance="0.3"/> <!-- Soul Bow -->
+                <item id="305" min="1" max="1" chance="0.3"/> <!-- Tallum Glaive -->
+                <item id="2500" min="1" max="1" chance="0.3"/> <!-- Dark Legion's Edge -->
+                <item id="2504" min="1" max="1" chance="0.3"/> <!-- Meteor Shower -->
+                <item id="7884" min="1" max="1" chance="0.3"/> <!-- Infernal Master -->
+                <item id="7894" min="1" max="1" chance="0.3"/> <!-- Spiritual Eye -->
+                <item id="7895" min="1" max="1" chance="0.3"/> <!-- Flaming Dragon Skull -->
+                <item id="7899" min="1" max="1" chance="0.3"/> <!-- Destroyer Hammer -->
+                <item id="7902" min="1" max="1" chance="0.3"/> <!-- Doom Crusher -->
+                <item id="288" min="1" max="1" chance="0.3"/> <!-- Carnage Bow -->
+                <item id="270" min="1" max="1" chance="0.3"/> <!-- Dragon Grinder -->
+                <item id="269" min="1" max="1" chance="0.3"/> <!-- Blood Tornado -->
+                <item id="80" min="1" max="1" chance="0.3"/> <!-- Tallum Blade -->
+                <item id="81" min="1" max="1" chance="0.3"/> <!-- Dragon Slayer -->
+                <item id="98" min="1" max="1" chance="0.3"/> <!-- Halberd -->
+                <item id="150" min="1" max="1" chance="0.3"/> <!-- Elemental Sword -->
+                <item id="151" min="1" max="1" chance="0.3"/> <!-- Sword of Miracles -->
+                <item id="164" min="1" max="1" chance="0.3"/> <!-- Elysian -->
+                <item id="236" min="1" max="1" chance="0.3"/> <!-- Soul Separator -->
+                <item id="235" min="1" max="1" chance="0.3"/> <!-- Bloody Orchid -->
+                <item id="213" min="1" max="1" chance="0.3"/> <!-- Branch of the Mother Tree -->
+                <item id="212" min="1" max="1" chance="0.3"/> <!-- Dasparion's Staff -->
+                <item id="8688" min="1" max="1" chance="0.075"/> <!-- Daimon Crystal -->
+                <item id="8687" min="1" max="1" chance="0.075"/> <!-- Cabrio's Hand -->
+                <item id="8686" min="1" max="1" chance="0.075"/> <!-- Themis' Tongue -->
+                <item id="8685" min="1" max="1" chance="0.075"/> <!-- Sobekk's Hurricane -->
+                <item id="8684" min="1" max="1" chance="0.075"/> <!-- Shyeed's Bow -->
+                <item id="8683" min="1" max="1" chance="0.075"/> <!-- Tiphon's Spear -->
+                <item id="8682" min="1" max="1" chance="0.075"/> <!-- Naga Storm -->
+                <item id="8681" min="1" max="1" chance="0.075"/> <!-- Behemoth' Tuning Fork -->
+                <item id="8680" min="1" max="1" chance="0.075"/> <!-- Barakiel's Axe -->
+                <item id="8678" min="1" max="1" chance="0.075"/> <!-- Sirra's Blade -->
+                <item id="8679" min="1" max="1" chance="0.075"/> <!-- Sword of Ipos -->
+                <item id="730" min="1" max="1" chance="100"/> <!-- Scroll: Enchant Armor (A-grade) -->
+                <item id="70000" min="19" max="57" chance="100"/> <!-- Sealed Rune - Stage 1 -->
+                <item id="91546" min="1" max="1" chance="50.77"/> <!-- Accessory Varnish (A-grade) -->
+                <item id="91532" min="1" max="1" chance="49.73"/> <!-- Weapon Varnish (A-grade) -->
+                <item id="91539" min="1" max="1" chance="49.16"/> <!-- Armor Varnish (A-grade) -->
+                <item id="729" min="1" max="1" chance="30.57"/> <!-- Scroll: Enchant Weapon (A-grade) -->
+                <item id="91395" min="1" max="1" chance="10.024"/> <!-- Forgotten Manuscript - Page 3 -->
+                <item id="49756" min="1" max="1" chance="9.978"/> <!-- Cloth Piece -->
+                <item id="8619" min="1" max="1" chance="9.939"/> <!-- Ancient Book: Divine Inspiration (Original Language Version) -->
+                <item id="8620" min="1" max="1" chance="5.044"/> <!-- Ancient Book: Divine Inspiration (Manuscript) -->
+                <item id="91124" min="1" max="1" chance="2.036"/> <!-- Radiant Spirit's Varnish -->
+                <item id="49961" min="1" max="1" chance="1.72"/> <!-- Best Dye of CON (CON 3 STR -1) -->
+                <item id="49960" min="1" max="1" chance="1.714"/> <!-- Best Dye of STR (STR 3 DEX -1) -->
+                <item id="49968" min="1" max="1" chance="1.706"/> <!-- Best Dye of MEN (MEN 3 WIT -1) -->
+                <item id="49967" min="1" max="1" chance="1.698"/> <!-- Best Dye of MEN (MEN 3 INT -1) -->
+                <item id="49964" min="1" max="1" chance="1.692"/> <!-- Best Dye of DEX (DEX 3 CON -1) -->
+                <item id="49963" min="1" max="1" chance="1.673"/> <!-- Best Dye of DEX (DEX 3 STR -1) -->
+                <item id="49969" min="1" max="1" chance="1.668"/> <!-- Best Dye of WIT (WIT 3 INT -1) -->
+                <item id="49959" min="1" max="1" chance="1.665"/> <!-- Best Dye of STR (STR 3 CON -1) -->
+                <item id="49965" min="1" max="1" chance="1.645"/> <!-- Best Dye of INT (INT 3 MEN -1) -->
+                <item id="49970" min="1" max="1" chance="1.62"/> <!-- Best Dye of WIT (WIT 2 MEN -1) -->
+                <item id="49962" min="1" max="1" chance="1.614"/> <!-- Best Dye of CON (CON 3 DEX -1) -->
+                <item id="49966" min="1" max="1" chance="1.596"/> <!-- Best Dye of INT (INT 3 WIT -1) -->
+                <item id="90898" min="1" max="1" chance="0.3"/> <!-- Agathion's Soul -->
+                <item id="90006" min="1" max="1" chance="0.3"/> <!-- Best Dye of WIT (WIT 4 MEN -2) -->
+                <item id="90005" min="1" max="1" chance="0.3"/> <!-- Best Dye of WIT (WIT 4 INT -2) -->
+                <item id="90004" min="1" max="1" chance="0.3"/> <!-- Best Dye of MEN (MEN 4 WIT -2) -->
+                <item id="90003" min="1" max="1" chance="0.3"/> <!-- Best Dye of MEN (MEN 4 INT -2) -->
+                <item id="90002" min="1" max="1" chance="0.3"/> <!-- Best Dye of INT (INT 4 WIT -2) -->
+                <item id="90001" min="1" max="1" chance="0.3"/> <!-- Best Dye of INT (INT 4 MEN -2) -->
+                <item id="90000" min="1" max="1" chance="0.3"/> <!-- Best Dye of DEX (DEX 4 CON -2) -->
+                <item id="49999" min="1" max="1" chance="0.3"/> <!-- Best Dye of DEX (DEX 4 STR -2) -->
+                <item id="49998" min="1" max="1" chance="0.3"/> <!-- Best Dye of CON (CON 4 DEX -2) -->
+                <item id="49997" min="1" max="1" chance="0.3"/> <!-- Best Dye of CON (CON 4 STR -2) -->
+                <item id="49995" min="1" max="1" chance="0.3"/> <!-- Best Dye of STR (STR 4 CON -2) -->
+                <item id="49996" min="1" max="1" chance="0.3"/> <!-- Best Dye of STR (STR 4 DEX -2) -->
+            </drop>
+        </dropLists>
+    </npc>
+    <npc id="29106" level="82" type="RaidBoss" name="Queen Nebula">
+        <race>ELEMENTAL</race>
+        <sex>MALE</sex>
+        <acquire exp="806880000" sp="21785760" raidPoints="0"/>
+        <stats str="60" int="76" dex="73" wit="70" con="57" men="80">
+            <vitals hp="13854937.5" hpRegen="319.2293199" mp="30569.67" mpRegen="3"/>
+            <attack physical="4522.433913" magical="3088.236091" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120"/>
+            <defence physical="3335.250614" magical="1627.090034"/>
+            <speed>
+                <walk ground="80"/>
+                <run ground="190"/>
+            </speed>
+        </stats>
+        <status attackable="true"/>
+        <collision>
+            <radius normal="42"/>
+            <height normal="88.5"/>
+        </collision>
+        <skillList>
+            <skill id="50080" level="1"/> <!-- 82 Lv. Raid Boss -->
+            <skill id="4416" level="7"/> <!-- Spirits -->
+            <skill id="5620" level="2"/> <!-- Melee Attack Vulnerability -->
+        </skillList>
+        <dropLists>
+            <drop>
+                <item id="91117" min="1" max="1" chance="4.937"/> <!-- Nebula's Necklace -->
+                <item id="289" min="1" max="1" chance="0.3"/> <!-- Soul Bow -->
+                <item id="305" min="1" max="1" chance="0.3"/> <!-- Tallum Glaive -->
+                <item id="2500" min="1" max="1" chance="0.3"/> <!-- Dark Legion's Edge -->
+                <item id="2504" min="1" max="1" chance="0.3"/> <!-- Meteor Shower -->
+                <item id="7884" min="1" max="1" chance="0.3"/> <!-- Infernal Master -->
+                <item id="7894" min="1" max="1" chance="0.3"/> <!-- Spiritual Eye -->
+                <item id="7895" min="1" max="1" chance="0.3"/> <!-- Flaming Dragon Skull -->
+                <item id="7899" min="1" max="1" chance="0.3"/> <!-- Destroyer Hammer -->
+                <item id="7902" min="1" max="1" chance="0.3"/> <!-- Doom Crusher -->
+                <item id="288" min="1" max="1" chance="0.3"/> <!-- Carnage Bow -->
+                <item id="270" min="1" max="1" chance="0.3"/> <!-- Dragon Grinder -->
+                <item id="269" min="1" max="1" chance="0.3"/> <!-- Blood Tornado -->
+                <item id="80" min="1" max="1" chance="0.3"/> <!-- Tallum Blade -->
+                <item id="81" min="1" max="1" chance="0.3"/> <!-- Dragon Slayer -->
+                <item id="98" min="1" max="1" chance="0.3"/> <!-- Halberd -->
+                <item id="150" min="1" max="1" chance="0.3"/> <!-- Elemental Sword -->
+                <item id="151" min="1" max="1" chance="0.3"/> <!-- Sword of Miracles -->
+                <item id="164" min="1" max="1" chance="0.3"/> <!-- Elysian -->
+                <item id="236" min="1" max="1" chance="0.3"/> <!-- Soul Separator -->
+                <item id="235" min="1" max="1" chance="0.3"/> <!-- Bloody Orchid -->
+                <item id="213" min="1" max="1" chance="0.3"/> <!-- Branch of the Mother Tree -->
+                <item id="212" min="1" max="1" chance="0.3"/> <!-- Dasparion's Staff -->
+                <item id="8688" min="1" max="1" chance="0.075"/> <!-- Daimon Crystal -->
+                <item id="8687" min="1" max="1" chance="0.075"/> <!-- Cabrio's Hand -->
+                <item id="8686" min="1" max="1" chance="0.075"/> <!-- Themis' Tongue -->
+                <item id="8685" min="1" max="1" chance="0.075"/> <!-- Sobekk's Hurricane -->
+                <item id="8684" min="1" max="1" chance="0.075"/> <!-- Shyeed's Bow -->
+                <item id="8683" min="1" max="1" chance="0.075"/> <!-- Tiphon's Spear -->
+                <item id="8682" min="1" max="1" chance="0.075"/> <!-- Naga Storm -->
+                <item id="8681" min="1" max="1" chance="0.075"/> <!-- Behemoth' Tuning Fork -->
+                <item id="8680" min="1" max="1" chance="0.075"/> <!-- Barakiel's Axe -->
+                <item id="8678" min="1" max="1" chance="0.075"/> <!-- Sirra's Blade -->
+                <item id="8679" min="1" max="1" chance="0.075"/> <!-- Sword of Ipos -->
+                <item id="730" min="1" max="1" chance="100"/> <!-- Scroll: Enchant Armor (A-grade) -->
+                <item id="70000" min="19" max="57" chance="100"/> <!-- Sealed Rune - Stage 1 -->
+                <item id="91532" min="1" max="1" chance="50.93"/> <!-- Weapon Varnish (A-grade) -->
+                <item id="91546" min="1" max="1" chance="50.23"/> <!-- Accessory Varnish (A-grade) -->
+                <item id="91539" min="1" max="1" chance="49.28"/> <!-- Armor Varnish (A-grade) -->
+                <item id="729" min="1" max="1" chance="30.6"/> <!-- Scroll: Enchant Weapon (A-grade) -->
+                <item id="8619" min="1" max="1" chance="10.053"/> <!-- Ancient Book: Divine Inspiration (Original Language Version) -->
+                <item id="49756" min="1" max="1" chance="9.995"/> <!-- Cloth Piece -->
+                <item id="91395" min="1" max="1" chance="9.93"/> <!-- Forgotten Manuscript - Page 3 -->
+                <item id="8620" min="1" max="1" chance="5.061"/> <!-- Ancient Book: Divine Inspiration (Manuscript) -->
+                <item id="91124" min="1" max="1" chance="1.968"/> <!-- Radiant Spirit's Varnish -->
+                <item id="49970" min="1" max="1" chance="1.721"/> <!-- Best Dye of WIT (WIT 2 MEN -1) -->
+                <item id="49967" min="1" max="1" chance="1.715"/> <!-- Best Dye of MEN (MEN 3 INT -1) -->
+                <item id="49961" min="1" max="1" chance="1.709"/> <!-- Best Dye of CON (CON 3 STR -1) -->
+                <item id="49966" min="1" max="1" chance="1.699"/> <!-- Best Dye of INT (INT 3 WIT -1) -->
+                <item id="49964" min="1" max="1" chance="1.689"/> <!-- Best Dye of DEX (DEX 3 CON -1) -->
+                <item id="49963" min="1" max="1" chance="1.655"/> <!-- Best Dye of DEX (DEX 3 STR -1) -->
+                <item id="49968" min="1" max="1" chance="1.653"/> <!-- Best Dye of MEN (MEN 3 WIT -1) -->
+                <item id="49969" min="1" max="1" chance="1.65"/> <!-- Best Dye of WIT (WIT 3 INT -1) -->
+                <item id="49960" min="1" max="1" chance="1.647"/> <!-- Best Dye of STR (STR 3 DEX -1) -->
+                <item id="49959" min="1" max="1" chance="1.638"/> <!-- Best Dye of STR (STR 3 CON -1) -->
+                <item id="49962" min="1" max="1" chance="1.627"/> <!-- Best Dye of CON (CON 3 DEX -1) -->
+                <item id="49965" min="1" max="1" chance="1.621"/> <!-- Best Dye of INT (INT 3 MEN -1) -->
+                <item id="90898" min="1" max="1" chance="0.3"/> <!-- Agathion's Soul -->
+                <item id="90006" min="1" max="1" chance="0.3"/> <!-- Best Dye of WIT (WIT 4 MEN -2) -->
+                <item id="90005" min="1" max="1" chance="0.3"/> <!-- Best Dye of WIT (WIT 4 INT -2) -->
+                <item id="90004" min="1" max="1" chance="0.3"/> <!-- Best Dye of MEN (MEN 4 WIT -2) -->
+                <item id="90003" min="1" max="1" chance="0.3"/> <!-- Best Dye of MEN (MEN 4 INT -2) -->
+                <item id="90002" min="1" max="1" chance="0.3"/> <!-- Best Dye of INT (INT 4 WIT -2) -->
+                <item id="90001" min="1" max="1" chance="0.3"/> <!-- Best Dye of INT (INT 4 MEN -2) -->
+                <item id="90000" min="1" max="1" chance="0.3"/> <!-- Best Dye of DEX (DEX 4 CON -2) -->
+                <item id="49999" min="1" max="1" chance="0.3"/> <!-- Best Dye of DEX (DEX 4 STR -2) -->
+                <item id="49998" min="1" max="1" chance="0.3"/> <!-- Best Dye of CON (CON 4 DEX -2) -->
+                <item id="49997" min="1" max="1" chance="0.3"/> <!-- Best Dye of CON (CON 4 STR -2) -->
+                <item id="49995" min="1" max="1" chance="0.3"/> <!-- Best Dye of STR (STR 4 CON -2) -->
+                <item id="49996" min="1" max="1" chance="0.3"/> <!-- Best Dye of STR (STR 4 DEX -2) -->
+            </drop>
+        </dropLists>
+    </npc>
+    <npc id="29107" level="82" type="RaidBoss" name="King Procella">
+        <race>ELEMENTAL</race>
+        <sex>MALE</sex>
+        <acquire exp="806880000" sp="21785760" raidPoints="0"/>
+        <stats str="60" int="76" dex="73" wit="70" con="57" men="80">
+            <vitals hp="13854937.5" hpRegen="319.2293199" mp="30569.67" mpRegen="3"/>
+            <attack physical="4522.433913" magical="3088.236091" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120"/>
+            <defence physical="3335.250614" magical="1627.090034"/>
+            <speed>
+                <walk ground="60"/>
+                <run ground="190"/>
+            </speed>
+        </stats>
+        <status attackable="true"/>
+        <collision>
+            <radius normal="40"/>
+            <height normal="133"/>
+        </collision>
+        <skillList>
+            <skill id="50081" level="1"/> <!-- 82 Lv. Raid Boss -->
+            <skill id="4416" level="7"/> <!-- Spirits -->
+            <skill id="5620" level="2"/> <!-- Melee Attack Vulnerability -->
+        </skillList>
+        <dropLists>
+            <drop>
+                <item id="91121" min="1" max="1" chance="5.049"/> <!-- Procella's Necklace -->
+                <item id="289" min="1" max="1" chance="0.3"/> <!-- Soul Bow -->
+                <item id="305" min="1" max="1" chance="0.3"/> <!-- Tallum Glaive -->
+                <item id="2500" min="1" max="1" chance="0.3"/> <!-- Dark Legion's Edge -->
+                <item id="2504" min="1" max="1" chance="0.3"/> <!-- Meteor Shower -->
+                <item id="7884" min="1" max="1" chance="0.3"/> <!-- Infernal Master -->
+                <item id="7894" min="1" max="1" chance="0.3"/> <!-- Spiritual Eye -->
+                <item id="7895" min="1" max="1" chance="0.3"/> <!-- Flaming Dragon Skull -->
+                <item id="7899" min="1" max="1" chance="0.3"/> <!-- Destroyer Hammer -->
+                <item id="7902" min="1" max="1" chance="0.3"/> <!-- Doom Crusher -->
+                <item id="288" min="1" max="1" chance="0.3"/> <!-- Carnage Bow -->
+                <item id="270" min="1" max="1" chance="0.3"/> <!-- Dragon Grinder -->
+                <item id="269" min="1" max="1" chance="0.3"/> <!-- Blood Tornado -->
+                <item id="80" min="1" max="1" chance="0.3"/> <!-- Tallum Blade -->
+                <item id="81" min="1" max="1" chance="0.3"/> <!-- Dragon Slayer -->
+                <item id="98" min="1" max="1" chance="0.3"/> <!-- Halberd -->
+                <item id="150" min="1" max="1" chance="0.3"/> <!-- Elemental Sword -->
+                <item id="151" min="1" max="1" chance="0.3"/> <!-- Sword of Miracles -->
+                <item id="164" min="1" max="1" chance="0.3"/> <!-- Elysian -->
+                <item id="236" min="1" max="1" chance="0.3"/> <!-- Soul Separator -->
+                <item id="235" min="1" max="1" chance="0.3"/> <!-- Bloody Orchid -->
+                <item id="213" min="1" max="1" chance="0.3"/> <!-- Branch of the Mother Tree -->
+                <item id="212" min="1" max="1" chance="0.3"/> <!-- Dasparion's Staff -->
+                <item id="8688" min="1" max="1" chance="0.075"/> <!-- Daimon Crystal -->
+                <item id="8687" min="1" max="1" chance="0.075"/> <!-- Cabrio's Hand -->
+                <item id="8686" min="1" max="1" chance="0.075"/> <!-- Themis' Tongue -->
+                <item id="8685" min="1" max="1" chance="0.075"/> <!-- Sobekk's Hurricane -->
+                <item id="8684" min="1" max="1" chance="0.075"/> <!-- Shyeed's Bow -->
+                <item id="8683" min="1" max="1" chance="0.075"/> <!-- Tiphon's Spear -->
+                <item id="8682" min="1" max="1" chance="0.075"/> <!-- Naga Storm -->
+                <item id="8681" min="1" max="1" chance="0.075"/> <!-- Behemoth' Tuning Fork -->
+                <item id="8680" min="1" max="1" chance="0.075"/> <!-- Barakiel's Axe -->
+                <item id="8678" min="1" max="1" chance="0.075"/> <!-- Sirra's Blade -->
+                <item id="8679" min="1" max="1" chance="0.075"/> <!-- Sword of Ipos -->
+                <item id="730" min="1" max="1" chance="100"/> <!-- Scroll: Enchant Armor (A-grade) -->
+                <item id="70000" min="19" max="57" chance="100"/> <!-- Sealed Rune - Stage 1 -->
+                <item id="91532" min="1" max="1" chance="49.78"/> <!-- Weapon Varnish (A-grade) -->
+                <item id="91546" min="1" max="1" chance="49.17"/> <!-- Accessory Varnish (A-grade) -->
+                <item id="91539" min="1" max="1" chance="48.81"/> <!-- Armor Varnish (A-grade) -->
+                <item id="729" min="1" max="1" chance="28.92"/> <!-- Scroll: Enchant Weapon (A-grade) -->
+                <item id="8619" min="1" max="1" chance="10.045"/> <!-- Ancient Book: Divine Inspiration (Original Language Version) -->
+                <item id="49756" min="1" max="1" chance="9.989"/> <!-- Cloth Piece -->
+                <item id="91395" min="1" max="1" chance="9.95"/> <!-- Forgotten Manuscript - Page 3 -->
+                <item id="8620" min="1" max="1" chance="4.958"/> <!-- Ancient Book: Divine Inspiration (Manuscript) -->
+                <item id="91124" min="1" max="1" chance="2.039"/> <!-- Radiant Spirit's Varnish -->
+                <item id="49964" min="1" max="1" chance="1.714"/> <!-- Best Dye of DEX (DEX 3 CON -1) -->
+                <item id="49966" min="1" max="1" chance="1.712"/> <!-- Best Dye of INT (INT 3 WIT -1) -->
+                <item id="49967" min="1" max="1" chance="1.703"/> <!-- Best Dye of MEN (MEN 3 INT -1) -->
+                <item id="49965" min="1" max="1" chance="1.673"/> <!-- Best Dye of INT (INT 3 MEN -1) -->
+                <item id="49968" min="1" max="1" chance="1.672"/> <!-- Best Dye of MEN (MEN 3 WIT -1) -->
+                <item id="49969" min="1" max="1" chance="1.646"/> <!-- Best Dye of WIT (WIT 3 INT -1) -->
+                <item id="49959" min="1" max="1" chance="1.644"/> <!-- Best Dye of STR (STR 3 CON -1) -->
+                <item id="49961" min="1" max="1" chance="1.641"/> <!-- Best Dye of CON (CON 3 STR -1) -->
+                <item id="49963" min="1" max="1" chance="1.639"/> <!-- Best Dye of DEX (DEX 3 STR -1) -->
+                <item id="49970" min="1" max="1" chance="1.632"/> <!-- Best Dye of WIT (WIT 2 MEN -1) -->
+                <item id="49960" min="1" max="1" chance="1.63"/> <!-- Best Dye of STR (STR 3 DEX -1) -->
+                <item id="49962" min="1" max="1" chance="1.62"/> <!-- Best Dye of CON (CON 3 DEX -1) -->
+                <item id="90898" min="1" max="1" chance="0.3"/> <!-- Agathion's Soul -->
+                <item id="90006" min="1" max="1" chance="0.3"/> <!-- Best Dye of WIT (WIT 4 MEN -2) -->
+                <item id="90005" min="1" max="1" chance="0.3"/> <!-- Best Dye of WIT (WIT 4 INT -2) -->
+                <item id="90004" min="1" max="1" chance="0.3"/> <!-- Best Dye of MEN (MEN 4 WIT -2) -->
+                <item id="90003" min="1" max="1" chance="0.3"/> <!-- Best Dye of MEN (MEN 4 INT -2) -->
+                <item id="90002" min="1" max="1" chance="0.3"/> <!-- Best Dye of INT (INT 4 WIT -2) -->
+                <item id="90001" min="1" max="1" chance="0.3"/> <!-- Best Dye of INT (INT 4 MEN -2) -->
+                <item id="90000" min="1" max="1" chance="0.3"/> <!-- Best Dye of DEX (DEX 4 CON -2) -->
+                <item id="49999" min="1" max="1" chance="0.3"/> <!-- Best Dye of DEX (DEX 4 STR -2) -->
+                <item id="49998" min="1" max="1" chance="0.3"/> <!-- Best Dye of CON (CON 4 DEX -2) -->
+                <item id="49997" min="1" max="1" chance="0.3"/> <!-- Best Dye of CON (CON 4 STR -2) -->
+                <item id="49995" min="1" max="1" chance="0.3"/> <!-- Best Dye of STR (STR 4 CON -2) -->
+                <item id="49996" min="1" max="1" chance="0.3"/> <!-- Best Dye of STR (STR 4 DEX -2) -->
+            </drop>
+        </dropLists>
+    </npc>
+    <npc id="29108" level="82" type="RaidBoss" name="King Petram">
+        <race>ELEMENTAL</race>
+        <sex>MALE</sex>
+        <acquire exp="806880000" sp="21785760" raidPoints="0"/>
+        <stats str="60" int="76" dex="73" wit="70" con="57" men="80">
+            <vitals hp="13854937.5" hpRegen="319.2293199" mp="30569.67" mpRegen="3"/>
+            <attack physical="4522.433913" magical="3088.236091" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120"/>
+            <defence physical="3335.250614" magical="1627.090034"/>
+            <speed>
+                <walk ground="40"/>
+                <run ground="190"/>
+            </speed>
+        </stats>
+        <status attackable="true"/>
+        <collision>
+            <radius normal="80"/>
+            <height normal="125"/>
+        </collision>
+        <skillList>
+            <skill id="50082" level="1"/> <!-- 82 Lv. Raid Boss -->
+            <skill id="4416" level="7"/> <!-- Spirits -->
+            <skill id="5620" level="2"/> <!-- Melee Attack Vulnerability -->
+        </skillList>
+        <dropLists>
+            <drop>
+                <item id="91123" min="1" max="1" chance="5.043"/> <!-- Petram's Necklace -->
+                <item id="289" min="1" max="1" chance="0.3"/> <!-- Soul Bow -->
+                <item id="305" min="1" max="1" chance="0.3"/> <!-- Tallum Glaive -->
+                <item id="2500" min="1" max="1" chance="0.3"/> <!-- Dark Legion's Edge -->
+                <item id="2504" min="1" max="1" chance="0.3"/> <!-- Meteor Shower -->
+                <item id="7884" min="1" max="1" chance="0.3"/> <!-- Infernal Master -->
+                <item id="7894" min="1" max="1" chance="0.3"/> <!-- Spiritual Eye -->
+                <item id="7895" min="1" max="1" chance="0.3"/> <!-- Flaming Dragon Skull -->
+                <item id="7899" min="1" max="1" chance="0.3"/> <!-- Destroyer Hammer -->
+                <item id="7902" min="1" max="1" chance="0.3"/> <!-- Doom Crusher -->
+                <item id="288" min="1" max="1" chance="0.3"/> <!-- Carnage Bow -->
+                <item id="270" min="1" max="1" chance="0.3"/> <!-- Dragon Grinder -->
+                <item id="269" min="1" max="1" chance="0.3"/> <!-- Blood Tornado -->
+                <item id="80" min="1" max="1" chance="0.3"/> <!-- Tallum Blade -->
+                <item id="81" min="1" max="1" chance="0.3"/> <!-- Dragon Slayer -->
+                <item id="98" min="1" max="1" chance="0.3"/> <!-- Halberd -->
+                <item id="150" min="1" max="1" chance="0.3"/> <!-- Elemental Sword -->
+                <item id="151" min="1" max="1" chance="0.3"/> <!-- Sword of Miracles -->
+                <item id="164" min="1" max="1" chance="0.3"/> <!-- Elysian -->
+                <item id="236" min="1" max="1" chance="0.3"/> <!-- Soul Separator -->
+                <item id="235" min="1" max="1" chance="0.3"/> <!-- Bloody Orchid -->
+                <item id="213" min="1" max="1" chance="0.3"/> <!-- Branch of the Mother Tree -->
+                <item id="212" min="1" max="1" chance="0.3"/> <!-- Dasparion's Staff -->
+                <item id="8688" min="1" max="1" chance="0.075"/> <!-- Daimon Crystal -->
+                <item id="8687" min="1" max="1" chance="0.075"/> <!-- Cabrio's Hand -->
+                <item id="8686" min="1" max="1" chance="0.075"/> <!-- Themis' Tongue -->
+                <item id="8685" min="1" max="1" chance="0.075"/> <!-- Sobekk's Hurricane -->
+                <item id="8684" min="1" max="1" chance="0.075"/> <!-- Shyeed's Bow -->
+                <item id="8683" min="1" max="1" chance="0.075"/> <!-- Tiphon's Spear -->
+                <item id="8682" min="1" max="1" chance="0.075"/> <!-- Naga Storm -->
+                <item id="8681" min="1" max="1" chance="0.075"/> <!-- Behemoth' Tuning Fork -->
+                <item id="8680" min="1" max="1" chance="0.075"/> <!-- Barakiel's Axe -->
+                <item id="8678" min="1" max="1" chance="0.075"/> <!-- Sirra's Blade -->
+                <item id="8679" min="1" max="1" chance="0.075"/> <!-- Sword of Ipos -->
+                <item id="730" min="1" max="1" chance="100"/> <!-- Scroll: Enchant Armor (A-grade) -->
+                <item id="70000" min="19" max="57" chance="100"/> <!-- Sealed Rune - Stage 1 -->
+                <item id="91546" min="1" max="1" chance="50.95"/> <!-- Accessory Varnish (A-grade) -->
+                <item id="91532" min="1" max="1" chance="50.35"/> <!-- Weapon Varnish (A-grade) -->
+                <item id="91539" min="1" max="1" chance="50.26"/> <!-- Armor Varnish (A-grade) -->
+                <item id="729" min="1" max="1" chance="30.92"/> <!-- Scroll: Enchant Weapon (A-grade) -->
+                <item id="8619" min="1" max="1" chance="10.067"/> <!-- Ancient Book: Divine Inspiration (Original Language Version) -->
+                <item id="49756" min="1" max="1" chance="10.066"/> <!-- Cloth Piece -->
+                <item id="91395" min="1" max="1" chance="9.971"/> <!-- Forgotten Manuscript - Page 3 -->
+                <item id="8620" min="1" max="1" chance="4.94"/> <!-- Ancient Book: Divine Inspiration (Manuscript) -->
+                <item id="91124" min="1" max="1" chance="1.948"/> <!-- Radiant Spirit's Varnish -->
+                <item id="49962" min="1" max="1" chance="1.729"/> <!-- Best Dye of CON (CON 3 DEX -1) -->
+                <item id="49964" min="1" max="1" chance="1.727"/> <!-- Best Dye of DEX (DEX 3 CON -1) -->
+                <item id="49961" min="1" max="1" chance="1.723"/> <!-- Best Dye of CON (CON 3 STR -1) -->
+                <item id="49959" min="1" max="1" chance="1.718"/> <!-- Best Dye of STR (STR 3 CON -1) -->
+                <item id="49966" min="1" max="1" chance="1.711"/> <!-- Best Dye of INT (INT 3 WIT -1) -->
+                <item id="49965" min="1" max="1" chance="1.7"/> <!-- Best Dye of INT (INT 3 MEN -1) -->
+                <item id="49967" min="1" max="1" chance="1.696"/> <!-- Best Dye of MEN (MEN 3 INT -1) -->
+                <item id="49969" min="1" max="1" chance="1.652"/> <!-- Best Dye of WIT (WIT 3 INT -1) -->
+                <item id="49968" min="1" max="1" chance="1.652"/> <!-- Best Dye of MEN (MEN 3 WIT -1) -->
+                <item id="49970" min="1" max="1" chance="1.618"/> <!-- Best Dye of WIT (WIT 2 MEN -1) -->
+                <item id="49963" min="1" max="1" chance="1.601"/> <!-- Best Dye of DEX (DEX 3 STR -1) -->
+                <item id="49960" min="1" max="1" chance="1.6"/> <!-- Best Dye of STR (STR 3 DEX -1) -->
+                <item id="90898" min="1" max="1" chance="0.3"/> <!-- Agathion's Soul -->
+                <item id="90006" min="1" max="1" chance="0.3"/> <!-- Best Dye of WIT (WIT 4 MEN -2) -->
+                <item id="90005" min="1" max="1" chance="0.3"/> <!-- Best Dye of WIT (WIT 4 INT -2) -->
+                <item id="90004" min="1" max="1" chance="0.3"/> <!-- Best Dye of MEN (MEN 4 WIT -2) -->
+                <item id="90003" min="1" max="1" chance="0.3"/> <!-- Best Dye of MEN (MEN 4 INT -2) -->
+                <item id="90002" min="1" max="1" chance="0.3"/> <!-- Best Dye of INT (INT 4 WIT -2) -->
+                <item id="90001" min="1" max="1" chance="0.3"/> <!-- Best Dye of INT (INT 4 MEN -2) -->
+                <item id="90000" min="1" max="1" chance="0.3"/> <!-- Best Dye of DEX (DEX 4 CON -2) -->
+                <item id="49999" min="1" max="1" chance="0.3"/> <!-- Best Dye of DEX (DEX 4 STR -2) -->
+                <item id="49998" min="1" max="1" chance="0.3"/> <!-- Best Dye of CON (CON 4 DEX -2) -->
+                <item id="49997" min="1" max="1" chance="0.3"/> <!-- Best Dye of CON (CON 4 STR -2) -->
+                <item id="49995" min="1" max="1" chance="0.3"/> <!-- Best Dye of STR (STR 4 CON -2) -->
+                <item id="49996" min="1" max="1" chance="0.3"/> <!-- Best Dye of STR (STR 4 DEX -2) -->
+            </drop>
+        </dropLists>
+    </npc>
+    <npc id="29109" level="80" type="Folk" name="Freya" title="Ice Queen">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+            <vitals hp="12680" hpRegen="10.5" mp="18000" mpRegen="3.6"/>
+            <speed>
+                <walk ground="54"/>
+                <run ground="190"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <collision>
+            <radius normal="22"/>
+            <height normal="55"/>
+        </collision>
+    </npc>
+    <npc id="29110" level="80" type="Folk" name="Safe Zone">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+            <vitals hp="12680640" hpRegen="10.5" mp="18000" mpRegen="3.6"/>
+            <speed>
+                <walk ground="50"/>
+                <run ground="190"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <collision>
+            <radius normal="0.001"/>
+            <height normal="0.001"/>
+        </collision>
+    </npc>
+    <npc id="29111" level="80" type="Folk" name="Water Slime">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+            <vitals hp="50000" hpRegen="10.5" mp="18000" mpRegen="3.6"/>
+            <speed>
+                <walk ground="36"/>
+                <run ground="36"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <collision>
+            <radius normal="36"/>
+            <height normal="39"/>
+        </collision>
+    </npc>
+    <npc id="29112" level="80" type="Folk" name="Procella's Guardian">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+            <vitals hp="8446" hpRegen="10.5" mp="18000" mpRegen="3.6"/>
+            <speed>
+                <walk ground="60"/>
+                <run ground="190"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <collision>
+            <radius normal="40"/>
+            <height normal="133"/>
+        </collision>
+    </npc>
+    <npc id="29113" level="80" type="Folk" name="Procella's Guardian">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+            <vitals hp="8446" hpRegen="10.5" mp="18000" mpRegen="3.6"/>
+            <speed>
+                <walk ground="60"/>
+                <run ground="190"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <collision>
+            <radius normal="40"/>
+            <height normal="133"/>
+        </collision>
+    </npc>
+    <npc id="29114" level="80" type="Folk" name="Procella's Guardian">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+            <vitals hp="8446" hpRegen="10.5" mp="18000" mpRegen="3.6"/>
+            <speed>
+                <walk ground="60"/>
+                <run ground="190"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <collision>
+            <radius normal="40"/>
+            <height normal="133"/>
+        </collision>
+    </npc>
+    <npc id="29115" level="80" type="Folk" name="Procella's Storm">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+            <vitals hp="8446" hpRegen="10.5" mp="18000" mpRegen="3.6"/>
+            <speed>
+                <walk ground="50"/>
+                <run ground="50"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <collision>
+            <radius normal="50"/>
+            <height normal="100"/>
+        </collision>
+    </npc>
+    <npc id="29116" level="80" type="Folk" name="Petram Piece">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+            <vitals hp="8446" hpRegen="10.5" mp="18000" mpRegen="3.6"/>
+            <speed>
+                <walk ground="40"/>
+                <run ground="190"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <collision>
+            <radius normal="40"/>
+            <height normal="61"/>
+        </collision>
+    </npc>
+    <npc id="29117" level="80" type="Folk" name="Petram Fragment">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+            <vitals hp="8446" hpRegen="10.5" mp="18000" mpRegen="3.6"/>
+            <speed>
+                <walk ground="40"/>
+                <run ground="190"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <collision>
+            <radius normal="40"/>
+            <height normal="61"/>
+        </collision>
+    </npc>
+    <npc id="29118" level="80" type="Folk" name="Spirit King's Magic">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+            <vitals hp="8446" hpRegen="10.5" mp="18000" mpRegen="3.6"/>
+            <speed>
+                <walk ground="45"/>
+                <run ground="190"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <collision>
+            <radius normal="18"/>
+            <height normal="27.5"/>
+        </collision>
+    </npc>
+    <npc id="29119" level="75" type="RaidBoss" name="Zaken">
+        <race>UNDEAD</race>
+        <sex>MALE</sex>
+        <acquire exp="0" sp="0" raidPoints="0"/>
+        <stats str="60" int="76" dex="73" wit="70" con="57" men="80">
+            <vitals hp="11083949.50738" hpRegen="310.756323" mp="20787.765" mpRegen="3"/>
+            <attack physical="2451.22348" magical="868.8760268" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120"/>
+            <defence physical="2788.494256" magical="1360.356908"/>
+            <speed>
+                <walk ground="42"/>
+                <run ground="190"/>
+            </speed>
+        </stats>
+        <status attackable="true"/>
+        <collision>
+            <radius normal="19.2"/>
+            <height normal="39"/>
+        </collision>
+        <skillList>
+            <skill id="4416" level="1"/> <!-- Undead -->
+        </skillList>
+    </npc>
+    <npc id="29120" level="85" type="Folk" name="Ignis" title="Flame Spirit King">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+            <vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+            <speed>
+                <walk ground="60" />
+                <run ground="120" />
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+            <defence physical="405.85106382979" magical="297.0297029703" />
+        </stats>
+        <status attackable="false" />
+        <collision>
+            <radius normal="5" />
+            <height normal="12" />
+        </collision>
+    </npc>
+    <npc id="29121" level="85" type="Folk" name="Nebula" title="Water Spirit Queen">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+            <vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+            <speed>
+                <walk ground="60" />
+                <run ground="120" />
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+            <defence physical="405.85106382979" magical="297.0297029703" />
+        </stats>
+        <status attackable="false" />
+        <collision>
+            <radius normal="5" />
+            <height normal="12" />
+        </collision>
+    </npc>
+    <npc id="29122" level="85" type="Folk" name="Procella" title="Wind Spirit King">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+            <vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+            <speed>
+                <walk ground="60" />
+                <run ground="120" />
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+            <defence physical="405.85106382979" magical="297.0297029703" />
+        </stats>
+        <status attackable="false" />
+        <collision>
+            <radius normal="5" />
+            <height normal="12" />
+        </collision>
+    </npc>
+    <npc id="29123" level="85" type="Folk" name="Petram" title="Earth Spirit King">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+            <vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+            <speed>
+                <walk ground="60" />
+                <run ground="120" />
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+            <defence physical="405.85106382979" magical="297.0297029703" />
+        </stats>
+        <status attackable="false" />
+        <collision>
+            <radius normal="5" />
+            <height normal="12" />
+        </collision>
+    </npc>
+    <npc id="29124" level="85" type="Folk" name="Freya" title="Ice Queen">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+            <vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+            <speed>
+                <walk ground="60" />
+                <run ground="120" />
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+            <defence physical="405.85106382979" magical="297.0297029703" />
+        </stats>
+        <status attackable="false" />
+        <collision>
+            <radius normal="5" />
+            <height normal="12" />
+        </collision>
+    </npc>
+    <npc id="29125" level="85" type="Folk" name="Safe Zone">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+            <vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+            <speed>
+                <walk ground="60" />
+                <run ground="120" />
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+            <defence physical="405.85106382979" magical="297.0297029703" />
+        </stats>
+        <status attackable="false" />
+        <collision>
+            <radius normal="5" />
+            <height normal="12" />
+        </collision>
+    </npc>
+    <npc id="29126" level="85" type="Folk" name="Water Slime">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+            <vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+            <speed>
+                <walk ground="60" />
+                <run ground="120" />
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+            <defence physical="405.85106382979" magical="297.0297029703" />
+        </stats>
+        <status attackable="false" />
+        <collision>
+            <radius normal="5" />
+            <height normal="12" />
+        </collision>
+    </npc>
+    <npc id="29127" level="85" type="Folk" name="Procella's Guardian">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+            <vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+            <speed>
+                <walk ground="60" />
+                <run ground="120" />
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+            <defence physical="405.85106382979" magical="297.0297029703" />
+        </stats>
+        <status attackable="false" />
+        <collision>
+            <radius normal="5" />
+            <height normal="12" />
+        </collision>
+    </npc>
+    <npc id="29128" level="85" type="Folk" name="Procella's Guardian">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+            <vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+            <speed>
+                <walk ground="60" />
+                <run ground="120" />
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+            <defence physical="405.85106382979" magical="297.0297029703" />
+        </stats>
+        <status attackable="false" />
+        <collision>
+            <radius normal="5" />
+            <height normal="12" />
+        </collision>
+    </npc>
+    <npc id="29129" level="85" type="Folk" name="Procella's Guardian">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+            <vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+            <speed>
+                <walk ground="60" />
+                <run ground="120" />
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+            <defence physical="405.85106382979" magical="297.0297029703" />
+        </stats>
+        <status attackable="false" />
+        <collision>
+            <radius normal="5" />
+            <height normal="12" />
+        </collision>
+    </npc>
+    <npc id="29130" level="85" type="Folk" name="Procella's Storm">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+            <vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+            <speed>
+                <walk ground="60" />
+                <run ground="120" />
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+            <defence physical="405.85106382979" magical="297.0297029703" />
+        </stats>
+        <status attackable="false" />
+        <collision>
+            <radius normal="5" />
+            <height normal="12" />
+        </collision>
+    </npc>
+    <npc id="29131" level="85" type="Folk" name="Petram Piece">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+            <vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+            <speed>
+                <walk ground="60" />
+                <run ground="120" />
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+            <defence physical="405.85106382979" magical="297.0297029703" />
+        </stats>
+        <status attackable="false" />
+        <collision>
+            <radius normal="5" />
+            <height normal="12" />
+        </collision>
+    </npc>
+    <npc id="29132" level="85" type="Folk" name="Petram Fragment">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+            <vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+            <speed>
+                <walk ground="60" />
+                <run ground="120" />
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+            <defence physical="405.85106382979" magical="297.0297029703" />
+        </stats>
+        <status attackable="false" />
+        <collision>
+            <radius normal="5" />
+            <height normal="12" />
+        </collision>
+    </npc>
+    <npc id="29133" level="85" type="Folk" name="Spirit King's Magic">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+            <vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+            <speed>
+                <walk ground="60" />
+                <run ground="120" />
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+            <defence physical="405.85106382979" magical="297.0297029703" />
+        </stats>
+        <status attackable="false" />
+        <collision>
+            <radius normal="5" />
+            <height normal="12" />
+        </collision>
+    </npc>
+    <npc id="29190" level="84" type="Monster" name="Tarask Dragon">
+        <!-- Todo: CT2.5 -->
+        <parameters>
+            <skill name="Skill01_ID" id="5095" level="1"/>
+            <skill name="Skill02_ID" id="5096" level="1"/>
+        </parameters>
+        <race>DRAGON</race>
+        <sex>MALE</sex>
+        <stats str="40" int="41" dex="30" wit="20" con="43" men="10">
+            <vitals hp="738930" hpRegen="8.5" mp="24863.19" mpRegen="3"/>
+            <attack physical="3584.56902102981" magical="1386.66000087809" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
+            <defence physical="1071.29474264312" magical="522.626863116263"/>
+            <speed>
+                <walk ground="55"/>
+                <run ground="180"/>
+            </speed>
+            <abnormalResist physical="10" magical="10"/>
+        </stats>
+        <status undying="false"/>
+        <skillList>
+            <skill id="5095" level="1"/> <!-- Antharas Subordinate Melee Attack -->
+            <skill id="5096" level="1"/> <!-- Antharas Subordinate Remote Attack -->
+            <skill id="4416" level="10"/> <!-- Dragons -->
+            <skill id="5465" level="1"/> <!-- Earth Attack -->
+        </skillList>
+        <exCrtEffect>true</exCrtEffect>
+        <ai aggroRange="300" clanHelpRange="300" isAggressive="true"/>
+        <collision>
+            <radius normal="63"/>
+            <height normal="54"/>
+        </collision>
+    </npc>
 </list>

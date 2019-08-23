@@ -1,9 +1,9 @@
 package org.l2j.gameserver.model.actor.instance;
 
 import org.l2j.commons.database.DatabaseFactory;
+import org.l2j.commons.threading.ThreadPoolManager;
 import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.Config;
-import org.l2j.commons.threading.ThreadPoolManager;
 import org.l2j.gameserver.ai.CtrlIntention;
 import org.l2j.gameserver.data.sql.impl.CharSummonTable;
 import org.l2j.gameserver.data.sql.impl.SummonEffectsTable;
@@ -20,10 +20,9 @@ import org.l2j.gameserver.handler.ItemHandler;
 import org.l2j.gameserver.instancemanager.CursedWeaponsManager;
 import org.l2j.gameserver.instancemanager.FortSiegeManager;
 import org.l2j.gameserver.instancemanager.ItemsOnGroundManager;
-import org.l2j.gameserver.world.World;
-import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.PetData;
 import org.l2j.gameserver.model.PetLevelData;
+import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.Summon;
 import org.l2j.gameserver.model.actor.stat.PetStat;
@@ -38,22 +37,20 @@ import org.l2j.gameserver.model.skills.AbnormalType;
 import org.l2j.gameserver.model.skills.BuffInfo;
 import org.l2j.gameserver.model.skills.EffectScope;
 import org.l2j.gameserver.model.skills.Skill;
-import org.l2j.gameserver.world.zone.ZoneType;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.*;
 import org.l2j.gameserver.taskmanager.DecayTaskManager;
 import org.l2j.gameserver.util.GameUtils;
+import org.l2j.gameserver.world.World;
+import org.l2j.gameserver.world.zone.ZoneType;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.util.Collections;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
-import java.util.concurrent.CopyOnWriteArrayList;
+import java.util.*;
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.Future;
 
 
@@ -671,7 +668,7 @@ public class Pet extends Summon {
     @Override
     public final void stopSkillEffects(boolean removed, int skillId) {
         super.stopSkillEffects(removed, skillId);
-        final List<SummonEffect> effects = SummonEffectsTable.getInstance().getPetEffects().get(getControlObjectId());
+        final Collection<SummonEffect> effects = SummonEffectsTable.getInstance().getPetEffects().get(getControlObjectId());
         if ((effects != null) && !effects.isEmpty()) {
             for (SummonEffect effect : effects) {
                 if (effect.getSkill().getId() == skillId) {
@@ -792,7 +789,7 @@ public class Pet extends Summon {
                     ps2.setInt(6, ++buff_index);
                     ps2.addBatch();
 
-                    SummonEffectsTable.getInstance().getPetEffects().computeIfAbsent(getControlObjectId(), k -> new CopyOnWriteArrayList<>()).add(new SummonEffect(skill, info.getTime()));
+                    SummonEffectsTable.getInstance().getPetEffects().computeIfAbsent(getControlObjectId(), k -> ConcurrentHashMap.newKeySet()).add(new SummonEffect(skill, info.getTime()));
                 }
                 ps2.executeBatch();
             }
@@ -818,7 +815,7 @@ public class Pet extends Summon {
                         }
 
                         if (skill.hasEffects(EffectScope.GENERAL)) {
-                            SummonEffectsTable.getInstance().getPetEffects().computeIfAbsent(getControlObjectId(), k -> new CopyOnWriteArrayList<>()).add(new SummonEffect(skill, effectCurTime));
+                            SummonEffectsTable.getInstance().getPetEffects().computeIfAbsent(getControlObjectId(), k -> ConcurrentHashMap.newKeySet()).add(new SummonEffect(skill, effectCurTime));
                         }
                     }
                 }
@@ -853,7 +850,7 @@ public class Pet extends Summon {
 
         stopFeed();
         if (!isDead() && (getOwner().getPet() == this)) {
-            _feedTask = ThreadPoolManager.getInstance().scheduleAtFixedRate(new FeedTask(), 10000, 10000);
+            _feedTask = ThreadPoolManager.scheduleAtFixedRate(new FeedTask(), 10000, 10000);
         }
     }
 

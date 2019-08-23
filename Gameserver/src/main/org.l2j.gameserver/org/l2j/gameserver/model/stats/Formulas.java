@@ -1108,7 +1108,7 @@ public final class Formulas {
     }
 
     public static double calcWeaponTraitBonus(Creature attacker, Creature target) {
-        return Math.max(0, 2.0 - target.getStat().getDefenceTrait(attacker.getAttackType().getTraitType()));
+        return Math.max(0, 1.0 - target.getStat().getDefenceTrait(attacker.getAttackType().getTraitType()));
     }
 
     public static double calcAttackTraitBonus(Creature attacker, Creature target) {

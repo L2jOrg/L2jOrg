@@ -30,6 +30,10 @@ public class RecipeShopSellList extends ServerPacket {
                 writeInt(temp.getRecipeId());
                 writeInt(0x00); // unknown
                 writeLong(temp.getCost());
+
+                writeLong(0x00); // Classic - 166
+                writeLong(0x00); // Classic - 166
+                writeByte(0x00); // Classic - 166
             }
         }
     }

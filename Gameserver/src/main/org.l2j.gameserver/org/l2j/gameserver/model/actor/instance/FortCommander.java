@@ -15,7 +15,7 @@ import org.l2j.gameserver.network.NpcStringId;
 import org.l2j.gameserver.util.GameUtils;
 import org.l2j.gameserver.util.MathUtil;
 
-import java.util.List;
+import java.util.Collection;
 
 public class FortCommander extends Defender {
 
@@ -86,7 +86,7 @@ public class FortCommander extends Defender {
     public final void addDamage(Creature attacker, int damage, Skill skill) {
         final Spawn spawn = getSpawn();
         if ((spawn != null) && canTalk()) {
-            final List<FortSiegeSpawn> commanders = FortSiegeManager.getInstance().getCommanderSpawnList(getFort().getResidenceId());
+            final Collection<FortSiegeSpawn> commanders = FortSiegeManager.getInstance().getCommanderSpawnList(getFort().getResidenceId());
             for (FortSiegeSpawn spawn2 : commanders) {
                 if (spawn2.getId() == spawn.getId()) {
                     NpcStringId npcString = null;

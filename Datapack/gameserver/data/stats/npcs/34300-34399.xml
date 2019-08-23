@@ -1,41 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org npcs.xsd">
-	<npc id="34300" level="80" type="Folk" name="Wizards" title="Cupid's Messenger">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="1507" mpRegen="3.6" />
-			<speed>
-				<walk ground="40" />
-				<run ground="1" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="8" />
-			<height normal="15" />
-		</collision>
-	</npc>
-	<npc id="34349" level="80" type="Folk" name="Bliss" title="Magical Flame Merchant">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
-			<speed>
-				<walk ground="20" />
-				<run ground="1" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="5.4" />
-			<height normal="24.9" />
-		</collision>
-	</npc>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org npcs.xsd">
+    <npc id="34300" level="80" type="Folk" name="Wizards" title="Cupid's Messenger">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+            <vitals hp="8446" hpRegen="10.5" mp="1507" mpRegen="3.6"/>
+            <speed>
+                <walk ground="40"/>
+                <run ground="1"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <collision>
+            <radius normal="8"/>
+            <height normal="15"/>
+        </collision>
+    </npc>
+    <npc id="34349" level="80" type="Folk" name="Bliss" title="Magical Flame Merchant">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+            <vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6"/>
+            <speed>
+                <walk ground="20"/>
+                <run ground="1"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <collision>
+            <radius normal="5.4"/>
+            <height normal="24.9"/>
+        </collision>
+    </npc>
 </list>

@@ -1,241 +1,241 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org npcs.xsd">
-	<npc id="13001" level="70" type="Folk" name="Heart of Warding">
-		<race>ETC</race>
-		<sex>ETC</sex>
-		<acquire exp="490" sp="10" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2444" hpRegen="7.5" mp="1345" mpRegen="2.7" />
-			<attack physical="688.86" magical="470.4" random="30" critical="4" accuracy="3.75" attackSpeed="257" type="FIST" range="40" distance="80" width="120" />
-			<defence physical="295.92" magical="216.54" />
-			<speed>
-				<walk ground="50" />
-				<run ground="120" />
-			</speed>
-			<abnormalResist physical="10" magical="10" />
-		</stats>
-		<status attackable="false" undying="true" />
-		<skillList>
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="19" /> <!-- Others -->
-		</skillList>
-		<exCrtEffect>true</exCrtEffect>
-		<ai clanHelpRange="300" aggroRange="450" />
-		<collision>
-			<radius normal="17" />
-			<height normal="120" />
-		</collision>
-	</npc>
-	<npc id="13002" level="20" type="ControlTower" name="Life Control Tower">
-		<race>ETC</race>
-		<sex>ETC</sex>
-		<acquire exp="40" sp="10" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="342" hpRegen="2.5" mp="192" mpRegen="1.2" />
-			<attack physical="44.33" magical="30.27" random="30" critical="4" accuracy="3.75" attackSpeed="257" type="FIST" range="40" distance="80" width="120" />
-			<defence physical="86.87" magical="63.57" />
-			<speed>
-				<walk ground="50" />
-				<run ground="1" />
-			</speed>
-			<abnormalResist physical="10" magical="10" />
-		</stats>
-		<status undying="false" />
-		<skillList>
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="19" /> <!-- Others -->
-		</skillList>
-		<exCrtEffect>true</exCrtEffect>
-		<ai clanHelpRange="300" aggroRange="450" />
-		<collision>
-			<radius normal="7" />
-			<height normal="35" />
-		</collision>
-	</npc>
-	<npc id="13003" level="20" type="ControlTower" name="Life Control Tower">
-		<race>ETC</race>
-		<sex>ETC</sex>
-		<acquire exp="40" sp="10" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="342" hpRegen="2.5" mp="192" mpRegen="1.2" />
-			<attack physical="44.33" magical="30.27" random="30" critical="4" accuracy="3.75" attackSpeed="257" type="FIST" range="40" distance="80" width="120" />
-			<defence physical="86.87" magical="63.57" />
-			<speed>
-				<walk ground="50" />
-				<run ground="1" />
-			</speed>
-			<abnormalResist physical="10" magical="10" />
-		</stats>
-		<status undying="false" />
-		<skillList>
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="19" /> <!-- Others -->
-		</skillList>
-		<exCrtEffect>true</exCrtEffect>
-		<ai clanHelpRange="300" aggroRange="450" />
-		<collision>
-			<radius normal="7" />
-			<height normal="35" />
-		</collision>
-	</npc>
-	<npc id="13004" level="20" type="FlameTower" name="Flame Control Tower">
-		<race>ETC</race>
-		<sex>ETC</sex>
-		<acquire exp="40" sp="10" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="342" hpRegen="2.5" mp="192" mpRegen="1.2" />
-			<attack physical="44.33" magical="30.27" random="30" critical="4" accuracy="3.75" attackSpeed="257" type="FIST" range="40" distance="80" width="120" />
-			<defence physical="86.87" magical="63.57" />
-			<speed>
-				<walk ground="50" />
-				<run ground="1" />
-			</speed>
-			<abnormalResist physical="10" magical="10" />
-		</stats>
-		<status undying="false" />
-		<skillList>
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="19" /> <!-- Others -->
-		</skillList>
-		<exCrtEffect>true</exCrtEffect>
-		<ai clanHelpRange="300" aggroRange="450" />
-		<collision>
-			<radius normal="7" />
-			<height normal="35" />
-		</collision>
-	</npc>
-	<npc id="13005" level="20" type="FlameTower" name="Flame Control Tower">
-		<race>ETC</race>
-		<sex>ETC</sex>
-		<acquire exp="40" sp="10" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="342" hpRegen="2.5" mp="192" mpRegen="1.2" />
-			<attack physical="44.33" magical="30.27" random="30" critical="4" accuracy="3.75" attackSpeed="257" type="FIST" range="40" distance="80" width="120" />
-			<defence physical="86.87" magical="63.57" />
-			<speed>
-				<walk ground="50" />
-				<run ground="1" />
-			</speed>
-			<abnormalResist physical="10" magical="10" />
-		</stats>
-		<status undying="false" />
-		<skillList>
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="19" /> <!-- Others -->
-		</skillList>
-		<exCrtEffect>true</exCrtEffect>
-		<ai clanHelpRange="300" aggroRange="450" />
-		<collision>
-			<radius normal="7" />
-			<height normal="35" />
-		</collision>
-	</npc>
-	<npc id="13016" level="81" type="Monster" name="King Squash">
-		<race>ETC</race>
-		<sex>MALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="39" hpRegen="80.58" mp="40" mpRegen="3.09" />
-			<attack physical="1578.5" magical="1211.7" random="50" critical="1" accuracy="9" attackSpeed="278" type="FIST" range="40" distance="80" width="120" />
-			<defence physical="373.8" magical="303.1" />
-			<speed>
-				<walk ground="50" />
-				<run ground="100" />
-			</speed>
-			<abnormalResist physical="10" magical="10" />
-		</stats>
-		<status undying="false" />
-		<skillList>
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="3" /> <!-- Light Armor Type -->
-			<skill id="4415" level="5" /> <!-- Blunt Weapons -->
-			<skill id="4416" level="19" /> <!-- Others -->
-			<skill id="4441" level="5" /> <!-- Greater Resist Mental Derangement -->
-		</skillList>
-		<exCrtEffect>true</exCrtEffect>
-		<ai type="BALANCED" aggroRange="450" />
-		<collision>
-			<radius normal="23" />
-			<height normal="25" />
-		</collision>
-	</npc>
-	<npc id="13017" level="81" type="Monster" name="Emperor Squash">
-		<race>ETC</race>
-		<sex>MALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="39" hpRegen="80.58" mp="40" mpRegen="3.09" />
-			<attack physical="1578.5" magical="1211.7" random="50" critical="1" accuracy="9" attackSpeed="278" type="FIST" range="40" distance="80" width="120" />
-			<defence physical="373.8" magical="303.1" />
-			<speed>
-				<walk ground="50" />
-				<run ground="100" />
-			</speed>
-			<abnormalResist physical="10" magical="10" />
-		</stats>
-		<status undying="false" />
-		<skillList>
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="3" /> <!-- Light Armor Type -->
-			<skill id="4415" level="5" /> <!-- Blunt Weapons -->
-			<skill id="4416" level="19" /> <!-- Others -->
-			<skill id="4441" level="5" /> <!-- Greater Resist Mental Derangement -->
-		</skillList>
-		<exCrtEffect>true</exCrtEffect>
-		<ai type="BALANCED" aggroRange="450" />
-		<collision>
-			<radius normal="34" />
-			<height normal="40" />
-		</collision>
-	</npc>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org npcs.xsd">
+    <npc id="13001" level="70" type="Folk" name="Heart of Warding">
+        <race>ETC</race>
+        <sex>ETC</sex>
+        <acquire exp="490" sp="10"/>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="2444" hpRegen="7.5" mp="1345" mpRegen="2.7"/>
+            <attack physical="688.86" magical="470.4" random="30" critical="4" accuracy="3.75" attackSpeed="257" type="FIST" range="40" distance="80" width="120"/>
+            <defence physical="295.92" magical="216.54"/>
+            <speed>
+                <walk ground="50"/>
+                <run ground="120"/>
+            </speed>
+            <abnormalResist physical="10" magical="10"/>
+        </stats>
+        <status attackable="false" undying="true"/>
+        <skillList>
+            <skill id="4045" level="1"/> <!-- Resist Full Magic Attack -->
+            <skill id="4408" level="1"/> <!-- HP Increase (1x) -->
+            <skill id="4409" level="1"/> <!-- MP Increase (1x) -->
+            <skill id="4410" level="11"/> <!-- Average P. Atk. -->
+            <skill id="4411" level="11"/> <!-- Average M. Atk. -->
+            <skill id="4412" level="11"/> <!-- Average P. Def. -->
+            <skill id="4413" level="11"/> <!-- Average M. Def. -->
+            <skill id="4414" level="2"/> <!-- Standard Type -->
+            <skill id="4415" level="3"/> <!-- One-handed Sword -->
+            <skill id="4416" level="19"/> <!-- Others -->
+        </skillList>
+        <exCrtEffect>true</exCrtEffect>
+        <ai clanHelpRange="300" aggroRange="450"/>
+        <collision>
+            <radius normal="17"/>
+            <height normal="120"/>
+        </collision>
+    </npc>
+    <npc id="13002" level="20" type="ControlTower" name="Life Control Tower">
+        <race>ETC</race>
+        <sex>ETC</sex>
+        <acquire exp="40" sp="10"/>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="342" hpRegen="2.5" mp="192" mpRegen="1.2"/>
+            <attack physical="44.33" magical="30.27" random="30" critical="4" accuracy="3.75" attackSpeed="257" type="FIST" range="40" distance="80" width="120"/>
+            <defence physical="86.87" magical="63.57"/>
+            <speed>
+                <walk ground="50"/>
+                <run ground="1"/>
+            </speed>
+            <abnormalResist physical="10" magical="10"/>
+        </stats>
+        <status undying="false"/>
+        <skillList>
+            <skill id="4045" level="1"/> <!-- Resist Full Magic Attack -->
+            <skill id="4408" level="1"/> <!-- HP Increase (1x) -->
+            <skill id="4409" level="1"/> <!-- MP Increase (1x) -->
+            <skill id="4410" level="11"/> <!-- Average P. Atk. -->
+            <skill id="4411" level="11"/> <!-- Average M. Atk. -->
+            <skill id="4412" level="11"/> <!-- Average P. Def. -->
+            <skill id="4413" level="11"/> <!-- Average M. Def. -->
+            <skill id="4414" level="2"/> <!-- Standard Type -->
+            <skill id="4415" level="3"/> <!-- One-handed Sword -->
+            <skill id="4416" level="19"/> <!-- Others -->
+        </skillList>
+        <exCrtEffect>true</exCrtEffect>
+        <ai clanHelpRange="300" aggroRange="450"/>
+        <collision>
+            <radius normal="7"/>
+            <height normal="35"/>
+        </collision>
+    </npc>
+    <npc id="13003" level="20" type="ControlTower" name="Life Control Tower">
+        <race>ETC</race>
+        <sex>ETC</sex>
+        <acquire exp="40" sp="10"/>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="342" hpRegen="2.5" mp="192" mpRegen="1.2"/>
+            <attack physical="44.33" magical="30.27" random="30" critical="4" accuracy="3.75" attackSpeed="257" type="FIST" range="40" distance="80" width="120"/>
+            <defence physical="86.87" magical="63.57"/>
+            <speed>
+                <walk ground="50"/>
+                <run ground="1"/>
+            </speed>
+            <abnormalResist physical="10" magical="10"/>
+        </stats>
+        <status undying="false"/>
+        <skillList>
+            <skill id="4045" level="1"/> <!-- Resist Full Magic Attack -->
+            <skill id="4408" level="1"/> <!-- HP Increase (1x) -->
+            <skill id="4409" level="1"/> <!-- MP Increase (1x) -->
+            <skill id="4410" level="11"/> <!-- Average P. Atk. -->
+            <skill id="4411" level="11"/> <!-- Average M. Atk. -->
+            <skill id="4412" level="11"/> <!-- Average P. Def. -->
+            <skill id="4413" level="11"/> <!-- Average M. Def. -->
+            <skill id="4414" level="2"/> <!-- Standard Type -->
+            <skill id="4415" level="3"/> <!-- One-handed Sword -->
+            <skill id="4416" level="19"/> <!-- Others -->
+        </skillList>
+        <exCrtEffect>true</exCrtEffect>
+        <ai clanHelpRange="300" aggroRange="450"/>
+        <collision>
+            <radius normal="7"/>
+            <height normal="35"/>
+        </collision>
+    </npc>
+    <npc id="13004" level="20" type="FlameTower" name="Flame Control Tower">
+        <race>ETC</race>
+        <sex>ETC</sex>
+        <acquire exp="40" sp="10"/>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="342" hpRegen="2.5" mp="192" mpRegen="1.2"/>
+            <attack physical="44.33" magical="30.27" random="30" critical="4" accuracy="3.75" attackSpeed="257" type="FIST" range="40" distance="80" width="120"/>
+            <defence physical="86.87" magical="63.57"/>
+            <speed>
+                <walk ground="50"/>
+                <run ground="1"/>
+            </speed>
+            <abnormalResist physical="10" magical="10"/>
+        </stats>
+        <status undying="false"/>
+        <skillList>
+            <skill id="4045" level="1"/> <!-- Resist Full Magic Attack -->
+            <skill id="4408" level="1"/> <!-- HP Increase (1x) -->
+            <skill id="4409" level="1"/> <!-- MP Increase (1x) -->
+            <skill id="4410" level="11"/> <!-- Average P. Atk. -->
+            <skill id="4411" level="11"/> <!-- Average M. Atk. -->
+            <skill id="4412" level="11"/> <!-- Average P. Def. -->
+            <skill id="4413" level="11"/> <!-- Average M. Def. -->
+            <skill id="4414" level="2"/> <!-- Standard Type -->
+            <skill id="4415" level="3"/> <!-- One-handed Sword -->
+            <skill id="4416" level="19"/> <!-- Others -->
+        </skillList>
+        <exCrtEffect>true</exCrtEffect>
+        <ai clanHelpRange="300" aggroRange="450"/>
+        <collision>
+            <radius normal="7"/>
+            <height normal="35"/>
+        </collision>
+    </npc>
+    <npc id="13005" level="20" type="FlameTower" name="Flame Control Tower">
+        <race>ETC</race>
+        <sex>ETC</sex>
+        <acquire exp="40" sp="10"/>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="342" hpRegen="2.5" mp="192" mpRegen="1.2"/>
+            <attack physical="44.33" magical="30.27" random="30" critical="4" accuracy="3.75" attackSpeed="257" type="FIST" range="40" distance="80" width="120"/>
+            <defence physical="86.87" magical="63.57"/>
+            <speed>
+                <walk ground="50"/>
+                <run ground="1"/>
+            </speed>
+            <abnormalResist physical="10" magical="10"/>
+        </stats>
+        <status undying="false"/>
+        <skillList>
+            <skill id="4045" level="1"/> <!-- Resist Full Magic Attack -->
+            <skill id="4408" level="1"/> <!-- HP Increase (1x) -->
+            <skill id="4409" level="1"/> <!-- MP Increase (1x) -->
+            <skill id="4410" level="11"/> <!-- Average P. Atk. -->
+            <skill id="4411" level="11"/> <!-- Average M. Atk. -->
+            <skill id="4412" level="11"/> <!-- Average P. Def. -->
+            <skill id="4413" level="11"/> <!-- Average M. Def. -->
+            <skill id="4414" level="2"/> <!-- Standard Type -->
+            <skill id="4415" level="3"/> <!-- One-handed Sword -->
+            <skill id="4416" level="19"/> <!-- Others -->
+        </skillList>
+        <exCrtEffect>true</exCrtEffect>
+        <ai clanHelpRange="300" aggroRange="450"/>
+        <collision>
+            <radius normal="7"/>
+            <height normal="35"/>
+        </collision>
+    </npc>
+    <npc id="13016" level="81" type="Monster" name="King Squash">
+        <race>ETC</race>
+        <sex>MALE</sex>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="39" hpRegen="80.58" mp="40" mpRegen="3.09"/>
+            <attack physical="1578.5" magical="1211.7" random="50" critical="1" accuracy="9" attackSpeed="278" type="FIST" range="40" distance="80" width="120"/>
+            <defence physical="373.8" magical="303.1"/>
+            <speed>
+                <walk ground="50"/>
+                <run ground="100"/>
+            </speed>
+            <abnormalResist physical="10" magical="10"/>
+        </stats>
+        <status undying="false"/>
+        <skillList>
+            <skill id="4045" level="1"/> <!-- Resist Full Magic Attack -->
+            <skill id="4408" level="1"/> <!-- HP Increase (1x) -->
+            <skill id="4409" level="1"/> <!-- MP Increase (1x) -->
+            <skill id="4410" level="11"/> <!-- Average P. Atk. -->
+            <skill id="4411" level="11"/> <!-- Average M. Atk. -->
+            <skill id="4412" level="11"/> <!-- Average P. Def. -->
+            <skill id="4413" level="11"/> <!-- Average M. Def. -->
+            <skill id="4414" level="3"/> <!-- Light Armor Type -->
+            <skill id="4415" level="5"/> <!-- Blunt Weapons -->
+            <skill id="4416" level="19"/> <!-- Others -->
+            <skill id="4441" level="5"/> <!-- Greater Resist Mental Derangement -->
+        </skillList>
+        <exCrtEffect>true</exCrtEffect>
+        <ai type="BALANCED" aggroRange="450"/>
+        <collision>
+            <radius normal="23"/>
+            <height normal="25"/>
+        </collision>
+    </npc>
+    <npc id="13017" level="81" type="Monster" name="Emperor Squash">
+        <race>ETC</race>
+        <sex>MALE</sex>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="39" hpRegen="80.58" mp="40" mpRegen="3.09"/>
+            <attack physical="1578.5" magical="1211.7" random="50" critical="1" accuracy="9" attackSpeed="278" type="FIST" range="40" distance="80" width="120"/>
+            <defence physical="373.8" magical="303.1"/>
+            <speed>
+                <walk ground="50"/>
+                <run ground="100"/>
+            </speed>
+            <abnormalResist physical="10" magical="10"/>
+        </stats>
+        <status undying="false"/>
+        <skillList>
+            <skill id="4045" level="1"/> <!-- Resist Full Magic Attack -->
+            <skill id="4408" level="1"/> <!-- HP Increase (1x) -->
+            <skill id="4409" level="1"/> <!-- MP Increase (1x) -->
+            <skill id="4410" level="11"/> <!-- Average P. Atk. -->
+            <skill id="4411" level="11"/> <!-- Average M. Atk. -->
+            <skill id="4412" level="11"/> <!-- Average P. Def. -->
+            <skill id="4413" level="11"/> <!-- Average M. Def. -->
+            <skill id="4414" level="3"/> <!-- Light Armor Type -->
+            <skill id="4415" level="5"/> <!-- Blunt Weapons -->
+            <skill id="4416" level="19"/> <!-- Others -->
+            <skill id="4441" level="5"/> <!-- Greater Resist Mental Derangement -->
+        </skillList>
+        <exCrtEffect>true</exCrtEffect>
+        <ai type="BALANCED" aggroRange="450"/>
+        <collision>
+            <radius normal="34"/>
+            <height normal="40"/>
+        </collision>
+    </npc>
 </list>

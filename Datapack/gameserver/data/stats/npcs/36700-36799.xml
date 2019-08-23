@@ -1,702 +1,721 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org npcs.xsd">
-	<npc id="36721" level="80" type="Merchant" name="Leina" title="Clan Hall Manager">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
-			<speed>
-				<walk ground="50" />
-				<run ground="100" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="4416" level="14" /> <!-- Humans -->
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skillList>
-		<collision>
-			<radius normal="8" />
-			<height normal="20.5" />
-		</collision>
-	</npc>
-	<npc id="36722" level="80" type="Folk" name="Bini" title="Clan Hall Gatekeeper">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
-			<speed>
-				<walk ground="50" />
-				<run ground="120" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="4416" level="14" /> <!-- Humans -->
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skillList>
-		<collision>
-			<radius normal="9" />
-			<height normal="22.25" />
-		</collision>
-	</npc>
-	<npc id="36723" level="80" type="Merchant" name="Bubek" title="Clan Hall Manager">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
-			<speed>
-				<walk ground="50" />
-				<run ground="100" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="4416" level="14" /> <!-- Humans -->
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skillList>
-		<collision>
-			<radius normal="8" />
-			<height normal="22" />
-		</collision>
-	</npc>
-	<npc id="36724" level="80" type="Folk" name="Varin" title="Clan Hall Gatekeeper">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
-			<speed>
-				<walk ground="50" />
-				<run ground="100" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="4416" level="14" /> <!-- Humans -->
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skillList>
-		<collision>
-			<radius normal="8" />
-			<height normal="23" />
-		</collision>
-	</npc>
-	<npc id="36725" level="80" type="Merchant" name="Sarina" title="Clan Hall Manager">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
-			<speed>
-				<walk ground="50" />
-				<run ground="100" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="4416" level="14" /> <!-- Humans -->
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skillList>
-		<collision>
-			<radius normal="8" />
-			<height normal="20.5" />
-		</collision>
-	</npc>
-	<npc id="36726" level="80" type="Folk" name="Loneiren" title="Clan Hall Gatekeeper">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
-			<speed>
-				<walk ground="50" />
-				<run ground="120" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="4416" level="14" /> <!-- Humans -->
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skillList>
-		<collision>
-			<radius normal="9" />
-			<height normal="22.25" />
-		</collision>
-	</npc>
-	<npc id="36727" level="80" type="Merchant" name="Arinas" title="Clan Hall Manager">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
-			<speed>
-				<walk ground="50" />
-				<run ground="100" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="4416" level="14" /> <!-- Humans -->
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skillList>
-		<collision>
-			<radius normal="8" />
-			<height normal="20.5" />
-		</collision>
-	</npc>
-	<npc id="36728" level="80" type="Folk" name="Cardiff" title="Clan Hall Gatekeeper">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
-			<speed>
-				<walk ground="50" />
-				<run ground="100" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="4416" level="14" /> <!-- Humans -->
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skillList>
-		<collision>
-			<radius normal="8" />
-			<height normal="22" />
-		</collision>
-	</npc>
-	<npc id="36729" level="80" type="Merchant" name="Bremen" title="Clan Hall Manager">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
-			<speed>
-				<walk ground="50" />
-				<run ground="100" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="4416" level="14" /> <!-- Humans -->
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skillList>
-		<collision>
-			<radius normal="8" />
-			<height normal="23" />
-		</collision>
-	</npc>
-	<npc id="36730" level="80" type="Folk" name="Faolin" title="Clan Hall Gatekeeper">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
-			<speed>
-				<walk ground="50" />
-				<run ground="120" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="4416" level="14" /> <!-- Humans -->
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skillList>
-		<collision>
-			<radius normal="9" />
-			<height normal="22.25" />
-		</collision>
-	</npc>
-	<npc id="36731" level="80" type="Merchant" name="Kalein" title="Clan Hall Manager">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
-			<speed>
-				<walk ground="50" />
-				<run ground="100" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="4416" level="14" /> <!-- Humans -->
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skillList>
-		<collision>
-			<radius normal="8" />
-			<height normal="20.5" />
-		</collision>
-	</npc>
-	<npc id="36732" level="80" type="Folk" name="Coren" title="Clan Hall Gatekeeper">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
-			<speed>
-				<walk ground="50" />
-				<run ground="100" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="4416" level="14" /> <!-- Humans -->
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skillList>
-		<collision>
-			<radius normal="8" />
-			<height normal="22" />
-		</collision>
-	</npc>
-	<npc id="36733" level="80" type="Merchant" name="Winsnun" title="Clan Hall Manager">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
-			<speed>
-				<walk ground="50" />
-				<run ground="100" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="4416" level="14" /> <!-- Humans -->
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skillList>
-		<collision>
-			<radius normal="8" />
-			<height normal="23" />
-		</collision>
-	</npc>
-	<npc id="36734" level="80" type="Folk" name="Muren" title="Clan Hall Gatekeeper">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
-			<speed>
-				<walk ground="50" />
-				<run ground="100" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="4416" level="14" /> <!-- Humans -->
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skillList>
-		<collision>
-			<radius normal="8" />
-			<height normal="22" />
-		</collision>
-	</npc>
-	<npc id="36735" level="80" type="Merchant" name="Yuven" title="Clan Hall Manager">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
-			<speed>
-				<walk ground="50" />
-				<run ground="100" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="4416" level="14" /> <!-- Humans -->
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skillList>
-		<collision>
-			<radius normal="8" />
-			<height normal="23" />
-		</collision>
-	</npc>
-	<npc id="36736" level="80" type="Folk" name="Lenning" title="Clan Hall Gatekeeper">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
-			<speed>
-				<walk ground="50" />
-				<run ground="100" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="4416" level="14" /> <!-- Humans -->
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skillList>
-		<collision>
-			<radius normal="8" />
-			<height normal="20.5" />
-		</collision>
-	</npc>
-	<npc id="36737" level="80" type="Merchant" name="Gairin" title="Clan Hall Manager">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
-			<speed>
-				<walk ground="50" />
-				<run ground="120" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="4416" level="14" /> <!-- Humans -->
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skillList>
-		<collision>
-			<radius normal="9" />
-			<height normal="22.25" />
-		</collision>
-	</npc>
-	<npc id="36738" level="80" type="Folk" name="Ludina" title="Clan Hall Gatekeeper">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
-			<speed>
-				<walk ground="50" />
-				<run ground="100" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="4416" level="14" /> <!-- Humans -->
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skillList>
-		<collision>
-			<radius normal="8" />
-			<height normal="20.5" />
-		</collision>
-	</npc>
-	<npc id="36739" level="80" type="Merchant" name="Flon" title="Clan Hall Manager">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
-			<speed>
-				<walk ground="50" />
-				<run ground="120" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="4416" level="14" /> <!-- Humans -->
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skillList>
-		<collision>
-			<radius normal="9" />
-			<height normal="22.25" />
-		</collision>
-	</npc>
-	<npc id="36740" level="80" type="Folk" name="Danif" title="Clan Hall Gatekeeper">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
-			<speed>
-				<walk ground="50" />
-				<run ground="100" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="4416" level="14" /> <!-- Humans -->
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skillList>
-		<collision>
-			<radius normal="8" />
-			<height normal="23" />
-		</collision>
-	</npc>
-	<npc id="36783" level="62" type="Monster" name="Human Knight" title="Royal Guard">
-		<race>HUMANOID</race>
-		<sex>MALE</sex>
-		<acquire exp="384" sp="0" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="5691.73148" hpRegen="7.5" mp="3197.505" mpRegen="2.7" />
-			<attack physical="521.12391" magical="355.86007" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="257.34267" magical="188.3122" />
-			<speed>
-				<walk ground="60" />
-				<run ground="160" />
-			</speed>
-		</stats>
-		<status attackable="true" />
-		<collision>
-			<radius normal="9" />
-			<height normal="23" />
-		</collision>
-		<skillList>
-			<skill id="4416" level="6" /> <!-- Humanoid -->
-		</skillList>
-		<dropLists>
-			<drop>
-				<item id="49758" min="3" max="6" chance="100" /> <!-- Blood Crystal -->
-			</drop>
-		</dropLists>
-	</npc>
-	<npc id="36784" level="62" type="Monster" name="Human Knight" title="Royal Guard">
-		<race>HUMANOID</race>
-		<sex>MALE</sex>
-		<acquire exp="384" sp="0" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="5691.73148" hpRegen="7.5" mp="3197.505" mpRegen="2.7" />
-			<attack physical="521.12391" magical="355.86007" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="257.34267" magical="188.3122" />
-			<speed>
-				<walk ground="60" />
-				<run ground="160" />
-			</speed>
-		</stats>
-		<status attackable="true" />
-		<collision>
-			<radius normal="8" />
-			<height normal="23.5" />
-		</collision>
-		<skillList>
-			<skill id="4416" level="6" /> <!-- Humanoid -->
-		</skillList>
-		<dropLists>
-			<drop>
-				<item id="49758" min="3" max="6" chance="100" /> <!-- Blood Crystal -->
-			</drop>
-		</dropLists>
-	</npc>
-	<npc id="36785" level="62" type="Monster" name="Human Knight" title="Royal Guard">
-		<race>HUMANOID</race>
-		<sex>MALE</sex>
-		<acquire exp="384" sp="0" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="5691.73148" hpRegen="7.5" mp="3197.505" mpRegen="2.7" />
-			<attack physical="521.12391" magical="355.86007" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="257.34267" magical="188.3122" />
-			<speed>
-				<walk ground="60" />
-				<run ground="160" />
-			</speed>
-		</stats>
-		<status attackable="true" />
-		<collision>
-			<radius normal="7.5" />
-			<height normal="24" />
-		</collision>
-		<skillList>
-			<skill id="4416" level="6" /> <!-- Humanoid -->
-		</skillList>
-		<dropLists>
-			<drop>
-				<item id="49758" min="3" max="6" chance="100" /> <!-- Blood Crystal -->
-			</drop>
-		</dropLists>
-	</npc>
-	<npc id="36786" level="62" type="Monster" name="Human Knight" title="Royal Guard">
-		<race>HUMANOID</race>
-		<sex>MALE</sex>
-		<acquire exp="384" sp="0" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="5691.73148" hpRegen="7.5" mp="3197.505" mpRegen="2.7" />
-			<attack physical="521.12391" magical="355.86007" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="257.34267" magical="188.3122" />
-			<speed>
-				<walk ground="60" />
-				<run ground="160" />
-			</speed>
-		</stats>
-		<status attackable="true" />
-		<collision>
-			<radius normal="7.5" />
-			<height normal="23" />
-		</collision>
-		<skillList>
-			<skill id="4416" level="6" /> <!-- Humanoid -->
-		</skillList>
-		<dropLists>
-			<drop>
-				<item id="49758" min="3" max="6" chance="100" /> <!-- Blood Crystal -->
-			</drop>
-		</dropLists>
-	</npc>
-	<npc id="36787" level="80" type="Folk" name="Shield" title="Gludio">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<equipment rhand="76" lhand="2497" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="14629" hpRegen="10.5" mp="2932" mpRegen="3.6" />
-			<speed>
-				<walk ground="50" />
-				<run ground="120" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skillList>
-		<collision>
-			<radius normal="7" />
-			<height normal="24" />
-		</collision>
-	</npc>
-	<npc id="36788" level="62" type="Monster" name="Human Knight" title="Royal Guard">
-		<race>HUMANOID</race>
-		<sex>MALE</sex>
-		<acquire exp="384" sp="0" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="5691.73148" hpRegen="7.5" mp="3197.505" mpRegen="2.7" />
-			<attack physical="521.12391" magical="355.86007" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="257.34267" magical="188.3122" />
-			<speed>
-				<walk ground="60" />
-				<run ground="120" />
-			</speed>
-		</stats>
-		<status attackable="true" />
-		<collision>
-			<radius normal="9" />
-			<height normal="23" />
-		</collision>
-		<skillList>
-			<skill id="4416" level="6" /> <!-- Humanoid -->
-		</skillList>
-		<dropLists>
-			<drop>
-				<item id="49758" min="3" max="6" chance="100" /> <!-- Blood Crystal -->
-			</drop>
-		</dropLists>
-	</npc>
-	<npc id="36789" level="62" type="Monster" name="Human Knight" title="Royal Guard">
-		<race>HUMANOID</race>
-		<sex>MALE</sex>
-		<acquire exp="384" sp="0" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="5691.73148" hpRegen="7.5" mp="3197.505" mpRegen="2.7" />
-			<attack physical="521.12391" magical="355.86007" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="257.34267" magical="188.3122" />
-			<speed>
-				<walk ground="60" />
-				<run ground="120" />
-			</speed>
-		</stats>
-		<status attackable="true" />
-		<collision>
-			<radius normal="8" />
-			<height normal="23.5" />
-		</collision>
-		<skillList>
-			<skill id="4416" level="6" /> <!-- Humanoid -->
-		</skillList>
-		<dropLists>
-			<drop>
-				<item id="49758" min="3" max="6" chance="100" /> <!-- Blood Crystal -->
-			</drop>
-		</dropLists>
-	</npc>
-	<npc id="36790" level="62" type="Monster" name="Human Knight" title="Royal Guard">
-		<race>HUMANOID</race>
-		<sex>MALE</sex>
-		<acquire exp="384" sp="0" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="5691.73148" hpRegen="7.5" mp="3197.505" mpRegen="2.7" />
-			<attack physical="521.12391" magical="355.86007" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="257.34267" magical="188.3122" />
-			<speed>
-				<walk ground="60" />
-				<run ground="120" />
-			</speed>
-		</stats>
-		<status attackable="true" />
-		<collision>
-			<radius normal="7.5" />
-			<height normal="24" />
-		</collision>
-		<skillList>
-			<skill id="4416" level="6" /> <!-- Humanoid -->
-		</skillList>
-		<dropLists>
-			<drop>
-				<item id="49758" min="3" max="6" chance="100" /> <!-- Blood Crystal -->
-			</drop>
-		</dropLists>
-	</npc>
-	<npc id="36791" level="62" type="Monster" name="Human Knight" title="Royal Guard">
-		<race>HUMANOID</race>
-		<sex>MALE</sex>
-		<acquire exp="384" sp="0" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="5691.73148" hpRegen="7.5" mp="3197.505" mpRegen="2.7" />
-			<attack physical="521.12391" magical="355.86007" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="257.34267" magical="188.3122" />
-			<speed>
-				<walk ground="60" />
-				<run ground="120" />
-			</speed>
-		</stats>
-		<status attackable="true" />
-		<collision>
-			<radius normal="7.5" />
-			<height normal="23" />
-		</collision>
-		<skillList>
-			<skill id="4416" level="6" /> <!-- Humanoid -->
-		</skillList>
-		<dropLists>
-			<drop>
-				<item id="49758" min="3" max="6" chance="100" /> <!-- Blood Crystal -->
-			</drop>
-		</dropLists>
-	</npc>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org npcs.xsd">
+    <npc id="36721" level="80" type="Merchant" name="Leina" title="Clan Hall Manager">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>HUMAN</race>
+        <sex>FEMALE</sex>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6"/>
+            <speed>
+                <walk ground="50"/>
+                <run ground="100"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <skillList>
+            <skill id="4416" level="14"/> <!-- Humans -->
+            <skill id="4045" level="1"/> <!-- Full Magic Attack Resistance -->
+        </skillList>
+        <collision>
+            <radius normal="8"/>
+            <height normal="20.5"/>
+        </collision>
+    </npc>
+    <npc id="36722" level="80" type="Folk" name="Bini" title="Clan Hall Gatekeeper">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>HUMAN</race>
+        <sex>FEMALE</sex>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6"/>
+            <speed>
+                <walk ground="50"/>
+                <run ground="120"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <skillList>
+            <skill id="4416" level="14"/> <!-- Humans -->
+            <skill id="4045" level="1"/> <!-- Full Magic Attack Resistance -->
+        </skillList>
+        <collision>
+            <radius normal="9"/>
+            <height normal="22.25"/>
+        </collision>
+    </npc>
+    <npc id="36723" level="80" type="Merchant" name="Bubek" title="Clan Hall Manager">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>HUMAN</race>
+        <sex>FEMALE</sex>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6"/>
+            <speed>
+                <walk ground="50"/>
+                <run ground="100"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <skillList>
+            <skill id="4416" level="14"/> <!-- Humans -->
+            <skill id="4045" level="1"/> <!-- Full Magic Attack Resistance -->
+        </skillList>
+        <collision>
+            <radius normal="8"/>
+            <height normal="22"/>
+        </collision>
+    </npc>
+    <npc id="36724" level="80" type="Folk" name="Varin" title="Clan Hall Gatekeeper">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>HUMAN</race>
+        <sex>FEMALE</sex>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6"/>
+            <speed>
+                <walk ground="50"/>
+                <run ground="100"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <skillList>
+            <skill id="4416" level="14"/> <!-- Humans -->
+            <skill id="4045" level="1"/> <!-- Full Magic Attack Resistance -->
+        </skillList>
+        <collision>
+            <radius normal="8"/>
+            <height normal="23"/>
+        </collision>
+    </npc>
+    <npc id="36725" level="80" type="Merchant" name="Sarina" title="Clan Hall Manager">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>HUMAN</race>
+        <sex>FEMALE</sex>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6"/>
+            <speed>
+                <walk ground="50"/>
+                <run ground="100"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <skillList>
+            <skill id="4416" level="14"/> <!-- Humans -->
+            <skill id="4045" level="1"/> <!-- Full Magic Attack Resistance -->
+        </skillList>
+        <collision>
+            <radius normal="8"/>
+            <height normal="20.5"/>
+        </collision>
+    </npc>
+    <npc id="36726" level="80" type="Folk" name="Loneiren" title="Clan Hall Gatekeeper">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>HUMAN</race>
+        <sex>FEMALE</sex>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6"/>
+            <speed>
+                <walk ground="50"/>
+                <run ground="120"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <skillList>
+            <skill id="4416" level="14"/> <!-- Humans -->
+            <skill id="4045" level="1"/> <!-- Full Magic Attack Resistance -->
+        </skillList>
+        <collision>
+            <radius normal="9"/>
+            <height normal="22.25"/>
+        </collision>
+    </npc>
+    <npc id="36727" level="80" type="Merchant" name="Arinas" title="Clan Hall Manager">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>HUMAN</race>
+        <sex>FEMALE</sex>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6"/>
+            <speed>
+                <walk ground="50"/>
+                <run ground="100"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <skillList>
+            <skill id="4416" level="14"/> <!-- Humans -->
+            <skill id="4045" level="1"/> <!-- Full Magic Attack Resistance -->
+        </skillList>
+        <collision>
+            <radius normal="8"/>
+            <height normal="20.5"/>
+        </collision>
+    </npc>
+    <npc id="36728" level="80" type="Folk" name="Cardiff" title="Clan Hall Gatekeeper">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>HUMAN</race>
+        <sex>FEMALE</sex>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6"/>
+            <speed>
+                <walk ground="50"/>
+                <run ground="100"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <skillList>
+            <skill id="4416" level="14"/> <!-- Humans -->
+            <skill id="4045" level="1"/> <!-- Full Magic Attack Resistance -->
+        </skillList>
+        <collision>
+            <radius normal="8"/>
+            <height normal="22"/>
+        </collision>
+    </npc>
+    <npc id="36729" level="80" type="Merchant" name="Bremen" title="Clan Hall Manager">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>HUMAN</race>
+        <sex>FEMALE</sex>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6"/>
+            <speed>
+                <walk ground="50"/>
+                <run ground="100"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <skillList>
+            <skill id="4416" level="14"/> <!-- Humans -->
+            <skill id="4045" level="1"/> <!-- Full Magic Attack Resistance -->
+        </skillList>
+        <collision>
+            <radius normal="8"/>
+            <height normal="23"/>
+        </collision>
+    </npc>
+    <npc id="36730" level="80" type="Folk" name="Faolin" title="Clan Hall Gatekeeper">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>HUMAN</race>
+        <sex>FEMALE</sex>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6"/>
+            <speed>
+                <walk ground="50"/>
+                <run ground="120"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <skillList>
+            <skill id="4416" level="14"/> <!-- Humans -->
+            <skill id="4045" level="1"/> <!-- Full Magic Attack Resistance -->
+        </skillList>
+        <collision>
+            <radius normal="9"/>
+            <height normal="22.25"/>
+        </collision>
+    </npc>
+    <npc id="36731" level="80" type="Merchant" name="Kalein" title="Clan Hall Manager">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>HUMAN</race>
+        <sex>FEMALE</sex>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6"/>
+            <speed>
+                <walk ground="50"/>
+                <run ground="100"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <skillList>
+            <skill id="4416" level="14"/> <!-- Humans -->
+            <skill id="4045" level="1"/> <!-- Full Magic Attack Resistance -->
+        </skillList>
+        <collision>
+            <radius normal="8"/>
+            <height normal="20.5"/>
+        </collision>
+    </npc>
+    <npc id="36732" level="80" type="Folk" name="Coren" title="Clan Hall Gatekeeper">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>HUMAN</race>
+        <sex>FEMALE</sex>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6"/>
+            <speed>
+                <walk ground="50"/>
+                <run ground="100"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <skillList>
+            <skill id="4416" level="14"/> <!-- Humans -->
+            <skill id="4045" level="1"/> <!-- Full Magic Attack Resistance -->
+        </skillList>
+        <collision>
+            <radius normal="8"/>
+            <height normal="22"/>
+        </collision>
+    </npc>
+    <npc id="36733" level="80" type="Merchant" name="Winsnun" title="Clan Hall Manager">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>HUMAN</race>
+        <sex>FEMALE</sex>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6"/>
+            <speed>
+                <walk ground="50"/>
+                <run ground="100"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <skillList>
+            <skill id="4416" level="14"/> <!-- Humans -->
+            <skill id="4045" level="1"/> <!-- Full Magic Attack Resistance -->
+        </skillList>
+        <collision>
+            <radius normal="8"/>
+            <height normal="23"/>
+        </collision>
+    </npc>
+    <npc id="36734" level="80" type="Folk" name="Muren" title="Clan Hall Gatekeeper">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>HUMAN</race>
+        <sex>FEMALE</sex>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6"/>
+            <speed>
+                <walk ground="50"/>
+                <run ground="100"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <skillList>
+            <skill id="4416" level="14"/> <!-- Humans -->
+            <skill id="4045" level="1"/> <!-- Full Magic Attack Resistance -->
+        </skillList>
+        <collision>
+            <radius normal="8"/>
+            <height normal="22"/>
+        </collision>
+    </npc>
+    <npc id="36735" level="80" type="Merchant" name="Yuven" title="Clan Hall Manager">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>HUMAN</race>
+        <sex>FEMALE</sex>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6"/>
+            <speed>
+                <walk ground="50"/>
+                <run ground="100"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <skillList>
+            <skill id="4416" level="14"/> <!-- Humans -->
+            <skill id="4045" level="1"/> <!-- Full Magic Attack Resistance -->
+        </skillList>
+        <collision>
+            <radius normal="8"/>
+            <height normal="23"/>
+        </collision>
+    </npc>
+    <npc id="36736" level="80" type="Folk" name="Lenning" title="Clan Hall Gatekeeper">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>HUMAN</race>
+        <sex>FEMALE</sex>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6"/>
+            <speed>
+                <walk ground="50"/>
+                <run ground="100"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <skillList>
+            <skill id="4416" level="14"/> <!-- Humans -->
+            <skill id="4045" level="1"/> <!-- Full Magic Attack Resistance -->
+        </skillList>
+        <collision>
+            <radius normal="8"/>
+            <height normal="20.5"/>
+        </collision>
+    </npc>
+    <npc id="36737" level="80" type="Merchant" name="Gairin" title="Clan Hall Manager">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>HUMAN</race>
+        <sex>FEMALE</sex>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6"/>
+            <speed>
+                <walk ground="50"/>
+                <run ground="120"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <skillList>
+            <skill id="4416" level="14"/> <!-- Humans -->
+            <skill id="4045" level="1"/> <!-- Full Magic Attack Resistance -->
+        </skillList>
+        <collision>
+            <radius normal="9"/>
+            <height normal="22.25"/>
+        </collision>
+    </npc>
+    <npc id="36738" level="80" type="Folk" name="Ludina" title="Clan Hall Gatekeeper">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>HUMAN</race>
+        <sex>FEMALE</sex>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6"/>
+            <speed>
+                <walk ground="50"/>
+                <run ground="100"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <skillList>
+            <skill id="4416" level="14"/> <!-- Humans -->
+            <skill id="4045" level="1"/> <!-- Full Magic Attack Resistance -->
+        </skillList>
+        <collision>
+            <radius normal="8"/>
+            <height normal="20.5"/>
+        </collision>
+    </npc>
+    <npc id="36739" level="80" type="Merchant" name="Flon" title="Clan Hall Manager">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>HUMAN</race>
+        <sex>FEMALE</sex>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6"/>
+            <speed>
+                <walk ground="50"/>
+                <run ground="120"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <skillList>
+            <skill id="4416" level="14"/> <!-- Humans -->
+            <skill id="4045" level="1"/> <!-- Full Magic Attack Resistance -->
+        </skillList>
+        <collision>
+            <radius normal="9"/>
+            <height normal="22.25"/>
+        </collision>
+    </npc>
+    <npc id="36740" level="80" type="Folk" name="Danif" title="Clan Hall Gatekeeper">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>HUMAN</race>
+        <sex>FEMALE</sex>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6"/>
+            <speed>
+                <walk ground="50"/>
+                <run ground="100"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <skillList>
+            <skill id="4416" level="14"/> <!-- Humans -->
+            <skill id="4045" level="1"/> <!-- Full Magic Attack Resistance -->
+        </skillList>
+        <collision>
+            <radius normal="8"/>
+            <height normal="23"/>
+        </collision>
+    </npc>
+    <npc id="36783" level="62" type="Monster" name="Human Knight" title="Royal Guard">
+        <race>HUMANOID</race>
+        <sex>MALE</sex>
+        <acquire exp="384" sp="0"/>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="5691.73148" hpRegen="7.5" mp="3197.505" mpRegen="2.7"/>
+            <attack physical="521.12391" magical="355.86007" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120"/>
+            <defence physical="257.34267" magical="188.3122"/>
+            <speed>
+                <walk ground="60"/>
+                <run ground="160"/>
+            </speed>
+        </stats>
+        <status attackable="true"/>
+        <collision>
+            <radius normal="9"/>
+            <height normal="23"/>
+        </collision>
+        <skillList>
+            <skill id="4416" level="6"/> <!-- Humanoid -->
+        </skillList>
+        <dropLists>
+            <drop>
+                <item id="49758" min="3" max="6" chance="100"/> <!-- Blood Crystal -->
+            </drop>
+        </dropLists>
+    </npc>
+    <npc id="36784" level="62" type="Monster" name="Human Knight" title="Royal Guard">
+        <race>HUMANOID</race>
+        <sex>MALE</sex>
+        <acquire exp="384" sp="0"/>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="5691.73148" hpRegen="7.5" mp="3197.505" mpRegen="2.7"/>
+            <attack physical="521.12391" magical="355.86007" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120"/>
+            <defence physical="257.34267" magical="188.3122"/>
+            <speed>
+                <walk ground="60"/>
+                <run ground="160"/>
+            </speed>
+        </stats>
+        <status attackable="true"/>
+        <collision>
+            <radius normal="8"/>
+            <height normal="23.5"/>
+        </collision>
+        <skillList>
+            <skill id="4416" level="6"/> <!-- Humanoid -->
+        </skillList>
+        <dropLists>
+            <drop>
+                <item id="49758" min="3" max="6" chance="100"/> <!-- Blood Crystal -->
+            </drop>
+        </dropLists>
+    </npc>
+    <npc id="36785" level="62" type="Monster" name="Human Knight" title="Royal Guard">
+        <race>HUMANOID</race>
+        <sex>MALE</sex>
+        <acquire exp="384" sp="0"/>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="5691.73148" hpRegen="7.5" mp="3197.505" mpRegen="2.7"/>
+            <attack physical="521.12391" magical="355.86007" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120"/>
+            <defence physical="257.34267" magical="188.3122"/>
+            <speed>
+                <walk ground="60"/>
+                <run ground="160"/>
+            </speed>
+        </stats>
+        <status attackable="true"/>
+        <collision>
+            <radius normal="7.5"/>
+            <height normal="24"/>
+        </collision>
+        <skillList>
+            <skill id="4416" level="6"/> <!-- Humanoid -->
+        </skillList>
+        <dropLists>
+            <drop>
+                <item id="49758" min="3" max="6" chance="100"/> <!-- Blood Crystal -->
+            </drop>
+        </dropLists>
+    </npc>
+    <npc id="36786" level="62" type="Monster" name="Human Knight" title="Royal Guard">
+        <race>HUMANOID</race>
+        <sex>MALE</sex>
+        <acquire exp="384" sp="0"/>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="5691.73148" hpRegen="7.5" mp="3197.505" mpRegen="2.7"/>
+            <attack physical="521.12391" magical="355.86007" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120"/>
+            <defence physical="257.34267" magical="188.3122"/>
+            <speed>
+                <walk ground="60"/>
+                <run ground="160"/>
+            </speed>
+        </stats>
+        <status attackable="true"/>
+        <collision>
+            <radius normal="7.5"/>
+            <height normal="23"/>
+        </collision>
+        <skillList>
+            <skill id="4416" level="6"/> <!-- Humanoid -->
+        </skillList>
+        <dropLists>
+            <drop>
+                <item id="49758" min="3" max="6" chance="100"/> <!-- Blood Crystal -->
+            </drop>
+        </dropLists>
+    </npc>
+    <npc id="36787" level="80" type="Folk" name="Shield" title="Gludio">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>HUMAN</race>
+        <sex>FEMALE</sex>
+        <equipment rhand="76" lhand="2497"/>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="14629" hpRegen="10.5" mp="2932" mpRegen="3.6"/>
+            <speed>
+                <walk ground="50"/>
+                <run ground="120"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <skillList>
+            <skill id="4045" level="1"/> <!-- Full Magic Attack Resistance -->
+        </skillList>
+        <collision>
+            <radius normal="7"/>
+            <height normal="24"/>
+        </collision>
+    </npc>
+    <npc id="36788" level="62" type="Monster" name="Human Knight" title="Royal Guard">
+        <race>HUMANOID</race>
+        <sex>MALE</sex>
+        <acquire exp="384" sp="0"/>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="5691.73148" hpRegen="7.5" mp="3197.505" mpRegen="2.7"/>
+            <attack physical="521.12391" magical="355.86007" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120"/>
+            <defence physical="257.34267" magical="188.3122"/>
+            <speed>
+                <walk ground="60"/>
+                <run ground="120"/>
+            </speed>
+        </stats>
+        <status attackable="true"/>
+        <collision>
+            <radius normal="9"/>
+            <height normal="23"/>
+        </collision>
+        <skillList>
+            <skill id="4416" level="6"/> <!-- Humanoid -->
+        </skillList>
+        <dropLists>
+            <drop>
+                <item id="49758" min="3" max="6" chance="100"/> <!-- Blood Crystal -->
+            </drop>
+        </dropLists>
+    </npc>
+    <npc id="36789" level="62" type="Monster" name="Human Knight" title="Royal Guard">
+        <race>HUMANOID</race>
+        <sex>MALE</sex>
+        <acquire exp="384" sp="0"/>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="5691.73148" hpRegen="7.5" mp="3197.505" mpRegen="2.7"/>
+            <attack physical="521.12391" magical="355.86007" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120"/>
+            <defence physical="257.34267" magical="188.3122"/>
+            <speed>
+                <walk ground="60"/>
+                <run ground="120"/>
+            </speed>
+        </stats>
+        <status attackable="true"/>
+        <collision>
+            <radius normal="8"/>
+            <height normal="23.5"/>
+        </collision>
+        <skillList>
+            <skill id="4416" level="6"/> <!-- Humanoid -->
+        </skillList>
+        <dropLists>
+            <drop>
+                <item id="49758" min="3" max="6" chance="100"/> <!-- Blood Crystal -->
+            </drop>
+        </dropLists>
+    </npc>
+    <npc id="36790" level="62" type="Monster" name="Human Knight" title="Royal Guard">
+        <race>HUMANOID</race>
+        <sex>MALE</sex>
+        <acquire exp="384" sp="0"/>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="5691.73148" hpRegen="7.5" mp="3197.505" mpRegen="2.7"/>
+            <attack physical="521.12391" magical="355.86007" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120"/>
+            <defence physical="257.34267" magical="188.3122"/>
+            <speed>
+                <walk ground="60"/>
+                <run ground="120"/>
+            </speed>
+        </stats>
+        <status attackable="true"/>
+        <collision>
+            <radius normal="7.5"/>
+            <height normal="24"/>
+        </collision>
+        <skillList>
+            <skill id="4416" level="6"/> <!-- Humanoid -->
+        </skillList>
+        <dropLists>
+            <drop>
+                <item id="49758" min="3" max="6" chance="100"/> <!-- Blood Crystal -->
+            </drop>
+        </dropLists>
+    </npc>
+    <npc id="36791" level="62" type="Monster" name="Human Knight" title="Royal Guard">
+        <race>HUMANOID</race>
+        <sex>MALE</sex>
+        <acquire exp="384" sp="0"/>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="5691.73148" hpRegen="7.5" mp="3197.505" mpRegen="2.7"/>
+            <attack physical="521.12391" magical="355.86007" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120"/>
+            <defence physical="257.34267" magical="188.3122"/>
+            <speed>
+                <walk ground="60"/>
+                <run ground="120"/>
+            </speed>
+        </stats>
+        <status attackable="true"/>
+        <collision>
+            <radius normal="7.5"/>
+            <height normal="23"/>
+        </collision>
+        <skillList>
+            <skill id="4416" level="6"/> <!-- Humanoid -->
+        </skillList>
+        <dropLists>
+            <drop>
+                <item id="49758" min="3" max="6" chance="100"/> <!-- Blood Crystal -->
+            </drop>
+        </dropLists>
+    </npc>
+    <npc id="36792" level="85" type="Folk" name="Giran Relic">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+            <vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+            <speed>
+                <walk ground="60" />
+                <run ground="120" />
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+            <defence physical="405.85106382979" magical="297.0297029703" />
+        </stats>
+        <status attackable="false" />
+        <collision>
+            <radius normal="5" />
+            <height normal="12" />
+        </collision>
+    </npc>
 </list>

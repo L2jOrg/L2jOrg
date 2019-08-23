@@ -1,19 +1,3 @@
-/*
- * This file is part of the L2J Mobius project.
- *
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
- * General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this program. If not, see <http://www.gnu.org/licenses/>.
- */
 package org.l2j.gameserver.communitybbs.Manager;
 
 import org.l2j.commons.database.DatabaseFactory;
@@ -25,17 +9,16 @@ import org.slf4j.LoggerFactory;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.Statement;
-import java.util.List;
-import java.util.concurrent.CopyOnWriteArrayList;
-
+import java.util.Collection;
+import java.util.concurrent.ConcurrentHashMap;
 
 public class ForumsBBSManager extends BaseBBSManager {
     private static final Logger LOGGER = LoggerFactory.getLogger(ForumsBBSManager.class);
-    private final List<Forum> _table;
+    private final Collection<Forum> _table;
     private int _lastid = 1;
 
     private ForumsBBSManager() {
-        _table = new CopyOnWriteArrayList<>();
+        _table = ConcurrentHashMap.newKeySet();
         try (Connection con = DatabaseFactory.getInstance().getConnection();
              Statement s = con.createStatement();
              ResultSet rs = s.executeQuery("SELECT forum_id FROM forums WHERE forum_type = 0")) {
@@ -43,7 +26,7 @@ public class ForumsBBSManager extends BaseBBSManager {
                 addForum(new Forum(rs.getInt("forum_id"), null));
             }
         } catch (Exception e) {
-            LOGGER.warn(getClass().getSimpleName() + ": Data error on Forum (root): " + e.getMessage(), e);
+            LOGGER.warn("Data error on Forum (root): " + e.getMessage(), e);
         }
     }
 

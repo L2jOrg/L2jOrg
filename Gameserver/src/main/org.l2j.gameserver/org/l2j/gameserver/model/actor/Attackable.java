@@ -97,7 +97,7 @@ public class Attackable extends Npc {
      */
     public Attackable(NpcTemplate template) {
         super(template);
-        setInstanceType(InstanceType.L2Attackable);
+        setInstanceType(InstanceType.Attackable);
         setIsInvul(false);
         _mustGiveExpSp = true;
     }

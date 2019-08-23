@@ -1,8 +1,8 @@
 package org.l2j.gameserver.model.actor.instance;
 
 import org.l2j.commons.database.DatabaseFactory;
-import org.l2j.gameserver.Config;
 import org.l2j.commons.threading.ThreadPoolManager;
+import org.l2j.gameserver.Config;
 import org.l2j.gameserver.ai.CtrlIntention;
 import org.l2j.gameserver.data.sql.impl.CharSummonTable;
 import org.l2j.gameserver.data.sql.impl.SummonEffectsTable;
@@ -29,11 +29,8 @@ import org.slf4j.LoggerFactory;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.concurrent.CopyOnWriteArrayList;
+import java.util.*;
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.Future;
 
 /**
@@ -189,9 +186,9 @@ public class Servitor extends Summon implements Runnable {
     @Override
     public final void stopSkillEffects(boolean removed, int skillId) {
         super.stopSkillEffects(removed, skillId);
-        final Map<Integer, List<SummonEffect>> servitorEffects = SummonEffectsTable.getInstance().getServitorEffects(getOwner());
+        final Map<Integer, Collection<SummonEffect>> servitorEffects = SummonEffectsTable.getInstance().getServitorEffects(getOwner());
         if (servitorEffects != null) {
-            final List<SummonEffect> effects = servitorEffects.get(_referenceSkill);
+            final Collection<SummonEffect> effects = servitorEffects.get(_referenceSkill);
             if ((effects != null) && !effects.isEmpty()) {
                 for (SummonEffect effect : effects) {
                     final Skill skill = effect.getSkill();
@@ -246,7 +243,7 @@ public class Servitor extends Summon implements Runnable {
 
             int buff_index = 0;
 
-            final List<Long> storedSkills = new CopyOnWriteArrayList<>();
+            final List<Long> storedSkills = new ArrayList<>();
 
             // Store all effect data along with calculated remaining
             if (storeEffects) {
@@ -301,7 +298,7 @@ public class Servitor extends Summon implements Runnable {
                             SummonEffectsTable.getInstance().getServitorEffectsOwner().get(getOwner().getObjectId()).put(getOwner().getClassIndex(), new HashMap<>());
                         }
                         if (!SummonEffectsTable.getInstance().getServitorEffects(getOwner()).containsKey(getReferenceSkill())) {
-                            SummonEffectsTable.getInstance().getServitorEffects(getOwner()).put(getReferenceSkill(), new CopyOnWriteArrayList<>());
+                            SummonEffectsTable.getInstance().getServitorEffects(getOwner()).put(getReferenceSkill(), ConcurrentHashMap.newKeySet());
                         }
 
                         SummonEffectsTable.getInstance().getServitorEffects(getOwner()).get(getReferenceSkill()).add(new SummonEffect(skill, info.getTime()));
@@ -344,7 +341,7 @@ public class Servitor extends Summon implements Runnable {
                                     SummonEffectsTable.getInstance().getServitorEffectsOwner().get(getOwner().getObjectId()).put(getOwner().getClassIndex(), new HashMap<>());
                                 }
                                 if (!SummonEffectsTable.getInstance().getServitorEffects(getOwner()).containsKey(getReferenceSkill())) {
-                                    SummonEffectsTable.getInstance().getServitorEffects(getOwner()).put(getReferenceSkill(), new CopyOnWriteArrayList<>());
+                                    SummonEffectsTable.getInstance().getServitorEffects(getOwner()).put(getReferenceSkill(), ConcurrentHashMap.newKeySet());
                                 }
 
                                 SummonEffectsTable.getInstance().getServitorEffects(getOwner()).get(getReferenceSkill()).add(new SummonEffect(skill, effectCurTime));

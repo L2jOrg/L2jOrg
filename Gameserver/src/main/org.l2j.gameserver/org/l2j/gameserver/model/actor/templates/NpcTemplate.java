@@ -19,7 +19,6 @@ import org.l2j.gameserver.model.stats.Stats;
 import org.l2j.gameserver.util.GameUtils;
 
 import java.util.*;
-import java.util.concurrent.CopyOnWriteArrayList;
 
 import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;
@@ -84,8 +83,8 @@ public final class NpcTemplate extends CreatureTemplate implements IIdentifiable
     private Map<AISkillScope, List<Skill>> _aiSkillLists;
     private Set<Integer> _clans;
     private Set<Integer> _ignoreClanNpcIds;
-    private CopyOnWriteArrayList<DropHolder> _dropListDeath;
-    private CopyOnWriteArrayList<DropHolder> _dropListSpoil;
+    private final List<DropHolder> _dropListDeath = new ArrayList<>();
+    private final List<DropHolder> _dropListSpoil = new ArrayList<>();
     private double _collisionRadiusGrown;
     private double _collisionHeightGrown;
     private int _mpRewardValue;
@@ -595,31 +594,18 @@ public final class NpcTemplate extends CreatureTemplate implements IIdentifiable
     }
 
     public void addDrop(DropHolder dropHolder) {
-        if (_dropListDeath == null) {
-            _dropListDeath = new CopyOnWriteArrayList<>();
-        }
         _dropListDeath.add(dropHolder);
     }
 
     public void addSpoil(DropHolder dropHolder) {
-        if (_dropListSpoil == null) {
-            _dropListSpoil = new CopyOnWriteArrayList<>();
-        }
         _dropListSpoil.add(dropHolder);
     }
 
     public List<DropHolder> getDropList(DropType dropType) {
-        switch (dropType) {
-            case DROP:
-            case LUCKY: // never happens
-            {
-                return _dropListDeath;
-            }
-            case SPOIL: {
-                return _dropListSpoil;
-            }
-        }
-        return null;
+        return switch (dropType) {
+            case DROP, LUCKY -> _dropListDeath;
+            case SPOIL -> _dropListSpoil;
+        };
     }
 
     public Collection<ItemHolder> calculateDrops(DropType dropType, Creature victim, Creature killer) {

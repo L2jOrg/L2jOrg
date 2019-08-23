@@ -1,576 +1,576 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org npcs.xsd">
-	<npc id="31580" level="70" type="Folk" name="Galadrid" title="Master">
-		<parameters>
-			<param name="MoveAroundSocial" value="0" />
-			<param name="MoveAroundSocial1" value="120" />
-		</parameters>
-		<race>DARK_ELF</race>
-		<sex>MALE</sex>
-		<equipment rhand="132" lhand="110" /> <!-- Ultimate Sword / Doom Shield -->
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2578" hpRegen="7.5" mp="1345" mpRegen="2.7" />
-			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="295.91597" magical="216.53847" shield="148" shieldRate="20" />
-			<speed>
-				<walk ground="50" />
-				<run ground="120" />
-			</speed>
-			<abnormalResist physical="10" magical="10" />
-		</stats>
-		<status attackable="false" undying="true" />
-		<skillList>
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="16" /> <!-- Dark Elves -->
-		</skillList>
-		<exCrtEffect>true</exCrtEffect>
-		<ai clanHelpRange="300" aggroRange="450" />
-		<collision>
-			<radius normal="8" />
-			<height normal="23" />
-		</collision>
-	</npc>
-	<npc id="31581" level="70" type="Folk" name="Anastia" title="Magister">
-		<parameters>
-			<param name="MoveAroundSocial" value="0" />
-			<param name="MoveAroundSocial1" value="106" />
-			<param name="skill_sharing_item" value="15309" />
-			<param name="token_num" value="7" />
-		</parameters>
-		<race>DARK_ELF</race>
-		<sex>FEMALE</sex>
-		<equipment rhand="202" /> <!-- Mace of Underworld -->
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2578" hpRegen="7.5" mp="1345" mpRegen="2.7" />
-			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="295.91597" magical="216.53847" />
-			<speed>
-				<walk ground="50" />
-				<run ground="120" />
-			</speed>
-			<abnormalResist physical="10" magical="10" />
-		</stats>
-		<status attackable="false" undying="true" />
-		<skillList>
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="16" /> <!-- Dark Elves -->
-		</skillList>
-		<exCrtEffect>true</exCrtEffect>
-		<ai clanHelpRange="300" aggroRange="450" />
-		<collision>
-			<radius normal="8" />
-			<height normal="25" />
-		</collision>
-	</npc>
-	<npc id="31582" level="70" type="Folk" name="Mordred" title="Dark Knight">
-		<parameters>
-			<param name="MoveAroundSocial" value="0" />
-			<param name="MoveAroundSocial1" value="0" />
-		</parameters>
-		<race>DARK_ELF</race>
-		<sex>MALE</sex>
-		<equipment rhand="84" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2578" hpRegen="7.5" mp="1345" mpRegen="2.7" />
-			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="295.91597" magical="216.53847" shield="148" shieldRate="20" />
-			<speed>
-				<walk ground="60" />
-				<run ground="120" />
-			</speed>
-			<hitTime>450</hitTime>
-			<abnormalResist physical="10" magical="10" />
-		</stats>
-		<status attackable="false" undying="true" />
-		<skillList>
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="9" /> <!-- Demons -->
-		</skillList>
-		<exCrtEffect>true</exCrtEffect>
-		<ai clanHelpRange="300" aggroRange="450" />
-		<collision>
-			<radius normal="8" grown="9" />
-			<height normal="23.5" grown="29" />
-		</collision>
-	</npc>
-	<npc id="31583" level="80" type="Merchant" name="Feynn" title="Blacksmith">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<equipment rhand="168" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="1345" mpRegen="3.6" />
-			<speed>
-				<walk ground="50" />
-				<run ground="120" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="7" />
-			<height normal="16.5" />
-		</collision>
-	</npc>
-	<npc id="31584" level="80" type="Folk" name="Valentine" title="Brewer">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="1345" mpRegen="3.6" />
-			<speed>
-				<walk ground="20" />
-				<run ground="120" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="8" />
-			<height normal="17.5" />
-		</collision>
-	</npc>
-	<npc id="31585" level="70" type="Folk" name="Sparky the Cat" title="Keats Servitor">
-		<parameters>
-			<param name="MoveAroundSocial" value="0" />
-			<param name="MoveAroundSocial1" value="0" />
-		</parameters>
-		<race>ANIMAL</race>
-		<sex>MALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2578" hpRegen="7.5" mp="1345" mpRegen="2.7" />
-			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="295.91597" magical="216.53847" />
-			<speed>
-				<walk ground="40" />
-				<run ground="120" />
-			</speed>
-			<hitTime>610</hitTime>
-			<abnormalResist physical="10" magical="10" />
-		</stats>
-		<status attackable="false" undying="true" />
-		<skillList>
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="7" /> <!-- Spirits -->
-		</skillList>
-		<exCrtEffect>true</exCrtEffect>
-		<ai clanHelpRange="300" aggroRange="450" />
-		<collision>
-			<radius normal="9" />
-			<height normal="16" />
-		</collision>
-	</npc>
-	<npc id="31586" level="70" type="Folk" name="Sparky the Cat" title="Keats Servitor">
-		<parameters>
-			<param name="MoveAroundSocial" value="0" />
-			<param name="MoveAroundSocial1" value="0" />
-		</parameters>
-		<race>ANIMAL</race>
-		<sex>MALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2578" hpRegen="7.5" mp="1345" mpRegen="2.7" />
-			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="295.91597" magical="216.53847" />
-			<speed>
-				<walk ground="40" />
-				<run ground="120" />
-			</speed>
-			<hitTime>610</hitTime>
-			<abnormalResist physical="10" magical="10" />
-		</stats>
-		<status attackable="false" undying="true" />
-		<skillList>
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="7" /> <!-- Spirits -->
-		</skillList>
-		<exCrtEffect>true</exCrtEffect>
-		<ai clanHelpRange="300" aggroRange="450" />
-		<collision>
-			<radius normal="9" />
-			<height normal="16" />
-		</collision>
-	</npc>
-	<npc id="31587" level="80" type="VillageMasterMystic" name="Halaster" title="Grand Magister">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="1345" mpRegen="3.6" />
-			<speed>
-				<walk ground="50" />
-				<run ground="120" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="8" />
-			<height normal="24" />
-		</collision>
-	</npc>
-	<npc id="31589" level="80" type="Folk" name="Duda-Mara Totem Spirit">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="1345" mpRegen="3.6" />
-			<speed>
-				<walk ground="72" />
-				<run ground="120" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="26" />
-			<height normal="25.5" />
-		</collision>
-	</npc>
-	<npc id="31590" level="70" type="Folk" name="Devianne" title="Truth Seeker">
-		<parameters>
-			<param name="MoveAroundSocial" value="0" />
-			<param name="MoveAroundSocial1" value="90" />
-		</parameters>
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<equipment rhand="7890" /> <!-- Crystal Staff -->
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2578" hpRegen="7.5" mp="1345" mpRegen="2.7" />
-			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="295.91597" magical="216.53847" />
-			<speed>
-				<walk ground="50" />
-				<run ground="120" />
-			</speed>
-			<abnormalResist physical="10" magical="10" />
-		</stats>
-		<status attackable="false" undying="true" />
-		<skillList>
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="14" /> <!-- Humans -->
-		</skillList>
-		<exCrtEffect>true</exCrtEffect>
-		<ai clanHelpRange="300" aggroRange="450" />
-		<collision>
-			<radius normal="8" />
-			<height normal="23" />
-		</collision>
-	</npc>
-	<npc id="31591" level="70" type="Folk" name="Sunset Guide Luna">
-		<parameters>
-			<param name="MoveAroundSocial" value="0" />
-			<param name="MoveAroundSocial1" value="120" />
-		</parameters>
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<equipment rhand="189" lhand="633" /> <!-- Staff of Life / Zubei's Shield -->
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2578" hpRegen="7.5" mp="1345" mpRegen="2.7" />
-			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="295.91597" magical="216.53847" shield="148" shieldRate="20" />
-			<speed>
-				<walk ground="50" />
-				<run ground="120" />
-			</speed>
-			<abnormalResist physical="10" magical="10" />
-		</stats>
-		<status attackable="false" undying="true" />
-		<skillList>
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="14" /> <!-- Humans -->
-		</skillList>
-		<exCrtEffect>true</exCrtEffect>
-		<ai clanHelpRange="300" aggroRange="450" />
-		<collision>
-			<radius normal="8" />
-			<height normal="22.5" />
-		</collision>
-	</npc>
-	<npc id="31594" level="70" type="Folk" name="Mond" title="Chief Inspector">
-		<parameters>
-			<param name="MoveAroundSocial" value="0" />
-			<param name="MoveAroundSocial1" value="97" />
-		</parameters>
-		<race>DWARF</race>
-		<sex>MALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2578" hpRegen="7.5" mp="1345" mpRegen="2.7" />
-			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="295.91597" magical="216.53847" />
-			<speed>
-				<walk ground="50" />
-				<run ground="120" />
-			</speed>
-			<abnormalResist physical="10" magical="10" />
-		</stats>
-		<status attackable="false" undying="true" />
-		<skillList>
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="18" /> <!-- Dwarves -->
-		</skillList>
-		<exCrtEffect>true</exCrtEffect>
-		<ai clanHelpRange="300" aggroRange="450" />
-		<collision>
-			<radius normal="8" />
-			<height normal="19.5" />
-		</collision>
-	</npc>
-	<npc id="31595" level="70" type="Folk" name="Leona Blackbird" title="Fire Dragon Bride">
-		<parameters>
-			<param name="MoveAroundSocial" value="0" />
-			<param name="MoveAroundSocial1" value="90" />
-		</parameters>
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<equipment rhand="97" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2578" hpRegen="7.5" mp="1345" mpRegen="2.7" />
-			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="295.91597" magical="216.53847" shield="148" shieldRate="20" />
-			<speed>
-				<walk ground="64" />
-				<run ground="120" />
-			</speed>
-			<abnormalResist physical="10" magical="10" />
-		</stats>
-		<status attackable="false" undying="true" />
-		<skillList>
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="14" /> <!-- Humans -->
-		</skillList>
-		<exCrtEffect>true</exCrtEffect>
-		<ai clanHelpRange="300" aggroRange="450" />
-		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
-		</collision>
-	</npc>
-	<npc id="31596" level="70" type="Folk" name="Tobald" title="Master">
-		<parameters>
-			<param name="MoveAroundSocial" value="0" />
-			<param name="MoveAroundSocial1" value="144" />
-		</parameters>
-		<race>DWARF</race>
-		<sex>MALE</sex>
-		<equipment rhand="187" /> <!-- Atuba Hammer -->
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2578" hpRegen="7.5" mp="1345" mpRegen="2.7" />
-			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="295.91597" magical="216.53847" />
-			<speed>
-				<walk ground="50" />
-				<run ground="120" />
-			</speed>
-			<abnormalResist physical="10" magical="10" />
-		</stats>
-		<status attackable="false" undying="true" />
-		<skillList>
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="18" /> <!-- Dwarves -->
-		</skillList>
-		<exCrtEffect>true</exCrtEffect>
-		<ai clanHelpRange="300" aggroRange="450" />
-		<collision>
-			<radius normal="8" />
-			<height normal="19" />
-		</collision>
-	</npc>
-	<npc id="31597" level="70" type="Folk" name="Tobald" title="Master">
-		<parameters>
-			<param name="MoveAroundSocial" value="0" />
-			<param name="MoveAroundSocial1" value="144" />
-		</parameters>
-		<race>DWARF</race>
-		<sex>MALE</sex>
-		<equipment rhand="187" /> <!-- Atuba Hammer -->
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2578" hpRegen="7.5" mp="1345" mpRegen="2.7" />
-			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="295.91597" magical="216.53847" />
-			<speed>
-				<walk ground="50" />
-				<run ground="120" />
-			</speed>
-			<abnormalResist physical="10" magical="10" />
-		</stats>
-		<status attackable="false" undying="true" />
-		<skillList>
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="18" /> <!-- Dwarves -->
-		</skillList>
-		<exCrtEffect>true</exCrtEffect>
-		<ai clanHelpRange="300" aggroRange="450" />
-		<collision>
-			<radius normal="8" />
-			<height normal="19" />
-		</collision>
-	</npc>
-	<npc id="31598" level="70" type="Folk" name="Medina Blackheart">
-		<parameters>
-			<param name="MoveAroundSocial" value="0" />
-			<param name="MoveAroundSocial1" value="90" />
-		</parameters>
-		<race>DARK_ELF</race>
-		<sex>FEMALE</sex>
-		<equipment rhand="206" /> <!-- Demon's Staff -->
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2578" hpRegen="7.5" mp="1345" mpRegen="2.7" />
-			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="295.91597" magical="216.53847" />
-			<speed>
-				<walk ground="50" />
-				<run ground="120" />
-			</speed>
-			<abnormalResist physical="10" magical="10" />
-		</stats>
-		<status attackable="false" undying="true" />
-		<skillList>
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="16" /> <!-- Dark Elves -->
-		</skillList>
-		<exCrtEffect>true</exCrtEffect>
-		<ai clanHelpRange="300" aggroRange="450" />
-		<collision>
-			<radius normal="8" />
-			<height normal="24.5" />
-		</collision>
-	</npc>
-	<npc id="31599" level="70" type="Folk" name="Disgraced Knight Waldstein">
-		<parameters>
-			<param name="MoveAroundSocial" value="0" />
-			<param name="MoveAroundSocial1" value="63" />
-		</parameters>
-		<race>HUMAN</race>
-		<sex>MALE</sex>
-		<equipment rhand="81" /> <!-- Dragon Slayer -->
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2578" hpRegen="7.5" mp="1345" mpRegen="2.7" />
-			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="295.91597" magical="216.53847" />
-			<speed>
-				<walk ground="50" />
-				<run ground="120" />
-			</speed>
-			<abnormalResist physical="10" magical="10" />
-		</stats>
-		<status attackable="false" undying="true" />
-		<skillList>
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="14" /> <!-- Humans -->
-		</skillList>
-		<exCrtEffect>true</exCrtEffect>
-		<ai clanHelpRange="300" aggroRange="450" />
-		<collision>
-			<radius normal="8" />
-			<height normal="23.5" />
-		</collision>
-	</npc>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org npcs.xsd">
+    <npc id="31580" level="70" type="Folk" name="Galadrid" title="Master">
+        <parameters>
+            <param name="MoveAroundSocial" value="0"/>
+            <param name="MoveAroundSocial1" value="120"/>
+        </parameters>
+        <race>DARK_ELF</race>
+        <sex>MALE</sex>
+        <equipment rhand="132" lhand="110"/> <!-- Ultimate Sword / Doom Shield -->
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="2578" hpRegen="7.5" mp="1345" mpRegen="2.7"/>
+            <attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
+            <defence physical="295.91597" magical="216.53847" shield="148" shieldRate="20"/>
+            <speed>
+                <walk ground="50"/>
+                <run ground="120"/>
+            </speed>
+            <abnormalResist physical="10" magical="10"/>
+        </stats>
+        <status attackable="false" undying="true"/>
+        <skillList>
+            <skill id="4045" level="1"/> <!-- Resist Full Magic Attack -->
+            <skill id="4408" level="1"/> <!-- HP Increase (1x) -->
+            <skill id="4409" level="1"/> <!-- MP Increase (1x) -->
+            <skill id="4410" level="11"/> <!-- Average P. Atk. -->
+            <skill id="4411" level="11"/> <!-- Average M. Atk. -->
+            <skill id="4412" level="11"/> <!-- Average P. Def. -->
+            <skill id="4413" level="11"/> <!-- Average M. Def. -->
+            <skill id="4414" level="2"/> <!-- Standard Type -->
+            <skill id="4415" level="3"/> <!-- One-handed Sword -->
+            <skill id="4416" level="16"/> <!-- Dark Elves -->
+        </skillList>
+        <exCrtEffect>true</exCrtEffect>
+        <ai clanHelpRange="300" aggroRange="450"/>
+        <collision>
+            <radius normal="8"/>
+            <height normal="23"/>
+        </collision>
+    </npc>
+    <npc id="31581" level="70" type="Folk" name="Anastia" title="Magister">
+        <parameters>
+            <param name="MoveAroundSocial" value="0"/>
+            <param name="MoveAroundSocial1" value="106"/>
+            <param name="skill_sharing_item" value="15309"/>
+            <param name="token_num" value="7"/>
+        </parameters>
+        <race>DARK_ELF</race>
+        <sex>FEMALE</sex>
+        <equipment rhand="202"/> <!-- Mace of Underworld -->
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="2578" hpRegen="7.5" mp="1345" mpRegen="2.7"/>
+            <attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
+            <defence physical="295.91597" magical="216.53847"/>
+            <speed>
+                <walk ground="50"/>
+                <run ground="120"/>
+            </speed>
+            <abnormalResist physical="10" magical="10"/>
+        </stats>
+        <status attackable="false" undying="true"/>
+        <skillList>
+            <skill id="4045" level="1"/> <!-- Resist Full Magic Attack -->
+            <skill id="4408" level="1"/> <!-- HP Increase (1x) -->
+            <skill id="4409" level="1"/> <!-- MP Increase (1x) -->
+            <skill id="4410" level="11"/> <!-- Average P. Atk. -->
+            <skill id="4411" level="11"/> <!-- Average M. Atk. -->
+            <skill id="4412" level="11"/> <!-- Average P. Def. -->
+            <skill id="4413" level="11"/> <!-- Average M. Def. -->
+            <skill id="4414" level="2"/> <!-- Standard Type -->
+            <skill id="4415" level="3"/> <!-- One-handed Sword -->
+            <skill id="4416" level="16"/> <!-- Dark Elves -->
+        </skillList>
+        <exCrtEffect>true</exCrtEffect>
+        <ai clanHelpRange="300" aggroRange="450"/>
+        <collision>
+            <radius normal="8"/>
+            <height normal="25"/>
+        </collision>
+    </npc>
+    <npc id="31582" level="70" type="Folk" name="Mordred" title="Dark Knight">
+        <parameters>
+            <param name="MoveAroundSocial" value="0"/>
+            <param name="MoveAroundSocial1" value="0"/>
+        </parameters>
+        <race>DARK_ELF</race>
+        <sex>MALE</sex>
+        <equipment rhand="84"/>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="2578" hpRegen="7.5" mp="1345" mpRegen="2.7"/>
+            <attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
+            <defence physical="295.91597" magical="216.53847" shield="148" shieldRate="20"/>
+            <speed>
+                <walk ground="60"/>
+                <run ground="120"/>
+            </speed>
+            <hitTime>450</hitTime>
+            <abnormalResist physical="10" magical="10"/>
+        </stats>
+        <status attackable="false" undying="true"/>
+        <skillList>
+            <skill id="4045" level="1"/> <!-- Resist Full Magic Attack -->
+            <skill id="4408" level="1"/> <!-- HP Increase (1x) -->
+            <skill id="4409" level="1"/> <!-- MP Increase (1x) -->
+            <skill id="4410" level="11"/> <!-- Average P. Atk. -->
+            <skill id="4411" level="11"/> <!-- Average M. Atk. -->
+            <skill id="4412" level="11"/> <!-- Average P. Def. -->
+            <skill id="4413" level="11"/> <!-- Average M. Def. -->
+            <skill id="4414" level="2"/> <!-- Standard Type -->
+            <skill id="4415" level="3"/> <!-- One-handed Sword -->
+            <skill id="4416" level="9"/> <!-- Demons -->
+        </skillList>
+        <exCrtEffect>true</exCrtEffect>
+        <ai clanHelpRange="300" aggroRange="450"/>
+        <collision>
+            <radius normal="8" grown="9"/>
+            <height normal="23.5" grown="29"/>
+        </collision>
+    </npc>
+    <npc id="31583" level="80" type="Merchant" name="Feynn" title="Blacksmith">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <equipment rhand="168"/>
+        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+            <vitals hp="8446" hpRegen="10.5" mp="1345" mpRegen="3.6"/>
+            <speed>
+                <walk ground="50"/>
+                <run ground="120"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <collision>
+            <radius normal="7"/>
+            <height normal="16.5"/>
+        </collision>
+    </npc>
+    <npc id="31584" level="80" type="Folk" name="Valentine" title="Brewer">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+            <vitals hp="8446" hpRegen="10.5" mp="1345" mpRegen="3.6"/>
+            <speed>
+                <walk ground="20"/>
+                <run ground="120"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <collision>
+            <radius normal="8"/>
+            <height normal="17.5"/>
+        </collision>
+    </npc>
+    <npc id="31585" level="70" type="Folk" name="Sparky the Cat" title="Keats Servitor">
+        <parameters>
+            <param name="MoveAroundSocial" value="0"/>
+            <param name="MoveAroundSocial1" value="0"/>
+        </parameters>
+        <race>ANIMAL</race>
+        <sex>MALE</sex>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="2578" hpRegen="7.5" mp="1345" mpRegen="2.7"/>
+            <attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
+            <defence physical="295.91597" magical="216.53847"/>
+            <speed>
+                <walk ground="40"/>
+                <run ground="120"/>
+            </speed>
+            <hitTime>610</hitTime>
+            <abnormalResist physical="10" magical="10"/>
+        </stats>
+        <status attackable="false" undying="true"/>
+        <skillList>
+            <skill id="4045" level="1"/> <!-- Resist Full Magic Attack -->
+            <skill id="4408" level="1"/> <!-- HP Increase (1x) -->
+            <skill id="4409" level="1"/> <!-- MP Increase (1x) -->
+            <skill id="4410" level="11"/> <!-- Average P. Atk. -->
+            <skill id="4411" level="11"/> <!-- Average M. Atk. -->
+            <skill id="4412" level="11"/> <!-- Average P. Def. -->
+            <skill id="4413" level="11"/> <!-- Average M. Def. -->
+            <skill id="4414" level="2"/> <!-- Standard Type -->
+            <skill id="4415" level="3"/> <!-- One-handed Sword -->
+            <skill id="4416" level="7"/> <!-- Spirits -->
+        </skillList>
+        <exCrtEffect>true</exCrtEffect>
+        <ai clanHelpRange="300" aggroRange="450"/>
+        <collision>
+            <radius normal="9"/>
+            <height normal="16"/>
+        </collision>
+    </npc>
+    <npc id="31586" level="70" type="Folk" name="Sparky the Cat" title="Keats Servitor">
+        <parameters>
+            <param name="MoveAroundSocial" value="0"/>
+            <param name="MoveAroundSocial1" value="0"/>
+        </parameters>
+        <race>ANIMAL</race>
+        <sex>MALE</sex>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="2578" hpRegen="7.5" mp="1345" mpRegen="2.7"/>
+            <attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
+            <defence physical="295.91597" magical="216.53847"/>
+            <speed>
+                <walk ground="40"/>
+                <run ground="120"/>
+            </speed>
+            <hitTime>610</hitTime>
+            <abnormalResist physical="10" magical="10"/>
+        </stats>
+        <status attackable="false" undying="true"/>
+        <skillList>
+            <skill id="4045" level="1"/> <!-- Resist Full Magic Attack -->
+            <skill id="4408" level="1"/> <!-- HP Increase (1x) -->
+            <skill id="4409" level="1"/> <!-- MP Increase (1x) -->
+            <skill id="4410" level="11"/> <!-- Average P. Atk. -->
+            <skill id="4411" level="11"/> <!-- Average M. Atk. -->
+            <skill id="4412" level="11"/> <!-- Average P. Def. -->
+            <skill id="4413" level="11"/> <!-- Average M. Def. -->
+            <skill id="4414" level="2"/> <!-- Standard Type -->
+            <skill id="4415" level="3"/> <!-- One-handed Sword -->
+            <skill id="4416" level="7"/> <!-- Spirits -->
+        </skillList>
+        <exCrtEffect>true</exCrtEffect>
+        <ai clanHelpRange="300" aggroRange="450"/>
+        <collision>
+            <radius normal="9"/>
+            <height normal="16"/>
+        </collision>
+    </npc>
+    <npc id="31587" level="80" type="VillageMasterMystic" name="Halaster" title="Grand Magister">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+            <vitals hp="8446" hpRegen="10.5" mp="1345" mpRegen="3.6"/>
+            <speed>
+                <walk ground="50"/>
+                <run ground="120"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <collision>
+            <radius normal="8"/>
+            <height normal="24"/>
+        </collision>
+    </npc>
+    <npc id="31589" level="80" type="Folk" name="Duda-Mara Totem Spirit">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+            <vitals hp="8446" hpRegen="10.5" mp="1345" mpRegen="3.6"/>
+            <speed>
+                <walk ground="72"/>
+                <run ground="120"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <collision>
+            <radius normal="26"/>
+            <height normal="25.5"/>
+        </collision>
+    </npc>
+    <npc id="31590" level="70" type="Folk" name="Devianne" title="Truth Seeker">
+        <parameters>
+            <param name="MoveAroundSocial" value="0"/>
+            <param name="MoveAroundSocial1" value="90"/>
+        </parameters>
+        <race>HUMAN</race>
+        <sex>FEMALE</sex>
+        <equipment rhand="7890"/> <!-- Crystal Staff -->
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="2578" hpRegen="7.5" mp="1345" mpRegen="2.7"/>
+            <attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
+            <defence physical="295.91597" magical="216.53847"/>
+            <speed>
+                <walk ground="50"/>
+                <run ground="120"/>
+            </speed>
+            <abnormalResist physical="10" magical="10"/>
+        </stats>
+        <status attackable="false" undying="true"/>
+        <skillList>
+            <skill id="4045" level="1"/> <!-- Resist Full Magic Attack -->
+            <skill id="4408" level="1"/> <!-- HP Increase (1x) -->
+            <skill id="4409" level="1"/> <!-- MP Increase (1x) -->
+            <skill id="4410" level="11"/> <!-- Average P. Atk. -->
+            <skill id="4411" level="11"/> <!-- Average M. Atk. -->
+            <skill id="4412" level="11"/> <!-- Average P. Def. -->
+            <skill id="4413" level="11"/> <!-- Average M. Def. -->
+            <skill id="4414" level="2"/> <!-- Standard Type -->
+            <skill id="4415" level="3"/> <!-- One-handed Sword -->
+            <skill id="4416" level="14"/> <!-- Humans -->
+        </skillList>
+        <exCrtEffect>true</exCrtEffect>
+        <ai clanHelpRange="300" aggroRange="450"/>
+        <collision>
+            <radius normal="8"/>
+            <height normal="23"/>
+        </collision>
+    </npc>
+    <npc id="31591" level="70" type="Folk" name="Sunset Guide Luna">
+        <parameters>
+            <param name="MoveAroundSocial" value="0"/>
+            <param name="MoveAroundSocial1" value="120"/>
+        </parameters>
+        <race>HUMAN</race>
+        <sex>FEMALE</sex>
+        <equipment rhand="189" lhand="633"/> <!-- Staff of Life / Zubei's Shield -->
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="2578" hpRegen="7.5" mp="1345" mpRegen="2.7"/>
+            <attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
+            <defence physical="295.91597" magical="216.53847" shield="148" shieldRate="20"/>
+            <speed>
+                <walk ground="50"/>
+                <run ground="120"/>
+            </speed>
+            <abnormalResist physical="10" magical="10"/>
+        </stats>
+        <status attackable="false" undying="true"/>
+        <skillList>
+            <skill id="4045" level="1"/> <!-- Resist Full Magic Attack -->
+            <skill id="4408" level="1"/> <!-- HP Increase (1x) -->
+            <skill id="4409" level="1"/> <!-- MP Increase (1x) -->
+            <skill id="4410" level="11"/> <!-- Average P. Atk. -->
+            <skill id="4411" level="11"/> <!-- Average M. Atk. -->
+            <skill id="4412" level="11"/> <!-- Average P. Def. -->
+            <skill id="4413" level="11"/> <!-- Average M. Def. -->
+            <skill id="4414" level="2"/> <!-- Standard Type -->
+            <skill id="4415" level="3"/> <!-- One-handed Sword -->
+            <skill id="4416" level="14"/> <!-- Humans -->
+        </skillList>
+        <exCrtEffect>true</exCrtEffect>
+        <ai clanHelpRange="300" aggroRange="450"/>
+        <collision>
+            <radius normal="8"/>
+            <height normal="22.5"/>
+        </collision>
+    </npc>
+    <npc id="31594" level="70" type="Folk" name="Mond" title="Chief Inspector">
+        <parameters>
+            <param name="MoveAroundSocial" value="0"/>
+            <param name="MoveAroundSocial1" value="97"/>
+        </parameters>
+        <race>DWARF</race>
+        <sex>MALE</sex>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="2578" hpRegen="7.5" mp="1345" mpRegen="2.7"/>
+            <attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
+            <defence physical="295.91597" magical="216.53847"/>
+            <speed>
+                <walk ground="50"/>
+                <run ground="120"/>
+            </speed>
+            <abnormalResist physical="10" magical="10"/>
+        </stats>
+        <status attackable="false" undying="true"/>
+        <skillList>
+            <skill id="4045" level="1"/> <!-- Resist Full Magic Attack -->
+            <skill id="4408" level="1"/> <!-- HP Increase (1x) -->
+            <skill id="4409" level="1"/> <!-- MP Increase (1x) -->
+            <skill id="4410" level="11"/> <!-- Average P. Atk. -->
+            <skill id="4411" level="11"/> <!-- Average M. Atk. -->
+            <skill id="4412" level="11"/> <!-- Average P. Def. -->
+            <skill id="4413" level="11"/> <!-- Average M. Def. -->
+            <skill id="4414" level="2"/> <!-- Standard Type -->
+            <skill id="4415" level="3"/> <!-- One-handed Sword -->
+            <skill id="4416" level="18"/> <!-- Dwarves -->
+        </skillList>
+        <exCrtEffect>true</exCrtEffect>
+        <ai clanHelpRange="300" aggroRange="450"/>
+        <collision>
+            <radius normal="8"/>
+            <height normal="19.5"/>
+        </collision>
+    </npc>
+    <npc id="31595" level="70" type="Folk" name="Leona Blackbird" title="Fire Dragon Bride">
+        <parameters>
+            <param name="MoveAroundSocial" value="0"/>
+            <param name="MoveAroundSocial1" value="90"/>
+        </parameters>
+        <race>HUMAN</race>
+        <sex>FEMALE</sex>
+        <equipment rhand="97"/>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="2578" hpRegen="7.5" mp="1345" mpRegen="2.7"/>
+            <attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
+            <defence physical="295.91597" magical="216.53847" shield="148" shieldRate="20"/>
+            <speed>
+                <walk ground="64"/>
+                <run ground="120"/>
+            </speed>
+            <abnormalResist physical="10" magical="10"/>
+        </stats>
+        <status attackable="false" undying="true"/>
+        <skillList>
+            <skill id="4045" level="1"/> <!-- Resist Full Magic Attack -->
+            <skill id="4408" level="1"/> <!-- HP Increase (1x) -->
+            <skill id="4409" level="1"/> <!-- MP Increase (1x) -->
+            <skill id="4410" level="11"/> <!-- Average P. Atk. -->
+            <skill id="4411" level="11"/> <!-- Average M. Atk. -->
+            <skill id="4412" level="11"/> <!-- Average P. Def. -->
+            <skill id="4413" level="11"/> <!-- Average M. Def. -->
+            <skill id="4414" level="2"/> <!-- Standard Type -->
+            <skill id="4415" level="3"/> <!-- One-handed Sword -->
+            <skill id="4416" level="14"/> <!-- Humans -->
+        </skillList>
+        <exCrtEffect>true</exCrtEffect>
+        <ai clanHelpRange="300" aggroRange="450"/>
+        <collision>
+            <radius normal="9.5"/>
+            <height normal="22.4"/>
+        </collision>
+    </npc>
+    <npc id="31596" level="70" type="Folk" name="Tobald" title="Master">
+        <parameters>
+            <param name="MoveAroundSocial" value="0"/>
+            <param name="MoveAroundSocial1" value="144"/>
+        </parameters>
+        <race>DWARF</race>
+        <sex>MALE</sex>
+        <equipment rhand="187"/> <!-- Atuba Hammer -->
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="2578" hpRegen="7.5" mp="1345" mpRegen="2.7"/>
+            <attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
+            <defence physical="295.91597" magical="216.53847"/>
+            <speed>
+                <walk ground="50"/>
+                <run ground="120"/>
+            </speed>
+            <abnormalResist physical="10" magical="10"/>
+        </stats>
+        <status attackable="false" undying="true"/>
+        <skillList>
+            <skill id="4045" level="1"/> <!-- Resist Full Magic Attack -->
+            <skill id="4408" level="1"/> <!-- HP Increase (1x) -->
+            <skill id="4409" level="1"/> <!-- MP Increase (1x) -->
+            <skill id="4410" level="11"/> <!-- Average P. Atk. -->
+            <skill id="4411" level="11"/> <!-- Average M. Atk. -->
+            <skill id="4412" level="11"/> <!-- Average P. Def. -->
+            <skill id="4413" level="11"/> <!-- Average M. Def. -->
+            <skill id="4414" level="2"/> <!-- Standard Type -->
+            <skill id="4415" level="3"/> <!-- One-handed Sword -->
+            <skill id="4416" level="18"/> <!-- Dwarves -->
+        </skillList>
+        <exCrtEffect>true</exCrtEffect>
+        <ai clanHelpRange="300" aggroRange="450"/>
+        <collision>
+            <radius normal="8"/>
+            <height normal="19"/>
+        </collision>
+    </npc>
+    <npc id="31597" level="70" type="Folk" name="Tobald" title="Master">
+        <parameters>
+            <param name="MoveAroundSocial" value="0"/>
+            <param name="MoveAroundSocial1" value="144"/>
+        </parameters>
+        <race>DWARF</race>
+        <sex>MALE</sex>
+        <equipment rhand="187"/> <!-- Atuba Hammer -->
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="2578" hpRegen="7.5" mp="1345" mpRegen="2.7"/>
+            <attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
+            <defence physical="295.91597" magical="216.53847"/>
+            <speed>
+                <walk ground="50"/>
+                <run ground="120"/>
+            </speed>
+            <abnormalResist physical="10" magical="10"/>
+        </stats>
+        <status attackable="false" undying="true"/>
+        <skillList>
+            <skill id="4045" level="1"/> <!-- Resist Full Magic Attack -->
+            <skill id="4408" level="1"/> <!-- HP Increase (1x) -->
+            <skill id="4409" level="1"/> <!-- MP Increase (1x) -->
+            <skill id="4410" level="11"/> <!-- Average P. Atk. -->
+            <skill id="4411" level="11"/> <!-- Average M. Atk. -->
+            <skill id="4412" level="11"/> <!-- Average P. Def. -->
+            <skill id="4413" level="11"/> <!-- Average M. Def. -->
+            <skill id="4414" level="2"/> <!-- Standard Type -->
+            <skill id="4415" level="3"/> <!-- One-handed Sword -->
+            <skill id="4416" level="18"/> <!-- Dwarves -->
+        </skillList>
+        <exCrtEffect>true</exCrtEffect>
+        <ai clanHelpRange="300" aggroRange="450"/>
+        <collision>
+            <radius normal="8"/>
+            <height normal="19"/>
+        </collision>
+    </npc>
+    <npc id="31598" level="70" type="Folk" name="Medina Blackheart">
+        <parameters>
+            <param name="MoveAroundSocial" value="0"/>
+            <param name="MoveAroundSocial1" value="90"/>
+        </parameters>
+        <race>DARK_ELF</race>
+        <sex>FEMALE</sex>
+        <equipment rhand="206"/> <!-- Demon's Staff -->
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="2578" hpRegen="7.5" mp="1345" mpRegen="2.7"/>
+            <attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
+            <defence physical="295.91597" magical="216.53847"/>
+            <speed>
+                <walk ground="50"/>
+                <run ground="120"/>
+            </speed>
+            <abnormalResist physical="10" magical="10"/>
+        </stats>
+        <status attackable="false" undying="true"/>
+        <skillList>
+            <skill id="4045" level="1"/> <!-- Resist Full Magic Attack -->
+            <skill id="4408" level="1"/> <!-- HP Increase (1x) -->
+            <skill id="4409" level="1"/> <!-- MP Increase (1x) -->
+            <skill id="4410" level="11"/> <!-- Average P. Atk. -->
+            <skill id="4411" level="11"/> <!-- Average M. Atk. -->
+            <skill id="4412" level="11"/> <!-- Average P. Def. -->
+            <skill id="4413" level="11"/> <!-- Average M. Def. -->
+            <skill id="4414" level="2"/> <!-- Standard Type -->
+            <skill id="4415" level="3"/> <!-- One-handed Sword -->
+            <skill id="4416" level="16"/> <!-- Dark Elves -->
+        </skillList>
+        <exCrtEffect>true</exCrtEffect>
+        <ai clanHelpRange="300" aggroRange="450"/>
+        <collision>
+            <radius normal="8"/>
+            <height normal="24.5"/>
+        </collision>
+    </npc>
+    <npc id="31599" level="70" type="Folk" name="Disgraced Knight Waldstein">
+        <parameters>
+            <param name="MoveAroundSocial" value="0"/>
+            <param name="MoveAroundSocial1" value="63"/>
+        </parameters>
+        <race>HUMAN</race>
+        <sex>MALE</sex>
+        <equipment rhand="81"/> <!-- Dragon Slayer -->
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="2578" hpRegen="7.5" mp="1345" mpRegen="2.7"/>
+            <attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
+            <defence physical="295.91597" magical="216.53847"/>
+            <speed>
+                <walk ground="50"/>
+                <run ground="120"/>
+            </speed>
+            <abnormalResist physical="10" magical="10"/>
+        </stats>
+        <status attackable="false" undying="true"/>
+        <skillList>
+            <skill id="4045" level="1"/> <!-- Resist Full Magic Attack -->
+            <skill id="4408" level="1"/> <!-- HP Increase (1x) -->
+            <skill id="4409" level="1"/> <!-- MP Increase (1x) -->
+            <skill id="4410" level="11"/> <!-- Average P. Atk. -->
+            <skill id="4411" level="11"/> <!-- Average M. Atk. -->
+            <skill id="4412" level="11"/> <!-- Average P. Def. -->
+            <skill id="4413" level="11"/> <!-- Average M. Def. -->
+            <skill id="4414" level="2"/> <!-- Standard Type -->
+            <skill id="4415" level="3"/> <!-- One-handed Sword -->
+            <skill id="4416" level="14"/> <!-- Humans -->
+        </skillList>
+        <exCrtEffect>true</exCrtEffect>
+        <ai clanHelpRange="300" aggroRange="450"/>
+        <collision>
+            <radius normal="8"/>
+            <height normal="23.5"/>
+        </collision>
+    </npc>
 </list>

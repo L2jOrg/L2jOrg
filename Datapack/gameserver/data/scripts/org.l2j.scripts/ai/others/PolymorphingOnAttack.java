@@ -16,11 +16,7 @@
  */
 package ai.others;
 
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
+import ai.AbstractNpcAI;
 import org.l2j.gameserver.ai.CtrlIntention;
 import org.l2j.gameserver.enums.ChatType;
 import org.l2j.gameserver.model.actor.Attackable;
@@ -30,7 +26,10 @@ import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.NpcStringId;
 import org.l2j.gameserver.network.serverpackets.CreatureSay;
 
-import ai.AbstractNpcAI;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 /**
  * Polymorphing on attack monsters AI.

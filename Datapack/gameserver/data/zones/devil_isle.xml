@@ -1,146 +1,146 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org zones.xsd" >
-	<!-- Devil Isle Zones -->
-	<!-- Physical Damage -->
-	<zone name="devil_damage_001" type="org.l2j.gameserver.world.zone.type.DamageZone" form="Polygon" minZ="-4048" maxZ="-3848"> <!-- [21_24] -->
-		<property name="initialDelay" value="1000" />
-		<property name="reuse" value="60000" />
-		<point x="51296" y="205421" />
-		<point x="51788" y="205266" />
-		<point x="51496" y="205621" />
-		<point x="51072" y="205896" />
-	</zone>
-	<zone name="devil_damage_002" type="org.l2j.gameserver.world.zone.type.DamageZone" form="Polygon" minZ="-4032" maxZ="-3732"> <!-- [21_24] -->
-		<property name="initialDelay" value="1000" />
-		<property name="reuse" value="60000" />
-		<point x="51820" y="205340" />
-		<point x="52535" y="205305" />
-		<point x="52535" y="205436" />
-		<point x="51705" y="205528" />
-	</zone>
-	<zone name="devil_damage_003" type="org.l2j.gameserver.world.zone.type.DamageZone" form="Polygon" minZ="-3776" maxZ="-3626"> <!-- [21_24] -->
-		<property name="initialDelay" value="1000" />
-		<property name="reuse" value="60000" />
-		<point x="43439" y="213259" />
-		<point x="43589" y="213249" />
-		<point x="43750" y="213760" />
-		<point x="43680" y="214092" />
-	</zone>
-	<zone name="devil_damage_004" type="org.l2j.gameserver.world.zone.type.DamageZone" form="Polygon" minZ="-3764" maxZ="-3564"> <!-- [21_24] -->
-		<property name="initialDelay" value="1000" />
-		<property name="reuse" value="60000" />
-		<point x="42805" y="214266" />
-		<point x="43627" y="214195" />
-		<point x="43386" y="214355" />
-		<point x="42805" y="214405" />
-	</zone>
-	<zone name="devil_damage_005" type="org.l2j.gameserver.world.zone.type.DamageZone" form="Polygon" minZ="-3856" maxZ="-3656"> <!-- [21_24] -->
-		<property name="initialDelay" value="1000" />
-		<property name="reuse" value="60000" />
-		<point x="43511" y="218426" />
-		<point x="43711" y="218426" />
-		<point x="43711" y="218759" />
-		<point x="43511" y="218759" />
-	</zone>
-	<zone name="devil_damage_006" type="org.l2j.gameserver.world.zone.type.DamageZone" form="Polygon" minZ="-3940" maxZ="-3740"> <!-- [21_24] -->
-		<property name="initialDelay" value="1000" />
-		<property name="reuse" value="60000" />
-		<point x="43012" y="218850" />
-		<point x="43708" y="218850" />
-		<point x="43719" y="219260" />
-		<point x="43001" y="219260" />
-	</zone>
-	<zone name="devil_damage_007" type="org.l2j.gameserver.world.zone.type.DamageZone" form="Polygon" minZ="-3060" maxZ="-2860"> <!-- [21_24] -->
-		<property name="initialDelay" value="1000" />
-		<property name="reuse" value="60000" />
-		<point x="50630" y="211383" />
-		<point x="51129" y="211383" />
-		<point x="51129" y="211858" />
-		<point x="50642" y="211858" />
-	</zone>
-	<zone name="devil_damage_008" type="org.l2j.gameserver.world.zone.type.DamageZone" form="Polygon" minZ="-4008" maxZ="-3608"> <!-- [21_24] -->
-		<property name="initialDelay" value="1000" />
-		<property name="reuse" value="60000" />
-		<point x="51820" y="206520" />
-		<point x="52792" y="206500" />
-		<point x="52812" y="207128" />
-		<point x="51844" y="207060" />
-	</zone>
-	<zone name="devil_damage_009" type="org.l2j.gameserver.world.zone.type.DamageZone" form="Polygon" minZ="-3056" maxZ="-2706"> <!-- [21_24] -->
-		<property name="initialDelay" value="1000" />
-		<property name="reuse" value="60000" />
-		<point x="50673" y="210566" />
-		<point x="51054" y="210572" />
-		<point x="51054" y="211317" />
-		<point x="50667" y="211311" />
-	</zone>
-	<zone name="devil_damage_010" type="org.l2j.gameserver.world.zone.type.DamageZone" form="Polygon" minZ="-2736" maxZ="-2536"> <!-- [21_24] -->
-		<property name="initialDelay" value="1000" />
-		<property name="reuse" value="60000" />
-		<point x="50608" y="209718" />
-		<point x="51145" y="209718" />
-		<point x="51150" y="210201" />
-		<point x="50614" y="210201" />
-	</zone>
-	<!-- Poison -->
-	<zone name="devil_poison_001" type="org.l2j.gameserver.world.zone.type.EffectZone" form="Polygon" minZ="-3752" maxZ="-3552"> <!-- [21_24] -->
-		<property name="skillIdLvl" value="4148-4;" /> <!-- s_area_poison4 -->
-		<property name="chance" value="30" />
-		<property name="initialDelay" value="1000" />
-		<property name="reuse" value="5000" />
-		<point x="41707" y="211982" />
-		<point x="42025" y="211917" />
-		<point x="42463" y="212012" />
-		<point x="42702" y="212346" />
-		<point x="42593" y="212977" />
-		<point x="42301" y="213144" />
-		<point x="41821" y="213081" />
-		<point x="41600" y="212602" />
-	</zone>
-	<zone name="devil_poison_002" type="org.l2j.gameserver.world.zone.type.EffectZone" form="Polygon" minZ="-3800" maxZ="-3600"> <!-- [21_24] -->
-		<property name="skillIdLvl" value="4148-4;" /> <!-- s_area_poison4 -->
-		<property name="chance" value="30" />
-		<property name="initialDelay" value="1000" />
-		<property name="reuse" value="5000" />
-		<point x="45296" y="213219" />
-		<point x="46136" y="213081" />
-		<point x="46289" y="213374" />
-		<point x="46158" y="213669" />
-		<point x="45105" y="213668" />
-	</zone>
-	<zone name="devil_poison_003" type="org.l2j.gameserver.world.zone.type.EffectZone" form="Polygon" minZ="-3628" maxZ="-3428"> <!-- [21_24] -->
-		<property name="skillIdLvl" value="4148-4;" /> <!-- s_area_poison4 -->
-		<property name="chance" value="30" />
-		<property name="initialDelay" value="1000" />
-		<property name="reuse" value="5000" />
-		<point x="47790" y="220792" />
-		<point x="48632" y="220818" />
-		<point x="48683" y="220992" />
-		<point x="47828" y="220980" />
-	</zone>
-	<!-- Swamp -->
-	<zone name="devil_slow_8" type="org.l2j.gameserver.world.zone.type.SwampZone" form="Polygon" minZ="-3964" maxZ="-3364"> <!-- [21_24] -->
-		<!-- stat name="initialDelay" val="1000" / -->
-		<property name="move_bonus" value="0.2" /> <!-- -80% -->
-		<point x="55250" y="210873" />
-		<point x="55762" y="211217" />
-		<point x="55934" y="212274" />
-		<point x="55686" y="212533" />
-		<point x="54639" y="212740" />
-		<point x="54276" y="212407" />
-		<point x="54160" y="211696" />
-		<point x="54332" y="211108" />
-	</zone>
-	<!-- Recovery -->
-	<zone name="devil_healing_zone" type="org.l2j.gameserver.world.zone.type.MotherTreeZone" form="Polygon" minZ="-3913" maxZ="-3413"> <!-- [21_24] -->
-		<property name="HpRegenBonus" value="2" />
-		<property name="MpRegenBonus" value="1" />
-		<property name="enterMsgId" value="1054" />
-		<property name="leaveMsgId" value="1055" />
-		<point x="41520" y="205163" />
-		<point x="44448" y="205623" />
-		<point x="44352" y="208957" />
-		<point x="42813" y="208983" />
-		<point x="41473" y="207893" />
-	</zone>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org zones.xsd">
+    <!-- Devil Isle Zones -->
+    <!-- Physical Damage -->
+    <zone name="devil_damage_001" type="org.l2j.gameserver.world.zone.type.DamageZone" form="Polygon" minZ="-4048" maxZ="-3848"> <!-- [21_24] -->
+        <property name="initialDelay" value="1000"/>
+        <property name="reuse" value="60000"/>
+        <point x="51296" y="205421"/>
+        <point x="51788" y="205266"/>
+        <point x="51496" y="205621"/>
+        <point x="51072" y="205896"/>
+    </zone>
+    <zone name="devil_damage_002" type="org.l2j.gameserver.world.zone.type.DamageZone" form="Polygon" minZ="-4032" maxZ="-3732"> <!-- [21_24] -->
+        <property name="initialDelay" value="1000"/>
+        <property name="reuse" value="60000"/>
+        <point x="51820" y="205340"/>
+        <point x="52535" y="205305"/>
+        <point x="52535" y="205436"/>
+        <point x="51705" y="205528"/>
+    </zone>
+    <zone name="devil_damage_003" type="org.l2j.gameserver.world.zone.type.DamageZone" form="Polygon" minZ="-3776" maxZ="-3626"> <!-- [21_24] -->
+        <property name="initialDelay" value="1000"/>
+        <property name="reuse" value="60000"/>
+        <point x="43439" y="213259"/>
+        <point x="43589" y="213249"/>
+        <point x="43750" y="213760"/>
+        <point x="43680" y="214092"/>
+    </zone>
+    <zone name="devil_damage_004" type="org.l2j.gameserver.world.zone.type.DamageZone" form="Polygon" minZ="-3764" maxZ="-3564"> <!-- [21_24] -->
+        <property name="initialDelay" value="1000"/>
+        <property name="reuse" value="60000"/>
+        <point x="42805" y="214266"/>
+        <point x="43627" y="214195"/>
+        <point x="43386" y="214355"/>
+        <point x="42805" y="214405"/>
+    </zone>
+    <zone name="devil_damage_005" type="org.l2j.gameserver.world.zone.type.DamageZone" form="Polygon" minZ="-3856" maxZ="-3656"> <!-- [21_24] -->
+        <property name="initialDelay" value="1000"/>
+        <property name="reuse" value="60000"/>
+        <point x="43511" y="218426"/>
+        <point x="43711" y="218426"/>
+        <point x="43711" y="218759"/>
+        <point x="43511" y="218759"/>
+    </zone>
+    <zone name="devil_damage_006" type="org.l2j.gameserver.world.zone.type.DamageZone" form="Polygon" minZ="-3940" maxZ="-3740"> <!-- [21_24] -->
+        <property name="initialDelay" value="1000"/>
+        <property name="reuse" value="60000"/>
+        <point x="43012" y="218850"/>
+        <point x="43708" y="218850"/>
+        <point x="43719" y="219260"/>
+        <point x="43001" y="219260"/>
+    </zone>
+    <zone name="devil_damage_007" type="org.l2j.gameserver.world.zone.type.DamageZone" form="Polygon" minZ="-3060" maxZ="-2860"> <!-- [21_24] -->
+        <property name="initialDelay" value="1000"/>
+        <property name="reuse" value="60000"/>
+        <point x="50630" y="211383"/>
+        <point x="51129" y="211383"/>
+        <point x="51129" y="211858"/>
+        <point x="50642" y="211858"/>
+    </zone>
+    <zone name="devil_damage_008" type="org.l2j.gameserver.world.zone.type.DamageZone" form="Polygon" minZ="-4008" maxZ="-3608"> <!-- [21_24] -->
+        <property name="initialDelay" value="1000"/>
+        <property name="reuse" value="60000"/>
+        <point x="51820" y="206520"/>
+        <point x="52792" y="206500"/>
+        <point x="52812" y="207128"/>
+        <point x="51844" y="207060"/>
+    </zone>
+    <zone name="devil_damage_009" type="org.l2j.gameserver.world.zone.type.DamageZone" form="Polygon" minZ="-3056" maxZ="-2706"> <!-- [21_24] -->
+        <property name="initialDelay" value="1000"/>
+        <property name="reuse" value="60000"/>
+        <point x="50673" y="210566"/>
+        <point x="51054" y="210572"/>
+        <point x="51054" y="211317"/>
+        <point x="50667" y="211311"/>
+    </zone>
+    <zone name="devil_damage_010" type="org.l2j.gameserver.world.zone.type.DamageZone" form="Polygon" minZ="-2736" maxZ="-2536"> <!-- [21_24] -->
+        <property name="initialDelay" value="1000"/>
+        <property name="reuse" value="60000"/>
+        <point x="50608" y="209718"/>
+        <point x="51145" y="209718"/>
+        <point x="51150" y="210201"/>
+        <point x="50614" y="210201"/>
+    </zone>
+    <!-- Poison -->
+    <zone name="devil_poison_001" type="org.l2j.gameserver.world.zone.type.EffectZone" form="Polygon" minZ="-3752" maxZ="-3552"> <!-- [21_24] -->
+        <property name="skillIdLvl" value="4148-4;"/> <!-- s_area_poison4 -->
+        <property name="chance" value="30"/>
+        <property name="initialDelay" value="1000"/>
+        <property name="reuse" value="5000"/>
+        <point x="41707" y="211982"/>
+        <point x="42025" y="211917"/>
+        <point x="42463" y="212012"/>
+        <point x="42702" y="212346"/>
+        <point x="42593" y="212977"/>
+        <point x="42301" y="213144"/>
+        <point x="41821" y="213081"/>
+        <point x="41600" y="212602"/>
+    </zone>
+    <zone name="devil_poison_002" type="org.l2j.gameserver.world.zone.type.EffectZone" form="Polygon" minZ="-3800" maxZ="-3600"> <!-- [21_24] -->
+        <property name="skillIdLvl" value="4148-4;"/> <!-- s_area_poison4 -->
+        <property name="chance" value="30"/>
+        <property name="initialDelay" value="1000"/>
+        <property name="reuse" value="5000"/>
+        <point x="45296" y="213219"/>
+        <point x="46136" y="213081"/>
+        <point x="46289" y="213374"/>
+        <point x="46158" y="213669"/>
+        <point x="45105" y="213668"/>
+    </zone>
+    <zone name="devil_poison_003" type="org.l2j.gameserver.world.zone.type.EffectZone" form="Polygon" minZ="-3628" maxZ="-3428"> <!-- [21_24] -->
+        <property name="skillIdLvl" value="4148-4;"/> <!-- s_area_poison4 -->
+        <property name="chance" value="30"/>
+        <property name="initialDelay" value="1000"/>
+        <property name="reuse" value="5000"/>
+        <point x="47790" y="220792"/>
+        <point x="48632" y="220818"/>
+        <point x="48683" y="220992"/>
+        <point x="47828" y="220980"/>
+    </zone>
+    <!-- Swamp -->
+    <zone name="devil_slow_8" type="org.l2j.gameserver.world.zone.type.SwampZone" form="Polygon" minZ="-3964" maxZ="-3364"> <!-- [21_24] -->
+        <!-- stat name="initialDelay" val="1000" / -->
+        <property name="move_bonus" value="0.2"/> <!-- -80% -->
+        <point x="55250" y="210873"/>
+        <point x="55762" y="211217"/>
+        <point x="55934" y="212274"/>
+        <point x="55686" y="212533"/>
+        <point x="54639" y="212740"/>
+        <point x="54276" y="212407"/>
+        <point x="54160" y="211696"/>
+        <point x="54332" y="211108"/>
+    </zone>
+    <!-- Recovery -->
+    <zone name="devil_healing_zone" type="org.l2j.gameserver.world.zone.type.MotherTreeZone" form="Polygon" minZ="-3913" maxZ="-3413"> <!-- [21_24] -->
+        <property name="HpRegenBonus" value="2"/>
+        <property name="MpRegenBonus" value="1"/>
+        <property name="enterMsgId" value="1054"/>
+        <property name="leaveMsgId" value="1055"/>
+        <point x="41520" y="205163"/>
+        <point x="44448" y="205623"/>
+        <point x="44352" y="208957"/>
+        <point x="42813" y="208983"/>
+        <point x="41473" y="207893"/>
+    </zone>
 </list>

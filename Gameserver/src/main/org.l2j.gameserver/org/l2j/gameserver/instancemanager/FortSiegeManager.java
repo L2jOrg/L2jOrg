@@ -22,12 +22,11 @@ import java.io.InputStream;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.util.List;
+import java.util.Collection;
 import java.util.Map;
 import java.util.Properties;
 import java.util.StringTokenizer;
 import java.util.concurrent.ConcurrentHashMap;
-import java.util.concurrent.CopyOnWriteArrayList;
 
 public final class FortSiegeManager {
     private static final Logger LOGGER = LoggerFactory.getLogger(FortSiegeManager.class);
@@ -35,15 +34,15 @@ public final class FortSiegeManager {
     private int _attackerMaxClans = 500; // Max number of clans
 
     // Fort Siege settings
-    private Map<Integer, List<FortSiegeSpawn>> _commanderSpawnList;
-    private Map<Integer, List<CombatFlag>> _flagList;
+    private Map<Integer, Collection<FortSiegeSpawn>> _commanderSpawnList;
+    private Map<Integer, Collection<CombatFlag>> _flagList;
     private boolean _justToTerritory = true; // Changeable in fortsiege.properties
     private int _flagMaxCount = 1; // Changeable in fortsiege.properties
     private int _siegeClanMinLevel = 4; // Changeable in fortsiege.properties
     private int _siegeLength = 60; // Time in minute. Changeable in fortsiege.properties
     private int _countDownLength = 10; // Time in minute. Changeable in fortsiege.properties
     private int _suspiciousMerchantRespawnDelay = 180; // Time in minute. Changeable in fortsiege.properties
-    private List<FortSiege> _sieges;
+    private Collection<FortSiege> _sieges;
 
     protected FortSiegeManager() {
         load();
@@ -108,8 +107,8 @@ public final class FortSiegeManager {
         _flagList = new ConcurrentHashMap<>();
 
         for (Fort fort : FortDataManager.getInstance().getForts()) {
-            final List<FortSiegeSpawn> _commanderSpawns = new CopyOnWriteArrayList<>();
-            final List<CombatFlag> _flagSpawns = new CopyOnWriteArrayList<>();
+            final Collection<FortSiegeSpawn> _commanderSpawns = ConcurrentHashMap.newKeySet();
+            final Collection<CombatFlag> _flagSpawns = ConcurrentHashMap.newKeySet();
             for (int i = 1; i < 5; i++) {
                 final String _spawnParams = siegeSettings.getProperty(fort.getName().replace(" ", "") + "Commander" + i, "");
                 if (_spawnParams.isEmpty()) {
@@ -154,11 +153,11 @@ public final class FortSiegeManager {
         }
     }
 
-    public final List<FortSiegeSpawn> getCommanderSpawnList(int _fortId) {
+    public final Collection<FortSiegeSpawn> getCommanderSpawnList(int _fortId) {
         return _commanderSpawnList.get(_fortId);
     }
 
-    public final List<CombatFlag> getFlagList(int _fortId) {
+    public final Collection<CombatFlag> getFlagList(int _fortId) {
         return _flagList.get(_fortId);
     }
 
@@ -203,9 +202,9 @@ public final class FortSiegeManager {
         return _countDownLength;
     }
 
-    public final List<FortSiege> getSieges() {
+    public final Collection<FortSiege> getSieges() {
         if (_sieges == null) {
-            _sieges = new CopyOnWriteArrayList<>();
+            _sieges = ConcurrentHashMap.newKeySet();
         }
         return _sieges;
     }
@@ -225,7 +224,7 @@ public final class FortSiegeManager {
 
         final Fort fort = FortDataManager.getInstance().getFort(player);
 
-        final List<CombatFlag> fcf = _flagList.get(fort.getResidenceId());
+        final Collection<CombatFlag> fcf = _flagList.get(fort.getResidenceId());
         for (CombatFlag cf : fcf) {
             if (cf.getCombatFlagInstance() == item) {
                 cf.activate(player, item);
@@ -262,7 +261,7 @@ public final class FortSiegeManager {
 
     public void dropCombatFlag(Player player, int fortId) {
         final Fort fort = FortDataManager.getInstance().getFortById(fortId);
-        final List<CombatFlag> fcf = _flagList.get(fort.getResidenceId());
+        final Collection<CombatFlag> fcf = _flagList.get(fort.getResidenceId());
         for (CombatFlag cf : fcf) {
             if (cf.getPlayerObjectId() == player.getObjectId()) {
                 cf.dropIt();

@@ -10,10 +10,9 @@ import org.l2j.gameserver.model.actor.instance.Player;
 import java.text.DateFormat;
 import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
-import java.util.concurrent.CopyOnWriteArrayList;
 
 public class TopicBBSManager extends BaseBBSManager {
-    private final List<Topic> _table = new CopyOnWriteArrayList<>();
+    private final Collection<Topic> _table = ConcurrentHashMap.newKeySet();
     private final Map<Forum, Integer> _maxId = new ConcurrentHashMap<>();
 
     private TopicBBSManager() {

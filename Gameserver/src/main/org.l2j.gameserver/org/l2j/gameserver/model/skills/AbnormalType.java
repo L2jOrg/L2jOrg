@@ -226,6 +226,7 @@ public enum AbnormalType {
     DANCE_OF_SAGE(-1),
     SONG_WEAPON(-1), // TODO: need find proper name
     HEAL_RESISTANCE(-1), // TODO: need find proper name
+    AVE_BROOCH(-1),
     AB_HAWK_EYE(0),
     ALL_ATTACK_DOWN(1),
     ALL_ATTACK_UP(2),

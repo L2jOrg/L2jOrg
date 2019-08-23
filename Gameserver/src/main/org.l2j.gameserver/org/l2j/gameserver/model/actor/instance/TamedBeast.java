@@ -1,13 +1,13 @@
 package org.l2j.gameserver.model.actor.instance;
 
-import org.l2j.commons.util.Rnd;
 import org.l2j.commons.threading.ThreadPoolManager;
+import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.ai.CtrlIntention;
 import org.l2j.gameserver.data.xml.impl.NpcData;
 import org.l2j.gameserver.data.xml.impl.SkillData;
 import org.l2j.gameserver.enums.InstanceType;
-import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.Location;
+import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.effects.EffectType;
 import org.l2j.gameserver.model.items.instance.Item;
@@ -19,8 +19,8 @@ import org.l2j.gameserver.network.serverpackets.SocialAction;
 import org.l2j.gameserver.network.serverpackets.StopMove;
 import org.l2j.gameserver.util.MathUtil;
 
-import java.util.List;
-import java.util.concurrent.CopyOnWriteArrayList;
+import java.util.Collection;
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.Future;
 
 // While a tamed beast behaves a lot like a pet (ingame) and does have
@@ -44,7 +44,7 @@ public final class TamedBeast extends FeedableBeast {
     private int _homeZ;
     private Future<?> _buffTask = null;
     private Future<?> _durationCheckTask = null;
-    private List<Skill> _beastSkills = null;
+    private Collection<Skill> _beastSkills = null;
 
     public TamedBeast(int npcTemplateId) {
         super(NpcData.getInstance().getTemplate(npcTemplateId));
@@ -163,7 +163,7 @@ public final class TamedBeast extends FeedableBeast {
 
     public void addBeastSkill(Skill skill) {
         if (_beastSkills == null) {
-            _beastSkills = new CopyOnWriteArrayList<>();
+            _beastSkills = ConcurrentHashMap.newKeySet();
         }
         _beastSkills.add(skill);
     }
@@ -174,10 +174,10 @@ public final class TamedBeast extends FeedableBeast {
         }
         int delay = 100;
         for (Skill skill : _beastSkills) {
-            ThreadPoolManager.getInstance().schedule(new buffCast(skill), delay);
+            ThreadPoolManager.schedule(new buffCast(skill), delay);
             delay += (100 + skill.getHitTime());
         }
-        ThreadPoolManager.getInstance().schedule(new buffCast(null), delay);
+        ThreadPoolManager.schedule(new buffCast(null), delay);
     }
 
     public Player getOwner() {

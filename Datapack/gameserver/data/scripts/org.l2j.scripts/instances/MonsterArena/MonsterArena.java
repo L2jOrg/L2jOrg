@@ -10,12 +10,12 @@ import org.l2j.gameserver.model.instancezone.Instance;
 import org.l2j.gameserver.network.NpcStringId;
 import org.l2j.gameserver.network.serverpackets.ExSendUIEvent;
 
-import java.util.List;
-import java.util.concurrent.CopyOnWriteArrayList;
+import java.util.Collection;
+import java.util.concurrent.ConcurrentHashMap;
 
 /**
  * @author Mobius
- * @URL https://l2wiki.com/classic/Clan_-_Clan_Arena
+ * https://l2wiki.com/classic/Clan_-_Clan_Arena
  */
 public class MonsterArena extends AbstractInstance
 {
@@ -55,7 +55,7 @@ public class MonsterArena extends AbstractInstance
 	private static final int TICKET_M = 90946;
 	private static final int TICKET_H = 90947;
 	// Misc
-	private static final List<Player> REWARDED_PLAYERS = new CopyOnWriteArrayList<>();
+	private static final Collection<Player> REWARDED_PLAYERS = ConcurrentHashMap.newKeySet();
 	private static final String MONSTER_ARENA_VARIABLE = "MA_C";
 	private static final int TEMPLATE_ID = 192;
 	
@@ -188,10 +188,7 @@ public class MonsterArena extends AbstractInstance
 						npc.setScriptValue(1);
 						npc.doDie(npc);
 						REWARDED_PLAYERS.add(player);
-						ThreadPoolManager.getInstance().schedule(() ->
-						{
-							REWARDED_PLAYERS.remove(player);
-						}, 60000);
+						ThreadPoolManager.schedule(() -> REWARDED_PLAYERS.remove(player), 60000);
 						
 						// Mandatory reward.
 						final Npc machine = world.getNpc(MACHINE);

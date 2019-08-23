@@ -1,26 +1,11 @@
-/*
- * This file is part of the L2J Mobius project.
- *
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
- * General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this program. If not, see <http://www.gnu.org/licenses/>.
- */
 package org.l2j.gameserver.model.holders;
 
 import org.l2j.gameserver.enums.Movie;
 import org.l2j.gameserver.model.actor.instance.Player;
 
+import java.util.Collection;
 import java.util.List;
-import java.util.concurrent.CopyOnWriteArrayList;
+import java.util.concurrent.ConcurrentHashMap;
 
 /**
  * @author St3eT
@@ -28,7 +13,7 @@ import java.util.concurrent.CopyOnWriteArrayList;
 public final class MovieHolder {
     private final Movie _movie;
     private final List<Player> _players;
-    private final List<Player> _votedPlayers = new CopyOnWriteArrayList<>();
+    private final Collection<Player> _votedPlayers = ConcurrentHashMap.newKeySet();
 
     public MovieHolder(List<Player> players, Movie movie) {
         _players = players;
@@ -55,9 +40,5 @@ public final class MovieHolder {
 
     public List<Player> getPlayers() {
         return _players;
-    }
-
-    public List<Player> getVotedPlayers() {
-        return _votedPlayers;
     }
 }

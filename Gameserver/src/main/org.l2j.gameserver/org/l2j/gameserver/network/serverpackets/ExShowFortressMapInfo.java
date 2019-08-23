@@ -7,9 +7,7 @@ import org.l2j.gameserver.model.entity.Fort;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
 
-import java.util.List;
-
-import static org.l2j.commons.util.Util.isNullOrEmpty;
+import java.util.Collection;
 
 /**
  * TODO: Rewrite!!!!!!
@@ -31,7 +29,7 @@ public class ExShowFortressMapInfo extends ServerPacket {
         writeInt(_fortress.getSiege().isInProgress() ? 1 : 0); // fortress siege status
         writeInt(_fortress.getFortSize()); // barracks count
 
-        final List<FortSiegeSpawn> commanders = FortSiegeManager.getInstance().getCommanderSpawnList(_fortress.getResidenceId());
+        final Collection<FortSiegeSpawn> commanders = FortSiegeManager.getInstance().getCommanderSpawnList(_fortress.getResidenceId());
         if ((commanders != null) && (commanders.size() != 0) && _fortress.getSiege().isInProgress()) {
             switch (commanders.size()) {
                 case 3: {

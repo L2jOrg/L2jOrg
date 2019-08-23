@@ -1,1160 +1,1160 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org npcs.xsd">
-	<npc id="25800" level="74" type="Monster" name="Kasha" title="Gosmos' Mentor">
-		<!-- Source: www.l2wiki.com -->
-		<race>HUMANOID</race>
-		<equipment rhand="135" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="1065031.87819" hpRegen="305.3568783" mp="902999.13" mpRegen="3" />
-			<attack physical="35238.095238095" magical="6218.487394958" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="2740.7407407407" magical="1591.3978494624" />
-			<attribute>
-				<attack type="FIRE" value="430" />
-				<defence fire="350" water="350" wind="350" earth="350" holy="300" dark="350" />
-			</attribute>
-			<speed>
-				<walk ground="80" />
-				<run ground="170" />
-			</speed>
-			<abnormalResist physical="100" magical="100" />
-		</stats>
-		<status attackable="true" canMove="true" />
-		<collision>
-			<radius normal="24.0" />
-			<height normal="52.0" />
-		</collision>
-		<skillList>
-			<skill id="5238" level="1" /> <!-- Freezing -->
-			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
-			<skill id="50028" level="7" /> <!-- 74 Lv. Raid Boss -->
-			<skill id="4416" level="6" /> <!-- Humanoid -->
-		</skillList>
-		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
-			<clanList>
-				<clan>CLAN_ARENA</clan>
-			</clanList>
-		</ai>
-	</npc>
-	<npc id="25801" level="76" type="Monster" name="Dorak" title="Kabed's Rival">
-		<!-- Source: www.l2wiki.com -->
-		<race>UNDEAD</race>
-		<equipment rhand="142" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="1288688.74749" hpRegen="310.756323" mp="995557.74" mpRegen="3" />
-			<attack physical="36190.476190476" magical="6386.5546218487" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="2814.8148148148" magical="1634.4086021505" />
-			<attribute>
-				<attack type="FIRE" value="280" />
-				<defence fire="200" water="200" wind="150" earth="200" holy="200" dark="200" />
-			</attribute>
-			<speed>
-				<walk ground="70" />
-				<run ground="170" />
-			</speed>
-			<abnormalResist physical="100" magical="100" />
-		</stats>
-		<status attackable="true" canMove="true" />
-		<collision>
-			<radius normal="30.0" />
-			<height normal="46.5" />
-		</collision>
-		<skillList>
-			<skill id="6268" level="1" /> <!-- Jump Attack -->
-			<skill id="14765" level="2" /> <!-- Blood Siphon Resistance -->
-			<skill id="50028" level="8" /> <!-- 76 Lv. Raid Boss -->
-			<skill id="4416" level="1" /> <!-- Undead -->
-		</skillList>
-		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
-			<clanList>
-				<clan>CLAN_ARENA</clan>
-			</clanList>
-		</ai>
-	</npc>
-	<npc id="25802" level="78" type="Monster" name="Turan" title="Leo Tracker">
-		<!-- Source: www.l2wiki.com -->
-		<race>HUMANOID</race>
-		<equipment rhand="91" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="1559313.48545" hpRegen="319.2293199" mp="1097602.665" mpRegen="3" />
-			<attack physical="37142.857142857" magical="6554.6218487395" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="2888.8888888889" magical="1677.4193548387" />
-			<attribute>
-				<attack type="FIRE" value="280" />
-				<defence fire="150" water="200" wind="200" earth="200" holy="200" dark="200" />
-			</attribute>
-			<speed>
-				<walk ground="70" />
-				<run ground="170" />
-			</speed>
-			<abnormalResist physical="100" magical="100" />
-		</stats>
-		<status attackable="true" canMove="true" />
-		<collision>
-			<radius normal="24.0" />
-			<height normal="46.2" />
-		</collision>
-		<skillList>
-			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
-			<skill id="50028" level="9" /> <!-- 78 Lv. Raid Boss -->
-			<skill id="4416" level="6" /> <!-- Humanoid -->
-		</skillList>
-		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
-			<clanList>
-				<clan>CLAN_ARENA</clan>
-			</clanList>
-		</ai>
-	</npc>
-	<npc id="25803" level="80" type="Monster" name="Varkan" title="Varka's Gatekeeper">
-		<!-- Source: www.l2wiki.com -->
-		<race>HUMANOID</race>
-		<equipment rhand="229" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="1886769.32971" hpRegen="319.2293199" mp="1210105.635" mpRegen="3" />
-			<attack physical="38095.238095238" magical="6722.6890756303" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="2962.962962963" magical="1720.4301075269" />
-			<attribute>
-				<attack type="FIRE" value="280" />
-				<defence fire="200" water="200" wind="200" earth="150" holy="200" dark="200" />
-			</attribute>
-			<speed>
-				<walk ground="44" />
-				<run ground="170" />
-			</speed>
-			<abnormalResist physical="100" magical="100" />
-		</stats>
-		<status attackable="true" canMove="true" />
-		<collision>
-			<radius normal="19.2" />
-			<height normal="46.2" />
-		</collision>
-		<skillList>
-			<skill id="14765" level="2" /> <!-- Blood Siphon Resistance -->
-			<skill id="50028" level="10" /> <!-- 80 Lv. Raid Boss -->
-			<skill id="4416" level="6" /> <!-- Humanoid -->
-		</skillList>
-		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
-			<clanList>
-				<clan>CLAN_ARENA</clan>
-			</clanList>
-		</ai>
-	</npc>
-	<npc id="25804" level="80" type="Monster" name="Ketran" title="Ketra's Gatekeeper">
-		<!-- Source: www.l2wiki.com -->
-		<race>HUMANOID</race>
-		<equipment rhand="175" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="1886769.32971" hpRegen="319.2293199" mp="1210105.635" mpRegen="3" />
-			<attack physical="38095.238095238" magical="6722.6890756303" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="2962.962962963" magical="1720.4301075269" />
-			<attribute>
-				<attack type="FIRE" value="280" />
-				<defence fire="200" water="200" wind="200" earth="150" holy="200" dark="200" />
-			</attribute>
-			<speed>
-				<walk ground="36" />
-				<run ground="170" />
-			</speed>
-			<abnormalResist physical="100" magical="100" />
-		</stats>
-		<status attackable="true" canMove="true" />
-		<collision>
-			<radius normal="18.0" />
-			<height normal="37.0" />
-		</collision>
-		<skillList>
-			<skill id="14765" level="2" /> <!-- Blood Siphon Resistance -->
-			<skill id="50028" level="11" /> <!-- 80 Lv. Raid Boss -->
-			<skill id="4416" level="6" /> <!-- Humanoid -->
-			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
-			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
-			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
-			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
-		</skillList>
-		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
-			<clanList>
-				<clan>CLAN_ARENA</clan>
-			</clanList>
-		</ai>
-	</npc>
-	<npc id="25805" level="80" type="Monster" name="Death Lord Likan" title="Hallate's Follower">
-		<!-- Source: www.l2wiki.com -->
-		<race>UNDEAD</race>
-		<equipment rhand="78" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="1886769.32971" hpRegen="319.2293199" mp="1210105.635" mpRegen="3" />
-			<attack physical="38095.238095238" magical="6722.6890756303" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="2962.962962963" magical="1720.4301075269" />
-			<attribute>
-				<attack type="FIRE" value="280" />
-				<defence fire="200" water="200" wind="200" earth="150" holy="200" dark="200" />
-			</attribute>
-			<speed>
-				<walk ground="40" />
-				<run ground="170" />
-			</speed>
-			<abnormalResist physical="100" magical="100" />
-		</stats>
-		<status attackable="true" canMove="true" />
-		<collision>
-			<radius normal="21.0" />
-			<height normal="40.0" />
-		</collision>
-		<skillList>
-			<skill id="14765" level="2" /> <!-- Blood Siphon Resistance -->
-			<skill id="50028" level="12" /> <!-- 80 Lv. Raid Boss -->
-			<skill id="4416" level="1" /> <!-- Undead -->
-			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
-			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
-			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
-			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
-		</skillList>
-		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
-			<clanList>
-				<clan>CLAN_ARENA</clan>
-			</clanList>
-		</ai>
-	</npc>
-	<npc id="25806" level="80" type="Monster" name="Anbarad" title="Barda's Nemesis">
-		<!-- Source: www.l2wiki.com -->
-		<race>HUMANOID</race>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="1886769.32971" hpRegen="319.2293199" mp="1210105.635" mpRegen="3" />
-			<attack physical="38095.238095238" magical="6722.6890756303" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="2962.962962963" magical="1720.4301075269" />
-			<attribute>
-				<attack type="FIRE" value="280" />
-				<defence fire="200" water="200" wind="200" earth="150" holy="200" dark="200" />
-			</attribute>
-			<speed>
-				<walk ground="67" />
-				<run ground="170" />
-			</speed>
-			<abnormalResist physical="100" magical="100" />
-		</stats>
-		<status attackable="true" canMove="true" />
-		<collision>
-			<radius normal="18.4" />
-			<height normal="48.2" />
-		</collision>
-		<skillList>
-			<skill id="14765" level="2" /> <!-- Blood Siphon Resistance -->
-			<skill id="50028" level="13" /> <!-- 80 Lv. Raid Boss -->
-			<skill id="4416" level="6" /> <!-- Humanoid -->
-			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
-			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
-			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
-			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
-		</skillList>
-		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
-			<clanList>
-				<clan>CLAN_ARENA</clan>
-			</clanList>
-		</ai>
-	</npc>
-	<npc id="25807" level="80" type="Monster" name="Baranos" title="Mos' Escort Captain">
-		<!-- Source: www.l2wiki.com -->
-		<race>HUMANOID</race>
-		<equipment rhand="79" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="7604251.7514242" hpRegen="319.2293199" mp="1210105.635" mpRegen="3" />
-			<attack physical="38095.238095238" magical="6722.6890756303" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="2962.962962963" magical="1720.4301075269" />
-			<attribute>
-				<attack type="FIRE" value="280" />
-				<defence fire="200" water="200" wind="200" earth="150" holy="200" dark="200" />
-			</attribute>
-			<speed>
-				<walk ground="34" />
-				<run ground="170" />
-			</speed>
-			<abnormalResist physical="100" magical="100" />
-		</stats>
-		<status attackable="true" canMove="true" />
-		<collision>
-			<radius normal="20.0" />
-			<height normal="49.2" />
-		</collision>
-		<skillList>
-			<skill id="14765" level="2" /> <!-- Blood Siphon Resistance -->
-			<skill id="50028" level="14" /> <!-- 80 Lv. Raid Boss -->
-			<skill id="4416" level="6" /> <!-- Humanoid -->
-			<skill id="4408" level="4" /> <!-- HP High -->
-			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
-			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
-			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
-			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
-		</skillList>
-		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
-			<clanList>
-				<clan>CLAN_ARENA</clan>
-			</clanList>
-		</ai>
-	</npc>
-	<npc id="25808" level="80" type="Monster" name="Takuran" title="Tayr's Escort Captain">
-		<!-- Source: www.l2wiki.com -->
-		<race>HUMANOID</race>
-		<equipment rhand="171" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="5988441.3251087" hpRegen="319.2293199" mp="1210105.635" mpRegen="3" />
-			<attack physical="38095.238095238" magical="6722.6890756303" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="2962.962962963" magical="1720.4301075269" />
-			<attribute>
-				<attack type="FIRE" value="280" />
-				<defence fire="200" water="200" wind="200" earth="150" holy="200" dark="200" />
-			</attribute>
-			<speed>
-				<walk ground="33" />
-				<run ground="170" />
-			</speed>
-			<abnormalResist physical="100" magical="100" />
-		</stats>
-		<status attackable="true" canMove="true" />
-		<collision>
-			<radius normal="14.0" />
-			<height normal="28.8" />
-		</collision>
-		<skillList>
-			<skill id="14765" level="2" /> <!-- Blood Siphon Resistance -->
-			<skill id="50028" level="15" /> <!-- 80 Lv. Raid Boss -->
-			<skill id="4416" level="6" /> <!-- Humanoid -->
-			<skill id="4408" level="5" /> <!-- HP High -->
-			<skill id="4410" level="16" /> <!-- Very Strong P. Atk. -->
-			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
-			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
-			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
-		</skillList>
-		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
-			<clanList>
-				<clan>CLAN_ARENA</clan>
-			</clanList>
-		</ai>
-	</npc>
-	<npc id="25809" level="80" type="Monster" name="Nast" title="Ipos' Agent">
-		<!-- Source: www.l2wiki.com -->
-		<race>DEMONIC</race>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="4979833.8006066" hpRegen="319.2293199" mp="1210105.635" mpRegen="3" />
-			<attack physical="38095.238095238" magical="6722.6890756303" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="2962.962962963" magical="1720.4301075269" />
-			<attribute>
-				<attack type="FIRE" value="0" />
-				<defence fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
-			</attribute>
-			<speed>
-				<walk ground="60" />
-				<run ground="170" />
-			</speed>
-			<abnormalResist physical="100" magical="100" />
-		</stats>
-		<status attackable="true" canMove="true" />
-		<collision>
-			<radius normal="18.0" />
-			<height normal="39.6" />
-		</collision>
-		<skillList>
-			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
-			<skill id="50028" level="16" /> <!-- 80 Lv. Raid Boss -->
-			<skill id="4416" level="9" /> <!-- Demons -->
-			<skill id="4408" level="6" /> <!-- HP Very High -->
-			<skill id="4410" level="17" /> <!-- Very Strong P. Atk. -->
-			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
-			<skill id="4412" level="14" /> <!-- Strong P. Def. -->
-			<skill id="4413" level="14" /> <!-- Strong M. Def. -->
-		</skillList>
-		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
-			<clanList>
-				<clan>CLAN_ARENA</clan>
-			</clanList>
-		</ai>
-	</npc>
-	<npc id="25810" level="80" type="Monster" name="Keltar" title="Shuriel's Paladin">
-		<!-- Source: www.l2wiki.com -->
-		<race>DIVINE</race>
-		<equipment rhand="80" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="4337118.9262208" hpRegen="319.2293199" mp="1210105.635" mpRegen="3" />
-			<attack physical="38095.238095238" magical="6722.6890756303" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="2962.962962963" magical="1720.4301075269" />
-			<attribute>
-				<attack type="FIRE" value="0" />
-				<defence fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
-			</attribute>
-			<speed>
-				<walk ground="50" />
-				<run ground="170" />
-			</speed>
-			<abnormalResist physical="100" magical="100" />
-		</stats>
-		<status attackable="true" canMove="true" />
-		<collision>
-			<radius normal="15.6" />
-			<height normal="39.0" />
-		</collision>
-		<skillList>
-			<skill id="50028" level="17" /> <!-- 80 Lv. Raid Boss -->
-			<skill id="4416" level="8" /> <!-- Angel -->
-			<skill id="4408" level="7" /> <!-- HP Very High -->
-			<skill id="4410" level="18" /> <!-- Extremely Strong P. Atk. -->
-			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
-			<skill id="4412" level="14" /> <!-- Strong P. Def. -->
-			<skill id="4413" level="14" /> <!-- Strong M. Def. -->
-		</skillList>
-		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
-			<clanList>
-				<clan>CLAN_ARENA</clan>
-			</clanList>
-		</ai>
-	</npc>
-	<npc id="25811" level="80" type="Monster" name="Satur" title="Shadith' Escort Captain">
-		<!-- Source: www.l2wiki.com -->
-		<race>HUMANOID</race>
-		<equipment rhand="2504" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="1886769.32971" hpRegen="319.2293199" mp="1210105.635" mpRegen="3" />
-			<attack physical="38095.238095238" magical="6722.6890756303" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="2962.962962963" magical="1720.4301075269" />
-			<attribute>
-				<attack type="FIRE" value="0" />
-				<defence fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
-			</attribute>
-			<speed>
-				<walk ground="25" />
-				<run ground="170" />
-			</speed>
-			<abnormalResist physical="100" magical="100" />
-		</stats>
-		<status attackable="true" canMove="true" />
-		<collision>
-			<radius normal="22.0" />
-			<height normal="51.0" />
-		</collision>
-		<skillList>
-			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
-			<skill id="50028" level="18" /> <!-- 80 Lv. Raid Boss -->
-			<skill id="4416" level="6" /> <!-- Humanoid -->
-			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4410" level="19" /> <!-- Extremely Strong P. Atk. -->
-			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
-			<skill id="4412" level="14" /> <!-- Strong P. Def. -->
-			<skill id="4413" level="14" /> <!-- Strong M. Def. -->
-		</skillList>
-		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
-			<clanList>
-				<clan>CLAN_ARENA</clan>
-			</clanList>
-		</ai>
-	</npc>
-	<npc id="25812" level="80" type="Monster" name="Kosnak" title="Hekaton's Escort Captain">
-		<!-- Source: www.l2wiki.com -->
-		<race>HUMANOID</race>
-		<equipment rhand="6719" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="1886769.2476067" hpRegen="319.2293199" mp="1210105.635" mpRegen="3" />
-			<attack physical="38095.238095238" magical="6722.6890756303" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="2962.962962963" magical="1720.4301075269" />
-			<attribute>
-				<attack type="FIRE" value="0" />
-				<defence fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
-			</attribute>
-			<speed>
-				<walk ground="24" />
-				<run ground="170" />
-			</speed>
-			<abnormalResist physical="100" magical="100" />
-		</stats>
-		<status attackable="true" canMove="true" />
-		<collision>
-			<radius normal="11.0" />
-			<height normal="38.5" />
-		</collision>
-		<skillList>
-			<skill id="50028" level="19" /> <!-- 80 Lv. Raid Boss -->
-			<skill id="4416" level="6" /> <!-- Humanoid -->
-			<skill id="4408" level="11" /> <!-- HP Increase (3x) -->
-			<skill id="4410" level="20" /> <!-- Extremely Strong P. Atk. -->
-			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
-			<skill id="4412" level="14" /> <!-- Strong P. Def. -->
-			<skill id="4413" level="14" /> <!-- Strong M. Def. -->
-		</skillList>
-		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
-			<clanList>
-				<clan>CLAN_ARENA</clan>
-			</clanList>
-		</ai>
-	</npc>
-	<npc id="25813" level="80" type="Monster" name="Garaki" title="Shax's Shadow">
-		<!-- Source: www.l2wiki.com -->
-		<race>UNDEAD</race>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="1886769.2681325" hpRegen="319.2293199" mp="1210105.635" mpRegen="3" />
-			<attack physical="38095.238095238" magical="6722.6890756303" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="2962.962962963" magical="1720.4301075269" />
-			<attribute>
-				<attack type="FIRE" value="0" />
-				<defence fire="0" water="0" wind="0" earth="0" holy="0" dark="0" />
-			</attribute>
-			<speed>
-				<walk ground="63" />
-				<run ground="170" />
-			</speed>
-			<abnormalResist physical="100" magical="100" />
-		</stats>
-		<status attackable="true" canMove="true" />
-		<collision>
-			<radius normal="25.0" />
-			<height normal="47.0" />
-		</collision>
-		<skillList>
-			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
-			<skill id="50028" level="20" /> <!-- 80 Lv. Raid Boss -->
-			<skill id="4416" level="1" /> <!-- Undead -->
-			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
-			<skill id="4410" level="21" /> <!-- Extremely Strong P. Atk. -->
-			<skill id="4411" level="15" /> <!-- Strong M. Atk. -->
-			<skill id="4412" level="14" /> <!-- Strong P. Def. -->
-			<skill id="4413" level="14" /> <!-- Strong M. Def. -->
-		</skillList>
-		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
-			<clanList>
-				<clan>CLAN_ARENA</clan>
-			</clanList>
-		</ai>
-	</npc>
-	<npc id="25814" level="80" type="Folk" name="Kutis' Pawn" title="Raid Fighter">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<equipment rhand="283" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="46957" hpRegen="10.5" mp="35201" mpRegen="3.6" />
-			<speed>
-				<walk ground="50" />
-				<run ground="170" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="14" />
-			<height normal="25" />
-		</collision>
-	</npc>
-	<npc id="25815" level="80" type="Folk" name="Garan's Vanguard" title="Raid Fighter">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<equipment rhand="72" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="37345" mpRegen="3.6" />
-			<speed>
-				<walk ground="34" />
-				<run ground="170" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="13" />
-			<height normal="29" />
-		</collision>
-	</npc>
-	<npc id="25816" level="80" type="Folk" name="Batur's Priest" title="Raid Fighter">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<equipment rhand="84" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="39620" mpRegen="3.6" />
-			<speed>
-				<walk ground="45" />
-				<run ground="170" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="9" />
-			<height normal="22" />
-		</collision>
-	</npc>
-	<npc id="25817" level="80" type="Folk" name="Venir's Spirit" title="Raid Fighter">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="42032" mpRegen="3.6" />
-			<speed>
-				<walk ground="100" />
-				<run ground="170" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="20" />
-			<height normal="35" />
-		</collision>
-	</npc>
-	<npc id="25818" level="80" type="Folk" name="Oel's Vanguard" title="Raid Fighter">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<equipment rhand="75" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="44592" mpRegen="3.6" />
-			<speed>
-				<walk ground="50" />
-				<run ground="170" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="14" />
-			<height normal="27" />
-		</collision>
-	</npc>
-	<npc id="25819" level="80" type="Folk" name="Taranka's Healer" title="Raid Fighter">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<equipment rhand="195" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="48227" mpRegen="3.6" />
-			<speed>
-				<walk ground="29" />
-				<run ground="170" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="13" />
-			<height normal="32" />
-		</collision>
-	</npc>
-	<npc id="25820" level="80" type="Folk" name="Kasha's Marksman" title="Raid Fighter">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<equipment rhand="286" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="53170" mpRegen="3.6" />
-			<speed>
-				<walk ground="45" />
-				<run ground="170" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="11" />
-			<height normal="21.5" />
-		</collision>
-	</npc>
-	<npc id="25821" level="80" type="Folk" name="Dorak's Evil Spirit" title="Raid Fighter">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="58620" mpRegen="3.6" />
-			<speed>
-				<walk ground="15" />
-				<run ground="170" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="30" />
-			<height normal="40" />
-		</collision>
-	</npc>
-	<npc id="25822" level="80" type="Folk" name="Turan's Escort" title="Raid Fighter">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<equipment rhand="2503" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="64628" mpRegen="3.6" />
-			<speed>
-				<walk ground="70" />
-				<run ground="170" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="20" />
-			<height normal="37" />
-		</collision>
-	</npc>
-	<npc id="25823" level="80" type="Folk" name="Varkan's Priest" title="Raid Fighter">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<equipment rhand="5793" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="71253" mpRegen="3.6" />
-			<speed>
-				<walk ground="36" />
-				<run ground="170" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="9" />
-			<height normal="41.5" />
-		</collision>
-	</npc>
-	<npc id="25824" level="80" type="Folk" name="Ketran's Sniper" title="Raid Fighter">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<equipment rhand="287" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="71253" mpRegen="3.6" />
-			<speed>
-				<walk ground="45" />
-				<run ground="170" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="12" />
-			<height normal="27" />
-		</collision>
-	</npc>
-	<npc id="25825" level="80" type="Folk" name="Likan's Maid" title="Raid Fighter">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="71253" mpRegen="3.6" />
-			<speed>
-				<walk ground="80" />
-				<run ground="170" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="14" />
-			<height normal="40" />
-		</collision>
-	</npc>
-	<npc id="25826" level="80" type="Folk" name="Anbarad's Priest" title="Raid Fighter">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<equipment rhand="210" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="71253" mpRegen="3.6" />
-			<speed>
-				<walk ground="70" />
-				<run ground="170" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="15" />
-			<height normal="34" />
-		</collision>
-	</npc>
-	<npc id="25827" level="80" type="Folk" name="Baranos' Guard" title="Raid Fighter">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="71253" mpRegen="3.6" />
-			<speed>
-				<walk ground="30" />
-				<run ground="170" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="8" />
-			<height normal="37.5" />
-		</collision>
-	</npc>
-	<npc id="25828" level="80" type="Folk" name="Takuran's Protector" title="Raid Fighter">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<equipment rhand="175" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="71253" mpRegen="3.6" />
-			<speed>
-				<walk ground="36" />
-				<run ground="170" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="12" />
-			<height normal="24" />
-		</collision>
-	</npc>
-	<npc id="25829" level="80" type="Folk" name="Nast's Pikeman" title="Raid Fighter">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<equipment rhand="1472" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="71253" mpRegen="3.6" />
-			<speed>
-				<walk ground="100" />
-				<run ground="170" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="15" />
-			<height normal="45" />
-		</collision>
-	</npc>
-	<npc id="25830" level="80" type="Folk" name="Keltar's Shaman" title="Raid Fighter">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<equipment rhand="202" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="71253" mpRegen="3.6" />
-			<speed>
-				<walk ground="50" />
-				<run ground="170" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="13" />
-			<height normal="25" />
-		</collision>
-	</npc>
-	<npc id="25831" level="80" type="Folk" name="Satur's Priest" title="Raid Fighter">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<equipment rhand="5794" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="71253" mpRegen="3.6" />
-			<speed>
-				<walk ground="36" />
-				<run ground="170" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="14" />
-			<height normal="39.5" />
-		</collision>
-	</npc>
-	<npc id="25832" level="80" type="Folk" name="Kosnak's Escorts" title="Raid Fighter">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<equipment rhand="171" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="71253" mpRegen="3.6" />
-			<speed>
-				<walk ground="33" />
-				<run ground="170" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="12" />
-			<height normal="24" />
-		</collision>
-	</npc>
-	<npc id="25833" level="80" type="Folk" name="Garaki's Banshee" title="Raid Fighter">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<equipment rhand="3939" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="71253" mpRegen="3.6" />
-			<speed>
-				<walk ground="80" />
-				<run ground="170" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="9" />
-			<height normal="23" />
-		</collision>
-	</npc>
-	<npc id="25834" level="81" type="RaidBoss" name="Shadai" title="Chief">
-		<race>HUMANOID</race>
-		<sex>MALE</sex>
-		<equipment rhand="8679" />
-		<acquire exp="0" sp="0" raidPoints="0" />
-		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
-			<vitals hp="3773538.536265" hpRegen="319.2293199" mp="5802.945" mpRegen="3" />
-			<attack physical="5212.711904" magical="3559.606475" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="3254.148006" magical="1587.524417" />
-			<speed>
-				<walk ground="25" />
-				<run ground="170" />
-			</speed>
-		</stats>
-		<status attackable="true" />
-		<collision>
-			<radius normal="22" />
-			<height normal="51" />
-		</collision>
-		<skillList>
-			<skill id="50028" level="20" /> <!-- 80 Lv. Raid Boss -->
-			<skill id="4416" level="6" /> <!-- Humanoid -->
-			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
-			<skill id="4410" level="21" /> <!-- Extremely Strong P. Atk. -->
-			<skill id="4411" level="15" /> <!-- Strong M. Atk. -->
-			<skill id="4412" level="14" /> <!-- Strong P. Def. -->
-			<skill id="4413" level="14" /> <!-- Strong M. Def. -->
-		</skillList>
-	</npc>
-	<npc id="25835" level="82" type="RaidBoss" name="Turabait" title="Conqueror">
-		<race>HUMANOID</race>
-		<sex>MALE</sex>
-		<equipment rhand="80" />
-		<acquire exp="0" sp="0" raidPoints="0" />
-		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
-			<vitals hp="7547077.6267275" hpRegen="319.2293199" mp="5920.65" mpRegen="3" />
-			<attack physical="4522.433913" magical="3088.236091" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="3335.250614" magical="1627.090034" />
-			<speed>
-				<walk ground="38" />
-				<run ground="170" />
-			</speed>
-		</stats>
-		<status attackable="true" />
-		<collision>
-			<radius normal="22.5" />
-			<height normal="41.25" />
-		</collision>
-		<skillList>
-			<skill id="50028" level="20" /> <!-- 80 Lv. Raid Boss -->
-			<skill id="4416" level="6" /> <!-- Humanoid -->
-			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
-			<skill id="4410" level="21" /> <!-- Extremely Strong P. Atk. -->
-			<skill id="4411" level="15" /> <!-- Strong M. Atk. -->
-			<skill id="4412" level="14" /> <!-- Strong P. Def. -->
-			<skill id="4413" level="14" /> <!-- Strong M. Def. -->
-		</skillList>
-	</npc>
-	<npc id="25836" level="83" type="RaidBoss" name="Tier" title="Fallen Angel">
-		<race>DIVINE</race>
-		<sex>MALE</sex>
-		<equipment rhand="8683" />
-		<acquire exp="0" sp="0" raidPoints="0" />
-		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
-			<vitals hp="15094155.253455" hpRegen="319.2293199" mp="6035.7" mpRegen="3" />
-			<attack physical="5327.465132" magical="3637.968053" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="3417.351408" magical="1667.142611" />
-			<speed>
-				<walk ground="50" />
-				<run ground="170" />
-			</speed>
-		</stats>
-		<status attackable="true" />
-		<collision>
-			<radius normal="10.5" />
-			<height normal="55.1" />
-		</collision>
-		<skillList>
-			<skill id="50028" level="20" /> <!-- 80 Lv. Raid Boss -->
-			<skill id="4416" level="8" /> <!-- Angel -->
-			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
-			<skill id="4410" level="21" /> <!-- Extremely Strong P. Atk. -->
-			<skill id="4411" level="15" /> <!-- Strong M. Atk. -->
-			<skill id="4412" level="14" /> <!-- Strong P. Def. -->
-			<skill id="4413" level="14" /> <!-- Strong M. Def. -->
-		</skillList>
-	</npc>
-	<npc id="25837" level="84" type="RaidBoss" name="Cherkya" title="Demon Apostle">
-		<race>DEMONIC</race>
-		<sex>MALE</sex>
-		<acquire exp="0" sp="0" raidPoints="0" />
-		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
-			<vitals hp="30188311.061108" hpRegen="319.2293199" mp="6154.29" mpRegen="3" />
-			<attack physical="3152.927754" magical="1289.681983" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="3500.450389" magical="1707.68215" />
-			<speed>
-				<walk ground="50" />
-				<run ground="170" />
-			</speed>
-		</stats>
-		<status attackable="true" />
-		<collision>
-			<radius normal="21" />
-			<height normal="40" />
-		</collision>
-		<skillList>
-			<skill id="50028" level="20" /> <!-- 80 Lv. Raid Boss -->
-			<skill id="4416" level="9" /> <!-- Demons -->
-			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
-			<skill id="4410" level="21" /> <!-- Extremely Strong P. Atk. -->
-			<skill id="4411" level="15" /> <!-- Strong M. Atk. -->
-			<skill id="4412" level="14" /> <!-- Strong P. Def. -->
-			<skill id="4413" level="14" /> <!-- Strong M. Def. -->
-		</skillList>
-	</npc>
-	<npc id="25838" level="85" type="RaidBoss" name="Spicula" title="Procella's Nemesis">
-		<race>HUMANOID</race>
-		<sex>MALE</sex>
-		<acquire exp="0" sp="0" raidPoints="0" />
-		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
-			<vitals hp="60376622.122215" hpRegen="319.2293199" mp="6271.995" mpRegen="3" />
-			<attack physical="8184.13934" magical="2579.001338" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="3584.547554" magical="1748.708651" />
-			<speed>
-				<walk ground="60" />
-				<run ground="170" />
-			</speed>
-		</stats>
-		<status attackable="true" />
-		<collision>
-			<radius normal="20" />
-			<height normal="46" />
-		</collision>
-		<skillList>
-			<skill id="50028" level="20" /> <!-- 80 Lv. Raid Boss -->
-			<skill id="4416" level="6" /> <!-- Humanoid -->
-			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
-			<skill id="4410" level="21" /> <!-- Extremely Strong P. Atk. -->
-			<skill id="4411" level="15" /> <!-- Strong M. Atk. -->
-			<skill id="4412" level="14" /> <!-- Strong P. Def. -->
-			<skill id="4413" level="14" /> <!-- Strong M. Def. -->
-		</skillList>
-	</npc>
-	<npc id="25839" level="80" type="Folk" name="Shadai's Priest" title="Raid Fighter">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<equipment rhand="5794" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="102528" mpRegen="3.6" />
-			<speed>
-				<walk ground="36" />
-				<run ground="170" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="14" />
-			<height normal="39.5" />
-		</collision>
-	</npc>
-	<npc id="25840" level="80" type="Folk" name="Turabait's Warrior" title="Raid Fighter">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<equipment rhand="8678" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="104580" mpRegen="3.6" />
-			<speed>
-				<walk ground="33" />
-				<run ground="170" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="12" />
-			<height normal="24" />
-		</collision>
-	</npc>
-	<npc id="25841" level="80" type="Folk" name="Tier's Follower" title="Raid Fighter">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<equipment rhand="8680" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="106644" mpRegen="3.6" />
-			<speed>
-				<walk ground="61" />
-				<run ground="170" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="9" />
-			<height normal="23.4" />
-		</collision>
-	</npc>
-	<npc id="25842" level="80" type="Folk" name="Cherkya's Escort" title="Raid Fighter">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="108720" mpRegen="3.6" />
-			<speed>
-				<walk ground="60" />
-				<run ground="170" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="16.8" />
-			<height normal="30.6" />
-		</collision>
-	</npc>
-	<npc id="25843" level="80" type="Folk" name="Spicula's Follower" title="Raid Fighter">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="110808" mpRegen="3.6" />
-			<speed>
-				<walk ground="60" />
-				<run ground="170" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="20" />
-			<height normal="40" />
-		</collision>
-	</npc>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org npcs.xsd">
+    <npc id="25800" level="74" type="Monster" name="Kasha" title="Gosmos' Mentor">
+        <!-- Source: www.l2wiki.com -->
+        <race>HUMANOID</race>
+        <equipment rhand="135"/>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="1065031.87819" hpRegen="305.3568783" mp="902999.13" mpRegen="3"/>
+            <attack physical="35238.095238095" magical="6218.487394958" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120"/>
+            <defence physical="2740.7407407407" magical="1591.3978494624"/>
+            <attribute>
+                <attack type="FIRE" value="430"/>
+                <defence fire="350" water="350" wind="350" earth="350" holy="300" dark="350"/>
+            </attribute>
+            <speed>
+                <walk ground="80"/>
+                <run ground="170"/>
+            </speed>
+            <abnormalResist physical="100" magical="100"/>
+        </stats>
+        <status attackable="true" canMove="true"/>
+        <collision>
+            <radius normal="24.0"/>
+            <height normal="52.0"/>
+        </collision>
+        <skillList>
+            <skill id="5238" level="1"/> <!-- Freezing -->
+            <skill id="14765" level="4"/> <!-- Blood Siphon Resistance -->
+            <skill id="50028" level="7"/> <!-- 74 Lv. Raid Boss -->
+            <skill id="4416" level="6"/> <!-- Humanoid -->
+        </skillList>
+        <ai aggroRange="300" clanHelpRange="300" isAggressive="false">
+            <clanList>
+                <clan>CLAN_ARENA</clan>
+            </clanList>
+        </ai>
+    </npc>
+    <npc id="25801" level="76" type="Monster" name="Dorak" title="Kabed's Rival">
+        <!-- Source: www.l2wiki.com -->
+        <race>UNDEAD</race>
+        <equipment rhand="142"/>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="1288688.74749" hpRegen="310.756323" mp="995557.74" mpRegen="3"/>
+            <attack physical="36190.476190476" magical="6386.5546218487" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120"/>
+            <defence physical="2814.8148148148" magical="1634.4086021505"/>
+            <attribute>
+                <attack type="FIRE" value="280"/>
+                <defence fire="200" water="200" wind="150" earth="200" holy="200" dark="200"/>
+            </attribute>
+            <speed>
+                <walk ground="70"/>
+                <run ground="170"/>
+            </speed>
+            <abnormalResist physical="100" magical="100"/>
+        </stats>
+        <status attackable="true" canMove="true"/>
+        <collision>
+            <radius normal="30.0"/>
+            <height normal="46.5"/>
+        </collision>
+        <skillList>
+            <skill id="6268" level="1"/> <!-- Jump Attack -->
+            <skill id="14765" level="2"/> <!-- Blood Siphon Resistance -->
+            <skill id="50028" level="8"/> <!-- 76 Lv. Raid Boss -->
+            <skill id="4416" level="1"/> <!-- Undead -->
+        </skillList>
+        <ai aggroRange="300" clanHelpRange="300" isAggressive="false">
+            <clanList>
+                <clan>CLAN_ARENA</clan>
+            </clanList>
+        </ai>
+    </npc>
+    <npc id="25802" level="78" type="Monster" name="Turan" title="Leo Tracker">
+        <!-- Source: www.l2wiki.com -->
+        <race>HUMANOID</race>
+        <equipment rhand="91"/>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="1559313.48545" hpRegen="319.2293199" mp="1097602.665" mpRegen="3"/>
+            <attack physical="37142.857142857" magical="6554.6218487395" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120"/>
+            <defence physical="2888.8888888889" magical="1677.4193548387"/>
+            <attribute>
+                <attack type="FIRE" value="280"/>
+                <defence fire="150" water="200" wind="200" earth="200" holy="200" dark="200"/>
+            </attribute>
+            <speed>
+                <walk ground="70"/>
+                <run ground="170"/>
+            </speed>
+            <abnormalResist physical="100" magical="100"/>
+        </stats>
+        <status attackable="true" canMove="true"/>
+        <collision>
+            <radius normal="24.0"/>
+            <height normal="46.2"/>
+        </collision>
+        <skillList>
+            <skill id="14765" level="4"/> <!-- Blood Siphon Resistance -->
+            <skill id="50028" level="9"/> <!-- 78 Lv. Raid Boss -->
+            <skill id="4416" level="6"/> <!-- Humanoid -->
+        </skillList>
+        <ai aggroRange="300" clanHelpRange="300" isAggressive="false">
+            <clanList>
+                <clan>CLAN_ARENA</clan>
+            </clanList>
+        </ai>
+    </npc>
+    <npc id="25803" level="80" type="Monster" name="Varkan" title="Varka's Gatekeeper">
+        <!-- Source: www.l2wiki.com -->
+        <race>HUMANOID</race>
+        <equipment rhand="229"/>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="1886769.32971" hpRegen="319.2293199" mp="1210105.635" mpRegen="3"/>
+            <attack physical="38095.238095238" magical="6722.6890756303" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120"/>
+            <defence physical="2962.962962963" magical="1720.4301075269"/>
+            <attribute>
+                <attack type="FIRE" value="280"/>
+                <defence fire="200" water="200" wind="200" earth="150" holy="200" dark="200"/>
+            </attribute>
+            <speed>
+                <walk ground="44"/>
+                <run ground="170"/>
+            </speed>
+            <abnormalResist physical="100" magical="100"/>
+        </stats>
+        <status attackable="true" canMove="true"/>
+        <collision>
+            <radius normal="19.2"/>
+            <height normal="46.2"/>
+        </collision>
+        <skillList>
+            <skill id="14765" level="2"/> <!-- Blood Siphon Resistance -->
+            <skill id="50028" level="10"/> <!-- 80 Lv. Raid Boss -->
+            <skill id="4416" level="6"/> <!-- Humanoid -->
+        </skillList>
+        <ai aggroRange="300" clanHelpRange="300" isAggressive="false">
+            <clanList>
+                <clan>CLAN_ARENA</clan>
+            </clanList>
+        </ai>
+    </npc>
+    <npc id="25804" level="80" type="Monster" name="Ketran" title="Ketra's Gatekeeper">
+        <!-- Source: www.l2wiki.com -->
+        <race>HUMANOID</race>
+        <equipment rhand="175"/>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="1886769.32971" hpRegen="319.2293199" mp="1210105.635" mpRegen="3"/>
+            <attack physical="38095.238095238" magical="6722.6890756303" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120"/>
+            <defence physical="2962.962962963" magical="1720.4301075269"/>
+            <attribute>
+                <attack type="FIRE" value="280"/>
+                <defence fire="200" water="200" wind="200" earth="150" holy="200" dark="200"/>
+            </attribute>
+            <speed>
+                <walk ground="36"/>
+                <run ground="170"/>
+            </speed>
+            <abnormalResist physical="100" magical="100"/>
+        </stats>
+        <status attackable="true" canMove="true"/>
+        <collision>
+            <radius normal="18.0"/>
+            <height normal="37.0"/>
+        </collision>
+        <skillList>
+            <skill id="14765" level="2"/> <!-- Blood Siphon Resistance -->
+            <skill id="50028" level="11"/> <!-- 80 Lv. Raid Boss -->
+            <skill id="4416" level="6"/> <!-- Humanoid -->
+            <skill id="4410" level="12"/> <!-- Slightly Strong P. Atk. -->
+            <skill id="4411" level="12"/> <!-- Slightly Strong M. Atk. -->
+            <skill id="4412" level="13"/> <!-- Slightly Strong P. Def. -->
+            <skill id="4413" level="13"/> <!-- Slightly Strong M. Def. -->
+        </skillList>
+        <ai aggroRange="300" clanHelpRange="300" isAggressive="false">
+            <clanList>
+                <clan>CLAN_ARENA</clan>
+            </clanList>
+        </ai>
+    </npc>
+    <npc id="25805" level="80" type="Monster" name="Death Lord Likan" title="Hallate's Follower">
+        <!-- Source: www.l2wiki.com -->
+        <race>UNDEAD</race>
+        <equipment rhand="78"/>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="1886769.32971" hpRegen="319.2293199" mp="1210105.635" mpRegen="3"/>
+            <attack physical="38095.238095238" magical="6722.6890756303" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120"/>
+            <defence physical="2962.962962963" magical="1720.4301075269"/>
+            <attribute>
+                <attack type="FIRE" value="280"/>
+                <defence fire="200" water="200" wind="200" earth="150" holy="200" dark="200"/>
+            </attribute>
+            <speed>
+                <walk ground="40"/>
+                <run ground="170"/>
+            </speed>
+            <abnormalResist physical="100" magical="100"/>
+        </stats>
+        <status attackable="true" canMove="true"/>
+        <collision>
+            <radius normal="21.0"/>
+            <height normal="40.0"/>
+        </collision>
+        <skillList>
+            <skill id="14765" level="2"/> <!-- Blood Siphon Resistance -->
+            <skill id="50028" level="12"/> <!-- 80 Lv. Raid Boss -->
+            <skill id="4416" level="1"/> <!-- Undead -->
+            <skill id="4410" level="13"/> <!-- Slightly Strong P. Atk. -->
+            <skill id="4411" level="12"/> <!-- Slightly Strong M. Atk. -->
+            <skill id="4412" level="13"/> <!-- Slightly Strong P. Def. -->
+            <skill id="4413" level="13"/> <!-- Slightly Strong M. Def. -->
+        </skillList>
+        <ai aggroRange="300" clanHelpRange="300" isAggressive="false">
+            <clanList>
+                <clan>CLAN_ARENA</clan>
+            </clanList>
+        </ai>
+    </npc>
+    <npc id="25806" level="80" type="Monster" name="Anbarad" title="Barda's Nemesis">
+        <!-- Source: www.l2wiki.com -->
+        <race>HUMANOID</race>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="1886769.32971" hpRegen="319.2293199" mp="1210105.635" mpRegen="3"/>
+            <attack physical="38095.238095238" magical="6722.6890756303" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120"/>
+            <defence physical="2962.962962963" magical="1720.4301075269"/>
+            <attribute>
+                <attack type="FIRE" value="280"/>
+                <defence fire="200" water="200" wind="200" earth="150" holy="200" dark="200"/>
+            </attribute>
+            <speed>
+                <walk ground="67"/>
+                <run ground="170"/>
+            </speed>
+            <abnormalResist physical="100" magical="100"/>
+        </stats>
+        <status attackable="true" canMove="true"/>
+        <collision>
+            <radius normal="18.4"/>
+            <height normal="48.2"/>
+        </collision>
+        <skillList>
+            <skill id="14765" level="2"/> <!-- Blood Siphon Resistance -->
+            <skill id="50028" level="13"/> <!-- 80 Lv. Raid Boss -->
+            <skill id="4416" level="6"/> <!-- Humanoid -->
+            <skill id="4410" level="14"/> <!-- Strong P. Atk. -->
+            <skill id="4411" level="12"/> <!-- Slightly Strong M. Atk. -->
+            <skill id="4412" level="13"/> <!-- Slightly Strong P. Def. -->
+            <skill id="4413" level="13"/> <!-- Slightly Strong M. Def. -->
+        </skillList>
+        <ai aggroRange="300" clanHelpRange="300" isAggressive="false">
+            <clanList>
+                <clan>CLAN_ARENA</clan>
+            </clanList>
+        </ai>
+    </npc>
+    <npc id="25807" level="80" type="Monster" name="Baranos" title="Mos' Escort Captain">
+        <!-- Source: www.l2wiki.com -->
+        <race>HUMANOID</race>
+        <equipment rhand="79"/>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="7604251.7514242" hpRegen="319.2293199" mp="1210105.635" mpRegen="3"/>
+            <attack physical="38095.238095238" magical="6722.6890756303" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120"/>
+            <defence physical="2962.962962963" magical="1720.4301075269"/>
+            <attribute>
+                <attack type="FIRE" value="280"/>
+                <defence fire="200" water="200" wind="200" earth="150" holy="200" dark="200"/>
+            </attribute>
+            <speed>
+                <walk ground="34"/>
+                <run ground="170"/>
+            </speed>
+            <abnormalResist physical="100" magical="100"/>
+        </stats>
+        <status attackable="true" canMove="true"/>
+        <collision>
+            <radius normal="20.0"/>
+            <height normal="49.2"/>
+        </collision>
+        <skillList>
+            <skill id="14765" level="2"/> <!-- Blood Siphon Resistance -->
+            <skill id="50028" level="14"/> <!-- 80 Lv. Raid Boss -->
+            <skill id="4416" level="6"/> <!-- Humanoid -->
+            <skill id="4408" level="4"/> <!-- HP High -->
+            <skill id="4410" level="15"/> <!-- Strong P. Atk. -->
+            <skill id="4411" level="13"/> <!-- Slightly Strong M. Atk. -->
+            <skill id="4412" level="13"/> <!-- Slightly Strong P. Def. -->
+            <skill id="4413" level="13"/> <!-- Slightly Strong M. Def. -->
+        </skillList>
+        <ai aggroRange="300" clanHelpRange="300" isAggressive="false">
+            <clanList>
+                <clan>CLAN_ARENA</clan>
+            </clanList>
+        </ai>
+    </npc>
+    <npc id="25808" level="80" type="Monster" name="Takuran" title="Tayr's Escort Captain">
+        <!-- Source: www.l2wiki.com -->
+        <race>HUMANOID</race>
+        <equipment rhand="171"/>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="5988441.3251087" hpRegen="319.2293199" mp="1210105.635" mpRegen="3"/>
+            <attack physical="38095.238095238" magical="6722.6890756303" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120"/>
+            <defence physical="2962.962962963" magical="1720.4301075269"/>
+            <attribute>
+                <attack type="FIRE" value="280"/>
+                <defence fire="200" water="200" wind="200" earth="150" holy="200" dark="200"/>
+            </attribute>
+            <speed>
+                <walk ground="33"/>
+                <run ground="170"/>
+            </speed>
+            <abnormalResist physical="100" magical="100"/>
+        </stats>
+        <status attackable="true" canMove="true"/>
+        <collision>
+            <radius normal="14.0"/>
+            <height normal="28.8"/>
+        </collision>
+        <skillList>
+            <skill id="14765" level="2"/> <!-- Blood Siphon Resistance -->
+            <skill id="50028" level="15"/> <!-- 80 Lv. Raid Boss -->
+            <skill id="4416" level="6"/> <!-- Humanoid -->
+            <skill id="4408" level="5"/> <!-- HP High -->
+            <skill id="4410" level="16"/> <!-- Very Strong P. Atk. -->
+            <skill id="4411" level="13"/> <!-- Slightly Strong M. Atk. -->
+            <skill id="4412" level="13"/> <!-- Slightly Strong P. Def. -->
+            <skill id="4413" level="13"/> <!-- Slightly Strong M. Def. -->
+        </skillList>
+        <ai aggroRange="300" clanHelpRange="300" isAggressive="false">
+            <clanList>
+                <clan>CLAN_ARENA</clan>
+            </clanList>
+        </ai>
+    </npc>
+    <npc id="25809" level="80" type="Monster" name="Nast" title="Ipos' Agent">
+        <!-- Source: www.l2wiki.com -->
+        <race>DEMONIC</race>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="4979833.8006066" hpRegen="319.2293199" mp="1210105.635" mpRegen="3"/>
+            <attack physical="38095.238095238" magical="6722.6890756303" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120"/>
+            <defence physical="2962.962962963" magical="1720.4301075269"/>
+            <attribute>
+                <attack type="FIRE" value="0"/>
+                <defence fire="0" water="0" wind="0" earth="0" holy="0" dark="0"/>
+            </attribute>
+            <speed>
+                <walk ground="60"/>
+                <run ground="170"/>
+            </speed>
+            <abnormalResist physical="100" magical="100"/>
+        </stats>
+        <status attackable="true" canMove="true"/>
+        <collision>
+            <radius normal="18.0"/>
+            <height normal="39.6"/>
+        </collision>
+        <skillList>
+            <skill id="14765" level="4"/> <!-- Blood Siphon Resistance -->
+            <skill id="50028" level="16"/> <!-- 80 Lv. Raid Boss -->
+            <skill id="4416" level="9"/> <!-- Demons -->
+            <skill id="4408" level="6"/> <!-- HP Very High -->
+            <skill id="4410" level="17"/> <!-- Very Strong P. Atk. -->
+            <skill id="4411" level="13"/> <!-- Slightly Strong M. Atk. -->
+            <skill id="4412" level="14"/> <!-- Strong P. Def. -->
+            <skill id="4413" level="14"/> <!-- Strong M. Def. -->
+        </skillList>
+        <ai aggroRange="300" clanHelpRange="300" isAggressive="false">
+            <clanList>
+                <clan>CLAN_ARENA</clan>
+            </clanList>
+        </ai>
+    </npc>
+    <npc id="25810" level="80" type="Monster" name="Keltar" title="Shuriel's Paladin">
+        <!-- Source: www.l2wiki.com -->
+        <race>DIVINE</race>
+        <equipment rhand="80"/>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="4337118.9262208" hpRegen="319.2293199" mp="1210105.635" mpRegen="3"/>
+            <attack physical="38095.238095238" magical="6722.6890756303" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120"/>
+            <defence physical="2962.962962963" magical="1720.4301075269"/>
+            <attribute>
+                <attack type="FIRE" value="0"/>
+                <defence fire="0" water="0" wind="0" earth="0" holy="0" dark="0"/>
+            </attribute>
+            <speed>
+                <walk ground="50"/>
+                <run ground="170"/>
+            </speed>
+            <abnormalResist physical="100" magical="100"/>
+        </stats>
+        <status attackable="true" canMove="true"/>
+        <collision>
+            <radius normal="15.6"/>
+            <height normal="39.0"/>
+        </collision>
+        <skillList>
+            <skill id="50028" level="17"/> <!-- 80 Lv. Raid Boss -->
+            <skill id="4416" level="8"/> <!-- Angel -->
+            <skill id="4408" level="7"/> <!-- HP Very High -->
+            <skill id="4410" level="18"/> <!-- Extremely Strong P. Atk. -->
+            <skill id="4411" level="14"/> <!-- Strong M. Atk. -->
+            <skill id="4412" level="14"/> <!-- Strong P. Def. -->
+            <skill id="4413" level="14"/> <!-- Strong M. Def. -->
+        </skillList>
+        <ai aggroRange="300" clanHelpRange="300" isAggressive="false">
+            <clanList>
+                <clan>CLAN_ARENA</clan>
+            </clanList>
+        </ai>
+    </npc>
+    <npc id="25811" level="80" type="Monster" name="Satur" title="Shadith' Escort Captain">
+        <!-- Source: www.l2wiki.com -->
+        <race>HUMANOID</race>
+        <equipment rhand="2504"/>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="1886769.32971" hpRegen="319.2293199" mp="1210105.635" mpRegen="3"/>
+            <attack physical="38095.238095238" magical="6722.6890756303" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120"/>
+            <defence physical="2962.962962963" magical="1720.4301075269"/>
+            <attribute>
+                <attack type="FIRE" value="0"/>
+                <defence fire="0" water="0" wind="0" earth="0" holy="0" dark="0"/>
+            </attribute>
+            <speed>
+                <walk ground="25"/>
+                <run ground="170"/>
+            </speed>
+            <abnormalResist physical="100" magical="100"/>
+        </stats>
+        <status attackable="true" canMove="true"/>
+        <collision>
+            <radius normal="22.0"/>
+            <height normal="51.0"/>
+        </collision>
+        <skillList>
+            <skill id="14765" level="4"/> <!-- Blood Siphon Resistance -->
+            <skill id="50028" level="18"/> <!-- 80 Lv. Raid Boss -->
+            <skill id="4416" level="6"/> <!-- Humanoid -->
+            <skill id="4408" level="10"/> <!-- HP Increase (2x) -->
+            <skill id="4410" level="19"/> <!-- Extremely Strong P. Atk. -->
+            <skill id="4411" level="14"/> <!-- Strong M. Atk. -->
+            <skill id="4412" level="14"/> <!-- Strong P. Def. -->
+            <skill id="4413" level="14"/> <!-- Strong M. Def. -->
+        </skillList>
+        <ai aggroRange="300" clanHelpRange="300" isAggressive="false">
+            <clanList>
+                <clan>CLAN_ARENA</clan>
+            </clanList>
+        </ai>
+    </npc>
+    <npc id="25812" level="80" type="Monster" name="Kosnak" title="Hekaton's Escort Captain">
+        <!-- Source: www.l2wiki.com -->
+        <race>HUMANOID</race>
+        <equipment rhand="6719"/>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="1886769.2476067" hpRegen="319.2293199" mp="1210105.635" mpRegen="3"/>
+            <attack physical="38095.238095238" magical="6722.6890756303" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120"/>
+            <defence physical="2962.962962963" magical="1720.4301075269"/>
+            <attribute>
+                <attack type="FIRE" value="0"/>
+                <defence fire="0" water="0" wind="0" earth="0" holy="0" dark="0"/>
+            </attribute>
+            <speed>
+                <walk ground="24"/>
+                <run ground="170"/>
+            </speed>
+            <abnormalResist physical="100" magical="100"/>
+        </stats>
+        <status attackable="true" canMove="true"/>
+        <collision>
+            <radius normal="11.0"/>
+            <height normal="38.5"/>
+        </collision>
+        <skillList>
+            <skill id="50028" level="19"/> <!-- 80 Lv. Raid Boss -->
+            <skill id="4416" level="6"/> <!-- Humanoid -->
+            <skill id="4408" level="11"/> <!-- HP Increase (3x) -->
+            <skill id="4410" level="20"/> <!-- Extremely Strong P. Atk. -->
+            <skill id="4411" level="14"/> <!-- Strong M. Atk. -->
+            <skill id="4412" level="14"/> <!-- Strong P. Def. -->
+            <skill id="4413" level="14"/> <!-- Strong M. Def. -->
+        </skillList>
+        <ai aggroRange="300" clanHelpRange="300" isAggressive="false">
+            <clanList>
+                <clan>CLAN_ARENA</clan>
+            </clanList>
+        </ai>
+    </npc>
+    <npc id="25813" level="80" type="Monster" name="Garaki" title="Shax's Shadow">
+        <!-- Source: www.l2wiki.com -->
+        <race>UNDEAD</race>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="1886769.2681325" hpRegen="319.2293199" mp="1210105.635" mpRegen="3"/>
+            <attack physical="38095.238095238" magical="6722.6890756303" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120"/>
+            <defence physical="2962.962962963" magical="1720.4301075269"/>
+            <attribute>
+                <attack type="FIRE" value="0"/>
+                <defence fire="0" water="0" wind="0" earth="0" holy="0" dark="0"/>
+            </attribute>
+            <speed>
+                <walk ground="63"/>
+                <run ground="170"/>
+            </speed>
+            <abnormalResist physical="100" magical="100"/>
+        </stats>
+        <status attackable="true" canMove="true"/>
+        <collision>
+            <radius normal="25.0"/>
+            <height normal="47.0"/>
+        </collision>
+        <skillList>
+            <skill id="14765" level="4"/> <!-- Blood Siphon Resistance -->
+            <skill id="50028" level="20"/> <!-- 80 Lv. Raid Boss -->
+            <skill id="4416" level="1"/> <!-- Undead -->
+            <skill id="4408" level="12"/> <!-- HP Increase (4x) -->
+            <skill id="4410" level="21"/> <!-- Extremely Strong P. Atk. -->
+            <skill id="4411" level="15"/> <!-- Strong M. Atk. -->
+            <skill id="4412" level="14"/> <!-- Strong P. Def. -->
+            <skill id="4413" level="14"/> <!-- Strong M. Def. -->
+        </skillList>
+        <ai aggroRange="300" clanHelpRange="300" isAggressive="false">
+            <clanList>
+                <clan>CLAN_ARENA</clan>
+            </clanList>
+        </ai>
+    </npc>
+    <npc id="25814" level="80" type="Folk" name="Kutis' Pawn" title="Raid Fighter">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <equipment rhand="283"/>
+        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+            <vitals hp="46957" hpRegen="10.5" mp="35201" mpRegen="3.6"/>
+            <speed>
+                <walk ground="50"/>
+                <run ground="170"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <collision>
+            <radius normal="14"/>
+            <height normal="25"/>
+        </collision>
+    </npc>
+    <npc id="25815" level="80" type="Folk" name="Garan's Vanguard" title="Raid Fighter">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <equipment rhand="72"/>
+        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+            <vitals hp="8446" hpRegen="10.5" mp="37345" mpRegen="3.6"/>
+            <speed>
+                <walk ground="34"/>
+                <run ground="170"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <collision>
+            <radius normal="13"/>
+            <height normal="29"/>
+        </collision>
+    </npc>
+    <npc id="25816" level="80" type="Folk" name="Batur's Priest" title="Raid Fighter">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <equipment rhand="84"/>
+        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+            <vitals hp="8446" hpRegen="10.5" mp="39620" mpRegen="3.6"/>
+            <speed>
+                <walk ground="45"/>
+                <run ground="170"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <collision>
+            <radius normal="9"/>
+            <height normal="22"/>
+        </collision>
+    </npc>
+    <npc id="25817" level="80" type="Folk" name="Venir's Spirit" title="Raid Fighter">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+            <vitals hp="8446" hpRegen="10.5" mp="42032" mpRegen="3.6"/>
+            <speed>
+                <walk ground="100"/>
+                <run ground="170"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <collision>
+            <radius normal="20"/>
+            <height normal="35"/>
+        </collision>
+    </npc>
+    <npc id="25818" level="80" type="Folk" name="Oel's Vanguard" title="Raid Fighter">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <equipment rhand="75"/>
+        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+            <vitals hp="8446" hpRegen="10.5" mp="44592" mpRegen="3.6"/>
+            <speed>
+                <walk ground="50"/>
+                <run ground="170"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <collision>
+            <radius normal="14"/>
+            <height normal="27"/>
+        </collision>
+    </npc>
+    <npc id="25819" level="80" type="Folk" name="Taranka's Healer" title="Raid Fighter">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <equipment rhand="195"/>
+        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+            <vitals hp="8446" hpRegen="10.5" mp="48227" mpRegen="3.6"/>
+            <speed>
+                <walk ground="29"/>
+                <run ground="170"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <collision>
+            <radius normal="13"/>
+            <height normal="32"/>
+        </collision>
+    </npc>
+    <npc id="25820" level="80" type="Folk" name="Kasha's Marksman" title="Raid Fighter">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <equipment rhand="286"/>
+        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+            <vitals hp="8446" hpRegen="10.5" mp="53170" mpRegen="3.6"/>
+            <speed>
+                <walk ground="45"/>
+                <run ground="170"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <collision>
+            <radius normal="11"/>
+            <height normal="21.5"/>
+        </collision>
+    </npc>
+    <npc id="25821" level="80" type="Folk" name="Dorak's Evil Spirit" title="Raid Fighter">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+            <vitals hp="8446" hpRegen="10.5" mp="58620" mpRegen="3.6"/>
+            <speed>
+                <walk ground="15"/>
+                <run ground="170"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <collision>
+            <radius normal="30"/>
+            <height normal="40"/>
+        </collision>
+    </npc>
+    <npc id="25822" level="80" type="Folk" name="Turan's Escort" title="Raid Fighter">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <equipment rhand="2503"/>
+        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+            <vitals hp="8446" hpRegen="10.5" mp="64628" mpRegen="3.6"/>
+            <speed>
+                <walk ground="70"/>
+                <run ground="170"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <collision>
+            <radius normal="20"/>
+            <height normal="37"/>
+        </collision>
+    </npc>
+    <npc id="25823" level="80" type="Folk" name="Varkan's Priest" title="Raid Fighter">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <equipment rhand="5793"/>
+        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+            <vitals hp="8446" hpRegen="10.5" mp="71253" mpRegen="3.6"/>
+            <speed>
+                <walk ground="36"/>
+                <run ground="170"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <collision>
+            <radius normal="9"/>
+            <height normal="41.5"/>
+        </collision>
+    </npc>
+    <npc id="25824" level="80" type="Folk" name="Ketran's Sniper" title="Raid Fighter">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <equipment rhand="287"/>
+        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+            <vitals hp="8446" hpRegen="10.5" mp="71253" mpRegen="3.6"/>
+            <speed>
+                <walk ground="45"/>
+                <run ground="170"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <collision>
+            <radius normal="12"/>
+            <height normal="27"/>
+        </collision>
+    </npc>
+    <npc id="25825" level="80" type="Folk" name="Likan's Maid" title="Raid Fighter">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+            <vitals hp="8446" hpRegen="10.5" mp="71253" mpRegen="3.6"/>
+            <speed>
+                <walk ground="80"/>
+                <run ground="170"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <collision>
+            <radius normal="14"/>
+            <height normal="40"/>
+        </collision>
+    </npc>
+    <npc id="25826" level="80" type="Folk" name="Anbarad's Priest" title="Raid Fighter">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <equipment rhand="210"/>
+        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+            <vitals hp="8446" hpRegen="10.5" mp="71253" mpRegen="3.6"/>
+            <speed>
+                <walk ground="70"/>
+                <run ground="170"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <collision>
+            <radius normal="15"/>
+            <height normal="34"/>
+        </collision>
+    </npc>
+    <npc id="25827" level="80" type="Folk" name="Baranos' Guard" title="Raid Fighter">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+            <vitals hp="8446" hpRegen="10.5" mp="71253" mpRegen="3.6"/>
+            <speed>
+                <walk ground="30"/>
+                <run ground="170"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <collision>
+            <radius normal="8"/>
+            <height normal="37.5"/>
+        </collision>
+    </npc>
+    <npc id="25828" level="80" type="Folk" name="Takuran's Protector" title="Raid Fighter">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <equipment rhand="175"/>
+        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+            <vitals hp="8446" hpRegen="10.5" mp="71253" mpRegen="3.6"/>
+            <speed>
+                <walk ground="36"/>
+                <run ground="170"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <collision>
+            <radius normal="12"/>
+            <height normal="24"/>
+        </collision>
+    </npc>
+    <npc id="25829" level="80" type="Folk" name="Nast's Pikeman" title="Raid Fighter">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <equipment rhand="1472"/>
+        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+            <vitals hp="8446" hpRegen="10.5" mp="71253" mpRegen="3.6"/>
+            <speed>
+                <walk ground="100"/>
+                <run ground="170"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <collision>
+            <radius normal="15"/>
+            <height normal="45"/>
+        </collision>
+    </npc>
+    <npc id="25830" level="80" type="Folk" name="Keltar's Shaman" title="Raid Fighter">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <equipment rhand="202"/>
+        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+            <vitals hp="8446" hpRegen="10.5" mp="71253" mpRegen="3.6"/>
+            <speed>
+                <walk ground="50"/>
+                <run ground="170"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <collision>
+            <radius normal="13"/>
+            <height normal="25"/>
+        </collision>
+    </npc>
+    <npc id="25831" level="80" type="Folk" name="Satur's Priest" title="Raid Fighter">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <equipment rhand="5794"/>
+        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+            <vitals hp="8446" hpRegen="10.5" mp="71253" mpRegen="3.6"/>
+            <speed>
+                <walk ground="36"/>
+                <run ground="170"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <collision>
+            <radius normal="14"/>
+            <height normal="39.5"/>
+        </collision>
+    </npc>
+    <npc id="25832" level="80" type="Folk" name="Kosnak's Escorts" title="Raid Fighter">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <equipment rhand="171"/>
+        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+            <vitals hp="8446" hpRegen="10.5" mp="71253" mpRegen="3.6"/>
+            <speed>
+                <walk ground="33"/>
+                <run ground="170"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <collision>
+            <radius normal="12"/>
+            <height normal="24"/>
+        </collision>
+    </npc>
+    <npc id="25833" level="80" type="Folk" name="Garaki's Banshee" title="Raid Fighter">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <equipment rhand="3939"/>
+        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+            <vitals hp="8446" hpRegen="10.5" mp="71253" mpRegen="3.6"/>
+            <speed>
+                <walk ground="80"/>
+                <run ground="170"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <collision>
+            <radius normal="9"/>
+            <height normal="23"/>
+        </collision>
+    </npc>
+    <npc id="25834" level="81" type="RaidBoss" name="Shadai" title="Chief">
+        <race>HUMANOID</race>
+        <sex>MALE</sex>
+        <equipment rhand="8679"/>
+        <acquire exp="0" sp="0" raidPoints="0"/>
+        <stats str="60" int="76" dex="73" wit="70" con="57" men="80">
+            <vitals hp="3773538.536265" hpRegen="319.2293199" mp="5802.945" mpRegen="3"/>
+            <attack physical="5212.711904" magical="3559.606475" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120"/>
+            <defence physical="3254.148006" magical="1587.524417"/>
+            <speed>
+                <walk ground="25"/>
+                <run ground="170"/>
+            </speed>
+        </stats>
+        <status attackable="true"/>
+        <collision>
+            <radius normal="22"/>
+            <height normal="51"/>
+        </collision>
+        <skillList>
+            <skill id="50028" level="20"/> <!-- 80 Lv. Raid Boss -->
+            <skill id="4416" level="6"/> <!-- Humanoid -->
+            <skill id="4408" level="12"/> <!-- HP Increase (4x) -->
+            <skill id="4410" level="21"/> <!-- Extremely Strong P. Atk. -->
+            <skill id="4411" level="15"/> <!-- Strong M. Atk. -->
+            <skill id="4412" level="14"/> <!-- Strong P. Def. -->
+            <skill id="4413" level="14"/> <!-- Strong M. Def. -->
+        </skillList>
+    </npc>
+    <npc id="25835" level="82" type="RaidBoss" name="Turabait" title="Conqueror">
+        <race>HUMANOID</race>
+        <sex>MALE</sex>
+        <equipment rhand="80"/>
+        <acquire exp="0" sp="0" raidPoints="0"/>
+        <stats str="60" int="76" dex="73" wit="70" con="57" men="80">
+            <vitals hp="7547077.6267275" hpRegen="319.2293199" mp="5920.65" mpRegen="3"/>
+            <attack physical="4522.433913" magical="3088.236091" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120"/>
+            <defence physical="3335.250614" magical="1627.090034"/>
+            <speed>
+                <walk ground="38"/>
+                <run ground="170"/>
+            </speed>
+        </stats>
+        <status attackable="true"/>
+        <collision>
+            <radius normal="22.5"/>
+            <height normal="41.25"/>
+        </collision>
+        <skillList>
+            <skill id="50028" level="20"/> <!-- 80 Lv. Raid Boss -->
+            <skill id="4416" level="6"/> <!-- Humanoid -->
+            <skill id="4408" level="12"/> <!-- HP Increase (4x) -->
+            <skill id="4410" level="21"/> <!-- Extremely Strong P. Atk. -->
+            <skill id="4411" level="15"/> <!-- Strong M. Atk. -->
+            <skill id="4412" level="14"/> <!-- Strong P. Def. -->
+            <skill id="4413" level="14"/> <!-- Strong M. Def. -->
+        </skillList>
+    </npc>
+    <npc id="25836" level="83" type="RaidBoss" name="Tier" title="Fallen Angel">
+        <race>DIVINE</race>
+        <sex>MALE</sex>
+        <equipment rhand="8683"/>
+        <acquire exp="0" sp="0" raidPoints="0"/>
+        <stats str="60" int="76" dex="73" wit="70" con="57" men="80">
+            <vitals hp="15094155.253455" hpRegen="319.2293199" mp="6035.7" mpRegen="3"/>
+            <attack physical="5327.465132" magical="3637.968053" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120"/>
+            <defence physical="3417.351408" magical="1667.142611"/>
+            <speed>
+                <walk ground="50"/>
+                <run ground="170"/>
+            </speed>
+        </stats>
+        <status attackable="true"/>
+        <collision>
+            <radius normal="10.5"/>
+            <height normal="55.1"/>
+        </collision>
+        <skillList>
+            <skill id="50028" level="20"/> <!-- 80 Lv. Raid Boss -->
+            <skill id="4416" level="8"/> <!-- Angel -->
+            <skill id="4408" level="12"/> <!-- HP Increase (4x) -->
+            <skill id="4410" level="21"/> <!-- Extremely Strong P. Atk. -->
+            <skill id="4411" level="15"/> <!-- Strong M. Atk. -->
+            <skill id="4412" level="14"/> <!-- Strong P. Def. -->
+            <skill id="4413" level="14"/> <!-- Strong M. Def. -->
+        </skillList>
+    </npc>
+    <npc id="25837" level="84" type="RaidBoss" name="Cherkya" title="Demon Apostle">
+        <race>DEMONIC</race>
+        <sex>MALE</sex>
+        <acquire exp="0" sp="0" raidPoints="0"/>
+        <stats str="60" int="76" dex="73" wit="70" con="57" men="80">
+            <vitals hp="30188311.061108" hpRegen="319.2293199" mp="6154.29" mpRegen="3"/>
+            <attack physical="3152.927754" magical="1289.681983" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120"/>
+            <defence physical="3500.450389" magical="1707.68215"/>
+            <speed>
+                <walk ground="50"/>
+                <run ground="170"/>
+            </speed>
+        </stats>
+        <status attackable="true"/>
+        <collision>
+            <radius normal="21"/>
+            <height normal="40"/>
+        </collision>
+        <skillList>
+            <skill id="50028" level="20"/> <!-- 80 Lv. Raid Boss -->
+            <skill id="4416" level="9"/> <!-- Demons -->
+            <skill id="4408" level="12"/> <!-- HP Increase (4x) -->
+            <skill id="4410" level="21"/> <!-- Extremely Strong P. Atk. -->
+            <skill id="4411" level="15"/> <!-- Strong M. Atk. -->
+            <skill id="4412" level="14"/> <!-- Strong P. Def. -->
+            <skill id="4413" level="14"/> <!-- Strong M. Def. -->
+        </skillList>
+    </npc>
+    <npc id="25838" level="85" type="RaidBoss" name="Spicula" title="Procella's Nemesis">
+        <race>HUMANOID</race>
+        <sex>MALE</sex>
+        <acquire exp="0" sp="0" raidPoints="0"/>
+        <stats str="60" int="76" dex="73" wit="70" con="57" men="80">
+            <vitals hp="60376622.122215" hpRegen="319.2293199" mp="6271.995" mpRegen="3"/>
+            <attack physical="8184.13934" magical="2579.001338" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120"/>
+            <defence physical="3584.547554" magical="1748.708651"/>
+            <speed>
+                <walk ground="60"/>
+                <run ground="170"/>
+            </speed>
+        </stats>
+        <status attackable="true"/>
+        <collision>
+            <radius normal="20"/>
+            <height normal="46"/>
+        </collision>
+        <skillList>
+            <skill id="50028" level="20"/> <!-- 80 Lv. Raid Boss -->
+            <skill id="4416" level="6"/> <!-- Humanoid -->
+            <skill id="4408" level="12"/> <!-- HP Increase (4x) -->
+            <skill id="4410" level="21"/> <!-- Extremely Strong P. Atk. -->
+            <skill id="4411" level="15"/> <!-- Strong M. Atk. -->
+            <skill id="4412" level="14"/> <!-- Strong P. Def. -->
+            <skill id="4413" level="14"/> <!-- Strong M. Def. -->
+        </skillList>
+    </npc>
+    <npc id="25839" level="80" type="Folk" name="Shadai's Priest" title="Raid Fighter">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <equipment rhand="5794"/>
+        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+            <vitals hp="8446" hpRegen="10.5" mp="102528" mpRegen="3.6"/>
+            <speed>
+                <walk ground="36"/>
+                <run ground="170"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <collision>
+            <radius normal="14"/>
+            <height normal="39.5"/>
+        </collision>
+    </npc>
+    <npc id="25840" level="80" type="Folk" name="Turabait's Warrior" title="Raid Fighter">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <equipment rhand="8678"/>
+        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+            <vitals hp="8446" hpRegen="10.5" mp="104580" mpRegen="3.6"/>
+            <speed>
+                <walk ground="33"/>
+                <run ground="170"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <collision>
+            <radius normal="12"/>
+            <height normal="24"/>
+        </collision>
+    </npc>
+    <npc id="25841" level="80" type="Folk" name="Tier's Follower" title="Raid Fighter">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <equipment rhand="8680"/>
+        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+            <vitals hp="8446" hpRegen="10.5" mp="106644" mpRegen="3.6"/>
+            <speed>
+                <walk ground="61"/>
+                <run ground="170"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <collision>
+            <radius normal="9"/>
+            <height normal="23.4"/>
+        </collision>
+    </npc>
+    <npc id="25842" level="80" type="Folk" name="Cherkya's Escort" title="Raid Fighter">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+            <vitals hp="8446" hpRegen="10.5" mp="108720" mpRegen="3.6"/>
+            <speed>
+                <walk ground="60"/>
+                <run ground="170"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <collision>
+            <radius normal="16.8"/>
+            <height normal="30.6"/>
+        </collision>
+    </npc>
+    <npc id="25843" level="80" type="Folk" name="Spicula's Follower" title="Raid Fighter">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+            <vitals hp="8446" hpRegen="10.5" mp="110808" mpRegen="3.6"/>
+            <speed>
+                <walk ground="60"/>
+                <run ground="170"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <collision>
+            <radius normal="20"/>
+            <height normal="40"/>
+        </collision>
+    </npc>
 </list>

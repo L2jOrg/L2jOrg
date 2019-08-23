@@ -1509,13 +1509,12 @@ public class Clan implements IIdentifiable, INamable {
             _privs.get(rank).setPrivs(privs);
 
             try (Connection con = DatabaseFactory.getInstance().getConnection();
-                 PreparedStatement ps = con.prepareStatement("INSERT INTO clan_privs (clan_id,`rank`,party,privs) VALUES (?,?,?,?) ON DUPLICATE KEY UPDATE privs = ?")) {
+                 PreparedStatement ps = con.prepareStatement("REPLACE INTO clan_privs (clan_id,`rank`,party,privs) VALUES (?,?,?,?)")) {
                 // Retrieve all skills of this Player from the database
                 ps.setInt(1, _clanId);
                 ps.setInt(2, rank);
                 ps.setInt(3, 0);
                 ps.setInt(4, privs);
-                ps.setInt(5, privs);
                 ps.execute();
             } catch (Exception e) {
                 LOGGER.warn("Could not store clan privs for rank: " + e.getMessage(), e);
@@ -1536,7 +1535,7 @@ public class Clan implements IIdentifiable, INamable {
             _privs.put(rank, new RankPrivs(rank, 0, privs));
 
             try (Connection con = DatabaseFactory.getInstance().getConnection();
-                 PreparedStatement ps = con.prepareStatement("INSERT INTO clan_privs (clan_id,`rank`,party,privs) VALUES (?,?,?,?)")) {
+                 PreparedStatement ps = con.prepareStatement("REPLACE INTO clan_privs (clan_id,`rank`,party,privs) VALUES (?,?,?,?)")) {
                 // Retrieve all skills of this Player from the database
                 ps.setInt(1, _clanId);
                 ps.setInt(2, rank);

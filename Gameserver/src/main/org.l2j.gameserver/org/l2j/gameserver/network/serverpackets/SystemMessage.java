@@ -13,17 +13,6 @@ public final class SystemMessage extends AbstractMessagePacket<SystemMessage> {
         super(smId);
     }
 
-    /**
-     * Use SystemMessage.getSystemMessage(SystemMessageId smId) where possible instead
-     *
-     * @param id
-     * @deprecated
-     */
-    @Deprecated
-    private SystemMessage(int id) {
-        this(SystemMessageId.getSystemMessageId(id));
-    }
-
     public static SystemMessage sendString(String text) {
         if (text == null) {
             throw new NullPointerException();

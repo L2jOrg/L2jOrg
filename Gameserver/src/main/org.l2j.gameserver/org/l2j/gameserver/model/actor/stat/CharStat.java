@@ -63,7 +63,7 @@ public class CharStat {
         for (int i = 0; i < TraitType.values().length; i++)
         {
             _attackTraitValues[i] = 1;
-            _defenceTraitValues[i] = 1;
+            _defenceTraitValues[i] = 0;
         }
     }
 
@@ -548,7 +548,7 @@ public class CharStat {
         try
         {
             _defenceTraitValues[traitType.ordinal()] -= value;
-            if (_defenceTraitValues[traitType.ordinal()] == 1)
+            if (_defenceTraitValues[traitType.ordinal()] == 0)
             {
                 _defenceTraits.remove(traitType);
             }

@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org zones.xsd" >
-	<!-- Damage Zones -->
-	<!-- Cruma (Damage Zone) -->
-	<zone name="cruma_boss_damage_zone" type="org.l2j.gameserver.world.zone.type.DamageZone" form="Polygon" minZ="-6519" maxZ="-6319"> <!-- [20_21] -->
-		<point x="17869" y="108566" />
-		<point x="18071" y="108774" />
-		<point x="18072" y="109060" />
-		<point x="17865" y="109265" />
-		<point x="17580" y="109264" />
-		<point x="17379" y="109062" />
-		<point x="17379" y="108774" />
-		<point x="17584" y="108569" />
-	</zone>
-	<!-- Tully Workshop 5th floor (Damage Zone) -->
-	<zone name="19_26_tolles_destruction1" id="200011" type="org.l2j.gameserver.world.zone.type.DamageZone" form="Polygon" minZ="-9136" maxZ="-7936">
-		<property name="dmgHPSec" value="2000" />
-		<property name="default_enabled" value="false" />
-		<property name="reuse" value="5000" />
-		<point x="-15015" y="271415" />
-		<point x="-10033" y="271428" />
-		<point x="-10033" y="276448" />
-		<point x="-15016" y="276448" />
-	</zone>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org zones.xsd">
+    <!-- Damage Zones -->
+    <!-- Cruma (Damage Zone) -->
+    <zone name="cruma_boss_damage_zone" type="org.l2j.gameserver.world.zone.type.DamageZone" form="Polygon" minZ="-6519" maxZ="-6319"> <!-- [20_21] -->
+        <point x="17869" y="108566"/>
+        <point x="18071" y="108774"/>
+        <point x="18072" y="109060"/>
+        <point x="17865" y="109265"/>
+        <point x="17580" y="109264"/>
+        <point x="17379" y="109062"/>
+        <point x="17379" y="108774"/>
+        <point x="17584" y="108569"/>
+    </zone>
+    <!-- Tully Workshop 5th floor (Damage Zone) -->
+    <zone name="19_26_tolles_destruction1" id="200011" type="org.l2j.gameserver.world.zone.type.DamageZone" form="Polygon" minZ="-9136" maxZ="-7936">
+        <property name="dmgHPSec" value="2000"/>
+        <property name="default_enabled" value="false"/>
+        <property name="reuse" value="5000"/>
+        <point x="-15015" y="271415"/>
+        <point x="-10033" y="271428"/>
+        <point x="-10033" y="276448"/>
+        <point x="-15016" y="276448"/>
+    </zone>
 </list>

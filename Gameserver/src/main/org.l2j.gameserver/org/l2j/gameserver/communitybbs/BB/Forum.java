@@ -25,10 +25,9 @@ import org.slf4j.LoggerFactory;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.util.List;
+import java.util.Collection;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
-import java.util.concurrent.CopyOnWriteArrayList;
 
 
 public class Forum {
@@ -44,7 +43,7 @@ public class Forum {
     public static final int CLANMEMBERONLY = 2;
     public static final int OWNERONLY = 3;
     private static final Logger LOGGER = LoggerFactory.getLogger(Forum.class);
-    private final List<Forum> _children;
+    private final Collection<Forum> _children;
     private final Map<Integer, Topic> _topic = new ConcurrentHashMap<>();
     private final int _forumId;
     private final Forum _fParent;
@@ -64,7 +63,7 @@ public class Forum {
     public Forum(int Forumid, Forum FParent) {
         _forumId = Forumid;
         _fParent = FParent;
-        _children = new CopyOnWriteArrayList<>();
+        _children = ConcurrentHashMap.newKeySet();
     }
 
     /**
@@ -82,7 +81,7 @@ public class Forum {
         _forumPerm = perm;
         _fParent = parent;
         _ownerID = OwnerID;
-        _children = new CopyOnWriteArrayList<>();
+        _children = ConcurrentHashMap.newKeySet();
         parent._children.add(this);
         ForumsBBSManager.getInstance().addForum(this);
         _loaded = true;

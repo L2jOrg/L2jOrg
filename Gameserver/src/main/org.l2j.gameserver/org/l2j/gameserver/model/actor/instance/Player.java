@@ -7,7 +7,6 @@ import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.commons.threading.ThreadPoolManager;
 import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.Config;
-import org.l2j.gameserver.world.WorldTimeController;
 import org.l2j.gameserver.ItemsAutoDestroy;
 import org.l2j.gameserver.RecipeController;
 import org.l2j.gameserver.ai.CreatureAI;
@@ -83,9 +82,6 @@ import org.l2j.gameserver.model.stats.MoveType;
 import org.l2j.gameserver.model.stats.Stats;
 import org.l2j.gameserver.model.variables.AccountVariables;
 import org.l2j.gameserver.model.variables.PlayerVariables;
-import org.l2j.gameserver.world.zone.Zone;
-import org.l2j.gameserver.world.zone.ZoneType;
-import org.l2j.gameserver.world.zone.type.WaterZone;
 import org.l2j.gameserver.network.Disconnection;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.SystemMessageId;
@@ -97,7 +93,11 @@ import org.l2j.gameserver.network.serverpackets.friend.FriendStatus;
 import org.l2j.gameserver.taskmanager.AttackStanceTaskManager;
 import org.l2j.gameserver.util.*;
 import org.l2j.gameserver.world.World;
+import org.l2j.gameserver.world.WorldTimeController;
+import org.l2j.gameserver.world.zone.Zone;
 import org.l2j.gameserver.world.zone.ZoneManager;
+import org.l2j.gameserver.world.zone.ZoneType;
+import org.l2j.gameserver.world.zone.type.WaterZone;
 
 import java.sql.Date;
 import java.sql.*;
@@ -3623,17 +3623,17 @@ public final class Player extends Playable {
 
                 // Update relation.
                 final int relation = getRelation(player);
-                Integer oldrelation = getKnownRelations().get(player.getObjectId());
-                if ((oldrelation == null) || (oldrelation != relation)) {
+                Integer oldRelation = getKnownRelations().get(player.getObjectId());
+                if ((oldRelation == null) || (oldRelation != relation)) {
                     final RelationChanged rc = new RelationChanged();
-                    rc.addRelation(this, relation, isAutoAttackable(player));
+                    rc.addRelation(this, relation, !isInsideZone(ZoneType.PEACE));
                     if (hasSummon()) {
                         final Summon pet = getPet();
                         if (pet != null) {
-                            rc.addRelation(pet, relation, isAutoAttackable(player));
+                            rc.addRelation(pet, relation, !isInsideZone(ZoneType.PEACE));
                         }
                         if (hasServitors()) {
-                            getServitors().values().forEach(s -> rc.addRelation(s, relation, isAutoAttackable(player)));
+                            getServitors().values().forEach(s -> rc.addRelation(s, relation, !isInsideZone(ZoneType.PEACE)));
                         }
                     }
                     player.sendPacket(rc);
@@ -5471,13 +5471,13 @@ public final class Player extends Playable {
             final Integer oldrelation = getKnownRelations().get(player.getObjectId());
             if ((oldrelation == null) || (oldrelation != relation)) {
                 final RelationChanged rc = new RelationChanged();
-                rc.addRelation(this, relation, isAutoAttackable(player));
+                rc.addRelation(this, relation, !isInsideZone(ZoneType.PEACE));
                 if (hasSummon()) {
                     if (_pet != null) {
-                        rc.addRelation(_pet, relation, isAutoAttackable(player));
+                        rc.addRelation(_pet, relation, !isInsideZone(ZoneType.PEACE));
                     }
                     if (hasServitors()) {
-                        getServitors().values().forEach(s -> rc.addRelation(s, relation, isAutoAttackable(player)));
+                        getServitors().values().forEach(s -> rc.addRelation(s, relation, !isInsideZone(ZoneType.PEACE)));
                     }
                 }
                 player.sendPacket(rc);
@@ -8538,7 +8538,7 @@ public final class Player extends Playable {
             if ((_teleportWatchdog == null) && (Config.TELEPORT_WATCHDOG_TIMEOUT > 0)) {
                 synchronized (this) {
                     if (_teleportWatchdog == null) {
-                        _teleportWatchdog = ThreadPoolManager.getInstance().schedule(new TeleportWatchdogTask(this), Config.TELEPORT_WATCHDOG_TIMEOUT * 1000);
+                        _teleportWatchdog = ThreadPoolManager.schedule(new TeleportWatchdogTask(this), Config.TELEPORT_WATCHDOG_TIMEOUT * 1000);
                     }
                 }
             }
@@ -9912,61 +9912,61 @@ public final class Player extends Playable {
     }
 
     @Override
-    public void sendInfo(Player activeChar) {
+    public void sendInfo(Player player) {
         if (isInBoat()) {
             setXYZ(getBoat().getLocation());
 
-            activeChar.sendPacket(new CharInfo(this, isInvisible() && activeChar.canOverrideCond(PcCondOverride.SEE_ALL_PLAYERS)));
-            activeChar.sendPacket(new GetOnVehicle(getObjectId(), getBoat().getObjectId(), _inVehiclePosition));
+            player.sendPacket(new CharInfo(this, isInvisible() && player.canOverrideCond(PcCondOverride.SEE_ALL_PLAYERS)));
+            player.sendPacket(new GetOnVehicle(getObjectId(), getBoat().getObjectId(), _inVehiclePosition));
         } else if (isInAirShip()) {
             setXYZ(getAirShip().getLocation());
-            activeChar.sendPacket(new CharInfo(this, isInvisible() && activeChar.canOverrideCond(PcCondOverride.SEE_ALL_PLAYERS)));
-            activeChar.sendPacket(new ExGetOnAirShip(this, getAirShip()));
+            player.sendPacket(new CharInfo(this, isInvisible() && player.canOverrideCond(PcCondOverride.SEE_ALL_PLAYERS)));
+            player.sendPacket(new ExGetOnAirShip(this, getAirShip()));
         } else {
-            activeChar.sendPacket(new CharInfo(this, isInvisible() && activeChar.canOverrideCond(PcCondOverride.SEE_ALL_PLAYERS)));
+            player.sendPacket(new CharInfo(this, isInvisible() && player.canOverrideCond(PcCondOverride.SEE_ALL_PLAYERS)));
         }
 
-        final int relation1 = getRelation(activeChar);
+        final int relation1 = getRelation(player);
         final RelationChanged rc1 = new RelationChanged();
-        rc1.addRelation(this, relation1, isAutoAttackable(activeChar));
+        rc1.addRelation(this, relation1, !isInsideZone(ZoneType.PEACE));
         if (hasSummon()) {
             if (_pet != null) {
-                rc1.addRelation(_pet, relation1, isAutoAttackable(activeChar));
+                rc1.addRelation(_pet, relation1, !isInsideZone(ZoneType.PEACE));
             }
             if (hasServitors()) {
-                getServitors().values().forEach(s -> rc1.addRelation(s, relation1, isAutoAttackable(activeChar)));
+                getServitors().values().forEach(s -> rc1.addRelation(s, relation1, !isInsideZone(ZoneType.PEACE)));
             }
         }
-        activeChar.sendPacket(rc1);
+        player.sendPacket(rc1);
 
-        final int relation2 = activeChar.getRelation(this);
+        final int relation2 = player.getRelation(this);
         final RelationChanged rc2 = new RelationChanged();
-        rc2.addRelation(activeChar, relation2, activeChar.isAutoAttackable(this));
-        if (activeChar.hasSummon()) {
+        rc2.addRelation(player, relation2, !player.isInsideZone(ZoneType.PEACE));
+        if (player.hasSummon()) {
             if (_pet != null) {
-                rc2.addRelation(_pet, relation2, activeChar.isAutoAttackable(this));
+                rc2.addRelation(_pet, relation2, !player.isInsideZone(ZoneType.PEACE));
             }
             if (hasServitors()) {
-                getServitors().values().forEach(s -> rc2.addRelation(s, relation2, activeChar.isAutoAttackable(this)));
+                getServitors().values().forEach(s -> rc2.addRelation(s, relation2, !player.isInsideZone(ZoneType.PEACE)));
             }
         }
         sendPacket(rc2);
 
         switch (_privateStoreType) {
             case SELL: {
-                activeChar.sendPacket(new PrivateStoreMsgSell(this));
+                player.sendPacket(new PrivateStoreMsgSell(this));
                 break;
             }
             case PACKAGE_SELL: {
-                activeChar.sendPacket(new ExPrivateStoreSetWholeMsg(this));
+                player.sendPacket(new ExPrivateStoreSetWholeMsg(this));
                 break;
             }
             case BUY: {
-                activeChar.sendPacket(new PrivateStoreMsgBuy(this));
+                player.sendPacket(new PrivateStoreMsgBuy(this));
                 break;
             }
             case MANUFACTURE: {
-                activeChar.sendPacket(new RecipeShopMsg(this));
+                player.sendPacket(new RecipeShopMsg(this));
                 break;
             }
         }
@@ -10324,7 +10324,7 @@ public final class Player extends Playable {
                 _lang = Config.MULTILANG_DEFAULT;
             }
 
-            _htmlPrefix = "data/lang/" + _lang + "/";
+            _htmlPrefix = _lang.equals("en") ? "" : "data/lang/" + _lang + "/";
         } else {
             _lang = null;
             _htmlPrefix = null;

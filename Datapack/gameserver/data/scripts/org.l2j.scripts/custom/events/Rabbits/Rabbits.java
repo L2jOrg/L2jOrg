@@ -1,19 +1,3 @@
-/*
- * This file is part of the L2J Mobius project.
- * 
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- * 
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
- * General Public License for more details.
- * 
- * You should have received a copy of the GNU General Public License
- * along with this program. If not, see <http://www.gnu.org/licenses/>.
- */
 package custom.events.Rabbits;
 
 import events.ScriptEvent;
@@ -28,8 +12,9 @@ import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.util.Broadcast;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
-import java.util.concurrent.CopyOnWriteArrayList;
+import java.util.concurrent.ConcurrentHashMap;
 
 import static org.l2j.gameserver.util.MathUtil.isInsideRadius2D;
 
@@ -52,7 +37,7 @@ public final class Rabbits extends Event implements ScriptEvent
 	private static final int EVENT_TIME = 10;
 	private static final int TOTAL_CHEST_COUNT = 75;
 	private static final int TRANSFORMATION_ID = 105;
-	private final List<Npc> _npcs = new CopyOnWriteArrayList<>();
+	private final Collection<Npc> _npcs = ConcurrentHashMap.newKeySet();
 	private final List<Player> _players = new ArrayList<>();
 	private boolean _isActive = false;
 	
@@ -256,7 +241,7 @@ public final class Rabbits extends Event implements ScriptEvent
 		}
 	}
 	
-	private static void recordSpawn(List<Npc> npcs, int npcId, int x, int y, int z, int heading, boolean randomOffSet, long despawnDelay)
+	private static void recordSpawn(Collection<Npc> npcs, int npcId, int x, int y, int z, int heading, boolean randomOffSet, long despawnDelay)
 	{
 		final Npc npc = addSpawn(npcId, x, y, z, heading, randomOffSet, despawnDelay);
 		if (npc.getId() == CHEST)

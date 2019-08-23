@@ -1,8 +1,8 @@
 package org.l2j.gameserver.model.entity;
 
 import org.l2j.commons.database.DatabaseFactory;
-import org.l2j.gameserver.Config;
 import org.l2j.commons.threading.ThreadPoolManager;
+import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.sql.impl.ClanTable;
 import org.l2j.gameserver.data.xml.impl.SiegeScheduleData;
 import org.l2j.gameserver.enums.SiegeClanType;
@@ -35,7 +35,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.*;
-import java.util.concurrent.CopyOnWriteArrayList;
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ScheduledFuture;
 import java.util.stream.Collectors;
 
@@ -48,9 +48,9 @@ public class Siege implements Siegable {
     protected static final Logger LOGGER = LoggerFactory.getLogger(Siege.class);
     final Castle _castle;
     // must support Concurrent Modifications
-    private final List<SiegeClan> _attackerClans = new CopyOnWriteArrayList<>();
-    private final List<SiegeClan> _defenderClans = new CopyOnWriteArrayList<>();
-    private final List<SiegeClan> _defenderWaitingClans = new CopyOnWriteArrayList<>();
+    private final Collection<SiegeClan> _attackerClans = ConcurrentHashMap.newKeySet();
+    private final Collection<SiegeClan> _defenderClans = ConcurrentHashMap.newKeySet();
+    private final Collection<SiegeClan> _defenderWaitingClans = ConcurrentHashMap.newKeySet();
     // Castle setting
     private final List<ControlTower> _controlTowers = new ArrayList<>();
     private final List<FlameTower> _flameTowers = new ArrayList<>();
@@ -1194,7 +1194,7 @@ public class Siege implements Siegable {
     }
 
     @Override
-    public final List<SiegeClan> getAttackerClans() {
+    public final Collection<SiegeClan> getAttackerClans() {
         if (_isNormalSide) {
             return _attackerClans;
         }
@@ -1228,7 +1228,7 @@ public class Siege implements Siegable {
     }
 
     @Override
-    public final List<SiegeClan> getDefenderClans() {
+    public final Collection<SiegeClan> getDefenderClans() {
         if (_isNormalSide) {
             return _defenderClans;
         }
@@ -1251,7 +1251,7 @@ public class Siege implements Siegable {
         return null;
     }
 
-    public final List<SiegeClan> getDefenderWaitingClans() {
+    public final Collection<SiegeClan> getDefenderWaitingClans() {
         return _defenderWaitingClans;
     }
 

@@ -12,7 +12,6 @@ import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.ensoul.EnsoulOption;
 import org.l2j.gameserver.model.holders.ItemChanceHolder;
-import org.l2j.gameserver.model.holders.ItemHolder;
 import org.l2j.gameserver.model.holders.MultisellEntryHolder;
 import org.l2j.gameserver.model.holders.PreparedMultisellListHolder;
 import org.l2j.gameserver.model.itemcontainer.PcInventory;
@@ -30,10 +29,7 @@ import org.slf4j.LoggerFactory;
 
 import java.util.Collections;
 import java.util.List;
-import java.util.Map;
-import java.util.Map.Entry;
 import java.util.OptionalLong;
-import java.util.stream.Collectors;
 
 import static org.l2j.gameserver.util.MathUtil.isInsideRadius3D;
 
@@ -100,7 +96,7 @@ public class MultiSellChoose extends ClientPacket {
             return;
         }
 
-        if ((_amount < 1) || (_amount > 999999)) // 999 999 is client max.
+        if ((_amount < 1) || (_amount > 10000)) // 999 999 is client max.
         {
             player.sendPacket(SystemMessageId.YOU_HAVE_EXCEEDED_THE_QUANTITY_THAT_CAN_BE_INPUTTED);
             return;
@@ -194,7 +190,7 @@ public class MultiSellChoose extends ClientPacket {
 
                 final long totalCount = Math.multiplyExact(list.getProductCount(product), _amount);
 
-                if (!(totalCount >= 0) && (totalCount <= Integer.MAX_VALUE)) {
+                if (totalCount <= 0  || totalCount > Integer.MAX_VALUE) {
                     player.sendPacket(SystemMessageId.YOU_HAVE_EXCEEDED_THE_QUANTITY_THAT_CAN_BE_INPUTTED);
                     return;
                 }
@@ -230,40 +226,26 @@ public class MultiSellChoose extends ClientPacket {
                 return;
             }
 
-            // Summarize all item counts into one map. That would include non-stackable items under 1 id and multiple count.
-            final Map<Integer, Long> itemIdCount = entry.getIngredients().stream().collect(Collectors.toMap(ItemHolder::getId, list::getIngredientCount, Math::addExact));
-
             // Check for enchanted level requirements.
             for (ItemChanceHolder ingredient : entry.getIngredients()) {
-                if (ingredient.getEnchantmentLevel() == 0) {
-                    continue;
-                }
-                int found = 0;
-                for (Item item : inventory.getAllItemsByItemId(ingredient.getId(), ingredient.getEnchantmentLevel())) {
-                    if (item.getEnchantLevel() >= ingredient.getEnchantmentLevel()) {
-                        found++;
-                    }
-                }
+                if (ingredient.getEnchantmentLevel() > 0) {
 
-                if (found < ingredient.getCount()) {
-                    final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_NEED_A_N_S1);
-                    sm.addString("+" + ingredient.getEnchantmentLevel() + " " + ItemTable.getInstance().getTemplate(ingredient.getId()).getName());
-                    player.sendPacket(sm);
+                    int found = 0;
+                    for (Item item : inventory.getAllItemsByItemId(ingredient.getId(), ingredient.getEnchantmentLevel())) {
+                        if (item.getEnchantLevel() >= ingredient.getEnchantmentLevel()) {
+                            found++;
+                        }
+                    }
+
+                    if (found < ingredient.getCount()) {
+                        final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_NEED_A_N_S1);
+                        sm.addString("+" + ingredient.getEnchantmentLevel() + " " + ItemTable.getInstance().getTemplate(ingredient.getId()).getName());
+                        player.sendPacket(sm);
+                        return;
+                    }
+                } else if (!checkIngredients(player, list, inventory, clan, ingredient.getId(), Math.multiplyExact(ingredient.getCount(), _amount))) {
                     return;
                 }
-
-                itemIdCount.remove(ingredient.getId()); // Since we check now.
-            }
-
-            // Now check if the player has sufficient items in the inventory to cover the ingredients' expences. Take care for non-stackable items like 2 swords to dual.
-            boolean allOk = true;
-            for (Entry<Integer, Long> idCount : itemIdCount.entrySet()) {
-                allOk &= checkIngredients(player, list, inventory, clan, idCount.getKey(), Math.multiplyExact(idCount.getValue(), _amount));
-            }
-
-            // The above operation should not be short-circuited, in order to show all missing ingredients.
-            if (!allOk) {
-                return;
             }
 
             final InventoryUpdate iu = new InventoryUpdate();
@@ -427,14 +409,16 @@ public class MultiSellChoose extends ClientPacket {
                                 addedItem.setAttribute(new AttributeHolder(AttributeType.DARK, itemEnchantment.getAttributeDefence(AttributeType.DARK)), false);
                             }
                         }
-                        if (_soulCrystalOptions != null) {
-                            for (int i = 0; i < _soulCrystalOptions.length; i++) {
-                                addedItem.addSpecialAbility(_soulCrystalOptions[i], i + 1, 1, false);
+						if (_soulCrystalOptions != null) {
+							int pos = -1;
+							for (EnsoulOption ensoul : _soulCrystalOptions) {
+								pos++;
+								addedItem.addSpecialAbility(ensoul, pos, 1, false);
                             }
                         }
-                        if (_soulCrystalSpecialOptions != null) {
-                            for (int i = 0; i < _soulCrystalSpecialOptions.length; i++) {
-                                addedItem.addSpecialAbility(_soulCrystalSpecialOptions[i], i + 1, 2, false);
+						if (_soulCrystalSpecialOptions != null) {
+							for (EnsoulOption ensoul : _soulCrystalSpecialOptions) {
+								addedItem.addSpecialAbility(ensoul, 0, 2, false);
                             }
                         }
                         addedItem.updateDatabase(true);

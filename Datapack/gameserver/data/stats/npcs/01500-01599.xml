@@ -1,807 +1,807 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org npcs.xsd">
-	<npc id="1513" level="55" type="Folk" name="Agathion One-eyed Bat Drove">
-		<!-- Confirmed CT2.5 -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
-			<vitals hp="1673" hpRegen="6.5" mp="889" mpRegen="2.4" />
-			<attack physical="388.11142" magical="265.02979" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
-			<defence physical="223.6362" magical="163.64727" />
-			<speed>
-				<walk ground="60" />
-				<run ground="180" />
-			</speed>
-		</stats>
-		<status undying="false" />
-		<skillList>
-			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!--Average P. Atk. -->
-			<skill id="4411" level="11" /> <!--Average M. Atk. -->
-			<skill id="4412" level="11" /> <!--Average P. Def. -->
-			<skill id="4413" level="11" /> <!--Average M. Def. -->
-			<skill id="4414" level="2" /> <!--Standard Type -->
-			<skill id="4415" level="1" /> <!--Bare Hands -->
-			<skill id="4416" level="19" /> <!--Others -->
-		</skillList>
-		<shots soul="2" spirit="2" />
-		<exCrtEffect>false</exCrtEffect>
-		<collision>
-			<radius normal="5" />
-			<height normal="3.75" />
-		</collision>
-	</npc>
-	<npc id="1514" level="55" type="Folk" name="Agathion Pegasus">
-		<!-- Confirmed CT2.5 -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
-			<vitals hp="1673" hpRegen="6.5" mp="889" mpRegen="2.4" />
-			<attack physical="388.11142" magical="265.02979" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
-			<defence physical="223.6362" magical="163.64727" />
-			<speed>
-				<walk ground="60" />
-				<run ground="180" />
-			</speed>
-		</stats>
-		<status undying="false" />
-		<skillList>
-			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!--Average P. Atk. -->
-			<skill id="4411" level="11" /> <!--Average M. Atk. -->
-			<skill id="4412" level="11" /> <!--Average P. Def. -->
-			<skill id="4413" level="11" /> <!--Average M. Def. -->
-			<skill id="4414" level="2" /> <!--Standard Type -->
-			<skill id="4415" level="1" /> <!--Bare Hands -->
-			<skill id="4416" level="19" /> <!--Others -->
-		</skillList>
-		<shots soul="2" spirit="2" />
-		<exCrtEffect>false</exCrtEffect>
-		<collision>
-			<radius normal="5" />
-			<height normal="3.75" />
-		</collision>
-	</npc>
-	<npc id="1523" level="55" type="Folk" name="God of Fortune">
-		<!-- Confirmed CT2.5 -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
-			<vitals hp="1673" hpRegen="6.5" mp="889" mpRegen="2.4" />
-			<attack physical="388.11142" magical="265.02979" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
-			<defence physical="223.6362" magical="163.64727" />
-			<speed>
-				<walk ground="60" />
-				<run ground="180" />
-			</speed>
-		</stats>
-		<status undying="false" />
-		<skillList>
-			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!--Average P. Atk. -->
-			<skill id="4411" level="11" /> <!--Average M. Atk. -->
-			<skill id="4412" level="11" /> <!--Average P. Def. -->
-			<skill id="4413" level="11" /> <!--Average M. Def. -->
-			<skill id="4414" level="2" /> <!--Standard Type -->
-			<skill id="4415" level="1" /> <!--Bare Hands -->
-			<skill id="4416" level="19" /> <!--Others -->
-		</skillList>
-		<shots soul="2" spirit="2" />
-		<exCrtEffect>false</exCrtEffect>
-		<collision>
-			<radius normal="5" />
-			<height normal="3.75" />
-		</collision>
-	</npc>
-	<npc id="1533" level="55" type="Folk" name="Agathion Uthanka">
-		<!-- Confirmed CT2.5 -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
-			<vitals hp="1673" hpRegen="6.5" mp="889" mpRegen="2.4" />
-			<attack physical="388.11142" magical="265.02979" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
-			<defence physical="223.6362" magical="163.64727" />
-			<speed>
-				<walk ground="60" />
-				<run ground="180" />
-			</speed>
-		</stats>
-		<status undying="false" />
-		<skillList>
-			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!--Average P. Atk. -->
-			<skill id="4411" level="11" /> <!--Average M. Atk. -->
-			<skill id="4412" level="11" /> <!--Average P. Def. -->
-			<skill id="4413" level="11" /> <!--Average M. Def. -->
-			<skill id="4414" level="2" /> <!--Standard Type -->
-			<skill id="4415" level="1" /> <!--Bare Hands -->
-			<skill id="4416" level="19" /> <!--Others -->
-		</skillList>
-		<shots soul="2" spirit="2" />
-		<exCrtEffect>false</exCrtEffect>
-		<collision>
-			<radius normal="5" />
-			<height normal="3.75" />
-		</collision>
-	</npc>
-	<npc id="1539" level="55" type="Folk" name="Agathion Iken">
-		<!-- Confirmed CT2.5 -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
-			<vitals hp="1673" hpRegen="6.5" mp="889" mpRegen="2.4" />
-			<attack physical="388.11142" magical="265.02979" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
-			<defence physical="223.6362" magical="163.64727" />
-			<speed>
-				<walk ground="60" />
-				<run ground="180" />
-			</speed>
-		</stats>
-		<status undying="false" />
-		<skillList>
-			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!--Average P. Atk. -->
-			<skill id="4411" level="11" /> <!--Average M. Atk. -->
-			<skill id="4412" level="11" /> <!--Average P. Def. -->
-			<skill id="4413" level="11" /> <!--Average M. Def. -->
-			<skill id="4414" level="2" /> <!--Standard Type -->
-			<skill id="4415" level="1" /> <!--Bare Hands -->
-			<skill id="4416" level="19" /> <!--Others -->
-		</skillList>
-		<shots soul="2" spirit="2" />
-		<exCrtEffect>false</exCrtEffect>
-		<collision>
-			<radius normal="5" />
-			<height normal="3.75" />
-		</collision>
-	</npc>
-	<npc id="1540" level="55" type="Folk" name="Agathion Lanya">
-		<!-- Confirmed CT2.5 -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
-			<vitals hp="1673" hpRegen="6.5" mp="889" mpRegen="2.4" />
-			<attack physical="388.11142" magical="265.02979" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
-			<defence physical="223.6362" magical="163.64727" />
-			<speed>
-				<walk ground="60" />
-				<run ground="180" />
-			</speed>
-		</stats>
-		<status undying="false" />
-		<skillList>
-			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!--Average P. Atk. -->
-			<skill id="4411" level="11" /> <!--Average M. Atk. -->
-			<skill id="4412" level="11" /> <!--Average P. Def. -->
-			<skill id="4413" level="11" /> <!--Average M. Def. -->
-			<skill id="4414" level="2" /> <!--Standard Type -->
-			<skill id="4415" level="1" /> <!--Bare Hands -->
-			<skill id="4416" level="19" /> <!--Others -->
-		</skillList>
-		<shots soul="2" spirit="2" />
-		<exCrtEffect>false</exCrtEffect>
-		<collision>
-			<radius normal="5" />
-			<height normal="3.75" />
-		</collision>
-	</npc>
-	<npc id="1541" level="55" type="Folk" name="Agathion Gnosian">
-		<!-- Confirmed CT2.5 -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
-			<vitals hp="1673" hpRegen="6.5" mp="889" mpRegen="2.4" />
-			<attack physical="388.11142" magical="265.02979" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
-			<defence physical="223.6362" magical="163.64727" />
-			<speed>
-				<walk ground="60" />
-				<run ground="180" />
-			</speed>
-		</stats>
-		<status undying="false" />
-		<skillList>
-			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!--Average P. Atk. -->
-			<skill id="4411" level="11" /> <!--Average M. Atk. -->
-			<skill id="4412" level="11" /> <!--Average P. Def. -->
-			<skill id="4413" level="11" /> <!--Average M. Def. -->
-			<skill id="4414" level="2" /> <!--Standard Type -->
-			<skill id="4415" level="1" /> <!--Bare Hands -->
-			<skill id="4416" level="19" /> <!--Others -->
-		</skillList>
-		<shots soul="2" spirit="2" />
-		<exCrtEffect>false</exCrtEffect>
-		<collision>
-			<radius normal="5" />
-			<height normal="3.75" />
-		</collision>
-	</npc>
-	<npc id="1542" level="55" type="Folk" name="Agathion Cheerleader Orodriel">
-		<!-- Confirmed CT2.5 -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
-			<vitals hp="1673" hpRegen="6.5" mp="889" mpRegen="2.4" />
-			<attack physical="388.11142" magical="265.02979" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
-			<defence physical="223.6362" magical="163.64727" />
-			<speed>
-				<walk ground="60" />
-				<run ground="180" />
-			</speed>
-		</stats>
-		<status undying="false" />
-		<skillList>
-			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!--Average P. Atk. -->
-			<skill id="4411" level="11" /> <!--Average M. Atk. -->
-			<skill id="4412" level="11" /> <!--Average P. Def. -->
-			<skill id="4413" level="11" /> <!--Average M. Def. -->
-			<skill id="4414" level="2" /> <!--Standard Type -->
-			<skill id="4415" level="1" /> <!--Bare Hands -->
-			<skill id="4416" level="19" /> <!--Others -->
-		</skillList>
-		<shots soul="2" spirit="2" />
-		<exCrtEffect>false</exCrtEffect>
-		<collision>
-			<radius normal="5" />
-			<height normal="3.75" />
-		</collision>
-	</npc>
-	<npc id="1543" level="55" type="Folk" name="Agathion Lakinos">
-		<!-- Confirmed CT2.5 -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
-			<vitals hp="1673" hpRegen="6.5" mp="889" mpRegen="2.4" />
-			<attack physical="388.11142" magical="265.02979" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
-			<defence physical="223.6362" magical="163.64727" />
-			<speed>
-				<walk ground="60" />
-				<run ground="180" />
-			</speed>
-		</stats>
-		<status undying="false" />
-		<skillList>
-			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!--Average P. Atk. -->
-			<skill id="4411" level="11" /> <!--Average M. Atk. -->
-			<skill id="4412" level="11" /> <!--Average P. Def. -->
-			<skill id="4413" level="11" /> <!--Average M. Def. -->
-			<skill id="4414" level="2" /> <!--Standard Type -->
-			<skill id="4415" level="1" /> <!--Bare Hands -->
-			<skill id="4416" level="19" /> <!--Others -->
-		</skillList>
-		<shots soul="2" spirit="2" />
-		<exCrtEffect>false</exCrtEffect>
-		<collision>
-			<radius normal="5" />
-			<height normal="3.75" />
-		</collision>
-	</npc>
-	<npc id="1544" level="55" type="Folk" name="Agathion Mortia">
-		<!-- Confirmed CT2.5 -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
-			<vitals hp="1673" hpRegen="6.5" mp="889" mpRegen="2.4" />
-			<attack physical="388.11142" magical="265.02979" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
-			<defence physical="223.6362" magical="163.64727" />
-			<speed>
-				<walk ground="60" />
-				<run ground="180" />
-			</speed>
-		</stats>
-		<status undying="false" />
-		<skillList>
-			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!--Average P. Atk. -->
-			<skill id="4411" level="11" /> <!--Average M. Atk. -->
-			<skill id="4412" level="11" /> <!--Average P. Def. -->
-			<skill id="4413" level="11" /> <!--Average M. Def. -->
-			<skill id="4414" level="2" /> <!--Standard Type -->
-			<skill id="4415" level="1" /> <!--Bare Hands -->
-			<skill id="4416" level="19" /> <!--Others -->
-		</skillList>
-		<shots soul="2" spirit="2" />
-		<exCrtEffect>false</exCrtEffect>
-		<collision>
-			<radius normal="5" />
-			<height normal="3.75" />
-		</collision>
-	</npc>
-	<npc id="1545" level="55" type="Folk" name="Agathion Heintz">
-		<!-- Confirmed CT2.5 -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
-			<vitals hp="1673" hpRegen="6.5" mp="889" mpRegen="2.4" />
-			<attack physical="388.11142" magical="265.02979" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
-			<defence physical="223.6362" magical="163.64727" />
-			<speed>
-				<walk ground="60" />
-				<run ground="180" />
-			</speed>
-		</stats>
-		<status undying="false" />
-		<skillList>
-			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!--Average P. Atk. -->
-			<skill id="4411" level="11" /> <!--Average M. Atk. -->
-			<skill id="4412" level="11" /> <!--Average P. Def. -->
-			<skill id="4413" level="11" /> <!--Average M. Def. -->
-			<skill id="4414" level="2" /> <!--Standard Type -->
-			<skill id="4415" level="1" /> <!--Bare Hands -->
-			<skill id="4416" level="19" /> <!--Others -->
-		</skillList>
-		<shots soul="2" spirit="2" />
-		<exCrtEffect>false</exCrtEffect>
-		<collision>
-			<radius normal="5" />
-			<height normal="3.75" />
-		</collision>
-	</npc>
-	<npc id="1546" level="55" type="Folk" name="Agathion Meruril">
-		<!-- Confirmed CT2.5 -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
-			<vitals hp="1673" hpRegen="6.5" mp="889" mpRegen="2.4" />
-			<attack physical="388.11142" magical="265.02979" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
-			<defence physical="223.6362" magical="163.64727" />
-			<speed>
-				<walk ground="60" />
-				<run ground="180" />
-			</speed>
-		</stats>
-		<status undying="false" />
-		<skillList>
-			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!--Average P. Atk. -->
-			<skill id="4411" level="11" /> <!--Average M. Atk. -->
-			<skill id="4412" level="11" /> <!--Average P. Def. -->
-			<skill id="4413" level="11" /> <!--Average M. Def. -->
-			<skill id="4414" level="2" /> <!--Standard Type -->
-			<skill id="4415" level="1" /> <!--Bare Hands -->
-			<skill id="4416" level="19" /> <!--Others -->
-		</skillList>
-		<shots soul="2" spirit="2" />
-		<exCrtEffect>false</exCrtEffect>
-		<collision>
-			<radius normal="5" />
-			<height normal="3.75" />
-		</collision>
-	</npc>
-	<npc id="1547" level="55" type="Folk" name="Agathion Taman Zu Rapatui">
-		<!-- Confirmed CT2.5 -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
-			<vitals hp="1673" hpRegen="6.5" mp="889" mpRegen="2.4" />
-			<attack physical="388.11142" magical="265.02979" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
-			<defence physical="223.6362" magical="163.64727" />
-			<speed>
-				<walk ground="60" />
-				<run ground="180" />
-			</speed>
-		</stats>
-		<status undying="false" />
-		<skillList>
-			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!--Average P. Atk. -->
-			<skill id="4411" level="11" /> <!--Average M. Atk. -->
-			<skill id="4412" level="11" /> <!--Average P. Def. -->
-			<skill id="4413" level="11" /> <!--Average M. Def. -->
-			<skill id="4414" level="2" /> <!--Standard Type -->
-			<skill id="4415" level="1" /> <!--Bare Hands -->
-			<skill id="4416" level="19" /> <!--Others -->
-		</skillList>
-		<shots soul="2" spirit="2" />
-		<exCrtEffect>false</exCrtEffect>
-		<collision>
-			<radius normal="5" />
-			<height normal="3.75" />
-		</collision>
-	</npc>
-	<npc id="1548" level="55" type="Folk" name="Agathion Kaurin">
-		<!-- Confirmed CT2.5 -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
-			<vitals hp="1673" hpRegen="6.5" mp="889" mpRegen="2.4" />
-			<attack physical="388.11142" magical="265.02979" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
-			<defence physical="223.6362" magical="163.64727" />
-			<speed>
-				<walk ground="60" />
-				<run ground="180" />
-			</speed>
-		</stats>
-		<status undying="false" />
-		<skillList>
-			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!--Average P. Atk. -->
-			<skill id="4411" level="11" /> <!--Average M. Atk. -->
-			<skill id="4412" level="11" /> <!--Average P. Def. -->
-			<skill id="4413" level="11" /> <!--Average M. Def. -->
-			<skill id="4414" level="2" /> <!--Standard Type -->
-			<skill id="4415" level="1" /> <!--Bare Hands -->
-			<skill id="4416" level="19" /> <!--Others -->
-		</skillList>
-		<shots soul="2" spirit="2" />
-		<exCrtEffect>false</exCrtEffect>
-		<collision>
-			<radius normal="5" />
-			<height normal="3.75" />
-		</collision>
-	</npc>
-	<npc id="1549" level="55" type="Folk" name="Agathion Ahertbein">
-		<!-- Confirmed CT2.5 -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
-			<vitals hp="1673" hpRegen="6.5" mp="889" mpRegen="2.4" />
-			<attack physical="388.11142" magical="265.02979" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
-			<defence physical="223.6362" magical="163.64727" />
-			<speed>
-				<walk ground="60" />
-				<run ground="180" />
-			</speed>
-		</stats>
-		<status undying="false" />
-		<skillList>
-			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!--Average P. Atk. -->
-			<skill id="4411" level="11" /> <!--Average M. Atk. -->
-			<skill id="4412" level="11" /> <!--Average P. Def. -->
-			<skill id="4413" level="11" /> <!--Average M. Def. -->
-			<skill id="4414" level="2" /> <!--Standard Type -->
-			<skill id="4415" level="1" /> <!--Bare Hands -->
-			<skill id="4416" level="19" /> <!--Others -->
-		</skillList>
-		<shots soul="2" spirit="2" />
-		<exCrtEffect>false</exCrtEffect>
-		<collision>
-			<radius normal="5" />
-			<height normal="3.75" />
-		</collision>
-	</npc>
-	<npc id="1550" level="55" type="Folk" name="Agathion Naonin">
-		<!-- Confirmed CT2.5 -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
-			<vitals hp="1673" hpRegen="6.5" mp="889" mpRegen="2.4" />
-			<attack physical="388.11142" magical="265.02979" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
-			<defence physical="223.6362" magical="163.64727" />
-			<speed>
-				<walk ground="60" />
-				<run ground="180" />
-			</speed>
-		</stats>
-		<status undying="false" />
-		<skillList>
-			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!--Average P. Atk. -->
-			<skill id="4411" level="11" /> <!--Average M. Atk. -->
-			<skill id="4412" level="11" /> <!--Average P. Def. -->
-			<skill id="4413" level="11" /> <!--Average M. Def. -->
-			<skill id="4414" level="2" /> <!--Standard Type -->
-			<skill id="4415" level="1" /> <!--Bare Hands -->
-			<skill id="4416" level="19" /> <!--Others -->
-		</skillList>
-		<shots soul="2" spirit="2" />
-		<exCrtEffect>false</exCrtEffect>
-		<collision>
-			<radius normal="5" />
-			<height normal="3.75" />
-		</collision>
-	</npc>
-	<npc id="1551" level="55" type="Folk" name="Agathion Guangong">
-		<!-- Confirmed CT2.5 -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
-			<vitals hp="1673" hpRegen="6.5" mp="889" mpRegen="2.4" />
-			<attack physical="388.11142" magical="265.02979" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
-			<defence physical="223.6362" magical="163.64727" />
-			<speed>
-				<walk ground="60" />
-				<run ground="180" />
-			</speed>
-		</stats>
-		<status undying="false" />
-		<skillList>
-			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!--Average P. Atk. -->
-			<skill id="4411" level="11" /> <!--Average M. Atk. -->
-			<skill id="4412" level="11" /> <!--Average P. Def. -->
-			<skill id="4413" level="11" /> <!--Average M. Def. -->
-			<skill id="4414" level="2" /> <!--Standard Type -->
-			<skill id="4415" level="1" /> <!--Bare Hands -->
-			<skill id="4416" level="19" /> <!--Others -->
-		</skillList>
-		<shots soul="2" spirit="2" />
-		<exCrtEffect>false</exCrtEffect>
-		<collision>
-			<radius normal="5" />
-			<height normal="3.75" />
-		</collision>
-	</npc>
-	<npc id="1552" level="55" type="Folk" name="Agathion Gwanseum Nyang">
-		<!-- Confirmed CT2.5 -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
-			<vitals hp="1673" hpRegen="6.5" mp="889" mpRegen="2.4" />
-			<attack physical="388.11142" magical="265.02979" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
-			<defence physical="223.6362" magical="163.64727" />
-			<speed>
-				<walk ground="60" />
-				<run ground="180" />
-			</speed>
-		</stats>
-		<status undying="false" />
-		<skillList>
-			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!--Average P. Atk. -->
-			<skill id="4411" level="11" /> <!--Average M. Atk. -->
-			<skill id="4412" level="11" /> <!--Average P. Def. -->
-			<skill id="4413" level="11" /> <!--Average M. Def. -->
-			<skill id="4414" level="2" /> <!--Standard Type -->
-			<skill id="4415" level="1" /> <!--Bare Hands -->
-			<skill id="4416" level="19" /> <!--Others -->
-		</skillList>
-		<shots soul="2" spirit="2" />
-		<exCrtEffect>false</exCrtEffect>
-		<collision>
-			<radius normal="5" />
-			<height normal="3.75" />
-		</collision>
-	</npc>
-	<npc id="1553" level="55" type="Folk" name="Agathion Blue Opera">
-		<!-- Confirmed CT2.5 -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
-			<vitals hp="1673" hpRegen="6.5" mp="889" mpRegen="2.4" />
-			<attack physical="388.11142" magical="265.02979" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
-			<defence physical="223.6362" magical="163.64727" />
-			<speed>
-				<walk ground="60" />
-				<run ground="180" />
-			</speed>
-		</stats>
-		<status undying="false" />
-		<skillList>
-			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!--Average P. Atk. -->
-			<skill id="4411" level="11" /> <!--Average M. Atk. -->
-			<skill id="4412" level="11" /> <!--Average P. Def. -->
-			<skill id="4413" level="11" /> <!--Average M. Def. -->
-			<skill id="4414" level="2" /> <!--Standard Type -->
-			<skill id="4415" level="1" /> <!--Bare Hands -->
-			<skill id="4416" level="19" /> <!--Others -->
-		</skillList>
-		<shots soul="2" spirit="2" />
-		<exCrtEffect>false</exCrtEffect>
-		<collision>
-			<radius normal="5" />
-			<height normal="3.75" />
-		</collision>
-	</npc>
-	<npc id="1554" level="55" type="Folk" name="Agathion Red Opera">
-		<!-- Confirmed CT2.5 -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
-			<vitals hp="1673" hpRegen="6.5" mp="889" mpRegen="2.4" />
-			<attack physical="388.11142" magical="265.02979" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
-			<defence physical="223.6362" magical="163.64727" />
-			<speed>
-				<walk ground="60" />
-				<run ground="180" />
-			</speed>
-		</stats>
-		<status undying="false" />
-		<skillList>
-			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!--Average P. Atk. -->
-			<skill id="4411" level="11" /> <!--Average M. Atk. -->
-			<skill id="4412" level="11" /> <!--Average P. Def. -->
-			<skill id="4413" level="11" /> <!--Average M. Def. -->
-			<skill id="4414" level="2" /> <!--Standard Type -->
-			<skill id="4415" level="1" /> <!--Bare Hands -->
-			<skill id="4416" level="19" /> <!--Others -->
-		</skillList>
-		<shots soul="2" spirit="2" />
-		<exCrtEffect>false</exCrtEffect>
-		<collision>
-			<radius normal="5" />
-			<height normal="3.75" />
-		</collision>
-	</npc>
-	<npc id="1556" level="55" type="Folk" name="Agathion Miss Chipao">
-		<!-- Confirmed CT2.5 -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
-			<vitals hp="1673" hpRegen="6.5" mp="889" mpRegen="2.4" />
-			<attack physical="388.11142" magical="265.02979" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
-			<defence physical="223.6362" magical="163.64727" />
-			<speed>
-				<walk ground="60" />
-				<run ground="180" />
-			</speed>
-		</stats>
-		<status undying="false" />
-		<skillList>
-			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!--Average P. Atk. -->
-			<skill id="4411" level="11" /> <!--Average M. Atk. -->
-			<skill id="4412" level="11" /> <!--Average P. Def. -->
-			<skill id="4413" level="11" /> <!--Average M. Def. -->
-			<skill id="4414" level="2" /> <!--Standard Type -->
-			<skill id="4415" level="1" /> <!--Bare Hands -->
-			<skill id="4416" level="19" /> <!--Others -->
-		</skillList>
-		<shots soul="2" spirit="2" />
-		<exCrtEffect>false</exCrtEffect>
-		<collision>
-			<radius normal="5" />
-			<height normal="3.75" />
-		</collision>
-	</npc>
-	<npc id="1574" level="55" type="Folk" name="Phoenix">
-		<!-- Confirmed CT2.5 -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
-			<vitals hp="1673" hpRegen="6.5" mp="889" mpRegen="2.4" />
-			<attack physical="388.11142" magical="265.02979" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
-			<defence physical="223.6362" magical="163.64727" />
-			<speed>
-				<walk ground="60" />
-				<run ground="180" />
-			</speed>
-		</stats>
-		<status undying="false" />
-		<skillList>
-			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!--Average P. Atk. -->
-			<skill id="4411" level="11" /> <!--Average M. Atk. -->
-			<skill id="4412" level="11" /> <!--Average P. Def. -->
-			<skill id="4413" level="11" /> <!--Average M. Def. -->
-			<skill id="4414" level="2" /> <!--Standard Type -->
-			<skill id="4415" level="1" /> <!--Bare Hands -->
-			<skill id="4416" level="19" /> <!--Others -->
-		</skillList>
-		<shots soul="2" spirit="2" />
-		<exCrtEffect>false</exCrtEffect>
-		<collision>
-			<radius normal="5" />
-			<height normal="3.75" />
-		</collision>
-	</npc>
-	<npc id="1586" level="55" type="Folk" name="Flower Fairy Spirit">
-		<!-- Confirmed CT2.5 -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
-			<vitals hp="1673" hpRegen="6.5" mp="889" mpRegen="2.4" />
-			<attack physical="388.11142" magical="265.02979" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
-			<defence physical="223.6362" magical="163.64727" />
-			<speed>
-				<walk ground="60" />
-				<run ground="180" />
-			</speed>
-		</stats>
-		<status undying="false" />
-		<skillList>
-			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!--Average P. Atk. -->
-			<skill id="4411" level="11" /> <!--Average M. Atk. -->
-			<skill id="4412" level="11" /> <!--Average P. Def. -->
-			<skill id="4413" level="11" /> <!--Average M. Def. -->
-			<skill id="4414" level="2" /> <!--Standard Type -->
-			<skill id="4415" level="1" /> <!--Bare Hands -->
-			<skill id="4416" level="19" /> <!--Others -->
-		</skillList>
-		<shots soul="2" spirit="2" />
-		<exCrtEffect>false</exCrtEffect>
-		<collision>
-			<radius normal="5" />
-			<height normal="3.75" />
-		</collision>
-	</npc>
-	<npc id="1592" level="55" type="Folk" name="Cheerleader Meruril">
-		<!-- Confirmed CT2.5 -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="25">
-			<vitals hp="1673" hpRegen="6.5" mp="889" mpRegen="2.4" />
-			<attack physical="388.11142" magical="265.02979" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
-			<defence physical="223.6362" magical="163.64727" />
-			<speed>
-				<walk ground="60" />
-				<run ground="180" />
-			</speed>
-		</stats>
-		<status undying="false" />
-		<skillList>
-			<skill id="4408" level="1" /> <!--HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!--MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!--Average P. Atk. -->
-			<skill id="4411" level="11" /> <!--Average M. Atk. -->
-			<skill id="4412" level="11" /> <!--Average P. Def. -->
-			<skill id="4413" level="11" /> <!--Average M. Def. -->
-			<skill id="4414" level="2" /> <!--Standard Type -->
-			<skill id="4415" level="1" /> <!--Bare Hands -->
-			<skill id="4416" level="19" /> <!--Others -->
-		</skillList>
-		<shots soul="2" spirit="2" />
-		<exCrtEffect>false</exCrtEffect>
-		<collision>
-			<radius normal="5" />
-			<height normal="3.75" />
-		</collision>
-	</npc>
-	<npc id="1594" level="80" type="Folk" name="Agathion Singer and Dancer">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<sex>MALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="1673" mp="889" />
-			<attack physical="500" magical="500" attackSpeed="278" range="40" />
-			<defence physical="500" magical="500" />
-			<speed>
-				<walk ground="60" />
-				<run ground="180" />
-			</speed>
-		</stats>
-		<collision>
-			<radius normal="5" />
-			<height normal="3.75" />
-		</collision>
-	</npc>
-	<npc id="1595" level="80" type="Folk" name="Agathion Zaken's Spirit Swords">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="889" mpRegen="3.6" />
-			<speed>
-				<walk ground="60" />
-				<run ground="180" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="30" />
-			<height normal="20" />
-		</collision>
-	</npc>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org npcs.xsd">
+    <npc id="1513" level="55" type="Folk" name="Agathion One-eyed Bat Drove">
+        <!-- Confirmed CT2.5 -->
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+            <vitals hp="1673" hpRegen="6.5" mp="889" mpRegen="2.4"/>
+            <attack physical="388.11142" magical="265.02979" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120"/>
+            <defence physical="223.6362" magical="163.64727"/>
+            <speed>
+                <walk ground="60"/>
+                <run ground="180"/>
+            </speed>
+        </stats>
+        <status undying="false"/>
+        <skillList>
+            <skill id="4408" level="1"/> <!--HP Increase (1x) -->
+            <skill id="4409" level="1"/> <!--MP Increase (1x) -->
+            <skill id="4410" level="11"/> <!--Average P. Atk. -->
+            <skill id="4411" level="11"/> <!--Average M. Atk. -->
+            <skill id="4412" level="11"/> <!--Average P. Def. -->
+            <skill id="4413" level="11"/> <!--Average M. Def. -->
+            <skill id="4414" level="2"/> <!--Standard Type -->
+            <skill id="4415" level="1"/> <!--Bare Hands -->
+            <skill id="4416" level="19"/> <!--Others -->
+        </skillList>
+        <shots soul="2" spirit="2"/>
+        <exCrtEffect>false</exCrtEffect>
+        <collision>
+            <radius normal="5"/>
+            <height normal="3.75"/>
+        </collision>
+    </npc>
+    <npc id="1514" level="55" type="Folk" name="Agathion Pegasus">
+        <!-- Confirmed CT2.5 -->
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+            <vitals hp="1673" hpRegen="6.5" mp="889" mpRegen="2.4"/>
+            <attack physical="388.11142" magical="265.02979" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120"/>
+            <defence physical="223.6362" magical="163.64727"/>
+            <speed>
+                <walk ground="60"/>
+                <run ground="180"/>
+            </speed>
+        </stats>
+        <status undying="false"/>
+        <skillList>
+            <skill id="4408" level="1"/> <!--HP Increase (1x) -->
+            <skill id="4409" level="1"/> <!--MP Increase (1x) -->
+            <skill id="4410" level="11"/> <!--Average P. Atk. -->
+            <skill id="4411" level="11"/> <!--Average M. Atk. -->
+            <skill id="4412" level="11"/> <!--Average P. Def. -->
+            <skill id="4413" level="11"/> <!--Average M. Def. -->
+            <skill id="4414" level="2"/> <!--Standard Type -->
+            <skill id="4415" level="1"/> <!--Bare Hands -->
+            <skill id="4416" level="19"/> <!--Others -->
+        </skillList>
+        <shots soul="2" spirit="2"/>
+        <exCrtEffect>false</exCrtEffect>
+        <collision>
+            <radius normal="5"/>
+            <height normal="3.75"/>
+        </collision>
+    </npc>
+    <npc id="1523" level="55" type="Folk" name="God of Fortune">
+        <!-- Confirmed CT2.5 -->
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+            <vitals hp="1673" hpRegen="6.5" mp="889" mpRegen="2.4"/>
+            <attack physical="388.11142" magical="265.02979" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120"/>
+            <defence physical="223.6362" magical="163.64727"/>
+            <speed>
+                <walk ground="60"/>
+                <run ground="180"/>
+            </speed>
+        </stats>
+        <status undying="false"/>
+        <skillList>
+            <skill id="4408" level="1"/> <!--HP Increase (1x) -->
+            <skill id="4409" level="1"/> <!--MP Increase (1x) -->
+            <skill id="4410" level="11"/> <!--Average P. Atk. -->
+            <skill id="4411" level="11"/> <!--Average M. Atk. -->
+            <skill id="4412" level="11"/> <!--Average P. Def. -->
+            <skill id="4413" level="11"/> <!--Average M. Def. -->
+            <skill id="4414" level="2"/> <!--Standard Type -->
+            <skill id="4415" level="1"/> <!--Bare Hands -->
+            <skill id="4416" level="19"/> <!--Others -->
+        </skillList>
+        <shots soul="2" spirit="2"/>
+        <exCrtEffect>false</exCrtEffect>
+        <collision>
+            <radius normal="5"/>
+            <height normal="3.75"/>
+        </collision>
+    </npc>
+    <npc id="1533" level="55" type="Folk" name="Agathion Uthanka">
+        <!-- Confirmed CT2.5 -->
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+            <vitals hp="1673" hpRegen="6.5" mp="889" mpRegen="2.4"/>
+            <attack physical="388.11142" magical="265.02979" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120"/>
+            <defence physical="223.6362" magical="163.64727"/>
+            <speed>
+                <walk ground="60"/>
+                <run ground="180"/>
+            </speed>
+        </stats>
+        <status undying="false"/>
+        <skillList>
+            <skill id="4408" level="1"/> <!--HP Increase (1x) -->
+            <skill id="4409" level="1"/> <!--MP Increase (1x) -->
+            <skill id="4410" level="11"/> <!--Average P. Atk. -->
+            <skill id="4411" level="11"/> <!--Average M. Atk. -->
+            <skill id="4412" level="11"/> <!--Average P. Def. -->
+            <skill id="4413" level="11"/> <!--Average M. Def. -->
+            <skill id="4414" level="2"/> <!--Standard Type -->
+            <skill id="4415" level="1"/> <!--Bare Hands -->
+            <skill id="4416" level="19"/> <!--Others -->
+        </skillList>
+        <shots soul="2" spirit="2"/>
+        <exCrtEffect>false</exCrtEffect>
+        <collision>
+            <radius normal="5"/>
+            <height normal="3.75"/>
+        </collision>
+    </npc>
+    <npc id="1539" level="55" type="Folk" name="Agathion Iken">
+        <!-- Confirmed CT2.5 -->
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+            <vitals hp="1673" hpRegen="6.5" mp="889" mpRegen="2.4"/>
+            <attack physical="388.11142" magical="265.02979" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120"/>
+            <defence physical="223.6362" magical="163.64727"/>
+            <speed>
+                <walk ground="60"/>
+                <run ground="180"/>
+            </speed>
+        </stats>
+        <status undying="false"/>
+        <skillList>
+            <skill id="4408" level="1"/> <!--HP Increase (1x) -->
+            <skill id="4409" level="1"/> <!--MP Increase (1x) -->
+            <skill id="4410" level="11"/> <!--Average P. Atk. -->
+            <skill id="4411" level="11"/> <!--Average M. Atk. -->
+            <skill id="4412" level="11"/> <!--Average P. Def. -->
+            <skill id="4413" level="11"/> <!--Average M. Def. -->
+            <skill id="4414" level="2"/> <!--Standard Type -->
+            <skill id="4415" level="1"/> <!--Bare Hands -->
+            <skill id="4416" level="19"/> <!--Others -->
+        </skillList>
+        <shots soul="2" spirit="2"/>
+        <exCrtEffect>false</exCrtEffect>
+        <collision>
+            <radius normal="5"/>
+            <height normal="3.75"/>
+        </collision>
+    </npc>
+    <npc id="1540" level="55" type="Folk" name="Agathion Lanya">
+        <!-- Confirmed CT2.5 -->
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+            <vitals hp="1673" hpRegen="6.5" mp="889" mpRegen="2.4"/>
+            <attack physical="388.11142" magical="265.02979" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120"/>
+            <defence physical="223.6362" magical="163.64727"/>
+            <speed>
+                <walk ground="60"/>
+                <run ground="180"/>
+            </speed>
+        </stats>
+        <status undying="false"/>
+        <skillList>
+            <skill id="4408" level="1"/> <!--HP Increase (1x) -->
+            <skill id="4409" level="1"/> <!--MP Increase (1x) -->
+            <skill id="4410" level="11"/> <!--Average P. Atk. -->
+            <skill id="4411" level="11"/> <!--Average M. Atk. -->
+            <skill id="4412" level="11"/> <!--Average P. Def. -->
+            <skill id="4413" level="11"/> <!--Average M. Def. -->
+            <skill id="4414" level="2"/> <!--Standard Type -->
+            <skill id="4415" level="1"/> <!--Bare Hands -->
+            <skill id="4416" level="19"/> <!--Others -->
+        </skillList>
+        <shots soul="2" spirit="2"/>
+        <exCrtEffect>false</exCrtEffect>
+        <collision>
+            <radius normal="5"/>
+            <height normal="3.75"/>
+        </collision>
+    </npc>
+    <npc id="1541" level="55" type="Folk" name="Agathion Gnosian">
+        <!-- Confirmed CT2.5 -->
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+            <vitals hp="1673" hpRegen="6.5" mp="889" mpRegen="2.4"/>
+            <attack physical="388.11142" magical="265.02979" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120"/>
+            <defence physical="223.6362" magical="163.64727"/>
+            <speed>
+                <walk ground="60"/>
+                <run ground="180"/>
+            </speed>
+        </stats>
+        <status undying="false"/>
+        <skillList>
+            <skill id="4408" level="1"/> <!--HP Increase (1x) -->
+            <skill id="4409" level="1"/> <!--MP Increase (1x) -->
+            <skill id="4410" level="11"/> <!--Average P. Atk. -->
+            <skill id="4411" level="11"/> <!--Average M. Atk. -->
+            <skill id="4412" level="11"/> <!--Average P. Def. -->
+            <skill id="4413" level="11"/> <!--Average M. Def. -->
+            <skill id="4414" level="2"/> <!--Standard Type -->
+            <skill id="4415" level="1"/> <!--Bare Hands -->
+            <skill id="4416" level="19"/> <!--Others -->
+        </skillList>
+        <shots soul="2" spirit="2"/>
+        <exCrtEffect>false</exCrtEffect>
+        <collision>
+            <radius normal="5"/>
+            <height normal="3.75"/>
+        </collision>
+    </npc>
+    <npc id="1542" level="55" type="Folk" name="Agathion Cheerleader Orodriel">
+        <!-- Confirmed CT2.5 -->
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+            <vitals hp="1673" hpRegen="6.5" mp="889" mpRegen="2.4"/>
+            <attack physical="388.11142" magical="265.02979" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120"/>
+            <defence physical="223.6362" magical="163.64727"/>
+            <speed>
+                <walk ground="60"/>
+                <run ground="180"/>
+            </speed>
+        </stats>
+        <status undying="false"/>
+        <skillList>
+            <skill id="4408" level="1"/> <!--HP Increase (1x) -->
+            <skill id="4409" level="1"/> <!--MP Increase (1x) -->
+            <skill id="4410" level="11"/> <!--Average P. Atk. -->
+            <skill id="4411" level="11"/> <!--Average M. Atk. -->
+            <skill id="4412" level="11"/> <!--Average P. Def. -->
+            <skill id="4413" level="11"/> <!--Average M. Def. -->
+            <skill id="4414" level="2"/> <!--Standard Type -->
+            <skill id="4415" level="1"/> <!--Bare Hands -->
+            <skill id="4416" level="19"/> <!--Others -->
+        </skillList>
+        <shots soul="2" spirit="2"/>
+        <exCrtEffect>false</exCrtEffect>
+        <collision>
+            <radius normal="5"/>
+            <height normal="3.75"/>
+        </collision>
+    </npc>
+    <npc id="1543" level="55" type="Folk" name="Agathion Lakinos">
+        <!-- Confirmed CT2.5 -->
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+            <vitals hp="1673" hpRegen="6.5" mp="889" mpRegen="2.4"/>
+            <attack physical="388.11142" magical="265.02979" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120"/>
+            <defence physical="223.6362" magical="163.64727"/>
+            <speed>
+                <walk ground="60"/>
+                <run ground="180"/>
+            </speed>
+        </stats>
+        <status undying="false"/>
+        <skillList>
+            <skill id="4408" level="1"/> <!--HP Increase (1x) -->
+            <skill id="4409" level="1"/> <!--MP Increase (1x) -->
+            <skill id="4410" level="11"/> <!--Average P. Atk. -->
+            <skill id="4411" level="11"/> <!--Average M. Atk. -->
+            <skill id="4412" level="11"/> <!--Average P. Def. -->
+            <skill id="4413" level="11"/> <!--Average M. Def. -->
+            <skill id="4414" level="2"/> <!--Standard Type -->
+            <skill id="4415" level="1"/> <!--Bare Hands -->
+            <skill id="4416" level="19"/> <!--Others -->
+        </skillList>
+        <shots soul="2" spirit="2"/>
+        <exCrtEffect>false</exCrtEffect>
+        <collision>
+            <radius normal="5"/>
+            <height normal="3.75"/>
+        </collision>
+    </npc>
+    <npc id="1544" level="55" type="Folk" name="Agathion Mortia">
+        <!-- Confirmed CT2.5 -->
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+            <vitals hp="1673" hpRegen="6.5" mp="889" mpRegen="2.4"/>
+            <attack physical="388.11142" magical="265.02979" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120"/>
+            <defence physical="223.6362" magical="163.64727"/>
+            <speed>
+                <walk ground="60"/>
+                <run ground="180"/>
+            </speed>
+        </stats>
+        <status undying="false"/>
+        <skillList>
+            <skill id="4408" level="1"/> <!--HP Increase (1x) -->
+            <skill id="4409" level="1"/> <!--MP Increase (1x) -->
+            <skill id="4410" level="11"/> <!--Average P. Atk. -->
+            <skill id="4411" level="11"/> <!--Average M. Atk. -->
+            <skill id="4412" level="11"/> <!--Average P. Def. -->
+            <skill id="4413" level="11"/> <!--Average M. Def. -->
+            <skill id="4414" level="2"/> <!--Standard Type -->
+            <skill id="4415" level="1"/> <!--Bare Hands -->
+            <skill id="4416" level="19"/> <!--Others -->
+        </skillList>
+        <shots soul="2" spirit="2"/>
+        <exCrtEffect>false</exCrtEffect>
+        <collision>
+            <radius normal="5"/>
+            <height normal="3.75"/>
+        </collision>
+    </npc>
+    <npc id="1545" level="55" type="Folk" name="Agathion Heintz">
+        <!-- Confirmed CT2.5 -->
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+            <vitals hp="1673" hpRegen="6.5" mp="889" mpRegen="2.4"/>
+            <attack physical="388.11142" magical="265.02979" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120"/>
+            <defence physical="223.6362" magical="163.64727"/>
+            <speed>
+                <walk ground="60"/>
+                <run ground="180"/>
+            </speed>
+        </stats>
+        <status undying="false"/>
+        <skillList>
+            <skill id="4408" level="1"/> <!--HP Increase (1x) -->
+            <skill id="4409" level="1"/> <!--MP Increase (1x) -->
+            <skill id="4410" level="11"/> <!--Average P. Atk. -->
+            <skill id="4411" level="11"/> <!--Average M. Atk. -->
+            <skill id="4412" level="11"/> <!--Average P. Def. -->
+            <skill id="4413" level="11"/> <!--Average M. Def. -->
+            <skill id="4414" level="2"/> <!--Standard Type -->
+            <skill id="4415" level="1"/> <!--Bare Hands -->
+            <skill id="4416" level="19"/> <!--Others -->
+        </skillList>
+        <shots soul="2" spirit="2"/>
+        <exCrtEffect>false</exCrtEffect>
+        <collision>
+            <radius normal="5"/>
+            <height normal="3.75"/>
+        </collision>
+    </npc>
+    <npc id="1546" level="55" type="Folk" name="Agathion Meruril">
+        <!-- Confirmed CT2.5 -->
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+            <vitals hp="1673" hpRegen="6.5" mp="889" mpRegen="2.4"/>
+            <attack physical="388.11142" magical="265.02979" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120"/>
+            <defence physical="223.6362" magical="163.64727"/>
+            <speed>
+                <walk ground="60"/>
+                <run ground="180"/>
+            </speed>
+        </stats>
+        <status undying="false"/>
+        <skillList>
+            <skill id="4408" level="1"/> <!--HP Increase (1x) -->
+            <skill id="4409" level="1"/> <!--MP Increase (1x) -->
+            <skill id="4410" level="11"/> <!--Average P. Atk. -->
+            <skill id="4411" level="11"/> <!--Average M. Atk. -->
+            <skill id="4412" level="11"/> <!--Average P. Def. -->
+            <skill id="4413" level="11"/> <!--Average M. Def. -->
+            <skill id="4414" level="2"/> <!--Standard Type -->
+            <skill id="4415" level="1"/> <!--Bare Hands -->
+            <skill id="4416" level="19"/> <!--Others -->
+        </skillList>
+        <shots soul="2" spirit="2"/>
+        <exCrtEffect>false</exCrtEffect>
+        <collision>
+            <radius normal="5"/>
+            <height normal="3.75"/>
+        </collision>
+    </npc>
+    <npc id="1547" level="55" type="Folk" name="Agathion Taman Zu Rapatui">
+        <!-- Confirmed CT2.5 -->
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+            <vitals hp="1673" hpRegen="6.5" mp="889" mpRegen="2.4"/>
+            <attack physical="388.11142" magical="265.02979" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120"/>
+            <defence physical="223.6362" magical="163.64727"/>
+            <speed>
+                <walk ground="60"/>
+                <run ground="180"/>
+            </speed>
+        </stats>
+        <status undying="false"/>
+        <skillList>
+            <skill id="4408" level="1"/> <!--HP Increase (1x) -->
+            <skill id="4409" level="1"/> <!--MP Increase (1x) -->
+            <skill id="4410" level="11"/> <!--Average P. Atk. -->
+            <skill id="4411" level="11"/> <!--Average M. Atk. -->
+            <skill id="4412" level="11"/> <!--Average P. Def. -->
+            <skill id="4413" level="11"/> <!--Average M. Def. -->
+            <skill id="4414" level="2"/> <!--Standard Type -->
+            <skill id="4415" level="1"/> <!--Bare Hands -->
+            <skill id="4416" level="19"/> <!--Others -->
+        </skillList>
+        <shots soul="2" spirit="2"/>
+        <exCrtEffect>false</exCrtEffect>
+        <collision>
+            <radius normal="5"/>
+            <height normal="3.75"/>
+        </collision>
+    </npc>
+    <npc id="1548" level="55" type="Folk" name="Agathion Kaurin">
+        <!-- Confirmed CT2.5 -->
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+            <vitals hp="1673" hpRegen="6.5" mp="889" mpRegen="2.4"/>
+            <attack physical="388.11142" magical="265.02979" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120"/>
+            <defence physical="223.6362" magical="163.64727"/>
+            <speed>
+                <walk ground="60"/>
+                <run ground="180"/>
+            </speed>
+        </stats>
+        <status undying="false"/>
+        <skillList>
+            <skill id="4408" level="1"/> <!--HP Increase (1x) -->
+            <skill id="4409" level="1"/> <!--MP Increase (1x) -->
+            <skill id="4410" level="11"/> <!--Average P. Atk. -->
+            <skill id="4411" level="11"/> <!--Average M. Atk. -->
+            <skill id="4412" level="11"/> <!--Average P. Def. -->
+            <skill id="4413" level="11"/> <!--Average M. Def. -->
+            <skill id="4414" level="2"/> <!--Standard Type -->
+            <skill id="4415" level="1"/> <!--Bare Hands -->
+            <skill id="4416" level="19"/> <!--Others -->
+        </skillList>
+        <shots soul="2" spirit="2"/>
+        <exCrtEffect>false</exCrtEffect>
+        <collision>
+            <radius normal="5"/>
+            <height normal="3.75"/>
+        </collision>
+    </npc>
+    <npc id="1549" level="55" type="Folk" name="Agathion Ahertbein">
+        <!-- Confirmed CT2.5 -->
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+            <vitals hp="1673" hpRegen="6.5" mp="889" mpRegen="2.4"/>
+            <attack physical="388.11142" magical="265.02979" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120"/>
+            <defence physical="223.6362" magical="163.64727"/>
+            <speed>
+                <walk ground="60"/>
+                <run ground="180"/>
+            </speed>
+        </stats>
+        <status undying="false"/>
+        <skillList>
+            <skill id="4408" level="1"/> <!--HP Increase (1x) -->
+            <skill id="4409" level="1"/> <!--MP Increase (1x) -->
+            <skill id="4410" level="11"/> <!--Average P. Atk. -->
+            <skill id="4411" level="11"/> <!--Average M. Atk. -->
+            <skill id="4412" level="11"/> <!--Average P. Def. -->
+            <skill id="4413" level="11"/> <!--Average M. Def. -->
+            <skill id="4414" level="2"/> <!--Standard Type -->
+            <skill id="4415" level="1"/> <!--Bare Hands -->
+            <skill id="4416" level="19"/> <!--Others -->
+        </skillList>
+        <shots soul="2" spirit="2"/>
+        <exCrtEffect>false</exCrtEffect>
+        <collision>
+            <radius normal="5"/>
+            <height normal="3.75"/>
+        </collision>
+    </npc>
+    <npc id="1550" level="55" type="Folk" name="Agathion Naonin">
+        <!-- Confirmed CT2.5 -->
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+            <vitals hp="1673" hpRegen="6.5" mp="889" mpRegen="2.4"/>
+            <attack physical="388.11142" magical="265.02979" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120"/>
+            <defence physical="223.6362" magical="163.64727"/>
+            <speed>
+                <walk ground="60"/>
+                <run ground="180"/>
+            </speed>
+        </stats>
+        <status undying="false"/>
+        <skillList>
+            <skill id="4408" level="1"/> <!--HP Increase (1x) -->
+            <skill id="4409" level="1"/> <!--MP Increase (1x) -->
+            <skill id="4410" level="11"/> <!--Average P. Atk. -->
+            <skill id="4411" level="11"/> <!--Average M. Atk. -->
+            <skill id="4412" level="11"/> <!--Average P. Def. -->
+            <skill id="4413" level="11"/> <!--Average M. Def. -->
+            <skill id="4414" level="2"/> <!--Standard Type -->
+            <skill id="4415" level="1"/> <!--Bare Hands -->
+            <skill id="4416" level="19"/> <!--Others -->
+        </skillList>
+        <shots soul="2" spirit="2"/>
+        <exCrtEffect>false</exCrtEffect>
+        <collision>
+            <radius normal="5"/>
+            <height normal="3.75"/>
+        </collision>
+    </npc>
+    <npc id="1551" level="55" type="Folk" name="Agathion Guangong">
+        <!-- Confirmed CT2.5 -->
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+            <vitals hp="1673" hpRegen="6.5" mp="889" mpRegen="2.4"/>
+            <attack physical="388.11142" magical="265.02979" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120"/>
+            <defence physical="223.6362" magical="163.64727"/>
+            <speed>
+                <walk ground="60"/>
+                <run ground="180"/>
+            </speed>
+        </stats>
+        <status undying="false"/>
+        <skillList>
+            <skill id="4408" level="1"/> <!--HP Increase (1x) -->
+            <skill id="4409" level="1"/> <!--MP Increase (1x) -->
+            <skill id="4410" level="11"/> <!--Average P. Atk. -->
+            <skill id="4411" level="11"/> <!--Average M. Atk. -->
+            <skill id="4412" level="11"/> <!--Average P. Def. -->
+            <skill id="4413" level="11"/> <!--Average M. Def. -->
+            <skill id="4414" level="2"/> <!--Standard Type -->
+            <skill id="4415" level="1"/> <!--Bare Hands -->
+            <skill id="4416" level="19"/> <!--Others -->
+        </skillList>
+        <shots soul="2" spirit="2"/>
+        <exCrtEffect>false</exCrtEffect>
+        <collision>
+            <radius normal="5"/>
+            <height normal="3.75"/>
+        </collision>
+    </npc>
+    <npc id="1552" level="55" type="Folk" name="Agathion Gwanseum Nyang">
+        <!-- Confirmed CT2.5 -->
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+            <vitals hp="1673" hpRegen="6.5" mp="889" mpRegen="2.4"/>
+            <attack physical="388.11142" magical="265.02979" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120"/>
+            <defence physical="223.6362" magical="163.64727"/>
+            <speed>
+                <walk ground="60"/>
+                <run ground="180"/>
+            </speed>
+        </stats>
+        <status undying="false"/>
+        <skillList>
+            <skill id="4408" level="1"/> <!--HP Increase (1x) -->
+            <skill id="4409" level="1"/> <!--MP Increase (1x) -->
+            <skill id="4410" level="11"/> <!--Average P. Atk. -->
+            <skill id="4411" level="11"/> <!--Average M. Atk. -->
+            <skill id="4412" level="11"/> <!--Average P. Def. -->
+            <skill id="4413" level="11"/> <!--Average M. Def. -->
+            <skill id="4414" level="2"/> <!--Standard Type -->
+            <skill id="4415" level="1"/> <!--Bare Hands -->
+            <skill id="4416" level="19"/> <!--Others -->
+        </skillList>
+        <shots soul="2" spirit="2"/>
+        <exCrtEffect>false</exCrtEffect>
+        <collision>
+            <radius normal="5"/>
+            <height normal="3.75"/>
+        </collision>
+    </npc>
+    <npc id="1553" level="55" type="Folk" name="Agathion Blue Opera">
+        <!-- Confirmed CT2.5 -->
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+            <vitals hp="1673" hpRegen="6.5" mp="889" mpRegen="2.4"/>
+            <attack physical="388.11142" magical="265.02979" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120"/>
+            <defence physical="223.6362" magical="163.64727"/>
+            <speed>
+                <walk ground="60"/>
+                <run ground="180"/>
+            </speed>
+        </stats>
+        <status undying="false"/>
+        <skillList>
+            <skill id="4408" level="1"/> <!--HP Increase (1x) -->
+            <skill id="4409" level="1"/> <!--MP Increase (1x) -->
+            <skill id="4410" level="11"/> <!--Average P. Atk. -->
+            <skill id="4411" level="11"/> <!--Average M. Atk. -->
+            <skill id="4412" level="11"/> <!--Average P. Def. -->
+            <skill id="4413" level="11"/> <!--Average M. Def. -->
+            <skill id="4414" level="2"/> <!--Standard Type -->
+            <skill id="4415" level="1"/> <!--Bare Hands -->
+            <skill id="4416" level="19"/> <!--Others -->
+        </skillList>
+        <shots soul="2" spirit="2"/>
+        <exCrtEffect>false</exCrtEffect>
+        <collision>
+            <radius normal="5"/>
+            <height normal="3.75"/>
+        </collision>
+    </npc>
+    <npc id="1554" level="55" type="Folk" name="Agathion Red Opera">
+        <!-- Confirmed CT2.5 -->
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+            <vitals hp="1673" hpRegen="6.5" mp="889" mpRegen="2.4"/>
+            <attack physical="388.11142" magical="265.02979" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120"/>
+            <defence physical="223.6362" magical="163.64727"/>
+            <speed>
+                <walk ground="60"/>
+                <run ground="180"/>
+            </speed>
+        </stats>
+        <status undying="false"/>
+        <skillList>
+            <skill id="4408" level="1"/> <!--HP Increase (1x) -->
+            <skill id="4409" level="1"/> <!--MP Increase (1x) -->
+            <skill id="4410" level="11"/> <!--Average P. Atk. -->
+            <skill id="4411" level="11"/> <!--Average M. Atk. -->
+            <skill id="4412" level="11"/> <!--Average P. Def. -->
+            <skill id="4413" level="11"/> <!--Average M. Def. -->
+            <skill id="4414" level="2"/> <!--Standard Type -->
+            <skill id="4415" level="1"/> <!--Bare Hands -->
+            <skill id="4416" level="19"/> <!--Others -->
+        </skillList>
+        <shots soul="2" spirit="2"/>
+        <exCrtEffect>false</exCrtEffect>
+        <collision>
+            <radius normal="5"/>
+            <height normal="3.75"/>
+        </collision>
+    </npc>
+    <npc id="1556" level="55" type="Folk" name="Agathion Miss Chipao">
+        <!-- Confirmed CT2.5 -->
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+            <vitals hp="1673" hpRegen="6.5" mp="889" mpRegen="2.4"/>
+            <attack physical="388.11142" magical="265.02979" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120"/>
+            <defence physical="223.6362" magical="163.64727"/>
+            <speed>
+                <walk ground="60"/>
+                <run ground="180"/>
+            </speed>
+        </stats>
+        <status undying="false"/>
+        <skillList>
+            <skill id="4408" level="1"/> <!--HP Increase (1x) -->
+            <skill id="4409" level="1"/> <!--MP Increase (1x) -->
+            <skill id="4410" level="11"/> <!--Average P. Atk. -->
+            <skill id="4411" level="11"/> <!--Average M. Atk. -->
+            <skill id="4412" level="11"/> <!--Average P. Def. -->
+            <skill id="4413" level="11"/> <!--Average M. Def. -->
+            <skill id="4414" level="2"/> <!--Standard Type -->
+            <skill id="4415" level="1"/> <!--Bare Hands -->
+            <skill id="4416" level="19"/> <!--Others -->
+        </skillList>
+        <shots soul="2" spirit="2"/>
+        <exCrtEffect>false</exCrtEffect>
+        <collision>
+            <radius normal="5"/>
+            <height normal="3.75"/>
+        </collision>
+    </npc>
+    <npc id="1574" level="55" type="Folk" name="Phoenix">
+        <!-- Confirmed CT2.5 -->
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+            <vitals hp="1673" hpRegen="6.5" mp="889" mpRegen="2.4"/>
+            <attack physical="388.11142" magical="265.02979" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120"/>
+            <defence physical="223.6362" magical="163.64727"/>
+            <speed>
+                <walk ground="60"/>
+                <run ground="180"/>
+            </speed>
+        </stats>
+        <status undying="false"/>
+        <skillList>
+            <skill id="4408" level="1"/> <!--HP Increase (1x) -->
+            <skill id="4409" level="1"/> <!--MP Increase (1x) -->
+            <skill id="4410" level="11"/> <!--Average P. Atk. -->
+            <skill id="4411" level="11"/> <!--Average M. Atk. -->
+            <skill id="4412" level="11"/> <!--Average P. Def. -->
+            <skill id="4413" level="11"/> <!--Average M. Def. -->
+            <skill id="4414" level="2"/> <!--Standard Type -->
+            <skill id="4415" level="1"/> <!--Bare Hands -->
+            <skill id="4416" level="19"/> <!--Others -->
+        </skillList>
+        <shots soul="2" spirit="2"/>
+        <exCrtEffect>false</exCrtEffect>
+        <collision>
+            <radius normal="5"/>
+            <height normal="3.75"/>
+        </collision>
+    </npc>
+    <npc id="1586" level="55" type="Folk" name="Flower Fairy Spirit">
+        <!-- Confirmed CT2.5 -->
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+            <vitals hp="1673" hpRegen="6.5" mp="889" mpRegen="2.4"/>
+            <attack physical="388.11142" magical="265.02979" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120"/>
+            <defence physical="223.6362" magical="163.64727"/>
+            <speed>
+                <walk ground="60"/>
+                <run ground="180"/>
+            </speed>
+        </stats>
+        <status undying="false"/>
+        <skillList>
+            <skill id="4408" level="1"/> <!--HP Increase (1x) -->
+            <skill id="4409" level="1"/> <!--MP Increase (1x) -->
+            <skill id="4410" level="11"/> <!--Average P. Atk. -->
+            <skill id="4411" level="11"/> <!--Average M. Atk. -->
+            <skill id="4412" level="11"/> <!--Average P. Def. -->
+            <skill id="4413" level="11"/> <!--Average M. Def. -->
+            <skill id="4414" level="2"/> <!--Standard Type -->
+            <skill id="4415" level="1"/> <!--Bare Hands -->
+            <skill id="4416" level="19"/> <!--Others -->
+        </skillList>
+        <shots soul="2" spirit="2"/>
+        <exCrtEffect>false</exCrtEffect>
+        <collision>
+            <radius normal="5"/>
+            <height normal="3.75"/>
+        </collision>
+    </npc>
+    <npc id="1592" level="55" type="Folk" name="Cheerleader Meruril">
+        <!-- Confirmed CT2.5 -->
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="25">
+            <vitals hp="1673" hpRegen="6.5" mp="889" mpRegen="2.4"/>
+            <attack physical="388.11142" magical="265.02979" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120"/>
+            <defence physical="223.6362" magical="163.64727"/>
+            <speed>
+                <walk ground="60"/>
+                <run ground="180"/>
+            </speed>
+        </stats>
+        <status undying="false"/>
+        <skillList>
+            <skill id="4408" level="1"/> <!--HP Increase (1x) -->
+            <skill id="4409" level="1"/> <!--MP Increase (1x) -->
+            <skill id="4410" level="11"/> <!--Average P. Atk. -->
+            <skill id="4411" level="11"/> <!--Average M. Atk. -->
+            <skill id="4412" level="11"/> <!--Average P. Def. -->
+            <skill id="4413" level="11"/> <!--Average M. Def. -->
+            <skill id="4414" level="2"/> <!--Standard Type -->
+            <skill id="4415" level="1"/> <!--Bare Hands -->
+            <skill id="4416" level="19"/> <!--Others -->
+        </skillList>
+        <shots soul="2" spirit="2"/>
+        <exCrtEffect>false</exCrtEffect>
+        <collision>
+            <radius normal="5"/>
+            <height normal="3.75"/>
+        </collision>
+    </npc>
+    <npc id="1594" level="80" type="Folk" name="Agathion Singer and Dancer">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <sex>MALE</sex>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+            <vitals hp="1673" mp="889"/>
+            <attack physical="500" magical="500" attackSpeed="278" range="40"/>
+            <defence physical="500" magical="500"/>
+            <speed>
+                <walk ground="60"/>
+                <run ground="180"/>
+            </speed>
+        </stats>
+        <collision>
+            <radius normal="5"/>
+            <height normal="3.75"/>
+        </collision>
+    </npc>
+    <npc id="1595" level="80" type="Folk" name="Agathion Zaken's Spirit Swords">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+            <vitals hp="8446" hpRegen="10.5" mp="889" mpRegen="3.6"/>
+            <speed>
+                <walk ground="60"/>
+                <run ground="180"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <collision>
+            <radius normal="30"/>
+            <height normal="20"/>
+        </collision>
+    </npc>
 </list>

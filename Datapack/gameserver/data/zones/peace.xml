@@ -1,939 +1,939 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org zones.xsd" >
-	<!-- Peace Zones -->
-	<zone name="talking_island_town_peace_zone1" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-3966" maxZ="-3466"> <!-- [17_25] -->
-		<point x="-84028" y="239722" />
-		<point x="-81007" y="243210" />
-		<point x="-81021" y="243484" />
-		<point x="-84308" y="246247" />
-		<point x="-84552" y="246239" />
-		<point x="-87638" y="242837" />
-		<point x="-87611" y="242574" />
-		<point x="-84305" y="239649" />
-	</zone>
-	<zone name="talking_island_town_peace_zone2" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-3820" maxZ="-3320"> <!-- [17_25] -->
-		<point x="-83428" y="240398" />
-		<point x="-82605" y="241262" />
-		<point x="-81512" y="242568" />
-		<point x="-82035" y="242583" />
-		<point x="-83396" y="241129" />
-	</zone>
-	<zone name="talking_island_town_peace_zone3" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-3789" maxZ="-3289"> <!-- [17_25] -->
-		<point x="-86138" y="243444" />
-		<point x="-85039" y="244801" />
-		<point x="-84811" y="245977" />
-		<point x="-86323" y="244370" />
-		<point x="-87229" y="243237" />
-	</zone>
-	<zone name="talking_island_town_peace_zone4" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-3846" maxZ="-3346"> <!-- [17_25] -->
-		<point x="-85539" y="241748" />
-		<point x="-87612" y="242572" />
-		<point x="-87470" y="242383" />
-		<point x="-86310" y="241337" />
-		<point x="-85622" y="240814" />
-	</zone>
-	<zone name="mage_start_peace_1" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-3699" maxZ="-2699"> <!-- [17_25] -->
-		<point x="-90034" y="248143" />
-		<point x="-89960" y="248698" />
-		<point x="-90520" y="248847" />
-		<point x="-91136" y="248445" />
-		<point x="-91270" y="248296" />
-		<point x="-91328" y="248092" />
-		<point x="-91250" y="247867" />
-		<point x="-91063" y="247704" />
-		<point x="-90863" y="247676" />
-		<point x="-90638" y="247748" />
-	</zone>
-	<zone name="mage_start_peace_2" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-4043" maxZ="-3043"> <!-- [17_25] -->
-		<point x="-90165" y="247096" />
-		<point x="-88576" y="248162" />
-		<point x="-89962" y="250239" />
-		<point x="-91512" y="249150" />
-	</zone>
-	<zone name="mage_start_peace_3" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-3659" maxZ="-2659"> <!-- [17_25] -->
-		<point x="-88457" y="248867" />
-		<point x="-88611" y="249099" />
-		<point x="-89054" y="249756" />
-		<point x="-89279" y="250048" />
-		<point x="-89684" y="250143" />
-		<point x="-90008" y="249970" />
-		<point x="-88864" y="248209" />
-		<point x="-88542" y="248446" />
-	</zone>
-	<zone name="mage_start_peace_4" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-3659" maxZ="-2659"> <!-- [17_25] -->
-		<point x="-88732" y="248912" />
-		<point x="-88418" y="249116" />
-		<point x="-89005" y="249980" />
-		<point x="-89311" y="249787" />
-	</zone>
-	<zone name="mage_start_peace_5" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-3659" maxZ="-2659"> <!-- [17_25] -->
-		<point x="-88612" y="249461" />
-		<point x="-88559" y="249539" />
-		<point x="-88581" y="249649" />
-		<point x="-88680" y="249708" />
-		<point x="-88761" y="249704" />
-		<point x="-89050" y="249513" />
-		<point x="-89073" y="249332" />
-		<point x="-88895" y="249273" />
-	</zone>
-	<zone name="fighter_start_peace_1" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-3284" maxZ="-2284"> <!-- [17_25] -->
-		<point x="-73436" y="257725" />
-		<point x="-71668" y="256229" />
-		<point x="-69952" y="258077" />
-		<point x="-71896" y="259701" />
-	</zone>
-	<zone name="fighter_start_peace_2" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-3272" maxZ="-2272"> <!-- [17_25] -->
-		<point x="-73180" y="257663" />
-		<point x="-72460" y="258619" />
-		<point x="-72720" y="258831" />
-		<point x="-73284" y="258115" />
-		<point x="-73260" y="257855" />
-	</zone>
-	<zone name="fighter_start_peace_3" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-3272" maxZ="-2272"> <!-- [17_25] -->
-		<point x="-71279" y="256408" />
-		<point x="-70679" y="257116" />
-		<point x="-70939" y="257328" />
-		<point x="-71575" y="256612" />
-		<point x="-71634" y="256392" />
-	</zone>
-	<zone name="fighter_start_peace_4" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-3306" maxZ="-2306"> <!-- [17_25] -->
-		<point x="-72596" y="259181" />
-		<point x="-70363" y="257272" />
-		<point x="-70041" y="257631" />
-		<point x="-72303" y="259545" />
-	</zone>
-	<zone name="darkelf_town_peace_zone" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-8507" maxZ="-1507"> <!-- [20_18] -->
-		<point x="15719" y="16735" />
-		<point x="14885" y="19139" />
-		<point x="12223" y="21049" />
-		<point x="8962" y="20203" />
-		<point x="7340" y="18060" />
-		<point x="7372" y="15649" />
-		<point x="8018" y="14013" />
-		<point x="9389" y="12836" />
-		<point x="10669" y="12131" />
-		<point x="12499" y="12455" />
-		<point x="14684" y="13625" />
-		<point x="15441" y="15060" />
-	</zone>
-	<zone name="darkelf_start_peace_1" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-4571" maxZ="-2071"> <!-- [20_18] -->
-		<point x="28422" y="8936" />
-		<point x="30282" y="10670" />
-		<point x="29952" y="11744" />
-		<point x="28457" y="13117" />
-		<point x="27730" y="13126" />
-		<point x="26435" y="11893" />
-		<point x="26450" y="10146" />
-		<point x="27792" y="8929" />
-	</zone>
-	<zone name="darkelf_start_peace_2" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-4588" maxZ="-2088"> <!-- [20_18] -->
-		<point x="29434" y="10233" />
-		<point x="31273" y="10233" />
-		<point x="31273" y="11827" />
-		<point x="29431" y="11830" />
-	</zone>
-	<zone name="elf_town_peace1" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-3511" maxZ="-2011"> <!-- [21_19] -->
-		<point x="47758" y="51443" />
-		<point x="46735" y="52457" />
-		<point x="45358" y="52947" />
-		<point x="44182" y="52419" />
-		<point x="43398" y="51830" />
-		<point x="43006" y="51401" />
-		<point x="42508" y="50515" />
-		<point x="42343" y="49479" />
-		<point x="42547" y="48421" />
-		<point x="43138" y="47363" />
-		<point x="44342" y="46639" />
-		<point x="45621" y="46486" />
-		<point x="45974" y="46554" />
-		<point x="47114" y="46996" />
-		<point x="47777" y="47710" />
-		<point x="48202" y="48441" />
-		<point x="48400" y="49391" />
-		<point x="48365" y="50345" />
-	</zone>
-	<zone name="elf_start_peace1" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-4071" maxZ="-2571"> <!-- [21_19] -->
-		<point x="47987" y="40688" />
-		<point x="47644" y="41254" />
-		<point x="47139" y="41756" />
-		<point x="46576" y="42051" />
-		<point x="45590" y="42006" />
-		<point x="44823" y="41489" />
-		<point x="44355" y="40860" />
-		<point x="44168" y="40397" />
-		<point x="44319" y="39900" />
-		<point x="44723" y="39030" />
-		<point x="45366" y="38626" />
-		<point x="46511" y="38446" />
-		<point x="47292" y="38808" />
-		<point x="47736" y="39330" />
-		<point x="48079" y="39911" />
-	</zone>
-	<zone name="elf_start_peace2" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-4082" maxZ="-2582"> <!-- [21_19] -->
-		<point x="44215" y="39803" />
-		<point x="44497" y="40504" />
-		<point x="43643" y="41416" />
-		<point x="43398" y="41419" />
-		<point x="42884" y="41191" />
-		<point x="42475" y="40529" />
-		<point x="42466" y="40285" />
-		<point x="42762" y="39658" />
-		<point x="43311" y="39336" />
-		<point x="43546" y="39327" />
-	</zone>
-	<zone name="elf_start_peace3" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-4082" maxZ="-2582"> <!-- [21_19] -->
-		<point x="49799" y="39991" />
-		<point x="49812" y="40226" />
-		<point x="48958" y="41201" />
-		<point x="48724" y="41204" />
-		<point x="48096" y="40759" />
-		<point x="47883" y="40159" />
-		<point x="48123" y="39481" />
-		<point x="48636" y="39123" />
-		<point x="48885" y="39121" />
-		<point x="49368" y="39360" />
-	</zone>
-	<zone name="guldiocastle_town_peace1" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-3245" maxZ="-2745"> <!-- [19_21] -->
-		<point x="-11998" y="123905" />
-		<point x="-12880" y="126192" />
-		<point x="-13928" y="126485" />
-		<point x="-14408" y="126484" />
-		<point x="-15239" y="126174" />
-		<point x="-16120" y="125367" />
-		<point x="-16551" y="124468" />
-		<point x="-16550" y="123911" />
-		<point x="-16509" y="123323" />
-		<point x="-14638" y="122381" />
-		<point x="-12022" y="122270" />
-	</zone>
-	<zone name="guldiocastle_town_peace2" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-3156" maxZ="-2656"> <!-- [19_21] -->
-		<point x="-14956" y="121115" />
-		<point x="-12670" y="121093" />
-		<point x="-12021" y="121755" />
-		<point x="-12019" y="123005" />
-		<point x="-15400" y="123009" />
-	</zone>
-	<zone name="gludin_town_peace1" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-3244" maxZ="-2744"> <!-- [17_22] -->
-		<point x="-79283" y="149148" />
-		<point x="-78525" y="149851" />
-		<point x="-78549" y="152429" />
-		<point x="-82513" y="152442" />
-		<point x="-82502" y="149146" />
-	</zone>
-	<zone name="gludin_town_peace2" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-3244" maxZ="-2744"> <!-- [17_22] -->
-		<point x="-84874" y="149370" />
-		<point x="-81337" y="149370" />
-		<point x="-81337" y="152419" />
-		<point x="-84874" y="152419" />
-	</zone>
-	<zone name="gludin_town_peace3" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-3276" maxZ="-2776"> <!-- [17_22] -->
-		<point x="-84884" y="152261" />
-		<point x="-78803" y="152218" />
-		<point x="-78803" y="156106" />
-		<point x="-84884" y="156113" />
-	</zone>
-	<zone name="gludin_town_peace4" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-3340" maxZ="-2840"> <!-- [17_22] -->
-		<point x="-80698" y="155950" />
-		<point x="-79097" y="154122" />
-		<point x="-77125" y="155447" />
-		<point x="-77948" y="156503" />
-	</zone>
-	<zone name="gludin_town_peace5" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-3456" maxZ="-2956"> <!-- [17_22] -->
-		<point x="-78474" y="156088" />
-		<point x="-77131" y="155440" />
-		<point x="-77831" y="156543" />
-		<point x="-78543" y="156393" />
-	</zone>
-	<zone name="dion_town_peace1" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-3157" maxZ="-2157"> <!-- [20_22] -->
-		<point x="14290" y="141403" />
-		<point x="15261" y="141328" />
-		<point x="17478" y="142633" />
-		<point x="17461" y="143349" />
-		<point x="16751" y="144384" />
-		<point x="15769" y="144681" />
-		<point x="14470" y="143863" />
-		<point x="14010" y="143120" />
-		<point x="13978" y="141885" />
-	</zone>
-	<zone name="dion_town_peace2" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-2802" maxZ="-2302"> <!-- [20_22] -->
-		<point x="15653" y="141687" />
-		<point x="17220" y="141541" />
-		<point x="17361" y="142876" />
-		<point x="15789" y="143037" />
-	</zone>
-	<zone name="dion_town_peace3" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-2858" maxZ="-2358"> <!-- [20_22] -->
-		<point x="17006" y="141806" />
-		<point x="17410" y="141768" />
-		<point x="17503" y="142644" />
-		<point x="17107" y="142709" />
-	</zone>
-	<zone name="dion_town_peace4" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-3267" maxZ="-2567"> <!-- [20_22] -->
-		<point x="15469" y="143498" />
-		<point x="17126" y="142976" />
-		<point x="19489" y="144901" />
-		<point x="17833" y="147643" />
-		<point x="16125" y="146869" />
-	</zone>
-	<zone name="dion_town_peace5" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-3230" maxZ="-2530"> <!-- [20_22] -->
-		<point x="20387" y="142469" />
-		<point x="21407" y="143663" />
-		<point x="21402" y="146315" />
-		<point x="16663" y="146406" />
-		<point x="16461" y="143892" />
-		<point x="18915" y="142444" />
-	</zone>
-	<zone name="floran_town_peace1" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-3957" maxZ="-3357"> <!-- [20_23] -->
-		<point x="18134" y="169527" />
-		<point x="18602" y="169760" />
-		<point x="18641" y="169827" />
-		<point x="18429" y="170529" />
-		<point x="17386" y="170916" />
-		<point x="16777" y="170706" />
-		<point x="16555" y="170564" />
-		<point x="16530" y="170497" />
-		<point x="16732" y="169864" />
-		<point x="17253" y="169433" />
-		<point x="17396" y="169394" />
-		<point x="17768" y="169440" />
-	</zone>
-	<zone name="floran_town_peace2" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-3967" maxZ="-3367"> <!-- [20_23] -->
-		<point x="17082" y="169410" />
-		<point x="17464" y="169397" />
-		<point x="17285" y="169889" />
-		<point x="16773" y="170007" />
-		<point x="16717" y="169945" />
-		<point x="16823" y="169466" />
-		<point x="16882" y="169431" />
-	</zone>
-	<zone name="floran_town_peace3" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-3956" maxZ="-3356"> <!-- [20_23] -->
-		<point x="18487" y="170499" />
-		<point x="18390" y="170915" />
-		<point x="18343" y="170933" />
-		<point x="17768" y="170965" />
-		<point x="17223" y="170891" />
-		<point x="16878" y="170752" />
-		<point x="18430" y="170079" />
-		<point x="18543" y="170093" />
-	</zone>
-	<zone name="giran_town_peace12" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-3464" maxZ="-3264"> <!-- [22_22] -->
-		<point x="85048" y="145756" />
-		<point x="86104" y="145752" />
-		<point x="86100" y="145888" />
-		<point x="85060" y="145856" />
-	</zone>
-	<zone name="giran_town_peace1" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-3654" maxZ="-2654"> <!-- [22_22] -->
-		<point x="77164" y="147420" />
-		<point x="79291" y="147417" />
-		<point x="79278" y="149808" />
-		<point x="77155" y="149824" />
-	</zone>
-	<zone name="giran_town_peace2" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-3598" maxZ="-1598"> <!-- [22_22] -->
-		<point x="79193" y="144776" />
-		<point x="85019" y="144748" />
-		<point x="85148" y="149864" />
-		<point x="79198" y="149858" />
-	</zone>
-	<zone name="giran_town_peace3" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-3602" maxZ="-2402"> <!-- [22_22] -->
-		<point x="79180" y="149311" />
-		<point x="83508" y="149374" />
-		<point x="83510" y="151272" />
-		<point x="79197" y="151297" />
-	</zone>
-	<zone name="giran_town_peace4" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-3636" maxZ="-3036"> <!-- [22_22] -->
-		<point x="85619" y="150120" />
-		<point x="86004" y="150125" />
-		<point x="86005" y="152300" />
-		<point x="85617" y="152305" />
-	</zone>
-	<zone name="giran_town_peace5" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-3799" maxZ="-2399"> <!-- [22_22] -->
-		<point x="84848" y="152234" />
-		<point x="86779" y="152240" />
-		<point x="86781" y="153610" />
-		<point x="84844" y="153610" />
-	</zone>
-	<zone name="giran_town_peace6" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-3872" maxZ="-1872"> <!-- [22_22] -->
-		<point x="84922" y="146919" />
-		<point x="88437" y="146909" />
-		<point x="88445" y="150047" />
-		<point x="85090" y="150032" />
-	</zone>
-	<zone name="giran_town_peace7" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-3810" maxZ="-2110"> <!-- [22_22] -->
-		<point x="80304" y="143626" />
-		<point x="85033" y="143631" />
-		<point x="85029" y="144930" />
-		<point x="80298" y="144914" />
-	</zone>
-	<zone name="giran_town_peace8" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-3538" maxZ="-3338"> <!-- [22_22] -->
-		<point x="79190" y="150958" />
-		<point x="82705" y="150962" />
-		<point x="82717" y="152824" />
-		<point x="79202" y="152821" />
-	</zone>
-	<zone name="giran_town_peace9" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-3496" maxZ="-2996"> <!-- [22_22] -->
-		<point x="84838" y="145789" />
-		<point x="86101" y="145774" />
-		<point x="86105" y="146911" />
-		<point x="84842" y="146925" />
-	</zone>
-	<zone name="giran_town_peace10" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-3599" maxZ="-2999"> <!-- [22_22] -->
-		<point x="85088" y="149126" />
-		<point x="86468" y="149142" />
-		<point x="86488" y="150240" />
-		<point x="85089" y="150240" />
-	</zone>
-	<zone name="giran_town_peace11" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-3410" maxZ="-3210"> <!-- [22_22] -->
-		<point x="83111" y="143502" />
-		<point x="85038" y="143499" />
-		<point x="85038" y="143856" />
-		<point x="83111" y="143859" />
-	</zone>
-	<zone name="orc_start_peace" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-1483" maxZ="516"> <!-- [18_14] -->
-		<point x="-58952" y="-115543" />
-		<point x="-52769" y="-115553" />
-		<point x="-52758" y="-111736" />
-		<point x="-58952" y="-111749" />
-	</zone>
-	<zone name="orc_town_peace1" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-397" maxZ="603"> <!-- [18_14] -->
-		<point x="-42044" y="-113585" />
-		<point x="-42533" y="-111862" />
-		<point x="-43811" y="-110599" />
-		<point x="-45614" y="-110071" />
-		<point x="-47375" y="-110007" />
-		<point x="-47397" y="-117215" />
-		<point x="-46661" y="-117220" />
-		<point x="-45633" y="-117094" />
-		<point x="-43791" y="-116569" />
-		<point x="-42530" y="-115322" />
-	</zone>
-	<zone name="orc_town_peace2" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-460" maxZ="540"> <!-- [18_14] -->
-		<point x="-50211" y="-116941" />
-		<point x="-47413" y="-117301" />
-		<point x="-47358" y="-109913" />
-		<point x="-49161" y="-109305" />
-		<point x="-51245" y="-109819" />
-		<point x="-53401" y="-112501" />
-		<point x="-53788" y="-113966" />
-		<point x="-52931" y="-115293" />
-	</zone>
-	<zone name="dwarf_start" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-652" maxZ="348"> <!-- [23_12] -->
-		<point x="110063" y="-175794" />
-		<point x="110565" y="-173944" />
-		<point x="110518" y="-173426" />
-		<point x="109153" y="-171575" />
-		<point x="106345" y="-171905" />
-		<point x="104853" y="-174391" />
-		<point x="105481" y="-176144" />
-		<point x="106031" y="-177035" />
-		<point x="107660" y="-177623" />
-		<point x="109208" y="-177140" />
-	</zone>
-	<zone name="dwarf_town_peace1" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-1600" maxZ="-400"> <!-- [23_12] -->
-		<point x="117520" y="-181718" />
-		<point x="117423" y="-180017" />
-		<point x="115371" y="-176774" />
-		<point x="114885" y="-176815" />
-		<point x="114070" y="-177180" />
-		<point x="113883" y="-179469" />
-		<point x="114580" y="-181875" />
-	</zone>
-	<zone name="dwarf_town_peace2" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-1685" maxZ="-685"> <!-- [23_12] -->
-		<point x="117630" y="-182925" />
-		<point x="115159" y="-182811" />
-		<point x="115477" y="-183673" />
-		<point x="115600" y="-183891" />
-		<point x="115740" y="-184086" />
-		<point x="115948" y="-184206" />
-		<point x="116257" y="-184251" />
-		<point x="116710" y="-184253" />
-		<point x="117023" y="-184164" />
-		<point x="117204" y="-184034" />
-		<point x="117335" y="-183812" />
-		<point x="117503" y="-183386" />
-	</zone>
-	<zone name="dwarf_town_peace3" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-1724" maxZ="-724"> <!-- [23_12] -->
-		<point x="114641" y="-183866" />
-		<point x="117517" y="-183140" />
-		<point x="117778" y="-182649" />
-		<point x="117775" y="-182246" />
-		<point x="117733" y="-182086" />
-		<point x="117432" y="-181576" />
-		<point x="114638" y="-181551" />
-	</zone>
-	<zone name="dwarf_town_peace4" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-1000" maxZ="-400"> <!-- [23_12] -->
-		<point x="116406" y="-176891" />
-		<point x="115964" y="-176809" />
-		<point x="115535" y="-176773" />
-		<point x="115142" y="-176788" />
-		<point x="115867" y="-178003" />
-		<point x="117355" y="-179595" />
-		<point x="117300" y="-178525" />
-		<point x="117172" y="-177847" />
-		<point x="116798" y="-177111" />
-		<point x="116643" y="-176968" />
-	</zone>
-	<zone name="dwarf_town_peace5" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-1257" maxZ="-657"> <!-- [23_12] -->
-		<point x="116649" y="-179760" />
-		<point x="117429" y="-180911" />
-		<point x="117493" y="-180052" />
-		<point x="117467" y="-179575" />
-		<point x="116977" y="-178211" />
-		<point x="116142" y="-178429" />
-	</zone>
-	<zone name="oren_town_peace1" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-1822" maxZ="-1022"> <!-- [22_19] -->
-		<point x="78900" y="52076" />
-		<point x="84126" y="52049" />
-		<point x="84099" y="57117" />
-		<point x="78872" y="57144" />
-	</zone>
-	<zone name="ivory_tower_peace1" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-4652" maxZ="347"> <!-- [22_18] -->
-		<point x="86094" y="16382" />
-		<point x="85888" y="16744" />
-		<point x="85510" y="16968" />
-		<point x="85139" y="16966" />
-		<point x="84767" y="16736" />
-		<point x="84576" y="16394" />
-		<point x="84580" y="15977" />
-		<point x="84783" y="15631" />
-		<point x="85143" y="15417" />
-		<point x="85499" y="15403" />
-		<point x="85886" y="15642" />
-		<point x="86049" y="15990" />
-	</zone>
-	<zone name="hunter_town_peace1" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-2749" maxZ="-1249"> <!-- [23_20] -->
-		<point x="120837" y="78996" />
-		<point x="118917" y="80603" />
-		<point x="116981" y="80412" />
-		<point x="115383" y="79832" />
-		<point x="114029" y="76721" />
-		<point x="114670" y="74772" />
-		<point x="115464" y="74131" />
-		<point x="118488" y="74094" />
-		<point x="120717" y="74271" />
-		<point x="121548" y="76702" />
-	</zone>
-	<zone name="hunter_town_peace2" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-2512" maxZ="-1012"> <!-- [23_20] -->
-		<point x="117932" y="74072" />
-		<point x="118560" y="74104" />
-		<point x="118308" y="74324" />
-		<point x="118108" y="74324" />
-	</zone>
-	<zone name="hadin_peace1" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-3434" maxZ="-2934"> <!-- [23_21] -->
-		<point x="106216" y="112467" />
-		<point x="106779" y="113174" />
-		<point x="106759" y="114084" />
-		<point x="106174" y="115069" />
-		<point x="105181" y="115072" />
-		<point x="104608" y="113714" />
-		<point x="104782" y="112755" />
-		<point x="105248" y="112466" />
-	</zone>
-	<zone name="aden_town_peace1" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-2532" maxZ="-1032"> <!-- [24_18] -->
-		<point x="150222" y="20224" />
-		<point x="151214" y="21124" />
-		<point x="151291" y="29988" />
-		<point x="150278" y="30956" />
-		<point x="144297" y="30912" />
-		<point x="143434" y="30078" />
-		<point x="143415" y="21117" />
-		<point x="144415" y="20200" />
-	</zone>
-	<zone name="aden_town_peace2" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-2517" maxZ="-1017"> <!-- [24_18] -->
-		<point x="145783" y="30543" />
-		<point x="149035" y="30552" />
-		<point x="147953" y="31586" />
-		<point x="147032" y="31586" />
-	</zone>
-	<zone name="aden_town_peace3" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-2215" maxZ="-715"> <!-- [24_18] -->
-		<point x="151101" y="24718" />
-		<point x="151485" y="24715" />
-		<point x="151489" y="25546" />
-		<point x="151098" y="25549" />
-	</zone>
-	<zone name="aden_town_peace4" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-2101" maxZ="-601"> <!-- [24_18] -->
-		<point x="147162" y="19914" />
-		<point x="147775" y="19914" />
-		<point x="147834" y="20395" />
-		<point x="147099" y="20394" />
-	</zone>
-	<zone name="aden_town_peace5" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-2456" maxZ="-956"> <!-- [24_18] -->
-		<point x="143117" y="25953" />
-		<point x="143728" y="25712" />
-		<point x="143728" y="26882" />
-		<point x="143118" y="26712" />
-	</zone>
-	<zone name="speaking_port_peace1" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-3684" maxZ="-3484"> <!-- [17_25] -->
-		<point x="-96610" y="258814" />
-		<point x="-96389" y="258748" />
-		<point x="-96369" y="258787" />
-		<point x="-96374" y="259051" />
-		<point x="-96640" y="259059" />
-	</zone>
-	<zone name="speaking_port_peace2" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-3676" maxZ="-3476"> <!-- [17_25] -->
-		<point x="-96561" y="258759" />
-		<point x="-96411" y="258764" />
-		<point x="-96553" y="259066" />
-		<point x="-97256" y="259068" />
-		<point x="-97245" y="258787" />
-	</zone>
-	<zone name="speaking_port_peace3" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-3672" maxZ="-3472"> <!-- [17_25] -->
-		<point x="-96969" y="259036" />
-		<point x="-96649" y="259036" />
-		<point x="-96648" y="261414" />
-		<point x="-96968" y="261414" />
-	</zone>
-	<zone name="speaking_port_peace4" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-3672" maxZ="-3472"> <!-- [17_25] -->
-		<point x="-97161" y="259866" />
-		<point x="-96961" y="259866" />
-		<point x="-96961" y="260203" />
-		<point x="-97161" y="260203" />
-	</zone>
-	<zone name="speaking_port_peace5" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-3679" maxZ="-3479"> <!-- [17_25] -->
-		<point x="-96750" y="259679" />
-		<point x="-96326" y="259679" />
-		<point x="-96326" y="260400" />
-		<point x="-96750" y="260400" />
-	</zone>
-	<zone name="speaking_port_peace6" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-3685" maxZ="-3485"> <!-- [17_25] -->
-		<point x="-97290" y="261068" />
-		<point x="-95888" y="261068" />
-		<point x="-95888" y="261419" />
-		<point x="-97290" y="261418" />
-	</zone>
-	<zone name="speaking_port_peace7" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-3681" maxZ="-3481"> <!-- [17_25] -->
-		<point x="-97476" y="260763" />
-		<point x="-97167" y="260763" />
-		<point x="-97167" y="261419" />
-		<point x="-97476" y="261419" />
-	</zone>
-	<zone name="speaking_port_peace8" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-3670" maxZ="-3470"> <!-- [17_25] -->
-		<point x="-97237" y="259333" />
-		<point x="-96923" y="259333" />
-		<point x="-96923" y="259637" />
-		<point x="-97237" y="259637" />
-	</zone>
-	<zone name="gludin_port1" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-3708" maxZ="-3508"> <!-- [17_22] -->
-		<point x="-92600" y="148457" />
-		<point x="-90416" y="148372" />
-		<point x="-90412" y="151666" />
-		<point x="-92508" y="151678" />
-		<point x="-93497" y="149244" />
-	</zone>
-	<zone name="gludin_port2" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-3694" maxZ="-3494"> <!-- [17_22] -->
-		<point x="-94294" y="148251" />
-		<point x="-92763" y="148869" />
-		<point x="-92437" y="152317" />
-		<point x="-93461" y="153244" />
-		<point x="-95444" y="151462" />
-		<point x="-95446" y="149881" />
-		<point x="-94588" y="148248" />
-	</zone>
-	<zone name="giran_port1" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-3625" maxZ="-3411"> <!-- [21_23] -->
-		<point x="47189" y="185982" />
-		<point x="49284" y="183651" />
-		<point x="52767" y="186787" />
-		<point x="49719" y="190044" />
-	</zone>
-	<zone name="giran_port2" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-3625" maxZ="-3311"> <!-- [21_23] -->
-		<point x="45288" y="186705" />
-		<point x="47947" y="185316" />
-		<point x="50535" y="189487" />
-		<point x="47639" y="191052" />
-	</zone>
-	<zone name="giran_port3" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-3606" maxZ="-3106"> <!-- [21_23] -->
-		<point x="43935" y="187891" />
-		<point x="45949" y="186815" />
-		<point x="46215" y="187346" />
-		<point x="44226" y="188420" />
-	</zone>
-	<zone name="giran_port4" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-3625" maxZ="-3314"> <!-- [21_23] -->
-		<point x="41861" y="188551" />
-		<point x="44221" y="187269" />
-		<point x="46275" y="191156" />
-		<point x="44031" y="192413" />
-	</zone>
-	<zone name="heiness_peace1" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-4287" maxZ="-3287"> <!-- [23_24] -->
-		<point x="106085" y="216119" />
-		<point x="116559" y="216118" />
-		<point x="116533" y="229030" />
-		<point x="106085" y="229015" />
-	</zone>
-	<zone name="heiness_peace2" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-4128" maxZ="-3128"> <!-- [23_24] -->
-		<point x="103796" y="217964" />
-		<point x="106602" y="217963" />
-		<point x="106602" y="218361" />
-		<point x="103796" y="218363" />
-	</zone>
-	<zone name="heiness_peace3" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-4096" maxZ="-3096"> <!-- [23_24] -->
-		<point x="115950" y="219084" />
-		<point x="118877" y="219084" />
-		<point x="118879" y="219496" />
-		<point x="115952" y="219498" />
-	</zone>
-	<zone name="godad_peace1" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-3000" maxZ="-771"> <!-- [24_16] -->
-		<point x="146517" y="-59854" />
-		<point x="148916" y="-59847" />
-		<point x="151301" y="-58338" />
-		<point x="152005" y="-56872" />
-		<point x="152043" y="-55010" />
-		<point x="150847" y="-51615" />
-		<point x="145228" y="-51601" />
-		<point x="143824" y="-54220" />
-		<point x="143444" y="-56732" />
-		<point x="144680" y="-58725" />
-	</zone>
-	<zone name="rune_peace1" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-1516" maxZ="484"> <!-- [21_16] -->
-		<point x="40071" y="-52192" />
-		<point x="42159" y="-46969" />
-		<point x="44445" y="-45865" />
-		<point x="46202" y="-46919" />
-		<point x="47212" y="-48809" />
-		<point x="47224" y="-51046" />
-		<point x="45845" y="-51986" />
-		<point x="43334" y="-52810" />
-		<point x="41192" y="-53281" />
-	</zone>
-	<zone name="rune_peace2" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-7660" maxZ="7340"> <!-- [21_16] -->
-		<point x="43099" y="-38911" />
-		<point x="40028" y="-35494" />
-		<point x="37429" y="-35357" />
-		<point x="32846" y="-38149" />
-		<point x="32804" y="-50466" />
-		<point x="36348" y="-52427" />
-		<point x="39429" y="-52058" />
-		<point x="46334" y="-46534" />
-	</zone>
-	<zone name="gludin_pvp_peace_1" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-3723" maxZ="-3223"> <!-- [17_22] -->
-		<point x="-88445" y="141473" />
-		<point x="-87166" y="141474" />
-		<point x="-87166" y="141726" />
-		<point x="-88441" y="141726" />
-	</zone>
-	<zone name="gludin_pvp_peace_2" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-3745" maxZ="-3245"> <!-- [17_22] -->
-		<point x="-88666" y="141473" />
-		<point x="-88417" y="141474" />
-		<point x="-88414" y="142740" />
-		<point x="-88666" y="142746" />
-	</zone>
-	<zone name="gludin_pvp_peace_3" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-3723" maxZ="-3223"> <!-- [17_22] -->
-		<point x="-88665" y="142716" />
-		<point x="-87165" y="142716" />
-		<point x="-87165" y="142973" />
-		<point x="-88667" y="142973" />
-	</zone>
-	<zone name="gludin_pvp_peace_4" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-3732" maxZ="-3232"> <!-- [17_22] -->
-		<point x="-87418" y="141681" />
-		<point x="-87165" y="141680" />
-		<point x="-87166" y="142779" />
-		<point x="-87416" y="142779" />
-	</zone>
-	<zone name="giran_pvp_peace1" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-3851" maxZ="-3351"> <!-- [22_22] -->
-		<point x="73490" y="142231" />
-		<point x="73743" y="142232" />
-		<point x="73741" y="143316" />
-		<point x="73494" y="143312" />
-	</zone>
-	<zone name="giran_pvp_peace2" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-3855" maxZ="-3355"> <!-- [22_22] -->
-		<point x="72462" y="142013" />
-		<point x="73744" y="142013" />
-		<point x="73743" y="142268" />
-		<point x="72461" y="142268" />
-	</zone>
-	<zone name="giran_pvp_peace3" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-3853" maxZ="-3353"> <!-- [22_22] -->
-		<point x="72244" y="142015" />
-		<point x="72497" y="142012" />
-		<point x="72497" y="143285" />
-		<point x="72242" y="143280" />
-	</zone>
-	<zone name="giran_pvp_peace4" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-3856" maxZ="-3356"> <!-- [22_22] -->
-		<point x="72242" y="143255" />
-		<point x="73743" y="143257" />
-		<point x="73743" y="143513" />
-		<point x="72243" y="143514" />
-	</zone>
-	<zone name="colosseum_peace1" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-3468" maxZ="-3268"> <!-- [24_19] -->
-		<point x="147779" y="46196" />
-		<point x="148045" y="46481" />
-		<point x="148047" y="46958" />
-		<point x="147772" y="47256" />
-		<point x="147078" y="47258" />
-		<point x="147095" y="46203" />
-	</zone>
-	<zone name="colosseum_peace2" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-3472" maxZ="-3272"> <!-- [24_19] -->
-		<point x="151221" y="46184" />
-		<point x="151928" y="46183" />
-		<point x="151925" y="47248" />
-		<point x="151222" y="47262" />
-		<point x="150952" y="46956" />
-		<point x="150954" y="46486" />
-	</zone>
-	<zone name="gm_prison" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-2992" maxZ="-2792"> <!-- [16_10] -->
-		<point x="-116390" y="-251581" />
-		<point x="-112756" y="-251617" />
-		<point x="-112720" y="-248199" />
-		<point x="-116354" y="-248217" />
-	</zone>
-	<zone name="primeval_peace1" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-4290" maxZ="-1290"> <!-- [20_17] -->
-		<point x="10408" y="-27395" />
-		<point x="12065" y="-25334" />
-		<point x="12223" y="-23159" />
-		<point x="10424" y="-22340" />
-		<point x="9566" y="-23131" />
-		<point x="9290" y="-24261" />
-	</zone>
-	<zone name=" primeval_peace2" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-4792" maxZ="208"> <!-- [20_17] -->
-		<point x="4850" y="-4736" />
-		<point x="7294" y="-4712" />
-		<point x="8529" y="-820" />
-		<point x="3615" y="-737" />
-	</zone>
-	<zone name="space_of_dimension_peace1" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-6964" maxZ="-6064"> <!-- [16_12] -->
-		<point x="-115441" y="-182134" />
-		<point x="-114106" y="-182134" />
-		<point x="-114106" y="-178021" />
-		<point x="-115476" y="-178021" />
-	</zone>
-	<zone name="schuttgart_peace1" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-2444" maxZ="3556"> <!-- [22_23] -->
-		<point x="91064" y="-143193" />
-		<point x="90200" y="-146685" />
-		<point x="84580" y="-146745" />
-		<point x="83600" y="-143273" />
-		<point x="84048" y="-141429" />
-		<point x="84922" y="-140225" />
-		<point x="86528" y="-139365" />
-		<point x="88292" y="-139397" />
-		<point x="89712" y="-140205" />
-		<point x="90660" y="-141409" />
-	</zone>
-	<zone name="rainbow_spring_peace1" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-2472" maxZ="2528"> <!-- [24_14] -->
-		<point x="148724" y="-128356" />
-		<point x="154172" y="-130160" />
-		<point x="158636" y="-126416" />
-		<point x="155456" y="-123772" />
-		<point x="152140" y="-124528" />
-	</zone>
-	<zone name="themepark_peace1" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-4696" maxZ="3304"> <!-- [17_15] -->
-		<point x="-76662" y="-77593" />
-		<point x="-65536" y="-77344" />
-		<point x="-65536" y="-65536" />
-		<point x="-81410" y="-65536" />
-	</zone>
-	<zone name="themepark_peace2" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-4696" maxZ="3304"> <!-- [18_15] -->
-		<point x="-51267" y="-78666" />
-		<point x="-44978" y="-75445" />
-		<point x="-44281" y="-65536" />
-		<point x="-65536" y="-65536" />
-		<point x="-65536" y="-72713" />
-	</zone>
-	<zone name="themepark_peace3" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-4696" maxZ="3304"> <!-- [17_16] -->
-		<point x="-83544" y="-65536" />
-		<point x="-65536" y="-65536" />
-		<point x="-65536" y="-41699" />
-		<point x="-80543" y="-39424" />
-		<point x="-91856" y="-41776" />
-		<point x="-92099" y="-53834" />
-	</zone>
-	<zone name="themepark_peace4" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-4696" maxZ="3304"> <!-- [18_16] -->
-		<point x="-65536" y="-65536" />
-		<point x="-43060" y="-65536" />
-		<point x="-44899" y="-44178" />
-		<point x="-65536" y="-43068" />
-	</zone>
-	<zone name="gludio_platform_peace1" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-424" maxZ="376"> <!-- [15_25] -->
-		<point x="-151634" y="252804" />
-		<point x="-147155" y="252804" />
-		<point x="-147155" y="257492" />
-		<point x="-151634" y="257492" />
-	</zone>
-	<zone name="base_kserth_peace1" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="1103" maxZ="3103"> <!-- [14_25] -->
-		<point x="-183709" y="237556" />
-		<point x="-181798" y="241875" />
-		<point x="-182894" y="245386" />
-		<point x="-186902" y="247724" />
-		<point x="-188573" y="247186" />
-		<point x="-185574" y="237097" />
-	</zone>
-	<zone name="undying_platform_peace1" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="4252" maxZ="4452"> <!-- [13_24] -->
-		<point x="-212443" y="210098" />
-		<point x="-211813" y="210748" />
-		<point x="-211916" y="210855" />
-		<point x="-212592" y="210210" />
-		<point x="-213117" y="210211" />
-		<point x="-213759" y="210832" />
-		<point x="-213845" y="210747" />
-		<point x="-213227" y="210101" />
-		<point x="-213229" y="209540" />
-		<point x="-213818" y="208901" />
-		<point x="-213737" y="208809" />
-		<point x="-213123" y="209426" />
-		<point x="-212529" y="209427" />
-		<point x="-211894" y="208808" />
-		<point x="-211801" y="208901" />
-		<point x="-212442" y="209522" />
-	</zone>
-	<zone name="deathsdoor_peace1" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-12989" maxZ="-12389"> <!-- [14_24] -->
-		<point x="-184105" y="205453" />
-		<point x="-182469" y="205453" />
-		<point x="-182469" y="207028" />
-		<point x="-184105" y="207028" />
-	</zone>
-	<zone name="border_of_nightmare_peace1" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-6762" maxZ="-6562"> <!-- [16_13] -->
-		<point x="-115424" y="-155539" />
-		<point x="-113764" y="-155547" />
-		<point x="-113768" y="-150965" />
-		<point x="-115424" y="-150965" />
-	</zone>
-	<zone name="The West Dungeon of Abyss" id="600000" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Cube" minZ="-7000" maxZ="-6500"> <!-- [16_12] -->
-		<point x="-120448" y="-182800" />
-		<point x="-117264" y="-180288" />
-	</zone>
-	<zone name="The West Dungeon of Abyss Boss Room" id="600004" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Cube" minZ="-7000" maxZ="-6500"> <!-- [16_12] -->
-		<point x="-117096" y="-181856" />
-		<point x="-115562" y="-181080" />
-	</zone>
-	<zone name="The West Dungeon of Abyss 2nd" id="600001" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Cube" minZ="-7000" maxZ="-6500"> <!-- [16_12] -->
-		<point x="-120448" y="-180093" />
-		<point x="-117264" y="-177472" />
-	</zone>
-	<zone name="The West Dungeon of Abyss 2nd Boss Room" id="600005" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Cube" minZ="-7000" maxZ="-6500"> <!-- [16_12] -->
-		<point x="-117097" y="-179108" />
-		<point x="-115565" y="-178261" />
-	</zone>
-	<zone name="The East Dungeon of Abyss" id="600002" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Cube" minZ="-7000" maxZ="-6500"> <!-- [16_12] -->
-		<point x="-109037" y="-180186" />
-		<point x="-112257" y="-182758" />
-	</zone>
-	<zone name="The East Dungeon of Abyss Boss Room" id="600006" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Cube" minZ="-7000" maxZ="-6500"> <!-- [16_12] -->
-		<point x="-112508" y="-181094" />
-		<point x="-114023" y="-181929" />
-	</zone>
-	<zone name="The East Dungeon of Abyss 2nd" id="600003" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Cube" minZ="-7000" maxZ="-6500"> <!-- [16_12] -->
-		<point x="-109152" y="-177408" />
-		<point x="-112336" y="-179920" />
-	</zone>
-	<zone name="The East Dungeon of Abyss 2nd Boss Room" id="600007" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Cube" minZ="-7000" maxZ="-6500"> <!-- [16_12] -->
-		<point x="-112495" y="-178268" />
-		<point x="-114025" y="-179108" />
-	</zone>
-	
-	<!-- Classic Monster Race Track -->
-	<zone name="Monster_Race_Arena_Peace" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-3565" maxZ="-3200"> <!-- [20_23] -->
-		<point x="14398" y="181581" />
-		<point x="14056" y="181560" />
-		<point x="14060" y="181325" />
-		<point x="13306" y="181325" />
-		<point x="13306" y="181575" />
-		<point x="11710" y="181562" />
-		<point x="11715" y="182745" />
-		<point x="11541" y="182743" />
-		<point x="11541" y="184629" />
-		<point x="11842" y="184630" />
-		<point x="11839" y="184821" />
-		<point x="13250" y="184819" />
-		<point x="13252" y="184619" />
-		<point x="13545" y="184628" />
-		<point x="13549" y="182916" />
-		<point x="14073" y="182918" />
-		<point x="14072" y="182673" />
-		<point x="14404" y="182674" />
-	</zone>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org zones.xsd">
+    <!-- Peace Zones -->
+    <zone name="talking_island_town_peace_zone1" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-3966" maxZ="-3466"> <!-- [17_25] -->
+        <point x="-84028" y="239722"/>
+        <point x="-81007" y="243210"/>
+        <point x="-81021" y="243484"/>
+        <point x="-84308" y="246247"/>
+        <point x="-84552" y="246239"/>
+        <point x="-87638" y="242837"/>
+        <point x="-87611" y="242574"/>
+        <point x="-84305" y="239649"/>
+    </zone>
+    <zone name="talking_island_town_peace_zone2" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-3820" maxZ="-3320"> <!-- [17_25] -->
+        <point x="-83428" y="240398"/>
+        <point x="-82605" y="241262"/>
+        <point x="-81512" y="242568"/>
+        <point x="-82035" y="242583"/>
+        <point x="-83396" y="241129"/>
+    </zone>
+    <zone name="talking_island_town_peace_zone3" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-3789" maxZ="-3289"> <!-- [17_25] -->
+        <point x="-86138" y="243444"/>
+        <point x="-85039" y="244801"/>
+        <point x="-84811" y="245977"/>
+        <point x="-86323" y="244370"/>
+        <point x="-87229" y="243237"/>
+    </zone>
+    <zone name="talking_island_town_peace_zone4" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-3846" maxZ="-3346"> <!-- [17_25] -->
+        <point x="-85539" y="241748"/>
+        <point x="-87612" y="242572"/>
+        <point x="-87470" y="242383"/>
+        <point x="-86310" y="241337"/>
+        <point x="-85622" y="240814"/>
+    </zone>
+    <zone name="mage_start_peace_1" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-3699" maxZ="-2699"> <!-- [17_25] -->
+        <point x="-90034" y="248143"/>
+        <point x="-89960" y="248698"/>
+        <point x="-90520" y="248847"/>
+        <point x="-91136" y="248445"/>
+        <point x="-91270" y="248296"/>
+        <point x="-91328" y="248092"/>
+        <point x="-91250" y="247867"/>
+        <point x="-91063" y="247704"/>
+        <point x="-90863" y="247676"/>
+        <point x="-90638" y="247748"/>
+    </zone>
+    <zone name="mage_start_peace_2" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-4043" maxZ="-3043"> <!-- [17_25] -->
+        <point x="-90165" y="247096"/>
+        <point x="-88576" y="248162"/>
+        <point x="-89962" y="250239"/>
+        <point x="-91512" y="249150"/>
+    </zone>
+    <zone name="mage_start_peace_3" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-3659" maxZ="-2659"> <!-- [17_25] -->
+        <point x="-88457" y="248867"/>
+        <point x="-88611" y="249099"/>
+        <point x="-89054" y="249756"/>
+        <point x="-89279" y="250048"/>
+        <point x="-89684" y="250143"/>
+        <point x="-90008" y="249970"/>
+        <point x="-88864" y="248209"/>
+        <point x="-88542" y="248446"/>
+    </zone>
+    <zone name="mage_start_peace_4" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-3659" maxZ="-2659"> <!-- [17_25] -->
+        <point x="-88732" y="248912"/>
+        <point x="-88418" y="249116"/>
+        <point x="-89005" y="249980"/>
+        <point x="-89311" y="249787"/>
+    </zone>
+    <zone name="mage_start_peace_5" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-3659" maxZ="-2659"> <!-- [17_25] -->
+        <point x="-88612" y="249461"/>
+        <point x="-88559" y="249539"/>
+        <point x="-88581" y="249649"/>
+        <point x="-88680" y="249708"/>
+        <point x="-88761" y="249704"/>
+        <point x="-89050" y="249513"/>
+        <point x="-89073" y="249332"/>
+        <point x="-88895" y="249273"/>
+    </zone>
+    <zone name="fighter_start_peace_1" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-3284" maxZ="-2284"> <!-- [17_25] -->
+        <point x="-73436" y="257725"/>
+        <point x="-71668" y="256229"/>
+        <point x="-69952" y="258077"/>
+        <point x="-71896" y="259701"/>
+    </zone>
+    <zone name="fighter_start_peace_2" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-3272" maxZ="-2272"> <!-- [17_25] -->
+        <point x="-73180" y="257663"/>
+        <point x="-72460" y="258619"/>
+        <point x="-72720" y="258831"/>
+        <point x="-73284" y="258115"/>
+        <point x="-73260" y="257855"/>
+    </zone>
+    <zone name="fighter_start_peace_3" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-3272" maxZ="-2272"> <!-- [17_25] -->
+        <point x="-71279" y="256408"/>
+        <point x="-70679" y="257116"/>
+        <point x="-70939" y="257328"/>
+        <point x="-71575" y="256612"/>
+        <point x="-71634" y="256392"/>
+    </zone>
+    <zone name="fighter_start_peace_4" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-3306" maxZ="-2306"> <!-- [17_25] -->
+        <point x="-72596" y="259181"/>
+        <point x="-70363" y="257272"/>
+        <point x="-70041" y="257631"/>
+        <point x="-72303" y="259545"/>
+    </zone>
+    <zone name="darkelf_town_peace_zone" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-8507" maxZ="-1507"> <!-- [20_18] -->
+        <point x="15719" y="16735"/>
+        <point x="14885" y="19139"/>
+        <point x="12223" y="21049"/>
+        <point x="8962" y="20203"/>
+        <point x="7340" y="18060"/>
+        <point x="7372" y="15649"/>
+        <point x="8018" y="14013"/>
+        <point x="9389" y="12836"/>
+        <point x="10669" y="12131"/>
+        <point x="12499" y="12455"/>
+        <point x="14684" y="13625"/>
+        <point x="15441" y="15060"/>
+    </zone>
+    <zone name="darkelf_start_peace_1" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-4571" maxZ="-2071"> <!-- [20_18] -->
+        <point x="28422" y="8936"/>
+        <point x="30282" y="10670"/>
+        <point x="29952" y="11744"/>
+        <point x="28457" y="13117"/>
+        <point x="27730" y="13126"/>
+        <point x="26435" y="11893"/>
+        <point x="26450" y="10146"/>
+        <point x="27792" y="8929"/>
+    </zone>
+    <zone name="darkelf_start_peace_2" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-4588" maxZ="-2088"> <!-- [20_18] -->
+        <point x="29434" y="10233"/>
+        <point x="31273" y="10233"/>
+        <point x="31273" y="11827"/>
+        <point x="29431" y="11830"/>
+    </zone>
+    <zone name="elf_town_peace1" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-3511" maxZ="-2011"> <!-- [21_19] -->
+        <point x="47758" y="51443"/>
+        <point x="46735" y="52457"/>
+        <point x="45358" y="52947"/>
+        <point x="44182" y="52419"/>
+        <point x="43398" y="51830"/>
+        <point x="43006" y="51401"/>
+        <point x="42508" y="50515"/>
+        <point x="42343" y="49479"/>
+        <point x="42547" y="48421"/>
+        <point x="43138" y="47363"/>
+        <point x="44342" y="46639"/>
+        <point x="45621" y="46486"/>
+        <point x="45974" y="46554"/>
+        <point x="47114" y="46996"/>
+        <point x="47777" y="47710"/>
+        <point x="48202" y="48441"/>
+        <point x="48400" y="49391"/>
+        <point x="48365" y="50345"/>
+    </zone>
+    <zone name="elf_start_peace1" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-4071" maxZ="-2571"> <!-- [21_19] -->
+        <point x="47987" y="40688"/>
+        <point x="47644" y="41254"/>
+        <point x="47139" y="41756"/>
+        <point x="46576" y="42051"/>
+        <point x="45590" y="42006"/>
+        <point x="44823" y="41489"/>
+        <point x="44355" y="40860"/>
+        <point x="44168" y="40397"/>
+        <point x="44319" y="39900"/>
+        <point x="44723" y="39030"/>
+        <point x="45366" y="38626"/>
+        <point x="46511" y="38446"/>
+        <point x="47292" y="38808"/>
+        <point x="47736" y="39330"/>
+        <point x="48079" y="39911"/>
+    </zone>
+    <zone name="elf_start_peace2" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-4082" maxZ="-2582"> <!-- [21_19] -->
+        <point x="44215" y="39803"/>
+        <point x="44497" y="40504"/>
+        <point x="43643" y="41416"/>
+        <point x="43398" y="41419"/>
+        <point x="42884" y="41191"/>
+        <point x="42475" y="40529"/>
+        <point x="42466" y="40285"/>
+        <point x="42762" y="39658"/>
+        <point x="43311" y="39336"/>
+        <point x="43546" y="39327"/>
+    </zone>
+    <zone name="elf_start_peace3" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-4082" maxZ="-2582"> <!-- [21_19] -->
+        <point x="49799" y="39991"/>
+        <point x="49812" y="40226"/>
+        <point x="48958" y="41201"/>
+        <point x="48724" y="41204"/>
+        <point x="48096" y="40759"/>
+        <point x="47883" y="40159"/>
+        <point x="48123" y="39481"/>
+        <point x="48636" y="39123"/>
+        <point x="48885" y="39121"/>
+        <point x="49368" y="39360"/>
+    </zone>
+    <zone name="guldiocastle_town_peace1" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-3245" maxZ="-2745"> <!-- [19_21] -->
+        <point x="-11998" y="123905"/>
+        <point x="-12880" y="126192"/>
+        <point x="-13928" y="126485"/>
+        <point x="-14408" y="126484"/>
+        <point x="-15239" y="126174"/>
+        <point x="-16120" y="125367"/>
+        <point x="-16551" y="124468"/>
+        <point x="-16550" y="123911"/>
+        <point x="-16509" y="123323"/>
+        <point x="-14638" y="122381"/>
+        <point x="-12022" y="122270"/>
+    </zone>
+    <zone name="guldiocastle_town_peace2" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-3156" maxZ="-2656"> <!-- [19_21] -->
+        <point x="-14956" y="121115"/>
+        <point x="-12670" y="121093"/>
+        <point x="-12021" y="121755"/>
+        <point x="-12019" y="123005"/>
+        <point x="-15400" y="123009"/>
+    </zone>
+    <zone name="gludin_town_peace1" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-3244" maxZ="-2744"> <!-- [17_22] -->
+        <point x="-79283" y="149148"/>
+        <point x="-78525" y="149851"/>
+        <point x="-78549" y="152429"/>
+        <point x="-82513" y="152442"/>
+        <point x="-82502" y="149146"/>
+    </zone>
+    <zone name="gludin_town_peace2" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-3244" maxZ="-2744"> <!-- [17_22] -->
+        <point x="-84874" y="149370"/>
+        <point x="-81337" y="149370"/>
+        <point x="-81337" y="152419"/>
+        <point x="-84874" y="152419"/>
+    </zone>
+    <zone name="gludin_town_peace3" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-3276" maxZ="-2776"> <!-- [17_22] -->
+        <point x="-84884" y="152261"/>
+        <point x="-78803" y="152218"/>
+        <point x="-78803" y="156106"/>
+        <point x="-84884" y="156113"/>
+    </zone>
+    <zone name="gludin_town_peace4" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-3340" maxZ="-2840"> <!-- [17_22] -->
+        <point x="-80698" y="155950"/>
+        <point x="-79097" y="154122"/>
+        <point x="-77125" y="155447"/>
+        <point x="-77948" y="156503"/>
+    </zone>
+    <zone name="gludin_town_peace5" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-3456" maxZ="-2956"> <!-- [17_22] -->
+        <point x="-78474" y="156088"/>
+        <point x="-77131" y="155440"/>
+        <point x="-77831" y="156543"/>
+        <point x="-78543" y="156393"/>
+    </zone>
+    <zone name="dion_town_peace1" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-3157" maxZ="-2157"> <!-- [20_22] -->
+        <point x="14290" y="141403"/>
+        <point x="15261" y="141328"/>
+        <point x="17478" y="142633"/>
+        <point x="17461" y="143349"/>
+        <point x="16751" y="144384"/>
+        <point x="15769" y="144681"/>
+        <point x="14470" y="143863"/>
+        <point x="14010" y="143120"/>
+        <point x="13978" y="141885"/>
+    </zone>
+    <zone name="dion_town_peace2" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-2802" maxZ="-2302"> <!-- [20_22] -->
+        <point x="15653" y="141687"/>
+        <point x="17220" y="141541"/>
+        <point x="17361" y="142876"/>
+        <point x="15789" y="143037"/>
+    </zone>
+    <zone name="dion_town_peace3" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-2858" maxZ="-2358"> <!-- [20_22] -->
+        <point x="17006" y="141806"/>
+        <point x="17410" y="141768"/>
+        <point x="17503" y="142644"/>
+        <point x="17107" y="142709"/>
+    </zone>
+    <zone name="dion_town_peace4" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-3267" maxZ="-2567"> <!-- [20_22] -->
+        <point x="15469" y="143498"/>
+        <point x="17126" y="142976"/>
+        <point x="19489" y="144901"/>
+        <point x="17833" y="147643"/>
+        <point x="16125" y="146869"/>
+    </zone>
+    <zone name="dion_town_peace5" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-3230" maxZ="-2530"> <!-- [20_22] -->
+        <point x="20387" y="142469"/>
+        <point x="21407" y="143663"/>
+        <point x="21402" y="146315"/>
+        <point x="16663" y="146406"/>
+        <point x="16461" y="143892"/>
+        <point x="18915" y="142444"/>
+    </zone>
+    <zone name="floran_town_peace1" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-3957" maxZ="-3357"> <!-- [20_23] -->
+        <point x="18134" y="169527"/>
+        <point x="18602" y="169760"/>
+        <point x="18641" y="169827"/>
+        <point x="18429" y="170529"/>
+        <point x="17386" y="170916"/>
+        <point x="16777" y="170706"/>
+        <point x="16555" y="170564"/>
+        <point x="16530" y="170497"/>
+        <point x="16732" y="169864"/>
+        <point x="17253" y="169433"/>
+        <point x="17396" y="169394"/>
+        <point x="17768" y="169440"/>
+    </zone>
+    <zone name="floran_town_peace2" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-3967" maxZ="-3367"> <!-- [20_23] -->
+        <point x="17082" y="169410"/>
+        <point x="17464" y="169397"/>
+        <point x="17285" y="169889"/>
+        <point x="16773" y="170007"/>
+        <point x="16717" y="169945"/>
+        <point x="16823" y="169466"/>
+        <point x="16882" y="169431"/>
+    </zone>
+    <zone name="floran_town_peace3" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-3956" maxZ="-3356"> <!-- [20_23] -->
+        <point x="18487" y="170499"/>
+        <point x="18390" y="170915"/>
+        <point x="18343" y="170933"/>
+        <point x="17768" y="170965"/>
+        <point x="17223" y="170891"/>
+        <point x="16878" y="170752"/>
+        <point x="18430" y="170079"/>
+        <point x="18543" y="170093"/>
+    </zone>
+    <zone name="giran_town_peace12" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-3464" maxZ="-3264"> <!-- [22_22] -->
+        <point x="85048" y="145756"/>
+        <point x="86104" y="145752"/>
+        <point x="86100" y="145888"/>
+        <point x="85060" y="145856"/>
+    </zone>
+    <zone name="giran_town_peace1" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-3654" maxZ="-2654"> <!-- [22_22] -->
+        <point x="77164" y="147420"/>
+        <point x="79291" y="147417"/>
+        <point x="79278" y="149808"/>
+        <point x="77155" y="149824"/>
+    </zone>
+    <zone name="giran_town_peace2" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-3598" maxZ="-1598"> <!-- [22_22] -->
+        <point x="79193" y="144776"/>
+        <point x="85019" y="144748"/>
+        <point x="85148" y="149864"/>
+        <point x="79198" y="149858"/>
+    </zone>
+    <zone name="giran_town_peace3" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-3602" maxZ="-2402"> <!-- [22_22] -->
+        <point x="79180" y="149311"/>
+        <point x="83508" y="149374"/>
+        <point x="83510" y="151272"/>
+        <point x="79197" y="151297"/>
+    </zone>
+    <zone name="giran_town_peace4" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-3636" maxZ="-3036"> <!-- [22_22] -->
+        <point x="85619" y="150120"/>
+        <point x="86004" y="150125"/>
+        <point x="86005" y="152300"/>
+        <point x="85617" y="152305"/>
+    </zone>
+    <zone name="giran_town_peace5" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-3799" maxZ="-2399"> <!-- [22_22] -->
+        <point x="84848" y="152234"/>
+        <point x="86779" y="152240"/>
+        <point x="86781" y="153610"/>
+        <point x="84844" y="153610"/>
+    </zone>
+    <zone name="giran_town_peace6" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-3872" maxZ="-1872"> <!-- [22_22] -->
+        <point x="84922" y="146919"/>
+        <point x="88437" y="146909"/>
+        <point x="88445" y="150047"/>
+        <point x="85090" y="150032"/>
+    </zone>
+    <zone name="giran_town_peace7" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-3810" maxZ="-2110"> <!-- [22_22] -->
+        <point x="80304" y="143626"/>
+        <point x="85033" y="143631"/>
+        <point x="85029" y="144930"/>
+        <point x="80298" y="144914"/>
+    </zone>
+    <zone name="giran_town_peace8" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-3538" maxZ="-3338"> <!-- [22_22] -->
+        <point x="79190" y="150958"/>
+        <point x="82705" y="150962"/>
+        <point x="82717" y="152824"/>
+        <point x="79202" y="152821"/>
+    </zone>
+    <zone name="giran_town_peace9" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-3496" maxZ="-2996"> <!-- [22_22] -->
+        <point x="84838" y="145789"/>
+        <point x="86101" y="145774"/>
+        <point x="86105" y="146911"/>
+        <point x="84842" y="146925"/>
+    </zone>
+    <zone name="giran_town_peace10" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-3599" maxZ="-2999"> <!-- [22_22] -->
+        <point x="85088" y="149126"/>
+        <point x="86468" y="149142"/>
+        <point x="86488" y="150240"/>
+        <point x="85089" y="150240"/>
+    </zone>
+    <zone name="giran_town_peace11" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-3410" maxZ="-3210"> <!-- [22_22] -->
+        <point x="83111" y="143502"/>
+        <point x="85038" y="143499"/>
+        <point x="85038" y="143856"/>
+        <point x="83111" y="143859"/>
+    </zone>
+    <zone name="orc_start_peace" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-1483" maxZ="516"> <!-- [18_14] -->
+        <point x="-58952" y="-115543"/>
+        <point x="-52769" y="-115553"/>
+        <point x="-52758" y="-111736"/>
+        <point x="-58952" y="-111749"/>
+    </zone>
+    <zone name="orc_town_peace1" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-397" maxZ="603"> <!-- [18_14] -->
+        <point x="-42044" y="-113585"/>
+        <point x="-42533" y="-111862"/>
+        <point x="-43811" y="-110599"/>
+        <point x="-45614" y="-110071"/>
+        <point x="-47375" y="-110007"/>
+        <point x="-47397" y="-117215"/>
+        <point x="-46661" y="-117220"/>
+        <point x="-45633" y="-117094"/>
+        <point x="-43791" y="-116569"/>
+        <point x="-42530" y="-115322"/>
+    </zone>
+    <zone name="orc_town_peace2" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-460" maxZ="540"> <!-- [18_14] -->
+        <point x="-50211" y="-116941"/>
+        <point x="-47413" y="-117301"/>
+        <point x="-47358" y="-109913"/>
+        <point x="-49161" y="-109305"/>
+        <point x="-51245" y="-109819"/>
+        <point x="-53401" y="-112501"/>
+        <point x="-53788" y="-113966"/>
+        <point x="-52931" y="-115293"/>
+    </zone>
+    <zone name="dwarf_start" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-652" maxZ="348"> <!-- [23_12] -->
+        <point x="110063" y="-175794"/>
+        <point x="110565" y="-173944"/>
+        <point x="110518" y="-173426"/>
+        <point x="109153" y="-171575"/>
+        <point x="106345" y="-171905"/>
+        <point x="104853" y="-174391"/>
+        <point x="105481" y="-176144"/>
+        <point x="106031" y="-177035"/>
+        <point x="107660" y="-177623"/>
+        <point x="109208" y="-177140"/>
+    </zone>
+    <zone name="dwarf_town_peace1" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-1600" maxZ="-400"> <!-- [23_12] -->
+        <point x="117520" y="-181718"/>
+        <point x="117423" y="-180017"/>
+        <point x="115371" y="-176774"/>
+        <point x="114885" y="-176815"/>
+        <point x="114070" y="-177180"/>
+        <point x="113883" y="-179469"/>
+        <point x="114580" y="-181875"/>
+    </zone>
+    <zone name="dwarf_town_peace2" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-1685" maxZ="-685"> <!-- [23_12] -->
+        <point x="117630" y="-182925"/>
+        <point x="115159" y="-182811"/>
+        <point x="115477" y="-183673"/>
+        <point x="115600" y="-183891"/>
+        <point x="115740" y="-184086"/>
+        <point x="115948" y="-184206"/>
+        <point x="116257" y="-184251"/>
+        <point x="116710" y="-184253"/>
+        <point x="117023" y="-184164"/>
+        <point x="117204" y="-184034"/>
+        <point x="117335" y="-183812"/>
+        <point x="117503" y="-183386"/>
+    </zone>
+    <zone name="dwarf_town_peace3" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-1724" maxZ="-724"> <!-- [23_12] -->
+        <point x="114641" y="-183866"/>
+        <point x="117517" y="-183140"/>
+        <point x="117778" y="-182649"/>
+        <point x="117775" y="-182246"/>
+        <point x="117733" y="-182086"/>
+        <point x="117432" y="-181576"/>
+        <point x="114638" y="-181551"/>
+    </zone>
+    <zone name="dwarf_town_peace4" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-1000" maxZ="-400"> <!-- [23_12] -->
+        <point x="116406" y="-176891"/>
+        <point x="115964" y="-176809"/>
+        <point x="115535" y="-176773"/>
+        <point x="115142" y="-176788"/>
+        <point x="115867" y="-178003"/>
+        <point x="117355" y="-179595"/>
+        <point x="117300" y="-178525"/>
+        <point x="117172" y="-177847"/>
+        <point x="116798" y="-177111"/>
+        <point x="116643" y="-176968"/>
+    </zone>
+    <zone name="dwarf_town_peace5" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-1257" maxZ="-657"> <!-- [23_12] -->
+        <point x="116649" y="-179760"/>
+        <point x="117429" y="-180911"/>
+        <point x="117493" y="-180052"/>
+        <point x="117467" y="-179575"/>
+        <point x="116977" y="-178211"/>
+        <point x="116142" y="-178429"/>
+    </zone>
+    <zone name="oren_town_peace1" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-1822" maxZ="-1022"> <!-- [22_19] -->
+        <point x="78900" y="52076"/>
+        <point x="84126" y="52049"/>
+        <point x="84099" y="57117"/>
+        <point x="78872" y="57144"/>
+    </zone>
+    <zone name="ivory_tower_peace1" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-4652" maxZ="347"> <!-- [22_18] -->
+        <point x="86094" y="16382"/>
+        <point x="85888" y="16744"/>
+        <point x="85510" y="16968"/>
+        <point x="85139" y="16966"/>
+        <point x="84767" y="16736"/>
+        <point x="84576" y="16394"/>
+        <point x="84580" y="15977"/>
+        <point x="84783" y="15631"/>
+        <point x="85143" y="15417"/>
+        <point x="85499" y="15403"/>
+        <point x="85886" y="15642"/>
+        <point x="86049" y="15990"/>
+    </zone>
+    <zone name="hunter_town_peace1" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-2749" maxZ="-1249"> <!-- [23_20] -->
+        <point x="120837" y="78996"/>
+        <point x="118917" y="80603"/>
+        <point x="116981" y="80412"/>
+        <point x="115383" y="79832"/>
+        <point x="114029" y="76721"/>
+        <point x="114670" y="74772"/>
+        <point x="115464" y="74131"/>
+        <point x="118488" y="74094"/>
+        <point x="120717" y="74271"/>
+        <point x="121548" y="76702"/>
+    </zone>
+    <zone name="hunter_town_peace2" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-2512" maxZ="-1012"> <!-- [23_20] -->
+        <point x="117932" y="74072"/>
+        <point x="118560" y="74104"/>
+        <point x="118308" y="74324"/>
+        <point x="118108" y="74324"/>
+    </zone>
+    <zone name="hadin_peace1" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-3434" maxZ="-2934"> <!-- [23_21] -->
+        <point x="106216" y="112467"/>
+        <point x="106779" y="113174"/>
+        <point x="106759" y="114084"/>
+        <point x="106174" y="115069"/>
+        <point x="105181" y="115072"/>
+        <point x="104608" y="113714"/>
+        <point x="104782" y="112755"/>
+        <point x="105248" y="112466"/>
+    </zone>
+    <zone name="aden_town_peace1" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-2532" maxZ="-1032"> <!-- [24_18] -->
+        <point x="150222" y="20224"/>
+        <point x="151214" y="21124"/>
+        <point x="151291" y="29988"/>
+        <point x="150278" y="30956"/>
+        <point x="144297" y="30912"/>
+        <point x="143434" y="30078"/>
+        <point x="143415" y="21117"/>
+        <point x="144415" y="20200"/>
+    </zone>
+    <zone name="aden_town_peace2" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-2517" maxZ="-1017"> <!-- [24_18] -->
+        <point x="145783" y="30543"/>
+        <point x="149035" y="30552"/>
+        <point x="147953" y="31586"/>
+        <point x="147032" y="31586"/>
+    </zone>
+    <zone name="aden_town_peace3" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-2215" maxZ="-715"> <!-- [24_18] -->
+        <point x="151101" y="24718"/>
+        <point x="151485" y="24715"/>
+        <point x="151489" y="25546"/>
+        <point x="151098" y="25549"/>
+    </zone>
+    <zone name="aden_town_peace4" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-2101" maxZ="-601"> <!-- [24_18] -->
+        <point x="147162" y="19914"/>
+        <point x="147775" y="19914"/>
+        <point x="147834" y="20395"/>
+        <point x="147099" y="20394"/>
+    </zone>
+    <zone name="aden_town_peace5" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-2456" maxZ="-956"> <!-- [24_18] -->
+        <point x="143117" y="25953"/>
+        <point x="143728" y="25712"/>
+        <point x="143728" y="26882"/>
+        <point x="143118" y="26712"/>
+    </zone>
+    <zone name="speaking_port_peace1" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-3684" maxZ="-3484"> <!-- [17_25] -->
+        <point x="-96610" y="258814"/>
+        <point x="-96389" y="258748"/>
+        <point x="-96369" y="258787"/>
+        <point x="-96374" y="259051"/>
+        <point x="-96640" y="259059"/>
+    </zone>
+    <zone name="speaking_port_peace2" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-3676" maxZ="-3476"> <!-- [17_25] -->
+        <point x="-96561" y="258759"/>
+        <point x="-96411" y="258764"/>
+        <point x="-96553" y="259066"/>
+        <point x="-97256" y="259068"/>
+        <point x="-97245" y="258787"/>
+    </zone>
+    <zone name="speaking_port_peace3" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-3672" maxZ="-3472"> <!-- [17_25] -->
+        <point x="-96969" y="259036"/>
+        <point x="-96649" y="259036"/>
+        <point x="-96648" y="261414"/>
+        <point x="-96968" y="261414"/>
+    </zone>
+    <zone name="speaking_port_peace4" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-3672" maxZ="-3472"> <!-- [17_25] -->
+        <point x="-97161" y="259866"/>
+        <point x="-96961" y="259866"/>
+        <point x="-96961" y="260203"/>
+        <point x="-97161" y="260203"/>
+    </zone>
+    <zone name="speaking_port_peace5" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-3679" maxZ="-3479"> <!-- [17_25] -->
+        <point x="-96750" y="259679"/>
+        <point x="-96326" y="259679"/>
+        <point x="-96326" y="260400"/>
+        <point x="-96750" y="260400"/>
+    </zone>
+    <zone name="speaking_port_peace6" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-3685" maxZ="-3485"> <!-- [17_25] -->
+        <point x="-97290" y="261068"/>
+        <point x="-95888" y="261068"/>
+        <point x="-95888" y="261419"/>
+        <point x="-97290" y="261418"/>
+    </zone>
+    <zone name="speaking_port_peace7" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-3681" maxZ="-3481"> <!-- [17_25] -->
+        <point x="-97476" y="260763"/>
+        <point x="-97167" y="260763"/>
+        <point x="-97167" y="261419"/>
+        <point x="-97476" y="261419"/>
+    </zone>
+    <zone name="speaking_port_peace8" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-3670" maxZ="-3470"> <!-- [17_25] -->
+        <point x="-97237" y="259333"/>
+        <point x="-96923" y="259333"/>
+        <point x="-96923" y="259637"/>
+        <point x="-97237" y="259637"/>
+    </zone>
+    <zone name="gludin_port1" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-3708" maxZ="-3508"> <!-- [17_22] -->
+        <point x="-92600" y="148457"/>
+        <point x="-90416" y="148372"/>
+        <point x="-90412" y="151666"/>
+        <point x="-92508" y="151678"/>
+        <point x="-93497" y="149244"/>
+    </zone>
+    <zone name="gludin_port2" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-3694" maxZ="-3494"> <!-- [17_22] -->
+        <point x="-94294" y="148251"/>
+        <point x="-92763" y="148869"/>
+        <point x="-92437" y="152317"/>
+        <point x="-93461" y="153244"/>
+        <point x="-95444" y="151462"/>
+        <point x="-95446" y="149881"/>
+        <point x="-94588" y="148248"/>
+    </zone>
+    <zone name="giran_port1" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-3625" maxZ="-3411"> <!-- [21_23] -->
+        <point x="47189" y="185982"/>
+        <point x="49284" y="183651"/>
+        <point x="52767" y="186787"/>
+        <point x="49719" y="190044"/>
+    </zone>
+    <zone name="giran_port2" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-3625" maxZ="-3311"> <!-- [21_23] -->
+        <point x="45288" y="186705"/>
+        <point x="47947" y="185316"/>
+        <point x="50535" y="189487"/>
+        <point x="47639" y="191052"/>
+    </zone>
+    <zone name="giran_port3" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-3606" maxZ="-3106"> <!-- [21_23] -->
+        <point x="43935" y="187891"/>
+        <point x="45949" y="186815"/>
+        <point x="46215" y="187346"/>
+        <point x="44226" y="188420"/>
+    </zone>
+    <zone name="giran_port4" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-3625" maxZ="-3314"> <!-- [21_23] -->
+        <point x="41861" y="188551"/>
+        <point x="44221" y="187269"/>
+        <point x="46275" y="191156"/>
+        <point x="44031" y="192413"/>
+    </zone>
+    <zone name="heiness_peace1" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-4287" maxZ="-3287"> <!-- [23_24] -->
+        <point x="106085" y="216119"/>
+        <point x="116559" y="216118"/>
+        <point x="116533" y="229030"/>
+        <point x="106085" y="229015"/>
+    </zone>
+    <zone name="heiness_peace2" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-4128" maxZ="-3128"> <!-- [23_24] -->
+        <point x="103796" y="217964"/>
+        <point x="106602" y="217963"/>
+        <point x="106602" y="218361"/>
+        <point x="103796" y="218363"/>
+    </zone>
+    <zone name="heiness_peace3" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-4096" maxZ="-3096"> <!-- [23_24] -->
+        <point x="115950" y="219084"/>
+        <point x="118877" y="219084"/>
+        <point x="118879" y="219496"/>
+        <point x="115952" y="219498"/>
+    </zone>
+    <zone name="godad_peace1" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-3000" maxZ="-771"> <!-- [24_16] -->
+        <point x="146517" y="-59854"/>
+        <point x="148916" y="-59847"/>
+        <point x="151301" y="-58338"/>
+        <point x="152005" y="-56872"/>
+        <point x="152043" y="-55010"/>
+        <point x="150847" y="-51615"/>
+        <point x="145228" y="-51601"/>
+        <point x="143824" y="-54220"/>
+        <point x="143444" y="-56732"/>
+        <point x="144680" y="-58725"/>
+    </zone>
+    <zone name="rune_peace1" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-1516" maxZ="484"> <!-- [21_16] -->
+        <point x="40071" y="-52192"/>
+        <point x="42159" y="-46969"/>
+        <point x="44445" y="-45865"/>
+        <point x="46202" y="-46919"/>
+        <point x="47212" y="-48809"/>
+        <point x="47224" y="-51046"/>
+        <point x="45845" y="-51986"/>
+        <point x="43334" y="-52810"/>
+        <point x="41192" y="-53281"/>
+    </zone>
+    <zone name="rune_peace2" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-7660" maxZ="7340"> <!-- [21_16] -->
+        <point x="43099" y="-38911"/>
+        <point x="40028" y="-35494"/>
+        <point x="37429" y="-35357"/>
+        <point x="32846" y="-38149"/>
+        <point x="32804" y="-50466"/>
+        <point x="36348" y="-52427"/>
+        <point x="39429" y="-52058"/>
+        <point x="46334" y="-46534"/>
+    </zone>
+    <zone name="gludin_pvp_peace_1" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-3723" maxZ="-3223"> <!-- [17_22] -->
+        <point x="-88445" y="141473"/>
+        <point x="-87166" y="141474"/>
+        <point x="-87166" y="141726"/>
+        <point x="-88441" y="141726"/>
+    </zone>
+    <zone name="gludin_pvp_peace_2" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-3745" maxZ="-3245"> <!-- [17_22] -->
+        <point x="-88666" y="141473"/>
+        <point x="-88417" y="141474"/>
+        <point x="-88414" y="142740"/>
+        <point x="-88666" y="142746"/>
+    </zone>
+    <zone name="gludin_pvp_peace_3" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-3723" maxZ="-3223"> <!-- [17_22] -->
+        <point x="-88665" y="142716"/>
+        <point x="-87165" y="142716"/>
+        <point x="-87165" y="142973"/>
+        <point x="-88667" y="142973"/>
+    </zone>
+    <zone name="gludin_pvp_peace_4" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-3732" maxZ="-3232"> <!-- [17_22] -->
+        <point x="-87418" y="141681"/>
+        <point x="-87165" y="141680"/>
+        <point x="-87166" y="142779"/>
+        <point x="-87416" y="142779"/>
+    </zone>
+    <zone name="giran_pvp_peace1" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-3851" maxZ="-3351"> <!-- [22_22] -->
+        <point x="73490" y="142231"/>
+        <point x="73743" y="142232"/>
+        <point x="73741" y="143316"/>
+        <point x="73494" y="143312"/>
+    </zone>
+    <zone name="giran_pvp_peace2" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-3855" maxZ="-3355"> <!-- [22_22] -->
+        <point x="72462" y="142013"/>
+        <point x="73744" y="142013"/>
+        <point x="73743" y="142268"/>
+        <point x="72461" y="142268"/>
+    </zone>
+    <zone name="giran_pvp_peace3" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-3853" maxZ="-3353"> <!-- [22_22] -->
+        <point x="72244" y="142015"/>
+        <point x="72497" y="142012"/>
+        <point x="72497" y="143285"/>
+        <point x="72242" y="143280"/>
+    </zone>
+    <zone name="giran_pvp_peace4" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-3856" maxZ="-3356"> <!-- [22_22] -->
+        <point x="72242" y="143255"/>
+        <point x="73743" y="143257"/>
+        <point x="73743" y="143513"/>
+        <point x="72243" y="143514"/>
+    </zone>
+    <zone name="colosseum_peace1" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-3468" maxZ="-3268"> <!-- [24_19] -->
+        <point x="147779" y="46196"/>
+        <point x="148045" y="46481"/>
+        <point x="148047" y="46958"/>
+        <point x="147772" y="47256"/>
+        <point x="147078" y="47258"/>
+        <point x="147095" y="46203"/>
+    </zone>
+    <zone name="colosseum_peace2" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-3472" maxZ="-3272"> <!-- [24_19] -->
+        <point x="151221" y="46184"/>
+        <point x="151928" y="46183"/>
+        <point x="151925" y="47248"/>
+        <point x="151222" y="47262"/>
+        <point x="150952" y="46956"/>
+        <point x="150954" y="46486"/>
+    </zone>
+    <zone name="gm_prison" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-2992" maxZ="-2792"> <!-- [16_10] -->
+        <point x="-116390" y="-251581"/>
+        <point x="-112756" y="-251617"/>
+        <point x="-112720" y="-248199"/>
+        <point x="-116354" y="-248217"/>
+    </zone>
+    <zone name="primeval_peace1" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-4290" maxZ="-1290"> <!-- [20_17] -->
+        <point x="10408" y="-27395"/>
+        <point x="12065" y="-25334"/>
+        <point x="12223" y="-23159"/>
+        <point x="10424" y="-22340"/>
+        <point x="9566" y="-23131"/>
+        <point x="9290" y="-24261"/>
+    </zone>
+    <zone name=" primeval_peace2" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-4792" maxZ="208"> <!-- [20_17] -->
+        <point x="4850" y="-4736"/>
+        <point x="7294" y="-4712"/>
+        <point x="8529" y="-820"/>
+        <point x="3615" y="-737"/>
+    </zone>
+    <zone name="space_of_dimension_peace1" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-6964" maxZ="-6064"> <!-- [16_12] -->
+        <point x="-115441" y="-182134"/>
+        <point x="-114106" y="-182134"/>
+        <point x="-114106" y="-178021"/>
+        <point x="-115476" y="-178021"/>
+    </zone>
+    <zone name="schuttgart_peace1" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-2444" maxZ="3556"> <!-- [22_23] -->
+        <point x="91064" y="-143193"/>
+        <point x="90200" y="-146685"/>
+        <point x="84580" y="-146745"/>
+        <point x="83600" y="-143273"/>
+        <point x="84048" y="-141429"/>
+        <point x="84922" y="-140225"/>
+        <point x="86528" y="-139365"/>
+        <point x="88292" y="-139397"/>
+        <point x="89712" y="-140205"/>
+        <point x="90660" y="-141409"/>
+    </zone>
+    <zone name="rainbow_spring_peace1" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-2472" maxZ="2528"> <!-- [24_14] -->
+        <point x="148724" y="-128356"/>
+        <point x="154172" y="-130160"/>
+        <point x="158636" y="-126416"/>
+        <point x="155456" y="-123772"/>
+        <point x="152140" y="-124528"/>
+    </zone>
+    <zone name="themepark_peace1" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-4696" maxZ="3304"> <!-- [17_15] -->
+        <point x="-76662" y="-77593"/>
+        <point x="-65536" y="-77344"/>
+        <point x="-65536" y="-65536"/>
+        <point x="-81410" y="-65536"/>
+    </zone>
+    <zone name="themepark_peace2" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-4696" maxZ="3304"> <!-- [18_15] -->
+        <point x="-51267" y="-78666"/>
+        <point x="-44978" y="-75445"/>
+        <point x="-44281" y="-65536"/>
+        <point x="-65536" y="-65536"/>
+        <point x="-65536" y="-72713"/>
+    </zone>
+    <zone name="themepark_peace3" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-4696" maxZ="3304"> <!-- [17_16] -->
+        <point x="-83544" y="-65536"/>
+        <point x="-65536" y="-65536"/>
+        <point x="-65536" y="-41699"/>
+        <point x="-80543" y="-39424"/>
+        <point x="-91856" y="-41776"/>
+        <point x="-92099" y="-53834"/>
+    </zone>
+    <zone name="themepark_peace4" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-4696" maxZ="3304"> <!-- [18_16] -->
+        <point x="-65536" y="-65536"/>
+        <point x="-43060" y="-65536"/>
+        <point x="-44899" y="-44178"/>
+        <point x="-65536" y="-43068"/>
+    </zone>
+    <zone name="gludio_platform_peace1" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-424" maxZ="376"> <!-- [15_25] -->
+        <point x="-151634" y="252804"/>
+        <point x="-147155" y="252804"/>
+        <point x="-147155" y="257492"/>
+        <point x="-151634" y="257492"/>
+    </zone>
+    <zone name="base_kserth_peace1" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="1103" maxZ="3103"> <!-- [14_25] -->
+        <point x="-183709" y="237556"/>
+        <point x="-181798" y="241875"/>
+        <point x="-182894" y="245386"/>
+        <point x="-186902" y="247724"/>
+        <point x="-188573" y="247186"/>
+        <point x="-185574" y="237097"/>
+    </zone>
+    <zone name="undying_platform_peace1" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="4252" maxZ="4452"> <!-- [13_24] -->
+        <point x="-212443" y="210098"/>
+        <point x="-211813" y="210748"/>
+        <point x="-211916" y="210855"/>
+        <point x="-212592" y="210210"/>
+        <point x="-213117" y="210211"/>
+        <point x="-213759" y="210832"/>
+        <point x="-213845" y="210747"/>
+        <point x="-213227" y="210101"/>
+        <point x="-213229" y="209540"/>
+        <point x="-213818" y="208901"/>
+        <point x="-213737" y="208809"/>
+        <point x="-213123" y="209426"/>
+        <point x="-212529" y="209427"/>
+        <point x="-211894" y="208808"/>
+        <point x="-211801" y="208901"/>
+        <point x="-212442" y="209522"/>
+    </zone>
+    <zone name="deathsdoor_peace1" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-12989" maxZ="-12389"> <!-- [14_24] -->
+        <point x="-184105" y="205453"/>
+        <point x="-182469" y="205453"/>
+        <point x="-182469" y="207028"/>
+        <point x="-184105" y="207028"/>
+    </zone>
+    <zone name="border_of_nightmare_peace1" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-6762" maxZ="-6562"> <!-- [16_13] -->
+        <point x="-115424" y="-155539"/>
+        <point x="-113764" y="-155547"/>
+        <point x="-113768" y="-150965"/>
+        <point x="-115424" y="-150965"/>
+    </zone>
+    <zone name="The West Dungeon of Abyss" id="600000" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Cube" minZ="-7000" maxZ="-6500"> <!-- [16_12] -->
+        <point x="-120448" y="-182800"/>
+        <point x="-117264" y="-180288"/>
+    </zone>
+    <zone name="The West Dungeon of Abyss Boss Room" id="600004" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Cube" minZ="-7000" maxZ="-6500"> <!-- [16_12] -->
+        <point x="-117096" y="-181856"/>
+        <point x="-115562" y="-181080"/>
+    </zone>
+    <zone name="The West Dungeon of Abyss 2nd" id="600001" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Cube" minZ="-7000" maxZ="-6500"> <!-- [16_12] -->
+        <point x="-120448" y="-180093"/>
+        <point x="-117264" y="-177472"/>
+    </zone>
+    <zone name="The West Dungeon of Abyss 2nd Boss Room" id="600005" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Cube" minZ="-7000" maxZ="-6500"> <!-- [16_12] -->
+        <point x="-117097" y="-179108"/>
+        <point x="-115565" y="-178261"/>
+    </zone>
+    <zone name="The East Dungeon of Abyss" id="600002" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Cube" minZ="-7000" maxZ="-6500"> <!-- [16_12] -->
+        <point x="-109037" y="-180186"/>
+        <point x="-112257" y="-182758"/>
+    </zone>
+    <zone name="The East Dungeon of Abyss Boss Room" id="600006" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Cube" minZ="-7000" maxZ="-6500"> <!-- [16_12] -->
+        <point x="-112508" y="-181094"/>
+        <point x="-114023" y="-181929"/>
+    </zone>
+    <zone name="The East Dungeon of Abyss 2nd" id="600003" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Cube" minZ="-7000" maxZ="-6500"> <!-- [16_12] -->
+        <point x="-109152" y="-177408"/>
+        <point x="-112336" y="-179920"/>
+    </zone>
+    <zone name="The East Dungeon of Abyss 2nd Boss Room" id="600007" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Cube" minZ="-7000" maxZ="-6500"> <!-- [16_12] -->
+        <point x="-112495" y="-178268"/>
+        <point x="-114025" y="-179108"/>
+    </zone>
+
+    <!-- Classic Monster Race Track -->
+    <zone name="Monster_Race_Arena_Peace" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-3565" maxZ="-3200"> <!-- [20_23] -->
+        <point x="14398" y="181581"/>
+        <point x="14056" y="181560"/>
+        <point x="14060" y="181325"/>
+        <point x="13306" y="181325"/>
+        <point x="13306" y="181575"/>
+        <point x="11710" y="181562"/>
+        <point x="11715" y="182745"/>
+        <point x="11541" y="182743"/>
+        <point x="11541" y="184629"/>
+        <point x="11842" y="184630"/>
+        <point x="11839" y="184821"/>
+        <point x="13250" y="184819"/>
+        <point x="13252" y="184619"/>
+        <point x="13545" y="184628"/>
+        <point x="13549" y="182916"/>
+        <point x="14073" y="182918"/>
+        <point x="14072" y="182673"/>
+        <point x="14404" y="182674"/>
+    </zone>
 </list>

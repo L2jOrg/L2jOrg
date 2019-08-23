@@ -1,0 +1,535 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
+	<skill id="59600" toLevel="1" name="Demon - Legendary Transformation">
+		<icon>BranchIcon.Icon.g_bm_costume_devil</icon>
+		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+	</skill>
+	<skill id="59601" toLevel="1" name="Demon - Mythic Transformation">
+		<icon>BranchIcon.Icon.g_bm_costume_devil</icon>
+		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+	</skill>
+	<skill id="59602" toLevel="1" name="Shadow Master">
+		<!-- Legendary transformation. Acquired XP +30%, P./ M. Atk. +15%, P./ M. Critical Damage +10%, Speed +10, Received PvP Damage -10%. The effect remains after death.\n\n<Special ability>\nIf a character is attacked when the transformation is active, it summons a clone every 120 sec. The clone provokes the enemies while the character is hiding for 10 sec. -->
+		<icon>BranchIcon.Icon.g_bm_costume_thief</icon>
+		<operateType>A1</operateType>
+		<isMagic>50</isMagic>
+		<reuseDelay>7200000</reuseDelay>
+	</skill>
+	<skill id="59603" toLevel="1" name="Shadow Master">
+		<!-- Mythic transformation. Acquired XP +50%, P./ M. Atk. +20%, P./ M. Critical Damage +15%, Speed +20, PvP Damage +10%, Received PvP Damage -20%. The effect remains after death.\n\n<Special ability>\nIf a character is attacked when the transformation is active, it summons a clone every 60 sec. The clone provokes the enemies while the character is hiding for 20 sec. -->
+		<icon>BranchIcon.Icon.g_bm_costume_thief</icon>
+		<operateType>A1</operateType>
+		<isMagic>50</isMagic>
+		<reuseDelay>7200000</reuseDelay>
+	</skill>
+	<skill id="59604" toLevel="2" name="Shadow Master - Decoy">
+		<icon>BranchIcon.Icon.g_bm_costume_thief</icon>
+		<operateType>A2</operateType>
+		<isMagic>4</isMagic>
+		<reuseDelay>100000</reuseDelay>
+	</skill>
+	<skill id="59605" toLevel="2" name="Shadow Master - Hide">
+		<!-- Grants invisibility for $s1. Effect cancels upon any action except for moving. -->
+		<icon>BranchIcon.Icon.g_bm_costume_thief</icon>
+		<operateType>A2</operateType>
+		<isMagic>4</isMagic>
+	</skill>
+	<skill id="59606" toLevel="1" name="Shadow Master - Decoy Provocation">
+		<icon>BranchIcon.Icon.g_bm_costume_thief</icon>
+		<operateType>A2</operateType>
+		<isMagic>4</isMagic>
+	</skill>
+	<skill id="59607" toLevel="1" name="Admiral">
+		<!-- Legendary transformation. Acquired XP +30%, P./ M. Atk. +15%, P./ M. Critical Damage +10%, Speed +10, Received PvP Damage -10%. The effect remains after death.\n\n<Special ability>\nWhen the transformation is active: P./ M. Atk. +150% in case of successful attack or skill usage, P./ M. Def. +150% in case of receiving damage. Cooldown: 100 sec.\nDuring the cooldown only 1 buff (attack or defense bonus) is active. -->
+		<icon>BranchIcon.Icon.g_bm_costume_navy</icon>
+		<operateType>A1</operateType>
+		<isMagic>50</isMagic>
+		<reuseDelay>7200000</reuseDelay>
+	</skill>
+	<skill id="59608" toLevel="1" name="Admiral">
+		<!-- Mythic transformation. Acquired XP +50%, P./ M. Atk. +20%, P./ M. Critical Damage +15%, Speed +20, PvP Damage +10%, Received PvP Damage -20%. The effect remains after death.\n\n<Special ability>\nWhen the transformation is active: P./ M. Atk. +200% in case of successful attack or skill usage, P./ M. Def. +200% in case of receiving damage. Cooldown: 600 sec.\nDuring the cooldown only 1 buff (attack or defense bonus) is active. -->
+		<icon>BranchIcon.Icon.g_bm_costume_navy</icon>
+		<operateType>A1</operateType>
+		<isMagic>50</isMagic>
+		<reuseDelay>7200000</reuseDelay>
+	</skill>
+	<skill id="59609" toLevel="2" name="Admiral - Attack Release">
+		<!-- The Admiral's power is stacking. The attack/ defense buff cannot be activated. -->
+		<icon>BranchIcon.Icon.g_bm_costume_navy</icon>
+		<operateType>A2</operateType>
+		<isMagic>4</isMagic>
+		<reuseDelay>100000</reuseDelay>
+	</skill>
+	<skill id="59610" toLevel="2" name="Admiral - Defense Release">
+		<!-- The Admiral's power is stacking. The attack/ defense buff cannot be activated. -->
+		<icon>BranchIcon.Icon.g_bm_costume_navy</icon>
+		<operateType>A2</operateType>
+		<isMagic>4</isMagic>
+		<reuseDelay>100000</reuseDelay>
+	</skill>
+	<skill id="59611" toLevel="2" name="Admiral - Attack">
+		<!-- For $s1 P. Atk/ M. Atk +$s2. -->
+		<icon>BranchIcon.Icon.g_bm_costume_navy</icon>
+		<operateType>A2</operateType>
+		<isMagic>4</isMagic>
+	</skill>
+	<skill id="59612" toLevel="2" name="Admiral - Defense">
+		<!-- For $s1 P./ M. Def. +$s2. -->
+		<icon>BranchIcon.Icon.g_bm_costume_navy</icon>
+		<operateType>A2</operateType>
+		<isMagic>4</isMagic>
+	</skill>
+	<skill id="59613" toLevel="1" name="Nymph">
+		<!-- Legendary transformation. Acquired XP +30%, P./ M. Atk. +15%, P./ M. Critical Damage +10%, Speed +10, Received PvP Damage -10%. The effect remains after death.\n\n<Special ability>\nAcquired adena/ item drop rate/ Spoil drop rate +50%.\nWhen the transformation is active, every 100 sec. the target receives the Lure debuff when attacks or uses skills. -->
+		<icon>BranchIcon.Icon.g_bm_costume_nymph</icon>
+		<operateType>A1</operateType>
+		<isMagic>50</isMagic>
+		<reuseDelay>7200000</reuseDelay>
+	</skill>
+	<skill id="59614" toLevel="1" name="Nymph">
+		<!-- Mythic transformation. Acquired XP +50%, P./ M. Atk. +20%, P./ M. Critical Damage +15%, Speed +20, PvP Damage +10%, Received PvP Damage -20%. The effect remains after death.\n\n<Special ability>\nAcquired adena/ item drop rate/ Spoil drop rate +50%.\nWhen the transformation is active, every 60 sec. the target receives the Lure debuff when attacks or uses skills. -->
+		<icon>BranchIcon.Icon.g_bm_costume_nymph</icon>
+		<operateType>A1</operateType>
+		<isMagic>50</isMagic>
+		<reuseDelay>7200000</reuseDelay>
+	</skill>
+	<skill id="59615" toLevel="1" name="Nymph - Lure">
+		<!-- Lures the enemy for 3 sec. -->
+		<icon>BranchIcon.Icon.g_bm_costume_nymph</icon>
+		<operateType>A2</operateType>
+		<isMagic>4</isMagic>
+		<isDebuff>true</isDebuff>
+		<castRange>1200</castRange>
+		<reuseDelay>100000</reuseDelay>
+		<effectPoint>-100</effectPoint>
+	</skill>
+	<skill id="59616" toLevel="1" name="Nymph - Lure">
+		<icon>BranchIcon.Icon.g_bm_costume_nymph</icon>
+		<operateType>A2</operateType>
+		<isMagic>4</isMagic>
+		<isDebuff>true</isDebuff>
+		<castRange>1200</castRange>
+		<reuseDelay>60000</reuseDelay>
+		<effectPoint>-100</effectPoint>
+	</skill>
+	<skill id="59617" toLevel="1" name="Demon">
+		<!-- Mythic transformation. Acquired XP +50%, P./ M. Atk. +20%, P./ M. Critical Damage +15%, Speed +20, PvP Damage +10%, Received PvP Damage -20%. The effect remains after death.\n\n<Special ability>\nEvery 60 sec. when receiving damage the Barrier is activated for 20 sec. In 10 sec. after the Barrier effect is over, activates Inferno that deals 1000 damage to all attacking enemies. -->
+		<icon>BranchIcon.Icon.g_bm_costume_devil</icon>
+		<operateType>A1</operateType>
+		<isMagic>50</isMagic>
+		<reuseDelay>7200000</reuseDelay>
+	</skill>
+	<skill id="59618" toLevel="1" name="Demon - Force Barrier">
+		<!-- All received damage is reduced to 1. -->
+		<icon>BranchIcon.Icon.g_bm_costume_devil</icon>
+		<operateType>A2</operateType>
+		<isMagic>4</isMagic>
+		<reuseDelay>90000</reuseDelay>
+		<effectPoint>20</effectPoint>
+	</skill>
+	<skill id="59619" toLevel="1" name="Demon - Inferno">
+		<!-- Deals 1000 damage to all attacking enemies. -->
+		<icon>BranchIcon.Icon.g_bm_costume_devil</icon>
+		<operateType>A2</operateType>
+		<isMagic>4</isMagic>
+	</skill>
+	<skill id="59620" toLevel="1" name="Demon - Inferno">
+		<icon>BranchIcon.Icon.g_bm_costume_devil</icon>
+		<operateType>A2</operateType>
+		<hitTime>500</hitTime>
+	</skill>
+	<skill id="59631" toLevel="1" name="+8 Weapon Pack (S-grade)">
+		<icon>icon_bm_gold_lure_special_box</icon>
+		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>3000</reuseDelay>
+	</skill>
+	<skill id="59632" toLevel="1" name="+5 Dragon Pendant Chest Lv. 4">
+		<icon>icon.bm_pendant_pve_box</icon>
+		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>3000</reuseDelay>
+	</skill>
+	<skill id="59633" toLevel="1" name="+6 Fire Dragon Pendant Chest">
+		<icon>icon.bm_pendant_pve_box</icon>
+		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>3000</reuseDelay>
+	</skill>
+	<skill id="59634" toLevel="1" name="Dragon Scroll (Event)">
+		<!-- For 20 min., P./ M. Atk. +150, P./ M. Critical Rate +30, Atk. Spd./ Casting Spd. +50, P./ M. Def. +200, Max HP/ MP/ CP +500. The effect remains after death. -->
+		<icon>icon.ev_charge_scroll</icon>
+		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
+		<reuseDelay>60000</reuseDelay>
+		<effectPoint>1</effectPoint>
+	</skill>
+	<skill id="59635" toLevel="9" name="Dimensional Border Power">
+		<!-- P./ M. Atk. +$s1, P./ M. Critical Damage +$s2. -->
+		<icon>icon.skill10030</icon>
+		<operateType>P</operateType>
+		<isMagic>4</isMagic>
+		<reuseDelay>30000</reuseDelay>
+	</skill>
+	<skill id="59636" toLevel="10" name="Dimensional Guard">
+		<!-- For $s1 success rate of attacks targeting the character's vital points -$s2. -->
+		<icon>icon.skill11876</icon>
+		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>180000</reuseDelay>
+		<mpConsume>100</mpConsume>
+	</skill>
+	<skill id="59637" toLevel="1" name="Dimensional Barrier">
+		<!-- For 15 sec., makes you immune to 10 attacks of enemy. -->
+		<icon>icon.skill11621</icon>
+		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>300000</reuseDelay>
+		<mpConsume>200</mpConsume>
+	</skill>
+	<skill id="59638" toLevel="1" name="Blessing Chest">
+		<icon>icon.bm_pendant_pve_box</icon>
+		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>3000</reuseDelay>
+	</skill>
+	<skill id="59639" toLevel="1" name="Aden Supply Box">
+		<icon>icon.bm_pendant_pve_box</icon>
+		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>3000</reuseDelay>
+	</skill>
+	<skill id="59640" toLevel="1" name="Kamael's Gift">
+		<icon>icon.bm_pendant_pve_box</icon>
+		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>3000</reuseDelay>
+	</skill>
+	<skill id="59641" toLevel="1" name="Improved Supply Box">
+		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>1000</reuseDelay>
+	</skill>
+	<skill id="59642" toLevel="1" name="Sealed Samurai Long Sword Pack">
+		<icon>icon.bm_pendant_pve_box</icon>
+		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>3000</reuseDelay>
+	</skill>
+	<skill id="59643" toLevel="1" name="Sealed Mace of Underworld Pack">
+		<icon>icon.bm_pendant_pve_box</icon>
+		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>3000</reuseDelay>
+	</skill>
+	<skill id="59644" toLevel="1" name="Sealed Demon's Staff Pack">
+		<icon>icon.bm_pendant_pve_box</icon>
+		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>3000</reuseDelay>
+	</skill>
+	<skill id="59645" toLevel="1" name="Sealed Crystal Dagger Pack">
+		<icon>icon.bm_pendant_pve_box</icon>
+		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>3000</reuseDelay>
+	</skill>
+	<skill id="59646" toLevel="1" name="Sealed Eminence Bow Pack">
+		<icon>icon.bm_pendant_pve_box</icon>
+		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>3000</reuseDelay>
+	</skill>
+	<skill id="59647" toLevel="1" name="Sealed Orcish Poleaxe Pack">
+		<icon>icon.bm_pendant_pve_box</icon>
+		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>3000</reuseDelay>
+	</skill>
+	<skill id="59648" toLevel="1" name="Sealed Katana*Katana Pack">
+		<icon>icon.bm_pendant_pve_box</icon>
+		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>3000</reuseDelay>
+	</skill>
+	<skill id="59649" toLevel="1" name="Sealed Yaksa Mace Pack">
+		<icon>icon.bm_pendant_pve_box</icon>
+		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>3000</reuseDelay>
+	</skill>
+	<skill id="59650" toLevel="1" name="Sealed Berserker Blade Pack">
+		<icon>icon.bm_pendant_pve_box</icon>
+		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>3000</reuseDelay>
+	</skill>
+	<skill id="59651" toLevel="1" name="Sealed Great Pata Pack">
+		<icon>icon.bm_pendant_pve_box</icon>
+		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>3000</reuseDelay>
+	</skill>
+	<skill id="59652" toLevel="1" name="Sealed Admiral's Estoc Pack">
+		<icon>icon.bm_pendant_pve_box</icon>
+		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>3000</reuseDelay>
+	</skill>
+	<skill id="59653" toLevel="1" name="Sealed Saber Tooth Pack">
+		<icon>icon.bm_pendant_pve_box</icon>
+		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>3000</reuseDelay>
+	</skill>
+	<skill id="59654" toLevel="1" name="Sealed Samurai Long Sword Pack">
+		<icon>icon.bm_pendant_pve_box</icon>
+		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>3000</reuseDelay>
+	</skill>
+	<skill id="59655" toLevel="1" name="Sealed Mace of Underworld Pack">
+		<icon>icon.bm_pendant_pve_box</icon>
+		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>3000</reuseDelay>
+	</skill>
+	<skill id="59656" toLevel="1" name="Sealed Demon's Staff Pack">
+		<icon>icon.bm_pendant_pve_box</icon>
+		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>3000</reuseDelay>
+	</skill>
+	<skill id="59657" toLevel="1" name="Sealed Crystal Dagger Pack">
+		<icon>icon.bm_pendant_pve_box</icon>
+		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>3000</reuseDelay>
+	</skill>
+	<skill id="59658" toLevel="1" name="Sealed Eminence Bow Pack">
+		<icon>icon.bm_pendant_pve_box</icon>
+		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>3000</reuseDelay>
+	</skill>
+	<skill id="59659" toLevel="1" name="Sealed Orcish Poleaxe Pack">
+		<icon>icon.bm_pendant_pve_box</icon>
+		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>3000</reuseDelay>
+	</skill>
+	<skill id="59660" toLevel="1" name="Sealed Katana*Katana Pack">
+		<icon>icon.bm_pendant_pve_box</icon>
+		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>3000</reuseDelay>
+	</skill>
+	<skill id="59661" toLevel="1" name="Sealed Yaksa Mace Pack">
+		<icon>icon.bm_pendant_pve_box</icon>
+		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>3000</reuseDelay>
+	</skill>
+	<skill id="59662" toLevel="1" name="Sealed Berserker Blade Pack">
+		<icon>icon.bm_pendant_pve_box</icon>
+		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>3000</reuseDelay>
+	</skill>
+	<skill id="59663" toLevel="1" name="Sealed Great Pata Pack">
+		<icon>icon.bm_pendant_pve_box</icon>
+		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>3000</reuseDelay>
+	</skill>
+	<skill id="59664" toLevel="1" name="Sealed Admiral's Estoc Pack">
+		<icon>icon.bm_pendant_pve_box</icon>
+		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>3000</reuseDelay>
+	</skill>
+	<skill id="59665" toLevel="1" name="Sealed Saber Tooth Pack">
+		<icon>icon.bm_pendant_pve_box</icon>
+		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>3000</reuseDelay>
+	</skill>
+	<skill id="59666" toLevel="1" name="Sealed Samurai Long Sword Pack">
+		<icon>icon.bm_pendant_pve_box</icon>
+		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>3000</reuseDelay>
+	</skill>
+	<skill id="59667" toLevel="1" name="Sealed Mace of Underworld Pack">
+		<icon>icon.bm_pendant_pve_box</icon>
+		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>3000</reuseDelay>
+	</skill>
+	<skill id="59668" toLevel="1" name="Sealed Demon's Staff Pack">
+		<icon>icon.bm_pendant_pve_box</icon>
+		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>3000</reuseDelay>
+	</skill>
+	<skill id="59669" toLevel="1" name="Sealed Crystal Dagger Pack">
+		<icon>icon.bm_pendant_pve_box</icon>
+		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>3000</reuseDelay>
+	</skill>
+	<skill id="59670" toLevel="1" name="Sealed Eminence Bow Pack">
+		<icon>icon.bm_pendant_pve_box</icon>
+		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>3000</reuseDelay>
+	</skill>
+	<skill id="59671" toLevel="1" name="Sealed Orcish Poleaxe Pack">
+		<icon>icon.bm_pendant_pve_box</icon>
+		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>3000</reuseDelay>
+	</skill>
+	<skill id="59672" toLevel="1" name="Sealed Katana*Katana Pack">
+		<icon>icon.bm_pendant_pve_box</icon>
+		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>3000</reuseDelay>
+	</skill>
+	<skill id="59673" toLevel="1" name="Sealed Yaksa Mace Pack">
+		<icon>icon.bm_pendant_pve_box</icon>
+		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>3000</reuseDelay>
+	</skill>
+	<skill id="59674" toLevel="1" name="Sealed Berserker Blade Pack">
+		<icon>icon.bm_pendant_pve_box</icon>
+		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>3000</reuseDelay>
+	</skill>
+	<skill id="59675" toLevel="1" name="Sealed Great Pata Pack">
+		<icon>icon.bm_pendant_pve_box</icon>
+		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>3000</reuseDelay>
+	</skill>
+	<skill id="59676" toLevel="1" name="Sealed Admiral's Estoc Pack">
+		<icon>icon.bm_pendant_pve_box</icon>
+		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>3000</reuseDelay>
+	</skill>
+	<skill id="59677" toLevel="1" name="Sealed Saber Tooth Pack">
+		<icon>icon.bm_pendant_pve_box</icon>
+		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>3000</reuseDelay>
+	</skill>
+	<skill id="59678" toLevel="1" name="Chronicle Chest">
+		<icon>icon.bm_pendant_pve_box</icon>
+		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>3000</reuseDelay>
+	</skill>
+	<skill id="59679" toLevel="1" name="15th Anniversary Gift Box">
+		<icon>icon.bm_pendant_pve_box</icon>
+		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>3000</reuseDelay>
+	</skill>
+	<skill id="59680" toLevel="1" name="XP Scroll Lv. 1">
+		<!-- XP +20,000. -->
+		<icon>icon.bm_elmoaden_exp_scrl</icon>
+		<operateType>A1</operateType>
+		<reuseDelay>500</reuseDelay>
+	</skill>
+	<skill id="59681" toLevel="1" name="XP Scroll Lv. 2">
+		<!-- XP +4,000,000. -->
+		<icon>icon.bm_elmoaden_exp_scrl</icon>
+		<operateType>A1</operateType>
+		<reuseDelay>500</reuseDelay>
+	</skill>
+	<skill id="59682" toLevel="1" name="XP Scroll Lv. 3">
+		<!-- XP +100,000,000. -->
+		<icon>icon.bm_elmoaden_exp_scrl</icon>
+		<operateType>A1</operateType>
+		<reuseDelay>500</reuseDelay>
+	</skill>
+	<skill id="59683" toLevel="1" name="XP Scroll Lv. 4">
+		<!-- XP +200,000,000. -->
+		<icon>icon.bm_elmoaden_exp_scrl</icon>
+		<operateType>A1</operateType>
+		<reuseDelay>500</reuseDelay>
+	</skill>
+	<skill id="59684" toLevel="1" name="XP Scroll Lv. 5">
+		<!-- XP +200,005,000. -->
+		<icon>icon.bm_elmoaden_exp_scrl</icon>
+		<operateType>A1</operateType>
+		<reuseDelay>500</reuseDelay>
+	</skill>
+	<skill id="59685" toLevel="1" name="XP Scroll Lv. 6">
+		<!-- XP +400,000,000. -->
+		<icon>icon.bm_elmoaden_exp_scrl</icon>
+		<operateType>A1</operateType>
+		<reuseDelay>500</reuseDelay>
+	</skill>
+	<skill id="59687" toLevel="1" name="null">
+		<!-- null -->
+		<icon>icon.power_of_storm</icon>
+		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
+		<reuseDelay>7200000</reuseDelay>
+	</skill>
+</list>

@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org zones.xsd" >
-	<!-- Swamp Zones -->
-	<!-- Sea of Spores (Swamp Zone) -->
-	<zone name="spore_boss_swamp_zone" type="org.l2j.gameserver.world.zone.type.SwampZone" form="Polygon" minZ="-4468" maxZ="-4118"> <!-- [21_18] -->
-		<point x="43084" y="15944" />
-		<point x="45140" y="15816" />
-		<point x="45748" y="17200" />
-		<point x="44504" y="18780" />
-		<point x="43284" y="18952" />
-		<point x="42476" y="18164" />
-		<point x="42480" y="16448" />
-	</zone>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org zones.xsd">
+    <!-- Swamp Zones -->
+    <!-- Sea of Spores (Swamp Zone) -->
+    <zone name="spore_boss_swamp_zone" type="org.l2j.gameserver.world.zone.type.SwampZone" form="Polygon" minZ="-4468" maxZ="-4118"> <!-- [21_18] -->
+        <point x="43084" y="15944"/>
+        <point x="45140" y="15816"/>
+        <point x="45748" y="17200"/>
+        <point x="44504" y="18780"/>
+        <point x="43284" y="18952"/>
+        <point x="42476" y="18164"/>
+        <point x="42480" y="16448"/>
+    </zone>
 </list>

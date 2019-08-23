@@ -10,8 +10,9 @@ import org.l2j.gameserver.model.actor.instance.Monster;
 import org.l2j.gameserver.model.actor.templates.NpcTemplate;
 import org.l2j.gameserver.model.holders.MinionHolder;
 
+import java.util.Collection;
 import java.util.List;
-import java.util.concurrent.CopyOnWriteArrayList;
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ScheduledFuture;
 
 /**
@@ -19,8 +20,8 @@ import java.util.concurrent.ScheduledFuture;
  */
 public class MinionList {
     protected final Monster _master;
-    private final List<Monster> _spawnedMinions = new CopyOnWriteArrayList<>();
-    private final List<ScheduledFuture<?>> _respawnTasks = new CopyOnWriteArrayList<>();
+    private final Collection<Monster> _spawnedMinions = ConcurrentHashMap.newKeySet();
+    private final Collection<ScheduledFuture<?>> _respawnTasks = ConcurrentHashMap.newKeySet();
 
     public MinionList(Monster pMaster) {
         if (pMaster == null) {
@@ -96,7 +97,7 @@ public class MinionList {
     /**
      * @return list of the spawned (alive) minions.
      */
-    public List<Monster> getSpawnedMinions() {
+    public Collection<Monster> getSpawnedMinions() {
         return _spawnedMinions;
     }
 

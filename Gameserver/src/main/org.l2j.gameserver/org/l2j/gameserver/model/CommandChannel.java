@@ -9,9 +9,10 @@ import org.l2j.gameserver.network.serverpackets.ExMPCCPartyInfoUpdate;
 import org.l2j.gameserver.network.serverpackets.ExOpenMPCC;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
 
+import java.util.Collection;
 import java.util.LinkedList;
 import java.util.List;
-import java.util.concurrent.CopyOnWriteArrayList;
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.function.Function;
 
 import static org.l2j.gameserver.util.GameUtils.isCreature;
@@ -22,7 +23,7 @@ import static org.l2j.gameserver.util.GameUtils.isCreature;
  * @author chris_00
  */
 public class CommandChannel extends AbstractPlayerGroup {
-    private final List<Party> _parties = new CopyOnWriteArrayList<>();
+    private final Collection<Party> _parties = ConcurrentHashMap.newKeySet();
     private Player _commandLeader;
     private int _channelLvl;
 
@@ -121,7 +122,7 @@ public class CommandChannel extends AbstractPlayerGroup {
     /**
      * @return a list of all parties in this command channel
      */
-    public List<Party> getPartys() {
+    public Collection<Party> getPartys() {
         return _parties;
     }
 

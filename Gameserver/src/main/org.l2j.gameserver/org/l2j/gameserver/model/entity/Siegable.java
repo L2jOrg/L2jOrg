@@ -32,7 +32,7 @@ public interface Siegable {
 
     SiegeClan getDefenderClan(Clan clan);
 
-    List<SiegeClan> getDefenderClans();
+    Collection<SiegeClan> getDefenderClans();
 
     boolean checkIsDefender(Clan clan);
 

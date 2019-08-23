@@ -5,7 +5,6 @@ import io.github.joealisson.primitive.IntMap;
 import org.l2j.gameserver.enums.Race;
 import org.l2j.gameserver.model.interfaces.IIdentifiable;
 
-import java.util.EnumMap;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -126,11 +125,11 @@ public enum ClassId implements IIdentifiable {
     FORTUNE_SEEKER(117, false, Race.DWARF, BOUNTY_HUNTER),
     MAESTRO(118, false, Race.DWARF, WARSMITH),
 
-    KAMAEL_SOLDIER(192, false, Race.JIN_KAMAEL, null),
+    JIN_KAMAEL_SOLDIER(192, false, Race.JIN_KAMAEL, null),
 
-    TROOPER(193, false, Race.JIN_KAMAEL, KAMAEL_SOLDIER),
-    SOUL_FINDER(194, false, Race.JIN_KAMAEL, KAMAEL_SOLDIER),
-    WARDEN(195, false, Race.JIN_KAMAEL, KAMAEL_SOLDIER),
+    TROOPER(193, false, Race.JIN_KAMAEL, JIN_KAMAEL_SOLDIER),
+    SOUL_FINDER(194, false, Race.JIN_KAMAEL, JIN_KAMAEL_SOLDIER),
+    WARDEN(195, false, Race.JIN_KAMAEL, JIN_KAMAEL_SOLDIER),
 
     BERSERKER(196, false, Race.JIN_KAMAEL, TROOPER),
     SOUL_BREAKER(197, false, Race.JIN_KAMAEL, SOUL_FINDER),

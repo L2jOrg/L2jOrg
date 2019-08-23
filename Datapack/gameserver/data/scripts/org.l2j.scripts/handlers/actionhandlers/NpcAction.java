@@ -41,23 +41,23 @@ public class NpcAction implements IActionHandler
 	 * <BR>
 	 * <li>Client packet : Action, AttackRequest</li><BR>
 	 * <BR>
-	 * @param activeChar The Player that start an action on the Npc
+	 * @param player The Player that start an action on the Npc
 	 */
 	@Override
-	public boolean action(Player activeChar, WorldObject target, boolean interact)
+	public boolean action(Player player, WorldObject target, boolean interact)
 	{
-		if (!((Npc) target).canTarget(activeChar))
+		if (!((Npc) target).canTarget(player))
 		{
 			return false;
 		}
-		activeChar.setLastFolkNPC((Npc) target);
+		player.setLastFolkNPC((Npc) target);
 		// Check if the Player already target the Npc
-		if (target != activeChar.getTarget())
+		if (target != player.getTarget())
 		{
 			// Set the target of the Player activeChar
-			activeChar.setTarget(target);
+			player.setTarget(target);
 			// Check if the activeChar is attackable (without a forced attack)
-			if (target.isAutoAttackable(activeChar))
+			if (target.isAutoAttackable(player))
 			{
 				((Npc) target).getAI(); // wake up ai
 			}
@@ -65,63 +65,69 @@ public class NpcAction implements IActionHandler
 		else if (interact)
 		{
 			// Check if the activeChar is attackable (without a forced attack) and isn't dead
-			if (target.isAutoAttackable(activeChar) && !((Creature) target).isAlikeDead())
+			if (target.isAutoAttackable(player) && !((Creature) target).isAlikeDead())
 			{
 				// Check if target is in LoS
-				if (GeoEngine.getInstance().canSeeTarget(activeChar, target))
+				if (GeoEngine.getInstance().canSeeTarget(player, target))
 				{
 					// Set the Player Intention to AI_INTENTION_ATTACK
-					activeChar.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, target);
+					player.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, target);
 				}
 				else
 				{
 					// Send a Server->Client ActionFailed to the Player in order to avoid that the client wait another packet
-					activeChar.sendPacket(ActionFailed.STATIC_PACKET);
+					player.sendPacket(ActionFailed.STATIC_PACKET);
 				}
 			}
-			else if (!target.isAutoAttackable(activeChar))
+			else if (!target.isAutoAttackable(player))
 			{
 				// Calculate the distance between the Player and the Npc
-				if (!((Npc) target).canInteract(activeChar))
+				if (!((Npc) target).canInteract(player))
 				{
 					// Notify the Player AI with AI_INTENTION_INTERACT
-					activeChar.getAI().setIntention(CtrlIntention.AI_INTENTION_INTERACT, target);
+					player.getAI().setIntention(CtrlIntention.AI_INTENTION_INTERACT, target);
 				}
 				else
 				{
 					final Npc npc = (Npc) target;
-					if (!activeChar.isSitting()) // Needed for Mystic Tavern Globe
+					if (!player.isSitting()) // Needed for Mystic Tavern Globe
 					{
 						// Turn NPC to the player.
-						activeChar.sendPacket(new MoveToPawn(activeChar, npc, 100));
+						player.sendPacket(new MoveToPawn(player, npc, 100));
 						if (npc.hasRandomAnimation())
 						{
 							npc.onRandomAnimation(Rnd.get(8));
 						}
 					}
+
+					if (npc.isMoving())
+					{
+						player.stopMove(null);
+					}
+
 					// Open a chat window on client with the text of the Npc
 					if (npc.getVariables().getBoolean("eventmob", false))
 					{
-						Event.showEventHtml(activeChar, String.valueOf(target.getObjectId()));
+						Event.showEventHtml(player, String.valueOf(target.getObjectId()));
 					}
 					else
 					{
 						if (npc.hasListener(EventType.ON_NPC_QUEST_START))
 						{
-							activeChar.setLastQuestNpcObject(target.getObjectId());
+							player.setLastQuestNpcObject(target.getObjectId());
 						}
 						if (npc.hasListener(EventType.ON_NPC_FIRST_TALK))
 						{
-							EventDispatcher.getInstance().notifyEventAsync(new OnNpcFirstTalk(npc, activeChar), npc);
+							EventDispatcher.getInstance().notifyEventAsync(new OnNpcFirstTalk(npc, player), npc);
 						}
 						else
 						{
-							npc.showChatWindow(activeChar);
+							npc.showChatWindow(player);
 						}
 					}
 					if (Config.PLAYER_MOVEMENT_BLOCK_TIME > 0)
 					{
-						activeChar.updateNotMoveUntil();
+						player.updateNotMoveUntil();
 					}
 				}
 			}

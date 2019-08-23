@@ -1,1229 +1,1229 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org npcs.xsd">
-	<npc id="18200" level="85" type="Monster" name="Charm of Corner">
-		<race>ETC</race>
-		<sex>MALE</sex>
-		<acquire exp="4019412" sp="60291" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="20711.616756" hpRegen="8.5" mp="3020.505" mpRegen="3" />
-			<attack physical="1188.872595" magical="811.845865" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="361.78814" magical="264.74086" />
-			<speed>
-				<walk ground="1" />
-				<run ground="1" />
-			</speed>
-		</stats>
-		<status attackable="true" />
-		<collision>
-			<radius normal="15" />
-			<height normal="75" />
-		</collision>
-		<skillList>
-			<skill id="4416" level="2" /> <!-- Magical Creatures -->
-			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
-			<skill id="4412" level="20" /> <!-- Extremely Strong P. Def. -->
-			<skill id="4413" level="20" /> <!-- Extremely Strong M. Def. -->
-			<skill id="4436" level="5" /> <!-- Greater Poison Resistance -->
-			<skill id="4437" level="5" /> <!-- Greater Bleed Resistance -->
-		</skillList>
-	</npc>
-	<npc id="18201" level="85" type="Monster" name="Charm of Corner">
-		<race>ETC</race>
-		<sex>MALE</sex>
-		<acquire exp="4019412" sp="60291" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="20711.616756" hpRegen="8.5" mp="3020.505" mpRegen="3" />
-			<attack physical="1188.872595" magical="811.845865" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="361.78814" magical="264.74086" />
-			<speed>
-				<walk ground="1" />
-				<run ground="1" />
-			</speed>
-		</stats>
-		<status attackable="true" />
-		<collision>
-			<radius normal="15" />
-			<height normal="75" />
-		</collision>
-		<skillList>
-			<skill id="4416" level="2" /> <!-- Magical Creatures -->
-			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
-			<skill id="4412" level="20" /> <!-- Extremely Strong P. Def. -->
-			<skill id="4413" level="20" /> <!-- Extremely Strong M. Def. -->
-			<skill id="4436" level="5" /> <!-- Greater Poison Resistance -->
-			<skill id="4437" level="5" /> <!-- Greater Bleed Resistance -->
-		</skillList>
-	</npc>
-	<npc id="18202" level="85" type="Monster" name="Charm of Corner">
-		<race>ETC</race>
-		<sex>MALE</sex>
-		<acquire exp="4019412" sp="60291" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="20711.616756" hpRegen="8.5" mp="3020.505" mpRegen="3" />
-			<attack physical="1188.872595" magical="811.845865" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="361.78814" magical="264.74086" />
-			<speed>
-				<walk ground="1" />
-				<run ground="1" />
-			</speed>
-		</stats>
-		<status attackable="true" />
-		<collision>
-			<radius normal="15" />
-			<height normal="75" />
-		</collision>
-		<skillList>
-			<skill id="4416" level="2" /> <!-- Magical Creatures -->
-			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
-			<skill id="4412" level="20" /> <!-- Extremely Strong P. Def. -->
-			<skill id="4413" level="20" /> <!-- Extremely Strong M. Def. -->
-			<skill id="4436" level="5" /> <!-- Greater Poison Resistance -->
-			<skill id="4437" level="5" /> <!-- Greater Bleed Resistance -->
-		</skillList>
-	</npc>
-	<npc id="18203" level="85" type="Monster" name="Charm of Corner">
-		<race>ETC</race>
-		<sex>MALE</sex>
-		<acquire exp="4019412" sp="60291" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="20711.616756" hpRegen="8.5" mp="3020.505" mpRegen="3" />
-			<attack physical="1188.872595" magical="811.845865" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="361.78814" magical="264.74086" />
-			<speed>
-				<walk ground="1" />
-				<run ground="1" />
-			</speed>
-		</stats>
-		<status attackable="true" />
-		<collision>
-			<radius normal="15" />
-			<height normal="75" />
-		</collision>
-		<skillList>
-			<skill id="4416" level="2" /> <!-- Magical Creatures -->
-			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
-			<skill id="4412" level="20" /> <!-- Extremely Strong P. Def. -->
-			<skill id="4413" level="20" /> <!-- Extremely Strong M. Def. -->
-			<skill id="4436" level="5" /> <!-- Greater Poison Resistance -->
-			<skill id="4437" level="5" /> <!-- Greater Bleed Resistance -->
-		</skillList>
-	</npc>
-	<npc id="18204" level="85" type="Monster" name="Charm of Corner">
-		<race>ETC</race>
-		<sex>MALE</sex>
-		<acquire exp="4019412" sp="60291" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="20711.616756" hpRegen="8.5" mp="3020.505" mpRegen="3" />
-			<attack physical="1188.872595" magical="811.845865" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="361.78814" magical="264.74086" />
-			<speed>
-				<walk ground="1" />
-				<run ground="1" />
-			</speed>
-		</stats>
-		<status attackable="true" />
-		<collision>
-			<radius normal="15" />
-			<height normal="75" />
-		</collision>
-		<skillList>
-			<skill id="4416" level="2" /> <!-- Magical Creatures -->
-			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
-			<skill id="4412" level="20" /> <!-- Extremely Strong P. Def. -->
-			<skill id="4413" level="20" /> <!-- Extremely Strong M. Def. -->
-			<skill id="4436" level="5" /> <!-- Greater Poison Resistance -->
-			<skill id="4437" level="5" /> <!-- Greater Bleed Resistance -->
-		</skillList>
-	</npc>
-	<npc id="18205" level="85" type="Monster" name="Charm of Corner">
-		<race>ETC</race>
-		<sex>MALE</sex>
-		<acquire exp="4019412" sp="60291" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="20711.616756" hpRegen="8.5" mp="3020.505" mpRegen="3" />
-			<attack physical="1188.872595" magical="811.845865" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="361.78814" magical="264.74086" />
-			<speed>
-				<walk ground="1" />
-				<run ground="1" />
-			</speed>
-		</stats>
-		<status attackable="true" />
-		<collision>
-			<radius normal="15" />
-			<height normal="75" />
-		</collision>
-		<skillList>
-			<skill id="4416" level="2" /> <!-- Magical Creatures -->
-			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
-			<skill id="4412" level="20" /> <!-- Extremely Strong P. Def. -->
-			<skill id="4413" level="20" /> <!-- Extremely Strong M. Def. -->
-			<skill id="4436" level="5" /> <!-- Greater Poison Resistance -->
-			<skill id="4437" level="5" /> <!-- Greater Bleed Resistance -->
-		</skillList>
-	</npc>
-	<npc id="18206" level="85" type="Monster" name="Charm of Corner">
-		<race>ETC</race>
-		<sex>MALE</sex>
-		<acquire exp="4019412" sp="60291" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="20711.616756" hpRegen="8.5" mp="3020.505" mpRegen="3" />
-			<attack physical="1188.872595" magical="811.845865" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="361.78814" magical="264.74086" />
-			<speed>
-				<walk ground="1" />
-				<run ground="1" />
-			</speed>
-		</stats>
-		<status attackable="true" />
-		<collision>
-			<radius normal="15" />
-			<height normal="75" />
-		</collision>
-		<skillList>
-			<skill id="4416" level="2" /> <!-- Magical Creatures -->
-			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
-			<skill id="4412" level="20" /> <!-- Extremely Strong P. Def. -->
-			<skill id="4413" level="20" /> <!-- Extremely Strong M. Def. -->
-			<skill id="4436" level="5" /> <!-- Greater Poison Resistance -->
-			<skill id="4437" level="5" /> <!-- Greater Bleed Resistance -->
-		</skillList>
-	</npc>
-	<npc id="18207" level="85" type="Monster" name="Charm of Corner">
-		<race>ETC</race>
-		<sex>MALE</sex>
-		<acquire exp="4019412" sp="60291" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="20711.616756" hpRegen="8.5" mp="3020.505" mpRegen="3" />
-			<attack physical="1188.872595" magical="811.845865" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="361.78814" magical="264.74086" />
-			<speed>
-				<walk ground="1" />
-				<run ground="1" />
-			</speed>
-		</stats>
-		<status attackable="true" />
-		<collision>
-			<radius normal="15" />
-			<height normal="75" />
-		</collision>
-		<skillList>
-			<skill id="4416" level="2" /> <!-- Magical Creatures -->
-			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
-			<skill id="4412" level="20" /> <!-- Extremely Strong P. Def. -->
-			<skill id="4413" level="20" /> <!-- Extremely Strong M. Def. -->
-			<skill id="4436" level="5" /> <!-- Greater Poison Resistance -->
-			<skill id="4437" level="5" /> <!-- Greater Bleed Resistance -->
-		</skillList>
-	</npc>
-	<npc id="18208" level="85" type="Monster" name="Charm of Corner">
-		<race>ETC</race>
-		<sex>MALE</sex>
-		<acquire exp="4019412" sp="60291" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="20711.616756" hpRegen="8.5" mp="3020.505" mpRegen="3" />
-			<attack physical="1188.872595" magical="811.845865" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="361.78814" magical="264.74086" />
-			<speed>
-				<walk ground="1" />
-				<run ground="1" />
-			</speed>
-		</stats>
-		<status attackable="true" />
-		<collision>
-			<radius normal="15" />
-			<height normal="75" />
-		</collision>
-		<skillList>
-			<skill id="4416" level="2" /> <!-- Magical Creatures -->
-			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
-			<skill id="4412" level="20" /> <!-- Extremely Strong P. Def. -->
-			<skill id="4413" level="20" /> <!-- Extremely Strong M. Def. -->
-			<skill id="4436" level="5" /> <!-- Greater Poison Resistance -->
-			<skill id="4437" level="5" /> <!-- Greater Bleed Resistance -->
-		</skillList>
-	</npc>
-	<npc id="18209" level="85" type="Monster" name="Charm of Corner">
-		<race>ETC</race>
-		<sex>MALE</sex>
-		<acquire exp="4019412" sp="60291" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="20711.616756" hpRegen="8.5" mp="3020.505" mpRegen="3" />
-			<attack physical="1188.872595" magical="811.845865" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="361.78814" magical="264.74086" />
-			<speed>
-				<walk ground="1" />
-				<run ground="1" />
-			</speed>
-		</stats>
-		<status attackable="true" />
-		<collision>
-			<radius normal="15" />
-			<height normal="75" />
-		</collision>
-		<skillList>
-			<skill id="4416" level="2" /> <!-- Magical Creatures -->
-			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
-			<skill id="4412" level="20" /> <!-- Extremely Strong P. Def. -->
-			<skill id="4413" level="20" /> <!-- Extremely Strong M. Def. -->
-			<skill id="4436" level="5" /> <!-- Greater Poison Resistance -->
-			<skill id="4437" level="5" /> <!-- Greater Bleed Resistance -->
-		</skillList>
-	</npc>
-	<npc id="18210" level="85" type="Monster" name="Charm of Corner">
-		<race>ETC</race>
-		<sex>MALE</sex>
-		<acquire exp="4019412" sp="60291" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="20711.616756" hpRegen="8.5" mp="3020.505" mpRegen="3" />
-			<attack physical="1188.872595" magical="811.845865" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="361.78814" magical="264.74086" />
-			<speed>
-				<walk ground="1" />
-				<run ground="1" />
-			</speed>
-		</stats>
-		<status attackable="true" />
-		<collision>
-			<radius normal="15" />
-			<height normal="75" />
-		</collision>
-		<skillList>
-			<skill id="4416" level="2" /> <!-- Magical Creatures -->
-			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
-			<skill id="4412" level="20" /> <!-- Extremely Strong P. Def. -->
-			<skill id="4413" level="20" /> <!-- Extremely Strong M. Def. -->
-			<skill id="4436" level="5" /> <!-- Greater Poison Resistance -->
-			<skill id="4437" level="5" /> <!-- Greater Bleed Resistance -->
-		</skillList>
-	</npc>
-	<npc id="18211" level="85" type="Monster" name="Charm of Corner">
-		<race>ETC</race>
-		<sex>MALE</sex>
-		<acquire exp="4019412" sp="60291" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="20711.616756" hpRegen="8.5" mp="3020.505" mpRegen="3" />
-			<attack physical="1188.872595" magical="811.845865" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="361.78814" magical="264.74086" />
-			<speed>
-				<walk ground="1" />
-				<run ground="1" />
-			</speed>
-		</stats>
-		<status attackable="true" />
-		<collision>
-			<radius normal="15" />
-			<height normal="75" />
-		</collision>
-		<skillList>
-			<skill id="4416" level="2" /> <!-- Magical Creatures -->
-			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
-			<skill id="4412" level="20" /> <!-- Extremely Strong P. Def. -->
-			<skill id="4413" level="20" /> <!-- Extremely Strong M. Def. -->
-			<skill id="4436" level="5" /> <!-- Greater Poison Resistance -->
-			<skill id="4437" level="5" /> <!-- Greater Bleed Resistance -->
-		</skillList>
-	</npc>
-	<npc id="18212" level="80" type="Folk" name="Halisha's Archon">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<equipment rhand="6722" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
-			<speed>
-				<walk ground="35" />
-				<run ground="185" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="14" />
-			<height normal="57.75" />
-		</collision>
-	</npc>
-	<npc id="18213" level="80" type="Folk" name="Halisha's Archon">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<equipment rhand="6722" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
-			<speed>
-				<walk ground="35" />
-				<run ground="185" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="14" />
-			<height normal="57.75" />
-		</collision>
-	</npc>
-	<npc id="18214" level="80" type="Folk" name="Halisha's Archon">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<equipment rhand="6722" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
-			<speed>
-				<walk ground="35" />
-				<run ground="185" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="14" />
-			<height normal="57.75" />
-		</collision>
-	</npc>
-	<npc id="18215" level="80" type="Folk" name="Halisha's Archon">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<equipment rhand="6722" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
-			<speed>
-				<walk ground="35" />
-				<run ground="185" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="14" />
-			<height normal="57.75" />
-		</collision>
-	</npc>
-	<npc id="18216" level="80" type="Folk" name="Halisha's Archon">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<equipment rhand="6722" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
-			<speed>
-				<walk ground="35" />
-				<run ground="185" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="14" />
-			<height normal="57.75" />
-		</collision>
-	</npc>
-	<npc id="18217" level="80" type="Folk" name="Halisha's Archon">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<equipment rhand="6722" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
-			<speed>
-				<walk ground="35" />
-				<run ground="185" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="14" />
-			<height normal="57.75" />
-		</collision>
-	</npc>
-	<npc id="18218" level="80" type="Folk" name="Halisha's Archon">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<equipment rhand="6722" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
-			<speed>
-				<walk ground="35" />
-				<run ground="185" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="14" />
-			<height normal="57.75" />
-		</collision>
-	</npc>
-	<npc id="18219" level="80" type="Folk" name="Halisha's Archon">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<equipment rhand="6722" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
-			<speed>
-				<walk ground="35" />
-				<run ground="185" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="14" />
-			<height normal="57.75" />
-		</collision>
-	</npc>
-	<npc id="18220" level="80" type="Folk" name="Shaman of Darkness">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<equipment rhand="3939" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
-			<speed>
-				<walk ground="80" />
-				<run ground="160" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="9" />
-			<height normal="23" />
-		</collision>
-	</npc>
-	<npc id="18221" level="80" type="Folk" name="Shaman of Darkness">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<equipment rhand="3939" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
-			<speed>
-				<walk ground="80" />
-				<run ground="160" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="9" />
-			<height normal="23" />
-		</collision>
-	</npc>
-	<npc id="18222" level="80" type="Folk" name="Assassin of Darkness">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
-			<speed>
-				<walk ground="41" />
-				<run ground="190" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="13" />
-			<height normal="37.5" />
-		</collision>
-	</npc>
-	<npc id="18223" level="80" type="Folk" name="Assassin of Darkness">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
-			<speed>
-				<walk ground="41" />
-				<run ground="190" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="13" />
-			<height normal="37.5" />
-		</collision>
-	</npc>
-	<npc id="18224" level="80" type="Folk" name="Assassin of Darkness">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
-			<speed>
-				<walk ground="41" />
-				<run ground="190" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="13" />
-			<height normal="37.5" />
-		</collision>
-	</npc>
-	<npc id="18225" level="80" type="Folk" name="Assassin of Darkness">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
-			<speed>
-				<walk ground="41" />
-				<run ground="190" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="13" />
-			<height normal="37.5" />
-		</collision>
-	</npc>
-	<npc id="18226" level="85" type="Monster" name="Caster of Darkness">
-		<race>DEMONIC</race>
-		<sex>MALE</sex>
-		<acquire exp="2979228" sp="44688" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="21574.6007875" hpRegen="8.5" mp="3020.505" mpRegen="3" />
-			<attack physical="1188.872595" magical="811.845865" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="361.78814" magical="264.74086" />
-			<speed>
-				<walk ground="70" />
-				<run ground="155" />
-			</speed>
-		</stats>
-		<status attackable="true" />
-		<collision>
-			<radius normal="12" />
-			<height normal="40" />
-		</collision>
-		<skillList>
-			<skill id="4416" level="9" /> <!-- Demons -->
-			<skill id="4408" level="13" /> <!-- HP Increase (5x) -->
-			<skill id="4411" level="19" /> <!-- Extremely Strong M. Atk. -->
-			<skill id="4413" level="19" /> <!-- Extremely Strong M. Def. -->
-		</skillList>
-	</npc>
-	<npc id="18227" level="85" type="Monster" name="Caster of Darkness">
-		<race>DEMONIC</race>
-		<sex>MALE</sex>
-		<acquire exp="2979228" sp="44688" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="21574.6007875" hpRegen="8.5" mp="3020.505" mpRegen="3" />
-			<attack physical="1188.872595" magical="811.845865" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="361.78814" magical="264.74086" />
-			<speed>
-				<walk ground="70" />
-				<run ground="155" />
-			</speed>
-		</stats>
-		<status attackable="true" />
-		<collision>
-			<radius normal="12" />
-			<height normal="40" />
-		</collision>
-		<skillList>
-			<skill id="4416" level="9" /> <!-- Demons -->
-			<skill id="4408" level="13" /> <!-- HP Increase (5x) -->
-			<skill id="4411" level="19" /> <!-- Extremely Strong M. Atk. -->
-			<skill id="4413" level="19" /> <!-- Extremely Strong M. Def. -->
-		</skillList>
-	</npc>
-	<npc id="18228" level="85" type="Monster" name="Caster of Darkness">
-		<race>DEMONIC</race>
-		<sex>MALE</sex>
-		<acquire exp="2979228" sp="44688" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="21574.6007875" hpRegen="8.5" mp="3020.505" mpRegen="3" />
-			<attack physical="1188.872595" magical="811.845865" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="361.78814" magical="264.74086" />
-			<speed>
-				<walk ground="70" />
-				<run ground="155" />
-			</speed>
-		</stats>
-		<status attackable="true" />
-		<collision>
-			<radius normal="12" />
-			<height normal="40" />
-		</collision>
-		<skillList>
-			<skill id="4416" level="9" /> <!-- Demons -->
-			<skill id="4408" level="13" /> <!-- HP Increase (5x) -->
-			<skill id="4411" level="19" /> <!-- Extremely Strong M. Atk. -->
-			<skill id="4413" level="19" /> <!-- Extremely Strong M. Def. -->
-		</skillList>
-	</npc>
-	<npc id="18229" level="85" type="Monster" name="Caster of Darkness">
-		<race>DEMONIC</race>
-		<sex>MALE</sex>
-		<acquire exp="2979228" sp="44688" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="21574.6007875" hpRegen="8.5" mp="3020.505" mpRegen="3" />
-			<attack physical="1188.872595" magical="811.845865" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="361.78814" magical="264.74086" />
-			<speed>
-				<walk ground="70" />
-				<run ground="155" />
-			</speed>
-		</stats>
-		<status attackable="true" />
-		<collision>
-			<radius normal="12" />
-			<height normal="40" />
-		</collision>
-		<skillList>
-			<skill id="4416" level="9" /> <!-- Demons -->
-			<skill id="4408" level="13" /> <!-- HP Increase (5x) -->
-			<skill id="4411" level="19" /> <!-- Extremely Strong M. Atk. -->
-			<skill id="4413" level="19" /> <!-- Extremely Strong M. Def. -->
-		</skillList>
-	</npc>
-	<npc id="18230" level="80" type="Folk" name="Signet of Emperor">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
-			<speed>
-				<walk ground="40" />
-				<run ground="60" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="12" />
-			<height normal="8" />
-		</collision>
-	</npc>
-	<npc id="18231" level="80" type="Folk" name="Statue of Protection">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<equipment rhand="5795" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
-			<speed>
-				<walk ground="53" />
-				<run ground="140" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="15" />
-			<height normal="42" />
-		</collision>
-	</npc>
-	<npc id="18232" level="80" type="Folk" name="Statue of Protection">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<equipment rhand="5795" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
-			<speed>
-				<walk ground="53" />
-				<run ground="140" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="15" />
-			<height normal="42" />
-		</collision>
-	</npc>
-	<npc id="18233" level="80" type="Folk" name="Statue of Protection">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<equipment rhand="5795" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
-			<speed>
-				<walk ground="53" />
-				<run ground="140" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="15" />
-			<height normal="42" />
-		</collision>
-	</npc>
-	<npc id="18234" level="80" type="Folk" name="Statue of Protection">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<equipment rhand="5795" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
-			<speed>
-				<walk ground="53" />
-				<run ground="140" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="15" />
-			<height normal="42" />
-		</collision>
-	</npc>
-	<npc id="18235" level="80" type="Folk" name="Statue of Protection">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<equipment rhand="5795" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
-			<speed>
-				<walk ground="53" />
-				<run ground="140" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="15" />
-			<height normal="42" />
-		</collision>
-	</npc>
-	<npc id="18236" level="80" type="Folk" name="Statue of Protection">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<equipment rhand="5795" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
-			<speed>
-				<walk ground="53" />
-				<run ground="140" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="15" />
-			<height normal="42" />
-		</collision>
-	</npc>
-	<npc id="18237" level="80" type="Folk" name="Statue of Protection">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<equipment rhand="5795" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
-			<speed>
-				<walk ground="53" />
-				<run ground="140" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="15" />
-			<height normal="42" />
-		</collision>
-	</npc>
-	<npc id="18238" level="80" type="Folk" name="Statue of Protection">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<equipment rhand="5795" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
-			<speed>
-				<walk ground="53" />
-				<run ground="140" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="15" />
-			<height normal="42" />
-		</collision>
-	</npc>
-	<npc id="18239" level="80" type="Folk" name="Statue of Protection">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<equipment rhand="5795" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
-			<speed>
-				<walk ground="53" />
-				<run ground="140" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="15" />
-			<height normal="42" />
-		</collision>
-	</npc>
-	<npc id="18240" level="80" type="Folk" name="Statue of Protection">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<equipment rhand="5795" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
-			<speed>
-				<walk ground="53" />
-				<run ground="140" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="15" />
-			<height normal="42" />
-		</collision>
-	</npc>
-	<npc id="18241" level="80" type="Folk" name="Statue of Protection">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<equipment rhand="5795" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
-			<speed>
-				<walk ground="53" />
-				<run ground="140" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="15" />
-			<height normal="42" />
-		</collision>
-	</npc>
-	<npc id="18242" level="80" type="Folk" name="Statue of Protection">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<equipment rhand="5795" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
-			<speed>
-				<walk ground="53" />
-				<run ground="140" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="15" />
-			<height normal="42" />
-		</collision>
-	</npc>
-	<npc id="18243" level="80" type="Folk" name="Statue of Protection">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<equipment rhand="5795" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
-			<speed>
-				<walk ground="53" />
-				<run ground="140" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="15" />
-			<height normal="42" />
-		</collision>
-	</npc>
-	<npc id="18244" level="80" type="Folk" name="Watchman of Grave">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
-			<speed>
-				<walk ground="90" />
-				<run ground="1" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="11" />
-			<height normal="20" />
-		</collision>
-	</npc>
-	<npc id="18245" level="80" type="Folk" name="Watchman of Grave">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
-			<speed>
-				<walk ground="90" />
-				<run ground="1" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="11" />
-			<height normal="20" />
-		</collision>
-	</npc>
-	<npc id="18246" level="80" type="Folk" name="Watchman of Grave">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
-			<speed>
-				<walk ground="90" />
-				<run ground="1" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="11" />
-			<height normal="20" />
-		</collision>
-	</npc>
-	<npc id="18247" level="80" type="Folk" name="Watchman of Grave">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
-			<speed>
-				<walk ground="90" />
-				<run ground="1" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="11" />
-			<height normal="20" />
-		</collision>
-	</npc>
-	<npc id="18248" level="80" type="Folk" name="Watchman of Grave">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
-			<speed>
-				<walk ground="90" />
-				<run ground="1" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="11" />
-			<height normal="20" />
-		</collision>
-	</npc>
-	<npc id="18249" level="80" type="Folk" name="Watchman of Grave">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
-			<speed>
-				<walk ground="90" />
-				<run ground="1" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="11" />
-			<height normal="20" />
-		</collision>
-	</npc>
-	<npc id="18250" level="80" type="Folk" name="Watchman of Grave">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
-			<speed>
-				<walk ground="90" />
-				<run ground="1" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="11" />
-			<height normal="20" />
-		</collision>
-	</npc>
-	<npc id="18251" level="80" type="Folk" name="Watchman of Grave">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
-			<speed>
-				<walk ground="90" />
-				<run ground="1" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="11" />
-			<height normal="20" />
-		</collision>
-	</npc>
-	<npc id="18252" level="80" type="Folk" name="Watchman of Grave">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
-			<speed>
-				<walk ground="90" />
-				<run ground="1" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="11" />
-			<height normal="20" />
-		</collision>
-	</npc>
-	<npc id="18253" level="80" type="Folk" name="Watchman of Grave">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
-			<speed>
-				<walk ground="90" />
-				<run ground="1" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="11" />
-			<height normal="20" />
-		</collision>
-	</npc>
-	<npc id="18254" level="80" type="Folk" name="Watchman of Grave">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
-			<speed>
-				<walk ground="90" />
-				<run ground="1" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="11" />
-			<height normal="20" />
-		</collision>
-	</npc>
-	<npc id="18255" level="80" type="Folk" name="Watchman of Grave">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
-			<speed>
-				<walk ground="90" />
-				<run ground="1" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="11" />
-			<height normal="20" />
-		</collision>
-	</npc>
-	<npc id="18256" level="80" type="Folk" name="Halisha's Treasure Chest">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="1" hpRegen="10.5" mp="1" mpRegen="3.6" />
-			<speed>
-				<walk ground="80" />
-				<run ground="1" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="8.5" />
-			<height normal="8.5" />
-		</collision>
-	</npc>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org npcs.xsd">
+    <npc id="18200" level="85" type="Monster" name="Charm of Corner">
+        <race>ETC</race>
+        <sex>MALE</sex>
+        <acquire exp="4019412" sp="60291"/>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="20711.616756" hpRegen="8.5" mp="3020.505" mpRegen="3"/>
+            <attack physical="1188.872595" magical="811.845865" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120"/>
+            <defence physical="361.78814" magical="264.74086"/>
+            <speed>
+                <walk ground="1"/>
+                <run ground="1"/>
+            </speed>
+        </stats>
+        <status attackable="true"/>
+        <collision>
+            <radius normal="15"/>
+            <height normal="75"/>
+        </collision>
+        <skillList>
+            <skill id="4416" level="2"/> <!-- Magical Creatures -->
+            <skill id="4408" level="14"/> <!-- HP Increase (6x) -->
+            <skill id="4412" level="20"/> <!-- Extremely Strong P. Def. -->
+            <skill id="4413" level="20"/> <!-- Extremely Strong M. Def. -->
+            <skill id="4436" level="5"/> <!-- Greater Poison Resistance -->
+            <skill id="4437" level="5"/> <!-- Greater Bleed Resistance -->
+        </skillList>
+    </npc>
+    <npc id="18201" level="85" type="Monster" name="Charm of Corner">
+        <race>ETC</race>
+        <sex>MALE</sex>
+        <acquire exp="4019412" sp="60291"/>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="20711.616756" hpRegen="8.5" mp="3020.505" mpRegen="3"/>
+            <attack physical="1188.872595" magical="811.845865" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120"/>
+            <defence physical="361.78814" magical="264.74086"/>
+            <speed>
+                <walk ground="1"/>
+                <run ground="1"/>
+            </speed>
+        </stats>
+        <status attackable="true"/>
+        <collision>
+            <radius normal="15"/>
+            <height normal="75"/>
+        </collision>
+        <skillList>
+            <skill id="4416" level="2"/> <!-- Magical Creatures -->
+            <skill id="4408" level="14"/> <!-- HP Increase (6x) -->
+            <skill id="4412" level="20"/> <!-- Extremely Strong P. Def. -->
+            <skill id="4413" level="20"/> <!-- Extremely Strong M. Def. -->
+            <skill id="4436" level="5"/> <!-- Greater Poison Resistance -->
+            <skill id="4437" level="5"/> <!-- Greater Bleed Resistance -->
+        </skillList>
+    </npc>
+    <npc id="18202" level="85" type="Monster" name="Charm of Corner">
+        <race>ETC</race>
+        <sex>MALE</sex>
+        <acquire exp="4019412" sp="60291"/>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="20711.616756" hpRegen="8.5" mp="3020.505" mpRegen="3"/>
+            <attack physical="1188.872595" magical="811.845865" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120"/>
+            <defence physical="361.78814" magical="264.74086"/>
+            <speed>
+                <walk ground="1"/>
+                <run ground="1"/>
+            </speed>
+        </stats>
+        <status attackable="true"/>
+        <collision>
+            <radius normal="15"/>
+            <height normal="75"/>
+        </collision>
+        <skillList>
+            <skill id="4416" level="2"/> <!-- Magical Creatures -->
+            <skill id="4408" level="14"/> <!-- HP Increase (6x) -->
+            <skill id="4412" level="20"/> <!-- Extremely Strong P. Def. -->
+            <skill id="4413" level="20"/> <!-- Extremely Strong M. Def. -->
+            <skill id="4436" level="5"/> <!-- Greater Poison Resistance -->
+            <skill id="4437" level="5"/> <!-- Greater Bleed Resistance -->
+        </skillList>
+    </npc>
+    <npc id="18203" level="85" type="Monster" name="Charm of Corner">
+        <race>ETC</race>
+        <sex>MALE</sex>
+        <acquire exp="4019412" sp="60291"/>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="20711.616756" hpRegen="8.5" mp="3020.505" mpRegen="3"/>
+            <attack physical="1188.872595" magical="811.845865" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120"/>
+            <defence physical="361.78814" magical="264.74086"/>
+            <speed>
+                <walk ground="1"/>
+                <run ground="1"/>
+            </speed>
+        </stats>
+        <status attackable="true"/>
+        <collision>
+            <radius normal="15"/>
+            <height normal="75"/>
+        </collision>
+        <skillList>
+            <skill id="4416" level="2"/> <!-- Magical Creatures -->
+            <skill id="4408" level="14"/> <!-- HP Increase (6x) -->
+            <skill id="4412" level="20"/> <!-- Extremely Strong P. Def. -->
+            <skill id="4413" level="20"/> <!-- Extremely Strong M. Def. -->
+            <skill id="4436" level="5"/> <!-- Greater Poison Resistance -->
+            <skill id="4437" level="5"/> <!-- Greater Bleed Resistance -->
+        </skillList>
+    </npc>
+    <npc id="18204" level="85" type="Monster" name="Charm of Corner">
+        <race>ETC</race>
+        <sex>MALE</sex>
+        <acquire exp="4019412" sp="60291"/>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="20711.616756" hpRegen="8.5" mp="3020.505" mpRegen="3"/>
+            <attack physical="1188.872595" magical="811.845865" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120"/>
+            <defence physical="361.78814" magical="264.74086"/>
+            <speed>
+                <walk ground="1"/>
+                <run ground="1"/>
+            </speed>
+        </stats>
+        <status attackable="true"/>
+        <collision>
+            <radius normal="15"/>
+            <height normal="75"/>
+        </collision>
+        <skillList>
+            <skill id="4416" level="2"/> <!-- Magical Creatures -->
+            <skill id="4408" level="14"/> <!-- HP Increase (6x) -->
+            <skill id="4412" level="20"/> <!-- Extremely Strong P. Def. -->
+            <skill id="4413" level="20"/> <!-- Extremely Strong M. Def. -->
+            <skill id="4436" level="5"/> <!-- Greater Poison Resistance -->
+            <skill id="4437" level="5"/> <!-- Greater Bleed Resistance -->
+        </skillList>
+    </npc>
+    <npc id="18205" level="85" type="Monster" name="Charm of Corner">
+        <race>ETC</race>
+        <sex>MALE</sex>
+        <acquire exp="4019412" sp="60291"/>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="20711.616756" hpRegen="8.5" mp="3020.505" mpRegen="3"/>
+            <attack physical="1188.872595" magical="811.845865" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120"/>
+            <defence physical="361.78814" magical="264.74086"/>
+            <speed>
+                <walk ground="1"/>
+                <run ground="1"/>
+            </speed>
+        </stats>
+        <status attackable="true"/>
+        <collision>
+            <radius normal="15"/>
+            <height normal="75"/>
+        </collision>
+        <skillList>
+            <skill id="4416" level="2"/> <!-- Magical Creatures -->
+            <skill id="4408" level="14"/> <!-- HP Increase (6x) -->
+            <skill id="4412" level="20"/> <!-- Extremely Strong P. Def. -->
+            <skill id="4413" level="20"/> <!-- Extremely Strong M. Def. -->
+            <skill id="4436" level="5"/> <!-- Greater Poison Resistance -->
+            <skill id="4437" level="5"/> <!-- Greater Bleed Resistance -->
+        </skillList>
+    </npc>
+    <npc id="18206" level="85" type="Monster" name="Charm of Corner">
+        <race>ETC</race>
+        <sex>MALE</sex>
+        <acquire exp="4019412" sp="60291"/>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="20711.616756" hpRegen="8.5" mp="3020.505" mpRegen="3"/>
+            <attack physical="1188.872595" magical="811.845865" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120"/>
+            <defence physical="361.78814" magical="264.74086"/>
+            <speed>
+                <walk ground="1"/>
+                <run ground="1"/>
+            </speed>
+        </stats>
+        <status attackable="true"/>
+        <collision>
+            <radius normal="15"/>
+            <height normal="75"/>
+        </collision>
+        <skillList>
+            <skill id="4416" level="2"/> <!-- Magical Creatures -->
+            <skill id="4408" level="14"/> <!-- HP Increase (6x) -->
+            <skill id="4412" level="20"/> <!-- Extremely Strong P. Def. -->
+            <skill id="4413" level="20"/> <!-- Extremely Strong M. Def. -->
+            <skill id="4436" level="5"/> <!-- Greater Poison Resistance -->
+            <skill id="4437" level="5"/> <!-- Greater Bleed Resistance -->
+        </skillList>
+    </npc>
+    <npc id="18207" level="85" type="Monster" name="Charm of Corner">
+        <race>ETC</race>
+        <sex>MALE</sex>
+        <acquire exp="4019412" sp="60291"/>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="20711.616756" hpRegen="8.5" mp="3020.505" mpRegen="3"/>
+            <attack physical="1188.872595" magical="811.845865" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120"/>
+            <defence physical="361.78814" magical="264.74086"/>
+            <speed>
+                <walk ground="1"/>
+                <run ground="1"/>
+            </speed>
+        </stats>
+        <status attackable="true"/>
+        <collision>
+            <radius normal="15"/>
+            <height normal="75"/>
+        </collision>
+        <skillList>
+            <skill id="4416" level="2"/> <!-- Magical Creatures -->
+            <skill id="4408" level="14"/> <!-- HP Increase (6x) -->
+            <skill id="4412" level="20"/> <!-- Extremely Strong P. Def. -->
+            <skill id="4413" level="20"/> <!-- Extremely Strong M. Def. -->
+            <skill id="4436" level="5"/> <!-- Greater Poison Resistance -->
+            <skill id="4437" level="5"/> <!-- Greater Bleed Resistance -->
+        </skillList>
+    </npc>
+    <npc id="18208" level="85" type="Monster" name="Charm of Corner">
+        <race>ETC</race>
+        <sex>MALE</sex>
+        <acquire exp="4019412" sp="60291"/>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="20711.616756" hpRegen="8.5" mp="3020.505" mpRegen="3"/>
+            <attack physical="1188.872595" magical="811.845865" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120"/>
+            <defence physical="361.78814" magical="264.74086"/>
+            <speed>
+                <walk ground="1"/>
+                <run ground="1"/>
+            </speed>
+        </stats>
+        <status attackable="true"/>
+        <collision>
+            <radius normal="15"/>
+            <height normal="75"/>
+        </collision>
+        <skillList>
+            <skill id="4416" level="2"/> <!-- Magical Creatures -->
+            <skill id="4408" level="14"/> <!-- HP Increase (6x) -->
+            <skill id="4412" level="20"/> <!-- Extremely Strong P. Def. -->
+            <skill id="4413" level="20"/> <!-- Extremely Strong M. Def. -->
+            <skill id="4436" level="5"/> <!-- Greater Poison Resistance -->
+            <skill id="4437" level="5"/> <!-- Greater Bleed Resistance -->
+        </skillList>
+    </npc>
+    <npc id="18209" level="85" type="Monster" name="Charm of Corner">
+        <race>ETC</race>
+        <sex>MALE</sex>
+        <acquire exp="4019412" sp="60291"/>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="20711.616756" hpRegen="8.5" mp="3020.505" mpRegen="3"/>
+            <attack physical="1188.872595" magical="811.845865" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120"/>
+            <defence physical="361.78814" magical="264.74086"/>
+            <speed>
+                <walk ground="1"/>
+                <run ground="1"/>
+            </speed>
+        </stats>
+        <status attackable="true"/>
+        <collision>
+            <radius normal="15"/>
+            <height normal="75"/>
+        </collision>
+        <skillList>
+            <skill id="4416" level="2"/> <!-- Magical Creatures -->
+            <skill id="4408" level="14"/> <!-- HP Increase (6x) -->
+            <skill id="4412" level="20"/> <!-- Extremely Strong P. Def. -->
+            <skill id="4413" level="20"/> <!-- Extremely Strong M. Def. -->
+            <skill id="4436" level="5"/> <!-- Greater Poison Resistance -->
+            <skill id="4437" level="5"/> <!-- Greater Bleed Resistance -->
+        </skillList>
+    </npc>
+    <npc id="18210" level="85" type="Monster" name="Charm of Corner">
+        <race>ETC</race>
+        <sex>MALE</sex>
+        <acquire exp="4019412" sp="60291"/>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="20711.616756" hpRegen="8.5" mp="3020.505" mpRegen="3"/>
+            <attack physical="1188.872595" magical="811.845865" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120"/>
+            <defence physical="361.78814" magical="264.74086"/>
+            <speed>
+                <walk ground="1"/>
+                <run ground="1"/>
+            </speed>
+        </stats>
+        <status attackable="true"/>
+        <collision>
+            <radius normal="15"/>
+            <height normal="75"/>
+        </collision>
+        <skillList>
+            <skill id="4416" level="2"/> <!-- Magical Creatures -->
+            <skill id="4408" level="14"/> <!-- HP Increase (6x) -->
+            <skill id="4412" level="20"/> <!-- Extremely Strong P. Def. -->
+            <skill id="4413" level="20"/> <!-- Extremely Strong M. Def. -->
+            <skill id="4436" level="5"/> <!-- Greater Poison Resistance -->
+            <skill id="4437" level="5"/> <!-- Greater Bleed Resistance -->
+        </skillList>
+    </npc>
+    <npc id="18211" level="85" type="Monster" name="Charm of Corner">
+        <race>ETC</race>
+        <sex>MALE</sex>
+        <acquire exp="4019412" sp="60291"/>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="20711.616756" hpRegen="8.5" mp="3020.505" mpRegen="3"/>
+            <attack physical="1188.872595" magical="811.845865" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120"/>
+            <defence physical="361.78814" magical="264.74086"/>
+            <speed>
+                <walk ground="1"/>
+                <run ground="1"/>
+            </speed>
+        </stats>
+        <status attackable="true"/>
+        <collision>
+            <radius normal="15"/>
+            <height normal="75"/>
+        </collision>
+        <skillList>
+            <skill id="4416" level="2"/> <!-- Magical Creatures -->
+            <skill id="4408" level="14"/> <!-- HP Increase (6x) -->
+            <skill id="4412" level="20"/> <!-- Extremely Strong P. Def. -->
+            <skill id="4413" level="20"/> <!-- Extremely Strong M. Def. -->
+            <skill id="4436" level="5"/> <!-- Greater Poison Resistance -->
+            <skill id="4437" level="5"/> <!-- Greater Bleed Resistance -->
+        </skillList>
+    </npc>
+    <npc id="18212" level="80" type="Folk" name="Halisha's Archon">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <equipment rhand="6722"/>
+        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+            <vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6"/>
+            <speed>
+                <walk ground="35"/>
+                <run ground="185"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <collision>
+            <radius normal="14"/>
+            <height normal="57.75"/>
+        </collision>
+    </npc>
+    <npc id="18213" level="80" type="Folk" name="Halisha's Archon">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <equipment rhand="6722"/>
+        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+            <vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6"/>
+            <speed>
+                <walk ground="35"/>
+                <run ground="185"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <collision>
+            <radius normal="14"/>
+            <height normal="57.75"/>
+        </collision>
+    </npc>
+    <npc id="18214" level="80" type="Folk" name="Halisha's Archon">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <equipment rhand="6722"/>
+        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+            <vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6"/>
+            <speed>
+                <walk ground="35"/>
+                <run ground="185"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <collision>
+            <radius normal="14"/>
+            <height normal="57.75"/>
+        </collision>
+    </npc>
+    <npc id="18215" level="80" type="Folk" name="Halisha's Archon">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <equipment rhand="6722"/>
+        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+            <vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6"/>
+            <speed>
+                <walk ground="35"/>
+                <run ground="185"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <collision>
+            <radius normal="14"/>
+            <height normal="57.75"/>
+        </collision>
+    </npc>
+    <npc id="18216" level="80" type="Folk" name="Halisha's Archon">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <equipment rhand="6722"/>
+        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+            <vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6"/>
+            <speed>
+                <walk ground="35"/>
+                <run ground="185"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <collision>
+            <radius normal="14"/>
+            <height normal="57.75"/>
+        </collision>
+    </npc>
+    <npc id="18217" level="80" type="Folk" name="Halisha's Archon">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <equipment rhand="6722"/>
+        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+            <vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6"/>
+            <speed>
+                <walk ground="35"/>
+                <run ground="185"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <collision>
+            <radius normal="14"/>
+            <height normal="57.75"/>
+        </collision>
+    </npc>
+    <npc id="18218" level="80" type="Folk" name="Halisha's Archon">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <equipment rhand="6722"/>
+        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+            <vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6"/>
+            <speed>
+                <walk ground="35"/>
+                <run ground="185"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <collision>
+            <radius normal="14"/>
+            <height normal="57.75"/>
+        </collision>
+    </npc>
+    <npc id="18219" level="80" type="Folk" name="Halisha's Archon">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <equipment rhand="6722"/>
+        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+            <vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6"/>
+            <speed>
+                <walk ground="35"/>
+                <run ground="185"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <collision>
+            <radius normal="14"/>
+            <height normal="57.75"/>
+        </collision>
+    </npc>
+    <npc id="18220" level="80" type="Folk" name="Shaman of Darkness">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <equipment rhand="3939"/>
+        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+            <vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6"/>
+            <speed>
+                <walk ground="80"/>
+                <run ground="160"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <collision>
+            <radius normal="9"/>
+            <height normal="23"/>
+        </collision>
+    </npc>
+    <npc id="18221" level="80" type="Folk" name="Shaman of Darkness">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <equipment rhand="3939"/>
+        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+            <vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6"/>
+            <speed>
+                <walk ground="80"/>
+                <run ground="160"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <collision>
+            <radius normal="9"/>
+            <height normal="23"/>
+        </collision>
+    </npc>
+    <npc id="18222" level="80" type="Folk" name="Assassin of Darkness">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+            <vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6"/>
+            <speed>
+                <walk ground="41"/>
+                <run ground="190"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <collision>
+            <radius normal="13"/>
+            <height normal="37.5"/>
+        </collision>
+    </npc>
+    <npc id="18223" level="80" type="Folk" name="Assassin of Darkness">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+            <vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6"/>
+            <speed>
+                <walk ground="41"/>
+                <run ground="190"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <collision>
+            <radius normal="13"/>
+            <height normal="37.5"/>
+        </collision>
+    </npc>
+    <npc id="18224" level="80" type="Folk" name="Assassin of Darkness">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+            <vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6"/>
+            <speed>
+                <walk ground="41"/>
+                <run ground="190"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <collision>
+            <radius normal="13"/>
+            <height normal="37.5"/>
+        </collision>
+    </npc>
+    <npc id="18225" level="80" type="Folk" name="Assassin of Darkness">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+            <vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6"/>
+            <speed>
+                <walk ground="41"/>
+                <run ground="190"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <collision>
+            <radius normal="13"/>
+            <height normal="37.5"/>
+        </collision>
+    </npc>
+    <npc id="18226" level="85" type="Monster" name="Caster of Darkness">
+        <race>DEMONIC</race>
+        <sex>MALE</sex>
+        <acquire exp="2979228" sp="44688"/>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="21574.6007875" hpRegen="8.5" mp="3020.505" mpRegen="3"/>
+            <attack physical="1188.872595" magical="811.845865" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120"/>
+            <defence physical="361.78814" magical="264.74086"/>
+            <speed>
+                <walk ground="70"/>
+                <run ground="155"/>
+            </speed>
+        </stats>
+        <status attackable="true"/>
+        <collision>
+            <radius normal="12"/>
+            <height normal="40"/>
+        </collision>
+        <skillList>
+            <skill id="4416" level="9"/> <!-- Demons -->
+            <skill id="4408" level="13"/> <!-- HP Increase (5x) -->
+            <skill id="4411" level="19"/> <!-- Extremely Strong M. Atk. -->
+            <skill id="4413" level="19"/> <!-- Extremely Strong M. Def. -->
+        </skillList>
+    </npc>
+    <npc id="18227" level="85" type="Monster" name="Caster of Darkness">
+        <race>DEMONIC</race>
+        <sex>MALE</sex>
+        <acquire exp="2979228" sp="44688"/>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="21574.6007875" hpRegen="8.5" mp="3020.505" mpRegen="3"/>
+            <attack physical="1188.872595" magical="811.845865" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120"/>
+            <defence physical="361.78814" magical="264.74086"/>
+            <speed>
+                <walk ground="70"/>
+                <run ground="155"/>
+            </speed>
+        </stats>
+        <status attackable="true"/>
+        <collision>
+            <radius normal="12"/>
+            <height normal="40"/>
+        </collision>
+        <skillList>
+            <skill id="4416" level="9"/> <!-- Demons -->
+            <skill id="4408" level="13"/> <!-- HP Increase (5x) -->
+            <skill id="4411" level="19"/> <!-- Extremely Strong M. Atk. -->
+            <skill id="4413" level="19"/> <!-- Extremely Strong M. Def. -->
+        </skillList>
+    </npc>
+    <npc id="18228" level="85" type="Monster" name="Caster of Darkness">
+        <race>DEMONIC</race>
+        <sex>MALE</sex>
+        <acquire exp="2979228" sp="44688"/>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="21574.6007875" hpRegen="8.5" mp="3020.505" mpRegen="3"/>
+            <attack physical="1188.872595" magical="811.845865" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120"/>
+            <defence physical="361.78814" magical="264.74086"/>
+            <speed>
+                <walk ground="70"/>
+                <run ground="155"/>
+            </speed>
+        </stats>
+        <status attackable="true"/>
+        <collision>
+            <radius normal="12"/>
+            <height normal="40"/>
+        </collision>
+        <skillList>
+            <skill id="4416" level="9"/> <!-- Demons -->
+            <skill id="4408" level="13"/> <!-- HP Increase (5x) -->
+            <skill id="4411" level="19"/> <!-- Extremely Strong M. Atk. -->
+            <skill id="4413" level="19"/> <!-- Extremely Strong M. Def. -->
+        </skillList>
+    </npc>
+    <npc id="18229" level="85" type="Monster" name="Caster of Darkness">
+        <race>DEMONIC</race>
+        <sex>MALE</sex>
+        <acquire exp="2979228" sp="44688"/>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="21574.6007875" hpRegen="8.5" mp="3020.505" mpRegen="3"/>
+            <attack physical="1188.872595" magical="811.845865" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120"/>
+            <defence physical="361.78814" magical="264.74086"/>
+            <speed>
+                <walk ground="70"/>
+                <run ground="155"/>
+            </speed>
+        </stats>
+        <status attackable="true"/>
+        <collision>
+            <radius normal="12"/>
+            <height normal="40"/>
+        </collision>
+        <skillList>
+            <skill id="4416" level="9"/> <!-- Demons -->
+            <skill id="4408" level="13"/> <!-- HP Increase (5x) -->
+            <skill id="4411" level="19"/> <!-- Extremely Strong M. Atk. -->
+            <skill id="4413" level="19"/> <!-- Extremely Strong M. Def. -->
+        </skillList>
+    </npc>
+    <npc id="18230" level="80" type="Folk" name="Signet of Emperor">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+            <vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6"/>
+            <speed>
+                <walk ground="40"/>
+                <run ground="60"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <collision>
+            <radius normal="12"/>
+            <height normal="8"/>
+        </collision>
+    </npc>
+    <npc id="18231" level="80" type="Folk" name="Statue of Protection">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <equipment rhand="5795"/>
+        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+            <vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6"/>
+            <speed>
+                <walk ground="53"/>
+                <run ground="140"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <collision>
+            <radius normal="15"/>
+            <height normal="42"/>
+        </collision>
+    </npc>
+    <npc id="18232" level="80" type="Folk" name="Statue of Protection">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <equipment rhand="5795"/>
+        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+            <vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6"/>
+            <speed>
+                <walk ground="53"/>
+                <run ground="140"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <collision>
+            <radius normal="15"/>
+            <height normal="42"/>
+        </collision>
+    </npc>
+    <npc id="18233" level="80" type="Folk" name="Statue of Protection">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <equipment rhand="5795"/>
+        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+            <vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6"/>
+            <speed>
+                <walk ground="53"/>
+                <run ground="140"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <collision>
+            <radius normal="15"/>
+            <height normal="42"/>
+        </collision>
+    </npc>
+    <npc id="18234" level="80" type="Folk" name="Statue of Protection">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <equipment rhand="5795"/>
+        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+            <vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6"/>
+            <speed>
+                <walk ground="53"/>
+                <run ground="140"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <collision>
+            <radius normal="15"/>
+            <height normal="42"/>
+        </collision>
+    </npc>
+    <npc id="18235" level="80" type="Folk" name="Statue of Protection">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <equipment rhand="5795"/>
+        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+            <vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6"/>
+            <speed>
+                <walk ground="53"/>
+                <run ground="140"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <collision>
+            <radius normal="15"/>
+            <height normal="42"/>
+        </collision>
+    </npc>
+    <npc id="18236" level="80" type="Folk" name="Statue of Protection">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <equipment rhand="5795"/>
+        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+            <vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6"/>
+            <speed>
+                <walk ground="53"/>
+                <run ground="140"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <collision>
+            <radius normal="15"/>
+            <height normal="42"/>
+        </collision>
+    </npc>
+    <npc id="18237" level="80" type="Folk" name="Statue of Protection">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <equipment rhand="5795"/>
+        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+            <vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6"/>
+            <speed>
+                <walk ground="53"/>
+                <run ground="140"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <collision>
+            <radius normal="15"/>
+            <height normal="42"/>
+        </collision>
+    </npc>
+    <npc id="18238" level="80" type="Folk" name="Statue of Protection">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <equipment rhand="5795"/>
+        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+            <vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6"/>
+            <speed>
+                <walk ground="53"/>
+                <run ground="140"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <collision>
+            <radius normal="15"/>
+            <height normal="42"/>
+        </collision>
+    </npc>
+    <npc id="18239" level="80" type="Folk" name="Statue of Protection">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <equipment rhand="5795"/>
+        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+            <vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6"/>
+            <speed>
+                <walk ground="53"/>
+                <run ground="140"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <collision>
+            <radius normal="15"/>
+            <height normal="42"/>
+        </collision>
+    </npc>
+    <npc id="18240" level="80" type="Folk" name="Statue of Protection">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <equipment rhand="5795"/>
+        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+            <vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6"/>
+            <speed>
+                <walk ground="53"/>
+                <run ground="140"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <collision>
+            <radius normal="15"/>
+            <height normal="42"/>
+        </collision>
+    </npc>
+    <npc id="18241" level="80" type="Folk" name="Statue of Protection">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <equipment rhand="5795"/>
+        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+            <vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6"/>
+            <speed>
+                <walk ground="53"/>
+                <run ground="140"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <collision>
+            <radius normal="15"/>
+            <height normal="42"/>
+        </collision>
+    </npc>
+    <npc id="18242" level="80" type="Folk" name="Statue of Protection">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <equipment rhand="5795"/>
+        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+            <vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6"/>
+            <speed>
+                <walk ground="53"/>
+                <run ground="140"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <collision>
+            <radius normal="15"/>
+            <height normal="42"/>
+        </collision>
+    </npc>
+    <npc id="18243" level="80" type="Folk" name="Statue of Protection">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <equipment rhand="5795"/>
+        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+            <vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6"/>
+            <speed>
+                <walk ground="53"/>
+                <run ground="140"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <collision>
+            <radius normal="15"/>
+            <height normal="42"/>
+        </collision>
+    </npc>
+    <npc id="18244" level="80" type="Folk" name="Watchman of Grave">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+            <vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6"/>
+            <speed>
+                <walk ground="90"/>
+                <run ground="1"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <collision>
+            <radius normal="11"/>
+            <height normal="20"/>
+        </collision>
+    </npc>
+    <npc id="18245" level="80" type="Folk" name="Watchman of Grave">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+            <vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6"/>
+            <speed>
+                <walk ground="90"/>
+                <run ground="1"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <collision>
+            <radius normal="11"/>
+            <height normal="20"/>
+        </collision>
+    </npc>
+    <npc id="18246" level="80" type="Folk" name="Watchman of Grave">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+            <vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6"/>
+            <speed>
+                <walk ground="90"/>
+                <run ground="1"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <collision>
+            <radius normal="11"/>
+            <height normal="20"/>
+        </collision>
+    </npc>
+    <npc id="18247" level="80" type="Folk" name="Watchman of Grave">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+            <vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6"/>
+            <speed>
+                <walk ground="90"/>
+                <run ground="1"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <collision>
+            <radius normal="11"/>
+            <height normal="20"/>
+        </collision>
+    </npc>
+    <npc id="18248" level="80" type="Folk" name="Watchman of Grave">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+            <vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6"/>
+            <speed>
+                <walk ground="90"/>
+                <run ground="1"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <collision>
+            <radius normal="11"/>
+            <height normal="20"/>
+        </collision>
+    </npc>
+    <npc id="18249" level="80" type="Folk" name="Watchman of Grave">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+            <vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6"/>
+            <speed>
+                <walk ground="90"/>
+                <run ground="1"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <collision>
+            <radius normal="11"/>
+            <height normal="20"/>
+        </collision>
+    </npc>
+    <npc id="18250" level="80" type="Folk" name="Watchman of Grave">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+            <vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6"/>
+            <speed>
+                <walk ground="90"/>
+                <run ground="1"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <collision>
+            <radius normal="11"/>
+            <height normal="20"/>
+        </collision>
+    </npc>
+    <npc id="18251" level="80" type="Folk" name="Watchman of Grave">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+            <vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6"/>
+            <speed>
+                <walk ground="90"/>
+                <run ground="1"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <collision>
+            <radius normal="11"/>
+            <height normal="20"/>
+        </collision>
+    </npc>
+    <npc id="18252" level="80" type="Folk" name="Watchman of Grave">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+            <vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6"/>
+            <speed>
+                <walk ground="90"/>
+                <run ground="1"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <collision>
+            <radius normal="11"/>
+            <height normal="20"/>
+        </collision>
+    </npc>
+    <npc id="18253" level="80" type="Folk" name="Watchman of Grave">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+            <vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6"/>
+            <speed>
+                <walk ground="90"/>
+                <run ground="1"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <collision>
+            <radius normal="11"/>
+            <height normal="20"/>
+        </collision>
+    </npc>
+    <npc id="18254" level="80" type="Folk" name="Watchman of Grave">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+            <vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6"/>
+            <speed>
+                <walk ground="90"/>
+                <run ground="1"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <collision>
+            <radius normal="11"/>
+            <height normal="20"/>
+        </collision>
+    </npc>
+    <npc id="18255" level="80" type="Folk" name="Watchman of Grave">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+            <vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6"/>
+            <speed>
+                <walk ground="90"/>
+                <run ground="1"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <collision>
+            <radius normal="11"/>
+            <height normal="20"/>
+        </collision>
+    </npc>
+    <npc id="18256" level="80" type="Folk" name="Halisha's Treasure Chest">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+            <vitals hp="1" hpRegen="10.5" mp="1" mpRegen="3.6"/>
+            <speed>
+                <walk ground="80"/>
+                <run ground="1"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <collision>
+            <radius normal="8.5"/>
+            <height normal="8.5"/>
+        </collision>
+    </npc>
 </list>

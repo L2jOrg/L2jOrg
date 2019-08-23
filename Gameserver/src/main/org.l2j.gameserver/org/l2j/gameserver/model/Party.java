@@ -3,7 +3,6 @@ package org.l2j.gameserver.model;
 import org.l2j.commons.threading.ThreadPoolManager;
 import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.Config;
-import org.l2j.gameserver.world.WorldTimeController;
 import org.l2j.gameserver.datatables.ItemTable;
 import org.l2j.gameserver.enums.PartyDistributionType;
 import org.l2j.gameserver.enums.StatusUpdateType;
@@ -23,13 +22,13 @@ import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.*;
 import org.l2j.gameserver.util.GameUtils;
 import org.l2j.gameserver.world.World;
+import org.l2j.gameserver.world.WorldTimeController;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.time.Duration;
 import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
-import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.concurrent.Future;
 
 /**
@@ -58,7 +57,7 @@ public class Party extends AbstractPlayerGroup {
                     2667
             };
     private static Map<Integer, Creature> _tacticalSigns = null;
-    private final List<Player> _members = new CopyOnWriteArrayList<>();
+    private final List<Player> _members =  Collections.synchronizedList(new ArrayList<>());
     protected PartyMemberPosition _positionPacket;
     private boolean _pendingInvitation = false;
     private long _pendingInviteTimeout;

@@ -96,7 +96,7 @@ public final class SummonCubic extends AbstractEffect
 			final int allowedCubicCount = (int) effected.getActingPlayer().getStat().getValue(Stats.MAX_CUBIC, 1);
 			final int currentCubicCount = player.getCubics().size();
 			// Extra cubics are removed, one by one, randomly.
-			for (int i = 0; i <= (currentCubicCount - allowedCubicCount); i++)
+			for (int i = 0; i <= (currentCubicCount + 1 - allowedCubicCount); i++)
 			{
 				final int removedCubicId = (int) player.getCubics().keySet().toArray()[Rnd.get(currentCubicCount)];
 				final CubicInstance removedCubic = player.getCubicById(removedCubicId);

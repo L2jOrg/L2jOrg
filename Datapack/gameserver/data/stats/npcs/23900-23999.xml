@@ -1,2317 +1,2317 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org npcs.xsd">
-	<npc id="23900" level="80" type="Folk" name="Laikel of Terror" title="Leader of Creation">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="74262" hpRegen="10.5" mp="1345" mpRegen="3.6" />
-			<speed>
-				<walk ground="60" />
-				<run ground="180" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skillList>
-		<collision>
-			<radius normal="25.9" />
-			<height normal="43.9" />
-		</collision>
-	</npc>
-	<npc id="23901" level="80" type="Folk" name="Giant Spider of Terror" title="Leader of Creation">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="80450" hpRegen="10.5" mp="1345" mpRegen="3.6" />
-			<speed>
-				<walk ground="105" />
-				<run ground="180" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skillList>
-		<collision>
-			<radius normal="31.5" />
-			<height normal="26.4" />
-		</collision>
-	</npc>
-	<npc id="23902" level="80" type="Folk" name="Riba of Terror" title="Leader of Creation">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="3094" hpRegen="10.5" mp="1345" mpRegen="3.6" />
-			<speed>
-				<walk ground="60" />
-				<run ground="180" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skillList>
-		<collision>
-			<radius normal="25" />
-			<height normal="72" />
-		</collision>
-	</npc>
-	<npc id="23903" level="80" type="Folk" name="Stakato Worker">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMANOID</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="27848" hpRegen="10.5" mp="1345" mpRegen="3.6" />
-			<speed>
-				<walk ground="55" />
-				<run ground="180" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skillList>
-		<collision>
-			<radius normal="18" />
-			<height normal="36.4" />
-		</collision>
-	</npc>
-	<npc id="23904" level="80" type="Folk" name="Stakato Guard">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="30942" hpRegen="10.5" mp="1345" mpRegen="3.6" />
-			<speed>
-				<walk ground="25" />
-				<run ground="180" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skillList>
-		<collision>
-			<radius normal="15" />
-			<height normal="39" />
-		</collision>
-	</npc>
-	<npc id="23905" level="80" type="Folk" name="Stakato Invader" title="Stakato Leader">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="74262" hpRegen="10.5" mp="1345" mpRegen="3.6" />
-			<speed>
-				<walk ground="40" />
-				<run ground="180" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skillList>
-		<collision>
-			<radius normal="34" />
-			<height normal="48.8" />
-		</collision>
-	</npc>
-	<npc id="23906" level="80" type="Folk" name="Stakato Queen" title="Stakato Leader">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="80450" hpRegen="10.5" mp="1345" mpRegen="3.6" />
-			<speed>
-				<walk ground="34" />
-				<run ground="180" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skillList>
-		<collision>
-			<radius normal="40" />
-			<height normal="42" />
-		</collision>
-	</npc>
-	<npc id="23907" level="80" type="Folk" name="Ultimate Gatekeeper A1803-1" title="Gatekeeper Leader">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="3094" hpRegen="10.5" mp="1345" mpRegen="3.6" />
-			<speed>
-				<walk ground="60" />
-				<run ground="180" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skillList>
-		<collision>
-			<radius normal="35" />
-			<height normal="463.765" />
-		</collision>
-	</npc>
-	<npc id="23908" level="80" type="Folk" name="Hell Assassin">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="21659" hpRegen="10.5" mp="1345" mpRegen="3.6" />
-			<speed>
-				<walk ground="36" />
-				<run ground="180" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skillList>
-		<collision>
-			<radius normal="12" />
-			<height normal="40" />
-		</collision>
-	</npc>
-	<npc id="23909" level="80" type="Folk" name="Hell Dark Wizard">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="41019" hpRegen="10.5" mp="1377" mpRegen="3.6" />
-			<speed>
-				<walk ground="50" />
-				<run ground="180" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skillList>
-		<collision>
-			<radius normal="9" />
-			<height normal="34" />
-		</collision>
-	</npc>
-	<npc id="23910" level="80" type="Folk" name="Hell Armor" title="Devil�s Advocate">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<equipment rhand="5800" lhand="5799" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="96461" hpRegen="10.5" mp="1410" mpRegen="3.6" />
-			<speed>
-				<walk ground="56" />
-				<run ground="180" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skillList>
-		<collision>
-			<radius normal="9.6" />
-			<height normal="39.4" />
-		</collision>
-	</npc>
-	<npc id="23911" level="80" type="Folk" name="Hell Queen" title="Devil�s Advocate">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="98227" hpRegen="10.5" mp="1442" mpRegen="3.6" />
-			<speed>
-				<walk ground="60" />
-				<run ground="180" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skillList>
-		<collision>
-			<radius normal="16.8" />
-			<height normal="55.1" />
-		</collision>
-	</npc>
-	<npc id="23912" level="80" type="Folk" name="Hell Lord" title="Devil�s Advocate">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="3331" hpRegen="10.5" mp="1475" mpRegen="3.6" />
-			<speed>
-				<walk ground="40" />
-				<run ground="180" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skillList>
-		<collision>
-			<radius normal="21" />
-			<height normal="40" />
-		</collision>
-	</npc>
-	<npc id="23913" level="80" type="Folk" name="Heavenly Soldier">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<equipment rhand="80" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="21659" hpRegen="10.5" mp="1345" mpRegen="3.6" />
-			<speed>
-				<walk ground="50" />
-				<run ground="180" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skillList>
-		<collision>
-			<radius normal="8" />
-			<height normal="30" />
-		</collision>
-	</npc>
-	<npc id="23914" level="80" type="Folk" name="Heavenly Priest">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<equipment rhand="2504" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="41019" hpRegen="10.5" mp="1377" mpRegen="3.6" />
-			<speed>
-				<walk ground="50" />
-				<run ground="180" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skillList>
-		<collision>
-			<radius normal="11" />
-			<height normal="38.5" />
-		</collision>
-	</npc>
-	<npc id="23915" level="80" type="Folk" name="Heavenly Judge" title="Angel�s Advocate">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<equipment rhand="97" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="96461" hpRegen="10.5" mp="1410" mpRegen="3.6" />
-			<speed>
-				<walk ground="50" />
-				<run ground="180" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skillList>
-		<collision>
-			<radius normal="13" />
-			<height normal="37.5" />
-		</collision>
-	</npc>
-	<npc id="23916" level="80" type="Folk" name="Heavenly Wings">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<equipment rhand="97" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="98227" hpRegen="10.5" mp="1442" mpRegen="3.6" />
-			<speed>
-				<walk ground="30" />
-				<run ground="180" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skillList>
-		<collision>
-			<radius normal="13" />
-			<height normal="47" />
-		</collision>
-	</npc>
-	<npc id="23917" level="80" type="Folk" name="Heavenly Guardian" title="Angel�s Advocate">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="3331" hpRegen="10.5" mp="1475" mpRegen="3.6" />
-			<speed>
-				<walk ground="60" />
-				<run ground="180" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skillList>
-		<collision>
-			<radius normal="30" />
-			<height normal="33" />
-		</collision>
-	</npc>
-	<npc id="23918" level="57" type="Monster" name="Drake">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>DRAGON</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="3388" hpRegen="10.5" mp="1507" mpRegen="3.6" />
-			<speed>
-				<walk ground="70" />
-				<run ground="180" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skillList>
-		<collision>
-			<radius normal="30" />
-			<height normal="100" />
-		</collision>
-		<dropLists>
-			<drop>
-				<item id="135" min="1" max="1" chance="0.0075" /> <!-- Samurai Long Sword -->
-				<item id="286" min="1" max="1" chance="0.0075" /> <!-- Eminence Bow -->
-				<item id="57" min="1782" max="4157" chance="70" /> <!-- Adena -->
-				<item id="1864" min="4" max="12" chance="26.2" /> <!-- Stem -->
-				<item id="1867" min="7" max="21" chance="9.273" /> <!-- Animal Skin -->
-				<item id="952" min="1" max="1" chance="1.318" /> <!-- Scroll: Enchant Armor (C-grade) -->
-				<item id="2121" min="1" max="1" chance="1.244" /> <!-- Eminence Bow Shaft -->
-				<item id="2115" min="1" max="1" chance="1.234" /> <!-- Samurai Long Sword Blade -->
-			</drop>
-			<spoil>
-				<item id="2962" min="1" max="1" chance="35.17" /> <!-- Drake Leather Glove Design -->
-				<item id="2961" min="1" max="1" chance="33.01" /> <!-- Full Plate Boot Fragment -->
-				<item id="1877" min="1" max="1" chance="24.59" /> <!-- Adamantite Nugget -->
-				<item id="1894" min="1" max="1" chance="22.59" /> <!-- Crafted Leather -->
-			</spoil>
-		</dropLists>
-	</npc>
-	<npc id="23919" level="80" type="Folk" name="Mutated Drake">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="3443" hpRegen="10.5" mp="1540" mpRegen="3.6" />
-			<speed>
-				<walk ground="46" />
-				<run ground="180" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skillList>
-		<collision>
-			<radius normal="48" />
-			<height normal="53.5" />
-		</collision>
-	</npc>
-	<npc id="23920" level="80" type="Folk" name="Drak" title="Dragon�s Advocate">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="3496" hpRegen="10.5" mp="1574" mpRegen="3.6" />
-			<speed>
-				<walk ground="60" />
-				<run ground="180" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skillList>
-		<collision>
-			<radius normal="44" />
-			<height normal="51.5" />
-		</collision>
-	</npc>
-	<npc id="23921" level="80" type="Folk" name="Inferno Drake">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="3496" hpRegen="10.5" mp="1574" mpRegen="3.6" />
-			<speed>
-				<walk ground="57" />
-				<run ground="180" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skillList>
-		<collision>
-			<radius normal="24" />
-			<height normal="35" />
-		</collision>
-	</npc>
-	<npc id="23922" level="80" type="Folk" name="Chaos Drake" title="Dragon�s Advocate">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="3547" hpRegen="10.5" mp="1607" mpRegen="3.6" />
-			<speed>
-				<walk ground="60" />
-				<run ground="180" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skillList>
-		<collision>
-			<radius normal="55" />
-			<height normal="80.5" />
-		</collision>
-	</npc>
-	<npc id="23923" level="80" type="Folk" name="Velociraptor">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="3388" hpRegen="10.5" mp="1507" mpRegen="3.6" />
-			<speed>
-				<walk ground="33" />
-				<run ground="180" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skillList>
-		<collision>
-			<radius normal="20" />
-			<height normal="47.2" />
-		</collision>
-	</npc>
-	<npc id="23924" level="80" type="Folk" name="Ornithomimus">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="3443" hpRegen="10.5" mp="1540" mpRegen="3.6" />
-			<speed>
-				<walk ground="36" />
-				<run ground="180" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skillList>
-		<collision>
-			<radius normal="15" />
-			<height normal="37.2" />
-		</collision>
-	</npc>
-	<npc id="23925" level="80" type="Folk" name="Pterosaur" title="Dominator of the Wild">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="3496" hpRegen="10.5" mp="1574" mpRegen="3.6" />
-			<speed>
-				<walk ground="54" />
-				<run ground="180" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skillList>
-		<collision>
-			<radius normal="36" />
-			<height normal="43.7" />
-		</collision>
-	</npc>
-	<npc id="23926" level="80" type="Folk" name="Primeval Strider">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="3496" hpRegen="10.5" mp="1574" mpRegen="3.6" />
-			<speed>
-				<walk ground="50" />
-				<run ground="180" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skillList>
-		<collision>
-			<radius normal="32" />
-			<height normal="44.2" />
-		</collision>
-	</npc>
-	<npc id="23927" level="80" type="Folk" name="Tyrannosaurus" title="Dominator of the Wild">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="3547" hpRegen="10.5" mp="1607" mpRegen="3.6" />
-			<speed>
-				<walk ground="105" />
-				<run ground="180" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skillList>
-		<collision>
-			<radius normal="60" />
-			<height normal="89.7" />
-		</collision>
-	</npc>
-	<npc id="23928" level="80" type="Folk" name="Giant Golden Pig of Good Fortune" title="Intruding Challenger">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="81358" hpRegen="10.5" mp="1251" mpRegen="3.6" />
-			<speed>
-				<walk ground="120" />
-				<run ground="180" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skillList>
-		<collision>
-			<radius normal="27.5" />
-			<height normal="38.25" />
-		</collision>
-	</npc>
-	<npc id="23929" level="80" type="Folk" name="Dancing Bard" title="Intruding Challenger">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="81358" hpRegen="10.5" mp="1251" mpRegen="3.6" />
-			<speed>
-				<walk ground="15" />
-				<run ground="180" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skillList>
-		<collision>
-			<radius normal="39" />
-			<height normal="61.5" />
-		</collision>
-	</npc>
-	<npc id="23930" level="80" type="Folk" name="Gatekeeper Roxxy" title="Intruding Challenger">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="86639" hpRegen="10.5" mp="1345" mpRegen="3.6" />
-			<speed>
-				<walk ground="50" />
-				<run ground="180" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skillList>
-		<collision>
-			<radius normal="13" />
-			<height normal="23" />
-		</collision>
-	</npc>
-	<npc id="23931" level="80" type="Folk" name="Super Kat the Cat" title="Intruding Challenger">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="86639" hpRegen="10.5" mp="1345" mpRegen="3.6" />
-			<speed>
-				<walk ground="60" />
-				<run ground="180" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skillList>
-		<collision>
-			<radius normal="30" />
-			<height normal="39" />
-		</collision>
-	</npc>
-	<npc id="23932" level="80" type="Folk" name="Super Mew the Cat" title="Intruding Challenger">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="109952" hpRegen="10.5" mp="1475" mpRegen="3.6" />
-			<speed>
-				<walk ground="60" />
-				<run ground="180" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skillList>
-		<collision>
-			<radius normal="30" />
-			<height normal="39" />
-		</collision>
-	</npc>
-	<npc id="23933" level="80" type="Folk" name="Super Queen the Cat" title="Intruding Challenger">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="109952" hpRegen="10.5" mp="1475" mpRegen="3.6" />
-			<speed>
-				<walk ground="60" />
-				<run ground="180" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skillList>
-		<collision>
-			<radius normal="30" />
-			<height normal="45" />
-		</collision>
-	</npc>
-	<npc id="23934" level="80" type="Folk" name="Roa" title="Intruding Challenger">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="117083" hpRegen="10.5" mp="1607" mpRegen="3.6" />
-			<speed>
-				<walk ground="64" />
-				<run ground="180" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skillList>
-		<collision>
-			<radius normal="9" />
-			<height normal="21.5" />
-		</collision>
-	</npc>
-	<npc id="23935" level="80" type="Folk" name="Golden Bat Dandy" title="Intruding Challenger">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="117083" hpRegen="10.5" mp="1607" mpRegen="3.6" />
-			<speed>
-				<walk ground="50" />
-				<run ground="180" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skillList>
-		<collision>
-			<radius normal="20" />
-			<height normal="30" />
-		</collision>
-	</npc>
-	<npc id="23936" level="80" type="Folk" name="Ketra Knight Recruit">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<equipment rhand="160" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="4894" hpRegen="10.5" mp="1036" mpRegen="3.6" />
-			<speed>
-				<walk ground="36" />
-				<run ground="180" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skillList>
-		<collision>
-			<radius normal="12" />
-			<height normal="24" />
-		</collision>
-	</npc>
-	<npc id="23937" level="80" type="Folk" name="Kel Mahum Knight Recruit">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<equipment rhand="160" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="4894" hpRegen="10.5" mp="1036" mpRegen="3.6" />
-			<speed>
-				<walk ground="50" />
-				<run ground="180" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skillList>
-		<collision>
-			<radius normal="13" />
-			<height normal="26" />
-		</collision>
-	</npc>
-	<npc id="23938" level="80" type="Folk" name="Doom Wraith">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<equipment rhand="1472" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="10844" hpRegen="10.5" mp="1158" mpRegen="3.6" />
-			<speed>
-				<walk ground="100" />
-				<run ground="180" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skillList>
-		<collision>
-			<radius normal="15" />
-			<height normal="45" />
-		</collision>
-	</npc>
-	<npc id="23939" level="80" type="Folk" name="Tanta Knight Recruit">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="10844" hpRegen="10.5" mp="1158" mpRegen="3.6" />
-			<speed>
-				<walk ground="40" />
-				<run ground="180" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skillList>
-		<collision>
-			<radius normal="20" />
-			<height normal="40.25" />
-		</collision>
-	</npc>
-	<npc id="23940" level="80" type="Folk" name="Beetle of Terror">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="26151" hpRegen="10.5" mp="1251" mpRegen="3.6" />
-			<speed>
-				<walk ground="45" />
-				<run ground="180" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skillList>
-		<collision>
-			<radius normal="14" />
-			<height normal="22" />
-		</collision>
-	</npc>
-	<npc id="23941" level="80" type="Folk" name="Stakato Knight Recruit">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="26151" hpRegen="10.5" mp="1251" mpRegen="3.6" />
-			<speed>
-				<walk ground="55" />
-				<run ground="180" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skillList>
-		<collision>
-			<radius normal="18" />
-			<height normal="36.4" />
-		</collision>
-	</npc>
-	<npc id="23942" level="80" type="Folk" name="Hell Knight Recruit">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="21659" hpRegen="10.5" mp="1345" mpRegen="3.6" />
-			<speed>
-				<walk ground="36" />
-				<run ground="180" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skillList>
-		<collision>
-			<radius normal="12" />
-			<height normal="40" />
-		</collision>
-	</npc>
-	<npc id="23943" level="80" type="Folk" name="Heavenly Guardian">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<equipment rhand="80" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="21659" hpRegen="10.5" mp="1345" mpRegen="3.6" />
-			<speed>
-				<walk ground="50" />
-				<run ground="180" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skillList>
-		<collision>
-			<radius normal="8" />
-			<height normal="30" />
-		</collision>
-	</npc>
-	<npc id="23944" level="80" type="Folk" name="Drake Knight Recruit">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="3388" hpRegen="10.5" mp="1507" mpRegen="3.6" />
-			<speed>
-				<walk ground="70" />
-				<run ground="180" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skillList>
-		<collision>
-			<radius normal="30" />
-			<height normal="100" />
-		</collision>
-	</npc>
-	<npc id="23945" level="80" type="Folk" name="Velociraptor Protector Tree">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="3388" hpRegen="10.5" mp="1507" mpRegen="3.6" />
-			<speed>
-				<walk ground="33" />
-				<run ground="180" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skillList>
-		<collision>
-			<radius normal="20" />
-			<height normal="47.2" />
-		</collision>
-	</npc>
-	<npc id="23946" level="80" type="Folk" name="Ketra Knight Recruit">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<equipment rhand="160" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="6188" hpRegen="10.5" mp="1036" mpRegen="3.6" />
-			<speed>
-				<walk ground="36" />
-				<run ground="180" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skillList>
-		<collision>
-			<radius normal="12" />
-			<height normal="24" />
-		</collision>
-	</npc>
-	<npc id="23947" level="80" type="Folk" name="Kel Mahum Knight Recruit">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<equipment rhand="160" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="6188" hpRegen="10.5" mp="1036" mpRegen="3.6" />
-			<speed>
-				<walk ground="50" />
-				<run ground="180" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skillList>
-		<collision>
-			<radius normal="13" />
-			<height normal="26" />
-		</collision>
-	</npc>
-	<npc id="23948" level="80" type="Folk" name="Doom Wraith">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<equipment rhand="84" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="12377" hpRegen="10.5" mp="1158" mpRegen="3.6" />
-			<speed>
-				<walk ground="40" />
-				<run ground="180" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skillList>
-		<collision>
-			<radius normal="10" />
-			<height normal="25" />
-		</collision>
-	</npc>
-	<npc id="23949" level="80" type="Folk" name="Tanta Knight Recruit">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="12377" hpRegen="10.5" mp="1158" mpRegen="3.6" />
-			<speed>
-				<walk ground="60" />
-				<run ground="180" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skillList>
-		<collision>
-			<radius normal="34" />
-			<height normal="28" />
-		</collision>
-	</npc>
-	<npc id="23950" level="80" type="Folk" name="Beetle of Terror">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="27848" hpRegen="10.5" mp="1251" mpRegen="3.6" />
-			<speed>
-				<walk ground="45" />
-				<run ground="180" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skillList>
-		<collision>
-			<radius normal="14" />
-			<height normal="22" />
-		</collision>
-	</npc>
-	<npc id="23951" level="80" type="Folk" name="Stakato Knight Recruit">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="27848" hpRegen="10.5" mp="1251" mpRegen="3.6" />
-			<speed>
-				<walk ground="140" />
-				<run ground="180" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skillList>
-		<collision>
-			<radius normal="16" />
-			<height normal="50" />
-		</collision>
-	</npc>
-	<npc id="23952" level="80" type="Folk" name="Hell Knight Recruit">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="21659" hpRegen="10.5" mp="1345" mpRegen="3.6" />
-			<speed>
-				<walk ground="36" />
-				<run ground="180" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skillList>
-		<collision>
-			<radius normal="12" />
-			<height normal="40" />
-		</collision>
-	</npc>
-	<npc id="23953" level="80" type="Folk" name="Heavenly Guardian">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<equipment rhand="80" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="21659" hpRegen="10.5" mp="1345" mpRegen="3.6" />
-			<speed>
-				<walk ground="50" />
-				<run ground="180" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skillList>
-		<collision>
-			<radius normal="8" />
-			<height normal="30" />
-		</collision>
-	</npc>
-	<npc id="23954" level="80" type="Folk" name="Drake Knight Recruit">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="3388" hpRegen="10.5" mp="1507" mpRegen="3.6" />
-			<speed>
-				<walk ground="70" />
-				<run ground="180" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skillList>
-		<collision>
-			<radius normal="30" />
-			<height normal="100" />
-		</collision>
-	</npc>
-	<npc id="23955" level="80" type="Folk" name="Velociraptor Protector Tree">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="3388" hpRegen="10.5" mp="1507" mpRegen="3.6" />
-			<speed>
-				<walk ground="33" />
-				<run ground="180" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skillList>
-		<collision>
-			<radius normal="20" />
-			<height normal="47.2" />
-		</collision>
-	</npc>
-	<npc id="23956" level="74" type="Monster" name="Veil Master" title="Aide of the Blood Queen">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>DEMONIC</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="14528" hpRegen="10.5" mp="1251" mpRegen="3.6" />
-			<speed>
-				<walk ground="70" />
-				<run ground="180" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skillList>
-		<collision>
-			<radius normal="12" />
-			<height normal="40" />
-		</collision>
-		<dropLists>
-			<drop>
-				<item id="79" min="1" max="1" chance="0.003" /> <!-- Damascus -->
-				<item id="171" min="1" max="1" chance="0.003" /> <!-- Deadman's Glory -->
-				<item id="57" min="1372" max="3205" chance="70" /> <!-- Adena -->
-				<item id="1895" min="1" max="1" chance="11.95" /> <!-- Metallic Fiber -->
-				<item id="1876" min="1" max="1" chance="7.985" /> <!-- Mithril Ore -->
-				<item id="1866" min="2" max="6" chance="6.714" /> <!-- Suede -->
-				<item id="1879" min="1" max="1" chance="6.686" /> <!-- Cokes -->
-				<item id="1870" min="5" max="15" chance="4.033" /> <!-- Coal -->
-				<item id="1871" min="9" max="27" chance="2.252" /> <!-- Charcoal -->
-				<item id="4114" min="1" max="1" chance="0.75" /> <!-- Damascus Sword Blade -->
-				<item id="4116" min="1" max="1" chance="0.75" /> <!-- Deadman's Glory Stone -->
-			</drop>
-			<spoil>
-				<item id="948" min="1" max="1" chance="2.399" /> <!-- Scroll: Enchant Armor (B-grade) -->
-				<item id="947" min="1" max="1" chance="0.3" /> <!-- Scroll: Enchant Weapon (B-grade) -->
-			</spoil>
-		</dropLists>
-	</npc>
-	<npc id="23957" level="80" type="Folk" name="Tanta Healer" title="Commander�s Medic">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="14528" hpRegen="10.5" mp="1251" mpRegen="3.6" />
-			<speed>
-				<walk ground="75" />
-				<run ground="180" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skillList>
-		<collision>
-			<radius normal="29" />
-			<height normal="44" />
-		</collision>
-	</npc>
-	<npc id="23958" level="80" type="Folk" name="Young Poisonous Spider">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="7883" hpRegen="10.5" mp="1314" mpRegen="3.6" />
-			<speed>
-				<walk ground="60" />
-				<run ground="180" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skillList>
-		<collision>
-			<radius normal="8.1" />
-			<height normal="5.55" />
-		</collision>
-	</npc>
-	<npc id="23959" level="80" type="Folk" name="Young Stakato">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="7883" hpRegen="10.5" mp="1314" mpRegen="3.6" />
-			<speed>
-				<walk ground="21" />
-				<run ground="180" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skillList>
-		<collision>
-			<radius normal="10" />
-			<height normal="20" />
-		</collision>
-	</npc>
-	<npc id="23960" level="65" type="Monster" name="Banshee" title="Queen�s Maid">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>DEMONIC</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="19645" hpRegen="10.5" mp="1442" mpRegen="3.6" />
-			<speed>
-				<walk ground="80" />
-				<run ground="180" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skillList>
-		<collision>
-			<radius normal="9" />
-			<height normal="23" />
-		</collision>
-		<dropLists>
-			<drop>
-				<item id="503" min="1" max="1" chance="0.075" /> <!-- Sealed Zubei's Helmet -->
-				<item id="2415" min="1" max="1" chance="0.075" /> <!-- Sealed Avadon Circlet -->
-				<item id="57" min="2289" max="5346" chance="70" /> <!-- Adena -->
-				<item id="4180" min="1" max="1" chance="8.96" /> <!-- Recipe: Silver Arrow -->
-				<item id="4072" min="1" max="3" chance="7.832" /> <!-- Sealed Avadon Circlet Pattern -->
-				<item id="4102" min="1" max="3" chance="5.267" /> <!-- Sealed Zubei's Helmet Design -->
-				<item id="4962" min="1" max="1" chance="1.073" /> <!-- Recipe: Sealed Zubei's Helmet (60%) -->
-				<item id="4952" min="1" max="1" chance="0.962" /> <!-- Recipe: Sealed Avadon Circlet (60%) -->
-				<item id="4990" min="1" max="1" chance="0.75" /> <!-- Recipe: Sealed Blue Wolf Helmet (60%) -->
-				<item id="4991" min="1" max="1" chance="0.75" /> <!-- Recipe: Sealed Doom Helmet (60%) -->
-			</drop>
-			<spoil>
-				<item id="4952" min="1" max="1" chance="10.61" /> <!-- Recipe: Sealed Avadon Circlet (60%) -->
-				<item id="4962" min="1" max="1" chance="10.3" /> <!-- Recipe: Sealed Zubei's Helmet (60%) -->
-				<item id="4990" min="1" max="1" chance="6.773" /> <!-- Recipe: Sealed Blue Wolf Helmet (60%) -->
-				<item id="4991" min="1" max="1" chance="6.759" /> <!-- Recipe: Sealed Doom Helmet (60%) -->
-			</spoil>
-		</dropLists>
-	</npc>
-	<npc id="23961" level="80" type="Folk" name="Angel">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<equipment rhand="193" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="19645" hpRegen="10.5" mp="1442" mpRegen="3.6" />
-			<speed>
-				<walk ground="30" />
-				<run ground="180" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skillList>
-		<collision>
-			<radius normal="13.5" />
-			<height normal="36.5" />
-		</collision>
-	</npc>
-	<npc id="23962" level="80" type="Folk" name="Baby Golden Pig">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="27119" hpRegen="10.5" mp="1251" mpRegen="3.6" />
-			<speed>
-				<walk ground="60" />
-				<run ground="180" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skillList>
-		<collision>
-			<radius normal="15" />
-			<height normal="18.3" />
-		</collision>
-	</npc>
-	<npc id="23963" level="80" type="Folk" name="Small Bard">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="27119" hpRegen="10.5" mp="1251" mpRegen="3.6" />
-			<speed>
-				<walk ground="15" />
-				<run ground="180" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skillList>
-		<collision>
-			<radius normal="13" />
-			<height normal="18.5" />
-		</collision>
-	</npc>
-	<npc id="23964" level="80" type="Folk" name="Would-be Gatekeeper">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="28879" hpRegen="10.5" mp="1251" mpRegen="3.6" />
-			<speed>
-				<walk ground="28" />
-				<run ground="180" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skillList>
-		<collision>
-			<radius normal="9" />
-			<height normal="23.5" />
-		</collision>
-	</npc>
-	<npc id="23965" level="80" type="Folk" name="Kat the Cat">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="28879" hpRegen="10.5" mp="1251" mpRegen="3.6" />
-			<speed>
-				<walk ground="40" />
-				<run ground="180" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skillList>
-		<collision>
-			<radius normal="9" />
-			<height normal="16" />
-		</collision>
-	</npc>
-	<npc id="23966" level="80" type="Folk" name="Mew the Cat">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="27488" hpRegen="10.5" mp="1475" mpRegen="3.6" />
-			<speed>
-				<walk ground="25" />
-				<run ground="180" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skillList>
-		<collision>
-			<radius normal="8" />
-			<height normal="15" />
-		</collision>
-	</npc>
-	<npc id="23967" level="80" type="Folk" name="Feline Queen">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="27488" hpRegen="10.5" mp="1475" mpRegen="3.6" />
-			<speed>
-				<walk ground="25" />
-				<run ground="180" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skillList>
-		<collision>
-			<radius normal="8" />
-			<height normal="15" />
-		</collision>
-	</npc>
-	<npc id="23968" level="80" type="Folk" name="Roa Fan Club Human">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="29270" hpRegen="10.5" mp="1475" mpRegen="3.6" />
-			<speed>
-				<walk ground="70" />
-				<run ground="180" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skillList>
-		<collision>
-			<radius normal="10" />
-			<height normal="24" />
-		</collision>
-	</npc>
-	<npc id="23969" level="80" type="Folk" name="Roa Fan Club Dwarf">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="29270" hpRegen="10.5" mp="1475" mpRegen="3.6" />
-			<speed>
-				<walk ground="50" />
-				<run ground="180" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skillList>
-		<collision>
-			<radius normal="8" />
-			<height normal="17" />
-		</collision>
-	</npc>
-	<npc id="23970" level="80" type="Folk" name="Dandy�s Dinosaur Friend">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="29270" hpRegen="10.5" mp="1475" mpRegen="3.6" />
-			<speed>
-				<walk ground="33" />
-				<run ground="180" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skillList>
-		<collision>
-			<radius normal="20" />
-			<height normal="47.2" />
-		</collision>
-	</npc>
-	<npc id="23971" level="74" type="Monster" name="Veil Master" title="Aide of the Blood Queen">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>DEMONIC</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="15471" hpRegen="10.5" mp="1251" mpRegen="3.6" />
-			<speed>
-				<walk ground="70" />
-				<run ground="180" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skillList>
-		<collision>
-			<radius normal="12" />
-			<height normal="40" />
-		</collision>
-		<dropLists>
-			<drop>
-				<item id="79" min="1" max="1" chance="0.003" /> <!-- Damascus -->
-				<item id="171" min="1" max="1" chance="0.003" /> <!-- Deadman's Glory -->
-				<item id="57" min="1372" max="3205" chance="70" /> <!-- Adena -->
-				<item id="1895" min="1" max="1" chance="11.95" /> <!-- Metallic Fiber -->
-				<item id="1876" min="1" max="1" chance="7.985" /> <!-- Mithril Ore -->
-				<item id="1866" min="2" max="6" chance="6.714" /> <!-- Suede -->
-				<item id="1879" min="1" max="1" chance="6.686" /> <!-- Cokes -->
-				<item id="1870" min="5" max="15" chance="4.033" /> <!-- Coal -->
-				<item id="1871" min="9" max="27" chance="2.252" /> <!-- Charcoal -->
-				<item id="4114" min="1" max="1" chance="0.75" /> <!-- Damascus Sword Blade -->
-				<item id="4116" min="1" max="1" chance="0.75" /> <!-- Deadman's Glory Stone -->
-			</drop>
-			<spoil>
-				<item id="948" min="1" max="1" chance="2.399" /> <!-- Scroll: Enchant Armor (B-grade) -->
-				<item id="947" min="1" max="1" chance="0.3" /> <!-- Scroll: Enchant Weapon (B-grade) -->
-			</spoil>
-		</dropLists>
-	</npc>
-	<npc id="23972" level="80" type="Folk" name="Tanta Healer" title="Commander�s Medic">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="15471" hpRegen="10.5" mp="1251" mpRegen="3.6" />
-			<speed>
-				<walk ground="75" />
-				<run ground="180" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skillList>
-		<collision>
-			<radius normal="29" />
-			<height normal="44" />
-		</collision>
-	</npc>
-	<npc id="23973" level="80" type="Folk" name="Young Poisonous Spider">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="8045" hpRegen="10.5" mp="1314" mpRegen="3.6" />
-			<speed>
-				<walk ground="60" />
-				<run ground="180" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skillList>
-		<collision>
-			<radius normal="8.1" />
-			<height normal="5.55" />
-		</collision>
-	</npc>
-	<npc id="23974" level="80" type="Folk" name="Young Stakato">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="8045" hpRegen="10.5" mp="1314" mpRegen="3.6" />
-			<speed>
-				<walk ground="21" />
-				<run ground="180" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skillList>
-		<collision>
-			<radius normal="10" />
-			<height normal="20" />
-		</collision>
-	</npc>
-	<npc id="23975" level="65" type="Monster" name="Banshee" title="Queen�s Maid">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>DEMONIC</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="19645" hpRegen="10.5" mp="1442" mpRegen="3.6" />
-			<speed>
-				<walk ground="80" />
-				<run ground="180" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skillList>
-		<collision>
-			<radius normal="14" />
-			<height normal="40" />
-		</collision>
-		<dropLists>
-			<drop>
-				<item id="503" min="1" max="1" chance="0.075" /> <!-- Sealed Zubei's Helmet -->
-				<item id="2415" min="1" max="1" chance="0.075" /> <!-- Sealed Avadon Circlet -->
-				<item id="57" min="2289" max="5346" chance="70" /> <!-- Adena -->
-				<item id="4180" min="1" max="1" chance="8.96" /> <!-- Recipe: Silver Arrow -->
-				<item id="4072" min="1" max="3" chance="7.832" /> <!-- Sealed Avadon Circlet Pattern -->
-				<item id="4102" min="1" max="3" chance="5.267" /> <!-- Sealed Zubei's Helmet Design -->
-				<item id="4962" min="1" max="1" chance="1.073" /> <!-- Recipe: Sealed Zubei's Helmet (60%) -->
-				<item id="4952" min="1" max="1" chance="0.962" /> <!-- Recipe: Sealed Avadon Circlet (60%) -->
-				<item id="4990" min="1" max="1" chance="0.75" /> <!-- Recipe: Sealed Blue Wolf Helmet (60%) -->
-				<item id="4991" min="1" max="1" chance="0.75" /> <!-- Recipe: Sealed Doom Helmet (60%) -->
-			</drop>
-			<spoil>
-				<item id="4952" min="1" max="1" chance="10.61" /> <!-- Recipe: Sealed Avadon Circlet (60%) -->
-				<item id="4962" min="1" max="1" chance="10.3" /> <!-- Recipe: Sealed Zubei's Helmet (60%) -->
-				<item id="4990" min="1" max="1" chance="6.773" /> <!-- Recipe: Sealed Blue Wolf Helmet (60%) -->
-				<item id="4991" min="1" max="1" chance="6.759" /> <!-- Recipe: Sealed Doom Helmet (60%) -->
-			</spoil>
-		</dropLists>
-	</npc>
-	<npc id="23976" level="80" type="Folk" name="Angel">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<equipment rhand="193" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="19645" hpRegen="10.5" mp="1442" mpRegen="3.6" />
-			<speed>
-				<walk ground="30" />
-				<run ground="180" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skillList>
-		<collision>
-			<radius normal="13.5" />
-			<height normal="36.5" />
-		</collision>
-	</npc>
-	<npc id="23977" level="80" type="Folk" name="Baby Golden Pig">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="27119" hpRegen="10.5" mp="1251" mpRegen="3.6" />
-			<speed>
-				<walk ground="60" />
-				<run ground="180" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skillList>
-		<collision>
-			<radius normal="15" />
-			<height normal="18.3" />
-		</collision>
-	</npc>
-	<npc id="23978" level="80" type="Folk" name="Small Bard">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="27119" hpRegen="10.5" mp="1251" mpRegen="3.6" />
-			<speed>
-				<walk ground="15" />
-				<run ground="180" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skillList>
-		<collision>
-			<radius normal="13" />
-			<height normal="18.5" />
-		</collision>
-	</npc>
-	<npc id="23979" level="80" type="Folk" name="Would-be Gatekeeper">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="28879" hpRegen="10.5" mp="1251" mpRegen="3.6" />
-			<speed>
-				<walk ground="28" />
-				<run ground="180" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skillList>
-		<collision>
-			<radius normal="9" />
-			<height normal="23.5" />
-		</collision>
-	</npc>
-	<npc id="23980" level="80" type="Folk" name="Kat the Cat">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="28879" hpRegen="10.5" mp="1251" mpRegen="3.6" />
-			<speed>
-				<walk ground="40" />
-				<run ground="180" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skillList>
-		<collision>
-			<radius normal="9" />
-			<height normal="16" />
-		</collision>
-	</npc>
-	<npc id="23981" level="80" type="Folk" name="Mew the Cat">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="27488" hpRegen="10.5" mp="1475" mpRegen="3.6" />
-			<speed>
-				<walk ground="25" />
-				<run ground="180" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skillList>
-		<collision>
-			<radius normal="8" />
-			<height normal="15" />
-		</collision>
-	</npc>
-	<npc id="23982" level="80" type="Folk" name="Feline Queen">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="27488" hpRegen="10.5" mp="1475" mpRegen="3.6" />
-			<speed>
-				<walk ground="25" />
-				<run ground="180" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skillList>
-		<collision>
-			<radius normal="8" />
-			<height normal="15" />
-		</collision>
-	</npc>
-	<npc id="23983" level="80" type="Folk" name="Roa Fan Club Human">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="29270" hpRegen="10.5" mp="1475" mpRegen="3.6" />
-			<speed>
-				<walk ground="70" />
-				<run ground="180" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skillList>
-		<collision>
-			<radius normal="10" />
-			<height normal="24" />
-		</collision>
-	</npc>
-	<npc id="23984" level="80" type="Folk" name="Roa Fan Club Dwarf">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="29270" hpRegen="10.5" mp="1475" mpRegen="3.6" />
-			<speed>
-				<walk ground="50" />
-				<run ground="180" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skillList>
-		<collision>
-			<radius normal="8" />
-			<height normal="17" />
-		</collision>
-	</npc>
-	<npc id="23985" level="80" type="Folk" name="Dandy�s Dinosaur Friend">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="29270" hpRegen="10.5" mp="1475" mpRegen="3.6" />
-			<speed>
-				<walk ground="33" />
-				<run ground="180" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skillList>
-		<collision>
-			<radius normal="20" />
-			<height normal="47.2" />
-		</collision>
-	</npc>
-	<npc id="23986" level="80" type="Folk" name="Leona Blackbird" title="Dragon�s Advocate">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<equipment rhand="98" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="67763" hpRegen="10.5" mp="1507" mpRegen="3.6" />
-			<speed>
-				<walk ground="64" />
-				<run ground="180" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skillList>
-		<collision>
-			<radius normal="9.5" />
-			<height normal="22.4" />
-		</collision>
-	</npc>
-	<npc id="23987" level="80" type="Folk" name="Kain Van Halter" title="Prince of the Second Dimension">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<equipment rhand="5233" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="67763" hpRegen="10.5" mp="1507" mpRegen="3.6" />
-			<speed>
-				<walk ground="64" />
-				<run ground="180" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skillList>
-		<collision>
-			<radius normal="9" />
-			<height normal="20" />
-		</collision>
-	</npc>
-	<npc id="23988" level="80" type="Folk" name="Queen Ant" title="Successor in the Ant Nest">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="151492" hpRegen="10.5" mp="1540" mpRegen="3.6" />
-			<speed>
-				<walk ground="80" />
-				<run ground="180" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skillList>
-		<collision>
-			<radius normal="45" />
-			<height normal="53" />
-		</collision>
-	</npc>
-	<npc id="23989" level="80" type="Folk" name="Escort Ant">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="55088" hpRegen="10.5" mp="1540" mpRegen="3.6" />
-			<speed>
-				<walk ground="40" />
-				<run ground="180" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skillList>
-		<collision>
-			<radius normal="26" />
-			<height normal="15" />
-		</collision>
-	</npc>
-	<npc id="23990" level="80" type="Folk" name="Royal Guard Ant">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="55088" hpRegen="10.5" mp="1540" mpRegen="3.6" />
-			<speed>
-				<walk ground="40" />
-				<run ground="180" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skillList>
-		<collision>
-			<radius normal="26" />
-			<height normal="15" />
-		</collision>
-	</npc>
-	<npc id="23991" level="80" type="Folk" name="Urfen" title="Orfen Kin">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="167822" hpRegen="10.5" mp="1574" mpRegen="3.6" />
-			<speed>
-				<walk ground="60" />
-				<run ground="180" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skillList>
-		<collision>
-			<radius normal="30" />
-			<height normal="53" />
-		</collision>
-	</npc>
-	<npc id="23992" level="80" type="Folk" name="Laikel">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="62933" hpRegen="10.5" mp="1574" mpRegen="3.6" />
-			<speed>
-				<walk ground="60" />
-				<run ground="180" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skillList>
-		<collision>
-			<radius normal="18.5" />
-			<height normal="30.5" />
-		</collision>
-	</npc>
-	<npc id="23993" level="80" type="Folk" name="Riba">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="62933" hpRegen="10.5" mp="1574" mpRegen="3.6" />
-			<speed>
-				<walk ground="60" />
-				<run ground="180" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skillList>
-		<collision>
-			<radius normal="12.5" />
-			<height normal="34.5" />
-		</collision>
-	</npc>
-	<npc id="23994" level="80" type="Folk" name="Zaken" title="Unworldly Pirate King">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="188800" hpRegen="10.5" mp="1574" mpRegen="3.6" />
-			<speed>
-				<walk ground="42" />
-				<run ground="180" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skillList>
-		<collision>
-			<radius normal="16" />
-			<height normal="32" />
-		</collision>
-	</npc>
-	<npc id="23995" level="80" type="Folk" name="Zaken" title="Unworldly Pirate King">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="188800" hpRegen="10.5" mp="1574" mpRegen="3.6" />
-			<speed>
-				<walk ground="42" />
-				<run ground="180" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skillList>
-		<collision>
-			<radius normal="16" />
-			<height normal="32" />
-		</collision>
-	</npc>
-	<npc id="23996" level="80" type="Folk" name="Pirate Zombie Captain">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="69926" hpRegen="10.5" mp="1574" mpRegen="3.6" />
-			<speed>
-				<walk ground="14" />
-				<run ground="180" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skillList>
-		<collision>
-			<radius normal="17" />
-			<height normal="28" />
-		</collision>
-	</npc>
-	<npc id="23997" level="80" type="Folk" name="Pirate Zombie">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="69926" hpRegen="10.5" mp="1574" mpRegen="3.6" />
-			<speed>
-				<walk ground="11" />
-				<run ground="180" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skillList>
-		<collision>
-			<radius normal="10" />
-			<height normal="23" />
-		</collision>
-	</npc>
-	<npc id="23998" level="80" type="Folk" name="Saium" title="Relative of the Emperor">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="212878" hpRegen="10.5" mp="1607" mpRegen="3.6" />
-			<speed>
-				<walk ground="80" />
-				<run ground="180" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skillList>
-		<collision>
-			<radius normal="26" />
-			<height normal="67.8" />
-		</collision>
-	</npc>
-	<npc id="23999" level="80" type="Folk" name="Traitor Angel">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<equipment rhand="97" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="70959" hpRegen="10.5" mp="1607" mpRegen="3.6" />
-			<speed>
-				<walk ground="50" />
-				<run ground="180" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
-		</skillList>
-		<collision>
-			<radius normal="13" />
-			<height normal="37.5" />
-		</collision>
-	</npc>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org npcs.xsd">
+    <npc id="23900" level="80" type="Folk" name="Laikel of Terror" title="Leader of Creation">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>HUMAN</race>
+        <sex>FEMALE</sex>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="74262" hpRegen="10.5" mp="1345" mpRegen="3.6"/>
+            <speed>
+                <walk ground="60"/>
+                <run ground="180"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <skillList>
+            <skill id="4045" level="1"/> <!-- Full Magic Attack Resistance -->
+        </skillList>
+        <collision>
+            <radius normal="25.9"/>
+            <height normal="43.9"/>
+        </collision>
+    </npc>
+    <npc id="23901" level="80" type="Folk" name="Giant Spider of Terror" title="Leader of Creation">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>HUMAN</race>
+        <sex>FEMALE</sex>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="80450" hpRegen="10.5" mp="1345" mpRegen="3.6"/>
+            <speed>
+                <walk ground="105"/>
+                <run ground="180"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <skillList>
+            <skill id="4045" level="1"/> <!-- Full Magic Attack Resistance -->
+        </skillList>
+        <collision>
+            <radius normal="31.5"/>
+            <height normal="26.4"/>
+        </collision>
+    </npc>
+    <npc id="23902" level="80" type="Folk" name="Riba of Terror" title="Leader of Creation">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>HUMAN</race>
+        <sex>FEMALE</sex>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="3094" hpRegen="10.5" mp="1345" mpRegen="3.6"/>
+            <speed>
+                <walk ground="60"/>
+                <run ground="180"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <skillList>
+            <skill id="4045" level="1"/> <!-- Full Magic Attack Resistance -->
+        </skillList>
+        <collision>
+            <radius normal="25"/>
+            <height normal="72"/>
+        </collision>
+    </npc>
+    <npc id="23903" level="80" type="Folk" name="Stakato Worker">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>HUMANOID</race>
+        <sex>FEMALE</sex>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="27848" hpRegen="10.5" mp="1345" mpRegen="3.6"/>
+            <speed>
+                <walk ground="55"/>
+                <run ground="180"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <skillList>
+            <skill id="4045" level="1"/> <!-- Full Magic Attack Resistance -->
+        </skillList>
+        <collision>
+            <radius normal="18"/>
+            <height normal="36.4"/>
+        </collision>
+    </npc>
+    <npc id="23904" level="80" type="Folk" name="Stakato Guard">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>HUMAN</race>
+        <sex>FEMALE</sex>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="30942" hpRegen="10.5" mp="1345" mpRegen="3.6"/>
+            <speed>
+                <walk ground="25"/>
+                <run ground="180"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <skillList>
+            <skill id="4045" level="1"/> <!-- Full Magic Attack Resistance -->
+        </skillList>
+        <collision>
+            <radius normal="15"/>
+            <height normal="39"/>
+        </collision>
+    </npc>
+    <npc id="23905" level="80" type="Folk" name="Stakato Invader" title="Stakato Leader">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>HUMAN</race>
+        <sex>FEMALE</sex>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="74262" hpRegen="10.5" mp="1345" mpRegen="3.6"/>
+            <speed>
+                <walk ground="40"/>
+                <run ground="180"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <skillList>
+            <skill id="4045" level="1"/> <!-- Full Magic Attack Resistance -->
+        </skillList>
+        <collision>
+            <radius normal="34"/>
+            <height normal="48.8"/>
+        </collision>
+    </npc>
+    <npc id="23906" level="80" type="Folk" name="Stakato Queen" title="Stakato Leader">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>HUMAN</race>
+        <sex>FEMALE</sex>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="80450" hpRegen="10.5" mp="1345" mpRegen="3.6"/>
+            <speed>
+                <walk ground="34"/>
+                <run ground="180"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <skillList>
+            <skill id="4045" level="1"/> <!-- Full Magic Attack Resistance -->
+        </skillList>
+        <collision>
+            <radius normal="40"/>
+            <height normal="42"/>
+        </collision>
+    </npc>
+    <npc id="23907" level="80" type="Folk" name="Ultimate Gatekeeper A1803-1" title="Gatekeeper Leader">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>HUMAN</race>
+        <sex>FEMALE</sex>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="3094" hpRegen="10.5" mp="1345" mpRegen="3.6"/>
+            <speed>
+                <walk ground="60"/>
+                <run ground="180"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <skillList>
+            <skill id="4045" level="1"/> <!-- Full Magic Attack Resistance -->
+        </skillList>
+        <collision>
+            <radius normal="35"/>
+            <height normal="463.765"/>
+        </collision>
+    </npc>
+    <npc id="23908" level="80" type="Folk" name="Hell Assassin">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>HUMAN</race>
+        <sex>FEMALE</sex>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="21659" hpRegen="10.5" mp="1345" mpRegen="3.6"/>
+            <speed>
+                <walk ground="36"/>
+                <run ground="180"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <skillList>
+            <skill id="4045" level="1"/> <!-- Full Magic Attack Resistance -->
+        </skillList>
+        <collision>
+            <radius normal="12"/>
+            <height normal="40"/>
+        </collision>
+    </npc>
+    <npc id="23909" level="80" type="Folk" name="Hell Dark Wizard">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>HUMAN</race>
+        <sex>FEMALE</sex>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="41019" hpRegen="10.5" mp="1377" mpRegen="3.6"/>
+            <speed>
+                <walk ground="50"/>
+                <run ground="180"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <skillList>
+            <skill id="4045" level="1"/> <!-- Full Magic Attack Resistance -->
+        </skillList>
+        <collision>
+            <radius normal="9"/>
+            <height normal="34"/>
+        </collision>
+    </npc>
+    <npc id="23910" level="80" type="Folk" name="Hell Armor" title="Devil's Advocate">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>HUMAN</race>
+        <sex>FEMALE</sex>
+        <equipment rhand="5800" lhand="5799"/>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="96461" hpRegen="10.5" mp="1410" mpRegen="3.6"/>
+            <speed>
+                <walk ground="56"/>
+                <run ground="180"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <skillList>
+            <skill id="4045" level="1"/> <!-- Full Magic Attack Resistance -->
+        </skillList>
+        <collision>
+            <radius normal="9.6"/>
+            <height normal="39.4"/>
+        </collision>
+    </npc>
+    <npc id="23911" level="80" type="Folk" name="Hell Queen" title="Devil's Advocate">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>HUMAN</race>
+        <sex>FEMALE</sex>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="98227" hpRegen="10.5" mp="1442" mpRegen="3.6"/>
+            <speed>
+                <walk ground="60"/>
+                <run ground="180"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <skillList>
+            <skill id="4045" level="1"/> <!-- Full Magic Attack Resistance -->
+        </skillList>
+        <collision>
+            <radius normal="16.8"/>
+            <height normal="55.1"/>
+        </collision>
+    </npc>
+    <npc id="23912" level="80" type="Folk" name="Hell Lord" title="Devil's Advocate">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>HUMAN</race>
+        <sex>FEMALE</sex>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="3331" hpRegen="10.5" mp="1475" mpRegen="3.6"/>
+            <speed>
+                <walk ground="40"/>
+                <run ground="180"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <skillList>
+            <skill id="4045" level="1"/> <!-- Full Magic Attack Resistance -->
+        </skillList>
+        <collision>
+            <radius normal="21"/>
+            <height normal="40"/>
+        </collision>
+    </npc>
+    <npc id="23913" level="80" type="Folk" name="Heavenly Soldier">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>HUMAN</race>
+        <sex>FEMALE</sex>
+        <equipment rhand="80"/>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="21659" hpRegen="10.5" mp="1345" mpRegen="3.6"/>
+            <speed>
+                <walk ground="50"/>
+                <run ground="180"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <skillList>
+            <skill id="4045" level="1"/> <!-- Full Magic Attack Resistance -->
+        </skillList>
+        <collision>
+            <radius normal="8"/>
+            <height normal="30"/>
+        </collision>
+    </npc>
+    <npc id="23914" level="80" type="Folk" name="Heavenly Priest">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>HUMAN</race>
+        <sex>FEMALE</sex>
+        <equipment rhand="2504"/>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="41019" hpRegen="10.5" mp="1377" mpRegen="3.6"/>
+            <speed>
+                <walk ground="50"/>
+                <run ground="180"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <skillList>
+            <skill id="4045" level="1"/> <!-- Full Magic Attack Resistance -->
+        </skillList>
+        <collision>
+            <radius normal="11"/>
+            <height normal="38.5"/>
+        </collision>
+    </npc>
+    <npc id="23915" level="80" type="Folk" name="Heavenly Judge" title="Angel's Advocate">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>HUMAN</race>
+        <sex>FEMALE</sex>
+        <equipment rhand="97"/>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="96461" hpRegen="10.5" mp="1410" mpRegen="3.6"/>
+            <speed>
+                <walk ground="50"/>
+                <run ground="180"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <skillList>
+            <skill id="4045" level="1"/> <!-- Full Magic Attack Resistance -->
+        </skillList>
+        <collision>
+            <radius normal="13"/>
+            <height normal="37.5"/>
+        </collision>
+    </npc>
+    <npc id="23916" level="80" type="Folk" name="Heavenly Wings">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>HUMAN</race>
+        <sex>FEMALE</sex>
+        <equipment rhand="97"/>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="98227" hpRegen="10.5" mp="1442" mpRegen="3.6"/>
+            <speed>
+                <walk ground="30"/>
+                <run ground="180"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <skillList>
+            <skill id="4045" level="1"/> <!-- Full Magic Attack Resistance -->
+        </skillList>
+        <collision>
+            <radius normal="13"/>
+            <height normal="47"/>
+        </collision>
+    </npc>
+    <npc id="23917" level="80" type="Folk" name="Heavenly Guardian" title="Angel's Advocate">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>HUMAN</race>
+        <sex>FEMALE</sex>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="3331" hpRegen="10.5" mp="1475" mpRegen="3.6"/>
+            <speed>
+                <walk ground="60"/>
+                <run ground="180"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <skillList>
+            <skill id="4045" level="1"/> <!-- Full Magic Attack Resistance -->
+        </skillList>
+        <collision>
+            <radius normal="30"/>
+            <height normal="33"/>
+        </collision>
+    </npc>
+    <npc id="23918" level="57" type="Monster" name="Drake">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>DRAGON</race>
+        <sex>FEMALE</sex>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="3388" hpRegen="10.5" mp="1507" mpRegen="3.6"/>
+            <speed>
+                <walk ground="70"/>
+                <run ground="180"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <skillList>
+            <skill id="4045" level="1"/> <!-- Full Magic Attack Resistance -->
+        </skillList>
+        <collision>
+            <radius normal="30"/>
+            <height normal="100"/>
+        </collision>
+        <dropLists>
+            <drop>
+                <item id="135" min="1" max="1" chance="0.0075"/> <!-- Samurai Long Sword -->
+                <item id="286" min="1" max="1" chance="0.0075"/> <!-- Eminence Bow -->
+                <item id="57" min="1782" max="4157" chance="70"/> <!-- Adena -->
+                <item id="1864" min="4" max="12" chance="26.2"/> <!-- Stem -->
+                <item id="1867" min="7" max="21" chance="9.273"/> <!-- Animal Skin -->
+                <item id="952" min="1" max="1" chance="1.318"/> <!-- Scroll: Enchant Armor (C-grade) -->
+                <item id="2121" min="1" max="1" chance="1.244"/> <!-- Eminence Bow Shaft -->
+                <item id="2115" min="1" max="1" chance="1.234"/> <!-- Samurai Long Sword Blade -->
+            </drop>
+            <spoil>
+                <item id="2962" min="1" max="1" chance="35.17"/> <!-- Drake Leather Glove Design -->
+                <item id="2961" min="1" max="1" chance="33.01"/> <!-- Full Plate Boot Fragment -->
+                <item id="1877" min="1" max="1" chance="24.59"/> <!-- Adamantite Nugget -->
+                <item id="1894" min="1" max="1" chance="22.59"/> <!-- Crafted Leather -->
+            </spoil>
+        </dropLists>
+    </npc>
+    <npc id="23919" level="80" type="Folk" name="Mutated Drake">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>HUMAN</race>
+        <sex>FEMALE</sex>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="3443" hpRegen="10.5" mp="1540" mpRegen="3.6"/>
+            <speed>
+                <walk ground="46"/>
+                <run ground="180"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <skillList>
+            <skill id="4045" level="1"/> <!-- Full Magic Attack Resistance -->
+        </skillList>
+        <collision>
+            <radius normal="48"/>
+            <height normal="53.5"/>
+        </collision>
+    </npc>
+    <npc id="23920" level="80" type="Folk" name="Drak" title="Dragon's Advocate">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>HUMAN</race>
+        <sex>FEMALE</sex>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="3496" hpRegen="10.5" mp="1574" mpRegen="3.6"/>
+            <speed>
+                <walk ground="60"/>
+                <run ground="180"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <skillList>
+            <skill id="4045" level="1"/> <!-- Full Magic Attack Resistance -->
+        </skillList>
+        <collision>
+            <radius normal="44"/>
+            <height normal="51.5"/>
+        </collision>
+    </npc>
+    <npc id="23921" level="80" type="Folk" name="Inferno Drake">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>HUMAN</race>
+        <sex>FEMALE</sex>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="3496" hpRegen="10.5" mp="1574" mpRegen="3.6"/>
+            <speed>
+                <walk ground="57"/>
+                <run ground="180"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <skillList>
+            <skill id="4045" level="1"/> <!-- Full Magic Attack Resistance -->
+        </skillList>
+        <collision>
+            <radius normal="24"/>
+            <height normal="35"/>
+        </collision>
+    </npc>
+    <npc id="23922" level="80" type="Folk" name="Chaos Drake" title="Dragon's Advocate">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>HUMAN</race>
+        <sex>FEMALE</sex>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="3547" hpRegen="10.5" mp="1607" mpRegen="3.6"/>
+            <speed>
+                <walk ground="60"/>
+                <run ground="180"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <skillList>
+            <skill id="4045" level="1"/> <!-- Full Magic Attack Resistance -->
+        </skillList>
+        <collision>
+            <radius normal="55"/>
+            <height normal="80.5"/>
+        </collision>
+    </npc>
+    <npc id="23923" level="80" type="Folk" name="Velociraptor">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>HUMAN</race>
+        <sex>FEMALE</sex>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="3388" hpRegen="10.5" mp="1507" mpRegen="3.6"/>
+            <speed>
+                <walk ground="33"/>
+                <run ground="180"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <skillList>
+            <skill id="4045" level="1"/> <!-- Full Magic Attack Resistance -->
+        </skillList>
+        <collision>
+            <radius normal="20"/>
+            <height normal="47.2"/>
+        </collision>
+    </npc>
+    <npc id="23924" level="80" type="Folk" name="Ornithomimus">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>HUMAN</race>
+        <sex>FEMALE</sex>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="3443" hpRegen="10.5" mp="1540" mpRegen="3.6"/>
+            <speed>
+                <walk ground="36"/>
+                <run ground="180"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <skillList>
+            <skill id="4045" level="1"/> <!-- Full Magic Attack Resistance -->
+        </skillList>
+        <collision>
+            <radius normal="15"/>
+            <height normal="37.2"/>
+        </collision>
+    </npc>
+    <npc id="23925" level="80" type="Folk" name="Pterosaur" title="Dominator of the Wild">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>HUMAN</race>
+        <sex>FEMALE</sex>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="3496" hpRegen="10.5" mp="1574" mpRegen="3.6"/>
+            <speed>
+                <walk ground="54"/>
+                <run ground="180"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <skillList>
+            <skill id="4045" level="1"/> <!-- Full Magic Attack Resistance -->
+        </skillList>
+        <collision>
+            <radius normal="36"/>
+            <height normal="43.7"/>
+        </collision>
+    </npc>
+    <npc id="23926" level="80" type="Folk" name="Primeval Strider">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>HUMAN</race>
+        <sex>FEMALE</sex>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="3496" hpRegen="10.5" mp="1574" mpRegen="3.6"/>
+            <speed>
+                <walk ground="50"/>
+                <run ground="180"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <skillList>
+            <skill id="4045" level="1"/> <!-- Full Magic Attack Resistance -->
+        </skillList>
+        <collision>
+            <radius normal="32"/>
+            <height normal="44.2"/>
+        </collision>
+    </npc>
+    <npc id="23927" level="80" type="Folk" name="Tyrannosaurus" title="Dominator of the Wild">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>HUMAN</race>
+        <sex>FEMALE</sex>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="3547" hpRegen="10.5" mp="1607" mpRegen="3.6"/>
+            <speed>
+                <walk ground="105"/>
+                <run ground="180"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <skillList>
+            <skill id="4045" level="1"/> <!-- Full Magic Attack Resistance -->
+        </skillList>
+        <collision>
+            <radius normal="60"/>
+            <height normal="89.7"/>
+        </collision>
+    </npc>
+    <npc id="23928" level="80" type="Folk" name="Giant Golden Pig of Good Fortune" title="Intruding Challenger">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>HUMAN</race>
+        <sex>FEMALE</sex>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="81358" hpRegen="10.5" mp="1251" mpRegen="3.6"/>
+            <speed>
+                <walk ground="120"/>
+                <run ground="180"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <skillList>
+            <skill id="4045" level="1"/> <!-- Full Magic Attack Resistance -->
+        </skillList>
+        <collision>
+            <radius normal="27.5"/>
+            <height normal="38.25"/>
+        </collision>
+    </npc>
+    <npc id="23929" level="80" type="Folk" name="Dancing Bard" title="Intruding Challenger">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>HUMAN</race>
+        <sex>FEMALE</sex>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="81358" hpRegen="10.5" mp="1251" mpRegen="3.6"/>
+            <speed>
+                <walk ground="15"/>
+                <run ground="180"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <skillList>
+            <skill id="4045" level="1"/> <!-- Full Magic Attack Resistance -->
+        </skillList>
+        <collision>
+            <radius normal="39"/>
+            <height normal="61.5"/>
+        </collision>
+    </npc>
+    <npc id="23930" level="80" type="Folk" name="Gatekeeper Roxxy" title="Intruding Challenger">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>HUMAN</race>
+        <sex>FEMALE</sex>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="86639" hpRegen="10.5" mp="1345" mpRegen="3.6"/>
+            <speed>
+                <walk ground="50"/>
+                <run ground="180"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <skillList>
+            <skill id="4045" level="1"/> <!-- Full Magic Attack Resistance -->
+        </skillList>
+        <collision>
+            <radius normal="13"/>
+            <height normal="23"/>
+        </collision>
+    </npc>
+    <npc id="23931" level="80" type="Folk" name="Super Kat the Cat" title="Intruding Challenger">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>HUMAN</race>
+        <sex>FEMALE</sex>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="86639" hpRegen="10.5" mp="1345" mpRegen="3.6"/>
+            <speed>
+                <walk ground="60"/>
+                <run ground="180"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <skillList>
+            <skill id="4045" level="1"/> <!-- Full Magic Attack Resistance -->
+        </skillList>
+        <collision>
+            <radius normal="30"/>
+            <height normal="39"/>
+        </collision>
+    </npc>
+    <npc id="23932" level="80" type="Folk" name="Super Mew the Cat" title="Intruding Challenger">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>HUMAN</race>
+        <sex>FEMALE</sex>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="109952" hpRegen="10.5" mp="1475" mpRegen="3.6"/>
+            <speed>
+                <walk ground="60"/>
+                <run ground="180"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <skillList>
+            <skill id="4045" level="1"/> <!-- Full Magic Attack Resistance -->
+        </skillList>
+        <collision>
+            <radius normal="30"/>
+            <height normal="39"/>
+        </collision>
+    </npc>
+    <npc id="23933" level="80" type="Folk" name="Super Queen the Cat" title="Intruding Challenger">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>HUMAN</race>
+        <sex>FEMALE</sex>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="109952" hpRegen="10.5" mp="1475" mpRegen="3.6"/>
+            <speed>
+                <walk ground="60"/>
+                <run ground="180"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <skillList>
+            <skill id="4045" level="1"/> <!-- Full Magic Attack Resistance -->
+        </skillList>
+        <collision>
+            <radius normal="30"/>
+            <height normal="45"/>
+        </collision>
+    </npc>
+    <npc id="23934" level="80" type="Folk" name="Roa" title="Intruding Challenger">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>HUMAN</race>
+        <sex>FEMALE</sex>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="117083" hpRegen="10.5" mp="1607" mpRegen="3.6"/>
+            <speed>
+                <walk ground="64"/>
+                <run ground="180"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <skillList>
+            <skill id="4045" level="1"/> <!-- Full Magic Attack Resistance -->
+        </skillList>
+        <collision>
+            <radius normal="9"/>
+            <height normal="21.5"/>
+        </collision>
+    </npc>
+    <npc id="23935" level="80" type="Folk" name="Golden Bat Dandy" title="Intruding Challenger">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>HUMAN</race>
+        <sex>FEMALE</sex>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="117083" hpRegen="10.5" mp="1607" mpRegen="3.6"/>
+            <speed>
+                <walk ground="50"/>
+                <run ground="180"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <skillList>
+            <skill id="4045" level="1"/> <!-- Full Magic Attack Resistance -->
+        </skillList>
+        <collision>
+            <radius normal="20"/>
+            <height normal="30"/>
+        </collision>
+    </npc>
+    <npc id="23936" level="80" type="Folk" name="Ketra Knight Recruit">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>HUMAN</race>
+        <sex>FEMALE</sex>
+        <equipment rhand="160"/>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="4894" hpRegen="10.5" mp="1036" mpRegen="3.6"/>
+            <speed>
+                <walk ground="36"/>
+                <run ground="180"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <skillList>
+            <skill id="4045" level="1"/> <!-- Full Magic Attack Resistance -->
+        </skillList>
+        <collision>
+            <radius normal="12"/>
+            <height normal="24"/>
+        </collision>
+    </npc>
+    <npc id="23937" level="80" type="Folk" name="Kel Mahum Knight Recruit">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>HUMAN</race>
+        <sex>FEMALE</sex>
+        <equipment rhand="160"/>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="4894" hpRegen="10.5" mp="1036" mpRegen="3.6"/>
+            <speed>
+                <walk ground="50"/>
+                <run ground="180"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <skillList>
+            <skill id="4045" level="1"/> <!-- Full Magic Attack Resistance -->
+        </skillList>
+        <collision>
+            <radius normal="13"/>
+            <height normal="26"/>
+        </collision>
+    </npc>
+    <npc id="23938" level="80" type="Folk" name="Doom Wraith">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>HUMAN</race>
+        <sex>FEMALE</sex>
+        <equipment rhand="1472"/>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="10844" hpRegen="10.5" mp="1158" mpRegen="3.6"/>
+            <speed>
+                <walk ground="100"/>
+                <run ground="180"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <skillList>
+            <skill id="4045" level="1"/> <!-- Full Magic Attack Resistance -->
+        </skillList>
+        <collision>
+            <radius normal="15"/>
+            <height normal="45"/>
+        </collision>
+    </npc>
+    <npc id="23939" level="80" type="Folk" name="Tanta Knight Recruit">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>HUMAN</race>
+        <sex>FEMALE</sex>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="10844" hpRegen="10.5" mp="1158" mpRegen="3.6"/>
+            <speed>
+                <walk ground="40"/>
+                <run ground="180"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <skillList>
+            <skill id="4045" level="1"/> <!-- Full Magic Attack Resistance -->
+        </skillList>
+        <collision>
+            <radius normal="20"/>
+            <height normal="40.25"/>
+        </collision>
+    </npc>
+    <npc id="23940" level="80" type="Folk" name="Beetle of Terror">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>HUMAN</race>
+        <sex>FEMALE</sex>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="26151" hpRegen="10.5" mp="1251" mpRegen="3.6"/>
+            <speed>
+                <walk ground="45"/>
+                <run ground="180"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <skillList>
+            <skill id="4045" level="1"/> <!-- Full Magic Attack Resistance -->
+        </skillList>
+        <collision>
+            <radius normal="14"/>
+            <height normal="22"/>
+        </collision>
+    </npc>
+    <npc id="23941" level="80" type="Folk" name="Stakato Knight Recruit">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>HUMAN</race>
+        <sex>FEMALE</sex>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="26151" hpRegen="10.5" mp="1251" mpRegen="3.6"/>
+            <speed>
+                <walk ground="55"/>
+                <run ground="180"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <skillList>
+            <skill id="4045" level="1"/> <!-- Full Magic Attack Resistance -->
+        </skillList>
+        <collision>
+            <radius normal="18"/>
+            <height normal="36.4"/>
+        </collision>
+    </npc>
+    <npc id="23942" level="80" type="Folk" name="Hell Knight Recruit">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>HUMAN</race>
+        <sex>FEMALE</sex>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="21659" hpRegen="10.5" mp="1345" mpRegen="3.6"/>
+            <speed>
+                <walk ground="36"/>
+                <run ground="180"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <skillList>
+            <skill id="4045" level="1"/> <!-- Full Magic Attack Resistance -->
+        </skillList>
+        <collision>
+            <radius normal="12"/>
+            <height normal="40"/>
+        </collision>
+    </npc>
+    <npc id="23943" level="80" type="Folk" name="Heavenly Guardian">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>HUMAN</race>
+        <sex>FEMALE</sex>
+        <equipment rhand="80"/>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="21659" hpRegen="10.5" mp="1345" mpRegen="3.6"/>
+            <speed>
+                <walk ground="50"/>
+                <run ground="180"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <skillList>
+            <skill id="4045" level="1"/> <!-- Full Magic Attack Resistance -->
+        </skillList>
+        <collision>
+            <radius normal="8"/>
+            <height normal="30"/>
+        </collision>
+    </npc>
+    <npc id="23944" level="80" type="Folk" name="Drake Knight Recruit">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>HUMAN</race>
+        <sex>FEMALE</sex>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="3388" hpRegen="10.5" mp="1507" mpRegen="3.6"/>
+            <speed>
+                <walk ground="70"/>
+                <run ground="180"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <skillList>
+            <skill id="4045" level="1"/> <!-- Full Magic Attack Resistance -->
+        </skillList>
+        <collision>
+            <radius normal="30"/>
+            <height normal="100"/>
+        </collision>
+    </npc>
+    <npc id="23945" level="80" type="Folk" name="Velociraptor Protector Tree">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>HUMAN</race>
+        <sex>FEMALE</sex>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="3388" hpRegen="10.5" mp="1507" mpRegen="3.6"/>
+            <speed>
+                <walk ground="33"/>
+                <run ground="180"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <skillList>
+            <skill id="4045" level="1"/> <!-- Full Magic Attack Resistance -->
+        </skillList>
+        <collision>
+            <radius normal="20"/>
+            <height normal="47.2"/>
+        </collision>
+    </npc>
+    <npc id="23946" level="80" type="Folk" name="Ketra Knight Recruit">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>HUMAN</race>
+        <sex>FEMALE</sex>
+        <equipment rhand="160"/>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="6188" hpRegen="10.5" mp="1036" mpRegen="3.6"/>
+            <speed>
+                <walk ground="36"/>
+                <run ground="180"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <skillList>
+            <skill id="4045" level="1"/> <!-- Full Magic Attack Resistance -->
+        </skillList>
+        <collision>
+            <radius normal="12"/>
+            <height normal="24"/>
+        </collision>
+    </npc>
+    <npc id="23947" level="80" type="Folk" name="Kel Mahum Knight Recruit">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>HUMAN</race>
+        <sex>FEMALE</sex>
+        <equipment rhand="160"/>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="6188" hpRegen="10.5" mp="1036" mpRegen="3.6"/>
+            <speed>
+                <walk ground="50"/>
+                <run ground="180"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <skillList>
+            <skill id="4045" level="1"/> <!-- Full Magic Attack Resistance -->
+        </skillList>
+        <collision>
+            <radius normal="13"/>
+            <height normal="26"/>
+        </collision>
+    </npc>
+    <npc id="23948" level="80" type="Folk" name="Doom Wraith">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>HUMAN</race>
+        <sex>FEMALE</sex>
+        <equipment rhand="84"/>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="12377" hpRegen="10.5" mp="1158" mpRegen="3.6"/>
+            <speed>
+                <walk ground="40"/>
+                <run ground="180"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <skillList>
+            <skill id="4045" level="1"/> <!-- Full Magic Attack Resistance -->
+        </skillList>
+        <collision>
+            <radius normal="10"/>
+            <height normal="25"/>
+        </collision>
+    </npc>
+    <npc id="23949" level="80" type="Folk" name="Tanta Knight Recruit">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>HUMAN</race>
+        <sex>FEMALE</sex>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="12377" hpRegen="10.5" mp="1158" mpRegen="3.6"/>
+            <speed>
+                <walk ground="60"/>
+                <run ground="180"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <skillList>
+            <skill id="4045" level="1"/> <!-- Full Magic Attack Resistance -->
+        </skillList>
+        <collision>
+            <radius normal="34"/>
+            <height normal="28"/>
+        </collision>
+    </npc>
+    <npc id="23950" level="80" type="Folk" name="Beetle of Terror">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>HUMAN</race>
+        <sex>FEMALE</sex>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="27848" hpRegen="10.5" mp="1251" mpRegen="3.6"/>
+            <speed>
+                <walk ground="45"/>
+                <run ground="180"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <skillList>
+            <skill id="4045" level="1"/> <!-- Full Magic Attack Resistance -->
+        </skillList>
+        <collision>
+            <radius normal="14"/>
+            <height normal="22"/>
+        </collision>
+    </npc>
+    <npc id="23951" level="80" type="Folk" name="Stakato Knight Recruit">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>HUMAN</race>
+        <sex>FEMALE</sex>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="27848" hpRegen="10.5" mp="1251" mpRegen="3.6"/>
+            <speed>
+                <walk ground="140"/>
+                <run ground="180"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <skillList>
+            <skill id="4045" level="1"/> <!-- Full Magic Attack Resistance -->
+        </skillList>
+        <collision>
+            <radius normal="16"/>
+            <height normal="50"/>
+        </collision>
+    </npc>
+    <npc id="23952" level="80" type="Folk" name="Hell Knight Recruit">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>HUMAN</race>
+        <sex>FEMALE</sex>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="21659" hpRegen="10.5" mp="1345" mpRegen="3.6"/>
+            <speed>
+                <walk ground="36"/>
+                <run ground="180"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <skillList>
+            <skill id="4045" level="1"/> <!-- Full Magic Attack Resistance -->
+        </skillList>
+        <collision>
+            <radius normal="12"/>
+            <height normal="40"/>
+        </collision>
+    </npc>
+    <npc id="23953" level="80" type="Folk" name="Heavenly Guardian">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>HUMAN</race>
+        <sex>FEMALE</sex>
+        <equipment rhand="80"/>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="21659" hpRegen="10.5" mp="1345" mpRegen="3.6"/>
+            <speed>
+                <walk ground="50"/>
+                <run ground="180"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <skillList>
+            <skill id="4045" level="1"/> <!-- Full Magic Attack Resistance -->
+        </skillList>
+        <collision>
+            <radius normal="8"/>
+            <height normal="30"/>
+        </collision>
+    </npc>
+    <npc id="23954" level="80" type="Folk" name="Drake Knight Recruit">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>HUMAN</race>
+        <sex>FEMALE</sex>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="3388" hpRegen="10.5" mp="1507" mpRegen="3.6"/>
+            <speed>
+                <walk ground="70"/>
+                <run ground="180"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <skillList>
+            <skill id="4045" level="1"/> <!-- Full Magic Attack Resistance -->
+        </skillList>
+        <collision>
+            <radius normal="30"/>
+            <height normal="100"/>
+        </collision>
+    </npc>
+    <npc id="23955" level="80" type="Folk" name="Velociraptor Protector Tree">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>HUMAN</race>
+        <sex>FEMALE</sex>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="3388" hpRegen="10.5" mp="1507" mpRegen="3.6"/>
+            <speed>
+                <walk ground="33"/>
+                <run ground="180"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <skillList>
+            <skill id="4045" level="1"/> <!-- Full Magic Attack Resistance -->
+        </skillList>
+        <collision>
+            <radius normal="20"/>
+            <height normal="47.2"/>
+        </collision>
+    </npc>
+    <npc id="23956" level="74" type="Monster" name="Veil Master" title="Aide of the Blood Queen">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>DEMONIC</race>
+        <sex>FEMALE</sex>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="14528" hpRegen="10.5" mp="1251" mpRegen="3.6"/>
+            <speed>
+                <walk ground="70"/>
+                <run ground="180"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <skillList>
+            <skill id="4045" level="1"/> <!-- Full Magic Attack Resistance -->
+        </skillList>
+        <collision>
+            <radius normal="12"/>
+            <height normal="40"/>
+        </collision>
+        <dropLists>
+            <drop>
+                <item id="79" min="1" max="1" chance="0.003"/> <!-- Damascus -->
+                <item id="171" min="1" max="1" chance="0.003"/> <!-- Deadman's Glory -->
+                <item id="57" min="1372" max="3205" chance="70"/> <!-- Adena -->
+                <item id="1895" min="1" max="1" chance="11.95"/> <!-- Metallic Fiber -->
+                <item id="1876" min="1" max="1" chance="7.985"/> <!-- Mithril Ore -->
+                <item id="1866" min="2" max="6" chance="6.714"/> <!-- Suede -->
+                <item id="1879" min="1" max="1" chance="6.686"/> <!-- Cokes -->
+                <item id="1870" min="5" max="15" chance="4.033"/> <!-- Coal -->
+                <item id="1871" min="9" max="27" chance="2.252"/> <!-- Charcoal -->
+                <item id="4114" min="1" max="1" chance="0.75"/> <!-- Damascus Sword Blade -->
+                <item id="4116" min="1" max="1" chance="0.75"/> <!-- Deadman's Glory Stone -->
+            </drop>
+            <spoil>
+                <item id="948" min="1" max="1" chance="2.399"/> <!-- Scroll: Enchant Armor (B-grade) -->
+                <item id="947" min="1" max="1" chance="0.3"/> <!-- Scroll: Enchant Weapon (B-grade) -->
+            </spoil>
+        </dropLists>
+    </npc>
+    <npc id="23957" level="80" type="Folk" name="Tanta Healer" title="Commander's Medic">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>HUMAN</race>
+        <sex>FEMALE</sex>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="14528" hpRegen="10.5" mp="1251" mpRegen="3.6"/>
+            <speed>
+                <walk ground="75"/>
+                <run ground="180"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <skillList>
+            <skill id="4045" level="1"/> <!-- Full Magic Attack Resistance -->
+        </skillList>
+        <collision>
+            <radius normal="29"/>
+            <height normal="44"/>
+        </collision>
+    </npc>
+    <npc id="23958" level="80" type="Folk" name="Young Poisonous Spider">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>HUMAN</race>
+        <sex>FEMALE</sex>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="7883" hpRegen="10.5" mp="1314" mpRegen="3.6"/>
+            <speed>
+                <walk ground="60"/>
+                <run ground="180"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <skillList>
+            <skill id="4045" level="1"/> <!-- Full Magic Attack Resistance -->
+        </skillList>
+        <collision>
+            <radius normal="8.1"/>
+            <height normal="5.55"/>
+        </collision>
+    </npc>
+    <npc id="23959" level="80" type="Folk" name="Young Stakato">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>HUMAN</race>
+        <sex>FEMALE</sex>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="7883" hpRegen="10.5" mp="1314" mpRegen="3.6"/>
+            <speed>
+                <walk ground="21"/>
+                <run ground="180"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <skillList>
+            <skill id="4045" level="1"/> <!-- Full Magic Attack Resistance -->
+        </skillList>
+        <collision>
+            <radius normal="10"/>
+            <height normal="20"/>
+        </collision>
+    </npc>
+    <npc id="23960" level="65" type="Monster" name="Banshee" title="Queen's Maid">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>DEMONIC</race>
+        <sex>FEMALE</sex>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="19645" hpRegen="10.5" mp="1442" mpRegen="3.6"/>
+            <speed>
+                <walk ground="80"/>
+                <run ground="180"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <skillList>
+            <skill id="4045" level="1"/> <!-- Full Magic Attack Resistance -->
+        </skillList>
+        <collision>
+            <radius normal="9"/>
+            <height normal="23"/>
+        </collision>
+        <dropLists>
+            <drop>
+                <item id="503" min="1" max="1" chance="0.075"/> <!-- Sealed Zubei's Helmet -->
+                <item id="2415" min="1" max="1" chance="0.075"/> <!-- Sealed Avadon Circlet -->
+                <item id="57" min="2289" max="5346" chance="70"/> <!-- Adena -->
+                <item id="4180" min="1" max="1" chance="8.96"/> <!-- Recipe: Silver Arrow -->
+                <item id="4072" min="1" max="3" chance="7.832"/> <!-- Sealed Avadon Circlet Pattern -->
+                <item id="4102" min="1" max="3" chance="5.267"/> <!-- Sealed Zubei's Helmet Design -->
+                <item id="4962" min="1" max="1" chance="1.073"/> <!-- Recipe: Sealed Zubei's Helmet (60%) -->
+                <item id="4952" min="1" max="1" chance="0.962"/> <!-- Recipe: Sealed Avadon Circlet (60%) -->
+                <item id="4990" min="1" max="1" chance="0.75"/> <!-- Recipe: Sealed Blue Wolf Helmet (60%) -->
+                <item id="4991" min="1" max="1" chance="0.75"/> <!-- Recipe: Sealed Doom Helmet (60%) -->
+            </drop>
+            <spoil>
+                <item id="4952" min="1" max="1" chance="10.61"/> <!-- Recipe: Sealed Avadon Circlet (60%) -->
+                <item id="4962" min="1" max="1" chance="10.3"/> <!-- Recipe: Sealed Zubei's Helmet (60%) -->
+                <item id="4990" min="1" max="1" chance="6.773"/> <!-- Recipe: Sealed Blue Wolf Helmet (60%) -->
+                <item id="4991" min="1" max="1" chance="6.759"/> <!-- Recipe: Sealed Doom Helmet (60%) -->
+            </spoil>
+        </dropLists>
+    </npc>
+    <npc id="23961" level="80" type="Folk" name="Angel">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>HUMAN</race>
+        <sex>FEMALE</sex>
+        <equipment rhand="193"/>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="19645" hpRegen="10.5" mp="1442" mpRegen="3.6"/>
+            <speed>
+                <walk ground="30"/>
+                <run ground="180"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <skillList>
+            <skill id="4045" level="1"/> <!-- Full Magic Attack Resistance -->
+        </skillList>
+        <collision>
+            <radius normal="13.5"/>
+            <height normal="36.5"/>
+        </collision>
+    </npc>
+    <npc id="23962" level="80" type="Folk" name="Baby Golden Pig">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>HUMAN</race>
+        <sex>FEMALE</sex>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="27119" hpRegen="10.5" mp="1251" mpRegen="3.6"/>
+            <speed>
+                <walk ground="60"/>
+                <run ground="180"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <skillList>
+            <skill id="4045" level="1"/> <!-- Full Magic Attack Resistance -->
+        </skillList>
+        <collision>
+            <radius normal="15"/>
+            <height normal="18.3"/>
+        </collision>
+    </npc>
+    <npc id="23963" level="80" type="Folk" name="Small Bard">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>HUMAN</race>
+        <sex>FEMALE</sex>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="27119" hpRegen="10.5" mp="1251" mpRegen="3.6"/>
+            <speed>
+                <walk ground="15"/>
+                <run ground="180"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <skillList>
+            <skill id="4045" level="1"/> <!-- Full Magic Attack Resistance -->
+        </skillList>
+        <collision>
+            <radius normal="13"/>
+            <height normal="18.5"/>
+        </collision>
+    </npc>
+    <npc id="23964" level="80" type="Folk" name="Would-be Gatekeeper">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>HUMAN</race>
+        <sex>FEMALE</sex>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="28879" hpRegen="10.5" mp="1251" mpRegen="3.6"/>
+            <speed>
+                <walk ground="28"/>
+                <run ground="180"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <skillList>
+            <skill id="4045" level="1"/> <!-- Full Magic Attack Resistance -->
+        </skillList>
+        <collision>
+            <radius normal="9"/>
+            <height normal="23.5"/>
+        </collision>
+    </npc>
+    <npc id="23965" level="80" type="Folk" name="Kat the Cat">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>HUMAN</race>
+        <sex>FEMALE</sex>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="28879" hpRegen="10.5" mp="1251" mpRegen="3.6"/>
+            <speed>
+                <walk ground="40"/>
+                <run ground="180"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <skillList>
+            <skill id="4045" level="1"/> <!-- Full Magic Attack Resistance -->
+        </skillList>
+        <collision>
+            <radius normal="9"/>
+            <height normal="16"/>
+        </collision>
+    </npc>
+    <npc id="23966" level="80" type="Folk" name="Mew the Cat">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>HUMAN</race>
+        <sex>FEMALE</sex>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="27488" hpRegen="10.5" mp="1475" mpRegen="3.6"/>
+            <speed>
+                <walk ground="25"/>
+                <run ground="180"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <skillList>
+            <skill id="4045" level="1"/> <!-- Full Magic Attack Resistance -->
+        </skillList>
+        <collision>
+            <radius normal="8"/>
+            <height normal="15"/>
+        </collision>
+    </npc>
+    <npc id="23967" level="80" type="Folk" name="Feline Queen">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>HUMAN</race>
+        <sex>FEMALE</sex>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="27488" hpRegen="10.5" mp="1475" mpRegen="3.6"/>
+            <speed>
+                <walk ground="25"/>
+                <run ground="180"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <skillList>
+            <skill id="4045" level="1"/> <!-- Full Magic Attack Resistance -->
+        </skillList>
+        <collision>
+            <radius normal="8"/>
+            <height normal="15"/>
+        </collision>
+    </npc>
+    <npc id="23968" level="80" type="Folk" name="Roa Fan Club Human">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>HUMAN</race>
+        <sex>FEMALE</sex>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="29270" hpRegen="10.5" mp="1475" mpRegen="3.6"/>
+            <speed>
+                <walk ground="70"/>
+                <run ground="180"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <skillList>
+            <skill id="4045" level="1"/> <!-- Full Magic Attack Resistance -->
+        </skillList>
+        <collision>
+            <radius normal="10"/>
+            <height normal="24"/>
+        </collision>
+    </npc>
+    <npc id="23969" level="80" type="Folk" name="Roa Fan Club Dwarf">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>HUMAN</race>
+        <sex>FEMALE</sex>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="29270" hpRegen="10.5" mp="1475" mpRegen="3.6"/>
+            <speed>
+                <walk ground="50"/>
+                <run ground="180"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <skillList>
+            <skill id="4045" level="1"/> <!-- Full Magic Attack Resistance -->
+        </skillList>
+        <collision>
+            <radius normal="8"/>
+            <height normal="17"/>
+        </collision>
+    </npc>
+    <npc id="23970" level="80" type="Folk" name="Dandy's Dinosaur Friend">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>HUMAN</race>
+        <sex>FEMALE</sex>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="29270" hpRegen="10.5" mp="1475" mpRegen="3.6"/>
+            <speed>
+                <walk ground="33"/>
+                <run ground="180"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <skillList>
+            <skill id="4045" level="1"/> <!-- Full Magic Attack Resistance -->
+        </skillList>
+        <collision>
+            <radius normal="20"/>
+            <height normal="47.2"/>
+        </collision>
+    </npc>
+    <npc id="23971" level="74" type="Monster" name="Veil Master" title="Aide of the Blood Queen">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>DEMONIC</race>
+        <sex>FEMALE</sex>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="15471" hpRegen="10.5" mp="1251" mpRegen="3.6"/>
+            <speed>
+                <walk ground="70"/>
+                <run ground="180"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <skillList>
+            <skill id="4045" level="1"/> <!-- Full Magic Attack Resistance -->
+        </skillList>
+        <collision>
+            <radius normal="12"/>
+            <height normal="40"/>
+        </collision>
+        <dropLists>
+            <drop>
+                <item id="79" min="1" max="1" chance="0.003"/> <!-- Damascus -->
+                <item id="171" min="1" max="1" chance="0.003"/> <!-- Deadman's Glory -->
+                <item id="57" min="1372" max="3205" chance="70"/> <!-- Adena -->
+                <item id="1895" min="1" max="1" chance="11.95"/> <!-- Metallic Fiber -->
+                <item id="1876" min="1" max="1" chance="7.985"/> <!-- Mithril Ore -->
+                <item id="1866" min="2" max="6" chance="6.714"/> <!-- Suede -->
+                <item id="1879" min="1" max="1" chance="6.686"/> <!-- Cokes -->
+                <item id="1870" min="5" max="15" chance="4.033"/> <!-- Coal -->
+                <item id="1871" min="9" max="27" chance="2.252"/> <!-- Charcoal -->
+                <item id="4114" min="1" max="1" chance="0.75"/> <!-- Damascus Sword Blade -->
+                <item id="4116" min="1" max="1" chance="0.75"/> <!-- Deadman's Glory Stone -->
+            </drop>
+            <spoil>
+                <item id="948" min="1" max="1" chance="2.399"/> <!-- Scroll: Enchant Armor (B-grade) -->
+                <item id="947" min="1" max="1" chance="0.3"/> <!-- Scroll: Enchant Weapon (B-grade) -->
+            </spoil>
+        </dropLists>
+    </npc>
+    <npc id="23972" level="80" type="Folk" name="Tanta Healer" title="Commander's Medic">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>HUMAN</race>
+        <sex>FEMALE</sex>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="15471" hpRegen="10.5" mp="1251" mpRegen="3.6"/>
+            <speed>
+                <walk ground="75"/>
+                <run ground="180"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <skillList>
+            <skill id="4045" level="1"/> <!-- Full Magic Attack Resistance -->
+        </skillList>
+        <collision>
+            <radius normal="29"/>
+            <height normal="44"/>
+        </collision>
+    </npc>
+    <npc id="23973" level="80" type="Folk" name="Young Poisonous Spider">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>HUMAN</race>
+        <sex>FEMALE</sex>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="8045" hpRegen="10.5" mp="1314" mpRegen="3.6"/>
+            <speed>
+                <walk ground="60"/>
+                <run ground="180"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <skillList>
+            <skill id="4045" level="1"/> <!-- Full Magic Attack Resistance -->
+        </skillList>
+        <collision>
+            <radius normal="8.1"/>
+            <height normal="5.55"/>
+        </collision>
+    </npc>
+    <npc id="23974" level="80" type="Folk" name="Young Stakato">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>HUMAN</race>
+        <sex>FEMALE</sex>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="8045" hpRegen="10.5" mp="1314" mpRegen="3.6"/>
+            <speed>
+                <walk ground="21"/>
+                <run ground="180"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <skillList>
+            <skill id="4045" level="1"/> <!-- Full Magic Attack Resistance -->
+        </skillList>
+        <collision>
+            <radius normal="10"/>
+            <height normal="20"/>
+        </collision>
+    </npc>
+    <npc id="23975" level="65" type="Monster" name="Banshee" title="Queen's Maid">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>DEMONIC</race>
+        <sex>FEMALE</sex>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="19645" hpRegen="10.5" mp="1442" mpRegen="3.6"/>
+            <speed>
+                <walk ground="80"/>
+                <run ground="180"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <skillList>
+            <skill id="4045" level="1"/> <!-- Full Magic Attack Resistance -->
+        </skillList>
+        <collision>
+            <radius normal="14"/>
+            <height normal="40"/>
+        </collision>
+        <dropLists>
+            <drop>
+                <item id="503" min="1" max="1" chance="0.075"/> <!-- Sealed Zubei's Helmet -->
+                <item id="2415" min="1" max="1" chance="0.075"/> <!-- Sealed Avadon Circlet -->
+                <item id="57" min="2289" max="5346" chance="70"/> <!-- Adena -->
+                <item id="4180" min="1" max="1" chance="8.96"/> <!-- Recipe: Silver Arrow -->
+                <item id="4072" min="1" max="3" chance="7.832"/> <!-- Sealed Avadon Circlet Pattern -->
+                <item id="4102" min="1" max="3" chance="5.267"/> <!-- Sealed Zubei's Helmet Design -->
+                <item id="4962" min="1" max="1" chance="1.073"/> <!-- Recipe: Sealed Zubei's Helmet (60%) -->
+                <item id="4952" min="1" max="1" chance="0.962"/> <!-- Recipe: Sealed Avadon Circlet (60%) -->
+                <item id="4990" min="1" max="1" chance="0.75"/> <!-- Recipe: Sealed Blue Wolf Helmet (60%) -->
+                <item id="4991" min="1" max="1" chance="0.75"/> <!-- Recipe: Sealed Doom Helmet (60%) -->
+            </drop>
+            <spoil>
+                <item id="4952" min="1" max="1" chance="10.61"/> <!-- Recipe: Sealed Avadon Circlet (60%) -->
+                <item id="4962" min="1" max="1" chance="10.3"/> <!-- Recipe: Sealed Zubei's Helmet (60%) -->
+                <item id="4990" min="1" max="1" chance="6.773"/> <!-- Recipe: Sealed Blue Wolf Helmet (60%) -->
+                <item id="4991" min="1" max="1" chance="6.759"/> <!-- Recipe: Sealed Doom Helmet (60%) -->
+            </spoil>
+        </dropLists>
+    </npc>
+    <npc id="23976" level="80" type="Folk" name="Angel">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>HUMAN</race>
+        <sex>FEMALE</sex>
+        <equipment rhand="193"/>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="19645" hpRegen="10.5" mp="1442" mpRegen="3.6"/>
+            <speed>
+                <walk ground="30"/>
+                <run ground="180"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <skillList>
+            <skill id="4045" level="1"/> <!-- Full Magic Attack Resistance -->
+        </skillList>
+        <collision>
+            <radius normal="13.5"/>
+            <height normal="36.5"/>
+        </collision>
+    </npc>
+    <npc id="23977" level="80" type="Folk" name="Baby Golden Pig">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>HUMAN</race>
+        <sex>FEMALE</sex>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="27119" hpRegen="10.5" mp="1251" mpRegen="3.6"/>
+            <speed>
+                <walk ground="60"/>
+                <run ground="180"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <skillList>
+            <skill id="4045" level="1"/> <!-- Full Magic Attack Resistance -->
+        </skillList>
+        <collision>
+            <radius normal="15"/>
+            <height normal="18.3"/>
+        </collision>
+    </npc>
+    <npc id="23978" level="80" type="Folk" name="Small Bard">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>HUMAN</race>
+        <sex>FEMALE</sex>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="27119" hpRegen="10.5" mp="1251" mpRegen="3.6"/>
+            <speed>
+                <walk ground="15"/>
+                <run ground="180"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <skillList>
+            <skill id="4045" level="1"/> <!-- Full Magic Attack Resistance -->
+        </skillList>
+        <collision>
+            <radius normal="13"/>
+            <height normal="18.5"/>
+        </collision>
+    </npc>
+    <npc id="23979" level="80" type="Folk" name="Would-be Gatekeeper">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>HUMAN</race>
+        <sex>FEMALE</sex>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="28879" hpRegen="10.5" mp="1251" mpRegen="3.6"/>
+            <speed>
+                <walk ground="28"/>
+                <run ground="180"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <skillList>
+            <skill id="4045" level="1"/> <!-- Full Magic Attack Resistance -->
+        </skillList>
+        <collision>
+            <radius normal="9"/>
+            <height normal="23.5"/>
+        </collision>
+    </npc>
+    <npc id="23980" level="80" type="Folk" name="Kat the Cat">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>HUMAN</race>
+        <sex>FEMALE</sex>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="28879" hpRegen="10.5" mp="1251" mpRegen="3.6"/>
+            <speed>
+                <walk ground="40"/>
+                <run ground="180"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <skillList>
+            <skill id="4045" level="1"/> <!-- Full Magic Attack Resistance -->
+        </skillList>
+        <collision>
+            <radius normal="9"/>
+            <height normal="16"/>
+        </collision>
+    </npc>
+    <npc id="23981" level="80" type="Folk" name="Mew the Cat">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>HUMAN</race>
+        <sex>FEMALE</sex>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="27488" hpRegen="10.5" mp="1475" mpRegen="3.6"/>
+            <speed>
+                <walk ground="25"/>
+                <run ground="180"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <skillList>
+            <skill id="4045" level="1"/> <!-- Full Magic Attack Resistance -->
+        </skillList>
+        <collision>
+            <radius normal="8"/>
+            <height normal="15"/>
+        </collision>
+    </npc>
+    <npc id="23982" level="80" type="Folk" name="Feline Queen">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>HUMAN</race>
+        <sex>FEMALE</sex>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="27488" hpRegen="10.5" mp="1475" mpRegen="3.6"/>
+            <speed>
+                <walk ground="25"/>
+                <run ground="180"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <skillList>
+            <skill id="4045" level="1"/> <!-- Full Magic Attack Resistance -->
+        </skillList>
+        <collision>
+            <radius normal="8"/>
+            <height normal="15"/>
+        </collision>
+    </npc>
+    <npc id="23983" level="80" type="Folk" name="Roa Fan Club Human">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>HUMAN</race>
+        <sex>FEMALE</sex>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="29270" hpRegen="10.5" mp="1475" mpRegen="3.6"/>
+            <speed>
+                <walk ground="70"/>
+                <run ground="180"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <skillList>
+            <skill id="4045" level="1"/> <!-- Full Magic Attack Resistance -->
+        </skillList>
+        <collision>
+            <radius normal="10"/>
+            <height normal="24"/>
+        </collision>
+    </npc>
+    <npc id="23984" level="80" type="Folk" name="Roa Fan Club Dwarf">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>HUMAN</race>
+        <sex>FEMALE</sex>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="29270" hpRegen="10.5" mp="1475" mpRegen="3.6"/>
+            <speed>
+                <walk ground="50"/>
+                <run ground="180"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <skillList>
+            <skill id="4045" level="1"/> <!-- Full Magic Attack Resistance -->
+        </skillList>
+        <collision>
+            <radius normal="8"/>
+            <height normal="17"/>
+        </collision>
+    </npc>
+    <npc id="23985" level="80" type="Folk" name="Dandy's Dinosaur Friend">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>HUMAN</race>
+        <sex>FEMALE</sex>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="29270" hpRegen="10.5" mp="1475" mpRegen="3.6"/>
+            <speed>
+                <walk ground="33"/>
+                <run ground="180"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <skillList>
+            <skill id="4045" level="1"/> <!-- Full Magic Attack Resistance -->
+        </skillList>
+        <collision>
+            <radius normal="20"/>
+            <height normal="47.2"/>
+        </collision>
+    </npc>
+    <npc id="23986" level="80" type="Folk" name="Leona Blackbird" title="Dragon's Advocate">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>HUMAN</race>
+        <sex>FEMALE</sex>
+        <equipment rhand="98"/>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="67763" hpRegen="10.5" mp="1507" mpRegen="3.6"/>
+            <speed>
+                <walk ground="64"/>
+                <run ground="180"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <skillList>
+            <skill id="4045" level="1"/> <!-- Full Magic Attack Resistance -->
+        </skillList>
+        <collision>
+            <radius normal="9.5"/>
+            <height normal="22.4"/>
+        </collision>
+    </npc>
+    <npc id="23987" level="80" type="Folk" name="Kain Van Halter" title="Prince of the Second Dimension">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>HUMAN</race>
+        <sex>FEMALE</sex>
+        <equipment rhand="5233"/>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="67763" hpRegen="10.5" mp="1507" mpRegen="3.6"/>
+            <speed>
+                <walk ground="64"/>
+                <run ground="180"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <skillList>
+            <skill id="4045" level="1"/> <!-- Full Magic Attack Resistance -->
+        </skillList>
+        <collision>
+            <radius normal="9"/>
+            <height normal="20"/>
+        </collision>
+    </npc>
+    <npc id="23988" level="80" type="Folk" name="Queen Ant" title="Successor in the Ant Nest">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>HUMAN</race>
+        <sex>FEMALE</sex>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="151492" hpRegen="10.5" mp="1540" mpRegen="3.6"/>
+            <speed>
+                <walk ground="80"/>
+                <run ground="180"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <skillList>
+            <skill id="4045" level="1"/> <!-- Full Magic Attack Resistance -->
+        </skillList>
+        <collision>
+            <radius normal="45"/>
+            <height normal="53"/>
+        </collision>
+    </npc>
+    <npc id="23989" level="80" type="Folk" name="Escort Ant">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>HUMAN</race>
+        <sex>FEMALE</sex>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="55088" hpRegen="10.5" mp="1540" mpRegen="3.6"/>
+            <speed>
+                <walk ground="40"/>
+                <run ground="180"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <skillList>
+            <skill id="4045" level="1"/> <!-- Full Magic Attack Resistance -->
+        </skillList>
+        <collision>
+            <radius normal="26"/>
+            <height normal="15"/>
+        </collision>
+    </npc>
+    <npc id="23990" level="80" type="Folk" name="Royal Guard Ant">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>HUMAN</race>
+        <sex>FEMALE</sex>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="55088" hpRegen="10.5" mp="1540" mpRegen="3.6"/>
+            <speed>
+                <walk ground="40"/>
+                <run ground="180"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <skillList>
+            <skill id="4045" level="1"/> <!-- Full Magic Attack Resistance -->
+        </skillList>
+        <collision>
+            <radius normal="26"/>
+            <height normal="15"/>
+        </collision>
+    </npc>
+    <npc id="23991" level="80" type="Folk" name="Urfen" title="Orfen Kin">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>HUMAN</race>
+        <sex>FEMALE</sex>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="167822" hpRegen="10.5" mp="1574" mpRegen="3.6"/>
+            <speed>
+                <walk ground="60"/>
+                <run ground="180"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <skillList>
+            <skill id="4045" level="1"/> <!-- Full Magic Attack Resistance -->
+        </skillList>
+        <collision>
+            <radius normal="30"/>
+            <height normal="53"/>
+        </collision>
+    </npc>
+    <npc id="23992" level="80" type="Folk" name="Laikel">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>HUMAN</race>
+        <sex>FEMALE</sex>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="62933" hpRegen="10.5" mp="1574" mpRegen="3.6"/>
+            <speed>
+                <walk ground="60"/>
+                <run ground="180"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <skillList>
+            <skill id="4045" level="1"/> <!-- Full Magic Attack Resistance -->
+        </skillList>
+        <collision>
+            <radius normal="18.5"/>
+            <height normal="30.5"/>
+        </collision>
+    </npc>
+    <npc id="23993" level="80" type="Folk" name="Riba">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>HUMAN</race>
+        <sex>FEMALE</sex>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="62933" hpRegen="10.5" mp="1574" mpRegen="3.6"/>
+            <speed>
+                <walk ground="60"/>
+                <run ground="180"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <skillList>
+            <skill id="4045" level="1"/> <!-- Full Magic Attack Resistance -->
+        </skillList>
+        <collision>
+            <radius normal="12.5"/>
+            <height normal="34.5"/>
+        </collision>
+    </npc>
+    <npc id="23994" level="80" type="Folk" name="Zaken" title="Unworldly Pirate King">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>HUMAN</race>
+        <sex>FEMALE</sex>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="188800" hpRegen="10.5" mp="1574" mpRegen="3.6"/>
+            <speed>
+                <walk ground="42"/>
+                <run ground="180"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <skillList>
+            <skill id="4045" level="1"/> <!-- Full Magic Attack Resistance -->
+        </skillList>
+        <collision>
+            <radius normal="16"/>
+            <height normal="32"/>
+        </collision>
+    </npc>
+    <npc id="23995" level="80" type="Folk" name="Zaken" title="Unworldly Pirate King">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>HUMAN</race>
+        <sex>FEMALE</sex>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="188800" hpRegen="10.5" mp="1574" mpRegen="3.6"/>
+            <speed>
+                <walk ground="42"/>
+                <run ground="180"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <skillList>
+            <skill id="4045" level="1"/> <!-- Full Magic Attack Resistance -->
+        </skillList>
+        <collision>
+            <radius normal="16"/>
+            <height normal="32"/>
+        </collision>
+    </npc>
+    <npc id="23996" level="80" type="Folk" name="Pirate Zombie Captain">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>HUMAN</race>
+        <sex>FEMALE</sex>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="69926" hpRegen="10.5" mp="1574" mpRegen="3.6"/>
+            <speed>
+                <walk ground="14"/>
+                <run ground="180"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <skillList>
+            <skill id="4045" level="1"/> <!-- Full Magic Attack Resistance -->
+        </skillList>
+        <collision>
+            <radius normal="17"/>
+            <height normal="28"/>
+        </collision>
+    </npc>
+    <npc id="23997" level="80" type="Folk" name="Pirate Zombie">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>HUMAN</race>
+        <sex>FEMALE</sex>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="69926" hpRegen="10.5" mp="1574" mpRegen="3.6"/>
+            <speed>
+                <walk ground="11"/>
+                <run ground="180"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <skillList>
+            <skill id="4045" level="1"/> <!-- Full Magic Attack Resistance -->
+        </skillList>
+        <collision>
+            <radius normal="10"/>
+            <height normal="23"/>
+        </collision>
+    </npc>
+    <npc id="23998" level="80" type="Folk" name="Saium" title="Relative of the Emperor">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>HUMAN</race>
+        <sex>FEMALE</sex>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="212878" hpRegen="10.5" mp="1607" mpRegen="3.6"/>
+            <speed>
+                <walk ground="80"/>
+                <run ground="180"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <skillList>
+            <skill id="4045" level="1"/> <!-- Full Magic Attack Resistance -->
+        </skillList>
+        <collision>
+            <radius normal="26"/>
+            <height normal="67.8"/>
+        </collision>
+    </npc>
+    <npc id="23999" level="80" type="Folk" name="Traitor Angel">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>HUMAN</race>
+        <sex>FEMALE</sex>
+        <equipment rhand="97"/>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="70959" hpRegen="10.5" mp="1607" mpRegen="3.6"/>
+            <speed>
+                <walk ground="50"/>
+                <run ground="180"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <skillList>
+            <skill id="4045" level="1"/> <!-- Full Magic Attack Resistance -->
+        </skillList>
+        <collision>
+            <radius normal="13"/>
+            <height normal="37.5"/>
+        </collision>
+    </npc>
 </list>

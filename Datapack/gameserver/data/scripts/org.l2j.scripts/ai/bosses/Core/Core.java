@@ -16,12 +16,7 @@
  */
 package ai.bosses.Core;
 
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.Map.Entry;
-import java.util.concurrent.CopyOnWriteArrayList;
-
+import ai.AbstractNpcAI;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.enums.ChatType;
 import org.l2j.gameserver.instancemanager.GlobalVariablesManager;
@@ -35,7 +30,11 @@ import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.NpcStringId;
 import org.l2j.gameserver.network.serverpackets.PlaySound;
 
-import ai.AbstractNpcAI;
+import java.util.Collection;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Map.Entry;
+import java.util.concurrent.ConcurrentHashMap;
 
 /**
  * Core AI.
@@ -77,7 +76,7 @@ public final class Core extends AbstractNpcAI
 	
 	private static boolean _firstAttacked;
 	
-	private static final List<Attackable> _minions = new CopyOnWriteArrayList<>();
+	private static final Collection<Attackable> _minions = ConcurrentHashMap.newKeySet();
 	
 	private Core()
 	{

@@ -1,689 +1,689 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org zones.xsd" >
-	<zone name="Emerald Square 1st Secret Room" id="20105" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Cube" minZ="-11900" maxZ="-11800">
-		<point x="144175" y="142396" />
-		<point x="144251" y="142588" />
-	</zone>
-	<zone name="Emerald Square 2nd Secret Room" id="20106" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Cube" minZ="-12250" maxZ="-12150">
-		<point x="147400" y="143631" />
-		<point x="147484" y="143828" />
-	</zone>
-	<zone name="Emerald Square 3rd Secret Room" id="20107" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Cube" minZ="-12150" maxZ="-12000">
-		<point x="149396" y="143473" />
-		<point x="149559" y="143584" />
-	</zone>
-	<zone name="Pailaka (Forgotten Temple)" id="20108" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Polygon" minZ="-5050" maxZ="-3900">
-		<point x="-62840" y="178808" />
-		<point x="-62840" y="184568" />
-		<point x="-60792" y="184568" />
-		<point x="-60792" y="188792" />
-		<point x="-57976" y="191224" />
-		<point x="-53000" y="190840" />
-		<point x="-52360" y="190200" />
-		<point x="-52360" y="178808" />
-	</zone>
-	<zone name="Pailaka (Devil's Isle)" id="20109" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Polygon" minZ="-3770" maxZ="-3700">
-		<point x="76650" y="-221310" />
-		<point x="76630" y="-221880" />
-		<point x="75490" y="-221480" />
-		<point x="75630" y="-221140" />
-	</zone>
-	<zone name="Giran (Devil's Isle)" id="200000" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Polygon" minZ="-5152" maxZ="3848">
-		<point x="65788" y="-229302" />
-		<point x="98153" y="-229274" />
-		<point x="98153" y="-196678" />
-		<point x="65758" y="-196655" />
-	</zone>
-	<zone name="Nornil's Garden Warrior's Gate" id="20110" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Cube" minZ="-12650" maxZ="-12600">
-		<point x="-109864" y="76184" />
-		<point x="-109544" y="76392" />
-	</zone>
-	<zone name="Nornil's Garden Midway Gate" id="20111" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Cube" minZ="-12930" maxZ="-12900">
-		<point x="-107560" y="80488" />
-		<point x="-107240" y="80808" />
-	</zone>
-	<zone name="Nornil's Garden Gate" id="20112" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Cube" minZ="-12990" maxZ="-12960">
-		<point x="-111016" y="83944" />
-		<point x="-110696" y="84264" />
-	</zone>
-	<zone name="Pagans mark" id="30100" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Polygon" minZ="-10735" maxZ="-10720">
-		<point x="-16100" y="-36620" />
-		<point x="-16600" y="-36620" />
-		<point x="-16600" y="-36925" />
-		<point x="-16100" y="-36925" />
-	</zone>
-	<zone name="Hellbound" id="40101" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Polygon" minZ="-30000" maxZ="30000">
-		<point x="-32768" y="229376" />
-		<point x="32768" y="229376" />
-		<point x="32768" y="262143" />
-		<point x="-32768" y="262143" />
-	</zone>
-	<zone name="Hellbound Dolmen" id="40107" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Cube" minZ="-3200" maxZ="-3000">
-		<point x="-6230" y="249000" />
-		<point x="-5230" y="249880" />
-	</zone>
-	<zone name="Hellbound Quarry" id="40108" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Polygon" minZ="-2509" maxZ="-1509">
-		<point x="-9675" y="240402" />
-		<point x="-2401" y="240307" />
-		<point x="-2393" y="246927" />
-		<point x="-9590" y="246820" />
-	</zone>
-	<zone name="Seed of Infinity AirShips dock" id="50600" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Cylinder" minZ="-1000" maxZ="6200" radius="2900">
-		<point x="-212855" y="209819" />
-	</zone>
-	<zone name="Seed of Destruction AirShips dock" id="50601" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Cylinder" minZ="-1000" maxZ="6200" radius="4300">
-		<point x="-249460" y="249282" />
-	</zone>
-	<zone name="Keucereus Base North" id="50602" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Polygon" minZ="-1000" maxZ="6200">
-		<point x="-193315" y="240184" />
-		<point x="-188053" y="235278" />
-		<point x="-179811" y="238353" />
-		<point x="-178407" y="242454" />
-		<point x="-178685" y="244665" />
-	</zone>
-	<zone name="Keucereus Base South" id="50603" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Polygon" minZ="-1000" maxZ="6200">
-		<point x="-178685" y="244664" />
-		<point x="-180120" y="246779" />
-		<point x="-185598" y="249572" />
-		<point x="-193009" y="245647" />
-		<point x="-193315" y="240185" />
-	</zone>
-	<zone name="Seed of Annihilation 1" id="60002" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Cylinder" minZ="-10600" maxZ="-10500" radius="260">
-		<point x="-182488" y="186655" />
-	</zone>
-	<zone name="Seed of Annihilation 2" id="60003" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Cylinder" minZ="-11050" maxZ="-10950" radius="260">
-		<point x="-212755" y="184380" />
-	</zone>
-	<zone name="Seed of Annihilation 3" id="60004" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Cylinder" minZ="-10800" maxZ="-10700" radius="360">
-		<point x="-178458" y="188167" />
-	</zone>
-	<zone name="Seed of Annihilation 4" id="60005" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Cylinder" minZ="-15250" maxZ="-15100" radius="360">
-		<point x="-179430" y="183844" />
-	</zone>
-	<zone name="Seed of Destruction" id="60009" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Cube" minZ="-14065" maxZ="-6500">
-		<point x="-237600" y="221168" />
-		<point x="-253900" y="204849" />
-	</zone>
-	<zone name="sod_tiat_video" id="60010" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Polygon" minZ="-12000" maxZ="-11750">
-		<point y="211566" x="-250954"/>
-		<point y="211773" x="-250966"/>
-		<point y="211779" x="-251142"/>
-		<point y="211559" x="-251125"/>
-	</zone>
-	<!-- Custom zones for Tully Workshop 6th and 8th floors spawn control -->
-	<!-- Tully Workshop 6th floor room 1 -->
-	<zone name="tully_workshop_floor_6th_room_1" id="200012" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Polygon" minZ="-13640" maxZ="-13440">
-		<point x="-13143" y="278159" />
-		<point x="-11984" y="278155" />
-		<point x="-12247" y="278817" />
-		<point x="-12877" y="278817" />
-		<point x="-13301" y="279233" />
-		<point x="-13948" y="278959" />
-	</zone>
-	<!-- Tully Workshop 6th floor room 2 -->
-	<zone name="tully_workshop_floor_6th_room_2" id="200013" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Polygon" minZ="-13640" maxZ="-13440">
-		<point x="-12135" y="280544" />
-		<point x="-11708" y="280111" />
-		<point x="-11029" y="280377" />
-		<point x="-11881" y="281242" />
-		<point x="-13044" y="281234" />
-		<point x="-12767" y="280546" />
-	</zone>
-	<!-- Tully Workshop 6th floor room 3 -->
-	<zone name="tully_workshop_floor_6th_room_3" id="200014" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Polygon" minZ="-13640" maxZ="-13440">
-		<point x="-13376" y="279405" />
-		<point x="-13380" y="280048" />
-		<point x="-12930" y="280494" />
-		<point x="-13219" y="281137" />
-		<point x="-14027" y="280321" />
-		<point x="-14034" y="279128" />
-	</zone>
-	<!-- Tully Workshop 6th floor room 4 -->
-	<zone name="tully_workshop_floor_6th_room_4" id="200015" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Polygon" minZ="-13640" maxZ="-13440">
-		<point x="-10980" y="279062" />
-		<point x="-10975" y="280217" />
-		<point x="-11688" y="279905" />
-		<point x="-11642" y="279320" />
-		<point x="-12056" y="278883" />
-		<point x="-11808" y="278212" />
-	</zone>
-	<!-- Tully Workshop 8th floor room 1 -->
-	<zone name="tully_workshop_floor_8th_room_1" id="200016" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Polygon" minZ="-10530" maxZ="-10330">
-		<point x="-13143" y="278159" />
-		<point x="-11984" y="278155" />
-		<point x="-12247" y="278817" />
-		<point x="-12877" y="278817" />
-		<point x="-13301" y="279233" />
-		<point x="-13948" y="278959" />
-	</zone>
-	<!-- Tully Workshop 8th floor room 2 -->
-	<zone name="tully_workshop_floor_8th_room_2" id="200017" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Polygon" minZ="-10530" maxZ="-10330">
-		<point x="-12135" y="280544" />
-		<point x="-11708" y="280111" />
-		<point x="-11029" y="280377" />
-		<point x="-11881" y="281242" />
-		<point x="-13044" y="281234" />
-		<point x="-12767" y="280546" />
-	</zone>
-	<!-- Tully Workshop 8th floor room 3 -->
-	<zone name="tully_workshop_floor_8th_room_3" id="200018" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Polygon" minZ="-10530" maxZ="-10330">
-		<point x="-13376" y="279405" />
-		<point x="-13380" y="280048" />
-		<point x="-12930" y="280494" />
-		<point x="-13219" y="281137" />
-		<point x="-14027" y="280321" />
-		<point x="-14034" y="279128" />
-	</zone>
-	<!-- Tully Workshop 8th floor room 4 -->
-	<zone name="tully_workshop_floor_8th_room_4" id="200019" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Polygon" minZ="-10530" maxZ="-10330">
-		<point x="-10980" y="279062" />
-		<point x="-10975" y="280217" />
-		<point x="-11688" y="279905" />
-		<point x="-11642" y="279320" />
-		<point x="-12056" y="278883" />
-		<point x="-11808" y="278212" />
-	</zone>
-	<!-- Custom zones for Tower of Naia rooms for characters control -->
-	<!-- Tower of Naia room 1 -->
-	<zone name="tower_of_naia_room_1" id="200020" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Cube" minZ="-9156" maxZ="-9056">
-		<point x="-46940" y="246865" />
-		<point x="-45466" y="245370" />
-	</zone>
-	<!-- Tower of Naia room 2 -->
-	<zone name="tower_of_naia_room_2" id="200021" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Cube" minZ="-9168" maxZ="-8818">
-		<point x="-49908" y="248440" />
-		<point x="-47912" y="249896" />
-	</zone>
-	<!-- Tower of room 3 -->
-	<zone name="tower_of_naia_room_3" id="200022" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Cube" minZ="-10032" maxZ="-9682">
-		<point x="-52362" y="245375" />
-		<point x="-50880" y="246866" />
-	</zone>
-	<!-- Tower of Naia room 4 -->
-	<zone name="tower_of_naia_room_4" id="200023" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Cube" minZ="-10032" maxZ="-9682">
-		<point x="-49954" y="242680" />
-		<point x="-47958" y="244136" />
-	</zone>
-	<!-- Tower of Naia room 5 -->
-	<zone name="tower_of_naia_room_5" id="200024" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Cube" minZ="-10044" maxZ="-9694">
-		<point x="-46953" y="245376" />
-		<point x="-45479" y="246871" />
-	</zone>
-	<!-- Tower of Naia room 6 -->
-	<zone name="tower_of_naia_room_6" id="200025" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Cube" minZ="-10036" maxZ="-9686">
-		<point x="-49444" y="247736" />
-		<point x="-48412" y="248708" />
-	</zone>
-	<!-- Tower of Naia room 7 -->
-	<zone name="tower_of_naia_room_7" id="200026" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Cube" minZ="-10880" maxZ="-10530">
-		<point x="-52371" y="245374" />
-		<point x="-50889" y="246865" />
-	</zone>
-	<!-- Tower of Naia room 8 -->
-	<zone name="tower_of_naia_room_8" id="200027" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Cube" minZ="-10876" maxZ="-10526">
-		<point x="-49447" y="243547" />
-		<point x="-48415" y="244519" />
-	</zone>
-	<!-- Tower of Naia room 9 -->
-	<zone name="tower_of_naia_room_9" id="200028" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Cube" minZ="-11748" maxZ="-11398">
-		<point x="-46970" y="245369" />
-		<point x="-45496" y="246864" />
-	</zone>
-	<!-- Tower of Naia room 10 -->
-	<zone name="tower_of_naia_room_10" id="200029" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Cube" minZ="-11760" maxZ="-11410">
-		<point x="-49440" y="247736" />
-		<point x="-48412" y="248708" />
-	</zone>
-	<!-- Tower of Naia room 11 -->
-	<zone name="tower_of_naia_room_11" id="200030" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Cube" minZ="-12650" maxZ="-12300">
-		<point x="-52347" y="245404" />
-		<point x="-50865" y="246895" />
-	</zone>
-	<!-- Tower of Naia room 12 -->
-	<zone name="tower_of_naia_room_12" id="200031" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Cube" minZ="-13444" maxZ="-13094">
-		<point x="-49004" y="242907" />
-		<point x="-47530" y="244402" />
-	</zone>
-	<zone name="talking_island_movie_zone" id="200034" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Polygon" minZ="-1250" maxZ="-1100">
-		<point x="-114216" y="257496" />
-		<point x="-114216" y="257336" />
-		<point x="-114536" y="257336" />
-		<point x="-114520" y="257496" />
-	</zone>
-	<zone name="harnak_underground_ruins_room_2" id="200032" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Cylinder" minZ="-11047" maxZ="-10697" radius="850">
-		<point x="-107926" y="208860" />
-	</zone>
-	<zone name="harnak_underground_ruins_room_3" id="200033" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Cylinder" minZ="-11047" maxZ="-10697" radius="850">
-		<point x="-107926" y="211416" />
-	</zone>
-	<zone name="Valakas Boss" id="12010" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Polygon" minZ="-2572" maxZ="5428">
-		<point x="196866" y="-130845" />
-		<point x="229289" y="-130860" />
-		<point x="229176" y="-98508" />
-		<point x="196880" y="-98498" />
-	</zone>
-	<zone name="Queen Ant Boss" id="12012" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Polygon" minZ="-5947" maxZ="-5547"> <!-- Not Verified -->
-		<property name="default_enabled" value="false" />
-		<point x="-21490" y="178613" />
-		<point x="-22258" y="178961" />
-		<point x="-22890" y="182205" />
-		<point x="-22770" y="183129" />
-		<point x="-21594" y="183945" />
-		<point x="-20570" y="183381" />
-		<point x="-20310" y="182673" />
-		<point x="-20762" y="179129" />
-	</zone>
-	<zone name="Orfen Boss" id="12013" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Polygon" minZ="-5796" maxZ="-3796"> <!-- Not Verified -->
-		<property name="default_enabled" value="false" />
-		<point x="43976" y="24664" />
-		<point x="43284" y="18952" />
-		<point x="42476" y="18164" />
-		<point x="42480" y="16448" />
-		<point x="43084" y="15944" />
-		<point x="45140" y="15816" />
-		<point x="48800" y="15112" />
-		<point x="56556" y="12040" />
-		<point x="59068" y="14288" />
-		<point x="61064" y="18492" />
-		<point x="60380" y="23672" />
-		<point x="58724" y="27412" />
-		<point x="55696" y="28496" />
-		<point x="43976" y="24664" />
-	</zone>
-	<zone name="Labyrinth of Belis" id="12014" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Polygon" minZ="-8000" maxZ="-8700">
-		<point x="-117832" y="214584" />
-		<point x="-117832" y="215000" />
-		<point x="-118120" y="215304" />
-		<point x="-118536" y="215304" />
-		<point x="-118840" y="215000" />
-		<point x="-118840" y="214584" />
-		<point x="-118552" y="214280" />
-		<point x="-118120" y="214280" />
-	</zone>
-	<zone name="anghel_waterfall_magmeld_teleport" id="12015" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Polygon" minZ="-2371" maxZ="-2171">
-		<point x="175319" y="90413" />
-		<point x="174983" y="90333" />
-		<point x="174933" y="90872" />
-		<point x="175382" y="90753" />
-	</zone>
-	<zone name="talking_island_q10332" id="12016" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Polygon" minZ="-1400" maxZ="-1200">
-		<point x="-117583" y="255700" />
-		<point x="-117538" y="255779" />
-		<point x="-117618" y="255809" />
-		<point x="-117663" y="255733" />
-	</zone>
-	<zone name="hot_springs_noble_q_1" id="12017" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Polygon" minZ="-1688" maxZ="-1488">
-		<point x="153077" y="-113251" />
-		<point x="153218" y="-113295" />
-		<point x="153452" y="-113190" />
-		<point x="153537" y="-113079" />
-		<point x="153587" y="-112928" />
-		<point x="153575" y="-112731" />
-		<point x="153570" y="-112544" />
-		<point x="153456" y="-112456" />
-		<point x="153299" y="-112436" />
-		<point x="153141" y="-112426" />
-		<point x="152987" y="-112456" />
-		<point x="152869" y="-112545" />
-		<point x="152786" y="-112674" />
-		<point x="152767" y="-112832" />
-		<point x="152794" y="-113026" />
-		<point x="152928" y="-113143" />
-	</zone>
-	<zone name="hot_springs_noble_q_2" id="12018" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Polygon" minZ="-2780" maxZ="-2580">
-		<point x="155735" y="-105980" />
-		<point x="155860" y="-105972" />
-		<point x="155967" y="-105957" />
-		<point x="156094" y="-105919" />
-		<point x="156134" y="-105776" />
-		<point x="156142" y="-105601" />
-		<point x="156132" y="-105440" />
-		<point x="156054" y="-105265" />
-		<point x="155886" y="-105264" />
-		<point x="155684" y="-105290" />
-		<point x="155477" y="-105286" />
-		<point x="155399" y="-105429" />
-		<point x="155312" y="-105594" />
-		<point x="155358" y="-105757" />
-		<point x="155429" y="-105909" />
-		<point x="155616" y="-105925" />
-	</zone>
-	<zone name="hot_springs_noble_q_3" id="12019" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Polygon" minZ="-3748" maxZ="-3548">
-		<point x="145300" y="-104537" />
-		<point x="145484" y="-104590" />
-		<point x="145627" y="-104624" />
-		<point x="145674" y="-104790" />
-		<point x="145724" y="-104917" />
-		<point x="145731" y="-105104" />
-		<point x="145662" y="-105249" />
-		<point x="145512" y="-105343" />
-		<point x="145328" y="-105398" />
-		<point x="145147" y="-105345" />
-		<point x="145002" y="-105234" />
-		<point x="144914" y="-105044" />
-		<point x="144932" y="-104851" />
-		<point x="145018" y="-104684" />
-		<point x="145107" y="-104592" />
-		<point x="145195" y="-104554" />
-	</zone>
-	<zone name="kartia_85_detect_1" id="12020" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Polygon" minZ="-10662" maxZ="-10262">
-		<point x="-111247" y="20538" />
-		<point x="-111979" y="20532" />
-		<point x="-111930" y="19993" />
-		<point x="-111304" y="20003" />
-	</zone>
-	<zone name="kartia_85_detect_2" id="12021" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Polygon" minZ="-10662" maxZ="-10262">
-		<point x="-111222" y="18452" />
-		<point x="-111957" y="18465" />
-		<point x="-111948" y="17761" />
-		<point x="-111257" y="17761" />
-	</zone>
-	<zone name="kartia_85_teleport_1" id="12022" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Polygon" minZ="-10999" maxZ="-10599">
-		<point x="-110858" y="22265" />
-		<point x="-111406" y="22269" />
-		<point x="-111408" y="21811" />
-		<point x="-110852" y="21832" />
-	</zone>
-	<zone name="kartia_85_teleport_2" id="12023" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Polygon" minZ="-10777" maxZ="-10377">
-		<point x="-111763" y="21254" />
-		<point x="-111482" y="21251" />
-		<point x="-111495" y="21374" />
-		<point x="-111762" y="21363" />
-	</zone>
-	<zone name="kartia_85_teleport_3" id="12024" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Polygon" minZ="-10516" maxZ="-10116">
-		<point x="-111497" y="18711" />
-		<point x="-111514" y="18547" />
-		<point x="-111712" y="18547" />
-		<point x="-111706" y="18727" />
-	</zone>
-	<zone name="kartia_90_detect_1" id="12025" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Polygon" minZ="-11673" maxZ="-11473">
-		<point x="-120613" y="-11928" />
-		<point x="-121100" y="-11915" />
-		<point x="-121073" y="-12276" />
-		<point x="-120587" y="-12292" />
-	</zone>
-	<zone name="kartia_90_detect_2" id="12026" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Polygon" minZ="-11527" maxZ="-11327">
-		<point x="-120472" y="-14025" />
-		<point x="-121274" y="-14019" />
-		<point x="-121289" y="-14742" />
-		<point x="-120445" y="-14750" />
-	</zone>
-	<zone name="kartia_90_teleport_1" id="12027" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Polygon" minZ="-12126" maxZ="-11726">
-		<point x="-120143" y="-10224" />
-		<point x="-120126" y="-10674" />
-		<point x="-120650" y="-10679" />
-		<point x="-120652" y="-10227" />
-	</zone>
-	<zone name="kartia_90_teleport_2" id="12028" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Polygon" minZ="-11785" maxZ="-11585">
-		<point x="-121002" y="-11240" />
-		<point x="-120726" y="-11243" />
-		<point x="-120733" y="-11117" />
-		<point x="-120994" y="-11118" />
-	</zone>
-	<zone name="kartia_90_teleport_3" id="12029" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Polygon" minZ="-11348" maxZ="-11548">
-		<point x="-120963" y="-13953" />
-		<point x="-120760" y="-13948" />
-		<point x="-120765" y="-13845" />
-		<point x="-120962" y="-13853" />
-	</zone>
-	<zone name="kartia_95_detect_1" type="org.l2j.gameserver.world.zone.type.ScriptZone" id="12030" form="Polygon" minZ="-11627" maxZ="-11227">
-		<point x="-111058" y="-11906" />
-		<point x="-111512" y="-11889" />
-		<point x="-111488" y="-12280" />
-		<point x="-111076" y="-12257" />
-	</zone>
-	<zone name="kartia_95_detect_2" type="org.l2j.gameserver.world.zone.type.ScriptZone" id="12031" form="Polygon" minZ="-11629" maxZ="-11229">
-		<point x="-110943" y="-14040" />
-		<point x="-111658" y="-14033" />
-		<point x="-111648" y="-14720" />
-		<point x="-110919" y="-14720" />
-	</zone>
-	<zone name="kartia_95_teleport_1" type="org.l2j.gameserver.world.zone.type.ScriptZone" id="12032" form="Polygon" minZ="-12124" maxZ="-11724">
-		<point x="-110553" y="-10224" />
-		<point x="-110555" y="-10684" />
-		<point x="-111081" y="-10679" />
-		<point x="-111083" y="-10222" />
-	</zone>
-	<zone name="kartia_95_teleport_2" type="org.l2j.gameserver.world.zone.type.ScriptZone" id="12033" form="Polygon" minZ="-11785" maxZ="-11585">
-		<point x="-111437" y="-11239" />
-		<point x="-111156" y="-11244" />
-		<point x="-111165" y="-11125" />
-		<point x="-111431" y="-11126" />
-	</zone>
-	<zone name="kartia_95_teleport_3" type="org.l2j.gameserver.world.zone.type.ScriptZone" id="12034" form="Polygon" minZ="-11548" maxZ="-11348">
-		<point x="-111174" y="-13934" />
-		<point x="-111399" y="-13921" />
-		<point x="-111398" y="-13833" />
-		<point x="-111169" y="-13830" />
-	</zone>
-	<zone name="ti_zone" id="12035" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Polygon" minZ="-3618" maxZ="-3818">
-   		<point x="208606" y="11865" />
-		<point x="207531" y="12839" />
-   		<point x="207269" y="13168" />
-		<point x="207236" y="13428" />
-		<point x="207357" y="13647" />
-		<point x="207953" y="14262" />
-   		<point x="208534" y="15021" />
-   	 	<point x="208839" y="15349" />
-   		<point x="210342" y="16895" />
-		<point x="210650" y="16919" />
-		<point x="212233" y="15604" />
-		<point x="212595" y="15306" />
-		<point x="213915" y="14132" />
-		<point x="213932" y="13845" />
-		<point x="212659" y="12208" />
-		<point x="212369" y="11843" />
-		<point x="210952" y="10366" />
-		<point x="210619" y="10241" />
-   	</zone>
-	<zone name="arcan_city_ceremony" id="23600" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Polygon" minZ="-2500" maxZ="200">
-		<point x="201496" y="85730" />
-		<point x="201750" y="85528" />
-		<point x="205245" y="80976" />
-		<point x="205506" y="80800" />
-		<point x="205826" y="80884" />
-		<point x="206011" y="81195" />
-		<point x="205918" y="81522" />
-		<point x="206146" y="81881" />
-		<point x="210526" y="82801" />
-		<point x="210973" y="82488" />
-		<point x="210999" y="82189" />
-		<point x="211216" y="81963" />
-		<point x="211394" y="81937" />
-		<point x="211626" y="82018" />
-		<point x="211778" y="82252" />
-		<point x="211725" y="82634" />
-		<point x="211410" y="82819" />
-		<point x="211076" y="82702" />
-		<point x="210672" y="82965" />
-		<point x="211425" y="89207" />
-		<point x="211502" y="89624" />
-		<point x="211304" y="89893" />
-		<point x="210864" y="89928" />
-		<point x="210656" y="89774" />
-		<point x="208561" y="90274" />
-		<point x="208007" y="90651" />
-		<point x="207364" y="90827" />
-		<point x="207084" y="90818" />
-		<point x="207154" y="91179" />
-		<point x="206771" y="92661" />
-		<point x="206065" y="92258" />
-		<point x="201369" y="85882" />
-	</zone>
-	<zone name="14_22_maternity_room_enter1" id="23601" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Polygon" minZ="2607" maxZ="2807">
-		<point x="-179731" y="153236" />
-		<point x="-179531" y="153236" />
-		<point x="-179531" y="153436" />
-		<point x="-179731" y="153436" />
-	</zone>
-	<zone name="14_22_maternity_room_enter2" id="23602" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Polygon" minZ="2605" maxZ="2805">
-		<point x="-177386" y="153237" />
-		<point x="-177186" y="153237" />
-		<point x="-177186" y="153437" />
-		<point x="-177386" y="153437" />
-	</zone>
-	<zone name="royal_rush_script_1" id="200221" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Polygon" minZ="-7263" maxZ="-7063">
-		<point x="181198" y="-86516" />
-		<point x="192394" y="-86521" />
-		<point x="192391" y="-84626" />
-		<point x="181193" y="-84622" />
-	</zone>
-	<zone name="royal_rush_script_2" id="200222" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Polygon" minZ="-7263" maxZ="-7063">
-		<point x="179511" y="-89903" />
-		<point x="190707" y="-89908" />
-		<point x="190704" y="-88013" />
-		<point x="179506" y="-88009" />
-	</zone>
-	<zone name="royal_rush_script_3" id="200223" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Polygon" minZ="-7263" maxZ="-7063">
-		<point x="174498" y="-82751" />
-		<point x="176622" y="-82751" />
-		<point x="176616" y="-71304" />
-		<point x="174489" y="-71303" />
-	</zone>
-	<zone name="royal_rush_script_4" id="200224" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Polygon" minZ="-7263" maxZ="-7063">
-		<point x="172183" y="-86660" />
-		<point x="174307" y="-86661" />
-		<point x="174301" y="-75214" />
-		<point x="172174" y="-75213" />
-	</zone>
-	 <zone name="GainakSiege" id="60019" type="org.l2j.gameserver.world.zone.type.SiegeZone" form="Polygon" minZ="-265" maxZ="-11">
-		<point x="14816" y="-114416" />
-		<point x="14576" y="-113968" />
-		<point x="14752" y="-112736" />
-		<point x="15415" y="-111960" />
-		<point x="15691" y="-111730" />
-		<point x="17559" y="-110950" />
-		<point x="18291" y="-112548" />
-		<point x="15936" y="-113920" />
-		<point x="16275" y="-114501" />
-		<point x="17642" y="-113922" />
-		<point x="18222" y="-114615" />
-		<point x="18637" y="-115667" />
-		<point x="17536" y="-116128" />
-		<point x="17138" y="-116183" />
-		<point x="16080" y="-116096" />
-		<point x="15130" y="-115345" />
-		<point x="14972" y="-114864" />
-	</zone>
-	<zone name="Beleth's Chamber" id="60022" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Polygon" minZ="-10412" maxZ="-5112">
-		<point x="11214" y="205578" />
-		<point x="20607" y="205578" />
-		<point x="20648" y="220271" />
-		<point x="11172" y="220271" />
-	</zone>
-	<zone name="Kelbim Zone" id="60023" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Polygon" minZ="-300" maxZ="500">
-		<point x="-56813" y="61745" />
-		<point x="-53966" y="61657" />
-		<point x="-53336" y="60303" />
-		<point x="-53291" y="59933" />
-		<point x="-54151" y="57985" />
-		<point x="-56364" y="57986" />
-		<point x="-57612" y="58114" />
-		<point x="-58114" y="58770" />
-		<point x="-58113" y="59355" />
-		<point x="-58058" y="59760" />
-		<point x="-57430" y="62356" />
-	</zone>
-	<zone name="Apherus Zone" id="60060" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Polygon" minZ="-877" maxZ="-857">
-		<point x="214323" y="115889" />
-		<point x="214324" y="114625" />
-		<point x="213068" y="114628" />
-		<point x="213058" y="115891" />
-	</zone>
-	<zone name="Anakim" id="12003" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Polygon" minZ="-5500" maxZ="-4600">
-		<point x="183904" y="-13884" />
-		<point x="186265" y="-13884" />
-		<point x="186245" y="-11263" />
-		<point x="183944" y="-11283" />
-	</zone>
-	<zone name="Pre Anakim" id="12004" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Polygon" minZ="-4950" maxZ="-4420">
-		<point x="172102" y="-18083" />
-		<point x="183504" y="-18105" />
-		<point x="183544" y="-6702" />
-		<point x="171976" y="-6743" />
-	</zone>
-	<zone name="Lilith" id="12005" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Polygon" minZ="-5500" maxZ="-4600">
-		<point x="183904" y="-10883" />
-		<point x="186245" y="-10903" />
-		<point x="186265" y="-8223" />
-		<point x="183924" y="-8203" />
-	</zone>
-	<zone name="Pre Lilith" id="12006" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Polygon" minZ="-5000" maxZ="-4300">
-		<point x="-19545" y="12943" />
-		<point x="-7704" y="12732" />
-		<point x="-7726" y="24753" />
-		<point x="-19865" y="24305" />
-	</zone>
-	<zone name="Harnak Underground Ruins Room 1" id="60142" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Cylinder" minZ="-13864" maxZ="-13704" radius="1000">
-		<point x="-117612" y="180489" />
-	</zone>
-	<zone name="Harnak Underground Ruins Room 2" id="60143" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Cylinder" minZ="-13864" maxZ="-13704" radius="1000">
-		<point x="-118432" y="185061" />
-	</zone>
-	<zone name="Harnak Underground Ruins Room 3" id="60144" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Cylinder" minZ="-13864" maxZ="-13704" radius="1000">
-		<point x="-118429" y="186915" />
-	</zone>
-	<zone name="Harnak Underground Ruins Room 4" id="60145" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Cylinder" minZ="-13864" maxZ="-13704" radius="1000">
-		<point x="-114699" y="186995" />
-	</zone>
-	<zone name="Harnak Underground Ruins Room 5" id="60146" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Cylinder" minZ="-13872" maxZ="-13712" radius="1000">
-		<point x="-110992" y="186886" />
-	</zone>
-	<zone name="Harnak Underground Ruins Room 6" id="60147" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Cylinder" minZ="-13864" maxZ="-13704" radius="1000">
-		<point x="-110984" y="185054" />
-	</zone>
-	<zone name="Harnak Underground Ruins Room 7" id="60148" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Cylinder" minZ="-13864" maxZ="-13704" radius="1000">
-		<point x="-111797" y="180482" />
-	</zone>
-	<zone name="Harnak Underground Ruins Room 8" id="60149" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Cylinder" minZ="-13864" maxZ="-13704" radius="1000">
-		<point x="-114703" y="179277" />
-	</zone>
-	<zone name="Harnak Underground Ruins Room 9" id="60150" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Cylinder" minZ="-10800" maxZ="-10640" radius="1000">
-		<point x="-117618" y="146395" />
-	</zone>
-	<zone name="Harnak Underground Ruins Room 10" id="60151" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Cylinder" minZ="-10800" maxZ="-10640" radius="1000">
-		<point x="-118439" y="150966" />
-	</zone>
-	<zone name="Harnak Underground Ruins Room 11" id="60152" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Cylinder" minZ="-10808" maxZ="-10648" radius="1000">
-		<point x="-118432" y="152816" />
-	</zone>
-	<zone name="Harnak Underground Ruins Room 12" id="60153" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Cylinder" minZ="-10808" maxZ="-10648" radius="1000">
-		<point x="-114711" y="152908" />
-	</zone>
-	<zone name="Harnak Underground Ruins Room 13" id="60154" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Cylinder" minZ="-10808" maxZ="-10648" radius="1000">
-		<point x="-110998" y="152801" />
-	</zone>
-	<zone name="Harnak Underground Ruins Room 14" id="60155" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Cylinder" minZ="-10808" maxZ="-10648" radius="1000">
-		<point x="-111002" y="150978" />
-	</zone>
-	<zone name="Harnak Underground Ruins Room 15" id="60156" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Cylinder" minZ="-10800" maxZ="-10640" radius="1000">
-		<point x="-111809" y="146397" />
-	</zone>
-	<zone name="Harnak Underground Ruins Room 16" id="60157" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Cylinder" minZ="-10800" maxZ="-10640" radius="1000">
-		<point x="-114706" y="145183" />
-	</zone>
-	<zone name="Harnak Underground Ruins Room 17" id="60158" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Cylinder" minZ="-7736" maxZ="-7576" radius="1000">
-		<point x="-117606" y="145039" />
-	</zone>
-	<zone name="Harnak Underground Ruins Room 18" id="60159" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Cylinder" minZ="-7744" maxZ="-7584" radius="1000">
-		<point x="-118432" y="149616" />
-	</zone>
-	<zone name="Harnak Underground Ruins Room 19" id="60160" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Cylinder" minZ="-7744" maxZ="-7584" radius="1000">
-		<point x="-118432" y="151472" />
-	</zone>
-	<zone name="Harnak Underground Ruins Room 20" id="60161" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Cylinder" minZ="-7744" maxZ="-7584" radius="1000">
-		<point x="-114704" y="151552" />
-	</zone>
-	<zone name="Harnak Underground Ruins Room 21" id="60162" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Cylinder" minZ="-7744" maxZ="-7584" radius="1000">
-		<point x="-110986" y="151456" />
-	</zone>
-	<zone name="Harnak Underground Ruins Room 22" id="60163" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Cylinder" minZ="-7744" maxZ="-7584" radius="1000">
-		<point x="-110991" y="149616" />
-	</zone>
-	<zone name="Harnak Underground Ruins Room 23" id="60164" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Cylinder" minZ="-7736" maxZ="-7576" radius="1000">
-		<point x="-111792" y="145040" />
-	</zone>
-	<zone name="Harnak Underground Ruins Room 24" id="60165" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Cylinder" minZ="-7736" maxZ="-7576" radius="1000">
-		<point x="-114700" y="143834" />
-	</zone>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org zones.xsd">
+    <zone name="Emerald Square 1st Secret Room" id="20105" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Cube" minZ="-11900" maxZ="-11800">
+        <point x="144175" y="142396"/>
+        <point x="144251" y="142588"/>
+    </zone>
+    <zone name="Emerald Square 2nd Secret Room" id="20106" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Cube" minZ="-12250" maxZ="-12150">
+        <point x="147400" y="143631"/>
+        <point x="147484" y="143828"/>
+    </zone>
+    <zone name="Emerald Square 3rd Secret Room" id="20107" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Cube" minZ="-12150" maxZ="-12000">
+        <point x="149396" y="143473"/>
+        <point x="149559" y="143584"/>
+    </zone>
+    <zone name="Pailaka (Forgotten Temple)" id="20108" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Polygon" minZ="-5050" maxZ="-3900">
+        <point x="-62840" y="178808"/>
+        <point x="-62840" y="184568"/>
+        <point x="-60792" y="184568"/>
+        <point x="-60792" y="188792"/>
+        <point x="-57976" y="191224"/>
+        <point x="-53000" y="190840"/>
+        <point x="-52360" y="190200"/>
+        <point x="-52360" y="178808"/>
+    </zone>
+    <zone name="Pailaka (Devil's Isle)" id="20109" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Polygon" minZ="-3770" maxZ="-3700">
+        <point x="76650" y="-221310"/>
+        <point x="76630" y="-221880"/>
+        <point x="75490" y="-221480"/>
+        <point x="75630" y="-221140"/>
+    </zone>
+    <zone name="Giran (Devil's Isle)" id="200000" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Polygon" minZ="-5152" maxZ="3848">
+        <point x="65788" y="-229302"/>
+        <point x="98153" y="-229274"/>
+        <point x="98153" y="-196678"/>
+        <point x="65758" y="-196655"/>
+    </zone>
+    <zone name="Nornil's Garden Warrior's Gate" id="20110" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Cube" minZ="-12650" maxZ="-12600">
+        <point x="-109864" y="76184"/>
+        <point x="-109544" y="76392"/>
+    </zone>
+    <zone name="Nornil's Garden Midway Gate" id="20111" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Cube" minZ="-12930" maxZ="-12900">
+        <point x="-107560" y="80488"/>
+        <point x="-107240" y="80808"/>
+    </zone>
+    <zone name="Nornil's Garden Gate" id="20112" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Cube" minZ="-12990" maxZ="-12960">
+        <point x="-111016" y="83944"/>
+        <point x="-110696" y="84264"/>
+    </zone>
+    <zone name="Pagans mark" id="30100" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Polygon" minZ="-10735" maxZ="-10720">
+        <point x="-16100" y="-36620"/>
+        <point x="-16600" y="-36620"/>
+        <point x="-16600" y="-36925"/>
+        <point x="-16100" y="-36925"/>
+    </zone>
+    <zone name="Hellbound" id="40101" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Polygon" minZ="-30000" maxZ="30000">
+        <point x="-32768" y="229376"/>
+        <point x="32768" y="229376"/>
+        <point x="32768" y="262143"/>
+        <point x="-32768" y="262143"/>
+    </zone>
+    <zone name="Hellbound Dolmen" id="40107" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Cube" minZ="-3200" maxZ="-3000">
+        <point x="-6230" y="249000"/>
+        <point x="-5230" y="249880"/>
+    </zone>
+    <zone name="Hellbound Quarry" id="40108" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Polygon" minZ="-2509" maxZ="-1509">
+        <point x="-9675" y="240402"/>
+        <point x="-2401" y="240307"/>
+        <point x="-2393" y="246927"/>
+        <point x="-9590" y="246820"/>
+    </zone>
+    <zone name="Seed of Infinity AirShips dock" id="50600" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Cylinder" minZ="-1000" maxZ="6200" radius="2900">
+        <point x="-212855" y="209819"/>
+    </zone>
+    <zone name="Seed of Destruction AirShips dock" id="50601" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Cylinder" minZ="-1000" maxZ="6200" radius="4300">
+        <point x="-249460" y="249282"/>
+    </zone>
+    <zone name="Keucereus Base North" id="50602" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Polygon" minZ="-1000" maxZ="6200">
+        <point x="-193315" y="240184"/>
+        <point x="-188053" y="235278"/>
+        <point x="-179811" y="238353"/>
+        <point x="-178407" y="242454"/>
+        <point x="-178685" y="244665"/>
+    </zone>
+    <zone name="Keucereus Base South" id="50603" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Polygon" minZ="-1000" maxZ="6200">
+        <point x="-178685" y="244664"/>
+        <point x="-180120" y="246779"/>
+        <point x="-185598" y="249572"/>
+        <point x="-193009" y="245647"/>
+        <point x="-193315" y="240185"/>
+    </zone>
+    <zone name="Seed of Annihilation 1" id="60002" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Cylinder" minZ="-10600" maxZ="-10500" radius="260">
+        <point x="-182488" y="186655"/>
+    </zone>
+    <zone name="Seed of Annihilation 2" id="60003" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Cylinder" minZ="-11050" maxZ="-10950" radius="260">
+        <point x="-212755" y="184380"/>
+    </zone>
+    <zone name="Seed of Annihilation 3" id="60004" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Cylinder" minZ="-10800" maxZ="-10700" radius="360">
+        <point x="-178458" y="188167"/>
+    </zone>
+    <zone name="Seed of Annihilation 4" id="60005" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Cylinder" minZ="-15250" maxZ="-15100" radius="360">
+        <point x="-179430" y="183844"/>
+    </zone>
+    <zone name="Seed of Destruction" id="60009" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Cube" minZ="-14065" maxZ="-6500">
+        <point x="-237600" y="221168"/>
+        <point x="-253900" y="204849"/>
+    </zone>
+    <zone name="sod_tiat_video" id="60010" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Polygon" minZ="-12000" maxZ="-11750">
+        <point y="211566" x="-250954"/>
+        <point y="211773" x="-250966"/>
+        <point y="211779" x="-251142"/>
+        <point y="211559" x="-251125"/>
+    </zone>
+    <!-- Custom zones for Tully Workshop 6th and 8th floors spawn control -->
+    <!-- Tully Workshop 6th floor room 1 -->
+    <zone name="tully_workshop_floor_6th_room_1" id="200012" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Polygon" minZ="-13640" maxZ="-13440">
+        <point x="-13143" y="278159"/>
+        <point x="-11984" y="278155"/>
+        <point x="-12247" y="278817"/>
+        <point x="-12877" y="278817"/>
+        <point x="-13301" y="279233"/>
+        <point x="-13948" y="278959"/>
+    </zone>
+    <!-- Tully Workshop 6th floor room 2 -->
+    <zone name="tully_workshop_floor_6th_room_2" id="200013" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Polygon" minZ="-13640" maxZ="-13440">
+        <point x="-12135" y="280544"/>
+        <point x="-11708" y="280111"/>
+        <point x="-11029" y="280377"/>
+        <point x="-11881" y="281242"/>
+        <point x="-13044" y="281234"/>
+        <point x="-12767" y="280546"/>
+    </zone>
+    <!-- Tully Workshop 6th floor room 3 -->
+    <zone name="tully_workshop_floor_6th_room_3" id="200014" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Polygon" minZ="-13640" maxZ="-13440">
+        <point x="-13376" y="279405"/>
+        <point x="-13380" y="280048"/>
+        <point x="-12930" y="280494"/>
+        <point x="-13219" y="281137"/>
+        <point x="-14027" y="280321"/>
+        <point x="-14034" y="279128"/>
+    </zone>
+    <!-- Tully Workshop 6th floor room 4 -->
+    <zone name="tully_workshop_floor_6th_room_4" id="200015" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Polygon" minZ="-13640" maxZ="-13440">
+        <point x="-10980" y="279062"/>
+        <point x="-10975" y="280217"/>
+        <point x="-11688" y="279905"/>
+        <point x="-11642" y="279320"/>
+        <point x="-12056" y="278883"/>
+        <point x="-11808" y="278212"/>
+    </zone>
+    <!-- Tully Workshop 8th floor room 1 -->
+    <zone name="tully_workshop_floor_8th_room_1" id="200016" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Polygon" minZ="-10530" maxZ="-10330">
+        <point x="-13143" y="278159"/>
+        <point x="-11984" y="278155"/>
+        <point x="-12247" y="278817"/>
+        <point x="-12877" y="278817"/>
+        <point x="-13301" y="279233"/>
+        <point x="-13948" y="278959"/>
+    </zone>
+    <!-- Tully Workshop 8th floor room 2 -->
+    <zone name="tully_workshop_floor_8th_room_2" id="200017" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Polygon" minZ="-10530" maxZ="-10330">
+        <point x="-12135" y="280544"/>
+        <point x="-11708" y="280111"/>
+        <point x="-11029" y="280377"/>
+        <point x="-11881" y="281242"/>
+        <point x="-13044" y="281234"/>
+        <point x="-12767" y="280546"/>
+    </zone>
+    <!-- Tully Workshop 8th floor room 3 -->
+    <zone name="tully_workshop_floor_8th_room_3" id="200018" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Polygon" minZ="-10530" maxZ="-10330">
+        <point x="-13376" y="279405"/>
+        <point x="-13380" y="280048"/>
+        <point x="-12930" y="280494"/>
+        <point x="-13219" y="281137"/>
+        <point x="-14027" y="280321"/>
+        <point x="-14034" y="279128"/>
+    </zone>
+    <!-- Tully Workshop 8th floor room 4 -->
+    <zone name="tully_workshop_floor_8th_room_4" id="200019" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Polygon" minZ="-10530" maxZ="-10330">
+        <point x="-10980" y="279062"/>
+        <point x="-10975" y="280217"/>
+        <point x="-11688" y="279905"/>
+        <point x="-11642" y="279320"/>
+        <point x="-12056" y="278883"/>
+        <point x="-11808" y="278212"/>
+    </zone>
+    <!-- Custom zones for Tower of Naia rooms for characters control -->
+    <!-- Tower of Naia room 1 -->
+    <zone name="tower_of_naia_room_1" id="200020" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Cube" minZ="-9156" maxZ="-9056">
+        <point x="-46940" y="246865"/>
+        <point x="-45466" y="245370"/>
+    </zone>
+    <!-- Tower of Naia room 2 -->
+    <zone name="tower_of_naia_room_2" id="200021" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Cube" minZ="-9168" maxZ="-8818">
+        <point x="-49908" y="248440"/>
+        <point x="-47912" y="249896"/>
+    </zone>
+    <!-- Tower of room 3 -->
+    <zone name="tower_of_naia_room_3" id="200022" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Cube" minZ="-10032" maxZ="-9682">
+        <point x="-52362" y="245375"/>
+        <point x="-50880" y="246866"/>
+    </zone>
+    <!-- Tower of Naia room 4 -->
+    <zone name="tower_of_naia_room_4" id="200023" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Cube" minZ="-10032" maxZ="-9682">
+        <point x="-49954" y="242680"/>
+        <point x="-47958" y="244136"/>
+    </zone>
+    <!-- Tower of Naia room 5 -->
+    <zone name="tower_of_naia_room_5" id="200024" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Cube" minZ="-10044" maxZ="-9694">
+        <point x="-46953" y="245376"/>
+        <point x="-45479" y="246871"/>
+    </zone>
+    <!-- Tower of Naia room 6 -->
+    <zone name="tower_of_naia_room_6" id="200025" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Cube" minZ="-10036" maxZ="-9686">
+        <point x="-49444" y="247736"/>
+        <point x="-48412" y="248708"/>
+    </zone>
+    <!-- Tower of Naia room 7 -->
+    <zone name="tower_of_naia_room_7" id="200026" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Cube" minZ="-10880" maxZ="-10530">
+        <point x="-52371" y="245374"/>
+        <point x="-50889" y="246865"/>
+    </zone>
+    <!-- Tower of Naia room 8 -->
+    <zone name="tower_of_naia_room_8" id="200027" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Cube" minZ="-10876" maxZ="-10526">
+        <point x="-49447" y="243547"/>
+        <point x="-48415" y="244519"/>
+    </zone>
+    <!-- Tower of Naia room 9 -->
+    <zone name="tower_of_naia_room_9" id="200028" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Cube" minZ="-11748" maxZ="-11398">
+        <point x="-46970" y="245369"/>
+        <point x="-45496" y="246864"/>
+    </zone>
+    <!-- Tower of Naia room 10 -->
+    <zone name="tower_of_naia_room_10" id="200029" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Cube" minZ="-11760" maxZ="-11410">
+        <point x="-49440" y="247736"/>
+        <point x="-48412" y="248708"/>
+    </zone>
+    <!-- Tower of Naia room 11 -->
+    <zone name="tower_of_naia_room_11" id="200030" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Cube" minZ="-12650" maxZ="-12300">
+        <point x="-52347" y="245404"/>
+        <point x="-50865" y="246895"/>
+    </zone>
+    <!-- Tower of Naia room 12 -->
+    <zone name="tower_of_naia_room_12" id="200031" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Cube" minZ="-13444" maxZ="-13094">
+        <point x="-49004" y="242907"/>
+        <point x="-47530" y="244402"/>
+    </zone>
+    <zone name="talking_island_movie_zone" id="200034" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Polygon" minZ="-1250" maxZ="-1100">
+        <point x="-114216" y="257496"/>
+        <point x="-114216" y="257336"/>
+        <point x="-114536" y="257336"/>
+        <point x="-114520" y="257496"/>
+    </zone>
+    <zone name="harnak_underground_ruins_room_2" id="200032" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Cylinder" minZ="-11047" maxZ="-10697" radius="850">
+        <point x="-107926" y="208860"/>
+    </zone>
+    <zone name="harnak_underground_ruins_room_3" id="200033" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Cylinder" minZ="-11047" maxZ="-10697" radius="850">
+        <point x="-107926" y="211416"/>
+    </zone>
+    <zone name="Valakas Boss" id="12010" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Polygon" minZ="-2572" maxZ="5428">
+        <point x="196866" y="-130845"/>
+        <point x="229289" y="-130860"/>
+        <point x="229176" y="-98508"/>
+        <point x="196880" y="-98498"/>
+    </zone>
+    <zone name="Queen Ant Boss" id="12012" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Polygon" minZ="-5947" maxZ="-5547"> <!-- Not Verified -->
+        <property name="default_enabled" value="false"/>
+        <point x="-21490" y="178613"/>
+        <point x="-22258" y="178961"/>
+        <point x="-22890" y="182205"/>
+        <point x="-22770" y="183129"/>
+        <point x="-21594" y="183945"/>
+        <point x="-20570" y="183381"/>
+        <point x="-20310" y="182673"/>
+        <point x="-20762" y="179129"/>
+    </zone>
+    <zone name="Orfen Boss" id="12013" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Polygon" minZ="-5796" maxZ="-3796"> <!-- Not Verified -->
+        <property name="default_enabled" value="false"/>
+        <point x="43976" y="24664"/>
+        <point x="43284" y="18952"/>
+        <point x="42476" y="18164"/>
+        <point x="42480" y="16448"/>
+        <point x="43084" y="15944"/>
+        <point x="45140" y="15816"/>
+        <point x="48800" y="15112"/>
+        <point x="56556" y="12040"/>
+        <point x="59068" y="14288"/>
+        <point x="61064" y="18492"/>
+        <point x="60380" y="23672"/>
+        <point x="58724" y="27412"/>
+        <point x="55696" y="28496"/>
+        <point x="43976" y="24664"/>
+    </zone>
+    <zone name="Labyrinth of Belis" id="12014" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Polygon" minZ="-8000" maxZ="-8700">
+        <point x="-117832" y="214584"/>
+        <point x="-117832" y="215000"/>
+        <point x="-118120" y="215304"/>
+        <point x="-118536" y="215304"/>
+        <point x="-118840" y="215000"/>
+        <point x="-118840" y="214584"/>
+        <point x="-118552" y="214280"/>
+        <point x="-118120" y="214280"/>
+    </zone>
+    <zone name="anghel_waterfall_magmeld_teleport" id="12015" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Polygon" minZ="-2371" maxZ="-2171">
+        <point x="175319" y="90413"/>
+        <point x="174983" y="90333"/>
+        <point x="174933" y="90872"/>
+        <point x="175382" y="90753"/>
+    </zone>
+    <zone name="talking_island_q10332" id="12016" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Polygon" minZ="-1400" maxZ="-1200">
+        <point x="-117583" y="255700"/>
+        <point x="-117538" y="255779"/>
+        <point x="-117618" y="255809"/>
+        <point x="-117663" y="255733"/>
+    </zone>
+    <zone name="hot_springs_noble_q_1" id="12017" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Polygon" minZ="-1688" maxZ="-1488">
+        <point x="153077" y="-113251"/>
+        <point x="153218" y="-113295"/>
+        <point x="153452" y="-113190"/>
+        <point x="153537" y="-113079"/>
+        <point x="153587" y="-112928"/>
+        <point x="153575" y="-112731"/>
+        <point x="153570" y="-112544"/>
+        <point x="153456" y="-112456"/>
+        <point x="153299" y="-112436"/>
+        <point x="153141" y="-112426"/>
+        <point x="152987" y="-112456"/>
+        <point x="152869" y="-112545"/>
+        <point x="152786" y="-112674"/>
+        <point x="152767" y="-112832"/>
+        <point x="152794" y="-113026"/>
+        <point x="152928" y="-113143"/>
+    </zone>
+    <zone name="hot_springs_noble_q_2" id="12018" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Polygon" minZ="-2780" maxZ="-2580">
+        <point x="155735" y="-105980"/>
+        <point x="155860" y="-105972"/>
+        <point x="155967" y="-105957"/>
+        <point x="156094" y="-105919"/>
+        <point x="156134" y="-105776"/>
+        <point x="156142" y="-105601"/>
+        <point x="156132" y="-105440"/>
+        <point x="156054" y="-105265"/>
+        <point x="155886" y="-105264"/>
+        <point x="155684" y="-105290"/>
+        <point x="155477" y="-105286"/>
+        <point x="155399" y="-105429"/>
+        <point x="155312" y="-105594"/>
+        <point x="155358" y="-105757"/>
+        <point x="155429" y="-105909"/>
+        <point x="155616" y="-105925"/>
+    </zone>
+    <zone name="hot_springs_noble_q_3" id="12019" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Polygon" minZ="-3748" maxZ="-3548">
+        <point x="145300" y="-104537"/>
+        <point x="145484" y="-104590"/>
+        <point x="145627" y="-104624"/>
+        <point x="145674" y="-104790"/>
+        <point x="145724" y="-104917"/>
+        <point x="145731" y="-105104"/>
+        <point x="145662" y="-105249"/>
+        <point x="145512" y="-105343"/>
+        <point x="145328" y="-105398"/>
+        <point x="145147" y="-105345"/>
+        <point x="145002" y="-105234"/>
+        <point x="144914" y="-105044"/>
+        <point x="144932" y="-104851"/>
+        <point x="145018" y="-104684"/>
+        <point x="145107" y="-104592"/>
+        <point x="145195" y="-104554"/>
+    </zone>
+    <zone name="kartia_85_detect_1" id="12020" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Polygon" minZ="-10662" maxZ="-10262">
+        <point x="-111247" y="20538"/>
+        <point x="-111979" y="20532"/>
+        <point x="-111930" y="19993"/>
+        <point x="-111304" y="20003"/>
+    </zone>
+    <zone name="kartia_85_detect_2" id="12021" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Polygon" minZ="-10662" maxZ="-10262">
+        <point x="-111222" y="18452"/>
+        <point x="-111957" y="18465"/>
+        <point x="-111948" y="17761"/>
+        <point x="-111257" y="17761"/>
+    </zone>
+    <zone name="kartia_85_teleport_1" id="12022" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Polygon" minZ="-10999" maxZ="-10599">
+        <point x="-110858" y="22265"/>
+        <point x="-111406" y="22269"/>
+        <point x="-111408" y="21811"/>
+        <point x="-110852" y="21832"/>
+    </zone>
+    <zone name="kartia_85_teleport_2" id="12023" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Polygon" minZ="-10777" maxZ="-10377">
+        <point x="-111763" y="21254"/>
+        <point x="-111482" y="21251"/>
+        <point x="-111495" y="21374"/>
+        <point x="-111762" y="21363"/>
+    </zone>
+    <zone name="kartia_85_teleport_3" id="12024" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Polygon" minZ="-10516" maxZ="-10116">
+        <point x="-111497" y="18711"/>
+        <point x="-111514" y="18547"/>
+        <point x="-111712" y="18547"/>
+        <point x="-111706" y="18727"/>
+    </zone>
+    <zone name="kartia_90_detect_1" id="12025" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Polygon" minZ="-11673" maxZ="-11473">
+        <point x="-120613" y="-11928"/>
+        <point x="-121100" y="-11915"/>
+        <point x="-121073" y="-12276"/>
+        <point x="-120587" y="-12292"/>
+    </zone>
+    <zone name="kartia_90_detect_2" id="12026" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Polygon" minZ="-11527" maxZ="-11327">
+        <point x="-120472" y="-14025"/>
+        <point x="-121274" y="-14019"/>
+        <point x="-121289" y="-14742"/>
+        <point x="-120445" y="-14750"/>
+    </zone>
+    <zone name="kartia_90_teleport_1" id="12027" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Polygon" minZ="-12126" maxZ="-11726">
+        <point x="-120143" y="-10224"/>
+        <point x="-120126" y="-10674"/>
+        <point x="-120650" y="-10679"/>
+        <point x="-120652" y="-10227"/>
+    </zone>
+    <zone name="kartia_90_teleport_2" id="12028" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Polygon" minZ="-11785" maxZ="-11585">
+        <point x="-121002" y="-11240"/>
+        <point x="-120726" y="-11243"/>
+        <point x="-120733" y="-11117"/>
+        <point x="-120994" y="-11118"/>
+    </zone>
+    <zone name="kartia_90_teleport_3" id="12029" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Polygon" minZ="-11348" maxZ="-11548">
+        <point x="-120963" y="-13953"/>
+        <point x="-120760" y="-13948"/>
+        <point x="-120765" y="-13845"/>
+        <point x="-120962" y="-13853"/>
+    </zone>
+    <zone name="kartia_95_detect_1" type="org.l2j.gameserver.world.zone.type.ScriptZone" id="12030" form="Polygon" minZ="-11627" maxZ="-11227">
+        <point x="-111058" y="-11906"/>
+        <point x="-111512" y="-11889"/>
+        <point x="-111488" y="-12280"/>
+        <point x="-111076" y="-12257"/>
+    </zone>
+    <zone name="kartia_95_detect_2" type="org.l2j.gameserver.world.zone.type.ScriptZone" id="12031" form="Polygon" minZ="-11629" maxZ="-11229">
+        <point x="-110943" y="-14040"/>
+        <point x="-111658" y="-14033"/>
+        <point x="-111648" y="-14720"/>
+        <point x="-110919" y="-14720"/>
+    </zone>
+    <zone name="kartia_95_teleport_1" type="org.l2j.gameserver.world.zone.type.ScriptZone" id="12032" form="Polygon" minZ="-12124" maxZ="-11724">
+        <point x="-110553" y="-10224"/>
+        <point x="-110555" y="-10684"/>
+        <point x="-111081" y="-10679"/>
+        <point x="-111083" y="-10222"/>
+    </zone>
+    <zone name="kartia_95_teleport_2" type="org.l2j.gameserver.world.zone.type.ScriptZone" id="12033" form="Polygon" minZ="-11785" maxZ="-11585">
+        <point x="-111437" y="-11239"/>
+        <point x="-111156" y="-11244"/>
+        <point x="-111165" y="-11125"/>
+        <point x="-111431" y="-11126"/>
+    </zone>
+    <zone name="kartia_95_teleport_3" type="org.l2j.gameserver.world.zone.type.ScriptZone" id="12034" form="Polygon" minZ="-11548" maxZ="-11348">
+        <point x="-111174" y="-13934"/>
+        <point x="-111399" y="-13921"/>
+        <point x="-111398" y="-13833"/>
+        <point x="-111169" y="-13830"/>
+    </zone>
+    <zone name="ti_zone" id="12035" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Polygon" minZ="-3618" maxZ="-3818">
+        <point x="208606" y="11865"/>
+        <point x="207531" y="12839"/>
+        <point x="207269" y="13168"/>
+        <point x="207236" y="13428"/>
+        <point x="207357" y="13647"/>
+        <point x="207953" y="14262"/>
+        <point x="208534" y="15021"/>
+        <point x="208839" y="15349"/>
+        <point x="210342" y="16895"/>
+        <point x="210650" y="16919"/>
+        <point x="212233" y="15604"/>
+        <point x="212595" y="15306"/>
+        <point x="213915" y="14132"/>
+        <point x="213932" y="13845"/>
+        <point x="212659" y="12208"/>
+        <point x="212369" y="11843"/>
+        <point x="210952" y="10366"/>
+        <point x="210619" y="10241"/>
+    </zone>
+    <zone name="arcan_city_ceremony" id="23600" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Polygon" minZ="-2500" maxZ="200">
+        <point x="201496" y="85730"/>
+        <point x="201750" y="85528"/>
+        <point x="205245" y="80976"/>
+        <point x="205506" y="80800"/>
+        <point x="205826" y="80884"/>
+        <point x="206011" y="81195"/>
+        <point x="205918" y="81522"/>
+        <point x="206146" y="81881"/>
+        <point x="210526" y="82801"/>
+        <point x="210973" y="82488"/>
+        <point x="210999" y="82189"/>
+        <point x="211216" y="81963"/>
+        <point x="211394" y="81937"/>
+        <point x="211626" y="82018"/>
+        <point x="211778" y="82252"/>
+        <point x="211725" y="82634"/>
+        <point x="211410" y="82819"/>
+        <point x="211076" y="82702"/>
+        <point x="210672" y="82965"/>
+        <point x="211425" y="89207"/>
+        <point x="211502" y="89624"/>
+        <point x="211304" y="89893"/>
+        <point x="210864" y="89928"/>
+        <point x="210656" y="89774"/>
+        <point x="208561" y="90274"/>
+        <point x="208007" y="90651"/>
+        <point x="207364" y="90827"/>
+        <point x="207084" y="90818"/>
+        <point x="207154" y="91179"/>
+        <point x="206771" y="92661"/>
+        <point x="206065" y="92258"/>
+        <point x="201369" y="85882"/>
+    </zone>
+    <zone name="14_22_maternity_room_enter1" id="23601" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Polygon" minZ="2607" maxZ="2807">
+        <point x="-179731" y="153236"/>
+        <point x="-179531" y="153236"/>
+        <point x="-179531" y="153436"/>
+        <point x="-179731" y="153436"/>
+    </zone>
+    <zone name="14_22_maternity_room_enter2" id="23602" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Polygon" minZ="2605" maxZ="2805">
+        <point x="-177386" y="153237"/>
+        <point x="-177186" y="153237"/>
+        <point x="-177186" y="153437"/>
+        <point x="-177386" y="153437"/>
+    </zone>
+    <zone name="royal_rush_script_1" id="200221" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Polygon" minZ="-7263" maxZ="-7063">
+        <point x="181198" y="-86516"/>
+        <point x="192394" y="-86521"/>
+        <point x="192391" y="-84626"/>
+        <point x="181193" y="-84622"/>
+    </zone>
+    <zone name="royal_rush_script_2" id="200222" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Polygon" minZ="-7263" maxZ="-7063">
+        <point x="179511" y="-89903"/>
+        <point x="190707" y="-89908"/>
+        <point x="190704" y="-88013"/>
+        <point x="179506" y="-88009"/>
+    </zone>
+    <zone name="royal_rush_script_3" id="200223" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Polygon" minZ="-7263" maxZ="-7063">
+        <point x="174498" y="-82751"/>
+        <point x="176622" y="-82751"/>
+        <point x="176616" y="-71304"/>
+        <point x="174489" y="-71303"/>
+    </zone>
+    <zone name="royal_rush_script_4" id="200224" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Polygon" minZ="-7263" maxZ="-7063">
+        <point x="172183" y="-86660"/>
+        <point x="174307" y="-86661"/>
+        <point x="174301" y="-75214"/>
+        <point x="172174" y="-75213"/>
+    </zone>
+    <zone name="GainakSiege" id="60019" type="org.l2j.gameserver.world.zone.type.SiegeZone" form="Polygon" minZ="-265" maxZ="-11">
+        <point x="14816" y="-114416"/>
+        <point x="14576" y="-113968"/>
+        <point x="14752" y="-112736"/>
+        <point x="15415" y="-111960"/>
+        <point x="15691" y="-111730"/>
+        <point x="17559" y="-110950"/>
+        <point x="18291" y="-112548"/>
+        <point x="15936" y="-113920"/>
+        <point x="16275" y="-114501"/>
+        <point x="17642" y="-113922"/>
+        <point x="18222" y="-114615"/>
+        <point x="18637" y="-115667"/>
+        <point x="17536" y="-116128"/>
+        <point x="17138" y="-116183"/>
+        <point x="16080" y="-116096"/>
+        <point x="15130" y="-115345"/>
+        <point x="14972" y="-114864"/>
+    </zone>
+    <zone name="Beleth's Chamber" id="60022" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Polygon" minZ="-10412" maxZ="-5112">
+        <point x="11214" y="205578"/>
+        <point x="20607" y="205578"/>
+        <point x="20648" y="220271"/>
+        <point x="11172" y="220271"/>
+    </zone>
+    <zone name="Kelbim Zone" id="60023" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Polygon" minZ="-300" maxZ="500">
+        <point x="-56813" y="61745"/>
+        <point x="-53966" y="61657"/>
+        <point x="-53336" y="60303"/>
+        <point x="-53291" y="59933"/>
+        <point x="-54151" y="57985"/>
+        <point x="-56364" y="57986"/>
+        <point x="-57612" y="58114"/>
+        <point x="-58114" y="58770"/>
+        <point x="-58113" y="59355"/>
+        <point x="-58058" y="59760"/>
+        <point x="-57430" y="62356"/>
+    </zone>
+    <zone name="Apherus Zone" id="60060" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Polygon" minZ="-877" maxZ="-857">
+        <point x="214323" y="115889"/>
+        <point x="214324" y="114625"/>
+        <point x="213068" y="114628"/>
+        <point x="213058" y="115891"/>
+    </zone>
+    <zone name="Anakim" id="12003" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Polygon" minZ="-5500" maxZ="-4600">
+        <point x="183904" y="-13884"/>
+        <point x="186265" y="-13884"/>
+        <point x="186245" y="-11263"/>
+        <point x="183944" y="-11283"/>
+    </zone>
+    <zone name="Pre Anakim" id="12004" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Polygon" minZ="-4950" maxZ="-4420">
+        <point x="172102" y="-18083"/>
+        <point x="183504" y="-18105"/>
+        <point x="183544" y="-6702"/>
+        <point x="171976" y="-6743"/>
+    </zone>
+    <zone name="Lilith" id="12005" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Polygon" minZ="-5500" maxZ="-4600">
+        <point x="183904" y="-10883"/>
+        <point x="186245" y="-10903"/>
+        <point x="186265" y="-8223"/>
+        <point x="183924" y="-8203"/>
+    </zone>
+    <zone name="Pre Lilith" id="12006" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Polygon" minZ="-5000" maxZ="-4300">
+        <point x="-19545" y="12943"/>
+        <point x="-7704" y="12732"/>
+        <point x="-7726" y="24753"/>
+        <point x="-19865" y="24305"/>
+    </zone>
+    <zone name="Harnak Underground Ruins Room 1" id="60142" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Cylinder" minZ="-13864" maxZ="-13704" radius="1000">
+        <point x="-117612" y="180489"/>
+    </zone>
+    <zone name="Harnak Underground Ruins Room 2" id="60143" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Cylinder" minZ="-13864" maxZ="-13704" radius="1000">
+        <point x="-118432" y="185061"/>
+    </zone>
+    <zone name="Harnak Underground Ruins Room 3" id="60144" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Cylinder" minZ="-13864" maxZ="-13704" radius="1000">
+        <point x="-118429" y="186915"/>
+    </zone>
+    <zone name="Harnak Underground Ruins Room 4" id="60145" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Cylinder" minZ="-13864" maxZ="-13704" radius="1000">
+        <point x="-114699" y="186995"/>
+    </zone>
+    <zone name="Harnak Underground Ruins Room 5" id="60146" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Cylinder" minZ="-13872" maxZ="-13712" radius="1000">
+        <point x="-110992" y="186886"/>
+    </zone>
+    <zone name="Harnak Underground Ruins Room 6" id="60147" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Cylinder" minZ="-13864" maxZ="-13704" radius="1000">
+        <point x="-110984" y="185054"/>
+    </zone>
+    <zone name="Harnak Underground Ruins Room 7" id="60148" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Cylinder" minZ="-13864" maxZ="-13704" radius="1000">
+        <point x="-111797" y="180482"/>
+    </zone>
+    <zone name="Harnak Underground Ruins Room 8" id="60149" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Cylinder" minZ="-13864" maxZ="-13704" radius="1000">
+        <point x="-114703" y="179277"/>
+    </zone>
+    <zone name="Harnak Underground Ruins Room 9" id="60150" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Cylinder" minZ="-10800" maxZ="-10640" radius="1000">
+        <point x="-117618" y="146395"/>
+    </zone>
+    <zone name="Harnak Underground Ruins Room 10" id="60151" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Cylinder" minZ="-10800" maxZ="-10640" radius="1000">
+        <point x="-118439" y="150966"/>
+    </zone>
+    <zone name="Harnak Underground Ruins Room 11" id="60152" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Cylinder" minZ="-10808" maxZ="-10648" radius="1000">
+        <point x="-118432" y="152816"/>
+    </zone>
+    <zone name="Harnak Underground Ruins Room 12" id="60153" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Cylinder" minZ="-10808" maxZ="-10648" radius="1000">
+        <point x="-114711" y="152908"/>
+    </zone>
+    <zone name="Harnak Underground Ruins Room 13" id="60154" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Cylinder" minZ="-10808" maxZ="-10648" radius="1000">
+        <point x="-110998" y="152801"/>
+    </zone>
+    <zone name="Harnak Underground Ruins Room 14" id="60155" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Cylinder" minZ="-10808" maxZ="-10648" radius="1000">
+        <point x="-111002" y="150978"/>
+    </zone>
+    <zone name="Harnak Underground Ruins Room 15" id="60156" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Cylinder" minZ="-10800" maxZ="-10640" radius="1000">
+        <point x="-111809" y="146397"/>
+    </zone>
+    <zone name="Harnak Underground Ruins Room 16" id="60157" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Cylinder" minZ="-10800" maxZ="-10640" radius="1000">
+        <point x="-114706" y="145183"/>
+    </zone>
+    <zone name="Harnak Underground Ruins Room 17" id="60158" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Cylinder" minZ="-7736" maxZ="-7576" radius="1000">
+        <point x="-117606" y="145039"/>
+    </zone>
+    <zone name="Harnak Underground Ruins Room 18" id="60159" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Cylinder" minZ="-7744" maxZ="-7584" radius="1000">
+        <point x="-118432" y="149616"/>
+    </zone>
+    <zone name="Harnak Underground Ruins Room 19" id="60160" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Cylinder" minZ="-7744" maxZ="-7584" radius="1000">
+        <point x="-118432" y="151472"/>
+    </zone>
+    <zone name="Harnak Underground Ruins Room 20" id="60161" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Cylinder" minZ="-7744" maxZ="-7584" radius="1000">
+        <point x="-114704" y="151552"/>
+    </zone>
+    <zone name="Harnak Underground Ruins Room 21" id="60162" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Cylinder" minZ="-7744" maxZ="-7584" radius="1000">
+        <point x="-110986" y="151456"/>
+    </zone>
+    <zone name="Harnak Underground Ruins Room 22" id="60163" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Cylinder" minZ="-7744" maxZ="-7584" radius="1000">
+        <point x="-110991" y="149616"/>
+    </zone>
+    <zone name="Harnak Underground Ruins Room 23" id="60164" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Cylinder" minZ="-7736" maxZ="-7576" radius="1000">
+        <point x="-111792" y="145040"/>
+    </zone>
+    <zone name="Harnak Underground Ruins Room 24" id="60165" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Cylinder" minZ="-7736" maxZ="-7576" radius="1000">
+        <point x="-114700" y="143834"/>
+    </zone>
 </list>

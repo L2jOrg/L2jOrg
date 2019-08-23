@@ -42,12 +42,12 @@ public final class TeleportListData extends GameXmlReader {
 
     @Override
     protected Path getSchemaFilePath() {
-        return getSettings(ServerSettings.class).dataPackDirectory().resolve("data/xsd/teleportlist.xsd");
+        return getSettings(ServerSettings.class).dataPackDirectory().resolve("data/xsd/teleports.xsd");
     }
 
     @Override
     public void load() {
-        parseDatapackFile("data/teleportlist.xml");
+        parseDatapackFile("data/teleports.xml");
     }
 
     @Override

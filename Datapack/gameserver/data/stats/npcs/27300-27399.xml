@@ -1,1076 +1,1076 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org npcs.xsd">
-	<npc id="27300" level="76" type="Monster" name="Stone Watchman Ezekiel" title="Quest Monster">
-		<parameters>
-			<param name="MoveAroundSocial" value="90" />
-			<param name="MoveAroundSocial1" value="98" />
-			<param name="MoveAroundSocial2" value="90" />
-			<skill name="WeakModeTrue" id="4523" level="1" />
-			<skill name="WeakModeFalse" id="4524" level="1" />
-			<skill name="Buff" id="4522" level="1" />
-			<skill name="PhysicalSpecial1" id="4101" level="8" />
-			<skill name="PhysicalSpecial2" id="4072" level="7" />
-			<skill name="PhysicalSpecial3" id="4032" level="8" />
-		</parameters>
-		<race>DIVINE</race>
-		<sex>MALE</sex>
-		<equipment rhand="97" /> <!-- Lance -->
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2823" hpRegen="8.5" mp="1507" mpRegen="3" />
-			<attack physical="815.37145" magical="556.793" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="323.78455" magical="236.93149" />
-			<speed>
-				<walk ground="50" />
-				<run ground="180" />
-			</speed>
-			<hitTime>760</hitTime>
-			<abnormalResist physical="10" magical="10" />
-		</stats>
-		<status undying="false" />
-		<skillList>
-			<skill id="4032" level="8" /> <!-- NPC Strike -->
-			<skill id="4072" level="7" /> <!-- Stun -->
-			<skill id="4101" level="8" /> <!-- NPC Spinning Slash -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="8" /> <!-- Angels -->
-			<skill id="4522" level="1" /> <!-- Eye of Assassin -->
-			<skill id="4523" level="1" /> <!-- Quest - BOSS Evasion -->
-			<skill id="4524" level="1" /> <!-- Quest - BOSS Bluff -->
-		</skillList>
-		<exCrtEffect>true</exCrtEffect>
-		<ai clanHelpRange="300" aggroRange="300" />
-		<collision>
-			<radius normal="15" />
-			<height normal="80" />
-		</collision>
-	</npc>
-	<npc id="27301" level="76" type="Monster" name="Stone Watchman Ezekiel" title="Quest Monster">
-		<parameters>
-			<param name="MoveAroundSocial" value="90" />
-			<param name="MoveAroundSocial1" value="98" />
-			<param name="MoveAroundSocial2" value="90" />
-			<skill name="WeakModeTrue" id="4523" level="1" />
-			<skill name="WeakModeFalse" id="4524" level="1" />
-			<skill name="Buff" id="4522" level="1" />
-			<skill name="PhysicalSpecial1" id="4101" level="8" />
-			<skill name="PhysicalSpecial2" id="4072" level="7" />
-			<skill name="PhysicalSpecial3" id="4032" level="8" />
-		</parameters>
-		<race>DIVINE</race>
-		<sex>MALE</sex>
-		<equipment rhand="97" /> <!-- Lance -->
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2823" hpRegen="8.5" mp="1507" mpRegen="3" />
-			<attack physical="815.37145" magical="556.793" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="323.78455" magical="236.93149" />
-			<speed>
-				<walk ground="50" />
-				<run ground="180" />
-			</speed>
-			<hitTime>760</hitTime>
-			<abnormalResist physical="10" magical="10" />
-		</stats>
-		<status undying="false" />
-		<skillList>
-			<skill id="4032" level="8" /> <!-- NPC Strike -->
-			<skill id="4072" level="7" /> <!-- Stun -->
-			<skill id="4101" level="8" /> <!-- NPC Spinning Slash -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="8" /> <!-- Angels -->
-			<skill id="4522" level="1" /> <!-- Eye of Assassin -->
-			<skill id="4523" level="1" /> <!-- Quest - BOSS Evasion -->
-			<skill id="4524" level="1" /> <!-- Quest - BOSS Bluff -->
-		</skillList>
-		<exCrtEffect>true</exCrtEffect>
-		<ai clanHelpRange="300" aggroRange="300" />
-		<collision>
-			<radius normal="15" />
-			<height normal="80" />
-		</collision>
-	</npc>
-	<npc id="27302" level="81" type="Monster" name="Stone Guardian Azrael" title="Quest Monster">
-		<parameters>
-			<param name="MoveAroundSocial" value="90" />
-			<param name="MoveAroundSocial1" value="98" />
-			<param name="MoveAroundSocial2" value="90" />
-		</parameters>
-		<race>DIVINE</race>
-		<sex>MALE</sex>
-		<equipment rhand="97" /> <!-- Lance -->
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2975" hpRegen="76.5" mp="1742" mpRegen="3" />
-			<attack physical="913.54847" magical="623.83518" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="345.61127" magical="252.90333" />
-			<speed>
-				<walk ground="50" />
-				<run ground="180" />
-			</speed>
-			<hitTime>760</hitTime>
-			<abnormalResist physical="10" magical="10" />
-		</stats>
-		<status undying="true" />
-		<skillList>
-			<skill id="4408" level="17" /> <!-- HP Increase (9x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="8" /> <!-- Angels -->
-		</skillList>
-		<exCrtEffect>true</exCrtEffect>
-		<sNpcPropHpRate>9</sNpcPropHpRate>
-		<ai aggroRange="300" clanHelpRange="300" isAggressive="true" />
-		<collision>
-			<radius normal="15" />
-			<height normal="80" />
-		</collision>
-	</npc>
-	<npc id="27303" level="81" type="Monster" name="Stone Guardian Azrael" title="Quest Monster">
-		<parameters>
-			<param name="MoveAroundSocial" value="90" />
-			<param name="MoveAroundSocial1" value="98" />
-			<param name="MoveAroundSocial2" value="90" />
-		</parameters>
-		<race>DIVINE</race>
-		<sex>MALE</sex>
-		<equipment rhand="97" /> <!-- Lance -->
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2975" hpRegen="76.5" mp="1742" mpRegen="3" />
-			<attack physical="913.54847" magical="623.83518" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="345.61127" magical="252.90333" />
-			<speed>
-				<walk ground="50" />
-				<run ground="180" />
-			</speed>
-			<hitTime>760</hitTime>
-			<abnormalResist physical="10" magical="10" />
-		</stats>
-		<status undying="true" />
-		<skillList>
-			<skill id="4408" level="17" /> <!-- HP Increase (9x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="8" /> <!-- Angels -->
-		</skillList>
-		<exCrtEffect>true</exCrtEffect>
-		<sNpcPropHpRate>9</sNpcPropHpRate>
-		<ai aggroRange="300" clanHelpRange="300" isAggressive="true" />
-		<collision>
-			<radius normal="15" />
-			<height normal="80" />
-		</collision>
-	</npc>
-	<npc id="27304" level="81" type="Monster" name="Stone Guardian Azrael" title="Quest Monster">
-		<parameters>
-			<param name="MoveAroundSocial" value="90" />
-			<param name="MoveAroundSocial1" value="98" />
-			<param name="MoveAroundSocial2" value="90" />
-		</parameters>
-		<race>DIVINE</race>
-		<sex>MALE</sex>
-		<equipment rhand="97" /> <!-- Lance -->
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2975" hpRegen="76.5" mp="1742" mpRegen="3" />
-			<attack physical="913.54847" magical="623.83518" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="345.61127" magical="252.90333" />
-			<speed>
-				<walk ground="50" />
-				<run ground="180" />
-			</speed>
-			<hitTime>760</hitTime>
-			<abnormalResist physical="10" magical="10" />
-		</stats>
-		<status undying="true" />
-		<skillList>
-			<skill id="4408" level="17" /> <!-- HP Increase (9x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="8" /> <!-- Angels -->
-		</skillList>
-		<exCrtEffect>true</exCrtEffect>
-		<sNpcPropHpRate>9</sNpcPropHpRate>
-		<ai aggroRange="300" clanHelpRange="300" isAggressive="true" />
-		<collision>
-			<radius normal="15" />
-			<height normal="80" />
-		</collision>
-	</npc>
-	<npc id="27305" level="81" type="Monster" name="Stone Guardian Azrael" title="Quest Monster">
-		<parameters>
-			<param name="MoveAroundSocial" value="90" />
-			<param name="MoveAroundSocial1" value="98" />
-			<param name="MoveAroundSocial2" value="90" />
-		</parameters>
-		<race>DIVINE</race>
-		<sex>MALE</sex>
-		<equipment rhand="97" /> <!-- Lance -->
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2975" hpRegen="76.5" mp="1742" mpRegen="3" />
-			<attack physical="913.54847" magical="623.83518" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="345.61127" magical="252.90333" />
-			<speed>
-				<walk ground="50" />
-				<run ground="180" />
-			</speed>
-			<hitTime>760</hitTime>
-			<abnormalResist physical="10" magical="10" />
-		</stats>
-		<status undying="true" />
-		<skillList>
-			<skill id="4408" level="17" /> <!-- HP Increase (9x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="8" /> <!-- Angels -->
-		</skillList>
-		<exCrtEffect>true</exCrtEffect>
-		<sNpcPropHpRate>9</sNpcPropHpRate>
-		<ai aggroRange="300" clanHelpRange="300" isAggressive="true" />
-		<collision>
-			<radius normal="15" />
-			<height normal="80" />
-		</collision>
-	</npc>
-	<npc id="27306" level="81" type="Monster" name="Stone Guardian Azrael" title="Quest Monster">
-		<parameters>
-			<param name="MoveAroundSocial" value="90" />
-			<param name="MoveAroundSocial1" value="98" />
-			<param name="MoveAroundSocial2" value="90" />
-		</parameters>
-		<race>DIVINE</race>
-		<sex>MALE</sex>
-		<equipment rhand="97" /> <!-- Lance -->
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2975" hpRegen="76.5" mp="1742" mpRegen="3" />
-			<attack physical="913.54847" magical="623.83518" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="345.61127" magical="252.90333" />
-			<speed>
-				<walk ground="50" />
-				<run ground="180" />
-			</speed>
-			<hitTime>760</hitTime>
-			<abnormalResist physical="10" magical="10" />
-		</stats>
-		<status undying="true" />
-		<skillList>
-			<skill id="4408" level="17" /> <!-- HP Increase (9x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="8" /> <!-- Angels -->
-		</skillList>
-		<exCrtEffect>true</exCrtEffect>
-		<sNpcPropHpRate>9</sNpcPropHpRate>
-		<ai aggroRange="300" clanHelpRange="300" isAggressive="true" />
-		<collision>
-			<radius normal="15" />
-			<height normal="80" />
-		</collision>
-	</npc>
-	<npc id="27307" level="81" type="Monster" name="Stone Guardian Azrael" title="Quest Monster">
-		<parameters>
-			<param name="MoveAroundSocial" value="90" />
-			<param name="MoveAroundSocial1" value="98" />
-			<param name="MoveAroundSocial2" value="90" />
-		</parameters>
-		<race>DIVINE</race>
-		<sex>MALE</sex>
-		<equipment rhand="97" /> <!-- Lance -->
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2975" hpRegen="76.5" mp="1742" mpRegen="3" />
-			<attack physical="913.54847" magical="623.83518" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="345.61127" magical="252.90333" />
-			<speed>
-				<walk ground="50" />
-				<run ground="180" />
-			</speed>
-			<hitTime>760</hitTime>
-			<abnormalResist physical="10" magical="10" />
-		</stats>
-		<status undying="true" />
-		<skillList>
-			<skill id="4408" level="17" /> <!-- HP Increase (9x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="8" /> <!-- Angels -->
-		</skillList>
-		<exCrtEffect>true</exCrtEffect>
-		<sNpcPropHpRate>9</sNpcPropHpRate>
-		<ai aggroRange="300" clanHelpRange="300" isAggressive="true" />
-		<collision>
-			<radius normal="15" />
-			<height normal="80" />
-		</collision>
-	</npc>
-	<npc id="27308" level="81" type="Monster" name="Assassin Frost" title="Quest Monster">
-		<parameters>
-			<param name="MoveAroundSocial" value="0" />
-			<param name="MoveAroundSocial1" value="0" />
-			<param name="MoveAroundSocial2" value="0" />
-		</parameters>
-		<race>DEMONIC</race>
-		<sex>MALE</sex>
-		<equipment rhand="229" /> <!-- Kris -->
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2975" hpRegen="76.5" mp="1742" mpRegen="3" />
-			<attack physical="799.3549113" magical="623.83518" random="10" critical="8" accuracy="0" attackSpeed="289" type="DAGGER" range="40" distance="80" width="120" />
-			<defence physical="345.61127" magical="252.90333" />
-			<speed>
-				<walk ground="60" />
-				<run ground="180" />
-			</speed>
-			<hitTime>450</hitTime>
-			<abnormalResist physical="10" magical="10" />
-		</stats>
-		<status undying="true" />
-		<skillList>
-			<skill id="4408" level="17" /> <!-- HP Increase (9x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
-			<skill id="4415" level="7" /> <!-- Daggers -->
-			<skill id="4416" level="9" /> <!-- Demons -->
-		</skillList>
-		<exCrtEffect>true</exCrtEffect>
-		<sNpcPropHpRate>9</sNpcPropHpRate>
-		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="true" />
-		<collision>
-			<radius normal="8" grown="9" />
-			<height normal="23.5" grown="29" />
-		</collision>
-	</npc>
-	<npc id="27309" level="81" type="Monster" name="Minervia Van Hacken" title="Quest Monster">
-		<parameters>
-			<param name="MoveAroundSocial" value="0" />
-			<param name="MoveAroundSocial1" value="0" />
-			<param name="MoveAroundSocial2" value="0" />
-		</parameters>
-		<race>DEMONIC</race>
-		<sex>FEMALE</sex>
-		<equipment rhand="229" /> <!-- Kris -->
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2975" hpRegen="76.5" mp="1742" mpRegen="3" />
-			<attack physical="799.3549113" magical="623.83518" random="10" critical="8" accuracy="0" attackSpeed="289" type="DAGGER" range="40" distance="80" width="120" />
-			<defence physical="293.7695795" magical="252.90333" evasion="10" />
-			<speed>
-				<walk ground="64" />
-				<run ground="180" />
-			</speed>
-			<hitTime>500</hitTime>
-			<abnormalResist physical="10" magical="10" />
-		</stats>
-		<status undying="true" />
-		<skillList>
-			<skill id="4408" level="17" /> <!-- HP Increase (9x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="3" /> <!-- Light Armor Type -->
-			<skill id="4415" level="7" /> <!-- Daggers -->
-			<skill id="4416" level="9" /> <!-- Demons -->
-		</skillList>
-		<exCrtEffect>true</exCrtEffect>
-		<sNpcPropHpRate>9</sNpcPropHpRate>
-		<ai type="MAGE" aggroRange="300" clanHelpRange="300" isAggressive="true" />
-		<collision>
-			<radius normal="6" grown="7" />
-			<height normal="21.5" grown="25.8" />
-		</collision>
-	</npc>
-	<npc id="27310" level="81" type="Monster" name="Kitanis Van Hacken" title="Quest Monster">
-		<parameters>
-			<param name="MoveAroundSocial" value="130" />
-			<param name="MoveAroundSocial1" value="130" />
-			<param name="MoveAroundSocial2" value="130" />
-		</parameters>
-		<race>DEMONIC</race>
-		<sex>MALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2975" hpRegen="76.5" mp="1742" mpRegen="3" />
-			<attack physical="913.54847" magical="623.83518" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="345.61127" magical="252.90333" />
-			<speed>
-				<walk ground="15" />
-				<run ground="180" />
-			</speed>
-			<hitTime>560</hitTime>
-			<abnormalResist physical="10" magical="10" />
-		</stats>
-		<status undying="true" />
-		<skillList>
-			<skill id="4408" level="17" /> <!-- HP Increase (9x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="9" /> <!-- Demons -->
-		</skillList>
-		<exCrtEffect>true</exCrtEffect>
-		<sNpcPropHpRate>9</sNpcPropHpRate>
-		<ai aggroRange="300" clanHelpRange="300" isAggressive="true" />
-		<collision>
-			<radius normal="7.5" />
-			<height normal="25.8" />
-		</collision>
-	</npc>
-	<npc id="27311" level="81" type="Monster" name="Judgment Hound Dog Kelvas" title="Quest Monster">
-		<parameters>
-			<param name="MoveAroundSocial" value="120" />
-			<param name="MoveAroundSocial1" value="120" />
-			<param name="MoveAroundSocial2" value="120" />
-		</parameters>
-		<race>BEAST</race>
-		<sex>MALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2975" hpRegen="76.5" mp="1742" mpRegen="3" />
-			<attack physical="913.54847" magical="623.83518" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="345.61127" magical="252.90333" />
-			<speed>
-				<walk ground="35" />
-				<run ground="180" />
-			</speed>
-			<hitTime>480</hitTime>
-			<abnormalResist physical="10" magical="10" />
-		</stats>
-		<status undying="true" />
-		<skillList>
-			<skill id="4408" level="17" /> <!-- HP Increase (9x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="3" /> <!-- Beasts -->
-		</skillList>
-		<exCrtEffect>true</exCrtEffect>
-		<sNpcPropHpRate>9</sNpcPropHpRate>
-		<ai aggroRange="300" clanHelpRange="300" isAggressive="true" />
-		<collision>
-			<radius normal="21" />
-			<height normal="35" />
-		</collision>
-	</npc>
-	<npc id="27312" level="81" type="Monster" name="Mysterious Servitor" title="Quest Monster">
-		<parameters>
-			<param name="MoveAroundSocial" value="24" />
-			<param name="MoveAroundSocial1" value="24" />
-			<param name="MoveAroundSocial2" value="24" />
-		</parameters>
-		<race>DEMONIC</race>
-		<sex>MALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2975" hpRegen="76.5" mp="1742" mpRegen="3" />
-			<attack physical="913.54847" magical="623.83518" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="293.7695795" magical="252.90333" evasion="10" />
-			<speed>
-				<walk ground="48" />
-				<run ground="180" />
-			</speed>
-			<hitTime>610</hitTime>
-			<abnormalResist physical="10" magical="10" />
-		</stats>
-		<status undying="true" />
-		<skillList>
-			<skill id="4408" level="17" /> <!-- HP Increase (9x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="3" /> <!-- Light Armor Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="9" /> <!-- Demons -->
-		</skillList>
-		<exCrtEffect>true</exCrtEffect>
-		<sNpcPropHpRate>9</sNpcPropHpRate>
-		<ai aggroRange="300" clanHelpRange="300" isAggressive="true" />
-		<collision>
-			<radius normal="7" />
-			<height normal="33" />
-		</collision>
-	</npc>
-	<npc id="27313" level="76" type="Monster" name="Vision Guardian Shakiel" title="Quest Monster">
-		<parameters>
-			<param name="MoveAroundSocial" value="85" />
-			<param name="MoveAroundSocial1" value="85" />
-			<param name="MoveAroundSocial2" value="85" />
-			<skill name="Buff1" id="4532" level="1" />
-			<skill name="PhysicalSpecial1" id="4032" level="8" />
-			<skill name="PhysicalSpecial2" id="4076" level="3" />
-			<skill name="PhysicalSpecial3" id="4032" level="7" />
-		</parameters>
-		<race>DIVINE</race>
-		<sex>MALE</sex>
-		<equipment rhand="161" /> <!-- Silver Axe -->
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2823" hpRegen="8.5" mp="1507" mpRegen="3" />
-			<attack physical="815.37145" magical="556.793" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
-			<defence physical="275.2168675" magical="236.93149" evasion="10" />
-			<speed>
-				<walk ground="50" />
-				<run ground="180" />
-			</speed>
-			<hitTime>480</hitTime>
-			<abnormalResist physical="10" magical="10" />
-		</stats>
-		<status undying="false" />
-		<skillList>
-			<skill id="4032" level="8" /> <!-- NPC Strike -->
-			<skill id="4076" level="3" /> <!-- Decrease Speed -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="3" /> <!-- Light Armor Type -->
-			<skill id="4415" level="5" /> <!-- Blunt Weapons -->
-			<skill id="4416" level="8" /> <!-- Angels -->
-			<skill id="4532" level="1" /> <!-- Quest - BOSS Reflect -->
-		</skillList>
-		<exCrtEffect>true</exCrtEffect>
-		<ai type="MAGE" clanHelpRange="300" aggroRange="300" />
-		<collision>
-			<radius normal="11" grown="13" />
-			<height normal="38.5" grown="46.5" />
-		</collision>
-	</npc>
-	<npc id="27314" level="76" type="Monster" name="Vision Guardian Shakiel" title="Quest Monster">
-		<parameters>
-			<param name="MoveAroundSocial" value="85" />
-			<param name="MoveAroundSocial1" value="85" />
-			<param name="MoveAroundSocial2" value="85" />
-			<skill name="Buff1" id="4532" level="1" />
-			<skill name="PhysicalSpecial1" id="4032" level="8" />
-			<skill name="PhysicalSpecial2" id="4076" level="3" />
-			<skill name="PhysicalSpecial3" id="4032" level="7" />
-		</parameters>
-		<race>DIVINE</race>
-		<sex>MALE</sex>
-		<equipment rhand="161" /> <!-- Silver Axe -->
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2823" hpRegen="8.5" mp="1507" mpRegen="3" />
-			<attack physical="815.37145" magical="556.793" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
-			<defence physical="275.2168675" magical="236.93149" evasion="10" />
-			<speed>
-				<walk ground="50" />
-				<run ground="180" />
-			</speed>
-			<hitTime>480</hitTime>
-			<abnormalResist physical="10" magical="10" />
-		</stats>
-		<status undying="false" />
-		<skillList>
-			<skill id="4032" level="8" /> <!-- NPC Strike -->
-			<skill id="4076" level="3" /> <!-- Decrease Speed -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="3" /> <!-- Light Armor Type -->
-			<skill id="4415" level="5" /> <!-- Blunt Weapons -->
-			<skill id="4416" level="8" /> <!-- Angels -->
-			<skill id="4532" level="1" /> <!-- Quest - BOSS Reflect -->
-		</skillList>
-		<exCrtEffect>true</exCrtEffect>
-		<ai type="MAGE" clanHelpRange="300" aggroRange="300" />
-		<collision>
-			<radius normal="11" grown="13" />
-			<height normal="38.5" grown="46.5" />
-		</collision>
-	</npc>
-	<npc id="27315" level="76" type="Monster" name="Vision Guardian Shakiel" title="Quest Monster">
-		<parameters>
-			<param name="MoveAroundSocial" value="85" />
-			<param name="MoveAroundSocial1" value="85" />
-			<param name="MoveAroundSocial2" value="85" />
-			<skill name="Buff1" id="4532" level="1" />
-			<skill name="PhysicalSpecial1" id="4032" level="8" />
-			<skill name="PhysicalSpecial2" id="4076" level="3" />
-			<skill name="PhysicalSpecial3" id="4032" level="7" />
-		</parameters>
-		<race>DIVINE</race>
-		<sex>MALE</sex>
-		<equipment rhand="161" /> <!-- Silver Axe -->
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2823" hpRegen="8.5" mp="1507" mpRegen="3" />
-			<attack physical="815.37145" magical="556.793" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
-			<defence physical="275.2168675" magical="236.93149" evasion="10" />
-			<speed>
-				<walk ground="50" />
-				<run ground="180" />
-			</speed>
-			<hitTime>480</hitTime>
-			<abnormalResist physical="10" magical="10" />
-		</stats>
-		<status undying="false" />
-		<skillList>
-			<skill id="4032" level="8" /> <!-- NPC Strike -->
-			<skill id="4076" level="3" /> <!-- Decrease Speed -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="3" /> <!-- Light Armor Type -->
-			<skill id="4415" level="5" /> <!-- Blunt Weapons -->
-			<skill id="4416" level="8" /> <!-- Angels -->
-			<skill id="4532" level="1" /> <!-- Quest - BOSS Reflect -->
-		</skillList>
-		<exCrtEffect>true</exCrtEffect>
-		<ai type="MAGE" clanHelpRange="300" aggroRange="300" />
-		<collision>
-			<radius normal="11" grown="13" />
-			<height normal="38.5" grown="46.5" />
-		</collision>
-	</npc>
-	<npc id="27316" level="70" type="Monster" name="Ice Monster" title="Quest Monster">
-		<parameters>
-			<param name="MoveAroundSocial" value="90" />
-			<param name="MoveAroundSocial1" value="65" />
-			<param name="MoveAroundSocial2" value="90" />
-		</parameters>
-		<race>HUMANOID</race>
-		<sex>MALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2823" hpRegen="6.5" mp="1507" mpRegen="2.4" />
-			<attack physical="388.11142" magical="265.02979" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
-			<defence physical="190.09077" magical="163.64727" evasion="10" />
-			<speed>
-				<walk ground="20" />
-				<run ground="180" />
-			</speed>
-			<hitTime>540</hitTime>
-			<abnormalResist physical="10" magical="10" />
-		</stats>
-		<status undying="false" />
-		<skillList>
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="3" /> <!-- Light Armor Type -->
-			<skill id="4415" level="5" /> <!-- Blunt Weapons -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
-		</skillList>
-		<exCrtEffect>true</exCrtEffect>
-		<ai clanHelpRange="300" aggroRange="300" />
-		<collision>
-			<radius normal="12" grown="14" />
-			<height normal="24" grown="28.8" />
-		</collision>
-	</npc>
-	<npc id="27317" level="70" type="Monster" name="Spirit of a Drowned" title="Quest Monster">
-		<parameters>
-			<param name="MoveAroundSocial" value="90" />
-			<param name="MoveAroundSocial1" value="74" />
-			<param name="MoveAroundSocial2" value="90" />
-		</parameters>
-		<race>DIVINE</race>
-		<sex>MALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2823" hpRegen="7.5" mp="1507" mpRegen="2.7" />
-			<attack physical="688.86373" magical="470.40463" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
-			<defence physical="251.5285745" magical="216.53847" evasion="10" />
-			<speed>
-				<walk ground="60" />
-				<run ground="180" />
-			</speed>
-			<hitTime>560</hitTime>
-			<abnormalResist physical="10" magical="10" />
-		</stats>
-		<status undying="false" />
-		<skillList>
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="3" /> <!-- Light Armor Type -->
-			<skill id="4415" level="5" /> <!-- Blunt Weapons -->
-			<skill id="4416" level="8" /> <!-- Angels -->
-		</skillList>
-		<exCrtEffect>true</exCrtEffect>
-		<ai clanHelpRange="300" aggroRange="300" />
-		<collision>
-			<radius normal="12" />
-			<height normal="27" />
-		</collision>
-	</npc>
-	<npc id="27318" level="70" type="Monster" name="Soul of Cold" title="Quest Monster">
-		<parameters>
-			<param name="MoveAroundSocial" value="80" />
-			<param name="MoveAroundSocial1" value="80" />
-			<param name="MoveAroundSocial2" value="94" />
-		</parameters>
-		<race>CONSTRUCT</race>
-		<sex>MALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2823" hpRegen="5.5" mp="1507" mpRegen="2.1" />
-			<attack physical="248.0526" magical="169.38777" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="182.18816" magical="133.31739" />
-			<speed>
-				<walk ground="30" />
-				<run ground="180" />
-			</speed>
-			<hitTime>430</hitTime>
-			<abnormalResist physical="10" magical="10" />
-		</stats>
-		<status undying="false" />
-		<skillList>
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="14" /> <!-- Strong P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="2" /> <!-- Magic Creatures -->
-		</skillList>
-		<exCrtEffect>true</exCrtEffect>
-		<ai aggroRange="300" clanHelpRange="300" isAggressive="true" />
-		<collision>
-			<radius normal="16" />
-			<height normal="35.6" />
-		</collision>
-	</npc>
-	<npc id="27319" level="70" type="Monster" name="Ghost of Solitude" title="Quest Monster">
-		<parameters>
-			<param name="MoveAroundSocial" value="90" />
-			<param name="MoveAroundSocial1" value="90" />
-			<param name="MoveAroundSocial2" value="90" />
-		</parameters>
-		<race>BEAST</race>
-		<sex>MALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2823" hpRegen="2.5" mp="1507" mpRegen="1.2" />
-			<attack physical="37.82932" magical="25.83252" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="81.34791" magical="59.52687" />
-			<speed>
-				<walk ground="36" />
-				<run ground="180" />
-			</speed>
-			<hitTime>240</hitTime>
-			<abnormalResist physical="10" magical="10" />
-		</stats>
-		<status undying="false" />
-		<skillList>
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="3" /> <!-- Beasts -->
-		</skillList>
-		<exCrtEffect>true</exCrtEffect>
-		<ai clanHelpRange="300" aggroRange="300" />
-		<collision>
-			<radius normal="12" />
-			<height normal="25" />
-		</collision>
-	</npc>
-	<npc id="27320" level="70" type="Monster" name="Fiend of Cold" title="Quest Monster">
-		<parameters>
-			<param name="MoveAroundSocial" value="35" />
-			<param name="MoveAroundSocial1" value="35" />
-			<param name="MoveAroundSocial2" value="35" />
-		</parameters>
-		<race>HUMANOID</race>
-		<sex>MALE</sex>
-		<equipment rhand="2" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2823" hpRegen="13.43" mp="1507" mpRegen="3.09" />
-			<attack physical="6300" magical="4200" random="50" critical="1" accuracy="9" attackSpeed="300" type="FIST" range="80" distance="80" width="120" />
-			<defence physical="3500" magical="4200" />
-			<speed>
-				<walk ground="60" />
-				<run ground="180" />
-			</speed>
-			<hitTime>460</hitTime>
-			<abnormalResist physical="10" magical="10" />
-		</stats>
-		<status undying="false" />
-		<skillList>
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
-		</skillList>
-		<exCrtEffect>true</exCrtEffect>
-		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="true" />
-		<collision>
-			<radius normal="34" />
-			<height normal="28" />
-		</collision>
-	</npc>
-	<npc id="27321" level="70" type="Monster" name="Spirit of Cold" title="Quest Monster">
-		<race>HUMANOID</race>
-		<sex>MALE</sex>
-		<equipment rhand="291" />
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2823" hpRegen="13.43" mp="1507" mpRegen="3.09" />
-			<attack physical="36.4" magical="57.4" random="50" critical="1" accuracy="9" attackSpeed="300" type="FIST" range="80" distance="80" width="120" />
-			<defence physical="70" magical="50.4" />
-			<speed>
-				<walk ground="30" />
-				<run ground="180" />
-			</speed>
-			<hitTime>480</hitTime>
-			<abnormalResist physical="10" magical="10" />
-		</stats>
-		<status undying="false" />
-		<skillList>
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="5" /> <!-- Blunt Weapons -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
-		</skillList>
-		<exCrtEffect>true</exCrtEffect>
-		<ai type="BALANCED" clanHelpRange="300" aggroRange="300" />
-		<collision>
-			<radius normal="20" />
-			<height normal="50" />
-		</collision>
-	</npc>
-	<npc id="27322" level="80" type="Folk" name="Possessed Windsus" title="Quest Monster">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="463" mpRegen="3.6" />
-			<speed>
-				<walk ground="35" />
-				<run ground="174" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="35" />
-			<height normal="27" />
-		</collision>
-	</npc>
-	<npc id="27323" level="80" type="Folk" name="Windsus Whelp" title="Quest Monster">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="463" mpRegen="3.6" />
-			<speed>
-				<walk ground="35" />
-				<run ground="174" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="35" />
-			<height normal="27" />
-		</collision>
-	</npc>
-	<npc id="27324" level="80" type="Folk" name="Windsus of Terror" title="Quest Monster">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="463" mpRegen="3.6" />
-			<speed>
-				<walk ground="35" />
-				<run ground="174" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="35" />
-			<height normal="27" />
-		</collision>
-	</npc>
-	<npc id="27325" level="80" type="Folk" name="Weak Windsus" title="Quest Monster">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="463" mpRegen="3.6" />
-			<speed>
-				<walk ground="35" />
-				<run ground="174" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="35" />
-			<height normal="27" />
-		</collision>
-	</npc>
-	<npc id="27326" level="80" type="Folk" name="Lesser Strain" title="Quest Monster">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="343" mpRegen="3.6" />
-			<speed>
-				<walk ground="15" />
-				<run ground="120" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="30" />
-			<height normal="40" />
-		</collision>
-	</npc>
-	<npc id="27327" level="80" type="Folk" name="Lesser Ghoul" title="Quest Monster">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="358" mpRegen="3.6" />
-			<speed>
-				<walk ground="15" />
-				<run ground="15" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="13" />
-			<height normal="21" />
-		</collision>
-	</npc>
-	<npc id="27328" level="80" type="Folk" name="Lesser Granite Golem" title="Quest Monster">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="372" mpRegen="3.6" />
-			<speed>
-				<walk ground="23" />
-				<run ground="23" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="20" />
-			<height normal="31" />
-		</collision>
-	</npc>
-	<npc id="27329" level="80" type="Folk" name="Lesser Corpse Tracker" title="Quest Monster">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="387" mpRegen="3.6" />
-			<speed>
-				<walk ground="60" />
-				<run ground="80" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="10" />
-			<height normal="33.5" />
-		</collision>
-	</npc>
-	<npc id="27330" level="80" type="Folk" name="Iron Wild Boar" title="Quest Monster">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2512" mpRegen="3.6" />
-			<speed>
-				<walk ground="50" />
-				<run ground="170" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="44" />
-			<height normal="32" />
-		</collision>
-	</npc>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org npcs.xsd">
+    <npc id="27300" level="76" type="Monster" name="Stone Watchman Ezekiel" title="Quest Monster">
+        <parameters>
+            <param name="MoveAroundSocial" value="90"/>
+            <param name="MoveAroundSocial1" value="98"/>
+            <param name="MoveAroundSocial2" value="90"/>
+            <skill name="WeakModeTrue" id="4523" level="1"/>
+            <skill name="WeakModeFalse" id="4524" level="1"/>
+            <skill name="Buff" id="4522" level="1"/>
+            <skill name="PhysicalSpecial1" id="4101" level="8"/>
+            <skill name="PhysicalSpecial2" id="4072" level="7"/>
+            <skill name="PhysicalSpecial3" id="4032" level="8"/>
+        </parameters>
+        <race>DIVINE</race>
+        <sex>MALE</sex>
+        <equipment rhand="97"/> <!-- Lance -->
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="2823" hpRegen="8.5" mp="1507" mpRegen="3"/>
+            <attack physical="815.37145" magical="556.793" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
+            <defence physical="323.78455" magical="236.93149"/>
+            <speed>
+                <walk ground="50"/>
+                <run ground="180"/>
+            </speed>
+            <hitTime>760</hitTime>
+            <abnormalResist physical="10" magical="10"/>
+        </stats>
+        <status undying="false"/>
+        <skillList>
+            <skill id="4032" level="8"/> <!-- NPC Strike -->
+            <skill id="4072" level="7"/> <!-- Stun -->
+            <skill id="4101" level="8"/> <!-- NPC Spinning Slash -->
+            <skill id="4408" level="1"/> <!-- HP Increase (1x) -->
+            <skill id="4409" level="1"/> <!-- MP Increase (1x) -->
+            <skill id="4410" level="11"/> <!-- Average P. Atk. -->
+            <skill id="4411" level="11"/> <!-- Average M. Atk. -->
+            <skill id="4412" level="11"/> <!-- Average P. Def. -->
+            <skill id="4413" level="11"/> <!-- Average M. Def. -->
+            <skill id="4414" level="1"/> <!-- Heavy Armor Type -->
+            <skill id="4415" level="3"/> <!-- One-handed Sword -->
+            <skill id="4416" level="8"/> <!-- Angels -->
+            <skill id="4522" level="1"/> <!-- Eye of Assassin -->
+            <skill id="4523" level="1"/> <!-- Quest - BOSS Evasion -->
+            <skill id="4524" level="1"/> <!-- Quest - BOSS Bluff -->
+        </skillList>
+        <exCrtEffect>true</exCrtEffect>
+        <ai clanHelpRange="300" aggroRange="300"/>
+        <collision>
+            <radius normal="15"/>
+            <height normal="80"/>
+        </collision>
+    </npc>
+    <npc id="27301" level="76" type="Monster" name="Stone Watchman Ezekiel" title="Quest Monster">
+        <parameters>
+            <param name="MoveAroundSocial" value="90"/>
+            <param name="MoveAroundSocial1" value="98"/>
+            <param name="MoveAroundSocial2" value="90"/>
+            <skill name="WeakModeTrue" id="4523" level="1"/>
+            <skill name="WeakModeFalse" id="4524" level="1"/>
+            <skill name="Buff" id="4522" level="1"/>
+            <skill name="PhysicalSpecial1" id="4101" level="8"/>
+            <skill name="PhysicalSpecial2" id="4072" level="7"/>
+            <skill name="PhysicalSpecial3" id="4032" level="8"/>
+        </parameters>
+        <race>DIVINE</race>
+        <sex>MALE</sex>
+        <equipment rhand="97"/> <!-- Lance -->
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="2823" hpRegen="8.5" mp="1507" mpRegen="3"/>
+            <attack physical="815.37145" magical="556.793" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
+            <defence physical="323.78455" magical="236.93149"/>
+            <speed>
+                <walk ground="50"/>
+                <run ground="180"/>
+            </speed>
+            <hitTime>760</hitTime>
+            <abnormalResist physical="10" magical="10"/>
+        </stats>
+        <status undying="false"/>
+        <skillList>
+            <skill id="4032" level="8"/> <!-- NPC Strike -->
+            <skill id="4072" level="7"/> <!-- Stun -->
+            <skill id="4101" level="8"/> <!-- NPC Spinning Slash -->
+            <skill id="4408" level="1"/> <!-- HP Increase (1x) -->
+            <skill id="4409" level="1"/> <!-- MP Increase (1x) -->
+            <skill id="4410" level="11"/> <!-- Average P. Atk. -->
+            <skill id="4411" level="11"/> <!-- Average M. Atk. -->
+            <skill id="4412" level="11"/> <!-- Average P. Def. -->
+            <skill id="4413" level="11"/> <!-- Average M. Def. -->
+            <skill id="4414" level="1"/> <!-- Heavy Armor Type -->
+            <skill id="4415" level="3"/> <!-- One-handed Sword -->
+            <skill id="4416" level="8"/> <!-- Angels -->
+            <skill id="4522" level="1"/> <!-- Eye of Assassin -->
+            <skill id="4523" level="1"/> <!-- Quest - BOSS Evasion -->
+            <skill id="4524" level="1"/> <!-- Quest - BOSS Bluff -->
+        </skillList>
+        <exCrtEffect>true</exCrtEffect>
+        <ai clanHelpRange="300" aggroRange="300"/>
+        <collision>
+            <radius normal="15"/>
+            <height normal="80"/>
+        </collision>
+    </npc>
+    <npc id="27302" level="81" type="Monster" name="Stone Guardian Azrael" title="Quest Monster">
+        <parameters>
+            <param name="MoveAroundSocial" value="90"/>
+            <param name="MoveAroundSocial1" value="98"/>
+            <param name="MoveAroundSocial2" value="90"/>
+        </parameters>
+        <race>DIVINE</race>
+        <sex>MALE</sex>
+        <equipment rhand="97"/> <!-- Lance -->
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="2975" hpRegen="76.5" mp="1742" mpRegen="3"/>
+            <attack physical="913.54847" magical="623.83518" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
+            <defence physical="345.61127" magical="252.90333"/>
+            <speed>
+                <walk ground="50"/>
+                <run ground="180"/>
+            </speed>
+            <hitTime>760</hitTime>
+            <abnormalResist physical="10" magical="10"/>
+        </stats>
+        <status undying="true"/>
+        <skillList>
+            <skill id="4408" level="17"/> <!-- HP Increase (9x) -->
+            <skill id="4409" level="1"/> <!-- MP Increase (1x) -->
+            <skill id="4410" level="11"/> <!-- Average P. Atk. -->
+            <skill id="4411" level="11"/> <!-- Average M. Atk. -->
+            <skill id="4412" level="11"/> <!-- Average P. Def. -->
+            <skill id="4413" level="11"/> <!-- Average M. Def. -->
+            <skill id="4414" level="1"/> <!-- Heavy Armor Type -->
+            <skill id="4415" level="3"/> <!-- One-handed Sword -->
+            <skill id="4416" level="8"/> <!-- Angels -->
+        </skillList>
+        <exCrtEffect>true</exCrtEffect>
+        <sNpcPropHpRate>9</sNpcPropHpRate>
+        <ai aggroRange="300" clanHelpRange="300" isAggressive="true"/>
+        <collision>
+            <radius normal="15"/>
+            <height normal="80"/>
+        </collision>
+    </npc>
+    <npc id="27303" level="81" type="Monster" name="Stone Guardian Azrael" title="Quest Monster">
+        <parameters>
+            <param name="MoveAroundSocial" value="90"/>
+            <param name="MoveAroundSocial1" value="98"/>
+            <param name="MoveAroundSocial2" value="90"/>
+        </parameters>
+        <race>DIVINE</race>
+        <sex>MALE</sex>
+        <equipment rhand="97"/> <!-- Lance -->
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="2975" hpRegen="76.5" mp="1742" mpRegen="3"/>
+            <attack physical="913.54847" magical="623.83518" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
+            <defence physical="345.61127" magical="252.90333"/>
+            <speed>
+                <walk ground="50"/>
+                <run ground="180"/>
+            </speed>
+            <hitTime>760</hitTime>
+            <abnormalResist physical="10" magical="10"/>
+        </stats>
+        <status undying="true"/>
+        <skillList>
+            <skill id="4408" level="17"/> <!-- HP Increase (9x) -->
+            <skill id="4409" level="1"/> <!-- MP Increase (1x) -->
+            <skill id="4410" level="11"/> <!-- Average P. Atk. -->
+            <skill id="4411" level="11"/> <!-- Average M. Atk. -->
+            <skill id="4412" level="11"/> <!-- Average P. Def. -->
+            <skill id="4413" level="11"/> <!-- Average M. Def. -->
+            <skill id="4414" level="1"/> <!-- Heavy Armor Type -->
+            <skill id="4415" level="3"/> <!-- One-handed Sword -->
+            <skill id="4416" level="8"/> <!-- Angels -->
+        </skillList>
+        <exCrtEffect>true</exCrtEffect>
+        <sNpcPropHpRate>9</sNpcPropHpRate>
+        <ai aggroRange="300" clanHelpRange="300" isAggressive="true"/>
+        <collision>
+            <radius normal="15"/>
+            <height normal="80"/>
+        </collision>
+    </npc>
+    <npc id="27304" level="81" type="Monster" name="Stone Guardian Azrael" title="Quest Monster">
+        <parameters>
+            <param name="MoveAroundSocial" value="90"/>
+            <param name="MoveAroundSocial1" value="98"/>
+            <param name="MoveAroundSocial2" value="90"/>
+        </parameters>
+        <race>DIVINE</race>
+        <sex>MALE</sex>
+        <equipment rhand="97"/> <!-- Lance -->
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="2975" hpRegen="76.5" mp="1742" mpRegen="3"/>
+            <attack physical="913.54847" magical="623.83518" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
+            <defence physical="345.61127" magical="252.90333"/>
+            <speed>
+                <walk ground="50"/>
+                <run ground="180"/>
+            </speed>
+            <hitTime>760</hitTime>
+            <abnormalResist physical="10" magical="10"/>
+        </stats>
+        <status undying="true"/>
+        <skillList>
+            <skill id="4408" level="17"/> <!-- HP Increase (9x) -->
+            <skill id="4409" level="1"/> <!-- MP Increase (1x) -->
+            <skill id="4410" level="11"/> <!-- Average P. Atk. -->
+            <skill id="4411" level="11"/> <!-- Average M. Atk. -->
+            <skill id="4412" level="11"/> <!-- Average P. Def. -->
+            <skill id="4413" level="11"/> <!-- Average M. Def. -->
+            <skill id="4414" level="1"/> <!-- Heavy Armor Type -->
+            <skill id="4415" level="3"/> <!-- One-handed Sword -->
+            <skill id="4416" level="8"/> <!-- Angels -->
+        </skillList>
+        <exCrtEffect>true</exCrtEffect>
+        <sNpcPropHpRate>9</sNpcPropHpRate>
+        <ai aggroRange="300" clanHelpRange="300" isAggressive="true"/>
+        <collision>
+            <radius normal="15"/>
+            <height normal="80"/>
+        </collision>
+    </npc>
+    <npc id="27305" level="81" type="Monster" name="Stone Guardian Azrael" title="Quest Monster">
+        <parameters>
+            <param name="MoveAroundSocial" value="90"/>
+            <param name="MoveAroundSocial1" value="98"/>
+            <param name="MoveAroundSocial2" value="90"/>
+        </parameters>
+        <race>DIVINE</race>
+        <sex>MALE</sex>
+        <equipment rhand="97"/> <!-- Lance -->
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="2975" hpRegen="76.5" mp="1742" mpRegen="3"/>
+            <attack physical="913.54847" magical="623.83518" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
+            <defence physical="345.61127" magical="252.90333"/>
+            <speed>
+                <walk ground="50"/>
+                <run ground="180"/>
+            </speed>
+            <hitTime>760</hitTime>
+            <abnormalResist physical="10" magical="10"/>
+        </stats>
+        <status undying="true"/>
+        <skillList>
+            <skill id="4408" level="17"/> <!-- HP Increase (9x) -->
+            <skill id="4409" level="1"/> <!-- MP Increase (1x) -->
+            <skill id="4410" level="11"/> <!-- Average P. Atk. -->
+            <skill id="4411" level="11"/> <!-- Average M. Atk. -->
+            <skill id="4412" level="11"/> <!-- Average P. Def. -->
+            <skill id="4413" level="11"/> <!-- Average M. Def. -->
+            <skill id="4414" level="1"/> <!-- Heavy Armor Type -->
+            <skill id="4415" level="3"/> <!-- One-handed Sword -->
+            <skill id="4416" level="8"/> <!-- Angels -->
+        </skillList>
+        <exCrtEffect>true</exCrtEffect>
+        <sNpcPropHpRate>9</sNpcPropHpRate>
+        <ai aggroRange="300" clanHelpRange="300" isAggressive="true"/>
+        <collision>
+            <radius normal="15"/>
+            <height normal="80"/>
+        </collision>
+    </npc>
+    <npc id="27306" level="81" type="Monster" name="Stone Guardian Azrael" title="Quest Monster">
+        <parameters>
+            <param name="MoveAroundSocial" value="90"/>
+            <param name="MoveAroundSocial1" value="98"/>
+            <param name="MoveAroundSocial2" value="90"/>
+        </parameters>
+        <race>DIVINE</race>
+        <sex>MALE</sex>
+        <equipment rhand="97"/> <!-- Lance -->
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="2975" hpRegen="76.5" mp="1742" mpRegen="3"/>
+            <attack physical="913.54847" magical="623.83518" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
+            <defence physical="345.61127" magical="252.90333"/>
+            <speed>
+                <walk ground="50"/>
+                <run ground="180"/>
+            </speed>
+            <hitTime>760</hitTime>
+            <abnormalResist physical="10" magical="10"/>
+        </stats>
+        <status undying="true"/>
+        <skillList>
+            <skill id="4408" level="17"/> <!-- HP Increase (9x) -->
+            <skill id="4409" level="1"/> <!-- MP Increase (1x) -->
+            <skill id="4410" level="11"/> <!-- Average P. Atk. -->
+            <skill id="4411" level="11"/> <!-- Average M. Atk. -->
+            <skill id="4412" level="11"/> <!-- Average P. Def. -->
+            <skill id="4413" level="11"/> <!-- Average M. Def. -->
+            <skill id="4414" level="1"/> <!-- Heavy Armor Type -->
+            <skill id="4415" level="3"/> <!-- One-handed Sword -->
+            <skill id="4416" level="8"/> <!-- Angels -->
+        </skillList>
+        <exCrtEffect>true</exCrtEffect>
+        <sNpcPropHpRate>9</sNpcPropHpRate>
+        <ai aggroRange="300" clanHelpRange="300" isAggressive="true"/>
+        <collision>
+            <radius normal="15"/>
+            <height normal="80"/>
+        </collision>
+    </npc>
+    <npc id="27307" level="81" type="Monster" name="Stone Guardian Azrael" title="Quest Monster">
+        <parameters>
+            <param name="MoveAroundSocial" value="90"/>
+            <param name="MoveAroundSocial1" value="98"/>
+            <param name="MoveAroundSocial2" value="90"/>
+        </parameters>
+        <race>DIVINE</race>
+        <sex>MALE</sex>
+        <equipment rhand="97"/> <!-- Lance -->
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="2975" hpRegen="76.5" mp="1742" mpRegen="3"/>
+            <attack physical="913.54847" magical="623.83518" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
+            <defence physical="345.61127" magical="252.90333"/>
+            <speed>
+                <walk ground="50"/>
+                <run ground="180"/>
+            </speed>
+            <hitTime>760</hitTime>
+            <abnormalResist physical="10" magical="10"/>
+        </stats>
+        <status undying="true"/>
+        <skillList>
+            <skill id="4408" level="17"/> <!-- HP Increase (9x) -->
+            <skill id="4409" level="1"/> <!-- MP Increase (1x) -->
+            <skill id="4410" level="11"/> <!-- Average P. Atk. -->
+            <skill id="4411" level="11"/> <!-- Average M. Atk. -->
+            <skill id="4412" level="11"/> <!-- Average P. Def. -->
+            <skill id="4413" level="11"/> <!-- Average M. Def. -->
+            <skill id="4414" level="1"/> <!-- Heavy Armor Type -->
+            <skill id="4415" level="3"/> <!-- One-handed Sword -->
+            <skill id="4416" level="8"/> <!-- Angels -->
+        </skillList>
+        <exCrtEffect>true</exCrtEffect>
+        <sNpcPropHpRate>9</sNpcPropHpRate>
+        <ai aggroRange="300" clanHelpRange="300" isAggressive="true"/>
+        <collision>
+            <radius normal="15"/>
+            <height normal="80"/>
+        </collision>
+    </npc>
+    <npc id="27308" level="81" type="Monster" name="Assassin Frost" title="Quest Monster">
+        <parameters>
+            <param name="MoveAroundSocial" value="0"/>
+            <param name="MoveAroundSocial1" value="0"/>
+            <param name="MoveAroundSocial2" value="0"/>
+        </parameters>
+        <race>DEMONIC</race>
+        <sex>MALE</sex>
+        <equipment rhand="229"/> <!-- Kris -->
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="2975" hpRegen="76.5" mp="1742" mpRegen="3"/>
+            <attack physical="799.3549113" magical="623.83518" random="10" critical="8" accuracy="0" attackSpeed="289" type="DAGGER" range="40" distance="80" width="120"/>
+            <defence physical="345.61127" magical="252.90333"/>
+            <speed>
+                <walk ground="60"/>
+                <run ground="180"/>
+            </speed>
+            <hitTime>450</hitTime>
+            <abnormalResist physical="10" magical="10"/>
+        </stats>
+        <status undying="true"/>
+        <skillList>
+            <skill id="4408" level="17"/> <!-- HP Increase (9x) -->
+            <skill id="4409" level="1"/> <!-- MP Increase (1x) -->
+            <skill id="4410" level="11"/> <!-- Average P. Atk. -->
+            <skill id="4411" level="11"/> <!-- Average M. Atk. -->
+            <skill id="4412" level="11"/> <!-- Average P. Def. -->
+            <skill id="4413" level="11"/> <!-- Average M. Def. -->
+            <skill id="4414" level="1"/> <!-- Heavy Armor Type -->
+            <skill id="4415" level="7"/> <!-- Daggers -->
+            <skill id="4416" level="9"/> <!-- Demons -->
+        </skillList>
+        <exCrtEffect>true</exCrtEffect>
+        <sNpcPropHpRate>9</sNpcPropHpRate>
+        <ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="true"/>
+        <collision>
+            <radius normal="8" grown="9"/>
+            <height normal="23.5" grown="29"/>
+        </collision>
+    </npc>
+    <npc id="27309" level="81" type="Monster" name="Minervia Van Hacken" title="Quest Monster">
+        <parameters>
+            <param name="MoveAroundSocial" value="0"/>
+            <param name="MoveAroundSocial1" value="0"/>
+            <param name="MoveAroundSocial2" value="0"/>
+        </parameters>
+        <race>DEMONIC</race>
+        <sex>FEMALE</sex>
+        <equipment rhand="229"/> <!-- Kris -->
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="2975" hpRegen="76.5" mp="1742" mpRegen="3"/>
+            <attack physical="799.3549113" magical="623.83518" random="10" critical="8" accuracy="0" attackSpeed="289" type="DAGGER" range="40" distance="80" width="120"/>
+            <defence physical="293.7695795" magical="252.90333" evasion="10"/>
+            <speed>
+                <walk ground="64"/>
+                <run ground="180"/>
+            </speed>
+            <hitTime>500</hitTime>
+            <abnormalResist physical="10" magical="10"/>
+        </stats>
+        <status undying="true"/>
+        <skillList>
+            <skill id="4408" level="17"/> <!-- HP Increase (9x) -->
+            <skill id="4409" level="1"/> <!-- MP Increase (1x) -->
+            <skill id="4410" level="11"/> <!-- Average P. Atk. -->
+            <skill id="4411" level="11"/> <!-- Average M. Atk. -->
+            <skill id="4412" level="11"/> <!-- Average P. Def. -->
+            <skill id="4413" level="11"/> <!-- Average M. Def. -->
+            <skill id="4414" level="3"/> <!-- Light Armor Type -->
+            <skill id="4415" level="7"/> <!-- Daggers -->
+            <skill id="4416" level="9"/> <!-- Demons -->
+        </skillList>
+        <exCrtEffect>true</exCrtEffect>
+        <sNpcPropHpRate>9</sNpcPropHpRate>
+        <ai type="MAGE" aggroRange="300" clanHelpRange="300" isAggressive="true"/>
+        <collision>
+            <radius normal="6" grown="7"/>
+            <height normal="21.5" grown="25.8"/>
+        </collision>
+    </npc>
+    <npc id="27310" level="81" type="Monster" name="Kitanis Van Hacken" title="Quest Monster">
+        <parameters>
+            <param name="MoveAroundSocial" value="130"/>
+            <param name="MoveAroundSocial1" value="130"/>
+            <param name="MoveAroundSocial2" value="130"/>
+        </parameters>
+        <race>DEMONIC</race>
+        <sex>MALE</sex>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="2975" hpRegen="76.5" mp="1742" mpRegen="3"/>
+            <attack physical="913.54847" magical="623.83518" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
+            <defence physical="345.61127" magical="252.90333"/>
+            <speed>
+                <walk ground="15"/>
+                <run ground="180"/>
+            </speed>
+            <hitTime>560</hitTime>
+            <abnormalResist physical="10" magical="10"/>
+        </stats>
+        <status undying="true"/>
+        <skillList>
+            <skill id="4408" level="17"/> <!-- HP Increase (9x) -->
+            <skill id="4409" level="1"/> <!-- MP Increase (1x) -->
+            <skill id="4410" level="11"/> <!-- Average P. Atk. -->
+            <skill id="4411" level="11"/> <!-- Average M. Atk. -->
+            <skill id="4412" level="11"/> <!-- Average P. Def. -->
+            <skill id="4413" level="11"/> <!-- Average M. Def. -->
+            <skill id="4414" level="1"/> <!-- Heavy Armor Type -->
+            <skill id="4415" level="3"/> <!-- One-handed Sword -->
+            <skill id="4416" level="9"/> <!-- Demons -->
+        </skillList>
+        <exCrtEffect>true</exCrtEffect>
+        <sNpcPropHpRate>9</sNpcPropHpRate>
+        <ai aggroRange="300" clanHelpRange="300" isAggressive="true"/>
+        <collision>
+            <radius normal="7.5"/>
+            <height normal="25.8"/>
+        </collision>
+    </npc>
+    <npc id="27311" level="81" type="Monster" name="Judgment Hound Dog Kelvas" title="Quest Monster">
+        <parameters>
+            <param name="MoveAroundSocial" value="120"/>
+            <param name="MoveAroundSocial1" value="120"/>
+            <param name="MoveAroundSocial2" value="120"/>
+        </parameters>
+        <race>BEAST</race>
+        <sex>MALE</sex>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="2975" hpRegen="76.5" mp="1742" mpRegen="3"/>
+            <attack physical="913.54847" magical="623.83518" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
+            <defence physical="345.61127" magical="252.90333"/>
+            <speed>
+                <walk ground="35"/>
+                <run ground="180"/>
+            </speed>
+            <hitTime>480</hitTime>
+            <abnormalResist physical="10" magical="10"/>
+        </stats>
+        <status undying="true"/>
+        <skillList>
+            <skill id="4408" level="17"/> <!-- HP Increase (9x) -->
+            <skill id="4409" level="1"/> <!-- MP Increase (1x) -->
+            <skill id="4410" level="11"/> <!-- Average P. Atk. -->
+            <skill id="4411" level="11"/> <!-- Average M. Atk. -->
+            <skill id="4412" level="11"/> <!-- Average P. Def. -->
+            <skill id="4413" level="11"/> <!-- Average M. Def. -->
+            <skill id="4414" level="1"/> <!-- Heavy Armor Type -->
+            <skill id="4415" level="3"/> <!-- One-handed Sword -->
+            <skill id="4416" level="3"/> <!-- Beasts -->
+        </skillList>
+        <exCrtEffect>true</exCrtEffect>
+        <sNpcPropHpRate>9</sNpcPropHpRate>
+        <ai aggroRange="300" clanHelpRange="300" isAggressive="true"/>
+        <collision>
+            <radius normal="21"/>
+            <height normal="35"/>
+        </collision>
+    </npc>
+    <npc id="27312" level="81" type="Monster" name="Mysterious Servitor" title="Quest Monster">
+        <parameters>
+            <param name="MoveAroundSocial" value="24"/>
+            <param name="MoveAroundSocial1" value="24"/>
+            <param name="MoveAroundSocial2" value="24"/>
+        </parameters>
+        <race>DEMONIC</race>
+        <sex>MALE</sex>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="2975" hpRegen="76.5" mp="1742" mpRegen="3"/>
+            <attack physical="913.54847" magical="623.83518" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
+            <defence physical="293.7695795" magical="252.90333" evasion="10"/>
+            <speed>
+                <walk ground="48"/>
+                <run ground="180"/>
+            </speed>
+            <hitTime>610</hitTime>
+            <abnormalResist physical="10" magical="10"/>
+        </stats>
+        <status undying="true"/>
+        <skillList>
+            <skill id="4408" level="17"/> <!-- HP Increase (9x) -->
+            <skill id="4409" level="1"/> <!-- MP Increase (1x) -->
+            <skill id="4410" level="11"/> <!-- Average P. Atk. -->
+            <skill id="4411" level="11"/> <!-- Average M. Atk. -->
+            <skill id="4412" level="11"/> <!-- Average P. Def. -->
+            <skill id="4413" level="11"/> <!-- Average M. Def. -->
+            <skill id="4414" level="3"/> <!-- Light Armor Type -->
+            <skill id="4415" level="3"/> <!-- One-handed Sword -->
+            <skill id="4416" level="9"/> <!-- Demons -->
+        </skillList>
+        <exCrtEffect>true</exCrtEffect>
+        <sNpcPropHpRate>9</sNpcPropHpRate>
+        <ai aggroRange="300" clanHelpRange="300" isAggressive="true"/>
+        <collision>
+            <radius normal="7"/>
+            <height normal="33"/>
+        </collision>
+    </npc>
+    <npc id="27313" level="76" type="Monster" name="Vision Guardian Shakiel" title="Quest Monster">
+        <parameters>
+            <param name="MoveAroundSocial" value="85"/>
+            <param name="MoveAroundSocial1" value="85"/>
+            <param name="MoveAroundSocial2" value="85"/>
+            <skill name="Buff1" id="4532" level="1"/>
+            <skill name="PhysicalSpecial1" id="4032" level="8"/>
+            <skill name="PhysicalSpecial2" id="4076" level="3"/>
+            <skill name="PhysicalSpecial3" id="4032" level="7"/>
+        </parameters>
+        <race>DIVINE</race>
+        <sex>MALE</sex>
+        <equipment rhand="161"/> <!-- Silver Axe -->
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="2823" hpRegen="8.5" mp="1507" mpRegen="3"/>
+            <attack physical="815.37145" magical="556.793" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120"/>
+            <defence physical="275.2168675" magical="236.93149" evasion="10"/>
+            <speed>
+                <walk ground="50"/>
+                <run ground="180"/>
+            </speed>
+            <hitTime>480</hitTime>
+            <abnormalResist physical="10" magical="10"/>
+        </stats>
+        <status undying="false"/>
+        <skillList>
+            <skill id="4032" level="8"/> <!-- NPC Strike -->
+            <skill id="4076" level="3"/> <!-- Decrease Speed -->
+            <skill id="4408" level="1"/> <!-- HP Increase (1x) -->
+            <skill id="4409" level="1"/> <!-- MP Increase (1x) -->
+            <skill id="4410" level="11"/> <!-- Average P. Atk. -->
+            <skill id="4411" level="11"/> <!-- Average M. Atk. -->
+            <skill id="4412" level="11"/> <!-- Average P. Def. -->
+            <skill id="4413" level="11"/> <!-- Average M. Def. -->
+            <skill id="4414" level="3"/> <!-- Light Armor Type -->
+            <skill id="4415" level="5"/> <!-- Blunt Weapons -->
+            <skill id="4416" level="8"/> <!-- Angels -->
+            <skill id="4532" level="1"/> <!-- Quest - BOSS Reflect -->
+        </skillList>
+        <exCrtEffect>true</exCrtEffect>
+        <ai type="MAGE" clanHelpRange="300" aggroRange="300"/>
+        <collision>
+            <radius normal="11" grown="13"/>
+            <height normal="38.5" grown="46.5"/>
+        </collision>
+    </npc>
+    <npc id="27314" level="76" type="Monster" name="Vision Guardian Shakiel" title="Quest Monster">
+        <parameters>
+            <param name="MoveAroundSocial" value="85"/>
+            <param name="MoveAroundSocial1" value="85"/>
+            <param name="MoveAroundSocial2" value="85"/>
+            <skill name="Buff1" id="4532" level="1"/>
+            <skill name="PhysicalSpecial1" id="4032" level="8"/>
+            <skill name="PhysicalSpecial2" id="4076" level="3"/>
+            <skill name="PhysicalSpecial3" id="4032" level="7"/>
+        </parameters>
+        <race>DIVINE</race>
+        <sex>MALE</sex>
+        <equipment rhand="161"/> <!-- Silver Axe -->
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="2823" hpRegen="8.5" mp="1507" mpRegen="3"/>
+            <attack physical="815.37145" magical="556.793" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120"/>
+            <defence physical="275.2168675" magical="236.93149" evasion="10"/>
+            <speed>
+                <walk ground="50"/>
+                <run ground="180"/>
+            </speed>
+            <hitTime>480</hitTime>
+            <abnormalResist physical="10" magical="10"/>
+        </stats>
+        <status undying="false"/>
+        <skillList>
+            <skill id="4032" level="8"/> <!-- NPC Strike -->
+            <skill id="4076" level="3"/> <!-- Decrease Speed -->
+            <skill id="4408" level="1"/> <!-- HP Increase (1x) -->
+            <skill id="4409" level="1"/> <!-- MP Increase (1x) -->
+            <skill id="4410" level="11"/> <!-- Average P. Atk. -->
+            <skill id="4411" level="11"/> <!-- Average M. Atk. -->
+            <skill id="4412" level="11"/> <!-- Average P. Def. -->
+            <skill id="4413" level="11"/> <!-- Average M. Def. -->
+            <skill id="4414" level="3"/> <!-- Light Armor Type -->
+            <skill id="4415" level="5"/> <!-- Blunt Weapons -->
+            <skill id="4416" level="8"/> <!-- Angels -->
+            <skill id="4532" level="1"/> <!-- Quest - BOSS Reflect -->
+        </skillList>
+        <exCrtEffect>true</exCrtEffect>
+        <ai type="MAGE" clanHelpRange="300" aggroRange="300"/>
+        <collision>
+            <radius normal="11" grown="13"/>
+            <height normal="38.5" grown="46.5"/>
+        </collision>
+    </npc>
+    <npc id="27315" level="76" type="Monster" name="Vision Guardian Shakiel" title="Quest Monster">
+        <parameters>
+            <param name="MoveAroundSocial" value="85"/>
+            <param name="MoveAroundSocial1" value="85"/>
+            <param name="MoveAroundSocial2" value="85"/>
+            <skill name="Buff1" id="4532" level="1"/>
+            <skill name="PhysicalSpecial1" id="4032" level="8"/>
+            <skill name="PhysicalSpecial2" id="4076" level="3"/>
+            <skill name="PhysicalSpecial3" id="4032" level="7"/>
+        </parameters>
+        <race>DIVINE</race>
+        <sex>MALE</sex>
+        <equipment rhand="161"/> <!-- Silver Axe -->
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="2823" hpRegen="8.5" mp="1507" mpRegen="3"/>
+            <attack physical="815.37145" magical="556.793" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120"/>
+            <defence physical="275.2168675" magical="236.93149" evasion="10"/>
+            <speed>
+                <walk ground="50"/>
+                <run ground="180"/>
+            </speed>
+            <hitTime>480</hitTime>
+            <abnormalResist physical="10" magical="10"/>
+        </stats>
+        <status undying="false"/>
+        <skillList>
+            <skill id="4032" level="8"/> <!-- NPC Strike -->
+            <skill id="4076" level="3"/> <!-- Decrease Speed -->
+            <skill id="4408" level="1"/> <!-- HP Increase (1x) -->
+            <skill id="4409" level="1"/> <!-- MP Increase (1x) -->
+            <skill id="4410" level="11"/> <!-- Average P. Atk. -->
+            <skill id="4411" level="11"/> <!-- Average M. Atk. -->
+            <skill id="4412" level="11"/> <!-- Average P. Def. -->
+            <skill id="4413" level="11"/> <!-- Average M. Def. -->
+            <skill id="4414" level="3"/> <!-- Light Armor Type -->
+            <skill id="4415" level="5"/> <!-- Blunt Weapons -->
+            <skill id="4416" level="8"/> <!-- Angels -->
+            <skill id="4532" level="1"/> <!-- Quest - BOSS Reflect -->
+        </skillList>
+        <exCrtEffect>true</exCrtEffect>
+        <ai type="MAGE" clanHelpRange="300" aggroRange="300"/>
+        <collision>
+            <radius normal="11" grown="13"/>
+            <height normal="38.5" grown="46.5"/>
+        </collision>
+    </npc>
+    <npc id="27316" level="70" type="Monster" name="Ice Monster" title="Quest Monster">
+        <parameters>
+            <param name="MoveAroundSocial" value="90"/>
+            <param name="MoveAroundSocial1" value="65"/>
+            <param name="MoveAroundSocial2" value="90"/>
+        </parameters>
+        <race>HUMANOID</race>
+        <sex>MALE</sex>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="2823" hpRegen="6.5" mp="1507" mpRegen="2.4"/>
+            <attack physical="388.11142" magical="265.02979" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120"/>
+            <defence physical="190.09077" magical="163.64727" evasion="10"/>
+            <speed>
+                <walk ground="20"/>
+                <run ground="180"/>
+            </speed>
+            <hitTime>540</hitTime>
+            <abnormalResist physical="10" magical="10"/>
+        </stats>
+        <status undying="false"/>
+        <skillList>
+            <skill id="4408" level="1"/> <!-- HP Increase (1x) -->
+            <skill id="4409" level="1"/> <!-- MP Increase (1x) -->
+            <skill id="4410" level="11"/> <!-- Average P. Atk. -->
+            <skill id="4411" level="11"/> <!-- Average M. Atk. -->
+            <skill id="4412" level="11"/> <!-- Average P. Def. -->
+            <skill id="4413" level="11"/> <!-- Average M. Def. -->
+            <skill id="4414" level="3"/> <!-- Light Armor Type -->
+            <skill id="4415" level="5"/> <!-- Blunt Weapons -->
+            <skill id="4416" level="6"/> <!-- Humanoids -->
+        </skillList>
+        <exCrtEffect>true</exCrtEffect>
+        <ai clanHelpRange="300" aggroRange="300"/>
+        <collision>
+            <radius normal="12" grown="14"/>
+            <height normal="24" grown="28.8"/>
+        </collision>
+    </npc>
+    <npc id="27317" level="70" type="Monster" name="Spirit of a Drowned" title="Quest Monster">
+        <parameters>
+            <param name="MoveAroundSocial" value="90"/>
+            <param name="MoveAroundSocial1" value="74"/>
+            <param name="MoveAroundSocial2" value="90"/>
+        </parameters>
+        <race>DIVINE</race>
+        <sex>MALE</sex>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="2823" hpRegen="7.5" mp="1507" mpRegen="2.7"/>
+            <attack physical="688.86373" magical="470.40463" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120"/>
+            <defence physical="251.5285745" magical="216.53847" evasion="10"/>
+            <speed>
+                <walk ground="60"/>
+                <run ground="180"/>
+            </speed>
+            <hitTime>560</hitTime>
+            <abnormalResist physical="10" magical="10"/>
+        </stats>
+        <status undying="false"/>
+        <skillList>
+            <skill id="4408" level="1"/> <!-- HP Increase (1x) -->
+            <skill id="4409" level="1"/> <!-- MP Increase (1x) -->
+            <skill id="4410" level="11"/> <!-- Average P. Atk. -->
+            <skill id="4411" level="11"/> <!-- Average M. Atk. -->
+            <skill id="4412" level="11"/> <!-- Average P. Def. -->
+            <skill id="4413" level="11"/> <!-- Average M. Def. -->
+            <skill id="4414" level="3"/> <!-- Light Armor Type -->
+            <skill id="4415" level="5"/> <!-- Blunt Weapons -->
+            <skill id="4416" level="8"/> <!-- Angels -->
+        </skillList>
+        <exCrtEffect>true</exCrtEffect>
+        <ai clanHelpRange="300" aggroRange="300"/>
+        <collision>
+            <radius normal="12"/>
+            <height normal="27"/>
+        </collision>
+    </npc>
+    <npc id="27318" level="70" type="Monster" name="Soul of Cold" title="Quest Monster">
+        <parameters>
+            <param name="MoveAroundSocial" value="80"/>
+            <param name="MoveAroundSocial1" value="80"/>
+            <param name="MoveAroundSocial2" value="94"/>
+        </parameters>
+        <race>CONSTRUCT</race>
+        <sex>MALE</sex>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="2823" hpRegen="5.5" mp="1507" mpRegen="2.1"/>
+            <attack physical="248.0526" magical="169.38777" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
+            <defence physical="182.18816" magical="133.31739"/>
+            <speed>
+                <walk ground="30"/>
+                <run ground="180"/>
+            </speed>
+            <hitTime>430</hitTime>
+            <abnormalResist physical="10" magical="10"/>
+        </stats>
+        <status undying="false"/>
+        <skillList>
+            <skill id="4408" level="1"/> <!-- HP Increase (1x) -->
+            <skill id="4409" level="1"/> <!-- MP Increase (1x) -->
+            <skill id="4410" level="11"/> <!-- Average P. Atk. -->
+            <skill id="4411" level="11"/> <!-- Average M. Atk. -->
+            <skill id="4412" level="14"/> <!-- Strong P. Def. -->
+            <skill id="4413" level="11"/> <!-- Average M. Def. -->
+            <skill id="4414" level="1"/> <!-- Heavy Armor Type -->
+            <skill id="4415" level="3"/> <!-- One-handed Sword -->
+            <skill id="4416" level="2"/> <!-- Magic Creatures -->
+        </skillList>
+        <exCrtEffect>true</exCrtEffect>
+        <ai aggroRange="300" clanHelpRange="300" isAggressive="true"/>
+        <collision>
+            <radius normal="16"/>
+            <height normal="35.6"/>
+        </collision>
+    </npc>
+    <npc id="27319" level="70" type="Monster" name="Ghost of Solitude" title="Quest Monster">
+        <parameters>
+            <param name="MoveAroundSocial" value="90"/>
+            <param name="MoveAroundSocial1" value="90"/>
+            <param name="MoveAroundSocial2" value="90"/>
+        </parameters>
+        <race>BEAST</race>
+        <sex>MALE</sex>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="2823" hpRegen="2.5" mp="1507" mpRegen="1.2"/>
+            <attack physical="37.82932" magical="25.83252" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
+            <defence physical="81.34791" magical="59.52687"/>
+            <speed>
+                <walk ground="36"/>
+                <run ground="180"/>
+            </speed>
+            <hitTime>240</hitTime>
+            <abnormalResist physical="10" magical="10"/>
+        </stats>
+        <status undying="false"/>
+        <skillList>
+            <skill id="4408" level="1"/> <!-- HP Increase (1x) -->
+            <skill id="4409" level="1"/> <!-- MP Increase (1x) -->
+            <skill id="4410" level="13"/> <!-- Slightly Strong P. Atk. -->
+            <skill id="4411" level="11"/> <!-- Average M. Atk. -->
+            <skill id="4412" level="12"/> <!-- Slightly Strong P. Def. -->
+            <skill id="4413" level="11"/> <!-- Average M. Def. -->
+            <skill id="4414" level="2"/> <!-- Standard Type -->
+            <skill id="4415" level="3"/> <!-- One-handed Sword -->
+            <skill id="4416" level="3"/> <!-- Beasts -->
+        </skillList>
+        <exCrtEffect>true</exCrtEffect>
+        <ai clanHelpRange="300" aggroRange="300"/>
+        <collision>
+            <radius normal="12"/>
+            <height normal="25"/>
+        </collision>
+    </npc>
+    <npc id="27320" level="70" type="Monster" name="Fiend of Cold" title="Quest Monster">
+        <parameters>
+            <param name="MoveAroundSocial" value="35"/>
+            <param name="MoveAroundSocial1" value="35"/>
+            <param name="MoveAroundSocial2" value="35"/>
+        </parameters>
+        <race>HUMANOID</race>
+        <sex>MALE</sex>
+        <equipment rhand="2"/>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="2823" hpRegen="13.43" mp="1507" mpRegen="3.09"/>
+            <attack physical="6300" magical="4200" random="50" critical="1" accuracy="9" attackSpeed="300" type="FIST" range="80" distance="80" width="120"/>
+            <defence physical="3500" magical="4200"/>
+            <speed>
+                <walk ground="60"/>
+                <run ground="180"/>
+            </speed>
+            <hitTime>460</hitTime>
+            <abnormalResist physical="10" magical="10"/>
+        </stats>
+        <status undying="false"/>
+        <skillList>
+            <skill id="4408" level="1"/> <!-- HP Increase (1x) -->
+            <skill id="4409" level="1"/> <!-- MP Increase (1x) -->
+            <skill id="4410" level="11"/> <!-- Average P. Atk. -->
+            <skill id="4411" level="11"/> <!-- Average M. Atk. -->
+            <skill id="4412" level="11"/> <!-- Average P. Def. -->
+            <skill id="4413" level="11"/> <!-- Average M. Def. -->
+            <skill id="4414" level="2"/> <!-- Standard Type -->
+            <skill id="4415" level="3"/> <!-- One-handed Sword -->
+            <skill id="4416" level="6"/> <!-- Humanoids -->
+        </skillList>
+        <exCrtEffect>true</exCrtEffect>
+        <ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="true"/>
+        <collision>
+            <radius normal="34"/>
+            <height normal="28"/>
+        </collision>
+    </npc>
+    <npc id="27321" level="70" type="Monster" name="Spirit of Cold" title="Quest Monster">
+        <race>HUMANOID</race>
+        <sex>MALE</sex>
+        <equipment rhand="291"/>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="2823" hpRegen="13.43" mp="1507" mpRegen="3.09"/>
+            <attack physical="36.4" magical="57.4" random="50" critical="1" accuracy="9" attackSpeed="300" type="FIST" range="80" distance="80" width="120"/>
+            <defence physical="70" magical="50.4"/>
+            <speed>
+                <walk ground="30"/>
+                <run ground="180"/>
+            </speed>
+            <hitTime>480</hitTime>
+            <abnormalResist physical="10" magical="10"/>
+        </stats>
+        <status undying="false"/>
+        <skillList>
+            <skill id="4408" level="1"/> <!-- HP Increase (1x) -->
+            <skill id="4409" level="1"/> <!-- MP Increase (1x) -->
+            <skill id="4410" level="11"/> <!-- Average P. Atk. -->
+            <skill id="4411" level="11"/> <!-- Average M. Atk. -->
+            <skill id="4412" level="11"/> <!-- Average P. Def. -->
+            <skill id="4413" level="11"/> <!-- Average M. Def. -->
+            <skill id="4414" level="2"/> <!-- Standard Type -->
+            <skill id="4415" level="5"/> <!-- Blunt Weapons -->
+            <skill id="4416" level="6"/> <!-- Humanoids -->
+        </skillList>
+        <exCrtEffect>true</exCrtEffect>
+        <ai type="BALANCED" clanHelpRange="300" aggroRange="300"/>
+        <collision>
+            <radius normal="20"/>
+            <height normal="50"/>
+        </collision>
+    </npc>
+    <npc id="27322" level="80" type="Folk" name="Possessed Windsus" title="Quest Monster">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+            <vitals hp="8446" hpRegen="10.5" mp="463" mpRegen="3.6"/>
+            <speed>
+                <walk ground="35"/>
+                <run ground="174"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <collision>
+            <radius normal="35"/>
+            <height normal="27"/>
+        </collision>
+    </npc>
+    <npc id="27323" level="80" type="Folk" name="Windsus Whelp" title="Quest Monster">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+            <vitals hp="8446" hpRegen="10.5" mp="463" mpRegen="3.6"/>
+            <speed>
+                <walk ground="35"/>
+                <run ground="174"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <collision>
+            <radius normal="35"/>
+            <height normal="27"/>
+        </collision>
+    </npc>
+    <npc id="27324" level="80" type="Folk" name="Windsus of Terror" title="Quest Monster">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+            <vitals hp="8446" hpRegen="10.5" mp="463" mpRegen="3.6"/>
+            <speed>
+                <walk ground="35"/>
+                <run ground="174"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <collision>
+            <radius normal="35"/>
+            <height normal="27"/>
+        </collision>
+    </npc>
+    <npc id="27325" level="80" type="Folk" name="Weak Windsus" title="Quest Monster">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+            <vitals hp="8446" hpRegen="10.5" mp="463" mpRegen="3.6"/>
+            <speed>
+                <walk ground="35"/>
+                <run ground="174"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <collision>
+            <radius normal="35"/>
+            <height normal="27"/>
+        </collision>
+    </npc>
+    <npc id="27326" level="80" type="Folk" name="Lesser Strain" title="Quest Monster">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+            <vitals hp="8446" hpRegen="10.5" mp="343" mpRegen="3.6"/>
+            <speed>
+                <walk ground="15"/>
+                <run ground="120"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <collision>
+            <radius normal="30"/>
+            <height normal="40"/>
+        </collision>
+    </npc>
+    <npc id="27327" level="80" type="Folk" name="Lesser Ghoul" title="Quest Monster">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+            <vitals hp="8446" hpRegen="10.5" mp="358" mpRegen="3.6"/>
+            <speed>
+                <walk ground="15"/>
+                <run ground="15"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <collision>
+            <radius normal="13"/>
+            <height normal="21"/>
+        </collision>
+    </npc>
+    <npc id="27328" level="80" type="Folk" name="Lesser Granite Golem" title="Quest Monster">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+            <vitals hp="8446" hpRegen="10.5" mp="372" mpRegen="3.6"/>
+            <speed>
+                <walk ground="23"/>
+                <run ground="23"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <collision>
+            <radius normal="20"/>
+            <height normal="31"/>
+        </collision>
+    </npc>
+    <npc id="27329" level="80" type="Folk" name="Lesser Corpse Tracker" title="Quest Monster">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+            <vitals hp="8446" hpRegen="10.5" mp="387" mpRegen="3.6"/>
+            <speed>
+                <walk ground="60"/>
+                <run ground="80"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <collision>
+            <radius normal="10"/>
+            <height normal="33.5"/>
+        </collision>
+    </npc>
+    <npc id="27330" level="80" type="Folk" name="Iron Wild Boar" title="Quest Monster">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <race>ETC</race>
+        <sex>FEMALE</sex>
+        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+            <vitals hp="8446" hpRegen="10.5" mp="2512" mpRegen="3.6"/>
+            <speed>
+                <walk ground="50"/>
+                <run ground="170"/>
+            </speed>
+            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40"/>
+            <defence physical="405.85106382979" magical="297.0297029703"/>
+        </stats>
+        <status attackable="false"/>
+        <collision>
+            <radius normal="44"/>
+            <height normal="32"/>
+        </collision>
+    </npc>
 </list>

@@ -12,6 +12,7 @@ import org.l2j.gameserver.model.instancezone.Instance;
 import org.l2j.gameserver.model.interfaces.IIdentifiable;
 import org.l2j.gameserver.model.interfaces.INamable;
 import org.l2j.gameserver.model.spawns.NpcSpawnTemplate;
+import org.l2j.gameserver.util.MathUtil;
 import org.l2j.gameserver.world.zone.ZoneType;
 import org.l2j.gameserver.taskmanager.RespawnTaskManager;
 import org.slf4j.Logger;
@@ -365,37 +366,48 @@ public class Spawn extends Location implements IIdentifiable, INamable {
      * @return
      */
     private Npc initializeNpcInstance(Npc npc) {
-        int newlocx = 0;
-        int newlocy = 0;
-        int newlocz = 0;
+        int newLocX = 0;
+        int newLocY = 0;
+        int newLocZ = 0;
 
         // If Locx and Locy are not defined, the Folk must be spawned in an area defined by location or spawn territory
         // New method
         if (_spawnTemplate != null) {
             final Location loc = _spawnTemplate.getSpawnLocation();
-            newlocx = loc.getX();
-            newlocy = loc.getY();
-            newlocz = loc.getZ();
+            newLocX = loc.getX();
+            newLocY = loc.getY();
+            newLocZ = loc.getZ();
             setLocation(loc);
         } else if ((getX() == 0) && (getY() == 0)) {
             LOGGER.warn("NPC " + npc + " doesn't have spawn location!");
             return null;
         } else {
             // The Folk is spawned at the exact position (Lox, Locy, Locz)
-            newlocx = getX();
-            newlocy = getY();
-            newlocz = getZ();
+            newLocX = getX();
+            newLocY = getY();
+            newLocZ = getZ();
         }
 
         // If random spawn system is enabled
         if (Config.ENABLE_RANDOM_MONSTER_SPAWNS) {
-            final int randX = newlocx + Rnd.get(Config.MOB_MIN_SPAWN_RANGE, Config.MOB_MAX_SPAWN_RANGE);
-            final int randY = newlocy + Rnd.get(Config.MOB_MIN_SPAWN_RANGE, Config.MOB_MAX_SPAWN_RANGE);
+            final int randX = newLocX + Rnd.get(Config.MOB_MIN_SPAWN_RANGE, Config.MOB_MAX_SPAWN_RANGE);
+            final int randY = newLocY + Rnd.get(Config.MOB_MIN_SPAWN_RANGE, Config.MOB_MAX_SPAWN_RANGE);
 
-            if (isMonster(npc) && !npc.isQuestMonster() && !isWalker(npc) && !npc.isInsideZone(ZoneType.NO_BOOKMARK) && (getInstanceId() == 0) && GeoEngine.getInstance().canMoveToTarget(newlocx, newlocy, newlocz, randX, randY, newlocz, npc.getInstanceWorld()) && !getTemplate().isUndying() && !npc.isRaid() && !npc.isRaidMinion() && !Config.MOBS_LIST_NOT_RANDOM.contains(npc.getId())) {
-                newlocx = randX;
-                newlocy = randY;
+            if (isMonster(npc) && !npc.isQuestMonster() && !isWalker(npc) && !npc.isInsideZone(ZoneType.NO_BOOKMARK) && (getInstanceId() == 0) && GeoEngine.getInstance().canMoveToTarget(newLocX, newLocY, newLocZ, randX, randY, newLocZ, npc.getInstanceWorld()) && !getTemplate().isUndying() && !npc.isRaid() && !npc.isRaidMinion() && !Config.MOBS_LIST_NOT_RANDOM.contains(npc.getId())) {
+                newLocX = randX;
+                newLocY = randY;
             }
+        }
+
+        if (!npc.isFlying())
+        {
+            int geoZ = GeoEngine.getInstance().getHeight(newLocX, newLocY, newLocZ);
+
+            if (MathUtil.isInsideRadius3D(newLocX, newLocY, newLocZ, newLocX, newLocY, geoZ, 300))
+            {
+                newLocZ = geoZ;
+            }
+            newLocZ = GeoEngine.getInstance().getHeight(newLocX, newLocY, newLocZ);
         }
 
         // Set is not random walk default value
@@ -423,7 +435,7 @@ public class Spawn extends Location implements IIdentifiable, INamable {
         npc.setSpawn(this);
 
         // Spawn NPC
-        npc.spawnMe(newlocx, newlocy, newlocz);
+        npc.spawnMe(newLocX, newLocY, newLocZ);
 
         if (_spawnTemplate != null) {
             _spawnTemplate.notifySpawnNpc(npc);

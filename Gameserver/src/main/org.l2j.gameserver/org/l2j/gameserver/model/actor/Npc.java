@@ -1364,15 +1364,10 @@ public class Npc extends Creature {
             }
         }
 
-        switch (chatType) {
-            case NPC_GENERAL: {
-                Broadcast.toKnownPlayersInRadius(this, npcSay, 1250);
-                break;
-            }
-            default: {
-                Broadcast.toKnownPlayers(this, npcSay);
-                break;
-            }
+        if (chatType == ChatType.NPC_GENERAL) {
+            Broadcast.toKnownPlayersInRadius(this, npcSay, 1250);
+        } else {
+            Broadcast.toKnownPlayers(this, npcSay);
         }
     }
 

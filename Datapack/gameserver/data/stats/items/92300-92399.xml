@@ -1,0 +1,273 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org ../../xsd/items.xsd">
+	<item id="92300" name="Majestic Boots" additionalName="Robe" type="Armor">
+		<!-- <Options>. Weight Limit +1000. M. Def. +10. INT +1. Max HP +50. M. Atk. +8%. Enchantment options become available when enchantment value of +5 and higher is obtained. -->
+		<set name="icon" val="icon.armor_t85_b_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="feet" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="BLOOD_STEEL" />
+		<set name="weight" val="1110" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pDef">49</stat>
+		</stats>
+	</item>
+	<item id="92301" name="Tallum Helmet" additionalName="Heavy Armor" type="Armor">
+		<!-- <Options>. Weight Limit +1500. M. Def. +10. INT +1. Max HP +100. Magic Attack Resistance +5%. Enchantment options become available when enchantment value of +5 and higher is obtained. -->
+		<set name="icon" val="icon.armor_helmet_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="head" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="CLOTH" />
+		<set name="weight" val="570" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pDef">69</stat>
+		</stats>
+	</item>
+	<item id="92302" name="Tallum Helmet" additionalName="Light Armor" type="Armor">
+		<!-- <Options>. Weight Limit +1500. M. Def. +10. MEN +1. Max MP +100. M. Critical Rate +10. Enchantment options become available when enchantment value of +5 and higher is obtained. -->
+		<set name="icon" val="icon.armor_helmet_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="head" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="CLOTH" />
+		<set name="weight" val="570" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pDef">69</stat>
+		</stats>
+	</item>
+	<item id="92303" name="Tallum Helmet" additionalName="Robe" type="Armor">
+		<!-- <Options>. Weight Limit +1500. M. Def. +10. MEN +1. Max MP +100. Received P. Critical Rate -20%. Enchantment options become available when enchantment value of +5 and higher is obtained. -->
+		<set name="icon" val="icon.armor_helmet_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="head" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="CLOTH" />
+		<set name="weight" val="570" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pDef">69</stat>
+		</stats>
+	</item>
+	<item id="92304" name="Dark Crystal Helmet" additionalName="Heavy Armor" type="Armor">
+		<!-- <Options>. Weight Limit +1500. M. Def. +10. DEX +1. Max HP +250. Enchantment options become available when enchantment value of +5 and higher is obtained. -->
+		<set name="icon" val="icon.armor_helmet_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="head" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="CRYSTAL" />
+		<set name="weight" val="570" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pDef">69</stat>
+		</stats>
+	</item>
+	<item id="92305" name="Dark Crystal Helmet" additionalName="Light Armor" type="Armor">
+		<!-- <Options>. Weight Limit +1500. M. Def. +10. DEX +1. Max HP +100. M. Critical Rate +10. Enchantment options become available when enchantment value of +5 and higher is obtained. -->
+		<set name="icon" val="icon.armor_helmet_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="head" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="CRYSTAL" />
+		<set name="weight" val="570" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pDef">69</stat>
+		</stats>
+	</item>
+	<item id="92306" name="Dark Crystal Helmet" additionalName="Robe" type="Armor">
+		<!-- <Options>. Weight Limit +1500. M. Def. +10. WIT +1. Max HP +100. Speed +7. Enchantment options become available when enchantment value of +5 and higher is obtained. -->
+		<set name="icon" val="icon.armor_helmet_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="head" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="CRYSTAL" />
+		<set name="weight" val="570" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pDef">69</stat>
+		</stats>
+	</item>
+	<item id="92307" name="Helm of Nightmare" additionalName="Heavy Armor" type="Armor">
+		<!-- <Options>. Weight Limit +1500. M. Def. +10. DEX +1. Max HP +100. Received Damage -5%. Enchantment options become available when enchantment value of +5 and higher is obtained. -->
+		<set name="icon" val="icon.armor_leather_helmet_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="head" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="560" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pDef">73</stat>
+		</stats>
+	</item>
+	<item id="92308" name="Helm of Nightmare" additionalName="Light Armor" type="Armor">
+		<!-- <Options>. Weight Limit +1500. M. Def. +10. WIT +1. Max MP +100. Melee Weapon Resistance +10%. Enchantment options become available when enchantment value of +5 and higher is obtained. -->
+		<set name="icon" val="icon.armor_leather_helmet_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="head" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="560" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pDef">73</stat>
+		</stats>
+	</item>
+	<item id="92309" name="Helm of Nightmare" additionalName="Robe" type="Armor">
+		<!-- <Options>. Weight Limit +1500. M. Def. +10. WIT +1. Max MP +100. P. Critical Rate +10. Enchantment options become available when enchantment value of +5 and higher is obtained. -->
+		<set name="icon" val="icon.armor_leather_helmet_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="head" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="560" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pDef">73</stat>
+		</stats>
+	</item>
+	<item id="92310" name="Majestic Circlet" additionalName="Heavy Armor" type="Armor">
+		<!-- <Options>. Weight Limit +1500. M. Def. +10. CON +1. Max HP +100. Speed +7. Enchantment options become available when enchantment value of +5 and higher is obtained. -->
+		<set name="icon" val="icon.armor_leather_helmet_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="head" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="550" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pDef">73</stat>
+		</stats>
+	</item>
+	<item id="92311" name="Majestic Circlet" additionalName="Light Armor" type="Armor">
+		<!-- <Options>. Weight Limit +1500. M. Def. +10. CON +1. Max HP +100. P. Critical Rate +10. Enchantment options become available when enchantment value of +5 and higher is obtained. -->
+		<set name="icon" val="icon.armor_leather_helmet_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="head" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="550" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pDef">73</stat>
+		</stats>
+	</item>
+	<item id="92312" name="Majestic Circlet" additionalName="Robe" type="Armor">
+		<!-- <Options>. Weight Limit +1500. M. Def. +10. WIT +1. Max HP +250. Enchantment options become available when enchantment value of +5 and higher is obtained. -->
+		<set name="icon" val="icon.armor_leather_helmet_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="head" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="A" />
+		<set name="material" val="LEATHER" />
+		<set name="weight" val="550" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pDef">73</stat>
+		</stats>
+	</item>
+	<item id="92313" name="Giran Trophy Chest" type="EtcItem">
+		<!-- Double-click to obtain one of the following rare items: Ignis' Necklace, Procella's Necklace, Petram's Necklace, Brooch Lv. 3. -->
+		<set name="icon" val="icon.bm_circlet_upgrade_box" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="price" val="10000" />
+		<set name="is_dropable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="92314" name="Giran Seal" type="EtcItem">
+		<!-- Acquired XP/ SP +20% for 20 min. Can be traded for various items by the Dimensional Merchant. -->
+		<set name="icon" val="icon.etc_royal_seal_of_lord_i04" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="STEEL" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="92315" name="Luxury Magic Box" type="EtcItem">
+		<!-- Double-click to obtain one of the items: Lilith's Rune Lv. 10, Anakim's Rune Lv. 10, +10 Dragon Belt Chest. -->
+		<set name="icon" val="icon.bm_circlet_upgrade_box" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="92316" name="+10 Dragon Belt Chest" type="EtcItem">
+		<!-- Double-click to obtain Dragon Belt +10. -->
+		<set name="icon" val="icon.etc_readybox_bronze" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="92318" name="Kamael's Black Wing Texture" additionalName="Test" type="Armor">
+		<set name="icon" val="icon.sayha2017_back_i01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="back" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="CLOTH" />
+		<set name="weight" val="220" />
+		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+</list>

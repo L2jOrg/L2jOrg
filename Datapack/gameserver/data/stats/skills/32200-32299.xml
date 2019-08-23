@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-	<skill id="32203" toLevel="1" name="Limit Barrier">
-		<!-- This barrier can be removed only after hit 500 times. If you fail to hit it 300 times within $s1, the Raid Boss fully recovers HP. -->
-		<icon>icon.skill11621</icon>
-		<operateType>A1</operateType>
-	</skill>
+    <skill id="32203" toLevel="1" name="Limit Barrier">
+        <!-- This barrier can be removed only after hit 500 times. If you fail to hit it 500 times within 15 sec., the Raid Boss fully recovers HP. -->
+        <icon>icon.skill11621</icon>
+        <operateType>A1</operateType>
+    </skill>
 </list>

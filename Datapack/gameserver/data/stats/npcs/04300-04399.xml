@@ -1,41 +1,41 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org npcs.xsd">
-	<npc id="4308" level="80" type="Folk" name="Angel Cat" title="Herald of Love">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<sex>MALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="2444" mp="1345" />
-			<attack physical="500" magical="500" attackSpeed="278" range="40" />
-			<defence physical="500" magical="500" />
-			<speed>
-				<walk ground="48" />
-				<run ground="140" />
-			</speed>
-		</stats>
-		<collision>
-			<radius normal="6" />
-			<height normal="16" />
-		</collision>
-	</npc>
-	<npc id="4309" level="80" type="Folk" name="Small Angel Cat" title="Herald of Love">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<sex>MALE</sex>
-		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
-			<vitals hp="8446" mp="2355" />
-			<attack physical="500" magical="500" attackSpeed="278" range="40" />
-			<defence physical="500" magical="500" />
-			<speed>
-				<walk ground="25" />
-				<run ground="140" />
-			</speed>
-		</stats>
-		<skillList>
-			<skill id="4416" level="14" /> <!--Humans -->
-		</skillList>
-		<collision>
-			<radius normal="8" />
-			<height normal="15" />
-		</collision>
-	</npc>
-																									
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org npcs.xsd">
+    <npc id="4308" level="80" type="Folk" name="Angel Cat" title="Herald of Love">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <sex>MALE</sex>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+            <vitals hp="2444" mp="1345"/>
+            <attack physical="500" magical="500" attackSpeed="278" range="40"/>
+            <defence physical="500" magical="500"/>
+            <speed>
+                <walk ground="48"/>
+                <run ground="140"/>
+            </speed>
+        </stats>
+        <collision>
+            <radius normal="6"/>
+            <height normal="16"/>
+        </collision>
+    </npc>
+    <npc id="4309" level="80" type="Folk" name="Small Angel Cat" title="Herald of Love">
+        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+        <sex>MALE</sex>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="20">
+            <vitals hp="8446" mp="2355"/>
+            <attack physical="500" magical="500" attackSpeed="278" range="40"/>
+            <defence physical="500" magical="500"/>
+            <speed>
+                <walk ground="25"/>
+                <run ground="140"/>
+            </speed>
+        </stats>
+        <skillList>
+            <skill id="4416" level="14"/> <!--Humans -->
+        </skillList>
+        <collision>
+            <radius normal="8"/>
+            <height normal="15"/>
+        </collision>
+    </npc>
+
 </list>
