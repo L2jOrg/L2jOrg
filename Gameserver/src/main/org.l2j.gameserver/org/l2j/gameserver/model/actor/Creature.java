@@ -3736,6 +3736,8 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
             value = Math.min(value, damageCap);
         }
 
+        value = Math.max(0, value);
+
         if (Config.CHAMPION_ENABLE && isChampion() && (Config.CHAMPION_HP != 0)) {
             _status.reduceHp(value / Config.CHAMPION_HP, attacker, (skill == null) || !skill.isToggle(), isDOT, false);
         } else if (GameUtils.isPlayer(this)) {

@@ -29,24 +29,24 @@ public class PetStat extends SummonStat {
     }
 
     public boolean addExp(int value) {
-        if (getActiveChar().isUncontrollable() || !super.addExp(value)) {
+        if (getCreature().isUncontrollable() || !super.addExp(value)) {
             return false;
         }
 
-        getActiveChar().updateAndBroadcastStatus(1);
+        getCreature().updateAndBroadcastStatus(1);
         return true;
     }
 
     public boolean addExpAndSp(double addToExp, double addToSp) {
         final long finalExp = Math.round(addToExp);
-        if (getActiveChar().isUncontrollable() || !addExp(finalExp)) {
+        if (getCreature().isUncontrollable() || !addExp(finalExp)) {
             return false;
         }
 
         SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOUR_PET_GAINED_S1_XP);
         sm.addLong(finalExp);
-        getActiveChar().updateAndBroadcastStatus(1);
-        getActiveChar().sendPacket(sm);
+        getCreature().updateAndBroadcastStatus(1);
+        getCreature().sendPacket(sm);
         return true;
     }
 
@@ -58,15 +58,15 @@ public class PetStat extends SummonStat {
 
         final boolean levelIncreased = super.addLevel(value);
 
-        getActiveChar().broadcastStatusUpdate();
+        getCreature().broadcastStatusUpdate();
         if (levelIncreased) {
-            getActiveChar().broadcastPacket(new SocialAction(getActiveChar().getObjectId(), SocialAction.LEVEL_UP));
+            getCreature().broadcastPacket(new SocialAction(getCreature().getObjectId(), SocialAction.LEVEL_UP));
         }
         // Send a Server->Client packet PetInfo to the Player
-        getActiveChar().updateAndBroadcastStatus(1);
+        getCreature().updateAndBroadcastStatus(1);
 
-        if (getActiveChar().getControlItem() != null) {
-            getActiveChar().getControlItem().setEnchantLevel(getLevel());
+        if (getCreature().getControlItem() != null) {
+            getCreature().getControlItem().setEnchantLevel(getLevel());
         }
 
         return levelIncreased;
@@ -75,52 +75,52 @@ public class PetStat extends SummonStat {
     @Override
     public final long getExpForLevel(int level) {
         try {
-            return PetDataTable.getInstance().getPetLevelData(getActiveChar().getId(), level).getPetMaxExp();
+            return PetDataTable.getInstance().getPetLevelData(getCreature().getId(), level).getPetMaxExp();
         } catch (NullPointerException e) {
-            if (getActiveChar() != null) {
-                LOGGER.warn("Pet objectId:" + getActiveChar().getObjectId() + ", NpcId:" + getActiveChar().getId() + ", level:" + level + " is missing data from pets_stats table!");
+            if (getCreature() != null) {
+                LOGGER.warn("Pet objectId:" + getCreature().getObjectId() + ", NpcId:" + getCreature().getId() + ", level:" + level + " is missing data from pets_stats table!");
             }
             throw e;
         }
     }
 
     @Override
-    public Pet getActiveChar() {
-        return (Pet) super.getActiveChar();
+    public Pet getCreature() {
+        return (Pet) super.getCreature();
     }
 
     public final int getFeedBattle() {
-        return getActiveChar().getPetLevelData().getPetFeedBattle();
+        return getCreature().getPetLevelData().getPetFeedBattle();
     }
 
     public final int getFeedNormal() {
-        return getActiveChar().getPetLevelData().getPetFeedNormal();
+        return getCreature().getPetLevelData().getPetFeedNormal();
     }
 
     @Override
     public void setLevel(byte value) {
-        getActiveChar().setPetData(PetDataTable.getInstance().getPetLevelData(getActiveChar().getTemplate().getId(), value));
-        if (getActiveChar().getPetLevelData() == null) {
-            throw new IllegalArgumentException("No pet data for npc: " + getActiveChar().getTemplate().getId() + " level: " + value);
+        getCreature().setPetData(PetDataTable.getInstance().getPetLevelData(getCreature().getTemplate().getId(), value));
+        if (getCreature().getPetLevelData() == null) {
+            throw new IllegalArgumentException("No pet data for npc: " + getCreature().getTemplate().getId() + " level: " + value);
         }
-        getActiveChar().stopFeed();
+        getCreature().stopFeed();
         super.setLevel(value);
 
-        getActiveChar().startFeed();
+        getCreature().startFeed();
 
-        if (getActiveChar().getControlItem() != null) {
-            getActiveChar().getControlItem().setEnchantLevel(getLevel());
+        if (getCreature().getControlItem() != null) {
+            getCreature().getControlItem().setEnchantLevel(getLevel());
         }
     }
 
     public final int getMaxFeed() {
-        return getActiveChar().getPetLevelData().getPetMaxFeed();
+        return getCreature().getPetLevelData().getPetMaxFeed();
     }
 
     @Override
     public int getPAtkSpd() {
         int val = super.getPAtkSpd();
-        if (getActiveChar().isHungry()) {
+        if (getCreature().isHungry()) {
             val /= 2;
         }
         return val;
@@ -129,7 +129,7 @@ public class PetStat extends SummonStat {
     @Override
     public int getMAtkSpd() {
         int val = super.getMAtkSpd();
-        if (getActiveChar().isHungry()) {
+        if (getCreature().isHungry()) {
             val /= 2;
         }
         return val;

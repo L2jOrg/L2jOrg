@@ -29,8 +29,8 @@ public class DoorStat extends CharStat {
     }
 
     @Override
-    public Door getActiveChar() {
-        return (Door) super.getActiveChar();
+    public Door getCreature() {
+        return (Door) super.getCreature();
     }
 
     @Override

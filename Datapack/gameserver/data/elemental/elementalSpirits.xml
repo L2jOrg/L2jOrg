@@ -7,48 +7,80 @@
     </spirit>
 
     <spirit name="Ignis - Minor Flame Spirit"  type="1" stage="1" npcId="13566" extractItem="91040" maxCharacteristics="5">
-        <level id="1" atk="35" def="35" critRate="1" critDam="1" maxExp="57713"/>
-        <level id="2" atk="40" def="40" critRate="2" critDam="2" maxExp="135313"/>
-        <level id="3" atk="45" def="45" critRate="3" critDam="3" maxExp="238082"/>	
-        <level id="4" atk="50" def="50" critRate="4" critDam="4" maxExp="371775"/>
-        <level id="5" atk="55" def="55" critRate="5" critDam="5" maxExp="542993"/>
-        <level id="6" atk="60" def="60" critRate="6" critDam="6" maxExp="759244"/>
-        <level id="7" atk="65" def="65" critRate="7" critDam="7" maxExp="1029008"/>
-        <level id="8" atk="70" def="70" critRate="8" critDam="8" maxExp="1361808"/>
-        <level id="9" atk="75" def="75" critRate="9" critDam="9" maxExp="1768273"/>
-        <level id="10" atk="80" def="80" critRate="10" critDam="10" maxExp="2260211"/>
+        <level id="1" atk="10" def="10" critRate="1" critDam="1" maxExp="57713"/>
+        <level id="2" atk="13" def="15" critRate="2" critDam="2" maxExp="135313"/>
+        <level id="3" atk="16" def="20" critRate="3" critDam="3" maxExp="238082"/>
+        <level id="4" atk="19" def="25" critRate="4" critDam="4" maxExp="371775"/>
+        <level id="5" atk="22" def="30" critRate="5" critDam="5" maxExp="542993"/>
+        <level id="6" atk="25" def="35" critRate="6" critDam="6" maxExp="759244"/>
+        <level id="7" atk="28" def="40" critRate="7" critDam="7" maxExp="1029008"/>
+        <level id="8" atk="31" def="45" critRate="8" critDam="8" maxExp="1361808"/>
+        <level id="9" atk="34" def="50" critRate="9" critDam="9" maxExp="1768273"/>
+        <level id="10" atk="37" def="55" critRate="10" critDam="10" maxExp="2260211"/>
         <itemToEvolve id="91032"/>
         <itemToEvolve id="57" count="1000000"/>
         <absorbItem id="91036" experience="9300"/>
     </spirit>
     
-    <spirit name="Ignis - Lesser Flame Spirit" type="1" stage="2" npcId="13566" extractItem="91040" maxCharacteristics="10">
-        <level id="1" atk="105" def="105" critRate="16" critDam="16" maxExp="596369"/>
-        <level id="2" atk="110" def="110" critRate="17" critDam="17" maxExp="1313872"/>
-        <level id="3" atk="115" def="115" critRate="18" critDam="18" maxExp="2171115"/>
-        <level id="4" atk="120" def="120" critRate="19" critDam="19" maxExp="3188751"/>
-        <level id="5" atk="125" def="125" critRate="20" critDam="20" maxExp="4389633"/>
-        <level id="6" atk="130" def="130" critRate="21" critDam="21" maxExp="5798968"/>
-        <level id="7" atk="135" def="135" critRate="22" critDam="22" maxExp="7444481"/>
-        <level id="8" atk="140" def="140" critRate="23" critDam="23" maxExp="9356589"/>
-        <level id="9" atk="145" def="145" critRate="24" critDam="24" maxExp="11568579"/>
-        <level id="10" atk="150" def="150" critRate="25" critDam="25" maxExp="14116796"/>
+    <spirit name="Ignis - Lesser Flame Spirit" type="1" stage="2" npcId="13567" extractItem="91040" maxCharacteristics="10">
+        <level id="1" atk="41" def="61" critRate="11" critDam="11" maxExp="596369"/>
+        <level id="2" atk="45" def="67" critRate="12" critDam="12" maxExp="1313872"/>
+        <level id="3" atk="49" def="73" critRate="13" critDam="13" maxExp="2171115"/>
+        <level id="4" atk="53" def="79" critRate="14" critDam="14" maxExp="3188751"/>
+        <level id="5" atk="57" def="85" critRate="15" critDam="15" maxExp="4389633"/>
+        <level id="6" atk="61" def="91" critRate="16" critDam="16" maxExp="5798968"/>
+        <level id="7" atk="65" def="97" critRate="17" critDam="17" maxExp="7444481"/>
+        <level id="8" atk="69" def="103" critRate="18" critDam="18" maxExp="9356589"/>
+        <level id="9" atk="73" def="109" critRate="19" critDam="19" maxExp="11568579"/>
+        <level id="10" atk="77" def="115" critRate="20" critDam="20" maxExp="14116796"/>
         <itemToEvolve id="91032" count="3"/>
         <itemToEvolve id="57" count="3000000"/>
         <absorbItem id="91036" experience="9300"/>
     </spirit>
     
     <spirit name="Ignis - Median Flame Spirit" type="1" stage="3" npcId="13568" extractItem="91040" maxCharacteristics="15" >
-        <level id="1" atk="175" def="175" critRate="31" critDam="31" maxExp="2924039"/>
-        <level id="2" atk="180" def="180" critRate="32" critDam="32" maxExp="6266952"/>
-        <level id="3" atk="185" def="185" critRate="33" critDam="33" maxExp="10075460"/>
-        <level id="4" atk="190" def="190" critRate="34" critDam="34" maxExp="14400173"/>
-        <level id="5" atk="195" def="195" critRate="35" critDam="35" maxExp="19295819"/>
-        <level id="6" atk="200" def="200" critRate="36" critDam="36" maxExp="24821487"/>
-        <level id="7" atk="205" def="205" critRate="37" critDam="37" maxExp="31040875"/>
-        <level id="8" atk="210" def="210" critRate="38" critDam="38" maxExp="38022549"/>
-        <level id="9" atk="215" def="215" critRate="39" critDam="39" maxExp="45840213"/>
-        <level id="10" atk="220" def="220" critRate="40" critDam="40" maxExp="54572992"/>
+        <level id="1" atk="82" def="122" critRate="21" critDam="21" maxExp="2924039"/>
+        <level id="2" atk="87" def="129" critRate="22" critDam="22" maxExp="6266952"/>
+        <level id="3" atk="92" def="136" critRate="23" critDam="23" maxExp="10075460"/>
+        <level id="4" atk="97" def="143" critRate="24" critDam="24" maxExp="14400173"/>
+        <level id="5" atk="102" def="150" critRate="25" critDam="25" maxExp="19295819"/>
+        <level id="6" atk="107" def="157" critRate="26" critDam="26" maxExp="24821487"/>
+        <level id="7" atk="112" def="164" critRate="27" critDam="27" maxExp="31040875"/>
+        <level id="8" atk="117" def="171" critRate="28" critDam="28" maxExp="38022549"/>
+        <level id="9" atk="122" def="178" critRate="29" critDam="29" maxExp="45840213"/>
+        <level id="10" atk="127" def="185" critRate="30" critDam="30" maxExp="54572992"/>
+        <itemToEvolve id="91032" count="5"/>
+        <itemToEvolve id="57" count="5000000"/>
+        <absorbItem id="91036" experience="9300"/>
+    </spirit>
+
+    <spirit name="Ignis - Elder Fire Spirit" type="1" stage="4" npcId="15943" extractItem="91040" maxCharacteristics="20" >
+        <level id="1" atk="133" def="193" critRate="31" critDam="31" maxExp="11478124"/>
+        <level id="2" atk="139" def="201" critRate="32" critDam="32" maxExp="31192283"/>
+        <level id="3" atk="145" def="209" critRate="33" critDam="33" maxExp="75614547"/>
+        <level id="4" atk="151" def="217" critRate="34" critDam="34" maxExp="144744916"/>
+        <level id="5" atk="157" def="225" critRate="35" critDam="35" maxExp="238583390"/>
+        <level id="6" atk="163" def="233" critRate="36" critDam="36" maxExp="357129969"/>
+        <level id="7" atk="169" def="241" critRate="37" critDam="37" maxExp="488030601"/>
+        <level id="8" atk="175" def="249" critRate="38" critDam="38" maxExp="625108258"/>
+        <level id="9" atk="181" def="257" critRate="39" critDam="39" maxExp="765274429"/>
+        <level id="10" atk="187" def="265" critRate="40" critDam="40" maxExp="906984857"/>
+        <itemToEvolve id="91032" count="10"/>
+        <itemToEvolve id="57" count="7000000"/>
+        <absorbItem id="91036" experience="9300"/>
+    </spirit>
+
+    <spirit name="Ignis - Great Fire Spirit" type="1" stage="5" npcId="15944" extractItem="91040" maxCharacteristics="30" >
+        <level id="1" atk="193" def="274" critRate="41" critDam="41" maxExp="146343197"/>
+        <level id="2" atk="199" def="283" critRate="42" critDam="42" maxExp="306584703"/>
+        <level id="3" atk="205" def="292" critRate="43" critDam="43" maxExp="501571982"/>
+        <level id="4" atk="211" def="301" critRate="44" critDam="44" maxExp="731305034"/>
+        <level id="5" atk="217" def="310" critRate="45" critDam="45" maxExp="995783858"/>
+        <level id="6" atk="223" def="320" critRate="47" critDam="47" maxExp="1295008455"/>
+        <level id="7" atk="229" def="330" critRate="49" critDam="49" maxExp="1611605938"/>
+        <level id="8" atk="235" def="340" critRate="51" critDam="51" maxExp="1936889864"/>
+        <level id="9" atk="241" def="350" critRate="53" critDam="53" maxExp="2266517012"/>
+        <level id="10" atk="247" def="360" critRate="55" critDam="55" maxExp="2598315771"/>
         <absorbItem id="91036" experience="9300"/>
     </spirit>
 
@@ -57,48 +89,80 @@
     </spirit>
 
     <spirit name="Nebula - Minor Water Spirit"  type="2" stage="1" npcId="13570" extractItem="91039" maxCharacteristics="5">
-        <level id="1" atk="35" def="35" critRate="1" critDam="1" maxExp="57713"/>
-        <level id="2" atk="40" def="40" critRate="2" critDam="2" maxExp="135313"/>
-        <level id="3" atk="45" def="45" critRate="3" critDam="3" maxExp="238082"/>
-        <level id="4" atk="50" def="50" critRate="4" critDam="4" maxExp="371775"/>
-        <level id="5" atk="55" def="55" critRate="5" critDam="5" maxExp="542993"/>
-        <level id="6" atk="60" def="60" critRate="6" critDam="6" maxExp="759244"/>
-        <level id="7" atk="65" def="65" critRate="7" critDam="7" maxExp="1029008"/>
-        <level id="8" atk="70" def="70" critRate="8" critDam="8" maxExp="1361808"/>
-        <level id="9" atk="75" def="75" critRate="9" critDam="9" maxExp="1768273"/>
-        <level id="10" atk="80" def="80" critRate="10" critDam="10" maxExp="2260211"/>
+        <level id="1" atk="10" def="10" critRate="1" critDam="1" maxExp="57713"/>
+        <level id="2" atk="13" def="15" critRate="2" critDam="2" maxExp="135313"/>
+        <level id="3" atk="16" def="20" critRate="3" critDam="3" maxExp="238082"/>
+        <level id="4" atk="19" def="25" critRate="4" critDam="4" maxExp="371775"/>
+        <level id="5" atk="22" def="30" critRate="5" critDam="5" maxExp="542993"/>
+        <level id="6" atk="25" def="35" critRate="6" critDam="6" maxExp="759244"/>
+        <level id="7" atk="28" def="40" critRate="7" critDam="7" maxExp="1029008"/>
+        <level id="8" atk="31" def="45" critRate="8" critDam="8" maxExp="1361808"/>
+        <level id="9" atk="34" def="50" critRate="9" critDam="9" maxExp="1768273"/>
+        <level id="10" atk="37" def="55" critRate="10" critDam="10" maxExp="2260211"/>
         <itemToEvolve id="91031"/>
         <itemToEvolve id="57" count="1000000"/>
         <absorbItem id="91035" experience="9300"/>
     </spirit>
 
     <spirit name="Nebula - Lesser Water Spirit" type="2" stage="2" npcId="13571" extractItem="91039" maxCharacteristics="10">
-        <level id="1" atk="105" def="105" critRate="16" critDam="16" maxExp="596369"/>
-        <level id="2" atk="110" def="110" critRate="17" critDam="17" maxExp="1313872"/>
-        <level id="3" atk="115" def="115" critRate="18" critDam="18" maxExp="2171115"/>
-        <level id="4" atk="120" def="120" critRate="19" critDam="19" maxExp="3188751"/>
-        <level id="5" atk="125" def="125" critRate="20" critDam="20" maxExp="4389633"/>
-        <level id="6" atk="130" def="130" critRate="21" critDam="21" maxExp="5798968"/>
-        <level id="7" atk="135" def="135" critRate="22" critDam="22" maxExp="7444481"/>
-        <level id="8" atk="140" def="140" critRate="23" critDam="23" maxExp="9356589"/>
-        <level id="9" atk="145" def="145" critRate="24" critDam="24" maxExp="11568579"/>
-        <level id="10" atk="150" def="150" critRate="25" critDam="25" maxExp="14116796"/>
+        <level id="1" atk="41" def="61" critRate="11" critDam="11" maxExp="596369"/>
+        <level id="2" atk="45" def="67" critRate="12" critDam="12" maxExp="1313872"/>
+        <level id="3" atk="49" def="73" critRate="13" critDam="13" maxExp="2171115"/>
+        <level id="4" atk="53" def="79" critRate="14" critDam="14" maxExp="3188751"/>
+        <level id="5" atk="57" def="85" critRate="15" critDam="15" maxExp="4389633"/>
+        <level id="6" atk="61" def="91" critRate="16" critDam="16" maxExp="5798968"/>
+        <level id="7" atk="65" def="97" critRate="17" critDam="17" maxExp="7444481"/>
+        <level id="8" atk="69" def="103" critRate="18" critDam="18" maxExp="9356589"/>
+        <level id="9" atk="73" def="109" critRate="19" critDam="19" maxExp="11568579"/>
+        <level id="10" atk="77" def="115" critRate="20" critDam="20" maxExp="14116796"/>
         <itemToEvolve id="91031" count="3"/>
         <itemToEvolve id="57" count="3000000"/>
         <absorbItem id="91035" experience="9300"/>
     </spirit>
 
     <spirit name="Nebula - Median Water Spirit" type="2" stage="3" npcId="13572" extractItem="91039" maxCharacteristics="15" >
-        <level id="1" atk="175" def="175" critRate="31" critDam="31" maxExp="2924039"/>
-        <level id="2" atk="180" def="180" critRate="32" critDam="32" maxExp="6266952"/>
-        <level id="3" atk="185" def="185" critRate="33" critDam="33" maxExp="10075460"/>
-        <level id="4" atk="190" def="190" critRate="34" critDam="34" maxExp="14400173"/>
-        <level id="5" atk="195" def="195" critRate="35" critDam="35" maxExp="19295819"/>
-        <level id="6" atk="200" def="200" critRate="36" critDam="36" maxExp="24821487"/>
-        <level id="7" atk="205" def="205" critRate="37" critDam="37" maxExp="31040875"/>
-        <level id="8" atk="210" def="210" critRate="38" critDam="38" maxExp="38022549"/>
-        <level id="9" atk="215" def="215" critRate="39" critDam="39" maxExp="45840213"/>
-        <level id="10" atk="220" def="220" critRate="40" critDam="40" maxExp="54572992"/>
+        <level id="1" atk="82" def="122" critRate="21" critDam="21" maxExp="2924039"/>
+        <level id="2" atk="87" def="129" critRate="22" critDam="22" maxExp="6266952"/>
+        <level id="3" atk="92" def="136" critRate="23" critDam="23" maxExp="10075460"/>
+        <level id="4" atk="97" def="143" critRate="24" critDam="24" maxExp="14400173"/>
+        <level id="5" atk="102" def="150" critRate="25" critDam="25" maxExp="19295819"/>
+        <level id="6" atk="107" def="157" critRate="26" critDam="26" maxExp="24821487"/>
+        <level id="7" atk="112" def="164" critRate="27" critDam="27" maxExp="31040875"/>
+        <level id="8" atk="117" def="171" critRate="28" critDam="28" maxExp="38022549"/>
+        <level id="9" atk="122" def="178" critRate="29" critDam="29" maxExp="45840213"/>
+        <level id="10" atk="127" def="185" critRate="30" critDam="30" maxExp="54572992"/>
+        <itemToEvolve id="91032" count="5"/>
+        <itemToEvolve id="57" count="5000000"/>
+        <absorbItem id="91035" experience="9300"/>
+    </spirit>
+
+    <spirit name="Nebula - Elder Water Spirit" type="1" stage="4" npcId="15945" extractItem="91039" maxCharacteristics="20" >
+        <level id="1" atk="133" def="193" critRate="31" critDam="31" maxExp="11478124"/>
+        <level id="2" atk="139" def="201" critRate="32" critDam="32" maxExp="31192283"/>
+        <level id="3" atk="145" def="209" critRate="33" critDam="33" maxExp="75614547"/>
+        <level id="4" atk="151" def="217" critRate="34" critDam="34" maxExp="144744916"/>
+        <level id="5" atk="157" def="225" critRate="35" critDam="35" maxExp="238583390"/>
+        <level id="6" atk="163" def="233" critRate="36" critDam="36" maxExp="357129969"/>
+        <level id="7" atk="169" def="241" critRate="37" critDam="37" maxExp="488030601"/>
+        <level id="8" atk="175" def="249" critRate="38" critDam="38" maxExp="625108258"/>
+        <level id="9" atk="181" def="257" critRate="39" critDam="39" maxExp="765274429"/>
+        <level id="10" atk="187" def="265" critRate="40" critDam="40" maxExp="906984857"/>
+        <itemToEvolve id="91032" count="10"/>
+        <itemToEvolve id="57" count="7000000"/>
+        <absorbItem id="91035" experience="9300"/>
+    </spirit>
+
+    <spirit name="Nebula - Great Water Spirit" type="1" stage="5" npcId="15946" extractItem="91039" maxCharacteristics="30" >
+        <level id="1" atk="193" def="274" critRate="41" critDam="41" maxExp="146343197"/>
+        <level id="2" atk="199" def="283" critRate="42" critDam="42" maxExp="306584703"/>
+        <level id="3" atk="205" def="292" critRate="43" critDam="43" maxExp="501571982"/>
+        <level id="4" atk="211" def="301" critRate="44" critDam="44" maxExp="731305034"/>
+        <level id="5" atk="217" def="310" critRate="45" critDam="45" maxExp="995783858"/>
+        <level id="6" atk="223" def="320" critRate="47" critDam="47" maxExp="1295008455"/>
+        <level id="7" atk="229" def="330" critRate="49" critDam="49" maxExp="1611605938"/>
+        <level id="8" atk="235" def="340" critRate="51" critDam="51" maxExp="1936889864"/>
+        <level id="9" atk="241" def="350" critRate="53" critDam="53" maxExp="2266517012"/>
+        <level id="10" atk="247" def="360" critRate="55" critDam="55" maxExp="2598315771"/>
         <absorbItem id="91035" experience="9300"/>
     </spirit>
 
@@ -107,48 +171,80 @@
     </spirit>
 
     <spirit name="Procella - Minor Wind Spirit"  type="3" stage="1" npcId="13574" extractItem="91041" maxCharacteristics="5">
-        <level id="1" atk="35" def="35" critRate="1" critDam="1" maxExp="57713"/>
-        <level id="2" atk="40" def="40" critRate="2" critDam="2" maxExp="135313"/>
-        <level id="3" atk="45" def="45" critRate="3" critDam="3" maxExp="238082"/>
-        <level id="4" atk="50" def="50" critRate="4" critDam="4" maxExp="371775"/>
-        <level id="5" atk="55" def="55" critRate="5" critDam="5" maxExp="542993"/>
-        <level id="6" atk="60" def="60" critRate="6" critDam="6" maxExp="759244"/>
-        <level id="7" atk="65" def="65" critRate="7" critDam="7" maxExp="1029008"/>
-        <level id="8" atk="70" def="70" critRate="8" critDam="8" maxExp="1361808"/>
-        <level id="9" atk="75" def="75" critRate="9" critDam="9" maxExp="1768273"/>
-        <level id="10" atk="80" def="80" critRate="10" critDam="10" maxExp="2260211"/>
+        <level id="1" atk="10" def="10" critRate="1" critDam="1" maxExp="57713"/>
+        <level id="2" atk="13" def="15" critRate="2" critDam="2" maxExp="135313"/>
+        <level id="3" atk="16" def="20" critRate="3" critDam="3" maxExp="238082"/>
+        <level id="4" atk="19" def="25" critRate="4" critDam="4" maxExp="371775"/>
+        <level id="5" atk="22" def="30" critRate="5" critDam="5" maxExp="542993"/>
+        <level id="6" atk="25" def="35" critRate="6" critDam="6" maxExp="759244"/>
+        <level id="7" atk="28" def="40" critRate="7" critDam="7" maxExp="1029008"/>
+        <level id="8" atk="31" def="45" critRate="8" critDam="8" maxExp="1361808"/>
+        <level id="9" atk="34" def="50" critRate="9" critDam="9" maxExp="1768273"/>
+        <level id="10" atk="37" def="55" critRate="10" critDam="10" maxExp="2260211"/>
         <itemToEvolve id="91033"/>
         <itemToEvolve id="57" count="1000000"/>
         <absorbItem id="91037" experience="9300"/>
     </spirit>
 
     <spirit name="Procella - Lesser Wind Spirit" type="3" stage="2" npcId="13575" extractItem="91041" maxCharacteristics="10">
-        <level id="1" atk="105" def="105" critRate="16" critDam="16" maxExp="596369"/>
-        <level id="2" atk="110" def="110" critRate="17" critDam="17" maxExp="1313872"/>
-        <level id="3" atk="115" def="115" critRate="18" critDam="18" maxExp="2171115"/>
-        <level id="4" atk="120" def="120" critRate="19" critDam="19" maxExp="3188751"/>
-        <level id="5" atk="125" def="125" critRate="20" critDam="20" maxExp="4389633"/>
-        <level id="6" atk="130" def="130" critRate="21" critDam="21" maxExp="5798968"/>
-        <level id="7" atk="135" def="135" critRate="22" critDam="22" maxExp="7444481"/>
-        <level id="8" atk="140" def="140" critRate="23" critDam="23" maxExp="9356589"/>
-        <level id="9" atk="145" def="145" critRate="24" critDam="24" maxExp="11568579"/>
-        <level id="10" atk="150" def="150" critRate="25" critDam="25" maxExp="14116796"/>
+        <level id="1" atk="41" def="61" critRate="11" critDam="11" maxExp="596369"/>
+        <level id="2" atk="45" def="67" critRate="12" critDam="12" maxExp="1313872"/>
+        <level id="3" atk="49" def="73" critRate="13" critDam="13" maxExp="2171115"/>
+        <level id="4" atk="53" def="79" critRate="14" critDam="14" maxExp="3188751"/>
+        <level id="5" atk="57" def="85" critRate="15" critDam="15" maxExp="4389633"/>
+        <level id="6" atk="61" def="91" critRate="16" critDam="16" maxExp="5798968"/>
+        <level id="7" atk="65" def="97" critRate="17" critDam="17" maxExp="7444481"/>
+        <level id="8" atk="69" def="103" critRate="18" critDam="18" maxExp="9356589"/>
+        <level id="9" atk="73" def="109" critRate="19" critDam="19" maxExp="11568579"/>
+        <level id="10" atk="77" def="115" critRate="20" critDam="20" maxExp="14116796"/>
         <itemToEvolve id="91033" count="3"/>
         <itemToEvolve id="57" count="3000000"/>
         <absorbItem id="91037" experience="9300"/>
     </spirit>
 
     <spirit name="Procella - Median Wind Spirit" type="3" stage="3" npcId="13576" extractItem="91041" maxCharacteristics="15">
-        <level id="1" atk="175" def="175" critRate="31" critDam="31" maxExp="2924039"/>
-        <level id="2" atk="180" def="180" critRate="32" critDam="32" maxExp="6266952"/>
-        <level id="3" atk="185" def="185" critRate="33" critDam="33" maxExp="10075460"/>
-        <level id="4" atk="190" def="190" critRate="34" critDam="34" maxExp="14400173"/>
-        <level id="5" atk="195" def="195" critRate="35" critDam="35" maxExp="19295819"/>
-        <level id="6" atk="200" def="200" critRate="36" critDam="36" maxExp="24821487"/>
-        <level id="7" atk="205" def="205" critRate="37" critDam="37" maxExp="31040875"/>
-        <level id="8" atk="210" def="210" critRate="38" critDam="38" maxExp="38022549"/>
-        <level id="9" atk="215" def="215" critRate="39" critDam="39" maxExp="45840213"/>
-        <level id="10" atk="220" def="220" critRate="40" critDam="40" maxExp="54572992"/>
+        <level id="1" atk="82" def="122" critRate="21" critDam="21" maxExp="2924039"/>
+        <level id="2" atk="87" def="129" critRate="22" critDam="22" maxExp="6266952"/>
+        <level id="3" atk="92" def="136" critRate="23" critDam="23" maxExp="10075460"/>
+        <level id="4" atk="97" def="143" critRate="24" critDam="24" maxExp="14400173"/>
+        <level id="5" atk="102" def="150" critRate="25" critDam="25" maxExp="19295819"/>
+        <level id="6" atk="107" def="157" critRate="26" critDam="26" maxExp="24821487"/>
+        <level id="7" atk="112" def="164" critRate="27" critDam="27" maxExp="31040875"/>
+        <level id="8" atk="117" def="171" critRate="28" critDam="28" maxExp="38022549"/>
+        <level id="9" atk="122" def="178" critRate="29" critDam="29" maxExp="45840213"/>
+        <level id="10" atk="127" def="185" critRate="30" critDam="30" maxExp="54572992"/>
+        <itemToEvolve id="91032" count="5"/>
+        <itemToEvolve id="57" count="5000000"/>
+        <absorbItem id="91037" experience="9300"/>
+    </spirit>
+
+    <spirit name="Procella - Elder Wind Spirit" type="1" stage="4" npcId="15947" extractItem="91041" maxCharacteristics="20" >
+        <level id="1" atk="133" def="193" critRate="31" critDam="31" maxExp="11478124"/>
+        <level id="2" atk="139" def="201" critRate="32" critDam="32" maxExp="31192283"/>
+        <level id="3" atk="145" def="209" critRate="33" critDam="33" maxExp="75614547"/>
+        <level id="4" atk="151" def="217" critRate="34" critDam="34" maxExp="144744916"/>
+        <level id="5" atk="157" def="225" critRate="35" critDam="35" maxExp="238583390"/>
+        <level id="6" atk="163" def="233" critRate="36" critDam="36" maxExp="357129969"/>
+        <level id="7" atk="169" def="241" critRate="37" critDam="37" maxExp="488030601"/>
+        <level id="8" atk="175" def="249" critRate="38" critDam="38" maxExp="625108258"/>
+        <level id="9" atk="181" def="257" critRate="39" critDam="39" maxExp="765274429"/>
+        <level id="10" atk="187" def="265" critRate="40" critDam="40" maxExp="906984857"/>
+        <itemToEvolve id="91032" count="10"/>
+        <itemToEvolve id="57" count="7000000"/>
+        <absorbItem id="91037" experience="9300"/>
+    </spirit>
+
+    <spirit name="Procella - Great Wind Spirit" type="1" stage="5" npcId="15948" extractItem="91041" maxCharacteristics="30" >
+        <level id="1" atk="193" def="274" critRate="41" critDam="41" maxExp="146343197"/>
+        <level id="2" atk="199" def="283" critRate="42" critDam="42" maxExp="306584703"/>
+        <level id="3" atk="205" def="292" critRate="43" critDam="43" maxExp="501571982"/>
+        <level id="4" atk="211" def="301" critRate="44" critDam="44" maxExp="731305034"/>
+        <level id="5" atk="217" def="310" critRate="45" critDam="45" maxExp="995783858"/>
+        <level id="6" atk="223" def="320" critRate="47" critDam="47" maxExp="1295008455"/>
+        <level id="7" atk="229" def="330" critRate="49" critDam="49" maxExp="1611605938"/>
+        <level id="8" atk="235" def="340" critRate="51" critDam="51" maxExp="1936889864"/>
+        <level id="9" atk="241" def="350" critRate="53" critDam="53" maxExp="2266517012"/>
+        <level id="10" atk="247" def="360" critRate="55" critDam="55" maxExp="2598315771"/>
         <absorbItem id="91037" experience="9300"/>
     </spirit>
 
@@ -157,48 +253,80 @@
     </spirit>
 
     <spirit name="Petram - Minor Earth Spirit"  type="4" stage="1" npcId="13578" extractItem="91042" maxCharacteristics="5">
-        <level id="1" atk="35" def="35" critRate="1" critDam="1" maxExp="57713"/>
-        <level id="2" atk="40" def="40" critRate="2" critDam="2" maxExp="135313"/>
-        <level id="3" atk="45" def="45" critRate="3" critDam="3" maxExp="238082"/>
-        <level id="4" atk="50" def="50" critRate="4" critDam="4" maxExp="371775"/>
-        <level id="5" atk="55" def="55" critRate="5" critDam="5" maxExp="542993"/>
-        <level id="6" atk="60" def="60" critRate="6" critDam="6" maxExp="759244"/>
-        <level id="7" atk="65" def="65" critRate="7" critDam="7" maxExp="1029008"/>
-        <level id="8" atk="70" def="70" critRate="8" critDam="8" maxExp="1361808"/>
-        <level id="9" atk="75" def="75" critRate="9" critDam="9" maxExp="1768273"/>
-        <level id="10" atk="80" def="80" critRate="10" critDam="10" maxExp="2260211"/>
+        <level id="1" atk="10" def="10" critRate="1" critDam="1" maxExp="57713"/>
+        <level id="2" atk="13" def="15" critRate="2" critDam="2" maxExp="135313"/>
+        <level id="3" atk="16" def="20" critRate="3" critDam="3" maxExp="238082"/>
+        <level id="4" atk="19" def="25" critRate="4" critDam="4" maxExp="371775"/>
+        <level id="5" atk="22" def="30" critRate="5" critDam="5" maxExp="542993"/>
+        <level id="6" atk="25" def="35" critRate="6" critDam="6" maxExp="759244"/>
+        <level id="7" atk="28" def="40" critRate="7" critDam="7" maxExp="1029008"/>
+        <level id="8" atk="31" def="45" critRate="8" critDam="8" maxExp="1361808"/>
+        <level id="9" atk="34" def="50" critRate="9" critDam="9" maxExp="1768273"/>
+        <level id="10" atk="37" def="55" critRate="10" critDam="10" maxExp="2260211"/>
         <itemToEvolve id="91034"/>
         <itemToEvolve id="57" count="1000000"/>
         <absorbItem id="91038" experience="9300"/>
     </spirit>
 
     <spirit name="Petram - Lesser Earth Spirit" type="4" stage="2" npcId="13579" extractItem="91042" maxCharacteristics="10">
-        <level id="1" atk="105" def="105" critRate="16" critDam="16" maxExp="596369"/>
-        <level id="2" atk="110" def="110" critRate="17" critDam="17" maxExp="1313872"/>
-        <level id="3" atk="115" def="115" critRate="18" critDam="18" maxExp="2171115"/>
-        <level id="4" atk="120" def="120" critRate="19" critDam="19" maxExp="3188751"/>
-        <level id="5" atk="125" def="125" critRate="20" critDam="20" maxExp="4389633"/>
-        <level id="6" atk="130" def="130" critRate="21" critDam="21" maxExp="5798968"/>
-        <level id="7" atk="135" def="135" critRate="22" critDam="22" maxExp="7444481"/>
-        <level id="8" atk="140" def="140" critRate="23" critDam="23" maxExp="9356589"/>
-        <level id="9" atk="145" def="145" critRate="24" critDam="24" maxExp="11568579"/>
-        <level id="10" atk="150" def="150" critRate="25" critDam="25" maxExp="14116796"/>
+        <level id="1" atk="41" def="61" critRate="11" critDam="11" maxExp="596369"/>
+        <level id="2" atk="45" def="67" critRate="12" critDam="12" maxExp="1313872"/>
+        <level id="3" atk="49" def="73" critRate="13" critDam="13" maxExp="2171115"/>
+        <level id="4" atk="53" def="79" critRate="14" critDam="14" maxExp="3188751"/>
+        <level id="5" atk="57" def="85" critRate="15" critDam="15" maxExp="4389633"/>
+        <level id="6" atk="61" def="91" critRate="16" critDam="16" maxExp="5798968"/>
+        <level id="7" atk="65" def="97" critRate="17" critDam="17" maxExp="7444481"/>
+        <level id="8" atk="69" def="103" critRate="18" critDam="18" maxExp="9356589"/>
+        <level id="9" atk="73" def="109" critRate="19" critDam="19" maxExp="11568579"/>
+        <level id="10" atk="77" def="115" critRate="20" critDam="20" maxExp="14116796"/>
         <itemToEvolve id="91034" count="3"/>
         <itemToEvolve id="57" count="3000000"/>
         <absorbItem id="91038" experience="9300"/>
     </spirit>
 
     <spirit name="Petram - Median Earth Spirit" type="4" stage="3" npcId="13580" extractItem="91042" maxCharacteristics="15">
-        <level id="1" atk="175" def="175" critRate="31" critDam="31" maxExp="2924039"/>
-        <level id="2" atk="180" def="180" critRate="32" critDam="32" maxExp="6266952"/>
-        <level id="3" atk="185" def="185" critRate="33" critDam="33" maxExp="10075460"/>
-        <level id="4" atk="190" def="190" critRate="34" critDam="34" maxExp="14400173"/>
-        <level id="5" atk="195" def="195" critRate="35" critDam="35" maxExp="19295819"/>
-        <level id="6" atk="200" def="200" critRate="36" critDam="36" maxExp="24821487"/>
-        <level id="7" atk="205" def="205" critRate="37" critDam="37" maxExp="31040875"/>
-        <level id="8" atk="210" def="210" critRate="38" critDam="38" maxExp="38022549"/>
-        <level id="9" atk="215" def="215" critRate="39" critDam="39" maxExp="45840213"/>
-        <level id="10" atk="220" def="220" critRate="40" critDam="40" maxExp="54572992"/>
+        <level id="1" atk="82" def="122" critRate="21" critDam="21" maxExp="2924039"/>
+        <level id="2" atk="87" def="129" critRate="22" critDam="22" maxExp="6266952"/>
+        <level id="3" atk="92" def="136" critRate="23" critDam="23" maxExp="10075460"/>
+        <level id="4" atk="97" def="143" critRate="24" critDam="24" maxExp="14400173"/>
+        <level id="5" atk="102" def="150" critRate="25" critDam="25" maxExp="19295819"/>
+        <level id="6" atk="107" def="157" critRate="26" critDam="26" maxExp="24821487"/>
+        <level id="7" atk="112" def="164" critRate="27" critDam="27" maxExp="31040875"/>
+        <level id="8" atk="117" def="171" critRate="28" critDam="28" maxExp="38022549"/>
+        <level id="9" atk="122" def="178" critRate="29" critDam="29" maxExp="45840213"/>
+        <level id="10" atk="127" def="185" critRate="30" critDam="30" maxExp="54572992"/>
+        <itemToEvolve id="91032" count="5"/>  <!-- TODO confirm evolution requirements -->
+        <itemToEvolve id="57" count="5000000"/>
+        <absorbItem id="91038" experience="9300"/>
+    </spirit>
+
+    <spirit name="Petram - Elder Earth Spirit" type="1" stage="4" npcId="15947" extractItem="91049" maxCharacteristics="20" >
+        <level id="1" atk="133" def="193" critRate="31" critDam="31" maxExp="11478124"/>
+        <level id="2" atk="139" def="201" critRate="32" critDam="32" maxExp="31192283"/>
+        <level id="3" atk="145" def="209" critRate="33" critDam="33" maxExp="75614547"/>
+        <level id="4" atk="151" def="217" critRate="34" critDam="34" maxExp="144744916"/>
+        <level id="5" atk="157" def="225" critRate="35" critDam="35" maxExp="238583390"/>
+        <level id="6" atk="163" def="233" critRate="36" critDam="36" maxExp="357129969"/>
+        <level id="7" atk="169" def="241" critRate="37" critDam="37" maxExp="488030601"/>
+        <level id="8" atk="175" def="249" critRate="38" critDam="38" maxExp="625108258"/>
+        <level id="9" atk="181" def="257" critRate="39" critDam="39" maxExp="765274429"/>
+        <level id="10" atk="187" def="265" critRate="40" critDam="40" maxExp="906984857"/>
+        <itemToEvolve id="91032" count="10"/>  <!-- TODO confirm evolution requirements -->
+        <itemToEvolve id="57" count="7000000"/>
+        <absorbItem id="91038" experience="9300"/>
+    </spirit>
+
+    <spirit name="Petram - Great Earth Spirit" type="1" stage="5" npcId="15948" extractItem="91042" maxCharacteristics="30" >
+        <level id="1" atk="193" def="274" critRate="41" critDam="41" maxExp="146343197"/>
+        <level id="2" atk="199" def="283" critRate="42" critDam="42" maxExp="306584703"/>
+        <level id="3" atk="205" def="292" critRate="43" critDam="43" maxExp="501571982"/>
+        <level id="4" atk="211" def="301" critRate="44" critDam="44" maxExp="731305034"/>
+        <level id="5" atk="217" def="310" critRate="45" critDam="45" maxExp="995783858"/>
+        <level id="6" atk="223" def="320" critRate="47" critDam="47" maxExp="1295008455"/>
+        <level id="7" atk="229" def="330" critRate="49" critDam="49" maxExp="1611605938"/>
+        <level id="8" atk="235" def="340" critRate="51" critDam="51" maxExp="1936889864"/>
+        <level id="9" atk="241" def="350" critRate="53" critDam="53" maxExp="2266517012"/>
+        <level id="10" atk="247" def="360" critRate="55" critDam="55" maxExp="2598315771"/>
         <absorbItem id="91038" experience="9300"/>
     </spirit>
 

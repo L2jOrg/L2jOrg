@@ -905,6 +905,7 @@
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
+        <set name="is_tradable" val="false"/>
         <skills>
             <skill id="51126" level="1"/> <!-- Intermediate Spirit's Blessing -->
         </skills>
@@ -920,6 +921,7 @@
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
+        <set name="is_tradable" val="false"/>
         <skills>
             <skill id="51127" level="1"/> <!-- Advanced Spirit's Blessing -->
         </skills>

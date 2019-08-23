@@ -531,7 +531,7 @@ public class Attackable extends Npc {
     private void rewardAttributeExp(Player player, long damage, long totalDamage) {
         if (player.getActiveElementalSpiritType() > 0 && getAttributeExp() > 0 && getElementalSpiritType() != ElementalType.NONE) {
             long attributeExp = (long) ((getAttributeExp() * damage / totalDamage) * player.getElementalSpiritXpBonus());
-            var spirit = player.getElementalSpirit(getElementalSpiritType().getDominating());
+            var spirit = player.getElementalSpirit(getElementalSpiritType().getSuperior());
             if (nonNull(spirit)) {
                 spirit.addExperience( attributeExp);
             }

@@ -158,30 +158,78 @@
 	<skill id="54122" toLevel="1" name="Improved Fire Attack Potion">
 		<!-- For 20 min., Fire Attack Power +80. Cooldown: 1 min. -->
 		<icon>icon.etc_fire_potion_i00</icon>
-		<operateType>A1</operateType>
+		<operateType>A2</operateType>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>1200</abnormalTime>
+		<magicLvl>1</magicLvl>
 		<isMagic>4</isMagic>
+		<stayAfterDeath>true</stayAfterDeath>
 		<reuseDelay>60000</reuseDelay>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="ElementalSpiritAttack">
+				<amount>80</amount>
+				<type>FIRE</type>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="54123" toLevel="1" name="Improved Water Attack Potion">
 		<!-- For 20 min., Water Attack Power +80. Cooldown: 1 min. -->
 		<icon>icon.etc_water_potion_i00</icon>
-		<operateType>A1</operateType>
+		<operateType>A2</operateType>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>1200</abnormalTime>
+		<magicLvl>1</magicLvl>
 		<isMagic>4</isMagic>
+		<stayAfterDeath>true</stayAfterDeath>
 		<reuseDelay>60000</reuseDelay>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="ElementalSpiritAttack">
+				<amount>80</amount>
+				<type>WATER</type>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="54124" toLevel="1" name="Improved Wind Attack Potion">
 		<!-- For 20 min., Wind Attack Power +80. Cooldown: 1 min. -->
 		<icon>icon.etc_wind_potion_i00</icon>
-		<operateType>A1</operateType>
+		<operateType>A2</operateType>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>1200</abnormalTime>
+		<magicLvl>1</magicLvl>
 		<isMagic>4</isMagic>
+		<stayAfterDeath>true</stayAfterDeath>
 		<reuseDelay>60000</reuseDelay>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="ElementalSpiritAttack">
+				<amount>80</amount>
+				<type>WIND</type>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="54125" toLevel="1" name="Improved Earth Attack Potion">
 		<!-- For 20 min., Earth Attack Power +80. Cooldown: 1 min. -->
 		<icon>icon.etc_earth_potion_i00</icon>
-		<operateType>A1</operateType>
+		<operateType>A2</operateType>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>1200</abnormalTime>
+		<magicLvl>1</magicLvl>
 		<isMagic>4</isMagic>
+		<stayAfterDeath>true</stayAfterDeath>
 		<reuseDelay>60000</reuseDelay>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="ElementalSpiritAttack">
+				<amount>80</amount>
+				<type>EARTH</type>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="54126" toLevel="3" name="Saiha's Grace Box">
 		<operateType>A1</operateType>

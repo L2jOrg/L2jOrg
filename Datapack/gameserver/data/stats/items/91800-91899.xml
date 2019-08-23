@@ -391,41 +391,65 @@
 		<!-- Fire Attack Power +80 for 20 min. -->
 		<set name="icon" val="icon.etc_fire_potion_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="STEEL" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="5" />
+		<set name="handler" val="ItemSkills"/>
+		<set name="immediate_effect" val="true"/>
+		<set name="etcitem_type" val="POTION"/>
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<skills>
+			<skill id="54122" level="1"/> <!-- Improved Fire Attribute Attack Potion -->
+		</skills>
 	</item>
 	<item id="91831" name="Improved Water Attack Potion" type="EtcItem">
 		<!-- Water Attack Power +80 for 20 min. -->
 		<set name="icon" val="icon.etc_water_potion_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="STEEL" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="5" />
+		<set name="handler" val="ItemSkills"/>
+		<set name="immediate_effect" val="true"/>
+		<set name="etcitem_type" val="POTION"/>
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<skills>
+			<skill id="54123" level="1"/> <!-- Improved Water Attribute Attack Potion -->
+		</skills>
 	</item>
 	<item id="91832" name="Improved Wind Attack Potion" type="EtcItem">
 		<!-- Wind Attack Power +80 for 20 min. -->
 		<set name="icon" val="icon.etc_wind_potion_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="STEEL" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="5" />
+		<set name="handler" val="ItemSkills"/>
+		<set name="immediate_effect" val="true"/>
+		<set name="etcitem_type" val="POTION"/>
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<skills>
+			<skill id="54124" level="1"/> <!-- Improved Wind Attribute Attack Potion -->
+		</skills>
 	</item>
 	<item id="91833" name="Improved Earth Attack Potion" type="EtcItem">
 		<!-- Earth Attack Power +80 for 20 min. -->
 		<set name="icon" val="icon.etc_earth_potion_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="STEEL" />
+		<set name="material" val="LIQUID" />
 		<set name="weight" val="5" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills"/>
+		<set name="immediate_effect" val="true"/>
+		<set name="etcitem_type" val="POTION"/>
+		<skills>
+			<skill id="54125" level="1"/> <!-- Improved Earth Attribute Attack Potion -->
+		</skills>
 	</item>
 	<item id="91834" name="Saiha's Grace Box" type="EtcItem">
 		<!-- Double-click to obtain Sayha's Blessing (200 pc.), Sayha's Storm Lv. 3 (30 pc.), and other items. -->

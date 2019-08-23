@@ -81,7 +81,7 @@ public class CharStat {
         return (int) getValue(Stats.ACCURACY_MAGIC);
     }
 
-    public Creature getActiveChar() {
+    public Creature getCreature() {
         return _activeChar;
     }
 

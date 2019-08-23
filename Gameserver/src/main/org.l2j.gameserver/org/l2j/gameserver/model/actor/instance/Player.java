@@ -162,6 +162,10 @@ public final class Player extends Playable {
     }
 
     public void initElementalSpirits() {
+        if(nonNull(spirits)) {
+            return;
+        }
+
         tryLoadSpirits();
 
         if(isNull(spirits)) {
@@ -799,7 +803,7 @@ public final class Player extends Playable {
 
         player.setHero(Hero.getInstance().isHero(objectId));
 
-        if(player.getLevel() >= 76 && player.getClassId().level() > 2) {
+        if(player.getLevel() >= 40) {
             player.initElementalSpirits();
         }
 
@@ -2149,7 +2153,6 @@ public final class Player extends Playable {
             setClassTemplate(Id);
             if (getClassId().level() == 3) {
                 sendPacket(SystemMessageId.CONGRATULATIONS_YOU_VE_COMPLETED_YOUR_THIRD_CLASS_TRANSFER_QUEST);
-                initElementalSpirits();
             } else {
                 sendPacket(SystemMessageId.CONGRATULATIONS_YOU_VE_COMPLETED_A_CLASS_TRANSFER);
             }

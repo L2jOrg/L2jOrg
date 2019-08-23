@@ -19,6 +19,9 @@ import static org.l2j.commons.database.DatabaseAccess.getDAO;
 import static org.l2j.gameserver.network.SystemMessageId.OBTAINED_S2_ATTRIBUTE_XP_OF_S1;
 import static org.l2j.gameserver.network.SystemMessageId.S1_ATTRIBUTE_SPIRIT_BECAME_LEVEL_S2;
 
+/**
+ * @author JoeAlisson
+ */
 public class ElementalSpirit {
 
     private final Player owner;
@@ -80,11 +83,11 @@ public class ElementalSpirit {
     }
 
     public int getExtractAmount() {
-        return Math.round(data.getExperience() / ElementalSpiritManager.FRAGMENT_XP_CONSUME);
+        return Math.round( (data.getExperience() - getExperienceToPreviousLevel()) / ElementalSpiritManager.FRAGMENT_XP_CONSUME);
     }
 
-    public void resetStage() {
-        data.setLevel((byte) 1);
+    public void resetLevel() {
+        data.setLevel((byte) Math.max(1, data.getLevel() -1));
         data.setExperience(0);
         resetCharacteristics();
     }
@@ -127,6 +130,10 @@ public class ElementalSpirit {
 
     public long getExperienceToNextLevel() {
         return template.getMaxExperienceAtLevel(data.getLevel());
+    }
+
+    public long getExperienceToPreviousLevel() {
+        return data.getLevel() < 2 ? 0 : template.getMaxExperienceAtLevel((byte) (data.getLevel() -1));
     }
 
     public byte getLevel() {

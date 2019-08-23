@@ -971,55 +971,12 @@
         <reward id="90917" count="3"/>
     </mission>
 
-    <mission id="1107" name="Learn Attribute" cycle="SINGLE"> <!-- TODO implement attribute System -->
-        <handler name="spirit">
-            <param name="kind">LEARN</param>
-        </handler>
-        <reward id="91030"/>
-    </mission>
-
-    <mission id="1108" name="Wind Attack Hunting Ground Guide" requiredCompletion="700" cycle="SINGLE">
-        <handler name="hunt">
-            <param name="minLevel">76</param>
-            <param name="classLevel">3</param>
-            <param name="monsters">21770 21771 21772 21776 21777 21778 21779 21780 21781 21782 21783 21784 21785 21786 21787 21788 21789 21790 21791 21792 21793</param>
-        </handler>
-        <reward id="91033"/>
-    </mission>
-
-    <mission id="1109" name="Earth Attack Hunting Ground Guide" requiredCompletion="700 " cycle="SINGLE">
-        <handler name="hunt">
-            <param name="minLevel">76</param>
-            <param name="classLevel">3</param>
-            <param name="monsters">21764 21765 21766 21774 21775 21813 21814 21815 21816 21817 21818 21819 21820 21821 21822 21823 21824 21825 21826 21827 21828 21829 21830 21831</param>
-        </handler>
-        <reward id="91034"/>
-    </mission>
-
-    <mission id="1110" name="Water Attack Hunting Ground Guide" requiredCompletion="700" cycle="SINGLE">
-        <handler name="hunt">
-            <param name="minLevel">76</param>
-            <param name="classLevel">3</param>
-            <param name="monsters">20800 20801 20802 20803 20849 20994 20803 20773 20792 20794 20795 20796 20797 20798 20799 20849 20994 20995 21767 21768 21769 21773 </param>
-        </handler>
-        <reward id="91031"/>
-    </mission>
-
-    <mission id="1111" name="Fire Attack Hunting Ground Guide" requiredCompletion="700" cycle="SINGLE">
-        <handler name="hunt">
-            <param name="minLevel">76</param>
-            <param name="classLevel">3</param>
-            <param name="monsters">12450 21661 21662 21663 21664 21665 21666 21667 21668 21669 21670 21671 21672 21673 21674 21675 21676 21678 21685 21686 21761 21762 21763</param>
-        </handler>
-        <reward id="91032"/>
-    </mission>
-
     <mission id="1112" name="Attain Fire Spirits 3 Stars" cycle="SINGLE" requiredCompletion="3">
         <handler name="spirit">
             <param name="kind">EVOLVE</param>
             <param name="element">FIRE</param>
         </handler>
-        <reward id="91056"/>
+        <reward id="91185" count="30"/>
     </mission>
 
     <mission id="1113" name="Attain Water Spirits 3 Stars" cycle="SINGLE" requiredCompletion="3">
@@ -1027,7 +984,7 @@
             <param name="kind">EVOLVE</param>
             <param name="element">WATER</param>
         </handler>
-        <reward id="91055"/>
+        <reward id="91185" count="30"/>
     </mission>
 
     <mission id="1114" name="Attain Wind Spirits 3 Stars" cycle="SINGLE" requiredCompletion="3">
@@ -1035,7 +992,7 @@
             <param name="kind">EVOLVE</param>
             <param name="element">WIND</param>
         </handler>
-        <reward id="91057"/>
+        <reward id="91185" count="30"/>
     </mission>
 
     <mission id="1115" name="Attain Earth Spirits 3 Stars" cycle="SINGLE" requiredCompletion="3">
@@ -1043,7 +1000,7 @@
             <param name="kind">EVOLVE</param>
             <param name="element">EARTH</param>
         </handler>
-        <reward id="91058"/>
+        <reward id="91185" count="30"/>
     </mission>
 
     <mission id="1116" name="Attribute Monster Hunt" requiredCompletion="1800" cycle="WEEKLY">
@@ -1151,6 +1108,38 @@
             <param name="monsters">2 <!-- Todo Imperial tomb monsters --> </param>
         </handler>
         <reward id="91406"/>
+    </mission>
+
+    <mission id="1162" name="Attain Fire Spirits 5 Stars" cycle="SINGLE" requiredCompletion="5">
+        <handler name="spirit">
+            <param name="kind">EVOLVE</param>
+            <param name="element">FIRE</param>
+        </handler>
+        <reward id="91186" count="30"/>
+    </mission>
+
+    <mission id="1163" name="Attain Water Spirits 5 Stars" cycle="SINGLE" requiredCompletion="5">
+        <handler name="spirit">
+            <param name="kind">EVOLVE</param>
+            <param name="element">WATER</param>
+        </handler>
+        <reward id="91186" count="30"/>
+    </mission>
+
+    <mission id="1164" name="Attain Wind Spirits 5 Stars" cycle="SINGLE" requiredCompletion="5">
+        <handler name="spirit">
+            <param name="kind">EVOLVE</param>
+            <param name="element">WIND</param>
+        </handler>
+        <reward id="91186" count="30"/>
+    </mission>
+
+    <mission id="1165" name="Attain Earth Spirits 5 Stars" cycle="SINGLE" requiredCompletion="5">
+        <handler name="spirit">
+            <param name="kind">EVOLVE</param>
+            <param name="element">EARTH</param>
+        </handler>
+        <reward id="91186" count="30"/>
     </mission>
 
     <mission id="3000" name="Hero's Way I" requiredCompletion="80" cycle="SINGLE">

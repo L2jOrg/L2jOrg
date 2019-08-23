@@ -24,12 +24,12 @@ public class StaticObjStat extends CharStat {
     }
 
     @Override
-    public StaticWorldObject getActiveChar() {
-        return (StaticWorldObject) super.getActiveChar();
+    public StaticWorldObject getCreature() {
+        return (StaticWorldObject) super.getCreature();
     }
 
     @Override
     public final byte getLevel() {
-        return (byte) getActiveChar().getLevel();
+        return (byte) getCreature().getLevel();
     }
 }

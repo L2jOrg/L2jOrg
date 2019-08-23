@@ -24,13 +24,13 @@ public class ControllableAirShipStat extends VehicleStat {
     }
 
     @Override
-    public ControllableAirShip getActiveChar() {
-        return (ControllableAirShip) super.getActiveChar();
+    public ControllableAirShip getCreature() {
+        return (ControllableAirShip) super.getCreature();
     }
 
     @Override
     public double getMoveSpeed() {
-        if (getActiveChar().isInDock() || (getActiveChar().getFuel() > 0)) {
+        if (getCreature().isInDock() || (getCreature().getFuel() > 0)) {
             return super.getMoveSpeed();
         }
         return super.getMoveSpeed() * 0.05f;

@@ -9,11 +9,11 @@ public class NpcStat extends CharStat {
 
     @Override
     public byte getLevel() {
-        return getActiveChar().getTemplate().getLevel();
+        return getCreature().getTemplate().getLevel();
     }
 
     @Override
-    public Npc getActiveChar() {
-        return (Npc) super.getActiveChar();
+    public Npc getCreature() {
+        return (Npc) super.getCreature();
     }
 }

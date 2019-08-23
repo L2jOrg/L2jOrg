@@ -73,7 +73,6 @@ open module org.l2j.scripts {
             ai.bosses.Zaken.Zaken,
 
             ai.others.ArenaManager.ArenaManager,
-            ai.others.AttributeMaster.AttributeMaster,
             ai.others.CastleBlacksmith.CastleBlacksmith,
             ai.others.CastleChamberlain.CastleChamberlain,
             ai.others.CastleDoorManager.CastleDoorManager,

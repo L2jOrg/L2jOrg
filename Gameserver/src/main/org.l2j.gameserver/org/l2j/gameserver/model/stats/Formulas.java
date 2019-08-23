@@ -1391,8 +1391,10 @@ public final class Formulas {
             var attackerPlayer = attacker.getActingPlayer();
             ElementalType type = ElementalType.of(attackerPlayer.getActiveElementalSpiritType());
 
+            var elementalDamage = 0;
+
             if(ElementalType.NONE == type) {
-                return 0;
+                return elementalDamage;
             }
 
             var critRate = attackerPlayer.getElementalSpiritCritRate();
@@ -1419,20 +1421,20 @@ public final class Formulas {
     private static double calcSpiritElementalPvEDamage(ElementalType attackerType, ElementalType targetType, double attack, double critDamage, boolean isCrit) {
         double damage;
         double baseDamage = attack * 0.8 + Rnd.get(-25, 25);
-        double bonus = 1;
-        if(targetType == ElementalType.NONE) {
-            damage = attack * 0.735;
-        } else if(attackerType.getDominating() == targetType) {
-            damage = (-1136 + baseDamage) * 0.6;
-            bonus = 0.6;
-        } else if(targetType.getDominating() == attackerType) {
-            damage = (185 + baseDamage) * 1.2;
-            bonus = 1.2;
+        double bonus;
+
+       if(attackerType.isInferior(targetType)) {
+            damage = (-1136 + baseDamage) * 1.1;
+            bonus = 1.1;
+        } else if(attackerType.isSuperior(targetType)) {
+            damage = (185 + baseDamage) * 1.3;
+            bonus = 1.3;
         } else if(targetType == attackerType) {
             damage = baseDamage;
+            bonus = 1.1;
         } else {
-            damage = (-477 + baseDamage) * 0.8;
-            bonus = 0.8;
+            damage = (-477 + baseDamage) * 1.1;
+            bonus = 1.1;
         }
 
         if(isCrit) {

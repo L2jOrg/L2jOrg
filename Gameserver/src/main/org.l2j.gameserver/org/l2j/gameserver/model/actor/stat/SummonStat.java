@@ -9,8 +9,8 @@ public class SummonStat extends PlayableStat {
     }
 
     @Override
-    public Summon getActiveChar() {
-        return (Summon) super.getActiveChar();
+    public Summon getCreature() {
+        return (Summon) super.getCreature();
     }
 
     @Override

@@ -354,6 +354,7 @@
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
+        <set name="is_tradable" val="false"/>
     </item>
     <item id="91040" name="Fire Attribute Fragment" type="EtcItem">
         <!-- A material filled with the power of Fire Attribute. Can be used to create equipment with the power of Fire Attribute. -->
@@ -361,6 +362,7 @@
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
+        <set name="is_tradable" val="false"/>
     </item>
     <item id="91041" name="Wind Attribute Fragment" type="EtcItem">
         <!-- A material filled with the power of Wind Attribute. Can be used to create equipment with the power of Wind Attribute. -->
@@ -368,6 +370,7 @@
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
+        <set name="is_tradable" val="false"/>
     </item>
     <item id="91042" name="Earth Attribute Fragment" type="EtcItem">
         <!-- A material filled with the power of Earth Attribute. Can be used to create equipment with the power of Earth Attribute. -->
@@ -375,6 +378,7 @@
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
+        <set name="is_tradable" val="false"/>
     </item>
     <item id="91043" name="Nebula’s Old Necklace" additionalName="Lv1" type="Armor">
         <!-- MP +35, Water Attack Defense +20, Acquired Attribute XP +3%. Cannot be enchanted using enchanting items. -->

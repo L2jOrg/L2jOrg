@@ -27,7 +27,7 @@ public class PlayableStat extends CharStat {
     }
 
     public boolean addExp(long value) {
-        final TerminateReturn term = EventDispatcher.getInstance().notifyEvent(new OnPlayableExpChanged(getActiveChar(), getExp(), getExp() + value), getActiveChar(), TerminateReturn.class);
+        final TerminateReturn term = EventDispatcher.getInstance().notifyEvent(new OnPlayableExpChanged(getCreature(), getExp(), getExp() + value), getCreature(), TerminateReturn.class);
         if ((term != null) && term.terminate()) {
             return false;
         }
@@ -44,9 +44,9 @@ public class PlayableStat extends CharStat {
         setExp(getExp() + value);
 
         byte minimumLevel = 1;
-        if (isPet(getActiveChar())) {
+        if (isPet(getCreature())) {
             // get minimum level from NpcTemplate
-            minimumLevel = (byte) PetDataTable.getInstance().getPetMinLevel(((Pet) getActiveChar()).getTemplate().getId());
+            minimumLevel = (byte) PetDataTable.getInstance().getPetMinLevel(((Pet) getCreature()).getTemplate().getId());
         }
 
         byte level = minimumLevel; // minimum level
@@ -63,10 +63,10 @@ public class PlayableStat extends CharStat {
             addLevel((byte) (level - getLevel()));
         }
 
-        if ((getLevel() > oldLevel) && isPlayer(getActiveChar())) {
-            final Player activeChar = getActiveChar().getActingPlayer();
+        if ((getLevel() > oldLevel) && isPlayer(getCreature())) {
+            final Player activeChar = getCreature().getActingPlayer();
             if (SkillTreesData.getInstance().hasAvailableSkills(activeChar, activeChar.getClassId())) {
-                getActiveChar().sendPacket(ExNewSkillToLearnByLevelUp.STATIC_PACKET);
+                getCreature().sendPacket(ExNewSkillToLearnByLevelUp.STATIC_PACKET);
             }
         }
 
@@ -85,9 +85,9 @@ public class PlayableStat extends CharStat {
         setExp(getExp() - value);
 
         byte minimumLevel = 1;
-        if (isPet(getActiveChar())) {
+        if (isPet(getCreature())) {
             // get minimum level from NpcTemplate
-            minimumLevel = (byte) PetDataTable.getInstance().getPetMinLevel(((Pet) getActiveChar()).getTemplate().getId());
+            minimumLevel = (byte) PetDataTable.getInstance().getPetMinLevel(((Pet) getCreature()).getTemplate().getId());
         }
         byte level = minimumLevel;
 
@@ -135,16 +135,16 @@ public class PlayableStat extends CharStat {
             setExp(getExpForLevel(getLevel()));
         }
 
-        if (!levelIncreased && isPlayer(getActiveChar()) && !getActiveChar().isGM() && Config.DECREASE_SKILL_LEVEL) {
-            ((Player) getActiveChar()).checkPlayerSkills();
+        if (!levelIncreased && isPlayer(getCreature()) && !getCreature().isGM() && Config.DECREASE_SKILL_LEVEL) {
+            ((Player) getCreature()).checkPlayerSkills();
         }
 
         if (!levelIncreased) {
             return false;
         }
 
-        getActiveChar().getStatus().setCurrentHp(getActiveChar().getStat().getMaxHp());
-        getActiveChar().getStatus().setCurrentMp(getActiveChar().getStat().getMaxMp());
+        getCreature().getStatus().setCurrentHp(getCreature().getStat().getMaxHp());
+        getCreature().getStatus().setCurrentMp(getCreature().getStat().getMaxMp());
 
         return true;
     }
@@ -181,8 +181,8 @@ public class PlayableStat extends CharStat {
     }
 
     @Override
-    public Playable getActiveChar() {
-        return (Playable) super.getActiveChar();
+    public Playable getCreature() {
+        return (Playable) super.getCreature();
     }
 
     public int getMaxLevel() {
@@ -191,13 +191,13 @@ public class PlayableStat extends CharStat {
 
     @Override
     public int getPhysicalAttackRadius() {
-        final Weapon weapon = getActiveChar().getActiveWeaponItem();
+        final Weapon weapon = getCreature().getActiveWeaponItem();
         return weapon != null ? weapon.getBaseAttackRadius() : super.getPhysicalAttackRadius();
     }
 
     @Override
     public int getPhysicalAttackAngle() {
-        final Weapon weapon = getActiveChar().getActiveWeaponItem();
+        final Weapon weapon = getCreature().getActiveWeaponItem();
         return weapon != null ? weapon.getBaseAttackAngle() : super.getPhysicalAttackAngle();
     }
 }

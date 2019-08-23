@@ -17,16 +17,24 @@ public enum ElementalType {
         return values()[elementId];
     }
 
-    public ElementalType getDominating() {
-        return dominating(this);
+    public boolean isSuperior(ElementalType targetType) {
+        return this == superior(targetType);
     }
 
-    public ElementalType dominating(ElementalType elementalType) {
+    public boolean isInferior(ElementalType targetType) {
+        return targetType == superior(this);
+    }
+
+    public ElementalType getSuperior() {
+        return superior(this);
+    }
+
+    public static ElementalType superior(ElementalType elementalType) {
         return switch (elementalType) {
             case FIRE -> WATER;
-            case WATER -> EARTH;
-            case WIND ->  FIRE;
-            case EARTH -> WIND;
+            case WATER -> WIND;
+            case WIND -> EARTH;
+            case EARTH -> FIRE;
             default -> NONE;
         };
     }
