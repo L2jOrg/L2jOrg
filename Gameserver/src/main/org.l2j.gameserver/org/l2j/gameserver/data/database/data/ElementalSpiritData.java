@@ -9,7 +9,7 @@ public class ElementalSpiritData {
     private int charId;
     private byte type;
     private byte level = 1;
-    private byte stage;
+    private byte stage = 1;
     private long experience;
 
     @Column("attack_points")
