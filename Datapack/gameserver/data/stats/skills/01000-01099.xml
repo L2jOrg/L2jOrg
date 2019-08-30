@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-    <skill id="1001" toLevel="15" name="Soul Cry">
-        <!-- P. Atk. +$s1 -->
+    <skill id="1001" toLevel="12" name="Battle Cry">
+        <!--Increases P. Atk. by +$s1 -->
         <icon>icon.skill1001</icon>
         <magicLvl>
             <value level="1">1</value>
@@ -16,9 +16,6 @@
             <value level="10">72</value>
             <value level="11">78</value>
             <value level="12">78</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-            <value level="13">78</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-            <value level="14">78</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-            <value level="15">78</value> <!-- FIXME: AUTO GENERATED LEVEL -->
         </magicLvl>
         <mpInitialConsume>1</mpInitialConsume>
         <operateType>T</operateType>
@@ -40,9 +37,6 @@
                     <value level="10">1</value>
                     <value level="11">1</value>
                     <value level="12">1</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-                    <value level="13">1</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-                    <value level="14">1</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-                    <value level="15">1</value> <!-- FIXME: AUTO GENERATED LEVEL -->
                 </power>
                 <ticks>5</ticks>
             </effect>
@@ -59,10 +53,7 @@
                     <value level="9">70</value>
                     <value level="10">80</value>
                     <value level="11">90</value>
-                    <value level="12">90</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-                    <value level="13">90</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-                    <value level="14">90</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-                    <value level="15">90</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+                    <value level="12">100</value>
                 </amount>
                 <mode>DIFF</mode>
             </effect>
@@ -79,10 +70,7 @@
                     <value level="9">7</value>
                     <value level="10">10</value>
                     <value level="11">12</value>
-                    <value level="12">12</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-                    <value level="13">12</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-                    <value level="14">12</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-                    <value level="15">12</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+                    <value level="12">14</value>
                 </amount>
                 <mode>PER</mode>
             </effect>
@@ -99,10 +87,7 @@
                     <value level="9">7</value>
                     <value level="10">10</value>
                     <value level="11">12</value>
-                    <value level="12">12</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-                    <value level="13">12</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-                    <value level="14">12</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-                    <value level="15">12</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+                    <value level="12">14</value>
                 </amount>
                 <mode>PER</mode>
             </effect>
@@ -119,10 +104,7 @@
                     <value level="9">7</value>
                     <value level="10">10</value>
                     <value level="11">12</value>
-                    <value level="12">12</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-                    <value level="13">12</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-                    <value level="14">12</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-                    <value level="15">12</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+                    <value level="12">14</value>
                 </amount>
                 <mode>PER</mode>
             </effect>
@@ -139,10 +121,7 @@
                     <value level="9">5</value>
                     <value level="10">5</value>
                     <value level="11">5</value>
-                    <value level="12">5</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-                    <value level="13">5</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-                    <value level="14">5</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-                    <value level="15">5</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+                    <value level="12">5</value>
                 </amount>
                 <mode>PER</mode>
             </effect>
@@ -159,10 +138,7 @@
                     <value level="9">5</value>
                     <value level="10">5</value>
                     <value level="11">5</value>
-                    <value level="12">5</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-                    <value level="13">5</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-                    <value level="14">5</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-                    <value level="15">5</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+                    <value level="12">5</value>
                 </amount>
                 <mode>PER</mode>
             </effect>
@@ -580,7 +556,7 @@
             </effect>
         </effects>
     </skill>
-    <skill id="1010" toLevel="3" name="Soul Shield">
+    <skill id="1010" toLevel="3" name="Spirit Shield">
         <!-- P. Def. +$s2 for $s1. -->
         <icon>icon.skill1010</icon>
         <abnormalLvl>
@@ -2887,8 +2863,8 @@
             </effect>
         </effects>
     </skill>
-    <skill id="1062" toLevel="2" name="Soul of Berserker">
-        <!-- For $s1 party member's P. Def. -$s2, M. Def. -$s3, P. Evasion -$s4, P. Atk. +$s5, M. Atk. +$s6, Atk. Spd. +$s7, Casting Spd. +$s8 and Speed +$s9. -->
+    <skill id="1062" toLevel="2" name="Berserker Spirit">
+        <!-- For $s1, a party member's P. Def. -$s2, M. Def -$s3, P. Evasion -$s4, P. Atk. +$s5, M. Atk. +$s6, Atk. Spd. +$s7, Casting Spd. +$s8, and Movement Speed +$s9. -->
         <icon>icon.skill1062</icon>
         <abnormalLvl>
             <value level="1">1</value>
@@ -4379,8 +4355,8 @@
             </effect>
         </effects>
     </skill>
-    <skill id="1090" toLevel="6" name="Drain Energy">
-        <!-- Inflicts damage on the enemy with $s1 Power added to M. Atk. Absorbs $s2 of the damage as HP. -->
+    <skill id="1090" toLevel="6" name="Life Drain">
+        <!-- Inflicts damage on the enemy with bonus  $s1 M. Atk Power. Absorbs $s2 of the damage as HP. -->
         <icon>icon.skill1090</icon>
         <castRange>600</castRange>
         <effectPoint>
@@ -4426,12 +4402,12 @@
         <effects>
             <effect name="HpDrain">
                 <power>
-                    <value level="1">15</value>
-                    <value level="2">21</value>
+                    <value level="1">18</value>
+                    <value level="2">23</value>
                     <value level="3">26</value>
-                    <value level="4">32</value>
-                    <value level="5">38</value>
-                    <value level="6">44</value>
+                    <value level="4">33</value>
+                    <value level="5">39</value>
+                    <value level="6">46</value>
                 </power>
                 <percentage>80</percentage>
             </effect>

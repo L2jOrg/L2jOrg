@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-    <skill id="50100" toLevel="1" name="Halisha Transformation - Long Distance">
+    <skill id="50100" toLevel="1" name="Halisha's Conversion - Long Distance">
         <!-- Long distance attack resistance +100%, significant increase of M. Def. -->
         <icon>icon.skill30515</icon>
         <operateType>A1</operateType>
@@ -8,16 +8,16 @@
         <coolTime>500</coolTime>
         <effectPoint>100</effectPoint>
     </skill>
-    <skill id="50101" toLevel="1" name="Halisha Transformation - Short Distance">
-        <!-- Short distance attack resistance +100%. -->
+    <skill id="50101" toLevel="1" name="Halisha's Conversion - Short Distance">
+        <!-- Increases Short Distance Attack Resistance +100%. -->
         <icon>icon.skill1062</icon>
         <operateType>A1</operateType>
         <hitTime>1000</hitTime>
         <coolTime>500</coolTime>
         <effectPoint>100</effectPoint>
     </skill>
-    <skill id="50102" toLevel="1" name="Halisha Transformation - Dash">
-        <!-- Speed +100%. -->
+    <skill id="50102" toLevel="1" name="Halisha's Conversion - Dash">
+        <!-- Increases Movement Speed +100%. -->
         <icon>icon.skill1062</icon>
         <operateType>A1</operateType>
         <hitTime>1000</hitTime>
@@ -33,15 +33,15 @@
         <reuseDelay>3000</reuseDelay>
         <effectPoint>-100</effectPoint>
     </skill>
-    <skill id="50104" toLevel="1" name="HP Transfer">
-        <!-- Connects souls and recovers HP. -->
+    <skill id="50104" toLevel="1" name="Life Force Transfer">
+        <!-- Connects to Spirit King. Instant HP Recovery. -->
         <icon>icon.skill1042</icon>
         <operateType>A1</operateType>
         <castRange>900</castRange>
         <hitTime>600000</hitTime>
     </skill>
-    <skill id="50105" toLevel="1" name="Earth Life">
-        <!-- Resores HP for prolonged time thanks to the Earth Attribute power. -->
+    <skill id="50105" toLevel="1" name="Life of Earth">
+        <!-- State connected to Earth's power. Continuous HP Recovery. -->
         <operateType>A1</operateType>
         <castRange>900</castRange>
         <effectPoint>100</effectPoint>
@@ -62,8 +62,8 @@
 		<reuseDelay>2500</reuseDelay>
 		<effectPoint>-354</effectPoint>
 	</skill>
-	<skill id="50108" toLevel="1" name="Pirate's Drain HP">
-		<!-- Inflicts magic damage on the enemy with 116 Power added to M. Atk. Power equals to that of Gust Lv. 80 skill. -->
+	<skill id="50108" toLevel="1" name="Pirate's Drain Energy">
+		<!-- Attacks the enemy with 116 Power added to M. Atk., which is as powerful as Lv. 80 Gust skill. -->
 		<operateType>A1</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<castRange>600</castRange>
@@ -81,15 +81,15 @@
 		<reuseDelay>5000</reuseDelay>
 		<effectPoint>-100</effectPoint>
 	</skill>
-	<skill id="50110" toLevel="1" name="Pirate's Aqua Splash">
-		<!-- Inflicts damage on the target and nearby enemies with 1876 Power. -->
+	<skill id="50110" toLevel="1" name="Pirate's Splash">
+		<!-- Attacks nearby enemies with 1876 Power. -->
 		<operateType>A1</operateType>
 		<hitTime>2000</hitTime>
 		<coolTime>500</coolTime>
 		<effectPoint>-100</effectPoint>
 	</skill>
-	<skill id="50111" toLevel="1" name="Pirate's Burst">
-		<!-- Inflicts magic damage on the enemy with 116 Power added to M. Atk. Power equals to that of Gust Lv. 80 skill. -->
+	<skill id="50111" toLevel="1" name="Pirate's Explosion">
+		<!-- Attacks the enemy with 116 Power added to M. Atk., which is as powerful as Lv. 80 Gust skill. -->
 		<icon>icon.skill0003</icon>
 		<operateType>A1</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -118,8 +118,8 @@
 		<reuseDelay>5000</reuseDelay>
 		<effectPoint>-100</effectPoint>
 	</skill>
-	<skill id="50114" toLevel="1" name="Pirate's Shield Bash">
-		<!-- Inflicts damage on all enemies in front of the character with 2112 Power. -->
+	<skill id="50114" toLevel="1" name="Pirate's Shield Strike">
+		<!--Attacks enemies within a fan-shaped range before you with 2112 Power. -->
 		<icon>icon.skill0096</icon>
 		<operateType>A1</operateType>
 		<isDebuff>true</isDebuff>
@@ -136,15 +136,15 @@
 		<reuseDelay>15000</reuseDelay>
 		<effectPoint>100</effectPoint>
 	</skill>
-	<skill id="50116" toLevel="1" name="Holy Water Blessing">
-		<!-- Holy water blessed by the High Priest of Aden protects you from the evil energy of ancient pirate's tomb. You can get it from Captain Anthony. -->
+	<skill id="50116" toLevel="1" name="Blessing of Holy Water">
+		<!-- Holy Water of the High Priest in the Town of Aden helps you tolerate evil energy of the Tomb of Ancient Pirates. You can receive it from Captain Anthony. -->
 		<icon>icon.skill16871</icon>
 		<operateType>A2</operateType>
 		<isMagic>4</isMagic>
 		<effectPoint>100</effectPoint>
 	</skill>
-	<skill id="50117" toLevel="1" name="Sayha's Grace">
-		<!-- You received fixed damage due to use of Sayha's Grace. -->
+	<skill id="50117" toLevel="1" name="Sayha's Benefaction">
+		<!-- Receives fixed damage thanks to Sayha's Benefaction. -->
 		<icon>icon.skill11621</icon>
 		<operateType>P</operateType>
 	</skill>
@@ -156,7 +156,7 @@
 		<operateType>A1</operateType>
 		<castRange>900</castRange>
 	</skill>
-	<skill id="50120" toLevel="3" name="Curse of Death">
+	<skill id="50120" toLevel="3" name="Death Curse">
 		<!-- M. Atk. -$s1. -->
 		<icon>icon.skill0046</icon>
 		<operateType>A1</operateType>
@@ -166,8 +166,8 @@
 		<hitTime>1000</hitTime>
 		<reuseDelay>10000</reuseDelay>
 	</skill>
-	<skill id="50121" toLevel="1" name="Protection of Blue Hawk">
-		<!-- A certificate allowing to conduct research on Primeval Isle. Can be obtained from Archer Researcher Kairen in Aden. -->
+	<skill id="50121" toLevel="1" name="Blue Eagle's Protection">
+		<!-- Certificate for explorers with permission to explore Primeval Isle. You can get it from Eagle Eye Explorer Kairen in the Town of Aden. -->
 		<icon>icon.campaign_high_rank_reward</icon>
 		<operateType>A2</operateType>
 		<isMagic>4</isMagic>
@@ -179,69 +179,69 @@
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<hitTime>100</hitTime>
 	</skill>
-	<skill id="50123" toLevel="1" name="Benefaction of Blue Hawk">
-		<!-- Sayha's Grace Consumption -50%. -->
+	<skill id="50123" toLevel="1" name="Blue Eagle's Grace">
+		<!-- Sayha's Grace Consumption Speed -50%. -->
 		<icon>icon.ev_10th_present1</icon>
 		<operateType>A2</operateType>
 		<isMagic>4</isMagic>
 	</skill>
-	<skill id="50124" toLevel="1" name="Lord Ishka's Assassin">
-		<!-- Combat characteristics of the player who killed Lord Ishka are increased. -->
+	<skill id="50124" toLevel="1" name="Defeater of Lord Ishka">
+		<!-- uff given to those who defeat Lord Ishka. Increases battle ability -->
 		<icon>icon.skill1042</icon>
 		<operateType>A2</operateType>
 		<isMagic>4</isMagic>
 		<hitTime>500</hitTime>
 	</skill>
-	<skill id="50125" toLevel="2" name="Piggy-Bank">
+	<skill id="50125" toLevel="2" name="Pig Coin Bank">
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>500</reuseDelay>
 	</skill>
-	<skill id="50126" toLevel="2" name="Piggy-Bank">
+	<skill id="50126" toLevel="2" name="Pig Coin Bank">
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>500</reuseDelay>
 	</skill>
-	<skill id="50127" toLevel="1" name="Piggy's Star Candy">
+	<skill id="50127" toLevel="1" name="Little Pig Blessing Star Candy">
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>500</reuseDelay>
 	</skill>
-	<skill id="50128" toLevel="1" name="Old Home's Treasure Chest">
+	<skill id="50128" toLevel="1" name="Ancient Imperial Treasure Chest">
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>500</reuseDelay>
 	</skill>
-	<skill id="50129" toLevel="1" name="Old Home's Golden Chest">
+	<skill id="50129" toLevel="1" name="Ancient Imperial Gold Box">
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>500</reuseDelay>
 	</skill>
-	<skill id="50130" toLevel="1" name="Old Home's Silver Chest">
+	<skill id="50130" toLevel="1" name="Ancient Imperial Silver Box">
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>500</reuseDelay>
 	</skill>
-	<skill id="50131" toLevel="1" name="Special Dragon's Miracle Potion">
-		<!-- For 20 min., Acquired XP/ SP +50%, P. Atk. +250, M. Atk. +380, P. Def. +320, M. Def. +450, Atk. Spd./ Casting Spd. +50, P./ M. Critical Rate +30, P./ M. Critical Damage +10%, Max HP/ CP +2500, Max MP +1500, HP/ MP Recovery Bonus +10, Sayha's Grace Consumption -20%. With a certain chance, absorbs 5% of the inflicted damage as HP. The effect remains after death. -->
+	<skill id="50131" toLevel="1" name="Dragon's Special Elixir">
+		<!-- For 20 min., XP/SP Gain +50%%, P. Atk. +250, M. Atk. +380, P. Def. +320, M. Def. +450, Atk. Spd./Casting Spd. +50, P./M. Critical Rate +30, P. Critical Damage/P. Critical Damage +10%%, Max HP/CP +2500, Max MP +1500, HP Recovery Bonus/MP Recovery Bonus +10, Sayha's Grace Consumption -20%%. Has a chance to recover 5%% of damage inflicted to enemy as HP Effect remains after death. -->
 		<icon>icon.bm_dragon_posion</icon>
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>
 		<reuseDelay>5000</reuseDelay>
 	</skill>
-	<skill id="50132" toLevel="1" name="Mid-grade HP Recovery Potion">
+	<skill id="50132" toLevel="1" name="Intermediate HP Potion">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="50133" toLevel="1" name="Improved Scroll of Escape">
+	<skill id="50133" toLevel="1" name="Advanced Scroll of Escape">
 		<operateType>A1</operateType>
 		<hitTime>1000</hitTime>
 	</skill>
@@ -252,73 +252,79 @@
 		<isMagic>4</isMagic>
 		<reuseDelay>60000</reuseDelay>
 	</skill>
-	<skill id="50135" toLevel="1" name="Einhasad�s Protection">
-		<!-- For 1 h., Acquired XP/ SP +100%. Cooldown: 1 min. The effect remains after death. -->
+	<skill id="50135" toLevel="1" name="Einhasad's Protection">
+		<!-- For 1 hour, XP/SP Gain +100%% with Einhasad's Grace. Cooldown 1 minute. Einhasad's Grace does not disappear at death. -->
 		<icon>icon.etc_dragons_blood_i03</icon>
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>
 		<reuseDelay>60000</reuseDelay>
 		<effectPoint>1</effectPoint>
 	</skill>
-	<skill id="50136" toLevel="1" name="Hero's HP Recovery Potion">
+	<skill id="50136" toLevel="1" name="Warrior's HP Potion">
 		<icon>icon.etc_reagent_white_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="50137" toLevel="1" name="Hero's MP Recovery Potion">
+	<skill id="50137" toLevel="1" name="Warrior's MP Potion">
 		<icon>icon.etc_reagent_white_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="50138" toLevel="1" name="Dragon Belt Chest">
+	<skill id="50138" toLevel="1" name="Dragon's Belt Box">
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>500</reuseDelay>
 	</skill>
-	<skill id="50139" toLevel="1" name="Dragon Belt's Decoration">
+	<skill id="50139" toLevel="1" name="Dragon's Belt Ornament">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="50140" toLevel="1" name="Red Lantern - 1st Place">
-		<!-- A magic lantern given as a reward for the 1st place. Prize: XP +100,000,000, SP +2,700,000. Cannot be exchanged, dropped or sold in a private store. Can be stored in a private warehouse. -->
+	<skill id="50140" toLevel="1" name="Red Arc - 1st Place">
+		<!-- Magic Lamp 1st Place Reward - Recharges 100,000,000 XP and 2,700,000 SP. Cannot be exchanged, dropped or sold in a private store. Can be stored in a private warehouse. Can be shared within account through Dimensional Merchant -->
 		<icon>icon.etc_holy_grail_i00</icon>
 		<operateType>A1</operateType>
 		<reuseDelay>500</reuseDelay>
 	</skill>
-	<skill id="50141" toLevel="1" name="Purple Lantern - 2nd Place">
-		<!-- A magic lantern given as a reward for the 2nd place. Prize: XP +30,000,000, SP +810,000. Cannot be exchanged, dropped or sold in a private store. Can be stored in a private warehouse. -->
+	<skill id="50141" toLevel="1" name="Purple Arc - 2nd Place">
+		<!-- Magic Lamp 2nd Place Reward - Recharges 30,000,000 XP and 810,000 SP. Cannot be exchanged, dropped or sold in a private store. Can be stored in a private warehouse. Can be shared within account through Dimensional Merchant. -->
 		<icon>icon.etc_holy_grail_i01</icon>
 		<operateType>A1</operateType>
 		<reuseDelay>500</reuseDelay>
 	</skill>
-	<skill id="50142" toLevel="1" name="Blue Lantern - 3rd Place">
-		<!-- A magic lantern given as a reward for the 3rd place. Prize: XP +10,000,000, SP +270,000. Cannot be exchanged, dropped or sold in a private store. Can be stored in a private warehouse. -->
+	<skill id="50142" toLevel="1" name="Blue Arc - 3rd Place">
+		<!-- Magic Lamp 3rd Place Reward - Recharges 10,000,000 XP and 270,000 SP. Cannot be exchanged, dropped or sold in a private store. Can be stored in a private warehouse. Can be shared within account through Dimensional Merchant. -->
 		<icon>icon.etc_holy_grail_i02</icon>
 		<operateType>A1</operateType>
 		<reuseDelay>500</reuseDelay>
 	</skill>
-	<skill id="50143" toLevel="1" name="Green Lantern - 4th Place">
-		<!-- A magic lantern given as a reward for the 4th place. Prize: XP +5,000,000, SP +135,000. Cannot be exchanged, dropped or sold in a private store. Can be stored in a private warehouse. -->
+	<skill id="50143" toLevel="1" name="Green Arc - 4th Place">
+		<!-- Magic Lamp 4th Place Reward - Recharges 5,000,000 XP and 135,000 SP. Cannot be exchanged, dropped or sold in a private store. Can be stored in a private warehouse. Can be shared within account through Dimensional Merchant. -->
 		<icon>icon.etc_holy_grail_i03</icon>
 		<operateType>A1</operateType>
 		<reuseDelay>500</reuseDelay>
 	</skill>
-	<skill id="50144" toLevel="3" name="Pa'agrio's Summoning Stick (PA Event)">
+	<skill id="50144" toLevel="3" name="PC Cafe Event Pa'agrio's Summoning Stick">
 		<operateType>A1</operateType>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<hitTime>2000</hitTime>
 		<reuseDelay>5000</reuseDelay>
 	</skill>
-	<skill id="50145" toLevel="5" name="Weapon Pack (PA Event)">
+	<skill id="50145" toLevel="5" name="PC Cafe Event Weapon Support Box">
+		<!--
+			level2 -> PC Cafe Event Armor Support Box
+			level3 -> PC Cafe Event Agathion Pack
+			level4 -> +10 Advanced Agathion Box
+			level5 -> +12 S-grade Weapon Pack
+		-->
 		<icon>icon.etc_treasure_box_i04</icon>
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>3000</reuseDelay>
 	</skill>
-	<skill id="50146" toLevel="1" name="Special Enchant Scroll (PA Event)">
+	<skill id="50146" toLevel="1" name="PC Cafe Event Special Enchant Scroll">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="50147" toLevel="1" name="Energy Rune">
-		<!-- When in inventory, recovers Sayha's Grace points. -->
+	<skill id="50147" toLevel="1" name="Rune of Vitality">
+		<!-- Maintains Sayha's Grace when you have it in the inventory. -->
 		<icon>icon.bm_freya_rune</icon>
 		<operateType>P</operateType>
 	</skill>
@@ -328,11 +334,11 @@
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 	</skill>
-	<skill id="50149" toLevel="1" name="Sayha's Blessing (Event)">
+	<skill id="50149" toLevel="1" name="Sayha's Blessing - Event">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="50150" toLevel="1" name="Sayha's Effect Scroll (Event)">
-		<!-- A magic scroll which allows getting various buffs. -->
+	<skill id="50150" toLevel="1" name="Sayha's Buff Scroll - Event">
+		<!--  A mysterious scroll that triggers various buffs. -->
 		<icon>icon.etc_ssq_i00</icon>
 		<operateType>A1</operateType>
 		<reuseDelay>60000</reuseDelay>
@@ -340,18 +346,18 @@
 	<skill id="50151" toLevel="1" name="HP Potion">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="50152" toLevel="1" name="Scroll of Escape: Effective Training">
+	<skill id="50152" toLevel="1" name="Escape: Adaptation Training">
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="50153" toLevel="1" name="Scroll of Escape: Captain Bathis">
 		<!-- A magical scroll that relocates you to the Captain Bathis in Gludio. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="50154" toLevel="1" name="Scroll of Escape: Captain Bathis">
-		<!-- A magical scroll that relocates you to the Captain Bathis in Gludio. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
+	<skill id="50154" toLevel="1" name="Escape - Captain Bathis">
+		<!-- A magic scroll that teleports you to Captain Bathis in the Town of Gludio. Cannot be exchanged, dropped or sold in a private store. Can be stored in a private warehouse. -->
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="50155" toLevel="1" name="+3 Dragon Belt Chest">
+	<skill id="50155" toLevel="1" name="+3 Dragon's Belt Box">
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="50156" toLevel="60" name="Inventory Test">
@@ -359,81 +365,82 @@
 		<icon>icon.skill0332</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="50157" toLevel="1" name="Primeval Isle's Prolongating Stone">
+	<skill id="50157" toLevel="1" name="Primeval Isle Time Recharge Stone">
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>3000</reuseDelay>
 	</skill>
-	<skill id="50158" toLevel="1" name="Ancient Pirates' Tomb's Prolongating Stone">
+	<skill id="50158" toLevel="1" name="Tomb of Ancient Pirates Time Recharge Stone">
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>3000</reuseDelay>
 	</skill>
-	<skill id="50159" toLevel="1" name="Heavenly Rift's Prolongating Stone">
+	<skill id="50159" toLevel="1" name="Heavenly Rift Time Recharge Stone">
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>3000</reuseDelay>
 	</skill>
-	<skill id="50160" toLevel="1" name="+7 Admiral's Estoc Chest">
+	<skill id="50160" toLevel="1" name="+7 Admiral's Estoc Box">
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>500</reuseDelay>
 	</skill>
-	<skill id="50161" toLevel="1" name="+7 Saber Tooth Chest">
+	<skill id="50161" toLevel="1" name="+7 Saber Tooth Box">
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>500</reuseDelay>
 	</skill>
-	<skill id="50162" toLevel="1" name="Ecliptic Axe +7">
+	<skill id="50162" toLevel="1" name="+7 Ecliptic Axe">
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>500</reuseDelay>
 	</skill>
-	<skill id="50163" toLevel="1" name="Star Candy">
+	<skill id="50163" toLevel="1" name="Blessing Star Candy">
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>500</reuseDelay>
 	</skill>
-	<skill id="50164" toLevel="1" name="Enhanced Warrior's Rapier Chest">
+	<skill id="50164" toLevel="1" name="Enchanted Fighter's Rapier Box">
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>500</reuseDelay>
 	</skill>
-	<skill id="50165" toLevel="1" name="Enhanced Ancient Warrior's Sword Chest">
+	<skill id="50165" toLevel="1" name="Enchanted Fighter's Ancient Sword Box">
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>500</reuseDelay>
 	</skill>
-	<skill id="50166" toLevel="1" name="Scroll: Enchant Talisman of Baium">
+	<skill id="50166" toLevel="1" name="Enchant Scroll: Talisman of Baium">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="50167" toLevel="1" name="Scroll: Enchant Ring of Insolence">
+	<skill id="50167" toLevel="1" name="Enchant Scroll: Ring of Insolence">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="50168" toLevel="1" name="Scroll: Enchant Dragon Valley's Earring">
+	<skill id="50168" toLevel="1" name="Enchant Scroll: Earring of Dragon World">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="50169" toLevel="12" name="Scroll of Escape: Tower of Insolence (1st Floor)">
+	<skill id="50169" toLevel="12" name="Scroll of Escape: Tower of Insolence 1st Floor">
+		<!-- level 1 to 12 floor -->
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="50170" toLevel="1" name="Special Dragon's Miracle Potion">
-		<!-- For 20 min., Acquired XP/ SP +50%, P. Atk. +250, M. Atk. +380, P. Def. +320, M. Def. +450, Atk. Spd./ Casting Spd. +50, P./ M. Critical Rate +30, P./ M. Critical Damage +10%, Max HP/ CP +2500, Max MP +1500, HP/ MP Recovery Bonus +10, Sayha's Grace Consumption -20%. With a certain chance absorbs 5% of the inflicted damage as HP. The effect remains after death. -->
+	<skill id="50170" toLevel="1" name=" Dragon's Special Elixir">
+		<!-- For 20 min., XP/SP Gain +50%%, P. Atk. +250, M. Atk. +380, P. Def. +320, M. Def. +450, Atk. Spd./Casting Spd. +50, P./M. Critical Rate +30, P. Critical Damage/P. Critical Damage +10%%, Max HP/CP +2500, Max MP +1500, HP Recovery Bonus/MP Recovery Bonus +10, Sayha's Grace Consumption -20%%. Has a chance to recover 5%% of damage inflicted to enemy as HP Effect remains after death. -->
 		<icon>icon.bm_dragon_posion</icon>
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>
 		<reuseDelay>5000</reuseDelay>
 	</skill>
-	<skill id="50171" toLevel="1" name="HP Potion">
+	<skill id="50171" toLevel="1" name="Healing Potion">
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="50172" toLevel="1" name="Sayha's Victory">
@@ -452,57 +459,70 @@
 		<reuseDelay>10000</reuseDelay>
 		<effectPoint>1</effectPoint>
 	</skill>
-	<skill id="50174" toLevel="1" name="Mental Resistance Scroll">
-		<!-- For 20 min., Mental Resistance +10%. -->
+	<skill id="50174" toLevel="1" name="Mental Attack Resistance Scroll">
+		<!--  Increases Mental Attack Resistance by 10% for 20 min -->
 		<icon>icon.scroll_of_verification_i08</icon>
 		<operateType>A1</operateType>
 		<isMagic>4</isMagic>
 		<reuseDelay>10000</reuseDelay>
 		<effectPoint>1</effectPoint>
 	</skill>
-	<skill id="50175" toLevel="4" name="Blessing Chest">
+	<skill id="50175" toLevel="4" name="Box of Full Blessing">
+		<!--
+			2 - Giant's Shining Box
+			3 - Giant's Coin Pouch
+			4 - Suspicious Stone
+		-->
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>500</reuseDelay>
 	</skill>
-	<skill id="50176" toLevel="1" name="+10 Special White Sayha's Cloak Chest">
+	<skill id="50176" toLevel="1" name="+10 Sayha's Supreme Cloak Box - White">
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>500</reuseDelay>
 	</skill>
-	<skill id="50177" toLevel="1" name="Primeval Isle's Prolongating Stone">
+	<skill id="50177" toLevel="1" name="Primeval Isle Time Recharge Stone">
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>3000</reuseDelay>
 	</skill>
-	<skill id="50178" toLevel="1" name="Ancient Pirates' Tomb's Prolongating Stone">
+	<skill id="50178" toLevel="1" name="Tomb of Ancient Pirates Time Recharge Stone">
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>3000</reuseDelay>
 	</skill>
-	<skill id="50179" toLevel="1" name="Heavenly Rift's Prolongating Stone">
+	<skill id="50179" toLevel="1" name="Heavenly Rift Time Recharge Stone">
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>3000</reuseDelay>
 	</skill>
 	<skill id="50180" toLevel="8" name="+8 Blue Wolf Heavy Armor Set">
+		<!-- 2 - +8 Blue Wolf Light Armor Set
+		 3 - +8 Blue Wolf Robe Set
+		 4 - +8 Doom Heavy Armor Set
+		 5 - +8 Doom Light Armor Set
+		 6 - +8 Doom Robe Set
+		 7 - +8 Avadon Robe Set
+		 8 - +8 Plated Leather Set
+		 -->
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>500</reuseDelay>
 	</skill>
-	<skill id="50181" toLevel="1" name="Luxury Box (A-grade)">
+	<skill id="50181" toLevel="1" name="Luxury A-grade Box">
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>500</reuseDelay>
 	</skill>
-	<skill id="50182" toLevel="1" name="Scroll of Escape Pack: Tower of Insolence">
+	<skill id="50182" toLevel="1" name="Scroll of Escape Box: Tower of Insolence">
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
@@ -518,21 +538,33 @@
 		<icon>icon.agathion_magmeld_teleport</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="50185" toLevel="1" name="Summon Agathion - Griffin">
-		<!-- Summons Agathion. -->
+	<skill id="50185" toLevel="1" name="Release Agathion's Seal - Griffin">
+		<!-- Unseals the Agathion. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
 	</skill>
-	<skill id="50186" toLevel="1" name="Adventurer's Agathion - Griffin">
+	<skill id="50186" toLevel="1" name="Adventurer's Griffin Agathion">
 		<!-- P. Def. +5. -->
 		<icon>icon.griffin_vehicle</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="PhysicalDefence">
+				<amount>5</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="50187" toLevel="1" name="Adventurer's Rough Jewel">
+	<skill id="50187" toLevel="1" name="Adventurer's Gem Fragment">
 		<!-- Max HP +5 -->
 		<icon>icon.etc_crystal_piece_i00</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="MaxHP">
+				<amount>5</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="50188" toLevel="1" name="Adventurer's Talisman">
 		<!-- M. Def. +5. -->
@@ -544,12 +576,29 @@
 		<icon>icon.ring_of_oman</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="50190" toLevel="11" name="Dragon Valley's Earring">
+	<skill id="50190" toLevel="11" name="Earring of Dragon World">
 		<!-- Stun Resistance +$s1. -->
 		<icon>icon.accessary_catseye_earing_i00</icon>
 		<operateType>P</operateType>
+		<effects>
+			<effect name="DefenceTrait">
+				<SHOCK>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">3</value>
+					<value level="4">4</value>
+					<value level="5">5</value>
+					<value level="6">10</value>
+					<value level="7">12</value>
+					<value level="8">14</value>
+					<value level="9">18</value>
+					<value level="10">22</value>
+					<value level="11">30</value>
+				</SHOCK>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="50191" toLevel="5" name="Talisman of Baium - Enchantment Effect">
+	<skill id="50191" toLevel="5" name="Talisman of Baium Enchant Effect">
 		<!-- P. Atk. +16, M. Atk. +23, CON/ MEN +1, Skill Cooldown -1%. -->
 		<icon>icon.tallisman_baium</icon>
 		<operateType>P</operateType>
@@ -559,8 +608,19 @@
 		<icon>icon.etc_bm_jewel_opal_i00</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="50196" toLevel="10" name="Opal - Special Abilities">
-		<!-- Becomes invincible for debuffs for $s1 -->
+	<skill id="50196" toLevel="10" name="Opal - Special Ability">
+		<!-- Becomes invincible for debuffs for $s1
+			1 - 1s
+			2 - 2s
+			3 - 3s
+			4 - 5s
+			5 - 15s
+			6 - 16s
+			7 - 17s
+			8 - 18s
+			9 - 20s
+			10 - 25s
+		-->
 		<icon>icon.etc_bm_jewel_opal_i00</icon>
 		<operateType>A1</operateType>
 		<reuseDelay>300000</reuseDelay>

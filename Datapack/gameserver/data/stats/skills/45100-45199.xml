@@ -377,7 +377,10 @@
 		<reuseDelay>10000</reuseDelay>
 	</skill>
 	<skill id="45151" toLevel="2" name="Collect Light Souls">
-		<!-- Collects $s1 Light Souls. Consumes $s2 Spirit Ores. -->
+		<!-- Collects $s1 Light Souls. Consumes $s2 Spirit Ores.
+			1 - 70, 30
+			2 - 100, 30
+		-->
 		<icon>icon.skill55474</icon>
 		<operateType>A1</operateType>
 		<hitTime>1000</hitTime>
@@ -385,7 +388,10 @@
 		<mpConsume>50</mpConsume>
 	</skill>
 	<skill id="45152" toLevel="2" name="Collect Shadow Souls">
-		<!-- Collects $s1 Shadow Souls. Consumes $s2 Spirit Ores. -->
+		<!-- Collects $s1 Shadow Souls. Consumes $s2 Spirit Ores.
+		 	1 - 70, 30
+			2 - 100, 30
+		 -->
 		<icon>icon.skill55475</icon>
 		<operateType>A1</operateType>
 		<hitTime>1000</hitTime>

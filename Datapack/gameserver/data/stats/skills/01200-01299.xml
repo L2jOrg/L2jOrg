@@ -7953,8 +7953,8 @@
             </effect>
         </effects>
     </skill>
-    <skill id="1283" toLevel="13" name="Soul Guard">
-        <!-- P. Def. +$s1. Continuously consumes MP. -->
+    <skill id="1283" toLevel="13" name="Spirit Guard">
+        <!-- Increases P. Def. by $s1 with the power of Ancient Soul. Continuously consumes MP. -->
         <icon>icon.skill1283</icon>
         <magicLvl>
             <value level="1">44</value>
@@ -8685,23 +8685,23 @@
         <effects>
             <effect name="MagicalAttack">
                 <power>
-                    <value level="1">41</value>
-                    <value level="2">43</value>
-                    <value level="3">45</value>
-                    <value level="4">46</value>
-                    <value level="5">48</value>
-                    <value level="6">50</value>
-                    <value level="7">51</value>
-                    <value level="8">53</value>
-                    <value level="9">54</value>
-                    <value level="10">55</value>
-                    <value level="11">57</value>
-                    <value level="12">58</value>
-                    <value level="13">60</value>
-                    <value level="14">62</value>
-                    <value level="15">64</value>
-                    <value level="16">66</value>
-                    <value level="17">68</value>
+                    <value level="1">60</value>
+                    <value level="2">62</value>
+                    <value level="3">64</value>
+                    <value level="4">66</value>
+                    <value level="5">68</value>
+                    <value level="6">70</value>
+                    <value level="7">72</value>
+                    <value level="8">74</value>
+                    <value level="9">76</value>
+                    <value level="10">78</value>
+                    <value level="11">81</value>
+                    <value level="12">84</value>
+                    <value level="13">88</value>
+                    <value level="14">91</value>
+                    <value level="15">94</value>
+                    <value level="16">97</value>
+                    <value level="17">100</value>
                 </power>
             </effect>
         </effects>

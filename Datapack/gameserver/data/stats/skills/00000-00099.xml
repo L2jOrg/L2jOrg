@@ -5566,7 +5566,7 @@
             </effect>
         </effects>
     </skill>
-    <skill id="61" toLevel="3" name="Cure Bleed">
+    <skill id="61" toLevel="3" name="Cure Bleeding">
         <!-- Cures minor bleeding. -->
         <icon>icon.skill0061</icon>
         <effectPoint>
@@ -5976,8 +5976,8 @@
             </effect>
         </effects>
     </skill>
-    <skill id="70" toLevel="56" name="Drain HP">
-        <!-- Inflicts dark damage on the target with $s1 Power added to M. Atk. Absorbs $s2 of the damage inflicted on target as HP. -->
+    <skill id="70" toLevel="56" name="Drain Energy">
+        <!-- Inflicts damage to the target with bonus $s1 M. Atk. Power. Absorbs $s2 of the damage inflicted as HP. -->
         <icon>icon.skill0070</icon>
         <castRange>600</castRange>
         <effectPoint>
@@ -7587,8 +7587,8 @@
             </effect>
         </effects>
     </skill>
-    <skill id="98" toLevel="8" name="Sword Symphony">
-        <!-- Attacks the enemy with 825 Power added to P. Atk. and blocks the use of magic skills for 10 sec. Critical. Over-hit. -->
+    <skill id="98" toLevel="8" name="Symphony">
+        <!-- Attacks the enemy with bonus $1 P. Atk. Power. Blocks the use of magic skills for $2 sec. Critical. Over-hit. -->
         <icon>icon.skill0098</icon>
         <abnormalLvl>1</abnormalLvl>
         <abnormalTime>10</abnormalTime>
@@ -7646,7 +7646,7 @@
                     <value level="3">1194</value>
                     <value level="4">1373</value>
                     <value level="5">1554</value>
-                    <value level="6">1726</value> <!-- Guessed -->
+                    <value level="6">1737</value>
                     <value level="7">2109</value> <!-- Confirmed https://eu.4gameforum.com/threads/654631/ -->
                     <value level="8">2298</value> <!-- Confirmed https://eu.4gameforum.com/threads/654631/ -->
                 </power>

@@ -1165,8 +1165,8 @@
             </effect>
         </selfEffects>
     </skill>
-    <skill id="322" toLevel="6" name="Ultimate Shield">
-        <!-- Shield Defense +$s1. Continuously consumes MP proportionately to your level. -->
+    <skill id="322" toLevel="6" name="Shield Fortress">
+        <!-- Increases Shield Defense +$s1. Continuously consumes MP proportionately to your level. -->
         <icon>icon.skill0322</icon>
         <magicLvl>
             <value level="1">64</value>
@@ -1289,22 +1289,29 @@
             </effect>
         </effects>
     </skill>
-    <skill id="328" toLevel="1" name="Wisdom">
-        <!-- Resistance to sleep, mental attacks and hold +22. -->
+    <skill id="328" toLevel="1" name="Dignity of Kamael">
+        <!-- With the original power of Kamael, Speed +$s1, Atk. Spd. +$s2, Casting Spd. +$s3. -->
         <icon>icon.skill0328</icon>
         <magicLvl>76</magicLvl>
         <operateType>P</operateType>
         <magicCriticalRate>5</magicCriticalRate>
         <effects>
-            <effect name="DefenceTrait">
-                <HOLD>20</HOLD>
-                <DERANGEMENT>20</DERANGEMENT>
-                <SLEEP>20</SLEEP>
+            <effect name="PhysicalAttackSpeed">
+                <amount>20</amount>
+                <mode>DIFF</mode>
+            </effect>
+            <effect name="MagicalAttackSpeed">
+                <amount>20</amount>
+                <mode>DIFF</mode>
+            </effect>
+            <effect name="Speed">
+                <amount>20</amount>
+                <mode>DIFF</mode>
             </effect>
         </effects>
     </skill>
-    <skill id="329" toLevel="1" name="Health">
-        <!-- Resistance to poison and bleed +20. -->
+    <skill id="329" toLevel="1" name="Pride of Kamael">
+        <!-- With the original power of Kamael, Poison/Bleed/Hold/Sleep/Stun/Mental Attack Resistance +20 -->
         <icon>icon.skill0329</icon>
         <magicLvl>76</magicLvl>
         <operateType>P</operateType>
@@ -1313,6 +1320,10 @@
             <effect name="DefenceTrait">
                 <POISON>20</POISON>
                 <BLEED>20</BLEED>
+                <HOLD>20</HOLD>
+                <SLEEP>20</SLEEP>
+                <SHOCK>20</SHOCK>
+                <DERANGEMENT>20</DERANGEMENT>
             </effect>
         </effects>
     </skill>
@@ -2616,8 +2627,8 @@
             </effect>
         </effects>
     </skill>
-    <skill id="361" toLevel="3" name="Stun Burst">
-        <!-- Creates a powerful shock wave with $s1 Power added to P. Atk., inflicting damage and stunning the target and nearby enemies for $s2 Their P. Def. -$s3 and M. Def. -$s4. Requires a polearm. Critical. Over-hit. Ignores Shield Defense. Target cancel is possible. -->
+    <skill id="361" toLevel="3" name="Stun Blast">
+        <!-- Creates a powerful shock wave with bonus $s1 Power to attack enemy's surroundings. Stuns for $s2 and P. Def. -$s3 and M. Def -$s4. Requires a spear. Critical. Ignores Shield Defense. Over-hit. -->
         <icon>icon.skill0361</icon>
         <abnormalLvl>3</abnormalLvl>
         <abnormalTime>7</abnormalTime>
@@ -2667,9 +2678,6 @@
             </condition>
         </conditions>
         <effects>
-            <effect name="TargetCancel">
-                <chance>60</chance>
-            </effect>
             <effect name="PhysicalAttack">
                 <criticalChance>20</criticalChance>
                 <overHit>true</overHit>
@@ -3638,14 +3646,20 @@
             </effect>
         </effects>
     </skill>
-    <skill id="393" toLevel="1" name="">
+    <skill id="393" toLevel="1" name="Shine Soul Finding">
+        <!-- TODO Obtain 2 Shine Souls
+            consume 30 hp ?
+        -->
         <magicLvl>1</magicLvl>
-        <operateType>P</operateType>
+        <operateType>A1</operateType>
         <magicCriticalRate>5</magicCriticalRate>
     </skill>
-    <skill id="394" toLevel="1" name="">
+    <skill id="394" toLevel="1" name="Shadow Soul Finding">
+        <!-- TODO Obtain 2 Shadow Souls
+            consume 30 hp ?
+         -->
         <magicLvl>1</magicLvl>
-        <operateType>P</operateType>
+        <operateType>A1</operateType>
         <magicCriticalRate>5</magicCriticalRate>
     </skill>
     <skill id="395" toLevel="1" name="Heroic Miracle">
@@ -3757,19 +3771,92 @@
             </effect>
         </effects>
     </skill>
-    <skill id="397" toLevel="1" name="">
+    <skill id="397" toLevel="2" name="Shine Side">
+        <!-- TODO Enough Shine Souls have been gathered to be in the Shine Side state. <Acceleration Stage 1>.
+             P. Atk. +130, Atk. Spd. +30, Casting Spd. +40, Speed +10. P./M. Def. +5%. Has a chance to recover MP when attacking.-->
         <magicLvl>1</magicLvl>
         <operateType>P</operateType>
         <magicCriticalRate>5</magicCriticalRate>
     </skill>
-    <skill id="398" toLevel="1" name="">
+    <skill id="398" toLevel="1" name="Shadow Side">
+        <!-- TODO Enough Shadow Souls have been gathered to be in the Shadow Side state. <Acceleration Stage 2>
+            P. Atk. +280, Atk. Spd. +80, Casting Spd. +120, Speed +15. Has a chance to activate powerful attack skills. -->
         <magicLvl>1</magicLvl>
         <operateType>P</operateType>
         <magicCriticalRate>5</magicCriticalRate>
     </skill>
-    <skill id="399" toLevel="1" name="">
+    <skill id="399" toLevel="10" name="Heavy Armor Mastery">
+        <!-- P. Def. +%s, Max HP +%s, P. Critical Attack Received Rate and P. Critical Damage Received -%s when equipped with heavy armor -->
         <magicLvl>1</magicLvl>
         <operateType>P</operateType>
         <magicCriticalRate>5</magicCriticalRate>
+        <effects>
+            <effect name="PhysicalDefence">
+                <amount>
+                    <value level="1">10</value>
+                    <value level="2">20</value>
+                    <value level="3">30</value>
+                    <value level="4">45</value>
+                    <value level="5">60</value>
+                    <value level="6">80</value>
+                    <value level="7">100</value>
+                    <value level="8">120</value>
+                    <value level="9">150</value>
+                    <value level="10">180</value>
+                </amount>
+                <mode>DIFF</mode>
+            </effect>
+            <effect name="MaxHp">
+                <amount>
+                    <value level="1">20</value>
+                    <value level="2">40</value>
+                    <value level="3">60</value>
+                    <value level="4">80</value>
+                    <value level="5">100</value>
+                    <value level="6">120</value>
+                    <value level="7">140</value>
+                    <value level="8">160</value>
+                    <value level="9">180</value>
+                    <value level="10">200</value>
+                </amount>
+                <mode>DIFF</mode>
+            </effect>
+            <effect name="DefenceCriticalDamage">
+                <amount>
+                    <value level="1">5</value>
+                    <value level="2">5</value>
+                    <value level="3">10</value>
+                    <value level="4">10</value>
+                    <value level="5">10</value>
+                    <value level="6">15</value>
+                    <value level="7">15</value>
+                    <value level="8">15</value>
+                    <value level="9">20</value>
+                    <value level="10">25</value>
+                </amount>
+                <mode>PER</mode>
+                <armorType>
+                    <item>HEAVY</item>
+                </armorType>
+            </effect>
+            <effect name="DefenceCriticalRate">
+                <amount>
+                    <value level="1">5</value>
+                    <value level="2">5</value>
+                    <value level="3">10</value>
+                    <value level="4">10</value>
+                    <value level="5">10</value>
+                    <value level="6">15</value>
+                    <value level="7">15</value>
+                    <value level="8">15</value>
+                    <value level="9">20</value>
+                    <value level="10">25</value>
+                </amount>
+                <mode>PER</mode>
+                <armorType>
+                    <item>HEAVY</item>
+                </armorType>
+            </effect>
+        </effects>
     </skill>
 </list>

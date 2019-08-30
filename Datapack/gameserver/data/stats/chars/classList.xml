@@ -102,13 +102,13 @@
     <class classId="122" name="Siege Attacker"/>
 
     <class classId="192" name="Jin Kamael Soldier"/>
-    <class classId="193" name="Trooper" parentClassId="192"/>
-    <class classId="194" name="Soul Finder" parentClassId="192"/>
-    <class classId="195" name="Warden" parentClassId="192"/>
-    <class classId="196" name="Beserker" parentClassId="193"/>
-    <class classId="197" name="Soul Breaker" parentClassId="194"/>
-    <class classId="198" name="Soul Ranger" parentClassId="195"/>
-    <class classId="199" name="Doombringer" parentClassId="196"/>
-    <class classId="200" name="Soul Hound" parentClassId="197"/>
-    <class classId="201" name="Trickster" parentClassId="198"/>
+    <class classId="125" name="Trooper" parentClassId="192"/>
+    <class classId="193" name="Soul Finder" parentClassId="192"/>
+    <class classId="126" name="Warden" parentClassId="192"/>
+    <class classId="127" name="Beserker" parentClassId="125"/>
+    <class classId="194" name="Soul Breaker" parentClassId="193"/>
+    <class classId="130" name="Arbalester" parentClassId="126"/>
+    <class classId="131" name="Doombringer" parentClassId="127"/>
+    <class classId="195" name="Soul Hound" parentClassId="194"/>
+    <class classId="134" name="Trickster" parentClassId="130"/>
 </list>

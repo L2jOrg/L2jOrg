@@ -332,14 +332,12 @@
             </effect>
         </effects>
     </skill>
-    <skill id="619" toLevel="1" name="Cancel Transformation">
-        <!-- Confirmed CT2.5 -->
+    <skill id="619" toLevel="1" name="Dispel Transform">
         <effectPoint>10</effectPoint>
         <hitTime>2500</hitTime>
         <icon>icon.skilltransform2</icon>
         <magicLvl>56</magicLvl>
         <operateType>A1</operateType>
-
         <magicCriticalRate>5</magicCriticalRate>
         <hitCancelTime>0</hitCancelTime>
         <targetType>SELF</targetType>
@@ -426,7 +424,6 @@
         </effects>
     </skill>
     <skill id="626" toLevel="4" name="Critical Sense">
-        <!-- Confirmed CT2.5 -->
         <icon>icon.skill0312</icon>
         <magicLvl>
             <value level="1">43</value>
@@ -457,8 +454,8 @@
             </effect>
         </effects>
     </skill>
-    <skill id="627" toLevel="40" name="Soul Shock">
-        <!-- Confirmed CT2.5 -->
+    <skill id="627" toLevel="5" name="Soul Panic">
+        <!-- Inflicts Fear on the enemy for $s1 -->
         <abnormalLvl>1</abnormalLvl>
         <abnormalTime>3</abnormalTime>
         <abnormalType>TURN_FLEE</abnormalType>
@@ -473,41 +470,6 @@
             <value level="3">-356</value>
             <value level="4">-366</value>
             <value level="5">-375</value>
-            <value level="6">-385</value>
-            <value level="7">-395</value>
-            <value level="8">-405</value>
-            <value level="9">-415</value>
-            <value level="10">-425</value>
-            <value level="11">-435</value>
-            <value level="12">-445</value>
-            <value level="13">-455</value>
-            <value level="14">-465</value>
-            <value level="15">-474</value>
-            <value level="16">-484</value>
-            <value level="17">-494</value>
-            <value level="18">-503</value>
-            <value level="19">-513</value>
-            <value level="20">-522</value>
-            <value level="21">-532</value>
-            <value level="22">-541</value>
-            <value level="23">-550</value>
-            <value level="24">-558</value>
-            <value level="25">-567</value>
-            <value level="26">-575</value>
-            <value level="27">-583</value>
-            <value level="28">-591</value>
-            <value level="29">-599</value>
-            <value level="30">-607</value>
-            <value level="31">-614</value>
-            <value level="32">-621</value>
-            <value level="33">-627</value>
-            <value level="34">-634</value>
-            <value level="35">-640</value>
-            <value level="36">-646</value>
-            <value level="37">-651</value>
-            <value level="38">-656</value>
-            <value level="39">-661</value>
-            <value level="40">-665</value>
         </effectPoint>
         <effectRange>600</effectRange>
         <hitTime>1500</hitTime>
@@ -520,41 +482,6 @@
             <value level="3">36</value>
             <value level="4">38</value>
             <value level="5">39</value>
-            <value level="6">40</value>
-            <value level="7">41</value>
-            <value level="8">42</value>
-            <value level="9">43</value>
-            <value level="10">44</value>
-            <value level="11">45</value>
-            <value level="12">46</value>
-            <value level="13">47</value>
-            <value level="14">48</value>
-            <value level="15">49</value>
-            <value level="16">50</value>
-            <value level="17">51</value>
-            <value level="18">52</value>
-            <value level="19">53</value>
-            <value level="20">54</value>
-            <value level="21">55</value>
-            <value level="22">56</value>
-            <value level="23">57</value>
-            <value level="24">58</value>
-            <value level="25">59</value>
-            <value level="26">60</value>
-            <value level="27">61</value>
-            <value level="28">62</value>
-            <value level="29">63</value>
-            <value level="30">64</value>
-            <value level="31">65</value>
-            <value level="32">66</value>
-            <value level="33">67</value>
-            <value level="34">68</value>
-            <value level="35">69</value>
-            <value level="36">70</value>
-            <value level="37">71</value>
-            <value level="38">72</value>
-            <value level="39">73</value>
-            <value level="40">74</value>
         </magicLvl>
         <mpConsume>
             <value level="1">48</value>
@@ -562,104 +489,15 @@
             <value level="3">51</value>
             <value level="4">52</value>
             <value level="5">54</value>
-            <value level="6">56</value>
-            <value level="7">56</value>
-            <value level="8">58</value>
-            <value level="9">59</value>
-            <value level="10">61</value>
-            <value level="11">63</value>
-            <value level="12">65</value>
-            <value level="13">66</value>
-            <value level="14">68</value>
-            <value level="15">70</value>
-            <value level="16">72</value>
-            <value level="17">72</value>
-            <value level="18">74</value>
-            <value level="19">76</value>
-            <value level="20">78</value>
-            <value level="21">80</value>
-            <value level="22">81</value>
-            <value level="23">83</value>
-            <value level="24">85</value>
-            <value level="25">87</value>
-            <value level="26">88</value>
-            <value level="27">89</value>
-            <value level="28">91</value>
-            <value level="29">92</value>
-            <value level="30">94</value>
-            <value level="31">96</value>
-            <value level="32">97</value>
-            <value level="33">99</value>
-            <value level="34">100</value>
-            <value level="35">102</value>
-            <value level="36">103</value>
-            <value level="37">105</value>
-            <value level="38">106</value>
-            <value level="39">108</value>
-            <value level="40">109</value>
         </mpConsume>
         <operateType>A2</operateType>
         <reuseDelay>15000</reuseDelay>
-
         <soulMaxConsumeCount>5</soulMaxConsumeCount>
         <magicCriticalRate>5</magicCriticalRate>
         <trait>DERANGEMENT</trait>
         <targetType>ENEMY</targetType>
         <affectScope>SINGLE</affectScope>
-        <conditions>
-            <condition name="EquipWeapon">
-                <weaponType>
-                    <item>CROSSBOW</item>
-                    <item>TWOHANDCROSSBOW</item>
-                </weaponType>
-            </condition>
-        </conditions>
         <effects>
-            <effect name="PhysicalSoulAttack">
-                <power>
-                    <value level="1">344</value>
-                    <value level="2">367</value>
-                    <value level="3">391</value>
-                    <value level="4">443</value>
-                    <value level="5">471</value>
-                    <value level="6">500</value>
-                    <value level="7">530</value>
-                    <value level="8">562</value>
-                    <value level="9">595</value>
-                    <value level="10">630</value>
-                    <value level="11">666</value>
-                    <value level="12">703</value>
-                    <value level="13">742</value>
-                    <value level="14">782</value>
-                    <value level="15">823</value>
-                    <value level="16">866</value>
-                    <value level="17">910</value>
-                    <value level="18">955</value>
-                    <value level="19">1002</value>
-                    <value level="20">1050</value>
-                    <value level="21">1100</value>
-                    <value level="22">1150</value>
-                    <value level="23">1202</value>
-                    <value level="24">1255</value>
-                    <value level="25">1309</value>
-                    <value level="26">1364</value>
-                    <value level="27">1420</value>
-                    <value level="28">1476</value>
-                    <value level="29">1534</value>
-                    <value level="30">1592</value>
-                    <value level="31">1651</value>
-                    <value level="32">1710</value>
-                    <value level="33">1770</value>
-                    <value level="34">1830</value>
-                    <value level="35">1891</value>
-                    <value level="36">1951</value>
-                    <value level="37">2012</value>
-                    <value level="38">2072</value>
-                    <value level="39">2132</value>
-                    <value level="40">2192</value>
-                </power>
-                <overHit>true</overHit>
-            </effect>
             <effect name="BlockControl"/>
             <effect name="Fear"/>
         </effects>
@@ -1839,10 +1677,8 @@
             </effect>
         </selfEffects>
     </skill>
-    <skill id="692" toLevel="1" name="Divine Wizard Divine Flare">
-        <abnormalLvl>0</abnormalLvl>
-        <abnormalTime>3</abnormalTime>
-        <abnormalType>MA_DOWN</abnormalType>
+    <skill id="692" toLevel="1" name="Divine Wizard Holy Flare">
+        <!-- Attacks a contacted target with 102 magic Power -->
         <castRange>150</castRange>
         <effectPoint>-541</effectPoint>
         <effectRange>650</effectRange>
@@ -1853,7 +1689,6 @@
         <mpConsume>73</mpConsume>
         <operateType>A3</operateType>
         <reuseDelay>1000</reuseDelay>
-
         <basicProperty>NONE</basicProperty>
         <magicCriticalRate>5</magicCriticalRate>
         <isDebuff>true</isDebuff>
@@ -1862,10 +1697,6 @@
         <effects>
             <effect name="MagicalAttack">
                 <power>102</power>
-            </effect>
-            <effect name="PvpMagicalSkillDamageBonus">
-                <amount>-50</amount>
-                <mode>PER</mode>
             </effect>
         </effects>
     </skill>
@@ -1893,7 +1724,8 @@
             </effect>
         </effects>
     </skill>
-    <skill id="694" toLevel="1" name="Divine Wizard Divine Curtain">
+    <skill id="694" toLevel="1" name="Divine Wizard Holy Curtain">
+        <!-- Attack a large number of enemies with divine rainstorm -->
         <affectLimit>5-12</affectLimit>
         <affectRange>200</affectRange>
         <castRange>500</castRange>
@@ -1908,7 +1740,6 @@
         <mpConsume>109</mpConsume>
         <operateType>A1</operateType>
         <reuseDelay>4000</reuseDelay>
-
         <magicCriticalRate>5</magicCriticalRate>
         <targetType>ENEMY</targetType>
         <affectScope>RANGE</affectScope>
@@ -1919,7 +1750,8 @@
             </effect>
         </effects>
     </skill>
-    <skill id="695" toLevel="1" name="Divine Wizard Divine Cloud">
+    <skill id="695" toLevel="1" name="Divine Wizard Holy Cloud">
+        <!-- Briefly draws in divine clouds that make nearby enemies fall asleep. Greatly decreases the chance to inflict additional Sleep state while effects last -->
         <abnormalLvl>1</abnormalLvl>
         <abnormalTime>30</abnormalTime>
         <abnormalType>SLEEP</abnormalType>
@@ -1941,7 +1773,6 @@
         <operateType>A2</operateType>
         <removedOnDamage>true</removedOnDamage>
         <reuseDelay>8000</reuseDelay>
-
         <magicCriticalRate>5</magicCriticalRate>
         <trait>SLEEP</trait>
         <targetType>ENEMY_ONLY</targetType>

@@ -1,13 +1,13 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-    <skill id="17608" toLevel="1" name="Energy of Delusion">
-        <!-- Fishing place, filled with Fantastical Energy. -->
+    <skill id="17608" toLevel="1" name="Fantastical Energy">
+        <!--Fantastical energy of the fishing dock. -->
         <icon>icon.etc_dragons_blood_i03</icon>
         <operateType>A2</operateType>
         <isMagic>4</isMagic>
     </skill>
-    <skill id="17613" toLevel="1" name="Agathion - Aries">
-        <!-- Summon Agathion -->
+    <skill id="17613" toLevel="1" name="Release Agathion Seal- Aries">
+        <!-- Releases the seal on the Agathion -->
         <icon>icon.etc_summon_aga_agit_i00</icon>
         <operateType>A1</operateType>
         <hitTime>3000</hitTime>
@@ -51,8 +51,8 @@
             </effect>
         </effects>
     </skill>
-    <skill id="17625" toLevel="1" name="Agathion Cute Trick - Aries">
-        <!-- See Agathion's cute trick. -->
+    <skill id="17625" toLevel="1" name="Agathion Trick- Aries">
+        <!-- Watch the Agathion's Trick. -->
         <icon>icon.skill_agathion_cute</icon>
         <operateType>A1</operateType>
         <hitTime>3000</hitTime>
@@ -62,7 +62,7 @@
         <effectPoint>1</effectPoint>
     </skill>
     <skill id="17686" toLevel="2" name="Uldie's Energy">
-        <!-- Buff from Uldie. For 2 h., acquired XP/ SP +$s1, P. Atk./ M. Atk. +$s2, Atk. Spd./ Casting Spd. +$s3. A chance to receive an Elite Gift from the Captain of Lara's Team when removing the Buff. <Warning> You cannot receive the gift if your character dies when receiving or if there is no empty slot in your Inventory. -->
+        <!-- Buff from Team Leader Lara Cat. For 2 hours, XP/SP gain +%s, P. Atk./M. Atk. +%s, Atk. Spd./Casting Spd. +%s. Lara Cat is thrilled. You have a chance to receive Team Leader Lara's Luxury Gift when the buff disappears. <Caution> You cannot receive the gift if your character is dead when the item is being provided or if there are no empty slots in your inventory. -->
         <icon>BranchSys.icon.br_sevenlove_girlpresent_i00</icon>
         <operateType>A2</operateType>
         <castRange>

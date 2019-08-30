@@ -3305,7 +3305,7 @@
             </effect>
         </effects>
     </skill>
-    <skill id="1372" toLevel="8" name="Extra Inventory">
+    <skill id="1372" toLevel="5" name="Expand Inventory">
         <!-- Increases the number of items an individual can possess. -->
         <icon>icon.skill0332</icon>
         <magicLvl>
@@ -3314,9 +3314,6 @@
             <value level="3">30</value>
             <value level="4">40</value>
             <value level="5">50</value>
-            <value level="6">60</value>
-            <value level="7">70</value>
-            <value level="8">80</value>
         </magicLvl>
         <operateType>P</operateType>
         <magicCriticalRate>5</magicCriticalRate>
@@ -3328,9 +3325,6 @@
                     <value level="3">18</value>
                     <value level="4">24</value>
                     <value level="5">30</value>
-                    <value level="6">36</value>
-                    <value level="7">42</value>
-                    <value level="8">48</value>
                 </amount>
                 <mode>DIFF</mode>
             </effect>
@@ -3498,12 +3492,26 @@
         <operateType>P</operateType>
         <magicCriticalRate>5</magicCriticalRate>
     </skill>
-    <skill id="1378" toLevel="1" name="">
+    <skill id="1378" toLevel="1" name="Soul Link">
+        <!--  M. Atk. increases by $s1 of P. Atk
+            1 - 30
+            2 - 40
+            3 - 50
+            4 - 60
+            5 - 80
+        -->
         <magicLvl>1</magicLvl>
         <operateType>P</operateType>
         <magicCriticalRate>5</magicCriticalRate>
     </skill>
-    <skill id="1379" toLevel="1" name="">
+    <skill id="1379" toLevel="1" name="Soul Sense">
+        <!-- M. Critical Rate increases by $s1 P. Critical Rate.
+            1 - 20
+            2 - 30
+            3 - 40
+            4 - 50
+            5 - 70
+         -->
         <magicLvl>1</magicLvl>
         <operateType>P</operateType>
         <magicCriticalRate>5</magicCriticalRate>

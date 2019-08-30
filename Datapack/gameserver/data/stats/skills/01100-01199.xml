@@ -2535,8 +2535,8 @@
             </effect>
         </effects>
     </skill>
-    <skill id="1160" toLevel="17" name="Slow">
-        <!-- For $s1, enemy's Speed -$s2. -->
+    <skill id="1160" toLevel="17" name="Decrease Speed">
+        <!-- Decreases the enemy's Speed by $s1 for $s2 -->
         <icon>icon.skill1160</icon>
         <abnormalLvl>
             <value level="1">2</value>

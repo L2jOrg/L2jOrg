@@ -2603,23 +2603,29 @@
             </effect>
         </effects>
     </skill>
-    <skill id="767" toLevel="1" name="Expose Vulnerability">
-        <!-- Gives flesh and takes a bone. Decreases the enemy's P. Def. by momentarily exposing his weakness when receiving the enemy's attack. Increases the critical hit rate of general attacks. -->
+    <skill id="767" toLevel="10" name="Bow Mastery">
+        <!-- P. Atk. increases by %s when equipping a bow. -->
         <icon>icon.skill0767</icon>
         <magicLvl>81</magicLvl>
         <operateType>P</operateType>
         <magicCriticalRate>5</magicCriticalRate>
         <effects>
-            <effect name="TriggerSkillByDamage">
-                <!-- Expose Weak Point -->
-                <attackerType>Creature</attackerType>
-                <minAttackerLevel>1</minAttackerLevel>
-                <maxAttackerLevel>99</maxAttackerLevel>
-                <chance>5</chance>
-                <targetType>TARGET</targetType>
-                <minDamage>1</minDamage>
-                <skillId>5565</skillId> <!-- Expose Vulnerability -->
-                <skillLevel>1</skillLevel>
+            <effect name="PhysicalAttack">
+                <amount>
+                    <value level="1">25</value>
+                    <value level="2">60</value>
+                    <value level="3">180</value>
+                    <value level="4">315</value>
+                    <value level="5">500</value>
+                    <value level="6">710</value>
+                    <value level="7">800</value>
+                    <value level="8">850</value>
+                    <value level="9">880</value>
+                    <value level="10">920</value>
+                </amount>
+                <weaponType>
+                    <item>BOW</item>
+                </weaponType>
             </effect>
         </effects>
     </skill>
@@ -3469,10 +3475,9 @@
             </effect>
         </effects>
     </skill>
-    <skill id="790" toLevel="1" name="Wild Shot">
-        <!-- Fires bolt at random to attack enemies in front with 7475 Power added to P. Atk. Requires a crossbow. Over-hit. Critical. Increases Power upon the consumption of up to 5 souls. -->
+    <skill id="790" toLevel="3" name="Critical Shot">
+        <!-- TODO Has a chance to increase P. Critical Rate by $s1 when attacking with a bow. {10, 20, 30} -->
         <icon>icon.skill0790</icon>
-        <affectLimit>5-12</affectLimit>
         <affectRange>900</affectRange>
         <castRange>900</castRange>
         <coolTime>1000</coolTime>
@@ -3484,27 +3489,11 @@
         <mpConsume>120</mpConsume>
         <operateType>A1</operateType>
         <reuseDelay>75000</reuseDelay>
-
         <soulMaxConsumeCount>5</soulMaxConsumeCount>
         <magicCriticalRate>5</magicCriticalRate>
         <targetType>ENEMY</targetType>
         <affectScope>FAN</affectScope>
         <affectObject>NOT_FRIEND</affectObject>
-        <conditions>
-            <condition name="EquipWeapon">
-                <weaponType>
-                    <item>CROSSBOW</item>
-                    <item>TWOHANDCROSSBOW</item>
-                </weaponType>
-            </condition>
-        </conditions>
-        <effects>
-            <effect name="PhysicalSoulAttack">
-                <power>7475</power>
-                <overHit>true</overHit>
-                <criticalChance>15</criticalChance>
-            </effect>
-        </effects>
     </skill>
     <skill id="791" toLevel="5" name="Lightning Shock">
         <!-- Sends an electric current to attack nearby enemies with $s1 Power added to M. Atk. Paralyzes for $s2. Received HP Recovery Rate -$s3. Over-hit. -->
@@ -3597,12 +3586,12 @@
             </effect>
         </endEffects>
     </skill>
-    <skill id="792" toLevel="1" name="Betrayal Mark">
-        <!-- Stamps the Mark of Betrayal on the enemy for 30 sec. When attacking the enemy that has the mark, inflicts damage to the enemy's party with a fixed rate. -->
+    <skill id="792" toLevel="5" name="Soul Stigma">
+        <!-- Carves a burning mark on the enemy for $s1 and reduces P. Critical Damage and M. Critical Damage by $s2 -->
         <icon>icon.skill0792</icon>
         <abnormalLvl>1</abnormalLvl>
-        <abnormalTime>30</abnormalTime>
-        <abnormalType>BETRAYAL_MARK</abnormalType>
+        <abnormalTime>10</abnormalTime>
+        <abnormalType>STIGMA_A</abnormalType>
         <abnormalVisualEffect>DOT_POISON</abnormalVisualEffect>
         <activateRate>70</activateRate>
         <basicProperty>PHYSICAL</basicProperty>
@@ -3617,22 +3606,30 @@
         <mpInitialConsume>8</mpInitialConsume>
         <operateType>A2</operateType>
         <reuseDelay>11000</reuseDelay>
-
         <magicCriticalRate>5</magicCriticalRate>
         <isDebuff>true</isDebuff>
         <targetType>ENEMY_ONLY</targetType>
         <affectScope>SINGLE</affectScope>
         <effects>
-            <effect name="TriggerSkillByDamage">
-                <!-- Betrayal Mark -->
-                <attackerType>Creature</attackerType>
-                <minAttackerLevel>1</minAttackerLevel>
-                <maxAttackerLevel>99</maxAttackerLevel>
-                <chance>10</chance>
-                <targetType>MY_PARTY</targetType>
-                <minDamage>1</minDamage>
-                <skillId>5600</skillId> <!-- Betrayal Mark -->
-                <skillLevel>1</skillLevel>
+            <effect name="MagicCriticalDamage">
+                <amount>
+                    <value level="1">-20</value>
+                    <value level="2">-25</value>
+                    <value level="3">-30</value>
+                    <value level="4">-35</value>
+                    <value level="5">-40</value>
+                </amount>
+                <mode>PER</mode>
+            </effect>
+            <effect name="CriticalDamage">
+                <amount>
+                    <value level="1">-20</value>
+                    <value level="2">-25</value>
+                    <value level="3">-30</value>
+                    <value level="4">-35</value>
+                    <value level="5">-40</value>
+                </amount>
+                <mode>PER</mode>
             </effect>
         </effects>
     </skill>
@@ -3730,37 +3727,19 @@
             </effect>
         </effects>
     </skill>
-    <skill id="794" toLevel="1" name="Mass Disarm">
-        <!-- Disarms nearby enemies for 5 sec. -->
+    <skill id="794" toLevel="3" name="Increase Critical">
+        <!-- P. Critical Rate +$s1. -->
         <icon>icon.skill0794</icon>
-        <abnormalLvl>1</abnormalLvl>
-        <abnormalTime>5</abnormalTime>
-        <abnormalType>DISARM</abnormalType>
-        <abnormalVisualEffect>DOT_BLEEDING</abnormalVisualEffect>
-        <activateRate>70</activateRate>
-        <affectLimit>6-12</affectLimit>
-        <affectRange>200</affectRange>
-        <basicProperty>PHYSICAL</basicProperty>
-        <effectPoint>-673</effectPoint>
-        <hitTime>1500</hitTime>
-        <isDebuff>true</isDebuff>
-        <lvlBonusRate>20</lvlBonusRate>
-        <magicLvl>79</magicLvl>
-        <mpConsume>58</mpConsume>
-        <operateType>A2</operateType>
-        <reuseDelay>150000</reuseDelay>
-
+        <operateType>P</operateType> <!-- confirm -->
         <magicCriticalRate>5</magicCriticalRate>
-        <trait>DISARM</trait>
         <targetType>SELF</targetType>
-        <affectScope>POINT_BLANK</affectScope>
-        <affectObject>NOT_FRIEND</affectObject>
         <effects>
-            <effect name="Disarm">
-            </effect>
-            <effect name="PAtk">
-                <amount>-40</amount>
-                <mode>PER</mode>
+            <effect name="CriticalRate">
+                <amount>
+                    <value level="1">10</value>
+                    <value level="2">20</value>
+                    <value level="3">30</value>
+                </amount>
             </effect>
         </effects>
     </skill>

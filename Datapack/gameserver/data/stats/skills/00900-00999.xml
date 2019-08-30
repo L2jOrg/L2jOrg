@@ -1270,8 +1270,8 @@
             </effect>
         </effects>
     </skill>
-    <skill id="921" toLevel="1" name="Spike Thrust">
-        <!-- Attacks a target and inflicts damage with 3849 Power added to P. Atk. Ignores Shield Defense. Over-hit. Critical. -->
+    <skill id="921" toLevel="1" name="Cursed Pierce">
+        <!-- Attacks the enemy with bonus 3849 Power. Ignores Shield Defense. Requires a Spear. Critical. Over-hit-->
         <icon>icon.skill0921</icon>
         <castRange>80</castRange>
         <coolTime>720</coolTime>
@@ -3754,7 +3754,7 @@
             </effect>
         </effects>
     </skill>
-    <skill id="973" toLevel="8" name="Shock Attack">
+    <skill id="973" toLevel="8" name="Stun Attack">
         <!-- Attack targets with Power $s1 added to P. Atk. Stuns the enemy for $s2. -->
         <icon>icon.skill0100</icon>
         <abnormalLvl>1</abnormalLvl>
@@ -3937,8 +3937,8 @@
             </effect>
         </effects>
     </skill>
-    <skill id="976" toLevel="7" name="Transformation Skill - Wind Strike">
-        <!-- Creates a powerful hurricane, inflicting Wind damage on the enemy with $s1 Power added to M. Atk. -->
+    <skill id="976" toLevel="7" name="Transformation - Wind Strike">
+        <!-- Creates a powerful hurricane and inflicts Wind damage on the enemy with bonus %s M. Atk. Power. -->
         <icon>icon.skill1177</icon>
         <castRange>600</castRange>
         <effectPoint>
@@ -4980,16 +4980,24 @@
             </effect>
         </effects>
     </skill>
-    <skill id="994" toLevel="1" name="Rush">
+    <skill id="994" toLevel="3" name="Rush">
         <!-- Charges into the enemy. Can be used if distance between the enemy and the character is more than 200. -->
         <icon>icon.skill0484</icon>
-        <castRange>400</castRange>
+        <castRange>
+            <value level="1">400</value>
+            <value level="2">500</value>
+            <value level="3">600</value>
+        </castRange>
         <coolTime>200</coolTime>
         <effectPoint>-379</effectPoint>
         <effectRange>600</effectRange>
         <hitTime>800</hitTime>
         <magicLvl>78</magicLvl>
-        <mpConsume>38</mpConsume>
+        <mpConsume>
+            <value level="1">35</value>
+            <value level="2">40</value>
+            <value level="3">45</value>
+        </mpConsume>
         <nextAction>ATTACK</nextAction>
         <operateType>DA1</operateType>
         <reuseDelay>3000</reuseDelay>

@@ -331,7 +331,7 @@ public final class SkillTreesData extends GameXmlReader {
 
             if (player.getLevel() >= skill.getGetLevel()) {
                 if (skill.getSkillLevel() > SkillData.getInstance().getMaxLevel(skill.getSkillId())) {
-                    LOGGER.error(": SkillTreesData found learnable skill " + skill.getSkillId() + " with level higher than max skill level!");
+                    LOGGER.error("SkillTreesData found learnable skill {} with level higher than max skill level!", skill.getSkillId());
                     continue;
                 }
 

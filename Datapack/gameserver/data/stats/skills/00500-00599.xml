@@ -49,28 +49,21 @@
             </effect>
         </effects>
     </skill>
-    <skill id="501" toLevel="12" name="Violent Temper">
-        <!-- Enemy's P. Def. -$s2 and Casting Spd. -$s3 for $s1. -->
+    <skill id="501" toLevel="5" name="Magic Break">
+        <!-- For $s1, reduces enemy's M. Atk. by $s2 -->
         <icon>icon.skill0501</icon>
         <abnormalLvl>3</abnormalLvl>
         <abnormalTime>30</abnormalTime>
         <abnormalType>PD_DOWN</abnormalType>
         <activateRate>80</activateRate>
         <basicProperty>MAGIC</basicProperty>
-        <castRange>600</castRange>
+        <castRange>150</castRange>
         <effectPoint>
             <value level="1">-234</value>
             <value level="2">-248</value>
             <value level="3">-262</value>
             <value level="4">-275</value>
             <value level="5">-283</value>
-            <value level="6">-291</value>
-            <value level="7">-299</value>
-            <value level="8">-306</value>
-            <value level="9">-312</value>
-            <value level="10">-318</value>
-            <value level="11">-323</value>
-            <value level="12">-328</value>
         </effectPoint>
         <effectRange>1100</effectRange>
         <hitTime>1800</hitTime>
@@ -82,27 +75,13 @@
             <value level="3">55</value>
             <value level="4">58</value>
             <value level="5">60</value>
-            <value level="6">62</value>
-            <value level="7">64</value>
-            <value level="8">66</value>
-            <value level="9">68</value>
-            <value level="10">70</value>
-            <value level="11">72</value>
-            <value level="12">74</value>
         </magicLvl>
         <mpConsume>
-            <value level="1">22</value>
-            <value level="2">24</value>
-            <value level="3">25</value>
-            <value level="4">27</value>
-            <value level="5">28</value>
-            <value level="6">29</value>
-            <value level="7">30</value>
-            <value level="8">31</value>
-            <value level="9">32</value>
-            <value level="10">33</value>
-            <value level="11">34</value>
-            <value level="12">34</value>
+            <value level="1">40</value>
+            <value level="2">45</value>
+            <value level="3">50</value>
+            <value level="4">55</value>
+            <value level="5">60</value>
         </mpConsume>
         <operateType>A2</operateType>
         <reuseDelay>2000</reuseDelay>
@@ -110,12 +89,8 @@
         <targetType>ENEMY_ONLY</targetType>
         <affectScope>SINGLE</affectScope>
         <effects>
-            <effect name="PhysicalDefence">
+            <effect name="MagicalAttack">
                 <amount>-23</amount>
-                <mode>PER</mode>
-            </effect>
-            <effect name="MagicalAttackSpeed">
-                <amount>-15</amount>
                 <mode>PER</mode>
             </effect>
         </effects>
@@ -180,9 +155,9 @@
             <value level="3">64</value>
         </magicLvl>
         <mpConsume>
-            <value level="1">21</value>
-            <value level="2">28</value>
-            <value level="3">33</value>
+            <value level="1">50</value>
+            <value level="2">60</value>
+            <value level="3">70</value>
         </mpConsume>
         <nextAction>ATTACK</nextAction>
         <operateType>A1</operateType>
@@ -2363,7 +2338,7 @@
             </effect>
         </effects>
     </skill>
-    <skill id="567" toLevel="4" name="Radiant Heal">
+    <skill id="567" toLevel="4" name="Light Heal">
         <!-- Draws from the force of light to bestow the ability of recovery. Power $s1. -->
         <icon>icon.skill_transform_etc</icon>
         <castRange>600</castRange>

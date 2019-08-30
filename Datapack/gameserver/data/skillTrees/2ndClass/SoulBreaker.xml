@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org ../../xsd/skillTrees.xsd">
+    <skillTree type="classSkillTree" classId="194" parentClassId="193">
+
+        <skill skillName="Armor Mastery" skillId="464" skillLvl="3" getLevel="40" levelUpSp="80000"/>
+        <skill skillName="Potion Mastery" skillId="45184" skillLvl="1" getLevel="40">
+            <item id="57" count="1000000"/> <!-- Adena -->
+        </skill>
+        <skill skillName="Light Armor Mastery" skillId="465" skillLvl="3" getLevel="40" levelUpSp="80000"/>
+        <skill skillName="Weapon Mastery" skillId="463" skillLvl="3" getLevel="40" levelUpSp="80000"/>
+        <skill skillName="Rapier Mastery" skillId="474" skillLvl="3" getLevel="40" levelUpSp="80000" />
+        <skill skillName="Shadow Master" skillId="45179" skillLvl="1" getLevel="40" />
+        <skill skillName="Soul Spark" skillId="45163" skillLvl="1" getLevel="40" levelUpSp="80000" />
+        <skill skillName="Magic Immunity" skillId="466" skillLvl="2" getLevel="40" levelUpSp="80000"/>
+        <skill skillName="Art of Rapier" skillId="1444" skillLvl="1" getLevel="40" levelUpSp="80000"/>
+        <skill skillName="Soul Chase" skillId="45183" skillLvl="1" getLevel="40" levelUpSp="80000"/>
+        <skill skillName="Shadow Soul Finding" skillId="394" skillLvl="1" getLevel="40" levelUpSp="80000" />
+        <skill skillName="Mana Pump" skillId="1565" skillLvl="1" getLevel="40" levelUpSp="80000" />
+        <skill skillName="Soul Slash" skillId="45160" skillLvl="3" getLevel="40" levelUpSp="80000" />
+        <skill skillName="Soul Link" skillId="1378" skillLvl="2" getLevel="40" levelUpSp="80000" />
+        <skill skillName="Soul Strike" skillId="1516" skillLvl="3" getLevel="40" levelUpSp="80000" />
+        <skill skillName="Soul Thrust" skillId="45161" skillLvl="1" getLevel="40" levelUpSp="80000" />
+        <skill skillName="Soul Sense" skillId="1379" skillLvl="2" getLevel="40" levelUpSp="80000" />
+
+        <skill skillName="Critical Sense" skillId="626" skillLvl="1" getLevel="45" levelUpSp="120000" />
+        <skill skillName="Abyssal Power" skillId="1474" skillLvl="1" getLevel="45" levelUpSp="120000" />
+
+        <skill skillName="Potion Mastery" skillId="45184" skillLvl="2" getLevel="50">
+            <item id="57" count="3000000"/> <!-- Adena -->
+        </skill>
+        <skill skillName="Light Armor Mastery" skillId="465" skillLvl="4" getLevel="50" levelUpSp="200000" />
+        <skill skillName="Rapier Mastery" skillId="474" skillLvl="4" getLevel="50" levelUpSp="200000" />
+        <skill skillName="Soul Spark" skillId="45163" skillLvl="2" getLevel="50" levelUpSp="200000" />
+        <skill skillName="Art of Rapier" skillId="1444" skillLvl="2" getLevel="50" levelUpSp="200000"/>
+        <skill skillName="Mana Pump" skillId="1565" skillLvl="2" getLevel="50" levelUpSp="200000" />
+        <skill skillName="Soul Slash" skillId="45160" skillLvl="3" getLevel="50" levelUpSp="200000" />
+        <skill skillName="Collect Light Souls" skillId="45151" skillLvl="1" getLevel="50" levelUpSp="200000"/>
+        <skill skillName="Collect Shadow Souls" skillId="45152" skillLvl="1" getLevel="50" levelUpSp="200000"/>
+        <skill skillName="Soul Strike" skillId="1516" skillLvl="4" getLevel="50" levelUpSp="200000" />
+        <skill skillName="Soul Thrust" skillId="45161" skillLvl="2" getLevel="50" levelUpSp="200000" />
+
+        <skill skillName="Divine Inspiration" skillId="1405" skillLvl="1" getLevel="52" levelUpSp="200000">
+            <item id="8618" count="1"/> <!-- Ancient Book: Divine Inspiration (Modern Language Version) -->
+        </skill>
+
+        <skill skillName="Magic Immunity" skillId="466" skillLvl="3" getLevel="55" levelUpSp="450000" />
+        <skill skillName="Steal Divinity" skillId="1440" skillLvl="1" getLevel="55" levelUpSp="450000" />
+        <skill skillName="Critical Sense" skillId="626" skillLvl="2" getLevel="55" levelUpSp="450000" />
+
+        <skill skillName="Death Mark" skillId="1435" skillLvl="3" getLevel="56" levelUpSp="500000"/>
+
+        <skill skillName="Expert Casting" skillId="1527" skillLvl="1" getLevel="58" levelUpSp="600000" />
+
+        <skill skillName="Light Armor Mastery" skillId="465" skillLvl="5" getLevel="60" levelUpSp="800000" />
+        <skill skillName="Rapier Mastery" skillId="474" skillLvl="5" getLevel="60" levelUpSp="800000"/>
+        <skill skillName="Light Master" skillId="45178" skillLvl="2" getLevel="60" levelUpSp="800000">
+            <item id="91944" count="1"/> <!-- Book of Light -->
+        </skill>
+        <skill skillName="Soul Spark" skillId="45163" skillLvl="3" getLevel="60" levelUpSp="800000" />
+        <skill skillName="Art of Rapier" skillId="1444" skillLvl="3" getLevel="60" levelUpSp="800000">
+            <item id="57" count="200000"/> <!-- Adena -->
+        </skill>
+        <skill skillName="Abyssal Power" skillId="1474" skillLvl="2" getLevel="60" levelUpSp="800000" />
+        <skill skillName="Mana Pump" skillId="1565" skillLvl="3" getLevel="60" levelUpSp="800000">
+            <item id="57" count="200000"/> <!-- Adena -->
+        </skill>
+        <skill skillName="Soul Slash" skillId="45160" skillLvl="4" getLevel="60" levelUpSp="800000" />
+        <skill skillName="Soul Link" skillId="1378" skillLvl="3" getLevel="60" levelUpSp="800000" />
+        <skill skillName="Soul Strike" skillId="1516" skillLvl="5" getLevel="60" levelUpSp="800000" />
+        <skill skillName="Soul Thrust" skillId="45161" skillLvl="3" getLevel="60" levelUpSp="800000" />
+        <skill skillName="Soul Sense" skillId="1379" skillLvl="3" getLevel="60" levelUpSp="800000" />
+
+
+        <skill skillName="Divine Inspiration" skillId="1405" skillLvl="2" getLevel="61" levelUpSp="900000">
+            <preRequisiteSkill id="1405" lvl="1"/>
+            <item id="8619" count="1"/> <!-- Ancient Book: Divine Inspiration (Modern Language Version) -->
+        </skill>
+
+        <skill skillName="Critical Sense" skillId="626" skillLvl="3" getLevel="67" levelUpSp="1500000" />
+
+        <skill skillName="Light Armor Mastery" skillId="465" skillLvl="6" getLevel="70" levelUpSp="1800000" />
+        <skill skillName="Rapier Mastery" skillId="474" skillLvl="6" getLevel="70" levelUpSp="1800000"/>
+        <skill skillName="Shadow Master" skillId="45179" skillLvl="2" getLevel="70" levelUpSp="1800000">
+            <item id="91945" count="1"/> <!-- Book of Darkness -->
+        </skill>
+        <skill skillName="Soul Spark" skillId="45163" skillLvl="4" getLevel="70" levelUpSp="1800000">
+            <item id="57" count="500000"/> <!-- Adena -->
+        </skill>
+        <skill skillName="Steal Divinity" skillId="1440" skillLvl="2" getLevel="70" levelUpSp="1800000" />
+        <skill skillName="Art of Rapier" skillId="1444" skillLvl="4" getLevel="70" levelUpSp="1800000">
+            <item id="57" count="500000"/> <!-- Adena -->
+        </skill>
+        <skill skillName="Expert Casting" skillId="1527" skillLvl="2" getLevel="70" levelUpSp="1800000" />
+        <skill skillName="Mana Pump" skillId="1565" skillLvl="4" getLevel="70" levelUpSp="1800000">
+            <item id="57" count="500000"/> <!-- Adena -->
+        </skill>
+        <skill skillName="Soul Slash" skillId="45160" skillLvl="6" getLevel="70" levelUpSp="1800000" />
+        <skill skillName="Soul Link" skillId="1378" skillLvl="4" getLevel="70" levelUpSp="1800000">
+            <item id="57" count="500000"/> <!-- Adena -->
+        </skill>
+        <skill skillName="Soul Strike" skillId="1516" skillLvl="6" getLevel="70" levelUpSp="1800000" />
+        <skill skillName="Soul Thrust" skillId="45161" skillLvl="4" getLevel="70" levelUpSp="1800000" />
+        <skill skillName="Soul Sense" skillId="1379" skillLvl="4" getLevel="70" levelUpSp="1800000" />
+
+
+        <skill skillName="Light Armor Mastery" skillId="465" skillLvl="7" getLevel="75" levelUpSp="2300000" />
+        <skill skillName="Rapier Mastery" skillId="474" skillLvl="7" getLevel="75" levelUpSp="2300000"/>
+        <skill skillName="Soul Spark" skillId="45163" skillLvl="5" getLevel="75" levelUpSp="2300000">
+            <item id="57" count="5000000"/> <!-- Adena -->
+        </skill>
+        <skill skillName="Art of Rapier" skillId="1444" skillLvl="5" getLevel="75" levelUpSp="2300000">
+            <item id="57" count="1000000"/> <!-- Adena -->
+        </skill>
+        <skill skillName="Mana Pump" skillId="1565" skillLvl="5" getLevel="75" levelUpSp="2300000">
+            <item id="57" count="1000000"/> <!-- Adena -->
+        </skill>
+        <skill skillName="Soul Slash" skillId="45160" skillLvl="7" getLevel="75" levelUpSp="2300000" />
+        <skill skillName="Soul Strike" skillId="1516" skillLvl="7" getLevel="75" levelUpSp="2300000" />
+        <skill skillName="Soul Thrust" skillId="45161" skillLvl="5" getLevel="75" levelUpSp="2300000" />
+
+    </skillTree>
+</list>

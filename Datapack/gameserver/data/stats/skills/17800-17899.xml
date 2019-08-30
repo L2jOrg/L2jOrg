@@ -16,7 +16,20 @@
         <operateType>A1</operateType>
     </skill>
     <skill id="17817" toLevel="10" name="Ruby">
-        <!-- Soulshot Damage +$s1. -->
+        <!-- Soulshot Damage +$s1.
+            1 - 16
+            3 - 17
+            5 - 18
+            7 - 19
+            9 - 20
+
+            Blessed Soushot Damage
+            2 - 16
+            4 - 17
+            6 - 18
+            8 - 19
+            10 - 20
+        -->
         <icon>
             <value level="1">icon.etc_bm_jewel_ruby_i00</value>
             <value level="2">icon.etc_bm_jewel_ruby_i00</value>
@@ -47,7 +60,20 @@
         <operateType>A1</operateType>
     </skill>
     <skill id="17821" toLevel="10" name="Sapphire">
-        <!-- Spiritshot Damage +$s1. -->
+        <!-- Spiritshot Damage +$s1.
+
+               1 - 16
+               2 - 16
+               3 - 17
+               4 - 17
+               5 - 18
+               6 - 18
+               7 - 19
+               8 - 19
+               9 - 20
+               10 - 20
+
+         -->
         <icon>
             <value level="1">icon.etc_bm_jewel_sapphire_i00</value>
             <value level="2">icon.etc_bm_jewel_sapphire_i00</value>
