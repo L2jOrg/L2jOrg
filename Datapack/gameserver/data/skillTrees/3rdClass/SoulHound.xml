@@ -43,20 +43,86 @@
 
         <skill skillName="Lightning Barrier" skillId="1515" skillLvl="3" getLevel="80" levelUpSp="18000000"/>
         <skill skillName="Light Armor Mastery" skillId="465" skillLvl="8" getLevel="80" levelUpSp="18000000">
-            <item id="57" count="1000000"/>
+            <item id="57" count="1000000"/> <!-- Adena -->
         </skill>
-        <skill skillName="Rapier Mastery" skillId="474" skillLvl="8" getLevel="80" levelUpSp="18000000"/>
+        <skill skillName="Rapier Mastery" skillId="474" skillLvl="8" getLevel="80" levelUpSp="18000000">
+            <item id="57" count="1000000"/> <!-- Adena -->
+        </skill>
         <skill skillName="Soul Spark" skillId="45163" skillLvl="6" getLevel="80" levelUpSp="18000000">
-            <item id="57" count="5000000"/> <!-- Adena -->
+            <item id="57" count="1000000"/> <!-- Adena -->
         </skill>
         <skill skillName="Steal Divinity" skillId="1440" skillLvl="2" getLevel="80" levelUpSp="18000000" />
         <skill skillName="Blink" skillId="1448" skillLvl="1" getLevel="80" levelUpSp="18000000" />
-        <skill skillName="Arcane Shield" skillId="1556" skillLvl="1" getLevel="80" levelUpSp="18000000" />
-        <skill skillName="Abyssal Power" skillId="1474" skillLvl="3" getLevel="80" levelUpSp="18000000" />
+        <skill skillName="Arcane Shield" skillId="1556" skillLvl="1" getLevel="80" levelUpSp="18000000">
+            <item id="90086" count="1"/> <!-- Scroll: Arcane Shield -->
+        </skill>
+        <skill skillName="Abyssal Power" skillId="1474" skillLvl="3" getLevel="80" levelUpSp="18000000">
+            <item id="57" count="1000000"/>
+        </skill>
         <skill skillName="Voice Bind" skillId="1447" skillLvl="3" getLevel="80" levelUpSp="18000000"/>
         <skill skillName="Shadow Bind" skillId="1446" skillLvl="3" getLevel="80" levelUpSp="18000000"/>
         <skill skillName="Lightning Shock" skillId="791" skillLvl="3" getLevel="80" levelUpSp="18000000"/>
+        <skill skillName="Soul Slash" skillId="45160" skillLvl="8" getLevel="80" levelUpSp="18000000">
+            <item id="57" count="1000000"/> <!-- Adena -->
+        </skill>
+        <skill skillName="Soul Link" skillId="1378" skillLvl="5" getLevel="80" levelUpSp="18000000">
+            <item id="57" count="1000000"/> <!-- Adena -->
+        </skill>
+        <skill skillName="Soul Strike" skillId="1516" skillLvl="8" getLevel="80" levelUpSp="18000000">
+            <item id="57" count="1000000"/> <!-- Adena -->
+        </skill>
+        <skill skillName="Soul Thrust" skillId="45161" skillLvl="6" getLevel="80" levelUpSp="18000000">
+            <item id="57" count="1000000"/> <!-- Adena -->
+        </skill>
+        <skill skillName="Soul Sense" skillId="1379" skillLvl="5" getLevel="80" levelUpSp="18000000" />
 
-        
+        <skill skillName="Arcane Shield" skillId="1556" skillLvl="2" getLevel="81" levelUpSp="160000000"/>
+
+        <skill skillName="Lightning Barrier" skillId="1515" skillLvl="4" getLevel="82" levelUpSp="170000000"/>
+        <skill skillName="Expert Casting" skillId="1527" skillLvl="3" getLevel="82" levelUpSp="170000000">
+            <item id="57" count="1000000"/> <!-- Adena -->
+        </skill>
+        <skill skillName="Arcane Shield" skillId="1556" skillLvl="3" getLevel="82" levelUpSp="170000000"/>
+        <skill skillName="Voice Bind" skillId="1447" skillLvl="4" getLevel="82" levelUpSp="170000000"/>
+        <skill skillName="Shadow Bind" skillId="1446" skillLvl="4" getLevel="82" levelUpSp="170000000"/>
+        <skill skillName="Lightning Shock" skillId="791" skillLvl="4" getLevel="82" levelUpSp="170000000"/>
+
+        <skill skillName="Arcane Shield" skillId="1556" skillLvl="4" getLevel="83" levelUpSp="240000000"/>
+
+        <skill skillName="Lightning Barrier" skillId="1515" skillLvl="5" getLevel="84" levelUpSp="240000000"/>
+        <skill skillName="Arcane Shield" skillId="1556" skillLvl="5" getLevel="84" levelUpSp="240000000"/>
+        <skill skillName="Voice Bind" skillId="1447" skillLvl="5" getLevel="84" levelUpSp="240000000"/>
+        <skill skillName="Shadow Bind" skillId="1446" skillLvl="5" getLevel="84" levelUpSp="240000000"/>
+        <skill skillName="Lightning Shock" skillId="791" skillLvl="5" getLevel="84" levelUpSp="240000000"/>
+
+
+        <skill skillName="Armor Mastery" skillId="464" skillLvl="5" getLevel="85" levelUpSp="840000000">
+            <item id="57" count="2000000"/> <!-- Adena -->
+        </skill>
+        <skill skillName="Light Armor Mastery" skillId="465" skillLvl="9" getLevel="85" levelUpSp="840000000">
+            <item id="57" count="5000000"/> <!-- Adena -->
+        </skill>
+        <skill skillName="Weapon Mastery" skillId="463" skillLvl="5" getLevel="85" levelUpSp="840000000">
+            <item id="57" count="2000000"/> <!-- Adena -->
+        </skill>
+        <skill skillName="Rapier Mastery" skillId="474" skillLvl="9" getLevel="85" levelUpSp="840000000">
+            <item id="57" count="5000000"/> <!-- Adena -->
+        </skill>
+        <skill skillName="Soul Spark" skillId="45163" skillLvl="7" getLevel="85" levelUpSp="840000000">
+            <item id="57" count="5000000"/> <!-- Adena -->
+        </skill>
+        <skill skillName="Critical Sense" skillId="626" skillLvl="5" getLevel="85" levelUpSp="840000000" />
+        <skill skillName="Death Mark" skillId="1435" skillLvl="5" getLevel="85" levelUpSp="840000000">
+            <item id="57" count="2000000"/> <!-- Adena -->
+        </skill>
+        <skill skillName="Soul Slash" skillId="45160" skillLvl="9" getLevel="85" levelUpSp="840000000">
+            <item id="57" count="5000000"/> <!-- Adena -->
+        </skill>
+        <skill skillName="Soul Strike" skillId="1516" skillLvl="9" getLevel="85" levelUpSp="840000000">
+            <item id="57" count="5000000"/> <!-- Adena -->
+        </skill>
+        <skill skillName="Soul Thrust" skillId="45161" skillLvl="7" getLevel="85" levelUpSp="840000000">
+            <item id="57" count="5000000"/> <!-- Adena -->
+        </skill>
     </skillTree>
 </list>
