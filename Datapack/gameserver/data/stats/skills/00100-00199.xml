@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-    <skill id="100" toLevel="15" name="Shock Attack">
-        <!-- Attacks the enemy with $s1 Power added to P. Atk., inflicting Stun for $s2. Requires a blunt weapon. Over-hit. -->
+    <skill id="100" toLevel="15" name="Stun Attack">
+        <!-- Attacks the enemy with bonus $s1 P. Atk. Power. Stun for $s2. Requires a Sword, Blunt Weapon, Spear or Dual Sword. Over-hit. -->
         <icon>icon.skill0100</icon>
         <abnormalLvl>1</abnormalLvl>
         <abnormalTime>7</abnormalTime>
@@ -77,6 +77,9 @@
             <condition name="EquipWeapon">
                 <weaponType>
                     <item>BLUNT</item>
+                    <item>SWORD</item>
+                    <item>POLE</item>
+                    <item>DUAL</item>
                 </weaponType>
             </condition>
         </conditions>
@@ -2480,7 +2483,7 @@
             </effect>
         </effects>
     </skill>
-    <skill id="147" toLevel="65" name="Magic Resistance">
+    <skill id="147" toLevel="54" name="Magic Defense">
         <!-- M. Def. +$s1. -->
         <icon>icon.skill0147</icon>
         <magicLvl>
@@ -2538,17 +2541,6 @@
             <value level="52">76</value>
             <value level="53">77</value>
             <value level="54">78</value>
-            <value level="55">80</value>
-            <value level="56">81</value>
-            <value level="57">82</value>
-            <value level="58">83</value>
-            <value level="59">84</value>
-            <value level="60">85</value>
-            <value level="61">85</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-            <value level="62">85</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-            <value level="63">85</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-            <value level="64">85</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-            <value level="65">85</value> <!-- FIXME: AUTO GENERATED LEVEL -->
         </magicLvl>
         <operateType>P</operateType>
         <magicCriticalRate>5</magicCriticalRate>
@@ -2609,17 +2601,6 @@
                     <value level="52">133</value>
                     <value level="53">136</value>
                     <value level="54">139</value>
-                    <value level="55">145</value>
-                    <value level="56">148</value>
-                    <value level="57">151</value>
-                    <value level="58">154</value>
-                    <value level="59">157</value>
-                    <value level="60">160</value>
-                    <value level="61">160</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-                    <value level="62">160</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-                    <value level="63">160</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-                    <value level="64">160</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-                    <value level="65">160</value> <!-- FIXME: AUTO GENERATED LEVEL -->
                 </amount>
                 <mode>DIFF</mode>
             </effect>
@@ -2679,17 +2660,6 @@
                     <value level="52">20</value>
                     <value level="53">20</value>
                     <value level="54">20</value>
-                    <value level="55">20</value>
-                    <value level="56">20</value>
-                    <value level="57">20</value>
-                    <value level="58">20</value>
-                    <value level="59">20</value>
-                    <value level="60">20</value>
-                    <value level="61">20</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-                    <value level="62">20</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-                    <value level="63">20</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-                    <value level="64">20</value> <!-- FIXME: AUTO GENERATED LEVEL -->
-                    <value level="65">20</value> <!-- FIXME: AUTO GENERATED LEVEL -->
                 </amount>
                 <mode>PER</mode>
             </effect>

@@ -4729,11 +4729,11 @@
             </effect>
         </effects>
     </skill>
-    <skill id="260" toLevel="45" name="Hammer Crush">
-        <!-- Attacks the enemy with $s1 Power added to P. Atk., inflicting Stun for $s2. Requires a blunt weapon. Ignores Shield Defense. Over-hit. -->
+    <skill id="260" toLevel="45" name="Power Crush">
+        <!-- Attacks the enemy with bonus $s1 P. Atk. Power, inflicting Stun for $s2. Requires a Sword, Blunt Weapon, Spear or DualSword. Ignores Shield Defense. Over-hit. -->
         <icon>icon.skill0260</icon>
         <abnormalLvl>1</abnormalLvl>
-        <abnormalTime>7</abnormalTime>
+        <abnormalTime>3</abnormalTime>
         <abnormalType>STUN</abnormalType>
         <abnormalVisualEffect>STUN</abnormalVisualEffect>
         <activateRate>50</activateRate>
@@ -4895,7 +4895,10 @@
         <conditions>
             <condition name="EquipWeapon">
                 <weaponType>
+                    <item>SWORD</item>
                     <item>BLUNT</item>
+                    <item>POLE</item>
+                    <item>DUAL</item>
                 </weaponType>
             </condition>
         </conditions>
@@ -6490,8 +6493,8 @@
             </effect>
         </effects>
     </skill>
-    <skill id="281" toLevel="45" name="Soul Breaker">
-        <!-- Attacks the enemy with $s1 Power added to P. Atk., inflicting Stun for $s2 Requires a fist weapon. Ignores Shield Defense. Over-hit. -->
+    <skill id="281" toLevel="45" name="Fist Breaker">
+        <!-- Hurls an iron-fist to attack the target with bonus $s1 Power, and stuns the target for $S2. Requires a fist weapon. Ignores Shield Defense. Over-hit. -->
         <icon>icon.skill0281</icon>
         <abnormalLvl>1</abnormalLvl>
         <abnormalTime>7</abnormalTime>
@@ -8019,3 +8022,4 @@
         </effects>
     </skill>
 </list>
+
