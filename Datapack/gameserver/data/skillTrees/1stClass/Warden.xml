@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org ../../xsd/skillTrees.xsd">
+    <skillTree type="classSkillTree" classId="126" parentClassId="192">
+
+        <skill skillName="Armor Mastery" skillId="464" skillLvl="2" getLevel="20" levelUpSp="1000" />
+        <skill skillName="Light Armor Mastery" skillId="465" skillLvl="1" getLevel="20" levelUpSp="1000" />
+        <skill skillName="Weapon Mastery" skillId="463" skillLvl="2" getLevel="20" levelUpSp="1000" />
+        <skill skillName="Bow Mastery" skillId="767" skillLvl="1" getLevel="20" levelUpSp="1000" />
+        <skill skillName="Light Master" skillId="45178" skillLvl="1" getLevel="20"  />
+        <skill skillName="Long Shot" skillId="113" skillLvl="1" getLevel="20" levelUpSp="1000" />
+        <skill skillName="Shine Soul Finding" skillId="393" skillLvl="1" getLevel="20" levelUpSp="1000" />
+        <skill skillName="Dash" skillId="4" skillLvl="1" getLevel="20" levelUpSp="1000" />
+        <skill skillName="Twin Shot" skillId="45168" skillLvl="1" getLevel="20" levelUpSp="1000" />
+
+        <skill skillName="Magic Immunity" skillId="466" skillLvl="1" getLevel="25" levelUpSp="5500" />
+
+        <skill skillName="Ultimate Escape" skillId="622" skillLvl="1" getLevel="28" levelUpSp="5500" />
+
+        <skill skillName="Light Armor Mastery" skillId="465" skillLvl="2" getLevel="30" levelUpSp="10000" />
+        <skill skillName="Bow Mastery" skillId="767" skillLvl="2" getLevel="30" levelUpSp="10000" />
+        <skill skillName="Twin Shot" skillId="45168" skillLvl="2" getLevel="30" levelUpSp="10000" />
+
+        <skill skillName="Rapid Shot" skillId="99" skillLvl="1" getLevel="32" levelUpSp="10000"/>
+        <skill skillName="Death Mark" skillId="1435" skillLvl="2" getLevel="32" levelUpSp="10000"/>
+
+    </skillTree>
+</list>

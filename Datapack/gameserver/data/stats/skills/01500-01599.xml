@@ -696,7 +696,7 @@
             </effect>
         </effects>
     </skill>
-    <skill id="1515" toLevel="1" name="Lightning Barrier">
+    <skill id="1515" toLevel="5" name="Lightning Barrier">
         <!-- Spreads lightning's defensive barrier for 20 minutes. Paralyzes the target that attacked you. -->
         <icon>icon.skill1515</icon>
         <abnormalLvl>1</abnormalLvl>
@@ -728,7 +728,7 @@
             </effect>
         </effects>
     </skill>
-    <skill id="1516" toLevel="1" name="Soul Strike">
+    <skill id="1516" toLevel="10" name="Soul Strike">
         <!-- Consecutively throws souls to inflict damage on the enemy with 166 Power added to M. Atk. Increases Power upon the consumption of up to 5 souls. -->
         <icon>icon.skill1516</icon>
         <castRange>750</castRange>
