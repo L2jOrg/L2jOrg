@@ -89,7 +89,24 @@
         <operateType>A1</operateType>
     </skill>
     <skill id="17823" toLevel="10" name="Aquamarine">
-        <!-- $s1 chance of recovering $s2 MP. -->
+        <!--
+            Has a $s1 chance to recover $s3 MP
+            1 - 10% 12
+            2 - 10% 16
+            3 - 10% 20
+            4 - 10% 30
+            5 - 10% 50
+
+            Has a $s1 chance to recover $s3 MP and Max MP +$s2 upon using a skill
+            6 - 10% 60 2
+            7 - 10% 80 5
+            8 - 10% 100 8
+            9 - 10% 130 12
+
+            Has a $s1 chance to recover $s2 MP and Max MP +$s3 upon using a skill. Enables a special skill that recovers $s4 MP when equipped
+            10 - 10% 200 20% 10%
+
+         -->
         <icon>
             <value level="1">icon.etc_bm_jewel_aquamarine_i00</value>
             <value level="2">icon.etc_bm_jewel_aquamarine_i00</value>
@@ -142,7 +159,13 @@
         <operateType>A1</operateType>
     </skill>
     <skill id="17891" toLevel="5" name="Ruby">
-        <!-- Beast Soulshot Damage +$s1. -->
+        <!-- Beast Soulshot Damage +$s1.
+            1 - 16%
+            2 - 17%
+            3 - 18%
+            4 - 19%
+            5 - 20%
+        -->
         <icon>
             <value level="1">icon.etc_bm_jewel_ruby_i00</value>
             <value level="2">icon.bm_jewel_ssdmg_high_lv1_lavianrose</value>
@@ -152,7 +175,7 @@
         </icon>
         <operateType>A1</operateType>
     </skill>
-    <skill id="17896" toLevel="1" name="Orc Recovery Ban">
+    <skill id="17896" toLevel="1" name="Aquamarine - Mana Drain">
         <!-- No HP recovery. -->
         <operateType>P</operateType>
         <hitTime>2000</hitTime>

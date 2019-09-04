@@ -123,8 +123,8 @@
             </effect>
         </effects>
     </skill>
-    <skill id="1606" toLevel="10" name="Quick Spear">
-        <!-- Attacks the enemy with $s1 Power added to P. Atk., inflicting Stun for $s2. Range 300. Requires a spear. Ignores Shield Defense. Over-hit. -->
+    <skill id="1606" toLevel="10" name="Lightning Spear">
+        <!-- Throws a spear to attack the enemy's surroundings with bonus $s1 Power. Stuns for $s2. Available when the distance is at least 300. Requires a spear. Ignores Shield Defense. Over-hit. -->
         <icon>icon.skill1606</icon>
         <abnormalLvl>1</abnormalLvl>
         <abnormalTime>5</abnormalTime>
@@ -214,8 +214,8 @@
             </effect>
         </effects>
     </skill>
-    <skill id="1607" toLevel="45" name="Excruciating Strike">
-        <!-- Attacks the enemies in front of the character with $s1 Power added to P. Atk. Ignores $s2 of the enemy's P. Def. Requires a sword/ two-handed sword. Ignores Shield Defense. Over-hit. -->
+    <skill id="1607" toLevel="45" name="Quake Attack">
+        <!-- Attacks frontal enemies with bonus $s1 Power. Requires a sword or blunt weapon. Ignores Shield Defense. Over-hit. -->
         <icon>icon.skill1607</icon>
         <castRange>40</castRange>
         <coolTime>500</coolTime>
@@ -372,6 +372,8 @@
             <condition name="EquipWeapon">
                 <weaponType>
                     <item>SWORD</item>
+                    <item>BLUNT</item>
+                    <item>TWO_HANDED_SWORD</item>
                 </weaponType>
             </condition>
         </conditions>
@@ -431,8 +433,8 @@
             </effect>
         </effects>
     </skill>
-    <skill id="1608" toLevel="2" name="Immortal Life">
-        <!-- For 5 sec., HP doesn't drop below 1. Additionally recovers 20% HP if the effect of Immortality ends. -->
+    <skill id="1608" toLevel="2" name="Immortal">
+        <!-- For $s1, HP does not go below 1, and after that, recovers $s2 of HP.\n\n<Auto Use Skill> -->
         <icon>icon.skill1608</icon>
         <abnormalLvl>
             <value level="1">1</value>
@@ -467,8 +469,8 @@
             </effect>
         </endEffects>
     </skill>
-    <skill id="1609" toLevel="4" name="Sword Expert">
-        <!-- P. Atk. +$s1, P. Accuracy +$s2. Atk. Spd. +$s3 when using a sword/ two-handed sword. Continuously consumes MP proportionately to your level. -->
+    <skill id="1609" toLevel="4" name="Proficient Sword">
+        <!-- Atk. Spd. +$s1 when equipped with a sword. P. Atk. +$s2 and P. Accuracy +$s3 when equipped with a two-handed sword. Consumes MP over time depending on your level. -->
         <icon>icon.skill1609</icon>
         <magicLvl>
             <value level="1">46</value>
@@ -522,8 +524,8 @@
             </effect>
         </effects>
     </skill>
-    <skill id="1610" toLevel="29" name="Life Rescue">
-        <!-- For $s1 restores $s2 HP of the target each sec. -->
+    <skill id="1610" toLevel="29" name="Life Saver">
+        <!-- For $s1, recover target's HP by $s2 per second -->
         <icon>icon.skill1610</icon>
         <abnormalLvl>
             <value level="1">1</value>
@@ -665,11 +667,11 @@
         <effects>
             <effect name="HealOverTime">
                 <power>
-                    <value level="1">12</value>
-                    <value level="2">15</value>
-                    <value level="3">17</value>
-                    <value level="4">20</value>
-                    <value level="5">22</value>
+                    <value level="1">19</value>
+                    <value level="2">24</value>
+                    <value level="3">28</value>
+                    <value level="4">33</value>
+                    <value level="5">36</value>
                     <value level="6">41</value>
                     <value level="7">46</value>
                     <value level="8">49</value>
@@ -699,8 +701,8 @@
             </effect>
         </effects>
     </skill>
-    <skill id="1611" toLevel="6" name="Power Supremacy">
-        <!-- P. Atk. +$s1, Max HP -$s2. -->
+    <skill id="1611" toLevel="6" name="Physical Transcendence">
+        <!-- Gathers power that exceeds your physical limit. P. Atk. +$s1 and Max HP -$s2 -->
         <icon>icon.skill1611</icon>
         <mpInitialConsume>
             <value level="1">0</value>
@@ -732,24 +734,32 @@
                     <value level="2">-11</value>
                     <value level="3">-12</value>
                     <value level="4">-13</value>
-                    <value level="5">-15</value>
+                    <value level="5">-14</value>
                     <value level="6">-15</value>
                 </amount>
                 <mode>PER</mode>
             </effect>
         </effects>
     </skill>
-    <skill id="1612" toLevel="1" name="Slowing Power">
+    <skill id="1612" toLevel="1" name="Slow Force">
         <!-- Speed -20% for 15 sec. -->
         <icon>icon.skill0210</icon>
         <operateType>A1</operateType>
         <isDebuff>true</isDebuff>
+        <abnormalTime>15</abnormalTime>
+        <abnormalType>SPEED_DOWN</abnormalType>
         <castRange>400</castRange>
         <hitTime>1000</hitTime>
         <effectPoint>-204</effectPoint>
+        <effects>
+            <effect name="Speed">
+                <amount>-20</amount>
+                <mode>PER</mode>
+            </effect>
+        </effects>
     </skill>
-    <skill id="1613" toLevel="11" name="Body Impale">
-        <!-- Attacks the enemy with $s1 Power added to P. Atk., inflicts Stun for $s2 and dispels $s3 buff(s) from a stunned target. Requires a blunt weapon. Ignores Shield Defense. Over-hit. -->
+    <skill id="1613" toLevel="11" name="Body Crush">
+        <!-- Attacks an enemy with bonus $s1 Power added to P. Atk. and stuns for $s2. Has a chance to remove $s3 buffs of the stunned target. Requires a Sword, Blunt Weapon or Spear. Ignores Shield Defense. Over-hit. -->
         <icon>icon.skill1613</icon>
         <abnormalLvl>2</abnormalLvl>
         <abnormalTime>5</abnormalTime>
@@ -814,6 +824,9 @@
                 <weaponType>
                     <item>BLUNT</item>
                     <item>DUALBLUNT</item>
+                    <item>SWORD</item>
+                    <item>TWO_HANDED_SWORD</item>
+                    <item>POLE</item>
                 </weaponType>
             </condition>
         </conditions>
@@ -921,8 +934,8 @@
             </effect>
         </effects>
     </skill>
-    <skill id="1617" toLevel="4" name="Tenacity">
-        <!-- Enhances the body. For $s1, Stun Resistance +$s2, restores HP at a certain chance upon taking damage. -->
+    <skill id="1617" toLevel="4" name="Stubborn Body">
+        <!-- Gives you a sturdy body. For $s1, Stun Resistance +$s2 and has a chance to recover HP when hit.\n\n<Auto Use Skill> -->
         <icon>icon.skill1617</icon>
         <reuseDelay>2000</reuseDelay>
         <coolTime>500</coolTime>
@@ -962,13 +975,13 @@
                 <chance>10</chance>
                 <targetType>SELF</targetType>
                 <minDamage>50</minDamage>
-                <skillId>1618</skillId> <!-- Body Reconstruction -->
+                <skillId>1618</skillId> <!-- Body Recovery -->
                 <skillLevel>1</skillLevel>
             </effect>
         </effects>
     </skill>
-    <skill id="1618" toLevel="4" name="Body Reconstruction">
-        <!-- Restores the target's HP with $s1 Power. -->
+    <skill id="1618" toLevel="4" name="Body Recovery">
+        <!-- Recovers your HP with $s1 Power. -->
         <icon>icon.skill0045</icon>
         <reuseDelay>5000</reuseDelay>
         <magicLvl>
@@ -988,7 +1001,7 @@
                     <value level="1">188</value>
                     <value level="2">289</value>
                     <value level="3">361</value>
-                    <value level="4">361</value> <!-- FIXME: AUTO GENERATED LEVEL -->
+                    <value level="4">431</value>
                 </power>
             </effect>
         </effects>
@@ -1101,8 +1114,8 @@
             </effect>
         </effects>
     </skill>
-    <skill id="1623" toLevel="5" name="Eva's Protection">
-        <!-- Party members' P. Def. +$s2, M. Def. +$s3 Speed +$s4 for $s1 Requires a shield. -->
+    <skill id="1623" toLevel="5" name="Protection of Eva">
+        <!-- With Eva's protection, for $s1, a party member's P. Def. +$s2, M. Def +$s3, and Movement Speed +$s4. Requires a shield. -->
         <icon>icon.skill1623</icon>
         <abnormalLvl>1</abnormalLvl>
         <abnormalTime>180</abnormalTime>
@@ -1173,8 +1186,9 @@
             </effect>
         </effects>
     </skill>
-    <skill id="1624" toLevel="4" name="Indestructible Sound">
-        <!-- Using Momentum, throws a powerful strike with a sword, blocking the target for $s1 Damage received by the target -$s2, blocks target's movements and skill usage. Requires a dual sword. Requires Momentum level 5. -->
+    <skill id="1624" toLevel="4" name="Unbreakable Sonic">
+        <!-- Using Momentum, throws a powerful strike with a sword, blocking the target for $s1. The target is engulfed by Momentum.
+             Damage received -$s2, and becomes unable to use skills or move. Requires a dual sword. Requires Momentum Stage 5 recharge. -->
         <icon>icon.skill1624</icon>
         <abnormalLvl>1</abnormalLvl>
         <abnormalTime>
@@ -1225,23 +1239,22 @@
                     <item>DUAL</item>
                 </weaponType>
             </condition>
+            <condition name="EnergySaved">
+                <amount>5</amount>
+            </condition>
         </conditions>
         <effects>
             <effect name="Mute"/>
             <effect name="PhysicalMute"/>
             <effect name="BlockTarget"/>
             <effect name="BlockMove"/>
-            <effect name="PvpPhysicalAttackDamageBonus">
-                <amount>-50</amount>
-                <mode>PER</mode>
-            </effect>
-            <effect name="PvpPhysicalSkillDamageBonus">
-                <amount>-50</amount>
-                <mode>PER</mode>
-            </effect>
-            <effect name="PvpMagicalSkillDamageBonus">
-                <amount>-50</amount>
-                <mode>PER</mode>
+            <effect name="ReduceDamage">
+                <amount>
+                    <value level="1" >50</value>
+                    <value level="2" >40</value>
+                    <value level="3" >30</value>
+                    <value level="4" >20</value>
+                </amount>
             </effect>
         </effects>
     </skill>

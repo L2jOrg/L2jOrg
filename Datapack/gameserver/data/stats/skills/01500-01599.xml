@@ -697,7 +697,7 @@
         </effects>
     </skill>
     <skill id="1515" toLevel="5" name="Lightning Barrier">
-        <!-- Spreads lightning's defensive barrier for 20 minutes. Paralyzes the target that attacked you. -->
+        <!-- Spreads lightning's defensive barrier for 30 seconds. Has a chance to Paralyze the target that attacked you for 3 seconds.\n\n<Auto Use Skill> -->
         <icon>icon.skill1515</icon>
         <abnormalLvl>1</abnormalLvl>
         <abnormalTime>1200</abnormalTime>
@@ -729,7 +729,8 @@
         </effects>
     </skill>
     <skill id="1516" toLevel="10" name="Soul Strike">
-        <!-- Consecutively throws souls to inflict damage on the enemy with 166 Power added to M. Atk. Increases Power upon the consumption of up to 5 souls. -->
+        <!-- When equipping a Rapier, has a chance to inflict additional M. Atk. when attacking the enemy. The type of M. Atk. that occurs for Soul Strike depends on the attack style.
+            <Physical Attack>Sword Energy\n<Magci Attack>Lightning -->
         <icon>icon.skill1516</icon>
         <castRange>750</castRange>
         <effectPoint>-662</effectPoint>

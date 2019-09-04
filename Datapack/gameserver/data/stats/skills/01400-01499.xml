@@ -2838,7 +2838,7 @@
         </effects>
     </skill>
     <skill id="1451" toLevel="2" name="Fire Vortex Buster">
-        <!-- Attacks by fire vortex and inflicts fire damage on the target with $s1 Power added to M. Atk. -->
+        <!-- Detonates a Fire Vortex that inflicts damage on the enemy with bonus $s1 M. Atk. Power. -->
         <icon>icon.skill1451</icon>
         <castRange>900</castRange>
         <effectPoint>
@@ -3667,15 +3667,19 @@
         </effects>
     </skill>
     <skill id="1474" toLevel="3" name="Abyssal Power">
-        <!-- When equipped with Light Armor, M. Atk. +10%. -->
+        <!-- M. Atk. +$s1. -->
         <icon>icon.skill1474</icon>
         <magicLvl>43</magicLvl>
         <operateType>P</operateType>
         <magicCriticalRate>5</magicCriticalRate>
         <effects>
             <effect name="MAtk">
-                <amount>10</amount>
-                <mode>PER</mode>
+                <amount>
+                    <value level="1">80</value>
+                    <value level="1">120</value>
+                    <value level="1">200</value>
+                </amount>
+                <mode>DIFF</mode>
             </effect>
         </effects>
     </skill>
