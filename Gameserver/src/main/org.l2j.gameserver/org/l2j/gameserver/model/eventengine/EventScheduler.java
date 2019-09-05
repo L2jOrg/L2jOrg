@@ -110,8 +110,6 @@ public class EventScheduler {
         try (Connection con = DatabaseFactory.getInstance().getConnection();
              PreparedStatement ps = con.prepareStatement("REPLACE INTO event_schedulers (eventName, schedulerName, lastRun) VALUES (?, ?, ?)")) {
 
-
-
             ps.setString(1, _eventManager.getName());
             ps.setString(2, _name);
             ps.setTimestamp(3, new Timestamp(lastRun));

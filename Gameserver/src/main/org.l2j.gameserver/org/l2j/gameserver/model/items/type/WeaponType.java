@@ -17,6 +17,7 @@ public enum WeaponType implements ItemType {
     BOW(TraitType.BOW),
     ETC(TraitType.ETC),
     DUAL(TraitType.DUAL),
+    TWO_HANDED_SWORD(TraitType.TWO_HANDED_SWORD),
     FIST(TraitType.FIST), // 0 items with that type
     FISHINGROD(TraitType.NONE),
     RAPIER(TraitType.RAPIER),

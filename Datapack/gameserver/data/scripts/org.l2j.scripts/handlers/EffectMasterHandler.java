@@ -120,7 +120,6 @@ public final class EffectMasterHandler
         EffectHandler.getInstance().registerHandler("EnlargeAbnormalSlot", EnlargeAbnormalSlot::new);
         EffectHandler.getInstance().registerHandler("EnlargeSlot", EnlargeSlot::new);
         EffectHandler.getInstance().registerHandler("Escape", Escape::new);
-        EffectHandler.getInstance().registerHandler("SpiritXpModify", SpiritXpModify::new);
         EffectHandler.getInstance().registerHandler("ExpModify", ExpModify::new);
         EffectHandler.getInstance().registerHandler("Faceoff", Faceoff::new);
         EffectHandler.getInstance().registerHandler("FakeDeath", FakeDeath::new);
@@ -296,6 +295,7 @@ public final class EffectMasterHandler
         EffectHandler.getInstance().registerHandler("Sow", Sow::new);
         EffectHandler.getInstance().registerHandler("Speed", Speed::new);
         EffectHandler.getInstance().registerHandler("SphericBarrier", SphericBarrier::new);
+        EffectHandler.getInstance().registerHandler("SpiritXpModify", SpiritXpModify::new);
         EffectHandler.getInstance().registerHandler("SpModify", SpModify::new);
         EffectHandler.getInstance().registerHandler("Spoil", Spoil::new);
         EffectHandler.getInstance().registerHandler("StatBonusSkillCritical", StatBonusSkillCritical::new);

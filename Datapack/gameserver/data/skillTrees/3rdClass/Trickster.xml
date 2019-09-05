@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org ../../xsd/skillTrees.xsd">
+    <skillTree type="classSkillTree" classId="134" parentClassId="130">
+
+        <skill skillName="Divine Inspiration" skillId="1405" skillLvl="3" getLevel="76" levelUpSp="8000000">
+            <item id="8620" count="1"/> <!-- Ancient Book: Divine Inspiration (Manuscript) -->
+        </skill>
+        <skill skillName="Divine Inspiration" skillId="1405" skillLvl="4" getLevel="76" levelUpSp="8000000">
+            <item id="8621" count="1"/> <!-- Ancient Book: Divine Inspiration (Original Version) -->
+        </skill>
+        <skill skillName="Armor Mastery" skillId="464" skillLvl="4" getLevel="76" levelUpSp="8000000">
+            <item id="57" count="1000000"/> <!-- Adena -->
+        </skill>
+        <skill skillName="Weapon Mastery" skillId="463" skillLvl="4" getLevel="76" levelUpSp="8000000">
+            <item id="57" count="1000000"/> <!-- Adena -->
+        </skill>
+        <skill skillName="Detect Darkness" skillId="53005" skillLvl="1" getLevel="76" levelUpSp="8000000">
+            <item id="91482" count="1"/> <!-- Scroll - Detect Darkness -->
+        </skill>
+        <skill skillName="Mount Griffin" skillId="62002" skillLvl="1" getLevel="76">
+            <item id="91946" count="1"/> <!-- Spellbook: Mount Griffin -->
+        </skill>
+        <skill skillName="Soul Panic" skillId="627" skillLvl="1" getLevel="76" levelUpSp="8000000">
+            <item id="91924" count="1"/> <!-- Scroll: Mental Panic -->
+        </skill>
+        <skill skillName="Collect Light Souls" skillId="45151" skillLvl="2" getLevel="76" levelUpSp="8000000">
+            <item id="91942" count="1"/> <!-- Crystal of Light -->
+        </skill>
+        <skill skillName="Collect Shadow Souls" skillId="45152" skillLvl="2" getLevel="76" levelUpSp="8000000">
+            <item id="91943" count="1" /> <!-- Crystal of Shadows -->
+        </skill>
+        <skill skillName="Soul Stigma" skillId="792" skillLvl="1" getLevel="76" levelUpSp="8000000">
+            <item id="91925" count="1" /> <!-- Scroll: Soul Stigma -->
+        </skill>
+
+        <skill skillName="Critical Sense" skillId="626" skillLvl="4" getLevel="78" levelUpSp="12000000" />
+        <skill skillName="Death Mark" skillId="1435" skillLvl="4" getLevel="78" levelUpSp="12000000">
+            <item id="57" count="1000000"/> <!-- Adena -->
+        </skill>
+        <skill skillName="Soul Panic" skillId="627" skillLvl="2" getLevel="78" levelUpSp="12000000"/>
+        <skill skillName="Soul Stigma" skillId="792" skillLvl="2" getLevel="78" levelUpSp="12000000"/>
+
+        <skill skillName="Light Armor Mastery" skillId="465" skillLvl="8" getLevel="80" levelUpSp="18000000">
+            <item id="57" count="1000000"/> <!-- Adena -->
+        </skill>
+        <skill skillName="Bow Mastery" skillId="767" skillLvl="8" getLevel="80" levelUpSp="18000000">
+            <item id="57" count="1000000"/> <!-- Adena -->
+        </skill>
+        <skill skillName="Critical Shot" skillId="790" skillLvl="3" getLevel="80" levelUpSp="18000000">
+            <item id="57" count="1000000"/> <!-- Adena -->
+        </skill>
+        <skill skillName="Multiple Shot" skillId="45170" skillLvl="6" getLevel="80" levelUpSp="18000000">
+            <item id="57" count="1000000"/> <!-- Adena -->
+        </skill>
+        <skill skillName="Soul Panic" skillId="627" skillLvl="3" getLevel="80" levelUpSp="18000000"/>
+        <skill skillName="Twin Shot" skillId="45168" skillLvl="8" getLevel="80" levelUpSp="18000000">
+            <item id="57" count="1000000"/> <!-- Adena -->
+        </skill>
+        <skill skillName="Soul Stigma" skillId="792" skillLvl="3" getLevel="80" levelUpSp="18000000"/>
+        <skill skillName="Sharp Aiming" skillId="45172" skillLvl="9" getLevel="80" levelUpSp="18000000">
+            <item id="57" count="1000000"/> <!-- Adena -->
+        </skill>
+
+        <skill skillName="Soul Panic" skillId="627" skillLvl="4" getLevel="82" levelUpSp="170000000"/>
+        <skill skillName="Soul Stigma" skillId="792" skillLvl="4" getLevel="82" levelUpSp="170000000"/>
+
+        <skill skillName="Soul Panic" skillId="627" skillLvl="5" getLevel="84" levelUpSp="240000000"/>
+        <skill skillName="Soul Stigma" skillId="792" skillLvl="5" getLevel="84" levelUpSp="240000000"/>
+
+
+        <skill skillName="Armor Mastery" skillId="464" skillLvl="5" getLevel="85" levelUpSp="840000000">
+            <item id="57" count="2000000"/> <!-- Adena -->
+        </skill>
+        <skill skillName="Light Armor Mastery" skillId="465" skillLvl="9" getLevel="85" levelUpSp="840000000">
+            <item id="57" count="5000000"/> <!-- Adena -->
+        </skill>
+        <skill skillName="Bow Mastery" skillId="767" skillLvl="9" getLevel="85" levelUpSp="840000000">
+            <item id="57" count="5000000"/> <!-- Adena -->
+        </skill>
+        <skill skillName="Weapon Mastery" skillId="463" skillLvl="5" getLevel="85" levelUpSp="840000000">
+            <item id="57" count="2000000"/> <!-- Adena -->
+        </skill>
+        <skill skillName="Critical Sense" skillId="626" skillLvl="5" getLevel="85" levelUpSp="840000000" />
+        <skill skillName="Death Mark" skillId="1435" skillLvl="5" getLevel="85" levelUpSp="840000000">
+            <item id="57" count="2000000"/> <!-- Adena -->
+        </skill>
+        <skill skillName="Multiple Shot" skillId="45170" skillLvl="6" getLevel="80" levelUpSp="18000000">
+            <item id="57" count="5000000"/> <!-- Adena -->
+        </skill>
+        <skill skillName="Twin Shot" skillId="45168" skillLvl="8" getLevel="80" levelUpSp="18000000">
+            <item id="57" count="5000000"/> <!-- Adena -->
+        </skill>
+
+    </skillTree>
+</list>

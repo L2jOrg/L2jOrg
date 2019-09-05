@@ -352,7 +352,6 @@
         </effects>
     </skill>
     <skill id="622" toLevel="2" name="Ultimate Escape">
-        <!-- Confirmed CT2.5 -->
         <abnormalLvl>1</abnormalLvl>
         <abnormalTime>20</abnormalTime>
         <abnormalType>AVOID_UP_SPECIAL</abnormalType>
@@ -423,32 +422,35 @@
             </effect>
         </effects>
     </skill>
-    <skill id="626" toLevel="4" name="Critical Sense">
+    <skill id="626" toLevel="5" name="Critical Sense">
         <icon>icon.skill0312</icon>
         <magicLvl>
-            <value level="1">43</value>
-            <value level="2">52</value>
-            <value level="3">60</value>
-            <value level="4">66</value>
+            <value level="1">45</value>
+            <value level="2">55</value>
+            <value level="3">67</value>
+            <value level="4">78</value>
+            <value level="5">85</value>
         </magicLvl>
         <operateType>P</operateType>
         <magicCriticalRate>5</magicCriticalRate>
         <effects>
             <effect name="CriticalDamage">
                 <amount>
-                    <value level="1">111</value>
-                    <value level="2">177</value>
-                    <value level="3">253</value>
-                    <value level="4">317</value>
+                    <value level="1">100</value>
+                    <value level="2">200</value>
+                    <value level="3">300</value>
+                    <value level="4">400</value>
+                    <value level="4">500</value>
                 </amount>
                 <mode>DIFF</mode>
             </effect>
             <effect name="CriticalRate">
                 <amount>
                     <value level="1">10</value>
-                    <value level="2">15</value>
-                    <value level="3">20</value>
-                    <value level="4">25</value>
+                    <value level="2">12</value>
+                    <value level="3">14</value>
+                    <value level="4">16</value>
+                    <value level="5">20</value>
                 </amount>
                 <mode>PER</mode>
             </effect>

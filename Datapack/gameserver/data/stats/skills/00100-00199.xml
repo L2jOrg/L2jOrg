@@ -2483,7 +2483,7 @@
             </effect>
         </effects>
     </skill>
-    <skill id="147" toLevel="54" name="Magic Defense">
+    <skill id="147" toLevel="65" name="Magic Resistance">
         <!-- M. Def. +$s1. -->
         <icon>icon.skill0147</icon>
         <magicLvl>
@@ -2541,6 +2541,17 @@
             <value level="52">76</value>
             <value level="53">77</value>
             <value level="54">78</value>
+            <value level="55">80</value>
+            <value level="56">81</value>
+            <value level="57">82</value>
+            <value level="58">83</value>
+            <value level="59">84</value>
+            <value level="60">85</value>
+            <value level="61">86</value>
+            <value level="62">87</value>
+            <value level="63">88</value>
+            <value level="64">89</value>
+            <value level="65">90</value>
         </magicLvl>
         <operateType>P</operateType>
         <magicCriticalRate>5</magicCriticalRate>
@@ -2601,6 +2612,17 @@
                     <value level="52">133</value>
                     <value level="53">136</value>
                     <value level="54">139</value>
+                    <value level="55">145</value>
+                    <value level="56">148</value>
+                    <value level="57">151</value>
+                    <value level="58">154</value>
+                    <value level="59">157</value>
+                    <value level="60">160</value>
+                    <value level="61">163</value>
+                    <value level="62">166</value>
+                    <value level="63">169</value>
+                    <value level="64">172</value>
+                    <value level="65">175</value>
                 </amount>
                 <mode>DIFF</mode>
             </effect>
@@ -2660,6 +2682,17 @@
                     <value level="52">20</value>
                     <value level="53">20</value>
                     <value level="54">20</value>
+                    <value level="55">15</value>
+                    <value level="56">20</value>
+                    <value level="57">20</value>
+                    <value level="58">20</value>
+                    <value level="59">20</value>
+                    <value level="60">20</value>
+                    <value level="61">20</value>
+                    <value level="62">20</value>
+                    <value level="63">20</value>
+                    <value level="64">20</value>
+                    <value level="65">20</value>
                 </amount>
                 <mode>PER</mode>
             </effect>

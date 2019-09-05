@@ -29,6 +29,7 @@ public enum TraitType {
     DRAGON_WEAKNESS(2),
     PARALYZE(3),
     DUAL(1),
+    TWO_HANDED_SWORD(1),
     DUALFIST(1),
     BOSS(3),
     GIANT_WEAKNESS(2),

@@ -3492,7 +3492,7 @@
         <operateType>P</operateType>
         <magicCriticalRate>5</magicCriticalRate>
     </skill>
-    <skill id="1378" toLevel="1" name="Soul Link">
+    <skill id="1378" toLevel="5" name="Soul Link">
         <!--  M. Atk. increases by $s1 of P. Atk
             1 - 30
             2 - 40
@@ -3504,7 +3504,7 @@
         <operateType>P</operateType>
         <magicCriticalRate>5</magicCriticalRate>
     </skill>
-    <skill id="1379" toLevel="1" name="Soul Sense">
+    <skill id="1379" toLevel="5" name="Soul Sense">
         <!-- M. Critical Rate increases by $s1 P. Critical Rate.
             1 - 20
             2 - 30
