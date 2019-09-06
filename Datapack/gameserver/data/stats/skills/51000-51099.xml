@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-	<skill id="51001" toLevel="1" name="Sayha's Storm Lv. 2 (Event)">
-		<!-- For 20 min., Momentum Consumption +100%, Acquired XP/ SP +150%. Cooldown: 1 min. The effect remains after death. -->
+	<skill id="51001" toLevel="1" name="Sayha's Storm Lv. 2 - Event">
+		<!-- Sayha's Grace Consumption +100%% and XP/SP Gain +150%% when hunting monsters. Effect remains even after death. Duration is 20 minutes. Cooldown is 1 minute. -->
         <icon>icon.bm_sayha_storm</icon>
         <operateType>A1</operateType>
         <isMagic>4</isMagic>
@@ -35,15 +35,15 @@
         <coolTime>500</coolTime>
         <reuseDelay>1000</reuseDelay>
     </skill>
-	<skill id="51006" toLevel="1" name="Sayha's Grace Potion">
-		<!-- For 10 min., activates the Sayha's Grace effect. Cooldown: 1 min. The effect remains after death. -->
+	<skill id="51006" toLevel="1" name="Sayha Grace Maintaining Potion">
+		<!--Maintains Sayha's Grace for 10 minutes. Cooldown: 1 minute. Effect remains even after death. -->
         <icon>icon.bm_freya_potion</icon>
         <operateType>A1</operateType>
         <isMagic>4</isMagic>
 		<reuseDelay>60000</reuseDelay>
     </skill>
-    <skill id="51007" toLevel="1" name="Golden Treasure Chest">
-        <!-- Acquired XP/ SP +20%, Sayha Grace Consumption -10%. -->
+    <skill id="51007" toLevel="1" name="Sayha's XP Charm">
+        <!-- XP/SP gain +20%%. Sayha's Grace Consumption -10%. -->
         <icon>icon.bm_sayha_rune</icon>
         <operateType>P</operateType>
     </skill>
@@ -51,19 +51,19 @@
         <icon>icon.scroll_of_unidentify_am_s</icon>
         <operateType>A1</operateType>
     </skill>
-    <skill id="51009" toLevel="1" name="Lucky Enchant Stone Chest - B-grade">
+    <skill id="51009" toLevel="1" name="Golden Relic Box">
         <operateType>A1</operateType>
         <hitTime>500</hitTime>
         <coolTime>500</coolTime>
         <reuseDelay>1000</reuseDelay>
     </skill>
-    <skill id="51010" toLevel="1" name="Refined Rare Accessory Pack">
+    <skill id="51010" toLevel="1" name="Armor Gem Box (A-grade)">
         <operateType>A1</operateType>
         <hitTime>500</hitTime>
         <coolTime>500</coolTime>
         <reuseDelay>1000</reuseDelay>
     </skill>
-    <skill id="51011" toLevel="1" name="Rare Accessory Box">
+    <skill id="51011" toLevel="1" name="Armor Gem Box (B-grade)">
         <operateType>A1</operateType>
         <hitTime>500</hitTime>
         <coolTime>500</coolTime>
@@ -76,15 +76,15 @@
         <coolTime>500</coolTime>
         <reuseDelay>1000</reuseDelay>
     </skill>
-	<skill id="51013" toLevel="1" name="Rare Accessory Pack">
+	<skill id="51013" toLevel="1" name="Rare Accessory Box">
         <!-- For 20 min. activates the following effects: Might, Shield, Haste, Empower, Acumen, Wind Walk, Vampiric Rage, Berserker Spirit, Focus, Death Whisper, Guidance, Purity, Wild Magic, Concentration. Cannot be used together with Scroll of Mood Melody. Effect remains after death. Cannot be used together with Scroll of Mood Melody. -->
         <operateType>A1</operateType>
         <hitTime>500</hitTime>
         <coolTime>500</coolTime>
         <reuseDelay>1000</reuseDelay>
     </skill>
-    <skill id="51014" toLevel="1" name="Fire Dragon's Blessing Scroll">
-        <!-- Grants you Blessing Of Fire Dragon for 20 min.: Buff/ debuff effects remain after death, but Blessing of Fire Dragon is consumed. -->
+    <skill id="51014" toLevel="1" name="Blessing of Fire Dragon Scroll">
+        <!-- Grants you Blessing of Fire Dragon for 20 minutes: Buff/ debuff effects remain after death, but Blessing of Fire Dragon is consumed. -->
         <icon>icon.bm_blessing_dragon</icon>
         <operateType>A1</operateType>
         <isMagic>1</isMagic> <!-- Magic Skill -->
@@ -99,29 +99,29 @@
         <reuseDelay>60000</reuseDelay>
         <effectPoint>1</effectPoint>
     </skill>
-    <skill id="51016" toLevel="1" name="Clan Bonus - Exp. Lv. 1">
-        <!-- For 4 h., clan members' Acquired XP/ SP +3%. At least 7 clan members must be logged in. -->
+    <skill id="51016" toLevel="1" name="Clan Bonus XP Boost - Stage 1">
+        <!-- XP/SP gain +3%% for 4 hours thanks to the clan members' activities. (Available when 7 or more clan members have logged in.) -->
         <icon>icon.skill19011</icon>
         <operateType>A1</operateType>
         <isMagic>4</isMagic>
         <effectPoint>1</effectPoint>
     </skill>
-    <skill id="51017" toLevel="1" name="Clan Bonus - Exp. Lv. 2">
-        <!-- For 4 h., clan members' Acquired XP/ SP +6%. At least 14 clan members must be logged in. -->
+    <skill id="51017" toLevel="1" name="Clan Bonus XP Boost - Stage 2">
+        <!-- XP/SP gain +6%% for 4 hours thanks to the clan members' activities. (Available when 14 or more clan members have logged in.) -->
         <icon>icon.skill19011</icon>
         <operateType>A1</operateType>
         <isMagic>4</isMagic>
         <effectPoint>1</effectPoint>
     </skill>
-    <skill id="51018" toLevel="1" name="Clan Bonus - Exp. Lv. 3">
-        <!-- For 4 h., clan members' Acquired XP/ SP +10%. At least 21 clan members must be logged in. -->
+    <skill id="51018" toLevel="1" name="Clan Bonus XP Boost - Stage 3">
+        <!-- XP/SP gain +10%% for 4 hours thanks to the clan members' activities. (Available when 21 or more clan members have logged in.). -->
         <icon>icon.skill19011</icon>
         <operateType>A1</operateType>
         <isMagic>4</isMagic>
         <effectPoint>1</effectPoint>
     </skill>
-    <skill id="51019" toLevel="1" name="Clan Bonus - Exp. Lv. 4">
-        <!-- For 4 h., clan members' Acquired XP/ SP +20%. At least 28 clan members must be logged in. -->
+    <skill id="51019" toLevel="1" name="Clan Bonus XP Boost - Stage 4">
+        <!-- XP/SP gain +20%% for 4 hours thanks to the clan members' activities. (Available when 28 or more clan members have logged in.) -->
         <icon>icon.skill19011</icon>
         <operateType>A1</operateType>
         <isMagic>4</isMagic>
