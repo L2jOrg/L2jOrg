@@ -28,7 +28,7 @@ dependencies {
     implementation project(':Commons')
     implementation 'io.github.joealisson:async-mmocore:3.0.0-SNAPSHOT'
 
-    runtimeOnly 'org.apache.logging.log4j:log4j-slf4j18-impl:2.12.0'
+    runtimeOnly 'org.apache.logging.log4j:log4j-slf4j18-impl:2.12.1'
     runtimeOnly 'org.ehcache:ehcache:3.7.1'
 }
 
