@@ -20,6 +20,7 @@ public final class RequestShortCutReg extends ClientPacket {
         final int slot = readInt();
         _slot = slot % 12;
         _page = slot / 12;
+        readByte(); // unk 0
         _id = readInt();
         _lvl = readShort();
         _subLvl = readShort(); // Sublevel
