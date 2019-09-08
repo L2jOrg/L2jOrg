@@ -20,7 +20,7 @@ import org.l2j.gameserver.cache.HtmCache;
 import org.l2j.gameserver.handler.IBypassHandler;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.network.serverpackets.NpcHtmlMessage;
+import org.l2j.gameserver.network.serverpackets.html.NpcHtmlMessage;
 
 public class Link implements IBypassHandler
 {

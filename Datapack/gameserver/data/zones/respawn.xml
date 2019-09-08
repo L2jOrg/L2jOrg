@@ -1003,7 +1003,7 @@
         <respawn race="ELF" region="Quarry"/>
         <respawn race="JIN_KAMAEL" region="Quarry"/>
     </zone>
-    <zone name="spirit_cave_16_19" type="org.l2j.gameserver.world.zone.type.RespawnZone" form="Polygon" minZ="-552" maxZ="5448">
+    <zone name="cave_of_souls_16_19" type="org.l2j.gameserver.world.zone.type.RespawnZone" form="Polygon" minZ="-552" maxZ="5448">
         <point x="-126634" y="36733"/>
         <point x="-114999" y="36218"/>
         <point x="-115417" y="39345"/>
@@ -1011,12 +1011,12 @@
         <point x="-123839" y="47818"/>
         <point x="-126097" y="46563"/>
         <point x="-127017" y="43453"/>
-        <respawn race="HUMAN" region="spirit_cave"/>
-        <respawn race="DARK_ELF" region="spirit_cave"/>
-        <respawn race="ORC" region="spirit_cave"/>
-        <respawn race="DWARF" region="spirit_cave"/>
-        <respawn race="ELF" region="spirit_cave"/>
-        <respawn race="JIN_KAMAEL" region="spirit_cave"/>
+        <respawn race="HUMAN" region="cave_of_souls"/>
+        <respawn race="DARK_ELF" region="cave_of_souls"/>
+        <respawn race="ORC" region="cave_of_souls"/>
+        <respawn race="DWARF" region="cave_of_souls"/>
+        <respawn race="ELF" region="cave_of_souls"/>
+        <respawn race="JIN_KAMAEL" region="cave_of_souls"/>
     </zone>
     <zone name="godard_town_23_17_1" type="org.l2j.gameserver.world.zone.type.RespawnZone" form="Polygon" minZ="-6540" maxZ="3460">
         <point x="97820" y="-33007"/>

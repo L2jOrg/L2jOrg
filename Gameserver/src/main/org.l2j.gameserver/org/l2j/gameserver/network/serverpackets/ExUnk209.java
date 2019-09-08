@@ -7,7 +7,7 @@ public class ExUnk209 extends ServerPacket {
 
     @Override
     protected void writeImpl(GameClient client) throws Exception {
-        writeId(ServerPacketId.EX_UNK_209);
+        writeId(ServerPacketId.EX_COIN_COUNT);
         writeLong(0);
     }
 }

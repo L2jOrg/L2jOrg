@@ -23,7 +23,7 @@ import org.l2j.gameserver.model.html.PageResult;
 import org.l2j.gameserver.network.serverpackets.ConfirmDlg;
 import org.l2j.gameserver.network.serverpackets.ExServerPrimitive;
 import org.l2j.gameserver.network.serverpackets.ExShowTerritory;
-import org.l2j.gameserver.network.serverpackets.NpcHtmlMessage;
+import org.l2j.gameserver.network.serverpackets.html.NpcHtmlMessage;
 import org.l2j.gameserver.util.BuilderUtil;
 import org.l2j.gameserver.world.zone.Zone;
 import org.l2j.gameserver.world.zone.ZoneManager;

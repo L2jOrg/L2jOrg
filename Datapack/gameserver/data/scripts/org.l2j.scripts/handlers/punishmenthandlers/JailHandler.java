@@ -33,7 +33,7 @@ import org.l2j.gameserver.world.zone.ZoneType;
 import org.l2j.gameserver.world.zone.type.JailZone;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.authcomm.AuthServerCommunication;
-import org.l2j.gameserver.network.serverpackets.NpcHtmlMessage;
+import org.l2j.gameserver.network.serverpackets.html.NpcHtmlMessage;
 
 /**
  * This class handles jail punishment.

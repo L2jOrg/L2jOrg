@@ -21,6 +21,7 @@ import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.quest.Quest;
 import org.l2j.gameserver.model.skills.AbnormalVisualEffect;
 import org.l2j.gameserver.model.variables.PlayerVariables;
+import org.l2j.gameserver.network.serverpackets.html.NpcHtmlMessage;
 import org.l2j.gameserver.world.zone.ZoneType;
 import org.l2j.gameserver.network.ConnectionState;
 import org.l2j.gameserver.network.Disconnection;
@@ -34,6 +35,7 @@ import org.l2j.gameserver.util.BuilderUtil;
 import org.l2j.gameserver.world.World;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
 
 import java.util.Objects;
 
@@ -226,7 +228,7 @@ public class EnterWorld extends ClientPacket {
         client.sendPacket(new ShortCutInit(player));
         client.sendPacket(new ExUnk235());
         client.sendPacket(new ExDressRoomUiOpen());
-        client.sendPacket(new ExUnk20F());
+        client.sendPacket(new ExSendCostumeList());
 
         // Send Unread Mail Count
         if (MailManager.getInstance().hasUnreadPost(player)) {

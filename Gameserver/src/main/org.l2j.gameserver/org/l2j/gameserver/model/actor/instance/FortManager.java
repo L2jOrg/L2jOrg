@@ -12,7 +12,7 @@ import org.l2j.gameserver.model.entity.Fort;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.model.teleporter.TeleportHolder;
 import org.l2j.gameserver.network.serverpackets.ActionFailed;
-import org.l2j.gameserver.network.serverpackets.NpcHtmlMessage;
+import org.l2j.gameserver.network.serverpackets.html.NpcHtmlMessage;
 import org.l2j.gameserver.network.serverpackets.WareHouseDepositList;
 import org.l2j.gameserver.network.serverpackets.WareHouseWithdrawalList;
 

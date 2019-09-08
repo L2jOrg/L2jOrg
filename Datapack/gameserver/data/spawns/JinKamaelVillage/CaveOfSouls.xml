@@ -1,30 +1,26 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/spawns.xsd">
     <spawn name="CaveOfSouls">
-        <group>
-            <npc id="18342" x="-124624" y="37728" z="1176" heading="16154" respawnTime="15sec"/>
-            <npc id="18342" x="-124370" y="38337" z="1176" heading="6315" respawnTime="15sec"/>
-            <npc id="18342" x="-124253" y="38773" z="1176" heading="44921" respawnTime="15sec"/>
-            <npc id="18342" x="-124439" y="37528" z="1176" heading="40666" respawnTime="15sec"/>
-            <npc id="18342" x="-124319" y="38140" z="1176" heading="25071" respawnTime="15sec"/>
-            <npc id="18342" x="-124618" y="37886" z="1176" heading="29702" respawnTime="15sec"/>
-            <npc id="18342" x="-124542" y="37972" z="1176" heading="46225" respawnTime="15sec"/>
-            <npc id="18342" x="-124538" y="38318" z="1176" heading="54525" respawnTime="15sec"/>
-            <npc id="18342" x="-124503" y="38315" z="1176" heading="45135" respawnTime="15sec"/>
-            <npc id="18342" x="-124352" y="38555" z="1176" heading="40961" respawnTime="15sec"/>
-            <npc id="18342" x="-124347" y="38629" z="1176" heading="20026" respawnTime="15sec"/>
-            <npc id="18342" x="-124532" y="38289" z="1176" heading="22883" respawnTime="15sec"/>
-            <npc id="18342" x="-124593" y="38013" z="1176" heading="16383" respawnTime="15sec"/>
-            <npc id="18342" x="-124540" y="38257" z="1176" heading="40348" respawnTime="15sec"/>
-            <npc id="18342" x="-124464" y="38103" z="1176" heading="55034" respawnTime="15sec"/>
-            <npc id="18342" x="-124297" y="38855" z="1176" heading="27352" respawnTime="15sec"/>
-            <npc id="18342" x="-124535" y="38656" z="1176" heading="27580" respawnTime="15sec"/>
-            <npc id="18342" x="-124481" y="38315" z="1176" heading="59546" respawnTime="15sec"/>
-            <npc id="18342" x="-124478" y="37978" z="1176" heading="49674" respawnTime="15sec"/>
-            <npc id="18342" x="-124467" y="38045" z="1176" heading="65189" respawnTime="15sec"/>
-        </group>
-        <group>
-            <npc id="34109" x="-124744" y="38176" z="1208" heading="62981" respawnTime="15sec"/>
-            <npc id="34108" x="-124731" y="38070" z="1208" heading="0" respawnTime="15sec"/>
-        </group>
+        <npc id="18342" x="-124624" y="37728" z="1176" heading="16154" respawnTime="15sec"/>
+        <npc id="18342" x="-124370" y="38337" z="1176" heading="6315" respawnTime="15sec"/>
+        <npc id="18342" x="-124253" y="38773" z="1176" heading="44921" respawnTime="15sec"/>
+        <npc id="18342" x="-124439" y="37528" z="1176" heading="40666" respawnTime="15sec"/>
+        <npc id="18342" x="-124319" y="38140" z="1176" heading="25071" respawnTime="15sec"/>
+        <npc id="18342" x="-124618" y="37886" z="1176" heading="29702" respawnTime="15sec"/>
+        <npc id="18342" x="-124542" y="37972" z="1176" heading="46225" respawnTime="15sec"/>
+        <npc id="18342" x="-124538" y="38318" z="1176" heading="54525" respawnTime="15sec"/>
+        <npc id="18342" x="-124503" y="38315" z="1176" heading="45135" respawnTime="15sec"/>
+        <npc id="18342" x="-124352" y="38555" z="1176" heading="40961" respawnTime="15sec"/>
+        <npc id="18342" x="-124347" y="38629" z="1176" heading="20026" respawnTime="15sec"/>
+        <npc id="18342" x="-124532" y="38289" z="1176" heading="22883" respawnTime="15sec"/>
+        <npc id="18342" x="-124593" y="38013" z="1176" heading="16383" respawnTime="15sec"/>
+        <npc id="18342" x="-124540" y="38257" z="1176" heading="40348" respawnTime="15sec"/>
+        <npc id="18342" x="-124464" y="38103" z="1176" heading="55034" respawnTime="15sec"/>
+        <npc id="18342" x="-124297" y="38855" z="1176" heading="27352" respawnTime="15sec"/>
+        <npc id="18342" x="-124535" y="38656" z="1176" heading="27580" respawnTime="15sec"/>
+        <npc id="18342" x="-124481" y="38315" z="1176" heading="59546" respawnTime="15sec"/>
+        <npc id="18342" x="-124478" y="37978" z="1176" heading="49674" respawnTime="15sec"/>
+        <npc id="18342" x="-124467" y="38045" z="1176" heading="65189" respawnTime="15sec"/>
+        <npc id="34109" x="-124744" y="38176" z="1208" heading="62981" respawnTime="15sec"/>
+        <npc id="34108" x="-124731" y="38070" z="1208" heading="0" respawnTime="15sec"/>
     </spawn>
 </list>

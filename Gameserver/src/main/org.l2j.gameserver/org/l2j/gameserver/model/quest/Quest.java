@@ -39,8 +39,8 @@ import org.l2j.gameserver.world.zone.Zone;
 import org.l2j.gameserver.network.NpcStringId;
 import org.l2j.gameserver.network.serverpackets.ActionFailed;
 import org.l2j.gameserver.network.serverpackets.ExQuestNpcLogList;
-import org.l2j.gameserver.network.serverpackets.NpcHtmlMessage;
-import org.l2j.gameserver.network.serverpackets.NpcQuestHtmlMessage;
+import org.l2j.gameserver.network.serverpackets.html.NpcHtmlMessage;
+import org.l2j.gameserver.network.serverpackets.html.NpcQuestHtmlMessage;
 import org.l2j.gameserver.scripting.ScriptEngineManager;
 import org.l2j.gameserver.util.GameUtils;
 import org.slf4j.Logger;
@@ -2457,7 +2457,7 @@ public class Quest extends AbstractScript implements IIdentifiable {
     public void registerQuestItems(int... items) {
         for (int id : items) {
             if ((id != 0) && (ItemTable.getInstance().getTemplate(id) == null)) {
-                LOGGER.error(super.getClass().getSimpleName() + ": Found registerQuestItems for non existing item: " + id + "!");
+                LOGGER.error("Found registerQuestItems for non existing item: {}!", id);
             }
         }
         _questItemIds = items;

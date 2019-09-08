@@ -29,7 +29,7 @@ import org.l2j.gameserver.model.html.PageResult;
 import org.l2j.gameserver.model.html.formatters.BypassParserFormatter;
 import org.l2j.gameserver.model.html.pagehandlers.NextPrevPageHandler;
 import org.l2j.gameserver.model.html.styles.ButtonsStyle;
-import org.l2j.gameserver.network.serverpackets.NpcHtmlMessage;
+import org.l2j.gameserver.network.serverpackets.html.NpcHtmlMessage;
 import org.l2j.gameserver.util.BuilderUtil;
 import org.l2j.gameserver.util.BypassBuilder;
 import org.l2j.gameserver.util.BypassParser;

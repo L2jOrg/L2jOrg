@@ -28,7 +28,7 @@ import org.l2j.gameserver.model.quest.QuestState;
 import org.l2j.gameserver.model.quest.State;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ExShowQuestMark;
-import org.l2j.gameserver.network.serverpackets.NpcHtmlMessage;
+import org.l2j.gameserver.network.serverpackets.html.NpcHtmlMessage;
 import org.l2j.gameserver.network.serverpackets.QuestList;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

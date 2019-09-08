@@ -5,7 +5,7 @@ import org.l2j.gameserver.handler.IActionShiftHandler;
 import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.instance.StaticWorldObject;
-import org.l2j.gameserver.network.serverpackets.NpcHtmlMessage;
+import org.l2j.gameserver.network.serverpackets.html.NpcHtmlMessage;
 import org.l2j.gameserver.network.serverpackets.StaticObject;
 
 public class StaticWorldObjectActionShift implements IActionShiftHandler

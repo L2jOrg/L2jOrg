@@ -19,7 +19,7 @@ public class RequestTutorialClientEvent extends ClientPacket {
         }
 
         // TODO: UNHARDCODE ME!
-        final QuestState qs = player.getQuestState("Q00255_Tutorial");
+        final QuestState qs = player.getQuestState("Q10960_Tutorial");
         if (qs != null) {
             qs.getQuest().notifyEvent(String.valueOf(_eventId), null, player);
         }

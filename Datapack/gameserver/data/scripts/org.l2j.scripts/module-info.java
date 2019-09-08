@@ -2,6 +2,7 @@ import handlers.actionhandlers.*;
 import handlers.actionshifthandlers.*;
 import handlers.admincommandhandlers.AdminCoins;
 import handlers.bypasshandlers.EquipmentUpgrade;
+import quests.Q10960_Tutorial.Q10960_Tutorial;
 
 open module org.l2j.scripts {
 
@@ -440,7 +441,7 @@ open module org.l2j.scripts {
     provides org.l2j.gameserver.model.quest.Quest
         with
              quests.Q00127_FishingSpecialistsRequest.Q00127_FishingSpecialistsRequest,
-             quests.Q00255_Tutorial.Q00255_Tutorial,
+                Q10960_Tutorial,
              quests.Q00300_HuntingLetoLizardman.Q00300_HuntingLetoLizardman,
              quests.Q00326_VanquishRemnants.Q00326_VanquishRemnants,
              quests.Q00327_RecoverTheFarmland.Q00327_RecoverTheFarmland,

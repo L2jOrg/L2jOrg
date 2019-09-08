@@ -102,6 +102,7 @@ module org.l2j.gameserver {
     exports org.l2j.gameserver.network.serverpackets.elementalspirits;
     exports org.l2j.gameserver.network.serverpackets.equipmentupgrade;
     exports org.l2j.gameserver.world;
+    exports org.l2j.gameserver.network.serverpackets.html;
 
     uses org.l2j.gameserver.scripting.IScriptingEngine;
     provides org.l2j.gameserver.scripting.IScriptingEngine

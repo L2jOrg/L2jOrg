@@ -30,6 +30,7 @@ import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.*;
 import org.l2j.gameserver.network.serverpackets.appearance.ExCuriousHouseMemberUpdate;
 import org.l2j.gameserver.network.serverpackets.ceremonyofchaos.*;
+import org.l2j.gameserver.network.serverpackets.html.NpcHtmlMessage;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

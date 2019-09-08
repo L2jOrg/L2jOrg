@@ -30,7 +30,7 @@ import org.l2j.gameserver.model.html.styles.ButtonsStyle;
 import org.l2j.gameserver.model.instancezone.Instance;
 import org.l2j.gameserver.model.instancezone.InstanceTemplate;
 import org.l2j.gameserver.network.serverpackets.ExShowScreenMessage;
-import org.l2j.gameserver.network.serverpackets.NpcHtmlMessage;
+import org.l2j.gameserver.network.serverpackets.html.NpcHtmlMessage;
 import org.l2j.gameserver.util.BuilderUtil;
 import org.l2j.gameserver.util.BypassParser;
 

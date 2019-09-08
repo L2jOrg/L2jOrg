@@ -31,7 +31,7 @@ public class QuestList extends ServerPacket {
     @Override
     public void writeImpl(GameClient client) {
         writeId(ServerPacketId.QUEST_LIST);
-        writeShort((short) _activeQuests.size());
+        writeShort(_activeQuests.size());
         for (QuestState qs : _activeQuests) {
             writeInt(qs.getQuest().getId());
             writeInt(qs.getCond());

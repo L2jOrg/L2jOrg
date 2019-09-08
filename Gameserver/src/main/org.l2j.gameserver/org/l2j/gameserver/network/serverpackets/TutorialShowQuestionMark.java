@@ -19,7 +19,7 @@ public final class TutorialShowQuestionMark extends ServerPacket {
     public void writeImpl(GameClient client) {
         writeId(ServerPacketId.TUTORIAL_SHOW_QUESTION_MARK);
 
-        writeByte((byte) _markType);
+        writeByte( _markType);
         writeInt(_markId);
     }
 

@@ -23,7 +23,7 @@ import org.l2j.gameserver.instancemanager.QuestManager;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.quest.Event;
 import org.l2j.gameserver.model.quest.Quest;
-import org.l2j.gameserver.network.serverpackets.NpcHtmlMessage;
+import org.l2j.gameserver.network.serverpackets.html.NpcHtmlMessage;
 import org.l2j.gameserver.util.BuilderUtil;
 
 public class AdminEvents implements IAdminCommandHandler

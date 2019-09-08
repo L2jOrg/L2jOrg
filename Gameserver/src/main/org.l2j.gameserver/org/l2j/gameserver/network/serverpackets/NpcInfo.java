@@ -209,15 +209,15 @@ public class NpcInfo extends AbstractMaskPacket<NpcInfoType> {
         writeId(ServerPacketId.NPC_INFO);
 
         writeInt(_npc.getObjectId());
-        writeByte((byte) (_npc.isShowSummonAnimation() ? 0x02 : 0x00)); // // 0=teleported 1=default 2=summoned
-        writeShort((short) 37); // mask_bits_37
+        writeByte((_npc.isShowSummonAnimation() ? 0x02 : 0x00)); // // 0=teleported 1=default 2=summoned
+        writeShort(37); // mask_bits_37
         writeBytes(_masks);
 
         // Block 1
-        writeByte((byte) _initSize);
+        writeByte(_initSize);
 
         if (containsMask(NpcInfoType.ATTACKABLE)) {
-            writeByte((byte)(isAttackable(_npc) && !(_npc instanceof Guard) ? 0x01 : 0x00));
+            writeByte(isAttackable(_npc) && !(_npc instanceof Guard));
         }
         if (containsMask(NpcInfoType.UNKNOWN1)) {
             writeInt(0x00); // unknown
@@ -227,7 +227,7 @@ public class NpcInfo extends AbstractMaskPacket<NpcInfoType> {
         }
 
         // Block 2
-        writeShort((short) _blockSize);
+        writeShort( _blockSize);
         if (containsMask(NpcInfoType.ID)) {
             writeInt(_npc.getTemplate().getDisplayId() + 1000000);
         }

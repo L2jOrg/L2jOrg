@@ -90,6 +90,7 @@ import org.l2j.gameserver.network.authcomm.gs2as.ChangeAccessLevel;
 import org.l2j.gameserver.network.serverpackets.*;
 import org.l2j.gameserver.network.serverpackets.commission.ExResponseCommissionInfo;
 import org.l2j.gameserver.network.serverpackets.friend.FriendStatus;
+import org.l2j.gameserver.network.serverpackets.html.AbstractHtmlPacket;
 import org.l2j.gameserver.taskmanager.AttackStanceTaskManager;
 import org.l2j.gameserver.util.*;
 import org.l2j.gameserver.world.World;
@@ -2906,6 +2907,8 @@ public final class Player extends Playable {
      * @param reference   : WorldObject Object referencing current action like NPC selling item or previous item in transformation
      * @param sendMessage : boolean Specifies whether to send message to Client about this action
      * @return
+     *
+     * TODO make process an enum.
      */
     public Item addItem(String process, int itemId, long count, WorldObject reference, boolean sendMessage) {
         if (count > 0) {
