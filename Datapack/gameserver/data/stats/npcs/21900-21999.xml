@@ -1944,81 +1944,173 @@
             <height normal="12" />
         </collision>
     </npc>
-    <npc id="21981" level="85" type="Folk" name="Grey Keltir">
-        <!-- AUTO GENERATED NPC TODO: FIX IT -->
-        <race>ETC</race>
+    <npc id="21981" level="1" type="Monster" name="Grey Keltir">
+        <parameters>
+            <param name="MoveAroundSocial" value="0"/>
+            <param name="MoveAroundSocial1" value="0"/>
+            <param name="MoveAroundSocial2" value="0"/>
+        </parameters>
+        <race>ANIMAL</race>
         <sex>FEMALE</sex>
-        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-            <vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+        <acquire exp="30" sp="1"/>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="65" hpRegen="2" mp="49" mpRegen="0.9" />
             <speed>
                 <walk ground="60" />
                 <run ground="120" />
             </speed>
-            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-            <defence physical="405.85106382979" magical="297.0297029703" />
+            <attack physical="9.32203" magical="6.36574" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
+            <defence physical="46.15385" magical="33.77338"/>
+            <hitTime>370</hitTime>
+            <abnormalResist physical="10" magical="10"/>
         </stats>
-        <status attackable="false" />
+        <status undying="false" canBeSown="true" />
         <collision>
             <radius normal="5" />
             <height normal="12" />
         </collision>
+        <skillList>
+            <skill id="4416" level="4"/>
+        </skillList>
+        <dropLists>
+            <drop>
+                <item id="18" min="1" max="1" chance="8.527"/> <!-- Leather Shield -->
+                <item id="41" min="1" max="1" chance="3.962"/> <!-- Cloth Cap -->
+                <item id="57" min="3" max="7" chance="70"/> <!-- Adena -->
+                <item id="1871" min="1" max="1" chance="1.885"/> <!-- Charcoal -->
+                <item id="1788" min="1" max="1" chance="1.414"/> <!-- Recipe: Bow -->
+            </drop>
+            <spoil>
+                <item id="35" min="1" max="1" chance="16.9"/> <!-- Cloth Shoes -->
+                <item id="1787" min="1" max="1" chance="2.334"/> <!-- Recipe: Willow Staff -->
+            </spoil>
+        </dropLists>
     </npc>
-    <npc id="21982" level="85" type="Folk" name="Elder Grey Keltir">
-        <!-- AUTO GENERATED NPC TODO: FIX IT -->
-        <race>ETC</race>
+    <npc id="21982" level="3" type="Monster" name="Elder Grey Keltir">
+        <parameters>
+            <param name="MoveAroundSocial" value="0"/>
+            <param name="MoveAroundSocial1" value="0"/>
+            <param name="MoveAroundSocial2" value="0"/>
+        </parameters>
+        <race>ANIMAL</race>
         <sex>FEMALE</sex>
-        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-            <vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+        <acquire exp="89" sp="3"/>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="95" hpRegen="2" mp="67" mpRegen="0.9" />
             <speed>
                 <walk ground="60" />
                 <run ground="120" />
             </speed>
-            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-            <defence physical="405.85106382979" magical="297.0297029703" />
+            <attack physical="10.24492" magical="6.99595" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
+            <defence physical="47.91652" magical="35.06323"/>
+            <hitTime>370</hitTime>
         </stats>
-        <status attackable="false" />
+        <status undying="false" canBeSown="true"/>
+        <skillList>
+            <skill id="4416" level="4"/> <!-- Animals -->
+        </skillList>
+        <exCrtEffect>false</exCrtEffect>
+        <ai aggroRange="500" clanHelpRange="300" isAggressive="false"/>
         <collision>
             <radius normal="5" />
             <height normal="12" />
         </collision>
+        <dropLists>
+            <drop>
+                <item id="35" min="1" max="1" chance="3.848"/> <!-- Cloth Shoes -->
+                <item id="36" min="1" max="1" chance="3.104"/> <!-- Leather Sandals -->
+                <item id="48" min="1" max="1" chance="2.582"/> <!-- Short Gloves -->
+                <item id="1121" min="1" max="1" chance="1.896"/> <!-- Apprentice's Shoes -->
+                <item id="57" min="5" max="12" chance="70"/> <!-- Adena -->
+                <item id="1060" min="1" max="1" chance="6.908"/> <!-- Healing Potion -->
+                <item id="1868" min="1" max="1" chance="6.199"/> <!-- Thread -->
+            </drop>
+            <spoil>
+                <item id="1121" min="13" max="13" chance="73.09"/> <!-- Apprentice's Shoes -->
+                <item id="1867" min="1" max="1" chance="6.784"/> <!-- Animal Skin -->
+            </spoil>
+        </dropLists>
     </npc>
-    <npc id="21983" level="85" type="Folk" name="Black Wolf">
-        <!-- AUTO GENERATED NPC TODO: FIX IT -->
-        <race>ETC</race>
-        <sex>FEMALE</sex>
-        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-            <vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+    <npc id="21983" level="4" type="Monster" name="Black Wolf">
+        <race>ANIMAL</race>
+        <sex>MALE</sex>
+        <acquire exp="177" sp="6"/>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="112" hpRegen="2" mp="76" mpRegen="0.9" />
             <speed>
                 <walk ground="60" />
                 <run ground="120" />
             </speed>
-            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-            <defence physical="405.85106382979" magical="297.0297029703" />
+            <attack physical="11.24892" magical="7.68155" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120"/>
+            <defence physical="49.73343" magical="36.39277"/>
+            <hitTime>390</hitTime>
+            <abnormalResist physical="10" magical="10"/>
         </stats>
-        <status attackable="false" />
+        <status undying="false" canBeSown="true"/>
+        <skillList>
+            <skill id="4416" level="4"/> <!-- Animals -->
+        </skillList>
+        <exCrtEffect>false</exCrtEffect>
+        <ai clanHelpRange="300" aggroRange="450"/>
         <collision>
             <radius normal="5" />
             <height normal="12" />
         </collision>
+        <dropLists>
+            <drop>
+                <item id="1" min="1" max="1" chance="4.965"/> <!-- Short Sword -->
+                <item id="57" min="8" max="20" chance="70"/> <!-- Adena -->
+                <item id="1868" min="1" max="1" chance="5.36"/> <!-- Thread -->
+                <item id="1867" min="1" max="1" chance="3.567"/> <!-- Animal Skin -->
+                <item id="1871" min="1" max="1" chance="2.728"/> <!-- Charcoal -->
+                <item id="1786" min="1" max="1" chance="2.098"/> <!-- Recipe: Broadsword (100 %) -->
+            </drop>
+            <spoil>
+                <item id="1867" min="12" max="12" chance="11.18"/> <!-- Animal Skin -->
+            </spoil>
+        </dropLists>
     </npc>
-    <npc id="21984" level="85" type="Folk" name="Elder Black Wolf">
-        <!-- AUTO GENERATED NPC TODO: FIX IT -->
-        <race>ETC</race>
-        <sex>FEMALE</sex>
-        <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-            <vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+    <npc id="21984" level="5" type="Monster" name="Elder Black Wolf">
+        <parameters>
+            <param name="MoveAroundSocial" value="60"/>
+            <param name="MoveAroundSocial1" value="60"/>
+            <param name="MoveAroundSocial2" value="60"/>
+        </parameters>
+        <race>ANIMAL</race>
+        <sex>MALE</sex>
+        <acquire exp="147" sp="5"/>
+        <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
+            <vitals hp="133" hpRegen="2" mp="85" mpRegen="0.9" />
             <speed>
                 <walk ground="60" />
                 <run ground="120" />
             </speed>
-            <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-            <defence physical="405.85106382979" magical="297.0297029703" />
+            <attack physical="17.9195676" magical="10.11301" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120"/>
+            <defence physical="45.88342149" magical="40.62635"/>
+            <hitTime>390</hitTime>
         </stats>
-        <status attackable="false" />
+        <status undying="false" canBeSown="true"/>
+        <skillList>
+            <skill id="4416" level="4"/> <!-- Animals -->
+        </skillList>
         <collision>
             <radius normal="5" />
             <height normal="12" />
         </collision>
+        <dropLists>
+            <drop>
+                <item id="4" min="1" max="1" chance="3.102"/> <!-- Club -->
+                <item id="7" min="1" max="1" chance="3.102"/> <!-- Apprentice's Rod -->
+                <item id="57" min="11" max="25" chance="70"/> <!-- Adena -->
+                <item id="1868" min="1" max="1" chance="8.634"/> <!-- Thread -->
+                <item id="1871" min="1" max="1" chance="4.243"/> <!-- Charcoal -->
+                <item id="1787" min="1" max="1" chance="3.429"/> <!-- Recipe: Willow Staff -->
+            </drop>
+            <spoil>
+                <item id="1864" min="1" max="1" chance="20.02"/> <!-- Stem -->
+                <item id="1788" min="1" max="1" chance="8.35"/> <!-- Recipe: Bow -->
+            </spoil>
+        </dropLists>
     </npc>
     <npc id="21985" level="85" type="Folk" name="Mountain Werewolf">
         <!-- AUTO GENERATED NPC TODO: FIX IT -->
