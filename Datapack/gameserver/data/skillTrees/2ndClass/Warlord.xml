@@ -20,6 +20,9 @@
 		<skill skillName="Thunder Storm" skillId="48" skillLvl="2" getLevel="40" levelUpSp="82000" />
 		<skill skillName="Thunder Storm" skillId="48" skillLvl="3" getLevel="40" levelUpSp="82000" />
 		<skill skillName="Detect Animal Weakness" skillId="87" skillLvl="1" getLevel="40" levelUpSp="82000" />
+		<skill skillName="Potion Mastery" skillId="45184" skillLvl="1">
+			<item id="57" count="1000000"/> <!-- Adena -->
+		</skill>
 	
 		<skill skillName="Spinning Slasher" skillId="36" skillLvl="4" getLevel="41" levelUpSp="96000" />
 		<skill skillName="Polearm Mastery" skillId="216" skillLvl="12" getLevel="41" levelUpSp="96000" />
@@ -102,6 +105,9 @@
 		<skill skillName="Heavy Armor Mastery" skillId="231" skillLvl="26" getLevel="50" levelUpSp="290000" />
 		<skill skillName="Thunder Storm" skillId="48" skillLvl="13" getLevel="50" levelUpSp="290000" />
 		<skill skillName="Quick Spear" skillId="1606" skillLvl="3" getLevel="50" levelUpSp="290000" />
+		<skill skillName="Potion Mastery" skillId="45184" skillLvl="1">
+			<item id="57" count="3000000"/> <!-- Adena -->
+		</skill>
 		
 		<skill skillName="Spinning Slasher" skillId="36" skillLvl="14" getLevel="51" levelUpSp="290000" />
 		<skill skillName="Polearm Mastery" skillId="216" skillLvl="22" getLevel="51" levelUpSp="290000" />
@@ -109,7 +115,7 @@
 		<skill skillName="Heavy Armor Mastery" skillId="231" skillLvl="27" getLevel="51" levelUpSp="290000" />
 		<skill skillName="Thunder Storm" skillId="48" skillLvl="14" getLevel="51" levelUpSp="290000" />
 		<skill skillName="Fell Swoop" skillId="421" skillLvl="1" getLevel="51" levelUpSp="290000">
-			<item id="49424" count="1" />
+			<item id="49424" count="1" /> <!-- Spellbook: Broad Sweep -->
 		</skill>
 		
 		<skill skillName="Vicious Stance" skillId="312" skillLvl="10" getLevel="52" levelUpSp="290000" />
@@ -196,6 +202,9 @@
 		<skill skillName="Thunder Storm" skillId="48" skillLvl="23" getLevel="60" levelUpSp="800000" />
 		<skill skillName="Final Frenzy" skillId="290" skillLvl="7" getLevel="60" levelUpSp="800000" />
 		<skill skillName="Provoke" skillId="286" skillLvl="3" getLevel="60" levelUpSp="800000" />
+		<skill skillName="Potion Mastery" skillId="45184" skillLvl="1">
+			<item id="57" count="6000000"/> <!-- Adena -->
+		</skill>
 
 		<skill skillName="Spinning Slasher" skillId="36" skillLvl="24" getLevel="61" levelUpSp="800000" />
 		<skill skillName="Polearm Mastery" skillId="216" skillLvl="32" getLevel="61" levelUpSp="800000" />

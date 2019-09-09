@@ -20,9 +20,9 @@
 		<skill skillName="Sonic Blaster" skillId="6" skillLvl="2" getLevel="40" levelUpSp="55000" />
 		<skill skillName="Sonic Blaster" skillId="6" skillLvl="3" getLevel="40" levelUpSp="55000" />
 		<skill skillName="Detect Animal Weakness" skillId="87" skillLvl="1" getLevel="40" levelUpSp="55000" />
-		<skill skillName="Hammer Crush" skillId="260" skillLvl="1" getLevel="40" levelUpSp="55000" />
-		<skill skillName="Hammer Crush" skillId="260" skillLvl="2" getLevel="40" levelUpSp="55000" />
-		<skill skillName="Hammer Crush" skillId="260" skillLvl="3" getLevel="40" levelUpSp="55000" />
+		<skill skillName="Power Crush" skillId="260" skillLvl="1" getLevel="40" levelUpSp="55000" />
+		<skill skillName="Power Crush" skillId="260" skillLvl="2" getLevel="40" levelUpSp="55000" />
+		<skill skillName="Power Crush" skillId="260" skillLvl="3" getLevel="40" levelUpSp="55000" />
 		<skill skillName="Triple Slash" skillId="1" skillLvl="1" getLevel="40" levelUpSp="55000" />
 		<skill skillName="Triple Slash" skillId="1" skillLvl="2" getLevel="40" levelUpSp="55000" />
 		<skill skillName="Triple Slash" skillId="1" skillLvl="3" getLevel="40" levelUpSp="55000" />
@@ -30,6 +30,9 @@
 		<skill skillName="Fatal Strike" skillId="190" skillLvl="2" getLevel="40" levelUpSp="55000" />
 		<skill skillName="Fatal Strike" skillId="190" skillLvl="3" getLevel="40" levelUpSp="55000" />
 		<skill skillName="Sonic Focus" skillId="8" skillLvl="1" getLevel="40" levelUpSp="55000" />
+		<skill skillName="Potion Mastery" skillId="45184" skillLvl="1">
+			<item id="57" count="1000000"/> <!-- Adena -->
+		</skill>
 		
 		<skill skillName="Light Armor Mastery" skillId="227" skillLvl="17" getLevel="41" levelUpSp="65000" />
 		<skill skillName="Sword/Blunt Weapon Mastery" skillId="257" skillLvl="12" getLevel="41" levelUpSp="65000" />
@@ -37,7 +40,7 @@
 		<skill skillName="Heavy Armor Mastery" skillId="231" skillLvl="17" getLevel="41" levelUpSp="65000" />
 		<skill skillName="Sonic Buster" skillId="9" skillLvl="1" getLevel="41" levelUpSp="65000" />
 		<skill skillName="Sonic Blaster" skillId="6" skillLvl="4" getLevel="41" levelUpSp="65000" />
-		<skill skillName="Hammer Crush" skillId="260" skillLvl="4" getLevel="41" levelUpSp="65000" />
+		<skill skillName="Power Crush" skillId="260" skillLvl="4" getLevel="41" levelUpSp="65000" />
 		<skill skillName="Triple Slash" skillId="1" skillLvl="4" getLevel="41" levelUpSp="65000" />
 		<skill skillName="Fatal Strike" skillId="190" skillLvl="4" getLevel="41" levelUpSp="65000" />
 		<skill skillName="Dual Weapon Defense" skillId="1605 " skillLvl="1" getLevel="41" levelUpSp="65000">
@@ -50,7 +53,7 @@
 		<skill skillName="Heavy Armor Mastery" skillId="231" skillLvl="18" getLevel="42" levelUpSp="65000" />
 		<skill skillName="Sonic Buster" skillId="9" skillLvl="2" getLevel="42" levelUpSp="65000" />
 		<skill skillName="Sonic Blaster" skillId="6" skillLvl="5" getLevel="42" levelUpSp="65000" />
-		<skill skillName="Hammer Crush" skillId="260" skillLvl="5" getLevel="42" levelUpSp="65000" />
+		<skill skillName="Power Crush" skillId="260" skillLvl="5" getLevel="42" levelUpSp="65000" />
 		<skill skillName="Triple Slash" skillId="1" skillLvl="5" getLevel="42" levelUpSp="65000" />
 		<skill skillName="Fatal Strike" skillId="190" skillLvl="5" getLevel="42" levelUpSp="65000" />
 		
@@ -64,7 +67,7 @@
 		<skill skillName="Sonic Blaster" skillId="6" skillLvl="6" getLevel="43" levelUpSp="65000" />
 		<skill skillName="War Cry" skillId="78" skillLvl="2" getLevel="43" levelUpSp="65000" />
 		<skill skillName="Final Frenzy" skillId="290" skillLvl="1" getLevel="43" levelUpSp="65000" />
-		<skill skillName="Hammer Crush" skillId="260" skillLvl="6" getLevel="43" levelUpSp="65000" />
+		<skill skillName="Power Crush" skillId="260" skillLvl="6" getLevel="43" levelUpSp="65000" />
 		<skill skillName="Triple Slash" skillId="1" skillLvl="6" getLevel="43" levelUpSp="65000" />
 		<skill skillName="Fatal Strike" skillId="190" skillLvl="6" getLevel="43" levelUpSp="65000" />
 		<skill skillName="Sonic Focus" skillId="8" skillLvl="2" getLevel="43" levelUpSp="65000" />
@@ -76,7 +79,7 @@
 		<skill skillName="Double Sonic Slash" skillId="5" skillLvl="1" getLevel="44" levelUpSp="97000" />
 		<skill skillName="Sonic Buster" skillId="9" skillLvl="4" getLevel="44" levelUpSp="97000" />
 		<skill skillName="Sonic Blaster" skillId="6" skillLvl="7" getLevel="44" levelUpSp="97000" />
-		<skill skillName="Hammer Crush" skillId="260" skillLvl="7" getLevel="44" levelUpSp="97000" />
+		<skill skillName="Power Crush" skillId="260" skillLvl="7" getLevel="44" levelUpSp="97000" />
 		<skill skillName="Triple Slash" skillId="1" skillLvl="7" getLevel="44" levelUpSp="97000" />
 		<skill skillName="Fatal Strike" skillId="190" skillLvl="7" getLevel="44" levelUpSp="97000" />
 		
@@ -87,7 +90,7 @@
 		<skill skillName="Double Sonic Slash" skillId="5" skillLvl="2" getLevel="45" levelUpSp="97000" />
 		<skill skillName="Sonic Buster" skillId="9" skillLvl="5" getLevel="45" levelUpSp="97000" />
 		<skill skillName="Sonic Blaster" skillId="6" skillLvl="8" getLevel="45" levelUpSp="97000" />
-		<skill skillName="Hammer Crush" skillId="260" skillLvl="8" getLevel="45" levelUpSp="97000" />
+		<skill skillName="Power Crush" skillId="260" skillLvl="8" getLevel="45" levelUpSp="97000" />
 		<skill skillName="Triple Slash" skillId="1" skillLvl="8" getLevel="45" levelUpSp="97000" />
 		<skill skillName="Fatal Strike" skillId="190" skillLvl="8" getLevel="45" levelUpSp="97000" />
 		
@@ -102,7 +105,7 @@
 		<skill skillName="Sonic Blaster" skillId="6" skillLvl="9" getLevel="46" levelUpSp="97000" />
 		<skill skillName="Detect Plant Weakness" skillId="104" skillLvl="1" getLevel="46" levelUpSp="97000" />
 		<skill skillName="Final Frenzy" skillId="290" skillLvl="2" getLevel="46" levelUpSp="97000" />
-		<skill skillName="Hammer Crush" skillId="260" skillLvl="9" getLevel="46" levelUpSp="97000" />
+		<skill skillName="Power Crush" skillId="260" skillLvl="9" getLevel="46" levelUpSp="97000" />
 		<skill skillName="Triple Slash" skillId="1" skillLvl="9" getLevel="46" levelUpSp="97000" />
 		<skill skillName="Fatal Strike" skillId="190" skillLvl="9" getLevel="46" levelUpSp="97000" />
 		
@@ -114,7 +117,7 @@
 		<skill skillName="Sonic Buster" skillId="9" skillLvl="7" getLevel="47" levelUpSp="130000" />
 		<skill skillName="Sonic Blaster" skillId="6" skillLvl="10" getLevel="47" levelUpSp="130000" />
 		<skill skillName="Sonic Storm" skillId="7" skillLvl="1" getLevel="47" levelUpSp="130000" />
-		<skill skillName="Hammer Crush" skillId="260" skillLvl="10" getLevel="47" levelUpSp="130000" />
+		<skill skillName="Power Crush" skillId="260" skillLvl="10" getLevel="47" levelUpSp="130000" />
 		<skill skillName="Triple Slash" skillId="1" skillLvl="10" getLevel="47" levelUpSp="130000" />
 		<skill skillName="Fatal Strike" skillId="190" skillLvl="10" getLevel="47" levelUpSp="130000" />
 		
@@ -126,7 +129,7 @@
 		<skill skillName="Sonic Buster" skillId="9" skillLvl="8" getLevel="48" levelUpSp="130000" />
 		<skill skillName="Sonic Blaster" skillId="6" skillLvl="11" getLevel="48" levelUpSp="130000" />
 		<skill skillName="Sonic Storm" skillId="7" skillLvl="2" getLevel="48" levelUpSp="130000" />
-		<skill skillName="Hammer Crush" skillId="260" skillLvl="11" getLevel="48" levelUpSp="130000" />
+		<skill skillName="Power Crush" skillId="260" skillLvl="11" getLevel="48" levelUpSp="130000" />
 		<skill skillName="Triple Slash" skillId="1" skillLvl="11" getLevel="48" levelUpSp="130000" />
 		<skill skillName="Fatal Strike" skillId="190" skillLvl="11" getLevel="48" levelUpSp="130000" />
 		
@@ -142,7 +145,7 @@
 		<skill skillName="Sonic Storm" skillId="7" skillLvl="3" getLevel="49" levelUpSp="130000" />
 		<skill skillName="Lionheart" skillId="287" skillLvl="2" getLevel="49" levelUpSp="130000" />
 		<skill skillName="Final Frenzy" skillId="290" skillLvl="3" getLevel="49" levelUpSp="130000" />
-		<skill skillName="Hammer Crush" skillId="260" skillLvl="12" getLevel="49" levelUpSp="130000" />
+		<skill skillName="Power Crush" skillId="260" skillLvl="12" getLevel="49" levelUpSp="130000" />
 		<skill skillName="Triple Slash" skillId="1" skillLvl="12" getLevel="49" levelUpSp="130000" />
 		<skill skillName="Fatal Strike" skillId="190" skillLvl="12" getLevel="49" levelUpSp="130000" />
 		<skill skillName="Sonic Focus" skillId="8" skillLvl="3" getLevel="49" levelUpSp="130000" />
@@ -155,9 +158,12 @@
 		<skill skillName="Sonic Buster" skillId="9" skillLvl="10" getLevel="50" levelUpSp="190000" />
 		<skill skillName="Sonic Blaster" skillId="6" skillLvl="13" getLevel="50" levelUpSp="190000" />
 		<skill skillName="Sonic Storm" skillId="7" skillLvl="4" getLevel="50" levelUpSp="190000" />
-		<skill skillName="Hammer Crush" skillId="260" skillLvl="13" getLevel="50" levelUpSp="190000" />
+		<skill skillName="Power Crush" skillId="260" skillLvl="13" getLevel="50" levelUpSp="190000" />
 		<skill skillName="Triple Slash" skillId="1" skillLvl="13" getLevel="50" levelUpSp="190000" />
 		<skill skillName="Fatal Strike" skillId="190" skillLvl="13" getLevel="50" levelUpSp="190000" />
+		<skill skillName="Potion Mastery" skillId="45184" skillLvl="1">
+			<item id="57" count="3000000"/> <!-- Adena -->
+		</skill>
 		
 		<skill skillName="Light Armor Mastery" skillId="227" skillLvl="27" getLevel="51" levelUpSp="190000" />
 		<skill skillName="Sword/Blunt Weapon Mastery" skillId="257" skillLvl="22" getLevel="51" levelUpSp="190000" />
@@ -167,7 +173,7 @@
 		<skill skillName="Sonic Buster" skillId="9" skillLvl="11" getLevel="51" levelUpSp="190000" />
 		<skill skillName="Sonic Blaster" skillId="6" skillLvl="14" getLevel="51" levelUpSp="190000" />
 		<skill skillName="Sonic Storm" skillId="7" skillLvl="5" getLevel="51" levelUpSp="190000" />
-		<skill skillName="Hammer Crush" skillId="260" skillLvl="14" getLevel="51" levelUpSp="190000" />
+		<skill skillName="Power Crush" skillId="260" skillLvl="14" getLevel="51" levelUpSp="190000" />
 		<skill skillName="Triple Slash" skillId="1" skillLvl="14" getLevel="51" levelUpSp="190000" />
 		<skill skillName="Fatal Strike" skillId="190" skillLvl="14" getLevel="51" levelUpSp="190000" />
 		
@@ -183,7 +189,7 @@
 		<skill skillName="Sonic Storm" skillId="7" skillLvl="6" getLevel="52" levelUpSp="190000" />
 		<skill skillName="Detect Beast Weakness" skillId="80" skillLvl="1" getLevel="52" levelUpSp="190000" />
 		<skill skillName="Final Frenzy" skillId="290" skillLvl="4" getLevel="52" levelUpSp="190000" />
-		<skill skillName="Hammer Crush" skillId="260" skillLvl="15" getLevel="52" levelUpSp="190000" />
+		<skill skillName="Power Crush" skillId="260" skillLvl="15" getLevel="52" levelUpSp="190000" />
 		<skill skillName="Triple Slash" skillId="1" skillLvl="15" getLevel="52" levelUpSp="190000" />
 		<skill skillName="Fatal Strike" skillId="190" skillLvl="15" getLevel="52" levelUpSp="190000" />
 		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="1" getLevel="52" levelUpSp="190000" >
@@ -198,7 +204,7 @@
 		<skill skillName="Sonic Buster" skillId="9" skillLvl="13" getLevel="53" levelUpSp="270000" />
 		<skill skillName="Sonic Blaster" skillId="6" skillLvl="16" getLevel="53" levelUpSp="270000" />
 		<skill skillName="Sonic Storm" skillId="7" skillLvl="7" getLevel="53" levelUpSp="270000" />
-		<skill skillName="Hammer Crush" skillId="260" skillLvl="16" getLevel="53" levelUpSp="270000" />
+		<skill skillName="Power Crush" skillId="260" skillLvl="16" getLevel="53" levelUpSp="270000" />
 		<skill skillName="Triple Sonic Slash" skillId="261" skillLvl="1" getLevel="53" levelUpSp="270000" />
 		<skill skillName="Triple Slash" skillId="1" skillLvl="16" getLevel="53" levelUpSp="270000" />
 		<skill skillName="Fatal Strike" skillId="190" skillLvl="16" getLevel="53" levelUpSp="270000" />
@@ -212,7 +218,7 @@
 		<skill skillName="Sonic Buster" skillId="9" skillLvl="14" getLevel="54" levelUpSp="270000" />
 		<skill skillName="Sonic Blaster" skillId="6" skillLvl="17" getLevel="54" levelUpSp="270000" />
 		<skill skillName="Sonic Storm" skillId="7" skillLvl="8" getLevel="54" levelUpSp="270000" />
-		<skill skillName="Hammer Crush" skillId="260" skillLvl="17" getLevel="54" levelUpSp="270000" />
+		<skill skillName="Power Crush" skillId="260" skillLvl="17" getLevel="54" levelUpSp="270000" />
 		<skill skillName="Triple Sonic Slash" skillId="261" skillLvl="2" getLevel="54" levelUpSp="270000" />
 		<skill skillName="Triple Slash" skillId="1" skillLvl="17" getLevel="54" levelUpSp="270000" />
 		<skill skillName="Fatal Strike" skillId="190" skillLvl="17" getLevel="54" levelUpSp="270000" />
@@ -229,7 +235,7 @@
 		<skill skillName="Sonic Blaster" skillId="6" skillLvl="19" getLevel="55" levelUpSp="270000" />
 		<skill skillName="Sonic Storm" skillId="7" skillLvl="9" getLevel="55" levelUpSp="270000" />
 		<skill skillName="Final Frenzy" skillId="290" skillLvl="5" getLevel="55" levelUpSp="270000" />
-		<skill skillName="Hammer Crush" skillId="260" skillLvl="18" getLevel="55" levelUpSp="270000" />
+		<skill skillName="Power Crush" skillId="260" skillLvl="18" getLevel="55" levelUpSp="270000" />
 		<skill skillName="Triple Sonic Slash" skillId="261" skillLvl="3" getLevel="55" levelUpSp="270000" />
 		<skill skillName="Triple Slash" skillId="1" skillLvl="18" getLevel="55" levelUpSp="270000" />
 		<skill skillName="Fatal Strike" skillId="190" skillLvl="18" getLevel="55" levelUpSp="270000" />
@@ -242,7 +248,7 @@
 		<skill skillName="Double Sonic Slash" skillId="5" skillLvl="13" getLevel="56" levelUpSp="370000" />
 		<skill skillName="Sonic Buster" skillId="9" skillLvl="16" getLevel="56" levelUpSp="370000" />
 		<skill skillName="Sonic Storm" skillId="7" skillLvl="10" getLevel="56" levelUpSp="370000" />
-		<skill skillName="Hammer Crush" skillId="260" skillLvl="19" getLevel="56" levelUpSp="370000" />
+		<skill skillName="Power Crush" skillId="260" skillLvl="19" getLevel="56" levelUpSp="370000" />
 		<skill skillName="Triple Sonic Slash" skillId="261" skillLvl="4" getLevel="56" levelUpSp="370000" />
 		<skill skillName="Triple Slash" skillId="1" skillLvl="19" getLevel="56" levelUpSp="370000" />
 		<skill skillName="Fatal Strike" skillId="190" skillLvl="19" getLevel="56" levelUpSp="370000" />
@@ -258,7 +264,7 @@
 		<skill skillName="Sonic Buster" skillId="9" skillLvl="17" getLevel="57" levelUpSp="370000" />
 		<skill skillName="Sonic Blaster" skillId="6" skillLvl="20" getLevel="57" levelUpSp="370000" />
 		<skill skillName="Sonic Storm" skillId="7" skillLvl="11" getLevel="57" levelUpSp="370000" />
-		<skill skillName="Hammer Crush" skillId="260" skillLvl="20" getLevel="57" levelUpSp="370000" />
+		<skill skillName="Power Crush" skillId="260" skillLvl="20" getLevel="57" levelUpSp="370000" />
 		<skill skillName="Triple Sonic Slash" skillId="261" skillLvl="5" getLevel="57" levelUpSp="370000" />
 		<skill skillName="Triple Slash" skillId="1" skillLvl="20" getLevel="57" levelUpSp="370000" />
 		<skill skillName="Fatal Strike" skillId="190" skillLvl="20" getLevel="57" levelUpSp="370000" />
@@ -275,7 +281,7 @@
 		<skill skillName="Sonic Storm" skillId="7" skillLvl="12" getLevel="58" levelUpSp="370000" />
 		<skill skillName="Detect Dragon Weakness" skillId="88" skillLvl="1" getLevel="58" levelUpSp="370000" />
 		<skill skillName="Final Frenzy" skillId="290" skillLvl="6" getLevel="58" levelUpSp="370000" />
-		<skill skillName="Hammer Crush" skillId="260" skillLvl="21" getLevel="58" levelUpSp="370000" />
+		<skill skillName="Power Crush" skillId="260" skillLvl="21" getLevel="58" levelUpSp="370000" />
 		<skill skillName="Triple Sonic Slash" skillId="261" skillLvl="6" getLevel="58" levelUpSp="370000" />
 		<skill skillName="Triple Slash" skillId="1" skillLvl="21" getLevel="58" levelUpSp="370000" />
 		<skill skillName="Fatal Strike" skillId="190" skillLvl="21" getLevel="58" levelUpSp="370000" />
@@ -288,7 +294,7 @@
 		<skill skillName="Sonic Buster" skillId="9" skillLvl="19" getLevel="59" levelUpSp="540000" />
 		<skill skillName="Sonic Blaster" skillId="6" skillLvl="22" getLevel="59" levelUpSp="540000" />
 		<skill skillName="Sonic Storm" skillId="7" skillLvl="13" getLevel="59" levelUpSp="540000" />
-		<skill skillName="Hammer Crush" skillId="260" skillLvl="22" getLevel="59" levelUpSp="540000" />
+		<skill skillName="Power Crush" skillId="260" skillLvl="22" getLevel="59" levelUpSp="540000" />
 		<skill skillName="Triple Sonic Slash" skillId="261" skillLvl="7" getLevel="59" levelUpSp="540000" />
 		<skill skillName="Triple Slash" skillId="1" skillLvl="22" getLevel="59" levelUpSp="540000" />
 		<skill skillName="Fatal Strike" skillId="190" skillLvl="22" getLevel="59" levelUpSp="540000" />
@@ -304,11 +310,14 @@
 		<skill skillName="Sonic Blaster" skillId="6" skillLvl="23" getLevel="60" levelUpSp="540000" />
 		<skill skillName="Sonic Storm" skillId="7" skillLvl="14" getLevel="60" levelUpSp="540000" />
 		<skill skillName="Final Frenzy" skillId="290" skillLvl="7" getLevel="60" levelUpSp="540000" />
-		<skill skillName="Hammer Crush" skillId="260" skillLvl="23" getLevel="60" levelUpSp="540000" />
+		<skill skillName="Power Crush" skillId="260" skillLvl="23" getLevel="60" levelUpSp="540000" />
 		<skill skillName="Triple Sonic Slash" skillId="261" skillLvl="8" getLevel="60" levelUpSp="540000" />
 		<skill skillName="Triple Slash" skillId="1" skillLvl="23" getLevel="60" levelUpSp="540000" />
 		<skill skillName="Fatal Strike" skillId="190" skillLvl="23" getLevel="60" levelUpSp="540000" />
 		<skill skillName="Sonic Focus" skillId="8" skillLvl="5" getLevel="60" levelUpSp="540000" />
+		<skill skillName="Potion Mastery" skillId="45184" skillLvl="1">
+			<item id="57" count="6000000"/> <!-- Adena -->
+		</skill>
 		
 		<skill skillName="Light Armor Mastery" skillId="227" skillLvl="37" getLevel="61" levelUpSp="540000" />
 		<skill skillName="Sword/Blunt Weapon Mastery" skillId="257" skillLvl="32" getLevel="61" levelUpSp="540000" />
@@ -318,7 +327,7 @@
 		<skill skillName="Sonic Buster" skillId="9" skillLvl="21" getLevel="61" levelUpSp="540000" />
 		<skill skillName="Sonic Blaster" skillId="6" skillLvl="24" getLevel="61" levelUpSp="540000" />
 		<skill skillName="Sonic Storm" skillId="7" skillLvl="15" getLevel="61" levelUpSp="540000" />
-		<skill skillName="Hammer Crush" skillId="260" skillLvl="24" getLevel="61" levelUpSp="540000" />
+		<skill skillName="Power Crush" skillId="260" skillLvl="24" getLevel="61" levelUpSp="540000" />
 		<skill skillName="Triple Sonic Slash" skillId="261" skillLvl="9" getLevel="61" levelUpSp="540000" />
 		<skill skillName="Triple Slash" skillId="1" skillLvl="24" getLevel="61" levelUpSp="540000" />
 		<skill skillName="Fatal Strike" skillId="190" skillLvl="24" getLevel="61" levelUpSp="540000" />
@@ -338,7 +347,7 @@
 		<skill skillName="Sonic Storm" skillId="7" skillLvl="16" getLevel="62" levelUpSp="670000" />
 		<skill skillName="Lionheart" skillId="287" skillLvl="3" getLevel="62" levelUpSp="670000" />
 		<skill skillName="Final Frenzy" skillId="290" skillLvl="8" getLevel="62" levelUpSp="670000" />
-		<skill skillName="Hammer Crush" skillId="260" skillLvl="25" getLevel="62" levelUpSp="670000" />
+		<skill skillName="Power Crush" skillId="260" skillLvl="25" getLevel="62" levelUpSp="670000" />
 		<skill skillName="Triple Sonic Slash" skillId="261" skillLvl="10" getLevel="62" levelUpSp="670000" />
 		<skill skillName="Triple Slash" skillId="1" skillLvl="25" getLevel="62" levelUpSp="670000" />
 		<skill skillName="Fatal Strike" skillId="190" skillLvl="25" getLevel="62" levelUpSp="670000" />
@@ -351,7 +360,7 @@
 		<skill skillName="Sonic Buster" skillId="9" skillLvl="23" getLevel="63" levelUpSp="670000" />
 		<skill skillName="Sonic Blaster" skillId="6" skillLvl="26" getLevel="63" levelUpSp="670000" />
 		<skill skillName="Sonic Storm" skillId="7" skillLvl="17" getLevel="63" levelUpSp="670000" />
-		<skill skillName="Hammer Crush" skillId="260" skillLvl="26" getLevel="63" levelUpSp="670000" />
+		<skill skillName="Power Crush" skillId="260" skillLvl="26" getLevel="63" levelUpSp="670000" />
 		<skill skillName="Triple Sonic Slash" skillId="261" skillLvl="11" getLevel="63" levelUpSp="670000" />
 		<skill skillName="Triple Slash" skillId="1" skillLvl="26" getLevel="63" levelUpSp="670000" />
 		<skill skillName="Fatal Strike" skillId="190" skillLvl="26" getLevel="63" levelUpSp="670000" />
@@ -367,7 +376,7 @@
 		<skill skillName="Sonic Blaster" skillId="6" skillLvl="27" getLevel="64" levelUpSp="840000" />
 		<skill skillName="Sonic Storm" skillId="7" skillLvl="18" getLevel="64" levelUpSp="840000" />
 		<skill skillName="Final Frenzy" skillId="290" skillLvl="9" getLevel="64" levelUpSp="840000" />
-		<skill skillName="Hammer Crush" skillId="260" skillLvl="27" getLevel="64" levelUpSp="840000" />
+		<skill skillName="Power Crush" skillId="260" skillLvl="27" getLevel="64" levelUpSp="840000" />
 		<skill skillName="Triple Sonic Slash" skillId="261" skillLvl="12" getLevel="64" levelUpSp="840000" />
 		<skill skillName="Triple Slash" skillId="1" skillLvl="27" getLevel="64" levelUpSp="840000" />
 		<skill skillName="Fatal Strike" skillId="190" skillLvl="27" getLevel="64" levelUpSp="840000" />
@@ -380,7 +389,7 @@
 		<skill skillName="Sonic Buster" skillId="9" skillLvl="25" getLevel="65" levelUpSp="840000" />
 		<skill skillName="Sonic Blaster" skillId="6" skillLvl="28" getLevel="65" levelUpSp="840000" />
 		<skill skillName="Sonic Storm" skillId="7" skillLvl="19" getLevel="65" levelUpSp="840000" />
-		<skill skillName="Hammer Crush" skillId="260" skillLvl="28" getLevel="65" levelUpSp="840000" />
+		<skill skillName="Power Crush" skillId="260" skillLvl="28" getLevel="65" levelUpSp="840000" />
 		<skill skillName="Triple Sonic Slash" skillId="261" skillLvl="13" getLevel="65" levelUpSp="840000" />
 		<skill skillName="Triple Slash" skillId="1" skillLvl="28" getLevel="65" levelUpSp="840000" />
 		<skill skillName="Fatal Strike" skillId="190" skillLvl="28" getLevel="65" levelUpSp="840000" />
@@ -396,7 +405,7 @@
 		<skill skillName="Sonic Blaster" skillId="6" skillLvl="29" getLevel="66" levelUpSp="950000" />
 		<skill skillName="Sonic Storm" skillId="7" skillLvl="20" getLevel="66" levelUpSp="950000" />
 		<skill skillName="Final Frenzy" skillId="290" skillLvl="10" getLevel="66" levelUpSp="950000" />
-		<skill skillName="Hammer Crush" skillId="260" skillLvl="29" getLevel="66" levelUpSp="950000" />
+		<skill skillName="Power Crush" skillId="260" skillLvl="29" getLevel="66" levelUpSp="950000" />
 		<skill skillName="Triple Sonic Slash" skillId="261" skillLvl="14" getLevel="66" levelUpSp="950000" />
 		<skill skillName="Triple Slash" skillId="1" skillLvl="29" getLevel="66" levelUpSp="950000" />
 		<skill skillName="Fatal Strike" skillId="190" skillLvl="29" getLevel="66" levelUpSp="950000" />
@@ -411,7 +420,7 @@
 		<skill skillName="Sonic Buster" skillId="9" skillLvl="27" getLevel="67" levelUpSp="950000" />
 		<skill skillName="Sonic Blaster" skillId="6" skillLvl="30" getLevel="67" levelUpSp="950000" />
 		<skill skillName="Sonic Storm" skillId="7" skillLvl="21" getLevel="67" levelUpSp="950000" />
-		<skill skillName="Hammer Crush" skillId="260" skillLvl="30" getLevel="67" levelUpSp="950000" />
+		<skill skillName="Power Crush" skillId="260" skillLvl="30" getLevel="67" levelUpSp="950000" />
 		<skill skillName="Triple Sonic Slash" skillId="261" skillLvl="15" getLevel="67" levelUpSp="950000" />
 		<skill skillName="Triple Slash" skillId="1" skillLvl="30" getLevel="67" levelUpSp="950000" />
 		<skill skillName="Fatal Strike" skillId="190" skillLvl="30" getLevel="67" levelUpSp="950000" />
@@ -428,7 +437,7 @@
 		<skill skillName="Sonic Blaster" skillId="6" skillLvl="31" getLevel="68" levelUpSp="1300000" />
 		<skill skillName="Sonic Storm" skillId="7" skillLvl="22" getLevel="68" levelUpSp="1300000" />
 		<skill skillName="Final Frenzy" skillId="290" skillLvl="11" getLevel="68" levelUpSp="1300000" />
-		<skill skillName="Hammer Crush" skillId="260" skillLvl="31" getLevel="68" levelUpSp="1300000" />
+		<skill skillName="Power Crush" skillId="260" skillLvl="31" getLevel="68" levelUpSp="1300000" />
 		<skill skillName="Triple Sonic Slash" skillId="261" skillLvl="16" getLevel="68" levelUpSp="1300000" />
 		<skill skillName="Triple Slash" skillId="1" skillLvl="31" getLevel="68" levelUpSp="1300000" />
 		<skill skillName="Fatal Strike" skillId="190" skillLvl="31" getLevel="68" levelUpSp="1300000" />
@@ -441,7 +450,7 @@
 		<skill skillName="Sonic Buster" skillId="9" skillLvl="29" getLevel="69" levelUpSp="1300000" />
 		<skill skillName="Sonic Blaster" skillId="6" skillLvl="32" getLevel="69" levelUpSp="1300000" />
 		<skill skillName="Sonic Storm" skillId="7" skillLvl="23" getLevel="69" levelUpSp="1300000" />
-		<skill skillName="Hammer Crush" skillId="260" skillLvl="32" getLevel="69" levelUpSp="1300000" />
+		<skill skillName="Power Crush" skillId="260" skillLvl="32" getLevel="69" levelUpSp="1300000" />
 		<skill skillName="Triple Sonic Slash" skillId="261" skillLvl="17" getLevel="69" levelUpSp="1300000" />
 		<skill skillName="Triple Slash" skillId="1" skillLvl="32" getLevel="69" levelUpSp="1300000" />
 		<skill skillName="Fatal Strike" skillId="190" skillLvl="32" getLevel="69" levelUpSp="1300000" />
@@ -457,7 +466,7 @@
 		<skill skillName="Sonic Blaster" skillId="6" skillLvl="33" getLevel="70" levelUpSp="1600000" />
 		<skill skillName="Sonic Storm" skillId="7" skillLvl="24" getLevel="70" levelUpSp="1600000" />
 		<skill skillName="Final Frenzy" skillId="290" skillLvl="12" getLevel="70" levelUpSp="1600000" />
-		<skill skillName="Hammer Crush" skillId="260" skillLvl="33" getLevel="70" levelUpSp="1600000" />
+		<skill skillName="Power Crush" skillId="260" skillLvl="33" getLevel="70" levelUpSp="1600000" />
 		<skill skillName="Triple Sonic Slash" skillId="261" skillLvl="18" getLevel="70" levelUpSp="1600000" />
 		<skill skillName="Triple Slash" skillId="1" skillLvl="33" getLevel="70" levelUpSp="1600000" />
 		<skill skillName="Fatal Strike" skillId="190" skillLvl="33" getLevel="70" levelUpSp="1600000" />
@@ -471,7 +480,7 @@
 		<skill skillName="Sonic Buster" skillId="9" skillLvl="31" getLevel="71" levelUpSp="1600000" />
 		<skill skillName="Sonic Blaster" skillId="6" skillLvl="34" getLevel="71" levelUpSp="1600000" />
 		<skill skillName="Sonic Storm" skillId="7" skillLvl="25" getLevel="71" levelUpSp="1600000" />
-		<skill skillName="Hammer Crush" skillId="260" skillLvl="34" getLevel="71" levelUpSp="1600000" />
+		<skill skillName="Power Crush" skillId="260" skillLvl="34" getLevel="71" levelUpSp="1600000" />
 		<skill skillName="Triple Sonic Slash" skillId="261" skillLvl="19" getLevel="71" levelUpSp="1600000" />
 		<skill skillName="Triple Slash" skillId="1" skillLvl="34" getLevel="71" levelUpSp="1600000" />
 		<skill skillName="Fatal Strike" skillId="190" skillLvl="34" getLevel="71" levelUpSp="1600000" />
@@ -487,7 +496,7 @@
 		<skill skillName="Sonic Blaster" skillId="6" skillLvl="35" getLevel="72" levelUpSp="1800000" />
 		<skill skillName="Sonic Storm" skillId="7" skillLvl="26" getLevel="72" levelUpSp="1800000" />
 		<skill skillName="Final Frenzy" skillId="290" skillLvl="13" getLevel="72" levelUpSp="1800000" />
-		<skill skillName="Hammer Crush" skillId="260" skillLvl="35" getLevel="72" levelUpSp="1800000" />
+		<skill skillName="Power Crush" skillId="260" skillLvl="35" getLevel="72" levelUpSp="1800000" />
 		<skill skillName="Triple Sonic Slash" skillId="261" skillLvl="20" getLevel="72" levelUpSp="1800000" />
 		<skill skillName="Triple Slash" skillId="1" skillLvl="35" getLevel="72" levelUpSp="1800000" />
 		<skill skillName="Fatal Strike" skillId="190" skillLvl="35" getLevel="72" levelUpSp="1800000" />
@@ -500,7 +509,7 @@
 		<skill skillName="Sonic Buster" skillId="9" skillLvl="33" getLevel="73" levelUpSp="1800000" />
 		<skill skillName="Sonic Blaster" skillId="6" skillLvl="36" getLevel="73" levelUpSp="1800000" />
 		<skill skillName="Sonic Storm" skillId="7" skillLvl="27" getLevel="73" levelUpSp="1800000" />
-		<skill skillName="Hammer Crush" skillId="260" skillLvl="36" getLevel="73" levelUpSp="1800000" />
+		<skill skillName="Power Crush" skillId="260" skillLvl="36" getLevel="73" levelUpSp="1800000" />
 		<skill skillName="Triple Sonic Slash" skillId="261" skillLvl="21" getLevel="73" levelUpSp="1800000" />
 		<skill skillName="Triple Slash" skillId="1" skillLvl="36" getLevel="73" levelUpSp="1800000" />
 		<skill skillName="Fatal Strike" skillId="190" skillLvl="36" getLevel="73" levelUpSp="1800000" />
@@ -516,7 +525,7 @@
 		<skill skillName="Sonic Blaster" skillId="6" skillLvl="37" getLevel="74" levelUpSp="1800000" />
 		<skill skillName="Sonic Storm" skillId="7" skillLvl="28" getLevel="74" levelUpSp="1800000" />
 		<skill skillName="Final Frenzy" skillId="290" skillLvl="14" getLevel="74" levelUpSp="1800000" />
-		<skill skillName="Hammer Crush" skillId="260" skillLvl="37" getLevel="74" levelUpSp="1800000" />
+		<skill skillName="Power Crush" skillId="260" skillLvl="37" getLevel="74" levelUpSp="1800000" />
 		<skill skillName="Triple Sonic Slash" skillId="261" skillLvl="22" getLevel="74" levelUpSp="1800000" />
 		<skill skillName="Triple Slash" skillId="1" skillLvl="37" getLevel="74" levelUpSp="1800000" />
 		<skill skillName="Fatal Strike" skillId="190" skillLvl="37" getLevel="74" levelUpSp="1800000" />
