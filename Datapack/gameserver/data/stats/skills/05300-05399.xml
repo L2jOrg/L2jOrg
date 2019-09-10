@@ -1747,7 +1747,7 @@
             </effect>
         </effects>
     </skill>
-    <skill id="5331" toLevel="9" name="Drain HP">
+    <skill id="5331" toLevel="9" name="Drain Energy">
         <castRange>600</castRange>
         <effectPoint>-100</effectPoint>
         <attributeType>DARK</attributeType>
@@ -4588,7 +4588,7 @@
             </effect>
         </effects>
     </skill>
-    <skill id="5392" toLevel="9" name="Drain HP">
+    <skill id="5392" toLevel="9" name="Drain Energy">
         <castRange>600</castRange>
         <effectPoint>-100</effectPoint>
         <effectRange>1100</effectRange>

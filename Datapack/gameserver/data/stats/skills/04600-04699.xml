@@ -1246,7 +1246,7 @@
             <effect name="BlockActions"/>
         </effects>
     </skill>
-    <skill id="4621" toLevel="12" name="Drain HP">
+    <skill id="4621" toLevel="12" name="Drain Energy">
         <castRange>500</castRange>
         <effectPoint>-100</effectPoint>
         <effectRange>1000</effectRange>
@@ -1309,7 +1309,7 @@
             </effect>
         </effects>
     </skill>
-    <skill id="4622" toLevel="12" name="Drain HP">
+    <skill id="4622" toLevel="12" name="Drain Energy">
         <affectRange>200</affectRange>
         <castRange>500</castRange>
         <effectPoint>-100</effectPoint>
@@ -1372,7 +1372,7 @@
             </effect>
         </effects>
     </skill>
-    <skill id="4623" toLevel="12" name="Drain HP">
+    <skill id="4623" toLevel="12" name="Drain Energy">
         <castRange>1000</castRange>
         <effectPoint>-100</effectPoint>
         <effectRange>1500</effectRange>
@@ -1696,7 +1696,7 @@
         <targetType>TARGET</targetType>
         <affectScope>SINGLE</affectScope>
     </skill>
-    <skill id="4629" toLevel="12" name="Drain HP">
+    <skill id="4629" toLevel="12" name="Drain Energy">
         <castRange>400</castRange>
         <effectPoint>-100</effectPoint>
         <effectRange>900</effectRange>
@@ -3786,7 +3786,7 @@
             </effect>
         </effects>
     </skill>
-    <skill id="4664" toLevel="12" name="Drain HP">
+    <skill id="4664" toLevel="12" name="Drain Energy">
         <castRange>600</castRange>
         <effectPoint>-100</effectPoint>
         <effectRange>1100</effectRange>
@@ -3861,7 +3861,7 @@
             </effect>
         </effects>
     </skill>
-    <skill id="4665" toLevel="12" name="Drain HP">
+    <skill id="4665" toLevel="12" name="Drain Energy">
         <castRange>600</castRange>
         <effectPoint>-100</effectPoint>
         <effectRange>1100</effectRange>
@@ -3936,7 +3936,7 @@
             </effect>
         </effects>
     </skill>
-    <skill id="4666" toLevel="12" name="Drain HP">
+    <skill id="4666" toLevel="12" name="Drain Energy">
         <castRange>1000</castRange>
         <effectPoint>-100</effectPoint>
         <effectRange>1500</effectRange>
@@ -4011,7 +4011,7 @@
             </effect>
         </effects>
     </skill>
-    <skill id="4667" toLevel="12" name="Drain HP">
+    <skill id="4667" toLevel="12" name="Drain Energy">
         <castRange>600</castRange>
         <effectPoint>-100</effectPoint>
         <effectRange>1100</effectRange>
@@ -4086,7 +4086,7 @@
             </effect>
         </effects>
     </skill>
-    <skill id="4668" toLevel="12" name="Drain HP">
+    <skill id="4668" toLevel="12" name="Drain Energy">
         <castRange>600</castRange>
         <effectPoint>-100</effectPoint>
         <effectRange>1100</effectRange>
@@ -4161,7 +4161,7 @@
             </effect>
         </effects>
     </skill>
-    <skill id="4669" toLevel="12" name="Drain HP">
+    <skill id="4669" toLevel="12" name="Drain Energy">
         <castRange>1000</castRange>
         <effectPoint>-100</effectPoint>
         <effectRange>1500</effectRange>

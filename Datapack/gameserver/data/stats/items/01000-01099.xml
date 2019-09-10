@@ -1250,8 +1250,8 @@
         <set name="commissionItemType" val="SPELLBOOK"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="1097" name="Spellbook: Drain HP" type="EtcItem">
-        <!-- Spellbook needed to learn Drain HP. Used by Knights and Dark Fighters. Required level: Dark Fighter - 13, Knight - 20 -->
+    <item id="1097" name="Spellbook: Drain Energy" type="EtcItem">
+        <!-- Spellbook needed to learn Drain Energy. Used by Knights and Dark Fighters. Required level: Dark Fighter - 13, Knight - 20 -->
         <set name="icon" val="icon.etc_spell_books_defighter_i00"/>
         <set name="immediate_effect" val="true"/>
         <set name="material" val="PAPER"/>

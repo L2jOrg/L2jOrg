@@ -4,12 +4,6 @@
 		<skill skillName="Aggression" skillId="28" skillLvl="50" getLevel="76" levelUpSp="5400000" />
 		<skill skillName="Shield Strike" skillId="984" skillLvl="16" getLevel="76" levelUpSp="5400000" />
 		<skill skillName="Aggression Aura" skillId="18" skillLvl="38" getLevel="76" levelUpSp="5400000" />
-		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="3" getLevel="76" levelUpSp="5400000">
-			<item id="8620" count="1" /> <!-- Ancient Book: Divine Inspiration (Manuscript) -->
-		</skill>
-		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="4" getLevel="76" levelUpSp="5400000">
-			<item id="8621" count="1" /> <!-- Ancient Book: Divine Inspiration (Original Version) -->
-		</skill>
 		<skill skillName="Sword/Blunt Weapon Mastery" skillId="217" skillLvl="46" getLevel="76" levelUpSp="5400000" />
 		<skill skillName="Heavy Armor Mastery" skillId="232" skillLvl="53" getLevel="76" levelUpSp="5400000" />
 		<skill skillName="Sacrifice" skillId="69" skillLvl="26" getLevel="76" levelUpSp="5400000" />
@@ -17,14 +11,20 @@
 		<skill skillName="Magic Resistance" skillId="147" skillLvl="52" getLevel="76" levelUpSp="5400000" />
 		<skill skillName="Mass Shackling" skillId="404" skillLvl="6" getLevel="76" levelUpSp="5400000" />
 		<skill skillName="Shield Stun" skillId="92" skillLvl="53" getLevel="76" levelUpSp="5400000" />
-		<skill skillName="Mount Gold Maned Lion" skillId="1833" skillLvl="1" getLevel="76">
-			<item id="90038" count="1" /> <!-- Spellbook: Mount Golden Lion -->
-		</skill>
 		<skill skillName="Final Fortress" skillId="291" skillLvl="12" getLevel="76" levelUpSp="5400000" />
 		<skill skillName="Sanctuary" skillId="97" skillLvl="12" getLevel="76" levelUpSp="5400000" />
 		<skill skillName="Fortitude" skillId="335" skillLvl="1" getLevel="76" levelUpSp="5400000" />
 		<skill skillName="Critical Vulnerability Decrease" skillId="53004" skillLvl="1" getLevel="76" levelUpSp="5400000" />
 		<skill skillName="Chain Strike" skillId="10015" skillLvl="1" getLevel="76" levelUpSp="5400000" />
+		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="3" getLevel="76" levelUpSp="5400000">
+			<item id="8620" count="1" /> <!-- Ancient Book: Divine Inspiration (Manuscript) -->
+		</skill>
+		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="4" getLevel="76" levelUpSp="5400000">
+			<item id="8621" count="1" /> <!-- Ancient Book: Divine Inspiration (Original Version) -->
+		</skill>
+		<skill skillName="Mount Gold Maned Lion" skillId="1833" skillLvl="1" getLevel="76">
+			<item id="90038" count="1" /> <!-- Spellbook: Mount Golden Lion -->
+		</skill>
 		
 		<skill skillName="Aggression" skillId="28" skillLvl="51" getLevel="77" levelUpSp="5400000" />
 		<skill skillName="Shield Strike" skillId="984" skillLvl="17" getLevel="77" levelUpSp="5400000" />
@@ -33,12 +33,12 @@
 		<skill skillName="Heavy Armor Mastery" skillId="232" skillLvl="54" getLevel="77" levelUpSp="5400000" />
 		<skill skillName="Shield Charge" skillId="1898" skillLvl="2" getLevel="77" levelUpSp="5400000" />
 		<skill skillName="Magic Resistance" skillId="147" skillLvl="53" getLevel="77" levelUpSp="5400000" />
-		<skill skillName="Vengeance" skillId="368" skillLvl="1" getLevel="77" levelUpSp="5400000">
-			<item id="90046" count="1" /> <!-- Scroll: Vengeance -->
-		</skill>
 		<skill skillName="Shield Stun" skillId="92" skillLvl="54" getLevel="77" levelUpSp="5400000" />
 		<skill skillName="Deflect Magic" skillId="913" skillLvl="1" getLevel="77" levelUpSp="5400000" />
 		<skill skillName="Final Fortress" skillId="291" skillLvl="13" getLevel="77" levelUpSp="5400000" />
+		<skill skillName="Vengeance" skillId="368" skillLvl="1" getLevel="77" levelUpSp="5400000">
+			<item id="90046" count="1" /> <!-- Scroll: Vengeance -->
+		</skill>
 		
 		<skill skillName="Aggression" skillId="28" skillLvl="52" getLevel="78" levelUpSp="12700000" />
 		<skill skillName="Shield Strike" skillId="984" skillLvl="18" getLevel="78" levelUpSp="12700000" />
@@ -52,12 +52,12 @@
 		<skill skillName="Mass Chain Strike" skillId="53003" skillLvl="1" getLevel="78" levelUpSp="12700000" />
 		<skill skillName="Shield Stun" skillId="92" skillLvl="55" getLevel="78" levelUpSp="12700000" />
 		<skill skillName="Final Fortress" skillId="291" skillLvl="14" getLevel="78" levelUpSp="12700000" />
-		<skill skillName="Touch of Life" skillId="341" skillLvl="1" getLevel="78" levelUpSp="12700000">
-			<item id="90047" count="1" /> <!-- Scroll: Touch of Life -->
-		</skill>
 		<skill skillName="Knighthood" skillId="429" skillLvl="1" getLevel="78" levelUpSp="12700000" />
 		<skill skillName="Sanctuary" skillId="97" skillLvl="13" getLevel="78" levelUpSp="12700000" />
 		<skill skillName="Critical Vulnerability Decrease" skillId="53004" skillLvl="2" getLevel="78" levelUpSp="12700000" />
+		<skill skillName="Touch of Life" skillId="341" skillLvl="1" getLevel="78" levelUpSp="12700000">
+			<item id="90047" count="1" /> <!-- Scroll: Touch of Life -->
+		</skill>
 		
 		<skill skillName="Shield Charge" skillId="1898" skillLvl="4" getLevel="79" levelUpSp="12700000" />
 		<skill skillName="Final Fortress" skillId="291" skillLvl="15" getLevel="79" levelUpSp="12700000" />
