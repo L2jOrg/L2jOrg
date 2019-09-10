@@ -4,9 +4,6 @@
 		<skill skillName="Anti Magic" skillId="146" skillLvl="13" getLevel="40" levelUpSp="55000" />
 		<skill skillName="Anti Magic" skillId="146" skillLvl="14" getLevel="40" levelUpSp="55000" />
 		<skill skillName="Anti Magic" skillId="146" skillLvl="15" getLevel="40" levelUpSp="55000" />
-		<skill skillName="Silence" skillId="1064" skillLvl="1" getLevel="40" levelUpSp="55000">
-			<item id="3064" count="1" />
-		</skill>
 		<skill skillName="Fast Spell Casting" skillId="228" skillLvl="2" getLevel="40" levelUpSp="55000" />
 		<skill skillName="Robe Mastery" skillId="234" skillLvl="9" getLevel="40" levelUpSp="55000" />
 		<skill skillName="Robe Mastery" skillId="234" skillLvl="10" getLevel="40" levelUpSp="55000" />
@@ -34,6 +31,9 @@
 		<skill skillName="Sleep" skillId="1069" skillLvl="12" getLevel="40" levelUpSp="55000" />
 		<skill skillName="Anchor" skillId="1170" skillLvl="1" getLevel="40" levelUpSp="55000">
 			<item id="3063" count="1" />
+		</skill>
+		<skill skillName="Silence" skillId="1064" skillLvl="1" getLevel="40" levelUpSp="55000">
+			<item id="3064" count="1" />
 		</skill>
 		
 		<skill skillName="Anti Magic" skillId="146" skillLvl="16" getLevel="42" levelUpSp="77000" />

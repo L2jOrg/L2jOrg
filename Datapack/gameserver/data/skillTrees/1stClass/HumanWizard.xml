@@ -121,9 +121,6 @@
 		<skill skillName="Robe Mastery" skillId="234" skillLvl="8" getLevel="35" levelUpSp="13000" />
 		<skill skillName="Weapon Mastery" skillId="249" skillLvl="9" getLevel="35" levelUpSp="13000" />
 		<skill skillName="Blaze" skillId="1220" skillLvl="8" getLevel="35" levelUpSp="13000" />
-		<skill skillName="Slow" skillId="1160" skillLvl="1" getLevel="35" levelUpSp="13000">
-			<item id="1409" count="1" />
-		</skill>
 		<skill skillName="Servitor Wind Walk" skillId="1144" skillLvl="1" getLevel="35" levelUpSp="13000" />
 		<skill skillName="Servitor Heal" skillId="1127" skillLvl="12" getLevel="35" levelUpSp="13000" />
 		<skill skillName="Corpse Life Drain" skillId="1151" skillLvl="2" getLevel="35" levelUpSp="13000" />
@@ -131,13 +128,16 @@
 		<skill skillName="Summon Kat the Cat" skillId="1111" skillLvl="4" getLevel="35" levelUpSp="13000" />
 		<skill skillName="Summon Mew the Cat" skillId="1225" skillLvl="4" getLevel="35" levelUpSp="13000" />
 		<skill skillName="Curse Weakness" skillId="1164" skillLvl="5" getLevel="35" levelUpSp="13000" />
-		<skill skillName="Curse Chaos" skillId="1222" skillLvl="1" getLevel="35" levelUpSp="13000">
-			<item id="1416" count="1" />
-		</skill>
 		<skill skillName="Aura Burn" skillId="1172" skillLvl="8" getLevel="35" levelUpSp="13000" />
 		<skill skillName="Higher Mana Gain" skillId="285" skillLvl="8" getLevel="35" levelUpSp="13000" />
 		<skill skillName="Sleep" skillId="1069" skillLvl="9" getLevel="35" levelUpSp="13000" />
 		<skill skillName="Energy Bolt" skillId="1274" skillLvl="4" getLevel="35" levelUpSp="13000" />
 		<skill skillName="Poisonous Cloud" skillId="1167" skillLvl="2" getLevel="35" levelUpSp="13000" />
+		<skill skillName="Slow" skillId="1160" skillLvl="1" getLevel="35" levelUpSp="13000">
+			<item id="1409" count="1" />
+		</skill>
+		<skill skillName="Curse Chaos" skillId="1222" skillLvl="1" getLevel="35" levelUpSp="13000">
+			<item id="1416" count="1" />
+		</skill>
 	</skillTree>
 </list>
