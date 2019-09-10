@@ -20,6 +20,9 @@
 		<skill skillName="Backstab" skillId="30" skillLvl="2" getLevel="40" levelUpSp="95000" />
 		<skill skillName="Backstab" skillId="30" skillLvl="3" getLevel="40" levelUpSp="95000" />
 		<skill skillName="Critical Chance" skillId="137" skillLvl="2" getLevel="40" levelUpSp="95000" />
+		<skill skillName="Potion Mastery" skillId="45184" skillLvl="1">
+			<item id="57" count="1000000"/> <!-- Adena -->
+		</skill>
 		
 		<skill skillName="Dagger Mastery" skillId="209" skillLvl="12" getLevel="41" levelUpSp="110000" />
 		<skill skillName="Light Armor Mastery" skillId="233" skillLvl="14" getLevel="41" levelUpSp="110000" />
@@ -91,6 +94,9 @@
 		<skill skillName="Deadly Blow" skillId="263" skillLvl="13" getLevel="50" levelUpSp="330000" />
 		<skill skillName="Backstab" skillId="30" skillLvl="13" getLevel="50" levelUpSp="330000" />
 		<skill skillName="Shadow Step" skillId="821" skillLvl="1" getLevel="50" levelUpSp="330000" />
+		<skill skillName="Potion Mastery" skillId="45184" skillLvl="1">
+			<item id="57" count="3000000"/> <!-- Adena -->
+		</skill>
 		
 		<skill skillName="Dagger Mastery" skillId="209" skillLvl="22" getLevel="51" levelUpSp="330000" />
 		<skill skillName="Light Armor Mastery" skillId="233" skillLvl="24" getLevel="51" levelUpSp="330000" />
