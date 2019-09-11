@@ -3436,8 +3436,8 @@
             </effect>
         </effects>
     </skill>
-    <skill id="1557" toLevel="3" name="Servitor Share">
-        <!-- Extends the summoner's abilities to the servitor. Using the summoner's abilities as the basis, extends to the servitor P. Atk./ P. Def. by $s1, M. Atk./ M. Def. by $s2, Max HP/ MP by $s3, Atk. Spd. by $s4, and Casting Spd. by $s5. -->
+    <skill id="1557" toLevel="5" name="Servitor Share">
+        <!-- Extends the summoner's abilities to the Servitor. Using the summoner's abilities as the basis, $s1 of P. Atk./P. Def./M. Atk./M. Def., $s2 Atk. Spd./Casting Spd., $s3 of Max HP/Max MP is transferred to the Servitor.\n\n<Auto Use Skill> -->
         <icon>icon.skill1557</icon>
         <abnormalLvl>1</abnormalLvl>
         <abnormalTime>1200</abnormalTime>
@@ -3446,6 +3446,8 @@
             <value level="1">379</value>
             <value level="2">382</value>
             <value level="3">385</value>
+            <value level="4">385</value>
+            <value level="5">385</value>
         </effectPoint>
         <hitTime>1000</hitTime>
         <isMagic>1</isMagic> <!-- Magic Skill -->
@@ -3453,11 +3455,15 @@
             <value level="1">76</value>
             <value level="2">79</value>
             <value level="3">82</value>
+            <value level="4">83</value>
+            <value level="5">84</value>
         </magicLvl>
         <mpConsume>
             <value level="1">105</value>
             <value level="2">109</value>
             <value level="3">113</value>
+            <value level="4">113</value>
+            <value level="5">113</value>
         </mpConsume>
         <mpInitialConsume>7</mpInitialConsume>
         <operateType>A2</operateType>
@@ -3473,7 +3479,7 @@
             <condition name="OpHaveSummon"/>
         </conditions>
         <effects>
-            <effect name="ServitorShare">
+            <effect name="ServitorShare"> <!-- TODO Fix level values -->
                 <PHYSICAL_ATTACK>50</PHYSICAL_ATTACK>
                 <PHYSICAL_DEFENCE>50</PHYSICAL_DEFENCE>
                 <MAGIC_ATTACK>25</MAGIC_ATTACK>

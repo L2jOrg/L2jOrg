@@ -3483,7 +3483,7 @@
             </effect>
         </effects>
     </skill>
-    <skill id="1072" toLevel="6" name="Sleeping Cloud">
+    <skill id="1072" toLevel="14" name="Sleeping Cloud">
         <!-- For $s1, casts Sleep on target and nearby enemies. -->
         <icon>icon.skill1072</icon>
         <abnormalLvl>1</abnormalLvl>
@@ -3502,6 +3502,14 @@
             <value level="4">-611</value>
             <value level="5">-635</value>
             <value level="6">-659</value>
+            <value level="7">-659</value><!-- TODO Fix correct value-->
+            <value level="8">-659</value>
+            <value level="9">-659</value>
+            <value level="10">-659</value>
+            <value level="11">-659</value>
+            <value level="12">-659</value>
+            <value level="13">-659</value>
+            <value level="14">-659</value>
         </effectPoint>
         <effectRange>1000</effectRange>
         <hitTime>15000</hitTime>
@@ -3515,6 +3523,14 @@
             <value level="4">66</value>
             <value level="5">70</value>
             <value level="6">76</value>
+            <value level="7">77</value> <!-- TODO Fix Correct value -->
+            <value level="8">78</value>
+            <value level="9">79</value>
+            <value level="10">80</value>
+            <value level="11">81</value>
+            <value level="12">82</value>
+            <value level="13">83</value>
+            <value level="14">84</value>
         </magicLvl>
         <mpConsume>
             <value level="1">47</value>
@@ -3523,6 +3539,14 @@
             <value level="4">74</value>
             <value level="5">78</value>
             <value level="6">107</value>
+            <value level="7">107</value>
+            <value level="8">107</value>
+            <value level="9">107</value>
+            <value level="10">107</value>
+            <value level="11">107</value>
+            <value level="12">107</value>
+            <value level="13">107</value>
+            <value level="14">107</value>
         </mpConsume>
         <mpInitialConsume>
             <value level="1">12</value>
@@ -3531,6 +3555,14 @@
             <value level="4">19</value>
             <value level="5">20</value>
             <value level="6">21</value>
+            <value level="7">21</value>
+            <value level="8">21</value>
+            <value level="9">21</value>
+            <value level="10">21</value>
+            <value level="11">21</value>
+            <value level="12">21</value>
+            <value level="13">21</value>
+            <value level="14">21</value>
         </mpInitialConsume>
         <operateType>A2</operateType>
         <removedOnDamage>true</removedOnDamage>

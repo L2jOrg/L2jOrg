@@ -1,5 +1,5 @@
 @echo off
-title L2 Classic: Seven Signs (Game Server)
+title Gameserver Classic - Kamael
 
 :start
 echo Starting GameServer.
