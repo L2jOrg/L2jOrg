@@ -4,20 +4,11 @@
 		<skill skillName="Aggression" skillId="28" skillLvl="50" getLevel="76" levelUpSp="5800000" />
 		<skill skillName="Arrest" skillId="402" skillLvl="11" getLevel="76" levelUpSp="5800000" />
 		<skill skillName="Aggression Aura" skillId="18" skillLvl="38" getLevel="76" levelUpSp="5800000" />
-		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="3" getLevel="76" levelUpSp="5800000">
-			<item id="8620" count="1" /> <!-- Ancient Book: Divine Inspiration (Manuscript) -->
-		</skill>
-		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="4" getLevel="76" levelUpSp="5800000">
-			<item id="8621" count="1" /> <!-- Ancient Book: Divine Inspiration (Original Version) -->
-		</skill>
 		<skill skillName="Sword/Blunt Weapon Mastery" skillId="217" skillLvl="46" getLevel="76" levelUpSp="5800000" />
 		<skill skillName="Heavy Armor Mastery" skillId="232" skillLvl="53" getLevel="76" levelUpSp="5800000" />
 		<skill skillName="Shield Charge" skillId="1898" skillLvl="1" getLevel="76" levelUpSp="5800000" />
 		<skill skillName="Magic Resistance" skillId="147" skillLvl="52" getLevel="76" levelUpSp="5800000" />
 		<skill skillName="Entangle" skillId="102" skillLvl="17" getLevel="76" levelUpSp="5800000" />
-		<skill skillName="Mount Pegasus" skillId="1834" skillLvl="1" getLevel="76">
-			<item id="90039" count="1" /> <!-- Spellbook: Mount Pegasus -->
-		</skill>
 		<skill skillName="Charm" skillId="15" skillLvl="53" getLevel="76" levelUpSp="5800000" />
 		<skill skillName="Final Fortress" skillId="291" skillLvl="12" getLevel="76" levelUpSp="5800000" />
 		<skill skillName="Summon Attractive Cubic" skillId="449" skillLvl="5" getLevel="76" levelUpSp="5800000" />
@@ -29,6 +20,15 @@
 		<skill skillName="Shield Bash" skillId="352" skillLvl="6" getLevel="76" levelUpSp="5800000" />
 		<skill skillName="Critical Vulnerability Decrease" skillId="53004" skillLvl="1" getLevel="76" levelUpSp="5800000" />
 		<skill skillName="Chain Strike" skillId="10015" skillLvl="1" getLevel="76" levelUpSp="5800000" />
+		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="3" getLevel="76" levelUpSp="5800000">
+			<item id="8620" count="1" /> <!-- Ancient Book: Divine Inspiration (Manuscript) -->
+		</skill>
+		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="4" getLevel="76" levelUpSp="5800000">
+			<item id="8621" count="1" /> <!-- Ancient Book: Divine Inspiration (Original Version) -->
+		</skill>
+		<skill skillName="Mount Pegasus" skillId="1834" skillLvl="1" getLevel="76">
+			<item id="90039" count="1" /> <!-- Spellbook: Mount Pegasus -->
+		</skill>
 		
 		<skill skillName="Aggression" skillId="28" skillLvl="51" getLevel="77" levelUpSp="5800000" />
 		<skill skillName="Aggression Aura" skillId="18" skillLvl="39" getLevel="77" levelUpSp="5800000" />
@@ -36,11 +36,11 @@
 		<skill skillName="Heavy Armor Mastery" skillId="232" skillLvl="54" getLevel="77" levelUpSp="5800000" />
 		<skill skillName="Shield Charge" skillId="1898" skillLvl="2" getLevel="77" levelUpSp="5800000" />
 		<skill skillName="Magic Resistance" skillId="147" skillLvl="53" getLevel="77" levelUpSp="5800000" />
+		<skill skillName="Deflect Magic" skillId="913" skillLvl="1" getLevel="77" levelUpSp="5800000" />
+		<skill skillName="Final Fortress" skillId="291" skillLvl="13" getLevel="77" levelUpSp="5800000" />
 		<skill skillName="Vengeance" skillId="368" skillLvl="1" getLevel="77" levelUpSp="5800000">
 			<item id="90046" count="1" /> <!-- Scroll: Vengeance -->
 		</skill>
-		<skill skillName="Deflect Magic" skillId="913" skillLvl="1" getLevel="77" levelUpSp="5800000" />
-		<skill skillName="Final Fortress" skillId="291" skillLvl="13" getLevel="77" levelUpSp="5800000" />
 		
 		<skill skillName="Aggression" skillId="28" skillLvl="52" getLevel="78" levelUpSp="13600000" />
 		<skill skillName="Arrest" skillId="402" skillLvl="12" getLevel="78" levelUpSp="13600000" />
@@ -56,14 +56,14 @@
 		<skill skillName="Summon Attractive Cubic" skillId="449" skillLvl="6" getLevel="78" levelUpSp="13600000" />
 		<skill skillName="Summon Life Cubic" skillId="67" skillLvl="10" getLevel="78" levelUpSp="13600000" />
 		<skill skillName="Summon Storm Cubic" skillId="10" skillLvl="10" getLevel="78" levelUpSp="13600000" />
-		<skill skillName="Touch of Life" skillId="341" skillLvl="1" getLevel="78" levelUpSp="13600000">
-			<item id="90047" count="1" /> <!-- Scroll: Touch of Life -->
-		</skill>
 		<skill skillName="Knighthood" skillId="429" skillLvl="1" getLevel="78" levelUpSp="13600000" />
 		<skill skillName="Holy Aura" skillId="107" skillLvl="11" getLevel="78" levelUpSp="13600000" />
 		<skill skillName="Tribunal" skillId="400" skillLvl="17" getLevel="78" levelUpSp="13600000" />
 		<skill skillName="Shield Bash" skillId="352" skillLvl="7" getLevel="78" levelUpSp="13600000" />
 		<skill skillName="Critical Vulnerability Decrease" skillId="53004" skillLvl="2" getLevel="78" levelUpSp="13600000" />
+		<skill skillName="Touch of Life" skillId="341" skillLvl="1" getLevel="78" levelUpSp="13600000">
+			<item id="90047" count="1" /> <!-- Scroll: Touch of Life -->
+		</skill>
 		
 		<skill skillName="Shield Charge" skillId="1898" skillLvl="4" getLevel="79" levelUpSp="13600000" />
 		<skill skillName="Final Fortress" skillId="291" skillLvl="15" getLevel="79" levelUpSp="13600000" />
@@ -77,9 +77,6 @@
 		<skill skillName="Sword/Blunt Weapon Mastery" skillId="217" skillLvl="49" getLevel="80" levelUpSp="13600000" />
 		<skill skillName="Heavy Armor Mastery" skillId="232" skillLvl="56" getLevel="80" levelUpSp="13600000" />
 		<skill skillName="Shield Charge" skillId="1898" skillLvl="5" getLevel="80" levelUpSp="13600000" />
-		<skill skillName="Eva's Protection" skillId="1623" skillLvl="1" getLevel="80" levelUpSp="13600000">
-			<item id="90049" count="1" /> <!-- Scroll: Eva's Protection -->
-		</skill>
 		<skill skillName="Magic Resistance" skillId="147" skillLvl="55" getLevel="80" levelUpSp="13600000" />
 		<skill skillName="Guard Stance" skillId="288" skillLvl="5" getLevel="80" levelUpSp="13600000" />
 		<skill skillName="Final Fortress" skillId="291" skillLvl="16" getLevel="80" levelUpSp="13600000" />
@@ -90,6 +87,9 @@
 		<skill skillName="Tribunal" skillId="400" skillLvl="18" getLevel="80" levelUpSp="13600000" />
 		<skill skillName="Shield Bash" skillId="352" skillLvl="8" getLevel="80" levelUpSp="13600000" />
 		<skill skillName="Critical Vulnerability Decrease" skillId="53004" skillLvl="3" getLevel="80" levelUpSp="13600000" />
+		<skill skillName="Eva's Protection" skillId="1623" skillLvl="1" getLevel="80" levelUpSp="13600000">
+			<item id="90049" count="1" /> <!-- Scroll: Eva's Protection -->
+		</skill>
 		
 		<skill skillName="Aggression" skillId="28" skillLvl="54" getLevel="81" levelUpSp="160000000" />
 		<skill skillName="Aggression Aura" skillId="18" skillLvl="42" getLevel="81" levelUpSp="160000000" />

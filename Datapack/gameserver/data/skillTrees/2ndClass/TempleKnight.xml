@@ -31,6 +31,9 @@
 		<skill skillName="Spirit Barrier" skillId="123" skillLvl="1" getLevel="40" levelUpSp="67000">
 			<item id="3051" count="1" />
 		</skill>
+		<skill skillName="Potion Mastery" skillId="45184" skillLvl="1" getLevel="40">
+			<item id="57" count="6000000"/> <!-- Adena -->
+		</skill>
 		
 		<skill skillName="Aggression" skillId="28" skillLvl="16" getLevel="41" levelUpSp="78000" />
 		<skill skillName="Aggression Aura" skillId="18" skillLvl="4" getLevel="41" levelUpSp="78000" />
@@ -304,7 +307,7 @@
 		<skill skillName="Focus Mind" skillId="191" skillLvl="5" getLevel="64" levelUpSp="1000000" />
 		<skill skillName="Shield Deflect Magic" skillId="916" skillLvl="2" getLevel="64" levelUpSp="1000000" />
 		<skill skillName="Ultimate Shield" skillId="322" skillLvl="1" getLevel="64" levelUpSp="1000000" />
-		
+
 		<skill skillName="Aggression" skillId="28" skillLvl="40" getLevel="65" levelUpSp="1000000" />
 		<skill skillName="Aggression Aura" skillId="18" skillLvl="28" getLevel="65" levelUpSp="1000000" />
 		<skill skillName="Sword/Blunt Weapon Mastery" skillId="217" skillLvl="36" getLevel="65" levelUpSp="1000000" />
