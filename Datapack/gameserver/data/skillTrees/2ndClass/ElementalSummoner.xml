@@ -26,9 +26,6 @@
 		<skill skillName="Servitor Recharge" skillId="1126" skillLvl="7" getLevel="40" levelUpSp="100000" />
 		<skill skillName="Servitor Recharge" skillId="1126" skillLvl="8" getLevel="40" levelUpSp="100000" />
 		<skill skillName="Summon Boxer the Unicorn" skillId="1226" skillLvl="5" getLevel="40" levelUpSp="100000" />
-		<skill skillName="Summon Aqua Cubic" skillId="1280" skillLvl="1" getLevel="40" levelUpSp="100000">
-			<item id="4923" count="1" />		
-		</skill>
 		<skill skillName="Summon Mirage the Unicorn" skillId="1227" skillLvl="5" getLevel="40" levelUpSp="100000" />
 		<skill skillName="Summon Merrow the Unicorn" skillId="1277" skillLvl="1" getLevel="40" levelUpSp="100000" />
 		<skill skillName="Summon Life Cubic" skillId="67" skillLvl="1" getLevel="40" levelUpSp="100000" />
@@ -36,6 +33,9 @@
 		<skill skillName="Summon Soulshots" skillId="11316" skillLvl="1" getLevel="40" levelUpSp="100000" />
 		<skill skillName="Boost Mana" skillId="213" skillLvl="3" getLevel="40" levelUpSp="100000" />
 		<skill skillName="Servitor Physical Shield" skillId="1140" skillLvl="1" getLevel="40" levelUpSp="100000" />
+		<skill skillName="Summon Aqua Cubic" skillId="1280" skillLvl="1" getLevel="40" levelUpSp="100000">
+			<item id="4923" count="1" />
+		</skill>
 		
 		<skill skillName="Anti Magic" skillId="146" skillLvl="16" getLevel="42" levelUpSp="140000" />
 		<skill skillName="Light Armor Mastery" skillId="258" skillLvl="4" getLevel="42" levelUpSp="140000" />
@@ -67,10 +67,10 @@
 		<skill skillName="Summon Mirage the Unicorn" skillId="1227" skillLvl="6" getLevel="44" levelUpSp="140000" />
 		<skill skillName="Summon Merrow the Unicorn" skillId="1277" skillLvl="2" getLevel="44" levelUpSp="140000" />
 		<skill skillName="Servitor Haste" skillId="1141" skillLvl="1" getLevel="44" levelUpSp="140000" />
+		<skill skillName="Aqua Swirl" skillId="1175" skillLvl="11" getLevel="44" levelUpSp="140000" />
 		<skill skillName="Spirit Sharing" skillId="1547" skillLvl="1" getLevel="44" levelUpSp="140000" >
 			<item id="49562" count="1" />
 		</skill>
-		<skill skillName="Aqua Swirl" skillId="1175" skillLvl="11" getLevel="44" levelUpSp="140000" />
 		
 		<skill skillName="Anti Magic" skillId="146" skillLvl="19" getLevel="46" levelUpSp="220000" />
 		<skill skillName="Light Armor Mastery" skillId="258" skillLvl="7" getLevel="46" levelUpSp="220000" />

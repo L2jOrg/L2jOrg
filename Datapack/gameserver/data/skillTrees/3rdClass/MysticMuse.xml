@@ -2,12 +2,6 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org ../../xsd/skillTrees.xsd">
 	<skillTree type="classSkillTree" classId="103" parentClassId="27">
 		<skill skillName="Anti Magic" skillId="146" skillLvl="46" getLevel="76" levelUpSp="6100000" />
-		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="3" getLevel="76" levelUpSp="6100000">
-			<item id="8620" count="1" /> <!-- Ancient Book: Divine Inspiration (Manuscript) -->
-		</skill>
-		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="4" getLevel="76" levelUpSp="6100000">
-			<item id="8621" count="1" /> <!-- Ancient Book: Divine Inspiration (Original Version) -->
-		</skill>
 		<skill skillName="Robe Mastery" skillId="234" skillLvl="42" getLevel="76" levelUpSp="6100000" />
 		<skill skillName="Weapon Mastery" skillId="249" skillLvl="43" getLevel="76" levelUpSp="6100000" />
 		<skill skillName="Aqua Splash" skillId="1295" skillLvl="10" getLevel="76" levelUpSp="6100000" />
@@ -15,9 +9,6 @@
 		<skill skillName="Frost Bolt" skillId="1236" skillLvl="20" getLevel="76" levelUpSp="6100000" />
 		<skill skillName="Ice Vortex" skillId="1340" skillLvl="1" getLevel="76" levelUpSp="6100000" />
 		<skill skillName="Ice Dagger" skillId="1237" skillLvl="18" getLevel="76" levelUpSp="6100000" />
-		<skill skillName="Mount Pegasus" skillId="1834" skillLvl="1" getLevel="76">
-			<item id="90039" count="1" /> <!-- Spellbook: Mount Pegasus -->
-		</skill>
 		<skill skillName="Bind" skillId="53006" skillLvl="1" getLevel="76" levelUpSp="6100000" />
 		<skill skillName="Curse Weakness" skillId="1164" skillLvl="20" getLevel="76" levelUpSp="6100000" />
 		<skill skillName="Aura Flare" skillId="1231" skillLvl="29" getLevel="76" levelUpSp="6100000" />
@@ -26,6 +17,15 @@
 		<skill skillName="Higher Mana Gain" skillId="285" skillLvl="28" getLevel="76" levelUpSp="6100000" />
 		<skill skillName="Sleep" skillId="1069" skillLvl="43" getLevel="76" levelUpSp="6100000" />
 		<skill skillName="Sleeping Cloud" skillId="1072" skillLvl="6" getLevel="76" levelUpSp="6100000" />
+		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="3" getLevel="76" levelUpSp="6100000">
+			<item id="8620" count="1" /> <!-- Ancient Book: Divine Inspiration (Manuscript) -->
+		</skill>
+		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="4" getLevel="76" levelUpSp="6100000">
+			<item id="8621" count="1" /> <!-- Ancient Book: Divine Inspiration (Original Version) -->
+		</skill>
+		<skill skillName="Mount Pegasus" skillId="1834" skillLvl="1" getLevel="76">
+			<item id="90039" count="1" /> <!-- Spellbook: Mount Pegasus -->
+		</skill>
 		
 		<skill skillName="Anti Magic" skillId="146" skillLvl="47" getLevel="77" levelUpSp="6100000" />
 		<skill skillName="Robe Mastery" skillId="234" skillLvl="43" getLevel="77" levelUpSp="6100000" />
@@ -33,11 +33,12 @@
 		<skill skillName="Hydro Blast" skillId="1235" skillLvl="30" getLevel="77" levelUpSp="6100000" />
 		<skill skillName="Aura Flare" skillId="1231" skillLvl="30" getLevel="77" levelUpSp="6100000" />
 		<skill skillName="Frost Wall" skillId="1174" skillLvl="24" getLevel="77" levelUpSp="6100000" />
+		<skill skillName="Higher Mana Gain" skillId="285" skillLvl="29" getLevel="77" levelUpSp="6100000" />
+		<skill skillName="Sleep" skillId="1069" skillLvl="44" getLevel="77" levelUpSp="6100000" />
+		<skill skillName="Sleeping Cloud" skillId="1072" skillLvl="7" getLevel="77" levelUpSp="6100000" />
 		<skill skillName="Arcane Power" skillId="337" skillLvl="1" getLevel="77" levelUpSp="6100000">
 			<item id="90081" count="1" /> <!-- Scroll: Arcane Power -->
 		</skill>
-		<skill skillName="Higher Mana Gain" skillId="285" skillLvl="29" getLevel="77" levelUpSp="6100000" />
-		<skill skillName="Sleep" skillId="1069" skillLvl="44" getLevel="77" levelUpSp="6100000" />
 		
 		<skill skillName="Anti Magic" skillId="146" skillLvl="48" getLevel="78" levelUpSp="13500000" />
 		<skill skillName="Robe Mastery" skillId="234" skillLvl="44" getLevel="78" levelUpSp="13500000" />
@@ -46,9 +47,6 @@
 		<skill skillName="Hydro Blast" skillId="1235" skillLvl="31" getLevel="78" levelUpSp="13500000" />
 		<skill skillName="Frost Bolt" skillId="1236" skillLvl="21" getLevel="78" levelUpSp="13500000" />
 		<skill skillName="Ice Dagger" skillId="1237" skillLvl="19" getLevel="78" levelUpSp="13500000" />
-		<skill skillName="Ice Vortex Crusher" skillId="1453" skillLvl="1" getLevel="78" levelUpSp="13500000">
-			<item id="90083" count="1" /> <!-- Scroll: Ice Vortex Crusher -->
-		</skill>
 		<skill skillName="Bind" skillId="53006" skillLvl="2" getLevel="78" levelUpSp="13500000" />
 		<skill skillName="Curse Weakness" skillId="1164" skillLvl="21" getLevel="78" levelUpSp="13500000" />
 		<skill skillName="Aura Flare" skillId="1231" skillLvl="31" getLevel="78" levelUpSp="13500000" />
@@ -57,23 +55,25 @@
 		<skill skillName="Arcane Power" skillId="337" skillLvl="2" getLevel="78" levelUpSp="13500000" />
 		<skill skillName="Higher Mana Gain" skillId="285" skillLvl="30" getLevel="78" levelUpSp="13500000" />
 		<skill skillName="Sleep" skillId="1069" skillLvl="45" getLevel="78" levelUpSp="13500000" />
+		<skill skillName="Sleeping Cloud" skillId="1072" skillLvl="8" getLevel="78" levelUpSp="13500000" />
+		<skill skillName="Ice Vortex Crusher" skillId="1453" skillLvl="1" getLevel="78" levelUpSp="13500000">
+			<item id="90083" count="1" /> <!-- Scroll: Ice Vortex Crusher -->
+		</skill>
 		
 		<skill skillName="Aqua Splash" skillId="1295" skillLvl="12" getLevel="79" levelUpSp="13500000" />
 		<skill skillName="Frost Wall" skillId="1174" skillLvl="26" getLevel="79" levelUpSp="13500000" />
 		<skill skillName="Arcane Power" skillId="337" skillLvl="3" getLevel="79" levelUpSp="13500000" />
+		<skill skillName="Sleep" skillId="1069" skillLvl="46" getLevel="79" levelUpSp="13500000" />
+		<skill skillName="Sleeping Cloud" skillId="1072" skillLvl="9" getLevel="79" levelUpSp="13500000" />
 		<skill skillName="Arcane Chaos" skillId="1338" skillLvl="1" getLevel="79" levelUpSp="13500000">
 			<item id="90085" count="1" /> <!-- Scroll: Arcane Chaos -->
 		</skill>
-		<skill skillName="Sleep" skillId="1069" skillLvl="46" getLevel="79" levelUpSp="13500000" />
 		
 		<skill skillName="Anti Magic" skillId="146" skillLvl="49" getLevel="80" levelUpSp="13500000" />
 		<skill skillName="Robe Mastery" skillId="234" skillLvl="45" getLevel="80" levelUpSp="13500000" />
 		<skill skillName="Weapon Mastery" skillId="249" skillLvl="46" getLevel="80" levelUpSp="13500000" />
 		<skill skillName="Aqua Splash" skillId="1295" skillLvl="13" getLevel="80" levelUpSp="13500000" />
 		<skill skillName="Hydro Blast" skillId="1235" skillLvl="32" getLevel="80" levelUpSp="13500000" />
-		<skill skillName="Arcane Shield" skillId="1556" skillLvl="1" getLevel="80" levelUpSp="13500000">
-			<item id="90086" count="1" /> <!-- Scroll: Arcane Shield -->
-		</skill>
 		<skill skillName="Bind" skillId="53006" skillLvl="3" getLevel="80" levelUpSp="13500000" />
 		<skill skillName="Curse Weakness" skillId="1164" skillLvl="22" getLevel="80" levelUpSp="13500000" />
 		<skill skillName="Mana Regeneration" skillId="1047" skillLvl="5" getLevel="80" levelUpSp="13500000" />
@@ -83,6 +83,10 @@
 		<skill skillName="Arcane Power" skillId="337" skillLvl="4" getLevel="80" levelUpSp="13500000" />
 		<skill skillName="Higher Mana Gain" skillId="285" skillLvl="31" getLevel="80" levelUpSp="13500000" />
 		<skill skillName="Sleep" skillId="1069" skillLvl="47" getLevel="80" levelUpSp="13500000" />
+		<skill skillName="Sleeping Cloud" skillId="1072" skillLvl="10" getLevel="80" levelUpSp="13500000" />
+		<skill skillName="Arcane Shield" skillId="1556" skillLvl="1" getLevel="80" levelUpSp="13500000">
+			<item id="90086" count="1" /> <!-- Scroll: Arcane Shield -->
+		</skill>
 
 		<skill skillName="Anti Magic" skillId="146" skillLvl="50" getLevel="81" levelUpSp="160000000" />
 		<skill skillName="Robe Mastery" skillId="234" skillLvl="46" getLevel="81" levelUpSp="160000000" />
@@ -96,6 +100,7 @@
 		<skill skillName="Arcane Power" skillId="337" skillLvl="5" getLevel="81" levelUpSp="160000000" />
 		<skill skillName="Higher Mana Gain" skillId="285" skillLvl="32" getLevel="81" levelUpSp="160000000" />
 		<skill skillName="Sleep" skillId="1069" skillLvl="48" getLevel="81" levelUpSp="160000000" />
+		<skill skillName="Sleeping Cloud" skillId="1072" skillLvl="11" getLevel="81" levelUpSp="160000000" />
 
 		<skill skillName="Anti Magic" skillId="146" skillLvl="51" getLevel="82" levelUpSp="170000000" />
 		<skill skillName="Robe Mastery" skillId="234" skillLvl="47" getLevel="82" levelUpSp="170000000" />
@@ -112,6 +117,7 @@
 		<skill skillName="Arcane Power" skillId="337" skillLvl="6" getLevel="82" levelUpSp="170000000" />
 		<skill skillName="Higher Mana Gain" skillId="285" skillLvl="33" getLevel="82" levelUpSp="170000000" />
 		<skill skillName="Sleep" skillId="1069" skillLvl="49" getLevel="82" levelUpSp="170000000" />
+		<skill skillName="Sleeping Cloud" skillId="1072" skillLvl="12" getLevel="82" levelUpSp="170000000" />
 
 		<skill skillName="Anti Magic" skillId="146" skillLvl="52" getLevel="83" levelUpSp="240000000" />
 		<skill skillName="Robe Mastery" skillId="234" skillLvl="48" getLevel="83" levelUpSp="240000000" />
@@ -125,6 +131,7 @@
 		<skill skillName="Arcane Power" skillId="337" skillLvl="7" getLevel="83" levelUpSp="240000000" />
 		<skill skillName="Higher Mana Gain" skillId="285" skillLvl="34" getLevel="83" levelUpSp="240000000" />
 		<skill skillName="Sleep" skillId="1069" skillLvl="50" getLevel="83" levelUpSp="240000000" />
+		<skill skillName="Sleeping Cloud" skillId="1072" skillLvl="13" getLevel="83" levelUpSp="240000000" />
 
 		<skill skillName="Anti Magic" skillId="146" skillLvl="53" getLevel="84" levelUpSp="240000000" />
 		<skill skillName="Robe Mastery" skillId="234" skillLvl="49" getLevel="84" levelUpSp="240000000" />
@@ -142,6 +149,7 @@
 		<skill skillName="Arcane Power" skillId="337" skillLvl="8" getLevel="84" levelUpSp="240000000" />
 		<skill skillName="Higher Mana Gain" skillId="285" skillLvl="35" getLevel="84" levelUpSp="240000000" />
 		<skill skillName="Sleep" skillId="1069" skillLvl="51" getLevel="84" levelUpSp="240000000" />
+		<skill skillName="Sleeping Cloud" skillId="1072" skillLvl="14" getLevel="84" levelUpSp="240000000" />
 		
 		<skill skillName="Anti Magic" skillId="146" skillLvl="54" getLevel="85" levelUpSp="840000000" />
 		<skill skillName="Robe Mastery" skillId="234" skillLvl="50" getLevel="85" levelUpSp="840000000" />
