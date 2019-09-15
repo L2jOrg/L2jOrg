@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+		   targetNamespace="http://l2j.org"
+		   xmlns="http://l2j.org"
+		   elementFormDefault="qualified">
+
+	<xs:include schemaLocation="../xsd/common.xsd"/>
+
+	<xs:element name="list">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="npc" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="npcs" minOccurs="0">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="npc" maxOccurs="unbounded" minOccurs="0">
+											<xs:complexType>
+												<xs:attribute type="xs:int" name="id" />
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="teleport" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="location"  type="TeleportLocation" maxOccurs="unbounded" minOccurs="0"/>
+									</xs:sequence>
+									<xs:attribute name="name" type="xs:string"/>
+									<xs:attribute name="type" type="TeleportType">
+									</xs:attribute>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+						<xs:attribute type="xs:integer" name="id" />
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:simpleType name="TeleportType">
+		<xs:restriction base="xs:token">
+			<xs:enumeration value="NORMAL" />
+			<xs:enumeration value="HUNTING" />
+			<xs:enumeration value="NOBLES_TOKEN" />
+			<xs:enumeration value="NOBLES_ADENA" />
+			<xs:enumeration value="OTHER" />
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:complexType name="TeleportLocation">
+		<xs:complexContent>
+			<xs:extension base="Location">
+				<xs:attribute type="xs:string" name="name" />
+				<xs:attribute type="xs:int" name="npcStringId" default="-1" />
+				<xs:attribute type="xs:int" name="questZoneId"  />
+				<xs:attribute type="xs:int" name="feeId" />
+				<xs:attribute type="xs:int" name="feeCount"  />
+				<xs:attribute name="castleId">
+					<xs:simpleType>
+						<xs:restriction base="xs:token">
+							<xs:pattern value="\d+(;\d+)*" />
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:attribute>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../xsd/teleporterData.xsd">
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org ../../teleporterData.xsd">
 	<npc id="35858"> <!-- Foreman -->
 		<teleport name="tel1" type="OTHER">
 			<location npcStringId="1010658" x="189894" y="36746" z="-3408" /> <!-- Fortress North Gate -->

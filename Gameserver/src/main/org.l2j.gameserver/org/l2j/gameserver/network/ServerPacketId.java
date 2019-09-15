@@ -830,10 +830,10 @@ public enum ServerPacketId {
     EX_MAX(0xFE, 0x204), // 152
     EX_COIN_COUNT(0xFE, 0x209),
     EX_SEND_COSTUME_LIST(0xFE, 0x20F),
-    EX_UNK_215(0xFE, 0x215),
+    EX_COSTUME_SHORTCUT_LIST(0xFE, 0x215),
     EX_AUTOPLAY_SETTING(0xFE, 0x221),
     EX_UNK_225(0xFE, 0x225),
-    EX_UNK_235(0xFE, 0x235);
+    EX_MERCENARY_CASTLEWAR_CASTLE_SIEGE_HUD_INFO(0xFE, 0x235);
 
     private final int id;
     private final int extId;

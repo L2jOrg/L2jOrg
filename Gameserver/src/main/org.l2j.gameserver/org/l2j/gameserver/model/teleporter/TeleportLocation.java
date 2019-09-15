@@ -1,24 +1,7 @@
-/*
- * This file is part of the L2J Mobius project.
- *
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
- * General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this program. If not, see <http://www.gnu.org/licenses/>.
- */
 package org.l2j.gameserver.model.teleporter;
 
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.StatsSet;
-import org.l2j.gameserver.model.itemcontainer.Inventory;
 import org.l2j.gameserver.model.items.CommonItem;
 import org.l2j.gameserver.network.NpcStringId;
 
@@ -32,7 +15,7 @@ import java.util.List;
 public class TeleportLocation extends Location {
     private final int _id;
     private final String _name;
-    private final NpcStringId _npcStringId;
+    private final int _npcStringId;
     private final int _questZoneId;
     private final int _feeId;
     private final long _feeCount;
@@ -42,7 +25,7 @@ public class TeleportLocation extends Location {
         super(set);
         _id = id;
         _name = set.getString("name", null);
-        _npcStringId = NpcStringId.getNpcStringIdOrDefault(set.getInt("npcStringId", -1), null);
+        _npcStringId = set.getInt("npcStringId", -1);
         _questZoneId = set.getInt("questZoneId", 0);
         _feeId = set.getInt("feeId", CommonItem.ADENA);
         _feeCount = set.getLong("feeCount", 0);
@@ -68,7 +51,7 @@ public class TeleportLocation extends Location {
         return _name;
     }
 
-    public NpcStringId getNpcStringId() {
+    public int getNpcStringId() {
         return _npcStringId;
     }
 

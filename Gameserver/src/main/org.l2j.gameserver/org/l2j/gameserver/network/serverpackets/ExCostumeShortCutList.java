@@ -3,11 +3,12 @@ package org.l2j.gameserver.network.serverpackets;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
 
-public class ExUnk209 extends ServerPacket {
+public class ExCostumeShortCutList extends ServerPacket {
 
     @Override
     protected void writeImpl(GameClient client) throws Exception {
-        writeId(ServerPacketId.EX_COIN_COUNT);
-        writeLong(0);
+        writeId(ServerPacketId.EX_COSTUME_SHORTCUT_LIST);
+        writeByte(0x01);
+        writeInt(0);
     }
 }

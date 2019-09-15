@@ -224,9 +224,8 @@ public class EnterWorld extends ClientPacket {
         client.sendPacket(new ExSubjobInfo(player, SubclassInfoType.NO_CHANGES));
         client.sendPacket(new ExUserInfoInvenWeight(player));
         client.sendPacket(new ExAdenaInvenCount(player));
-        client.sendPacket(new ExUnk209());
+        client.sendPacket(new ExCoinCount(client.getCoin()));
         client.sendPacket(new ShortCutInit(player));
-        client.sendPacket(new ExUnk235());
         client.sendPacket(new ExDressRoomUiOpen());
         client.sendPacket(new ExSendCostumeList());
 

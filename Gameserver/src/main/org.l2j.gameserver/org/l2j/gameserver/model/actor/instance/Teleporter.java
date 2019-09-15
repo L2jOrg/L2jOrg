@@ -32,6 +32,8 @@ import org.slf4j.LoggerFactory;
 
 import java.util.StringTokenizer;
 
+import static java.util.Objects.isNull;
+
 
 /**
  * @author NightMarez
@@ -61,8 +63,8 @@ public final class Teleporter extends Npc {
             case "showTeleports": {
                 final String listName = (st.hasMoreTokens()) ? st.nextToken() : TeleportType.NORMAL.name();
                 final TeleportHolder holder = TeleportersData.getInstance().getHolder(getId(), listName);
-                if (holder == null) {
-                    LOGGER.warn("Player " + player.getObjectId() + " requested show teleports for list with name " + listName + " at NPC " + getId() + "!");
+                if (isNull(holder)) {
+                    LOGGER.warn("Player {} requested show teleports for list with name {}  at NPC {}!", player.getObjectId(), listName, getId());
                     return;
                 }
                 holder.showTeleportList(player, this);

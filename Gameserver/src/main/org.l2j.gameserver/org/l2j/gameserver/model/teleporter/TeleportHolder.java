@@ -18,22 +18,36 @@ import org.l2j.gameserver.network.serverpackets.html.NpcHtmlMessage;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.time.DayOfWeek;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
-import java.util.Calendar;
+import java.util.EnumSet;
 import java.util.List;
 
+import static org.l2j.commons.util.Util.SPACE;
 
 /**
  * Teleport holder
  *
  * @author UnAfraid
+ * @author joeAlisson
  */
 public final class TeleportHolder {
     private static final Logger LOGGER = LoggerFactory.getLogger(TeleportHolder.class);
 
-    private final String _name;
-    private final TeleportType _type;
-    private final List<TeleportLocation> _teleportData = new ArrayList<>();
+    private static final String NPC_STRING_ID_FORMAT = "<fstring>%d</fstring>";
+    private static final String BUTTON_QUEST_BYPASS = "<button align=left icon=\"quest\" action=\"bypass -h ";
+    private static final String BUTTON_TELEPORT_BYPASS = "<button align=left icon=\"teleport\" action=\"bypass -h ";
+    private static final String CONFIRM_TELEPORT_MSG = "\" msg=\"811;";
+    private static final String ADENA_STRING_ID = "<fstring>1000308</fstring>";
+    private static final String ANCIENT_ADENA_STRING_ID = "<fstring>1000309</fstring>";
+    private static final String TEMPLATE_TELEPORTER_HTM = "data/html/teleporter/teleports.htm";
+    private static final String CASTLE_TELEPORTER_BUSY_HTM = "data/html/teleporter/castleteleporter-busy.htm";
+    private static final EnumSet<DayOfWeek> DISCOUNT_DAYS = EnumSet.of(DayOfWeek.MONDAY, DayOfWeek.TUESDAY);
+
+    private final String name;
+    private final TeleportType type;
+    private final List<TeleportLocation> teleportData = new ArrayList<>();
 
     /**
      * Constructor
@@ -42,35 +56,8 @@ public final class TeleportHolder {
      * @param type type of teleport list
      */
     public TeleportHolder(String name, TeleportType type) {
-        _name = name;
-        _type = type;
-    }
-
-    /**
-     * Gets list identification (name).
-     *
-     * @return list name
-     */
-    public String getName() {
-        return _name;
-    }
-
-    /**
-     * Check if teleport list is for noblesse or not.
-     *
-     * @return {@code true} if is for noblesse otherwise {@code false}
-     */
-    public boolean isNoblesse() {
-        return (_type == TeleportType.NOBLES_ADENA) || (_type == TeleportType.NOBLES_TOKEN);
-    }
-
-    /**
-     * Gets type of teleport list.
-     *
-     * @return type of list
-     */
-    public TeleportType getType() {
-        return _type;
+        this.name = name;
+        this.type = type;
     }
 
     /**
@@ -79,26 +66,7 @@ public final class TeleportHolder {
      * @param locData information about teleport location
      */
     public void registerLocation(StatsSet locData) {
-        _teleportData.add(new TeleportLocation(_teleportData.size(), locData));
-    }
-
-    /**
-     * Gets teleport location with specific index.
-     *
-     * @param locationId index of location (begins with {@code 0})
-     * @return instance of {@link TeleportLocation} if found otherwise {@code null}
-     */
-    public TeleportLocation getLocation(int locationId) {
-        return _teleportData.get(locationId);
-    }
-
-    /**
-     * Gets all teleport locations registered in current holder.
-     *
-     * @return collection of {@link TeleportLocation}
-     */
-    public List<TeleportLocation> getLocations() {
-        return _teleportData;
+        teleportData.add(new TeleportLocation(teleportData.size(), locData));
     }
 
     /**
@@ -120,7 +88,7 @@ public final class TeleportHolder {
      */
     public void showTeleportList(Player player, Npc npc, String bypass) {
         if (isNoblesse() && !player.isNoble()) {
-            LOGGER.warn("Player " + player.getObjectId() + " requested noblesse teleport without being noble!");
+            LOGGER.warn("Player {} requested noblesse teleport without being noble!", player.getObjectId());
             return;
         }
 
@@ -130,34 +98,31 @@ public final class TeleportHolder {
         // Build html
         final StringBuilder sb = new StringBuilder();
         final StringBuilder sb_f = new StringBuilder();
-        for (TeleportLocation loc : _teleportData) {
+        for (TeleportLocation loc : teleportData) {
             String finalName = loc.getName();
             String confirmDesc = loc.getName();
-            if (loc.getNpcStringId() != null) {
-                final int stringId = loc.getNpcStringId().getId();
-                finalName = "<fstring>" + stringId + "</fstring>";
-                confirmDesc = "F;" + stringId;
+            if (loc.getNpcStringId() != -1) {
+                finalName = String.format(NPC_STRING_ID_FORMAT, loc.getNpcStringId());
+                confirmDesc = "F;" + loc.getNpcStringId();
             }
 
             if (shouldPayFee(player, loc)) {
                 final long fee = calculateFee(player, loc);
                 if (fee != 0) {
-                    finalName += " - " + fee + " " + getItemName(loc.getFeeId(), true);
+                    finalName += " - " + fee + SPACE + getItemName(loc.getFeeId(), true);
                 }
             }
 
             final boolean isQuestTeleport = (questZoneId >= 0) && (loc.getQuestZoneId() == questZoneId);
-            if (isQuestTeleport) {
-                sb_f.append("<button align=left icon=\"quest\" action=\"bypass -h " + bypass + " " + _name + " " + loc.getId() + "\" msg=\"811;" + confirmDesc + "\">" + finalName + "</button>");
-            } else {
-                sb.append("<button align=left icon=\"teleport\" action=\"bypass -h " + bypass + " " + _name + " " + loc.getId() + "\" msg=\"811;" + confirmDesc + "\">" + finalName + "</button>");
-            }
+            var builder = isQuestTeleport  ?  sb_f.append(BUTTON_QUEST_BYPASS) : sb.append(BUTTON_TELEPORT_BYPASS);
+            builder.append(bypass).append(SPACE).append(name).append(SPACE).append(loc.getId()).append(CONFIRM_TELEPORT_MSG).append(confirmDesc).append("\">")
+                    .append(finalName).append("</button>");
         }
         sb_f.append(sb.toString());
 
         // Send html message
         final NpcHtmlMessage msg = new NpcHtmlMessage(npc.getObjectId());
-        msg.setFile(player, "data/html/teleporter/teleports.htm");
+        msg.setFile(player, TEMPLATE_TELEPORTER_HTM);
         msg.replace("%locations%", sb_f.toString());
         player.sendPacket(msg);
     }
@@ -171,13 +136,13 @@ public final class TeleportHolder {
      */
     public void doTeleport(Player player, Npc npc, int locId) {
         if (isNoblesse() && !player.isNoble()) {
-            LOGGER.warn("Player " + player.getObjectId() + " requested noblesse teleport without being noble!");
+            LOGGER.warn("Player {} requested noblesse teleport without being noble!", player.getObjectId());
             return;
         }
 
         final TeleportLocation loc = getLocation(locId);
         if (loc == null) {
-            LOGGER.warn("Player " + player.getObjectId() + " requested unknown teleport location " + locId + " within list " + _name + "!");
+            LOGGER.warn("Player {} requested unknown teleport location {} within list {}!", player.getObjectId(), locId, name);
             return;
         }
 
@@ -193,7 +158,7 @@ public final class TeleportHolder {
         if (isNormalTeleport()) {
             if (npc.getCastle().getSiege().isInProgress()) {
                 final NpcHtmlMessage msg = new NpcHtmlMessage(npc.getObjectId());
-                msg.setFile(player, "data/html/teleporter/castleteleporter-busy.htm");
+                msg.setFile(player, CASTLE_TELEPORTER_BUSY_HTM);
                 player.sendPacket(msg);
                 return;
             } else if (!Config.ALT_GAME_KARMA_PLAYER_CAN_USE_GK && (player.getReputation() < 0)) {
@@ -249,10 +214,8 @@ public final class TeleportHolder {
                 return 0;
             }
 
-            final Calendar cal = Calendar.getInstance();
-            final int hour = cal.get(Calendar.HOUR_OF_DAY);
-            final int dayOfWeek = cal.get(Calendar.DAY_OF_WEEK);
-            if ((hour >= 20) && ((dayOfWeek >= Calendar.MONDAY) && (dayOfWeek <= Calendar.TUESDAY))) {
+            var now = LocalDateTime.now();
+            if(now.getHour() >= 20 && DISCOUNT_DAYS.contains(now.getDayOfWeek())) {
                 return loc.getFeeCount() / 2;
             }
         }
@@ -261,7 +224,7 @@ public final class TeleportHolder {
 
     private boolean isNormalTeleport()
     {
-        return (_type == TeleportType.NORMAL) || (_type == TeleportType.HUNTING);
+        return (type == TeleportType.NORMAL) || (type == TeleportType.HUNTING);
     }
 
     /**
@@ -274,9 +237,9 @@ public final class TeleportHolder {
     private String getItemName(int itemId, boolean fstring) {
         if (fstring) {
             if (itemId == CommonItem.ADENA) {
-                return "<fstring>1000308</fstring>";
+                return ADENA_STRING_ID;
             } else if (itemId == CommonItem.ANCIENT_ADENA) {
-                return "<fstring>1000309</fstring>";
+                return ANCIENT_ADENA_STRING_ID;
             }
         }
         final ItemTemplate item = ItemTable.getInstance().getTemplate(itemId);
@@ -286,24 +249,54 @@ public final class TeleportHolder {
 
         final SpecialItemType specialItem = SpecialItemType.getByClientId(itemId);
         if (specialItem != null) {
-            switch (specialItem) {
-                case PC_CAFE_POINTS: {
-                    return "Player Commendation Points";
-                }
-                case CLAN_REPUTATION: {
-                    return "Clan Reputation Points";
-                }
-                case FAME: {
-                    return "Fame";
-                }
-                case FIELD_CYCLE_POINTS: {
-                    return "Field Cycle Points";
-                }
-                case RAIDBOSS_POINTS: {
-                    return "Raid Points";
-                }
-            }
+            return specialItem.getDescription();
         }
         return "Unknown item: " + itemId;
+    }
+
+    /**
+     * Gets teleport location with specific index.
+     *
+     * @param locationId index of location (begins with {@code 0})
+     * @return instance of {@link TeleportLocation} if found otherwise {@code null}
+     */
+    public TeleportLocation getLocation(int locationId) {
+        return teleportData.get(locationId);
+    }
+
+    /**
+     * Gets all teleport locations registered in current holder.
+     *
+     * @return collection of {@link TeleportLocation}
+     */
+    public List<TeleportLocation> getLocations() {
+        return teleportData;
+    }
+
+    /**
+     * Gets list identification (name).
+     *
+     * @return list name
+     */
+    public String getName() {
+        return name;
+    }
+
+    /**
+     * Check if teleport list is for noblesse or not.
+     *
+     * @return {@code true} if is for noblesse otherwise {@code false}
+     */
+    public boolean isNoblesse() {
+        return (type == TeleportType.NOBLES_ADENA) || (type == TeleportType.NOBLES_TOKEN);
+    }
+
+    /**
+     * Gets type of teleport list.
+     *
+     * @return type of list
+     */
+    public TeleportType getType() {
+        return type;
     }
 }
