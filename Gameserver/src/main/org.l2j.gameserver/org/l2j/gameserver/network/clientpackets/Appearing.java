@@ -3,6 +3,8 @@ package org.l2j.gameserver.network.clientpackets;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.serverpackets.UserInfo;
 
+import static java.util.Objects.isNull;
+
 /**
  * Appearing Packet Handler
  * <p>
@@ -21,14 +23,14 @@ public final class Appearing extends ClientPacket {
 
     @Override
     public void runImpl() {
-        final Player activeChar = client.getPlayer();
-        if (activeChar == null) {
+        final Player player = client.getPlayer();
+        if (isNull(player)) {
             return;
         }
-        if (activeChar.isTeleporting()) {
-            activeChar.onTeleported();
+        if (player.isTeleporting()) {
+            player.onTeleported();
         }
 
-        client.sendPacket(new UserInfo(activeChar));
+        client.sendPacket(new UserInfo(player));
     }
 }

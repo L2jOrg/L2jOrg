@@ -1,6 +1,7 @@
 package org.l2j.gameserver.model.actor.instance;
 
 import org.l2j.commons.util.CommonUtil;
+import org.l2j.commons.util.Util;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.xml.impl.SkillData;
 import org.l2j.gameserver.data.xml.impl.TeleportersData;
@@ -18,6 +19,8 @@ import org.l2j.gameserver.network.serverpackets.WareHouseWithdrawalList;
 
 import java.text.SimpleDateFormat;
 import java.util.StringTokenizer;
+
+import static org.l2j.commons.util.Util.*;
 
 /**
  * Fortress Foreman implementation used for: Area Teleports, Support Magic, Clan Warehouse, Exp Loss Reduction
@@ -707,7 +710,7 @@ public class FortManager extends Merchant {
                 if (func.getLvl() == funcLvl) {
                     final TeleportHolder holder = TeleportersData.getInstance().getHolder(getId(), val);
                     if (holder != null) {
-                        holder.doTeleport(player, this, CommonUtil.parseNextInt(st, -1));
+                        holder.doTeleport(player, this, parseNextInt(st, -1));
                     }
                 }
                 return;

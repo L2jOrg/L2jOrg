@@ -18,6 +18,7 @@ package ai.others.CastleChamberlain;
 
 import ai.AbstractNpcAI;
 import org.l2j.commons.util.CommonUtil;
+import org.l2j.commons.util.Util;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.sql.impl.ClanTable;
 import org.l2j.gameserver.data.xml.impl.TeleportersData;
@@ -50,6 +51,8 @@ import org.l2j.gameserver.network.serverpackets.html.NpcHtmlMessage;
 import org.l2j.gameserver.util.GameUtils;
 
 import java.util.*;
+
+import static org.l2j.commons.util.Util.*;
 
 /**
  * Castle Chamberlain AI.
@@ -1002,7 +1005,7 @@ public final class CastleChamberlain extends AbstractNpcAI
 						final TeleportHolder holder = TeleportersData.getInstance().getHolder(npc.getId(), listId);
 						if (holder != null)
 						{
-							holder.doTeleport(player, npc, CommonUtil.parseNextInt(st, -1));
+							holder.doTeleport(player, npc, parseNextInt(st, -1));
 						}
 					}
 				}

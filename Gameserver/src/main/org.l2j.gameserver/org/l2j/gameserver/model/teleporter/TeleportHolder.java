@@ -24,6 +24,7 @@ import java.util.ArrayList;
 import java.util.EnumSet;
 import java.util.List;
 
+import static java.util.Objects.isNull;
 import static org.l2j.commons.util.Util.SPACE;
 
 /**
@@ -141,7 +142,7 @@ public final class TeleportHolder {
         }
 
         final TeleportLocation loc = getLocation(locId);
-        if (loc == null) {
+        if (isNull(loc)) {
             LOGGER.warn("Player {} requested unknown teleport location {} within list {}!", player.getObjectId(), locId, name);
             return;
         }

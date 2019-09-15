@@ -92,7 +92,6 @@ public final class World {
     private World() {
     }
 
-
     private void initRegions() {
 
         for (int x = 0; x <= REGIONS_X; x++) {
@@ -133,15 +132,7 @@ public final class World {
         }
 
         if (isPlayer(object)) {
-
-            final Player player = (Player) object;
-
-            // TODO: Drop when we stop removing player from the world while teleporting.
-            if (player.isTeleporting()) {
-                return;
-            }
-
-            onPlayerEnter(player);
+            onPlayerEnter((Player) object);
         }
     }
 
@@ -170,12 +161,6 @@ public final class World {
         objects.remove(object.getObjectId());
 
         if (isPlayer(object)) {
-            final Player player = (Player) object;
-            if (player.isTeleporting()) // TODO: Drop when we stop removing player from the world while teleporting.
-            {
-                return;
-            }
-
             players.remove(object.getObjectId());
         }
     }
@@ -265,11 +250,11 @@ public final class World {
      * @param newRegion WorldRegion in wich the object will be add (not used)
      */
     public void addVisibleObject(WorldObject object, WorldRegion newRegion) {
-        if (!newRegion.isActive()) {
+        if (isNull(newRegion) || !newRegion.isActive()) {
             return;
         }
 
-        forEachVisibleObject(object, WorldObject.class, wo -> beAwareOfEachOther(object, wo));
+        forEachVisibleObjectInRange(object, WorldObject.class, -1, wo -> beAwareOfEachOther(object, wo));
     }
 
     private void beAwareOfEachOther(WorldObject object, WorldObject wo) {
@@ -335,12 +320,12 @@ public final class World {
         WorldRegion oldRegion;
 
         if (nonNull(newRegion) && !newRegion.equals(oldRegion = object.getWorldRegion())) {
+            object.setWorldRegion(newRegion);
             if (nonNull(oldRegion)) {
                 oldRegion.removeVisibleObject(object);
             }
-            switchRegion(object, oldRegion, newRegion);
             newRegion.addVisibleObject(object);
-            object.setWorldRegion(newRegion);
+            switchRegion(object, oldRegion, newRegion);
         }
     }
 

@@ -158,4 +158,15 @@ public class Util {
         }
         return false;
     }
+
+    public static int parseNextInt(StringTokenizer st, int defaultVal) {
+        if (st.hasMoreTokens()) {
+            final String token = st.nextToken();
+            if (isInteger(token)) {
+                return Integer.parseInt(token);
+            }
+        }
+        return defaultVal;
+    }
+
 }

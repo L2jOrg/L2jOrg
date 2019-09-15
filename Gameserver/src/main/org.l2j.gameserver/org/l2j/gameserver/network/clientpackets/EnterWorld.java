@@ -12,7 +12,9 @@ import org.l2j.gameserver.data.xml.impl.SkillTreesData;
 import org.l2j.gameserver.enums.ChatType;
 import org.l2j.gameserver.enums.SubclassInfoType;
 import org.l2j.gameserver.instancemanager.*;
-import org.l2j.gameserver.model.*;
+import org.l2j.gameserver.model.Clan;
+import org.l2j.gameserver.model.PcCondOverride;
+import org.l2j.gameserver.model.TeleportWhereType;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.entity.*;
 import org.l2j.gameserver.model.holders.AttendanceInfoHolder;
@@ -21,8 +23,6 @@ import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.quest.Quest;
 import org.l2j.gameserver.model.skills.AbnormalVisualEffect;
 import org.l2j.gameserver.model.variables.PlayerVariables;
-import org.l2j.gameserver.network.serverpackets.html.NpcHtmlMessage;
-import org.l2j.gameserver.world.zone.ZoneType;
 import org.l2j.gameserver.network.ConnectionState;
 import org.l2j.gameserver.network.Disconnection;
 import org.l2j.gameserver.network.SystemMessageId;
@@ -31,11 +31,12 @@ import org.l2j.gameserver.network.serverpackets.attendance.ExVipAttendanceItemLi
 import org.l2j.gameserver.network.serverpackets.dailymission.ExConnectedTimeAndGettableReward;
 import org.l2j.gameserver.network.serverpackets.elementalspirits.ElementalSpiritInfo;
 import org.l2j.gameserver.network.serverpackets.friend.FriendListPacket;
+import org.l2j.gameserver.network.serverpackets.html.NpcHtmlMessage;
 import org.l2j.gameserver.util.BuilderUtil;
 import org.l2j.gameserver.world.World;
+import org.l2j.gameserver.world.zone.ZoneType;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
 
 import java.util.Objects;
 
@@ -234,9 +235,6 @@ public class EnterWorld extends ClientPacket {
             player.sendPacket(new ExUnReadMailCount(player));
         }
 
-        // Send Quest List
-        player.sendPacket(new QuestList(player));
-
         if (Config.PLAYER_SPAWN_PROTECTION > 0) {
             player.setSpawnProtection(true);
         }
@@ -422,7 +420,7 @@ public class EnterWorld extends ClientPacket {
             }, 5000);
         }
 
-        player.onPlayerEnter();
+        player.onEnter();
         Quest.playerEnter(player);
     }
 

@@ -176,7 +176,7 @@ public final class ClanHallManager extends AbstractNpcAI
 												final int funcLvl = (listName.length() >= 4) ? CommonUtil.parseInt(listName.substring(3), -1) : -1;
 												if (teleportLevel == funcLvl)
 												{
-													holder.doTeleport(player, npc, CommonUtil.parseNextInt(st, -1));
+													holder.doTeleport(player, npc, Util.parseNextInt(st, -1));
 												}
 											}
 										}

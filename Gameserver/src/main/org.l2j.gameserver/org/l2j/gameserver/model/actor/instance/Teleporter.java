@@ -33,6 +33,7 @@ import org.slf4j.LoggerFactory;
 import java.util.StringTokenizer;
 
 import static java.util.Objects.isNull;
+import static org.l2j.commons.util.Util.*;
 
 
 /**
@@ -54,7 +55,7 @@ public final class Teleporter extends Npc {
     @Override
     public void onBypassFeedback(Player player, String command) {
         // Process bypass
-        final StringTokenizer st = new StringTokenizer(command, " ");
+        final StringTokenizer st = new StringTokenizer(command, SPACE);
         switch (st.nextToken()) {
             case "showNoblesSelect": {
                 sendHtmlMessage(player, "data/html/teleporter/" + (player.isNoble() ? "nobles_select" : "not_nobles") + ".htm");
@@ -85,14 +86,14 @@ public final class Teleporter extends Npc {
             case "teleport": {
                 // Check for required count of params.
                 if (st.countTokens() != 2) {
-                    LOGGER.warn("Player " + player.getObjectId() + " send unhandled teleport command: " + command);
+                    LOGGER.warn("Player {} send unhandled teleport command: {}", player, command);
                     return;
                 }
 
                 final String listName = st.nextToken();
                 final TeleportHolder holder = TeleportersData.getInstance().getHolder(getId(), listName);
-                if (holder == null) {
-                    LOGGER.warn("Player " + player.getObjectId() + " requested unknown teleport list: " + listName + " for npc: " + getId() + "!");
+                if (isNull(holder)) {
+                    LOGGER.warn("Player {} requested unknown teleport list: {} for npc: {}!", player, listName, getId());
                     return;
                 }
                 holder.doTeleport(player, this, parseNextInt(st, -1));
@@ -111,16 +112,6 @@ public final class Teleporter extends Npc {
                 super.onBypassFeedback(player, command);
             }
         }
-    }
-
-    private int parseNextInt(StringTokenizer st, int defaultVal) {
-        if (st.hasMoreTokens()) {
-            final String token = st.nextToken();
-            if (Util.isInteger(token)) {
-                return Integer.valueOf(token);
-            }
-        }
-        return defaultVal;
     }
 
     @Override

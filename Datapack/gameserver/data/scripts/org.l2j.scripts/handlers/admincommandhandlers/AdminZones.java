@@ -139,7 +139,7 @@ public class AdminZones extends AbstractNpcAI implements IAdminCommandHandler {
             case "clear" -> _zones.remove(activeChar.getObjectId());
             case "dump" -> dumpPoints(activeChar);
             case "list" -> {
-                final int page = CommonUtil.parseNextInt(st, 0);
+                final int page = Util.parseNextInt(st, 0);
                 buildHtmlWindow(activeChar, page);
                 return false;
             }

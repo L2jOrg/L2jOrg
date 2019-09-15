@@ -524,8 +524,17 @@ public final class GameUtils {
         return isVisible(reference, range, false);
     }
 
+    /**
+     * Test if a object can see other
+     *
+     * @param reference the object to take as reference
+     * @param range the range to test or -1 if any range
+     * @param includeReference if the reference is visible to himself
+     * @param <T> The type o the predicate
+     * @return a Predicate that test if a object is visible to the reference
+     */
     public static <T extends WorldObject> Predicate<T> isVisible(WorldObject reference, int range, boolean includeReference) {
         return visible -> nonNull(visible) && (includeReference || !visible.equals(reference)) &&
-                Objects.equals(visible.getInstanceWorld(),  reference.getInstanceWorld()) && isInsideRadius3D(reference, visible, range);
+                Objects.equals(visible.getInstanceWorld(),  reference.getInstanceWorld()) && (range == -1 || isInsideRadius3D(reference, visible, range));
     }
 }

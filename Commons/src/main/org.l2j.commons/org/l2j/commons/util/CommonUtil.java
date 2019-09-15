@@ -479,19 +479,6 @@ public final class CommonUtil
 		return false;
 	}
 	
-	public static int parseNextInt(StringTokenizer st, int defaultVal)
-	{
-		try
-		{
-			final String value = st.nextToken().trim();
-			return Integer.parseInt(value);
-		}
-		catch (Exception e)
-		{
-			return defaultVal;
-		}
-	}
-	
 	public static int parseInt(String value, int defaultValue)
 	{
 		try

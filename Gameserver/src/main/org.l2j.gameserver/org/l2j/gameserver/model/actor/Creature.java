@@ -456,7 +456,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
         if (!_isTeleporting) {
             return;
         }
-        spawnMe(getX(), getY(), getZ());
+        //spawnMe(getX(), getY(), getZ());
         setIsTeleporting(false);
         EventDispatcher.getInstance().notifyEventAsync(new OnCreatureTeleported(this), this);
     }
@@ -626,9 +626,6 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 
         // Send teleport packet to player and visible players
         broadcastPacket(new TeleportToLocation(this, x, y, z, heading));
-
-        // remove the object from its old location
-        decayMe();
 
         // Change instance world
         if (getInstanceWorld() != instance) {
