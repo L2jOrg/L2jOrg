@@ -7,10 +7,10 @@ import static java.util.Objects.isNull;
 
 /**
  * @author Mobius
+ * @author JoeAlisson
  */
 public class RequestTargetActionMenu extends ClientPacket {
     private int _objectId;
-    private int _type;
 
     @Override
     public void readImpl() {
@@ -24,9 +24,7 @@ public class RequestTargetActionMenu extends ClientPacket {
             return;
         }
 
-        if (_type == 1) {
-            var object = World.getInstance().findVisibleObject(player, _objectId);
-            player.setTarget(object);
-        }
+        var object = World.getInstance().findVisibleObject(player, _objectId);
+        player.setTarget(object);
     }
 }
