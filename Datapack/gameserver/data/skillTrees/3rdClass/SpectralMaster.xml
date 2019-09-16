@@ -4,19 +4,10 @@
 		<skill skillName="Anti Magic" skillId="146" skillLvl="46" getLevel="76" levelUpSp="8300000" />
 		<skill skillName="Warrior Bane" skillId="1350" skillLvl="1" getLevel="76" levelUpSp="8300000" />
 		<skill skillName="Mage Bane" skillId="1351" skillLvl="1" getLevel="76" levelUpSp="8300000" />
-		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="3" getLevel="76" levelUpSp="8300000">
-			<item id="8620" count="1" /> <!-- Ancient Book: Divine Inspiration (Manuscript) -->
-		</skill>
-		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="4" getLevel="76" levelUpSp="8300000">
-			<item id="8621" count="1" /> <!-- Ancient Book: Divine Inspiration (Original Version) -->
-		</skill>
 		<skill skillName="Light Armor Mastery" skillId="258" skillLvl="34" getLevel="76" levelUpSp="8300000" />
 		<skill skillName="Robe Mastery" skillId="234" skillLvl="42" getLevel="76" levelUpSp="8300000" />
 		<skill skillName="Weapon Mastery" skillId="249" skillLvl="43" getLevel="76" levelUpSp="8300000" />
 		<skill skillName="Servitor Heal" skillId="1127" skillLvl="46" getLevel="76" levelUpSp="8300000" />
-		<skill skillName="Mount Saber Tooth Cougar" skillId="1835" skillLvl="1" getLevel="76">
-			<item id="90040" count="1" /> <!-- Spellbook: Mount Saber Tooth Cougar -->
-		</skill>
 		<skill skillName="Servitor Recharge" skillId="1126" skillLvl="35" getLevel="76" levelUpSp="8300000" />
 		<skill skillName="Summon Spark Cubic" skillId="1281" skillLvl="11" getLevel="76" levelUpSp="8300000" />
 		<skill skillName="Summon Phantom Cubic" skillId="33" skillLvl="9" getLevel="76" levelUpSp="8300000" />
@@ -24,6 +15,15 @@
 			<item id="90131" count="1" /> <!-- Scroll: Servitor Share -->
 		</skill>
 		<skill skillName="Twister" skillId="1178" skillLvl="27" getLevel="76" levelUpSp="8300000" />
+		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="3" getLevel="76" levelUpSp="8300000">
+			<item id="8620" count="1" /> <!-- Ancient Book: Divine Inspiration (Manuscript) -->
+		</skill>
+		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="4" getLevel="76" levelUpSp="8300000">
+			<item id="8621" count="1" /> <!-- Ancient Book: Divine Inspiration (Original Version) -->
+		</skill>
+		<skill skillName="Mount Saber Tooth Cougar" skillId="1835" skillLvl="1" getLevel="76">
+			<item id="90040" count="1" /> <!-- Spellbook: Mount Saber Tooth Cougar -->
+		</skill>
 		
 		<skill skillName="Anti Magic" skillId="146" skillLvl="47" getLevel="77" levelUpSp="8300000" />
 		<skill skillName="Light Armor Mastery" skillId="258" skillLvl="35" getLevel="77" levelUpSp="8300000" />
@@ -31,10 +31,10 @@
 		<skill skillName="Weapon Mastery" skillId="249" skillLvl="44" getLevel="77" levelUpSp="8300000" />
 		<skill skillName="Servitor Heal" skillId="1127" skillLvl="47" getLevel="77" levelUpSp="8300000" />
 		<skill skillName="Servitor Recharge" skillId="1126" skillLvl="36" getLevel="77" levelUpSp="8300000" />
+		<skill skillName="Summon Spectral Lord" skillId="1408" skillLvl="1" getLevel="77" levelUpSp="8300000" />
 		<skill skillName="Summon Nightshade" skillId="1333" skillLvl="1" getLevel="77" levelUpSp="8300000">
 			<item id="91205" count="1" /> <!-- Scroll: Summon Nightshade -->
 		</skill>
-		<skill skillName="Summon Spectral Lord" skillId="1408" skillLvl="1" getLevel="77" levelUpSp="8300000" />
 		
 		<skill skillName="Anti Magic" skillId="146" skillLvl="48" getLevel="78" levelUpSp="18300000" />
 		<skill skillName="Warrior Bane" skillId="1350" skillLvl="2" getLevel="78" levelUpSp="18300000" />
@@ -47,13 +47,13 @@
 		<skill skillName="Summon Spark Cubic" skillId="1281" skillLvl="12" getLevel="78" levelUpSp="18300000" />
 		<skill skillName="Summon Phantom Cubic" skillId="33" skillLvl="10" getLevel="78" levelUpSp="18300000" />
 		<skill skillName="Spirit Sharing" skillId="1547" skillLvl="4" getLevel="78" levelUpSp="18300000" />
+		<skill skillName="Servitor Share" skillId="1557" skillLvl="2" getLevel="78" levelUpSp="18300000" />
+		<skill skillName="Twister" skillId="1178" skillLvl="28" getLevel="78" levelUpSp="18300000" />
 		<skill skillName="Assassin Servitor" skillId="1348" skillLvl="1" getLevel="78" levelUpSp="18300000">
 			<item id="90129" count="1" /> <!-- Scroll: Assassin Servitor -->
 		</skill>
-		<skill skillName="Twister" skillId="1178" skillLvl="28" getLevel="78" levelUpSp="18300000" />
 		
 		<skill skillName="Summon Nightshade" skillId="1333" skillLvl="2" getLevel="79" levelUpSp="18300000" />
-		<skill skillName="Servitor Share" skillId="1557" skillLvl="2" getLevel="79" levelUpSp="18300000" />
 		<skill skillName="Final Servitor" skillId="1349" skillLvl="1" getLevel="79" levelUpSp="18300000">
 			<item id="90130" count="1" /> <!-- Scroll: Final Servitor -->
 		</skill>

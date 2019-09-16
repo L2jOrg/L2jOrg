@@ -6,6 +6,21 @@
 		<skill skillName="Mana Recovery" skillId="214" skillLvl="1" getLevel="1" autoGet="true" />
 		<skill skillName="Wind Strike" skillId="1177" skillLvl="1" getLevel="1" autoGet="true" />
 		<skill skillName="Self Heal" skillId="1216" skillLvl="1" getLevel="1" autoGet="true" />
+		<skill skillName="Extra Inventory" skillId="1372" skillLvl="1" getLevel="1" levelUpSp="0">
+			<item id="92004" count="1"/> <!-- Inventory Expansion Ticket Lv. 1 -->
+		</skill>
+		<skill skillName="Extra Inventory" skillId="1372" skillLvl="2" getLevel="1" levelUpSp="0">
+			<item id="92005" count="1"/>   <!-- Inventory Expansion Ticket Lv. 2 -->
+		</skill>
+		<skill skillName="Extra Inventory" skillId="1372" skillLvl="3" getLevel="1" levelUpSp="0">
+			<item id="92006" count="1"/>  <!-- Inventory Expansion Ticket Lv. 3  -->
+		</skill>
+		<skill skillName="Extra Inventory" skillId="1372" skillLvl="4" getLevel="1" levelUpSp="0">
+			<item id="92007" count="1"/>  <!-- Inventory Expansion Ticket Lv. 4 -->
+		</skill>
+		<skill skillName="Extra Inventory" skillId="1372" skillLvl="5" getLevel="1" levelUpSp="0">
+			<item id="92008" count="1"/>  <!-- Inventory Expansion Ticket Lv. 5 -->
+		</skill>
 		
 		<skill skillName="Heal" skillId="1011" skillLvl="1" getLevel="3" levelUpSp="10" />
 		

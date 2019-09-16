@@ -20,9 +20,6 @@
 		<skill skillName="Drain Energy" skillId="70" skillLvl="19" getLevel="40" levelUpSp="65000" />
 		<skill skillName="Critical Damage" skillId="193" skillLvl="3" getLevel="40" levelUpSp="65000" />
 		<skill skillName="Unlock" skillId="27" skillLvl="6" getLevel="40" levelUpSp="65000" />
-		<skill skillName="Hex" skillId="122" skillLvl="1" getLevel="40" levelUpSp="65000">
-			<item id="3050" count="1" />
-		</skill>
 		<skill skillName="Deadly Blow" skillId="263" skillLvl="1" getLevel="40" levelUpSp="65000" />
 		<skill skillName="Deadly Blow" skillId="263" skillLvl="2" getLevel="40" levelUpSp="65000" />
 		<skill skillName="Deadly Blow" skillId="263" skillLvl="3" getLevel="40" levelUpSp="65000" />
@@ -30,6 +27,12 @@
 		<skill skillName="Backstab" skillId="30" skillLvl="1" getLevel="40" levelUpSp="65000" />
 		<skill skillName="Backstab" skillId="30" skillLvl="2" getLevel="40" levelUpSp="65000" />
 		<skill skillName="Backstab" skillId="30" skillLvl="3" getLevel="40" levelUpSp="65000" />
+		<skill skillName="Potion Mastery" skillId="45184" skillLvl="1" getLevel="40">
+			<item id="57" count="1000000"/> <!-- Adena -->
+		</skill>
+		<skill skillName="Hex" skillId="122" skillLvl="1" getLevel="40" levelUpSp="65000">
+			<item id="3050" count="1" />
+		</skill>
 
 		<skill skillName="Dagger Mastery" skillId="209" skillLvl="12" getLevel="41" levelUpSp="76000" />
 		<skill skillName="Light Armor Mastery" skillId="233" skillLvl="14" getLevel="41" levelUpSp="76000" />
@@ -130,6 +133,9 @@
 		<skill skillName="Deadly Blow" skillId="263" skillLvl="13" getLevel="50" levelUpSp="230000" />
 		<skill skillName="Backstab" skillId="30" skillLvl="13" getLevel="50" levelUpSp="230000" />
 		<skill skillName="Shadow Step" skillId="821" skillLvl="1" getLevel="50" levelUpSp="230000" />
+		<skill skillName="Potion Mastery" skillId="45184" skillLvl="2" getLevel="40">
+			<item id="57" count="3000000"/> <!-- Adena -->
+		</skill>
 		
 		<skill skillName="Dagger Mastery" skillId="209" skillLvl="22" getLevel="51" levelUpSp="230000" />
 		<skill skillName="Light Armor Mastery" skillId="233" skillLvl="24" getLevel="51" levelUpSp="230000" />
@@ -137,16 +143,13 @@
 		<skill skillName="Freezing Strike" skillId="105" skillLvl="11" getLevel="51" levelUpSp="230000" />
 		<skill skillName="Drain Energy" skillId="70" skillLvl="30" getLevel="51" levelUpSp="230000" />
 		<skill skillName="Deadly Blow" skillId="263" skillLvl="14" getLevel="51" levelUpSp="230000" />
-		<skill skillName="Hide" skillId="922" skillLvl="1" getLevel="51" levelUpSp="230000" >
-		<item id="49429" count="1" />
-		</skill>
 		<skill skillName="Backstab" skillId="30" skillLvl="14" getLevel="51" levelUpSp="230000" />
+		<skill skillName="Hide" skillId="922" skillLvl="1" getLevel="51" levelUpSp="230000" >
+			<item id="49429" count="1" />
+		</skill>
 
 		<skill skillName="Vicious Stance" skillId="312" skillLvl="10" getLevel="52" levelUpSp="230000" />
 		<skill skillName="Esprit" skillId="171" skillLvl="5" getLevel="52" levelUpSp="230000" />
-		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="1" getLevel="52" levelUpSp="230000" >
-			<item id="8618" count="1" /> <!-- Ancient Book: Divine Inspiration (Modern Language Version) -->
-		</skill>
 		<skill skillName="Dagger Mastery" skillId="209" skillLvl="23" getLevel="52" levelUpSp="230000" />
 		<skill skillName="Light Armor Mastery" skillId="233" skillLvl="25" getLevel="52" levelUpSp="230000" />
 		<skill skillName="Sting" skillId="223" skillLvl="27" getLevel="52" levelUpSp="230000" />
@@ -160,6 +163,9 @@
 		<skill skillName="Power Break" skillId="115" skillLvl="7" getLevel="52" levelUpSp="230000" />
 		<skill skillName="Trick" skillId="11" skillLvl="2" getLevel="52" levelUpSp="230000" />
 		<skill skillName="Backstab" skillId="30" skillLvl="15" getLevel="52" levelUpSp="230000" />
+		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="1" getLevel="52" levelUpSp="230000" >
+			<item id="8618" count="1" /> <!-- Ancient Book: Divine Inspiration (Modern Language Version) -->
+		</skill>
 		
 		<skill skillName="Dagger Mastery" skillId="209" skillLvl="24" getLevel="53" levelUpSp="320000" />
 		<skill skillName="Light Armor Mastery" skillId="233" skillLvl="26" getLevel="53" levelUpSp="320000" />
@@ -189,14 +195,14 @@
 		<skill skillName="Freezing Strike" skillId="105" skillLvl="14" getLevel="55" levelUpSp="320000" />
 		<skill skillName="Drain Energy" skillId="70" skillLvl="34" getLevel="55" levelUpSp="320000" />
 		<skill skillName="Unlock" skillId="27" skillLvl="10" getLevel="55" levelUpSp="320000" />
-		<skill skillName="Sand Bomb" skillId="412" skillLvl="1" getLevel="55" levelUpSp="320000" >
-			<item id="49569" count="1" />
-		</skill>
 		<skill skillName="Hex" skillId="122" skillLvl="6" getLevel="55" levelUpSp="320000" />
 		<skill skillName="Deadly Blow" skillId="263" skillLvl="18" getLevel="55" levelUpSp="320000" />
 		<skill skillName="Power Break" skillId="115" skillLvl="8" getLevel="55" levelUpSp="320000" />
 		<skill skillName="Trick" skillId="11" skillLvl="3" getLevel="55" levelUpSp="320000" />
 		<skill skillName="Backstab" skillId="30" skillLvl="18" getLevel="55" levelUpSp="320000" />
+		<skill skillName="Sand Bomb" skillId="412" skillLvl="1" getLevel="55" levelUpSp="320000" >
+			<item id="49569" count="1" />
+		</skill>
 
 		<skill skillName="Dagger Mastery" skillId="209" skillLvl="27" getLevel="56" levelUpSp="440000" />
 		<skill skillName="Light Armor Mastery" skillId="233" skillLvl="29" getLevel="56" levelUpSp="440000" />
@@ -253,9 +259,6 @@
 		<skill skillName="Trick" skillId="11" skillLvl="5" getLevel="60" levelUpSp="640000" />
 		<skill skillName="Backstab" skillId="30" skillLvl="23" getLevel="60" levelUpSp="640000" />
 
-		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="2" getLevel="61" levelUpSp="640000" >
-			<item id="8619" count="1" /> <!-- Ancient Book: Divine Inspiration (Original Language Version) -->
-		</skill>
 		<skill skillName="Dagger Mastery" skillId="209" skillLvl="32" getLevel="61" levelUpSp="640000" />
 		<skill skillName="Light Armor Mastery" skillId="233" skillLvl="34" getLevel="61" levelUpSp="640000" />
 		<skill skillName="Sting" skillId="223" skillLvl="36" getLevel="61" levelUpSp="640000" />
@@ -263,6 +266,9 @@
 		<skill skillName="Deadly Blow" skillId="263" skillLvl="24" getLevel="61" levelUpSp="640000" />
 		<skill skillName="Hide" skillId="922" skillLvl="2" getLevel="61" levelUpSp="640000" />
 		<skill skillName="Backstab" skillId="30" skillLvl="24" getLevel="61" levelUpSp="640000" />
+		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="2" getLevel="61" levelUpSp="640000" >
+			<item id="8619" count="1" /> <!-- Ancient Book: Divine Inspiration (Original Language Version) -->
+		</skill>
 		
 		<skill skillName="Vicious Stance" skillId="312" skillLvl="14" getLevel="62" levelUpSp="790000" />
 		<skill skillName="Esprit" skillId="171" skillLvl="6" getLevel="62" levelUpSp="790000" />

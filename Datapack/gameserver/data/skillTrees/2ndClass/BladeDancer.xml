@@ -19,11 +19,14 @@
 		<skill skillName="Magic Resistance" skillId="147" skillLvl="15" getLevel="40" levelUpSp="87000" />
 		<skill skillName="Magic Resistance" skillId="147" skillLvl="16" getLevel="40" levelUpSp="87000" />
 		<skill skillName="Magic Resistance" skillId="147" skillLvl="17" getLevel="40" levelUpSp="87000" />
+		<skill skillName="Power Break" skillId="115" skillLvl="3" getLevel="40" levelUpSp="87000" />
+		<skill skillName="Dance of Fire" skillId="274" skillLvl="1" getLevel="40" levelUpSp="87000" />
+		<skill skillName="Potion Mastery" skillId="45184" skillLvl="1" getLevel="40">
+			<item id="57" count="1000000"/> <!-- Adena -->
+		</skill>
 		<skill skillName="Hex" skillId="122" skillLvl="1" getLevel="40" levelUpSp="87000" >
 			<item id="3050" count="1" />
 		</skill>
-		<skill skillName="Power Break" skillId="115" skillLvl="3" getLevel="40" levelUpSp="87000" />
-		<skill skillName="Dance of Fire" skillId="274" skillLvl="1" getLevel="40" levelUpSp="87000" />
 		
 		<skill skillName="Dual Weapon Mastery" skillId="144" skillLvl="4" getLevel="41" levelUpSp="100000" />
 		<skill skillName="Heavy Armor Mastery" skillId="232" skillLvl="19" getLevel="41" levelUpSp="100000" />
@@ -106,6 +109,9 @@
 		<skill skillName="Sting" skillId="223" skillLvl="25" getLevel="50" levelUpSp="300000" />
 		<skill skillName="Drain Energy" skillId="70" skillLvl="29" getLevel="50" levelUpSp="300000" />
 		<skill skillName="Magic Resistance" skillId="147" skillLvl="27" getLevel="50" levelUpSp="300000" />
+		<skill skillName="Potion Mastery" skillId="45184" skillLvl="1" getLevel="50">
+			<item id="57" count="3000000"/> <!-- Adena -->
+		</skill>
 		
 		<skill skillName="Dual Weapon Mastery" skillId="144" skillLvl="14" getLevel="51" levelUpSp="300000" />
 		<skill skillName="Heavy Armor Mastery" skillId="232" skillLvl="29" getLevel="51" levelUpSp="300000" />

@@ -1,6 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org ../../xsd/skillTrees.xsd">
 	<skillTree type="classSkillTree" classId="31">
+		<skill skillName="Extra Inventory" skillId="1372" skillLvl="1" getLevel="1" levelUpSp="0">
+			<item id="92004" count="1"/> <!-- Inventory Expansion Ticket Lv. 1 -->
+		</skill>
+		<skill skillName="Extra Inventory" skillId="1372" skillLvl="2" getLevel="1" levelUpSp="0">
+			<item id="92005" count="1"/>   <!-- Inventory Expansion Ticket Lv. 2 -->
+		</skill>
+		<skill skillName="Extra Inventory" skillId="1372" skillLvl="3" getLevel="1" levelUpSp="0">
+			<item id="92006" count="1"/>  <!-- Inventory Expansion Ticket Lv. 3  -->
+		</skill>
+		<skill skillName="Extra Inventory" skillId="1372" skillLvl="4" getLevel="1" levelUpSp="0">
+			<item id="92007" count="1"/>  <!-- Inventory Expansion Ticket Lv. 4 -->
+		</skill>
+		<skill skillName="Extra Inventory" skillId="1372" skillLvl="5" getLevel="1" levelUpSp="0">
+			<item id="92008" count="1"/>  <!-- Inventory Expansion Ticket Lv. 5 -->
+		</skill>
+
+
 		<skill skillName="Power Shot" skillId="56" skillLvl="1" getLevel="3" levelUpSp="5" />
 		<skill skillName="Power Strike" skillId="3" skillLvl="1" getLevel="3" levelUpSp="5" />
 		<skill skillName="Mortal Blow" skillId="16" skillLvl="1" getLevel="3" levelUpSp="5" />

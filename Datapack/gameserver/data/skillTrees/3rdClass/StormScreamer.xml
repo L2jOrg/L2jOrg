@@ -3,12 +3,6 @@
 	<skillTree type="classSkillTree" classId="110" parentClassId="40">
 		<skill skillName="Anti Magic" skillId="146" skillLvl="46" getLevel="76" levelUpSp="5700000" />
 		<skill skillName="Silence" skillId="1064" skillLvl="15" getLevel="76" levelUpSp="5700000" />
-		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="3" getLevel="76" levelUpSp="5700000">
-			<item id="8620" count="1" /> <!-- Ancient Book: Divine Inspiration (Manuscript) -->
-		</skill>
-		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="4" getLevel="76" levelUpSp="5700000">
-			<item id="8621" count="1" /> <!-- Ancient Book: Divine Inspiration (Original Version) -->
-		</skill>
 		<skill skillName="Tempest" skillId="1176" skillLvl="16" getLevel="76" levelUpSp="5700000" />
 		<skill skillName="Robe Mastery" skillId="234" skillLvl="42" getLevel="76" levelUpSp="5700000" />
 		<skill skillName="Weapon Mastery" skillId="249" skillLvl="43" getLevel="76" levelUpSp="5700000" />
@@ -16,9 +10,6 @@
 		<skill skillName="Demon Wind" skillId="1291" skillLvl="2" getLevel="76" levelUpSp="5700000" />
 		<skill skillName="Slow" skillId="1160" skillLvl="16" getLevel="76" levelUpSp="5700000" />
 		<skill skillName="Vampiric Claw" skillId="1234" skillLvl="29" getLevel="76" levelUpSp="5700000" />
-		<skill skillName="Mount Saber Tooth Cougar" skillId="1835" skillLvl="1" getLevel="76">
-			<item id="90040" count="1" /> <!-- Spellbook: Mount Saber Tooth Cougar -->
-		</skill>
 		<skill skillName="Bind" skillId="53006" skillLvl="1" getLevel="76" levelUpSp="5700000" />
 		<skill skillName="Corpse Life Drain" skillId="1151" skillLvl="17" getLevel="76" levelUpSp="5700000" />
 		<skill skillName="Curse Death Link" skillId="1159" skillLvl="23" getLevel="76" levelUpSp="5700000" />
@@ -26,18 +17,27 @@
 		<skill skillName="Hurricane" skillId="1239" skillLvl="29" getLevel="76" levelUpSp="5700000" />
 		<skill skillName="Higher Mana Gain" skillId="285" skillLvl="28" getLevel="76" levelUpSp="5700000" />
 		<skill skillName="Sleep" skillId="1069" skillLvl="43" getLevel="76" levelUpSp="5700000" />
+		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="3" getLevel="76" levelUpSp="5700000">
+			<item id="8620" count="1" /> <!-- Ancient Book: Divine Inspiration (Manuscript) -->
+		</skill>
+		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="4" getLevel="76" levelUpSp="5700000">
+			<item id="8621" count="1" /> <!-- Ancient Book: Divine Inspiration (Original Version) -->
+		</skill>
+		<skill skillName="Mount Saber Tooth Cougar" skillId="1835" skillLvl="1" getLevel="76">
+			<item id="90040" count="1" /> <!-- Spellbook: Mount Saber Tooth Cougar -->
+		</skill>
 		
 		<skill skillName="Anti Magic" skillId="146" skillLvl="47" getLevel="77" levelUpSp="5700000" />
 		<skill skillName="Robe Mastery" skillId="234" skillLvl="43" getLevel="77" levelUpSp="5700000" />
 		<skill skillName="Weapon Mastery" skillId="249" skillLvl="44" getLevel="77" levelUpSp="5700000" />
 		<skill skillName="Vampiric Claw" skillId="1234" skillLvl="30" getLevel="77" levelUpSp="5700000" />
 		<skill skillName="Curse Death Link" skillId="1159" skillLvl="24" getLevel="77" levelUpSp="5700000" />
-		<skill skillName="Arcane Power" skillId="337" skillLvl="1" getLevel="77" levelUpSp="5700000">
-			<item id="90081" count="1" /> <!-- Scroll: Arcane Power -->
-		</skill>
 		<skill skillName="Hurricane" skillId="1239" skillLvl="30" getLevel="77" levelUpSp="5700000" />
 		<skill skillName="Higher Mana Gain" skillId="285" skillLvl="29" getLevel="77" levelUpSp="5700000" />
 		<skill skillName="Sleep" skillId="1069" skillLvl="44" getLevel="77" levelUpSp="5700000" />
+		<skill skillName="Arcane Power" skillId="337" skillLvl="1" getLevel="77" levelUpSp="5700000">
+			<item id="90081" count="1" /> <!-- Scroll: Arcane Power -->
+		</skill>
 		
 		<skill skillName="Anti Magic" skillId="146" skillLvl="48" getLevel="78" levelUpSp="12400000" />
 		<skill skillName="Silence" skillId="1064" skillLvl="16" getLevel="78" levelUpSp="12400000" />
@@ -49,9 +49,6 @@
 		<skill skillName="Vampiric Claw" skillId="1234" skillLvl="31" getLevel="78" levelUpSp="12400000" />
 		<skill skillName="Bind" skillId="53006" skillLvl="2" getLevel="78" levelUpSp="12400000" />
 		<skill skillName="Corpse Life Drain" skillId="1151" skillLvl="18" getLevel="78" levelUpSp="12400000" />
-		<skill skillName="Wind Vortex Slug" skillId="1456" skillLvl="1" getLevel="78" levelUpSp="12400000">
-			<item id="90084" count="1" /> <!-- Scroll: Wind Vortex Slug -->
-		</skill>
 		<skill skillName="Curse Death Link" skillId="1159" skillLvl="25" getLevel="78" levelUpSp="12400000" />
 		<skill skillName="Curse Chaos" skillId="1222" skillLvl="17" getLevel="78" levelUpSp="12400000" />
 		<skill skillName="Arcane Power" skillId="337" skillLvl="2" getLevel="78" levelUpSp="12400000" />
@@ -59,22 +56,22 @@
 		<skill skillName="Higher Mana Gain" skillId="285" skillLvl="30" getLevel="78" levelUpSp="12400000" />
 		<skill skillName="Sleep" skillId="1069" skillLvl="45" getLevel="78" levelUpSp="12400000" />
 		<skill skillName="Poisonous Cloud" skillId="1167" skillLvl="7" getLevel="78" levelUpSp="12400000" />
+		<skill skillName="Wind Vortex Slug" skillId="1456" skillLvl="1" getLevel="78" levelUpSp="12400000">
+			<item id="90084" count="1" /> <!-- Scroll: Wind Vortex Slug -->
+		</skill>
 		
 		<skill skillName="Tempest" skillId="1176" skillLvl="18" getLevel="79" levelUpSp="12400000" />
 		<skill skillName="Arcane Power" skillId="337" skillLvl="3" getLevel="79" levelUpSp="12400000" />
+		<skill skillName="Sleep" skillId="1069" skillLvl="46" getLevel="79" levelUpSp="12400000" />
 		<skill skillName="Arcane Chaos" skillId="1338" skillLvl="1" getLevel="79" levelUpSp="12400000">
 			<item id="90085" count="1" /> <!-- Scroll: Arcane Chaos -->
 		</skill>
-		<skill skillName="Sleep" skillId="1069" skillLvl="46" getLevel="79" levelUpSp="12400000" />
 		
 		<skill skillName="Anti Magic" skillId="146" skillLvl="49" getLevel="80" levelUpSp="12400000" />
 		<skill skillName="Tempest" skillId="1176" skillLvl="19" getLevel="80" levelUpSp="12400000" />
 		<skill skillName="Robe Mastery" skillId="234" skillLvl="45" getLevel="80" levelUpSp="12400000" />
 		<skill skillName="Weapon Mastery" skillId="249" skillLvl="46" getLevel="80" levelUpSp="12400000" />
 		<skill skillName="Demon Wind" skillId="1291" skillLvl="4" getLevel="80" levelUpSp="12400000" />
-		<skill skillName="Arcane Shield" skillId="1556" skillLvl="1" getLevel="80" levelUpSp="12400000">
-			<item id="90086" count="1" /> <!-- Scroll: Arcane Shield -->
-		</skill>
 		<skill skillName="Bind" skillId="53006" skillLvl="3" getLevel="80" levelUpSp="12400000" />
 		<skill skillName="Curse Death Link" skillId="1159" skillLvl="26" getLevel="80" levelUpSp="12400000" />
 		<skill skillName="Mana Regeneration" skillId="1047" skillLvl="5" getLevel="80" levelUpSp="12400000" />
@@ -83,6 +80,9 @@
 		<skill skillName="Hurricane" skillId="1239" skillLvl="32" getLevel="80" levelUpSp="12400000" />
 		<skill skillName="Higher Mana Gain" skillId="285" skillLvl="31" getLevel="80" levelUpSp="12400000" />
 		<skill skillName="Sleep" skillId="1069" skillLvl="47" getLevel="80" levelUpSp="12400000" />
+		<skill skillName="Arcane Shield" skillId="1556" skillLvl="1" getLevel="80" levelUpSp="12400000">
+			<item id="90086" count="1" /> <!-- Scroll: Arcane Shield -->
+		</skill>
 
 		<skill skillName="Anti Magic" skillId="146" skillLvl="50" getLevel="81" levelUpSp="160000000" />
 		<skill skillName="Tempest" skillId="1176" skillLvl="20" getLevel="81" levelUpSp="160000000" />

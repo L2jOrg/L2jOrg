@@ -35,6 +35,9 @@
 		<skill skillName="Hex" skillId="122" skillLvl="1" getLevel="40" levelUpSp="56000">
 			<item id="3050" count ="1" />
 		</skill>
+		<skill skillName="Potion Mastery" skillId="45184" skillLvl="1" getLevel="40">
+			<item id="57" count="1000000"/> <!-- Adena -->
+		</skill>
 		
 		<skill skillName="Aggression" skillId="28" skillLvl="16" getLevel="41" levelUpSp="66000" />
 		<skill skillName="Aggression Aura" skillId="18" skillLvl="4" getLevel="41" levelUpSp="66000" />

@@ -127,16 +127,16 @@
 		<skill skillName="Sleep" skillId="1069" skillLvl="9" getLevel="35" levelUpSp="13000" />
 		<skill skillName="Surrender To Poison" skillId="1224" skillLvl="3" getLevel="35" levelUpSp="13000" />
 		<skill skillName="Shadow Spark" skillId="1266" skillLvl="3" getLevel="35" levelUpSp="13000" />
-		<skill skillName="Curse Chaos" skillId="1222" skillLvl="1" getLevel="35" levelUpSp="13000">
-			<item id="1416" count="1" />
-		</skill>
 		<skill skillName="Corpse Life Drain" skillId="1151" skillLvl="2" getLevel="35" levelUpSp="13000" />
-		<skill skillName="Slow" skillId="1160" skillLvl="1" getLevel="35" levelUpSp="13000">
-			<item id="1409" count="1" />
-		</skill>
 		<skill skillName="Summon Shadow" skillId="1128" skillLvl="4" getLevel="35" levelUpSp="13000" />
 		<skill skillName="Summon Silhouette" skillId="1228" skillLvl="4" getLevel="35" levelUpSp="13000" />
 		<skill skillName="Poisonous Cloud" skillId="1167" skillLvl="2" getLevel="35" levelUpSp="13000" />
 		<skill skillName="Mighty Servitor" skillId="1146" skillLvl="1" getLevel="35" levelUpSp="13000" />
+		<skill skillName="Slow" skillId="1160" skillLvl="1" getLevel="35" levelUpSp="13000">
+			<item id="1409" count="1" />
+		</skill>
+		<skill skillName="Curse Chaos" skillId="1222" skillLvl="1" getLevel="35" levelUpSp="13000">
+			<item id="1416" count="1" />
+		</skill>
 	</skillTree>
 </list>

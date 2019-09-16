@@ -1,12 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org ../../xsd/skillTrees.xsd">
 	<skillTree type="classSkillTree" classId="109" parentClassId="37">
-		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="3" getLevel="76" levelUpSp="6300000">
-			<item id="8620" count="1" /> <!-- Ancient Book: Divine Inspiration (Manuscript) -->
-		</skill>
-		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="4" getLevel="76" levelUpSp="6300000">
-			<item id="8621" count="1" /> <!-- Ancient Book: Divine Inspiration (Original Version) -->
-		</skill>
 		<skill skillName="Light Armor Mastery" skillId="233" skillLvl="48" getLevel="76" levelUpSp="6300000" />
 		<skill skillName="Bow Mastery" skillId="208" skillLvl="53" getLevel="76" levelUpSp="6300000" />
 		<skill skillName="Double Shot" skillId="19" skillLvl="38" getLevel="76" levelUpSp="6300000" />
@@ -17,12 +11,18 @@
 		<skill skillName="Detect Darkness" skillId="53005" skillLvl="1" getLevel="76" levelUpSp="6300000" />
 		<skill skillName="Fatal Counter" skillId="314" skillLvl="17" getLevel="76" levelUpSp="6300000" />
 		<skill skillName="Stun Shot" skillId="101" skillLvl="41" getLevel="76" levelUpSp="6300000" />
-		<skill skillName="Mount Saber Tooth Cougar" skillId="1835" skillLvl="1" getLevel="76">
-			<item id="90040" count="1" /> <!-- Spellbook: Mount Saber Tooth Cougar -->
-		</skill>
 		<skill skillName="Hex" skillId="122" skillLvl="16" getLevel="76" levelUpSp="6300000" />
 		<skill skillName="Lethal Shot" skillId="343" skillLvl="1" getLevel="76" levelUpSp="6300000" />
 		<skill skillName="Power Break" skillId="115" skillLvl="18" getLevel="76" levelUpSp="6300000" />
+		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="3" getLevel="76" levelUpSp="6300000">
+			<item id="8620" count="1" /> <!-- Ancient Book: Divine Inspiration (Manuscript) -->
+		</skill>
+		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="4" getLevel="76" levelUpSp="6300000">
+			<item id="8621" count="1" /> <!-- Ancient Book: Divine Inspiration (Original Version) -->
+		</skill>
+		<skill skillName="Mount Saber Tooth Cougar" skillId="1835" skillLvl="1" getLevel="76">
+			<item id="90040" count="1" /> <!-- Spellbook: Mount Saber Tooth Cougar -->
+		</skill>
 		
 		<skill skillName="Light Armor Mastery" skillId="233" skillLvl="49" getLevel="77" levelUpSp="6300000" />
 		<skill skillName="Bow Mastery" skillId="208" skillLvl="54" getLevel="77" levelUpSp="6300000" />
@@ -36,9 +36,6 @@
 		
 		<skill skillName="Light Armor Mastery" skillId="233" skillLvl="50" getLevel="78" levelUpSp="14700000" />
 		<skill skillName="Bow Mastery" skillId="208" skillLvl="55" getLevel="78" levelUpSp="14700000" />
-		<skill skillName="Real Target" skillId="522" skillLvl="1" getLevel="78" levelUpSp="14700000">
-			<item id="90062" count="1" /> <!-- Scroll: Real Target -->
-		</skill>
 		<skill skillName="Double Shot" skillId="19" skillLvl="40" getLevel="78" levelUpSp="14700000" />
 		<skill skillName="Sting" skillId="223" skillLvl="52" getLevel="78" levelUpSp="14700000" />
 		<skill skillName="Freezing Strike" skillId="105" skillLvl="26" getLevel="78" levelUpSp="14700000" />
@@ -48,6 +45,9 @@
 		<skill skillName="Hex" skillId="122" skillLvl="17" getLevel="78" levelUpSp="14700000" />
 		<skill skillName="Lethal Shot" skillId="343" skillLvl="3" getLevel="78" levelUpSp="14700000" />
 		<skill skillName="Power Break" skillId="115" skillLvl="19" getLevel="78" levelUpSp="14700000" />
+		<skill skillName="Real Target" skillId="522" skillLvl="1" getLevel="78" levelUpSp="14700000">
+			<item id="90062" count="1" /> <!-- Scroll: Real Target -->
+		</skill>
 		
 		<skill skillName="Lethal Shot" skillId="343" skillLvl="4" getLevel="79" levelUpSp="14700000" />
 		<skill skillName="Death Sting" skillId="990" skillLvl="1" getLevel="79" levelUpSp="14700000">
@@ -60,10 +60,10 @@
 		<skill skillName="Double Shot" skillId="19" skillLvl="41" getLevel="80" levelUpSp="14700000" />
 		<skill skillName="Dead Eye" skillId="414" skillLvl="9" getLevel="80" levelUpSp="14700000" />
 		<skill skillName="Stun Shot" skillId="101" skillLvl="44" getLevel="80" levelUpSp="14700000" />
+		<skill skillName="Lethal Shot" skillId="343" skillLvl="5" getLevel="80" levelUpSp="14700000" />
 		<skill skillName="Ghost Piercing" skillId="773" skillLvl="1" getLevel="80" levelUpSp="14700000">
 			<item id="90066" count="1" /> <!-- Scroll: Ghost Piercing -->
 		</skill>
-		<skill skillName="Lethal Shot" skillId="343" skillLvl="5" getLevel="80" levelUpSp="14700000" />
 
 		<skill skillName="Light Armor Mastery" skillId="233" skillLvl="52" getLevel="81" levelUpSp="160000000" />
 		<skill skillName="Bow Mastery" skillId="208" skillLvl="57" getLevel="81" levelUpSp="160000000" />

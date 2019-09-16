@@ -2,24 +2,24 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org ../../xsd/skillTrees.xsd">
 	<skillTree type="classSkillTree" classId="107" parentClassId="34">
 		<skill skillName="Arrest" skillId="402" skillLvl="11" getLevel="76" levelUpSp="7600000" />
-		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="3" getLevel="76" levelUpSp="7600000">
-			<item id="8620" count="1" /> <!-- Ancient Book: Divine Inspiration (Manuscript) -->
-		</skill>
-		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="4" getLevel="76" levelUpSp="7600000">
-			<item id="8621" count="1" /> <!-- Ancient Book: Divine Inspiration (Original Version) -->
-		</skill>
 		<skill skillName="Dual Weapon Mastery" skillId="144" skillLvl="38" getLevel="76" levelUpSp="7600000" />
 		<skill skillName="Heavy Armor Mastery" skillId="232" skillLvl="53" getLevel="76" levelUpSp="7600000" />
 		<skill skillName="Sting" skillId="223" skillLvl="50" getLevel="76" levelUpSp="7600000" />
 		<skill skillName="Freezing Strike" skillId="105" skillLvl="25" getLevel="76" levelUpSp="7600000" />
 		<skill skillName="Drain Energy" skillId="70" skillLvl="54" getLevel="76" levelUpSp="7600000" />
 		<skill skillName="Magic Resistance" skillId="147" skillLvl="52" getLevel="76" levelUpSp="7600000" />
-		<skill skillName="Mount Saber Tooth Cougar" skillId="1835" skillLvl="1" getLevel="76">
-			<item id="90040" count="1" /> <!-- Spellbook: Mount Saber Tooth Cougar -->
-		</skill>
 		<skill skillName="Hex" skillId="122" skillLvl="16" getLevel="76" levelUpSp="7600000" />
 		<skill skillName="Deadly Strike" skillId="1632" skillLvl="1" getLevel="76" levelUpSp="7600000" />
 		<skill skillName="Power Break" skillId="115" skillLvl="18" getLevel="76" levelUpSp="7600000" />
+		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="3" getLevel="76" levelUpSp="7600000">
+			<item id="8620" count="1" /> <!-- Ancient Book: Divine Inspiration (Manuscript) -->
+		</skill>
+		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="4" getLevel="76" levelUpSp="7600000">
+			<item id="8621" count="1" /> <!-- Ancient Book: Divine Inspiration (Original Version) -->
+		</skill>
+		<skill skillName="Mount Saber Tooth Cougar" skillId="1835" skillLvl="1" getLevel="76">
+			<item id="90040" count="1" /> <!-- Spellbook: Mount Saber Tooth Cougar -->
+		</skill>
 		
 		<skill skillName="Dual Weapon Mastery" skillId="144" skillLvl="39" getLevel="77" levelUpSp="7600000" />
 		<skill skillName="Heavy Armor Mastery" skillId="232" skillLvl="54" getLevel="77" levelUpSp="7600000" />
@@ -41,10 +41,10 @@
 		<skill skillName="Hex" skillId="122" skillLvl="17" getLevel="78" levelUpSp="17800000" />
 		<skill skillName="Deadly Strike" skillId="1632" skillLvl="3" getLevel="78" levelUpSp="17800000" />
 		<skill skillName="Power Break" skillId="115" skillLvl="19" getLevel="78" levelUpSp="17800000" />
+		<skill skillName="Poison Blade Dance" skillId="84" skillLvl="4" getLevel="78" levelUpSp="17800000" />
 		<skill skillName="Dance of Siren" skillId="365" skillLvl="1" getLevel="78" levelUpSp="17800000">
 			<item id="90095" count="1" /> <!-- Scroll: Dance of Siren -->
 		</skill>
-		<skill skillName="Poison Blade Dance" skillId="84" skillLvl="4" getLevel="78" levelUpSp="17800000" />
 
 		<skill skillName="Dance of Medusa" skillId="367" skillLvl="1" getLevel="79" levelUpSp="17800000">
 			<item id="90096" count="1" /> <!-- Scroll: Dance of Medusa -->
