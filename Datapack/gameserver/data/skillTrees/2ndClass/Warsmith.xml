@@ -24,6 +24,9 @@
 		<skill skillName="Power Crush" skillId="260" skillLvl="1" getLevel="40" levelUpSp="90000" />
 		<skill skillName="Power Crush" skillId="260" skillLvl="2" getLevel="40" levelUpSp="90000" />
 		<skill skillName="Power Crush" skillId="260" skillLvl="3" getLevel="40" levelUpSp="90000" />
+		<skill skillName="Potion Mastery" skillId="45184" skillLvl="1" getLevel="40">
+			<item id="57" count="1000000"/> <!-- Adena -->
+		</skill>
 
 		<skill skillName="Spinning Slasher" skillId="36" skillLvl="4" getLevel="41" levelUpSp="110000" />
 		<skill skillName="Polearm Mastery" skillId="216" skillLvl="12" getLevel="41" levelUpSp="110000" />
@@ -116,6 +119,9 @@
 		<skill skillName="Sword/Blunt Weapon Mastery" skillId="205" skillLvl="21" getLevel="50" levelUpSp="310000" />
 		<skill skillName="Heavy Armor Mastery" skillId="231" skillLvl="26" getLevel="50" levelUpSp="310000" />
 		<skill skillName="Power Crush" skillId="260" skillLvl="13" getLevel="50" levelUpSp="310000" />
+		<skill skillName="Potion Mastery" skillId="45184" skillLvl="2" getLevel="50">
+			<item id="57" count="3000000"/> <!-- Adena -->
+		</skill>
 		
 		<skill skillName="Spinning Slasher" skillId="36" skillLvl="14" getLevel="51" levelUpSp="310000" />
 		<skill skillName="Polearm Mastery" skillId="216" skillLvl="22" getLevel="51" levelUpSp="310000" />
@@ -210,6 +216,9 @@
 		<skill skillName="Summon Mechanic Golem" skillId="25" skillLvl="6" getLevel="60" levelUpSp="880000" />
 		<skill skillName="Provoke" skillId="286" skillLvl="3" getLevel="60" levelUpSp="880000" />
 		<skill skillName="Power Crush" skillId="260" skillLvl="23" getLevel="60" levelUpSp="880000" />
+		<skill skillName="Potion Mastery" skillId="45184" skillLvl="3" getLevel="60">
+			<item id="57" count="6000000"/> <!-- Adena -->
+		</skill>
 
 		<skill skillName="Spinning Slasher" skillId="36" skillLvl="24" getLevel="61" levelUpSp="880000" />
 		<skill skillName="Polearm Mastery" skillId="216" skillLvl="32" getLevel="61" levelUpSp="880000" />

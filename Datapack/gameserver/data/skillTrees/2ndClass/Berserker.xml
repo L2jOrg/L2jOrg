@@ -4,9 +4,6 @@
 
         <skill skillName="Armor Mastery" skillId="464" skillLvl="3" getLevel="40" levelUpSp="80000"/>
         <skill skillName="Ancient Sword Mastery" skillId="472" skillLvl="3" getLevel="40" levelUpSp="80000"/>
-        <skill skillName="Potion Mastery" skillId="45184" skillLvl="1" getLevel="40">
-            <item id="57" count="1000000"/> <!-- Adena -->
-        </skill>
         <skill skillName="Light Armor Mastery" skillId="465" skillLvl="3" getLevel="40" levelUpSp="80000"/>
         <skill skillName="Weapon Mastery" skillId="463" skillLvl="3" getLevel="40" levelUpSp="80000"/>
         <skill skillName="Shadow Master" skillId="45179" skillLvl="1" getLevel="40" />
@@ -16,6 +13,9 @@
         <skill skillName="Shadow Soul Finding" skillId="394" skillLvl="1" getLevel="40" levelUpSp="80000" />
         <skill skillName="Soul Smash" skillId="477" skillLvl="3" getLevel="40" levelUpSp="80000"/>
         <skill skillName="Rush" skillId="994" skillLvl="1" getLevel="40" levelUpSp="80000" />
+        <skill skillName="Potion Mastery" skillId="45184" skillLvl="1" getLevel="40">
+            <item id="57" count="1000000"/> <!-- Adena -->
+        </skill>
 
         <skill skillName="Scorn" skillId="503" skillLvl="1" getLevel="43" levelUpSp="80000" />
 

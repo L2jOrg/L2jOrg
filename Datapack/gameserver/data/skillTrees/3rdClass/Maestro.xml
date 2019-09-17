@@ -1,12 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org ../../xsd/skillTrees.xsd">
 	<skillTree type="classSkillTree" classId="118" parentClassId="57">
-		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="3" getLevel="76" levelUpSp="7900000">
-			<item id="8620" count="1" /> <!-- Ancient Book: Divine Inspiration (Manuscript) -->
-		</skill>
-		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="4" getLevel="76" levelUpSp="7900000">
-			<item id="8621" count="1" /> <!-- Ancient Book: Divine Inspiration (Original Version) -->
-		</skill>
 		<skill skillName="Spinning Slasher" skillId="36" skillLvl="38" getLevel="76" levelUpSp="7900000" />
 		<skill skillName="Polearm Mastery" skillId="216" skillLvl="46" getLevel="76" levelUpSp="7900000" />
 		<skill skillName="Light Armor Mastery" skillId="227" skillLvl="51" getLevel="76" levelUpSp="7900000" />
@@ -14,11 +8,17 @@
 		<skill skillName="Heavy Armor Mastery" skillId="231" skillLvl="51" getLevel="76" levelUpSp="7900000" />
 		<skill skillName="Earthquake" skillId="347" skillLvl="1" getLevel="76" levelUpSp="7900000" />
 		<skill skillName="Critical Creation" skillId="53001" skillLvl="1" getLevel="76" levelUpSp="7900000" />
+		<skill skillName="Summon Mechanic Golem" skillId="25" skillLvl="10" getLevel="76" levelUpSp="7900000" />
+		<skill skillName="Power Crush" skillId="260" skillLvl="38" getLevel="76" levelUpSp="7900000" />
+		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="3" getLevel="76" levelUpSp="7900000">
+			<item id="8620" count="1" /> <!-- Ancient Book: Divine Inspiration (Manuscript) -->
+		</skill>
+		<skill skillName="Divine Inspiration" skillId="1405" skillLvl="4" getLevel="76" levelUpSp="7900000">
+			<item id="8621" count="1" /> <!-- Ancient Book: Divine Inspiration (Original Version) -->
+		</skill>
 		<skill skillName="Mount Kukuru" skillId="1836" skillLvl="1" getLevel="76">
 			<item id="90041" count="1" /> <!-- Spellbook: Mount Kukuru  -->
 		</skill>
-		<skill skillName="Summon Mechanic Golem" skillId="25" skillLvl="10" getLevel="76" levelUpSp="7900000" />
-		<skill skillName="Power Crush" skillId="260" skillLvl="38" getLevel="76" levelUpSp="7900000" />
 		
 		<skill skillName="Spinning Slasher" skillId="36" skillLvl="39" getLevel="77" levelUpSp="7900000" />
 		<skill skillName="Polearm Mastery" skillId="216" skillLvl="47" getLevel="77" levelUpSp="7900000" />
@@ -26,10 +26,10 @@
 		<skill skillName="Sword/Blunt Weapon Mastery" skillId="205" skillLvl="47" getLevel="77" levelUpSp="7900000" />
 		<skill skillName="Heavy Armor Mastery" skillId="231" skillLvl="52" getLevel="77" levelUpSp="7900000" />
 		<skill skillName="Earthquake" skillId="347" skillLvl="2" getLevel="77" levelUpSp="7900000" />
+		<skill skillName="Power Crush" skillId="260" skillLvl="39" getLevel="77" levelUpSp="7900000" />
 		<skill skillName="Armor Crush" skillId="362" skillLvl="1" getLevel="77" levelUpSp="7900000">
 			<item id="90078" count="1" /> <!-- Scroll: Armor Crush -->
 		</skill>
-		<skill skillName="Power Crush" skillId="260" skillLvl="39" getLevel="77" levelUpSp="7900000" />
 		
 		<skill skillName="Spinning Slasher" skillId="36" skillLvl="40" getLevel="78" levelUpSp="18400000" />
 		<skill skillName="Polearm Mastery" skillId="216" skillLvl="48" getLevel="78" levelUpSp="18400000" />
@@ -47,10 +47,10 @@
 		
 		<skill skillName="Earthquake" skillId="347" skillLvl="4" getLevel="79" levelUpSp="18400000" />
 		<skill skillName="Critical Creation" skillId="53001" skillLvl="2" getLevel="79" levelUpSp="18400000" />
+		<skill skillName="Armor Crush" skillId="362" skillLvl="3" getLevel="79" levelUpSp="18400000" />
 		<skill skillName="Final Secret" skillId="917" skillLvl="1" getLevel="79" levelUpSp="18400000">
 			<item id="90080" count="1" /> <!-- Scroll: Final Secret -->
 		</skill>
-		<skill skillName="Armor Crush" skillId="362" skillLvl="3" getLevel="79" levelUpSp="18400000" />
 
 		<skill skillName="Polearm Mastery" skillId="216" skillLvl="49" getLevel="80" levelUpSp="18400000" />
 		<skill skillName="Light Armor Mastery" skillId="227" skillLvl="54" getLevel="80" levelUpSp="18400000" />
