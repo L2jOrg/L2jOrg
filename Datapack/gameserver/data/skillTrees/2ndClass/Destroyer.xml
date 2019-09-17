@@ -30,7 +30,9 @@
 		<skill skillName="Fatal Strike" skillId="190" skillLvl="1" getLevel="40" levelUpSp="67000" />
 		<skill skillName="Fatal Strike" skillId="190" skillLvl="2" getLevel="40" levelUpSp="67000" />
 		<skill skillName="Fatal Strike" skillId="190" skillLvl="3" getLevel="40" levelUpSp="67000" />
-
+		<skill skillName="Potion Mastery" skillId="45184" skillLvl="1" getLevel="40">
+			<item id="57" count="1000000"/> <!-- Adena -->
+		</skill>
 
 		<skill skillName="Spinning Slasher" skillId="36" skillLvl="4" getLevel="41" levelUpSp="80000" />
 		<skill skillName="Polearm Mastery" skillId="216" skillLvl="12" getLevel="41" levelUpSp="80000" />
@@ -137,6 +139,9 @@
 		<skill skillName="Power Crush" skillId="260" skillLvl="13" getLevel="50" levelUpSp="240000" />
 		<skill skillName="Excruciating Strike" skillId="1607" skillLvl="13" getLevel="50" levelUpSp="240000" />
 		<skill skillName="Fatal Strike" skillId="190" skillLvl="13" getLevel="50" levelUpSp="240000" />
+		<skill skillName="Potion Mastery" skillId="45184" skillLvl="2" getLevel="50">
+			<item id="57" count="3000000"/> <!-- Adena -->
+		</skill>
 		
 		<skill skillName="Spinning Slasher" skillId="36" skillLvl="14" getLevel="51" levelUpSp="240000" />
 		<skill skillName="Polearm Mastery" skillId="216" skillLvl="22" getLevel="51" levelUpSp="240000" />
@@ -253,6 +258,9 @@
 		<skill skillName="Power Crush" skillId="260" skillLvl="23" getLevel="60" levelUpSp="660000" />
 		<skill skillName="Excruciating Strike" skillId="1607" skillLvl="23" getLevel="60" levelUpSp="660000" />
 		<skill skillName="Fatal Strike" skillId="190" skillLvl="23" getLevel="60" levelUpSp="660000" />
+		<skill skillName="Potion Mastery" skillId="45184" skillLvl="3" getLevel="60">
+			<item id="57" count="6000000"/> <!-- Adena -->
+		</skill>
 
 		<skill skillName="Spinning Slasher" skillId="36" skillLvl="24" getLevel="61" levelUpSp="660000" />
 		<skill skillName="Polearm Mastery" skillId="216" skillLvl="32" getLevel="61" levelUpSp="660000" />

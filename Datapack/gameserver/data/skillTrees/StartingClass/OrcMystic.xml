@@ -6,7 +6,21 @@
 		<skill skillName="Magician's Movement" skillId="118" skillLvl="1" getLevel="1" autoGet="true" />
 		<skill skillName="Spellcraft" skillId="163" skillLvl="1" getLevel="1" autoGet="true" />
 		<skill skillName="Soul Cry" skillId="1001" skillLvl="1" getLevel="1" autoGet="true" />
-		<skill skillName="Toughness" skillId="134" skillLvl="1" getLevel="1" autoGet="true" />
+		<skill skillName="Extra Inventory" skillId="1372" skillLvl="1" getLevel="1" levelUpSp="0">
+			<item id="92004" count="1"/> <!-- Inventory Expansion Ticket Lv. 1 -->
+		</skill>
+		<skill skillName="Extra Inventory" skillId="1372" skillLvl="2" getLevel="1" levelUpSp="0">
+			<item id="92005" count="1"/>   <!-- Inventory Expansion Ticket Lv. 2 -->
+		</skill>
+		<skill skillName="Extra Inventory" skillId="1372" skillLvl="3" getLevel="1" levelUpSp="0">
+			<item id="92006" count="1"/>  <!-- Inventory Expansion Ticket Lv. 3  -->
+		</skill>
+		<skill skillName="Extra Inventory" skillId="1372" skillLvl="4" getLevel="1" levelUpSp="0">
+			<item id="92007" count="1"/>  <!-- Inventory Expansion Ticket Lv. 4 -->
+		</skill>
+		<skill skillName="Extra Inventory" skillId="1372" skillLvl="5" getLevel="1" levelUpSp="0">
+			<item id="92008" count="1"/>  <!-- Inventory Expansion Ticket Lv. 5 -->
+		</skill>
 		
 		<skill skillName="Anti Magic" skillId="146" skillLvl="1" getLevel="4" levelUpSp="15" />
 		<skill skillName="Light Armor Mastery" skillId="252" skillLvl="1" getLevel="4" levelUpSp="15" />

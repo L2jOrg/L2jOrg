@@ -23,6 +23,9 @@
 		<skill skillName="Hurricane Assault" skillId="284" skillLvl="6" getLevel="40" levelUpSp="70000" />
 		<skill skillName="Focus Force" skillId="50" skillLvl="3" getLevel="40" levelUpSp="70000" />
 		<skill skillName="Cripple" skillId="95" skillLvl="6" getLevel="40" levelUpSp="70000" />
+		<skill skillName="Potion Mastery" skillId="45184" skillLvl="1" getLevel="40">
+			<item id="57" count="1000000"/> <!-- Adena -->
+		</skill>
 
 		<skill skillName="Force Burst" skillId="17" skillLvl="1" getLevel="41" levelUpSp="82000" />
 		<skill skillName="Fist Weapon Mastery" skillId="210" skillLvl="12" getLevel="41" levelUpSp="82000" />
@@ -114,6 +117,9 @@
 		<skill skillName="Soul Breaker" skillId="281" skillLvl="13" getLevel="50" levelUpSp="240000" />
 		<skill skillName="Force Storm" skillId="35" skillLvl="4" getLevel="50" levelUpSp="240000" />
 		<skill skillName="Hurricane Assault" skillId="284" skillLvl="16" getLevel="50" levelUpSp="240000" />
+		<skill skillName="Potion Mastery" skillId="45184" skillLvl="2" getLevel="50">
+			<item id="57" count="3000000"/> <!-- Adena -->
+		</skill>
 		
 		<skill skillName="Force Burst" skillId="17" skillLvl="11" getLevel="51" levelUpSp="240000" />
 		<skill skillName="Fist Weapon Mastery" skillId="210" skillLvl="22" getLevel="51" levelUpSp="240000" />
@@ -222,6 +228,9 @@
 		<skill skillName="Hurricane Assault" skillId="284" skillLvl="26" getLevel="60" levelUpSp="680000" />
 		<skill skillName="Focus Force" skillId="50" skillLvl="5" getLevel="60" levelUpSp="680000" />
 		<skill skillName="Cripple" skillId="95" skillLvl="13" getLevel="60" levelUpSp="680000" />
+		<skill skillName="Potion Mastery" skillId="45184" skillLvl="3" getLevel="60">
+			<item id="57" count="6000000"/> <!-- Adena -->
+		</skill>
 		
 		<skill skillName="Force Burst" skillId="17" skillLvl="21" getLevel="61" levelUpSp="680000" />
 		<skill skillName="Fist Weapon Mastery" skillId="210" skillLvl="32" getLevel="61" levelUpSp="680000" />
