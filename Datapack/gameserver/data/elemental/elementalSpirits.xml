@@ -136,7 +136,7 @@
         <absorbItem id="91035" experience="9300"/>
     </spirit>
 
-    <spirit name="Nebula - Elder Water Spirit" type="1" stage="4" npcId="15945" extractItem="91039" maxCharacteristics="20" >
+    <spirit name="Nebula - Elder Water Spirit" type="2" stage="4" npcId="15945" extractItem="91039" maxCharacteristics="20" >
         <level id="1" atk="133" def="193" critRate="31" critDam="31" maxExp="11478124"/>
         <level id="2" atk="139" def="201" critRate="32" critDam="32" maxExp="31192283"/>
         <level id="3" atk="145" def="209" critRate="33" critDam="33" maxExp="75614547"/>
@@ -152,7 +152,7 @@
         <absorbItem id="91035" experience="9300"/>
     </spirit>
 
-    <spirit name="Nebula - Great Water Spirit" type="1" stage="5" npcId="15946" extractItem="91039" maxCharacteristics="30" >
+    <spirit name="Nebula - Great Water Spirit" type="2" stage="5" npcId="15946" extractItem="91039" maxCharacteristics="30" >
         <level id="1" atk="193" def="274" critRate="41" critDam="41" maxExp="146343197"/>
         <level id="2" atk="199" def="283" critRate="42" critDam="42" maxExp="306584703"/>
         <level id="3" atk="205" def="292" critRate="43" critDam="43" maxExp="501571982"/>
@@ -218,7 +218,7 @@
         <absorbItem id="91037" experience="9300"/>
     </spirit>
 
-    <spirit name="Procella - Elder Wind Spirit" type="1" stage="4" npcId="15947" extractItem="91041" maxCharacteristics="20" >
+    <spirit name="Procella - Elder Wind Spirit" type="3" stage="4" npcId="15947" extractItem="91041" maxCharacteristics="20" >
         <level id="1" atk="133" def="193" critRate="31" critDam="31" maxExp="11478124"/>
         <level id="2" atk="139" def="201" critRate="32" critDam="32" maxExp="31192283"/>
         <level id="3" atk="145" def="209" critRate="33" critDam="33" maxExp="75614547"/>
@@ -234,7 +234,7 @@
         <absorbItem id="91037" experience="9300"/>
     </spirit>
 
-    <spirit name="Procella - Great Wind Spirit" type="1" stage="5" npcId="15948" extractItem="91041" maxCharacteristics="30" >
+    <spirit name="Procella - Great Wind Spirit" type="3" stage="5" npcId="15948" extractItem="91041" maxCharacteristics="30" >
         <level id="1" atk="193" def="274" critRate="41" critDam="41" maxExp="146343197"/>
         <level id="2" atk="199" def="283" critRate="42" critDam="42" maxExp="306584703"/>
         <level id="3" atk="205" def="292" critRate="43" critDam="43" maxExp="501571982"/>
@@ -300,7 +300,7 @@
         <absorbItem id="91038" experience="9300"/>
     </spirit>
 
-    <spirit name="Petram - Elder Earth Spirit" type="1" stage="4" npcId="15947" extractItem="91049" maxCharacteristics="20" >
+    <spirit name="Petram - Elder Earth Spirit" type="4" stage="4" npcId="15947" extractItem="91049" maxCharacteristics="20" >
         <level id="1" atk="133" def="193" critRate="31" critDam="31" maxExp="11478124"/>
         <level id="2" atk="139" def="201" critRate="32" critDam="32" maxExp="31192283"/>
         <level id="3" atk="145" def="209" critRate="33" critDam="33" maxExp="75614547"/>
@@ -316,7 +316,7 @@
         <absorbItem id="91038" experience="9300"/>
     </spirit>
 
-    <spirit name="Petram - Great Earth Spirit" type="1" stage="5" npcId="15948" extractItem="91042" maxCharacteristics="30" >
+    <spirit name="Petram - Great Earth Spirit" type="4" stage="5" npcId="15948" extractItem="91042" maxCharacteristics="30" >
         <level id="1" atk="193" def="274" critRate="41" critDam="41" maxExp="146343197"/>
         <level id="2" atk="199" def="283" critRate="42" critDam="42" maxExp="306584703"/>
         <level id="3" atk="205" def="292" critRate="43" critDam="43" maxExp="501571982"/>
