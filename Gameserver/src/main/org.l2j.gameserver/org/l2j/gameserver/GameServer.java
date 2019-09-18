@@ -87,7 +87,7 @@ public class GameServer {
         DailyMissionData.getInstance();
         VipData.getInstance();
         ElementalSpiritManager.init();
-        TeleportListData.getInstance();
+        TeleportListData.init();
 
         printSection("Skills");
         SkillConditionHandler.getInstance().executeScript();

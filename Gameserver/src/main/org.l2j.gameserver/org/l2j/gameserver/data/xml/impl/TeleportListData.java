@@ -3,7 +3,6 @@ package org.l2j.gameserver.data.xml.impl;
 import io.github.joealisson.primitive.HashIntMap;
 import io.github.joealisson.primitive.IntMap;
 import org.l2j.gameserver.data.xml.model.TeleportData;
-import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.util.GameXmlReader;
 import org.slf4j.Logger;
@@ -22,8 +21,6 @@ public final class TeleportListData extends GameXmlReader {
 
     private static Logger LOGGER = LoggerFactory.getLogger(TeleportListData.class);
 
-    private static Location INCORRECT_LOCATION = new Location(0, 0, 0);
-
     private IntMap<TeleportData> infos = new HashIntMap<>();
 
     private TeleportListData() {
@@ -31,13 +28,11 @@ public final class TeleportListData extends GameXmlReader {
     }
 
     public Optional<TeleportData> getInfo(int id) {
-        var info = infos.get(id);
-        if (nonNull(info)) {
-            return Optional.of(info);
+        var data = Optional.ofNullable(infos.get(id));
+        if(data.isEmpty()) {
+            LOGGER.warn("Can't find teleport list for id: {}", id);
         }
-
-        LOGGER.warn("Can't find teleport list for id: " + id);
-        return Optional.empty();
+        return data;
     }
 
     @Override
@@ -48,6 +43,7 @@ public final class TeleportListData extends GameXmlReader {
     @Override
     public void load() {
         parseDatapackFile("data/teleports.xml");
+        LOGGER.info("Loaded {} Teleports", infos.size());
     }
 
     @Override
@@ -59,19 +55,16 @@ public final class TeleportListData extends GameXmlReader {
         var attributes = teleportNode.getAttributes();
         var id = parseInteger(attributes, "id");
         var price = parseInteger(attributes, "price");
+        var castle = parseByte(attributes, "castle");
 
-        Location location;
         var locationNode = teleportNode.getFirstChild();
         if(nonNull(locationNode)) {
-            location = parseLocation(locationNode);
+            infos.put(id, new TeleportData(price, parseLocation(locationNode), castle));
         }
         else {
-            LOGGER.warn("Can't find location node in TeleportListInfo");
-            location = INCORRECT_LOCATION;
+            LOGGER.warn("Can't find location node in teleports.xml id {}", id);
         }
 
-        var info = new TeleportData(price, location);
-        infos.put(id, info);
     }
 
     public static void init() {

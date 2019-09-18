@@ -2,9 +2,13 @@ package org.l2j.gameserver.network.clientpackets;
 
 import org.l2j.gameserver.data.xml.impl.TeleportListData;
 import org.l2j.gameserver.data.xml.model.TeleportData;
-import org.l2j.gameserver.model.items.CommonItem;
+import org.l2j.gameserver.instancemanager.CastleManager;
 import org.l2j.gameserver.network.SystemMessageId;
+import org.l2j.gameserver.util.GameUtils;
 
+/**
+ * @author joeAlisson
+ */
 public class ExRequestTeleport extends ClientPacket {
     private int id;
 
@@ -15,16 +19,19 @@ public class ExRequestTeleport extends ClientPacket {
 
     @Override
     protected void runImpl()  {
-        var optionalInfo = TeleportListData.getInstance().getInfo(id);
-        if (optionalInfo.isPresent()) {
-            TeleportData info = optionalInfo.get();
+        TeleportListData.getInstance().getInfo(id).ifPresent(this::teleport);
+    }
 
-            var player = getClient().getPlayer();
-            if ((player.getLevel() >= 40) && !player.destroyItemByItemId("Teleport", CommonItem.ADENA, info.getPrice(), null, true)) {
-                player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ADENA);
-            } else if (!player.isAlikeDead()) {
-                player.teleToLocation(info.getLocation());
-            }
+    private void teleport(TeleportData info) {
+        var player = client.getPlayer();
+
+        if(info.getCastleId() != -1 && CastleManager.getInstance().getCastleById(info.getCastleId()).isInSiege()) {
+            player.sendPacket(SystemMessageId.YOU_CANNOT_TELEPORT_TO_A_VILLAGE_THAT_IS_IN_A_SIEGE);
+            return;
+        }
+
+        if(GameUtils.canTeleport(player) && (player.getLevel() < 40 || player.reduceAdena("Teleport", info.getPrice(), null, true))) {
+            player.teleToLocation(info.getLocation());
         }
     }
 }

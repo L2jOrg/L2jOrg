@@ -21,5 +21,6 @@
         </xs:sequence>
         <xs:attribute name="id" type="xs:integer" use="required"/>
         <xs:attribute name="price" type="xs:integer" use="required"/>
+        <xs:attribute name="castle" type="xs:byte" default="-1"/>
     </xs:complexType>
 </xs:schema>

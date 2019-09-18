@@ -859,6 +859,10 @@ public final class Castle extends AbstractResidence {
         spawnSideNpcs();
     }
 
+    public boolean isInSiege() {
+        return getSiege().isInProgress();
+    }
+
     public class CastleFunction {
         final int _type;
         final long _rate;

@@ -4,12 +4,14 @@ import org.l2j.gameserver.model.Location;
 
 public class TeleportData {
 
-    private long price;
-    private Location location;
+    private final byte castleId;
+    private final long price;
+    private final Location location;
 
-    public TeleportData(long price, Location location) {
+    public TeleportData(long price, Location location, byte castleId) {
         this.price = price;
         this.location = location;
+        this.castleId = castleId;
     }
 
     public long getPrice() {
@@ -18,5 +20,9 @@ public class TeleportData {
 
     public Location getLocation() {
         return location;
+    }
+
+    public byte getCastleId() {
+        return castleId;
     }
 }

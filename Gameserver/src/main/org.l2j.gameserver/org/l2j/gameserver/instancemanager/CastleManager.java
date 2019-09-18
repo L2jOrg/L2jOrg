@@ -169,9 +169,9 @@ public final class CastleManager implements InstanceListManager {
                 final int castleId = rs.getInt("id");
                 _castles.put(castleId, new Castle(castleId));
             }
-            LOGGER.info(getClass().getSimpleName() + ": Loaded: " + _castles.values().size() + " castles.");
+            LOGGER.info("Loaded: {} castles.", _castles.size());
         } catch (Exception e) {
-            LOGGER.warn(getClass().getSimpleName() + ": Exception: loadCastleData():", e);
+            LOGGER.error( e.getMessage(), e);
         }
     }
 

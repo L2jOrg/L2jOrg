@@ -7,7 +7,6 @@ import org.l2j.gameserver.enums.HtmlActionScope;
 import org.l2j.gameserver.enums.IllegalActionPunishmentType;
 import org.l2j.gameserver.instancemanager.WalkingManager;
 import org.l2j.gameserver.model.Location;
-import org.l2j.gameserver.world.World;
 import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.*;
 import org.l2j.gameserver.model.actor.instance.*;
@@ -17,8 +16,10 @@ import org.l2j.gameserver.model.items.Armor;
 import org.l2j.gameserver.model.items.ItemTemplate;
 import org.l2j.gameserver.model.items.Weapon;
 import org.l2j.gameserver.model.items.instance.Item;
-import org.l2j.gameserver.network.serverpackets.html.AbstractHtmlPacket;
 import org.l2j.gameserver.network.serverpackets.ShowBoard;
+import org.l2j.gameserver.network.serverpackets.html.AbstractHtmlPacket;
+import org.l2j.gameserver.world.World;
+import org.l2j.gameserver.world.zone.ZoneType;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -29,6 +30,7 @@ import java.util.*;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
+import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;
 import static org.l2j.commons.util.Util.isAnyNull;
 import static org.l2j.gameserver.util.MathUtil.isInsideRadius2D;
@@ -536,5 +538,10 @@ public final class GameUtils {
     public static <T extends WorldObject> Predicate<T> isVisible(WorldObject reference, int range, boolean includeReference) {
         return visible -> nonNull(visible) && (includeReference || !visible.equals(reference)) &&
                 Objects.equals(visible.getInstanceWorld(),  reference.getInstanceWorld()) && (range == -1 || isInsideRadius3D(reference, visible, range));
+    }
+
+    public static boolean canTeleport(Player player) {
+        return !( isNull(player) || player.isInDuel() || player.isControlBlocked() || player.isConfused() || player.isCombatFlagEquipped() || player.isFlying() || player.isFlyingMounted() ||
+                player.isInOlympiadMode() || player.isAlikeDead() || player.isOnCustomEvent() || player.isInBattle() || player.isInsideZone(ZoneType.JAIL));
     }
 }
