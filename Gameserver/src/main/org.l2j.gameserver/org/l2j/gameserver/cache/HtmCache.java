@@ -69,23 +69,9 @@ public class HtmCache {
     }
 
     public String getHtm(Player player, String path) {
-        final String prefix = player != null ? player.getHtmlPrefix() : "en";
-        String newPath = null;
-        String content;
-        if ((prefix != null) && !prefix.isEmpty()) {
-            newPath = prefix + path;
-            content = getHtm(newPath);
-            if (content != null) {
-                if ((player != null) && player.isGM() && Config.GM_DEBUG_HTML_PATHS) {
-                    BuilderUtil.sendHtmlMessage(player, newPath.substring(5));
-                }
-                return content;
-            }
-        }
-
-        content = getHtm(path);
-        if ((content != null) && (newPath != null)) {
-            CACHE.put(newPath, content);
+        var content = getHtm(path);
+        if (content != null && !contains(path)) {
+            CACHE.put(path, content);
         }
 
         if ((player != null) && player.isGM() && (path != null) && Config.GM_DEBUG_HTML_PATHS) {

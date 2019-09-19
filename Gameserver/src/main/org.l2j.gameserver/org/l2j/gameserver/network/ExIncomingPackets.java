@@ -402,6 +402,7 @@ public enum ExIncomingPackets implements PacketFactory {
     EX_INTERACT_MODIFY(0x15F, null, ConnectionState.IN_GAME), // 152
     EX_TRY_ENCHANT_ARTIFACT(0x160, null, ConnectionState.IN_GAME), // 152
     EX_XIGN_CODE(0x161, null, ConnectionState.IN_GAME), // 152
+    EX_OPEN_HTML(0x164, ExOpenHtml::new, ConnectionState.IN_GAME),
     EX_REQUEST_CLASS_CHANGE(0x165, null, ConnectionState.IN_GAME), // 228
     EX_REQUEST_CLASS_CHANGE_VERIFYING(0x166, null, ConnectionState.IN_GAME),
     EX_REQUEST_TELEPORT(0x167, ExRequestTeleport::new, ConnectionState.IN_GAME),
@@ -412,9 +413,6 @@ public enum ExIncomingPackets implements PacketFactory {
     EX_MERCENARY_CASTLEWAR_CASTLE_SIEGE_ATTACKER_LIST(0x186,null, ConnectionState.IN_GAME),
     EX_LETTER_COLLECTOR_TAKE_REWARD(0x18D, null, ConnectionState.IN_GAME),
     EX_RANKING_CHAR_HISTORY(0x1E5, null, ConnectionState.IN_GAME);
-
-
-
 
     public static final ExIncomingPackets[] PACKET_ARRAY;
 
