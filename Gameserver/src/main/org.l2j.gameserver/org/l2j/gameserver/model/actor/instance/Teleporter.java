@@ -8,6 +8,7 @@ import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.templates.NpcTemplate;
 import org.l2j.gameserver.model.teleporter.TeleportHolder;
+import org.l2j.gameserver.network.serverpackets.ExShowTeleportUi;
 import org.l2j.gameserver.network.serverpackets.html.NpcHtmlMessage;
 import org.l2j.gameserver.util.GameUtils;
 import org.slf4j.Logger;
@@ -19,9 +20,9 @@ import static java.util.Objects.isNull;
 import static org.l2j.commons.util.Util.SPACE;
 import static org.l2j.commons.util.Util.parseNextInt;
 
-
 /**
  * @author NightMarez
+ * @author JoeAlisson
  */
 public final class Teleporter extends Npc {
     private static final Logger LOGGER = LoggerFactory.getLogger(Teleporter.class);
@@ -38,14 +39,10 @@ public final class Teleporter extends Npc {
 
     @Override
     public void onBypassFeedback(Player player, String command) {
-        // Process bypass
         final StringTokenizer st = new StringTokenizer(command, SPACE);
         switch (st.nextToken()) {
-            case "showNoblesSelect": {
-                sendHtmlMessage(player, "data/html/teleporter/" + (player.isNoble() ? "nobles_select" : "not_nobles") + ".htm");
-                break;
-            }
-            case "showTeleports": {
+            case "requestTeleport" -> player.sendPacket(ExShowTeleportUi.OPEN);
+            case "showTeleports" -> {
                 final String listName = (st.hasMoreTokens()) ? st.nextToken() : TeleportType.NORMAL.name();
                 final TeleportHolder holder = TeleportersData.getInstance().getHolder(getId(), listName);
                 if (isNull(holder)) {
@@ -53,21 +50,8 @@ public final class Teleporter extends Npc {
                     return;
                 }
                 holder.showTeleportList(player, this);
-                break;
             }
-            case "showTeleportsHunting":
-            {
-                final String listName = (st.hasMoreTokens()) ? st.nextToken() : TeleportType.HUNTING.name();
-                final TeleportHolder holder = TeleportersData.getInstance().getHolder(getId(), listName);
-                if (holder == null)
-                {
-                    LOGGER.warn("Player {} requested show teleports for hunting list with name {}  at NPC {}!", player.getObjectId(), listName, getId());
-                    return;
-                }
-                holder.showTeleportList(player, this);
-                break;
-            }
-            case "teleport": {
+            case "teleport" -> {
                 // Check for required count of params.
                 if (st.countTokens() != 2) {
                     LOGGER.warn("Player {} send unhandled teleport command: {}", player, command);
@@ -81,20 +65,16 @@ public final class Teleporter extends Npc {
                     return;
                 }
                 holder.doTeleport(player, this, parseNextInt(st, -1));
-                break;
             }
-            case "chat": {
+            case "chat" -> {
                 int val = 0;
                 try {
                     val = Integer.parseInt(command.substring(5));
                 } catch (IndexOutOfBoundsException | NumberFormatException ignored) {
                 }
                 showChatWindow(player, val);
-                break;
             }
-            default: {
-                super.onBypassFeedback(player, command);
-            }
+            default -> super.onBypassFeedback(player, command);
         }
     }
 

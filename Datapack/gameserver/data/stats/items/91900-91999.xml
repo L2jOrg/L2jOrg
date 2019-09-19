@@ -341,6 +341,9 @@
 	<item id="91927" name="Soulshot" type="EtcItem">
 		<!-- Increases weapon's physical power. -->
 		<set name="icon" val="icon.etc_spirit_bullet_gold_i00" />
+		<set name="etcitem_type" val="SOULSHOT"/>
+		<set name="commissionItemType" val="SOULSHOT"/>
+		<set name="handler" val="SoulShots"/>
 		<set name="default_action" val="SOULSHOT" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -350,10 +353,16 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<skills>
+			<skill id="2154" level="1"/> <!-- TODO find the correct skill Soulshot (S-grade) -->
+		</skills>
 	</item>
 	<item id="91928" name="Spiritshot" type="EtcItem">
 		<!-- Increases weapon's magic power. -->
 		<set name="icon" val="icon.etc_spell_shot_gold_i00" />
+		<set name="commissionItemType" val="SPIRITSHOT"/>
+		<set name="etcitem_type" val="SOULSHOT"/>
+		<set name="handler" val="SpiritShot"/>
 		<set name="default_action" val="SPIRITSHOT" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -363,11 +372,18 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<skills>
+			<skill id="2159" level="1"/> <!-- TODO find correct skill Spiritshot (S-grade) -->
+		</skills>
 	</item>
 	<item id="91929" name="Blessed Soulshot" type="EtcItem">
 		<!-- Increases weapon's physical power. -->
 		<set name="icon" val="icon.etc_bless_spirit_bullet_gold_i00" />
 		<set name="immediate_effect" val="true" />
+		<set name="etcitem_type" val="SOULSHOT"/>
+		<set name="commissionItemType" val="SOULSHOT"/>
+		<set name="handler" val="BlessedSoulShots"/>
+		<set name="default_action" val="SOULSHOT" />
 		<set name="material" val="STEEL" />
 		<set name="price" val="50" />
 		<set name="is_tradable" val="false" />
@@ -375,11 +391,17 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<skills>
+			<skill id="8920" level="1"/> <!-- TODO find correct skill Spiritshot (S-grade) -->
+		</skills>
 	</item>
 	<item id="91930" name="Blessed Spiritshot" type="EtcItem">
 		<!-- Increases weapon's magic power. -->
 		<set name="icon" val="icon.etc_spell_shot_gold_i01" />
 		<set name="default_action" val="SPIRITSHOT" />
+		<set name="handler" val="BlessedSpiritShot"/>
+		<set name="etcitem_type" val="SOULSHOT"/>
+		<set name="commissionItemType" val="SPIRITSHOT"/>
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="price" val="75" />
@@ -388,6 +410,9 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<skills>
+			<skill id="2164" level="1"/> <!-- TODO find correct skill Blessed Spiritshot (S-grade) -->
+		</skills>
 	</item>
 	<item id="91931" name="Adventurer's Mark Lv. 5" type="EtcItem">
 		<!-- Received after completing the Adventurer's Journey mission. When in inventory, HP/ MP Recovery Bonus +25%. Double-click to see the list of hunting zones for each character level. -->
