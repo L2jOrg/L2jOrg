@@ -44,6 +44,7 @@ public final class RequestBypassToServer extends ClientPacket {
 
     // FIXME: This is for compatibility, will be changed when bypass functionality got an overhaul by NosBit
     private static final String[] nonHtmBypasses = {
+        "admin",
         "_bbs",
         "bbs",
         "_mail",
@@ -56,7 +57,6 @@ public final class RequestBypassToServer extends ClientPacket {
         "pccafe"
     };
 
-    // S
     private String bypass;
 
     private static void comeHere(Player player) {
