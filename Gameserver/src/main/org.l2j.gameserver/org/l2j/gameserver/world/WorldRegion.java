@@ -258,6 +258,15 @@ public final class WorldRegion {
 
     void setSurroundingRegions(WorldRegion[] regions) {
         surroundingRegions = regions;
+
+        // Make sure that this region is always the first region to improve bulk operations when this region should be update first
+        for (int i = 0; i < surroundingRegions.length; i++) {
+            if(surroundingRegions[i] == this) {
+                var first = surroundingRegions[0];
+                surroundingRegions[0] = this;
+                surroundingRegions[i] = first;
+            }
+        }
     }
 
     public boolean isInSurroundingRegion(WorldObject object) {
@@ -282,7 +291,7 @@ public final class WorldRegion {
     }
 
     private static Stream<? extends WorldObject> regionToWorldObjectStream(WorldRegion region) {
-        return region.objects.values().parallelStream().unordered();
+        return region.objects.values().parallelStream();
     }
 
     @Override
