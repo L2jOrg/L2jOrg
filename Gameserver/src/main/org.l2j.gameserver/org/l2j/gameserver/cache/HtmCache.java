@@ -21,6 +21,7 @@ import static org.l2j.commons.configuration.Configurator.getSettings;
 
 /**
  * @author Layane
+ * @author JoeAlisson
  */
 public class HtmCache {
     private static final Logger LOGGER = LoggerFactory.getLogger(HtmCache.class);

@@ -4,6 +4,9 @@ import org.l2j.gameserver.enums.HtmlActionScope;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
 
+/**
+ * @author JoeAlisson
+ */
 public class ExPremiumManagerShowHtml extends AbstractHtmlPacket {
 
     public ExPremiumManagerShowHtml(String html) {
