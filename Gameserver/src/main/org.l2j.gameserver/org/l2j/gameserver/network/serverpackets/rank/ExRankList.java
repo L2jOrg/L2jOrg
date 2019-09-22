@@ -37,13 +37,14 @@ public class ExRankList extends ServerPacket {
         writeInt(rankers.size());
 
         for (Ranker ranker : rankers) {
-            writeString(ranker.name);
-            writeString(ranker.pledgeName);
+            writeSizedString(ranker.name);
+            writeSizedString(ranker.pledgeName);
             writeInt(ranker.level);
             writeInt(ranker.rClass);
+            writeInt(ranker.race);
             writeInt(ranker.rank);
-            writeInt(ranker.raceRankSnapshot);
             writeInt(ranker.serverRankSnapshot);
+            writeInt(ranker.raceRankSnapshot);
         }
     }
 
@@ -52,12 +53,12 @@ public class ExRankList extends ServerPacket {
         var ranker = new Ranker();
         ranker.name = "Ranker" + rankers.size();
         ranker.pledgeName = "ClanRanker" + rankers.size();
-        ranker.level = 20;
-        ranker.rClass = rankers.size();
-        ranker.rank = 1+rankers.size();
-        ranker.raceRankSnapshot = ranker.rank + rankers.size();
-        ranker.serverRankSnapshot = ranker.rank + rankers.size() + 1;
-
+        ranker.level = 80 - rankers.size();
+        ranker.race = rankers.size();
+        ranker.rClass = 20 + rankers.size();
+        ranker.rank = 1 + rankers.size();
+        ranker.serverRankSnapshot = ranker.rank + (rankers.size() % 2 == 0 ? 2 : - 1);
+        ranker.raceRankSnapshot = rankers.size();
         rankers.add(ranker);
     }
 
@@ -67,6 +68,7 @@ public class ExRankList extends ServerPacket {
         int level;
         int rClass;
         int rank;
+        int race;
         int serverRankSnapshot;
         int raceRankSnapshot;
     }
