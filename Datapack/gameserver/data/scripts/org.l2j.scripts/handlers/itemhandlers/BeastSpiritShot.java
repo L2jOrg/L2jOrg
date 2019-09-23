@@ -1,19 +1,3 @@
-/*
- * This file is part of the L2J Mobius project.
- * 
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- * 
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
- * General Public License for more details.
- * 
- * You should have received a copy of the GNU General Public License
- * along with this program. If not, see <http://www.gnu.org/licenses/>.
- */
 package handlers.itemhandlers;
 
 import org.l2j.gameserver.enums.ItemSkillType;
@@ -37,41 +21,43 @@ import static org.l2j.gameserver.util.GameUtils.isPlayer;
  * Beast SpiritShot Handler
  * @author Tempy
  */
-public class BeastSpiritShot implements IItemHandler
-{
+public class BeastSpiritShot implements IItemHandler {
+
 	@Override
-	public boolean useItem(Playable playable, Item item, boolean forceUse)
-	{
-		if (!isPlayer(playable))
-		{
+	public boolean useItem(Playable playable, Item item, boolean forceUse) {
+
+		if (!isPlayer(playable)) {
 			playable.sendPacket(SystemMessageId.YOUR_PET_CANNOT_CARRY_THIS_ITEM);
 			return false;
 		}
 		
 		final Player activeOwner = playable.getActingPlayer();
-		if (!activeOwner.hasSummon())
-		{
+		if (!activeOwner.hasSummon()) {
 			activeOwner.sendPacket(SystemMessageId.SERVITORS_ARE_NOT_AVAILABLE_AT_THIS_TIME);
 			return false;
 		}
 		
 		final Summon pet = playable.getPet();
-		if ((pet != null) && pet.isDead())
-		{
+		if ((pet != null) && pet.isDead()) {
 			activeOwner.sendPacket(SystemMessageId.SOULSHOTS_AND_SPIRITSHOTS_ARE_NOT_AVAILABLE_FOR_A_DEAD_SERVITOR_SAD_ISN_T_IT);
 			return false;
 		}
 		
 		final List<Summon> aliveServitor = playable.getServitors().values().stream().filter(s -> !s.isDead()).collect(Collectors.toList());
-		if ((pet == null) && aliveServitor.isEmpty())
-		{
+		if ((pet == null) && aliveServitor.isEmpty()) {
 			activeOwner.sendPacket(SystemMessageId.SOULSHOTS_AND_SPIRITSHOTS_ARE_NOT_AVAILABLE_FOR_A_DEAD_SERVITOR_SAD_ISN_T_IT);
 			return false;
 		}
 		
 		final int itemId = item.getId();
+		final long shotCount = item.getCount();
 		final boolean isBlessed = ((itemId == 6647) || (itemId == 20334)); // TODO: Unhardcode these!
 		final List<ItemSkillHolder> skills = item.getItem().getSkills(ItemSkillType.NORMAL);
+		if (skills == null)
+		{
+			LOGGER.warn(": is missing skills!");
+			return false;
+		}
 		
 		final ShotType shotType = isBlessed ? ShotType.BLESSED_SPIRITSHOTS : ShotType.SPIRITSHOTS;
 		
@@ -91,14 +77,7 @@ public class BeastSpiritShot implements IItemHandler
 				shotConsumption += servitors.getSpiritShotsPerHit();
 			}
 		}
-		
-		if (skills == null)
-		{
-			LOGGER.warn(": is missing skills!");
-			return false;
-		}
-		
-		final long shotCount = item.getCount();
+
 		if (shotCount < shotConsumption)
 		{
 			// Not enough SpiritShots to use.

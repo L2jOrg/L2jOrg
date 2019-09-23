@@ -19,31 +19,6 @@ public final class RequestAutoSoulShot extends ClientPacket {
     private boolean _enable;
     private int _type;
 
-    public static boolean isPlayerShot(ItemTemplate item) {
-        switch (item.getDefaultAction()) {
-            case SPIRITSHOT:
-            case SOULSHOT:
-            case FISHINGSHOT: {
-                return true;
-            }
-            default: {
-                return false;
-            }
-        }
-    }
-
-    public static boolean isSummonShot(ItemTemplate item) {
-        switch (item.getDefaultAction()) {
-            case SUMMON_SPIRITSHOT:
-            case SUMMON_SOULSHOT: {
-                return true;
-            }
-            default: {
-                return false;
-            }
-        }
-    }
-
     @Override
     public void readImpl() {
         _itemId = readInt();
@@ -135,10 +110,6 @@ public final class RequestAutoSoulShot extends ClientPacket {
                     final boolean isSoulshot = item.getEtcItem().getDefaultAction() == ActionType.SOULSHOT;
                     final boolean isSpiritshot = item.getEtcItem().getDefaultAction() == ActionType.SPIRITSHOT;
                     final boolean isFishingshot = item.getEtcItem().getDefaultAction() == ActionType.FISHINGSHOT;
-                    if ((activeChar.getActiveWeaponItem() == activeChar.getFistsWeaponItem()) || (item.getItem().getCrystalType() != activeChar.getActiveWeaponItem().getCrystalType())) {
-                        client.sendPacket(isSoulshot ? SystemMessageId.THE_SOULSHOT_YOU_ARE_ATTEMPTING_TO_USE_DOES_NOT_MATCH_THE_GRADE_OF_YOUR_EQUIPPED_WEAPON : SystemMessageId.YOUR_SPIRITSHOT_DOES_NOT_MATCH_THE_WEAPON_S_GRADE);
-                        return;
-                    }
 
                     // Activate shots
                     activeChar.addAutoSoulShot(_itemId);
@@ -161,6 +132,31 @@ public final class RequestAutoSoulShot extends ClientPacket {
                 final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.THE_AUTOMATIC_USE_OF_S1_HAS_BEEN_DEACTIVATED);
                 sm.addItemName(item);
                 client.sendPacket(sm);
+            }
+        }
+    }
+
+    private static boolean isPlayerShot(ItemTemplate item) {
+        switch (item.getDefaultAction()) {
+            case SPIRITSHOT:
+            case SOULSHOT:
+            case FISHINGSHOT: {
+                return true;
+            }
+            default: {
+                return false;
+            }
+        }
+    }
+
+    private static boolean isSummonShot(ItemTemplate item) {
+        switch (item.getDefaultAction()) {
+            case SUMMON_SPIRITSHOT:
+            case SUMMON_SOULSHOT: {
+                return true;
+            }
+            default: {
+                return false;
             }
         }
     }
