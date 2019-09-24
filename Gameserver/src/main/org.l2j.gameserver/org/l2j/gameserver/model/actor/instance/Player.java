@@ -372,8 +372,6 @@ public final class Player extends Playable {
     private static final String ATTENDANCE_DATE_VAR = "ATTENDANCE_DATE";
     private static final String ATTENDANCE_INDEX_VAR = "ATTENDANCE_INDEX";
 
-
-    public final ReentrantLock soulShotLock = new ReentrantLock();
     private final ReentrantLock _subclassLock = new ReentrantLock();
     private final ContactList _contactList = new ContactList(this);
     private final Map<Integer, TeleportBookmark> _tpbookmarks = new ConcurrentSkipListMap<>();

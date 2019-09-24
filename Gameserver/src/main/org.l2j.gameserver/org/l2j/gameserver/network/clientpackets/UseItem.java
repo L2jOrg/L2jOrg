@@ -48,8 +48,8 @@ public final class UseItem extends ClientPacket {
 
     @Override
     public void runImpl() {
-        final Player activeChar = client.getPlayer();
-        if (activeChar == null) {
+        final Player player = client.getPlayer();
+        if (player == null) {
             return;
         }
 
@@ -58,58 +58,58 @@ public final class UseItem extends ClientPacket {
             return;
         }
 
-        if (activeChar.getActiveTradeList() != null) {
-            activeChar.cancelActiveTrade();
+        if (player.getActiveTradeList() != null) {
+            player.cancelActiveTrade();
         }
 
-        if (activeChar.getPrivateStoreType() != PrivateStoreType.NONE) {
-            activeChar.sendPacket(SystemMessageId.WHILE_OPERATING_A_PRIVATE_STORE_OR_WORKSHOP_YOU_CANNOT_DISCARD_DESTROY_OR_TRADE_AN_ITEM);
-            activeChar.sendPacket(ActionFailed.STATIC_PACKET);
+        if (player.getPrivateStoreType() != PrivateStoreType.NONE) {
+            player.sendPacket(SystemMessageId.WHILE_OPERATING_A_PRIVATE_STORE_OR_WORKSHOP_YOU_CANNOT_DISCARD_DESTROY_OR_TRADE_AN_ITEM);
+            player.sendPacket(ActionFailed.STATIC_PACKET);
             return;
         }
 
-        final Item item = activeChar.getInventory().getItemByObjectId(_objectId);
+        final Item item = player.getInventory().getItemByObjectId(_objectId);
         if (item == null) {
             // gm can use other player item
-            if (activeChar.isGM()) {
+            if (player.isGM()) {
                 final WorldObject obj = World.getInstance().findObject(_objectId);
                 if (isItem(obj)) {
-                    AdminCommandHandler.getInstance().useAdminCommand(activeChar, "admin_use_item " + _objectId, true);
+                    AdminCommandHandler.getInstance().useAdminCommand(player, "admin_use_item " + _objectId, true);
                 }
             }
             return;
         }
 
         if (item.isQuestItem() && (item.getItem().getDefaultAction() != ActionType.NONE)) {
-            activeChar.sendPacket(SystemMessageId.YOU_CANNOT_USE_QUEST_ITEMS);
+            player.sendPacket(SystemMessageId.YOU_CANNOT_USE_QUEST_ITEMS);
             return;
         }
 
         // No UseItem is allowed while the player is in special conditions
-        if (activeChar.hasBlockActions() || activeChar.isControlBlocked() || activeChar.isAlikeDead()) {
+        if (player.hasBlockActions() || player.isControlBlocked() || player.isAlikeDead()) {
             return;
         }
 
         // Char cannot use item when dead
-        if (activeChar.isDead() || !activeChar.getInventory().canManipulateWithItemId(item.getId())) {
+        if (player.isDead() || !player.getInventory().canManipulateWithItemId(item.getId())) {
             final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS);
             sm.addItemName(item);
-            activeChar.sendPacket(sm);
+            player.sendPacket(sm);
             return;
         }
 
-        if (!item.isEquipped() && !item.getItem().checkCondition(activeChar, activeChar, true)) {
+        if (!item.isEquipped() && !item.getItem().checkCondition(player, player, true)) {
             return;
         }
 
         _itemId = item.getId();
-        if (activeChar.isFishing() && ((_itemId < 6535) || (_itemId > 6540))) {
+        if (player.isFishing() && ((_itemId < 6535) || (_itemId > 6540))) {
             // You cannot do anything else while fishing
-            activeChar.sendPacket(SystemMessageId.YOU_CANNOT_DO_THAT_WHILE_FISHING_3);
+            player.sendPacket(SystemMessageId.YOU_CANNOT_DO_THAT_WHILE_FISHING_3);
             return;
         }
 
-        if (!Config.ALT_GAME_KARMA_PLAYER_CAN_TELEPORT && (activeChar.getReputation() < 0)) {
+        if (!Config.ALT_GAME_KARMA_PLAYER_CAN_TELEPORT && (player.getReputation() < 0)) {
             final List<ItemSkillHolder> skills = item.getItem().getSkills(ItemSkillType.NORMAL);
             if ((skills != null) && skills.stream().anyMatch(holder -> holder.getSkill().hasEffectType(EffectType.TELEPORT))) {
                 return;
@@ -121,24 +121,24 @@ public final class UseItem extends ClientPacket {
         final int reuseDelay = item.getReuseDelay();
         final int sharedReuseGroup = item.getSharedReuseGroup();
         if (reuseDelay > 0) {
-            final long reuse = activeChar.getItemRemainingReuseTime(item.getObjectId());
+            final long reuse = player.getItemRemainingReuseTime(item.getObjectId());
             if (reuse > 0) {
-                reuseData(activeChar, item, reuse);
-                sendSharedGroupUpdate(activeChar, sharedReuseGroup, reuse, reuseDelay);
+                reuseData(player, item, reuse);
+                sendSharedGroupUpdate(player, sharedReuseGroup, reuse, reuseDelay);
                 return;
             }
 
-            final long reuseOnGroup = activeChar.getReuseDelayOnGroup(sharedReuseGroup);
+            final long reuseOnGroup = player.getReuseDelayOnGroup(sharedReuseGroup);
             if (reuseOnGroup > 0) {
-                reuseData(activeChar, item, reuseOnGroup);
-                sendSharedGroupUpdate(activeChar, sharedReuseGroup, reuseOnGroup, reuseDelay);
+                reuseData(player, item, reuseOnGroup);
+                sendSharedGroupUpdate(player, sharedReuseGroup, reuseOnGroup, reuseDelay);
                 return;
             }
         }
 
         if (item.isEquipable()) {
             // Don't allow to put formal wear while a cursed weapon is equipped.
-            if (activeChar.isCursedWeaponEquipped() && (_itemId == 6408)) {
+            if (player.isCursedWeaponEquipped() && (_itemId == 6408)) {
                 return;
             }
 
@@ -147,68 +147,68 @@ public final class UseItem extends ClientPacket {
                 return; // no message
             }
 
-            if (activeChar.isCombatFlagEquipped()) {
+            if (player.isCombatFlagEquipped()) {
                 return;
             }
 
-            if (activeChar.getInventory().isItemSlotBlocked(item.getItem().getBodyPart())) {
-                activeChar.sendPacket(SystemMessageId.YOU_DO_NOT_MEET_THE_REQUIRED_CONDITION_TO_EQUIP_THAT_ITEM);
+            if (player.getInventory().isItemSlotBlocked(item.getItem().getBodyPart())) {
+                player.sendPacket(SystemMessageId.YOU_DO_NOT_MEET_THE_REQUIRED_CONDITION_TO_EQUIP_THAT_ITEM);
                 return;
             }
             // Prevent players to equip weapon while wearing combat flag
             // Don't allow weapon/shield equipment if a cursed weapon is equipped.
             if ((item.getItem().getBodyPart() == ItemTemplate.SLOT_LR_HAND) || (item.getItem().getBodyPart() == ItemTemplate.SLOT_L_HAND) || (item.getItem().getBodyPart() == ItemTemplate.SLOT_R_HAND)) {
-                if ((activeChar.getActiveWeaponItem() != null) && (activeChar.getActiveWeaponItem().getId() == 9819)) {
-                    activeChar.sendPacket(SystemMessageId.YOU_DO_NOT_MEET_THE_REQUIRED_CONDITION_TO_EQUIP_THAT_ITEM);
+                if ((player.getActiveWeaponItem() != null) && (player.getActiveWeaponItem().getId() == 9819)) {
+                    player.sendPacket(SystemMessageId.YOU_DO_NOT_MEET_THE_REQUIRED_CONDITION_TO_EQUIP_THAT_ITEM);
                     return;
                 }
-                if (activeChar.isMounted() || activeChar.isDisarmed()) {
-                    activeChar.sendPacket(SystemMessageId.YOU_DO_NOT_MEET_THE_REQUIRED_CONDITION_TO_EQUIP_THAT_ITEM);
+                if (player.isMounted() || player.isDisarmed()) {
+                    player.sendPacket(SystemMessageId.YOU_DO_NOT_MEET_THE_REQUIRED_CONDITION_TO_EQUIP_THAT_ITEM);
                     return;
                 }
-                if (activeChar.isCursedWeaponEquipped()) {
+                if (player.isCursedWeaponEquipped()) {
                     return;
                 }
             } else if (item.getItem().getBodyPart() == ItemTemplate.SLOT_TALISMAN) {
-                if (!item.isEquipped() && (activeChar.getInventory().getTalismanSlots() == 0)) {
-                    activeChar.sendPacket(SystemMessageId.YOU_DO_NOT_MEET_THE_REQUIRED_CONDITION_TO_EQUIP_THAT_ITEM);
+                if (!item.isEquipped() && (player.getInventory().getTalismanSlots() == 0)) {
+                    player.sendPacket(SystemMessageId.YOU_DO_NOT_MEET_THE_REQUIRED_CONDITION_TO_EQUIP_THAT_ITEM);
                     return;
                 }
             } else if (item.getItem().getBodyPart() == ItemTemplate.SLOT_BROOCH_JEWEL) {
-                if (!item.isEquipped() && (activeChar.getInventory().getBroochJewelSlots() == 0)) {
+                if (!item.isEquipped() && (player.getInventory().getBroochJewelSlots() == 0)) {
                     final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_CANNOT_EQUIP_S1_WITHOUT_EQUIPPING_A_BROOCH);
                     sm.addItemName(item);
-                    activeChar.sendPacket(sm);
+                    player.sendPacket(sm);
                     return;
                 }
             } else if (item.getItem().getBodyPart() == ItemTemplate.SLOT_AGATHION) {
-                if (!item.isEquipped() && (activeChar.getInventory().getAgathionSlots() == 0)) {
-                    activeChar.sendPacket(SystemMessageId.YOU_DO_NOT_MEET_THE_REQUIRED_CONDITION_TO_EQUIP_THAT_ITEM);
+                if (!item.isEquipped() && (player.getInventory().getAgathionSlots() == 0)) {
+                    player.sendPacket(SystemMessageId.YOU_DO_NOT_MEET_THE_REQUIRED_CONDITION_TO_EQUIP_THAT_ITEM);
                     return;
                 }
             } else if (item.getItem().getBodyPart() == ItemTemplate.SLOT_ARTIFACT) {
-                if (!item.isEquipped() && (activeChar.getInventory().getArtifactSlots() == 0)) {
+                if (!item.isEquipped() && (player.getInventory().getArtifactSlots() == 0)) {
                     final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.UNABLE_TO_EQUIP_S1_BECAUSE_YOU_DO_NOT_HAVE_A_BOOK_OF_ARTIFACTS);
                     sm.addItemName(item);
-                    activeChar.sendPacket(sm);
+                    player.sendPacket(sm);
                     return;
                 }
             }
-            if (activeChar.isCastingNow()) {
+            if (player.isCastingNow()) {
                 // Create and Bind the next action to the AI
-                activeChar.getAI().setNextAction(new NextAction(CtrlEvent.EVT_FINISH_CASTING, CtrlIntention.AI_INTENTION_CAST, () -> activeChar.useEquippableItem(item, true)));
-            } else if (activeChar.isAttackingNow()) {
+                player.getAI().setNextAction(new NextAction(CtrlEvent.EVT_FINISH_CASTING, CtrlIntention.AI_INTENTION_CAST, () -> player.useEquippableItem(item, true)));
+            } else if (player.isAttackingNow()) {
                 ThreadPoolManager.schedule(() -> {
-                    var usedItem = activeChar.getInventory().getItemByObjectId(_objectId);
+                    var usedItem = player.getInventory().getItemByObjectId(_objectId);
 
                     if(isNull(usedItem)) {
                         return;
                     }
                     // Equip or unEquip
-                    activeChar.useEquippableItem(usedItem, false);
-                }, activeChar.getAttackEndTime() - TimeUnit.MILLISECONDS.toNanos(System.currentTimeMillis()));
+                    player.useEquippableItem(usedItem, false);
+                }, player.getAttackEndTime() - TimeUnit.MILLISECONDS.toNanos(System.currentTimeMillis()));
             } else {
-                activeChar.useEquippableItem(item, true);
+                player.useEquippableItem(item, true);
             }
         } else {
             final EtcItem etcItem = item.getEtcItem();
@@ -217,12 +217,12 @@ public final class UseItem extends ClientPacket {
                 if ((etcItem != null) && (etcItem.getHandlerName() != null)) {
                     LOGGER.warn("Unmanaged Item handler: " + etcItem.getHandlerName() + " for Item Id: " + _itemId + "!");
                 }
-            } else if (handler.useItem(activeChar, item, _ctrlPressed)) {
+            } else if (handler.useItem(player, item, _ctrlPressed)) {
                 // Item reuse time should be added if the item is successfully used.
                 // Skill reuse delay is done at handlers.itemhandlers.ItemSkillsTemplate;
                 if (reuseDelay > 0) {
-                    activeChar.addTimeStampItem(item, reuseDelay);
-                    sendSharedGroupUpdate(activeChar, sharedReuseGroup, reuseDelay, reuseDelay);
+                    player.addTimeStampItem(item, reuseDelay);
+                    sendSharedGroupUpdate(player, sharedReuseGroup, reuseDelay, reuseDelay);
                 }
             }
         }
