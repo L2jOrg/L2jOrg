@@ -91,13 +91,13 @@ public final class TaskManager {
                 break false;
             }
             case SHEDULED -> {
-                delay = Long.valueOf(task.getParam1());
+                delay = Long.parseLong(task.getParam1());
                 task.scheduled = ThreadPoolManager.schedule(task, delay);
                 break true;
             }
             case FIXED_SHEDULED -> {
-                delay = Long.valueOf(task.getParam1());
-                interval = Long.valueOf(task.getParam2());
+                delay = Long.parseLong(task.getParam1());
+                interval = Long.parseLong(task.getParam2());
                 task.scheduled = ThreadPoolManager.scheduleAtFixedRate(task, delay, interval);
                 break true;
             }
@@ -124,7 +124,7 @@ public final class TaskManager {
                 break false;
             }
             case GLOBAL_TASK -> {
-                interval = Long.valueOf(task.getParam1()) * 86400000;
+                interval = Long.parseLong(task.getParam1()) * 86400000;
                 final String[] hour = task.getParam2().split(":");
 
                 if (hour.length != 3) {
@@ -165,7 +165,7 @@ public final class TaskManager {
         private static final TaskManager INSTANCE = new TaskManager();
     }
 
-    public class ExecutableTask implements Runnable {
+    public static class ExecutableTask implements Runnable {
         private final Task task;
         private final TaskType type;
         private final TaskData data;

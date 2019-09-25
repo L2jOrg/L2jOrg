@@ -7,7 +7,7 @@ import org.l2j.gameserver.model.dailymission.DailyMissionStatus;
 
 /**
  * @author UnAfraid
- * @author Joe Alisson
+ * @author JoeAlisson
  */
 @Table("character_daily_missions")
 public class DailyMissionPlayerData {
