@@ -456,8 +456,9 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
         if (!_isTeleporting) {
             return;
         }
-        //spawnMe(getX(), getY(), getZ());
+        setSpawned(true);
         setIsTeleporting(false);
+        World.getInstance().switchRegionIfNeed(this);
         EventDispatcher.getInstance().notifyEventAsync(new OnCreatureTeleported(this), this);
     }
 
@@ -632,13 +633,13 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
             setInstance(instance);
         }
 
-        // Set the x,y,z position of the WorldObject and if necessary modify its _worldRegion
-        setXYZ(x, y, z);
-
         // temporary fix for heading on teleport
         if (heading != 0) {
             setHeading(heading);
         }
+
+        // Set the x,y,z position of the WorldObject and if necessary modify its _worldRegion
+        setXYZInvisible(x, y, z);
 
         // Send teleport finished packet to player
         sendPacket(new ExTeleportToLocationActivate(this));

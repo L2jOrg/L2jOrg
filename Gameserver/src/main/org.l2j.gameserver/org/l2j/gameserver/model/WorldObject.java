@@ -313,8 +313,8 @@ public abstract class WorldObject extends ListenersContainer implements IIdentif
     }
 
     public final void setXYZInvisible(int x, int y, int z) {
-        setXYZ(x, y, z);
         setSpawned(false);
+        setXYZ(x, y, z);
     }
 
     public final void setLocationInvisible(ILocational loc) {

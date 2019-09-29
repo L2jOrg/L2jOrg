@@ -18,6 +18,7 @@ import org.l2j.gameserver.model.events.impl.character.npc.OnNpcCreatureSee;
 import org.l2j.gameserver.network.Disconnection;
 import org.l2j.gameserver.settings.CharacterSettings;
 import org.l2j.gameserver.util.GameUtils;
+import org.l2j.gameserver.util.MathUtil;
 import org.l2j.gameserver.world.zone.ZoneManager;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -128,7 +129,7 @@ public final class World {
 
     public void addObject(WorldObject object) {
         if (objects.putIfAbsent(object.getObjectId(), object) != null) {
-            LOGGER.warn("Object {}  already exists in the world. Stack Trace: {}", object, CommonUtil.getTraceString(Thread.currentThread().getStackTrace()));
+            LOGGER.warn("Object {} already exists in the world. Stack Trace: {}", object, CommonUtil.getTraceString(Thread.currentThread().getStackTrace()));
         }
 
         if (isPlayer(object)) {
@@ -166,11 +167,6 @@ public final class World {
     }
 
     /**
-     * <B><U> Example of use</U>:</B>
-     * <ul>
-     * <li>Client packets : Action, AttackRequest, RequestJoinParty, RequestJoinPledge...</li>
-     * </ul>
-     *
      * @param objectId Identifier of the WorldObject
      * @return the WorldObject object that belongs to an ID or null if no object found.
      */
@@ -254,7 +250,7 @@ public final class World {
             return;
         }
 
-        forEachVisibleObjectInRange(object, WorldObject.class, -1, wo -> beAwareOfEachOther(object, wo));
+        forEachVisibleObject(object, WorldObject.class, wo -> beAwareOfEachOther(object, wo));
     }
 
     private void beAwareOfEachOther(WorldObject object, WorldObject wo) {
@@ -331,6 +327,12 @@ public final class World {
 
     private void switchRegion(WorldObject object, WorldRegion oldRegion, WorldRegion newRegion) {
 
+        newRegion.forEachSurroundingRegion(w -> {
+            if (!w.isSurroundingRegion(oldRegion)) {
+                w.forEachObject(WorldObject.class, other -> beAwareOfEachOther(object, other), other -> !object.equals(other) && Objects.equals(other.getInstanceWorld(), object.getInstanceWorld()));
+            }
+        });
+
         if(nonNull(oldRegion)) {
             oldRegion.forEachSurroundingRegion(w -> {
                 if (!newRegion.isSurroundingRegion(w)) {
@@ -338,12 +340,6 @@ public final class World {
                 }
             });
         }
-
-        newRegion.forEachSurroundingRegion(w -> {
-            if (!w.isSurroundingRegion(oldRegion)) {
-                w.forEachObject(WorldObject.class, other -> beAwareOfEachOther(object, other), other -> !object.equals(other) && Objects.equals(other.getInstanceWorld(), object.getInstanceWorld()));
-            }
-        });
     }
 
     private void forgetEachOther(WorldObject object, WorldObject other) {
@@ -380,10 +376,10 @@ public final class World {
         var region = getRegion(reference);
 
         if(isNull(region)) {
-            return includeReference && clazz.isInstance(reference)? clazz.cast(reference) : null;
+            return includeReference && clazz.isInstance(reference) ? clazz.cast(reference) : null;
         }
 
-        return region.findAnyObjectInSurrounding(clazz, and(isVisible(reference, range, includeReference), filter));
+        return region.findAnyObjectInSurrounding(clazz, and(isVisibleInRange(reference, range, includeReference), filter));
     }
 
     public <T extends WorldObject> T findFirstVisibleObject(WorldObject reference, Class<T> clazz, int range, boolean includeReference, Predicate<T> filter, Comparator<T> comparator) {
@@ -393,7 +389,7 @@ public final class World {
             return includeReference && clazz.isInstance(reference)? clazz.cast(reference) : null;
         }
 
-        return region.findFirstObjectInSurrounding(clazz, and(isVisible(reference, range, includeReference), filter), comparator);
+        return region.findFirstObjectInSurrounding(clazz, and(isVisibleInRange(reference, range, includeReference), filter), comparator);
     }
 
     public boolean hasVisiblePlayer(WorldObject object) {
@@ -403,7 +399,7 @@ public final class World {
             return false;
         }
 
-        return region.hasObjectInSurrounding(Player.class, isVisible(object, getSettings(CharacterSettings.class).partyRange()));
+        return region.hasObjectInSurrounding(Player.class, isVisibleInRange(object, getSettings(CharacterSettings.class).partyRange(), false));
     }
 
     public <T extends WorldObject> boolean hasAnyVisibleObjectInRange(WorldObject reference, Class<T> clazz, int range, Predicate<T> filter) {
@@ -411,19 +407,21 @@ public final class World {
         if(isNull(region)) {
             return false;
         }
-        return region.hasObjectInSurrounding(clazz, and(isVisible(reference, range), filter));
+        return region.hasObjectInSurrounding(clazz, and(isVisibleInRange(reference, range, false), filter));
     }
 
     public <T extends WorldObject> void forEachVisibleObject(WorldObject reference, Class<T> clazz, Consumer<T> action) {
-        forEachVisibleObjectInRange(reference, clazz, getSettings(CharacterSettings.class).partyRange(), action);
+        var region = getRegion(reference);
+        if(nonNull(region)) {
+            region.forEachObjectInSurrounding(clazz, action, isVisible(reference));
+        }
     }
 
     public <T extends WorldObject> void forEachVisibleObject(WorldObject reference, Class<T> clazz, Consumer<T> action, Predicate<T> filter) {
         var region = getRegion(reference);
-        if(isNull(region)) {
-            return;
+        if(nonNull(region)) {
+            region.forEachObjectInSurrounding(clazz, action, and(isVisible(reference), filter));
         }
-        region.forEachObjectInSurrounding(clazz, action, and(isVisible(reference, getSettings(CharacterSettings.class).partyRange()), filter));
     }
 
     public <T extends WorldObject> List<T> getVisibleObjectsInRange(WorldObject reference, Class<T> clazz, int range, Predicate<T> filter) {
@@ -433,7 +431,7 @@ public final class World {
             return Collections.emptyList();
         }
 
-        return region.findAllObjectsInSurrounding(clazz, and(isVisible(reference, range), filter));
+        return region.findAllObjectsInSurrounding(clazz, and(isVisibleInRange(reference, range, false), filter));
     }
 
     public void forEachPlayerInRange(WorldObject reference, int range, Consumer<Player> action, Predicate<Player> filter) {
@@ -450,7 +448,7 @@ public final class World {
             return;
         }
 
-        region.forEachObjectInSurrounding(clazz, action, and(isVisible(reference, range), filter));
+        region.forEachObjectInSurrounding(clazz, action, and(isVisibleInRange(reference, range, false), filter));
     }
 
     public <T extends WorldObject> void forVisibleObjectsInRange(WorldObject reference, Class<T> clazz, int range, int maxObjects, Predicate<T> filter, Consumer<T> action) {
@@ -459,7 +457,7 @@ public final class World {
             return;
         }
 
-        region.forEachObjectInSurroundingLimiting(clazz, maxObjects, and(isVisible(reference, range), filter), action);
+        region.forEachObjectInSurroundingLimiting(clazz, maxObjects, and(isVisibleInRange(reference, range, false), filter), action);
     }
 
     public <T extends WorldObject> void forVisibleOrderedObjectsInRange(WorldObject reference, Class<T> clazz, int range, int maxObjects, Predicate<T> filter, Comparator<T> comparator, Consumer<? super T> action) {
@@ -469,7 +467,7 @@ public final class World {
             return;
         }
 
-        region.forEachOrderedObjectInSurrounding(clazz, maxObjects, comparator, and(isVisible(reference, range), filter), action);
+        region.forEachOrderedObjectInSurrounding(clazz, maxObjects, comparator, and(isVisibleInRange(reference, range, false), filter), action);
     }
 
     public <T extends WorldObject> void forAnyVisibleObject(WorldObject reference, Class<T> clazz, Consumer<T> action, Predicate<T> filter) {
@@ -482,7 +480,7 @@ public final class World {
         if(isNull(region)) {
             return;
         }
-        region.forAnyObjectInSurrounding(clazz, action, and(isVisible(reference, range), filter));
+        region.forAnyObjectInSurrounding(clazz, action, and(isVisibleInRange(reference, range, false), filter));
     }
 
     public <T extends WorldObject> boolean checkAnyVisibleObjectInRange(WorldObject reference, Class<T> clazz, int range, Predicate<T> filter) {
@@ -492,18 +490,8 @@ public final class World {
             return false;
         }
 
-        return region.hasObjectInSurrounding(clazz, and(isVisible(reference, range), filter));
+        return region.hasObjectInSurrounding(clazz, and(isVisibleInRange(reference, range, false), filter));
     }
-
-    public <T extends WorldObject> long countVisibleObjectInRange(WorldObject reference, Class<T> clazz, int range, Predicate<T> filter) {
-        WorldRegion region = getRegion(reference);
-
-        if(isNull(region)) {
-            return 0;
-        }
-        return region.countObjectInSurrounding(clazz, and(isVisible(reference, range), filter));
-    }
-
 
     /**
      * Calculate the current L2WorldRegions of the object according to its position (x,y). <B><U> Example of use </U> :</B>
@@ -599,6 +587,19 @@ public final class World {
         MapRegionManager.init();
         ZoneManager.init();
         WorldTimeController.init();
+    }
+
+    private static <T extends WorldObject> Predicate<T> isVisible(WorldObject reference) {
+        return isVisible(reference, false);
+    }
+
+    private static <T extends WorldObject> Predicate<T> isVisible(WorldObject reference, boolean includeReference) {
+        return object -> nonNull(object) && (includeReference || !object.equals(reference)) &&
+                Objects.equals(object.getInstanceWorld(), reference.getInstanceWorld());
+    }
+
+    private static <T extends WorldObject> Predicate<T> isVisibleInRange(WorldObject reference, int range, boolean includeReference){
+        return object -> isVisible(reference, includeReference).test(object) && MathUtil.isInsideRadius3D(reference, object, range);
     }
 
     public static World getInstance() {

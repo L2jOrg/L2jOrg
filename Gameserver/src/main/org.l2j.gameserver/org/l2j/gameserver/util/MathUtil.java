@@ -2,6 +2,8 @@ package org.l2j.gameserver.util;
 
 import org.l2j.gameserver.model.interfaces.ILocational;
 
+import static java.lang.Math.pow;
+
 /**
  * @author UnAfraid
  * @author joeAlisson
@@ -67,7 +69,7 @@ public final class MathUtil {
      * @return the number or one of the limit (mininum / maximum).
      */
     public static int limit(int numToTest, int min, int max) {
-        return (numToTest > max) ? max : ((numToTest < min) ? min : numToTest);
+        return (numToTest > max) ? max : Math.max(numToTest, min);
     }
 
     public static boolean isInsideRadius2D(ILocational object, ILocational other, int radius) {
@@ -83,7 +85,7 @@ public final class MathUtil {
     }
 
     public static double calculateDistanceSq2D(int x1, int y1, int x2, int y2) {
-        return Math.pow(x1 - x2, 2) + Math.pow(y1 - y2, 2);
+        return pow(x1 - x2, 2) + pow(y1 - y2, 2);
     }
 
     public static double calculateDistance2D(ILocational loc, ILocational other) {
@@ -99,19 +101,27 @@ public final class MathUtil {
     }
 
     public static double calculateDistance3D(int x1, int y1, int z1, int x2, int y2, int z2) {
-        return Math.sqrt(Math.pow(x1 - x2, 2) + Math.pow(y1 - y2, 2) + Math.pow(z1 - z2, 2));
+        return Math.sqrt(pow(x1 - x2, 2) + pow(y1 - y2, 2) + pow(z1 - z2, 2));
+    }
+
+    public static double calculateDistanceSq3D(int x1, int y1, int z1, int x2, int y2, int z2) {
+        return pow(x1 -x2, 2) + pow(y1 - y2, 2) + pow(z1 - z2, 2);
+    }
+
+    private static double calculateDistanceSq3D(ILocational object, ILocational other) {
+        return calculateDistanceSq3D(object.getX(), object.getY(), object.getZ(), other.getX(), other.getY(), other.getZ());
     }
 
     public static boolean isInsideRadius3D(ILocational object, ILocational other, int range) {
-        return calculateDistance3D(object, other) <= range;
+        return calculateDistanceSq3D(object, other) <= range * range;
     }
 
     public static boolean isInsideRadius3D(ILocational object, int x, int y, int z, int range) {
-        return calculateDistance3D(object.getX(), object.getY(), object.getZ(), x, y, z) <= range;
+        return calculateDistanceSq3D(object.getX(), object.getY(), object.getZ(), x, y, z) <= range * range;
     }
 
     public static boolean isInsideRadius3D(int originX, int originY, int originZ, int targetX, int targetY, int targetZ, int range) {
-        return calculateDistance3D(originX, originY, originZ, targetX, targetY, targetZ) <= range;
+        return calculateDistanceSq3D(originX, originY, originZ, targetX, targetY, targetZ) <= range * range;
     }
 
     public static int calculateHeadingFrom(ILocational from, ILocational to) {
