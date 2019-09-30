@@ -838,7 +838,8 @@ public enum ServerPacketId {
     EX_UNK_225(0xFE, 0x225),
     EX_RANKING_CHAR_INFO(0xFE, 0x230),
     EX_RANKING_CHAR_RANKERS(0xFE, 0x232),
-    EX_MERCENARY_CASTLEWAR_CASTLE_SIEGE_HUD_INFO(0xFE, 0x235);
+    EX_MERCENARY_CASTLEWAR_CASTLE_SIEGE_HUD_INFO(0xFE, 0x235),
+    EX_PVPBOOK_LIST(0xFE, 0x23A);
 
     private final int id;
     private final int extId;

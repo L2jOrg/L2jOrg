@@ -416,6 +416,7 @@ public enum ExIncomingPackets implements PacketFactory {
     EX_RANKING_CHAR_HISTORY(0x182, null, ConnectionState.IN_GAME),
     EX_RANKING_CHAR_RANKERS(0x183, ExRankingCharRankers::new, ConnectionState.IN_GAME),
     EX_MERCENARY_CASTLEWAR_CASTLE_SIEGE_ATTACKER_LIST(0x186,null, ConnectionState.IN_GAME),
+    EX_PVP_BOOK_LIST(0x18B, ExPvpBookList::new, ConnectionState.IN_GAME),
     EX_LETTER_COLLECTOR_TAKE_REWARD(0x18D, null, ConnectionState.IN_GAME);
 
     public static final ExIncomingPackets[] PACKET_ARRAY;

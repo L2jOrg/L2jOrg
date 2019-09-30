@@ -1,6 +1,10 @@
 package org.l2j.gameserver.network.clientpackets;
 
+/**
+ * @author JoeAlisson
+ */
 public class ExAutoPlaySetting extends ClientPacket {
+
     @Override
     protected void readImpl() throws Exception {
         var options = readShort();
@@ -13,7 +17,7 @@ public class ExAutoPlaySetting extends ClientPacket {
     }
 
     @Override
-    protected void runImpl() throws Exception {
-
+    protected void runImpl() {
+        client.sendPacket(new org.l2j.gameserver.network.serverpackets.ExAutoPlaySetting());
     }
 }
