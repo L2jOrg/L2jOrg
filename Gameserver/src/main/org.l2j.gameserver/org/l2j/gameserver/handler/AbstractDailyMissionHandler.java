@@ -40,9 +40,9 @@ public abstract class AbstractDailyMissionHandler extends ListenersContainer  {
                     if(entry.getProgress() >= getRequiredCompletion()) {
                         entry.setStatus(DailyMissionStatus.AVAILABLE);
                         storePlayerEntry(entry);
-                        break true;
+                        yield  true;
                     }
-                    break false;
+                    yield false;
                 }
                 default -> false;
             }

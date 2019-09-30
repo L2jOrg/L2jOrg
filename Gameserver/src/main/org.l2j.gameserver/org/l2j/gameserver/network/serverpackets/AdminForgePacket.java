@@ -29,31 +29,31 @@ public class AdminForgePacket extends ServerPacket {
         return switch (type | 32) {
             case 'c' -> {
                 writeByte(Integer.decode(value).byteValue());
-                break true;
+                yield true;
             }
             case 'd' -> {
                 writeInt(Integer.decode(value));
-                break true;
+                yield true;
             }
             case 'h' -> {
                 writeShort(Integer.decode(value).shortValue());
-                break true;
+                yield true;
             }
             case 'f' -> {
                 writeDouble(Double.parseDouble(value));
-                break true;
+                yield true;
             }
             case 's' -> {
                 writeString(value);
-                break true;
+                yield true;
             }
             case 'b', 'x' -> {
                 writeBytes(new BigInteger(value).toByteArray());
-                break  true;
+                yield true;
             }
             case 'q' -> {
                 writeLong(Long.decode(value));
-                break true;
+                yield true;
             }
             default -> false;
         };

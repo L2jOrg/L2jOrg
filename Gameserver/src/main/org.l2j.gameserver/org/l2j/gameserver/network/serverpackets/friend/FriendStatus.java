@@ -43,5 +43,4 @@ public class FriendStatus extends ServerPacket {
             case CLASS -> writeInt(_classId);
         }
     }
-
 }

@@ -50,7 +50,7 @@ final class ScriptingFileManager extends ForwardingJavaFileManager<StandardJavaF
         return scriptsFileInfo.get(scriptPath);
     }
 
-    Iterable<? extends JavaFileObject> getJavaFileObjectsFromPaths(Iterable<Path> paths) {
+    Iterable<? extends JavaFileObject> getJavaFileObjectsFromPaths(Collection<Path> paths) {
         return fileManager.getJavaFileObjectsFromPaths(paths);
     }
 

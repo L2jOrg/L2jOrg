@@ -88,18 +88,18 @@ public final class TaskManager {
         return switch (task.getType()) {
             case STARTUP -> {
                 task.run();
-                break false;
+                yield false;
             }
             case SHEDULED -> {
                 delay = Long.parseLong(task.getParam1());
                 task.scheduled = ThreadPoolManager.schedule(task, delay);
-                break true;
+                yield true;
             }
             case FIXED_SHEDULED -> {
                 delay = Long.parseLong(task.getParam1());
                 interval = Long.parseLong(task.getParam2());
                 task.scheduled = ThreadPoolManager.scheduleAtFixedRate(task, delay, interval);
-                break true;
+                yield true;
             }
             case TIME -> {
                 try {
@@ -107,21 +107,21 @@ public final class TaskManager {
                     final long diff = desired.getTime() - currentTimeMillis();
                     if (diff >= 0) {
                         task.scheduled = ThreadPoolManager.schedule(task, diff);
-                        break  true;
+                        yield true;
                     }
                     LOGGER.info("Task {} is obsoleted", task.getId());
                 } catch (Exception e) {
                     LOGGER.warn(e.getMessage(), e);
                 }
-                break false;
+                yield false;
             }
             case SPECIAL -> {
                 final ScheduledFuture<?> result = task.getTask().launchSpecial(task);
                 if (result != null) {
                     task.scheduled = result;
-                    break  true;
+                    yield true;
                 }
-                break false;
+                yield false;
             }
             case GLOBAL_TASK -> {
                 interval = Long.parseLong(task.getParam1()) * 86400000;
@@ -129,7 +129,7 @@ public final class TaskManager {
 
                 if (hour.length != 3) {
                     LOGGER.warn("Task {} has incorrect parameters {}", task.getId(), task.getParam2());
-                    break  false;
+                    yield false;
                 }
 
                 final Calendar check = Calendar.getInstance();
@@ -142,7 +142,7 @@ public final class TaskManager {
                     min.set(Calendar.SECOND, Integer.parseInt(hour[2]));
                 } catch (Exception e) {
                     LOGGER.warn("Bad parameter " + task.getParam2() + " on task " + task.getId() + ": " + e.getMessage(), e);
-                    break  false;
+                    yield   false;
                 }
 
                 delay = min.getTimeInMillis() - currentTimeMillis();
@@ -151,7 +151,7 @@ public final class TaskManager {
                     delay += interval;
                 }
                 task.scheduled = ThreadPoolManager.scheduleAtFixedRate(task, delay, interval);
-                break  true;
+                yield true;
             }
             default -> false;
         };
