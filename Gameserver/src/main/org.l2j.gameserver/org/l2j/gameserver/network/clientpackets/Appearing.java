@@ -1,5 +1,6 @@
 package org.l2j.gameserver.network.clientpackets;
 
+import org.l2j.gameserver.enums.UserInfoType;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.serverpackets.UserInfo;
 
@@ -31,6 +32,6 @@ public final class Appearing extends ClientPacket {
             player.onTeleported();
         }
 
-        client.sendPacket(new UserInfo(player));
+        client.sendPacket(new UserInfo(player, UserInfoType.POSITION));
     }
 }

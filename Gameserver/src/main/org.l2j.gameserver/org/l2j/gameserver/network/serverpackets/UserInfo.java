@@ -11,6 +11,8 @@ import org.l2j.gameserver.world.zone.ZoneType;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
 
+import static java.util.Objects.nonNull;
+
 /**
  * @author Sdw, UnAfraid
  */
@@ -35,6 +37,15 @@ public class UserInfo extends AbstractMaskPacket<UserInfoType> {
 
     public UserInfo(Player cha) {
         this(cha, true);
+    }
+
+    public UserInfo(Player cha, UserInfoType... infoTypes) {
+        this(cha, false);
+        if(nonNull(infoTypes)) {
+            for (UserInfoType infoType : infoTypes) {
+              addComponentType(infoType);
+            }
+        }
     }
 
     public UserInfo(Player cha, boolean addAll) {

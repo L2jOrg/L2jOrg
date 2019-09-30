@@ -409,7 +409,7 @@ public enum ExIncomingPackets implements PacketFactory {
     EX_REQUEST_CLASS_CHANGE_VERIFYING(0x166, null, ConnectionState.IN_GAME),
     EX_REQUEST_TELEPORT(0x167, ExRequestTeleport::new, ConnectionState.IN_GAME),
     EX_COSTUME_COLLECTION_SKILL_ACTIVE(0x16B, null, ConnectionState.IN_GAME),
-    EX_PAYBACK_GIVE_REWARD(0x177, null, ConnectionState.IN_GAME),
+    EX_AUTOPLAY_SETTING(0x177, ExAutoPlaySetting::new, ConnectionState.IN_GAME),
     EX_TIME_RESTRICT_FIELD_LIST(0x17F, ExTimedHuntingZoneList::new, ConnectionState.IN_GAME),
     EX_TIME_RESTRICT_FIELD_USER_ENTER(0x180, null, ConnectionState.IN_GAME),
     EX_RANKING_CHAR_INFO(0x181, ExRankCharInfo::new, ConnectionState.IN_GAME),
