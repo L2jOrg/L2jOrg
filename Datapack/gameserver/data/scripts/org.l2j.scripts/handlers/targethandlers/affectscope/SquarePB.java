@@ -16,7 +16,7 @@
  */
 package handlers.targethandlers.affectscope;
 
-import org.l2j.gameserver.geoengine.GeoEngine;
+import org.l2j.gameserver.engine.geo.GeoEngine;
 import org.l2j.gameserver.handler.AffectObjectHandler;
 import org.l2j.gameserver.handler.IAffectObjectHandler;
 import org.l2j.gameserver.handler.IAffectScopeHandler;

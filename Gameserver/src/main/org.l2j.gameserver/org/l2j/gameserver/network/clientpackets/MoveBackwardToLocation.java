@@ -4,7 +4,7 @@ import org.l2j.gameserver.Config;
 import org.l2j.gameserver.ai.CtrlIntention;
 import org.l2j.gameserver.data.xml.impl.DoorData;
 import org.l2j.gameserver.enums.AdminTeleportType;
-import org.l2j.gameserver.geoengine.GeoEngine;
+import org.l2j.gameserver.engine.geo.GeoEngine;
 import org.l2j.gameserver.world.zone.ZoneManager;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.actor.instance.Player;

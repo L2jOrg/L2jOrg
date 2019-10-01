@@ -2,7 +2,7 @@ package ai.others;
 
 import ai.AbstractNpcAI;
 import org.l2j.gameserver.ai.CtrlIntention;
-import org.l2j.gameserver.geoengine.GeoEngine;
+import org.l2j.gameserver.engine.geo.GeoEngine;
 import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.Attackable;
 import org.l2j.gameserver.model.actor.Npc;

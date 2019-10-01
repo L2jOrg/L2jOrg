@@ -14,9 +14,9 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.l2j.gameserver.geoengine.pathfinding;
+package org.l2j.gameserver.engine.geo.pathfinding;
 
-import org.l2j.gameserver.geoengine.geodata.GeoLocation;
+import org.l2j.gameserver.engine.geo.geodata.GeoLocation;
 
 /**
  * @author Hasha

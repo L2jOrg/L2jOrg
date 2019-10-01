@@ -1,7 +1,7 @@
 package org.l2j.gameserver.ai;
 
 import org.l2j.commons.util.Rnd;
-import org.l2j.gameserver.geoengine.GeoEngine;
+import org.l2j.gameserver.engine.geo.GeoEngine;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.world.World;
 import org.l2j.gameserver.model.WorldObject;

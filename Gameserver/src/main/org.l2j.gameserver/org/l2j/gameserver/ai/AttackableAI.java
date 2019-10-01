@@ -6,7 +6,7 @@ import org.l2j.gameserver.Config;
 import org.l2j.gameserver.world.WorldTimeController;
 import org.l2j.commons.threading.ThreadPoolManager;
 import org.l2j.gameserver.enums.AISkillScope;
-import org.l2j.gameserver.geoengine.GeoEngine;
+import org.l2j.gameserver.engine.geo.GeoEngine;
 import org.l2j.gameserver.model.AggroInfo;
 import org.l2j.gameserver.world.World;
 import org.l2j.gameserver.model.WorldObject;

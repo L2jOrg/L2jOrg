@@ -17,7 +17,7 @@
 package org.l2j.gameserver.model.actor;
 
 import org.l2j.gameserver.ai.CtrlIntention;
-import org.l2j.gameserver.geoengine.GeoEngine;
+import org.l2j.gameserver.engine.geo.GeoEngine;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.templates.NpcTemplate;
 import org.l2j.gameserver.network.serverpackets.ActionFailed;

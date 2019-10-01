@@ -16,8 +16,8 @@
  */
 package org.l2j.gameserver.util;
 
-import org.l2j.gameserver.geoengine.GeoEngine;
-import org.l2j.gameserver.geoengine.geodata.GeoStructure;
+import org.l2j.gameserver.engine.geo.GeoEngine;
+import org.l2j.gameserver.engine.geo.geodata.GeoStructure;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.serverpackets.ExServerPrimitive;
 

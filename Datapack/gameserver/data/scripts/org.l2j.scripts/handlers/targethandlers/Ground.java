@@ -16,7 +16,7 @@
  */
 package handlers.targethandlers;
 
-import org.l2j.gameserver.geoengine.GeoEngine;
+import org.l2j.gameserver.engine.geo.GeoEngine;
 import org.l2j.gameserver.handler.ITargetTypeHandler;
 import org.l2j.gameserver.world.zone.ZoneManager;
 import org.l2j.gameserver.model.Location;

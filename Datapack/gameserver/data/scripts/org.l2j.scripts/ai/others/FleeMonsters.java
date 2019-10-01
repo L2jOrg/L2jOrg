@@ -2,7 +2,7 @@ package ai.others;
 
 import ai.AbstractNpcAI;
 import org.l2j.gameserver.ai.CtrlIntention;
-import org.l2j.gameserver.geoengine.GeoEngine;
+import org.l2j.gameserver.engine.geo.GeoEngine;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.Summon;

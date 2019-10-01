@@ -17,7 +17,7 @@
 package handlers.skillconditionhandlers;
 
 import org.l2j.gameserver.enums.Position;
-import org.l2j.gameserver.geoengine.GeoEngine;
+import org.l2j.gameserver.engine.geo.GeoEngine;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.Creature;

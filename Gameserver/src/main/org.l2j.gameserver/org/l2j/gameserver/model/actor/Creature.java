@@ -4,6 +4,8 @@ import org.l2j.commons.threading.ThreadPoolManager;
 import org.l2j.commons.util.EmptyQueue;
 import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.Config;
+import org.l2j.gameserver.engine.geo.SyncMode;
+import org.l2j.gameserver.engine.geo.settings.GeoEngineSettings;
 import org.l2j.gameserver.world.WorldTimeController;
 import org.l2j.gameserver.ai.AttackableAI;
 import org.l2j.gameserver.ai.CreatureAI;
@@ -14,7 +16,7 @@ import org.l2j.gameserver.data.xml.impl.CategoryData;
 import org.l2j.gameserver.data.xml.impl.SkillData;
 import org.l2j.gameserver.data.xml.impl.TransformData;
 import org.l2j.gameserver.enums.*;
-import org.l2j.gameserver.geoengine.GeoEngine;
+import org.l2j.gameserver.engine.geo.GeoEngine;
 import org.l2j.gameserver.idfactory.IdFactory;
 import org.l2j.gameserver.world.MapRegionManager;
 import org.l2j.gameserver.instancemanager.TimersManager;
@@ -72,6 +74,7 @@ import java.util.concurrent.locks.StampedLock;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
+import static org.l2j.commons.configuration.Configurator.getSettings;
 import static org.l2j.gameserver.ai.CtrlIntention.AI_INTENTION_ACTIVE;
 import static org.l2j.gameserver.util.MathUtil.calculateHeadingFrom;
 import static org.l2j.gameserver.util.MathUtil.convertHeadingToDegree;
@@ -2438,14 +2441,12 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
         double dx;
         double dy;
         double dz;
-        if (Config.COORD_SYNCHRONIZE == 1)
+
         // the only method that can modify x,y while moving (otherwise _move would/should be set null)
-        {
+        if (getSettings(GeoEngineSettings.class).isSyncMode(SyncMode.CLIENT)) {
             dx = m._xDestination - xPrev;
             dy = m._yDestination - yPrev;
-        } else
-        // otherwise we need saved temporary values to avoid rounding errors
-        {
+        } else {  // otherwise we need saved temporary values to avoid rounding errors
             dx = m._xDestination - m._xAccurate;
             dy = m._yDestination - m._yAccurate;
         }
@@ -2752,8 +2753,9 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
                 m.disregardingGeodata = true;
             }
 
+            var geoSettings = getSettings(GeoEngineSettings.class);
             // Movement checks.
-            if (Config.PATHFINDING && !(this instanceof FriendlyNpc)) {
+            if (geoSettings.isEnabledPathFinding() && !(this instanceof FriendlyNpc)) {
                 final double originalDistance = distance;
                 final int originalX = x;
                 final int originalY = y;
@@ -2822,7 +2824,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
             }
 
             // If no distance to go through, the movement is canceled
-            if ((distance < 1) && (Config.PATHFINDING || GameUtils.isPlayable(this))) {
+            if ((distance < 1) && (geoSettings.isEnabledPathFinding() || GameUtils.isPlayable(this))) {
                 if (GameUtils.isSummon(this)) {
                     ((Summon) this).setFollowStatus(false);
                 }

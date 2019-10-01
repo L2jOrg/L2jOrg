@@ -3,7 +3,7 @@ package org.l2j.gameserver.ai;
 
 import org.l2j.commons.threading.ThreadPoolManager;
 import org.l2j.gameserver.enums.ItemLocation;
-import org.l2j.gameserver.geoengine.GeoEngine;
+import org.l2j.gameserver.engine.geo.GeoEngine;
 import org.l2j.gameserver.instancemanager.WalkingManager;
 import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.Location;

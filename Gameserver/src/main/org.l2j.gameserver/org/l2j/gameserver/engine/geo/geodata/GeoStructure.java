@@ -1,4 +1,4 @@
-package org.l2j.gameserver.geoengine.geodata;
+package org.l2j.gameserver.engine.geo.geodata;
 
 import org.l2j.gameserver.world.World;
 

@@ -12,6 +12,7 @@ module org.l2j.gameserver {
     requires java.compiler;
 
     opens org.l2j.gameserver.settings to org.l2j.commons;
+    opens org.l2j.gameserver.engine.geo.settings to org.l2j.commons;
     opens org.l2j.gameserver.data.database.data to org.l2j.commons;
 
     exports org.l2j.gameserver.model.actor;
@@ -48,7 +49,7 @@ module org.l2j.gameserver {
     exports org.l2j.gameserver.model.punishment;
     exports org.l2j.gameserver.model.events.impl.character;
     exports org.l2j.gameserver.model.itemcontainer;
-    exports org.l2j.gameserver.geoengine;
+    exports org.l2j.gameserver.engine.geo;
     exports org.l2j.gameserver.model.events.impl.character.npc;
     exports org.l2j.gameserver.model.olympiad;
     exports org.l2j.gameserver.model.html;
@@ -103,6 +104,7 @@ module org.l2j.gameserver {
     exports org.l2j.gameserver.network.serverpackets.equipmentupgrade;
     exports org.l2j.gameserver.world;
     exports org.l2j.gameserver.network.serverpackets.html;
+    exports org.l2j.gameserver.engine.geo.settings;
 
     uses org.l2j.gameserver.engine.scripting.IScriptingEngine;
     provides org.l2j.gameserver.engine.scripting.IScriptingEngine

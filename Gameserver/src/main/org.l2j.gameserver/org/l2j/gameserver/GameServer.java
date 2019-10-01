@@ -14,7 +14,7 @@ import org.l2j.gameserver.data.xml.impl.*;
 import org.l2j.gameserver.datatables.ItemTable;
 import org.l2j.gameserver.datatables.ReportTable;
 import org.l2j.gameserver.datatables.SchemeBufferTable;
-import org.l2j.gameserver.geoengine.GeoEngine;
+import org.l2j.gameserver.engine.geo.GeoEngine;
 import org.l2j.gameserver.handler.ConditionHandler;
 import org.l2j.gameserver.handler.DailyMissionHandler;
 import org.l2j.gameserver.handler.EffectHandler;

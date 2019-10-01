@@ -1,30 +1,25 @@
-/*
- * This file is part of the L2J Mobius project.
- *
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
- * General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this program. If not, see <http://www.gnu.org/licenses/>.
- */
-package org.l2j.gameserver.geoengine.pathfinding;
+package org.l2j.gameserver.engine.geo.pathfinding;
 
-import org.l2j.gameserver.Config;
-import org.l2j.gameserver.geoengine.geodata.GeoStructure;
+import org.l2j.gameserver.engine.geo.geodata.GeoStructure;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.concurrent.locks.ReentrantLock;
 
 /**
  * @author DS, Hasha; Credits to Diamond
+ * @author JoeAlisson
  */
 public class NodeBuffer {
+
+    private static final Logger LOGGER = LoggerFactory.getLogger(NodeBuffer.class);
+
+    private static final int BASE_WEIGHT = 10;
+    private static final int DIAGONAL_WEIGHT = 14;
+    private static final int HEURISTIC_WEIGHT = 20;
+    private static final int OBSTACLE_MULTIPLIER = 10;
+    private static final int MAX_ITERATIONS = 3500;
+
     private final ReentrantLock _lock = new ReentrantLock();
     private final int _size;
     private final Node[][] _buffer;
@@ -37,10 +32,6 @@ public class NodeBuffer {
     private int _gtx = 0;
     private int _gty = 0;
     private short _gtz = 0;
-
-    // pathfinding statistics
-    private long _timeStamp = 0;
-    private long _lastElapsedTime = 0;
 
     private Node _current = null;
 
@@ -74,8 +65,6 @@ public class NodeBuffer {
      * @return Node : first node of path
      */
     public final Node findPath(int gox, int goy, short goz, int gtx, int gty, short gtz) {
-        // load timestamp
-        _timeStamp = System.currentTimeMillis();
 
         // set coordinates (middle of the line (gox,goy) - (gtx,gty), will be in the center of the buffer)
         _cx = gox + ((gtx - gox - _size) / 2);
@@ -101,7 +90,7 @@ public class NodeBuffer {
             // move pointer
             _current = _current.getChild();
         }
-        while ((_current != null) && (++count < Config.MAX_ITERATIONS));
+        while ((_current != null) && (++count < MAX_ITERATIONS));
 
         return null;
     }
@@ -122,11 +111,6 @@ public class NodeBuffer {
         }
 
         _lock.unlock();
-        _lastElapsedTime = System.currentTimeMillis() - _timeStamp;
-    }
-
-    public final long getElapsedTime() {
-        return _lastElapsedTime;
     }
 
     /**
@@ -146,42 +130,42 @@ public class NodeBuffer {
 
         // can move north, expand
         if ((nswe & GeoStructure.CELL_FLAG_N) != 0) {
-            addNode(x, y - 1, z, Config.BASE_WEIGHT);
+            addNode(x, y - 1, z, BASE_WEIGHT);
         }
 
         // can move south, expand
         if ((nswe & GeoStructure.CELL_FLAG_S) != 0) {
-            addNode(x, y + 1, z, Config.BASE_WEIGHT);
+            addNode(x, y + 1, z, BASE_WEIGHT);
         }
 
         // can move west, expand
         if ((nswe & GeoStructure.CELL_FLAG_W) != 0) {
-            addNode(x - 1, y, z, Config.BASE_WEIGHT);
+            addNode(x - 1, y, z, BASE_WEIGHT);
         }
 
         // can move east, expand
         if ((nswe & GeoStructure.CELL_FLAG_E) != 0) {
-            addNode(x + 1, y, z, Config.BASE_WEIGHT);
+            addNode(x + 1, y, z, BASE_WEIGHT);
         }
 
         // can move north-west, expand
         if ((nswe & GeoStructure.CELL_FLAG_NW) != 0) {
-            addNode(x - 1, y - 1, z, Config.DIAGONAL_WEIGHT);
+            addNode(x - 1, y - 1, z, DIAGONAL_WEIGHT);
         }
 
         // can move north-east, expand
         if ((nswe & GeoStructure.CELL_FLAG_NE) != 0) {
-            addNode(x + 1, y - 1, z, Config.DIAGONAL_WEIGHT);
+            addNode(x + 1, y - 1, z, DIAGONAL_WEIGHT);
         }
 
         // can move south-west, expand
         if ((nswe & GeoStructure.CELL_FLAG_SW) != 0) {
-            addNode(x - 1, y + 1, z, Config.DIAGONAL_WEIGHT);
+            addNode(x - 1, y + 1, z, DIAGONAL_WEIGHT);
         }
 
         // can move south-east, expand
         if ((nswe & GeoStructure.CELL_FLAG_SE) != 0) {
-            addNode(x + 1, y + 1, z, Config.DIAGONAL_WEIGHT);
+            addNode(x + 1, y + 1, z, DIAGONAL_WEIGHT);
         }
     }
 
@@ -245,14 +229,14 @@ public class NodeBuffer {
 
         node.setParent(_current);
         if (node.getLoc().getNSWE() != (byte) 0xFF) {
-            node.setCost(getCostH(x, y, node.getLoc().getZ()) + (weight * Config.OBSTACLE_MULTIPLIER));
+            node.setCost(getCostH(x, y, node.getLoc().getZ()) + (weight * OBSTACLE_MULTIPLIER));
         } else {
             node.setCost(getCostH(x, y, node.getLoc().getZ()) + weight);
         }
 
         Node current = _current;
         int count = 0;
-        while ((current.getChild() != null) && (count < (Config.MAX_ITERATIONS * 4))) {
+        while ((current.getChild() != null) && (count < (MAX_ITERATIONS * 4))) {
             count++;
             if (current.getChild().getCost() > node.getCost()) {
                 node.setChild(current.getChild());
@@ -261,8 +245,8 @@ public class NodeBuffer {
             current = current.getChild();
         }
 
-        if (count >= (Config.MAX_ITERATIONS * 4)) {
-            System.err.println("Pathfinding: too long loop detected, cost:" + node.getCost());
+        if (count >= (MAX_ITERATIONS * 4)) {
+            LOGGER.warn("Too long loop detected, cost: {}", node.getCost());
         }
 
         current.setChild(node);
@@ -279,7 +263,6 @@ public class NodeBuffer {
         final int dY = y - _gty;
         final int dZ = (i - _gtz) / GeoStructure.CELL_HEIGHT;
 
-        // return (Math.abs(dX) + Math.abs(dY) + Math.abs(dZ)) * Config.HEURISTIC_WEIGHT; // Manhattan distance
-        return Math.sqrt((dX * dX) + (dY * dY) + (dZ * dZ)) * Config.HEURISTIC_WEIGHT; // Direct distance
+        return Math.sqrt((dX * dX) + (dY * dY) + (dZ * dZ)) * HEURISTIC_WEIGHT; // Direct distance
     }
 }

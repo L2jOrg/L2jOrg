@@ -12,7 +12,7 @@ import org.l2j.gameserver.enums.InstanceType;
 import org.l2j.gameserver.enums.NpcInfoType;
 import org.l2j.gameserver.enums.Race;
 import org.l2j.gameserver.enums.Team;
-import org.l2j.gameserver.geoengine.GeoEngine;
+import org.l2j.gameserver.engine.geo.GeoEngine;
 import org.l2j.gameserver.handler.IItemHandler;
 import org.l2j.gameserver.handler.ItemHandler;
 import org.l2j.gameserver.world.zone.ZoneManager;

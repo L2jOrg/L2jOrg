@@ -3,7 +3,7 @@ package ai.areas;
 import ai.AbstractNpcAI;
 import org.l2j.commons.util.Util;
 import org.l2j.gameserver.enums.ChatType;
-import org.l2j.gameserver.geoengine.GeoEngine;
+import org.l2j.gameserver.engine.geo.GeoEngine;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Monster;
 import org.l2j.gameserver.model.actor.instance.Player;

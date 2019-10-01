@@ -9,6 +9,9 @@ import javax.cache.Cache;
 import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;
 
+/**
+ * @author JoeAlisson
+ */
 public class Configurator {
 
     private static final Logger logger = LoggerFactory.getLogger(Configurator.class);

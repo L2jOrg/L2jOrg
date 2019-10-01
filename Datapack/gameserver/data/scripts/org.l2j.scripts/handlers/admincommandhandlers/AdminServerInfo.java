@@ -18,19 +18,22 @@ package handlers.admincommandhandlers;
 
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.GameServer;
-import org.l2j.gameserver.world.WorldTimeController;
 import org.l2j.gameserver.cache.HtmCache;
 import org.l2j.gameserver.data.xml.impl.AdminData;
+import org.l2j.gameserver.engine.geo.settings.GeoEngineSettings;
 import org.l2j.gameserver.handler.IAdminCommandHandler;
-import org.l2j.gameserver.world.World;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.serverpackets.html.NpcHtmlMessage;
+import org.l2j.gameserver.world.World;
+import org.l2j.gameserver.world.WorldTimeController;
 
 import java.text.SimpleDateFormat;
 import java.util.Collection;
 import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
+
+import static org.l2j.commons.configuration.Configurator.getSettings;
 
 /**
  * @author St3eT
@@ -59,7 +62,7 @@ public class AdminServerInfo implements IAdminCommandHandler
 			html.replace("%slots%", getPlayersCount("ALL") + "/" + Config.MAXIMUM_ONLINE_USERS);
 			html.replace("%gameTime%", WorldTimeController.getInstance().getGameHour() + ":" + WorldTimeController.getInstance().getGameMinute());
 			html.replace("%dayNight%", WorldTimeController.getInstance().isNight() ? "Night" : "Day");
-			html.replace("%geodata%", Config.PATHFINDING ? "Enabled" : "Disabled");
+			html.replace("%geodata%", getSettings(GeoEngineSettings.class).isEnabledPathFinding() ? "Enabled" : "Disabled");
 			html.replace("%serverTime%", fmt.format(new Date(System.currentTimeMillis())));
 			html.replace("%serverUpTime%", GameServer.getInstance().getUptime());
 			html.replace("%onlineAll%", getPlayersCount("ALL"));

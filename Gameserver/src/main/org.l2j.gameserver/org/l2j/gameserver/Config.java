@@ -47,7 +47,7 @@ public final class Config {
     // --------------------------------------------------
     // Config File Definitions
     // --------------------------------------------------
-    public static final String GEOENGINE_CONFIG_FILE = "./config/GeoEngine.ini";
+
     public static final String OLYMPIAD_CONFIG_FILE = "./config/Olympiad.ini";
     public static final String SIEGE_CONFIG_FILE = "./config/Siege.ini";
     public static final String FORTSIEGE_CONFIG_FILE = "./config/FortSiege.ini";
@@ -764,30 +764,7 @@ public final class Config {
     public static long SOD_STAGE_2_LENGTH;
     // chatfilter
     public static List<String> FILTER_LIST;
-    /**
-     * Geodata
-     */
-    public static String GEODATA_PATH;
 
-    // --------------------------------------------------
-    // GeoEngine
-    // --------------------------------------------------
-    public static int COORD_SYNCHRONIZE;
-    /**
-     * Path checking
-     */
-    public static int PART_OF_CHARACTER_HEIGHT;
-    public static int MAX_OBSTACLE_HEIGHT;
-    /**
-     * Path finding
-     */
-    public static boolean PATHFINDING;
-    public static String PATHFIND_BUFFERS;
-    public static int BASE_WEIGHT;
-    public static int DIAGONAL_WEIGHT;
-    public static int HEURISTIC_WEIGHT;
-    public static int OBSTACLE_MULTIPLIER;
-    public static int MAX_ITERATIONS;
     // --------------------------------------------------
     // Custom Settings
     // --------------------------------------------------
@@ -1900,22 +1877,6 @@ public final class Config {
         } catch (IOException e) {
             LOGGER.warn("Error while loading chat filter words!", e);
         }
-
-        final PropertiesParser geoData = new PropertiesParser(GEOENGINE_CONFIG_FILE);
-
-        GEODATA_PATH = geoData.getString("GeoDataPath", "./data/geodata/");
-        COORD_SYNCHRONIZE = geoData.getInt("CoordSynchronize", -1);
-
-        PART_OF_CHARACTER_HEIGHT = geoData.getInt("PartOfCharacterHeight", 75);
-        MAX_OBSTACLE_HEIGHT = geoData.getInt("MaxObstacleHeight", 32);
-
-        PATHFINDING = geoData.getBoolean("PathFinding", true);
-        PATHFIND_BUFFERS = geoData.getString("PathFindBuffers", "100x6;128x6;192x6;256x4;320x4;384x4;500x2");
-        BASE_WEIGHT = geoData.getInt("BaseWeight", 10);
-        DIAGONAL_WEIGHT = geoData.getInt("DiagonalWeight", 14);
-        OBSTACLE_MULTIPLIER = geoData.getInt("ObstacleMultiplier", 10);
-        HEURISTIC_WEIGHT = geoData.getInt("HeuristicWeight", 20);
-        MAX_ITERATIONS = geoData.getInt("MaxIterations", 3500);
 
         // Load AutoPotions config file (if exists)
         final PropertiesParser AutoPotions = new PropertiesParser(CUSTOM_AUTO_POTIONS_CONFIG_FILE);

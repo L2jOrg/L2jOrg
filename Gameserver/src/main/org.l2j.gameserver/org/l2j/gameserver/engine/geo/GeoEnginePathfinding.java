@@ -1,11 +1,12 @@
-package org.l2j.gameserver.geoengine;
+package org.l2j.gameserver.engine.geo;
 
-import org.l2j.gameserver.Config;
-import org.l2j.gameserver.geoengine.geodata.GeoLocation;
-import org.l2j.gameserver.geoengine.pathfinding.Node;
-import org.l2j.gameserver.geoengine.pathfinding.NodeBuffer;
+import org.l2j.gameserver.engine.geo.geodata.GeoLocation;
+import org.l2j.gameserver.engine.geo.pathfinding.Node;
+import org.l2j.gameserver.engine.geo.pathfinding.NodeBuffer;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.instancezone.Instance;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
@@ -14,31 +15,24 @@ import java.util.ListIterator;
 
 /**
  * @author Hasha
+ * @author JoeAlisson
  */
 final class GeoEnginePathfinding extends GeoEngine {
-    // pre-allocated buffers
-    private final BufferHolder[] _buffers;
+
+    private static final Logger LOGGER = LoggerFactory.getLogger(GeoEnginePathfinding.class);
+
+    private final BufferHolder[] buffers = new BufferHolder[] {
+        new BufferHolder(100, 6),
+        new BufferHolder(128, 6),
+        new BufferHolder(192, 6),
+        new BufferHolder(256, 4),
+        new BufferHolder(320, 4),
+        new BufferHolder(384, 4),
+        new BufferHolder(500, 2)
+    };
 
     GeoEnginePathfinding() {
-
-        String[] array = Config.PATHFIND_BUFFERS.split(";");
-        _buffers = new BufferHolder[array.length];
-
-        int count = 0;
-        for (int i = 0; i < array.length; i++) {
-            String buf = array[i];
-            String[] args = buf.split("x");
-
-            try {
-                int size = Integer.parseInt(args[1]);
-                count += size;
-                _buffers[i] = new BufferHolder(Integer.parseInt(args[0]), size);
-            } catch (Exception e) {
-                LOGGER.warn("GeoEnginePathfinding: Can not load buffer setting: " + buf);
-            }
-        }
-
-        LOGGER.info("GeoEnginePathfinding: Loaded " + count + " node buffers.");
+        LOGGER.info("Loaded {} node buffers.", buffers.length);
     }
 
     /**
@@ -178,7 +172,7 @@ final class GeoEnginePathfinding extends GeoEngine {
      */
     private final NodeBuffer getBuffer(int size) {
         NodeBuffer current = null;
-        for (BufferHolder holder : _buffers) {
+        for (BufferHolder holder : buffers) {
             // Find proper size of buffer
             if (holder._size < size) {
                 continue;

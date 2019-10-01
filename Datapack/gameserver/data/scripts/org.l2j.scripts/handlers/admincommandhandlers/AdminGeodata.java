@@ -18,7 +18,7 @@ package handlers.admincommandhandlers;
 
 import java.util.StringTokenizer;
 
-import org.l2j.gameserver.geoengine.GeoEngine;
+import org.l2j.gameserver.engine.geo.GeoEngine;
 import org.l2j.gameserver.handler.IAdminCommandHandler;
 import org.l2j.gameserver.world.World;
 import org.l2j.gameserver.model.WorldObject;

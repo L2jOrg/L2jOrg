@@ -2,6 +2,8 @@ package org.l2j.gameserver.network.clientpackets;
 
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.xml.impl.DoorData;
+import org.l2j.gameserver.engine.geo.SyncMode;
+import org.l2j.gameserver.engine.geo.settings.GeoEngineSettings;
 import org.l2j.gameserver.world.World;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.world.zone.ZoneType;
@@ -9,6 +11,8 @@ import org.l2j.gameserver.network.serverpackets.GetOnVehicle;
 import org.l2j.gameserver.network.serverpackets.ValidateLocation;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import static org.l2j.commons.configuration.Configurator.getSettings;
 
 /**
  * This class ...
@@ -59,8 +63,10 @@ public class ValidatePosition extends ClientPacket {
         int dz;
         double diffSq;
 
+        var geoSettings = getSettings(GeoEngineSettings.class);
+
         if (activeChar.isInBoat()) {
-            if (Config.COORD_SYNCHRONIZE == 2) {
+            if (geoSettings.isSyncMode(SyncMode.SERVER)) {
                 dx = _x - activeChar.getInVehiclePosition().getX();
                 dy = _y - activeChar.getInVehiclePosition().getY();
                 // dz = _z - activeChar.getInVehiclePosition().getZ();
@@ -72,18 +78,6 @@ public class ValidatePosition extends ClientPacket {
             return;
         }
         if (activeChar.isInAirShip()) {
-            // Zoey76: TODO: Implement or cleanup.
-            // if (Config.COORD_SYNCHRONIZE == 2)
-            // {
-            // dx = _x - activeChar.getInVehiclePosition().getX();
-            // dy = _y - activeChar.getInVehiclePosition().getY();
-            // dz = _z - activeChar.getInVehiclePosition().getZ();
-            // diffSq = ((dx * dx) + (dy * dy));
-            // if (diffSq > 250000)
-            // {
-            // sendPacket(new GetOnVehicle(activeChar.getObjectId(), _data, activeChar.getInBoatPosition()));
-            // }
-            // }
             return;
         }
 
@@ -95,14 +89,6 @@ public class ValidatePosition extends ClientPacket {
         dy = _y - realY;
         dz = _z - realZ;
         diffSq = ((dx * dx) + (dy * dy));
-
-        // Zoey76: TODO: Implement or cleanup.
-        // Party party = activeChar.getParty();
-        // if ((party != null) && (activeChar.getLastPartyPositionDistance(_x, _y, _z) > 150))
-        // {
-        // activeChar.setLastPartyPosition(_x, _y, _z);
-        // party.broadcastToPartyMembers(activeChar, new PartyMemberPosition(activeChar));
-        // }
 
         // Don't allow flying transformations outside gracia area!
         if (activeChar.isFlyingMounted() && (_x > World.GRACIA_MAX_X)) {
@@ -116,13 +102,13 @@ public class ValidatePosition extends ClientPacket {
             }
         } else if (diffSq < 360000) // if too large, messes observation
         {
-            if (Config.COORD_SYNCHRONIZE == -1) // Only Z coordinate synched to server,
+            if (geoSettings.isSyncMode(SyncMode.Z_ONLY))
             // mainly used when no geodata but can be used also with geodata
             {
                 activeChar.setXYZ(realX, realY, _z);
                 return;
             }
-            if (Config.COORD_SYNCHRONIZE == 1) // Trusting also client x,y coordinates (should not be used with geodata)
+            if (geoSettings.isSyncMode(SyncMode.CLIENT)) // Trusting also client x,y coordinates (should not be used with geodata)
             {
                 if (!activeChar.isMoving() || !activeChar.validateMovementHeading(_heading)) // Heading changed on client = possible obstacle
                 {

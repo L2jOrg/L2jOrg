@@ -1,33 +1,41 @@
-package org.l2j.gameserver.geoengine;
+package org.l2j.gameserver.engine.geo;
 
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.xml.impl.DoorData;
 import org.l2j.gameserver.data.xml.impl.FenceData;
-import org.l2j.gameserver.geoengine.geodata.*;
-import org.l2j.gameserver.world.World;
-import org.l2j.gameserver.model.WorldObject;
+import org.l2j.gameserver.engine.geo.geodata.*;
+import org.l2j.gameserver.engine.geo.settings.GeoEngineSettings;
 import org.l2j.gameserver.model.Location;
+import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.instancezone.Instance;
+import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.util.MathUtil;
+import org.l2j.gameserver.world.World;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.io.File;
 import java.io.RandomAccessFile;
 import java.nio.ByteOrder;
 import java.nio.MappedByteBuffer;
 import java.nio.channels.FileChannel;
+import java.nio.file.Files;
+import java.nio.file.Path;
 import java.util.List;
 
+import static org.l2j.commons.configuration.Configurator.getSettings;
 import static org.l2j.gameserver.util.GameUtils.isCreature;
 import static org.l2j.gameserver.util.GameUtils.isDoor;
 
 /**
  * @author Hasha
+ * @author JoeAlisson
  */
 public class GeoEngine {
-    protected static final Logger LOGGER = LoggerFactory.getLogger(GeoEngine.class);
+
+    private static final Logger LOGGER = LoggerFactory.getLogger(GeoEngine.class);
+
+    private static final double SIGHT_LINE_PERCENT = 0.75;
+    private static final int MAX_OBSTACLE_HEIGHT = 32;
 
     private final ABlock[][] blocks;
     private final BlockNull nullBlock;
@@ -46,35 +54,34 @@ public class GeoEngine {
 
         // load geo files according to geoengine config setup
         int loaded = 0;
+        var geodataPath = getSettings(ServerSettings.class).dataPackDirectory().resolve("geodata");
         for (int rx = World.TILE_X_MIN; rx <= World.TILE_X_MAX; rx++) {
             for (int ry = World.TILE_Y_MIN; ry <= World.TILE_Y_MAX; ry++) {
-                final File f = new File(Config.GEODATA_PATH + String.format(GeoFormat.L2D.getFilename(), rx, ry));
-                if (f.exists() && !f.isDirectory()) {
-                    // region file is load-able, try to load it
-                    if (loadGeoBlocks(rx, ry)) {
+
+                var filePath = geodataPath.resolve(String.format(GeoFormat.L2D.getFilename(), rx, ry));
+                if(Files.exists(filePath) && !Files.isDirectory(filePath)) {
+                    if (loadGeoBlocks(filePath, rx, ry)) {
                         loaded++;
                     }
                 } else {
-                    // region file is not load-able, load null blocks
                     loadNullBlocks(rx, ry);
                 }
             }
         }
 
-        LOGGER.info("GeoEngine: Loaded " + loaded + " geodata files.");
-
+        LOGGER.info("GeoEngine: Loaded {} geodata files.", loaded);
         // avoid wrong configs when no files are loaded
         if (loaded == 0) {
-            if (Config.PATHFINDING) {
-                Config.PATHFINDING = false;
-                LOGGER.info("GeoEngine: Forcing PathFinding setting to false.");
+            var geoSettings = getSettings(GeoEngineSettings.class);
+            if (geoSettings.isEnabledPathFinding()) {
+                geoSettings.setEnabledPathFinding(false);
+                LOGGER.warn("Disabling  Path Finding.");
             }
-            if (Config.COORD_SYNCHRONIZE == 2) {
-                Config.COORD_SYNCHRONIZE = -1;
-                LOGGER.info("GeoEngine: Forcing CoordSynchronize setting to -1.");
+            if (geoSettings.isSyncMode(SyncMode.SERVER)) {
+                geoSettings.setSyncMode(SyncMode.Z_ONLY);
+                LOGGER.warn("Forcing Sync Mode setting to {}", SyncMode.Z_ONLY);
             }
         }
-
         // release multilayer block temporarily buffer
         BlockMultilayer.release();
     }
@@ -148,15 +155,16 @@ public class GeoEngine {
     /**
      * Loads geodata from a file. When file does not exist, is corrupted or not consistent, loads none geodata.
      *
+     *
+     * @param filePath : The Geodata File Path
      * @param regionX : Geodata file region X coordinate.
      * @param regionY : Geodata file region Y coordinate.
      * @return boolean : True, when geodata file was loaded without problem.
      */
-    private final boolean loadGeoBlocks(int regionX, int regionY) {
-        final String filename = String.format(GeoFormat.L2D.getFilename(), regionX, regionY);
+    private boolean loadGeoBlocks(Path filePath, int regionX, int regionY) {
 
         // standard load
-        try (RandomAccessFile raf = new RandomAccessFile(Config.GEODATA_PATH + filename, "r");
+        try (RandomAccessFile raf = new RandomAccessFile(filePath.toAbsolutePath().toString(), "r");
              FileChannel fc = raf.getChannel()) {
             // initialize file buffer
             MappedByteBuffer buffer = fc.map(FileChannel.MapMode.READ_ONLY, 0, fc.size()).load();
@@ -173,38 +181,25 @@ public class GeoEngine {
                     final byte type = buffer.get();
 
                     // load block according to block type
-                    switch (type) {
-                        case GeoStructure.TYPE_FLAT_L2D: {
-                            blocks[blockX + ix][blockY + iy] = new BlockFlat(buffer, GeoFormat.L2D);
-                            break;
-                        }
-                        case GeoStructure.TYPE_COMPLEX_L2D: {
-                            blocks[blockX + ix][blockY + iy] = new BlockComplex(buffer, GeoFormat.L2D);
-                            break;
-                        }
-                        case GeoStructure.TYPE_MULTILAYER_L2D: {
-                            blocks[blockX + ix][blockY + iy] = new BlockMultilayer(buffer, GeoFormat.L2D);
-                            break;
-                        }
-                        default: {
-                            throw new IllegalArgumentException("Unknown block type: " + type);
-                        }
-                    }
+                    blocks[blockX + ix][blockY + iy] = switch (type) {
+                        case GeoStructure.TYPE_FLAT_L2D -> new BlockFlat(buffer, GeoFormat.L2D);
+                        case GeoStructure.TYPE_COMPLEX_L2D -> new BlockComplex(buffer, GeoFormat.L2D);
+                        case GeoStructure.TYPE_MULTILAYER_L2D -> new BlockMultilayer(buffer, GeoFormat.L2D);
+                        default -> throw new IllegalArgumentException("Unknown block type: " + type);
+                    };
                 }
             }
 
             // check data consistency
             if (buffer.remaining() > 0) {
-                LOGGER.warn("GeoEngine: Region file " + filename + " can be corrupted, remaining " + buffer.remaining() + " bytes to read.");
+                LOGGER.warn("GeoEngine: Region file {} can be corrupted, remaining {} bytes to read.", filePath, buffer.remaining());
             }
 
             // loading was successful
             return true;
         } catch (Exception e) {
-            // an error occured while loading, load null blocks
-            LOGGER.warn("GeoEngine: Error while loading " + filename + " region file.");
-            LOGGER.warn(e.getMessage());
-            e.printStackTrace();
+            LOGGER.error("Error while loading {} region file.", filePath);
+            LOGGER.error(e.getMessage());
 
             // replace whole region file with null blocks
             loadNullBlocks(regionX, regionY);
@@ -458,8 +453,8 @@ public class GeoEngine {
      */
     private final boolean checkSee(int gox, int goy, int goz, double oheight, int gtx, int gty, int gtz, double theight, Instance instance) {
         // get line of sight Z coordinates
-        double losoz = goz + ((oheight * Config.PART_OF_CHARACTER_HEIGHT) / 100);
-        double lostz = gtz + ((theight * Config.PART_OF_CHARACTER_HEIGHT) / 100);
+        double losoz = goz + oheight * SIGHT_LINE_PERCENT;
+        double lostz = gtz + theight * SIGHT_LINE_PERCENT;
 
         // get X delta and signum
         final int dx = Math.abs(gtx - gox);
@@ -560,7 +555,7 @@ public class GeoEngine {
                 losoz += dz;
 
                 // perform line of sight check, return when fails
-                if ((goz - losoz) > Config.MAX_OBSTACLE_HEIGHT) {
+                if ((goz - losoz) > MAX_OBSTACLE_HEIGHT) {
                     return false;
                 }
 
@@ -588,7 +583,7 @@ public class GeoEngine {
                 lostz -= dz;
 
                 // perform line of sight check, return when fails
-                if ((gtz - lostz) > Config.MAX_OBSTACLE_HEIGHT) {
+                if ((gtz - lostz) > MAX_OBSTACLE_HEIGHT) {
                     return false;
                 }
 
@@ -824,6 +819,6 @@ public class GeoEngine {
     }
 
     private static class Singleton {
-        private static final GeoEngine INSTANCE = Config.PATHFINDING ? new GeoEnginePathfinding() : new GeoEngine();
+        private static final GeoEngine INSTANCE = getSettings(GeoEngineSettings.class).isEnabledPathFinding() ? new GeoEnginePathfinding() : new GeoEngine();
     }
 }

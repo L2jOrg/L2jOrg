@@ -11,8 +11,12 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 import static java.nio.file.Files.newBufferedReader;
+import static java.util.Objects.isNull;
 import static org.l2j.commons.util.Util.*;
 
+/**
+ * @author JoeAlisson
+ */
 public final class SettingsFile extends Properties {
 
     private static final long serialVersionUID = -4599023842346938325L;
@@ -167,6 +171,19 @@ public final class SettingsFile extends Properties {
             return Short.parseShort(getProperty(key));
         } catch (Exception e) {
             logger.warn("Error getting property {} : {}", key, e.getLocalizedMessage());
+        }
+        return defaultValue;
+    }
+
+    public <T extends Enum<T>> T getEnum(String key, Class<T> enumClass, T defaultValue) {
+        String value;
+        if(isNullOrEmpty(value = getProperty(key)) || isNull(enumClass)) {
+            return defaultValue;
+        }
+        try {
+            return Enum.valueOf(enumClass, value);
+        } catch (Exception e) {
+            logger.warn("Unknown enum constant {} of type {}", key, enumClass);
         }
         return defaultValue;
     }

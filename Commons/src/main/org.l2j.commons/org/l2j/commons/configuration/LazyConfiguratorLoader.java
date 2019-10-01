@@ -11,6 +11,9 @@ import java.util.Map.Entry;
 import static org.l2j.commons.util.Util.isNullOrEmpty;
 import static java.util.Objects.nonNull;
 
+/**
+ * @author JoeAlisson
+ */
 class LazyConfiguratorLoader {
 
     protected static final Logger logger = LoggerFactory.getLogger(LazyConfiguratorLoader.class);
