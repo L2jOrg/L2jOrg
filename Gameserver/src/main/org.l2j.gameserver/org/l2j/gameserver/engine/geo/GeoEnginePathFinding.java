@@ -17,9 +17,9 @@ import java.util.ListIterator;
  * @author Hasha
  * @author JoeAlisson
  */
-final class GeoEnginePathfinding extends GeoEngine {
+final class GeoEnginePathFinding extends GeoEngine {
 
-    private static final Logger LOGGER = LoggerFactory.getLogger(GeoEnginePathfinding.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(GeoEnginePathFinding.class);
 
     private final BufferHolder[] buffers = new BufferHolder[] {
         new BufferHolder(100, 6),
@@ -31,8 +31,8 @@ final class GeoEnginePathfinding extends GeoEngine {
         new BufferHolder(500, 2)
     };
 
-    GeoEnginePathfinding() {
-        LOGGER.info("Loaded {} node buffers.", buffers.length);
+    GeoEnginePathFinding() {
+        LOGGER.info("Loaded {} path node buffers.", buffers.length);
     }
 
     /**

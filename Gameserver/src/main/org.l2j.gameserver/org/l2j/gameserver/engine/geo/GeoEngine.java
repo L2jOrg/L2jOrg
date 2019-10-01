@@ -37,22 +37,20 @@ public class GeoEngine {
     private static final double SIGHT_LINE_PERCENT = 0.75;
     private static final int MAX_OBSTACLE_HEIGHT = 32;
 
-    private final ABlock[][] blocks;
-    private final BlockNull nullBlock;
+    private final ABlock[][] blocks = new ABlock[GeoStructure.GEO_BLOCKS_X][GeoStructure.GEO_BLOCKS_Y];
+    private final BlockNull nullBlock = new BlockNull();
 
-    GeoEngine() {
-        LOGGER.info("GeoEngine: Initializing...");
+    protected GeoEngine() {
 
-        // initialize block container
-        blocks = new ABlock[GeoStructure.GEO_BLOCKS_X][GeoStructure.GEO_BLOCKS_Y];
+    }
 
-        // load null block
-        nullBlock = new BlockNull();
-
-        // initialize multilayer temporarily buffer
+    protected void load() {
         BlockMultilayer.initialize();
+        loadGeodataFiles();
+        BlockMultilayer.release();
+    }
 
-        // load geo files according to geoengine config setup
+    private void loadGeodataFiles() {
         int loaded = 0;
         var geodataPath = getSettings(ServerSettings.class).dataPackDirectory().resolve("geodata");
         for (int rx = World.TILE_X_MIN; rx <= World.TILE_X_MAX; rx++) {
@@ -68,9 +66,8 @@ public class GeoEngine {
                 }
             }
         }
+        LOGGER.info("Loaded {} geodata files.", loaded);
 
-        LOGGER.info("GeoEngine: Loaded {} geodata files.", loaded);
-        // avoid wrong configs when no files are loaded
         if (loaded == 0) {
             var geoSettings = getSettings(GeoEngineSettings.class);
             if (geoSettings.isEnabledPathFinding()) {
@@ -82,8 +79,6 @@ public class GeoEngine {
                 LOGGER.warn("Forcing Sync Mode setting to {}", SyncMode.Z_ONLY);
             }
         }
-        // release multilayer block temporarily buffer
-        BlockMultilayer.release();
     }
 
     /**
@@ -107,7 +102,6 @@ public class GeoEngine {
     }
 
 
-    // GEODATA - GENERAL
     /**
      * Converts geodata X to world X.
      *
@@ -301,8 +295,6 @@ public class GeoEngine {
         return hasGeoPos(getGeoX(worldX), getGeoY(worldY));
     }
 
-
-    // PATHFINDING
     /**
      * Returns closest Z coordinate according to geodata.
      *
@@ -327,58 +319,8 @@ public class GeoEngine {
             return true;
         }
 
-        // get origin and target world coordinates
-        final int ox = origin.getX();
-        final int oy = origin.getY();
-        final int oz = origin.getZ();
-        final int tx = target.getX();
-        final int ty = target.getY();
-        final int tz = target.getZ();
-
-        if (DoorData.getInstance().checkIfDoorsBetween(ox, oy, oz, tx, ty, tz, origin.getInstanceWorld(), true)) {
-            return false;
-        }
-        if (FenceData.getInstance().checkIfFenceBetween(ox, oy, oz, tx, ty, tz, origin.getInstanceWorld())) {
-            return false;
-        }
-
-
-        // get origin and check existing geo coordinates
-        final int gox = getGeoX(ox);
-        final int goy = getGeoY(oy);
-        if (!hasGeoPos(gox, goy)) {
-            return true;
-        }
-
-        final short goz = getHeightNearest(gox, goy, oz);
-
-        // get target and check existing geo coordinates
-        final int gtx = getGeoX(tx);
-        final int gty = getGeoY(ty);
-        if (!hasGeoPos(gtx, gty)) {
-            return true;
-        }
-
-        final short gtz = getHeightNearest(gtx, gty, tz);
-
-        // origin and target coordinates are same
-        if ((gox == gtx) && (goy == gty)) {
-            return goz == gtz;
-        }
-
-        // get origin and target height, real height = collision height * 2
-        double oheight = 0;
-        if (isCreature(origin)) {
-            oheight = ((Creature) origin).getCollisionHeight() * 2;
-        }
-
-        double theight = 0;
-        if (isCreature(target)) {
-            theight = ((Creature) target).getCollisionHeight() * 2;
-        }
-
-        // perform geodata check
-        return checkSee(gox, goy, goz, oheight, gtx, gty, gtz, theight, origin.getInstanceWorld());
+        double theight = isCreature(target) ? ((Creature) target).getCollisionHeight() * 2 : 0;
+        return canSeeTarget(origin, target.getLocation(), theight);
     }
 
     /**
@@ -389,6 +331,10 @@ public class GeoEngine {
      * @return {@code boolean} : True if object can see position
      */
     public final boolean canSeeTarget(WorldObject origin, Location position) {
+        return canSeeTarget(origin, position, 0);
+    }
+
+    private boolean canSeeTarget(WorldObject origin, Location position, double tHeight) {
         // get origin and target world coordinates
         final int ox = origin.getX();
         final int oy = origin.getY();
@@ -400,6 +346,7 @@ public class GeoEngine {
         if (DoorData.getInstance().checkIfDoorsBetween(ox, oy, oz, tx, ty, tz, origin.getInstanceWorld(), true)) {
             return false;
         }
+
         if (FenceData.getInstance().checkIfFenceBetween(ox, oy, oz, tx, ty, tz, origin.getInstanceWorld())) {
             return false;
         }
@@ -422,8 +369,7 @@ public class GeoEngine {
 
         final short gtz = getHeightNearest(gtx, gty, tz);
 
-        // origin and target coordinates are same
-        if ((gox == gtx) && (goy == gty)) {
+        if (gox == gtx && goy == gty) {
             return goz == gtz;
         }
 
@@ -433,8 +379,7 @@ public class GeoEngine {
             oheight = ((Creature) origin).getTemplate().getCollisionHeight();
         }
 
-        // perform geodata check
-        return checkSee(gox, goy, goz, oheight, gtx, gty, gtz, 0, origin.getInstanceWorld());
+        return checkSee(gox, goy, goz, oheight, gtx, gty, gtz, tHeight, origin.getInstanceWorld());
     }
 
     /**
@@ -451,7 +396,7 @@ public class GeoEngine {
      * @param instance
      * @return {@code boolean} : True, when target can be seen.
      */
-    private final boolean checkSee(int gox, int goy, int goz, double oheight, int gtx, int gty, int gtz, double theight, Instance instance) {
+    private boolean checkSee(int gox, int goy, int goz, double oheight, int gtx, int gty, int gtz, double theight, Instance instance) {
         // get line of sight Z coordinates
         double losoz = goz + oheight * SIGHT_LINE_PERCENT;
         double lostz = gtz + theight * SIGHT_LINE_PERCENT;
@@ -483,9 +428,6 @@ public class GeoEngine {
         byte diro;
         byte dirt;
 
-        // clearDebugItems();
-        // dropDebugItem(728, 0, new GeoLocation(gox, goy, goz)); // blue potion
-        // dropDebugItem(728, 0, new GeoLocation(gtx, gty, gtz)); // blue potion
 
         // initialize node values
         int nox = gox;
@@ -499,9 +441,6 @@ public class GeoEngine {
         ABlock block;
         int index;
         for (int i = 0; i < ((dm + 1) / 2); i++) {
-            // dropDebugItem(57, 0, new GeoLocation(gox, goy, goz)); // antidote
-            // dropDebugItem(1831, 0, new GeoLocation(gtx, gty, gtz)); // adena
-
             // reset direction flag
             diro = 0;
             dirt = 0;
@@ -814,11 +753,15 @@ public class GeoEngine {
         return null;
     }
 
+    public static void init() {
+        getInstance().load();
+    }
+
     public static GeoEngine getInstance() {
         return Singleton.INSTANCE;
     }
 
     private static class Singleton {
-        private static final GeoEngine INSTANCE = getSettings(GeoEngineSettings.class).isEnabledPathFinding() ? new GeoEnginePathfinding() : new GeoEngine();
+        private static final GeoEngine INSTANCE = getSettings(GeoEngineSettings.class).isEnabledPathFinding() ? new GeoEnginePathFinding() : new GeoEngine();
     }
 }
