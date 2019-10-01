@@ -3,7 +3,7 @@ package org.l2j.gameserver.model.instancezone;
 import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.commons.threading.ThreadPoolManager;
 import org.l2j.gameserver.Config;
-import org.l2j.gameserver.data.xml.impl.DoorData;
+import org.l2j.gameserver.data.xml.DoorDataManager;
 import org.l2j.gameserver.enums.InstanceReenterType;
 import org.l2j.gameserver.enums.InstanceTeleportType;
 import org.l2j.gameserver.instancemanager.InstanceManager;
@@ -263,7 +263,7 @@ public final class Instance implements IIdentifiable, INamable {
     private void spawnDoors() {
         for (DoorTemplate template : _template.getDoors().values()) {
             // Create new door instance
-            _doors.put(template.getId(), DoorData.getInstance().spawnDoor(template, this));
+            _doors.put(template.getId(), DoorDataManager.getInstance().spawnDoor(template, this));
         }
     }
 

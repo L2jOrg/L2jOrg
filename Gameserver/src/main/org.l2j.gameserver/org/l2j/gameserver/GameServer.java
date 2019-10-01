@@ -8,8 +8,10 @@ import org.l2j.commons.threading.ThreadPoolManager;
 import org.l2j.commons.util.DeadLockDetector;
 import org.l2j.gameserver.cache.HtmCache;
 import org.l2j.gameserver.data.database.dao.CharacterDAO;
-import org.l2j.gameserver.data.elemental.ElementalSpiritManager;
+import org.l2j.gameserver.data.database.elemental.ElementalSpiritManager;
 import org.l2j.gameserver.data.sql.impl.*;
+import org.l2j.gameserver.data.xml.DoorDataManager;
+import org.l2j.gameserver.data.xml.FenceDataManager;
 import org.l2j.gameserver.data.xml.impl.*;
 import org.l2j.gameserver.datatables.ItemTable;
 import org.l2j.gameserver.datatables.ReportTable;
@@ -70,11 +72,11 @@ public class GameServer {
         World.init();
 
         printSection("Geodata");
-        GeoEngine.getInstance();
+        GeoEngine.init();
 
         printSection("Server Data");
-        DoorData.getInstance();
-        FenceData.getInstance();
+        DoorDataManager.init();
+        FenceDataManager.init();
         AnnouncementsTable.getInstance();
         GlobalVariablesManager.getInstance();
         ActionData.getInstance();

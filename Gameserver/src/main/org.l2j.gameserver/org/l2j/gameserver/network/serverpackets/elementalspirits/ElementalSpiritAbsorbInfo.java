@@ -1,7 +1,7 @@
 package org.l2j.gameserver.network.serverpackets.elementalspirits;
 
-import org.l2j.gameserver.data.elemental.AbsorbItem;
-import org.l2j.gameserver.data.elemental.ElementalType;
+import org.l2j.gameserver.data.database.elemental.AbsorbItem;
+import org.l2j.gameserver.data.database.elemental.ElementalType;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.serverpackets.ServerPacket;
 

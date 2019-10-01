@@ -5,7 +5,7 @@ import org.l2j.gameserver.Config;
 import org.l2j.commons.threading.ThreadPoolManager;
 import org.l2j.gameserver.data.sql.impl.ClanTable;
 import org.l2j.gameserver.data.xml.impl.CastleData;
-import org.l2j.gameserver.data.xml.impl.DoorData;
+import org.l2j.gameserver.data.xml.DoorDataManager;
 import org.l2j.gameserver.enums.CastleSide;
 import org.l2j.gameserver.enums.MountType;
 import org.l2j.gameserver.enums.TaxType;
@@ -452,7 +452,7 @@ public final class Castle extends AbstractResidence {
 
     // This method loads castle door data from database
     private void loadDoor() {
-        for (Door door : DoorData.getInstance().getDoors()) {
+        for (Door door : DoorDataManager.getInstance().getDoors()) {
             if ((door.getCastle() != null) && (door.getCastle().getResidenceId() == getResidenceId())) {
                 _doors.add(door);
             }
@@ -490,7 +490,7 @@ public final class Castle extends AbstractResidence {
     }
 
     public void setDoorUpgrade(int doorId, int ratio, boolean save) {
-        final Door door = (getDoors().isEmpty()) ? DoorData.getInstance().getDoor(doorId) : getDoor(doorId);
+        final Door door = (getDoors().isEmpty()) ? DoorDataManager.getInstance().getDoor(doorId) : getDoor(doorId);
         if (door == null) {
             return;
         }

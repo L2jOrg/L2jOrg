@@ -1,4 +1,4 @@
-package org.l2j.gameserver.data.elemental;
+package org.l2j.gameserver.data.database.elemental;
 
 import io.github.joealisson.primitive.IntMap;
 import io.github.joealisson.primitive.HashIntMap;

@@ -1,6 +1,6 @@
 package handlers.effecthandlers;
 
-import org.l2j.gameserver.data.elemental.ElementalType;
+import org.l2j.gameserver.data.database.elemental.ElementalType;
 import org.l2j.gameserver.model.StatsSet;
 
 public class ElementalSpiritAttack extends AbstractStatEffect {

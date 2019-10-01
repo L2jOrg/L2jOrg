@@ -2,7 +2,7 @@ package org.l2j.gameserver.network.clientpackets;
 
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.ai.CtrlIntention;
-import org.l2j.gameserver.data.xml.impl.DoorData;
+import org.l2j.gameserver.data.xml.DoorDataManager;
 import org.l2j.gameserver.enums.AdminTeleportType;
 import org.l2j.gameserver.engine.geo.GeoEngine;
 import org.l2j.gameserver.world.zone.ZoneManager;
@@ -65,7 +65,7 @@ public class MoveBackwardToLocation extends ClientPacket {
         }
 
         // Mobius: Check for possible door logout and move over exploit. Also checked at ValidatePosition.
-        if (DoorData.getInstance().checkIfDoorsBetween(activeChar.getX(), activeChar.getY(), activeChar.getZ(), _targetX, _targetY, _targetZ, activeChar.getInstanceWorld(), false)) {
+        if (DoorDataManager.getInstance().checkIfDoorsBetween(activeChar.getX(), activeChar.getY(), activeChar.getZ(), _targetX, _targetY, _targetZ, activeChar.getInstanceWorld(), false)) {
             activeChar.stopMove(activeChar.getLastServerPosition());
             activeChar.sendPacket(ActionFailed.STATIC_PACKET);
             return;

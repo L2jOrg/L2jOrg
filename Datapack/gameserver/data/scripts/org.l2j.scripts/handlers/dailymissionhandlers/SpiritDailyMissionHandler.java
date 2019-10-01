@@ -1,6 +1,6 @@
 package handlers.dailymissionhandlers;
 
-import org.l2j.gameserver.data.elemental.ElementalType;
+import org.l2j.gameserver.data.database.elemental.ElementalType;
 import org.l2j.gameserver.handler.AbstractDailyMissionHandler;
 import org.l2j.gameserver.model.dailymission.DailyMissionDataHolder;
 import org.l2j.gameserver.model.dailymission.DailyMissionStatus;

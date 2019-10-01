@@ -5,7 +5,7 @@ import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.ItemsAutoDestroy;
 import org.l2j.gameserver.cache.HtmCache;
-import org.l2j.gameserver.data.elemental.ElementalType;
+import org.l2j.gameserver.data.database.elemental.ElementalType;
 import org.l2j.gameserver.data.xml.impl.ClanHallData;
 import org.l2j.gameserver.datatables.ItemTable;
 import org.l2j.gameserver.enums.*;

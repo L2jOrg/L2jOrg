@@ -1,13 +1,15 @@
-package org.l2j.gameserver.data.xml.impl;
+package org.l2j.gameserver.data.xml;
 
+import io.github.joealisson.primitive.CHashIntMap;
+import io.github.joealisson.primitive.IntMap;
 import org.l2j.gameserver.enums.FenceState;
-import org.l2j.gameserver.world.World;
-import org.l2j.gameserver.world.WorldRegion;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.instance.Fence;
 import org.l2j.gameserver.model.instancezone.Instance;
 import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.util.GameXmlReader;
+import org.l2j.gameserver.world.World;
+import org.l2j.gameserver.world.WorldRegion;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
@@ -27,17 +29,16 @@ import static org.l2j.commons.configuration.Configurator.getSettings;
 /**
  * @author HoridoJoho / FBIagent
  */
-public final class FenceData extends GameXmlReader {
+public final class FenceDataManager extends GameXmlReader {
 
-    private static final Logger LOGGER = LoggerFactory.getLogger(FenceData.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(FenceDataManager.class);
 
     private static final int MAX_Z_DIFF = 100;
 
-    private final Map<WorldRegion, List<Fence>> _regions = new ConcurrentHashMap<>();
-    private final Map<Integer, Fence> _fences = new ConcurrentHashMap<>();
+    private final Map<WorldRegion, List<Fence>> regions = new ConcurrentHashMap<>();
+    private final IntMap<Fence> fences = new CHashIntMap<>();
 
-    private FenceData() {
-        load();
+    private FenceDataManager() {
     }
 
     @Override
@@ -47,21 +48,17 @@ public final class FenceData extends GameXmlReader {
 
     @Override
     public void load() {
-        if (!_fences.isEmpty()) {
-            _fences.values().forEach(this::removeFence);
+        if (!fences.isEmpty()) {
+            fences.values().forEach(this::removeFence);
         }
 
         parseDatapackFile("data/FenceData.xml");
-        LOGGER.info("Loaded {} Fences", _fences.size());
+        LOGGER.info("Loaded {} Fences", fences.size());
     }
 
     @Override
     public void parseDocument(Document doc, File f) {
         forEach(doc, "list", listNode -> forEach(listNode, "fence", this::spawnFence));
-    }
-
-    public int getLoadedElementsCount() {
-        return _fences.size();
     }
 
     private void spawnFence(Node fenceNode) {
@@ -73,7 +70,7 @@ public final class FenceData extends GameXmlReader {
         return spawnFence(x, y, z, null, width, length, height, instanceId, state);
     }
 
-    public Fence spawnFence(int x, int y, int z, String name, int width, int length, int height, int instanceId, FenceState state) {
+    private Fence spawnFence(int x, int y, int z, String name, int width, int length, int height, int instanceId, FenceState state) {
         final Fence fence = new Fence(x, y, name, width, length, height, state);
         if (instanceId > 0) {
             fence.setInstanceById(instanceId);
@@ -85,25 +82,21 @@ public final class FenceData extends GameXmlReader {
     }
 
     private void addFence(Fence fence) {
-        _fences.put(fence.getObjectId(), fence);
-        _regions.computeIfAbsent(World.getInstance().getRegion(fence), key -> new ArrayList<>()).add(fence);
+        fences.put(fence.getObjectId(), fence);
+        regions.computeIfAbsent(World.getInstance().getRegion(fence), key -> new ArrayList<>()).add(fence);
     }
 
     public void removeFence(Fence fence) {
-        _fences.remove(fence.getObjectId());
+        fences.remove(fence.getObjectId());
 
-        final List<Fence> fencesInRegion = _regions.get(World.getInstance().getRegion(fence));
+        final List<Fence> fencesInRegion = regions.get(World.getInstance().getRegion(fence));
         if (fencesInRegion != null) {
             fencesInRegion.remove(fence);
         }
     }
 
-    public Map<Integer, Fence> getFences() {
-        return _fences;
-    }
-
-    public Fence getFence(int objectId) {
-        return _fences.get(objectId);
+    public IntMap<Fence> getFences() {
+        return fences;
     }
 
     public boolean checkIfFenceBetween(int x, int y, int z, int tx, int ty, int tz, Instance instance) {
@@ -143,16 +136,14 @@ public final class FenceData extends GameXmlReader {
             }
 
             if (crossLinePart(xMin, yMin, xMax, yMin, x, y, tx, ty, xMin, yMin, xMax, yMax) || crossLinePart(xMax, yMin, xMax, yMax, x, y, tx, ty, xMin, yMin, xMax, yMax) || crossLinePart(xMax, yMax, xMin, yMax, x, y, tx, ty, xMin, yMin, xMax, yMax) || crossLinePart(xMin, yMax, xMin, yMin, x, y, tx, ty, xMin, yMin, xMax, yMax)) {
-                if ((z > (fence.getZ() - MAX_Z_DIFF)) && (z < (fence.getZ() + MAX_Z_DIFF))) {
-                    return true;
-                }
+                return (z > (fence.getZ() - MAX_Z_DIFF)) && (z < (fence.getZ() + MAX_Z_DIFF));
             }
 
             return false;
         };
 
         final WorldRegion region = World.getInstance().getRegion(x, y); // Should never be null.
-        return region != null && _regions.getOrDefault(region, Collections.emptyList()).stream().anyMatch(filter);
+        return region != null && regions.getOrDefault(region, Collections.emptyList()).stream().anyMatch(filter);
     }
 
     private boolean crossLinePart(double x1, double y1, double x2, double y2, double x3, double y3, double x4, double y4, double xMin, double yMin, double xMax, double yMax) {
@@ -166,11 +157,7 @@ public final class FenceData extends GameXmlReader {
         if ((xCross <= xMax) && (xCross >= xMin)) {
             return true;
         }
-        if ((yCross <= yMax) && (yCross >= yMin)) {
-            return true;
-        }
-
-        return false;
+        return (yCross <= yMax) && (yCross >= yMin);
     }
 
     private double[] intersection(double x1, double y1, double x2, double y2, double x3, double y3, double x4, double y4) {
@@ -182,18 +169,18 @@ public final class FenceData extends GameXmlReader {
         final double xi = (((x3 - x4) * ((x1 * y2) - (y1 * x2))) - ((x1 - x2) * ((x3 * y4) - (y3 * x4)))) / d;
         final double yi = (((y3 - y4) * ((x1 * y2) - (y1 * x2))) - ((y1 - y2) * ((x3 * y4) - (y3 * x4)))) / d;
 
-        return new double[]
-                {
-                        xi,
-                        yi
-                };
+        return new double[]  { xi, yi };
     }
 
-    public static FenceData getInstance() {
+    public static void init() {
+        getInstance().load();
+    }
+
+    public static FenceDataManager getInstance() {
         return Singleton.INSTANCE;
     }
 
     private static class Singleton {
-        private static final FenceData INSTANCE = new FenceData();
+        private static final FenceDataManager INSTANCE = new FenceDataManager();
     }
 }

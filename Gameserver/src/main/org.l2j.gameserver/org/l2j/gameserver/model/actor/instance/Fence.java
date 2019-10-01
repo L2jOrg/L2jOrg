@@ -1,6 +1,6 @@
 package org.l2j.gameserver.model.actor.instance;
 
-import org.l2j.gameserver.data.xml.impl.FenceData;
+import org.l2j.gameserver.data.xml.FenceDataManager;
 import org.l2j.gameserver.enums.FenceState;
 import org.l2j.gameserver.idfactory.IdFactory;
 import org.l2j.gameserver.world.World;
@@ -90,7 +90,7 @@ public final class Fence extends WorldObject {
     public boolean deleteMe() {
         decayMe();
 
-        FenceData.getInstance().removeFence(this);
+        FenceDataManager.getInstance().removeFence(this);
         return false;
     }
 

@@ -1,4 +1,4 @@
-package org.l2j.gameserver.data;
+package org.l2j.gameserver.data.database;
 
 import org.l2j.gameserver.data.database.dao.RankDAO;
 import org.l2j.gameserver.data.database.data.RankData;

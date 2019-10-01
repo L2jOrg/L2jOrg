@@ -1,7 +1,7 @@
 package org.l2j.gameserver.model.shuttle;
 
 import org.l2j.commons.threading.ThreadPoolManager;
-import org.l2j.gameserver.data.xml.impl.DoorData;
+import org.l2j.gameserver.data.xml.DoorDataManager;
 import org.l2j.gameserver.model.actor.instance.Door;
 import org.l2j.gameserver.model.actor.instance.Shuttle;
 import org.slf4j.Logger;
@@ -22,8 +22,8 @@ public class ShuttleEngine implements Runnable {
 
     public ShuttleEngine(ShuttleData data, Shuttle shuttle) {
         _shuttle = shuttle;
-        _door1 = DoorData.getInstance().getDoor(data.getDoors().get(0));
-        _door2 = DoorData.getInstance().getDoor(data.getDoors().get(1));
+        _door1 = DoorDataManager.getInstance().getDoor(data.getDoors().get(0));
+        _door2 = DoorDataManager.getInstance().getDoor(data.getDoors().get(1));
     }
 
     // TODO: Rework me..

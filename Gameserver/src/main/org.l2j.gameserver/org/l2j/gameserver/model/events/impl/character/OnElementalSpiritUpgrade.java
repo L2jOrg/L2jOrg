@@ -1,6 +1,6 @@
 package org.l2j.gameserver.model.events.impl.character;
 
-import org.l2j.gameserver.data.elemental.ElementalSpirit;
+import org.l2j.gameserver.data.database.elemental.ElementalSpirit;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.events.EventType;
 import org.l2j.gameserver.model.events.impl.IBaseEvent;

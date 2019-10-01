@@ -1,22 +1,6 @@
-/*
- * This file is part of the L2J Mobius project.
- * 
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- * 
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
- * General Public License for more details.
- * 
- * You should have received a copy of the GNU General Public License
- * along with this program. If not, see <http://www.gnu.org/licenses/>.
- */
 package handlers.admincommandhandlers;
 
-import org.l2j.gameserver.data.xml.impl.FenceData;
+import org.l2j.gameserver.data.xml.FenceDataManager;
 import org.l2j.gameserver.enums.FenceState;
 import org.l2j.gameserver.handler.IAdminCommandHandler;
 import org.l2j.gameserver.world.World;
@@ -71,7 +55,7 @@ public class AdminFence implements IAdminCommandHandler
 						return false;
 					}
 					
-					FenceData.getInstance().spawnFence(activeChar.getX(), activeChar.getY(), activeChar.getZ(), width, length, height, activeChar.getInstanceId(), FenceState.CLOSED);
+					FenceDataManager.getInstance().spawnFence(activeChar.getX(), activeChar.getY(), activeChar.getZ(), width, length, height, activeChar.getInstanceId(), FenceState.CLOSED);
 					BuilderUtil.sendSysMessage(activeChar, "Fence added succesfully.");
 				}
 				catch (NoSuchElementException | NumberFormatException e)
@@ -176,7 +160,7 @@ public class AdminFence implements IAdminCommandHandler
 	
 	private static void sendHtml(Player activeChar, int page)
 	{
-		final PageResult result = PageBuilder.newBuilder(FenceData.getInstance().getFences().values(), 10, "bypass -h admin_listfence").currentPage(page).style(ButtonsStyle.INSTANCE).bodyHandler((pages, fence, sb) ->
+		final PageResult result = PageBuilder.newBuilder(FenceDataManager.getInstance().getFences().values(), 10, "bypass -h admin_listfence").currentPage(page).style(ButtonsStyle.INSTANCE).bodyHandler((pages, fence, sb) ->
 		{
 			sb.append("<tr><td>");
 			sb.append(fence.getName() == null ? fence.getId() : fence.getName());

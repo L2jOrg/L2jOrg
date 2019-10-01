@@ -1,4 +1,4 @@
-package org.l2j.gameserver.data.elemental;
+package org.l2j.gameserver.data.database.elemental;
 
 import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.util.GameXmlReader;

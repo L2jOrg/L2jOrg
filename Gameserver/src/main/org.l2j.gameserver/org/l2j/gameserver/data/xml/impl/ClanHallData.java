@@ -1,5 +1,6 @@
 package org.l2j.gameserver.data.xml.impl;
 
+import org.l2j.gameserver.data.xml.DoorDataManager;
 import org.l2j.gameserver.enums.ClanHallGrade;
 import org.l2j.gameserver.enums.ClanHallType;
 import org.l2j.gameserver.model.Clan;
@@ -86,7 +87,7 @@ public final class ClanHallData extends GameXmlReader {
                                         if ("door".equals(npcNode.getNodeName())) {
                                             final NamedNodeMap np = npcNode.getAttributes();
                                             final int doorId = parseInteger(np, "id");
-                                            final Door door = DoorData.getInstance().getDoor(doorId);
+                                            final Door door = DoorDataManager.getInstance().getDoor(doorId);
                                             if (door != null) {
                                                 doors.add(door);
                                             }
@@ -147,7 +148,7 @@ public final class ClanHallData extends GameXmlReader {
     }
 
     public ClanHall getClanHallByDoorId(int doorId) {
-        final Door door = DoorData.getInstance().getDoor(doorId);
+        final Door door = DoorDataManager.getInstance().getDoor(doorId);
         return _clanHalls.values().stream().filter(ch -> ch.getDoors().contains(door)).findFirst().orElse(null);
     }
 

@@ -1,8 +1,8 @@
 package org.l2j.gameserver.network.clientpackets.elementalspirits;
 
-import org.l2j.gameserver.data.elemental.ElementalSpirit;
-import org.l2j.gameserver.data.elemental.ElementalSpiritManager;
-import org.l2j.gameserver.data.elemental.ElementalType;
+import org.l2j.gameserver.data.database.elemental.ElementalSpirit;
+import org.l2j.gameserver.data.database.elemental.ElementalSpiritManager;
+import org.l2j.gameserver.data.database.elemental.ElementalType;
 import org.l2j.gameserver.enums.PrivateStoreType;
 import org.l2j.gameserver.enums.UserInfoType;
 import org.l2j.gameserver.model.actor.instance.Player;

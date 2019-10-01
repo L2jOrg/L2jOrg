@@ -4,7 +4,7 @@ import org.l2j.commons.threading.ThreadPoolManager;
 import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.ai.CreatureAI;
 import org.l2j.gameserver.ai.DoorAI;
-import org.l2j.gameserver.data.xml.impl.DoorData;
+import org.l2j.gameserver.data.xml.DoorDataManager;
 import org.l2j.gameserver.enums.DoorOpenType;
 import org.l2j.gameserver.enums.InstanceType;
 import org.l2j.gameserver.enums.Race;
@@ -12,7 +12,6 @@ import org.l2j.gameserver.instancemanager.CastleManager;
 import org.l2j.gameserver.instancemanager.FortDataManager;
 import org.l2j.gameserver.model.Clan;
 import org.l2j.gameserver.model.Location;
-import org.l2j.gameserver.world.World;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.stat.DoorStat;
 import org.l2j.gameserver.model.actor.status.DoorStatus;
@@ -29,9 +28,12 @@ import org.l2j.gameserver.network.serverpackets.OnEventTrigger;
 import org.l2j.gameserver.network.serverpackets.StaticObject;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
 import org.l2j.gameserver.util.GameUtils;
+import org.l2j.gameserver.world.World;
 
-import java.util.Set;
 import java.util.concurrent.Future;
+
+import static java.util.Objects.isNull;
+import static java.util.Objects.nonNull;
 
 public final class Door extends Creature {
     boolean open;
@@ -340,11 +342,12 @@ public final class Door extends Creature {
     }
 
     private void manageGroupOpen(boolean open, String groupName) {
-        final Set<Integer> set = DoorData.getInstance().getDoorsByGroup(groupName);
+        var doorsId = DoorDataManager.getInstance().getDoorsByGroup(groupName).iterator();
         Door first = null;
-        for (Integer id : set) {
-            final Door door = getSiblingDoor(id);
-            if (first == null) {
+
+        while (doorsId.hasNext()) {
+            final Door door = getSiblingDoor(doorsId.nextInt());
+            if (isNull(first)) {
                 first = door;
             }
 
@@ -353,7 +356,7 @@ public final class Door extends Creature {
                 door.broadcastStatusUpdate();
             }
         }
-        if ((first != null) && open) {
+        if (nonNull(first) && open) {
             first.startAutoCloseTask(); // only one from group
         }
     }
@@ -487,7 +490,7 @@ public final class Door extends Creature {
      */
     private Door getSiblingDoor(int doorId) {
         final Instance inst = getInstanceWorld();
-        return (inst != null) ? inst.getDoor(doorId) : DoorData.getInstance().getDoor(doorId);
+        return (inst != null) ? inst.getDoor(doorId) : DoorDataManager.getInstance().getDoor(doorId);
     }
 
     private void startAutoCloseTask() {

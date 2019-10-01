@@ -5,7 +5,7 @@ import org.l2j.gameserver.Config;
 import org.l2j.gameserver.FortUpdater;
 import org.l2j.commons.threading.ThreadPoolManager;
 import org.l2j.gameserver.data.sql.impl.ClanTable;
-import org.l2j.gameserver.data.xml.impl.DoorData;
+import org.l2j.gameserver.data.xml.DoorDataManager;
 import org.l2j.gameserver.data.xml.impl.StaticObjectData;
 import org.l2j.gameserver.datatables.SpawnTable;
 import org.l2j.gameserver.enums.MountType;
@@ -452,7 +452,7 @@ public final class Fort extends AbstractResidence {
 
     // This method loads fort door data from database
     private void loadDoor() {
-        for (Door door : DoorData.getInstance().getDoors()) {
+        for (Door door : DoorDataManager.getInstance().getDoors()) {
             if ((door.getFort() != null) && (door.getFort().getResidenceId() == getResidenceId())) {
                 _doors.add(door);
             }

@@ -16,7 +16,7 @@
  */
 package org.l2j.gameserver.model.actor.instance;
 
-import org.l2j.gameserver.data.xml.impl.DoorData;
+import org.l2j.gameserver.data.xml.DoorDataManager;
 import org.l2j.gameserver.data.xml.impl.TeleportersData;
 import org.l2j.gameserver.enums.InstanceType;
 import org.l2j.gameserver.enums.TeleportType;
@@ -106,7 +106,7 @@ public class Doormen extends Folk {
         st.nextToken();
 
         while (st.hasMoreTokens()) {
-            DoorData.getInstance().getDoor(Integer.parseInt(st.nextToken())).openMe();
+            DoorDataManager.getInstance().getDoor(Integer.parseInt(st.nextToken())).openMe();
         }
     }
 
@@ -115,7 +115,7 @@ public class Doormen extends Folk {
         st.nextToken();
 
         while (st.hasMoreTokens()) {
-            DoorData.getInstance().getDoor(Integer.parseInt(st.nextToken())).closeMe();
+            DoorDataManager.getInstance().getDoor(Integer.parseInt(st.nextToken())).closeMe();
         }
     }
 

@@ -2,9 +2,9 @@ package org.l2j.gameserver.model.events;
 
 import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.Config;
+import org.l2j.gameserver.data.xml.DoorDataManager;
 import org.l2j.gameserver.world.WorldTimeController;
 import org.l2j.gameserver.ai.CtrlIntention;
-import org.l2j.gameserver.data.xml.impl.DoorData;
 import org.l2j.gameserver.data.xml.impl.NpcData;
 import org.l2j.gameserver.datatables.ItemTable;
 import org.l2j.gameserver.enums.AttributeType;
@@ -2841,7 +2841,7 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
     public Door getDoor(int doorId, int instanceId) {
         Door door = null;
         if (instanceId <= 0) {
-            door = DoorData.getInstance().getDoor(doorId);
+            door = DoorDataManager.getInstance().getDoor(doorId);
         } else {
             final Instance inst = InstanceManager.getInstance().getInstance(instanceId);
             if (inst != null) {

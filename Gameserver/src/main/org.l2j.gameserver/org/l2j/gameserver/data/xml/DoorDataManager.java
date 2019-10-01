@@ -1,14 +1,14 @@
-package org.l2j.gameserver.data.xml.impl;
+package org.l2j.gameserver.data.xml;
 
+import io.github.joealisson.primitive.*;
 import org.l2j.commons.xml.XmlReader;
-import org.l2j.gameserver.world.MapRegionManager;
-import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.instance.Door;
 import org.l2j.gameserver.model.actor.templates.DoorTemplate;
 import org.l2j.gameserver.model.instancezone.Instance;
 import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.util.GameXmlReader;
+import org.l2j.gameserver.world.MapRegionManager;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
@@ -26,18 +26,17 @@ import static org.l2j.commons.configuration.Configurator.getSettings;
  * This class loads and hold info about doors.
  *
  * @author JIV, GodKratos, UnAfraid
+ * @author JoeAlisson
  */
-public final class DoorData extends GameXmlReader {
-    private static final Logger LOGGER = LoggerFactory.getLogger(DoorData.class);
+public final class DoorDataManager extends GameXmlReader {
+    private static final Logger LOGGER = LoggerFactory.getLogger(DoorDataManager.class);
 
-    // Info holders
-    private final Map<String, Set<Integer>> _groups = new HashMap<>();
-    private final Map<Integer, Door> _doors = new HashMap<>();
-    private final Map<Integer, StatsSet> _templates = new HashMap<>();
-    private final Map<Integer, List<Door>> _regions = new HashMap<>();
+    private final Map<String, IntSet> groups = new HashMap<>();
+    private final IntMap<Door> doors = new HashIntMap<>();
+    private final IntMap<StatsSet> templates = new HashIntMap<>();
+    private final IntMap<List<Door>> regions = new HashIntMap<>();
 
-    private DoorData() {
-        load();
+    private DoorDataManager() {
     }
 
     @Override
@@ -47,31 +46,29 @@ public final class DoorData extends GameXmlReader {
 
     @Override
     public void load() {
-        _doors.clear();
-        _groups.clear();
-        _regions.clear();
+        doors.clear();
+        groups.clear();
+        regions.clear();
         parseDatapackFile("data/DoorData.xml");
     }
 
     @Override
     public void parseDocument(Document doc, File f) {
         forEach(doc, "list", listNode -> forEach(listNode, "door", doorNode -> spawnDoor(parseDoor(doorNode))));
-        LOGGER.info("Loaded {} Door Templates for {} regions.", _doors.size(), _regions.size());
+        LOGGER.info("Loaded {} Door Templates for {} regions.", doors.size(), regions.size());
     }
 
     public StatsSet parseDoor(Node doorNode) {
         final StatsSet params = new StatsSet(parseAttributes(doorNode));
         params.set("baseHpMax", 1); // Avoid doors without HP value created dead due to default value 0 in CreatureTemplate
 
-        forEach(doorNode, XmlReader::isNode, innerDoorNode ->
-        {
+        forEach(doorNode, XmlReader::isNode, innerDoorNode -> {
             final NamedNodeMap attrs = innerDoorNode.getAttributes();
             if (innerDoorNode.getNodeName().equals("nodes")) {
                 params.set("nodeZ", parseInteger(attrs, "nodeZ"));
 
                 final AtomicInteger count = new AtomicInteger();
-                forEach(innerDoorNode, XmlReader::isNode, nodes ->
-                {
+                forEach(innerDoorNode, XmlReader::isNode, nodes -> {
                     final NamedNodeMap nodeAttrs = nodes.getAttributes();
                     if ("node".equals(nodes.getNodeName())) {
                         params.set("nodeX_" + count.get(), parseInteger(nodeAttrs, "x"));
@@ -91,7 +88,6 @@ public final class DoorData extends GameXmlReader {
     }
 
     private void applyCollisions(StatsSet set) {
-        // Insert Collision data
         if (set.contains("nodeX_0") && set.contains("nodeY_0") && set.contains("nodeX_1") && set.contains("nodeX_1")) {
             final int height = set.getInt("height", 150);
             final int nodeX = set.getInt("nodeX_0");
@@ -109,16 +105,15 @@ public final class DoorData extends GameXmlReader {
         }
     }
 
-    public Door spawnDoor(StatsSet set) {
+    private void spawnDoor(StatsSet set) {
         // Create door template + door instance
         final DoorTemplate template = new DoorTemplate(set);
         final Door door = spawnDoor(template, null);
 
         // Register the door
-        _templates.put(door.getId(), set);
-        _doors.put(door.getId(), door);
-        _regions.computeIfAbsent(MapRegionManager.getInstance().getMapRegionLocId(door), key -> new ArrayList<>()).add(door);
-        return door;
+        templates.put(door.getId(), set);
+        doors.put(door.getId(), door);
+        regions.computeIfAbsent(MapRegionManager.getInstance().getMapRegionLocId(door), key -> new ArrayList<>()).add(door);
     }
 
     /**
@@ -142,41 +137,32 @@ public final class DoorData extends GameXmlReader {
 
         // Register door's group
         if (template.getGroupName() != null) {
-            _groups.computeIfAbsent(door.getGroupName(), key -> new HashSet<>()).add(door.getId());
+            groups.computeIfAbsent(door.getGroupName(), key -> new HashIntSet()).add(door.getId());
         }
         return door;
     }
 
     public StatsSet getDoorTemplate(int doorId) {
-        return _templates.get(doorId);
+        return templates.get(doorId);
     }
 
     public Door getDoor(int doorId) {
-        return _doors.get(doorId);
+        return doors.get(doorId);
     }
 
-    public Set<Integer> getDoorsByGroup(String groupName) {
-        return _groups.getOrDefault(groupName, Collections.emptySet());
+    public IntSet getDoorsByGroup(String groupName) {
+        return groups.getOrDefault(groupName, Containers.emptyIntSet());
     }
 
     public Collection<Door> getDoors() {
-        return _doors.values();
-    }
-
-    public boolean checkIfDoorsBetween(Location start, Location end, Instance instance) {
-        return checkIfDoorsBetween(start.getX(), start.getY(), start.getZ(), end.getX(), end.getY(), end.getZ(), instance);
-    }
-
-    public boolean checkIfDoorsBetween(int x, int y, int z, int tx, int ty, int tz, Instance instance) {
-        return checkIfDoorsBetween(x, y, z, tx, ty, tz, instance, false);
+        return doors.values();
     }
 
     /**
      * GodKratos: TODO: remove GeoData checks from door table and convert door nodes to Geo zones
-     *
      */
     public boolean checkIfDoorsBetween(int x, int y, int z, int tx, int ty, int tz, Instance instance, boolean doubleFaceCheck) {
-        final Collection<Door> allDoors = (instance != null) ? instance.getDoors() : _regions.get(MapRegionManager.getInstance().getMapRegionLocId(x, y));
+        final Collection<Door> allDoors = (instance != null) ? instance.getDoors() : regions.get(MapRegionManager.getInstance().getMapRegionLocId(x, y));
         if (allDoors == null) {
             return false;
         }
@@ -214,11 +200,15 @@ public final class DoorData extends GameXmlReader {
         return false;
     }
 
-    public static DoorData getInstance() {
+    public static void init() {
+        getInstance().load();
+    }
+
+    public static DoorDataManager getInstance() {
         return Singleton.INSTANCE;
     }
 
     private static class Singleton {
-        protected static final DoorData INSTANCE = new DoorData();
+        protected static final DoorDataManager INSTANCE = new DoorDataManager();
     }
 }

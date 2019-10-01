@@ -1,7 +1,7 @@
 package org.l2j.gameserver.engine.geo;
 
-import org.l2j.gameserver.data.xml.impl.DoorData;
-import org.l2j.gameserver.data.xml.impl.FenceData;
+import org.l2j.gameserver.data.xml.DoorDataManager;
+import org.l2j.gameserver.data.xml.FenceDataManager;
 import org.l2j.gameserver.engine.geo.geodata.*;
 import org.l2j.gameserver.engine.geo.settings.GeoEngineSettings;
 import org.l2j.gameserver.model.Location;
@@ -343,11 +343,11 @@ public class GeoEngine {
         final int ty = position.getY();
         final int tz = position.getZ();
 
-        if (DoorData.getInstance().checkIfDoorsBetween(ox, oy, oz, tx, ty, tz, origin.getInstanceWorld(), true)) {
+        if (DoorDataManager.getInstance().checkIfDoorsBetween(ox, oy, oz, tx, ty, tz, origin.getInstanceWorld(), true)) {
             return false;
         }
 
-        if (FenceData.getInstance().checkIfFenceBetween(ox, oy, oz, tx, ty, tz, origin.getInstanceWorld())) {
+        if (FenceDataManager.getInstance().checkIfFenceBetween(ox, oy, oz, tx, ty, tz, origin.getInstanceWorld())) {
             return false;
         }
 
@@ -596,10 +596,10 @@ public class GeoEngine {
      */
     public final Location canMoveToTargetLoc(int ox, int oy, int oz, int tx, int ty, int tz, Instance instance) {
         // Mobius: Double check for doors before normal checkMove to avoid exploiting key movement.
-        if (DoorData.getInstance().checkIfDoorsBetween(ox, oy, oz, tx, ty, tz, instance, false)) {
+        if (DoorDataManager.getInstance().checkIfDoorsBetween(ox, oy, oz, tx, ty, tz, instance, false)) {
             return new GeoLocation(ox, oy, oz);
         }
-        if (FenceData.getInstance().checkIfFenceBetween(ox, oy, oz, tx, ty, tz, instance)) {
+        if (FenceDataManager.getInstance().checkIfFenceBetween(ox, oy, oz, tx, ty, tz, instance)) {
             return new Location(ox, oy, oz);
         }
 
@@ -655,10 +655,10 @@ public class GeoEngine {
      * @return {@link GeoLocation} : The last allowed point of movement.
      */
     protected final GeoLocation checkMove(int gox, int goy, int goz, int gtx, int gty, int gtz, Instance instance) {
-        if (DoorData.getInstance().checkIfDoorsBetween(gox, goy, goz, gtx, gty, gtz, instance, false)) {
+        if (DoorDataManager.getInstance().checkIfDoorsBetween(gox, goy, goz, gtx, gty, gtz, instance, false)) {
             return new GeoLocation(gox, goy, goz);
         }
-        if (FenceData.getInstance().checkIfFenceBetween(gox, goy, goz, gtx, gty, gtz, instance)) {
+        if (FenceDataManager.getInstance().checkIfFenceBetween(gox, goy, goz, gtx, gty, gtz, instance)) {
             return new GeoLocation(gox, goy, goz);
         }
 

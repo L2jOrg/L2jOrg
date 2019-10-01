@@ -3,7 +3,7 @@ package org.l2j.gameserver.instancemanager;
 import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.commons.xml.XmlReader;
 import org.l2j.gameserver.Config;
-import org.l2j.gameserver.data.xml.impl.DoorData;
+import org.l2j.gameserver.data.xml.DoorDataManager;
 import org.l2j.gameserver.data.xml.impl.SpawnsData;
 import org.l2j.gameserver.enums.InstanceReenterType;
 import org.l2j.gameserver.enums.InstanceRemoveBuffType;
@@ -174,10 +174,10 @@ public final class InstanceManager extends GameXmlReader {
                 case "doorlist": {
                     for (Node doorNode = innerNode.getFirstChild(); doorNode != null; doorNode = doorNode.getNextSibling()) {
                         if (doorNode.getNodeName().equals("door")) {
-                            final StatsSet parsedSet = DoorData.getInstance().parseDoor(doorNode);
+                            final StatsSet parsedSet = DoorDataManager.getInstance().parseDoor(doorNode);
                             final StatsSet mergedSet = new StatsSet();
                             final int doorId = parsedSet.getInt("id");
-                            final StatsSet templateSet = DoorData.getInstance().getDoorTemplate(doorId);
+                            final StatsSet templateSet = DoorDataManager.getInstance().getDoorTemplate(doorId);
                             if (templateSet != null) {
                                 mergedSet.merge(templateSet);
                             } else {
