@@ -64,7 +64,7 @@ import org.l2j.gameserver.world.zone.Zone;
 import org.l2j.gameserver.network.NpcStringId;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.*;
-import org.l2j.gameserver.scripting.ManagedScript;
+import org.l2j.gameserver.engine.scripting.ManagedScript;
 import org.l2j.gameserver.util.MinionList;
 import org.l2j.gameserver.world.zone.ZoneManager;
 import org.slf4j.Logger;

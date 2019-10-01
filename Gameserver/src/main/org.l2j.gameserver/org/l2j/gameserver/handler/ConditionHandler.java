@@ -2,7 +2,7 @@ package org.l2j.gameserver.handler;
 
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.conditions.ICondition;
-import org.l2j.gameserver.scripting.ScriptEngineManager;
+import org.l2j.gameserver.engine.scripting.ScriptEngineManager;
 
 import java.util.HashMap;
 import java.util.Map;

@@ -1,7 +1,7 @@
 package org.l2j.gameserver.handler;
 
 import org.l2j.gameserver.model.dailymission.DailyMissionDataHolder;
-import org.l2j.gameserver.scripting.ScriptEngineManager;
+import org.l2j.gameserver.engine.scripting.ScriptEngineManager;
 
 import java.util.HashMap;
 import java.util.Map;

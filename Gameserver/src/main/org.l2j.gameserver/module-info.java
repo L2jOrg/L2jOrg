@@ -61,7 +61,7 @@ module org.l2j.gameserver {
     exports org.l2j.gameserver.cache;
     exports org.l2j.gameserver.data.sql.impl;
     exports org.l2j.gameserver.model.events.listeners;
-    exports org.l2j.gameserver.scripting;
+    exports org.l2j.gameserver.engine.scripting;
     exports org.l2j.gameserver.model.instancezone;
     exports org.l2j.gameserver.world.zone;
     exports org.l2j.gameserver.world.zone.type;
@@ -79,7 +79,7 @@ module org.l2j.gameserver {
     exports org.l2j.gameserver.model.interfaces;
     exports org.l2j.gameserver.model.events.impl.item;
     exports org.l2j.gameserver.model.events.impl.sieges;
-    exports org.l2j.gameserver.scripting.annotations;
+    exports org.l2j.gameserver.engine.scripting.annotations;
     exports org.l2j.gameserver.network.serverpackets.luckygame;
     exports org.l2j.gameserver.model.announce;
     exports org.l2j.gameserver.world.zone.form;
@@ -104,7 +104,7 @@ module org.l2j.gameserver {
     exports org.l2j.gameserver.world;
     exports org.l2j.gameserver.network.serverpackets.html;
 
-    uses org.l2j.gameserver.scripting.IScriptingEngine;
-    provides org.l2j.gameserver.scripting.IScriptingEngine
-        with org.l2j.gameserver.scripting.java.JavaScriptingEngine;
+    uses org.l2j.gameserver.engine.scripting.IScriptingEngine;
+    provides org.l2j.gameserver.engine.scripting.IScriptingEngine
+        with org.l2j.gameserver.engine.scripting.java.JavaScriptingEngine;
 }

@@ -27,7 +27,7 @@ import org.l2j.gameserver.model.votereward.VoteSystem;
 import org.l2j.gameserver.network.ClientPacketHandler;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.authcomm.AuthServerCommunication;
-import org.l2j.gameserver.scripting.ScriptEngineManager;
+import org.l2j.gameserver.engine.scripting.ScriptEngineManager;
 import org.l2j.gameserver.taskmanager.TaskManager;
 import org.l2j.gameserver.util.Broadcast;
 import org.l2j.gameserver.world.World;
@@ -49,7 +49,6 @@ import static org.l2j.commons.util.Util.isNullOrEmpty;
 
 public class GameServer {
 
-    private static final String UPDATE_NAME = "Classic - Kamael";
     private static final String LOG4J_CONFIGURATION_FILE = "log4j.configurationFile";
 
     private static Logger LOGGER;
@@ -64,7 +63,7 @@ public class GameServer {
         printSection("Identity Factory");
         if (!IdFactory.getInstance().isInitialized()) {
             LOGGER.error("Could not read object IDs from database. Please check your configuration.");
-            throw new Exception("Could not initialize the ID factory!");
+            throw new Exception("Could not initialize the Identity factory!");
         }
 
         printSection("Lineage II World");
@@ -264,7 +263,7 @@ public class GameServer {
 
     public static void main(String[] args) throws Exception {
         configureLogger();
-        configureCaches();
+        configureCache();
         logVersionInfo();
         configureDatabase();
         configureNetworkPackets();
@@ -280,7 +279,7 @@ public class GameServer {
         ThreadPoolManager.execute(AuthServerCommunication.getInstance());
     }
 
-    private static void configureCaches() {
+    private static void configureCache() {
         CacheFactory.getInstance().initialize("config/ehcache.xml");
     }
 
@@ -297,7 +296,7 @@ public class GameServer {
     }
 
     private static void configureDatabase() throws Exception {
-        printSection("Database Connection");
+        printSection("Datasource Settings");
         System.setProperty("hikaricp.configurationFile", "config/database.properties");
         if (!DatabaseAccess.initialize()) {
             throw new Exception("Database Access could not be initialized");
@@ -305,21 +304,21 @@ public class GameServer {
     }
 
     private static void logVersionInfo() {
-        try {
-            var versionFile = ClassLoader.getSystemResourceAsStream("version.properties");
+        try( var versionFile = ClassLoader.getSystemResourceAsStream("version.properties")) {
             if (nonNull(versionFile)) {
-
                 var versionProperties = new Properties();
                 versionProperties.load(versionFile);
                 var version = versionProperties.getProperty("version");
-                fullVersion = String.format("%s: %s-%s (%s)", UPDATE_NAME, version, versionProperties.getProperty("revision"), versionProperties.getProperty("buildDate"));
+                var updateName = versionProperties.getProperty("update");
+
+                fullVersion = String.format("%s: %s-%s (%s)", updateName, version, versionProperties.getProperty("revision"), versionProperties.getProperty("buildDate"));
+
                 printSection("Server Info Version");
-                LOGGER.info("Update: .................. {}", UPDATE_NAME);
+                LOGGER.info("Update: .................. {}", updateName);
                 LOGGER.info("Build Version: ........... {}", version);
                 LOGGER.info("Build Revision: .......... {}", versionProperties.getProperty("revision"));
                 LOGGER.info("Build date: .............. {}", versionProperties.getProperty("buildDate"));
                 LOGGER.info("Compiler JDK version: .... {}", versionProperties.getProperty("compilerVersion"));
-
             }
         } catch (IOException e) {
             LOGGER.warn(e.getLocalizedMessage(), e);
@@ -327,9 +326,7 @@ public class GameServer {
     }
 
     private static void printSection(String s) {
-        String format = "{}=[ {} ]";
-        var len = s.length();
-        LOGGER.info(format, "-".repeat(64 - len), s);
+        LOGGER.info("{}=[ {} ]", "-".repeat(64 - s.length()), s);
     }
 
     public static GameServer getInstance() {

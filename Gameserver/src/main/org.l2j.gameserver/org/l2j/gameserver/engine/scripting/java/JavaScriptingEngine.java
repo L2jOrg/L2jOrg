@@ -1,7 +1,7 @@
-package org.l2j.gameserver.scripting.java;
+package org.l2j.gameserver.engine.scripting.java;
 
-import org.l2j.gameserver.scripting.AbstractScriptingEngine;
-import org.l2j.gameserver.scripting.IExecutionContext;
+import org.l2j.gameserver.engine.scripting.AbstractScriptingEngine;
+import org.l2j.gameserver.engine.scripting.IExecutionContext;
 
 import javax.lang.model.SourceVersion;
 import javax.tools.JavaCompiler;

@@ -1,4 +1,4 @@
-package org.l2j.gameserver.engines.captcha;
+package org.l2j.gameserver.engine.captcha;
 
 import io.github.joealisson.primitive.IntMap;
 import io.github.joealisson.primitive.CHashIntMap;

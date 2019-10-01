@@ -1,9 +1,9 @@
-package org.l2j.gameserver.scripting.java;
+package org.l2j.gameserver.engine.scripting.java;
 
 import org.l2j.commons.util.FilterUtil;
 import org.l2j.commons.util.Util;
-import org.l2j.gameserver.scripting.AbstractExecutionContext;
-import org.l2j.gameserver.scripting.annotations.Disabled;
+import org.l2j.gameserver.engine.scripting.AbstractExecutionContext;
+import org.l2j.gameserver.engine.scripting.annotations.Disabled;
 import org.l2j.gameserver.settings.ServerSettings;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

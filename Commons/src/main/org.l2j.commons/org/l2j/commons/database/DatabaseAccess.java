@@ -8,14 +8,17 @@ import javax.cache.Cache;
 import java.lang.reflect.Proxy;
 import java.sql.SQLException;
 
+/**
+ * @author JoeAlisson
+ */
 public class DatabaseAccess {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(DatabaseAccess.class);
-    private static boolean initialized = false;
-
     @SuppressWarnings("rawtypes")
-    private static Cache<Class, DAO> cache = CacheFactory.getInstance().getCache("dao", Class.class, DAO.class);
-    private static JDBCInvocation handler = new JDBCInvocation();
+    private static final Cache<Class, DAO> cache = CacheFactory.getInstance().getCache("dao", Class.class, DAO.class);
+    private static final JDBCInvocation handler = new JDBCInvocation();
+
+    private volatile static boolean initialized = false;
 
     public static boolean initialize() {
         if(initialized) {
@@ -23,12 +26,11 @@ public class DatabaseAccess {
         }
         try {
             DatabaseFactory.getInstance();
-            initialized = true;
-            return true;
+            return initialized = true;
         } catch (SQLException e) {
             LOGGER.error(e.getLocalizedMessage(), e);
         }
-        return false;
+        return initialized;
     }
 
     public static <T extends DAO<?>> T getDAO(Class<T> daoClass) {

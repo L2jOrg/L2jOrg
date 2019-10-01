@@ -1,4 +1,4 @@
-package org.l2j.gameserver.scripting;
+package org.l2j.gameserver.engine.scripting;
 
 import org.l2j.commons.util.Util;
 

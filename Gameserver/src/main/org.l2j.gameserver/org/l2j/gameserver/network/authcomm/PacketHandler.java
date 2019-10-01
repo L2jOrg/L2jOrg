@@ -6,42 +6,26 @@ import org.l2j.gameserver.network.authcomm.as2gs.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * @author JoeAlisson
+ */
 public class PacketHandler implements io.github.joealisson.mmocore.PacketHandler<AuthServerClient> {
-	private static final Logger _log = LoggerFactory.getLogger(PacketHandler.class);
+	private static final Logger LOGGER = LoggerFactory.getLogger(PacketHandler.class);
 
-	public ReadablePacket<AuthServerClient> handlePacket(PacketBuffer buf, AuthServerClient client)
-	{
-		ReadablePacket<AuthServerClient> packet = null;
-
+	public ReadablePacket<AuthServerClient> handlePacket(PacketBuffer buf, AuthServerClient client) {
 		int id = buf.read() & 0xff;
-
-		switch(id)
-		{
-			case 0x00:
-				packet = new AuthResponse();
-				break;
-			case 0x01:
-				packet = new LoginServerFail();
-				break;
-			case 0x02:
-				packet = new PlayerAuthResponse();
-				break;
-			case 0x03:
-				packet = new KickPlayer();
-				break;
-			case 0x04:
-				packet = new GetAccountInfo();
-				break;
-			case 0x06:
-				// packet = new ChangePasswordResponse();
-				break;
-			case 0xff:
-				packet = new PingRequest();
-				break;
-			default:
-				_log.error("Received unknown packet: " + Integer.toHexString(id));
-		}
-
-		return packet;
+		return switch(id) {
+			case 0x00 -> new AuthResponse();
+			case 0x01 -> new LoginServerFail();
+			case 0x02 -> new PlayerAuthResponse();
+			case 0x03 -> new KickPlayer();
+			case 0x04 -> new GetAccountInfo();
+			case 0x06 -> null; // new ChangePasswordResponse();
+			case 0xff -> new PingRequest();
+			default -> {
+				LOGGER.error("Received unknown packet: {}", Integer.toHexString(id));
+				yield null;
+			}
+		};
 	}
 }

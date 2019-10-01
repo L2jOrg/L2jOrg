@@ -8,7 +8,7 @@ import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.database.dao.BotReportDAO;
 import org.l2j.gameserver.data.database.data.BotReportData;
 import org.l2j.gameserver.data.xml.impl.SkillData;
-import org.l2j.gameserver.engines.captcha.CaptchaEngine;
+import org.l2j.gameserver.engine.captcha.CaptchaEngine;
 import org.l2j.gameserver.instancemanager.PunishmentManager;
 import org.l2j.gameserver.model.Clan;
 import org.l2j.gameserver.model.WorldObject;

@@ -27,7 +27,7 @@ import org.l2j.gameserver.instancemanager.QuestManager;
 import org.l2j.gameserver.instancemanager.WalkingManager;
 import org.l2j.gameserver.world.zone.ZoneManager;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.scripting.ScriptEngineManager;
+import org.l2j.gameserver.engine.scripting.ScriptEngineManager;
 import org.l2j.gameserver.util.BuilderUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

@@ -1,4 +1,4 @@
-package org.l2j.gameserver.scripting;
+package org.l2j.gameserver.engine.scripting;
 
 import java.nio.file.Path;
 import java.util.HashMap;

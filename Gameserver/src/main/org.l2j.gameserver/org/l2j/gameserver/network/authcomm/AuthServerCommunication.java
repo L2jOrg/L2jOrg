@@ -47,7 +47,7 @@ public class AuthServerCommunication implements Runnable, PacketExecutor<AuthSer
 
     public void connect() throws IOException, ExecutionException, InterruptedException {
         var serverSettings = getSettings(ServerSettings.class);
-        logger.info("Connecting to authserver on {}:{}",serverSettings.authServerAddress(), serverSettings.authServerPort());
+        logger.info("Connecting to authserver on {}:{}", serverSettings.authServerAddress(), serverSettings.authServerPort());
         InetSocketAddress address = isNullOrEmpty(serverSettings.authServerAddress()) ? new InetSocketAddress(serverSettings.port()) : new InetSocketAddress(serverSettings.authServerAddress(), serverSettings.authServerPort());
         client = Connector.create(AuthServerClient::new, new PacketHandler(), this).connect(address);
     }

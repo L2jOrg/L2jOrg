@@ -32,7 +32,7 @@ import org.l2j.gameserver.model.events.impl.sieges.OnCastleSiegeStart;
 import org.l2j.gameserver.model.events.listeners.ConsumerEventListener;
 import org.l2j.gameserver.model.events.returns.TerminateReturn;
 import org.l2j.gameserver.model.holders.ItemHolder;
-import org.l2j.gameserver.scripting.annotations.Disabled;
+import org.l2j.gameserver.engine.scripting.annotations.Disabled;
 
 import static org.l2j.gameserver.util.GameUtils.isAttackable;
 import static org.l2j.gameserver.util.GameUtils.isPlayable;

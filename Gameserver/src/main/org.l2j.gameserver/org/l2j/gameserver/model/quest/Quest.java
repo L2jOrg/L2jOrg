@@ -42,7 +42,7 @@ import org.l2j.gameserver.network.serverpackets.ActionFailed;
 import org.l2j.gameserver.network.serverpackets.ExQuestNpcLogList;
 import org.l2j.gameserver.network.serverpackets.html.NpcHtmlMessage;
 import org.l2j.gameserver.network.serverpackets.html.NpcQuestHtmlMessage;
-import org.l2j.gameserver.scripting.ScriptEngineManager;
+import org.l2j.gameserver.engine.scripting.ScriptEngineManager;
 import org.l2j.gameserver.util.GameUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

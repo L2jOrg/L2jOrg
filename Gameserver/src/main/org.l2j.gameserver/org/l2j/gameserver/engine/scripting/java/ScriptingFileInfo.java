@@ -1,4 +1,4 @@
-package org.l2j.gameserver.scripting.java;
+package org.l2j.gameserver.engine.scripting.java;
 
 import javax.tools.JavaFileManager.Location;
 import java.nio.file.Path;

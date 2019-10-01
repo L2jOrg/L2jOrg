@@ -1,4 +1,4 @@
-package org.l2j.gameserver.engines.items;
+package org.l2j.gameserver.engine.items;
 
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.items.ItemTemplate;

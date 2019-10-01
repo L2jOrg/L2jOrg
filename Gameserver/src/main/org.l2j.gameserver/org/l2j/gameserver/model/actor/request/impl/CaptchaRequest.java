@@ -9,7 +9,7 @@ import java.time.Instant;
 import java.time.temporal.ChronoUnit;
 
 import static java.lang.System.currentTimeMillis;
-import static org.l2j.gameserver.engines.captcha.CaptchaEngine.Captcha;
+import static org.l2j.gameserver.engine.captcha.CaptchaEngine.Captcha;
 
 public class CaptchaRequest extends AbstractRequest {
 

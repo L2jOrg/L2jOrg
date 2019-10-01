@@ -1,4 +1,4 @@
-package org.l2j.gameserver.engines;
+package org.l2j.gameserver.engine;
 
 import org.l2j.gameserver.datatables.ItemTable;
 import org.l2j.gameserver.enums.CastleSide;

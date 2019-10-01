@@ -1,4 +1,4 @@
-package org.l2j.gameserver.scripting;
+package org.l2j.gameserver.engine.scripting;
 
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.settings.ServerSettings;
@@ -30,8 +30,8 @@ public final class ScriptEngineManager  {
     private static final Path CONDITION_HANDLER_FILE = Paths.get(SCRIPT_FOLDER.toString(), "org.l2j.scripts", "handlers", "ConditionMasterHandler.java");
     private static final Path ONE_DAY_REWARD_MASTER_HANDLER = Paths.get(SCRIPT_FOLDER.toString(), "org.l2j.scripts", "handlers", "DailyMissionMasterHandler.java");
 
-    private final Map<String, IExecutionContext> _extEngines = new HashMap<>();
-    private IExecutionContext _currentExecutionContext = null;
+    private final Map<String, IExecutionContext> extEngines = new HashMap<>();
+    private IExecutionContext currentExecutionContext = null;
 
     private ScriptEngineManager() {
         // no public instances
@@ -60,14 +60,14 @@ public final class ScriptEngineManager  {
         maybeSetProperties(engine.getLanguageName().toLowerCase(), props, engine);
         final IExecutionContext context = engine.createExecutionContext();
         for (String commonExtension : engine.getCommonFileExtensions()) {
-            _extEngines.put(commonExtension, context);
+            extEngines.put(commonExtension, context);
         }
 
         LOGGER.info("{} {} ({} {})", engine.getEngineName(), engine.getEngineVersion(), engine.getLanguageName(), engine.getLanguageVersion());
     }
 
     private void maybeSetProperties(String language, Properties props, IScriptingEngine engine) {
-        for (Entry<Object, Object> prop : props.entrySet()) {
+        for (var prop : props.entrySet()) {
             String key = (String) prop.getKey();
             String value = (String) prop.getValue();
 
@@ -82,7 +82,7 @@ public final class ScriptEngineManager  {
     }
 
     private IExecutionContext getEngineByExtension(String ext) {
-        return _extEngines.get(ext);
+        return extEngines.get(ext);
     }
 
     private String getFileExtension(Path p) {
@@ -134,14 +134,14 @@ public final class ScriptEngineManager  {
         }
 
         for (Entry<IExecutionContext, List<Path>> entry : parseScriptDirectory().entrySet()) {
-            _currentExecutionContext = entry.getKey();
+            currentExecutionContext = entry.getKey();
             try {
-                final Map<Path, Throwable> invokationErrors = _currentExecutionContext.executeScripts(entry.getValue());
+                final Map<Path, Throwable> invokationErrors = currentExecutionContext.executeScripts(entry.getValue());
                 for (Entry<Path, Throwable> entry2 : invokationErrors.entrySet()) {
                     LOGGER.warn("{} failed execution! {}", entry2.getKey(), entry2.getValue());
                 }
             } finally {
-                _currentExecutionContext = null;
+                currentExecutionContext = null;
             }
         }
     }
@@ -193,19 +193,19 @@ public final class ScriptEngineManager  {
         final IExecutionContext engine = getEngineByExtension(ext);
         Objects.requireNonNull(engine, "ScriptEngine: No engine registered for extension " + ext + "!");
 
-        _currentExecutionContext = engine;
+        currentExecutionContext = engine;
         try {
             final Entry<Path, Throwable> error = engine.executeScript(sourceFile);
             if (error != null) {
                 throw new Exception("ScriptEngine: " + error.getKey() + " failed execution!", error.getValue());
             }
         } finally {
-            _currentExecutionContext = null;
+            currentExecutionContext = null;
         }
     }
 
     public Path getCurrentLoadingScript() {
-        return _currentExecutionContext != null ? _currentExecutionContext.getCurrentExecutingScript() : null;
+        return currentExecutionContext != null ? currentExecutionContext.getCurrentExecutingScript() : null;
     }
 
 

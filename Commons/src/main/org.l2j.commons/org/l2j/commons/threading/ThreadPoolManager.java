@@ -9,7 +9,7 @@ public class ThreadPoolManager {
     private final ThreadPoolExecutor executor;
     private final ForkJoinPool forkJoinPool;
 
-    private boolean _shutdown;
+    private boolean shutdown;
 
     private ThreadPoolManager() {
         RejectedExecutionHandler rejectedHandler = new RejectedExecutionHandlerImpl();
@@ -44,7 +44,7 @@ public class ThreadPoolManager {
 
     public boolean isShutdown()
     {
-        return _shutdown;
+        return shutdown;
     }
 
     public static ScheduledFuture<?> schedule(Runnable r, long delay){
@@ -94,7 +94,7 @@ public class ThreadPoolManager {
 
     public void shutdown() throws InterruptedException
     {
-        _shutdown = true;
+        shutdown = true;
         try
         {
             scheduledExecutor.shutdown();

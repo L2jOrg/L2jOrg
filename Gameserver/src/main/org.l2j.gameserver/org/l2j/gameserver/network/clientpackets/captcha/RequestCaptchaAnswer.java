@@ -1,7 +1,7 @@
 package org.l2j.gameserver.network.clientpackets.captcha;
 
 import org.l2j.gameserver.datatables.ReportTable;
-import org.l2j.gameserver.engines.captcha.CaptchaEngine;
+import org.l2j.gameserver.engine.captcha.CaptchaEngine;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.request.impl.CaptchaRequest;
 import org.l2j.gameserver.network.SystemMessageId;

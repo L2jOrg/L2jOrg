@@ -5,6 +5,8 @@ plugins {
     id "application"
 }
 
+ext.updateName = "Classic - Kamael"
+
 ext.moduleName = 'org.l2j.gameserver'
 mainClassName = "org.l2j.gameserver.GameServer"
 
@@ -42,6 +44,7 @@ task createVersionFile(dependsOn: processResources) {
             p['revision'] = rootProject.ext.revision
             p['buildDate'] =new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSSZ").format(new Date())
             p['compilerVersion'] = rootProject.ext.buildJDK
+            p['update'] = updateName
             p.store w, null
         }
     }

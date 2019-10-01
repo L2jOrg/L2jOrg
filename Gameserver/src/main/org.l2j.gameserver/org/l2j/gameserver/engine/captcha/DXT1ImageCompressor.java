@@ -1,4 +1,4 @@
-package org.l2j.gameserver.engines.captcha;
+package org.l2j.gameserver.engine.captcha;
 
 import java.awt.image.BufferedImage;
 import java.nio.ByteBuffer;

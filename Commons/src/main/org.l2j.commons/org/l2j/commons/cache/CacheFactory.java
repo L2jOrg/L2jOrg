@@ -11,20 +11,12 @@ import java.nio.file.Path;
 
 import static java.util.Objects.isNull;
 
-public class CacheFactory {
+public final class CacheFactory {
 
-    private static CacheFactory instance;
     private CacheManager manager;
 
     private CacheFactory() {
 
-    }
-
-    public static CacheFactory getInstance() {
-        if(isNull(instance)) {
-            instance = new CacheFactory();
-        }
-        return  instance;
     }
 
     public void initialize(String configurationFilePath) {
@@ -52,8 +44,16 @@ public class CacheFactory {
 
     private void checkInitilized() {
         if (isNull(manager)) {
-            throw new IllegalStateException("CacheFactory not initialized. Call method initialize before use it");
+            throw new IllegalStateException("CacheFactory not initialized. Call initialize method before use it");
         }
+    }
+
+    private static final class Singleton {
+        private static final CacheFactory INSTANCE = new CacheFactory();
+    }
+
+    public static CacheFactory getInstance() {
+        return  Singleton.INSTANCE;
     }
 
 }

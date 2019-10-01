@@ -1,8 +1,8 @@
-package org.l2j.gameserver.engines;
+package org.l2j.gameserver.engine;
 
 import org.l2j.commons.util.filter.XMLFilter;
 import org.l2j.gameserver.Config;
-import org.l2j.gameserver.engines.items.DocumentItem;
+import org.l2j.gameserver.engine.items.DocumentItem;
 import org.l2j.gameserver.model.items.ItemTemplate;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
