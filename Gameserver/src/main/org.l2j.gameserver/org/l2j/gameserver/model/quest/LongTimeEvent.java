@@ -2,7 +2,7 @@ package org.l2j.gameserver.model.quest;
 
 import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.commons.threading.ThreadPoolManager;
-import org.l2j.gameserver.data.sql.impl.AnnouncementsTable;
+import org.l2j.gameserver.data.database.manager.AnnouncementsManager;
 import org.l2j.gameserver.data.xml.impl.NpcData;
 import org.l2j.gameserver.datatables.EventDroplist;
 import org.l2j.gameserver.datatables.ItemTable;
@@ -256,7 +256,7 @@ public class LongTimeEvent extends Quest {
         Broadcast.toAllOnlinePlayers(_onEnterMsg);
 
         // Add announce for entering players
-        AnnouncementsTable.getInstance().addAnnouncement(new EventAnnouncement(_eventPeriod, _onEnterMsg));
+        AnnouncementsManager.getInstance().addAnnouncement(new EventAnnouncement(_eventPeriod, _onEnterMsg));
 
         // Schedule event end (now only for message sending)
         ThreadPoolManager.schedule(new ScheduleEnd(), millisToEventEnd);

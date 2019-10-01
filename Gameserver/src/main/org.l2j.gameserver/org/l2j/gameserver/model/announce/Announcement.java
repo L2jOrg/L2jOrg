@@ -47,7 +47,7 @@ public class Announcement implements IAnnouncement {
 
     @Override
     public void setType(AnnouncementType type) {
-        _type = type;
+
     }
 
     @Override
@@ -57,17 +57,17 @@ public class Announcement implements IAnnouncement {
 
     @Override
     public void setContent(String content) {
-        _content = content;
+
     }
 
     @Override
     public String getAuthor() {
-        return _author;
+        return null;
     }
 
     @Override
     public void setAuthor(String author) {
-        _author = author;
+
     }
 
     @Override
@@ -75,7 +75,6 @@ public class Announcement implements IAnnouncement {
         return true;
     }
 
-    @Override
     public boolean storeMe() {
         try (Connection con = DatabaseFactory.getInstance().getConnection();
              PreparedStatement ps = con.prepareStatement(INSERT_QUERY, Statement.RETURN_GENERATED_KEYS)) {

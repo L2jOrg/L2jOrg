@@ -1,43 +1,31 @@
-/*
- * This file is part of the L2J Mobius project.
- *
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
- * General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this program. If not, see <http://www.gnu.org/licenses/>.
- */
 package org.l2j.gameserver.model.announce;
 
-import org.l2j.gameserver.idfactory.IdFactory;
+import org.l2j.gameserver.data.database.data.Announce;
 import org.l2j.gameserver.script.DateRange;
 
 import java.util.Date;
+import java.util.concurrent.atomic.AtomicInteger;
 
 /**
  * @author UnAfraid
  */
-public class EventAnnouncement implements IAnnouncement {
-    private final int _id;
-    private final DateRange _range;
-    private String _content;
+public class EventAnnouncement implements Announce {
+
+    private volatile static AtomicInteger virtualId = new AtomicInteger();
+
+    private final int id;
+    private final DateRange range;
+    private String content;
 
     public EventAnnouncement(DateRange range, String content) {
-        _id = IdFactory.getInstance().getNextId();
-        _range = range;
-        _content = content;
+        id = virtualId.getAndDecrement();
+        this.range = range;
+        this.content = content;
     }
 
     @Override
     public int getId() {
-        return _id;
+        return id;
     }
 
     @Override
@@ -46,48 +34,34 @@ public class EventAnnouncement implements IAnnouncement {
     }
 
     @Override
-    public void setType(AnnouncementType type) {
-        throw new UnsupportedOperationException();
-    }
-
-    @Override
     public boolean isValid() {
-        return _range.isWithinRange(new Date());
+        return range.isWithinRange(new Date());
     }
 
     @Override
     public String getContent() {
-        return _content;
+        return content;
     }
 
-    @Override
     public void setContent(String content) {
-        _content = content;
+        this.content = content;
     }
 
-    @Override
     public String getAuthor() {
-        return "N/A";
+        return "System";
     }
 
     @Override
+    public void setType(AnnouncementType type) {
+
+    }
+
     public void setAuthor(String author) {
         throw new UnsupportedOperationException();
     }
 
     @Override
-    public boolean deleteMe() {
-        IdFactory.getInstance().releaseId(_id);
-        return true;
-    }
-
-    @Override
-    public boolean storeMe() {
-        return true;
-    }
-
-    @Override
-    public boolean updateMe() {
-        throw new UnsupportedOperationException();
+    public boolean canBeStored() {
+        return false;
     }
 }

@@ -21,7 +21,7 @@ final class GeoEnginePathFinding extends GeoEngine {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(GeoEnginePathFinding.class);
 
-    private final BufferHolder[] buffers = new BufferHolder[] {
+    private final BufferHolder[] buffers = {
         new BufferHolder(100, 6),
         new BufferHolder(128, 6),
         new BufferHolder(192, 6),

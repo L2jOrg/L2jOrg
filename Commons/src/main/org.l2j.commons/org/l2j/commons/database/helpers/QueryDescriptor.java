@@ -64,10 +64,21 @@ public class QueryDescriptor implements AutoCloseable {
     }
 
     public void execute(Connection con, Object[] args) throws SQLException {
-        var statement = con.prepareStatement(query);
+        var statement = con.prepareStatement(query, Statement.RETURN_GENERATED_KEYS);
         strategy.setParameters(statement, args);
         statement.execute();
         statementLocal.set(statement);
+    }
+
+    public int getGeneratedKey() throws SQLException{
+        var statment = statementLocal.get();
+        if(nonNull(statment)) {
+            var rs = statment.getGeneratedKeys();
+            if(rs.next()) {
+                return rs.getInt(1);
+            }
+        }
+        return  0;
     }
 
     public Integer getUpdateCount() throws SQLException {

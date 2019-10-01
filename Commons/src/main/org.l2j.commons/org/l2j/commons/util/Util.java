@@ -150,6 +150,23 @@ public class Util {
         return Collections.unmodifiableList(fields);
     }
 
+    public static Field findField(final Class<?> classToSearch, String fieldName) {
+        Class<?> searchClass = classToSearch;
+        Field field = null;
+        while (nonNull(searchClass)) {
+            try {
+                if(nonNull( field = searchClass.getDeclaredField(fieldName))) {
+                    break;
+                }
+                searchClass = searchClass.getSuperclass();
+            } catch (NoSuchFieldException e) {
+                break;
+            }
+        }
+        return field;
+    }
+
+
     public static boolean isAnyNull(Object... objects) {
         for (Object object : objects) {
             if(isNull(object)) {

@@ -106,6 +106,7 @@ module org.l2j.gameserver {
     exports org.l2j.gameserver.network.serverpackets.html;
     exports org.l2j.gameserver.engine.geo.settings;
     exports org.l2j.gameserver.data.xml;
+    exports org.l2j.gameserver.data.database.manager;
 
     uses org.l2j.gameserver.engine.scripting.IScriptingEngine;
     provides org.l2j.gameserver.engine.scripting.IScriptingEngine

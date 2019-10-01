@@ -7,6 +7,7 @@ import org.l2j.commons.database.DatabaseAccess;
 import org.l2j.commons.threading.ThreadPoolManager;
 import org.l2j.commons.util.DeadLockDetector;
 import org.l2j.gameserver.cache.HtmCache;
+import org.l2j.gameserver.data.database.manager.AnnouncementsManager;
 import org.l2j.gameserver.data.database.dao.CharacterDAO;
 import org.l2j.gameserver.data.database.elemental.ElementalSpiritManager;
 import org.l2j.gameserver.data.sql.impl.*;
@@ -77,7 +78,7 @@ public class GameServer {
         printSection("Server Data");
         DoorDataManager.init();
         FenceDataManager.init();
-        AnnouncementsTable.getInstance();
+        AnnouncementsManager.getInstance();
         GlobalVariablesManager.getInstance();
         ActionData.getInstance();
         CategoryData.getInstance();
