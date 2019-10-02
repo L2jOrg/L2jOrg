@@ -1,6 +1,5 @@
-package org.l2j.gameserver.model.announce;
+package org.l2j.gameserver.data.database.announce;
 
-import org.l2j.gameserver.data.database.data.Announce;
 import org.l2j.gameserver.script.DateRange;
 
 import java.util.Date;
@@ -11,7 +10,7 @@ import java.util.concurrent.atomic.AtomicInteger;
  */
 public class EventAnnouncement implements Announce {
 
-    private volatile static AtomicInteger virtualId = new AtomicInteger();
+    private volatile static AtomicInteger virtualId = new AtomicInteger(-1);
 
     private final int id;
     private final DateRange range;

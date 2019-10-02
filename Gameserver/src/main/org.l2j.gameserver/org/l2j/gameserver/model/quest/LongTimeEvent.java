@@ -2,7 +2,7 @@ package org.l2j.gameserver.model.quest;
 
 import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.commons.threading.ThreadPoolManager;
-import org.l2j.gameserver.data.database.manager.AnnouncementsManager;
+import org.l2j.gameserver.data.database.announce.manager.AnnouncementsManager;
 import org.l2j.gameserver.data.xml.impl.NpcData;
 import org.l2j.gameserver.datatables.EventDroplist;
 import org.l2j.gameserver.datatables.ItemTable;
@@ -10,7 +10,7 @@ import org.l2j.gameserver.instancemanager.EventShrineManager;
 import org.l2j.gameserver.world.World;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.announce.EventAnnouncement;
+import org.l2j.gameserver.data.database.announce.EventAnnouncement;
 import org.l2j.gameserver.model.events.AbstractScript;
 import org.l2j.gameserver.model.holders.DropHolder;
 import org.l2j.gameserver.script.DateRange;

@@ -39,8 +39,8 @@ public class ButtonsStyle implements IHtmlStyle {
     }
 
     @Override
-    public String applyBypass(String bypass, String name, boolean isEnabled) {
-        if (isEnabled) {
+    public String applyBypass(String bypass, String name, boolean isActive) {
+        if (isActive) {
             return String.format(DEFAULT_PAGE_TEXT_FORMAT, name);
         }
         return String.format(DEFAULT_PAGE_LINK_FORMAT, bypass, name, _width, _height, _back, _fore);

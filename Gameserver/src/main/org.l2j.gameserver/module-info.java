@@ -82,7 +82,6 @@ module org.l2j.gameserver {
     exports org.l2j.gameserver.model.events.impl.sieges;
     exports org.l2j.gameserver.engine.scripting.annotations;
     exports org.l2j.gameserver.network.serverpackets.luckygame;
-    exports org.l2j.gameserver.model.announce;
     exports org.l2j.gameserver.world.zone.form;
     exports org.l2j.gameserver.model.matching;
     exports org.l2j.gameserver.model.events.impl.ceremonyofchaos;
@@ -106,7 +105,8 @@ module org.l2j.gameserver {
     exports org.l2j.gameserver.network.serverpackets.html;
     exports org.l2j.gameserver.engine.geo.settings;
     exports org.l2j.gameserver.data.xml;
-    exports org.l2j.gameserver.data.database.manager;
+    exports org.l2j.gameserver.data.database.announce.manager;
+    exports org.l2j.gameserver.data.database.announce;
 
     uses org.l2j.gameserver.engine.scripting.IScriptingEngine;
     provides org.l2j.gameserver.engine.scripting.IScriptingEngine

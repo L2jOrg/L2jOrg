@@ -1,6 +1,4 @@
-package org.l2j.gameserver.data.database.data;
-
-import org.l2j.gameserver.model.announce.AnnouncementType;
+package org.l2j.gameserver.data.database.announce;
 
 public interface Announce {
 

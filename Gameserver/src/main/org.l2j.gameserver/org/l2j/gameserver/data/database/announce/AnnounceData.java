@@ -1,7 +1,6 @@
-package org.l2j.gameserver.data.database.data;
+package org.l2j.gameserver.data.database.announce;
 
 import org.l2j.commons.database.annotation.Table;
-import org.l2j.gameserver.model.announce.AnnouncementType;
 
 /**
  * @author JoeAlisson
@@ -27,7 +26,7 @@ public class AnnounceData implements Announce {
         this.author = author;
     }
 
-    public AnnounceData(AnnouncementType type, String content, String author, int initDelay, int delay, int repeat) {
+    public AnnounceData(AnnouncementType type, String content, String author, long initDelay, long delay, int repeat) {
         this.type = type;
         this.content = content;
         this.author = author;

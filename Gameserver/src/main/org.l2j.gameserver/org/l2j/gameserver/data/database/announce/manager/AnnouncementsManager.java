@@ -1,14 +1,14 @@
-package org.l2j.gameserver.data.database.manager;
+package org.l2j.gameserver.data.database.announce.manager;
 
 import io.github.joealisson.primitive.CHashIntMap;
 import io.github.joealisson.primitive.IntMap;
 import org.l2j.commons.threading.ThreadPoolManager;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.database.dao.AnnounceDAO;
-import org.l2j.gameserver.data.database.data.Announce;
-import org.l2j.gameserver.data.database.data.AnnounceData;
+import org.l2j.gameserver.data.database.announce.Announce;
+import org.l2j.gameserver.data.database.announce.AnnounceData;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.announce.AnnouncementType;
+import org.l2j.gameserver.data.database.announce.AnnouncementType;
 import org.l2j.gameserver.network.serverpackets.CreatureSay;
 import org.l2j.gameserver.util.Broadcast;
 
@@ -20,7 +20,7 @@ import static java.util.Objects.nonNull;
 import static org.l2j.commons.database.DatabaseAccess.getDAO;
 import static org.l2j.gameserver.enums.ChatType.ANNOUNCEMENT;
 import static org.l2j.gameserver.enums.ChatType.CRITICAL_ANNOUNCE;
-import static org.l2j.gameserver.model.announce.AnnouncementType.*;
+import static org.l2j.gameserver.data.database.announce.AnnouncementType.*;
 
 /**
  * Loads announcements from database.
@@ -43,7 +43,7 @@ public final class AnnouncementsManager {
         for (AnnounceData announce : announces) {
             announcements.put(announce.getId(), announce);
 
-            if(isAutoAnnounce(announce.getType())) {
+            if(isAutoAnnounce(announce)) {
                 scheduleAnnounce(announce);
             }
         }
@@ -104,8 +104,9 @@ public final class AnnouncementsManager {
         var announce = announcements.remove(id);
         if(announce instanceof AnnounceData) {
             getDAO(AnnounceDAO.class).deleteById(id);
+            return true;
         }
-        return nonNull(announce);
+        return false;
     }
 
     public void updateAnnouncement(Announce announce) {

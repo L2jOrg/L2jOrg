@@ -1,54 +1,26 @@
-<html noscrollbar>
-	<body>
-		<center>
-			<br>
-			<table border="0" cellpadding="0" cellspacing="0" width="97%" height="480" background="L2UI_CH3.refinewnd_back_Pattern">
+<html noscrollbar><body>
+<center><br>
+	<table border="0" cellpadding="0" cellspacing="0" width="97%" height="480" background="L2UI_CH3.refinewnd_back_Pattern">
+		<tr><td valign="top" align="center">
+			<table border="0" cellpadding="0" cellspacing="0">
+				<tr><td width="256" height="185" background="L2UI_CT1.OlympiadWnd_DF_GrandTexture"></td></tr>
+			</table>
+			Announcement: %id%<br1>
+			<table width=600 height=185 cellspacing=5 background="L2UI_CT1.Windows.Windows_DF_TooltipBG">
+				<tr><td>Type</td><td>%type%</td></tr>
+				<tr><td>Initial Delay</td><td>%initial%</td></tr>
+				<tr><td>Delay</td><td>%delay%</td></tr>
+				<tr><td>Repeat:</td><td>%repeat%</td></tr>
+				<tr><td>Author:</td><td>%author%</td></tr>
+				<tr><td>Text:</td><td>%content%</td></tr>
+			</table>
+			<table>
 				<tr>
-					<td valign="top" align="center">
-						<table border="0" cellpadding="0" cellspacing="0">
-							<tr>
-								<td width="256" height="185" background="L2UI_CT1.OlympiadWnd_DF_GrandTexture"></td>
-							</tr>
-						</table>
-						Announcement: %id%<br1>
-						<table width=600 height=185 cellspacing=5 background="L2UI_CT1.Windows.Windows_DF_TooltipBG">
-							<tr>
-								<td>Type</td>
-								<td>%type%</td>
-							</tr>
-							<tr>
-								<td>Initial Delay</td>
-								<td>%initial%</td>
-							</tr>
-							<tr>
-								<td>Delay</td>
-								<td>%delay%</td>
-							</tr>
-							<tr>
-								<td>Repeat:</td>
-								<td>%repeat%</td>
-							</tr>
-							<tr>
-								<td>Author:</td>
-								<td>%author%</td>
-							</tr>
-							<tr>
-								<td>Text:</td>
-								<td>%content%</td>
-							</tr>
-						</table>
-						<center>
-							<table>
-								<tr>
-									<td><button action="bypass -h admin_announces remove %id%" width="70">Remove</button></td>
-									<td><button action="bypass -h admin_announces restart %id" width="70">Restart</button></td>
-									<td><button action="bypass -h admin_announces list" width="70">Back</button></td>
-								</tr>
-							</table>
-						</center>
-					</td>
+					<td><button action="bypass -h admin_announces remove %id%" width="70">Remove</button></td>
+					<td><button action="bypass -h admin_announces restart %id" width="70">Restart</button></td>
+					<td><button action="bypass -h admin_announces list" width="70">Back</button></td>
 				</tr>
 			</table>
-		</center>
-	</body>
-</html>
+		</td></tr>
+	</table>
+</center></body></html>

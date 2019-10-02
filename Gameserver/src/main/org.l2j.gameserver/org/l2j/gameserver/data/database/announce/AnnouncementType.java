@@ -1,4 +1,4 @@
-package org.l2j.gameserver.model.announce;
+package org.l2j.gameserver.data.database.announce;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -34,7 +34,12 @@ public enum AnnouncementType {
         return NORMAL;
     }
 
-    public static boolean isAutoAnnounce(AnnouncementType type) {
+    public static boolean isAutoAnnounce(Announce announce) {
+        var type = announce.getType();
         return  type == AUTO_CRITICAL || type == AUTO_NORMAL;
+    }
+
+    public boolean isAutoAnnounce() {
+        return this == AUTO_CRITICAL || this == AUTO_NORMAL;
     }
 }

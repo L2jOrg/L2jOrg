@@ -1,19 +1,3 @@
-/*
- * This file is part of the L2J Mobius project.
- *
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
- * General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this program. If not, see <http://www.gnu.org/licenses/>.
- */
 package org.l2j.gameserver.model.html;
 
 import org.l2j.gameserver.model.html.formatters.DefaultFormatter;
@@ -22,26 +6,28 @@ import org.l2j.gameserver.model.html.styles.DefaultStyle;
 
 import java.util.Arrays;
 import java.util.Collection;
-import java.util.Objects;
+
+import static java.lang.Math.max;
+import static java.util.Objects.requireNonNull;
 
 /**
  * @param <T>
  * @author UnAfraid
  */
 public class PageBuilder<T> {
-    private final Collection<T> _elements;
-    private final int _elementsPerPage;
-    private final String _bypass;
-    private int _currentPage = 0;
-    private IPageHandler _pageHandler = DefaultPageHandler.INSTANCE;
-    private IBypassFormatter _formatter = DefaultFormatter.INSTANCE;
-    private IHtmlStyle _style = DefaultStyle.INSTANCE;
-    private IBodyHandler<T> _bodyHandler;
+    private final Collection<T> elements;
+    private final int elementsPerPage;
+    private final String bypass;
+    private int currentPage = 0;
+    private IPageHandler pageHandler = DefaultPageHandler.INSTANCE;
+    private IBypassFormatter formatter = DefaultFormatter.INSTANCE;
+    private IHtmlStyle style = DefaultStyle.INSTANCE;
+    private IBodyHandler<T> bodyHandler;
 
     private PageBuilder(Collection<T> elements, int elementsPerPage, String bypass) {
-        _elements = elements;
-        _elementsPerPage = elementsPerPage;
-        _bypass = bypass;
+        this.elements = elements;
+        this.elementsPerPage = elementsPerPage;
+        this.bypass = bypass;
     }
 
     public static <T> PageBuilder<T> newBuilder(Collection<T> elements, int elementsPerPage, String bypass) {
@@ -53,50 +39,50 @@ public class PageBuilder<T> {
     }
 
     public PageBuilder<T> currentPage(int currentPage) {
-        _currentPage = Math.max(currentPage, 0);
+        this.currentPage = max(currentPage, 0);
         return this;
     }
 
     public PageBuilder<T> bodyHandler(IBodyHandler<T> bodyHandler) {
-        Objects.requireNonNull(bodyHandler, "Body Handler cannot be null!");
-        _bodyHandler = bodyHandler;
+        requireNonNull(bodyHandler, "Body Handler cannot be null!");
+        this.bodyHandler = bodyHandler;
         return this;
     }
 
     public PageBuilder<T> pageHandler(IPageHandler pageHandler) {
-        Objects.requireNonNull(pageHandler, "Page Handler cannot be null!");
-        _pageHandler = pageHandler;
+        requireNonNull(pageHandler, "Page Handler cannot be null!");
+        this.pageHandler = pageHandler;
         return this;
     }
 
     public PageBuilder<T> formatter(IBypassFormatter formatter) {
-        Objects.requireNonNull(formatter, "Formatter cannot be null!");
-        _formatter = formatter;
+        requireNonNull(formatter, "Formatter cannot be null!");
+        this.formatter = formatter;
         return this;
     }
 
     public PageBuilder<T> style(IHtmlStyle style) {
-        Objects.requireNonNull(style, "Style cannot be null!");
-        _style = style;
+        requireNonNull(style, "Style cannot be null!");
+        this.style = style;
         return this;
     }
 
     public PageResult build() {
-        Objects.requireNonNull(_bodyHandler, "Body was not set!");
+        requireNonNull(bodyHandler, "Body was not set!");
 
-        final int pages = (_elements.size() / _elementsPerPage) + ((_elements.size() % _elementsPerPage) > 0 ? 1 : 0);
+        final int pages = (elements.size() / elementsPerPage) + ((elements.size() % elementsPerPage) > 0 ? 1 : 0);
         final StringBuilder pagerTemplate = new StringBuilder();
         if (pages > 1) {
-            _pageHandler.apply(_bypass, _currentPage, pages, pagerTemplate, _formatter, _style);
+            pageHandler.apply(bypass, currentPage, pages, pagerTemplate, formatter, style);
         }
 
-        if (_currentPage > pages) {
-            _currentPage = pages - 1;
+        if (currentPage > pages) {
+            currentPage = pages - 1;
         }
 
-        final int start = Math.max(_elementsPerPage * _currentPage, 0);
+        final int start = max(elementsPerPage * currentPage, 0);
         final StringBuilder sb = new StringBuilder();
-        _bodyHandler.create(_elements, pages, start, _elementsPerPage, sb);
+        bodyHandler.create(elements, pages, start, elementsPerPage, sb);
         return new PageResult(pages, pagerTemplate, sb);
     }
 }
