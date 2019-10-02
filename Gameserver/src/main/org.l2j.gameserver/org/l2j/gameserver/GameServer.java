@@ -78,7 +78,7 @@ public class GameServer {
         printSection("Server Data");
         DoorDataManager.init();
         FenceDataManager.init();
-        AnnouncementsManager.getInstance();
+        AnnouncementsManager.init();
         GlobalVariablesManager.getInstance();
         ActionData.getInstance();
         CategoryData.getInstance();

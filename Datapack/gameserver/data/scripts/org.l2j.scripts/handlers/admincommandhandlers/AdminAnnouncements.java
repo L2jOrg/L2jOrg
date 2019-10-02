@@ -3,7 +3,7 @@ package handlers.admincommandhandlers;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.cache.HtmCache;
 import org.l2j.gameserver.data.database.announce.Announce;
-import org.l2j.gameserver.data.database.announce.AnnounceData;
+import org.l2j.gameserver.data.database.data.AnnounceData;
 import org.l2j.gameserver.data.database.announce.manager.AnnouncementsManager;
 import org.l2j.gameserver.handler.IAdminCommandHandler;
 import org.l2j.gameserver.model.actor.instance.Player;

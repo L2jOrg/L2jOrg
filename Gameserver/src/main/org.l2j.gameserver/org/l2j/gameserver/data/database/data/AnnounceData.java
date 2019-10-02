@@ -1,6 +1,8 @@
-package org.l2j.gameserver.data.database.announce;
+package org.l2j.gameserver.data.database.data;
 
 import org.l2j.commons.database.annotation.Table;
+import org.l2j.gameserver.data.database.announce.Announce;
+import org.l2j.gameserver.data.database.announce.AnnouncementType;
 
 /**
  * @author JoeAlisson

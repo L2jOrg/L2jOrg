@@ -6,7 +6,7 @@ import org.l2j.commons.threading.ThreadPoolManager;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.database.dao.AnnounceDAO;
 import org.l2j.gameserver.data.database.announce.Announce;
-import org.l2j.gameserver.data.database.announce.AnnounceData;
+import org.l2j.gameserver.data.database.data.AnnounceData;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.data.database.announce.AnnouncementType;
 import org.l2j.gameserver.network.serverpackets.CreatureSay;

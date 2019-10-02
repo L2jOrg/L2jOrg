@@ -2,7 +2,7 @@ package org.l2j.gameserver.data.database.dao;
 
 import org.l2j.commons.database.DAO;
 import org.l2j.commons.database.annotation.Query;
-import org.l2j.gameserver.data.database.announce.AnnounceData;
+import org.l2j.gameserver.data.database.data.AnnounceData;
 
 import java.util.List;
 
