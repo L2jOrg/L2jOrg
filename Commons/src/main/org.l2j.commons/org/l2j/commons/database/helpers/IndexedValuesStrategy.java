@@ -9,6 +9,9 @@ import java.sql.SQLException;
 
 import static java.util.Objects.isNull;
 
+/**
+ * @author JoeAlisson
+ */
 public class IndexedValuesStrategy implements MapParameterStrategy {
 
     private final IntMap<IntKeyValue<Class<?>>> parametersInfo;

@@ -6,7 +6,10 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-public class LongHandler implements  TypeHandler<Long> {
+/**
+ * @author JoeAlisson
+ */
+public class LongHandler implements TypeHandler<Long> {
     @Override
     public Long defaultValue() {
         return 0L;

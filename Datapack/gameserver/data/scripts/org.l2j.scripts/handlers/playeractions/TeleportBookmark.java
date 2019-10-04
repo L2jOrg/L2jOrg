@@ -17,13 +17,13 @@
 package handlers.playeractions;
 
 import org.l2j.gameserver.handler.IPlayerActionHandler;
-import org.l2j.gameserver.model.ActionDataHolder;
+import org.l2j.gameserver.data.xml.model.ActionData;
 import org.l2j.gameserver.model.actor.instance.Player;
 
 public final class TeleportBookmark implements IPlayerActionHandler
 {
 	@Override
-	public void useAction(Player activeChar, ActionDataHolder data, boolean ctrlPressed, boolean shiftPressed)
+	public void useAction(Player activeChar, ActionData data, boolean ctrlPressed, boolean shiftPressed)
 	{
 	}
 }

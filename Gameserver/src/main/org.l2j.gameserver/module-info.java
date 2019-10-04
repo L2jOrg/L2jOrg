@@ -107,6 +107,7 @@ module org.l2j.gameserver {
     exports org.l2j.gameserver.data.xml;
     exports org.l2j.gameserver.data.database.announce.manager;
     exports org.l2j.gameserver.data.database.announce;
+    exports org.l2j.gameserver.data.xml.model;
 
     uses org.l2j.gameserver.engine.scripting.IScriptingEngine;
     provides org.l2j.gameserver.engine.scripting.IScriptingEngine

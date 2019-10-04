@@ -11,6 +11,7 @@ import org.l2j.gameserver.data.database.announce.manager.AnnouncementsManager;
 import org.l2j.gameserver.data.database.dao.CharacterDAO;
 import org.l2j.gameserver.data.database.elemental.ElementalSpiritManager;
 import org.l2j.gameserver.data.sql.impl.*;
+import org.l2j.gameserver.data.xml.ActionManager;
 import org.l2j.gameserver.data.xml.DoorDataManager;
 import org.l2j.gameserver.data.xml.FenceDataManager;
 import org.l2j.gameserver.data.xml.impl.*;
@@ -80,7 +81,7 @@ public class GameServer {
         FenceDataManager.init();
         AnnouncementsManager.init();
         GlobalVariablesManager.getInstance();
-        ActionData.getInstance();
+        ActionManager.init();
         CategoryData.getInstance();
         SecondaryAuthData.getInstance();
         CombinationItemsData.getInstance();

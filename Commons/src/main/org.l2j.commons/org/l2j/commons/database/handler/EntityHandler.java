@@ -14,6 +14,9 @@ import java.sql.SQLException;
 import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;
 
+/**
+ * @author JoeAlisson
+ */
 public class EntityHandler implements TypeHandler<Object> {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(EntityHandler.class);

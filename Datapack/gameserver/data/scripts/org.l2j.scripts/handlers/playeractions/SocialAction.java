@@ -4,7 +4,7 @@ import org.l2j.gameserver.ai.CtrlEvent;
 import org.l2j.gameserver.ai.CtrlIntention;
 import org.l2j.gameserver.ai.NextAction;
 import org.l2j.gameserver.handler.IPlayerActionHandler;
-import org.l2j.gameserver.model.ActionDataHolder;
+import org.l2j.gameserver.data.xml.model.ActionData;
 import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.events.EventDispatcher;
@@ -24,7 +24,7 @@ import static org.l2j.gameserver.util.MathUtil.calculateDistance2D;
 public final class SocialAction implements IPlayerActionHandler
 {
 	@Override
-	public void useAction(Player activeChar, ActionDataHolder data, boolean ctrlPressed, boolean shiftPressed)
+	public void useAction(Player activeChar, ActionData data, boolean ctrlPressed, boolean shiftPressed)
 	{
 		switch (data.getOptionId())
 		{

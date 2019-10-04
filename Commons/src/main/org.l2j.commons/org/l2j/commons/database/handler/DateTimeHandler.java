@@ -6,10 +6,12 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.time.LocalDateTime;
-import java.util.Objects;
 
 import static java.util.Objects.nonNull;
 
+/**
+ * @author JoeAlisson
+ */
 public class DateTimeHandler implements TypeHandler<LocalDateTime> {
 
     @Override

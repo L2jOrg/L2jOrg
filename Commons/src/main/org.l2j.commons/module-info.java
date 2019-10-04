@@ -1,3 +1,5 @@
+import org.l2j.commons.database.handler.TypeHandler;
+
 module org.l2j.commons {
     requires java.sql;
     requires org.slf4j;
@@ -19,8 +21,8 @@ module org.l2j.commons {
     exports org.l2j.commons.network;
     exports org.l2j.commons.util.filter;
 
-    uses org.l2j.commons.database.handler.TypeHandler;
-    provides org.l2j.commons.database.handler.TypeHandler
+    uses TypeHandler;
+    provides TypeHandler
         with org.l2j.commons.database.handler.IntegerHandler,
              org.l2j.commons.database.handler.LongHandler,
              org.l2j.commons.database.handler.VoidHandler,

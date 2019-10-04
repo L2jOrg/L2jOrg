@@ -8,6 +8,10 @@ import java.sql.SQLException;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * @author JoeAlisson
+ * @param <T> the entity type
+ */
 public interface TypeHandler<T> {
 
     Map<String, TypeHandler> MAP = new HashMap<>();

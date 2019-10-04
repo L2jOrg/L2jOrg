@@ -5,6 +5,9 @@ import org.l2j.commons.database.helpers.QueryDescriptor;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
+/**
+ * @author JoeAlisson
+ */
 public class VoidHandler implements TypeHandler<Void> {
 
     @Override

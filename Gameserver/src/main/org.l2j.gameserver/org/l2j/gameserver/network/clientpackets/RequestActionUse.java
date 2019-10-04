@@ -1,10 +1,10 @@
 package org.l2j.gameserver.network.clientpackets;
 
-import org.l2j.gameserver.data.xml.impl.ActionData;
+import org.l2j.gameserver.data.xml.ActionManager;
 import org.l2j.gameserver.enums.PrivateStoreType;
 import org.l2j.gameserver.handler.IPlayerActionHandler;
 import org.l2j.gameserver.handler.PlayerActionHandler;
-import org.l2j.gameserver.model.ActionDataHolder;
+import org.l2j.gameserver.data.xml.model.ActionData;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.effects.AbstractEffect;
 import org.l2j.gameserver.model.skills.AbnormalType;
@@ -68,7 +68,7 @@ public final class RequestActionUse extends ClientPacket {
             return;
         }
 
-        final ActionDataHolder actionHolder = ActionData.getInstance().getActionData(_actionId);
+        final ActionData actionHolder = ActionManager.getInstance().getActionData(_actionId);
         if (actionHolder != null) {
             final IPlayerActionHandler actionHandler = PlayerActionHandler.getInstance().getHandler(actionHolder.getHandler());
             if (actionHandler != null) {

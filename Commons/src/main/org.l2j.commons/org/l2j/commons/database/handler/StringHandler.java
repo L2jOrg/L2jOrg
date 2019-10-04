@@ -7,6 +7,9 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
+/**
+ * @author JoeAlisson
+ */
 public class StringHandler implements TypeHandler<String> {
 
     @Override

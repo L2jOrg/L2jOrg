@@ -6,6 +6,9 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
+/**
+ * @author JoeAlisson
+ */
 public class IntegerHandler implements TypeHandler<Integer> {
 
     @Override

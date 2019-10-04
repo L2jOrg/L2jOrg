@@ -11,6 +11,9 @@ import java.util.List;
 
 import static java.util.Objects.isNull;
 
+/**
+ * @author JoeAlisson
+ */
 public class ListHandler implements TypeHandler<List<?>> {
 
     @Override

@@ -10,6 +10,9 @@ import java.util.Map;
 import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;
 
+/**
+ * @author JoeAlisson
+ */
 public class EntityBasedStrategy implements MapParameterStrategy {
 
     private final Map<String, IntKeyValue<Class<?>>> parametersInfo;

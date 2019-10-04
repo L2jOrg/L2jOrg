@@ -2,6 +2,9 @@ package org.l2j.commons.database.helpers;
 
 import java.sql.PreparedStatement;
 
+/**
+ * @author JoeAlisson
+ */
 public class NoParameterStrategy implements MapParameterStrategy {
 
     @Override

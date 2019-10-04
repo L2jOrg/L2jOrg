@@ -1,6 +1,5 @@
 package org.l2j.commons.database.handler;
 
-
 import io.github.joealisson.primitive.IntSet;
 import io.github.joealisson.primitive.HashIntSet;
 import org.l2j.commons.database.helpers.QueryDescriptor;
@@ -9,6 +8,9 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
+/**
+ * @author JoeAlisson
+ */
 public class IntSetHandler implements TypeHandler<IntSet> {
 
     @Override

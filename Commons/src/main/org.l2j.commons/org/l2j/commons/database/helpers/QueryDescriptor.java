@@ -13,6 +13,9 @@ import java.util.regex.Pattern;
 
 import static java.util.Objects.nonNull;
 
+/**
+ * @author JoeAlisson
+ */
 public class QueryDescriptor implements AutoCloseable {
 
     private static final Pattern SELECT_PATTERN = Pattern.compile("^SELECT.*", Pattern.CASE_INSENSITIVE);

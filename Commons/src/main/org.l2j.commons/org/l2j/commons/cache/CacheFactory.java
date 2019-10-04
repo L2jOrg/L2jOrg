@@ -11,6 +11,9 @@ import java.nio.file.Path;
 
 import static java.util.Objects.isNull;
 
+/**
+ * @author JoeAlisson
+ */
 public final class CacheFactory {
 
     private CacheManager manager;

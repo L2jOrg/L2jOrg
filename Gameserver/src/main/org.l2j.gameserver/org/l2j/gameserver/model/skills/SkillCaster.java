@@ -5,7 +5,7 @@ import org.l2j.gameserver.Config;
 import org.l2j.commons.threading.ThreadPoolManager;
 import org.l2j.gameserver.ai.CtrlEvent;
 import org.l2j.gameserver.ai.CtrlIntention;
-import org.l2j.gameserver.data.xml.impl.ActionData;
+import org.l2j.gameserver.data.xml.ActionManager;
 import org.l2j.gameserver.datatables.ItemTable;
 import org.l2j.gameserver.enums.ItemSkillType;
 import org.l2j.gameserver.enums.NextActionType;
@@ -569,7 +569,7 @@ public class SkillCaster implements Runnable {
         }
 
         // Send a packet starting the casting.
-        final int actionId = isSummon(caster) ? ActionData.getInstance().getSkillActionId(_skill.getId()) : -1;
+        final int actionId = isSummon(caster) ? ActionManager.getInstance().getSkillActionId(_skill.getId()) : -1;
         if (!_skill.isNotBroadcastable()) {
             caster.broadcastPacket(new MagicSkillUse(caster, target, _skill.getDisplayId(), _skill.getDisplayLevel(), displayedCastTime, reuseDelay, _skill.getReuseDelayGroup(), actionId, _castingType));
         }

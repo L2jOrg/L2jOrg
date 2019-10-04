@@ -9,6 +9,9 @@ import java.time.LocalDate;
 
 import static java.util.Objects.nonNull;
 
+/**
+ * @author JoeAlisson
+ */
 public class DateHandler implements TypeHandler<LocalDate> {
 
     @Override
