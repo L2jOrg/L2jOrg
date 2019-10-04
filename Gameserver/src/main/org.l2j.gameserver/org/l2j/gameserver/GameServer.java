@@ -12,6 +12,7 @@ import org.l2j.gameserver.data.database.dao.CharacterDAO;
 import org.l2j.gameserver.data.database.elemental.ElementalSpiritManager;
 import org.l2j.gameserver.data.sql.impl.*;
 import org.l2j.gameserver.data.xml.ActionManager;
+import org.l2j.gameserver.data.xml.CategoryManager;
 import org.l2j.gameserver.data.xml.DoorDataManager;
 import org.l2j.gameserver.data.xml.FenceDataManager;
 import org.l2j.gameserver.data.xml.impl.*;
@@ -82,7 +83,7 @@ public class GameServer {
         AnnouncementsManager.init();
         GlobalVariablesManager.getInstance();
         ActionManager.init();
-        CategoryData.getInstance();
+        CategoryManager.init();
         SecondaryAuthData.getInstance();
         CombinationItemsData.getInstance();
         ClanRewardData.getInstance();

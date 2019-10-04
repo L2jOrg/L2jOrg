@@ -2,9 +2,8 @@ package ai.others.ClassMaster;
 
 import ai.AbstractNpcAI;
 import org.l2j.gameserver.Config;
-import org.l2j.gameserver.data.xml.impl.CategoryData;
+import org.l2j.gameserver.data.xml.CategoryManager;
 import org.l2j.gameserver.data.xml.impl.ClassListData;
-import org.l2j.gameserver.data.xml.impl.SkillTreesData;
 import org.l2j.gameserver.datatables.ItemTable;
 import org.l2j.gameserver.enums.CategoryType;
 import org.l2j.gameserver.model.actor.Npc;
@@ -152,15 +151,15 @@ public final class ClassMaster extends AbstractNpcAI
 				boolean canChange = false;
 				if ((player.isInCategory(CategoryType.SECOND_CLASS_GROUP) || player.isInCategory(CategoryType.FIRST_CLASS_GROUP)) && (player.getLevel() >= 40)) // In retail you can skip first occupation
 				{
-					canChange = CategoryData.getInstance().isInCategory(CategoryType.THIRD_CLASS_GROUP, classId) || (player.isInCategory(CategoryType.FIRST_CLASS_GROUP) && CategoryData.getInstance().isInCategory(CategoryType.SECOND_CLASS_GROUP, classId));
+					canChange = CategoryManager.getInstance().isInCategory(CategoryType.THIRD_CLASS_GROUP, classId) || (player.isInCategory(CategoryType.FIRST_CLASS_GROUP) && CategoryManager.getInstance().isInCategory(CategoryType.SECOND_CLASS_GROUP, classId));
 				}
 				else if (player.isInCategory(CategoryType.FIRST_CLASS_GROUP) && (player.getLevel() >= 20))
 				{
-					canChange = CategoryData.getInstance().isInCategory(CategoryType.SECOND_CLASS_GROUP, classId);
+					canChange = CategoryManager.getInstance().isInCategory(CategoryType.SECOND_CLASS_GROUP, classId);
 				}
 				else if (player.isInCategory(CategoryType.THIRD_CLASS_GROUP) && (player.getLevel() >= 76))
 				{
-					canChange = CategoryData.getInstance().isInCategory(CategoryType.FOURTH_CLASS_GROUP, classId);
+					canChange = CategoryManager.getInstance().isInCategory(CategoryType.FOURTH_CLASS_GROUP, classId);
 				}
 				// else if (player.isInCategory(CategoryType.FOURTH_CLASS_GROUP) && (player.getLevel() >= 85)) // 9
 				// {
@@ -234,10 +233,6 @@ public final class ClassMaster extends AbstractNpcAI
 					{
 						player.setBaseClass(player.getActiveClass());
 					}
-					if (player.isInCategory(CategoryType.SIXTH_CLASS_GROUP))
-					{
-						SkillTreesData.getInstance().cleanSkillUponAwakening(player);
-					}
 					if (Config.AUTO_LEARN_SKILLS)
 					{
 						player.giveAvailableSkills(Config.AUTO_LEARN_FS_SKILLS, true);
@@ -257,15 +252,7 @@ public final class ClassMaster extends AbstractNpcAI
 			}
 			case "learnskills":
 			{
-				// Retail class master only lets you learn all third class skills.
-				if (player.isInCategory(CategoryType.SIXTH_CLASS_GROUP))
-				{
-					htmltext = "test_server_helper001_failed.html";
-				}
-				else
-				{
-					player.giveAvailableSkills(true, true);
-				}
+				player.giveAvailableSkills(true, true);
 				break;
 			}
 			case "clanlevelup":
@@ -618,10 +605,7 @@ public final class ClassMaster extends AbstractNpcAI
 			{
 				player.setBaseClass(player.getActiveClass());
 			}
-			if (player.isInCategory(CategoryType.SIXTH_CLASS_GROUP))
-			{
-				SkillTreesData.getInstance().cleanSkillUponAwakening(player);
-			}
+
 			if (Config.AUTO_LEARN_SKILLS)
 			{
 				player.giveAvailableSkills(Config.AUTO_LEARN_FS_SKILLS, true);

@@ -16,7 +16,7 @@
  */
 package handlers.itemhandlers;
 
-import org.l2j.gameserver.data.xml.impl.CategoryData;
+import org.l2j.gameserver.data.xml.CategoryManager;
 import org.l2j.gameserver.enums.CategoryType;
 import org.l2j.gameserver.enums.Race;
 import org.l2j.gameserver.handler.IItemHandler;
@@ -90,11 +90,11 @@ public class FatedSupportBox implements IItemHandler
                 {
                     player.addItem(getClass().getSimpleName(), FATED_BOX_WIZARD, 1, player, true);
                 }
-                else if (CategoryData.getInstance().isInCategory(CategoryType.SUB_GROUP_ROGUE, classId.getId()))
+                else if (CategoryManager.getInstance().isInCategory(CategoryType.SUB_GROUP_ROGUE, classId.getId()))
                 {
                     player.addItem(getClass().getSimpleName(), FATED_BOX_ROGUE, 1, player, true);
                 }
-                else if (CategoryData.getInstance().isInCategory(CategoryType.SUB_GROUP_KNIGHT, classId.getId()))
+                else if (CategoryManager.getInstance().isInCategory(CategoryType.SUB_GROUP_KNIGHT, classId.getId()))
                 {
                     player.addItem(getClass().getSimpleName(), FATED_BOX_FIGHTER, 1, player, true);
                 }

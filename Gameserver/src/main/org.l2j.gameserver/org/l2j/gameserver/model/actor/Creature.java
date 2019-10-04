@@ -12,7 +12,7 @@ import org.l2j.gameserver.ai.CreatureAI;
 import org.l2j.gameserver.ai.CtrlEvent;
 import org.l2j.gameserver.ai.CtrlIntention;
 import org.l2j.gameserver.data.database.elemental.ElementalType;
-import org.l2j.gameserver.data.xml.impl.CategoryData;
+import org.l2j.gameserver.data.xml.CategoryManager;
 import org.l2j.gameserver.data.xml.impl.SkillData;
 import org.l2j.gameserver.data.xml.impl.TransformData;
 import org.l2j.gameserver.enums.*;
@@ -4072,12 +4072,12 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
     }
 
     public final boolean isInCategory(CategoryType type) {
-        return CategoryData.getInstance().isInCategory(type, getId());
+        return CategoryManager.getInstance().isInCategory(type, getId());
     }
 
     public final boolean isInOneOfCategory(CategoryType... types) {
         for (CategoryType type : types) {
-            if (CategoryData.getInstance().isInCategory(type, getId())) {
+            if (CategoryManager.getInstance().isInCategory(type, getId())) {
                 return true;
             }
         }

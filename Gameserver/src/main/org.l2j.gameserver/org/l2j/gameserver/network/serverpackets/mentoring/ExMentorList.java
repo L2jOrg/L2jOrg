@@ -1,6 +1,5 @@
 package org.l2j.gameserver.network.serverpackets.mentoring;
 
-import org.l2j.gameserver.enums.CategoryType;
 import org.l2j.gameserver.instancemanager.MentorManager;
 import org.l2j.gameserver.model.Mentee;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -25,11 +24,7 @@ public class ExMentorList extends ServerPacket {
         } else if (activeChar.isMentee()) {
             _type = 0x02;
             _mentees = Collections.singletonList(MentorManager.getInstance().getMentor(activeChar.getObjectId()));
-        } else if (activeChar.isInCategory(CategoryType.SIXTH_CLASS_GROUP)) // Not a mentor, Not a mentee, so can be a mentor
-        {
-            _mentees = Collections.emptyList();
-            _type = 0x01;
-        } else {
+        }  else {
             _mentees = Collections.emptyList();
             _type = 0x00;
         }

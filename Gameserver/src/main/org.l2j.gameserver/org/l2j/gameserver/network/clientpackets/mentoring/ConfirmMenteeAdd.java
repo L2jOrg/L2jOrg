@@ -1,9 +1,7 @@
 package org.l2j.gameserver.network.clientpackets.mentoring;
 
 import org.l2j.commons.database.DatabaseFactory;
-import org.l2j.gameserver.enums.CategoryType;
 import org.l2j.gameserver.instancemanager.MentorManager;
-import org.l2j.gameserver.world.World;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.events.EventDispatcher;
 import org.l2j.gameserver.model.events.impl.character.player.OnPlayerMenteeAdd;
@@ -11,6 +9,7 @@ import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.clientpackets.ClientPacket;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
 import org.l2j.gameserver.network.serverpackets.mentoring.ExMentorList;
+import org.l2j.gameserver.world.World;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -19,6 +18,7 @@ import java.sql.PreparedStatement;
 
 /**
  * @author Gnacik, UnAfraid
+ *
  */
 public class ConfirmMenteeAdd extends ClientPacket {
 
@@ -39,9 +39,6 @@ public class ConfirmMenteeAdd extends ClientPacket {
             return false;
         } else if (!mentee.isOnline()) {
             mentor.sendPacket(SystemMessageId.THAT_PLAYER_IS_NOT_ONLINE);
-            return false;
-        } else if (!mentor.isInCategory(CategoryType.SIXTH_CLASS_GROUP)) {
-            mentor.sendPacket(SystemMessageId.YOU_MUST_AWAKEN_IN_ORDER_TO_BECOME_A_MENTOR);
             return false;
         } else if (MentorManager.getInstance().getMentorPenalty(mentor.getObjectId()) > System.currentTimeMillis()) {
             long remainingTime = (MentorManager.getInstance().getMentorPenalty(mentor.getObjectId()) - System.currentTimeMillis()) / 1000;

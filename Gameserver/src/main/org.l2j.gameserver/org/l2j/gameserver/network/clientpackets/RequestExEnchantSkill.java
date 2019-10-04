@@ -4,7 +4,6 @@ import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.xml.impl.EnchantSkillGroupsData;
 import org.l2j.gameserver.data.xml.impl.SkillData;
-import org.l2j.gameserver.enums.CategoryType;
 import org.l2j.gameserver.enums.PrivateStoreType;
 import org.l2j.gameserver.enums.SkillEnchantType;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -55,10 +54,6 @@ public final class RequestExEnchantSkill extends ClientPacket {
 
         final Player player = client.getPlayer();
         if (player == null) {
-            return;
-        }
-
-        if (!player.isInCategory(CategoryType.SIXTH_CLASS_GROUP)) {
             return;
         }
 

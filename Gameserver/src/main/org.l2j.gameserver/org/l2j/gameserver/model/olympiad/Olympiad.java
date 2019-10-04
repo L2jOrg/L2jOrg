@@ -1,9 +1,10 @@
 package org.l2j.gameserver.model.olympiad;
 
+import io.github.joealisson.primitive.IntSet;
 import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.gameserver.Config;
 import org.l2j.commons.threading.ThreadPoolManager;
-import org.l2j.gameserver.data.xml.impl.CategoryData;
+import org.l2j.gameserver.data.xml.CategoryManager;
 import org.l2j.gameserver.data.xml.impl.ClassListData;
 import org.l2j.gameserver.enums.CategoryType;
 import org.l2j.gameserver.instancemanager.AntiFeedManager;
@@ -63,7 +64,7 @@ public class Olympiad extends ListenersContainer {
     private static final String OLYMPIAD_MONTH_CLEAR = "TRUNCATE olympiad_nobles_eom";
     private static final String OLYMPIAD_MONTH_CREATE = "INSERT INTO olympiad_nobles_eom SELECT charId, class_id, olympiad_points, competitions_done, competitions_won, competitions_lost, competitions_drawn FROM olympiad_nobles";
 
-    private static final Set<Integer> HERO_IDS = CategoryData.getInstance().getCategoryByType(CategoryType.FOURTH_CLASS_GROUP);
+    private static final IntSet HERO_IDS = CategoryManager.getInstance().getCategoryByType(CategoryType.FOURTH_CLASS_GROUP);
 
     private static final int COMP_START = Config.ALT_OLY_START_TIME; // 6PM
     private static final int COMP_MIN = Config.ALT_OLY_MIN; // 00 mins
@@ -746,7 +747,9 @@ public class Olympiad extends ListenersContainer {
         try (Connection con = DatabaseFactory.getInstance().getConnection();
              PreparedStatement statement = con.prepareStatement(OLYMPIAD_GET_HEROS)) {
             StatsSet hero;
-            for (int element : HERO_IDS) {
+            var it = HERO_IDS.iterator();
+            while (it.hasNext()) {
+                var element = it.nextInt();
                 // Classic can have 2nd and 3rd class competitors, but only 1 hero
                 ClassId parent = ClassListData.getInstance().getClass(element).getParentClassId();
                 statement.setInt(1, element);

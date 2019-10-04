@@ -6608,12 +6608,12 @@ public final class Player extends Playable {
      */
     @Override
     public boolean hasBasicPropertyResist() {
-        return isInCategory(CategoryType.SIXTH_CLASS_GROUP);
+        return false;
     }
 
     private void startAutoSaveTask() {
         if ((Config.CHAR_DATA_STORE_INTERVAL > 0) && (_autoSaveTask == null)) {
-            _autoSaveTask = ThreadPoolManager.getInstance().scheduleAtFixedRate(this::autoSave, 300_000L, TimeUnit.MINUTES.toMillis(Config.CHAR_DATA_STORE_INTERVAL));
+            _autoSaveTask = ThreadPoolManager.scheduleAtFixedRate(this::autoSave, 300_000L, TimeUnit.MINUTES.toMillis(Config.CHAR_DATA_STORE_INTERVAL));
         }
     }
 

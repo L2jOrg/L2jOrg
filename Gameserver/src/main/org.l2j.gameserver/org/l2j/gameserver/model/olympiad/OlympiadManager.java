@@ -246,27 +246,7 @@ public class OlympiadManager {
     }
 
     private int getClassGroup(Player player) {
-        if (player.isInCategory(CategoryType.SIXTH_TIR_GROUP)) {
-            return 1001;
-        } else if (player.isInCategory(CategoryType.SIXTH_SIGEL_GROUP)) {
-            return 1002;
-        } else if (player.isInCategory(CategoryType.SIXTH_OTHEL_GROUP)) {
-            return 1003;
-        } else if (player.isInCategory(CategoryType.SIXTH_FEOH_GROUP)) {
-            return 1004;
-        } else if (player.isInCategory(CategoryType.SIXTH_IS_GROUP)) {
-            return 1005;
-        } else if (player.isInCategory(CategoryType.SIXTH_EOLH_GROUP)) {
-            return 1006;
-        } else if (player.isInCategory(CategoryType.SIXTH_WYNN_GROUP)) {
-            return 1007;
-        } else if (player.isInCategory(CategoryType.SIXTH_YR_GROUP)) {
-            return 1008;
-        } else if (player.isInCategory(CategoryType.ERTHEIA_FOURTH_CLASS_GROUP)) {
-            return 1009;
-        } else {
-            return player.getBaseClass();
-        }
+        return player.getBaseClass();
     }
 
     public static OlympiadManager getInstance() {

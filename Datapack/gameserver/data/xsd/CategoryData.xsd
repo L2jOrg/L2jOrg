@@ -5,8 +5,8 @@
 			<xs:sequence minOccurs="1" maxOccurs="1">
 				<xs:element name="category" minOccurs="0" maxOccurs="unbounded">
 					<xs:complexType>
-						<xs:sequence minOccurs="1" maxOccurs="1">
-							<xs:element name="id" type="xs:nonNegativeInteger" minOccurs="1" maxOccurs="unbounded" />
+						<xs:sequence>
+							<xs:element name="id" type="xs:nonNegativeInteger" maxOccurs="unbounded" />
 						</xs:sequence>
 						<xs:attribute name="name" type="xs:string" />
 					</xs:complexType>

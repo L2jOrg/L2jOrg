@@ -243,7 +243,7 @@ public class CeremonyOfChaosManager extends AbstractEventManager<CeremonyOfChaos
         } else if (player.isFlyingMounted()) {
             sm = SystemMessageId.YOU_CANNOT_PARTICIPATE_IN_THE_CEREMONY_OF_CHAOS_AS_A_FLYING_TRANSFORMED_OBJECT;
             canRegister = false;
-        } else if (!player.isInCategory(CategoryType.SIXTH_CLASS_GROUP)) {
+        } else if (!player.isInCategory(CategoryType.FOURTH_CLASS_GROUP)) {
             sm = SystemMessageId.ONLY_CHARACTERS_WHO_HAVE_COMPLETED_THE_3RD_CLASS_TRANSFER_MAY_PARTICIPATE;
             canRegister = false;
         } else if (!player.isInventoryUnder80(false) || (player.getWeightPenalty() != 0)) {

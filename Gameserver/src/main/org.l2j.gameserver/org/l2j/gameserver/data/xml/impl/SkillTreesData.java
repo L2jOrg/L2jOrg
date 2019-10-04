@@ -2,7 +2,6 @@ package org.l2j.gameserver.data.xml.impl;
 
 import io.github.joealisson.primitive.*;
 import org.l2j.gameserver.Config;
-import org.l2j.gameserver.enums.CategoryType;
 import org.l2j.gameserver.enums.Race;
 import org.l2j.gameserver.model.Clan;
 import org.l2j.gameserver.model.SkillLearn;
@@ -311,11 +310,11 @@ public final class SkillTreesData extends GameXmlReader {
 
         if (skills.isEmpty()) {
             // The Skill Tree for this class is undefined.
-            LOGGER.warn(": Skilltree for class " + classId + " is not defined!");
+            LOGGER.warn("Skilltree for class {} is not defined!", classId);
             return result;
         }
 
-        final boolean isAwaken = player.isInCategory(CategoryType.SIXTH_CLASS_GROUP) && (player.isDualClassActive());
+        final boolean isAwaken = player.isDualClassActive();
 
 
         for (var entry : skills.entrySet()) {
@@ -400,12 +399,11 @@ public final class SkillTreesData extends GameXmlReader {
         final LongMap<SkillLearn> skills = getCompleteClassSkillTree(player.getClassId());
         if (skills.isEmpty()) {
             // The Skill Tree for this class is undefined, so we return an empty list.
-            LOGGER.warn(": Skill Tree for this class Id(" + player.getClassId() + ") is not defined!");
+            LOGGER.warn("Skill Tree for this class Id({}) is not defined!", player.getClassId());
             return result;
         }
 
         final Race race = player.getRace();
-        final boolean isAwaken = player.isInCategory(CategoryType.SIXTH_CLASS_GROUP);
 
         for (SkillLearn skill : skills.values()) {
             if (!skill.getRaces().isEmpty() && !skill.getRaces().contains(race)) {
@@ -413,7 +411,6 @@ public final class SkillTreesData extends GameXmlReader {
             }
 
             final int maxLvl = SkillData.getInstance().getMaxLevel(skill.getSkillId());
-            final long hashCode = SkillData.getSkillHashCode(skill.getSkillId(), maxLvl);
 
             if (skill.isAutoGet() && (player.getLevel() >= skill.getGetLevel())) {
                 final Skill oldSkill = player.getKnownSkill(skill.getSkillId());
@@ -421,7 +418,7 @@ public final class SkillTreesData extends GameXmlReader {
                     if (oldSkill.getLevel() < skill.getSkillLevel()) {
                         result.add(skill);
                     }
-                } else if (!isAwaken || isCurrentClassSkillNoParent(player.getClassId(), hashCode)) {
+                } else {
                     result.add(skill);
                 }
             }

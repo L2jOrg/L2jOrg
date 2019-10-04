@@ -2,7 +2,6 @@ package org.l2j.gameserver.network.clientpackets;
 
 import org.l2j.gameserver.data.xml.impl.EnchantSkillGroupsData;
 import org.l2j.gameserver.data.xml.impl.SkillData;
-import org.l2j.gameserver.enums.CategoryType;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.network.serverpackets.ExEnchantSkillInfo;
@@ -38,10 +37,6 @@ public final class RequestExEnchantSkillInfo extends ClientPacket {
             return;
         }
 
-        if (!activeChar.isInCategory(CategoryType.SIXTH_CLASS_GROUP)) {
-            return;
-        }
-
         final Skill skill = SkillData.getInstance().getSkill(_skillId, _skillLvl, _skillSubLvl);
         if ((skill == null) || (skill.getId() != _skillId)) {
             return;
@@ -57,7 +52,5 @@ public final class RequestExEnchantSkillInfo extends ClientPacket {
         }
 
         client.sendPacket(new ExEnchantSkillInfo(_skillId, _skillLvl, _skillSubLvl, playerSkill.getSubLevel()));
-        // ExEnchantSkillInfoDetail - not really necessary I think
-        // client.sendPacket(new ExEnchantSkillInfoDetail(SkillEnchantType.NORMAL, _skillId, _skillLvl, _skillSubLvl, activeChar));
     }
 }

@@ -16,7 +16,7 @@
  */
 package org.l2j.gameserver.enums;
 
-import org.l2j.gameserver.data.xml.impl.CategoryData;
+import org.l2j.gameserver.data.xml.CategoryManager;
 
 /**
  * @author UnAfraid
@@ -28,11 +28,11 @@ public enum MountType {
     WOLF;
 
     public static MountType findByNpcId(int npcId) {
-        if (CategoryData.getInstance().isInCategory(CategoryType.STRIDER, npcId)) {
+        if (CategoryManager.getInstance().isInCategory(CategoryType.STRIDER, npcId)) {
             return STRIDER;
-        } else if (CategoryData.getInstance().isInCategory(CategoryType.WYVERN_GROUP, npcId)) {
+        } else if (CategoryManager.getInstance().isInCategory(CategoryType.WYVERN_GROUP, npcId)) {
             return WYVERN;
-        } else if (CategoryData.getInstance().isInCategory(CategoryType.WOLF_GROUP, npcId)) {
+        } else if (CategoryManager.getInstance().isInCategory(CategoryType.WOLF_GROUP, npcId)) {
             return WOLF;
         }
         return NONE;
