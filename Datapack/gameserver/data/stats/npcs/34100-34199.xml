@@ -248,12 +248,17 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="34113" level="85" type="Folk" name="Maddy" title="Marksman">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+	<npc id="34113" level="85" type="Guard" name="Maddy" title="Marksman">
+		<parameters>
+			<param name="MoveAroundSocial" value="60"/>
+			<param name="MoveAroundSocial1" value="60"/>
+			<param name="MoveAroundSocial2" value="60"/>
+		</parameters>
+		<race>JIN_KAMAEL</race>
+		<sex>MALE</sex>
+		<equipment rhand="91878"/>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="77487" hpRegen="20.5" mp="2355" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
 				<run ground="120" />
@@ -267,12 +272,17 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="34114" level="85" type="Folk" name="Bixon" title="Marksman">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+	<npc id="34114" level="85" type="Guard" name="Bixon" title="Marksman">
+		<parameters>
+			<param name="MoveAroundSocial" value="60"/>
+			<param name="MoveAroundSocial1" value="60"/>
+			<param name="MoveAroundSocial2" value="60"/>
+		</parameters>
+		<race>JIN_KAMAEL</race>
+		<sex>MALE</sex>
+		<equipment rhand="91878"/>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="77487" hpRegen="10.5" mp="2355" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
 				<run ground="120" />
@@ -286,12 +296,17 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="34115" level="85" type="Folk" name="Carver" title="Marksman">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+	<npc id="34115" level="85" type="Guard" name="Carver" title="Marksman">
+		<parameters>
+			<param name="MoveAroundSocial" value="60"/>
+			<param name="MoveAroundSocial1" value="60"/>
+			<param name="MoveAroundSocial2" value="60"/>
+		</parameters>
+		<race>JIN_KAMAEL</race>
+		<sex>MALE</sex>
+		<equipment rhand="91878"/>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="77487" hpRegen="10.5" mp="2355" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
 				<run ground="120" />
@@ -305,12 +320,17 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="34116" level="85" type="Folk" name="Putin" title="Marksman">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+	<npc id="34116" level="85" type="Guard" name="Putin" title="Marksman">
+		<parameters>
+			<param name="MoveAroundSocial" value="60"/>
+			<param name="MoveAroundSocial1" value="60"/>
+			<param name="MoveAroundSocial2" value="60"/>
+		</parameters>
+		<race>JIN_KAMAEL</race>
+		<sex>MALE</sex>
+		<equipment rhand="91878"/>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="77487" hpRegen="10.5" mp="2355" mpRegen="3.6" />
 			<speed>
 				<walk ground="60" />
 				<run ground="120" />
@@ -324,10 +344,14 @@
 			<height normal="12" />
 		</collision>
 	</npc>
-	<npc id="34117" level="85" type="Folk" name="Drapier" title="Warehouse Keeper">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+	<npc id="34117" level="85" type="Warehouse" name="Drapier" title="Warehouse Keeper">
+		<parameters>
+			<param name="MoveAroundSocial" value="60"/>
+			<param name="MoveAroundSocial1" value="60"/>
+			<param name="MoveAroundSocial2" value="60"/>
+		</parameters>
+		<race>JIN_KAMAEL</race>
+		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
 			<speed>

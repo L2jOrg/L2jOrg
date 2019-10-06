@@ -1946,9 +1946,9 @@
     </npc>
     <npc id="21981" level="1" type="Monster" name="Grey Keltir">
         <parameters>
-            <param name="MoveAroundSocial" value="0"/>
-            <param name="MoveAroundSocial1" value="0"/>
-            <param name="MoveAroundSocial2" value="0"/>
+            <param name="MoveAroundSocial" value="45"/>
+            <param name="MoveAroundSocial1" value="30"/>
+            <param name="MoveAroundSocial2" value="60"/>
         </parameters>
         <race>ANIMAL</race>
         <sex>FEMALE</sex>
@@ -1988,9 +1988,9 @@
     </npc>
     <npc id="21982" level="3" type="Monster" name="Elder Grey Keltir">
         <parameters>
-            <param name="MoveAroundSocial" value="0"/>
-            <param name="MoveAroundSocial1" value="0"/>
-            <param name="MoveAroundSocial2" value="0"/>
+            <param name="MoveAroundSocial" value="120"/>
+            <param name="MoveAroundSocial1" value="60"/>
+            <param name="MoveAroundSocial2" value="90"/>
         </parameters>
         <race>ANIMAL</race>
         <sex>FEMALE</sex>
@@ -2032,6 +2032,11 @@
         </dropLists>
     </npc>
     <npc id="21983" level="4" type="Monster" name="Black Wolf">
+        <parameters>
+            <param name="MoveAroundSocial" value="60"/>
+            <param name="MoveAroundSocial1" value="60"/>
+            <param name="MoveAroundSocial2" value="60"/>
+        </parameters>
         <race>ANIMAL</race>
         <sex>MALE</sex>
         <acquire exp="177" sp="6"/>
@@ -2112,12 +2117,17 @@
             </spoil>
         </dropLists>
     </npc>
-    <npc id="21985" level="85" type="Folk" name="Mountain Werewolf">
-        <!-- AUTO GENERATED NPC TODO: FIX IT -->
+    <npc id="21985" level="16" type="Monster" name="Mountain Werewolf">
+        <parameters>
+            <param name="MoveAroundSocial" value="60"/>
+            <param name="MoveAroundSocial1" value="60"/>
+            <param name="MoveAroundSocial2" value="60"/>
+        </parameters>
         <race>ETC</race>
-        <sex>FEMALE</sex>
+        <sex>MALE</sex>
+        <acquire exp="472" sp="15"/>
         <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-            <vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+            <vitals hp="439" hpRegen="2.5" mp="193" mpRegen="3.6" />
             <speed>
                 <walk ground="60" />
                 <run ground="120" />
@@ -2125,18 +2135,45 @@
             <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
             <defence physical="405.85106382979" magical="297.0297029703" />
         </stats>
-        <status attackable="false" />
+        <status undying="false" canBeSown="true"/>
         <collision>
             <radius normal="5" />
             <height normal="12" />
         </collision>
+        <skillList>
+            <skill id="4416" level="6"/> <!-- Humanoids -->
+        </skillList>
+        <dropLists>
+            <drop>
+                <item id="24" min="1" max="1" chance="0.3"/> <!-- Bone Breastplate -->
+                <item id="31" min="1" max="1" chance="0.3"/> <!-- Bone Gaiters -->
+                <item id="390" min="1" max="1" chance="0.3"/> <!-- Cotton Shirt -->
+                <item id="412" min="1" max="1" chance="0.3"/> <!-- Cotton Pants -->
+                <item id="57" min="32" max="61" chance="75"/> <!-- Adena -->
+                <item id="1864" min="1" max="1" chance="4.422"/> <!-- Stem -->
+                <item id="1868" min="1" max="1" chance="4.234"/> <!-- Thread -->
+                <item id="1867" min="1" max="1" chance="2.823"/> <!-- Animal Skin -->
+                <item id="1869" min="1" max="1" chance="2.023"/> <!-- Iron Ore -->
+                <item id="1871" min="1" max="1" chance="2.01"/> <!-- Charcoal -->
+                <item id="1866" min="1" max="1" chance="1.585"/> <!-- Suede -->
+                <item id="1817" min="1" max="1" chance="0.3"/> <!-- Redipe Cord -->
+            </drop>
+            <spoil>
+                <item id="1872" min="1" max="2" chance="41.32"/> <!-- Animal Bone -->
+            </spoil>
+        </dropLists>
     </npc>
-    <npc id="21986" level="85" type="Folk" name="Mountain Fungus">
-        <!-- AUTO GENERATED NPC TODO: FIX IT -->
-        <race>ETC</race>
-        <sex>FEMALE</sex>
+    <npc id="21986" level="15" type="Monster" name="Mountain Fungus">
+        <parameters>
+            <param name="MoveAroundSocial" value="60"/>
+            <param name="MoveAroundSocial1" value="60"/>
+            <param name="MoveAroundSocial2" value="60"/>
+        </parameters>
+        <race>ANIMAL</race>
+        <sex>MALE</sex>
+        <acquire exp="441" sp="14"/>
         <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-            <vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+            <vitals hp="411" hpRegen="10.5" mp="2355" mpRegen="3.6" />
             <speed>
                 <walk ground="60" />
                 <run ground="120" />
@@ -2144,18 +2181,46 @@
             <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
             <defence physical="405.85106382979" magical="297.0297029703" />
         </stats>
-        <status attackable="false" />
+        <status undying="false" canBeSown="true"/>
         <collision>
             <radius normal="5" />
             <height normal="12" />
         </collision>
+        <skillList>
+            <skill id="4416" level="5"/> <!-- plants -->
+            <skill id="4410" level="12"/>
+            <skill id="4411" level="12"/>
+            <skill id="4412" level="10"/>
+            <skill id="4413" level="10"/>
+            <skill id="4279" level="1"/>
+            <skill id="4277" level="5"/>
+        </skillList>
+        <dropLists>
+            <drop>
+                <item id="29" min="1" max="1" chance="3.680"/> <!-- Leather pants -->
+                <item id="22" min="1" max="1" chance="2.332"/> <!-- Leather Shirt -->
+                <item id="57" min="25" max="61" chance="70"/> <!-- Adena -->
+                <item id="1868" min="1" max="1" chance="8.634"/> <!-- Thread -->
+                <item id="1867" min="1" max="1" chance="5.443"/> <!-- Animal Skin -->
+                <item id="1871" min="1" max="1" chance="4.129"/> <!-- Charcoal -->
+            </drop>
+            <spoil>
+                <item id="1864" min="1" max="1" chance="50.32"/> <!-- Stem -->
+                <item id="1866" min="1" max="1" chance="15.85"/> <!-- Suede -->
+            </spoil>
+        </dropLists>
     </npc>
-    <npc id="21987" level="85" type="Folk" name="Muertos Fighter">
-        <!-- AUTO GENERATED NPC TODO: FIX IT -->
-        <race>ETC</race>
-        <sex>FEMALE</sex>
+    <npc id="21987" level="17" type="Monster" name="Muertos Fighter">
+        <parameters>
+            <param name="MoveAroundSocial" value="60"/>
+            <param name="MoveAroundSocial1" value="60"/>
+            <param name="MoveAroundSocial2" value="60"/>
+        </parameters>
+        <race>HUMANOID</race>
+        <sex>MALE</sex>
+        <acquire exp="500" sp="15"/>
         <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-            <vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+            <vitals hp="471" hpRegen="2.5" mp="205" mpRegen="2.6" />
             <speed>
                 <walk ground="60" />
                 <run ground="120" />
@@ -2163,18 +2228,41 @@
             <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
             <defence physical="405.85106382979" magical="297.0297029703" />
         </stats>
-        <status attackable="false" />
+        <status undying="false" canBeSown="true"/>
         <collision>
             <radius normal="5" />
             <height normal="12" />
         </collision>
+        <skillList>
+            <skill id="4416" level="6"/> <!-- Humanoids -->
+        </skillList>
+        <dropLists>
+            <drop>
+                <item id="176" min="1" max="1" chance="0.04"/> <!-- Bone Breastplate -->
+                <item id="2501" min="1" max="1" chance="0.04"/> <!-- Bone Breastplate -->
+                <item id="57" min="33" max="78" chance="75"/> <!-- Adena -->
+                <item id="1865" min="1" max="1" chance="4.022"/> <!-- Varnish -->
+                <item id="1873" min="1" max="1" chance="1.622"/> <!-- Silver Nugget -->
+                <item id="1876" min="1" max="1" chance="0.3"/> <!-- Mithril Ore -->
+                <item id="2140" min="1" max="1" chance="0.3"/> <!-- Recipe: High-grade Suede -->
+            </drop>
+            <spoil>
+                <item id="1869" min="1" max="1" chance="33.023"/> <!-- Iron Ore -->
+                <item id="2013" min="1" max="2" chance="0.75"/> <!-- Forest Bow Shaft -->
+            </spoil>
+        </dropLists>
     </npc>
-    <npc id="21988" level="85" type="Folk" name="Muertos Captain">
-        <!-- AUTO GENERATED NPC TODO: FIX IT -->
-        <race>ETC</race>
-        <sex>FEMALE</sex>
+    <npc id="21988" level="18" type="Monster" name="Muertos Captain">
+        <parameters>
+            <param name="MoveAroundSocial" value="60"/>
+            <param name="MoveAroundSocial1" value="60"/>
+            <param name="MoveAroundSocial2" value="60"/>
+        </parameters>
+        <race>HUMANOID</race>
+        <sex>MALE</sex>
+        <acquire exp="529" sp="16"/>
         <stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-            <vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+            <vitals hp="502" hpRegen="2.5" mp="214" mpRegen="1.6" />
             <speed>
                 <walk ground="60" />
                 <run ground="120" />
@@ -2182,11 +2270,27 @@
             <attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
             <defence physical="405.85106382979" magical="297.0297029703" />
         </stats>
-        <status attackable="false" />
+        <status undying="false" canBeSown="true"/>
         <collision>
             <radius normal="5" />
             <height normal="12" />
         </collision>
+        <skillList>
+            <skill id="4416" level="6"/> <!-- Humanoids -->
+        </skillList>
+        <dropLists>
+            <drop>
+                <item id="1104" min="1" max="1" chance="0.75"/> <!-- Stocking of Devotion -->
+                <item id="1101" min="1" max="1" chance="0.4"/> <!-- Tunic of Devotion -->
+                <item id="57" min="34" max="81" chance="70"/> <!-- Adena -->
+                <item id="1060" min="1" max="1" chance="12.022"/> <!-- HP Replenshing Potion -->
+                <item id="1866" min="1" max="1" chance="3.722"/> <!-- Suede -->
+                <item id="2144" min="1" max="1" chance="1.03"/> <!-- Recipe: Synthetic Braid -->
+            </drop>
+            <spoil>
+                <item id="1866" min="1" max="2" chance="22.722"/> <!-- Suede -->
+            </spoil>
+        </dropLists>
     </npc>
     <npc id="21989" level="85" type="Folk" name="Ghost of the Tower">
         <!-- AUTO GENERATED NPC TODO: FIX IT -->
