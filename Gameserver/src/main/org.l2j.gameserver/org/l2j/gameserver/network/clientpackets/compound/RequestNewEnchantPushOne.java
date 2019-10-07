@@ -1,6 +1,6 @@
 package org.l2j.gameserver.network.clientpackets.compound;
 
-import org.l2j.gameserver.data.xml.impl.CombinationItemsData;
+import org.l2j.gameserver.data.xml.CombinationItemsManager;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.request.CompoundRequest;
 import org.l2j.gameserver.model.items.combination.CombinationItem;
@@ -25,21 +25,21 @@ public class RequestNewEnchantPushOne extends ClientPacket {
 
     @Override
     public void runImpl() {
-        final Player activeChar = client.getPlayer();
-        if (activeChar == null) {
+        final Player player = client.getPlayer();
+        if (player == null) {
             return;
-        } else if (activeChar.isInStoreMode()) {
+        } else if (player.isInStoreMode()) {
             client.sendPacket(SystemMessageId.YOU_CANNOT_DO_THAT_WHILE_IN_A_PRIVATE_STORE_OR_PRIVATE_WORKSHOP);
             client.sendPacket(ExEnchantOneFail.STATIC_PACKET);
             return;
-        } else if (activeChar.isProcessingTransaction() || activeChar.isProcessingRequest()) {
+        } else if (player.isProcessingTransaction() || player.isProcessingRequest()) {
             client.sendPacket(SystemMessageId.YOU_CANNOT_USE_THIS_SYSTEM_DURING_TRADING_PRIVATE_STORE_AND_WORKSHOP_SETUP);
             client.sendPacket(ExEnchantOneFail.STATIC_PACKET);
             return;
         }
 
-        final CompoundRequest request = new CompoundRequest(activeChar);
-        if (!activeChar.addRequest(request)) {
+        final CompoundRequest request = new CompoundRequest(player);
+        if (!player.addRequest(request)) {
             client.sendPacket(ExEnchantOneFail.STATIC_PACKET);
             return;
         }
@@ -49,16 +49,16 @@ public class RequestNewEnchantPushOne extends ClientPacket {
         final Item itemOne = request.getItemOne();
         if (itemOne == null) {
             client.sendPacket(ExEnchantOneFail.STATIC_PACKET);
-            activeChar.removeRequest(request.getClass());
+            player.removeRequest(request.getClass());
             return;
         }
 
-        final List<CombinationItem> combinationItems = CombinationItemsData.getInstance().getItemsByFirstSlot(itemOne.getId());
+        final List<CombinationItem> combinationItems = CombinationItemsManager.getInstance().getItemsByFirstSlot(itemOne.getId());
 
         // Not implemented or not able to merge!
         if (combinationItems.isEmpty()) {
             client.sendPacket(ExEnchantOneFail.STATIC_PACKET);
-            activeChar.removeRequest(request.getClass());
+            player.removeRequest(request.getClass());
             return;
         }
 

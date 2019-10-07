@@ -1,7 +1,7 @@
 package org.l2j.gameserver.network.clientpackets.compound;
 
 import org.l2j.commons.util.Rnd;
-import org.l2j.gameserver.data.xml.impl.CombinationItemsData;
+import org.l2j.gameserver.data.xml.CombinationItemsManager;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.request.CompoundRequest;
 import org.l2j.gameserver.model.items.combination.CombinationItem;
@@ -61,7 +61,7 @@ public class RequestNewEnchantTry extends ClientPacket {
             return;
         }
 
-        final CombinationItem combinationItem = CombinationItemsData.getInstance().getItemsBySlots(itemOne.getId(), itemTwo.getId());
+        final CombinationItem combinationItem = CombinationItemsManager.getInstance().getItemsBySlots(itemOne.getId(), itemTwo.getId());
 
         // Not implemented or not able to merge!
         if (combinationItem == null) {

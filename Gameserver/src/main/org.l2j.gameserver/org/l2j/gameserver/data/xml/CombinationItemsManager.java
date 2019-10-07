@@ -1,4 +1,4 @@
-package org.l2j.gameserver.data.xml.impl;
+package org.l2j.gameserver.data.xml;
 
 import org.l2j.gameserver.datatables.ItemTable;
 import org.l2j.gameserver.model.StatsSet;
@@ -22,12 +22,11 @@ import static org.l2j.commons.configuration.Configurator.getSettings;
 /**
  * @author UnAfraid
  */
-public class CombinationItemsData extends GameXmlReader {
-    private static final Logger LOGGER = LoggerFactory.getLogger(CombinationItemsData.class);
-    private final List<CombinationItem> _items = new ArrayList<>();
+public class CombinationItemsManager extends GameXmlReader {
+    private static final Logger LOGGER = LoggerFactory.getLogger(CombinationItemsManager.class);
+    private final List<CombinationItem> items = new ArrayList<>();
 
-    private CombinationItemsData() {
-        load();
+    private CombinationItemsManager() {
     }
 
     @Override
@@ -37,48 +36,48 @@ public class CombinationItemsData extends GameXmlReader {
 
     @Override
     public synchronized void load() {
-        _items.clear();
+        items.clear();
         parseDatapackFile("data/CombinationItems.xml");
-        LOGGER.info("Loaded {} combinations", _items.size());
+        LOGGER.info("Loaded {} combinations", items.size());
     }
 
     @Override
     public void parseDocument(Document doc, File f) {
-        forEach(doc, "list", listNode -> forEach(listNode, "item", itemNode ->
-        {
+        forEach(doc, "list", listNode -> forEach(listNode, "item", itemNode -> {
             final CombinationItem item = new CombinationItem(new StatsSet(parseAttributes(itemNode)));
 
-            forEach(itemNode, "reward", rewardNode ->
-            {
-                final int id = parseInteger(rewardNode.getAttributes(), "id");
-                final int count = parseInteger(rewardNode.getAttributes(), "count", 1);
-                final CombinationItemType type = parseEnum(rewardNode.getAttributes(), CombinationItemType.class, "type");
+            forEach(itemNode, "reward", rewardNode -> {
+                var attrs = rewardNode.getAttributes();
+                final int id = parseInteger(attrs, "id");
+                final int count = parseInteger(attrs, "count", 1);
+                final CombinationItemType type = parseEnum(attrs, CombinationItemType.class, "type");
+
                 item.addReward(new CombinationItemReward(id, count, type));
                 if (ItemTable.getInstance().getTemplate(id) == null) {
-                    LOGGER.info(getClass().getSimpleName() + ": Could not find item with id " + id);
+                    LOGGER.info("Could not find item with id {}", id);
                 }
             });
-            _items.add(item);
+            items.add(item);
         }));
     }
 
-    public List<CombinationItem> getItems() {
-        return _items;
-    }
-
     public CombinationItem getItemsBySlots(int firstSlot, int secondSlot) {
-        return _items.stream().filter(item -> (item.getItemOne() == firstSlot) && (item.getItemTwo() == secondSlot)).findFirst().orElse(null);
+        return items.stream().filter(item -> (item.getItemOne() == firstSlot) && (item.getItemTwo() == secondSlot)).findFirst().orElse(null);
     }
 
     public List<CombinationItem> getItemsByFirstSlot(int id) {
-        return _items.stream().filter(item -> item.getItemOne() == id).collect(Collectors.toList());
+        return items.stream().filter(item -> item.getItemOne() == id).collect(Collectors.toList());
     }
 
-    public static CombinationItemsData getInstance() {
+    public static void init() {
+        getInstance().load();
+    }
+
+    public static CombinationItemsManager getInstance() {
         return Singleton.INSTANCE;
     }
 
     private static class Singleton {
-        private static final CombinationItemsData INSTANCE = new CombinationItemsData();
+        private static final CombinationItemsManager INSTANCE = new CombinationItemsManager();
     }
 }
