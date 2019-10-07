@@ -83,7 +83,7 @@ public class GameServer {
         CategoryManager.init();
         SecondaryAuthManager.init();
         CombinationItemsManager.init();
-        ClanRewardData.getInstance();
+        ClanRewardManager.init();
         DailyMissionHandler.getInstance().executeScript();
         DailyMissionData.getInstance();
         VipData.getInstance();

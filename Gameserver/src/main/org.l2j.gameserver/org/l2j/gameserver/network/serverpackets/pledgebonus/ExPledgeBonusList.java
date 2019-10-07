@@ -1,6 +1,6 @@
 package org.l2j.gameserver.network.serverpackets.pledgebonus;
 
-import org.l2j.gameserver.data.xml.impl.ClanRewardData;
+import org.l2j.gameserver.data.xml.ClanRewardManager;
 import org.l2j.gameserver.enums.ClanRewardType;
 import org.l2j.gameserver.model.pledge.ClanRewardBonus;
 import org.l2j.gameserver.network.GameClient;
@@ -17,10 +17,10 @@ public class ExPledgeBonusList extends ServerPacket {
     public void writeImpl(GameClient client) {
         writeId(ServerPacketId.EX_PLEDGE_BONUS_LIST);
         writeByte((byte) 0x00); // 140
-        ClanRewardData.getInstance().getClanRewardBonuses(ClanRewardType.MEMBERS_ONLINE).stream().sorted(Comparator.comparingInt(ClanRewardBonus::getLevel)).forEach(bonus ->
+        ClanRewardManager.getInstance().getClanRewardBonuses(ClanRewardType.MEMBERS_ONLINE).stream().sorted(Comparator.comparingInt(ClanRewardBonus::getLevel)).forEach(bonus ->
                 writeInt(bonus.getSkillReward().getSkillId()));
         writeByte((byte) 0x01); // 140
-        ClanRewardData.getInstance().getClanRewardBonuses(ClanRewardType.HUNTING_MONSTERS).stream().sorted(Comparator.comparingInt(ClanRewardBonus::getLevel)).forEach(bonus ->
+        ClanRewardManager.getInstance().getClanRewardBonuses(ClanRewardType.HUNTING_MONSTERS).stream().sorted(Comparator.comparingInt(ClanRewardBonus::getLevel)).forEach(bonus ->
                 writeInt(bonus.getItemReward().getId()));
     }
 

@@ -1,6 +1,6 @@
 package org.l2j.gameserver.enums;
 
-import org.l2j.gameserver.data.xml.impl.ClanRewardData;
+import org.l2j.gameserver.data.xml.ClanRewardManager;
 import org.l2j.gameserver.model.Clan;
 import org.l2j.gameserver.model.pledge.ClanRewardBonus;
 
@@ -41,7 +41,7 @@ public enum ClanRewardType {
 
     public ClanRewardBonus getAvailableBonus(Clan clan) {
         ClanRewardBonus availableBonus = null;
-        for (ClanRewardBonus bonus : ClanRewardData.getInstance().getClanRewardBonuses(this)) {
+        for (ClanRewardBonus bonus : ClanRewardManager.getInstance().getClanRewardBonuses(this)) {
             if (bonus.getRequiredAmount() <= _pointsFunction.apply(clan)) {
                 if ((availableBonus == null) || (availableBonus.getLevel() < bonus.getLevel())) {
                     availableBonus = bonus;
