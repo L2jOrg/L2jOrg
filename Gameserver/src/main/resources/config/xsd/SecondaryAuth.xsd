@@ -1,20 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
-	<xs:element name="list">
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+		   targetNamespace="http://l2j.org"
+		   xmlns="http://l2j.org"
+		   elementFormDefault="qualified">
+
+	<xs:element name="secondary-auth">
 		<xs:complexType>
-			<xs:sequence minOccurs="1" maxOccurs="1">
-				<xs:element name="enabled" type="xs:boolean" minOccurs="1" maxOccurs="1" />
-				<xs:element name="maxAttempts" type="xs:nonNegativeInteger" minOccurs="1" maxOccurs="1" />
-				<xs:element name="banTime" type="xs:nonNegativeInteger" minOccurs="1" maxOccurs="1" />
-				<xs:element name="recoveryLink" type="xs:string" minOccurs="1" maxOccurs="1" />
-				<xs:element name="forbiddenPasswords" minOccurs="0" maxOccurs="1">
+			<xs:sequence>
+				<xs:element name="forbidden-passwords" minOccurs="0">
 					<xs:complexType>
-						<xs:sequence minOccurs="1" maxOccurs="1">
-							<xs:element name="password" type="xs:string" minOccurs="1" maxOccurs="unbounded" />
+						<xs:sequence>
+							<xs:element name="password" type="xs:integer" maxOccurs="unbounded" />
 						</xs:sequence>
 					</xs:complexType>
 				</xs:element>
 			</xs:sequence>
+			<xs:attribute name="enabled" type="xs:boolean" default="true"/>
+			<xs:attribute name="max-attempts" type="xs:nonNegativeInteger" default="5"/>
+			<xs:attribute name="ban-time" type="xs:nonNegativeInteger" default="480"/>
+			<xs:attribute name="recovery-link" type="xs:string"/>
 		</xs:complexType>
 	</xs:element>
+
 </xs:schema>

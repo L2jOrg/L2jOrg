@@ -3,13 +3,14 @@ package org.l2j.gameserver.network;
 import io.github.joealisson.mmocore.Client;
 import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.commons.network.SessionKey;
+import org.l2j.commons.util.Util;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.database.dao.AccountDAO;
 import org.l2j.gameserver.data.database.dao.CharacterDAO;
 import org.l2j.gameserver.data.database.data.AccountData;
-import org.l2j.gameserver.data.sql.impl.PlayerNameTable;
 import org.l2j.gameserver.data.sql.impl.ClanTable;
-import org.l2j.gameserver.data.xml.impl.SecondaryAuthData;
+import org.l2j.gameserver.data.sql.impl.PlayerNameTable;
+import org.l2j.gameserver.data.xml.SecondaryAuthManager;
 import org.l2j.gameserver.data.xml.impl.VipData;
 import org.l2j.gameserver.enums.CharacterDeleteFailType;
 import org.l2j.gameserver.instancemanager.CommissionManager;
@@ -17,28 +18,31 @@ import org.l2j.gameserver.instancemanager.MailManager;
 import org.l2j.gameserver.instancemanager.MentorManager;
 import org.l2j.gameserver.model.CharSelectInfoPackage;
 import org.l2j.gameserver.model.Clan;
-import org.l2j.gameserver.world.World;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.holders.ClientHardwareInfoHolder;
 import org.l2j.gameserver.network.authcomm.AuthServerCommunication;
 import org.l2j.gameserver.network.authcomm.gs2as.PlayerLogout;
 import org.l2j.gameserver.network.serverpackets.*;
 import org.l2j.gameserver.network.serverpackets.vip.ReceiveVipInfo;
-import org.l2j.gameserver.security.SecondaryPasswordAuth;
 import org.l2j.gameserver.util.FloodProtectors;
+import org.l2j.gameserver.world.World;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.security.NoSuchAlgorithmException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.time.Instant;
 import java.time.temporal.ChronoUnit;
+import java.util.Objects;
 import java.util.concurrent.locks.ReentrantLock;
 
 import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;
 import static org.l2j.commons.database.DatabaseAccess.getDAO;
+import static org.l2j.commons.util.Util.hash;
+import static org.l2j.commons.util.Util.isNotEmpty;
 
 /**
  * Represents a client connected on Game Server.
@@ -49,19 +53,18 @@ public final class GameClient extends Client<io.github.joealisson.mmocore.Connec
     protected static final Logger LOGGER = LoggerFactory.getLogger(GameClient.class);
     protected static final Logger LOGGER_ACCOUNTING = LoggerFactory.getLogger("accounting");
 
-    private final ReentrantLock _activeCharLock = new ReentrantLock();
-    // flood protectors
-    private final FloodProtectors _floodProtectors = new FloodProtectors(this);
-    // Crypt
-    private final Crypt _crypt;
+    private final ReentrantLock activeCharLock = new ReentrantLock();
+
+    private final FloodProtectors floodProtectors = new FloodProtectors(this);
+
+    private final Crypt crypt;
     private String accountName;
-    private SessionKey _sessionId;
+    private SessionKey sessionId;
     private Player activeChar;
-    private SecondaryPasswordAuth _secondaryAuth;
-    private ClientHardwareInfoHolder _hardwareInfo;
-    private boolean _isAuthedGG;
-    private CharSelectInfoPackage[] _charSlotMapping = null;
-    private volatile boolean _isDetached = false;
+    private ClientHardwareInfoHolder hardwareInfo;
+    private boolean isAuthedGG;
+    private CharSelectInfoPackage[] charSlotMapping = null;
+    private volatile boolean isDetached = false;
 
     private boolean _protocol;
 
@@ -69,10 +72,11 @@ public final class GameClient extends Client<io.github.joealisson.mmocore.Connec
 
     private ConnectionState state;
     private AccountData account;
+    private boolean secondaryAuthed;
 
     public GameClient(io.github.joealisson.mmocore.Connection<GameClient> connection) {
         super(connection);
-        _crypt = new Crypt(this);
+        crypt = new Crypt(this);
     }
 
     public static void deleteCharByObjId(int objId) {
@@ -197,13 +201,13 @@ public final class GameClient extends Client<io.github.joealisson.mmocore.Connec
 
     @Override
     public int encrypt(byte[] data, int offset, int size) {
-        _crypt.encrypt(data, offset, size);
+        crypt.encrypt(data, offset, size);
         return size;
     }
 
     @Override
     public boolean decrypt(byte[] data, int offset, int size) {
-        return _crypt.decrypt(data, offset, size);
+        return crypt.decrypt(data, offset, size);
     }
 
     @Override
@@ -243,7 +247,7 @@ public final class GameClient extends Client<io.github.joealisson.mmocore.Connec
 
     public byte[] enableCrypt() {
         final byte[] key = BlowFishKeygen.getRandomKey();
-        _crypt.setKey(key);
+        crypt.setKey(key);
         return key;
     }
 
@@ -256,43 +260,44 @@ public final class GameClient extends Client<io.github.joealisson.mmocore.Connec
     }
 
     public ReentrantLock getActivePlayerLock() {
-        return _activeCharLock;
+        return activeCharLock;
     }
 
     public FloodProtectors getFloodProtectors() {
-        return _floodProtectors;
+        return floodProtectors;
     }
 
     public void setGameGuardOk(boolean val) {
-        _isAuthedGG = val;
+        isAuthedGG = val;
     }
 
     public boolean isAuthedGG() {
-        return _isAuthedGG;
+        return isAuthedGG;
     }
 
     public String getAccountName() {
         return accountName;
     }
 
-    public void setAccountName(String account) {
-        accountName = account;
+    public synchronized void setAccountName(String accountName) {
+        this.accountName = accountName;
 
-        if (SecondaryAuthData.getInstance().isEnabled()) {
-            _secondaryAuth = new SecondaryPasswordAuth(this);
+        account = getDAO(AccountDAO.class).findById(this.accountName);
+        if(isNull(account)) {
+            createNewAccountData();
         }
     }
 
     public SessionKey getSessionId() {
-        return _sessionId;
+        return sessionId;
     }
 
     public void setSessionId(SessionKey sk) {
-        _sessionId = sk;
+        sessionId = sk;
     }
 
     public void sendPacket(ServerPacket packet) {
-        if (_isDetached || (packet == null)) {
+        if (isDetached || (packet == null)) {
             return;
         }
 
@@ -306,11 +311,11 @@ public final class GameClient extends Client<io.github.joealisson.mmocore.Connec
     }
 
     public boolean isDetached() {
-        return _isDetached;
+        return isDetached;
     }
 
     public void setDetached(boolean b) {
-        _isDetached = b;
+        isDetached = b;
     }
 
     /**
@@ -409,18 +414,14 @@ public final class GameClient extends Client<io.github.joealisson.mmocore.Connec
     }
 
     public void setCharSelection(CharSelectInfoPackage[] chars) {
-        _charSlotMapping = chars;
+        charSlotMapping = chars;
     }
 
     public CharSelectInfoPackage getCharSelection(int charslot) {
-        if ((_charSlotMapping == null) || (charslot < 0) || (charslot >= _charSlotMapping.length)) {
+        if ((charSlotMapping == null) || (charslot < 0) || (charslot >= charSlotMapping.length)) {
             return null;
         }
-        return _charSlotMapping[charslot];
-    }
-
-    public SecondaryPasswordAuth getSecondaryAuth() {
-        return _secondaryAuth;
+        return charSlotMapping[charslot];
     }
 
     private int getObjectIdForSlot(int characterSlot) {
@@ -432,13 +433,7 @@ public final class GameClient extends Client<io.github.joealisson.mmocore.Connec
         return info.getObjectId();
     }
 
-    private synchronized AccountData getAccountData() {
-        if (isNull(account)) {
-            account = getDAO(AccountDAO.class).findById(accountName);
-            if (isNull(account)) {
-                createNewAccountData();
-            }
-        }
+    private AccountData getAccountData() {
         return account;
     }
 
@@ -446,7 +441,6 @@ public final class GameClient extends Client<io.github.joealisson.mmocore.Connec
         account = new AccountData();
         account.setAccount(accountName);
     }
-
 
     public void sendActionFailed() {
         sendPacket(ActionFailed.STATIC_PACKET);
@@ -469,15 +463,15 @@ public final class GameClient extends Client<io.github.joealisson.mmocore.Connec
     }
 
     public Crypt getCrypt() {
-        return _crypt;
+        return crypt;
     }
 
     public ClientHardwareInfoHolder getHardwareInfo() {
-        return _hardwareInfo;
+        return hardwareInfo;
     }
 
     public void setHardwareInfo(ClientHardwareInfoHolder hardwareInfo) {
-        _hardwareInfo = hardwareInfo;
+        this.hardwareInfo = hardwareInfo;
     }
 
     public ConnectionState getConnectionState() {
@@ -546,6 +540,112 @@ public final class GameClient extends Client<io.github.joealisson.mmocore.Connec
             };
         } catch (NullPointerException e) {
             return "[Character read failed due to disconnect]";
+        }
+    }
+
+    public boolean hasSecondPassword() {
+        return isNotEmpty(account.getSecAuthPassword());
+    }
+
+    public boolean saveSecondPassword(String password) {
+        if (hasSecondPassword()) {
+            LOGGER.warn("{} forced savePassword", this);
+            Disconnection.of(this).defaultSequence(false);
+            return false;
+        }
+
+        if (!validatePassword(password)) {
+            sendPacket(new Ex2ndPasswordAck(0, Ex2ndPasswordAck.WRONG_PATTERN));
+            return false;
+        }
+
+        try {
+            var cripted = hash(password);
+            account.setSecAuthPassword(cripted);
+            account.setSecAuthAttempts(0);
+            return true;
+        } catch (NoSuchAlgorithmException e) {
+            LOGGER.error("Unsupported Algorithm", e);
+        }
+        return false;
+    }
+
+    private boolean validatePassword(String password) {
+        if (!Util.isInteger(password)) {
+            return false;
+        }
+
+        if ((password.length() < 6) || (password.length() > 8)) {
+            return false;
+        }
+
+        return !SecondaryAuthManager.getInstance().isForbiddenPassword(Integer.parseInt(password));
+    }
+
+    public boolean changeSecondPassword(String password, String newPassword) {
+        if (!hasSecondPassword()) {
+            LOGGER.warn("{} forced changePassword", this);
+            Disconnection.of(this).defaultSequence(false);
+            return false;
+        }
+
+        if (!checkPassword(password, true)) {
+            return false;
+        }
+
+        if (!validatePassword(newPassword)) {
+            sendPacket(new Ex2ndPasswordAck(2, Ex2ndPasswordAck.WRONG_PATTERN));
+            return false;
+        }
+
+        try {
+            account.setSecAuthPassword(hash(newPassword));
+            secondaryAuthed = false;
+            return true;
+        } catch (NoSuchAlgorithmException e) {
+            LOGGER.error("Unsupported Algorithm", e);
+        }
+        return false;
+    }
+
+    public boolean checkPassword(String password, boolean skipAuth) {
+        try {
+            password = hash(password);
+
+            if (!Objects.equals(password, account.getSecAuthPassword())) {
+                var attempts = account.increaseSecAuthAttempts();
+                if (attempts  < SecondaryAuthManager.getInstance().getMaxAttempts()) {
+                    sendPacket(new Ex2ndPasswordVerify(Ex2ndPasswordVerify.PASSWORD_WRONG, attempts));
+                } else {
+                    // TODO AuthServerCommunication.getInstance().sendTempBan(_activeClient.getAccountName(), _activeClient.getHostAddress(), SecondaryAuthManager.getInstance().getBanTime());
+                    //AuthServerCommunication.getInstance().sendMail(_activeClient.getAccountName(), "SATempBan", _activeClient.getHostAddress(), Integer.toString(SecondaryAuthManager.getInstance().getMaxAttempts()), Long.toString(SecondaryAuthManager.getInstance().getBanTime()), SecondaryAuthManager.getInstance().getRecoveryLink());
+                    close(new Ex2ndPasswordVerify(Ex2ndPasswordVerify.PASSWORD_BAN, SecondaryAuthManager.getInstance().getMaxAttempts()));
+                    LOGGER.warn("{}  has inputted the wrong password {} times in row.", this, attempts);
+                }
+                return false;
+            }
+        } catch (NoSuchAlgorithmException e) {
+            LOGGER.error("Unsupported Algorithm", e);
+            return false;
+        }
+
+        if (!skipAuth) {
+            secondaryAuthed = true;
+            sendPacket(new Ex2ndPasswordVerify(Ex2ndPasswordVerify.PASSWORD_OK, account.getSecAuthAttempts()));
+        }
+        account.setSecAuthAttempts(0);
+        return true;
+    }
+
+    public boolean isSecondaryAuthed() {
+        return secondaryAuthed;
+    }
+
+    public void openSecondaryAuthDialog() {
+        if (hasSecondPassword()) {
+            sendPacket(new Ex2ndPasswordCheck(Ex2ndPasswordCheck.PASSWORD_PROMPT));
+        } else {
+            sendPacket(new Ex2ndPasswordCheck(Ex2ndPasswordCheck.PASSWORD_NEW));
         }
     }
 }

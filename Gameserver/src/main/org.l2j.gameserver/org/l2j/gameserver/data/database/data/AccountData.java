@@ -16,6 +16,12 @@ public class AccountData {
     @Column("vip_tier_expiration")
     private long vipTierExpiration;
 
+    @Column("sec_auth_password")
+    private String secAuthPassword;
+
+    @Column("sec_auth_attempts")
+    private int secAuthAttempts;
+
     public void setAccount(String accountName) {
         this.account = accountName;
     }
@@ -46,5 +52,25 @@ public class AccountData {
 
     public void setVipTierExpiration(long expiration) {
         this.vipTierExpiration = expiration;
+    }
+
+    public String getSecAuthPassword() {
+        return secAuthPassword;
+    }
+
+    public void setSecAuthPassword(String secAuthPassword) {
+        this.secAuthPassword = secAuthPassword;
+    }
+
+    public int getSecAuthAttempts() {
+        return secAuthAttempts;
+    }
+
+    public void setSecAuthAttempts(int secAuthAttempts) {
+        this.secAuthAttempts = secAuthAttempts;
+    }
+
+    public int increaseSecAuthAttempts() {
+        return ++secAuthAttempts;
     }
 }

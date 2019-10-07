@@ -2,7 +2,7 @@ package org.l2j.gameserver.network.clientpackets;
 
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.sql.impl.PlayerNameTable;
-import org.l2j.gameserver.data.xml.impl.SecondaryAuthData;
+import org.l2j.gameserver.data.xml.SecondaryAuthManager;
 import org.l2j.gameserver.data.xml.impl.VipData;
 import org.l2j.gameserver.instancemanager.AntiFeedManager;
 import org.l2j.gameserver.instancemanager.PunishmentManager;
@@ -59,8 +59,8 @@ public class CharacterSelect extends ClientPacket {
             return;
         }
 
-        if (SecondaryAuthData.getInstance().isEnabled() && !client.getSecondaryAuth().isAuthed()) {
-            client.getSecondaryAuth().openDialog();
+        if (SecondaryAuthManager.getInstance().isEnabled() && !client.isSecondaryAuthed()) {
+            client.openSecondaryAuthDialog();
             return;
         }
 
