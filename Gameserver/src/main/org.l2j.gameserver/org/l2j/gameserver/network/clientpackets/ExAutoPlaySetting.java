@@ -1,23 +1,40 @@
 package org.l2j.gameserver.network.clientpackets;
 
+import org.l2j.gameserver.model.actor.instance.Monster;
+import org.l2j.gameserver.network.serverpackets.ExAutoPlayDoMacro;
+import org.l2j.gameserver.world.World;
+
 /**
  * @author JoeAlisson
  */
 public class ExAutoPlaySetting extends ClientPacket {
 
+    private short options;
+    private boolean active;
+    private boolean pickUp;
+    private short nextTargetMode;
+    private boolean isNearTarget;
+    private int usableHpPotionPercent;
+    private boolean mannerMode;
+
     @Override
     protected void readImpl() throws Exception {
-        var options = readShort();
-        var active = readByteAsBoolean();
-        var pickUp = readByteAsBoolean();
-        var nextTargetMode = readShort();
-        var isNearTarget = readByteAsBoolean();
-        var usableHpPotionPercent = readInt();
-        var mannerMode = readByteAsBoolean();
+        options = readShort();
+        active = readByteAsBoolean();
+        pickUp = readByteAsBoolean();
+        nextTargetMode = readShort();
+        isNearTarget = readByteAsBoolean();
+        usableHpPotionPercent = readInt();
+        mannerMode = readByteAsBoolean();
     }
 
     @Override
     protected void runImpl() {
-        client.sendPacket(new org.l2j.gameserver.network.serverpackets.ExAutoPlaySetting());
+        var range = isNearTarget ? 600 : 1400;
+        var player = client.getPlayer();
+        var monster = World.getInstance().findAnyVisibleObject(player, Monster.class, range, false, m -> m.isAutoAttackable(player));
+        player.setTarget(monster);
+        client.sendPacket(new org.l2j.gameserver.network.serverpackets.ExAutoPlaySetting(options, active, pickUp, nextTargetMode, isNearTarget, usableHpPotionPercent, mannerMode));
+        client.sendPacket(new ExAutoPlayDoMacro());
     }
 }
