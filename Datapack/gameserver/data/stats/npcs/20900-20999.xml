@@ -130,7 +130,6 @@
             </drop>
             <spoil>
                 <item id="2014" min="1" max="1" chance="0.301"/> <!-- Iron Hammer Head -->
-                <item id="5163" min="1" max="1" chance="1.0474"/> <!-- Recipe: Blessed Spiritshot Compressed Package (D-grade) -->
                 <item id="1898" min="1" max="1" chance="2.6897"/> <!-- Blue Diamond Necklace Gem -->
             </spoil>
         </dropLists>
@@ -195,12 +194,10 @@
                 <item id="1880" min="1" max="1" chance="0.231"/> <!-- Steel -->
                 <item id="1881" min="1" max="1" chance="0.311"/> <!-- Coarse Bone Powder -->
                 <item id="1882" min="1" max="1" chance="0.518"/> <!-- Leather -->
-                <item id="3032" min="1" max="1" chance="0.091"/> <!-- Recipe: Spiritshot (D-grade) -->
             </drop>
             <spoil>
                 <item id="1864" min="1" max="1" chance="36.6638"/> <!-- Stem -->
                 <item id="1928" min="1" max="1" chance="2.6703"/> <!-- Piece Bone Gaiter Fragment -->
-                <item id="1804" min="1" max="1" chance="0.7333"/> <!-- Recipe: Soulshot (D-grade) -->
             </spoil>
         </dropLists>
     </npc>
@@ -480,7 +477,6 @@
                 <item id="1872" min="1" max="1" chance="2.489"/> <!-- Animal Bone -->
                 <item id="1867" min="1" max="1" chance="2.489"/> <!-- Animal Skin -->
                 <item id="1881" min="1" max="1" chance="0.248"/> <!-- Coarse Bone Powder -->
-                <item id="5273" min="1" max="1" chance="0.0039"/> <!-- Recipe: Greater Spiritshot Compressed Package (D-grade) -->
                 <item id="8294" min="1" max="1" chance="0.0039"/> <!-- Recipe: Steel Sword -->
             </drop>
             <spoil>
@@ -1346,12 +1342,10 @@
                 <item id="1885" min="1" max="1" chance="0.546"/> <!-- High-grade Suede -->
                 <item id="2307" min="1" max="1" chance="0.0276"/> <!-- Recipe: Heavy Doom Axe -->
                 <item id="2205" min="1" max="1" chance="0.2"/> <!-- Recipe: Chain Gaiters -->
-                <item id="5164" min="1" max="1" chance="0.021"/> <!-- Recipe: Blessed Spiritshot Compressed Package (C-grade) -->
             </drop>
             <spoil>
                 <item id="4480" min="1" max="1" chance="0.5103"/> <!-- Dye of WIT <Wit +1 Men -1> - 1st Class Transfer -->
                 <item id="2054" min="1" max="1" chance="0.7601"/> <!-- Light Crossbow Shaft -->
-                <item id="1805" min="1" max="1" chance="0.2977"/> <!-- Recipe: Soulshot (C-grade) -->
             </spoil>
         </dropLists>
     </npc>
@@ -2092,7 +2086,6 @@
             <spoil>
                 <item id="4967" min="1" max="1" chance="0.1726"/> <!-- Recipe: Sword of Valhalla (60%) -->
                 <item id="4938" min="1" max="1" chance="3.708"/> <!-- Recipe: Adamantite Ring (70%) -->
-                <item id="1806" min="1" max="1" chance="0.2996"/> <!-- Recipe: Soulshot (B-grade) -->
             </spoil>
         </dropLists>
         <collision>
@@ -2385,13 +2378,10 @@
                 <item id="1882" min="1" max="1" chance="0.693"/> <!-- Leather -->
                 <item id="1894" min="1" max="1" chance="0.108"/> <!-- Crafted Leather -->
                 <item id="4042" min="1" max="1" chance="0.052"/> <!-- Enria -->
-                <item id="1806" min="1" max="1" chance="0.006"/> <!-- Recipe: Soulshot (B-grade) -->
-                <item id="5270" min="1" max="1" chance="0.006"/> <!-- Recipe: Greater Soulshot Compressed Package (B-grade) -->
                 <item id="5436" min="1" max="1" chance="0.005"/> <!-- Recipe: Berserker Blade -->
             </drop>
             <spoil>
                 <item id="1918" min="1" max="1" chance="4.3851"/> <!-- Nassen's Earring Gemstone -->
-                <item id="1806" min="1" max="1" chance="0.2025"/> <!-- Recipe: Soulshot (B-grade) -->
                 <item id="1920" min="1" max="1" chance="3.4646"/> <!-- Necklace of Seal Chain -->
             </spoil>
         </dropLists>
@@ -2460,11 +2450,9 @@
                 <item id="1889" min="1" max="1" chance="0.378"/> <!-- Synthetic Braid -->
                 <item id="4044" min="1" max="1" chance="0.189"/> <!-- Thons -->
                 <item id="4128" min="1" max="1" chance="0.069"/> <!-- Recipe: Adamantite Necklace -->
-                <item id="5275" min="1" max="1" chance="0.011"/> <!-- Recipe: Greater Spiritshot Compressed Package (B-grade) -->
                 <item id="4187" min="1" max="1" chance="0.006"/> <!-- Recipe: Kris -->
             </drop>
             <spoil>
-                <item id="3034" min="1" max="1" chance="0.367"/> <!-- Recipe: Spiritshot (B-grade) -->
                 <item id="1984" min="1" max="1" chance="3.9333"/> <!-- Theca Leather Armor Pattern -->
                 <item id="4044" min="1" max="1" chance="6.1163"/> <!-- Thons -->
             </spoil>
@@ -4733,9 +4721,6 @@
                 <item id="1878" min="1" max="1" chance="5.05"/> <!-- Durable Braid -->
                 <item id="1884" min="1" max="1" chance="7.78"/> <!-- Cord -->
                 <item id="4039" min="1" max="1" chance="0.421"/> <!-- Mold Glue -->
-                <item id="3034" min="1" max="1" chance="0.025"/> <!-- Recipe: Spiritshot (B-grade) -->
-                <item id="5270" min="1" max="1" chance="0.025"/> <!-- Recipe: Greater Soulshot Compressed Package (B-grade) -->
-                <item id="3955" min="1" max="1" chance="0.025"/> <!-- Recipe: Blessed Spiritshot (B-grade) -->
             </drop>
             <spoil>
                 <item id="1918" min="1" max="1" chance="17.4977"/> <!-- Nassen's Earring Gemstone -->
@@ -4814,13 +4799,10 @@
                 <item id="1879" min="1" max="1" chance="2.304"/> <!-- Cokes -->
                 <item id="1875" min="1" max="1" chance="0.921"/> <!-- Stone of Purity -->
                 <item id="4040" min="1" max="1" chance="0.275"/> <!-- Mold Lubricant -->
-                <item id="3955" min="1" max="1" chance="0.0275"/> <!-- Recipe: Blessed Spiritshot (B-grade) -->
-                <item id="5270" min="1" max="1" chance="0.0275"/> <!-- Recipe: Greater Soulshot Compressed Package (B-grade) -->
                 <item id="4127" min="1" max="1" chance="0.342"/> <!-- Recipe: Adamantite Ring -->
             </drop>
             <spoil>
                 <item id="1920" min="1" max="1" chance="15.2063"/> <!-- Necklace of Seal Chain -->
-                <item id="1806" min="1" max="1" chance="0.8888"/> <!-- Recipe: Soulshot (B-grade) -->
                 <item id="1984" min="1" max="1" chance="9.5264"/> <!-- Theca Leather Armor Pattern -->
             </spoil>
         </dropLists>
@@ -5278,13 +5260,12 @@
                 <item id="2508" min="1" max="1" chance="17.83"/> <!-- Cursed Bone -->
                 <item id="1877" min="1" max="1" chance="0.75"/> <!-- Adamantite Nugget -->
                 <item id="2079" min="1" max="1" chance="0.3"/> <!-- Bec de Corbin Blade -->
-                <item id="5274" min="1" max="1" chance="0.3"/> <!-- Recipe: Greater Spiritshot Compressed Package (C-grade) -->
             </drop>
             <spoil>
                 <item id="2950" min="1" max="1" chance="11.43"/> <!-- Gloves of Seal Pattern -->
                 <item id="4125" min="1" max="1" chance="5.804"/> <!-- Recipe: Maestro Mold -->
                 <item id="2327" min="1" max="1" chance="0.3"/> <!-- Recipe: Caliburs -->
-                <item id="5269" min="1" max="1" chance="0.3"/> <!-- Recipe: Greater Soulshot Compressed Package (C-grade) -->
+
             </spoil>
         </dropLists>
     </npc>

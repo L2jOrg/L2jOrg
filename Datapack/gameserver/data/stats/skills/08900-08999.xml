@@ -86,6 +86,12 @@
     </skill>
     <skill id="8920" toLevel="1" name="Blessed Soulshot (S-grade)">
         <icon>icon.etc_spirit_bullet_white_i00</icon>
+        <isMagic>2</isMagic> <!-- Static Skill -->
+        <magicLvl>1</magicLvl>
         <operateType>A1</operateType>
+        <magicCriticalRate>5</magicCriticalRate>
+        <hitCancelTime>0</hitCancelTime>
+        <targetType>SELF</targetType>
+        <affectScope>SINGLE</affectScope>
     </skill>
 </list>

@@ -320,7 +320,6 @@
                 <item id="1866" min="1" max="1" chance="13.25"/> <!-- Suede -->
                 <item id="1878" min="1" max="1" chance="7.625"/> <!-- Durable Braid -->
                 <item id="2054" min="1" max="1" chance="0.75"/> <!-- Light Crossbow Shaft -->
-                <item id="1805" min="1" max="1" chance="0.075"/> <!-- Recipe: Soulshot (C-grade) -->
             </drop>
             <spoil>
                 <item id="2999" min="1" max="1" chance="20.98"/> <!-- Recipe: Plated Leather Gloves -->
@@ -2100,7 +2099,6 @@
                 <item id="1879" min="1" max="1" chance="1.31"/> <!-- Cokes -->
                 <item id="1875" min="1" max="1" chance="0.522"/> <!-- Stone of Purity -->
                 <item id="2162" min="1" max="1" chance="0.379"/> <!-- Recipe: Aquastone Necklace -->
-                <item id="5159" min="1" max="1" chance="0.025"/> <!-- Recipe: Spiritshot Compressed Package (C-grade) -->
                 <item id="2312" min="1" max="1" chance="0.03"/> <!-- Recipe: Crystallized Ice Bow -->
             </drop>
             <spoil>
@@ -2249,13 +2247,11 @@
                 <item id="1878" min="1" max="1" chance="4.485"/> <!-- Durable Braid -->
                 <item id="1884" min="1" max="1" chance="6.93"/> <!-- Cord -->
                 <item id="2306" min="1" max="1" chance="0.046"/> <!-- Recipe: Stick of Faith -->
-                <item id="5274" min="1" max="1" chance="0.03"/> <!-- Recipe: Greater Spiritshot Compressed Package (C-grade) -->
                 <item id="2996" min="1" max="1" chance="0.893"/> <!-- Recipe: Chain Gloves -->
             </drop>
             <spoil>
                 <item id="1878" min="1" max="1" chance="71.4983"/> <!-- Durable Braid -->
                 <item id="1885" min="1" max="1" chance="14.8955"/> <!-- High-grade Suede -->
-                <item id="1805" min="1" max="1" chance="0.5958"/> <!-- Recipe: Soulshot (C-grade) -->
             </spoil>
         </dropLists>
     </npc>
@@ -2328,8 +2324,6 @@
                 <item id="3000" min="1" max="1" chance="0.221"/> <!-- Recipe: Dwarven Chain Shield -->
                 <item id="2303" min="1" max="1" chance="0.015"/> <!-- Recipe: Skull Graver -->
                 <item id="2990" min="1" max="1" chance="0.273"/> <!-- Recipe: Chain Boots -->
-                <item id="3033" min="1" max="1" chance="0.013"/> <!-- Recipe: Spiritshot (C-grade) -->
-                <item id="3954" min="1" max="1" chance="0.11"/> <!-- Recipe: Blessed Spiritshot (C-grade) -->
             </drop>
             <spoil>
                 <item id="1871" min="1" max="3" chance="49.5145"/> <!-- Charcoal -->
@@ -3142,7 +3136,6 @@
                 <item id="4042" min="1" max="1" chance="0.088"/> <!-- Enria -->
                 <item id="4608" min="1" max="1" chance="0.011"/> <!-- Greater Dye of INT <Int +3 Wit -3> - 2nd Class Transfer -->
                 <item id="3017" min="1" max="1" chance="0.146"/> <!-- Recipe: Divine Gloves -->
-                <item id="5155" min="1" max="1" chance="0.01"/> <!-- Recipe: Soulshot Compressed Package (B-grade) -->
                 <item id="3017" min="1" max="1" chance="0.146"/> <!-- Recipe: Divine Gloves -->
             </drop>
             <spoil>
@@ -4091,8 +4084,6 @@
                 <item id="1895" min="3" max="9" chance="6.566"/> <!-- Metallic Fiber -->
                 <item id="4044" min="1" max="1" chance="5.351"/> <!-- Thons -->
                 <item id="1864" min="32" max="96" chance="4.965"/> <!-- Stem -->
-                <item id="5161" min="1" max="1" chance="0.3"/> <!-- Recipe: Spiritshot Compressed Package (A-grade) -->
-                <item id="3035" min="1" max="1" chance="0.3"/> <!-- Recipe: Spiritshot (A-grade) -->
                 <item id="90012" min="1" max="1" chance="0.3"/> <!-- Common Life Stone -->
             </drop>
             <spoil>

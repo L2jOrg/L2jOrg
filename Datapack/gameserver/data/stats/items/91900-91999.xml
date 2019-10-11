@@ -378,14 +378,14 @@
 	</item>
 	<item id="91929" name="Blessed Soulshot" type="EtcItem">
 		<!-- Increases weapon's physical power. -->
-		<set name="icon" val="icon.etc_bless_spirit_bullet_gold_i00" />
-		<set name="immediate_effect" val="true" />
+		<set name="icon" val="icon.etc_spirit_bullet_gold_i00" />
 		<set name="etcitem_type" val="SOULSHOT"/>
 		<set name="commissionItemType" val="SOULSHOT"/>
 		<set name="handler" val="BlessedSoulShots"/>
 		<set name="default_action" val="SOULSHOT" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
-		<set name="price" val="50" />
+		<set name="price" val="20" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />

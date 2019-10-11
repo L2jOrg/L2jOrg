@@ -58,13 +58,11 @@
                 <item id="1875" min="1" max="1" chance="0.75"/> <!-- Stone of Purity -->
                 <item id="1877" min="1" max="1" chance="0.75"/> <!-- Adamantite Nugget -->
                 <item id="2079" min="1" max="1" chance="0.3"/> <!-- Bec de Corbin Blade -->
-                <item id="5274" min="1" max="1" chance="0.3"/> <!-- Recipe: Greater Spiritshot Compressed Package (C-grade) -->
             </drop>
             <spoil>
                 <item id="2950" min="1" max="1" chance="10.45"/> <!-- Gloves of Seal Pattern -->
                 <item id="4125" min="1" max="1" chance="5.717"/> <!-- Recipe: Maestro Mold -->
                 <item id="2327" min="1" max="1" chance="0.3"/> <!-- Recipe: Caliburs -->
-                <item id="5269" min="1" max="1" chance="0.3"/> <!-- Recipe: Greater Soulshot Compressed Package (C-grade) -->
             </spoil>
         </dropLists>
     </npc>
@@ -209,7 +207,6 @@
                 <item id="4042" min="1" max="1" chance="0.3"/> <!-- Enria -->
                 <item id="4039" min="1" max="1" chance="0.3"/> <!-- Mold Glue -->
                 <item id="2321" min="1" max="1" chance="0.075"/> <!-- Recipe: Stiletto -->
-                <item id="5274" min="1" max="1" chance="0.075"/> <!-- Recipe: Greater Spiritshot Compressed Package (C-grade) -->
             </drop>
             <spoil>
                 <item id="1869" min="1" max="1" chance="91.065"/> <!-- Iron Ore -->
@@ -343,7 +340,6 @@
                 <item id="2936" min="1" max="1" chance="1.941"/> <!-- Chain Hood Pattern -->
                 <item id="1960" min="1" max="1" chance="1.41"/> <!-- Chain Gaiter Fragment -->
                 <item id="2321" min="1" max="1" chance="0.075"/> <!-- Recipe: Stiletto -->
-                <item id="5274" min="1" max="1" chance="0.075"/> <!-- Recipe: Greater Spiritshot Compressed Package (C-grade) -->
             </drop>
             <spoil>
                 <item id="1873" min="1" max="1" chance="80.2"/> <!-- Silver Nugget -->
@@ -2011,7 +2007,6 @@
                 <item id="2052" min="1" max="1" chance="0.75"/> <!-- Mithril Dagger Blade -->
                 <item id="955" min="1" max="1" chance="0.3"/> <!-- Scroll: Enchant Weapon (D-grade) -->
                 <item id="2358" min="1" max="1" chance="0.3"/> <!-- Recipe: Great Pata -->
-                <item id="5269" min="1" max="1" chance="0.3"/> <!-- Recipe: Greater Soulshot Compressed Package (C-grade) -->
             </drop>
             <spoil>
                 <item id="2234" min="1" max="1" chance="8.265"/> <!-- Recipe: Divine Stockings -->
@@ -2298,7 +2293,6 @@
                 <item id="2047" min="1" max="1" chance="0.3"/> <!-- Claymore Blade -->
                 <item id="2054" min="1" max="1" chance="0.075"/> <!-- Light Crossbow Shaft -->
                 <item id="2317" min="1" max="1" chance="0.03"/> <!-- Recipe: Bec de Corbin -->
-                <item id="5269" min="1" max="1" chance="0.03"/> <!-- Recipe: Greater Soulshot Compressed Package (C-grade) -->
             </drop>
             <spoil>
                 <item id="1876" min="1" max="1" chance="73.66"/> <!-- Mithril Ore -->
@@ -3146,8 +3140,6 @@
                 <item id="1864" min="50" max="150" chance="3.826"/> <!-- Stem -->
                 <item id="90045" min="1" max="1" chance="3.525"/> <!-- Magical Tablet -->
                 <item id="4041" min="1" max="1" chance="1.709"/> <!-- Mold Hardener -->
-                <item id="3956" min="1" max="1" chance="0.3"/> <!-- Recipe: Blessed Spiritshot (A-grade) -->
-                <item id="5166" min="1" max="1" chance="0.3"/> <!-- Recipe: Blessed Spiritshot Compressed Package (A-grade) -->
             </drop>
             <spoil>
                 <item id="4983" min="1" max="1" chance="25.24"/> <!-- Recipe: Doom Plate Armor (60%) -->
@@ -3407,8 +3399,6 @@
                 <item id="1865" min="18" max="54" chance="2.828"/> <!-- Varnish -->
                 <item id="90045" min="1" max="1" chance="1.838"/> <!-- Magical Tablet -->
                 <item id="4041" min="1" max="1" chance="0.75"/> <!-- Mold Hardener -->
-                <item id="1807" min="1" max="1" chance="0.3"/> <!-- Recipe: Soulshot (A-grade) -->
-                <item id="5156" min="1" max="1" chance="0.075"/> <!-- Recipe: Soulshot Compressed Package (A-grade) -->
             </drop>
             <spoil>
                 <item id="4989" min="1" max="1" chance="22.54"/> <!-- Recipe: Stockings of Doom (60%) -->
@@ -4386,7 +4376,6 @@
                 <item id="4166" min="1" max="1" chance="0.285"/> <!-- Recipe: Sealed Doom Helmet (100%) -->
             </drop>
             <spoil>
-                <item id="1807" min="1" max="1" chance="1.2483"/> <!-- Recipe: Soulshot (A-grade) -->
                 <item id="5482" min="1" max="1" chance="12.3574"/> <!-- Sealed Dark Crystal Legging Design -->
                 <item id="1895" min="1" max="5" chance="89.1673"/> <!-- Metallic Fiber -->
             </spoil>
@@ -4703,7 +4692,6 @@
             <spoil>
                 <item id="5230" min="1" max="1" chance="1.1849"/> <!-- Recipe: Mithril Arrow -->
                 <item id="5486" min="1" max="1" chance="5.2583"/> <!-- Sealed Dark Crystal Robe Fabric -->
-                <item id="5156" min="1" max="1" chance="1.1849"/> <!-- Recipe: Soulshot Compressed Package (A-grade) -->
             </spoil>
         </dropLists>
     </npc>
@@ -4773,11 +4761,9 @@
                 <item id="1882" min="1" max="1" chance="6.996"/> <!-- Leather -->
                 <item id="1894" min="1" max="1" chance="1.1"/> <!-- Crafted Leather -->
                 <item id="4042" min="1" max="1" chance="0.523"/> <!-- Enria -->
-                <item id="3035" min="1" max="1" chance="0.042"/> <!-- Recipe: Spiritshot (A-grade) -->
             </drop>
             <spoil>
                 <item id="5479" min="1" max="1" chance="3.5349"/> <!-- Sealed Tallum Leather Armor Pattern -->
-                <item id="3035" min="1" max="1" chance="0.7965"/> <!-- Recipe: Spiritshot (A-grade) -->
                 <item id="5336" min="1" max="1" chance="0.7728"/> <!-- Recipe: Sealed Leather Armor of Nightmare (60%) -->
             </spoil>
         </dropLists>
@@ -4853,12 +4839,10 @@
                 <item id="5549" min="1" max="1" chance="2.711"/> <!-- Metallic Thread -->
                 <item id="1889" min="1" max="1" chance="1.807"/> <!-- Synthetic Braid -->
                 <item id="4044" min="1" max="1" chance="0.903"/> <!-- Thons -->
-                <item id="3956" min="1" max="1" chance="0.034"/> <!-- Recipe: Blessed Spiritshot (A-grade) -->
                 <item id="1344" min="30" max="90" chance="11.28"/> <!-- Mithril Arrow -->
             </drop>
             <spoil>
                 <item id="5485" min="1" max="1" chance="4.9077"/> <!-- Sealed Tallum Tunic Texture -->
-                <item id="5161" min="1" max="1" chance="0.7782"/> <!-- Recipe: Spiritshot Compressed Package (A-grade) -->
                 <item id="5478" min="1" max="1" chance="4.9077"/> <!-- Sealed Dark Crystal Leather Armor Pattern -->
             </spoil>
         </dropLists>
@@ -5031,12 +5015,10 @@
                 <item id="1868" min="1" max="1" chance="7.882"/> <!-- Thread -->
                 <item id="1864" min="1" max="1" chance="7.814"/> <!-- Stem -->
                 <item id="1866" min="1" max="1" chance="2.573"/> <!-- Suede -->
-                <item id="1804" min="1" max="1" chance="0.3"/> <!-- Recipe: Soulshot (D-grade) -->
             </drop>
             <spoil>
                 <item id="2151" min="1" max="1" chance="9.91"/> <!-- Recipe: Necklace of Devotion -->
                 <item id="1898" min="1" max="1" chance="3.892"/> <!-- Blue Diamond Necklace Gem -->
-                <item id="1804" min="1" max="1" chance="1.489"/> <!-- Recipe: Soulshot (D-grade) -->
             </spoil>
         </dropLists>
     </npc>
@@ -5208,8 +5190,6 @@
                 <item id="1868" min="1" max="1" chance="9.227"/> <!-- Thread -->
                 <item id="1867" min="1" max="1" chance="6.192"/> <!-- Animal Skin -->
                 <item id="1866" min="1" max="1" chance="3.013"/> <!-- Suede -->
-                <item id="5158" min="1" max="1" chance="0.3"/> <!-- Recipe: Spiritshot Compressed Package (D-grade) -->
-                <item id="5163" min="1" max="1" chance="0.3"/> <!-- Recipe: Blessed Spiritshot Compressed Package (D-grade) -->
             </drop>
             <spoil>
                 <item id="2177" min="1" max="1" chance="14.39"/> <!-- Recipe: Bone Helmet -->

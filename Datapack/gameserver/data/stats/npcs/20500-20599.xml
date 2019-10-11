@@ -478,7 +478,6 @@
             </drop>
             <spoil>
                 <item id="1866" min="1" max="1" chance="37.91"/> <!-- Suede -->
-                <item id="3032" min="1" max="1" chance="2.256"/> <!-- Recipe: Spiritshot (D-grade) -->
             </spoil>
         </dropLists>
     </npc>
@@ -2484,11 +2483,11 @@
                 <item id="1867" min="1" max="1" chance="5.481"/> <!-- Animal Skin -->
                 <item id="1866" min="1" max="1" chance="2.811"/> <!-- Suede -->
                 <item id="2151" min="1" max="1" chance="1.09"/> <!-- Recipe: Necklace of Devotion -->
-                <item id="5153" min="1" max="1" chance="0.3"/> <!-- Recipe: Soulshot Compressed Package (D-grade) -->
+
             </drop>
             <spoil>
                 <item id="2151" min="1" max="1" chance="16.29"/> <!-- Recipe: Necklace of Devotion -->
-                <item id="1804" min="1" max="1" chance="2.325"/> <!-- Recipe: Soulshot (D-grade) -->
+
             </spoil>
         </dropLists>
     </npc>
@@ -2541,7 +2540,6 @@
                 <item id="1868" min="1" max="1" chance="8.288"/> <!-- Thread -->
                 <item id="1867" min="1" max="1" chance="5.618"/> <!-- Animal Skin -->
                 <item id="1866" min="1" max="1" chance="2.795"/> <!-- Suede -->
-                <item id="5153" min="1" max="1" chance="0.3"/> <!-- Recipe: Soulshot Compressed Package (D-grade) -->
                 <item id="2261" min="1" max="1" chance="0.075"/> <!-- Recipe: Conjuror's Staff -->
             </drop>
             <spoil>
@@ -3059,7 +3057,6 @@
             <spoil>
                 <item id="1957" min="1" max="1" chance="11.99"/> <!-- Assault Boot Fragment -->
                 <item id="2305" min="1" max="1" chance="0.3"/> <!-- Recipe: Crystal Staff -->
-                <item id="3033" min="1" max="1" chance="0.3"/> <!-- Recipe: Spiritshot (C-grade) -->
             </spoil>
         </dropLists>
     </npc>
@@ -3114,7 +3111,6 @@
             <spoil>
                 <item id="2148" min="1" max="1" chance="7.911"/> <!-- Recipe: Crafted Leather -->
                 <item id="2299" min="1" max="1" chance="0.3"/> <!-- Recipe: Big Hammer -->
-                <item id="3954" min="1" max="1" chance="0.3"/> <!-- Recipe: Blessed Spiritshot (C-grade) -->
             </spoil>
         </dropLists>
     </npc>
@@ -3180,7 +3176,6 @@
                 <item id="2932" min="1" max="1" chance="8.087"/> <!-- Plate Boot Design -->
                 <item id="2300" min="1" max="1" chance="0.3"/> <!-- Recipe: Scythe -->
                 <item id="2310" min="1" max="1" chance="0.3"/> <!-- Recipe: Dark Elven Dagger -->
-                <item id="3033" min="1" max="1" chance="0.3"/> <!-- Recipe: Spiritshot (C-grade) -->
             </spoil>
         </dropLists>
     </npc>
@@ -3917,7 +3912,6 @@
                 <item id="1960" min="1" max="1" chance="0.75"/> <!-- Chain Gaiter Fragment -->
                 <item id="1885" min="1" max="1" chance="0.75"/> <!-- High-grade Suede -->
                 <item id="2321" min="1" max="1" chance="0.03"/> <!-- Recipe: Stiletto -->
-                <item id="5274" min="1" max="1" chance="0.03"/> <!-- Recipe: Greater Spiritshot Compressed Package (C-grade) -->
             </drop>
             <spoil>
                 <item id="3001" min="1" max="1" chance="11.54"/> <!-- Recipe: Rind Leather Boots -->
@@ -3983,7 +3977,6 @@
                 <item id="2216" min="1" max="1" chance="4.184"/> <!-- Recipe: Great Helmet -->
                 <item id="3008" min="1" max="1" chance="3.636"/> <!-- Recipe: Theca Leather Gloves -->
                 <item id="2166" min="1" max="1" chance="3.477"/> <!-- Recipe: Earring of Seal -->
-                <item id="5279" min="1" max="1" chance="0.3"/> <!-- Recipe: Greater Blessed Spiritshot Compressed Package (C-grade) -->
             </spoil>
         </dropLists>
     </npc>
@@ -4108,13 +4101,11 @@
                 <item id="1866" min="1" max="1" chance="13.04"/> <!-- Suede -->
                 <item id="1867" min="1" max="3" chance="8.355"/> <!-- Animal Skin -->
                 <item id="2079" min="1" max="1" chance="0.3"/> <!-- Bec de Corbin Blade -->
-                <item id="5274" min="1" max="1" chance="0.3"/> <!-- Recipe: Greater Spiritshot Compressed Package (C-grade) -->
             </drop>
             <spoil>
                 <item id="2950" min="1" max="1" chance="9.702"/> <!-- Gloves of Seal Pattern -->
                 <item id="4125" min="1" max="1" chance="5.094"/> <!-- Recipe: Maestro Mold -->
                 <item id="2327" min="1" max="1" chance="0.3"/> <!-- Recipe: Caliburs -->
-                <item id="5269" min="1" max="1" chance="0.3"/> <!-- Recipe: Greater Soulshot Compressed Package (C-grade) -->
             </spoil>
         </dropLists>
     </npc>
@@ -4371,7 +4362,6 @@
             </drop>
             <spoil>
                 <item id="5530" min="1" max="1" chance="2.281"/> <!-- Berserker Blade Edge -->
-                <item id="3955" min="1" max="1" chance="0.75"/> <!-- Recipe: Blessed Spiritshot (B-grade) -->
             </spoil>
         </dropLists>
     </npc>
@@ -4941,7 +4931,6 @@
                 <item id="57" min="235" max="550" chance="70"/> <!-- Adena -->
                 <item id="2050" min="1" max="1" chance="0.3"/> <!-- Ghost Staff Head -->
                 <item id="2051" min="1" max="1" chance="0.3"/> <!-- Staff of Life Shaft -->
-                <item id="5159" min="1" max="1" chance="0.3"/> <!-- Recipe: Spiritshot Compressed Package (C-grade) -->
                 <item id="2048" min="1" max="1" chance="0.075"/> <!-- Bonebreaker Head -->
                 <item id="2049" min="1" max="1" chance="0.075"/> <!-- Atuba Hammer Head -->
                 <item id="2058" min="1" max="1" chance="0.075"/> <!-- Atuba Mace Head -->
@@ -5002,11 +4991,9 @@
                 <item id="57" min="205" max="480" chance="70"/> <!-- Adena -->
                 <item id="2047" min="1" max="1" chance="0.3"/> <!-- Claymore Blade -->
                 <item id="2967" min="1" max="1" chance="0.3"/> <!-- Elven Long Sword Blade -->
-                <item id="5164" min="1" max="1" chance="0.3"/> <!-- Recipe: Blessed Spiritshot Compressed Package (C-grade) -->
             </drop>
             <spoil>
                 <item id="2314" min="1" max="1" chance="0.75"/> <!-- Recipe: Body Slasher -->
-                <item id="3954" min="1" max="1" chance="0.3"/> <!-- Recipe: Blessed Spiritshot (C-grade) -->
             </spoil>
         </dropLists>
     </npc>

@@ -114,7 +114,6 @@
                 <item id="1866" min="1" max="1" chance="2.782"/> <!-- Suede -->
                 <item id="2014" min="1" max="1" chance="0.3"/> <!-- Iron Hammer Head -->
                 <item id="2257" min="1" max="1" chance="0.3"/> <!-- Recipe: Trident -->
-                <item id="5273" min="1" max="1" chance="0.3"/> <!-- Recipe: Greater Spiritshot Compressed Package (D-grade) -->
                 <!-- Classic: Also drops herbs. -->
                 <item id="70166" min="1" max="1" chance="5"/> <!-- Energy of Speed -->
                 <item id="70169" min="1" max="1" chance="4"/> <!-- Energy of Accuracy -->
@@ -190,8 +189,6 @@
                 <item id="1928" min="1" max="1" chance="2.197"/> <!-- Piece Bone Gaiter Fragment -->
                 <item id="1926" min="1" max="1" chance="1.485"/> <!-- Piece Bone Breastplate Fragment -->
                 <item id="1661" min="1" max="1" chance="0.75"/> <!-- Thief Key -->
-                <item id="5153" min="1" max="1" chance="0.3"/> <!-- Recipe: Soulshot Compressed Package (D-grade) -->
-                <item id="5158" min="1" max="1" chance="0.3"/> <!-- Recipe: Spiritshot Compressed Package (D-grade) -->
                 <!-- Classic: Also drops herbs. -->
                 <item id="70166" min="1" max="1" chance="5"/> <!-- Energy of Speed -->
                 <item id="70169" min="1" max="1" chance="4"/> <!-- Energy of Accuracy -->
@@ -954,8 +951,6 @@
                 <item id="1866" min="1" max="1" chance="1.636"/> <!-- Suede -->
                 <item id="1873" min="1" max="1" chance="0.99"/> <!-- Silver Nugget -->
                 <item id="1876" min="1" max="1" chance="0.75"/> <!-- Mithril Ore -->
-                <item id="1804" min="1" max="1" chance="0.3"/> <!-- Recipe: Soulshot (D-grade) -->
-                <item id="5273" min="1" max="1" chance="0.3"/> <!-- Recipe: Greater Spiritshot Compressed Package (D-grade) -->
             </drop>
             <spoil>
                 <item id="1868" min="1" max="1" chance="57.34"/> <!-- Thread -->
@@ -1025,7 +1020,6 @@
                 <item id="1873" min="1" max="1" chance="1.261"/> <!-- Silver Nugget -->
                 <item id="1876" min="1" max="1" chance="0.75"/> <!-- Mithril Ore -->
                 <item id="2016" min="1" max="1" chance="0.75"/> <!-- Compound Bow Shaft -->
-                <item id="3032" min="1" max="1" chance="0.3"/> <!-- Recipe: Spiritshot (D-grade) -->
             </drop>
             <spoil>
                 <item id="1866" min="1" max="1" chance="40.44"/> <!-- Suede -->
@@ -1967,8 +1961,6 @@
                 <item id="1928" min="1" max="1" chance="4.106"/> <!-- Piece Bone Gaiter Fragment -->
                 <item id="2176" min="1" max="1" chance="3.33"/> <!-- Recipe: Leather Boots -->
                 <item id="1926" min="1" max="1" chance="2.822"/> <!-- Piece Bone Breastplate Fragment -->
-                <item id="5153" min="1" max="1" chance="0.3"/> <!-- Recipe: Soulshot Compressed Package (D-grade) -->
-                <item id="5158" min="1" max="1" chance="0.3"/> <!-- Recipe: Spiritshot Compressed Package (D-grade) -->
             </drop>
             <spoil>
                 <item id="2255" min="1" max="1" chance="2.926"/> <!-- Recipe: Saber -->
@@ -4464,7 +4456,6 @@
                 <item id="1927" min="1" max="1" chance="1.626"/> <!-- Durable Leather Shirt Pattern -->
                 <item id="1873" min="1" max="1" chance="1.21"/> <!-- Silver Nugget -->
                 <item id="1876" min="1" max="1" chance="0.75"/> <!-- Mithril Ore -->
-                <item id="3032" min="1" max="1" chance="0.3"/> <!-- Recipe: Spiritshot (D-grade) -->
             </drop>
             <spoil>
                 <item id="1879" min="1" max="1" chance="9.622"/> <!-- Cokes -->
@@ -4789,7 +4780,6 @@
                 <item id="2261" min="1" max="1" chance="0.3"/> <!-- Recipe: Conjuror's Staff -->
             </drop>
             <spoil>
-                <item id="3953" min="1" max="1" chance="5.868"/> <!-- Recipe: Blessed Spiritshot (D-grade) -->
                 <item id="2262" min="1" max="1" chance="2.237"/> <!-- Recipe: Elven Bow -->
             </spoil>
         </dropLists>

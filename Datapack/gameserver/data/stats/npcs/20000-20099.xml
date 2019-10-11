@@ -1857,7 +1857,6 @@
                 <item id="1869" min="1" max="1" chance="2.311"/> <!-- Iron Ore -->
                 <item id="1876" min="1" max="1" chance="0.3"/> <!-- Mithril Ore -->
                 <item id="1817" min="1" max="1" chance="0.3"/> <!-- Recipe: Cord -->
-                <item id="5268" min="1" max="1" chance="0.075"/> <!-- Recipe: Greater Soulshot Compressed Package (D-grade) -->
             </drop>
             <spoil>
                 <item id="1868" min="1" max="1" chance="52.19"/> <!-- Thread -->
@@ -2991,7 +2990,6 @@
             </drop>
             <spoil>
                 <item id="1880" min="1" max="1" chance="5.518"/> <!-- Steel -->
-                <item id="3032" min="1" max="1" chance="2.284"/> <!-- Recipe: Spiritshot (D-grade) -->
             </spoil>
         </dropLists>
     </npc>
@@ -3128,7 +3126,6 @@
             <spoil>
                 <item id="2151" min="1" max="1" chance="10.97"/> <!-- Recipe: Necklace of Devotion -->
                 <item id="1926" min="1" max="1" chance="4.104"/> <!-- Piece Bone Breastplate Fragment -->
-                <item id="5163" min="1" max="1" chance="1.681"/> <!-- Recipe: Blessed Spiritshot Compressed Package (D-grade) -->
             </spoil>
         </dropLists>
     </npc>
@@ -3251,7 +3248,6 @@
                 <item id="1867" min="1" max="1" chance="5.541"/> <!-- Animal Skin -->
                 <item id="1866" min="1" max="1" chance="2.728"/> <!-- Suede -->
                 <item id="2255" min="1" max="1" chance="0.3"/> <!-- Recipe: Saber -->
-                <item id="5153" min="1" max="1" chance="0.3"/> <!-- Recipe: Soulshot Compressed Package (D-grade) -->
             </drop>
             <spoil>
                 <item id="1873" min="1" max="1" chance="23.25"/> <!-- Silver Nugget -->
@@ -3317,8 +3313,6 @@
                 <item id="1868" min="1" max="1" chance="8.372"/> <!-- Thread -->
                 <item id="1867" min="1" max="1" chance="5.581"/> <!-- Animal Skin -->
                 <item id="1866" min="1" max="1" chance="2.856"/> <!-- Suede -->
-                <item id="1804" min="1" max="1" chance="0.3"/> <!-- Recipe: Soulshot (D-grade) -->
-                <item id="5268" min="1" max="1" chance="0.3"/> <!-- Recipe: Greater Soulshot Compressed Package (D-grade) -->
             </drop>
             <spoil>
                 <item id="2177" min="1" max="1" chance="18.42"/> <!-- Recipe: Bone Helmet -->
@@ -3388,7 +3382,6 @@
                 <item id="1871" min="1" max="1" chance="2.536"/> <!-- Charcoal -->
                 <item id="1876" min="1" max="1" chance="0.75"/> <!-- Mithril Ore -->
                 <item id="2014" min="1" max="1" chance="0.3"/> <!-- Iron Hammer Head -->
-                <item id="5268" min="1" max="1" chance="0.3"/> <!-- Recipe: Greater Soulshot Compressed Package (D-grade) -->
                 <!-- Classic: Also drops herbs. -->
                 <item id="70166" min="1" max="1" chance="5"/> <!-- Energy of Speed -->
                 <item id="70169" min="1" max="1" chance="4"/> <!-- Energy of Accuracy -->
@@ -3653,8 +3646,6 @@
                 <item id="1870" min="1" max="1" chance="2.821"/> <!-- Coal -->
                 <item id="1927" min="1" max="1" chance="1.889"/> <!-- Durable Leather Shirt Pattern -->
                 <item id="1876" min="1" max="1" chance="0.75"/> <!-- Mithril Ore -->
-                <item id="1804" min="1" max="1" chance="0.3"/> <!-- Recipe: Soulshot (D-grade) -->
-                <item id="5153" min="1" max="1" chance="0.3"/> <!-- Recipe: Soulshot Compressed Package (D-grade) -->
                 <!-- Classic: Also drops herbs. -->
                 <item id="70166" min="1" max="1" chance="5"/> <!-- Energy of Speed -->
                 <item id="70169" min="1" max="1" chance="4"/> <!-- Energy of Accuracy -->
@@ -3778,7 +3769,6 @@
                 <item id="1867" min="1" max="1" chance="5.35"/> <!-- Animal Skin -->
                 <item id="1866" min="1" max="1" chance="2.647"/> <!-- Suede -->
                 <item id="956" min="1" max="1" chance="0.3"/> <!-- Scroll: Enchant Armor (D-grade) -->
-                <item id="5273" min="1" max="1" chance="0.3"/> <!-- Recipe: Greater Spiritshot Compressed Package (D-grade) -->
                 <item id="2261" min="1" max="1" chance="0.075"/> <!-- Recipe: Conjuror's Staff -->
             </drop>
             <spoil>
@@ -4140,7 +4130,6 @@
                 <item id="2262" min="1" max="1" chance="0.075"/> <!-- Recipe: Elven Bow -->
             </drop>
             <spoil>
-                <item id="3953" min="1" max="1" chance="3.642"/> <!-- Recipe: Blessed Spiritshot (D-grade) -->
                 <item id="2263" min="1" max="1" chance="1.35"/> <!-- Recipe: Dwarven Trident -->
             </spoil>
         </dropLists>

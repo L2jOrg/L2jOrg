@@ -4059,6 +4059,13 @@
             <radius normal="12"/>
             <height normal="24"/>
         </collision>
+        <dropLists>
+            <drop>
+                <item id="57" min="4527" max="10563" chance="70"/> <!-- Adena -->
+                <item id="90045" min="1" max="1" chance="1.9"/> <!-- Magical Tablet -->
+                <item id="49756" min="1" max="1" chance="0.50"/> <!-- Cloth Piece -->
+            </drop>
+        </dropLists>
     </npc>
     <npc id="21864" level="82" type="Monster" name="Ketra's Head Shaman">
         <!-- Classic Seven Sings -->
@@ -4348,6 +4355,7 @@
                 <item id="1895" min="3" max="9" chance="8.131"/> <!-- Metallic Fiber -->
                 <item id="1864" min="32" max="96" chance="6.133"/> <!-- Stem -->
                 <item id="90045" min="1" max="1" chance="1.9"/> <!-- Magical Tablet -->
+                <item id="49756" min="1" max="1" chance="0.50"/> <!-- Cloth Piece -->
             </drop>
             <spoil>
                 <item id="1864" min="1" max="1" chance="92.725"/> <!-- Stem -->
@@ -5889,6 +5897,18 @@
             <radius normal="16"/>
             <height normal="41"/>
         </collision>
+        <dropLists>
+            <drop>
+                <item id="57" min="7200" max="16801" chance="70"/> <!-- Adena -->
+                <item id="1874" min="1" max="1" chance="25.00"/> <!-- Oriharukon Ore -->
+                <item id="90045" min="1" max="1" chance="1.9"/> <!-- Magical Tablet -->
+                <item id="49756" min="1" max="1" chance="0.50"/> <!-- Cloth Piece -->
+            </drop>
+            <spoil>
+                <item id="1874" min="1" max="1" chance="75.00"/> <!-- Oriharukon Ore -->
+            </spoil>
+        </dropLists>
+
     </npc>
     <npc id="21890" level="82" type="Monster" name="Varka's Chief Magus">
         <!-- Classic Seven Sings -->
@@ -6089,6 +6109,8 @@
                 <item id="1878" min="22" max="66" chance="2.788"/> <!-- Durable Braid -->
                 <item id="90012" min="1" max="1" chance="2.186"/> <!-- Common Life Stone -->
                 <item id="90013" min="1" max="1" chance="0.75"/> <!-- Mid-grade Life Stone -->
+                <item id="49756" min="1" max="1" chance="0.50"/> <!-- Cloth Piece -->
+                <item id="90045" min="1" max="1" chance="1.9"/> <!-- Magical Tablet -->
             </drop>
             <spoil>
                 <item id="1869" min="1" max="1" chance="92.76"/> <!-- Iron Ore -->
