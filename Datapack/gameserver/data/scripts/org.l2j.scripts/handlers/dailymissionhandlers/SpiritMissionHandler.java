@@ -2,8 +2,8 @@ package handlers.dailymissionhandlers;
 
 import org.l2j.gameserver.data.database.elemental.ElementalType;
 import org.l2j.gameserver.handler.AbstractMissionHandler;
-import org.l2j.gameserver.model.dailymission.DailyMissionDataHolder;
-import org.l2j.gameserver.model.dailymission.DailyMissionStatus;
+import org.l2j.gameserver.model.dailymission.MissionDataHolder;
+import org.l2j.gameserver.model.dailymission.MissionStatus;
 import org.l2j.gameserver.model.events.Containers;
 import org.l2j.gameserver.model.events.EventType;
 import org.l2j.gameserver.model.events.impl.character.OnElementalSpiritUpgrade;
@@ -16,7 +16,7 @@ public class SpiritMissionHandler extends AbstractMissionHandler {
 
     private final ElementalType type;
 
-    public SpiritMissionHandler(DailyMissionDataHolder holder) {
+    public SpiritMissionHandler(MissionDataHolder holder) {
         super(holder);
         type = getHolder().getParams().getEnum("element", ElementalType.class, ElementalType.NONE);
     }
@@ -35,7 +35,7 @@ public class SpiritMissionHandler extends AbstractMissionHandler {
     private void onElementalSpiritLearn(OnElementalSpiritLearn event) {
         var missionData = getPlayerEntry(event.getPlayer(), true);
         missionData.setProgress(1);
-        missionData.setStatus(DailyMissionStatus.AVAILABLE);
+        missionData.setStatus(MissionStatus.AVAILABLE);
         notifyAvailablesReward(event.getPlayer());
         storePlayerEntry(missionData);
     }
@@ -50,7 +50,7 @@ public class SpiritMissionHandler extends AbstractMissionHandler {
         var missionData = getPlayerEntry(event.getPlayer(), true);
         missionData.setProgress(spirit.getStage());
         if(missionData.getProgress() >= getRequiredCompletion()) {
-            missionData.setStatus(DailyMissionStatus.AVAILABLE);
+            missionData.setStatus(MissionStatus.AVAILABLE);
             notifyAvailablesReward(event.getPlayer());
         }
         storePlayerEntry(missionData);

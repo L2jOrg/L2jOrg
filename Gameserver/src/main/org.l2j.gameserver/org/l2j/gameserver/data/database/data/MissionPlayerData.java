@@ -3,31 +3,31 @@ package org.l2j.gameserver.data.database.data;
 import org.l2j.commons.database.annotation.Column;
 import org.l2j.commons.database.annotation.Table;
 import org.l2j.commons.database.annotation.Transient;
-import org.l2j.gameserver.model.dailymission.DailyMissionStatus;
+import org.l2j.gameserver.model.dailymission.MissionStatus;
 
 /**
  * @author UnAfraid
  * @author JoeAlisson
  */
 @Table("character_daily_missions")
-public class DailyMissionPlayerData {
+public class MissionPlayerData {
 
     @Column("char_id")
     private int playerObjectId;
     @Column("mission_id")
     private int missionId;
 
-    private DailyMissionStatus status = DailyMissionStatus.NOT_AVAILABLE;
+    private MissionStatus status = MissionStatus.NOT_AVAILABLE;
     private int progress;
 
     @Transient
     private boolean recentlyCompleted;
 
-    public DailyMissionPlayerData() {
+    public MissionPlayerData() {
         // default
     }
 
-    public DailyMissionPlayerData(int objectId, int missionId) {
+    public MissionPlayerData(int objectId, int missionId) {
         playerObjectId = objectId;
         this.missionId = missionId;
     }
@@ -36,11 +36,11 @@ public class DailyMissionPlayerData {
         return playerObjectId;
     }
 
-    public DailyMissionStatus getStatus() {
+    public MissionStatus getStatus() {
         return status;
     }
 
-    public void setStatus(DailyMissionStatus status) {
+    public void setStatus(MissionStatus status) {
         this.status = status;
     }
 
@@ -69,6 +69,6 @@ public class DailyMissionPlayerData {
     }
 
     public boolean isAvailable() {
-        return status == DailyMissionStatus.AVAILABLE;
+        return status == MissionStatus.AVAILABLE;
     }
 }

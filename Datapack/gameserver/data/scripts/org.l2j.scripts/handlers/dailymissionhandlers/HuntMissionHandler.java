@@ -4,8 +4,8 @@ import org.l2j.commons.util.Util;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.handler.AbstractMissionHandler;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.dailymission.DailyMissionDataHolder;
-import org.l2j.gameserver.model.dailymission.DailyMissionStatus;
+import org.l2j.gameserver.model.dailymission.MissionDataHolder;
+import org.l2j.gameserver.model.dailymission.MissionStatus;
 import org.l2j.gameserver.model.events.Containers;
 import org.l2j.gameserver.model.events.EventType;
 import org.l2j.gameserver.model.events.impl.character.npc.OnAttackableKill;
@@ -26,7 +26,7 @@ public class HuntMissionHandler extends AbstractMissionHandler {
     private final List<Integer> monsters;
     private final int classLevel;
 
-    public HuntMissionHandler(DailyMissionDataHolder holder) {
+    public HuntMissionHandler(MissionDataHolder holder) {
         super(holder);
         requiredLevel = holder.getParams().getInt("minLevel", 0);
         maxLevel = holder.getParams().getInt("maxLevel", Byte.MAX_VALUE);
@@ -65,11 +65,11 @@ public class HuntMissionHandler extends AbstractMissionHandler {
     private void onKillProgress(Player player)
     {
         final var entry = getPlayerEntry(player, true);
-        if (entry.getStatus() == DailyMissionStatus.NOT_AVAILABLE)
+        if (entry.getStatus() == MissionStatus.NOT_AVAILABLE)
         {
             if (entry.increaseProgress() >= getRequiredCompletion())
             {
-                entry.setStatus(DailyMissionStatus.AVAILABLE);
+                entry.setStatus(MissionStatus.AVAILABLE);
                 notifyAvailablesReward(player);
             }
             storePlayerEntry(entry);

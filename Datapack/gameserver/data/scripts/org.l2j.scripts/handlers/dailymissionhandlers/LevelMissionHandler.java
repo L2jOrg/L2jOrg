@@ -2,9 +2,9 @@ package handlers.dailymissionhandlers;
 
 import org.l2j.gameserver.handler.AbstractMissionHandler;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.dailymission.DailyMissionDataHolder;
-import org.l2j.gameserver.data.database.data.DailyMissionPlayerData;
-import org.l2j.gameserver.model.dailymission.DailyMissionStatus;
+import org.l2j.gameserver.model.dailymission.MissionDataHolder;
+import org.l2j.gameserver.data.database.data.MissionPlayerData;
+import org.l2j.gameserver.model.dailymission.MissionStatus;
 import org.l2j.gameserver.model.events.Containers;
 import org.l2j.gameserver.model.events.EventType;
 import org.l2j.gameserver.model.events.impl.character.player.OnPlayerLevelChanged;
@@ -19,7 +19,7 @@ import static java.util.Objects.nonNull;
  */
 public class LevelMissionHandler extends AbstractMissionHandler {
 
-    public LevelMissionHandler(DailyMissionDataHolder holder) {
+    public LevelMissionHandler(MissionDataHolder holder) {
         super(holder);
     }
 
@@ -36,15 +36,15 @@ public class LevelMissionHandler extends AbstractMissionHandler {
     @Override
     public int getStatus(Player player) {
         final var entry = getPlayerEntry(player, true);
-        return nonNull(entry) ? entry.getStatus().getClientId() : DailyMissionStatus.NOT_AVAILABLE.getClientId();
+        return nonNull(entry) ? entry.getStatus().getClientId() : MissionStatus.NOT_AVAILABLE.getClientId();
     }
 
     private void onPlayerLevelChanged(OnPlayerLevelChanged event) {
         final Player player = event.getActiveChar();
         if ((player.getLevel() >= getRequiredCompletion())) {
-            final DailyMissionPlayerData entry = getPlayerEntry(player, true);
-            if (entry.getStatus() == DailyMissionStatus.NOT_AVAILABLE) {
-                entry.setStatus(DailyMissionStatus.AVAILABLE);
+            final MissionPlayerData entry = getPlayerEntry(player, true);
+            if (entry.getStatus() == MissionStatus.NOT_AVAILABLE) {
+                entry.setStatus(MissionStatus.AVAILABLE);
                 storePlayerEntry(entry);
                 notifyAvailablesReward(player);
             }

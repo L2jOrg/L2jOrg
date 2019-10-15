@@ -1,10 +1,10 @@
 package handlers.dailymissionhandlers;
 
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.dailymission.DailyMissionStatus;
+import org.l2j.gameserver.model.dailymission.MissionStatus;
 import org.l2j.gameserver.handler.AbstractMissionHandler;
-import org.l2j.gameserver.model.dailymission.DailyMissionDataHolder;
-import org.l2j.gameserver.data.database.data.DailyMissionPlayerData;
+import org.l2j.gameserver.model.dailymission.MissionDataHolder;
+import org.l2j.gameserver.data.database.data.MissionPlayerData;
 import org.l2j.gameserver.model.events.Containers;
 import org.l2j.gameserver.model.events.EventType;
 import org.l2j.gameserver.model.events.impl.olympiad.OnOlympiadMatchResult;
@@ -19,7 +19,7 @@ import static java.util.Objects.nonNull;
  */
 public class OlympiadMissionHandler extends AbstractMissionHandler {
 	private final boolean winnerOnly;
-	public OlympiadMissionHandler(DailyMissionDataHolder holder) {
+	public OlympiadMissionHandler(MissionDataHolder holder) {
 		super(holder);
 		winnerOnly = holder.getParams().getBoolean("win", false);
 	}
@@ -31,20 +31,20 @@ public class OlympiadMissionHandler extends AbstractMissionHandler {
 	
 	private void onOlympiadMatchResult(OnOlympiadMatchResult event) {
 		if (nonNull(event.getWinner())) {
-			final DailyMissionPlayerData winnerEntry = getPlayerEntry(event.getWinner().getPlayer(), true);
+			final MissionPlayerData winnerEntry = getPlayerEntry(event.getWinner().getPlayer(), true);
 			increaseProgress(winnerEntry, event.getWinner().getPlayer());
 		}
 		
 		if (nonNull(event.getLoser()) && !winnerOnly) {
-			final DailyMissionPlayerData loseEntry = getPlayerEntry(event.getLoser().getPlayer(), true);
+			final MissionPlayerData loseEntry = getPlayerEntry(event.getLoser().getPlayer(), true);
 			increaseProgress(loseEntry, event.getLoser().getPlayer());
 		}
 	}
 
-	private void increaseProgress(DailyMissionPlayerData entry, Player player) {
-		if (entry.getStatus() == DailyMissionStatus.NOT_AVAILABLE) {
+	private void increaseProgress(MissionPlayerData entry, Player player) {
+		if (entry.getStatus() == MissionStatus.NOT_AVAILABLE) {
 			if (entry.increaseProgress() >= getRequiredCompletion()) {
-				entry.setStatus(DailyMissionStatus.AVAILABLE);
+				entry.setStatus(MissionStatus.AVAILABLE);
 				notifyAvailablesReward(player);
 			}
 			storePlayerEntry(entry);

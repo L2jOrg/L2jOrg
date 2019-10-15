@@ -1,5 +1,5 @@
-DROP TABLE IF EXISTS character_daily_missions;
-CREATE TABLE IF NOT EXISTS character_daily_missions (
+DROP TABLE IF EXISTS character_missions;
+CREATE TABLE IF NOT EXISTS character_missions (
   `char_id`  INT UNSIGNED NOT NULL ,
   `mission_id`  INT UNSIGNED NOT NULL ,
   `status`  ENUM ('AVAILABLE', 'NOT_AVAILABLE', 'COMPLETED') NOT NULL DEFAULT 'NOT_AVAILABLE' ,

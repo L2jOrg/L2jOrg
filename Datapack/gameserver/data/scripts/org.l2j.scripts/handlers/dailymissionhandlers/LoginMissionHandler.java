@@ -1,10 +1,10 @@
 package handlers.dailymissionhandlers;
 
 
-import org.l2j.gameserver.model.dailymission.DailyMissionStatus;
+import org.l2j.gameserver.model.dailymission.MissionStatus;
 import org.l2j.gameserver.handler.AbstractMissionHandler;
-import org.l2j.gameserver.model.dailymission.DailyMissionDataHolder;
-import org.l2j.gameserver.data.database.data.DailyMissionPlayerData;
+import org.l2j.gameserver.model.dailymission.MissionDataHolder;
+import org.l2j.gameserver.data.database.data.MissionPlayerData;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.events.Containers;
 import org.l2j.gameserver.model.events.EventType;
@@ -20,7 +20,7 @@ public class LoginMissionHandler extends AbstractMissionHandler {
 
     private byte days = 0;
 
-    public LoginMissionHandler(DailyMissionDataHolder holder) {
+    public LoginMissionHandler(MissionDataHolder holder) {
         super(holder);
         var days = holder.getParams().getString("days", "");
         for (String day : days.split(" ")) {
@@ -32,8 +32,8 @@ public class LoginMissionHandler extends AbstractMissionHandler {
 
     @Override
     public boolean isAvailable(Player player) {
-        final DailyMissionPlayerData entry = getPlayerEntry(player, false);
-        return (entry != null) && (DailyMissionStatus.AVAILABLE == entry.getStatus());
+        final MissionPlayerData entry = getPlayerEntry(player, false);
+        return (entry != null) && (MissionStatus.AVAILABLE == entry.getStatus());
     }
 
     @Override
@@ -42,18 +42,18 @@ public class LoginMissionHandler extends AbstractMissionHandler {
     }
 
     private void onPlayerLogin(OnPlayerLogin event) {
-        final DailyMissionPlayerData entry = getPlayerEntry(event.getActiveChar(), true);
-        if(DailyMissionStatus.COMPLETED.equals(entry.getStatus())) {
+        final MissionPlayerData entry = getPlayerEntry(event.getActiveChar(), true);
+        if(MissionStatus.COMPLETED.equals(entry.getStatus())) {
             return;
         }
 
         final int currentDay = Calendar.getInstance().get(Calendar.DAY_OF_WEEK);
         if(days != 0 && (days & 1 << currentDay) == 0) {
             entry.setProgress(0);
-            entry.setStatus(DailyMissionStatus.NOT_AVAILABLE);
+            entry.setStatus(MissionStatus.NOT_AVAILABLE);
         } else {
             entry.setProgress(1);
-            entry.setStatus(DailyMissionStatus.AVAILABLE);
+            entry.setStatus(MissionStatus.AVAILABLE);
             notifyAvailablesReward(event.getActiveChar());
         }
     }

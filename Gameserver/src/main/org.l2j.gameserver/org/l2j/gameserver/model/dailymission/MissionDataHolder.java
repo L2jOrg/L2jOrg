@@ -20,27 +20,27 @@ import static java.util.Objects.nonNull;
 /**
  * @author Sdw
  */
-public class DailyMissionDataHolder {
+public class MissionDataHolder {
 
     private final int id;
     private final List<ItemHolder> rewardsItems;
     private final List<ClassId> classRestriction;
     private final int requiredCompletions;
     private final StatsSet params;
-    private final DailyMissionCycle cycle;
+    private final MissionCycle cycle;
 
     private final boolean isDisplayedWhenNotAvailable;
     private final AbstractMissionHandler handler;
 
-    public DailyMissionDataHolder(StatsSet set) {
-        final Function<DailyMissionDataHolder, AbstractMissionHandler> handler = MissionEngine.getInstance().getHandler(set.getString("handler"));
+    public MissionDataHolder(StatsSet set) {
+        final Function<MissionDataHolder, AbstractMissionHandler> handler = MissionEngine.getInstance().getHandler(set.getString("handler"));
 
         id = set.getInt("id");
         requiredCompletions = set.getInt("requiredCompletion", 1);
         rewardsItems = set.getList("rewards", ItemHolder.class);
         classRestriction = set.getList("classRestriction", ClassId.class);
         params = set.getObject("params", StatsSet.class);
-        cycle = set.getEnum("cycle", DailyMissionCycle.class);
+        cycle = set.getEnum("cycle", MissionCycle.class);
         isDisplayedWhenNotAvailable = set.getBoolean("isDisplayedWhenNotAvailable", true);
         this.handler = handler != null ? handler.apply(this) : null;
     }
@@ -62,7 +62,7 @@ public class DailyMissionDataHolder {
     }
 
     public boolean isOneTime() {
-        return cycle == DailyMissionCycle.SINGLE;
+        return cycle == MissionCycle.SINGLE;
     }
 
     public boolean isDisplayedWhenNotAvailable() {
@@ -76,12 +76,12 @@ public class DailyMissionDataHolder {
         }
 
         final int status = getStatus(player);
-        if (!isDisplayedWhenNotAvailable() && (status == DailyMissionStatus.NOT_AVAILABLE.getClientId())) {
+        if (!isDisplayedWhenNotAvailable() && (status == MissionStatus.NOT_AVAILABLE.getClientId())) {
             return false;
         }
 
         // Show only if its repeatable, recently completed or uncompleted that has met the checks above.
-        return (!isOneTime() || getRecentlyCompleted(player) || (status != DailyMissionStatus.COMPLETED.getClientId()));
+        return (!isOneTime() || getRecentlyCompleted(player) || (status != MissionStatus.COMPLETED.getClientId()));
     }
 
     public void requestReward(Player player) {
@@ -91,7 +91,7 @@ public class DailyMissionDataHolder {
     }
 
     public int getStatus(Player player) {
-        return nonNull(handler) ? handler.getStatus(player) : DailyMissionStatus.NOT_AVAILABLE.getClientId();
+        return nonNull(handler) ? handler.getStatus(player) : MissionStatus.NOT_AVAILABLE.getClientId();
     }
 
     public int getProgress(Player player) {

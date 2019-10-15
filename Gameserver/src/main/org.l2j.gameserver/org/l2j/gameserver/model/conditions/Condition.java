@@ -1,7 +1,7 @@
 package org.l2j.gameserver.model.conditions;
 
 import org.l2j.gameserver.model.actor.Creature;
-import org.l2j.gameserver.model.dailymission.DailyMissionDataHolder;
+import org.l2j.gameserver.model.dailymission.MissionDataHolder;
 import org.l2j.gameserver.model.items.ItemTemplate;
 import org.l2j.gameserver.model.skills.Skill;
 
@@ -96,7 +96,7 @@ public abstract class Condition implements ConditionListener {
         return test(caster, target, null, null);
     }
 
-    public final boolean test(Creature caster, DailyMissionDataHolder onewayreward) {
+    public final boolean test(Creature caster, MissionDataHolder onewayreward) {
         return test(caster, null, null, null);
     }
 

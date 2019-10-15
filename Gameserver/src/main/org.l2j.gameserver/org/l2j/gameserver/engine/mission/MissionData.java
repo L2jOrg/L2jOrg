@@ -3,11 +3,11 @@ package org.l2j.gameserver.engine.mission;
 import io.github.joealisson.primitive.HashIntMap;
 import io.github.joealisson.primitive.IntMap;
 import io.github.joealisson.primitive.CHashIntMap;
-import org.l2j.gameserver.data.database.data.DailyMissionPlayerData;
+import org.l2j.gameserver.data.database.data.MissionPlayerData;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.base.ClassId;
-import org.l2j.gameserver.model.dailymission.DailyMissionDataHolder;
+import org.l2j.gameserver.model.dailymission.MissionDataHolder;
 import org.l2j.gameserver.model.holders.ItemHolder;
 import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.util.GameXmlReader;
@@ -30,8 +30,8 @@ import static org.l2j.commons.util.Util.isNullOrEmpty;
 public class MissionData extends GameXmlReader {
     private static final Logger LOGGER = LoggerFactory.getLogger(MissionData.class);
 
-    private final IntMap<IntMap<DailyMissionPlayerData>> missionsData = new CHashIntMap<>();
-    private final IntMap<List<DailyMissionDataHolder>> dailyMissionRewards = new HashIntMap<>();
+    private final IntMap<IntMap<MissionPlayerData>> missionsData = new CHashIntMap<>();
+    private final IntMap<List<MissionDataHolder>> dailyMissionRewards = new HashIntMap<>();
 
     private boolean available;
 
@@ -89,12 +89,12 @@ public class MissionData extends GameXmlReader {
                 forEach(handlerNode, "param", paramNode -> params.set(parseString(paramNode.getAttributes(), "name"), paramNode.getTextContent()));
             });
 
-            final DailyMissionDataHolder holder = new DailyMissionDataHolder(set);
+            final MissionDataHolder holder = new MissionDataHolder(set);
             dailyMissionRewards.computeIfAbsent(holder.getId(), k -> new ArrayList<>()).add(holder);
         }));
     }
 
-    public Collection<DailyMissionDataHolder> getDailyMissions() {
+    public Collection<MissionDataHolder> getDailyMissions() {
         //@formatter:off
         return dailyMissionRewards.values()
                 .stream()
@@ -103,7 +103,7 @@ public class MissionData extends GameXmlReader {
         //@formatter:on
     }
 
-    public Collection<DailyMissionDataHolder> getDailyMissions(Player player) {
+    public Collection<MissionDataHolder> getDailyMissions(Player player) {
         //@formatter:off
         return dailyMissionRewards.values()
                 .stream()
@@ -117,7 +117,7 @@ public class MissionData extends GameXmlReader {
         return (int) dailyMissionRewards.values().stream().flatMap(List::stream).filter(mission -> mission.isAvailable(player)).count();
     }
 
-    public Collection<DailyMissionDataHolder> getDailyMissions(int id) {
+    public Collection<MissionDataHolder> getDailyMissions(int id) {
         return dailyMissionRewards.get(id);
     }
 
@@ -125,13 +125,13 @@ public class MissionData extends GameXmlReader {
         missionsData.values().forEach(map -> map.remove(id));
     }
 
-    public void storeMissionData(int missionId, DailyMissionPlayerData data) {
+    public void storeMissionData(int missionId, MissionPlayerData data) {
         if(nonNull(data)) {
             missionsData.computeIfAbsent(data.getObjectId(), id -> new CHashIntMap<>()).putIfAbsent(missionId, data);
         }
     }
 
-    public IntMap<DailyMissionPlayerData> getStoredDailyMissionData(Player player) {
+    public IntMap<MissionPlayerData> getStoredDailyMissionData(Player player) {
         return missionsData.computeIfAbsent(player.getObjectId(), id -> new CHashIntMap<>());
     }
 

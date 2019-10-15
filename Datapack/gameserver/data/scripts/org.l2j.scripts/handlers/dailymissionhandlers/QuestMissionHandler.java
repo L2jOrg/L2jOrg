@@ -17,11 +17,11 @@
 package handlers.dailymissionhandlers;
 
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.dailymission.DailyMissionStatus;
+import org.l2j.gameserver.model.dailymission.MissionStatus;
 import org.l2j.gameserver.enums.QuestType;
 import org.l2j.gameserver.handler.AbstractMissionHandler;
-import org.l2j.gameserver.model.dailymission.DailyMissionDataHolder;
-import org.l2j.gameserver.data.database.data.DailyMissionPlayerData;
+import org.l2j.gameserver.model.dailymission.MissionDataHolder;
+import org.l2j.gameserver.data.database.data.MissionPlayerData;
 import org.l2j.gameserver.model.events.Containers;
 import org.l2j.gameserver.model.events.EventType;
 import org.l2j.gameserver.model.events.impl.character.player.OnPlayerQuestComplete;
@@ -32,7 +32,7 @@ import org.l2j.gameserver.model.events.listeners.ConsumerEventListener;
  */
 public class QuestMissionHandler extends AbstractMissionHandler
 {
-	public QuestMissionHandler(DailyMissionDataHolder holder)
+	public QuestMissionHandler(MissionDataHolder holder)
 	{
 		super(holder);
 	}
@@ -49,12 +49,12 @@ public class QuestMissionHandler extends AbstractMissionHandler
 		final Player player = event.getActiveChar();
 		if (event.getQuestType() == QuestType.DAILY)
 		{
-			final DailyMissionPlayerData entry = getPlayerEntry(player, true);
-			if (entry.getStatus() == DailyMissionStatus.NOT_AVAILABLE)
+			final MissionPlayerData entry = getPlayerEntry(player, true);
+			if (entry.getStatus() == MissionStatus.NOT_AVAILABLE)
 			{
 				if (entry.increaseProgress() >= getRequiredCompletion())
 				{
-					entry.setStatus(DailyMissionStatus.AVAILABLE);
+					entry.setStatus(MissionStatus.AVAILABLE);
 					notifyAvailablesReward(player);
 				}
 				storePlayerEntry(entry);

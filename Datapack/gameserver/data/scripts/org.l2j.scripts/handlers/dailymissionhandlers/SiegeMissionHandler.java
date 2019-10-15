@@ -5,9 +5,9 @@ import org.l2j.gameserver.handler.AbstractMissionHandler;
 import org.l2j.gameserver.model.Clan;
 import org.l2j.gameserver.model.SiegeClan;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.dailymission.DailyMissionDataHolder;
-import org.l2j.gameserver.data.database.data.DailyMissionPlayerData;
-import org.l2j.gameserver.model.dailymission.DailyMissionStatus;
+import org.l2j.gameserver.model.dailymission.MissionDataHolder;
+import org.l2j.gameserver.data.database.data.MissionPlayerData;
+import org.l2j.gameserver.model.dailymission.MissionStatus;
 import org.l2j.gameserver.model.events.Containers;
 import org.l2j.gameserver.model.events.EventType;
 import org.l2j.gameserver.model.events.impl.sieges.OnCastleSiegeStart;
@@ -21,7 +21,7 @@ import static java.util.Objects.nonNull;
  * @author UnAfraid
  */
 public class SiegeMissionHandler extends AbstractMissionHandler {
-	public SiegeMissionHandler(DailyMissionDataHolder holder)
+	public SiegeMissionHandler(MissionDataHolder holder)
 	{
 		super(holder);
 	}
@@ -33,8 +33,8 @@ public class SiegeMissionHandler extends AbstractMissionHandler {
 	
 	@Override
 	public boolean isAvailable(Player player) {
-		final DailyMissionPlayerData entry = getPlayerEntry(player, false);
-		return nonNull(entry) && DailyMissionStatus.AVAILABLE == entry.getStatus();
+		final MissionPlayerData entry = getPlayerEntry(player, false);
+		return nonNull(entry) && MissionStatus.AVAILABLE == entry.getStatus();
 	}
 	
 	private void onSiegeStart(OnCastleSiegeStart event) {
@@ -49,8 +49,8 @@ public class SiegeMissionHandler extends AbstractMissionHandler {
 		{
 			clan.getOnlineMembers(0).forEach(player ->
 			{
-				final DailyMissionPlayerData entry = getPlayerEntry(player, true);
-				entry.setStatus(DailyMissionStatus.AVAILABLE);
+				final MissionPlayerData entry = getPlayerEntry(player, true);
+				entry.setStatus(MissionStatus.AVAILABLE);
 				notifyAvailablesReward(player);
 				storePlayerEntry(entry);
 			});

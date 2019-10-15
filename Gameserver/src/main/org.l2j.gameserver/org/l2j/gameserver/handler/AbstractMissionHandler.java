@@ -1,11 +1,11 @@
 package org.l2j.gameserver.handler;
 
-import org.l2j.gameserver.data.database.dao.DailyMissionDAO;
-import org.l2j.gameserver.data.database.data.DailyMissionPlayerData;
+import org.l2j.gameserver.data.database.dao.MissionDAO;
+import org.l2j.gameserver.data.database.data.MissionPlayerData;
 import org.l2j.gameserver.engine.mission.MissionData;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.dailymission.DailyMissionDataHolder;
-import org.l2j.gameserver.model.dailymission.DailyMissionStatus;
+import org.l2j.gameserver.model.dailymission.MissionDataHolder;
+import org.l2j.gameserver.model.dailymission.MissionStatus;
 import org.l2j.gameserver.model.events.ListenersContainer;
 import org.l2j.gameserver.network.serverpackets.dailymission.ExConnectedTimeAndGettableReward;
 
@@ -21,14 +21,14 @@ import static org.l2j.commons.util.Util.zeroIfNullOrElse;
  */
 public abstract class AbstractMissionHandler extends ListenersContainer  {
 
-    private final DailyMissionDataHolder holder;
+    private final MissionDataHolder holder;
 
-    protected AbstractMissionHandler(DailyMissionDataHolder holder) {
+    protected AbstractMissionHandler(MissionDataHolder holder) {
         this.holder = holder;
         init();
     }
 
-    public DailyMissionDataHolder getHolder() {
+    public MissionDataHolder getHolder() {
         return holder;
     }
 
@@ -38,7 +38,7 @@ public abstract class AbstractMissionHandler extends ListenersContainer  {
                 case AVAILABLE -> true;
                 case NOT_AVAILABLE -> {
                     if(entry.getProgress() >= getRequiredCompletion()) {
-                        entry.setStatus(DailyMissionStatus.AVAILABLE);
+                        entry.setStatus(MissionStatus.AVAILABLE);
                         storePlayerEntry(entry);
                         yield  true;
                     }
@@ -53,7 +53,7 @@ public abstract class AbstractMissionHandler extends ListenersContainer  {
 
     public int getStatus(Player player) {
         final var entry = getPlayerEntry(player, false);
-        return nonNull(entry) ? entry.getStatus().getClientId() : DailyMissionStatus.NOT_AVAILABLE.getClientId();
+        return nonNull(entry) ? entry.getStatus().getClientId() : MissionStatus.NOT_AVAILABLE.getClientId();
     }
 
     protected int getRequiredCompletion() {
@@ -61,23 +61,23 @@ public abstract class AbstractMissionHandler extends ListenersContainer  {
     }
 
     public int getProgress(Player player) {
-        return zeroIfNullOrElse(getPlayerEntry(player, false), DailyMissionPlayerData::getProgress);
+        return zeroIfNullOrElse(getPlayerEntry(player, false), MissionPlayerData::getProgress);
     }
 
     public boolean isRecentlyCompleted(Player player) {
-        return falseIfNullOrElse(getPlayerEntry(player, false), DailyMissionPlayerData::isRecentlyCompleted);
+        return falseIfNullOrElse(getPlayerEntry(player, false), MissionPlayerData::isRecentlyCompleted);
     }
 
     public synchronized void reset() {
-        getDAO(DailyMissionDAO.class).deleteById(holder.getId());
+        getDAO(MissionDAO.class).deleteById(holder.getId());
         MissionData.getInstance().clearMissionData(holder.getId());
     }
 
     public void requestReward(Player player) {
         synchronized (holder) {
             if (isAvailable(player)) {
-                final DailyMissionPlayerData entry = getPlayerEntry(player, true);
-                entry.setStatus(DailyMissionStatus.COMPLETED);
+                final MissionPlayerData entry = getPlayerEntry(player, true);
+                entry.setStatus(MissionStatus.COMPLETED);
                 entry.setRecentlyCompleted(true);
                 storePlayerEntry(entry);
                 giveRewards(player);
@@ -89,12 +89,12 @@ public abstract class AbstractMissionHandler extends ListenersContainer  {
         holder.getRewards().forEach(i -> player.addItem("One Day Reward", i, player, true));
     }
 
-    protected void storePlayerEntry(DailyMissionPlayerData entry) {
+    protected void storePlayerEntry(MissionPlayerData entry) {
         MissionData.getInstance().storeMissionData(holder.getId(), entry);
-        getDAO(DailyMissionDAO.class).save(entry);
+        getDAO(MissionDAO.class).save(entry);
     }
 
-    protected DailyMissionPlayerData getPlayerEntry(Player player, boolean createIfNone) {
+    protected MissionPlayerData getPlayerEntry(Player player, boolean createIfNone) {
 
         final var playerMissions = MissionData.getInstance().getStoredDailyMissionData(player);
 
@@ -102,13 +102,13 @@ public abstract class AbstractMissionHandler extends ListenersContainer  {
             return playerMissions.get(holder.getId());
         }
 
-        DailyMissionPlayerData missionData = getDAO(DailyMissionDAO.class).findById(player.getObjectId(), holder.getId());
+        MissionPlayerData missionData = getDAO(MissionDAO.class).findById(player.getObjectId(), holder.getId());
 
         if (isNull(missionData) && createIfNone) {
-            missionData = new DailyMissionPlayerData(player.getObjectId(), holder.getId());
+            missionData = new MissionPlayerData(player.getObjectId(), holder.getId());
             var progress = getProgress(player);
             missionData.setProgress(progress);
-            missionData.setStatus(progress >= getRequiredCompletion() ? DailyMissionStatus.AVAILABLE : DailyMissionStatus.NOT_AVAILABLE);
+            missionData.setStatus(progress >= getRequiredCompletion() ? MissionStatus.AVAILABLE : MissionStatus.NOT_AVAILABLE);
         }
         MissionData.getInstance().storeMissionData(holder.getId(), missionData);
         return missionData;
@@ -116,7 +116,7 @@ public abstract class AbstractMissionHandler extends ListenersContainer  {
 
     protected void notifyAvailablesReward(Player player) {
         var playerMissions = MissionData.getInstance().getStoredDailyMissionData(player).values();
-        player.sendPacket(new ExConnectedTimeAndGettableReward((int) playerMissions.stream().filter(DailyMissionPlayerData::isAvailable).count()));
+        player.sendPacket(new ExConnectedTimeAndGettableReward((int) playerMissions.stream().filter(MissionPlayerData::isAvailable).count()));
 
     }
 }

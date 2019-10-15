@@ -1,9 +1,9 @@
 package handlers.dailymissionhandlers;
 
-import org.l2j.gameserver.model.dailymission.DailyMissionStatus;
+import org.l2j.gameserver.model.dailymission.MissionStatus;
 import org.l2j.gameserver.handler.AbstractMissionHandler;
-import org.l2j.gameserver.model.dailymission.DailyMissionDataHolder;
-import org.l2j.gameserver.data.database.data.DailyMissionPlayerData;
+import org.l2j.gameserver.model.dailymission.MissionDataHolder;
+import org.l2j.gameserver.data.database.data.MissionPlayerData;
 import org.l2j.gameserver.model.events.Containers;
 import org.l2j.gameserver.model.events.EventType;
 import org.l2j.gameserver.model.events.impl.ceremonyofchaos.OnCeremonyOfChaosMatchResult;
@@ -18,7 +18,7 @@ public class CeremonyOfChaosMissionHandler extends AbstractMissionHandler
 {
 	private final int _amount;
 	
-	public CeremonyOfChaosMissionHandler(DailyMissionDataHolder holder)
+	public CeremonyOfChaosMissionHandler(MissionDataHolder holder)
 	{
 		super(holder);
 		_amount = holder.getRequiredCompletions();
@@ -34,12 +34,12 @@ public class CeremonyOfChaosMissionHandler extends AbstractMissionHandler
 	{
 		event.getMembers().forEach(member ->
 		{
-			final DailyMissionPlayerData entry = getPlayerEntry(member.getPlayer(), true);
-			if (entry.getStatus() == DailyMissionStatus.NOT_AVAILABLE)
+			final MissionPlayerData entry = getPlayerEntry(member.getPlayer(), true);
+			if (entry.getStatus() == MissionStatus.NOT_AVAILABLE)
 			{
 				if (entry.increaseProgress() >= _amount)
 				{
-					entry.setStatus(DailyMissionStatus.AVAILABLE);
+					entry.setStatus(MissionStatus.AVAILABLE);
 					notifyAvailablesReward(member.getPlayer());
 				}
 				storePlayerEntry(entry);

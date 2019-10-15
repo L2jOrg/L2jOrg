@@ -2,7 +2,7 @@ package org.l2j.gameserver.network.serverpackets.dailymission;
 
 import org.l2j.gameserver.engine.mission.MissionData;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.dailymission.DailyMissionDataHolder;
+import org.l2j.gameserver.model.dailymission.MissionDataHolder;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
 import org.l2j.gameserver.network.serverpackets.ServerPacket;
@@ -19,7 +19,7 @@ import java.util.function.Function;
 public class ExOneDayReceiveRewardList extends ServerPacket {
     private static final Function<String, Long> remainTime = pattern -> (new Predictor(pattern).nextMatchingTime() - System.currentTimeMillis()) / 1000;
     private final Player player;
-    private final Collection<DailyMissionDataHolder> missions;
+    private final Collection<MissionDataHolder> missions;
     private final long dayRemainTime;
     private final long weekRemainTime;
     private final long monthRemainTime;
@@ -47,7 +47,7 @@ public class ExOneDayReceiveRewardList extends ServerPacket {
         writeInt(player.getClassId().getId());
         writeInt(Calendar.getInstance().get(Calendar.DAY_OF_WEEK)); // Day of week
         writeInt(missions.size());
-        for (DailyMissionDataHolder mission : missions) {
+        for (MissionDataHolder mission : missions) {
             writeShort(mission.getId());
             writeByte(mission.getStatus(player));
             writeByte((mission.getRequiredCompletions() > 1));

@@ -3,19 +3,19 @@ package org.l2j.gameserver.model.dailymission;
 /**
  * @author UnAfraid
  */
-public enum DailyMissionStatus {
+public enum MissionStatus {
     AVAILABLE(1),
     NOT_AVAILABLE(2),
     COMPLETED(3);
 
     private int _clientId;
 
-    DailyMissionStatus(int clientId) {
+    MissionStatus(int clientId) {
         _clientId = clientId;
     }
 
-    public static DailyMissionStatus valueOf(int clientId) {
-        for (DailyMissionStatus type : values()) {
+    public static MissionStatus valueOf(int clientId) {
+        for (MissionStatus type : values()) {
             if (type.getClientId() == clientId) {
                 return type;
             }
