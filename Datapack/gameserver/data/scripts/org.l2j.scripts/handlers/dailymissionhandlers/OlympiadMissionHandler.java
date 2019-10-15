@@ -2,7 +2,7 @@ package handlers.dailymissionhandlers;
 
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.dailymission.DailyMissionStatus;
-import org.l2j.gameserver.handler.AbstractDailyMissionHandler;
+import org.l2j.gameserver.handler.AbstractMissionHandler;
 import org.l2j.gameserver.model.dailymission.DailyMissionDataHolder;
 import org.l2j.gameserver.data.database.data.DailyMissionPlayerData;
 import org.l2j.gameserver.model.events.Containers;
@@ -17,9 +17,9 @@ import static java.util.Objects.nonNull;
 /**
  * @author UnAfraid
  */
-public class OlympiadDailyMissionHandler extends AbstractDailyMissionHandler {
+public class OlympiadMissionHandler extends AbstractMissionHandler {
 	private final boolean winnerOnly;
-	public OlympiadDailyMissionHandler(DailyMissionDataHolder holder) {
+	public OlympiadMissionHandler(DailyMissionDataHolder holder) {
 		super(holder);
 		winnerOnly = holder.getParams().getBoolean("win", false);
 	}

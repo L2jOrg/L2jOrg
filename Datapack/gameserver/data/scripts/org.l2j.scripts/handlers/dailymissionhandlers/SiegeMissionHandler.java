@@ -1,7 +1,7 @@
 package handlers.dailymissionhandlers;
 
 import org.l2j.gameserver.data.sql.impl.ClanTable;
-import org.l2j.gameserver.handler.AbstractDailyMissionHandler;
+import org.l2j.gameserver.handler.AbstractMissionHandler;
 import org.l2j.gameserver.model.Clan;
 import org.l2j.gameserver.model.SiegeClan;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -20,8 +20,8 @@ import static java.util.Objects.nonNull;
 /**
  * @author UnAfraid
  */
-public class SiegeDailyMissionHandler extends AbstractDailyMissionHandler {
-	public SiegeDailyMissionHandler(DailyMissionDataHolder holder)
+public class SiegeMissionHandler extends AbstractMissionHandler {
+	public SiegeMissionHandler(DailyMissionDataHolder holder)
 	{
 		super(holder);
 	}

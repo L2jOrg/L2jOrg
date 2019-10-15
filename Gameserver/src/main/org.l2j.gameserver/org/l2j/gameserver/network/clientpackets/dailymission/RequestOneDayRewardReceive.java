@@ -2,7 +2,7 @@ package org.l2j.gameserver.network.clientpackets.dailymission;
 
 import org.l2j.commons.util.Util;
 import org.l2j.gameserver.data.database.data.DailyMissionPlayerData;
-import org.l2j.gameserver.data.xml.impl.DailyMissionData;
+import org.l2j.gameserver.engine.mission.MissionData;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.dailymission.DailyMissionDataHolder;
 import org.l2j.gameserver.network.clientpackets.ClientPacket;
@@ -29,7 +29,7 @@ public class RequestOneDayRewardReceive extends ClientPacket {
             return;
         }
 
-        var dailyMissionData = DailyMissionData.getInstance();
+        var dailyMissionData = MissionData.getInstance();
 
         final Collection<DailyMissionDataHolder> missions = dailyMissionData.getDailyMissions(_id);
         if (Util.isNullOrEmpty(missions)) { return;

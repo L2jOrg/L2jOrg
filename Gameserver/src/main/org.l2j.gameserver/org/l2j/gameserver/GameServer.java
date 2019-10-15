@@ -18,7 +18,7 @@ import org.l2j.gameserver.datatables.ReportTable;
 import org.l2j.gameserver.datatables.SchemeBufferTable;
 import org.l2j.gameserver.engine.geo.GeoEngine;
 import org.l2j.gameserver.handler.ConditionHandler;
-import org.l2j.gameserver.handler.DailyMissionHandler;
+import org.l2j.gameserver.engine.mission.MissionEngine;
 import org.l2j.gameserver.handler.EffectHandler;
 import org.l2j.gameserver.handler.SkillConditionHandler;
 import org.l2j.gameserver.idfactory.IdFactory;
@@ -84,8 +84,7 @@ public class GameServer {
         SecondaryAuthManager.init();
         CombinationItemsManager.init();
         ClanRewardManager.init();
-        DailyMissionHandler.getInstance().executeScript();
-        DailyMissionData.getInstance();
+        MissionEngine.init();
         VipData.getInstance();
         ElementalSpiritManager.init();
         TeleportListData.init();

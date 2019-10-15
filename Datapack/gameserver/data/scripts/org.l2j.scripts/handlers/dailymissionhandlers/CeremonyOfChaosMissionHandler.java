@@ -1,7 +1,7 @@
 package handlers.dailymissionhandlers;
 
 import org.l2j.gameserver.model.dailymission.DailyMissionStatus;
-import org.l2j.gameserver.handler.AbstractDailyMissionHandler;
+import org.l2j.gameserver.handler.AbstractMissionHandler;
 import org.l2j.gameserver.model.dailymission.DailyMissionDataHolder;
 import org.l2j.gameserver.data.database.data.DailyMissionPlayerData;
 import org.l2j.gameserver.model.events.Containers;
@@ -14,11 +14,11 @@ import java.util.function.Consumer;
 /**
  * @author UnAfraid
  */
-public class CeremonyOfChaosDailyMissionHandler extends AbstractDailyMissionHandler
+public class CeremonyOfChaosMissionHandler extends AbstractMissionHandler
 {
 	private final int _amount;
 	
-	public CeremonyOfChaosDailyMissionHandler(DailyMissionDataHolder holder)
+	public CeremonyOfChaosMissionHandler(DailyMissionDataHolder holder)
 	{
 		super(holder);
 		_amount = holder.getRequiredCompletions();

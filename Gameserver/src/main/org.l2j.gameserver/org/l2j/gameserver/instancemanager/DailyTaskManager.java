@@ -3,7 +3,7 @@ package org.l2j.gameserver.instancemanager;
 import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.sql.impl.ClanTable;
-import org.l2j.gameserver.data.xml.impl.DailyMissionData;
+import org.l2j.gameserver.engine.mission.MissionData;
 import org.l2j.gameserver.data.xml.impl.VipData;
 import org.l2j.gameserver.model.Clan;
 import org.l2j.gameserver.model.ClanMember;
@@ -235,7 +235,7 @@ public class DailyTaskManager extends AbstractEventManager<AbstractEvent<?>> {
     private void resetDailyMissionRewards() {
         var scheduler = getScheduler("reset");
         long lastReset = nonNull(scheduler) ? scheduler.getLastRun() : 0;
-        DailyMissionData.getInstance().getDailyMissions().forEach(mission -> mission.reset(lastReset));
+        MissionData.getInstance().getDailyMissions().forEach(mission -> mission.reset(lastReset));
     }
 
     public static DailyTaskManager getInstance() {

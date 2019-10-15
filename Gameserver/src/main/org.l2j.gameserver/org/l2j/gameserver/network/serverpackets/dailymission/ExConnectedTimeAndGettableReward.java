@@ -1,6 +1,6 @@
 package org.l2j.gameserver.network.serverpackets.dailymission;
 
-import org.l2j.gameserver.data.xml.impl.DailyMissionData;
+import org.l2j.gameserver.engine.mission.MissionData;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
@@ -13,7 +13,7 @@ public class ExConnectedTimeAndGettableReward extends ServerPacket {
     private final int oneDayRewardAvailableCount;
 
     public ExConnectedTimeAndGettableReward(Player player) {
-        oneDayRewardAvailableCount = DailyMissionData.getInstance().getAvailableDailyMissionCount(player);
+        oneDayRewardAvailableCount = MissionData.getInstance().getAvailableDailyMissionCount(player);
     }
 
     public ExConnectedTimeAndGettableReward(int availableCount) {
@@ -22,7 +22,7 @@ public class ExConnectedTimeAndGettableReward extends ServerPacket {
 
     @Override
     public void writeImpl(GameClient client) {
-        if (!DailyMissionData.getInstance().isAvailable()) {
+        if (!MissionData.getInstance().isAvailable()) {
             return;
         }
 

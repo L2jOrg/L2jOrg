@@ -12,6 +12,7 @@ import java.nio.file.attribute.BasicFileAttributes;
 import java.util.*;
 import java.util.Map.Entry;
 
+import static java.util.Objects.requireNonNull;
 import static org.l2j.commons.configuration.Configurator.getSettings;
 
 /**
@@ -28,7 +29,6 @@ public final class ScriptEngineManager  {
     private static final Path EFFECT_MASTER_HANDLER_FILE = Paths.get(SCRIPT_FOLDER.toString(), "org.l2j.scripts", "handlers", "EffectMasterHandler.java");
     private static final Path SKILL_CONDITION_HANDLER_FILE = Paths.get(SCRIPT_FOLDER.toString(), "org.l2j.scripts", "handlers", "SkillConditionMasterHandler.java");
     private static final Path CONDITION_HANDLER_FILE = Paths.get(SCRIPT_FOLDER.toString(), "org.l2j.scripts", "handlers", "ConditionMasterHandler.java");
-    private static final Path ONE_DAY_REWARD_MASTER_HANDLER = Paths.get(SCRIPT_FOLDER.toString(), "org.l2j.scripts", "handlers", "DailyMissionMasterHandler.java");
 
     private final Map<String, IExecutionContext> extEngines = new HashMap<>();
     private IExecutionContext currentExecutionContext = null;
@@ -124,10 +124,6 @@ public final class ScriptEngineManager  {
         executeScript(CONDITION_HANDLER_FILE);
     }
 
-    public void executeDailyMissionMasterHandler() throws Exception {
-        executeScript(ONE_DAY_REWARD_MASTER_HANDLER);
-    }
-
     public void executeScriptInitList() throws Exception {
         if (Config.ALT_DEV_NO_QUESTS) {
             return;
@@ -178,7 +174,7 @@ public final class ScriptEngineManager  {
     }
 
     public void executeScript(Path sourceFile) throws Exception {
-        Objects.requireNonNull(sourceFile);
+        requireNonNull(sourceFile);
 
         if (sourceFile.isAbsolute()) {
             sourceFile = SCRIPT_FOLDER.toAbsolutePath().relativize(sourceFile);
@@ -188,10 +184,10 @@ public final class ScriptEngineManager  {
         checkExistingFile(sourceFile);
 
         final String ext = getFileExtension(sourceFile);
-        Objects.requireNonNull(sourceFile, "ScriptFile: " + sourceFile + " does not have an extension to determine the script engine!");
+        requireNonNull(sourceFile, "ScriptFile: " + sourceFile + " does not have an extension to determine the script engine!");
 
         final IExecutionContext engine = getEngineByExtension(ext);
-        Objects.requireNonNull(engine, "ScriptEngine: No engine registered for extension " + ext + "!");
+        requireNonNull(engine, "ScriptEngine: No engine registered for extension " + ext + "!");
 
         currentExecutionContext = engine;
         try {

@@ -1,5 +1,6 @@
-package org.l2j.gameserver.data.xml.impl;
+package org.l2j.gameserver.engine.mission;
 
+import io.github.joealisson.primitive.HashIntMap;
 import io.github.joealisson.primitive.IntMap;
 import io.github.joealisson.primitive.CHashIntMap;
 import org.l2j.gameserver.data.database.data.DailyMissionPlayerData;
@@ -26,16 +27,15 @@ import static org.l2j.commons.util.Util.isNullOrEmpty;
 /**
  * @author Sdw
  */
-public class DailyMissionData extends GameXmlReader {
-    private static final Logger LOGGER = LoggerFactory.getLogger(DailyMissionData.class);
+public class MissionData extends GameXmlReader {
+    private static final Logger LOGGER = LoggerFactory.getLogger(MissionData.class);
 
     private final IntMap<IntMap<DailyMissionPlayerData>> missionsData = new CHashIntMap<>();
-    private final Map<Integer, List<DailyMissionDataHolder>> dailyMissionRewards = new LinkedHashMap<>();
+    private final IntMap<List<DailyMissionDataHolder>> dailyMissionRewards = new HashIntMap<>();
 
     private boolean available;
 
-    private DailyMissionData() {
-        load();
+    private MissionData() {
     }
 
     @Override
@@ -139,11 +139,15 @@ public class DailyMissionData extends GameXmlReader {
         return available;
     }
 
-    public static DailyMissionData getInstance() {
+    public static void init() {
+        getInstance().load();
+    }
+
+    public static MissionData getInstance() {
         return Singleton.INSTANCE;
     }
 
     private static class Singleton {
-        private static final DailyMissionData INSTANCE = new DailyMissionData();
+        private static final MissionData INSTANCE = new MissionData();
     }
 }

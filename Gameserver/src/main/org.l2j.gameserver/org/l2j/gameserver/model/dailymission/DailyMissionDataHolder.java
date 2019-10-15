@@ -1,7 +1,7 @@
 package org.l2j.gameserver.model.dailymission;
 
-import org.l2j.gameserver.handler.AbstractDailyMissionHandler;
-import org.l2j.gameserver.handler.DailyMissionHandler;
+import org.l2j.gameserver.handler.AbstractMissionHandler;
+import org.l2j.gameserver.engine.mission.MissionEngine;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.base.ClassId;
@@ -30,10 +30,10 @@ public class DailyMissionDataHolder {
     private final DailyMissionCycle cycle;
 
     private final boolean isDisplayedWhenNotAvailable;
-    private final AbstractDailyMissionHandler handler;
+    private final AbstractMissionHandler handler;
 
     public DailyMissionDataHolder(StatsSet set) {
-        final Function<DailyMissionDataHolder, AbstractDailyMissionHandler> handler = DailyMissionHandler.getInstance().getHandler(set.getString("handler"));
+        final Function<DailyMissionDataHolder, AbstractMissionHandler> handler = MissionEngine.getInstance().getHandler(set.getString("handler"));
 
         id = set.getInt("id");
         requiredCompletions = set.getInt("requiredCompletion", 1);

@@ -2,7 +2,7 @@ package handlers.dailymissionhandlers;
 
 import org.l2j.commons.util.Util;
 import org.l2j.gameserver.Config;
-import org.l2j.gameserver.handler.AbstractDailyMissionHandler;
+import org.l2j.gameserver.handler.AbstractMissionHandler;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.dailymission.DailyMissionDataHolder;
 import org.l2j.gameserver.model.dailymission.DailyMissionStatus;
@@ -19,14 +19,14 @@ import java.util.stream.Collectors;
 
 import static java.util.Objects.isNull;
 
-public class HuntDailyMissionHandler extends AbstractDailyMissionHandler {
+public class HuntMissionHandler extends AbstractMissionHandler {
 
     private final int requiredLevel;
     private final int maxLevel;
     private final List<Integer> monsters;
     private final int classLevel;
 
-    public HuntDailyMissionHandler(DailyMissionDataHolder holder) {
+    public HuntMissionHandler(DailyMissionDataHolder holder) {
         super(holder);
         requiredLevel = holder.getParams().getInt("minLevel", 0);
         maxLevel = holder.getParams().getInt("maxLevel", Byte.MAX_VALUE);

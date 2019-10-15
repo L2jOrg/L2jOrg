@@ -19,7 +19,7 @@ package handlers.dailymissionhandlers;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.dailymission.DailyMissionStatus;
 import org.l2j.gameserver.enums.QuestType;
-import org.l2j.gameserver.handler.AbstractDailyMissionHandler;
+import org.l2j.gameserver.handler.AbstractMissionHandler;
 import org.l2j.gameserver.model.dailymission.DailyMissionDataHolder;
 import org.l2j.gameserver.data.database.data.DailyMissionPlayerData;
 import org.l2j.gameserver.model.events.Containers;
@@ -30,9 +30,9 @@ import org.l2j.gameserver.model.events.listeners.ConsumerEventListener;
 /**
  * @author UnAfraid
  */
-public class QuestDailyMissionHandler extends AbstractDailyMissionHandler
+public class QuestMissionHandler extends AbstractMissionHandler
 {
-	public QuestDailyMissionHandler(DailyMissionDataHolder holder)
+	public QuestMissionHandler(DailyMissionDataHolder holder)
 	{
 		super(holder);
 	}

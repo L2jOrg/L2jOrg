@@ -2,7 +2,7 @@ package handlers.dailymissionhandlers;
 
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.database.data.DailyMissionPlayerData;
-import org.l2j.gameserver.handler.AbstractDailyMissionHandler;
+import org.l2j.gameserver.handler.AbstractMissionHandler;
 import org.l2j.gameserver.model.CommandChannel;
 import org.l2j.gameserver.model.Party;
 import org.l2j.gameserver.model.actor.Attackable;
@@ -20,11 +20,11 @@ import java.util.List;
 /**
  * @author UnAfraid
  */
-public class BossDailyMissionHandler extends AbstractDailyMissionHandler
+public class BossMissionHandler extends AbstractMissionHandler
 {
 	private final int _amount;
 	
-	public BossDailyMissionHandler(DailyMissionDataHolder holder)
+	public BossMissionHandler(DailyMissionDataHolder holder)
 	{
 		super(holder);
 		_amount = holder.getRequiredCompletions();

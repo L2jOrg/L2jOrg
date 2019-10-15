@@ -1,6 +1,6 @@
 package handlers.dailymissionhandlers;
 
-import org.l2j.gameserver.handler.AbstractDailyMissionHandler;
+import org.l2j.gameserver.handler.AbstractMissionHandler;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.dailymission.DailyMissionDataHolder;
 import org.l2j.gameserver.data.database.data.DailyMissionPlayerData;
@@ -14,11 +14,11 @@ import java.util.function.Consumer;
 
 import static java.util.Objects.nonNull;
 
-public class ClanDailyMissionHandler extends AbstractDailyMissionHandler {
+public class ClanMissionHandler extends AbstractMissionHandler {
 
     private final MissionKind kind;
 
-    public ClanDailyMissionHandler(DailyMissionDataHolder holder) {
+    public ClanMissionHandler(DailyMissionDataHolder holder) {
         super(holder);
         kind = holder.getParams().getEnum("kind", MissionKind.class, MissionKind.JOIN);
     }

@@ -1,6 +1,5 @@
 package org.l2j.gameserver.engine.items;
 
-import org.l2j.gameserver.engine.DocumentBase;
 import org.l2j.gameserver.enums.ItemSkillType;
 import org.l2j.gameserver.model.ExtractableProduct;
 import org.l2j.gameserver.model.StatsSet;

@@ -2,7 +2,7 @@ package org.l2j.gameserver.handler;
 
 import org.l2j.gameserver.data.database.dao.DailyMissionDAO;
 import org.l2j.gameserver.data.database.data.DailyMissionPlayerData;
-import org.l2j.gameserver.data.xml.impl.DailyMissionData;
+import org.l2j.gameserver.engine.mission.MissionData;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.dailymission.DailyMissionDataHolder;
 import org.l2j.gameserver.model.dailymission.DailyMissionStatus;
@@ -19,11 +19,11 @@ import static org.l2j.commons.util.Util.zeroIfNullOrElse;
  * @author Sdw
  * @author JoeAlisson
  */
-public abstract class AbstractDailyMissionHandler extends ListenersContainer  {
+public abstract class AbstractMissionHandler extends ListenersContainer  {
 
     private final DailyMissionDataHolder holder;
 
-    protected AbstractDailyMissionHandler(DailyMissionDataHolder holder) {
+    protected AbstractMissionHandler(DailyMissionDataHolder holder) {
         this.holder = holder;
         init();
     }
@@ -70,7 +70,7 @@ public abstract class AbstractDailyMissionHandler extends ListenersContainer  {
 
     public synchronized void reset() {
         getDAO(DailyMissionDAO.class).deleteById(holder.getId());
-        DailyMissionData.getInstance().clearMissionData(holder.getId());
+        MissionData.getInstance().clearMissionData(holder.getId());
     }
 
     public void requestReward(Player player) {
@@ -90,13 +90,13 @@ public abstract class AbstractDailyMissionHandler extends ListenersContainer  {
     }
 
     protected void storePlayerEntry(DailyMissionPlayerData entry) {
-        DailyMissionData.getInstance().storeMissionData(holder.getId(), entry);
+        MissionData.getInstance().storeMissionData(holder.getId(), entry);
         getDAO(DailyMissionDAO.class).save(entry);
     }
 
     protected DailyMissionPlayerData getPlayerEntry(Player player, boolean createIfNone) {
 
-        final var playerMissions = DailyMissionData.getInstance().getStoredDailyMissionData(player);
+        final var playerMissions = MissionData.getInstance().getStoredDailyMissionData(player);
 
         if (playerMissions.containsKey(holder.getId())) {
             return playerMissions.get(holder.getId());
@@ -110,12 +110,12 @@ public abstract class AbstractDailyMissionHandler extends ListenersContainer  {
             missionData.setProgress(progress);
             missionData.setStatus(progress >= getRequiredCompletion() ? DailyMissionStatus.AVAILABLE : DailyMissionStatus.NOT_AVAILABLE);
         }
-        DailyMissionData.getInstance().storeMissionData(holder.getId(), missionData);
+        MissionData.getInstance().storeMissionData(holder.getId(), missionData);
         return missionData;
     }
 
     protected void notifyAvailablesReward(Player player) {
-        var playerMissions = DailyMissionData.getInstance().getStoredDailyMissionData(player).values();
+        var playerMissions = MissionData.getInstance().getStoredDailyMissionData(player).values();
         player.sendPacket(new ExConnectedTimeAndGettableReward((int) playerMissions.stream().filter(DailyMissionPlayerData::isAvailable).count()));
 
     }

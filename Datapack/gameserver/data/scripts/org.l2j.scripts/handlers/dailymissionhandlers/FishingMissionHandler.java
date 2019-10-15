@@ -1,6 +1,6 @@
 package handlers.dailymissionhandlers;
 
-import org.l2j.gameserver.handler.AbstractDailyMissionHandler;
+import org.l2j.gameserver.handler.AbstractMissionHandler;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.dailymission.DailyMissionDataHolder;
 import org.l2j.gameserver.data.database.data.DailyMissionPlayerData;
@@ -15,9 +15,9 @@ import java.util.function.Consumer;
 /**
  * @author UnAfraid
  */
-public class FishingDailyMissionHandler extends AbstractDailyMissionHandler {
+public class FishingMissionHandler extends AbstractMissionHandler {
 	
-	public FishingDailyMissionHandler(DailyMissionDataHolder holder) {
+	public FishingMissionHandler(DailyMissionDataHolder holder) {
 		super(holder);
 	}
 	

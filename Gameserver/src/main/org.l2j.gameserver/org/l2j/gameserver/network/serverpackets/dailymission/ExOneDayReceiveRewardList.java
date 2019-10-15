@@ -1,6 +1,6 @@
 package org.l2j.gameserver.network.serverpackets.dailymission;
 
-import org.l2j.gameserver.data.xml.impl.DailyMissionData;
+import org.l2j.gameserver.engine.mission.MissionData;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.dailymission.DailyMissionDataHolder;
 import org.l2j.gameserver.network.GameClient;
@@ -26,7 +26,7 @@ public class ExOneDayReceiveRewardList extends ServerPacket {
 
     public ExOneDayReceiveRewardList(Player player, boolean sendRewards) {
         this.player = player;
-        this.missions = sendRewards ? DailyMissionData.getInstance().getDailyMissions(player) : Collections.emptyList();
+        this.missions = sendRewards ? MissionData.getInstance().getDailyMissions(player) : Collections.emptyList();
         dayRemainTime = remainTime.apply("30 6 * * *");
         weekRemainTime = remainTime.apply("30 6 * * 1");
         monthRemainTime = remainTime.apply("30 6 1 * *");
@@ -34,7 +34,7 @@ public class ExOneDayReceiveRewardList extends ServerPacket {
 
     @Override
     public void writeImpl(GameClient client) {
-        if (!DailyMissionData.getInstance().isAvailable()) {
+        if (!MissionData.getInstance().isAvailable()) {
             return;
         }
 

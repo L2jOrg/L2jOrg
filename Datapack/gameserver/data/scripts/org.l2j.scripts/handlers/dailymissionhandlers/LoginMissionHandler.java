@@ -1,9 +1,8 @@
 package handlers.dailymissionhandlers;
 
 
-import org.l2j.commons.util.Util;
 import org.l2j.gameserver.model.dailymission.DailyMissionStatus;
-import org.l2j.gameserver.handler.AbstractDailyMissionHandler;
+import org.l2j.gameserver.handler.AbstractMissionHandler;
 import org.l2j.gameserver.model.dailymission.DailyMissionDataHolder;
 import org.l2j.gameserver.data.database.data.DailyMissionPlayerData;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -17,11 +16,11 @@ import java.util.function.Consumer;
 
 import static org.l2j.commons.util.Util.isInteger;
 
-public class LoginDailyMissionHandler extends AbstractDailyMissionHandler {
+public class LoginMissionHandler extends AbstractMissionHandler {
 
     private byte days = 0;
 
-    public LoginDailyMissionHandler(DailyMissionDataHolder holder) {
+    public LoginMissionHandler(DailyMissionDataHolder holder) {
         super(holder);
         var days = holder.getParams().getString("days", "");
         for (String day : days.split(" ")) {

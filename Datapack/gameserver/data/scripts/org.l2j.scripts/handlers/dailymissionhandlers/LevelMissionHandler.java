@@ -1,6 +1,6 @@
 package handlers.dailymissionhandlers;
 
-import org.l2j.gameserver.handler.AbstractDailyMissionHandler;
+import org.l2j.gameserver.handler.AbstractMissionHandler;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.dailymission.DailyMissionDataHolder;
 import org.l2j.gameserver.data.database.data.DailyMissionPlayerData;
@@ -17,9 +17,9 @@ import static java.util.Objects.nonNull;
 /**
  * @author Sdw
  */
-public class LevelDailyMissionHandler extends AbstractDailyMissionHandler {
+public class LevelMissionHandler extends AbstractMissionHandler {
 
-    public LevelDailyMissionHandler(DailyMissionDataHolder holder) {
+    public LevelMissionHandler(DailyMissionDataHolder holder) {
         super(holder);
     }
 

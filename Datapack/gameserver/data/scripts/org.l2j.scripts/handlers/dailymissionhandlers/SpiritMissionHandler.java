@@ -1,7 +1,7 @@
 package handlers.dailymissionhandlers;
 
 import org.l2j.gameserver.data.database.elemental.ElementalType;
-import org.l2j.gameserver.handler.AbstractDailyMissionHandler;
+import org.l2j.gameserver.handler.AbstractMissionHandler;
 import org.l2j.gameserver.model.dailymission.DailyMissionDataHolder;
 import org.l2j.gameserver.model.dailymission.DailyMissionStatus;
 import org.l2j.gameserver.model.events.Containers;
@@ -12,11 +12,11 @@ import org.l2j.gameserver.model.events.listeners.ConsumerEventListener;
 
 import java.util.function.Consumer;
 
-public class SpiritDailyMissionHandler extends AbstractDailyMissionHandler {
+public class SpiritMissionHandler extends AbstractMissionHandler {
 
     private final ElementalType type;
 
-    public SpiritDailyMissionHandler(DailyMissionDataHolder holder) {
+    public SpiritMissionHandler(DailyMissionDataHolder holder) {
         super(holder);
         type = getHolder().getParams().getEnum("element", ElementalType.class, ElementalType.NONE);
     }
