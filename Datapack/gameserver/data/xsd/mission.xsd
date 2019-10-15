@@ -23,9 +23,9 @@
 		</xs:sequence>
 		<xs:attribute type="xs:short" name="id" use="required"/>
 		<xs:attribute type="xs:token" name="name" use="required"/>
-		<xs:attribute type="xs:short" name="requiredCompletion" default="1"/>
+		<xs:attribute type="xs:short" name="required-completion" default="1"/>
 		<xs:attribute type="Cycle" name="cycle" default="DAILY"/>
-		<xs:attribute type="xs:boolean" name="isDisplayedWhenNotAvailable" />
+		<xs:attribute type="xs:boolean" name="display-not-available" />
 	</xs:complexType>
 
 	<xs:complexType name="handlerType">

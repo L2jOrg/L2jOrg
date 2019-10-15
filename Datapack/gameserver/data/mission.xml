@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org"
-      xsi:schemaLocation="http://l2j.org xsd/DailyMission.xsd">
+      xsi:schemaLocation="http://l2j.org xsd/mission.xsd">
 
-    <mission id="1001" name="Daily Hunting (Lv. 20 or lower)" requiredCompletion="30">
+    <mission id="1001" name="Daily Hunting (Lv. 20 or lower)" required-completion="30">
         <handler name="hunt">
             <param name="minLevel">1</param>
             <param name="maxLevel">20</param>
@@ -11,7 +11,7 @@
         <reward id="71683"/> <!-- Transformation Sealbook Fragment -->
     </mission>
 
-    <mission id="1002" name="Daily Hunting (Lv. 21-40)" requiredCompletion="30">
+    <mission id="1002" name="Daily Hunting (Lv. 21-40)" required-completion="30">
         <handler name="hunt">
             <param name="minLevel">21</param>
             <param name="maxLevel">40</param>
@@ -22,7 +22,7 @@
         <reward id="71683"/> <!-- Transformation Sealbook Fragment -->
     </mission>
 
-    <mission id="1003" name="Daily Hunting (Lv. 41-50)" requiredCompletion="40">
+    <mission id="1003" name="Daily Hunting (Lv. 41-50)" required-completion="40">
         <handler name="hunt">
             <param name="minLevel">41</param>
             <param name="maxLevel">50</param>
@@ -31,7 +31,7 @@
         <reward id="71683"/> <!-- Transformation Sealbook Fragment -->
     </mission>
 
-    <mission id="1004" name="Daily Hunting (Lv. 51-60)" requiredCompletion="50">
+    <mission id="1004" name="Daily Hunting (Lv. 51-60)" required-completion="50">
         <handler name="hunt">
             <param name="minLevel">51</param>
             <param name="maxLevel">60</param>
@@ -40,7 +40,7 @@
         <reward id="71683"/> <!-- Transformation Sealbook Fragment -->
     </mission>
 
-    <mission id="1005" name="Daily Hunting (Lv. 61-70)" requiredCompletion="60">
+    <mission id="1005" name="Daily Hunting (Lv. 61-70)" required-completion="60">
         <handler name="hunt">
             <param name="minLevel">61</param>
             <param name="maxLevel">70</param>
@@ -49,7 +49,7 @@
         <reward id="71683"/> <!-- Transformation Sealbook Fragment -->
     </mission>
 
-    <mission id="1006" name="Daily Hunting (Lv. 71-75)" requiredCompletion="80">
+    <mission id="1006" name="Daily Hunting (Lv. 71-75)" required-completion="80">
         <handler name="hunt">
             <param name="minLevel">71</param>
             <param name="maxLevel">75</param>
@@ -58,7 +58,7 @@
         <reward id="71683"/> <!-- Transformation Sealbook Fragment -->
     </mission>
 
-    <mission id="1007" name="Daily Hunting (Lv. 76 or higher)" requiredCompletion="100">
+    <mission id="1007" name="Daily Hunting (Lv. 76 or higher)" required-completion="100">
         <handler name="hunt">
             <param name="minLevel">76</param>
         </handler>
@@ -66,7 +66,7 @@
         <reward id="71683"/> <!-- Transformation Sealbook Fragment -->
     </mission>
 
-    <mission id="1015" name="Go Fishing" requiredCompletion="100" cycle="WEEKLY">
+    <mission id="1015" name="Go Fishing" required-completion="100" cycle="WEEKLY">
         <handler name="fishing"/>
         <reward id="49508" count="1000"/> <!-- Normal Bait -->
     </mission>
@@ -98,7 +98,7 @@
         <reward id="91781" count="3"/> <!-- Sayha's Effect Scroll -->
     </mission>
 
-    <mission id="1096" name="Defeat Clan Raid" requiredCompletion="20" cycle="SINGLE">
+    <mission id="1096" name="Defeat Clan Raid" required-completion="20" cycle="SINGLE">
         <handler name="clan">
             <param name="minLevel">40</param>
             <param name="kind">ARENA</param> <!-- TODO implement Clan Arena -->
@@ -106,7 +106,7 @@
         <reward id="91781" count="10"/> <!-- Sayha's Effect Scroll -->
     </mission>
 
-    <mission id="1102" name="Alligator Island Exploration (Level 35-50)" requiredCompletion="100">
+    <mission id="1102" name="Alligator Island Exploration (Level 35-50)" required-completion="100">
         <handler name="hunt">
             <param name="minLevel">35</param>
             <param name="maxLevel">50</param>
@@ -115,7 +115,7 @@
         <reward id="49781" count="3"/> <!-- Super XP Scroll -->
     </mission>
 
-    <mission id="1103" name="Forest of Mirrors Exploration (Level 45-60" requiredCompletion="30">
+    <mission id="1103" name="Forest of Mirrors Exploration (Level 45-60" required-completion="30">
         <handler name="hunt">
             <param name="minLevel">45</param>
             <param name="maxLevel">60</param>
@@ -124,7 +124,7 @@
         <reward id="49781" count="7"/>  <!-- Super XP Scroll -->
     </mission>
 
-    <mission id="1104" name="Seal of Shilen Exploration (Level 55-70)" requiredCompletion="30">
+    <mission id="1104" name="Seal of Shilen Exploration (Level 55-70)" required-completion="30">
         <handler name="hunt">
             <param name="minLevel">55</param>
             <param name="maxLevel">70</param>
@@ -133,7 +133,7 @@
         <reward id="49781" count="9"/> <!-- Super XP Scroll -->
     </mission>
 
-    <mission id="1105" name="Forsaken Plains Exploration (Level 65-75)" requiredCompletion="30">
+    <mission id="1105" name="Forsaken Plains Exploration (Level 65-75)" required-completion="30">
         <handler name="hunt">
             <param name="minLevel">65</param>
             <param name="maxLevel">75</param>
@@ -142,7 +142,7 @@
         <reward id="49781" count="11"/> <!-- Super XP Scroll -->
     </mission>
 
-    <mission id="1106" name="Hot Springs Exploration (Level 76 +)" requiredCompletion="100">
+    <mission id="1106" name="Hot Springs Exploration (Level 76 +)" required-completion="100">
         <handler name="hunt">
             <param name="minLevel">76</param>
             <param name="monsters">21834 21839 21842</param>
@@ -150,7 +150,7 @@
         <reward id="90917" count="3"/> <!-- XP Scroll -->
     </mission>
 
-    <mission id="1112" name="Attain Fire Spirits 3 Stars" cycle="SINGLE" requiredCompletion="3">
+    <mission id="1112" name="Attain Fire Spirits 3 Stars" cycle="SINGLE" required-completion="3">
         <handler name="spirit">
             <param name="kind">EVOLVE</param>
             <param name="element">FIRE</param>
@@ -158,7 +158,7 @@
         <reward id="91185" count="30"/> <!-- Intermediate Spirit's Blessing -->
     </mission>
 
-    <mission id="1113" name="Attain Water Spirits 3 Stars" cycle="SINGLE" requiredCompletion="3">
+    <mission id="1113" name="Attain Water Spirits 3 Stars" cycle="SINGLE" required-completion="3">
         <handler name="spirit">
             <param name="kind">EVOLVE</param>
             <param name="element">WATER</param>
@@ -166,7 +166,7 @@
         <reward id="91185" count="30"/> <!-- Intermediate Spirit's Blessing -->
     </mission>
 
-    <mission id="1114" name="Attain Wind Spirits 3 Stars" cycle="SINGLE" requiredCompletion="3">
+    <mission id="1114" name="Attain Wind Spirits 3 Stars" cycle="SINGLE" required-completion="3">
         <handler name="spirit">
             <param name="kind">EVOLVE</param>
             <param name="element">WIND</param>
@@ -174,7 +174,7 @@
         <reward id="91185" count="30"/> <!-- Intermediate Spirit's Blessing -->
     </mission>
 
-    <mission id="1115" name="Attain Earth Spirits 3 Stars" cycle="SINGLE" requiredCompletion="3">
+    <mission id="1115" name="Attain Earth Spirits 3 Stars" cycle="SINGLE" required-completion="3">
         <handler name="spirit">
             <param name="kind">EVOLVE</param>
             <param name="element">EARTH</param>
@@ -182,7 +182,7 @@
         <reward id="91185" count="30"/> <!-- Intermediate Spirit's Blessing -->
     </mission>
 
-    <mission id="1116" name="Attribute Monster Hunt" requiredCompletion="1800" cycle="WEEKLY">
+    <mission id="1116" name="Attribute Monster Hunt" required-completion="1800" cycle="WEEKLY">
         <handler name="hunt">
             <param name="minLevel">76</param>
             <param name="classLevel">3</param>
@@ -196,7 +196,7 @@
         <reward id="91030" count="10"/> <!-- Spirit's Blessing -->
     </mission>
 
-    <mission id="1117" name="Giant's Cave Exploration" requiredCompletion="200">
+    <mission id="1117" name="Giant's Cave Exploration" required-completion="200">
         <handler name="hunt">
             <param name="minLevel">76</param>
             <param name="monsters">20651 20652 20654 20656 20657 20658 24015 24016 24021 24022 20655 20771</param>
@@ -205,7 +205,7 @@
         <reward id="91030" count="2"/> <!-- Spirit's Blessing -->
     </mission>
 
-    <mission id="1118" name="Forgotten Island Exploration" requiredCompletion="200">
+    <mission id="1118" name="Forgotten Island Exploration" required-completion="200">
         <handler name="hunt">
             <param name="minLevel">78</param>
             <param name="monsters">21737 21738 21739 21740 21741 21746 21747 21748 21749 21750 21752 21753</param>
@@ -214,7 +214,7 @@
         <reward id="91030" count="2"/> <!-- Spirit's Blessing -->
     </mission>
 
-    <mission id="1119" name="Varka Silenos Barracks Exploration" requiredCompletion="300">
+    <mission id="1119" name="Varka Silenos Barracks Exploration" required-completion="300">
         <handler name="hunt">
             <param name="minLevel">78</param>
             <param name="monsters">21869 21870 21871 21876 21877 21878 21879 21888</param>
@@ -223,7 +223,7 @@
         <reward id="91030" count="2"/> <!-- Spirit's Blessing -->
     </mission>
 
-    <mission id="1120" name="Exploration of Ketra Orc Outpost" requiredCompletion="300">
+    <mission id="1120" name="Exploration of Ketra Orc Outpost" required-completion="300">
         <handler name="hunt">
             <param name="minLevel">78</param>
             <param name="monsters">21854 21855 81856 21857 21866 21867</param>
@@ -232,7 +232,7 @@
         <reward id="91030" count="2"/> <!-- Spirit's Blessing -->
     </mission>
 
-    <mission id="1121" name="Defeat Spirits King Ignis" requiredCompletion="10" cycle="SINGLE">
+    <mission id="1121" name="Defeat Spirits King Ignis" required-completion="10" cycle="SINGLE">
         <handler name="hunt">
             <param name="minLevel">76</param>
             <param name="monsters">29105</param>
@@ -240,7 +240,7 @@
         <reward id="91125"/> <!-- Ignis' Breath -->
     </mission>
 
-    <mission id="1122" name="Defeat of Spirit Queen Nebula" requiredCompletion="10" cycle="SINGLE">
+    <mission id="1122" name="Defeat of Spirit Queen Nebula" required-completion="10" cycle="SINGLE">
         <handler name="hunt">
             <param name="minLevel">76</param>
             <param name="monsters">29106</param>
@@ -248,7 +248,7 @@
         <reward id="91126"/> <!-- Nebula's Breath -->
     </mission>
 
-    <mission id="1123" name="Defeat Spirit King Procella" requiredCompletion="10" cycle="SINGLE">
+    <mission id="1123" name="Defeat Spirit King Procella" required-completion="10" cycle="SINGLE">
         <handler name="hunt">
             <param name="minLevel">76</param>
             <param name="monsters">29107</param>
@@ -256,21 +256,21 @@
         <reward id="91127"/> <!-- Procella's Breath -->
     </mission>
 
-    <mission id="1124" name="Defeat Spirits King Petram" requiredCompletion="10" cycle="SINGLE">
+    <mission id="1124" name="Defeat Spirits King Petram" required-completion="10" cycle="SINGLE">
         <handler name="hunt">
             <param name="monsters">29108</param>
         </handler>
         <reward id="91128"/> <!-- Petram's Breath -->
     </mission>
 
-    <mission id="1126" name="Daily Hunting II (Lv. 20 or lower)" requiredCompletion="50">
+    <mission id="1126" name="Daily Hunting II (Lv. 20 or lower)" required-completion="50">
         <handler name="hunt">
             <param name="maxLevel">20</param>
         </handler>
         <reward id="49674"/> <!-- Rice Cake of Flaming Fighting Spirit -->
     </mission>
 
-    <mission id="1127" name="Daily Hunting II (Lv. 21-40)" requiredCompletion="60">
+    <mission id="1127" name="Daily Hunting II (Lv. 21-40)" required-completion="60">
         <handler name="hunt">
             <param name="minLevel">21</param>
             <param name="maxLevel">40</param>
@@ -280,7 +280,7 @@
         <reward id="49595"/> <!-- Scroll: 2000 SP -->
     </mission>
 
-    <mission id="1128" name="Daily Hunting II (Lv. 41-50)" requiredCompletion="80">
+    <mission id="1128" name="Daily Hunting II (Lv. 41-50)" required-completion="80">
         <handler name="hunt">
             <param name="minLevel">41</param>
             <param name="maxLevel">50</param>
@@ -288,7 +288,7 @@
         <reward id="49674" count="2"/> <!-- Rice Cake of Flaming Fighting Spirit -->
     </mission>
 
-    <mission id="1129" name="Daily Hunting II (Lv. 51-60)" requiredCompletion="100">
+    <mission id="1129" name="Daily Hunting II (Lv. 51-60)" required-completion="100">
         <handler name="hunt">
             <param name="minLevel">51</param>
             <param name="maxLevel">60</param>
@@ -296,7 +296,7 @@
         <reward id="49674" count="2"/> <!-- Rice Cake of Flaming Fighting Spirit -->
     </mission>
 
-    <mission id="1130" name="Daily Hunting II (Lv. 61-70)" requiredCompletion="120">
+    <mission id="1130" name="Daily Hunting II (Lv. 61-70)" required-completion="120">
         <handler name="hunt">
             <param name="minLevel">61</param>
             <param name="maxLevel">70</param>
@@ -304,7 +304,7 @@
         <reward id="49674" count="2"/> <!-- Rice Cake of Flaming Fighting Spirit -->
     </mission>
 
-    <mission id="1131" name="Daily Hunting II (Lv. 71-75)" requiredCompletion="150">
+    <mission id="1131" name="Daily Hunting II (Lv. 71-75)" required-completion="150">
         <handler name="hunt">
             <param name="minLevel">71</param>
             <param name="maxLevel">75</param>
@@ -312,21 +312,21 @@
         <reward id="49674" count="2"/> <!-- Rice Cake of Flaming Fighting Spirit -->
     </mission>
 
-    <mission id="1132" name="Daily Hunting II (Lv. 76 or higher)" requiredCompletion="200">
+    <mission id="1132" name="Daily Hunting II (Lv. 76 or higher)" required-completion="200">
         <handler name="hunt">
             <param name="minLevel">76</param>
         </handler>
         <reward id="49674" count="2"/> <!-- Rice Cake of Flaming Fighting Spirit -->
     </mission>
 
-    <mission id="1133" name="Daily Hunting III (Lv. 20 or lower)" requiredCompletion="80">
+    <mission id="1133" name="Daily Hunting III (Lv. 20 or lower)" required-completion="80">
         <handler name="hunt">
             <param name="maxLevel">20</param>
         </handler>
         <reward id="49674"/> <!-- Rice Cake of Flaming Fighting Spirit -->
     </mission>
 
-    <mission id="1134" name="Daily Hunting III (Lv. 21-40)" requiredCompletion="100">
+    <mission id="1134" name="Daily Hunting III (Lv. 21-40)" required-completion="100">
         <handler name="hunt">
             <param name="minLevel">21</param>
             <param name="maxLevel">40</param>
@@ -336,7 +336,7 @@
         <reward id="49595"/> <!-- Rice Cake of Flaming Fighting Spirit -->
     </mission>
 
-    <mission id="1135" name="Daily Hunting III (Lv. 41-50)" requiredCompletion="120">
+    <mission id="1135" name="Daily Hunting III (Lv. 41-50)" required-completion="120">
         <handler name="hunt">
             <param name="minLevel">41</param>
             <param name="maxLevel">50</param>
@@ -344,7 +344,7 @@
         <reward id="49674" count="3"/> <!-- Rice Cake of Flaming Fighting Spirit -->
     </mission>
 
-    <mission id="1136" name="Daily Hunting III (Lv. 51-60)" requiredCompletion="150">
+    <mission id="1136" name="Daily Hunting III (Lv. 51-60)" required-completion="150">
         <handler name="hunt">
             <param name="minLevel">51</param>
             <param name="maxLevel">60</param>
@@ -352,7 +352,7 @@
         <reward id="49674" count="3"/> <!-- Rice Cake of Flaming Fighting Spirit -->
     </mission>
 
-    <mission id="1137" name="Daily Hunting III (Lv. 61-70)" requiredCompletion="180">
+    <mission id="1137" name="Daily Hunting III (Lv. 61-70)" required-completion="180">
         <handler name="hunt">
             <param name="minLevel">61</param>
             <param name="maxLevel">70</param>
@@ -360,7 +360,7 @@
         <reward id="49674" count="3"/> <!-- Rice Cake of Flaming Fighting Spirit -->
     </mission>
 
-    <mission id="1138" name="Daily Hunting III (Lv. 71-75)" requiredCompletion="200">
+    <mission id="1138" name="Daily Hunting III (Lv. 71-75)" required-completion="200">
         <handler name="hunt">
             <param name="minLevel">71</param>
             <param name="maxLevel">75</param>
@@ -368,14 +368,14 @@
         <reward id="49674" count="3"/> <!-- Rice Cake of Flaming Fighting Spirit -->
     </mission>
 
-    <mission id="1139" name="Daily Hunting III (Lv. 76+)" requiredCompletion="300">
+    <mission id="1139" name="Daily Hunting III (Lv. 76+)" required-completion="300">
         <handler name="hunt">
             <param name="minLevel">76</param>
         </handler>
         <reward id="49674" count="3"/> <!-- Rice Cake of Flaming Fighting Spirit -->
     </mission>
 
-    <mission id="1140" name="Imperial Tomb Exploration" requiredCompletion="500">
+    <mission id="1140" name="Imperial Tomb Exploration" required-completion="500">
         <handler name="hunt">
             <param name="minLevel">78</param>
             <param name="monsters">2 <!-- Todo Imperial tomb monsters --> </param>
@@ -383,7 +383,7 @@
         <reward id="91406"/> <!-- Sepulcher Pass -->
     </mission>
 
-    <mission id="1141" name="Adventurer's Journey I (Lv. 20-30)" requiredCompletion="100">
+    <mission id="1141" name="Adventurer's Journey I (Lv. 20-30)" required-completion="100">
         <handler name="hunt">
             <param name="minLevel">20</param>
             <param name="maxLevel">30</param>
@@ -392,7 +392,7 @@
         <reward id="91654"/> <!--Adventurer's Mark Lv. 1 -->
     </mission>
 
-    <mission id="1142" name="Adventurer's Journey II (Lv. 31-40)" requiredCompletion="200">
+    <mission id="1142" name="Adventurer's Journey II (Lv. 31-40)" required-completion="200">
         <handler name="hunt">
             <param name="minLevel">31</param>
             <param name="maxLevel">40</param>
@@ -401,7 +401,7 @@
         <reward id="91655"/> <!--Adventurer's Mark Lv. 2 -->
     </mission>
 
-    <mission id="1143" name="Adventurer's Journey III (Lv. 41-60)" requiredCompletion="500">
+    <mission id="1143" name="Adventurer's Journey III (Lv. 41-60)" required-completion="500">
         <handler name="hunt">
             <param name="minLevel">41</param>
             <param name="maxLevel">60</param>
@@ -410,7 +410,7 @@
         <reward id="91656"/> <!--Adventurer's Mark Lv. 3 -->
     </mission>
 
-    <mission id="1144" name="Adventurer's Journey IV (Lv. 61-75)" requiredCompletion="700">
+    <mission id="1144" name="Adventurer's Journey IV (Lv. 61-75)" required-completion="700">
         <handler name="hunt">
             <param name="minLevel">61</param>
             <param name="maxLevel">75</param>
@@ -419,7 +419,7 @@
         <reward id="91657"/> <!--Adventurer's Mark Lv. 4 -->
     </mission>
 
-    <mission id="1145" name="Adventurer's Journey V (Lv. 76+)" requiredCompletion="1000">
+    <mission id="1145" name="Adventurer's Journey V (Lv. 76+)" required-completion="1000">
         <handler name="hunt">
             <param name="maxLevel">76</param>
             <param name="monsters">2 <!-- Todo  monsters in  Wind Plateau / Forge of the Gods / Wall of Argos / Garden of Eva. --> </param>
@@ -427,14 +427,14 @@
         <reward id="91931"/> <!-- Adventurer's Mark Lv. 5-->
     </mission>
 
-    <mission id="1146" name="Daily Hunting IV (Lv. 20 or lower)" requiredCompletion="100">
+    <mission id="1146" name="Daily Hunting IV (Lv. 20 or lower)" required-completion="100">
         <handler name="hunt">
             <param name="maxLevel">20</param>
         </handler>
         <reward id="49674"/> <!--  Rice Cake of Flaming Fighting Spirit -->
     </mission>
 
-    <mission id="1147" name="Daily Hunting IV (Lv. 21-40)" requiredCompletion="130">
+    <mission id="1147" name="Daily Hunting IV (Lv. 21-40)" required-completion="130">
         <handler name="hunt">
             <param name="minLevel">21</param>
             <param name="maxLevel">40</param>
@@ -444,7 +444,7 @@
         <reward id="49595"/> <!-- Scroll: 2000 SP -->
     </mission>
 
-    <mission id="1148" name="Daily Hunting IV (Lv. 41-50)" requiredCompletion="160">
+    <mission id="1148" name="Daily Hunting IV (Lv. 41-50)" required-completion="160">
         <handler name="hunt">
             <param name="minLevel">41</param>
             <param name="maxLevel">50</param>
@@ -452,7 +452,7 @@
         <reward id="49674" count="3"/> <!--  Rice Cake of Flaming Fighting Spirit -->
     </mission>
 
-    <mission id="1149" name="Daily Hunting IV (Lv. 51-60)" requiredCompletion="200">
+    <mission id="1149" name="Daily Hunting IV (Lv. 51-60)" required-completion="200">
         <handler name="hunt">
             <param name="minLevel">51</param>
             <param name="maxLevel">60</param>
@@ -460,7 +460,7 @@
         <reward id="49674" count="3"/> <!--  Rice Cake of Flaming Fighting Spirit -->
     </mission>
 
-    <mission id="1150" name="Daily Hunting IV (Lv. 61-70)" requiredCompletion="240">
+    <mission id="1150" name="Daily Hunting IV (Lv. 61-70)" required-completion="240">
         <handler name="hunt">
             <param name="minLevel">61</param>
             <param name="maxLevel">70</param>
@@ -468,7 +468,7 @@
         <reward id="49674" count="3"/> <!--  Rice Cake of Flaming Fighting Spirit -->
     </mission>
 
-    <mission id="1151" name="Daily Hunting IV (Lv. 71-75)" requiredCompletion="300">
+    <mission id="1151" name="Daily Hunting IV (Lv. 71-75)" required-completion="300">
         <handler name="hunt">
             <param name="minLevel">61</param>
             <param name="maxLevel">70</param>
@@ -476,21 +476,21 @@
         <reward id="49674" count="3"/> <!--  Rice Cake of Flaming Fighting Spirit -->
     </mission>
 
-    <mission id="1152" name="Daily Hunting IV (Lv. 76 or higher)" requiredCompletion="400">
+    <mission id="1152" name="Daily Hunting IV (Lv. 76 or higher)" required-completion="400">
         <handler name="hunt">
             <param name="minLevel">76</param>
         </handler>
         <reward id="49674" count="3"/> <!--  Rice Cake of Flaming Fighting Spirit -->
     </mission>
 
-    <mission id="1153" name="Daily Hunting V (Lv. 20 or lower)" requiredCompletion="130">
+    <mission id="1153" name="Daily Hunting V (Lv. 20 or lower)" required-completion="130">
         <handler name="hunt">
             <param name="maxLevel">20</param>
         </handler>
         <reward id="49674"/> <!--  Rice Cake of Flaming Fighting Spirit -->
     </mission>
 
-    <mission id="1154" name="Daily Hunting V (Lv. 21-40)" requiredCompletion="160">
+    <mission id="1154" name="Daily Hunting V (Lv. 21-40)" required-completion="160">
         <handler name="hunt">
             <param name="minLevel">21</param>
             <param name="maxLevel">40</param>
@@ -500,7 +500,7 @@
         <reward id="49595"/> <!-- Scroll: 2000 SP -->
     </mission>
 
-    <mission id="1155" name="Daily Hunting V (Lv. 41-50)" requiredCompletion="200">
+    <mission id="1155" name="Daily Hunting V (Lv. 41-50)" required-completion="200">
         <handler name="hunt">
             <param name="minLevel">41</param>
             <param name="maxLevel">50</param>
@@ -508,7 +508,7 @@
         <reward id="49674" count="3"/> <!--  Rice Cake of Flaming Fighting Spirit -->
     </mission>
 
-    <mission id="1156" name="Daily Hunting V (Lv. 51-60)" requiredCompletion="250">
+    <mission id="1156" name="Daily Hunting V (Lv. 51-60)" required-completion="250">
         <handler name="hunt">
             <param name="minLevel">51</param>
             <param name="maxLevel">60</param>
@@ -516,7 +516,7 @@
         <reward id="49674" count="3"/> <!--  Rice Cake of Flaming Fighting Spirit -->
     </mission>
 
-    <mission id="1157" name="Daily Hunting V (Lv. 61-70)" requiredCompletion="300">
+    <mission id="1157" name="Daily Hunting V (Lv. 61-70)" required-completion="300">
         <handler name="hunt">
             <param name="minLevel">51</param>
             <param name="maxLevel">60</param>
@@ -524,7 +524,7 @@
         <reward id="49674" count="3"/> <!--  Rice Cake of Flaming Fighting Spirit -->
     </mission>
 
-    <mission id="1158" name="Daily Hunting V (Lv. 71-75)" requiredCompletion="400">
+    <mission id="1158" name="Daily Hunting V (Lv. 71-75)" required-completion="400">
         <handler name="hunt">
             <param name="minLevel">51</param>
             <param name="maxLevel">60</param>
@@ -532,7 +532,7 @@
         <reward id="49674" count="3"/> <!--  Rice Cake of Flaming Fighting Spirit -->
     </mission>
 
-    <mission id="1159" name="Daily Hunting V (Lv. 76 or higher)" requiredCompletion="500">
+    <mission id="1159" name="Daily Hunting V (Lv. 76 or higher)" required-completion="500">
         <handler name="hunt">
             <param name="minLevel">51</param>
             <param name="maxLevel">60</param>
@@ -540,7 +540,7 @@
         <reward id="49674" count="3"/> <!--  Rice Cake of Flaming Fighting Spirit -->
     </mission>
 
-    <mission id="1162" name="Attain Fire Spirits 5 Stars" cycle="SINGLE" requiredCompletion="5">
+    <mission id="1162" name="Attain Fire Spirits 5 Stars" cycle="SINGLE" required-completion="5">
         <handler name="spirit">
             <param name="kind">EVOLVE</param>
             <param name="element">FIRE</param>
@@ -548,7 +548,7 @@
         <reward id="91186" count="30"/> <!-- Advanced Spirit's Blessing -->
     </mission>
 
-    <mission id="1163" name="Attain Water Spirits 5 Stars" cycle="SINGLE" requiredCompletion="5">
+    <mission id="1163" name="Attain Water Spirits 5 Stars" cycle="SINGLE" required-completion="5">
         <handler name="spirit">
             <param name="kind">EVOLVE</param>
             <param name="element">WATER</param>
@@ -556,7 +556,7 @@
         <reward id="91186" count="30"/> <!-- Advanced Spirit's Blessing -->
     </mission>
 
-    <mission id="1164" name="Attain Wind Spirits 5 Stars" cycle="SINGLE" requiredCompletion="5">
+    <mission id="1164" name="Attain Wind Spirits 5 Stars" cycle="SINGLE" required-completion="5">
         <handler name="spirit">
             <param name="kind">EVOLVE</param>
             <param name="element">WIND</param>
@@ -564,7 +564,7 @@
         <reward id="91186" count="30"/> <!-- Advanced Spirit's Blessing -->
     </mission>
 
-    <mission id="1165" name="Attain Earth Spirits 5 Stars" cycle="SINGLE" requiredCompletion="5">
+    <mission id="1165" name="Attain Earth Spirits 5 Stars" cycle="SINGLE" required-completion="5">
         <handler name="spirit">
             <param name="kind">EVOLVE</param>
             <param name="element">EARTH</param>
@@ -572,149 +572,149 @@
         <reward id="91186" count="30"/> <!-- Advanced Spirit's Blessing -->
     </mission>
 
-    <mission id="4000" name="Reach Level 10" requiredCompletion="10" cycle="SINGLE">
+    <mission id="4000" name="Reach Level 10" required-completion="10" cycle="SINGLE">
         <handler name="level"/>
         <reward id="90907" count="5"/> <!-- Soulshot Ticket -->
         <reward id="49778"/> <!-- Mid-grade XP Scroll -->
         <reward id="49495"/> <!-- Hero's Dual Swords -->
     </mission>
 
-    <mission id="4001" name="Reach Level 20" requiredCompletion="20" cycle="SINGLE">
+    <mission id="4001" name="Reach Level 20" required-completion="20" cycle="SINGLE">
         <handler name="level"/>
         <reward id="90907" count="5"/> <!-- Soulshot Ticket -->
         <reward id="49488" count="10"/> <!-- Major Healing Potion -->
         <reward id="49778" count="8"/> <!-- Mid-grade XP Scroll -->
     </mission>
 
-    <mission id="4002" name="Reach Level 30" requiredCompletion="30" cycle="SINGLE">
+    <mission id="4002" name="Reach Level 30" required-completion="30" cycle="SINGLE">
         <handler name="level"/>
         <reward id="90907" count="15"/> <!-- Soulshot Ticket -->
         <reward id="49488" count="20"/> <!-- Major Healing Potion -->
         <reward id="49779"/> <!-- High-grade XP Scroll -->
     </mission>
 
-    <mission id="4003" name="Reach Level 40" requiredCompletion="40" cycle="SINGLE">
+    <mission id="4003" name="Reach Level 40" required-completion="40" cycle="SINGLE">
         <handler name="level"/>
         <reward id="90907" count="20"/> <!-- Soulshot Ticket -->
         <reward id="49488" count="30"/> <!-- Major Healing Potion -->
     </mission>
 
-    <mission id="4004" name="Reach Level 45" requiredCompletion="45" cycle="SINGLE">
+    <mission id="4004" name="Reach Level 45" required-completion="45" cycle="SINGLE">
         <handler name="level"/>
         <reward id="49781" count="4"/> <!-- Super XP Scroll -->
         <reward id="49674" count="3"/> <!-- Rice Cake of Flaming Fighting Spirit -->
     </mission>
 
-    <mission id="4005" name="Reach Level 50" requiredCompletion="50" cycle="SINGLE">
+    <mission id="4005" name="Reach Level 50" required-completion="50" cycle="SINGLE">
         <handler name="level"/>
         <reward id="49781" count="8"/> <!-- Super XP Scroll -->
         <reward id="49674" count="6"/> <!-- Rice Cake of Flaming Fighting Spirit -->
     </mission>
 
-    <mission id="4006" name="Reach Level 55" requiredCompletion="55" cycle="SINGLE">
+    <mission id="4006" name="Reach Level 55" required-completion="55" cycle="SINGLE">
         <handler name="level"/>
         <reward id="49781" count="14"/> <!-- Super XP Scroll -->
         <reward id="49674" count="9"/> <!-- Rice Cake of Flaming Fighting Spirit -->
     </mission>
 
-    <mission id="4007" name="Reach Level 60" requiredCompletion="60" cycle="SINGLE">
+    <mission id="4007" name="Reach Level 60" required-completion="60" cycle="SINGLE">
         <handler name="level"/>
         <reward id="49781" count="25"/> <!-- Super XP Scroll -->
         <reward id="49674" count="9"/> <!-- Rice Cake of Flaming Fighting Spirit -->
     </mission>
 
-    <mission id="4008" name="Reach Level 65" requiredCompletion="65" cycle="SINGLE">
+    <mission id="4008" name="Reach Level 65" required-completion="65" cycle="SINGLE">
         <handler name="level"/>
         <reward id="90917" count="4"/> <!-- XP Scroll -->
         <reward id="49674" count="12"/> <!-- Rice Cake of Flaming Fighting Spirit -->
         <reward id="91781" count="3"/> <!-- Sayha's Effect Scroll -->
     </mission>
 
-    <mission id="4009" name="Reach Level 68" requiredCompletion="68" cycle="SINGLE">
+    <mission id="4009" name="Reach Level 68" required-completion="68" cycle="SINGLE">
         <handler name="level"/>
         <reward id="90917" count="6"/> <!-- XP Scroll -->
         <reward id="49674" count="12"/> <!-- Rice Cake of Flaming Fighting Spirit -->
         <reward id="91781" count="6"/> <!-- Sayha's Effect Scroll -->
     </mission>
 
-    <mission id="4010" name="Reach Level 71" requiredCompletion="71" cycle="SINGLE">
+    <mission id="4010" name="Reach Level 71" required-completion="71" cycle="SINGLE">
         <handler name="level"/>
         <reward id="90917" count="8"/> <!-- XP Scroll -->
         <reward id="49674" count="12"/> <!-- Rice Cake of Flaming Fighting Spirit -->
         <reward id="91781" count="9"/> <!-- Sayha's Effect Scroll -->
     </mission>
 
-    <mission id="4011" name="Reach Level 74" requiredCompletion="74" cycle="SINGLE">
+    <mission id="4011" name="Reach Level 74" required-completion="74" cycle="SINGLE">
         <handler name="level"/>
         <reward id="90917" count="12"/> <!-- XP Scroll -->
         <reward id="49674" count="12"/> <!-- Rice Cake of Flaming Fighting Spirit -->
         <reward id="91781" count="12"/> <!-- Sayha's Effect Scroll -->
     </mission>
 
-    <mission id="4012" name="Reach Level 76" requiredCompletion="76" cycle="SINGLE">
+    <mission id="4012" name="Reach Level 76" required-completion="76" cycle="SINGLE">
         <handler name="level"/>
         <reward id="91780" count="12"/> <!-- Dragon Scroll -->
         <reward id="49674" count="12"/> <!-- Rice Cake of Flaming Fighting Spirit -->
         <reward id="91781" count="12"/> <!-- Sayha's Effect Scroll -->
     </mission>
 
-    <mission id="4013" name="Reach Level 78" requiredCompletion="78" cycle="SINGLE">
+    <mission id="4013" name="Reach Level 78" required-completion="78" cycle="SINGLE">
         <handler name="level"/>
         <reward id="91780" count="12"/> <!-- Dragon Scroll -->
         <reward id="49674" count="12"/> <!-- Rice Cake of Flaming Fighting Spirit -->
         <reward id="91781" count="12"/> <!-- Sayha's Effect Scroll -->
     </mission>
 
-    <mission id="4014" name="Reach Level 79" requiredCompletion="79" cycle="SINGLE">
+    <mission id="4014" name="Reach Level 79" required-completion="79" cycle="SINGLE">
         <handler name="level"/>
         <reward id="91780" count="12"/> <!-- Dragon Scroll -->
         <reward id="49674" count="12"/> <!-- Rice Cake of Flaming Fighting Spirit -->
         <reward id="91781" count="12"/> <!-- Sayha's Effect Scroll -->
     </mission>
 
-    <mission id="4015" name="Reach Level 80" requiredCompletion="80" cycle="SINGLE">
+    <mission id="4015" name="Reach Level 80" required-completion="80" cycle="SINGLE">
         <handler name="level"/>
         <reward id="91780" count="12"/> <!-- Dragon Scroll -->
         <reward id="49674" count="12"/> <!-- Rice Cake of Flaming Fighting Spirit -->
         <reward id="91781" count="15"/> <!-- Sayha's Effect Scroll -->
     </mission>
 
-    <mission id="4016" name="Reach Level 81" requiredCompletion="81" cycle="SINGLE">
+    <mission id="4016" name="Reach Level 81" required-completion="81" cycle="SINGLE">
         <handler name="level"/>
         <reward id="91780" count="12"/> <!-- Dragon Scroll -->
         <reward id="49674" count="15"/> <!-- Rice Cake of Flaming Fighting Spirit -->
         <reward id="91781" count="15"/> <!-- Sayha's Effect Scroll -->
     </mission>
 
-    <mission id="4017" name="Reach Level 82" requiredCompletion="82" cycle="SINGLE">
+    <mission id="4017" name="Reach Level 82" required-completion="82" cycle="SINGLE">
         <handler name="level"/>
         <reward id="91780" count="15"/> <!-- Dragon Scroll -->
         <reward id="49674" count="15"/> <!-- Rice Cake of Flaming Fighting Spirit -->
         <reward id="91781" count="15"/> <!-- Sayha's Effect Scroll -->
     </mission>
 
-    <mission id="4018" name="Reach Level 83" requiredCompletion="83" cycle="SINGLE">
+    <mission id="4018" name="Reach Level 83" required-completion="83" cycle="SINGLE">
         <handler name="level"/>
         <reward id="91780" count="15"/> <!-- Dragon Scroll -->
         <reward id="49674" count="15"/> <!-- Rice Cake of Flaming Fighting Spirit -->
         <reward id="91781" count="18"/> <!-- Sayha's Effect Scroll -->
     </mission>
 
-    <mission id="4019" name="Reach Level 84" requiredCompletion="84" cycle="SINGLE">
+    <mission id="4019" name="Reach Level 84" required-completion="84" cycle="SINGLE">
         <handler name="level"/>
         <reward id="91780" count="15"/> <!-- Dragon Scroll -->
         <reward id="49674" count="18"/> <!-- Rice Cake of Flaming Fighting Spirit -->
         <reward id="91781" count="18"/> <!-- Sayha's Effect Scroll -->
     </mission>
 
-    <mission id="4020" name="Reach Level 85" requiredCompletion="85" cycle="SINGLE">
+    <mission id="4020" name="Reach Level 85" required-completion="85" cycle="SINGLE">
         <handler name="level"/>
         <reward id="91780" count="18"/> <!-- Dragon Scroll -->
         <reward id="49674" count="18"/> <!-- Rice Cake of Flaming Fighting Spirit -->
         <reward id="91781" count="18"/> <!-- Sayha's Effect Scroll -->
     </mission>
 
-    <mission id="4021" name="Reach Level 86" requiredCompletion="86" cycle="SINGLE">
+    <mission id="4021" name="Reach Level 86" required-completion="86" cycle="SINGLE">
         <handler name="level"/>
         <reward id="91780" count="20"/> <!-- Dragon Scroll -->
         <reward id="49674" count="20"/> <!-- Rice Cake of Flaming Fighting Spirit -->

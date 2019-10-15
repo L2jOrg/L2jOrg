@@ -18,7 +18,7 @@ import org.l2j.gameserver.model.stats.Formulas;
 import org.l2j.gameserver.model.stats.Stats;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.*;
-import org.l2j.gameserver.network.serverpackets.dailymission.ExOneDayReceiveRewardList;
+import org.l2j.gameserver.network.serverpackets.mission.ExOneDayReceiveRewardList;
 import org.l2j.gameserver.network.serverpackets.friend.FriendStatus;
 import org.l2j.gameserver.util.GameUtils;
 import org.l2j.gameserver.world.zone.ZoneType;

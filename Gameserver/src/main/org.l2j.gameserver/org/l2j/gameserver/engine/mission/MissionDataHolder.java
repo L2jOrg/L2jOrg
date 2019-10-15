@@ -35,12 +35,12 @@ public class MissionDataHolder {
         final Function<MissionDataHolder, AbstractMissionHandler> handler = MissionEngine.getInstance().getHandler(set.getString("handler"));
 
         id = set.getInt("id");
-        requiredCompletions = set.getInt("requiredCompletion", 1);
+        requiredCompletions = set.getInt("required-completion", 1);
         rewardsItems = set.getList("rewards", ItemHolder.class);
         classRestriction = set.getList("classRestriction", ClassId.class);
         params = set.getObject("params", StatsSet.class);
         cycle = set.getEnum("cycle", MissionCycle.class);
-        isDisplayedWhenNotAvailable = set.getBoolean("isDisplayedWhenNotAvailable", true);
+        isDisplayedWhenNotAvailable = set.getBoolean("display-not-available", true);
         this.handler = handler != null ? handler.apply(this) : null;
     }
 

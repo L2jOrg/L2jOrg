@@ -1,4 +1,4 @@
-package handlers.dailymissionhandlers;
+package handlers.mission;
 
 import org.l2j.gameserver.engine.elemental.api.ElementalType;
 import org.l2j.gameserver.handler.AbstractMissionHandler;

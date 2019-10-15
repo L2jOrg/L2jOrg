@@ -14,7 +14,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package handlers.dailymissionhandlers;
+package handlers.mission;
 
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.engine.mission.MissionStatus;

@@ -6,6 +6,9 @@ import org.l2j.commons.util.CommonUtil;
 import org.l2j.gameserver.ai.CreatureAI;
 import org.l2j.gameserver.ai.CtrlEvent;
 import org.l2j.gameserver.data.sql.impl.PlayerNameTable;
+import org.l2j.gameserver.data.xml.DoorDataManager;
+import org.l2j.gameserver.data.xml.FenceDataManager;
+import org.l2j.gameserver.engine.geo.GeoEngine;
 import org.l2j.gameserver.model.Spawn;
 import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.Creature;
@@ -586,7 +589,12 @@ public final class World {
         getInstance().initRegions();
         MapRegionManager.init();
         ZoneManager.init();
+        GeoEngine.init();
+
         WorldTimeController.init();
+
+        DoorDataManager.init();
+        FenceDataManager.init();
     }
 
     private static <T extends WorldObject> Predicate<T> isVisible(WorldObject reference) {

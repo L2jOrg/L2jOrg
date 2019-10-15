@@ -36,7 +36,7 @@ public final class MissionEngine {
         try {
             ScriptEngineManager.getInstance().executeScript(ONE_DAY_REWARD_MASTER_HANDLER);
         } catch (Exception e) {
-            throw new Error("Problems while running DailyMissionMasterHandler", e);
+            throw new Error("Problems while running MissionMasterHandler", e);
         }
     }
 

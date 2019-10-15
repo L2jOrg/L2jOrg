@@ -25,12 +25,13 @@ import static org.l2j.commons.util.Util.isNullOrEmpty;
 
 /**
  * @author Sdw
+ * @author JoeAlisson
  */
 public class MissionData extends GameXmlReader {
     private static final Logger LOGGER = LoggerFactory.getLogger(MissionData.class);
 
     private final IntMap<IntMap<MissionPlayerData>> missionsData = new CHashIntMap<>();
-    private final IntMap<List<MissionDataHolder>> dailyMissionRewards = new HashIntMap<>();
+    private final IntMap<List<MissionDataHolder>> missions = new HashIntMap<>();
 
     private boolean available;
 
@@ -39,15 +40,15 @@ public class MissionData extends GameXmlReader {
 
     @Override
     protected Path getSchemaFilePath() {
-        return getSettings(ServerSettings.class).dataPackDirectory().resolve("data/xsd/DailyMission.xsd");
+        return getSettings(ServerSettings.class).dataPackDirectory().resolve("data/xsd/mission.xsd");
     }
 
     @Override
     public void load() {
-        dailyMissionRewards.clear();
-        parseDatapackFile("data/DailyMission.xml");
-        available = !dailyMissionRewards.isEmpty();
-        LOGGER.info("Loaded {} one day rewards.",  dailyMissionRewards.size());
+        missions.clear();
+        parseDatapackFile("data/mission.xml");
+        available = !missions.isEmpty();
+        LOGGER.info("Loaded {} missions.",  missions.size());
     }
 
     @Override
@@ -89,22 +90,22 @@ public class MissionData extends GameXmlReader {
             });
 
             final MissionDataHolder holder = new MissionDataHolder(set);
-            dailyMissionRewards.computeIfAbsent(holder.getId(), k -> new ArrayList<>()).add(holder);
+            missions.computeIfAbsent(holder.getId(), k -> new ArrayList<>()).add(holder);
         }));
     }
 
-    public Collection<MissionDataHolder> getDailyMissions() {
+    public Collection<MissionDataHolder> getMissions() {
         //@formatter:off
-        return dailyMissionRewards.values()
+        return missions.values()
                 .stream()
                 .flatMap(List::stream)
                 .collect(Collectors.toList());
         //@formatter:on
     }
 
-    public Collection<MissionDataHolder> getDailyMissions(Player player) {
+    public Collection<MissionDataHolder> getMissions(Player player) {
         //@formatter:off
-        return dailyMissionRewards.values()
+        return missions.values()
                 .stream()
                 .flatMap(List::stream)
                 .filter(o -> o.isDisplayable(player))
@@ -112,12 +113,12 @@ public class MissionData extends GameXmlReader {
         //@formatter:on
     }
 
-    public int getAvailableDailyMissionCount(Player player) {
-        return (int) dailyMissionRewards.values().stream().flatMap(List::stream).filter(mission -> mission.isAvailable(player)).count();
+    public int getAvailableMissionCount(Player player) {
+        return (int) missions.values().stream().flatMap(List::stream).filter(mission -> mission.isAvailable(player)).count();
     }
 
-    public Collection<MissionDataHolder> getDailyMissions(int id) {
-        return dailyMissionRewards.get(id);
+    public Collection<MissionDataHolder> getMissions(int id) {
+        return missions.get(id);
     }
 
     public void clearMissionData(int id) {
@@ -130,7 +131,7 @@ public class MissionData extends GameXmlReader {
         }
     }
 
-    public IntMap<MissionPlayerData> getStoredDailyMissionData(Player player) {
+    public IntMap<MissionPlayerData> getStoredMissionData(Player player) {
         return missionsData.computeIfAbsent(player.getObjectId(), id -> new CHashIntMap<>());
     }
 

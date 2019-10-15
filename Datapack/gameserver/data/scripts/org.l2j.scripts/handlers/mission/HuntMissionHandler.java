@@ -1,4 +1,4 @@
-package handlers.dailymissionhandlers;
+package handlers.mission;
 
 import org.l2j.commons.util.Util;
 import org.l2j.gameserver.Config;

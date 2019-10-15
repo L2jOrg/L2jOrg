@@ -1,4 +1,4 @@
-package handlers.dailymissionhandlers;
+package handlers.mission;
 
 import org.l2j.gameserver.data.sql.impl.ClanTable;
 import org.l2j.gameserver.handler.AbstractMissionHandler;

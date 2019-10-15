@@ -1,8 +1,8 @@
-package org.l2j.gameserver.network.clientpackets.dailymission;
+package org.l2j.gameserver.network.clientpackets.mission;
 
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.clientpackets.ClientPacket;
-import org.l2j.gameserver.network.serverpackets.dailymission.ExOneDayReceiveRewardList;
+import org.l2j.gameserver.network.serverpackets.mission.ExOneDayReceiveRewardList;
 
 /**
  * @author UnAfraid

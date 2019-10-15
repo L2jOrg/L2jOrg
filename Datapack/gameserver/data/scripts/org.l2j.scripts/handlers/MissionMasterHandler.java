@@ -1,6 +1,6 @@
 package handlers;
 
-import handlers.dailymissionhandlers.*;
+import handlers.mission.*;
 import org.l2j.gameserver.engine.mission.MissionEngine;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

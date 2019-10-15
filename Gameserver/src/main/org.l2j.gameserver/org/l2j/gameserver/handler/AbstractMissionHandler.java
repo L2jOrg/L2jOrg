@@ -7,7 +7,7 @@ import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.engine.mission.MissionDataHolder;
 import org.l2j.gameserver.engine.mission.MissionStatus;
 import org.l2j.gameserver.model.events.ListenersContainer;
-import org.l2j.gameserver.network.serverpackets.dailymission.ExConnectedTimeAndGettableReward;
+import org.l2j.gameserver.network.serverpackets.mission.ExConnectedTimeAndGettableReward;
 
 import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;
@@ -96,7 +96,7 @@ public abstract class AbstractMissionHandler extends ListenersContainer  {
 
     protected MissionPlayerData getPlayerEntry(Player player, boolean createIfNone) {
 
-        final var playerMissions = MissionData.getInstance().getStoredDailyMissionData(player);
+        final var playerMissions = MissionData.getInstance().getStoredMissionData(player);
 
         if (playerMissions.containsKey(holder.getId())) {
             return playerMissions.get(holder.getId());
@@ -115,7 +115,7 @@ public abstract class AbstractMissionHandler extends ListenersContainer  {
     }
 
     protected void notifyAvailablesReward(Player player) {
-        var playerMissions = MissionData.getInstance().getStoredDailyMissionData(player).values();
+        var playerMissions = MissionData.getInstance().getStoredMissionData(player).values();
         player.sendPacket(new ExConnectedTimeAndGettableReward((int) playerMissions.stream().filter(MissionPlayerData::isAvailable).count()));
 
     }

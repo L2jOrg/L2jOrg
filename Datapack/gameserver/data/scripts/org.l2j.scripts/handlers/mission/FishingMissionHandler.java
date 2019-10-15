@@ -1,4 +1,4 @@
-package handlers.dailymissionhandlers;
+package handlers.mission;
 
 import org.l2j.gameserver.handler.AbstractMissionHandler;
 import org.l2j.gameserver.model.actor.instance.Player;

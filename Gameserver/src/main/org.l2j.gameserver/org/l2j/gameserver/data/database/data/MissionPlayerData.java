@@ -9,7 +9,7 @@ import org.l2j.gameserver.engine.mission.MissionStatus;
  * @author UnAfraid
  * @author JoeAlisson
  */
-@Table("character_daily_missions")
+@Table("character_missions")
 public class MissionPlayerData {
 
     @Column("char_id")

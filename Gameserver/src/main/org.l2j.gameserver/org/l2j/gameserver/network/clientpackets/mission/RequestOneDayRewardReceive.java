@@ -1,4 +1,4 @@
-package org.l2j.gameserver.network.clientpackets.dailymission;
+package org.l2j.gameserver.network.clientpackets.mission;
 
 import org.l2j.commons.util.Util;
 import org.l2j.gameserver.data.database.data.MissionPlayerData;
@@ -6,8 +6,8 @@ import org.l2j.gameserver.engine.mission.MissionData;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.engine.mission.MissionDataHolder;
 import org.l2j.gameserver.network.clientpackets.ClientPacket;
-import org.l2j.gameserver.network.serverpackets.dailymission.ExConnectedTimeAndGettableReward;
-import org.l2j.gameserver.network.serverpackets.dailymission.ExOneDayReceiveRewardList;
+import org.l2j.gameserver.network.serverpackets.mission.ExConnectedTimeAndGettableReward;
+import org.l2j.gameserver.network.serverpackets.mission.ExOneDayReceiveRewardList;
 
 import java.util.Collection;
 
@@ -15,11 +15,11 @@ import java.util.Collection;
  * @author Sdw
  */
 public class RequestOneDayRewardReceive extends ClientPacket {
-    private int _id;
+    private int id;
 
     @Override
     public void readImpl() {
-        _id = readShort();
+        id = readShort();
     }
 
     @Override
@@ -29,15 +29,15 @@ public class RequestOneDayRewardReceive extends ClientPacket {
             return;
         }
 
-        var dailyMissionData = MissionData.getInstance();
+        var missionData = MissionData.getInstance();
 
-        final Collection<MissionDataHolder> missions = dailyMissionData.getDailyMissions(_id);
+        final Collection<MissionDataHolder> missions = missionData.getMissions(id);
         if (Util.isNullOrEmpty(missions)) { return;
         }
 
         missions.stream().filter(o -> o.isDisplayable(player)).forEach(r -> r.requestReward(player));
 
         player.sendPacket(new ExOneDayReceiveRewardList(player, true));
-        player.sendPacket(new ExConnectedTimeAndGettableReward((int) dailyMissionData.getStoredDailyMissionData(player).values().stream().filter(MissionPlayerData::isAvailable).count()));
+        player.sendPacket(new ExConnectedTimeAndGettableReward((int) missionData.getStoredMissionData(player).values().stream().filter(MissionPlayerData::isAvailable).count()));
     }
 }

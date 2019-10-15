@@ -235,7 +235,7 @@ public class DailyTaskManager extends AbstractEventManager<AbstractEvent<?>> {
     private void resetDailyMissionRewards() {
         var scheduler = getScheduler("reset");
         long lastReset = nonNull(scheduler) ? scheduler.getLastRun() : 0;
-        MissionData.getInstance().getDailyMissions().forEach(mission -> mission.reset(lastReset));
+        MissionData.getInstance().getMissions().forEach(mission -> mission.reset(lastReset));
     }
 
     public static DailyTaskManager getInstance() {

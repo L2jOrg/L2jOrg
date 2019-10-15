@@ -27,7 +27,6 @@ public final class GlobalVariablesManager extends AbstractVariables {
     private static final String INSERT_QUERY = "INSERT INTO global_variables (var, value) VALUES (?, ?)";
 
     private GlobalVariablesManager() {
-        restoreMe();
     }
 
     @Override
@@ -89,6 +88,10 @@ public final class GlobalVariablesManager extends AbstractVariables {
             return false;
         }
         return true;
+    }
+
+    public static void init() {
+        getInstance().restoreMe();
     }
 
     public static GlobalVariablesManager getInstance() {
