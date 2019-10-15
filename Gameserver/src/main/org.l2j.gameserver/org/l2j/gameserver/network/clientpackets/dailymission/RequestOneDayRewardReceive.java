@@ -4,7 +4,7 @@ import org.l2j.commons.util.Util;
 import org.l2j.gameserver.data.database.data.MissionPlayerData;
 import org.l2j.gameserver.engine.mission.MissionData;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.dailymission.MissionDataHolder;
+import org.l2j.gameserver.engine.mission.MissionDataHolder;
 import org.l2j.gameserver.network.clientpackets.ClientPacket;
 import org.l2j.gameserver.network.serverpackets.dailymission.ExConnectedTimeAndGettableReward;
 import org.l2j.gameserver.network.serverpackets.dailymission.ExOneDayReceiveRewardList;

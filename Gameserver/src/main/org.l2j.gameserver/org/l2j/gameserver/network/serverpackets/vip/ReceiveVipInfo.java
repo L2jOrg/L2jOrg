@@ -1,6 +1,6 @@
 package org.l2j.gameserver.network.serverpackets.vip;
 
-import org.l2j.gameserver.data.xml.impl.VipData;
+import org.l2j.gameserver.engine.vip.VipEngine;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
 import org.l2j.gameserver.network.serverpackets.ServerPacket;
@@ -8,14 +8,12 @@ import org.l2j.gameserver.network.serverpackets.ServerPacket;
 import java.time.Instant;
 import java.time.temporal.ChronoUnit;
 
-import static java.lang.Math.max;
-
 public class ReceiveVipInfo extends ServerPacket {
 
     @Override
     protected void writeImpl(GameClient client) {
         var player = client.getPlayer();
-        var vipData = VipData.getInstance();
+        var vipData = VipEngine.getInstance();
         var vipTier = player.getVipTier();
 
         var vipDuration = (int) ChronoUnit.SECONDS.between(Instant.now(), Instant.ofEpochMilli(client.getVipTierExpiration()));

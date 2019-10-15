@@ -1,35 +1,35 @@
 <?xml version='1.0' encoding='utf-8'?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org xsd/vip.xsd" >
     
-    <vip tier="0" points_required="0" points_depreciated="0">
+    <vip tier="0" points-required="0" points-depreciated="0">
         <bonus/>
     </vip>
     
-    <vip tier="1" points_required="300" points_depreciated="300">
+    <vip tier="1" points-required="300" points-depreciated="300">
         <bonus skill="55161"/>
     </vip>
 
-    <vip tier="2" points_required="1000" points_depreciated="500">
+    <vip tier="2" points-required="1000" points-depreciated="500">
         <bonus skill="55162"/>
     </vip>
 
-    <vip tier="3" points_required="2000" points_depreciated="660">
-        <bonus skill="55163" silver_coin_acquisition="40"/>
+    <vip tier="3" points-required="2000" points-depreciated="660">
+        <bonus skill="55163" silver-coin-acquisition="40"/>
     </vip>
 
-    <vip tier="4" points_required="3500" points_depreciated="1050">
-        <bonus skill="55164" silver_coin_acquisition="45"/>
+    <vip tier="4" points-required="3500" points-depreciated="1050">
+        <bonus skill="55164" silver-coin-acquisition="45"/>
     </vip>
 
-    <vip tier="5" points_required="7000" points_depreciated="1750">
-        <bonus skill="55165" silver_coin_acquisition="50" rusty_coin_acquisition="35"/>
+    <vip tier="5" points-required="7000" points-depreciated="1750">
+        <bonus skill="55165" silver-coin-acquisition="50" rusty-coin-acquisition="35"/>
     </vip>
 
-    <vip tier="6" points_required="20000" points_depreciated="4000">
-        <bonus skill="55166" silver_coin_acquisition="60" rusty_coin_acquisition="45"/>
+    <vip tier="6" points-required="20000" points-depreciated="4000">
+        <bonus skill="55166" silver-coin-acquisition="60" rusty-coin-acquisition="45"/>
     </vip>
 
-    <vip tier="7" points_required="40000" points_depreciated="6000">
-        <bonus skill="55167" silver_coin_acquisition="70" rusty_coin_acquisition="55"/>
+    <vip tier="7" points-required="40000" points-depreciated="6000">
+        <bonus skill="55167" silver-coin-acquisition="70" rusty-coin-acquisition="55"/>
     </vip>
 </list>

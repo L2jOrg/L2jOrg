@@ -2,7 +2,6 @@ package org.l2j.gameserver.engine.mission;
 
 import org.l2j.gameserver.engine.scripting.ScriptEngineManager;
 import org.l2j.gameserver.handler.AbstractMissionHandler;
-import org.l2j.gameserver.model.dailymission.MissionDataHolder;
 
 import java.nio.file.Path;
 import java.util.HashMap;

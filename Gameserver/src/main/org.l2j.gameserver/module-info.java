@@ -47,7 +47,6 @@ module org.l2j.gameserver {
     exports org.l2j.gameserver.model.base;
     exports org.l2j.gameserver.datatables;
     exports org.l2j.gameserver.model.punishment;
-    exports org.l2j.gameserver.model.events.impl.character;
     exports org.l2j.gameserver.model.itemcontainer;
     exports org.l2j.gameserver.engine.geo;
     exports org.l2j.gameserver.model.events.impl.character.npc;
@@ -97,9 +96,6 @@ module org.l2j.gameserver {
     exports org.l2j.gameserver.settings;
     exports org.l2j.gameserver.data.database.data;
     exports org.l2j.gameserver.data.database.dao;
-    exports org.l2j.gameserver.model.dailymission;
-    exports org.l2j.gameserver.data.database.elemental;
-    exports org.l2j.gameserver.network.serverpackets.elementalspirits;
     exports org.l2j.gameserver.network.serverpackets.equipmentupgrade;
     exports org.l2j.gameserver.world;
     exports org.l2j.gameserver.network.serverpackets.html;
@@ -109,6 +105,8 @@ module org.l2j.gameserver {
     exports org.l2j.gameserver.data.database.announce;
     exports org.l2j.gameserver.data.xml.model;
     exports org.l2j.gameserver.engine.mission;
+    exports org.l2j.gameserver.engine.elemental.api;
+    exports org.l2j.gameserver.model.events.impl.character;
 
     uses org.l2j.gameserver.engine.scripting.IScriptingEngine;
     provides org.l2j.gameserver.engine.scripting.IScriptingEngine

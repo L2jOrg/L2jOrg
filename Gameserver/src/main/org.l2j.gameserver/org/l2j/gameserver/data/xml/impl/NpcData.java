@@ -2,8 +2,8 @@ package org.l2j.gameserver.data.xml.impl;
 
 import org.l2j.commons.util.CommonUtil;
 import org.l2j.gameserver.Config;
-import org.l2j.gameserver.data.database.elemental.ElementalType;
 import org.l2j.gameserver.datatables.ItemTable;
+import org.l2j.gameserver.engine.elemental.api.ElementalType;
 import org.l2j.gameserver.enums.AISkillScope;
 import org.l2j.gameserver.enums.DropType;
 import org.l2j.gameserver.enums.MpRewardAffectType;

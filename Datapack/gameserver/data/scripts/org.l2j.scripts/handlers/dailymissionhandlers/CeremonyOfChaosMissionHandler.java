@@ -1,8 +1,8 @@
 package handlers.dailymissionhandlers;
 
-import org.l2j.gameserver.model.dailymission.MissionStatus;
+import org.l2j.gameserver.engine.mission.MissionStatus;
 import org.l2j.gameserver.handler.AbstractMissionHandler;
-import org.l2j.gameserver.model.dailymission.MissionDataHolder;
+import org.l2j.gameserver.engine.mission.MissionDataHolder;
 import org.l2j.gameserver.data.database.data.MissionPlayerData;
 import org.l2j.gameserver.model.events.Containers;
 import org.l2j.gameserver.model.events.EventType;

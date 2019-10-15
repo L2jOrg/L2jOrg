@@ -1,7 +1,10 @@
-package org.l2j.gameserver.data.database.elemental;
+package org.l2j.gameserver.engine.elemental.api;
 
 import org.l2j.gameserver.data.database.dao.ElementalSpiritDAO;
 import org.l2j.gameserver.data.database.data.ElementalSpiritData;
+import org.l2j.gameserver.engine.elemental.AbsorbItem;
+import org.l2j.gameserver.engine.elemental.ElementalSpiritEngine;
+import org.l2j.gameserver.engine.elemental.ElementalSpiritTemplate;
 import org.l2j.gameserver.enums.UserInfoType;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.events.EventDispatcher;
@@ -30,14 +33,14 @@ public class ElementalSpirit {
 
     public ElementalSpirit(ElementalType type, Player owner) {
         data = new ElementalSpiritData(type.getId(), owner.getObjectId());
-        this.template = ElementalSpiritManager.getInstance().getSpirit(type.getId(), data.getStage());
+        this.template = ElementalSpiritEngine.getInstance().getSpirit(type.getId(), data.getStage());
         this.owner = owner;
     }
 
     public ElementalSpirit(ElementalSpiritData data, Player owner) {
         this.owner = owner;
         this.data = data;
-        this.template = ElementalSpiritManager.getInstance().getSpirit(data.getType(), data.getStage());
+        this.template = ElementalSpiritEngine.getInstance().getSpirit(data.getType(), data.getStage());
     }
 
     public void addExperience(long experience) {
@@ -83,7 +86,7 @@ public class ElementalSpirit {
     }
 
     public int getExtractAmount() {
-        return Math.round( (data.getExperience() - getExperienceToPreviousLevel()) / ElementalSpiritManager.FRAGMENT_XP_CONSUME);
+        return Math.round( (data.getExperience() - getExperienceToPreviousLevel()) / ElementalSpiritEngine.FRAGMENT_XP_CONSUME);
     }
 
     public void resetLevel() {
@@ -100,7 +103,7 @@ public class ElementalSpirit {
         data.increaseStage();
         data.setLevel((byte) 1);
         data.setExperience(0);
-        template = ElementalSpiritManager.getInstance().getSpirit(data.getType(), data.getStage());
+        template = ElementalSpiritEngine.getInstance().getSpirit(data.getType(), data.getStage());
         EventDispatcher.getInstance().notifyEventAsync(new OnElementalSpiritUpgrade(owner, this), owner);
 
     }
@@ -132,7 +135,7 @@ public class ElementalSpirit {
         return template.getMaxExperienceAtLevel(data.getLevel());
     }
 
-    public long getExperienceToPreviousLevel() {
+    private long getExperienceToPreviousLevel() {
         return data.getLevel() < 2 ? 0 : template.getMaxExperienceAtLevel((byte) (data.getLevel() -1));
     }
 

@@ -1,5 +1,8 @@
-package org.l2j.gameserver.data.database.elemental;
+package org.l2j.gameserver.engine.elemental;
 
+/**
+ * @author JoeAlisson
+ */
 public class AbsorbItem {
 
     private final int id;

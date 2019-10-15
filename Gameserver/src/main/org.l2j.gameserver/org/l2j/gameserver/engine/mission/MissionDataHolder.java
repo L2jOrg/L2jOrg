@@ -1,7 +1,6 @@
-package org.l2j.gameserver.model.dailymission;
+package org.l2j.gameserver.engine.mission;
 
 import org.l2j.gameserver.handler.AbstractMissionHandler;
-import org.l2j.gameserver.engine.mission.MissionEngine;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.base.ClassId;

@@ -150,7 +150,6 @@ public class AdminAnnouncements implements IAdminCommandHandler {
             return false;
         }
 
-
         var announceData = (AnnounceData) announce;
         var tokens = st.countTokens();
 

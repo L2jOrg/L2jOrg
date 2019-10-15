@@ -2,10 +2,10 @@ package org.l2j.gameserver.model.actor.templates;
 
 import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.Config;
-import org.l2j.gameserver.data.database.elemental.ElementalType;
 import org.l2j.gameserver.data.xml.impl.NpcData;
-import org.l2j.gameserver.data.xml.impl.VipData;
 import org.l2j.gameserver.datatables.ItemTable;
+import org.l2j.gameserver.engine.elemental.api.ElementalType;
+import org.l2j.gameserver.engine.vip.VipEngine;
 import org.l2j.gameserver.enums.*;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Creature;
@@ -618,8 +618,9 @@ public final class NpcTemplate extends CreatureTemplate implements IIdentifiable
 
 
         if(dropType == DropType.DROP && nonNull(killer.getActingPlayer())) {
-            float silverCoinChance = VipData.getInstance().getSilverCoinDropChance(killer.getActingPlayer());
-            float rustyCoinChance = VipData.getInstance().getRustyCoinDropChance(killer.getActingPlayer());
+            var vipEngine = VipEngine.getInstance();
+            float silverCoinChance = vipEngine.getSilverCoinDropChance(killer.getActingPlayer());
+            float rustyCoinChance = vipEngine.getRustyCoinDropChance(killer.getActingPlayer());
 
             if(silverCoinChance > 0 ) {
                 dropList.add(new DropHolder(dropType, CommonItem.SILVER_COIN, 2, 5, silverCoinChance));

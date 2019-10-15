@@ -1,7 +1,7 @@
 package org.l2j.gameserver.model.conditions;
 
+import org.l2j.gameserver.engine.mission.MissionDataHolder;
 import org.l2j.gameserver.model.actor.Creature;
-import org.l2j.gameserver.model.dailymission.MissionDataHolder;
 import org.l2j.gameserver.model.items.ItemTemplate;
 import org.l2j.gameserver.model.skills.Skill;
 

@@ -16,24 +16,24 @@
     <xs:complexType name="SpiritInfo">
         <xs:sequence>
             <xs:element name="level" type="LevelData" maxOccurs="unbounded"/>
-            <xs:element name="itemToEvolve" type="ItemInfo" minOccurs="0" maxOccurs="unbounded"/>
-            <xs:element name="absorbItem" type="AbsorbItemInfo" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element name="evolve-item" type="ItemInfo" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element name="absorb-item" type="AbsorbItemInfo" minOccurs="0" maxOccurs="unbounded"/>
         </xs:sequence>
         <xs:attribute name="name" type="xs:string" use="required"/>
         <xs:attribute name="type" type="xs:byte" use="required"/>
         <xs:attribute name="stage" type="xs:byte" use="required"/>
-        <xs:attribute name="npcId" type="xs:int" use="required"/>
-        <xs:attribute name="extractItem" type="xs:int" use="required"/>
-        <xs:attribute name="maxCharacteristics" type="xs:int" use="required"/>
+        <xs:attribute name="npc" type="xs:int" use="required"/>
+        <xs:attribute name="extract-item" type="xs:int" use="required"/>
+        <xs:attribute name="max-characteristics" type="xs:int" use="required"/>
     </xs:complexType>
 
     <xs:complexType name="LevelData">
         <xs:attribute name="id"  type="xs:int" use="required"/>
         <xs:attribute name="atk" type="xs:int" use="required"/>
         <xs:attribute name="def" type="xs:int" use="required"/>
-        <xs:attribute name="critRate" type="xs:int" use="required"/>
-        <xs:attribute name="critDam" type="xs:int" use="required"/>
-        <xs:attribute name="maxExp" type="xs:long" use="required"/>
+        <xs:attribute name="crit-rate" type="xs:int" use="required"/>
+        <xs:attribute name="crit-dam" type="xs:int" use="required"/>
+        <xs:attribute name="max-exp" type="xs:long" use="required"/>
     </xs:complexType>
 
     <xs:complexType name="AbsorbItemInfo">

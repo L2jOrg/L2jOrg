@@ -1,4 +1,4 @@
-package org.l2j.gameserver.data.database.elemental;
+package org.l2j.gameserver.engine.elemental;
 
 import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.util.GameXmlReader;
@@ -14,25 +14,23 @@ import java.util.Map;
 
 import static org.l2j.commons.configuration.Configurator.getSettings;
 
-public class ElementalSpiritManager extends GameXmlReader {
+/**
+ * @author JoeAlisson
+ */
+public final class ElementalSpiritEngine extends GameXmlReader {
 
-    private static final Logger LOGGER = LoggerFactory.getLogger(ElementalSpiritManager.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(ElementalSpiritEngine.class);
 
     public static final long EXTRACT_FEE = 1000000;
     public static final float FRAGMENT_XP_CONSUME = 50000.0f;
     public static final int TALENT_INIT_FEE = 50000;
 
-    private final Map<Byte, Map<Byte, ElementalSpiritTemplate>> spiritData;
+    private final Map<Byte, Map<Byte, ElementalSpiritTemplate>> spiritData = new HashMap<>(4);
 
-    private ElementalSpiritManager() {
-        spiritData = new HashMap<>(4);
+    private ElementalSpiritEngine() {
     }
 
-    public static void init() {
-        getInstance().load();
-    }
-
-    ElementalSpiritTemplate getSpirit(byte type, byte stage) {
+    public ElementalSpiritTemplate getSpirit(byte type, byte stage) {
         if(spiritData.containsKey(type)) {
            return spiritData.get(type).get(stage);
         }
@@ -59,9 +57,9 @@ public class ElementalSpiritManager extends GameXmlReader {
         var attributes = spiritNode.getAttributes();
         var type = parseByte(attributes, "type");
         var stage = parseByte(attributes, "stage");
-        var npcId = parseInteger(attributes, "npcId");
-        var extractItem = parseInteger(attributes, "extractItem");
-        var maxCharacteristics = parseInteger(attributes, "maxCharacteristics");
+        var npcId = parseInteger(attributes, "npc");
+        var extractItem = parseInteger(attributes, "extract-item");
+        var maxCharacteristics = parseInteger(attributes, "max-characteristics");
         ElementalSpiritTemplate template = new ElementalSpiritTemplate(type, stage, npcId, extractItem, maxCharacteristics);
         spiritData.computeIfAbsent(type, HashMap::new).put(stage, template);
 
@@ -70,20 +68,20 @@ public class ElementalSpiritManager extends GameXmlReader {
             var level = parseInteger(levelInfo, "id");
             var attack = parseInteger(levelInfo, "atk");
             var defense = parseInteger(levelInfo, "def");
-            var criticalRate = parseInteger(levelInfo, "critRate");
-            var criticalDamage = parseInteger(levelInfo, "critDam");
-            var maxExperience = parseLong(levelInfo, "maxExp");
+            var criticalRate = parseInteger(levelInfo, "crit-rate");
+            var criticalDamage = parseInteger(levelInfo, "crit-dam");
+            var maxExperience = parseLong(levelInfo, "max-exp");
             template.addLevelInfo(level, attack, defense, criticalRate, criticalDamage, maxExperience);
         });
 
-        forEach(spiritNode, "itemToEvolve", itemNode -> {
+        forEach(spiritNode, "evolve-item", itemNode -> {
             var itemInfo = itemNode.getAttributes();
             var itemId = parseInteger(itemInfo, "id");
             var count = parseInteger(itemInfo, "count");
             template.addItemToEvolve(itemId, count);
         });
 
-        forEach(spiritNode, "absorbItem", absorbItemNode -> {
+        forEach(spiritNode, "absorb-item", absorbItemNode -> {
             var absorbInfo = absorbItemNode.getAttributes();
             var itemId = parseInteger(absorbInfo, "id");
             var experience = parseInteger(absorbInfo, "experience");
@@ -92,11 +90,15 @@ public class ElementalSpiritManager extends GameXmlReader {
 
     }
 
-    public static ElementalSpiritManager getInstance() {
+    public static void init() {
+        getInstance().load();
+    }
+
+    public static ElementalSpiritEngine getInstance() {
         return Singleton.INSTANCE;
     }
 
     private static class Singleton {
-        private static final ElementalSpiritManager INSTANCE = new ElementalSpiritManager();
+        private static final ElementalSpiritEngine INSTANCE = new ElementalSpiritEngine();
     }
 }

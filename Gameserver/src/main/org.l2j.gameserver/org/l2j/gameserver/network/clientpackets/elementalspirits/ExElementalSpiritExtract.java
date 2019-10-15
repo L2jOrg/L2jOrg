@@ -1,8 +1,8 @@
 package org.l2j.gameserver.network.clientpackets.elementalspirits;
 
-import org.l2j.gameserver.data.database.elemental.ElementalSpirit;
-import org.l2j.gameserver.data.database.elemental.ElementalSpiritManager;
-import org.l2j.gameserver.data.database.elemental.ElementalType;
+import org.l2j.gameserver.engine.elemental.api.ElementalSpirit;
+import org.l2j.gameserver.engine.elemental.ElementalSpiritEngine;
+import org.l2j.gameserver.engine.elemental.api.ElementalType;
 import org.l2j.gameserver.enums.PrivateStoreType;
 import org.l2j.gameserver.enums.UserInfoType;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -60,7 +60,7 @@ public class ExElementalSpiritExtract extends ClientPacket {
             client.sendPacket(CANNOT_EVOLVE_ABSORB_EXTRACT_WHILE_USING_THE_PRIVATE_STORE_WORKSHOP);
         } else if(noMeetConditions = player.isInBattle()) {
             client.sendPacket(UNABLE_TO_EVOLVE_DURING_BATTLE);
-        } else if(noMeetConditions = !player.reduceAdena("Extract", ElementalSpiritManager.EXTRACT_FEE,  player, true)) {
+        } else if(noMeetConditions = !player.reduceAdena("Extract", ElementalSpiritEngine.EXTRACT_FEE,  player, true)) {
             client.sendPacket(NOT_ENOUGH_INGREDIENTS_TO_EXTRACT);
         }
         return !noMeetConditions;

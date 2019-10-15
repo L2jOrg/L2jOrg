@@ -2,7 +2,7 @@ package org.l2j.gameserver.network.serverpackets.dailymission;
 
 import org.l2j.gameserver.engine.mission.MissionData;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.dailymission.MissionDataHolder;
+import org.l2j.gameserver.engine.mission.MissionDataHolder;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
 import org.l2j.gameserver.network.serverpackets.ServerPacket;

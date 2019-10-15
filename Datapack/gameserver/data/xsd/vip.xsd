@@ -19,13 +19,13 @@
             <xs:element name="bonus" type="TierBonusInfo"/>
         </xs:sequence>
         <xs:attribute name="tier" type="xs:byte" use="required"/>
-        <xs:attribute name="points_required" type="xs:long" use="required"/>
-        <xs:attribute name="points_depreciated" type="xs:long" use="required"/>
+        <xs:attribute name="points-required" type="xs:long" use="required"/>
+        <xs:attribute name="points-depreciated" type="xs:long" use="required"/>
     </xs:complexType>
 
     <xs:complexType name="TierBonusInfo">
-        <xs:attribute name="silver_coin_acquisition" type="xs:float" default="0"/>
-        <xs:attribute name="rusty_coin_acquisition" type="xs:float" default="0"/>
+        <xs:attribute name="silver-coin-acquisition" type="xs:float" default="0"/>
+        <xs:attribute name="rusty-coin-acquisition" type="xs:float" default="0"/>
         <xs:attribute name="skill" type="xs:int" default="0"/>
     </xs:complexType>
 </xs:schema>

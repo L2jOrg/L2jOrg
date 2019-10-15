@@ -3,7 +3,7 @@ package org.l2j.gameserver.data.database.data;
 import org.l2j.commons.database.annotation.Column;
 import org.l2j.commons.database.annotation.Table;
 import org.l2j.commons.database.annotation.Transient;
-import org.l2j.gameserver.model.dailymission.MissionStatus;
+import org.l2j.gameserver.engine.mission.MissionStatus;
 
 /**
  * @author UnAfraid

@@ -1,8 +1,9 @@
-package org.l2j.gameserver.data.xml.impl;
+package org.l2j.gameserver.engine.vip;
 
 import io.github.joealisson.primitive.IntMap;
 import io.github.joealisson.primitive.HashIntMap;
-import org.l2j.gameserver.data.xml.model.VipInfo;
+import org.l2j.gameserver.data.xml.impl.PrimeShopData;
+import org.l2j.gameserver.data.xml.impl.SkillData;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.events.Containers;
 import org.l2j.gameserver.model.events.EventType;
@@ -24,14 +25,15 @@ import java.util.function.Consumer;
 import static java.util.Objects.nonNull;
 import static org.l2j.commons.configuration.Configurator.getSettings;
 
-public class VipData extends GameXmlReader {
+/**
+ * @author JoeAlisson
+ */
+public final class VipEngine extends GameXmlReader {
 
     private static final byte VIP_MAX_TIER = 7;
     private IntMap<VipInfo> vipTiers = new HashIntMap<>(8);
 
-    private VipData() {
-        load();
-
+    private VipEngine() {
         var listeners = Containers.Players();
 
         listeners.addListener(new ConsumerEventListener(listeners, EventType.ON_PLAYER_LOGIN, (Consumer<OnPlayerLogin>) (event) -> {
@@ -78,8 +80,8 @@ public class VipData extends GameXmlReader {
     private void parseVipTier(Node vipNode) {
         var attributes = vipNode.getAttributes();
         var level = parseByte(attributes, "tier");
-        var pointsRequired = parseLong(attributes, "points_required");
-        var pointsDepreciated = parseLong(attributes, "points_depreciated");
+        var pointsRequired = parseLong(attributes, "points-required");
+        var pointsDepreciated = parseLong(attributes, "points-depreciated");
 
         var vipInfo = new VipInfo(level, pointsRequired, pointsDepreciated);
         vipTiers.put(level, vipInfo);
@@ -87,8 +89,8 @@ public class VipData extends GameXmlReader {
         var bonusNode = vipNode.getFirstChild();
         if(nonNull(bonusNode)) {
             attributes = bonusNode.getAttributes();
-            vipInfo.setSilverCoinChance(parseFloat(attributes, "silver_coin_acquisition"));
-            vipInfo.setRustyCoinChance(parseFloat(attributes, "rusty_coin_acquisition"));
+            vipInfo.setSilverCoinChance(parseFloat(attributes, "silver-coin-acquisition"));
+            vipInfo.setRustyCoinChance(parseFloat(attributes, "rusty-coin-acquisition"));
             vipInfo.setSkill(parseInteger(attributes, "skill"));
         }
     }
@@ -100,7 +102,6 @@ public class VipData extends GameXmlReader {
     public byte getVipTier(long points) {
         return getVipInfo(points).getTier();
     }
-
 
     private VipInfo getVipInfo(Player player) {
         var points =  player.getVipPoints();
@@ -145,11 +146,15 @@ public class VipData extends GameXmlReader {
         return false;
     }
 
-    public static VipData getInstance() {
+    public static void init() {
+        getInstance().load();
+    }
+
+    public static VipEngine getInstance() {
         return Singleton.INSTANCE;
     }
 
     private static class Singleton {
-        private static final VipData INSTANCE = new VipData();
+        private static final VipEngine INSTANCE = new VipEngine();
     }
 }

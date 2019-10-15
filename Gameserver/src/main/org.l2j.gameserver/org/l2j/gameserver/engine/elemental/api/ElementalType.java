@@ -1,7 +1,10 @@
-package org.l2j.gameserver.data.database.elemental;
+package org.l2j.gameserver.engine.elemental.api;
 
 import org.l2j.gameserver.model.stats.Stats;
 
+/**
+ * @author JoeAlisson
+ */
 public enum ElementalType {
     NONE,
     FIRE,

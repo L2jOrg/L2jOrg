@@ -4,7 +4,7 @@ import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.sql.impl.ClanTable;
 import org.l2j.gameserver.engine.mission.MissionData;
-import org.l2j.gameserver.data.xml.impl.VipData;
+import org.l2j.gameserver.engine.vip.VipEngine;
 import org.l2j.gameserver.model.Clan;
 import org.l2j.gameserver.model.ClanMember;
 import org.l2j.gameserver.world.World;
@@ -227,7 +227,7 @@ public class DailyTaskManager extends AbstractEventManager<AbstractEvent<?>> {
                 return;
             }
 
-            VipData.getInstance().checkVipTierExpiration(player);
+            VipEngine.getInstance().checkVipTierExpiration(player);
         });
         LOGGER.info("VIP expiration time has been checked.");
     }

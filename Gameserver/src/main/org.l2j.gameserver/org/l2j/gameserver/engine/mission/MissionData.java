@@ -7,7 +7,6 @@ import org.l2j.gameserver.data.database.data.MissionPlayerData;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.base.ClassId;
-import org.l2j.gameserver.model.dailymission.MissionDataHolder;
 import org.l2j.gameserver.model.holders.ItemHolder;
 import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.util.GameXmlReader;

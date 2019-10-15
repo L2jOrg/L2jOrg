@@ -9,7 +9,7 @@ import org.l2j.commons.util.DeadLockDetector;
 import org.l2j.gameserver.cache.HtmCache;
 import org.l2j.gameserver.data.database.announce.manager.AnnouncementsManager;
 import org.l2j.gameserver.data.database.dao.CharacterDAO;
-import org.l2j.gameserver.data.database.elemental.ElementalSpiritManager;
+import org.l2j.gameserver.engine.elemental.ElementalSpiritEngine;
 import org.l2j.gameserver.data.sql.impl.*;
 import org.l2j.gameserver.data.xml.*;
 import org.l2j.gameserver.data.xml.impl.*;
@@ -17,6 +17,7 @@ import org.l2j.gameserver.datatables.ItemTable;
 import org.l2j.gameserver.datatables.ReportTable;
 import org.l2j.gameserver.datatables.SchemeBufferTable;
 import org.l2j.gameserver.engine.geo.GeoEngine;
+import org.l2j.gameserver.engine.vip.VipEngine;
 import org.l2j.gameserver.handler.ConditionHandler;
 import org.l2j.gameserver.engine.mission.MissionEngine;
 import org.l2j.gameserver.handler.EffectHandler;
@@ -85,8 +86,8 @@ public class GameServer {
         CombinationItemsManager.init();
         ClanRewardManager.init();
         MissionEngine.init();
-        VipData.getInstance();
-        ElementalSpiritManager.init();
+        VipEngine.init();
+        ElementalSpiritEngine.init();
         TeleportListData.init();
 
         printSection("Skills");

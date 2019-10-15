@@ -1,4 +1,4 @@
-package org.l2j.gameserver.data.database.elemental;
+package org.l2j.gameserver.engine.elemental;
 
 import io.github.joealisson.primitive.IntMap;
 import io.github.joealisson.primitive.HashIntMap;
@@ -10,7 +10,10 @@ import java.util.List;
 
 import static java.util.Objects.isNull;
 
-class ElementalSpiritTemplate {
+/**
+ * @author JoeAlisson
+ */
+public class ElementalSpiritTemplate {
 
     private final byte type;
     private final byte stage;
@@ -61,7 +64,7 @@ class ElementalSpiritTemplate {
         return npcId;
     }
 
-    long getMaxExperienceAtLevel(byte level) {
+    public long getMaxExperienceAtLevel(byte level) {
         return levels.get(level).maxExperience;
     }
 
@@ -69,27 +72,27 @@ class ElementalSpiritTemplate {
         return levels.size();
     }
 
-    int getAttackAtLevel(byte level) {
+    public int getAttackAtLevel(byte level) {
         return levels.get(level).attack;
     }
 
-    int getDefenseAtLevel(byte level) {
+    public int getDefenseAtLevel(byte level) {
         return levels.get(level).defense;
     }
 
-    int getCriticalRateAtLevel(byte level) {
+    public int getCriticalRateAtLevel(byte level) {
         return levels.get(level).criticalRate;
     }
 
-    int getCriticalDamageAtLevel(byte level) {
+    public int getCriticalDamageAtLevel(byte level) {
         return levels.get(level).criticalDamage;
     }
 
-    int getMaxCharacteristics() {
+    public int getMaxCharacteristics() {
         return maxCharacteristics;
     }
 
-    List<ItemHolder> getItemsToEvolve() {
+    public List<ItemHolder> getItemsToEvolve() {
         return isNull(itemsToEvolve) ? Collections.emptyList() : itemsToEvolve;
     }
 
@@ -100,14 +103,13 @@ class ElementalSpiritTemplate {
         absorbItems.add(new AbsorbItem(itemId, experience));
     }
 
-    List<AbsorbItem> getAbsorbItems() {
+   public List<AbsorbItem> getAbsorbItems() {
         return isNull(absorbItems) ? Collections.emptyList() : absorbItems;
     }
 
-    int getExtractItem() {
+    public int getExtractItem() {
         return extractItem;
     }
-
 
     private static class SpiritLevel {
         long maxExperience;

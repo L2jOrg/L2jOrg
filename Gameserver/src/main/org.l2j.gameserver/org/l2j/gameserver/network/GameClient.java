@@ -11,7 +11,7 @@ import org.l2j.gameserver.data.database.data.AccountData;
 import org.l2j.gameserver.data.sql.impl.ClanTable;
 import org.l2j.gameserver.data.sql.impl.PlayerNameTable;
 import org.l2j.gameserver.data.xml.SecondaryAuthManager;
-import org.l2j.gameserver.data.xml.impl.VipData;
+import org.l2j.gameserver.engine.vip.VipEngine;
 import org.l2j.gameserver.enums.CharacterDeleteFailType;
 import org.l2j.gameserver.instancemanager.CommissionManager;
 import org.l2j.gameserver.instancemanager.MailManager;
@@ -498,9 +498,9 @@ public final class GameClient extends Client<io.github.joealisson.mmocore.Connec
         if(points == 0) {
             return;
         }
-        var currentVipTier = VipData.getInstance().getVipTier(getVipPoints());
+        var currentVipTier = VipEngine.getInstance().getVipTier(getVipPoints());
         getAccountData().updateVipPoints(points);
-        var newTier = VipData.getInstance().getVipTier(getVipPoints());
+        var newTier = VipEngine.getInstance().getVipTier(getVipPoints());
         if(newTier != currentVipTier && nonNull(activeChar)) {
             activeChar.setVipTier(newTier);
             if(newTier > 0) {

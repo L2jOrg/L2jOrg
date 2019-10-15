@@ -1,6 +1,9 @@
-package org.l2j.gameserver.data.xml.model;
+package org.l2j.gameserver.engine.vip;
 
-public class VipInfo {
+/**
+ * @author JoeAlisson
+ */
+class VipInfo {
 
     private final byte tier;
     private final long pointsRequired;
@@ -9,45 +12,45 @@ public class VipInfo {
     private float rustyCoinChance;
     private int skill;
 
-    public VipInfo(byte tier, long pointsRequired, long pointsDepreciated) {
+    VipInfo(byte tier, long pointsRequired, long pointsDepreciated) {
         this.tier = tier;
         this.pointsRequired = pointsRequired;
         this.pointsDepreciated = pointsDepreciated;
     }
 
-    public byte getTier() {
+    byte getTier() {
         return tier;
     }
 
-    public void setSilverCoinChance(float silverCoinChance) {
+    void setSilverCoinChance(float silverCoinChance) {
         this.silverCoinChance = silverCoinChance;
     }
 
-    public float getSilverCoinChance() {
+    float getSilverCoinChance() {
         return silverCoinChance;
     }
 
-    public void setRustyCoinChance(float rustyCoinChance) {
+    void setRustyCoinChance(float rustyCoinChance) {
         this.rustyCoinChance = rustyCoinChance;
     }
 
-    public float getRustyCoinChance() {
+    float getRustyCoinChance() {
         return rustyCoinChance;
     }
 
-    public long getPointsRequired() {
+    long getPointsRequired() {
         return pointsRequired;
     }
 
-    public long getPointsDepreciated() {
+    long getPointsDepreciated() {
         return pointsDepreciated;
     }
 
-    public int getSkill() {
+    int getSkill() {
         return skill;
     }
 
-    public void setSkill(int skill) {
+    void setSkill(int skill) {
         this.skill = skill;
     }
 }

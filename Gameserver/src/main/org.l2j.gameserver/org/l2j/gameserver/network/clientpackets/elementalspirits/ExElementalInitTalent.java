@@ -1,7 +1,7 @@
 package org.l2j.gameserver.network.clientpackets.elementalspirits;
 
-import org.l2j.gameserver.data.database.elemental.ElementalSpiritManager;
-import org.l2j.gameserver.data.database.elemental.ElementalType;
+import org.l2j.gameserver.engine.elemental.ElementalSpiritEngine;
+import org.l2j.gameserver.engine.elemental.api.ElementalType;
 import org.l2j.gameserver.network.clientpackets.ClientPacket;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
 import org.l2j.gameserver.network.serverpackets.elementalspirits.ElementalSpiritSetTalent;
@@ -35,7 +35,7 @@ public class ExElementalInitTalent extends ClientPacket {
            return;
        }
 
-        if(player.reduceAdena("Talent", ElementalSpiritManager.TALENT_INIT_FEE, player, true)) {
+        if(player.reduceAdena("Talent", ElementalSpiritEngine.TALENT_INIT_FEE, player, true)) {
             spirit.resetCharacteristics();
             client.sendPacket(SystemMessage.getSystemMessage(RESET_THE_SELECTED_SPIRIT_S_CHARACTERISTICS_SUCCESSFULLY));
             client.sendPacket(new ElementalSpiritSetTalent(type, true));
