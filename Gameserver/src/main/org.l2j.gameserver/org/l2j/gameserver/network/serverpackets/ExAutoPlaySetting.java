@@ -1,5 +1,6 @@
 package org.l2j.gameserver.network.serverpackets;
 
+import org.l2j.gameserver.engine.autoplay.AutoPlaySetting;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
 
@@ -8,33 +9,21 @@ import org.l2j.gameserver.network.ServerPacketId;
  */
 public class ExAutoPlaySetting extends ServerPacket {
 
-    private final short options;
-    private final boolean active;
-    private final boolean pickUp;
-    private final short nextTargetMode;
-    private final boolean isNearTarget;
-    private final int usableHpPotionPercent;
-    private final boolean mannerMode;
+    private final AutoPlaySetting setting;
 
-    public ExAutoPlaySetting(short options, boolean active, boolean pickUp, short nextTargetMode, boolean isNearTarget, int usableHpPotionPercent, boolean mannerMode) {
-        this.options = options;
-        this.active = active;
-        this.pickUp = pickUp;
-        this.nextTargetMode = nextTargetMode;
-        this.isNearTarget = isNearTarget;
-        this.usableHpPotionPercent = usableHpPotionPercent;
-        this.mannerMode = mannerMode;
+    public ExAutoPlaySetting(AutoPlaySetting setting) {
+        this.setting = setting;
     }
 
     @Override
     protected void writeImpl(GameClient client) {
         writeId(ServerPacketId.EX_AUTOPLAY_SETTING);
-        writeShort(options);
-        writeByte(active);
-        writeByte(pickUp);
-        writeShort(nextTargetMode);
-        writeByte(isNearTarget);
-        writeInt(usableHpPotionPercent);
-        writeByte(mannerMode);
+        writeShort(setting.getOptions());
+        writeByte(setting.isActive());
+        writeByte(setting.isPickUp());
+        writeShort(setting.getNextTargetMode());
+        writeByte(setting.isNearTarget());
+        writeInt(setting.getUsableHpPotionPercent());
+        writeByte(setting.isMannerMode());
     }
 }

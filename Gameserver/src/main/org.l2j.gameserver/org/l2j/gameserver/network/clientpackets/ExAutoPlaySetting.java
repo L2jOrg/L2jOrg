@@ -1,8 +1,7 @@
 package org.l2j.gameserver.network.clientpackets;
 
-import org.l2j.gameserver.model.actor.instance.Monster;
-import org.l2j.gameserver.network.serverpackets.ExAutoPlayDoMacro;
-import org.l2j.gameserver.world.World;
+import org.l2j.gameserver.engine.autoplay.AutoPlayEngine;
+import org.l2j.gameserver.engine.autoplay.AutoPlaySetting;
 
 /**
  * @author JoeAlisson
@@ -30,11 +29,12 @@ public class ExAutoPlaySetting extends ClientPacket {
 
     @Override
     protected void runImpl() {
-        var range = isNearTarget ? 600 : 1400;
-        var player = client.getPlayer();
-        var monster = World.getInstance().findAnyVisibleObject(player, Monster.class, range, false, m -> m.isAutoAttackable(player));
-        player.setTarget(monster);
-        client.sendPacket(new org.l2j.gameserver.network.serverpackets.ExAutoPlaySetting(options, active, pickUp, nextTargetMode, isNearTarget, usableHpPotionPercent, mannerMode));
-        client.sendPacket(new ExAutoPlayDoMacro());
+        var setting = new AutoPlaySetting(options, active, pickUp, nextTargetMode, isNearTarget, usableHpPotionPercent, mannerMode);
+        if(active) {
+            AutoPlayEngine.getInstance().startAutoPlay(client.getPlayer(), setting);
+        } else {
+            AutoPlayEngine.getInstance().stopAutoPlay(client.getPlayer());
+        }
+        client.sendPacket(new org.l2j.gameserver.network.serverpackets.ExAutoPlaySetting(setting));
     }
 }
