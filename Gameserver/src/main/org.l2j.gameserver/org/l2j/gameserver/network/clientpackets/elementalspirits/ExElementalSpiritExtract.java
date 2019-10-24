@@ -53,15 +53,15 @@ public class ExElementalSpiritExtract extends ClientPacket {
         var noMeetConditions = false;
 
         if(noMeetConditions = spirit.getExtractAmount() < 1) {
-            client.sendPacket(NOT_ENOUGH_ATTRIBUTE_XP_FOR_EXTRACTION);
+            client.sendPacket(YOU_DO_NOT_HAVE_ENOUGH_SKILL_XP_TO_EXTRACT);
         } else if(noMeetConditions = !player.getInventory().validateCapacity(1)) {
-            client.sendPacket(UNABLE_TO_EXTRACT_BECAUSE_INVENTORY_IS_FULL);
+            client.sendPacket(INVENTORY_IS_FULL_CANNOT_EXTRACT);
         } else if(noMeetConditions = player.getPrivateStoreType() != PrivateStoreType.NONE) {
             client.sendPacket(CANNOT_EVOLVE_ABSORB_EXTRACT_WHILE_USING_THE_PRIVATE_STORE_WORKSHOP);
         } else if(noMeetConditions = player.isInBattle()) {
-            client.sendPacket(UNABLE_TO_EVOLVE_DURING_BATTLE);
+            client.sendPacket(CANNOT_EVOLVE_DURING_BATTLE);
         } else if(noMeetConditions = !player.reduceAdena("Extract", ElementalSpiritEngine.EXTRACT_FEE,  player, true)) {
-            client.sendPacket(NOT_ENOUGH_INGREDIENTS_TO_EXTRACT);
+            client.sendPacket(YOU_DO_NOT_HAVE_THE_MATERIALS_REQUIRED_TO_EXTRACT);
         }
         return !noMeetConditions;
     }

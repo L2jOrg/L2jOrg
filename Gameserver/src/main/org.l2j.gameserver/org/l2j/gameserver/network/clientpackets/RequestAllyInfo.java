@@ -73,10 +73,10 @@ public final class RequestAllyInfo extends ClientPacket {
                 sm.addInt(aci.getTotal());
                 client.sendPacket(sm);
 
-                sm = SystemMessage.getSystemMessage(SystemMessageId.EMPTY_4);
+                sm = SystemMessage.getSystemMessage(SystemMessageId.SEPARATOR_DASHES);
             }
 
-            sm = SystemMessage.getSystemMessage(SystemMessageId.EMPTY_5);
+            sm = SystemMessage.getSystemMessage(SystemMessageId.SEPARATOR_EQUALS);
             client.sendPacket(sm);
         } else {
             client.sendPacket(SystemMessageId.YOU_ARE_NOT_CURRENTLY_ALLIED_WITH_ANY_CLANS);

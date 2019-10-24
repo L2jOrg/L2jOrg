@@ -205,7 +205,7 @@ public class CursedWeapon implements INamable {
             // _player.getInventory().getItemByItemId(_itemId).dropMe(_player, _player.getX(), _player.getY(), _player.getZ());
         }
         _isDropped = true;
-        final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S2_WAS_DROPPED_IN_THE_S1_REGION);
+        final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S2_HAS_DROPPED_IN_S1_THE_QUANTITY_OF_ADENA_STACKED_IN_THE_S2_TREASURE_CHEST_IS_S3_IN_FIXED_QUANTITY_AND_S4_IN_VARIABLE_QUANTITY_THE_OWNER_AT_23_59_WILL_FINALLY_OWN_THIS_ADENA);
         if (player != null) {
             sm.addZoneName(player.getX(), player.getY(), player.getZ()); // Region Name
         } else if (_player != null) {
@@ -214,6 +214,8 @@ public class CursedWeapon implements INamable {
             sm.addZoneName(killer.getX(), killer.getY(), killer.getZ()); // Region Name
         }
         sm.addItemName(_itemId);
+        sm.addInt(0); // TODO adena fix count
+        sm.addInt(0); // adena variable count
         CursedWeaponsManager.announce(sm); // in the Hot Spring region
     }
 
@@ -221,9 +223,11 @@ public class CursedWeapon implements INamable {
         doTransform();
         giveSkill();
 
-        final SystemMessage msg = SystemMessage.getSystemMessage(SystemMessageId.S2_S_OWNER_HAS_LOGGED_INTO_THE_S1_REGION);
+        final SystemMessage msg = SystemMessage.getSystemMessage(SystemMessageId.S2_S_OWNER_HAS_LOGGED_INTO_S1_THE_QUANTITY_OF_ADENA_STACKED_IN_THE_S2_TREASURE_CHEST_IS_S3_IN_FIXED_QUANTITY_AND_S4_IN_VARIABLE_QUANTITY_THE_OWNER_AT_23_59_WILL_FINALLY_OWN_THIS_ADENA);
         msg.addZoneName(_player.getX(), _player.getY(), _player.getZ());
         msg.addItemName(_player.getCursedWeaponEquippedId());
+        msg.addInt(0); // adena fix count
+        msg.addInt(0); // adena variable count
         CursedWeaponsManager.announce(msg);
 
         final CursedWeapon cw = CursedWeaponsManager.getInstance().getCursedWeapon(_player.getCursedWeaponEquippedId());
@@ -361,9 +365,11 @@ public class CursedWeapon implements INamable {
 
         _player.broadcastPacket(atk);
 
-        sm = SystemMessage.getSystemMessage(SystemMessageId.THE_OWNER_OF_S2_HAS_APPEARED_IN_THE_S1_REGION);
+        sm = SystemMessage.getSystemMessage(SystemMessageId.S2_S_OWNER_HAS_APPEARED_IN_S1_THE_QUANTITY_OF_ADENA_STACKED_IN_THE_S2_TREASURE_CHEST_IS_S3_IN_FIXED_QUANTITY_AND_S4_IN_VARIABLE_QUANTITY_THE_OWNER_AT_23_59_WILL_FINALLY_OWN_THIS_ADENA);
         sm.addZoneName(_player.getX(), _player.getY(), _player.getZ()); // Region Name
         sm.addItemName(_item);
+        sm.addInt(0); // TODO adena count
+        sm.addInt(0); // adena variable count
         CursedWeaponsManager.announce(sm);
     }
 

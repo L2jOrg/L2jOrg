@@ -46,7 +46,7 @@ public final class RequestPetGetItem extends ClientPacket {
         }
 
         if (pet.isUncontrollable()) {
-            client.sendPacket(SystemMessageId.WHEN_YOUR_PET_S_HUNGER_GAUGE_IS_AT_0_YOU_CANNOT_USE_YOUR_PET);
+            client.sendPacket(SystemMessageId.YOU_CANNOT_USE_YOUR_PET_WHEN_ITS_HUNGER_GAUGE_IS_AT_0);
             return;
         }
 

@@ -144,14 +144,14 @@ public final class RequestPreviewItem extends ClientPacket {
 
         // Charge buyer and add tax to castle treasury if not owned by npc clan because a Try On is not Free
         if ((totalPrice < 0) || !activeChar.reduceAdena("Wear", totalPrice, activeChar.getLastFolkNPC(), true)) {
-            activeChar.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ADENA);
+            activeChar.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ADENA_POPUP);
             return;
         }
 
         if (!itemList.isEmpty()) {
             activeChar.sendPacket(new ShopPreviewInfo(itemList));
             // Schedule task
-            ThreadPoolManager.getInstance().schedule(new RemoveWearItemsTask(activeChar), Config.WEAR_DELAY * 1000);
+            ThreadPoolManager.schedule(new RemoveWearItemsTask(activeChar), Config.WEAR_DELAY * 1000);
         }
     }
 
@@ -165,7 +165,7 @@ public final class RequestPreviewItem extends ClientPacket {
         @Override
         public void run() {
             try {
-                activeChar.sendPacket(SystemMessageId.YOU_ARE_NO_LONGER_TRYING_ON_EQUIPMENT_2);
+                activeChar.sendPacket(SystemMessageId.YOU_ARE_NO_LONGER_TRYING_ON_EQUIPMENT);
                 activeChar.sendPacket(new ExUserInfoEquipSlot(activeChar));
             } catch (Exception e) {
                 LOGGER.error(e.getLocalizedMessage(), e);

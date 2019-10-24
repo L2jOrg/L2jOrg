@@ -269,7 +269,7 @@ public class CeremonyOfChaosManager extends AbstractEventManager<CeremonyOfChaos
             sm = SystemMessageId.YOU_CANNOT_REGISTER_FOR_THE_WAITING_LIST_WHILE_PARTICIPATING_IN_THE_BLOCK_CHECKER_COLISEUM_OLYMPIAD_KRATEI_S_CUBE_CEREMONY_OF_CHAOS;
             canRegister = false;
         } else if (player.isInInstance()) {
-            sm = SystemMessageId.YOU_MAY_NOT_REGISTER_WHILE_USING_THE_INSTANCE_ZONE;
+            sm = SystemMessageId.YOU_MAY_NOT_REGISTER_WHILE_USING_THE_INSTANT_ZONE;
             canRegister = false;
         } else if (player.isInSiege()) {
             sm = SystemMessageId.YOU_CANNOT_REGISTER_FOR_THE_WAITING_LIST_ON_THE_BATTLEFIELD_CASTLE_SIEGE_FORTRESS_SIEGE;

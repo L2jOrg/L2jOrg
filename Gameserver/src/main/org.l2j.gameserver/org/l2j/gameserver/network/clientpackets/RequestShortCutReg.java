@@ -5,35 +5,35 @@ import org.l2j.gameserver.model.Shortcut;
 import org.l2j.gameserver.network.serverpackets.ShortCutRegister;
 
 public final class RequestShortCutReg extends ClientPacket {
-    private ShortcutType _type;
-    private int _id;
-    private int _slot;
-    private int _page;
-    private int _lvl;
-    private int _subLvl;
-    private int _characterType; // 1 - player, 2 - pet
+    private ShortcutType type;
+    private int id;
+    private int slot;
+    private int page;
+    private int lvl;
+    private int subLvl;
+    private int characterType; // 1 - player, 2 - pet
 
     @Override
     public void readImpl() {
         final int typeId = readInt();
-        _type = ShortcutType.values()[(typeId < 1) || (typeId > 6) ? 0 : typeId];
+        type = ShortcutType.values()[(typeId < 1) || (typeId > 6) ? 0 : typeId];
         final int slot = readInt();
-        _slot = slot % 12;
-        _page = slot / 12;
+        this.slot = slot % 12;
+        page = slot / 12;
         readByte(); // unk 0
-        _id = readInt();
-        _lvl = readShort();
-        _subLvl = readShort(); // Sublevel
-        _characterType = readInt();
+        id = readInt();
+        lvl = readShort();
+        subLvl = readShort(); // Sublevel
+        characterType = readInt();
     }
 
     @Override
     public void runImpl() {
-        if ((client.getPlayer() == null) || (_page > 19) || (_page < 0)) {
+        if ((client.getPlayer() == null) || (page > 23) || (page < 0)) {
             return;
         }
 
-        final Shortcut sc = new Shortcut(_slot, _page, _type, _id, _lvl, _subLvl, _characterType);
+        final Shortcut sc = new Shortcut(slot, page, type, id, lvl, subLvl, characterType);
         client.getPlayer().registerShortCut(sc);
         client.sendPacket(new ShortCutRegister(sc));
     }

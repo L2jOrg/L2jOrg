@@ -614,7 +614,7 @@ public class TradeList {
         }
 
         if (totalPrice > playerInventory.getAdena()) {
-            player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ADENA);
+            player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ADENA_POPUP);
             return 1;
         }
 
@@ -634,7 +634,7 @@ public class TradeList {
 
         final Item adenaItem = playerInventory.getAdenaInstance();
         if (!playerInventory.reduceAdena("PrivateStore", totalPrice, player, _owner)) {
-            player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ADENA);
+            player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ADENA_POPUP);
             return 1;
         }
         playerIU.addItem(adenaItem);

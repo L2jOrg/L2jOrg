@@ -40,7 +40,7 @@ public final class RequestHennaRemove extends ClientPacket {
                 if (activeChar.getAdena() >= henna.getCancelFee()) {
                     activeChar.removeHenna(i);
                 } else {
-                    activeChar.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ADENA);
+                    activeChar.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ADENA_POPUP);
                     client.sendPacket(ActionFailed.STATIC_PACKET);
                 }
                 found = true;

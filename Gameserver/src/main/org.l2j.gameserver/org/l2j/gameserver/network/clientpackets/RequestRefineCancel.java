@@ -57,7 +57,7 @@ public final class RequestRefineCancel extends ClientPacket {
         // try to reduce the players adena
         if (!activeChar.reduceAdena("RequestRefineCancel", price, targetItem, true)) {
             client.sendPacket(ExVariationCancelResult.STATIC_PACKET_FAILURE);
-            client.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ADENA);
+            client.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ADENA_POPUP);
             return;
         }
 

@@ -137,7 +137,7 @@ public class RequestProcureCropList extends ClientPacket {
                 sm.addLong(i.getCount());
                 player.sendPacket(sm);
 
-                sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ADENA);
+                sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ADENA_POPUP);
                 player.sendPacket(sm);
                 continue;
             }

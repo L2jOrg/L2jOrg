@@ -19,8 +19,7 @@ import java.util.List;
 
 import static java.lang.Math.max;
 import static org.l2j.commons.database.DatabaseAccess.getDAO;
-import static org.l2j.gameserver.network.SystemMessageId.OBTAINED_S2_ATTRIBUTE_XP_OF_S1;
-import static org.l2j.gameserver.network.SystemMessageId.S1_ATTRIBUTE_SPIRIT_BECAME_LEVEL_S2;
+import static org.l2j.gameserver.network.SystemMessageId.*;
 
 /**
  * @author JoeAlisson
@@ -45,10 +44,10 @@ public class ElementalSpirit {
 
     public void addExperience(long experience) {
         data.addExperience(experience);
-        owner.sendPacket(SystemMessage.getSystemMessage(OBTAINED_S2_ATTRIBUTE_XP_OF_S1).addInt((int) experience).addElementalSpirit(getType()));
+        owner.sendPacket(SystemMessage.getSystemMessage(YOU_HAVE_ACQUIRED_S1S_S2_SKILL_XP).addInt((int) experience).addElementalSpirit(getType()));
         if(data.getExperience() > getExperienceToNextLevel()) {
             levelUp();
-            owner.sendPacket(SystemMessage.getSystemMessage(S1_ATTRIBUTE_SPIRIT_BECAME_LEVEL_S2).addElementalSpirit(getType()).addByte(data.getLevel()));
+            owner.sendPacket(SystemMessage.getSystemMessage(S1_ATTACK_SPIRITS_HAVE_REACHED_LEVEL_S2).addElementalSpirit(getType()).addByte(data.getLevel()));
             owner.sendPacket(new ElementalSpiritInfo(owner.getActiveElementalSpiritType(), (byte) 0));
             var userInfo = new UserInfo(owner);
             userInfo.addComponentType(UserInfoType.SPIRITS);

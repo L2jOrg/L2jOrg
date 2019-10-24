@@ -59,7 +59,7 @@ public final class ChatWhisper implements IChatHandler {
 			}
 			var levelRequired = getSettings(GeneralSettings.class).whisperChatLevel();
 			if ((activeChar.getLevel() < levelRequired) && !activeChar.getWhisperers().contains(receiver.getObjectId()) && !activeChar.canOverrideCond(PcCondOverride.CHAT_CONDITIONS)) {
-				activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.NON_PREMIUM_USERS_LV_S1_OR_LOWER_CAN_RESPOND_TO_A_WHISPER_BUT_CANNOT_INITIATE_IT).addInt(levelRequired));
+				activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.USERS_LV_S1_OR_LOWER_CAN_RESPOND_TO_A_WHISPER_BUT_CANNOT_INITIATE_IT).addInt(levelRequired));
 				return;
 			}
 			if (!BlockList.isBlocked(receiver, activeChar)) {

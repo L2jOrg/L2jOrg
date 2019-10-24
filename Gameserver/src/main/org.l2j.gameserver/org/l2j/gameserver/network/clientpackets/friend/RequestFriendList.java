@@ -25,7 +25,7 @@ public final class RequestFriendList extends ClientPacket {
 
         player.sendPacket(SystemMessageId.FRIENDS_LIST);
         player.sendPacket(player.getFriendList().stream().mapToObj(this::statusMessage).toArray(SystemMessage[]::new));
-        player.sendPacket(SystemMessageId.END_LIST);
+        player.sendPacket(SystemMessageId.SEPARATOR_EQUALS);
     }
 
     private SystemMessage statusMessage(int friendId) {

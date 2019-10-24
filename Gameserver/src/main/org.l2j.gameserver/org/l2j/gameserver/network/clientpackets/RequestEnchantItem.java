@@ -106,7 +106,7 @@ public final class RequestEnchantItem extends ClientPacket {
 
         // attempting to destroy scroll
         if (activeChar.getInventory().destroyItem("Enchant", scroll.getObjectId(), 1, activeChar, item) == null) {
-            client.sendPacket(SystemMessageId.INCORRECT_ITEM_COUNT_2);
+            client.sendPacket(SystemMessageId.INCORRECT_ITEM_COUNT);
             GameUtils.handleIllegalPlayerAction(activeChar, "Player " + activeChar.getName() + " tried to enchant with a scroll he doesn't have", Config.DEFAULT_PUNISH);
             activeChar.removeRequest(request.getClass());
             client.sendPacket(new EnchantResult(EnchantResult.ERROR, 0, 0));
@@ -116,7 +116,7 @@ public final class RequestEnchantItem extends ClientPacket {
         // attempting to destroy support if exist
         if (support != null) {
             if (activeChar.getInventory().destroyItem("Enchant", support.getObjectId(), 1, activeChar, item) == null) {
-                client.sendPacket(SystemMessageId.INCORRECT_ITEM_COUNT_2);
+                client.sendPacket(SystemMessageId.INCORRECT_ITEM_COUNT);
                 GameUtils.handleIllegalPlayerAction(activeChar, "Player " + activeChar.getName() + " tried to enchant with a support item he doesn't have", Config.DEFAULT_PUNISH);
                 activeChar.removeRequest(request.getClass());
                 client.sendPacket(new EnchantResult(EnchantResult.ERROR, 0, 0));
@@ -228,7 +228,7 @@ public final class RequestEnchantItem extends ClientPacket {
                         // unequip item on enchant failure to avoid item skills stack
                         if (item.isEquipped()) {
                             if (item.getEnchantLevel() > 0) {
-                                final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_S2_HAS_BEEN_UNEQUIPPED);
+                                final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.THE_EQUIPMENT_S1_S2_HAS_BEEN_REMOVED);
                                 sm.addInt(item.getEnchantLevel());
                                 sm.addItemName(item);
                                 client.sendPacket(sm);

@@ -96,7 +96,7 @@ public class TeleportToPlayer extends AbstractEffect
 			
 			if (target.inObserverMode() || OlympiadManager.getInstance().isRegisteredInComp(target))
 			{
-				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_IN_AN_AREA_WHICH_BLOCKS_SUMMONING_OR_TELEPORTING_2);
+				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_IN_AN_AREA_WHICH_BLOCKS_SUMMONING_OR_TELEPORTING);
 				sm.addString(target.getName());
 				effector.sendPacket(sm);
 				return;

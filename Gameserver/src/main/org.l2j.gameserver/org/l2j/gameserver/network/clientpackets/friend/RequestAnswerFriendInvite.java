@@ -76,7 +76,7 @@ public final class RequestAnswerFriendInvite extends ClientPacket {
             requestor.getFriendList().add(player.getObjectId());
 
             // has joined as friend.
-            msg = SystemMessage.getSystemMessage(SystemMessageId.S1_HAS_BEEN_ADDED_TO_YOUR_FRIENDS_LIST_2);
+            msg = SystemMessage.getSystemMessage(SystemMessageId.S1_HAS_BEEN_ADDED_TO_YOUR_FRIENDS_LIST);
             msg.addString(requestor.getName());
             player.sendPacket(msg);
             player.getFriendList().add(requestor.getObjectId());

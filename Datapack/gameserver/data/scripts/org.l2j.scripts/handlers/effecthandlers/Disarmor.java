@@ -83,7 +83,7 @@ public final class Disarmor extends AbstractEffect
 			SystemMessage sm = null;
 			if (unequiped[0].getEnchantLevel() > 0)
 			{
-				sm = SystemMessage.getSystemMessage(SystemMessageId.S1_S2_HAS_BEEN_UNEQUIPPED);
+				sm = SystemMessage.getSystemMessage(SystemMessageId.THE_EQUIPMENT_S1_S2_HAS_BEEN_REMOVED);
 				sm.addInt(unequiped[0].getEnchantLevel());
 				sm.addItemName(unequiped[0]);
 			}

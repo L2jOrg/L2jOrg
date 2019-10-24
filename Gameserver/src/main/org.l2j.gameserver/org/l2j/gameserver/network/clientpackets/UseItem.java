@@ -105,7 +105,7 @@ public final class UseItem extends ClientPacket {
         _itemId = item.getId();
         if (player.isFishing() && ((_itemId < 6535) || (_itemId > 6540))) {
             // You cannot do anything else while fishing
-            player.sendPacket(SystemMessageId.YOU_CANNOT_DO_THAT_WHILE_FISHING_3);
+            player.sendPacket(SystemMessageId.YOU_CANNOT_DO_THAT_WHILE_FISHING_SCREEN);
             return;
         }
 
@@ -188,7 +188,7 @@ public final class UseItem extends ClientPacket {
                 }
             } else if (item.getItem().getBodyPart() == ItemTemplate.SLOT_ARTIFACT) {
                 if (!item.isEquipped() && (player.getInventory().getArtifactSlots() == 0)) {
-                    final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.UNABLE_TO_EQUIP_S1_BECAUSE_YOU_DO_NOT_HAVE_A_BOOK_OF_ARTIFACTS);
+                    final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.NO_ARTIFACT_BOOK_EQUIPPED_YOU_CANNOT_EQUIP_S1);
                     sm.addItemName(item);
                     player.sendPacket(sm);
                     return;

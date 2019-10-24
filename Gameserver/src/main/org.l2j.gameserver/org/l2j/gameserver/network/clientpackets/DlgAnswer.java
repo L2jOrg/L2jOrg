@@ -14,6 +14,7 @@ import org.l2j.gameserver.network.SystemMessageId;
  * @author Dezmond_snz
  */
 public final class DlgAnswer extends ClientPacket {
+    public static final int ANY_STRING = 1987;
     private int _messageId;
     private int _answer;
     private int _requesterId;
@@ -37,7 +38,7 @@ public final class DlgAnswer extends ClientPacket {
             return;
         }
 
-        if (_messageId == SystemMessageId.S1_3.getId()) {
+        if (_messageId == ANY_STRING) {
             if (activeChar.removeAction(PlayerAction.ADMIN_COMMAND)) {
                 final String cmd = activeChar.getAdminConfirmCmd();
                 activeChar.setAdminConfirmCmd(null);

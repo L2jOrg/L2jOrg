@@ -120,7 +120,7 @@ public class RequestPackageSend extends ClientPacket {
 
         // Check if enough adena and charge the fee
         if ((currentAdena < fee) || !player.reduceAdena(warehouse.getName(), fee, manager, false)) {
-            player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ADENA);
+            player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ADENA_POPUP);
             warehouse.deleteMe();
             return;
         }

@@ -382,7 +382,7 @@ public final class RequestAcquireSkill extends ClientPacket {
      */
     private void giveSkill(Player player, Npc trainer, Skill skill, boolean store) {
         // Send message.
-        final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_LEARNED_S1);
+        final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.LEARNED_S1_LV_S2);
         sm.addSkillName(skill);
         player.sendPacket(sm);
 

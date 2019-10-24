@@ -136,7 +136,7 @@ public class OlympiadManager {
 
         final int charId = player.getObjectId();
         if (Olympiad.getInstance().getRemainingWeeklyMatches(charId) < 1) {
-            player.sendPacket(SystemMessageId.THE_MAXIMUM_MATCHES_YOU_CAN_PARTICIPATE_IN_1_WEEK_IS_30);
+            player.sendPacket(SystemMessageId.YOU_CAN_PARTICIPATE_IN_UP_TO_30_MATCHES_PER_WEEK);
             return false;
         }
 
@@ -174,7 +174,7 @@ public class OlympiadManager {
                 }
 
                 _nonClassBasedRegisters.add(charId);
-                player.sendPacket(SystemMessageId.YOU_ARE_CURRENTLY_REGISTERED_FOR_A_1V1_CLASS_IRRELEVANT_MATCH);
+                player.sendPacket(SystemMessageId.YOU_VE_BEEN_REGISTERED_IN_THE_WAITING_LIST_OF_ALL_CLASS_BATTLE);
                 break;
             }
         }
@@ -189,7 +189,7 @@ public class OlympiadManager {
 
         if ((!noble.isInCategory(CategoryType.THIRD_CLASS_GROUP) && !noble.isInCategory(CategoryType.FOURTH_CLASS_GROUP)) || (noble.getLevel() < 55)) // Classic noble equivalent check.
         {
-            final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.CHARACTER_C1_DOES_NOT_MEET_THE_CONDITIONS_ONLY_CHARACTERS_WHO_HAVE_CHANGED_TWO_OR_MORE_CLASSES_CAN_PARTICIPATE_IN_OLYMPIAD);
+            final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_DOES_NOT_MEET_THE_PARTICIPATION_REQUIREMENTS_ONLY_CHARACTERS_THAT_COMPLETED_THE_2ND_CLASS_TRANSFER_CAN_PARTICIPATE_IN_THE_OLYMPIAD);
             sm.addString(noble.getName());
             noble.sendPacket(sm);
             return false;

@@ -79,7 +79,7 @@ public final class CallPc extends AbstractEffect
 			}
 			
 			target.addScript(new SummonRequestHolder(activeChar, skill));
-			final ConfirmDlg confirm = new ConfirmDlg(SystemMessageId.C1_WISHES_TO_SUMMON_YOU_FROM_S2_DO_YOU_ACCEPT.getId());
+			final ConfirmDlg confirm = new ConfirmDlg(SystemMessageId.C1_WISHES_TO_SUMMON_YOU_FROM_S2_DO_YOU_ACCEPT);
 			confirm.addString(activeChar.getName());
 			confirm.addZoneName(activeChar.getX(), activeChar.getY(), activeChar.getZ());
 			confirm.addTime(30000);
@@ -131,15 +131,7 @@ public final class CallPc extends AbstractEffect
 			return false;
 		}
 		
-		if (target.inObserverMode() || OlympiadManager.getInstance().isRegisteredInComp(target))
-		{
-			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_IN_AN_AREA_WHICH_BLOCKS_SUMMONING_OR_TELEPORTING_2);
-			sm.addString(target.getName());
-			activeChar.sendPacket(sm);
-			return false;
-		}
-		
-		if (target.isInsideZone(ZoneType.NO_SUMMON_FRIEND) || target.isInsideZone(ZoneType.JAIL))
+		if (target.inObserverMode() || OlympiadManager.getInstance().isRegisteredInComp(target) || target.isInsideZone(ZoneType.NO_SUMMON_FRIEND) || target.isInsideZone(ZoneType.JAIL))
 		{
 			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_IN_AN_AREA_WHICH_BLOCKS_SUMMONING_OR_TELEPORTING);
 			sm.addString(target.getName());

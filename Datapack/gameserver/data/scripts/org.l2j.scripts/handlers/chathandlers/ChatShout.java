@@ -42,7 +42,7 @@ public final class ChatShout implements IChatHandler
 		var leveRequired = getSettings(GeneralSettings.class).shoutChatLevel();
 		if ((activeChar.getLevel() < leveRequired) && !activeChar.canOverrideCond(PcCondOverride.CHAT_CONDITIONS))
 		{
-			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.SHOUT_CHAT_CANNOT_BE_USED_BY_NON_PREMIUM_USERS_LV_S1_OR_LOWER).addInt(leveRequired));
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.SHOUT_CHAT_CANNOT_BE_USED_BY_USERS_LV_S1_OR_LOWER).addInt(leveRequired));
 			return;
 		}
 		

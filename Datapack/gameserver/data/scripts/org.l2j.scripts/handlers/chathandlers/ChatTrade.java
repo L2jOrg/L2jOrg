@@ -57,7 +57,7 @@ public final class ChatTrade implements IChatHandler
 		}
 		var levelRequired =  getSettings(GeneralSettings.class).tradeChatLevel();
 		if (activeChar.getLevel() < levelRequired) {
-			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.TRADE_CHAT_CANNOT_BE_USED_BY_NON_PREMIUM_USERS_LV_S1_OR_LOWER).addInt(levelRequired));
+			activeChar.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.TRADE_CHAT_CANNOT_BE_USED_BY_USERS_LV_S1_OR_LOWER).addInt(levelRequired));
 			return;
 		}
 		

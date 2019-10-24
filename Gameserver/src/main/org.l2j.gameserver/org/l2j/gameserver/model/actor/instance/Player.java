@@ -114,7 +114,7 @@ import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;
 import static org.l2j.commons.database.DatabaseAccess.getDAO;
 import static org.l2j.commons.util.Util.zeroIfNullOrElse;
-import static org.l2j.gameserver.network.SystemMessageId.S1_HAS_INFLICTED_S3_DAMAGE_ATTRIBUTE_DAMAGE_S4_TO_S2;
+import static org.l2j.gameserver.network.SystemMessageId.S1_HAS_INFLICTED_S3_S4_ATTRIBUTE_DAMGE_DAMAGE_TO_S2;
 
 /**
  * This class represents all player characters in the world.<br>
@@ -1995,7 +1995,7 @@ public final class Player extends Playable {
 
         if (isEquiped) {
             if (item.getEnchantLevel() > 0) {
-                sm = SystemMessage.getSystemMessage(SystemMessageId.S1_S2_HAS_BEEN_UNEQUIPPED);
+                sm = SystemMessage.getSystemMessage(SystemMessageId.THE_EQUIPMENT_S1_S2_HAS_BEEN_REMOVED);
                 sm.addInt(item.getEnchantLevel());
                 sm.addItemName(item);
             } else {
@@ -2690,7 +2690,7 @@ public final class Player extends Playable {
     public boolean reduceAdena(String process, long count, WorldObject reference, boolean sendMessage) {
         if (count > _inventory.getAdena()) {
             if (sendMessage) {
-                sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ADENA);
+                sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ADENA_POPUP);
             }
             return false;
         }
@@ -2732,7 +2732,7 @@ public final class Player extends Playable {
     public boolean reduceBeautyTickets(String process, long count, WorldObject reference, boolean sendMessage) {
         if (count > _inventory.getBeautyTickets()) {
             if (sendMessage) {
-                sendPacket(SystemMessageId.INCORRECT_ITEM_COUNT_2);
+                sendPacket(SystemMessageId.INCORRECT_ITEM_COUNT);
             }
             return false;
         }
@@ -2810,7 +2810,7 @@ public final class Player extends Playable {
     public boolean reduceAncientAdena(String process, long count, WorldObject reference, boolean sendMessage) {
         if (count > _inventory.getAncientAdena()) {
             if (sendMessage) {
-                sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ADENA);
+                sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ADENA_POPUP);
             }
 
             return false;
@@ -3002,7 +3002,7 @@ public final class Player extends Playable {
 
         if (item == null) {
             if (sendMessage) {
-                sendPacket(SystemMessageId.INCORRECT_ITEM_COUNT_2);
+                sendPacket(SystemMessageId.INCORRECT_ITEM_COUNT);
             }
             return false;
         }
@@ -3049,7 +3049,7 @@ public final class Player extends Playable {
 
         if (item == null) {
             if (sendMessage) {
-                sendPacket(SystemMessageId.INCORRECT_ITEM_COUNT_2);
+                sendPacket(SystemMessageId.INCORRECT_ITEM_COUNT);
             }
 
             return false;
@@ -3072,7 +3072,7 @@ public final class Player extends Playable {
 
         if ((item == null) || (item.getCount() < count)) {
             if (sendMessage) {
-                sendPacket(SystemMessageId.INCORRECT_ITEM_COUNT_2);
+                sendPacket(SystemMessageId.INCORRECT_ITEM_COUNT);
             }
 
             return false;
@@ -3101,7 +3101,7 @@ public final class Player extends Playable {
 
         if ((item == null) || (item.getCount() < count) || (_inventory.destroyItemByItemId(process, itemId, count, this, reference) == null)) {
             if (sendMessage) {
-                sendPacket(SystemMessageId.INCORRECT_ITEM_COUNT_2);
+                sendPacket(SystemMessageId.INCORRECT_ITEM_COUNT);
             }
 
             return false;
@@ -3240,7 +3240,7 @@ public final class Player extends Playable {
 
         if (item == null) {
             if (sendMessage) {
-                sendPacket(SystemMessageId.INCORRECT_ITEM_COUNT_2);
+                sendPacket(SystemMessageId.INCORRECT_ITEM_COUNT);
             }
 
             return false;
@@ -3313,7 +3313,7 @@ public final class Player extends Playable {
 
         if (item == null) {
             if (sendMessage) {
-                sendPacket(SystemMessageId.INCORRECT_ITEM_COUNT_2);
+                sendPacket(SystemMessageId.INCORRECT_ITEM_COUNT);
             }
 
             return null;
@@ -4232,7 +4232,7 @@ public final class Player extends Playable {
                     if (_pvpFlag == 0) {
                         msg = Config.ANNOUNCE_PK_MSG.replace("$killer", killer.getName()).replace("$target", getName());
                         if (Config.ANNOUNCE_PK_PVP_NORMAL_MESSAGE) {
-                            final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_3);
+                            final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1);
                             sm.addString(msg);
                             Broadcast.toAllOnlinePlayers(sm);
                         } else {
@@ -4241,7 +4241,7 @@ public final class Player extends Playable {
                     } else if (_pvpFlag != 0) {
                         msg = Config.ANNOUNCE_PVP_MSG.replace("$killer", killer.getName()).replace("$target", getName());
                         if (Config.ANNOUNCE_PK_PVP_NORMAL_MESSAGE) {
-                            final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_3);
+                            final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1);
                             sm.addString(msg);
                             Broadcast.toAllOnlinePlayers(sm);
                         } else {
@@ -5081,7 +5081,7 @@ public final class Player extends Playable {
         if (unequiped.length > 0) {
             final SystemMessage sm;
             if (unequiped[0].getEnchantLevel() > 0) {
-                sm = SystemMessage.getSystemMessage(SystemMessageId.S1_S2_HAS_BEEN_UNEQUIPPED);
+                sm = SystemMessage.getSystemMessage(SystemMessageId.THE_EQUIPMENT_S1_S2_HAS_BEEN_REMOVED);
                 sm.addInt(unequiped[0].getEnchantLevel());
                 sm.addItemName(unequiped[0]);
             } else {
@@ -5115,7 +5115,7 @@ public final class Player extends Playable {
             if (unequiped.length > 0) {
                 SystemMessage sm = null;
                 if (unequiped[0].getEnchantLevel() > 0) {
-                    sm = SystemMessage.getSystemMessage(SystemMessageId.S1_S2_HAS_BEEN_UNEQUIPPED);
+                    sm = SystemMessage.getSystemMessage(SystemMessageId.THE_EQUIPMENT_S1_S2_HAS_BEEN_REMOVED);
                     sm.addInt(unequiped[0].getEnchantLevel());
                     sm.addItemName(unequiped[0]);
                 } else {
@@ -5201,7 +5201,7 @@ public final class Player extends Playable {
             } else if (isFishing()) {
                 // You can't mount, dismount, break and drop items while fishing
                 sendPacket(ActionFailed.STATIC_PACKET);
-                sendPacket(SystemMessageId.YOU_CANNOT_DO_THAT_WHILE_FISHING_2);
+                sendPacket(SystemMessageId.YOU_CANNOT_DO_THAT_WHILE_FISHING_SCREEN);
                 return false;
             } else if (isTransformed() || isCursedWeaponEquipped()) {
                 // no message needed, player while transformed doesn't have mount action
@@ -7692,8 +7692,8 @@ public final class Player extends Playable {
             _noDuelReason = SystemMessageId.C1_CANNOT_DUEL_BECAUSE_C1_IS_CURRENTLY_ENGAGED_IN_BATTLE;
             return false;
         }
-        if (isDead() || isAlikeDead() || ((getCurrentHp() < (getMaxHp() / 2)) || (getCurrentMp() < (getMaxMp() / 2)))) {
-            _noDuelReason = SystemMessageId.C1_CANNOT_DUEL_BECAUSE_C1_S_HP_OR_MP_IS_BELOW_50;
+        if (isDead() || isAlikeDead() || ((getCurrentHp() < (getMaxHp() / 2d)) || (getCurrentMp() < (getMaxMp() / 2d)))) {
+            _noDuelReason = SystemMessageId.C1_S_HP_OR_MP_IS_BELOW_50_AND_CANNOT_DUEL;
             return false;
         }
         if (_isInDuel || _startingDuel) {
@@ -8363,14 +8363,14 @@ public final class Player extends Playable {
             _revivePet = isPet;
 
             if (hasCharmOfCourage()) {
-                final ConfirmDlg dlg = new ConfirmDlg(SystemMessageId.YOUR_CHARM_OF_COURAGE_IS_TRYING_TO_RESURRECT_YOU_WOULD_YOU_LIKE_TO_RESURRECT_NOW.getId());
+                final ConfirmDlg dlg = new ConfirmDlg(SystemMessageId.YOUR_CHARM_OF_COURAGE_IS_TRYING_TO_RESURRECT_YOU_WOULD_YOU_LIKE_TO_RESURRECT_NOW);
                 dlg.addTime(60000);
                 sendPacket(dlg);
                 return;
             }
 
             final long restoreExp = Math.round(((model.getExpBeforeDeath() - getExp()) * _revivePower) / 100);
-            final ConfirmDlg dlg = new ConfirmDlg(SystemMessageId.C1_IS_ATTEMPTING_TO_DO_A_RESURRECTION_THAT_RESTORES_S2_S3_XP_ACCEPT.getId());
+            final ConfirmDlg dlg = new ConfirmDlg(SystemMessageId.C1_IS_ATTEMPTING_TO_DO_A_RESURRECTION_THAT_RESTORES_S2_S3_XP_ACCEPT);
             dlg.addPcName(reviver);
             dlg.addLong(restoreExp);
             dlg.addInt(power);
@@ -9386,7 +9386,7 @@ public final class Player extends Playable {
             sm.addInt(damage);
         } else if (this != target){
             if(elementalDamage != 0) {
-                sm = SystemMessage.getSystemMessage(S1_HAS_INFLICTED_S3_DAMAGE_ATTRIBUTE_DAMAGE_S4_TO_S2);
+                sm = SystemMessage.getSystemMessage(S1_HAS_INFLICTED_S3_S4_ATTRIBUTE_DAMGE_DAMAGE_TO_S2);
             } else {
                 sm = SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_INFLICTED_S3_DAMAGE_ON_C2);
             }
@@ -9446,7 +9446,7 @@ public final class Player extends Playable {
                 }
 
                 if (equippedItem.getEnchantLevel() > 0) {
-                    sm = SystemMessage.getSystemMessage(SystemMessageId.S1_S2_HAS_BEEN_UNEQUIPPED);
+                    sm = SystemMessage.getSystemMessage(SystemMessageId.THE_EQUIPMENT_S1_S2_HAS_BEEN_REMOVED);
                     sm.addInt(equippedItem.getEnchantLevel());
                     sm.addItemName(equippedItem);
                 } else {

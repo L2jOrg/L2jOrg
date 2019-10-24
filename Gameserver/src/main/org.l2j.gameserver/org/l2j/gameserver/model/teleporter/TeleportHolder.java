@@ -180,7 +180,7 @@ public final class TeleportHolder {
         // Check rest of conditions
         if (shouldPayFee(player, loc) && !player.destroyItemByItemId("Teleport", loc.getFeeId(), calculateFee(player, loc), npc, true)) {
             if (loc.getFeeId() == CommonItem.ADENA) {
-                player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ADENA);
+                player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ADENA_POPUP);
             } else {
                 player.sendMessage("You do not have enough " + getItemName(loc.getFeeId(), false));
             }

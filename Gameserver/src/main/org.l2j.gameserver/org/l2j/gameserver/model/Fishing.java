@@ -144,7 +144,7 @@ public class Fishing {
         final int minPlayerLevel = baitData == null ? 20 : baitData.getMinPlayerLevel();
         if (_player.getLevel() < minPlayerLevel) {
             if (minPlayerLevel == 20) {
-                _player.sendPacket(SystemMessageId.YOU_CANNOT_FISH_AS_YOU_DO_NOT_MEET_THE_REQUIREMENTS);
+                _player.sendPacket(SystemMessageId.FISHING_WILL_END_BECAUSE_THE_CONDITIONS_HAVE_NOT_BEEN_MET);
             } else // In case of custom fishing level.
             {
                 _player.sendPacket(SystemMessageId.YOU_DO_NOT_MEET_THE_FISHING_LEVEL_REQUIREMENTS);

@@ -123,7 +123,7 @@ public class RequestBuySeed extends ClientPacket {
             player.sendPacket(SystemMessageId.YOUR_INVENTORY_IS_FULL);
             return;
         } else if ((totalPrice < 0) || (player.getAdena() < totalPrice)) {
-            player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ADENA);
+            player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ADENA_POPUP);
             return;
         }
 

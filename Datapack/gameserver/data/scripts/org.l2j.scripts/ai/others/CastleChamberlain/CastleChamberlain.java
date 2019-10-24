@@ -18,7 +18,6 @@ package ai.others.CastleChamberlain;
 
 import ai.AbstractNpcAI;
 import org.l2j.commons.util.CommonUtil;
-import org.l2j.commons.util.Util;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.sql.impl.ClanTable;
 import org.l2j.gameserver.data.xml.impl.TeleportersData;
@@ -52,7 +51,7 @@ import org.l2j.gameserver.util.GameUtils;
 
 import java.util.*;
 
-import static org.l2j.commons.util.Util.*;
+import static org.l2j.commons.util.Util.parseNextInt;
 
 /**
  * Castle Chamberlain AI.
@@ -736,7 +735,7 @@ public final class CastleChamberlain extends AbstractNpcAI
 						}
 						else
 						{
-							player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ADENA);
+							player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ADENA_POPUP);
 						}
 					}
 					htmltext = "chamberlain-01.html";

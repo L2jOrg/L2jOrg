@@ -12,6 +12,8 @@ import org.l2j.gameserver.model.entity.ClanHall;
 import org.l2j.gameserver.model.holders.DoorRequestHolder;
 import org.l2j.gameserver.network.serverpackets.ConfirmDlg;
 
+import static org.l2j.gameserver.network.SystemMessageId.WOULD_YOU_LIKE_TO_CLOSE_THE_GATE;
+import static org.l2j.gameserver.network.SystemMessageId.WOULD_YOU_LIKE_TO_OPEN_THE_GATE;
 import static org.l2j.gameserver.util.MathUtil.isInsideRadius2D;
 
 public class DoorAction implements IActionHandler
@@ -48,11 +50,11 @@ public class DoorAction implements IActionHandler
                     activeChar.addScript(new DoorRequestHolder(door));
                     if (!door.isOpen())
                     {
-                        activeChar.sendPacket(new ConfirmDlg(1140));
+                        activeChar.sendPacket(new ConfirmDlg(WOULD_YOU_LIKE_TO_OPEN_THE_GATE));
                     }
                     else
                     {
-                        activeChar.sendPacket(new ConfirmDlg(1141));
+                        activeChar.sendPacket(new ConfirmDlg(WOULD_YOU_LIKE_TO_CLOSE_THE_GATE));
                     }
                 }
             }
@@ -67,11 +69,11 @@ public class DoorAction implements IActionHandler
                     activeChar.addScript(new DoorRequestHolder((Door) target));
                     if (!((Door) target).isOpen())
                     {
-                        activeChar.sendPacket(new ConfirmDlg(1140));
+                        activeChar.sendPacket(new ConfirmDlg(WOULD_YOU_LIKE_TO_OPEN_THE_GATE));
                     }
                     else
                     {
-                        activeChar.sendPacket(new ConfirmDlg(1141));
+                        activeChar.sendPacket(new ConfirmDlg(WOULD_YOU_LIKE_TO_CLOSE_THE_GATE));
                     }
                 }
             }

@@ -17,12 +17,8 @@ public class ConfirmDlg extends AbstractMessagePacket<ConfirmDlg> {
         super(smId);
     }
 
-    public ConfirmDlg(int id) {
-        this(SystemMessageId.getSystemMessageId(id));
-    }
-
     public ConfirmDlg(String text) {
-        this(SystemMessageId.S1_3);
+        this(SystemMessageId.S1);
         addString(text);
     }
 

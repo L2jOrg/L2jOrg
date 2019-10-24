@@ -78,20 +78,17 @@ public final class RequestGiveItemToPet extends ClientPacket {
             return;
         }
 
-        if (!pet.getInventory().validateCapacity(item)) {
-            player.sendPacket(SystemMessageId.YOUR_PET_CANNOT_CARRY_ANY_MORE_ITEMS);
-            return;
-        }
+        var inventory = pet.getInventory();
 
-        if (!pet.getInventory().validateWeight(item, _amount)) {
-            player.sendPacket(SystemMessageId.YOUR_PET_CANNOT_CARRY_ANY_MORE_ITEMS_2);
+        if (!inventory.validateCapacity(item) || !inventory.validateWeight(item, _amount)) {
+            player.sendPacket(SystemMessageId.YOUR_PET_CANNOT_CARRY_ANY_MORE_ITEMS);
             return;
         }
 
         final Item transferedItem = player.transferItem("Transfer", _objectId, _amount, pet.getInventory(), pet);
         if (transferedItem != null)
         {
-            player.sendPacket(new PetItemList(pet.getInventory().getItems()));
+            player.sendPacket(new PetItemList(inventory.getItems()));
         }
         else {
             LOGGER.warn("Invalid item transfer request: " + pet.getName() + "(pet) --> " + player.getName());

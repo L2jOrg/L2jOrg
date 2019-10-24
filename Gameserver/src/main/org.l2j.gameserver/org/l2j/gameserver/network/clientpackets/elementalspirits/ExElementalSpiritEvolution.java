@@ -53,11 +53,11 @@ public class ExElementalSpiritEvolution extends ClientPacket {
         if(noMeetConditions = player.getPrivateStoreType() != PrivateStoreType.NONE) {
             client.sendPacket(CANNOT_EVOLVE_ABSORB_EXTRACT_WHILE_USING_THE_PRIVATE_STORE_WORKSHOP);
         } else if(noMeetConditions = player.isInBattle()) {
-            client.sendPacket(UNABLE_TO_EVOLVE_DURING_BATTLE);
+            client.sendPacket(CANNOT_EVOLVE_DURING_BATTLE);
         } else if(noMeetConditions = !spirit.canEvolve()) {
-            client.sendPacket(THIS_SPIRIT_CANNOT_EVOLVE);
+            client.sendPacket(SPIRIT_CANNOT_BE_EVOLVED);
         } else if(noMeetConditions = !consumeEvolveItems(player, spirit)) {
-            client.sendPacket(NOT_ENOUGH_INGREDIENTS_FOR_EVOLUTION);
+            client.sendPacket(YOU_DO_NOT_HAVE_THE_MATERIALS_REQUIRED_TO_EVOLVE);
         }
         return !noMeetConditions;
     }

@@ -80,8 +80,8 @@ public class HappyHours extends LongTimeEvent implements ScriptEvent
 					if ((System.currentTimeMillis() - (_lastRewardTime + REWARD_INTERVAL)) > 0) // Exploit check - Just in case.
 					{
 						_lastRewardTime = System.currentTimeMillis();
-						final ExShowScreenMessage screenMsg = new ExShowScreenMessage("You obtained 20 Sibi's coins.", ExShowScreenMessage.TOP_CENTER, 7000, 0, true, true);
-						final SystemMessage systemMsg = SystemMessage.getSystemMessage(SystemMessageId.YOU_OBTAINED_S1_SIBI_S_COINS);
+						final ExShowScreenMessage screenMsg = new ExShowScreenMessage("You obtained 20 Oriana's coins.", ExShowScreenMessage.TOP_CENTER, 7000, 0, true, true);
+						final SystemMessage systemMsg = SystemMessage.getSystemMessage(SystemMessageId.YOU_OBTAINED_S1_ORIANA_S_COINS);
 						systemMsg.addInt(20);
 						for (Player plr : World.getInstance().getPlayers())
 						{

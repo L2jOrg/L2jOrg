@@ -140,7 +140,7 @@ public class ItemSkillsTemplate implements IItemHandler
         {
             if (!playable.destroyItem("Consume", item.getObjectId(), 1, playable, false))
             {
-                playable.sendPacket(SystemMessageId.INCORRECT_ITEM_COUNT_2);
+                playable.sendPacket(SystemMessageId.INCORRECT_ITEM_COUNT);
                 return false;
             }
         }

@@ -43,7 +43,7 @@ public final class RequestReplyStartPledgeWar extends ClientPacket {
                 }
             }
         } else {
-            requestor.sendPacket(SystemMessageId.THE_S1_CLAN_DID_NOT_RESPOND_WAR_PROCLAMATION_HAS_BEEN_REFUSED_2);
+            requestor.sendPacket(SystemMessageId.THE_S1_CLAN_DID_NOT_RESPOND_WAR_PROCLAMATION_HAS_BEEN_REFUSED);
         }
         activeChar.setActiveRequester(null);
         requestor.onTransactionResponse();

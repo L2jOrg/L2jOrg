@@ -142,7 +142,7 @@ public final class HandysBlockCheckerManager {
 
             for (int i = 0; i < 4; i++) {
                 if (_arenaPlayers[i].getAllPlayers().contains(player)) {
-                    final SystemMessage msg = SystemMessage.getSystemMessage(SystemMessageId.C1_IS_ALREADY_REGISTERED_ON_THE_MATCH_WAITING_LIST);
+                    final SystemMessage msg = SystemMessage.getSystemMessage(SystemMessageId.C1_YOU_HAVE_ALREADY_REGISTERED_FOR_THE_MATCH);
                     msg.addString(player.getName());
                     player.sendPacket(msg);
                     return false;

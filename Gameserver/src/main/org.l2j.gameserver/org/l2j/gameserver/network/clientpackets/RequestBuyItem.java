@@ -178,7 +178,7 @@ public final class RequestBuyItem extends ClientPacket {
 
         // Charge buyer and add tax to castle treasury if not owned by npc clan
         if ((subTotal < 0) || !player.reduceAdena("Buy", subTotal, player.getLastFolkNPC(), false)) {
-            client.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ADENA);
+            client.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ADENA_POPUP);
             client.sendPacket(ActionFailed.STATIC_PACKET);
             return;
         }

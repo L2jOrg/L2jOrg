@@ -194,7 +194,7 @@ public class RecipeController {
                     _price = item.getCost();
                     if (_target.getAdena() < _price) // check price
                     {
-                        _target.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ADENA);
+                        _target.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ADENA_POPUP);
                         abort();
                         return;
                     }
@@ -310,7 +310,7 @@ public class RecipeController {
                 final Item adenatransfer = _target.transferItem("PayManufacture", _target.getInventory().getAdenaInstance().getObjectId(), _price, _player.getInventory(), _player);
 
                 if (adenatransfer == null) {
-                    _target.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ADENA);
+                    _target.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ADENA_POPUP);
                     abort();
                     return;
                 }

@@ -93,7 +93,7 @@ public final class ClanHallAuctioneer extends AbstractNpcAI
 				
 				if (!player.isClanLeader() || (clan.getLevel() < 2))
 				{
-					player.sendPacket(SystemMessageId.ONLY_A_CLAN_LEADER_WHOSE_CLAN_IS_OF_LEVEL_2_OR_ABOVE_IS_ALLOWED_TO_PARTICIPATE_IN_A_CLAN_HALL_AUCTION);
+					player.sendPacket(SystemMessageId.TO_PARTICIPATE_IN_THE_32_CLAN_HALL_AUCTION_THE_CLAN_LEVEL_MUST_BE_2_OR_HIGHER_AND_THE_CHARACTER_MUST_BE_A_CLAN_LEADER_OR_HAVE_THE_RIGHT_TO_BID_AND_SELL);
 					return htmltext;
 				}
 				
@@ -122,7 +122,7 @@ public final class ClanHallAuctioneer extends AbstractNpcAI
 				
 				if (!player.isClanLeader() || (clan.getLevel() < 2))
 				{
-					player.sendPacket(SystemMessageId.ONLY_A_CLAN_LEADER_WHOSE_CLAN_IS_OF_LEVEL_2_OR_ABOVE_IS_ALLOWED_TO_PARTICIPATE_IN_A_CLAN_HALL_AUCTION);
+					player.sendPacket(SystemMessageId.TO_PARTICIPATE_IN_THE_32_CLAN_HALL_AUCTION_THE_CLAN_LEVEL_MUST_BE_2_OR_HIGHER_AND_THE_CHARACTER_MUST_BE_A_CLAN_LEADER_OR_HAVE_THE_RIGHT_TO_BID_AND_SELL);
 					return htmltext;
 				}
 				
@@ -174,7 +174,7 @@ public final class ClanHallAuctioneer extends AbstractNpcAI
 				
 				if (!player.isClanLeader() || (clan.getLevel() < 2))
 				{
-					player.sendPacket(SystemMessageId.ONLY_A_CLAN_LEADER_WHOSE_CLAN_IS_OF_LEVEL_2_OR_ABOVE_IS_ALLOWED_TO_PARTICIPATE_IN_A_CLAN_HALL_AUCTION);
+					player.sendPacket(SystemMessageId.TO_PARTICIPATE_IN_THE_32_CLAN_HALL_AUCTION_THE_CLAN_LEVEL_MUST_BE_2_OR_HIGHER_AND_THE_CHARACTER_MUST_BE_A_CLAN_LEADER_OR_HAVE_THE_RIGHT_TO_BID_AND_SELL);
 					return htmltext;
 				}
 				
@@ -331,7 +331,7 @@ public final class ClanHallAuctioneer extends AbstractNpcAI
 			
 			if (!player.isClanLeader() || (clan.getLevel() < 2))
 			{
-				player.sendPacket(SystemMessageId.ONLY_A_CLAN_LEADER_WHOSE_CLAN_IS_OF_LEVEL_2_OR_ABOVE_IS_ALLOWED_TO_PARTICIPATE_IN_A_CLAN_HALL_AUCTION);
+				player.sendPacket(SystemMessageId.TO_PARTICIPATE_IN_THE_32_CLAN_HALL_AUCTION_THE_CLAN_LEVEL_MUST_BE_2_OR_HIGHER_AND_THE_CHARACTER_MUST_BE_A_CLAN_LEADER_OR_HAVE_THE_RIGHT_TO_BID_AND_SELL);
 				return;
 			}
 			final ClanHall playerClanHall = ClanHallData.getInstance().getClanHallByClan(clan);

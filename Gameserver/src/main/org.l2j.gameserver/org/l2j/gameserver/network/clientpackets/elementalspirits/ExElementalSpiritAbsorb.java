@@ -47,7 +47,7 @@ public class ExElementalSpiritAbsorb extends ClientPacket {
 
         var canAbsorb = checkConditions(player, spirit);
         if(canAbsorb) {
-            client.sendPacket(SUCCESFUL_ABSORPTION);
+            client.sendPacket(DRAIN_SUCCESSFUL);
             spirit.addExperience(absorbItem.getExperience() * amount);
             var userInfo = new UserInfo(player);
             userInfo.addComponentType(UserInfoType.SPIRITS);
@@ -62,11 +62,11 @@ public class ExElementalSpiritAbsorb extends ClientPacket {
         if(noMeetConditions = player.getPrivateStoreType() != PrivateStoreType.NONE) {
             client.sendPacket(CANNOT_EVOLVE_ABSORB_EXTRACT_WHILE_USING_THE_PRIVATE_STORE_WORKSHOP);
         } else if(noMeetConditions = player.isInBattle()) {
-            client.sendPacket(UNABLE_TO_ABSORB_DURING_BATTLE);
+            client.sendPacket(CANNOT_DRAIN_DURING_BATTLE);
         } else if(noMeetConditions = (spirit.getLevel() == spirit.getMaxLevel() && spirit.getExperience() == spirit.getExperienceToNextLevel())) {
-            client.sendPacket(UNABLE_TO_ABSORB_BECAUSE_REACHED_MAXIMUM_LEVEL);
+            client.sendPacket(YOU_HAVE_REACHED_THE_HIGHEST_LEVEL_AND_CANNOT_ABSORB_ANY_FURTHER);
         } else if ( noMeetConditions = (amount < 1 || !player.destroyItemByItemId("Absorb", itemId, amount, player, true))) {
-            client.sendPacket(NOT_ENOUGH_INGREDIENTS_TO_ABSORB);
+            client.sendPacket(YOU_DO_NOT_HAVE_THE_MATERIALS_REQUIRED_TO_ABSORB);
         }
 
         return !noMeetConditions;

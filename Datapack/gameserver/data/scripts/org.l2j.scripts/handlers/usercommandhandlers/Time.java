@@ -16,15 +16,15 @@
  */
 package handlers.usercommandhandlers;
 
-import java.text.SimpleDateFormat;
-import java.util.Date;
-
 import org.l2j.gameserver.Config;
-import org.l2j.gameserver.world.WorldTimeController;
 import org.l2j.gameserver.handler.IUserCommandHandler;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
+import org.l2j.gameserver.world.WorldTimeController;
+
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 /**
  * Time user command.
@@ -61,7 +61,7 @@ public class Time implements IUserCommandHandler
 		SystemMessage sm;
 		if (WorldTimeController.getInstance().isNight())
 		{
-			sm = SystemMessage.getSystemMessage(SystemMessageId.THE_CURRENT_TIME_IS_S1_S2_2);
+			sm = SystemMessage.getSystemMessage(SystemMessageId.THE_CURRENT_TIME_IS_S1_S2);
 			sm.addString(h);
 			sm.addString(m);
 		}

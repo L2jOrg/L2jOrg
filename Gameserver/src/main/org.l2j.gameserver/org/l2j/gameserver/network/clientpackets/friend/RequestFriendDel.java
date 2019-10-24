@@ -48,7 +48,7 @@ public final class RequestFriendDel extends ClientPacket {
 
         getDAO(CharacterDAO.class).deleteFriendship(activeChar.getObjectId(), id);
 
-        sm = SystemMessage.getSystemMessage(SystemMessageId.S1_HAS_BEEN_REMOVED_FROM_YOUR_FRIENDS_LIST_2);
+        sm = SystemMessage.getSystemMessage(SystemMessageId.S1_HAS_BEEN_REMOVED_FROM_YOUR_FRIENDS_LIST);
         sm.addString(name);
         activeChar.sendPacket(sm);
 

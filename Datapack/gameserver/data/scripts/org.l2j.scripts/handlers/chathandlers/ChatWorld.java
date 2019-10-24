@@ -56,7 +56,7 @@ public final class ChatWorld implements IChatHandler {
 		
 		if (activeChar.getLevel() < Config.WORLD_CHAT_MIN_LEVEL && activeChar.getVipTier() < 1)
 		{
-			final SystemMessage msg = SystemMessage.getSystemMessage(SystemMessageId.YOU_CAN_USE_WORLD_CHAT_FROM_LV_S1);
+			final SystemMessage msg = SystemMessage.getSystemMessage(SystemMessageId.YOU_MUST_BE_LV_S1_OR_HIGHER_TO_USE_WORLD_CHAT_YOU_CAN_ALSO_USE_IT_WITH_VIP_BENEFITS);
 			msg.addInt(Config.WORLD_CHAT_MIN_LEVEL);
 			activeChar.sendPacket(msg);
 		}
@@ -71,7 +71,7 @@ public final class ChatWorld implements IChatHandler {
 		}
 		else if (activeChar.getWorldChatUsed() >= activeChar.getWorldChatPoints())
 		{
-			activeChar.sendPacket(SystemMessageId.YOU_HAVE_SPENT_YOUR_WORLD_CHAT_QUOTA_FOR_THE_DAY_A_NEW_DAY_STARTS_EVERY_DAY_AT_18_30);
+			activeChar.sendPacket(SystemMessageId.YOU_USED_WORLD_CHAT_UP_TO_TODAY_S_LIMIT_THE_USAGE_COUNT_OF_WORLD_CHAT_IS_RESET_EVERY_DAY_AT_6_30);
 		}
 		else
 		{

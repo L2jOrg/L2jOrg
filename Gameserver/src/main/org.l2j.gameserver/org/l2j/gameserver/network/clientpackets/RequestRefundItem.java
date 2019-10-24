@@ -146,7 +146,7 @@ public final class RequestRefundItem extends ClientPacket {
         }
 
         if ((adena < 0) || !player.reduceAdena("Refund", adena, player.getLastFolkNPC(), false)) {
-            client.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ADENA);
+            client.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_ADENA_POPUP);
             client.sendPacket(ActionFailed.STATIC_PACKET);
             return;
         }

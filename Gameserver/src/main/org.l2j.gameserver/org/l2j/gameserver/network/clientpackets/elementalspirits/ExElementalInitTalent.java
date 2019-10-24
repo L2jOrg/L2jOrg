@@ -30,7 +30,7 @@ public class ExElementalInitTalent extends ClientPacket {
         }
 
        if(player.isInBattle()) {
-           client.sendPacket(SystemMessage.getSystemMessage(UNABLE_TO_RESET_SPIRIT_ATTRIBUTE_DURING_BATTLE));
+           client.sendPacket(SystemMessage.getSystemMessage(CANNOT_RESET_SPIRIT_CHARACTERISTICS_DURING_BATTLE));
            client.sendPacket(new ElementalSpiritSetTalent(type, false));
            return;
        }

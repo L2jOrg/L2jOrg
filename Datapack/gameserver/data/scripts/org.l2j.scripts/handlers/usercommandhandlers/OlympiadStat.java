@@ -48,7 +48,7 @@ public class OlympiadStat implements IUserCommandHandler
 		final WorldObject target = activeChar.getTarget();
 		if (!isPlayer(target) || (target.getActingPlayer().getClassId().level() < 2))
 		{
-			activeChar.sendPacket(SystemMessageId.COMMAND_AVAILABLE_FOR_THOSE_WHO_HAVE_COMPLETED_2ND_CLASS_TRANSFER);
+			activeChar.sendPacket(SystemMessageId.THIS_COMMAND_IS_AVAILABLE_ONLY_WHEN_THE_TARGET_HAS_COMPLETED_THE_2ND_CLASS_TRANSFER);
 			return false;
 		}
 		
@@ -59,7 +59,7 @@ public class OlympiadStat implements IUserCommandHandler
 		sm.addInt(Olympiad.getInstance().getNoblePoints((Player) target));
 		activeChar.sendPacket(sm);
 		
-		final SystemMessage sm2 = SystemMessage.getSystemMessage(SystemMessageId.THE_MATCHES_THIS_WEEK_ARE_ALL_CLASS_BATTLES_THE_NUMBER_OF_MATCHES_THAT_ARE_ALLOWED_TO_PARTICIPATE_IS_S1);
+		final SystemMessage sm2 = SystemMessage.getSystemMessage(SystemMessageId.YOU_CAN_PARTICIPATE_IN_S1_ALL_CLASS_BATTLE_MATCHES_THIS_WEEK);
 		sm2.addInt(Olympiad.getInstance().getRemainingWeeklyMatches(nobleObjId));
 		activeChar.sendPacket(sm2);
 		return true;

@@ -292,7 +292,7 @@ public class Pet extends Summon {
 
         if (item == null) {
             if (sendMessage) {
-                sendPacket(SystemMessageId.INCORRECT_ITEM_COUNT_2);
+                sendPacket(SystemMessageId.INCORRECT_ITEM_COUNT);
             }
 
             return false;
@@ -334,7 +334,7 @@ public class Pet extends Summon {
 
         if (item == null) {
             if (sendMessage) {
-                sendPacket(SystemMessageId.INCORRECT_ITEM_COUNT_2);
+                sendPacket(SystemMessageId.INCORRECT_ITEM_COUNT);
             }
             return false;
         }
