@@ -120,7 +120,7 @@ public class SiegeFlag extends Npc {
                     // send warning to owners of headquarters that theirs base is under attack
                     _clan.broadcastToOnlineMembers(SystemMessage.getSystemMessage(SystemMessageId.SIEGE_CAMP_IS_UNDER_ATTACK));
                     setCanTalk(false);
-                    ThreadPoolManager.getInstance().schedule(new ScheduleTalkTask(), 20000);
+                    ThreadPoolManager.schedule(new ScheduleTalkTask(), 20000);
                 }
             }
         }

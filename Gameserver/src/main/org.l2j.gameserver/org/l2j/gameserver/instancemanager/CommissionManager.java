@@ -234,7 +234,7 @@ public final class CommissionManager {
                 try (ResultSet rs = ps.getGeneratedKeys()) {
                     if (rs.next()) {
                         final CommissionItem commissionItem = new CommissionItem(rs.getLong(1), itemInstance, pricePerUnit, startTime, durationInDays);
-                        final ScheduledFuture<?> saleEndTask = ThreadPoolManager.getInstance().schedule(() -> expireSale(commissionItem), Duration.between(Instant.now(), commissionItem.getEndTime()).toMillis());
+                        final ScheduledFuture<?> saleEndTask = ThreadPoolManager.schedule(() -> expireSale(commissionItem), Duration.between(Instant.now(), commissionItem.getEndTime()).toMillis());
                         commissionItem.setSaleEndTask(saleEndTask);
                         _commissionItems.put(commissionItem.getCommissionId(), commissionItem);
                         player.getLastCommissionInfos().put(itemInstance.getId(), new ExResponseCommissionInfo(itemInstance.getId(), pricePerUnit, itemCount, (byte) ((durationInDays - 1) / 2)));

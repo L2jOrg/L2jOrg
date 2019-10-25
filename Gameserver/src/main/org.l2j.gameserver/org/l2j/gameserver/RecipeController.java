@@ -72,7 +72,7 @@ public class RecipeController {
         if (maker._isValid) {
             if (Config.ALT_GAME_CREATION) {
                 _activeMakers.put(manufacturer.getObjectId(), maker);
-                ThreadPoolManager.getInstance().schedule(maker, 100);
+                ThreadPoolManager.schedule(maker, 100);
             } else {
                 maker.run();
             }
@@ -112,7 +112,7 @@ public class RecipeController {
         if (maker._isValid) {
             if (Config.ALT_GAME_CREATION) {
                 _activeMakers.put(player.getObjectId(), maker);
-                ThreadPoolManager.getInstance().schedule(maker, 100);
+                ThreadPoolManager.schedule(maker, 100);
             } else {
                 maker.run();
             }

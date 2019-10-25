@@ -269,7 +269,7 @@ public final class OlympiadGameTask implements Runnable {
                     return;
                 }
             }
-            ThreadPoolManager.getInstance().schedule(this, delay * 1000);
+            ThreadPoolManager.schedule(this, delay * 1000);
         } catch (Exception e) {
             switch (_state) {
                 case GAME_STOPPED:

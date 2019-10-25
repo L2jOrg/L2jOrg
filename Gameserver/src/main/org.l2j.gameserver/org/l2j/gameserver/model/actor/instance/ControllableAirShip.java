@@ -181,8 +181,8 @@ public class ControllableAirShip extends AirShip {
     @Override
     public void onSpawn() {
         super.onSpawn();
-        _checkTask = ThreadPoolManager.getInstance().scheduleAtFixedRate(new CheckTask(), 60000, 10000);
-        _consumeFuelTask = ThreadPoolManager.getInstance().scheduleAtFixedRate(new ConsumeFuelTask(), 60000, 60000);
+        _checkTask = ThreadPoolManager.scheduleAtFixedRate(new CheckTask(), 60000, 10000);
+        _consumeFuelTask = ThreadPoolManager.scheduleAtFixedRate(new ConsumeFuelTask(), 60000, 60000);
     }
 
     @Override

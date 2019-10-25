@@ -1523,7 +1523,7 @@ public final class Item extends WorldObject {
             if (_lifeTimeTask != null) {
                 _lifeTimeTask.cancel(true);
             }
-            _lifeTimeTask = ThreadPoolManager.getInstance().schedule(new ScheduleLifeTimeTask(this), getRemainingTime());
+            _lifeTimeTask = ThreadPoolManager.schedule(new ScheduleLifeTimeTask(this), getRemainingTime());
         }
     }
 

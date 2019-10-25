@@ -5260,7 +5260,7 @@ public final class Player extends Playable {
                 return false;
             }
         } else {
-            ThreadPoolManager.getInstance().schedule(() ->
+            ThreadPoolManager.schedule(() ->
             {
                 if (isInWater()) {
                     broadcastUserInfo();
@@ -10235,7 +10235,7 @@ public final class Player extends Playable {
         if (_fallingDamageTask != null) {
             _fallingDamageTask.cancel(true);
         }
-        _fallingDamageTask = ThreadPoolManager.getInstance().schedule(() ->
+        _fallingDamageTask = ThreadPoolManager.schedule(() ->
         {
             if ((_fallingDamage > 0) && !isInvul()) {
                 reduceCurrentHp(min(_fallingDamage, getCurrentHp() - 1), this, null, false, true, false, false);

@@ -895,7 +895,7 @@ public class Party extends AbstractPlayerGroup {
         }
         _changeRequestDistributionType = partyDistributionType;
         _changeDistributionTypeAnswers = new HashSet<>();
-        _changeDistributionTypeRequestTask = ThreadPoolManager.getInstance().schedule(() -> finishLootRequest(false), PARTY_DISTRIBUTION_TYPE_REQUEST_TIMEOUT.toMillis());
+        _changeDistributionTypeRequestTask = ThreadPoolManager.schedule(() -> finishLootRequest(false), PARTY_DISTRIBUTION_TYPE_REQUEST_TIMEOUT.toMillis());
 
         broadcastToPartyMembers(getLeader(), new ExAskModifyPartyLooting(getLeader().getName(), partyDistributionType));
 

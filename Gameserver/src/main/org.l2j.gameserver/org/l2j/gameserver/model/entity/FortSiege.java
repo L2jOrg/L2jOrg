@@ -138,7 +138,7 @@ public class FortSiege implements Siegable {
             _fort.getZone().updateZoneStatusForCharactersInside();
 
             // Schedule a task to prepare auto siege end
-            _siegeEnd = ThreadPoolManager.getInstance().schedule(new ScheduleEndSiegeTask(), FortSiegeManager.getInstance().getSiegeLength() * 60 * 1000); // Prepare auto end task
+            _siegeEnd = ThreadPoolManager.schedule(new ScheduleEndSiegeTask(), FortSiegeManager.getInstance().getSiegeLength() * 60 * 1000); // Prepare auto end task
 
             final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.THE_FORTRESS_BATTLE_S1_HAS_BEGUN);
             sm.addCastleId(_fort.getResidenceId());
@@ -423,7 +423,7 @@ public class FortSiege implements Siegable {
                 // schedule restoring doors/commanders respawn
                 else if (_siegeRestore == null) {
                     _fort.getSiege().announceToPlayer(SystemMessage.getSystemMessage(SystemMessageId.THE_BARRACKS_HAVE_BEEN_SEIZED));
-                    _siegeRestore = ThreadPoolManager.getInstance().schedule(new ScheduleSiegeRestore(), FortSiegeManager.getInstance().getCountDownLength() * 60 * 1000);
+                    _siegeRestore = ThreadPoolManager.schedule(new ScheduleSiegeRestore(), FortSiegeManager.getInstance().getCountDownLength() * 60 * 1000);
                 } else {
                     _fort.getSiege().announceToPlayer(SystemMessage.getSystemMessage(SystemMessageId.THE_BARRACKS_HAVE_BEEN_SEIZED));
                 }
@@ -603,7 +603,7 @@ public class FortSiege implements Siegable {
         }
 
         // Execute siege auto start
-        _siegeStartTask = ThreadPoolManager.getInstance().schedule(new ScheduleStartSiegeTask(3600), 0);
+        _siegeStartTask = ThreadPoolManager.schedule(new ScheduleStartSiegeTask(3600), 0);
     }
 
     /**

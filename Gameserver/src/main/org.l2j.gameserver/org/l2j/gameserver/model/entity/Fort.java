@@ -544,9 +544,9 @@ public final class Fort extends AbstractResidence {
                 if (_FortUpdater[1] != null) {
                     _FortUpdater[1].cancel(false);
                 }
-                _FortUpdater[0] = ThreadPoolManager.getInstance().scheduleAtFixedRate(new FortUpdater(this, clan, 0, FortUpdater.UpdaterType.PERIODIC_UPDATE), Config.FS_UPDATE_FRQ * 60000, Config.FS_UPDATE_FRQ * 60000); // Schedule owner tasks to start running
+                _FortUpdater[0] = ThreadPoolManager.scheduleAtFixedRate(new FortUpdater(this, clan, 0, FortUpdater.UpdaterType.PERIODIC_UPDATE), Config.FS_UPDATE_FRQ * 60000, Config.FS_UPDATE_FRQ * 60000); // Schedule owner tasks to start running
                 if (Config.FS_MAX_OWN_TIME > 0) {
-                    _FortUpdater[1] = ThreadPoolManager.getInstance().scheduleAtFixedRate(new FortUpdater(this, clan, 0, FortUpdater.UpdaterType.MAX_OWN_TIME), 3600000, 3600000); // Schedule owner tasks to remove owner
+                    _FortUpdater[1] = ThreadPoolManager.scheduleAtFixedRate(new FortUpdater(this, clan, 0, FortUpdater.UpdaterType.MAX_OWN_TIME), 3600000, 3600000); // Schedule owner tasks to remove owner
                 }
             } else {
                 if (_FortUpdater[0] != null) {

@@ -81,7 +81,7 @@ public class Duel {
             broadcastToTeam2(sm);
         }
         // Schedule duel start
-        ThreadPoolManager.getInstance().schedule(new ScheduleStartDuelTask(this), 3000);
+        ThreadPoolManager.schedule(new ScheduleStartDuelTask(this), 3000);
     }
 
     public Instance getDueldInstance() {
