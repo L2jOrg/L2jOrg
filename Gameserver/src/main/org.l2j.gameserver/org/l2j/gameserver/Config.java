@@ -79,14 +79,11 @@ public final class Config {
     private static final String CUSTOM_AUTO_POTIONS_CONFIG_FILE = "./config/Custom/AutoPotions.ini";
     private static final String CUSTOM_BANKING_CONFIG_FILE = "./config/Custom/Banking.ini";
     private static final String CUSTOM_CHAMPION_MONSTERS_CONFIG_FILE = "./config/Custom/ChampionMonsters.ini";
-    private static final String CUSTOM_CHAT_MODERATION_CONFIG_FILE = "./config/Custom/ChatModeration.ini";
     private static final String CUSTOM_COMMUNITY_BOARD_CONFIG_FILE = "./config/Custom/CommunityBoard.ini";
     private static final String CUSTOM_DUALBOX_CHECK_CONFIG_FILE = "./config/Custom/DualboxCheck.ini";
-    private static final String CUSTOM_FIND_PVP_CONFIG_FILE = "./config/Custom/FindPvP.ini";
     private static final String CUSTOM_MULTILANGUAL_SUPPORT_CONFIG_FILE = "./config/Custom/MultilingualSupport.ini";
     private static final String CUSTOM_NPC_STAT_MULTIPIERS_CONFIG_FILE = "./config/Custom/NpcStatMultipliers.ini";
     private static final String CUSTOM_OFFLINE_TRADE_CONFIG_FILE = "./config/Custom/OfflineTrade.ini";
-    private static final String CUSTOM_PASSWORD_CHANGE_CONFIG_FILE = "./config/Custom/PasswordChange.ini";
     private static final String CUSTOM_PC_CAFE_CONFIG_FILE = "./config/Custom/PcCafe.ini";
 
     private static final String CUSTOM_PVP_ANNOUNCE_CONFIG_FILE = "./config/Custom/PvpAnnounce.ini";
@@ -145,9 +142,7 @@ public final class Config {
     public static boolean ALT_GAME_SUBCLASS_WITHOUT_QUESTS;
     public static boolean ALT_GAME_SUBCLASS_EVERYWHERE;
     public static boolean ALLOW_TRANSFORM_WITHOUT_QUEST;
-    public static int FEE_DELETE_TRANSFER_SKILLS;
-    public static int FEE_DELETE_SUBCLASS_SKILLS;
-    public static int FEE_DELETE_DUALCLASS_SKILLS;
+
     public static boolean RESTORE_SERVITOR_ON_RECONNECT;
     public static boolean RESTORE_PET_ON_RECONNECT;
     public static double MAX_BONUS_EXP;
@@ -180,7 +175,7 @@ public final class Config {
     public static int WAREHOUSE_SLOTS_CLAN;
     public static int ALT_FREIGHT_SLOTS;
     public static int ALT_FREIGHT_PRICE;
-    public static long MENTOR_PENALTY_FOR_MENTEE_COMPLETE;
+
     public static long MENTOR_PENALTY_FOR_MENTEE_LEAVE;
     public static boolean ALT_GAME_KARMA_PLAYER_CAN_BE_KILLED_IN_PEACEZONE;
     public static boolean ALT_GAME_KARMA_PLAYER_CAN_SHOP;
@@ -218,7 +213,7 @@ public final class Config {
     public static boolean REMOVE_CASTLE_CIRCLETS;
     public static int ALT_PARTY_MAX_MEMBERS;
     public static int ALT_PARTY_RANGE;
-    public static int ALT_PARTY_RANGE2;
+
     public static boolean ALT_LEAVE_PARTY_LEADER;
     public static boolean INITIAL_EQUIPMENT_EVENT;
     public static long STARTING_ADENA;
@@ -328,30 +323,13 @@ public final class Config {
     public static int TAKE_CASTLE_POINTS;
     public static int LOOSE_CASTLE_POINTS;
     public static int CASTLE_DEFENDED_POINTS;
-    public static int FESTIVAL_WIN_POINTS;
+
     public static int HERO_POINTS;
     public static int ROYAL_GUARD_COST;
     public static int KNIGHT_UNIT_COST;
-    public static int KNIGHT_REINFORCE_COST;
-    public static int BALLISTA_POINTS;
-    public static int BLOODALLIANCE_POINTS;
-    public static int BLOODOATH_POINTS;
-    public static int KNIGHTSEPAULETTE_POINTS;
     public static int REPUTATION_SCORE_PER_KILL;
     public static int JOIN_ACADEMY_MIN_REP_SCORE;
     public static int JOIN_ACADEMY_MAX_REP_SCORE;
-    public static int CLAN_LEVEL_6_COST;
-    public static int CLAN_LEVEL_7_COST;
-    public static int CLAN_LEVEL_8_COST;
-    public static int CLAN_LEVEL_9_COST;
-    public static int CLAN_LEVEL_10_COST;
-    public static int CLAN_LEVEL_11_COST;
-    public static int CLAN_LEVEL_6_REQUIREMENT;
-    public static int CLAN_LEVEL_7_REQUIREMENT;
-    public static int CLAN_LEVEL_8_REQUIREMENT;
-    public static int CLAN_LEVEL_9_REQUIREMENT;
-    public static int CLAN_LEVEL_10_REQUIREMENT;
-    public static int CLAN_LEVEL_11_REQUIREMENT;
     public static boolean ALLOW_WYVERN_ALWAYS;
     public static boolean ALLOW_WYVERN_DURING_SIEGE;
     public static boolean ALLOW_MOUNTS_DURING_SIEGE;
@@ -378,7 +356,6 @@ public final class Config {
     public static boolean GM_DEBUG_HTML_PATHS;
     public static boolean USE_SUPER_HASTE_AS_GM_SPEED;
     public static boolean LOG_CHAT;
-    public static boolean LOG_AUTO_ANNOUNCEMENTS;
     public static boolean LOG_ITEMS;
     public static boolean LOG_ITEMS_SMALL_LOG;
     public static boolean LOG_ITEM_ENCHANTS;
@@ -393,11 +370,7 @@ public final class Config {
     public static boolean ALT_DEV_NO_SPAWNS;
     public static boolean ALT_DEV_SHOW_QUESTS_LOAD_IN_LOGS;
     public static boolean ALT_DEV_SHOW_SCRIPTS_LOAD_IN_LOGS;
-    public static int SCHEDULED_THREAD_POOL_COUNT;
-    public static int THREADS_PER_SCHEDULED_THREAD_POOL;
-    public static int INSTANT_THREAD_POOL_COUNT;
-    public static int THREADS_PER_INSTANT_THREAD_POOL;
-    public static int IO_PACKET_THREAD_CORE_SIZE;
+
     public static boolean DEADLOCK_DETECTOR;
     public static int DEADLOCK_CHECK_INTERVAL;
     public static boolean RESTART_ON_DEADLOCK;
@@ -517,8 +490,7 @@ public final class Config {
     public static boolean JAIL_DISABLE_CHAT;
     public static boolean JAIL_DISABLE_TRANSACTION;
     public static boolean CUSTOM_NPC_DATA;
-    public static boolean CUSTOM_TELEPORT_TABLE;
-    public static boolean CUSTOM_SKILLS_LOAD;
+
     public static boolean CUSTOM_ITEMS_LOAD;
     public static boolean CUSTOM_MULTISELL_LOAD;
     public static boolean CUSTOM_BUYLIST_LOAD;
@@ -526,11 +498,8 @@ public final class Config {
     public static String ALT_BIRTHDAY_MAIL_SUBJECT;
     public static String ALT_BIRTHDAY_MAIL_TEXT;
     public static boolean ENABLE_BLOCK_CHECKER_EVENT;
-    public static int MIN_BLOCK_CHECKER_TEAM_MEMBERS;
     public static boolean HBCE_FAIR_PLAY;
     public static int PLAYER_MOVEMENT_BLOCK_TIME;
-    public static int ABILITY_MAX_POINTS;
-    public static long ABILITY_POINTS_RESET_ADENA;
     public static boolean BOTREPORT_ENABLE;
     public static String[] BOTREPORT_RESETPOINT_HOUR;
     public static long BOTREPORT_REPORT_DELAY;
@@ -559,7 +528,6 @@ public final class Config {
     // --------------------------------------------------
     // NPC Settings
     // --------------------------------------------------
-    public static boolean ANNOUNCE_MAMMON_SPAWN;
     public static boolean ALT_MOB_AGRO_IN_PEACEZONE;
     public static boolean ALT_ATTACKABLE_NPCS;
     public static boolean ALT_GAME_VIEWNPC;
@@ -611,7 +579,6 @@ public final class Config {
     public static boolean ANTIFEED_DUALBOX;
     public static boolean ANTIFEED_DISCONNECTED_AS_DUALBOX;
     public static int ANTIFEED_INTERVAL;
-    public static boolean ANNOUNCE_GAINAK_SIEGE;
 
     // --------------------------------------------------
     // Rate Settings
@@ -677,7 +644,6 @@ public final class Config {
     // --------------------------------------------------
     public static int PORT_GAME;
 
-    public static String GAMESERVER_HOSTNAME;
     public static int MAXIMUM_ONLINE_USERS;
     public static boolean HARDWARE_INFO_ENABLED;
     public static int MAX_PLAYERS_PER_HWID;
@@ -686,8 +652,6 @@ public final class Config {
     public static String CLAN_NAME_TEMPLATE;
     public static int MAX_CHARACTERS_NUMBER_PER_ACCOUNT;
     public static File DATAPACK_ROOT;
-    public static boolean ACCEPT_ALTERNATE_ID;
-    public static int REQUEST_ID;
     public static List<Integer> PROTOCOL_LIST;
     public static int SERVER_LIST_AGE;
     public static boolean SERVER_LIST_BRACKET;
@@ -711,8 +675,6 @@ public final class Config {
     // No classification assigned to the following yet
     // --------------------------------------------------
     public static int MAX_ITEM_IN_PACKET;
-    public static int GAME_SERVER_LOGIN_PORT;
-    public static String GAME_SERVER_LOGIN_HOST;
     public static List<String> GAME_SERVER_SUBNETS;
     public static List<String> GAME_SERVER_HOSTS;
     public static int PVP_NORMAL_TIME;
@@ -734,8 +696,6 @@ public final class Config {
     public static boolean TRAINING_CAMP_ENABLE;
 
     public static int TRAINING_CAMP_MAX_DURATION;
-    public static int TRAINING_CAMP_MIN_LEVEL;
-    public static int TRAINING_CAMP_MAX_LEVEL;
     public static double TRAINING_CAMP_EXP_MULTIPLIER;
     public static double TRAINING_CAMP_SP_MULTIPLIER;
 
@@ -790,7 +750,6 @@ public final class Config {
     public static int CHAMPION_REWARD_QTY;
     public static boolean CHAMPION_ENABLE_VITALITY;
     public static boolean CHAMPION_ENABLE_IN_INSTANCES;
-    public static boolean BANKING_SYSTEM_ENABLED;
     public static int BANKING_SYSTEM_GOLDBARS;
     public static int BANKING_SYSTEM_ADENA;
     public static boolean ENABLE_NPC_STAT_MULTIPIERS;
@@ -873,7 +832,6 @@ public final class Config {
     public static String TITLE_FOR_PVP_AMOUNT3;
     public static String TITLE_FOR_PVP_AMOUNT4;
     public static String TITLE_FOR_PVP_AMOUNT5;
-    public static boolean CHAT_ADMIN;
     public static boolean MULTILANG_ENABLE;
     public static List<String> MULTILANG_ALLOWED = new ArrayList<>();
     public static String MULTILANG_DEFAULT;
@@ -884,7 +842,6 @@ public final class Config {
     public static int DUALBOX_CHECK_MAX_L2EVENT_PARTICIPANTS_PER_IP;
     public static boolean DUALBOX_COUNT_OFFLINE_TRADERS;
     public static Map<Integer, Integer> DUALBOX_CHECK_WHITELIST;
-    public static boolean ALLOW_CHANGE_PASSWORD;
 
     public static boolean AUTO_POTIONS_ENABLED;
     public static boolean AUTO_POTIONS_IN_OLYMPIAD;
@@ -922,7 +879,6 @@ public final class Config {
     public static List<Integer> COMMUNITY_AVAILABLE_BUFFS;
     public static Map<String, Location> COMMUNITY_AVAILABLE_TELEPORTS;
 
-    public static boolean ENABLE_FIND_PVP;
     public static boolean PC_CAFE_ENABLED;
     public static boolean PC_CAFE_ONLY_VIP;
     public static int PC_CAFE_MAX_POINTS;
@@ -984,15 +940,7 @@ public final class Config {
         FLOOD_PROTECTOR_ITEM_AUCTION = new FloodProtectorConfig("ItemAuctionFloodProtector");
 
         final PropertiesParser serverSettings = new PropertiesParser(SERVER_CONFIG_FILE);
-
-        GAMESERVER_HOSTNAME = serverSettings.getString("GameserverHostname", "0.0.0.0");
         PORT_GAME = serverSettings.getInt("GameserverPort", 7777);
-
-        GAME_SERVER_LOGIN_PORT = serverSettings.getInt("LoginPort", 9014);
-        GAME_SERVER_LOGIN_HOST = serverSettings.getString("LoginHost", "127.0.0.1");
-
-        REQUEST_ID = serverSettings.getInt("RequestServerID", 0);
-        ACCEPT_ALTERNATE_ID = serverSettings.getBoolean("AcceptAlternateID", true);
 
         try {
             DATAPACK_ROOT = new File(serverSettings.getString("DatapackRoot", ".").replaceAll("\\\\", "/")).getCanonicalFile();
@@ -1033,12 +981,6 @@ public final class Config {
 
         SERVER_LIST_AGE = serverSettings.getInt("ServerListAge", 0);
         SERVER_LIST_BRACKET = serverSettings.getBoolean("ServerListBrackets", false);
-
-        SCHEDULED_THREAD_POOL_COUNT = serverSettings.getInt("ScheduledThreadPoolCount", -1);
-        THREADS_PER_SCHEDULED_THREAD_POOL = serverSettings.getInt("ThreadsPerScheduledThreadPool", 4);
-        INSTANT_THREAD_POOL_COUNT = serverSettings.getInt("InstantThreadPoolCount", -1);
-        THREADS_PER_INSTANT_THREAD_POOL = serverSettings.getInt("ThreadsPerInstantThreadPool", 2);
-        IO_PACKET_THREAD_CORE_SIZE = serverSettings.getInt("UrgentPacketThreadCoreSize", 2);
 
         DEADLOCK_DETECTOR = serverSettings.getBoolean("DeadLockDetector", true);
         DEADLOCK_CHECK_INTERVAL = serverSettings.getInt("DeadLockCheckInterval", 20);
@@ -1125,30 +1067,13 @@ public final class Config {
         TAKE_CASTLE_POINTS = Feature.getInt("TakeCastlePoints", 1500);
         LOOSE_CASTLE_POINTS = Feature.getInt("LooseCastlePoints", 3000);
         CASTLE_DEFENDED_POINTS = Feature.getInt("CastleDefendedPoints", 750);
-        FESTIVAL_WIN_POINTS = Feature.getInt("FestivalOfDarknessWin", 200);
+
         HERO_POINTS = Feature.getInt("HeroPoints", 1000);
         ROYAL_GUARD_COST = Feature.getInt("CreateRoyalGuardCost", 5000);
         KNIGHT_UNIT_COST = Feature.getInt("CreateKnightUnitCost", 10000);
-        KNIGHT_REINFORCE_COST = Feature.getInt("ReinforceKnightUnitCost", 5000);
-        BALLISTA_POINTS = Feature.getInt("KillBallistaPoints", 500);
-        BLOODALLIANCE_POINTS = Feature.getInt("BloodAlliancePoints", 500);
-        BLOODOATH_POINTS = Feature.getInt("BloodOathPoints", 200);
-        KNIGHTSEPAULETTE_POINTS = Feature.getInt("KnightsEpaulettePoints", 20);
         REPUTATION_SCORE_PER_KILL = Feature.getInt("ReputationScorePerKill", 1);
         JOIN_ACADEMY_MIN_REP_SCORE = Feature.getInt("CompleteAcademyMinPoints", 190);
         JOIN_ACADEMY_MAX_REP_SCORE = Feature.getInt("CompleteAcademyMaxPoints", 650);
-        CLAN_LEVEL_6_COST = Feature.getInt("ClanLevel6Cost", 5000);
-        CLAN_LEVEL_7_COST = Feature.getInt("ClanLevel7Cost", 10000);
-        CLAN_LEVEL_8_COST = Feature.getInt("ClanLevel8Cost", 20000);
-        CLAN_LEVEL_9_COST = Feature.getInt("ClanLevel9Cost", 40000);
-        CLAN_LEVEL_10_COST = Feature.getInt("ClanLevel10Cost", 40000);
-        CLAN_LEVEL_11_COST = Feature.getInt("ClanLevel11Cost", 75000);
-        CLAN_LEVEL_6_REQUIREMENT = Feature.getInt("ClanLevel6Requirement", 30);
-        CLAN_LEVEL_7_REQUIREMENT = Feature.getInt("ClanLevel7Requirement", 50);
-        CLAN_LEVEL_8_REQUIREMENT = Feature.getInt("ClanLevel8Requirement", 80);
-        CLAN_LEVEL_9_REQUIREMENT = Feature.getInt("ClanLevel9Requirement", 120);
-        CLAN_LEVEL_10_REQUIREMENT = Feature.getInt("ClanLevel10Requirement", 140);
-        CLAN_LEVEL_11_REQUIREMENT = Feature.getInt("ClanLevel11Requirement", 170);
         ALLOW_WYVERN_ALWAYS = Feature.getBoolean("AllowRideWyvernAlways", false);
         ALLOW_WYVERN_DURING_SIEGE = Feature.getBoolean("AllowRideWyvernDuringSiege", true);
         ALLOW_MOUNTS_DURING_SIEGE = Feature.getBoolean("AllowRideMountsDuringSiege", false);
@@ -1242,9 +1167,6 @@ public final class Config {
         RESTORE_SERVITOR_ON_RECONNECT = Character.getBoolean("RestoreServitorOnReconnect", true);
         RESTORE_PET_ON_RECONNECT = Character.getBoolean("RestorePetOnReconnect", true);
         ALLOW_TRANSFORM_WITHOUT_QUEST = Character.getBoolean("AltTransformationWithoutQuest", false);
-        FEE_DELETE_TRANSFER_SKILLS = Character.getInt("FeeDeleteTransferSkills", 10000000);
-        FEE_DELETE_SUBCLASS_SKILLS = Character.getInt("FeeDeleteSubClassSkills", 10000000);
-        FEE_DELETE_DUALCLASS_SKILLS = Character.getInt("FeeDeleteDualClassSkills", 20000000);
         ENABLE_VITALITY = Character.getBoolean("EnableVitality", true);
         STARTING_VITALITY_POINTS = Character.getInt("StartingVitalityPoints", 140000);
         RAIDBOSS_USE_VITALITY = Character.getBoolean("RaidbossUseVitality", true);
@@ -1279,8 +1201,8 @@ public final class Config {
         WAREHOUSE_SLOTS_CLAN = Character.getInt("MaximumWarehouseSlotsForClan", 150);
         ALT_FREIGHT_SLOTS = Character.getInt("MaximumFreightSlots", 200);
         ALT_FREIGHT_PRICE = Character.getInt("FreightPrice", 1000);
-        MENTOR_PENALTY_FOR_MENTEE_COMPLETE = Character.getInt("MentorPenaltyForMenteeComplete", 1) * 24 * 60 * 60 * 1000;
-        MENTOR_PENALTY_FOR_MENTEE_COMPLETE = Character.getInt("MentorPenaltyForMenteeLeave", 2) * 24 * 60 * 60 * 1000;
+
+        MENTOR_PENALTY_FOR_MENTEE_LEAVE = Character.getInt("MentorPenaltyForMenteeLeave", 2) * 24 * 60 * 60 * 1000;
         ENCHANT_CHANCE_ELEMENT_STONE = Character.getDouble("EnchantChanceElementStone", 50);
         ENCHANT_CHANCE_ELEMENT_CRYSTAL = Character.getDouble("EnchantChanceElementCrystal", 30);
         ENCHANT_CHANCE_ELEMENT_JEWEL = Character.getDouble("EnchantChanceElementJewel", 20);
@@ -1337,7 +1259,7 @@ public final class Config {
         REMOVE_CASTLE_CIRCLETS = Character.getBoolean("RemoveCastleCirclets", true);
         ALT_PARTY_MAX_MEMBERS = Character.getInt("AltPartyMaxMembers", 7);
         ALT_PARTY_RANGE = Character.getInt("AltPartyRange", 1600);
-        ALT_PARTY_RANGE2 = Character.getInt("AltPartyRange2", 1400);
+
         ALT_LEAVE_PARTY_LEADER = Character.getBoolean("AltLeavePartyLeader", false);
         INITIAL_EQUIPMENT_EVENT = Character.getBoolean("InitialEquipmentEvent", false);
         STARTING_ADENA = Character.getLong("StartingAdena", 0);
@@ -1405,8 +1327,6 @@ public final class Config {
         SILENCE_MODE_EXCLUDE = Character.getBoolean("SilenceModeExclude", false);
 
         PLAYER_MOVEMENT_BLOCK_TIME = Character.getInt("NpcTalkBlockingTime", 0) * 1000;
-        ABILITY_MAX_POINTS = Character.getInt("AbilityMaxPoints", 16);
-        ABILITY_POINTS_RESET_ADENA = Character.getLong("AbilityPointsResetAdena", 10_000_000);
 
         // Load Training Camp config file (if exists)
         final PropertiesParser trainingCampSettings = new PropertiesParser(TRAINING_CAMP_CONFIG_FILE);
@@ -1414,8 +1334,6 @@ public final class Config {
         TRAINING_CAMP_ENABLE = trainingCampSettings.getBoolean("TrainingCampEnable", false);
 
         TRAINING_CAMP_MAX_DURATION = trainingCampSettings.getInt("TrainingCampDuration", 18000);
-        TRAINING_CAMP_MIN_LEVEL = trainingCampSettings.getInt("TrainingCampMinLevel", 18);
-        TRAINING_CAMP_MAX_LEVEL = trainingCampSettings.getInt("TrainingCampMaxLevel", 127);
         TRAINING_CAMP_EXP_MULTIPLIER = trainingCampSettings.getDouble("TrainingCampExpMultiplier", 1.0);
         TRAINING_CAMP_SP_MULTIPLIER = trainingCampSettings.getDouble("TrainingCampSpMultiplier", 1.0);
 
@@ -1440,7 +1358,7 @@ public final class Config {
         GM_DEBUG_HTML_PATHS = General.getBoolean("GMDebugHtmlPaths", true);
         USE_SUPER_HASTE_AS_GM_SPEED = General.getBoolean("UseSuperHasteAsGMSpeed", false);
         LOG_CHAT = General.getBoolean("LogChat", false);
-        LOG_AUTO_ANNOUNCEMENTS = General.getBoolean("LogAutoAnnouncements", false);
+
         LOG_ITEMS = General.getBoolean("LogItems", false);
         LOG_ITEMS_SMALL_LOG = General.getBoolean("LogItemsSmallLog", false);
         LOG_ITEM_ENCHANTS = General.getBoolean("LogItemEnchants", false);
@@ -1545,8 +1463,6 @@ public final class Config {
         JAIL_DISABLE_CHAT = General.getBoolean("JailDisableChat", true);
         JAIL_DISABLE_TRANSACTION = General.getBoolean("JailDisableTransaction", false);
         CUSTOM_NPC_DATA = General.getBoolean("CustomNpcData", false);
-        CUSTOM_TELEPORT_TABLE = General.getBoolean("CustomTeleportTable", false);
-        CUSTOM_SKILLS_LOAD = General.getBoolean("CustomSkillsLoad", false);
         CUSTOM_ITEMS_LOAD = General.getBoolean("CustomItemsLoad", false);
         CUSTOM_MULTISELL_LOAD = General.getBoolean("CustomMultisellLoad", false);
         CUSTOM_BUYLIST_LOAD = General.getBoolean("CustomBuyListLoad", false);
@@ -1554,12 +1470,7 @@ public final class Config {
         ALT_BIRTHDAY_MAIL_SUBJECT = General.getString("AltBirthdayMailSubject", "Happy Birthday!");
         ALT_BIRTHDAY_MAIL_TEXT = General.getString("AltBirthdayMailText", "Hello Adventurer!! Seeing as you're one year older now, I thought I would send you some birthday cheer :) Please find your birthday pack attached. May these gifts bring you joy and happiness on this very special day." + EOL + EOL + "Sincerely, Alegria");
         ENABLE_BLOCK_CHECKER_EVENT = General.getBoolean("EnableBlockCheckerEvent", false);
-        MIN_BLOCK_CHECKER_TEAM_MEMBERS = General.getInt("BlockCheckerMinTeamMembers", 2);
-        if (MIN_BLOCK_CHECKER_TEAM_MEMBERS < 1) {
-            MIN_BLOCK_CHECKER_TEAM_MEMBERS = 1;
-        } else if (MIN_BLOCK_CHECKER_TEAM_MEMBERS > 6) {
-            MIN_BLOCK_CHECKER_TEAM_MEMBERS = 6;
-        }
+
         HBCE_FAIR_PLAY = General.getBoolean("HBCEFairPlay", false);
 
         BOTREPORT_ENABLE = General.getBoolean("EnableBotReportButton", false);
@@ -1576,7 +1487,6 @@ public final class Config {
         // Load NPC config file (if exists)
         final PropertiesParser NPC = new PropertiesParser(NPC_CONFIG_FILE);
 
-        ANNOUNCE_MAMMON_SPAWN = NPC.getBoolean("AnnounceMammonSpawn", false);
         ALT_MOB_AGRO_IN_PEACEZONE = NPC.getBoolean("AltMobAgroInPeaceZone", true);
         ALT_ATTACKABLE_NPCS = NPC.getBoolean("AltAttackableNpcs", true);
         ALT_GAME_VIEWNPC = NPC.getBoolean("AltGameViewNpc", false);
@@ -1787,7 +1697,6 @@ public final class Config {
         PVP_PVP_TIME = PVPSettings.getInt("PvPVsPvPTime", 60000);
         MAX_REPUTATION = PVPSettings.getInt("MaxReputation", 500);
         REPUTATION_INCREASE = PVPSettings.getInt("ReputationIncrease", 100);
-        ANNOUNCE_GAINAK_SIEGE = PVPSettings.getBoolean("AnnounceGainakSiege", false);
 
         // Load Olympiad config file (if exists)
         final PropertiesParser Olympiad = new PropertiesParser(OLYMPIAD_CONFIG_FILE);
@@ -1905,7 +1814,6 @@ public final class Config {
         // Load Banking config file (if exists)
         final PropertiesParser Banking = new PropertiesParser(CUSTOM_BANKING_CONFIG_FILE);
 
-        BANKING_SYSTEM_ENABLED = Banking.getBoolean("BankingEnabled", false);
         BANKING_SYSTEM_GOLDBARS = Banking.getInt("BankingGoldbarCount", 1);
         BANKING_SYSTEM_ADENA = Banking.getInt("BankingAdenaCount", 500000000);
 
@@ -1972,10 +1880,6 @@ public final class Config {
         CHAMPION_ENABLE_VITALITY = ChampionMonster.getBoolean("ChampionEnableVitality", false);
         CHAMPION_ENABLE_IN_INSTANCES = ChampionMonster.getBoolean("ChampionEnableInInstances", false);
 
-        // Load ChatModeration config file (if exists)
-        final PropertiesParser ChatModeration = new PropertiesParser(CUSTOM_CHAT_MODERATION_CONFIG_FILE);
-
-        CHAT_ADMIN = ChatModeration.getBoolean("ChatAdmin", true);
 
         // Load CommunityBoard config file (if exists)
         final PropertiesParser CommunityBoard = new PropertiesParser(CUSTOM_COMMUNITY_BOARD_CONFIG_FILE);
@@ -2030,10 +1934,6 @@ public final class Config {
             }
         }
 
-        // Load FindPvP config file (if exists)
-        final PropertiesParser FindPvP = new PropertiesParser(CUSTOM_FIND_PVP_CONFIG_FILE);
-        ENABLE_FIND_PVP = FindPvP.getBoolean("EnableFindPvP", false);
-
         // Load MultilingualSupport config file (if exists)
         final PropertiesParser MultilingualSupport = new PropertiesParser(CUSTOM_MULTILANGUAL_SUPPORT_CONFIG_FILE);
 
@@ -2063,11 +1963,6 @@ public final class Config {
         OFFLINE_MAX_DAYS = OfflineTrade.getInt("OfflineMaxDays", 10);
         OFFLINE_DISCONNECT_FINISHED = OfflineTrade.getBoolean("OfflineDisconnectFinished", true);
         STORE_OFFLINE_TRADE_IN_REALTIME = OfflineTrade.getBoolean("StoreOfflineTradeInRealtime", true);
-
-        // Load PasswordChange config file (if exists)
-        final PropertiesParser PasswordChange = new PropertiesParser(CUSTOM_PASSWORD_CHANGE_CONFIG_FILE);
-
-        ALLOW_CHANGE_PASSWORD = PasswordChange.getBoolean("AllowChangePassword", false);
 
         // Load PcCafe config file (if exists)
         final PropertiesParser PcCafe = new PropertiesParser(CUSTOM_PC_CAFE_CONFIG_FILE);
@@ -2334,11 +2229,6 @@ public final class Config {
             }
         }
         return result;
-    }
-
-    public enum IdFactoryType {
-        BitSet,
-        Stack
     }
 
     private static class IPConfigData extends GameXmlReader {
