@@ -20,12 +20,8 @@ import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.sql.impl.PlayerNameTable;
 import org.l2j.gameserver.data.xml.impl.ClassListData;
-import org.l2j.gameserver.data.xml.impl.SkillTreesData;
-import org.l2j.gameserver.enums.CategoryType;
 import org.l2j.gameserver.enums.SubclassInfoType;
 import org.l2j.gameserver.handler.IAdminCommandHandler;
-import org.l2j.gameserver.network.serverpackets.html.NpcHtmlMessage;
-import org.l2j.gameserver.world.World;
 import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.Playable;
@@ -39,7 +35,9 @@ import org.l2j.gameserver.model.stats.Stats;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.*;
+import org.l2j.gameserver.network.serverpackets.html.NpcHtmlMessage;
 import org.l2j.gameserver.util.BuilderUtil;
+import org.l2j.gameserver.world.World;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -47,6 +45,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.util.*;
 
+import static org.l2j.gameserver.network.SystemMessageId.YOUR_TITLE_HAS_BEEN_CHANGED;
 import static org.l2j.gameserver.util.GameUtils.*;
 
 
@@ -406,7 +405,7 @@ public class AdminEditChar implements IAdminCommandHandler
 					return false;
 				}
 				player.setTitle(val);
-				player.sendMessage("Your title has been changed by a GM");
+				player.sendPacket(YOUR_TITLE_HAS_BEEN_CHANGED);
 				player.broadcastTitleInfo();
 			}
 			catch (StringIndexOutOfBoundsException e)

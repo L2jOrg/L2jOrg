@@ -1,7 +1,6 @@
 package org.l2j.gameserver.data.xml.impl;
 
 import io.github.joealisson.primitive.*;
-import org.l2j.gameserver.Config;
 import org.l2j.gameserver.enums.Race;
 import org.l2j.gameserver.model.Clan;
 import org.l2j.gameserver.model.SkillLearn;
@@ -320,7 +319,7 @@ public final class SkillTreesData extends GameXmlReader {
         for (var entry : skills.entrySet()) {
             final SkillLearn skill = entry.getValue();
 
-            if (((skill.getSkillId() == CommonSkill.DIVINE_INSPIRATION.getId()) && (!Config.AUTO_LEARN_DIVINE_INSPIRATION && includeAutoGet) && !player.isGM()) || (!includeAutoGet && skill.isAutoGet()) || (!includeByFs && skill.isLearnedByFS()) || isRemoveSkill(classId, skill.getSkillId())) {
+            if(skill.isAutoGet() && !includeAutoGet || skill.isLearnedByFS() && !includeByFs || isRemoveSkill(classId, skill.getSkillId())) {
                 continue;
             }
 
@@ -409,8 +408,6 @@ public final class SkillTreesData extends GameXmlReader {
             if (!skill.getRaces().isEmpty() && !skill.getRaces().contains(race)) {
                 continue;
             }
-
-            final int maxLvl = SkillData.getInstance().getMaxLevel(skill.getSkillId());
 
             if (skill.isAutoGet() && (player.getLevel() >= skill.getGetLevel())) {
                 final Skill oldSkill = player.getKnownSkill(skill.getSkillId());

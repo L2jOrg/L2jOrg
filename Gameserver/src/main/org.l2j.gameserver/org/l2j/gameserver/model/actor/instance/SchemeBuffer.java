@@ -13,6 +13,8 @@ import org.l2j.gameserver.network.serverpackets.html.NpcHtmlMessage;
 import java.text.NumberFormat;
 import java.util.*;
 
+import static org.l2j.gameserver.network.SystemMessageId.YOU_DO_NOT_HAVE_A_PET;
+
 public class SchemeBuffer extends Npc {
     private static final int PAGE_LIMIT = 6;
 
@@ -134,7 +136,7 @@ public class SchemeBuffer extends Npc {
             }
 
             if (target == null) {
-                player.sendMessage("You don't have a pet.");
+                player.sendPacket(YOU_DO_NOT_HAVE_A_PET);
             } else if ((cost == 0) || player.reduceAdena("NPC Buffer", cost, this, true)) {
                 for (int skillId : SchemeBufferTable.getInstance().getScheme(player.getObjectId(), schemeName)) {
                     SkillData.getInstance().getSkill(skillId, SkillData.getInstance().getMaxLevel(skillId)).applyEffects(this, target);

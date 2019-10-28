@@ -62,4 +62,8 @@ public enum CommonSkill {
     public Skill getSkill() {
         return _holder.getSkill();
     }
+
+    public boolean isSame(int skillId) {
+        return  skillId == _holder.getSkillId();
+    }
 }

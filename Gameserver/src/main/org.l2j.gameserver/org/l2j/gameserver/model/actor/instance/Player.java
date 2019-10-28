@@ -115,6 +115,7 @@ import static java.util.Objects.nonNull;
 import static org.l2j.commons.database.DatabaseAccess.getDAO;
 import static org.l2j.commons.util.Util.zeroIfNullOrElse;
 import static org.l2j.gameserver.network.SystemMessageId.S1_HAS_INFLICTED_S3_S4_ATTRIBUTE_DAMGE_DAMAGE_TO_S2;
+import static org.l2j.gameserver.network.SystemMessageId.YOU_CANNOT_MOVE_WHILE_CASTING;
 
 /**
  * This class represents all player characters in the world.<br>
@@ -2538,7 +2539,7 @@ public final class Player extends Playable {
 
     public void sitDown(boolean checkCast) {
         if (checkCast && isCastingNow()) {
-            sendMessage("Cannot sit while casting.");
+            sendPacket(YOU_CANNOT_MOVE_WHILE_CASTING);
             return;
         }
 
@@ -2548,7 +2549,7 @@ public final class Player extends Playable {
             getAI().setIntention(CtrlIntention.AI_INTENTION_REST);
             broadcastPacket(new ChangeWaitType(this, ChangeWaitType.WT_SITTING));
             // Schedule a sit down task to wait for the animation to finish
-            ThreadPoolManager.getInstance().schedule(new SitDownTask(this), 2500);
+            ThreadPoolManager.schedule(new SitDownTask(this), 2500);
             setBlockActions(true);
         }
     }
@@ -2566,7 +2567,7 @@ public final class Player extends Playable {
 
             broadcastPacket(new ChangeWaitType(this, ChangeWaitType.WT_STANDING));
             // Schedule a stand up task to wait for the animation to finish
-            ThreadPoolManager.getInstance().schedule(new StandUpTask(this), 2500);
+            ThreadPoolManager.schedule(new StandUpTask(this), 2500);
         }
     }
 

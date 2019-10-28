@@ -130,7 +130,7 @@ public final class Config {
     public static boolean DANCE_CANCEL_BUFF;
     public static boolean DANCE_CONSUME_ADDITIONAL_MP;
     public static boolean ALT_STORE_DANCES;
-    public static boolean AUTO_LEARN_DIVINE_INSPIRATION;
+
     public static boolean ALT_GAME_CANCEL_BOW;
     public static boolean ALT_GAME_CANCEL_CAST;
     public static boolean ALT_GAME_MAGICFAILURES;
@@ -1226,7 +1226,6 @@ public final class Config {
         DANCE_CANCEL_BUFF = Character.getBoolean("DanceCancelBuff", false);
         DANCE_CONSUME_ADDITIONAL_MP = Character.getBoolean("DanceConsumeAdditionalMP", true);
         ALT_STORE_DANCES = Character.getBoolean("AltStoreDances", false);
-        AUTO_LEARN_DIVINE_INSPIRATION = Character.getBoolean("AutoLearnDivineInspiration", false);
         ALT_GAME_CANCEL_BOW = Character.getString("AltGameCancelByHit", "Cast").equalsIgnoreCase("bow") || Character.getString("AltGameCancelByHit", "Cast").equalsIgnoreCase("all");
         ALT_GAME_CANCEL_CAST = Character.getString("AltGameCancelByHit", "Cast").equalsIgnoreCase("cast") || Character.getString("AltGameCancelByHit", "Cast").equalsIgnoreCase("all");
         ALT_GAME_MAGICFAILURES = Character.getBoolean("MagicFailures", true);

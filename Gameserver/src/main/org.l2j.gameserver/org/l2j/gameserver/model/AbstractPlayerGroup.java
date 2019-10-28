@@ -1,14 +1,11 @@
 package org.l2j.gameserver.model;
 
-import org.l2j.commons.util.Rnd;
-import org.l2j.gameserver.enums.Race;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.CreatureSay;
 import org.l2j.gameserver.network.serverpackets.ServerPacket;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Function;
 
@@ -20,19 +17,6 @@ public abstract class AbstractPlayerGroup {
      * @return a list of all members of this group
      */
     public abstract List<Player> getMembers();
-
-    /**
-     * @return a list of object IDs of the members of this group
-     */
-    public List<Integer> getMembersObjectId() {
-        final List<Integer> ids = new ArrayList<>();
-        forEachMember(m ->
-        {
-            ids.add(m.getObjectId());
-            return true;
-        });
-        return ids;
-    }
 
     /**
      * @return the leader of this group
@@ -71,19 +55,6 @@ public abstract class AbstractPlayerGroup {
     }
 
     /**
-     * @return the count of all player races in this group
-     */
-    public int getRaceCount() {
-        final List<Race> partyRaces = new ArrayList<>();
-        for (Player member : getMembers()) {
-            if (!partyRaces.contains(member.getRace())) {
-                partyRaces.add(member.getRace());
-            }
-        }
-        return partyRaces.size();
-    }
-
-    /**
      * @return the level of this group
      */
     public abstract int getLevel();
@@ -112,15 +83,6 @@ public abstract class AbstractPlayerGroup {
         broadcastPacket(SystemMessage.getSystemMessage(message));
     }
 
-    /**
-     * Broadcast a text message to this group.
-     *
-     * @param text to broadcast
-     */
-    public void broadcastString(String text) {
-        broadcastPacket(SystemMessage.sendString(text));
-    }
-
     public void broadcastCreatureSay(CreatureSay msg, Player broadcaster) {
         forEachMember(m ->
         {
@@ -139,13 +101,6 @@ public abstract class AbstractPlayerGroup {
      */
     public boolean containsPlayer(Player player) {
         return getMembers().contains(player);
-    }
-
-    /**
-     * @return a random member of this group
-     */
-    public Player getRandomPlayer() {
-        return getMembers().get(Rnd.get(getMembers().size()));
     }
 
     /**

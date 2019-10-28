@@ -70,10 +70,7 @@ public final class SystemMessageId {
     @ClientString(id = 32, message = "You are unable to engage in combat. Please go to the nearest restart point.")
     public static SystemMessageId YOU_ARE_UNABLE_TO_ENGAGE_IN_COMBAT_PLEASE_GO_TO_THE_NEAREST_RESTART_POINT;
 
-    @ClientString(id = 33, message = "You cannot move while casting.")
-    public static SystemMessageId YOU_CANNOT_MOVE_WHILE_CASTING;
-
-     @ClientString(id = 36, message = "$c1 hit you for $s2 damage.")
+    @ClientString(id = 36, message = "$c1 hit you for $s2 damage.")
     public static SystemMessageId C1_HIT_YOU_FOR_S2_DAMAGE;
 
     @ClientString(id = 37, message = "$c1 hit you for $s2 damage.")
@@ -14186,6 +14183,9 @@ public final class SystemMessageId {
 
     @ClientString(id = 31, message = "You cannot use actions and skills while the character is sitting.")
     public static SystemMessageId YOU_CANNOT_USE_ACTIONS_AND_SKILLS_WHILE_THE_CHARACTER_IS_SITTING;
+
+    @ClientString(id = 33, message = "You cannot move while casting.")
+    public static SystemMessageId YOU_CANNOT_MOVE_WHILE_CASTING;
 
     @ClientString(id = 34, message = "Welcome to the World of Lineage II.")
     public static SystemMessageId WELCOME_TO_THE_WORLD_OF_LINEAGE_II;
