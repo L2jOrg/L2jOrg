@@ -4,6 +4,8 @@ import org.l2j.gameserver.enums.ShortcutType;
 import org.l2j.gameserver.model.Shortcut;
 import org.l2j.gameserver.network.serverpackets.ShortCutRegister;
 
+import static org.l2j.gameserver.network.SystemMessageId.ONLY_MACROS_CAN_BE_REGISTERED;
+
 public final class RequestShortCutReg extends ClientPacket {
     private ShortcutType type;
     private int id;
@@ -30,6 +32,11 @@ public final class RequestShortCutReg extends ClientPacket {
     @Override
     public void runImpl() {
         if ((client.getPlayer() == null) || (page > 23) || (page < 0)) {
+            return;
+        }
+
+        if(page == 23 && type != ShortcutType.MACRO) {
+            client.sendPacket(ONLY_MACROS_CAN_BE_REGISTERED);
             return;
         }
 

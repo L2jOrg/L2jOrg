@@ -8,7 +8,7 @@ import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.serverpackets.ConfirmDlg;
 import org.l2j.gameserver.settings.GeneralSettings;
 import org.l2j.gameserver.util.GMAudit;
-import org.l2j.gameserver.util.TimeAmountInterpreter;
+import org.l2j.commons.util.TimeInterpreter;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -94,7 +94,7 @@ public class AdminCommandHandler implements IHandler<IAdminCommandHandler, Strin
                     LOGGER.warn("Exception during execution of " + fullCommand, e);
                 } finally {
                     final long runtime = System.currentTimeMillis() - begin;
-                    player.sendMessage("The execution of '" + fullCommand + "' took " + TimeAmountInterpreter.consolidateMillis(runtime) + ".");
+                    player.sendMessage("The execution of '" + fullCommand + "' took " + TimeInterpreter.consolidateMillis(runtime) + ".");
                 }
             });
         }

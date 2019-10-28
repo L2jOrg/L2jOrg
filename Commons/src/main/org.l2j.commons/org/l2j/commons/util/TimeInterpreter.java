@@ -1,15 +1,4 @@
-/*
- * Copyright (c) 1999 CERN - European Organization for Nuclear Research.
- *
- * Permission to use, copy, modify, distribute and sell this software
- * and its documentation for any purpose is hereby granted without fee,
- * provided that the above copyright notice appear in all copies and
- * that both that copyright notice and this permission notice appear in
- * supporting documentation. CERN makes no representations about the
- * suitability of this software for any purpose. It is provided "as is"
- * without expressed or implied warranty.
- */
-package org.l2j.gameserver.util;
+package org.l2j.commons.util;
 
 import java.io.IOException;
 import java.util.Locale;
@@ -22,11 +11,12 @@ import static java.util.concurrent.TimeUnit.MILLISECONDS;
  * Allows to present time intervals in a standardized, user friendly manner.
  *
  * @author _dev_
+ * @author JoeAlisson
  */
-public class TimeAmountInterpreter {
+public class TimeInterpreter {
     private static final TimeUnit[] UNIT_CACHE = TimeUnit.values();
 
-    private TimeAmountInterpreter() {
+    private TimeInterpreter() {
         // utility class
     }
 
@@ -47,8 +37,19 @@ public class TimeAmountInterpreter {
      * @param timeUnit   unit of the given amount
      * @return an user-friendly description of the given time amount
      */
-    private static String consolidate(long timeAmount, TimeUnit timeUnit) {
+    public static String consolidate(long timeAmount, TimeUnit timeUnit) {
         return consolidate(timeAmount, timeUnit, timeUnit, DAYS, "0 " + timeUnit.name().toLowerCase(Locale.ENGLISH));
+    }
+
+    /**
+     * Constructs an user-friendly description of the given amount of time, specifying the number of days (if any), hours (if any), minutes (if any), seconds (if any) and milliseconds (if any). Otherwise, returns the string value {@code 0}.
+     *
+     * @param timeAmount amount of time to be written
+     * @param timeUnit   unit of the given amount
+     * @return an user-friendly description of the given time amount
+     */
+    public static String consolidate(long timeAmount, TimeUnit timeUnit, TimeUnit minUnit) {
+        return consolidate(timeAmount, timeUnit, minUnit, DAYS, "0 " + timeUnit.name().toLowerCase(Locale.ENGLISH));
     }
 
     /**

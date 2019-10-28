@@ -2,14 +2,13 @@ package org.l2j.gameserver.model.olympiad;
 
 import io.github.joealisson.primitive.IntSet;
 import org.l2j.commons.database.DatabaseFactory;
-import org.l2j.gameserver.Config;
 import org.l2j.commons.threading.ThreadPoolManager;
+import org.l2j.commons.util.TimeInterpreter;
+import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.xml.CategoryManager;
 import org.l2j.gameserver.data.xml.impl.ClassListData;
 import org.l2j.gameserver.enums.CategoryType;
 import org.l2j.gameserver.instancemanager.AntiFeedManager;
-import org.l2j.gameserver.world.zone.ZoneManager;
-import org.l2j.gameserver.world.World;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.base.ClassId;
@@ -18,6 +17,8 @@ import org.l2j.gameserver.model.events.ListenersContainer;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
 import org.l2j.gameserver.util.Broadcast;
+import org.l2j.gameserver.world.World;
+import org.l2j.gameserver.world.zone.ZoneManager;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -31,6 +32,7 @@ import java.util.*;
 import java.util.Map.Entry;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ScheduledFuture;
+import java.util.concurrent.TimeUnit;
 
 /**
  * @author godson
@@ -219,12 +221,14 @@ public class Olympiad extends ListenersContainer {
                 milliToEnd = getMillisToValidationEnd();
             }
 
-            LOGGER.info("{} minutes until period ends", (milliToEnd / 60000));
+
+
+            LOGGER.info("{} until period ends", TimeInterpreter.consolidate(milliToEnd, TimeUnit.MILLISECONDS, TimeUnit.MINUTES));
 
             if (_period == 0) {
                 milliToEnd = getMillisToWeekChange();
 
-                LOGGER.info("Next weekly change is in {} minutes", (milliToEnd / 60000) );
+                LOGGER.info("Next weekly change is in {}", TimeInterpreter.consolidate(milliToEnd, TimeUnit.MILLISECONDS, TimeUnit.MINUTES) );
             }
         }
 
