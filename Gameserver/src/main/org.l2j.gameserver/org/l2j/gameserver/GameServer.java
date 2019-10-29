@@ -270,7 +270,7 @@ public class GameServer {
         printSection("Scripting Engine");
         ScriptEngineManager.init();
 
-        ThreadPool.schedulePurge();
+        ThreadPool.getInstance().schedulePurge();
         INSTANCE = new GameServer();
         ThreadPool.execute(AuthServerCommunication.getInstance());
     }

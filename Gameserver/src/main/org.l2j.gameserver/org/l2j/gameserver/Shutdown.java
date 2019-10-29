@@ -126,7 +126,7 @@ public class Shutdown extends Thread {
 
             // stop all thread pools
             try {
-                ThreadPool.shutdown();
+                ThreadPool.getInstance().shutdown();
                 LOGGER.info("Thread Pool Manager: Manager has been shut down(" + tc.getEstimatedTimeAndRestartCounter() + "ms).");
             } catch (Throwable t) {
                 // ignore

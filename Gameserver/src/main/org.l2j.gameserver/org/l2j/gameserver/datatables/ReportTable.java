@@ -85,7 +85,7 @@ public final class ReportTable {
                 final SAXParser parser = SAXParserFactory.newInstance().newSAXParser();
                 parser.parse(punishments, new PunishmentsLoader());
             } catch (Exception e) {
-                LOGGER.warn(getClass().getSimpleName() + ": Could not load punishments from /config/BotReportPunishments.xml", e);
+                LOGGER.warn("Could not load punishments from /config/BotReportPunishments.xml", e);
             }
 
             loadReportedCharData();
