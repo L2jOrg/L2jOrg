@@ -2,7 +2,7 @@ package org.l2j.gameserver.taskmanager;
 
 import io.github.joealisson.primitive.CHashIntMap;
 import io.github.joealisson.primitive.IntMap;
-import org.l2j.commons.threading.ThreadPoolManager;
+import org.l2j.commons.threading.ThreadPool;
 import org.l2j.gameserver.data.database.dao.TaskDAO;
 import org.l2j.gameserver.data.database.data.TaskData;
 import org.l2j.gameserver.taskmanager.tasks.*;
@@ -92,13 +92,13 @@ public final class TaskManager {
             }
             case SHEDULED -> {
                 delay = Long.parseLong(task.getParam1());
-                task.scheduled = ThreadPoolManager.schedule(task, delay);
+                task.scheduled = ThreadPool.schedule(task, delay);
                 yield true;
             }
             case FIXED_SHEDULED -> {
                 delay = Long.parseLong(task.getParam1());
                 interval = Long.parseLong(task.getParam2());
-                task.scheduled = ThreadPoolManager.scheduleAtFixedRate(task, delay, interval);
+                task.scheduled = ThreadPool.scheduleAtFixedRate(task, delay, interval);
                 yield true;
             }
             case TIME -> {
@@ -106,7 +106,7 @@ public final class TaskManager {
                     final Date desired = DateFormat.getInstance().parse(task.getParam1());
                     final long diff = desired.getTime() - currentTimeMillis();
                     if (diff >= 0) {
-                        task.scheduled = ThreadPoolManager.schedule(task, diff);
+                        task.scheduled = ThreadPool.schedule(task, diff);
                         yield true;
                     }
                     LOGGER.info("Task {} is obsoleted", task.getId());
@@ -150,7 +150,7 @@ public final class TaskManager {
                 if (check.after(min) || (delay < 0)) {
                     delay += interval;
                 }
-                task.scheduled = ThreadPoolManager.scheduleAtFixedRate(task, delay, interval);
+                task.scheduled = ThreadPool.scheduleAtFixedRate(task, delay, interval);
                 yield true;
             }
             default -> false;

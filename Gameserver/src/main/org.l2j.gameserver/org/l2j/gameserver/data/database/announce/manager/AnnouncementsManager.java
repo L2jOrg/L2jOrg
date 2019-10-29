@@ -2,7 +2,7 @@ package org.l2j.gameserver.data.database.announce.manager;
 
 import io.github.joealisson.primitive.CHashIntMap;
 import io.github.joealisson.primitive.IntMap;
-import org.l2j.commons.threading.ThreadPoolManager;
+import org.l2j.commons.threading.ThreadPool;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.database.dao.AnnounceDAO;
 import org.l2j.gameserver.data.database.announce.Announce;
@@ -56,7 +56,7 @@ public final class AnnouncementsManager {
             task.cancel(false);
         }
 
-        schedules.put(announce.getId(), ThreadPoolManager.schedule(new AutoAnnounce(announce), announce.getInitial()));
+        schedules.put(announce.getId(), ThreadPool.schedule(new AutoAnnounce(announce), announce.getInitial()));
     }
 
     /**
@@ -162,7 +162,7 @@ public final class AnnouncementsManager {
                 }
 
                 if(data.getDelay() > 0) {
-                    task = schedules.put(data.getId(), ThreadPoolManager.schedule(this, data.getDelay()));
+                    task = schedules.put(data.getId(), ThreadPool.schedule(this, data.getDelay()));
                 } else {
                     task = schedules.remove(data.getId());
                 }

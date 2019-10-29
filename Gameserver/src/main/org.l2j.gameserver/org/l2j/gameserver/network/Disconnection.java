@@ -1,6 +1,6 @@
 package org.l2j.gameserver.network;
 
-import org.l2j.commons.threading.ThreadPoolManager;
+import org.l2j.commons.threading.ThreadPool;
 import org.l2j.gameserver.instancemanager.AntiFeedManager;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.events.EventDispatcher;
@@ -140,7 +140,7 @@ public final class Disconnection {
 
     public void onDisconnection() {
         if (_activeChar != null) {
-            ThreadPoolManager.schedule(this::defaultSequence, _activeChar.canLogout() ? 0 : AttackStanceTaskManager.COMBAT_TIME);
+            ThreadPool.schedule(this::defaultSequence, _activeChar.canLogout() ? 0 : AttackStanceTaskManager.COMBAT_TIME);
         }
     }
 }

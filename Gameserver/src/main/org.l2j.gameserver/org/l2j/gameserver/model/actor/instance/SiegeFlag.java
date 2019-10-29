@@ -1,6 +1,6 @@
 package org.l2j.gameserver.model.actor.instance;
 
-import org.l2j.commons.threading.ThreadPoolManager;
+import org.l2j.commons.threading.ThreadPool;
 import org.l2j.gameserver.ai.CtrlIntention;
 import org.l2j.gameserver.enums.InstanceType;
 import org.l2j.gameserver.instancemanager.FortSiegeManager;
@@ -120,7 +120,7 @@ public class SiegeFlag extends Npc {
                     // send warning to owners of headquarters that theirs base is under attack
                     _clan.broadcastToOnlineMembers(SystemMessage.getSystemMessage(SystemMessageId.SIEGE_CAMP_IS_UNDER_ATTACK));
                     setCanTalk(false);
-                    ThreadPoolManager.schedule(new ScheduleTalkTask(), 20000);
+                    ThreadPool.schedule(new ScheduleTalkTask(), 20000);
                 }
             }
         }

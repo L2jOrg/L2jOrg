@@ -1,7 +1,7 @@
 package org.l2j.gameserver.world.zone.type;
 
+import org.l2j.commons.threading.ThreadPool;
 import org.l2j.gameserver.Config;
-import org.l2j.commons.threading.ThreadPoolManager;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -62,7 +62,7 @@ public class JailZone extends Zone {
 
             if (player.isJailed()) {
                 // when a player wants to exit jail even if he is still jailed, teleport him back to jail
-                ThreadPoolManager.schedule(new TeleportTask(player, JAIL_IN_LOC), 2000);
+                ThreadPool.schedule(new TeleportTask(player, JAIL_IN_LOC), 2000);
                 creature.sendMessage("You cannot cheat your way out of here. You must wait until your jail time is over.");
             }
             if (Config.JAIL_DISABLE_TRANSACTION) {

@@ -1,7 +1,7 @@
 package org.l2j.gameserver.model.instancezone;
 
 import org.l2j.commons.database.DatabaseFactory;
-import org.l2j.commons.threading.ThreadPoolManager;
+import org.l2j.commons.threading.ThreadPool;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.xml.DoorDataManager;
 import org.l2j.gameserver.enums.InstanceReenterType;
@@ -224,7 +224,7 @@ public final class Instance implements IIdentifiable, INamable {
             if ((_template.getDuration() == 0) || (emptyTime == 0)) {
                 destroy();
             } else if ((emptyTime >= 0) && (_emptyDestroyTask == null) && (getRemainingTime() < emptyTime)) {
-                _emptyDestroyTask = ThreadPoolManager.schedule(this::destroy, emptyTime);
+                _emptyDestroyTask = ThreadPool.schedule(this::destroy, emptyTime);
             }
         }
     }
@@ -418,10 +418,10 @@ public final class Instance implements IIdentifiable, INamable {
             sendWorldDestroyMessage(minutes);
             if (minutes <= 5) // Message 1 minute before destroy
             {
-                _cleanUpTask = ThreadPoolManager.schedule(this::cleanUp, millis - 60000);
+                _cleanUpTask = ThreadPool.schedule(this::cleanUp, millis - 60000);
             } else // Message 5 minutes before destroy
             {
-                _cleanUpTask = ThreadPoolManager.schedule(this::cleanUp, millis - (5 * 60000));
+                _cleanUpTask = ThreadPool.schedule(this::cleanUp, millis - (5 * 60000));
             }
         }
     }
@@ -598,7 +598,7 @@ public final class Instance implements IIdentifiable, INamable {
             player.sendPacket(sm);
 
             // Start eject task
-            _ejectDeadTasks.put(player.getObjectId(), ThreadPoolManager.schedule(() ->
+            _ejectDeadTasks.put(player.getObjectId(), ThreadPool.schedule(() ->
             {
                 if (player.isDead()) {
                     ejectPlayer(player.getActingPlayer());
@@ -790,10 +790,10 @@ public final class Instance implements IIdentifiable, INamable {
     private void cleanUp() {
         if (getRemainingTime() <= TimeUnit.MINUTES.toMillis(1)) {
             sendWorldDestroyMessage(1);
-            _cleanUpTask = ThreadPoolManager.schedule(this::destroy, 60 * 1000); // 1 minute
+            _cleanUpTask = ThreadPool.schedule(this::destroy, 60 * 1000); // 1 minute
         } else {
             sendWorldDestroyMessage(5);
-            _cleanUpTask = ThreadPoolManager.schedule(this::cleanUp, 5 * 60 * 1000); // 5 minutes
+            _cleanUpTask = ThreadPool.schedule(this::cleanUp, 5 * 60 * 1000); // 5 minutes
         }
     }
 

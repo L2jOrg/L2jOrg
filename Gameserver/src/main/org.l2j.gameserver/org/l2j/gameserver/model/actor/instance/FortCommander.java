@@ -1,6 +1,6 @@
 package org.l2j.gameserver.model.actor.instance;
 
-import org.l2j.commons.threading.ThreadPoolManager;
+import org.l2j.commons.threading.ThreadPool;
 import org.l2j.gameserver.ai.CtrlIntention;
 import org.l2j.gameserver.enums.ChatType;
 import org.l2j.gameserver.enums.InstanceType;
@@ -110,7 +110,7 @@ public class FortCommander extends Defender {
                     if (npcString != null) {
                         broadcastSay(ChatType.NPC_SHOUT, npcString, npcString.getParamCount() == 1 ? attacker.getName() : null);
                         setCanTalk(false);
-                        ThreadPoolManager.schedule(new ScheduleTalkTask(), 10000);
+                        ThreadPool.schedule(new ScheduleTalkTask(), 10000);
                     }
                 }
             }

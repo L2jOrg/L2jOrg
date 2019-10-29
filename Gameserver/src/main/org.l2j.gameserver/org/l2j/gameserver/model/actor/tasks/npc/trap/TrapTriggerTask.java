@@ -1,6 +1,6 @@
 package org.l2j.gameserver.model.actor.tasks.npc.trap;
 
-import org.l2j.commons.threading.ThreadPoolManager;
+import org.l2j.commons.threading.ThreadPool;
 import org.l2j.gameserver.model.actor.instance.Trap;
 
 /**
@@ -19,7 +19,7 @@ public class TrapTriggerTask implements Runnable {
     public void run() {
         try {
             _trap.doCast(_trap.getSkill());
-            ThreadPoolManager.getInstance().schedule(new TrapUnsummonTask(_trap), _trap.getSkill().getHitTime() + 300);
+            ThreadPool.schedule(new TrapUnsummonTask(_trap), _trap.getSkill().getHitTime() + 300);
         } catch (Exception e) {
             _trap.unSummon();
         }

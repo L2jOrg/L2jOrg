@@ -1,8 +1,8 @@
 package org.l2j.gameserver.model.itemauction;
 
 import org.l2j.commons.database.DatabaseFactory;
+import org.l2j.commons.threading.ThreadPool;
 import org.l2j.gameserver.Config;
-import org.l2j.commons.threading.ThreadPoolManager;
 import org.l2j.gameserver.instancemanager.ItemAuctionManager;
 import org.l2j.gameserver.model.ItemInfo;
 import org.l2j.gameserver.world.World;
@@ -314,7 +314,7 @@ public final class ItemAuction {
     }
 
     public final void broadcastToAllBidders(ServerPacket packet) {
-        ThreadPoolManager.getInstance().execute(() -> broadcastToAllBiddersInternal(packet));
+        ThreadPool.execute(() -> broadcastToAllBiddersInternal(packet));
     }
 
     public final void broadcastToAllBiddersInternal(ServerPacket packet) {

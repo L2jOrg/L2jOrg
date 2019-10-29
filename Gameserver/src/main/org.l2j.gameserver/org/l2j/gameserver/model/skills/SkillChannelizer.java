@@ -1,6 +1,6 @@
 package org.l2j.gameserver.model.skills;
 
-import org.l2j.commons.threading.ThreadPoolManager;
+import org.l2j.commons.threading.ThreadPool;
 import org.l2j.gameserver.data.xml.impl.SkillData;
 import org.l2j.gameserver.enums.ShotType;
 import org.l2j.gameserver.engine.geo.GeoEngine;
@@ -60,7 +60,7 @@ public class SkillChannelizer implements Runnable {
 
         // Start channeling.
         _skill = skill;
-        _task = ThreadPoolManager.getInstance().scheduleAtFixedRate(this, skill.getChannelingTickInitialDelay(), skill.getChannelingTickInterval());
+        _task = ThreadPool.scheduleAtFixedRate(this, skill.getChannelingTickInitialDelay(), skill.getChannelingTickInterval());
     }
 
     public void stopChanneling() {

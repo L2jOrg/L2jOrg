@@ -1,7 +1,7 @@
 package org.l2j.gameserver.cache;
 
+import org.l2j.commons.threading.ThreadPool;
 import org.l2j.gameserver.Config;
-import org.l2j.commons.threading.ThreadPoolManager;
 import org.l2j.gameserver.model.actor.instance.Player;
 
 import java.util.Map;
@@ -15,7 +15,7 @@ public class WarehouseCacheManager {
     private final long _cacheTime = Config.WAREHOUSE_CACHE_TIME * 60000;
 
     private WarehouseCacheManager() {
-        ThreadPoolManager.scheduleAtFixedRate(new CacheScheduler(), 120000, 60000);
+        ThreadPool.scheduleAtFixedRate(new CacheScheduler(), 120000, 60000);
     }
 
     public void addCacheTask(Player pc) {

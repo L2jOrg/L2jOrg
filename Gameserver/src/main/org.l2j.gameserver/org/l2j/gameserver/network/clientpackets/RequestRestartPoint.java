@@ -1,6 +1,6 @@
 package org.l2j.gameserver.network.clientpackets;
 
-import org.l2j.commons.threading.ThreadPoolManager;
+import org.l2j.commons.threading.ThreadPool;
 import org.l2j.gameserver.data.xml.impl.ClanHallData;
 import org.l2j.gameserver.instancemanager.CastleManager;
 import org.l2j.gameserver.instancemanager.FortDataManager;
@@ -70,7 +70,7 @@ public final class RequestRestartPoint extends ClientPacket {
         if ((castle != null) && castle.getSiege().isInProgress()) {
             if ((activeChar.getClan() != null) && castle.getSiege().checkIsAttacker(activeChar.getClan())) {
                 // Schedule respawn delay for attacker
-                ThreadPoolManager.getInstance().schedule(new DeathTask(activeChar), castle.getSiege().getAttackerRespawnDelay());
+                ThreadPool.schedule(new DeathTask(activeChar), castle.getSiege().getAttackerRespawnDelay());
                 if (castle.getSiege().getAttackerRespawnDelay() > 0) {
                     activeChar.sendMessage("You will be re-spawned in " + (castle.getSiege().getAttackerRespawnDelay() / 1000) + " seconds");
                 }

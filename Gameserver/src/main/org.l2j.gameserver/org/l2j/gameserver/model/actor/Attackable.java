@@ -1,6 +1,6 @@
 package org.l2j.gameserver.model.actor;
 
-import org.l2j.commons.threading.ThreadPoolManager;
+import org.l2j.commons.threading.ThreadPool;
 import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.ai.AttackableAI;
@@ -180,7 +180,7 @@ public class Attackable extends Npc {
                         if (_firstCommandChannelAttacked != null) {
                             _commandChannelTimer = new CommandChannelTimer(this);
                             _commandChannelLastAttack = System.currentTimeMillis();
-                            ThreadPoolManager.schedule(_commandChannelTimer, 10000); // check for last attack
+                            ThreadPool.schedule(_commandChannelTimer, 10000); // check for last attack
                             _firstCommandChannelAttacked.broadcastPacket(new CreatureSay(0, ChatType.PARTYROOM_ALL, "", "You have looting rights!")); // TODO: retail msg
                         }
                     }

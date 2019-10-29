@@ -1,9 +1,9 @@
 package org.l2j.gameserver.instancemanager;
 
 import org.l2j.commons.database.DatabaseFactory;
+import org.l2j.commons.threading.ThreadPool;
 import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.Config;
-import org.l2j.commons.threading.ThreadPoolManager;
 import org.l2j.gameserver.data.xml.impl.NpcData;
 import org.l2j.gameserver.data.xml.impl.SpawnsData;
 import org.l2j.gameserver.datatables.SpawnTable;
@@ -159,7 +159,7 @@ public class DBSpawnManager {
             if (!_schedules.containsKey(npc.getId()) && ((respawnMinDelay > 0) || (respawnMaxDelay > 0))) {
                 LOGGER.info(getClass().getSimpleName() + ": Updated " + npc.getName() + " respawn time to " + GameUtils.formatDate(new Date(respawnTime), "dd.MM.yyyy HH:mm"));
 
-                _schedules.put(npc.getId(), ThreadPoolManager.getInstance().schedule(() -> scheduleSpawn(npc.getId()), respawnDelay));
+                _schedules.put(npc.getId(), ThreadPool.schedule(() -> scheduleSpawn(npc.getId()), respawnDelay));
                 updateDb();
             }
         } else {
@@ -212,7 +212,7 @@ public class DBSpawnManager {
             }
         } else {
             final long spawnTime = respawnTime - System.currentTimeMillis();
-            _schedules.put(npcId, ThreadPoolManager.getInstance().schedule(() -> scheduleSpawn(npcId), spawnTime));
+            _schedules.put(npcId, ThreadPool.schedule(() -> scheduleSpawn(npcId), spawnTime));
         }
 
         _spawns.put(npcId, spawn);

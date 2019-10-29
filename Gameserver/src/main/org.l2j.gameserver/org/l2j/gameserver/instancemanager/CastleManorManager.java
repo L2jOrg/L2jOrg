@@ -17,9 +17,9 @@
 package org.l2j.gameserver.instancemanager;
 
 import org.l2j.commons.database.DatabaseFactory;
+import org.l2j.commons.threading.ThreadPool;
 import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.Config;
-import org.l2j.commons.threading.ThreadPoolManager;
 import org.l2j.gameserver.enums.ManorMode;
 import org.l2j.gameserver.model.*;
 import org.l2j.gameserver.model.entity.Castle;
@@ -90,7 +90,7 @@ public final class CastleManorManager extends GameXmlReader implements IStorable
 
             // Schedule autosave
             if (!Config.ALT_MANOR_SAVE_ALL_ACTIONS) {
-                ThreadPoolManager.scheduleAtFixedRate(this::storeMe, Config.ALT_MANOR_SAVE_PERIOD_RATE * 60 * 60 * 1000, Config.ALT_MANOR_SAVE_PERIOD_RATE * 60 * 60 * 1000);
+                ThreadPool.scheduleAtFixedRate(this::storeMe, Config.ALT_MANOR_SAVE_PERIOD_RATE * 60 * 60 * 1000, Config.ALT_MANOR_SAVE_PERIOD_RATE * 60 * 60 * 1000);
             }
         } else {
             _mode = ManorMode.DISABLED;
@@ -231,7 +231,7 @@ public final class CastleManorManager extends GameXmlReader implements IStorable
             }
         }
         // Schedule mode change
-        ThreadPoolManager.getInstance().schedule(this::changeMode, (_nextModeChange.getTimeInMillis() - System.currentTimeMillis()));
+        ThreadPool.schedule(this::changeMode, (_nextModeChange.getTimeInMillis() - System.currentTimeMillis()));
     }
     public final void changeMode() {
         switch (_mode) {

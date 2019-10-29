@@ -1,6 +1,6 @@
 package org.l2j.gameserver.model.skills;
 
-import org.l2j.commons.threading.ThreadPoolManager;
+import org.l2j.commons.threading.ThreadPool;
 
 import java.util.Map;
 import java.util.Map.Entry;
@@ -14,7 +14,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 public class BuffFinishTask
 {
 	private final Map<BuffInfo, AtomicInteger> _buffInfos = new ConcurrentHashMap<>();
-	private final ScheduledFuture<?> _task = ThreadPoolManager.scheduleAtFixedRate(() ->
+	private final ScheduledFuture<?> _task = ThreadPool.scheduleAtFixedRate(() ->
 	{
 		for (Entry<BuffInfo, AtomicInteger> entry : _buffInfos.entrySet())
 		{

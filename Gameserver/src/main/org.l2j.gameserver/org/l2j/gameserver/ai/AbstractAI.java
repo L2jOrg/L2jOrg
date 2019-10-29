@@ -2,7 +2,7 @@ package org.l2j.gameserver.ai;
 
 import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.world.WorldTimeController;
-import org.l2j.commons.threading.ThreadPoolManager;
+import org.l2j.commons.threading.ThreadPool;
 import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.model.actor.Creature;
@@ -625,7 +625,7 @@ public abstract class AbstractAI implements Ctrl {
         setTarget(target);
 
         final int followRange = range == -1 ? Rnd.get(50, 100) : range;
-        _followTask = ThreadPoolManager.scheduleAtFixedRate(() ->
+        _followTask = ThreadPool.scheduleAtFixedRate(() ->
         {
             try {
                 if (_followTask == null) {

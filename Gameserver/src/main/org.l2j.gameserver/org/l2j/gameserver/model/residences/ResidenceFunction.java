@@ -1,6 +1,6 @@
 package org.l2j.gameserver.model.residences;
 
-import org.l2j.commons.threading.ThreadPoolManager;
+import org.l2j.commons.threading.ThreadPool;
 import org.l2j.gameserver.data.sql.impl.ClanTable;
 import org.l2j.gameserver.data.xml.impl.ResidenceFunctionsData;
 import org.l2j.gameserver.model.Clan;
@@ -44,7 +44,7 @@ public class ResidenceFunction {
     private void init() {
         final ResidenceFunctionTemplate template = getTemplate();
         if ((template != null) && (_expiration > System.currentTimeMillis())) {
-            _task = ThreadPoolManager.getInstance().schedule(this::onFunctionExpiration, _expiration - System.currentTimeMillis());
+            _task = ThreadPool.schedule(this::onFunctionExpiration, _expiration - System.currentTimeMillis());
         }
     }
 

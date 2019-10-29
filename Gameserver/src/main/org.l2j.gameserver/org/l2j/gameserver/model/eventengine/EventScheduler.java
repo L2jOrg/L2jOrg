@@ -1,7 +1,7 @@
 package org.l2j.gameserver.model.eventengine;
 
 import org.l2j.commons.database.DatabaseFactory;
-import org.l2j.commons.threading.ThreadPoolManager;
+import org.l2j.commons.threading.ThreadPool;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.util.cron4j.PastPredictor;
 import org.l2j.gameserver.util.cron4j.Predictor;
@@ -86,7 +86,7 @@ public class EventScheduler {
         final long timeSchedule = nextSchedule - System.currentTimeMillis();
         if (timeSchedule <= (30 * 1000)) {
             LOGGER.warn("Wrong reschedule for " + _eventManager.getClass().getSimpleName() + " end up run in " + (timeSchedule / 1000) + " seconds!");
-            ThreadPoolManager.schedule(this::startScheduler, timeSchedule + 1000);
+            ThreadPool.schedule(this::startScheduler, timeSchedule + 1000);
             return;
         }
 
@@ -94,13 +94,13 @@ public class EventScheduler {
             _task.cancel(false);
         }
 
-        _task = ThreadPoolManager.schedule(() ->
+        _task = ThreadPool.schedule(() ->
         {
             run();
             updateLastRun();
 
             if (_repeat) {
-                ThreadPoolManager.schedule(this::startScheduler, 1000);
+                ThreadPool.schedule(this::startScheduler, 1000);
             }
         }, timeSchedule);
     }

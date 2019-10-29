@@ -1,6 +1,6 @@
 package org.l2j.gameserver;
 
-import org.l2j.commons.threading.ThreadPoolManager;
+import org.l2j.commons.threading.ThreadPool;
 import org.l2j.gameserver.enums.ItemLocation;
 import org.l2j.gameserver.instancemanager.ItemsOnGroundManager;
 import org.l2j.gameserver.model.items.instance.Item;
@@ -13,7 +13,7 @@ public final class ItemsAutoDestroy {
     private final List<Item> _items = new LinkedList<>();
 
     private ItemsAutoDestroy() {
-        ThreadPoolManager.scheduleAtFixedRate(this::removeItems, 5000, 5000);
+        ThreadPool.scheduleAtFixedRate(this::removeItems, 5000, 5000);
     }
 
     public synchronized void addItem(Item item) {

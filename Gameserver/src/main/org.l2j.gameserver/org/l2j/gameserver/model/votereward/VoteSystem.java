@@ -1,7 +1,7 @@
 package org.l2j.gameserver.model.votereward;
 
+import org.l2j.commons.threading.ThreadPool;
 import org.l2j.gameserver.Config;
-import org.l2j.commons.threading.ThreadPoolManager;
 import org.l2j.gameserver.enums.ChatType;
 import org.l2j.gameserver.world.World;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -34,7 +34,7 @@ public abstract class VoteSystem implements Runnable {
         this.boxes = boxes;
         this.rewards = rewards;
 
-        ThreadPoolManager.scheduleAtFixedRate(this, checkMins * 1000 * 60, checkMins * 1000 * 60);
+        ThreadPool.scheduleAtFixedRate(this, checkMins * 1000 * 60, checkMins * 1000 * 60);
     }
 
     public static void initialize() {

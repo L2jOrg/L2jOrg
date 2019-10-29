@@ -1,6 +1,6 @@
 package org.l2j.gameserver.model.events;
 
-import org.l2j.commons.threading.ThreadPoolManager;
+import org.l2j.commons.threading.ThreadPool;
 import org.l2j.gameserver.model.events.impl.IBaseEvent;
 import org.l2j.gameserver.model.events.listeners.AbstractEventListener;
 import org.l2j.gameserver.model.events.returns.AbstractEventReturn;
@@ -85,7 +85,7 @@ public final class EventDispatcher {
         }
 
         if (hasListeners) {
-            ThreadPoolManager.execute(() -> notifyEventToMultipleContainers(event, containers, null));
+            ThreadPool.execute(() -> notifyEventToMultipleContainers(event, containers, null));
         }
     }
 
@@ -98,7 +98,7 @@ public final class EventDispatcher {
      */
     public void notifyEventAsyncDelayed(IBaseEvent event, ListenersContainer container, long delay) {
         if (Containers.Global().hasListener(event.getType()) || container.hasListener(event.getType())) {
-            ThreadPoolManager.schedule(() -> notifyEvent(event, container, null), delay);
+            ThreadPool.schedule(() -> notifyEvent(event, container, null), delay);
         }
     }
 

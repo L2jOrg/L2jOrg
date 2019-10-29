@@ -16,7 +16,7 @@
  */
 package handlers.punishmenthandlers;
 
-import org.l2j.commons.threading.ThreadPoolManager;
+import org.l2j.commons.threading.ThreadPool;
 import org.l2j.gameserver.cache.HtmCache;
 import org.l2j.gameserver.handler.IPunishmentHandler;
 import org.l2j.gameserver.world.World;
@@ -162,7 +162,7 @@ public class JailHandler implements IPunishmentHandler
 			OlympiadManager.getInstance().removeDisconnectedCompetitor(player);
 		}
 		
-		ThreadPoolManager.getInstance().schedule(new TeleportTask(player, JailZone.getLocationIn()), 2000);
+		ThreadPool.schedule(new TeleportTask(player, JailZone.getLocationIn()), 2000);
 		
 		// Open a Html message to inform the player
 		final NpcHtmlMessage msg = new NpcHtmlMessage();
@@ -198,7 +198,7 @@ public class JailHandler implements IPunishmentHandler
 	 */
 	private static void removeFromPlayer(Player player)
 	{
-		ThreadPoolManager.getInstance().schedule(new TeleportTask(player, JailZone.getLocationOut()), 2000);
+		ThreadPool.schedule(new TeleportTask(player, JailZone.getLocationOut()), 2000);
 		
 		// Open a Html message to inform the player
 		final NpcHtmlMessage msg = new NpcHtmlMessage();

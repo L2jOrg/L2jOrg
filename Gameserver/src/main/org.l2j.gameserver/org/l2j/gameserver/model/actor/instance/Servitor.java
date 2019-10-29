@@ -1,7 +1,7 @@
 package org.l2j.gameserver.model.actor.instance;
 
 import org.l2j.commons.database.DatabaseFactory;
-import org.l2j.commons.threading.ThreadPoolManager;
+import org.l2j.commons.threading.ThreadPool;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.ai.CtrlIntention;
 import org.l2j.gameserver.data.sql.impl.CharSummonTable;
@@ -61,7 +61,7 @@ public class Servitor extends Summon implements Runnable {
     public void onSpawn() {
         super.onSpawn();
         if ((_lifeTime > 0) && (_summonLifeTask == null)) {
-            _summonLifeTask = ThreadPoolManager.scheduleAtFixedRate(this, 0, 5000);
+            _summonLifeTask = ThreadPool.scheduleAtFixedRate(this, 0, 5000);
         }
     }
 

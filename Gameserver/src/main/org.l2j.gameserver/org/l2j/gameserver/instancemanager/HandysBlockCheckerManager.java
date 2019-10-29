@@ -16,8 +16,8 @@
  */
 package org.l2j.gameserver.instancemanager;
 
+import org.l2j.commons.threading.ThreadPool;
 import org.l2j.gameserver.Config;
-import org.l2j.commons.threading.ThreadPoolManager;
 import org.l2j.gameserver.enums.Team;
 import org.l2j.gameserver.instancemanager.tasks.PenaltyRemoveTask;
 import org.l2j.gameserver.model.ArenaParticipantsHolder;
@@ -93,7 +93,7 @@ public final class HandysBlockCheckerManager {
             if (Config.HBCE_FAIR_PLAY) {
                 holder.checkAndShuffle();
             }
-            ThreadPoolManager.getInstance().execute(holder.getEvent().new StartEvent());
+            ThreadPool.execute(holder.getEvent().new StartEvent());
         } else {
             _arenaVotes.put(arena, newVotes);
         }
@@ -327,7 +327,7 @@ public final class HandysBlockCheckerManager {
     }
 
     private void schedulePenaltyRemoval(int objId) {
-        ThreadPoolManager.getInstance().schedule(new PenaltyRemoveTask(objId), 10000);
+        ThreadPool.schedule(new PenaltyRemoveTask(objId), 10000);
     }
 
     public static HandysBlockCheckerManager getInstance() {

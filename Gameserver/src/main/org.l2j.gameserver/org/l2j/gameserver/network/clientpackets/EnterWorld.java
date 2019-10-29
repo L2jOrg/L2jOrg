@@ -1,6 +1,6 @@
 package org.l2j.gameserver.network.clientpackets;
 
-import org.l2j.commons.threading.ThreadPoolManager;
+import org.l2j.commons.threading.ThreadPool;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.cache.HtmCache;
 import org.l2j.gameserver.data.database.announce.manager.AnnouncementsManager;
@@ -412,7 +412,7 @@ public class EnterWorld extends ClientPacket {
         }
 
         if (Config.HARDWARE_INFO_ENABLED) {
-            ThreadPoolManager.schedule(() ->
+            ThreadPool.schedule(() ->
             {
                 if (client.getHardwareInfo() == null) {
                     Disconnection.of(client).defaultSequence(false);
@@ -425,7 +425,7 @@ public class EnterWorld extends ClientPacket {
     }
 
     private void sendAttendanceInfo(Player activeChar) {
-        ThreadPoolManager.schedule(() -> {
+        ThreadPool.schedule(() -> {
             // Check if player can receive reward today.
             final AttendanceInfoHolder attendanceInfo = activeChar.getAttendanceInfo();
             if (attendanceInfo.isRewardAvailable()) {

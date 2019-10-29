@@ -1,6 +1,6 @@
 package org.l2j.gameserver.model.actor.instance;
 
-import org.l2j.commons.threading.ThreadPoolManager;
+import org.l2j.commons.threading.ThreadPool;
 import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.ai.CtrlIntention;
 import org.l2j.gameserver.data.xml.impl.NpcData;
@@ -122,7 +122,7 @@ public final class TamedBeast extends FeedableBeast {
             if (_durationCheckTask != null) {
                 _durationCheckTask.cancel(true);
             }
-            _durationCheckTask = ThreadPoolManager.getInstance().scheduleAtFixedRate(new CheckDuration(this), DURATION_CHECK_INTERVAL, DURATION_CHECK_INTERVAL);
+            _durationCheckTask = ThreadPool.scheduleAtFixedRate(new CheckDuration(this), DURATION_CHECK_INTERVAL, DURATION_CHECK_INTERVAL);
         }
     }
 
@@ -174,10 +174,10 @@ public final class TamedBeast extends FeedableBeast {
         }
         int delay = 100;
         for (Skill skill : _beastSkills) {
-            ThreadPoolManager.schedule(new buffCast(skill), delay);
+            ThreadPool.schedule(new buffCast(skill), delay);
             delay += (100 + skill.getHitTime());
         }
-        ThreadPoolManager.schedule(new buffCast(null), delay);
+        ThreadPool.schedule(new buffCast(null), delay);
     }
 
     public Player getOwner() {
@@ -211,7 +211,7 @@ public final class TamedBeast extends FeedableBeast {
                 if (_buffTask != null) {
                     _buffTask.cancel(true);
                 }
-                _buffTask = ThreadPoolManager.scheduleAtFixedRate(new CheckOwnerBuffs(this, totalBuffsAvailable), BUFF_INTERVAL, BUFF_INTERVAL);
+                _buffTask = ThreadPool.scheduleAtFixedRate(new CheckOwnerBuffs(this, totalBuffsAvailable), BUFF_INTERVAL, BUFF_INTERVAL);
             }
         } else {
             deleteMe(); // despawn if no owner

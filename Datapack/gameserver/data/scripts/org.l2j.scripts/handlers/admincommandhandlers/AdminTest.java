@@ -16,7 +16,7 @@
  */
 package handlers.admincommandhandlers;
 
-import org.l2j.commons.threading.ThreadPoolManager;
+import org.l2j.commons.threading.ThreadPool;
 import org.l2j.gameserver.data.xml.impl.SkillData;
 import org.l2j.gameserver.handler.IAdminCommandHandler;
 import org.l2j.gameserver.model.WorldObject;
@@ -47,7 +47,7 @@ public class AdminTest implements IAdminCommandHandler
 	{
 		if (command.equals("admin_stats"))
 		{
-			activeChar.sendMessage(ThreadPoolManager.getInstance().getStats().toString());
+			activeChar.sendMessage(ThreadPool.getStats().toString());
 		}
 		else if (command.startsWith("admin_skill_test"))
 		{

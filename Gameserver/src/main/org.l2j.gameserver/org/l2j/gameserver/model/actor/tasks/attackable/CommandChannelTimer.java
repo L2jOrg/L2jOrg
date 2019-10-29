@@ -1,7 +1,7 @@
 package org.l2j.gameserver.model.actor.tasks.attackable;
 
+import org.l2j.commons.threading.ThreadPool;
 import org.l2j.gameserver.Config;
-import org.l2j.commons.threading.ThreadPoolManager;
 import org.l2j.gameserver.model.actor.Attackable;
 
 /**
@@ -25,7 +25,7 @@ public final class CommandChannelTimer implements Runnable {
             _attackable.setFirstCommandChannelAttacked(null);
             _attackable.setCommandChannelLastAttack(0);
         } else {
-            ThreadPoolManager.getInstance().schedule(this, 10000); // 10sec
+            ThreadPool.schedule(this, 10000); // 10sec
         }
     }
 

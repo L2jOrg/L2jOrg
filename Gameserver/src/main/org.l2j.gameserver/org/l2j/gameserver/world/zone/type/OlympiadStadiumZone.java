@@ -1,6 +1,6 @@
 package org.l2j.gameserver.world.zone.type;
 
-import org.l2j.commons.threading.ThreadPoolManager;
+import org.l2j.commons.threading.ThreadPool;
 import org.l2j.gameserver.world.zone.ZoneManager;
 import org.l2j.gameserver.model.Spawn;
 import org.l2j.gameserver.model.Location;
@@ -76,7 +76,7 @@ public class OlympiadStadiumZone extends ZoneRespawn {
             if (nonNull(player)) {
                 // only participants, observers and GMs allowed
                 if (!player.canOverrideCond(PcCondOverride.ZONE_CONDITIONS) && !player.isInOlympiadMode() && !player.inObserverMode()) {
-                    ThreadPoolManager.execute(new KickPlayer(player));
+                    ThreadPool.execute(new KickPlayer(player));
                 } else {
                     // check for pet
                     final Summon pet = player.getPet();

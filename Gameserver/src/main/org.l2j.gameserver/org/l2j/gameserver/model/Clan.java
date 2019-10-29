@@ -2,7 +2,7 @@ package org.l2j.gameserver.model;
 
 import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.gameserver.Config;
-import org.l2j.commons.threading.ThreadPoolManager;
+import org.l2j.commons.threading.ThreadPool;
 import org.l2j.gameserver.communitybbs.BB.Forum;
 import org.l2j.gameserver.communitybbs.Manager.ForumsBBSManager;
 import org.l2j.gameserver.data.sql.impl.PlayerNameTable;
@@ -2405,7 +2405,7 @@ public class Clan implements IIdentifiable, INamable {
                 if (_vars == null) {
                     _vars = new ClanVariables(_clanId);
                     if (Config.CLAN_VARIABLES_STORE_INTERVAL > 0) {
-                        ThreadPoolManager.getInstance().scheduleAtFixedRate(this::storeVariables, Config.CLAN_VARIABLES_STORE_INTERVAL, Config.CLAN_VARIABLES_STORE_INTERVAL);
+                        ThreadPool.scheduleAtFixedRate(this::storeVariables, Config.CLAN_VARIABLES_STORE_INTERVAL, Config.CLAN_VARIABLES_STORE_INTERVAL);
                     }
                 }
             }

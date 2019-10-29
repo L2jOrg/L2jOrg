@@ -1,6 +1,6 @@
 package org.l2j.gameserver.model.shuttle;
 
-import org.l2j.commons.threading.ThreadPoolManager;
+import org.l2j.commons.threading.ThreadPool;
 import org.l2j.gameserver.data.xml.DoorDataManager;
 import org.l2j.gameserver.model.actor.instance.Door;
 import org.l2j.gameserver.model.actor.instance.Shuttle;
@@ -40,7 +40,7 @@ public class ShuttleEngine implements Runnable {
                     _shuttle.openDoor(0);
                     _shuttle.closeDoor(1);
                     _shuttle.broadcastShuttleInfo();
-                    ThreadPoolManager.schedule(this, DELAY);
+                    ThreadPool.schedule(this, DELAY);
                     break;
                 }
                 case 1: {
@@ -49,7 +49,7 @@ public class ShuttleEngine implements Runnable {
                     _shuttle.closeDoor(0);
                     _shuttle.closeDoor(1);
                     _shuttle.broadcastShuttleInfo();
-                    ThreadPoolManager.schedule(this, 1000);
+                    ThreadPool.schedule(this, 1000);
                     break;
                 }
                 case 2: {
@@ -62,7 +62,7 @@ public class ShuttleEngine implements Runnable {
                     _shuttle.openDoor(1);
                     _shuttle.closeDoor(0);
                     _shuttle.broadcastShuttleInfo();
-                    ThreadPoolManager.schedule(this, DELAY);
+                    ThreadPool.schedule(this, DELAY);
                     break;
                 }
                 case 4: {
@@ -71,7 +71,7 @@ public class ShuttleEngine implements Runnable {
                     _shuttle.closeDoor(0);
                     _shuttle.closeDoor(1);
                     _shuttle.broadcastShuttleInfo();
-                    ThreadPoolManager.schedule(this, 1000);
+                    ThreadPool.schedule(this, 1000);
                     break;
                 }
                 case 5: {

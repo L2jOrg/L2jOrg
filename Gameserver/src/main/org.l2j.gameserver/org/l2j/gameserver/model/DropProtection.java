@@ -1,6 +1,6 @@
 package org.l2j.gameserver.model;
 
-import org.l2j.commons.threading.ThreadPoolManager;
+import org.l2j.commons.threading.ThreadPool;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Pet;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -71,6 +71,6 @@ public class DropProtection implements Runnable {
             throw new NullPointerException("Trying to protect dropped item to null owner");
         }
 
-        _task = ThreadPoolManager.getInstance().schedule(this, PROTECTED_MILLIS_TIME);
+        _task = ThreadPool.schedule(this, PROTECTED_MILLIS_TIME);
     }
 }

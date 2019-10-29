@@ -1,6 +1,6 @@
 package org.l2j.gameserver.model.quest;
 
-import org.l2j.commons.threading.ThreadPoolManager;
+import org.l2j.commons.threading.ThreadPool;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.slf4j.Logger;
@@ -24,7 +24,7 @@ public class QuestTimer {
         _player = player;
         _npc = npc;
         _isRepeating = repeating;
-        _scheduler = repeating ? ThreadPoolManager.getInstance().scheduleAtFixedRate(new ScheduleTimerTask(), time, time) : ThreadPoolManager.getInstance().schedule(new ScheduleTimerTask(), time);
+        _scheduler = repeating ? ThreadPool.scheduleAtFixedRate(new ScheduleTimerTask(), time, time) : ThreadPool.schedule(new ScheduleTimerTask(), time);
     }
 
     public QuestTimer(Quest quest, String name, long time, Npc npc, Player player) {

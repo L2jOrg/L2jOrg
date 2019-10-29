@@ -1,7 +1,7 @@
 package org.l2j.gameserver;
 
 import org.l2j.commons.database.DatabaseFactory;
-import org.l2j.commons.threading.ThreadPoolManager;
+import org.l2j.commons.threading.ThreadPool;
 import org.l2j.gameserver.data.sql.impl.ClanTable;
 import org.l2j.gameserver.data.sql.impl.OfflineTradersTable;
 import org.l2j.gameserver.datatables.ReportTable;
@@ -126,7 +126,7 @@ public class Shutdown extends Thread {
 
             // stop all thread pools
             try {
-                ThreadPoolManager.getInstance().shutdown();
+                ThreadPool.shutdown();
                 LOGGER.info("Thread Pool Manager: Manager has been shut down(" + tc.getEstimatedTimeAndRestartCounter() + "ms).");
             } catch (Throwable t) {
                 // ignore

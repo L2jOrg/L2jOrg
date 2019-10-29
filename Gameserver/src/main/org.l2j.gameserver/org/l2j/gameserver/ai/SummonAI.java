@@ -1,7 +1,7 @@
 package org.l2j.gameserver.ai;
 
 import org.l2j.commons.util.Rnd;
-import org.l2j.commons.threading.ThreadPoolManager;
+import org.l2j.commons.threading.ThreadPool;
 import org.l2j.gameserver.engine.geo.GeoEngine;
 import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.Creature;
@@ -260,7 +260,7 @@ public class SummonAI extends PlayableAI implements Runnable {
 
     private void startAvoidTask() {
         if (_avoidTask == null) {
-            _avoidTask = ThreadPoolManager.scheduleAtFixedRate(this, 100, 100);
+            _avoidTask = ThreadPool.scheduleAtFixedRate(this, 100, 100);
         }
     }
 

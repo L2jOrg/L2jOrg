@@ -1,6 +1,6 @@
 package org.l2j.gameserver.model.actor.status;
 
-import org.l2j.commons.threading.ThreadPoolManager;
+import org.l2j.commons.threading.ThreadPool;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.events.EventDispatcher;
@@ -165,7 +165,7 @@ public class CharStatus {
             final int period = Formulas.getRegeneratePeriod(_activeChar);
 
             // Create the HP/MP/CP Regeneration task
-            _regTask = ThreadPoolManager.getInstance().scheduleAtFixedRate(this::doRegeneration, period, period);
+            _regTask = ThreadPool.scheduleAtFixedRate(this::doRegeneration, period, period);
         }
     }
 

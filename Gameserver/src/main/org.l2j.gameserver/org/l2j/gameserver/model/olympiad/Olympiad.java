@@ -2,7 +2,7 @@ package org.l2j.gameserver.model.olympiad;
 
 import io.github.joealisson.primitive.IntSet;
 import org.l2j.commons.database.DatabaseFactory;
-import org.l2j.commons.threading.ThreadPoolManager;
+import org.l2j.commons.threading.ThreadPool;
 import org.l2j.commons.util.TimeInterpreter;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.xml.CategoryManager;
@@ -169,7 +169,7 @@ public class Olympiad extends ListenersContainer {
             case 1: {
                 if (_validationEnd > Calendar.getInstance().getTimeInMillis()) {
                     loadNoblesRank();
-                    _scheduledValdationTask = ThreadPoolManager.schedule(new ValidationEndTask(), getMillisToValidationEnd());
+                    _scheduledValdationTask = ThreadPool.schedule(new ValidationEndTask(), getMillisToValidationEnd());
                 } else {
                     _currentCycle++;
                     _period = 0;
@@ -356,7 +356,7 @@ public class Olympiad extends ListenersContainer {
             _scheduledOlympiadEnd.cancel(true);
         }
 
-        _scheduledOlympiadEnd = ThreadPoolManager.schedule(new OlympiadEndTask(), getMillisToOlympiadEnd());
+        _scheduledOlympiadEnd = ThreadPool.schedule(new OlympiadEndTask(), getMillisToOlympiadEnd());
 
         updateCompStatus();
     }
@@ -389,7 +389,7 @@ public class Olympiad extends ListenersContainer {
             LOGGER.info("Event starts/started: {}", _compStart.getTime());
         }
 
-        _scheduledCompStart = ThreadPoolManager.schedule(() ->
+        _scheduledCompStart = ThreadPool.schedule(() ->
         {
             if (isOlympiadEnd()) {
                 return;
@@ -401,17 +401,17 @@ public class Olympiad extends ListenersContainer {
             LOGGER.info("Olympiad Games have started.");
             LOGGER_OLYMPIAD.info("Result,Player1,Player2,Player1 HP,Player2 HP,Player1 Damage,Player2 Damage,Points,Classed");
 
-            _gameManager = ThreadPoolManager.scheduleAtFixedRate(OlympiadGameManager.getInstance(), 30000, 30000);
+            _gameManager = ThreadPool.scheduleAtFixedRate(OlympiadGameManager.getInstance(), 30000, 30000);
             if (Config.ALT_OLY_ANNOUNCE_GAMES) {
-                _gameAnnouncer = ThreadPoolManager.scheduleAtFixedRate(new OlympiadAnnouncer(), 30000, 500);
+                _gameAnnouncer = ThreadPool.scheduleAtFixedRate(new OlympiadAnnouncer(), 30000, 500);
             }
 
             final long regEnd = getMillisToCompEnd() - 600000;
             if (regEnd > 0) {
-                ThreadPoolManager.schedule(() -> Broadcast.toAllOnlinePlayers(SystemMessage.getSystemMessage(SystemMessageId.THE_OLYMPIAD_REGISTRATION_PERIOD_HAS_ENDED)), regEnd);
+                ThreadPool.schedule(() -> Broadcast.toAllOnlinePlayers(SystemMessage.getSystemMessage(SystemMessageId.THE_OLYMPIAD_REGISTRATION_PERIOD_HAS_ENDED)), regEnd);
             }
 
-            _scheduledCompEnd = ThreadPoolManager.schedule(() ->
+            _scheduledCompEnd = ThreadPool.schedule(() ->
             {
                 if (isOlympiadEnd()) {
                     return;
@@ -455,7 +455,7 @@ public class Olympiad extends ListenersContainer {
             _scheduledOlympiadEnd.cancel(true);
         }
 
-        _scheduledOlympiadEnd = ThreadPoolManager.schedule(new OlympiadEndTask(), 0);
+        _scheduledOlympiadEnd = ThreadPool.schedule(new OlympiadEndTask(), 0);
     }
 
     protected long getMillisToValidationEnd() {
@@ -581,7 +581,7 @@ public class Olympiad extends ListenersContainer {
     }
 
     private void scheduleWeeklyChange() {
-        _scheduledWeeklyTask = ThreadPoolManager.scheduleAtFixedRate(() ->
+        _scheduledWeeklyTask = ThreadPool.scheduleAtFixedRate(() ->
         {
             addWeeklyPoints();
             LOGGER.info("Added weekly points to nobles");
@@ -987,7 +987,7 @@ public class Olympiad extends ListenersContainer {
             _validationEnd = validationEnd.getTimeInMillis() + VALIDATION_PERIOD;
 
             loadNoblesRank();
-            _scheduledValdationTask = ThreadPoolManager.schedule(new ValidationEndTask(), getMillisToValidationEnd());
+            _scheduledValdationTask = ThreadPool.schedule(new ValidationEndTask(), getMillisToValidationEnd());
         }
     }
 

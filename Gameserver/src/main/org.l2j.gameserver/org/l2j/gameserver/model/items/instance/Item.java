@@ -2,7 +2,7 @@ package org.l2j.gameserver.model.items.instance;
 
 import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.gameserver.Config;
-import org.l2j.commons.threading.ThreadPoolManager;
+import org.l2j.commons.threading.ThreadPool;
 import org.l2j.gameserver.data.xml.impl.EnchantItemOptionsData;
 import org.l2j.gameserver.data.xml.impl.EnsoulData;
 import org.l2j.gameserver.data.xml.impl.OptionData;
@@ -1215,7 +1215,7 @@ public final class Item extends WorldObject {
             return;
         }
         _consumingMana = true;
-        ThreadPoolManager.getInstance().schedule(new ScheduleConsumeManaTask(this), MANA_CONSUMPTION_RATE);
+        ThreadPool.schedule(new ScheduleConsumeManaTask(this), MANA_CONSUMPTION_RATE);
     }
 
     /**
@@ -1262,7 +1262,7 @@ public final class Item extends WorldObject {
     }
 
     public final void dropMe(Creature dropper, int x, int y, int z) {
-        ThreadPoolManager.execute(new ItemDropTask(this, dropper, x, y, z));
+        ThreadPool.execute(new ItemDropTask(this, dropper, x, y, z));
         if (GameUtils.isPlayer(dropper)) {
             // Notify to scripts
             EventDispatcher.getInstance().notifyEventAsync(new OnPlayerItemDrop(dropper.getActingPlayer(), this, new Location(x, y, z)), getItem());
@@ -1523,7 +1523,7 @@ public final class Item extends WorldObject {
             if (_lifeTimeTask != null) {
                 _lifeTimeTask.cancel(true);
             }
-            _lifeTimeTask = ThreadPoolManager.schedule(new ScheduleLifeTimeTask(this), getRemainingTime());
+            _lifeTimeTask = ThreadPool.schedule(new ScheduleLifeTimeTask(this), getRemainingTime());
         }
     }
 

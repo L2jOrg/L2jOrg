@@ -1,6 +1,6 @@
 package org.l2j.gameserver;
 
-import org.l2j.commons.threading.ThreadPoolManager;
+import org.l2j.commons.threading.ThreadPool;
 import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.data.xml.impl.RecipeData;
 import org.l2j.gameserver.datatables.ItemTable;
@@ -72,7 +72,7 @@ public class RecipeController {
         if (maker._isValid) {
             if (Config.ALT_GAME_CREATION) {
                 _activeMakers.put(manufacturer.getObjectId(), maker);
-                ThreadPoolManager.schedule(maker, 100);
+                ThreadPool.schedule(maker, 100);
             } else {
                 maker.run();
             }
@@ -112,7 +112,7 @@ public class RecipeController {
         if (maker._isValid) {
             if (Config.ALT_GAME_CREATION) {
                 _activeMakers.put(player.getObjectId(), maker);
-                ThreadPoolManager.schedule(maker, 100);
+                ThreadPool.schedule(maker, 100);
             } else {
                 maker.run();
             }
@@ -280,7 +280,7 @@ public class RecipeController {
                     _player.broadcastPacket(msk);
 
                     _player.sendPacket(new SetupGauge(_player.getObjectId(), 0, _delay));
-                    ThreadPoolManager.getInstance().schedule(this, 100 + _delay);
+                    ThreadPool.schedule(this, 100 + _delay);
                 } else {
                     // for alt mode, sleep delay msec before finishing
                     _player.sendPacket(new SetupGauge(_player.getObjectId(), 0, _delay));
@@ -428,7 +428,7 @@ public class RecipeController {
                         // rest (wait for HP)
                         if (Config.ALT_GAME_CREATION && isWait) {
                             _player.sendPacket(new SetupGauge(_player.getObjectId(), 0, _delay));
-                            ThreadPoolManager.getInstance().schedule(this, 100 + _delay);
+                            ThreadPool.schedule(this, 100 + _delay);
                         } else {
                             _target.sendPacket(SystemMessageId.NOT_ENOUGH_HP);
                             abort();
@@ -442,7 +442,7 @@ public class RecipeController {
                         // rest (wait for MP)
                         if (Config.ALT_GAME_CREATION && isWait) {
                             _player.sendPacket(new SetupGauge(_player.getObjectId(), 0, _delay));
-                            ThreadPoolManager.getInstance().schedule(this, 100 + _delay);
+                            ThreadPool.schedule(this, 100 + _delay);
                         } else {
                             _target.sendPacket(SystemMessageId.NOT_ENOUGH_MP);
                             abort();

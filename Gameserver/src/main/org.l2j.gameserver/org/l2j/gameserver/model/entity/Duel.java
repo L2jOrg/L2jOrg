@@ -1,7 +1,7 @@
 package org.l2j.gameserver.model.entity;
 
 import org.l2j.commons.util.Rnd;
-import org.l2j.commons.threading.ThreadPoolManager;
+import org.l2j.commons.threading.ThreadPool;
 import org.l2j.gameserver.ai.CtrlIntention;
 import org.l2j.gameserver.enums.DuelResult;
 import org.l2j.gameserver.enums.Team;
@@ -81,7 +81,7 @@ public class Duel {
             broadcastToTeam2(sm);
         }
         // Schedule duel start
-        ThreadPoolManager.schedule(new ScheduleStartDuelTask(this), 3000);
+        ThreadPool.schedule(new ScheduleStartDuelTask(this), 3000);
     }
 
     public Instance getDueldInstance() {
@@ -230,7 +230,7 @@ public class Duel {
         broadcastToTeam2(B04_S01);
 
         // start duelling task
-        ThreadPoolManager.getInstance().schedule(new ScheduleDuelTask(this), 1000);
+        ThreadPool.schedule(new ScheduleDuelTask(this), 1000);
     }
 
     /**
@@ -818,10 +818,10 @@ public class Duel {
                     _duel.teleportPlayers();
 
                     // give players 20 seconds to complete teleport and get ready (its ought to be 30 on offical..)
-                    ThreadPoolManager.getInstance().schedule(this, 20000);
+                    ThreadPool.schedule(this, 20000);
                 } else if (count > 0) // duel not started yet - continue countdown
                 {
-                    ThreadPoolManager.getInstance().schedule(this, 1000);
+                    ThreadPool.schedule(this, 1000);
                 } else {
                     _duel.startDuel();
                 }
@@ -868,13 +868,13 @@ public class Duel {
                         break;
                     }
                     case CONTINUE: {
-                        ThreadPoolManager.getInstance().schedule(this, 1000);
+                        ThreadPool.schedule(this, 1000);
                         break;
                     }
                     default: {
                         setFinished(true);
                         playKneelAnimation();
-                        ThreadPoolManager.getInstance().schedule(new ScheduleEndDuelTask(_duel, _duel.checkEndDuelCondition()), 5000);
+                        ThreadPool.schedule(new ScheduleEndDuelTask(_duel, _duel.checkEndDuelCondition()), 5000);
                         if (_duelInstance != null) {
                             _duelInstance.destroy();
                         }

@@ -1,10 +1,10 @@
 package org.l2j.gameserver.ai;
 
 
+import org.l2j.commons.threading.ThreadPool;
 import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.world.WorldTimeController;
-import org.l2j.commons.threading.ThreadPoolManager;
 import org.l2j.gameserver.enums.AISkillScope;
 import org.l2j.gameserver.engine.geo.GeoEngine;
 import org.l2j.gameserver.model.AggroInfo;
@@ -154,7 +154,7 @@ public class AttackableAI extends CreatureAI {
     public void startAITask() {
         // If not idle - create an AI task (schedule onEvtThink repeatedly)
         if (_aiTask == null) {
-            _aiTask = ThreadPoolManager.scheduleAtFixedRate(this::onEvtThink, 1000, 1000);
+            _aiTask = ThreadPool.scheduleAtFixedRate(this::onEvtThink, 1000, 1000);
         }
     }
 

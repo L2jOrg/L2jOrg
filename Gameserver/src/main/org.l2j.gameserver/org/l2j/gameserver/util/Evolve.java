@@ -1,8 +1,8 @@
 package org.l2j.gameserver.util;
 
 import org.l2j.commons.database.DatabaseFactory;
+import org.l2j.commons.threading.ThreadPool;
 import org.l2j.gameserver.Config;
-import org.l2j.commons.threading.ThreadPoolManager;
 import org.l2j.gameserver.data.xml.impl.NpcData;
 import org.l2j.gameserver.data.xml.impl.PetDataTable;
 import org.l2j.gameserver.model.PetData;
@@ -116,10 +116,10 @@ public final class Evolve {
         petSummon.startFeed();
         item.setEnchantLevel(petSummon.getLevel());
 
-        ThreadPoolManager.getInstance().schedule(new EvolveFinalizer(player, petSummon), 900);
+        ThreadPool.schedule(new EvolveFinalizer(player, petSummon), 900);
 
         if (petSummon.getCurrentFed() <= 0) {
-            ThreadPoolManager.getInstance().schedule(new EvolveFeedWait(player, petSummon), 60000);
+            ThreadPool.schedule(new EvolveFeedWait(player, petSummon), 60000);
         } else {
             petSummon.startFeed();
         }
@@ -199,10 +199,10 @@ public final class Evolve {
 
         player.broadcastUserInfo();
 
-        ThreadPoolManager.getInstance().schedule(new EvolveFinalizer(player, petSummon), 900);
+        ThreadPool.schedule(new EvolveFinalizer(player, petSummon), 900);
 
         if (petSummon.getCurrentFed() <= 0) {
-            ThreadPoolManager.getInstance().schedule(new EvolveFeedWait(player, petSummon), 60000);
+            ThreadPool.schedule(new EvolveFeedWait(player, petSummon), 60000);
         } else {
             petSummon.startFeed();
         }

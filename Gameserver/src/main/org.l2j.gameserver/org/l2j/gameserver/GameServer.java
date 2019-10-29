@@ -4,7 +4,7 @@ import io.github.joealisson.mmocore.ConnectionBuilder;
 import io.github.joealisson.mmocore.ConnectionHandler;
 import org.l2j.commons.cache.CacheFactory;
 import org.l2j.commons.database.DatabaseAccess;
-import org.l2j.commons.threading.ThreadPoolManager;
+import org.l2j.commons.threading.ThreadPool;
 import org.l2j.commons.util.DeadLockDetector;
 import org.l2j.gameserver.cache.HtmCache;
 import org.l2j.gameserver.data.database.announce.manager.AnnouncementsManager;
@@ -253,7 +253,7 @@ public class GameServer {
         printSection("Setting All characters to offline status!");
         getDAO(CharacterDAO.class).setAllCharactersOffline();
 
-        connectionHandler = ConnectionBuilder.create(new InetSocketAddress(Config.PORT_GAME), GameClient::new, new ClientPacketHandler(), ThreadPoolManager::execute).build();
+        connectionHandler = ConnectionBuilder.create(new InetSocketAddress(Config.PORT_GAME), GameClient::new, new ClientPacketHandler(), ThreadPool::execute).build();
         connectionHandler.start();
     }
 
@@ -270,9 +270,9 @@ public class GameServer {
         printSection("Scripting Engine");
         ScriptEngineManager.init();
 
-        ThreadPoolManager.getInstance().schedulePurge();
+        ThreadPool.schedulePurge();
         INSTANCE = new GameServer();
-        ThreadPoolManager.execute(AuthServerCommunication.getInstance());
+        ThreadPool.execute(AuthServerCommunication.getInstance());
     }
 
     private static void configureCache() {

@@ -1,6 +1,6 @@
 package org.l2j.gameserver.model.actor;
 
-import org.l2j.commons.threading.ThreadPoolManager;
+import org.l2j.commons.threading.ThreadPool;
 import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.ItemsAutoDestroy;
@@ -1021,7 +1021,7 @@ public class Npc extends Creature {
     }
 
     public void scheduleDespawn(long delay) {
-        ThreadPoolManager.schedule(() -> {
+        ThreadPool.schedule(() -> {
             if (!_isDecayed) {
                 deleteMe();
             }

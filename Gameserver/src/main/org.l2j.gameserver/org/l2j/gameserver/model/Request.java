@@ -1,6 +1,6 @@
 package org.l2j.gameserver.model;
 
-import org.l2j.commons.threading.ThreadPoolManager;
+import org.l2j.commons.threading.ThreadPool;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.clientpackets.ClientPacket;
@@ -100,7 +100,7 @@ public class Request {
     private void setOnRequestTimer(boolean isRequestor) {
         _isRequestor = isRequestor;
         _isAnswerer = !isRequestor;
-        ThreadPoolManager.getInstance().schedule(() -> clear(), REQUEST_TIMEOUT * 1000);
+        ThreadPool.schedule(() -> clear(), REQUEST_TIMEOUT * 1000);
     }
 
     /**

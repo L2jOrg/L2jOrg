@@ -1,7 +1,7 @@
 package org.l2j.gameserver.model.punishment;
 
 import org.l2j.commons.database.DatabaseFactory;
-import org.l2j.commons.threading.ThreadPoolManager;
+import org.l2j.commons.threading.ThreadPool;
 import org.l2j.gameserver.handler.IPunishmentHandler;
 import org.l2j.gameserver.handler.PunishmentHandler;
 import org.l2j.gameserver.instancemanager.PunishmentManager;
@@ -117,7 +117,7 @@ public class PunishmentTask implements Runnable {
         onStart();
         if (_expirationTime > 0) // Has expiration?
         {
-            _task = ThreadPoolManager.schedule(this, (_expirationTime - System.currentTimeMillis()));
+            _task = ThreadPool.schedule(this, (_expirationTime - System.currentTimeMillis()));
         }
     }
 

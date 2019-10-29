@@ -1,6 +1,6 @@
 package org.l2j.gameserver.model.actor;
 
-import org.l2j.commons.threading.ThreadPoolManager;
+import org.l2j.commons.threading.ThreadPool;
 import org.l2j.gameserver.world.WorldTimeController;
 import org.l2j.gameserver.ai.CtrlIntention;
 import org.l2j.gameserver.enums.InstanceType;
@@ -63,7 +63,7 @@ public abstract class Vehicle extends Creature {
 
     public void runEngine(int delay) {
         if (_engine != null) {
-            ThreadPoolManager.schedule(_engine, delay);
+            ThreadPool.schedule(_engine, delay);
         }
     }
 

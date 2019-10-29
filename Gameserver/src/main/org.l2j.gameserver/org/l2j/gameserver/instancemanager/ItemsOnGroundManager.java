@@ -3,7 +3,7 @@ package org.l2j.gameserver.instancemanager;
 import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.ItemsAutoDestroy;
-import org.l2j.commons.threading.ThreadPoolManager;
+import org.l2j.commons.threading.ThreadPool;
 import org.l2j.gameserver.world.World;
 import org.l2j.gameserver.model.items.instance.Item;
 import org.slf4j.Logger;
@@ -26,7 +26,7 @@ public final class ItemsOnGroundManager implements Runnable {
 
     private ItemsOnGroundManager() {
         if (Config.SAVE_DROPPED_ITEM_INTERVAL > 0) {
-            ThreadPoolManager.scheduleAtFixedRate(this, Config.SAVE_DROPPED_ITEM_INTERVAL, Config.SAVE_DROPPED_ITEM_INTERVAL);
+            ThreadPool.scheduleAtFixedRate(this, Config.SAVE_DROPPED_ITEM_INTERVAL, Config.SAVE_DROPPED_ITEM_INTERVAL);
         }
         load();
     }

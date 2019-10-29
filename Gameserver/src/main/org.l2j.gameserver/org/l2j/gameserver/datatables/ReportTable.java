@@ -3,7 +3,7 @@ package org.l2j.gameserver.datatables;
 import io.github.joealisson.primitive.CHashIntMap;
 import io.github.joealisson.primitive.HashIntMap;
 import io.github.joealisson.primitive.IntMap;
-import org.l2j.commons.threading.ThreadPoolManager;
+import org.l2j.commons.threading.ThreadPool;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.database.dao.BotReportDAO;
 import org.l2j.gameserver.data.database.data.BotReportData;
@@ -321,9 +321,9 @@ public final class ReportTable {
                 c.set(Calendar.DAY_OF_YEAR, c.get(Calendar.DAY_OF_YEAR) + 1);
             }
 
-            ThreadPoolManager.schedule(new ResetPointTask(), c.getTimeInMillis() - System.currentTimeMillis());
+            ThreadPool.schedule(new ResetPointTask(), c.getTimeInMillis() - System.currentTimeMillis());
         } catch (Exception e) {
-            ThreadPoolManager.schedule(new ResetPointTask(), 24 * 3600 * 1000);
+            ThreadPool.schedule(new ResetPointTask(), 24 * 3600 * 1000);
             LOGGER.warn(getClass().getSimpleName() + ": Could not properly schedule bot report points reset task. Scheduled in 24 hours.", e);
         }
     }

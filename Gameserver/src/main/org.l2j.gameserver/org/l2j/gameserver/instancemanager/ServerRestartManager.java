@@ -2,7 +2,7 @@ package org.l2j.gameserver.instancemanager;
 
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.Shutdown;
-import org.l2j.commons.threading.ThreadPoolManager;
+import org.l2j.commons.threading.ThreadPool;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -49,7 +49,7 @@ public class ServerRestartManager {
 
             if (lastRestart != null) {
                 nextRestartTime = new SimpleDateFormat("HH:mm").format(lastRestart.getTime());
-                ThreadPoolManager.schedule(new ServerRestartTask(), lastDelay - (Config.SERVER_RESTART_SCHEDULE_COUNTDOWN * 1000));
+                ThreadPool.schedule(new ServerRestartTask(), lastDelay - (Config.SERVER_RESTART_SCHEDULE_COUNTDOWN * 1000));
                 LOGGER.info("Scheduled server restart at " + lastRestart.getTime() + ".");
             }
         } catch (Exception e) {

@@ -1,6 +1,6 @@
 package org.l2j.gameserver.model.actor.instance;
 
-import org.l2j.commons.threading.ThreadPoolManager;
+import org.l2j.commons.threading.ThreadPool;
 import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.ai.CreatureAI;
 import org.l2j.gameserver.ai.DoorAI;
@@ -83,7 +83,7 @@ public final class Door extends Creature {
         if (getTemplate().getRandomTime() > 0) {
             delay += Rnd.get(getTemplate().getRandomTime());
         }
-        ThreadPoolManager.schedule(new TimerOpen(), delay * 1000);
+        ThreadPool.schedule(new TimerOpen(), delay * 1000);
     }
 
     @Override
@@ -503,7 +503,7 @@ public final class Door extends Creature {
             _autoCloseTask = null;
             oldTask.cancel(false);
         }
-        _autoCloseTask = ThreadPoolManager.schedule(new AutoClose(), getTemplate().getCloseTime() * 1000);
+        _autoCloseTask = ThreadPool.schedule(new AutoClose(), getTemplate().getCloseTime() * 1000);
     }
 
     class AutoClose implements Runnable {
@@ -528,7 +528,7 @@ public final class Door extends Creature {
             if (getTemplate().getRandomTime() > 0) {
                 delay += Rnd.get(getTemplate().getRandomTime());
             }
-            ThreadPoolManager.schedule(this, delay * 1000);
+            ThreadPool.schedule(this, delay * 1000);
         }
     }
 }

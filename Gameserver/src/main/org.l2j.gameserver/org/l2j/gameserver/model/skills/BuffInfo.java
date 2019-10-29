@@ -1,8 +1,8 @@
 package org.l2j.gameserver.model.skills;
 
+import org.l2j.commons.threading.ThreadPool;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.world.WorldTimeController;
-import org.l2j.commons.threading.ThreadPoolManager;
 import org.l2j.gameserver.model.CharEffectList;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.Summon;
@@ -319,7 +319,7 @@ public final class BuffInfo {
             if (effect.getTicks() > 0) {
                 // The task for the effect ticks.
                 final EffectTickTask effectTask = new EffectTickTask(this, effect);
-                final ScheduledFuture<?> scheduledFuture = ThreadPoolManager.scheduleAtFixedRate(effectTask, effect.getTicks() * Config.EFFECT_TICK_RATIO, effect.getTicks() * Config.EFFECT_TICK_RATIO);
+                final ScheduledFuture<?> scheduledFuture = ThreadPool.scheduleAtFixedRate(effectTask, effect.getTicks() * Config.EFFECT_TICK_RATIO, effect.getTicks() * Config.EFFECT_TICK_RATIO);
                 // Adds the task for ticking.
                 addTask(effect, new EffectTaskInfo(effectTask, scheduledFuture));
             }

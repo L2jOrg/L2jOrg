@@ -16,7 +16,7 @@
  */
 package org.l2j.gameserver.ai;
 
-import org.l2j.commons.threading.ThreadPoolManager;
+import org.l2j.commons.threading.ThreadPool;
 import org.l2j.gameserver.world.World;
 import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.Location;
@@ -79,7 +79,7 @@ public class DoorAI extends CreatureAI {
 
     @Override
     protected void onEvtAttacked(Creature attacker) {
-        ThreadPoolManager.execute(new onEventAttackedDoorTask((Door) actor, attacker));
+        ThreadPool.execute(new onEventAttackedDoorTask((Door) actor, attacker));
     }
 
     @Override

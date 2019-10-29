@@ -2,7 +2,7 @@ package org.l2j.gameserver.model.skills;
 
 import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.Config;
-import org.l2j.commons.threading.ThreadPoolManager;
+import org.l2j.commons.threading.ThreadPool;
 import org.l2j.gameserver.ai.CtrlEvent;
 import org.l2j.gameserver.ai.CtrlIntention;
 import org.l2j.gameserver.data.xml.ActionManager;
@@ -485,7 +485,7 @@ public class SkillCaster implements Runnable {
 
         // Reschedule next task if we have such.
         if (hasNextPhase) {
-            _task = ThreadPoolManager.schedule(this, nextTaskDelay);
+            _task = ThreadPool.schedule(this, nextTaskDelay);
         } else {
             // Stop casting if there is no next phase.
             stopCasting(false);
@@ -786,7 +786,7 @@ public class SkillCaster implements Runnable {
             final SkillUseHolder queuedSkill = currPlayer.getQueuedSkill();
 
             if (queuedSkill != null) {
-                ThreadPoolManager.execute(() ->
+                ThreadPool.execute(() ->
                 {
                     currPlayer.setQueuedSkill(null, null, false, false);
                     currPlayer.useMagic(queuedSkill.getSkill(), queuedSkill.getItem(), queuedSkill.isCtrlPressed(), queuedSkill.isShiftPressed());

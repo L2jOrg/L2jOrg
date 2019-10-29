@@ -1,6 +1,6 @@
 package org.l2j.gameserver.util;
 
-import org.l2j.commons.threading.ThreadPoolManager;
+import org.l2j.commons.threading.ThreadPool;
 import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.xml.impl.NpcData;
@@ -186,7 +186,7 @@ public class MinionList {
         final int time = respawnTime < 0 ? _master.isRaid() ? (int) Config.RAID_MINION_RESPAWN_TIMER : 0 : respawnTime;
 		if ((time > 0) && !_master.isAlikeDead())
 		{
-			_respawnTasks.add(ThreadPoolManager.schedule(new MinionRespawnTask(minion), time));
+			_respawnTasks.add(ThreadPool.schedule(new MinionRespawnTask(minion), time));
         }
     }
 

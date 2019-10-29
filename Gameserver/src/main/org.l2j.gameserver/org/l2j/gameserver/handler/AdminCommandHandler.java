@@ -1,6 +1,6 @@
 package org.l2j.gameserver.handler;
 
-import org.l2j.commons.threading.ThreadPoolManager;
+import org.l2j.commons.threading.ThreadPool;
 import org.l2j.gameserver.data.xml.impl.AdminData;
 import org.l2j.gameserver.enums.PlayerAction;
 import org.l2j.gameserver.model.WorldObject;
@@ -79,7 +79,7 @@ public class AdminCommandHandler implements IHandler<IAdminCommandHandler, Strin
             player.sendPacket(dlg);
         } else {
             // Admin Commands must run through a long running task, otherwise a command that takes too much time will freeze the server, this way you'll feel only a minor spike.
-            ThreadPoolManager.execute(() ->
+            ThreadPool.execute(() ->
             {
                 final long begin = System.currentTimeMillis();
                 try {

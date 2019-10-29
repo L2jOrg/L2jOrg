@@ -1,7 +1,7 @@
 package handlers.communityboard;
 
 import org.l2j.commons.database.DatabaseFactory;
-import org.l2j.commons.threading.ThreadPoolManager;
+import org.l2j.commons.threading.ThreadPool;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.cache.HtmCache;
 import org.l2j.gameserver.data.database.dao.ReportDAO;
@@ -165,7 +165,7 @@ public final class HomeBoard implements IParseBoardHandler {
 				activeChar.destroyItemByItemId("CB_Teleport", Config.COMMUNITYBOARD_CURRENCY, Config.COMMUNITYBOARD_TELEPORT_PRICE, activeChar, true);
 				activeChar.setInstanceById(0);
 				activeChar.teleToLocation(Config.COMMUNITY_AVAILABLE_TELEPORTS.get(teleBuypass), 0);
-				ThreadPoolManager.schedule(activeChar::enableAllSkills, 3000);
+				ThreadPool.schedule(activeChar::enableAllSkills, 3000);
 			}
 		}
 		else if (command.startsWith("_bbsbuff"))

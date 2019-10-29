@@ -1,6 +1,6 @@
 package org.l2j.gameserver.model.actor.instance;
 
-import org.l2j.commons.threading.ThreadPoolManager;
+import org.l2j.commons.threading.ThreadPool;
 import org.l2j.gameserver.enums.InstanceType;
 import org.l2j.gameserver.enums.TrapAction;
 import org.l2j.gameserver.world.zone.ZoneManager;
@@ -60,7 +60,7 @@ public final class Trap extends Npc {
         _lifeTime = lifeTime != 0 ? lifeTime : 30000;
         _remainingTime = _lifeTime;
         if (_skill != null) {
-            _trapTask = ThreadPoolManager.getInstance().scheduleAtFixedRate(new TrapTask(this), TICK, TICK);
+            _trapTask = ThreadPool.scheduleAtFixedRate(new TrapTask(this), TICK, TICK);
         }
     }
 
@@ -277,7 +277,7 @@ public final class Trap extends Npc {
 
         EventDispatcher.getInstance().notifyEventAsync(new OnTrapAction(this, target, TrapAction.TRAP_TRIGGERED), this);
 
-        ThreadPoolManager.getInstance().schedule(new TrapTriggerTask(this), 500);
+        ThreadPool.schedule(new TrapTriggerTask(this), 500);
     }
 
     public void unSummon() {

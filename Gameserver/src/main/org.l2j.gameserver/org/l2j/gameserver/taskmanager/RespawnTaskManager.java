@@ -1,6 +1,6 @@
 package org.l2j.gameserver.taskmanager;
 
-import org.l2j.commons.threading.ThreadPoolManager;
+import org.l2j.commons.threading.ThreadPool;
 import org.l2j.gameserver.model.Spawn;
 import org.l2j.gameserver.model.actor.Npc;
 
@@ -17,7 +17,7 @@ public class RespawnTaskManager
 
 	public RespawnTaskManager()
 	{
-		ThreadPoolManager.scheduleAtFixedRate(() ->
+		ThreadPool.scheduleAtFixedRate(() ->
 		{
 			final long time = System.currentTimeMillis();
 			for (Entry<Npc, Long> entry : PENDING_RESPAWNS.entrySet())

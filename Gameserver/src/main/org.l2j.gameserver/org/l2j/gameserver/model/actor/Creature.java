@@ -1,6 +1,6 @@
 package org.l2j.gameserver.model.actor;
 
-import org.l2j.commons.threading.ThreadPoolManager;
+import org.l2j.commons.threading.ThreadPool;
 import org.l2j.commons.util.EmptyQueue;
 import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.Config;
@@ -815,7 +815,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
                     // Check if bow delay is still active.
                     if (_disableRangedAttackEndTime > System.nanoTime()) {
                         if (GameUtils.isPlayer(this)) {
-                            ThreadPoolManager.schedule(new NotifyAITask(this, CtrlEvent.EVT_READY_TO_ACT), 1000);
+                            ThreadPool.schedule(new NotifyAITask(this, CtrlEvent.EVT_READY_TO_ACT), 1000);
                             sendPacket(ActionFailed.STATIC_PACKET);
                         }
                         return;
@@ -849,7 +849,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
                         mpConsume = isAffected(EffectFlag.CHEAPSHOT) ? 0 : mpConsume;
                         if (_status.getCurrentMp() < mpConsume) {
                             // If Player doesn't have enough MP, stop the attack
-                            ThreadPoolManager.schedule(new NotifyAITask(this, CtrlEvent.EVT_READY_TO_ACT), 1000);
+                            ThreadPool.schedule(new NotifyAITask(this, CtrlEvent.EVT_READY_TO_ACT), 1000);
                             sendPacket(SystemMessageId.NOT_ENOUGH_MP);
                             sendPacket(ActionFailed.STATIC_PACKET);
                             return;
@@ -911,12 +911,12 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 
                     // Calculate and set the disable delay of the bow in function of the Attack Speed
                     _disableRangedAttackEndTime = System.nanoTime() + TimeUnit.MILLISECONDS.toNanos(reuse);
-                    _hitTask = ThreadPoolManager.schedule(() -> onHitTimeNotDual(weaponItem, attack, timeToHit, timeAtk), timeToHit);
+                    _hitTask = ThreadPool.schedule(() -> onHitTimeNotDual(weaponItem, attack, timeToHit, timeAtk), timeToHit);
                     break;
                 }
                 case FIST: {
                     if (!GameUtils.isPlayer(this)) {
-                        _hitTask = ThreadPoolManager.schedule(() -> onHitTimeNotDual(weaponItem, attack, timeToHit, timeAtk), timeToHit);
+                        _hitTask = ThreadPool.schedule(() -> onHitTimeNotDual(weaponItem, attack, timeToHit, timeAtk), timeToHit);
                         break;
                     }
                 }
@@ -925,11 +925,11 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
                 case DUALBLUNT:
                 case DUALDAGGER: {
                     final int timeToHit2 = Formulas.calculateTimeToHit(timeAtk, weaponType, isTwoHanded, true) - timeToHit;
-                    _hitTask = ThreadPoolManager.schedule(() -> onFirstHitTimeForDual(weaponItem, attack, timeToHit, timeAtk, timeToHit2), timeToHit);
+                    _hitTask = ThreadPool.schedule(() -> onFirstHitTimeForDual(weaponItem, attack, timeToHit, timeAtk, timeToHit2), timeToHit);
                     break;
                 }
                 default: {
-                    _hitTask = ThreadPoolManager.schedule(() -> onHitTimeNotDual(weaponItem, attack, timeToHit, timeAtk), timeToHit);
+                    _hitTask = ThreadPool.schedule(() -> onHitTimeNotDual(weaponItem, attack, timeToHit, timeAtk), timeToHit);
                     break;
                 }
             }
@@ -2515,7 +2515,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
         m._moveTimestamp = gameTicks;
 
         if (distFraction > 1) {
-            ThreadPoolManager.execute(() -> getAI().notifyEvent(CtrlEvent.EVT_ARRIVED));
+            ThreadPool.execute(() -> getAI().notifyEvent(CtrlEvent.EVT_ARRIVED));
             return true;
         }
 
@@ -2863,7 +2863,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 
         // Create a task to notify the AI that Creature arrives at a check point of the movement
         if ((ticksToMove * WorldTimeController.MILLIS_IN_TICK) > 3000) {
-            ThreadPoolManager.getInstance().schedule(new NotifyAITask(this, CtrlEvent.EVT_ARRIVED_REVALIDATE), 2000);
+            ThreadPool.schedule(new NotifyAITask(this, CtrlEvent.EVT_ARRIVED_REVALIDATE), 2000);
         }
         // the CtrlEvent.EVT_ARRIVED will be sent when the character will actually arrive to destination by GameTimeController
     }
@@ -2936,7 +2936,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 
         // Create a task to notify the AI that Creature arrives at a check point of the movement
         if ((ticksToMove * WorldTimeController.MILLIS_IN_TICK) > 3000) {
-            ThreadPoolManager.getInstance().schedule(new NotifyAITask(this, CtrlEvent.EVT_ARRIVED_REVALIDATE), 2000);
+            ThreadPool.schedule(new NotifyAITask(this, CtrlEvent.EVT_ARRIVED_REVALIDATE), 2000);
         }
 
         // the CtrlEvent.EVT_ARRIVED will be sent when the character will actually arrive
@@ -3054,7 +3054,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
             }
         }
 
-        _hitTask = ThreadPoolManager.schedule(() -> onAttackFinish(attack), attackTime - hitTime);
+        _hitTask = ThreadPool.schedule(() -> onAttackFinish(attack), attackTime - hitTime);
     }
 
     public void onFirstHitTimeForDual(Weapon weapon, Attack attack, int hitTime, int attackTime, int delayForSecondAttack) {
@@ -3063,7 +3063,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
             return;
         }
 
-        _hitTask = ThreadPoolManager.getInstance().schedule(() -> onSecondHitTimeForDual(weapon, attack, hitTime, delayForSecondAttack, attackTime), delayForSecondAttack);
+        _hitTask = ThreadPool.schedule(() -> onSecondHitTimeForDual(weapon, attack, hitTime, delayForSecondAttack, attackTime), delayForSecondAttack);
 
         // First dual attack is the first hit only.
         final Hit hit = attack.getHits().get(0);
@@ -3102,7 +3102,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
             }
         }
 
-        _hitTask = ThreadPoolManager.schedule(() -> onAttackFinish(attack), attackTime - (hitTime1 + hitTime2));
+        _hitTask = ThreadPool.schedule(() -> onAttackFinish(attack), attackTime - (hitTime1 + hitTime2));
     }
 
     public void onHitTarget(Creature target, Weapon weapon, Hit hit) {

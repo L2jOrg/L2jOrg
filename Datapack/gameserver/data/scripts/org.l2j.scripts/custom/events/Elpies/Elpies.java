@@ -18,7 +18,7 @@ package custom.events.Elpies;
 
 import events.ScriptEvent;
 import org.l2j.gameserver.Config;
-import org.l2j.commons.threading.ThreadPoolManager;
+import org.l2j.commons.threading.ThreadPool;
 import org.l2j.gameserver.datatables.SpawnTable;
 import org.l2j.gameserver.model.Spawn;
 import org.l2j.gameserver.model.actor.Npc;
@@ -113,7 +113,7 @@ public final class Elpies extends Event implements ScriptEvent
 		Broadcast.toAllOnlinePlayers("Help us exterminate them!");
 		Broadcast.toAllOnlinePlayers("You have " + EVENT_DURATION_MINUTES + " minutes!");
 		
-		_eventTask = ThreadPoolManager.getInstance().schedule(() ->
+		_eventTask = ThreadPool.schedule(() ->
 		{
 			Broadcast.toAllOnlinePlayers("Time is up!");
 			eventStop();

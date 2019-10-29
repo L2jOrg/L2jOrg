@@ -1,7 +1,7 @@
 package org.l2j.gameserver.model.quest;
 
 import org.l2j.commons.database.DatabaseFactory;
-import org.l2j.commons.threading.ThreadPoolManager;
+import org.l2j.commons.threading.ThreadPool;
 import org.l2j.gameserver.data.database.announce.manager.AnnouncementsManager;
 import org.l2j.gameserver.data.xml.impl.NpcData;
 import org.l2j.gameserver.datatables.EventDroplist;
@@ -68,7 +68,7 @@ public class LongTimeEvent extends Quest {
                 LOGGER.info("Event " + _eventName + " active till " + _eventPeriod.getEndDate());
             } else if (_eventPeriod.getStartDate().after(new Date())) {
                 final long delay = _eventPeriod.getStartDate().getTime() - System.currentTimeMillis();
-                ThreadPoolManager.getInstance().schedule(new ScheduleStart(), delay);
+                ThreadPool.schedule(new ScheduleStart(), delay);
                 LOGGER.info("Event " + _eventName + " will be started at " + _eventPeriod.getStartDate());
             } else {
                 // Destroy items that must exist only on event period.
@@ -259,7 +259,7 @@ public class LongTimeEvent extends Quest {
         AnnouncementsManager.getInstance().addAnnouncement(new EventAnnouncement(_eventPeriod, _onEnterMsg));
 
         // Schedule event end (now only for message sending)
-        ThreadPoolManager.schedule(new ScheduleEnd(), millisToEventEnd);
+        ThreadPool.schedule(new ScheduleEnd(), millisToEventEnd);
     }
 
     /**

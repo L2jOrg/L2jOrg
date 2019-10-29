@@ -1,7 +1,7 @@
 package org.l2j.gameserver.world.zone.type;
 
 import org.l2j.gameserver.Config;
-import org.l2j.commons.threading.ThreadPoolManager;
+import org.l2j.commons.threading.ThreadPool;
 import org.l2j.gameserver.model.Fishing;
 import org.l2j.gameserver.model.PcCondOverride;
 import org.l2j.gameserver.model.actor.Creature;
@@ -31,7 +31,7 @@ public class FishingZone extends Zone {
 
             final WeakReference<Player> weakPlayer = new WeakReference<>(creature.getActingPlayer());
 
-            ThreadPoolManager.execute(new Runnable() {
+            ThreadPool.execute(new Runnable() {
                 @Override
                 public void run() {
                     final Player player = weakPlayer.get();
@@ -45,7 +45,7 @@ public class FishingZone extends Zone {
                             if (fishing.canFish() && !fishing.isFishing()) {
                                 player.sendPacket( fishing.isAtValidLocation() ? ExAutoFishAvailable.YES : ExAutoFishAvailable.NO);
                             }
-                            ThreadPoolManager.schedule(this, 1500);
+                            ThreadPool.schedule(this, 1500);
                         } else {
                             player.sendPacket(ExAutoFishAvailable.NO);
                         }

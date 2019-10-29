@@ -1,6 +1,6 @@
 package org.l2j.gameserver.util;
 
-import org.l2j.commons.threading.ThreadPoolManager;
+import org.l2j.commons.threading.ThreadPool;
 import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.enums.HtmlActionScope;
@@ -27,7 +27,6 @@ import java.text.DateFormat;
 import java.text.NumberFormat;
 import java.text.SimpleDateFormat;
 import java.util.*;
-import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
 import static java.util.Objects.isNull;
@@ -46,7 +45,7 @@ public final class GameUtils {
     private static final NumberFormat ADENA_FORMATTER = NumberFormat.getIntegerInstance(Locale.ENGLISH);
 
     public static void handleIllegalPlayerAction(Player actor, String message, IllegalActionPunishmentType punishment) {
-        ThreadPoolManager.schedule(new IllegalPlayerActionTask(actor, message, punishment), 5000);
+        ThreadPool.schedule(new IllegalPlayerActionTask(actor, message, punishment), 5000);
     }
 
     /**

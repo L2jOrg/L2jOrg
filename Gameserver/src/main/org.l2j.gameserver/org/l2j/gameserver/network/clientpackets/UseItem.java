@@ -1,6 +1,6 @@
 package org.l2j.gameserver.network.clientpackets;
 
-import org.l2j.commons.threading.ThreadPoolManager;
+import org.l2j.commons.threading.ThreadPool;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.ai.CtrlEvent;
 import org.l2j.gameserver.ai.CtrlIntention;
@@ -198,7 +198,7 @@ public final class UseItem extends ClientPacket {
                 // Create and Bind the next action to the AI
                 player.getAI().setNextAction(new NextAction(CtrlEvent.EVT_FINISH_CASTING, CtrlIntention.AI_INTENTION_CAST, () -> player.useEquippableItem(item, true)));
             } else if (player.isAttackingNow()) {
-                ThreadPoolManager.schedule(() -> {
+                ThreadPool.schedule(() -> {
                     var usedItem = player.getInventory().getItemByObjectId(_objectId);
 
                     if(isNull(usedItem)) {

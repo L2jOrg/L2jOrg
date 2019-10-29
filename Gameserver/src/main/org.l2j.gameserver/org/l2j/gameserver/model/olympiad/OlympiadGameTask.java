@@ -1,7 +1,7 @@
 package org.l2j.gameserver.model.olympiad;
 
+import org.l2j.commons.threading.ThreadPool;
 import org.l2j.gameserver.Config;
-import org.l2j.commons.threading.ThreadPoolManager;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
 import org.slf4j.Logger;
@@ -127,7 +127,7 @@ public final class OlympiadGameTask implements Runnable {
         _game = game;
         _state = GameState.BEGIN;
         _needAnnounce = false;
-        ThreadPoolManager.getInstance().execute(this);
+        ThreadPool.execute(this);
     }
 
     @Override
@@ -269,7 +269,7 @@ public final class OlympiadGameTask implements Runnable {
                     return;
                 }
             }
-            ThreadPoolManager.schedule(this, delay * 1000);
+            ThreadPool.schedule(this, delay * 1000);
         } catch (Exception e) {
             switch (_state) {
                 case GAME_STOPPED:
@@ -285,7 +285,7 @@ public final class OlympiadGameTask implements Runnable {
 
             LOGGER.warn("Exception in " + _state + ", trying to port players back: " + e.getMessage(), e);
             _state = GameState.GAME_STOPPED;
-            ThreadPoolManager.getInstance().schedule(this, 1000);
+            ThreadPool.schedule(this, 1000);
         }
     }
 

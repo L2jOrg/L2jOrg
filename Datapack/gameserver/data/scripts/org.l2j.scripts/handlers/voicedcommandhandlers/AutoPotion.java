@@ -17,7 +17,7 @@
 package handlers.voicedcommandhandlers;
 
 import org.l2j.gameserver.Config;
-import org.l2j.commons.threading.ThreadPoolManager;
+import org.l2j.commons.threading.ThreadPool;
 import org.l2j.gameserver.handler.IVoicedCommandHandler;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.tasks.player.AutoPotionTask;
@@ -65,7 +65,7 @@ public class AutoPotion implements IVoicedCommandHandler
 				AUTO_POTION_TASKS.get(playerOID).cancel(true);
 				AUTO_POTION_TASKS.remove(playerOID);
 			}
-			AUTO_POTION_TASKS.put(activeChar.getObjectId(), ThreadPoolManager.getInstance().scheduleAtFixedRate(new AutoPotionTask(activeChar), POTION_TASK_DELAY, POTION_TASK_DELAY));
+			AUTO_POTION_TASKS.put(activeChar.getObjectId(), ThreadPool.scheduleAtFixedRate(new AutoPotionTask(activeChar), POTION_TASK_DELAY, POTION_TASK_DELAY));
 			activeChar.sendMessage("Auto potions is enabled.");
 			return true;
 		}

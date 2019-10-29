@@ -1,6 +1,6 @@
 package org.l2j.gameserver.model;
 
-import org.l2j.commons.threading.ThreadPoolManager;
+import org.l2j.commons.threading.ThreadPool;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.events.EventDispatcher;
 import org.l2j.gameserver.model.events.impl.character.OnCreatureSee;
@@ -42,7 +42,7 @@ public class CreatureContainer {
      */
     public void start() {
         if ((_task == null) || _task.isDone()) {
-            _task = ThreadPoolManager.getInstance().scheduleAtFixedRate(this::update, 1000, 1000);
+            _task = ThreadPool.scheduleAtFixedRate(this::update, 1000, 1000);
         }
     }
 

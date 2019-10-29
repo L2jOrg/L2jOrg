@@ -16,7 +16,7 @@
  */
 package handlers.effecthandlers;
 
-import org.l2j.commons.threading.ThreadPoolManager;
+import org.l2j.commons.threading.ThreadPool;
 import org.l2j.gameserver.data.xml.impl.SkillData;
 import org.l2j.gameserver.enums.SubclassInfoType;
 import org.l2j.gameserver.model.StatsSet;
@@ -58,7 +58,7 @@ public class ClassChange extends AbstractEffect
 		{
 			final Player player = effected.getActingPlayer();
 			// TODO: FIX ME - Executing 1 second later otherwise interupted exception during storeCharBase()
-			ThreadPoolManager.schedule(() ->
+			ThreadPool.schedule(() ->
 			{
 				final int activeClass = player.getClassId().getId();
 				

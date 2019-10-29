@@ -2,7 +2,7 @@ package org.l2j.gameserver.instancemanager;
 
 import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.commons.util.CommonUtil;
-import org.l2j.commons.threading.ThreadPoolManager;
+import org.l2j.commons.threading.ThreadPool;
 import org.l2j.gameserver.data.sql.impl.ClanTable;
 import org.l2j.gameserver.model.clan.entry.PledgeApplicantInfo;
 import org.l2j.gameserver.model.clan.entry.PledgeRecruitInfo;
@@ -68,14 +68,14 @@ public class ClanEntryManager {
     }
 
     private static void lockPlayer(int playerId) {
-        _playerLocked.put(playerId, ThreadPoolManager.getInstance().schedule(() ->
+        _playerLocked.put(playerId, ThreadPool.schedule(() ->
         {
             _playerLocked.remove(playerId);
         }, LOCK_TIME));
     }
 
     private static void lockClan(int clanId) {
-        _clanLocked.put(clanId, ThreadPoolManager.schedule(() ->
+        _clanLocked.put(clanId, ThreadPool.schedule(() ->
         {
             _clanLocked.remove(clanId);
         }, LOCK_TIME));

@@ -1,6 +1,6 @@
 package org.l2j.gameserver.instancemanager;
 
-import org.l2j.commons.threading.ThreadPoolManager;
+import org.l2j.commons.threading.ThreadPool;
 import org.l2j.gameserver.ai.CtrlIntention;
 import org.l2j.gameserver.data.xml.impl.NpcData;
 import org.l2j.gameserver.enums.ChatType;
@@ -253,7 +253,7 @@ public final class WalkingManager extends GameXmlReader {
                     final ScheduledFuture<?> task = _repeatMoveTasks.get(npc);
                     if ((task == null) || task.isCancelled() || task.isDone())
                     {
-                        final ScheduledFuture<?> newTask = ThreadPoolManager.scheduleAtFixedRate(new StartMovingTask(npc, routeName), 60000, 60000);
+                        final ScheduledFuture<?> newTask = ThreadPool.scheduleAtFixedRate(new StartMovingTask(npc, routeName), 60000, 60000);
                         _repeatMoveTasks.put(npc, newTask);
                         walk.setWalkCheckTask(newTask); // start walk check task, for resuming walk after fight
                     }
@@ -263,7 +263,7 @@ public final class WalkingManager extends GameXmlReader {
                     final ScheduledFuture<?> task = _startMoveTasks.get(npc);
                     if ((task == null) || task.isCancelled() || task.isDone())
                     {
-                        _startMoveTasks.put(npc, ThreadPoolManager.schedule(new StartMovingTask(npc, routeName), 60000));
+                        _startMoveTasks.put(npc, ThreadPool.schedule(new StartMovingTask(npc, routeName), 60000));
                     }
                 }
             } else
@@ -382,7 +382,7 @@ public final class WalkingManager extends GameXmlReader {
                     final ScheduledFuture<?> task = _arriveTasks.get(npc);
                     if ((task == null) || task.isCancelled() || task.isDone())
                     {
-                        _arriveTasks.put(npc, ThreadPoolManager.schedule(new ArrivedTask(npc, walk), 100 + (node.getDelay() * 1000)));
+                        _arriveTasks.put(npc, ThreadPool.schedule(new ArrivedTask(npc, walk), 100 + (node.getDelay() * 1000)));
                     }
                 }
             }

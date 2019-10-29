@@ -2,7 +2,7 @@ package org.l2j.gameserver.data.sql.impl;
 
 import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.gameserver.Config;
-import org.l2j.commons.threading.ThreadPoolManager;
+import org.l2j.commons.threading.ThreadPool;
 import org.l2j.gameserver.communitybbs.Manager.ForumsBBSManager;
 import org.l2j.gameserver.data.xml.impl.ClanHallData;
 import org.l2j.gameserver.enums.ClanWarState;
@@ -31,7 +31,6 @@ import org.l2j.gameserver.network.serverpackets.PledgeShowMemberListAll;
 import org.l2j.gameserver.network.serverpackets.PledgeShowMemberListUpdate;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
 import org.l2j.gameserver.util.EnumIntBitmask;
-import org.l2j.gameserver.util.GameUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -274,7 +273,7 @@ public class ClanTable {
     }
 
     public void scheduleRemoveClan(int clanId) {
-        ThreadPoolManager.schedule(() ->
+        ThreadPool.schedule(() ->
         {
             if (getClan(clanId) == null) {
                 return;

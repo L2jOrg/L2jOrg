@@ -10,7 +10,7 @@ import org.l2j.authserver.network.crypt.ScrambledKeyPair;
 import org.l2j.authserver.network.gameserver.packet.game2auth.ServerStatus;
 import org.l2j.authserver.settings.AuthServerSettings;
 import org.l2j.commons.network.SessionKey;
-import org.l2j.commons.threading.ThreadPoolManager;
+import org.l2j.commons.threading.ThreadPool;
 import org.l2j.commons.util.Rnd;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -104,7 +104,7 @@ public class AuthController {
         client.setCrypt(cripter);
 
         if(isNull(scheduledPurge) || scheduledPurge.isCancelled()) {
-            scheduledPurge = ThreadPoolManager.scheduleAtFixedDelay(new PurgeThread(), LOGIN_TIMEOUT, LOGIN_TIMEOUT, TimeUnit.MINUTES);
+            scheduledPurge = ThreadPool.scheduleAtFixedDelay(new PurgeThread(), LOGIN_TIMEOUT, LOGIN_TIMEOUT, TimeUnit.MINUTES);
         }
     }
 

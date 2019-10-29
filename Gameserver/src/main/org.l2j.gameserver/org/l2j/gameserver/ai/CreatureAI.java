@@ -1,7 +1,7 @@
 package org.l2j.gameserver.ai;
 
 
-import org.l2j.commons.threading.ThreadPoolManager;
+import org.l2j.commons.threading.ThreadPool;
 import org.l2j.gameserver.enums.ItemLocation;
 import org.l2j.gameserver.engine.geo.GeoEngine;
 import org.l2j.gameserver.instancemanager.WalkingManager;
@@ -210,7 +210,7 @@ public class CreatureAI extends AbstractAI {
         }
 
         if (actor.isAttackingNow()) {
-            ThreadPoolManager.schedule(new CastTask(actor, skill, target, item, forceUse, dontMove), actor.getAttackEndTime() - TimeUnit.MILLISECONDS.toNanos(System.currentTimeMillis()));
+            ThreadPool.schedule(new CastTask(actor, skill, target, item, forceUse, dontMove), actor.getAttackEndTime() - TimeUnit.MILLISECONDS.toNanos(System.currentTimeMillis()));
         } else {
             changeIntentionToCast(skill, target, item, forceUse, dontMove);
         }

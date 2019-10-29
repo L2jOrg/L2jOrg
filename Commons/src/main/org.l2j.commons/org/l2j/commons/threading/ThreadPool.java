@@ -2,7 +2,7 @@ package org.l2j.commons.threading;
 
 import java.util.concurrent.*;
 
-public class ThreadPoolManager {
+public class ThreadPool {
     private static final long MAX_DELAY = TimeUnit.NANOSECONDS.toMillis(Long.MAX_VALUE - System.nanoTime()) / 2;
 
     private final ScheduledThreadPoolExecutor scheduledExecutor;
@@ -11,7 +11,7 @@ public class ThreadPoolManager {
 
     private boolean shutdown;
 
-    private ThreadPoolManager() {
+    private ThreadPool() {
         RejectedExecutionHandler rejectedHandler = new RejectedExecutionHandlerImpl();
 
         var processors = Runtime.getRuntime().availableProcessors();
@@ -35,7 +35,7 @@ public class ThreadPoolManager {
 
     private static long validate(long delay)
     {
-        long validatedDelay = Math.max(0, Math.min(ThreadPoolManager.MAX_DELAY, delay));
+        long validatedDelay = Math.max(0, Math.min(ThreadPool.MAX_DELAY, delay));
         if (delay > validatedDelay)
             return -1;
 
@@ -131,11 +131,11 @@ public class ThreadPoolManager {
         list.append("\tgetTaskCount: ........ ").append(scheduledExecutor.getTaskCount()).append("\n");
     }
 
-    public static ThreadPoolManager getInstance() {
+    public static ThreadPool getInstance() {
         return Singleton.INSTANCE;
     }
 
     private static class Singleton {
-        private static final ThreadPoolManager INSTANCE = new ThreadPoolManager();
+        private static final ThreadPool INSTANCE = new ThreadPool();
     }
 }

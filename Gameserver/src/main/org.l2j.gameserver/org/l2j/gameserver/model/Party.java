@@ -1,6 +1,6 @@
 package org.l2j.gameserver.model;
 
-import org.l2j.commons.threading.ThreadPoolManager;
+import org.l2j.commons.threading.ThreadPool;
 import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.datatables.ItemTable;
@@ -309,7 +309,7 @@ public class Party extends AbstractPlayerGroup {
         }
 
         if (_positionBroadcastTask == null) {
-            _positionBroadcastTask = ThreadPoolManager.scheduleAtFixedRate(() ->
+            _positionBroadcastTask = ThreadPool.scheduleAtFixedRate(() ->
             {
                 if (_positionPacket == null) {
                     _positionPacket = new PartyMemberPosition(this);
@@ -895,7 +895,7 @@ public class Party extends AbstractPlayerGroup {
         }
         _changeRequestDistributionType = partyDistributionType;
         _changeDistributionTypeAnswers = new HashSet<>();
-        _changeDistributionTypeRequestTask = ThreadPoolManager.schedule(() -> finishLootRequest(false), PARTY_DISTRIBUTION_TYPE_REQUEST_TIMEOUT.toMillis());
+        _changeDistributionTypeRequestTask = ThreadPool.schedule(() -> finishLootRequest(false), PARTY_DISTRIBUTION_TYPE_REQUEST_TIMEOUT.toMillis());
 
         broadcastToPartyMembers(getLeader(), new ExAskModifyPartyLooting(getLeader().getName(), partyDistributionType));
 

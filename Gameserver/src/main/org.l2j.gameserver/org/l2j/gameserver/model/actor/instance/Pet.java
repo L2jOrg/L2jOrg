@@ -1,7 +1,7 @@
 package org.l2j.gameserver.model.actor.instance;
 
 import org.l2j.commons.database.DatabaseFactory;
-import org.l2j.commons.threading.ThreadPoolManager;
+import org.l2j.commons.threading.ThreadPool;
 import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.ai.CtrlIntention;
@@ -850,7 +850,7 @@ public class Pet extends Summon {
 
         stopFeed();
         if (!isDead() && (getOwner().getPet() == this)) {
-            _feedTask = ThreadPoolManager.scheduleAtFixedRate(new FeedTask(), 10000, 10000);
+            _feedTask = ThreadPool.scheduleAtFixedRate(new FeedTask(), 10000, 10000);
         }
     }
 

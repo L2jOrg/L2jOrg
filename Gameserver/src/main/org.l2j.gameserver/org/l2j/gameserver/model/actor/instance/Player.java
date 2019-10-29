@@ -4,7 +4,7 @@ import io.github.joealisson.primitive.CHashIntMap;
 import io.github.joealisson.primitive.IntMap;
 import io.github.joealisson.primitive.IntSet;
 import org.l2j.commons.database.DatabaseFactory;
-import org.l2j.commons.threading.ThreadPoolManager;
+import org.l2j.commons.threading.ThreadPool;
 import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.ItemsAutoDestroy;
@@ -1026,7 +1026,7 @@ public final class Player extends Playable {
         updatePvPFlag(1);
 
         if (_PvPRegTask == null) {
-            _PvPRegTask = ThreadPoolManager.scheduleAtFixedRate(new PvPFlagTask(this), 1000, 1000);
+            _PvPRegTask = ThreadPool.scheduleAtFixedRate(new PvPFlagTask(this), 1000, 1000);
         }
     }
 
@@ -2549,7 +2549,7 @@ public final class Player extends Playable {
             getAI().setIntention(CtrlIntention.AI_INTENTION_REST);
             broadcastPacket(new ChangeWaitType(this, ChangeWaitType.WT_SITTING));
             // Schedule a sit down task to wait for the animation to finish
-            ThreadPoolManager.schedule(new SitDownTask(this), 2500);
+            ThreadPool.schedule(new SitDownTask(this), 2500);
             setBlockActions(true);
         }
     }
@@ -2567,7 +2567,7 @@ public final class Player extends Playable {
 
             broadcastPacket(new ChangeWaitType(this, ChangeWaitType.WT_STANDING));
             // Schedule a stand up task to wait for the animation to finish
-            ThreadPoolManager.schedule(new StandUpTask(this), 2500);
+            ThreadPool.schedule(new StandUpTask(this), 2500);
         }
     }
 
@@ -5261,7 +5261,7 @@ public final class Player extends Playable {
                 return false;
             }
         } else {
-            ThreadPoolManager.schedule(() ->
+            ThreadPool.schedule(() ->
             {
                 if (isInWater()) {
                     broadcastUserInfo();
@@ -6372,7 +6372,7 @@ public final class Player extends Playable {
                             removeHenna(slot);
                             continue;
                         }
-                        _hennaRemoveSchedules.put(slot, ThreadPoolManager.schedule(new HennaDurationTask(this, slot), System.currentTimeMillis() + remainingTime));
+                        _hennaRemoveSchedules.put(slot, ThreadPool.schedule(new HennaDurationTask(this, slot), System.currentTimeMillis() + remainingTime));
                     }
 
                     _henna[slot - 1] = henna;
@@ -6517,7 +6517,7 @@ public final class Player extends Playable {
                 // Task for henna duration
                 if (henna.getDuration() > 0) {
                     getVariables().set("HennaDuration" + i, System.currentTimeMillis() + (henna.getDuration() * 60000));
-                    _hennaRemoveSchedules.put(i, ThreadPoolManager.getInstance().schedule(new HennaDurationTask(this, i), System.currentTimeMillis() + (henna.getDuration() * 60000)));
+                    _hennaRemoveSchedules.put(i, ThreadPool.schedule(new HennaDurationTask(this, i), System.currentTimeMillis() + (henna.getDuration() * 60000)));
                 }
 
                 // Reward henna skills
@@ -6614,7 +6614,7 @@ public final class Player extends Playable {
 
     private void startAutoSaveTask() {
         if ((Config.CHAR_DATA_STORE_INTERVAL > 0) && (_autoSaveTask == null)) {
-            _autoSaveTask = ThreadPoolManager.scheduleAtFixedRate(this::autoSave, 300_000L, TimeUnit.MINUTES.toMillis(Config.CHAR_DATA_STORE_INTERVAL));
+            _autoSaveTask = ThreadPool.scheduleAtFixedRate(this::autoSave, 300_000L, TimeUnit.MINUTES.toMillis(Config.CHAR_DATA_STORE_INTERVAL));
         }
     }
 
@@ -7112,7 +7112,7 @@ public final class Player extends Playable {
     public void setInventoryBlockingStatus(boolean val) {
         _inventoryDisable = val;
         if (val) {
-            ThreadPoolManager.schedule(new InventoryEnableTask(this), 1500);
+            ThreadPool.schedule(new InventoryEnableTask(this), 1500);
         }
     }
 
@@ -7778,7 +7778,7 @@ public final class Player extends Playable {
 
     public void sendSkillList() {
         if (_skillListRefreshTask == null) {
-            _skillListRefreshTask = ThreadPoolManager.schedule(() ->
+            _skillListRefreshTask = ThreadPool.schedule(() ->
             {
                 sendSkillList(0);
                 _skillListRefreshTask = null;
@@ -8194,7 +8194,7 @@ public final class Player extends Playable {
 
     public void startWarnUserTakeBreak() {
         if (_taskWarnUserTakeBreak == null) {
-            _taskWarnUserTakeBreak = ThreadPoolManager.scheduleAtFixedRate(new WarnUserTakeBreakTask(this), 3600000, 3600000);
+            _taskWarnUserTakeBreak = ThreadPool.scheduleAtFixedRate(new WarnUserTakeBreakTask(this), 3600000, 3600000);
         }
     }
 
@@ -8215,7 +8215,7 @@ public final class Player extends Playable {
 
     public void startRentPet(int seconds) {
         if (_taskRentPet == null) {
-            _taskRentPet = ThreadPoolManager.getInstance().scheduleAtFixedRate(new RentPetTask(this), seconds * 1000, seconds * 1000);
+            _taskRentPet = ThreadPool.scheduleAtFixedRate(new RentPetTask(this), seconds * 1000, seconds * 1000);
         }
     }
 
@@ -8240,7 +8240,7 @@ public final class Player extends Playable {
             final int timeinwater = (int) getStat().getValue(Stats.BREATH, 60000);
 
             sendPacket(new SetupGauge(getObjectId(), 2, timeinwater));
-            _taskWater = ThreadPoolManager.getInstance().scheduleAtFixedRate(new WaterTask(this), timeinwater, 1000);
+            _taskWater = ThreadPool.scheduleAtFixedRate(new WaterTask(this), timeinwater, 1000);
         }
     }
 
@@ -8530,7 +8530,7 @@ public final class Player extends Playable {
             if ((_teleportWatchdog == null) && (Config.TELEPORT_WATCHDOG_TIMEOUT > 0)) {
                 synchronized (this) {
                     if (_teleportWatchdog == null) {
-                        _teleportWatchdog = ThreadPoolManager.schedule(new TeleportWatchdogTask(this), Config.TELEPORT_WATCHDOG_TIMEOUT * 1000);
+                        _teleportWatchdog = ThreadPool.schedule(new TeleportWatchdogTask(this), Config.TELEPORT_WATCHDOG_TIMEOUT * 1000);
                     }
                 }
             }
@@ -9216,7 +9216,7 @@ public final class Player extends Playable {
             return;
         }
         if (_fameTask == null) {
-            _fameTask = ThreadPoolManager.scheduleAtFixedRate(new FameTask(this, fameFixRate), delay, delay);
+            _fameTask = ThreadPool.scheduleAtFixedRate(new FameTask(this, fameFixRate), delay, delay);
         }
     }
 
@@ -9320,7 +9320,7 @@ public final class Player extends Playable {
             _soulTask.cancel(false);
             _soulTask = null;
         }
-        _soulTask = ThreadPoolManager.getInstance().schedule(new ResetSoulsTask(this), 600000);
+        _soulTask = ThreadPool.schedule(new ResetSoulsTask(this), 600000);
 
     }
 
@@ -9560,14 +9560,14 @@ public final class Player extends Playable {
             _controlItemId = _pet.getControlObjectId();
             sendPacket(new SetupGauge(3, (_curFeed * 10000) / getFeedConsume(), (getMaxFeed() * 10000) / getFeedConsume()));
             if (!isDead()) {
-                _mountFeedTask = ThreadPoolManager.getInstance().scheduleAtFixedRate(new PetFeedTask(this), 10000, 10000);
+                _mountFeedTask = ThreadPool.scheduleAtFixedRate(new PetFeedTask(this), 10000, 10000);
             }
         } else if (_canFeed) {
             setCurrentFeed(getMaxFeed());
             final SetupGauge sg = new SetupGauge(3, (_curFeed * 10000) / getFeedConsume(), (getMaxFeed() * 10000) / getFeedConsume());
             sendPacket(sg);
             if (!isDead()) {
-                _mountFeedTask = ThreadPoolManager.getInstance().scheduleAtFixedRate(new PetFeedTask(this), 10000, 10000);
+                _mountFeedTask = ThreadPool.scheduleAtFixedRate(new PetFeedTask(this), 10000, 10000);
             }
         }
     }
@@ -9629,7 +9629,7 @@ public final class Player extends Playable {
     }
 
     public void enteredNoLanding(int delay) {
-        _dismountTask = ThreadPoolManager.getInstance().schedule(new DismountTask(this), delay * 1000);
+        _dismountTask = ThreadPool.schedule(new DismountTask(this), delay * 1000);
     }
 
     public void exitedNoLanding() {
@@ -9728,7 +9728,7 @@ public final class Player extends Playable {
             _chargeTask.cancel(false);
             _chargeTask = null;
         }
-        _chargeTask = ThreadPoolManager.getInstance().schedule(new ResetChargesTask(this), 600000);
+        _chargeTask = ThreadPool.schedule(new ResetChargesTask(this), 600000);
     }
 
     /**
@@ -10236,7 +10236,7 @@ public final class Player extends Playable {
         if (_fallingDamageTask != null) {
             _fallingDamageTask.cancel(true);
         }
-        _fallingDamageTask = ThreadPoolManager.schedule(() ->
+        _fallingDamageTask = ThreadPool.schedule(() ->
         {
             if ((_fallingDamage > 0) && !isInvul()) {
                 reduceCurrentHp(min(_fallingDamage, getCurrentHp() - 1), this, null, false, true, false, false);
@@ -10537,7 +10537,7 @@ public final class Player extends Playable {
 
     public void startRecoGiveTask() {
         // Create task to give new recommendations
-        _recoGiveTask = ThreadPoolManager.getInstance().scheduleAtFixedRate(new RecoGiveTask(this), 7200000, 3600000);
+        _recoGiveTask = ThreadPool.scheduleAtFixedRate(new RecoGiveTask(this), 7200000, 3600000);
 
         // Store new data
         storeRecommendations();
@@ -11249,7 +11249,7 @@ public final class Player extends Playable {
             stopOnlineTimeUpdateTask();
         }
 
-        _onlineTimeUpdateTask = ThreadPoolManager.getInstance().scheduleAtFixedRate(this::updateOnlineTime, 60 * 1000, 60 * 1000);
+        _onlineTimeUpdateTask = ThreadPool.scheduleAtFixedRate(this::updateOnlineTime, 60 * 1000, 60 * 1000);
     }
 
     private void updateOnlineTime() {

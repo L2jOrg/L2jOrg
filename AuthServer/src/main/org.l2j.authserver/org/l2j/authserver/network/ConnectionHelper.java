@@ -5,7 +5,7 @@ import io.github.joealisson.mmocore.PacketExecutor;
 import io.github.joealisson.mmocore.ReadablePacket;
 import org.l2j.authserver.controller.AuthController;
 import org.l2j.authserver.network.client.AuthClient;
-import org.l2j.commons.threading.ThreadPoolManager;
+import org.l2j.commons.threading.ThreadPool;
 
 import java.io.IOException;
 import java.net.InetSocketAddress;
@@ -15,7 +15,7 @@ public class ConnectionHelper implements PacketExecutor<AuthClient>,  Connection
 
     @Override
     public void execute(ReadablePacket<AuthClient> packet) {
-        ThreadPoolManager.execute(packet);
+        ThreadPool.execute(packet);
     }
 
     @Override

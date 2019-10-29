@@ -17,7 +17,7 @@
 package org.l2j.gameserver.instancemanager;
 
 import org.l2j.commons.database.DatabaseFactory;
-import org.l2j.commons.threading.ThreadPoolManager;
+import org.l2j.commons.threading.ThreadPool;
 import org.l2j.gameserver.enums.MailType;
 import org.l2j.gameserver.idfactory.IdFactory;
 import org.l2j.gameserver.instancemanager.tasks.MessageDeletionTask;
@@ -65,9 +65,9 @@ public final class MailManager {
                 final long expiration = msg.getExpiration();
 
                 if (expiration < System.currentTimeMillis()) {
-                    ThreadPoolManager.schedule(new MessageDeletionTask(msgId), 10000);
+                    ThreadPool.schedule(new MessageDeletionTask(msgId), 10000);
                 } else {
-                    ThreadPoolManager.schedule(new MessageDeletionTask(msgId), expiration - System.currentTimeMillis());
+                    ThreadPool.schedule(new MessageDeletionTask(msgId), expiration - System.currentTimeMillis());
                 }
             }
         } catch (SQLException e) {
@@ -167,7 +167,7 @@ public final class MailManager {
             receiver.sendPacket(new ExUnReadMailCount(receiver));
         }
 
-        ThreadPoolManager.getInstance().schedule(new MessageDeletionTask(msg.getId()), msg.getExpiration() - System.currentTimeMillis());
+        ThreadPool.schedule(new MessageDeletionTask(msg.getId()), msg.getExpiration() - System.currentTimeMillis());
     }
 
     public final void markAsReadInDb(int msgId) {

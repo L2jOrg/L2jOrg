@@ -1,7 +1,7 @@
 package org.l2j.gameserver.instancemanager;
 
 import org.l2j.commons.database.DatabaseFactory;
-import org.l2j.commons.threading.ThreadPoolManager;
+import org.l2j.commons.threading.ThreadPool;
 import org.l2j.gameserver.data.xml.impl.NpcData;
 import org.l2j.gameserver.instancemanager.tasks.GrandBossManagerStoreTask;
 import org.l2j.gameserver.model.StatsSet;
@@ -73,7 +73,7 @@ public final class GrandBossManager implements IStorable {
         } catch (Exception e) {
             LOGGER.warn(getClass().getSimpleName() + ": Error while initializing GrandBossManager: " + e.getMessage(), e);
         }
-        ThreadPoolManager.getInstance().scheduleAtFixedRate(new GrandBossManagerStoreTask(), 5 * 60 * 1000, 5 * 60 * 1000);
+        ThreadPool.scheduleAtFixedRate(new GrandBossManagerStoreTask(), 5 * 60 * 1000, 5 * 60 * 1000);
     }
 
     public int getBossStatus(int bossId) {

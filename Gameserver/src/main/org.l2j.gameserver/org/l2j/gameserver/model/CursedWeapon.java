@@ -1,9 +1,9 @@
 package org.l2j.gameserver.model;
 
 import org.l2j.commons.database.DatabaseFactory;
+import org.l2j.commons.threading.ThreadPool;
 import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.Config;
-import org.l2j.commons.threading.ThreadPoolManager;
 import org.l2j.gameserver.data.xml.impl.SkillData;
 import org.l2j.gameserver.instancemanager.CursedWeaponsManager;
 import org.l2j.gameserver.model.Party.MessageType;
@@ -267,7 +267,7 @@ public class CursedWeapon implements INamable {
         if (_player.isTransformed()) {
             _player.stopTransformation(true);
 
-            ThreadPoolManager.getInstance().schedule(() -> _player.transform(transformationId, true), 500);
+            ThreadPool.schedule(() -> _player.transform(transformationId, true), 500);
         } else {
             _player.transform(transformationId, true);
         }
@@ -284,7 +284,7 @@ public class CursedWeapon implements INamable {
         if ((_endTime - System.currentTimeMillis()) <= 0) {
             endOfLife();
         } else {
-            _removeTask = ThreadPoolManager.getInstance().scheduleAtFixedRate(new RemoveTask(), _durationLost * 12000, _durationLost * 12000);
+            _removeTask = ThreadPool.scheduleAtFixedRate(new RemoveTask(), _durationLost * 12000, _durationLost * 12000);
         }
 
     }
@@ -296,7 +296,7 @@ public class CursedWeapon implements INamable {
 
             // Start the Life Task
             _endTime = System.currentTimeMillis() + (_duration * 60000);
-            _removeTask = ThreadPoolManager.getInstance().scheduleAtFixedRate(new RemoveTask(), _durationLost * 12000, _durationLost * 12000);
+            _removeTask = ThreadPool.scheduleAtFixedRate(new RemoveTask(), _durationLost * 12000, _durationLost * 12000);
 
             return true;
         }

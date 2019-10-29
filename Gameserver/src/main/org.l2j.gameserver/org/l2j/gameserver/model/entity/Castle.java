@@ -1,8 +1,8 @@
 package org.l2j.gameserver.model.entity;
 
 import org.l2j.commons.database.DatabaseFactory;
+import org.l2j.commons.threading.ThreadPool;
 import org.l2j.gameserver.Config;
-import org.l2j.commons.threading.ThreadPoolManager;
 import org.l2j.gameserver.data.sql.impl.ClanTable;
 import org.l2j.gameserver.data.xml.impl.CastleData;
 import org.l2j.gameserver.data.xml.DoorDataManager;
@@ -921,9 +921,9 @@ public final class Castle extends AbstractResidence {
             }
             final long currentTime = System.currentTimeMillis();
             if (_endDate > currentTime) {
-                ThreadPoolManager.getInstance().schedule(new FunctionTask(cwh), _endDate - currentTime);
+                ThreadPool.schedule(new FunctionTask(cwh), _endDate - currentTime);
             } else {
-                ThreadPoolManager.getInstance().schedule(new FunctionTask(cwh), 0);
+                ThreadPool.schedule(new FunctionTask(cwh), 0);
             }
         }
 
@@ -964,7 +964,7 @@ public final class Castle extends AbstractResidence {
                         if (_cwh) {
                             ClanTable.getInstance().getClan(getOwnerId()).getWarehouse().destroyItemByItemId("CS_function_fee", CommonItem.ADENA, fee, null, null);
                         }
-                        ThreadPoolManager.schedule(new FunctionTask(true), _rate);
+                        ThreadPool.schedule(new FunctionTask(true), _rate);
                     } else {
                         removeFunction(_type);
                     }

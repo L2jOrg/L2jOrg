@@ -1,6 +1,6 @@
 package org.l2j.gameserver.idfactory;
 
-import org.l2j.commons.threading.ThreadPoolManager;
+import org.l2j.commons.threading.ThreadPool;
 import org.l2j.gameserver.util.PrimeFinder;
 
 import java.util.BitSet;
@@ -17,7 +17,7 @@ public final class BitSetIDFactory extends IdFactory {
     BitSetIDFactory() {
         synchronized (BitSetIDFactory.class) {
             initialize();
-            ThreadPoolManager.scheduleAtFixedRate(new BitSetCapacityCheck(), 30000, 30000);
+            ThreadPool.scheduleAtFixedRate(new BitSetCapacityCheck(), 30000, 30000);
         }
         LOGGER.info("{} Identifiers available", freeIds.size());
     }

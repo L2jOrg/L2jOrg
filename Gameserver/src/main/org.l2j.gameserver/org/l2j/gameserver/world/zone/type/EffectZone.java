@@ -1,6 +1,6 @@
 package org.l2j.gameserver.world.zone.type;
 
-import org.l2j.commons.threading.ThreadPoolManager;
+import org.l2j.commons.threading.ThreadPool;
 import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.enums.InstanceType;
 import org.l2j.gameserver.model.actor.Creature;
@@ -88,7 +88,7 @@ public final class EffectZone extends Zone {
         if (nonNull(skills) && isNull(getSettings().getTask())) {
             synchronized (taskLock) {
                 if (getSettings().getTask() == null) {
-                    getSettings().setTask(ThreadPoolManager.scheduleAtFixedRate(new ApplySkill(), initialDelay, reuse));
+                    getSettings().setTask(ThreadPool.scheduleAtFixedRate(new ApplySkill(), initialDelay, reuse));
                 }
             }
         }

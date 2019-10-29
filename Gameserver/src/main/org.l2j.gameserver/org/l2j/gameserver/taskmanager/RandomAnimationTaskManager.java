@@ -1,6 +1,6 @@
 package org.l2j.gameserver.taskmanager;
 
-import org.l2j.commons.threading.ThreadPoolManager;
+import org.l2j.commons.threading.ThreadPool;
 import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.model.actor.Npc;
@@ -20,7 +20,7 @@ public class RandomAnimationTaskManager
 
     public RandomAnimationTaskManager()
     {
-        ThreadPoolManager.scheduleAtFixedRate(() ->
+        ThreadPool.scheduleAtFixedRate(() ->
         {
             final long time = System.currentTimeMillis();
             for (Entry<Npc, Long> entry : PENDING_ANIMATIONS.entrySet())

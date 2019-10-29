@@ -1,6 +1,6 @@
 package org.l2j.gameserver.model.actor.instance;
 
-import org.l2j.commons.threading.ThreadPoolManager;
+import org.l2j.commons.threading.ThreadPool;
 import org.l2j.gameserver.enums.InstanceType;
 import org.l2j.gameserver.idfactory.IdFactory;
 import org.l2j.gameserver.model.actor.stat.ControllableAirShipStat;
@@ -181,8 +181,8 @@ public class ControllableAirShip extends AirShip {
     @Override
     public void onSpawn() {
         super.onSpawn();
-        _checkTask = ThreadPoolManager.scheduleAtFixedRate(new CheckTask(), 60000, 10000);
-        _consumeFuelTask = ThreadPoolManager.scheduleAtFixedRate(new ConsumeFuelTask(), 60000, 60000);
+        _checkTask = ThreadPool.scheduleAtFixedRate(new CheckTask(), 60000, 10000);
+        _consumeFuelTask = ThreadPool.scheduleAtFixedRate(new ConsumeFuelTask(), 60000, 60000);
     }
 
     @Override
@@ -240,7 +240,7 @@ public class ControllableAirShip extends AirShip {
         public void run() {
             if (isSpawned() && isEmpty() && !isInDock()) {
                 // deleteMe() can't be called from CheckTask because task should not cancel itself
-                ThreadPoolManager.getInstance().execute(new DecayTask());
+                ThreadPool.execute(new DecayTask());
             }
         }
     }

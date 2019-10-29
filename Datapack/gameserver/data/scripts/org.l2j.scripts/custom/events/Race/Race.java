@@ -1,7 +1,7 @@
 package custom.events.Race;
 
 import events.ScriptEvent;
-import org.l2j.commons.threading.ThreadPoolManager;
+import org.l2j.commons.threading.ThreadPool;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.xml.impl.SkillData;
 import org.l2j.gameserver.enums.ChatType;
@@ -126,7 +126,7 @@ public final class Race extends Event implements ScriptEvent
 		Broadcast.toAllOnlinePlayers("Visit Event Manager in Dion village and signup, you have " + _time_register + " min before Race Start...");
 		
 		// Schedule Event end
-		_eventTask = ThreadPoolManager.schedule(this::StartRace, _time_register * 60 * 1000);
+		_eventTask = ThreadPool.schedule(this::StartRace, _time_register * 60 * 1000);
 		
 		return true;
 		
@@ -169,7 +169,7 @@ public final class Race extends Event implements ScriptEvent
 			}
 		}
 		// Schedule timeup for Race
-		_eventTask = ThreadPoolManager.getInstance().schedule(() -> timeUp(), _time_race * 60 * 1000);
+		_eventTask = ThreadPool.schedule(() -> timeUp(), _time_race * 60 * 1000);
 	}
 	
 	@Override

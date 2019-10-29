@@ -1,6 +1,6 @@
 package org.l2j.gameserver.model.cubic;
 
-import org.l2j.commons.threading.ThreadPoolManager;
+import org.l2j.commons.threading.ThreadPool;
 import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.model.Party;
 import org.l2j.gameserver.model.WorldObject;
@@ -38,8 +38,8 @@ public class CubicInstance {
     }
 
     private void activate() {
-        _skillUseTask = ThreadPoolManager.getInstance().scheduleAtFixedRate(this::readyToUseSkill, 0, _template.getDelay() * 1000);
-        _expireTask = ThreadPoolManager.getInstance().schedule(this::deactivate, _template.getDuration() * 1000);
+        _skillUseTask = ThreadPool.scheduleAtFixedRate(this::readyToUseSkill, 0, _template.getDelay() * 1000);
+        _expireTask = ThreadPool.schedule(this::deactivate, _template.getDuration() * 1000);
     }
 
     public void deactivate() {

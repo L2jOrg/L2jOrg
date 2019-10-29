@@ -17,7 +17,7 @@
 package org.l2j.gameserver.instancemanager;
 
 import org.l2j.commons.database.DatabaseFactory;
-import org.l2j.commons.threading.ThreadPoolManager;
+import org.l2j.commons.threading.ThreadPool;
 import org.l2j.gameserver.enums.ItemLocation;
 import org.l2j.gameserver.enums.MailType;
 import org.l2j.gameserver.model.actor.Npc;
@@ -93,7 +93,7 @@ public final class CommissionManager {
                     if (commissionItem.getEndTime().isBefore(Instant.now())) {
                         expireSale(commissionItem);
                     } else {
-                        commissionItem.setSaleEndTask(ThreadPoolManager.getInstance().schedule(() -> expireSale(commissionItem), Duration.between(Instant.now(), commissionItem.getEndTime()).toMillis()));
+                        commissionItem.setSaleEndTask(ThreadPool.schedule(() -> expireSale(commissionItem), Duration.between(Instant.now(), commissionItem.getEndTime()).toMillis()));
                     }
                 }
             }
@@ -234,7 +234,7 @@ public final class CommissionManager {
                 try (ResultSet rs = ps.getGeneratedKeys()) {
                     if (rs.next()) {
                         final CommissionItem commissionItem = new CommissionItem(rs.getLong(1), itemInstance, pricePerUnit, startTime, durationInDays);
-                        final ScheduledFuture<?> saleEndTask = ThreadPoolManager.schedule(() -> expireSale(commissionItem), Duration.between(Instant.now(), commissionItem.getEndTime()).toMillis());
+                        final ScheduledFuture<?> saleEndTask = ThreadPool.schedule(() -> expireSale(commissionItem), Duration.between(Instant.now(), commissionItem.getEndTime()).toMillis());
                         commissionItem.setSaleEndTask(saleEndTask);
                         _commissionItems.put(commissionItem.getCommissionId(), commissionItem);
                         player.getLastCommissionInfos().put(itemInstance.getId(), new ExResponseCommissionInfo(itemInstance.getId(), pricePerUnit, itemCount, (byte) ((durationInDays - 1) / 2)));

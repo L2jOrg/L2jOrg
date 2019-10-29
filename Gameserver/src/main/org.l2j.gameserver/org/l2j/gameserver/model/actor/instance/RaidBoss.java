@@ -2,7 +2,7 @@ package org.l2j.gameserver.model.actor.instance;
 
 import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.Config;
-import org.l2j.commons.threading.ThreadPoolManager;
+import org.l2j.commons.threading.ThreadPool;
 import org.l2j.gameserver.enums.InstanceType;
 import org.l2j.gameserver.model.Spawn;
 import org.l2j.gameserver.model.actor.templates.NpcTemplate;
@@ -53,7 +53,7 @@ public class RaidBoss extends Monster {
      */
     @Override
     protected void startMaintenanceTask() {
-        _maintenanceTask = ThreadPoolManager.getInstance().scheduleAtFixedRate(() -> checkAndReturnToSpawn(), 60000, getMaintenanceInterval() + Rnd.get(5000));
+        _maintenanceTask = ThreadPool.scheduleAtFixedRate(() -> checkAndReturnToSpawn(), 60000, getMaintenanceInterval() + Rnd.get(5000));
     }
 
     protected void checkAndReturnToSpawn() {

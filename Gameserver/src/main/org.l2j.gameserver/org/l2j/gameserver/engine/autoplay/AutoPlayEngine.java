@@ -1,6 +1,6 @@
 package org.l2j.gameserver.engine.autoplay;
 
-import org.l2j.commons.threading.ThreadPoolManager;
+import org.l2j.commons.threading.ThreadPool;
 import org.l2j.gameserver.ai.CtrlIntention;
 import org.l2j.gameserver.model.actor.instance.Monster;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -34,7 +34,7 @@ public final class AutoPlayEngine {
         players.put(player, setting);
         synchronized (taskLocker) {
             if(isNull(scheduled)) {
-                scheduled = ThreadPoolManager.scheduleAtFixedDelay(doMacroTask, AUTO_PLAY_INTERVAL, AUTO_PLAY_INTERVAL);
+                scheduled = ThreadPool.scheduleAtFixedDelay(doMacroTask, AUTO_PLAY_INTERVAL, AUTO_PLAY_INTERVAL);
             }
         }
     }

@@ -1,7 +1,7 @@
 package instances.MonsterArena;
 
 import instances.AbstractInstance;
-import org.l2j.commons.threading.ThreadPoolManager;
+import org.l2j.commons.threading.ThreadPool;
 import org.l2j.gameserver.enums.ChatType;
 import org.l2j.gameserver.instancemanager.GlobalVariablesManager;
 import org.l2j.gameserver.model.actor.Npc;
@@ -188,7 +188,7 @@ public class MonsterArena extends AbstractInstance
 						npc.setScriptValue(1);
 						npc.doDie(npc);
 						REWARDED_PLAYERS.add(player);
-						ThreadPoolManager.schedule(() -> REWARDED_PLAYERS.remove(player), 60000);
+						ThreadPool.schedule(() -> REWARDED_PLAYERS.remove(player), 60000);
 						
 						// Mandatory reward.
 						final Npc machine = world.getNpc(MACHINE);

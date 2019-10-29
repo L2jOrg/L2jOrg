@@ -5,7 +5,7 @@ import io.github.joealisson.mmocore.PacketExecutor;
 import io.github.joealisson.mmocore.PacketHandler;
 import io.github.joealisson.mmocore.ReadablePacket;
 import org.l2j.authserver.network.gameserver.packet.game2auth.*;
-import org.l2j.commons.threading.ThreadPoolManager;
+import org.l2j.commons.threading.ThreadPool;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -78,6 +78,6 @@ public final class GameServerPacketHandler implements PacketHandler<ServerClient
 
     @Override
     public void execute(ReadablePacket<ServerClient> packet) {
-        ThreadPoolManager.execute(packet);
+        ThreadPool.execute(packet);
     }
 }

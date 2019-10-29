@@ -1,7 +1,7 @@
 package org.l2j.gameserver.model.entity;
 
+import org.l2j.commons.threading.ThreadPool;
 import org.l2j.commons.util.Rnd;
-import org.l2j.commons.threading.ThreadPoolManager;
 import org.l2j.gameserver.data.xml.impl.NpcData;
 import org.l2j.gameserver.data.xml.impl.SkillData;
 import org.l2j.gameserver.datatables.SpawnTable;
@@ -263,7 +263,7 @@ public final class BlockCheckerEngine {
 
                 _abnormalEnd = true;
 
-                ThreadPoolManager.getInstance().execute(new EndEvent());
+                ThreadPool.execute(new EndEvent());
             }
         } catch (Exception e) {
             LOGGER.error("Couldnt end Block Checker event at " + _arena, e);
@@ -367,7 +367,7 @@ public final class BlockCheckerEngine {
             }
             _isStarted = true;
             // Spawn the blocks
-            ThreadPoolManager.getInstance().execute(new SpawnRound(16, 1));
+            ThreadPool.execute(new SpawnRound(16, 1));
             // Start up player parameters
             setUpPlayers();
             // Set the started time
@@ -396,17 +396,17 @@ public final class BlockCheckerEngine {
             switch (_round) {
                 case 1: // Schedule second spawn round
                 {
-                    _task = ThreadPoolManager.getInstance().schedule(new SpawnRound(20, 2), 60000);
+                    _task = ThreadPool.schedule(new SpawnRound(20, 2), 60000);
                     break;
                 }
                 case 2: // Schedule third spawn round
                 {
-                    _task = ThreadPoolManager.getInstance().schedule(new SpawnRound(14, 3), 60000);
+                    _task = ThreadPool.schedule(new SpawnRound(14, 3), 60000);
                     break;
                 }
                 case 3: // Schedule Event End Count Down
                 {
-                    _task = ThreadPoolManager.getInstance().schedule(new EndEvent(), 180000);
+                    _task = ThreadPool.schedule(new EndEvent(), 180000);
                     break;
                 }
             }
@@ -453,7 +453,7 @@ public final class BlockCheckerEngine {
                     SpawnTable.getInstance().addNewSpawn(girlSpawn, false);
                     girlSpawn.init();
                     // Schedule his deletion after 9 secs of spawn
-                    ThreadPoolManager.getInstance().schedule(new CarryingGirlUnspawn(girlSpawn), 9000);
+                    ThreadPool.schedule(new CarryingGirlUnspawn(girlSpawn), 9000);
                 } catch (Exception e) {
                     LOGGER.warn("Couldnt Spawn Block Checker NPCs! Wrong instance type at npc table?");
                     LOGGER.warn(": " + e.getMessage());
@@ -490,7 +490,7 @@ public final class BlockCheckerEngine {
 
     /*
      * private class CountDown implements Runnable {
-     * @Override public void run() { _holder.broadCastPacketToTeam(SystemMessage.getSystemMessage(SystemMessageId.BLOCK_CHECKER_ENDS_5)); ThreadPoolManager.schedule(new EndEvent(), 5000); } }
+     * @Override public void run() { _holder.broadCastPacketToTeam(SystemMessage.getSystemMessage(SystemMessageId.BLOCK_CHECKER_ENDS_5)); ThreadPool.schedule(new EndEvent(), 5000); } }
      */
 
     /**

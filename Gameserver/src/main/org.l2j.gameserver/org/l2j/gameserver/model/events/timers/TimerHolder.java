@@ -16,7 +16,7 @@
  */
 package org.l2j.gameserver.model.events.timers;
 
-import org.l2j.commons.threading.ThreadPoolManager;
+import org.l2j.commons.threading.ThreadPool;
 import org.l2j.gameserver.instancemanager.TimersManager;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Npc;
@@ -56,7 +56,7 @@ public class TimerHolder<T> implements Runnable {
         _eventScript = eventScript;
         _cancelScript = cancelScript;
         _postExecutor = postExecutor;
-        _task = isRepeating ? ThreadPoolManager.getInstance().scheduleAtFixedRate(this, _time, _time) : ThreadPoolManager.getInstance().schedule(this, _time);
+        _task = isRepeating ? ThreadPool.scheduleAtFixedRate(this, _time, _time) : ThreadPool.schedule(this, _time);
         TimersManager.getInstance().registerTimer(this);
     }
 

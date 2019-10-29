@@ -1,7 +1,7 @@
 package org.l2j.gameserver.network.clientpackets;
 
 import org.l2j.gameserver.Config;
-import org.l2j.commons.threading.ThreadPoolManager;
+import org.l2j.commons.threading.ThreadPool;
 import org.l2j.gameserver.data.xml.impl.BuyListData;
 import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.Npc;
@@ -151,7 +151,7 @@ public final class RequestPreviewItem extends ClientPacket {
         if (!itemList.isEmpty()) {
             activeChar.sendPacket(new ShopPreviewInfo(itemList));
             // Schedule task
-            ThreadPoolManager.schedule(new RemoveWearItemsTask(activeChar), Config.WEAR_DELAY * 1000);
+            ThreadPool.schedule(new RemoveWearItemsTask(activeChar), Config.WEAR_DELAY * 1000);
         }
     }
 

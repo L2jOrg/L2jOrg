@@ -1,6 +1,6 @@
 package org.l2j.gameserver.taskmanager;
 
-import org.l2j.commons.threading.ThreadPoolManager;
+import org.l2j.commons.threading.ThreadPool;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.Summon;
 import org.l2j.gameserver.network.serverpackets.AutoAttackStop;
@@ -30,7 +30,7 @@ public class AttackStanceTaskManager {
      * Instantiates a new attack stance task manager.
      */
     private AttackStanceTaskManager() {
-        ThreadPoolManager.scheduleAtFixedRate(new FightModeScheduler(), 0, 1000);
+        ThreadPool.scheduleAtFixedRate(new FightModeScheduler(), 0, 1000);
     }
 
     /**

@@ -1,7 +1,7 @@
 package org.l2j.gameserver.model.entity;
 
 import org.l2j.commons.database.DatabaseFactory;
-import org.l2j.commons.threading.ThreadPoolManager;
+import org.l2j.commons.threading.ThreadPool;
 import org.l2j.gameserver.data.sql.impl.ClanTable;
 import org.l2j.gameserver.data.xml.impl.ClanHallData;
 import org.l2j.gameserver.enums.ClanHallGrade;
@@ -215,7 +215,7 @@ public final class ClanHall extends AbstractResidence {
 
             final int failDays = getCostFailDay();
             final long time = failDays > 0 ? (failDays > 8 ? Instant.now().toEpochMilli() : Instant.ofEpochMilli(_paidUntil).plus(Duration.ofDays(failDays + 1)).toEpochMilli()) : _paidUntil;
-            _checkPaymentTask = ThreadPoolManager.getInstance().schedule(new CheckPaymentTask(), time - System.currentTimeMillis());
+            _checkPaymentTask = ThreadPool.schedule(new CheckPaymentTask(), time - System.currentTimeMillis());
         } else {
             if (_owner != null) {
                 _owner.setHideoutId(0);
@@ -312,7 +312,7 @@ public final class ClanHall extends AbstractResidence {
                         _owner.broadcastToOnlineMembers(SystemMessage.getSystemMessage(SystemMessageId.THE_CLAN_HALL_FEE_IS_ONE_WEEK_OVERDUE_THEREFORE_THE_CLAN_HALL_OWNERSHIP_HAS_BEEN_REVOKED));
                         setOwner(null);
                     } else {
-                        _checkPaymentTask = ThreadPoolManager.schedule(new CheckPaymentTask(), 24 * 60 * 60 * 1000); // 1 day
+                        _checkPaymentTask = ThreadPool.schedule(new CheckPaymentTask(), 24 * 60 * 60 * 1000); // 1 day
                         final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.PAYMENT_FOR_YOUR_CLAN_HALL_HAS_NOT_BEEN_MADE_PLEASE_MAKE_PAYMENT_TO_YOUR_CLAN_WAREHOUSE_BY_S1_TOMORROW);
                         sm.addInt(_lease);
                         _owner.broadcastToOnlineMembers(sm);
@@ -320,7 +320,7 @@ public final class ClanHall extends AbstractResidence {
                 } else {
                     _owner.getWarehouse().destroyItem("Clan Hall Lease", CommonItem.ADENA, _lease, null, null);
                     setPaidUntil(Instant.ofEpochMilli(_paidUntil).plus(Duration.ofDays(7)).toEpochMilli());
-                    _checkPaymentTask = ThreadPoolManager.schedule(new CheckPaymentTask(), _paidUntil - System.currentTimeMillis());
+                    _checkPaymentTask = ThreadPool.schedule(new CheckPaymentTask(), _paidUntil - System.currentTimeMillis());
                     updateDB();
                 }
             }

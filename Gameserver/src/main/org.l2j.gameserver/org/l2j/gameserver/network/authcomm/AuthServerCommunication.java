@@ -3,7 +3,7 @@ package org.l2j.gameserver.network.authcomm;
 import io.github.joealisson.mmocore.Connector;
 import io.github.joealisson.mmocore.PacketExecutor;
 import io.github.joealisson.mmocore.ReadablePacket;
-import org.l2j.commons.threading.ThreadPoolManager;
+import org.l2j.commons.threading.ThreadPool;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.authcomm.gs2as.ChangePassword;
 import org.l2j.gameserver.network.authcomm.gs2as.ServerStatus;
@@ -153,7 +153,7 @@ public class AuthServerCommunication implements Runnable, PacketExecutor<AuthSer
 
     @Override
     public void execute(ReadablePacket<AuthServerClient> packet) {
-        ThreadPoolManager.execute(packet);
+        ThreadPool.execute(packet);
     }
 
     public void shutdown() {
@@ -182,7 +182,7 @@ public class AuthServerCommunication implements Runnable, PacketExecutor<AuthSer
             client.close(null);
         }
         client = null;
-        ThreadPoolManager.schedule(this, waitSeconds, TimeUnit.SECONDS);
+        ThreadPool.schedule(this, waitSeconds, TimeUnit.SECONDS);
     }
 
     public void sendChangePassword(String accountName, String oldPass, String curpass) {

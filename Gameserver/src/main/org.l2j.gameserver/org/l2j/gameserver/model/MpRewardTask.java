@@ -17,7 +17,7 @@
 package org.l2j.gameserver.model;
 
 import org.l2j.gameserver.Config;
-import org.l2j.commons.threading.ThreadPoolManager;
+import org.l2j.commons.threading.ThreadPool;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.templates.NpcTemplate;
@@ -41,7 +41,7 @@ public class MpRewardTask {
         _creature = creature;
         _count = new AtomicInteger(template.getMpRewardTicks());
         _value = calculateBaseValue(npc, creature);
-        _task = ThreadPoolManager.getInstance().scheduleAtFixedRate(this::run, Config.EFFECT_TICK_RATIO, Config.EFFECT_TICK_RATIO);
+        _task = ThreadPool.scheduleAtFixedRate(this::run, Config.EFFECT_TICK_RATIO, Config.EFFECT_TICK_RATIO);
     }
 
     /**

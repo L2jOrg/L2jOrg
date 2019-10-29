@@ -16,7 +16,7 @@
  */
 package handlers.effecthandlers;
 
-import org.l2j.commons.threading.ThreadPoolManager;
+import org.l2j.commons.threading.ThreadPool;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.items.instance.Item;
@@ -41,7 +41,7 @@ public class MaxHp extends AbstractStatEffect
 	public void continuousInstant(Creature effector, Creature effected, Skill skill, Item item)
 	{
 		if (_heal) {
-			ThreadPoolManager.schedule(() ->
+			ThreadPool.schedule(() ->
 			{
 				if (!effected.isHpBlocked()) {
 					switch (_mode) {

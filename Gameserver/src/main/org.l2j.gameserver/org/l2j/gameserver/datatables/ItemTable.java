@@ -2,7 +2,7 @@ package org.l2j.gameserver.datatables;
 
 import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.gameserver.Config;
-import org.l2j.commons.threading.ThreadPoolManager;
+import org.l2j.commons.threading.ThreadPool;
 import org.l2j.gameserver.data.xml.impl.EnchantItemHPBonusData;
 import org.l2j.gameserver.engine.items.DocumentEngine;
 import org.l2j.gameserver.enums.ItemLocation;
@@ -180,12 +180,12 @@ public class ItemTable {
                 // if in CommandChannel and was killing a World/RaidBoss
                 if ((raid.getFirstCommandChannelAttacked() != null) && !Config.AUTO_LOOT_RAIDS) {
                     item.setOwnerId(raid.getFirstCommandChannelAttacked().getLeaderObjectId());
-                    itemLootShedule = ThreadPoolManager.getInstance().schedule(new ResetOwner(item), Config.LOOT_RAIDS_PRIVILEGE_INTERVAL);
+                    itemLootShedule = ThreadPool.schedule(new ResetOwner(item), Config.LOOT_RAIDS_PRIVILEGE_INTERVAL);
                     item.setItemLootShedule(itemLootShedule);
                 }
             } else if (!Config.AUTO_LOOT || ((reference instanceof EventMonster) && ((EventMonster) reference).eventDropOnGround())) {
                 item.setOwnerId(actor.getObjectId());
-                itemLootShedule = ThreadPoolManager.getInstance().schedule(new ResetOwner(item), 15000);
+                itemLootShedule = ThreadPool.schedule(new ResetOwner(item), 15000);
                 item.setItemLootShedule(itemLootShedule);
             }
         }

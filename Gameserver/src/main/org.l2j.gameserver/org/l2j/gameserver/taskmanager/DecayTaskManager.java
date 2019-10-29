@@ -1,6 +1,6 @@
 package org.l2j.gameserver.taskmanager;
 
-import org.l2j.commons.threading.ThreadPoolManager;
+import org.l2j.commons.threading.ThreadPool;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.model.actor.Attackable;
 import org.l2j.gameserver.model.actor.Creature;
@@ -24,7 +24,7 @@ public final class DecayTaskManager {
     private static final Map<Creature, Long> DECAY_SCHEDULES = new ConcurrentHashMap<>();
 
     private DecayTaskManager() {
-        ThreadPoolManager.scheduleAtFixedRate(() ->
+        ThreadPool.scheduleAtFixedRate(() ->
         {
             final long time = System.currentTimeMillis();
             for (Entry<Creature, Long> entry : DECAY_SCHEDULES.entrySet())
