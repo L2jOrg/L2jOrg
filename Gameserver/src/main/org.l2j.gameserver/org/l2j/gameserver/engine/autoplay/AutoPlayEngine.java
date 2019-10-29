@@ -20,7 +20,7 @@ import static org.l2j.gameserver.util.GameUtils.isMonster;
  */
 public final class AutoPlayEngine {
 
-    private static final int AUTO_PLAY_INTERVAL = 1000;
+    private static final int AUTO_PLAY_INTERVAL = 1500;
     private final WeakHashMap<Player, AutoPlaySetting> players = new WeakHashMap<>();
     private final DoMacro doMacroTask = new DoMacro();
     private ScheduledFuture<?> scheduled;
@@ -68,8 +68,10 @@ public final class AutoPlayEngine {
                     var setting = entry.getValue();
                     var range = setting.isNearTarget() ? 600 : 1400;
 
-                    if(setting.isPickUp()) {
-                        world.forEachVisibleObjectInRange(player, Item.class, range, item -> player.getAI().setIntention(CtrlIntention.AI_INTENTION_PICK_UP, item));
+                    if(setting.isAutoPickUpOn()) {
+                        world.forAnyVisibleObjectInRange(player, Item.class, range,
+                                item -> player.getAI().setIntention(CtrlIntention.AI_INTENTION_PICK_UP, item),
+                                item -> item.getDropProtection().tryPickUp(player));
                     }
 
                     if(player.getAI().getIntention() == CtrlIntention.AI_INTENTION_PICK_UP) {
@@ -77,7 +79,7 @@ public final class AutoPlayEngine {
                     }
 
                     var target = player.getTarget();
-                    if(isNull(target) || !isMonster(target) || !target.isAutoAttackable(player) || ((Monster) target).isDead()) {
+                    if(isNull(target) || (isMonster(target) && ((Monster) target).isDead())) {
                         var monster = world.findAnyVisibleObject(player, Monster.class, range, false, m -> canBeTargeted(player, setting, m));
                         player.setTarget(monster);
                     }

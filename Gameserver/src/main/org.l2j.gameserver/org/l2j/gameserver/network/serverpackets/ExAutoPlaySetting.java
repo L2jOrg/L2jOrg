@@ -20,7 +20,7 @@ public class ExAutoPlaySetting extends ServerPacket {
         writeId(ServerPacketId.EX_AUTOPLAY_SETTING);
         writeShort(setting.getOptions());
         writeByte(setting.isActive());
-        writeByte(setting.isPickUp());
+        writeByte(setting.isAutoPickUpOn());
         writeShort(setting.getNextTargetMode());
         writeByte(setting.isNearTarget());
         writeInt(setting.getUsableHpPotionPercent());

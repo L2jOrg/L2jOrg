@@ -31,7 +31,7 @@ public class AutoPlaySetting {
         return active;
     }
 
-    public boolean isPickUp() {
+    public boolean isAutoPickUpOn() {
         return pickUp;
     }
 
