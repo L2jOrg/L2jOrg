@@ -6,8 +6,6 @@ import org.l2j.gameserver.ServerType;
 
 import java.nio.file.Path;
 
-import static org.l2j.commons.util.Util.isNullOrEmpty;
-
 public class ServerSettings implements Settings {
 
     private int serverId;
@@ -22,6 +20,9 @@ public class ServerSettings implements Settings {
     private short port;
     private int maximumOnlineUsers;
     private Path dataPackDirectory;
+
+    private int scheduledPoolSize;
+    private int threadPoolSize;
 
     @Override
     public void load(SettingsFile settingsFile) {
@@ -41,6 +42,20 @@ public class ServerSettings implements Settings {
         isPvP = settingsFile.getBoolean("PvPServer", false);
 
         dataPackDirectory = Path.of(settingsFile.getString("DatapackRoot", "."));
+
+        var processors = Runtime.getRuntime().availableProcessors();
+
+        scheduledPoolSize = determinePoolSize(settingsFile, "ScheduledThreadPoolSize", processors);
+        threadPoolSize = determinePoolSize(settingsFile, "ThreadPoolSize", processors);
+    }
+
+    private int determinePoolSize(SettingsFile settingsFile, String property, int processors) {
+        var size = settingsFile.getInteger(property, processors);
+
+        if(size < 2) {
+            return processors;
+        }
+        return size;
     }
 
     public int serverId() {
@@ -93,5 +108,13 @@ public class ServerSettings implements Settings {
 
     public Path dataPackDirectory() {
         return dataPackDirectory;
+    }
+
+    public int scheduledPoolSize() {
+        return scheduledPoolSize;
+    }
+
+    public int threadPoolSize() {
+        return threadPoolSize;
     }
 }

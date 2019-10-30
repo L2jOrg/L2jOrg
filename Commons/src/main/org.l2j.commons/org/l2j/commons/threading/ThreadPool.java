@@ -2,33 +2,41 @@ package org.l2j.commons.threading;
 
 import java.util.concurrent.*;
 
+import static java.util.Objects.isNull;
+
 public class ThreadPool {
     private static final long MAX_DELAY = TimeUnit.NANOSECONDS.toMillis(Long.MAX_VALUE - System.nanoTime()) / 2;
 
-    private final ScheduledThreadPoolExecutor scheduledExecutor;
-    private final ThreadPoolExecutor executor;
-    private final ForkJoinPool forkJoinPool;
+    private ScheduledThreadPoolExecutor scheduledExecutor;
+    private ThreadPoolExecutor executor;
 
     private boolean shutdown;
 
     private ThreadPool() {
+
+    }
+
+    public static void init(int threadPoolSize, int scheduledPoolSize) {
+        synchronized (ThreadPool.class) {
+
+            var instance = getInstance();
+            if(isNull(instance.scheduledExecutor)) {
+                instance.initThreadPools(threadPoolSize, scheduledPoolSize);
+            }
+        }
+    }
+
+    private void initThreadPools(int threadPoolSize, int scheduledPoolSize) {
         RejectedExecutionHandler rejectedHandler = new RejectedExecutionHandlerImpl();
 
-        var processors = Runtime.getRuntime().availableProcessors();
-        scheduledExecutor = new ScheduledThreadPoolExecutor(processors *4, new PriorityThreadFactory("ScheduledThreadPool", Thread.NORM_PRIORITY), rejectedHandler);
+        executor = new ThreadPoolExecutor(threadPoolSize, Integer.MAX_VALUE, 5, TimeUnit.MINUTES, new LinkedBlockingQueue<>(), new PriorityThreadFactory("ThreadPoolExecutor", Thread.NORM_PRIORITY), rejectedHandler);
+        scheduledExecutor = new ScheduledThreadPoolExecutor(scheduledPoolSize, new PriorityThreadFactory("ScheduledThreadPool", Thread.NORM_PRIORITY), rejectedHandler);
         scheduledExecutor.setRemoveOnCancelPolicy(true);
 
-        executor = new ThreadPoolExecutor(processors * 6, Integer.MAX_VALUE, 5L, TimeUnit.SECONDS, new LinkedBlockingQueue<>(), new PriorityThreadFactory("ThreadPoolExecutor", Thread.NORM_PRIORITY), new ThreadPoolExecutor.CallerRunsPolicy());
-        executor.setRejectedExecutionHandler(rejectedHandler);
-
-        forkJoinPool = new ForkJoinPool(processors * 4);
+        schedulePurge();
     }
 
-    public <T> T submit(Callable<T> callable) {
-        return forkJoinPool.submit(callable).join();
-    }
-
-    public void schedulePurge() {
+    private void schedulePurge() {
         scheduleAtFixedRate(() -> { scheduledExecutor.purge(); executor.purge();  }, 300000L, 300000L);
     }
 

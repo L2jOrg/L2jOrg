@@ -30,6 +30,7 @@ import org.l2j.gameserver.model.votereward.VoteSystem;
 import org.l2j.gameserver.network.ClientPacketHandler;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.authcomm.AuthServerCommunication;
+import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.taskmanager.TaskManager;
 import org.l2j.gameserver.util.Broadcast;
 import org.l2j.gameserver.world.World;
@@ -46,6 +47,7 @@ import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
 import static java.util.Objects.nonNull;
+import static org.l2j.commons.configuration.Configurator.getSettings;
 import static org.l2j.commons.database.DatabaseAccess.getDAO;
 import static org.l2j.commons.util.Util.isNullOrEmpty;
 
@@ -270,8 +272,11 @@ public class GameServer {
         printSection("Scripting Engine");
         ScriptEngineManager.init();
 
-        ThreadPool.getInstance().schedulePurge();
+        var settings = getSettings(ServerSettings.class);
+        ThreadPool.init(settings.threadPoolSize() ,settings.scheduledPoolSize());
+
         INSTANCE = new GameServer();
+
         ThreadPool.execute(AuthServerCommunication.getInstance());
     }
 
