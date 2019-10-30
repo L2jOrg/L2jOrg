@@ -7,6 +7,8 @@ import org.l2j.gameserver.network.serverpackets.ShortCutRegister;
 import static org.l2j.gameserver.network.SystemMessageId.ONLY_MACROS_CAN_BE_REGISTERED;
 
 public final class RequestShortCutReg extends ClientPacket {
+    private static final int AUTO_PLAY_PAGE = 23;
+
     private ShortcutType type;
     private int id;
     private int slot;
@@ -35,9 +37,15 @@ public final class RequestShortCutReg extends ClientPacket {
             return;
         }
 
-        if(page == 23 && type != ShortcutType.MACRO) {
-            client.sendPacket(ONLY_MACROS_CAN_BE_REGISTERED);
-            return;
+        if(page == AUTO_PLAY_PAGE) {
+            if(slot == 0 && type != ShortcutType.MACRO) {
+                client.sendPacket(ONLY_MACROS_CAN_BE_REGISTERED);
+                return;
+            }
+
+            if(slot == 1 && ( type != ShortcutType.ITEM || !client.getPlayer().getInventory().getItemByObjectId(id).isPotion())) {
+                return; // TODO restrict to HP auto potion only
+            }
         }
 
         final Shortcut sc = new Shortcut(slot, page, type, id, lvl, subLvl, characterType);
