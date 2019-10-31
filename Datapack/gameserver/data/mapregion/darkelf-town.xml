@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	  xmlns="http://l2j.org"
+	  xsi:schemaLocation="http://l2j.org map-region.xsd">
+	<!-- Darkelf Town -->
+	<region name="darkelf_town" town="Darkelven Town" loc="915" bbs="3">
+		<respawn-point x="12501" y="16768" z="-4500" />
+		<respawn-point x="12104" y="17385" z="-4500" />
+		<respawn-point x="12519" y="16376" z="-4500" />
+		<respawn-point x="10355" y="17270" z="-4500" />
+		<respawn-point x="10146" y="16965" z="-4500" />
+		<respawn-point x="10691" y="16343" z="-4500" />
+		<respawn-point x="3040" y="24240" z="-3700" chaotic="true" />
+		<respawn-point x="1184" y="21856" z="-3240" chaotic="true" />
+		<respawn-point x="3760" y="25136" z="-3700" chaotic="true" />
+		<respawn-point x="672" y="20096" z="-3350" chaotic="true" />
+		<respawn-point x="1248" y="14512" z="-3180" chaotic="true" />
+		<respawn-point x="-8176" y="23120" z="-3450" chaotic="true" />
+		<respawn-point x="-10208" y="25408" z="-3560" chaotic="true" />
+		<respawn-point x="-11456" y="23936" z="-3700" chaotic="true" />
+		<respawn-point x="-9632" y="22624" z="-3650" chaotic="true" />
+		<respawn-point x="-5776" y="22080" z="-3510" chaotic="true" />
+		<respawn-point x="2224" y="11936" z="-3050" chaotic="true" />
+		<respawn-point x="1744" y="8640" z="-3250" chaotic="true" />
+		<respawn-point x="2784" y="7872" z="-3110" chaotic="true" />
+		<respawn-point x="3216" y="10128" z="-2980" chaotic="true" />
+		<respawn-point x="3584" y="6976" z="-3020" chaotic="true" />
+		<respawn-point x="-10768" y="21952" z="-3600" chaotic="true" />
+		<respawn-point x="-11360" y="22688" z="-3600" chaotic="true" />
+		<respawn-point x="-12784" y="23232" z="-3630" chaotic="true" />
+		<respawn-point x="-13632" y="21872" z="-3620" chaotic="true" />
+		<respawn-point x="-11984" y="21232" z="-3600" chaotic="true" />
+		<map x="20" y="18" />
+		<map x="19" y="18" />
+		<map x="19" y="19" />
+		<map x="18" y="19" />
+		<map x="18" y="18" />
+		<map x="18" y="20" />
+		<map x="17" y="19" />
+		<banned race="ELF" point="elf_town" />
+	</region>
+	<!-- Temple Of Shilen -->
+	<region name="Temple_of_Shilen" town="Darkelven Town" loc="915" bbs="3">
+		<respawn-point x="28295" y="11063" z="-4224" />
+		<respawn-point x="28302" y="11008" z="-4224" />
+		<respawn-point x="28377" y="10916" z="-4224" />
+		<respawn-point x="28456" y="10997" z="-4224" />
+		<respawn-point x="28461" y="11044" z="-4224" />
+		<respawn-point x="28395" y="11127" z="-4224" />
+		<respawn-point x="3040" y="24240" z="-3700" chaotic="true" />
+		<respawn-point x="1184" y="21856" z="-3240" chaotic="true" />
+		<respawn-point x="3760" y="25136" z="-3700" chaotic="true" />
+		<respawn-point x="672" y="20096" z="-3350" chaotic="true" />
+		<respawn-point x="1248" y="14512" z="-3180" chaotic="true" />
+		<respawn-point x="-8176" y="23120" z="-3450" chaotic="true" />
+		<respawn-point x="-10208" y="25408" z="-3560" chaotic="true" />
+		<respawn-point x="-11456" y="23936" z="-3700" chaotic="true" />
+		<respawn-point x="-9632" y="22624" z="-3650" chaotic="true" />
+		<respawn-point x="-5776" y="22080" z="-3510" chaotic="true" />
+		<respawn-point x="2224" y="11936" z="-3050" chaotic="true" />
+		<respawn-point x="1744" y="8640" z="-3250" chaotic="true" />
+		<respawn-point x="2784" y="7872" z="-3110" chaotic="true" />
+		<respawn-point x="3216" y="10128" z="-2980" chaotic="true" />
+		<respawn-point x="3584" y="6976" z="-3020" chaotic="true" />
+		<respawn-point x="-10768" y="21952" z="-3600" chaotic="true" />
+		<respawn-point x="-11360" y="22688" z="-3600" chaotic="true" />
+		<respawn-point x="-12784" y="23232" z="-3630" chaotic="true" />
+		<respawn-point x="-13632" y="21872" z="-3620" chaotic="true" />
+		<respawn-point x="-11984" y="21232" z="-3600" chaotic="true" />
+		<banned race="ELF" point="elf_town" />
+	</region>
+</list>

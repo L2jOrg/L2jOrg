@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	  xmlns="http://l2j.org"
+	  xsi:schemaLocation="http://l2j.org map-region.xsd">
+
+	<!-- Aden Town -->
+	<region name="aden_town" town="Aden Castle Town" loc="924" bbs="13">
+		<respawn-point x="146494" y="30584" z="-2420" />
+		<respawn-point x="146038" y="30519" z="-2420" />
+		<respawn-point x="148112" y="30439" z="-2420" />
+		<respawn-point x="148565" y="30463" z="-2420" />
+		<respawn-point x="150227" y="29104" z="-2420" />
+		<respawn-point x="144626" y="29145" z="-2420" />
+		<respawn-point x="144635" y="26664" z="-2220" />
+		<respawn-point x="144526" y="24661" z="-2100" />
+		<respawn-point x="144559" y="22835" z="-2100" />
+		<respawn-point x="145686" y="21114" z="-2100" />
+		<respawn-point x="148946" y="21121" z="-2070" />
+		<respawn-point x="148010" y="27996" z="-2256" />
+		<respawn-point x="147970" y="27040" z="-2191" />
+		<respawn-point x="146814" y="27108" z="-2189" />
+		<respawn-point x="146819" y="28063" z="-2252" />
+		<respawn-point x="136398" y="28901" z="-3582" chaotic="true" />
+		<respawn-point x="137292" y="28485" z="-3290" chaotic="true" />
+		<respawn-point x="155925" y="28554" z="-3164" chaotic="true" />
+		<respawn-point x="157608" y="23866" z="-3760" chaotic="true" />
+		<respawn-point x="157463" y="28770" z="-3371" chaotic="true" />
+		<respawn-point x="159348" y="28561" z="-3400" chaotic="true" />
+		<respawn-point x="160236" y="14119" z="-3892" chaotic="true" />
+		<respawn-point x="156764" y="13774" z="-3960" chaotic="true" />
+		<respawn-point x="161426" y="23055" z="-3670" chaotic="true" />
+		<respawn-point x="136380" y="21899" z="-3647" chaotic="true" />
+		<respawn-point x="137708" y="15640" z="-3800" chaotic="true" />
+		<respawn-point x="136629" y="28127" z="-3258" chaotic="true" />
+		<map x="23" y="18" />
+		<map x="24" y="17" />
+		<map x="24" y="18" />
+		<map x="24" y="19" />
+		<map x="25" y="17" />
+		<map x="25" y="18" />
+		<map x="25" y="19" />
+		<map x="20" y="17" />
+	</region>
+</list>

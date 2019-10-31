@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	  xmlns="http://l2j.org"
+	  xsi:schemaLocation="http://l2j.org map-region.xsd">
+	<!-- Gludio Castle Town -->
+	<region name="gludio_castle_town" town="Gludio Castle Town" loc="912" bbs="2">
+		<respawn-point x="-14288" y="122752" z="-3000" />
+		<respawn-point x="-14592" y="123232" z="-3000" />
+		<respawn-point x="-14704" y="122032" z="-3000" />
+		<respawn-point x="-13904" y="123456" z="-3000" />
+		<respawn-point x="-15314" y="124131" z="-3000" />
+		<respawn-point x="-15564" y="123896" z="-3000" />
+		<respawn-point x="-14279" y="124446" z="-3000" />
+		<respawn-point x="-14465" y="124434" z="-3000" />
+		<respawn-point x="-13709" y="123563" z="-3000" />
+		<respawn-point x="-13513" y="123752" z="-3000" />
+		<respawn-point x="-14683" y="121945" z="-3000" />
+		<respawn-point x="-14491" y="121915" z="-3000" />
+		<respawn-point x="-17280" y="125392" z="-3120" chaotic="true" />
+		<respawn-point x="-16128" y="126944" z="-3120" chaotic="true" />
+		<respawn-point x="-14464" y="128288" z="-3250" chaotic="true" />
+		<respawn-point x="-13040" y="128768" z="-3350" chaotic="true" />
+		<respawn-point x="-15600" y="127904" z="-3150" chaotic="true" />
+		<respawn-point x="-16128" y="128592" z="-3230" chaotic="true" />
+		<respawn-point x="-15632" y="129456" z="-3400" chaotic="true" />
+		<respawn-point x="-16960" y="127696" z="-3200" chaotic="true" />
+		<respawn-point x="-17632" y="126320" z="-3150" chaotic="true" />
+		<respawn-point x="-18704" y="124960" z="-3100" chaotic="true" />
+		<respawn-point x="-17760" y="121888" z="-3140" chaotic="true" />
+		<respawn-point x="-17472" y="122752" z="-3100" chaotic="true" />
+		<respawn-point x="-18720" y="124080" z="-3130" chaotic="true" />
+		<respawn-point x="-19008" y="122432" z="-3200" chaotic="true" />
+		<respawn-point x="-20048" y="122432" z="-3280" chaotic="true" />
+		<respawn-point x="-19008" y="126160" z="-3250" chaotic="true" />
+		<respawn-point x="-18480" y="127184" z="-3300" chaotic="true" />
+		<respawn-point x="-19664" y="125440" z="-3180" chaotic="true" />
+		<respawn-point x="-20176" y="124512" z="-3350" chaotic="true" />
+		<respawn-point x="-19040" y="121632" z="-3200" chaotic="true" />
+		<map x="18" y="21" />
+		<map x="19" y="21" />
+		<map x="19" y="22" />
+		<map x="19" y="23" />
+		<map x="19" y="26" />
+		<map x="20" y="26" />
+	</region>
+</list>

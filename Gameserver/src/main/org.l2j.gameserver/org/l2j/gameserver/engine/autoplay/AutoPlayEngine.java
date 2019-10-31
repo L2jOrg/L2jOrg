@@ -20,7 +20,7 @@ import static org.l2j.gameserver.util.GameUtils.isMonster;
  */
 public final class AutoPlayEngine {
 
-    private static final int AUTO_PLAY_INTERVAL = 1500;
+    private static final int AUTO_PLAY_INTERVAL = 2000;
     private final WeakHashMap<Player, AutoPlaySetting> players = new WeakHashMap<>();
     private final DoMacro doMacroTask = new DoMacro();
     private ScheduledFuture<?> scheduled;

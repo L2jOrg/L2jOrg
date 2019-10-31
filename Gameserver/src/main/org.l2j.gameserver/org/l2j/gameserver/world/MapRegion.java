@@ -25,9 +25,9 @@ public class MapRegion {
     private List<Location> spawnLocs = null;
     private List<Location> chaoticSpawnLocs = null;
 
-    public MapRegion(String town, int locId, int bbs) {
+    public MapRegion(String town, int loc, int bbs) {
         this.town = town;
-        this.locId = locId;
+        this.locId = loc;
         this.bbs = bbs;
     }
 

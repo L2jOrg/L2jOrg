@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	  xmlns="http://l2j.org"
+	  xsi:schemaLocation="http://l2j.org map-region.xsd">
+	<!-- Giran Castle Town -->
+	<region name="giran_castle_town" town="Giran Castle Town" loc="918" bbs="6">
+		<respawn-point x="82480" y="149087" z="-3350" />
+		<respawn-point x="81440" y="149119" z="-3350" />
+		<respawn-point x="81376" y="148095" z="-3350" />
+		<respawn-point x="82496" y="148095" z="-3350" />
+		<respawn-point x="83473" y="149223" z="-3300" />
+		<respawn-point x="83426" y="148835" z="-3300" />
+		<respawn-point x="83409" y="148578" z="-3300" />
+		<respawn-point x="83415" y="148235" z="-3300" />
+		<respawn-point x="82272" y="147801" z="-3350" />
+		<respawn-point x="81562" y="147782" z="-3350" />
+		<respawn-point x="81062" y="148144" z="-3350" />
+		<respawn-point x="81033" y="148883" z="-3350" />
+		<respawn-point x="81637" y="149427" z="-3350" />
+		<respawn-point x="82292" y="149450" z="-3350" />
+		<respawn-point x="74450" y="144238" z="-3730" chaotic="true" />
+		<respawn-point x="74209" y="142395" z="-3730" chaotic="true" />
+		<respawn-point x="77279" y="145045" z="-3630" chaotic="true" />
+		<respawn-point x="74809" y="146119" z="-3600" chaotic="true" />
+		<respawn-point x="75006" y="143520" z="-3700" chaotic="true" />
+		<respawn-point x="81347" y="140579" z="-3520" chaotic="true" />
+		<respawn-point x="79543" y="142050" z="-3500" chaotic="true" />
+		<respawn-point x="86223" y="140993" z="-3400" chaotic="true" />
+		<respawn-point x="78692" y="154573" z="-3450" chaotic="true" />
+		<respawn-point x="77870" y="156209" z="-3430" chaotic="true" />
+		<respawn-point x="79832" y="154009" z="-3500" chaotic="true" />
+		<respawn-point x="75501" y="147178" z="-3530" chaotic="true" />
+		<map x="21" y="23" />
+		<map x="22" y="22" />
+		<map x="23" y="22" />
+		<!-- Heiness region -->
+		<map x="22" y="23" />
+		<map x="22" y="24" />
+		<map x="22" y="25" />
+		<map x="23" y="23" />
+		<map x="23" y="24" />
+		<map x="23" y="25" />
+	</region>
+</list>	

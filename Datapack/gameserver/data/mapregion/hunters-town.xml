@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	  xmlns="http://l2j.org"
+	  xsi:schemaLocation="http://l2j.org map-region.xsd">
+	<!-- Hunter Town -->
+	<region name="hunter_town" town="Hunters Village" loc="923" bbs="11">
+		<respawn-point x="116127" y="76015" z="-2729" />
+		<respawn-point x="115683" y="77610" z="-2650" />
+		<respawn-point x="117304" y="76318" z="-2670" />
+		<respawn-point x="119862" y="76603" z="-2220" />
+		<respawn-point x="117671" y="78998" z="-2210" />
+		<respawn-point x="117189" y="78952" z="-2210" />
+		<respawn-point x="115861" y="75200" z="-2550" />
+		<respawn-point x="118275" y="74859" z="-2557" />
+		<respawn-point x="118229" y="74677" z="-2450" />
+		<respawn-point x="115685" y="75072" z="-2550" />
+		<respawn-point x="116704" y="75695" z="-2680" />
+		<respawn-point x="116737" y="76738" z="-2650" />
+		<respawn-point x="115193" y="77594" z="-2670" />
+		<respawn-point x="116158" y="77443" z="-2660" />
+		<respawn-point x="122098" y="70373" z="-2864" chaotic="true" />
+		<respawn-point x="118674" y="71218" z="-2743" chaotic="true" />
+		<respawn-point x="118040" y="67175" z="-2905" chaotic="true" />
+		<respawn-point x="119300" y="70660" z="-2850" chaotic="true" />
+		<respawn-point x="118851" y="70566" z="-2800" chaotic="true" />
+		<respawn-point x="112655" y="70976" z="-3122" chaotic="true" />
+		<respawn-point x="119712" y="66376" z="-2960" chaotic="true" />
+		<respawn-point x="107511" y="82890" z="-2515" chaotic="true" />
+		<respawn-point x="105702" y="82773" z="-2803" chaotic="true" />
+		<respawn-point x="104257" y="82194" z="-2581" chaotic="true" />
+		<respawn-point x="104474" y="81109" z="-2651" chaotic="true" />
+		<map x="20" y="10" />
+		<map x="23" y="20" />
+		<map x="23" y="19" />
+		<map x="24" y="20" />
+		<map x="25" y="20" />
+		<!-- NOTE: When teleporting out of Anthara's Lair or Dragon Valley, the teleport drop-off location is Hunter's Village in H5 -->
+		<map x="22" y="21" />
+		<map x="23" y="21" />
+		<map x="24" y="21" />
+		<map x="25" y="21" />
+	</region>
+</list>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	  xmlns="http://l2j.org"
+	  xsi:schemaLocation="http://l2j.org map-region.xsd">
+	<region name="dwarf_town" town="Dwarven Town" loc="921" bbs="9">
+		<respawn-point x="116176" y="-182448" z="-1400" />
+		<respawn-point x="116476" y="-182904" z="-1500" />
+		<respawn-point x="115248" y="-178816" z="-850" />
+		<respawn-point x="116352" y="-179264" z="-1000" />
+		<respawn-point x="115271" y="-178561" z="-820" />
+		<respawn-point x="115249" y="-177859" z="-820" />
+		<respawn-point x="115485" y="-178077" z="-820" />
+		<respawn-point x="115790" y="-179146" z="-890" />
+		<respawn-point x="116507" y="-179597" z="-1000" />
+		<respawn-point x="116725" y="-180147" z="-1000" />
+		<respawn-point x="116738" y="-181494" z="-1300" />
+		<respawn-point x="116775" y="-182367" z="-1400" />
+		<respawn-point x="116587" y="-183032" z="-1400" />
+		<respawn-point x="116321" y="-182734" z="-1400" />
+		<respawn-point x="118160" y="-179328" z="-1578" chaotic="true" />
+		<respawn-point x="119024" y="-180208" z="-2180" chaotic="true" />
+		<respawn-point x="119728" y="-180912" z="-2649" chaotic="true" />
+		<respawn-point x="119776" y="-181968" z="-2948" chaotic="true" />
+		<respawn-point x="119392" y="-183968" z="-3125" chaotic="true" />
+		<respawn-point x="119520" y="-184928" z="-3196" chaotic="true" />
+		<respawn-point x="119568" y="-186016" z="-3220" chaotic="true" />
+		<respawn-point x="119984" y="-187312" z="-3260" chaotic="true" />
+		<respawn-point x="119632" y="-188352" z="-3260" chaotic="true" />
+		<respawn-point x="119264" y="-188736" z="-3203" chaotic="true" />
+		<respawn-point x="118656" y="-187760" z="-2828" chaotic="true" />
+		<map x="23" y="10" />
+		<map x="23" y="11" />
+		<map x="23" y="12" />
+		<map x="24" y="10" />
+		<map x="24" y="11" />
+		<map x="24" y="12" />
+		<map x="25" y="10" />
+		<map x="25" y="11" />
+		<map x="25" y="12" />
+	</region>
+	<!-- Quarry -->
+	<region name="Quarry" town="Dwarven Town" loc="921" bbs="9">
+		<respawn-point x="108644" y="-173947" z="-400" />
+		<respawn-point x="108678" y="-174002" z="-400" />
+		<respawn-point x="108505" y="-173964" z="-400" />
+		<respawn-point x="108512" y="-174026" z="-400" />
+		<respawn-point x="108549" y="-174075" z="-400" />
+		<respawn-point x="108576" y="-174122" z="-400" />
+		<respawn-point x="118160" y="-179328" z="-1578" chaotic="true" />
+		<respawn-point x="119024" y="-180208" z="-2180" chaotic="true" />
+		<respawn-point x="119728" y="-180912" z="-2649" chaotic="true" />
+		<respawn-point x="119776" y="-181968" z="-2948" chaotic="true" />
+		<respawn-point x="119392" y="-183968" z="-3125" chaotic="true" />
+		<respawn-point x="119520" y="-184928" z="-3196" chaotic="true" />
+		<respawn-point x="119568" y="-186016" z="-3220" chaotic="true" />
+		<respawn-point x="119984" y="-187312" z="-3260" chaotic="true" />
+		<respawn-point x="119632" y="-188352" z="-3260" chaotic="true" />
+		<respawn-point x="119264" y="-188736" z="-3203" chaotic="true" />
+		<respawn-point x="118656" y="-187760" z="-2828" chaotic="true" />
+	</region>
+</list>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	  xmlns="http://l2j.org"
+	  xsi:schemaLocation="http://l2j.org map-region.xsd">
+	<!-- Inner Annihilation01 -->
+	<region name="inner_annihilation01" town="Seed of Annihilation" loc="3170" bbs="2">
+		<respawn-point x="-178256" y="153397" z="2472" />
+		<respawn-point x="-178256" y="153397" z="2472" chaotic="true" />
+	</region>
+	<!-- Inner Annihilation02 -->
+	<region name="inner_annihilation02" town="Seed of Annihilation" loc="3170" bbs="2">
+		<respawn-point x="-178256" y="153397" z="2472" />
+		<respawn-point x="-178256" y="153397" z="2472" chaotic="true" />
+	</region>
+</list>

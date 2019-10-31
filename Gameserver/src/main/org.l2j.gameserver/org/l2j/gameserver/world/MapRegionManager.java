@@ -45,14 +45,14 @@ public final class MapRegionManager extends GameXmlReader {
     private static final Logger LOGGER = LoggerFactory.getLogger(MapRegionManager.class);
 
     private final Map<String, MapRegion> regions = new HashMap<>();
-    private final String defaultRespawn = "talking_island_town";
+    private final String defaultRespawn = "talking-island";
 
     private MapRegionManager() {
     }
 
     @Override
     protected Path getSchemaFilePath() {
-        return getSettings(ServerSettings.class).dataPackDirectory().resolve("data/mapregion/MapRegion.xsd");
+        return getSettings(ServerSettings.class).dataPackDirectory().resolve("data/mapregion/map-region.xsd");
     }
 
     @Override
@@ -68,10 +68,10 @@ public final class MapRegionManager extends GameXmlReader {
            var attributes = regionNode.getAttributes();
            var name = parseString(attributes, "name");
            var town = parseString(attributes, "town");
-           var locId = parseInteger(attributes, "locId");
+           var loc = parseInteger(attributes, "loc");
            var bbs = parseInteger(attributes, "bbs");
 
-           var region = new MapRegion(town, locId, bbs);
+           var region = new MapRegion(town, loc, bbs);
            parseRegion(regionNode, region);
            regions.put(name, region);
         }));
@@ -80,7 +80,7 @@ public final class MapRegionManager extends GameXmlReader {
     private void parseRegion(Node regionNode, MapRegion region) {
         for (Node node = regionNode.getFirstChild(); node != null; node = node.getNextSibling()) {
              var attributes = node.getAttributes();
-             if ("respawnPoint".equalsIgnoreCase(node.getNodeName())) {
+             if ("respawn-point".equalsIgnoreCase(node.getNodeName())) {
                  final int spawnX = parseInteger(attributes, "x");
                  final int spawnY = parseInteger(attributes, "y");
                  final int spawnZ = parseInteger(attributes, "z");
@@ -92,7 +92,7 @@ public final class MapRegionManager extends GameXmlReader {
                  }
 
              } else if ("map".equalsIgnoreCase(node.getNodeName())) {
-                 region.addMapTile(parseByte(attributes, "X"), parseByte(attributes, "Y"));
+                 region.addMapTile(parseByte(attributes, "x"), parseByte(attributes, "y"));
              } else if ("banned".equalsIgnoreCase(node.getNodeName())) {
                  region.addBannedRace(attributes.getNamedItem("race").getNodeValue(), attributes.getNamedItem("point").getNodeValue());
              }

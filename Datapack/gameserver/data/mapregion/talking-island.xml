@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	  xmlns="http://l2j.org"
+	  xsi:schemaLocation="http://l2j.org map-region.xsd">
+	<!-- Talking Island Town -->
+	<region name="talking_island_town" town="Talking Island Town" loc="910" bbs="1">
+		<respawn-point x="-83990" y="243336" z="-3700" />
+		<respawn-point x="-83964" y="242680" z="-3700" />
+		<respawn-point x="-84512" y="242679" z="-3700" />
+		<respawn-point x="-84623" y="243193" z="-3700" />
+		<respawn-point x="-83742" y="242214" z="-3700" />
+		<respawn-point x="-83537" y="242537" z="-3700" />
+		<respawn-point x="-83700" y="242896" z="-3700" />
+		<respawn-point x="-83646" y="243397" z="-3700" />
+		<respawn-point x="-83808" y="243637" z="-3700" />
+		<respawn-point x="-84903" y="243489" z="-3700" />
+		<respawn-point x="-84852" y="243174" z="-3700" />
+		<respawn-point x="-84892" y="242479" z="-3700" />
+		<respawn-point x="-84756" y="242155" z="-3700" />
+		<respawn-point x="-83761" y="243620" z="-3700" />
+		<respawn-point x="-79411" y="240677" z="-3450" chaotic="true" />
+		<respawn-point x="-80480" y="242640" z="-3690" chaotic="true" />
+		<respawn-point x="-80336" y="244656" z="-3680" chaotic="true" />
+		<respawn-point x="-82464" y="247248" z="-3570" chaotic="true" />
+		<respawn-point x="-89522" y="241696" z="-3530" chaotic="true" />
+		<respawn-point x="-87056" y="237952" z="-3580" chaotic="true" />
+		<respawn-point x="-89536" y="240336" z="-3560" chaotic="true" />
+		<respawn-point x="-88208" y="241360" z="-3560" chaotic="true" />
+		<respawn-point x="-85328" y="238080" z="-3660" chaotic="true" />
+		<respawn-point x="-89760" y="237408" z="-3660" chaotic="true" />
+		<respawn-point x="-92976" y="240560" z="-3380" chaotic="true" />
+		<respawn-point x="-94448" y="240944" z="-3300" chaotic="true" />
+		<respawn-point x="-93552" y="245296" z="-3530" chaotic="true" />
+		<respawn-point x="-91584" y="238480" z="-3650" chaotic="true" />
+		<respawn-point x="-88720" y="238976" z="-3650" chaotic="true" />
+		<respawn-point x="-91760" y="243664" z="-3440" chaotic="true" />
+		<respawn-point x="-81680" y="249696" z="-3630" chaotic="true" />
+		<respawn-point x="-83808" y="251264" z="-3630" chaotic="true" />
+		<respawn-point x="-83328" y="238304" z="-3700" chaotic="true" />
+		<respawn-point x="-91296" y="236272" z="-3690" chaotic="true" />
+		<map x="15" y="23" />
+		<map x="15" y="24" />
+		<map x="15" y="25" />
+		<map x="16" y="23" />
+		<map x="16" y="24" />
+		<map x="16" y="25" />
+		<map x="17" y="24" />
+		<map x="17" y="25" />
+		<map x="18" y="25" />
+	</region>
+	<!-- Cedric's Training Hall -->
+	<region name="Cedric's_Training_Hall" town="Talking Island Town" loc="910" bbs="1">
+		<respawn-point x="-71338" y="258271" z="-3104" />
+		<respawn-point x="-71417" y="258270" z="-3104" />
+		<respawn-point x="-71453" y="258305" z="-3104" />
+		<respawn-point x="-71467" y="258378" z="-3104" />
+		<respawn-point x="-79411" y="240677" z="-3450" chaotic="true" />
+		<respawn-point x="-80480" y="242640" z="-3690" chaotic="true" />
+		<respawn-point x="-80336" y="244656" z="-3680" chaotic="true" />
+		<respawn-point x="-82464" y="247248" z="-3570" chaotic="true" />
+		<respawn-point x="-89522" y="241696" z="-3530" chaotic="true" />
+		<respawn-point x="-87056" y="237952" z="-3580" chaotic="true" />
+		<respawn-point x="-89536" y="240336" z="-3560" chaotic="true" />
+		<respawn-point x="-88208" y="241360" z="-3560" chaotic="true" />
+		<respawn-point x="-85328" y="238080" z="-3660" chaotic="true" />
+		<respawn-point x="-89760" y="237408" z="-3660" chaotic="true" />
+		<respawn-point x="-92976" y="240560" z="-3380" chaotic="true" />
+		<respawn-point x="-94448" y="240944" z="-3300" chaotic="true" />
+		<respawn-point x="-93552" y="245296" z="-3530" chaotic="true" />
+		<respawn-point x="-91584" y="238480" z="-3650" chaotic="true" />
+		<respawn-point x="-88720" y="238976" z="-3650" chaotic="true" />
+		<respawn-point x="-91760" y="243664" z="-3440" chaotic="true" />
+		<respawn-point x="-81680" y="249696" z="-3630" chaotic="true" />
+		<respawn-point x="-83808" y="251264" z="-3630" chaotic="true" />
+		<respawn-point x="-83328" y="238304" z="-3700" chaotic="true" />
+		<respawn-point x="-91296" y="236272" z="-3690" chaotic="true" />
+	</region>
+	<!-- Einhovant's School Of Magic -->
+	<region name="Einhovant's_School_of_Magic" town="Talking Island Town" loc="910" bbs="1">
+		<respawn-point x="-90875" y="248162" z="-3570" />
+		<respawn-point x="-90954" y="248118" z="-3570" />
+		<respawn-point x="-90918" y="248070" z="-3570" />
+		<respawn-point x="-90890" y="248027" z="-3570" />
+		<respawn-point x="-79411" y="240677" z="-3450" chaotic="true" />
+		<respawn-point x="-80480" y="242640" z="-3690" chaotic="true" />
+		<respawn-point x="-80336" y="244656" z="-3680" chaotic="true" />
+		<respawn-point x="-82464" y="247248" z="-3570" chaotic="true" />
+		<respawn-point x="-89522" y="241696" z="-3530" chaotic="true" />
+		<respawn-point x="-87056" y="237952" z="-3580" chaotic="true" />
+		<respawn-point x="-89536" y="240336" z="-3560" chaotic="true" />
+		<respawn-point x="-88208" y="241360" z="-3560" chaotic="true" />
+		<respawn-point x="-85328" y="238080" z="-3660" chaotic="true" />
+		<respawn-point x="-89760" y="237408" z="-3660" chaotic="true" />
+		<respawn-point x="-92976" y="240560" z="-3380" chaotic="true" />
+		<respawn-point x="-94448" y="240944" z="-3300" chaotic="true" />
+		<respawn-point x="-93552" y="245296" z="-3530" chaotic="true" />
+		<respawn-point x="-91584" y="238480" z="-3650" chaotic="true" />
+		<respawn-point x="-88720" y="238976" z="-3650" chaotic="true" />
+		<respawn-point x="-91760" y="243664" z="-3440" chaotic="true" />
+		<respawn-point x="-81680" y="249696" z="-3630" chaotic="true" />
+		<respawn-point x="-83808" y="251264" z="-3630" chaotic="true" />
+		<respawn-point x="-83328" y="238304" z="-3700" chaotic="true" />
+		<respawn-point x="-91296" y="236272" z="-3690" chaotic="true" />
+	</region>
+</list>

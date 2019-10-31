@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+		   targetNamespace="http://l2j.org"
+		   xmlns="http://l2j.org"
+		   elementFormDefault="qualified">
+
+	<xs:include schemaLocation="../xsd/common.xsd"/>
+
+	<xs:element name="list">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="region" type="Region" maxOccurs="unbounded"/>
+			</xs:sequence>
+			<xs:attribute name="enabled" type="xs:boolean" default="true" />
+		</xs:complexType>
+	</xs:element>
+
+	<xs:complexType name="Region">
+		<xs:sequence>
+			<xs:element name="respawn-point" type="Respawn" maxOccurs="unbounded"/>
+			<xs:element name="map" minOccurs="0" maxOccurs="unbounded">
+				<xs:complexType>
+					<xs:attribute name="x" type="xs:integer" use="required" />
+					<xs:attribute name="y" type="xs:integer" use="required" />
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="banned" minOccurs="0" maxOccurs="unbounded">
+				<xs:complexType>
+					<xs:attribute name="point" type="xs:token" use="required" />
+					<xs:attribute name="race" type="Race" use="required"/>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute name="bbs" type="xs:token" use="required" />
+		<xs:attribute name="loc" type="xs:positiveInteger" use="required" />
+		<xs:attribute name="name" type="xs:token" use="required" />
+		<xs:attribute name="town" type="xs:token" use="required" />
+	</xs:complexType>
+
+	<xs:complexType name="Respawn">
+		<xs:complexContent>
+			<xs:extension base="Location">
+				<xs:attribute name="chaotic" type="xs:boolean" default="false"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+</xs:schema>

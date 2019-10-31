@@ -1,57 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<list enabled="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	  xmlns="http://l2j.org"
-	  xsi:schemaLocation="http://l2j.org MapRegion.xsd">
+	  xsi:schemaLocation="http://l2j.org map-region.xsd">
 	<!-- Colosseum -->
-	<region name="colosseum" town="Coliseum" locId="925" bbs="13">
-		<respawnPoint x="147420" y="46378" z="-3350" />
-		<respawnPoint x="147696" y="46416" z="-3350" />
-		<respawnPoint x="147248" y="47048" z="-3350" />
-		<respawnPoint x="147449" y="47051" z="-3350" />
-		<respawnPoint x="147680" y="47040" z="-3350" />
-		<respawnPoint x="147232" y="46352" z="-3350" />
-		<respawnPoint x="147696" y="46928" z="-3350" />
-		<respawnPoint x="147456" y="46928" z="-3350" />
-		<respawnPoint x="147232" y="46928" z="-3350" />
-		<respawnPoint x="147232" y="46464" z="-3350" />
-		<respawnPoint x="147424" y="46464" z="-3350" />
-		<respawnPoint x="147696" y="46512" z="-3350" />
-		<respawnPoint x="151294" y="46378" z="-3350" />
-		<respawnPoint x="151535" y="46353" z="-3350" />
-		<respawnPoint x="151712" y="46368" z="-3350" />
-		<respawnPoint x="151753" y="46500" z="-3405" />
-		<respawnPoint x="151760" y="46928" z="-3350" />
-		<respawnPoint x="151760" y="47104" z="-3350" />
-		<respawnPoint x="151536" y="46960" z="-3350" />
-		<respawnPoint x="151536" y="47104" z="-3350" />
-		<respawnPoint x="151264" y="47136" z="-3350" />
-		<respawnPoint x="151264" y="47008" z="-3350" />
-		<respawnPoint x="151536" y="46482" z="-3350" />
-		<respawnPoint x="151296" y="46480" z="-3350" />
-		<respawnPoint x="147420" y="46378" z="-3350" chaotic="true" />
-		<respawnPoint x="147696" y="46416" z="-3350" chaotic="true" />
-		<respawnPoint x="147248" y="47048" z="-3350" chaotic="true" />
-		<respawnPoint x="147449" y="47051" z="-3350" chaotic="true" />
-		<respawnPoint x="147680" y="47040" z="-3350" chaotic="true" />
-		<respawnPoint x="147232" y="46352" z="-3350" chaotic="true" />
-		<respawnPoint x="147696" y="46928" z="-3350" chaotic="true" />
-		<respawnPoint x="147456" y="46928" z="-3350" chaotic="true" />
-		<respawnPoint x="147232" y="46928" z="-3350" chaotic="true" />
-		<respawnPoint x="147232" y="46464" z="-3350" chaotic="true" />
-		<respawnPoint x="147424" y="46464" z="-3350" chaotic="true" />
-		<respawnPoint x="147696" y="46512" z="-3350" chaotic="true" />
-		<respawnPoint x="151294" y="46378" z="-3350" chaotic="true" />
-		<respawnPoint x="151535" y="46353" z="-3350" chaotic="true" />
-		<respawnPoint x="151712" y="46368" z="-3350" chaotic="true" />
-		<respawnPoint x="151753" y="46500" z="-3405" chaotic="true" />
-		<respawnPoint x="151760" y="46928" z="-3350" chaotic="true" />
-		<respawnPoint x="151760" y="47104" z="-3350" chaotic="true" />
-		<respawnPoint x="151536" y="46960" z="-3350" chaotic="true" />
-		<respawnPoint x="151536" y="47104" z="-3350" chaotic="true" />
-		<respawnPoint x="151264" y="47136" z="-3350" chaotic="true" />
-		<respawnPoint x="151264" y="47008" z="-3350" chaotic="true" />
-		<respawnPoint x="151536" y="46482" z="-3350" chaotic="true" />
-		<respawnPoint x="151296" y="46480" z="-3350" chaotic="true" />
+	<region name="colosseum" town="Coliseum" loc="925" bbs="13">
+		<respawn-point x="147420" y="46378" z="-3350" />
+		<respawn-point x="147696" y="46416" z="-3350" />
+		<respawn-point x="147248" y="47048" z="-3350" />
+		<respawn-point x="147449" y="47051" z="-3350" />
+		<respawn-point x="147680" y="47040" z="-3350" />
+		<respawn-point x="147232" y="46352" z="-3350" />
+		<respawn-point x="147696" y="46928" z="-3350" />
+		<respawn-point x="147456" y="46928" z="-3350" />
+		<respawn-point x="147232" y="46928" z="-3350" />
+		<respawn-point x="147232" y="46464" z="-3350" />
+		<respawn-point x="147424" y="46464" z="-3350" />
+		<respawn-point x="147696" y="46512" z="-3350" />
+		<respawn-point x="151294" y="46378" z="-3350" />
+		<respawn-point x="151535" y="46353" z="-3350" />
+		<respawn-point x="151712" y="46368" z="-3350" />
+		<respawn-point x="151753" y="46500" z="-3405" />
+		<respawn-point x="151760" y="46928" z="-3350" />
+		<respawn-point x="151760" y="47104" z="-3350" />
+		<respawn-point x="151536" y="46960" z="-3350" />
+		<respawn-point x="151536" y="47104" z="-3350" />
+		<respawn-point x="151264" y="47136" z="-3350" />
+		<respawn-point x="151264" y="47008" z="-3350" />
+		<respawn-point x="151536" y="46482" z="-3350" />
+		<respawn-point x="151296" y="46480" z="-3350" />
+		<respawn-point x="147420" y="46378" z="-3350" chaotic="true" />
+		<respawn-point x="147696" y="46416" z="-3350" chaotic="true" />
+		<respawn-point x="147248" y="47048" z="-3350" chaotic="true" />
+		<respawn-point x="147449" y="47051" z="-3350" chaotic="true" />
+		<respawn-point x="147680" y="47040" z="-3350" chaotic="true" />
+		<respawn-point x="147232" y="46352" z="-3350" chaotic="true" />
+		<respawn-point x="147696" y="46928" z="-3350" chaotic="true" />
+		<respawn-point x="147456" y="46928" z="-3350" chaotic="true" />
+		<respawn-point x="147232" y="46928" z="-3350" chaotic="true" />
+		<respawn-point x="147232" y="46464" z="-3350" chaotic="true" />
+		<respawn-point x="147424" y="46464" z="-3350" chaotic="true" />
+		<respawn-point x="147696" y="46512" z="-3350" chaotic="true" />
+		<respawn-point x="151294" y="46378" z="-3350" chaotic="true" />
+		<respawn-point x="151535" y="46353" z="-3350" chaotic="true" />
+		<respawn-point x="151712" y="46368" z="-3350" chaotic="true" />
+		<respawn-point x="151753" y="46500" z="-3405" chaotic="true" />
+		<respawn-point x="151760" y="46928" z="-3350" chaotic="true" />
+		<respawn-point x="151760" y="47104" z="-3350" chaotic="true" />
+		<respawn-point x="151536" y="46960" z="-3350" chaotic="true" />
+		<respawn-point x="151536" y="47104" z="-3350" chaotic="true" />
+		<respawn-point x="151264" y="47136" z="-3350" chaotic="true" />
+		<respawn-point x="151264" y="47008" z="-3350" chaotic="true" />
+		<respawn-point x="151536" y="46482" z="-3350" chaotic="true" />
+		<respawn-point x="151296" y="46480" z="-3350" chaotic="true" />
 	</region>
 </list>

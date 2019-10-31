@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	  xmlns="http://l2j.org"
+	  xsi:schemaLocation="http://l2j.org map-region.xsd">
+	<!-- Town Of Schuttgart -->
+	<region name="town_of_schuttgart" town="Town of Schuttgart" loc="1714" bbs="9">
+		<respawn-point x="88240" y="-142736" z="-1341" />
+		<respawn-point x="88624" y="-142480" z="-1344" />
+		<respawn-point x="87408" y="-142304" z="-1341" />
+		<respawn-point x="87344" y="-141696" z="-1341" />
+		<respawn-point x="86400" y="-142672" z="-1344" />
+		<respawn-point x="85968" y="-142384" z="-1341" />
+		<respawn-point x="84720" y="-141936" z="-1542" />
+		<respawn-point x="85056" y="-141328" z="-1542" />
+		<respawn-point x="85472" y="-140752" z="-1542" />
+		<respawn-point x="86560" y="-140320" z="-1542" />
+		<respawn-point x="87184" y="-140256" z="-1542" />
+		<respawn-point x="87776" y="-140384" z="-1542" />
+		<respawn-point x="88448" y="-140512" z="-1542" />
+		<respawn-point x="89360" y="-140944" z="-1542" />
+		<respawn-point x="89712" y="-141472" z="-1542" />
+		<respawn-point x="82720" y="-141584" z="-2221" chaotic="true" />
+		<respawn-point x="83120" y="-141088" z="-2276" chaotic="true" />
+		<respawn-point x="83744" y="-139392" z="-2272" chaotic="true" />
+		<respawn-point x="84128" y="-139440" z="-2272" chaotic="true" />
+		<respawn-point x="84480" y="-138800" z="-2245" chaotic="true" />
+		<respawn-point x="85136" y="-139072" z="-2277" chaotic="true" />
+		<respawn-point x="85184" y="-138560" z="-2265" chaotic="true" />
+		<respawn-point x="85616" y="-138912" z="-2277" chaotic="true" />
+		<respawn-point x="86016" y="-138736" z="-2277" chaotic="true" />
+		<respawn-point x="86368" y="-137984" z="-2273" chaotic="true" />
+		<respawn-point x="89200" y="-138336" z="-2344" chaotic="true" />
+		<map x="21" y="14" />
+		<map x="22" y="14" />
+		<map x="22" y="13" />
+		<map x="23" y="14" />
+		<map x="23" y="13" />
+	</region>
+</list>

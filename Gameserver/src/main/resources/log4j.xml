@@ -5,7 +5,7 @@
     </properties>
     <Appenders>
         <Console name="console" target="SYSTEM_OUT">
-            <PatternLayout pattern="%highlight{${pattern}}{Bright}"/>
+            <PatternLayout pattern="%highlight{${pattern}}"/>
             <ThresholdFilter level="INFO"/>
         </Console>
 
@@ -26,15 +26,6 @@
                 <SizeBasedTriggeringPolicy size="50 MB"/>
             </Policies>
             <DefaultRolloverStrategy max="5" fileIndex="min"/>
-            <ThresholdFilter level="debug"/>
-        </RollingFile>
-
-        <RollingFile name="packetSize" filename="logs/packetSize.log" filepattern="logs/packetSize.log.%i" append="true" >
-            <PatternLayout pattern="%msg%n" />
-            <Policies>
-                <SizeBasedTriggeringPolicy size="50 MB" />
-            </Policies>
-            <DefaultRolloverStrategy max="10" fileIndex="min"/>
             <ThresholdFilter level="debug"/>
         </RollingFile>
     </Appenders>
@@ -60,9 +51,6 @@
         <Logger name="org.ehcache" level="error">
             <AppenderRef ref="game"/>
             <AppenderRef ref="debug"/>
-        </Logger>
-        <Logger name="packet.info" level="debug">
-            <AppenderRef ref="packetSize"/>
         </Logger>
     </Loggers>
 </Configuration>

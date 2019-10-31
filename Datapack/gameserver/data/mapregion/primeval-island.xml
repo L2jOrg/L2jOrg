@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	  xmlns="http://l2j.org"
+	  xsi:schemaLocation="http://l2j.org map-region.xsd">
+	<!-- Primeval Island -->
+	<region name="primeval_island" town="Primeval Island" loc="1924" bbs="14">
+		<respawn-point x="11088" y="-24768" z="-3644" />
+		<respawn-point x="10560" y="-24656" z="-3648" />
+		<respawn-point x="10352" y="-24240" z="-3658" />
+		<respawn-point x="10896" y="-24112" z="-3644" />
+		<respawn-point x="10256" y="-23680" z="-3667" chaotic="true" />
+		<respawn-point x="10816" y="-23552" z="-3653" chaotic="true" />
+		<respawn-point x="11424" y="-24064" z="-3644" chaotic="true" />
+		<respawn-point x="10512" y="-23072" z="-3664" chaotic="true" />
+		<respawn-point x="9904" y="-24128" z="-3728" chaotic="true" />
+		<respawn-point x="10560" y="-23920" z="-3654" chaotic="true" />
+		<respawn-point x="11136" y="-24384" z="-3644" chaotic="true" />
+		<map x="20" y="17" />
+	</region>
+</list>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	  xmlns="http://l2j.org"
+	  xsi:schemaLocation="http://l2j.org map-region.xsd">
+	<!-- Elf Town -->
+	<region name="elf_town" town="Elven Town" loc="914" bbs="4">
+		<respawn-point x="45487" y="49767" z="-2950" />
+		<respawn-point x="45080" y="49614" z="-2950" />
+		<respawn-point x="45284" y="49309" z="-2950" />
+		<respawn-point x="45576" y="49412" z="-2950" />
+		<respawn-point x="45896" y="49831" z="-2950" />
+		<respawn-point x="45463" y="50097" z="-2950" />
+		<respawn-point x="44935" y="49798" z="-2950" />
+		<respawn-point x="44798" y="49475" z="-2950" />
+		<respawn-point x="45100" y="49025" z="-2950" />
+		<respawn-point x="45912" y="49363" z="-2950" />
+		<respawn-point x="45788" y="49861" z="-2950" />
+		<respawn-point x="45325" y="50067" z="-2950" />
+		<respawn-point x="40720" y="56064" z="-3580" chaotic="true" />
+		<respawn-point x="39760" y="55040" z="-3410" chaotic="true" />
+		<respawn-point x="43152" y="55920" z="-3620" chaotic="true" />
+		<respawn-point x="44192" y="56960" z="-3580" chaotic="true" />
+		<respawn-point x="39328" y="56256" z="-3580" chaotic="true" />
+		<respawn-point x="40448" y="57744" z="-3600" chaotic="true" />
+		<respawn-point x="38080" y="52048" z="-3500" chaotic="true" />
+		<respawn-point x="38784" y="51824" z="-3470" chaotic="true" />
+		<respawn-point x="37088" y="51248" z="-3400" chaotic="true" />
+		<respawn-point x="37952" y="49680" z="-3480" chaotic="true" />
+		<respawn-point x="38848" y="47072" z="-3580" chaotic="true" />
+		<respawn-point x="36688" y="49856" z="-3440" chaotic="true" />
+		<respawn-point x="36096" y="46544" z="-3680" chaotic="true" />
+		<respawn-point x="37200" y="45232" z="-3600" chaotic="true" />
+		<respawn-point x="50128" y="55472" z="-3410" chaotic="true" />
+		<respawn-point x="51856" y="54432" z="-3320" chaotic="true" />
+		<respawn-point x="53136" y="54592" z="-3420" chaotic="true" />
+		<respawn-point x="51824" y="58624" z="-3400" chaotic="true" />
+		<respawn-point x="51232" y="59216" z="-3320" chaotic="true" />
+		<respawn-point x="49808" y="56240" z="-3430" chaotic="true" />
+		<map x="21" y="19" />
+		<map x="21" y="20" />
+		<map x="20" y="19" />
+		<map x="20" y="20" />
+		<banned race="DARK_ELF" point="darkelf_town" />
+	</region>
+	<!-- Mothertree Glade -->
+	<region name="Mothertree_Glade" town="Elven Town" loc="914" bbs="4">
+		<respawn-point x="46045" y="41251" z="-3440" />
+		<respawn-point x="46117" y="41247" z="-3440" />
+		<respawn-point x="46182" y="41198" z="-3440" />
+		<respawn-point x="46115" y="41141" z="-3440" />
+		<respawn-point x="46048" y="41141" z="-3440" />
+		<respawn-point x="45978" y="41196" z="-3440" />
+		<respawn-point x="40720" y="56064" z="-3580" chaotic="true" />
+		<respawn-point x="39760" y="55040" z="-3410" chaotic="true" />
+		<respawn-point x="43152" y="55920" z="-3620" chaotic="true" />
+		<respawn-point x="44192" y="56960" z="-3580" chaotic="true" />
+		<respawn-point x="39328" y="56256" z="-3580" chaotic="true" />
+		<respawn-point x="40448" y="57744" z="-3600" chaotic="true" />
+		<respawn-point x="38080" y="52048" z="-3500" chaotic="true" />
+		<respawn-point x="38784" y="51824" z="-3470" chaotic="true" />
+		<respawn-point x="37088" y="51248" z="-3400" chaotic="true" />
+		<respawn-point x="37952" y="49680" z="-3480" chaotic="true" />
+		<respawn-point x="38848" y="47072" z="-3580" chaotic="true" />
+		<respawn-point x="36688" y="49856" z="-3440" chaotic="true" />
+		<respawn-point x="36096" y="46544" z="-3680" chaotic="true" />
+		<respawn-point x="37200" y="45232" z="-3600" chaotic="true" />
+		<respawn-point x="50128" y="55472" z="-3410" chaotic="true" />
+		<respawn-point x="51856" y="54432" z="-3320" chaotic="true" />
+		<respawn-point x="53136" y="54592" z="-3420" chaotic="true" />
+		<respawn-point x="51824" y="58624" z="-3400" chaotic="true" />
+		<respawn-point x="51232" y="59216" z="-3320" chaotic="true" />
+		<respawn-point x="49808" y="56240" z="-3430" chaotic="true" />
+		<banned race="DARK_ELF" point="darkelf_town" />
+	</region>
+</list>

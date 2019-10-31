@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	  xmlns="http://l2j.org"
+	  xsi:schemaLocation="http://l2j.org map-region.xsd">
+	<!-- Floran Town -->
+	<region name="floran_town" town="Floran Town" loc="917" bbs="5">
+		<respawn-point x="19025" y="145245" z="-3107" />
+		<respawn-point x="18576" y="145136" z="-3104" />
+		<respawn-point x="18717" y="145711" z="-3097" />
+		<respawn-point x="18512" y="145536" z="-3100" />
+		<respawn-point x="18954" y="144428" z="-3000" />
+		<respawn-point x="19150" y="143941" z="-3020" />
+		<respawn-point x="19134" y="144847" z="-3020" />
+		<respawn-point x="19613" y="145607" z="-3020" />
+		<respawn-point x="18078" y="145925" z="-3020" />
+		<respawn-point x="17398" y="145456" z="-3000" />
+		<respawn-point x="17144" y="145055" z="-3000" />
+		<respawn-point x="19012" y="145140" z="-3020" />
+		<respawn-point x="17555" y="170393" z="-3451" chaotic="true" />
+		<respawn-point x="17699" y="170153" z="-3451" chaotic="true" />
+		<respawn-point x="17315" y="170041" z="-3451" chaotic="true" />
+		<respawn-point x="17283" y="170329" z="-3451" chaotic="true" />
+		<respawn-point x="17536" y="170505" z="-3451" chaotic="true" />
+		<respawn-point x="17299" y="170341" z="-3451" chaotic="true" />
+		<respawn-point x="17085" y="170170" z="-3451" chaotic="true" />
+		<respawn-point x="17421" y="169993" z="-3451" chaotic="true" />
+		<respawn-point x="17820" y="170054" z="-3451" chaotic="true" />
+		<respawn-point x="18054" y="170263" z="-3451" chaotic="true" />
+		<respawn-point x="17931" y="170381" z="-3451" chaotic="true" />
+		<map x="20" y="23" />
+	</region>
+</list>	

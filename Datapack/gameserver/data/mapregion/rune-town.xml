@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	  xmlns="http://l2j.org"
+	  xsi:schemaLocation="http://l2j.org map-region.xsd">
+	<!-- Rune Town -->
+	<region name="rune_town" town="Rune Town" loc="1537" bbs="14">
+		<respawn-point x="38096" y="-46976" z="899" />
+		<respawn-point x="38608" y="-47168" z="899" />
+		<respawn-point x="38752" y="-47792" z="899" />
+		<respawn-point x="38848" y="-48640" z="899" />
+		<respawn-point x="38272" y="-49008" z="899" />
+		<respawn-point x="38112" y="-49792" z="899" />
+		<respawn-point x="43408" y="-51120" z="-800" />
+		<respawn-point x="43536" y="-50416" z="-800" />
+		<respawn-point x="44368" y="-50592" z="-800" />
+		<respawn-point x="44000" y="-49952" z="-800" />
+		<respawn-point x="45072" y="-49936" z="-800" />
+		<respawn-point x="45824" y="-49056" z="-800" />
+		<respawn-point x="45632" y="-47968" z="-800" />
+		<respawn-point x="44864" y="-47824" z="-800" />
+		<respawn-point x="43744" y="-47920" z="-800" />
+		<respawn-point x="43792" y="-48928" z="-800" />
+		<respawn-point x="42640" y="-54496" z="-2310" chaotic="true" />
+		<respawn-point x="38304" y="-55440" z="-1136" chaotic="true" />
+		<respawn-point x="40192" y="-57600" z="-2343" chaotic="true" />
+		<respawn-point x="38400" y="-56832" z="-992" chaotic="true" />
+		<respawn-point x="35632" y="-54800" z="-1744" chaotic="true" />
+		<respawn-point x="37919" y="-54688" z="-672" chaotic="true" />
+		<respawn-point x="43936" y="-56480" z="-3627" chaotic="true" />
+		<respawn-point x="39440" y="-60080" z="-2870" chaotic="true" />
+		<respawn-point x="41376" y="-55376" z="-1488" chaotic="true" />
+		<respawn-point x="41920" y="-57760" z="-2392" chaotic="true" />
+		<respawn-point x="40438" y="-55431" z="-1376" chaotic="true" />
+		<respawn-point x="40784" y="-59888" z="-2600" chaotic="true" />
+		<map x="21" y="15" />
+		<map x="21" y="16" />
+		<map x="21" y="17" />
+		<map x="22" y="15" />
+		<map x="22" y="16" />
+		<map x="23" y="15" />
+		<map x="16" y="11" />
+		<map x="17" y="10" />
+		<map x="17" y="11" />
+		<map x="19" y="17" />
+		<map x="20" y="16" />
+		<!-- <map X="20" Y="17" /> NOTE: Commented due possible retail typo interfering with Primeval Isle mapregion -->
+		<map x="19" y="16" />
+	</region>
+	<!-- Olympiad Stadium02 -->
+	<region name="olympiad_stadium02" town="Rune Town" loc="1537" bbs="14">
+		<respawn-point x="38096" y="-46976" z="899" />
+		<respawn-point x="38608" y="-47168" z="899" />
+		<respawn-point x="38752" y="-47792" z="899" />
+		<respawn-point x="38848" y="-48640" z="899" />
+		<respawn-point x="38272" y="-49008" z="899" />
+		<respawn-point x="38112" y="-49792" z="899" />
+		<respawn-point x="43408" y="-51120" z="-800" />
+		<respawn-point x="43536" y="-50416" z="-800" />
+		<respawn-point x="44368" y="-50592" z="-800" />
+		<respawn-point x="44000" y="-49952" z="-800" />
+		<respawn-point x="45072" y="-49936" z="-800" />
+		<respawn-point x="45824" y="-49056" z="-800" />
+		<respawn-point x="45632" y="-47968" z="-800" />
+		<respawn-point x="44864" y="-47824" z="-800" />
+		<respawn-point x="43744" y="-47920" z="-800" />
+		<respawn-point x="43792" y="-48928" z="-800" />
+		<respawn-point x="42640" y="-54496" z="-2310" chaotic="true" />
+		<respawn-point x="38304" y="-55440" z="-1136" chaotic="true" />
+		<respawn-point x="40192" y="-57600" z="-2343" chaotic="true" />
+		<respawn-point x="38400" y="-56832" z="-992" chaotic="true" />
+		<respawn-point x="35632" y="-54800" z="-1744" chaotic="true" />
+		<respawn-point x="37919" y="-54688" z="-672" chaotic="true" />
+		<respawn-point x="43936" y="-56480" z="-3627" chaotic="true" />
+		<respawn-point x="39440" y="-60080" z="-2870" chaotic="true" />
+		<respawn-point x="41376" y="-55376" z="-1488" chaotic="true" />
+		<respawn-point x="41920" y="-57760" z="-2392" chaotic="true" />
+		<respawn-point x="40438" y="-55431" z="-1376" chaotic="true" />
+		<respawn-point x="40784" y="-59888" z="-2600" chaotic="true" />
+		<map x="15" y="10" />
+	</region>
+
+	<!-- Olympiad Stadium03 -->
+	<region name="olympiad_stadium03" town="Rune Town" loc="1537" bbs="14">
+		<respawn-point x="38096" y="-46976" z="899" />
+		<respawn-point x="38608" y="-47168" z="899" />
+		<respawn-point x="38752" y="-47792" z="899" />
+		<respawn-point x="38848" y="-48640" z="899" />
+		<respawn-point x="38272" y="-49008" z="899" />
+		<respawn-point x="38112" y="-49792" z="899" />
+		<respawn-point x="43408" y="-51120" z="-800" />
+		<respawn-point x="43536" y="-50416" z="-800" />
+		<respawn-point x="44368" y="-50592" z="-800" />
+		<respawn-point x="44000" y="-49952" z="-800" />
+		<respawn-point x="45072" y="-49936" z="-800" />
+		<respawn-point x="45824" y="-49056" z="-800" />
+		<respawn-point x="45632" y="-47968" z="-800" />
+		<respawn-point x="44864" y="-47824" z="-800" />
+		<respawn-point x="43744" y="-47920" z="-800" />
+		<respawn-point x="43792" y="-48928" z="-800" />
+		<respawn-point x="42640" y="-54496" z="-2310" chaotic="true" />
+		<respawn-point x="38304" y="-55440" z="-1136" chaotic="true" />
+		<respawn-point x="40192" y="-57600" z="-2343" chaotic="true" />
+		<respawn-point x="38400" y="-56832" z="-992" chaotic="true" />
+		<respawn-point x="35632" y="-54800" z="-1744" chaotic="true" />
+		<respawn-point x="37919" y="-54688" z="-672" chaotic="true" />
+		<respawn-point x="43936" y="-56480" z="-3627" chaotic="true" />
+		<respawn-point x="39440" y="-60080" z="-2870" chaotic="true" />
+		<respawn-point x="41376" y="-55376" z="-1488" chaotic="true" />
+		<respawn-point x="41920" y="-57760" z="-2392" chaotic="true" />
+		<respawn-point x="40438" y="-55431" z="-1376" chaotic="true" />
+		<respawn-point x="40784" y="-59888" z="-2600" chaotic="true" />
+		<map x="15" y="11" />
+	</region>
+
+	<!-- Olympiad Stadium04 -->
+	<region name="olympiad_stadium04" town="Rune Town" loc="1537" bbs="14">
+		<respawn-point x="38096" y="-46976" z="899" />
+		<respawn-point x="38608" y="-47168" z="899" />
+		<respawn-point x="38752" y="-47792" z="899" />
+		<respawn-point x="38848" y="-48640" z="899" />
+		<respawn-point x="38272" y="-49008" z="899" />
+		<respawn-point x="38112" y="-49792" z="899" />
+		<respawn-point x="43408" y="-51120" z="-800" />
+		<respawn-point x="43536" y="-50416" z="-800" />
+		<respawn-point x="44368" y="-50592" z="-800" />
+		<respawn-point x="44000" y="-49952" z="-800" />
+		<respawn-point x="45072" y="-49936" z="-800" />
+		<respawn-point x="45824" y="-49056" z="-800" />
+		<respawn-point x="45632" y="-47968" z="-800" />
+		<respawn-point x="44864" y="-47824" z="-800" />
+		<respawn-point x="43744" y="-47920" z="-800" />
+		<respawn-point x="43792" y="-48928" z="-800" />
+		<respawn-point x="42640" y="-54496" z="-2310" chaotic="true" />
+		<respawn-point x="38304" y="-55440" z="-1136" chaotic="true" />
+		<respawn-point x="40192" y="-57600" z="-2343" chaotic="true" />
+		<respawn-point x="38400" y="-56832" z="-992" chaotic="true" />
+		<respawn-point x="35632" y="-54800" z="-1744" chaotic="true" />
+		<respawn-point x="37919" y="-54688" z="-672" chaotic="true" />
+		<respawn-point x="43936" y="-56480" z="-3627" chaotic="true" />
+		<respawn-point x="39440" y="-60080" z="-2870" chaotic="true" />
+		<respawn-point x="41376" y="-55376" z="-1488" chaotic="true" />
+		<respawn-point x="41920" y="-57760" z="-2392" chaotic="true" />
+		<respawn-point x="40438" y="-55431" z="-1376" chaotic="true" />
+		<respawn-point x="40784" y="-59888" z="-2600" chaotic="true" />
+		<map x="15" y="12" />
+	</region>
+</list>

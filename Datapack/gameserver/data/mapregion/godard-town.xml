@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	  xmlns="http://l2j.org"
+	  xsi:schemaLocation="http://l2j.org map-region.xsd">
+	<!-- Godard Town -->
+	<region name="godard_town" town="Goddard Town" loc="1538" bbs="15">
+		<respawn-point x="148560" y="-55904" z="-2779" />
+		<respawn-point x="150704" y="-55744" z="-2979" />
+		<respawn-point x="150400" y="-56752" z="-2979" />
+		<respawn-point x="149872" y="-57424" z="-2979" />
+		<respawn-point x="149088" y="-56256" z="-2779" />
+		<respawn-point x="147664" y="-56464" z="-2779" />
+		<respawn-point x="147680" y="-56928" z="-2779" />
+		<respawn-point x="146832" y="-55904" z="-2779" />
+		<respawn-point x="146368" y="-56256" z="-2779" />
+		<respawn-point x="149120" y="-58064" z="-2979" />
+		<respawn-point x="148288" y="-58304" z="-2979" />
+		<respawn-point x="147680" y="-58208" z="-2979" />
+		<respawn-point x="147232" y="-58480" z="-2979" />
+		<respawn-point x="146272" y="-58176" z="-2979" />
+		<respawn-point x="145696" y="-57696" z="-2979" />
+		<respawn-point x="145264" y="-57680" z="-2979" />
+		<respawn-point x="145392" y="-56960" z="-2979" />
+		<respawn-point x="144752" y="-56752" z="-2979" />
+		<respawn-point x="144960" y="-56224" z="-2979" />
+		<respawn-point x="144944" y="-55392" z="-2979" />
+		<respawn-point x="144496" y="-55088" z="-2979" />
+		<respawn-point x="142656" y="-55008" z="-3024" chaotic="true" />
+		<respawn-point x="142832" y="-55680" z="-3462" chaotic="true" />
+		<respawn-point x="143152" y="-56368" z="-3456" chaotic="true" />
+		<respawn-point x="145344" y="-59472" z="-3344" chaotic="true" />
+		<respawn-point x="145872" y="-59744" z="-3328" chaotic="true" />
+		<respawn-point x="150304" y="-59800" z="-3504" chaotic="true" />
+		<respawn-point x="145248" y="-60064" z="-3440" chaotic="true" />
+		<respawn-point x="144368" y="-59616" z="-3512" chaotic="true" />
+		<respawn-point x="149680" y="-59600" z="-3440" chaotic="true" />
+		<respawn-point x="149360" y="-60576" z="-3520" chaotic="true" />
+		<respawn-point x="152114" y="-57296" z="-3451" chaotic="true" />
+		<respawn-point x="150492" y="-59719" z="-3611" chaotic="true" />
+		<respawn-point x="148791" y="-60361" z="-3537" chaotic="true" />
+		<respawn-point x="146499" y="-60242" z="-3455" chaotic="true" />
+		<respawn-point x="143052" y="-56418" z="-3490" chaotic="true" />
+		<map x="23" y="16" />
+		<map x="24" y="14" />
+		<map x="24" y="15" />
+		<map x="24" y="16" />
+		<map x="25" y="14" />
+		<map x="25" y="15" />
+		<map x="25" y="16" />
+		<map x="26" y="14" />
+	</region>
+</list>

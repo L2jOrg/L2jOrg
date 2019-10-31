@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	  xmlns="http://l2j.org"
+	  xsi:schemaLocation="http://l2j.org map-region.xsd">
+	<!-- Rift Bitween Worlds -->
+	<region name="rift_bitween_worlds" town="Dimensional Rift" loc="1643" bbs="100">
+		<respawn-point x="146950" y="26754" z="-2198" />
+		<respawn-point x="136398" y="28901" z="-3582" chaotic="true" />
+		<respawn-point x="137292" y="28485" z="-3290" chaotic="true" />
+		<respawn-point x="155925" y="28554" z="-3164" chaotic="true" />
+		<respawn-point x="157608" y="23866" z="-3760" chaotic="true" />
+		<respawn-point x="157463" y="28770" z="-3371" chaotic="true" />
+		<respawn-point x="159348" y="28561" z="-3400" chaotic="true" />
+		<respawn-point x="160236" y="14119" z="-3892" chaotic="true" />
+		<respawn-point x="156764" y="13774" z="-3960" chaotic="true" />
+		<respawn-point x="161426" y="23055" z="-3670" chaotic="true" />
+		<respawn-point x="136380" y="21899" z="-3647" chaotic="true" />
+		<respawn-point x="137708" y="15640" z="-3800" chaotic="true" />
+		<respawn-point x="136629" y="28127" z="-3258" chaotic="true" />
+		<map x="16" y="12" />
+	</region>
+</list>

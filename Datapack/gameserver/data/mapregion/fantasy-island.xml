@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	  xmlns="http://l2j.org"
+	  xsi:schemaLocation="http://l2j.org map-region.xsd">
+	<!-- Crate01 -->
+	<region name="crate01" town="Fantasy Island" loc="2259" bbs="14">
+		<respawn-point x="-87123" y="-16464" z="-8320" />
+		<respawn-point x="-87123" y="-16464" z="-8320" chaotic="true" />
+	</region>
+	<!-- Crate02 -->
+	<region name="crate02" town="Fantasy Island" loc="2259" bbs="14">
+		<respawn-point x="-86974" y="-81844" z="-8364" />
+		<respawn-point x="-86974" y="-81844" z="-8364" chaotic="true" />
+	</region>
+	<!-- Crate03 -->
+	<region name="crate03" town="Fantasy Island" loc="2259" bbs="14">
+		<respawn-point x="-53892" y="-82896" z="-8320" />
+		<respawn-point x="-53892" y="-82896" z="-8320" chaotic="true" />
+	</region>
+	<!-- Themepark -->
+	<region name="themepark" town="Fantasy Island" loc="2259" bbs="14">
+		<respawn-point x="-60012" y="-57445" z="-2030" />
+		<respawn-point x="-59078" y="-56898" z="-2030" />
+		<respawn-point x="-60009" y="-56328" z="-2030" />
+		<respawn-point x="-60012" y="-57445" z="-2030" chaotic="true" />
+		<respawn-point x="-59078" y="-56898" z="-2030" chaotic="true" />
+		<respawn-point x="-60009" y="-56328" z="-2030" chaotic="true" />
+		<map x="17" y="15" />
+		<map x="18" y="15" />
+		<map x="17" y="16" />
+		<map x="18" y="16" />
+	</region>
+</list>

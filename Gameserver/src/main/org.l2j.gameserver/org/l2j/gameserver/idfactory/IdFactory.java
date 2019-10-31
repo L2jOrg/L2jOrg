@@ -28,8 +28,9 @@ public abstract class IdFactory {
 
         cleanCount += getDAO(AccountDAO.class).deleteWithoutAccount();
 
-        cleanCount += getDAO(ItemDAO.class).deleteWithoutOwner();
-        cleanCount += getDAO(ItemDAO.class).deleteFromEmailWithoutMessage();
+        var itemDAO = getDAO(ItemDAO.class);
+        cleanCount += itemDAO.deleteWithoutOwner();
+        cleanCount += itemDAO.deleteFromEmailWithoutMessage();
 
 
         var clanDao = getDAO(ClanDAO.class);
@@ -51,8 +52,9 @@ public abstract class IdFactory {
 
     private void cleanUpTimeStamps() {
         var timestamp = System.currentTimeMillis();
-        getDAO(CharacterDAO.class).deleteExpiredInstances(timestamp);
-        getDAO(CharacterDAO.class).deleteExpiredSavedSkills(timestamp);
+        var characterDAO = getDAO(CharacterDAO.class);
+        characterDAO.deleteExpiredInstances(timestamp);
+        characterDAO.deleteExpiredSavedSkills(timestamp);
     }
 
     protected final IntSet extractUsedObjectIDTable()  {

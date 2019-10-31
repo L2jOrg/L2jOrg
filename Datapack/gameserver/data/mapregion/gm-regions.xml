@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	  xmlns="http://l2j.org"
+	  xsi:schemaLocation="http://l2j.org map-region.xsd">
+	<!-- Gm Room -->
+	<region name="gm_room" town="GM Consultation Service" loc="1222" bbs="9">
+		<respawn-point x="-114598" y="-249431" z="-2984" />
+		<respawn-point x="-114527" y="-249452" z="-2984" />
+		<respawn-point x="-114567" y="-249517" z="-2984" />
+		<respawn-point x="-114634" y="-249516" z="-2984" />
+		<respawn-point x="-114665" y="-249440" z="-2984" />
+		<respawn-point x="-114626" y="-249397" z="-2984" />
+		<respawn-point x="-114567" y="-249384" z="-2984" />
+		<respawn-point x="-114566" y="-249470" z="-2984" />
+		<respawn-point x="-114601" y="-249489" z="-2984" />
+		<respawn-point x="-114630" y="-249465" z="-2984" />
+		<respawn-point x="-114501" y="-249297" z="-2984" />
+		<respawn-point x="-114475" y="-249273" z="-2984" />
+		<respawn-point x="-114441" y="-249293" z="-2984" />
+		<respawn-point x="-114598" y="-249431" z="-2984" chaotic="true" />
+		<respawn-point x="-114527" y="-249452" z="-2984" chaotic="true" />
+		<respawn-point x="-114567" y="-249517" z="-2984" chaotic="true" />
+		<respawn-point x="-114634" y="-249516" z="-2984" chaotic="true" />
+		<respawn-point x="-114665" y="-249440" z="-2984" chaotic="true" />
+		<respawn-point x="-114626" y="-249397" z="-2984" chaotic="true" />
+		<respawn-point x="-114567" y="-249384" z="-2984" chaotic="true" />
+		<respawn-point x="-114566" y="-249470" z="-2984" chaotic="true" />
+		<respawn-point x="-114601" y="-249489" z="-2984" chaotic="true" />
+		<respawn-point x="-114630" y="-249465" z="-2984" chaotic="true" />
+		<respawn-point x="-114501" y="-249297" z="-2984" chaotic="true" />
+		<respawn-point x="-114475" y="-249273" z="-2984" chaotic="true" />
+		<respawn-point x="-114441" y="-249293" z="-2984" chaotic="true" />
+	</region>
+
+	<!-- Gm Room Solo1 -->
+	<region name="gm_room_solo1" town="GM Consultation Service" loc="1222" bbs="9">
+		<respawn-point x="-116059" y="-251145" z="-2992" />
+		<respawn-point x="-116126" y="-251135" z="-2992" />
+		<respawn-point x="-116050" y="-251210" z="-2992" />
+		<respawn-point x="-116049" y="-251082" z="-2992" />
+		<respawn-point x="-116059" y="-251145" z="-2992" chaotic="true" />
+		<respawn-point x="-116126" y="-251135" z="-2992" chaotic="true" />
+		<respawn-point x="-116050" y="-251210" z="-2992" chaotic="true" />
+		<respawn-point x="-116049" y="-251082" z="-2992" chaotic="true" />
+	</region>
+
+	<!-- Gm Room Solo2 -->
+	<region name="gm_room_solo2" town="GM Consultation Service" loc="1222" bbs="9">
+		<respawn-point x="-112959" y="-251147" z="-2992" />
+		<respawn-point x="-113157" y="-251149" z="-2992" />
+		<respawn-point x="-113099" y="-251231" z="-2992" />
+		<respawn-point x="-113097" y="-251033" z="-2992" />
+		<respawn-point x="-112959" y="-251147" z="-2992" chaotic="true" />
+		<respawn-point x="-113157" y="-251149" z="-2992" chaotic="true" />
+		<respawn-point x="-113099" y="-251231" z="-2992" chaotic="true" />
+		<respawn-point x="-113097" y="-251033" z="-2992" chaotic="true" />
+	</region>
+</list>
