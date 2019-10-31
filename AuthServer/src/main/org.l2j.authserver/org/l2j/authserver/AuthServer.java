@@ -11,6 +11,7 @@ import org.l2j.authserver.network.gameserver.GameServerPacketHandler;
 import org.l2j.authserver.network.gameserver.ServerClient;
 import org.l2j.authserver.settings.AuthServerSettings;
 import org.l2j.commons.cache.CacheFactory;
+import org.l2j.commons.threading.ThreadPool;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -62,6 +63,8 @@ public class AuthServer {
         configureCaches();
         configureDatabase();
         configureNetworkPackets();
+        var processors = Runtime.getRuntime().availableProcessors();
+        ThreadPool.init(processors, Math.max(1, processors/2));
         try {
             _instance = new AuthServer();
             getRuntime().addShutdownHook(new Thread(() -> _instance.shutdown()));
