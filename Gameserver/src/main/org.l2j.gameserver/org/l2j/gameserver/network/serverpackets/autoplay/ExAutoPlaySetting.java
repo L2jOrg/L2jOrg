@@ -1,8 +1,9 @@
-package org.l2j.gameserver.network.serverpackets;
+package org.l2j.gameserver.network.serverpackets.autoplay;
 
 import org.l2j.gameserver.engine.autoplay.AutoPlaySetting;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.ServerPacketId;
+import org.l2j.gameserver.network.serverpackets.ServerPacket;
 
 /**
  * @author JoeAlisson

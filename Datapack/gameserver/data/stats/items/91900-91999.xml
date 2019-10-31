@@ -175,11 +175,18 @@
 		<!-- Instantly recovers 50 HP. The remaining points are used to recover CP. -->
 		<set name="icon" val="icon.etc_lesser_potion_red_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="immediate_effect" val="true"/>
+		<set name="etcitem_type" val="POTION"/>
+		<set name="commissionItemType" val="POTION"/>
+		<set name="handler" val="ItemSkills"/>
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1" />
 		<set name="price" val="30" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<skills>
+			<skill id="50151" level="1"/> <!-- HP Potion -->
+		</skills>
 	</item>
 	<item id="91913" name="Aden Spellbook Chest" type="EtcItem">
 		<!-- Double-click to obtain a spellbook for learning skills (for all races, except Orcs). <Spellbook List>. Spellbook: Empower, Spellbook: Focus, Spellbook: Wild Magic, Spellbook: Haste, Spellbook: Acumen, Spellbook: Death Whisper, Spellbook: Clarity, Spellbook: Berserker Spirit. -->

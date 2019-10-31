@@ -10,6 +10,8 @@ import org.l2j.gameserver.network.clientpackets.attendance.RequestVipAttendanceI
 import org.l2j.gameserver.network.clientpackets.attributechange.RequestChangeAttributeCancel;
 import org.l2j.gameserver.network.clientpackets.attributechange.RequestChangeAttributeItem;
 import org.l2j.gameserver.network.clientpackets.attributechange.SendChangeAttributeTargetItem;
+import org.l2j.gameserver.network.clientpackets.autoplay.ExAutoPlaySetting;
+import org.l2j.gameserver.network.clientpackets.autoplay.ExRequestActivateAutoShortcut;
 import org.l2j.gameserver.network.clientpackets.captcha.RequestCaptchaAnswer;
 import org.l2j.gameserver.network.clientpackets.captcha.RequestRefreshCaptcha;
 import org.l2j.gameserver.network.clientpackets.ceremonyofchaos.RequestCancelCuriousHouse;
@@ -409,6 +411,7 @@ public enum ExIncomingPackets implements PacketFactory {
     EX_REQUEST_CLASS_CHANGE_VERIFYING(0x166, null, ConnectionState.IN_GAME),
     EX_REQUEST_TELEPORT(0x167, ExRequestTeleport::new, ConnectionState.IN_GAME),
     EX_COSTUME_COLLECTION_SKILL_ACTIVE(0x16B, null, ConnectionState.IN_GAME),
+    EX_ACTIVATE_AUTO_SHORTCUT(0x171, ExRequestActivateAutoShortcut::new, ConnectionState.IN_GAME),
     EX_AUTOPLAY_SETTING(0x177, ExAutoPlaySetting::new, ConnectionState.IN_GAME),
     EX_TIME_RESTRICT_FIELD_LIST(0x17F, ExTimedHuntingZoneList::new, ConnectionState.IN_GAME),
     EX_TIME_RESTRICT_FIELD_USER_ENTER(0x180, null, ConnectionState.IN_GAME),

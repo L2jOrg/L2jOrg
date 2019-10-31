@@ -344,7 +344,17 @@
 		<reuseDelay>60000</reuseDelay>
 	</skill>
 	<skill id="50151" toLevel="1" name="HP Potion">
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="HpCpHeal">
+				<amount>50</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="50152" toLevel="1" name="Escape: Adaptation Training">
 		<operateType>A1</operateType>
