@@ -12,7 +12,7 @@ import java.util.Map;
  *
  * @author Nyaran
  */
-public class RespawnZone extends ZoneRespawn {
+public class RespawnZone extends SpawnZone {
     private final Map<Race, String> raceRespawnPoint = new HashMap<>();
 
     public RespawnZone(int id) {

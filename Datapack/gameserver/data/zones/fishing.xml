@@ -1,201 +1,227 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org zones.xsd">
-    <zone name="fishing_giran_1" type="org.l2j.gameserver.world.zone.type.FishingZone" form="Polygon" minZ="-3600" maxZ="-3350">
-        <point x="85091" y="150247"/>
-        <point x="85630" y="150238"/>
-        <point x="85639" y="152251"/>
-        <point x="84852" y="152251"/>
-        <point x="84855" y="152399"/>
-        <point x="86774" y="152407"/>
-        <point x="86777" y="152250"/>
-        <point x="85990" y="152255"/>
-        <point x="85990" y="150243"/>
-        <point x="86488" y="150249"/>
-        <point x="86489" y="150163"/>
-        <point x="85087" y="150138"/>
+    <zone name="fishing_giran_1" type="org.l2j.gameserver.world.zone.type.FishingZone">
+        <polygon min-z="-3600" max-z="-3350">
+            <point x="85091" y="150247"/>
+            <point x="85630" y="150238"/>
+            <point x="85639" y="152251"/>
+            <point x="84852" y="152251"/>
+            <point x="84855" y="152399"/>
+            <point x="86774" y="152407"/>
+            <point x="86777" y="152250"/>
+            <point x="85990" y="152255"/>
+            <point x="85990" y="150243"/>
+            <point x="86488" y="150249"/>
+            <point x="86489" y="150163"/>
+            <point x="85087" y="150138"/>
+        </polygon>
     </zone>
-    <zone name="fishing_giran_2" type="org.l2j.gameserver.world.zone.type.FishingZone" form="Polygon" minZ="-3550" maxZ="-3500">
-        <point x="88666" y="147527"/>
-        <point x="90406" y="147527"/>
-        <point x="90406" y="147185"/>
-        <point x="88680" y="147185"/>
+    <zone name="fishing_giran_2" type="org.l2j.gameserver.world.zone.type.FishingZone">
+        <polygon min-z="-3550" max-z="-3500">
+            <point x="88666" y="147527"/>
+            <point x="90406" y="147527"/>
+            <point x="90406" y="147185"/>
+            <point x="88680" y="147185"/>
+        </polygon>
     </zone>
-    <zone name="fishing_giran_3" type="org.l2j.gameserver.world.zone.type.FishingZone" form="Polygon" minZ="-3550" maxZ="-3500">
-        <point x="84068" y="143243"/>
-        <point x="84069" y="141532"/>
-        <point x="83707" y="141527"/>
-        <point x="83703" y="143244"/>
+    <zone name="fishing_giran_3" type="org.l2j.gameserver.world.zone.type.FishingZone">
+        <polygon min-z="-3550" max-z="-3500">
+            <point x="84068" y="143243"/>
+            <point x="84069" y="141532"/>
+            <point x="83707" y="141527"/>
+            <point x="83703" y="143244"/>
+        </polygon>
     </zone>
-    <zone name="fishing_giran_harbor" type="org.l2j.gameserver.world.zone.type.FishingZone" form="Polygon" minZ="-3700" maxZ="-3300">
-        <point x="50727" y="184858"/>
-        <point x="48874" y="186940"/>
-        <point x="46463" y="188239"/>
-        <point x="45663" y="186532"/>
-        <point x="43848" y="187494"/>
-        <point x="44631" y="188770"/>
-        <point x="42568" y="189871"/>
-        <point x="44155" y="193268"/>
-        <point x="50252" y="190691"/>
-        <point x="53136" y="186640"/>
+    <zone name="fishing_giran_harbor" type="org.l2j.gameserver.world.zone.type.FishingZone">
+        <polygon min-z="-3700" max-z="-3300">
+            <point x="50727" y="184858"/>
+            <point x="48874" y="186940"/>
+            <point x="46463" y="188239"/>
+            <point x="45663" y="186532"/>
+            <point x="43848" y="187494"/>
+            <point x="44631" y="188770"/>
+            <point x="42568" y="189871"/>
+            <point x="44155" y="193268"/>
+            <point x="50252" y="190691"/>
+            <point x="53136" y="186640"/>
+        </polygon>
     </zone>
-    <zone name="fishing_fellmere_lake" type="org.l2j.gameserver.world.zone.type.FishingZone" form="Polygon" minZ="-3650" maxZ="-2200">
-        <point x="-55351" y="128912"/>
-        <point x="-55974" y="131960"/>
-        <point x="-61124" y="133034"/>
-        <point x="-63346" y="132706"/>
-        <point x="-63622" y="137127"/>
-        <point x="-63943" y="139991"/>
-        <point x="-66278" y="138637"/>
-        <point x="-70269" y="133704"/>
-        <point x="-68687" y="129352"/>
-        <point x="-61255" y="125857"/>
-        <point x="-61634" y="122648"/>
-        <point x="-64758" y="120838"/>
-        <point x="-65553" y="115366"/>
-        <point x="-63965" y="112894"/>
-        <point x="-62075" y="113109"/>
-        <point x="-60208" y="114967"/>
-        <point x="-58091" y="120419"/>
-        <point x="-58399" y="122746"/>
-        <point x="-55645" y="122787"/>
-        <point x="-52452" y="124898"/>
-        <point x="-52589" y="127015"/>
+    <zone name="fishing_fellmere_lake" type="org.l2j.gameserver.world.zone.type.FishingZone">
+        <polygon min-z="-3650" max-z="-2200">
+            <point x="-55351" y="128912"/>
+            <point x="-55974" y="131960"/>
+            <point x="-61124" y="133034"/>
+            <point x="-63346" y="132706"/>
+            <point x="-63622" y="137127"/>
+            <point x="-63943" y="139991"/>
+            <point x="-66278" y="138637"/>
+            <point x="-70269" y="133704"/>
+            <point x="-68687" y="129352"/>
+            <point x="-61255" y="125857"/>
+            <point x="-61634" y="122648"/>
+            <point x="-64758" y="120838"/>
+            <point x="-65553" y="115366"/>
+            <point x="-63965" y="112894"/>
+            <point x="-62075" y="113109"/>
+            <point x="-60208" y="114967"/>
+            <point x="-58091" y="120419"/>
+            <point x="-58399" y="122746"/>
+            <point x="-55645" y="122787"/>
+            <point x="-52452" y="124898"/>
+            <point x="-52589" y="127015"/>
+        </polygon>
     </zone>
-    <zone name="fishing_narsell_lake" type="org.l2j.gameserver.world.zone.type.FishingZone" form="Polygon" minZ="-3750" maxZ="-3200">
-        <point x="143476" y="46677"/>
-        <point x="143378" y="47597"/>
-        <point x="141912" y="48300"/>
-        <point x="140149" y="46938"/>
-        <point x="137895" y="47855"/>
-        <point x="137190" y="50320"/>
-        <point x="137840" y="51469"/>
-        <point x="139300" y="52548"/>
-        <point x="137961" y="54671"/>
-        <point x="136828" y="57481"/>
-        <point x="138792" y="59808"/>
-        <point x="143935" y="59893"/>
-        <point x="148324" y="59026"/>
-        <point x="149082" y="58032"/>
-        <point x="151890" y="58634"/>
-        <point x="153262" y="57498"/>
-        <point x="152659" y="55271"/>
-        <point x="153196" y="54110"/>
-        <point x="154187" y="53247"/>
-        <point x="155423" y="53209"/>
-        <point x="157125" y="54176"/>
-        <point x="158716" y="53215"/>
-        <point x="158622" y="52273"/>
-        <point x="160864" y="51337"/>
-        <point x="161582" y="50347"/>
-        <point x="161667" y="48356"/>
-        <point x="159959" y="45092"/>
-        <point x="157666" y="45539"/>
-        <point x="157071" y="47916"/>
-        <point x="155858" y="47763"/>
-        <point x="155654" y="46743"/>
-        <point x="155780" y="42906"/>
-        <point x="157608" y="42222"/>
-        <point x="158460" y="40748"/>
-        <point x="158487" y="39104"/>
-        <point x="156930" y="37678"/>
-        <point x="152085" y="36185"/>
-        <point x="146922" y="37298"/>
-        <point x="144899" y="36565"/>
-        <point x="141637" y="37684"/>
-        <point x="138935" y="39332"/>
-        <point x="137809" y="40536"/>
-        <point x="138040" y="41586"/>
-        <point x="139209" y="42805"/>
-        <point x="141751" y="43654"/>
-        <point x="142611" y="44584"/>
-        <point x="143468" y="46767"/>
-        <point x="146394" y="46766"/>
-        <point x="146387" y="48012"/>
-        <point x="147497" y="49447"/>
-        <point x="151510" y="49446"/>
-        <point x="152585" y="48008"/>
-        <point x="152590" y="45439"/>
-        <point x="151506" y="43999"/>
-        <point x="147503" y="43998"/>
-        <point x="146384" y="45443"/>
-        <point x="146389" y="46695"/>
+    <zone name="fishing_narsell_lake" type="org.l2j.gameserver.world.zone.type.FishingZone">
+        <polygon min-z="-3750" max-z="-3200">
+            <point x="143476" y="46677"/>
+            <point x="143378" y="47597"/>
+            <point x="141912" y="48300"/>
+            <point x="140149" y="46938"/>
+            <point x="137895" y="47855"/>
+            <point x="137190" y="50320"/>
+            <point x="137840" y="51469"/>
+            <point x="139300" y="52548"/>
+            <point x="137961" y="54671"/>
+            <point x="136828" y="57481"/>
+            <point x="138792" y="59808"/>
+            <point x="143935" y="59893"/>
+            <point x="148324" y="59026"/>
+            <point x="149082" y="58032"/>
+            <point x="151890" y="58634"/>
+            <point x="153262" y="57498"/>
+            <point x="152659" y="55271"/>
+            <point x="153196" y="54110"/>
+            <point x="154187" y="53247"/>
+            <point x="155423" y="53209"/>
+            <point x="157125" y="54176"/>
+            <point x="158716" y="53215"/>
+            <point x="158622" y="52273"/>
+            <point x="160864" y="51337"/>
+            <point x="161582" y="50347"/>
+            <point x="161667" y="48356"/>
+            <point x="159959" y="45092"/>
+            <point x="157666" y="45539"/>
+            <point x="157071" y="47916"/>
+            <point x="155858" y="47763"/>
+            <point x="155654" y="46743"/>
+            <point x="155780" y="42906"/>
+            <point x="157608" y="42222"/>
+            <point x="158460" y="40748"/>
+            <point x="158487" y="39104"/>
+            <point x="156930" y="37678"/>
+            <point x="152085" y="36185"/>
+            <point x="146922" y="37298"/>
+            <point x="144899" y="36565"/>
+            <point x="141637" y="37684"/>
+            <point x="138935" y="39332"/>
+            <point x="137809" y="40536"/>
+            <point x="138040" y="41586"/>
+            <point x="139209" y="42805"/>
+            <point x="141751" y="43654"/>
+            <point x="142611" y="44584"/>
+            <point x="143468" y="46767"/>
+            <point x="146394" y="46766"/>
+            <point x="146387" y="48012"/>
+            <point x="147497" y="49447"/>
+            <point x="151510" y="49446"/>
+            <point x="152585" y="48008"/>
+            <point x="152590" y="45439"/>
+            <point x="151506" y="43999"/>
+            <point x="147503" y="43998"/>
+            <point x="146384" y="45443"/>
+            <point x="146389" y="46695"/>
+        </polygon>
     </zone>
-    <zone name="fishing_iris_lake" type="org.l2j.gameserver.world.zone.type.FishingZone" form="Polygon" minZ="-3800" maxZ="-3250">
-        <point x="37154" y="68179"/>
-        <point x="38801" y="68085"/>
-        <point x="40777" y="71129"/>
-        <point x="46441" y="70716"/>
-        <point x="51580" y="71869"/>
-        <point x="52781" y="73455"/>
-        <point x="52551" y="75206"/>
-        <point x="54933" y="76938"/>
-        <point x="54396" y="79397"/>
-        <point x="55784" y="80902"/>
-        <point x="55439" y="83143"/>
-        <point x="53122" y="83309"/>
-        <point x="54339" y="85836"/>
-        <point x="53134" y="88170"/>
-        <point x="49728" y="88941"/>
-        <point x="46450" y="86985"/>
-        <point x="43025" y="88687"/>
-        <point x="41242" y="87297"/>
-        <point x="42002" y="83559"/>
-        <point x="38737" y="83170"/>
-        <point x="37219" y="81068"/>
-        <point x="37592" y="79682"/>
-        <point x="39704" y="75696"/>
-        <point x="36919" y="70835"/>
+    <zone name="fishing_iris_lake" type="org.l2j.gameserver.world.zone.type.FishingZone">
+        <polygon min-z="-3800" max-z="-3250">
+            <point x="37154" y="68179"/>
+            <point x="38801" y="68085"/>
+            <point x="40777" y="71129"/>
+            <point x="46441" y="70716"/>
+            <point x="51580" y="71869"/>
+            <point x="52781" y="73455"/>
+            <point x="52551" y="75206"/>
+            <point x="54933" y="76938"/>
+            <point x="54396" y="79397"/>
+            <point x="55784" y="80902"/>
+            <point x="55439" y="83143"/>
+            <point x="53122" y="83309"/>
+            <point x="54339" y="85836"/>
+            <point x="53134" y="88170"/>
+            <point x="49728" y="88941"/>
+            <point x="46450" y="86985"/>
+            <point x="43025" y="88687"/>
+            <point x="41242" y="87297"/>
+            <point x="42002" y="83559"/>
+            <point x="38737" y="83170"/>
+            <point x="37219" y="81068"/>
+            <point x="37592" y="79682"/>
+            <point x="39704" y="75696"/>
+            <point x="36919" y="70835"/>
+        </polygon>
     </zone>
-    <zone name="fishing_aden_1" type="org.l2j.gameserver.world.zone.type.FishingZone" form="Polygon" minZ="-4500" maxZ="-2050">
-        <point x="149133" y="25824"/>
-        <point x="149130" y="29255"/>
-        <point x="147936" y="29238"/>
-        <point x="147946" y="30010"/>
-        <point x="149362" y="30002"/>
-        <point x="149889" y="29497"/>
-        <point x="149890" y="25892"/>
+    <zone name="fishing_aden_1" type="org.l2j.gameserver.world.zone.type.FishingZone">
+        <polygon min-z="-4500" max-z="-2050">
+            <point x="149133" y="25824"/>
+            <point x="149130" y="29255"/>
+            <point x="147936" y="29238"/>
+            <point x="147946" y="30010"/>
+            <point x="149362" y="30002"/>
+            <point x="149889" y="29497"/>
+            <point x="149890" y="25892"/>
+        </polygon>
     </zone>
-    <zone name="fishing_aden_2" type="org.l2j.gameserver.world.zone.type.FishingZone" form="Polygon" minZ="-4500" maxZ="-2050">
-        <point x="145797" y="25836"/>
-        <point x="145790" y="29230"/>
-        <point x="146979" y="29234"/>
-        <point x="146963" y="30018"/>
-        <point x="145527" y="30008"/>
-        <point x="145011" y="29491"/>
-        <point x="144999" y="25810"/>
+    <zone name="fishing_aden_2" type="org.l2j.gameserver.world.zone.type.FishingZone">
+        <polygon min-z="-4500" max-z="-2050">
+            <point x="145797" y="25836"/>
+            <point x="145790" y="29230"/>
+            <point x="146979" y="29234"/>
+            <point x="146963" y="30018"/>
+            <point x="145527" y="30008"/>
+            <point x="145011" y="29491"/>
+            <point x="144999" y="25810"/>
+        </polygon>
     </zone>
-    <zone name="fishing_plains_of_the_lizardmen" type="org.l2j.gameserver.world.zone.type.FishingZone" form="Polygon" minZ="-3900" maxZ="-3550">
-        <point x="83659" y="97107"/>
-        <point x="86433" y="97824"/>
-        <point x="91779" y="96034"/>
-        <point x="92898" y="93824"/>
-        <point x="91352" y="93609"/>
-        <point x="84221" y="95305"/>
+    <zone name="fishing_plains_of_the_lizardmen" type="org.l2j.gameserver.world.zone.type.FishingZone">
+        <polygon min-z="-3900" max-z="-3550">
+            <point x="83659" y="97107"/>
+            <point x="86433" y="97824"/>
+            <point x="91779" y="96034"/>
+            <point x="92898" y="93824"/>
+            <point x="91352" y="93609"/>
+            <point x="84221" y="95305"/>
+        </polygon>
     </zone>
-    <zone name="fishing_floran" type="org.l2j.gameserver.world.zone.type.FishingZone" form="Polygon" minZ="-3900" maxZ="-3500">
-        <point x="6322" y="171259"/>
-        <point x="7522" y="167364"/>
-        <point x="8320" y="166440"/>
-        <point x="10542" y="167917"/>
-        <point x="11834" y="166749"/>
-        <point x="13465" y="167197"/>
-        <point x="14056" y="169657"/>
-        <point x="11602" y="171827"/>
-        <point x="12727" y="173552"/>
-        <point x="11917" y="175123"/>
-        <point x="7791" y="173888"/>
+    <zone name="fishing_floran" type="org.l2j.gameserver.world.zone.type.FishingZone">
+        <polygon min-z="-3900" max-z="-3500">
+            <point x="6322" y="171259"/>
+            <point x="7522" y="167364"/>
+            <point x="8320" y="166440"/>
+            <point x="10542" y="167917"/>
+            <point x="11834" y="166749"/>
+            <point x="13465" y="167197"/>
+            <point x="14056" y="169657"/>
+            <point x="11602" y="171827"/>
+            <point x="12727" y="173552"/>
+            <point x="11917" y="175123"/>
+            <point x="7791" y="173888"/>
+        </polygon>
     </zone>
-    <zone name="fishing_ol_mahum" type="org.l2j.gameserver.world.zone.type.FishingZone" form="Polygon" minZ="-3900" maxZ="-3600">
-        <point x="-9684" y="209598"/>
-        <point x="-14801" y="213962"/>
-        <point x="-11899" y="215713"/>
-        <point x="-8636" y="211047"/>
+    <zone name="fishing_ol_mahum" type="org.l2j.gameserver.world.zone.type.FishingZone">
+        <polygon min-z="-3900" max-z="-3600">
+            <point x="-9684" y="209598"/>
+            <point x="-14801" y="213962"/>
+            <point x="-11899" y="215713"/>
+            <point x="-8636" y="211047"/>
+        </polygon>
     </zone>
-    <zone name="fishing_gludin_harbor" type="org.l2j.gameserver.world.zone.type.FishingZone" form="Polygon" minZ="-3700" maxZ="-3500">
-        <point x="-96248" y="147885"/>
-        <point x="-96122" y="151413"/>
-        <point x="-93793" y="153291"/>
-        <point x="-91458" y="153347"/>
-        <point x="-91451" y="148441"/>
+    <zone name="fishing_gludin_harbor" type="org.l2j.gameserver.world.zone.type.FishingZone">
+        <polygon min-z="-3700" max-z="-3500">
+            <point x="-96248" y="147885"/>
+            <point x="-96122" y="151413"/>
+            <point x="-93793" y="153291"/>
+            <point x="-91458" y="153347"/>
+            <point x="-91451" y="148441"/>
+        </polygon>
     </zone>
 </list>

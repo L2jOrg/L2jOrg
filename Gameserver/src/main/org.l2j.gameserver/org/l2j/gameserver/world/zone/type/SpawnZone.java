@@ -4,6 +4,8 @@ import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.model.Location;
 import org.l2j.gameserver.world.zone.Zone;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -13,13 +15,16 @@ import java.util.List;
  *
  * @author DS, Nyaran (rework 10/07/2011)
  */
-public abstract class ZoneRespawn extends Zone {
+public abstract class SpawnZone extends Zone {
+
+    private static final Logger LOGGER = LoggerFactory.getLogger(SpawnZone.class);
+
     private List<Location> spawnLocs = null;
     private List<Location> otherSpawnLocs = null;
     private List<Location> chaoticSpawnLocs = null;
     private List<Location> banishSpawnLocs = null;
 
-    ZoneRespawn(int id) {
+    SpawnZone(int id) {
         super(id);
     }
 

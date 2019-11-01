@@ -1,13 +1,13 @@
 package org.l2j.gameserver.model;
 
 import org.l2j.commons.database.DatabaseFactory;
-import org.l2j.gameserver.Config;
 import org.l2j.commons.threading.ThreadPool;
+import org.l2j.gameserver.Config;
 import org.l2j.gameserver.communitybbs.BB.Forum;
 import org.l2j.gameserver.communitybbs.Manager.ForumsBBSManager;
-import org.l2j.gameserver.data.sql.impl.PlayerNameTable;
 import org.l2j.gameserver.data.sql.impl.ClanTable;
 import org.l2j.gameserver.data.sql.impl.CrestTable;
+import org.l2j.gameserver.data.sql.impl.PlayerNameTable;
 import org.l2j.gameserver.data.xml.impl.SkillData;
 import org.l2j.gameserver.data.xml.impl.SkillTreesData;
 import org.l2j.gameserver.enums.ClanRewardType;
@@ -30,13 +30,13 @@ import org.l2j.gameserver.model.pledge.ClanRewardBonus;
 import org.l2j.gameserver.model.skills.CommonSkill;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.model.variables.ClanVariables;
-import org.l2j.gameserver.world.zone.ZoneType;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.*;
 import org.l2j.gameserver.network.serverpackets.PledgeSkillList.SubPledgeSkill;
 import org.l2j.gameserver.network.serverpackets.pledgebonus.ExPledgeBonusMarkReset;
 import org.l2j.gameserver.util.EnumIntBitmask;
 import org.l2j.gameserver.world.World;
+import org.l2j.gameserver.world.zone.ZoneType;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -48,6 +48,8 @@ import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentSkipListMap;
 import java.util.concurrent.atomic.AtomicInteger;
+import java.util.function.Consumer;
+import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
 import static org.l2j.commons.util.Util.isAlphaNumeric;
@@ -105,7 +107,7 @@ public class Clan implements IIdentifiable, INamable {
     private static final String INSERT_CLAN_DATA = "INSERT INTO clan_data (clan_id,clan_name,clan_level,hasCastle,blood_alliance_count,blood_oath_count,ally_id,ally_name,leader_id,crest_id,crest_large_id,ally_crest_id,new_leader_id) values (?,?,?,?,?,?,?,?,?,?,?,?,?)";
     private static final String SELECT_CLAN_DATA = "SELECT * FROM clan_data where clan_id=?";
     private static final int MAX_NOTICE_LENGTH = 8192;
-    private final Map<Integer, ClanMember> _members = new ConcurrentHashMap<>();
+    private final Map<Integer, ClanMember> members = new ConcurrentHashMap<>();
     private final ItemContainer _warehouse = new ClanWarehouse(this);
     private final ConcurrentHashMap<Integer, ClanWar> _atWarWith = new ConcurrentHashMap<>();
     private final Map<Integer, Skill> _skills = new ConcurrentSkipListMap<>();
@@ -213,7 +215,7 @@ public class Clan implements IIdentifiable, INamable {
      */
     public void setLeader(ClanMember leader) {
         _leader = leader;
-        _members.put(leader.getObjectId(), leader);
+        members.put(leader.getObjectId(), leader);
     }
 
     /**
@@ -248,7 +250,7 @@ public class Clan implements IIdentifiable, INamable {
      * @param member the clan member.
      */
     private void addClanMember(ClanMember member) {
-        _members.put(member.getObjectId(), member);
+        members.put(member.getObjectId(), member);
     }
 
     /**
@@ -292,7 +294,7 @@ public class Clan implements IIdentifiable, INamable {
      * @return the clan member for a given name.
      */
     public ClanMember getClanMember(String name) {
-        for (ClanMember temp : _members.values()) {
+        for (ClanMember temp : members.values()) {
             if (temp.getName().equals(name)) {
                 return temp;
             }
@@ -305,7 +307,7 @@ public class Clan implements IIdentifiable, INamable {
      * @return the clan member for a given {@code objectId}.
      */
     public ClanMember getClanMember(int objectId) {
-        return _members.get(objectId);
+        return members.get(objectId);
     }
 
     /**
@@ -313,7 +315,7 @@ public class Clan implements IIdentifiable, INamable {
      * @param clanJoinExpiryTime time penalty to join a clan.
      */
     public void removeClanMember(int objectId, long clanJoinExpiryTime) {
-        final ClanMember exMember = _members.remove(objectId);
+        final ClanMember exMember = members.remove(objectId);
         if (exMember == null) {
             LOGGER.warn("Member Object ID: " + objectId + " not found in clan while trying to remove");
             return;
@@ -400,16 +402,16 @@ public class Clan implements IIdentifiable, INamable {
     }
 
     public Collection<ClanMember> getMembers() {
-        return _members.values();
+        return members.values();
     }
 
     public int getMembersCount() {
-        return _members.size();
+        return members.size();
     }
 
     public int getSubPledgeMembersCount(int subpl) {
         int result = 0;
-        for (ClanMember temp : _members.values()) {
+        for (ClanMember temp : members.values()) {
             if (temp.getPledgeType() == subpl) {
                 result++;
             }
@@ -500,7 +502,7 @@ public class Clan implements IIdentifiable, INamable {
      */
     public List<Player> getOnlineMembers(int exclude) {
         //@formatter:off
-        return _members.values().stream()
+        return members.values().stream()
                 .filter(member -> member.getObjectId() != exclude)
                 .filter(ClanMember::isOnline)
                 .map(ClanMember::getPlayerInstance)
@@ -514,10 +516,14 @@ public class Clan implements IIdentifiable, INamable {
      */
     public int getOnlineMembersCount() {
         //@formatter:off
-        return (int) _members.values().stream()
+        return (int) members.values().stream()
                 .filter(ClanMember::isOnline)
                 .count();
         //@formatter:on
+    }
+
+    public void forEachOnlineMember(Consumer<Player> action, Predicate<Player> filter) {
+        members.values().stream().filter(ClanMember::isOnline).map(ClanMember::getPlayerInstance).filter(filter).forEach(action);
     }
 
     /**
@@ -662,7 +668,7 @@ public class Clan implements IIdentifiable, INamable {
      * @return {code true} if the player belongs to the clan.
      */
     public boolean isMember(int id) {
-        return ((id != 0) && _members.containsKey(id));
+        return ((id != 0) && members.containsKey(id));
     }
 
     /**
@@ -1103,7 +1109,7 @@ public class Clan implements IIdentifiable, INamable {
             final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.THE_CLAN_SKILL_S1_HAS_BEEN_ADDED);
             sm.addSkillName(newSkill.getId());
 
-            for (ClanMember temp : _members.values()) {
+            for (ClanMember temp : members.values()) {
                 if ((temp != null) && (temp.getPlayerInstance() != null) && temp.isOnline()) {
                     if (subType == -2) {
                         if (newSkill.getMinPledgeClass() <= temp.getPlayerInstance().getPledgeClass()) {
@@ -1127,7 +1133,7 @@ public class Clan implements IIdentifiable, INamable {
 
     public void addSkillEffects() {
         for (Skill skill : _skills.values()) {
-            for (ClanMember temp : _members.values()) {
+            for (ClanMember temp : members.values()) {
                 try {
                     if ((temp != null) && temp.isOnline()) {
                         if (skill.getMinPledgeClass() <= temp.getPlayerInstance().getPledgeClass()) {
@@ -1241,7 +1247,7 @@ public class Clan implements IIdentifiable, INamable {
     }
 
     public void broadcastToOnlineMembers(ServerPacket packet) {
-        for (ClanMember member : _members.values()) {
+        for (ClanMember member : members.values()) {
             if ((member != null) && member.isOnline()) {
                 member.getPlayerInstance().sendPacket(packet);
             }
@@ -1249,7 +1255,7 @@ public class Clan implements IIdentifiable, INamable {
     }
 
     public void broadcastCSToOnlineMembers(CreatureSay packet, Player broadcaster) {
-        for (ClanMember member : _members.values()) {
+        for (ClanMember member : members.values()) {
             if ((member != null) && member.isOnline() && !BlockList.isBlocked(member.getPlayerInstance(), broadcaster)) {
                 member.getPlayerInstance().sendPacket(packet);
             }
@@ -1257,7 +1263,7 @@ public class Clan implements IIdentifiable, INamable {
     }
 
     public void broadcastToOtherOnlineMembers(ServerPacket packet, Player player) {
-        for (ClanMember member : _members.values()) {
+        for (ClanMember member : members.values()) {
             if ((member != null) && member.isOnline() && (member.getPlayerInstance() != player)) {
                 member.getPlayerInstance().sendPacket(packet);
             }
@@ -1520,7 +1526,7 @@ public class Clan implements IIdentifiable, INamable {
                 LOGGER.warn("Could not store clan privs for rank: " + e.getMessage(), e);
             }
 
-            for (ClanMember cm : _members.values()) {
+            for (ClanMember cm : members.values()) {
                 if (cm.isOnline()) {
                     if (cm.getPowerGrade() == rank) {
                         if (cm.getPlayerInstance() != null) {
@@ -1579,14 +1585,14 @@ public class Clan implements IIdentifiable, INamable {
     private void setReputationScore(int value, boolean save) {
         if ((_reputationScore >= 0) && (value < 0)) {
             broadcastToOnlineMembers(SystemMessage.getSystemMessage(SystemMessageId.SINCE_THE_CLAN_REPUTATION_HAS_DROPPED_BELOW_0_YOUR_CLAN_SKILL_S_WILL_BE_DE_ACTIVATED));
-            for (ClanMember member : _members.values()) {
+            for (ClanMember member : members.values()) {
                 if (member.isOnline() && (member.getPlayerInstance() != null)) {
                     skillsStatus(member.getPlayerInstance(), true);
                 }
             }
         } else if ((_reputationScore < 0) && (value >= 0)) {
             broadcastToOnlineMembers(SystemMessage.getSystemMessage(SystemMessageId.CLAN_SKILLS_WILL_NOW_BE_ACTIVATED_SINCE_THE_CLAN_REPUTATION_IS_1_OR_HIGHER));
-            for (ClanMember member : _members.values()) {
+            for (ClanMember member : members.values()) {
                 if (member.isOnline() && (member.getPlayerInstance() != null)) {
                     skillsStatus(member.getPlayerInstance(), false);
                 }
@@ -1898,7 +1904,7 @@ public class Clan implements IIdentifiable, INamable {
         switch (_level) {
             case 0: {
                 // Upgrade to 1
-                if ((player.getSp() >= 1000) && (player.getAdena() >= 150000) && (_members.size() >= 1)) {
+                if ((player.getSp() >= 1000) && (player.getAdena() >= 150000) && (members.size() >= 1)) {
                     if (player.reduceAdena("ClanLvl", 150000, player.getTarget(), true)) {
                         player.setSp(player.getSp() - 1000);
                         final SystemMessage sp = SystemMessage.getSystemMessage(SystemMessageId.YOUR_SP_HAS_DECREASED_BY_S1);
@@ -1911,7 +1917,7 @@ public class Clan implements IIdentifiable, INamable {
             }
             case 1: {
                 // Upgrade to 2
-                if ((player.getSp() >= 15000) && (player.getAdena() >= 300000) && (_members.size() >= 1)) {
+                if ((player.getSp() >= 15000) && (player.getAdena() >= 300000) && (members.size() >= 1)) {
                     if (player.reduceAdena("ClanLvl", 300000, player.getTarget(), true)) {
                         player.setSp(player.getSp() - 15000);
                         final SystemMessage sp = SystemMessage.getSystemMessage(SystemMessageId.YOUR_SP_HAS_DECREASED_BY_S1);
@@ -1924,7 +1930,7 @@ public class Clan implements IIdentifiable, INamable {
             }
             case 2: {
                 // Upgrade to 3
-                if ((player.getSp() >= 100000) && (player.getInventory().getItemByItemId(1419) != null) && (_members.size() >= 1)) {
+                if ((player.getSp() >= 100000) && (player.getInventory().getItemByItemId(1419) != null) && (members.size() >= 1)) {
                     // itemId 1419 == Blood Mark
                     if (player.destroyItemByItemId("ClanLvl", 1419, 100, player.getTarget(), true)) {
                         player.setSp(player.getSp() - 100000);
@@ -1941,7 +1947,7 @@ public class Clan implements IIdentifiable, INamable {
             }
             case 3: {
                 // Upgrade to 4
-                if ((player.getSp() >= 1000000) && (player.getInventory().getItemByItemId(1419) != null) && (_members.size() >= 1)) {
+                if ((player.getSp() >= 1000000) && (player.getInventory().getItemByItemId(1419) != null) && (members.size() >= 1)) {
                     // itemId 1419 == Blood Mark
                     if (player.destroyItemByItemId("ClanLvl", 1419, 5000, player.getTarget(), true)) {
                         player.setSp(player.getSp() - 1000000);
@@ -1958,7 +1964,7 @@ public class Clan implements IIdentifiable, INamable {
             }
             case 4: {
                 // Upgrade to 5
-                if ((player.getSp() >= 5000000) && (player.getInventory().getItemByItemId(1419) != null) && (_members.size() >= 1)) {
+                if ((player.getSp() >= 5000000) && (player.getInventory().getItemByItemId(1419) != null) && (members.size() >= 1)) {
                     // itemId 1419 == Blood Mark
                     if (player.destroyItemByItemId("ClanLvl", 1419, 10000, player.getTarget(), true)) {
                         player.setSp(player.getSp() - 5000000);
@@ -2333,7 +2339,7 @@ public class Clan implements IIdentifiable, INamable {
             }
         }
 
-        final int currentMaxOnline = (int) _members.values().stream().filter(member -> member.getOnlineTime() > Config.ALT_CLAN_MEMBERS_TIME_FOR_BONUS).count();
+        final int currentMaxOnline = (int) members.values().stream().filter(member -> member.getOnlineTime() > Config.ALT_CLAN_MEMBERS_TIME_FOR_BONUS).count();
         if (getMaxOnlineMembers() < currentMaxOnline) {
             getVariables().set("MAX_ONLINE_MEMBERS", currentMaxOnline);
         }
@@ -2389,7 +2395,7 @@ public class Clan implements IIdentifiable, INamable {
         getVariables().set("PREVIOUS_HUNTING_POINTS", getHuntingPoints());
 
         // Reset
-        _members.values().forEach(ClanMember::resetBonus);
+        members.values().forEach(ClanMember::resetBonus);
         getVariables().remove("HUNTING_POINTS");
 
         // force store

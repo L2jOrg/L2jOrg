@@ -273,14 +273,11 @@ public final class Baium extends AbstractNpcAI
                     npc.doCast(BAIUM_PRESENT.getSkill());
                 }
 
-                for (Player players : zone.getPlayersInside())
-                {
-                    if (players.isHero())
-                    {
-                        zone.broadcastPacket(new ExShowScreenMessage(NpcStringId.NOT_EVEN_THE_GODS_THEMSELVES_COULD_TOUCH_ME_BUT_YOU_S1_YOU_DARE_CHALLENGE_ME_IGNORANT_MORTAL, 2, 4000, players.getName()));
-                        break;
-                    }
-                }
+                zone.forAnyCreature(creature ->
+                    zone.broadcastPacket(new ExShowScreenMessage(NpcStringId.NOT_EVEN_THE_GODS_THEMSELVES_COULD_TOUCH_ME_BUT_YOU_S1_YOU_DARE_CHALLENGE_ME_IGNORANT_MORTAL, 2, 4000, creature.getName())),
+                    creature -> isPlayer(creature) && ((Player)creature).isHero()
+                );
+
                 startQuestTimer("SPAWN_ARCHANGEL", 8000, npc, null);
                 break;
             }
@@ -390,22 +387,15 @@ public final class Baium extends AbstractNpcAI
                 addSpawn(BAIUM_STONE, BAIUM_LOC, false, 0);
                 break;
             }
-            case "CLEAR_ZONE":
-            {
-                for (Creature charInside : zone.getCreaturesInside())
-                {
-                    if (charInside != null)
-                    {
-                        if (isNpc(charInside))
-                        {
-                            charInside.deleteMe();
-                        }
-                        else if (isPlayer(charInside))
-                        {
-                            notifyEvent("teleportOut", null, (Player) charInside);
-                        }
+            case "CLEAR_ZONE": {
+
+                zone.forEachCreature(creature -> {
+                    if(isNpc(creature)) {
+                        creature.deleteMe();
+                    } else if(isPlayer(creature)) {
+                        notifyEvent("teleportOut", null, (Player) creature);
                     }
-                }
+                });
                 break;
             }
             case "RESPAWN_BAIUM":
@@ -441,15 +431,9 @@ public final class Baium extends AbstractNpcAI
             }
             case "DESPAWN_MINIONS":
             {
-                if (getStatus() == IN_FIGHT)
-                {
-                    for (Creature charInside : zone.getCreaturesInside())
-                    {
-                        if (isNpc(charInside) && (charInside.getId() == ARCHANGEL))
-                        {
-                            charInside.deleteMe();
-                        }
-                    }
+                if (getStatus() == IN_FIGHT) {
+                    zone.forEachCreature(Creature::deleteMe, creature -> isNpc(creature) && creature.getId() == ARCHANGEL);
+
                     if (player != null)
                     {
                         player.sendMessage(getClass().getSimpleName() + ": All archangels has been deleted!");

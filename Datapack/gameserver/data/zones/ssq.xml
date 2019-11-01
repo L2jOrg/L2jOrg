@@ -2,328 +2,408 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org zones.xsd">
     <!-- SSQ Main Event -->
     <!-- Oracle of Dusk (No Restart Zones) -->
-    <zone name="ssq_no_res_1720_01" type="org.l2j.gameserver.world.zone.type.NoRestartZone" form="Polygon" minZ="-5200" maxZ="-5000">
+    <zone name="ssq_no_res_1720_01" type="org.l2j.gameserver.world.zone.type.NoRestartZone">
+        <polygon min-z="-5200" max-z="-5000">
+            <point x="-79735" y="85612"/>
+            <point x="-78957" y="85605"/>
+            <point x="-78957" y="85690"/>
+            <point x="-79735" y="85700"/>
+        </polygon>
         <property name="restartTime" value="0"/>
-        <point x="-79735" y="85612"/>
-        <point x="-78957" y="85605"/>
-        <point x="-78957" y="85690"/>
-        <point x="-79735" y="85700"/>
     </zone>
-    <zone name="ssq_no_res_1720_02" type="org.l2j.gameserver.world.zone.type.NoRestartZone" form="Polygon" minZ="-5200" maxZ="-5000">
+    <zone name="ssq_no_res_1720_02" type="org.l2j.gameserver.world.zone.type.NoRestartZone">
+        <polygon min-z="-5200" max-z="-5000">
+            <point x="-80952" y="85605"/>
+            <point x="-80139" y="85597"/>
+            <point x="-80139" y="85696"/>
+            <point x="-80952" y="85690"/>
+        </polygon>
         <property name="restartTime" value="0"/>
-        <point x="-80952" y="85605"/>
-        <point x="-80139" y="85597"/>
-        <point x="-80139" y="85696"/>
-        <point x="-80952" y="85690"/>
     </zone>
-    <zone name="ssq_no_res_1720_03" type="org.l2j.gameserver.world.zone.type.NoRestartZone" form="Polygon" minZ="-5192" maxZ="-4992">
+    <zone name="ssq_no_res_1720_03" type="org.l2j.gameserver.world.zone.type.NoRestartZone">
+        <polygon min-z="-5192" max-z="-4992">
+            <point x="-80962" y="83695"/>
+            <point x="-78946" y="83691"/>
+            <point x="-78959" y="85626"/>
+            <point x="-80947" y="85625"/>
+        </polygon>
         <property name="restartTime" value="0"/>
-        <point x="-80962" y="83695"/>
-        <point x="-78946" y="83691"/>
-        <point x="-78959" y="85626"/>
-        <point x="-80947" y="85625"/>
     </zone>
-    <zone name="ssq_no_res_1720_04" type="org.l2j.gameserver.world.zone.type.NoRestartZone" form="Polygon" minZ="-5196" maxZ="-4996">
+    <zone name="ssq_no_res_1720_04" type="org.l2j.gameserver.world.zone.type.NoRestartZone">
+        <polygon min-z="-5196" max-z="-4996">
+            <point x="-81199" y="87363"/>
+            <point x="-80386" y="87358"/>
+            <point x="-80386" y="87449"/>
+            <point x="-81203" y="87454"/>
+        </polygon>
         <property name="restartTime" value="0"/>
-        <point x="-81199" y="87363"/>
-        <point x="-80386" y="87358"/>
-        <point x="-80386" y="87449"/>
-        <point x="-81203" y="87454"/>
     </zone>
-    <zone name="ssq_no_res_1720_05" type="org.l2j.gameserver.world.zone.type.NoRestartZone" form="Polygon" minZ="-5196" maxZ="-4996">
+    <zone name="ssq_no_res_1720_05" type="org.l2j.gameserver.world.zone.type.NoRestartZone">
+        <polygon min-z="-5196" max-z="-4996">
+            <point x="-79990" y="87361"/>
+            <point x="-79212" y="87360"/>
+            <point x="-79212" y="87460"/>
+            <point x="-79989" y="87446"/>
+        </polygon>
         <property name="restartTime" value="0"/>
-        <point x="-79990" y="87361"/>
-        <point x="-79212" y="87360"/>
-        <point x="-79212" y="87460"/>
-        <point x="-79989" y="87446"/>
     </zone>
-    <zone name="ssq_no_res_1720_06" type="org.l2j.gameserver.world.zone.type.NoRestartZone" form="Polygon" minZ="-5200" maxZ="-5000">
+    <zone name="ssq_no_res_1720_06" type="org.l2j.gameserver.world.zone.type.NoRestartZone">
+        <polygon min-z="-5200" max-z="-5000">
+            <point x="-81205" y="87433"/>
+            <point x="-79212" y="87432"/>
+            <point x="-79208" y="89361"/>
+            <point x="-81207" y="89361"/>
+        </polygon>
         <property name="restartTime" value="0"/>
-        <point x="-81205" y="87433"/>
-        <point x="-79212" y="87432"/>
-        <point x="-79208" y="89361"/>
-        <point x="-81207" y="89361"/>
     </zone>
-    <zone name="ssq_no_res_1720_07" type="org.l2j.gameserver.world.zone.type.NoRestartZone" form="Polygon" minZ="-5200" maxZ="-5000">
+    <zone name="ssq_no_res_1720_07" type="org.l2j.gameserver.world.zone.type.NoRestartZone">
+        <polygon min-z="-5200" max-z="-5000">
+            <point x="-78197" y="87968"/>
+            <point x="-77373" y="87961"/>
+            <point x="-77365" y="88060"/>
+            <point x="-78197" y="88060"/>
+        </polygon>
         <property name="restartTime" value="0"/>
-        <point x="-78197" y="87968"/>
-        <point x="-77373" y="87961"/>
-        <point x="-77365" y="88060"/>
-        <point x="-78197" y="88060"/>
     </zone>
-    <zone name="ssq_no_res_1720_08" type="org.l2j.gameserver.world.zone.type.NoRestartZone" form="Polygon" minZ="-5200" maxZ="-5000">
+    <zone name="ssq_no_res_1720_08" type="org.l2j.gameserver.world.zone.type.NoRestartZone">
+        <polygon min-z="-5200" max-z="-5000">
+            <point x="-77025" y="87959"/>
+            <point x="-76209" y="87969"/>
+            <point x="-76202" y="88069"/>
+            <point x="-77026" y="88061"/>
+        </polygon>
         <property name="restartTime" value="0"/>
-        <point x="-77025" y="87959"/>
-        <point x="-76209" y="87969"/>
-        <point x="-76202" y="88069"/>
-        <point x="-77026" y="88061"/>
     </zone>
-    <zone name="ssq_no_res_1720_09" type="org.l2j.gameserver.world.zone.type.NoRestartZone" form="Polygon" minZ="-5196" maxZ="-4996">
+    <zone name="ssq_no_res_1720_09" type="org.l2j.gameserver.world.zone.type.NoRestartZone">
+        <polygon min-z="-5196" max-z="-4996">
+            <point x="-78196" y="88060"/>
+            <point x="-76200" y="88068"/>
+            <point x="-76192" y="89970"/>
+            <point x="-78196" y="89970"/>
+        </polygon>
         <property name="restartTime" value="0"/>
-        <point x="-78196" y="88060"/>
-        <point x="-76200" y="88068"/>
-        <point x="-76192" y="89970"/>
-        <point x="-78196" y="89970"/>
     </zone>
-    <zone name="ssq_no_res_1720_10" type="org.l2j.gameserver.world.zone.type.NoRestartZone" form="Polygon" minZ="-5204" maxZ="-5004">
+    <zone name="ssq_no_res_1720_10" type="org.l2j.gameserver.world.zone.type.NoRestartZone">
+        <polygon min-z="-5204" max-z="-5004">
+            <point x="-76797" y="86142"/>
+            <point x="-75947" y="86147"/>
+            <point x="-75945" y="86304"/>
+            <point x="-76794" y="86298"/>
+        </polygon>
         <property name="restartTime" value="0"/>
-        <point x="-76797" y="86142"/>
-        <point x="-75947" y="86147"/>
-        <point x="-75945" y="86304"/>
-        <point x="-76794" y="86298"/>
     </zone>
-    <zone name="ssq_no_res_1720_11" type="org.l2j.gameserver.world.zone.type.NoRestartZone" form="Polygon" minZ="-5196" maxZ="-4996">
+    <zone name="ssq_no_res_1720_11" type="org.l2j.gameserver.world.zone.type.NoRestartZone">
+        <polygon min-z="-5196" max-z="-4996">
+            <point x="-77944" y="86148"/>
+            <point x="-77189" y="86148"/>
+            <point x="-77194" y="86291"/>
+            <point x="-77942" y="86295"/>
+        </polygon>
         <property name="restartTime" value="0"/>
-        <point x="-77944" y="86148"/>
-        <point x="-77189" y="86148"/>
-        <point x="-77194" y="86291"/>
-        <point x="-77942" y="86295"/>
     </zone>
-    <zone name="ssq_no_res_1720_12" type="org.l2j.gameserver.world.zone.type.NoRestartZone" form="Polygon" minZ="-5196" maxZ="-4996">
+    <zone name="ssq_no_res_1720_12" type="org.l2j.gameserver.world.zone.type.NoRestartZone">
+        <polygon min-z="-5196" max-z="-4996">
+            <point x="-77949" y="84300"/>
+            <point x="-75940" y="84300"/>
+            <point x="-75943" y="86185"/>
+            <point x="-77939" y="86187"/>
+        </polygon>
         <property name="restartTime" value="0"/>
-        <point x="-77949" y="84300"/>
-        <point x="-75940" y="84300"/>
-        <point x="-75943" y="86185"/>
-        <point x="-77939" y="86187"/>
     </zone>
-    <zone name="ssq_no_res_1720_13" type="org.l2j.gameserver.world.zone.type.NoRestartZone" form="Polygon" minZ="-5200" maxZ="-5000">
+    <zone name="ssq_no_res_1720_13" type="org.l2j.gameserver.world.zone.type.NoRestartZone">
+        <polygon min-z="-5200" max-z="-5000">
+            <point x="-75870" y="87311"/>
+            <point x="-75738" y="87309"/>
+            <point x="-75738" y="88130"/>
+            <point x="-75870" y="88125"/>
+        </polygon>
         <property name="restartTime" value="0"/>
-        <point x="-75870" y="87311"/>
-        <point x="-75738" y="87309"/>
-        <point x="-75738" y="88130"/>
-        <point x="-75870" y="88125"/>
     </zone>
-    <zone name="ssq_no_res_1720_14" type="org.l2j.gameserver.world.zone.type.NoRestartZone" form="Polygon" minZ="-5200" maxZ="-5000">
+    <zone name="ssq_no_res_1720_14" type="org.l2j.gameserver.world.zone.type.NoRestartZone">
+        <polygon min-z="-5200" max-z="-5000">
+            <point x="-75865" y="86137"/>
+            <point x="-75747" y="86134"/>
+            <point x="-75740" y="86958"/>
+            <point x="-75865" y="86963"/>
+        </polygon>
         <property name="restartTime" value="0"/>
-        <point x="-75865" y="86137"/>
-        <point x="-75747" y="86134"/>
-        <point x="-75740" y="86958"/>
-        <point x="-75865" y="86963"/>
     </zone>
-    <zone name="ssq_no_res_1720_15" type="org.l2j.gameserver.world.zone.type.NoRestartZone" form="Polygon" minZ="-5200" maxZ="-5000">
+    <zone name="ssq_no_res_1720_15" type="org.l2j.gameserver.world.zone.type.NoRestartZone">
+        <polygon min-z="-5200" max-z="-5000">
+            <point x="-75758" y="86126"/>
+            <point x="-73857" y="86139"/>
+            <point x="-73855" y="88140"/>
+            <point x="-75769" y="88133"/>
+        </polygon>
         <property name="restartTime" value="0"/>
-        <point x="-75758" y="86126"/>
-        <point x="-73857" y="86139"/>
-        <point x="-73855" y="88140"/>
-        <point x="-75769" y="88133"/>
     </zone>
     <!-- Oracle of Dawn (No Restart Zones) -->
-    <zone name="ssq_no_res_1721_01" type="org.l2j.gameserver.world.zone.type.NoRestartZone" form="Polygon" minZ="-4948" maxZ="-4748">
+    <zone name="ssq_no_res_1721_01" type="org.l2j.gameserver.world.zone.type.NoRestartZone">
+        <polygon min-z="-4948" max-z="-4748">
+            <point x="-78713" y="110409"/>
+            <point x="-77923" y="110423"/>
+            <point x="-77923" y="110522"/>
+            <point x="-78708" y="110515"/>
+        </polygon>
         <property name="restartTime" value="0"/>
-        <point x="-78713" y="110409"/>
-        <point x="-77923" y="110423"/>
-        <point x="-77923" y="110522"/>
-        <point x="-78708" y="110515"/>
     </zone>
-    <zone name="ssq_no_res_1721_02" type="org.l2j.gameserver.world.zone.type.NoRestartZone" form="Polygon" minZ="-4940" maxZ="-4740">
+    <zone name="ssq_no_res_1721_02" type="org.l2j.gameserver.world.zone.type.NoRestartZone">
+        <polygon min-z="-4940" max-z="-4740">
+            <point x="-79923" y="110427"/>
+            <point x="-79109" y="110432"/>
+            <point x="-79105" y="110524"/>
+            <point x="-79923" y="110528"/>
+        </polygon>
         <property name="restartTime" value="0"/>
-        <point x="-79923" y="110427"/>
-        <point x="-79109" y="110432"/>
-        <point x="-79105" y="110524"/>
-        <point x="-79923" y="110528"/>
     </zone>
-    <zone name="ssq_no_res_1721_03" type="org.l2j.gameserver.world.zone.type.NoRestartZone" form="Polygon" minZ="-4944" maxZ="-4744">
+    <zone name="ssq_no_res_1721_03" type="org.l2j.gameserver.world.zone.type.NoRestartZone">
+        <polygon min-z="-4944" max-z="-4744">
+            <point x="-79931" y="108523"/>
+            <point x="-77928" y="108523"/>
+            <point x="-77932" y="110445"/>
+            <point x="-79925" y="110453"/>
+        </polygon>
         <property name="restartTime" value="0"/>
-        <point x="-79931" y="108523"/>
-        <point x="-77928" y="108523"/>
-        <point x="-77932" y="110445"/>
-        <point x="-79925" y="110453"/>
     </zone>
-    <zone name="ssq_no_res_1721_04" type="org.l2j.gameserver.world.zone.type.NoRestartZone" form="Polygon" minZ="-4940" maxZ="-4740">
+    <zone name="ssq_no_res_1721_04" type="org.l2j.gameserver.world.zone.type.NoRestartZone">
+        <polygon min-z="-4940" max-z="-4740">
+            <point x="-75761" y="111051"/>
+            <point x="-74921" y="111033"/>
+            <point x="-74921" y="111142"/>
+            <point x="-75757" y="111151"/>
+        </polygon>
         <property name="restartTime" value="0"/>
-        <point x="-75761" y="111051"/>
-        <point x="-74921" y="111033"/>
-        <point x="-74921" y="111142"/>
-        <point x="-75757" y="111151"/>
     </zone>
-    <zone name="ssq_no_res_1721_05" type="org.l2j.gameserver.world.zone.type.NoRestartZone" form="Polygon" minZ="-4940" maxZ="-4740">
+    <zone name="ssq_no_res_1721_05" type="org.l2j.gameserver.world.zone.type.NoRestartZone">
+        <polygon min-z="-4940" max-z="-4740">
+            <point x="-76920" y="111022"/>
+            <point x="-76089" y="111022"/>
+            <point x="-76085" y="111105"/>
+            <point x="-76920" y="111097"/>
+        </polygon>
         <property name="restartTime" value="0"/>
-        <point x="-76920" y="111022"/>
-        <point x="-76089" y="111022"/>
-        <point x="-76085" y="111105"/>
-        <point x="-76920" y="111097"/>
     </zone>
-    <zone name="ssq_no_res_1721_06" type="org.l2j.gameserver.world.zone.type.NoRestartZone" form="Polygon" minZ="-4932" maxZ="-4732">
+    <zone name="ssq_no_res_1721_06" type="org.l2j.gameserver.world.zone.type.NoRestartZone">
+        <polygon min-z="-4932" max-z="-4732">
+            <point x="-76920" y="109134"/>
+            <point x="-74928" y="109134"/>
+            <point x="-74920" y="111099"/>
+            <point x="-76920" y="111087"/>
+        </polygon>
         <property name="restartTime" value="0"/>
-        <point x="-76920" y="109134"/>
-        <point x="-74928" y="109134"/>
-        <point x="-74920" y="111099"/>
-        <point x="-76920" y="111087"/>
     </zone>
-    <zone name="ssq_no_res_1721_07" type="org.l2j.gameserver.world.zone.type.NoRestartZone" form="Polygon" minZ="-4944" maxZ="-4744">
+    <zone name="ssq_no_res_1721_07" type="org.l2j.gameserver.world.zone.type.NoRestartZone">
+        <polygon min-z="-4944" max-z="-4744">
+            <point x="-77176" y="112795"/>
+            <point x="-76350" y="112795"/>
+            <point x="-76344" y="112897"/>
+            <point x="-77176" y="112903"/>
+        </polygon>
         <property name="restartTime" value="0"/>
-        <point x="-77176" y="112795"/>
-        <point x="-76350" y="112795"/>
-        <point x="-76344" y="112897"/>
-        <point x="-77176" y="112903"/>
     </zone>
-    <zone name="ssq_no_res_1721_08" type="org.l2j.gameserver.world.zone.type.NoRestartZone" form="Polygon" minZ="-4940" maxZ="-4740">
+    <zone name="ssq_no_res_1721_08" type="org.l2j.gameserver.world.zone.type.NoRestartZone">
+        <polygon min-z="-4940" max-z="-4740">
+            <point x="-76002" y="112810"/>
+            <point x="-75182" y="112806"/>
+            <point x="-75176" y="112904"/>
+            <point x="-76002" y="112898"/>
+        </polygon>
         <property name="restartTime" value="0"/>
-        <point x="-76002" y="112810"/>
-        <point x="-75182" y="112806"/>
-        <point x="-75176" y="112904"/>
-        <point x="-76002" y="112898"/>
     </zone>
-    <zone name="ssq_no_res_1721_09" type="org.l2j.gameserver.world.zone.type.NoRestartZone" form="Polygon" minZ="-4944" maxZ="-4744">
+    <zone name="ssq_no_res_1721_09" type="org.l2j.gameserver.world.zone.type.NoRestartZone">
+        <polygon min-z="-4944" max-z="-4744">
+            <point x="-77174" y="112902"/>
+            <point x="-75172" y="112902"/>
+            <point x="-75167" y="114798"/>
+            <point x="-77173" y="114806"/>
+        </polygon>
         <property name="restartTime" value="0"/>
-        <point x="-77174" y="112902"/>
-        <point x="-75172" y="112902"/>
-        <point x="-75167" y="114798"/>
-        <point x="-77173" y="114806"/>
     </zone>
-    <zone name="ssq_no_res_1721_10" type="org.l2j.gameserver.world.zone.type.NoRestartZone" form="Polygon" minZ="-4940" maxZ="-4740">
+    <zone name="ssq_no_res_1721_10" type="org.l2j.gameserver.world.zone.type.NoRestartZone">
+        <polygon min-z="-4940" max-z="-4740">
+            <point x="-80178" y="112233"/>
+            <point x="-79362" y="112250"/>
+            <point x="-79356" y="112294"/>
+            <point x="-80190" y="112301"/>
+        </polygon>
         <property name="restartTime" value="0"/>
-        <point x="-80178" y="112233"/>
-        <point x="-79362" y="112250"/>
-        <point x="-79356" y="112294"/>
-        <point x="-80190" y="112301"/>
     </zone>
-    <zone name="ssq_no_res_1721_11" type="org.l2j.gameserver.world.zone.type.NoRestartZone" form="Polygon" minZ="-4940" maxZ="-4740">
+    <zone name="ssq_no_res_1721_11" type="org.l2j.gameserver.world.zone.type.NoRestartZone">
+        <polygon min-z="-4940" max-z="-4740">
+            <point x="-78861" y="112220"/>
+            <point x="-78196" y="112201"/>
+            <point x="-78178" y="112294"/>
+            <point x="-78994" y="112294"/>
+        </polygon>
         <property name="restartTime" value="0"/>
-        <point x="-78861" y="112220"/>
-        <point x="-78196" y="112201"/>
-        <point x="-78178" y="112294"/>
-        <point x="-78994" y="112294"/>
     </zone>
-    <zone name="ssq_no_res_1721_12" type="org.l2j.gameserver.world.zone.type.NoRestartZone" form="Polygon" minZ="-4940" maxZ="-4740">
+    <zone name="ssq_no_res_1721_12" type="org.l2j.gameserver.world.zone.type.NoRestartZone">
+        <polygon min-z="-4940" max-z="-4740">
+            <point x="-80184" y="112276"/>
+            <point x="-78188" y="112262"/>
+            <point x="-78176" y="114188"/>
+            <point x="-80190" y="114196"/>
+        </polygon>
         <property name="restartTime" value="0"/>
-        <point x="-80184" y="112276"/>
-        <point x="-78188" y="112262"/>
-        <point x="-78176" y="114188"/>
-        <point x="-80190" y="114196"/>
     </zone>
-    <zone name="ssq_no_res_1721_13" type="org.l2j.gameserver.world.zone.type.NoRestartZone" form="Polygon" minZ="-4940" maxZ="-4740">
+    <zone name="ssq_no_res_1721_13" type="org.l2j.gameserver.world.zone.type.NoRestartZone">
+        <polygon min-z="-4940" max-z="-4740">
+            <point x="-74840" y="112152"/>
+            <point x="-74704" y="112157"/>
+            <point x="-74707" y="112966"/>
+            <point x="-74840" y="112966"/>
+        </polygon>
         <property name="restartTime" value="0"/>
-        <point x="-74840" y="112152"/>
-        <point x="-74704" y="112157"/>
-        <point x="-74707" y="112966"/>
-        <point x="-74840" y="112966"/>
     </zone>
-    <zone name="ssq_no_res_1721_14" type="org.l2j.gameserver.world.zone.type.NoRestartZone" form="Polygon" minZ="-4948" maxZ="-4748">
+    <zone name="ssq_no_res_1721_14" type="org.l2j.gameserver.world.zone.type.NoRestartZone">
+        <polygon min-z="-4948" max-z="-4748">
+            <point x="-74840" y="110962"/>
+            <point x="-74737" y="110962"/>
+            <point x="-74741" y="111793"/>
+            <point x="-74840" y="111796"/>
+        </polygon>
         <property name="restartTime" value="0"/>
-        <point x="-74840" y="110962"/>
-        <point x="-74737" y="110962"/>
-        <point x="-74741" y="111793"/>
-        <point x="-74840" y="111796"/>
     </zone>
-    <zone name="ssq_no_res_1721_15" type="org.l2j.gameserver.world.zone.type.NoRestartZone" form="Polygon" minZ="-4936" maxZ="-4736">
+    <zone name="ssq_no_res_1721_15" type="org.l2j.gameserver.world.zone.type.NoRestartZone">
+        <polygon min-z="-4936" max-z="-4736">
+            <point x="-74737" y="110969"/>
+            <point x="-72838" y="110964"/>
+            <point x="-72830" y="112974"/>
+            <point x="-74740" y="112965"/>
+        </polygon>
         <property name="restartTime" value="0"/>
-        <point x="-74737" y="110969"/>
-        <point x="-72838" y="110964"/>
-        <point x="-72830" y="112974"/>
-        <point x="-74740" y="112965"/>
     </zone>
     <!-- Oracle of Dusk (Mp Regen Zones) -->
-    <zone name="ssq_main_event_17_20_01" type="org.l2j.gameserver.world.zone.type.MotherTreeZone" form="Polygon" minZ="-5168" maxZ="-4968">
+    <zone name="ssq_main_event_17_20_01" type="org.l2j.gameserver.world.zone.type.MotherTreeZone">
+        <polygon min-z="-5168" max-z="-4968">
+            <point x="-79956" y="84556"/>
+            <point x="-79832" y="84620"/>
+            <point x="-79824" y="84772"/>
+            <point x="-79956" y="84844"/>
+            <point x="-80080" y="84772"/>
+            <point x="-80076" y="84620"/>
+        </polygon>
         <property name="MpRegenBonus" value="2"/>
         <property name="enterMsgId" value="1054"/>
         <property name="leaveMsgId" value="1055"/>
-        <point x="-79956" y="84556"/>
-        <point x="-79832" y="84620"/>
-        <point x="-79824" y="84772"/>
-        <point x="-79956" y="84844"/>
-        <point x="-80080" y="84772"/>
-        <point x="-80076" y="84620"/>
     </zone>
-    <zone name="ssq_main_event_17_20_04" type="org.l2j.gameserver.world.zone.type.MotherTreeZone" form="Polygon" minZ="-5164" maxZ="-4964">
+    <zone name="ssq_main_event_17_20_04" type="org.l2j.gameserver.world.zone.type.MotherTreeZone">
+        <polygon min-z="-5164" max-z="-4964">
+            <point x="-76936" y="85164"/>
+            <point x="-76820" y="85232"/>
+            <point x="-76816" y="85380"/>
+            <point x="-76948" y="85444"/>
+            <point x="-77068" y="85376"/>
+            <point x="-77068" y="85236"/>
+        </polygon>
         <property name="MpRegenBonus" value="2"/>
         <property name="enterMsgId" value="1054"/>
         <property name="leaveMsgId" value="1055"/>
-        <point x="-76936" y="85164"/>
-        <point x="-76820" y="85232"/>
-        <point x="-76816" y="85380"/>
-        <point x="-76948" y="85444"/>
-        <point x="-77068" y="85376"/>
-        <point x="-77068" y="85236"/>
     </zone>
-    <zone name="ssq_main_event_17_20_05" type="org.l2j.gameserver.world.zone.type.MotherTreeZone" form="Polygon" minZ="-5164" maxZ="-4964">
+    <zone name="ssq_main_event_17_20_05" type="org.l2j.gameserver.world.zone.type.MotherTreeZone">
+        <polygon min-z="-5164" max-z="-4964">
+            <point x="-74924" y="87012"/>
+            <point x="-74784" y="87008"/>
+            <point x="-74712" y="87132"/>
+            <point x="-74780" y="87256"/>
+            <point x="-74924" y="87260"/>
+            <point x="-75000" y="87140"/>
+        </polygon>
         <property name="MpRegenBonus" value="3"/>
         <property name="enterMsgId" value="1054"/>
         <property name="leaveMsgId" value="1055"/>
-        <point x="-74924" y="87012"/>
-        <point x="-74784" y="87008"/>
-        <point x="-74712" y="87132"/>
-        <point x="-74780" y="87256"/>
-        <point x="-74924" y="87260"/>
-        <point x="-75000" y="87140"/>
     </zone>
-    <zone name="ssq_main_event_17_20_03" type="org.l2j.gameserver.world.zone.type.MotherTreeZone" form="Polygon" minZ="-5176" maxZ="-4976">
+    <zone name="ssq_main_event_17_20_03" type="org.l2j.gameserver.world.zone.type.MotherTreeZone">
+        <polygon min-z="-5176" max-z="-4976">
+            <point x="-77200" y="88820"/>
+            <point x="-77076" y="88896"/>
+            <point x="-77076" y="89040"/>
+            <point x="-77204" y="89108"/>
+            <point x="-77328" y="89044"/>
+            <point x="-77328" y="88892"/>
+        </polygon>
         <property name="MpRegenBonus" value="3"/>
         <property name="enterMsgId" value="1054"/>
         <property name="leaveMsgId" value="1055"/>
-        <point x="-77200" y="88820"/>
-        <point x="-77076" y="88896"/>
-        <point x="-77076" y="89040"/>
-        <point x="-77204" y="89108"/>
-        <point x="-77328" y="89044"/>
-        <point x="-77328" y="88892"/>
     </zone>
-    <zone name="ssq_main_event_17_20_02" type="org.l2j.gameserver.world.zone.type.MotherTreeZone" form="Polygon" minZ="-5172" maxZ="-4972">
+    <zone name="ssq_main_event_17_20_02" type="org.l2j.gameserver.world.zone.type.MotherTreeZone">
+        <polygon min-z="-5172" max-z="-4972">
+            <point x="-80204" y="88220"/>
+            <point x="-80080" y="88288"/>
+            <point x="-80080" y="88428"/>
+            <point x="-80208" y="88504"/>
+            <point x="-80336" y="88428"/>
+            <point x="-80328" y="88292"/>
+        </polygon>
         <property name="MpRegenBonus" value="4"/>
         <property name="enterMsgId" value="1054"/>
         <property name="leaveMsgId" value="1055"/>
-        <point x="-80204" y="88220"/>
-        <point x="-80080" y="88288"/>
-        <point x="-80080" y="88428"/>
-        <point x="-80208" y="88504"/>
-        <point x="-80336" y="88428"/>
-        <point x="-80328" y="88292"/>
     </zone>
     <!-- Oracle of Dawn (Mp Regen Zones) -->
-    <zone name="ssq_main_event_17_21_01" type="org.l2j.gameserver.world.zone.type.MotherTreeZone" form="Polygon" minZ="-4916" maxZ="-4716">
+    <zone name="ssq_main_event_17_21_01" type="org.l2j.gameserver.world.zone.type.MotherTreeZone">
+        <polygon min-z="-4916" max-z="-4716">
+            <point x="-78796" y="109452"/>
+            <point x="-78804" y="109608"/>
+            <point x="-78924" y="109672"/>
+            <point x="-79056" y="109600"/>
+            <point x="-79056" y="109456"/>
+            <point x="-78932" y="109380"/>
+        </polygon>
         <property name="MpRegenBonus" value="2"/>
         <property name="enterMsgId" value="1054"/>
         <property name="leaveMsgId" value="1055"/>
-        <point x="-78796" y="109452"/>
-        <point x="-78804" y="109608"/>
-        <point x="-78924" y="109672"/>
-        <point x="-79056" y="109600"/>
-        <point x="-79056" y="109456"/>
-        <point x="-78932" y="109380"/>
     </zone>
-    <zone name="ssq_main_event_17_21_02" type="org.l2j.gameserver.world.zone.type.MotherTreeZone" form="Polygon" minZ="-4908" maxZ="-4708">
+    <zone name="ssq_main_event_17_21_02" type="org.l2j.gameserver.world.zone.type.MotherTreeZone">
+        <polygon min-z="-4908" max-z="-4708">
+            <point x="-75920" y="109992"/>
+            <point x="-75792" y="110068"/>
+            <point x="-75792" y="110220"/>
+            <point x="-75912" y="110288"/>
+            <point x="-76048" y="110212"/>
+            <point x="-76044" y="110068"/>
+        </polygon>
         <property name="MpRegenBonus" value="2"/>
         <property name="enterMsgId" value="1054"/>
         <property name="leaveMsgId" value="1055"/>
-        <point x="-75920" y="109992"/>
-        <point x="-75792" y="110068"/>
-        <point x="-75792" y="110220"/>
-        <point x="-75912" y="110288"/>
-        <point x="-76048" y="110212"/>
-        <point x="-76044" y="110068"/>
     </zone>
-    <zone name="ssq_main_event_17_21_05" type="org.l2j.gameserver.world.zone.type.MotherTreeZone" form="Polygon" minZ="-4916" maxZ="-4716">
+    <zone name="ssq_main_event_17_21_05" type="org.l2j.gameserver.world.zone.type.MotherTreeZone">
+        <polygon min-z="-4916" max-z="-4716">
+            <point x="-73900" y="111844"/>
+            <point x="-73752" y="111840"/>
+            <point x="-73688" y="111976"/>
+            <point x="-73760" y="112092"/>
+            <point x="-73904" y="112092"/>
+            <point x="-73976" y="111968"/>
+        </polygon>
         <property name="MpRegenBonus" value="3"/>
         <property name="enterMsgId" value="1054"/>
         <property name="leaveMsgId" value="1055"/>
-        <point x="-73900" y="111844"/>
-        <point x="-73752" y="111840"/>
-        <point x="-73688" y="111976"/>
-        <point x="-73760" y="112092"/>
-        <point x="-73904" y="112092"/>
-        <point x="-73976" y="111968"/>
     </zone>
-    <zone name="ssq_main_event_17_21_03" type="org.l2j.gameserver.world.zone.type.MotherTreeZone" form="Polygon" minZ="-4912" maxZ="-4712">
+    <zone name="ssq_main_event_17_21_03" type="org.l2j.gameserver.world.zone.type.MotherTreeZone">
+        <polygon min-z="-4912" max-z="-4712">
+            <point x="-76172" y="113656"/>
+            <point x="-76052" y="113728"/>
+            <point x="-76048" y="113872"/>
+            <point x="-76172" y="113944"/>
+            <point x="-76308" y="113876"/>
+            <point x="-76304" y="113728"/>
+        </polygon>
         <property name="MpRegenBonus" value="3"/>
         <property name="enterMsgId" value="1054"/>
         <property name="leaveMsgId" value="1055"/>
-        <point x="-76172" y="113656"/>
-        <point x="-76052" y="113728"/>
-        <point x="-76048" y="113872"/>
-        <point x="-76172" y="113944"/>
-        <point x="-76308" y="113876"/>
-        <point x="-76304" y="113728"/>
     </zone>
-    <zone name="ssq_main_event_17_21_04" type="org.l2j.gameserver.world.zone.type.MotherTreeZone" form="Polygon" minZ="-4908" maxZ="-4708">
+    <zone name="ssq_main_event_17_21_04" type="org.l2j.gameserver.world.zone.type.MotherTreeZone">
+        <polygon min-z="-4908" max-z="-4708">
+            <point x="-79184" y="113040"/>
+            <point x="-79060" y="113116"/>
+            <point x="-79052" y="113268"/>
+            <point x="-79184" y="113336"/>
+            <point x="-79304" y="113260"/>
+            <point x="-79304" y="113116"/>
+        </polygon>
         <property name="MpRegenBonus" value="4"/>
         <property name="enterMsgId" value="1054"/>
         <property name="leaveMsgId" value="1055"/>
-        <point x="-79184" y="113040"/>
-        <point x="-79060" y="113116"/>
-        <point x="-79052" y="113268"/>
-        <point x="-79184" y="113336"/>
-        <point x="-79304" y="113260"/>
-        <point x="-79304" y="113116"/>
     </zone>
     <!-- Oracle of Dusk (SSQ Zones) -->
     <!-- TODO: Require Support -->
@@ -659,47 +739,59 @@
     <!-- node X="172174" Y="-75213" / -->
     <!-- /zone -->
     <!-- Oracle of Dusk (Peace Zones) -->
-    <zone name="ssq_peace_1720_01" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-5208" maxZ="-5008">
+    <zone name="ssq_peace_1720_01" type="org.l2j.gameserver.world.zone.type.PeaceZone">
+        <polygon min-z="-5208" max-z="-5008">
+            <point x="-78118" y="86296"/>
+            <point x="-75860" y="86294"/>
+            <point x="-75853" y="87965"/>
+            <point x="-78156" y="87967"/>
+        </polygon>
         <property name="allowStore" value="false"/>
-        <point x="-78118" y="86296"/>
-        <point x="-75860" y="86294"/>
-        <point x="-75853" y="87965"/>
-        <point x="-78156" y="87967"/>
     </zone>
-    <zone name="ssq_peace_1720_02" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-5200" maxZ="-5000">
+    <zone name="ssq_peace_1720_02" type="org.l2j.gameserver.world.zone.type.PeaceZone">
+        <polygon min-z="-5200" max-z="-5000">
+            <point x="-81169" y="85693"/>
+            <point x="-78118" y="85690"/>
+            <point x="-78134" y="87364"/>
+            <point x="-81187" y="87364"/>
+        </polygon>
         <property name="allowStore" value="false"/>
-        <point x="-81169" y="85693"/>
-        <point x="-78118" y="85690"/>
-        <point x="-78134" y="87364"/>
-        <point x="-81187" y="87364"/>
     </zone>
-    <zone name="ssq_peace_1720_03" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-5200" maxZ="-5000">
+    <zone name="ssq_peace_1720_03" type="org.l2j.gameserver.world.zone.type.PeaceZone">
+        <polygon min-z="-5200" max-z="-5000">
+            <point x="-81549" y="86361"/>
+            <point x="-80995" y="86367"/>
+            <point x="-80995" y="86688"/>
+            <point x="-81549" y="86688"/>
+        </polygon>
         <property name="allowStore" value="false"/>
-        <point x="-81549" y="86361"/>
-        <point x="-80995" y="86367"/>
-        <point x="-80995" y="86688"/>
-        <point x="-81549" y="86688"/>
     </zone>
     <!-- Oracle of Dawn (Peace Zones) -->
-    <zone name="ssq_peace_1721_01" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-4952" maxZ="-4752">
+    <zone name="ssq_peace_1721_01" type="org.l2j.gameserver.world.zone.type.PeaceZone">
+        <polygon min-z="-4952" max-z="-4752">
+            <point x="-77077" y="111140"/>
+            <point x="-74838" y="111140"/>
+            <point x="-74842" y="112806"/>
+            <point x="-77104" y="112779"/>
+        </polygon>
         <property name="allowStore" value="false"/>
-        <point x="-77077" y="111140"/>
-        <point x="-74838" y="111140"/>
-        <point x="-74842" y="112806"/>
-        <point x="-77104" y="112779"/>
     </zone>
-    <zone name="ssq_peace_1721_02" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-4956" maxZ="-4756">
+    <zone name="ssq_peace_1721_02" type="org.l2j.gameserver.world.zone.type.PeaceZone">
+        <polygon min-z="-4956" max-z="-4756">
+            <point x="-80075" y="110530"/>
+            <point x="-77066" y="110552"/>
+            <point x="-77092" y="112188"/>
+            <point x="-80089" y="112184"/>
+        </polygon>
         <property name="allowStore" value="false"/>
-        <point x="-80075" y="110530"/>
-        <point x="-77066" y="110552"/>
-        <point x="-77092" y="112188"/>
-        <point x="-80089" y="112184"/>
     </zone>
-    <zone name="ssq_peace_1721_03" type="org.l2j.gameserver.world.zone.type.PeaceZone" form="Polygon" minZ="-4944" maxZ="-4744">
+    <zone name="ssq_peace_1721_03" type="org.l2j.gameserver.world.zone.type.PeaceZone">
+        <polygon min-z="-4944" max-z="-4744">
+            <point x="-80536" y="111192"/>
+            <point x="-79984" y="111196"/>
+            <point x="-79984" y="111517"/>
+            <point x="-80532" y="111517"/>
+        </polygon>
         <property name="allowStore" value="false"/>
-        <point x="-80536" y="111192"/>
-        <point x="-79984" y="111196"/>
-        <point x="-79984" y="111517"/>
-        <point x="-80532" y="111517"/>
     </zone>
 </list>

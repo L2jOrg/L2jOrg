@@ -1,0 +1,517 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org zones.xsd">
+    <!-- Clan Hall Zones -->
+    <zone name="clanhall_gludio_monster_hall" type="org.l2j.gameserver.world.zone.type.ClanHallZone">
+        <polygon min-z="-3598" max-z="-2098">
+            <point x="-16342" y="123496"/>
+            <point x="-15748" y="123315"/>
+            <point x="-15645" y="123655"/>
+            <point x="-16234" y="123831"/>
+        </polygon>
+        <property name="clanHallId" value="22"/>
+    </zone>
+    <zone name="clanhall_gludio_onyx_hall" type="org.l2j.gameserver.world.zone.type.ClanHallZone">
+        <polygon min-z="-3777" max-z="-2277">
+            <point x="-15098" y="125352"/>
+            <point x="-14789" y="125352"/>
+            <point x="-14789" y="125816"/>
+            <point x="-15098" y="125816"/>
+        </polygon>
+        <property name="clanHallId" value="23"/>
+    </zone>
+    <zone name="clanhall_gludio_topaz_hall" type="org.l2j.gameserver.world.zone.type.ClanHallZone">
+        <polygon min-z="-3745" max-z="-2245">
+            <point x="-14028" y="125062"/>
+            <point x="-13695" y="125070"/>
+            <point x="-13695" y="125693"/>
+            <point x="-14108" y="125693"/>
+            <point x="-14108" y="125588"/>
+            <point x="-14028" y="125588"/>
+        </polygon>
+        <property name="clanHallId" value="24"/>
+    </zone>
+    <zone name="clanhall_gludio_ruby_hall" type="org.l2j.gameserver.world.zone.type.ClanHallZone">
+        <polygon min-z="-3809" max-z="-2309">
+            <point x="-12942" y="123872"/>
+            <point x="-12327" y="123872"/>
+            <point x="-12327" y="124231"/>
+            <point x="-12942" y="124231"/>
+        </polygon>
+        <property name="clanHallId" value="25"/>
+    </zone>
+    <zone name="clanhall_gludin_crystal_hall" type="org.l2j.gameserver.world.zone.type.ClanHallZone">
+        <polygon min-z="-4076" max-z="-2576">
+            <point x="-84691" y="151557"/>
+            <point x="-84261" y="151557"/>
+            <point x="-84261" y="151962"/>
+            <point x="-84071" y="151962"/>
+            <point x="-84071" y="151850"/>
+            <point x="-83945" y="151850"/>
+            <point x="-83945" y="151962"/>
+            <point x="-83819" y="151962"/>
+            <point x="-83819" y="152328"/>
+            <point x="-84691" y="152328"/>
+        </polygon>
+        <property name="clanHallId" value="26"/>
+    </zone>
+    <zone name="clanhall_gludin_onyx_hall" type="org.l2j.gameserver.world.zone.type.ClanHallZone">
+        <polygon min-z="-4012" max-z="-2512">
+            <point x="-84367" y="153086"/>
+            <point x="-83983" y="153086"/>
+            <point x="-83977" y="154046"/>
+            <point x="-84367" y="154054"/>
+            <point x="-84160" y="153086"/>
+            <point x="-83586" y="153085"/>
+            <point x="-83585" y="153564"/>
+            <point x="-84160" y="153561"/>
+        </polygon>
+        <property name="clanHallId" value="27"/>
+    </zone>
+    <zone name="clanhall_gludin_sapphire_hall" type="org.l2j.gameserver.world.zone.type.ClanHallZone">
+        <polygon min-z="-4044" max-z="-2544">
+            <point x="-84463" y="154941"/>
+            <point x="-83987" y="154941"/>
+            <point x="-83986" y="155688"/>
+            <point x="-84463" y="155685"/>
+            <point x="-79657" y="149419"/>
+            <point x="-79290" y="149424"/>
+            <point x="-79284" y="150296"/>
+            <point x="-79656" y="150298"/>
+        </polygon>
+        <property name="clanHallId" value="28"/>
+    </zone>
+    <zone name="clanhall_gludin_moonstone_hall" type="org.l2j.gameserver.world.zone.type.ClanHallZone">
+        <polygon min-z="-3948" max-z="-2448">
+            <point x="-80066" y="149420"/>
+            <point x="-79491" y="149419"/>
+            <point x="-79491" y="149859"/>
+            <point x="-80066" y="149857"/>
+        </polygon>
+        <property name="clanHallId" value="29"/>
+    </zone>
+    <zone name="clanhall_gludin_emerald_hall" type="org.l2j.gameserver.world.zone.type.ClanHallZone">
+        <polygon min-z="-3980" max-z="-2480">
+            <point x="-80067" y="151809"/>
+            <point x="-79493" y="151808"/>
+            <point x="-79493" y="152247"/>
+            <point x="-80067" y="152245"/>
+        </polygon>
+        <property name="clanHallId" value="30"/>
+    </zone>
+    <zone name="clanhall_dion_the_atramental_barracks" type="org.l2j.gameserver.world.zone.type.ClanHallZone">
+        <polygon min-z="-3365" max-z="-1865">
+            <point x="17597" y="144823"/>
+            <point x="17989" y="145089"/>
+            <point x="17828" y="145333"/>
+            <point x="17433" y="145067"/>
+        </polygon>
+        <property name="clanHallId" value="31"/>
+    </zone>
+    <zone name="clanhall_dion_scarlet_barracks" type="org.l2j.gameserver.world.zone.type.ClanHallZone">
+        <polygon min-z="-3333" max-z="-1833">
+            <point x="18849" y="143099"/>
+            <point x="18897" y="143562"/>
+            <point x="18615" y="143588"/>
+            <point x="18571" y="143128"/>
+        </polygon>
+        <property name="clanHallId" value="32"/>
+    </zone>
+    <zone name="clanhall_dion_viridian_barracks" type="org.l2j.gameserver.world.zone.type.ClanHallZone">
+        <polygon min-z="-3397" max-z="-1897">
+            <point x="19942" y="145996"/>
+            <point x="20414" y="145996"/>
+            <point x="20414" y="146292"/>
+            <point x="19942" y="146292"/>
+        </polygon>
+        <property name="clanHallId" value="33"/>
+    </zone>
+    <zone name="clanhall_aden_golden_chamber" type="org.l2j.gameserver.world.zone.type.ClanHallZone">
+        <polygon min-z="-2160" max-z="-1960">
+            <point x="148844" y="22709"/>
+            <point x="149424" y="22709"/>
+            <point x="149424" y="23569"/>
+            <point x="148844" y="23569"/>
+        </polygon>
+        <property name="clanHallId" value="36"/>
+    </zone>
+    <zone name="clanhall_aden_silver_chamber" type="org.l2j.gameserver.world.zone.type.ClanHallZone">
+        <polygon min-z="-2150" max-z="-1950">
+            <point x="150343" y="23193"/>
+            <point x="150943" y="23193"/>
+            <point x="150943" y="24113"/>
+            <point x="150343" y="24113"/>
+            <point x="150343" y="23693"/>
+            <point x="150305" y="23693"/>
+            <point x="150305" y="23618"/>
+            <point x="150343" y="23618"/>
+        </polygon>
+        <property name="clanHallId" value="37"/>
+    </zone>
+    <zone name="clanhall_aden_mithril_chamber" type="org.l2j.gameserver.world.zone.type.ClanHallZone">
+        <polygon min-z="-2150" max-z="-1950">
+            <point x="145362" y="24890"/>
+            <point x="145972" y="24890"/>
+            <point x="145972" y="25820"/>
+            <point x="145362" y="25820"/>
+        </polygon>
+        <property name="clanHallId" value="38"/>
+    </zone>
+    <zone name="clanhall_aden_silver_manor" type="org.l2j.gameserver.world.zone.type.ClanHallZone">
+        <polygon min-z="-2280" max-z="-2080">
+            <point x="150460" y="26108"/>
+            <point x="151036" y="26108"/>
+            <point x="151036" y="26972"/>
+            <point x="150460" y="26972"/>
+            <point x="150460" y="26585"/>
+            <point x="150450" y="26585"/>
+            <point x="150450" y="26505"/>
+            <point x="150460" y="26505"/>
+        </polygon>
+        <property name="clanHallId" value="39"/>
+    </zone>
+    <zone name="clanhall_aden_gold_manor" type="org.l2j.gameserver.world.zone.type.ClanHallZone">
+        <polygon min-z="-2290" max-z="-2090">
+            <point x="143701" y="26661"/>
+            <point x="144299" y="26661"/>
+            <point x="144299" y="27521"/>
+            <point x="143701" y="27521"/>
+        </polygon>
+        <property name="clanHallId" value="40"/>
+    </zone>
+    <zone name="clanhall_aden_bronze_chamber" type="org.l2j.gameserver.world.zone.type.ClanHallZone">
+        <polygon min-z="-2280" max-z="-2080">
+            <point x="143704" y="27734"/>
+            <point x="144324" y="27734"/>
+            <point x="144324" y="28155"/>
+            <point x="144360" y="28155"/>
+            <point x="144360" y="28245"/>
+            <point x="144324" y="28245"/>
+            <point x="144324" y="28670"/>
+            <point x="143704" y="28670"/>
+        </polygon>
+        <property name="clanHallId" value="41"/>
+    </zone>
+    <zone name="clanhall_giran_golden_chamber" type="org.l2j.gameserver.world.zone.type.ClanHallZone">
+        <polygon min-z="-3647" max-z="-3297">
+            <point x="78059" y="147906"/>
+            <point x="79122" y="147906"/>
+            <point x="79122" y="148296"/>
+            <point x="78620" y="148296"/>
+            <point x="78620" y="148316"/>
+            <point x="78524" y="148316"/>
+            <point x="78524" y="148296"/>
+            <point x="78059" y="148296"/>
+        </polygon>
+        <property name="clanHallId" value="42"/>
+    </zone>
+    <zone name="clanhall_giran_silver_chamber" type="org.l2j.gameserver.world.zone.type.ClanHallZone">
+        <polygon min-z="-3647" max-z="-3297">
+            <point x="81859" y="144802"/>
+            <point x="82254" y="144802"/>
+            <point x="82254" y="145870"/>
+            <point x="81859" y="145870"/>
+            <point x="81859" y="145355"/>
+            <point x="81833" y="145355"/>
+            <point x="81833" y="145274"/>
+            <point x="81859" y="145274"/>
+        </polygon>
+        <property name="clanHallId" value="43"/>
+    </zone>
+    <zone name="clanhall_giran_mithril_chamber " type="org.l2j.gameserver.world.zone.type.ClanHallZone">
+        <polygon min-z="-3540" max-z="-3190">
+            <point x="83195" y="144779"/>
+            <point x="83591" y="144779"/>
+            <point x="83591" y="145287"/>
+            <point x="83615" y="145287"/>
+            <point x="83615" y="145374"/>
+            <point x="83594" y="145374"/>
+            <point x="83591" y="145847"/>
+            <point x="83195" y="145847"/>
+        </polygon>
+        <property name="clanHallId" value="44"/>
+    </zone>
+    <zone name="clanhall_giran_bronze_chamber" type="org.l2j.gameserver.world.zone.type.ClanHallZone">
+        <polygon min-z="-3647" max-z="-3297">
+            <point x="80773" y="151053"/>
+            <point x="81169" y="151053"/>
+            <point x="81169" y="151560"/>
+            <point x="81185" y="151560"/>
+            <point x="81185" y="151653"/>
+            <point x="81169" y="151653"/>
+            <point x="81169" y="152121"/>
+            <point x="80773" y="152121"/>
+        </polygon>
+        <property name="clanHallId" value="45"/>
+    </zone>
+    <zone name="clanhall_giran_silver_manor" type="org.l2j.gameserver.world.zone.type.ClanHallZone">
+        <polygon min-z="-3647" max-z="-3297">
+            <point x="81903" y="151377"/>
+            <point x="82299" y="151377"/>
+            <point x="82299" y="152445"/>
+            <point x="81903" y="152445"/>
+            <point x="81903" y="151945"/>
+            <point x="81883" y="151945"/>
+            <point x="81883" y="151850"/>
+            <point x="81903" y="151850"/>
+        </polygon>
+        <property name="clanHallId" value="46"/>
+    </zone>
+    <zone name="clanhall_goddard_moonstone_hall" type="org.l2j.gameserver.world.zone.type.ClanHallZone">
+        <polygon min-z="-2828" max-z="-2528">
+            <point x="145660" y="-55829"/>
+            <point x="146459" y="-55730"/>
+            <point x="146402" y="-55280"/>
+            <point x="145605" y="-55378"/>
+        </polygon>
+        <property name="clanHallId" value="47"/>
+    </zone>
+    <zone name="clanhall_goddard_onyx_hall" type="org.l2j.gameserver.world.zone.type.ClanHallZone">
+        <polygon min-z="-2828" max-z="-2528">
+            <point x="146936" y="-57320"/>
+            <point x="147308" y="-56607"/>
+            <point x="146906" y="-56397"/>
+            <point x="146535" y="-57111"/>
+        </polygon>
+        <property name="clanHallId" value="48"/>
+    </zone>
+    <zone name="clanhall_goddard_emerald_hall" type="org.l2j.gameserver.world.zone.type.ClanHallZone">
+        <polygon min-z="-2828" max-z="-2528">
+            <point x="148487" y="-57327"/>
+            <point x="148887" y="-57113"/>
+            <point x="148508" y="-56405"/>
+            <point x="148108" y="-56618"/>
+        </polygon>
+        <property name="clanHallId" value="49"/>
+    </zone>
+    <zone name="clanhall_goddard_sapphire_hall" type="org.l2j.gameserver.world.zone.type.ClanHallZone">
+        <polygon min-z="-2828" max-z="-2528">
+            <point x="148962" y="-55739"/>
+            <point x="149759" y="-55838"/>
+            <point x="149815" y="-55388"/>
+            <point x="149018" y="-55289"/>
+        </polygon>
+        <property name="clanHallId" value="50"/>
+    </zone>
+    <zone name="clanhall_rune_mont_chamber" type="org.l2j.gameserver.world.zone.type.ClanHallZone">
+        <polygon min-z="850" max-z="1150">
+            <point x="37433" y="-51016"/>
+            <point x="38034" y="-51016"/>
+            <point x="38034" y="-50565"/>
+            <point x="37765" y="-50565"/>
+            <point x="37765" y="-50445"/>
+            <point x="37680" y="-50445"/>
+            <point x="37680" y="-50565"/>
+            <point x="37433" y="-50565"/>
+        </polygon>
+        <property name="clanHallId" value="51"/>
+    </zone>
+    <zone name="clanhall_rune_astaire_chamber" type="org.l2j.gameserver.world.zone.type.ClanHallZone">
+        <polygon min-z="850" max-z="1150">
+            <point x="38569" y="-50790"/>
+            <point x="39107" y="-50522"/>
+            <point x="38908" y="-50119"/>
+            <point x="38674" y="-50238"/>
+            <point x="38612" y="-50125"/>
+            <point x="38538" y="-50162"/>
+            <point x="38592" y="-50271"/>
+            <point x="38369" y="-50386"/>
+        </polygon>
+        <property name="clanHallId" value="52"/>
+    </zone>
+    <zone name="clanhall_rune_aria_chamber" type="org.l2j.gameserver.world.zone.type.ClanHallZone">
+        <polygon min-z="850" max-z="1150">
+            <point x="39123" y="-49827"/>
+            <point x="39513" y="-50048"/>
+            <point x="39808" y="-49526"/>
+            <point x="39414" y="-49304"/>
+            <point x="39286" y="-49533"/>
+            <point x="39172" y="-49472"/>
+            <point x="39136" y="-49546"/>
+            <point x="39246" y="-49605"/>
+        </polygon>
+        <property name="clanHallId" value="53"/>
+    </zone>
+    <zone name="clanhall_rune_yiana_chamber" type="org.l2j.gameserver.world.zone.type.ClanHallZone">
+        <polygon min-z="850" max-z="1150">
+            <point x="39394" y="-48636"/>
+            <point x="39846" y="-48636"/>
+            <point x="39845" y="-47837"/>
+            <point x="39394" y="-47837"/>
+            <point x="39394" y="-48198"/>
+            <point x="39347" y="-48198"/>
+            <point x="39348" y="-48290"/>
+            <point x="39394" y="-48290"/>
+        </polygon>
+        <property name="clanHallId" value="54"/>
+    </zone>
+    <zone name="clanhall_rune_roien_chamber" type="org.l2j.gameserver.world.zone.type.ClanHallZone">
+        <polygon min-z="850" max-z="1150">
+            <point x="39123" y="-46646"/>
+            <point x="39254" y="-46879"/>
+            <point x="39146" y="-46939"/>
+            <point x="39187" y="-47014"/>
+            <point x="39296" y="-46958"/>
+            <point x="39414" y="-47172"/>
+            <point x="39808" y="-46954"/>
+            <point x="39517" y="-46427"/>
+        </polygon>
+        <property name="clanHallId" value="55"/>
+        <!-- residence_territory -->
+    </zone>
+    <zone name="clanhall_rune_luna_chamber" type="org.l2j.gameserver.world.zone.type.ClanHallZone">
+        <polygon min-z="850" max-z="1150">
+            <point x="38371" y="-46086"/>
+            <point x="38577" y="-45688"/>
+            <point x="39111" y="-45960"/>
+            <point x="38906" y="-46362"/>
+            <point x="38688" y="-46252"/>
+            <point x="38631" y="-46361"/>
+            <point x="38554" y="-46324"/>
+            <point x="38610" y="-46214"/>
+        </polygon>
+        <property name="clanHallId" value="56"/>
+    </zone>
+    <zone name="clanhall_rune_traban_chamber" type="org.l2j.gameserver.world.zone.type.ClanHallZone">
+        <polygon min-z="850" max-z="1150">
+            <point x="37432" y="-45908"/>
+            <point x="37700" y="-45908"/>
+            <point x="37700" y="-46030"/>
+            <point x="37790" y="-46030"/>
+            <point x="37790" y="-45908"/>
+            <point x="38033" y="-45908"/>
+            <point x="38033" y="-45457"/>
+            <point x="37432" y="-45457"/>
+        </polygon>
+        <property name="clanHallId" value="57"/>
+    </zone>
+    <zone name="clanhall_schuttgart_eisen_hall" type="org.l2j.gameserver.world.zone.type.ClanHallZone">
+        <polygon min-z="-1380" max-z="-1130">
+            <point x="85259" y="-143315"/>
+            <point x="86057" y="-143416"/>
+            <point x="86108" y="-142966"/>
+            <point x="85311" y="-142865"/>
+        </polygon>
+        <property name="clanHallId" value="58"/>
+    </zone>
+    <zone name="clanhall_schuttgart_heavy_metal_hall" type="org.l2j.gameserver.world.zone.type.ClanHallZone">
+        <polygon min-z="-1380" max-z="-1130">
+            <point x="86184" y="-141594"/>
+            <point x="86582" y="-141377"/>
+            <point x="86964" y="-142085"/>
+            <point x="86563" y="-142300"/>
+        </polygon>
+        <property name="clanHallId" value="59"/>
+    </zone>
+    <zone name="clanhall_schuttgart_molten_ore_hall" type="org.l2j.gameserver.world.zone.type.ClanHallZone">
+        <polygon min-z="-1380" max-z="-1130">
+            <point x="87767" y="-142096"/>
+            <point x="88135" y="-141383"/>
+            <point x="88537" y="-141591"/>
+            <point x="88167" y="-142307"/>
+        </polygon>
+        <property name="clanHallId" value="60"/>
+    </zone>
+    <zone name="clanhall_schuttgart_titan_hall" type="org.l2j.gameserver.world.zone.type.ClanHallZone">
+        <polygon min-z="-1380" max-z="-1130">
+            <point x="88668" y="-143423"/>
+            <point x="89462" y="-143324"/>
+            <point x="89409" y="-142877"/>
+            <point x="88613" y="-142975"/>
+        </polygon>
+        <property name="clanHallId" value="61"/>
+    </zone>
+    <zone name="clanhall_outskirts_gludio_emerald_hall" type="org.l2j.gameserver.world.zone.type.ClanHallZone">
+        <polygon min-z="-3909" max-z="-3509">
+            <point x="-27574" y="122619"/>
+            <point x="-27153" y="122619"/>
+            <point x="-27152" y="122000"/>
+            <point x="-27475" y="122005"/>
+            <point x="-27479" y="122496"/>
+            <point x="-27574" y="122497"/>
+        </polygon>
+        <property name="clanHallId" value="65"/>
+    </zone>
+    <zone name="clanhall_outskirts_gludio_crystal_hall" type="org.l2j.gameserver.world.zone.type.ClanHallZone">
+        <polygon min-z="-3925" max-z="-3525">
+            <point x="-28358" y="121524"/>
+            <point x="-28358" y="121959"/>
+            <point x="-28647" y="121940"/>
+            <point x="-28646" y="121532"/>
+        </polygon>
+        <property name="clanHallId" value="66"/>
+    </zone>
+    <zone name="clanhall_outskirts_gludio_sapphire_hall" type="org.l2j.gameserver.world.zone.type.ClanHallZone">
+        <polygon min-z="-3913" max-z="-3513">
+            <point x="-27878" y="121068"/>
+            <point x="-27752" y="121070"/>
+            <point x="-27760" y="120675"/>
+            <point x="-28371" y="120647"/>
+            <point x="-28372" y="120973"/>
+            <point x="-27878" y="120977"/>
+        </polygon>
+        <property name="clanHallId" value="67"/>
+    </zone>
+    <zone name="clanhall_outskirts_gludio_aquamarine_hall" type="org.l2j.gameserver.world.zone.type.ClanHallZone">
+        <polygon min-z="-3913" max-z="-3513">
+            <point x="-27616" y="121886"/>
+            <point x="-27615" y="121450"/>
+            <point x="-27326" y="121470"/>
+            <point x="-27327" y="121867"/>
+        </polygon>
+        <property name="clanHallId" value="68"/>
+    </zone>
+    <zone name="clanhall_outskirts_dion_blue_barracks" type="org.l2j.gameserver.world.zone.type.ClanHallZone">
+        <polygon min-z="-3817" max-z="-3417">
+            <point x="16165" y="156055"/>
+            <point x="16165" y="155780"/>
+            <point x="16632" y="155780"/>
+            <point x="16632" y="156052"/>
+        </polygon>
+        <property name="clanHallId" value="69"/>
+    </zone>
+    <zone name="clanhall_outskirts_dion_brown_barracks" type="org.l2j.gameserver.world.zone.type.ClanHallZone">
+        <polygon min-z="-3816" max-z="-3416">
+            <point x="15203" y="156227"/>
+            <point x="15203" y="155953"/>
+            <point x="15670" y="155954"/>
+            <point x="15670" y="156227"/>
+        </polygon>
+        <property name="clanHallId" value="70"/>
+    </zone>
+    <zone name="clanhall_outskirts_dion_yellow_barracks" type="org.l2j.gameserver.world.zone.type.ClanHallZone">
+        <polygon min-z="-3816" max-z="-3416">
+            <point x="14343" y="155201"/>
+            <point x="14618" y="155201"/>
+            <point x="14618" y="155668"/>
+            <point x="14344" y="155668"/>
+        </polygon>
+        <property name="clanHallId" value="71"/>
+    </zone>
+    <zone name="clanhall_outskirts_dion_white_barracks" type="org.l2j.gameserver.world.zone.type.ClanHallZone">
+        <polygon min-z="-3697" max-z="-3297">
+            <point x="15667" y="154464"/>
+            <point x="15942" y="154465"/>
+            <point x="15942" y="154931"/>
+            <point x="15668" y="154931"/>
+        </polygon>
+        <property name="clanHallId" value="72"/>
+    </zone>
+    <zone name="clanhall_floran_black_barracks" type="org.l2j.gameserver.world.zone.type.ClanHallZone">
+        <polygon min-z="-3689" max-z="-3289">
+            <point x="17404" y="169510"/>
+            <point x="17404" y="169787"/>
+            <point x="16940" y="169787"/>
+            <point x="16940" y="169509"/>
+        </polygon>
+        <property name="clanHallId" value="73"/>
+    </zone>
+    <zone name="clanhall_floran_green_barracks" type="org.l2j.gameserver.world.zone.type.ClanHallZone">
+        <polygon min-z="-3688" max-z="-3288">
+            <point x="18200" y="170592"/>
+            <point x="18199" y="170868"/>
+            <point x="17736" y="170870"/>
+            <point x="17736" y="170592"/>
+        </polygon>
+        <property name="clanHallId" value="74"/>
+    </zone>
+</list>

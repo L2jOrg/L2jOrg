@@ -18,10 +18,11 @@ import org.l2j.gameserver.world.zone.form.ZonePolygonArea;
 import org.l2j.gameserver.world.zone.type.OlympiadStadiumZone;
 import org.l2j.gameserver.world.zone.type.RespawnZone;
 import org.l2j.gameserver.world.zone.type.SpawnTerritory;
-import org.l2j.gameserver.world.zone.type.ZoneRespawn;
+import org.l2j.gameserver.world.zone.type.SpawnZone;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
+import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
 import java.io.File;
@@ -67,10 +68,6 @@ public final class ZoneManager extends GameXmlReader {
         LOGGER.info("Zone Region Grid set up: {} by {}", regionsX, regionsY);
     }
 
-    public static void init() {
-        getInstance().load();
-    }
-
     @Override
     public final void load() {
         classZones.clear();
@@ -87,15 +84,11 @@ public final class ZoneManager extends GameXmlReader {
         return Configurator.getSettings(ServerSettings.class).dataPackDirectory().resolve("data/zones/zones.xsd");
     }
 
-    /**
-     * Reload.
-     */
     public void reload() {
         unload();
         load();
 
         World.getInstance().forEachCreature(creature -> creature.revalidateZone(true));
-
         SETTINGS.clear();
     }
 
@@ -146,27 +139,26 @@ public final class ZoneManager extends GameXmlReader {
         }
     }
 
-    private void addZone(Node zoneNode, Class<?> zoneClass, String file) throws NoSuchMethodException, InvalidZoneException, InstantiationException, IllegalAccessException, InvocationTargetException {
-        var attributes = zoneNode.getAttributes();
+    private void addZone(Node zoneNode, Class<?> zoneClass, String file) throws NoSuchMethodException, InstantiationException, IllegalAccessException, InvocationTargetException, InvalidZoneException {
         var constructor = zoneClass.asSubclass(Zone.class).getConstructor(int.class);
-        ZoneArea form = parseZoneForm(zoneNode);
-
+        var attributes = zoneNode.getAttributes();
         var zoneId = parseInteger(attributes, "id");
         if(isNull(zoneId)) {
             zoneId = lastDynamicId++;
         }
 
         var zone = constructor.newInstance(zoneId);
-        zone.setArea(form);
         zone.setName(parseString(attributes, "name"));
-
         parseZoneProperties(zoneNode, zone);
 
+        if(isNull(zone.getArea())) {
+            throw new InvalidZoneException("There is no defined area to Zone " + zone);
+        }
+
         if(nonNull(addZone(zoneId, zone))) {
-            LOGGER.warn("Zone ({}) from file: {} overrides previous definition.", zoneId, file);
+            LOGGER.warn("Zone ({}) from file: {} overrides previous definition.", zone, file);
         }
         registerIntoWorldRegion(zone);
-
     }
 
     private void registerIntoWorldRegion(Zone zone) {
@@ -188,26 +180,36 @@ public final class ZoneManager extends GameXmlReader {
         }
     }
 
-    private void parseZoneProperties(Node zoneNode, Zone zone) {
-        for (Node cd = zoneNode.getFirstChild(); cd != null; cd = cd.getNextSibling()) {
-            var attr = cd.getAttributes();
+    private void parseZoneProperties(Node zoneNode, Zone zone) throws InvalidZoneException {
+        for (Node node = zoneNode.getFirstChild(); node != null; node = node.getNextSibling()) {
+            var attr = node.getAttributes();
 
-            if ("property".equalsIgnoreCase(cd.getNodeName())) {
-                final String name = parseString(attr, "name");
-                final String value = parseString(attr, "value");
-
-                zone.setParameter(name, value);
-            } else if ("spawn".equalsIgnoreCase(cd.getNodeName()) && (zone instanceof ZoneRespawn)) {
-                final int spawnX = parseInteger(attr, "x");
-                final int spawnY = parseInteger(attr, "y");
-                final int spawnZ = parseInteger(attr, "z");
-                final String spawnType = parseString(attr, "type");
-                ((ZoneRespawn) zone).parseLoc(spawnX, spawnY, spawnZ, spawnType);
-            } else if ("respawn".equalsIgnoreCase(cd.getNodeName()) && (zone instanceof RespawnZone)) {
-                final String race = parseString(attr, "race");
-                final String point = parseString(attr,"region");
-                ((RespawnZone) zone).addRaceRespawnPoint(race, point);
+            switch (node.getNodeName()) {
+                case "polygon" -> zone.setArea(parsePolygon(node));
+                case "cube" -> zone.setArea(parseCube(node));
+                case "cylinder" -> zone.setArea(parseCylinder(node));
+                case "property" ->  zone.setParameter(parseString(attr, "name"), parseString(attr, "value"));
+                case "spawn" -> parseSpawn(zone, attr);
+                case "respawn" -> parseRespawn(zone, attr);
             }
+        }
+    }
+
+    private void parseRespawn(Zone zone, NamedNodeMap attr) {
+        if(zone instanceof RespawnZone) {
+            var race = parseString(attr, "race");
+            final String point = parseString(attr,"region");
+            ((RespawnZone) zone).addRaceRespawnPoint(race, point);
+        }
+    }
+
+    private void parseSpawn(Zone zone, NamedNodeMap attr) {
+        if(zone instanceof SpawnZone) {
+            var x = parseInteger(attr, "x");
+            var y = parseInteger(attr, "y");
+            var z = parseInteger(attr, "z");
+            var type = parseString(attr, "type");
+            ((SpawnZone) zone).parseLoc(x, y, z, type);
         }
     }
 
@@ -218,26 +220,34 @@ public final class ZoneManager extends GameXmlReader {
         } else if (spawnTerritories.containsKey(name)) {
             LOGGER.warn("Spawn Territory Name {} already used for another zone, check file: {}. Skipping zone", name, file);
         } else {
-            spawnTerritories.put(name, new SpawnTerritory(name, parseZoneForm(zoneNode)));
+
+            ZoneArea area = null;
+
+            for (Node node = zoneNode.getFirstChild(); node != null; node = node.getNextSibling()) {
+
+                area = switch (node.getNodeName()) {
+                    case "polygon" -> parsePolygon(node);
+                    case "cube" -> parseCube(node);
+                    case "cylinder" -> parseCylinder(node);
+                    default -> null;
+                };
+
+                if(nonNull(area)) {
+                    spawnTerritories.put(name, new SpawnTerritory(name, area));
+                    break;
+                }
+            }
+            if(isNull(area)) {
+                LOGGER.warn("There is no defined area to Spawn Territory {} on file {}", name, file);
+            }
         }
     }
 
-    private ZoneArea parseZoneForm(Node zoneNode) throws InvalidZoneException {
-        var form = parseString(zoneNode.getAttributes(), "form");
-        return switch (form) {
-            default -> null;
-            case "Cube" -> parseCube(zoneNode);
-            case "Cylinder" -> parseCylinder(zoneNode);
-            case "Polygon" -> parsePolygon(zoneNode);
-        };
-    }
-
-    private ZoneArea parsePolygon(Node zoneNode) throws InvalidZoneException {
-        var attributes = zoneNode.getAttributes();
+    private ZoneArea parsePolygon(Node polygonNode) throws InvalidZoneException {
         IntList xPoints = new ArrayIntList();
         IntList yPoints = new ArrayIntList();
 
-        for (Node node = zoneNode.getFirstChild(); node != null; node = node.getNextSibling()) {
+        for (Node node = polygonNode.getFirstChild(); node != null; node = node.getNextSibling()) {
             if ("point".equalsIgnoreCase(node.getNodeName())) {
                 var attr = node.getAttributes();
                 xPoints.add(parseInteger(attr, "x"));
@@ -248,37 +258,39 @@ public final class ZoneManager extends GameXmlReader {
             throw new InvalidZoneException("The Zone with Polygon form must have at least 3 points");
         }
 
-        var minZ = parseInteger(attributes, "minZ");
-        var maxZ = parseInteger(attributes, "maxZ");
+        var attributes = polygonNode.getAttributes();
+        var minZ = parseInteger(attributes, "min-z");
+        var maxZ = parseInteger(attributes, "max-z");
         return new ZonePolygonArea(xPoints.toArray(int[]::new), yPoints.toArray(int[]::new), minZ, maxZ);
     }
 
     private ZoneArea parseCylinder(Node zoneNode) throws InvalidZoneException {
         var attributes = zoneNode.getAttributes();
+        int radius = parseInteger(attributes, "radius");
+
+        if(radius <= 0) {
+            throw new  InvalidZoneException("The Zone with Cylinder form must have a radius");
+        }
+
         for (Node node = zoneNode.getFirstChild(); node != null; node = node.getNextSibling()) {
             if ("point".equalsIgnoreCase(node.getNodeName())) {
                 var attr = node.getAttributes();
-                int radius = parseInteger(attributes, "radius");
-
-                if(radius < 0) {
-                    throw new  InvalidZoneException("The Zone with Cylinder form must have a radius");
-                }
 
                 int x = parseInteger(attr, "x");
                 int y = parseInteger(attr, "y");
-                var minZ = parseInteger(attributes, "minZ");
-                var maxZ = parseInteger(attributes, "maxZ");
+                var minZ = parseInteger(attributes, "min-z");
+                var maxZ = parseInteger(attributes, "max-z");
                 return new ZoneCylinderArea(x, y, minZ, maxZ, radius);
             }
         }
         throw new InvalidZoneException("The Zone with Cylinder form must have 1 point");
     }
 
-    private ZoneArea parseCube(Node zoneNode) throws InvalidZoneException {
-        var attributes = zoneNode.getAttributes();
+    private ZoneArea parseCube(Node cubeNode) throws InvalidZoneException {
+        var attributes = cubeNode.getAttributes();
         int[] points = new int[4];
         var point = 0;
-        for (Node node = zoneNode.getFirstChild(); node != null; node = node.getNextSibling()) {
+        for (Node node = cubeNode.getFirstChild(); node != null; node = node.getNextSibling()) {
             if ("point".equalsIgnoreCase(node.getNodeName())) {
                 var attr = node.getAttributes();
 
@@ -288,8 +300,8 @@ public final class ZoneManager extends GameXmlReader {
                 points[point++] = y;
 
                 if(point > 3) {
-                    var minZ = parseInteger(attributes, "minZ");
-                    var maxZ = parseInteger(attributes, "maxZ");
+                    var minZ = parseInteger(attributes, "min-z");
+                    var maxZ = parseInteger(attributes, "max-z");
                     return new ZoneCubeArea(points[0], points[2], points[1], points[3], minZ, maxZ);
                 }
             }
@@ -506,6 +518,10 @@ public final class ZoneManager extends GameXmlReader {
      */
     public static AbstractZoneSettings getSettings(String name) {
         return SETTINGS.get(name);
+    }
+
+    public static void init() {
+        getInstance().load();
     }
 
     public static ZoneManager getInstance() {

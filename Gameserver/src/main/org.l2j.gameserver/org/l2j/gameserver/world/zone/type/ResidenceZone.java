@@ -3,7 +3,7 @@ package org.l2j.gameserver.world.zone.type;
 /**
  * @author xban1x
  */
-public abstract class ResidenceZone extends ZoneRespawn {
+public abstract class ResidenceZone extends SpawnZone {
     private int residenceId;
 
     ResidenceZone(int id) {
@@ -11,9 +11,7 @@ public abstract class ResidenceZone extends ZoneRespawn {
     }
 
     public void banishForeigners(int owningClanId) {
-        getPlayersInside().stream()
-                .filter(p -> p.getClanId() == owningClanId && owningClanId != 0)
-                .forEach(p -> p.teleToLocation(getBanishSpawnLoc(), true));
+        forEachPlayer(p -> p.teleToLocation(getBanishSpawnLoc(), true), p -> p.getClanId() == owningClanId && owningClanId != 0);
     }
 
     public int getResidenceId() {

@@ -8,6 +8,8 @@ import org.l2j.gameserver.model.holders.SkillHolder;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.network.serverpackets.EtcStatusUpdate;
 import org.l2j.gameserver.world.zone.*;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -24,6 +26,8 @@ import static org.l2j.gameserver.util.GameUtils.isPlayer;
  * @author kerberos
  */
 public final class EffectZone extends Zone {
+
+    private static final Logger LOGGER = LoggerFactory.getLogger(EffectZone.class);
 
     private final Object taskLock = new Object();
     private boolean bypassConditions;
@@ -130,11 +134,8 @@ public final class EffectZone extends Zone {
         public void run() {
             if (isEnabled()) {
                 skills.stream()
-                        .map(SkillHolder::getSkill)
-                        .forEach(s -> getCreaturesInside().stream().
-                                filter(c -> canApplySkill(c) && checkSkillCondition(s, c))
-                                .forEach(c -> s.activateSkill(c, c)) );
-
+                    .map(SkillHolder::getSkill)
+                    .forEach(s -> forEachCreature(c -> s.activateSkill(c, c), c -> canApplySkill(c) && checkSkillCondition(s, c)));
             }
         }
 

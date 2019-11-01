@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list enabled="false" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org ../zones.xsd">
+    <zone name="spawn_zone_test_01" type="org.l2j.gameserver.world.zone.type.SpawnTerritory">
+        <cube min-z="-3734" max-z="-3689">
+            <point x="75552" y="142899"/>
+            <point x="76887" y="144333"/>
+        </cube>
+    </zone>
+</list>

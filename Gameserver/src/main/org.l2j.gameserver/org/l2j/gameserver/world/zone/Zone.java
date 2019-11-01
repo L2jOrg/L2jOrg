@@ -19,10 +19,12 @@ import org.l2j.gameserver.util.GameUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.util.Collection;
-import java.util.List;
-import java.util.stream.Collectors;
+import java.util.Arrays;
+import java.util.function.Consumer;
+import java.util.function.Predicate;
+import java.util.stream.Stream;
 
+import static java.util.Objects.isNull;
 import static java.util.Objects.nonNull;
 import static org.l2j.gameserver.util.GameUtils.isPlayer;
 
@@ -30,9 +32,12 @@ import static org.l2j.gameserver.util.GameUtils.isPlayer;
  * Abstract base class for any zone type handles basic operations.
  *
  * @author durgus
+ * @author JoeAlisson
  */
 public abstract class Zone extends ListenersContainer {
-    protected static final Logger LOGGER = LoggerFactory.getLogger(Zone.class.getName());
+    private static final Logger LOGGER = LoggerFactory.getLogger(Zone.class);
+    public static final int FIGHTER = 1;
+    public static final int MAGE = 2;
 
     private final int id;
     private boolean enabled;
@@ -50,7 +55,6 @@ public abstract class Zone extends ListenersContainer {
     private boolean allowStore;
     private AbstractZoneSettings settings;
     private int instanceTemplateId;
-    private IntMap<Boolean> enabledInInstance;
 
     protected ZoneArea area;
     protected IntMap<Creature> creatures = new CHashIntMap<>();
@@ -70,242 +74,111 @@ public abstract class Zone extends ListenersContainer {
         return id;
     }
 
-    /**
-     * Setup new parameters for this zone
-     *
-     * @param name
-     * @param value
-     */
     public void setParameter(String name, String value) {
         checkAffected = true;
 
-        // Zone name
         switch (name) {
-            case "name":
-                this.name = value;
-                break;
-            // Minimum level
-            case "affectedLvlMin":
-                minLvl = Integer.parseInt(value);
-                break;
-            // Maximum level
-            case "affectedLvlMax":
-                maxLvl = Integer.parseInt(value);
-                break;
-            // Affected Races
-            case "affectedRace":
-                // Create a new array holding the affected race
-                if (races == null) {
+            default -> LOGGER.warn("Unknown parameter - {} in zone: {}", name, id);
+            case "name" -> this.name = value;
+            case "affectedLvlMin" -> minLvl = Integer.parseInt(value);
+            case "affectedLvlMax" -> maxLvl = Integer.parseInt(value);
+            case "affectedClassType" -> classType = (char) (value.equalsIgnoreCase("Fighter") ? FIGHTER : MAGE);
+            case "targetClass" -> target = Enum.valueOf(InstanceType.class, value);
+            case "allowStore"-> allowStore = Boolean.parseBoolean(value);
+            case "default_enabled" -> enabled = Boolean.parseBoolean(value);
+            case "instanceId" -> instanceTemplateId = Integer.parseInt(value);
+            case "affectedRace" -> {
+                if (isNull(races)) {
                     races = new int[1];
                     races[0] = Integer.parseInt(value);
                 } else {
-                    final int[] temp = new int[races.length + 1];
-
-                    int i = 0;
-                    for (; i < races.length; i++) {
-                        temp[i] = races[i];
-                    }
-
-                    temp[i] = Integer.parseInt(value);
-
-                    races = temp;
+                    races = Arrays.copyOf(races, races.length + 1);
+                    races[races.length - 1] = Integer.parseInt(value);
                 }
-                break;
-            // Affected classes
-            case "affectedClassId":
-                // Create a new array holding the affected classIds
-                if (classes == null) {
+            }
+            case "affectedClassId" -> {
+                if (isNull(classes)) {
                     classes = new int[1];
                     classes[0] = Integer.parseInt(value);
                 } else {
-                    final int[] temp = new int[classes.length + 1];
-
-                    int i = 0;
-                    for (; i < classes.length; i++) {
-                        temp[i] = classes[i];
-                    }
-
-                    temp[i] = Integer.parseInt(value);
-
-                    classes = temp;
+                    classes = Arrays.copyOf(classes, classes.length + 1);
+                    classes[classes.length - 1] = Integer.parseInt(value);
                 }
-                break;
-            // Affected class type
-            case "affectedClassType":
-                if (value.equals("Fighter")) {
-                    classType = 1;
-                } else {
-                    classType = 2;
-                }
-                break;
-            case "targetClass":
-                target = Enum.valueOf(InstanceType.class, value);
-                break;
-            case "allowStore":
-                allowStore = Boolean.parseBoolean(value);
-                break;
-            case "default_enabled":
-                enabled = Boolean.parseBoolean(value);
-                break;
-            case "instanceId":
-                instanceTemplateId = Integer.parseInt(value);
-                break;
-            default:
-                LOGGER.info("Unknown parameter - {} in zone: {}", name, id);
-                break;
+            }
         }
     }
 
     /**
-     * @param character the player to verify.
+     * @param creature the player to verify.
      * @return {@code true} if the given character is affected by this zone, {@code false} otherwise.
      */
-    private boolean isAffected(Creature character) {
-        // Check instance
-        final Instance world = character.getInstanceWorld();
-        if (nonNull(world)) {
-            if (world.getTemplateId() != instanceTemplateId) {
-                return false;
-            }
-            if (!isEnabled(character.getInstanceId())) {
+    private boolean isAffected(Creature creature) {
+        if(!isEnabled()) {
+            return false;
+        }
+        final Instance instance = creature.getInstanceWorld();
+
+        if (nonNull(instance)) {
+            if (instance.getTemplateId() != instanceTemplateId) {
                 return false;
             }
         } else if (instanceTemplateId > 0) {
             return false;
         }
 
-        // Check lvl
-        if ((character.getLevel() < minLvl) || (character.getLevel() > maxLvl)) {
+        if (creature.getLevel() < minLvl || creature.getLevel() > maxLvl) {
             return false;
         }
 
-        // check obj class
-        if (!character.isInstanceTypes(target)) {
+        if (!creature.isInstanceTypes(target)) {
             return false;
         }
 
-        if (isPlayer(character)) {
-            // Check class type
-            if (classType != 0) {
-                if (((Player) character).isMageClass()) {
-                    if (classType == 1) {
-                        return false;
-                    }
-                } else if (classType == 2) {
+        if (isPlayer(creature)) {
+            var isMage = ((Player) creature).isMageClass();
+            if( (isMage && classType == FIGHTER) || (!isMage && classType == MAGE) ) {
+                return false;
+            }
+
+            if(nonNull(races)) {
+                if(Arrays.stream(races).noneMatch(id -> id == creature.getRace().ordinal())) {
                     return false;
                 }
             }
 
-            // Check race
-            if (races != null) {
-                boolean ok = false;
-
-                for (int element : races) {
-                    if (character.getRace().ordinal() == element) {
-                        ok = true;
-                        break;
-                    }
-                }
-
-                if (!ok) {
-                    return false;
-                }
-            }
-
-            // Check class
-            if (classes != null) {
-                boolean ok = false;
-
-                for (int _clas : classes) {
-                    if (((Player) character).getClassId().ordinal() == _clas) {
-                        ok = true;
-                        break;
-                    }
-                }
-
-                return ok;
+            if(nonNull(classes)) {
+                return Arrays.stream(classes).anyMatch(id -> id == ((Player) creature).getClassId().ordinal());
             }
         }
         return true;
     }
 
     /**
-     * Returns this zones zone form.
      *
-     * @return {@link #area}
-     */
-    public ZoneArea getArea() {
-        return area;
-    }
-
-    /**
-     * Set the zone for this Zone Instance
-     *
-     * @param zone
-     */
-    public void setArea(ZoneArea zone) {
-        if (area != null) {
-            throw new IllegalStateException("Zone already set");
-        }
-        area = zone;
-    }
-
-    /**
-     * Returns zone name
-     *
-     * @return
-     */
-    public String getName() {
-        return name;
-    }
-
-    /**
-     * Set the zone name.
-     *
-     * @param name
-     */
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    /**
-     * Checks if the given coordinates are within the zone, ignores instanceId check
-     *
-     * @param x
-     * @param y
-     * @param z
-     * @return
+     * @return if the given coordinates are within the zone, ignores instanceId check
      */
     public boolean isInsideZone(int x, int y, int z) {
         return area.isInsideZone(x, y, z);
     }
 
     /**
-     * Checks if the given coordinates are within zone's plane
-     *
-     * @param x
-     * @param y
-     * @return
+     * @return if the given coordinates are within zone's plane
      */
     public boolean isInsideZone(int x, int y) {
         return isInsideZone(x, y, area.getHighZ());
     }
 
     /**
-     * Checks if the given coordinates are within the zone, ignores instanceId check
      *
-     * @param loc
-     * @return
+     * @return if the given location are within the zone, ignores instanceId check
      */
     public boolean isInsideZone(ILocational loc) {
         return isInsideZone(loc.getX(), loc.getY(), loc.getZ());
     }
 
     /**
-     * Checks if the given object is inside the zone.
      *
-     * @param object
-     * @return
+     * @return if the given object is inside the zone.
      */
     public boolean isInsideZone(WorldObject object) {
         return isInsideZone(object.getX(), object.getY(), object.getZ());
@@ -315,52 +188,127 @@ public abstract class Zone extends ListenersContainer {
         return area.getDistanceToZone(object.getX(), object.getY());
     }
 
-    public void revalidateInZone(Creature character) {
-        // If the object is inside the zone...
-        if (isInsideZone(character)) {
-            // If the character can't be affected by this zone return
-            if (checkAffected && !isAffected(character)) {
+    protected void revalidateInZone(Creature creature) {
+        if (isInsideZone(creature)) {
+            if (checkAffected && !isAffected(creature)) {
                 return;
             }
 
-            if (creatures.putIfAbsent(character.getObjectId(), character) == null) {
-                // Notify to scripts.
-                EventDispatcher.getInstance().notifyEventAsync(new OnCreatureZoneEnter(character, this), this);
-                // Notify Zone implementation.
-                onEnter(character);
+            if (creatures.putIfAbsent(creature.getObjectId(), creature) == null) {
+                onEnter(creature);
+                EventDispatcher.getInstance().notifyEventAsync(new OnCreatureZoneEnter(creature, this), this);
             }
         } else {
-            removeCreature(character);
+            removeCreature(creature);
         }
     }
 
     /**
      * Force fully removes a character from the zone Should use during teleport / logoff
-     *
-     * @param character
      */
-    public void removeCreature(Creature character) {
-        // Was the character inside this zone?
-        if (creatures.containsKey(character.getObjectId())) {
-            // Notify to scripts.
-            EventDispatcher.getInstance().notifyEventAsync(new OnCreatureZoneExit(character, this), this);
-
-            // Unregister player.
-            creatures.remove(character.getObjectId());
-
-            // Notify Zone implementation.
-            onExit(character);
+    protected void removeCreature(Creature creature) {
+        if (creatures.containsKey(creature.getObjectId())) {
+            creatures.remove(creature.getObjectId());
+            onExit(creature);
+            EventDispatcher.getInstance().notifyEventAsync(new OnCreatureZoneExit(creature, this), this);
         }
     }
 
     /**
-     * Will scan the zones char list for the character
-     *
-     * @param character
-     * @return
+     * @return if creature is inside zone
      */
-    public boolean isCreatureInZone(Creature character) {
-        return creatures.containsKey(character.getObjectId());
+    public boolean isCreatureInZone(Creature creature) {
+        return creatures.containsKey(creature.getObjectId());
+    }
+
+    protected void onDieInside(Creature creature) {
+    }
+
+    protected void onReviveInside(Creature creature) {
+    }
+
+    public void onPlayerLoginInside(Player player) {
+    }
+
+    public void onPlayerLogoutInside(Player player) {
+    }
+
+    public void forEachCreature(Consumer<Creature> action) {
+        creatures.values().forEach(action);
+    }
+
+    public void forEachCreature(Consumer<Creature> action, Predicate<Creature> filter) {
+        creatures.values().stream().filter(filter).forEach(action);
+    }
+
+    public void forAnyCreature(Consumer<Creature> action, Predicate<Creature> filter) {
+        creatures.values().stream().filter(filter).findAny().ifPresent(action);
+    }
+
+    public void forEachPlayer(Consumer<Player> action, Predicate<Player> filter) {
+        toPlayerStream(creatures.values().stream()).filter(filter).forEach(action);
+    }
+
+    public void forEachPlayer(Consumer<Player> action) {
+        toPlayerStream(creatures.values().stream()).forEach(action);
+    }
+
+    public long getPlayersInsideCount() {
+        return creatures.values().stream().filter(GameUtils::isPlayer).count();
+    }
+
+    /**
+     * Broadcasts packet to all players inside the zone
+     *
+     */
+    public void broadcastPacket(ServerPacket packet) {
+        if (creatures.isEmpty()) {
+            return;
+        }
+       toPlayerStream(creatures.values().parallelStream()).forEach(packet::sendTo);
+    }
+
+    private Stream<Player> toPlayerStream(Stream<Creature> stream) {
+        return  stream.filter(GameUtils::isPlayer).map(WorldObject::getActingPlayer);
+    }
+
+    public void visualizeZone(int z) {
+        area.visualizeZone(z);
+    }
+
+    public void oustAllPlayers() {
+        if(creatures.isEmpty()) {
+            return;
+        }
+
+        toPlayerStream(creatures.values().parallelStream()).forEach(player -> player.teleToLocation(TeleportWhereType.TOWN));
+    }
+
+    public void movePlayersTo(Location loc) {
+        if (creatures.isEmpty()) {
+            return;
+        }
+
+        toPlayerStream(creatures.values().parallelStream()).forEach(p -> p.teleToLocation(loc));
+    }
+
+    public ZoneArea getArea() {
+        return area;
+    }
+
+    public void setArea(ZoneArea area) {
+        if (this.area != null) {
+            throw new IllegalStateException("Zone already set");
+        }
+        this.area = area;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public AbstractZoneSettings getSettings() {
@@ -374,45 +322,12 @@ public abstract class Zone extends ListenersContainer {
         this.settings = settings;
     }
 
-    protected abstract void onEnter(Creature character);
-
-    protected abstract void onExit(Creature character);
-
-    public void onDieInside(Creature character) {
+    public boolean isEnabled() {
+        return enabled;
     }
 
-    public void onReviveInside(Creature character) {
-    }
-
-    public void onPlayerLoginInside(Player player) {
-    }
-
-    public void onPlayerLogoutInside(Player player) {
-    }
-
-    public IntMap<Creature> getCharacters() {
-        return creatures;
-    }
-
-    public Collection<Creature> getCreaturesInside() {
-        return creatures.values();
-    }
-
-    public List<Player> getPlayersInside() {
-        return creatures.values().stream().filter(GameUtils::isPlayer).map(WorldObject::getActingPlayer).collect(Collectors.toList());
-    }
-
-    /**
-     * Broadcasts packet to all players inside the zone
-     *
-     * @param packet
-     */
-    public void broadcastPacket(ServerPacket packet) {
-        if (creatures.isEmpty()) {
-            return;
-        }
-
-        creatures.values().parallelStream().filter(GameUtils::isPlayer).map(WorldObject::getActingPlayer).forEach(packet::sendTo);
+    public void setEnabled(boolean state) {
+        enabled = state;
     }
 
     public InstanceType getTargetType() {
@@ -432,62 +347,11 @@ public abstract class Zone extends ListenersContainer {
         return instanceTemplateId;
     }
 
+    protected abstract void onEnter(Creature character);
+    protected abstract void onExit(Creature character);
+
     @Override
     public String toString() {
-        return getClass().getSimpleName() + "[" + id + "]";
-    }
-
-    public void visualizeZone(int z) {
-        area.visualizeZone(z);
-    }
-
-    public boolean isEnabled() {
-        return enabled;
-    }
-
-    public void setEnabled(boolean state) {
-        enabled = state;
-    }
-
-    public void setEnabled(boolean state, int instanceId) {
-        if (enabledInInstance == null) {
-            synchronized (this) {
-                if (enabledInInstance == null) {
-                    enabledInInstance = new CHashIntMap<>();
-                }
-            }
-        }
-
-        enabledInInstance.put(instanceId, state);
-    }
-
-    public boolean isEnabled(int instanceId) {
-        if (nonNull(enabledInInstance)) {
-            return enabledInInstance.getOrDefault(instanceId, enabled);
-        }
-
-        return enabled;
-    }
-
-    public void oustAllPlayers() {
-        if(creatures.isEmpty()) {
-            return;
-        }
-
-        //@formatter:off
-        creatures.values().parallelStream()
-                .filter(GameUtils::isPlayer)
-                .map(WorldObject::getActingPlayer)
-                .filter(Player::isOnline)
-                .forEach(player -> player.teleToLocation(TeleportWhereType.TOWN));
-        //@formatter:off
-    }
-
-    public void movePlayersTo(Location loc) {
-        if (creatures.isEmpty()) {
-            return;
-        }
-
-        creatures.values().parallelStream().filter(p -> GameUtils.isPlayer(p) && ((Player)p).isOnline()).forEach(p -> p.teleToLocation(loc));
+        return getClass().getSimpleName() + "[" + id + "] - " + name;
     }
 }

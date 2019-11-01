@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org zones.xsd">
+    <!-- Castle Siege Zones -->
+    <zone name="gludio_castle_battlefield_territory " type="org.l2j.gameserver.world.zone.type.SiegeZone">
+        <polygon min-z="-4448" max-z="3551">
+            <point x="-22615" y="104510"/>
+            <point x="-13290" y="104564"/>
+            <point x="-13313" y="116950"/>
+            <point x="-22638" y="116896"/>
+        </polygon>
+        <property name="castleId" value="1"/>
+    </zone>
+    <zone name="dion_castle_battlefield_territory" type="org.l2j.gameserver.world.zone.type.SiegeZone">
+        <polygon min-z="-4642" max-z="4000">
+            <point x="26575" y="165240"/>
+            <point x="17250" y="165186"/>
+            <point x="17273" y="152800"/>
+            <point x="26598" y="152854"/>
+        </polygon>
+        <property name="castleId" value="2"/>
+    </zone>
+    <zone name="giran_castle_battlefield_territory" type="org.l2j.gameserver.world.zone.type.SiegeZone">
+        <polygon min-z="-4515" max-z="19935">
+            <point x="121412" y="140594"/>
+            <point x="121358" y="149919"/>
+            <point x="108972" y="149896"/>
+            <point x="109026" y="140571"/>
+        </polygon>
+        <property name="castleId" value="3"/>
+    </zone>
+    <zone name="oren_castle_battlefield_territory" type="org.l2j.gameserver.world.zone.type.SiegeZone">
+        <polygon min-z="-4242" max-z="19935">
+            <point x="87488" y="32689"/>
+            <point x="87434" y="42014"/>
+            <point x="75048" y="41991"/>
+            <point x="75102" y="32666"/>
+        </polygon>
+        <property name="castleId" value="4"/>
+    </zone>
+    <zone name="aden_castle_battlefield_territory" type="org.l2j.gameserver.world.zone.type.SiegeZone">
+        <polygon min-z="-3184" max-z="6816">
+            <point x="142431" y="362"/>
+            <point x="152319" y="344"/>
+            <point x="152282" y="15197"/>
+            <point x="142393" y="15215"/>
+        </polygon>
+        <property name="castleId" value="5"/>
+    </zone>
+    <zone name="innadrile_castle_battlefield_territory" type="org.l2j.gameserver.world.zone.type.SiegeZone">
+        <polygon min-z="-2738" max-z="4000">
+            <point x="120526" y="254019"/>
+            <point x="111201" y="253965"/>
+            <point x="111224" y="241579"/>
+            <point x="120549" y="241633"/>
+        </polygon>
+        <property name="castleId" value="6"/>
+    </zone>
+    <zone name="godad_castle_battlefield_territory" type="org.l2j.gameserver.world.zone.type.SiegeZone">
+        <polygon min-z="-3397" max-z="5100">
+            <point x="143023" y="-53210"/> <!-- TODO: Needs Support for minZ/maxZ for each node, due minZ in this node should be -2300 -->
+            <point x="151893" y="-53210"/> <!-- TODO: Needs Support for minZ/maxZ for each node, due minZ in this node should be -2300 -->
+            <point x="151949" y="-39107"/>
+            <point x="145899" y="-39107"/>
+            <point x="141457" y="-44407"/>
+        </polygon>
+        <property name="castleId" value="7"/>
+    </zone>
+    <zone name="rune_castle_battlefield_territory" type="org.l2j.gameserver.world.zone.type.SiegeZone">
+        <polygon min-z="-4350" max-z="10030">
+            <point x="6015" y="-56316"/>
+            <point x="17343" y="-53750"/>
+            <point x="19486" y="-52556"/>
+            <point x="23783" y="-52570"/>
+            <point x="27027" y="-49433"/>
+            <point x="27020" y="-48831"/>
+            <point x="23887" y="-45218"/>
+            <point x="19385" y="-45203"/>
+            <point x="17413" y="-44022"/>
+            <point x="6015" y="-41600"/>
+        </polygon>
+        <property name="castleId" value="8"/>
+    </zone>
+    <zone name="schuttgart_castle_battlefield_territory" type="org.l2j.gameserver.world.zone.type.SiegeZone">
+        <polygon min-z="-3997" max-z="8503">
+            <point x="71420" y="-159445"/>
+            <point x="83119" y="-159442"/>
+            <point x="83122" y="-150000"/>
+            <point x="77897" y="-143861"/>
+            <point x="71420" y="-148782"/>
+        </polygon>
+        <property name="castleId" value="9"/>
+    </zone>
+</list>

@@ -1,0 +1,714 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org zones.xsd">
+    <!-- Underground Coliseum Zones -->
+    <zone name="17_16_kerthang_001" type="org.l2j.gameserver.world.zone.type.EffectZone">
+        <polygon min-z="-11592" max-z="-11192">
+            <point x="-84483" y="-51200"/>
+            <point x="-84884" y="-51508"/>
+            <point x="-85064" y="-51972"/>
+            <point x="-84991" y="-52456"/>
+            <point x="-84683" y="-52850"/>
+            <point x="-84227" y="-53023"/>
+            <point x="-83731" y="-52947"/>
+            <point x="-83341" y="-52645"/>
+            <point x="-83157" y="-52168"/>
+            <point x="-83229" y="-51689"/>
+            <point x="-83531" y="-51310"/>
+            <point x="-84050" y="-51128"/>
+        </polygon>
+        <property name="chance" value="100"/>
+        <!-- stat name="unitTick" val="5" / -->
+        <property name="default_enabled" value="false"/>
+        <property name="skillIdLvl" value="4148-6;"/> <!-- s_area_poison6 -->
+    </zone>
+    <zone name="17_16_kerthang_002" type="org.l2j.gameserver.world.zone.type.EffectZone">
+        <polygon min-z="-11544" max-z="-11144">
+            <point x="-84073" y="-52966"/>
+            <point x="-84107" y="-53251"/>
+            <point x="-84463" y="-53589"/>
+            <point x="-84387" y="-53989"/>
+            <point x="-84186" y="-54237"/>
+            <point x="-83867" y="-54292"/>
+            <point x="-83692" y="-54243"/>
+            <point x="-83495" y="-54075"/>
+            <point x="-83388" y="-53808"/>
+            <point x="-83430" y="-53557"/>
+            <point x="-83625" y="-53339"/>
+            <point x="-83926" y="-52943"/>
+        </polygon>
+        <property name="chance" value="100"/>
+        <!-- stat name="unitTick" val="5" / -->
+        <property name="default_enabled" value="false"/>
+        <property name="skillIdLvl" value="4148-6;"/> <!-- s_area_poison6 -->
+    </zone>
+    <zone name="17_16_kerthang_003" type="org.l2j.gameserver.world.zone.type.EffectZone">
+        <polygon min-z="-11556" max-z="-11156">
+            <point x="-82843" y="-50854"/>
+            <point x="-83086" y="-51047"/>
+            <point x="-83469" y="-51515"/>
+            <point x="-83439" y="-51637"/>
+            <point x="-83239" y="-51644"/>
+            <point x="-82734" y="-51936"/>
+            <point x="-82432" y="-51866"/>
+            <point x="-82201" y="-51683"/>
+            <point x="-82104" y="-51422"/>
+            <point x="-82151" y="-51139"/>
+            <point x="-82324" y="-50921"/>
+            <point x="-82568" y="-50814"/>
+        </polygon>
+        <property name="chance" value="100"/>
+        <!-- stat name="unitTick" val="5" / -->
+        <property name="default_enabled" value="false"/>
+        <property name="skillIdLvl" value="4148-6;"/> <!-- s_area_poison6 -->
+    </zone>
+    <zone name="17_16_kerthang_004" type="org.l2j.gameserver.world.zone.type.EffectZone">
+        <polygon min-z="-11552" max-z="-11152">
+            <point x="-84036" y="-50233"/>
+            <point x="-84139" y="-50483"/>
+            <point x="-84129" y="-50794"/>
+            <point x="-84074" y="-51204"/>
+            <point x="-83953" y="-51248"/>
+            <point x="-83782" y="-50991"/>
+            <point x="-83502" y="-50966"/>
+            <point x="-83317" y="-50807"/>
+            <point x="-83230" y="-50597"/>
+            <point x="-83265" y="-50330"/>
+            <point x="-83504" y="-50090"/>
+            <point x="-83781" y="-50087"/>
+        </polygon>
+        <property name="chance" value="100"/>
+        <!-- stat name="unitTick" val="5" / -->
+        <property name="default_enabled" value="false"/>
+        <property name="skillIdLvl" value="4148-6;"/> <!-- s_area_poison6 -->
+    </zone>
+    <zone name="17_16_kerthang_005" type="org.l2j.gameserver.world.zone.type.EffectZone">
+        <polygon min-z="-11564" max-z="-11164">
+            <point x="-85997" y="-51983"/>
+            <point x="-86207" y="-52165"/>
+            <point x="-86298" y="-52409"/>
+            <point x="-86239" y="-52671"/>
+            <point x="-86062" y="-52880"/>
+            <point x="-85819" y="-52969"/>
+            <point x="-85542" y="-52935"/>
+            <point x="-85325" y="-52747"/>
+            <point x="-84949" y="-52233"/>
+            <point x="-84972" y="-52104"/>
+            <point x="-85447" y="-52027"/>
+            <point x="-85716" y="-51927"/>
+        </polygon>
+        <property name="chance" value="100"/>
+        <!-- stat name="unitTick" val="5" / -->
+        <property name="default_enabled" value="false"/>
+        <property name="skillIdLvl" value="4148-6;"/> <!-- s_area_poison6 -->
+    </zone>
+    <zone name="17_16_kerthang_006" type="org.l2j.gameserver.world.zone.type.EffectZone">
+        <polygon min-z="-11581" max-z="-11181">
+            <point x="-80410" y="-51388"/>
+            <point x="-80641" y="-51679"/>
+            <point x="-80782" y="-52222"/>
+            <point x="-80703" y="-52582"/>
+            <point x="-80322" y="-53010"/>
+            <point x="-79758" y="-53098"/>
+            <point x="-79437" y="-53011"/>
+            <point x="-78979" y="-52731"/>
+            <point x="-78898" y="-52192"/>
+            <point x="-78856" y="-51814"/>
+            <point x="-79311" y="-51328"/>
+            <point x="-79870" y="-51180"/>
+        </polygon>
+        <property name="chance" value="100"/>
+        <!-- stat name="unitTick" val="5" / -->
+        <property name="default_enabled" value="false"/>
+        <property name="skillIdLvl" value="4148-7;"/> <!-- s_area_poison7 -->
+    </zone>
+    <zone name="17_16_kerthang_007" type="org.l2j.gameserver.world.zone.type.EffectZone">
+        <polygon min-z="-11540" max-z="-11140">
+            <point x="-80276" y="-53424"/>
+            <point x="-80458" y="-53708"/>
+            <point x="-80431" y="-54058"/>
+            <point x="-80241" y="-54292"/>
+            <point x="-79923" y="-54378"/>
+            <point x="-79697" y="-54308"/>
+            <point x="-79477" y="-54132"/>
+            <point x="-79400" y="-53820"/>
+            <point x="-79491" y="-53558"/>
+            <point x="-79717" y="-53359"/>
+            <point x="-79910" y="-53001"/>
+            <point x="-80047" y="-52981"/>
+        </polygon>
+        <property name="chance" value="100"/>
+        <!-- stat name="unitTick" val="5" / -->
+        <property name="default_enabled" value="false"/>
+        <property name="skillIdLvl" value="4148-7;"/> <!-- s_area_poison7 -->
+    </zone>
+    <zone name="17_16_kerthang_008" type="org.l2j.gameserver.world.zone.type.EffectZone">
+        <polygon min-z="-11564" max-z="-11164">
+            <point x="-78494" y="-52005"/>
+            <point x="-78954" y="-52219"/>
+            <point x="-78968" y="-52344"/>
+            <point x="-78705" y="-52433"/>
+            <point x="-78572" y="-52755"/>
+            <point x="-78349" y="-52923"/>
+            <point x="-78101" y="-52954"/>
+            <point x="-77819" y="-52831"/>
+            <point x="-77638" y="-52598"/>
+            <point x="-77623" y="-52359"/>
+            <point x="-77694" y="-52185"/>
+            <point x="-78009" y="-51850"/>
+        </polygon>
+        <property name="chance" value="100"/>
+        <!-- stat name="unitTick" val="5" / -->
+        <property name="default_enabled" value="false"/>
+        <property name="skillIdLvl" value="4148-7;"/> <!-- s_area_poison7 -->
+    </zone>
+    <zone name="17_16_kerthang_009" type="org.l2j.gameserver.world.zone.type.EffectZone">
+        <polygon min-z="-11551" max-z="-11151">
+            <point x="-80231" y="-50016"/>
+            <point x="-80475" y="-50131"/>
+            <point x="-80674" y="-50439"/>
+            <point x="-80547" y="-50993"/>
+            <point x="-80190" y="-51377"/>
+            <point x="-80067" y="-51379"/>
+            <point x="-80020" y="-51091"/>
+            <point x="-79731" y="-50976"/>
+            <point x="-79566" y="-50715"/>
+            <point x="-79561" y="-50427"/>
+            <point x="-79707" y="-50172"/>
+            <point x="-79894" y="-50034"/>
+        </polygon>
+        <property name="chance" value="100"/>
+        <!-- stat name="unitTick" val="5" / -->
+        <property name="default_enabled" value="false"/>
+        <property name="skillIdLvl" value="4148-7;"/> <!-- s_area_poison7 -->
+    </zone>
+    <zone name="17_16_kerthang_010" type="org.l2j.gameserver.world.zone.type.EffectZone">
+        <polygon min-z="-11533" max-z="-11133">
+            <point x="-81266" y="-50853"/>
+            <point x="-81517" y="-50943"/>
+            <point x="-81667" y="-51293"/>
+            <point x="-81568" y="-51630"/>
+            <point x="-81172" y="-51795"/>
+            <point x="-80663" y="-51863"/>
+            <point x="-80577" y="-51752"/>
+            <point x="-80723" y="-51656"/>
+            <point x="-80912" y="-51684"/>
+            <point x="-80748" y="-51445"/>
+            <point x="-80745" y="-51107"/>
+            <point x="-81003" y="-50893"/>
+        </polygon>
+        <property name="chance" value="100"/>
+        <!-- stat name="unitTick" val="5" / -->
+        <property name="default_enabled" value="false"/>
+        <property name="skillIdLvl" value="4148-7;"/> <!-- s_area_poison7 -->
+    </zone>
+    <zone name="17_16_kerthang_011" type="org.l2j.gameserver.world.zone.type.EffectZone">
+        <polygon min-z="-11588" max-z="-11188">
+            <point x="-78718" y="-47247"/>
+            <point x="-79143" y="-47541"/>
+            <point x="-79374" y="-48010"/>
+            <point x="-79301" y="-48493"/>
+            <point x="-78992" y="-48907"/>
+            <point x="-78571" y="-49090"/>
+            <point x="-78080" y="-49049"/>
+            <point x="-77690" y="-48777"/>
+            <point x="-77462" y="-48280"/>
+            <point x="-77563" y="-47636"/>
+            <point x="-77886" y="-47372"/>
+            <point x="-78329" y="-47195"/>
+        </polygon>
+        <property name="chance" value="100"/>
+        <!-- stat name="unitTick" val="5" / -->
+        <property name="default_enabled" value="false"/>
+        <property name="skillIdLvl" value="4148-8;"/> <!-- s_area_poison8 -->
+    </zone>
+    <zone name="17_16_kerthang_012" type="org.l2j.gameserver.world.zone.type.EffectZone">
+        <polygon min-z="-11568" max-z="-11168">
+            <point x="-77009" y="-48264"/>
+            <point x="-77259" y="-48440"/>
+            <point x="-77633" y="-48489"/>
+            <point x="-77690" y="-48615"/>
+            <point x="-77377" y="-48879"/>
+            <point x="-77169" y="-49188"/>
+            <point x="-76786" y="-49324"/>
+            <point x="-76451" y="-49108"/>
+            <point x="-76319" y="-48854"/>
+            <point x="-76351" y="-48600"/>
+            <point x="-76494" y="-48368"/>
+            <point x="-76757" y="-48254"/>
+        </polygon>
+        <property name="chance" value="100"/>
+        <!-- stat name="unitTick" val="5" / -->
+        <property name="default_enabled" value="false"/>
+        <property name="skillIdLvl" value="4148-8;"/> <!-- s_area_poison8 -->
+    </zone>
+    <zone name="17_16_kerthang_013" type="org.l2j.gameserver.world.zone.type.EffectZone">
+        <polygon min-z="-11564" max-z="-11164">
+            <point x="-78000" y="-46223"/>
+            <point x="-78153" y="-46567"/>
+            <point x="-78113" y="-46882"/>
+            <point x="-78085" y="-47336"/>
+            <point x="-77962" y="-47383"/>
+            <point x="-77833" y="-47166"/>
+            <point x="-77456" y="-47148"/>
+            <point x="-77235" y="-46983"/>
+            <point x="-77109" y="-46705"/>
+            <point x="-77161" y="-46421"/>
+            <point x="-77319" y="-46231"/>
+            <point x="-77620" y="-46120"/>
+        </polygon>
+        <property name="chance" value="100"/>
+        <!-- stat name="unitTick" val="5" / -->
+        <property name="default_enabled" value="false"/>
+        <property name="skillIdLvl" value="4148-8;"/> <!-- s_area_poison8 -->
+    </zone>
+    <zone name="17_16_kerthang_014" type="org.l2j.gameserver.world.zone.type.EffectZone">
+        <polygon min-z="-11568" max-z="-11168">
+            <point x="-79678" y="-47494"/>
+            <point x="-80091" y="-47328"/>
+            <point x="-80492" y="-47615"/>
+            <point x="-80602" y="-47897"/>
+            <point x="-80512" y="-48241"/>
+            <point x="-80230" y="-48460"/>
+            <point x="-79808" y="-48431"/>
+            <point x="-79537" y="-48355"/>
+            <point x="-79268" y="-48260"/>
+            <point x="-79224" y="-48133"/>
+            <point x="-79472" y="-47988"/>
+            <point x="-79523" y="-47709"/>
+        </polygon>
+        <property name="chance" value="100"/>
+        <!-- stat name="unitTick" val="5" / -->
+        <property name="default_enabled" value="false"/>
+        <property name="skillIdLvl" value="4148-8;"/> <!-- s_area_poison8 -->
+    </zone>
+    <zone name="17_16_kerthang_015" type="org.l2j.gameserver.world.zone.type.EffectZone">
+        <polygon min-z="-11556" max-z="-11156">
+            <point x="-79808" y="-48756"/>
+            <point x="-79978" y="-48868"/>
+            <point x="-80106" y="-49157"/>
+            <point x="-80072" y="-49370"/>
+            <point x="-79866" y="-49573"/>
+            <point x="-79552" y="-49644"/>
+            <point x="-79377" y="-49624"/>
+            <point x="-79134" y="-49245"/>
+            <point x="-78940" y="-48848"/>
+            <point x="-79014" y="-48756"/>
+            <point x="-79335" y="-48852"/>
+            <point x="-79634" y="-48702"/>
+        </polygon>
+        <property name="chance" value="100"/>
+        <!-- stat name="unitTick" val="5" / -->
+        <property name="default_enabled" value="false"/>
+        <property name="skillIdLvl" value="4148-8;"/> <!-- s_area_poison8 -->
+    </zone>
+    <zone name="17_16_kerthang_016" type="org.l2j.gameserver.world.zone.type.EffectZone">
+        <polygon min-z="-11588" max-z="-11188">
+            <point x="-82239" y="-44711"/>
+            <point x="-82588" y="-45030"/>
+            <point x="-82757" y="-45489"/>
+            <point x="-82667" y="-45972"/>
+            <point x="-82358" y="-46366"/>
+            <point x="-81902" y="-46539"/>
+            <point x="-81406" y="-46463"/>
+            <point x="-81016" y="-46161"/>
+            <point x="-80833" y="-45639"/>
+            <point x="-80950" y="-45107"/>
+            <point x="-81327" y="-44740"/>
+            <point x="-81805" y="-44621"/>
+        </polygon>
+        <property name="chance" value="100"/>
+        <!-- stat name="unitTick" val="5" / -->
+        <property name="default_enabled" value="false"/>
+        <property name="skillIdLvl" value="4148-9;"/> <!-- s_area_poison9 -->
+    </zone>
+    <zone name="17_16_kerthang_017" type="org.l2j.gameserver.world.zone.type.EffectZone">
+        <polygon min-z="-11552" max-z="-11152">
+            <point x="-81210" y="-44263"/>
+            <point x="-81138" y="-44561"/>
+            <point x="-81212" y="-44951"/>
+            <point x="-81121" y="-45040"/>
+            <point x="-80805" y="-44788"/>
+            <point x="-80549" y="-44832"/>
+            <point x="-80196" y="-44492"/>
+            <point x="-80156" y="-44278"/>
+            <point x="-80216" y="-44058"/>
+            <point x="-80349" y="-43880"/>
+            <point x="-80664" y="-43767"/>
+            <point x="-81064" y="-43830"/>
+        </polygon>
+        <property name="chance" value="100"/>
+        <!-- stat name="unitTick" val="5" / -->
+        <property name="default_enabled" value="false"/>
+        <property name="skillIdLvl" value="4148-9;"/> <!-- s_area_poison9 -->
+    </zone>
+    <zone name="17_16_kerthang_018" type="org.l2j.gameserver.world.zone.type.EffectZone">
+        <polygon min-z="-11564" max-z="-11164">
+            <point x="-83192" y="-43876"/>
+            <point x="-83402" y="-44074"/>
+            <point x="-83494" y="-44317"/>
+            <point x="-83434" y="-44579"/>
+            <point x="-83257" y="-44789"/>
+            <point x="-83014" y="-44877"/>
+            <point x="-82836" y="-44838"/>
+            <point x="-82446" y="-44990"/>
+            <point x="-82356" y="-44900"/>
+            <point x="-82462" y="-44126"/>
+            <point x="-82632" y="-43910"/>
+            <point x="-82906" y="-43810"/>
+        </polygon>
+        <property name="chance" value="100"/>
+        <!-- stat name="unitTick" val="5" / -->
+        <property name="default_enabled" value="false"/>
+        <property name="skillIdLvl" value="4148-9;"/> <!-- s_area_poison9 -->
+    </zone>
+    <zone name="17_16_kerthang_019" type="org.l2j.gameserver.world.zone.type.EffectZone">
+        <polygon min-z="-11620" max-z="-11220">
+            <point x="-82317" y="-46433"/>
+            <point x="-82874" y="-46567"/>
+            <point x="-83088" y="-46886"/>
+            <point x="-83031" y="-47286"/>
+            <point x="-82811" y="-47535"/>
+            <point x="-82492" y="-47589"/>
+            <point x="-82317" y="-47540"/>
+            <point x="-82082" y="-47358"/>
+            <point x="-82014" y="-47105"/>
+            <point x="-81984" y="-46865"/>
+            <point x="-81972" y="-46409"/>
+            <point x="-82065" y="-46334"/>
+        </polygon>
+        <property name="chance" value="100"/>
+        <!-- stat name="unitTick" val="5" / -->
+        <property name="default_enabled" value="false"/>
+        <property name="skillIdLvl" value="4148-9;"/> <!-- s_area_poison9 -->
+    </zone>
+    <zone name="17_16_kerthang_020" type="org.l2j.gameserver.world.zone.type.EffectZone">
+        <polygon min-z="-11584" max-z="-11184">
+            <point x="-81426" y="-46342"/>
+            <point x="-81671" y="-46988"/>
+            <point x="-81631" y="-47261"/>
+            <point x="-81552" y="-47398"/>
+            <point x="-81387" y="-47476"/>
+            <point x="-81211" y="-47523"/>
+            <point x="-81011" y="-47490"/>
+            <point x="-80830" y="-47320"/>
+            <point x="-80762" y="-47102"/>
+            <point x="-80797" y="-46835"/>
+            <point x="-80910" y="-46690"/>
+            <point x="-81303" y="-46300"/>
+        </polygon>
+        <property name="chance" value="100"/>
+        <!-- stat name="unitTick" val="5" / -->
+        <property name="default_enabled" value="false"/>
+        <property name="skillIdLvl" value="4148-9;"/> <!-- s_area_poison9 -->
+    </zone>
+    <zone name="17_16_kerthang_021" type="org.l2j.gameserver.world.zone.type.EffectZone">
+        <polygon min-z="-11573" max-z="-11173">
+            <point x="-85653" y="-47093"/>
+            <point x="-86082" y="-47396"/>
+            <point x="-86269" y="-47854"/>
+            <point x="-86219" y="-48367"/>
+            <point x="-85940" y="-48743"/>
+            <point x="-85531" y="-48940"/>
+            <point x="-85000" y="-48917"/>
+            <point x="-84627" y="-48679"/>
+            <point x="-84385" y="-48261"/>
+            <point x="-84398" y="-47723"/>
+            <point x="-84700" y="-47244"/>
+            <point x="-85067" y="-47074"/>
+        </polygon>
+        <property name="chance" value="100"/>
+        <!-- stat name="unitTick" val="5" / -->
+        <property name="default_enabled" value="false"/>
+        <property name="skillIdLvl" value="4148-5;"/> <!-- s_area_poison5 -->
+    </zone>
+    <zone name="17_16_kerthang_022" type="org.l2j.gameserver.world.zone.type.EffectZone">
+        <polygon min-z="-11586" max-z="-11186">
+            <point x="-87045" y="-48304"/>
+            <point x="-87255" y="-48487"/>
+            <point x="-87347" y="-48730"/>
+            <point x="-87300" y="-49010"/>
+            <point x="-87110" y="-49219"/>
+            <point x="-86837" y="-49329"/>
+            <point x="-86460" y="-49213"/>
+            <point x="-86282" y="-48847"/>
+            <point x="-86052" y="-48470"/>
+            <point x="-86112" y="-48361"/>
+            <point x="-86496" y="-48349"/>
+            <point x="-86765" y="-48249"/>
+        </polygon>
+        <property name="chance" value="100"/>
+        <!-- stat name="unitTick" val="5" / -->
+        <property name="default_enabled" value="false"/>
+        <property name="skillIdLvl" value="4148-5;"/> <!-- s_area_poison5 -->
+    </zone>
+    <zone name="17_16_kerthang_023" type="org.l2j.gameserver.world.zone.type.EffectZone">
+        <polygon min-z="-11590" max-z="-11190">
+            <point x="-84541" y="-48397"/>
+            <point x="-84653" y="-48474"/>
+            <point x="-84674" y="-48959"/>
+            <point x="-84629" y="-49359"/>
+            <point x="-84397" y="-49608"/>
+            <point x="-84078" y="-49662"/>
+            <point x="-83903" y="-49613"/>
+            <point x="-83684" y="-49471"/>
+            <point x="-83582" y="-49260"/>
+            <point x="-83576" y="-48928"/>
+            <point x="-83737" y="-48704"/>
+            <point x="-83971" y="-48580"/>
+        </polygon>
+        <property name="chance" value="100"/>
+        <!-- stat name="unitTick" val="5" / -->
+        <property name="default_enabled" value="false"/>
+        <property name="skillIdLvl" value="4148-5;"/> <!-- s_area_poison5 -->
+    </zone>
+    <zone name="17_16_kerthang_024" type="org.l2j.gameserver.world.zone.type.EffectZone">
+        <polygon min-z="-11601" max-z="-11201">
+            <point x="-84063" y="-47545"/>
+            <point x="-84484" y="-47735"/>
+            <point x="-84486" y="-47849"/>
+            <point x="-84164" y="-47930"/>
+            <point x="-84066" y="-48154"/>
+            <point x="-83805" y="-48310"/>
+            <point x="-83525" y="-48284"/>
+            <point x="-83340" y="-48126"/>
+            <point x="-83253" y="-47916"/>
+            <point x="-83288" y="-47649"/>
+            <point x="-83527" y="-47408"/>
+            <point x="-83804" y="-47405"/>
+        </polygon>
+        <property name="chance" value="100"/>
+        <!-- stat name="unitTick" val="5" / -->
+        <property name="default_enabled" value="false"/>
+        <property name="skillIdLvl" value="4148-5;"/> <!-- s_area_poison5 -->
+    </zone>
+    <zone name="17_16_kerthang_025" type="org.l2j.gameserver.world.zone.type.EffectZone">
+        <polygon min-z="-11559" max-z="-11159">
+            <point x="-86433" y="-46106"/>
+            <point x="-86693" y="-46266"/>
+            <point x="-86794" y="-46709"/>
+            <point x="-86613" y="-46969"/>
+            <point x="-86348" y="-47100"/>
+            <point x="-86051" y="-47143"/>
+            <point x="-85741" y="-47270"/>
+            <point x="-85633" y="-47202"/>
+            <point x="-85744" y="-46803"/>
+            <point x="-85746" y="-46374"/>
+            <point x="-85870" y="-46233"/>
+            <point x="-86090" y="-46061"/>
+        </polygon>
+        <property name="chance" value="100"/>
+        <!-- stat name="unitTick" val="5" / -->
+        <property name="default_enabled" value="false"/>
+        <property name="skillIdLvl" value="4148-5;"/> <!-- s_area_poison5 -->
+    </zone>
+    <zone name="17_16_kerthang_area_01" type="org.l2j.gameserver.world.zone.type.ArenaZone">
+        <polygon min-z="-11624" max-z="-11224">
+            <point x="-85850" y="-45960"/>
+            <point x="-86761" y="-45935"/>
+            <point x="-87000" y="-46986"/>
+            <point x="-87535" y="-48793"/>
+            <point x="-87049" y="-49419"/>
+            <point x="-85458" y="-49051"/>
+            <point x="-84224" y="-49803"/>
+            <point x="-83446" y="-49477"/>
+            <point x="-83154" y="-47528"/>
+            <point x="-83863" y="-47202"/>
+            <point x="-84291" y="-47449"/>
+            <point x="-84711" y="-47094"/>
+        </polygon>
+    </zone>
+    <zone name="17_16_kerthang_area_02" type="org.l2j.gameserver.world.zone.type.ArenaZone">
+        <polygon min-z="-11620" max-z="-11220">
+            <point x="-84112" y="-50103"/>
+            <point x="-84830" y="-51342"/>
+            <point x="-86142" y="-51844"/>
+            <point x="-86553" y="-52634"/>
+            <point x="-85640" y="-53190"/>
+            <point x="-84380" y="-54211"/>
+            <point x="-83379" y="-54413"/>
+            <point x="-82972" y="-52054"/>
+            <point x="-81938" y="-51822"/>
+            <point x="-82193" y="-50685"/>
+            <point x="-82732" y="-50575"/>
+            <point x="-83454" y="-49986"/>
+        </polygon>
+    </zone>
+    <zone name="17_16_kerthang_area_03" type="org.l2j.gameserver.world.zone.type.ArenaZone">
+        <polygon min-z="-11716" max-z="-11316">
+            <point x="-79843" y="-49874"/>
+            <point x="-81401" y="-50399"/>
+            <point x="-81709" y="-51148"/>
+            <point x="-81639" y="-51704"/>
+            <point x="-80712" y="-52824"/>
+            <point x="-80414" y="-54463"/>
+            <point x="-79510" y="-54322"/>
+            <point x="-78717" y="-52952"/>
+            <point x="-77725" y="-52968"/>
+            <point x="-77416" y="-51996"/>
+            <point x="-78890" y="-51583"/>
+            <point x="-79378" y="-50568"/>
+        </polygon>
+    </zone>
+    <zone name="17_16_kerthang_area_04" type="org.l2j.gameserver.world.zone.type.ArenaZone">
+        <polygon min-z="-11592" max-z="-11192">
+            <point x="-79343" y="-47478"/>
+            <point x="-80117" y="-47109"/>
+            <point x="-80672" y="-47858"/>
+            <point x="-80382" y="-49156"/>
+            <point x="-79813" y="-49685"/>
+            <point x="-79130" y="-49730"/>
+            <point x="-77951" y="-49052"/>
+            <point x="-76485" y="-49456"/>
+            <point x="-76221" y="-48619"/>
+            <point x="-76710" y="-48032"/>
+            <point x="-76946" y="-46451"/>
+            <point x="-77668" y="-45794"/>
+        </polygon>
+    </zone>
+    <zone name="17_16_kerthang_area_05" type="org.l2j.gameserver.world.zone.type.ArenaZone">
+        <polygon min-z="-11640" max-z="-11240">
+            <point x="-82326" y="-43857"/>
+            <point x="-83361" y="-43681"/>
+            <point x="-83614" y="-44430"/>
+            <point x="-82884" y="-46072"/>
+            <point x="-83209" y="-47165"/>
+            <point x="-82621" y="-47718"/>
+            <point x="-81071" y="-47576"/>
+            <point x="-80636" y="-47169"/>
+            <point x="-80853" y="-46291"/>
+            <point x="-79968" y="-44123"/>
+            <point x="-80245" y="-43614"/>
+            <point x="-81544" y="-43878"/>
+        </polygon>
+    </zone>
+    <zone name="17_16_kerthang_restart_01" type="org.l2j.gameserver.world.zone.type.NoRestartZone">
+        <polygon min-z="-11624" max-z="-11224">
+            <point x="-85850" y="-45960"/>
+            <point x="-86761" y="-45935"/>
+            <point x="-87000" y="-46986"/>
+            <point x="-87535" y="-48793"/>
+            <point x="-87049" y="-49419"/>
+            <point x="-85458" y="-49051"/>
+            <point x="-84224" y="-49803"/>
+            <point x="-83446" y="-49477"/>
+            <point x="-83154" y="-47528"/>
+            <point x="-83863" y="-47202"/>
+            <point x="-84291" y="-47449"/>
+            <point x="-84711" y="-47094"/>
+        </polygon>
+        <property name="restartTime" value="0"/>
+        <property name="restartAllowedTime" value="0"/>
+    </zone>
+    <zone name="17_16_kerthang_restart_02" type="org.l2j.gameserver.world.zone.type.NoRestartZone">
+        <polygon min-z="-11620" max-z="-11220">
+            <point x="-84112" y="-50103"/>
+            <point x="-84830" y="-51342"/>
+            <point x="-86142" y="-51844"/>
+            <point x="-86553" y="-52634"/>
+            <point x="-85640" y="-53190"/>
+            <point x="-84380" y="-54211"/>
+            <point x="-83379" y="-54413"/>
+            <point x="-82972" y="-52054"/>
+            <point x="-81938" y="-51822"/>
+            <point x="-82193" y="-50685"/>
+            <point x="-82732" y="-50575"/>
+            <point x="-83454" y="-49986"/>
+        </polygon>
+        <property name="restartTime" value="0"/>
+        <property name="restartAllowedTime" value="0"/>
+    </zone>
+    <zone name="17_16_kerthang_restart_03" type="org.l2j.gameserver.world.zone.type.NoRestartZone">
+        <polygon min-z="-11716" max-z="-11316">
+            <point x="-79843" y="-49874"/>
+            <point x="-81401" y="-50399"/>
+            <point x="-81709" y="-51148"/>
+            <point x="-81639" y="-51704"/>
+            <point x="-80712" y="-52824"/>
+            <point x="-80414" y="-54463"/>
+            <point x="-79510" y="-54322"/>
+            <point x="-78717" y="-52952"/>
+            <point x="-77725" y="-52968"/>
+            <point x="-77416" y="-51996"/>
+            <point x="-78890" y="-51583"/>
+            <point x="-79378" y="-50568"/>
+        </polygon>
+        <property name="restartTime" value="0"/>
+        <property name="restartAllowedTime" value="0"/>
+    </zone>
+    <zone name="17_16_kerthang_restart_04" type="org.l2j.gameserver.world.zone.type.NoRestartZone">
+        <polygon min-z="-11592" max-z="-11192">
+            <point x="-79343" y="-47478"/>
+            <point x="-80117" y="-47109"/>
+            <point x="-80672" y="-47858"/>
+            <point x="-80382" y="-49156"/>
+            <point x="-79813" y="-49685"/>
+            <point x="-79130" y="-49730"/>
+            <point x="-77951" y="-49052"/>
+            <point x="-76485" y="-49456"/>
+            <point x="-76221" y="-48619"/>
+            <point x="-76710" y="-48032"/>
+            <point x="-76946" y="-46451"/>
+            <point x="-77668" y="-45794"/>
+        </polygon>
+        <property name="restartTime" value="0"/>
+        <property name="restartAllowedTime" value="0"/>
+    </zone>
+    <zone name="17_16_kerthang_restart_05" type="org.l2j.gameserver.world.zone.type.NoRestartZone">
+        <polygon min-z="-11640" max-z="-11240">
+            <point x="-82326" y="-43857"/>
+            <point x="-83361" y="-43681"/>
+            <point x="-83614" y="-44430"/>
+            <point x="-82884" y="-46072"/>
+            <point x="-83209" y="-47165"/>
+            <point x="-82621" y="-47718"/>
+            <point x="-81071" y="-47576"/>
+            <point x="-80636" y="-47169"/>
+            <point x="-80853" y="-46291"/>
+            <point x="-79968" y="-44123"/>
+            <point x="-80245" y="-43614"/>
+            <point x="-81544" y="-43878"/>
+        </polygon>
+        <property name="restartTime" value="0"/>
+        <property name="restartAllowedTime" value="0"/>
+    </zone>
+    <zone name="17_16_kerthang_peace_01" type="org.l2j.gameserver.world.zone.type.PeaceZone">
+        <polygon min-z="-10839" max-z="-10439">
+            <point x="-87059" y="-51858"/>
+            <point x="-85176" y="-51100"/>
+            <point x="-85652" y="-49480"/>
+            <point x="-87711" y="-50204"/>
+        </polygon>
+    </zone>
+    <zone name="17_16_kerthang_peace_02" type="org.l2j.gameserver.world.zone.type.PeaceZone">
+        <polygon min-z="-10839" max-z="-10439">
+            <point x="-82729" y="-54797"/>
+            <point x="-81105" y="-54768"/>
+            <point x="-81125" y="-52888"/>
+            <point x="-82702" y="-52897"/>
+        </polygon>
+    </zone>
+    <zone name="17_16_kerthang_peace_03" type="org.l2j.gameserver.world.zone.type.PeaceZone">
+        <polygon min-z="-10791" max-z="-10391">
+            <point x="-78609" y="-51115"/>
+            <point x="-76726" y="-51679"/>
+            <point x="-76226" y="-49948"/>
+            <point x="-78187" y="-49524"/>
+        </polygon>
+    </zone>
+    <zone name="17_16_kerthang_peace_04" type="org.l2j.gameserver.world.zone.type.PeaceZone">
+        <polygon min-z="-10811" max-z="-10411">
+            <point x="-80338" y="-45742"/>
+            <point x="-78973" y="-46689"/>
+            <point x="-77733" y="-45069"/>
+            <point x="-79261" y="-44052"/>
+        </polygon>
+    </zone>
+    <zone name="17_16_kerthang_peace_05" type="org.l2j.gameserver.world.zone.type.PeaceZone">
+        <polygon min-z="-10823" max-z="-10423">
+            <point x="-85950" y="-45198"/>
+            <point x="-84604" y="-46609"/>
+            <point x="-83376" y="-45692"/>
+            <point x="-84521" y="-44082"/>
+        </polygon>
+    </zone>
+</list>

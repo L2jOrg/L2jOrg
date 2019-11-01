@@ -58,7 +58,7 @@ public class PeaceZone extends Zone {
     public void setEnabled(boolean state) {
         super.setEnabled(state);
         if (state) {
-            getPlayersInside().forEach(player -> {
+            forEachPlayer(player -> {
                 revalidateInZone(player);
 
                 if(nonNull(player.getPet())) {
@@ -68,7 +68,7 @@ public class PeaceZone extends Zone {
                 player.getServitors().values().forEach(this::revalidateInZone);
             });
         } else {
-            getCreaturesInside().forEach(this::removeCreature);
+            forEachCreature(this::removeCreature);
         }
     }
 }

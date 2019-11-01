@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list enabled="false" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org ../zones.xsd">
+    <!-- Custom No Store Zones -->
+    <!-- Giran zones coords contributed by Nekys -->
+    <zone name="Giran northern coridor west" type="org.l2j.gameserver.world.zone.type.NoStoreZone">
+        <cube min-z="-3400" max-z="-3550">
+            <point x="81446" y="143530"/>
+            <point x="81635" y="147720"/>
+        </cube>
+    </zone>
+    <zone name="Giran northern coridor east" type="org.l2j.gameserver.world.zone.type.NoStoreZone">
+        <cube min-z="-3350" max-z="-3450">
+            <point x="83790" y="143495"/>
+            <point x="84000" y="147230"/>
+        </cube>
+    </zone>
+    <zone name="Giran western coridor (up to the Dusk Priestess)" type="org.l2j.gameserver.world.zone.type.NoStoreZone">
+        <cube min-z="-3650" max-z="-3400">
+            <point x="77080" y="148525"/>
+            <point x="81780" y="148720"/>
+        </cube>
+    </zone>
+    <zone name="Giran southern coridor" type="org.l2j.gameserver.world.zone.type.NoStoreZone">
+        <cube min-z="-3550" max-z="-3400">
+            <point x="81435" y="149530"/>
+            <point x="81640" y="152920"/>
+        </cube>
+    </zone>
+    <zone name="Giran northern path" type="org.l2j.gameserver.world.zone.type.NoStoreZone">
+        <cube min-z="-3500" max-z="-3400">
+            <point x="80930" y="147680"/>
+            <point x="82940" y="147875"/>
+        </cube>
+    </zone>
+    <zone name="Giran western path" type="org.l2j.gameserver.world.zone.type.NoStoreZone">
+        <cube min-z="-3500" max-z="-3400">
+            <point x="80930" y="147680"/>
+            <point x="81115" y="149540"/>
+        </cube>
+    </zone>
+    <zone name="Giran southern path" type="org.l2j.gameserver.world.zone.type.NoStoreZone">
+        <cube min-z="-3500" max-z="-3400">
+            <point x="80925" y="149340"/>
+            <point x="82940" y="149535"/>
+        </cube>
+    </zone>
+    <zone name="Giran large temple area (gatekeeper and Priest of Dawn area)" type="org.l2j.gameserver.world.zone.type.NoStoreZone">
+        <cube min-z="-3500" max-z="-3350">
+            <point x="82735" y="147000"/>
+            <point x="84320" y="149780"/>
+        </cube>
+    </zone>
+    <zone name="Giran olympiad manager" type="org.l2j.gameserver.world.zone.type.NoStoreZone">
+        <cube min-z="-3500" max-z="-3400">
+            <point x="81985" y="147450"/>
+            <point x="82205" y="147710"/>
+        </cube>
+    </zone>
+    <zone name="Giran manor manager" type="org.l2j.gameserver.world.zone.type.NoStoreZone">
+        <cube min-z="-3500" max-z="-3400">
+            <point x="81865" y="149530"/>
+            <point x="82030" y="149680"/>
+        </cube>
+    </zone>
+    <zone name="Giran auctioneer and gabrielle" type="org.l2j.gameserver.world.zone.type.NoStoreZone">
+        <cube min-z="-3500" max-z="-3400">
+            <point x="81205" y="149520"/>
+            <point x="81510" y="149830"/>
+        </cube>
+    </zone>
+    <zone name="Giran path to taurin" type="org.l2j.gameserver.world.zone.type.NoStoreZone">
+        <cube min-z="-3550" max-z="-3450">
+            <point x="81055" y="146820"/>
+            <point x="81455" y="147000"/>
+        </cube>
+    </zone>
+    <zone name="Giran path to warehouse" type="org.l2j.gameserver.world.zone.type.NoStoreZone">
+        <cube min-z="-3550" max-z="-3450">
+            <point x="81620" y="146465"/>
+            <point x="82035" y="146680"/>
+        </cube>
+    </zone>
+    <zone name="Giran Taurin" type="org.l2j.gameserver.world.zone.type.NoStoreZone">
+        <cube min-z="-3550" max-z="-3450">
+            <point x="80655" y="146350"/>
+            <point x="80855" y="146460"/>
+        </cube>
+    </zone>
+    <zone name="Giran Collob " type="org.l2j.gameserver.world.zone.type.NoStoreZone">
+        <cube min-z="-3550" max-z="-3450">
+            <point x="79200" y="149455"/>
+            <point x="79300" y="149645"/>
+        </cube>
+    </zone>
+    <zone name="Aden olympiad manager square" type="org.l2j.gameserver.world.zone.type.NoStoreZone">
+        <cube min-z="-2250" max-z="-2150">
+            <point x="146841" y="26541"/>
+            <point x="148071" y="27425"/>
+        </cube>
+    </zone>
+    <zone name="Aden central stairs" type="org.l2j.gameserver.world.zone.type.NoStoreZone">
+        <cube min-z="-2250" max-z="-1950">
+            <point x="147273" y="25941"/>
+            <point x="147645" y="26538"/>
+        </cube>
+    </zone>
+    <zone name="Aden temple square" type="org.l2j.gameserver.world.zone.type.NoStoreZone">
+        <cube min-z="-2050" max-z="-1950">
+            <point x="146233" y="25938"/>
+            <point x="148729" y="25553"/>
+        </cube>
+    </zone>
+</list>

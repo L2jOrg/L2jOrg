@@ -28,7 +28,7 @@ import static org.l2j.gameserver.util.GameUtils.isPlayer;
  *
  * @author durgus, DS
  */
-public class OlympiadStadiumZone extends ZoneRespawn {
+public class OlympiadStadiumZone extends SpawnZone {
     private final List<Door> doors = new ArrayList<>(2);
     private final List<Spawn> buffers = new ArrayList<>(2);
     private final List<Location> spectatorLocations = new ArrayList<>(1);
@@ -54,10 +54,6 @@ public class OlympiadStadiumZone extends ZoneRespawn {
         } else {
             super.parseLoc(x, y, z, type);
         }
-    }
-
-    public final void registerTask(OlympiadGameTask task) {
-        getSettings().setTask(task);
     }
 
     @Override
@@ -134,10 +130,6 @@ public class OlympiadStadiumZone extends ZoneRespawn {
 
         public OlympiadGameTask getOlympiadTask() {
             return _task;
-        }
-
-        void setTask(OlympiadGameTask task) {
-            _task = task;
         }
 
         @Override

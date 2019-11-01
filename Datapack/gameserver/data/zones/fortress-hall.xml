@@ -1,21 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org zones.xsd">
     <!-- Fortress Zones -->
-    <zone name="gludio_fort_a" type="org.l2j.gameserver.world.zone.type.FortZone" form="Polygon" minZ="-3800" maxZ="1200">
+    <zone name="gludio_fort_a" type="org.l2j.gameserver.world.zone.type.FortZone">
+        <polygon min-z="-3800" max-z="1200">
+            <point x="-51659" y="154611"/>
+            <point x="-50832" y="155421"/>
+            <point x="-50536" y="156414"/>
+            <point x="-50806" y="157482"/>
+            <point x="-51574" y="158294"/>
+            <point x="-52759" y="158667"/>
+            <point x="-53851" y="158413"/>
+            <point x="-54716" y="157600"/>
+            <point x="-54996" y="156665"/>
+            <point x="-54727" y="155525"/>
+            <point x="-53949" y="154717"/>
+            <point x="-52755" y="154357"/>
+        </polygon>
         <property name="fortId" value="101"/>
         <!-- residence_territory -->
-        <point x="-51659" y="154611"/>
-        <point x="-50832" y="155421"/>
-        <point x="-50536" y="156414"/>
-        <point x="-50806" y="157482"/>
-        <point x="-51574" y="158294"/>
-        <point x="-52759" y="158667"/>
-        <point x="-53851" y="158413"/>
-        <point x="-54716" y="157600"/>
-        <point x="-54996" y="156665"/>
-        <point x="-54727" y="155525"/>
-        <point x="-53949" y="154717"/>
-        <point x="-52755" y="154357"/>
         <!-- owner_restart_point_list -->
         <spawn x="-52713" y="156914" z="-1728"/>
         <spawn x="-52584" y="156931" z="-1728"/>
@@ -57,21 +59,23 @@
         <spawn x="-50272" y="152355" z="-2720" type="banish"/>
         <spawn x="-50488" y="152155" z="-2752" type="banish"/>
     </zone>
-    <zone name="gludio_fort_b" type="org.l2j.gameserver.world.zone.type.FortZone" form="Polygon" minZ="-4948" maxZ="52">
+    <zone name="gludio_fort_b" type="org.l2j.gameserver.world.zone.type.FortZone">
+        <polygon min-z="-4948" max-z="52">
+            <point x="-23469" y="217427"/>
+            <point x="-21899" y="217420"/>
+            <point x="-20790" y="218057"/>
+            <point x="-20138" y="219154"/>
+            <point x="-20138" y="220597"/>
+            <point x="-20764" y="221707"/>
+            <point x="-21873" y="222346"/>
+            <point x="-23482" y="222346"/>
+            <point x="-24585" y="221708"/>
+            <point x="-25226" y="220586"/>
+            <point x="-25226" y="219175"/>
+            <point x="-24585" y="218079"/>
+        </polygon>
         <property name="fortId" value="102"/>
         <!-- residence_territory -->
-        <point x="-23469" y="217427"/>
-        <point x="-21899" y="217420"/>
-        <point x="-20790" y="218057"/>
-        <point x="-20138" y="219154"/>
-        <point x="-20138" y="220597"/>
-        <point x="-20764" y="221707"/>
-        <point x="-21873" y="222346"/>
-        <point x="-23482" y="222346"/>
-        <point x="-24585" y="221708"/>
-        <point x="-25226" y="220586"/>
-        <point x="-25226" y="219175"/>
-        <point x="-24585" y="218079"/>
         <!-- owner_restart_point_list -->
         <spawn x="-22654" y="219325" z="-2912"/>
         <spawn x="-22755" y="219405" z="-2912"/>
@@ -113,21 +117,23 @@
         <spawn x="-16269" y="213103" z="-3656" type="banish"/>
         <spawn x="-16339" y="212691" z="-3680" type="banish"/>
     </zone>
-    <zone name="dion_fort" type="org.l2j.gameserver.world.zone.type.FortZone" form="Polygon" minZ="-4912" maxZ="88">
+    <zone name="dion_fort" type="org.l2j.gameserver.world.zone.type.FortZone">
+        <polygon min-z="-4912" max-z="88">
+            <point x="15965" y="185955"/>
+            <point x="17042" y="185894"/>
+            <point x="18052" y="186385"/>
+            <point x="18750" y="187436"/>
+            <point x="18832" y="188535"/>
+            <point x="18349" y="189539"/>
+            <point x="17406" y="190143"/>
+            <point x="16315" y="190223"/>
+            <point x="15353" y="189773"/>
+            <point x="14613" y="188679"/>
+            <point x="14545" y="187592"/>
+            <point x="15028" y="186592"/>
+        </polygon>
         <property name="fortId" value="103"/>
         <!-- residence_territory -->
-        <point x="15965" y="185955"/>
-        <point x="17042" y="185894"/>
-        <point x="18052" y="186385"/>
-        <point x="18750" y="187436"/>
-        <point x="18832" y="188535"/>
-        <point x="18349" y="189539"/>
-        <point x="17406" y="190143"/>
-        <point x="16315" y="190223"/>
-        <point x="15353" y="189773"/>
-        <point x="14613" y="188679"/>
-        <point x="14545" y="187592"/>
-        <point x="15028" y="186592"/>
         <!-- owner_restart_point_list -->
         <spawn x="16973" y="187783" z="-2592"/>
         <spawn x="16849" y="187782" z="-2592"/>
@@ -163,21 +169,23 @@
         <spawn x="15324" y="182643" z="-3600" type="banish"/>
         <spawn x="15641" y="182598" z="-3608" type="banish"/>
     </zone>
-    <zone name="giran_fort" type="org.l2j.gameserver.world.zone.type.FortZone" form="Polygon" minZ="-4592" maxZ="408">
+    <zone name="giran_fort" type="org.l2j.gameserver.world.zone.type.FortZone">
+        <polygon min-z="-4592" max-z="408">
+            <point x="125385" y="120559"/>
+            <point x="126777" y="120568"/>
+            <point x="127891" y="121208"/>
+            <point x="128495" y="122323"/>
+            <point x="128495" y="123911"/>
+            <point x="127882" y="125000"/>
+            <point x="126760" y="125672"/>
+            <point x="125373" y="125672"/>
+            <point x="124227" y="125046"/>
+            <point x="123626" y="123899"/>
+            <point x="123611" y="122318"/>
+            <point x="124235" y="121233"/>
+        </polygon>
         <property name="fortId" value="104"/>
         <!-- residence_territory -->
-        <point x="125385" y="120559"/>
-        <point x="126777" y="120568"/>
-        <point x="127891" y="121208"/>
-        <point x="128495" y="122323"/>
-        <point x="128495" y="123911"/>
-        <point x="127882" y="125000"/>
-        <point x="126760" y="125672"/>
-        <point x="125373" y="125672"/>
-        <point x="124227" y="125046"/>
-        <point x="123626" y="123899"/>
-        <point x="123611" y="122318"/>
-        <point x="124235" y="121233"/>
         <!-- owner_restart_point_list -->
         <spawn x="126456" y="123393" z="-2256"/>
         <spawn x="126488" y="123259" z="-2256"/>
@@ -216,21 +224,23 @@
         <spawn x="124988" y="128784" z="-3072" type="banish"/>
         <spawn x="124982" y="129012" z="-3048" type="banish"/>
     </zone>
-    <zone name="oren_fort" type="org.l2j.gameserver.world.zone.type.FortZone" form="Polygon" minZ="-4800" maxZ="200">
+    <zone name="oren_fort" type="org.l2j.gameserver.world.zone.type.FortZone">
+        <polygon min-z="-4800" max-z="200">
+            <point x="71707" y="2585"/>
+            <point x="72746" y="2201"/>
+            <point x="73817" y="2370"/>
+            <point x="74666" y="3080"/>
+            <point x="75054" y="4101"/>
+            <point x="74873" y="5174"/>
+            <point x="74061" y="6176"/>
+            <point x="73020" y="6557"/>
+            <point x="71978" y="6382"/>
+            <point x="71132" y="5689"/>
+            <point x="70737" y="4675"/>
+            <point x="70933" y="3479"/>
+        </polygon>
         <property name="fortId" value="105"/>
         <!-- residence_territory -->
-        <point x="71707" y="2585"/>
-        <point x="72746" y="2201"/>
-        <point x="73817" y="2370"/>
-        <point x="74666" y="3080"/>
-        <point x="75054" y="4101"/>
-        <point x="74873" y="5174"/>
-        <point x="74061" y="6176"/>
-        <point x="73020" y="6557"/>
-        <point x="71978" y="6382"/>
-        <point x="71132" y="5689"/>
-        <point x="70737" y="4675"/>
-        <point x="70933" y="3479"/>
         <!-- owner_restart_point_list -->
         <spawn x="73185" y="4537" z="-2720"/>
         <spawn x="73311" y="4516" z="-2720"/>
@@ -277,21 +287,23 @@
         <spawn x="75447" y="9001" z="-3576" type="banish"/>
         <spawn x="75265" y="9276" z="-3568" type="banish"/>
     </zone>
-    <zone name="aden_fort_a" type="org.l2j.gameserver.world.zone.type.FortZone" form="Polygon" minZ="-4953" maxZ="47">
+    <zone name="aden_fort_a" type="org.l2j.gameserver.world.zone.type.FortZone">
+        <polygon min-z="-4953" max-z="47">
+            <point x="154098" y="53410"/>
+            <point x="155197" y="53250"/>
+            <point x="156208" y="53634"/>
+            <point x="156913" y="54493"/>
+            <point x="157087" y="55545"/>
+            <point x="156702" y="56582"/>
+            <point x="155720" y="57386"/>
+            <point x="154634" y="57567"/>
+            <point x="153623" y="57193"/>
+            <point x="152917" y="56338"/>
+            <point x="152741" y="55266"/>
+            <point x="153129" y="54229"/>
+        </polygon>
         <property name="fortId" value="106"/>
         <!-- residence_territory -->
-        <point x="154098" y="53410"/>
-        <point x="155197" y="53250"/>
-        <point x="156208" y="53634"/>
-        <point x="156913" y="54493"/>
-        <point x="157087" y="55545"/>
-        <point x="156702" y="56582"/>
-        <point x="155720" y="57386"/>
-        <point x="154634" y="57567"/>
-        <point x="153623" y="57193"/>
-        <point x="152917" y="56338"/>
-        <point x="152741" y="55266"/>
-        <point x="153129" y="54229"/>
         <!-- owner_restart_point_list -->
         <spawn x="155166" y="55675" z="-2928"/>
         <spawn x="155191" y="55554" z="-2928"/>
@@ -328,21 +340,23 @@
         <spawn x="151075" y="59275" z="-3480" type="banish"/>
         <spawn x="150685" y="59168" z="-3472" type="banish"/>
     </zone>
-    <zone name="aden_fort_b" type="org.l2j.gameserver.world.zone.type.FortZone" form="Polygon" minZ="-5154" maxZ="-154">
+    <zone name="aden_fort_b" type="org.l2j.gameserver.world.zone.type.FortZone">
+        <polygon min-z="-5154" max-z="-154">
+            <point x="189205" y="36940"/>
+            <point x="190614" y="36943"/>
+            <point x="191733" y="37577"/>
+            <point x="192356" y="38695"/>
+            <point x="192372" y="40292"/>
+            <point x="191724" y="41396"/>
+            <point x="190645" y="42022"/>
+            <point x="189203" y="42041"/>
+            <point x="188110" y="41414"/>
+            <point x="187469" y="40314"/>
+            <point x="187458" y="38701"/>
+            <point x="188085" y="37600"/>
+        </polygon>
         <property name="fortId" value="107"/>
         <!-- residence_territory -->
-        <point x="189205" y="36940"/>
-        <point x="190614" y="36943"/>
-        <point x="191733" y="37577"/>
-        <point x="192356" y="38695"/>
-        <point x="192372" y="40292"/>
-        <point x="191724" y="41396"/>
-        <point x="190645" y="42022"/>
-        <point x="189203" y="42041"/>
-        <point x="188110" y="41414"/>
-        <point x="187469" y="40314"/>
-        <point x="187458" y="38701"/>
-        <point x="188085" y="37600"/>
         <!-- owner_restart_point_list -->
         <spawn x="190377" y="39774" z="-3080"/>
         <spawn x="190317" y="39659" z="-3080"/>
@@ -379,21 +393,23 @@
         <spawn x="184749" y="36097" z="-4056" type="banish"/>
         <spawn x="184969" y="36070" z="-4024" type="banish"/>
     </zone>
-    <zone name="inna_fort" type="org.l2j.gameserver.world.zone.type.FortZone" form="Polygon" minZ="-5089" maxZ="-89">
+    <zone name="inna_fort" type="org.l2j.gameserver.world.zone.type.FortZone">
+        <polygon min-z="-5089" max-z="-89">
+            <point x="116755" y="203413"/>
+            <point x="117740" y="202835"/>
+            <point x="118832" y="202803"/>
+            <point x="119957" y="203389"/>
+            <point x="120538" y="204340"/>
+            <point x="120585" y="205449"/>
+            <point x="120080" y="206382"/>
+            <point x="119147" y="206966"/>
+            <point x="118041" y="207027"/>
+            <point x="116923" y="206444"/>
+            <point x="116328" y="205460"/>
+            <point x="116293" y="204354"/>
+        </polygon>
         <property name="fortId" value="108"/>
         <!-- residence_territory -->
-        <point x="116755" y="203413"/>
-        <point x="117740" y="202835"/>
-        <point x="118832" y="202803"/>
-        <point x="119957" y="203389"/>
-        <point x="120538" y="204340"/>
-        <point x="120585" y="205449"/>
-        <point x="120080" y="206382"/>
-        <point x="119147" y="206966"/>
-        <point x="118041" y="207027"/>
-        <point x="116923" y="206444"/>
-        <point x="116328" y="205460"/>
-        <point x="116293" y="204354"/>
         <!-- owner_restart_point_list -->
         <spawn x="118740" y="204589" z="-3008"/>
         <spawn x="118598" y="204592" z="-3008"/>
@@ -425,21 +441,23 @@
         <spawn x="113959" y="201830" z="-3488" type="banish"/>
         <spawn x="114053" y="201766" z="-3496" type="banish"/>
     </zone>
-    <zone name="godad_fort" type="org.l2j.gameserver.world.zone.type.FortZone" form="Polygon" minZ="-4638" maxZ="362">
+    <zone name="godad_fort" type="org.l2j.gameserver.world.zone.type.FortZone">
+        <polygon min-z="-4638" max-z="362">
+            <point x="158644" y="-72935"/>
+            <point x="159905" y="-73008"/>
+            <point x="161018" y="-72457"/>
+            <point x="161832" y="-71222"/>
+            <point x="161912" y="-70015"/>
+            <point x="161340" y="-68851"/>
+            <point x="160029" y="-67981"/>
+            <point x="158763" y="-67885"/>
+            <point x="157631" y="-68454"/>
+            <point x="156828" y="-69663"/>
+            <point x="156751" y="-70872"/>
+            <point x="157305" y="-72039"/>
+        </polygon>
         <property name="fortId" value="109"/>
         <!-- residence_territory -->
-        <point x="158644" y="-72935"/>
-        <point x="159905" y="-73008"/>
-        <point x="161018" y="-72457"/>
-        <point x="161832" y="-71222"/>
-        <point x="161912" y="-70015"/>
-        <point x="161340" y="-68851"/>
-        <point x="160029" y="-67981"/>
-        <point x="158763" y="-67885"/>
-        <point x="157631" y="-68454"/>
-        <point x="156828" y="-69663"/>
-        <point x="156751" y="-70872"/>
-        <point x="157305" y="-72039"/>
         <!-- owner_restart_point_list -->
         <spawn x="159361" y="-69939" z="-2536"/>
         <spawn x="159476" y="-70058" z="-2536"/>
@@ -483,21 +501,23 @@
         <spawn x="159400" y="-77923" z="-3672" type="banish"/>
         <spawn x="159529" y="-77699" z="-3616" type="banish"/>
     </zone>
-    <zone name="rune_fort" type="org.l2j.gameserver.world.zone.type.FortZone" form="Polygon" minZ="-4535" maxZ="465">
+    <zone name="rune_fort" type="org.l2j.gameserver.world.zone.type.FortZone">
+        <polygon min-z="-4535" max-z="465">
+            <point x="68143" y="-63434"/>
+            <point x="69456" y="-63975"/>
+            <point x="70712" y="-63829"/>
+            <point x="71724" y="-63042"/>
+            <point x="72326" y="-61576"/>
+            <point x="72163" y="-60300"/>
+            <point x="71412" y="-59331"/>
+            <point x="70094" y="-58774"/>
+            <point x="68825" y="-58938"/>
+            <point x="67808" y="-59692"/>
+            <point x="67210" y="-61179"/>
+            <point x="67370" y="-62433"/>
+        </polygon>
         <property name="fortId" value="110"/>
         <!-- residence_territory -->
-        <point x="68143" y="-63434"/>
-        <point x="69456" y="-63975"/>
-        <point x="70712" y="-63829"/>
-        <point x="71724" y="-63042"/>
-        <point x="72326" y="-61576"/>
-        <point x="72163" y="-60300"/>
-        <point x="71412" y="-59331"/>
-        <point x="70094" y="-58774"/>
-        <point x="68825" y="-58938"/>
-        <point x="67808" y="-59692"/>
-        <point x="67210" y="-61179"/>
-        <point x="67370" y="-62433"/>
         <!-- owner_restart_point_list -->
         <spawn x="70262" y="-61485" z="-2456"/>
         <spawn x="70283" y="-61645" z="-2456"/>
@@ -538,21 +558,23 @@
         <spawn x="68153" y="-66112" z="-2744" type="banish"/>
         <spawn x="68039" y="-66247" z="-2736" type="banish"/>
     </zone>
-    <zone name="schutt_fort" type="org.l2j.gameserver.world.zone.type.FortZone" form="Polygon" minZ="-4667" maxZ="333">
+    <zone name="schutt_fort" type="org.l2j.gameserver.world.zone.type.FortZone">
+        <polygon min-z="-4667" max-z="333">
+            <point x="108246" y="-142872"/>
+            <point x="109482" y="-143246"/>
+            <point x="110546" y="-143007"/>
+            <point x="111330" y="-142271"/>
+            <point x="111660" y="-141197"/>
+            <point x="111417" y="-140153"/>
+            <point x="110668" y="-139352"/>
+            <point x="109465" y="-138979"/>
+            <point x="108380" y="-139235"/>
+            <point x="107587" y="-139973"/>
+            <point x="107264" y="-141020"/>
+            <point x="107501" y="-142076"/>
+        </polygon>
         <property name="fortId" value="111"/>
         <!-- residence_territory -->
-        <point x="108246" y="-142872"/>
-        <point x="109482" y="-143246"/>
-        <point x="110546" y="-143007"/>
-        <point x="111330" y="-142271"/>
-        <point x="111660" y="-141197"/>
-        <point x="111417" y="-140153"/>
-        <point x="110668" y="-139352"/>
-        <point x="109465" y="-138979"/>
-        <point x="108380" y="-139235"/>
-        <point x="107587" y="-139973"/>
-        <point x="107264" y="-141020"/>
-        <point x="107501" y="-142076"/>
         <!-- owner_restart_point_list -->
         <spawn x="109594" y="-140771" z="-2632"/>
         <spawn x="109654" y="-140875" z="-2632"/>
@@ -591,17 +613,19 @@
         <spawn x="112563" y="-147797" z="-3264" type="banish"/>
         <spawn x="112261" y="-147644" z="-3256" type="banish"/>
     </zone>
-    <zone name="glu_di_fort" type="org.l2j.gameserver.world.zone.type.FortZone" form="Polygon" minZ="-4697" maxZ="303">
+    <zone name="glu_di_fort" type="org.l2j.gameserver.world.zone.type.FortZone">
+        <polygon min-z="-4697" max-z="303">
+            <point x="4616" y="146584"/>
+            <point x="6848" y="146581"/>
+            <point x="7530" y="147257"/>
+            <point x="7528" y="152211"/>
+            <point x="6836" y="152887"/>
+            <point x="4622" y="152890"/>
+            <point x="3935" y="152211"/>
+            <point x="3939" y="147261"/>
+        </polygon>
         <property name="fortId" value="112"/>
         <!-- residence_territory -->
-        <point x="4616" y="146584"/>
-        <point x="6848" y="146581"/>
-        <point x="7530" y="147257"/>
-        <point x="7528" y="152211"/>
-        <point x="6836" y="152887"/>
-        <point x="4622" y="152890"/>
-        <point x="3935" y="152211"/>
-        <point x="3939" y="147261"/>
         <!-- owner_restart_point_list -->
         <spawn x="5627" y="150138" z="-2560"/>
         <spawn x="5502" y="150190" z="-2560"/>
@@ -637,17 +661,19 @@
         <spawn x="11109" y="151030" z="-3296" type="banish"/>
         <spawn x="11031" y="150739" z="-3272" type="banish"/>
     </zone>
-    <zone name="glu_ore_fort" type="org.l2j.gameserver.world.zone.type.FortZone" form="Polygon" minZ="-4611" maxZ="389">
+    <zone name="glu_ore_fort" type="org.l2j.gameserver.world.zone.type.FortZone">
+        <polygon min-z="-4611" max-z="389">
+            <point x="-55661" y="89490"/>
+            <point x="-50813" y="89490"/>
+            <point x="-50142" y="90180"/>
+            <point x="-50143" y="92382"/>
+            <point x="-50816" y="93083"/>
+            <point x="-55698" y="93061"/>
+            <point x="-56366" y="92379"/>
+            <point x="-56362" y="90167"/>
+        </polygon>
         <property name="fortId" value="113"/>
         <!-- residence_territory -->
-        <point x="-55661" y="89490"/>
-        <point x="-50813" y="89490"/>
-        <point x="-50142" y="90180"/>
-        <point x="-50143" y="92382"/>
-        <point x="-50816" y="93083"/>
-        <point x="-55698" y="93061"/>
-        <point x="-56366" y="92379"/>
-        <point x="-56362" y="90167"/>
         <!-- owner_restart_point_list -->
         <spawn x="-52789" y="91279" z="-2496"/>
         <spawn x="-52859" y="91153" z="-2496"/>
@@ -689,17 +715,19 @@
         <spawn x="-55296" y="87373" z="-3112" type="banish"/>
         <spawn x="-55268" y="87618" z="-3024" type="banish"/>
     </zone>
-    <zone name="di_gi_fort" type="org.l2j.gameserver.world.zone.type.FortZone" form="Polygon" minZ="-3547" maxZ="1453">
+    <zone name="di_gi_fort" type="org.l2j.gameserver.world.zone.type.FortZone">
+        <polygon min-z="-3547" max-z="1453">
+            <point x="58034" y="138236"/>
+            <point x="61861" y="137478"/>
+            <point x="62655" y="138002"/>
+            <point x="63028" y="139849"/>
+            <point x="62493" y="140642"/>
+            <point x="58666" y="141408"/>
+            <point x="57872" y="140882"/>
+            <point x="57514" y="139036"/>
+        </polygon>
         <property name="fortId" value="114"/>
         <!-- residence_territory -->
-        <point x="58034" y="138236"/>
-        <point x="61861" y="137478"/>
-        <point x="62655" y="138002"/>
-        <point x="63028" y="139849"/>
-        <point x="62493" y="140642"/>
-        <point x="58666" y="141408"/>
-        <point x="57872" y="140882"/>
-        <point x="57514" y="139036"/>
         <!-- owner_restart_point_list -->
         <spawn x="60733" y="139386" z="-1424"/>
         <spawn x="60611" y="139308" z="-1424"/>
@@ -735,17 +763,19 @@
         <spawn x="57994" y="136411" z="-2040" type="banish"/>
         <spawn x="57788" y="136564" z="-2064" type="banish"/>
     </zone>
-    <zone name="di_ore_fort" type="org.l2j.gameserver.world.zone.type.FortZone" form="Polygon" minZ="-5174" maxZ="-174">
+    <zone name="di_ore_fort" type="org.l2j.gameserver.world.zone.type.FortZone">
+        <polygon min-z="-5174" max-z="-174">
+            <point x="9512" y="93424"/>
+            <point x="13451" y="93424"/>
+            <point x="14144" y="94111"/>
+            <point x="14145" y="95967"/>
+            <point x="13452" y="96649"/>
+            <point x="9538" y="96655"/>
+            <point x="8847" y="95965"/>
+            <point x="8861" y="94104"/>
+        </polygon>
         <property name="fortId" value="115"/>
         <!-- residence_territory -->
-        <point x="9512" y="93424"/>
-        <point x="13451" y="93424"/>
-        <point x="14144" y="94111"/>
-        <point x="14145" y="95967"/>
-        <point x="13452" y="96649"/>
-        <point x="9538" y="96655"/>
-        <point x="8847" y="95965"/>
-        <point x="8861" y="94104"/>
         <!-- owner_restart_point_list -->
         <spawn x="11972" y="95089" z="-3096"/>
         <spawn x="11908" y="94962" z="-3096"/>
@@ -781,17 +811,19 @@
         <spawn x="12958" y="91178" z="-3640" type="banish"/>
         <spawn x="14336" y="91139" z="-3664" type="banish"/>
     </zone>
-    <zone name="ore_gi_fort" type="org.l2j.gameserver.world.zone.type.FortZone" form="Polygon" minZ="-4668" maxZ="332">
+    <zone name="ore_gi_fort" type="org.l2j.gameserver.world.zone.type.FortZone">
+        <polygon min-z="-4668" max-z="332">
+            <point x="76352" y="92342"/>
+            <point x="78708" y="87988"/>
+            <point x="79630" y="87692"/>
+            <point x="81602" y="88742"/>
+            <point x="81884" y="89671"/>
+            <point x="79557" y="94043"/>
+            <point x="78639" y="94310"/>
+            <point x="76651" y="93275"/>
+        </polygon>
         <property name="fortId" value="116"/>
         <!-- residence_territory -->
-        <point x="76352" y="92342"/>
-        <point x="78708" y="87988"/>
-        <point x="79630" y="87692"/>
-        <point x="81602" y="88742"/>
-        <point x="81884" y="89671"/>
-        <point x="79557" y="94043"/>
-        <point x="78639" y="94310"/>
-        <point x="76651" y="93275"/>
         <!-- owner_restart_point_list -->
         <spawn x="79550" y="90718" z="-2560"/>
         <spawn x="79396" y="90717" z="-2560"/>
@@ -838,17 +870,19 @@
         <spawn x="75157" y="90170" z="-3224" type="banish"/>
         <spawn x="75113" y="90611" z="-3288" type="banish"/>
     </zone>
-    <zone name="a_o_g_fort" type="org.l2j.gameserver.world.zone.type.FortZone" form="Polygon" minZ="-3005" maxZ="1995">
+    <zone name="a_o_g_fort" type="org.l2j.gameserver.world.zone.type.FortZone">
+        <polygon min-z="-3005" max-z="1995">
+            <point x="108868" y="-17066"/>
+            <point x="113839" y="-17070"/>
+            <point x="114512" y="-16375"/>
+            <point x="114500" y="-14135"/>
+            <point x="113857" y="-13478"/>
+            <point x="108890" y="-13459"/>
+            <point x="108192" y="-14135"/>
+            <point x="108181" y="-16382"/>
+        </polygon>
         <property name="fortId" value="117"/>
         <!-- residence_territory -->
-        <point x="108868" y="-17066"/>
-        <point x="113839" y="-17070"/>
-        <point x="114512" y="-16375"/>
-        <point x="114500" y="-14135"/>
-        <point x="113857" y="-13478"/>
-        <point x="108890" y="-13459"/>
-        <point x="108192" y="-14135"/>
-        <point x="108181" y="-16382"/>
         <!-- owner_restart_point_list -->
         <spawn x="111826" y="-15050" z="-672"/>
         <spawn x="111734" y="-15178" z="-672"/>
@@ -892,17 +926,19 @@
         <spawn x="117990" y="-19966" z="-2512" type="banish"/>
         <spawn x="117684" y="-20048" z="-2504" type="banish"/>
     </zone>
-    <zone name="aden_gi_fort" type="org.l2j.gameserver.world.zone.type.FortZone" form="Polygon" minZ="-3975" maxZ="1025">
+    <zone name="aden_gi_fort" type="org.l2j.gameserver.world.zone.type.FortZone">
+        <polygon min-z="-3975" max-z="1025">
+            <point x="122719" y="93391"/>
+            <point x="127690" y="93387"/>
+            <point x="128362" y="94082"/>
+            <point x="128351" y="96322"/>
+            <point x="127708" y="96979"/>
+            <point x="122741" y="96998"/>
+            <point x="122043" y="96322"/>
+            <point x="122032" y="94075"/>
+        </polygon>
         <property name="fortId" value="118"/>
         <!-- residence_territory -->
-        <point x="122719" y="93391"/>
-        <point x="127690" y="93387"/>
-        <point x="128362" y="94082"/>
-        <point x="128351" y="96322"/>
-        <point x="127708" y="96979"/>
-        <point x="122741" y="96998"/>
-        <point x="122043" y="96322"/>
-        <point x="122032" y="94075"/>
         <!-- owner_restart_point_list -->
         <spawn x="125698" y="95192" z="-1808"/>
         <spawn x="125625" y="95066" z="-1808"/>
@@ -940,17 +976,19 @@
         <spawn x="118588" y="90558" z="-3656" type="banish"/>
         <spawn x="118662" y="90968" z="-3576" type="banish"/>
     </zone>
-    <zone name="inna_gi_fort" type="org.l2j.gameserver.world.zone.type.FortZone" form="Polygon" minZ="-4319" maxZ="681">
+    <zone name="inna_gi_fort" type="org.l2j.gameserver.world.zone.type.FortZone">
+        <polygon min-z="-4319" max-z="681">
+            <point x="71373" y="183754"/>
+            <point x="72304" y="183554"/>
+            <point x="75596" y="185749"/>
+            <point x="75787" y="186691"/>
+            <point x="74709" y="188274"/>
+            <point x="73799" y="188441"/>
+            <point x="70525" y="186248"/>
+            <point x="70328" y="185312"/>
+        </polygon>
         <property name="fortId" value="119"/>
         <!-- residence_territory -->
-        <point x="71373" y="183754"/>
-        <point x="72304" y="183554"/>
-        <point x="75596" y="185749"/>
-        <point x="75787" y="186691"/>
-        <point x="74709" y="188274"/>
-        <point x="73799" y="188441"/>
-        <point x="70525" y="186248"/>
-        <point x="70328" y="185312"/>
         <!-- owner_restart_point_list -->
         <spawn x="73441" y="186346" z="-2256"/>
         <spawn x="73430" y="186183" z="-2256"/>
@@ -982,17 +1020,19 @@
         <spawn x="71497" y="180580" z="-3168" type="banish"/>
         <spawn x="71446" y="180657" z="-3168" type="banish"/>
     </zone>
-    <zone name="ru_go_fort" type="org.l2j.gameserver.world.zone.type.FortZone" form="Polygon" minZ="-2442" maxZ="2558">
+    <zone name="ru_go_fort" type="org.l2j.gameserver.world.zone.type.FortZone">
+        <polygon min-z="-2442" max-z="2558">
+            <point x="99731" y="-58033"/>
+            <point x="101604" y="-58028"/>
+            <point x="102307" y="-57318"/>
+            <point x="102292" y="-53408"/>
+            <point x="101598" y="-52707"/>
+            <point x="99745" y="-52704"/>
+            <point x="99040" y="-53379"/>
+            <point x="99038" y="-57314"/>
+        </polygon>
         <property name="fortId" value="120"/>
         <!-- residence_territory -->
-        <point x="99731" y="-58033"/>
-        <point x="101604" y="-58028"/>
-        <point x="102307" y="-57318"/>
-        <point x="102292" y="-53408"/>
-        <point x="101598" y="-52707"/>
-        <point x="99745" y="-52704"/>
-        <point x="99040" y="-53379"/>
-        <point x="99038" y="-57314"/>
         <!-- owner_restart_point_list -->
         <spawn x="100586" y="-54853" z="-320"/>
         <spawn x="100707" y="-54938" z="-320"/>
@@ -1036,17 +1076,19 @@
         <spawn x="104902" y="-57801" z="-976" type="banish"/>
         <spawn x="105059" y="-57989" z="-1016" type="banish"/>
     </zone>
-    <zone name="ru_sch_fort" type="org.l2j.gameserver.world.zone.type.FortZone" form="Polygon" minZ="-3168" maxZ="1832">
+    <zone name="ru_sch_fort" type="org.l2j.gameserver.world.zone.type.FortZone">
+        <polygon min-z="-3168" max-z="1832">
+            <point x="69693" y="-95435"/>
+            <point x="73324" y="-96945"/>
+            <point x="74240" y="-96582"/>
+            <point x="74958" y="-94854"/>
+            <point x="74574" y="-93948"/>
+            <point x="70950" y="-92445"/>
+            <point x="70060" y="-92807"/>
+            <point x="69341" y="-94533"/>
+        </polygon>
         <property name="fortId" value="121"/>
         <!-- residence_territory -->
-        <point x="69693" y="-95435"/>
-        <point x="73324" y="-96945"/>
-        <point x="74240" y="-96582"/>
-        <point x="74958" y="-94854"/>
-        <point x="74574" y="-93948"/>
-        <point x="70950" y="-92445"/>
-        <point x="70060" y="-92807"/>
-        <point x="69341" y="-94533"/>
         <!-- owner_restart_point_list -->
         <spawn x="72635" y="-94836" z="-1104"/>
         <spawn x="72505" y="-94937" z="-1104"/>

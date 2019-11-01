@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- TODO: Require Support -->
-<list enabled="false" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org zones.xsd">
-    <!-- Territory War Zones -->
-    <zone name="gludio_dominion" type="org.l2j.gameserver.world.zone.type.TerritoryWarZone" form="Polygon" minZ="-4452" maxZ="3547">
-        <property name="territoryId" value="81"/>
-        <!-- residence_territory -->
-        <point x="-20060" y="106912"/>
-        <point x="-15820" y="106912"/>
-        <point x="-15816" y="113449"/>
-        <point x="-20061" y="113413"/>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org zones.xsd">
+    <!-- Castle Zones -->
+    <zone name="gludio_castle" type="org.l2j.gameserver.world.zone.type.CastleZone">
+        <polygon min-z="-4452" max-z="3547">
+            <point x="-20300" y="106700"/>
+            <point x="-15700" y="106700"/>
+            <point x="-15700" y="113800"/>
+            <point x="-20300" y="113800"/>
+        </polygon>
+        <property name="castleId" value="1"/>
         <!-- owner_restart_point_list -->
         <spawn x="-16554" y="109382" z="-1799"/>
         <spawn x="-16869" y="109375" z="-1799"/>
@@ -51,13 +51,14 @@
         <spawn x="-15553" y="110780" z="-2770" type="banish"/>
         <spawn x="-15281" y="110142" z="-2770" type="banish"/>
     </zone>
-    <zone name="dion_dominion" type="org.l2j.gameserver.world.zone.type.TerritoryWarZone" form="Polygon" minZ="-4646" maxZ="4000">
-        <property name="territoryId" value="82"/>
-        <!-- residence_territory -->
-        <point x="24020" y="162838"/>
-        <point x="19780" y="162838"/>
-        <point x="19776" y="156301"/>
-        <point x="24021" y="156337"/>
+    <zone name="dion_castle" type="org.l2j.gameserver.world.zone.type.CastleZone">
+        <polygon min-z="-4646" max-z="4000">
+            <point x="24300" y="163100"/>
+            <point x="19700" y="163100"/>
+            <point x="19700" y="156100"/>
+            <point x="24300" y="156100"/>
+        </polygon>
+        <property name="castleId" value="2"/>
         <!-- owner_restart_point_list -->
         <spawn x="20514" y="160368" z="-1993"/>
         <spawn x="20829" y="160375" z="-1993"/>
@@ -100,13 +101,14 @@
         <spawn x="19524" y="159041" z="-2770" type="banish"/>
         <spawn x="19252" y="159679" z="-2770" type="banish"/>
     </zone>
-    <zone name="giran_dominion" type="org.l2j.gameserver.world.zone.type.TerritoryWarZone" form="Polygon" minZ="-4519" maxZ="19931">
-        <property name="territoryId" value="83"/>
-        <!-- residence_territory -->
-        <point x="119010" y="143149"/>
-        <point x="119010" y="147389"/>
-        <point x="112473" y="147393"/>
-        <point x="112509" y="143148"/>
+    <zone name="giran_castle" type="org.l2j.gameserver.world.zone.type.CastleZone">
+        <polygon min-z="-4519" max-z="19931">
+            <point x="119200" y="142800"/>
+            <point x="119200" y="147500"/>
+            <point x="112300" y="147500"/>
+            <point x="112300" y="142800"/>
+        </polygon>
+        <property name="castleId" value="3"/>
         <!-- owner_restart_point_list -->
         <spawn x="116540" y="146655" z="-1866"/>
         <spawn x="116547" y="146340" z="-1866"/>
@@ -145,13 +147,14 @@
         <spawn x="115146" y="147601" z="-2770" type="banish"/>
         <spawn x="115784" y="147873" z="-2770" type="banish"/>
     </zone>
-    <zone name="oren_dominion" type="org.l2j.gameserver.world.zone.type.TerritoryWarZone" form="Polygon" minZ="-4246" maxZ="19931">
-        <property name="territoryId" value="84"/>
-        <!-- residence_territory -->
-        <point x="85086" y="35244"/>
-        <point x="85086" y="39484"/>
-        <point x="78549" y="39488"/>
-        <point x="78585" y="35243"/>
+    <zone name="oren_castle" type="org.l2j.gameserver.world.zone.type.CastleZone">
+        <polygon min-z="-4246" max-z="19931">
+            <point x="85400" y="34900"/>
+            <point x="85400" y="39700"/>
+            <point x="78200" y="39700"/>
+            <point x="78200" y="34900"/>
+        </polygon>
+        <property name="castleId" value="4"/>
         <!-- owner_restart_point_list -->
         <spawn x="82616" y="38750" z="-1593"/>
         <spawn x="82623" y="38435" z="-1593"/>
@@ -190,13 +193,14 @@
         <spawn x="81224" y="39749" z="-2770" type="banish"/>
         <spawn x="81862" y="40021" z="-2770" type="banish"/>
     </zone>
-    <zone name="aden_dominion" type="org.l2j.gameserver.world.zone.type.TerritoryWarZone" form="Polygon" minZ="-4000" maxZ="8800">
-        <property name="territoryId" value="85"/>
-        <!-- residence_territory -->
-        <point x="144758" y="461"/>
-        <point x="150162" y="475"/>
-        <point x="150169" y="8508"/>
-        <point x="144757" y="8510"/>
+    <zone name="aden_castle" type="org.l2j.gameserver.world.zone.type.CastleZone">
+        <polygon min-z="-4000" max-z="8800">
+            <point x="144300" y="461"/>
+            <point x="150500" y="475"/>
+            <point x="150500" y="8700"/>
+            <point x="144300" y="8700"/>
+        </polygon>
+        <property name="castleId" value="5"/>
         <!-- owner_restart_point_list -->
         <spawn x="147700" y="4608" z="-2784"/>
         <spawn x="147705" y="4865" z="-2784"/>
@@ -236,13 +240,14 @@
         <spawn x="151065" y="1813" z="-592" type="banish"/>
         <spawn x="150952" y="2615" z="-592" type="banish"/>
     </zone>
-    <zone name="innadrile_dominion" type="org.l2j.gameserver.world.zone.type.TerritoryWarZone" form="Polygon" minZ="-2742" maxZ="4000">
-        <property name="territoryId" value="86"/>
-        <!-- residence_territory -->
-        <point x="117971" y="251617"/>
-        <point x="113731" y="251617"/>
-        <point x="113727" y="245080"/>
-        <point x="117972" y="245116"/>
+    <zone name="innadrile_castle" type="org.l2j.gameserver.world.zone.type.CastleZone">
+        <polygon min-z="-2742" max-z="4000">
+            <point x="118200" y="251900"/>
+            <point x="113500" y="251900"/>
+            <point x="113500" y="244700"/>
+            <point x="118200" y="244700"/>
+        </polygon>
+        <property name="castleId" value="6"/>
         <!-- owner_restart_point_list -->
         <spawn x="114465" y="249147" z="-89"/>
         <spawn x="114780" y="249154" z="-89"/>
@@ -281,29 +286,21 @@
         <spawn x="119058" y="243545" z="-1060" type="banish"/>
         <spawn x="119330" y="242907" z="-1060" type="banish"/>
     </zone>
-    <zone name="godad_dominion" type="org.l2j.gameserver.world.zone.type.TerritoryWarZone" form="Polygon" minZ="-3670" maxZ="4830">
-        <property name="territoryId" value="87"/>
-        <!-- residence_territory -->
-        <point x="144023" y="-52189"/>
-        <point x="150893" y="-52189"/>
-        <point x="150743" y="-48031"/>
-        <point x="150075" y="-46567"/>
-        <point x="149381" y="-45932"/>
-        <point x="149767" y="-45321"/>
-        <point x="149628" y="-45254"/>
-        <point x="149204" y="-45845"/>
-        <point x="147805" y="-45106"/>
-        <point x="147108" y="-45106"/>
-        <point x="145714" y="-45845"/>
-        <point x="145288" y="-45254"/>
-        <point x="145143" y="-45321"/>
-        <point x="145557" y="-45932"/>
-        <point x="144721" y="-46567"/>
-        <point x="144212" y="-48031"/>
-        <point x="144023" y="-52189"/>
-        <point x="150893" y="-52189"/>
-        <point x="150893" y="-53200"/>
-        <point x="144023" y="-53200"/>
+    <zone name="goddard_castle" type="org.l2j.gameserver.world.zone.type.CastleZone">
+        <polygon min-z="-3670" max-z="4830">
+            <point x="144000" y="-52200"/>
+            <point x="151000" y="-52200"/>
+            <point x="151100" y="-48000"/>
+            <point x="150000" y="-45000"/>
+            <point x="147500" y="-44300"/>
+            <point x="145000" y="-45000"/>
+            <point x="144000" y="-48000"/>
+            <point x="144000" y="-52200"/> <!-- TODO: Needs Support for minZ/maxZ for each node, due minZ in this node should be 0 -->
+            <point x="151000" y="-52200"/> <!-- TODO: Needs Support for minZ/maxZ for each node, due minZ in this node should be 0 -->
+            <point x="151000" y="-53200"/> <!-- TODO: Needs Support for minZ/maxZ for each node, due minZ in this node should be 0 -->
+            <point x="144000" y="-53200"/> <!-- TODO: Needs Support for minZ/maxZ for each node, due minZ in this node should be 0 -->
+        </polygon>
+        <property name="castleId" value="7"/>
         <!-- owner_restart_point_list -->
         <spawn x="147408" y="-46448" z="-963"/>
         <spawn x="147520" y="-46432" z="-963"/>
@@ -345,21 +342,22 @@
         <spawn x="138439" y="-45153" z="-2064" type="banish"/>
         <spawn x="140871" y="-55380" z="-3224" type="banish"/>
     </zone>
-    <zone name="rune_dominion" type="org.l2j.gameserver.world.zone.type.TerritoryWarZone" form="Polygon" minZ="-3200" maxZ="10020">
-        <property name="territoryId" value="88"/>
-        <!-- residence_territory -->
-        <point x="6005" y="-56306"/>
-        <point x="15112" y="-52711"/>
-        <point x="16831" y="-52270"/>
-        <point x="17745" y="-51547"/>
-        <point x="18326" y="-50543"/>
-        <point x="18666" y="-49413"/>
-        <point x="18680" y="-48882"/>
-        <point x="18334" y="-47737"/>
-        <point x="17756" y="-46741"/>
-        <point x="16808" y="-46019"/>
-        <point x="15114" y="-45624"/>
-        <point x="6005" y="-41610"/>
+    <zone name="rune_castle" type="org.l2j.gameserver.world.zone.type.CastleZone">
+        <polygon min-z="-3200" max-z="10020">
+            <point x="6005" y="-56306"/>
+            <point x="15112" y="-52711"/>
+            <point x="16831" y="-52270"/>
+            <point x="17745" y="-51547"/>
+            <point x="18326" y="-50543"/>
+            <point x="18666" y="-49413"/>
+            <point x="18680" y="-48882"/>
+            <point x="18334" y="-47737"/>
+            <point x="17756" y="-46741"/>
+            <point x="16808" y="-46019"/>
+            <point x="15114" y="-45624"/>
+            <point x="6005" y="-41610"/>
+        </polygon>
+        <property name="castleId" value="8"/>
         <!-- owner_restart_point_list -->
         <spawn x="10891" y="-49058" z="3890"/>
         <spawn x="11224" y="-49116" z="3890"/>
@@ -409,25 +407,19 @@
         <spawn x="28331" y="-48740" z="-1344" type="banish"/>
         <spawn x="29203" y="-50908" z="-2056" type="banish"/>
     </zone>
-    <zone name="schuttgart_dominion" type="org.l2j.gameserver.world.zone.type.TerritoryWarZone" form="Polygon" minZ="-3670" maxZ="8830">
-        <property name="territoryId" value="89"/>
-        <!-- residence_territory -->
-        <point x="71720" y="-159619"/>
-        <point x="82963" y="-159619"/>
-        <point x="82963" y="-152546"/>
-        <point x="80415" y="-151159"/>
-        <point x="79532" y="-149880"/>
-        <point x="79832" y="-149415"/>
-        <point x="79695" y="-149348"/>
-        <point x="79395" y="-149803"/>
-        <point x="77934" y="-149175"/>
-        <point x="77204" y="-149173"/>
-        <point x="75705" y="-149781"/>
-        <point x="75384" y="-149328"/>
-        <point x="75274" y="-149418"/>
-        <point x="75572" y="-149843"/>
-        <point x="74695" y="-151156"/>
-        <point x="71720" y="-152526"/>
+    <zone name="schuttgart_castle" type="org.l2j.gameserver.world.zone.type.CastleZone">
+        <polygon min-z="-3670" max-z="8830">
+            <point x="71700" y="-159600"/>
+            <point x="83000" y="-159600"/>
+            <point x="83000" y="-152500"/>
+            <point x="81200" y="-150900"/>
+            <point x="80000" y="-149200"/>
+            <point x="77600" y="-148500"/>
+            <point x="75200" y="-149200"/>
+            <point x="74000" y="-150900"/>
+            <point x="71700" y="-152500"/>
+        </polygon>
+        <property name="castleId" value="9"/>
         <!-- owner_restart_point_list -->
         <spawn x="77619" y="-150591" z="770"/>
         <spawn x="77487" y="-150735" z="770"/>

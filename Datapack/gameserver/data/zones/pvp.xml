@@ -1,54 +1,66 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org zones.xsd">
     <!-- PVP Zones -->
-    <zone name="gludin_pvp" type="org.l2j.gameserver.world.zone.type.ArenaZone" form="Polygon" minZ="-3752" maxZ="-352"> <!-- [17_22] -->
-        <point x="-88411" y="141732"/>
-        <point x="-87429" y="141733"/>
-        <point x="-87429" y="142708"/>
-        <point x="-88408" y="142708"/>
+    <zone name="gludin_pvp" type="org.l2j.gameserver.world.zone.type.ArenaZone">
+        <polygon min-z="-3752" max-z="-352">
+            <point x="-88411" y="141732"/>
+            <point x="-87429" y="141733"/>
+            <point x="-87429" y="142708"/>
+            <point x="-88408" y="142708"/>
+        </polygon>
     </zone>
-    <zone name="giran_pvp_battle" type="org.l2j.gameserver.world.zone.type.ArenaZone" form="Polygon" minZ="-3850" maxZ="-350"> <!-- [22_22] -->
-        <point x="72493" y="142263"/>
-        <point x="73493" y="142264"/>
-        <point x="73493" y="143261"/>
-        <point x="72495" y="143258"/>
+    <zone name="giran_pvp_battle" type="org.l2j.gameserver.world.zone.type.ArenaZone">
+        <polygon min-z="-3850" max-z="-350">
+            <point x="72493" y="142263"/>
+            <point x="73493" y="142264"/>
+            <point x="73493" y="143261"/>
+            <point x="72495" y="143258"/>
+        </polygon>
     </zone>
-    <zone name="colosseum_battle1" type="org.l2j.gameserver.world.zone.type.ArenaZone" form="Polygon" minZ="-3498" maxZ="-3298"> <!-- [24_19] -->
-        <point x="151252" y="45918"/>
-        <point x="151219" y="46182"/>
-        <point x="150677" y="46786"/>
-        <point x="148334" y="46788"/>
-        <point x="147748" y="46166"/>
-        <point x="147744" y="45916"/>
-        <point x="148238" y="45301"/>
-        <point x="150781" y="45307"/>
+    <zone name="colosseum_battle1" type="org.l2j.gameserver.world.zone.type.ArenaZone">
+        <polygon min-z="-3498" max-z="-3298">
+            <point x="151252" y="45918"/>
+            <point x="151219" y="46182"/>
+            <point x="150677" y="46786"/>
+            <point x="148334" y="46788"/>
+            <point x="147748" y="46166"/>
+            <point x="147744" y="45916"/>
+            <point x="148238" y="45301"/>
+            <point x="150781" y="45307"/>
+        </polygon>
     </zone>
-    <zone name="colosseum_battle2" type="org.l2j.gameserver.world.zone.type.ArenaZone" form="Polygon" minZ="-3498" maxZ="-3298"> <!-- [24_19] -->
-        <point x="151236" y="47268"/>
-        <point x="151255" y="47520"/>
-        <point x="150785" y="48132"/>
-        <point x="148258" y="48126"/>
-        <point x="147712" y="47532"/>
-        <point x="147728" y="47294"/>
-        <point x="148278" y="46707"/>
-        <point x="150697" y="46709"/>
+    <zone name="colosseum_battle2" type="org.l2j.gameserver.world.zone.type.ArenaZone">
+        <polygon min-z="-3498" max-z="-3298">
+            <point x="151236" y="47268"/>
+            <point x="151255" y="47520"/>
+            <point x="150785" y="48132"/>
+            <point x="148258" y="48126"/>
+            <point x="147712" y="47532"/>
+            <point x="147728" y="47294"/>
+            <point x="148278" y="46707"/>
+            <point x="150697" y="46709"/>
+        </polygon>
     </zone>
-    <zone name="colosseum_battle3" type="org.l2j.gameserver.world.zone.type.ArenaZone" form="Polygon" minZ="-3587" maxZ="-3387"> <!-- [24_19] -->
-        <point x="148047" y="46276"/>
-        <point x="150955" y="46276"/>
-        <point x="150956" y="47052"/>
-        <point x="148049" y="47053"/>
+    <zone name="colosseum_battle3" type="org.l2j.gameserver.world.zone.type.ArenaZone">
+        <polygon min-z="-3587" max-z="-3387">
+            <point x="148047" y="46276"/>
+            <point x="150955" y="46276"/>
+            <point x="150956" y="47052"/>
+            <point x="148049" y="47053"/>
+        </polygon>
     </zone>
 
     <!-- Classic Monster Race Track Arena -->
-    <zone name="Monster_Race_Arena_PvP" type="org.l2j.gameserver.world.zone.type.ArenaZone" form="Polygon" minZ="-3800" maxZ="-3550"> <!-- [20_23] -->
-        <point x="13081" y="183060"/>
-        <point x="13302" y="183285"/>
-        <point x="13300" y="184089"/>
-        <point x="13086" y="184308"/>
-        <point x="11993" y="184308"/>
-        <point x="11774" y="184091"/>
-        <point x="11773" y="183287"/>
-        <point x="11994" y="183055"/>
+    <zone name="Monster_Race_Arena_PvP" type="org.l2j.gameserver.world.zone.type.ArenaZone">
+        <polygon min-z="-3800" max-z="-3550">
+            <point x="13081" y="183060"/>
+            <point x="13302" y="183285"/>
+            <point x="13300" y="184089"/>
+            <point x="13086" y="184308"/>
+            <point x="11993" y="184308"/>
+            <point x="11774" y="184091"/>
+            <point x="11773" y="183287"/>
+            <point x="11994" y="183055"/>
+        </polygon>
     </zone>
 </list>

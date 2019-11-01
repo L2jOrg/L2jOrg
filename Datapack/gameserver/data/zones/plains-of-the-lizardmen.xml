@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org zones.xsd">
+    <!-- Plains of the Lizardmen Zones -->
+    <zone name="oren21_2220_a01_1" type="org.l2j.gameserver.world.zone.type.EffectZone">
+        <polygon min-z="-3764" max-z="-3464">
+            <point x="83885" y="80497"/>
+            <point x="83325" y="80678"/>
+            <point x="82690" y="80480"/>
+            <point x="82628" y="79804"/>
+            <point x="82713" y="79397"/>
+            <point x="82713" y="79397"/>
+            <point x="82025" y="78227"/>
+            <point x="81718" y="77815"/>
+            <point x="81959" y="77379"/>
+            <point x="82656" y="77511"/>
+            <point x="82656" y="77511"/>
+            <point x="83152" y="77939"/>
+            <point x="83913" y="78957"/>
+            <point x="84190" y="79474"/>
+            <point x="84276" y="80099"/>
+        </polygon>
+        <property name="chance" value="100"/>
+        <!-- stat name="unitTick" val="5" / -->
+        <property name="skillIdLvl" value="6435-3;"/> <!-- s_area_poison_bow3 -->
+        <property name="default_enabled" value="true"/>
+        <property name="reuse" value="5000"/> <!-- Guess -->
+    </zone>
+    <zone name="oren21_2220_a01_2" type="org.l2j.gameserver.world.zone.type.EffectZone">
+        <polygon min-z="-3740" max-z="-3240">
+            <point x="82755" y="81625"/>
+            <point x="82309" y="81855"/>
+            <point x="81625" y="81248"/>
+            <point x="81626" y="80626"/>
+            <point x="82228" y="79566"/>
+            <point x="82228" y="79566"/>
+            <point x="81220" y="78236"/>
+            <point x="81030" y="77077"/>
+            <point x="82472" y="76149"/>
+            <point x="83270" y="76354"/>
+            <point x="83589" y="77629"/>
+            <point x="84703" y="78917"/>
+            <point x="84777" y="79993"/>
+            <point x="84676" y="80864"/>
+            <point x="84018" y="81088"/>
+            <point x="83337" y="81240"/>
+        </polygon>
+        <property name="chance" value="100"/>
+        <!-- stat name="unitTick" val="5" / -->
+        <property name="skillIdLvl" value="6435-2;"/> <!-- s_area_poison_bow2 -->
+        <property name="default_enabled" value="true"/>
+        <property name="reuse" value="5000"/> <!-- Guess -->
+        <!-- stat name="bannedZoneRange" val="oren21_2220_a01_1" / -->
+    </zone>
+    <zone name="oren21_2220_a01_3" type="org.l2j.gameserver.world.zone.type.EffectZone">
+        <polygon min-z="-3744" max-z="-3044">
+            <point x="80948" y="81704"/>
+            <point x="80002" y="80533"/>
+            <point x="80106" y="79870"/>
+            <point x="81333" y="80359"/>
+            <point x="81434" y="79192"/>
+            <point x="79905" y="78427"/>
+            <point x="80363" y="76612"/>
+            <point x="80879" y="75452"/>
+            <point x="83080" y="74980"/>
+            <point x="85000" y="73955"/>
+            <point x="85759" y="75136"/>
+            <point x="84154" y="77015"/>
+            <point x="84228" y="77737"/>
+            <point x="85242" y="78306"/>
+            <point x="85692" y="81525"/>
+            <point x="84399" y="82252"/>
+            <point x="83365" y="81953"/>
+            <point x="81610" y="83388"/>
+            <point x="80473" y="82612"/>
+        </polygon>
+        <property name="chance" value="100"/>
+        <!-- stat name="unitTick" val="5" / -->
+        <property name="skillIdLvl" value="6435-1;"/> <!-- s_area_poison_bow1 -->
+        <property name="default_enabled" value="true"/>
+        <property name="reuse" value="5000"/> <!-- Guess -->
+        <!-- stat name="bannedZoneRange" val="oren21_2220_a01_2" / -->
+    </zone>
+    <zone name="oren21_2220_a02_1" type="org.l2j.gameserver.world.zone.type.EffectZone">
+        <polygon min-z="-3344" max-z="-3044">
+            <point x="91337" y="77665"/>
+            <point x="92093" y="78507"/>
+            <point x="92023" y="79105"/>
+            <point x="90291" y="79743"/>
+            <point x="89466" y="79279"/>
+            <point x="89466" y="79279"/>
+            <point x="89600" y="77834"/>
+            <point x="88778" y="76650"/>
+            <point x="89692" y="76002"/>
+            <point x="90764" y="77561"/>
+        </polygon>
+        <property name="chance" value="100"/>
+        <!-- stat name="unitTick" val="5" / -->
+        <property name="skillIdLvl" value="6435-3;"/> <!-- s_area_poison_bow3 -->
+        <property name="default_enabled" value="true"/>
+        <property name="reuse" value="5000"/> <!-- Guess -->
+    </zone>
+    <zone name="oren21_2220_a02_2" type="org.l2j.gameserver.world.zone.type.EffectZone">
+        <polygon min-z="-3432" max-z="-3032">
+            <point x="90731" y="76824"/>
+            <point x="91716" y="77112"/>
+            <point x="93656" y="79500"/>
+            <point x="91801" y="80446"/>
+            <point x="88992" y="80261"/>
+            <point x="88992" y="80261"/>
+            <point x="88408" y="79497"/>
+            <point x="89140" y="78440"/>
+            <point x="87884" y="75539"/>
+            <point x="89076" y="74755"/>
+            <point x="90815" y="76046"/>
+        </polygon>
+        <property name="chance" value="100"/>
+        <!-- stat name="unitTick" val="5" / -->
+        <property name="skillIdLvl" value="6435-2;"/> <!-- s_area_poison_bow2 -->
+        <property name="default_enabled" value="true"/>
+        <property name="reuse" value="5000"/> <!-- Guess -->
+        <!-- stat name="bannedZoneRange" val="oren21_2220_a02_1" / -->
+    </zone>
+    <zone name="oren21_2220_a02_3" type="org.l2j.gameserver.world.zone.type.EffectZone">
+        <polygon min-z="-3600" max-z="-3200">
+            <point x="88436" y="81303"/>
+            <point x="87307" y="79562"/>
+            <point x="88166" y="78344"/>
+            <point x="86441" y="78316"/>
+            <point x="86179" y="77546"/>
+            <point x="87330" y="75984"/>
+            <point x="86509" y="74262"/>
+            <point x="88049" y="72874"/>
+            <point x="89061" y="74238"/>
+            <point x="91577" y="75214"/>
+            <point x="92445" y="74710"/>
+            <point x="92777" y="75434"/>
+            <point x="92125" y="76318"/>
+            <point x="92587" y="76918"/>
+            <point x="94066" y="76677"/>
+            <point x="94437" y="79460"/>
+            <point x="93369" y="81194"/>
+            <point x="91425" y="81782"/>
+            <point x="90501" y="81054"/>
+        </polygon>
+        <property name="chance" value="100"/>
+        <!-- stat name="unitTick" val="5" / -->
+        <property name="skillIdLvl" value="6435-1;"/> <!-- s_area_poison_bow1 -->
+        <property name="default_enabled" value="true"/>
+        <property name="reuse" value="5000"/> <!-- Guess -->
+        <!-- stat name="bannedZoneRange" val="oren21_2220_a02_2" / -->
+    </zone>
+    <zone name="oren21_2220_a03_1" type="org.l2j.gameserver.world.zone.type.EffectZone">
+        <polygon min-z="-3744" max-z="-3444">
+            <point x="92254" y="83601"/>
+            <point x="92513" y="84114"/>
+            <point x="92406" y="84883"/>
+            <point x="92553" y="85384"/>
+            <point x="91805" y="85573"/>
+            <point x="91805" y="85573"/>
+            <point x="91193" y="84531"/>
+            <point x="91293" y="83868"/>
+        </polygon>
+        <property name="chance" value="100"/>
+        <!-- stat name="unitTick" val="5" / -->
+        <property name="skillIdLvl" value="6435-3;"/> <!-- s_area_poison_bow3 -->
+        <property name="default_enabled" value="true"/>
+        <property name="reuse" value="5000"/> <!-- Guess -->
+    </zone>
+    <zone name="oren21_2220_a03_2" type="org.l2j.gameserver.world.zone.type.EffectZone">
+        <polygon min-z="-3728" max-z="-3428">
+            <point x="92437" y="83030"/>
+            <point x="93139" y="83525"/>
+            <point x="92934" y="85775"/>
+            <point x="92261" y="86141"/>
+            <point x="90864" y="85353"/>
+            <point x="90864" y="85353"/>
+            <point x="90622" y="83941"/>
+            <point x="91126" y="83342"/>
+            <point x="91818" y="83153"/>
+        </polygon>
+        <property name="chance" value="100"/>
+        <!-- stat name="unitTick" val="5" / -->
+        <property name="skillIdLvl" value="6435-2;"/> <!-- s_area_poison_bow2 -->
+        <property name="default_enabled" value="true"/>
+        <property name="reuse" value="5000"/> <!-- Guess -->
+        <!-- stat name="bannedZoneRange" val="oren21_2220_a03_1" / -->
+    </zone>
+    <zone name="oren21_2220_a03_3" type="org.l2j.gameserver.world.zone.type.EffectZone">
+        <polygon min-z="-3700" max-z="-3400">
+            <point x="94254" y="83444"/>
+            <point x="93570" y="83984"/>
+            <point x="93445" y="86178"/>
+            <point x="91313" y="86422"/>
+            <point x="90275" y="86358"/>
+            <point x="89791" y="85414"/>
+            <point x="90219" y="83874"/>
+            <point x="89607" y="83262"/>
+            <point x="90015" y="82634"/>
+            <point x="92143" y="82182"/>
+            <point x="94099" y="82550"/>
+        </polygon>
+        <property name="chance" value="100"/>
+        <!-- stat name="unitTick" val="5" / -->
+        <property name="skillIdLvl" value="6435-1;"/> <!-- s_area_poison_bow1 -->
+        <property name="default_enabled" value="true"/>
+        <property name="reuse" value="5000"/> <!-- Guess -->
+        <!-- stat name="bannedZoneRange" val="oren21_2220_a03_2" / -->
+    </zone>
+    <zone name="oren21_2220_a04_1" type="org.l2j.gameserver.world.zone.type.EffectZone">
+        <polygon min-z="-3584" max-z="-3184">
+            <point x="93513" y="87903"/>
+            <point x="93911" y="88740"/>
+            <point x="93830" y="89533"/>
+            <point x="93276" y="89513"/>
+            <point x="92059" y="88226"/>
+            <point x="92059" y="88226"/>
+            <point x="91971" y="87777"/>
+            <point x="92480" y="87548"/>
+            <point x="92795" y="87327"/>
+            <point x="93262" y="87501"/>
+        </polygon>
+        <property name="chance" value="100"/>
+        <!-- stat name="unitTick" val="5" / -->
+        <property name="skillIdLvl" value="6435-3;"/> <!-- s_area_poison_bow3 -->
+        <property name="default_enabled" value="true"/>
+        <property name="reuse" value="5000"/> <!-- Guess -->
+    </zone>
+    <zone name="oren21_2220_a04_2" type="org.l2j.gameserver.world.zone.type.EffectZone">
+        <polygon min-z="-3620" max-z="-3220">
+            <point x="92727" y="86380"/>
+            <point x="94103" y="87753"/>
+            <point x="94451" y="89784"/>
+            <point x="93104" y="90072"/>
+            <point x="91228" y="88097"/>
+            <point x="91228" y="88097"/>
+            <point x="91568" y="87205"/>
+            <point x="92330" y="86409"/>
+        </polygon>
+        <property name="chance" value="100"/>
+        <!-- stat name="unitTick" val="5" / -->
+        <property name="skillIdLvl" value="6435-2;"/> <!-- s_area_poison_bow2 -->
+        <property name="default_enabled" value="true"/>
+        <property name="reuse" value="5000"/> <!-- Guess -->
+        <!-- stat name="bannedZoneRange" val="oren21_2220_a04_1" / -->
+    </zone>
+    <zone name="oren21_2220_a04_3" type="org.l2j.gameserver.world.zone.type.EffectZone">
+        <polygon min-z="-3640" max-z="-3140">
+            <point x="94664" y="90851"/>
+            <point x="93241" y="91517"/>
+            <point x="92850" y="90548"/>
+            <point x="91950" y="90369"/>
+            <point x="91525" y="89361"/>
+            <point x="90345" y="88918"/>
+            <point x="91377" y="86446"/>
+            <point x="93171" y="86240"/>
+            <point x="94273" y="87094"/>
+            <point x="94625" y="87946"/>
+            <point x="95849" y="89386"/>
+            <point x="95401" y="90138"/>
+            <point x="94917" y="90406"/>
+        </polygon>
+        <property name="chance" value="100"/>
+        <!-- stat name="unitTick" val="5" / -->
+        <property name="skillIdLvl" value="6435-1;"/> <!-- s_area_poison_bow1 -->
+        <property name="default_enabled" value="true"/>
+        <property name="reuse" value="5000"/> <!-- Guess -->
+        <!-- stat name="bannedZoneRange" val="oren21_2220_a04_2" / -->
+    </zone>
+    <zone name="oren21_2220_a05_1" type="org.l2j.gameserver.world.zone.type.EffectZone">
+        <polygon min-z="-3288" max-z="-2788">
+            <point x="88568" y="92008"/>
+            <point x="90012" y="92048"/>
+            <point x="90093" y="92642"/>
+            <point x="88464" y="92784"/>
+            <point x="87451" y="93745"/>
+            <point x="87451" y="93745"/>
+            <point x="86372" y="92881"/>
+            <point x="87136" y="92149"/>
+        </polygon>
+        <property name="chance" value="100"/>
+        <!-- stat name="unitTick" val="5" / -->
+        <property name="skillIdLvl" value="6435-3;"/> <!-- s_area_poison_bow3 -->
+        <property name="default_enabled" value="true"/>
+        <property name="reuse" value="5000"/> <!-- Guess -->
+    </zone>
+    <zone name="oren21_2220_a05_2" type="org.l2j.gameserver.world.zone.type.EffectZone">
+        <polygon min-z="-3476" max-z="-2976">
+            <point x="87196" y="94553"/>
+            <point x="86308" y="93675"/>
+            <point x="85314" y="94270"/>
+            <point x="84520" y="93898"/>
+            <point x="85968" y="92702"/>
+            <point x="85968" y="92702"/>
+            <point x="86478" y="91730"/>
+            <point x="88406" y="91514"/>
+            <point x="90392" y="91279"/>
+            <point x="90923" y="92101"/>
+            <point x="90953" y="92766"/>
+            <point x="89935" y="93237"/>
+            <point x="88741" y="93082"/>
+            <point x="88416" y="93943"/>
+        </polygon>
+        <property name="chance" value="100"/>
+        <!-- stat name="unitTick" val="5" / -->
+        <property name="skillIdLvl" value="6435-2;"/> <!-- s_area_poison_bow2 -->
+        <property name="default_enabled" value="true"/>
+        <property name="reuse" value="5000"/> <!-- Guess -->
+        <!-- stat name="bannedZoneRange" val="oren21_2220_a05_1" / -->
+    </zone>
+    <zone name="oren21_2220_a05_3" type="org.l2j.gameserver.world.zone.type.EffectZone">
+        <polygon min-z="-3600" max-z="-3000">
+            <point x="90965" y="93248"/>
+            <point x="86669" y="95030"/>
+            <point x="86060" y="94247"/>
+            <point x="85132" y="95244"/>
+            <point x="83537" y="94333"/>
+            <point x="84037" y="93518"/>
+            <point x="85621" y="92454"/>
+            <point x="86735" y="90612"/>
+            <point x="90830" y="90531"/>
+            <point x="91352" y="91601"/>
+            <point x="92529" y="92534"/>
+            <point x="92241" y="93634"/>
+        </polygon>
+        <property name="chance" value="100"/>
+        <!-- stat name="unitTick" val="5" / -->
+        <property name="skillIdLvl" value="6435-1;"/> <!-- s_area_poison_bow1 -->
+        <property name="default_enabled" value="true"/>
+        <property name="reuse" value="5000"/> <!-- Guess -->
+        <!-- stat name="bannedZoneRange" val="oren21_2220_a05_2" / -->
+    </zone>
+    <zone id="70307" name="oren21_mb2220_ugoz01" type="org.l2j.gameserver.world.zone.type.EffectZone">
+        <polygon min-z="-3792" max-z="-3292">
+            <point x="96971" y="84648"/>
+            <point x="97842" y="86047"/>
+            <point x="97803" y="86717"/>
+            <point x="95982" y="86676"/>
+            <point x="95046" y="85676"/>
+            <point x="95166" y="84573"/>
+            <point x="96095" y="84213"/>
+        </polygon>
+        <property name="chance" value="100"/>
+        <!-- stat name="unitTick" val="5" / -->
+        <property name="skillIdLvl" value="6436-1;"/> <!-- s_area_poison_ugoros -->
+        <property name="default_enabled" value="true"/>
+        <property name="reuse" value="5000"/> <!-- Guess -->
+    </zone>
+    <zone name="oren21_mb2220_ugoz01" type="org.l2j.gameserver.world.zone.type.NoRestartZone">
+        <polygon min-z="-3758" max-z="-2758">
+            <point x="97040" y="84524"/>
+            <point x="98383" y="85869"/>
+            <point x="98344" y="87269"/>
+            <point x="95708" y="87235"/>
+            <point x="94661" y="85673"/>
+            <point x="95107" y="84457"/>
+            <point x="96094" y="84094"/>
+        </polygon>
+        <property name="restartTime" value="1800"/>
+        <property name="restartAllowedTime" value="1"/>
+    </zone>
+</list>

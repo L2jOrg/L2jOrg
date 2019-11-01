@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org zones.xsd">
+    <!-- Territory War HQ Zones -->
+    <!-- Gludio Territory War HQ Zones -->
+    <zone name="gludio_dominion_headquarter_territory1" type="org.l2j.gameserver.world.zone.type.HqZone">
+        <polygon min-z="-4484" max-z="3515">
+            <point x="-22052" y="114025"/>
+            <point x="-14221" y="114007"/>
+            <point x="-14197" y="116558"/>
+            <point x="-22032" y="116566"/>
+        </polygon>
+        <property name="territoryId" value="81"/>
+        <!-- headquarter_territory -->
+    </zone>
+    <zone name="gludio_dominion_headquarter_territory2" type="org.l2j.gameserver.world.zone.type.HqZone">
+        <polygon min-z="-4420" max-z="3579">
+            <point x="-22030" y="104809"/>
+            <point x="-20270" y="104817"/>
+            <point x="-20266" y="113735"/>
+            <point x="-22031" y="113732"/>
+        </polygon>
+        <property name="territoryId" value="81"/>
+        <!-- headquarter_territory -->
+    </zone>
+    <zone name="gludio_dominion_headquarter_territory3" type="org.l2j.gameserver.world.zone.type.HqZone">
+        <polygon min-z="-4388" max-z="3611">
+            <point x="-15554" y="104834"/>
+            <point x="-13917" y="104839"/>
+            <point x="-13914" y="113757"/>
+            <point x="-15554" y="113757"/>
+        </polygon>
+        <property name="territoryId" value="81"/>
+        <!-- headquarter_territory -->
+    </zone>
+    <!-- Dion Territory War HQ Zones -->
+    <zone name="dion_dominion_headquarter_territory1" type="org.l2j.gameserver.world.zone.type.HqZone">
+        <polygon min-z="-4678" max-z="4000">
+            <point x="26012" y="155725"/>
+            <point x="18181" y="155743"/>
+            <point x="18157" y="153192"/>
+            <point x="25992" y="153184"/>
+        </polygon>
+        <property name="territoryId" value="82"/>
+        <!-- headquarter_territory -->
+    </zone>
+    <zone name="dion_dominion_headquarter_territory2" type="org.l2j.gameserver.world.zone.type.HqZone">
+        <polygon min-z="-4614" max-z="4000">
+            <point x="25990" y="164941"/>
+            <point x="24230" y="164933"/>
+            <point x="24226" y="156015"/>
+            <point x="25991" y="156018"/>
+        </polygon>
+        <property name="territoryId" value="82"/>
+        <!-- headquarter_territory -->
+    </zone>
+    <zone name="dion_dominion_headquarter_territory3" type="org.l2j.gameserver.world.zone.type.HqZone">
+        <polygon min-z="-4582" max-z="4000">
+            <point x="19514" y="164916"/>
+            <point x="17877" y="164911"/>
+            <point x="17874" y="155993"/>
+            <point x="19514" y="155993"/>
+        </polygon>
+        <property name="territoryId" value="82"/>
+        <!-- headquarter_territory -->
+    </zone>
+    <!-- Giran Territory War HQ Zones -->
+    <zone name="giran_dominion_headquarter_territory1" type="org.l2j.gameserver.world.zone.type.HqZone">
+        <polygon min-z="-4551" max-z="19899">
+            <point x="111897" y="141157"/>
+            <point x="111915" y="148988"/>
+            <point x="109364" y="149012"/>
+            <point x="109356" y="141177"/>
+        </polygon>
+        <property name="territoryId" value="83"/>
+        <!-- headquarter_territory -->
+    </zone>
+    <zone name="giran_dominion_headquarter_territory2" type="org.l2j.gameserver.world.zone.type.HqZone">
+        <polygon min-z="-4487" max-z="19963">
+            <point x="121113" y="141179"/>
+            <point x="121105" y="142939"/>
+            <point x="112187" y="142943"/>
+            <point x="112190" y="141178"/>
+        </polygon>
+        <property name="territoryId" value="83"/>
+        <!-- headquarter_territory -->
+    </zone>
+    <zone name="giran_dominion_headquarter_territory3" type="org.l2j.gameserver.world.zone.type.HqZone">
+        <polygon min-z="-4455" max-z="19995">
+            <point x="121088" y="147655"/>
+            <point x="121083" y="149292"/>
+            <point x="112165" y="149295"/>
+            <point x="112165" y="147655"/>
+        </polygon>
+        <property name="territoryId" value="83"/>
+        <!-- headquarter_territory -->
+    </zone>
+    <!-- Oren Territory War HQ Zones -->
+    <zone name="oren_dominion_headquarter_territory1" type="org.l2j.gameserver.world.zone.type.HqZone">
+        <polygon min-z="-4278" max-z="19899">
+            <point x="77973" y="33252"/>
+            <point x="77991" y="41083"/>
+            <point x="75440" y="41107"/>
+            <point x="75432" y="33272"/>
+        </polygon>
+        <property name="territoryId" value="84"/>
+        <!-- headquarter_territory -->
+    </zone>
+    <zone name="oren_dominion_headquarter_territory2" type="org.l2j.gameserver.world.zone.type.HqZone">
+        <polygon min-z="-4214" max-z="19963">
+            <point x="87189" y="33274"/>
+            <point x="87181" y="35034"/>
+            <point x="78263" y="35038"/>
+            <point x="78266" y="33273"/>
+        </polygon>
+        <property name="territoryId" value="84"/>
+        <!-- headquarter_territory -->
+    </zone>
+    <zone name="oren_dominion_headquarter_territory3" type="org.l2j.gameserver.world.zone.type.HqZone">
+        <polygon min-z="-4182" max-z="19995">
+            <point x="87164" y="39750"/>
+            <point x="87159" y="41387"/>
+            <point x="78241" y="41390"/>
+            <point x="78241" y="39750"/>
+        </polygon>
+        <property name="territoryId" value="84"/>
+        <!-- headquarter_territory -->
+    </zone>
+    <!-- Aden Territory War HQ Zones -->
+    <zone name="aden_dominion_headquarter_territory" type="org.l2j.gameserver.world.zone.type.HqZone">
+        <polygon min-z="-1158" max-z="42">
+            <point x="144365" y="9902"/>
+            <point x="150572" y="9919"/>
+            <point x="150816" y="4925"/>
+            <point x="151831" y="4916"/>
+            <point x="151833" y="7955"/>
+            <point x="150754" y="9839"/>
+            <point x="150281" y="10385"/>
+            <point x="151282" y="12184"/>
+            <point x="151280" y="13248"/>
+            <point x="143668" y="13224"/>
+            <point x="143698" y="12185"/>
+            <point x="144657" y="10353"/>
+            <point x="144156" y="9821"/>
+            <point x="143148" y="7939"/>
+            <point x="143155" y="4824"/>
+            <point x="144053" y="4830"/>
+        </polygon>
+        <property name="territoryId" value="85"/>
+        <!-- headquarter_territory -->
+    </zone>
+    <!-- Innadril Territory War HQ Zones -->
+    <zone name="innadrile_dominion_headquarter_territory1" type="org.l2j.gameserver.world.zone.type.HqZone">
+        <polygon min-z="-2774" max-z="4000">
+            <point x="119963" y="244504"/>
+            <point x="112132" y="244522"/>
+            <point x="112108" y="241971"/>
+            <point x="119943" y="241963"/>
+        </polygon>
+        <property name="territoryId" value="86"/>
+        <!-- headquarter_territory -->
+    </zone>
+    <zone name="innadrile_dominion_headquarter_territory2" type="org.l2j.gameserver.world.zone.type.HqZone">
+        <polygon min-z="-2710" max-z="4000">
+            <point x="119941" y="253720"/>
+            <point x="118181" y="253712"/>
+            <point x="118177" y="244794"/>
+            <point x="119942" y="244797"/>
+        </polygon>
+        <property name="territoryId" value="86"/>
+        <!-- headquarter_territory -->
+    </zone>
+    <zone name="innadrile_dominion_headquarter_territory3" type="org.l2j.gameserver.world.zone.type.HqZone">
+        <polygon min-z="-2678" max-z="4000">
+            <point x="113465" y="253695"/>
+            <point x="111828" y="253690"/>
+            <point x="111825" y="244772"/>
+            <point x="113465" y="244772"/>
+        </polygon>
+        <property name="territoryId" value="86"/>
+        <!-- headquarter_territory -->
+    </zone>
+    <!-- Goddard Territory War HQ Zones -->
+    <zone name="godad_dominion_headquarter_territory" type="org.l2j.gameserver.world.zone.type.HqZone">
+        <polygon min-z="-2625" max-z="1875">
+            <point x="144715" y="-43884"/>
+            <point x="150045" y="-43884"/>
+            <point x="150037" y="-43064"/>
+            <point x="148924" y="-42723"/>
+            <point x="148512" y="-41841"/>
+            <point x="148496" y="-40907"/>
+            <point x="147063" y="-40920"/>
+            <point x="145883" y="-42805"/>
+            <point x="144692" y="-42822"/>
+        </polygon>
+        <property name="territoryId" value="87"/>
+        <!-- headquarter_territory -->
+    </zone>
+    <!-- Rune Territory War HQ Zones -->
+    <zone name="rune_dominion_headquarter_territory" type="org.l2j.gameserver.world.zone.type.HqZone">
+        <polygon min-z="-1780" max-z="-680">
+            <point x="26755" y="-49171"/>
+            <point x="22310" y="-49171"/>
+            <point x="22309" y="-50415"/>
+            <point x="21392" y="-50412"/>
+            <point x="21391" y="-49164"/>
+            <point x="19543" y="-49168"/>
+            <point x="19546" y="-49074"/>
+            <point x="21387" y="-49070"/>
+            <point x="21388" y="-47783"/>
+            <point x="22316" y="-47784"/>
+            <point x="22316" y="-49082"/>
+            <point x="26755" y="-49082"/>
+        </polygon>
+        <property name="territoryId" value="88"/>
+        <!-- headquarter_territory -->
+    </zone>
+    <!-- Schuttgart Territory War HQ Zones -->
+    <zone name="schuttgart_dominion_headquarter_territory" type="org.l2j.gameserver.world.zone.type.HqZone">
+        <polygon min-z="-3800" max-z="1700">
+            <point x="74554" y="-148009"/>
+            <point x="80640" y="-148009"/>
+            <point x="80631" y="-147713"/>
+            <point x="78857" y="-147120"/>
+            <point x="78119" y="-146316"/>
+            <point x="76767" y="-146316"/>
+            <point x="76314" y="-147099"/>
+            <point x="74533" y="-147618"/>
+        </polygon>
+        <property name="territoryId" value="89"/>
+        <!-- headquarter_territory -->
+    </zone>
+</list>

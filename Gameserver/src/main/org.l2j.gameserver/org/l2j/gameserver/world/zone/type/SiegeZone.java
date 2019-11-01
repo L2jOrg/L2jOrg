@@ -163,31 +163,23 @@ public class SiegeZone extends Zone {
 
     public void updateZoneStatusForCharactersInside() {
         if (getSettings().isActiveSiege()) {
-            for (Creature character : getCreaturesInside()) {
-                if (character != null) {
-                    onEnter(character);
-                }
-            }
+            forEachCreature(this::onEnter);
         } else {
-            Player player;
-            for (Creature character : getCreaturesInside()) {
-                if (character == null) {
-                    continue;
-                }
 
-                character.setInsideZone(ZoneType.PVP, false);
-                character.setInsideZone(ZoneType.SIEGE, false);
-                character.setInsideZone(ZoneType.NO_SUMMON_FRIEND, false);
+            forEachCreature( creature ->  {
+                creature.setInsideZone(ZoneType.PVP, false);
+                creature.setInsideZone(ZoneType.SIEGE, false);
+                creature.setInsideZone(ZoneType.NO_SUMMON_FRIEND, false);
 
-                if (isPlayer(character)) {
-                    player = character.getActingPlayer();
-                    character.sendPacket(SystemMessageId.YOU_HAVE_LEFT_A_COMBAT_ZONE);
+                if (isPlayer(creature)) {
+                    var player = creature.getActingPlayer();
+                    creature.sendPacket(SystemMessageId.YOU_HAVE_LEFT_A_COMBAT_ZONE);
                     player.stopFameTask();
                     if (player.getMountType() == MountType.WYVERN) {
                         player.exitedNoLanding();
                     }
                 }
-            }
+            });
         }
     }
 
@@ -213,12 +205,7 @@ public class SiegeZone extends Zone {
      * @param owningClanId
      */
     public void banishForeigners(int owningClanId) {
-        for (Player temp : getPlayersInside()) {
-            if (temp.getClanId() == owningClanId) {
-                continue;
-            }
-            temp.teleToLocation(TeleportWhereType.TOWN);
-        }
+        forEachPlayer(p -> p.teleToLocation(TeleportWhereType.TOWN), p -> p.getClanId() != owningClanId);
     }
 
     public static final class Settings extends AbstractZoneSettings {

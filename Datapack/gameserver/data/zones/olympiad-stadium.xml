@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org zones.xsd">
     <!-- Olympiad Stadium Zones -->
-    <zone name="olimpiad_stadium_h5_1" id="311" type="org.l2j.gameserver.world.zone.type.OlympiadStadiumZone" form="Cube" minZ="-3500" maxZ="-2000">
+    <zone name="olimpiad_stadium_h5_1" id="311" type="org.l2j.gameserver.world.zone.type.OlympiadStadiumZone">
+        <cube min-z="-3500" max-z="-2000">
+            <point x="-90200" y="-251085"/>
+            <point x="-85825" y="-254465"/>
+        </cube>
         <property name="instanceId" value="147"/>
-        <point x="-90200" y="-251085"/>
-        <point x="-85825" y="-254465"/>
         <!-- point1 -->
         <spawn x="-89597" y="-252841" z="-3320"/>
         <spawn x="-89578" y="-252826" z="-3320"/>
@@ -17,10 +19,12 @@
         <spawn x="-88077" y="-252849" z="-3020" type="spectatorSpawn"/>
     </zone>
 
-    <zone name="olimpiad_stadium_h5_2" id="312" type="org.l2j.gameserver.world.zone.type.OlympiadStadiumZone" form="Cube" minZ="-8000" maxZ="-6500">
+    <zone name="olimpiad_stadium_h5_2" id="312" type="org.l2j.gameserver.world.zone.type.OlympiadStadiumZone">
+        <cube min-z="-8000" max-z="-6500">
+            <point x="-77302" y="-250871"/>
+            <point x="-73770" y="-253917"/>
+        </cube>
         <property name="instanceId" value="148"/>
-        <point x="-77302" y="-250871"/>
-        <point x="-73770" y="-253917"/>
         <!-- point1 -->
         <spawn x="-76949" y="-252459" z="-7720"/>
         <spawn x="-76930" y="-252476" z="-7720"/>
@@ -33,10 +37,12 @@
         <spawn x="-75503" y="-252463" z="-7400" type="spectatorSpawn"/>
     </zone>
 
-    <zone name="olimpiad_stadium_h5_3" id="313" type="org.l2j.gameserver.world.zone.type.OlympiadStadiumZone" form="Cube" minZ="-8600" maxZ="-7300">
+    <zone name="olimpiad_stadium_h5_3" id="313" type="org.l2j.gameserver.world.zone.type.OlympiadStadiumZone">
+        <cube min-z="-8600" max-z="-7300">
+            <point x="-89727" y="-237729"/>
+            <point x="-86464" y="-240971"/>
+        </cube>
         <property name="instanceId" value="149"/>
-        <point x="-89727" y="-237729"/>
-        <point x="-86464" y="-240971"/>
         <!-- point1 -->
         <spawn x="-89480" y="-239358" z="-8450"/>
         <spawn x="-89451" y="-239343" z="-8450"/>
@@ -49,10 +55,12 @@
         <spawn x="-88099" y="-239359" z="-8150" type="spectatorSpawn"/>
     </zone>
 
-    <zone name="olimpiad_stadium_h5_4" id="314" type="org.l2j.gameserver.world.zone.type.OlympiadStadiumZone" form="Cube" minZ="-8400" maxZ="-7100">
+    <zone name="olimpiad_stadium_h5_4" id="314" type="org.l2j.gameserver.world.zone.type.OlympiadStadiumZone">
+        <cube min-z="-8400" max-z="-7100">
+            <point x="-77066" y="-237599"/>
+            <point x="-73837" y="-240764"/>
+        </cube>
         <property name="instanceId" value="150"/>
-        <point x="-77066" y="-237599"/>
-        <point x="-73837" y="-240764"/>
         <!-- point1 -->
         <spawn x="-76817" y="-239184" z="-8192"/>
         <spawn x="-76793" y="-239205" z="-8192"/>

@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org zones.xsd">
+    <!-- Fortress HQ Zones -->
+    <zone name="gludio_fort_a_headquarter_territory" type="org.l2j.gameserver.world.zone.type.HqZone">
+        <polygon min-z="-3950" max-z="1050">
+            <point x="-51350" y="153139"/>
+            <point x="-48668" y="156359"/>
+            <point x="-51990" y="159614"/>
+            <point x="-56397" y="158120"/>
+            <point x="-56414" y="155051"/>
+        </polygon>
+        <property name="fortId" value="101"/>
+        <!-- headquarter_territory -->
+    </zone>
+    <zone name="gludio_fort_b_headquarter_territory" type="org.l2j.gameserver.world.zone.type.HqZone">
+        <polygon min-z="-5267" max-z="-267">
+            <point x="-23904" y="215879"/>
+            <point x="-18666" y="217928"/>
+            <point x="-17457" y="220961"/>
+            <point x="-21539" y="223804"/>
+            <point x="-27440" y="221210"/>
+            <point x="-27262" y="218372"/>
+        </polygon>
+        <property name="fortId" value="102"/>
+        <!-- headquarter_territory -->
+    </zone>
+    <zone name="dion_fort_headquarter_territory" type="org.l2j.gameserver.world.zone.type.HqZone">
+        <polygon min-z="-4763" max-z="237">
+            <point x="16806" y="184151"/>
+            <point x="18658" y="185948"/>
+            <point x="19811" y="188016"/>
+            <point x="18313" y="190851"/>
+            <point x="14432" y="189919"/>
+            <point x="13658" y="186916"/>
+            <point x="14463" y="185414"/>
+        </polygon>
+        <property name="fortId" value="103"/>
+        <!-- headquarter_territory -->
+    </zone>
+    <zone name="giran_fort_headquarter_territory" type="org.l2j.gameserver.world.zone.type.HqZone">
+        <polygon min-z="-4498" max-z="502">
+            <point x="124284" y="119446"/>
+            <point x="128574" y="119995"/>
+            <point x="129735" y="123571"/>
+            <point x="128400" y="126683"/>
+            <point x="124116" y="126248"/>
+            <point x="122777" y="124293"/>
+            <point x="122690" y="121280"/>
+        </polygon>
+        <property name="fortId" value="104"/>
+        <!-- headquarter_territory -->
+    </zone>
+    <zone name="oren_fort_headquarter_territory" type="org.l2j.gameserver.world.zone.type.HqZone">
+        <polygon min-z="-4926" max-z="74">
+            <point x="71484" y="1432"/>
+            <point x="75340" y="1205"/>
+            <point x="76621" y="4854"/>
+            <point x="72909" y="7357"/>
+            <point x="71016" y="7512"/>
+            <point x="69961" y="4638"/>
+        </polygon>
+        <property name="fortId" value="105"/>
+        <!-- headquarter_territory -->
+    </zone>
+    <zone name="aden_fort_a_headquarter_territory" type="org.l2j.gameserver.world.zone.type.HqZone">
+        <polygon min-z="-5130" max-z="-130">
+            <point x="154558" y="52235"/>
+            <point x="156800" y="53060"/>
+            <point x="158118" y="54785"/>
+            <point x="157627" y="57248"/>
+            <point x="154860" y="58637"/>
+            <point x="153165" y="58063"/>
+            <point x="151591" y="55815"/>
+            <point x="151765" y="54393"/>
+            <point x="152779" y="52962"/>
+        </polygon>
+        <property name="fortId" value="106"/>
+        <!-- headquarter_territory -->
+    </zone>
+    <zone name="aden_fort_b_headquarter_territory" type="org.l2j.gameserver.world.zone.type.HqZone">
+        <polygon min-z="-5193" max-z="-193">
+            <point x="188581" y="35178"/>
+            <point x="192930" y="36794"/>
+            <point x="193336" y="41634"/>
+            <point x="191834" y="43367"/>
+            <point x="187645" y="42951"/>
+            <point x="185955" y="38633"/>
+        </polygon>
+        <property name="fortId" value="107"/>
+        <!-- headquarter_territory -->
+    </zone>
+    <zone name="inna_fort_headquarter_territory" type="org.l2j.gameserver.world.zone.type.HqZone">
+        <polygon min-z="-5158" max-z="-158">
+            <point x="116995" y="201928"/>
+            <point x="120569" y="202176"/>
+            <point x="121141" y="206722"/>
+            <point x="117936" y="208342"/>
+            <point x="115047" y="206898"/>
+            <point x="115703" y="203324"/>
+        </polygon>
+        <property name="fortId" value="108"/>
+        <!-- headquarter_territory -->
+    </zone>
+    <zone name="godad_fort_headquarter_territory" type="org.l2j.gameserver.world.zone.type.HqZone">
+        <polygon min-z="-4677" max-z="323">
+            <point x="157327" y="-73226"/>
+            <point x="162307" y="-73709"/>
+            <point x="162890" y="-68333"/>
+            <point x="158281" y="-66517"/>
+            <point x="155844" y="-68174"/>
+            <point x="155347" y="-70351"/>
+        </polygon>
+        <property name="fortId" value="109"/>
+        <!-- headquarter_territory -->
+    </zone>
+    <zone name="rune_fort_headquarter_territory" type="org.l2j.gameserver.world.zone.type.HqZone">
+        <polygon min-z="-4544" max-z="456">
+            <point x="66706" y="-63705"/>
+            <point x="69655" y="-64519"/>
+            <point x="72607" y="-63744"/>
+            <point x="73096" y="-60007"/>
+            <point x="70204" y="-57367"/>
+            <point x="66604" y="-59399"/>
+        </polygon>
+        <property name="fortId" value="110"/>
+        <!-- headquarter_territory -->
+    </zone>
+    <zone name="schutt_fort_headquarter_territory" type="org.l2j.gameserver.world.zone.type.HqZone">
+        <polygon min-z="-4744" max-z="256">
+            <point x="108236" y="-143972"/>
+            <point x="110775" y="-143634"/>
+            <point x="113016" y="-141709"/>
+            <point x="111508" y="-138829"/>
+            <point x="107114" y="-138401"/>
+            <point x="105935" y="-141913"/>
+        </polygon>
+        <property name="fortId" value="111"/>
+        <!-- headquarter_territory -->
+    </zone>
+    <zone name="glu_di_fort_headquarter_territory" type="org.l2j.gameserver.world.zone.type.HqZone">
+        <polygon min-z="-4776" max-z="224">
+            <point x="4841" y="145037"/>
+            <point x="8162" y="146059"/>
+            <point x="8695" y="150157"/>
+            <point x="7735" y="153473"/>
+            <point x="3175" y="152995"/>
+            <point x="2625" y="149463"/>
+            <point x="3003" y="148080"/>
+        </polygon>
+        <property name="fortId" value="112"/>
+        <!-- headquarter_territory -->
+    </zone>
+    <zone name="glu_ore_fort_headquarter_territory" type="org.l2j.gameserver.world.zone.type.HqZone">
+        <polygon min-z="-5416" max-z="-416">
+            <point x="-57784" y="88538"/>
+            <point x="-49335" y="88648"/>
+            <point x="-48981" y="93886"/>
+            <point x="-57853" y="93471"/>
+        </polygon>
+        <property name="fortId" value="113"/>
+        <!-- headquarter_territory -->
+    </zone>
+    <zone name="di_gi_fort_headquarter_territory" type="org.l2j.gameserver.world.zone.type.HqZone">
+        <polygon min-z="-3620" max-z="1380">
+            <point x="57267" y="137306"/>
+            <point x="62461" y="136798"/>
+            <point x="63626" y="139896"/>
+            <point x="62337" y="142501"/>
+            <point x="57884" y="141884"/>
+            <point x="56277" y="139496"/>
+        </polygon>
+        <property name="fortId" value="114"/>
+        <!-- headquarter_territory -->
+    </zone>
+    <zone name="di_ore_fort_headquarter_territory" type="org.l2j.gameserver.world.zone.type.HqZone">
+        <polygon min-z="-5457" max-z="-457">
+            <point x="8304" y="92707"/>
+            <point x="11224" y="92625"/>
+            <point x="14885" y="92948"/>
+            <point x="14742" y="95949"/>
+            <point x="13106" y="97755"/>
+            <point x="9421" y="97504"/>
+            <point x="7680" y="96618"/>
+        </polygon>
+        <property name="fortId" value="115"/>
+        <!-- headquarter_territory -->
+    </zone>
+    <zone name="ore_gi_fort_headquarter_territory" type="org.l2j.gameserver.world.zone.type.HqZone">
+        <polygon min-z="-4710" max-z="290">
+            <point x="78726" y="86600"/>
+            <point x="81087" y="86176"/>
+            <point x="83452" y="88657"/>
+            <point x="80971" y="93477"/>
+            <point x="78396" y="95036"/>
+            <point x="74691" y="93089"/>
+            <point x="76675" y="89735"/>
+        </polygon>
+        <property name="fortId" value="116"/>
+        <!-- headquarter_territory -->
+    </zone>
+    <zone name="a_o_g_fort_headquarter_territory" type="org.l2j.gameserver.world.zone.type.HqZone">
+        <polygon min-z="-2505" max-z="2495">
+            <point x="106731" y="-19032"/>
+            <point x="115932" y="-19301"/>
+            <point x="115716" y="-11679"/>
+            <point x="111792" y="-9682"/>
+            <point x="106440" y="-13306"/>
+        </polygon>
+        <property name="fortId" value="117"/>
+        <!-- headquarter_territory -->
+    </zone>
+    <zone name="aden_gi_fort_headquarter_territory" type="org.l2j.gameserver.world.zone.type.HqZone">
+        <polygon min-z="-3988" max-z="1012">
+            <point x="122054" y="91956"/>
+            <point x="128690" y="92822"/>
+            <point x="128716" y="97660"/>
+            <point x="121811" y="97944"/>
+            <point x="121349" y="93373"/>
+        </polygon>
+        <property name="fortId" value="118"/>
+        <!-- headquarter_territory -->
+    </zone>
+    <zone name="inna_gi_fort_headquarter_territory" type="org.l2j.gameserver.world.zone.type.HqZone">
+        <polygon min-z="-4393" max-z="607">
+            <point x="71458" y="182308"/>
+            <point x="73539" y="182370"/>
+            <point x="76657" y="185241"/>
+            <point x="75146" y="189567"/>
+            <point x="69945" y="187518"/>
+            <point x="69014" y="185651"/>
+        </polygon>
+        <property name="fortId" value="119"/>
+        <!-- headquarter_territory -->
+    </zone>
+    <zone name="ru_go_fort_headquarter_territory" type="org.l2j.gameserver.world.zone.type.HqZone">
+        <polygon min-z="-2414" max-z="2586">
+            <point x="98350" y="-58747"/>
+            <point x="103100" y="-58279"/>
+            <point x="102972" y="-52300"/>
+            <point x="98379" y="-52053"/>
+        </polygon>
+        <property name="fortId" value="120"/>
+        <!-- headquarter_territory -->
+    </zone>
+    <zone name="ru_sch_fort_headquarter_territory" type="org.l2j.gameserver.world.zone.type.HqZone">
+        <polygon min-z="-3246" max-z="1754">
+            <point x="68828" y="-96543"/>
+            <point x="72135" y="-97648"/>
+            <point x="75413" y="-97103"/>
+            <point x="76387" y="-92770"/>
+            <point x="71298" y="-90403"/>
+            <point x="68701" y="-92263"/>
+        </polygon>
+        <property name="fortId" value="121"/>
+        <!-- headquarter_territory -->
+    </zone>
+</list>

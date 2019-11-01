@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org zones.xsd">
+    <zone name="oracle_of_dusk_waitroom" type="org.l2j.gameserver.world.zone.type.NoSummonFriendZone">
+        <polygon min-z="-5383" max-z="-4883">
+            <point x="-82064" y="85608"/>
+            <point x="-75832" y="85626"/>
+            <point x="-75832" y="88068"/>
+            <point x="-82099" y="88080"/>
+        </polygon>
+    </zone>
+    <zone name="oracle_of_dawn_waitroom" type="org.l2j.gameserver.world.zone.type.NoSummonFriendZone">
+        <polygon min-z="-5118" max-z="-4618">
+            <point x="-74529" y="110475"/>
+            <point x="-75832" y="110476"/>
+            <point x="-74524" y="113224"/>
+            <point x="-80892" y="113211"/>
+        </polygon>
+    </zone>
+    <zone name="rift_between_worlds_waitroom" type="org.l2j.gameserver.world.zone.type.NoSummonFriendZone">
+        <polygon min-z="-6949" max-z="-6449">
+            <point x="-115608" y="-182374"/>
+            <point x="-113976" y="-182380"/>
+            <point x="-113990" y="-177851"/>
+            <point x="-115606" y="-177858"/>
+        </polygon>
+    </zone>
+    <zone name="gm_prison" type="org.l2j.gameserver.world.zone.type.NoSummonFriendZone">
+        <polygon min-z="-2992" max-z="-2792">
+            <point x="-116390" y="-251581"/>
+            <point x="-112756" y="-251617"/>
+            <point x="-112720" y="-248199"/>
+            <point x="-116354" y="-248217"/>
+        </polygon>
+    </zone>
+    <zone name="Hell_Bound_Island" type="org.l2j.gameserver.world.zone.type.NoSummonFriendZone">
+        <polygon min-z="-15000" max-z="15000">
+            <point x="-47730" y="228200"/>
+            <point x="-48000" y="287833"/>
+            <point x="48000" y="287833"/>
+            <point x="48000" y="228200"/>
+            <point x="-10026" y="228200"/>
+        </polygon>
+    </zone>
+    <zone name="boss_area_valakas" type="org.l2j.gameserver.world.zone.type.NoSummonFriendZone">
+        <polygon min-z="-3753" max-z="32767">
+            <point x="196710" y="-130845"/>
+            <point x="228895" y="-130845"/>
+            <point x="229126" y="-96162"/>
+            <point x="196478" y="-98187"/>
+        </polygon>
+    </zone>
+    <zone name="boss_area_valakas2" type="org.l2j.gameserver.world.zone.type.NoSummonFriendZone">
+        <polygon min-z="-3753" max-z="32767">
+            <point x="183634" y="-115085"/>
+            <point x="183634" y="-114885"/>
+            <point x="184000" y="-115085"/>
+            <point x="184000" y="-114885"/>
+        </polygon>
+    </zone>
+    <zone name="20_26_basetower_inner_01" type="org.l2j.gameserver.world.zone.type.NoSummonFriendZone">
+        <polygon min-z="-10736" max-z="-5736">
+            <point x="12080" y="274633"/>
+            <point x="20523" y="274633"/>
+            <point x="20553" y="284567"/>
+            <point x="11947" y="284600"/>
+        </polygon>
+    </zone>
+    <zone name="19_26_tower_a_inner_01" type="org.l2j.gameserver.world.zone.type.NoSummonFriendZone">
+        <polygon min-z="-15364" max-z="-6864">
+            <point x="-23324" y="276243"/>
+            <point x="-17912" y="276243"/>
+            <point x="-17912" y="280871"/>
+            <point x="-23324" y="280871"/>
+        </polygon>
+    </zone>
+    <zone name="19_26_tower_b_inner_01" type="org.l2j.gameserver.world.zone.type.NoSummonFriendZone">
+        <polygon min-z="-16148" max-z="-4648">
+            <point x="-15081" y="271397"/>
+            <point x="-9858" y="271401"/>
+            <point x="-9809" y="282115"/>
+            <point x="-15085" y="282131"/>
+        </polygon>
+    </zone>
+    <zone name="20_24_beres_01" type="org.l2j.gameserver.world.zone.type.NoSummonFriendZone">
+        <polygon min-z="-10412" max-z="-5112">
+            <point x="11214" y="205578"/>
+            <point x="20607" y="205578"/>
+            <point x="20648" y="220271"/>
+            <point x="11172" y="220271"/>
+        </polygon>
+    </zone>
+    <zone name="20_21_cruma_tower" type="org.l2j.gameserver.world.zone.type.NoSummonFriendZone">
+        <polygon min-z="-14581" max-z="-4581">
+            <point x="9951" y="106537"/>
+            <point x="25483" y="106522"/>
+            <point x="25456" y="121770"/>
+            <point x="9991" y="121797"/>
+        </polygon>
+    </zone>
+    <zone name="14_25_kserth01" type="org.l2j.gameserver.world.zone.type.NoSummonFriendZone">
+        <polygon min-z="534" max-z="4534">
+            <point x="-185793" y="237221"/>
+            <point x="-179675" y="239239"/>
+            <point x="-182132" y="249166"/>
+            <point x="-189240" y="247252"/>
+        </polygon>
+    </zone>
+    <zone name="13_24_undying01" type="org.l2j.gameserver.world.zone.type.NoSummonFriendZone">
+        <polygon min-z="4039" max-z="5039">
+            <point x="-215517" y="207306"/>
+            <point x="-209939" y="207283"/>
+            <point x="-209952" y="212489"/>
+            <point x="-215511" y="212467"/>
+        </polygon>
+    </zone>
+    <zone name="14_24_undying02" type="org.l2j.gameserver.world.zone.type.NoSummonFriendZone">
+        <polygon min-z="-16246" max-z="-6246">
+            <point x="-188655" y="204450"/>
+            <point x="-171766" y="204407"/>
+            <point x="-171791" y="221459"/>
+            <point x="-188592" y="221581"/>
+        </polygon>
+    </zone>
+    <zone name="12_24_destruction01" type="org.l2j.gameserver.world.zone.type.NoSummonFriendZone">
+        <polygon min-z="-13600" max-z="-5600">
+            <point x="-253983" y="204764"/>
+            <point x="-237481" y="204721"/>
+            <point x="-237521" y="221261"/>
+            <point x="-253986" y="221221"/>
+        </polygon>
+    </zone>
+    <zone name="12_25_destruction02" type="org.l2j.gameserver.world.zone.type.NoSummonFriendZone">
+        <polygon min-z="3964" max-z="5964">
+            <point x="-253537" y="245296"/>
+            <point x="-246362" y="245296"/>
+            <point x="-246326" y="252369"/>
+            <point x="-253537" y="252369"/>
+        </polygon>
+    </zone>
+    <zone name="14_23_annihilation01" type="org.l2j.gameserver.world.zone.type.NoSummonFriendZone">
+        <polygon min-z="-16312" max-z="-5912">
+            <point x="-193000" y="165212"/>
+            <point x="-165004" y="165212"/>
+            <point x="-165044" y="195382"/>
+            <point x="-193000" y="195382"/>
+        </polygon>
+    </zone>
+    <zone name="13_23_annihilation02" type="org.l2j.gameserver.world.zone.type.NoSummonFriendZone">
+        <polygon min-z="-16384" max-z="-5704">
+            <point x="-221209" y="171933"/>
+            <point x="-204834" y="171933"/>
+            <point x="-204834" y="188552"/>
+            <point x="-221209" y="188552"/>
+        </polygon>
+    </zone>
+    <zone name="14_23_annihilation03" type="org.l2j.gameserver.world.zone.type.NoSummonFriendZone">
+        <polygon min-z="-16096" max-z="10228">
+            <point x="-188401" y="139198"/>
+            <point x="-171892" y="139242"/>
+            <point x="-172090" y="155776"/>
+            <point x="-188584" y="155747"/>
+        </polygon>
+    </zone>
+    <zone name="13_25_cleft01" type="org.l2j.gameserver.world.zone.type.NoSummonFriendZone">
+        <polygon min-z="-5412" max-z="14587">
+            <point x="-226831" y="234718"/>
+            <point x="-201182" y="234791"/>
+            <point x="-201182" y="255191"/>
+            <point x="-226778" y="255249"/>
+        </polygon>
+    </zone>
+    <zone name="18_16_etc08_nocall" type="org.l2j.gameserver.world.zone.type.NoSummonFriendZone">
+        <polygon min-z="-2425" max-z="-2225">
+            <point x="-58571" y="64074"/>
+            <point x="-56368" y="64071"/>
+            <point x="-56370" y="61896"/>
+            <point x="-58565" y="61904"/>
+        </polygon>
+    </zone>
+    <zone name="25_15_godard15_nocall" type="org.l2j.gameserver.world.zone.type.NoSummonFriendZone">
+        <polygon min-z="-8800" max-z="200">
+            <point x="164226" y="-94258"/>
+            <point x="171998" y="-94378"/>
+            <point x="171845" y="-84191"/>
+            <point x="164030" y="-83790"/>
+        </polygon>
+    </zone>
+    <zone name="25_15_godard14_nocall" type="org.l2j.gameserver.world.zone.type.NoSummonFriendZone">
+        <polygon min-z="-8800" max-z="200">
+            <point x="176475" y="-90312"/>
+            <point x="192224" y="-90260"/>
+            <point x="192236" y="-84568"/>
+            <point x="180669" y="-84640"/>
+            <point x="180606" y="-82852"/>
+            <point x="176498" y="-82757"/>
+        </polygon>
+    </zone>
+    <zone name="25_15_godard18_nocall" type="org.l2j.gameserver.world.zone.type.NoSummonFriendZone">
+        <polygon min-z="-7318" max-z="-6718">
+            <point x="172063" y="-90095"/>
+            <point x="176460" y="-90057"/>
+            <point x="176460" y="-74019"/>
+            <point x="172089" y="-74076"/>
+        </polygon>
+    </zone>
+    <zone name="Tower_of_Insolence_Baium_nocall" type="org.l2j.gameserver.world.zone.type.NoSummonFriendZone">
+        <polygon min-z="8773" max-z="32767">
+            <point x="102382" y="2297"/>
+            <point x="100118" y="30085"/>
+            <point x="126188" y="29775"/>
+            <point x="127178" y="3979"/>
+        </polygon>
+    </zone>
+
+    <!-- Classic Monster Race Track Arena -->
+    <zone name="Monster_Race_Arena_NoCall" type="org.l2j.gameserver.world.zone.type.NoSummonFriendZone">
+        <polygon min-z="-3800" max-z="-3550">
+            <point x="13081" y="183060"/>
+            <point x="13302" y="183285"/>
+            <point x="13300" y="184089"/>
+            <point x="13086" y="184308"/>
+            <point x="11993" y="184308"/>
+            <point x="11774" y="184091"/>
+            <point x="11773" y="183287"/>
+            <point x="11994" y="183055"/>
+        </polygon>
+    </zone>
+</list>

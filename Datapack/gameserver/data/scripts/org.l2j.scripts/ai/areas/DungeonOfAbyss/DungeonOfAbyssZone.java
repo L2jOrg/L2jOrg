@@ -58,35 +58,35 @@ public class DungeonOfAbyssZone extends AbstractNpcAI
 	{
 		if (event.startsWith("EXIT_PLAYER") && (player != null))
 		{
-			if (event.contains(ABYSS_WEST_ZONE_1.getName()) && ABYSS_WEST_ZONE_1.getPlayersInside().contains(player))
+			if (event.contains(ABYSS_WEST_ZONE_1.getName()) && ABYSS_WEST_ZONE_1.isCreatureInZone(player))
 			{
 				player.teleToLocation(EXIT_LOCATION_1);
 			}
-			else if (event.contains(ABYSS_WEST_ZONE_2.getName()) && ABYSS_WEST_ZONE_2.getPlayersInside().contains(player))
+			else if (event.contains(ABYSS_WEST_ZONE_2.getName()) && ABYSS_WEST_ZONE_2.isCreatureInZone(player))
 			{
 				player.teleToLocation(EXIT_LOCATION_2);
 			}
-			else if (event.contains(ABYSS_EAST_ZONE_3.getName()) && ABYSS_EAST_ZONE_3.getPlayersInside().contains(player))
+			else if (event.contains(ABYSS_EAST_ZONE_3.getName()) && ABYSS_EAST_ZONE_3.isCreatureInZone(player))
 			{
 				player.teleToLocation(EXIT_LOCATION_3);
 			}
-			else if (event.contains(ABYSS_EAST_ZONE_4.getName()) && ABYSS_EAST_ZONE_4.getPlayersInside().contains(player))
+			else if (event.contains(ABYSS_EAST_ZONE_4.getName()) && ABYSS_EAST_ZONE_4.isCreatureInZone(player))
 			{
 				player.teleToLocation(EXIT_LOCATION_4);
 			}
-			else if (event.contains(ABYSS_WEST_ZONE_BOSS_1.getName()) && ABYSS_WEST_ZONE_BOSS_1.getPlayersInside().contains(player))
+			else if (event.contains(ABYSS_WEST_ZONE_BOSS_1.getName()) && ABYSS_WEST_ZONE_BOSS_1.isCreatureInZone(player))
 			{
 				player.teleToLocation(EXIT_LOCATION_1);
 			}
-			else if (event.contains(ABYSS_WEST_ZONE_BOSS_2.getName()) && ABYSS_WEST_ZONE_BOSS_2.getPlayersInside().contains(player))
+			else if (event.contains(ABYSS_WEST_ZONE_BOSS_2.getName()) && ABYSS_WEST_ZONE_BOSS_2.isCreatureInZone(player))
 			{
 				player.teleToLocation(EXIT_LOCATION_2);
 			}
-			else if (event.contains(ABYSS_EAST_ZONE_BOSS_3.getName()) && ABYSS_EAST_ZONE_BOSS_3.getPlayersInside().contains(player))
+			else if (event.contains(ABYSS_EAST_ZONE_BOSS_3.getName()) && ABYSS_EAST_ZONE_BOSS_3.isCreatureInZone(player))
 			{
 				player.teleToLocation(EXIT_LOCATION_3);
 			}
-			else if (event.contains(ABYSS_EAST_ZONE_BOSS_4.getName()) && ABYSS_EAST_ZONE_BOSS_4.getPlayersInside().contains(player))
+			else if (event.contains(ABYSS_EAST_ZONE_BOSS_4.getName()) && ABYSS_EAST_ZONE_BOSS_4.isCreatureInZone(player))
 			{
 				player.teleToLocation(EXIT_LOCATION_4);
 			}

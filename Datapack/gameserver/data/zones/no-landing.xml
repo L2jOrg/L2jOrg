@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org zones.xsd">
+    <!-- No Landing Zones -->
+    <zone name="boss_area_antaras" type="org.l2j.gameserver.world.zone.type.NoLandingZone">
+        <polygon min-z="-4096" max-z="-3896">
+            <point x="-58026" y="-190958"/>
+            <point x="-98030" y="-190958"/>
+            <point x="-97263" y="-35335"/>
+            <point x="-5341" y="-34964"/>
+            <point x="-5554" y="-4207"/>
+            <point x="-129444" y="-4207"/>
+        </polygon>
+    </zone>
+    <zone name="boss_area_valakas" type="org.l2j.gameserver.world.zone.type.NoLandingZone">
+        <polygon min-z="-3753" max-z="32767">
+            <point x="196710" y="-130845"/>
+            <point x="228895" y="-130845"/>
+            <point x="229126" y="-96162"/>
+            <point x="196478" y="-98187"/>
+        </polygon>
+    </zone>
+    <zone name="Tower_of_Insolence" type="org.l2j.gameserver.world.zone.type.NoLandingZone">
+        <polygon min-z="-3349" max-z="32767">
+            <point x="102382" y="2297"/>
+            <point x="100118" y="30085"/>
+            <point x="126188" y="29775"/>
+            <point x="127178" y="3979"/>
+        </polygon>
+    </zone>
+    <zone name="Hell_Bound_Island" type="org.l2j.gameserver.world.zone.type.NoLandingZone">
+        <polygon min-z="-15000" max-z="15000">
+            <point x="-47730" y="228200"/>
+            <point x="-33000" y="287833"/>
+            <point x="33000" y="287833"/>
+            <point x="33000" y="228200"/>
+            <point x="-10026" y="228200"/>
+        </polygon>
+    </zone>
+    <zone name="Rainbow_Spring" type="org.l2j.gameserver.world.zone.type.NoLandingZone">
+        <polygon min-z="-2610" max-z="15890">
+            <point x="147262" y="-130925"/>
+            <point x="159640" y="-130952"/>
+            <point x="159532" y="-121970"/>
+            <point x="147455" y="-121883"/>
+        </polygon>
+    </zone>
+    <zone name="24_21_nofly" type="org.l2j.gameserver.world.zone.type.NoLandingZone">
+        <polygon min-z="-716" max-z="15283">
+            <point x="131156" y="98394"/>
+            <point x="163755" y="98405"/>
+            <point x="163747" y="130995"/>
+            <point x="131168" y="131006"/>
+        </polygon>
+    </zone>
+    <zone name="25_21_nofly" type="org.l2j.gameserver.world.zone.type.NoLandingZone">
+        <polygon min-z="-4044" max-z="11956">
+            <point x="163907" y="98398"/>
+            <point x="196477" y="98408"/>
+            <point x="196495" y="130990"/>
+            <point x="164032" y="130993"/>
+        </polygon>
+    </zone>
+    <zone name="oren01_mb2220_ugoz01_flyno" type="org.l2j.gameserver.world.zone.type.NoLandingZone">
+        <polygon min-z="-15000" max-z="15000">
+            <point x="88417" y="77085"/>
+            <point x="105546" y="77041"/>
+            <point x="105421" y="92728"/>
+            <point x="88481" y="92787"/>
+        </polygon>
+    </zone>
+
+    <!-- High five zone -->
+    <zone name="olympiad_stadiums" type="org.l2j.gameserver.world.zone.type.NoLandingZone">
+        <cube min-z="-8485" max-z="1149">
+            <point x="-98296" y="-262136"/>
+            <point x="-65544" y="-229384"/>
+        </cube>
+    </zone>
+</list>

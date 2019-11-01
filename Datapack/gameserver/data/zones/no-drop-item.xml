@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org zones.xsd">
+    <!-- No Drop Item Zones -->
+    <!-- Steel's Star B Tower -->
+    <zone name="b_tower_bascule_bridge" type="org.l2j.gameserver.world.zone.type.ConditionZone">
+        <polygon min-z="10956" max-z="11956">
+            <point x="17887" y="244199"/>
+            <point x="20797" y="243918"/>
+            <point x="20808" y="244101"/>
+            <point x="17900" y="244403"/>
+        </polygon>
+        <property name="NoItemDrop" value="true"/>
+    </zone>
+    <!-- Underground Coliseum -->
+    <zone name="kerthang_area1" type="org.l2j.gameserver.world.zone.type.ConditionZone">
+        <polygon min-z="-11624" max-z="-11224">
+            <point x="-85850" y="-45960"/>
+            <point x="-86761" y="-45935"/>
+            <point x="-87000" y="-46986"/>
+            <point x="-87535" y="-48793"/>
+            <point x="-87049" y="-49419"/>
+            <point x="-85458" y="-49051"/>
+            <point x="-84224" y="-49803"/>
+            <point x="-83446" y="-49477"/>
+            <point x="-83154" y="-47528"/>
+            <point x="-83863" y="-47202"/>
+            <point x="-84291" y="-47449"/>
+            <point x="-84711" y="-47094"/>
+        </polygon>
+        <property name="NoItemDrop" value="true"/>
+    </zone>
+    <zone name="kerthang_area2" type="org.l2j.gameserver.world.zone.type.ConditionZone">
+        <polygon min-z="-11620" max-z="-11220">
+            <point x="-84112" y="-50103"/>
+            <point x="-84830" y="-51342"/>
+            <point x="-86142" y="-51844"/>
+            <point x="-86553" y="-52634"/>
+            <point x="-85640" y="-53190"/>
+            <point x="-84380" y="-54211"/>
+            <point x="-83379" y="-54413"/>
+            <point x="-82972" y="-52054"/>
+            <point x="-81938" y="-51822"/>
+            <point x="-82193" y="-50685"/>
+            <point x="-82732" y="-50575"/>
+            <point x="-83454" y="-49986"/>
+        </polygon>
+        <property name="NoItemDrop" value="true"/>
+    </zone>
+    <zone name="kerthang_area3" type="org.l2j.gameserver.world.zone.type.ConditionZone">
+        <polygon min-z="-11716" max-z="-11316">
+            <point x="-79843" y="-49874"/>
+            <point x="-81401" y="-50399"/>
+            <point x="-81709" y="-51148"/>
+            <point x="-81639" y="-51704"/>
+            <point x="-80712" y="-52824"/>
+            <point x="-80414" y="-54463"/>
+            <point x="-79510" y="-54322"/>
+            <point x="-78717" y="-52952"/>
+            <point x="-77725" y="-52968"/>
+            <point x="-77416" y="-51996"/>
+            <point x="-78890" y="-51583"/>
+            <point x="-79378" y="-50568"/>
+        </polygon>
+        <property name="NoItemDrop" value="true"/>
+    </zone>
+    <zone name="kerthang_area4" type="org.l2j.gameserver.world.zone.type.ConditionZone">
+        <polygon min-z="-11592" max-z="-11192">
+            <point x="-79343" y="-47478"/>
+            <point x="-80117" y="-47109"/>
+            <point x="-80672" y="-47858"/>
+            <point x="-80382" y="-49156"/>
+            <point x="-79813" y="-49685"/>
+            <point x="-79130" y="-49730"/>
+            <point x="-77951" y="-49052"/>
+            <point x="-76485" y="-49456"/>
+            <point x="-76221" y="-48619"/>
+            <point x="-76710" y="-48032"/>
+            <point x="-76946" y="-46451"/>
+            <point x="-77668" y="-45794"/>
+        </polygon>
+        <property name="NoItemDrop" value="true"/>
+    </zone>
+    <zone name="kerthang_area5" type="org.l2j.gameserver.world.zone.type.ConditionZone">
+        <polygon min-z="-11640" max-z="-11240">
+            <point x="-82326" y="-43857"/>
+            <point x="-83361" y="-43681"/>
+            <point x="-83614" y="-44430"/>
+            <point x="-82884" y="-46072"/>
+            <point x="-83209" y="-47165"/>
+            <point x="-82621" y="-47718"/>
+            <point x="-81071" y="-47576"/>
+            <point x="-80636" y="-47169"/>
+            <point x="-80853" y="-46291"/>
+            <point x="-79968" y="-44123"/>
+            <point x="-80245" y="-43614"/>
+            <point x="-81544" y="-43878"/>
+        </polygon>
+        <property name="NoItemDrop" value="true"/>
+    </zone>
+    <!-- Fantasy Island (Handy's Block Checker) -->
+    <zone name="18_16_etc08_nodrop" type="org.l2j.gameserver.world.zone.type.ConditionZone">
+        <polygon min-z="-2425" max-z="-2225">
+            <point x="-58571" y="-64074"/>
+            <point x="-56368" y="-64071"/>
+            <point x="-56370" y="-61896"/>
+            <point x="-58565" y="-61904"/>
+        </polygon>
+        <property name="NoItemDrop" value="true"/>
+    </zone>
+</list>

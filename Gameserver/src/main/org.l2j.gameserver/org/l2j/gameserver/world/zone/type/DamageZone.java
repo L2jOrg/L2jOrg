@@ -12,12 +12,14 @@ import org.l2j.gameserver.world.zone.TaskZoneSettings;
 import org.l2j.gameserver.world.zone.Zone;
 import org.l2j.gameserver.world.zone.ZoneManager;
 
-import static java.util.Objects.requireNonNullElseGet;
+import static java.util.Objects.*;
+import static org.l2j.gameserver.util.GameUtils.isPlayer;
 
 /**
  * A damage zone
  *
  * @author durgus
+ * @author JoeAlisson
  */
 public class DamageZone extends Zone {
     private int damageHPPerSec;
@@ -109,36 +111,32 @@ public class DamageZone extends Zone {
                 return;
             }
 
-            boolean siege = false;
-
-            if (getCastle() != null) {
-                siege = castle.getSiege().isInProgress();
-                // castle zones active only during siege
-                if (!siege) {
+            if (nonNull(castle)) {
+                if (!castle.getSiege().isInProgress()) {
                     getSettings().clear();
                     return;
                 }
             }
 
-            for (Creature temp : getCreaturesInside()) {
-                if ((temp != null) && !temp.isDead()) {
-                    if (siege) {
-                        // during siege defenders not affected
-                        final Player player = temp.getActingPlayer();
-                        if ((player != null) && player.isInSiege() && (player.getSiegeState() == 2)) {
-                            continue;
-                        }
-                    }
+            forEachCreature(this::doDamage, this::canReceiveDamage);
+        }
 
-                    final double multiplier = 1 + (temp.getStat().getValue(Stats.DAMAGE_ZONE_VULN, 0) / 100);
+        private boolean canReceiveDamage(Creature creature) {
+            if(creature.isDead()) {
+                return false;
+            }
 
-                    if (damageHPPerSec != 0) {
-                        temp.reduceCurrentHp(damageHPPerSec * multiplier, temp, null);
-                    }
-                    if (damageMPPerSec != 0) {
-                        temp.reduceCurrentMp(damageMPPerSec * multiplier);
-                    }
-                }
+            return !isPlayer(creature) || !((Player) creature).isInSiege() || ((Player) creature).getSiegeState() != 2;
+        }
+
+        private void doDamage(Creature creature) {
+            final double multiplier = 1 + (creature.getStat().getValue(Stats.DAMAGE_ZONE_VULN, 0) / 100);
+
+            if (damageHPPerSec != 0) {
+                creature.reduceCurrentHp(damageHPPerSec * multiplier, creature, null);
+            }
+            if (damageMPPerSec != 0) {
+                creature.reduceCurrentMp(damageMPPerSec * multiplier);
             }
         }
     }

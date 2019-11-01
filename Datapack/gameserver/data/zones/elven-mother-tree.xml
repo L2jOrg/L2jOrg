@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org zones.xsd">
+    <!-- Elven Mother Tree Zones -->
+    <zone name="mother_tree_start_zone" type="org.l2j.gameserver.world.zone.type.MotherTreeZone">
+        <polygon min-z="-3550" max-z="-3350">
+            <point x="45889" y="41890"/>
+            <point x="45277" y="41672"/>
+            <point x="45028" y="41478"/>
+            <point x="44809" y="41230"/>
+            <point x="44522" y="40689"/>
+            <point x="44501" y="39970"/>
+            <point x="44725" y="39407"/>
+            <point x="44930" y="39145"/>
+            <point x="45447" y="38764"/>
+            <point x="46073" y="38618"/>
+            <point x="46710" y="38716"/>
+            <point x="47255" y="39049"/>
+            <point x="47743" y="39834"/>
+            <point x="47772" y="40568"/>
+            <point x="47545" y="41125"/>
+            <point x="47108" y="41599"/>
+            <point x="46531" y="41868"/>
+        </polygon>
+        <property name="HpRegenBonus" value="2"/>
+        <property name="MpRegenBonus" value="1"/>
+        <property name="affectedRace" value="1"/> <!-- Elf -->
+        <property name="enterMsgId" value="114"/>
+        <property name="leaveMsgId" value="115"/>
+    </zone>
+    <zone name="mother_tree_town" type="org.l2j.gameserver.world.zone.type.MotherTreeZone">
+        <polygon min-z="-3121" max-z="-2921">
+            <point x="45234" y="49892"/>
+            <point x="45117" y="49826"/>
+            <point x="45031" y="49722"/>
+            <point x="44986" y="49597"/>
+            <point x="44985" y="49462"/>
+            <point x="45032" y="49336"/>
+            <point x="45116" y="49233"/>
+            <point x="45233" y="49165"/>
+            <point x="45365" y="49143"/>
+            <point x="45498" y="49166"/>
+            <point x="45614" y="49235"/>
+            <point x="45700" y="49336"/>
+            <point x="45746" y="49462"/>
+            <point x="45747" y="49596"/>
+            <point x="45699" y="49723"/>
+            <point x="45614" y="49825"/>
+            <point x="45498" y="49893"/>
+            <point x="45366" y="49914"/>
+        </polygon>
+        <property name="HpRegenBonus" value="2"/>
+        <property name="MpRegenBonus" value="1"/>
+        <property name="affectedRace" value="1"/> <!-- Elf -->
+        <property name="enterMsgId" value="114"/>
+        <property name="leaveMsgId" value="115"/>
+    </zone>
+    <zone name="20_19_worldtree" type="org.l2j.gameserver.world.zone.type.MotherTreeZone">
+        <polygon min-z="-3745" max-z="-3545">
+            <point x="21101" y="50538"/>
+            <point x="21511" y="50683"/>
+            <point x="21642" y="51005"/>
+            <point x="21583" y="51349"/>
+            <point x="21255" y="51581"/>
+            <point x="20852" y="51473"/>
+            <point x="20627" y="51121"/>
+            <point x="20728" y="50743"/>
+        </polygon>
+        <property name="HpRegenBonus" value="2"/>
+        <property name="MpRegenBonus" value="1"/>
+        <property name="affectedRace" value="1"/> <!-- Elf -->
+        <property name="enterMsgId" value="114"/>
+        <property name="leaveMsgId" value="115"/>
+    </zone>
+    <zone name="20_20_worldtree" type="org.l2j.gameserver.world.zone.type.MotherTreeZone">
+        <polygon min-z="-3260" max-z="-3060">
+            <point x="25548" y="81124"/>
+            <point x="25660" y="81548"/>
+            <point x="25380" y="81884"/>
+            <point x="24960" y="81972"/>
+            <point x="24660" y="81716"/>
+            <point x="24604" y="81324"/>
+            <point x="24816" y="81012"/>
+            <point x="25248" y="80944"/>
+        </polygon>
+        <property name="HpRegenBonus" value="2"/>
+        <property name="MpRegenBonus" value="1"/>
+        <property name="affectedRace" value="1"/> <!-- Elf -->
+        <property name="enterMsgId" value="114"/>
+        <property name="leaveMsgId" value="115"/>
+    </zone>
+    <zone name="21_20_worldtree" type="org.l2j.gameserver.world.zone.type.MotherTreeZone">
+        <polygon min-z="-3775" max-z="-3575">
+            <point x="57755" y="85802"/>
+            <point x="57974" y="86079"/>
+            <point x="57953" y="86404"/>
+            <point x="57711" y="86683"/>
+            <point x="57324" y="86686"/>
+            <point x="57105" y="86436"/>
+            <point x="57088" y="86061"/>
+            <point x="57404" y="85785"/>
+        </polygon>
+        <property name="HpRegenBonus" value="2"/>
+        <property name="MpRegenBonus" value="1"/>
+        <property name="affectedRace" value="1"/> <!-- Elf -->
+        <property name="enterMsgId" value="114"/>
+        <property name="leaveMsgId" value="115"/>
+    </zone>
+</list>

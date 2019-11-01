@@ -1,7 +1,6 @@
 package org.l2j.gameserver.world.zone.type;
 
 import org.l2j.gameserver.model.actor.Creature;
-import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.world.zone.ZoneType;
 
 /**
@@ -9,7 +8,7 @@ import org.l2j.gameserver.world.zone.ZoneType;
  *
  * @author Nyaran
  */
-public class ResidenceTeleportZone extends ZoneRespawn {
+public class ResidenceTeleportZone extends SpawnZone {
     private int residenceId;
 
     public ResidenceTeleportZone(int id) {
@@ -37,7 +36,7 @@ public class ResidenceTeleportZone extends ZoneRespawn {
 
     @Override
     public void oustAllPlayers() {
-        getPlayersInside().stream().filter(Player::isOnline).forEach(player -> player.teleToLocation(getSpawnLoc(), 200));
+        forEachPlayer(p -> p.teleToLocation(getSpawnLoc(), 200));
     }
 
     public int getResidenceId() {

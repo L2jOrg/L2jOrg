@@ -1,1704 +1,2554 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org zones.xsd">
     <!-- Water Zones -->
-    <zone name="11_23_water1" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4779" maxZ="-3779">
-        <point x="-294912" y="163839"/>
-        <point x="-262144" y="196607"/>
-    </zone>
-    <zone name="11_24_water1" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4779" maxZ="-3779">
-        <point x="-294912" y="196607"/>
-        <point x="-262144" y="229375"/>
-    </zone>
-    <zone name="11_25_water1" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4779" maxZ="-3779">
-        <point x="-294912" y="229375"/>
-        <point x="-262144" y="262143"/>
-    </zone>
-    <zone name="11_26_water1" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4779" maxZ="-3779">
-        <point x="-294912" y="262144"/>
-        <point x="-262144" y="294912"/>
-    </zone>
-    <zone name="12_23_water1" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4779" maxZ="-3779">
-        <point x="-262144" y="163839"/>
-        <point x="-229376" y="196607"/>
-    </zone>
-    <zone name="12_24_water1" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4779" maxZ="-3779">
-        <point x="-262144" y="196607"/>
-        <point x="-229376" y="229375"/>
-    </zone>
-    <zone name="12_25_water1" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4779" maxZ="-3779">
-        <point x="-262144" y="229375"/>
-        <point x="-229376" y="262143"/>
-    </zone>
-    <zone name="12_26_water1" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4779" maxZ="-3779">
-        <point x="-262144" y="262144"/>
-        <point x="-229376" y="294912"/>
-    </zone>
-    <zone name="13_23_water1" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4779" maxZ="-3779">
-        <point x="-229376" y="163839"/>
-        <point x="-196608" y="196607"/>
-    </zone>
-    <zone name="13_24_water1" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4779" maxZ="-3779">
-        <point x="-229376" y="223231"/>
-        <point x="-196608" y="229375"/>
-    </zone>
-    <zone name="13_24_water2" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4779" maxZ="-3779">
-        <point x="-229376" y="200447"/>
-        <point x="-225024" y="223231"/>
-    </zone>
-    <zone name="13_24_water3" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4779" maxZ="-3779">
-        <point x="-229376" y="196607"/>
-        <point x="-196608" y="200447"/>
-    </zone>
-    <zone name="13_24_water4" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4779" maxZ="-3779">
-        <point x="-206336" y="200447"/>
-        <point x="-196608" y="204287"/>
-    </zone>
-    <zone name="13_24_water5" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4779" maxZ="-3779">
-        <point x="-225024" y="200447"/>
-        <point x="-217344" y="207871"/>
-    </zone>
-    <zone name="13_24_water6" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4779" maxZ="-3779">
-        <point x="-219648" y="215039"/>
-        <point x="-213248" y="223231"/>
-    </zone>
-    <zone name="13_25_water1" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4779" maxZ="-3779">
-        <point x="-229376" y="229375"/>
-        <point x="-196608" y="262143"/>
-    </zone>
-    <zone name="13_26_water1" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4779" maxZ="-3779">
-        <point x="-229376" y="262144"/>
-        <point x="-196608" y="294912"/>
-    </zone>
-    <zone name="14_23_water1" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4779" maxZ="-3779">
-        <point x="-196608" y="163839"/>
-        <point x="-163840" y="196607"/>
-    </zone>
-    <zone name="14_24_water1" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4779" maxZ="-3779">
-        <point x="-193152" y="196607"/>
-        <point x="-168960" y="202239"/>
-    </zone>
-    <zone name="14_24_water2" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4779" maxZ="-3779">
-        <point x="-168960" y="196607"/>
-        <point x="-163840" y="229375"/>
-    </zone>
-    <zone name="14_24_water3" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4779" maxZ="-3779">
-        <point x="-196608" y="222975"/>
-        <point x="-179584" y="229375"/>
-    </zone>
-    <zone name="14_24_water4" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4779" maxZ="-3779">
-        <point x="-179584" y="224767"/>
-        <point x="-168960" y="229375"/>
-    </zone>
-    <zone name="14_24_water5" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4779" maxZ="-3779">
-        <point x="-186880" y="218111"/>
-        <point x="-179584" y="222975"/>
-    </zone>
-    <zone name="14_24_water6" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4779" maxZ="-3779">
-        <point x="-196608" y="196607"/>
-        <point x="-193152" y="203775"/>
-    </zone>
-    <zone name="14_25_water1" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4779" maxZ="-3779">
-        <point x="-196608" y="229375"/>
-        <point x="-163840" y="262143"/>
-    </zone>
-    <zone name="14_25_water2" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-2192" maxZ="-144">
-        <point x="-187152" y="240401"/>
-        <point x="-183376" y="245393"/>
-    </zone>
-    <zone name="14_25_water3" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-2192" maxZ="-144">
-        <point x="-183376" y="241768"/>
-        <point x="-182032" y="244872"/>
-    </zone>
-    <zone name="14_25_water4" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-2192" maxZ="-144">
-        <point x="-183376" y="240968"/>
-        <point x="-182799" y="241768"/>
-    </zone>
-    <zone name="14_26_water1" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4779" maxZ="-3779">
-        <point x="-196608" y="262144"/>
-        <point x="-163840" y="294912"/>
-    </zone>
-    <zone name="15_23_water1" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4784" maxZ="-3784">
-        <point x="-163840" y="163839"/>
-        <point x="-131072" y="196607"/>
-    </zone>
-    <zone name="15_24_water1" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4779" maxZ="-3779">
-        <point x="-163840" y="196608"/>
-        <point x="-131072" y="229376"/>
-    </zone>
-    <zone name="15_25_water1" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4779" maxZ="-3779">
-        <point x="-163840" y="229375"/>
-        <point x="-131072" y="262143"/>
-    </zone>
-    <zone name="15_26_water1" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4783" maxZ="-3783">
-        <point x="-163840" y="262144"/>
-        <point x="-131072" y="294912"/>
-    </zone>
-    <zone name="16_11_water1" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4780" maxZ="-3780">
-        <point x="-131072" y="-229376"/>
-        <point x="-98304" y="-196608"/>
-    </zone>
-    <zone name="16_14_water1" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4780" maxZ="-3780">
-        <point x="-131072" y="-131072"/>
-        <point x="-98304" y="-98304"/>
-    </zone>
-    <zone name="16_15_water1" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4780" maxZ="-3780">
-        <point x="-131072" y="-98304"/>
-        <point x="-98304" y="-65536"/>
-    </zone>
-    <zone name="16_16_water1" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4780" maxZ="-3780">
-        <point x="-131072" y="-65536"/>
-        <point x="-98304" y="-32768"/>
-    </zone>
-    <zone name="16_17_water1" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4780" maxZ="-3780">
-        <point x="-131072" y="-32768"/>
-        <point x="-98304" y="0"/>
-    </zone>
-    <zone name="16_18_water1" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4780" maxZ="-3780">
-        <point x="-131072" y="0"/>
-        <point x="-98304" y="32768"/>
-    </zone>
-    <zone name="16_19_water1" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-2431" maxZ="-1643">
-        <point x="-119580" y="51908"/>
-        <point x="-116148" y="55660"/>
-    </zone>
-    <zone name="16_19_water2" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="237" maxZ="337">
-        <point x="-118668" y="45364"/>
-        <point x="-117492" y="46588"/>
-    </zone>
-    <zone name="16_19_water3" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="237" maxZ="337">
-        <point x="-117492" y="45572"/>
-        <point x="-117020" y="46332"/>
-    </zone>
-    <zone name="16_19_water4" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="237" maxZ="337">
-        <point x="-119140" y="45572"/>
-        <point x="-118668" y="46332"/>
-    </zone>
-    <zone name="16_19_water5" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4779" maxZ="-3779">
-        <point x="-131072" y="32768"/>
-        <point x="-125120" y="65536"/>
-    </zone>
-    <zone name="16_19_water6" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4779" maxZ="-3779">
-        <point x="-125120" y="32768"/>
-        <point x="-98304" y="38848"/>
-    </zone>
-    <zone name="16_19_water7" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4779" maxZ="-3779">
-        <point x="-102528" y="60608"/>
-        <point x="-98304" y="65536"/>
-    </zone>
-    <zone name="16_20_water1" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4780" maxZ="-3780">
-        <point x="-131072" y="65536"/>
-        <point x="-98304" y="98304"/>
-    </zone>
-    <zone name="16_20_water2" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-12729" maxZ="-12721">
-        <point x="-117708" y="86820"/>
-        <point x="-116988" y="87540"/>
-    </zone>
-    <zone name="16_20_water3" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-12822" maxZ="-12814">
-        <point x="-115811" y="86821"/>
-        <point x="-115091" y="87541"/>
-    </zone>
-    <zone name="16_20_water4" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-12919" maxZ="-12911">
-        <point x="-113915" y="86823"/>
-        <point x="-113195" y="87543"/>
-    </zone>
-    <zone name="16_20_water5" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-12632" maxZ="-12624">
-        <point x="-119992" y="86728"/>
-        <point x="-119096" y="87624"/>
-    </zone>
-    <zone name="16_20_water6" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-12632" maxZ="-12624">
-        <point x="-119096" y="86960"/>
-        <point x="-118880" y="87392"/>
-    </zone>
-    <zone name="16_20_water7" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-12632" maxZ="-12624">
-        <point x="-120224" y="86960"/>
-        <point x="-119992" y="87392"/>
-    </zone>
-    <zone name="16_20_water8" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-12632" maxZ="-12624">
-        <point x="-119760" y="86520"/>
-        <point x="-119328" y="86728"/>
-    </zone>
-    <zone name="16_20_water9" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-12632" maxZ="-12624">
-        <point x="-119760" y="87624"/>
-        <point x="-119328" y="87848"/>
-    </zone>
-    <zone name="16_21_water1" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4780" maxZ="-3780">
-        <point x="-131071" y="98303"/>
-        <point x="-98303" y="131071"/>
-    </zone>
-    <zone name="16_22_water1" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4780" maxZ="-3780">
-        <point x="-131071" y="131072"/>
-        <point x="-98303" y="163840"/>
-    </zone>
-    <zone name="16_23_water1" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4780" maxZ="-3780">
-        <point x="-131071" y="163840"/>
-        <point x="-98303" y="196608"/>
-    </zone>
-    <zone name="16_24_water1" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-7779" maxZ="-3779">
-        <point x="-131072" y="196607"/>
-        <point x="-98304" y="229375"/>
-    </zone>
-    <zone name="16_25_water1" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4779" maxZ="-3779">
-        <point x="-131072" y="229375"/>
-        <point x="-98304" y="262144"/>
-    </zone>
-    <zone name="17_11_water1" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4748" maxZ="-3748">
-        <point x="-98304" y="-229376"/>
-        <point x="-65536" y="-196608"/>
-    </zone>
-    <zone name="17_14_water1" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4779" maxZ="-3779">
-        <point x="-98304" y="-131072"/>
-        <point x="-65536" y="-98304"/>
-    </zone>
-    <zone name="17_15_water1" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4756" maxZ="-3756">
-        <point x="-98304" y="-98304"/>
-        <point x="-65536" y="-65536"/>
-    </zone>
-    <zone name="17_16_water1" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4780" maxZ="-3780">
-        <point x="-98304" y="-65536"/>
-        <point x="-65536" y="-32768"/>
-    </zone>
-    <zone name="17_16_water2" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-3947" maxZ="-3200">
-        <point x="-80070" y="-53637"/>
-        <point x="-74814" y="-47958"/>
-    </zone>
-    <zone name="17_16_water3" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-3947" maxZ="-3200">
-        <point x="-74814" y="-54014"/>
-        <point x="-71990" y="-49026"/>
-    </zone>
-    <zone name="17_16_water4" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-3947" maxZ="-3200">
-        <point x="-71990" y="-52974"/>
-        <point x="-70190" y="-49528"/>
-    </zone>
-    <zone name="17_17_water1" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4764" maxZ="-3764">
-        <point x="-98304" y="-32768"/>
-        <point x="-65536" y="0"/>
-    </zone>
-    <zone name="17_18_water1" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4780" maxZ="-3780">
-        <point x="-98303" y="0"/>
-        <point x="-65535" y="32767"/>
-    </zone>
-    <zone name="17_19_water1" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4779" maxZ="-3779">
-        <point x="-78208" y="32768"/>
-        <point x="-65536" y="65536"/>
-    </zone>
-    <zone name="17_19_water2" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4779" maxZ="-3779">
-        <point x="-98304" y="56320"/>
-        <point x="-78208" y="65535"/>
-    </zone>
-    <zone name="17_19_water3" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4779" maxZ="-3779">
-        <point x="-98304" y="32768"/>
-        <point x="-78208" y="39936"/>
-    </zone>
-    <zone name="17_20_water1" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4780" maxZ="-3780">
-        <point x="-98303" y="65536"/>
-        <point x="-85503" y="98304"/>
-    </zone>
-    <zone name="17_20_water2" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4780" maxZ="-3780">
-        <point x="-85503" y="65536"/>
-        <point x="-65535" y="80384"/>
-    </zone>
-    <zone name="17_20_water3" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-5824" maxZ="-3504">
-        <point x="-85056" y="86208"/>
-        <point x="-84416" y="86848"/>
-    </zone>
-    <zone name="17_20_water4" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-5824" maxZ="-5248">
-        <point x="-84416" y="86208"/>
-        <point x="-82944" y="86848"/>
-    </zone>
-    <zone name="17_21_water1" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4780" maxZ="-3780">
-        <point x="-98304" y="121072"/>
-        <point x="-88304" y="131072"/>
-    </zone>
-    <zone name="17_21_water2" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4780" maxZ="-3780">
-        <point x="-98304" y="98304"/>
-        <point x="-96804" y="99804"/>
-    </zone>
-    <zone name="17_21_water3" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4179" maxZ="-3179">
-        <point x="-68536" y="128072"/>
-        <point x="-65536" y="131072"/>
-    </zone>
-    <zone name="17_21_water4" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-5568" maxZ="-3248">
-        <point x="-84032" y="111040"/>
-        <point x="-83392" y="111680"/>
-    </zone>
-    <zone name="17_21_water5" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-5568" maxZ="-4992">
-        <point x="-83392" y="111040"/>
-        <point x="-81920" y="111680"/>
-    </zone>
-    <zone name="17_22_water1" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4780" maxZ="-3780">
-        <point x="-98304" y="131072"/>
-        <point x="-78304" y="163840"/>
-    </zone>
-    <zone name="17_22_water2" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4179" maxZ="-3179">
-        <point x="-69836" y="131072"/>
-        <point x="-65536" y="140072"/>
-    </zone>
-    <zone name="17_23_water1" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-7780" maxZ="-3780">
-        <point x="-98304" y="163840"/>
-        <point x="-65536" y="196608"/>
-    </zone>
-    <zone name="17_24_water1" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4779" maxZ="-3779">
-        <point x="-98303" y="196608"/>
-        <point x="-65535" y="229376"/>
-    </zone>
-    <zone name="17_25_water1" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4779" maxZ="-3779">
-        <point x="-98303" y="229375"/>
-        <point x="-65535" y="262143"/>
-    </zone>
-    <zone name="18_11_water1" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4780" maxZ="-3780">
-        <point x="-65536" y="-229375"/>
-        <point x="-32768" y="-196607"/>
-    </zone>
-    <zone name="18_14_water1" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4780" maxZ="-3780">
-        <point x="-65536" y="-103304"/>
-        <point x="-32768" y="-98304"/>
-    </zone>
-    <zone name="18_15_water1" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4779" maxZ="-3779">
-        <point x="-65535" y="-98304"/>
-        <point x="-32767" y="-65536"/>
-    </zone>
-    <zone name="18_15_water2" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-3500" maxZ="-3200">
-        <point x="-56956" y="-70888"/>
-        <point x="-55556" y="-68104"/>
-    </zone>
-    <zone name="18_15_water3" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-3500" maxZ="-3200">
-        <point x="-50556" y="-70888"/>
-        <point x="-49604" y="-68104"/>
-    </zone>
-    <zone name="18_15_water4" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-3500" maxZ="-3200">
-        <point x="-56380" y="-72024"/>
-        <point x="-50116" y="-70888"/>
-    </zone>
-    <zone name="18_15_water5" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-3500" maxZ="-3200">
-        <point x="-56380" y="-68104"/>
-        <point x="-50012" y="-67112"/>
-    </zone>
-    <zone name="18_15_water6" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-3108" maxZ="-3008">
-        <point x="-59454" y="-68630"/>
-        <point x="-58034" y="-67530"/>
-    </zone>
-    <zone name="18_16_water1" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4780" maxZ="-3780">
-        <point x="-65536" y="-65536"/>
-        <point x="-32768" y="-32768"/>
-    </zone>
-    <zone name="18_16_water2" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-2069" maxZ="-2066">
-        <point x="-61172" y="-58276"/>
-        <point x="-58317" y="-55532"/>
-    </zone>
-    <zone name="18_16_water3" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-2086" maxZ="-2062">
-        <point x="-61684" y="-59972"/>
-        <point x="-60556" y="-59196"/>
-    </zone>
-    <zone name="18_16_water4" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-2301" maxZ="-2151">
-        <point x="-60960" y="-54879"/>
-        <point x="-58432" y="-53379"/>
-    </zone>
-    <zone name="18_16_water5" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-2893" maxZ="-2843">
-        <point x="-50599" y="-54912"/>
-        <point x="-50143" y="-53444"/>
-    </zone>
-    <zone name="18_16_water6" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-2893" maxZ="-2843">
-        <point x="-50143" y="-55029"/>
-        <point x="-49277" y="-53305"/>
-    </zone>
-    <zone name="18_16_water7" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-2894" maxZ="-2844">
-        <point x="-49277" y="-54781"/>
-        <point x="-49019" y="-53569"/>
-    </zone>
-    <zone name="18_16_water8" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-2893" maxZ="-2843">
-        <point x="-51168" y="-55433"/>
-        <point x="-50910" y="-55117"/>
-    </zone>
-    <zone name="18_16_water9" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-2893" maxZ="-2843">
-        <point x="-50186" y="-56004"/>
-        <point x="-49832" y="-55784"/>
-    </zone>
-    <zone name="18_16_water10" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-2893" maxZ="-2843">
-        <point x="-51206" y="-53249"/>
-        <point x="-50916" y="-52869"/>
-    </zone>
-    <zone name="18_16_water11" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-2893" maxZ="-2843">
-        <point x="-50199" y="-52553"/>
-        <point x="-49797" y="-52333"/>
-    </zone>
-    <zone name="18_17_water1" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4780" maxZ="-3780">
-        <point x="-65536" y="-32768"/>
-        <point x="-32768" y="0"/>
-    </zone>
-    <zone name="18_19_water1" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4779" maxZ="-3779">
-        <point x="-65536" y="32767"/>
-        <point x="-52036" y="65535"/>
-    </zone>
-    <zone name="18_19_water2" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4779" maxZ="-3779">
-        <point x="-52036" y="32768"/>
-        <point x="-32768" y="40768"/>
-    </zone>
-    <zone name="18_20_water1" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4780" maxZ="-3780">
-        <point x="-65536" y="65536"/>
-        <point x="-55536" y="75536"/>
-    </zone>
-    <zone name="18_20_water2" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-5408" maxZ="-3048">
-        <point x="-56055" y="78728"/>
-        <point x="-55303" y="79480"/>
-    </zone>
-    <zone name="18_20_water3" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-5408" maxZ="-4831">
-        <point x="-55303" y="78784"/>
-        <point x="-53887" y="79424"/>
-    </zone>
-    <zone name="18_21_water1" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4179" maxZ="-3179">
-        <point x="-65536" y="122368"/>
-        <point x="-52480" y="131072"/>
-    </zone>
-    <zone name="18_21_water1" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4659" maxZ="-3659">
-        <point x="-65536" y="113088"/>
-        <point x="-57664" y="121856"/>
-    </zone>
-    <zone name="18_22_water1" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4179" maxZ="-3179">
-        <point x="-65536" y="131072"/>
-        <point x="-62464" y="141056"/>
-    </zone>
-    <zone name="18_22_water2" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4179" maxZ="-3179">
-        <point x="-61764" y="131072"/>
-        <point x="-55748" y="132608"/>
-    </zone>
-    <zone name="18_23_water1" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4780" maxZ="-3780">
-        <point x="-65536" y="191350"/>
-        <point x="-53536" y="196608"/>
-    </zone>
-    <zone name="18_23_water2" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4780" maxZ="-3780">
-        <point x="-65535" y="179446"/>
-        <point x="-62962" y="191446"/>
-    </zone>
-    <zone name="18_23_water3" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4960" maxZ="-4702">
-        <point x="-54681" y="180233"/>
-        <point x="-53049" y="183017"/>
-    </zone>
-    <zone name="18_23_water4" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4960" maxZ="-4702">
-        <point x="-53616" y="183018"/>
-        <point x="-52368" y="184394"/>
-    </zone>
-    <zone name="18_24_water1" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-5754" maxZ="-5177">
-        <point x="-41888" y="206688"/>
-        <point x="-41248" y="208160"/>
-    </zone>
-    <zone name="18_24_water2" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4780" maxZ="-3780">
-        <point x="-65536" y="196608"/>
-        <point x="-53536" y="229376"/>
-    </zone>
-    <zone name="18_24_water3" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4780" maxZ="-3780">
-        <point x="-53536" y="220976"/>
-        <point x="-32768" y="229376"/>
-    </zone>
-    <zone name="18_24_water4" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4780" maxZ="-3780">
-        <point x="-41024" y="212576"/>
-        <point x="-32768" y="220976"/>
-    </zone>
-    <zone name="18_24_water5" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4282" maxZ="-3780">
-        <point x="-53536" y="212576"/>
-        <point x="-45280" y="220976"/>
-    </zone>
-    <zone name="18_24_water6" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4282" maxZ="-3780">
-        <point x="-53536" y="202208"/>
-        <point x="-47584" y="209584"/>
-    </zone>
-    <zone name="18_24_water7" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4282" maxZ="-3780">
-        <point x="-45280" y="212576"/>
-        <point x="-41024" y="220976"/>
-    </zone>
-    <zone name="18_24_water8" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-5754" maxZ="-3434">
-        <point x="-41888" y="206048"/>
-        <point x="-41248" y="206688"/>
-    </zone>
-    <zone name="18_25_water1" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4779" maxZ="-3779">
-        <point x="-65536" y="229375"/>
-        <point x="-32768" y="262143"/>
-    </zone>
-    <zone name="19_11_water1" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4780" maxZ="-3780">
-        <point x="-32768" y="-229375"/>
-        <point x="0" y="-196607"/>
-    </zone>
-    <zone name="19_14_water1" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4779" maxZ="-3779">
-        <point x="-32767" y="-101304"/>
-        <point x="-29767" y="-98304"/>
-    </zone>
-    <zone name="19_15_water1" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4780" maxZ="-3780">
-        <point x="-32768" y="-98304"/>
-        <point x="0" y="-65536"/>
-    </zone>
-    <zone name="19_16_water1" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4780" maxZ="-3780">
-        <point x="-32768" y="-65536"/>
-        <point x="0" y="-32768"/>
-    </zone>
-    <zone name="19_17_water1" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4780" maxZ="-3780">
-        <point x="-32768" y="-32768"/>
-        <point x="-25088" y="0"/>
-    </zone>
-    <zone name="19_17_water2" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4780" maxZ="-3780">
-        <point x="-25088" y="-32768"/>
-        <point x="-16384" y="-25856"/>
-    </zone>
-    <zone name="19_17_water3" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4780" maxZ="-3780">
-        <point x="-16384" y="-32768"/>
-        <point x="0" y="-14848"/>
-    </zone>
-    <zone name="19_17_water4" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4780" maxZ="-3780">
-        <point x="-25088" y="-14848"/>
-        <point x="0" y="0"/>
-    </zone>
-    <zone name="19_17_water5" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4780" maxZ="-3780">
-        <point x="-19712" y="-17664"/>
-        <point x="-16384" y="-14848"/>
-    </zone>
-    <zone name="19_17_water6" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4780" maxZ="-3780">
-        <point x="-25088" y="-18176"/>
-        <point x="-21760" y="-14848"/>
-    </zone>
-    <zone name="19_17_water7" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4780" maxZ="-3780">
-        <point x="-17920" y="-20224"/>
-        <point x="-16384" y="-17664"/>
-    </zone>
-    <zone name="19_17_water8" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4780" maxZ="-3780">
-        <point x="-18688" y="-25856"/>
-        <point x="-16384" y="-23296"/>
-    </zone>
-    <zone name="19_17_water9" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4780" maxZ="-3780">
-        <point x="-25088" y="-25856"/>
-        <point x="-23808" y="-22784"/>
-    </zone>
-    <zone name="19_17_water10" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4780" maxZ="-3780">
-        <point x="-23808" y="-25856"/>
-        <point x="-21504" y="-24320"/>
-    </zone>
-    <zone name="19_18_water1" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4780" maxZ="-3780">
-        <point x="-32768" y="0"/>
-        <point x="-23424" y="32768"/>
-    </zone>
-    <zone name="19_18_water2" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-5568" maxZ="-3248">
-        <point x="-23168" y="13184"/>
-        <point x="-22528" y="13824"/>
-    </zone>
-    <zone name="19_18_water3" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-5568" maxZ="-4991">
-        <point x="-22528" y="13184"/>
-        <point x="-21056" y="13824"/>
-    </zone>
-    <zone name="19_18_water4" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4780" maxZ="-3780">
-        <point x="-23424" y="0"/>
-        <point x="0" y="12928"/>
-    </zone>
-    <zone name="19_19_water1" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4784" maxZ="-3784">
-        <point x="-12972" y="57536"/>
-        <point x="-5972" y="65536"/>
-    </zone>
-    <zone name="19_19_water2" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4788" maxZ="-3788">
-        <point x="-5840" y="60645"/>
-        <point x="-3840" y="62645"/>
-    </zone>
-    <zone name="19_20_water1" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4268" maxZ="-3780">
-        <point x="-24488" y="65536"/>
-        <point x="0" y="98304"/>
-    </zone>
-    <zone name="19_20_water2" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-5840" maxZ="-3520">
-        <point x="-25472" y="77056"/>
-        <point x="-24832" y="77696"/>
-    </zone>
-    <zone name="19_20_water3" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-5840" maxZ="-5263">
-        <point x="-24832" y="77056"/>
-        <point x="-23360" y="77696"/>
-    </zone>
-    <zone name="19_21_water1" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-10611" maxZ="-3779">
-        <point x="-25816" y="98304"/>
-        <point x="0" y="106624"/>
-    </zone>
-    <zone name="19_21_water2" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-3214" maxZ="-2836">
-        <point x="-20504" y="106688"/>
-        <point x="-15719" y="107947"/>
-    </zone>
-    <zone name="19_21_water3" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-3214" maxZ="-2836">
-        <point x="-20504" y="107947"/>
-        <point x="-18904" y="113841"/>
-    </zone>
-    <zone name="19_21_water4" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-3214" maxZ="-2836">
-        <point x="-17319" y="107947"/>
-        <point x="-15719" y="113841"/>
-    </zone>
-    <zone name="19_21_water5" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-3214" maxZ="-2836">
-        <point x="-18904" y="111448"/>
-        <point x="-17319" y="113841"/>
-    </zone>
-    <zone name="19_21_water6" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-10611" maxZ="-3779">
-        <point x="-25816" y="115072"/>
-        <point x="0" y="120576"/>
-    </zone>
-    <zone name="19_21_water7" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-10611" maxZ="-3779">
-        <point x="-13528" y="106624"/>
-        <point x="0" y="115072"/>
-    </zone>
-    <zone name="19_21_water8" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-10611" maxZ="-3779">
-        <point x="-25816" y="106624"/>
-        <point x="-22144" y="115072"/>
-    </zone>
-    <zone name="19_21_water9" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-10611" maxZ="-3779">
-        <point x="-11992" y="120576"/>
-        <point x="0" y="131072"/>
-    </zone>
-    <zone name="19_24_water1" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-7780" maxZ="-3780">
-        <point x="-32768" y="209376"/>
-        <point x="-10000" y="229376"/>
-    </zone>
-    <zone name="19_24_water2" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-7780" maxZ="-3780">
-        <point x="-10000" y="196608"/>
-        <point x="0" y="229376"/>
-    </zone>
-    <zone name="19_25_water1" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4779" maxZ="-3779">
-        <point x="-32767" y="229376"/>
-        <point x="0" y="262144"/>
-    </zone>
-    <zone name="19_25_water3" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-3604" maxZ="-3348">
-        <point x="-21948" y="250556"/>
-        <point x="-19460" y="251252"/>
-    </zone>
-    <zone name="19_26_water1" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4780" maxZ="-3780">
-        <point x="-32768" y="262144"/>
-        <point x="0" y="294912"/>
-    </zone>
-    <zone name="20_11_water1" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4780" maxZ="-3780">
-        <point x="0" y="-229375"/>
-        <point x="32768" y="-196607"/>
-    </zone>
-    <zone name="20_15_water1" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4780" maxZ="-3780">
-        <point x="0" y="-73536"/>
-        <point x="8000" y="-65536"/>
-    </zone>
-    <zone name="20_16_water1" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4780" maxZ="-3780">
-        <point x="0" y="-65536"/>
-        <point x="32768" y="-32768"/>
-    </zone>
-    <zone name="20_16_water2" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-2136" maxZ="-1136">
-        <point x="15392" y="-48832"/>
-        <point x="17360" y="-46664"/>
-    </zone>
-    <zone name="20_16_water3" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-2136" maxZ="-1136">
-        <point x="15392" y="-51632"/>
-        <point x="17360" y="-49464"/>
-    </zone>
-    <zone name="20_17_water1" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-7780" maxZ="-3780">
-        <point x="0" y="-32768"/>
-        <point x="32768" y="0"/>
-    </zone>
-    <zone name="20_18_water1" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4780" maxZ="-3780">
-        <point x="0" y="0"/>
-        <point x="32768" y="5500"/>
-    </zone>
-    <zone name="20_19_water1" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4780" maxZ="-3780">
-        <point x="0" y="32768"/>
-        <point x="32768" y="65536"/>
-    </zone>
-    <zone name="20_20_water1" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4780" maxZ="-3780">
-        <point x="0" y="76174"/>
-        <point x="4000" y="98304"/>
-    </zone>
-    <zone name="20_20_water2" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4794" maxZ="-3794">
-        <point x="4608" y="65479"/>
-        <point x="32768" y="70343"/>
-    </zone>
-    <zone name="20_20_water3" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4794" maxZ="-3794">
-        <point x="0" y="66791"/>
-        <point x="4624" y="72935"/>
-    </zone>
-    <zone name="20_21_water1" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4780" maxZ="-3780">
-        <point x="0" y="98304"/>
-        <point x="4300" y="131072"/>
-    </zone>
-    <zone name="20_22_water1" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4788" maxZ="-3788">
-        <point x="0" y="131072"/>
-        <point x="10496" y="163840"/>
-    </zone>
-    <zone name="20_22_water1" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-3518" maxZ="-3030">
-        <point x="19736" y="155981"/>
-        <point x="24344" y="163131"/>
-    </zone>
-    <zone name="20_23_water1" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-7780" maxZ="-3780">
-        <point x="0" y="163840"/>
-        <point x="32768" y="196608"/>
-    </zone>
-    <zone name="20_24_water1" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4780" maxZ="-3780">
-        <point x="0" y="196608"/>
-        <point x="32767" y="229376"/>
-    </zone>
-    <zone name="20_25_water1" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4779" maxZ="-3779">
-        <point x="0" y="229376"/>
-        <point x="32768" y="243712"/>
-    </zone>
-    <zone name="20_25_water2" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4779" maxZ="-3779">
-        <point x="25600" y="243712"/>
-        <point x="32768" y="262144"/>
-    </zone>
-    <zone name="20_25_water3" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4779" maxZ="-3779">
-        <point x="0" y="254464"/>
-        <point x="25600" y="262144"/>
-    </zone>
-    <zone name="20_25_water4" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-2416" maxZ="-2141">
-        <point x="4991" y="248304"/>
-        <point x="9599" y="253680"/>
-    </zone>
-    <zone name="20_26_water1" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4780" maxZ="-3780">
-        <point x="0" y="262144"/>
-        <point x="32768" y="294912"/>
-    </zone>
-    <zone name="21_10_water1" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4780" maxZ="-3780">
-        <point x="32768" y="-262143"/>
-        <point x="65536" y="-229375"/>
-    </zone>
-    <zone name="21_11_water1" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4780" maxZ="-3780">
-        <point x="32768" y="-229375"/>
-        <point x="65536" y="-196607"/>
-    </zone>
-    <zone name="21_14_water1" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4780" maxZ="-3780">
-        <point x="32767" y="-131072"/>
-        <point x="65535" y="-128000"/>
-    </zone>
-    <zone name="21_14_water1" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4780" maxZ="-3780">
-        <point x="57344" y="-128000"/>
-        <point x="65536" y="-113664"/>
-    </zone>
-    <zone name="21_15_water1" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4780" maxZ="-3780">
-        <point x="32768" y="-98304"/>
-        <point x="65536" y="-65536"/>
-    </zone>
-    <zone name="21_16_water1" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4783" maxZ="-3783">
-        <point x="32768" y="-65535"/>
-        <point x="65536" y="-32767"/>
-    </zone>
-    <zone name="21_17_water1" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4780" maxZ="-3780">
-        <point x="32768" y="-32767"/>
-        <point x="65536" y="0"/>
-    </zone>
-    <zone name="21_18_water1" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4780" maxZ="-3780">
-        <point x="32768" y="0"/>
-        <point x="65536" y="10000"/>
-    </zone>
-    <zone name="21_19_water1" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4780" maxZ="-3780">
-        <point x="32768" y="32767"/>
-        <point x="60672" y="65535"/>
-    </zone>
-    <zone name="21_20_water1" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4780" maxZ="-3780">
-        <point x="32767" y="65535"/>
-        <point x="63567" y="90535"/>
-    </zone>
-    <zone name="21_20_water2" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4780" maxZ="-3780">
-        <point x="63236" y="73140"/>
-        <point x="65536" y="75440"/>
-    </zone>
-    <zone name="21_21_water1" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-3980" maxZ="-3780">
-        <point x="43516" y="116836"/>
-        <point x="52516" y="126092"/>
-    </zone>
-    <zone name="21_21_water2" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-2377" maxZ="-2227">
-        <point x="48773" y="115910"/>
-        <point x="50237" y="116708"/>
-    </zone>
-    <zone name="21_21_water3" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-2409" maxZ="-2259">
-        <point x="46597" y="111628"/>
-        <point x="49597" y="115128"/>
-    </zone>
-    <zone name="21_21_water4" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-2409" maxZ="-2259">
-        <point x="49172" y="115128"/>
-        <point x="50136" y="116868"/>
-    </zone>
-    <zone name="21_21_water5" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-2409" maxZ="-2259">
-        <point x="48000" y="115128"/>
-        <point x="49172" y="116356"/>
-    </zone>
-    <zone name="21_21_water6" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-6080" maxZ="-3776">
-        <point x="44928" y="126976"/>
-        <point x="45568" y="127616"/>
-    </zone>
-    <zone name="21_21_water7" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-6080" maxZ="-5504">
-        <point x="44928" y="125504"/>
-        <point x="45568" y="126976"/>
-    </zone>
-    <zone name="21_22_water1" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-3948" maxZ="-3748">
-        <point x="41916" y="139479"/>
-        <point x="51916" y="152769"/>
-    </zone>
-    <zone name="21_22_water2" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-6048" maxZ="-3688">
-        <point x="39240" y="143560"/>
-        <point x="39992" y="144312"/>
-    </zone>
-    <zone name="21_22_water3" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-6048" maxZ="-5471">
-        <point x="39992" y="143616"/>
-        <point x="41408" y="144256"/>
-    </zone>
-    <zone name="21_23_water1" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4780" maxZ="-3780">
-        <point x="32768" y="181239"/>
-        <point x="65536" y="196607"/>
-    </zone>
-    <zone name="21_23_water2" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4780" maxZ="-3780">
-        <point x="32768" y="175599"/>
-        <point x="44032" y="181239"/>
-    </zone>
-    <zone name="21_23_water3" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4780" maxZ="-3780">
-        <point x="57472" y="175599"/>
-        <point x="65536" y="181239"/>
-    </zone>
-    <zone name="21_23_water4" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-5648" maxZ="-3328">
-        <point x="42496" y="169984"/>
-        <point x="43136" y="170624"/>
-    </zone>
-    <zone name="21_23_water5" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-5648" maxZ="-5071">
-        <point x="43136" y="169984"/>
-        <point x="44608" y="170624"/>
-    </zone>
-    <zone name="21_24_water1" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4779" maxZ="-3779">
-        <point x="32768" y="196608"/>
-        <point x="65536" y="229376"/>
-    </zone>
-    <zone name="21_25_water1" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4780" maxZ="-3780">
-        <point x="32768" y="229379"/>
-        <point x="65536" y="262147"/>
-    </zone>
-    <zone name="22_11_water1" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4779" maxZ="-3779">
-        <point x="65536" y="-229375"/>
-        <point x="98304" y="-196607"/>
-    </zone>
-    <zone name="22_13_water1" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4780" maxZ="-3780">
-        <point x="65536" y="-163840"/>
-        <point x="98304" y="-156160"/>
-    </zone>
-    <zone name="22_13_water2" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4780" maxZ="-3780">
-        <point x="65536" y="-156160"/>
-        <point x="74880" y="-131072"/>
-    </zone>
-    <zone name="22_13_water3" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4780" maxZ="-3780">
-        <point x="80896" y="-156160"/>
-        <point x="98304" y="-147328"/>
-    </zone>
-    <zone name="22_13_water4" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4780" maxZ="-3780">
-        <point x="74880" y="-138880"/>
-        <point x="98304" y="-131072"/>
-    </zone>
-    <zone name="22_13_water5" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4780" maxZ="-3780">
-        <point x="91520" y="-147328"/>
-        <point x="98304" y="-138880"/>
-    </zone>
-    <zone name="22_14_water1" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4897" maxZ="-3897">
-        <point x="65536" y="-131072"/>
-        <point x="75776" y="-122368"/>
-    </zone>
-    <zone name="22_14_water2" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4865" maxZ="-3865">
-        <point x="95488" y="-131072"/>
-        <point x="98304" y="-124160"/>
-    </zone>
-    <zone name="22_16_water1" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4780" maxZ="-3780">
-        <point x="65536" y="-40960"/>
-        <point x="98304" y="-32768"/>
-    </zone>
-    <zone name="22_16_water2" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-2889" maxZ="-2633">
-        <point x="91829" y="-55930"/>
-        <point x="95637" y="-50266"/>
-    </zone>
-    <zone name="22_16_water3" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-2889" maxZ="-2633">
-        <point x="87765" y="-54554"/>
-        <point x="91829" y="-50266"/>
-    </zone>
-    <zone name="22_16_water4" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-3408" maxZ="-3152">
-        <point x="84947" y="-50234"/>
-        <point x="90133" y="-46202"/>
-    </zone>
-    <zone name="22_16_water5" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-3504" maxZ="-3248">
-        <point x="76003" y="-46368"/>
-        <point x="84947" y="-39968"/>
-    </zone>
-    <zone name="22_16_water6" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-3417" maxZ="-3161">
-        <point x="68852" y="-62008"/>
-        <point x="74036" y="-56192"/>
-    </zone>
-    <zone name="22_16_water7" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-3417" maxZ="-3161">
-        <point x="69480" y="-56192"/>
-        <point x="77032" y="-53203"/>
-    </zone>
-    <zone name="22_16_water8" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-3417" maxZ="-3161">
-        <point x="71311" y="-53203"/>
-        <point x="76175" y="-50292"/>
-    </zone>
-    <zone name="22_16_water9" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-2608" maxZ="-2352">
-        <point x="75059" y="-63591"/>
-        <point x="78355" y="-57517"/>
-    </zone>
-    <zone name="22_16_water10" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-2608" maxZ="-2352">
-        <point x="78355" y="-65184"/>
-        <point x="83859" y="-51872"/>
-    </zone>
-    <zone name="22_16_water11" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-2608" maxZ="-2352">
-        <point x="83859" y="-64826"/>
-        <point x="87187" y="-55418"/>
-    </zone>
-    <zone name="22_16_water12" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-2608" maxZ="-2352">
-        <point x="87187" y="-62909"/>
-        <point x="90963" y="-58301"/>
-    </zone>
-    <zone name="22_16_water13" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-2608" maxZ="-2352">
-        <point x="77283" y="-51872"/>
-        <point x="83747" y="-49440"/>
-    </zone>
-    <zone name="22_16_water14" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-2608" maxZ="-2352">
-        <point x="83859" y="-55418"/>
-        <point x="86227" y="-52602"/>
-    </zone>
-    <zone name="22_16_water15" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-3504" maxZ="-3248">
-        <point x="69635" y="-47328"/>
-        <point x="76003" y="-39776"/>
-    </zone>
-    <zone name="22_16_water16" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-2608" maxZ="-2352">
-        <point x="87187" y="-58301"/>
-        <point x="89235" y="-56541"/>
-    </zone>
-    <zone name="22_16_water17" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-5228" maxZ="-5164">
-        <point x="79215" y="-44656"/>
-        <point x="79855" y="-44096"/>
-    </zone>
-    <zone name="22_16_water18" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-5228" maxZ="-5164">
-        <point x="79639" y="-46144"/>
-        <point x="80351" y="-45560"/>
-    </zone>
-    <zone name="22_16_water19" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-5228" maxZ="-5164">
-        <point x="77169" y="-42816"/>
-        <point x="77729" y="-42176"/>
-    </zone>
-    <zone name="22_16_water20" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-5228" maxZ="-5164">
-        <point x="80154" y="-49757"/>
-        <point x="80738" y="-49045"/>
-    </zone>
-    <zone name="22_16_water21" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-5228" maxZ="-5164">
-        <point x="77635" y="-47006"/>
-        <point x="78219" y="-46294"/>
-    </zone>
-    <zone name="22_16_water22" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-5228" maxZ="-5164">
-        <point x="77731" y="-47841"/>
-        <point x="78371" y="-47281"/>
-    </zone>
-    <zone name="22_16_water23" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4739" maxZ="-4675">
-        <point x="81910" y="-48911"/>
-        <point x="82494" y="-48199"/>
-    </zone>
-    <zone name="22_16_water24" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-5228" maxZ="-5164">
-        <point x="88096" y="-53099"/>
-        <point x="88680" y="-52387"/>
-    </zone>
-    <zone name="22_16_water25" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-5228" maxZ="-5164">
-        <point x="87454" y="-54537"/>
-        <point x="88094" y="-53977"/>
-    </zone>
-    <zone name="22_16_water26" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-5228" maxZ="-5164">
-        <point x="85450" y="-50078"/>
-        <point x="86162" y="-49494"/>
-    </zone>
-    <zone name="22_16_water27" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-5228" maxZ="-5164">
-        <point x="75537" y="-47082"/>
-        <point x="75905" y="-46698"/>
-    </zone>
-    <zone name="22_17_water1" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4780" maxZ="-3780">
-        <point x="65536" y="-32768"/>
-        <point x="76800" y="0"/>
-    </zone>
-    <zone name="22_17_water2" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4780" maxZ="-3780">
-        <point x="76800" y="-32768"/>
-        <point x="98304" y="-18432"/>
-    </zone>
-    <zone name="22_18_water1" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4780" maxZ="-3780">
-        <point x="65536" y="4768"/>
-        <point x="75536" y="32768"/>
-    </zone>
-    <zone name="22_18_water2" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4780" maxZ="-3780">
-        <point x="75536" y="27768"/>
-        <point x="98304" y="32768"/>
-    </zone>
-    <zone name="22_19_water1" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-3625" maxZ="-2625">
-        <point x="77961" y="34750"/>
-        <point x="85461" y="39750"/>
-    </zone>
-    <zone name="22_19_water2" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4780" maxZ="-3780">
-        <point x="84727" y="32768"/>
-        <point x="91727" y="53768"/>
-    </zone>
-    <zone name="22_20_water1" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4772" maxZ="-3772">
-        <point x="65536" y="91304"/>
-        <point x="98304" y="98304"/>
-    </zone>
-    <zone name="22_20_water2" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4772" maxZ="-3772">
-        <point x="65536" y="71304"/>
-        <point x="70536" y="91304"/>
-    </zone>
-    <zone name="22_20_water3" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-5792" maxZ="-3472">
-        <point x="73984" y="78080"/>
-        <point x="74624" y="78720"/>
-    </zone>
-    <zone name="22_20_water4" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-5792" maxZ="-5215">
-        <point x="74624" y="78080"/>
-        <point x="76096" y="78720"/>
-    </zone>
-    <zone name="22_22_water1" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-8778" maxZ="-3780">
-        <point x="82656" y="149824"/>
-        <point x="98304" y="152256"/>
-    </zone>
-    <zone name="22_22_water2" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-8778" maxZ="-3780">
-        <point x="81344" y="139840"/>
-        <point x="84832" y="143680"/>
-    </zone>
-    <zone name="22_22_water3" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-8778" maxZ="-3780">
-        <point x="79040" y="152818"/>
-        <point x="82656" y="163840"/>
-    </zone>
-    <zone name="22_22_water4" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-8778" maxZ="-3780">
-        <point x="88361" y="146991"/>
-        <point x="91593" y="149821"/>
-    </zone>
-    <zone name="22_22_water5" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-8778" maxZ="-3780">
-        <point x="84832" y="139840"/>
-        <point x="98304" y="146991"/>
-    </zone>
-    <zone name="22_22_water6" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-8778" maxZ="-3780">
-        <point x="82656" y="153600"/>
-        <point x="98304" y="163840"/>
-    </zone>
-    <zone name="22_22_water7" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-8778" maxZ="-3780">
-        <point x="82656" y="152256"/>
-        <point x="84880" y="153600"/>
-    </zone>
-    <zone name="22_22_water8" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-8778" maxZ="-3780">
-        <point x="86757" y="152256"/>
-        <point x="98304" y="153600"/>
-    </zone>
-    <zone name="22_23_water1" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4779" maxZ="-3779">
-        <point x="65536" y="163840"/>
-        <point x="74752" y="196608"/>
-    </zone>
-    <zone name="22_23_water2" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4779" maxZ="-3779">
-        <point x="74752" y="163840"/>
-        <point x="85215" y="173976"/>
-    </zone>
-    <zone name="22_23_water3" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4779" maxZ="-3779">
-        <point x="74752" y="173976"/>
-        <point x="83244" y="178267"/>
-    </zone>
-    <zone name="22_23_water4" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4779" maxZ="-3779">
-        <point x="74752" y="178267"/>
-        <point x="78031" y="180291"/>
-    </zone>
-    <zone name="22_23_water5" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4779" maxZ="-3779">
-        <point x="78031" y="178267"/>
-        <point x="83244" y="180291"/>
-    </zone>
-    <zone name="22_23_water6" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4779" maxZ="-3779">
-        <point x="74751" y="180291"/>
-        <point x="83243" y="195250"/>
-    </zone>
-    <zone name="22_23_water7" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4779" maxZ="-3779">
-        <point x="91149" y="163840"/>
-        <point x="98304" y="166737"/>
-    </zone>
-    <zone name="22_23_water8" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4779" maxZ="-3779">
-        <point x="85215" y="166737"/>
-        <point x="95485" y="173976"/>
-    </zone>
-    <zone name="22_23_water9" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4779" maxZ="-3779">
-        <point x="83244" y="173976"/>
-        <point x="92290" y="195250"/>
-    </zone>
-    <zone name="22_23_water10" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4779" maxZ="-3779">
-        <point x="95485" y="166737"/>
-        <point x="98304" y="193105"/>
-    </zone>
-    <zone name="22_23_water11" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4779" maxZ="-3779">
-        <point x="92290" y="173976"/>
-        <point x="95485" y="185103"/>
-    </zone>
-    <zone name="22_23_water12" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4779" maxZ="-3779">
-        <point x="92290" y="185103"/>
-        <point x="95485" y="193105"/>
-    </zone>
-    <zone name="22_23_water13" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4779" maxZ="-3779">
-        <point x="92290" y="193105"/>
-        <point x="98304" y="196608"/>
-    </zone>
-    <zone name="22_24_water1" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4780" maxZ="-3780">
-        <point x="93696" y="224128"/>
-        <point x="98304" y="229376"/>
-    </zone>
-    <zone name="22_24_water2" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4780" maxZ="-3780">
-        <point x="93056" y="196608"/>
-        <point x="98304" y="201216"/>
-    </zone>
-    <zone name="22_24_water3" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4780" maxZ="-3780">
-        <point x="65536" y="196608"/>
-        <point x="76032" y="200320"/>
-    </zone>
-    <zone name="22_24_water4" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4780" maxZ="-3780">
-        <point x="70024" y="222217"/>
-        <point x="77862" y="229376"/>
-    </zone>
-    <zone name="22_24_water5" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4780" maxZ="-3780">
-        <point x="65536" y="200320"/>
-        <point x="70024" y="229376"/>
-    </zone>
-    <zone name="22_24_water6" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4268" maxZ="-3780">
-        <point x="70024" y="200320"/>
-        <point x="79174" y="222217"/>
-    </zone>
-    <zone name="22_24_water7" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4268" maxZ="-3780">
-        <point x="77862" y="224128"/>
-        <point x="93696" y="229376"/>
-    </zone>
-    <zone name="22_24_water8" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4268" maxZ="-3780">
-        <point x="80192" y="201216"/>
-        <point x="98304" y="224128"/>
-    </zone>
-    <zone name="22_24_water9" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4268" maxZ="-3780">
-        <point x="81856" y="196608"/>
-        <point x="93056" y="201216"/>
-    </zone>
-    <zone name="22_24_water10" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-6106" maxZ="-3786">
-        <point x="79360" y="208897"/>
-        <point x="80000" y="209537"/>
-    </zone>
-    <zone name="22_24_water11" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-6106" maxZ="-5529">
-        <point x="80000" y="208897"/>
-        <point x="81472" y="209537"/>
-    </zone>
-    <zone name="22_24_water12" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4268" maxZ="-3780">
-        <point x="79174" y="209727"/>
-        <point x="80192" y="224128"/>
-    </zone>
-    <zone name="22_24_water13" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4268" maxZ="-3780">
-        <point x="79174" y="201216"/>
-        <point x="80192" y="208704"/>
-    </zone>
-    <zone name="22_25_water1" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-10902" maxZ="-10886">
-        <point x="79010" y="246660"/>
-        <point x="86498" y="254710"/>
-    </zone>
-    <zone name="22_25_water2" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-7219" maxZ="-4203">
-        <point x="84195" y="239659"/>
-        <point x="86179" y="242731"/>
-    </zone>
-    <zone name="22_25_water3" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-7219" maxZ="-6763">
-        <point x="82979" y="241471"/>
-        <point x="84195" y="241919"/>
-    </zone>
-    <zone name="22_25_water4" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-9354" maxZ="-8898">
-        <point x="80356" y="245012"/>
-        <point x="84644" y="245844"/>
-    </zone>
-    <zone name="22_25_water5" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-9354" maxZ="-8898">
-        <point x="80303" y="258156"/>
-        <point x="84591" y="258988"/>
-    </zone>
-    <zone name="22_25_water6" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4779" maxZ="-3779">
-        <point x="65536" y="229376"/>
-        <point x="98304" y="262144"/>
-    </zone>
-    <zone name="22_25_water7" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-10902" maxZ="-10886">
-        <point x="78624" y="254710"/>
-        <point x="82336" y="255593"/>
-    </zone>
-    <zone name="22_25_water8" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-10902" maxZ="-10886">
-        <point x="82785" y="254710"/>
-        <point x="86497" y="255593"/>
-    </zone>
-    <zone name="22_25_water9" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-10902" maxZ="-10886">
-        <point x="82336" y="255350"/>
-        <point x="82785" y="255593"/>
-    </zone>
-    <zone name="23_11_water1" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4780" maxZ="-3780">
-        <point x="98304" y="-229376"/>
-        <point x="131072" y="-196608"/>
-    </zone>
-    <zone name="23_12_water1" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4780" maxZ="-3780">
-        <point x="119040" y="-196608"/>
-        <point x="131072" y="-178624"/>
-    </zone>
-    <zone name="23_13_water1" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4780" maxZ="-3780">
-        <point x="98304" y="-163840"/>
-        <point x="131072" y="-131072"/>
-    </zone>
-    <zone name="23_14_water1" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4780" maxZ="-3780">
-        <point x="98304" y="-131072"/>
-        <point x="131072" y="-98304"/>
-    </zone>
-    <zone name="23_15_water1" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4772" maxZ="-3772">
-        <point x="98304" y="-98304"/>
-        <point x="131072" y="-90304"/>
-    </zone>
-    <zone name="23_15_water2" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-3560" maxZ="-3556">
-        <point x="114464" y="-89256"/>
-        <point x="116384" y="-88464"/>
-    </zone>
-    <zone name="23_18_water1" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4780" maxZ="-3780">
-        <point x="98304" y="27767"/>
-        <point x="120320" y="32767"/>
-    </zone>
-    <zone name="23_19_water1" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-5656" maxZ="-4656">
-        <point x="103091" y="37760"/>
-        <point x="128091" y="62760"/>
-    </zone>
-    <zone name="23_20_water1" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-7184" maxZ="-4864">
-        <point x="110208" y="84224"/>
-        <point x="110848" y="84864"/>
-    </zone>
-    <zone name="23_20_water2" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-7208" maxZ="-6631">
-        <point x="110848" y="84224"/>
-        <point x="112320" y="84864"/>
-    </zone>
-    <zone name="23_22_water1" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-3176" maxZ="-2892">
-        <point x="112096" y="142623"/>
-        <point x="119232" y="147603"/>
-    </zone>
-    <zone name="23_22_water2" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-5498" maxZ="-3138">
-        <point x="114504" y="132424"/>
-        <point x="115256" y="133176"/>
-    </zone>
-    <zone name="23_22_water3" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-5498" maxZ="-4921">
-        <point x="115256" y="132480"/>
-        <point x="116672" y="133120"/>
-    </zone>
-    <zone name="23_22_water4" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4780" maxZ="-3780">
-        <point x="98304" y="138239"/>
-        <point x="131072" y="163839"/>
-    </zone>
-    <zone name="23_22_water5" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4108" maxZ="-3780">
-        <point x="117512" y="136743"/>
-        <point x="122009" y="138239"/>
-    </zone>
-    <zone name="23_23_water1" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4779" maxZ="-3764">
-        <point x="98304" y="163840"/>
-        <point x="131072" y="167840"/>
-    </zone>
-    <zone name="23_23_water2" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4779" maxZ="-3764">
-        <point x="98304" y="167840"/>
-        <point x="102304" y="196608"/>
-    </zone>
-    <zone name="23_23_water3" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4779" maxZ="-3764">
-        <point x="124072" y="167840"/>
-        <point x="131072" y="196608"/>
-    </zone>
-    <zone name="23_23_water4" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4779" maxZ="-3764">
-        <point x="102304" y="191608"/>
-        <point x="124072" y="196608"/>
-    </zone>
-    <zone name="23_23_water5" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4779" maxZ="-3764">
-        <point x="121672" y="186199"/>
-        <point x="124072" y="189151"/>
-    </zone>
-    <zone name="23_23_water6" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4779" maxZ="-3764">
-        <point x="102304" y="184170"/>
-        <point x="105652" y="187250"/>
-    </zone>
-    <zone name="23_23_water7" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4779" maxZ="-3764">
-        <point x="102304" y="168567"/>
-        <point x="106804" y="173567"/>
-    </zone>
-    <zone name="23_23_water8" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-6096" maxZ="-3764">
-        <point x="107520" y="173696"/>
-        <point x="108160" y="174336"/>
-    </zone>
-    <zone name="23_23_water9" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-6106" maxZ="-3764">
-        <point x="108160" y="173696"/>
-        <point x="109632" y="174336"/>
-    </zone>
-    <zone name="23_24_water1" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-3751" maxZ="-3699">
-        <point x="110380" y="219263"/>
-        <point x="112391" y="221056"/>
-    </zone>
-    <zone name="23_24_water2" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4780" maxZ="-3780">
-        <point x="98304" y="225024"/>
-        <point x="107104" y="229376"/>
-    </zone>
-    <zone name="23_24_water3" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4780" maxZ="-3780">
-        <point x="107104" y="219008"/>
-        <point x="109760" y="220256"/>
-    </zone>
-    <zone name="23_24_water4" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4780" maxZ="-3780">
-        <point x="107104" y="220256"/>
-        <point x="107456" y="221280"/>
-    </zone>
-    <zone name="23_24_water5" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4780" maxZ="-3780">
-        <point x="107104" y="221280"/>
-        <point x="108032" y="229376"/>
-    </zone>
-    <zone name="23_24_water6" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4780" maxZ="-3780">
-        <point x="108032" y="223104"/>
-        <point x="108896" y="229376"/>
-    </zone>
-    <zone name="23_24_water7" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4780" maxZ="-3780">
-        <point x="108896" y="221632"/>
-        <point x="110304" y="229376"/>
-    </zone>
-    <zone name="23_24_water8" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4780" maxZ="-3780">
-        <point x="112480" y="223392"/>
-        <point x="114656" y="229376"/>
-    </zone>
-    <zone name="23_24_water9" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4780" maxZ="-3780">
-        <point x="114656" y="225088"/>
-        <point x="131072" y="229376"/>
-    </zone>
-    <zone name="23_24_water10" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4780" maxZ="-3780">
-        <point x="115360" y="220128"/>
-        <point x="131072" y="222784"/>
-    </zone>
-    <zone name="23_24_water11" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4780" maxZ="-3780">
-        <point x="112480" y="221632"/>
-        <point x="113792" y="223392"/>
-    </zone>
-    <zone name="23_24_water12" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4780" maxZ="-3780">
-        <point x="110304" y="221632"/>
-        <point x="112480" y="223008"/>
-    </zone>
-    <zone name="23_24_water13" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4780" maxZ="-3780">
-        <point x="112640" y="221056"/>
-        <point x="113792" y="221632"/>
-    </zone>
-    <zone name="23_24_water14" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4780" maxZ="-3780">
-        <point x="112768" y="218560"/>
-        <point x="114016" y="221056"/>
-    </zone>
-    <zone name="23_24_water15" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4780" maxZ="-3780">
-        <point x="114016" y="220576"/>
-        <point x="115360" y="221120"/>
-    </zone>
-    <zone name="23_24_water16" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4780" maxZ="-3780">
-        <point x="114688" y="221120"/>
-        <point x="115360" y="221472"/>
-    </zone>
-    <zone name="23_24_water17" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4780" maxZ="-3780">
-        <point x="113792" y="221056"/>
-        <point x="114016" y="221120"/>
-    </zone>
-    <zone name="23_24_water18" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4780" maxZ="-3780">
-        <point x="115264" y="220128"/>
-        <point x="115360" y="220576"/>
-    </zone>
-    <zone name="23_24_water19" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4780" maxZ="-3780">
-        <point x="114016" y="219616"/>
-        <point x="114752" y="219808"/>
-    </zone>
-    <zone name="23_24_water20" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4780" maxZ="-3780">
-        <point x="114432" y="218560"/>
-        <point x="114752" y="219616"/>
-    </zone>
-    <zone name="23_24_water21" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4780" maxZ="-3780">
-        <point x="114752" y="216576"/>
-        <point x="115936" y="217952"/>
-    </zone>
-    <zone name="23_24_water22" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4780" maxZ="-3780">
-        <point x="115936" y="216576"/>
-        <point x="131072" y="220128"/>
-    </zone>
-    <zone name="23_24_water23" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4780" maxZ="-3780">
-        <point x="111808" y="216576"/>
-        <point x="113280" y="218560"/>
-    </zone>
-    <zone name="23_24_water24" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4780" maxZ="-3780">
-        <point x="111808" y="218560"/>
-        <point x="112768" y="219008"/>
-    </zone>
-    <zone name="23_24_water25" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4780" maxZ="-3780">
-        <point x="109280" y="216576"/>
-        <point x="110976" y="219008"/>
-    </zone>
-    <zone name="23_24_water26" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4780" maxZ="-3780">
-        <point x="107104" y="216576"/>
-        <point x="109280" y="217120"/>
-    </zone>
-    <zone name="23_24_water27" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4780" maxZ="-3780">
-        <point x="108896" y="221056"/>
-        <point x="110144" y="221632"/>
-    </zone>
-    <zone name="23_24_water28" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4780" maxZ="-3780">
-        <point x="108800" y="220256"/>
-        <point x="109760" y="221056"/>
-    </zone>
-    <zone name="23_24_water29" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4780" maxZ="-3780">
-        <point x="108800" y="221056"/>
-        <point x="108896" y="221280"/>
-    </zone>
-    <zone name="23_24_water30" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4780" maxZ="-3780">
-        <point x="110304" y="225472"/>
-        <point x="112480" y="229376"/>
-    </zone>
-    <zone name="23_24_water31" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4780" maxZ="-3780">
-        <point x="113280" y="216576"/>
-        <point x="114752" y="217120"/>
-    </zone>
-    <zone name="23_24_water32" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4780" maxZ="-3780">
-        <point x="98304" y="207104"/>
-        <point x="131072" y="216576"/>
-    </zone>
-    <zone name="23_24_water33" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4780" maxZ="-3780">
-        <point x="98304" y="196608"/>
-        <point x="107840" y="207104"/>
-    </zone>
-    <zone name="23_24_water34" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4780" maxZ="-3780">
-        <point x="116352" y="206528"/>
-        <point x="117056" y="207104"/>
-    </zone>
-    <zone name="23_24_water35" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4780" maxZ="-3780">
-        <point x="120704" y="196608"/>
-        <point x="131072" y="207104"/>
-    </zone>
-    <zone name="23_24_water36" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4780" maxZ="-3780">
-        <point x="116352" y="196608"/>
-        <point x="120704" y="202752"/>
-    </zone>
-    <zone name="23_24_water37" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4780" maxZ="-3780">
-        <point x="119616" y="202752"/>
-        <point x="120704" y="203200"/>
-    </zone>
-    <zone name="23_24_water38" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4780" maxZ="-3780">
-        <point x="107840" y="196608"/>
-        <point x="116352" y="204416"/>
-    </zone>
-    <zone name="23_24_water39" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4780" maxZ="-3780">
-        <point x="109632" y="204416"/>
-        <point x="116352" y="207104"/>
-    </zone>
-    <zone name="23_24_water40" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4780" maxZ="-3780">
-        <point x="107840" y="206016"/>
-        <point x="109632" y="207104"/>
-    </zone>
-    <zone name="23_24_water41" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4780" maxZ="-3780">
-        <point x="98304" y="216576"/>
-        <point x="107104" y="225024"/>
-    </zone>
-    <zone name="23_24_water42" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4780" maxZ="-3780">
-        <point x="114656" y="222784"/>
-        <point x="131072" y="225088"/>
-    </zone>
-    <zone name="23_25_water1" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4780" maxZ="-3780">
-        <point x="98304" y="252160"/>
-        <point x="131072" y="262144"/>
-    </zone>
-    <zone name="23_25_water2" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4780" maxZ="-3780">
-        <point x="98304" y="229376"/>
-        <point x="111872" y="252160"/>
-    </zone>
-    <zone name="23_25_water3" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4780" maxZ="-3780">
-        <point x="111872" y="229376"/>
-        <point x="119552" y="243456"/>
-    </zone>
-    <zone name="23_25_water4" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4780" maxZ="-3780">
-        <point x="119552" y="229376"/>
-        <point x="131072" y="252160"/>
-    </zone>
-    <zone name="23_25_water5" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-1320" maxZ="-1120">
-        <point x="113960" y="244504"/>
-        <point x="118192" y="245684"/>
-    </zone>
-    <zone name="23_25_water6" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-1320" maxZ="-1120">
-        <point x="113960" y="245684"/>
-        <point x="114480" y="247924"/>
-    </zone>
-    <zone name="23_25_water7" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-1320" maxZ="-1120">
-        <point x="113480" y="247924"/>
-        <point x="114736" y="250740"/>
-    </zone>
-    <zone name="23_25_water8" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-1320" maxZ="-1120">
-        <point x="117672" y="245684"/>
-        <point x="118192" y="249428"/>
-    </zone>
-    <zone name="23_25_water9" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-1320" maxZ="-1120">
-        <point x="117224" y="249428"/>
-        <point x="118192" y="250100"/>
-    </zone>
-    <zone name="23_25_water10" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-1320" maxZ="-1120">
-        <point x="114640" y="251488"/>
-        <point x="117224" y="251848"/>
-    </zone>
-    <zone name="23_25_water11" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-1320" maxZ="-1120">
-        <point x="114448" y="250740"/>
-        <point x="115288" y="251488"/>
-    </zone>
-    <zone name="23_25_water12" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-1320" maxZ="-1120">
-        <point x="114480" y="245684"/>
-        <point x="115032" y="246228"/>
-    </zone>
-    <zone name="23_25_water13" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-1320" maxZ="-1120">
-        <point x="117120" y="245684"/>
-        <point x="117672" y="246228"/>
-    </zone>
-    <zone name="23_25_water14" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-1320" maxZ="-1120">
-        <point x="117224" y="250100"/>
-        <point x="117536" y="251764"/>
-    </zone>
-    <zone name="24_11_water1" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4780" maxZ="-3780">
-        <point x="131072" y="-229376"/>
-        <point x="163840" y="-196608"/>
-    </zone>
-    <zone name="24_12_water1" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4780" maxZ="-3780">
-        <point x="131072" y="-196608"/>
-        <point x="163840" y="-178608"/>
-    </zone>
-    <zone name="24_18_water1" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-2626" maxZ="-2528">
-        <point x="145081" y="25139"/>
-        <point x="149881" y="29939"/>
-    </zone>
-    <zone name="24_19_water1" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4775" maxZ="-3775">
-        <point x="137087" y="36272"/>
-        <point x="158719" y="43440"/>
-    </zone>
-    <zone name="24_19_water2" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4775" maxZ="-3775">
-        <point x="137087" y="43440"/>
-        <point x="146176" y="50096"/>
-    </zone>
-    <zone name="24_19_water3" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4775" maxZ="-3775">
-        <point x="152832" y="43440"/>
-        <point x="161921" y="50096"/>
-    </zone>
-    <zone name="24_19_water4" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4775" maxZ="-3775">
-        <point x="151679" y="43440"/>
-        <point x="152832" y="44336"/>
-    </zone>
-    <zone name="24_19_water5" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4775" maxZ="-3775">
-        <point x="152063" y="44336"/>
-        <point x="152832" y="45360"/>
-    </zone>
-    <zone name="24_19_water6" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4775" maxZ="-3775">
-        <point x="146176" y="43440"/>
-        <point x="147329" y="44336"/>
-    </zone>
-    <zone name="24_19_water7" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4775" maxZ="-3775">
-        <point x="146176" y="44336"/>
-        <point x="146945" y="45360"/>
-    </zone>
-    <zone name="24_19_water8" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4775" maxZ="-3775">
-        <point x="147329" y="43440"/>
-        <point x="151679" y="43824"/>
-    </zone>
-    <zone name="24_19_water9" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4775" maxZ="-3775">
-        <point x="146176" y="49200"/>
-        <point x="147329" y="50096"/>
-    </zone>
-    <zone name="24_19_water10" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4775" maxZ="-3775">
-        <point x="146176" y="48176"/>
-        <point x="146945" y="49200"/>
-    </zone>
-    <zone name="24_19_water11" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4775" maxZ="-3775">
-        <point x="151679" y="49200"/>
-        <point x="152832" y="50096"/>
-    </zone>
-    <zone name="24_19_water12" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4775" maxZ="-3775">
-        <point x="152063" y="48176"/>
-        <point x="152832" y="49200"/>
-    </zone>
-    <zone name="24_19_water13" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4775" maxZ="-3775">
-        <point x="147329" y="49712"/>
-        <point x="151679" y="50096"/>
-    </zone>
-    <zone name="24_19_water14" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4775" maxZ="-3775">
-        <point x="137087" y="50096"/>
-        <point x="161921" y="53170"/>
-    </zone>
-    <zone name="24_19_water15" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4775" maxZ="-3775">
-        <point x="156928" y="53170"/>
-        <point x="161921" y="58544"/>
-    </zone>
-    <zone name="24_19_water16" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4775" maxZ="-3775">
-        <point x="151680" y="57264"/>
-        <point x="156928" y="58544"/>
-    </zone>
-    <zone name="24_19_water17" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4775" maxZ="-3775">
-        <point x="151680" y="53170"/>
-        <point x="153089" y="57264"/>
-    </zone>
-    <zone name="24_19_water18" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4775" maxZ="-3775">
-        <point x="137087" y="53170"/>
-        <point x="151680" y="65536"/>
-    </zone>
-    <zone name="24_19_water19" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4775" maxZ="-3775">
-        <point x="151679" y="58544"/>
-        <point x="161922" y="65535"/>
-    </zone>
-    <zone name="24_20_water1" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-6096" maxZ="-3736">
-        <point x="136648" y="79304"/>
-        <point x="137400" y="80056"/>
-    </zone>
-    <zone name="24_20_water2" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-6096" maxZ="-5519">
-        <point x="137400" y="79360"/>
-        <point x="138816" y="80000"/>
-    </zone>
-    <zone name="24_20_water3" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4480" maxZ="-3780">
-        <point x="137472" y="65536"/>
-        <point x="163840" y="98304"/>
-    </zone>
-    <zone name="24_21_water1" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4780" maxZ="-3780">
-        <point x="131072" y="126072"/>
-        <point x="136072" y="131072"/>
-    </zone>
-    <zone name="24_22_water1" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-5804" maxZ="-3780">
-        <point x="131072" y="131072"/>
-        <point x="163840" y="163840"/>
-    </zone>
-    <zone name="24_23_water1" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-5208" maxZ="-3780">
-        <point x="131072" y="163840"/>
-        <point x="141072" y="196608"/>
-    </zone>
-    <zone name="24_23_water2" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-5208" maxZ="-3780">
-        <point x="153840" y="163840"/>
-        <point x="163840" y="196608"/>
-    </zone>
-    <zone name="24_23_water3" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-5208" maxZ="-3780">
-        <point x="141072" y="181336"/>
-        <point x="153840" y="196608"/>
-    </zone>
-    <zone name="24_23_water4" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-5208" maxZ="-3780">
-        <point x="141072" y="163840"/>
-        <point x="153840" y="180131"/>
-    </zone>
-    <zone name="24_24_water1" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4780" maxZ="-3780">
-        <point x="131072" y="196608"/>
-        <point x="163840" y="229376"/>
-    </zone>
-    <zone name="25_11_water1" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4780" maxZ="-3780">
-        <point x="163840" y="-229376"/>
-        <point x="196608" y="-196608"/>
-    </zone>
-    <zone name="25_12_water1" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4780" maxZ="-3780">
-        <point x="163840" y="-196608"/>
-        <point x="168840" y="-186608"/>
-    </zone>
-    <zone name="25_12_water2" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-5465" maxZ="-4465">
-        <point x="173411" y="-187756"/>
-        <point x="186042" y="-182534"/>
-    </zone>
-    <zone name="25_12_water3" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-2322" maxZ="-2066">
-        <point x="174206" y="-182687"/>
-        <point x="176749" y="-179167"/>
-    </zone>
-    <zone name="25_14_water1" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4643" maxZ="-4033">
-        <point x="170908" y="-116845"/>
-        <point x="173748" y="-113952"/>
-    </zone>
-    <zone name="25_14_water2" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-6130" maxZ="-5256">
-        <point x="170926" y="-113935"/>
-        <point x="173920" y="-111042"/>
-    </zone>
-    <zone name="25_20_water1" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4280" maxZ="-3780">
-        <point x="163840" y="65760"/>
-        <point x="173840" y="95072"/>
-    </zone>
-    <zone name="25_17_water1" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-5568" maxZ="-3248">
-        <point x="168576" y="-17920"/>
-        <point x="169216" y="-17280"/>
-    </zone>
-    <zone name="25_17_water2" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-5568" maxZ="-2653">
-        <point x="169216" y="-17920"/>
-        <point x="170688" y="-17280"/>
-    </zone>
-    <zone name="Forbitten Path Descend" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4970" maxZ="-2681">
-        <point x="103807" y="81660"/>
-        <point x="104570" y="80899"/>
-    </zone>
-    <zone name="Forbitten Path Descend 2" type="org.l2j.gameserver.world.zone.type.WaterZone" form="Cube" minZ="-4970" maxZ="-4478">
-        <point x="103926" y="81413"/>
-        <point x="104485" y="83134"/>
+    <zone name="11_23_water1" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4779" max-z="-3779">
+            <point x="-294912" y="163839"/>
+            <point x="-262144" y="196607"/>
+        </cube>
+    </zone>
+    <zone name="11_24_water1" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4779" max-z="-3779">
+            <point x="-294912" y="196607"/>
+            <point x="-262144" y="229375"/>
+        </cube>
+    </zone>
+    <zone name="11_25_water1" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4779" max-z="-3779">
+            <point x="-294912" y="229375"/>
+            <point x="-262144" y="262143"/>
+        </cube>
+    </zone>
+    <zone name="11_26_water1" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4779" max-z="-3779">
+            <point x="-294912" y="262144"/>
+            <point x="-262144" y="294912"/>
+        </cube>
+    </zone>
+    <zone name="12_23_water1" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4779" max-z="-3779">
+            <point x="-262144" y="163839"/>
+            <point x="-229376" y="196607"/>
+        </cube>
+    </zone>
+    <zone name="12_24_water1" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4779" max-z="-3779">
+            <point x="-262144" y="196607"/>
+            <point x="-229376" y="229375"/>
+        </cube>
+    </zone>
+    <zone name="12_25_water1" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4779" max-z="-3779">
+            <point x="-262144" y="229375"/>
+            <point x="-229376" y="262143"/>
+        </cube>
+    </zone>
+    <zone name="12_26_water1" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4779" max-z="-3779">
+            <point x="-262144" y="262144"/>
+            <point x="-229376" y="294912"/>
+        </cube>
+    </zone>
+    <zone name="13_23_water1" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4779" max-z="-3779">
+            <point x="-229376" y="163839"/>
+            <point x="-196608" y="196607"/>
+        </cube>
+    </zone>
+    <zone name="13_24_water1" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4779" max-z="-3779">
+            <point x="-229376" y="223231"/>
+            <point x="-196608" y="229375"/>
+        </cube>
+    </zone>
+    <zone name="13_24_water2" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4779" max-z="-3779">
+            <point x="-229376" y="200447"/>
+            <point x="-225024" y="223231"/>
+        </cube>
+    </zone>
+    <zone name="13_24_water3" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4779" max-z="-3779">
+            <point x="-229376" y="196607"/>
+            <point x="-196608" y="200447"/>
+        </cube>
+    </zone>
+    <zone name="13_24_water4" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4779" max-z="-3779">
+            <point x="-206336" y="200447"/>
+            <point x="-196608" y="204287"/>
+        </cube>
+    </zone>
+    <zone name="13_24_water5" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4779" max-z="-3779">
+            <point x="-225024" y="200447"/>
+            <point x="-217344" y="207871"/>
+        </cube>
+    </zone>
+    <zone name="13_24_water6" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4779" max-z="-3779">
+            <point x="-219648" y="215039"/>
+            <point x="-213248" y="223231"/>
+        </cube>
+    </zone>
+    <zone name="13_25_water1" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4779" max-z="-3779">
+            <point x="-229376" y="229375"/>
+            <point x="-196608" y="262143"/>
+        </cube>
+    </zone>
+    <zone name="13_26_water1" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4779" max-z="-3779">
+            <point x="-229376" y="262144"/>
+            <point x="-196608" y="294912"/>
+        </cube>
+    </zone>
+    <zone name="14_23_water1" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4779" max-z="-3779">
+            <point x="-196608" y="163839"/>
+            <point x="-163840" y="196607"/>
+        </cube>
+    </zone>
+    <zone name="14_24_water1" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4779" max-z="-3779">
+            <point x="-193152" y="196607"/>
+            <point x="-168960" y="202239"/>
+        </cube>
+    </zone>
+    <zone name="14_24_water2" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4779" max-z="-3779">
+            <point x="-168960" y="196607"/>
+            <point x="-163840" y="229375"/>
+        </cube>
+    </zone>
+    <zone name="14_24_water3" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4779" max-z="-3779">
+            <point x="-196608" y="222975"/>
+            <point x="-179584" y="229375"/>
+        </cube>
+    </zone>
+    <zone name="14_24_water4" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4779" max-z="-3779">
+            <point x="-179584" y="224767"/>
+            <point x="-168960" y="229375"/>
+        </cube>
+    </zone>
+    <zone name="14_24_water5" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4779" max-z="-3779">
+            <point x="-186880" y="218111"/>
+            <point x="-179584" y="222975"/>
+        </cube>
+    </zone>
+    <zone name="14_24_water6" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4779" max-z="-3779">
+            <point x="-196608" y="196607"/>
+            <point x="-193152" y="203775"/>
+        </cube>
+    </zone>
+    <zone name="14_25_water1" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4779" max-z="-3779">
+            <point x="-196608" y="229375"/>
+            <point x="-163840" y="262143"/>
+        </cube>
+    </zone>
+    <zone name="14_25_water2" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-2192" max-z="-144">
+            <point x="-187152" y="240401"/>
+            <point x="-183376" y="245393"/>
+        </cube>
+    </zone>
+    <zone name="14_25_water3" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-2192" max-z="-144">
+            <point x="-183376" y="241768"/>
+            <point x="-182032" y="244872"/>
+        </cube>
+    </zone>
+    <zone name="14_25_water4" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-2192" max-z="-144">
+            <point x="-183376" y="240968"/>
+            <point x="-182799" y="241768"/>
+        </cube>
+    </zone>
+    <zone name="14_26_water1" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4779" max-z="-3779">
+            <point x="-196608" y="262144"/>
+            <point x="-163840" y="294912"/>
+        </cube>
+    </zone>
+    <zone name="15_23_water1" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4784" max-z="-3784">
+            <point x="-163840" y="163839"/>
+            <point x="-131072" y="196607"/>
+        </cube>
+    </zone>
+    <zone name="15_24_water1" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4779" max-z="-3779">
+            <point x="-163840" y="196608"/>
+            <point x="-131072" y="229376"/>
+        </cube>
+    </zone>
+    <zone name="15_25_water1" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4779" max-z="-3779">
+            <point x="-163840" y="229375"/>
+            <point x="-131072" y="262143"/>
+        </cube>
+    </zone>
+    <zone name="15_26_water1" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4783" max-z="-3783">
+            <point x="-163840" y="262144"/>
+            <point x="-131072" y="294912"/>
+        </cube>
+    </zone>
+    <zone name="16_11_water1" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4780" max-z="-3780">
+            <point x="-131072" y="-229376"/>
+            <point x="-98304" y="-196608"/>
+        </cube>
+    </zone>
+    <zone name="16_14_water1" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4780" max-z="-3780">
+            <point x="-131072" y="-131072"/>
+            <point x="-98304" y="-98304"/>
+        </cube>
+    </zone>
+    <zone name="16_15_water1" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4780" max-z="-3780">
+            <point x="-131072" y="-98304"/>
+            <point x="-98304" y="-65536"/>
+        </cube>
+    </zone>
+    <zone name="16_16_water1" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4780" max-z="-3780">
+            <point x="-131072" y="-65536"/>
+            <point x="-98304" y="-32768"/>
+        </cube>
+    </zone>
+    <zone name="16_17_water1" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4780" max-z="-3780">
+            <point x="-131072" y="-32768"/>
+            <point x="-98304" y="0"/>
+        </cube>
+    </zone>
+    <zone name="16_18_water1" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4780" max-z="-3780">
+            <point x="-131072" y="0"/>
+            <point x="-98304" y="32768"/>
+        </cube>
+    </zone>
+    <zone name="16_19_water1" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-2431" max-z="-1643">
+            <point x="-119580" y="51908"/>
+            <point x="-116148" y="55660"/>
+        </cube>
+    </zone>
+    <zone name="16_19_water2" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="237" max-z="337">
+            <point x="-118668" y="45364"/>
+            <point x="-117492" y="46588"/>
+        </cube>
+    </zone>
+    <zone name="16_19_water3" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="237" max-z="337">
+            <point x="-117492" y="45572"/>
+            <point x="-117020" y="46332"/>
+        </cube>
+    </zone>
+    <zone name="16_19_water4" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="237" max-z="337">
+            <point x="-119140" y="45572"/>
+            <point x="-118668" y="46332"/>
+        </cube>
+    </zone>
+    <zone name="16_19_water5" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4779" max-z="-3779">
+            <point x="-131072" y="32768"/>
+            <point x="-125120" y="65536"/>
+        </cube>
+    </zone>
+    <zone name="16_19_water6" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4779" max-z="-3779">
+            <point x="-125120" y="32768"/>
+            <point x="-98304" y="38848"/>
+        </cube>
+    </zone>
+    <zone name="16_19_water7" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4779" max-z="-3779">
+            <point x="-102528" y="60608"/>
+            <point x="-98304" y="65536"/>
+        </cube>
+    </zone>
+    <zone name="16_20_water1" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4780" max-z="-3780">
+            <point x="-131072" y="65536"/>
+            <point x="-98304" y="98304"/>
+        </cube>
+    </zone>
+    <zone name="16_20_water2" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-12729" max-z="-12721">
+            <point x="-117708" y="86820"/>
+            <point x="-116988" y="87540"/>
+        </cube>
+    </zone>
+    <zone name="16_20_water3" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-12822" max-z="-12814">
+            <point x="-115811" y="86821"/>
+            <point x="-115091" y="87541"/>
+        </cube>
+    </zone>
+    <zone name="16_20_water4" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-12919" max-z="-12911">
+            <point x="-113915" y="86823"/>
+            <point x="-113195" y="87543"/>
+        </cube>
+    </zone>
+    <zone name="16_20_water5" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-12632" max-z="-12624">
+            <point x="-119992" y="86728"/>
+            <point x="-119096" y="87624"/>
+        </cube>
+    </zone>
+    <zone name="16_20_water6" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-12632" max-z="-12624">
+            <point x="-119096" y="86960"/>
+            <point x="-118880" y="87392"/>
+        </cube>
+    </zone>
+    <zone name="16_20_water7" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-12632" max-z="-12624">
+            <point x="-120224" y="86960"/>
+            <point x="-119992" y="87392"/>
+        </cube>
+    </zone>
+    <zone name="16_20_water8" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-12632" max-z="-12624">
+            <point x="-119760" y="86520"/>
+            <point x="-119328" y="86728"/>
+        </cube>
+    </zone>
+    <zone name="16_20_water9" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-12632" max-z="-12624">
+            <point x="-119760" y="87624"/>
+            <point x="-119328" y="87848"/>
+        </cube>
+    </zone>
+    <zone name="16_21_water1" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4780" max-z="-3780">
+            <point x="-131071" y="98303"/>
+            <point x="-98303" y="131071"/>
+        </cube>
+    </zone>
+    <zone name="16_22_water1" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4780" max-z="-3780">
+            <point x="-131071" y="131072"/>
+            <point x="-98303" y="163840"/>
+        </cube>
+    </zone>
+    <zone name="16_23_water1" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4780" max-z="-3780">
+            <point x="-131071" y="163840"/>
+            <point x="-98303" y="196608"/>
+        </cube>
+    </zone>
+    <zone name="16_24_water1" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-7779" max-z="-3779">
+            <point x="-131072" y="196607"/>
+            <point x="-98304" y="229375"/>
+        </cube>
+    </zone>
+    <zone name="16_25_water1" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4779" max-z="-3779">
+            <point x="-131072" y="229375"/>
+            <point x="-98304" y="262144"/>
+        </cube>
+    </zone>
+    <zone name="17_11_water1" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4748" max-z="-3748">
+            <point x="-98304" y="-229376"/>
+            <point x="-65536" y="-196608"/>
+        </cube>
+    </zone>
+    <zone name="17_14_water1" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4779" max-z="-3779">
+            <point x="-98304" y="-131072"/>
+            <point x="-65536" y="-98304"/>
+        </cube>
+    </zone>
+    <zone name="17_15_water1" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4756" max-z="-3756">
+            <point x="-98304" y="-98304"/>
+            <point x="-65536" y="-65536"/>
+        </cube>
+    </zone>
+    <zone name="17_16_water1" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4780" max-z="-3780">
+            <point x="-98304" y="-65536"/>
+            <point x="-65536" y="-32768"/>
+        </cube>
+    </zone>
+    <zone name="17_16_water2" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-3947" max-z="-3200">
+            <point x="-80070" y="-53637"/>
+            <point x="-74814" y="-47958"/>
+        </cube>
+    </zone>
+    <zone name="17_16_water3" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-3947" max-z="-3200">
+            <point x="-74814" y="-54014"/>
+            <point x="-71990" y="-49026"/>
+        </cube>
+    </zone>
+    <zone name="17_16_water4" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-3947" max-z="-3200">
+            <point x="-71990" y="-52974"/>
+            <point x="-70190" y="-49528"/>
+        </cube>
+    </zone>
+    <zone name="17_17_water1" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4764" max-z="-3764">
+            <point x="-98304" y="-32768"/>
+            <point x="-65536" y="0"/>
+        </cube>
+    </zone>
+    <zone name="17_18_water1" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4780" max-z="-3780">
+            <point x="-98303" y="0"/>
+            <point x="-65535" y="32767"/>
+        </cube>
+    </zone>
+    <zone name="17_19_water1" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4779" max-z="-3779">
+            <point x="-78208" y="32768"/>
+            <point x="-65536" y="65536"/>
+        </cube>
+    </zone>
+    <zone name="17_19_water2" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4779" max-z="-3779">
+            <point x="-98304" y="56320"/>
+            <point x="-78208" y="65535"/>
+        </cube>
+    </zone>
+    <zone name="17_19_water3" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4779" max-z="-3779">
+            <point x="-98304" y="32768"/>
+            <point x="-78208" y="39936"/>
+        </cube>
+    </zone>
+    <zone name="17_20_water1" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4780" max-z="-3780">
+            <point x="-98303" y="65536"/>
+            <point x="-85503" y="98304"/>
+        </cube>
+    </zone>
+    <zone name="17_20_water2" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4780" max-z="-3780">
+            <point x="-85503" y="65536"/>
+            <point x="-65535" y="80384"/>
+        </cube>
+    </zone>
+    <zone name="17_20_water3" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-5824" max-z="-3504">
+            <point x="-85056" y="86208"/>
+            <point x="-84416" y="86848"/>
+        </cube>
+    </zone>
+    <zone name="17_20_water4" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-5824" max-z="-5248">
+            <point x="-84416" y="86208"/>
+            <point x="-82944" y="86848"/>
+        </cube>
+    </zone>
+    <zone name="17_21_water1" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4780" max-z="-3780">
+            <point x="-98304" y="121072"/>
+            <point x="-88304" y="131072"/>
+        </cube>
+    </zone>
+    <zone name="17_21_water2" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4780" max-z="-3780">
+            <point x="-98304" y="98304"/>
+            <point x="-96804" y="99804"/>
+        </cube>
+    </zone>
+    <zone name="17_21_water3" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4179" max-z="-3179">
+            <point x="-68536" y="128072"/>
+            <point x="-65536" y="131072"/>
+        </cube>
+    </zone>
+    <zone name="17_21_water4" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-5568" max-z="-3248">
+            <point x="-84032" y="111040"/>
+            <point x="-83392" y="111680"/>
+        </cube>
+    </zone>
+    <zone name="17_21_water5" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-5568" max-z="-4992">
+            <point x="-83392" y="111040"/>
+            <point x="-81920" y="111680"/>
+        </cube>
+    </zone>
+    <zone name="17_22_water1" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4780" max-z="-3780">
+            <point x="-98304" y="131072"/>
+            <point x="-78304" y="163840"/>
+        </cube>
+    </zone>
+    <zone name="17_22_water2" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4179" max-z="-3179">
+            <point x="-69836" y="131072"/>
+            <point x="-65536" y="140072"/>
+        </cube>
+    </zone>
+    <zone name="17_23_water1" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-7780" max-z="-3780">
+            <point x="-98304" y="163840"/>
+            <point x="-65536" y="196608"/>
+        </cube>
+    </zone>
+    <zone name="17_24_water1" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4779" max-z="-3779">
+            <point x="-98303" y="196608"/>
+            <point x="-65535" y="229376"/>
+        </cube>
+    </zone>
+    <zone name="17_25_water1" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4779" max-z="-3779">
+            <point x="-98303" y="229375"/>
+            <point x="-65535" y="262143"/>
+        </cube>
+    </zone>
+    <zone name="18_11_water1" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4780" max-z="-3780">
+            <point x="-65536" y="-229375"/>
+            <point x="-32768" y="-196607"/>
+        </cube>
+    </zone>
+    <zone name="18_14_water1" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4780" max-z="-3780">
+            <point x="-65536" y="-103304"/>
+            <point x="-32768" y="-98304"/>
+        </cube>
+    </zone>
+    <zone name="18_15_water1" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4779" max-z="-3779">
+            <point x="-65535" y="-98304"/>
+            <point x="-32767" y="-65536"/>
+        </cube>
+    </zone>
+    <zone name="18_15_water2" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-3500" max-z="-3200">
+            <point x="-56956" y="-70888"/>
+            <point x="-55556" y="-68104"/>
+        </cube>
+    </zone>
+    <zone name="18_15_water3" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-3500" max-z="-3200">
+            <point x="-50556" y="-70888"/>
+            <point x="-49604" y="-68104"/>
+        </cube>
+    </zone>
+    <zone name="18_15_water4" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-3500" max-z="-3200">
+            <point x="-56380" y="-72024"/>
+            <point x="-50116" y="-70888"/>
+        </cube>
+    </zone>
+    <zone name="18_15_water5" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-3500" max-z="-3200">
+            <point x="-56380" y="-68104"/>
+            <point x="-50012" y="-67112"/>
+        </cube>
+    </zone>
+    <zone name="18_15_water6" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-3108" max-z="-3008">
+            <point x="-59454" y="-68630"/>
+            <point x="-58034" y="-67530"/>
+        </cube>
+    </zone>
+    <zone name="18_16_water1" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4780" max-z="-3780">
+            <point x="-65536" y="-65536"/>
+            <point x="-32768" y="-32768"/>
+        </cube>
+    </zone>
+    <zone name="18_16_water2" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-2069" max-z="-2066">
+            <point x="-61172" y="-58276"/>
+            <point x="-58317" y="-55532"/>
+        </cube>
+    </zone>
+    <zone name="18_16_water3" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-2086" max-z="-2062">
+            <point x="-61684" y="-59972"/>
+            <point x="-60556" y="-59196"/>
+        </cube>
+    </zone>
+    <zone name="18_16_water4" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-2301" max-z="-2151">
+            <point x="-60960" y="-54879"/>
+            <point x="-58432" y="-53379"/>
+        </cube>
+    </zone>
+    <zone name="18_16_water5" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-2893" max-z="-2843">
+            <point x="-50599" y="-54912"/>
+            <point x="-50143" y="-53444"/>
+        </cube>
+    </zone>
+    <zone name="18_16_water6" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-2893" max-z="-2843">
+            <point x="-50143" y="-55029"/>
+            <point x="-49277" y="-53305"/>
+        </cube>
+    </zone>
+    <zone name="18_16_water7" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-2894" max-z="-2844">
+            <point x="-49277" y="-54781"/>
+            <point x="-49019" y="-53569"/>
+        </cube>
+    </zone>
+    <zone name="18_16_water8" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-2893" max-z="-2843">
+            <point x="-51168" y="-55433"/>
+            <point x="-50910" y="-55117"/>
+        </cube>
+    </zone>
+    <zone name="18_16_water9" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-2893" max-z="-2843">
+            <point x="-50186" y="-56004"/>
+            <point x="-49832" y="-55784"/>
+        </cube>
+    </zone>
+    <zone name="18_16_water10" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-2893" max-z="-2843">
+            <point x="-51206" y="-53249"/>
+            <point x="-50916" y="-52869"/>
+        </cube>
+    </zone>
+    <zone name="18_16_water11" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-2893" max-z="-2843">
+            <point x="-50199" y="-52553"/>
+            <point x="-49797" y="-52333"/>
+        </cube>
+    </zone>
+    <zone name="18_17_water1" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4780" max-z="-3780">
+            <point x="-65536" y="-32768"/>
+            <point x="-32768" y="0"/>
+        </cube>
+    </zone>
+    <zone name="18_19_water1" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4779" max-z="-3779">
+            <point x="-65536" y="32767"/>
+            <point x="-52036" y="65535"/>
+        </cube>
+    </zone>
+    <zone name="18_19_water2" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4779" max-z="-3779">
+            <point x="-52036" y="32768"/>
+            <point x="-32768" y="40768"/>
+        </cube>
+    </zone>
+    <zone name="18_20_water1" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4780" max-z="-3780">
+            <point x="-65536" y="65536"/>
+            <point x="-55536" y="75536"/>
+        </cube>
+    </zone>
+    <zone name="18_20_water2" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-5408" max-z="-3048">
+            <point x="-56055" y="78728"/>
+            <point x="-55303" y="79480"/>
+        </cube>
+    </zone>
+    <zone name="18_20_water3" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-5408" max-z="-4831">
+            <point x="-55303" y="78784"/>
+            <point x="-53887" y="79424"/>
+        </cube>
+    </zone>
+    <zone name="18_21_water1" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4179" max-z="-3179">
+            <point x="-65536" y="122368"/>
+            <point x="-52480" y="131072"/>
+        </cube>
+    </zone>
+    <zone name="18_21_water1" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4659" max-z="-3659">
+            <point x="-65536" y="113088"/>
+            <point x="-57664" y="121856"/>
+        </cube>
+    </zone>
+    <zone name="18_22_water1" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4179" max-z="-3179">
+            <point x="-65536" y="131072"/>
+            <point x="-62464" y="141056"/>
+        </cube>
+    </zone>
+    <zone name="18_22_water2" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4179" max-z="-3179">
+            <point x="-61764" y="131072"/>
+            <point x="-55748" y="132608"/>
+        </cube>
+    </zone>
+    <zone name="18_23_water1" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4780" max-z="-3780">
+            <point x="-65536" y="191350"/>
+            <point x="-53536" y="196608"/>
+        </cube>
+    </zone>
+    <zone name="18_23_water2" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4780" max-z="-3780">
+            <point x="-65535" y="179446"/>
+            <point x="-62962" y="191446"/>
+        </cube>
+    </zone>
+    <zone name="18_23_water3" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4960" max-z="-4702">
+            <point x="-54681" y="180233"/>
+            <point x="-53049" y="183017"/>
+        </cube>
+    </zone>
+    <zone name="18_23_water4" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4960" max-z="-4702">
+            <point x="-53616" y="183018"/>
+            <point x="-52368" y="184394"/>
+        </cube>
+    </zone>
+    <zone name="18_24_water1" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-5754" max-z="-5177">
+            <point x="-41888" y="206688"/>
+            <point x="-41248" y="208160"/>
+        </cube>
+    </zone>
+    <zone name="18_24_water2" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4780" max-z="-3780">
+            <point x="-65536" y="196608"/>
+            <point x="-53536" y="229376"/>
+        </cube>
+    </zone>
+    <zone name="18_24_water3" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4780" max-z="-3780">
+            <point x="-53536" y="220976"/>
+            <point x="-32768" y="229376"/>
+        </cube>
+    </zone>
+    <zone name="18_24_water4" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4780" max-z="-3780">
+            <point x="-41024" y="212576"/>
+            <point x="-32768" y="220976"/>
+        </cube>
+    </zone>
+    <zone name="18_24_water5" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4282" max-z="-3780">
+            <point x="-53536" y="212576"/>
+            <point x="-45280" y="220976"/>
+        </cube>
+    </zone>
+    <zone name="18_24_water6" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4282" max-z="-3780">
+            <point x="-53536" y="202208"/>
+            <point x="-47584" y="209584"/>
+        </cube>
+    </zone>
+    <zone name="18_24_water7" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4282" max-z="-3780">
+            <point x="-45280" y="212576"/>
+            <point x="-41024" y="220976"/>
+        </cube>
+    </zone>
+    <zone name="18_24_water8" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-5754" max-z="-3434">
+            <point x="-41888" y="206048"/>
+            <point x="-41248" y="206688"/>
+        </cube>
+    </zone>
+    <zone name="18_25_water1" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4779" max-z="-3779">
+            <point x="-65536" y="229375"/>
+            <point x="-32768" y="262143"/>
+        </cube>
+    </zone>
+    <zone name="19_11_water1" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4780" max-z="-3780">
+            <point x="-32768" y="-229375"/>
+            <point x="0" y="-196607"/>
+        </cube>
+    </zone>
+    <zone name="19_14_water1" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4779" max-z="-3779">
+            <point x="-32767" y="-101304"/>
+            <point x="-29767" y="-98304"/>
+        </cube>
+    </zone>
+    <zone name="19_15_water1" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4780" max-z="-3780">
+            <point x="-32768" y="-98304"/>
+            <point x="0" y="-65536"/>
+        </cube>
+    </zone>
+    <zone name="19_16_water1" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4780" max-z="-3780">
+            <point x="-32768" y="-65536"/>
+            <point x="0" y="-32768"/>
+        </cube>
+    </zone>
+    <zone name="19_17_water1" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4780" max-z="-3780">
+            <point x="-32768" y="-32768"/>
+            <point x="-25088" y="0"/>
+        </cube>
+    </zone>
+    <zone name="19_17_water2" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4780" max-z="-3780">
+            <point x="-25088" y="-32768"/>
+            <point x="-16384" y="-25856"/>
+        </cube>
+    </zone>
+    <zone name="19_17_water3" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4780" max-z="-3780">
+            <point x="-16384" y="-32768"/>
+            <point x="0" y="-14848"/>
+        </cube>
+    </zone>
+    <zone name="19_17_water4" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4780" max-z="-3780">
+            <point x="-25088" y="-14848"/>
+            <point x="0" y="0"/>
+        </cube>
+    </zone>
+    <zone name="19_17_water5" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4780" max-z="-3780">
+            <point x="-19712" y="-17664"/>
+            <point x="-16384" y="-14848"/>
+        </cube>
+    </zone>
+    <zone name="19_17_water6" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4780" max-z="-3780">
+            <point x="-25088" y="-18176"/>
+            <point x="-21760" y="-14848"/>
+        </cube>
+    </zone>
+    <zone name="19_17_water7" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4780" max-z="-3780">
+            <point x="-17920" y="-20224"/>
+            <point x="-16384" y="-17664"/>
+        </cube>
+    </zone>
+    <zone name="19_17_water8" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4780" max-z="-3780">
+            <point x="-18688" y="-25856"/>
+            <point x="-16384" y="-23296"/>
+        </cube>
+    </zone>
+    <zone name="19_17_water9" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4780" max-z="-3780">
+            <point x="-25088" y="-25856"/>
+            <point x="-23808" y="-22784"/>
+        </cube>
+    </zone>
+    <zone name="19_17_water10" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4780" max-z="-3780">
+            <point x="-23808" y="-25856"/>
+            <point x="-21504" y="-24320"/>
+        </cube>
+    </zone>
+    <zone name="19_18_water1" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4780" max-z="-3780">
+            <point x="-32768" y="0"/>
+            <point x="-23424" y="32768"/>
+        </cube>
+    </zone>
+    <zone name="19_18_water2" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-5568" max-z="-3248">
+            <point x="-23168" y="13184"/>
+            <point x="-22528" y="13824"/>
+        </cube>
+    </zone>
+    <zone name="19_18_water3" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-5568" max-z="-4991">
+            <point x="-22528" y="13184"/>
+            <point x="-21056" y="13824"/>
+        </cube>
+    </zone>
+    <zone name="19_18_water4" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4780" max-z="-3780">
+            <point x="-23424" y="0"/>
+            <point x="0" y="12928"/>
+        </cube>
+    </zone>
+    <zone name="19_19_water1" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4784" max-z="-3784">
+            <point x="-12972" y="57536"/>
+            <point x="-5972" y="65536"/>
+        </cube>
+    </zone>
+    <zone name="19_19_water2" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4788" max-z="-3788">
+            <point x="-5840" y="60645"/>
+            <point x="-3840" y="62645"/>
+        </cube>
+    </zone>
+    <zone name="19_20_water1" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4268" max-z="-3780">
+            <point x="-24488" y="65536"/>
+            <point x="0" y="98304"/>
+        </cube>
+    </zone>
+    <zone name="19_20_water2" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-5840" max-z="-3520">
+            <point x="-25472" y="77056"/>
+            <point x="-24832" y="77696"/>
+        </cube>
+    </zone>
+    <zone name="19_20_water3" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-5840" max-z="-5263">
+            <point x="-24832" y="77056"/>
+            <point x="-23360" y="77696"/>
+        </cube>
+    </zone>
+    <zone name="19_21_water1" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-10611" max-z="-3779">
+            <point x="-25816" y="98304"/>
+            <point x="0" y="106624"/>
+        </cube>
+    </zone>
+    <zone name="19_21_water2" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-3214" max-z="-2836">
+            <point x="-20504" y="106688"/>
+            <point x="-15719" y="107947"/>
+        </cube>
+    </zone>
+    <zone name="19_21_water3" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-3214" max-z="-2836">
+            <point x="-20504" y="107947"/>
+            <point x="-18904" y="113841"/>
+        </cube>
+    </zone>
+    <zone name="19_21_water4" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-3214" max-z="-2836">
+            <point x="-17319" y="107947"/>
+            <point x="-15719" y="113841"/>
+        </cube>
+    </zone>
+    <zone name="19_21_water5" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-3214" max-z="-2836">
+            <point x="-18904" y="111448"/>
+            <point x="-17319" y="113841"/>
+        </cube>
+    </zone>
+    <zone name="19_21_water6" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-10611" max-z="-3779">
+            <point x="-25816" y="115072"/>
+            <point x="0" y="120576"/>
+        </cube>
+    </zone>
+    <zone name="19_21_water7" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-10611" max-z="-3779">
+            <point x="-13528" y="106624"/>
+            <point x="0" y="115072"/>
+        </cube>
+    </zone>
+    <zone name="19_21_water8" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-10611" max-z="-3779">
+            <point x="-25816" y="106624"/>
+            <point x="-22144" y="115072"/>
+        </cube>
+    </zone>
+    <zone name="19_21_water9" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-10611" max-z="-3779">
+            <point x="-11992" y="120576"/>
+            <point x="0" y="131072"/>
+        </cube>
+    </zone>
+    <zone name="19_24_water1" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-7780" max-z="-3780">
+            <point x="-32768" y="209376"/>
+            <point x="-10000" y="229376"/>
+        </cube>
+    </zone>
+    <zone name="19_24_water2" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-7780" max-z="-3780">
+            <point x="-10000" y="196608"/>
+            <point x="0" y="229376"/>
+        </cube>
+    </zone>
+    <zone name="19_25_water1" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4779" max-z="-3779">
+            <point x="-32767" y="229376"/>
+            <point x="0" y="262144"/>
+        </cube>
+    </zone>
+    <zone name="19_25_water3" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-3604" max-z="-3348">
+            <point x="-21948" y="250556"/>
+            <point x="-19460" y="251252"/>
+        </cube>
+    </zone>
+    <zone name="19_26_water1" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4780" max-z="-3780">
+            <point x="-32768" y="262144"/>
+            <point x="0" y="294912"/>
+        </cube>
+    </zone>
+    <zone name="20_11_water1" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4780" max-z="-3780">
+            <point x="0" y="-229375"/>
+            <point x="32768" y="-196607"/>
+        </cube>
+    </zone>
+    <zone name="20_15_water1" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4780" max-z="-3780">
+            <point x="0" y="-73536"/>
+            <point x="8000" y="-65536"/>
+        </cube>
+    </zone>
+    <zone name="20_16_water1" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4780" max-z="-3780">
+            <point x="0" y="-65536"/>
+            <point x="32768" y="-32768"/>
+        </cube>
+    </zone>
+    <zone name="20_16_water2" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-2136" max-z="-1136">
+            <point x="15392" y="-48832"/>
+            <point x="17360" y="-46664"/>
+        </cube>
+    </zone>
+    <zone name="20_16_water3" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-2136" max-z="-1136">
+            <point x="15392" y="-51632"/>
+            <point x="17360" y="-49464"/>
+        </cube>
+    </zone>
+    <zone name="20_17_water1" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-7780" max-z="-3780">
+            <point x="0" y="-32768"/>
+            <point x="32768" y="0"/>
+        </cube>
+    </zone>
+    <zone name="20_18_water1" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4780" max-z="-3780">
+            <point x="0" y="0"/>
+            <point x="32768" y="5500"/>
+        </cube>
+    </zone>
+    <zone name="20_19_water1" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4780" max-z="-3780">
+            <point x="0" y="32768"/>
+            <point x="32768" y="65536"/>
+        </cube>
+    </zone>
+    <zone name="20_20_water1" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4780" max-z="-3780">
+            <point x="0" y="76174"/>
+            <point x="4000" y="98304"/>
+        </cube>
+    </zone>
+    <zone name="20_20_water2" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4794" max-z="-3794">
+            <point x="4608" y="65479"/>
+            <point x="32768" y="70343"/>
+        </cube>
+    </zone>
+    <zone name="20_20_water3" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4794" max-z="-3794">
+            <point x="0" y="66791"/>
+            <point x="4624" y="72935"/>
+        </cube>
+    </zone>
+    <zone name="20_21_water1" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4780" max-z="-3780">
+            <point x="0" y="98304"/>
+            <point x="4300" y="131072"/>
+        </cube>
+    </zone>
+    <zone name="20_22_water1" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4788" max-z="-3788">
+            <point x="0" y="131072"/>
+            <point x="10496" y="163840"/>
+        </cube>
+    </zone>
+    <zone name="20_22_water1" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-3518" max-z="-3030">
+            <point x="19736" y="155981"/>
+            <point x="24344" y="163131"/>
+        </cube>
+    </zone>
+    <zone name="20_23_water1" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-7780" max-z="-3780">
+            <point x="0" y="163840"/>
+            <point x="32768" y="196608"/>
+        </cube>
+    </zone>
+    <zone name="20_24_water1" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4780" max-z="-3780">
+            <point x="0" y="196608"/>
+            <point x="32767" y="229376"/>
+        </cube>
+    </zone>
+    <zone name="20_25_water1" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4779" max-z="-3779">
+            <point x="0" y="229376"/>
+            <point x="32768" y="243712"/>
+        </cube>
+    </zone>
+    <zone name="20_25_water2" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4779" max-z="-3779">
+            <point x="25600" y="243712"/>
+            <point x="32768" y="262144"/>
+        </cube>
+    </zone>
+    <zone name="20_25_water3" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4779" max-z="-3779">
+            <point x="0" y="254464"/>
+            <point x="25600" y="262144"/>
+        </cube>
+    </zone>
+    <zone name="20_25_water4" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-2416" max-z="-2141">
+            <point x="4991" y="248304"/>
+            <point x="9599" y="253680"/>
+        </cube>
+    </zone>
+    <zone name="20_26_water1" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4780" max-z="-3780">
+            <point x="0" y="262144"/>
+            <point x="32768" y="294912"/>
+        </cube>
+    </zone>
+    <zone name="21_10_water1" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4780" max-z="-3780">
+            <point x="32768" y="-262143"/>
+            <point x="65536" y="-229375"/>
+        </cube>
+    </zone>
+    <zone name="21_11_water1" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4780" max-z="-3780">
+            <point x="32768" y="-229375"/>
+            <point x="65536" y="-196607"/>
+        </cube>
+    </zone>
+    <zone name="21_14_water1" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4780" max-z="-3780">
+            <point x="32767" y="-131072"/>
+            <point x="65535" y="-128000"/>
+        </cube>
+    </zone>
+    <zone name="21_14_water1" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4780" max-z="-3780">
+            <point x="57344" y="-128000"/>
+            <point x="65536" y="-113664"/>
+        </cube>
+    </zone>
+    <zone name="21_15_water1" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4780" max-z="-3780">
+            <point x="32768" y="-98304"/>
+            <point x="65536" y="-65536"/>
+        </cube>
+    </zone>
+    <zone name="21_16_water1" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4783" max-z="-3783">
+            <point x="32768" y="-65535"/>
+            <point x="65536" y="-32767"/>
+        </cube>
+    </zone>
+    <zone name="21_17_water1" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4780" max-z="-3780">
+            <point x="32768" y="-32767"/>
+            <point x="65536" y="0"/>
+        </cube>
+    </zone>
+    <zone name="21_18_water1" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4780" max-z="-3780">
+            <point x="32768" y="0"/>
+            <point x="65536" y="10000"/>
+        </cube>
+    </zone>
+    <zone name="21_19_water1" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4780" max-z="-3780">
+            <point x="32768" y="32767"/>
+            <point x="60672" y="65535"/>
+        </cube>
+    </zone>
+    <zone name="21_20_water1" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4780" max-z="-3780">
+            <point x="32767" y="65535"/>
+            <point x="63567" y="90535"/>
+        </cube>
+    </zone>
+    <zone name="21_20_water2" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4780" max-z="-3780">
+            <point x="63236" y="73140"/>
+            <point x="65536" y="75440"/>
+        </cube>
+    </zone>
+    <zone name="21_21_water1" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-3980" max-z="-3780">
+            <point x="43516" y="116836"/>
+            <point x="52516" y="126092"/>
+        </cube>
+    </zone>
+    <zone name="21_21_water2" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-2377" max-z="-2227">
+            <point x="48773" y="115910"/>
+            <point x="50237" y="116708"/>
+        </cube>
+    </zone>
+    <zone name="21_21_water3" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-2409" max-z="-2259">
+            <point x="46597" y="111628"/>
+            <point x="49597" y="115128"/>
+        </cube>
+    </zone>
+    <zone name="21_21_water4" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-2409" max-z="-2259">
+            <point x="49172" y="115128"/>
+            <point x="50136" y="116868"/>
+        </cube>
+    </zone>
+    <zone name="21_21_water5" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-2409" max-z="-2259">
+            <point x="48000" y="115128"/>
+            <point x="49172" y="116356"/>
+        </cube>
+    </zone>
+    <zone name="21_21_water6" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-6080" max-z="-3776">
+            <point x="44928" y="126976"/>
+            <point x="45568" y="127616"/>
+        </cube>
+    </zone>
+    <zone name="21_21_water7" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-6080" max-z="-5504">
+            <point x="44928" y="125504"/>
+            <point x="45568" y="126976"/>
+        </cube>
+    </zone>
+    <zone name="21_22_water1" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-3948" max-z="-3748">
+            <point x="41916" y="139479"/>
+            <point x="51916" y="152769"/>
+        </cube>
+    </zone>
+    <zone name="21_22_water2" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-6048" max-z="-3688">
+            <point x="39240" y="143560"/>
+            <point x="39992" y="144312"/>
+        </cube>
+    </zone>
+    <zone name="21_22_water3" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-6048" max-z="-5471">
+            <point x="39992" y="143616"/>
+            <point x="41408" y="144256"/>
+        </cube>
+    </zone>
+    <zone name="21_23_water1" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4780" max-z="-3780">
+            <point x="32768" y="181239"/>
+            <point x="65536" y="196607"/>
+        </cube>
+    </zone>
+    <zone name="21_23_water2" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4780" max-z="-3780">
+            <point x="32768" y="175599"/>
+            <point x="44032" y="181239"/>
+        </cube>
+    </zone>
+    <zone name="21_23_water3" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4780" max-z="-3780">
+            <point x="57472" y="175599"/>
+            <point x="65536" y="181239"/>
+        </cube>
+    </zone>
+    <zone name="21_23_water4" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-5648" max-z="-3328">
+            <point x="42496" y="169984"/>
+            <point x="43136" y="170624"/>
+        </cube>
+    </zone>
+    <zone name="21_23_water5" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-5648" max-z="-5071">
+            <point x="43136" y="169984"/>
+            <point x="44608" y="170624"/>
+        </cube>
+    </zone>
+    <zone name="21_24_water1" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4779" max-z="-3779">
+            <point x="32768" y="196608"/>
+            <point x="65536" y="229376"/>
+        </cube>
+    </zone>
+    <zone name="21_25_water1" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4780" max-z="-3780">
+            <point x="32768" y="229379"/>
+            <point x="65536" y="262147"/>
+        </cube>
+    </zone>
+    <zone name="22_11_water1" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4779" max-z="-3779">
+            <point x="65536" y="-229375"/>
+            <point x="98304" y="-196607"/>
+        </cube>
+    </zone>
+    <zone name="22_13_water1" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4780" max-z="-3780">
+            <point x="65536" y="-163840"/>
+            <point x="98304" y="-156160"/>
+        </cube>
+    </zone>
+    <zone name="22_13_water2" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4780" max-z="-3780">
+            <point x="65536" y="-156160"/>
+            <point x="74880" y="-131072"/>
+        </cube>
+    </zone>
+    <zone name="22_13_water3" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4780" max-z="-3780">
+            <point x="80896" y="-156160"/>
+            <point x="98304" y="-147328"/>
+        </cube>
+    </zone>
+    <zone name="22_13_water4" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4780" max-z="-3780">
+            <point x="74880" y="-138880"/>
+            <point x="98304" y="-131072"/>
+        </cube>
+    </zone>
+    <zone name="22_13_water5" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4780" max-z="-3780">
+            <point x="91520" y="-147328"/>
+            <point x="98304" y="-138880"/>
+        </cube>
+    </zone>
+    <zone name="22_14_water1" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4897" max-z="-3897">
+            <point x="65536" y="-131072"/>
+            <point x="75776" y="-122368"/>
+        </cube>
+    </zone>
+    <zone name="22_14_water2" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4865" max-z="-3865">
+            <point x="95488" y="-131072"/>
+            <point x="98304" y="-124160"/>
+        </cube>
+    </zone>
+    <zone name="22_16_water1" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4780" max-z="-3780">
+            <point x="65536" y="-40960"/>
+            <point x="98304" y="-32768"/>
+        </cube>
+    </zone>
+    <zone name="22_16_water2" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-2889" max-z="-2633">
+            <point x="91829" y="-55930"/>
+            <point x="95637" y="-50266"/>
+        </cube>
+    </zone>
+    <zone name="22_16_water3" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-2889" max-z="-2633">
+            <point x="87765" y="-54554"/>
+            <point x="91829" y="-50266"/>
+        </cube>
+    </zone>
+    <zone name="22_16_water4" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-3408" max-z="-3152">
+            <point x="84947" y="-50234"/>
+            <point x="90133" y="-46202"/>
+        </cube>
+    </zone>
+    <zone name="22_16_water5" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-3504" max-z="-3248">
+            <point x="76003" y="-46368"/>
+            <point x="84947" y="-39968"/>
+        </cube>
+    </zone>
+    <zone name="22_16_water6" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-3417" max-z="-3161">
+            <point x="68852" y="-62008"/>
+            <point x="74036" y="-56192"/>
+        </cube>
+    </zone>
+    <zone name="22_16_water7" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-3417" max-z="-3161">
+            <point x="69480" y="-56192"/>
+            <point x="77032" y="-53203"/>
+        </cube>
+    </zone>
+    <zone name="22_16_water8" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-3417" max-z="-3161">
+            <point x="71311" y="-53203"/>
+            <point x="76175" y="-50292"/>
+        </cube>
+    </zone>
+    <zone name="22_16_water9" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-2608" max-z="-2352">
+            <point x="75059" y="-63591"/>
+            <point x="78355" y="-57517"/>
+        </cube>
+    </zone>
+    <zone name="22_16_water10" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-2608" max-z="-2352">
+            <point x="78355" y="-65184"/>
+            <point x="83859" y="-51872"/>
+        </cube>
+    </zone>
+    <zone name="22_16_water11" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-2608" max-z="-2352">
+            <point x="83859" y="-64826"/>
+            <point x="87187" y="-55418"/>
+        </cube>
+    </zone>
+    <zone name="22_16_water12" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-2608" max-z="-2352">
+            <point x="87187" y="-62909"/>
+            <point x="90963" y="-58301"/>
+        </cube>
+    </zone>
+    <zone name="22_16_water13" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-2608" max-z="-2352">
+            <point x="77283" y="-51872"/>
+            <point x="83747" y="-49440"/>
+        </cube>
+    </zone>
+    <zone name="22_16_water14" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-2608" max-z="-2352">
+            <point x="83859" y="-55418"/>
+            <point x="86227" y="-52602"/>
+        </cube>
+    </zone>
+    <zone name="22_16_water15" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-3504" max-z="-3248">
+            <point x="69635" y="-47328"/>
+            <point x="76003" y="-39776"/>
+        </cube>
+    </zone>
+    <zone name="22_16_water16" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-2608" max-z="-2352">
+            <point x="87187" y="-58301"/>
+            <point x="89235" y="-56541"/>
+        </cube>
+    </zone>
+    <zone name="22_16_water17" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-5228" max-z="-5164">
+            <point x="79215" y="-44656"/>
+            <point x="79855" y="-44096"/>
+        </cube>
+    </zone>
+    <zone name="22_16_water18" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-5228" max-z="-5164">
+            <point x="79639" y="-46144"/>
+            <point x="80351" y="-45560"/>
+        </cube>
+    </zone>
+    <zone name="22_16_water19" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-5228" max-z="-5164">
+            <point x="77169" y="-42816"/>
+            <point x="77729" y="-42176"/>
+        </cube>
+    </zone>
+    <zone name="22_16_water20" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-5228" max-z="-5164">
+            <point x="80154" y="-49757"/>
+            <point x="80738" y="-49045"/>
+        </cube>
+    </zone>
+    <zone name="22_16_water21" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-5228" max-z="-5164">
+            <point x="77635" y="-47006"/>
+            <point x="78219" y="-46294"/>
+        </cube>
+    </zone>
+    <zone name="22_16_water22" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-5228" max-z="-5164">
+            <point x="77731" y="-47841"/>
+            <point x="78371" y="-47281"/>
+        </cube>
+    </zone>
+    <zone name="22_16_water23" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4739" max-z="-4675">
+            <point x="81910" y="-48911"/>
+            <point x="82494" y="-48199"/>
+        </cube>
+    </zone>
+    <zone name="22_16_water24" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-5228" max-z="-5164">
+            <point x="88096" y="-53099"/>
+            <point x="88680" y="-52387"/>
+        </cube>
+    </zone>
+    <zone name="22_16_water25" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-5228" max-z="-5164">
+            <point x="87454" y="-54537"/>
+            <point x="88094" y="-53977"/>
+        </cube>
+    </zone>
+    <zone name="22_16_water26" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-5228" max-z="-5164">
+            <point x="85450" y="-50078"/>
+            <point x="86162" y="-49494"/>
+        </cube>
+    </zone>
+    <zone name="22_16_water27" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-5228" max-z="-5164">
+            <point x="75537" y="-47082"/>
+            <point x="75905" y="-46698"/>
+        </cube>
+    </zone>
+    <zone name="22_17_water1" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4780" max-z="-3780">
+            <point x="65536" y="-32768"/>
+            <point x="76800" y="0"/>
+        </cube>
+    </zone>
+    <zone name="22_17_water2" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4780" max-z="-3780">
+            <point x="76800" y="-32768"/>
+            <point x="98304" y="-18432"/>
+        </cube>
+    </zone>
+    <zone name="22_18_water1" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4780" max-z="-3780">
+            <point x="65536" y="4768"/>
+            <point x="75536" y="32768"/>
+        </cube>
+    </zone>
+    <zone name="22_18_water2" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4780" max-z="-3780">
+            <point x="75536" y="27768"/>
+            <point x="98304" y="32768"/>
+        </cube>
+    </zone>
+    <zone name="22_19_water1" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-3625" max-z="-2625">
+            <point x="77961" y="34750"/>
+            <point x="85461" y="39750"/>
+        </cube>
+    </zone>
+    <zone name="22_19_water2" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4780" max-z="-3780">
+            <point x="84727" y="32768"/>
+            <point x="91727" y="53768"/>
+        </cube>
+    </zone>
+    <zone name="22_20_water1" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4772" max-z="-3772">
+            <point x="65536" y="91304"/>
+            <point x="98304" y="98304"/>
+        </cube>
+    </zone>
+    <zone name="22_20_water2" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4772" max-z="-3772">
+            <point x="65536" y="71304"/>
+            <point x="70536" y="91304"/>
+        </cube>
+    </zone>
+    <zone name="22_20_water3" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-5792" max-z="-3472">
+            <point x="73984" y="78080"/>
+            <point x="74624" y="78720"/>
+        </cube>
+    </zone>
+    <zone name="22_20_water4" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-5792" max-z="-5215">
+            <point x="74624" y="78080"/>
+            <point x="76096" y="78720"/>
+        </cube>
+    </zone>
+    <zone name="22_22_water1" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-8778" max-z="-3780">
+            <point x="82656" y="149824"/>
+            <point x="98304" y="152256"/>
+        </cube>
+    </zone>
+    <zone name="22_22_water2" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-8778" max-z="-3780">
+            <point x="81344" y="139840"/>
+            <point x="84832" y="143680"/>
+        </cube>
+    </zone>
+    <zone name="22_22_water3" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-8778" max-z="-3780">
+            <point x="79040" y="152818"/>
+            <point x="82656" y="163840"/>
+        </cube>
+    </zone>
+    <zone name="22_22_water4" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-8778" max-z="-3780">
+            <point x="88361" y="146991"/>
+            <point x="91593" y="149821"/>
+        </cube>
+    </zone>
+    <zone name="22_22_water5" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-8778" max-z="-3780">
+            <point x="84832" y="139840"/>
+            <point x="98304" y="146991"/>
+        </cube>
+    </zone>
+    <zone name="22_22_water6" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-8778" max-z="-3780">
+            <point x="82656" y="153600"/>
+            <point x="98304" y="163840"/>
+        </cube>
+    </zone>
+    <zone name="22_22_water7" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-8778" max-z="-3780">
+            <point x="82656" y="152256"/>
+            <point x="84880" y="153600"/>
+        </cube>
+    </zone>
+    <zone name="22_22_water8" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-8778" max-z="-3780">
+            <point x="86757" y="152256"/>
+            <point x="98304" y="153600"/>
+        </cube>
+    </zone>
+    <zone name="22_23_water1" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4779" max-z="-3779">
+            <point x="65536" y="163840"/>
+            <point x="74752" y="196608"/>
+        </cube>
+    </zone>
+    <zone name="22_23_water2" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4779" max-z="-3779">
+            <point x="74752" y="163840"/>
+            <point x="85215" y="173976"/>
+        </cube>
+    </zone>
+    <zone name="22_23_water3" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4779" max-z="-3779">
+            <point x="74752" y="173976"/>
+            <point x="83244" y="178267"/>
+        </cube>
+    </zone>
+    <zone name="22_23_water4" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4779" max-z="-3779">
+            <point x="74752" y="178267"/>
+            <point x="78031" y="180291"/>
+        </cube>
+    </zone>
+    <zone name="22_23_water5" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4779" max-z="-3779">
+            <point x="78031" y="178267"/>
+            <point x="83244" y="180291"/>
+        </cube>
+    </zone>
+    <zone name="22_23_water6" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4779" max-z="-3779">
+            <point x="74751" y="180291"/>
+            <point x="83243" y="195250"/>
+        </cube>
+    </zone>
+    <zone name="22_23_water7" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4779" max-z="-3779">
+            <point x="91149" y="163840"/>
+            <point x="98304" y="166737"/>
+        </cube>
+    </zone>
+    <zone name="22_23_water8" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4779" max-z="-3779">
+            <point x="85215" y="166737"/>
+            <point x="95485" y="173976"/>
+        </cube>
+    </zone>
+    <zone name="22_23_water9" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4779" max-z="-3779">
+            <point x="83244" y="173976"/>
+            <point x="92290" y="195250"/>
+        </cube>
+    </zone>
+    <zone name="22_23_water10" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4779" max-z="-3779">
+            <point x="95485" y="166737"/>
+            <point x="98304" y="193105"/>
+        </cube>
+    </zone>
+    <zone name="22_23_water11" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4779" max-z="-3779">
+            <point x="92290" y="173976"/>
+            <point x="95485" y="185103"/>
+        </cube>
+    </zone>
+    <zone name="22_23_water12" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4779" max-z="-3779">
+            <point x="92290" y="185103"/>
+            <point x="95485" y="193105"/>
+        </cube>
+    </zone>
+    <zone name="22_23_water13" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4779" max-z="-3779">
+            <point x="92290" y="193105"/>
+            <point x="98304" y="196608"/>
+        </cube>
+    </zone>
+    <zone name="22_24_water1" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4780" max-z="-3780">
+            <point x="93696" y="224128"/>
+            <point x="98304" y="229376"/>
+        </cube>
+    </zone>
+    <zone name="22_24_water2" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4780" max-z="-3780">
+            <point x="93056" y="196608"/>
+            <point x="98304" y="201216"/>
+        </cube>
+    </zone>
+    <zone name="22_24_water3" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4780" max-z="-3780">
+            <point x="65536" y="196608"/>
+            <point x="76032" y="200320"/>
+        </cube>
+    </zone>
+    <zone name="22_24_water4" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4780" max-z="-3780">
+            <point x="70024" y="222217"/>
+            <point x="77862" y="229376"/>
+        </cube>
+    </zone>
+    <zone name="22_24_water5" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4780" max-z="-3780">
+            <point x="65536" y="200320"/>
+            <point x="70024" y="229376"/>
+        </cube>
+    </zone>
+    <zone name="22_24_water6" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4268" max-z="-3780">
+            <point x="70024" y="200320"/>
+            <point x="79174" y="222217"/>
+        </cube>
+    </zone>
+    <zone name="22_24_water7" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4268" max-z="-3780">
+            <point x="77862" y="224128"/>
+            <point x="93696" y="229376"/>
+        </cube>
+    </zone>
+    <zone name="22_24_water8" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4268" max-z="-3780">
+            <point x="80192" y="201216"/>
+            <point x="98304" y="224128"/>
+        </cube>
+    </zone>
+    <zone name="22_24_water9" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4268" max-z="-3780">
+            <point x="81856" y="196608"/>
+            <point x="93056" y="201216"/>
+        </cube>
+    </zone>
+    <zone name="22_24_water10" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-6106" max-z="-3786">
+            <point x="79360" y="208897"/>
+            <point x="80000" y="209537"/>
+        </cube>
+    </zone>
+    <zone name="22_24_water11" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-6106" max-z="-5529">
+            <point x="80000" y="208897"/>
+            <point x="81472" y="209537"/>
+        </cube>
+    </zone>
+    <zone name="22_24_water12" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4268" max-z="-3780">
+            <point x="79174" y="209727"/>
+            <point x="80192" y="224128"/>
+        </cube>
+    </zone>
+    <zone name="22_24_water13" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4268" max-z="-3780">
+            <point x="79174" y="201216"/>
+            <point x="80192" y="208704"/>
+        </cube>
+    </zone>
+    <zone name="22_25_water1" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-10902" max-z="-10886">
+            <point x="79010" y="246660"/>
+            <point x="86498" y="254710"/>
+        </cube>
+    </zone>
+    <zone name="22_25_water2" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-7219" max-z="-4203">
+            <point x="84195" y="239659"/>
+            <point x="86179" y="242731"/>
+        </cube>
+    </zone>
+    <zone name="22_25_water3" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-7219" max-z="-6763">
+            <point x="82979" y="241471"/>
+            <point x="84195" y="241919"/>
+        </cube>
+    </zone>
+    <zone name="22_25_water4" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-9354" max-z="-8898">
+            <point x="80356" y="245012"/>
+            <point x="84644" y="245844"/>
+        </cube>
+    </zone>
+    <zone name="22_25_water5" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-9354" max-z="-8898">
+            <point x="80303" y="258156"/>
+            <point x="84591" y="258988"/>
+        </cube>
+    </zone>
+    <zone name="22_25_water6" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4779" max-z="-3779">
+            <point x="65536" y="229376"/>
+            <point x="98304" y="262144"/>
+        </cube>
+    </zone>
+    <zone name="22_25_water7" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-10902" max-z="-10886">
+            <point x="78624" y="254710"/>
+            <point x="82336" y="255593"/>
+        </cube>
+    </zone>
+    <zone name="22_25_water8" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-10902" max-z="-10886">
+            <point x="82785" y="254710"/>
+            <point x="86497" y="255593"/>
+        </cube>
+    </zone>
+    <zone name="22_25_water9" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-10902" max-z="-10886">
+            <point x="82336" y="255350"/>
+            <point x="82785" y="255593"/>
+        </cube>
+    </zone>
+    <zone name="23_11_water1" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4780" max-z="-3780">
+            <point x="98304" y="-229376"/>
+            <point x="131072" y="-196608"/>
+        </cube>
+    </zone>
+    <zone name="23_12_water1" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4780" max-z="-3780">
+            <point x="119040" y="-196608"/>
+            <point x="131072" y="-178624"/>
+        </cube>
+    </zone>
+    <zone name="23_13_water1" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4780" max-z="-3780">
+            <point x="98304" y="-163840"/>
+            <point x="131072" y="-131072"/>
+        </cube>
+    </zone>
+    <zone name="23_14_water1" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4780" max-z="-3780">
+            <point x="98304" y="-131072"/>
+            <point x="131072" y="-98304"/>
+        </cube>
+    </zone>
+    <zone name="23_15_water1" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4772" max-z="-3772">
+            <point x="98304" y="-98304"/>
+            <point x="131072" y="-90304"/>
+        </cube>
+    </zone>
+    <zone name="23_15_water2" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-3560" max-z="-3556">
+            <point x="114464" y="-89256"/>
+            <point x="116384" y="-88464"/>
+        </cube>
+    </zone>
+    <zone name="23_18_water1" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4780" max-z="-3780">
+            <point x="98304" y="27767"/>
+            <point x="120320" y="32767"/>
+        </cube>
+    </zone>
+    <zone name="23_19_water1" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-5656" max-z="-4656">
+            <point x="103091" y="37760"/>
+            <point x="128091" y="62760"/>
+        </cube>
+    </zone>
+    <zone name="23_20_water1" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-7184" max-z="-4864">
+            <point x="110208" y="84224"/>
+            <point x="110848" y="84864"/>
+        </cube>
+    </zone>
+    <zone name="23_20_water2" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-7208" max-z="-6631">
+            <point x="110848" y="84224"/>
+            <point x="112320" y="84864"/>
+        </cube>
+    </zone>
+    <zone name="23_22_water1" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-3176" max-z="-2892">
+            <point x="112096" y="142623"/>
+            <point x="119232" y="147603"/>
+        </cube>
+    </zone>
+    <zone name="23_22_water2" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-5498" max-z="-3138">
+            <point x="114504" y="132424"/>
+            <point x="115256" y="133176"/>
+        </cube>
+    </zone>
+    <zone name="23_22_water3" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-5498" max-z="-4921">
+            <point x="115256" y="132480"/>
+            <point x="116672" y="133120"/>
+        </cube>
+    </zone>
+    <zone name="23_22_water4" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4780" max-z="-3780">
+            <point x="98304" y="138239"/>
+            <point x="131072" y="163839"/>
+        </cube>
+    </zone>
+    <zone name="23_22_water5" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4108" max-z="-3780">
+            <point x="117512" y="136743"/>
+            <point x="122009" y="138239"/>
+        </cube>
+    </zone>
+    <zone name="23_23_water1" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4779" max-z="-3764">
+            <point x="98304" y="163840"/>
+            <point x="131072" y="167840"/>
+        </cube>
+    </zone>
+    <zone name="23_23_water2" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4779" max-z="-3764">
+            <point x="98304" y="167840"/>
+            <point x="102304" y="196608"/>
+        </cube>
+    </zone>
+    <zone name="23_23_water3" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4779" max-z="-3764">
+            <point x="124072" y="167840"/>
+            <point x="131072" y="196608"/>
+        </cube>
+    </zone>
+    <zone name="23_23_water4" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4779" max-z="-3764">
+            <point x="102304" y="191608"/>
+            <point x="124072" y="196608"/>
+        </cube>
+    </zone>
+    <zone name="23_23_water5" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4779" max-z="-3764">
+            <point x="121672" y="186199"/>
+            <point x="124072" y="189151"/>
+        </cube>
+    </zone>
+    <zone name="23_23_water6" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4779" max-z="-3764">
+            <point x="102304" y="184170"/>
+            <point x="105652" y="187250"/>
+        </cube>
+    </zone>
+    <zone name="23_23_water7" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4779" max-z="-3764">
+            <point x="102304" y="168567"/>
+            <point x="106804" y="173567"/>
+        </cube>
+    </zone>
+    <zone name="23_23_water8" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-6096" max-z="-3764">
+            <point x="107520" y="173696"/>
+            <point x="108160" y="174336"/>
+        </cube>
+    </zone>
+    <zone name="23_23_water9" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-6106" max-z="-3764">
+            <point x="108160" y="173696"/>
+            <point x="109632" y="174336"/>
+        </cube>
+    </zone>
+    <zone name="23_24_water1" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-3751" max-z="-3699">
+            <point x="110380" y="219263"/>
+            <point x="112391" y="221056"/>
+        </cube>
+    </zone>
+    <zone name="23_24_water2" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4780" max-z="-3780">
+            <point x="98304" y="225024"/>
+            <point x="107104" y="229376"/>
+        </cube>
+    </zone>
+    <zone name="23_24_water3" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4780" max-z="-3780">
+            <point x="107104" y="219008"/>
+            <point x="109760" y="220256"/>
+        </cube>
+    </zone>
+    <zone name="23_24_water4" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4780" max-z="-3780">
+            <point x="107104" y="220256"/>
+            <point x="107456" y="221280"/>
+        </cube>
+    </zone>
+    <zone name="23_24_water5" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4780" max-z="-3780">
+            <point x="107104" y="221280"/>
+            <point x="108032" y="229376"/>
+        </cube>
+    </zone>
+    <zone name="23_24_water6" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4780" max-z="-3780">
+            <point x="108032" y="223104"/>
+            <point x="108896" y="229376"/>
+        </cube>
+    </zone>
+    <zone name="23_24_water7" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4780" max-z="-3780">
+            <point x="108896" y="221632"/>
+            <point x="110304" y="229376"/>
+        </cube>
+    </zone>
+    <zone name="23_24_water8" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4780" max-z="-3780">
+            <point x="112480" y="223392"/>
+            <point x="114656" y="229376"/>
+        </cube>
+    </zone>
+    <zone name="23_24_water9" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4780" max-z="-3780">
+            <point x="114656" y="225088"/>
+            <point x="131072" y="229376"/>
+        </cube>
+    </zone>
+    <zone name="23_24_water10" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4780" max-z="-3780">
+            <point x="115360" y="220128"/>
+            <point x="131072" y="222784"/>
+        </cube>
+    </zone>
+    <zone name="23_24_water11" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4780" max-z="-3780">
+            <point x="112480" y="221632"/>
+            <point x="113792" y="223392"/>
+        </cube>
+    </zone>
+    <zone name="23_24_water12" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4780" max-z="-3780">
+            <point x="110304" y="221632"/>
+            <point x="112480" y="223008"/>
+        </cube>
+    </zone>
+    <zone name="23_24_water13" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4780" max-z="-3780">
+            <point x="112640" y="221056"/>
+            <point x="113792" y="221632"/>
+        </cube>
+    </zone>
+    <zone name="23_24_water14" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4780" max-z="-3780">
+            <point x="112768" y="218560"/>
+            <point x="114016" y="221056"/>
+        </cube>
+    </zone>
+    <zone name="23_24_water15" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4780" max-z="-3780">
+            <point x="114016" y="220576"/>
+            <point x="115360" y="221120"/>
+        </cube>
+    </zone>
+    <zone name="23_24_water16" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4780" max-z="-3780">
+            <point x="114688" y="221120"/>
+            <point x="115360" y="221472"/>
+        </cube>
+    </zone>
+    <zone name="23_24_water17" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4780" max-z="-3780">
+            <point x="113792" y="221056"/>
+            <point x="114016" y="221120"/>
+        </cube>
+    </zone>
+    <zone name="23_24_water18" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4780" max-z="-3780">
+            <point x="115264" y="220128"/>
+            <point x="115360" y="220576"/>
+        </cube>
+    </zone>
+    <zone name="23_24_water19" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4780" max-z="-3780">
+            <point x="114016" y="219616"/>
+            <point x="114752" y="219808"/>
+        </cube>
+    </zone>
+    <zone name="23_24_water20" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4780" max-z="-3780">
+            <point x="114432" y="218560"/>
+            <point x="114752" y="219616"/>
+        </cube>
+    </zone>
+    <zone name="23_24_water21" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4780" max-z="-3780">
+            <point x="114752" y="216576"/>
+            <point x="115936" y="217952"/>
+        </cube>
+    </zone>
+    <zone name="23_24_water22" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4780" max-z="-3780">
+            <point x="115936" y="216576"/>
+            <point x="131072" y="220128"/>
+        </cube>
+    </zone>
+    <zone name="23_24_water23" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4780" max-z="-3780">
+            <point x="111808" y="216576"/>
+            <point x="113280" y="218560"/>
+        </cube>
+    </zone>
+    <zone name="23_24_water24" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4780" max-z="-3780">
+            <point x="111808" y="218560"/>
+            <point x="112768" y="219008"/>
+        </cube>
+    </zone>
+    <zone name="23_24_water25" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4780" max-z="-3780">
+            <point x="109280" y="216576"/>
+            <point x="110976" y="219008"/>
+        </cube>
+    </zone>
+    <zone name="23_24_water26" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4780" max-z="-3780">
+            <point x="107104" y="216576"/>
+            <point x="109280" y="217120"/>
+        </cube>
+    </zone>
+    <zone name="23_24_water27" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4780" max-z="-3780">
+            <point x="108896" y="221056"/>
+            <point x="110144" y="221632"/>
+        </cube>
+    </zone>
+    <zone name="23_24_water28" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4780" max-z="-3780">
+            <point x="108800" y="220256"/>
+            <point x="109760" y="221056"/>
+        </cube>
+    </zone>
+    <zone name="23_24_water29" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4780" max-z="-3780">
+            <point x="108800" y="221056"/>
+            <point x="108896" y="221280"/>
+        </cube>
+    </zone>
+    <zone name="23_24_water30" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4780" max-z="-3780">
+            <point x="110304" y="225472"/>
+            <point x="112480" y="229376"/>
+        </cube>
+    </zone>
+    <zone name="23_24_water31" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4780" max-z="-3780">
+            <point x="113280" y="216576"/>
+            <point x="114752" y="217120"/>
+        </cube>
+    </zone>
+    <zone name="23_24_water32" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4780" max-z="-3780">
+            <point x="98304" y="207104"/>
+            <point x="131072" y="216576"/>
+        </cube>
+    </zone>
+    <zone name="23_24_water33" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4780" max-z="-3780">
+            <point x="98304" y="196608"/>
+            <point x="107840" y="207104"/>
+        </cube>
+    </zone>
+    <zone name="23_24_water34" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4780" max-z="-3780">
+            <point x="116352" y="206528"/>
+            <point x="117056" y="207104"/>
+        </cube>
+    </zone>
+    <zone name="23_24_water35" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4780" max-z="-3780">
+            <point x="120704" y="196608"/>
+            <point x="131072" y="207104"/>
+        </cube>
+    </zone>
+    <zone name="23_24_water36" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4780" max-z="-3780">
+            <point x="116352" y="196608"/>
+            <point x="120704" y="202752"/>
+        </cube>
+    </zone>
+    <zone name="23_24_water37" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4780" max-z="-3780">
+            <point x="119616" y="202752"/>
+            <point x="120704" y="203200"/>
+        </cube>
+    </zone>
+    <zone name="23_24_water38" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4780" max-z="-3780">
+            <point x="107840" y="196608"/>
+            <point x="116352" y="204416"/>
+        </cube>
+    </zone>
+    <zone name="23_24_water39" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4780" max-z="-3780">
+            <point x="109632" y="204416"/>
+            <point x="116352" y="207104"/>
+        </cube>
+    </zone>
+    <zone name="23_24_water40" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4780" max-z="-3780">
+            <point x="107840" y="206016"/>
+            <point x="109632" y="207104"/>
+        </cube>
+    </zone>
+    <zone name="23_24_water41" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4780" max-z="-3780">
+            <point x="98304" y="216576"/>
+            <point x="107104" y="225024"/>
+        </cube>
+    </zone>
+    <zone name="23_24_water42" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4780" max-z="-3780">
+            <point x="114656" y="222784"/>
+            <point x="131072" y="225088"/>
+        </cube>
+    </zone>
+    <zone name="23_25_water1" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4780" max-z="-3780">
+            <point x="98304" y="252160"/>
+            <point x="131072" y="262144"/>
+        </cube>
+    </zone>
+    <zone name="23_25_water2" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4780" max-z="-3780">
+            <point x="98304" y="229376"/>
+            <point x="111872" y="252160"/>
+        </cube>
+    </zone>
+    <zone name="23_25_water3" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4780" max-z="-3780">
+            <point x="111872" y="229376"/>
+            <point x="119552" y="243456"/>
+        </cube>
+    </zone>
+    <zone name="23_25_water4" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4780" max-z="-3780">
+            <point x="119552" y="229376"/>
+            <point x="131072" y="252160"/>
+        </cube>
+    </zone>
+    <zone name="23_25_water5" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-1320" max-z="-1120">
+            <point x="113960" y="244504"/>
+            <point x="118192" y="245684"/>
+        </cube>
+    </zone>
+    <zone name="23_25_water6" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-1320" max-z="-1120">
+            <point x="113960" y="245684"/>
+            <point x="114480" y="247924"/>
+        </cube>
+    </zone>
+    <zone name="23_25_water7" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-1320" max-z="-1120">
+            <point x="113480" y="247924"/>
+            <point x="114736" y="250740"/>
+        </cube>
+    </zone>
+    <zone name="23_25_water8" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-1320" max-z="-1120">
+            <point x="117672" y="245684"/>
+            <point x="118192" y="249428"/>
+        </cube>
+    </zone>
+    <zone name="23_25_water9" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-1320" max-z="-1120">
+            <point x="117224" y="249428"/>
+            <point x="118192" y="250100"/>
+        </cube>
+    </zone>
+    <zone name="23_25_water10" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-1320" max-z="-1120">
+            <point x="114640" y="251488"/>
+            <point x="117224" y="251848"/>
+        </cube>
+    </zone>
+    <zone name="23_25_water11" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-1320" max-z="-1120">
+            <point x="114448" y="250740"/>
+            <point x="115288" y="251488"/>
+        </cube>
+    </zone>
+    <zone name="23_25_water12" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-1320" max-z="-1120">
+            <point x="114480" y="245684"/>
+            <point x="115032" y="246228"/>
+        </cube>
+    </zone>
+    <zone name="23_25_water13" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-1320" max-z="-1120">
+            <point x="117120" y="245684"/>
+            <point x="117672" y="246228"/>
+        </cube>
+    </zone>
+    <zone name="23_25_water14" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-1320" max-z="-1120">
+            <point x="117224" y="250100"/>
+            <point x="117536" y="251764"/>
+        </cube>
+    </zone>
+    <zone name="24_11_water1" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4780" max-z="-3780">
+            <point x="131072" y="-229376"/>
+            <point x="163840" y="-196608"/>
+        </cube>
+    </zone>
+    <zone name="24_12_water1" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4780" max-z="-3780">
+            <point x="131072" y="-196608"/>
+            <point x="163840" y="-178608"/>
+        </cube>
+    </zone>
+    <zone name="24_18_water1" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-2626" max-z="-2528">
+            <point x="145081" y="25139"/>
+            <point x="149881" y="29939"/>
+        </cube>
+    </zone>
+    <zone name="24_19_water1" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4775" max-z="-3775">
+            <point x="137087" y="36272"/>
+            <point x="158719" y="43440"/>
+        </cube>
+    </zone>
+    <zone name="24_19_water2" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4775" max-z="-3775">
+            <point x="137087" y="43440"/>
+            <point x="146176" y="50096"/>
+        </cube>
+    </zone>
+    <zone name="24_19_water3" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4775" max-z="-3775">
+            <point x="152832" y="43440"/>
+            <point x="161921" y="50096"/>
+        </cube>
+    </zone>
+    <zone name="24_19_water4" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4775" max-z="-3775">
+            <point x="151679" y="43440"/>
+            <point x="152832" y="44336"/>
+        </cube>
+    </zone>
+    <zone name="24_19_water5" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4775" max-z="-3775">
+            <point x="152063" y="44336"/>
+            <point x="152832" y="45360"/>
+        </cube>
+    </zone>
+    <zone name="24_19_water6" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4775" max-z="-3775">
+            <point x="146176" y="43440"/>
+            <point x="147329" y="44336"/>
+        </cube>
+    </zone>
+    <zone name="24_19_water7" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4775" max-z="-3775">
+            <point x="146176" y="44336"/>
+            <point x="146945" y="45360"/>
+        </cube>
+    </zone>
+    <zone name="24_19_water8" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4775" max-z="-3775">
+            <point x="147329" y="43440"/>
+            <point x="151679" y="43824"/>
+        </cube>
+    </zone>
+    <zone name="24_19_water9" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4775" max-z="-3775">
+            <point x="146176" y="49200"/>
+            <point x="147329" y="50096"/>
+        </cube>
+    </zone>
+    <zone name="24_19_water10" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4775" max-z="-3775">
+            <point x="146176" y="48176"/>
+            <point x="146945" y="49200"/>
+        </cube>
+    </zone>
+    <zone name="24_19_water11" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4775" max-z="-3775">
+            <point x="151679" y="49200"/>
+            <point x="152832" y="50096"/>
+        </cube>
+    </zone>
+    <zone name="24_19_water12" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4775" max-z="-3775">
+            <point x="152063" y="48176"/>
+            <point x="152832" y="49200"/>
+        </cube>
+    </zone>
+    <zone name="24_19_water13" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4775" max-z="-3775">
+            <point x="147329" y="49712"/>
+            <point x="151679" y="50096"/>
+        </cube>
+    </zone>
+    <zone name="24_19_water14" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4775" max-z="-3775">
+            <point x="137087" y="50096"/>
+            <point x="161921" y="53170"/>
+        </cube>
+    </zone>
+    <zone name="24_19_water15" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4775" max-z="-3775">
+            <point x="156928" y="53170"/>
+            <point x="161921" y="58544"/>
+        </cube>
+    </zone>
+    <zone name="24_19_water16" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4775" max-z="-3775">
+            <point x="151680" y="57264"/>
+            <point x="156928" y="58544"/>
+        </cube>
+    </zone>
+    <zone name="24_19_water17" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4775" max-z="-3775">
+            <point x="151680" y="53170"/>
+            <point x="153089" y="57264"/>
+        </cube>
+    </zone>
+    <zone name="24_19_water18" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4775" max-z="-3775">
+            <point x="137087" y="53170"/>
+            <point x="151680" y="65536"/>
+        </cube>
+    </zone>
+    <zone name="24_19_water19" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4775" max-z="-3775">
+            <point x="151679" y="58544"/>
+            <point x="161922" y="65535"/>
+        </cube>
+    </zone>
+    <zone name="24_20_water1" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-6096" max-z="-3736">
+            <point x="136648" y="79304"/>
+            <point x="137400" y="80056"/>
+        </cube>
+    </zone>
+    <zone name="24_20_water2" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-6096" max-z="-5519">
+            <point x="137400" y="79360"/>
+            <point x="138816" y="80000"/>
+        </cube>
+    </zone>
+    <zone name="24_20_water3" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4480" max-z="-3780">
+            <point x="137472" y="65536"/>
+            <point x="163840" y="98304"/>
+        </cube>
+    </zone>
+    <zone name="24_21_water1" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4780" max-z="-3780">
+            <point x="131072" y="126072"/>
+            <point x="136072" y="131072"/>
+        </cube>
+    </zone>
+    <zone name="24_22_water1" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-5804" max-z="-3780">
+            <point x="131072" y="131072"/>
+            <point x="163840" y="163840"/>
+        </cube>
+    </zone>
+    <zone name="24_23_water1" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-5208" max-z="-3780">
+            <point x="131072" y="163840"/>
+            <point x="141072" y="196608"/>
+        </cube>
+    </zone>
+    <zone name="24_23_water2" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-5208" max-z="-3780">
+            <point x="153840" y="163840"/>
+            <point x="163840" y="196608"/>
+        </cube>
+    </zone>
+    <zone name="24_23_water3" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-5208" max-z="-3780">
+            <point x="141072" y="181336"/>
+            <point x="153840" y="196608"/>
+        </cube>
+    </zone>
+    <zone name="24_23_water4" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-5208" max-z="-3780">
+            <point x="141072" y="163840"/>
+            <point x="153840" y="180131"/>
+        </cube>
+    </zone>
+    <zone name="24_24_water1" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4780" max-z="-3780">
+            <point x="131072" y="196608"/>
+            <point x="163840" y="229376"/>
+        </cube>
+    </zone>
+    <zone name="25_11_water1" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4780" max-z="-3780">
+            <point x="163840" y="-229376"/>
+            <point x="196608" y="-196608"/>
+        </cube>
+    </zone>
+    <zone name="25_12_water1" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4780" max-z="-3780">
+            <point x="163840" y="-196608"/>
+            <point x="168840" y="-186608"/>
+        </cube>
+    </zone>
+    <zone name="25_12_water2" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-5465" max-z="-4465">
+            <point x="173411" y="-187756"/>
+            <point x="186042" y="-182534"/>
+        </cube>
+    </zone>
+    <zone name="25_12_water3" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-2322" max-z="-2066">
+            <point x="174206" y="-182687"/>
+            <point x="176749" y="-179167"/>
+        </cube>
+    </zone>
+    <zone name="25_14_water1" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4643" max-z="-4033">
+            <point x="170908" y="-116845"/>
+            <point x="173748" y="-113952"/>
+        </cube>
+    </zone>
+    <zone name="25_14_water2" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-6130" max-z="-5256">
+            <point x="170926" y="-113935"/>
+            <point x="173920" y="-111042"/>
+        </cube>
+    </zone>
+    <zone name="25_20_water1" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4280" max-z="-3780">
+            <point x="163840" y="65760"/>
+            <point x="173840" y="95072"/>
+        </cube>
+    </zone>
+    <zone name="25_17_water1" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-5568" max-z="-3248">
+            <point x="168576" y="-17920"/>
+            <point x="169216" y="-17280"/>
+        </cube>
+    </zone>
+    <zone name="25_17_water2" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-5568" max-z="-2653">
+            <point x="169216" y="-17920"/>
+            <point x="170688" y="-17280"/>
+        </cube>
+    </zone>
+    <zone name="Forbitten Path Descend" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4970" max-z="-2681">
+            <point x="103807" y="81660"/>
+            <point x="104570" y="80899"/>
+        </cube>
+    </zone>
+    <zone name="Forbitten Path Descend 2" type="org.l2j.gameserver.world.zone.type.WaterZone">
+        <cube min-z="-4970" max-z="-4478">
+            <point x="103926" y="81413"/>
+            <point x="104485" y="83134"/>
+        </cube>
     </zone>
 </list>

@@ -14,21 +14,23 @@
 			<xs:attribute name="enabled" type="xs:boolean" default="true" />
 		</xs:complexType>
 	</xs:element>
+	
+	<xs:element name="form" type="ZoneForm"/>
+	<xs:element name="cube" type="Cube" substitutionGroup="form"/>
+	<xs:element name="cylinder" type="Cylinder" substitutionGroup="form"/>
+	<xs:element name="polygon" type="Polygon" substitutionGroup="form"/>
+
 
 	<xs:complexType name="Zone">
 		<xs:sequence>
+			<xs:element ref="form"/>
 			<xs:element name="property" type="Property" minOccurs="0" maxOccurs="unbounded"/>
-			<xs:element name="point" type="Location" minOccurs="0" maxOccurs="unbounded"/>
 			<xs:element name="respawn" type="Respawn" maxOccurs="unbounded" minOccurs="0"/>
 			<xs:element name="spawn" type="Spawn" minOccurs="0" maxOccurs="unbounded"/>
 		</xs:sequence>
-		<xs:attribute name="id" type="xs:positiveInteger" />
+		<xs:attribute name="id" type="xs:positiveInteger"/>
 		<xs:attribute name="name" type="xs:normalizedString"/>
-		<xs:attribute name="maxZ" type="xs:integer" use="required" />
-		<xs:attribute name="minZ" type="xs:integer" use="required" />
-		<xs:attribute name="form" type="ZoneForm" use="required"/>
 		<xs:attribute name="type" type="xs:token" use="required"/>
-		<xs:attribute name="radius" type="xs:positiveInteger" />
 	</xs:complexType>
 
 	<xs:complexType name="Property">
@@ -109,17 +111,45 @@
 		</xs:restriction>
 	</xs:simpleType>
 
-	<xs:simpleType name="ZoneForm">
-		<xs:restriction base="xs:token">
-			<xs:enumeration value="Cube" />
-			<xs:enumeration value="Cylinder" />
-			<xs:enumeration value="Polygon" />
-		</xs:restriction>
-	</xs:simpleType>
-
 	<xs:complexType name="Respawn">
 		<xs:attribute name="region" type="xs:token" use="required" />
 		<xs:attribute name="race" type="Race" use="required" />
+	</xs:complexType>
+
+	<xs:complexType name="ZoneForm" abstract="true">
+		<xs:attribute name="min-z" type="xs:integer" use="required" />
+		<xs:attribute name="max-z" type="xs:integer" use="required" />
+	</xs:complexType>
+
+	<xs:complexType name="Cube">
+		<xs:complexContent>
+			<xs:extension base="ZoneForm">
+				<xs:sequence>
+					<xs:element name="point" type="Location" minOccurs="2" maxOccurs="2"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<xs:complexType name="Cylinder">
+		<xs:complexContent>
+			<xs:extension base="ZoneForm">
+				<xs:sequence>
+					<xs:element name="point" type="Location"/>
+				</xs:sequence>
+				<xs:attribute name="radius" type="xs:positiveInteger" />
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+
+	<xs:complexType name="Polygon">
+		<xs:complexContent>
+			<xs:extension base="ZoneForm">
+				<xs:sequence>
+					<xs:element name="point" type="Location" minOccurs="3" maxOccurs="unbounded"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
 	</xs:complexType>
 
 </xs:schema>

@@ -16,20 +16,22 @@
  */
 package handlers.admincommandhandlers;
 
+import org.l2j.gameserver.cache.HtmCache;
+import org.l2j.gameserver.handler.IAdminCommandHandler;
+import org.l2j.gameserver.instancemanager.GrandBossManager;
+import org.l2j.gameserver.model.StatsSet;
+import org.l2j.gameserver.model.actor.instance.Player;
+import org.l2j.gameserver.model.quest.Quest;
+import org.l2j.gameserver.network.serverpackets.html.NpcHtmlMessage;
+import org.l2j.gameserver.util.BuilderUtil;
+import org.l2j.gameserver.world.zone.ZoneManager;
+import org.l2j.gameserver.world.zone.type.NoRestartZone;
+
 import java.text.SimpleDateFormat;
 import java.util.Arrays;
 import java.util.StringTokenizer;
 
-import org.l2j.gameserver.cache.HtmCache;
-import org.l2j.gameserver.handler.IAdminCommandHandler;
-import org.l2j.gameserver.instancemanager.GrandBossManager;
-import org.l2j.gameserver.world.zone.ZoneManager;
-import org.l2j.gameserver.model.StatsSet;
-import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.quest.Quest;
-import org.l2j.gameserver.world.zone.type.NoRestartZone;
-import org.l2j.gameserver.network.serverpackets.html.NpcHtmlMessage;
-import org.l2j.gameserver.util.BuilderUtil;
+import static java.util.Objects.nonNull;
 
 /**
  * @author St3eT
@@ -313,7 +315,7 @@ public class AdminGrandBoss implements IAdminCommandHandler
 			html.replace("%bossStatus%", text);
 			html.replace("%bossColor%", textColor);
 			html.replace("%respawnTime%", bossStatus == deadStatus ? bossRespawn : "Already respawned!");
-			html.replace("%playersInside%", bossZone != null ? String.valueOf(bossZone.getPlayersInside().size()) : "Zone not found!");
+			html.replace("%playersInside%", nonNull(bossZone) ? String.valueOf(bossZone.getPlayersInsideCount()) : "Zone not found!");
 			activeChar.sendPacket(html);
 		}
 		else

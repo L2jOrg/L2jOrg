@@ -1,266 +1,314 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org zones.xsd">
     <!-- Dummy Zones -->
-    <zone name="no_escape_1" id="10501" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Polygon" minZ="-3050" maxZ="-2850">
-        <point x="-115727" y="-251652"/>
-        <point x="-113365" y="-251655"/>
-        <point x="-113365" y="-248191"/>
-        <point x="-115727" y="-248194"/>
+    <zone name="no_escape_1" id="10501" type="org.l2j.gameserver.world.zone.type.ScriptZone">
+        <polygon min-z="-3050" max-z="-2850">
+            <point x="-115727" y="-251652"/>
+            <point x="-113365" y="-251655"/>
+            <point x="-113365" y="-248191"/>
+            <point x="-115727" y="-248194"/>
+        </polygon>
     </zone>
-    <zone name="no_escape_2" id="10502" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Polygon" minZ="-3049" maxZ="-2849">
-        <point x="-116299" y="-251426"/>
-        <point x="-115745" y="-251426"/>
-        <point x="-115745" y="-250840"/>
-        <point x="-116296" y="-250840"/>
+    <zone name="no_escape_2" id="10502" type="org.l2j.gameserver.world.zone.type.ScriptZone">
+        <polygon min-z="-3049" max-z="-2849">
+            <point x="-116299" y="-251426"/>
+            <point x="-115745" y="-251426"/>
+            <point x="-115745" y="-250840"/>
+            <point x="-116296" y="-250840"/>
+        </polygon>
     </zone>
-    <zone name="no_escape_3" id="10503" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Polygon" minZ="-3053" maxZ="-2853">
-        <point x="-113350" y="-251408"/>
-        <point x="-112797" y="-251407"/>
-        <point x="-112798" y="-250855"/>
-        <point x="-113353" y="-250857"/>
+    <zone name="no_escape_3" id="10503" type="org.l2j.gameserver.world.zone.type.ScriptZone">
+        <polygon min-z="-3053" max-z="-2853">
+            <point x="-113350" y="-251408"/>
+            <point x="-112797" y="-251407"/>
+            <point x="-112798" y="-250855"/>
+            <point x="-113353" y="-250857"/>
+        </polygon>
     </zone>
-    <zone name="no_escape_4" id="10504" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Polygon" minZ="-11624" maxZ="-11224">
-        <point x="-85850" y="-45960"/>
-        <point x="-86761" y="-45935"/>
-        <point x="-87000" y="-46986"/>
-        <point x="-87535" y="-48793"/>
-        <point x="-87049" y="-49419"/>
-        <point x="-85458" y="-49051"/>
-        <point x="-84224" y="-49803"/>
-        <point x="-83446" y="-49477"/>
-        <point x="-83154" y="-47528"/>
-        <point x="-83863" y="-47202"/>
-        <point x="-84291" y="-47449"/>
-        <point x="-84711" y="-47094"/>
+    <zone name="no_escape_4" id="10504" type="org.l2j.gameserver.world.zone.type.ScriptZone">
+        <polygon min-z="-11624" max-z="-11224">
+            <point x="-85850" y="-45960"/>
+            <point x="-86761" y="-45935"/>
+            <point x="-87000" y="-46986"/>
+            <point x="-87535" y="-48793"/>
+            <point x="-87049" y="-49419"/>
+            <point x="-85458" y="-49051"/>
+            <point x="-84224" y="-49803"/>
+            <point x="-83446" y="-49477"/>
+            <point x="-83154" y="-47528"/>
+            <point x="-83863" y="-47202"/>
+            <point x="-84291" y="-47449"/>
+            <point x="-84711" y="-47094"/>
+        </polygon>
     </zone>
-    <zone name="no_escape_5" id="10505" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Polygon" minZ="-11620" maxZ="-11220">
-        <point x="-84112" y="-50103"/>
-        <point x="-84830" y="-51342"/>
-        <point x="-86142" y="-51844"/>
-        <point x="-86553" y="-52634"/>
-        <point x="-85640" y="-53190"/>
-        <point x="-84380" y="-54211"/>
-        <point x="-83379" y="-54413"/>
-        <point x="-82972" y="-52054"/>
-        <point x="-81938" y="-51822"/>
-        <point x="-82193" y="-50685"/>
-        <point x="-82732" y="-50575"/>
-        <point x="-83454" y="-49986"/>
+    <zone name="no_escape_5" id="10505" type="org.l2j.gameserver.world.zone.type.ScriptZone">
+        <polygon min-z="-11620" max-z="-11220">
+            <point x="-84112" y="-50103"/>
+            <point x="-84830" y="-51342"/>
+            <point x="-86142" y="-51844"/>
+            <point x="-86553" y="-52634"/>
+            <point x="-85640" y="-53190"/>
+            <point x="-84380" y="-54211"/>
+            <point x="-83379" y="-54413"/>
+            <point x="-82972" y="-52054"/>
+            <point x="-81938" y="-51822"/>
+            <point x="-82193" y="-50685"/>
+            <point x="-82732" y="-50575"/>
+            <point x="-83454" y="-49986"/>
+        </polygon>
     </zone>
-    <zone name="no_escape_6" id="10506" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Polygon" minZ="-11716" maxZ="-11316">
-        <point x="-79843" y="-49874"/>
-        <point x="-81401" y="-50399"/>
-        <point x="-81709" y="-51148"/>
-        <point x="-81639" y="-51704"/>
-        <point x="-80712" y="-52824"/>
-        <point x="-80414" y="-54463"/>
-        <point x="-79510" y="-54322"/>
-        <point x="-78717" y="-52952"/>
-        <point x="-77725" y="-52968"/>
-        <point x="-77416" y="-51996"/>
-        <point x="-78890" y="-51583"/>
-        <point x="-79378" y="-50568"/>
+    <zone name="no_escape_6" id="10506" type="org.l2j.gameserver.world.zone.type.ScriptZone">
+        <polygon min-z="-11716" max-z="-11316">
+            <point x="-79843" y="-49874"/>
+            <point x="-81401" y="-50399"/>
+            <point x="-81709" y="-51148"/>
+            <point x="-81639" y="-51704"/>
+            <point x="-80712" y="-52824"/>
+            <point x="-80414" y="-54463"/>
+            <point x="-79510" y="-54322"/>
+            <point x="-78717" y="-52952"/>
+            <point x="-77725" y="-52968"/>
+            <point x="-77416" y="-51996"/>
+            <point x="-78890" y="-51583"/>
+            <point x="-79378" y="-50568"/>
+        </polygon>
     </zone>
-    <zone name="no_escape_7" id="10507" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Polygon" minZ="-11592" maxZ="-11192">
-        <point x="-79343" y="-47478"/>
-        <point x="-80117" y="-47109"/>
-        <point x="-80672" y="-47858"/>
-        <point x="-80382" y="-49156"/>
-        <point x="-79813" y="-49685"/>
-        <point x="-79130" y="-49730"/>
-        <point x="-77951" y="-49052"/>
-        <point x="-76485" y="-49456"/>
-        <point x="-76221" y="-48619"/>
-        <point x="-76710" y="-48032"/>
-        <point x="-76946" y="-46451"/>
-        <point x="-77668" y="-45794"/>
+    <zone name="no_escape_7" id="10507" type="org.l2j.gameserver.world.zone.type.ScriptZone">
+        <polygon min-z="-11592" max-z="-11192">
+            <point x="-79343" y="-47478"/>
+            <point x="-80117" y="-47109"/>
+            <point x="-80672" y="-47858"/>
+            <point x="-80382" y="-49156"/>
+            <point x="-79813" y="-49685"/>
+            <point x="-79130" y="-49730"/>
+            <point x="-77951" y="-49052"/>
+            <point x="-76485" y="-49456"/>
+            <point x="-76221" y="-48619"/>
+            <point x="-76710" y="-48032"/>
+            <point x="-76946" y="-46451"/>
+            <point x="-77668" y="-45794"/>
+        </polygon>
     </zone>
-    <zone name="no_escape_8" id="10508" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Polygon" minZ="-11640" maxZ="-11240">
-        <point x="-82326" y="-43857"/>
-        <point x="-83361" y="-43681"/>
-        <point x="-83614" y="-44430"/>
-        <point x="-82884" y="-46072"/>
-        <point x="-83209" y="-47165"/>
-        <point x="-82621" y="-47718"/>
-        <point x="-81071" y="-47576"/>
-        <point x="-80636" y="-47169"/>
-        <point x="-80853" y="-46291"/>
-        <point x="-79968" y="-44123"/>
-        <point x="-80245" y="-43614"/>
-        <point x="-81544" y="-43878"/>
+    <zone name="no_escape_8" id="10508" type="org.l2j.gameserver.world.zone.type.ScriptZone">
+        <polygon min-z="-11640" max-z="-11240">
+            <point x="-82326" y="-43857"/>
+            <point x="-83361" y="-43681"/>
+            <point x="-83614" y="-44430"/>
+            <point x="-82884" y="-46072"/>
+            <point x="-83209" y="-47165"/>
+            <point x="-82621" y="-47718"/>
+            <point x="-81071" y="-47576"/>
+            <point x="-80636" y="-47169"/>
+            <point x="-80853" y="-46291"/>
+            <point x="-79968" y="-44123"/>
+            <point x="-80245" y="-43614"/>
+            <point x="-81544" y="-43878"/>
+        </polygon>
     </zone>
-    <zone name="no_s_swoop_cannon_1" id="51101" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Polygon" minZ="-3325" maxZ="-325">
-        <point x="-19761" y="106717"/>
-        <point x="-17065" y="106707"/>
-        <point x="-16372" y="107407"/>
-        <point x="-16365" y="108351"/>
-        <point x="-15653" y="108857"/>
-        <point x="-15650" y="109747"/>
-        <point x="-16149" y="110295"/>
-        <point x="-16149" y="112445"/>
-        <point x="-17783" y="113928"/>
-        <point x="-18965" y="113925"/>
-        <point x="-20477" y="112395"/>
-        <point x="-20475" y="109024"/>
-        <point x="-19757" y="108203"/>
+    <zone name="no_s_swoop_cannon_1" id="51101" type="org.l2j.gameserver.world.zone.type.ScriptZone">
+        <polygon min-z="-3325" max-z="-325">
+            <point x="-19761" y="106717"/>
+            <point x="-17065" y="106707"/>
+            <point x="-16372" y="107407"/>
+            <point x="-16365" y="108351"/>
+            <point x="-15653" y="108857"/>
+            <point x="-15650" y="109747"/>
+            <point x="-16149" y="110295"/>
+            <point x="-16149" y="112445"/>
+            <point x="-17783" y="113928"/>
+            <point x="-18965" y="113925"/>
+            <point x="-20477" y="112395"/>
+            <point x="-20475" y="109024"/>
+            <point x="-19757" y="108203"/>
+        </polygon>
     </zone>
-    <zone name="no_s_swoop_cannon_2" id="51102" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Polygon" minZ="-3533" maxZ="-533">
-        <point x="24389" y="157488"/>
-        <point x="24398" y="160923"/>
-        <point x="23789" y="161566"/>
-        <point x="23798" y="163079"/>
-        <point x="21170" y="163085"/>
-        <point x="20090" y="162065"/>
-        <point x="20099" y="161445"/>
-        <point x="19397" y="160439"/>
-        <point x="19971" y="159494"/>
-        <point x="19971" y="157487"/>
-        <point x="21554" y="155879"/>
-        <point x="23105" y="155885"/>
+    <zone name="no_s_swoop_cannon_2" id="51102" type="org.l2j.gameserver.world.zone.type.ScriptZone">
+        <polygon min-z="-3533" max-z="-533">
+            <point x="24389" y="157488"/>
+            <point x="24398" y="160923"/>
+            <point x="23789" y="161566"/>
+            <point x="23798" y="163079"/>
+            <point x="21170" y="163085"/>
+            <point x="20090" y="162065"/>
+            <point x="20099" y="161445"/>
+            <point x="19397" y="160439"/>
+            <point x="19971" y="159494"/>
+            <point x="19971" y="157487"/>
+            <point x="21554" y="155879"/>
+            <point x="23105" y="155885"/>
+        </polygon>
     </zone>
-    <zone name="no_s_swoop_cannon_3" id="51103" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Polygon" minZ="-3000" maxZ="0">
-        <point x="113630" y="142600"/>
-        <point x="117151" y="142602"/>
-        <point x="118085" y="143188"/>
-        <point x="119331" y="143280"/>
-        <point x="119351" y="146088"/>
-        <point x="118505" y="147038"/>
-        <point x="117672" y="147096"/>
-        <point x="116511" y="147715"/>
-        <point x="115540" y="147237"/>
-        <point x="113723" y="147237"/>
-        <point x="112723" y="146279"/>
-        <point x="112027" y="145412"/>
-        <point x="112013" y="144502"/>
+    <zone name="no_s_swoop_cannon_3" id="51103" type="org.l2j.gameserver.world.zone.type.ScriptZone">
+        <polygon min-z="-3000" max-z="0">
+            <point x="113630" y="142600"/>
+            <point x="117151" y="142602"/>
+            <point x="118085" y="143188"/>
+            <point x="119331" y="143280"/>
+            <point x="119351" y="146088"/>
+            <point x="118505" y="147038"/>
+            <point x="117672" y="147096"/>
+            <point x="116511" y="147715"/>
+            <point x="115540" y="147237"/>
+            <point x="113723" y="147237"/>
+            <point x="112723" y="146279"/>
+            <point x="112027" y="145412"/>
+            <point x="112013" y="144502"/>
+        </polygon>
     </zone>
-    <zone name="no_s_swoop_cannon_4" id="51104" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Polygon" minZ="-3320" maxZ="-320">
-        <point x="79720" y="34771"/>
-        <point x="83242" y="34773"/>
-        <point x="84176" y="35359"/>
-        <point x="85422" y="35451"/>
-        <point x="85441" y="38258"/>
-        <point x="84584" y="39110"/>
-        <point x="83762" y="39119"/>
-        <point x="82601" y="39886"/>
-        <point x="81631" y="39407"/>
-        <point x="79814" y="39408"/>
-        <point x="78814" y="38450"/>
-        <point x="78118" y="37583"/>
-        <point x="78104" y="36672"/>
+    <zone name="no_s_swoop_cannon_4" id="51104" type="org.l2j.gameserver.world.zone.type.ScriptZone">
+        <polygon min-z="-3320" max-z="-320">
+            <point x="79720" y="34771"/>
+            <point x="83242" y="34773"/>
+            <point x="84176" y="35359"/>
+            <point x="85422" y="35451"/>
+            <point x="85441" y="38258"/>
+            <point x="84584" y="39110"/>
+            <point x="83762" y="39119"/>
+            <point x="82601" y="39886"/>
+            <point x="81631" y="39407"/>
+            <point x="79814" y="39408"/>
+            <point x="78814" y="38450"/>
+            <point x="78118" y="37583"/>
+            <point x="78104" y="36672"/>
+        </polygon>
     </zone>
-    <zone name="no_s_swoop_cannon_5" id="51105" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Polygon" minZ="-1062" maxZ="8938">
-        <point x="144406" y="1077"/>
-        <point x="150586" y="1051"/>
-        <point x="150592" y="5125"/>
-        <point x="149973" y="6169"/>
-        <point x="150232" y="8978"/>
-        <point x="144667" y="8971"/>
-        <point x="144992" y="6142"/>
-        <point x="144411" y="5220"/>
+    <zone name="no_s_swoop_cannon_5" id="51105" type="org.l2j.gameserver.world.zone.type.ScriptZone">
+        <polygon min-z="-1062" max-z="8938">
+            <point x="144406" y="1077"/>
+            <point x="150586" y="1051"/>
+            <point x="150592" y="5125"/>
+            <point x="149973" y="6169"/>
+            <point x="150232" y="8978"/>
+            <point x="144667" y="8971"/>
+            <point x="144992" y="6142"/>
+            <point x="144411" y="5220"/>
+        </polygon>
     </zone>
-    <zone name="no_s_swoop_cannon_6" id="51106" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Polygon" minZ="-1936" maxZ="1064">
-        <point x="118288" y="246245"/>
-        <point x="118297" y="249680"/>
-        <point x="117688" y="250323"/>
-        <point x="117696" y="251836"/>
-        <point x="115069" y="251842"/>
-        <point x="113988" y="250822"/>
-        <point x="113997" y="250202"/>
-        <point x="113296" y="249196"/>
-        <point x="113870" y="248251"/>
-        <point x="113869" y="246244"/>
-        <point x="115460" y="244643"/>
-        <point x="117004" y="244642"/>
+    <zone name="no_s_swoop_cannon_6" id="51106" type="org.l2j.gameserver.world.zone.type.ScriptZone">
+        <polygon min-z="-1936" max-z="1064">
+            <point x="118288" y="246245"/>
+            <point x="118297" y="249680"/>
+            <point x="117688" y="250323"/>
+            <point x="117696" y="251836"/>
+            <point x="115069" y="251842"/>
+            <point x="113988" y="250822"/>
+            <point x="113997" y="250202"/>
+            <point x="113296" y="249196"/>
+            <point x="113870" y="248251"/>
+            <point x="113869" y="246244"/>
+            <point x="115460" y="244643"/>
+            <point x="117004" y="244642"/>
+        </polygon>
     </zone>
-    <zone name="no_s_swoop_cannon_7" id="51107" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Polygon" minZ="-3000" maxZ="1400">
-        <point x="143803" y="-49155"/>
-        <point x="151092" y="-49185"/>
-        <point x="151084" y="-47725"/>
-        <point x="150320" y="-45980"/>
-        <point x="147872" y="-44463"/>
-        <point x="147085" y="-44462"/>
-        <point x="144627" y="-46006"/>
-        <point x="143802" y="-47669"/>
+    <zone name="no_s_swoop_cannon_7" id="51107" type="org.l2j.gameserver.world.zone.type.ScriptZone">
+        <polygon min-z="-3000" max-z="1400">
+            <point x="143803" y="-49155"/>
+            <point x="151092" y="-49185"/>
+            <point x="151084" y="-47725"/>
+            <point x="150320" y="-45980"/>
+            <point x="147872" y="-44463"/>
+            <point x="147085" y="-44462"/>
+            <point x="144627" y="-46006"/>
+            <point x="143802" y="-47669"/>
+        </polygon>
     </zone>
-    <zone name="no_s_swoop_cannon_8" id="51108" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Polygon" minZ="-3000" maxZ="8000">
-        <point x="11670" y="-52692"/>
-        <point x="16653" y="-52693"/>
-        <point x="18368" y="-51762"/>
-        <point x="19492" y="-49506"/>
-        <point x="19492" y="-48773"/>
-        <point x="18368" y="-46554"/>
-        <point x="16836" y="-45585"/>
-        <point x="11699" y="-45596"/>
+    <zone name="no_s_swoop_cannon_8" id="51108" type="org.l2j.gameserver.world.zone.type.ScriptZone">
+        <polygon min-z="-3000" max-z="8000">
+            <point x="11670" y="-52692"/>
+            <point x="16653" y="-52693"/>
+            <point x="18368" y="-51762"/>
+            <point x="19492" y="-49506"/>
+            <point x="19492" y="-48773"/>
+            <point x="18368" y="-46554"/>
+            <point x="16836" y="-45585"/>
+            <point x="11699" y="-45596"/>
+        </polygon>
     </zone>
-    <zone name="no_s_swoop_cannon_9" id="51109" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Polygon" minZ="-1251" maxZ="3149">
-        <point x="73859" y="-153166"/>
-        <point x="81148" y="-153196"/>
-        <point x="81139" y="-151736"/>
-        <point x="80376" y="-149992"/>
-        <point x="77928" y="-148474"/>
-        <point x="77141" y="-148473"/>
-        <point x="74683" y="-150017"/>
-        <point x="73858" y="-151680"/>
+    <zone name="no_s_swoop_cannon_9" id="51109" type="org.l2j.gameserver.world.zone.type.ScriptZone">
+        <polygon min-z="-1251" max-z="3149">
+            <point x="73859" y="-153166"/>
+            <point x="81148" y="-153196"/>
+            <point x="81139" y="-151736"/>
+            <point x="80376" y="-149992"/>
+            <point x="77928" y="-148474"/>
+            <point x="77141" y="-148473"/>
+            <point x="74683" y="-150017"/>
+            <point x="73858" y="-151680"/>
+        </polygon>
     </zone>
-    <zone name="allow_s_disrupting_arrow" id="2234" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Polygon" minZ="-9239" maxZ="-8739">
-        <point x="-86067" y="-152626"/>
-        <point x="-86292" y="-152322"/>
-        <point x="-87125" y="-151593"/>
-        <point x="-88505" y="-151586"/>
-        <point x="-89313" y="-152278"/>
-        <point x="-89503" y="-152648"/>
-        <point x="-89500" y="-153806"/>
-        <point x="-89429" y="-154257"/>
-        <point x="-88538" y="-155006"/>
-        <point x="-87030" y="-155003"/>
-        <point x="-86063" y="-154215"/>
+    <zone name="allow_s_disrupting_arrow" id="2234" type="org.l2j.gameserver.world.zone.type.ScriptZone">
+        <polygon min-z="-9239" max-z="-8739">
+            <point x="-86067" y="-152626"/>
+            <point x="-86292" y="-152322"/>
+            <point x="-87125" y="-151593"/>
+            <point x="-88505" y="-151586"/>
+            <point x="-89313" y="-152278"/>
+            <point x="-89503" y="-152648"/>
+            <point x="-89500" y="-153806"/>
+            <point x="-89429" y="-154257"/>
+            <point x="-88538" y="-155006"/>
+            <point x="-87030" y="-155003"/>
+            <point x="-86063" y="-154215"/>
+        </polygon>
     </zone>
-    <zone name="allow_s_item_scroll_of_stone" id="2239" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Polygon" minZ="-5064" maxZ="-64">
-        <point x="99294" y="-130555"/>
-        <point x="114151" y="-130344"/>
-        <point x="113630" y="-124346"/>
-        <point x="99617" y="-122509"/>
+    <zone name="allow_s_item_scroll_of_stone" id="2239" type="org.l2j.gameserver.world.zone.type.ScriptZone">
+        <polygon min-z="-5064" max-z="-64">
+            <point x="99294" y="-130555"/>
+            <point x="114151" y="-130344"/>
+            <point x="113630" y="-124346"/>
+            <point x="99617" y="-122509"/>
+        </polygon>
     </zone>
-    <zone name="allow_s_item_hot_spring" id="2240123" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Polygon" minZ="-2460" maxZ="-1860">
-        <point x="150253" y="-127587"/>
-        <point x="154061" y="-128780"/>
-        <point x="157203" y="-125699"/>
-        <point x="154870" y="-123511"/>
-        <point x="150933" y="-124975"/>
+    <zone name="allow_s_item_hot_spring" id="2240123" type="org.l2j.gameserver.world.zone.type.ScriptZone">
+        <polygon min-z="-2460" max-z="-1860">
+            <point x="150253" y="-127587"/>
+            <point x="154061" y="-128780"/>
+            <point x="157203" y="-125699"/>
+            <point x="154870" y="-123511"/>
+            <point x="150933" y="-124975"/>
+        </polygon>
     </zone>
-    <zone name="allow_s_disrupting_dew" id="2276" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Polygon" minZ="-9239" maxZ="-8739">
-        <point x="-86067" y="-152626"/>
-        <point x="-86292" y="-152322"/>
-        <point x="-87125" y="-151593"/>
-        <point x="-88505" y="-151586"/>
-        <point x="-89313" y="-152278"/>
-        <point x="-89503" y="-152648"/>
-        <point x="-89500" y="-153806"/>
-        <point x="-89429" y="-154257"/>
-        <point x="-88538" y="-155006"/>
-        <point x="-87030" y="-155003"/>
-        <point x="-86063" y="-154215"/>
+    <zone name="allow_s_disrupting_dew" id="2276" type="org.l2j.gameserver.world.zone.type.ScriptZone">
+        <polygon min-z="-9239" max-z="-8739">
+            <point x="-86067" y="-152626"/>
+            <point x="-86292" y="-152322"/>
+            <point x="-87125" y="-151593"/>
+            <point x="-88505" y="-151586"/>
+            <point x="-89313" y="-152278"/>
+            <point x="-89503" y="-152648"/>
+            <point x="-89500" y="-153806"/>
+            <point x="-89429" y="-154257"/>
+            <point x="-88538" y="-155006"/>
+            <point x="-87030" y="-155003"/>
+            <point x="-86063" y="-154215"/>
+        </polygon>
     </zone>
-    <zone name="allow_s_item_detect_hide_door" id="2353" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Polygon" minZ="-12923" maxZ="-12723">
-        <point x="-107560" y="83571"/>
-        <point x="-107293" y="83571"/>
-        <point x="-107293" y="83823"/>
-        <point x="-107560" y="83823"/>
+    <zone name="allow_s_item_detect_hide_door" id="2353" type="org.l2j.gameserver.world.zone.type.ScriptZone">
+        <polygon min-z="-12923" max-z="-12723">
+            <point x="-107560" y="83571"/>
+            <point x="-107293" y="83571"/>
+            <point x="-107293" y="83823"/>
+            <point x="-107560" y="83823"/>
+        </polygon>
     </zone>
-    <zone name="allow_s_frintessa_daemon_charge" id="5015" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Polygon" minZ="-5175" maxZ="-4675">
-        <point x="174657" y="-88953"/>
-        <point x="175155" y="-88446"/>
-        <point x="175142" y="-87562"/>
-        <point x="174600" y="-87099"/>
-        <point x="173854" y="-87098"/>
-        <point x="173331" y="-87540"/>
-        <point x="173322" y="-88469"/>
-        <point x="173812" y="-88958"/>
+    <zone name="allow_s_frintessa_daemon_charge" id="5015" type="org.l2j.gameserver.world.zone.type.ScriptZone">
+        <polygon min-z="-5175" max-z="-4675">
+            <point x="174657" y="-88953"/>
+            <point x="175155" y="-88446"/>
+            <point x="175142" y="-87562"/>
+            <point x="174600" y="-87099"/>
+            <point x="173854" y="-87098"/>
+            <point x="173331" y="-87540"/>
+            <point x="173322" y="-88469"/>
+            <point x="173812" y="-88958"/>
+        </polygon>
     </zone>
-    <zone name="allow_s_item_freezing_core" id="90578" type="org.l2j.gameserver.world.zone.type.ScriptZone" form="Polygon" minZ="-11249" maxZ="-10749">
-        <point x="112898" y="-117865"/>
-        <point x="116554" y="-117891"/>
-        <point x="116597" y="-112972"/>
-        <point x="112920" y="-112997"/>
+    <zone name="allow_s_item_freezing_core" id="90578" type="org.l2j.gameserver.world.zone.type.ScriptZone">
+        <polygon min-z="-11249" max-z="-10749">
+            <point x="112898" y="-117865"/>
+            <point x="116554" y="-117891"/>
+            <point x="116597" y="-112972"/>
+            <point x="112920" y="-112997"/>
+        </polygon>
     </zone>
 </list>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org zones.xsd">
+    <!-- Katei's Cube Zones -->
+    <zone name="crataer_race1" type="org.l2j.gameserver.world.zone.type.PeaceZone">
+        <polygon min-z="-8355" max-z="-8105">
+            <point x="-87901" y="-17029"/>
+            <point x="-86611" y="-17044"/>
+            <point x="-86618" y="-15767"/>
+            <point x="-87894" y="-15770"/>
+        </polygon>
+    </zone>
+    <zone name="crataer_race2" type="org.l2j.gameserver.world.zone.type.PeaceZone">
+        <polygon min-z="-8459" max-z="-8209">
+            <point x="-87827" y="-82417"/>
+            <point x="-86552" y="-82421"/>
+            <point x="-86548" y="-81200"/>
+            <point x="-87826" y="-81190"/>
+        </polygon>
+    </zone>
+    <zone name="crataer_race3" type="org.l2j.gameserver.world.zone.type.PeaceZone">
+        <polygon min-z="-8403" max-z="-8153">
+            <point x="-54654" y="-83602"/>
+            <point x="-53357" y="-83594"/>
+            <point x="-53359" y="-82330"/>
+            <point x="-54650" y="-82341"/>
+        </polygon>
+    </zone>
+    <zone name="crataer_battle1" type="org.l2j.gameserver.world.zone.type.ArenaZone">
+        <polygon min-z="-8375" max-z="-8095">
+            <point x="-86726" y="-21076"/>
+            <point x="-77193" y="-21079"/>
+            <point x="-77321" y="-11710"/>
+            <point x="-86670" y="-11714"/>
+        </polygon>
+    </zone>
+    <zone name="crataer_battle2" type="org.l2j.gameserver.world.zone.type.ArenaZone">
+        <polygon min-z="-8483" max-z="-8233">
+            <point x="-86608" y="-86506"/>
+            <point x="-77222" y="-86479"/>
+            <point x="-77064" y="-76900"/>
+            <point x="-86576" y="-76829"/>
+        </polygon>
+    </zone>
+    <zone name="crataer_battle3" type="org.l2j.gameserver.world.zone.type.ArenaZone">
+        <polygon min-z="-8471" max-z="-8221">
+            <point x="-53365" y="-87679"/>
+            <point x="-43940" y="-87683"/>
+            <point x="-43926" y="-78026"/>
+            <point x="-53311" y="-77966"/>
+        </polygon>
+    </zone>
+    <zone name="cratae_no_restart1" type="org.l2j.gameserver.world.zone.type.NoRestartZone">
+        <polygon min-z="-8375" max-z="-8095">
+            <point x="-86726" y="-21076"/>
+            <point x="-77193" y="-21079"/>
+            <point x="-77321" y="-11710"/>
+            <point x="-86670" y="-11714"/>
+        </polygon>
+        <property name="default_enabled" value="true"/>
+        <property name="restartTime" value="0"/>
+    </zone>
+    <zone name="cratae_no_restart2" type="org.l2j.gameserver.world.zone.type.NoRestartZone">
+        <polygon min-z="-8483" max-z="-8233">
+            <point x="-86608" y="-86506"/>
+            <point x="-77222" y="-86479"/>
+            <point x="-77064" y="-76900"/>
+            <point x="-86576" y="-76829"/>
+        </polygon>
+        <property name="default_enabled" value="true"/>
+        <property name="restartTime" value="0"/>
+    </zone>
+    <zone name="cratae_no_restart3" type="org.l2j.gameserver.world.zone.type.NoRestartZone">
+        <polygon min-z="-8471" max-z="-8221">
+            <point x="-53365" y="-87679"/>
+            <point x="-43940" y="-87683"/>
+            <point x="-43926" y="-78026"/>
+            <point x="-53311" y="-77966"/>
+        </polygon>
+        <property name="default_enabled" value="true"/>
+        <property name="restartTime" value="0"/>
+    </zone>
+</list>

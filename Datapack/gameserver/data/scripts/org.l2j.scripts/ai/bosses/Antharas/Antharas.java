@@ -44,8 +44,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import static org.l2j.gameserver.util.GameUtils.isNpc;
-import static org.l2j.gameserver.util.GameUtils.isPlayer;
+import static org.l2j.gameserver.util.GameUtils.*;
 import static org.l2j.gameserver.util.MathUtil.calculateDistance3D;
 import static org.l2j.gameserver.util.MathUtil.isInsideRadius3D;
 
@@ -209,7 +208,7 @@ public final class Antharas extends AbstractNpcAI
 				{
 					htmltext = "13001-02.html";
 				}
-				else if (zone.getPlayersInside().size() >= MAX_PEOPLE)
+				else if (zone.getPlayersInsideCount() >= MAX_PEOPLE)
 				{
 					htmltext = "13001-04.html";
 				}
@@ -227,7 +226,7 @@ public final class Antharas extends AbstractNpcAI
 					{
 						htmltext = "13001-03.html";
 					}
-					else if (members.size() > (MAX_PEOPLE - zone.getPlayersInside().size()))
+					else if (members.size() > (MAX_PEOPLE - zone.getPlayersInsideCount()))
 					{
 						htmltext = "13001-04.html";
 					}
@@ -363,27 +362,9 @@ public final class Antharas extends AbstractNpcAI
 				if ((npc != null) && ((_lastAttack + 900000) < System.currentTimeMillis()))
 				{
 					setStatus(ALIVE);
-					for (Creature charInside : zone.getCreaturesInside())
-					{
-						if (charInside != null)
-						{
-							if (isNpc(charInside))
-							{
-								if (charInside.getId() == ANTHARAS)
-								{
-									charInside.teleToLocation(185708, 114298, -8221);
-								}
-								else
-								{
-									charInside.deleteMe();
-								}
-							}
-							else if (isPlayer(charInside))
-							{
-								charInside.teleToLocation(79800 + getRandom(600), 151200 + getRandom(1100), -3534);
-							}
-						}
-					}
+
+					oustCreatures();
+
 					cancelQuestTimer("CHECK_ATTACK", npc, null);
 					cancelQuestTimer("SPAWN_MINION", npc, null);
 				}
@@ -438,20 +419,13 @@ public final class Antharas extends AbstractNpcAI
 			}
 			case "CLEAR_ZONE":
 			{
-				for (Creature charInside : zone.getCreaturesInside())
-				{
-					if (charInside != null)
-					{
-						if (isNpc(charInside))
-						{
-							charInside.deleteMe();
-						}
-						else if (isPlayer(charInside))
-						{
-							charInside.teleToLocation(79800 + getRandom(600), 151200 + getRandom(1100), -3534);
-						}
+				zone.forEachCreature(creature -> {
+					if(isNpc(creature)) {
+						creature.deleteMe();
+					} else if(isPlayer(creature)) {
+						creature.teleToLocation(79800 + getRandom(600), 151200 + getRandom(1100), -3534);
 					}
-				}
+				});
 				break;
 			}
 			case "TID_USED_FEAR":
@@ -538,13 +512,8 @@ public final class Antharas extends AbstractNpcAI
 				if (getStatus() == IN_FIGHT)
 				{
 					_minionCount = 0;
-					for (Creature charInside : zone.getCreaturesInside())
-					{
-						if ((charInside != null) && isNpc(charInside) && ((charInside.getId() == BEHEMOTH) || (charInside.getId() == TERASQUE)))
-						{
-							charInside.deleteMe();
-						}
-					}
+					zone.forEachCreature(Creature::deleteMe, creature -> isNpc(creature) && (creature.getId() == BEHEMOTH || creature.getId() == TERASQUE));
+
 					if (player != null) // Player dont will be null just when is this event called from GM command
 					{
 						player.sendMessage(getClass().getSimpleName() + ": All minions has been deleted!");
@@ -563,27 +532,8 @@ public final class Antharas extends AbstractNpcAI
 					setStatus(ALIVE);
 					cancelQuestTimer("CHECK_ATTACK", _antharas, null);
 					cancelQuestTimer("SPAWN_MINION", _antharas, null);
-					for (Creature charInside : zone.getCreaturesInside())
-					{
-						if (charInside != null)
-						{
-							if (isNpc(charInside))
-							{
-								if (charInside.getId() == ANTHARAS)
-								{
-									charInside.teleToLocation(185708, 114298, -8221);
-								}
-								else
-								{
-									charInside.deleteMe();
-								}
-							}
-							else if (isPlayer(charInside) && !charInside.isGM())
-							{
-								charInside.teleToLocation(79800 + getRandom(600), 151200 + getRandom(1100), -3534);
-							}
-						}
-					}
+
+					oustCreatures();
 					player.sendMessage(getClass().getSimpleName() + ": Fight has been aborted!");
 				}
 				else
@@ -600,7 +550,21 @@ public final class Antharas extends AbstractNpcAI
 		}
 		return super.onAdvEvent(event, npc, player);
 	}
-	
+
+	private void oustCreatures() {
+		zone.forEachCreature(creature -> {
+			if(isNpc(creature)) {
+				if(creature.getId() == ANTHARAS) {
+					creature.teleToLocation(185708, 114298, -8221);
+				} else {
+					creature.deleteMe();
+				}
+			} else if(isPlayer(creature)) {
+				creature.teleToLocation(79800 + getRandom(600), 151200 + getRandom(1100), -3534);
+			}
+		});
+	}
+
 	@Override
 	public String onAggroRangeEnter(Npc npc, Player player, boolean isSummon)
 	{

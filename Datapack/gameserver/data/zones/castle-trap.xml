@@ -1,0 +1,458 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org zones.xsd">
+    <!-- Castle Trap Zones -->
+    <zone name="aden_slow_2" id="70001" type="org.l2j.gameserver.world.zone.type.SwampZone">
+        <polygon min-z="-560" max-z="-360">
+            <point x="149349" y="7203"/>
+            <point x="149084" y="7204"/>
+            <point x="149084" y="6686"/>
+            <point x="149349" y="6685"/>
+        </polygon>
+        <property name="default_enabled" value="false"/>
+        <property name="move_bonus" value="0.2"/> <!-- -80% -->
+        <property name="castleId" value="5"/>
+        <property name="eventId" value="2418002"/>
+    </zone>
+    <zone name="aden_slow_1" id="70005" type="org.l2j.gameserver.world.zone.type.SwampZone">
+        <polygon min-z="-528" max-z="-328">
+            <point x="145813" y="7187"/>
+            <point x="145548" y="7188"/>
+            <point x="145548" y="6670"/>
+            <point x="145813" y="6669"/>
+        </polygon>
+        <property name="default_enabled" value="false"/>
+        <property name="move_bonus" value="0.2"/> <!-- -80% -->
+        <property name="castleId" value="5"/>
+        <property name="eventId" value="2418001"/>
+    </zone>
+    <zone name="aden_damage_8" id="70009" type="org.l2j.gameserver.world.zone.type.DamageZone">
+        <polygon min-z="-560" max-z="-360">
+            <point x="149084" y="7070"/>
+            <point x="149349" y="7069"/>
+            <point x="149349" y="7203"/>
+            <point x="149084" y="7204"/>
+        </polygon>
+        <property name="default_enabled" value="false"/>
+        <property name="castleId" value="5"/>
+    </zone>
+    <zone name="aden_damage_7" id="70010" type="org.l2j.gameserver.world.zone.type.DamageZone">
+        <polygon min-z="-528" max-z="-328">
+            <point x="149084" y="6942"/>
+            <point x="149349" y="6941"/>
+            <point x="149349" y="7075"/>
+            <point x="149084" y="7076"/>
+        </polygon>
+        <property name="default_enabled" value="false"/>
+        <property name="castleId" value="5"/>
+    </zone>
+    <zone name="aden_damage_6" id="70011" type="org.l2j.gameserver.world.zone.type.DamageZone">
+        <polygon min-z="-528" max-z="-328">
+            <point x="149084" y="6814"/>
+            <point x="149349" y="6813"/>
+            <point x="149349" y="6947"/>
+            <point x="149084" y="6948"/>
+        </polygon>
+        <property name="default_enabled" value="false"/>
+        <property name="castleId" value="5"/>
+    </zone>
+    <zone name="aden_damage_5" id="70012" type="org.l2j.gameserver.world.zone.type.DamageZone">
+        <polygon min-z="-528" max-z="-328">
+            <point x="149084" y="6686"/>
+            <point x="149349" y="6685"/>
+            <point x="149349" y="6819"/>
+            <point x="149084" y="6820"/>
+        </polygon>
+        <property name="castleId" value="5"/>
+    </zone>
+    <zone name="aden_damage_4" id="70013" type="org.l2j.gameserver.world.zone.type.DamageZone">
+        <polygon min-z="-528" max-z="-328">
+            <point x="145548" y="7054"/>
+            <point x="145813" y="7053"/>
+            <point x="145813" y="7187"/>
+            <point x="145548" y="7188"/>
+        </polygon>
+        <property name="default_enabled" value="false"/>
+        <property name="castleId" value="5"/>
+    </zone>
+    <zone name="aden_damage_3" id="70014" type="org.l2j.gameserver.world.zone.type.DamageZone">
+        <polygon min-z="-496" max-z="-296">
+            <point x="145548" y="6926"/>
+            <point x="145813" y="6925"/>
+            <point x="145813" y="7059"/>
+            <point x="145548" y="7060"/>
+        </polygon>
+        <property name="default_enabled" value="false"/>
+        <property name="castleId" value="5"/>
+    </zone>
+    <zone name="aden_damage_2" id="70015" type="org.l2j.gameserver.world.zone.type.DamageZone">
+        <polygon min-z="-496" max-z="-296">
+            <point x="145548" y="6798"/>
+            <point x="145813" y="6797"/>
+            <point x="145813" y="6931"/>
+            <point x="145548" y="6932"/>
+        </polygon>
+        <property name="default_enabled" value="false"/>
+        <property name="castleId" value="5"/>
+    </zone>
+    <zone name="aden_damage_1" id="70016" type="org.l2j.gameserver.world.zone.type.DamageZone">
+        <polygon min-z="-496" max-z="-296">
+            <point x="145548" y="6670"/>
+            <point x="145813" y="6669"/>
+            <point x="145813" y="6803"/>
+            <point x="145548" y="6804"/>
+        </polygon>
+        <property name="default_enabled" value="false"/>
+        <property name="castleId" value="5"/>
+    </zone>
+    <zone name="gludio_slow_1" id="70017" type="org.l2j.gameserver.world.zone.type.SwampZone">
+        <polygon min-z="-2627" max-z="-2427">
+            <point x="-18255" y="110790"/>
+            <point x="-17971" y="110790"/>
+            <point x="-17972" y="111174"/>
+            <point x="-18256" y="111174"/>
+        </polygon>
+        <property name="default_enabled" value="false"/>
+        <property name="move_bonus" value="0.2"/> <!-- -80% -->
+        <property name="castleId" value="1"/>
+        <property name="eventId" value="1921001"/>
+    </zone>
+    <zone name="gludio_slow_2" id="70018" type="org.l2j.gameserver.world.zone.type.SwampZone">
+        <polygon min-z="-2595" max-z="-2395">
+            <point x="-19213" y="107137"/>
+            <point x="-18827" y="107137"/>
+            <point x="-18827" y="107404"/>
+            <point x="-19213" y="107404"/>
+        </polygon>
+        <property name="default_enabled" value="false"/>
+        <property name="move_bonus" value="0.2"/> <!-- -80% -->
+        <property name="castleId" value="1"/>
+        <property name="eventId" value="1921002"/>
+    </zone>
+    <zone name="gludio_damage_1" id="70019" type="org.l2j.gameserver.world.zone.type.DamageZone">
+        <polygon min-z="-2627" max-z="-2427">
+            <point x="-18255" y="110790"/>
+            <point x="-17971" y="110790"/>
+            <point x="-17972" y="111174"/>
+            <point x="-18256" y="111174"/>
+        </polygon>
+        <property name="default_enabled" value="false"/>
+        <property name="castleId" value="1"/>
+    </zone>
+    <zone name="gludio_damage_2" id="70020" type="org.l2j.gameserver.world.zone.type.DamageZone">
+        <polygon min-z="-2595" max-z="-2395">
+            <point x="-19213" y="107137"/>
+            <point x="-18827" y="107137"/>
+            <point x="-18827" y="107404"/>
+            <point x="-19213" y="107404"/>
+        </polygon>
+        <property name="default_enabled" value="false"/>
+        <property name="castleId" value="1"/>
+    </zone>
+    <zone name="dion_slow_1" id="70021" type="org.l2j.gameserver.world.zone.type.SwampZone">
+        <polygon min-z="-2821" max-z="30341">
+            <point x="22215" y="158960"/>
+            <point x="21931" y="158960"/>
+            <point x="21932" y="158576"/>
+            <point x="22216" y="158576"/>
+        </polygon>
+        <property name="default_enabled" value="false"/>
+        <property name="move_bonus" value="0.2"/> <!-- -80% -->
+        <property name="castleId" value="2"/>
+        <property name="eventId" value="2022001"/>
+    </zone>
+    <zone name="dion_slow_2" id="70022" type="org.l2j.gameserver.world.zone.type.SwampZone">
+        <polygon min-z="-2789" max-z="30373">
+            <point x="23173" y="162613"/>
+            <point x="22787" y="162613"/>
+            <point x="22787" y="162346"/>
+            <point x="23173" y="162346"/>
+        </polygon>
+        <property name="default_enabled" value="false"/>
+        <property name="move_bonus" value="0.2"/> <!-- -80% -->
+        <property name="castleId" value="2"/>
+        <property name="eventId" value="2022002"/>
+    </zone>
+    <zone name="dion_damage_1" id="70023" type="org.l2j.gameserver.world.zone.type.DamageZone">
+        <polygon min-z="-2821" max-z="30341">
+            <point x="22215" y="158960"/>
+            <point x="21931" y="158960"/>
+            <point x="21932" y="158576"/>
+            <point x="22216" y="158576"/>
+        </polygon>
+        <property name="default_enabled" value="false"/>
+        <property name="castleId" value="2"/>
+    </zone>
+    <zone name="dion_damage_2" id="70024" type="org.l2j.gameserver.world.zone.type.DamageZone">
+        <polygon min-z="-2789" max-z="30373">
+            <point x="23173" y="162613"/>
+            <point x="22787" y="162613"/>
+            <point x="22787" y="162346"/>
+            <point x="23173" y="162346"/>
+        </polygon>
+        <property name="castleId" value="2"/>
+    </zone>
+    <zone name="giran_slow_1" id="70025" type="org.l2j.gameserver.world.zone.type.SwampZone">
+        <polygon min-z="-2694" max-z="13957">
+            <point x="115132" y="144954"/>
+            <point x="115132" y="145238"/>
+            <point x="114748" y="145237"/>
+            <point x="114748" y="144953"/>
+        </polygon>
+        <property name="default_enabled" value="false"/>
+        <property name="move_bonus" value="0.2"/> <!-- -80% -->
+        <property name="castleId" value="3"/>
+        <property name="eventId" value="2322001"/>
+    </zone>
+    <zone name="giran_slow_2" id="70026" type="org.l2j.gameserver.world.zone.type.SwampZone">
+        <polygon min-z="-2662" max-z="13989">
+            <point x="118785" y="143996"/>
+            <point x="118785" y="144382"/>
+            <point x="118518" y="144382"/>
+            <point x="118518" y="143996"/>
+        </polygon>
+        <property name="default_enabled" value="false"/>
+        <property name="move_bonus" value="0.2"/> <!-- -80% -->
+        <property name="castleId" value="3"/>
+        <property name="eventId" value="2322002"/>
+    </zone>
+    <zone name="giran_damage_1" id="70027" type="org.l2j.gameserver.world.zone.type.DamageZone">
+        <polygon min-z="-2694" max-z="13957">
+            <point x="115132" y="144954"/>
+            <point x="115132" y="145238"/>
+            <point x="114748" y="145237"/>
+            <point x="114748" y="144953"/>
+        </polygon>
+        <property name="default_enabled" value="false"/>
+        <property name="castleId" value="3"/>
+    </zone>
+    <zone name="giran_damage_2" id="70028" type="org.l2j.gameserver.world.zone.type.DamageZone">
+        <polygon min-z="-2662" max-z="13989">
+            <point x="118785" y="143996"/>
+            <point x="118785" y="144382"/>
+            <point x="118518" y="144382"/>
+            <point x="118518" y="143996"/>
+        </polygon>
+        <property name="default_enabled" value="false"/>
+        <property name="castleId" value="3"/>
+    </zone>
+    <zone name="oren_slow_1" id="70029" type="org.l2j.gameserver.world.zone.type.SwampZone">
+        <polygon min-z="-2421" max-z="13957">
+            <point x="81208" y="37049"/>
+            <point x="81208" y="37333"/>
+            <point x="80824" y="37332"/>
+            <point x="80824" y="37048"/>
+        </polygon>
+        <property name="default_enabled" value="false"/>
+        <property name="move_bonus" value="0.2"/> <!-- -80% -->
+        <property name="castleId" value="4"/>
+        <property name="eventId" value="2219001"/>
+    </zone>
+    <zone name="oren_slow_2" id="70030" type="org.l2j.gameserver.world.zone.type.SwampZone">
+        <polygon min-z="-2389" max-z="13989">
+            <point x="84861" y="36091"/>
+            <point x="84861" y="36477"/>
+            <point x="84594" y="36477"/>
+            <point x="84594" y="36091"/>
+        </polygon>
+        <property name="default_enabled" value="false"/>
+        <property name="move_bonus" value="0.2"/> <!-- -80% -->
+        <property name="castleId" value="4"/>
+        <property name="eventId" value="2219002"/>
+    </zone>
+    <zone name="oren_damage_1" id="70031" type="org.l2j.gameserver.world.zone.type.DamageZone">
+        <polygon min-z="-2421" max-z="13957">
+            <point x="81208" y="37049"/>
+            <point x="81208" y="37333"/>
+            <point x="80824" y="37332"/>
+            <point x="80824" y="37048"/>
+        </polygon>
+        <property name="default_enabled" value="false"/>
+        <property name="castleId" value="4"/>
+    </zone>
+    <zone name="oren_damage_2" id="70032" type="org.l2j.gameserver.world.zone.type.DamageZone">
+        <polygon min-z="-2389" max-z="13989">
+            <point x="84861" y="36091"/>
+            <point x="84861" y="36477"/>
+            <point x="84594" y="36477"/>
+            <point x="84594" y="36091"/>
+        </polygon>
+        <property name="default_enabled" value="false"/>
+        <property name="castleId" value="4"/>
+    </zone>
+    <zone name="innadrile_slow_1" id="70033" type="org.l2j.gameserver.world.zone.type.SwampZone">
+        <polygon min-z="-917" max-z="30341">
+            <point x="116166" y="247739"/>
+            <point x="115882" y="247739"/>
+            <point x="115883" y="247355"/>
+            <point x="116167" y="247355"/>
+        </polygon>
+        <property name="default_enabled" value="false"/>
+        <property name="move_bonus" value="0.2"/> <!-- -80% -->
+        <property name="castleId" value="6"/>
+        <property name="eventId" value="2325001"/>
+    </zone>
+    <zone name="innadrile_slow_2" id="70034" type="org.l2j.gameserver.world.zone.type.SwampZone">
+        <polygon min-z="-885" max-z="30373">
+            <point x="117124" y="251392"/>
+            <point x="116738" y="251392"/>
+            <point x="116738" y="251125"/>
+            <point x="117124" y="251125"/>
+        </polygon>
+        <property name="default_enabled" value="false"/>
+        <property name="move_bonus" value="0.2"/> <!-- -80% -->
+        <property name="castleId" value="6"/>
+        <property name="eventId" value="2325002"/>
+    </zone>
+    <zone name="innadrile_damage_1" id="70035" type="org.l2j.gameserver.world.zone.type.DamageZone">
+        <polygon min-z="-917" max-z="30341">
+            <point x="116166" y="247739"/>
+            <point x="115882" y="247739"/>
+            <point x="115883" y="247355"/>
+            <point x="116167" y="247355"/>
+        </polygon>
+        <property name="default_enabled" value="false"/>
+        <property name="castleId" value="6"/>
+    </zone>
+    <zone name="innadrile_damage_2" id="70036" type="org.l2j.gameserver.world.zone.type.DamageZone">
+        <polygon min-z="-885" max-z="30373">
+            <point x="117124" y="251392"/>
+            <point x="116738" y="251392"/>
+            <point x="116738" y="251125"/>
+            <point x="117124" y="251125"/>
+        </polygon>
+        <property name="default_enabled" value="false"/>
+        <property name="castleId" value="6"/>
+    </zone>
+    <zone name="godad_slow_1" id="70037" type="org.l2j.gameserver.world.zone.type.SwampZone">
+        <polygon min-z="-1789" max-z="-1489">
+            <point x="149235" y="-47768"/>
+            <point x="149579" y="-47608"/>
+            <point x="149515" y="-47472"/>
+            <point x="149169" y="-47634"/>
+        </polygon>
+        <property name="default_enabled" value="false"/>
+        <property name="move_bonus" value="0.2"/> <!-- -80% -->
+        <property name="castleId" value="7"/>
+        <property name="eventId" value="2416001"/>
+    </zone>
+    <zone name="godad_slow_2" id="70038" type="org.l2j.gameserver.world.zone.type.SwampZone">
+        <polygon min-z="-1789" max-z="-1439">
+            <point x="145352" y="-47607"/>
+            <point x="145696" y="-47768"/>
+            <point x="145760" y="-47633"/>
+            <point x="145415" y="-47471"/>
+        </polygon>
+        <property name="default_enabled" value="false"/>
+        <property name="move_bonus" value="0.2"/> <!-- -80% -->
+        <property name="castleId" value="7"/>
+        <property name="eventId" value="2416002"/>
+    </zone>
+    <zone name="godad_damage_1" id="70039" type="org.l2j.gameserver.world.zone.type.DamageZone">
+        <polygon min-z="-1789" max-z="-1489">
+            <point x="149235" y="-47768"/>
+            <point x="149579" y="-47608"/>
+            <point x="149515" y="-47472"/>
+            <point x="149169" y="-47634"/>
+        </polygon>
+        <property name="default_enabled" value="false"/>
+        <property name="castleId" value="7"/>
+    </zone>
+    <zone name="godad_damage_2" id="70040" type="org.l2j.gameserver.world.zone.type.DamageZone">
+        <polygon min-z="-1789" max-z="-1439">
+            <point x="145352" y="-47607"/>
+            <point x="145696" y="-47768"/>
+            <point x="145760" y="-47633"/>
+            <point x="145415" y="-47471"/>
+        </polygon>
+        <property name="default_enabled" value="false"/>
+        <property name="castleId" value="7"/>
+    </zone>
+    <zone name="rune_slow_1" id="70041" type="org.l2j.gameserver.world.zone.type.SwampZone">
+        <polygon min-z="509" max-z="809">
+            <point x="13785" y="-47663"/>
+            <point x="14046" y="-47854"/>
+            <point x="14203" y="-47668"/>
+            <point x="13916" y="-47450"/>
+        </polygon>
+        <property name="default_enabled" value="false"/>
+        <property name="move_bonus" value="0.2"/> <!-- -80% -->
+        <property name="castleId" value="8"/>
+        <property name="eventId" value="2016002"/>
+    </zone>
+    <zone name="rune_slow_2" id="70042" type="org.l2j.gameserver.world.zone.type.SwampZone">
+        <polygon min-z="518" max-z="818">
+            <point x="13917" y="-50851"/>
+            <point x="14209" y="-50630"/>
+            <point x="14052" y="-50447"/>
+            <point x="13788" y="-50647"/>
+        </polygon>
+        <property name="default_enabled" value="false"/>
+        <property name="move_bonus" value="0.2"/> <!-- -80% -->
+        <property name="castleId" value="8"/>
+        <property name="eventId" value="2016001"/>
+    </zone>
+    <zone name="rune_damage_1" id="70043" type="org.l2j.gameserver.world.zone.type.DamageZone">
+        <polygon min-z="509" max-z="809">
+            <point x="13785" y="-47663"/>
+            <point x="14046" y="-47854"/>
+            <point x="14203" y="-47668"/>
+            <point x="13916" y="-47450"/>
+        </polygon>
+        <property name="default_enabled" value="false"/>
+        <property name="castleId" value="8"/>
+    </zone>
+    <zone name="rune_damage_2" id="70044" type="org.l2j.gameserver.world.zone.type.DamageZone">
+        <polygon min-z="518" max-z="818">
+            <point x="13917" y="-50851"/>
+            <point x="14209" y="-50630"/>
+            <point x="14052" y="-50447"/>
+            <point x="13788" y="-50647"/>
+        </polygon>
+        <property name="default_enabled" value="false"/>
+        <property name="castleId" value="8"/>
+    </zone>
+    <zone name="schutt_slow_1" id="70045" type="org.l2j.gameserver.world.zone.type.SwampZone">
+        <polygon min-z="-93" max-z="207">
+            <point x="75440" y="-151667"/>
+            <point x="75787" y="-151830"/>
+            <point x="75849" y="-151697"/>
+            <point x="75503" y="-151535"/>
+        </polygon>
+        <property name="default_enabled" value="false"/>
+        <property name="move_bonus" value="0.2"/> <!-- -80% -->
+        <property name="castleId" value="9"/>
+        <property name="eventId" value="2213002"/>
+    </zone>
+    <zone name="schutt_slow_2" id="70046" type="org.l2j.gameserver.world.zone.type.SwampZone">
+        <polygon min-z="-77" max-z="223">
+            <point x="79322" y="-151831"/>
+            <point x="79668" y="-151670"/>
+            <point x="79606" y="-151535"/>
+            <point x="79261" y="-151699"/>
+        </polygon>
+        <property name="default_enabled" value="false"/>
+        <property name="move_bonus" value="0.2"/> <!-- -80% -->
+        <property name="castleId" value="9"/>
+        <property name="eventId" value="2213001"/>
+    </zone>
+    <zone name="schutt_damage_1" id="70047" type="org.l2j.gameserver.world.zone.type.DamageZone">
+        <polygon min-z="-93" max-z="207">
+            <point x="75440" y="-151667"/>
+            <point x="75787" y="-151830"/>
+            <point x="75849" y="-151697"/>
+            <point x="75503" y="-151535"/>
+        </polygon>
+        <property name="default_enabled" value="false"/>
+        <property name="castleId" value="9"/>
+    </zone>
+    <zone name="schutt_damage_2" id="70048" type="org.l2j.gameserver.world.zone.type.DamageZone">
+        <polygon min-z="-77" max-z="223">
+            <point x="79322" y="-151831"/>
+            <point x="79668" y="-151670"/>
+            <point x="79606" y="-151535"/>
+            <point x="79261" y="-151699"/>
+        </polygon>
+        <property name="default_enabled" value="false"/>
+        <property name="castleId" value="9"/>
+    </zone>
+</list>

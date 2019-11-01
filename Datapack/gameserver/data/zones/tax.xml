@@ -1,889 +1,1133 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org zones.xsd">
     <!-- Tax Zones -->
-    <zone name="gludio_1621_001" type="org.l2j.gameserver.world.zone.type.TaxZone" form="Polygon" minZ="-5036" maxZ="964">
+    <zone name="gludio_1621_001" type="org.l2j.gameserver.world.zone.type.TaxZone">
+        <polygon min-z="-5036" max-z="964">
+            <point x="-121528" y="98344"/>
+            <point x="-98372" y="98344"/>
+            <point x="-98340" y="131032"/>
+            <point x="-122216" y="131420"/>
+        </polygon>
         <property name="domainId" value="1"/>
-        <point x="-121528" y="98344"/>
-        <point x="-98372" y="98344"/>
-        <point x="-98340" y="131032"/>
-        <point x="-122216" y="131420"/>
     </zone>
-    <zone name="gludio_1624_001" type="org.l2j.gameserver.world.zone.type.TaxZone" form="Polygon" minZ="-5212" maxZ="788">
+    <zone name="gludio_1624_001" type="org.l2j.gameserver.world.zone.type.TaxZone">
+        <polygon min-z="-5212" max-z="788">
+            <point x="-131056" y="196736"/>
+            <point x="-98380" y="196648"/>
+            <point x="-98428" y="229188"/>
+            <point x="-130988" y="229224"/>
+        </polygon>
         <property name="domainId" value="1"/>
-        <point x="-131056" y="196736"/>
-        <point x="-98380" y="196648"/>
-        <point x="-98428" y="229188"/>
-        <point x="-130988" y="229224"/>
     </zone>
-    <zone name="gludio_1625_001" type="org.l2j.gameserver.world.zone.type.TaxZone" form="Polygon" minZ="-4820" maxZ="1180">
+    <zone name="gludio_1625_001" type="org.l2j.gameserver.world.zone.type.TaxZone">
+        <polygon min-z="-4820" max-z="1180">
+            <point x="-131020" y="229516"/>
+            <point x="-98484" y="229588"/>
+            <point x="-98396" y="262080"/>
+            <point x="-131064" y="261872"/>
+        </polygon>
         <property name="domainId" value="1"/>
-        <point x="-131020" y="229516"/>
-        <point x="-98484" y="229588"/>
-        <point x="-98396" y="262080"/>
-        <point x="-131064" y="261872"/>
     </zone>
-    <zone name="gludio_1720_001" type="org.l2j.gameserver.world.zone.type.TaxZone" form="Polygon" minZ="-4904" maxZ="1096">
+    <zone name="gludio_1720_001" type="org.l2j.gameserver.world.zone.type.TaxZone">
+        <polygon min-z="-4904" max-z="1096">
+            <point x="-97868" y="65836"/>
+            <point x="-76324" y="65972"/>
+            <point x="-77528" y="77712"/>
+            <point x="-98100" y="87216"/>
+        </polygon>
         <property name="domainId" value="1"/>
-        <point x="-97868" y="65836"/>
-        <point x="-76324" y="65972"/>
-        <point x="-77528" y="77712"/>
-        <point x="-98100" y="87216"/>
     </zone>
-    <zone name="gludio_1720_002" type="org.l2j.gameserver.world.zone.type.TaxZone" form="Polygon" minZ="-4832" maxZ="1168">
+    <zone name="gludio_1720_002" type="org.l2j.gameserver.world.zone.type.TaxZone">
+        <polygon min-z="-4832" max-z="1168">
+            <point x="-98172" y="87344"/>
+            <point x="-80156" y="79000"/>
+            <point x="-78324" y="86876"/>
+            <point x="-80152" y="98052"/>
+            <point x="-98256" y="98092"/>
+        </polygon>
         <property name="domainId" value="1"/>
-        <point x="-98172" y="87344"/>
-        <point x="-80156" y="79000"/>
-        <point x="-78324" y="86876"/>
-        <point x="-80152" y="98052"/>
-        <point x="-98256" y="98092"/>
     </zone>
-    <zone name="gludio_1720_003" type="org.l2j.gameserver.world.zone.type.TaxZone" form="Polygon" minZ="-3848" maxZ="2152">
+    <zone name="gludio_1720_003" type="org.l2j.gameserver.world.zone.type.TaxZone">
+        <polygon min-z="-3848" max-z="2152">
+            <point x="-78308" y="87376"/>
+            <point x="-70516" y="89252"/>
+            <point x="-65788" y="93912"/>
+            <point x="-65736" y="98076"/>
+            <point x="-80084" y="98040"/>
+        </polygon>
         <property name="domainId" value="1"/>
-        <point x="-78308" y="87376"/>
-        <point x="-70516" y="89252"/>
-        <point x="-65788" y="93912"/>
-        <point x="-65736" y="98076"/>
-        <point x="-80084" y="98040"/>
     </zone>
-    <zone name="gludio_1720_004" type="org.l2j.gameserver.world.zone.type.TaxZone" form="Polygon" minZ="-3468" maxZ="-2468">
+    <zone name="gludio_1720_004" type="org.l2j.gameserver.world.zone.type.TaxZone">
+        <polygon min-z="-3468" max-z="-2468">
+            <point x="-86388" y="79308"/>
+            <point x="-82064" y="78388"/>
+            <point x="-80872" y="84576"/>
+            <point x="-88852" y="84796"/>
+            <point x="-88992" y="82552"/>
+        </polygon>
         <property name="domainId" value="1"/>
-        <point x="-86388" y="79308"/>
-        <point x="-82064" y="78388"/>
-        <point x="-80872" y="84576"/>
-        <point x="-88852" y="84796"/>
-        <point x="-88992" y="82552"/>
     </zone>
-    <zone name="gludio_1721_001" type="org.l2j.gameserver.world.zone.type.TaxZone" form="Polygon" minZ="-3808" maxZ="2192">
+    <zone name="gludio_1721_001" type="org.l2j.gameserver.world.zone.type.TaxZone">
+        <polygon min-z="-3808" max-z="2192">
+            <point x="-98388" y="98168"/>
+            <point x="-65688" y="98296"/>
+            <point x="-65600" y="131076"/>
+            <point x="-98300" y="131356"/>
+        </polygon>
         <property name="domainId" value="1"/>
-        <point x="-98388" y="98168"/>
-        <point x="-65688" y="98296"/>
-        <point x="-65600" y="131076"/>
-        <point x="-98300" y="131356"/>
     </zone>
-    <zone name="gludio_1722_001" type="org.l2j.gameserver.world.zone.type.TaxZone" form="Polygon" minZ="-5024" maxZ="2976">
+    <zone name="gludio_1722_001" type="org.l2j.gameserver.world.zone.type.TaxZone">
+        <polygon min-z="-5024" max-z="2976">
+            <point x="-98272" y="131164"/>
+            <point x="-65828" y="131248"/>
+            <point x="-65764" y="163676"/>
+            <point x="-98732" y="165048"/>
+        </polygon>
         <property name="domainId" value="1"/>
-        <point x="-98272" y="131164"/>
-        <point x="-65828" y="131248"/>
-        <point x="-65764" y="163676"/>
-        <point x="-98732" y="165048"/>
     </zone>
-    <zone name="gludio_1723_001" type="org.l2j.gameserver.world.zone.type.TaxZone" form="Polygon" minZ="-5004" maxZ="996">
+    <zone name="gludio_1723_001" type="org.l2j.gameserver.world.zone.type.TaxZone">
+        <polygon min-z="-5004" max-z="996">
+            <point x="-98236" y="163948"/>
+            <point x="-65724" y="163856"/>
+            <point x="-65880" y="195756"/>
+            <point x="-98388" y="196880"/>
+        </polygon>
         <property name="domainId" value="1"/>
-        <point x="-98236" y="163948"/>
-        <point x="-65724" y="163856"/>
-        <point x="-65880" y="195756"/>
-        <point x="-98388" y="196880"/>
     </zone>
-    <zone name="gludio_1725_001" type="org.l2j.gameserver.world.zone.type.TaxZone" form="Polygon" minZ="-5036" maxZ="964">
+    <zone name="gludio_1725_001" type="org.l2j.gameserver.world.zone.type.TaxZone">
+        <polygon min-z="-5036" max-z="964">
+            <point x="-98320" y="229472"/>
+            <point x="-65752" y="229436"/>
+            <point x="-65468" y="261984"/>
+            <point x="-98200" y="261776"/>
+        </polygon>
         <property name="domainId" value="1"/>
-        <point x="-98320" y="229472"/>
-        <point x="-65752" y="229436"/>
-        <point x="-65468" y="261984"/>
-        <point x="-98200" y="261776"/>
     </zone>
-    <zone name="gludio_1820_001" type="org.l2j.gameserver.world.zone.type.TaxZone" form="Polygon" minZ="-4148" maxZ="1852">
+    <zone name="gludio_1820_001" type="org.l2j.gameserver.world.zone.type.TaxZone">
+        <polygon min-z="-4148" max-z="1852">
+            <point x="-65488" y="93628"/>
+            <point x="-33092" y="89240"/>
+            <point x="-32964" y="98112"/>
+            <point x="-65476" y="98100"/>
+        </polygon>
         <property name="domainId" value="1"/>
-        <point x="-65488" y="93628"/>
-        <point x="-33092" y="89240"/>
-        <point x="-32964" y="98112"/>
-        <point x="-65476" y="98100"/>
     </zone>
-    <zone name="gludio_1821_001" type="org.l2j.gameserver.world.zone.type.TaxZone" form="Polygon" minZ="-3780" maxZ="2220">
+    <zone name="gludio_1821_001" type="org.l2j.gameserver.world.zone.type.TaxZone">
+        <polygon min-z="-3780" max-z="2220">
+            <point x="-65484" y="98340"/>
+            <point x="-33068" y="98676"/>
+            <point x="-33020" y="130852"/>
+            <point x="-65528" y="131016"/>
+        </polygon>
         <property name="domainId" value="1"/>
-        <point x="-65484" y="98340"/>
-        <point x="-33068" y="98676"/>
-        <point x="-33020" y="130852"/>
-        <point x="-65528" y="131016"/>
     </zone>
-    <zone name="gludio_1822_001" type="org.l2j.gameserver.world.zone.type.TaxZone" form="Polygon" minZ="-4172" maxZ="1828">
+    <zone name="gludio_1822_001" type="org.l2j.gameserver.world.zone.type.TaxZone">
+        <polygon min-z="-4172" max-z="1828">
+            <point x="-65484" y="131176"/>
+            <point x="-32972" y="131168"/>
+            <point x="-33024" y="163632"/>
+            <point x="-65388" y="163568"/>
+        </polygon>
         <property name="domainId" value="1"/>
-        <point x="-65484" y="131176"/>
-        <point x="-32972" y="131168"/>
-        <point x="-33024" y="163632"/>
-        <point x="-65388" y="163568"/>
     </zone>
-    <zone name="gludio_1823_001" type="org.l2j.gameserver.world.zone.type.TaxZone" form="Polygon" minZ="-5616" maxZ="384">
+    <zone name="gludio_1823_001" type="org.l2j.gameserver.world.zone.type.TaxZone">
+        <polygon min-z="-5616" max-z="384">
+            <point x="-65440" y="163896"/>
+            <point x="-32844" y="163852"/>
+            <point x="-32996" y="196452"/>
+            <point x="-65532" y="196488"/>
+        </polygon>
         <property name="domainId" value="1"/>
-        <point x="-65440" y="163896"/>
-        <point x="-32844" y="163852"/>
-        <point x="-32996" y="196452"/>
-        <point x="-65532" y="196488"/>
     </zone>
-    <zone name="gludio_1824_001" type="org.l2j.gameserver.world.zone.type.TaxZone" form="Polygon" minZ="-4880" maxZ="1120">
+    <zone name="gludio_1824_001" type="org.l2j.gameserver.world.zone.type.TaxZone">
+        <polygon min-z="-4880" max-z="1120">
+            <point x="-65368" y="196732"/>
+            <point x="-33032" y="196776"/>
+            <point x="-33076" y="229244"/>
+            <point x="-65012" y="229212"/>
+        </polygon>
         <property name="domainId" value="1"/>
-        <point x="-65368" y="196732"/>
-        <point x="-33032" y="196776"/>
-        <point x="-33076" y="229244"/>
-        <point x="-65012" y="229212"/>
     </zone>
-    <zone name="gludio_1920_001" type="org.l2j.gameserver.world.zone.type.TaxZone" form="Polygon" minZ="-4088" maxZ="-2088">
+    <zone name="gludio_1920_001" type="org.l2j.gameserver.world.zone.type.TaxZone">
+        <polygon min-z="-4088" max-z="-2088">
+            <point x="-5032" y="72868"/>
+            <point x="-24" y="79252"/>
+            <point x="108" y="98528"/>
+            <point x="-21568" y="98404"/>
+            <point x="-22548" y="90904"/>
+            <point x="-20236" y="76952"/>
+            <point x="-12260" y="70068"/>
+        </polygon>
         <property name="domainId" value="1"/>
-        <point x="-5032" y="72868"/>
-        <point x="-24" y="79252"/>
-        <point x="108" y="98528"/>
-        <point x="-21568" y="98404"/>
-        <point x="-22548" y="90904"/>
-        <point x="-20236" y="76952"/>
-        <point x="-12260" y="70068"/>
     </zone>
-    <zone name="gludio_1920_002" type="org.l2j.gameserver.world.zone.type.TaxZone" form="Polygon" minZ="-5408" maxZ="-4408">
+    <zone name="gludio_1920_002" type="org.l2j.gameserver.world.zone.type.TaxZone">
+        <polygon min-z="-5408" max-z="-4408">
+            <point x="-22232" y="77188"/>
+            <point x="-10864" y="77036"/>
+            <point x="-11192" y="88548"/>
+            <point x="-21852" y="88044"/>
+        </polygon>
         <property name="domainId" value="1"/>
-        <point x="-22232" y="77188"/>
-        <point x="-10864" y="77036"/>
-        <point x="-11192" y="88548"/>
-        <point x="-21852" y="88044"/>
     </zone>
-    <zone name="gludio_1921_001" type="org.l2j.gameserver.world.zone.type.TaxZone" form="Polygon" minZ="-4044" maxZ="1956">
+    <zone name="gludio_1921_001" type="org.l2j.gameserver.world.zone.type.TaxZone">
+        <polygon min-z="-4044" max-z="1956">
+            <point x="-32480" y="98448"/>
+            <point x="-192" y="98440"/>
+            <point x="388" y="131392"/>
+            <point x="-32692" y="130880"/>
+        </polygon>
         <property name="domainId" value="1"/>
-        <point x="-32480" y="98448"/>
-        <point x="-192" y="98440"/>
-        <point x="388" y="131392"/>
-        <point x="-32692" y="130880"/>
     </zone>
-    <zone name="gludio_1922_001" type="org.l2j.gameserver.world.zone.type.TaxZone" form="Polygon" minZ="-3904" maxZ="2096">
+    <zone name="gludio_1922_001" type="org.l2j.gameserver.world.zone.type.TaxZone">
+        <polygon min-z="-3904" max-z="2096">
+            <point x="-32744" y="131188"/>
+            <point x="-252" y="131164"/>
+            <point x="-124" y="163732"/>
+            <point x="-32696" y="163648"/>
+        </polygon>
         <property name="domainId" value="1"/>
-        <point x="-32744" y="131188"/>
-        <point x="-252" y="131164"/>
-        <point x="-124" y="163732"/>
-        <point x="-32696" y="163648"/>
     </zone>
-    <zone name="gludio_1923_001" type="org.l2j.gameserver.world.zone.type.TaxZone" form="Polygon" minZ="-4464" maxZ="1536">
+    <zone name="gludio_1923_001" type="org.l2j.gameserver.world.zone.type.TaxZone">
+        <polygon min-z="-4464" max-z="1536">
+            <point x="-32644" y="163916"/>
+            <point x="-148" y="163948"/>
+            <point x="132" y="196496"/>
+            <point x="-32716" y="196364"/>
+        </polygon>
         <property name="domainId" value="1"/>
-        <point x="-32644" y="163916"/>
-        <point x="-148" y="163948"/>
-        <point x="132" y="196496"/>
-        <point x="-32716" y="196364"/>
     </zone>
-    <zone name="gludio_1924_001" type="org.l2j.gameserver.world.zone.type.TaxZone" form="Polygon" minZ="-6988" maxZ="-988">
+    <zone name="gludio_1924_001" type="org.l2j.gameserver.world.zone.type.TaxZone">
+        <polygon min-z="-6988" max-z="-988">
+            <point x="-32720" y="196704"/>
+            <point x="-64" y="196664"/>
+            <point x="-216" y="229148"/>
+            <point x="-33140" y="229576"/>
+        </polygon>
         <property name="domainId" value="1"/>
-        <point x="-32720" y="196704"/>
-        <point x="-64" y="196664"/>
-        <point x="-216" y="229148"/>
-        <point x="-33140" y="229576"/>
     </zone>
-    <zone name="gludio_2125_001" type="org.l2j.gameserver.world.zone.type.TaxZone" form="Polygon" minZ="-5196" maxZ="804">
+    <zone name="gludio_2125_001" type="org.l2j.gameserver.world.zone.type.TaxZone">
+        <polygon min-z="-5196" max-z="804">
+            <point x="33600" y="229712"/>
+            <point x="65364" y="230072"/>
+            <point x="65324" y="262096"/>
+            <point x="31612" y="262128"/>
+        </polygon>
         <property name="domainId" value="1"/>
-        <point x="33600" y="229712"/>
-        <point x="65364" y="230072"/>
-        <point x="65324" y="262096"/>
-        <point x="31612" y="262128"/>
     </zone>
-    <zone name="dion_1810_001" type="org.l2j.gameserver.world.zone.type.TaxZone" form="Polygon" minZ="-10208" maxZ="-3208">
+    <zone name="dion_1810_001" type="org.l2j.gameserver.world.zone.type.TaxZone">
+        <polygon min-z="-10208" max-z="-3208">
+            <point x="-57777" y="-253194"/>
+            <point x="-40997" y="-252692"/>
+            <point x="-41305" y="-237750"/>
+            <point x="-58125" y="-237445"/>
+        </polygon>
         <property name="domainId" value="2"/>
-        <point x="-57777" y="-253194"/>
-        <point x="-40997" y="-252692"/>
-        <point x="-41305" y="-237750"/>
-        <point x="-58125" y="-237445"/>
     </zone>
-    <zone name="dion_2021_001" type="org.l2j.gameserver.world.zone.type.TaxZone" form="Polygon" minZ="-4268" maxZ="1732">
+    <zone name="dion_2021_001" type="org.l2j.gameserver.world.zone.type.TaxZone">
+        <polygon min-z="-4268" max-z="1732">
+            <point x="3236" y="98380"/>
+            <point x="31976" y="98800"/>
+            <point x="31880" y="117524"/>
+            <point x="2496" y="112880"/>
+        </polygon>
         <property name="domainId" value="2"/>
-        <point x="3236" y="98380"/>
-        <point x="31976" y="98800"/>
-        <point x="31880" y="117524"/>
-        <point x="2496" y="112880"/>
     </zone>
-    <zone name="dion_2021_002" type="org.l2j.gameserver.world.zone.type.TaxZone" form="Polygon" minZ="-3796" maxZ="2204">
+    <zone name="dion_2021_002" type="org.l2j.gameserver.world.zone.type.TaxZone">
+        <polygon min-z="-3796" max-z="2204">
+            <point x="32082" y="117581"/>
+            <point x="32546" y="130836"/>
+            <point x="9062" y="131116"/>
+            <point x="862" y="127172"/>
+            <point x="2410" y="113013"/>
+        </polygon>
         <property name="domainId" value="2"/>
-        <point x="32082" y="117581"/>
-        <point x="32546" y="130836"/>
-        <point x="9062" y="131116"/>
-        <point x="862" y="127172"/>
-        <point x="2410" y="113013"/>
     </zone>
-    <zone name="dion_2022_001" type="org.l2j.gameserver.world.zone.type.TaxZone" form="Polygon" minZ="-4228" maxZ="1772">
+    <zone name="dion_2022_001" type="org.l2j.gameserver.world.zone.type.TaxZone">
+        <polygon min-z="-4228" max-z="1772">
+            <point x="2876" y="155112"/>
+            <point x="5860" y="131136"/>
+            <point x="32588" y="131428"/>
+            <point x="32496" y="163624"/>
+            <point x="5600" y="163816"/>
+        </polygon>
         <property name="domainId" value="2"/>
-        <point x="2876" y="155112"/>
-        <point x="5860" y="131136"/>
-        <point x="32588" y="131428"/>
-        <point x="32496" y="163624"/>
-        <point x="5600" y="163816"/>
     </zone>
-    <zone name="dion_2023_001" type="org.l2j.gameserver.world.zone.type.TaxZone" form="Polygon" minZ="-4700" maxZ="1300">
+    <zone name="dion_2023_001" type="org.l2j.gameserver.world.zone.type.TaxZone">
+        <polygon min-z="-4700" max-z="1300">
+            <point x="92" y="164016"/>
+            <point x="32620" y="163960"/>
+            <point x="32596" y="196456"/>
+            <point x="-8" y="196608"/>
+        </polygon>
         <property name="domainId" value="2"/>
-        <point x="92" y="164016"/>
-        <point x="32620" y="163960"/>
-        <point x="32596" y="196456"/>
-        <point x="-8" y="196608"/>
     </zone>
-    <zone name="dion_2121_001" type="org.l2j.gameserver.world.zone.type.TaxZone" form="Polygon" minZ="-3988" maxZ="2012">
+    <zone name="dion_2121_001" type="org.l2j.gameserver.world.zone.type.TaxZone">
+        <polygon min-z="-3988" max-z="2012">
+            <point x="56516" y="99872"/>
+            <point x="62188" y="111928"/>
+            <point x="61972" y="130772"/>
+            <point x="32864" y="130916"/>
+            <point x="32824" y="98272"/>
+        </polygon>
         <property name="domainId" value="2"/>
-        <point x="56516" y="99872"/>
-        <point x="62188" y="111928"/>
-        <point x="61972" y="130772"/>
-        <point x="32864" y="130916"/>
-        <point x="32824" y="98272"/>
     </zone>
-    <zone name="dion_2122_001" type="org.l2j.gameserver.world.zone.type.TaxZone" form="Polygon" minZ="-3876" maxZ="2124">
+    <zone name="dion_2122_001" type="org.l2j.gameserver.world.zone.type.TaxZone">
+        <polygon min-z="-3876" max-z="2124">
+            <point x="32872" y="131188"/>
+            <point x="65324" y="131368"/>
+            <point x="65280" y="163608"/>
+            <point x="33000" y="163656"/>
+        </polygon>
         <property name="domainId" value="2"/>
-        <point x="32872" y="131188"/>
-        <point x="65324" y="131368"/>
-        <point x="65280" y="163608"/>
-        <point x="33000" y="163656"/>
     </zone>
-    <zone name="giran_2123_001" type="org.l2j.gameserver.world.zone.type.TaxZone" form="Polygon" minZ="-4912" maxZ="1088">
+    <zone name="giran_2123_001" type="org.l2j.gameserver.world.zone.type.TaxZone">
+        <polygon min-z="-4912" max-z="1088">
+            <point x="32884" y="163952"/>
+            <point x="33084" y="196400"/>
+            <point x="65244" y="194620"/>
+            <point x="65324" y="163764"/>
+        </polygon>
         <property name="domainId" value="3"/>
-        <point x="32884" y="163952"/>
-        <point x="33084" y="196400"/>
-        <point x="65244" y="194620"/>
-        <point x="65324" y="163764"/>
     </zone>
-    <zone name="giran_2221_001" type="org.l2j.gameserver.world.zone.type.TaxZone" form="Polygon" minZ="-4496" maxZ="1504">
+    <zone name="giran_2221_001" type="org.l2j.gameserver.world.zone.type.TaxZone">
+        <polygon min-z="-4496" max-z="1504">
+            <point x="65740" y="98480"/>
+            <point x="97976" y="98536"/>
+            <point x="97900" y="130712"/>
+            <point x="65604" y="130920"/>
+        </polygon>
         <property name="domainId" value="3"/>
-        <point x="65740" y="98480"/>
-        <point x="97976" y="98536"/>
-        <point x="97900" y="130712"/>
-        <point x="65604" y="130920"/>
     </zone>
-    <zone name="giran_2222_001" type="org.l2j.gameserver.world.zone.type.TaxZone" form="Polygon" minZ="-4468" maxZ="1532">
+    <zone name="giran_2222_001" type="org.l2j.gameserver.world.zone.type.TaxZone">
+        <polygon min-z="-4468" max-z="1532">
+            <point x="65668" y="131208"/>
+            <point x="98012" y="131164"/>
+            <point x="80700" y="163712"/>
+            <point x="65716" y="163616"/>
+        </polygon>
         <property name="domainId" value="3"/>
-        <point x="65668" y="131208"/>
-        <point x="98012" y="131164"/>
-        <point x="80700" y="163712"/>
-        <point x="65716" y="163616"/>
     </zone>
-    <zone name="giran_2222_002" type="org.l2j.gameserver.world.zone.type.TaxZone" form="Polygon" minZ="-4632" maxZ="1368">
+    <zone name="giran_2222_002" type="org.l2j.gameserver.world.zone.type.TaxZone">
+        <polygon min-z="-4632" max-z="1368">
+            <point x="83796" y="157680"/>
+            <point x="98044" y="131208"/>
+            <point x="98212" y="154536"/>
+        </polygon>
         <property name="domainId" value="3"/>
-        <point x="83796" y="157680"/>
-        <point x="98044" y="131208"/>
-        <point x="98212" y="154536"/>
     </zone>
-    <zone name="giran_2223_001" type="org.l2j.gameserver.world.zone.type.TaxZone" form="Polygon" minZ="-4500" maxZ="-1500">
+    <zone name="giran_2223_001" type="org.l2j.gameserver.world.zone.type.TaxZone">
+        <polygon min-z="-4500" max-z="-1500">
+            <point x="65896" y="163996"/>
+            <point x="80060" y="164232"/>
+            <point x="70212" y="180176"/>
+            <point x="65880" y="184172"/>
+        </polygon>
         <property name="domainId" value="3"/>
-        <point x="65896" y="163996"/>
-        <point x="80060" y="164232"/>
-        <point x="70212" y="180176"/>
-        <point x="65880" y="184172"/>
     </zone>
-    <zone name="giran_2321_001" type="org.l2j.gameserver.world.zone.type.TaxZone" form="Polygon" minZ="-4236" maxZ="1764">
+    <zone name="giran_2321_001" type="org.l2j.gameserver.world.zone.type.TaxZone">
+        <polygon min-z="-4236" max-z="1764">
+            <point x="98544" y="98724"/>
+            <point x="130904" y="98396"/>
+            <point x="130624" y="130740"/>
+            <point x="98384" y="130748"/>
+        </polygon>
         <property name="domainId" value="3"/>
-        <point x="98544" y="98724"/>
-        <point x="130904" y="98396"/>
-        <point x="130624" y="130740"/>
-        <point x="98384" y="130748"/>
     </zone>
-    <zone name="giran_2322_001" type="org.l2j.gameserver.world.zone.type.TaxZone" form="Polygon" minZ="-4952" maxZ="1048">
+    <zone name="giran_2322_001" type="org.l2j.gameserver.world.zone.type.TaxZone">
+        <polygon min-z="-4952" max-z="1048">
+            <point x="130912" y="131104"/>
+            <point x="130976" y="138376"/>
+            <point x="118944" y="150588"/>
+            <point x="98332" y="153328"/>
+            <point x="98412" y="131148"/>
+        </polygon>
         <property name="domainId" value="3"/>
-        <point x="130912" y="131104"/>
-        <point x="130976" y="138376"/>
-        <point x="118944" y="150588"/>
-        <point x="98332" y="153328"/>
-        <point x="98412" y="131148"/>
     </zone>
-    <zone name="giran_2124_001" type="org.l2j.gameserver.world.zone.type.TaxZone" form="Polygon" minZ="-4768" maxZ="-568">
+    <zone name="giran_2124_001" type="org.l2j.gameserver.world.zone.type.TaxZone">
+        <polygon min-z="-4768" max-z="-568">
+            <point x="33479" y="197223"/>
+            <point x="65148" y="197187"/>
+            <point x="64952" y="228627"/>
+            <point x="33478" y="228629"/>
+        </polygon>
         <property name="domainId" value="3"/>
-        <point x="33479" y="197223"/>
-        <point x="65148" y="197187"/>
-        <point x="64952" y="228627"/>
-        <point x="33478" y="228629"/>
     </zone>
-    <zone name="giran_2421_001" type="org.l2j.gameserver.world.zone.type.TaxZone" form="Polygon" minZ="-9187" maxZ="-687">
+    <zone name="giran_2421_001" type="org.l2j.gameserver.world.zone.type.TaxZone">
+        <polygon min-z="-9187" max-z="-687">
+            <point x="131379" y="98612"/>
+            <point x="163514" y="98612"/>
+            <point x="163514" y="130860"/>
+            <point x="128820" y="130972"/>
+        </polygon>
         <property name="domainId" value="3"/>
-        <point x="131379" y="98612"/>
-        <point x="163514" y="98612"/>
-        <point x="163514" y="130860"/>
-        <point x="128820" y="130972"/>
     </zone>
-    <zone name="oren_1720_001" type="org.l2j.gameserver.world.zone.type.TaxZone" form="Polygon" minZ="-4507" maxZ="493">
+    <zone name="oren_1720_001" type="org.l2j.gameserver.world.zone.type.TaxZone">
+        <polygon min-z="-4507" max-z="493">
+            <point x="-74709" y="66788"/>
+            <point x="-64139" y="68684"/>
+            <point x="-63819" y="78993"/>
+            <point x="-77276" y="77514"/>
+        </polygon>
         <property name="domainId" value="4"/>
-        <point x="-74709" y="66788"/>
-        <point x="-64139" y="68684"/>
-        <point x="-63819" y="78993"/>
-        <point x="-77276" y="77514"/>
     </zone>
-    <zone name="oren_1720_002" type="org.l2j.gameserver.world.zone.type.TaxZone" form="Polygon" minZ="-3611" maxZ="389">
+    <zone name="oren_1720_002" type="org.l2j.gameserver.world.zone.type.TaxZone">
+        <polygon min-z="-3611" max-z="389">
+            <point x="-77466" y="77648"/>
+            <point x="-64154" y="79077"/>
+            <point x="-64722" y="93562"/>
+            <point x="-77571" y="86723"/>
+            <point x="-79893" y="79185"/>
+        </polygon>
         <property name="domainId" value="4"/>
-        <point x="-77466" y="77648"/>
-        <point x="-64154" y="79077"/>
-        <point x="-64722" y="93562"/>
-        <point x="-77571" y="86723"/>
-        <point x="-79893" y="79185"/>
     </zone>
-    <zone name="oren_1819_001" type="org.l2j.gameserver.world.zone.type.TaxZone" form="Polygon" minZ="-4708" maxZ="-708">
+    <zone name="oren_1819_001" type="org.l2j.gameserver.world.zone.type.TaxZone">
+        <polygon min-z="-4708" max-z="-708">
+            <point x="-64361" y="32992"/>
+            <point x="-32575" y="33002"/>
+            <point x="-32889" y="65436"/>
+            <point x="-64348" y="65380"/>
+        </polygon>
         <property name="domainId" value="4"/>
-        <point x="-64361" y="32992"/>
-        <point x="-32575" y="33002"/>
-        <point x="-32889" y="65436"/>
-        <point x="-64348" y="65380"/>
     </zone>
-    <zone name="oren_1820_001" type="org.l2j.gameserver.world.zone.type.TaxZone" form="Polygon" minZ="-4822" maxZ="178">
+    <zone name="oren_1820_001" type="org.l2j.gameserver.world.zone.type.TaxZone">
+        <polygon min-z="-4822" max-z="178">
+            <point x="-65494" y="65591"/>
+            <point x="-32918" y="65544"/>
+            <point x="-32918" y="86639"/>
+            <point x="-65420" y="93116"/>
+        </polygon>
         <property name="domainId" value="4"/>
-        <point x="-65494" y="65591"/>
-        <point x="-32918" y="65544"/>
-        <point x="-32918" y="86639"/>
-        <point x="-65420" y="93116"/>
     </zone>
-    <zone name="oren_1820_002" type="org.l2j.gameserver.world.zone.type.TaxZone" form="Polygon" minZ="1388" maxZ="3612">
+    <zone name="oren_1820_002" type="org.l2j.gameserver.world.zone.type.TaxZone">
+        <polygon min-z="1388" max-z="3612">
+            <point x="-50272" y="84060"/>
+            <point x="-39573" y="83914"/>
+            <point x="-40871" y="90354"/>
+            <point x="-46801" y="90150"/>
+        </polygon>
         <property name="domainId" value="4"/>
-        <point x="-50272" y="84060"/>
-        <point x="-39573" y="83914"/>
-        <point x="-40871" y="90354"/>
-        <point x="-46801" y="90150"/>
     </zone>
-    <zone name="oren_1910_001" type="org.l2j.gameserver.world.zone.type.TaxZone" form="Polygon" minZ="-12116" maxZ="-3116">
+    <zone name="oren_1910_001" type="org.l2j.gameserver.world.zone.type.TaxZone">
+        <polygon min-z="-12116" max-z="-3116">
+            <point x="-25242" y="-252548"/>
+            <point x="-8974" y="-253262"/>
+            <point x="-8741" y="-239057"/>
+            <point x="-24943" y="-239075"/>
+        </polygon>
         <property name="domainId" value="4"/>
-        <point x="-25242" y="-252548"/>
-        <point x="-8974" y="-253262"/>
-        <point x="-8741" y="-239057"/>
-        <point x="-24943" y="-239075"/>
     </zone>
-    <zone name="oren_1918_001" type="org.l2j.gameserver.world.zone.type.TaxZone" form="Polygon" minZ="-4861" maxZ="139">
+    <zone name="oren_1918_001" type="org.l2j.gameserver.world.zone.type.TaxZone">
+        <polygon min-z="-4861" max-z="139">
+            <point x="-32872" y="786"/>
+            <point x="-179" y="806"/>
+            <point x="-113" y="32576"/>
+            <point x="-32681" y="32592"/>
+        </polygon>
         <property name="domainId" value="4"/>
-        <point x="-32872" y="786"/>
-        <point x="-179" y="806"/>
-        <point x="-113" y="32576"/>
-        <point x="-32681" y="32592"/>
     </zone>
-    <zone name="oren_1919_001" type="org.l2j.gameserver.world.zone.type.TaxZone" form="Polygon" minZ="-4687" maxZ="313">
+    <zone name="oren_1919_001" type="org.l2j.gameserver.world.zone.type.TaxZone">
+        <polygon min-z="-4687" max-z="313">
+            <point x="-32712" y="32869"/>
+            <point x="-130" y="32869"/>
+            <point x="-227" y="65280"/>
+            <point x="-32663" y="65329"/>
+        </polygon>
         <property name="domainId" value="4"/>
-        <point x="-32712" y="32869"/>
-        <point x="-130" y="32869"/>
-        <point x="-227" y="65280"/>
-        <point x="-32663" y="65329"/>
     </zone>
-    <zone name="oren_1920_001" type="org.l2j.gameserver.world.zone.type.TaxZone" form="Polygon" minZ="-4056" maxZ="-2056">
+    <zone name="oren_1920_001" type="org.l2j.gameserver.world.zone.type.TaxZone">
+        <polygon min-z="-4056" max-z="-2056">
+            <point x="-7240" y="65392"/>
+            <point x="12" y="65520"/>
+            <point x="172" y="78196"/>
+            <point x="-4140" y="72496"/>
+            <point x="-10404" y="69532"/>
+            <point x="-10208" y="67056"/>
+        </polygon>
         <property name="domainId" value="4"/>
-        <point x="-7240" y="65392"/>
-        <point x="12" y="65520"/>
-        <point x="172" y="78196"/>
-        <point x="-4140" y="72496"/>
-        <point x="-10404" y="69532"/>
-        <point x="-10208" y="67056"/>
     </zone>
-    <zone name="oren_1920_002" type="org.l2j.gameserver.world.zone.type.TaxZone" form="Polygon" minZ="-4164" maxZ="-2164">
+    <zone name="oren_1920_002" type="org.l2j.gameserver.world.zone.type.TaxZone">
+        <polygon min-z="-4164" max-z="-2164">
+            <point x="-32884" y="65624"/>
+            <point x="-11460" y="65548"/>
+            <point x="-11340" y="68448"/>
+            <point x="-21064" y="77080"/>
+            <point x="-23036" y="98260"/>
+            <point x="-32716" y="98248"/>
+        </polygon>
         <property name="domainId" value="4"/>
-        <point x="-32884" y="65624"/>
-        <point x="-11460" y="65548"/>
-        <point x="-11340" y="68448"/>
-        <point x="-21064" y="77080"/>
-        <point x="-23036" y="98260"/>
-        <point x="-32716" y="98248"/>
     </zone>
-    <zone name="oren_2918_001" type="org.l2j.gameserver.world.zone.type.TaxZone" form="Polygon" minZ="-4797" maxZ="1203">
+    <zone name="oren_2918_001" type="org.l2j.gameserver.world.zone.type.TaxZone">
+        <polygon min-z="-4797" max-z="1203">
+            <point x="79" y="751"/>
+            <point x="32586" y="2079"/>
+            <point x="32566" y="32564"/>
+            <point x="99" y="32605"/>
+        </polygon>
         <property name="domainId" value="4"/>
-        <point x="79" y="751"/>
-        <point x="32586" y="2079"/>
-        <point x="32566" y="32564"/>
-        <point x="99" y="32605"/>
     </zone>
-    <zone name="oren_2019_001" type="org.l2j.gameserver.world.zone.type.TaxZone" form="Polygon" minZ="-4583" maxZ="417">
+    <zone name="oren_2019_001" type="org.l2j.gameserver.world.zone.type.TaxZone">
+        <polygon min-z="-4583" max-z="417">
+            <point x="20" y="32842"/>
+            <point x="32689" y="32979"/>
+            <point x="32611" y="65413"/>
+            <point x="99" y="65276"/>
+        </polygon>
         <property name="domainId" value="4"/>
-        <point x="20" y="32842"/>
-        <point x="32689" y="32979"/>
-        <point x="32611" y="65413"/>
-        <point x="99" y="65276"/>
     </zone>
-    <zone name="oren_2020_001" type="org.l2j.gameserver.world.zone.type.TaxZone" form="Polygon" minZ="-4234" maxZ="-234">
+    <zone name="oren_2020_001" type="org.l2j.gameserver.world.zone.type.TaxZone">
+        <polygon min-z="-4234" max-z="-234">
+            <point x="49" y="65664"/>
+            <point x="32525" y="65566"/>
+            <point x="32446" y="95418"/>
+            <point x="147" y="96601"/>
+        </polygon>
         <property name="domainId" value="4"/>
-        <point x="49" y="65664"/>
-        <point x="32525" y="65566"/>
-        <point x="32446" y="95418"/>
-        <point x="147" y="96601"/>
     </zone>
-    <zone name="oren_2118_001" type="org.l2j.gameserver.world.zone.type.TaxZone" form="Polygon" minZ="-5196" maxZ="804">
+    <zone name="oren_2118_001" type="org.l2j.gameserver.world.zone.type.TaxZone">
+        <polygon min-z="-5196" max-z="804">
+            <point x="32830" y="77"/>
+            <point x="65375" y="40"/>
+            <point x="65375" y="32548"/>
+            <point x="32867" y="32548"/>
+        </polygon>
         <property name="domainId" value="4"/>
-        <point x="32830" y="77"/>
-        <point x="65375" y="40"/>
-        <point x="65375" y="32548"/>
-        <point x="32867" y="32548"/>
     </zone>
-    <zone name="oren_2119_001" type="org.l2j.gameserver.world.zone.type.TaxZone" form="Polygon" minZ="-5003" maxZ="997">
+    <zone name="oren_2119_001" type="org.l2j.gameserver.world.zone.type.TaxZone">
+        <polygon min-z="-5003" max-z="997">
+            <point x="32834" y="32786"/>
+            <point x="65336" y="32832"/>
+            <point x="65284" y="65301"/>
+            <point x="32834" y="65308"/>
+        </polygon>
         <property name="domainId" value="4"/>
-        <point x="32834" y="32786"/>
-        <point x="65336" y="32832"/>
-        <point x="65284" y="65301"/>
-        <point x="32834" y="65308"/>
     </zone>
-    <zone name="oren_2120_001" type="org.l2j.gameserver.world.zone.type.TaxZone" form="Polygon" minZ="-4318" maxZ="682">
+    <zone name="oren_2120_001" type="org.l2j.gameserver.world.zone.type.TaxZone">
+        <polygon min-z="-4318" max-z="682">
+            <point x="32858" y="65602"/>
+            <point x="62709" y="65636"/>
+            <point x="62590" y="95846"/>
+            <point x="32875" y="95744"/>
+        </polygon>
         <property name="domainId" value="4"/>
-        <point x="32858" y="65602"/>
-        <point x="62709" y="65636"/>
-        <point x="62590" y="95846"/>
-        <point x="32875" y="95744"/>
     </zone>
-    <zone name="oren_2217_001" type="org.l2j.gameserver.world.zone.type.TaxZone" form="Polygon" minZ="-4121" maxZ="879">
+    <zone name="oren_2217_001" type="org.l2j.gameserver.world.zone.type.TaxZone">
+        <polygon min-z="-4121" max-z="879">
+            <point x="91399" y="-28759"/>
+            <point x="97984" y="-25491"/>
+            <point x="97984" y="-403"/>
+            <point x="66008" y="-252"/>
+            <point x="75435" y="-17296"/>
+        </polygon>
         <property name="domainId" value="4"/>
-        <point x="91399" y="-28759"/>
-        <point x="97984" y="-25491"/>
-        <point x="97984" y="-403"/>
-        <point x="66008" y="-252"/>
-        <point x="75435" y="-17296"/>
     </zone>
-    <zone name="oren_2218_001" type="org.l2j.gameserver.world.zone.type.TaxZone" form="Polygon" minZ="-4854" maxZ="1146">
+    <zone name="oren_2218_001" type="org.l2j.gameserver.world.zone.type.TaxZone">
+        <polygon min-z="-4854" max-z="1146">
+            <point x="65639" y="120"/>
+            <point x="98015" y="194"/>
+            <point x="98039" y="32470"/>
+            <point x="65713" y="32520"/>
+        </polygon>
         <property name="domainId" value="4"/>
-        <point x="65639" y="120"/>
-        <point x="98015" y="194"/>
-        <point x="98039" y="32470"/>
-        <point x="65713" y="32520"/>
     </zone>
-    <zone name="oren_2219_001" type="org.l2j.gameserver.world.zone.type.TaxZone" form="Polygon" minZ="-4561" maxZ="439">
+    <zone name="oren_2219_001" type="org.l2j.gameserver.world.zone.type.TaxZone">
+        <polygon min-z="-4561" max-z="439">
+            <point x="65649" y="32791"/>
+            <point x="98049" y="32844"/>
+            <point x="98085" y="65280"/>
+            <point x="65738" y="65209"/>
+        </polygon>
         <property name="domainId" value="4"/>
-        <point x="65649" y="32791"/>
-        <point x="98049" y="32844"/>
-        <point x="98085" y="65280"/>
-        <point x="65738" y="65209"/>
     </zone>
-    <zone name="oren_2220_001" type="org.l2j.gameserver.world.zone.type.TaxZone" form="Polygon" minZ="-4425" maxZ="-425">
+    <zone name="oren_2220_001" type="org.l2j.gameserver.world.zone.type.TaxZone">
+        <polygon min-z="-4425" max-z="-425">
+            <point x="65637" y="65628"/>
+            <point x="98094" y="65666"/>
+            <point x="98131" y="98048"/>
+            <point x="65656" y="97993"/>
+        </polygon>
         <property name="domainId" value="4"/>
-        <point x="65637" y="65628"/>
-        <point x="98094" y="65666"/>
-        <point x="98131" y="98048"/>
-        <point x="65656" y="97993"/>
     </zone>
-    <zone name="oren_2317_001" type="org.l2j.gameserver.world.zone.type.TaxZone" form="Polygon" minZ="-4188" maxZ="3812">
+    <zone name="oren_2317_001" type="org.l2j.gameserver.world.zone.type.TaxZone">
+        <polygon min-z="-4188" max-z="3812">
+            <point x="117258" y="-17696"/>
+            <point x="111573" y="-6727"/>
+            <point x="104357" y="-204"/>
+            <point x="98363" y="-186"/>
+            <point x="98372" y="-24720"/>
+        </polygon>
         <property name="domainId" value="4"/>
-        <point x="117258" y="-17696"/>
-        <point x="111573" y="-6727"/>
-        <point x="104357" y="-204"/>
-        <point x="98363" y="-186"/>
-        <point x="98372" y="-24720"/>
     </zone>
-    <zone name="oren_2318_001" type="org.l2j.gameserver.world.zone.type.TaxZone" form="Polygon" minZ="-4434" maxZ="-434">
+    <zone name="oren_2318_001" type="org.l2j.gameserver.world.zone.type.TaxZone">
+        <polygon min-z="-4434" max-z="-434">
+            <point x="104257" y="187"/>
+            <point x="105033" y="14228"/>
+            <point x="102443" y="19127"/>
+            <point x="98426" y="18974"/>
+            <point x="98392" y="134"/>
+        </polygon>
         <property name="domainId" value="4"/>
-        <point x="104257" y="187"/>
-        <point x="105033" y="14228"/>
-        <point x="102443" y="19127"/>
-        <point x="98426" y="18974"/>
-        <point x="98392" y="134"/>
     </zone>
-    <zone name="oren_2318_002" type="org.l2j.gameserver.world.zone.type.TaxZone" form="Polygon" minZ="-4434" maxZ="-434">
+    <zone name="oren_2318_002" type="org.l2j.gameserver.world.zone.type.TaxZone">
+        <polygon min-z="-4434" max-z="-434">
+            <point x="102566" y="19193"/>
+            <point x="105394" y="24621"/>
+            <point x="103476" y="30460"/>
+            <point x="98404" y="30671"/>
+            <point x="98446" y="19158"/>
+        </polygon>
         <property name="domainId" value="4"/>
-        <point x="102566" y="19193"/>
-        <point x="105394" y="24621"/>
-        <point x="103476" y="30460"/>
-        <point x="98404" y="30671"/>
-        <point x="98446" y="19158"/>
     </zone>
-    <zone name="aden_2010_001" type="org.l2j.gameserver.world.zone.type.TaxZone" form="Polygon" minZ="-13296" maxZ="-3296">
+    <zone name="aden_2010_001" type="org.l2j.gameserver.world.zone.type.TaxZone">
+        <polygon min-z="-13296" max-z="-3296">
+            <point x="8251" y="-249650"/>
+            <point x="24608" y="-249430"/>
+            <point x="24109" y="-242790"/>
+            <point x="8316" y="-242767"/>
+        </polygon>
         <property name="domainId" value="5"/>
-        <point x="8251" y="-249650"/>
-        <point x="24608" y="-249430"/>
-        <point x="24109" y="-242790"/>
-        <point x="8316" y="-242767"/>
     </zone>
-    <zone name="aden_2317_001" type="org.l2j.gameserver.world.zone.type.TaxZone" form="Polygon" minZ="-4188" maxZ="3812">
+    <zone name="aden_2317_001" type="org.l2j.gameserver.world.zone.type.TaxZone">
+        <polygon min-z="-4188" max-z="3812">
+            <point x="130704" y="-21362"/>
+            <point x="130886" y="-209"/>
+            <point x="112747" y="-173"/>
+            <point x="108637" y="-3399"/>
+            <point x="115372" y="-13695"/>
+        </polygon>
         <property name="domainId" value="5"/>
-        <point x="130704" y="-21362"/>
-        <point x="130886" y="-209"/>
-        <point x="112747" y="-173"/>
-        <point x="108637" y="-3399"/>
-        <point x="115372" y="-13695"/>
     </zone>
-    <zone name="aden_2317_002" type="org.l2j.gameserver.world.zone.type.TaxZone" form="Polygon" minZ="-4188" maxZ="3812">
+    <zone name="aden_2317_002" type="org.l2j.gameserver.world.zone.type.TaxZone">
+        <polygon min-z="-4188" max-z="3812">
+            <point x="112124" y="-2649"/>
+            <point x="112704" y="-240"/>
+            <point x="104663" y="-310"/>
+            <point x="109835" y="-5034"/>
+        </polygon>
         <property name="domainId" value="5"/>
-        <point x="112124" y="-2649"/>
-        <point x="112704" y="-240"/>
-        <point x="104663" y="-310"/>
-        <point x="109835" y="-5034"/>
     </zone>
-    <zone name="aden_2318_001" type="org.l2j.gameserver.world.zone.type.TaxZone" form="Polygon" minZ="-5659" maxZ="341">
+    <zone name="aden_2318_001" type="org.l2j.gameserver.world.zone.type.TaxZone">
+        <polygon min-z="-5659" max-z="341">
+            <point x="130874" y="104"/>
+            <point x="130895" y="32580"/>
+            <point x="118078" y="32572"/>
+            <point x="105114" y="14306"/>
+            <point x="104370" y="262"/>
+        </polygon>
         <property name="domainId" value="5"/>
-        <point x="130874" y="104"/>
-        <point x="130895" y="32580"/>
-        <point x="118078" y="32572"/>
-        <point x="105114" y="14306"/>
-        <point x="104370" y="262"/>
     </zone>
-    <zone name="aden_2318_002" type="org.l2j.gameserver.world.zone.type.TaxZone" form="Polygon" minZ="-5659" maxZ="341">
+    <zone name="aden_2318_002" type="org.l2j.gameserver.world.zone.type.TaxZone">
+        <polygon min-z="-5659" max-z="341">
+            <point x="105074" y="14348"/>
+            <point x="112125" y="24353"/>
+            <point x="105677" y="24686"/>
+            <point x="102702" y="19097"/>
+        </polygon>
         <property name="domainId" value="5"/>
-        <point x="105074" y="14348"/>
-        <point x="112125" y="24353"/>
-        <point x="105677" y="24686"/>
-        <point x="102702" y="19097"/>
     </zone>
-    <zone name="aden_2318_003" type="org.l2j.gameserver.world.zone.type.TaxZone" form="Polygon" minZ="-5659" maxZ="341">
+    <zone name="aden_2318_003" type="org.l2j.gameserver.world.zone.type.TaxZone">
+        <polygon min-z="-5659" max-z="341">
+            <point x="112187" y="24432"/>
+            <point x="116529" y="30516"/>
+            <point x="103552" y="30665"/>
+            <point x="105525" y="24829"/>
+        </polygon>
         <property name="domainId" value="5"/>
-        <point x="112187" y="24432"/>
-        <point x="116529" y="30516"/>
-        <point x="103552" y="30665"/>
-        <point x="105525" y="24829"/>
     </zone>
-    <zone name="aden_2318_004" type="org.l2j.gameserver.world.zone.type.TaxZone" form="Polygon" minZ="-5659" maxZ="341">
+    <zone name="aden_2318_004" type="org.l2j.gameserver.world.zone.type.TaxZone">
+        <polygon min-z="-5659" max-z="341">
+            <point x="116613" y="30668"/>
+            <point x="117915" y="32552"/>
+            <point x="98368" y="32578"/>
+            <point x="98390" y="30871"/>
+        </polygon>
         <property name="domainId" value="5"/>
-        <point x="116613" y="30668"/>
-        <point x="117915" y="32552"/>
-        <point x="98368" y="32578"/>
-        <point x="98390" y="30871"/>
     </zone>
-    <zone name="aden_2319_001" type="org.l2j.gameserver.world.zone.type.TaxZone" form="Polygon" minZ="-4342" maxZ="2658">
+    <zone name="aden_2319_001" type="org.l2j.gameserver.world.zone.type.TaxZone">
+        <polygon min-z="-4342" max-z="2658">
+            <point x="98397" y="32855"/>
+            <point x="130761" y="32911"/>
+            <point x="130836" y="65313"/>
+            <point x="98434" y="65275"/>
+        </polygon>
         <property name="domainId" value="5"/>
-        <point x="98397" y="32855"/>
-        <point x="130761" y="32911"/>
-        <point x="130836" y="65313"/>
-        <point x="98434" y="65275"/>
     </zone>
-    <zone name="aden_2320_001" type="org.l2j.gameserver.world.zone.type.TaxZone" form="Polygon" minZ="-5608" maxZ="2392">
+    <zone name="aden_2320_001" type="org.l2j.gameserver.world.zone.type.TaxZone">
+        <polygon min-z="-5608" max-z="2392">
+            <point x="98414" y="65631"/>
+            <point x="130803" y="65693"/>
+            <point x="130741" y="95120"/>
+            <point x="106991" y="95326"/>
+            <point x="98493" y="85703"/>
+        </polygon>
         <property name="domainId" value="5"/>
-        <point x="98414" y="65631"/>
-        <point x="130803" y="65693"/>
-        <point x="130741" y="95120"/>
-        <point x="106991" y="95326"/>
-        <point x="98493" y="85703"/>
     </zone>
-    <zone name="aden_2417_001" type="org.l2j.gameserver.world.zone.type.TaxZone" form="Polygon" minZ="-5418" maxZ="1582">
+    <zone name="aden_2417_001" type="org.l2j.gameserver.world.zone.type.TaxZone">
+        <polygon min-z="-5418" max-z="1582">
+            <point x="145791" y="-31156"/>
+            <point x="163475" y="-24637"/>
+            <point x="163695" y="-232"/>
+            <point x="131228" y="-287"/>
+            <point x="131292" y="-22737"/>
+        </polygon>
         <property name="domainId" value="5"/>
-        <point x="145791" y="-31156"/>
-        <point x="163475" y="-24637"/>
-        <point x="163695" y="-232"/>
-        <point x="131228" y="-287"/>
-        <point x="131292" y="-22737"/>
     </zone>
-    <zone name="aden_2418_001" type="org.l2j.gameserver.world.zone.type.TaxZone" form="Polygon" minZ="-4556" maxZ="1444">
+    <zone name="aden_2418_001" type="org.l2j.gameserver.world.zone.type.TaxZone">
+        <polygon min-z="-4556" max-z="1444">
+            <point x="131177" y="105"/>
+            <point x="163636" y="105"/>
+            <point x="163614" y="32477"/>
+            <point x="131263" y="32564"/>
+        </polygon>
         <property name="domainId" value="5"/>
-        <point x="131177" y="105"/>
-        <point x="163636" y="105"/>
-        <point x="163614" y="32477"/>
-        <point x="131263" y="32564"/>
     </zone>
-    <zone name="aden_2419_001" type="org.l2j.gameserver.world.zone.type.TaxZone" form="Polygon" minZ="-3424" maxZ="1576">
+    <zone name="aden_2419_001" type="org.l2j.gameserver.world.zone.type.TaxZone">
+        <polygon min-z="-3424" max-z="1576">
+            <point x="131166" y="32940"/>
+            <point x="163536" y="32963"/>
+            <point x="163582" y="65242"/>
+            <point x="131280" y="65310"/>
+        </polygon>
         <property name="domainId" value="5"/>
-        <point x="131166" y="32940"/>
-        <point x="163536" y="32963"/>
-        <point x="163582" y="65242"/>
-        <point x="131280" y="65310"/>
     </zone>
-    <zone name="aden_2420_001" type="org.l2j.gameserver.world.zone.type.TaxZone" form="Polygon" minZ="-4624" maxZ="2376">
+    <zone name="aden_2420_001" type="org.l2j.gameserver.world.zone.type.TaxZone">
+        <polygon min-z="-4624" max-z="2376">
+            <point x="131191" y="65584"/>
+            <point x="163732" y="65563"/>
+            <point x="163523" y="96577"/>
+            <point x="131212" y="95385"/>
+        </polygon>
         <property name="domainId" value="5"/>
-        <point x="131191" y="65584"/>
-        <point x="163732" y="65563"/>
-        <point x="163523" y="96577"/>
-        <point x="131212" y="95385"/>
     </zone>
-    <zone name="aden_2517_001" type="org.l2j.gameserver.world.zone.type.TaxZone" form="Polygon" minZ="-4527" maxZ="1473">
+    <zone name="aden_2517_001" type="org.l2j.gameserver.world.zone.type.TaxZone">
+        <polygon min-z="-4527" max-z="1473">
+            <point x="187258" y="-29967"/>
+            <point x="192441" y="-23330"/>
+            <point x="191839" y="-267"/>
+            <point x="163944" y="-286"/>
+            <point x="163913" y="-26539"/>
+        </polygon>
         <property name="domainId" value="5"/>
-        <point x="187258" y="-29967"/>
-        <point x="192441" y="-23330"/>
-        <point x="191839" y="-267"/>
-        <point x="163944" y="-286"/>
-        <point x="163913" y="-26539"/>
     </zone>
-    <zone name="aden_2518_001" type="org.l2j.gameserver.world.zone.type.TaxZone" form="Polygon" minZ="-4138" maxZ="862">
+    <zone name="aden_2518_001" type="org.l2j.gameserver.world.zone.type.TaxZone">
+        <polygon min-z="-4138" max-z="862">
+            <point x="163936" y="95"/>
+            <point x="196353" y="176"/>
+            <point x="196374" y="32533"/>
+            <point x="164037" y="32492"/>
+        </polygon>
         <property name="domainId" value="5"/>
-        <point x="163936" y="95"/>
-        <point x="196353" y="176"/>
-        <point x="196374" y="32533"/>
-        <point x="164037" y="32492"/>
     </zone>
-    <zone name="aden_2519_001" type="org.l2j.gameserver.world.zone.type.TaxZone" form="Polygon" minZ="-5587" maxZ="413">
+    <zone name="aden_2519_001" type="org.l2j.gameserver.world.zone.type.TaxZone">
+        <polygon min-z="-5587" max-z="413">
+            <point x="163940" y="32880"/>
+            <point x="195847" y="32880"/>
+            <point x="196311" y="65211"/>
+            <point x="163900" y="65393"/>
+        </polygon>
         <property name="domainId" value="5"/>
-        <point x="163940" y="32880"/>
-        <point x="195847" y="32880"/>
-        <point x="196311" y="65211"/>
-        <point x="163900" y="65393"/>
     </zone>
-    <zone name="aden_2520_001" type="org.l2j.gameserver.world.zone.type.TaxZone" form="Polygon" minZ="-4209" maxZ="2791">
+    <zone name="aden_2520_001" type="org.l2j.gameserver.world.zone.type.TaxZone">
+        <polygon min-z="-4209" max-z="2791">
+            <point x="163899" y="65633"/>
+            <point x="179801" y="65681"/>
+            <point x="180399" y="98025"/>
+            <point x="164067" y="97953"/>
+        </polygon>
         <property name="domainId" value="5"/>
-        <point x="163899" y="65633"/>
-        <point x="179801" y="65681"/>
-        <point x="180399" y="98025"/>
-        <point x="164067" y="97953"/>
     </zone>
-    <zone name="aden_1619_001" type="org.l2j.gameserver.world.zone.type.TaxZone" form="Polygon" minZ="-30000" maxZ="30000">
+    <zone name="aden_1619_001" type="org.l2j.gameserver.world.zone.type.TaxZone">
+        <polygon min-z="-30000" max-z="30000">
+            <point x="-131203" y="32850"/>
+            <point x="-65502" y="32696"/>
+            <point x="-65513" y="65526"/>
+            <point x="-98290" y="65555"/>
+            <point x="-98301" y="98318"/>
+            <point x="-131108" y="98373"/>
+        </polygon>
         <property name="domainId" value="5"/>
-        <point x="-131203" y="32850"/>
-        <point x="-65502" y="32696"/>
-        <point x="-65513" y="65526"/>
-        <point x="-98290" y="65555"/>
-        <point x="-98301" y="98318"/>
-        <point x="-131108" y="98373"/>
     </zone>
-    <zone name="innadrile_2223_001" type="org.l2j.gameserver.world.zone.type.TaxZone" form="Polygon" minZ="-4687" maxZ="-687">
+    <zone name="innadrile_2223_001" type="org.l2j.gameserver.world.zone.type.TaxZone">
+        <polygon min-z="-4687" max-z="-687">
+            <point x="81820" y="164026"/>
+            <point x="98102" y="163884"/>
+            <point x="98119" y="196406"/>
+            <point x="65650" y="196335"/>
+            <point x="65626" y="185662"/>
+        </polygon>
         <property name="domainId" value="6"/>
-        <point x="81820" y="164026"/>
-        <point x="98102" y="163884"/>
-        <point x="98119" y="196406"/>
-        <point x="65650" y="196335"/>
-        <point x="65626" y="185662"/>
     </zone>
-    <zone name="innadrile_2224_001" type="org.l2j.gameserver.world.zone.type.TaxZone" form="Polygon" minZ="-5099" maxZ="-99">
+    <zone name="innadrile_2224_001" type="org.l2j.gameserver.world.zone.type.TaxZone">
+        <polygon min-z="-5099" max-z="-99">
+            <point x="65632" y="196740"/>
+            <point x="98138" y="196802"/>
+            <point x="98014" y="229061"/>
+            <point x="65787" y="228999"/>
+        </polygon>
         <property name="domainId" value="6"/>
-        <point x="65632" y="196740"/>
-        <point x="98138" y="196802"/>
-        <point x="98014" y="229061"/>
-        <point x="65787" y="228999"/>
     </zone>
-    <zone name="innadrile_2323_001" type="org.l2j.gameserver.world.zone.type.TaxZone" form="Polygon" minZ="-4424" maxZ="576">
+    <zone name="innadrile_2323_001" type="org.l2j.gameserver.world.zone.type.TaxZone">
+        <polygon min-z="-4424" max-z="576">
+            <point x="98423" y="163931"/>
+            <point x="130913" y="163949"/>
+            <point x="130895" y="196457"/>
+            <point x="98476" y="196280"/>
+        </polygon>
         <property name="domainId" value="6"/>
-        <point x="98423" y="163931"/>
-        <point x="130913" y="163949"/>
-        <point x="130895" y="196457"/>
-        <point x="98476" y="196280"/>
     </zone>
-    <zone name="innadrile_2324_001" type="org.l2j.gameserver.world.zone.type.TaxZone" form="Polygon" minZ="-4923" maxZ="-923">
+    <zone name="innadrile_2324_001" type="org.l2j.gameserver.world.zone.type.TaxZone">
+        <polygon min-z="-4923" max-z="-923">
+            <point x="98489" y="196660"/>
+            <point x="130904" y="196721"/>
+            <point x="130863" y="229074"/>
+            <point x="98387" y="229135"/>
+        </polygon>
         <property name="domainId" value="6"/>
-        <point x="98489" y="196660"/>
-        <point x="130904" y="196721"/>
-        <point x="130863" y="229074"/>
-        <point x="98387" y="229135"/>
     </zone>
-    <zone name="innadrile_2325_001" type="org.l2j.gameserver.world.zone.type.TaxZone" form="Polygon" minZ="-4910" maxZ="90">
+    <zone name="innadrile_2325_001" type="org.l2j.gameserver.world.zone.type.TaxZone">
+        <polygon min-z="-4910" max-z="90">
+            <point x="98837" y="229539"/>
+            <point x="130899" y="229455"/>
+            <point x="130543" y="261161"/>
+            <point x="98565" y="261329"/>
+        </polygon>
         <property name="domainId" value="6"/>
-        <point x="98837" y="229539"/>
-        <point x="130899" y="229455"/>
-        <point x="130543" y="261161"/>
-        <point x="98565" y="261329"/>
     </zone>
-    <zone name="innadrile_2225_001" type="org.l2j.gameserver.world.zone.type.TaxZone" form="Polygon" minZ="-12112" maxZ="-3112">
+    <zone name="innadrile_2225_001" type="org.l2j.gameserver.world.zone.type.TaxZone">
+        <polygon min-z="-12112" max-z="-3112">
+            <point x="66747" y="229569"/>
+            <point x="97926" y="229569"/>
+            <point x="97926" y="261775"/>
+            <point x="65879" y="261776"/>
+        </polygon>
         <property name="domainId" value="6"/>
-        <point x="66747" y="229569"/>
-        <point x="97926" y="229569"/>
-        <point x="97926" y="261775"/>
-        <point x="65879" y="261776"/>
     </zone>
-    <zone name="godard_2315_001" type="org.l2j.gameserver.world.zone.type.TaxZone" form="Polygon" minZ="-3600" maxZ="900">
+    <zone name="godard_2315_001" type="org.l2j.gameserver.world.zone.type.TaxZone">
+        <polygon min-z="-3600" max-z="900">
+            <point x="124536" y="-76584"/>
+            <point x="131060" y="-73112"/>
+            <point x="131096" y="-65444"/>
+            <point x="117620" y="-65588"/>
+            <point x="120316" y="-69304"/>
+            <point x="120156" y="-77072"/>
+        </polygon>
         <property name="domainId" value="7"/>
-        <point x="124536" y="-76584"/>
-        <point x="131060" y="-73112"/>
-        <point x="131096" y="-65444"/>
-        <point x="117620" y="-65588"/>
-        <point x="120316" y="-69304"/>
-        <point x="120156" y="-77072"/>
     </zone>
-    <zone name="godard_2316_001" type="org.l2j.gameserver.world.zone.type.TaxZone" form="Polygon" minZ="-2892" maxZ="2108">
+    <zone name="godard_2316_001" type="org.l2j.gameserver.world.zone.type.TaxZone">
+        <polygon min-z="-2892" max-z="2108">
+            <point x="98715" y="-65295"/>
+            <point x="130562" y="-64884"/>
+            <point x="130973" y="-32833"/>
+            <point x="98184" y="-32828"/>
+        </polygon>
         <property name="domainId" value="7"/>
-        <point x="98715" y="-65295"/>
-        <point x="130562" y="-64884"/>
-        <point x="130973" y="-32833"/>
-        <point x="98184" y="-32828"/>
     </zone>
-    <zone name="godard_2317_001" type="org.l2j.gameserver.world.zone.type.TaxZone" form="Polygon" minZ="-4008" maxZ="1992">
+    <zone name="godard_2317_001" type="org.l2j.gameserver.world.zone.type.TaxZone">
+        <polygon min-z="-4008" max-z="1992">
+            <point x="97820" y="-33007"/>
+            <point x="130600" y="-33101"/>
+            <point x="131029" y="-19205"/>
+            <point x="114478" y="-17118"/>
+            <point x="113183" y="-18971"/>
+            <point x="97723" y="-24594"/>
+        </polygon>
         <property name="domainId" value="7"/>
-        <point x="97820" y="-33007"/>
-        <point x="130600" y="-33101"/>
-        <point x="131029" y="-19205"/>
-        <point x="114478" y="-17118"/>
-        <point x="113183" y="-18971"/>
-        <point x="97723" y="-24594"/>
     </zone>
-    <zone name="godard_2417_001" type="org.l2j.gameserver.world.zone.type.TaxZone" form="Polygon" minZ="-1560" maxZ="2440">
+    <zone name="godard_2417_001" type="org.l2j.gameserver.world.zone.type.TaxZone">
+        <polygon min-z="-1560" max-z="2440">
+            <point x="152216" y="-33320"/>
+            <point x="164125" y="-33132"/>
+            <point x="164256" y="-26895"/>
+            <point x="154928" y="-24300"/>
+        </polygon>
         <property name="domainId" value="7"/>
-        <point x="152216" y="-33320"/>
-        <point x="164125" y="-33132"/>
-        <point x="164256" y="-26895"/>
-        <point x="154928" y="-24300"/>
     </zone>
-    <zone name="godard_2416_001" type="org.l2j.gameserver.world.zone.type.TaxZone" form="Polygon" minZ="-3732" maxZ="1268">
+    <zone name="godard_2416_001" type="org.l2j.gameserver.world.zone.type.TaxZone">
+        <polygon min-z="-3732" max-z="1268">
+            <point x="130947" y="-65660"/>
+            <point x="164514" y="-65899"/>
+            <point x="164312" y="-32038"/>
+            <point x="131005" y="-33178"/>
+        </polygon>
         <property name="domainId" value="7"/>
-        <point x="130947" y="-65660"/>
-        <point x="164514" y="-65899"/>
-        <point x="164312" y="-32038"/>
-        <point x="131005" y="-33178"/>
     </zone>
-    <zone name="godard_2415_001" type="org.l2j.gameserver.world.zone.type.TaxZone" form="Polygon" minZ="-3728" maxZ="1272">
+    <zone name="godard_2415_001" type="org.l2j.gameserver.world.zone.type.TaxZone">
+        <polygon min-z="-3728" max-z="1272">
+            <point x="130485" y="-99472"/>
+            <point x="164233" y="-98903"/>
+            <point x="164375" y="-65581"/>
+            <point x="130980" y="-65588"/>
+        </polygon>
         <property name="domainId" value="7"/>
-        <point x="130485" y="-99472"/>
-        <point x="164233" y="-98903"/>
-        <point x="164375" y="-65581"/>
-        <point x="130980" y="-65588"/>
     </zone>
-    <zone name="godard_2414_001" type="org.l2j.gameserver.world.zone.type.TaxZone" form="Polygon" minZ="-3120" maxZ="1880">
+    <zone name="godard_2414_001" type="org.l2j.gameserver.world.zone.type.TaxZone">
+        <polygon min-z="-3120" max-z="1880">
+            <point x="130996" y="-131394"/>
+            <point x="164233" y="-131294"/>
+            <point x="164153" y="-98357"/>
+            <point x="130996" y="-98392"/>
+        </polygon>
         <property name="domainId" value="7"/>
-        <point x="130996" y="-131394"/>
-        <point x="164233" y="-131294"/>
-        <point x="164153" y="-98357"/>
-        <point x="130996" y="-98392"/>
     </zone>
-    <zone name="godard_2514_001" type="org.l2j.gameserver.world.zone.type.TaxZone" form="Polygon" minZ="-9252" maxZ="748">
+    <zone name="godard_2514_001" type="org.l2j.gameserver.world.zone.type.TaxZone">
+        <polygon min-z="-9252" max-z="748">
+            <point x="163523" y="-131490"/>
+            <point x="196824" y="-131490"/>
+            <point x="196824" y="-98295"/>
+            <point x="163551" y="-98320"/>
+        </polygon>
         <property name="domainId" value="7"/>
-        <point x="163523" y="-131490"/>
-        <point x="196824" y="-131490"/>
-        <point x="196824" y="-98295"/>
-        <point x="163551" y="-98320"/>
     </zone>
-    <zone name="godard_2515_001" type="org.l2j.gameserver.world.zone.type.TaxZone" form="Polygon" minZ="-8136" maxZ="3864">
+    <zone name="godard_2515_001" type="org.l2j.gameserver.world.zone.type.TaxZone">
+        <polygon min-z="-8136" max-z="3864">
+            <point x="197022" y="-64539"/>
+            <point x="196540" y="-98372"/>
+            <point x="163683" y="-98327"/>
+            <point x="163633" y="-64788"/>
+        </polygon>
         <property name="domainId" value="7"/>
-        <point x="197022" y="-64539"/>
-        <point x="196540" y="-98372"/>
-        <point x="163683" y="-98327"/>
-        <point x="163633" y="-64788"/>
     </zone>
-    <zone name="godard_2516_001" type="org.l2j.gameserver.world.zone.type.TaxZone" form="Polygon" minZ="-4676" maxZ="1324">
+    <zone name="godard_2516_001" type="org.l2j.gameserver.world.zone.type.TaxZone">
+        <polygon min-z="-4676" max-z="1324">
+            <point x="163779" y="-65828"/>
+            <point x="196772" y="-65651"/>
+            <point x="196772" y="-32747"/>
+            <point x="163732" y="-32768"/>
+        </polygon>
         <property name="domainId" value="7"/>
-        <point x="163779" y="-65828"/>
-        <point x="196772" y="-65651"/>
-        <point x="196772" y="-32747"/>
-        <point x="163732" y="-32768"/>
     </zone>
-    <zone name="rune_1916_001" type="org.l2j.gameserver.world.zone.type.TaxZone" form="Polygon" minZ="-14360" maxZ="-7360">
+    <zone name="rune_1916_001" type="org.l2j.gameserver.world.zone.type.TaxZone">
+        <polygon min-z="-14360" max-z="-7360">
+            <point x="-33117" y="-65301"/>
+            <point x="238" y="-65577"/>
+            <point x="123" y="-32757"/>
+            <point x="-33117" y="-32724"/>
+        </polygon>
         <property name="domainId" value="8"/>
-        <point x="-33117" y="-65301"/>
-        <point x="238" y="-65577"/>
-        <point x="123" y="-32757"/>
-        <point x="-33117" y="-32724"/>
     </zone>
-    <zone name="rune_2016_001" type="org.l2j.gameserver.world.zone.type.TaxZone" form="Polygon" minZ="-6584" maxZ="1416">
+    <zone name="rune_2016_001" type="org.l2j.gameserver.world.zone.type.TaxZone">
+        <polygon min-z="-6584" max-z="1416">
+            <point x="-99" y="-65791"/>
+            <point x="32848" y="-65540"/>
+            <point x="32887" y="-32804"/>
+            <point x="-204" y="-32700"/>
+        </polygon>
         <property name="domainId" value="8"/>
-        <point x="-99" y="-65791"/>
-        <point x="32848" y="-65540"/>
-        <point x="32887" y="-32804"/>
-        <point x="-204" y="-32700"/>
     </zone>
-    <zone name="rune_2115_001" type="org.l2j.gameserver.world.zone.type.TaxZone" form="Polygon" minZ="-6884" maxZ="1116">
+    <zone name="rune_2115_001" type="org.l2j.gameserver.world.zone.type.TaxZone">
+        <polygon min-z="-6884" max-z="1116">
+            <point x="32672" y="-98312"/>
+            <point x="65566" y="-98283"/>
+            <point x="65664" y="-65455"/>
+            <point x="32737" y="-65455"/>
+        </polygon>
         <property name="domainId" value="8"/>
-        <point x="32672" y="-98312"/>
-        <point x="65566" y="-98283"/>
-        <point x="65664" y="-65455"/>
-        <point x="32737" y="-65455"/>
     </zone>
-    <zone name="rune_2116_001" type="org.l2j.gameserver.world.zone.type.TaxZone" form="Polygon" minZ="-6392" maxZ="1608">
+    <zone name="rune_2116_001" type="org.l2j.gameserver.world.zone.type.TaxZone">
+        <polygon min-z="-6392" max-z="1608">
+            <point x="32784" y="-65592"/>
+            <point x="65470" y="-65487"/>
+            <point x="65483" y="-32751"/>
+            <point x="32784" y="-32696"/>
+        </polygon>
         <property name="domainId" value="8"/>
-        <point x="32784" y="-65592"/>
-        <point x="65470" y="-65487"/>
-        <point x="65483" y="-32751"/>
-        <point x="32784" y="-32696"/>
     </zone>
-    <zone name="rune_2117_001" type="org.l2j.gameserver.world.zone.type.TaxZone" form="Polygon" minZ="-4460" maxZ="3540">
+    <zone name="rune_2117_001" type="org.l2j.gameserver.world.zone.type.TaxZone">
+        <polygon min-z="-4460" max-z="3540">
+            <point x="65514" y="-189"/>
+            <point x="65548" y="-32784"/>
+            <point x="32682" y="-32835"/>
+            <point x="32890" y="-128"/>
+        </polygon>
         <property name="domainId" value="8"/>
-        <point x="65514" y="-189"/>
-        <point x="65548" y="-32784"/>
-        <point x="32682" y="-32835"/>
-        <point x="32890" y="-128"/>
     </zone>
-    <zone name="rune_2215_001" type="org.l2j.gameserver.world.zone.type.TaxZone" form="Polygon" minZ="-6044" maxZ="1956">
+    <zone name="rune_2215_001" type="org.l2j.gameserver.world.zone.type.TaxZone">
+        <polygon min-z="-6044" max-z="1956">
+            <point x="98265" y="-65434"/>
+            <point x="98216" y="-98202"/>
+            <point x="65496" y="-98309"/>
+            <point x="65506" y="-65445"/>
+        </polygon>
         <property name="domainId" value="8"/>
-        <point x="98265" y="-65434"/>
-        <point x="98216" y="-98202"/>
-        <point x="65496" y="-98309"/>
-        <point x="65506" y="-65445"/>
     </zone>
-    <zone name="rune_2216_001" type="org.l2j.gameserver.world.zone.type.TaxZone" form="Polygon" minZ="-6772" maxZ="228">
+    <zone name="rune_2216_001" type="org.l2j.gameserver.world.zone.type.TaxZone">
+        <polygon min-z="-6772" max-z="228">
+            <point x="65268" y="-65603"/>
+            <point x="98231" y="-65611"/>
+            <point x="98487" y="-32852"/>
+            <point x="65268" y="-32735"/>
+        </polygon>
         <property name="domainId" value="8"/>
-        <point x="65268" y="-65603"/>
-        <point x="98231" y="-65611"/>
-        <point x="98487" y="-32852"/>
-        <point x="65268" y="-32735"/>
     </zone>
-    <zone name="rune_2315_001" type="org.l2j.gameserver.world.zone.type.TaxZone" form="Polygon" minZ="-4860" maxZ="5140">
+    <zone name="rune_2315_001" type="org.l2j.gameserver.world.zone.type.TaxZone">
+        <polygon min-z="-4860" max-z="5140">
+            <point x="98394" y="-72893"/>
+            <point x="98277" y="-98511"/>
+            <point x="131243" y="-98624"/>
+            <point x="131021" y="-75702"/>
+            <point x="116196" y="-69438"/>
+        </polygon>
         <property name="domainId" value="8"/>
-        <point x="98394" y="-72893"/>
-        <point x="98277" y="-98511"/>
-        <point x="131243" y="-98624"/>
-        <point x="131021" y="-75702"/>
-        <point x="116196" y="-69438"/>
     </zone>
-    <zone name="schuttgart_1814_001" type="org.l2j.gameserver.world.zone.type.TaxZone" form="Polygon" minZ="-4720" maxZ="3280">
+    <zone name="schuttgart_1814_001" type="org.l2j.gameserver.world.zone.type.TaxZone">
+        <polygon min-z="-4720" max-z="3280">
+            <point x="-65564" y="-131112"/>
+            <point x="-32670" y="-131240"/>
+            <point x="-32361" y="-98152"/>
+            <point x="-65999" y="-97945"/>
+        </polygon>
         <property name="domainId" value="9"/>
-        <point x="-65564" y="-131112"/>
-        <point x="-32670" y="-131240"/>
-        <point x="-32361" y="-98152"/>
-        <point x="-65999" y="-97945"/>
     </zone>
-    <zone name="schuttgart_1913_001" type="org.l2j.gameserver.world.zone.type.TaxZone" form="Polygon" minZ="-4592" maxZ="3408">
+    <zone name="schuttgart_1913_001" type="org.l2j.gameserver.world.zone.type.TaxZone">
+        <polygon min-z="-4592" max-z="3408">
+            <point x="-32893" y="-164337"/>
+            <point x="-32850" y="-131216"/>
+            <point x="101" y="-130978"/>
+            <point x="125" y="-164233"/>
+        </polygon>
         <property name="domainId" value="9"/>
-        <point x="-32893" y="-164337"/>
-        <point x="-32850" y="-131216"/>
-        <point x="101" y="-130978"/>
-        <point x="125" y="-164233"/>
     </zone>
-    <zone name="schuttgart_1914_001" type="org.l2j.gameserver.world.zone.type.TaxZone" form="Polygon" minZ="-5044" maxZ="2956">
+    <zone name="schuttgart_1914_001" type="org.l2j.gameserver.world.zone.type.TaxZone">
+        <polygon min-z="-5044" max-z="2956">
+            <point x="-33218" y="-131357"/>
+            <point x="-33370" y="-97951"/>
+            <point x="122" y="-97809"/>
+            <point x="70" y="-131388"/>
+        </polygon>
         <property name="domainId" value="9"/>
-        <point x="-33218" y="-131357"/>
-        <point x="-33370" y="-97951"/>
-        <point x="122" y="-97809"/>
-        <point x="70" y="-131388"/>
     </zone>
-    <zone name="schuttgart_1915_001" type="org.l2j.gameserver.world.zone.type.TaxZone" form="Polygon" minZ="-5464" maxZ="2536">
+    <zone name="schuttgart_1915_001" type="org.l2j.gameserver.world.zone.type.TaxZone">
+        <polygon min-z="-5464" max-z="2536">
+            <point x="-32987" y="-98820"/>
+            <point x="730" y="-99021"/>
+            <point x="525" y="-65412"/>
+            <point x="-33196" y="-65308"/>
+        </polygon>
         <property name="domainId" value="9"/>
-        <point x="-32987" y="-98820"/>
-        <point x="730" y="-99021"/>
-        <point x="525" y="-65412"/>
-        <point x="-33196" y="-65308"/>
     </zone>
-    <zone name="schuttgart_2013_001" type="org.l2j.gameserver.world.zone.type.TaxZone" form="Polygon" minZ="-5052" maxZ="2948">
+    <zone name="schuttgart_2013_001" type="org.l2j.gameserver.world.zone.type.TaxZone">
+        <polygon min-z="-5052" max-z="2948">
+            <point x="32678" y="-130763"/>
+            <point x="32684" y="-163872"/>
+            <point x="-197" y="-163909"/>
+            <point x="-262" y="-130698"/>
+        </polygon>
         <property name="domainId" value="9"/>
-        <point x="32678" y="-130763"/>
-        <point x="32684" y="-163872"/>
-        <point x="-197" y="-163909"/>
-        <point x="-262" y="-130698"/>
     </zone>
-    <zone name="schuttgart_2014_001" type="org.l2j.gameserver.world.zone.type.TaxZone" form="Polygon" minZ="-5792" maxZ="2208">
+    <zone name="schuttgart_2014_001" type="org.l2j.gameserver.world.zone.type.TaxZone">
+        <polygon min-z="-5792" max-z="2208">
+            <point x="-416" y="-131216"/>
+            <point x="-433" y="-98319"/>
+            <point x="32729" y="-98279"/>
+            <point x="32806" y="-131124"/>
+        </polygon>
         <property name="domainId" value="9"/>
-        <point x="-416" y="-131216"/>
-        <point x="-433" y="-98319"/>
-        <point x="32729" y="-98279"/>
-        <point x="32806" y="-131124"/>
     </zone>
-    <zone name="schuttgart_2015_001" type="org.l2j.gameserver.world.zone.type.TaxZone" form="Polygon" minZ="-6256" maxZ="1744">
+    <zone name="schuttgart_2015_001" type="org.l2j.gameserver.world.zone.type.TaxZone">
+        <polygon min-z="-6256" max-z="1744">
+            <point x="96" y="-98466"/>
+            <point x="32948" y="-98171"/>
+            <point x="32952" y="-65391"/>
+            <point x="-24" y="-65496"/>
+        </polygon>
         <property name="domainId" value="9"/>
-        <point x="96" y="-98466"/>
-        <point x="32948" y="-98171"/>
-        <point x="32952" y="-65391"/>
-        <point x="-24" y="-65496"/>
     </zone>
-    <zone name="schuttgart_2114_001" type="org.l2j.gameserver.world.zone.type.TaxZone" form="Polygon" minZ="-4560" maxZ="2940">
+    <zone name="schuttgart_2114_001" type="org.l2j.gameserver.world.zone.type.TaxZone">
+        <polygon min-z="-4560" max-z="2940">
+            <point x="32698" y="-131311"/>
+            <point x="65641" y="-131311"/>
+            <point x="65361" y="-98088"/>
+            <point x="32558" y="-98088"/>
+        </polygon>
         <property name="domainId" value="9"/>
-        <point x="32698" y="-131311"/>
-        <point x="65641" y="-131311"/>
-        <point x="65361" y="-98088"/>
-        <point x="32558" y="-98088"/>
     </zone>
-    <zone name="schuttgart_2213_001" type="org.l2j.gameserver.world.zone.type.TaxZone" form="Polygon" minZ="-4652" maxZ="348">
+    <zone name="schuttgart_2213_001" type="org.l2j.gameserver.world.zone.type.TaxZone">
+        <polygon min-z="-4652" max-z="348">
+            <point x="65088" y="-164063"/>
+            <point x="98600" y="-164186"/>
+            <point x="98651" y="-130884"/>
+            <point x="65082" y="-130918"/>
+        </polygon>
         <property name="domainId" value="9"/>
-        <point x="65088" y="-164063"/>
-        <point x="98600" y="-164186"/>
-        <point x="98651" y="-130884"/>
-        <point x="65082" y="-130918"/>
     </zone>
-    <zone name="schuttgart_2214_001" type="org.l2j.gameserver.world.zone.type.TaxZone" form="Polygon" minZ="-4812" maxZ="1188">
+    <zone name="schuttgart_2214_001" type="org.l2j.gameserver.world.zone.type.TaxZone">
+        <polygon min-z="-4812" max-z="1188">
+            <point x="65403" y="-131193"/>
+            <point x="98553" y="-131190"/>
+            <point x="98674" y="-98156"/>
+            <point x="65760" y="-98156"/>
+        </polygon>
         <property name="domainId" value="9"/>
-        <point x="65403" y="-131193"/>
-        <point x="98553" y="-131190"/>
-        <point x="98674" y="-98156"/>
-        <point x="65760" y="-98156"/>
     </zone>
-    <zone name="schuttgart_2311_001" type="org.l2j.gameserver.world.zone.type.TaxZone" form="Polygon" minZ="-5652" maxZ="2348">
+    <zone name="schuttgart_2311_001" type="org.l2j.gameserver.world.zone.type.TaxZone">
+        <polygon min-z="-5652" max-z="2348">
+            <point x="96598" y="-229453"/>
+            <point x="130768" y="-229322"/>
+            <point x="131096" y="-196656"/>
+            <point x="96466" y="-196336"/>
+        </polygon>
         <property name="domainId" value="9"/>
-        <point x="96598" y="-229453"/>
-        <point x="130768" y="-229322"/>
-        <point x="131096" y="-196656"/>
-        <point x="96466" y="-196336"/>
     </zone>
-    <zone name="schuttgart_2312_001" type="org.l2j.gameserver.world.zone.type.TaxZone" form="Polygon" minZ="-5008" maxZ="7992">
+    <zone name="schuttgart_2312_001" type="org.l2j.gameserver.world.zone.type.TaxZone">
+        <polygon min-z="-5008" max-z="7992">
+            <point x="97017" y="-196828"/>
+            <point x="131481" y="-197001"/>
+            <point x="131506" y="-163900"/>
+            <point x="96901" y="-163540"/>
+        </polygon>
         <property name="domainId" value="9"/>
-        <point x="97017" y="-196828"/>
-        <point x="131481" y="-197001"/>
-        <point x="131506" y="-163900"/>
-        <point x="96901" y="-163540"/>
     </zone>
-    <zone name="schuttgart_2313_001" type="org.l2j.gameserver.world.zone.type.TaxZone" form="Polygon" minZ="-4192" maxZ="1808">
+    <zone name="schuttgart_2313_001" type="org.l2j.gameserver.world.zone.type.TaxZone">
+        <polygon min-z="-4192" max-z="1808">
+            <point x="97971" y="-130638"/>
+            <point x="98055" y="-163865"/>
+            <point x="131048" y="-163925"/>
+            <point x="131239" y="-130762"/>
+        </polygon>
         <property name="domainId" value="9"/>
-        <point x="97971" y="-130638"/>
-        <point x="98055" y="-163865"/>
-        <point x="131048" y="-163925"/>
-        <point x="131239" y="-130762"/>
     </zone>
-    <zone name="schuttgart_2314_001" type="org.l2j.gameserver.world.zone.type.TaxZone" form="Polygon" minZ="-4540" maxZ="1460">
+    <zone name="schuttgart_2314_001" type="org.l2j.gameserver.world.zone.type.TaxZone">
+        <polygon min-z="-4540" max-z="1460">
+            <point x="98191" y="-131348"/>
+            <point x="131368" y="-131440"/>
+            <point x="131368" y="-97802"/>
+            <point x="98191" y="-98078"/>
+        </polygon>
         <property name="domainId" value="9"/>
-        <point x="98191" y="-131348"/>
-        <point x="131368" y="-131440"/>
-        <point x="131368" y="-97802"/>
-        <point x="98191" y="-98078"/>
     </zone>
-    <zone name="schuttgart_2411_001" type="org.l2j.gameserver.world.zone.type.TaxZone" form="Polygon" minZ="-5504" maxZ="2496">
+    <zone name="schuttgart_2411_001" type="org.l2j.gameserver.world.zone.type.TaxZone">
+        <polygon min-z="-5504" max-z="2496">
+            <point x="130923" y="-229607"/>
+            <point x="163792" y="-229607"/>
+            <point x="163686" y="-196844"/>
+            <point x="131052" y="-196712"/>
+        </polygon>
         <property name="domainId" value="9"/>
-        <point x="130923" y="-229607"/>
-        <point x="163792" y="-229607"/>
-        <point x="163686" y="-196844"/>
-        <point x="131052" y="-196712"/>
     </zone>
-    <zone name="schuttgart_2412_001" type="org.l2j.gameserver.world.zone.type.TaxZone" form="Polygon" minZ="-4972" maxZ="3028">
+    <zone name="schuttgart_2412_001" type="org.l2j.gameserver.world.zone.type.TaxZone">
+        <polygon min-z="-4972" max-z="3028">
+            <point x="131104" y="-196675"/>
+            <point x="163713" y="-196681"/>
+            <point x="163713" y="-163915"/>
+            <point x="130947" y="-163915"/>
+        </polygon>
         <property name="domainId" value="9"/>
-        <point x="131104" y="-196675"/>
-        <point x="163713" y="-196681"/>
-        <point x="163713" y="-163915"/>
-        <point x="130947" y="-163915"/>
     </zone>
-    <zone name="schuttgart_2511_001" type="org.l2j.gameserver.world.zone.type.TaxZone" form="Polygon" minZ="-4860" maxZ="3140">
+    <zone name="schuttgart_2511_001" type="org.l2j.gameserver.world.zone.type.TaxZone">
+        <polygon min-z="-4860" max-z="3140">
+            <point x="163883" y="-229498"/>
+            <point x="196513" y="-229498"/>
+            <point x="197118" y="-196506"/>
+            <point x="163795" y="-196583"/>
+        </polygon>
         <property name="domainId" value="9"/>
-        <point x="163883" y="-229498"/>
-        <point x="196513" y="-229498"/>
-        <point x="197118" y="-196506"/>
-        <point x="163795" y="-196583"/>
     </zone>
-    <zone name="schuttgart_2512_001" type="org.l2j.gameserver.world.zone.type.TaxZone" form="Polygon" minZ="-5936" maxZ="4064">
+    <zone name="schuttgart_2512_001" type="org.l2j.gameserver.world.zone.type.TaxZone">
+        <polygon min-z="-5936" max-z="4064">
+            <point x="163896" y="-196927"/>
+            <point x="196879" y="-196737"/>
+            <point x="196804" y="-163821"/>
+            <point x="163881" y="-163870"/>
+        </polygon>
         <property name="domainId" value="9"/>
-        <point x="163896" y="-196927"/>
-        <point x="196879" y="-196737"/>
-        <point x="196804" y="-163821"/>
-        <point x="163881" y="-163870"/>
     </zone>
 </list>

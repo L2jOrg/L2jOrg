@@ -1,107 +1,135 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org zones.xsd">
-    <zone name="Seed of Annihilation 1" id="60006" type="org.l2j.gameserver.world.zone.type.EffectZone" form="Polygon" minZ="-10700" maxZ="-10100">
+    <zone name="Seed of Annihilation 1" id="60006" type="org.l2j.gameserver.world.zone.type.EffectZone">
+        <polygon min-z="-10700" max-z="-10100">
+            <point x="-180000" y="183000"/>
+            <point x="-178300" y="184666"/>
+            <point x="-173000" y="184666"/>
+            <point x="-173000" y="174500"/>
+            <point x="-187350" y="174500"/>
+            <point x="-187350" y="184666"/>
+            <point x="-182000" y="184666"/>
+            <point x="-180500" y="183000"/>
+        </polygon>
         <property name="maxDynamicSkillCount" value="1"/>
         <property name="showDangerIcon" value="false"/>
         <property name="initialDelay" value="1000"/>
         <property name="reuse" value="3000"/>
-        <point x="-180000" y="183000"/>
-        <point x="-178300" y="184666"/>
-        <point x="-173000" y="184666"/>
-        <point x="-173000" y="174500"/>
-        <point x="-187350" y="174500"/>
-        <point x="-187350" y="184666"/>
-        <point x="-182000" y="184666"/>
-        <point x="-180500" y="183000"/>
     </zone>
 
-    <zone name="Seed of Annihilation 2" id="60007" type="org.l2j.gameserver.world.zone.type.EffectZone" form="Polygon" minZ="-15900" maxZ="-14950">
+    <zone name="Seed of Annihilation 2" id="60007" type="org.l2j.gameserver.world.zone.type.EffectZone">
+        <polygon min-z="-15900" max-z="-14950">
+            <point x="-180000" y="182500"/>
+            <point x="-178800" y="183500"/>
+            <point x="-176500" y="183500"/>
+            <point x="-176500" y="187000"/>
+            <point x="-173000" y="187000"/>
+            <point x="-173000" y="175000"/>
+            <point x="-187500" y="175000"/>
+            <point x="-187500" y="187600"/>
+            <point x="-183500" y="187600"/>
+            <point x="-183500" y="183500"/>
+            <point x="-181000" y="183500"/>
+            <point x="-180500" y="182500"/>
+        </polygon>
         <property name="maxDynamicSkillCount" value="1"/>
         <property name="showDangerIcon" value="false"/>
         <property name="initialDelay" value="1000"/>
         <property name="reuse" value="3000"/>
-        <point x="-180000" y="182500"/>
-        <point x="-178800" y="183500"/>
-        <point x="-176500" y="183500"/>
-        <point x="-176500" y="187000"/>
-        <point x="-173000" y="187000"/>
-        <point x="-173000" y="175000"/>
-        <point x="-187500" y="175000"/>
-        <point x="-187500" y="187600"/>
-        <point x="-183500" y="187600"/>
-        <point x="-183500" y="183500"/>
-        <point x="-181000" y="183500"/>
-        <point x="-180500" y="182500"/>
     </zone>
-    <zone name="Seed of Annihilation 3" id="60008" type="org.l2j.gameserver.world.zone.type.EffectZone" form="Polygon" minZ="-12850" maxZ="-10800">
+    <zone name="Seed of Annihilation 3" id="60008" type="org.l2j.gameserver.world.zone.type.EffectZone">
+        <polygon min-z="-12850" max-z="-10800">
+            <point x="-212800" y="182800"/>
+            <point x="-211000" y="185000"/>
+            <point x="-205000" y="185000"/>
+            <point x="-205000" y="172000"/>
+            <point x="-221000" y="172000"/>
+            <point x="-221000" y="187000"/>
+            <point x="-216000" y="187000"/>
+            <point x="-213500" y="182800"/>
+        </polygon>
         <property name="maxDynamicSkillCount" value="1"/>
         <property name="showDangerIcon" value="false"/>
         <property name="initialDelay" value="1000"/>
         <property name="reuse" value="3000"/>
-        <point x="-212800" y="182800"/>
-        <point x="-211000" y="185000"/>
-        <point x="-205000" y="185000"/>
-        <point x="-205000" y="172000"/>
-        <point x="-221000" y="172000"/>
-        <point x="-221000" y="187000"/>
-        <point x="-216000" y="187000"/>
-        <point x="-213500" y="182800"/>
     </zone>
 
     <!-- (vertices, min Z and Max Z are estimated) -->
-    <zone name="Den of Evil 1" type="org.l2j.gameserver.world.zone.type.EffectZone" form="Cylinder" minZ="-2300" maxZ="-2100" radius="750">
+    <zone name="Den of Evil 1" type="org.l2j.gameserver.world.zone.type.EffectZone">
+        <cylinder min-z="-2300" max-z="-2100" radius="750">
+            <point x="74313" y="-116888"/>
+        </cylinder>
         <property name="reuse" value="9000"/>
         <property name="targetClass" value="Creature"/>
-        <point x="74313" y="-116888"/>
     </zone>
-    <zone name="Den of Evil 2" type="org.l2j.gameserver.world.zone.type.EffectZone" form="Cylinder" minZ="-2400" maxZ="-2200" radius="850">
+    <zone name="Den of Evil 2" type="org.l2j.gameserver.world.zone.type.EffectZone">
+        <cylinder min-z="-2400" max-z="-2200" radius="850">
+            <point x="63170" y="-106621"/>
+        </cylinder>
         <property name="reuse" value="9000"/>
         <property name="targetClass" value="Creature"/>
-        <point x="63170" y="-106621"/>
     </zone>
-    <zone name="Den of Evil 3" type="org.l2j.gameserver.world.zone.type.EffectZone" form="Cylinder" minZ="-1200" maxZ="-1000" radius="1200">
+    <zone name="Den of Evil 3" type="org.l2j.gameserver.world.zone.type.EffectZone">
+        <cylinder min-z="-1200" max-z="-1000" radius="1200">
+            <point x="68030" y="-107150"/>
+        </cylinder>
         <property name="reuse" value="9000"/>
         <property name="targetClass" value="Creature"/>
-        <point x="68030" y="-107150"/>
     </zone>
-    <zone name="Den of Evil 4" type="org.l2j.gameserver.world.zone.type.EffectZone" form="Cylinder" minZ="-3100" maxZ="-2900" radius="1200">
+    <zone name="Den of Evil 4" type="org.l2j.gameserver.world.zone.type.EffectZone">
+        <cylinder min-z="-3100" max-z="-2900" radius="1200">
+            <point x="62351" y="-117376"/>
+        </cylinder>
         <property name="reuse" value="9000"/>
         <property name="targetClass" value="Creature"/>
-        <point x="62351" y="-117376"/>
     </zone>
-    <zone name="Den of Evil 5" type="org.l2j.gameserver.world.zone.type.EffectZone" form="Cylinder" minZ="-2200" maxZ="-2000" radius="1200">
+    <zone name="Den of Evil 5" type="org.l2j.gameserver.world.zone.type.EffectZone">
+        <cylinder min-z="-2200" max-z="-2000" radius="1200">
+            <point x="68100" y="-116006"/>
+        </cylinder>
         <property name="reuse" value="9000"/>
         <property name="targetClass" value="Creature"/>
-        <point x="68100" y="-116006"/>
     </zone>
-    <zone name="Den of Evil 6" type="org.l2j.gameserver.world.zone.type.EffectZone" form="Cylinder" minZ="-2600" maxZ="-2400" radius="1200">
+    <zone name="Den of Evil 6" type="org.l2j.gameserver.world.zone.type.EffectZone">
+        <cylinder min-z="-2600" max-z="-2400" radius="1200">
+            <point x="69911" y="-118790"/>
+        </cylinder>
         <property name="reuse" value="9000"/>
         <property name="targetClass" value="Creature"/>
-        <point x="69911" y="-118790"/>
     </zone>
-    <zone name="Den of Evil 7" type="org.l2j.gameserver.world.zone.type.EffectZone" form="Cylinder" minZ="-3000" maxZ="-2800" radius="1200">
+    <zone name="Den of Evil 7" type="org.l2j.gameserver.world.zone.type.EffectZone">
+        <cylinder min-z="-3000" max-z="-2800" radius="1200">
+            <point x="67520" y="-122211"/>
+        </cylinder>
         <property name="reuse" value="9000"/>
         <property name="targetClass" value="Creature"/>
-        <point x="67520" y="-122211"/>
     </zone>
-    <zone name="Den of Evil 8" type="org.l2j.gameserver.world.zone.type.EffectZone" form="Cylinder" minZ="-3100" maxZ="-2900" radius="1500">
+    <zone name="Den of Evil 8" type="org.l2j.gameserver.world.zone.type.EffectZone">
+        <cylinder min-z="-3100" max-z="-2900" radius="1500">
+            <point x="74325" y="-121296"/>
+        </cylinder>
         <property name="reuse" value="9000"/>
         <property name="targetClass" value="Creature"/>
-        <point x="74325" y="-121296"/>
     </zone>
-    <zone name="Den of Evil 9" type="org.l2j.gameserver.world.zone.type.EffectZone" form="Cylinder" minZ="-3100" maxZ="-2850" radius="1200">
+    <zone name="Den of Evil 9" type="org.l2j.gameserver.world.zone.type.EffectZone">
+        <cylinder min-z="-3100" max-z="-2850" radius="1200">
+            <point x="70788" y="-125554"/>
+        </cylinder>
         <property name="reuse" value="9000"/>
         <property name="targetClass" value="Creature"/>
-        <point x="70788" y="-125554"/>
     </zone>
-    <zone name="Den of Evil 10" type="org.l2j.gameserver.world.zone.type.EffectZone" form="Cylinder" minZ="-3200" maxZ="-3000" radius="1200">
+    <zone name="Den of Evil 10" type="org.l2j.gameserver.world.zone.type.EffectZone">
+        <cylinder min-z="-3200" max-z="-3000" radius="1200">
+            <point x="76155" y="-127355"/>
+        </cylinder>
         <property name="reuse" value="9000"/>
         <property name="targetClass" value="Creature"/>
-        <point x="76155" y="-127355"/>
     </zone>
-    <zone name="Den of Evil 11" type="org.l2j.gameserver.world.zone.type.EffectZone" form="Cylinder" minZ="-3400" maxZ="-3200" radius="750">
+    <zone name="Den of Evil 11" type="org.l2j.gameserver.world.zone.type.EffectZone">
+        <cylinder min-z="-3400" max-z="-3200" radius="750">
+            <point x="71543" y="-128820"/>
+        </cylinder>
         <property name="reuse" value="9000"/>
         <property name="targetClass" value="Creature"/>
-        <point x="71543" y="-128820"/>
     </zone>
 </list>
