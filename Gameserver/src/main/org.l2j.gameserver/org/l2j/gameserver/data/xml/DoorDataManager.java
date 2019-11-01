@@ -41,7 +41,7 @@ public final class DoorDataManager extends GameXmlReader {
 
     @Override
     protected Path getSchemaFilePath() {
-        return getSettings(ServerSettings.class).dataPackDirectory().resolve("data/xsd/DoorData.xsd");
+        return getSettings(ServerSettings.class).dataPackDirectory().resolve("data/xsd/doors.xsd");
     }
 
     @Override
@@ -49,7 +49,7 @@ public final class DoorDataManager extends GameXmlReader {
         doors.clear();
         groups.clear();
         regions.clear();
-        parseDatapackFile("data/DoorData.xml");
+        parseDatapackFile("data/doors.xml");
     }
 
     @Override
@@ -106,11 +106,9 @@ public final class DoorDataManager extends GameXmlReader {
     }
 
     private void spawnDoor(StatsSet set) {
-        // Create door template + door instance
         final DoorTemplate template = new DoorTemplate(set);
         final Door door = spawnDoor(template, null);
 
-        // Register the door
         templates.put(door.getId(), set);
         doors.put(door.getId(), door);
         regions.computeIfAbsent(MapRegionManager.getInstance().getMapRegionLocId(door), key -> new ArrayList<>()).add(door);
@@ -127,15 +125,12 @@ public final class DoorDataManager extends GameXmlReader {
         final Door door = new Door(template);
         door.setCurrentHp(door.getMaxHp());
 
-        // Set instance world if provided
         if (instance != null) {
             door.setInstance(instance);
         }
 
-        // Spawn the door on the world
         door.spawnMe(template.getX(), template.getY(), template.getZ());
 
-        // Register door's group
         if (template.getGroupName() != null) {
             groups.computeIfAbsent(door.getGroupName(), key -> new HashIntSet()).add(door.getId());
         }

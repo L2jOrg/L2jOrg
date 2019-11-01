@@ -8,7 +8,7 @@
 	<xs:element name="list">
 		<xs:complexType>
 			<xs:sequence>
-				<xs:element name="membersOnline">
+				<xs:element name="members-online">
 					<xs:complexType>
 						<xs:sequence>
 							<xs:element name="players" maxOccurs="unbounded" minOccurs="0">
@@ -28,7 +28,7 @@
 						</xs:sequence>
 					</xs:complexType>
 				</xs:element>
-				<xs:element name="huntingBonus">
+				<xs:element name="hunting-bonus">
 					<xs:complexType>
 						<xs:sequence>
 							<xs:element name="hunting" maxOccurs="unbounded" minOccurs="0">

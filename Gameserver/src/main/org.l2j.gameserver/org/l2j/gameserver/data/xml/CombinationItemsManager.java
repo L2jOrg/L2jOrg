@@ -31,13 +31,13 @@ public class CombinationItemsManager extends GameXmlReader {
 
     @Override
     protected Path getSchemaFilePath() {
-        return getSettings(ServerSettings.class).dataPackDirectory().resolve("data/xsd/CombinationItems.xsd");
+        return getSettings(ServerSettings.class).dataPackDirectory().resolve("data/xsd/combination-items.xsd");
     }
 
     @Override
     public synchronized void load() {
         items.clear();
-        parseDatapackFile("data/CombinationItems.xml");
+        parseDatapackFile("data/combination-items.xml");
         LOGGER.info("Loaded {} combinations", items.size());
     }
 

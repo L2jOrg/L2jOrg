@@ -39,12 +39,12 @@ public final class ElementalSpiritEngine extends GameXmlReader {
 
     @Override
     protected Path getSchemaFilePath() {
-        return getSettings(ServerSettings.class).dataPackDirectory().resolve("data/elemental/elementalSpirits.xsd");
+        return getSettings(ServerSettings.class).dataPackDirectory().resolve("data/elemental/elemental-spirits.xsd");
     }
 
     @Override
     public void load() {
-        parseDatapackFile("data/elemental/elementalSpirits.xml");
+        parseDatapackFile("data/elemental/elemental-spirits.xml");
         LOGGER.info("Loaded {} Elemental Spirits Templates.", spiritData.size());
     }
 

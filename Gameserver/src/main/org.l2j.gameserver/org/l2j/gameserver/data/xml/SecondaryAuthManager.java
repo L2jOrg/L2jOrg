@@ -28,13 +28,13 @@ public class SecondaryAuthManager extends GameXmlReader {
 
     @Override
     protected Path getSchemaFilePath() {
-        return Path.of("config/xsd/SecondaryAuth.xsd");
+        return Path.of("config/xsd/secondary-auth.xsd");
     }
 
     @Override
     public synchronized void load() {
         forbiddenPasswords.clear();
-        parseFile(new File("config/SecondaryAuth.xml"));
+        parseFile(new File("config/secondary-auth.xml"));
         LOGGER.info("Loaded {} forbidden passwords.", forbiddenPasswords.size() );
     }
 

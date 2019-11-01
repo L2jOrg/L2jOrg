@@ -33,13 +33,13 @@ public final class CategoryManager extends GameXmlReader {
 
     @Override
     protected Path getSchemaFilePath() {
-        return getSettings(ServerSettings.class).dataPackDirectory().resolve("data/xsd/CategoryData.xsd");
+        return getSettings(ServerSettings.class).dataPackDirectory().resolve("data/xsd/categories.xsd");
     }
 
     @Override
     public void load() {
         categories.clear();
-        parseDatapackFile("data/CategoryData.xml");
+        parseDatapackFile("data/categories.xml");
         LOGGER.info("Loaded {} Categories", categories.size());
     }
 

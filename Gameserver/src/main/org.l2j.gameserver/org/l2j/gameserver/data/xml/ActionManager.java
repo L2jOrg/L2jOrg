@@ -31,21 +31,17 @@ public final class ActionManager extends GameXmlReader {
 
     @Override
     protected Path getSchemaFilePath() {
-        return getSettings(ServerSettings.class).dataPackDirectory().resolve("data/xsd/ActionData.xsd");
+        return getSettings(ServerSettings.class).dataPackDirectory().resolve("data/xsd/actions.xsd");
     }
 
     @Override
     public void load() {
         actions.clear();
         actionSkills.clear();
-        parseDatapackFile("data/ActionData.xml");
-        actions.values().stream().filter(this::isActionSkill).forEach(h -> actionSkills.put(h.getOptionId(), h.getId()));
+        parseDatapackFile("data/actions.xml");
         LOGGER.info("Loaded {} player actions.", actions.size());
     }
 
-    private boolean isActionSkill(ActionData h) {
-        return h.getHandler().equals("PetSkillUse") || h.getHandler().equals("ServitorSkillUse");
-    }
 
     @Override
     public void parseDocument(Document doc, File f) {
@@ -55,9 +51,17 @@ public final class ActionManager extends GameXmlReader {
             var handler = parseString(attrs, "handler");
             var optionId = parseInteger(attrs, "option");
 
-            final ActionData holder = new ActionData(id, handler, optionId);
-            actions.put(holder.getId(), holder);
+            final ActionData action = new ActionData(id, handler, optionId);
+            actions.put(action.getId(), action);
+
+            if(isActionSkill(action)) {
+                actionSkills.put(action.getOptionId(), action.getId());
+            }
         }));
+    }
+
+    private boolean isActionSkill(ActionData h) {
+        return h.getHandler().equals("PetSkillUse") || h.getHandler().equals("ServitorSkillUse");
     }
 
     /**

@@ -120,6 +120,10 @@ public final class AnnouncementsManager {
         return announcements.get(id);
     }
 
+    public void restartAutoAnnounce() {
+        announcements.values().stream().filter(AnnouncementType::isAutoAnnounce).map(AnnounceData.class::cast).forEach(this::scheduleAnnounce);
+    }
+
     /**
      * @return {@link Collection} containing all announcements
      */

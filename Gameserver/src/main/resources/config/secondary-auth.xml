@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<secondary-auth  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org xsd/SecondaryAuth.xsd"
+<secondary-auth  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org secondary-auth.xsd"
 				 recovery-link="https://github.com/JoeAlisson/L2jOrg">
 
 	<forbidden-passwords> <!-- List of forbidden passwords -->

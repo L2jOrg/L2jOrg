@@ -6,7 +6,7 @@
 				<xs:element name="action" maxOccurs="unbounded" minOccurs="0">
 					<xs:complexType>
 						<xs:attribute type="xs:nonNegativeInteger" name="id" use="required" />
-						<xs:attribute type="xs:string" name="handler" use="required" />
+						<xs:attribute type="xs:token" name="handler" use="required" />
 						<xs:attribute type="xs:int" name="option" default="0" />
 					</xs:complexType>
 				</xs:element>

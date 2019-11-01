@@ -40,8 +40,8 @@ public final class WorldTimeController extends Thread {
 
     private WorldTimeController() {
         super("GameTimeController");
-        super.setDaemon(true);
-        super.setPriority(MAX_PRIORITY);
+        setDaemon(true);
+        setPriority(MAX_PRIORITY);
 
         referenceTime = LocalDate.now().atStartOfDay(ZoneId.systemDefault()).toInstant().toEpochMilli();
     }

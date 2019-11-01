@@ -32,12 +32,12 @@ public class ClanRewardManager extends GameXmlReader {
 
     @Override
     protected Path getSchemaFilePath() {
-        return Path.of("config/xsd/ClanReward.xsd");
+        return Path.of("config/xsd/clan-reward.xsd");
     }
 
     @Override
     public void load() {
-        parseFile(new File("config/ClanReward.xml"));
+        parseFile(new File("config/clan-reward.xml"));
         for (ClanRewardType type : ClanRewardType.values()) {
             LOGGER.info("Loaded {} rewards for {}", (clanRewards.containsKey(type) ? clanRewards.get(type).size() : 0), type);
         }
@@ -47,8 +47,8 @@ public class ClanRewardManager extends GameXmlReader {
     public void parseDocument(Document doc, File f) {
         forEach(doc.getFirstChild(), XmlReader::isNode, listNode -> {
             switch (listNode.getNodeName()) {
-                case "membersOnline" -> parseMembersOnline(listNode);
-                case "huntingBonus" -> parseHuntingBonus(listNode);
+                case "members-online" -> parseMembersOnline(listNode);
+                case "hunting-bonus" -> parseHuntingBonus(listNode);
             }
         });
     }

@@ -85,8 +85,7 @@ public class AdminAnnouncements implements IAdminCommandHandler {
 
     private boolean restartAnnounce(Player gm, StringTokenizer st) {
         if (!st.hasMoreTokens()) {
-            var manager = AnnouncementsManager.getInstance();
-            manager.getAllAnnouncements().stream().filter(AnnouncementType::isAutoAnnounce).forEach(a -> manager.scheduleAnnounce((AnnounceData) a));
+            AnnouncementsManager.getInstance().restartAutoAnnounce();
             BuilderUtil.sendSysMessage(gm, "Auto announcements has been successfully restarted.");
             return true;
         }
