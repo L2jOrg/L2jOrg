@@ -1,5 +1,5 @@
 @echo off
-
+echo Make sure mysql is on your bin path!
 if exist mysql_settings.conf goto settings
 
 echo Can't find mysql_settings.conf file!

@@ -1,5 +1,5 @@
 @echo off
-title Gameserver Classic - Kamael
+title Lineage 2 Gameserver - L2jOrg Kamael Update
 
 :start
 echo Starting GameServer.

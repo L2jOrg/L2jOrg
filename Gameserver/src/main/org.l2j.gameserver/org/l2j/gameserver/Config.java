@@ -1399,8 +1399,8 @@ public final class Config {
         FORCE_INVENTORY_UPDATE = General.getBoolean("ForceInventoryUpdate", false);
 
         CACHE_CHAR_NAMES = General.getBoolean("CacheCharNames", true);
-        MIN_NPC_ANIMATION = General.getInt("MinNPCAnimation", 5);
-        MAX_NPC_ANIMATION = General.getInt("MaxNPCAnimation", 60);
+        MIN_NPC_ANIMATION = General.getInt("MinNpcAnimation", 5);
+        MAX_NPC_ANIMATION = General.getInt("MaxNpcAnimation", 60);
         MIN_MONSTER_ANIMATION = General.getInt("MinMonsterAnimation", 5);
         MAX_MONSTER_ANIMATION = General.getInt("MaxMonsterAnimation", 60);
         GRIDS_ALWAYS_ON = General.getBoolean("GridsAlwaysOn", false);
@@ -2296,7 +2296,7 @@ public final class Config {
                     externalIp = in.readLine();
                 }
             } catch (IOException e) {
-                LOGGER.info("Failed to connect to api.ipify.org please check your internet connection using 127.0.0.1!");
+                LOGGER.info("Failed to connect to api.ipify.org please check your internet connection! using 127.0.0.1!");
                 externalIp = "127.0.0.1";
             }
 
