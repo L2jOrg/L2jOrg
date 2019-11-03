@@ -3,7 +3,6 @@
     <item id="5126" name="Dual Weapon Crafting Stamp" type="EtcItem">
         <!-- Essential component for making dualswords of B-grade and higher. -->
         <set name="icon" val="icon.etc_letter_blue_i00"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="20"/>
         <set name="price" val="10000"/>
         <set name="is_stackable" val="true"/>
@@ -17,7 +16,6 @@
         <set name="damage_range" val="0;0;40;120"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="D"/>
-        <set name="material" val="STEEL"/>
         <set name="weight" val="300"/>
         <set name="price" val="10000"/>
         <set name="soulshots" val="1"/>
@@ -45,7 +43,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="101"/>
         <set name="crystal_type" val="D"/>
-        <set name="material" val="STEEL"/>
         <set name="weight" val="300"/>
         <set name="price" val="10000"/>
         <set name="soulshots" val="1"/>
@@ -72,7 +69,6 @@
         <set name="damage_range" val="0;0;44;120"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="D"/>
-        <set name="material" val="STEEL"/>
         <set name="weight" val="300"/>
         <set name="price" val="10000"/>
         <set name="soulshots" val="1"/>
@@ -99,7 +95,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="101"/>
         <set name="crystal_type" val="D"/>
-        <set name="material" val="STEEL"/>
         <set name="weight" val="300"/>
         <set name="price" val="10000"/>
         <set name="soulshots" val="1"/>
@@ -127,7 +122,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="101"/>
         <set name="crystal_type" val="D"/>
-        <set name="material" val="STEEL"/>
         <set name="weight" val="300"/>
         <set name="price" val="10000"/>
         <set name="soulshots" val="1"/>
@@ -155,7 +149,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="101"/>
         <set name="crystal_type" val="D"/>
-        <set name="material" val="STEEL"/>
         <set name="weight" val="300"/>
         <set name="price" val="10000"/>
         <set name="soulshots" val="1"/>
@@ -182,7 +175,6 @@
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;40;120"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="commissionItemType" val="FIST_WEAPON"/>
 
         <set name="is_dropable" val="false"/>
@@ -201,7 +193,6 @@
         <set name="icon" val="icon.etc_pouch_yellow_i00"/>
         <set name="default_action" val="CAPSULE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="weight" val="600"/>
         <set name="price" val="2300"/>
         <set name="handler" val="ItemSkills"/>
@@ -215,7 +206,6 @@
         <set name="icon" val="icon.etc_pouch_yellow_i00"/>
         <set name="default_action" val="CAPSULE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="weight" val="450"/>
         <set name="price" val="3300"/>
         <set name="handler" val="ItemSkills"/>
@@ -229,7 +219,6 @@
         <set name="icon" val="icon.etc_pouch_yellow_i00"/>
         <set name="default_action" val="CAPSULE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="weight" val="450"/>
         <set name="price" val="4950"/>
         <set name="handler" val="ItemSkills"/>
@@ -243,7 +232,6 @@
         <set name="icon" val="icon.etc_pouch_yellow_i00"/>
         <set name="default_action" val="CAPSULE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="weight" val="200"/>
         <set name="price" val="16500"/>
         <set name="handler" val="ItemSkills"/>
@@ -257,7 +245,6 @@
         <set name="icon" val="icon.etc_pouch_yellow_i00"/>
         <set name="default_action" val="CAPSULE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="weight" val="200"/>
         <set name="price" val="26400"/>
         <set name="handler" val="ItemSkills"/>
@@ -271,7 +258,6 @@
         <set name="icon" val="icon.etc_pouch_yellow_i00"/>
         <set name="default_action" val="CAPSULE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="weight" val="750"/>
         <set name="price" val="4950"/>
         <set name="handler" val="ItemSkills"/>
@@ -285,7 +271,6 @@
         <set name="icon" val="icon.etc_pouch_yellow_i00"/>
         <set name="default_action" val="CAPSULE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="weight" val="750"/>
         <set name="price" val="5940"/>
         <set name="handler" val="ItemSkills"/>
@@ -299,7 +284,6 @@
         <set name="icon" val="icon.etc_pouch_yellow_i00"/>
         <set name="default_action" val="CAPSULE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="weight" val="450"/>
         <set name="price" val="11550"/>
         <set name="handler" val="ItemSkills"/>
@@ -313,7 +297,6 @@
         <set name="icon" val="icon.etc_pouch_yellow_i00"/>
         <set name="default_action" val="CAPSULE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="weight" val="450"/>
         <set name="price" val="33000"/>
         <set name="handler" val="ItemSkills"/>
@@ -327,7 +310,6 @@
         <set name="icon" val="icon.etc_pouch_yellow_i00"/>
         <set name="default_action" val="CAPSULE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="weight" val="200"/>
         <set name="price" val="39600"/>
         <set name="handler" val="ItemSkills"/>
@@ -341,7 +323,6 @@
         <set name="icon" val="icon.etc_pouch_yellow_i00"/>
         <set name="default_action" val="CAPSULE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="weight" val="750"/>
         <set name="price" val="11550"/>
         <set name="handler" val="ItemSkills"/>
@@ -355,7 +336,6 @@
         <set name="icon" val="icon.etc_pouch_yellow_i00"/>
         <set name="default_action" val="CAPSULE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="weight" val="750"/>
         <set name="price" val="14850"/>
         <set name="handler" val="ItemSkills"/>
@@ -369,7 +349,6 @@
         <set name="icon" val="icon.etc_pouch_yellow_i00"/>
         <set name="default_action" val="CAPSULE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="weight" val="450"/>
         <set name="price" val="29700"/>
         <set name="handler" val="ItemSkills"/>
@@ -383,7 +362,6 @@
         <set name="icon" val="icon.etc_pouch_yellow_i00"/>
         <set name="default_action" val="CAPSULE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="weight" val="450"/>
         <set name="price" val="80850"/>
         <set name="handler" val="ItemSkills"/>
@@ -397,7 +375,6 @@
         <set name="icon" val="icon.etc_pouch_yellow_i00"/>
         <set name="default_action" val="CAPSULE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="weight" val="200"/>
         <set name="price" val="95700"/>
         <set name="handler" val="ItemSkills"/>
@@ -410,7 +387,6 @@
         <!-- Magic tool needed to compress soulshots, spiritshots etc. -->
         <set name="icon" val="icon.etc_jewel_box_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="weight" val="10"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
         <set name="price" val="100"/>
@@ -421,7 +397,6 @@
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="30"/>
         <set name="price" val="5000"/>
         <set name="recipe_id" val="480"/>
@@ -435,7 +410,6 @@
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="30"/>
         <set name="price" val="60000"/>
         <set name="recipe_id" val="481"/>
@@ -449,7 +423,6 @@
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="30"/>
         <set name="price" val="100000"/>
         <set name="recipe_id" val="482"/>
@@ -463,7 +436,6 @@
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="30"/>
         <set name="price" val="150000"/>
         <set name="recipe_id" val="483"/>
@@ -477,7 +449,6 @@
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="30"/>
         <set name="price" val="5000"/>
         <set name="recipe_id" val="485"/>
@@ -491,7 +462,6 @@
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="30"/>
         <set name="price" val="60000"/>
         <set name="recipe_id" val="486"/>
@@ -505,7 +475,6 @@
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="30"/>
         <set name="price" val="100000"/>
         <set name="recipe_id" val="487"/>
@@ -519,7 +488,6 @@
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="30"/>
         <set name="price" val="150000"/>
         <set name="recipe_id" val="488"/>
@@ -533,7 +501,6 @@
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="30"/>
         <set name="price" val="5000"/>
         <set name="recipe_id" val="490"/>
@@ -547,7 +514,6 @@
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="30"/>
         <set name="price" val="60000"/>
         <set name="recipe_id" val="491"/>
@@ -561,7 +527,6 @@
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="30"/>
         <set name="price" val="100000"/>
         <set name="recipe_id" val="492"/>
@@ -575,7 +540,6 @@
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="30"/>
         <set name="price" val="150000"/>
         <set name="recipe_id" val="493"/>
@@ -587,7 +551,6 @@
         <!-- Rope that has magical power. It is made by weaving strips of lizard leather together. Using this rope to tie an item will reduce its weight so that it will be easier to carry. -->
         <set name="icon" val="icon.etc_braided_hemp_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="2"/>
         <set name="price" val="100"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
@@ -597,7 +560,6 @@
         <!-- Rope that has magical power. It is made by weaving strips of lizard leather together. Using this rope to tie an item will reduce its weight so that it will be easier to carry. -->
         <set name="icon" val="icon.etc_braided_hemp_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="2"/>
         <set name="price" val="150"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
@@ -607,7 +569,6 @@
         <!-- Rope that has magical power. It is made by weaving strips of lizard leather together. Using this rope to tie an item will reduce its weight so that it will be easier to carry. -->
         <set name="icon" val="icon.etc_braided_hemp_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="2"/>
         <set name="price" val="250"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
@@ -617,7 +578,6 @@
         <!-- Rope that has magical power. It is made by weaving strips of lizard leather together. Using this rope to tie an item will reduce its weight so that it will be easier to carry. -->
         <set name="icon" val="icon.etc_braided_hemp_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="2"/>
         <set name="price" val="400"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
@@ -627,7 +587,6 @@
         <!-- Rope that has magical power. It is made by weaving strips of lizard leather together. Using this rope to tie an item will reduce its weight so that it will be easier to carry. -->
         <set name="icon" val="icon.etc_braided_hemp_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="2"/>
         <set name="price" val="400"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
@@ -637,7 +596,6 @@
         <!-- Opens a level 1 treasure chest with a success rate of 60%. When opening a higher level treasure chest, the success rate will decrease. -->
         <set name="icon" val="icon.etc_key_i00"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="10"/>
         <set name="price" val="70"/>
         <set name="is_stackable" val="true"/>
@@ -652,7 +610,6 @@
         <!-- Opens a level 10 treasure chest with a success rate of 60%. When opening a higher level treasure chest, the success rate will decrease. -->
         <set name="icon" val="icon.etc_key_i00"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="10"/>
         <set name="price" val="760"/>
         <set name="is_stackable" val="true"/>
@@ -667,7 +624,6 @@
         <!-- Opens a level 20 treasure chest with a success rate of 60%. When opening a higher level treasure chest, the success rate will decrease. -->
         <set name="icon" val="icon.etc_key_i00"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="10"/>
         <set name="price" val="1200"/>
         <set name="is_stackable" val="true"/>

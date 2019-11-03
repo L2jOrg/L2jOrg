@@ -6,7 +6,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="hairall"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="WOOD"/>
         <set name="weight" val="10"/>
         <set name="is_sellable" val="false"/>
     </item>
@@ -16,7 +15,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="hairall"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="WOOD"/>
         <set name="weight" val="10"/>
         <set name="is_sellable" val="false"/>
     </item>
@@ -26,7 +24,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="hair"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="WOOD"/>
         <set name="weight" val="10"/>
         <set name="is_sellable" val="false"/>
     </item>
@@ -36,14 +33,12 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="hair"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="WOOD"/>
         <set name="weight" val="10"/>
         <set name="is_sellable" val="false"/>
     </item>
     <item id="20033" name="Unoccupied Teleport Device Flag" type="EtcItem">
         <!-- The item is used when the current location of an Unoccupied Teleport Device is saved. -->
         <set name="icon" val="BranchSys.icon.br_flag_of_bookmark_i00"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="5"/>
         <set name="is_stackable" val="true"/>
     </item>

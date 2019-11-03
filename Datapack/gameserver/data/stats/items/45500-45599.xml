@@ -3,7 +3,6 @@
     <item id="45584" name="Mark of Battle" type="EtcItem">
         <!-- A reward for the success in the Olympiad. Can be traded for a special gift with Olympiad Manager in any village. Cannot be exchanged, dropped or sold in a private store. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.bel_mark_clear"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_depositable" val="false"/>

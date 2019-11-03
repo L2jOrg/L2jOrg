@@ -3,7 +3,6 @@
     <item id="13417" name="Letter Y" type="EtcItem">
         <!-- Combine with other letters to create a special word and bring it to the Letter Collector to receive a great gift! -->
         <set name="icon" val="icon.etc_alphabet_y_i00"/>
-        <set name="material" val="PAPER"/>
         <set name="is_stackable" val="true"/>
 	</item>
 	<item id="13435" name="Vesper Noble Breastplate" additionalName="Not used" type="Armor">
@@ -13,7 +12,6 @@
 		<set name="armor_type" val="LIGHT" />
 		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="WOOD" />
 		<set name="weight" val="7520" />
 		<set name="price" val="7960" />
 		<stats>
@@ -27,7 +25,6 @@
 		<set name="armor_type" val="LIGHT" />
 		<set name="bodypart" val="legs" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="BONE" />
 		<set name="weight" val="3170" />
 		<set name="price" val="12700" />
 		<stats>
@@ -41,7 +38,6 @@
 		<set name="bodypart" val="gloves" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="D" />
-		<set name="material" val="LEATHER" />
 		<set name="weight" val="510" />
 		<set name="price" val="33300" />
 		<set name="enchant_enabled" val="1" />
@@ -56,7 +52,6 @@
 		<set name="bodypart" val="feet" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="D" />
-		<set name="material" val="LEATHER" />
 		<set name="weight" val="1070" />
 		<set name="price" val="20900" />
 		<set name="enchant_enabled" val="1" />
@@ -69,7 +64,6 @@
 		<set name="icon" val="icon.weapon_vesper_pincer_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
 		<set name="weight" val="1300" />
 		<set name="price" val="5100" />
 		<stats>
@@ -88,7 +82,6 @@
 		<set name="weapon_type" val="DUALBLUNT" />
 		<set name="bodypart" val="lrhand" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="BRONZE" />
 		<set name="weight" val="1530" />
 		<set name="price" val="5100" />
 		<set name="soulshots" val="1" />

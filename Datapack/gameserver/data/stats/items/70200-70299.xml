@@ -6,7 +6,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="rear;lear"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="GOLD"/>
         <set name="weight" val="150"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
@@ -23,7 +22,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="rear;lear"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="GOLD"/>
         <set name="weight" val="150"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
@@ -40,7 +38,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="hairall"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="WOOD"/>
         <set name="weight" val="10"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
@@ -55,7 +52,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="hairall"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="WOOD"/>
         <set name="weight" val="10"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
@@ -67,7 +63,6 @@
     <item id="70204" name="Feather of Blessing" type="EtcItem">
         <!-- A dimensional item. Allows resurrecting immediately after death. -->
         <set name="icon" val="icon.blessed_feather_i00"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_depositable" val="false"/>
@@ -79,7 +74,6 @@
         <set name="icon" val="icon.etc_pi_gift_box_i00"/>
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_depositable" val="false"/>
@@ -92,7 +86,6 @@
         <set name="icon" val="icon.etc_pi_gift_box_i00"/>
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_depositable" val="false"/>
@@ -105,7 +98,6 @@
         <set name="icon" val="icon.etc_pi_gift_box_i00"/>
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_depositable" val="false"/>
@@ -118,7 +110,6 @@
         <set name="icon" val="icon.etc_pi_gift_box_i00"/>
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_depositable" val="false"/>
@@ -131,7 +122,6 @@
         <set name="icon" val="icon.etc_pi_gift_box_i00"/>
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_depositable" val="false"/>
@@ -144,7 +134,6 @@
         <set name="icon" val="icon.etc_pi_gift_box_i00"/>
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_depositable" val="false"/>
@@ -156,7 +145,6 @@
         <!-- A cubic which you can use for 30 days, once a day. Open it to obtain various items. -->
         <set name="icon" val="icon.etc_ore_cube_event_i00"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_depositable" val="false"/>
@@ -166,7 +154,6 @@
         <!-- A cubic which you can use for 30 days, once a day. Open it to obtain various items. -->
         <set name="icon" val="icon.etc_ore_cube_event_i00"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_depositable" val="false"/>
@@ -177,7 +164,6 @@
         <set name="icon" val="icon.etc_pi_gift_box_i00"/>
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_depositable" val="false"/>
@@ -189,7 +175,6 @@
         <set name="icon" val="icon.etc_pi_gift_box_i00"/>
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_depositable" val="false"/>
@@ -201,7 +186,6 @@
         <set name="icon" val="icon.etc_pi_box_joy_pack"/>
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_destroyable" val="false"/>
@@ -214,7 +198,6 @@
         <!-- A 21-item. Can be used once a day. Allows obtaining a vast variety of items. Cannot be exchanged, dropped or sold. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.etc_ore_cube_event_i00"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_depositable" val="false"/>
@@ -225,14 +208,12 @@
         <!-- If you collect 4 of them, you will obtain Chronicle Cube -->
         <set name="icon" val="icon.etc_lottery_card_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="is_stackable" val="true"/>
     </item>
     <item id="70218" name="Chronicle Chest" type="EtcItem">
         <!-- Allows obtaining a vast variety of items. Cannot be exchanged, dropped or sold. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.ev_10th_present2"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_depositable" val="false"/>
@@ -247,7 +228,6 @@
         <!-- Double-click to receive one of the following items: Refined Queen Ant's Ring (7-day), Refined Orfen's Earring (7-day), or Refined Ring of Core (7-day). -->
         <set name="icon" val="icon.etc_box_of_adventure_3_i00"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_depositable" val="false"/>
@@ -261,7 +241,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="rfinger;lfinger"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="GOLD"/>
         <set name="weight" val="150"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
@@ -283,7 +262,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="rear;lear"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="GOLD"/>
         <set name="weight" val="150"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
@@ -305,7 +283,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="rfinger;lfinger"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="GOLD"/>
         <set name="weight" val="150"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
@@ -327,7 +304,6 @@
         <set name="icon" val="icon.etc_pi_gift_box_i00"/>
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_depositable" val="false"/>
@@ -339,7 +315,6 @@
         <set name="icon" val="icon.etc_pi_gift_box_i00"/>
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_depositable" val="false"/>
@@ -351,7 +326,6 @@
         <set name="icon" val="icon.etc_pi_gift_box_i00"/>
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_depositable" val="false"/>
@@ -363,7 +337,6 @@
         <set name="icon" val="icon.etc_pi_gift_box_i00"/>
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_depositable" val="false"/>
@@ -375,7 +348,6 @@
         <set name="icon" val="icon.etc_pi_gift_box_i00"/>
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_depositable" val="false"/>
@@ -387,7 +359,6 @@
         <set name="icon" val="icon.etc_pi_gift_box_i00"/>
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_depositable" val="false"/>
@@ -399,7 +370,6 @@
         <set name="icon" val="icon.etc_pi_gift_box_i00"/>
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_depositable" val="false"/>
@@ -409,7 +379,6 @@
     <item id="70230" name="Exchange Coupon: Refined Rare Accessory Pack" type="EtcItem">
         <!-- Using Dimensional Merchant, you can trade it for a Refined Rare Accessory (30-day). The item will be removed after the event is over. -->
         <set name="icon" val="icon.etc_lottery_card_i00"/>
-        <set name="material" val="PAPER"/>
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
@@ -418,14 +387,12 @@
         <set name="icon" val="icon.bm_pirate_treasure_box"/>
         <set name="default_action" val="CAPSULE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
     <item id="70232" name="Coco Brownie's Amulet of Love" type="EtcItem">
         <!-- An amulet created by Coco Brownie to endow the Heroes of Aden with love. Carry it with you, and something good will definitely happen. Having the amulet in your inventory enables getting chocolate from Coco Brownie once a day. Cannot be exchanged, dropped, or destroyed. Can be stored in a private warehouse. The item will be removed after the event is over. -->
         <set name="icon" val="icon.love_potion_party"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_destroyable" val="false"/>
@@ -440,7 +407,6 @@
         <set name="is_stackable" val="true"/>
         <set name="etcitem_type" val="POTION"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="reuse_delay" val="3000"/>
         <set name="is_oly_restricted" val="true"/>
         <set name="handler" val="ItemSkills"/>
@@ -457,7 +423,6 @@
         <set name="is_stackable" val="true"/>
         <set name="etcitem_type" val="POTION"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="reuse_delay" val="3000"/>
         <set name="is_oly_restricted" val="true"/>
         <set name="handler" val="ItemSkills"/>
@@ -474,7 +439,6 @@
         <set name="is_stackable" val="true"/>
         <set name="etcitem_type" val="POTION"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="reuse_delay" val="3000"/>
         <set name="is_oly_restricted" val="true"/>
         <set name="handler" val="ItemSkills"/>
@@ -488,7 +452,6 @@
         <!-- When used, adds 50 SP -->
         <set name="icon" val="icon.etc_sp_scroll1_i00"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
@@ -496,7 +459,6 @@
         <!-- When used, adds 100 SP -->
         <set name="icon" val="icon.etc_sp_scroll2_i00"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
@@ -504,7 +466,6 @@
         <!-- When used, adds 1,000 SP -->
         <set name="icon" val="icon.etc_sp_scroll3_i00"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
@@ -512,7 +473,6 @@
         <!-- When used, provides 50% XP bonus for 1 hour. Intended for Lv. 1~19. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.etc_dragons_blood_i03"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_depositable" val="false"/>
@@ -524,7 +484,6 @@
         <!-- When used, provides 50% XP bonus for 1 hour. Intended for Lv. 1~19. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.etc_dragons_blood_i03"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_depositable" val="false"/>
@@ -536,7 +495,6 @@
         <!-- When used, provides 50% XP bonus for 1 hour. Intended for Lv. 1~19. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.etc_dragons_blood_i03"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_depositable" val="false"/>
@@ -548,7 +506,6 @@
         <!-- When used, provides 50% XP bonus for 1 hour. Intended for Lv. 20~39. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.etc_dragons_blood_i03"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_depositable" val="false"/>
@@ -560,7 +517,6 @@
         <!-- When used, provides 50% XP bonus for 1 hour. Intended for Lv. 20~39. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.etc_dragons_blood_i03"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_depositable" val="false"/>
@@ -572,7 +528,6 @@
         <!-- When used, provides 50% XP bonus for 1 hour. Intended for Lv. 20~39. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.etc_dragons_blood_i03"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_depositable" val="false"/>
@@ -584,7 +539,6 @@
         <!-- When used, provides 50% XP bonus for 1 hour. Intended for Lv. 40~51. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.etc_dragons_blood_i03"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_depositable" val="false"/>
@@ -596,7 +550,6 @@
         <!-- When used, provides 50% XP bonus for 1 hour. Intended for Lv. 40~51. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.etc_dragons_blood_i03"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_depositable" val="false"/>
@@ -608,7 +561,6 @@
         <!-- When used, provides 50% XP bonus for 1 hour. Intended for Lv. 40~51. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.etc_dragons_blood_i03"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_depositable" val="false"/>
@@ -620,7 +572,6 @@
         <!-- When used, provides 50% XP bonus for 1 hour. Intended for Lv. 52~60. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.etc_dragons_blood_i03"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_depositable" val="false"/>
@@ -632,7 +583,6 @@
         <!-- When used, provides 50% XP bonus for 1 hour. Intended for Lv. 52~60. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.etc_dragons_blood_i03"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_depositable" val="false"/>
@@ -644,7 +594,6 @@
         <!-- When used, provides 50% XP bonus for 1 hour. Intended for Lv. 52~60. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.etc_dragons_blood_i03"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_depositable" val="false"/>
@@ -656,7 +605,6 @@
         <!-- When used, provides 50% XP bonus for 1 hour. Intended for Lv. 61~75. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.etc_dragons_blood_i03"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_depositable" val="false"/>
@@ -668,7 +616,6 @@
         <!-- When used, provides 50% XP bonus for 1 hour. Intended for Lv. 61~75. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.etc_dragons_blood_i03"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_depositable" val="false"/>
@@ -680,7 +627,6 @@
         <!-- When used, provides 50% XP bonus for 1 hour. Intended for Lv. 61~75. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.etc_dragons_blood_i03"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_depositable" val="false"/>
@@ -692,7 +638,6 @@
         <!-- When used, provides 50% XP bonus for 1 hour. Intended for Lv. 76~79. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.etc_dragons_blood_i03"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_depositable" val="false"/>
@@ -704,7 +649,6 @@
         <!-- When used, provides 50% XP bonus for 1 hour. Intended for Lv. 76~79. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.etc_dragons_blood_i03"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_depositable" val="false"/>
@@ -716,7 +660,6 @@
         <!-- When used, provides 50% XP bonus for 1 hour. Intended for Lv. 76~79. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.etc_dragons_blood_i03"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_depositable" val="false"/>
@@ -728,7 +671,6 @@
         <!-- When used, provides 50% XP bonus for 1 hour. Intended for Lv. 80~85. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.etc_dragons_blood_i03"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_depositable" val="false"/>
@@ -740,7 +682,6 @@
         <!-- When used, provides 50% XP bonus for 1 hour. Intended for Lv. 80~85. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.etc_dragons_blood_i03"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_depositable" val="false"/>
@@ -752,7 +693,6 @@
         <!-- When used, provides 50% XP bonus for 1 hour. Intended for Lv. 80~85. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.etc_dragons_blood_i03"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_depositable" val="false"/>
@@ -764,7 +704,6 @@
         <!-- When used, provides 50% XP bonus for 1 hour. Intended for Lv. 1~99. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.etc_dragons_blood_i03"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_depositable" val="false"/>
@@ -776,7 +715,6 @@
         <!-- When used, provides 50% XP bonus for 1 hour. Intended for Lv. 1~99. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.etc_dragons_blood_i03"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_depositable" val="false"/>
@@ -788,7 +726,6 @@
         <!-- When used, provides 50% XP bonus for 1 hour. Intended for Lv. 1~99. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.etc_dragons_blood_i03"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_depositable" val="false"/>
@@ -800,7 +737,6 @@
         <!-- When used, provides 50% XP bonus for 1 hour. Intended for Lv. 1~99. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.etc_dragons_blood_i03"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_depositable" val="false"/>
@@ -811,7 +747,6 @@
     <item id="70264" name="Irene's Song 100%" additionalName="1 hour" type="EtcItem">
         <!-- When in inventory, your XP and SP gain is increased by 100%. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. -->
         <set name="icon" val="br_cashtex.item.br_cash_rune_of_feather_i00"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_depositable" val="false"/>
@@ -821,7 +756,6 @@
     <item id="70265" name="Irene's Song 100%" additionalName="3 hours" type="EtcItem">
         <!-- When in inventory, your XP and SP gain is increased by 100%. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. -->
         <set name="icon" val="br_cashtex.item.br_cash_rune_of_feather_i00"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_depositable" val="false"/>
@@ -831,7 +765,6 @@
     <item id="70266" name="Irene's Song 100%" additionalName="5 hours" type="EtcItem">
         <!-- When in inventory, your XP and SP gain is increased by 100%. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. -->
         <set name="icon" val="br_cashtex.item.br_cash_rune_of_feather_i00"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_depositable" val="false"/>
@@ -841,7 +774,6 @@
     <item id="70267" name="Irene's Song 100%" additionalName="7-day" type="EtcItem">
         <!-- When in inventory, your XP and SP gain is increased by 100%. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. -->
         <set name="icon" val="br_cashtex.item.br_cash_rune_of_feather_i00"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_depositable" val="false"/>
@@ -853,7 +785,6 @@
         <set name="icon" val="icon.etc_pi_gift_box_i00"/>
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_depositable" val="false"/>
@@ -866,7 +797,6 @@
         <set name="icon" val="icon.etc_pi_gift_box_i00"/>
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_depositable" val="false"/>
@@ -879,7 +809,6 @@
         <set name="icon" val="icon.etc_pi_gift_box_i00"/>
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_depositable" val="false"/>
@@ -892,7 +821,6 @@
         <set name="icon" val="icon.etc_pi_gift_box_i00"/>
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_depositable" val="false"/>
@@ -903,7 +831,6 @@
     <item id="70272" name="Irene's Song 200%" additionalName="1 hour" type="EtcItem">
         <!-- When in inventory, your XP and SP gain is increased by 200%. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. -->
         <set name="icon" val="br_cashtex.item.br_cash_rune_of_feather_i00"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_depositable" val="false"/>
@@ -913,7 +840,6 @@
     <item id="70273" name="Irene's Song 200%" additionalName="3 hours" type="EtcItem">
         <!-- When in inventory, your XP and SP gain is increased by 200%. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. -->
         <set name="icon" val="br_cashtex.item.br_cash_rune_of_feather_i00"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_depositable" val="false"/>
@@ -923,7 +849,6 @@
     <item id="70274" name="Irene's Song 200%" additionalName="5 hours" type="EtcItem">
         <!-- When in inventory, your XP and SP gain is increased by 200%. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. -->
         <set name="icon" val="br_cashtex.item.br_cash_rune_of_feather_i00"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_depositable" val="false"/>
@@ -933,7 +858,6 @@
     <item id="70275" name="Irene's Song 200%" additionalName="7-day" type="EtcItem">
         <!-- When in inventory, your XP and SP gain is increased by 200%. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. -->
         <set name="icon" val="br_cashtex.item.br_cash_rune_of_feather_i00"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_depositable" val="false"/>
@@ -945,7 +869,6 @@
         <set name="icon" val="icon.etc_pi_gift_box_i04"/>
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_depositable" val="false"/>
@@ -958,7 +881,6 @@
         <set name="icon" val="icon.etc_pi_gift_box_i04"/>
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_depositable" val="false"/>
@@ -971,7 +893,6 @@
         <set name="icon" val="icon.etc_pi_gift_box_i04"/>
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_depositable" val="false"/>
@@ -984,7 +905,6 @@
         <set name="icon" val="icon.etc_pi_gift_box_i04"/>
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_depositable" val="false"/>
@@ -997,7 +917,6 @@
         <set name="icon" val="icon.etc_bloodpledge_point_i00"/>
         <set name="default_action" val="SKILL_REDUCE"/>
         <set name="etcitem_type" val="SCROLL"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_depositable" val="false"/>
@@ -1013,7 +932,6 @@
         <set name="icon" val="icon.etc_bloodpledge_point_i00"/>
         <set name="default_action" val="SKILL_REDUCE"/>
         <set name="etcitem_type" val="SCROLL"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_depositable" val="false"/>
@@ -1029,7 +947,6 @@
         <set name="icon" val="icon.etc_bloodpledge_point_i00"/>
         <set name="default_action" val="SKILL_REDUCE"/>
         <set name="etcitem_type" val="SCROLL"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_depositable" val="false"/>
@@ -1045,7 +962,6 @@
         <set name="icon" val="icon.etc_potion_red_i00"/>
         <set name="default_action" val="SKILL_REDUCE"/>
         <set name="etcitem_type" val="POTION"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="20"/>
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
@@ -1058,7 +974,6 @@
         <!-- Double-click to receive a B-grade weapon. -->
         <set name="icon" val="icon.bm_pirate_treasure_box"/>
         <set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
-        <set name="material" val="PAPER"/>
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
@@ -1066,7 +981,6 @@
         <!-- Double-click to receive a C-grade weapon. -->
         <set name="icon" val="icon.bm_pirate_treasure_box"/>
         <set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
-        <set name="material" val="PAPER"/>
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
@@ -1074,7 +988,6 @@
         <!-- Double-click to receive a B-grade armor. -->
         <set name="icon" val="icon.bm_pirate_treasure_box"/>
         <set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
-        <set name="material" val="PAPER"/>
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
@@ -1082,7 +995,6 @@
         <!-- Double-click to receive a C-grade armor. -->
         <set name="icon" val="icon.bm_pirate_treasure_box"/>
         <set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
-        <set name="material" val="PAPER"/>
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
@@ -1090,7 +1002,6 @@
         <!-- Double-click to receive a B-grade weapons ingredient box. -->
         <set name="icon" val="icon.bm_pirate_treasure_box"/>
         <set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
-        <set name="material" val="PAPER"/>
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
@@ -1098,7 +1009,6 @@
         <!-- Double-click to receive a C-grade weapons ingredient box. -->
         <set name="icon" val="icon.bm_pirate_treasure_box"/>
         <set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
-        <set name="material" val="PAPER"/>
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
@@ -1106,7 +1016,6 @@
         <!-- Double-click to receive a B-grade armor ingredient box. -->
         <set name="icon" val="icon.bm_pirate_treasure_box"/>
         <set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
-        <set name="material" val="PAPER"/>
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
@@ -1114,7 +1023,6 @@
         <!-- Double-click to receive a C-grade armor ingredient box. -->
         <set name="icon" val="icon.bm_pirate_treasure_box"/>
         <set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
-        <set name="material" val="PAPER"/>
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
@@ -1123,7 +1031,6 @@
         <set name="icon" val="icon.etc_treasure_box_i00"/>
         <set name="default_action" val="CAPSULE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
@@ -1131,7 +1038,6 @@
         <!-- Double-click to receive one Average, Improved, Solid, or Blessed Scroll: Enchant Weapon (C~A). -->
         <set name="icon" val="icon.etc_bm_jewelbox_main_i00"/>
         <set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
-        <set name="material" val="PAPER"/>
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
@@ -1139,25 +1045,21 @@
         <!-- By combining Talismans of the same level using Dimensional Merchant, you can enhance them up to Lv. 5. With each level, new effects are added. Using an Enchant Scroll, you can make new, special effects appear. Effects do not stack if two identical Talismans are used. <Note>. When combining with other Talismans, their enchantment is reset -->
         <set name="icon" val="icon.bm_magic_square_talisman"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="GOLD"/>
     </item>
     <item id="70295" name="Talisman of Border +2" type="Armor">
         <!-- By combining Talismans of the same level using Dimensional Merchant, you can enhance them up to Lv. 5. With each level, new effects are added. Using an Enchant Scroll, you can make new, special effects appear. Effects do not stack if two identical Talismans are used. <Note>. When combining with other Talismans, their enchantment is reset -->
         <set name="icon" val="icon.bm_magic_square_talisman"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="GOLD"/>
     </item>
     <item id="70296" name="Talisman of Border +3" type="Armor">
         <!-- By combining Talismans of the same level using Dimensional Merchant, you can enhance them up to Lv. 5. With each level, new effects are added. Using an Enchant Scroll, you can make new, special effects appear. Effects do not stack if two identical Talismans are used. <Note>. When combining with other Talismans, their enchantment is reset -->
         <set name="icon" val="icon.bm_magic_square_talisman"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="GOLD"/>
     </item>
     <item id="70297" name="Talisman of Border +4" type="Armor">
         <!-- By combining Talismans of the same level using Dimensional Merchant, you can enhance them up to Lv. 5. With each level, new effects are added. Using an Enchant Scroll, you can make new, special effects appear. Effects do not stack if two identical Talismans are used. Cannot be exchanged, dropped, or sold in a private store. <Note>. When combining with other Talismans, their enchantment is reset -->
         <set name="icon" val="icon.bm_magic_square_talisman"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="GOLD"/>
         <set name="is_dropable" val="false"/>
         <set name="is_destroyable" val="false"/>
     </item>
@@ -1165,7 +1067,6 @@
         <!-- By combining Talismans of the same level using Dimensional Merchant, you can enhance them up to Lv. 5. With each level, new effects are added. Using an Enchant Scroll, you can make new, special effects appear. Effects do not stack if two identical Talismans are used. Cannot be exchanged, dropped, or sold in a private store. <Note>. When combining with other Talismans, their enchantment is reset -->
         <set name="icon" val="icon.bm_magic_square_talisman"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="GOLD"/>
         <set name="is_dropable" val="false"/>
         <set name="is_destroyable" val="false"/>
     </item>
@@ -1173,7 +1074,6 @@
         <!-- An Enchant Scroll enhancing the properties of Talisman of Border. The maximum level of enchantment is +10 -->
         <set name="icon" val="icon.etc_doom_capture"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="is_stackable" val="true"/>
     </item>
 </list>

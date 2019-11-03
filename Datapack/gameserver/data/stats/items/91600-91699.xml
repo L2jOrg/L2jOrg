@@ -5,7 +5,6 @@
         <set name="icon" val="icon.bm_dimension_tallisman"/>
         <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="GOLD"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
     </item>
@@ -14,7 +13,6 @@
         <set name="icon" val="icon.bm_dimension_tallisman"/>
         <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="GOLD"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
     </item>
@@ -23,7 +21,6 @@
         <set name="icon" val="icon.bm_doll_frintessa_30d"/>
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="is_dropable" val="false"/>
         <set name="is_stackable" val="true"/>
         <set name="time" val="43200"/>
@@ -31,7 +28,6 @@
     <item id="91603" name="Doll of Border - Frintezza" additionalName="30-day" type="EtcItem">
         <!-- A 30-day item. When in inventory, improves the character's stats. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. This item will be deleted after the event is over. <Frintezza Doll Spell>. CON +1, MEN +1, WIT +1, DEX +1, STR +1, INT +1, Stun/ Paralysis Atk. Rate +10%. -->
         <set name="icon" val="icon.bm_doll_frintessa_30d"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_depositable" val="false"/>
@@ -41,14 +37,12 @@
     <item id="91604" name="Frintezza Doll" additionalName="Lv. 1" type="EtcItem">
         <!-- When in inventory, improves the character's stats. Take it to Alchemist Veruti in Giran to upgrade to Lv. 1-2. Cannot be dropped. <Frintezza Doll Spell Lv. 1>. CON +1, MEN +1, WIT +1, DEX +1, STR +1, INT +1, Stun/ Paralysis Atk. Rate +10%. -->
         <set name="icon" val="icon.bm_doll_frintessa_30d"/>
-        <set name="material" val="PAPER"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
     </item>
     <item id="91605" name="Frintezza Doll" additionalName="Lv. 2" type="EtcItem">
         <!-- When in inventory, improves the character's stats. Cannot be dropped. <Frintezza Doll Spell Lv. 2>. CON +1, MEN +1, WIT +1, DEX +1, STR +1, INT +1, Stun/ Paralysis Atk. Rate +20%, Speed +5. -->
         <set name="icon" val="icon.bm_doll_frintessa_30d"/>
-        <set name="material" val="PAPER"/>
         <set name="is_dropable" val="false"/>
 	</item>
 	<item id="91606" name="High Quality Agathion Virgo" additionalName="Fire Dragon" type="Armor">
@@ -57,7 +51,6 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="SILVER" />
 		<set name="weight" val="5" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -68,7 +61,6 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="SILVER" />
 		<set name="weight" val="5" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -79,7 +71,6 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="SILVER" />
 		<set name="weight" val="5" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -90,7 +81,6 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="SILVER" />
 		<set name="weight" val="5" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -101,7 +91,6 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="SILVER" />
 		<set name="weight" val="5" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -112,7 +101,6 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="SILVER" />
 		<set name="weight" val="5" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -123,7 +111,6 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="SILVER" />
 		<set name="weight" val="5" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -134,7 +121,6 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="SILVER" />
 		<set name="weight" val="5" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -145,7 +131,6 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="SILVER" />
 		<set name="weight" val="5" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -156,7 +141,6 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="SILVER" />
 		<set name="weight" val="5" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -167,7 +151,6 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="SILVER" />
 		<set name="weight" val="5" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -178,7 +161,6 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="SILVER" />
 		<set name="weight" val="5" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -189,7 +171,6 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="SILVER" />
 		<set name="weight" val="5" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -200,7 +181,6 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="SILVER" />
 		<set name="weight" val="5" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -211,7 +191,6 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="SILVER" />
 		<set name="weight" val="5" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -222,7 +201,6 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="SILVER" />
 		<set name="weight" val="5" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -233,7 +211,6 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="SILVER" />
 		<set name="weight" val="5" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -242,7 +219,6 @@
 		<!-- Only for High Quality Zodiac Agathion. Increases M. Def. Can be enchanted maximum to +10. Starting from +1, the Agathion special abilities are enhanced with each enchant level. In case of failure the item will not be destroyed, and its enchant value remains the same. -->
 		<set name="icon" val="icon.guard_giantscrl_of_ench_ag" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="STEEL" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -251,7 +227,6 @@
 		<!-- Double-click to obtain various S-grade items, special items and materials, materials for Agathion enchantment. -->
 		<set name="icon" val="icon.bm_gold_relic_box" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
-		<set name="material" val="STEEL" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -260,7 +235,6 @@
 		<!-- Double-click to obtain an S-grade weapon. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
-		<set name="material" val="STEEL" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -269,7 +243,6 @@
 		<!-- Double-click to obtain an S-grade armor or accessory. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
-		<set name="material" val="STEEL" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -278,7 +251,6 @@
 		<!-- Double-click to obtain a +10 A-grade armor. -->
 		<set name="icon" val="icon.etc_treasure_box_i00" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
-		<set name="material" val="STEEL" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -287,7 +259,6 @@
 		<!-- Double-click to obtain a +10 B-grade armor. -->
 		<set name="icon" val="icon.etc_treasure_box_i04" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
-		<set name="material" val="STEEL" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -296,7 +267,6 @@
 		<!-- Double-click to obtain a +10 A-grade accessory. -->
 		<set name="icon" val="icon.etc_treasure_box_i02" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
-		<set name="material" val="STEEL" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -305,7 +275,6 @@
 		<!-- Double-click to obtain a +10 B-grade accessory. -->
 		<set name="icon" val="icon.etc_treasure_box_i05" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
-		<set name="material" val="STEEL" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -313,7 +282,6 @@
 	<item id="91631" name="Crafting Supplies Coupon" type="EtcItem">
 		<!-- Take it to any Dimensional Merchant to exchange for high-quality crafting supplies. <Exchange Price> 2,500,000 adena. -->
 		<set name="icon" val="icon.etc_exchange_ticket_i02" />
-		<set name="material" val="STEEL" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -321,7 +289,6 @@
 	<item id="91632" name="Fire Dragon's Soulstone" type="EtcItem">
 		<!-- Required for upgrading Zodiac Agathion with the dragon's power and for changing the dragon's element. Can be obtained from Pona in Giran. -->
 		<set name="icon" val="icon.r99_soul_stone_i00" />
-		<set name="material" val="STEEL" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -329,7 +296,6 @@
 	<item id="91633" name="Land Dragon's Soulstone" type="EtcItem">
 		<!-- Required for upgrading Zodiac Agathion with the dragon's power and for changing the dragon's element. Can be obtained from Pona in Giran. -->
 		<set name="icon" val="icon.r99_soul_stone_i04" />
-		<set name="material" val="STEEL" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -337,7 +303,6 @@
 	<item id="91634" name="Agathion's Soulstone" type="EtcItem">
 		<!-- Required for upgrading Agathion Gemini to High Quality Agathion. Can be obtained from Pona in Giran. -->
 		<set name="icon" val="icon.r99_soul_stone_i05" />
-		<set name="material" val="STEEL" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -346,14 +311,12 @@
 		<!-- Double-click to obtain one of the following items: Soulshot Ticket, Weapon Exchange Coupon, Shiny Coin. -->
 		<set name="icon" val="icon.etc_treasure_box_i08" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
-		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="91636" name="Goldberg's Room Key" type="EtcItem">
 		<!-- A shiny key lost by Goldberg's Steward. Take it to Sora in Aden to go to Goldberg's room. -->
 		<set name="icon" val="icon.etc_old_key_i02" />
-		<set name="material" val="STEEL" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="91637" name="15th Anniversary Talisman" type="Armor">
@@ -361,7 +324,6 @@
 		<set name="icon" val="icon.ev_L2_soul_ore" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="GOLD" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
@@ -371,7 +333,6 @@
 		<!-- Double-click to obtain Chronicle Cube Gift (maximum 15 times). Can be used only once a day. -->
 		<set name="icon" val="icon.ev_15th_cube" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
@@ -382,7 +343,6 @@
 		<set name="icon" val="icon.etc_box_of_adventure_3_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
@@ -395,7 +355,6 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="WOOD" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
@@ -405,7 +364,6 @@
 		<!-- Sayha's Grace points +35,000. -->
 		<set name="icon" val="icon.etc_wind_potion_i00" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
-		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
@@ -416,7 +374,6 @@
 		<!-- Double-click to obtain one of the following items: Manuscript Chest, Dragon Dye Box, Spirit Transformation Scroll - Singer, Transformation Scroll: White Assassin, Rice Cake of Fighting Spirit. -->
 		<set name="icon" val="icon.event_six_party_box_i00" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
-		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
@@ -427,7 +384,6 @@
 		<!-- Double-click to obtain an enchanted rare accessory or crafting supply (30-day). -->
 		<set name="icon" val="icon.new_user_box" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
-		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
@@ -439,7 +395,6 @@
 		<set name="icon" val="icon.etc_treasure_box_i11" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
@@ -450,7 +405,6 @@
 		<!-- Can be used for the 15th Anniversary Event Cake raids (daily, 11 am - 8 pm). Use it on the Event Cake to choose a random number from 1 to 6. -->
 		<set name="icon" val="icon.ev_15th_foke" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
-		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
@@ -460,7 +414,6 @@
 		<!-- Teleports to Jackson in the Talking Island Village. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i04" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
@@ -470,7 +423,6 @@
 		<!-- Teleports to Herbiel in Elven Village. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i04" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
@@ -480,7 +432,6 @@
 		<!-- Teleports to Vollodos in Dark Elf Village. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i04" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
@@ -490,7 +441,6 @@
 		<!-- Teleports to Uska in the Orc Village. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i04" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
@@ -500,7 +450,6 @@
 		<!-- Teleports to Gerald in Dwarven Village. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i04" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
@@ -510,7 +459,6 @@
 		<!-- Teleports to Captain Bathis in Giran Castle. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i04" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
@@ -519,7 +467,6 @@
 	<item id="91652" name="Giant Cobweb" type="EtcItem">
 		<!-- A light and shiny cobweb made by Giant Spiders. -->
 		<set name="icon" val="icon.etc_cobweb_i00" />
-		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
@@ -529,7 +476,6 @@
 	<item id="91653" name="Tarantula's Venom Sac" type="EtcItem">
 		<!-- A venom sac from a Tarantula. -->
 		<set name="icon" val="icon.etc_poison_pouch_i00" />
-		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
@@ -541,7 +487,6 @@
 		<set name="icon" val="icon.etc_crest_blue_i00" />
 		<set name="default_action" val="SHOW_HTML" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -552,7 +497,6 @@
 		<set name="icon" val="icon.etc_crest_blue_i00" />
 		<set name="default_action" val="SHOW_HTML" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -563,7 +507,6 @@
 		<set name="icon" val="icon.etc_crest_blue_i00" />
 		<set name="default_action" val="SHOW_HTML" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -574,7 +517,6 @@
 		<set name="icon" val="icon.etc_crest_blue_i00" />
 		<set name="default_action" val="SHOW_HTML" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -585,7 +527,6 @@
 		<set name="icon" val="icon.ev_chicken_box_i01" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
@@ -595,7 +536,6 @@
 	<item id="91659" name="Yummy Chicken" type="EtcItem">
 		<!-- Very delicious chicken from Chicken Box. Sell it in the GM shop to obtain a gift certificate that can be exchange for the real (and by that we mean real real!) chicken! The number of certificates is limited to 1000, so if you have Yummy Chicken, don't hesitate to sell it! The GM shop is located on the Monster Race Track, and it will work only until all 1000 coupons are distributed. Can be sold for a certain sum of adena. -->
 		<set name="icon" val="icon.ev_chicken_ticket_i01" />
-		<set name="material" val="STEEL" />
 		<set name="price" val="600000" />
 		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -604,7 +544,6 @@
 		<!-- For 1 h., grants the following effects: Might, Shield, Haste, Empower, Acumen, Wind Walk, Vampiric Rage, Berserker Spirit, Focus, Death Whisper, Guidance, Clarity, Wild Magic, Concentration. The effect remains after death. <Note>. 1. Cannot be used together with Scroll of Mood Melody. 2. The effect of the last applied item will be active. -->
 		<set name="icon" val="icon.bm_magmeld" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="STEEL" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -614,7 +553,6 @@
 		<!-- For 4 h., grants the following effects: Might, Shield, Haste, Empower, Acumen, Wind Walk, Vampiric Rage, Berserker Spirit, Focus, Death Whisper, Guidance, Clarity, Wild Magic, Concentration. The effect remains after death. <Note>. 1. Cannot be used together with Scroll of Mood Melody. 2. The effect of the last applied item will be active. -->
 		<set name="icon" val="icon.bm_magmeld" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="STEEL" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -624,7 +562,6 @@
 		<!-- For 8 h., grants the following effects: Might, Shield, Haste, Empower, Acumen, Wind Walk, Vampiric Rage, Berserker Spirit, Focus, Death Whisper, Guidance, Clarity, Wild Magic, Concentration. The effect remains after death. <Note>. 1. Cannot be used together with Scroll of Mood Melody. 2. The effect of the last applied item will be active. -->
 		<set name="icon" val="icon.bm_magmeld" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="STEEL" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -633,7 +570,6 @@
 	<item id="91663" name="L-Coin" type="EtcItem">
 		<!-- Can be used to buy various items in L-Coin Store. -->
 		<set name="icon" val="icon.etc_11th_token" />
-		<set name="material" val="STEEL" />
 		<set name="price" val="1" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -645,7 +581,6 @@
 		<!-- Double-click to recover 10,000 SP. -->
 		<set name="icon" val="icon.etc_sp_scroll2_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
@@ -655,7 +590,6 @@
 		<!-- Double-click to recover 100,000 SP. -->
 		<set name="icon" val="icon.etc_sp_scroll3_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
@@ -665,7 +599,6 @@
 		<!-- Sayha's Grace points +100%, Acquired XP/ SP +100%. The effect remains after death. Duration: 20 min. Cooldown: 1 min. Available if Sayha's Grace point bar is filled by more than one unit. -->
 		<set name="icon" val="icon.bm_sayha_storm" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
@@ -678,7 +611,6 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="back" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="CLOTH" />
 		<set name="weight" val="220" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -689,7 +621,6 @@
 		<!-- <Reward for achieving the 1st place in the Magic Lantern event>. XP +100,000,000, SP +2,700,000. Can be exchanged by the Dimensional Merchant for the Red Lantern (transferable to other characters on the account). -->
 		<set name="icon" val="icon.r99_soul_stone_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
@@ -700,7 +631,6 @@
 		<!-- <Reward for achieving the 2nd place in the Magic Lantern event>. XP +30,000,000, SP +810,000. Can be exchanged by the Dimensional Merchant for the Purple Lantern (transferable to other characters on the account). -->
 		<set name="icon" val="icon.r99_soul_stone_i05" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
@@ -711,7 +641,6 @@
 		<!-- <Reward for achieving the 3rd place in the Magic Lantern event>. XP +10,000,000, SP +270,000. Can be exchanged by the Dimensional Merchant for the Blue Lantern (transferable to other characters on the account). -->
 		<set name="icon" val="icon.r99_soul_stone_i02" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
@@ -722,7 +651,6 @@
 		<!-- <Reward for achieving the 4th place in the Magic Lantern event>. XP +5,000,000, SP +135,000. Can be exchanged by the Dimensional Merchant for the Green Lantern (transferable to other characters on the account). -->
 		<set name="icon" val="icon.r99_soul_stone_i04" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
@@ -734,7 +662,6 @@
 		<set name="icon" val="icon.bm_nebit_present" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_destroyable" val="false" />
@@ -749,7 +676,6 @@
 		<set name="weapon_type" val="ETC" />
 		<set name="bodypart" val="lrhand" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="BRONZE" />
 		<set name="weight" val="2120" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
@@ -772,7 +698,6 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="BRONZE" />
 		<set name="weight" val="1530" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
@@ -794,7 +719,6 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
 		<set name="weight" val="1850" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
@@ -819,7 +743,6 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="WOOD" />
 		<set name="weight" val="630" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
@@ -840,7 +763,6 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
 		<set name="weight" val="1800" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
@@ -865,7 +787,6 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
 		<set name="weight" val="1110" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
@@ -889,7 +810,6 @@
 		<set name="weapon_type" val="FISHINGROD" />
 		<set name="bodypart" val="lrhand" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
 		<set name="weight" val="1560" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
@@ -913,7 +833,6 @@
 		<set name="weapon_type" val="RAPIER" />
 		<set name="bodypart" val="lrhand" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
 		<set name="weight" val="1880" />
 		<set name="soulshots" val="2" />
 		<set name="spiritshots" val="1" />
@@ -934,7 +853,6 @@
 	<item id="91681" name="Spear Amulet" additionalName="30 days" type="EtcItem">
 		<!-- Available for 30 days. Contains the Reinforced Spear's power. <Active Skill> Reinforced Spear's Power: Double-click to obtain Glaive (D-grade) enchanted from +8 to +16. Requires 1 Weapon Ticket from the L-Coin Store. Can be used only once a day. -->
 		<set name="icon" val="icon.bm_freya_bloody_rune" />
-		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
@@ -943,7 +861,6 @@
 	<item id="91682" name="Falchion Amulet" additionalName="30 days" type="EtcItem">
 		<!-- Available for 30 days. Contains the Reinforced Falchion's power. <Active Skill> Reinforced Falchion's Power I: Double-click to obtain Elven Long Sword (D-grade) enchanted from +8 to +16. Requires 1 Weapon Ticket from the L-Coin Store. Reinforced Falchion's Power II: Double-click to obtain Bastard Sword*Crimson Sword (D-grade) enchanted from +8 to +16. Requires 1 Weapon Ticket from the L-Coin Store. Can be used only once a day. -->
 		<set name="icon" val="icon.bm_freya_bloody_rune" />
-		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
@@ -952,7 +869,6 @@
 	<item id="91683" name="Iron Hammer Amulet" additionalName="30 days" type="EtcItem">
 		<!-- Available for 30 days. Contains the Reinforced Iron Hammer's power. <Active Skill> Reinforced Iron Hammer's Power: Double-click to obtain Bonebreaker (D-grade) enchanted from +8 to +16. Requires 1 Weapon Ticket from the L-Coin Store. Can be used only once a day. -->
 		<set name="icon" val="icon.bm_freya_bloody_rune" />
-		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
@@ -961,7 +877,6 @@
 	<item id="91684" name="Voodoo Doll Amulet" additionalName="30 days" type="EtcItem">
 		<!-- Available for 30 days. Contains the Reinforced Voodoo Doll's power. <Active Skill> Reinforced Voodoo Doll's Power: Double-click to obtain Staff of Life (D-grade) enchanted from +8 to +16. Requires 1 Weapon Ticket from the L-Coin Store. Can be used only once a day. -->
 		<set name="icon" val="icon.bm_freya_bloody_rune" />
-		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
@@ -970,7 +885,6 @@
 	<item id="91685" name="Flanged Mace Amulet" additionalName="30 days" type="EtcItem">
 		<!-- Available for 30 days. Contains the Reinforced Flanged Mace's power. <Active Skill> Reinforced Flanged Mace's Power: Double-click to obtain Claymore (D-grade) enchanted from +8 to +16. Requires 1 Weapon Ticket from the L-Coin Store. Can be used only once a day. -->
 		<set name="icon" val="icon.bm_freya_bloody_rune" />
-		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
@@ -979,7 +893,6 @@
 	<item id="91686" name="Sword Breaker Amulet" additionalName="30 days" type="EtcItem">
 		<!-- Available for 30 days. Contains the Reinforced Sword Breaker's power. <Active Skill> Reinforced Sword Breaker's Power: Double-click to obtain Mithril Dagger (D-grade) enchanted from +8 to +16. Requires 1 Weapon Ticket from the L-Coin Store. Can be used only once a day. -->
 		<set name="icon" val="icon.bm_freya_bloody_rune" />
-		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
@@ -988,7 +901,6 @@
 	<item id="91687" name="Viper Fang Amulet" additionalName="30 days" type="EtcItem">
 		<!-- Available for 30 days. Contains the Reinforced Viper Fang's power. <Active Skill> Reinforced Viper Fang's Power: Double-click to obtain Scallop Jamadhr (D-grade) enchanted from +8 to +16. Requires 1 Weapon Ticket from the L-Coin Store. Can be used only once a day. -->
 		<set name="icon" val="icon.bm_freya_bloody_rune" />
-		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
@@ -997,7 +909,6 @@
 	<item id="91688" name="Compound Bow Amulet" additionalName="30 days" type="EtcItem">
 		<!-- Available for 30 days. Contains the Reinforced Compound Bow's power. <Active Skill> Reinforced Compound Bow's Power: Double-click to obtain Light Bow (D-grade) enchanted from +8 to +16. Requires 1 Weapon Ticket from the L-Coin Store. Can be used only once a day. -->
 		<set name="icon" val="icon.bm_freya_bloody_rune" />
-		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
@@ -1007,7 +918,6 @@
 		<!-- Teleports to the nearest village. Its casting time is very short. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
@@ -1018,7 +928,6 @@
 		<!-- Instantly recovers 500 HP. The remaining points are used to recover CP. -->
 		<set name="icon" val="BranchSys.icon.br_vitality_potion_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
@@ -1029,7 +938,6 @@
 		<!-- Instantly recovers MP. -->
 		<set name="icon" val="icon.freya_potion" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
@@ -1039,7 +947,6 @@
 	<item id="91692" name="Blessing of Plenty - 100% (Event)" additionalName="3 days" type="EtcItem">
 		<!-- Available for 3 days. L-Coin drop rate +100%. -->
 		<set name="icon" val="icon.aden_bless_rune_i01" />
-		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
@@ -1048,7 +955,6 @@
 	<item id="91693" name="Blessing of Plenty - 100%" additionalName="1 day" type="EtcItem">
 		<!-- Available for 1 day. L-Coin drop rate +100%, Acquired XP/ SP +10%, Sayha's Grace Consumption -20%. -->
 		<set name="icon" val="icon.aden_bless_rune_i02" />
-		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
@@ -1057,7 +963,6 @@
 	<item id="91694" name="Blessing of Plenty - 100%" additionalName="30 days" type="EtcItem">
 		<!-- Available for 30 days. L-Coin drop rate +100%, Acquired XP/ SP +10%, Sayha's Grace Consumption -20%. -->
 		<set name="icon" val="icon.aden_bless_rune_i02" />
-		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
@@ -1066,7 +971,6 @@
 	<item id="91695" name="Mark of Aden's Braveheart" type="EtcItem">
 		<!-- Can be sold for adena. -->
 		<set name="icon" val="icon.bm_royal_gold_ticket_all" />
-		<set name="material" val="STEEL" />
 		<set name="price" val="1000000" />
 		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -1076,7 +980,6 @@
 		<set name="icon" val="icon.bm_gold_lure_box" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
 		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -1085,7 +988,6 @@
 		<set name="icon" val="icon.weapon_samurai_old_longsword_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -1095,7 +997,6 @@
 		<set name="icon" val="icon.weapon_demons_staff_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -1105,7 +1006,6 @@
 		<set name="icon" val="icon.weapon_mace_of_underworld_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />

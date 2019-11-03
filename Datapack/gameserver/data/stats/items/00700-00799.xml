@@ -4,7 +4,6 @@
         <!-- The juice of a fungus. -->
         <set name="icon" val="icon.item_canuse28"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -20,7 +19,6 @@
         <!-- Gather forty wolf pelts and take them to Trader Lector of the weapons and armor shop. -->
         <set name="icon" val="icon.etc_leather_brown_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -36,7 +34,6 @@
         <!-- Giant Spider's Poison Sacs obtained from the dead giant spider. Take this to Priest Yohanes. -->
         <set name="icon" val="icon.etc_pouch_gray_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -52,7 +49,6 @@
         <!-- Medicine concocted by Priest Yohanes for the students who are ill with fever. Take this to Elias. -->
         <set name="icon" val="icon.etc_lesser_potion_purple_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -68,7 +64,6 @@
         <!-- Basilisk's claw. -->
         <set name="icon" val="icon.item_normal141"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -84,7 +79,6 @@
         <!-- Sac obtained from the spore fungus. Gather 10 of these and take them to Trader Vollodos. -->
         <set name="icon" val="icon.etc_pouch_yellow_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -100,7 +94,6 @@
         <!-- A Sylph Headband -->
         <set name="icon" val="icon.item_system03"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -118,7 +111,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="chest"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LEATHER"/>
         <set name="weight" val="400"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
@@ -140,7 +132,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="chest"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LEATHER"/>
         <set name="weight" val="400"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
@@ -162,7 +153,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="chest"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="BONE"/>
         <set name="weight" val="800"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
@@ -184,7 +174,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="chest"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="weight" val="1200"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
@@ -206,7 +195,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="legs"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LEATHER"/>
         <set name="weight" val="250"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
@@ -228,7 +216,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="legs"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LEATHER"/>
         <set name="weight" val="300"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
@@ -250,7 +237,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="legs"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="BONE"/>
         <set name="weight" val="500"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
@@ -272,7 +258,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="legs"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="weight" val="800"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
@@ -294,7 +279,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="gloves"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LEATHER"/>
         <set name="weight" val="100"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
@@ -316,7 +300,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="gloves"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LEATHER"/>
         <set name="weight" val="150"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
@@ -338,7 +321,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="gloves"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LEATHER"/>
         <set name="weight" val="150"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
@@ -360,7 +342,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="gloves"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="weight" val="200"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
@@ -382,7 +363,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="feet"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LEATHER"/>
         <set name="weight" val="150"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
@@ -404,7 +384,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="feet"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LEATHER"/>
         <set name="weight" val="150"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
@@ -426,7 +405,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="feet"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LEATHER"/>
         <set name="weight" val="200"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
@@ -448,7 +426,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="feet"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="weight" val="250"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
@@ -470,7 +447,6 @@
         <set name="default_action" val="SKILL_REDUCE"/>
         <set name="etcitem_type" val="ENCHT_WP"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="120"/>
         <set name="price" val="1800000"/>
         <set name="is_stackable" val="true"/>
@@ -487,7 +463,6 @@
         <set name="default_action" val="SKILL_REDUCE"/>
         <set name="etcitem_type" val="ENCHT_AM"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="120"/>
         <set name="price" val="240000"/>
         <set name="is_stackable" val="true"/>
@@ -504,7 +479,6 @@
         <set name="default_action" val="SKILL_REDUCE"/>
         <set name="etcitem_type" val="POTION"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="20"/>
         <set name="price" val="1200"/>
         <set name="reuse_delay" val="500"/>
@@ -526,7 +500,6 @@
         <set name="default_action" val="SKILL_REDUCE"/>
         <set name="etcitem_type" val="POTION"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="20"/>
         <set name="price" val="2400"/>
         <set name="reuse_delay" val="500"/>
@@ -547,7 +520,6 @@
         <set name="icon" val="icon.etc_scroll_of_return_i00"/>
         <set name="default_action" val="SKILL_REDUCE"/>
         <set name="etcitem_type" val="SCROLL"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="120"/>
         <set name="price" val="400"/>
         <set name="is_stackable" val="true"/>
@@ -563,7 +535,6 @@
         <set name="icon" val="icon.etc_scroll_of_resurrection_i00"/>
         <set name="default_action" val="SKILL_REDUCE"/>
         <set name="etcitem_type" val="SCROLL"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="120"/>
         <set name="price" val="2000"/>
         <set name="is_stackable" val="true"/>
@@ -582,7 +553,6 @@
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="BRONZE"/>
         <set name="weight" val="1300"/>
         <set name="price" val="18500"/>
         <set name="soulshots" val="1"/>
@@ -602,7 +572,6 @@
         <!-- The handle part of the sword of solidarity. Take this to Blacksmith Altran. -->
         <set name="icon" val="icon.weapon_small_sword_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -618,7 +587,6 @@
         <!-- Take this, and the upper part of the blade to Blacksmith Altran. -->
         <set name="icon" val="icon.weapon_great_sword_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -634,7 +602,6 @@
         <!-- Take this, and the lower part of the blade to Blacksmith Altran. -->
         <set name="icon" val="icon.etc_sword_body_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -650,7 +617,6 @@
         <!-- Letter requesting the handle of the sword from Roien. Take this to Grand Master Roien of Sedrick's Training Hall. -->
         <set name="icon" val="icon.etc_piece_of_paper_white_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -670,7 +636,6 @@
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="weight" val="1300"/>
         <set name="price" val="33600"/>
         <set name="soulshots" val="1"/>
@@ -694,7 +659,6 @@
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;46;120"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="WOOD"/>
         <set name="weight" val="1800"/>
         <set name="price" val="33600"/>
         <set name="soulshots" val="1"/>
@@ -715,7 +679,6 @@
     <item id="745" name="Cobendell's Medicine" type="EtcItem">
         <set name="icon" val="icon.item_normal40"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -731,7 +694,6 @@
         <!-- Deliver the medicine to Sentinel Berros, Sentinel Veltress, Sentinel Rayen, and Sentinel Gartrandell. -->
         <set name="icon" val="icon.etc_piece_of_paper_white_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -751,7 +713,6 @@
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="WOOD"/>
         <set name="weight" val="1300"/>
         <set name="price" val="25500"/>
         <set name="soulshots" val="1"/>
@@ -777,7 +738,6 @@
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;46;120"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="WOOD"/>
         <set name="weight" val="1350"/>
         <set name="soulshots" val="1"/>
         <set name="spiritshots" val="1"/>
@@ -804,7 +764,6 @@
     <item id="750" name="Kinship Crystal" type="EtcItem">
         <set name="icon" val="icon.item_normal45"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -819,7 +778,6 @@
     <item id="751" name="Cracked Kinship Crystal" type="EtcItem">
         <set name="icon" val="icon.item_canuse07"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -835,7 +793,6 @@
         <!-- Amulet that the Orcs carry for magical purposes. Take this to Captain Gilbert. -->
         <set name="icon" val="icon.etc_feather_gold_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -850,7 +807,6 @@
     <item id="753" name="Silverleaf Brooch" type="EtcItem">
         <set name="icon" val="icon.item_normal12"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -870,7 +826,6 @@
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;46;120"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="WOOD"/>
         <set name="weight" val="1700"/>
         <set name="price" val="25500"/>
         <set name="soulshots" val="1"/>
@@ -892,7 +847,6 @@
         <!-- Letter on which Roien summarized the historical information related to the sword of solidarity. Take this to Blacksmith Altran. -->
         <set name="icon" val="icon.etc_scroll_white_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>

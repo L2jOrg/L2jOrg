@@ -103,7 +103,6 @@ public abstract class ItemTemplate extends ListenersContainer implements IIdenti
     private String _icon;
     private int _weight;
     private boolean _stackable;
-    private MaterialType _materialType;
     private CrystalType _crystalType;
     private int _equipReuseDelay;
     private int _duration;
@@ -159,7 +158,6 @@ public abstract class ItemTemplate extends ListenersContainer implements IIdenti
         _additionalName = set.getString("additionalName", null);
         _icon = set.getString("icon", null);
         _weight = set.getInt("weight", 0);
-        _materialType = set.getEnum("material", MaterialType.class, MaterialType.STEEL);
         _equipReuseDelay = set.getInt("equip_reuse_delay", 0) * 1000;
         _duration = set.getInt("duration", -1);
         _time = set.getInt("time", -1);
@@ -268,14 +266,6 @@ public abstract class ItemTemplate extends ListenersContainer implements IIdenti
 
     public abstract int getItemMask();
 
-    /**
-     * Return the type of material of the item
-     *
-     * @return MaterialType
-     */
-    public final MaterialType getMaterialType() {
-        return _materialType;
-    }
 
     /**
      * Returns the type 2 of the item

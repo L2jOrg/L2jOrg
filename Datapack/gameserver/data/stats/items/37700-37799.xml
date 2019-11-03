@@ -7,7 +7,6 @@
         <set name="weapon_type" val="DUALDAGGER"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="weight" val="500"/>
         <set name="soulshots" val="1"/>
         <set name="spiritshots" val="1"/>
@@ -32,7 +31,6 @@
         <set name="weapon_type" val="DUALBLUNT"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="FINE_STEEL"/>
         <set name="weight" val="500"/>
         <set name="soulshots" val="1"/>
         <set name="spiritshots" val="1"/>
@@ -56,7 +54,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="lhand"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="DAMASCUS"/>
         <set name="weight" val="1130"/>
         <set name="price" val="88681000"/>
         <set name="is_tradable" val="false"/>
@@ -76,7 +73,6 @@
         <set name="armor_type" val="SIGIL"/>
         <set name="bodypart" val="lhand"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="weight" val="920"/>
         <set name="price" val="88681000"/>
         <set name="is_tradable" val="false"/>
@@ -91,7 +87,6 @@
     <item id="37704" name="Love Potion" type="EtcItem">
         <!-- Modifies the appearance of Valentine's Day 2013 weapon. -->
         <set name="icon" val="icon.etc_whiteday_herb"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_destroyable" val="false"/>
         <set name="is_depositable" val="false"/>
@@ -112,7 +107,6 @@
         <set name="icon" val="icon.etc_spirit_bullet_fish_i05"/>
         <set name="default_action" val="FISHINGSHOT"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="3"/>
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
@@ -124,7 +118,6 @@
         <set name="armor_type" val="HEAVY"/>
         <set name="bodypart" val="alldress"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="CLOTH"/>
         <set name="weight" val="1000"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
@@ -135,7 +128,6 @@
         <!-- NC Dinos Shortstop Cap -->
         <set name="icon" val="icon.accessory_mining_cap_i00"/>
         <set name="bodypart" val="hairall"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_destroyable" val="false"/>

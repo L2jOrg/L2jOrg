@@ -6,7 +6,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="hairall"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="WOOD"/>
         <set name="weight" val="10"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -18,7 +17,6 @@
         <set name="weapon_type" val="ETC"/>
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="weight" val="1600"/>
         <set name="soulshots" val="1"/>
         <set name="spiritshots" val="1"/>
@@ -38,7 +36,6 @@
         <set name="icon" val="BranchSys2.Icon.br_aga_zaken_i00"/>
         <set name="bodypart" val="lbracelet"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="SILVER"/>
         <set name="weight" val="150"/>
         <set name="is_dropable" val="false"/>
         <set name="is_destroyable" val="false"/>

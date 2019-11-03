@@ -5,7 +5,6 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="B" />
-		<set name="material" val="STEEL" />
 		<set name="weight" val="1300" />
 		<set name="price" val="13100000" />
 		<set name="enchant_enabled" val="1" />
@@ -23,7 +22,6 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="B" />
-		<set name="material" val="STEEL" />
 		<set name="weight" val="1300" />
 		<set name="price" val="8680000" />
 		<set name="enchant_enabled" val="1" />
@@ -41,7 +39,6 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="A" />
-		<set name="material" val="STEEL" />
 		<set name="weight" val="1300" />
 		<set name="price" val="26968400" />
 		<set name="enchant_enabled" val="1" />
@@ -59,7 +56,6 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="A" />
-		<set name="material" val="STEEL" />
 		<set name="weight" val="1300" />
 		<set name="price" val="20741000" />
 		<set name="enchant_enabled" val="1" />
@@ -77,7 +73,6 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="A" />
-		<set name="material" val="STEEL" />
 		<set name="weight" val="1300" />
 		<set name="price" val="14098000" />
 		<set name="enchant_enabled" val="1" />
@@ -95,7 +90,6 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="S" />
-		<set name="material" val="STEEL" />
 		<set name="weight" val="1300" />
 		<set name="price" val="42759400" />
 		<set name="enchant_enabled" val="1" />
@@ -111,7 +105,6 @@
 	<item id="91906" name="Energy Rune" additionalName="30 days" type="EtcItem">
 		<!-- Available for 30 days. When in inventory, recovers Sayha's Grace points. -->
 		<set name="icon" val="icon.bm_freya_rune" />
-		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
@@ -122,7 +115,6 @@
 		<set name="icon" val="icon.npoint_earthworm_30day_box" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -132,7 +124,6 @@
 		<set name="icon" val="icon.npoint_earthworm_30day_box" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -142,7 +133,6 @@
 		<set name="icon" val="icon.sayha2017_box_i01" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
@@ -153,7 +143,6 @@
 		<!-- Sayha's Grace points +35,000. Reqiured level: 1-75. -->
 		<set name="icon" val="icon.etc_wind_potion_i00" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
-		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
@@ -164,7 +153,6 @@
 		<!-- For 20 min., grants the following effects: Sayha's Shield, Sayha's Magic Barrier, Sayha�s Decrease Weight, Sayha's Clarity, Sayha's Berserker Spirit, Sayha's Wind Walk, Sayha's Might, Sayha's Focus, Sayha's Haste, Sayha's Death Whisper, Sayha's Empower, Sayha's Wild Magic, Sayha's Acumen, Sayha's Concentration, Sayha's Victory, Sayha's Recover HP, Sayha's Recover MP. Cooldown: 1 min. Can't be used when the Sayha's Recover MP effect is active. Note: The Sayha's Victory effect does not stack if the identical effect is active. -->
 		<set name="icon" val="icon.etc_ssq_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
@@ -179,7 +167,6 @@
 		<set name="etcitem_type" val="POTION"/>
 		<set name="commissionItemType" val="POTION"/>
 		<set name="handler" val="ItemSkills"/>
-		<set name="material" val="STEEL" />
 		<set name="weight" val="1" />
 		<set name="price" val="30" />
 		<set name="is_sellable" val="false" />
@@ -193,7 +180,6 @@
 		<set name="icon" val="icon.bm_freya_sirr_box" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
@@ -205,7 +191,6 @@
 		<set name="icon" val="icon.bm_freya_2016_gift_box" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
@@ -219,7 +204,6 @@
 		<set name="weapon_type" val="DUALBLUNT" />
 		<set name="bodypart" val="lrhand" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="BRONZE" />
 		<set name="weight" val="1530" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
@@ -241,7 +225,6 @@
 		<set name="icon" val="icon.weapon_sealed_rapier_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
 		<set name="weight" val="1300" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -259,7 +242,6 @@
 		<!-- Teleports to Reahen in the Kamael Village. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i04" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
@@ -269,7 +251,6 @@
 		<!-- Teleports to Captain Bathis in Giran Castle. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i04" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
@@ -279,7 +260,6 @@
 		<!-- Teleports to Captain Bathis in Giran Castle. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i04" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
@@ -288,7 +268,6 @@
 	<item id="91920" name="Scroll: Magic Break" type="EtcItem">
 		<!-- Scroll needed to learn Magic Break. -->
 		<set name="icon" val="icon.etc_magic_book_black_i00" />
-		<set name="material" val="STEEL" />
 		<set name="weight" val="120" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -296,7 +275,6 @@
 	<item id="91921" name="Scroll: Disarm" type="EtcItem">
 		<!-- Scroll needed to learn Disarm. -->
 		<set name="icon" val="icon.etc_magic_book_black_i00" />
-		<set name="material" val="STEEL" />
 		<set name="weight" val="120" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -304,7 +282,6 @@
 	<item id="91922" name="Scroll: Lightning Barrier" type="EtcItem">
 		<!-- Scroll needed to learn Lightning Barrier. -->
 		<set name="icon" val="icon.etc_magic_book_black_i00" />
-		<set name="material" val="STEEL" />
 		<set name="weight" val="120" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -312,7 +289,6 @@
 	<item id="91923" name="Scroll: Lightning" type="EtcItem">
 		<!-- Scroll needed to learn Lightning. -->
 		<set name="icon" val="icon.etc_magic_book_black_i00" />
-		<set name="material" val="STEEL" />
 		<set name="weight" val="120" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -320,7 +296,6 @@
 	<item id="91924" name="Scroll: Mental Panic" type="EtcItem">
 		<!-- Scroll needed to learn Mental Panic. -->
 		<set name="icon" val="icon.etc_magic_book_black_i00" />
-		<set name="material" val="STEEL" />
 		<set name="weight" val="120" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -328,7 +303,6 @@
 	<item id="91925" name="Scroll: Soul Stigma" type="EtcItem">
 		<!-- Scroll needed to learn Soul Stigma. -->
 		<set name="icon" val="icon.etc_magic_book_black_i00" />
-		<set name="material" val="STEEL" />
 		<set name="weight" val="120" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -338,7 +312,6 @@
 		<set name="icon" val="icon.etc_readybox_bronze" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
@@ -353,7 +326,6 @@
 		<set name="handler" val="SoulShots"/>
 		<set name="default_action" val="SOULSHOT" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
 		<set name="price" val="20" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -372,7 +344,6 @@
 		<set name="handler" val="SpiritShot"/>
 		<set name="default_action" val="SPIRITSHOT" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
 		<set name="price" val="30" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -391,7 +362,6 @@
 		<set name="handler" val="BlessedSoulShots"/>
 		<set name="default_action" val="SOULSHOT" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
 		<set name="price" val="20" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -410,7 +380,6 @@
 		<set name="etcitem_type" val="SOULSHOT"/>
 		<set name="commissionItemType" val="SPIRITSHOT"/>
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
 		<set name="price" val="75" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -426,7 +395,6 @@
 		<set name="icon" val="icon.etc_crest_blue_i00" />
 		<set name="default_action" val="SHOW_HTML" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
 		<set name="weight" val="10" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -438,7 +406,6 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="underwear" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="SILVER" />
 		<set name="weight" val="10" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -451,7 +418,6 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="SILVER" />
 		<set name="weight" val="100" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -464,7 +430,6 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rbracelet" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<set name="price" val="1080000" />
 		<set name="is_tradable" val="false" />
@@ -478,7 +443,6 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="SILVER" />
 		<set name="weight" val="5" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -491,7 +455,6 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="GOLD" />
 		<set name="weight" val="5" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -503,7 +466,6 @@
 		<set name="icon" val="icon.etc_talisman_i07" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="GOLD" />
 		<set name="weight" val="120" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -514,7 +476,6 @@
 		<!-- Prolongs your Primeval Isle's raid for 60 min. -->
 		<set name="icon" val="icon.timezone_refill_1" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
-		<set name="material" val="STEEL" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -523,7 +484,6 @@
 		<!-- Prolongs your Ancient Pirates' Tomb's raid for 60 min. -->
 		<set name="icon" val="icon.timezone_refill_2" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
-		<set name="material" val="STEEL" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -532,7 +492,6 @@
 		<!-- Prolongs your Heavenly Rift's raid for 60 min. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i03" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
-		<set name="material" val="STEEL" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -542,7 +501,6 @@
 		<set name="icon" val="icon.event_six_party_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
@@ -552,7 +510,6 @@
 	<item id="91942" name="Crystal of Light" type="EtcItem">
 		<!-- Mysterious crystal that contains the light energy. Needed to learn Collect Light Souls Lv. 2. -->
 		<set name="icon" val="icon.high_energy_condense_i00" />
-		<set name="material" val="STEEL" />
 		<set name="weight" val="120" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -560,7 +517,6 @@
 	<item id="91943" name="Crystal of Shadows" type="EtcItem">
 		<!-- Mysterious crystal that contains the shadow energy. Needed to learn Collect Shadow Souls Lv. 2. -->
 		<set name="icon" val="icon.high_energy_condense_i01" />
-		<set name="material" val="STEEL" />
 		<set name="weight" val="120" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -568,7 +524,6 @@
 	<item id="91944" name="Book of Light" type="EtcItem">
 		<!-- Mysterious book that contains the light energy. Needed to learn Light Master Lv. 2. -->
 		<set name="icon" val="icon.giant_book_i02" />
-		<set name="material" val="STEEL" />
 		<set name="weight" val="120" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -576,7 +531,6 @@
 	<item id="91945" name="Book of Darkness" type="EtcItem">
 		<!-- Mysterious book that contains the shadow energy. Needed to learn Shadow Master Lv. 2. -->
 		<set name="icon" val="icon.giant_book_i00" />
-		<set name="material" val="STEEL" />
 		<set name="weight" val="120" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -584,7 +538,6 @@
 	<item id="91946" name="Spellbook: Mount Griffin" type="EtcItem">
 		<!-- Spellbook needed to learn Mount Griffin. Required level: 76 (after the 3rd class change). -->
 		<set name="icon" val="icon.etc_spellbook_red_i00" />
-		<set name="material" val="STEEL" />
 		<set name="weight" val="120" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -594,7 +547,6 @@
 		<set name="icon" val="icon.weapon_rapier_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -604,7 +556,6 @@
 		<set name="icon" val="icon.weapon_invincible_blade_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -615,7 +566,6 @@
 		<set name="weapon_type" val="RAPIER" />
 		<set name="bodypart" val="rhand" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
 		<set name="weight" val="1300" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
@@ -637,7 +587,6 @@
 		<set name="weapon_type" val="ANCIENTSWORD" />
 		<set name="bodypart" val="lrhand" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="BRONZE" />
 		<set name="weight" val="1530" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
@@ -658,7 +607,6 @@
 		<!-- Required to enchant Talisman of Baium. The maximum enchant level is +10. In case of failure the item disappears. -->
 		<set name="icon" val="icon.etc_charm_of_courage_i05" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="STEEL" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -668,7 +616,6 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="GOLD" />
 		<set name="weight" val="150" />
 		<set name="price" val="616000" />
 		<stats>
@@ -681,7 +628,6 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="SILVER" />
 		<set name="weight" val="150" />
 		<set name="price" val="924000" />
 		<stats>
@@ -692,7 +638,6 @@
 		<!-- Teleports to the 1st floor of the Tower of Insolence. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i04" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="STEEL" />
 		<set name="weight" val="5" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -703,7 +648,6 @@
 		<!-- Teleports to the 2nd floor of the Tower of Insolence. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i04" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="STEEL" />
 		<set name="weight" val="5" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -714,7 +658,6 @@
 		<!-- Teleports to the 3rd floor of the Tower of Insolence. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i04" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="STEEL" />
 		<set name="weight" val="5" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -725,7 +668,6 @@
 		<!-- Teleports to the 4th floor of the Tower of Insolence. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i04" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="STEEL" />
 		<set name="weight" val="5" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -736,7 +678,6 @@
 		<!-- Teleports to the 5th floor of the Tower of Insolence. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i04" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="STEEL" />
 		<set name="weight" val="5" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -747,7 +688,6 @@
 		<!-- Teleports to the 6th floor of the Tower of Insolence. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i04" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="STEEL" />
 		<set name="weight" val="5" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -758,7 +698,6 @@
 		<!-- Teleports to the 7th floor of the Tower of Insolence. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i04" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="STEEL" />
 		<set name="weight" val="5" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -769,7 +708,6 @@
 		<!-- Teleports to the 8th floor of the Tower of Insolence. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i04" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="STEEL" />
 		<set name="weight" val="5" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -780,7 +718,6 @@
 		<!-- Teleports to the 9th floor of the Tower of Insolence. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i04" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="STEEL" />
 		<set name="weight" val="5" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -791,7 +728,6 @@
 		<!-- Teleports to the 10th floor of the Tower of Insolence. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i04" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="STEEL" />
 		<set name="weight" val="5" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -802,7 +738,6 @@
 		<!-- Teleports to the 11th floor of the Tower of Insolence. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i04" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="STEEL" />
 		<set name="weight" val="5" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -813,7 +748,6 @@
 		<!-- Teleports to the 12th floor of the Tower of Insolence. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i04" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="STEEL" />
 		<set name="weight" val="5" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -824,7 +758,6 @@
 		<!-- Required to enchant Ring of Insolence. The maximum enchant level is +10. -->
 		<set name="icon" val="icon.etc_penalty_recovery_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="STEEL" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -832,7 +765,6 @@
 		<!-- Required to enchant Dragon Valley's Earring. The maximum enchant level is +10. -->
 		<set name="icon" val="icon.etc_penalty_recovery_i02" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="STEEL" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -841,7 +773,6 @@
 		<set name="icon" val="icon.weapon_sealed_rapier_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
@@ -853,7 +784,6 @@
 		<set name="icon" val="icon.weapon_tulwar_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
@@ -865,7 +795,6 @@
 		<set name="icon" val="icon.weapon_eclipse_axe_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -874,7 +803,6 @@
 		<!-- Sayha's Grace points +10,000. -->
 		<set name="icon" val="BranchSys.icon.br_valentine_agathion_pack_i00" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
-		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
@@ -885,7 +813,6 @@
 		<!-- Coupon for entering the Heavenly Rift from the Dimensional Vortex on the 1st floor of the Tower of Insolence. -->
 		<set name="icon" val="icon.etc_ticket_red_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="STEEL" />
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -894,7 +821,6 @@
 		<!-- For 20 min., Acquired XP/ SP +50%, P. Atk. +250, M. Atk. +380, P. Def. +320, M. Def. +450, P./ M. Critical Rate +30, P./ M. Critical Damage +10%, Atk. Spd./ Casting Spd. +50, Max HP/ CP +2500, Max MP +1500, HP/ MP Recovery Bonus +10, Sayha's Grace Consumption -20%. Has a certain chance to absorb 5% of the inflicted damage as HP. <Note> If used when the Dragon's Miracle Potion effect is active, the buff will be replaced. -->
 		<set name="icon" val="icon.bm_dragon_posion" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
@@ -905,7 +831,6 @@
 		<!-- Instantly recovers 50 HP. The remaining points are used to recover CP. -->
 		<set name="icon" val="icon.etc_lesser_potion_red_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="STEEL" />
 		<set name="weight" val="1" />
 		<set name="price" val="30" />
 		<set name="is_tradable" val="false" />
@@ -918,7 +843,6 @@
 		<!-- For 20 min., Max HP/ MP/ CP +300, P./ M. Atk. +200, Atk. Spd./ Casting Spd. +60, P./ M. Critical Rate +20, P./ M. Critical Damage +10%. -->
 		<set name="icon" val="icon.etc_ssq_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
@@ -930,7 +854,6 @@
 		<set name="icon" val="icon.destiny_stone" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
 		<set name="price" val="10000" />
 		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -939,7 +862,6 @@
 		<!-- Increases Paralysis Resistance for 20 min. -->
 		<set name="icon" val="icon.scroll_of_verification_i08" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="STEEL" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -948,7 +870,6 @@
 		<!-- Increases Mental Resistance for 20 min. -->
 		<set name="icon" val="icon.scroll_of_verification_i08" />
 		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="material" val="STEEL" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -958,7 +879,6 @@
 		<set name="icon" val="icon.bm_sheep_agathion_30d_box" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -968,7 +888,6 @@
 		<set name="icon" val="icon.pouch_i01" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -976,7 +895,6 @@
 	<item id="91981" name="Giants' Coin" type="EtcItem">
 		<!-- Coin used by ancient Giants. Can be exchanged for various items by the Dimensional Merchant. -->
 		<set name="icon" val="icon.etc_magic_coin_gold_i01" />
-		<set name="material" val="STEEL" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -986,7 +904,6 @@
 		<set name="icon" val="icon.bm_nebit_box" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -995,7 +912,6 @@
 		<!-- Prolongs your Primeval Isle's raid for 60 min. -->
 		<set name="icon" val="icon.timezone_refill_1" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
-		<set name="material" val="STEEL" />
 		<set name="weight" val="5" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -1007,7 +923,6 @@
 		<!-- Prolongs your Ancient Pirates' Tomb's raid for 60 min. -->
 		<set name="icon" val="icon.timezone_refill_2" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
-		<set name="material" val="STEEL" />
 		<set name="weight" val="5" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -1019,7 +934,6 @@
 		<!-- Prolongs your Heavenly Rift's raid for 60 min. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i03" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
-		<set name="material" val="STEEL" />
 		<set name="weight" val="5" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -1033,7 +947,6 @@
 		<set name="weapon_type" val="ETC" />
 		<set name="bodypart" val="lrhand" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
 		<set name="weight" val="2140" />
 		<set name="price" val="136000" />
 		<set name="soulshots" val="1" />
@@ -1053,7 +966,6 @@
 		<set name="icon" val="icon.armor_t68_u_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
@@ -1065,7 +977,6 @@
 		<set name="icon" val="icon.armor_t69_ul_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
@@ -1077,7 +988,6 @@
 		<set name="icon" val="icon.armor_t70_u_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
@@ -1089,7 +999,6 @@
 		<set name="icon" val="icon.armor_t71_ul_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
@@ -1101,7 +1010,6 @@
 		<set name="icon" val="icon.armor_t72_ul_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
@@ -1113,7 +1021,6 @@
 		<set name="icon" val="icon.armor_t73_u_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
@@ -1125,7 +1032,6 @@
 		<set name="icon" val="icon.armor_t59_ul_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
@@ -1137,7 +1043,6 @@
 		<set name="icon" val="icon.armor_t47_u_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
@@ -1149,7 +1054,6 @@
 		<set name="icon" val="icon.bm_sayha_gold_present" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
@@ -1161,7 +1065,6 @@
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
@@ -1173,7 +1076,6 @@
 		<set name="icon" val="icon.timezone_refill_1" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
@@ -1185,7 +1087,6 @@
 		<set name="icon" val="icon.timezone_refill_1" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
@@ -1195,7 +1096,6 @@
 	<item id="91999" name="Water Spirit Jewel Shard" type="EtcItem">
 		<!-- Rough Jewel with the power of Wind Attribute. Use it to acquire 9300 Water Attribute XP points. -->
 		<set name="icon" val="icon.elemental_water_stone_i00" />
-		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />

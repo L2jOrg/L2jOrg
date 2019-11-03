@@ -10,7 +10,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="1659"/>
         <set name="crystal_type" val="A"/>
-        <set name="material" val="FINE_STEEL"/>
         <set name="weight" val="1320"/>
         <set name="price" val="20741000"/>
         <set name="change_weaponId" val="9340"/>
@@ -35,7 +34,6 @@
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="FINE_STEEL"/>
         <set name="weight" val="1850"/>
         <set name="price" val="136000"/>
         <set name="soulshots" val="1"/>
@@ -61,7 +59,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="1148"/>
         <set name="crystal_type" val="C"/>
-        <set name="material" val="FINE_STEEL"/>
         <set name="weight" val="1670"/>
         <set name="price" val="2870000"/>
         <set name="soulshots" val="1"/>
@@ -88,7 +85,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="2452"/>
         <set name="crystal_type" val="C"/>
-        <set name="material" val="FINE_STEEL"/>
         <set name="weight" val="1640"/>
         <set name="price" val="6130000"/>
         <set name="soulshots" val="1"/>
@@ -116,7 +112,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="1128"/>
         <set name="crystal_type" val="A"/>
-        <set name="material" val="FINE_STEEL"/>
         <set name="weight" val="1600"/>
         <set name="price" val="14098000"/>
         <set name="soulshots" val="1"/>
@@ -142,7 +137,6 @@
         <set name="damage_range" val="0;0;40;120"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="D"/>
-        <set name="material" val="STEEL"/>
         <set name="weight" val="300"/>
         <set name="price" val="409000"/>
         <set name="soulshots" val="1"/>
@@ -164,7 +158,6 @@
         <set name="icon" val="icon.etc_piece_bone_red_i00"/>
         <set name="etcitem_type" val="MATERIAL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="3"/>
         <set name="price" val="240"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
@@ -175,7 +168,6 @@
         <set name="icon" val="icon.etc_spell_shot_white_i00"/>
         <set name="default_action" val="SPIRITSHOT"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="4"/>
         <set name="price" val="15"/>
         <set name="is_stackable" val="true"/>
@@ -191,7 +183,6 @@
         <set name="icon" val="icon.etc_spell_shot_blue_i00"/>
         <set name="default_action" val="SPIRITSHOT"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="4"/>
         <set name="price" val="18"/>
         <set name="is_stackable" val="true"/>
@@ -209,7 +200,6 @@
         <set name="icon" val="icon.etc_spell_shot_green_i00"/>
         <set name="default_action" val="SPIRITSHOT"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="2"/>
         <set name="price" val="35"/>
         <set name="is_stackable" val="true"/>
@@ -227,7 +217,6 @@
         <set name="icon" val="icon.etc_spell_shot_red_i00"/>
         <set name="default_action" val="SPIRITSHOT"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="2"/>
         <set name="price" val="100"/>
         <set name="is_stackable" val="true"/>
@@ -245,7 +234,6 @@
         <set name="icon" val="icon.etc_spell_shot_silver_i00"/>
         <set name="default_action" val="SPIRITSHOT"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="1"/>
         <set name="price" val="120"/>
         <set name="is_stackable" val="true"/>
@@ -263,7 +251,6 @@
         <set name="icon" val="icon.etc_spell_shot_gold_i00"/>
         <set name="default_action" val="SPIRITSHOT"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="1"/>
         <set name="price" val="150"/>
         <set name="is_stackable" val="true"/>
@@ -286,7 +273,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="1594"/>
         <set name="crystal_type" val="D"/>
-        <set name="material" val="FINE_STEEL"/>
         <set name="weight" val="2530"/>
         <set name="price" val="877000"/>
         <set name="soulshots" val="1"/>
@@ -313,7 +299,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="1927"/>
         <set name="crystal_type" val="D"/>
-        <set name="material" val="FINE_STEEL"/>
         <set name="weight" val="2520"/>
         <set name="price" val="1060000"/>
         <set name="soulshots" val="1"/>
@@ -340,7 +325,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="1927"/>
         <set name="crystal_type" val="D"/>
-        <set name="material" val="FINE_STEEL"/>
         <set name="weight" val="2530"/>
         <set name="price" val="1060000"/>
         <set name="soulshots" val="1"/>
@@ -367,7 +351,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="1927"/>
         <set name="crystal_type" val="D"/>
-        <set name="material" val="FINE_STEEL"/>
         <set name="weight" val="2520"/>
         <set name="price" val="1060000"/>
         <set name="soulshots" val="1"/>
@@ -394,7 +377,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="1927"/>
         <set name="crystal_type" val="D"/>
-        <set name="material" val="FINE_STEEL"/>
         <set name="weight" val="2510"/>
         <set name="price" val="1060000"/>
         <set name="soulshots" val="1"/>
@@ -421,7 +403,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="2545"/>
         <set name="crystal_type" val="D"/>
-        <set name="material" val="FINE_STEEL"/>
         <set name="weight" val="2530"/>
         <set name="price" val="1400000"/>
         <set name="soulshots" val="1"/>
@@ -448,7 +429,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="2545"/>
         <set name="crystal_type" val="D"/>
-        <set name="material" val="FINE_STEEL"/>
         <set name="weight" val="2510"/>
         <set name="price" val="1400000"/>
         <set name="soulshots" val="1"/>
@@ -475,7 +455,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="784"/>
         <set name="crystal_type" val="C"/>
-        <set name="material" val="FINE_STEEL"/>
         <set name="weight" val="2420"/>
         <set name="price" val="1960000"/>
         <set name="soulshots" val="1"/>
@@ -502,7 +481,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="916"/>
         <set name="crystal_type" val="C"/>
-        <set name="material" val="FINE_STEEL"/>
         <set name="weight" val="2420"/>
         <set name="price" val="2290000"/>
         <set name="soulshots" val="1"/>
@@ -529,7 +507,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="2545"/>
         <set name="crystal_type" val="D"/>
-        <set name="material" val="FINE_STEEL"/>
         <set name="weight" val="2470"/>
         <set name="price" val="1400000"/>
         <set name="soulshots" val="1"/>
@@ -556,7 +533,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="2545"/>
         <set name="crystal_type" val="D"/>
-        <set name="material" val="FINE_STEEL"/>
         <set name="weight" val="2470"/>
         <set name="price" val="1400000"/>
         <set name="soulshots" val="1"/>
@@ -583,7 +559,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="2545"/>
         <set name="crystal_type" val="D"/>
-        <set name="material" val="FINE_STEEL"/>
         <set name="weight" val="2480"/>
         <set name="price" val="1400000"/>
         <set name="soulshots" val="1"/>
@@ -610,7 +585,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="2545"/>
         <set name="crystal_type" val="D"/>
-        <set name="material" val="FINE_STEEL"/>
         <set name="weight" val="2500"/>
         <set name="price" val="1400000"/>
         <set name="soulshots" val="1"/>
@@ -637,7 +611,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="3018"/>
         <set name="crystal_type" val="D"/>
-        <set name="material" val="FINE_STEEL"/>
         <set name="weight" val="2470"/>
         <set name="price" val="1660000"/>
         <set name="soulshots" val="1"/>
@@ -664,7 +637,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="3018"/>
         <set name="crystal_type" val="D"/>
-        <set name="material" val="FINE_STEEL"/>
         <set name="weight" val="2460"/>
         <set name="price" val="1660000"/>
         <set name="soulshots" val="1"/>
@@ -691,7 +663,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="848"/>
         <set name="crystal_type" val="C"/>
-        <set name="material" val="FINE_STEEL"/>
         <set name="weight" val="2450"/>
         <set name="price" val="2120000"/>
         <set name="soulshots" val="1"/>
@@ -718,7 +689,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="988"/>
         <set name="crystal_type" val="C"/>
-        <set name="material" val="FINE_STEEL"/>
         <set name="weight" val="2430"/>
         <set name="price" val="2470000"/>
         <set name="soulshots" val="1"/>
@@ -745,7 +715,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="2545"/>
         <set name="crystal_type" val="D"/>
-        <set name="material" val="FINE_STEEL"/>
         <set name="weight" val="2520"/>
         <set name="price" val="1400000"/>
         <set name="soulshots" val="1"/>
@@ -772,7 +741,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="2545"/>
         <set name="crystal_type" val="D"/>
-        <set name="material" val="FINE_STEEL"/>
         <set name="weight" val="2460"/>
         <set name="price" val="1400000"/>
         <set name="soulshots" val="1"/>
@@ -799,7 +767,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="2545"/>
         <set name="crystal_type" val="D"/>
-        <set name="material" val="FINE_STEEL"/>
         <set name="weight" val="2470"/>
         <set name="price" val="1400000"/>
         <set name="soulshots" val="1"/>
@@ -826,7 +793,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="3018"/>
         <set name="crystal_type" val="D"/>
-        <set name="material" val="FINE_STEEL"/>
         <set name="weight" val="2520"/>
         <set name="price" val="1660000"/>
         <set name="soulshots" val="1"/>
@@ -853,7 +819,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="3018"/>
         <set name="crystal_type" val="D"/>
-        <set name="material" val="FINE_STEEL"/>
         <set name="weight" val="2460"/>
         <set name="price" val="1660000"/>
         <set name="soulshots" val="1"/>
@@ -880,7 +845,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="848"/>
         <set name="crystal_type" val="C"/>
-        <set name="material" val="FINE_STEEL"/>
         <set name="weight" val="2460"/>
         <set name="price" val="2120000"/>
         <set name="soulshots" val="1"/>
@@ -907,7 +871,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="988"/>
         <set name="crystal_type" val="C"/>
-        <set name="material" val="FINE_STEEL"/>
         <set name="weight" val="2390"/>
         <set name="price" val="2470000"/>
         <set name="soulshots" val="1"/>
@@ -934,7 +897,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="2545"/>
         <set name="crystal_type" val="D"/>
-        <set name="material" val="FINE_STEEL"/>
         <set name="weight" val="2480"/>
         <set name="price" val="1400000"/>
         <set name="soulshots" val="1"/>
@@ -961,7 +923,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="2545"/>
         <set name="crystal_type" val="D"/>
-        <set name="material" val="FINE_STEEL"/>
         <set name="weight" val="2470"/>
         <set name="price" val="1400000"/>
         <set name="soulshots" val="1"/>
@@ -988,7 +949,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="3018"/>
         <set name="crystal_type" val="D"/>
-        <set name="material" val="FINE_STEEL"/>
         <set name="weight" val="2450"/>
         <set name="price" val="1660000"/>
         <set name="soulshots" val="1"/>
@@ -1015,7 +975,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="3018"/>
         <set name="crystal_type" val="D"/>
-        <set name="material" val="FINE_STEEL"/>
         <set name="weight" val="2470"/>
         <set name="price" val="1660000"/>
         <set name="soulshots" val="1"/>
@@ -1042,7 +1001,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="848"/>
         <set name="crystal_type" val="C"/>
-        <set name="material" val="FINE_STEEL"/>
         <set name="weight" val="2420"/>
         <set name="price" val="2120000"/>
         <set name="soulshots" val="1"/>
@@ -1069,7 +1027,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="988"/>
         <set name="crystal_type" val="C"/>
-        <set name="material" val="FINE_STEEL"/>
         <set name="weight" val="2410"/>
         <set name="price" val="2470000"/>
         <set name="soulshots" val="1"/>
@@ -1096,7 +1053,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="2545"/>
         <set name="crystal_type" val="D"/>
-        <set name="material" val="FINE_STEEL"/>
         <set name="weight" val="2460"/>
         <set name="price" val="1400000"/>
         <set name="soulshots" val="1"/>
@@ -1123,7 +1079,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="3018"/>
         <set name="crystal_type" val="D"/>
-        <set name="material" val="FINE_STEEL"/>
         <set name="weight" val="2460"/>
         <set name="price" val="1660000"/>
         <set name="soulshots" val="1"/>
@@ -1150,7 +1105,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="3018"/>
         <set name="crystal_type" val="D"/>
-        <set name="material" val="FINE_STEEL"/>
         <set name="weight" val="2450"/>
         <set name="price" val="1660000"/>
         <set name="soulshots" val="1"/>
@@ -1177,7 +1131,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="848"/>
         <set name="crystal_type" val="C"/>
-        <set name="material" val="FINE_STEEL"/>
         <set name="weight" val="2430"/>
         <set name="price" val="2120000"/>
         <set name="soulshots" val="1"/>
@@ -1204,7 +1157,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="988"/>
         <set name="crystal_type" val="C"/>
-        <set name="material" val="FINE_STEEL"/>
         <set name="weight" val="2370"/>
         <set name="price" val="2470000"/>
         <set name="soulshots" val="1"/>
@@ -1231,7 +1183,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="784"/>
         <set name="crystal_type" val="C"/>
-        <set name="material" val="FINE_STEEL"/>
         <set name="weight" val="2440"/>
         <set name="price" val="1960000"/>
         <set name="soulshots" val="1"/>
@@ -1258,7 +1209,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="784"/>
         <set name="crystal_type" val="C"/>
-        <set name="material" val="FINE_STEEL"/>
         <set name="weight" val="2450"/>
         <set name="price" val="1960000"/>
         <set name="soulshots" val="1"/>
@@ -1285,7 +1235,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="988"/>
         <set name="crystal_type" val="C"/>
-        <set name="material" val="FINE_STEEL"/>
         <set name="weight" val="2390"/>
         <set name="price" val="2470000"/>
         <set name="soulshots" val="1"/>
@@ -1312,7 +1261,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="1148"/>
         <set name="crystal_type" val="C"/>
-        <set name="material" val="FINE_STEEL"/>
         <set name="weight" val="2360"/>
         <set name="price" val="2870000"/>
         <set name="soulshots" val="1"/>
@@ -1342,7 +1290,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="784"/>
         <set name="crystal_type" val="C"/>
-        <set name="material" val="FINE_STEEL"/>
         <set name="weight" val="2440"/>
         <set name="price" val="1960000"/>
         <set name="soulshots" val="1"/>
@@ -1369,7 +1316,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="988"/>
         <set name="crystal_type" val="C"/>
-        <set name="material" val="FINE_STEEL"/>
         <set name="weight" val="2410"/>
         <set name="price" val="2470000"/>
         <set name="soulshots" val="1"/>
@@ -1396,7 +1342,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="1148"/>
         <set name="crystal_type" val="C"/>
-        <set name="material" val="FINE_STEEL"/>
         <set name="weight" val="2410"/>
         <set name="price" val="2870000"/>
         <set name="soulshots" val="1"/>
@@ -1426,7 +1371,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="1148"/>
         <set name="crystal_type" val="C"/>
-        <set name="material" val="FINE_STEEL"/>
         <set name="weight" val="2360"/>
         <set name="price" val="2870000"/>
         <set name="soulshots" val="1"/>
@@ -1456,7 +1400,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="1336"/>
         <set name="crystal_type" val="C"/>
-        <set name="material" val="FINE_STEEL"/>
         <set name="weight" val="2340"/>
         <set name="price" val="3340000"/>
         <set name="soulshots" val="1"/>
@@ -1486,7 +1429,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="1528"/>
         <set name="crystal_type" val="C"/>
-        <set name="material" val="FINE_STEEL"/>
         <set name="weight" val="2340"/>
         <set name="price" val="3820000"/>
         <set name="soulshots" val="1"/>
@@ -1516,7 +1458,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="1912"/>
         <set name="crystal_type" val="C"/>
-        <set name="material" val="FINE_STEEL"/>
         <set name="weight" val="2330"/>
         <set name="price" val="4780000"/>
         <set name="soulshots" val="1"/>
@@ -1546,7 +1487,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="2112"/>
         <set name="crystal_type" val="C"/>
-        <set name="material" val="FINE_STEEL"/>
         <set name="weight" val="2300"/>
         <set name="price" val="5280000"/>
         <set name="soulshots" val="1"/>
@@ -1576,7 +1516,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="2112"/>
         <set name="crystal_type" val="C"/>
-        <set name="material" val="FINE_STEEL"/>
         <set name="weight" val="2320"/>
         <set name="price" val="5280000"/>
         <set name="soulshots" val="1"/>
@@ -1606,7 +1545,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="2112"/>
         <set name="crystal_type" val="C"/>
-        <set name="material" val="FINE_STEEL"/>
         <set name="weight" val="2310"/>
         <set name="price" val="5280000"/>
         <set name="soulshots" val="1"/>
@@ -1636,7 +1574,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="2112"/>
         <set name="crystal_type" val="C"/>
-        <set name="material" val="FINE_STEEL"/>
         <set name="weight" val="2340"/>
         <set name="price" val="5280000"/>
         <set name="soulshots" val="1"/>
@@ -1666,7 +1603,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="930"/>
         <set name="crystal_type" val="B"/>
-        <set name="material" val="FINE_STEEL"/>
         <set name="weight" val="2260"/>
         <set name="price" val="6980000"/>
         <set name="soulshots" val="1"/>
@@ -1696,7 +1632,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="930"/>
         <set name="crystal_type" val="B"/>
-        <set name="material" val="FINE_STEEL"/>
         <set name="weight" val="2240"/>
         <set name="price" val="6980000"/>
         <set name="soulshots" val="1"/>
@@ -1726,7 +1661,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="930"/>
         <set name="crystal_type" val="B"/>
-        <set name="material" val="FINE_STEEL"/>
         <set name="weight" val="2230"/>
         <set name="price" val="6980000"/>
         <set name="soulshots" val="1"/>
@@ -1756,7 +1690,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="930"/>
         <set name="crystal_type" val="B"/>
-        <set name="material" val="FINE_STEEL"/>
         <set name="weight" val="2250"/>
         <set name="price" val="6980000"/>
         <set name="soulshots" val="1"/>
@@ -1786,7 +1719,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="930"/>
         <set name="crystal_type" val="B"/>
-        <set name="material" val="FINE_STEEL"/>
         <set name="weight" val="2220"/>
         <set name="price" val="6980000"/>
         <set name="soulshots" val="1"/>
@@ -1816,7 +1748,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="1157"/>
         <set name="crystal_type" val="B"/>
-        <set name="material" val="FINE_STEEL"/>
         <set name="weight" val="2150"/>
         <set name="price" val="8680000"/>
         <set name="soulshots" val="1"/>
@@ -1846,7 +1777,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="2452"/>
         <set name="crystal_type" val="C"/>
-        <set name="material" val="FINE_STEEL"/>
         <set name="weight" val="2330"/>
         <set name="price" val="6130000"/>
         <set name="soulshots" val="1"/>
@@ -1876,7 +1806,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="2452"/>
         <set name="crystal_type" val="C"/>
-        <set name="material" val="FINE_STEEL"/>
         <set name="weight" val="2310"/>
         <set name="price" val="6130000"/>
         <set name="soulshots" val="1"/>
@@ -1906,7 +1835,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="2452"/>
         <set name="crystal_type" val="C"/>
-        <set name="material" val="FINE_STEEL"/>
         <set name="weight" val="2280"/>
         <set name="price" val="6130000"/>
         <set name="soulshots" val="1"/>
@@ -1936,7 +1864,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="2452"/>
         <set name="crystal_type" val="C"/>
-        <set name="material" val="FINE_STEEL"/>
         <set name="weight" val="2280"/>
         <set name="price" val="6130000"/>
         <set name="soulshots" val="1"/>
@@ -1966,7 +1893,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="1044"/>
         <set name="crystal_type" val="B"/>
-        <set name="material" val="FINE_STEEL"/>
         <set name="weight" val="2230"/>
         <set name="price" val="7830000"/>
         <set name="soulshots" val="1"/>
@@ -1996,7 +1922,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="1044"/>
         <set name="crystal_type" val="B"/>
-        <set name="material" val="FINE_STEEL"/>
         <set name="weight" val="2240"/>
         <set name="price" val="7830000"/>
         <set name="soulshots" val="1"/>
@@ -2026,7 +1951,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="1044"/>
         <set name="crystal_type" val="B"/>
-        <set name="material" val="FINE_STEEL"/>
         <set name="weight" val="2200"/>
         <set name="price" val="7830000"/>
         <set name="soulshots" val="1"/>
@@ -2056,7 +1980,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="1044"/>
         <set name="crystal_type" val="B"/>
-        <set name="material" val="FINE_STEEL"/>
         <set name="weight" val="2210"/>
         <set name="price" val="7830000"/>
         <set name="soulshots" val="1"/>
@@ -2086,7 +2009,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="1044"/>
         <set name="crystal_type" val="B"/>
-        <set name="material" val="FINE_STEEL"/>
         <set name="weight" val="2220"/>
         <set name="price" val="7830000"/>
         <set name="soulshots" val="1"/>
@@ -2116,7 +2038,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="1273"/>
         <set name="crystal_type" val="B"/>
-        <set name="material" val="FINE_STEEL"/>
         <set name="weight" val="2110"/>
         <set name="price" val="9550000"/>
         <set name="soulshots" val="1"/>
@@ -2146,7 +2067,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="2452"/>
         <set name="crystal_type" val="C"/>
-        <set name="material" val="FINE_STEEL"/>
         <set name="weight" val="2270"/>
         <set name="price" val="6130000"/>
         <set name="soulshots" val="1"/>
@@ -2176,7 +2096,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="2452"/>
         <set name="crystal_type" val="C"/>
-        <set name="material" val="FINE_STEEL"/>
         <set name="weight" val="2250"/>
         <set name="price" val="6130000"/>
         <set name="soulshots" val="1"/>
@@ -2206,7 +2125,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="2452"/>
         <set name="crystal_type" val="C"/>
-        <set name="material" val="FINE_STEEL"/>
         <set name="weight" val="2270"/>
         <set name="price" val="6130000"/>
         <set name="soulshots" val="1"/>
@@ -2236,7 +2154,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="1044"/>
         <set name="crystal_type" val="B"/>
-        <set name="material" val="FINE_STEEL"/>
         <set name="weight" val="2220"/>
         <set name="price" val="7830000"/>
         <set name="soulshots" val="1"/>
@@ -2266,7 +2183,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="1044"/>
         <set name="crystal_type" val="B"/>
-        <set name="material" val="FINE_STEEL"/>
         <set name="weight" val="2180"/>
         <set name="price" val="7830000"/>
         <set name="soulshots" val="1"/>
@@ -2296,7 +2212,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="1044"/>
         <set name="crystal_type" val="B"/>
-        <set name="material" val="FINE_STEEL"/>
         <set name="weight" val="2190"/>
         <set name="price" val="7830000"/>
         <set name="soulshots" val="1"/>
@@ -2326,7 +2241,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="1044"/>
         <set name="crystal_type" val="B"/>
-        <set name="material" val="FINE_STEEL"/>
         <set name="weight" val="2170"/>
         <set name="price" val="7830000"/>
         <set name="soulshots" val="1"/>
@@ -2356,7 +2270,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="1044"/>
         <set name="crystal_type" val="B"/>
-        <set name="material" val="FINE_STEEL"/>
         <set name="weight" val="2210"/>
         <set name="price" val="7830000"/>
         <set name="soulshots" val="1"/>
@@ -2386,7 +2299,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="1273"/>
         <set name="crystal_type" val="B"/>
-        <set name="material" val="FINE_STEEL"/>
         <set name="weight" val="2130"/>
         <set name="price" val="9550000"/>
         <set name="soulshots" val="1"/>
@@ -2416,7 +2328,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="2452"/>
         <set name="crystal_type" val="C"/>
-        <set name="material" val="FINE_STEEL"/>
         <set name="weight" val="2240"/>
         <set name="price" val="6130000"/>
         <set name="soulshots" val="1"/>
@@ -2446,7 +2357,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="2452"/>
         <set name="crystal_type" val="C"/>
-        <set name="material" val="FINE_STEEL"/>
         <set name="weight" val="2260"/>
         <set name="price" val="6130000"/>
         <set name="soulshots" val="1"/>
@@ -2476,7 +2386,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="1044"/>
         <set name="crystal_type" val="B"/>
-        <set name="material" val="FINE_STEEL"/>
         <set name="weight" val="2240"/>
         <set name="price" val="7830000"/>
         <set name="soulshots" val="1"/>
@@ -2506,7 +2415,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="1044"/>
         <set name="crystal_type" val="B"/>
-        <set name="material" val="FINE_STEEL"/>
         <set name="weight" val="2240"/>
         <set name="price" val="7830000"/>
         <set name="soulshots" val="1"/>
@@ -2536,7 +2444,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="1044"/>
         <set name="crystal_type" val="B"/>
-        <set name="material" val="FINE_STEEL"/>
         <set name="weight" val="2250"/>
         <set name="price" val="7830000"/>
         <set name="soulshots" val="1"/>
@@ -2566,7 +2473,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="1044"/>
         <set name="crystal_type" val="B"/>
-        <set name="material" val="FINE_STEEL"/>
         <set name="weight" val="2250"/>
         <set name="price" val="7830000"/>
         <set name="soulshots" val="1"/>
@@ -2596,7 +2502,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="1044"/>
         <set name="crystal_type" val="B"/>
-        <set name="material" val="FINE_STEEL"/>
         <set name="weight" val="2220"/>
         <set name="price" val="7830000"/>
         <set name="soulshots" val="1"/>
@@ -2626,7 +2531,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="1273"/>
         <set name="crystal_type" val="B"/>
-        <set name="material" val="FINE_STEEL"/>
         <set name="weight" val="2110"/>
         <set name="price" val="9550000"/>
         <set name="soulshots" val="1"/>
@@ -2656,7 +2560,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="2452"/>
         <set name="crystal_type" val="C"/>
-        <set name="material" val="FINE_STEEL"/>
         <set name="weight" val="2250"/>
         <set name="price" val="6130000"/>
         <set name="soulshots" val="1"/>

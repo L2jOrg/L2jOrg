@@ -4,7 +4,6 @@
         <!-- The sacred object of the Gandi Tribe that has been recovered from Bugbears. Take it to Gandi Chief Chianta in the Town of Dion. -->
         <set name="icon" val="icon.etc_royal_seal_of_lord_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="WOOD"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -20,7 +19,6 @@
         <!-- Flute that Troubadour Swan had obtained as a gift for Musician Nanarin. -->
         <set name="icon" val="icon.etc_dragon_flute_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="WOOD"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -36,7 +34,6 @@
         <!-- Love letter that Troubadour Swan wants to send to Musician Nanarin along with the flute. Take them to Musician Nanarin. -->
         <set name="icon" val="icon.etc_scroll_white_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -52,7 +49,6 @@
         <!-- Gift that Musician Nanarin is sending to Musician Barbado. Take it to Barbado. -->
         <set name="icon" val="icon.etc_ladys_dress_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="CLOTH"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -69,7 +65,6 @@
         <!-- Gift that Musician Nanarin is sending to Musician Barbado. Take it to Barbado. -->
         <set name="icon" val="icon.etc_dragon_flute_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="WOOD"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -86,7 +81,6 @@
         <!-- Gift that Musician Nanarin is sending to Musician Barbado. Take it to Barbado. -->
         <set name="icon" val="icon.etc_oil_pot_black_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -103,7 +97,6 @@
         <!-- Black beer that was stolen from Jonas. Take it to Trader Sabrin. -->
         <set name="icon" val="icon.etc_oil_pot_black_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -119,7 +112,6 @@
         <!-- Event clothes that were stolen from Trader Sonia. Take them to Guard Xaber. -->
         <set name="icon" val="icon.etc_ladys_dress_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="CLOTH"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -135,7 +127,6 @@
         <!-- The key given by Bard Swan. Use this key to open the clothes chest and retrieve the event clothes. -->
         <set name="icon" val="icon.etc_old_key_i01"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -151,7 +142,6 @@
         <!-- The key given by Bard Swan. Use this key to open the beer chest and get the black beer out of it. -->
         <set name="icon" val="icon.etc_old_key_i02"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -167,7 +157,6 @@
         <!-- Leaf given by Fairy Mimyu to put on the fairy's neck wound that was inflicted by a Hatchling. -->
         <set name="icon" val="icon.etc_leaf_green_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="WOOD"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -183,7 +172,6 @@
         <!-- Heads of Ratman Scavengers that you hunted after receiving a request from Katari. Collect 10 of them and take them to Katari. -->
         <set name="icon" val="icon.etc_pet_arms_i04"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="BONE"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -199,7 +187,6 @@
         <!-- The tails of Turek war Hounds that Piotur asks you to catch. Collect 10 of them and take them to Piotur. -->
         <set name="icon" val="icon.etc_mane_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="BONE"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -215,7 +202,6 @@
         <!-- Tyrant Kingpin's Heart. Take it to Elder Casian. -->
         <set name="icon" val="icon.etc_heart_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LEATHER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -231,7 +217,6 @@
         <!-- The venom sacs of Trisalim Tarantulas that Magister Joan asked you to hunt. Collect three and take them to Magister Joan. -->
         <set name="icon" val="icon.etc_poison_pouch_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="CLOTH"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -247,7 +232,6 @@
         <!-- Mark that can be obtained by catching a Tarlk Bugbear or a Tarlk Basilisk. Collect 30 and take them to a Clan Hall Herald. -->
         <set name="icon" val="icon.etc_orcish_talisman_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -263,7 +247,6 @@
         <!-- Certificate that one can present to participate in the hunt for Tarlk Basilisks, a preliminary contest for a Clan Hall Siege War. -->
         <set name="icon" val="icon.etc_paper_black_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -279,7 +262,6 @@
         <!-- Bodily fluids extracted from ants or Ant Captains. Collect 20 and take them to Elder Casian. -->
         <set name="icon" val="icon.etc_reagent_red_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -295,7 +277,6 @@
         <!-- The nerve tissue harvested from a Noble Ant's head. Take it to Elder Casian along with the Ant Fluids. -->
         <set name="icon" val="icon.etc_bodypart_brain_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -311,7 +292,6 @@
         <!-- Enzyme created by Elder Casian. Find the Ant Larvae Sleeping within the Ant Nest Dungeon and administer the enzyme to them. -->
         <set name="icon" val="icon.etc_spell_shot_silver_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -327,7 +307,6 @@
         <!-- Lump of crystal that contains the energy of water. You should find the Stone Statue of Water and dedicate it to the statue. -->
         <set name="icon" val="icon.etc_gem_blue_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="CRYSTAL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -343,7 +322,6 @@
         <!-- Lump of crystal that contains the energy of fire. You should find the Stone Statue of Fire and dedicate it to the statue. -->
         <set name="icon" val="icon.etc_gem_red_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="CRYSTAL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -359,7 +337,6 @@
         <!-- Lump of crystal that contains the energy of wind. You should find the Stone Statue of Wind and dedicate it to the statue. -->
         <set name="icon" val="icon.etc_gem_green_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="CRYSTAL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -375,7 +352,6 @@
         <!-- Lump of crystal that contains the energy of earth. You should find the Stone Statue of Earth and dedicate it to the statue. -->
         <set name="icon" val="icon.etc_gem_yellow_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="CRYSTAL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -391,7 +367,6 @@
         <!-- Lump of crystal that contains the energy of darkness. You should find the Stone Statue of Darkness and dedicate it to the statue. -->
         <set name="icon" val="icon.etc_gem_clear_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="CRYSTAL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -407,7 +382,6 @@
         <!-- Lump of crystal that contains the energy of light. You should find the Stone Statue of Light and dedicate it to the statue. -->
         <set name="icon" val="icon.etc_gem_black_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="CRYSTAL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -423,7 +397,6 @@
         <!-- Jade crystals that had been gathered from the Enchanted Valley. Collect them and take them to Bentley of Hunter's Village. -->
         <set name="icon" val="icon.etc_gem_green_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="CRYSTAL"/>
         <set name="weight" val="1"/>
         <set name="price" val="50"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
@@ -433,7 +406,6 @@
         <!-- Statue of a goddess that was created by the ancient sculptor Berona in ancient times. -->
         <set name="icon" val="icon.etc_holy_statue_silver_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="WOOD"/>
         <set name="weight" val="5"/>
         <set name="price" val="50"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
@@ -443,7 +415,6 @@
         <!-- Statue created by the ancient sculptor Berona. It Has not been evaluated by antique experts yet. -->
         <set name="icon" val="icon.etc_statue_of_einhasad_gold_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="WOOD"/>
         <set name="weight" val="5"/>
         <set name="price" val="10"/>
         <set name="is_questitem" val="true"/>
@@ -454,7 +425,6 @@
         <!-- Statue created by Berona, an ancient sculptor. - Prototype -->
         <set name="icon" val="icon.etc_statue_of_einhasad_gold_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="WOOD"/>
         <set name="weight" val="5"/>
         <set name="price" val="2000"/>
         <set name="is_questitem" val="true"/>
@@ -465,7 +435,6 @@
         <!-- Statue created by Berona, a sculptor in ancient times. - Original -->
         <set name="icon" val="icon.etc_statue_of_einhasad_gold_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="WOOD"/>
         <set name="weight" val="5"/>
         <set name="price" val="200"/>
         <set name="is_questitem" val="true"/>
@@ -476,7 +445,6 @@
         <!-- Replicated statues that have been created by present day sculptors who imitated Berona's works. -->
         <set name="icon" val="icon.etc_statue_of_einhasad_gold_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="WOOD"/>
         <set name="weight" val="5"/>
         <set name="price" val="150"/>
         <set name="is_questitem" val="true"/>
@@ -487,7 +455,6 @@
         <!-- Forgeries that have been created in imitation of the ancient sculptor Berona's works. -->
         <set name="icon" val="icon.etc_statue_of_einhasad_gold_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="WOOD"/>
         <set name="weight" val="5"/>
         <set name="price" val="100"/>
         <set name="is_questitem" val="true"/>
@@ -498,7 +465,6 @@
         <!-- Special Coin -->
         <set name="icon" val="icon.etc_magic_coin_blue_i01"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="price" val="100"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
         <set name="is_stackable" val="true"/>
@@ -507,7 +473,6 @@
         <!-- Special Coin -->
         <set name="icon" val="icon.etc_magic_coin_gold_i02"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="price" val="100"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
         <set name="is_stackable" val="true"/>
@@ -516,7 +481,6 @@
         <!-- Special Coin -->
         <set name="icon" val="icon.etc_magic_coin_silver_i02"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="price" val="100"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
         <set name="is_stackable" val="true"/>
@@ -525,7 +489,6 @@
         <!-- Special Coin -->
         <set name="icon" val="icon.etc_magic_coin_blood_i02"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="price" val="100"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
         <set name="is_stackable" val="true"/>
@@ -534,7 +497,6 @@
         <!-- Barrel that is filled to the brim with delicious and fragrant liquor. The barrel is very heavy. -->
         <set name="icon" val="icon.etc_wine_barrel_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="WOOD"/>
         <set name="weight" val="2000"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
         <set name="price" val="4000"/>
@@ -543,7 +505,6 @@
         <!-- Scarab that is transparent and shines like a precious stone. Among hustlers it is traded at a high price. -->
         <set name="icon" val="icon.etc_beetle_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="CRYSTAL"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
         <set name="price" val="15000"/>
     </item>
@@ -551,7 +512,6 @@
         <!-- Type of flower that is believed to have the power to heal sickness. It is a favorite of elves. -->
         <set name="icon" val="icon.etc_flower_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="WOOD"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
         <set name="price" val="2000"/>
     </item>
@@ -559,7 +519,6 @@
         <!-- It is a strange looking statue of a living creature that looks like an imp. It is an orc's favorite item. -->
         <set name="icon" val="icon.etc_totem_black_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="weight" val="500"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
         <set name="price" val="8000"/>
@@ -568,7 +527,6 @@
         <!-- Very attractive scarlet Aden-style dress designed for a virtuous lady. -->
         <set name="icon" val="icon.etc_ladys_dress_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="CLOTH"/>
         <set name="weight" val="20"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
         <set name="price" val="30000"/>
@@ -577,7 +535,6 @@
         <!-- It is made by cutting Nebulite into a spherical shape. Take this to Magic Trader Cema in Hardin's Academy. -->
         <set name="icon" val="icon.etc_crystal_ball_red_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="CRYSTAL"/>
         <set name="weight" val="2"/>
         <set name="price" val="10"/>
         <set name="is_questitem" val="true"/>
@@ -588,7 +545,6 @@
         <!-- Exotic tasting liqueur made from ectoplasm. Very popular among connoisseurs. -->
         <set name="icon" val="icon.etc_dragon_blood_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="CRYSTAL"/>
         <set name="weight" val="10"/>
         <set name="is_questitem" val="true"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
@@ -598,7 +554,6 @@
         <!-- The winning trophy that Prince Malcom won in a dance competition. You can sell it at a store or keep it as a souvenir. -->
         <set name="icon" val="icon.etc_trophy_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="weight" val="20"/>
         <set name="price" val="100"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
@@ -608,7 +563,6 @@
         <!-- The autobiography of Prince Malcom that bears his hand-written signature. Sell it at a store. -->
         <set name="icon" val="icon.etc_spellbook_red_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="10"/>
         <set name="price" val="100"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
@@ -618,7 +572,6 @@
         <!-- Statue of Prince Malcom made of pure gold. Although quite ugly, it will fetch a handsome price. -->
         <set name="icon" val="icon.etc_holy_statue_gold_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="weight" val="20"/>
         <set name="price" val="100"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
@@ -628,7 +581,6 @@
         <!-- Beautiful and elaborate handkerchief decorated with a flower pattern and lace. Its design could attract the attention of princes and princesses. -->
         <set name="icon" val="icon.etc_kerchief_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="CLOTH"/>
         <set name="weight" val="5"/>
         <set name="price" val="100"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
@@ -638,7 +590,6 @@
         <!-- Luxuriously designed goblet. It seems to be an object made during the period of the Elmo Aden Empire. -->
         <set name="icon" val="icon.etc_holy_grail_i01"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="weight" val="10"/>
         <set name="price" val="100"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
@@ -648,7 +599,6 @@
         <!-- Staff that gives off dark M. Atk. On its handle, the words Great Demon King are engraved.\0 -->
         <set name="icon" val="icon.etc_imperial_scepter_i02"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="weight" val="10"/>
         <set name="price" val="100"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
@@ -658,7 +608,6 @@
         <!-- Perfume used by Succubus noblewomen. Very strong fragrance, not popular among Elves and Humans. -->
         <set name="icon" val="icon.etc_dragons_blood_i02"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="5"/>
         <set name="price" val="100"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
@@ -668,7 +617,6 @@
         <!-- Mirror used by Succubus noblewomen when they put on cosmetics. It is also said to be used occasionally by blood queens. -->
         <set name="icon" val="icon.etc_mirror_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="10"/>
         <set name="price" val="100"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
@@ -678,7 +626,6 @@
         <!-- Heart-shaped stone piece that gives off the aura of dark M. Atk. On its reverse, the words I love you Merkenis! are engraved.\0 -->
         <set name="icon" val="icon.etc_heart_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="WOOD"/>
         <set name="weight" val="30"/>
         <set name="price" val="100"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
@@ -688,7 +635,6 @@
         <!-- Totem made by carving out a whole lump of red granite. -->
         <set name="icon" val="icon.etc_totem_red_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="WOOD"/>
         <set name="weight" val="30"/>
         <set name="price" val="100"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
@@ -698,7 +644,6 @@
         <!-- Walnut sized bead that is smeared with dirt. Perhaps, it is a pearl. -->
         <set name="icon" val="icon.etc_crystal_ball_silver_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="CRYSTAL"/>
         <set name="weight" val="5"/>
         <set name="price" val="100"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
@@ -708,7 +653,6 @@
         <!-- The tusk of a boar that looks somewhat similar to the ivory of an elephant. -->
         <set name="icon" val="icon.etc_horn_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="BONE"/>
         <set name="weight" val="10"/>
         <set name="price" val="100"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
@@ -718,7 +662,6 @@
         <!-- Large sized sweet potato that was just plucked out of the soil. You s it or roast it. It will make a delicious treat. -->
         <set name="icon" val="icon.etc_seed_yellow_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="BONE"/>
         <set name="weight" val="5"/>
         <set name="price" val="100"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
@@ -728,7 +671,6 @@
         <!-- White lion's sharp claws. It is rumored that it is being traded among collectors at a high price. -->
         <set name="icon" val="icon.etc_fang_ivory_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="BONE"/>
         <set name="weight" val="5"/>
         <set name="price" val="100"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
@@ -738,7 +680,6 @@
         <!-- White lion's luxuriant mane. It is rumored to be sold at a high price among collectors. -->
         <set name="icon" val="icon.etc_metallic_fiber_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LEATHER"/>
         <set name="weight" val="10"/>
         <set name="price" val="100"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
@@ -748,7 +689,6 @@
         <!-- Rare medicine imported from the Orient. -->
         <set name="icon" val="icon.etc_ginseng_red_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="WOOD"/>
         <set name="weight" val="5"/>
         <set name="price" val="100"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
@@ -758,7 +698,6 @@
         <!-- Jar containing sweet honey. -->
         <set name="icon" val="icon.etc_oil_pot_white_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="weight" val="10"/>
         <set name="price" val="100"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
@@ -768,7 +707,6 @@
         <!-- The gall of a bear that is known to be highly effective in promoting one's health and well-being as well as having mysterious healing properties. -->
         <set name="icon" val="icon.etc_bodypart_liver_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="5"/>
         <set name="price" val="100"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
@@ -778,7 +716,6 @@
         <!-- Fresh salmon that seems to have been just caught from a river. -->
         <set name="icon" val="icon.etc_fish_seawater_i01"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="BONE"/>
         <set name="weight" val="5"/>
         <set name="price" val="100"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
@@ -788,7 +725,6 @@
         <!-- The Schuttgart type sushi rice ball. The delicious seasoning of well minced meat gets absorbed into a the rice and produces a wonderful taste. -->
         <set name="icon" val="icon.etc_meat_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="5"/>
         <set name="price" val="100"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
@@ -798,7 +734,6 @@
         <!-- Exotic spice that has been imported from Avella of the Orient. -->
         <set name="icon" val="icon.etc_powder_red_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="5"/>
         <set name="price" val="100"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
@@ -808,7 +743,6 @@
         <!-- Rabbit weed that is supposed to bring luck. It is the favorite food of rabbits and elpys. -->
         <set name="icon" val="icon.etc_herb_green_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="WOOD"/>
         <set name="weight" val="5"/>
         <set name="price" val="100"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
@@ -818,7 +752,6 @@
         <!-- Check of tremendous face value signed by Prince Malcom. It can be cashed at a warehouse in Town of Giran. -->
         <set name="icon" val="icon.etc_paper_blue_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="10"/>
         <set name="price" val="100"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
@@ -828,7 +761,6 @@
         <!-- Key for a private deposit box located in a warehouse in Town of Giran. -->
         <set name="icon" val="icon.etc_old_key_i03"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="weight" val="10"/>
         <set name="price" val="100"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
@@ -838,7 +770,6 @@
         <!-- Royal seal made of carved jade. It is engraved with the seal of the Dwarven royal family. -->
         <set name="icon" val="icon.etc_royal_seal_of_lord_i04"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="weight" val="20"/>
         <set name="price" val="100"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
@@ -848,7 +779,6 @@
         <!-- King's crown made of gold. It is engraved with the seal of the Dwarven royal family. -->
         <set name="icon" val="icon.etc_ancient_crown_i02"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="weight" val="20"/>
         <set name="price" val="100"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
@@ -858,7 +788,6 @@
         <!-- Dance manual that details ballroom dancing techniques. This book will make you a dancing hero! -->
         <set name="icon" val="icon.etc_spellbook_blue_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="20"/>
         <set name="price" val="100"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
@@ -869,7 +798,6 @@
         <set name="icon" val="icon.etc_calculator_i00"/>
         <set name="default_action" val="CALC"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="weight" val="20"/>
         <set name="price" val="100"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
@@ -879,7 +807,6 @@
         <!-- Holy Writ of Solina, which looks like an ordinary book. Take it to Magister Hanellin. -->
         <set name="icon" val="icon.etc_spellbook_gray_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="20"/>
         <set name="is_dropable" val="false"/>
         <set name="is_destroyable" val="false"/>

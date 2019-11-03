@@ -4,7 +4,6 @@
         <!-- Opens a level 30 treasure chest with a success rate of 60%. When opening a higher level treasure chest, the success rate will decrease. -->
         <set name="icon" val="icon.etc_key_i00"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="10"/>
         <set name="price" val="1900"/>
         <set name="is_stackable" val="true"/>
@@ -19,7 +18,6 @@
         <!-- Opens a level 40 treasure chest with a success rate of 60%. When opening a higher level treasure chest, the success rate will decrease. -->
         <set name="icon" val="icon.etc_key_i00"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="10"/>
         <set name="price" val="3200"/>
         <set name="is_stackable" val="true"/>
@@ -34,7 +32,6 @@
         <!-- Opens a level 50 treasure chest with a success rate of 60%. When opening a higher level treasure chest, the success rate will decrease. -->
         <set name="icon" val="icon.etc_key_i00"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="10"/>
         <set name="price" val="5100"/>
         <set name="is_stackable" val="true"/>
@@ -49,7 +46,6 @@
         <!-- Opens a level 60 treasure chest with a success rate of 60%. When opening a higher level treasure chest, the success rate will decrease. -->
         <set name="icon" val="icon.etc_key_i00"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="10"/>
         <set name="price" val="7400"/>
         <set name="is_stackable" val="true"/>
@@ -64,7 +60,6 @@
         <!-- Opens a level 70 treasure chest with a success rate of 60%. When opening a higher level treasure chest, the success rate will decrease. -->
         <set name="icon" val="icon.etc_key_i00"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="10"/>
         <set name="price" val="10000"/>
         <set name="is_stackable" val="true"/>
@@ -80,7 +75,6 @@
         <set name="icon" val="icon.mticket_sword_fix_i00"/>
         <set name="etcitem_type" val="CASTLE_GUARD"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="price" val="50000"/>
         <set name="is_stackable" val="true"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
@@ -91,7 +85,6 @@
         <set name="icon" val="icon.mticket_pole_fix_i00"/>
         <set name="etcitem_type" val="CASTLE_GUARD"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="price" val="60000"/>
         <set name="is_stackable" val="true"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
@@ -102,7 +95,6 @@
         <set name="icon" val="icon.mticket_bow_fix_i00"/>
         <set name="etcitem_type" val="CASTLE_GUARD"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="price" val="70000"/>
         <set name="is_stackable" val="true"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
@@ -113,7 +105,6 @@
         <set name="icon" val="icon.mticket_cleric_fix_i00"/>
         <set name="etcitem_type" val="CASTLE_GUARD"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="price" val="170000"/>
         <set name="is_stackable" val="true"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
@@ -124,7 +115,6 @@
         <set name="icon" val="icon.mticket_wizard_fix_i00"/>
         <set name="etcitem_type" val="CASTLE_GUARD"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="price" val="170000"/>
         <set name="is_stackable" val="true"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
@@ -135,7 +125,6 @@
         <set name="icon" val="icon.mticket_sword_move_i00"/>
         <set name="etcitem_type" val="CASTLE_GUARD"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="price" val="50000"/>
         <set name="is_stackable" val="true"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
@@ -146,7 +135,6 @@
         <set name="icon" val="icon.mticket_pole_move_i00"/>
         <set name="etcitem_type" val="CASTLE_GUARD"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="price" val="60000"/>
         <set name="is_stackable" val="true"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
@@ -157,7 +145,6 @@
         <set name="icon" val="icon.mticket_bow_move_i00"/>
         <set name="etcitem_type" val="CASTLE_GUARD"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="price" val="70000"/>
         <set name="is_stackable" val="true"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
@@ -168,7 +155,6 @@
         <set name="icon" val="icon.mticket_cleric_move_i00"/>
         <set name="etcitem_type" val="CASTLE_GUARD"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="price" val="170000"/>
         <set name="is_stackable" val="true"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
@@ -179,7 +165,6 @@
         <set name="icon" val="icon.mticket_wizard_move_i00"/>
         <set name="etcitem_type" val="CASTLE_GUARD"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="price" val="170000"/>
         <set name="is_stackable" val="true"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
@@ -190,7 +175,6 @@
         <set name="icon" val="icon.mticket_teleporter_fix_i00"/>
         <set name="etcitem_type" val="CASTLE_GUARD"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="price" val="100000"/>
         <set name="is_stackable" val="true"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
@@ -201,7 +185,6 @@
         <set name="icon" val="icon.mticket_teleporter_fix_i00"/>
         <set name="etcitem_type" val="CASTLE_GUARD"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="price" val="100000"/>
         <set name="is_stackable" val="true"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
@@ -212,7 +195,6 @@
         <set name="icon" val="icon.mticket_teleporter_fix_i00"/>
         <set name="etcitem_type" val="CASTLE_GUARD"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="price" val="100000"/>
         <set name="is_stackable" val="true"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
@@ -223,7 +205,6 @@
         <set name="icon" val="icon.etc_plate_blue_i00"/>
         <set name="etcitem_type" val="MATERIAL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="2"/>
         <set name="price" val="5000"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
@@ -235,7 +216,6 @@
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="30"/>
         <set name="price" val="150000"/>
         <set name="recipe_id" val="496"/>
@@ -249,7 +229,6 @@
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="30"/>
         <set name="price" val="2800"/>
         <set name="recipe_id" val="497"/>
@@ -261,7 +240,6 @@
         <!-- Large piece of white cloth given by Magister Hanellin. Kill Guardian Angels and Seal Angels and soak the cloth with their blood. -->
         <set name="icon" val="icon.etc_piece_of_cloth_white_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="CLOTH"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -283,7 +261,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="1128"/>
         <set name="crystal_type" val="A"/>
-        <set name="material" val="FINE_STEEL"/>
         <set name="weight" val="2080"/>
         <set name="price" val="14098000"/>
         <set name="soulshots" val="1"/>
@@ -309,7 +286,6 @@
         <set name="default_action" val="SKILL_REDUCE"/>
         <set name="etcitem_type" val="POTION"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="50"/>
         <set name="price" val="10000"/>
         <set name="reuse_delay" val="500"/>
@@ -330,7 +306,6 @@
         <set name="icon" val="icon.etc_lesser_potion_purple_i00"/>
         <set name="default_action" val="SKILL_REDUCE"/>
         <set name="etcitem_type" val="POTION"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="50"/>
         <set name="price" val="20000"/>
         <set name="reuse_delay" val="500"/>
@@ -351,7 +326,6 @@
         <set name="icon" val="icon.etc_lesser_potion_purple_i00"/>
         <set name="default_action" val="SKILL_REDUCE"/>
         <set name="etcitem_type" val="POTION"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="50"/>
         <set name="price" val="20000"/>
         <set name="reuse_delay" val="500"/>
@@ -372,7 +346,6 @@
         <set name="icon" val="icon.etc_lesser_potion_purple_i00"/>
         <set name="default_action" val="SKILL_REDUCE"/>
         <set name="etcitem_type" val="POTION"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="50"/>
         <set name="price" val="20000"/>
         <set name="reuse_delay" val="500"/>
@@ -393,7 +366,6 @@
         <set name="icon" val="icon.etc_lesser_potion_scarlet_i00"/>
         <set name="default_action" val="SKILL_REDUCE"/>
         <set name="etcitem_type" val="POTION"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="50"/>
         <set name="price" val="20000"/>
         <set name="reuse_delay" val="500"/>
@@ -414,7 +386,6 @@
         <set name="icon" val="icon.etc_lesser_potion_scarlet_i00"/>
         <set name="default_action" val="SKILL_REDUCE"/>
         <set name="etcitem_type" val="POTION"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="50"/>
         <set name="price" val="20000"/>
         <set name="reuse_delay" val="500"/>
@@ -435,7 +406,6 @@
         <set name="icon" val="icon.etc_lesser_potion_scarlet_i00"/>
         <set name="default_action" val="SKILL_REDUCE"/>
         <set name="etcitem_type" val="POTION"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="50"/>
         <set name="price" val="20000"/>
         <set name="reuse_delay" val="500"/>
@@ -456,7 +426,6 @@
         <set name="icon" val="icon.etc_lesser_potion_scarlet_i00"/>
         <set name="default_action" val="SKILL_REDUCE"/>
         <set name="etcitem_type" val="POTION"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="50"/>
         <set name="price" val="20000"/>
         <set name="reuse_delay" val="500"/>
@@ -477,7 +446,6 @@
         <set name="icon" val="icon.etc_lesser_potion_green_i00"/>
         <set name="default_action" val="SKILL_REDUCE"/>
         <set name="etcitem_type" val="POTION"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="50"/>
         <set name="price" val="20000"/>
         <set name="reuse_delay" val="500"/>
@@ -498,7 +466,6 @@
         <set name="icon" val="icon.etc_lesser_potion_green_i00"/>
         <set name="default_action" val="SKILL_REDUCE"/>
         <set name="etcitem_type" val="POTION"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="50"/>
         <set name="price" val="20000"/>
         <set name="reuse_delay" val="500"/>
@@ -519,7 +486,6 @@
         <set name="icon" val="icon.etc_lesser_potion_green_i00"/>
         <set name="default_action" val="SKILL_REDUCE"/>
         <set name="etcitem_type" val="POTION"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="50"/>
         <set name="price" val="20000"/>
         <set name="reuse_delay" val="500"/>
@@ -540,7 +506,6 @@
         <set name="icon" val="icon.etc_lesser_potion_green_i00"/>
         <set name="default_action" val="SKILL_REDUCE"/>
         <set name="etcitem_type" val="POTION"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="50"/>
         <set name="price" val="20000"/>
         <set name="reuse_delay" val="500"/>
@@ -561,7 +526,6 @@
         <set name="icon" val="icon.etc_lesser_potion_green_i00"/>
         <set name="default_action" val="SKILL_REDUCE"/>
         <set name="etcitem_type" val="POTION"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="50"/>
         <set name="price" val="20000"/>
         <set name="reuse_delay" val="500"/>
@@ -582,7 +546,6 @@
         <set name="icon" val="icon.etc_lesser_potion_green_i00"/>
         <set name="default_action" val="SKILL_REDUCE"/>
         <set name="etcitem_type" val="POTION"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="50"/>
         <set name="price" val="20000"/>
         <set name="reuse_delay" val="500"/>
@@ -603,7 +566,6 @@
         <set name="icon" val="icon.etc_lesser_potion_green_i00"/>
         <set name="default_action" val="SKILL_REDUCE"/>
         <set name="etcitem_type" val="POTION"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="50"/>
         <set name="price" val="20000"/>
         <set name="reuse_delay" val="500"/>
@@ -624,7 +586,6 @@
         <set name="icon" val="icon.etc_pouch_gray_i00"/>
         <set name="default_action" val="CAPSULE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="weight" val="600"/>
         <set name="price" val="7700"/>
         <set name="handler" val="ItemSkills"/>
@@ -638,7 +599,6 @@
         <set name="icon" val="icon.etc_pouch_gray_i00"/>
         <set name="default_action" val="CAPSULE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="weight" val="450"/>
         <set name="price" val="11000"/>
         <set name="handler" val="ItemSkills"/>
@@ -652,7 +612,6 @@
         <set name="icon" val="icon.etc_pouch_gray_i00"/>
         <set name="default_action" val="CAPSULE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="weight" val="450"/>
         <set name="price" val="16500"/>
         <set name="handler" val="ItemSkills"/>
@@ -666,7 +625,6 @@
         <set name="icon" val="icon.etc_pouch_gray_i00"/>
         <set name="default_action" val="CAPSULE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="weight" val="300"/>
         <set name="price" val="55000"/>
         <set name="handler" val="ItemSkills"/>
@@ -680,7 +638,6 @@
         <set name="icon" val="icon.etc_pouch_gray_i00"/>
         <set name="default_action" val="CAPSULE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="weight" val="300"/>
         <set name="price" val="88000"/>
         <set name="handler" val="ItemSkills"/>
@@ -694,7 +651,6 @@
         <set name="icon" val="icon.etc_pouch_gray_i00"/>
         <set name="default_action" val="CAPSULE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="weight" val="750"/>
         <set name="price" val="16500"/>
         <set name="handler" val="ItemSkills"/>
@@ -708,7 +664,6 @@
         <set name="icon" val="icon.etc_pouch_gray_i00"/>
         <set name="default_action" val="CAPSULE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="weight" val="750"/>
         <set name="price" val="19800"/>
         <set name="handler" val="ItemSkills"/>
@@ -722,7 +677,6 @@
         <set name="icon" val="icon.etc_pouch_gray_i00"/>
         <set name="default_action" val="CAPSULE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="weight" val="450"/>
         <set name="price" val="38500"/>
         <set name="handler" val="ItemSkills"/>
@@ -736,7 +690,6 @@
         <set name="icon" val="icon.etc_pouch_gray_i00"/>
         <set name="default_action" val="CAPSULE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="weight" val="450"/>
         <set name="price" val="110000"/>
         <set name="handler" val="ItemSkills"/>
@@ -750,7 +703,6 @@
         <set name="icon" val="icon.etc_pouch_gray_i00"/>
         <set name="default_action" val="CAPSULE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="weight" val="300"/>
         <set name="price" val="132000"/>
         <set name="handler" val="ItemSkills"/>
@@ -764,7 +716,6 @@
         <set name="icon" val="icon.etc_pouch_gray_i00"/>
         <set name="default_action" val="CAPSULE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="weight" val="750"/>
         <set name="price" val="38500"/>
         <set name="handler" val="ItemSkills"/>
@@ -778,7 +729,6 @@
         <set name="icon" val="icon.etc_pouch_gray_i00"/>
         <set name="default_action" val="CAPSULE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="weight" val="750"/>
         <set name="price" val="49500"/>
         <set name="handler" val="ItemSkills"/>
@@ -792,7 +742,6 @@
         <set name="icon" val="icon.etc_pouch_gray_i00"/>
         <set name="default_action" val="CAPSULE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="weight" val="450"/>
         <set name="price" val="99000"/>
         <set name="handler" val="ItemSkills"/>
@@ -806,7 +755,6 @@
         <set name="icon" val="icon.etc_pouch_gray_i00"/>
         <set name="default_action" val="CAPSULE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="weight" val="450"/>
         <set name="price" val="269500"/>
         <set name="handler" val="ItemSkills"/>
@@ -820,7 +768,6 @@
         <set name="icon" val="icon.etc_pouch_gray_i00"/>
         <set name="default_action" val="CAPSULE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="weight" val="300"/>
         <set name="price" val="319000"/>
         <set name="handler" val="ItemSkills"/>
@@ -835,7 +782,6 @@
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="30"/>
         <set name="price" val="5000"/>
         <set name="recipe_id" val="498"/>
@@ -849,7 +795,6 @@
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="30"/>
         <set name="price" val="60000"/>
         <set name="recipe_id" val="499"/>
@@ -863,7 +808,6 @@
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="30"/>
         <set name="price" val="100000"/>
         <set name="recipe_id" val="500"/>
@@ -877,7 +821,6 @@
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="30"/>
         <set name="price" val="150000"/>
         <set name="recipe_id" val="501"/>
@@ -891,7 +834,6 @@
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="30"/>
         <set name="price" val="5000"/>
         <set name="recipe_id" val="503"/>
@@ -905,7 +847,6 @@
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="30"/>
         <set name="price" val="60000"/>
         <set name="recipe_id" val="504"/>
@@ -919,7 +860,6 @@
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="30"/>
         <set name="price" val="100000"/>
         <set name="recipe_id" val="505"/>
@@ -933,7 +873,6 @@
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="30"/>
         <set name="price" val="150000"/>
         <set name="recipe_id" val="506"/>
@@ -947,7 +886,6 @@
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="30"/>
         <set name="price" val="5000"/>
         <set name="recipe_id" val="508"/>
@@ -961,7 +899,6 @@
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="30"/>
         <set name="price" val="60000"/>
         <set name="recipe_id" val="509"/>
@@ -975,7 +912,6 @@
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="30"/>
         <set name="price" val="100000"/>
         <set name="recipe_id" val="510"/>
@@ -989,7 +925,6 @@
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="30"/>
         <set name="price" val="150000"/>
         <set name="recipe_id" val="511"/>
@@ -1003,7 +938,6 @@
         <set name="default_action" val="SKILL_REDUCE"/>
         <set name="etcitem_type" val="POTION"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="is_stackable" val="true"/>
         <set name="is_oly_restricted" val="true"/>
         <set name="handler" val="ItemSkills"/>
@@ -1019,7 +953,6 @@
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;44;120"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="BRONZE"/>
         <set name="weight" val="1530"/>
         <set name="price" val="244000"/>
         <set name="soulshots" val="1"/>
@@ -1044,7 +977,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="743"/>
         <set name="crystal_type" val="D"/>
-        <set name="material" val="STEEL"/>
         <set name="weight" val="1520"/>
         <set name="price" val="409000"/>
         <set name="change_weaponId" val="9210"/>
@@ -1072,7 +1004,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="2452"/>
         <set name="crystal_type" val="C"/>
-        <set name="material" val="ORIHARUKON"/>
         <set name="weight" val="1380"/>
         <set name="price" val="6130000"/>
         <set name="change_weaponId" val="9296"/>
@@ -1099,7 +1030,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="2452"/>
         <set name="crystal_type" val="A"/>
-        <set name="material" val="CRYSTAL"/>
         <set name="weight" val="7700"/>
         <set name="price" val="3562000"/>
         <set name="commissionItemType" val="ARMOR_TOP"/>
@@ -1118,7 +1048,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="178"/>
         <set name="crystal_type" val="A"/>
-        <set name="material" val="CRYSTAL"/>
         <set name="weight" val="3320"/>
         <set name="price" val="2226000"/>
         <set name="enchant_enabled" val="1"/>
@@ -1136,7 +1065,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="107"/>
         <set name="crystal_type" val="A"/>
-        <set name="material" val="CRYSTAL"/>
         <set name="weight" val="570"/>
         <set name="price" val="1336000"/>
         <set name="enchant_enabled" val="1"/>
@@ -1153,7 +1081,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="71"/>
         <set name="crystal_type" val="A"/>
-        <set name="material" val="LEATHER"/>
         <set name="weight" val="580"/>
         <set name="price" val="890000"/>
         <set name="enchant_enabled" val="1"/>
@@ -1171,7 +1098,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="71"/>
         <set name="crystal_type" val="A"/>
-        <set name="material" val="CRYSTAL"/>
         <set name="weight" val="1110"/>
         <set name="price" val="890000"/>
         <set name="enchant_enabled" val="1"/>
@@ -1189,7 +1115,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="75"/>
         <set name="crystal_type" val="A"/>
-        <set name="material" val="CRYSTAL"/>
         <set name="weight" val="1190"/>
         <set name="price" val="935000"/>
         <set name="commissionItemType" val="SHIELD"/>
@@ -1210,7 +1135,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="463"/>
         <set name="crystal_type" val="A"/>
-        <set name="material" val="LEATHER"/>
         <set name="weight" val="9780"/>
         <set name="price" val="5788000"/>
         <set name="commissionItemType" val="FULL_BODY"/>
@@ -1228,7 +1152,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="107"/>
         <set name="crystal_type" val="A"/>
-        <set name="material" val="CLOTH"/>
         <set name="weight" val="570"/>
         <set name="price" val="1336000"/>
         <set name="commissionItemType" val="HELMET"/>
@@ -1245,7 +1168,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="71"/>
         <set name="crystal_type" val="A"/>
-        <set name="material" val="LEATHER"/>
         <set name="weight" val="580"/>
         <set name="price" val="890000"/>
         <set name="enchant_enabled" val="1"/>
@@ -1263,7 +1185,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="71"/>
         <set name="crystal_type" val="A"/>
-        <set name="material" val="BLOOD_STEEL"/>
         <set name="weight" val="1130"/>
         <set name="price" val="890000"/>
         <set name="enchant_enabled" val="1"/>
@@ -1282,7 +1203,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="214"/>
         <set name="crystal_type" val="A"/>
-        <set name="material" val="LEATHER"/>
         <set name="weight" val="4300"/>
         <set name="price" val="2671000"/>
         <set name="commissionItemType" val="ARMOR_TOP"/>
@@ -1301,7 +1221,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="134"/>
         <set name="crystal_type" val="A"/>
-        <set name="material" val="LEATHER"/>
         <set name="weight" val="1480"/>
         <set name="price" val="1670000"/>
         <set name="enchant_enabled" val="1"/>

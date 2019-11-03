@@ -1,5 +1,7 @@
 package org.l2j.gameserver.datatables;
 
+import io.github.joealisson.primitive.HashIntMap;
+import io.github.joealisson.primitive.IntMap;
 import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.gameserver.Config;
 import org.l2j.commons.threading.ThreadPool;
@@ -33,7 +35,7 @@ import static org.l2j.commons.configuration.Configurator.getSettings;
 /**
  * This class serves as a container for all item templates in the game.
  */
-public class ItemTable {
+public final class ItemTable {
     private static Logger LOGGER = LoggerFactory.getLogger(ItemTable.class);
     private static Logger LOGGER_ITEMS = LoggerFactory.getLogger("item");
 
@@ -82,37 +84,36 @@ public class ItemTable {
         SLOTS.put("waist", (long) ItemTemplate.SLOT_BELT);
     }
 
-    private final Map<Integer, EtcItem> _etcItems = new HashMap<>();
-    private final Map<Integer, Armor> _armors = new HashMap<>();
-    private final Map<Integer, Weapon> _weapons = new HashMap<>();
-    private ItemTemplate[] _allTemplates;
+    private final IntMap<EtcItem> etcItems = new HashIntMap<>();
+    private final IntMap<Armor> armors = new HashIntMap<>();
+    private final IntMap<Weapon> weapons = new HashIntMap<>();
+    private ItemTemplate[] allTemplates;
 
     private ItemTable() {
-        load();
     }
 
     private void load() {
         int highest = 0;
-        _armors.clear();
-        _etcItems.clear();
-        _weapons.clear();
+        armors.clear();
+        etcItems.clear();
+        weapons.clear();
         for (ItemTemplate item : DocumentEngine.getInstance().loadItems()) {
             if (highest < item.getId()) {
                 highest = item.getId();
             }
             if (item instanceof EtcItem) {
-                _etcItems.put(item.getId(), (EtcItem) item);
+                etcItems.put(item.getId(), (EtcItem) item);
             } else if (item instanceof Armor) {
-                _armors.put(item.getId(), (Armor) item);
+                armors.put(item.getId(), (Armor) item);
             } else {
-                _weapons.put(item.getId(), (Weapon) item);
+                weapons.put(item.getId(), (Weapon) item);
             }
         }
         buildFastLookupTable(highest);
-        LOGGER.info("Loaded {} Etc Items", _etcItems.size());
-        LOGGER.info("Loaded {} Armor Items", _armors.size() );
-        LOGGER.info("Loaded {} Weapon Items", _weapons.size());
-        LOGGER.info("Loaded {} Items in total.", _etcItems.size() + _armors.size() + _weapons.size());
+        LOGGER.info("Loaded {} Etc Items", etcItems.size());
+        LOGGER.info("Loaded {} Armor Items", armors.size() );
+        LOGGER.info("Loaded {} Weapon Items", weapons.size());
+        LOGGER.info("Loaded {} Items in total.", etcItems.size() + armors.size() + weapons.size());
     }
 
     /**
@@ -123,21 +124,21 @@ public class ItemTable {
     private void buildFastLookupTable(int size) {
         // Create a FastLookUp Table called _allTemplates of size : value of the highest item ID
         LOGGER.info("Highest item id used: {}", size);
-        _allTemplates = new ItemTemplate[size + 1];
+        allTemplates = new ItemTemplate[size + 1];
 
         // Insert armor item in Fast Look Up Table
-        for (Armor item : _armors.values()) {
-            _allTemplates[item.getId()] = item;
+        for (Armor item : armors.values()) {
+            allTemplates[item.getId()] = item;
         }
 
         // Insert weapon item in Fast Look Up Table
-        for (Weapon item : _weapons.values()) {
-            _allTemplates[item.getId()] = item;
+        for (Weapon item : weapons.values()) {
+            allTemplates[item.getId()] = item;
         }
 
         // Insert etcItem item in Fast Look Up Table
-        for (EtcItem item : _etcItems.values()) {
-            _allTemplates[item.getId()] = item;
+        for (EtcItem item : etcItems.values()) {
+            allTemplates[item.getId()] = item;
         }
     }
 
@@ -148,11 +149,11 @@ public class ItemTable {
      * @return ItemTemplate
      */
     public ItemTemplate getTemplate(int id) {
-        if ((id >= _allTemplates.length) || (id < 0)) {
+        if ((id >= allTemplates.length) || (id < 0)) {
             return null;
         }
 
-        return _allTemplates[id];
+        return allTemplates[id];
     }
 
     /**
@@ -336,7 +337,7 @@ public class ItemTable {
     }
 
     public ItemTemplate[] getAllItems() {
-        return _allTemplates;
+        return allTemplates;
     }
 
     protected static class ResetOwner implements Runnable {
@@ -352,6 +353,10 @@ public class ItemTable {
             _item.setItemLootShedule(null);
         }
 
+    }
+
+    public static void init() {
+        getInstance().load();
     }
 
     public static ItemTable getInstance() {

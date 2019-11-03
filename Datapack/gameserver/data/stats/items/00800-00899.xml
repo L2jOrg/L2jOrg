@@ -4,7 +4,6 @@
         <!-- Bone fragments obtained from the undead skeletons. Collect ten of these and take to Tetrarch Kaitar. -->
         <set name="icon" val="icon.etc_piece_bone_white_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -19,7 +18,6 @@
     <item id="844" name="Book of Aklantoth P1 ~ P10" type="EtcItem">
         <set name="icon" val="icon.item_normal07"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -36,7 +34,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="rear;lear"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="SILVER"/>
         <set name="weight" val="150"/>
         <set name="commissionItemType" val="EARRING"/>
         <set name="price" val="8890"/>
@@ -49,7 +46,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="rear;lear"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="SILVER"/>
         <set name="weight" val="150"/>
         <set name="commissionItemType" val="EARRING"/>
         <set name="price" val="16000"/>
@@ -64,7 +60,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="48"/>
         <set name="crystal_type" val="D"/>
-        <set name="material" val="SILVER"/>
         <set name="weight" val="150"/>
         <set name="price" val="26900"/>
         <set name="commissionItemType" val="EARRING"/>
@@ -80,7 +75,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="77"/>
         <set name="crystal_type" val="D"/>
-        <set name="material" val="SILVER"/>
         <set name="weight" val="150"/>
         <set name="price" val="42600"/>
         <set name="commissionItemType" val="EARRING"/>
@@ -96,7 +90,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="116"/>
         <set name="crystal_type" val="D"/>
-        <set name="material" val="SILVER"/>
         <set name="weight" val="150"/>
         <set name="price" val="64300"/>
         <set name="commissionItemType" val="EARRING"/>
@@ -112,7 +105,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="169"/>
         <set name="crystal_type" val="D"/>
-        <set name="material" val="SILVER"/>
         <set name="weight" val="150"/>
         <set name="price" val="93400"/>
         <set name="commissionItemType" val="EARRING"/>
@@ -128,7 +120,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="220"/>
         <set name="crystal_type" val="D"/>
-        <set name="material" val="SILVER"/>
         <set name="weight" val="150"/>
         <set name="price" val="121000"/>
         <set name="commissionItemType" val="EARRING"/>
@@ -144,7 +135,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="62"/>
         <set name="crystal_type" val="C"/>
-        <set name="material" val="SILVER"/>
         <set name="weight" val="150"/>
         <set name="price" val="155000"/>
         <set name="commissionItemType" val="EARRING"/>
@@ -160,7 +150,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="78"/>
         <set name="crystal_type" val="C"/>
-        <set name="material" val="SILVER"/>
         <set name="weight" val="150"/>
         <set name="price" val="196000"/>
         <set name="enchant_enabled" val="1"/>
@@ -176,7 +165,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="118"/>
         <set name="crystal_type" val="C"/>
-        <set name="material" val="SILVER"/>
         <set name="weight" val="150"/>
         <set name="price" val="295000"/>
         <set name="enchant_enabled" val="1"/>
@@ -192,7 +180,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="169"/>
         <set name="crystal_type" val="C"/>
-        <set name="material" val="SILVER"/>
         <set name="weight" val="150"/>
         <set name="price" val="424000"/>
         <set name="enchant_enabled" val="1"/>
@@ -208,7 +195,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="80"/>
         <set name="crystal_type" val="B"/>
-        <set name="material" val="SILVER"/>
         <set name="weight" val="150"/>
         <set name="price" val="606000"/>
         <set name="enchant_enabled" val="1"/>
@@ -224,7 +210,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="169"/>
         <set name="crystal_type" val="C"/>
-        <set name="material" val="SILVER"/>
         <set name="weight" val="150"/>
         <set name="price" val="424000"/>
         <set name="commissionItemType" val="EARRING"/>
@@ -241,7 +226,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="157"/>
         <set name="crystal_type" val="S"/>
-        <set name="material" val="SILVER"/>
         <set name="weight" val="150"/>
         <set name="price" val="3270000"/>
         <set name="enchant_enabled" val="1"/>
@@ -257,7 +241,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="169"/>
         <set name="crystal_type" val="B"/>
-        <set name="material" val="SILVER"/>
         <set name="weight" val="150"/>
         <set name="price" val="606000"/>
         <set name="commissionItemType" val="EARRING"/>
@@ -273,7 +256,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="169"/>
         <set name="crystal_type" val="B"/>
-        <set name="material" val="SILVER"/>
         <set name="weight" val="150"/>
         <set name="price" val="924000"/>
         <set name="commissionItemType" val="EARRING"/>
@@ -290,7 +272,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="120"/>
         <set name="crystal_type" val="A"/>
-        <set name="material" val="SILVER"/>
         <set name="weight" val="150"/>
         <set name="price" val="1498000"/>
         <set name="commissionItemType" val="EARRING"/>
@@ -307,7 +288,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="123"/>
         <set name="crystal_type" val="B"/>
-        <set name="material" val="SILVER"/>
         <set name="weight" val="150"/>
         <set name="price" val="924000"/>
         <set name="enchant_enabled" val="1"/>
@@ -323,7 +303,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="123"/>
         <set name="crystal_type" val="B"/>
-        <set name="material" val="SILVER"/>
         <set name="weight" val="150"/>
         <set name="price" val="606000"/>
         <set name="commissionItemType" val="EARRING"/>
@@ -340,7 +319,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="80"/>
         <set name="crystal_type" val="A"/>
-        <set name="material" val="SILVER"/>
         <set name="weight" val="150"/>
         <set name="price" val="1005000"/>
         <set name="commissionItemType" val="EARRING"/>
@@ -357,7 +335,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="80"/>
         <set name="crystal_type" val="B"/>
-        <set name="material" val="SILVER"/>
         <set name="weight" val="150"/>
         <set name="price" val="606000"/>
         <set name="commissionItemType" val="EARRING"/>
@@ -372,7 +349,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="rfinger;lfinger"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="GOLD"/>
         <set name="weight" val="150"/>
         <set name="commissionItemType" val="RING"/>
         <set name="price" val="540"/>
@@ -386,7 +362,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="rfinger;lfinger"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="GOLD"/>
         <set name="weight" val="150"/>
         <set name="commissionItemType" val="RING"/>
         <set name="price" val="2340"/>
@@ -399,7 +374,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="rfinger;lfinger"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="GOLD"/>
         <set name="weight" val="150"/>
         <set name="commissionItemType" val="RING"/>
         <set name="price" val="5920"/>
@@ -412,7 +386,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="rfinger;lfinger"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="GOLD"/>
         <set name="weight" val="150"/>
         <set name="commissionItemType" val="RING"/>
         <set name="price" val="10700"/>
@@ -427,7 +400,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="51"/>
         <set name="crystal_type" val="D"/>
-        <set name="material" val="GOLD"/>
         <set name="weight" val="150"/>
         <set name="price" val="28400"/>
         <set name="commissionItemType" val="RING"/>
@@ -443,7 +415,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="77"/>
         <set name="crystal_type" val="D"/>
-        <set name="material" val="GOLD"/>
         <set name="weight" val="150"/>
         <set name="price" val="42800"/>
         <set name="commissionItemType" val="RING"/>
@@ -459,7 +430,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="113"/>
         <set name="crystal_type" val="D"/>
-        <set name="material" val="GOLD"/>
         <set name="weight" val="150"/>
         <set name="price" val="62300"/>
         <set name="commissionItemType" val="RING"/>
@@ -475,7 +445,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="146"/>
         <set name="crystal_type" val="D"/>
-        <set name="material" val="GOLD"/>
         <set name="weight" val="150"/>
         <set name="price" val="80800"/>
         <set name="commissionItemType" val="RING"/>
@@ -491,7 +460,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="41"/>
         <set name="crystal_type" val="C"/>
-        <set name="material" val="GOLD"/>
         <set name="weight" val="150"/>
         <set name="price" val="103000"/>
         <set name="commissionItemType" val="RING"/>
@@ -507,7 +475,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="52"/>
         <set name="crystal_type" val="C"/>
-        <set name="material" val="GOLD"/>
         <set name="weight" val="150"/>
         <set name="price" val="130000"/>
         <set name="enchant_enabled" val="1"/>
@@ -523,7 +490,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="78"/>
         <set name="crystal_type" val="C"/>
-        <set name="material" val="GOLD"/>
         <set name="weight" val="150"/>
         <set name="price" val="196000"/>
         <set name="enchant_enabled" val="1"/>
@@ -539,7 +505,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="112"/>
         <set name="crystal_type" val="C"/>
-        <set name="material" val="GOLD"/>
         <set name="weight" val="150"/>
         <set name="price" val="282000"/>
         <set name="enchant_enabled" val="1"/>
@@ -555,7 +520,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="53"/>
         <set name="crystal_type" val="B"/>
-        <set name="material" val="GOLD"/>
         <set name="weight" val="150"/>
         <set name="price" val="404000"/>
         <set name="enchant_enabled" val="1"/>
@@ -571,7 +535,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="112"/>
         <set name="crystal_type" val="C"/>
-        <set name="material" val="GOLD"/>
         <set name="weight" val="150"/>
         <set name="price" val="282000"/>
         <set name="commissionItemType" val="RING"/>
@@ -588,7 +551,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="105"/>
         <set name="crystal_type" val="S"/>
-        <set name="material" val="GOLD"/>
         <set name="weight" val="150"/>
         <set name="price" val="2180000"/>
         <set name="enchant_enabled" val="1"/>
@@ -604,7 +566,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="32"/>
         <set name="crystal_type" val="D"/>
-        <set name="material" val="GOLD"/>
         <set name="weight" val="150"/>
         <set name="price" val="18000"/>
         <set name="commissionItemType" val="RING"/>
@@ -620,7 +581,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="32"/>
         <set name="crystal_type" val="B"/>
-        <set name="material" val="GOLD"/>
         <set name="weight" val="150"/>
         <set name="price" val="616000"/>
         <set name="enchant_enabled" val="1"/>
@@ -637,7 +597,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="80"/>
         <set name="crystal_type" val="A"/>
-        <set name="material" val="GOLD"/>
         <set name="weight" val="150"/>
         <set name="price" val="999000"/>
         <set name="commissionItemType" val="RING"/>
@@ -654,7 +613,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="82"/>
         <set name="crystal_type" val="B"/>
-        <set name="material" val="GOLD"/>
         <set name="weight" val="150"/>
         <set name="price" val="616000"/>
         <set name="enchant_enabled" val="1"/>

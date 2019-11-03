@@ -4,7 +4,6 @@
         <!-- A crystal filled with a monster's soul. Adds special properties to a weapon. You can enhance the level of a crystal by combining. -->
         <set name="icon" val="icon.ensoul_big_pm"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="20"/>
     </item>
 </list>

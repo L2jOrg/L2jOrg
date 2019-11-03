@@ -38,7 +38,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="gloves"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="SILVER"/>
         <set name="weight" val="5"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -49,7 +48,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="gloves"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="SILVER"/>
         <set name="weight" val="5"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -60,7 +58,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="gloves"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="SILVER"/>
         <set name="weight" val="5"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -71,7 +68,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="gloves"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="SILVER"/>
         <set name="weight" val="5"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -82,7 +78,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="gloves"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="SILVER"/>
         <set name="weight" val="5"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -93,7 +88,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="gloves"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="SILVER"/>
         <set name="weight" val="5"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -104,7 +98,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="gloves"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="SILVER"/>
         <set name="weight" val="5"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -115,7 +108,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="gloves"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="SILVER"/>
         <set name="weight" val="5"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -126,7 +118,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="gloves"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="SILVER"/>
         <set name="weight" val="5"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -135,7 +126,6 @@
         <!-- Double-click to obtain a random Zodiac Agathion. Cannot be dropped or sold. -->
         <set name="icon" val="icon.star_agathion_cube"/>
         <set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="5"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -144,7 +134,6 @@
     <item id="71313" name="Shiny Coin" type="EtcItem">
         <!-- A coin that can be exchanged for special gifts through Pona. -->
         <set name="icon" val="icon.bm_nebit_coin"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_depositable" val="false"/>
@@ -155,7 +144,6 @@
         <!-- Allows to regain 800 VIP Points when used. Cannot be exchanged, dropped or sold in a private store. Can be stored in a private warehouse. -->
         <set name="icon" val="BranchIcon.Icon.g_bm_vip_potion_i00"/>
         <set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="5"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
@@ -167,7 +155,6 @@
         <!-- Allows to regain 2400 VIP Points when used. Cannot be exchanged, dropped or sold in a private store. Can be stored in a private warehouse. -->
         <set name="icon" val="BranchIcon.Icon.g_bm_vip_potion_i00"/>
         <set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="5"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
@@ -179,7 +166,6 @@
         <!-- Allows to regain 80 VIP Points when used. Cannot be exchanged, dropped or sold in a private store. Can be stored in a private warehouse. -->
         <set name="icon" val="BranchIcon.Icon.g_bm_vip_potion_i00"/>
         <set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="5"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
@@ -191,7 +177,6 @@
         <!-- Allows to regain 240 VIP Points when used. Cannot be exchanged, dropped or sold in a private store. Can be stored in a private warehouse. -->
         <set name="icon" val="BranchIcon.Icon.g_bm_vip_potion_i00"/>
         <set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="5"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
@@ -203,7 +188,6 @@
         <!-- Sealbook for learning the skill of transforming yourself into Kat the Cat. -->
         <set name="icon" val="icon.etc_transform_warrior_i00"/>
         <set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
-        <set name="material" val="PAPER"/>
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
@@ -213,7 +197,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="lbracelet"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="SILVER"/>
         <set name="weight" val="100"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
@@ -228,7 +211,6 @@
         <set name="weapon_type" val="ANCIENTSWORD"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="MITHRIL"/>
         <set name="soulshots" val="1"/>
         <set name="spiritshots" val="1"/>
         <set name="is_tradable" val="false"/>
@@ -249,7 +231,6 @@
         <set name="icon" val="icon.etc_pi_box_belief_pack"/>
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_destroyable" val="false"/>
@@ -262,7 +243,6 @@
         <set name="icon" val="icon.etc_pi_box_love_pack"/>
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_destroyable" val="false"/>
@@ -276,7 +256,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="hairall"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="WOOD"/>
         <set name="weight" val="10"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
@@ -289,7 +268,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="hairall"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="WOOD"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_depositable" val="false"/>
@@ -299,7 +277,6 @@
         <!-- Double-click to obtain 30 Shining Golden Baits. If you are lucky, you will get Angler's Gold Box or Angler's Silver Box. Cannot be dropped or sold. The item will be removed after the event is over. -->
         <set name="icon" val="icon.etc_readybox_bronze"/>
         <set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
-        <set name="material" val="PAPER"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
@@ -308,7 +285,6 @@
         <!-- Double-click to obtain 1 rare item. Cannot be dropped or sold. The item will be removed after the event is over. -->
         <set name="icon" val="icon.etc_readybox_gold"/>
         <set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
-        <set name="material" val="PAPER"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
@@ -317,7 +293,6 @@
         <!-- Double-click to obtain 1 rare item. Cannot be dropped or sold. The item will be removed after the event is over. -->
         <set name="icon" val="icon.etc_readybox_silver"/>
         <set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
-        <set name="material" val="PAPER"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
@@ -326,7 +301,6 @@
         <!-- Scroll for enchanting Event weapon Blue Mackerel: Dual Sword, than can be obtainned through the Fishermen's Guild. Cannot be enchanted, exchanged, dropped, sold or shared within account. Can be stored in a private warehouse. The item will be removed after the event is over. -->
         <set name="icon" val="icon.etc_pvppoint_scroll1"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_depositable" val="false"/>
@@ -337,28 +311,24 @@
         <!-- L2 Halloween Honey Pumpkin Event. Double-click to get a little pumpkin. -->
         <set name="icon" val="icon.etc_gourd_i00"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="is_stackable" val="true"/>
     </item>
     <item id="71330" name="Honey Pumpkin Seed" type="EtcItem">
         <!-- L2 Halloween Honey Pumpkin Event. Double-click to get a little honey pumpkin. -->
         <set name="icon" val="icon.etc_gourd_i01"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="is_stackable" val="true"/>
     </item>
     <item id="71331" name="Monster Energy" type="EtcItem">
         <!-- L2 Halloween Honey Pumpkin Event. Double-click to get a little honey pumpkin. -->
         <set name="icon" val="icon.etc_nectar_i00"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="is_stackable" val="true"/>
     </item>
     <item id="71332" name="Halloween Gift" type="EtcItem">
         <!-- Double-click to obtain one of various items at a random rate. Cannot be exchanged, dropped, destroyed, or sold in a private store. Can be stored in a private warehouse. Will be deleted after the event. -->
         <set name="icon" val="icon.event_halloween_king_pumpkini00"/>
         <set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_destroyable" val="false"/>
@@ -370,7 +340,6 @@
         <!-- Halloween buff. Cannot be used diring Halloween buff from Rico. If you get another Halloween buff from Rico, current buff will disappear. For 20 min., Acquired XP/ SP +10%, P./ M. Atk. +5%, Atk. Spd./ Casting Spd. +5%. Cannot be exchanged, dropped, destroyed, or sold in a private store. Can be stored in a private warehouse. Can be shared within account through Dimensional Merchant. Will be deleted after the event. -->
         <set name="icon" val="icon.etc_holy_potion_i00"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_depositable" val="false"/>
@@ -381,7 +350,6 @@
         <!-- Halloween buff. Cannot be used diring Halloween buff from Rico. If you get another Halloween buff from Rico, current buff will disappear. For 20 min., Acquired XP/ SP +20%, P./ M. Atk. +5%, Atk. Spd./ Casting Spd. +5%. Cannot be exchanged, dropped, destroyed, or sold in a private store. Can be stored in a private warehouse. Can be shared within account through Dimensional Merchant. Will be deleted after the event. -->
         <set name="icon" val="icon.etc_wind_potion_i00"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_depositable" val="false"/>
@@ -392,7 +360,6 @@
         <!-- Halloween buff. Cannot be used diring Halloween buff from Rico. If you get another Halloween buff from Rico, current buff will disappear. For 20 min., Acquired XP/ SP +30%, P./ M. Atk. +5%, Atk. Spd./ Casting Spd. +5%. Cannot be exchanged, dropped, destroyed, or sold in a private store. Can be stored in a private warehouse. Can be shared within account through Dimensional Merchant. Will be deleted after the event. -->
         <set name="icon" val="icon.etc_water_potion_i00"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_depositable" val="false"/>
@@ -404,7 +371,6 @@
         <set name="icon" val="BranchSys.icon.br_gold_box_i00"/>
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_depositable" val="false"/>
@@ -414,7 +380,6 @@
     <item id="71337" name="Expertise Rune (C-grade)" additionalName="1-day" type="EtcItem">
         <!-- 1-day item. When in inventory, gives Expertise C Skill. The remaining time decreases even when not playing. Cannot be exchanged, dropped or sold. Can be stored in a private warehouse. -->
         <set name="icon" val="br_cashtex.item.br_cash_rune_of_feather_i00"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_depositable" val="false"/>
@@ -426,7 +391,6 @@
         <set name="icon" val="icon.etc_pi_gift_box_i00"/>
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_depositable" val="false"/>
@@ -436,7 +400,6 @@
     <item id="71339" name="Magic Trumpet" additionalName="30-day" type="EtcItem">
         <!-- 30-day item. When in inventory, World Chat Points +20 (renewed at 7:00 a.m.). Intended for Lv. 40 and higher characters. Cannot be exchanged, dropped or sold. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.skill18578"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_depositable" val="false"/>
@@ -446,7 +409,6 @@
     <item id="71340" name="Summon Scroll: Magic Warehouse" additionalName="30-day" type="EtcItem">
         <!-- 30-day item. Inventory slols +12, allows to use special skill to summon Magic Warehouse. Cannot be exchanged, dropped or sold. Can be stored in a private warehouse. -->
         <set name="icon" val="BranchIcon.icon.g_bm_shop_add_i00"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_depositable" val="false"/>
@@ -458,7 +420,6 @@
         <set name="icon" val="icon.etc_pi_gift_box_i04"/>
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_depositable" val="false"/>
@@ -469,7 +430,6 @@
         <!-- When used, teleports to selected party member. Not available in chaotic state. Cannot be exchanged, dropped or sold. Can be shared within account via Dimensional Merchant. -->
         <set name="icon" val="icon.bookmark_scroll_i00"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="5"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
@@ -483,7 +443,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="gloves"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="SILVER"/>
         <set name="weight" val="5"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
@@ -496,7 +455,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="back"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="CLOTH"/>
         <set name="weight" val="220"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
@@ -513,7 +471,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="back"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="CLOTH"/>
         <set name="weight" val="220"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
@@ -530,7 +487,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="back"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="CLOTH"/>
         <set name="weight" val="220"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
@@ -546,7 +502,6 @@
         <set name="icon" val="icon.etc_pi_gift_box_i00"/>
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_depositable" val="false"/>
@@ -559,7 +514,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="brooch_jewel"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="GOLD"/>
         <set name="weight" val="5"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
@@ -572,7 +526,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="brooch_jewel"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="GOLD"/>
         <set name="weight" val="5"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
@@ -585,7 +538,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="brooch_jewel"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="GOLD"/>
         <set name="weight" val="5"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
@@ -598,7 +550,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="brooch_jewel"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="GOLD"/>
         <set name="weight" val="5"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
@@ -611,7 +562,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="brooch_jewel"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="GOLD"/>
         <set name="weight" val="5"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
@@ -624,7 +574,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="brooch_jewel"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="GOLD"/>
         <set name="weight" val="5"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -635,7 +584,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="brooch_jewel"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="GOLD"/>
         <set name="weight" val="5"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -646,7 +594,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="brooch_jewel"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="GOLD"/>
         <set name="weight" val="5"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -657,7 +604,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="brooch_jewel"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="GOLD"/>
         <set name="weight" val="5"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -668,7 +614,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="brooch_jewel"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="GOLD"/>
         <set name="weight" val="5"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -679,7 +624,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="brooch_jewel"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="GOLD"/>
         <set name="weight" val="5"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -690,7 +634,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="brooch_jewel"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="GOLD"/>
         <set name="weight" val="5"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -701,7 +644,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="brooch_jewel"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="GOLD"/>
         <set name="weight" val="5"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -712,7 +654,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="brooch_jewel"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="GOLD"/>
         <set name="weight" val="5"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -723,7 +664,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="brooch_jewel"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="GOLD"/>
         <set name="weight" val="5"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -734,7 +674,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="brooch_jewel"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="GOLD"/>
         <set name="weight" val="5"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -745,7 +684,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="brooch_jewel"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="GOLD"/>
         <set name="weight" val="5"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -756,7 +694,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="brooch_jewel"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="GOLD"/>
         <set name="weight" val="5"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -767,7 +704,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="brooch_jewel"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="GOLD"/>
         <set name="weight" val="5"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -778,7 +714,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="brooch_jewel"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="GOLD"/>
         <set name="weight" val="5"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -789,7 +724,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="brooch_jewel"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="GOLD"/>
         <set name="weight" val="5"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -800,7 +734,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="brooch_jewel"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="GOLD"/>
         <set name="weight" val="5"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -811,7 +744,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="brooch_jewel"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="GOLD"/>
         <set name="weight" val="5"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -822,7 +754,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="brooch_jewel"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="GOLD"/>
         <set name="weight" val="5"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -833,7 +764,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="brooch_jewel"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="GOLD"/>
         <set name="weight" val="5"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -844,7 +774,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="brooch_jewel"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="GOLD"/>
         <set name="weight" val="5"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -855,7 +784,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="brooch_jewel"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="GOLD"/>
         <set name="weight" val="5"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -866,7 +794,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="brooch_jewel"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="GOLD"/>
         <set name="weight" val="5"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -877,7 +804,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="brooch_jewel"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="GOLD"/>
         <set name="weight" val="5"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -888,7 +814,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="brooch_jewel"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="GOLD"/>
         <set name="weight" val="5"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -899,7 +824,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="brooch_jewel"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="GOLD"/>
         <set name="weight" val="5"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -910,7 +834,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="brooch_jewel"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="GOLD"/>
         <set name="weight" val="5"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -921,7 +844,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="brooch_jewel"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="GOLD"/>
         <set name="weight" val="5"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -932,7 +854,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="brooch_jewel"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="GOLD"/>
         <set name="weight" val="5"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -943,7 +864,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="brooch_jewel"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="GOLD"/>
         <set name="weight" val="5"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -954,7 +874,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="brooch_jewel"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="GOLD"/>
         <set name="weight" val="5"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -965,7 +884,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="brooch_jewel"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="GOLD"/>
         <set name="weight" val="5"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -976,7 +894,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="brooch_jewel"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="GOLD"/>
         <set name="weight" val="5"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -987,7 +904,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="brooch_jewel"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="GOLD"/>
         <set name="weight" val="5"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -998,7 +914,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="brooch_jewel"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="GOLD"/>
         <set name="weight" val="5"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -1009,7 +924,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="brooch_jewel"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="GOLD"/>
         <set name="weight" val="5"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -1020,7 +934,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="brooch_jewel"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="GOLD"/>
         <set name="weight" val="5"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -1031,7 +944,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="brooch_jewel"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="GOLD"/>
         <set name="weight" val="5"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -1042,7 +954,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="brooch_jewel"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="GOLD"/>
         <set name="weight" val="5"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -1053,7 +964,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="brooch_jewel"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="GOLD"/>
         <set name="weight" val="5"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -1064,7 +974,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="brooch_jewel"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="GOLD"/>
         <set name="weight" val="5"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -1075,7 +984,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="brooch_jewel"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="GOLD"/>
         <set name="weight" val="5"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -1086,7 +994,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="brooch_jewel"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="GOLD"/>
         <set name="weight" val="5"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -1097,7 +1004,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="brooch_jewel"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="GOLD"/>
         <set name="weight" val="5"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -1108,7 +1014,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="brooch_jewel"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="GOLD"/>
         <set name="weight" val="5"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -1119,7 +1024,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="brooch_jewel"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="GOLD"/>
         <set name="weight" val="5"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -1130,7 +1034,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="brooch_jewel"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="GOLD"/>
         <set name="weight" val="5"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>

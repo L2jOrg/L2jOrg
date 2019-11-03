@@ -36,7 +36,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="lbracelet"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="SILVER"/>
         <set name="weight" val="5"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
@@ -53,7 +52,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="gloves"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="SILVER"/>
         <set name="weight" val="5"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
@@ -76,7 +74,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="gloves"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="SILVER"/>
         <set name="weight" val="5"/>
         <set name="is_sellable" val="false"/>
         <stats>
@@ -290,7 +287,6 @@
         <set name="handler" val="ItemSkills"/>
         <set name="immediate_effect" val="true"/>
         <set name="etcitem_type" val="SCROLL"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_depositable" val="false"/>
@@ -389,7 +385,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="neck"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="GOLD"/>
         <set name="weight" val="150"/>
         <set name="enchant_enabled" val="0"/>
         <set name="commissionItemType" val="NECKLACE"/>
@@ -411,7 +406,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="neck"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="GOLD"/>
         <set name="weight" val="150"/>
         <set name="enchant_enabled" val="0"/>
         <set name="commissionItemType" val="NECKLACE"/>
@@ -433,7 +427,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="neck"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="GOLD"/>
         <set name="weight" val="150"/>
         <set name="enchant_enabled" val="0"/>
         <set name="commissionItemType" val="NECKLACE"/>
@@ -455,7 +448,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="neck"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="GOLD"/>
         <set name="weight" val="150"/>
         <set name="enchant_enabled" val="0"/>
         <set name="commissionItemType" val="NECKLACE"/>
@@ -477,7 +469,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="neck"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="GOLD"/>
         <set name="weight" val="150"/>
         <set name="enchant_enabled" val="0"/>
         <set name="commissionItemType" val="NECKLACE"/>
@@ -499,7 +490,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="neck"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="GOLD"/>
         <set name="weight" val="150"/>
         <set name="enchant_enabled" val="0"/>
         <set name="commissionItemType" val="NECKLACE"/>
@@ -521,7 +511,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="neck"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="GOLD"/>
         <set name="weight" val="150"/>
         <set name="enchant_enabled" val="0"/>
         <set name="commissionItemType" val="NECKLACE"/>
@@ -544,7 +533,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="neck"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="GOLD"/>
         <set name="weight" val="150"/>
         <set name="enchant_enabled" val="0"/>
         <set name="commissionItemType" val="NECKLACE"/>
@@ -566,7 +554,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="neck"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="GOLD"/>
         <set name="weight" val="150"/>
         <set name="enchant_enabled" val="0"/>
         <set name="commissionItemType" val="NECKLACE"/>
@@ -588,7 +575,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="neck"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="GOLD"/>
         <set name="weight" val="150"/>
         <set name="enchant_enabled" val="0"/>
         <set name="commissionItemType" val="NECKLACE"/>
@@ -610,7 +596,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="neck"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="GOLD"/>
         <set name="weight" val="150"/>
         <set name="enchant_enabled" val="0"/>
         <set name="commissionItemType" val="NECKLACE"/>
@@ -632,7 +617,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="neck"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="GOLD"/>
         <set name="weight" val="150"/>
         <set name="enchant_enabled" val="0"/>
         <set name="commissionItemType" val="NECKLACE"/>
@@ -654,7 +638,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="neck"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="GOLD"/>
         <set name="weight" val="150"/>
         <set name="enchant_enabled" val="0"/>
         <set name="commissionItemType" val="NECKLACE"/>
@@ -677,7 +660,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="neck"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="GOLD"/>
         <set name="weight" val="150"/>
         <set name="enchant_enabled" val="0"/>
         <set name="commissionItemType" val="NECKLACE"/>
@@ -700,7 +682,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="neck"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="GOLD"/>
         <set name="weight" val="150"/>
         <set name="enchant_enabled" val="0"/>
         <set name="commissionItemType" val="NECKLACE"/>
@@ -723,7 +704,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="neck"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="GOLD"/>
         <set name="weight" val="150"/>
         <set name="enchant_enabled" val="0"/>
         <set name="commissionItemType" val="NECKLACE"/>
@@ -751,7 +731,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="underwear"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="SILVER"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
     </item>
@@ -760,7 +739,6 @@
         <set name="icon" val="icon.sayhas_talisman_g_Lv1"/>
         <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="GOLD"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
     </item>
@@ -769,7 +747,6 @@
         <set name="icon" val="icon.sayhas_talisman_g_Lv2"/>
         <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="GOLD"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
     </item>
@@ -778,7 +755,6 @@
         <set name="icon" val="icon.sayhas_talisman_g_Lv3"/>
         <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="GOLD"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
     </item>
@@ -787,7 +763,6 @@
         <set name="icon" val="icon.sayhas_talisman_g_Lv4"/>
         <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="GOLD"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
     </item>
@@ -796,7 +771,6 @@
         <set name="icon" val="icon.sayhas_talisman_g_lv5"/>
         <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="GOLD"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
     </item>
@@ -805,7 +779,6 @@
         <set name="icon" val="icon.sayhas_talisman_pve_Lv1"/>
         <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="GOLD"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
     </item>
@@ -814,7 +787,6 @@
         <set name="icon" val="icon.sayhas_talisman_pve_Lv2"/>
         <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="GOLD"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
     </item>
@@ -823,7 +795,6 @@
         <set name="icon" val="icon.sayhas_talisman_pve_Lv3"/>
         <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="GOLD"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
     </item>
@@ -832,7 +803,6 @@
         <set name="icon" val="icon.sayhas_talisman_pve_Lv4"/>
         <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="GOLD"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
     </item>
@@ -841,7 +811,6 @@
         <set name="icon" val="icon.sayhas_talisman_pve_lv5"/>
         <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="GOLD"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
     </item>
@@ -850,7 +819,6 @@
         <set name="icon" val="icon.sayhas_talisman_pvp_Lv1"/>
         <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="GOLD"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
     </item>
@@ -859,7 +827,6 @@
         <set name="icon" val="icon.sayhas_talisman_pvp_Lv2"/>
         <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="GOLD"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
     </item>
@@ -868,7 +835,6 @@
         <set name="icon" val="icon.sayhas_talisman_pvp_Lv3"/>
         <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="GOLD"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
     </item>
@@ -877,7 +843,6 @@
         <set name="icon" val="icon.sayhas_talisman_pvp_Lv4"/>
         <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="GOLD"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
     </item>
@@ -886,7 +851,6 @@
         <set name="icon" val="icon.sayhas_talisman_pvp_lv5"/>
         <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="GOLD"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
     </item>
@@ -903,7 +867,6 @@
         <set name="icon" val="icon.etc_all_stat_talisman_i00"/>
         <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="GOLD"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
     </item>
@@ -912,7 +875,6 @@
         <set name="icon" val="icon.etc_all_stat_talisman_i00"/>
         <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="GOLD"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
     </item>
@@ -921,7 +883,6 @@
         <set name="icon" val="icon.etc_all_stat_talisman_i00"/>
         <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="GOLD"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
     </item>
@@ -930,7 +891,6 @@
         <set name="icon" val="icon.etc_all_stat_talisman_i00"/>
         <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="GOLD"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
     </item>
@@ -939,7 +899,6 @@
         <set name="icon" val="icon.etc_all_stat_talisman_i00"/>
         <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="GOLD"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
     </item>
@@ -948,7 +907,6 @@
         <set name="icon" val="icon.etc_all_stat_talisman_i00"/>
         <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="GOLD"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
     </item>
@@ -957,7 +915,6 @@
         <set name="icon" val="icon.etc_all_stat_talisman_i01"/>
         <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="GOLD"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
     </item>
@@ -966,7 +923,6 @@
         <set name="icon" val="icon.etc_all_stat_talisman_i01"/>
         <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="GOLD"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
     </item>
@@ -975,7 +931,6 @@
         <set name="icon" val="icon.etc_all_stat_talisman_i01"/>
         <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="GOLD"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
     </item>
@@ -984,7 +939,6 @@
         <set name="icon" val="icon.etc_all_stat_talisman_i01"/>
         <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="GOLD"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
     </item>
@@ -993,7 +947,6 @@
         <set name="icon" val="icon.etc_all_stat_talisman_i01"/>
         <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="GOLD"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
     </item>
@@ -1002,7 +955,6 @@
         <set name="icon" val="icon.etc_all_stat_talisman_i01"/>
         <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="GOLD"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
     </item>
@@ -1011,7 +963,6 @@
         <set name="icon" val="icon.etc_all_stat_talisman_i02"/>
         <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="GOLD"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
     </item>
@@ -1020,7 +971,6 @@
         <set name="icon" val="icon.etc_all_stat_talisman_i02"/>
         <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="GOLD"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
     </item>
@@ -1029,7 +979,6 @@
         <set name="icon" val="icon.etc_all_stat_talisman_i02"/>
         <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="GOLD"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
     </item>
@@ -1038,7 +987,6 @@
         <set name="icon" val="icon.etc_all_stat_talisman_i02"/>
         <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="GOLD"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
     </item>
@@ -1047,7 +995,6 @@
         <set name="icon" val="icon.etc_all_stat_talisman_i02"/>
         <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="GOLD"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
     </item>
@@ -1056,7 +1003,6 @@
         <set name="icon" val="icon.etc_all_stat_talisman_i02"/>
         <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="GOLD"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
     </item>
@@ -1067,7 +1013,6 @@
         <set name="armor_type" val="LIGHT"/>
         <set name="bodypart" val="waist"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="CLOTH"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
         <stats>
@@ -1081,7 +1026,6 @@
         <set name="armor_type" val="LIGHT"/>
         <set name="bodypart" val="waist"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="CLOTH"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
         <stats>
@@ -1095,7 +1039,6 @@
         <set name="armor_type" val="LIGHT"/>
         <set name="bodypart" val="waist"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="CLOTH"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
         <stats>
@@ -1109,7 +1052,6 @@
         <set name="armor_type" val="LIGHT"/>
         <set name="bodypart" val="waist"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="CLOTH"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
         <stats>
@@ -1123,7 +1065,6 @@
         <set name="armor_type" val="LIGHT"/>
         <set name="bodypart" val="waist"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="CLOTH"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
         <stats>

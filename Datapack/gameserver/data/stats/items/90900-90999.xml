@@ -12,7 +12,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="lbracelet"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="weight" val="10"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
@@ -29,7 +28,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="agathion"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="CLOTH"/>
         <set name="weight" val="220"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
@@ -43,7 +41,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="agathion"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="GOLD"/>
         <set name="weight" val="150"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
@@ -112,7 +109,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="agathion"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="SILVER"/>
         <set name="weight" val="5"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
@@ -237,7 +233,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="gloves"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="SILVER"/>
         <set name="weight" val="5"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
@@ -251,7 +246,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="underwear"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="SILVER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_depositable" val="false"/>
@@ -278,7 +272,6 @@
         <set name="icon" val="icon.etc_bm_jewel_aquamarine_i00"/>
         <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="GOLD"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_depositable" val="false"/>
@@ -289,7 +282,6 @@
         <set name="icon" val="icon.etc_bm_jewel_aquamarine_i00"/>
         <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="GOLD"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_depositable" val="false"/>
@@ -300,7 +292,6 @@
         <set name="icon" val="icon.etc_bm_jewel_aquamarine_i00"/>
         <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="GOLD"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_depositable" val="false"/>
@@ -311,7 +302,6 @@
         <set name="icon" val="icon.etc_bm_jewel_aquamarine_i00"/>
         <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="GOLD"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_depositable" val="false"/>
@@ -322,7 +312,6 @@
         <set name="icon" val="icon.etc_bm_jewel_aquamarine_i00"/>
         <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="GOLD"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_depositable" val="false"/>
@@ -334,7 +323,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="brooch_jewel"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="GOLD"/>
         <set name="weight" val="5"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
@@ -347,7 +335,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="brooch_jewel"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="GOLD"/>
         <set name="weight" val="5"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
@@ -360,7 +347,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="brooch_jewel"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="GOLD"/>
         <set name="weight" val="5"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
@@ -373,7 +359,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="brooch_jewel"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="GOLD"/>
         <set name="weight" val="5"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
@@ -386,7 +371,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="brooch_jewel"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="GOLD"/>
         <set name="weight" val="5"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
@@ -399,7 +383,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="brooch"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="GOLD"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
     </item>
@@ -542,7 +525,6 @@
         <set name="icon" val="icon.accessory_ring_of_baium_i03"/>
         <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="GOLD"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_depositable" val="false"/>
@@ -607,7 +589,6 @@
         <set name="weapon_type" val="DUAL"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="FINE_STEEL"/>
         <set name="soulshots" val="1"/>
         <set name="spiritshots" val="1"/>
         <set name="is_dropable" val="false"/>
@@ -661,7 +642,6 @@
         <set name="weapon_type" val="POLE"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="BRONZE"/>
         <set name="soulshots" val="1"/>
         <set name="spiritshots" val="1"/>
         <set name="is_tradable" val="false"/>
@@ -743,7 +723,6 @@
         <set name="icon" val="icon.bm_pendant_pve"/>
         <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="GOLD"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
         <set name="is_freightable" val="true"/>
@@ -756,7 +735,6 @@
         <set name="icon" val="icon.bm_pendant_pvp"/>
         <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="GOLD"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
         <set name="is_freightable" val="true"/>
@@ -788,7 +766,6 @@
         <set name="icon" val="BranchSys2.Icon.br_zaken_cloak_i00"/>
         <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="GOLD"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_depositable" val="false"/>
@@ -864,7 +841,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="rfinger;lfinger"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="GOLD"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_depositable" val="false"/>
@@ -878,7 +854,6 @@
         <set name="armor_type" val="HEAVY"/>
         <set name="bodypart" val="alldress"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="CLOTH"/>
         <set name="weight" val="1000"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
@@ -892,7 +867,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="hairall"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="WOOD"/>
         <set name="weight" val="10"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
@@ -905,7 +879,6 @@
         <set name="icon" val="icon.etc_bm_jewel_garnet"/>
         <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="WOOD"/>
         <set name="weight" val="10"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
@@ -919,7 +892,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="hairall"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="WOOD"/>
         <set name="weight" val="10"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
@@ -932,7 +904,6 @@
         <set name="icon" val="icon.bm_antaras_belt"/>
         <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="WOOD"/>
         <set name="weight" val="10"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
@@ -961,7 +932,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="hairall"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="WOOD"/>
         <set name="weight" val="10"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
@@ -977,7 +947,6 @@
         <set name="icon" val="icon.r2_earring_i01"/>
         <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="WOOD"/>
         <set name="weight" val="10"/>
         <set name="is_sellable" val="false"/>
         <stats>
@@ -1011,7 +980,6 @@
         <set name="icon" val="icon.Accessary_middle_ages_i00"/>
         <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="WOOD"/>
         <set name="weight" val="10"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
@@ -1025,7 +993,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="rear;lear"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="WOOD"/>
         <set name="weight" val="10"/>
         <skills>
             <skill id="3558" level="1"/> <!-- Antharas' Earring -->
@@ -1039,7 +1006,6 @@
         <set name="icon" val="icon.accessory_earring_of_antaras_i00"/>
         <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="WOOD"/>
         <set name="weight" val="10"/>
         <set name="is_sellable" val="false"/>
         <stats>
@@ -1051,7 +1017,6 @@
         <set name="icon" val="icon.accessory_ring_of_baium_i00"/>
         <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="WOOD"/>
         <set name="weight" val="10"/>
         <set name="is_sellable" val="false"/>
         <stats>

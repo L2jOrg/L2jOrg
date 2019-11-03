@@ -4,7 +4,6 @@
         <!-- Double-click and a Young or Defective Squash (Solo) will appear. Will be removed after the event is over. -->
         <set name="icon" val="icon.etc_gourd_i00"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="is_stackable" val="true"/>
         <set name="is_oly_restricted" val="true"/>
         <set name="handler" val="ItemSkills"/>
@@ -17,7 +16,6 @@
         <!-- Double-click and a High Quality Large or Defective Large Squash (Solo) will appear. Will be removed after the event is over. -->
         <set name="icon" val="icon.etc_gourd_i01"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="is_stackable" val="true"/>
         <set name="is_oly_restricted" val="true"/>
         <set name="handler" val="ItemSkills"/>

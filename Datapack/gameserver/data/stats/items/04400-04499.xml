@@ -4,7 +4,6 @@
         <!-- A reward for eliminating Angels. Collect 1,000 pcs. and bring them to Magister Hanellin. -->
         <set name="icon" val="icon.etc_piece_of_cloth_white_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="CLOTH"/>
         <set name="is_dropable" val="false"/>
         <set name="is_destroyable" val="false"/>
         <set name="is_questitem" val="true"/>
@@ -15,7 +14,6 @@
         <!-- Broken shard of the green Dimensional Stone. Collect these and take them to Researcher Kaplan. -->
         <set name="icon" val="icon.etc_broken_crystal_green_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="CRYSTAL"/>
         <set name="weight" val="10"/>
         <set name="price" val="10"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
@@ -25,7 +23,6 @@
         <!-- Broken shard of the blue Dimensional Stone. Collect these and take them to Researcher Euclie. -->
         <set name="icon" val="icon.etc_broken_crystal_blue_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="CRYSTAL"/>
         <set name="weight" val="10"/>
         <set name="price" val="10"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
@@ -35,7 +32,6 @@
         <!-- Broken shard of the red Dimensional Stone. Collect these and take them to Researcher Pitagon. -->
         <set name="icon" val="icon.etc_broken_crystal_red_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="CRYSTAL"/>
         <set name="weight" val="10"/>
         <set name="price" val="10"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
@@ -45,7 +41,6 @@
         <!-- Posthumously released musical score of Gillian. If you take it to Maestro Melody, you can have an echo crystal made. -->
         <set name="icon" val="icon.etc_musical_note_i01"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="20"/>
         <set name="price" val="500"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
@@ -55,7 +50,6 @@
         <!-- The musical score for the Battle March of Flames. If you take it to Maestro Melody, you can have an echo crystal made. -->
         <set name="icon" val="icon.etc_musical_note_i01"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="20"/>
         <set name="price" val="500"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
@@ -65,7 +59,6 @@
         <!-- Musical score composed by Troubadour Swan. If you take it to Maestro Melody, you can have an echo crystal made. -->
         <set name="icon" val="icon.etc_musical_note_i01"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="20"/>
         <set name="price" val="500"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
@@ -76,7 +69,6 @@
         <set name="icon" val="icon.etc_echo_crystal_i00"/>
         <set name="default_action" val="SKILL_REDUCE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="10"/>
         <set name="reuse_delay" val="20000"/>
         <set name="is_stackable" val="true"/>
@@ -91,7 +83,6 @@
         <set name="icon" val="icon.etc_echo_crystal_i01"/>
         <set name="default_action" val="SKILL_REDUCE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="10"/>
         <set name="reuse_delay" val="24000"/>
         <set name="is_stackable" val="true"/>
@@ -106,7 +97,6 @@
         <set name="icon" val="icon.etc_echo_crystal_i02"/>
         <set name="default_action" val="SKILL_REDUCE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="10"/>
         <set name="reuse_delay" val="24000"/>
         <set name="is_stackable" val="true"/>
@@ -121,7 +111,6 @@
         <set name="icon" val="icon.etc_echo_crystal_i03"/>
         <set name="default_action" val="SKILL_REDUCE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="10"/>
         <set name="reuse_delay" val="20000"/>
         <set name="is_stackable" val="true"/>
@@ -136,7 +125,6 @@
         <set name="icon" val="icon.etc_echo_crystal_i04"/>
         <set name="default_action" val="SKILL_REDUCE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="10"/>
         <set name="reuse_delay" val="3000"/>
         <set name="is_stackable" val="true"/>
@@ -151,7 +139,6 @@
         <set name="icon" val="icon.etc_echo_crystal_i00"/>
         <set name="default_action" val="SKILL_REDUCE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="10"/>
         <set name="reuse_delay" val="3000"/>
         <set name="is_stackable" val="true"/>
@@ -166,7 +153,6 @@
         <set name="icon" val="icon.etc_echo_crystal_i01"/>
         <set name="default_action" val="SKILL_REDUCE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="10"/>
         <set name="reuse_delay" val="3000"/>
         <set name="is_stackable" val="true"/>
@@ -180,7 +166,6 @@
         <!-- Musical score containing the theme music of a celebration. If you take it to Maestro Melody, you can have an echo crystal made. -->
         <set name="icon" val="icon.etc_musical_note_i01"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="20"/>
         <set name="price" val="500"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
@@ -190,7 +175,6 @@
         <!-- Musical score containing the theme music of a comedy. If you take it to Maestro Melody, you can have an echo crystal made. -->
         <set name="icon" val="icon.etc_musical_note_i01"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="20"/>
         <set name="price" val="500"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
@@ -200,7 +184,6 @@
         <!-- Musical score composed by Musician Nanarin. If you take it to Maestro Melody, you can have an echo crystal made. -->
         <set name="icon" val="icon.etc_musical_note_i01"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="20"/>
         <set name="price" val="500"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
@@ -210,7 +193,6 @@
         <!-- Musical score composed by Musician Barbado. If you take it to Maestro Melody, you can have an echo crystal made. -->
         <set name="icon" val="icon.etc_musical_note_i02"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="20"/>
         <set name="price" val="500"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
@@ -220,7 +202,6 @@
         <!-- Elemental stone powder obtained from a stone statue in the Forgotten Temple. Can be sold at any store or taken to Magister Nell. -->
         <set name="icon" val="icon.etc_powder_white_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="CRYSTAL"/>
         <set name="weight" val="10"/>
         <set name="price" val="50"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
@@ -230,7 +211,6 @@
         <!-- The shards of Elemental stones obtained from stone statues in the Forgotten Temple. Can be sold at any store or taken to Magister Nell. -->
         <set name="icon" val="icon.etc_broken_crystal_green_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="CRYSTAL"/>
         <set name="weight" val="100"/>
         <set name="price" val="500"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
@@ -240,7 +220,6 @@
         <!-- The lumps of Elemental stone obtained from stone statues in the Forgotten Temple. Can be sold at any store or taken to Magister Nell. -->
         <set name="icon" val="icon.etc_crystal_green_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="CRYSTAL"/>
         <set name="weight" val="1000"/>
         <set name="price" val="5000"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
@@ -250,7 +229,6 @@
         <!-- Request to find and bring back jade crystals from creatures such as Fline, Liele, Satyr etc. that inhabit the Enchanted Valley. -->
         <set name="icon" val="icon.etc_piece_of_paper_gray_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -266,7 +244,6 @@
         <!-- Request to recover the works of the ancient sculptor Berona from Hatar Ratmen and Vanor Silenos in the area near the Cemetery. -->
         <set name="icon" val="icon.etc_piece_of_paper_black_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -283,7 +260,6 @@
         <set name="icon" val="icon.etc_sword_body_i00"/>
         <set name="etcitem_type" val="MATERIAL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="60"/>
         <set name="price" val="28044"/>
         <set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS"/>
@@ -294,7 +270,6 @@
         <set name="icon" val="icon.etc_plate_silver_i00"/>
         <set name="etcitem_type" val="MATERIAL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="60"/>
         <set name="price" val="2900"/>
         <set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS"/>
@@ -306,7 +281,6 @@
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="30"/>
         <set name="price" val="57400"/>
         <set name="recipe_id" val="495"/>
@@ -320,7 +294,6 @@
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="30"/>
         <set name="price" val="10900"/>
         <set name="recipe_id" val="479"/>
@@ -333,7 +306,6 @@
         <set name="icon" val="icon.etc_str_hena_i00"/>
         <set name="etcitem_type" val="DYE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="150"/>
         <set name="price" val="5100"/>
         <set name="commissionItemType" val="DYES"/>
@@ -344,7 +316,6 @@
         <set name="icon" val="icon.etc_str_hena_i00"/>
         <set name="etcitem_type" val="DYE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="150"/>
         <set name="price" val="5100"/>
         <set name="commissionItemType" val="DYES"/>
@@ -355,7 +326,6 @@
         <set name="icon" val="icon.etc_con_hena_i00"/>
         <set name="etcitem_type" val="DYE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="150"/>
         <set name="price" val="5100"/>
         <set name="commissionItemType" val="DYES"/>
@@ -366,7 +336,6 @@
         <set name="icon" val="icon.etc_con_hena_i00"/>
         <set name="etcitem_type" val="DYE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="150"/>
         <set name="price" val="5100"/>
         <set name="commissionItemType" val="DYES"/>
@@ -377,7 +346,6 @@
         <set name="icon" val="icon.etc_dex_hena_i00"/>
         <set name="etcitem_type" val="DYE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="150"/>
         <set name="price" val="5100"/>
         <set name="commissionItemType" val="DYES"/>
@@ -388,7 +356,6 @@
         <set name="icon" val="icon.etc_dex_hena_i00"/>
         <set name="etcitem_type" val="DYE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="150"/>
         <set name="price" val="5100"/>
         <set name="commissionItemType" val="DYES"/>
@@ -399,7 +366,6 @@
         <set name="icon" val="icon.etc_int_hena_i00"/>
         <set name="etcitem_type" val="DYE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="150"/>
         <set name="price" val="5100"/>
         <set name="commissionItemType" val="DYES"/>
@@ -410,7 +376,6 @@
         <set name="icon" val="icon.etc_int_hena_i00"/>
         <set name="etcitem_type" val="DYE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="150"/>
         <set name="price" val="5100"/>
         <set name="commissionItemType" val="DYES"/>
@@ -421,7 +386,6 @@
         <set name="icon" val="icon.etc_men_hena_i00"/>
         <set name="etcitem_type" val="DYE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="150"/>
         <set name="price" val="5100"/>
         <set name="commissionItemType" val="DYES"/>
@@ -432,7 +396,6 @@
         <set name="icon" val="icon.etc_men_hena_i00"/>
         <set name="etcitem_type" val="DYE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="150"/>
         <set name="price" val="5100"/>
         <set name="commissionItemType" val="DYES"/>
@@ -443,7 +406,6 @@
         <set name="icon" val="icon.etc_wit_hena_i00"/>
         <set name="etcitem_type" val="DYE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="150"/>
         <set name="price" val="5100"/>
         <set name="commissionItemType" val="DYES"/>
@@ -454,7 +416,6 @@
         <set name="icon" val="icon.etc_wit_hena_i00"/>
         <set name="etcitem_type" val="DYE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="150"/>
         <set name="price" val="5100"/>
         <set name="commissionItemType" val="DYES"/>
@@ -465,7 +426,6 @@
         <set name="icon" val="icon.etc_str_hena_i00"/>
         <set name="etcitem_type" val="DYE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="150"/>
         <set name="price" val="12000"/>
         <set name="commissionItemType" val="DYES"/>
@@ -476,7 +436,6 @@
         <set name="icon" val="icon.etc_str_hena_i00"/>
         <set name="etcitem_type" val="DYE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="150"/>
         <set name="price" val="12000"/>
         <set name="commissionItemType" val="DYES"/>
@@ -487,7 +446,6 @@
         <set name="icon" val="icon.etc_con_hena_i00"/>
         <set name="etcitem_type" val="DYE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="150"/>
         <set name="price" val="12000"/>
         <set name="commissionItemType" val="DYES"/>
@@ -498,7 +456,6 @@
         <set name="icon" val="icon.etc_con_hena_i00"/>
         <set name="etcitem_type" val="DYE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="150"/>
         <set name="price" val="12000"/>
         <set name="commissionItemType" val="DYES"/>
@@ -509,7 +466,6 @@
         <set name="icon" val="icon.etc_dex_hena_i00"/>
         <set name="etcitem_type" val="DYE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="150"/>
         <set name="price" val="12000"/>
         <set name="commissionItemType" val="DYES"/>
@@ -520,7 +476,6 @@
         <set name="icon" val="icon.etc_dex_hena_i00"/>
         <set name="etcitem_type" val="DYE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="150"/>
         <set name="price" val="12000"/>
         <set name="commissionItemType" val="DYES"/>
@@ -531,7 +486,6 @@
         <set name="icon" val="icon.etc_int_hena_i00"/>
         <set name="etcitem_type" val="DYE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="150"/>
         <set name="price" val="12000"/>
         <set name="commissionItemType" val="DYES"/>
@@ -542,7 +496,6 @@
         <set name="icon" val="icon.etc_int_hena_i00"/>
         <set name="etcitem_type" val="DYE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="150"/>
         <set name="price" val="12000"/>
         <set name="commissionItemType" val="DYES"/>
@@ -553,7 +506,6 @@
         <set name="icon" val="icon.etc_men_hena_i00"/>
         <set name="etcitem_type" val="DYE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="150"/>
         <set name="price" val="12000"/>
         <set name="commissionItemType" val="DYES"/>
@@ -564,7 +516,6 @@
         <set name="icon" val="icon.etc_men_hena_i00"/>
         <set name="etcitem_type" val="DYE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="150"/>
         <set name="price" val="12000"/>
         <set name="commissionItemType" val="DYES"/>
@@ -575,7 +526,6 @@
         <set name="icon" val="icon.etc_wit_hena_i00"/>
         <set name="etcitem_type" val="DYE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="150"/>
         <set name="price" val="12000"/>
         <set name="commissionItemType" val="DYES"/>
@@ -586,7 +536,6 @@
         <set name="icon" val="icon.etc_wit_hena_i00"/>
         <set name="etcitem_type" val="DYE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="150"/>
         <set name="price" val="12000"/>
         <set name="commissionItemType" val="DYES"/>
@@ -597,7 +546,6 @@
         <set name="icon" val="icon.etc_str_hena_i00"/>
         <set name="etcitem_type" val="DYE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="150"/>
         <set name="price" val="35000"/>
         <set name="commissionItemType" val="DYES"/>
@@ -608,7 +556,6 @@
         <set name="icon" val="icon.etc_str_hena_i00"/>
         <set name="etcitem_type" val="DYE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="150"/>
         <set name="price" val="35000"/>
         <set name="commissionItemType" val="DYES"/>
@@ -619,7 +566,6 @@
         <set name="icon" val="icon.etc_con_hena_i00"/>
         <set name="etcitem_type" val="DYE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="150"/>
         <set name="price" val="35000"/>
         <set name="commissionItemType" val="DYES"/>
@@ -630,7 +576,6 @@
         <set name="icon" val="icon.etc_con_hena_i00"/>
         <set name="etcitem_type" val="DYE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="150"/>
         <set name="price" val="35000"/>
         <set name="commissionItemType" val="DYES"/>
@@ -641,7 +586,6 @@
         <set name="icon" val="icon.etc_dex_hena_i00"/>
         <set name="etcitem_type" val="DYE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="150"/>
         <set name="price" val="35000"/>
         <set name="commissionItemType" val="DYES"/>
@@ -652,7 +596,6 @@
         <set name="icon" val="icon.etc_dex_hena_i00"/>
         <set name="etcitem_type" val="DYE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="150"/>
         <set name="price" val="35000"/>
         <set name="commissionItemType" val="DYES"/>
@@ -663,7 +606,6 @@
         <set name="icon" val="icon.etc_int_hena_i00"/>
         <set name="etcitem_type" val="DYE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="150"/>
         <set name="price" val="35000"/>
         <set name="commissionItemType" val="DYES"/>
@@ -674,7 +616,6 @@
         <set name="icon" val="icon.etc_int_hena_i00"/>
         <set name="etcitem_type" val="DYE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="150"/>
         <set name="price" val="35000"/>
         <set name="commissionItemType" val="DYES"/>
@@ -685,7 +626,6 @@
         <set name="icon" val="icon.etc_men_hena_i00"/>
         <set name="etcitem_type" val="DYE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="150"/>
         <set name="price" val="35000"/>
         <set name="commissionItemType" val="DYES"/>
@@ -696,7 +636,6 @@
         <set name="icon" val="icon.etc_men_hena_i00"/>
         <set name="etcitem_type" val="DYE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="150"/>
         <set name="price" val="35000"/>
         <set name="commissionItemType" val="DYES"/>
@@ -707,7 +646,6 @@
         <set name="icon" val="icon.etc_wit_hena_i00"/>
         <set name="etcitem_type" val="DYE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="150"/>
         <set name="price" val="35000"/>
         <set name="commissionItemType" val="DYES"/>
@@ -718,7 +656,6 @@
         <set name="icon" val="icon.etc_wit_hena_i00"/>
         <set name="etcitem_type" val="DYE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="150"/>
         <set name="price" val="35000"/>
         <set name="commissionItemType" val="DYES"/>
@@ -729,7 +666,6 @@
         <set name="icon" val="icon.etc_str_hena_i01"/>
         <set name="etcitem_type" val="DYE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="150"/>
         <set name="price" val="12000"/>
         <set name="commissionItemType" val="DYES"/>
@@ -740,7 +676,6 @@
         <set name="icon" val="icon.etc_str_hena_i01"/>
         <set name="etcitem_type" val="DYE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="150"/>
         <set name="price" val="12000"/>
         <set name="commissionItemType" val="DYES"/>
@@ -751,7 +686,6 @@
         <set name="icon" val="icon.etc_con_hena_i01"/>
         <set name="etcitem_type" val="DYE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="150"/>
         <set name="price" val="12000"/>
         <set name="commissionItemType" val="DYES"/>
@@ -762,7 +696,6 @@
         <set name="icon" val="icon.etc_con_hena_i01"/>
         <set name="etcitem_type" val="DYE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="150"/>
         <set name="price" val="12000"/>
         <set name="commissionItemType" val="DYES"/>
@@ -773,7 +706,6 @@
         <set name="icon" val="icon.etc_dex_hena_i01"/>
         <set name="etcitem_type" val="DYE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="150"/>
         <set name="price" val="12000"/>
         <set name="commissionItemType" val="DYES"/>
@@ -784,7 +716,6 @@
         <set name="icon" val="icon.etc_dex_hena_i01"/>
         <set name="etcitem_type" val="DYE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="150"/>
         <set name="price" val="12000"/>
         <set name="commissionItemType" val="DYES"/>
@@ -795,7 +726,6 @@
         <set name="icon" val="icon.etc_int_hena_i01"/>
         <set name="etcitem_type" val="DYE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="150"/>
         <set name="price" val="12000"/>
         <set name="commissionItemType" val="DYES"/>
@@ -806,7 +736,6 @@
         <set name="icon" val="icon.etc_int_hena_i01"/>
         <set name="etcitem_type" val="DYE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="150"/>
         <set name="price" val="12000"/>
         <set name="commissionItemType" val="DYES"/>
@@ -817,7 +746,6 @@
         <set name="icon" val="icon.etc_men_hena_i01"/>
         <set name="etcitem_type" val="DYE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="150"/>
         <set name="price" val="12000"/>
         <set name="commissionItemType" val="DYES"/>
@@ -828,7 +756,6 @@
         <set name="icon" val="icon.etc_men_hena_i01"/>
         <set name="etcitem_type" val="DYE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="150"/>
         <set name="price" val="12000"/>
         <set name="commissionItemType" val="DYES"/>
@@ -839,7 +766,6 @@
         <set name="icon" val="icon.etc_wit_hena_i01"/>
         <set name="etcitem_type" val="DYE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="150"/>
         <set name="price" val="12000"/>
         <set name="commissionItemType" val="DYES"/>
@@ -850,7 +776,6 @@
         <set name="icon" val="icon.etc_wit_hena_i01"/>
         <set name="etcitem_type" val="DYE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="150"/>
         <set name="price" val="12000"/>
         <set name="commissionItemType" val="DYES"/>
@@ -861,7 +786,6 @@
         <set name="icon" val="icon.etc_str_hena_i01"/>
         <set name="etcitem_type" val="DYE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="150"/>
         <set name="price" val="21000"/>
         <set name="commissionItemType" val="DYES"/>
@@ -872,7 +796,6 @@
         <set name="icon" val="icon.etc_str_hena_i01"/>
         <set name="etcitem_type" val="DYE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="150"/>
         <set name="price" val="21000"/>
         <set name="commissionItemType" val="DYES"/>
@@ -883,7 +806,6 @@
         <set name="icon" val="icon.etc_con_hena_i01"/>
         <set name="etcitem_type" val="DYE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="150"/>
         <set name="price" val="21000"/>
         <set name="commissionItemType" val="DYES"/>
@@ -894,7 +816,6 @@
         <set name="icon" val="icon.etc_con_hena_i01"/>
         <set name="etcitem_type" val="DYE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="150"/>
         <set name="price" val="21000"/>
         <set name="commissionItemType" val="DYES"/>
@@ -905,7 +826,6 @@
         <set name="icon" val="icon.etc_dex_hena_i01"/>
         <set name="etcitem_type" val="DYE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="150"/>
         <set name="price" val="21000"/>
         <set name="commissionItemType" val="DYES"/>
@@ -916,7 +836,6 @@
         <set name="icon" val="icon.etc_dex_hena_i01"/>
         <set name="etcitem_type" val="DYE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="150"/>
         <set name="price" val="21000"/>
         <set name="commissionItemType" val="DYES"/>
@@ -927,7 +846,6 @@
         <set name="icon" val="icon.etc_int_hena_i01"/>
         <set name="etcitem_type" val="DYE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="150"/>
         <set name="price" val="21000"/>
         <set name="commissionItemType" val="DYES"/>

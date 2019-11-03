@@ -4,7 +4,6 @@
         <!-- Golden Ball received from Dandy. Increases XP and SP gain by 100% for an hour. Changes the look of your armor to NC Dinos Uniform. -->
         <set name="icon" val="BranchIcon.icon.g_ev_homerunball"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_destroyable" val="false"/>
@@ -19,7 +18,6 @@
         <set name="armor_type" val="HEAVY"/>
         <set name="bodypart" val="alldress"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="BRONZE"/>
         <set name="is_sellable" val="false"/>
         <stats>
             <stat type="pDef">400</stat>

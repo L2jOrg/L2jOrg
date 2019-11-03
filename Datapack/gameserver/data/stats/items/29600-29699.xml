@@ -5,7 +5,6 @@
         <set name="icon" val="icon.accessory_taiwan_i00"/>
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="hair"/>
-        <set name="material" val="WOOD"/>
         <set name="weight" val="10"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
@@ -24,7 +23,6 @@
         <set name="icon" val="icon.etc_pi_gift_box_i00"/>
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_depositable" val="false"/>
@@ -49,7 +47,6 @@
         <set name="icon" val="icon.etc_pi_gift_box_i00"/>
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_depositable" val="false"/>
@@ -69,7 +66,6 @@
         <set name="icon" val="icon.etc_pi_gift_box_i00"/>
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_depositable" val="false"/>
@@ -91,7 +87,6 @@
         <set name="icon" val="icon.etc_pi_gift_box_i00"/>
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_depositable" val="false"/>
@@ -113,7 +108,6 @@
         <set name="icon" val="icon.etc_pi_gift_box_i00"/>
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_depositable" val="false"/>
@@ -135,7 +129,6 @@
         <set name="icon" val="icon.etc_pi_gift_box_i00"/>
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_depositable" val="false"/>
@@ -157,7 +150,6 @@
         <set name="icon" val="icon.etc_pi_gift_box_i00"/>
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_depositable" val="false"/>
@@ -174,7 +166,6 @@
     <item id="29608" name="Ticket: Temporary Weapon (D-grade)" type="EtcItem">
         <!-- Dimensional Merchant can exchange that for D-grade weapon (30-day), which cannot be enchanted, dropped or exchanged. -->
         <set name="icon" val="icon.etc_lottery_card_i00"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_depositable" val="false"/>
@@ -184,7 +175,6 @@
     <item id="29609" name="Ticket: Temporary Weapon (C-grade)" type="EtcItem">
         <!-- Dimensional Merchant can exchange that for C-grade weapon (30-day), which cannot be enchanted, dropped or exchanged. -->
         <set name="icon" val="icon.etc_lottery_card_i00"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_depositable" val="false"/>
@@ -199,7 +189,6 @@
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="C"/>
-        <set name="material" val="FINE_STEEL"/>
         <set name="weight" val="1420"/>
         <set name="soulshots" val="1"/>
         <set name="spiritshots" val="1"/>
@@ -225,7 +214,6 @@
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="C"/>
-        <set name="material" val="FINE_STEEL"/>
         <set name="weight" val="1030"/>
         <set name="soulshots" val="1"/>
         <set name="spiritshots" val="1"/>
@@ -252,7 +240,6 @@
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="C"/>
-        <set name="material" val="FINE_STEEL"/>
         <set name="weight" val="1670"/>
         <set name="soulshots" val="1"/>
         <set name="spiritshots" val="1"/>
@@ -279,7 +266,6 @@
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="C"/>
-        <set name="material" val="FINE_STEEL"/>
         <set name="weight" val="2020"/>
         <set name="soulshots" val="1"/>
         <set name="spiritshots" val="1"/>
@@ -309,7 +295,6 @@
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="C"/>
-        <set name="material" val="FINE_STEEL"/>
         <set name="weight" val="1770"/>
         <set name="soulshots" val="3"/>
         <set name="spiritshots" val="1"/>
@@ -337,7 +322,6 @@
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="C"/>
-        <set name="material" val="FINE_STEEL"/>
         <set name="weight" val="1490"/>
         <set name="soulshots" val="1"/>
         <set name="spiritshots" val="1"/>
@@ -364,7 +348,6 @@
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="C"/>
-        <set name="material" val="FINE_STEEL"/>
         <set name="weight" val="750"/>
         <set name="soulshots" val="1"/>
         <set name="spiritshots" val="1"/>
@@ -391,7 +374,6 @@
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="C"/>
-        <set name="material" val="STEEL"/>
         <set name="weight" val="540"/>
         <set name="soulshots" val="1"/>
         <set name="spiritshots" val="1"/>
@@ -417,7 +399,6 @@
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="C"/>
-        <set name="material" val="WOOD"/>
         <set name="weight" val="1000"/>
         <set name="soulshots" val="1"/>
         <set name="spiritshots" val="1"/>
@@ -445,7 +426,6 @@
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="C"/>
-        <set name="material" val="FINE_STEEL"/>
         <set name="weight" val="2410"/>
         <set name="soulshots" val="1"/>
         <set name="spiritshots" val="1"/>
@@ -471,7 +451,6 @@
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="D"/>
-        <set name="material" val="FINE_STEEL"/>
         <set name="weight" val="2510"/>
         <set name="soulshots" val="1"/>
         <set name="spiritshots" val="1"/>
@@ -497,7 +476,6 @@
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="D"/>
-        <set name="material" val="FINE_STEEL"/>
         <set name="weight" val="1450"/>
         <set name="soulshots" val="1"/>
         <set name="spiritshots" val="1"/>
@@ -523,7 +501,6 @@
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="D"/>
-        <set name="material" val="FINE_STEEL"/>
         <set name="weight" val="1070"/>
         <set name="soulshots" val="1"/>
         <set name="spiritshots" val="1"/>
@@ -550,7 +527,6 @@
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="D"/>
-        <set name="material" val="FINE_STEEL"/>
         <set name="weight" val="1820"/>
         <set name="soulshots" val="2"/>
         <set name="spiritshots" val="1"/>
@@ -578,7 +554,6 @@
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="D"/>
-        <set name="material" val="FINE_STEEL"/>
         <set name="weight" val="1730"/>
         <set name="soulshots" val="1"/>
         <set name="spiritshots" val="1"/>
@@ -605,7 +580,6 @@
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="D"/>
-        <set name="material" val="FINE_STEEL"/>
         <set name="weight" val="2020"/>
         <set name="soulshots" val="1"/>
         <set name="spiritshots" val="1"/>
@@ -631,7 +605,6 @@
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="D"/>
-        <set name="material" val="STEEL"/>
         <set name="weight" val="2100"/>
         <set name="soulshots" val="1"/>
         <set name="spiritshots" val="1"/>
@@ -658,7 +631,6 @@
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="D"/>
-        <set name="material" val="FINE_STEEL"/>
         <set name="weight" val="2060"/>
         <set name="soulshots" val="1"/>
         <set name="spiritshots" val="1"/>
@@ -688,7 +660,6 @@
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="D"/>
-        <set name="material" val="FINE_STEEL"/>
         <set name="weight" val="1510"/>
         <set name="soulshots" val="1"/>
         <set name="spiritshots" val="1"/>
@@ -715,7 +686,6 @@
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="D"/>
-        <set name="material" val="FINE_STEEL"/>
         <set name="weight" val="1450"/>
         <set name="soulshots" val="1"/>
         <set name="spiritshots" val="1"/>
@@ -742,7 +712,6 @@
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="D"/>
-        <set name="material" val="STEEL"/>
         <set name="weight" val="1720"/>
         <set name="soulshots" val="1"/>
         <set name="spiritshots" val="1"/>
@@ -769,7 +738,6 @@
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="D"/>
-        <set name="material" val="WOOD"/>
         <set name="weight" val="1000"/>
         <set name="soulshots" val="1"/>
         <set name="spiritshots" val="1"/>
@@ -794,7 +762,6 @@
         <set name="icon" val="BranchIcon.Icon.etc_vip_present_i05"/>
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="10"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
@@ -813,7 +780,6 @@
         <set name="icon" val="BranchIcon.Icon.etc_vip_present_i06"/>
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="10"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
@@ -833,7 +799,6 @@
         <set name="icon" val="icon.etc_pi_gift_box_i00"/>
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_depositable" val="false"/>
@@ -856,7 +821,6 @@
         <set name="icon" val="icon.etc_pi_gift_box_i00"/>
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_depositable" val="false"/>
@@ -876,7 +840,6 @@
         <set name="icon" val="icon.etc_pi_gift_box_i00"/>
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_depositable" val="false"/>
@@ -898,7 +861,6 @@
         <set name="icon" val="icon.etc_pi_gift_box_i00"/>
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_depositable" val="false"/>
@@ -919,7 +881,6 @@
         <set name="icon" val="icon.etc_pi_gift_box_i00"/>
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_depositable" val="false"/>
@@ -940,7 +901,6 @@
         <set name="icon" val="icon.etc_pi_gift_box_i00"/>
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_depositable" val="false"/>
@@ -962,7 +922,6 @@
         <set name="icon" val="icon.etc_pi_gift_box_i00"/>
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_depositable" val="false"/>
@@ -981,7 +940,6 @@
         <set name="icon" val="BranchIcon.Icon.g_etc_soulshot_i01"/>
         <set name="default_action" val="SOULSHOT"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_depositable" val="false"/>
@@ -993,7 +951,6 @@
         <set name="icon" val="BranchIcon.Icon.g_etc_spiritshot_i01"/>
         <set name="default_action" val="SPIRITSHOT"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_depositable" val="false"/>
@@ -1006,7 +963,6 @@
         <set name="default_action" val="SOULSHOT"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="D"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_depositable" val="false"/>
@@ -1019,7 +975,6 @@
         <set name="default_action" val="SPIRITSHOT"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="D"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_depositable" val="false"/>
@@ -1032,7 +987,6 @@
         <set name="default_action" val="SOULSHOT"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="C"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_depositable" val="false"/>
@@ -1045,7 +999,6 @@
         <set name="default_action" val="SPIRITSHOT"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="C"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_depositable" val="false"/>
@@ -1056,7 +1009,6 @@
         <!-- Increases XP/SP gain by 30% for 20 minutes. Buff remains after death. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.etc_recall_exp_scroll"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="5"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
@@ -1076,7 +1028,6 @@
         <!-- Increases XP/SP gain by 30% for 20 minutes. Buff remains after death. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.etc_recall_exp_scroll"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="5"/>
         <set name="is_clan_depositable" val="false"/>
         <set name="is_mailable" val="false"/>
@@ -1097,7 +1048,6 @@
         <!-- Increases XP/SP gain by 40% for 20 minutes. Buff remains after death. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.etc_recall_exp_scroll"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="5"/>
         <set name="is_clan_depositable" val="false"/>
         <set name="is_mailable" val="false"/>
@@ -1118,7 +1068,6 @@
         <!-- Increases XP/SP gain by 100% for 20 minutes. Buff remains after death. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.etc_recall_exp_scroll"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="is_clan_depositable" val="false"/>
         <set name="is_mailable" val="false"/>
         <set name="is_tradable" val="false"/>
@@ -1141,7 +1090,6 @@
         <set name="default_action" val="SKILL_REDUCE"/>
         <set name="etcitem_type" val="POTION"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="5"/>
         <set name="is_stackable" val="true"/>
         <set name="commissionItemType" val="POTION"/>
@@ -1160,7 +1108,6 @@
         <set name="default_action" val="SKILL_REDUCE"/>
         <set name="etcitem_type" val="POTION"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="5"/>
         <set name="price" val="330"/>
         <set name="reuse_delay" val="10000"/>
@@ -1184,7 +1131,6 @@
         <set name="etcitem_type" val="POTION"/>
         <set name="immediate_effect" val="true"/>
         <set name="reuse_delay" val="500"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="20"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
@@ -1248,7 +1194,6 @@
         <set name="icon" val="icon.etc_pi_gift_box_i00"/>
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_depositable" val="false"/>
@@ -1275,7 +1220,6 @@
         <set name="icon" val="icon.etc_pi_gift_box_i00"/>
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_depositable" val="false"/>
@@ -1295,7 +1239,6 @@
         <set name="icon" val="icon.etc_pi_gift_box_i00"/>
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_depositable" val="false"/>
@@ -1315,7 +1258,6 @@
         <set name="icon" val="icon.etc_pi_gift_box_i00"/>
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_depositable" val="false"/>
@@ -1337,7 +1279,6 @@
         <set name="icon" val="icon.etc_pi_gift_box_i00"/>
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_depositable" val="false"/>
@@ -1360,7 +1301,6 @@
         <set name="icon" val="icon.etc_pi_gift_box_i00"/>
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_depositable" val="false"/>
@@ -1383,7 +1323,6 @@
         <set name="icon" val="icon.etc_pi_gift_box_i00"/>
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_depositable" val="false"/>
@@ -1405,7 +1344,6 @@
         <set name="icon" val="icon.etc_pi_gift_box_i00"/>
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_depositable" val="false"/>
@@ -1427,7 +1365,6 @@
         <set name="icon" val="icon.etc_pi_gift_box_i00"/>
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_depositable" val="false"/>
@@ -1449,7 +1386,6 @@
         <set name="icon" val="icon.etc_pi_gift_box_i00"/>
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_depositable" val="false"/>
@@ -1471,7 +1407,6 @@
         <set name="icon" val="icon.etc_pi_gift_box_i00"/>
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_depositable" val="false"/>
@@ -1491,7 +1426,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="lbracelet"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="SILVER"/>
         <set name="weight" val="150"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
@@ -1508,7 +1442,6 @@
     <item id="29668" name="Castle Owners' Coin" type="EtcItem">
         <!-- A special coin that can only be obtained by a member of a clan that has taken over a castle. While you are in hold of the castle, you can exchange coins for special items through Chamberlain. -->
         <set name="icon" val="icon.etc_11th_token"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_depositable" val="false"/>
@@ -1518,7 +1451,6 @@
         <!-- Increases XP/SP gain by 35% for 20 minutes. Buff remains after death. -->
         <set name="icon" val="icon.etc_recall_exp_scroll"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="5"/>
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
@@ -1533,7 +1465,6 @@
         <!-- Increases XP/SP gain by 45% for 20 minutes. Buff remains after death. -->
         <set name="icon" val="icon.etc_recall_exp_scroll"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="5"/>
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
@@ -1548,7 +1479,6 @@
         <!-- Magic potion that instantly restores HP. Instant effect with no cooldown. Cannot be used when HP is full. -->
         <set name="icon" val="icon.etc_potion_gold_i00"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="5"/>
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
@@ -1562,7 +1492,6 @@
         <!-- Magic potion that instantly restores great amount of HP. Instant effect with no cooldown. Cannot be used when HP is full. Cannot be exchanged, dropped, sold, or stored in private warehouse. -->
         <set name="icon" val="icon.etc_potion_gold_i00"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="5"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
@@ -1580,7 +1509,6 @@
         <!-- For 20 minutes, P. Def. - 5%, M. Def. - 10%, P. Evasion - 2, P. Atk. + 5%, M. Atk. + 10%, Atk. Spd. + 5%, Casting Spd. + 5%, Speed + 5. -->
         <set name="icon" val="icon.etc_scroll_white_i00"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="120"/>
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
@@ -1596,7 +1524,6 @@
         <!-- For 20 minutes, P. Critical Damage + 25%. -->
         <set name="icon" val="icon.etc_scroll_white_i00"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="120"/>
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
@@ -1612,7 +1539,6 @@
         <!-- Magical scroll that relocates you to the nearest village. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.etc_scroll_of_return_i01"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="120"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
@@ -1630,7 +1556,6 @@
         <!-- Maintains buffs and debuffs even after death. The Noblesse Blessing and the Lucky Charm disappear, however. -->
         <set name="icon" val="icon.etc_scroll_white_i00"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="120"/>
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
@@ -1648,7 +1573,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="rfinger;lfinger"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="GOLD"/>
         <set name="weight" val="150"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
@@ -1669,7 +1593,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="rfinger;lfinger"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="GOLD"/>
         <set name="weight" val="150"/>
         <set name="commissionItemType" val="RING"/>
         <set name="handler" val="ItemSkills"/>
@@ -1686,7 +1609,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="rear;lear"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="SILVER"/>
         <set name="weight" val="150"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
@@ -1708,7 +1630,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="rear;lear"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="SILVER"/>
         <set name="weight" val="150"/>
         <set name="commissionItemType" val="EARRING"/>
         <set name="handler" val="ItemSkills"/>
@@ -1726,7 +1647,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="neck"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="SILVER"/>
         <set name="weight" val="150"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
@@ -1748,7 +1668,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="neck"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="SILVER"/>
         <set name="weight" val="150"/>
         <set name="commissionItemType" val="NECKLACE"/>
         <set name="handler" val="ItemSkills"/>
@@ -1765,7 +1684,6 @@
         <set name="icon" val="icon.etc_treasure_box_i08"/>
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="10"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
@@ -1781,7 +1699,6 @@
         <!-- Increases P. Def. by 12% for 20 minutes when used. -->
         <set name="icon" val="icon.etc_scroll_white_i00"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="120"/>
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
@@ -1796,7 +1713,6 @@
         <!-- Increases P. Atk. by 12% for 20 minutes when used. -->
         <set name="icon" val="icon.etc_scroll_white_i00"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="120"/>
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
@@ -1811,7 +1727,6 @@
         <!-- When used, damage required to cancel magic -25 for 20 minutes. -->
         <set name="icon" val="icon.etc_scroll_white_i00"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="120"/>
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
@@ -1822,7 +1737,6 @@
         <!-- Increases Evasion by 2 for 20 minutes when used. -->
         <set name="icon" val="icon.etc_scroll_white_i00"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="120"/>
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
@@ -1832,7 +1746,6 @@
         <!-- Increases HP Recovery by 10% for 20 minutes when used. -->
         <set name="icon" val="icon.etc_scroll_white_i00"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="120"/>
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
@@ -1842,7 +1755,6 @@
         <!-- Increases M. Def. by 23% for 20 minutes when used. -->
         <set name="icon" val="icon.etc_scroll_white_i00"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="120"/>
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
@@ -1852,7 +1764,6 @@
         <!-- Increases Max HP by 10% for 20 minutes when used. -->
         <set name="icon" val="icon.etc_scroll_white_i00"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="120"/>
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
@@ -1862,7 +1773,6 @@
         <!-- Increases Max MP by 10% for 20 minutes when used. -->
         <set name="icon" val="icon.etc_scroll_white_i00"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="120"/>
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
@@ -1872,7 +1782,6 @@
         <!-- A reward box given for collecting all the letters of the word 'Lineage II'. -->
         <set name="icon" val="icon.ev_10th_present2"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
         <set name="handler" val="ItemSkills"/>
@@ -1884,7 +1793,6 @@
         <!-- A reward box given for collecting all the letters of the word 'Chronicle'. There must be something interesting in there! Double-click to find out. -->
         <set name="icon" val="icon.ev_10th_present2"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
         <set name="handler" val="ItemSkills"/>
@@ -1896,7 +1804,6 @@
         <!-- A reward box given for collecting all the letters of the word 'Memories'. There must be something interesting in there! Double-click to find out. -->
         <set name="icon" val="icon.ev_10th_present2"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
         <set name="handler" val="ItemSkills"/>
@@ -1908,7 +1815,6 @@
         <!-- Magic potion that instantly restores small amount of HP. Instant cooldown. Cannot be used when HP is full. -->
         <set name="icon" val="icon.etc_potion_gold_i00"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="5"/>
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
@@ -1922,7 +1828,6 @@
         <!-- Magic potion that instantly restores HP. Instant effect with no cooldown. Cannot be used when HP is full. -->
         <set name="icon" val="icon.etc_potion_gold_i00"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="5"/>
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
@@ -1936,7 +1841,6 @@
         <!-- For 10 minutes gives Shield Lv.2, Might Lv.2, Concentration Lv.2, Acumen Lv.1, Wind Walk Lv.1, Focus Lv.1, Agility Lv.1, Empower Lv.1 Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
         <set name="icon" val="BranchIcon.Icon.etc_g_bm_buff_scroll_i00"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="5"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
@@ -1953,7 +1857,6 @@
         <!-- Provides the following positive effects for 10 min: Shield (Lvl 3), Might (Lvl 3), Acumen (Lvl 2), Wind Walk (Lvl 2), Focus (Lvl 2), Regeneration (Lvl 1), Guidance (Lvl 1), Death Whisper (Lvl 1), Magic Barrier (Lvl 1), Blessed Body (Lvl 1), Blessed Soul (Lvl 1), Haste (Lvl 1), Agility (Lvl 2)? Empower (Lvl2). Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
         <set name="icon" val="BranchIcon.Icon.etc_g_bm_buff_scroll_i01"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="5"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
@@ -1970,7 +1873,6 @@
         <!-- Magic Scroll that relocates you to the nearest village. Needs very little time to cast. -->
         <set name="icon" val="icon.etc_scroll_of_return_i01"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="5"/>
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>

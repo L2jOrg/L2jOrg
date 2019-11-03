@@ -4,7 +4,6 @@
         <!-- Leaf obtained by slaying the black willow lurker. Take this to the Blight Treant. -->
         <set name="icon" val="icon.etc_leaf_gold_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -20,7 +19,6 @@
         <!-- The sap of a blight treant. Take this to Arkenia. -->
         <set name="icon" val="icon.etc_reagent_gold_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -36,7 +34,6 @@
         <!-- Letter written by Arkenia. It states that the Initiation Ceremony of the Shillien Circle is complete. Take it to Hierarch Thifiell. -->
         <set name="icon" val="icon.etc_letter_red_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -52,7 +49,6 @@
         <!-- Mark given to those who have passed the Testimony of Glory. Item for class transfer. -->
         <set name="icon" val="icon.etc_badge_gold_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -68,7 +64,6 @@
         <!-- Collect and return with 10 Manashen Shards, 10 Tyrant's Talonss and 10 Guardian Basilisk Fangs. -->
         <set name="icon" val="icon.etc_scroll_gray_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -84,7 +79,6 @@
         <!-- Shard of the broken manashen. Collect 10 and take them back to Prefect Vokian. -->
         <set name="icon" val="icon.etc_broken_crystal_silver_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -100,7 +94,6 @@
         <!-- The talons plucked from a slain Tyrant. Collect 10 and take them back to Prefect Vokian. -->
         <set name="icon" val="icon.etc_claw_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -116,7 +109,6 @@
         <!-- The fangs of a slain Guardian Basilisk. Collect 10 and take them back to Prefect Vokian. -->
         <set name="icon" val="icon.etc_fang_red_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -132,7 +124,6 @@
         <!-- Prefect Vokian's orders. The instructions are to go and seek out the Gandi Chief Chianta in the Town of Dion. -->
         <set name="icon" val="icon.etc_scroll_white_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -148,7 +139,6 @@
         <!-- Symbol given to those representing Pa'agrio Lord Kakai. -->
         <set name="icon" val="icon.accessary_necklace_of_binding_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -164,7 +154,6 @@
         <!-- Orders of Gandi Chief Chianta. The instructions are to go and recover the flame scepter from the lower orc tribes. -->
         <set name="icon" val="icon.etc_letter_red_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -180,7 +169,6 @@
         <!-- Scepter of flame which can be obtained from a Breka orc chief. Take it along with 4 other tribes' scepters and go see Gandi Chief Chianta. -->
         <set name="icon" val="icon.weapon_buzdygan_i01"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -196,7 +184,6 @@
         <!-- The flame scepter received from the Enku orc chief. Take this, along with the remaining 4 scepters, to Gandi Chief Chianta. -->
         <set name="icon" val="icon.weapon_buzdygan_i01"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -212,7 +199,6 @@
         <!-- The flame scepter received from the Vuku orc chief. Take this, along with the remaining 4 scepters, to Gandi Chief Chianta. -->
         <set name="icon" val="icon.weapon_buzdygan_i01"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -228,7 +214,6 @@
         <!-- The flame scepter received from the Turek orc chief. Take this, along with the remaining 4 scepters, to Gandi Chief Chianta. -->
         <set name="icon" val="icon.weapon_buzdygan_i01"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -244,7 +229,6 @@
         <!-- The flame scepter received from the Lennunt orc chief. Take this, along with the remaining 4 scepters, to Gandi Chief Chianta. -->
         <set name="icon" val="icon.weapon_buzdygan_i01"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -260,7 +244,6 @@
         <!-- Gandi Chief Chianta's orders. The instructions are to come back for further orders after reaching level 38. -->
         <set name="icon" val="icon.etc_letter_blue_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -276,7 +259,6 @@
         <!-- Gandi Chief Chianta's orders. The instructions are to bring back 20 each of Timak and Tamlin Orc heads. -->
         <set name="icon" val="icon.etc_letter_white_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -292,7 +274,6 @@
         <!-- The head of a Tamlin Orc cut off after being slain. Collect 20 of these and take them to Gandi Chief Chianta. -->
         <set name="icon" val="icon.etc_skull_red_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -308,7 +289,6 @@
         <!-- The head of a Timak orc, cut off after being slain. Collect 20 of these and take them to Gandi Chief Chianta. -->
         <set name="icon" val="icon.etc_skull_black_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -324,7 +304,6 @@
         <!-- Box containing the 5 flame scepters recovered from the lesser orc tribes. Take this to Seer Tanapi of the Orc Village. -->
         <set name="icon" val="icon.etc_jewel_box_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -340,7 +319,6 @@
         <!-- Kill Pashika, son of Voltar, cut his head off and show it to Breka Chief Voltar. -->
         <set name="icon" val="icon.etc_skull_black_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -356,7 +334,6 @@
         <!-- Kill Vultus, son of Voltar, cut his head off and show it to Breka Chief Voltar. -->
         <set name="icon" val="icon.etc_skull_white_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -372,7 +349,6 @@
         <!-- Gloves that was thrown out by Breka Chief Voltar. Slay Pashika and Vultus, sons of Voltar. -->
         <set name="icon" val="icon.armor_short_leather_gloves_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -388,7 +364,6 @@
         <!-- The head of an Enku overlord, cut off after being slain. Show this to Enku Chief Kepra. -->
         <set name="icon" val="icon.etc_skull_red_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -404,7 +379,6 @@
         <!-- The glove thrown down by Enku Chief Kepra. Go and slay the Enku overlords. -->
         <set name="icon" val="icon.armor_short_leather_gloves_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -420,7 +394,6 @@
         <!-- The head of a Makum bugbear warrior, cut off after being slain. Show this to Turek Chief Burai. -->
         <set name="icon" val="icon.etc_skull_black_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -436,7 +409,6 @@
         <!-- The glove thrown down by Turek Chief Burai. Go and slay the Makum bugbear warriors. -->
         <set name="icon" val="icon.armor_short_leather_gloves_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -452,7 +424,6 @@
         <!-- Letter of Priest Manakia. Take it to Breka orc chief. -->
         <set name="icon" val="icon.etc_recipe_red_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -468,7 +439,6 @@
         <!-- Priest Manakia's letter. Take this and go to the Enku Orc Chief. -->
         <set name="icon" val="icon.etc_recipe_red_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -484,7 +454,6 @@
         <!-- Prefect Kasman's letter. Take this and go to the Vuku Orc Chief. -->
         <set name="icon" val="icon.etc_recipe_blue_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -500,7 +469,6 @@
         <!-- Prefect Kasman's letter. Take this and go to the Turek Orc Chief. -->
         <set name="icon" val="icon.etc_recipe_blue_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -516,7 +484,6 @@
         <!-- Prefect Kasman's letter. Take this and go to the Lennunt Orc Chief. -->
         <set name="icon" val="icon.etc_recipe_blue_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -532,7 +499,6 @@
         <!-- Vuku Chief Driko's contract. The contract contains instructions to hunt the Marsh Stakato Drones in the Cruma Marshlands. -->
         <set name="icon" val="icon.etc_letter_white_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -548,7 +514,6 @@
         <!-- The husks of a Marsh Stakato Drone. Collect 30 of these and take them to Vuku Chief Driko. -->
         <set name="icon" val="icon.etc_parasite_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -564,7 +529,6 @@
         <!-- Seer Tanapi's orders. Hunt the Ragna Orc Chief and seers and recover the scepter of Tantosc. -->
         <set name="icon" val="icon.etc_piece_of_paper_gray_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -580,7 +544,6 @@
         <!-- The flame scepter of the now-perished Tantos tribe. Take this to Seer Tanapi. -->
         <set name="icon" val="icon.weapon_buzdygan_i01"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -596,7 +559,6 @@
         <!-- Box containing the scepters recovered from the Orcs of the Tantos tribe. Take this to Pa'agrio Lord Kakai. -->
         <set name="icon" val="icon.etc_jewel_box_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -612,7 +574,6 @@
         <!-- Mark given to those who have passed the Testimony of Prosperity. Class transfer related item. -->
         <set name="icon" val="icon.etc_coins_gold_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -628,7 +589,6 @@
         <!-- Ring given to those Dwarves attempting the Testimony of Prosperity. Find the 4 proofs of prosperity. -->
         <set name="icon" val="icon.accessary_ring_of_assistance_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -644,7 +604,6 @@
         <!-- Ring given to those Dwarves attempting the Testimony of Prosperity. Find Maphr's tablet, which contains the ultimate secrets of geometry. -->
         <set name="icon" val="icon.accessary_aquastone_ring_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -660,7 +619,6 @@
         <!-- Iron Gate Lockirin's account book. The proof of wealth. Take this to Warehouse Keeper Parman of Town of Giran. -->
         <set name="icon" val="icon.etc_spellbook_gray_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -676,7 +634,6 @@
         <!-- Seed containing the blessings of Maphr. The proof of fertile lands. Take this to Warehouse Keeper Parman of Town of Giran. -->
         <set name="icon" val="icon.etc_fruit_yellow_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -692,7 +649,6 @@
         <!-- Recipe good for childbirth and childbirth recovery. The proof of fertility. Take this to Warehouse Keeper Parman of Town of Giran. -->
         <set name="icon" val="icon.etc_piece_of_paper_white_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -708,7 +664,6 @@
         <!-- Food regarded as the secret to the Elves' longevity. The proof of health. Take this to Warehouse Keeper Parman of Town of Giran. -->
         <set name="icon" val="icon.etc_lump_white_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -724,7 +679,6 @@
         <!-- Fragment of Maphr's tablet, which contains the ultimate secrets of geometry. Take this to Warehouse Keeper Parman of Town of Giran. -->
         <set name="icon" val="icon.etc_plate_blue_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -740,7 +694,6 @@
         <!-- License that allows the bearer to collect guild contributions. Seek out those who still owe contributions and collect the funds from them. -->
         <set name="icon" val="icon.etc_letter_white_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -756,7 +709,6 @@
         <!-- Notice that guild contributions are due. Take this to Golden Wheel's Spiron. -->
         <set name="icon" val="icon.etc_recipe_blue_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -772,7 +724,6 @@
         <!-- Notice that guild contributions are due. Take this to Silver Scale's Balanki. -->
         <set name="icon" val="icon.etc_recipe_blue_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -788,7 +739,6 @@
         <!-- Notice that guild contributions are due. Take this to Bronze Key's Keef. -->
         <set name="icon" val="icon.etc_recipe_blue_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -804,7 +754,6 @@
         <!-- Notice that guild contributions are due. Take this to Filaur of the Grey Pillar. -->
         <set name="icon" val="icon.etc_recipe_blue_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -820,7 +769,6 @@
         <!-- Notice that guild contributions are due. Take this to Black Anvil's Arin. -->
         <set name="icon" val="icon.etc_recipe_blue_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -836,7 +784,6 @@
         <!-- Armor Merchant Shari's guild contribution. Take this to Golden Wheel's Spiron. -->
         <set name="icon" val="icon.etc_pouch_yellow_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -852,7 +799,6 @@
         <!-- Grocer Mion's guild contribution. Take this to Silver Scale's Balanki. -->
         <set name="icon" val="icon.etc_pouch_yellow_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -868,7 +814,6 @@
         <!-- Maryse Redbonnet's guild contribution. Take this to Silver Scale's Balanki. -->
         <set name="icon" val="icon.etc_pouch_yellow_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -884,7 +829,6 @@
         <!-- Note containing Maryse Redbonnet's request that you bring back 10 leather hides for use in crafting items. -->
         <set name="icon" val="icon.etc_piece_of_paper_gray_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -900,7 +844,6 @@
         <!-- Master Toma's guild contribution. Take this to Black Anvil's Arin. -->
         <set name="icon" val="icon.etc_pouch_yellow_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -916,7 +859,6 @@
         <!-- Miner Bolter's contribution receipt. Take this to Filaur of the Gray Pillar Guild. -->
         <set name="icon" val="icon.etc_ticket_blue_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -932,7 +874,6 @@
         <!-- The contribution receipt received from Golden Wheel's Spiron. Collect 5 receipts and take them to Lockirin of the Iron Gate. -->
         <set name="icon" val="icon.etc_ticket_red_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -948,7 +889,6 @@
         <!-- The contribution receipt received from Silver Scale's Balanki. Collect 5 receipts and take them to Lockirin of the Iron Gate. -->
         <set name="icon" val="icon.etc_ticket_red_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -964,7 +904,6 @@
         <!-- The contribution receipt received from Bronze Key's Keef. Collect 5 receipts and take them to Lockirin of the Iron Gate. -->
         <set name="icon" val="icon.etc_ticket_red_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -980,7 +919,6 @@
         <!-- Contribution receipt received from Filaur of the Grey Pillar. Collect 5 receipts and take them to Lockirin of the Iron Gate. -->
         <set name="icon" val="icon.etc_ticket_red_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -996,7 +934,6 @@
         <!-- The contribution receipt received from Black Anvil's Arin. Collect 5 receipts and take them to Lockirin of the Iron Gate. -->
         <set name="icon" val="icon.etc_ticket_red_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -1012,7 +949,6 @@
         <!-- The bearer of this procuration hereby agrees to make contributions on behalf of Torocco. Take this to Bronze Key's Keef. -->
         <set name="icon" val="icon.etc_letter_blue_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -1028,7 +964,6 @@
         <!-- List of ingredients that Guard Bright Has written. 20 mandragora petals, 10 bunches of crimson moss\0 -->
         <set name="icon" val="icon.etc_piece_of_paper_white_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -1044,7 +979,6 @@
         <!-- The petals of a mandragora flower. Collect 20 of these and take them to Guard Bright. -->
         <set name="icon" val="icon.etc_herb_red_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -1060,7 +994,6 @@
         <!-- Crimson Moss obtained from giant red ants. Collect 10 of these and take them to Guard Bright. -->
         <set name="icon" val="icon.etc_powder_red_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -1076,7 +1009,6 @@
         <!-- Flower bouquet made of mandragora petals and crimson moss. Take this to Emily in the Town of Dion. -->
         <set name="icon" val="icon.etc_branch_gold_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -1092,7 +1024,6 @@
         <!-- Note containing Warehouse Keeper Parman's instructions. The instructions are to come back after reaching level 38. -->
         <set name="icon" val="icon.etc_scroll_gray_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -1108,7 +1039,6 @@
         <!-- Warehouse Keeper Parman's letter. Take this to Maestro Nikola of the Cruma Tower. -->
         <set name="icon" val="icon.etc_piece_of_paper_white_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -1124,7 +1054,6 @@
         <!-- Piece of clay that Maestro Nikola Has given. Use this to make a copy of the keyhole from the Lesser Giant's box. -->
         <set name="icon" val="icon.etc_powder_black_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -1140,7 +1069,6 @@
         <!-- The keyhole pattern made from clay dough. Take this to Maestro Nikola. -->
         <set name="icon" val="icon.etc_plate_black_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -1156,7 +1084,6 @@
         <!-- 20 Stakato Shells, 10 Toad Lord Sacs, 10 Spider Thorns and 10 D-grade Crystals. -->
         <set name="icon" val="icon.etc_piece_of_paper_gray_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -1172,7 +1099,6 @@
         <!-- The shell of a Marsh Stakato. Key ingredient in making the Lesser Giant's key. -->
         <set name="icon" val="icon.etc_parasite_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -1188,7 +1114,6 @@
         <!-- The Giant Spider's Poison Sac removed from the neck of a toad lord. Key ingredient in making the Lesser Giant's Key. -->
         <set name="icon" val="icon.etc_poison_pouch_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -1204,7 +1129,6 @@
         <!-- Thorn removed from the shell of a Marsh Spider. Key ingredient in making the Lesser Giant's Key. -->
         <set name="icon" val="icon.etc_horn_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -1220,7 +1144,6 @@
         <!-- Mark given to those who have passed the Test of the Champion. Item for class transfer. -->
         <set name="icon" val="icon.etc_jewel_gold_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -1236,7 +1159,6 @@
         <!-- Veteran Ascalon's letter. Take this to Mason in the Town of Dion. -->
         <set name="icon" val="icon.etc_scroll_gray_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -1252,7 +1174,6 @@
         <!-- Letter from Mason to Veteran Ascalon of Town of Giran. -->
         <set name="icon" val="icon.etc_piece_of_paper_gray_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -1268,7 +1189,6 @@
         <!-- Ring given by Mason. The ring is engraved with the symbol of the iron rose. Complete the revenge in place of Mason. -->
         <set name="icon" val="icon.accessary_magic_ring_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -1284,7 +1204,6 @@
         <!-- Veteran Ascalon's letter. Take this to Dye Merchant Groot of Town of Giran. -->
         <set name="icon" val="icon.etc_scroll_gray_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -1300,7 +1219,6 @@
         <!-- Insignia given by Dye Merchant Groot. It was formerly worn by the medics of the iron rose. Aid Dye Merchant Groot in his material gathering. -->
         <set name="icon" val="icon.shield_knight_shield_i01"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -1316,7 +1234,6 @@
         <!-- Letter from Trader Groot to Veteran Ascalon in Town of Giran. -->
         <set name="icon" val="icon.etc_piece_of_paper_gray_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -1332,7 +1249,6 @@
         <!-- Veteran Ascalon's letter. Take this to Captain Mouen of the Town of Oren. -->
         <set name="icon" val="icon.etc_scroll_gray_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -1348,7 +1264,6 @@
         <!-- Bring 10 heads of Road Scavengers or Road Collectors. -->
         <set name="icon" val="icon.etc_scroll_white_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -1364,7 +1279,6 @@
         <!-- Destroy the Leto Lizardmen and bring back 10 of their fangs. -->
         <set name="icon" val="icon.etc_scroll_white_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -1380,7 +1294,6 @@
         <!-- Letter from Captain Mouen to Veteran Ascalon of Town of Giran. -->
         <set name="icon" val="icon.etc_piece_of_paper_black_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -1396,7 +1309,6 @@
         <!-- Egg obtained after slaying a Harpy. Collect 30 of these and take them to Dye Merchant Groot of Town of Giran. -->
         <set name="icon" val="icon.etc_bead_white_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -1412,7 +1324,6 @@
         <!-- The venom obtained after slaying a Medusa. Collect 30 of these and take them to Dye Merchant Groot of Town of Giran. -->
         <set name="icon" val="icon.etc_reagent_green_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -1428,7 +1339,6 @@
         <!-- The bile obtained after slaying a Windsus. Collect 30 of these and take them to Dye Merchant Groot of Town of Giran. -->
         <set name="icon" val="icon.etc_potion_scarlet_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -1444,7 +1354,6 @@
         <!-- The head of a Bloody Axe's Escort. Collect 10 of these and return to Mason in the Town of Dion. -->
         <set name="icon" val="icon.etc_skull_red_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -1460,7 +1369,6 @@
         <!-- The severed head of a Road Scavenger or Road Collector. Collect 10 of them and take them to Captain Mouen. -->
         <set name="icon" val="icon.etc_skull_black_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -1476,7 +1384,6 @@
         <!-- Fang from a slain Leto Lizardman. Collect 10 of these and take them to Captain Mouen. -->
         <set name="icon" val="icon.etc_fang_gray_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -1492,7 +1399,6 @@
         <!-- Mark given to those who have passed the Test of the Sagittarius. Class transfer related item. -->
         <set name="icon" val="icon.weapon_wooden_arrow_i01"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -1508,7 +1414,6 @@
         <!-- Take this letter and go to Sagittarius Hamil of the Village of Floran. -->
         <set name="icon" val="icon.etc_letter_white_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -1524,7 +1429,6 @@
         <!-- Take this letter and meet with Sir Aron Tanford of the Southern Wastelands. -->
         <set name="icon" val="icon.etc_piece_of_paper_white_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -1540,7 +1444,6 @@
         <!-- Take this letter and go to Prefect Vokian of Town of Giran. -->
         <set name="icon" val="icon.etc_piece_of_paper_white_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -1556,7 +1459,6 @@
         <!-- Take this letter and go to Gauen of the Ivory Tower. -->
         <set name="icon" val="icon.etc_piece_of_paper_white_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -1572,7 +1474,6 @@
         <!-- Stone engraved with a hunter's rune. Collect 10 of these and take them to Hamil of the Village of Floran. -->
         <set name="icon" val="icon.etc_mold_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -1588,7 +1489,6 @@
         <!-- Rune obtained from Breka Orc Overlords or Shamans. Collect 10 of these and take them, along with the snake talisman, to Prefect Vokian. -->
         <set name="icon" val="icon.etc_mold_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>

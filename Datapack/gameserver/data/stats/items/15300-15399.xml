@@ -7,7 +7,6 @@
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="A"/>
-        <set name="material" val="FINE_STEEL"/>
         <set name="weight" val="2080"/>
         <set name="soulshots" val="1"/>
         <set name="spiritshots" val="1"/>
@@ -32,7 +31,6 @@
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="A"/>
-        <set name="material" val="BLOOD_STEEL"/>
         <set name="weight" val="1950"/>
         <set name="soulshots" val="3"/>
         <set name="spiritshots" val="3"/>
@@ -61,7 +59,6 @@
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="A"/>
-        <set name="material" val="STEEL"/>
         <set name="weight" val="1830"/>
         <set name="soulshots" val="6"/>
         <set name="spiritshots" val="2"/>
@@ -88,7 +85,6 @@
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="A"/>
-        <set name="material" val="ADAMANTAITE"/>
         <set name="weight" val="1013"/>
         <set name="soulshots" val="1"/>
         <set name="spiritshots" val="1"/>
@@ -114,7 +110,6 @@
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="A"/>
-        <set name="material" val="STEEL"/>
         <set name="weight" val="1850"/>
         <set name="soulshots" val="4"/>
         <set name="spiritshots" val="2"/>
@@ -140,7 +135,6 @@
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="A"/>
-        <set name="material" val="STEEL"/>
         <set name="weight" val="1520"/>
         <set name="soulshots" val="2"/>
         <set name="spiritshots" val="2"/>
@@ -166,7 +160,6 @@
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="A"/>
-        <set name="material" val="STEEL"/>
         <set name="weight" val="2150"/>
         <set name="soulshots" val="1"/>
         <set name="spiritshots" val="1"/>
@@ -189,7 +182,6 @@
         <!-- Giant Watermelon Event: double-click summons a Young Watermelon. -->
         <set name="icon" val="icon.event_honey_watermelon_seed_i00"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="is_stackable" val="true"/>
         <set name="is_oly_restricted" val="true"/>
         <set name="handler" val="ItemSkills"/>
@@ -202,7 +194,6 @@
         <!-- Giant Watermelon Event: double-click summons a Young Honey Watermelon. -->
         <set name="icon" val="icon.event_watermelon_seed_i00"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="is_stackable" val="true"/>
         <set name="is_oly_restricted" val="true"/>
         <set name="handler" val="ItemSkills"/>
@@ -215,7 +206,6 @@
         <!-- Giant Watermelon Event: double-click summons a Young Watermelon. -->
         <set name="icon" val="icon.event_honey_watermelon_seed_i00"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_depositable" val="false"/>
@@ -226,7 +216,6 @@
         <!-- Giant Watermelon Event: double-click summons a Young Honey Watermelon. -->
         <set name="icon" val="icon.event_watermelon_seed_i00"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_depositable" val="false"/>

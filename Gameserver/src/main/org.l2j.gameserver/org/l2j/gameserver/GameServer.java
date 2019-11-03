@@ -51,6 +51,9 @@ import static org.l2j.commons.configuration.Configurator.getSettings;
 import static org.l2j.commons.database.DatabaseAccess.getDAO;
 import static org.l2j.commons.util.Util.isNullOrEmpty;
 
+/**
+ * @author JoeAlisson
+ */
 public class GameServer {
 
     private static final String LOG4J_CONFIGURATION_FILE = "log4j.configurationFile";
@@ -79,7 +82,6 @@ public class GameServer {
         ActionManager.init();
         CategoryManager.init();
         SecondaryAuthManager.init();
-        CombinationItemsManager.init();
         ClanRewardManager.init();
         MissionEngine.init();
         VipEngine.init();
@@ -96,7 +98,7 @@ public class GameServer {
 
         printSection("Items");
         ConditionHandler.getInstance().executeScript();
-        ItemTable.getInstance();
+        ItemTable.init();
         EnchantItemGroupsData.getInstance();
         EnchantItemData.getInstance();
         EnchantItemOptionsData.getInstance();
@@ -116,6 +118,7 @@ public class GameServer {
         CommissionManager.getInstance();
         LuckyGameData.getInstance();
         AttendanceRewardData.getInstance();
+        CombinationItemsManager.init();
 
         printSection("Characters");
         ClassListData.getInstance();

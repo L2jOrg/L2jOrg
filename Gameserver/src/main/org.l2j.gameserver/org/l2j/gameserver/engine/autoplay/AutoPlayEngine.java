@@ -68,6 +68,11 @@ public final class AutoPlayEngine {
                     var setting = entry.getValue();
                     var range = setting.isNearTarget() ? 600 : 1400;
 
+                    /**
+                     * 91974, 91912, 1540, 49528, 49533, 91251
+                     * 91690, 91843, 91857
+                     */
+
                     if(setting.isAutoPickUpOn()) {
                         world.forAnyVisibleObjectInRange(player, Item.class, range,
                                 item -> player.getAI().setIntention(CtrlIntention.AI_INTENTION_PICK_UP, item),

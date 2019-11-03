@@ -9,7 +9,6 @@
         <set name="damage_range" val="0;0;40;120"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="NONE"/>
-        <set name="material" val="ADAMANTAITE"/>
         <set name="weight" val="1300"/>
         <set name="soulshots" val="1"/>
         <set name="spiritshots" val="1"/>
@@ -48,7 +47,6 @@
         <set name="damage_range" val="0;0;44;120"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="NONE"/>
-        <set name="material" val="ADAMANTAITE"/>
         <set name="weight" val="1300"/>
         <set name="soulshots" val="1"/>
         <set name="spiritshots" val="1"/>
@@ -87,7 +85,6 @@
         <set name="damage_range" val="0;0;40;120"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="S"/>
-        <set name="material" val="ADAMANTAITE"/>
         <set name="weight" val="1300"/>
         <set name="soulshots" val="1"/>
         <set name="spiritshots" val="1"/>
@@ -127,7 +124,6 @@
         <set name="damage_range" val="0;0;40;120"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="NONE"/>
-        <set name="material" val="ADAMANTAITE"/>
         <set name="weight" val="1300"/>
         <set name="soulshots" val="1"/>
         <set name="spiritshots" val="1"/>
@@ -167,7 +163,6 @@
         <set name="damage_range" val="0;0;44;120"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="NONE"/>
-        <set name="material" val="ADAMANTAITE"/>
         <set name="weight" val="1300"/>
         <set name="soulshots" val="1"/>
         <set name="spiritshots" val="1"/>
@@ -207,7 +202,6 @@
         <set name="damage_range" val="0;0;40;120"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="NONE"/>
-        <set name="material" val="ADAMANTAITE"/>
         <set name="weight" val="1300"/>
         <set name="soulshots" val="1"/>
         <set name="spiritshots" val="1"/>
@@ -247,7 +241,6 @@
         <set name="damage_range" val="0;0;32;120"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="NONE"/>
-        <set name="material" val="ADAMANTAITE"/>
         <set name="weight" val="1300"/>
         <set name="soulshots" val="1"/>
         <set name="spiritshots" val="1"/>
@@ -287,7 +280,6 @@
         <set name="damage_range" val="0;0;10;0"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="NONE"/>
-        <set name="material" val="ADAMANTAITE"/>
         <set name="weight" val="1300"/>
         <set name="soulshots" val="1"/>
         <set name="spiritshots" val="1"/>
@@ -329,7 +321,6 @@
         <set name="damage_range" val="0;0;44;120"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="NONE"/>
-        <set name="material" val="ADAMANTAITE"/>
         <set name="weight" val="1300"/>
         <set name="soulshots" val="1"/>
         <set name="spiritshots" val="1"/>
@@ -368,7 +359,6 @@
         <set name="damage_range" val="0;0;66;120"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="NONE"/>
-        <set name="material" val="ADAMANTAITE"/>
         <set name="weight" val="1300"/>
         <set name="soulshots" val="1"/>
         <set name="spiritshots" val="1"/>
@@ -404,7 +394,6 @@
         <set name="icon" val="icon.etc_beast_soul_shot_i00"/>
         <set name="default_action" val="SUMMON_SOULSHOT"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="1"/>
         <set name="price" val="20"/>
         <set name="is_stackable" val="true"/>
@@ -421,7 +410,6 @@
         <set name="icon" val="icon.etc_beast_spirit_shot_i00"/>
         <set name="default_action" val="SUMMON_SPIRITSHOT"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="1"/>
         <set name="price" val="50"/>
         <set name="is_stackable" val="true"/>
@@ -438,7 +426,6 @@
         <set name="icon" val="icon.etc_blessed_beast_spirit_shot_i00"/>
         <set name="default_action" val="SUMMON_SPIRITSHOT"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="1"/>
         <set name="price" val="100"/>
         <set name="is_stackable" val="true"/>
@@ -456,7 +443,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="rfinger;lfinger"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="GOLD"/>
         <set name="weight" val="150"/>
         <set name="price" val="100"/>
         <set name="enchant_enabled" val="1"/>
@@ -475,7 +461,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="rear;lear"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="GOLD"/>
         <set name="weight" val="150"/>
         <set name="price" val="100"/>
         <set name="enchant_enabled" val="1"/>
@@ -494,7 +479,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="rfinger;lfinger"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="GOLD"/>
         <set name="weight" val="150"/>
         <set name="price" val="100"/>
         <set name="enchant_enabled" val="1"/>
@@ -515,7 +499,6 @@
         <set name="bodypart" val="chest"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="S"/>
-        <set name="material" val="SCALE_OF_DRAGON"/>
         <set name="weight" val="7620"/>
         <set name="price" val="12781000"/>
         <set name="enchant_enabled" val="1"/>
@@ -531,7 +514,6 @@
         <set name="bodypart" val="legs"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="S"/>
-        <set name="material" val="SCALE_OF_DRAGON"/>
         <set name="weight" val="3260"/>
         <set name="price" val="7988000"/>
         <set name="enchant_enabled" val="1"/>
@@ -546,7 +528,6 @@
         <set name="bodypart" val="gloves"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="S"/>
-        <set name="material" val="LEATHER"/>
         <set name="weight" val="540"/>
         <set name="price" val="3195000"/>
         <set name="enchant_enabled" val="1"/>
@@ -561,7 +542,6 @@
         <set name="bodypart" val="feet"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="S"/>
-        <set name="material" val="LEATHER"/>
         <set name="weight" val="1110"/>
         <set name="price" val="3195000"/>
         <set name="enchant_enabled" val="1"/>
@@ -575,7 +555,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="S"/>
-        <set name="material" val="BONE"/>
         <set name="weight" val="1170"/>
         <set name="price" val="3355000"/>
         <set name="enchant_enabled" val="1"/>
@@ -592,7 +571,6 @@
         <set name="bodypart" val="head"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="S"/>
-        <set name="material" val="BONE"/>
         <set name="weight" val="550"/>
         <set name="price" val="4793000"/>
         <set name="enchant_enabled" val="1"/>
@@ -608,7 +586,6 @@
         <set name="bodypart" val="onepiece"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="S"/>
-        <set name="material" val="LEATHER"/>
         <set name="weight" val="4950"/>
         <set name="price" val="15577000"/>
         <set name="enchant_enabled" val="1"/>
@@ -623,7 +600,6 @@
         <set name="bodypart" val="gloves"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="S"/>
-        <set name="material" val="LEATHER"/>
         <set name="weight" val="540"/>
         <set name="price" val="3195000"/>
         <set name="enchant_enabled" val="1"/>
@@ -638,7 +614,6 @@
         <set name="bodypart" val="feet"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="S"/>
-        <set name="material" val="LEATHER"/>
         <set name="weight" val="1110"/>
         <set name="price" val="3195000"/>
         <set name="enchant_enabled" val="1"/>
@@ -653,7 +628,6 @@
         <set name="bodypart" val="head"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="S"/>
-        <set name="material" val="BONE"/>
         <set name="weight" val="550"/>
         <set name="price" val="4793000"/>
         <set name="enchant_enabled" val="1"/>
@@ -669,7 +643,6 @@
         <set name="bodypart" val="onepiece"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="S"/>
-        <set name="material" val="CLOTH"/>
         <set name="weight" val="2300"/>
         <set name="price" val="15577000"/>
         <set name="enchant_enabled" val="1"/>
@@ -685,7 +658,6 @@
         <set name="bodypart" val="gloves"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="S"/>
-        <set name="material" val="LEATHER"/>
         <set name="weight" val="540"/>
         <set name="price" val="3195000"/>
         <set name="enchant_enabled" val="1"/>
@@ -700,7 +672,6 @@
         <set name="bodypart" val="feet"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="S"/>
-        <set name="material" val="LEATHER"/>
         <set name="weight" val="1110"/>
         <set name="price" val="3195000"/>
         <set name="enchant_enabled" val="1"/>
@@ -715,7 +686,6 @@
         <set name="bodypart" val="head"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="S"/>
-        <set name="material" val="BONE"/>
         <set name="weight" val="550"/>
         <set name="price" val="4793000"/>
         <set name="enchant_enabled" val="1"/>
@@ -726,7 +696,6 @@
     <item id="6688" name="Forgotten Blade Edge" type="EtcItem">
         <!-- Main ingredient required for a Dwarf to make a Forgotten Blade. Can be sold at ordinary shops. -->
         <set name="icon" val="icon.etc_sword_body_i00"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="60"/>
         <set name="price" val="92529"/>
         <set name="is_stackable" val="true"/>
@@ -734,7 +703,6 @@
     <item id="6689" name="Basalt Battlehammer Head" type="EtcItem">
         <!-- Main ingredient required for a Dwarf to make a Basalt Battlehammer. Can be sold at ordinary shops. -->
         <set name="icon" val="icon.etc_squares_gray_i00"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="60"/>
         <set name="price" val="94306"/>
         <set name="is_stackable" val="true"/>
@@ -742,7 +710,6 @@
     <item id="6690" name="Imperial Staff Head" type="EtcItem">
         <!-- Main ingredient required for a Dwarf to make a Imperial Staff. Can be sold at ordinary shops. -->
         <set name="icon" val="icon.etc_bark_blue_i00"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="60"/>
         <set name="price" val="92353"/>
         <set name="is_stackable" val="true"/>
@@ -750,7 +717,6 @@
     <item id="6691" name="Angel Slayer Blade" type="EtcItem">
         <!-- Main ingredient required for a Dwarf to make a Angel Slayer. Can be sold at ordinary shops. -->
         <set name="icon" val="icon.etc_sword_body_i00"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="60"/>
         <set name="price" val="92529"/>
         <set name="is_stackable" val="true"/>
@@ -758,7 +724,6 @@
     <item id="6693" name="Dragon Hunter Axe Blade" type="EtcItem">
         <!-- Main ingredient required for a Dwarf to make a hunter axe. Can be sold at ordinary shops. -->
         <set name="icon" val="icon.etc_sword_body_i00"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="60"/>
         <set name="price" val="90882"/>
         <set name="is_stackable" val="true"/>
@@ -766,7 +731,6 @@
     <item id="6694" name="Saint Spear Blade" type="EtcItem">
         <!-- Main ingredient required for a Dwarf to make a Saint Spear. Can be sold at ordinary shops. -->
         <set name="icon" val="icon.etc_sword_body_i00"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="60"/>
         <set name="price" val="90882"/>
         <set name="is_stackable" val="true"/>
@@ -774,7 +738,6 @@
     <item id="6695" name="Demon Splinter Blade" type="EtcItem">
         <!-- Main ingredient required for a Dwarf to make a Demon Splinter. Can be sold at ordinary shops. -->
         <set name="icon" val="icon.etc_sword_body_i00"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="60"/>
         <set name="price" val="94306"/>
         <set name="is_stackable" val="true"/>
@@ -782,7 +745,6 @@
     <item id="6696" name="Heaven's Divider Edge" type="EtcItem">
         <!-- Main ingredient required for a Dwarf to make a Heaven's Divider. Can be sold at ordinary shops. -->
         <set name="icon" val="icon.etc_sword_body_i00"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="60"/>
         <set name="price" val="91082"/>
         <set name="is_stackable" val="true"/>
@@ -790,7 +752,6 @@
     <item id="6697" name="Arcana Mace Head" type="EtcItem">
         <!-- Main ingredient required for a Dwarf to make a Imperial Staff. Can be sold at ordinary shops. -->
         <set name="icon" val="icon.etc_squares_gray_i00"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="60"/>
         <set name="price" val="94306"/>
         <set name="is_stackable" val="true"/>
@@ -798,7 +759,6 @@
     <item id="6698" name="Sealed Tateossian Earring Part" type="EtcItem">
         <!-- Main ingredient required for a Dwarf to make a Sealed Tateossian Earring. Can be sold at ordinary shops. -->
         <set name="icon" val="icon.etc_broken_crystal_silver_i00"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="60"/>
         <set name="price" val="10182"/>
         <set name="is_stackable" val="true"/>
@@ -806,7 +766,6 @@
     <item id="6699" name="Sealed Tateossian Ring Gem" type="EtcItem">
         <!-- Main ingredient required for a Dwarf to make a Sealed Tateossian Ring. Can be sold at ordinary shops. -->
         <set name="icon" val="icon.etc_crystal_ball_gold_i00"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="60"/>
         <set name="price" val="9176"/>
         <set name="is_stackable" val="true"/>

@@ -4,7 +4,6 @@
         <!-- Porcelain from the era of an ancient empire found in the Tower of Insolence. It Has not been evaluated by antique experts yet. -->
         <set name="icon" val="icon.etc_oil_pot_white_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="10"/>
         <set name="price" val="8000"/>
         <set name="is_questitem" val="true"/>
@@ -15,7 +14,6 @@
         <!-- Porcelain from the era of an ancient empire. Judged to be of the highest grade excellent porcelain.\0 -->
         <set name="icon" val="icon.etc_oil_pot_white_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="10"/>
         <set name="price" val="80000"/>
         <set name="is_questitem" val="true"/>
@@ -26,7 +24,6 @@
         <!-- Porcelain from the era of an ancient empire. Judged to be of high grade porcelain.\0 -->
         <set name="icon" val="icon.etc_oil_pot_white_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="10"/>
         <set name="price" val="16000"/>
         <set name="is_questitem" val="true"/>
@@ -37,7 +34,6 @@
         <!-- Porcelain from the era of an ancient empire. Judged to be of low grade porcelain.\0 -->
         <set name="icon" val="icon.etc_oil_pot_white_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="10"/>
         <set name="price" val="4000"/>
         <set name="is_questitem" val="true"/>
@@ -48,7 +44,6 @@
         <!-- Porcelain from the era of an ancient empire. Judged to be of the lowest grade porcelain.\0 -->
         <set name="icon" val="icon.etc_oil_pot_white_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="10"/>
         <set name="price" val="2640"/>
         <set name="is_questitem" val="true"/>
@@ -61,7 +56,6 @@
         <set name="default_action" val="SKILL_REDUCE"/>
         <set name="etcitem_type" val="POTION"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="20"/>
         <set name="price" val="2400"/>
         <set name="reuse_delay" val="500"/>
@@ -80,7 +74,6 @@
         <set name="default_action" val="SKILL_REDUCE"/>
         <set name="etcitem_type" val="POTION"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="20"/>
         <set name="price" val="3400"/>
         <set name="reuse_delay" val="500"/>
@@ -101,7 +94,6 @@
         <set name="icon" val="icon.etc_piece_of_paper_white_i00"/>
         <set name="default_action" val="SKILL_REDUCE"/>
         <set name="etcitem_type" val="SCROLL"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="5"/>
         <set name="price" val="100"/>
         <set name="is_stackable" val="true"/>
@@ -117,7 +109,6 @@
         <set name="icon" val="icon.mticket_sword_fix_i00"/>
         <set name="etcitem_type" val="CASTLE_GUARD"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="price" val="60000"/>
         <set name="is_stackable" val="true"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
@@ -128,7 +119,6 @@
         <set name="icon" val="icon.mticket_pole_fix_i00"/>
         <set name="etcitem_type" val="CASTLE_GUARD"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="price" val="80000"/>
         <set name="is_stackable" val="true"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
@@ -139,7 +129,6 @@
         <set name="icon" val="icon.mticket_bow_fix_i00"/>
         <set name="etcitem_type" val="CASTLE_GUARD"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="price" val="100000"/>
         <set name="is_stackable" val="true"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
@@ -150,7 +139,6 @@
         <set name="icon" val="icon.mticket_cleric_fix_i00"/>
         <set name="etcitem_type" val="CASTLE_GUARD"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="price" val="200000"/>
         <set name="is_stackable" val="true"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
@@ -161,7 +149,6 @@
         <set name="icon" val="icon.mticket_wizard_fix_i00"/>
         <set name="etcitem_type" val="CASTLE_GUARD"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="price" val="200000"/>
         <set name="is_stackable" val="true"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
@@ -172,7 +159,6 @@
         <set name="icon" val="icon.mticket_sword_move_i00"/>
         <set name="etcitem_type" val="CASTLE_GUARD"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="price" val="60000"/>
         <set name="is_stackable" val="true"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
@@ -183,7 +169,6 @@
         <set name="icon" val="icon.mticket_pole_move_i00"/>
         <set name="etcitem_type" val="CASTLE_GUARD"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="price" val="80000"/>
         <set name="is_stackable" val="true"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
@@ -194,7 +179,6 @@
         <set name="icon" val="icon.mticket_bow_move_i00"/>
         <set name="etcitem_type" val="CASTLE_GUARD"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="price" val="100000"/>
         <set name="is_stackable" val="true"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
@@ -205,7 +189,6 @@
         <set name="icon" val="icon.mticket_cleric_move_i00"/>
         <set name="etcitem_type" val="CASTLE_GUARD"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="price" val="200000"/>
         <set name="is_stackable" val="true"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
@@ -216,7 +199,6 @@
         <set name="icon" val="icon.mticket_wizard_move_i00"/>
         <set name="etcitem_type" val="CASTLE_GUARD"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="price" val="200000"/>
         <set name="is_stackable" val="true"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
@@ -227,7 +209,6 @@
         <set name="icon" val="icon.mticket_sword_fix_i00"/>
         <set name="etcitem_type" val="CASTLE_GUARD"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="price" val="60000"/>
         <set name="is_stackable" val="true"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
@@ -238,7 +219,6 @@
         <set name="icon" val="icon.mticket_pole_fix_i00"/>
         <set name="etcitem_type" val="CASTLE_GUARD"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="price" val="80000"/>
         <set name="is_stackable" val="true"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
@@ -249,7 +229,6 @@
         <set name="icon" val="icon.mticket_bow_fix_i00"/>
         <set name="etcitem_type" val="CASTLE_GUARD"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="price" val="100000"/>
         <set name="is_stackable" val="true"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
@@ -260,7 +239,6 @@
         <set name="icon" val="icon.mticket_cleric_fix_i00"/>
         <set name="etcitem_type" val="CASTLE_GUARD"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="price" val="200000"/>
         <set name="is_stackable" val="true"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
@@ -271,7 +249,6 @@
         <set name="icon" val="icon.mticket_wizard_fix_i00"/>
         <set name="etcitem_type" val="CASTLE_GUARD"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="price" val="200000"/>
         <set name="is_stackable" val="true"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
@@ -282,7 +259,6 @@
         <set name="icon" val="icon.mticket_sword_move_i00"/>
         <set name="etcitem_type" val="CASTLE_GUARD"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="price" val="60000"/>
         <set name="is_stackable" val="true"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
@@ -293,7 +269,6 @@
         <set name="icon" val="icon.mticket_pole_move_i00"/>
         <set name="etcitem_type" val="CASTLE_GUARD"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="price" val="80000"/>
         <set name="is_stackable" val="true"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
@@ -304,7 +279,6 @@
         <set name="icon" val="icon.mticket_bow_move_i00"/>
         <set name="etcitem_type" val="CASTLE_GUARD"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="price" val="100000"/>
         <set name="is_stackable" val="true"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
@@ -315,7 +289,6 @@
         <set name="icon" val="icon.mticket_cleric_move_i00"/>
         <set name="etcitem_type" val="CASTLE_GUARD"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="price" val="200000"/>
         <set name="is_stackable" val="true"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
@@ -326,7 +299,6 @@
         <set name="icon" val="icon.mticket_wizard_move_i00"/>
         <set name="etcitem_type" val="CASTLE_GUARD"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="price" val="200000"/>
         <set name="is_stackable" val="true"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
@@ -337,7 +309,6 @@
         <set name="icon" val="icon.mticket_sword_fix_i00"/>
         <set name="etcitem_type" val="CASTLE_GUARD"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="price" val="60000"/>
         <set name="is_stackable" val="true"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
@@ -348,7 +319,6 @@
         <set name="icon" val="icon.mticket_pole_fix_i00"/>
         <set name="etcitem_type" val="CASTLE_GUARD"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="price" val="80000"/>
         <set name="is_stackable" val="true"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
@@ -359,7 +329,6 @@
         <set name="icon" val="icon.mticket_bow_fix_i00"/>
         <set name="etcitem_type" val="CASTLE_GUARD"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="price" val="100000"/>
         <set name="is_stackable" val="true"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
@@ -370,7 +339,6 @@
         <set name="icon" val="icon.mticket_cleric_fix_i00"/>
         <set name="etcitem_type" val="CASTLE_GUARD"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="price" val="200000"/>
         <set name="is_stackable" val="true"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
@@ -381,7 +349,6 @@
         <set name="icon" val="icon.mticket_wizard_fix_i00"/>
         <set name="etcitem_type" val="CASTLE_GUARD"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="price" val="200000"/>
         <set name="is_stackable" val="true"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
@@ -392,7 +359,6 @@
         <set name="icon" val="icon.mticket_sword_move_i00"/>
         <set name="etcitem_type" val="CASTLE_GUARD"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="price" val="60000"/>
         <set name="is_stackable" val="true"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
@@ -403,7 +369,6 @@
         <set name="icon" val="icon.mticket_pole_move_i00"/>
         <set name="etcitem_type" val="CASTLE_GUARD"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="price" val="80000"/>
         <set name="is_stackable" val="true"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
@@ -414,7 +379,6 @@
         <set name="icon" val="icon.mticket_bow_move_i00"/>
         <set name="etcitem_type" val="CASTLE_GUARD"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="price" val="100000"/>
         <set name="is_stackable" val="true"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
@@ -425,7 +389,6 @@
         <set name="icon" val="icon.mticket_cleric_move_i00"/>
         <set name="etcitem_type" val="CASTLE_GUARD"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="price" val="200000"/>
         <set name="is_stackable" val="true"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
@@ -436,7 +399,6 @@
         <set name="icon" val="icon.mticket_wizard_move_i00"/>
         <set name="etcitem_type" val="CASTLE_GUARD"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="price" val="200000"/>
         <set name="is_stackable" val="true"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
@@ -447,7 +409,6 @@
         <set name="icon" val="icon.mticket_sword_fix_i00"/>
         <set name="etcitem_type" val="CASTLE_GUARD"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="price" val="60000"/>
         <set name="is_stackable" val="true"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
@@ -458,7 +419,6 @@
         <set name="icon" val="icon.mticket_pole_fix_i00"/>
         <set name="etcitem_type" val="CASTLE_GUARD"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="price" val="80000"/>
         <set name="is_stackable" val="true"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
@@ -469,7 +429,6 @@
         <set name="icon" val="icon.mticket_bow_fix_i00"/>
         <set name="etcitem_type" val="CASTLE_GUARD"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="price" val="100000"/>
         <set name="is_stackable" val="true"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
@@ -480,7 +439,6 @@
         <set name="icon" val="icon.mticket_cleric_fix_i00"/>
         <set name="etcitem_type" val="CASTLE_GUARD"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="price" val="200000"/>
         <set name="is_stackable" val="true"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
@@ -491,7 +449,6 @@
         <set name="icon" val="icon.mticket_wizard_fix_i00"/>
         <set name="etcitem_type" val="CASTLE_GUARD"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="price" val="200000"/>
         <set name="is_stackable" val="true"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
@@ -502,7 +459,6 @@
         <set name="icon" val="icon.mticket_sword_move_i00"/>
         <set name="etcitem_type" val="CASTLE_GUARD"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="price" val="60000"/>
         <set name="is_stackable" val="true"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
@@ -513,7 +469,6 @@
         <set name="icon" val="icon.mticket_pole_move_i00"/>
         <set name="etcitem_type" val="CASTLE_GUARD"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="price" val="80000"/>
         <set name="is_stackable" val="true"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
@@ -524,7 +479,6 @@
         <set name="icon" val="icon.mticket_bow_move_i00"/>
         <set name="etcitem_type" val="CASTLE_GUARD"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="price" val="100000"/>
         <set name="is_stackable" val="true"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
@@ -535,7 +489,6 @@
         <set name="icon" val="icon.mticket_cleric_move_i00"/>
         <set name="etcitem_type" val="CASTLE_GUARD"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="price" val="200000"/>
         <set name="is_stackable" val="true"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
@@ -546,7 +499,6 @@
         <set name="icon" val="icon.mticket_wizard_move_i00"/>
         <set name="etcitem_type" val="CASTLE_GUARD"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="price" val="200000"/>
         <set name="is_stackable" val="true"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
@@ -557,7 +509,6 @@
         <set name="icon" val="icon.mticket_sword_fix_i00"/>
         <set name="etcitem_type" val="CASTLE_GUARD"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="price" val="60000"/>
         <set name="is_stackable" val="true"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
@@ -568,7 +519,6 @@
         <set name="icon" val="icon.mticket_pole_fix_i00"/>
         <set name="etcitem_type" val="CASTLE_GUARD"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="price" val="80000"/>
         <set name="is_stackable" val="true"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
@@ -579,7 +529,6 @@
         <set name="icon" val="icon.mticket_bow_fix_i00"/>
         <set name="etcitem_type" val="CASTLE_GUARD"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="price" val="100000"/>
         <set name="is_stackable" val="true"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
@@ -590,7 +539,6 @@
         <set name="icon" val="icon.mticket_cleric_fix_i00"/>
         <set name="etcitem_type" val="CASTLE_GUARD"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="price" val="200000"/>
         <set name="is_stackable" val="true"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
@@ -601,7 +549,6 @@
         <set name="icon" val="icon.mticket_wizard_fix_i00"/>
         <set name="etcitem_type" val="CASTLE_GUARD"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="price" val="200000"/>
         <set name="is_stackable" val="true"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
@@ -612,7 +559,6 @@
         <set name="icon" val="icon.mticket_sword_move_i00"/>
         <set name="etcitem_type" val="CASTLE_GUARD"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="price" val="60000"/>
         <set name="is_stackable" val="true"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
@@ -623,7 +569,6 @@
         <set name="icon" val="icon.mticket_pole_move_i00"/>
         <set name="etcitem_type" val="CASTLE_GUARD"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="price" val="80000"/>
         <set name="is_stackable" val="true"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
@@ -634,7 +579,6 @@
         <set name="icon" val="icon.mticket_bow_move_i00"/>
         <set name="etcitem_type" val="CASTLE_GUARD"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="price" val="100000"/>
         <set name="is_stackable" val="true"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
@@ -645,7 +589,6 @@
         <set name="icon" val="icon.mticket_cleric_move_i00"/>
         <set name="etcitem_type" val="CASTLE_GUARD"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="price" val="200000"/>
         <set name="is_stackable" val="true"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
@@ -656,7 +599,6 @@
         <set name="icon" val="icon.mticket_wizard_move_i00"/>
         <set name="etcitem_type" val="CASTLE_GUARD"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="price" val="200000"/>
         <set name="is_stackable" val="true"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>

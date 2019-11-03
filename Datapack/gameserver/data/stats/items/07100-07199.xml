@@ -5,7 +5,6 @@
         <set name="icon" val="icon.etc_spellbook_blue_i00"/>
         <set name="default_action" val="SHOW_HTML"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_destroyable" val="false"/>
@@ -22,7 +21,6 @@
         <set name="icon" val="icon.etc_spellbook_blue_i00"/>
         <set name="default_action" val="SHOW_HTML"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_destroyable" val="false"/>
@@ -39,7 +37,6 @@
         <set name="icon" val="icon.etc_spellbook_gray_i00"/>
         <set name="default_action" val="SHOW_HTML"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_destroyable" val="false"/>
@@ -56,7 +53,6 @@
         <set name="icon" val="icon.etc_spellbook_gray_i00"/>
         <set name="default_action" val="SHOW_HTML"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_destroyable" val="false"/>
@@ -73,7 +69,6 @@
         <set name="icon" val="icon.etc_spellbook_gray_i00"/>
         <set name="default_action" val="SHOW_HTML"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_destroyable" val="false"/>
@@ -90,7 +85,6 @@
         <set name="icon" val="icon.etc_magic_book_red_i00"/>
         <set name="default_action" val="SHOW_HTML"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_destroyable" val="false"/>
@@ -107,7 +101,6 @@
         <set name="icon" val="icon.etc_magic_book_red_i00"/>
         <set name="default_action" val="SHOW_HTML"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_destroyable" val="false"/>
@@ -124,7 +117,6 @@
         <set name="icon" val="icon.etc_magic_book_red_i00"/>
         <set name="default_action" val="SHOW_HTML"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_destroyable" val="false"/>
@@ -141,7 +133,6 @@
         <set name="icon" val="icon.etc_magic_book_red_i00"/>
         <set name="default_action" val="SHOW_HTML"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_destroyable" val="false"/>
@@ -158,7 +149,6 @@
         <set name="icon" val="icon.etc_magic_book_red_i00"/>
         <set name="default_action" val="SHOW_HTML"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_destroyable" val="false"/>
@@ -175,7 +165,6 @@
         <set name="icon" val="icon.etc_magic_book_red_i00"/>
         <set name="default_action" val="SHOW_HTML"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_destroyable" val="false"/>
@@ -192,7 +181,6 @@
         <set name="icon" val="icon.etc_magic_book_red_i00"/>
         <set name="default_action" val="SHOW_HTML"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_destroyable" val="false"/>
@@ -209,7 +197,6 @@
         <set name="icon" val="icon.etc_magic_book_red_i00"/>
         <set name="default_action" val="SHOW_HTML"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_destroyable" val="false"/>
@@ -225,7 +212,6 @@
         <!-- Magical scroll that relocates you to Talking Island. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.etc_scroll_of_return_i04"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="30"/>
         <set name="price" val="35000"/>
         <set name="is_stackable" val="true"/>
@@ -243,7 +229,6 @@
         <!-- Magical scroll that relocates you to the Elven Village. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.etc_scroll_of_return_i04"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="30"/>
         <set name="price" val="35000"/>
         <set name="is_stackable" val="true"/>
@@ -261,7 +246,6 @@
         <!-- Magical scroll that relocates you to Dark Elf Village. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.etc_scroll_of_return_i04"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="30"/>
         <set name="price" val="35000"/>
         <set name="is_stackable" val="true"/>
@@ -279,7 +263,6 @@
         <!-- Magical scroll that relocates you to Orc Village. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.etc_scroll_of_return_i04"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="30"/>
         <set name="price" val="35000"/>
         <set name="is_stackable" val="true"/>
@@ -297,7 +280,6 @@
         <!-- Magical scroll that relocates you to Dwarven Village. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.etc_scroll_of_return_i04"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="30"/>
         <set name="price" val="35000"/>
         <set name="is_stackable" val="true"/>
@@ -315,7 +297,6 @@
         <!-- Magical scroll that relocates you to Gludin Village. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.etc_scroll_of_return_i04"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="30"/>
         <set name="price" val="35000"/>
         <set name="is_stackable" val="true"/>
@@ -333,7 +314,6 @@
         <!-- Magical scroll that relocates you to the Town of Gludio. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.etc_scroll_of_return_i04"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="30"/>
         <set name="price" val="35000"/>
         <set name="is_stackable" val="true"/>
@@ -351,7 +331,6 @@
         <!-- Magical scroll that relocates you to the Town of Dion. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.etc_scroll_of_return_i04"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="30"/>
         <set name="price" val="35000"/>
         <set name="is_stackable" val="true"/>
@@ -369,7 +348,6 @@
         <!-- Magical scroll that relocates you to Floran Village. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.etc_scroll_of_return_i04"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="30"/>
         <set name="price" val="35000"/>
         <set name="is_stackable" val="true"/>
@@ -387,7 +365,6 @@
         <!-- Magical scroll that relocates you to the Town of Giran. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.etc_scroll_of_return_i04"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="30"/>
         <set name="price" val="35000"/>
         <set name="is_stackable" val="true"/>
@@ -405,7 +382,6 @@
         <!-- Magical scroll that relocates you to Hardin's Academy. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.etc_scroll_of_return_i00"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="30"/>
         <set name="price" val="35000"/>
         <set name="is_stackable" val="true"/>
@@ -423,7 +399,6 @@
         <!-- Magical scroll that relocates you to the Town of Oren. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.etc_scroll_of_return_i04"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="30"/>
         <set name="price" val="35000"/>
         <set name="is_stackable" val="true"/>
@@ -441,7 +416,6 @@
         <!-- Magical scroll that relocates you to the Ivory Tower. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.etc_scroll_of_return_i04"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="30"/>
         <set name="price" val="35000"/>
         <set name="is_stackable" val="true"/>
@@ -459,7 +433,6 @@
         <!-- Magical scroll that relocates you to Hunter's Village. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.etc_scroll_of_return_i04"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="30"/>
         <set name="price" val="35000"/>
         <set name="is_stackable" val="true"/>
@@ -477,7 +450,6 @@
         <!-- Leto Lizardman Bracelet. Take it to Guard Rath in Giran. -->
         <set name="icon" val="icon.etc_leash_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>

@@ -4,7 +4,6 @@
         <!-- The totem of the Hestui. Can be sold in any shop for a high price. -->
         <set name="icon" val="icon.etc_totem_black_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="10"/>
         <set name="price" val="11000"/>
         <set name="is_questitem" val="true"/>
@@ -15,7 +14,6 @@
         <!-- Maraku Wolfmen Totem. Can be sold in any shop. -->
         <set name="icon" val="icon.etc_totem_green_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="10"/>
         <set name="price" val="1200"/>
         <set name="is_questitem" val="true"/>
@@ -26,7 +24,6 @@
         <!-- Article left by the grandmother of Redbonnet. Can be sold in any shop for a high price. -->
         <set name="icon" val="icon.etc_crystal_ball_silver_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="10"/>
         <set name="price" val="10000"/>
         <set name="is_questitem" val="true"/>
@@ -37,7 +34,6 @@
         <!-- Article left by the grandmother of Redbonnet. Can be sold in any shop for a high price. -->
         <set name="icon" val="icon.etc_mirror_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="10"/>
         <set name="price" val="1000"/>
         <set name="is_questitem" val="true"/>
@@ -48,7 +44,6 @@
         <!-- Article left by the grandmother of Redbonnet. Can be sold in any shop for a high price. -->
         <set name="icon" val="icon.accessary_aquastone_necklace_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="10"/>
         <set name="price" val="600"/>
         <set name="is_questitem" val="true"/>
@@ -59,7 +54,6 @@
         <!-- Article left by the grandmother of Redbonnet. Can be sold in any shop for a high price. -->
         <set name="icon" val="icon.etc_jewel_white_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="10"/>
         <set name="price" val="200"/>
         <set name="is_questitem" val="true"/>
@@ -72,7 +66,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="neck"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="SILVER"/>
         <set name="weight" val="150"/>
         <set name="commissionItemType" val="NECKLACE"/>
         <set name="price" val="66"/>
@@ -86,7 +79,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="neck"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="SILVER"/>
         <set name="weight" val="150"/>
         <set name="commissionItemType" val="NECKLACE"/>
         <set name="price" val="4680"/>
@@ -100,7 +92,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="rfinger;lfinger"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="GOLD"/>
         <set name="weight" val="150"/>
         <set name="commissionItemType" val="RING"/>
         <set name="price" val="2340"/>
@@ -114,7 +105,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="rfinger;lfinger"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="GOLD"/>
         <set name="weight" val="150"/>
         <set name="commissionItemType" val="RING"/>
         <set name="price" val="2340"/>
@@ -130,7 +120,6 @@
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="weight" val="1450"/>
         <set name="price" val="25500"/>
         <set name="soulshots" val="1"/>
@@ -154,7 +143,6 @@
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="weight" val="1860"/>
         <set name="price" val="25500"/>
         <set name="soulshots" val="1"/>
@@ -175,7 +163,6 @@
         <!-- Spellbook needed to learn Confusion. Used by Palace Knights and Assassins. Lv. acquired: Palace Knight 24, Assassin 24 -->
         <set name="icon" val="icon.etc_spell_books_defighter_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="120"/>
         <set name="price" val="1150"/>
         <set name="commissionItemType" val="SPELLBOOK"/>
@@ -185,7 +172,6 @@
         <!-- Spellbook needed to learn Charm. Used by Elven Knights and Elven Scouts. Required level: 20 -->
         <set name="icon" val="icon.etc_spell_books_efighter_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="120"/>
         <set name="price" val="800"/>
         <set name="commissionItemType" val="SPELLBOOK"/>
@@ -195,7 +181,6 @@
         <!-- Spellbook needed to learn Resurrection. Used by Clerics, Elven Oracles, and Shillien Oracles. Required level: 20 -->
         <set name="icon" val="icon.etc_spell_books_white_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="120"/>
         <set name="price" val="7461"/>
         <set name="commissionItemType" val="SPELLBOOK"/>
@@ -205,7 +190,6 @@
         <!-- Spellbook needed to learn Eva's Kiss. Used by Clerics, Elven Oracles and Shillien Oracles. Required level: 20 -->
         <set name="icon" val="icon.etc_spell_books_assistance_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="120"/>
         <set name="price" val="800"/>
         <set name="commissionItemType" val="SPELLBOOK"/>
@@ -215,7 +199,6 @@
         <!-- Spellbook needed to learn Corpse Life Drain. Used by Human Wizards and Dark Wizards. Required level: 30 -->
         <set name="icon" val="icon.etc_spell_books_black_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="120"/>
         <set name="price" val="1800"/>
         <set name="commissionItemType" val="SPELLBOOK"/>
@@ -225,7 +208,6 @@
         <!-- Spellbook needed to learn Body To Mind. Used by Human Wizards and Dark Wizards. Required level: 25 -->
         <set name="icon" val="icon.etc_spell_books_black_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="120"/>
         <set name="price" val="15048"/>
         <set name="commissionItemType" val="SPELLBOOK"/>
@@ -235,7 +217,6 @@
         <!-- Amulet required for the Chant of Flame spell. Used by Orc Shamans. Required level: 30 -->
         <set name="icon" val="icon.etc_orcish_talisman_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="120"/>
         <set name="price" val="26593"/>
         <set name="commissionItemType" val="SPELLBOOK"/>
@@ -245,7 +226,6 @@
         <!-- Amulet required for the Pa'agrio's Gift spell. Used by Orc Shamans. Required level: 30 -->
         <set name="icon" val="icon.etc_orcish_talisman_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="120"/>
         <set name="price" val="26593"/>
         <set name="commissionItemType" val="SPELLBOOK"/>
@@ -255,7 +235,6 @@
         <!-- Amulet required for the Pa'agrio's Blessing spell. Used by Orc Shamans. Required level: 35 -->
         <set name="icon" val="icon.etc_orcish_talisman_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="120"/>
         <set name="price" val="2450"/>
         <set name="commissionItemType" val="SPELLBOOK"/>
@@ -265,7 +244,6 @@
         <!-- Amulet required for the Chant of Fire spell. Used by Orc Shamans. Required level: 20 -->
         <set name="icon" val="icon.etc_orcish_talisman_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="120"/>
         <set name="price" val="7461"/>
         <set name="commissionItemType" val="SPELLBOOK"/>
@@ -275,7 +253,6 @@
         <!-- Amulet required for the Chant of Battle spell. Used by Orc Mystics. Required level: 14 -->
         <set name="icon" val="icon.etc_orcish_talisman_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="120"/>
         <set name="price" val="500"/>
         <set name="commissionItemType" val="SPELLBOOK"/>
@@ -285,7 +262,6 @@
         <!-- Amulet required for the Chant of Shielding spell. Used by Orc Shamans. Required level: 20 -->
         <set name="icon" val="icon.etc_orcish_talisman_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="120"/>
         <set name="price" val="7461"/>
         <set name="commissionItemType" val="SPELLBOOK"/>
@@ -295,7 +271,6 @@
         <!-- Amulet required for the Soul Shield spell. Used by Orc Mystics. Required level: 7 -->
         <set name="icon" val="icon.etc_orcish_talisman_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="120"/>
         <set name="price" val="100"/>
         <set name="commissionItemType" val="SPELLBOOK"/>
@@ -305,7 +280,6 @@
         <!-- Amulet required for the Life Drain spell. Used by Orc Mystics. Required level: 7 -->
         <set name="icon" val="icon.etc_orcish_talisman_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="120"/>
         <set name="price" val="100"/>
         <set name="commissionItemType" val="SPELLBOOK"/>
@@ -315,7 +289,6 @@
         <!-- Amulet required for the Fear spell. Used by Orc Mystics. Required level: 14 -->
         <set name="icon" val="icon.etc_orcish_talisman_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="120"/>
         <set name="price" val="500"/>
         <set name="commissionItemType" val="SPELLBOOK"/>
@@ -325,7 +298,6 @@
         <!-- Amulet required for the Venom spell. Used by Orc Mystics. Required level: 7 -->
         <set name="icon" val="icon.etc_orcish_talisman_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="120"/>
         <set name="price" val="100"/>
         <set name="commissionItemType" val="SPELLBOOK"/>
@@ -335,7 +307,6 @@
         <!-- Amulet required for the Seal of Chaos spell. Used by Orc Shamans. Required level: 30 -->
         <set name="icon" val="icon.etc_orcish_talisman_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="120"/>
         <set name="price" val="1800"/>
         <set name="commissionItemType" val="SPELLBOOK"/>
@@ -345,7 +316,6 @@
         <!-- Amulet required for the Spirit Dream spell. Used by Orc Mystics. Required level: 7 -->
         <set name="icon" val="icon.etc_orcish_talisman_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="120"/>
         <set name="price" val="100"/>
         <set name="commissionItemType" val="SPELLBOOK"/>
@@ -355,7 +325,6 @@
         <!-- Amulet required for the Seal of Slow spell. Used by Orc Shamans. Required level: 35 -->
         <set name="icon" val="icon.etc_orcish_talisman_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="120"/>
         <set name="price" val="43681"/>
         <set name="commissionItemType" val="SPELLBOOK"/>
@@ -365,7 +334,6 @@
         <!-- Amulet required for the Chill Flame spell. Used by Orc Mystics. Required level: 7 -->
         <set name="icon" val="icon.etc_orcish_talisman_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="120"/>
         <set name="price" val="100"/>
         <set name="commissionItemType" val="SPELLBOOK"/>
@@ -375,7 +343,6 @@
         <!-- Amulet required for the Burning Flame spell. Used by Orc Shamans. Required level: 25 -->
         <set name="icon" val="icon.etc_orcish_talisman_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="120"/>
         <set name="price" val="1250"/>
         <set name="commissionItemType" val="SPELLBOOK"/>
@@ -385,7 +352,6 @@
         <!-- Amulet required for the Aura Sink spell. Used by Orc Shamans. Required level: 25 -->
         <set name="icon" val="icon.etc_orcish_talisman_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="120"/>
         <set name="price" val="1250"/>
         <set name="commissionItemType" val="SPELLBOOK"/>
@@ -395,7 +361,6 @@
         <!-- Amulet required for the Madness spell. Used by Orc Shamans. Required level: 20 -->
         <set name="icon" val="icon.etc_orcish_talisman_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="120"/>
         <set name="price" val="800"/>
         <set name="commissionItemType" val="SPELLBOOK"/>
@@ -405,7 +370,6 @@
         <!-- Amulet required for the Frost Flame spell. Used by Orc Shamans. Required level: 20 -->
         <set name="icon" val="icon.etc_orcish_talisman_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="120"/>
         <set name="price" val="800"/>
         <set name="commissionItemType" val="SPELLBOOK"/>
@@ -415,7 +379,6 @@
         <!-- Amulet required for the Seal of Binding spell. Used by Orc Shamans. Required level: 25 -->
         <set name="icon" val="icon.etc_orcish_talisman_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="120"/>
         <set name="price" val="15048"/>
         <set name="commissionItemType" val="SPELLBOOK"/>
@@ -425,7 +388,6 @@
         <!-- Amulet required for the Seal of Poison spell. Used by Orc Shamans. Required level: 20 -->
         <set name="icon" val="icon.etc_orcish_talisman_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="120"/>
         <set name="price" val="800"/>
         <set name="commissionItemType" val="SPELLBOOK"/>
@@ -436,7 +398,6 @@
         <set name="icon" val="icon.etc_scroll_of_return_i01"/>
         <set name="default_action" val="SKILL_REDUCE"/>
         <set name="etcitem_type" val="SCROLL"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="120"/>
         <set name="price" val="150000"/>
         <set name="is_stackable" val="true"/>
@@ -453,7 +414,6 @@
         <set name="default_action" val="SKILL_REDUCE"/>
         <set name="etcitem_type" val="POTION"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="5"/>
         <set name="price" val="900"/>
         <set name="reuse_delay" val="10000"/>
@@ -476,7 +436,6 @@
         <set name="default_action" val="SKILL_REDUCE"/>
         <set name="etcitem_type" val="POTION"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="180"/>
         <set name="price" val="10000"/>
         <set name="reuse_delay" val="500"/>
@@ -497,7 +456,6 @@
         <!-- Miraculous medicine made of the mixture of honey and khandar extract. Take this to Centurion Nakusin. -->
         <set name="icon" val="icon.etc_potion_gold_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -513,7 +471,6 @@
         <!-- Cloak made of grizzly bear's fur. Excellent for keeping warm. Take this to Centurion Nakusin. -->
         <set name="icon" val="icon.etc_piece_of_cloth_black_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -529,7 +486,6 @@
         <!-- Axe that holds the blood of wild animals. It is said to strengthen its owner's life force. Take this to Centurion Nakusin. -->
         <set name="icon" val="icon.weapon_tomahawk_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -545,7 +501,6 @@
         <!-- Skull of an ancestor of Urutus. It is said to strengthen its owner's life force. Take this to Centurion Nakusin. -->
         <set name="icon" val="icon.etc_skull_black_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -561,7 +516,6 @@
         <!-- Grain of powder made of dried legs of poisonous spiders. Smelling it will make you feel refreshed. Take this to Centurion Nakusin. -->
         <set name="icon" val="icon.etc_powder_white_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -577,7 +531,6 @@
         <!-- Pearl brought out of a deep sea. It is said to help predict the future. Take this to Centurion Nakusin. -->
         <set name="icon" val="icon.etc_crystal_ball_silver_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -593,7 +546,6 @@
         <!-- The list of things that Bolter wants you to bring from the village. -->
         <set name="icon" val="icon.etc_piece_of_paper_white_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -609,7 +561,6 @@
         <!-- Pair of mining boots you got from Trader Garita. Take this to Miner Bolter. -->
         <set name="icon" val="icon.armor_apprentices_shoes_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -625,7 +576,6 @@
         <!-- Miner's pick you got from Blacksmith Brunon. Take this to Miner Bolter. -->
         <set name="icon" val="icon.weapon_guard_spear_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -641,7 +591,6 @@
         <!-- Sack of boomboom powder you got from Trader Shari. Take this to Miner Bolter. -->
         <set name="icon" val="icon.etc_powder_black_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -657,7 +606,6 @@
         <!-- Delicious beer you got from Warehouse Chief Reed. Take this to Miner Bolter. -->
         <set name="icon" val="icon.etc_potion_scarlet_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -673,7 +621,6 @@
         <!-- Pair of socks that Miner Bolter gave you. For what...? -->
         <set name="icon" val="icon.armor_cotton_shoes_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -689,7 +636,6 @@
         <!-- An order to kill Varangka's Messenger. After killing him, recover the letter and take it to Urutu Chief Hatos. -->
         <set name="icon" val="icon.etc_piece_of_paper_white_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -705,7 +651,6 @@
         <!-- An order to kill Varangka's Messenger. After killing him, recover the letter and take it to Urutu Chief Hatos. -->
         <set name="icon" val="icon.etc_piece_of_paper_gray_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -721,7 +666,6 @@
         <!-- An order to kill Varangka's Messenger. After killing him, recover the letter and take it to Urutu Chief Hatos. -->
         <set name="icon" val="icon.etc_piece_of_paper_black_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -737,7 +681,6 @@
         <!-- A secret letter that Varangka sent to Dark Elven Magister. Take the letter to Urutu Chief Hatos. -->
         <set name="icon" val="icon.etc_letter_red_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -753,7 +696,6 @@
         <!-- A secret letter that Varangka sent to Duke Van Halter. Take the letter to Urutu Chief Hatos. -->
         <set name="icon" val="icon.etc_letter_white_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -769,7 +711,6 @@
         <!-- A secret letter that Varangka sent to Elven Master Laria. Take the letter to Urutu Chief Hatos. -->
         <set name="icon" val="icon.etc_letter_blue_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -785,7 +726,6 @@
         <!-- Collector Gouph drew up this contract when buying the star diamond from Trader Reep. Take this to Trader Reep. -->
         <set name="icon" val="icon.etc_letter_blue_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -801,7 +741,6 @@
         <!-- Trader Reep drew up this contract when he requested the delivery of the star diamond. Take this to Carrier Torocco. -->
         <set name="icon" val="icon.etc_letter_red_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -817,7 +756,6 @@
         <!-- Carrier Torocco bought this high quality wine to give it to his old friend, Maron, as a present. Take this to Miner Maron. -->
         <set name="icon" val="icon.etc_lesser_potion_purple_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -833,7 +771,6 @@
         <!-- These dice were specially made for gambling. Take these to Blacksmith Brunon. -->
         <set name="icon" val="icon.etc_squares_silver_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -849,7 +786,6 @@
         <!-- This contract says if Brunon gets the 20 stolen jewels back from goblins, he can get the star diamond back. -->
         <set name="icon" val="icon.etc_letter_white_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -865,7 +801,6 @@
         <!-- This jewel is obtained by the Goblin Brigand Leader. Take 10 Aquamarines and 10 Chrysoberyls to Blacksmith Brunon. -->
         <set name="icon" val="icon.etc_jewel_green_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -881,7 +816,6 @@
         <!-- This jewel is obtained by the Goblin Brigand Leader. Take 10 Aquamarines and 10 Chrysoberyls to Blacksmith Brunon. -->
         <set name="icon" val="icon.etc_jewel_blue_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -897,7 +831,6 @@
         <!-- Blacksmith Brunon gives this Jewel Box. Take it to Collector Gouph. -->
         <set name="icon" val="icon.etc_jewel_box_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -913,7 +846,6 @@
         <!-- This coal piece is in the Jewel Box. Take this to Blacksmith Brunon. -->
         <set name="icon" val="icon.etc_plate_black_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -929,7 +861,6 @@
         <!-- Blacksmith Brunon sends this letter to Warehouse Keeper Murdoc asking for the right box. -->
         <set name="icon" val="icon.etc_scroll_white_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -945,7 +876,6 @@
         <!-- Sweet strawberry-flavored tart. Warehouse Keeper Murdoc sends this to Warehouse Keeper Airy as a present of apology. -->
         <set name="icon" val="icon.etc_pouch_brown_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -961,7 +891,6 @@
         <!-- This diagram shows the blade bat in details. Take this and go hunt blade bats to obtain the star diamond. -->
         <set name="icon" val="icon.etc_recipe_red_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -977,7 +906,6 @@
         <!-- Everyone is looking for this diamond. Take this to the real owner. -->
         <set name="icon" val="icon.etc_jewel_silver_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -993,7 +921,6 @@
         <!-- Mineral collected from the destroyed greystone golem. Collect 20 of these and take them to Gatekeeper Tamil. -->
         <set name="icon" val="icon.etc_crystal_blue_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -1009,7 +936,6 @@
         <!-- Mineral obtained by defeated whinstone golems. Collect twenty and take them to Gatekeeper Wirphy. -->
         <set name="icon" val="icon.etc_crystal_blue_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -1025,7 +951,6 @@
         <!-- Letter Magister Mirien wrote after tasting Jonas' dish. Take this and go to Jonas. -->
         <set name="icon" val="icon.etc_letter_red_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -1041,7 +966,6 @@
         <!-- Letter Magister Mirien wrote after tasting Jonas' dish. Take this and go to Jonas. -->
         <set name="icon" val="icon.etc_letter_red_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -1057,7 +981,6 @@
         <!-- Letter Magister Mirien wrote after tasting Jonas' dish. Take this and go to Jonas. -->
         <set name="icon" val="icon.etc_letter_red_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -1073,7 +996,6 @@
         <!-- Letter Magister Mirien wrote after tasting Jonas' dish. Take this and go to Jonas. -->
         <set name="icon" val="icon.etc_letter_red_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -1089,7 +1011,6 @@
         <!-- Goblin's blood. If you have enough of this item, the Kuruka Ratman Leader appears. -->
         <set name="icon" val="icon.etc_reagent_green_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -1105,7 +1026,6 @@
         <!-- Map showing goblins' dwelling. Take this and find the goblin tribes and destroy them. -->
         <set name="icon" val="icon.etc_recipe_blue_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -1121,7 +1041,6 @@
         <!-- Fang obtained after killing Kuruka Ratman Leader. Collect ten of these to take to Prefect Karukia. -->
         <set name="icon" val="icon.etc_claw_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -1137,7 +1056,6 @@
         <!-- Detailed account of a betrayer who recently joined the Umbar tribe and settled on the outskirts of a mountain west of the Spider Nest. -->
         <set name="icon" val="icon.etc_piece_of_paper_white_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -1153,7 +1071,6 @@
         <!-- Detailed account of a betrayer who recently joined the Umbar tribe and settled on the outskirts of a mountain west of the Spider Nest. -->
         <set name="icon" val="icon.etc_piece_of_paper_white_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -1169,7 +1086,6 @@
         <!-- Detailed account of a betrayer who recently joined the Umbar tribe and settled on the outskirts of a mountain west of the Spider Nest. -->
         <set name="icon" val="icon.etc_piece_of_paper_white_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -1185,7 +1101,6 @@
         <!-- Detailed account of a betrayer who recently joined the Umbar tribe and settled on the outskirts of a mountain west of the Spider Nest. -->
         <set name="icon" val="icon.etc_piece_of_paper_white_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -1201,7 +1116,6 @@
         <!-- Detailed account of a betrayer who recently joined the Umbar tribe and settled on the outskirts of a mountain west of the Spider Nest. -->
         <set name="icon" val="icon.etc_piece_of_paper_white_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -1217,7 +1131,6 @@
         <!-- Detailed account of a betrayer who recently joined the Umbar tribe and settled on the outskirts of a mountain west of the Spider Nest. -->
         <set name="icon" val="icon.etc_piece_of_paper_white_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -1233,7 +1146,6 @@
         <!-- Detailed account of a betrayer who recently joined the Umbar tribe and settled on the outskirts of a mountain west of the Spider Nest. -->
         <set name="icon" val="icon.etc_piece_of_paper_white_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -1249,7 +1161,6 @@
         <!-- Detailed account of a betrayer who recently joined the Umbar tribe and settled on the outskirts of a mountain west of the Spider Nest. -->
         <set name="icon" val="icon.etc_piece_of_paper_white_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -1265,7 +1176,6 @@
         <!-- Detailed account of a betrayer who recently joined the Umbar tribe and settled on the outskirts of a mountain west of the Spider Nest. -->
         <set name="icon" val="icon.etc_piece_of_paper_white_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -1281,7 +1191,6 @@
         <!-- Detailed account of a betrayer who recently joined the Umbar tribe and settled on the outskirts of a mountain west of the Spider Nest. -->
         <set name="icon" val="icon.etc_piece_of_paper_white_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -1297,7 +1206,6 @@
         <!-- The head of a traitor orc. Collect 2 and take them to Prefect Kasman in Gludin Village. -->
         <set name="icon" val="icon.etc_skull_red_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -1313,7 +1221,6 @@
         <!-- Earring given to an Orc who has earned the qualification to become an Orc Raider. Take this to the High Prefect to change your class to an Orc Raider. -->
         <set name="icon" val="icon.accessary_earing_of_black_ore_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -1329,7 +1236,6 @@
         <!-- Red pomegranate fruit given by Gantaki Zu Urutu. Take this and go to Khavatari Rosheek. -->
         <set name="icon" val="icon.etc_fruit_red_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -1345,7 +1251,6 @@
         <!-- Leather pouch given by Khavatari Rosheek. Take this and hunt Kasha Bears to collect 5 of their claws. -->
         <set name="icon" val="icon.etc_pouch_gray_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -1361,7 +1266,6 @@
         <!-- Leather pouch given by Khavatari Rosheek. Hunt Kasha Blade Spiders with this and collect 5 talons. -->
         <set name="icon" val="icon.etc_pouch_gray_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -1377,7 +1281,6 @@
         <!-- Leather pouch Khavatari Rosheek gave you. Take this while hunting Scarlet Salamanders to obtain 5 of their scales. -->
         <set name="icon" val="icon.etc_pouch_gray_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -1393,7 +1296,6 @@
         <!-- Pouch that contains 5 Kasha Bear Claws. Take this to Khavatari Rosheek. -->
         <set name="icon" val="icon.etc_pouch_yellow_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -1409,7 +1311,6 @@
         <!-- Pouch that contains 5 pincers of Kasha Blade Spider Talon. Take this to Khavatari Rosheek. -->
         <set name="icon" val="icon.etc_pouch_yellow_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -1425,7 +1326,6 @@
         <!-- Pouch that contains 5 Scarlet Salamander Scales. Take this to Khavatari Rosheek. -->
         <set name="icon" val="icon.etc_pouch_yellow_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>

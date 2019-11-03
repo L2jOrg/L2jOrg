@@ -6,7 +6,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="hair"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="WOOD"/>
         <set name="weight" val="10"/>
         <set name="price" val="500000"/>
         <set name="is_tradable" val="false"/>
@@ -36,7 +35,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="hair"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="WOOD"/>
         <set name="weight" val="10"/>
         <set name="price" val="500000"/>
         <set name="is_tradable" val="false"/>
@@ -66,7 +64,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="hair"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="WOOD"/>
         <set name="weight" val="10"/>
         <set name="price" val="500000"/>
         <set name="is_tradable" val="false"/>
@@ -96,7 +93,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="hair"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="WOOD"/>
         <set name="weight" val="10"/>
         <set name="price" val="500000"/>
         <set name="is_tradable" val="false"/>
@@ -126,7 +122,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="hair"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="WOOD"/>
         <set name="weight" val="10"/>
         <set name="price" val="500000"/>
         <set name="is_tradable" val="false"/>
@@ -156,7 +151,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="hair"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="WOOD"/>
         <set name="weight" val="10"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
@@ -185,7 +179,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="hair"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="WOOD"/>
         <set name="weight" val="10"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
@@ -206,7 +199,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="hair2"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="WOOD"/>
         <set name="weight" val="10"/>
         <set name="price" val="500000"/>
         <set name="enchant_enabled" val="7"/>
@@ -219,7 +211,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="hair"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="WOOD"/>
         <set name="weight" val="10"/>
         <set name="price" val="500000"/>
         <set name="is_tradable" val="false"/>
@@ -233,7 +224,6 @@
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="30"/>
         <set name="price" val="74000"/>
         <set name="is_stackable" val="true"/>
@@ -246,7 +236,6 @@
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="30"/>
         <set name="price" val="49400"/>
         <set name="is_stackable" val="true"/>
@@ -259,7 +248,6 @@
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="30"/>
         <set name="price" val="98800"/>
         <set name="is_stackable" val="true"/>
@@ -272,7 +260,6 @@
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="30"/>
         <set name="price" val="286000"/>
         <set name="is_stackable" val="true"/>
@@ -285,7 +272,6 @@
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="30"/>
         <set name="price" val="179200"/>
         <set name="is_stackable" val="true"/>
@@ -298,7 +284,6 @@
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="30"/>
         <set name="price" val="71600"/>
         <set name="is_stackable" val="true"/>
@@ -311,7 +296,6 @@
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="30"/>
         <set name="price" val="71600"/>
         <set name="is_stackable" val="true"/>
@@ -324,7 +308,6 @@
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="30"/>
         <set name="price" val="75200"/>
         <set name="is_stackable" val="true"/>
@@ -337,7 +320,6 @@
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="30"/>
         <set name="price" val="107400"/>
         <set name="is_stackable" val="true"/>
@@ -350,7 +332,6 @@
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="30"/>
         <set name="price" val="348000"/>
         <set name="is_stackable" val="true"/>
@@ -363,7 +344,6 @@
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="30"/>
         <set name="price" val="71600"/>
         <set name="is_stackable" val="true"/>
@@ -376,7 +356,6 @@
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="30"/>
         <set name="price" val="71600"/>
         <set name="is_stackable" val="true"/>
@@ -389,7 +368,6 @@
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="30"/>
         <set name="price" val="107400"/>
         <set name="is_stackable" val="true"/>
@@ -402,7 +380,6 @@
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="30"/>
         <set name="price" val="348000"/>
         <set name="is_stackable" val="true"/>
@@ -415,7 +392,6 @@
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="30"/>
         <set name="price" val="71600"/>
         <set name="is_stackable" val="true"/>
@@ -428,7 +404,6 @@
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="30"/>
         <set name="price" val="71600"/>
         <set name="is_stackable" val="true"/>
@@ -441,7 +416,6 @@
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="30"/>
         <set name="price" val="107400"/>
         <set name="is_stackable" val="true"/>
@@ -454,7 +428,6 @@
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="30"/>
         <set name="price" val="976000"/>
         <set name="is_stackable" val="true"/>
@@ -467,7 +440,6 @@
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="30"/>
         <set name="price" val="976000"/>
         <set name="is_stackable" val="true"/>
@@ -480,7 +452,6 @@
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="30"/>
         <set name="price" val="976000"/>
         <set name="is_stackable" val="true"/>
@@ -493,7 +464,6 @@
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="30"/>
         <set name="price" val="976000"/>
         <set name="is_stackable" val="true"/>
@@ -506,7 +476,6 @@
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="30"/>
         <set name="price" val="976000"/>
         <set name="is_stackable" val="true"/>
@@ -519,7 +488,6 @@
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="30"/>
         <set name="price" val="976000"/>
         <set name="is_stackable" val="true"/>
@@ -532,7 +500,6 @@
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="30"/>
         <set name="price" val="976000"/>
         <set name="is_stackable" val="true"/>
@@ -545,7 +512,6 @@
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="30"/>
         <set name="price" val="976000"/>
         <set name="is_stackable" val="true"/>
@@ -558,7 +524,6 @@
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="30"/>
         <set name="price" val="976000"/>
         <set name="is_stackable" val="true"/>

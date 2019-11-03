@@ -4,7 +4,6 @@
         <!-- Double-click to get one of the following items: Blessed Scroll: Enchant Weapon / Improved Scroll: Enchant Weapon (D-, C-, or B-grade). -->
         <set name="icon" val="icon.etc_treasure_box_i00"/>
         <set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
-        <set name="material" val="PAPER"/>
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
         <set name="is_freightable" val="true"/>
@@ -12,7 +11,6 @@
     <item id="49701" name="Steel Bracelet Fragment" type="EtcItem">
         <!-- Used to create Steel Bracelet. Give this item to Baggins along with Bronze Bracelet, and you will receive Steel Bracelet. -->
         <set name="icon" val="icon.etc_vacualite_noglow_white_i00"/>
-        <set name="material" val="PAPER"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
@@ -20,7 +18,6 @@
     <item id="49702" name="Bracelet of Border Fragment" type="EtcItem">
         <!-- Used to create Bracelet of Border. Give this item to Baggins along with Steel Bracelet, and you will receive Bracelet of Border. Cannot be dropped. -->
         <set name="icon" val="icon.etc_vacualite_noglow_gold_i00"/>
-        <set name="material" val="PAPER"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
@@ -31,7 +28,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="underwear"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="SILVER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_depositable" val="false"/>
@@ -41,7 +37,6 @@
     <item id="49704" name="Talisman of Border’s Fragment" type="EtcItem">
         <!-- Used to create Talisman of Border. Give this item to Baggins along with a low-grade Talisman of Border, and you will receive a high-grade Talisman of Border. Cannot be dropped. -->
         <set name="icon" val="icon.etc_armor_soul_i00"/>
-        <set name="material" val="PAPER"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
@@ -50,7 +45,6 @@
         <!-- A chest containing the power of Forbidden Limit. Double-click to receive Talisman of Border's Fragment and, at a low probability, Talisman of Darkness Box. Cannot be dropped. -->
         <set name="icon" val="icon.bm_special_pendant_abradant_box"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
@@ -59,7 +53,6 @@
         <!-- Double-click to receive Talisman of Darkness for one hour. Cannot be dropped. -->
         <set name="icon" val="icon.bm_pirate_king_box"/>
         <set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
-        <set name="material" val="PAPER"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
@@ -73,7 +66,6 @@
         <set name="icon" val="icon.etc_wise_man_stone_i04"/>
         <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="GOLD"/>
         <set name="weight" val="120"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
@@ -90,7 +82,6 @@
         <set name="icon" val="icon.etc_wise_man_stone_i04"/>
         <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="GOLD"/>
         <set name="weight" val="120"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
@@ -107,7 +98,6 @@
         <set name="icon" val="icon.etc_wise_man_stone_i04"/>
         <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="GOLD"/>
         <set name="weight" val="120"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
@@ -124,7 +114,6 @@
         <set name="icon" val="icon.etc_wise_man_stone_i04"/>
         <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="GOLD"/>
         <set name="weight" val="120"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
@@ -141,7 +130,6 @@
         <set name="icon" val="icon.etc_wise_man_stone_i04"/>
         <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="GOLD"/>
         <set name="weight" val="120"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
@@ -158,7 +146,6 @@
         <set name="icon" val="icon.etc_wise_man_stone_i04"/>
         <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="GOLD"/>
         <set name="weight" val="120"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
@@ -175,7 +162,6 @@
         <set name="icon" val="icon.etc_wise_man_stone_i04"/>
         <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="GOLD"/>
         <set name="weight" val="120"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
@@ -192,7 +178,6 @@
         <set name="icon" val="icon.etc_wise_man_stone_i04"/>
         <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="GOLD"/>
         <set name="weight" val="120"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
@@ -209,7 +194,6 @@
         <set name="icon" val="icon.etc_wise_man_stone_i04"/>
         <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="GOLD"/>
         <set name="weight" val="120"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
@@ -226,7 +210,6 @@
         <set name="icon" val="icon.etc_wise_man_stone_i04"/>
         <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="GOLD"/>
         <set name="weight" val="120"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
@@ -243,7 +226,6 @@
         <set name="icon" val="icon.etc_exchange_box_i00"/>
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
@@ -258,7 +240,6 @@
         <set name="icon" val="icon.etc_exchange_box_i00"/>
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
@@ -273,7 +254,6 @@
         <set name="icon" val="icon.etc_exchange_box_i00"/>
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
@@ -288,7 +268,6 @@
         <set name="icon" val="icon.etc_exchange_box_i00"/>
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
@@ -303,7 +282,6 @@
         <set name="icon" val="icon.etc_exchange_box_i00"/>
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
@@ -318,7 +296,6 @@
         <set name="icon" val="icon.etc_exchange_box_i00"/>
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
@@ -333,7 +310,6 @@
         <set name="icon" val="icon.etc_exchange_box_i00"/>
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
@@ -348,7 +324,6 @@
         <set name="icon" val="icon.etc_exchange_box_i00"/>
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
@@ -363,7 +338,6 @@
         <set name="icon" val="icon.etc_exchange_box_i00"/>
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
@@ -378,7 +352,6 @@
         <set name="icon" val="icon.etc_exchange_box_i00"/>
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
@@ -393,7 +366,6 @@
         <set name="icon" val="icon.bm_magic_square_talisman"/>
         <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="GOLD"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_depositable" val="false"/>
@@ -408,7 +380,6 @@
         <set name="icon" val="icon.bm_magic_square_talisman"/>
         <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="GOLD"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_depositable" val="false"/>
@@ -423,7 +394,6 @@
         <set name="icon" val="icon.bm_magic_square_talisman"/>
         <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="GOLD"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_depositable" val="false"/>
@@ -438,7 +408,6 @@
         <set name="icon" val="icon.bm_magic_square_talisman"/>
         <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="GOLD"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_depositable" val="false"/>
@@ -453,7 +422,6 @@
         <set name="icon" val="icon.bm_magic_square_talisman"/>
         <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="GOLD"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_depositable" val="false"/>
@@ -468,7 +436,6 @@
         <set name="icon" val="icon.bm_magic_square_talisman"/>
         <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="GOLD"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_depositable" val="false"/>
@@ -484,7 +451,6 @@
         <set name="icon" val="icon.bm_magic_square_talisman"/>
         <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="GOLD"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_depositable" val="false"/>
@@ -501,7 +467,6 @@
         <set name="icon" val="icon.bm_magic_square_talisman"/>
         <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="GOLD"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_depositable" val="false"/>
@@ -518,7 +483,6 @@
         <set name="icon" val="icon.bm_magic_square_talisman"/>
         <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="GOLD"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_depositable" val="false"/>
@@ -535,7 +499,6 @@
         <set name="icon" val="icon.bm_magic_square_talisman"/>
         <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="GOLD"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_depositable" val="false"/>
@@ -552,7 +515,6 @@
         <set name="icon" val="icon.bm_blessed_magic_square_talisman"/>
         <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="GOLD"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_depositable" val="false"/>
@@ -568,7 +530,6 @@
         <!-- Double-click to get Blessed Talisman of Border. Cannot be dropped. -->
         <set name="icon" val="icon.bm_blessed_magic_square_talisman"/>
         <set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
-        <set name="material" val="PAPER"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
         <set name="handler" val="ItemSkills"/>
@@ -581,7 +542,6 @@
         <set name="icon" val="icon.etc_bless_spirit_bullet_white_i00"/>
         <set name="default_action" val="SOULSHOT"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="3"/>
         <set name="is_stackable" val="true"/>
         <set name="etcitem_type" val="SOULSHOT"/>
@@ -597,7 +557,6 @@
         <set name="default_action" val="SOULSHOT"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="D"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="2"/>
         <set name="is_stackable" val="true"/>
         <set name="etcitem_type" val="SOULSHOT"/>
@@ -613,7 +572,6 @@
         <set name="default_action" val="SOULSHOT"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="C"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="2"/>
         <set name="is_stackable" val="true"/>
         <set name="etcitem_type" val="SOULSHOT"/>
@@ -629,7 +587,6 @@
         <set name="default_action" val="SOULSHOT"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="B"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="1"/>
         <set name="is_stackable" val="true"/>
         <set name="etcitem_type" val="SOULSHOT"/>
@@ -645,7 +602,6 @@
         <set name="default_action" val="SOULSHOT"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="A"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="1"/>
         <set name="is_stackable" val="true"/>
         <set name="etcitem_type" val="SOULSHOT"/>
@@ -660,7 +616,6 @@
         <set name="icon" val="icon.etc_bless_spirit_bullet_white_i00"/>
         <set name="default_action" val="SOULSHOT"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="commissionItemType" val="SOULSHOT"/>
         <set name="etcitem_type" val="SOULSHOT"/>
         <set name="is_tradable" val="false"/>
@@ -679,7 +634,6 @@
         <set name="default_action" val="SOULSHOT"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="D"/>
-        <set name="material" val="PAPER"/>
         <set name="commissionItemType" val="SOULSHOT"/>
         <set name="etcitem_type" val="SOULSHOT"/>
         <set name="is_tradable" val="false"/>
@@ -698,7 +652,6 @@
         <set name="default_action" val="SOULSHOT"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="C"/>
-        <set name="material" val="PAPER"/>
         <set name="commissionItemType" val="SOULSHOT"/>
         <set name="etcitem_type" val="SOULSHOT"/>
         <set name="is_tradable" val="false"/>
@@ -717,7 +670,6 @@
         <set name="default_action" val="SOULSHOT"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="B"/>
-        <set name="material" val="PAPER"/>
         <set name="commissionItemType" val="SOULSHOT"/>
         <set name="etcitem_type" val="SOULSHOT"/>
         <set name="is_tradable" val="false"/>
@@ -736,7 +688,6 @@
         <set name="default_action" val="SOULSHOT"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="A"/>
-        <set name="material" val="PAPER"/>
         <set name="commissionItemType" val="SOULSHOT"/>
         <set name="etcitem_type" val="SOULSHOT"/>
         <set name="is_tradable" val="false"/>
@@ -755,7 +706,6 @@
         <set name="default_action" val="SPIRITSHOT"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="B"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_depositable" val="false"/>
@@ -772,7 +722,6 @@
         <set name="default_action" val="SPIRITSHOT"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="A"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_depositable" val="false"/>
@@ -789,7 +738,6 @@
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="30"/>
         <set name="is_stackable" val="true"/>
         <set name="recipe_id" val="4000"/>
@@ -801,7 +749,6 @@
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="30"/>
         <set name="is_stackable" val="true"/>
         <set name="recipe_id" val="4001"/>
@@ -813,7 +760,6 @@
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="30"/>
         <set name="is_stackable" val="true"/>
         <set name="recipe_id" val="4002"/>
@@ -825,7 +771,6 @@
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="30"/>
         <set name="is_stackable" val="true"/>
         <set name="recipe_id" val="4003"/>
@@ -835,7 +780,6 @@
         <!-- Double-click to receive one of the following items: Talisman of Baium, Baium's Soul, Talisman of Insolence I, Talisman of Insolence II, Energy of Insolence, Talisman Crystal, or Elemental Stone. Cannot be dropped. -->
         <set name="icon" val="icon.etc_treasure_box_i07"/>
         <set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
-        <set name="material" val="PAPER"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
@@ -847,14 +791,12 @@
     <item id="49756" name="Cloth Piece" type="EtcItem">
         <!-- Required to remove the seal from A-grade Armor. -->
         <set name="icon" val="icon.etc_piece_shirt_green_i00"/>
-        <set name="material" val="PAPER"/>
         <set name="is_stackable" val="true"/>
     </item>
     <item id="49757" name="Sayha's Holy Water" type="EtcItem">
         <!-- Sayha Grace points +20 thousand. Can be used no more than 5 times per week. Reuse Time is 60 minutes. Cannot be exchanged, dropped or sold in a private store. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.etc_fruit_juice_glass_bottle_i09"/>
         <set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="120"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
@@ -865,13 +807,11 @@
     <item id="49758" name="Blood Crystal" type="EtcItem">
         <!-- Consumed when using Clan skills. -->
         <set name="icon" val="icon.etc_fire_crystal_1_i00"/>
-        <set name="material" val="PAPER"/>
         <set name="is_stackable" val="true"/>
     </item>
     <item id="49759" name="Celestial Shard" type="EtcItem">
         <!-- The item required to enter Heavenly Rift. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.etc_unholy_crystal_1_i00"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_depositable" val="false"/>
@@ -882,7 +822,6 @@
         <!-- Double-click to receive an A-grade Armor. -->
         <set name="icon" val="icon.etc_box_of_adventure_3_i00"/>
         <set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
-        <set name="material" val="PAPER"/>
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
@@ -890,7 +829,6 @@
         <!-- Double-click to receive an A-grade Ornament. -->
         <set name="icon" val="icon.etc_box_of_adventure_2_i00"/>
         <set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
-        <set name="material" val="PAPER"/>
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
         <set name="handler" val="ItemSkills"/>
@@ -902,7 +840,6 @@
         <!-- Double-click to receive one of A-grade Armor Ingredients. -->
         <set name="icon" val="icon.etc_box_of_adventure_3_i00"/>
         <set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
-        <set name="material" val="PAPER"/>
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
@@ -910,7 +847,6 @@
         <!-- Double-click to receive one of A-grade Ornament Ingredients. -->
         <set name="icon" val="icon.etc_box_of_adventure_2_i00"/>
         <set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
-        <set name="material" val="PAPER"/>
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
@@ -918,7 +854,6 @@
         <!-- SP +20000. -->
         <set name="icon" val="icon.etc_sp_scroll3_i00"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="30"/>
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
@@ -927,7 +862,6 @@
         <!-- HP / MP +5%, XP / SP gain +30%, activates Paralysis / Mental Attack Resistance. Duration: 60 minutes. Reuse Time: 30 minutes. <Note> When used simultaneously with Angel Cat's Blessing, effects do not stack. -->
         <set name="icon" val="icon.etc_aidcharm_cancel_valbreath_i00"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="30"/>
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
@@ -936,13 +870,11 @@
         <!-- Double-click to get one of the following items: Celestial Shard or Broken Celestial Shard. -->
         <set name="icon" val="icon.etc_magical_stone_i00"/>
         <set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
-        <set name="material" val="PAPER"/>
         <set name="is_stackable" val="true"/>
     </item>
     <item id="49767" name="Broken Celestial Shard" type="EtcItem">
         <!-- Broken Celestial Shard. Take it to the Dimensional Vortex at the 1st floor of the Tower of Insolence. -->
         <set name="icon" val="icon.etc_broken_crystal_silver_i00"/>
-        <set name="material" val="PAPER"/>
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
@@ -950,7 +882,6 @@
         <!-- Activates Resistance to Paralysis / Mental Attacks for 20 minutes. -->
         <set name="icon" val="icon.scroll_of_verification_i08"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="30"/>
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
@@ -959,7 +890,6 @@
         <!-- Double-click to get one of the following scrolls: Solid Scroll: Enchant Weapon (C)/(B), Improved Scroll: Enchant Weapon (C)/(B), or Normal Scroll: Enchant Weapon (C)/(B). Cannot be sold in the grocery store. -->
         <set name="icon" val="icon.etc_treasure_box_i00"/>
         <set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
-        <set name="material" val="PAPER"/>
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
@@ -967,7 +897,6 @@
         <!-- Sayha Grace points +35 thousand (1 slot). Reuse Time is 60 minutes. Cannot be sold in the grocery store. -->
         <set name="icon" val="icon.etc_holy_water_i00"/>
         <set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
-        <set name="material" val="PAPER"/>
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
@@ -975,7 +904,6 @@
         <!-- Double-click to receive Scroll Box: Emperor Baium's Enchant. In addition, with a certain probability, you might get Sayha's Energy (5 pcs.). Cannot be sold in the grocery store. -->
         <set name="icon" val="icon.etc_bm_jewelbox_shhadai"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
@@ -983,7 +911,6 @@
         <!-- Activates the following effects: Might, Shield, Focus, Haste, Acumen, Empower, Wind Walk, Death Whisper, and Vampiric Rage. Duration: 20 minutes. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse and transferred between characters on one account. -->
         <set name="icon" val="icon.bm_magmeld"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="120"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
@@ -996,7 +923,6 @@
         <!-- P./M. Atk. +7%, P./M. Def. +10%, Max. HP/CP/MP +15%, HP/MP Recovery +20%. At a certain chance converts 3% of the damage dealt into HP. Damage dealt in PvP +5%. Duration is 20 minutes. Reuse Time is 1 minute. The effect persists through death. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a warehouse. -->
         <set name="icon" val="icon.etc_codran_i09"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_depositable" val="false"/>
@@ -1013,7 +939,6 @@
         <!-- P./M. Atk. +7%, P./M. Def. +10%, Max. HP/CP/MP +15%, HP/MP Recovery +20%. At a certain chance converts 3% of the damage dealt into HP. Damage received in PvP -5%. Duration is +20 minutes. Reuse Time is 1 minute. The effect persists through death. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a warehouse. -->
         <set name="icon" val="icon.etc_codran_i09"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_depositable" val="false"/>
@@ -1029,14 +954,12 @@
     <item id="49775" name="Red Spinel" additionalName="Event" type="EtcItem">
         <!-- A reward item. You can receive it for helping Grocer Pink and use it to exchange for rare items with Pink. -->
         <set name="icon" val="icon.ensoul_big_pp"/>
-        <set name="material" val="PAPER"/>
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
     <item id="49776" name="Green Spinel" additionalName="Event" type="EtcItem">
         <!-- A reward item. You can receive it for helping Grocer Pink and use it to exchange for rare items with Pink. -->
         <set name="icon" val="icon.ensoul_big_ep"/>
-        <set name="material" val="PAPER"/>
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
@@ -1044,7 +967,6 @@
         <!-- XP +1,000. Cannot be exchanged, dropped or sold in a private store. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.etc_recall_exp_scroll"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="30"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
@@ -1056,7 +978,6 @@
         <!-- XP +10,000. Cannot be exchanged, dropped or sold in a private store. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.etc_recall_exp_scroll"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="30"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
@@ -1068,7 +989,6 @@
         <!-- XP +100,000. Cannot be exchanged, dropped or sold in a private store. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.etc_recall_exp_scroll"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="30"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
@@ -1080,7 +1000,6 @@
         <!-- XP +500,000. Cannot be exchanged, dropped or sold in a private store. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.etc_recall_exp_scroll"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="30"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
@@ -1092,7 +1011,6 @@
         <!-- XP +1,000,000. Cannot be exchanged, dropped or sold in a private store. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.etc_recall_exp_scroll"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="30"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
@@ -1105,7 +1023,6 @@
         <set name="icon" val="icon.etc_ev_kalie_treasure_box"/>
         <set name="default_action" val="SKILL_REDUCE"/>
         <set name="reuse_delay" val="86400000"/> <!-- 1 Day -->
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_depositable" val="false"/>
@@ -1128,7 +1045,6 @@
         <set name="icon" val="icon.ev_balthus_token"/>
         <set name="default_action" val="SKILL_REDUCE"/>
         <set name="reuse_delay" val="60000"/> <!-- 1 minute -->
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_depositable" val="false"/>
@@ -1144,7 +1060,6 @@
         <!-- Double-click to receive an A-grade Weapon. -->
         <set name="icon" val="icon.etc_treasure_box_i00"/>
         <set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
-        <set name="material" val="PAPER"/>
         <set name="is_stackable" val="true"/>
         <set name="handler" val="ItemSkills"/>
         <skills>
@@ -1155,7 +1070,6 @@
         <!-- Double-click to receive an A-grade Armor. -->
         <set name="icon" val="icon.etc_treasure_box_i00"/>
         <set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
-        <set name="material" val="PAPER"/>
         <set name="is_stackable" val="true"/>
         <set name="handler" val="ItemSkills"/>
         <skills>
@@ -1167,7 +1081,6 @@
         <set name="icon" val="icon.etc_treasure_box_i03"/>
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="is_stackable" val="true"/>
     </item>
     <item id="49788" name="Solid Scroll: Enchant (A-grade) Large Box" type="EtcItem">
@@ -1175,14 +1088,12 @@
         <set name="icon" val="icon.etc_treasure_box_i03"/>
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="is_stackable" val="true"/>
     </item>
     <item id="49789" name="+8 Enchanted Weapon Supply Box (B-grade)" type="EtcItem">
         <!-- Double-click to receive a +8 B-grade Weapon. -->
         <set name="icon" val="icon.etc_jewel_box_i00"/>
         <set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
-        <set name="material" val="PAPER"/>
         <set name="is_stackable" val="true"/>
         <set name="handler" val="ItemSkills"/>
         <skills>
@@ -1193,7 +1104,6 @@
         <!-- Double-click to receive a +16 C-grade Weapon. -->
         <set name="icon" val="icon.etc_treasure_box_i06"/>
         <set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
-        <set name="material" val="PAPER"/>
         <set name="is_stackable" val="true"/>
         <set name="handler" val="ItemSkills"/>
         <skills>
@@ -1206,7 +1116,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="underwear"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="SILVER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_depositable" val="false"/>
@@ -1219,7 +1128,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="underwear"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="SILVER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_depositable" val="false"/>
@@ -1232,7 +1140,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="underwear"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="SILVER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_depositable" val="false"/>
@@ -1245,7 +1152,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="underwear"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="SILVER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_depositable" val="false"/>
@@ -1258,7 +1164,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="underwear"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="SILVER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_depositable" val="false"/>
@@ -1271,7 +1176,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="underwear"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="SILVER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_depositable" val="false"/>
@@ -1282,7 +1186,6 @@
         <!-- XP gain +37 million, SP gain +1.1 million (standard for Lv. 50 characters) Intended for Lv. 45 and higher. Cannot be exchanged, dropped, or sold in a private store. Can be transferred between characters on the same account using Dimensional Merchant. Can be stored in a private warehouse. The item will be removed after the event is over. -->
         <set name="icon" val="icon.etc_ev_draco_gift_box"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_depositable" val="false"/>
@@ -1297,7 +1200,6 @@
         <set name="weapon_type" val="DUAL"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="weight" val="2530"/>
         <set name="soulshots" val="1"/>
         <set name="spiritshots" val="1"/>
@@ -1319,7 +1221,6 @@
         <!-- Provides 5 million XP and 16 thousand SP. Intended for Lv. 20 and higher. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.card_hidden"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_depositable" val="false"/>

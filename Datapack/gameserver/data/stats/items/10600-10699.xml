@@ -4,7 +4,6 @@
         <!-- Doesn't exist in client. -->
         <set name="immediate_effect" val="true"/>
         <set name="ex_immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -18,7 +17,6 @@
     <item id="10649" name="Feather of Blessing" type="EtcItem">
         <!-- Dimensional item.  Blessed feather that allows to resurrect right in the place of death. -->
         <set name="icon" val="icon.blessed_feather_i00"/>
-        <set name="material" val="LIQUID"/>
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
         <set name="is_clan_depositable" val="false"/>
@@ -32,7 +30,6 @@
         <set name="icon" val="icon.etc_scroll_of_return_i00"/>
         <set name="default_action" val="SKILL_REDUCE"/>
         <set name="etcitem_type" val="SCROLL"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="120"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>

@@ -4,7 +4,6 @@
         <!-- Spellbook needed to learn Restore Life. Used by Bishops. Required level: 44 -->
         <set name="icon" val="icon.etc_spell_books_assistance_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="120"/>
         <set name="price" val="3850"/>
         <set name="commissionItemType" val="SPELLBOOK"/>
@@ -14,7 +13,6 @@
         <!-- Spellbook needed to learn Stun Resistance. Used by Elven Elders. Required level: 40 -->
         <set name="icon" val="icon.etc_spell_books_white_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="120"/>
         <set name="price" val="3200"/>
         <set name="commissionItemType" val="SPELLBOOK"/>
@@ -28,7 +26,6 @@
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="commissionItemType" val="ONE_HAND_SWORD"/>
 
         <set name="is_dropable" val="false"/>
@@ -45,7 +42,6 @@
         <!-- Spellbook needed to learn Life Leech. Used by Shillien Knights. Required level: 40 -->
         <set name="icon" val="icon.etc_spell_books_defighter_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="120"/>
         <set name="price" val="3200"/>
         <set name="commissionItemType" val="SPELLBOOK"/>
@@ -55,7 +51,6 @@
         <!-- Amulet required for the Pa'agrio's Tact spell. Used by Overlords. Required level: 40 -->
         <set name="icon" val="icon.etc_orcish_talisman_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="120"/>
         <set name="price" val="3200"/>
         <set name="commissionItemType" val="SPELLBOOK"/>
@@ -65,7 +60,6 @@
         <!-- Amulet required for the Pa'agrio's Rage spell. Used by Overlords. Required level: 44 -->
         <set name="icon" val="icon.etc_orcish_talisman_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="120"/>
         <set name="price" val="100000"/>
         <set name="commissionItemType" val="SPELLBOOK"/>
@@ -75,7 +69,6 @@
         <!-- Spellbook needed to learn Transfer Pain. Used by Necromancers, Warlocks, Elemental Summoners and Phantom Summoners. Required level: 40 -->
         <set name="icon" val="icon.etc_spell_books_summon_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="120"/>
         <set name="price" val="3200"/>
         <set name="commissionItemType" val="SPELLBOOK"/>
@@ -85,7 +78,6 @@
         <!-- Spellbook needed to learn Mana Regeneration. Used by Spellsingers. Required level: 40 -->
         <set name="icon" val="icon.etc_spell_books_assistance_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="120"/>
         <set name="price" val="3200"/>
         <set name="commissionItemType" val="SPELLBOOK"/>
@@ -95,7 +87,6 @@
         <!-- Spellbook needed to learn Curse Gloom. Used by Necromancers. Required level: 44 -->
         <set name="icon" val="icon.etc_spell_books_black_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="120"/>
         <set name="price" val="3850"/>
         <set name="commissionItemType" val="SPELLBOOK"/>
@@ -105,7 +96,6 @@
         <!-- Used only during the Change of Heart event. Complete a heart and take it to Puss the Cat to claim your prize. -->
         <set name="icon" val="icon.etc_heart_i01"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
         <set name="is_stackable" val="true"/>
     </item>
@@ -113,7 +103,6 @@
         <!-- Used only during the Change of Heart event. Complete a heart and take it to Puss the Cat to claim your prize. -->
         <set name="icon" val="icon.etc_heart_i02"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
         <set name="is_stackable" val="true"/>
     </item>
@@ -121,7 +110,6 @@
         <!-- Used only during the Change of Heart event. Complete a heart and take it to Puss the Cat to claim your prize. -->
         <set name="icon" val="icon.etc_heart_i03"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
         <set name="is_stackable" val="true"/>
     </item>
@@ -129,7 +117,6 @@
         <!-- Used only during the Change of Heart event. Complete a heart and take it to Puss the Cat to claim your prize. -->
         <set name="icon" val="icon.etc_heart_i04"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
         <set name="is_stackable" val="true"/>
     </item>
@@ -137,7 +124,6 @@
         <!-- Used only during the Change of Heart event. Complete a heart and take it to Puss the Cat to claim your prize. -->
         <set name="icon" val="icon.etc_heart_i05"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
         <set name="is_stackable" val="true"/>
     </item>
@@ -145,7 +131,6 @@
         <!-- Used only during the Change of Heart event. Complete a heart and take it to Puss the Cat to claim your prize. -->
         <set name="icon" val="icon.etc_heart_i06"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
         <set name="is_stackable" val="true"/>
     </item>
@@ -153,7 +138,6 @@
         <!-- Used only during the Change of Heart event. Complete a heart and take it to Puss the Cat to claim your prize. -->
         <set name="icon" val="icon.etc_heart_i07"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
         <set name="is_stackable" val="true"/>
     </item>
@@ -161,7 +145,6 @@
         <!-- Used only during the Change of Heart event. Complete a heart and take it to Puss the Cat to claim your prize. -->
         <set name="icon" val="icon.etc_heart_i08"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
         <set name="is_stackable" val="true"/>
     </item>
@@ -169,7 +152,6 @@
         <!-- Used only during the Change of Heart event. Complete a heart and take it to Puss the Cat to claim your prize. -->
         <set name="icon" val="icon.etc_heart_i09"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
         <set name="is_stackable" val="true"/>
     </item>
@@ -178,7 +160,6 @@
         <set name="icon" val="icon.etc_scroll_white_i00"/>
         <set name="default_action" val="SKILL_REDUCE"/>
         <set name="etcitem_type" val="SCROLL"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="120"/>
         <set name="is_stackable" val="true"/>
         <set name="is_oly_restricted" val="true"/>
@@ -197,7 +178,6 @@
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="BRONZE"/>
         <set name="weight" val="1530"/>
         <set name="soulshots" val="1"/>
         <set name="spiritshots" val="1"/>
@@ -228,7 +208,6 @@
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="weight" val="1110"/>
         <set name="soulshots" val="1"/>
         <set name="spiritshots" val="1"/>
@@ -260,7 +239,6 @@
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="weight" val="1850"/>
         <set name="soulshots" val="1"/>
         <set name="spiritshots" val="1"/>
@@ -290,7 +268,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="lhand"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="BONE"/>
         <set name="weight" val="1380"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
@@ -314,7 +291,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="lhand"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="BONE"/>
         <set name="weight" val="1380"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
@@ -339,7 +315,6 @@
         <set name="armor_type" val="HEAVY"/>
         <set name="bodypart" val="chest"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="BRONZE"/>
         <set name="weight" val="8920"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
@@ -362,7 +337,6 @@
         <set name="armor_type" val="HEAVY"/>
         <set name="bodypart" val="legs"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="BRONZE"/>
         <set name="weight" val="3960"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
@@ -384,7 +358,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="gloves"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LEATHER"/>
         <set name="weight" val="650"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
@@ -406,7 +379,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="feet"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="CLOTH"/>
         <set name="weight" val="1310"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
@@ -429,7 +401,6 @@
         <set name="armor_type" val="HEAVY"/>
         <set name="bodypart" val="chest"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="BRONZE"/>
         <set name="weight" val="8920"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
@@ -452,7 +423,6 @@
         <set name="armor_type" val="HEAVY"/>
         <set name="bodypart" val="legs"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="BRONZE"/>
         <set name="weight" val="3960"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
@@ -474,7 +444,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="gloves"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LEATHER"/>
         <set name="weight" val="650"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
@@ -496,7 +465,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="feet"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="CLOTH"/>
         <set name="weight" val="1310"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
@@ -517,7 +485,6 @@
         <set name="icon" val="icon.etc_dice_a_i00"/>
         <set name="default_action" val="DICE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="price" val="3850"/>
         <set name="reuse_delay" val="5000"/>
         <set name="is_dropable" val="false"/>
@@ -534,7 +501,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="1148"/>
         <set name="crystal_type" val="C"/>
-        <set name="material" val="FINE_STEEL"/>
         <set name="weight" val="1490"/>
         <set name="price" val="2870000"/>
         <set name="soulshots" val="1"/>
@@ -556,7 +522,6 @@
         <!-- Cargo that Trader Arodin needs to send to the Dark Elves. Find all 20 of them and take them to Trader Tyra. -->
         <set name="icon" val="icon.etc_artisans_frame_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -572,7 +537,6 @@
         <!-- Note from Trader Tyra. Take it to Trader Arodin in Gludin Village. -->
         <set name="icon" val="icon.etc_piece_of_paper_gray_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -588,7 +552,6 @@
         <!-- First piece of a ranger's report. Find all 4 pieces and take them to Guard Alvah. -->
         <set name="icon" val="icon.etc_piece_of_report_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -604,7 +567,6 @@
         <!-- Second piece of a ranger's report. Find all 4 pieces and take them to Guard Alvah. -->
         <set name="icon" val="icon.etc_piece_of_report_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -620,7 +582,6 @@
         <!-- Third piece of a ranger's report. Find all 4 pieces and take them to Guard Alvah. -->
         <set name="icon" val="icon.etc_piece_of_report_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -636,7 +597,6 @@
         <!-- Fourth piece of a ranger's report. Find all 4 pieces and take them to Guard Alvah. -->
         <set name="icon" val="icon.etc_piece_of_report_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -652,7 +612,6 @@
         <!-- The contract that was carried by an Ol Mahum General. It is engraved with the Mark of the Dwarves. Take it to Guard Alvah. -->
         <set name="icon" val="icon.etc_paper_red_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -668,7 +627,6 @@
         <!-- Operation order that was carried by an Ol Mahum General. Take it to Guard Alvah. -->
         <set name="icon" val="icon.etc_roll_of_paper_red_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -684,7 +642,6 @@
         <!-- Certificate that verifies one's membership to the Silver Scale Guild. -->
         <set name="icon" val="icon.etc_crest_yellow_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -700,7 +657,6 @@
         <!-- The war supplies that the Dwarven trader Rolento promised to send to Turek orcs. First, show it to Guard Alvah. -->
         <set name="icon" val="icon.etc_jewel_box_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="WOOD"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -716,7 +672,6 @@
         <!-- Severed head of an Ol Mahum Captain. Collect 30 of them and take them to Turek Chief Burai. -->
         <set name="icon" val="icon.etc_skull_red_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LEATHER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -732,7 +687,6 @@
         <!-- Jade gemstone from the Enchanted Valley. Collect them and take them to Bentley of Hunter's Village. -->
         <set name="icon" val="icon.etc_gem_green_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="CRYSTAL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -748,7 +702,6 @@
         <!-- Statue of a goddess from an old empire that has been discovered in the cemetery. Take it to Priestess Flownia of Town of Aden. -->
         <set name="icon" val="icon.etc_statue_of_einhasad_gold_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="BONE"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -764,7 +717,6 @@
         <!-- Statue created by the ancient sculptor Berona. Take it to Trader Galibredo of the Town of Oren. -->
         <set name="icon" val="icon.etc_holy_statue_silver_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="BONE"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -780,7 +732,6 @@
         <!-- Collect 50 eyes of the Shadow and take them to Warehouse Keeper Sorint. -->
         <set name="icon" val="icon.etc_horn_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="CRYSTAL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -796,7 +747,6 @@
         <!-- The certificate that allows one to participate in a Battle Royal. This game is played by grade 1 members of the Coin Collectors Club. -->
         <set name="icon" val="icon.etc_paper_white_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -812,7 +762,6 @@
         <!-- The cargo boxes that have been robbed from the wagon of the Trade Guild. Collect 30 of them and take them to Guard Weisz. -->
         <set name="icon" val="icon.etc_pouch_gray_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -828,7 +777,6 @@
         <!-- The Crucifix of the goddess of Einhasad. This article was left by Priestess Agnes after her death. Take it along with Agnes' Rosary to Priest Adonius. -->
         <set name="icon" val="icon.etc_statue_of_einhasad_bronze_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -844,7 +792,6 @@
         <!-- Rosary used while praying. It was left by Priestess Agnes after her death. Take it along with the Crucifix of the goddess of Einhasad to Priest Adonius. -->
         <set name="icon" val="icon.etc_evil_necklace_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="WOOD"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -860,7 +807,6 @@
         <!-- Black totem that exudes an evil aura. Take it to High Priestess Levian. -->
         <set name="icon" val="icon.etc_totem_black_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="WOOD"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -876,7 +822,6 @@
         <!-- The pelts obtained by hunting bears. Collect 20 of them and take them to Grocer Pano of Floran Village. -->
         <set name="icon" val="icon.etc_leather_brown_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LEATHER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -892,7 +837,6 @@
         <!-- Beheaded head of an Enku Orc. Collect 100 of them and take them to Orc Lady Jennifer. -->
         <set name="icon" val="icon.etc_skull_red_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="BONE"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -908,7 +852,6 @@
         <!-- Bouquet made by tying 100 orc heads together. On behalf of Jennifer who is shy, deliver it to High Prefect Drikus. -->
         <set name="icon" val="icon.etc_flower_bouquet_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -924,7 +867,6 @@
         <!-- Bouquet made by tying 100 orc heads together. On behalf of Jennifer who is shy, deliver it to Priest Manuel. -->
         <set name="icon" val="icon.etc_flower_bouquet_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -940,7 +882,6 @@
         <!-- Bouquet made by tying 100 orc heads together. On behalf of Jennifer who is shy, deliver it to Vuku Chief Driko. -->
         <set name="icon" val="icon.etc_flower_bouquet_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -956,7 +897,6 @@
         <!-- Bouquet made by tying 100 orc heads together. On behalf of Jennifer who is shy, deliver it to Seer Somak. -->
         <set name="icon" val="icon.etc_flower_bouquet_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -972,7 +912,6 @@
         <!-- Bouquet made by tying 100 orc heads together. On behalf of Jennifer who is shy, deliver it to Prefect Dowki. -->
         <set name="icon" val="icon.etc_flower_bouquet_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -988,7 +927,6 @@
         <!-- Bouquet made by tying 100 orc heads together. On behalf of Jennifer who is shy, deliver it to Watchman Endrigo. -->
         <set name="icon" val="icon.etc_flower_bouquet_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -1004,7 +942,6 @@
         <!-- Bouquet made by tying 100 orc heads together. On behalf of Jennifer who is shy, deliver it to Captain Lucas. -->
         <set name="icon" val="icon.etc_flower_bouquet_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -1020,7 +957,6 @@
         <!-- The box that a man who is smitten by Orc Lady Jennifer asked this to be delivered to her. What do you think is in the box...? -->
         <set name="icon" val="icon.etc_jewel_box_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -1036,7 +972,6 @@
         <!-- The articles of dead soldiers who were sent as an expeditionary force 1,000 years ago. These articles have been collected by hunting cave servants. Take them to Antharas Watchman Gilmore. -->
         <set name="icon" val="icon.etc_squares_gray_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -1052,7 +987,6 @@
         <!-- Article left by a dead soldier. His descendent Sir Kristof Rodemai is living in Town of Giran. Take it to him. -->
         <set name="icon" val="icon.etc_old_key_i03"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -1068,7 +1002,6 @@
         <!-- Article left by a dead soldier. His descendant Duelist Kaien is living in the Town of Oren. Take it to him. -->
         <set name="icon" val="icon.etc_hilt_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -1084,7 +1017,6 @@
         <!-- Article left by a dead soldier. His descendent, High Prefect Garvarentz, lives in Hunters Village. Take it to him. -->
         <set name="icon" val="icon.etc_totem_necklace_black_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="BONE"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -1100,7 +1032,6 @@
         <!-- Article left by a dead soldier. Take it to High Priest Orven of Einhasad Temple in Town of Aden where the dead soldier used to be stationed. -->
         <set name="icon" val="icon.etc_magic_coin_silver_i01"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -1116,7 +1047,6 @@
         <!-- The arm bone of a victim who has been eaten by a Crokian. Collect the five types of bones and take them to Xenovia. -->
         <set name="icon" val="icon.etc_piece_bone_black_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="BONE"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -1132,7 +1062,6 @@
         <!-- The thigh bone of a victim who has been eaten by a Crokian. Collect the five types of bones and take them to Xenovia. -->
         <set name="icon" val="icon.etc_piece_bone_white_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="BONE"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -1148,7 +1077,6 @@
         <!-- The skull of a victim who has been eaten alive by a Crokian. Collect the five types of bones and take them to Xenovia. -->
         <set name="icon" val="icon.etc_skull_white_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="BONE"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -1164,7 +1092,6 @@
         <!-- The rib bone of a victim who has been eaten by a Crokian. Collect the five types of bones and take them to Xenovia. -->
         <set name="icon" val="icon.etc_rib_white_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="BONE"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -1180,7 +1107,6 @@
         <!-- The spine of a victim who has been eaten by a Crokian. Collect the five types of bones and take them to Xenovia. -->
         <set name="icon" val="icon.etc_piece_bone_red_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="BONE"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -1196,7 +1122,6 @@
         <!-- Urn that contains the bones of all the victims. Ask Mad Doctor Orpheus to resurrect the victims. -->
         <set name="icon" val="icon.etc_oil_pot_black_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="BONE"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -1212,7 +1137,6 @@
         <!-- Useless bone pieces obtained after hunting Crokians. If you take them to Orpheus, perhaps something good will happen...? -->
         <set name="icon" val="icon.etc_mithril_ore_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="BONE"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -1228,7 +1152,6 @@
         <!-- The magic powder bought from Magister Xenovia. Throw it along with the victims' bones into a the Psychic Medium's Urn. -->
         <set name="icon" val="icon.etc_powder_black_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="BONE"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -1244,7 +1167,6 @@
         <!-- Sack containing victim's soul. Urn was possessed by the victim's soul. Take it to Locksmith Dorothy. -->
         <set name="icon" val="icon.etc_pouch_brown_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="BONE"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -1260,7 +1182,6 @@
         <!-- What are you waiting for? You promised to help me! Release me from this curse immediately! I want to turn back to normal as soon as possible!!! -->
         <set name="icon" val="icon.etc_q_frog_green_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="CRYSTAL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -1276,7 +1197,6 @@
         <!-- Powder made by grinding dried flies. Use it when you fail in your attempt to transform a frog. -->
         <set name="icon" val="icon.etc_powder_gray_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -1292,7 +1212,6 @@
         <!-- The latest model of calculator. Take it to Blacksmith Brunon. -->
         <set name="icon" val="icon.etc_calculator_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="CRYSTAL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -1308,7 +1227,6 @@
         <!-- Crystal obtained by slaying a gemstone beast. Collect 10 of these and take them to Blacksmith Silvera. -->
         <set name="icon" val="icon.etc_crystal_ball_silver_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="CRYSTAL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -1324,7 +1242,6 @@
         <!-- The Lesser Giant's Powerstone that has been extracted from the corpse of a Giant. Take it to Magister Hanellin. -->
         <set name="icon" val="icon.etc_crystal_ball_silver_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -1340,7 +1257,6 @@
         <!-- A letter that Hanellin entrusted to you. Deliver it to Magister Harne at the Dark Elf Guild in the Town of Gludio and receive the next instructions. -->
         <set name="icon" val="icon.etc_crystal_ball_silver_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -1356,7 +1272,6 @@
         <!-- Give this letter to Claudia Athebaldt in Aden. -->
         <set name="icon" val="icon.etc_piece_of_paper_gray_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -1372,7 +1287,6 @@
         <!-- Letter that Hanellin entrusted you with. Take it to Martien of the Town of Giran and receive your next assignment from him. -->
         <set name="icon" val="icon.etc_piece_of_paper_gray_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -1388,7 +1302,6 @@
         <!-- The key that was found upon the corpse of the guardian of the sacred ark. Use this key to open the sacred ark and retrieve the sacred object. -->
         <set name="icon" val="icon.etc_piece_of_paper_gray_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -1404,7 +1317,6 @@
         <!-- The key you got after killing Elberoth, the Ark Guardian. Use it to open the ark and obtain the sacred item. -->
         <set name="icon" val="icon.etc_old_key_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -1420,7 +1332,6 @@
         <!-- A reward for eliminating enemies in the Platinum Tribe. Collect 100 pcs. and bring them to Magister Hanellin. -->
         <set name="icon" val="icon.etc_piece_of_cloth_white_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="CLOTH"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -1436,7 +1347,6 @@
         <!-- A cloth soaked in the blood of Angels and Platinum Tribe. According to Hanellin, you must wrap it around your body to challenge Baium. -->
         <set name="icon" val="icon.etc_piece_of_cloth_red_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="CLOTH"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -1452,7 +1362,6 @@
         <!-- The order states that you should hunt Tasaba Lizardmen and Tasaba Lizardman Shaman and bring back their fangs as proof. -->
         <set name="icon" val="icon.etc_paper_white_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -1468,7 +1377,6 @@
         <!-- The fangs that have been collected as proofs that Tasaba Lizardmen and Tasaba Lizardman Shaman have been hunted. -->
         <set name="icon" val="icon.etc_molar_white_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="BONE"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -1484,7 +1392,6 @@
         <!-- This seems to be the cargo that was stolen from Iason Heine's wagon by Tasaba Lizardmen. -->
         <set name="icon" val="icon.etc_wine_barrel_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="WOOD"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>

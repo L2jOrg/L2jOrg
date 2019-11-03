@@ -131,7 +131,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="lbracelet"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="SILVER"/>
         <set name="weight" val="30"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
@@ -145,7 +144,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="lbracelet"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="SILVER"/>
         <set name="weight" val="30"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
@@ -441,7 +439,6 @@
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="C"/>
-        <set name="material" val="FINE_STEEL"/>
         <set name="weight" val="1"/>
         <set name="soulshots" val="1"/>
         <set name="spiritshots" val="1"/>
@@ -467,7 +464,6 @@
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="C"/>
-        <set name="material" val="WOOD"/>
         <set name="weight" val="1"/>
         <set name="soulshots" val="1"/>
         <set name="spiritshots" val="1"/>
@@ -495,7 +491,6 @@
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="C"/>
-        <set name="material" val="HORN"/>
         <set name="weight" val="1"/>
         <set name="soulshots" val="4"/>
         <set name="spiritshots" val="1"/>
@@ -523,7 +518,6 @@
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="C"/>
-        <set name="material" val="FINE_STEEL"/>
         <set name="weight" val="1"/>
         <set name="soulshots" val="1"/>
         <set name="spiritshots" val="1"/>
@@ -550,7 +544,6 @@
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="C"/>
-        <set name="material" val="BRONZE"/>
         <set name="weight" val="1"/>
         <set name="soulshots" val="1"/>
         <set name="spiritshots" val="1"/>
@@ -579,7 +572,6 @@
         <set name="bodypart" val="head"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="C"/>
-        <set name="material" val="LEATHER"/>
         <set name="weight" val="600"/>
         <set name="enchant_enabled" val="1"/>
         <set name="is_tradable" val="false"/>
@@ -598,7 +590,6 @@
         <set name="bodypart" val="onepiece"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="C"/>
-        <set name="material" val="FINE_STEEL"/>
         <set name="weight" val="10480"/>
         <set name="enchant_enabled" val="1"/>
         <set name="is_tradable" val="false"/>
@@ -616,7 +607,6 @@
         <set name="bodypart" val="gloves"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="C"/>
-        <set name="material" val="LEATHER"/>
         <set name="weight" val="600"/>
         <set name="enchant_enabled" val="1"/>
         <set name="is_tradable" val="false"/>
@@ -634,7 +624,6 @@
         <set name="bodypart" val="feet"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="C"/>
-        <set name="material" val="LEATHER"/>
         <set name="weight" val="1200"/>
         <set name="enchant_enabled" val="1"/>
         <set name="is_tradable" val="false"/>
@@ -652,7 +641,6 @@
         <set name="bodypart" val="head"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="C"/>
-        <set name="material" val="LEATHER"/>
         <set name="weight" val="620"/>
         <set name="enchant_enabled" val="1"/>
         <set name="is_tradable" val="false"/>
@@ -671,7 +659,6 @@
         <set name="bodypart" val="onepiece"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="C"/>
-        <set name="material" val="LEATHER"/>
         <set name="weight" val="5800"/>
         <set name="enchant_enabled" val="1"/>
         <set name="is_tradable" val="false"/>
@@ -689,7 +676,6 @@
         <set name="bodypart" val="gloves"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="C"/>
-        <set name="material" val="LEATHER"/>
         <set name="weight" val="600"/>
         <set name="enchant_enabled" val="1"/>
         <set name="is_tradable" val="false"/>
@@ -707,7 +693,6 @@
         <set name="bodypart" val="feet"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="C"/>
-        <set name="material" val="LEATHER"/>
         <set name="weight" val="1210"/>
         <set name="enchant_enabled" val="1"/>
         <set name="is_tradable" val="false"/>
@@ -725,7 +710,6 @@
         <set name="bodypart" val="head"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="C"/>
-        <set name="material" val="STEEL"/>
         <set name="weight" val="600"/>
         <set name="enchant_enabled" val="1"/>
         <set name="is_tradable" val="false"/>
@@ -744,7 +728,6 @@
         <set name="bodypart" val="chest"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="C"/>
-        <set name="material" val="CLOTH"/>
         <set name="weight" val="1980"/>
         <set name="enchant_enabled" val="1"/>
         <set name="is_tradable" val="false"/>
@@ -764,7 +747,6 @@
         <set name="bodypart" val="legs"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="C"/>
-        <set name="material" val="CLOTH"/>
         <set name="weight" val="960"/>
         <set name="enchant_enabled" val="1"/>
         <set name="is_tradable" val="false"/>
@@ -783,7 +765,6 @@
         <set name="bodypart" val="gloves"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="C"/>
-        <set name="material" val="LEATHER"/>
         <set name="weight" val="610"/>
         <set name="enchant_enabled" val="1"/>
         <set name="is_tradable" val="false"/>
@@ -801,7 +782,6 @@
         <set name="bodypart" val="feet"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="C"/>
-        <set name="material" val="LEATHER"/>
         <set name="weight" val="1210"/>
         <set name="enchant_enabled" val="1"/>
         <set name="is_tradable" val="false"/>
@@ -928,7 +908,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="underwear"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="SILVER"/>
         <set name="weight" val="150"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
@@ -940,7 +919,6 @@
         <set name="icon" val="icon.npoint_talisman_stat"/>
         <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="GOLD"/>
         <set name="weight" val="120"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
@@ -1082,7 +1060,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="hairall"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="WOOD"/>
         <set name="weight" val="10"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -1098,7 +1075,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="hairall"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="WOOD"/>
         <set name="weight" val="10"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -1114,7 +1090,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="hairall"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="WOOD"/>
         <set name="weight" val="10"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -1130,7 +1105,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="hairall"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="WOOD"/>
         <set name="weight" val="10"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -1146,7 +1120,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="hairall"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="WOOD"/>
         <set name="weight" val="10"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -1162,7 +1135,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="hairall"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="WOOD"/>
         <set name="weight" val="10"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -1178,7 +1150,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="hairall"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="WOOD"/>
         <set name="weight" val="10"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -1194,7 +1165,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="hairall"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="WOOD"/>
         <set name="weight" val="10"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -1210,7 +1180,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="hairall"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="WOOD"/>
         <set name="weight" val="10"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -1226,7 +1195,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="hairall"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="WOOD"/>
         <set name="weight" val="10"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -1242,7 +1210,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="hairall"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="WOOD"/>
         <set name="weight" val="10"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -1258,7 +1225,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="hairall"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="WOOD"/>
         <set name="weight" val="10"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -1274,7 +1240,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="hairall"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="WOOD"/>
         <set name="weight" val="10"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>

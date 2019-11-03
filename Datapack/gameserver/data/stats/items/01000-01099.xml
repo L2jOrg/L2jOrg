@@ -5,7 +5,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="gloves"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="CLOTH"/>
         <set name="weight" val="60"/>
         <set name="commissionItemType" val="GLOVES"/>
 
@@ -18,7 +17,6 @@
         <!-- Receipt Harrys received after ordering tools. Take this and go to Blacksmith Altran. -->
         <set name="icon" val="icon.etc_letter_white_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -34,7 +32,6 @@
         <!-- The receipt that Harrys has received after placing an order for his tools. Go and gather golem shards needed for creating the tool. -->
         <set name="icon" val="icon.etc_letter_white_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -50,7 +47,6 @@
         <!-- Shards of rock that have fallen from the Golem's body. Gather 5 and take them to Blacksmith Altran. -->
         <set name="icon" val="icon.etc_lump_black_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -66,7 +62,6 @@
         <!-- Toolbox containing the tools that Blacksmith Altran Has forged. Take this to Magister Harrys at the temple. -->
         <set name="icon" val="icon.etc_jewel_box_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -82,7 +77,6 @@
         <!-- Take the heavy wooden box to Trader Jackson. The bolts of cloth to Trader Silvia. Take the clay pot to the warehouse keeper Rant. -->
         <set name="icon" val="icon.etc_piece_of_paper_white_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -98,7 +92,6 @@
         <!-- The wooden box to be delivered to Trader Jackson of the weapons shop. -->
         <set name="icon" val="icon.etc_jewel_box_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -114,7 +107,6 @@
         <!-- Bolts of cloth that need to be delivered to Trader Silvia of the grocery store. -->
         <set name="icon" val="icon.etc_piece_of_cloth_blue_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -130,7 +122,6 @@
         <!-- The clay pot that must be delivered to the warehouse keeper Rant. -->
         <set name="icon" val="icon.etc_oil_pot_white_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -146,7 +137,6 @@
         <!-- The receipt that Jackson Has issued upon receiving his heavy wooden box. Take this to Guard Arnold. -->
         <set name="icon" val="icon.etc_letter_red_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -162,7 +152,6 @@
         <!-- The receipt that Silvia Has issued upon receiving her bolts of cloth. Take this to Guard Arnold. -->
         <set name="icon" val="icon.etc_letter_blue_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -178,7 +167,6 @@
         <!-- The receipt issued by Rant upon his receiving of the clay pot. Take this to Guard Arnold. -->
         <set name="icon" val="icon.etc_letter_white_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -194,7 +182,6 @@
         <!-- Official letter that the Lord of Gludio Has sent to Sir Colin Windawood, calling a meeting. Deliver this to Sir Windawood. -->
         <set name="icon" val="icon.etc_letter_red_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -210,7 +197,6 @@
         <!-- Fragment of Soulstone of fire. Can be taken from the fire spirit salamander. Give it to Trader Katerina. -->
         <set name="icon" val="icon.etc_crystal_red_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -226,7 +212,6 @@
         <!-- Fragment of Elemental stone of water. Can be taken from the water spirit undine. Give to Trader Katerina. -->
         <set name="icon" val="icon.etc_crystal_blue_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -242,7 +227,6 @@
         <!-- Letter written by Lilith in longing for her lover, separated a thousand years ago. Find out news about her lover for her. -->
         <set name="icon" val="icon.etc_piece_of_paper_white_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -258,7 +242,6 @@
         <!-- Diary written by Teon in longing for his lover, separated a thousand years ago. Take this to Lilith. -->
         <set name="icon" val="icon.etc_spell_books_blue_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -274,7 +257,6 @@
         <!-- Adamantite ore. All of it is imported from Gracia. Gather 20 of these and take them to Warehouse Keeper Wilford. -->
         <set name="icon" val="icon.etc_plate_blue_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -290,7 +272,6 @@
         <!-- Tablet praising Beleth that the devil Nerkas possessed. Deliver this to High Priest Biotin. -->
         <set name="icon" val="icon.etc_plate_glay_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -306,7 +287,6 @@
         <!-- The spider silk of the silver spider. Take this to Trader Unoren of the weapons shop. -->
         <set name="icon" val="icon.etc_skein_white_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -322,7 +302,6 @@
         <!-- The receipt issued by the magic shop. Take this and go to Trader Creamees. -->
         <set name="icon" val="icon.etc_letter_white_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -338,7 +317,6 @@
         <!-- Ticket issued by the warehouse. Take this and go to Warehouse Keeper Julia. -->
         <set name="icon" val="icon.etc_ticket_blue_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -354,7 +332,6 @@
         <!-- The leaf of the nightshade plant. Take this to Nerupa. -->
         <set name="icon" val="icon.etc_herb_blue_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -370,7 +347,6 @@
         <!-- The cracked skull of the Dark Horror. Take this to Magister Vlasty. -->
         <set name="icon" val="icon.etc_skull_black_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -386,7 +362,6 @@
         <!-- Skull of the dark horror. Take this to Magister Vlasty. -->
         <set name="icon" val="icon.etc_skull_white_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -402,7 +377,6 @@
         <!-- Mane of keltirs. It is soft and luxurious, and used to spin thread and yarn. Take this to Cristel. -->
         <set name="icon" val="icon.etc_mane_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -418,7 +392,6 @@
         <!-- Yarn spun out of the fur of keltirs. Take this to the former tailor Warehouse Keeper Rolfe, and he will make it into a the doll's hair. -->
         <set name="icon" val="icon.etc_skein_gray_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -434,7 +407,6 @@
         <!-- Doll resembling a Human maiden. Take this to Lighthouse Keeper Rockswell. -->
         <set name="icon" val="icon.etc_totem_red_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -450,7 +422,6 @@
         <!-- Powder obtained from the Plague Zombie. Take it to Hierarch Asterios. -->
         <set name="icon" val="icon.etc_powder_red_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -466,7 +437,6 @@
         <!-- Letter from Andellia asking her sister Thalia to send her the fruit of the Mother Tree. -->
         <set name="icon" val="icon.etc_scroll_gray_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -482,7 +452,6 @@
         <!-- Fruit that the Mother Tree bears once every few years. Take this to Andellia. -->
         <set name="icon" val="icon.etc_fruit_green_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -498,7 +467,6 @@
         <!-- The scroll containing Rumiel Moonshine's first poem. Gather all four and take them to Sentinel Starden. -->
         <set name="icon" val="icon.etc_piece_of_paper_black_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -514,7 +482,6 @@
         <!-- The scroll containing Rumiel Moonshine's second poem. Gather all four and take them to Sentinel Starden. -->
         <set name="icon" val="icon.etc_piece_of_paper_black_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -530,7 +497,6 @@
         <!-- The scroll containing Rumiel Moonshine's third poem. Gather all four and take them to Sentinel Starden. -->
         <set name="icon" val="icon.etc_piece_of_paper_black_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -546,7 +512,6 @@
         <!-- The scroll containing Rumiel Moonshine's fourth poem. Gather all four and take them to Sentinel Starden. -->
         <set name="icon" val="icon.etc_piece_of_paper_black_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -562,7 +527,6 @@
         <!-- The fang of a dead ratman. Collect these to take to Master Ellenia. -->
         <set name="icon" val="icon.etc_claw_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -578,7 +542,6 @@
         <!-- The fang of Varool Foulclaw, leader of the ratmen. Take this to Master Ellenia. -->
         <set name="icon" val="icon.etc_horn_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -594,7 +557,6 @@
         <!-- Kirunak's skull obtained after killing Kirunak, the leader of the Dre Vanuls. Take this to Trader Creamees. -->
         <set name="icon" val="icon.etc_skull_red_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -610,7 +572,6 @@
         <!-- Skin obtained from marshland zombies. Collect five and go to Trader Minaless. -->
         <set name="icon" val="icon.etc_bark_gold_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -626,7 +587,6 @@
         <!-- Crystal used by the Succubus Merkenis to cast nightmares. Take this to Hierarch Vellior. -->
         <set name="icon" val="icon.etc_totem_black_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -642,7 +602,6 @@
         <!-- Spellbook needed to learn Light. -->
         <set name="icon" val="icon.etc_spell_books_blue_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="120"/>
         <set name="commissionItemType" val="SPELLBOOK"/>
         <set name="price" val="100"/>
@@ -651,7 +610,6 @@
         <!-- Spellbook needed to learn Might. Used by Human Mystics, Elven Mystics and Dark Mystics. Required level: 7 -->
         <set name="icon" val="icon.etc_spell_books_assistance_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="120"/>
         <set name="price" val="100"/>
         <set name="commissionItemType" val="SPELLBOOK"/>
@@ -661,7 +619,6 @@
         <!-- Spellbook needed to learn Ice Bolt. Used by Human Mystics, Elven Mystics and Dark Mystics. Required level: 7 -->
         <set name="icon" val="icon.etc_spell_books_element_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="120"/>
         <set name="price" val="100"/>
         <set name="commissionItemType" val="SPELLBOOK"/>
@@ -671,7 +628,6 @@
         <!-- Spellbook needed to learn Battle Heal. Used by Human Mystics, Elven Mystics and Dark Mystics. Required level: 14 -->
         <set name="icon" val="icon.etc_spell_books_white_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="120"/>
         <set name="price" val="100"/>
         <set name="commissionItemType" val="SPELLBOOK"/>
@@ -681,7 +637,6 @@
         <!-- Spellbook needed to learn Vampiric Touch. Used by Human Mystics and Dark Mystics. Required level: 14 -->
         <set name="icon" val="icon.etc_spell_books_black_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="120"/>
         <set name="price" val="100"/>
         <set name="commissionItemType" val="SPELLBOOK"/>
@@ -691,7 +646,6 @@
         <!-- Spellbook needed to learn Flame Strike. Used by Human Wizards, Elven Wizards and Dark Wizards. Required level: 20 -->
         <set name="icon" val="icon.etc_spell_books_element_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="120"/>
         <set name="price" val="500"/>
         <set name="commissionItemType" val="SPELLBOOK"/>
@@ -701,7 +655,6 @@
         <!-- Spellbook needed to learn Cure Poison. Used by Human Mystics, Elven Mystics and Dark Mystics. Required level: 7 -->
         <set name="icon" val="icon.etc_spell_books_white_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="120"/>
         <set name="price" val="500"/>
         <set name="commissionItemType" val="SPELLBOOK"/>
@@ -711,7 +664,6 @@
         <!-- Spellbook needed to learn Group Heal. Used by Human Mystics, Elven Mystics and Dark Mystics. Required level: 14 -->
         <set name="icon" val="icon.etc_spell_books_white_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="120"/>
         <set name="price" val="500"/>
         <set name="commissionItemType" val="SPELLBOOK"/>
@@ -721,7 +673,6 @@
         <!-- Spellbook needed to learn Curse Poison. Used by Human Mystics and Dark Mystics. Required level: 7 -->
         <set name="icon" val="icon.etc_spell_books_black_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="120"/>
         <set name="price" val="500"/>
         <set name="commissionItemType" val="SPELLBOOK"/>
@@ -731,7 +682,6 @@
         <!-- Spellbook needed to learn Curse Weakness. Used by Human Mystics and Elven Mystics. Required level: 14 -->
         <set name="icon" val="icon.etc_spell_books_black_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="120"/>
         <set name="price" val="500"/>
         <set name="commissionItemType" val="SPELLBOOK"/>
@@ -741,7 +691,6 @@
         <!-- Spellbook needed to learn Summon Meal. -->
         <set name="icon" val="icon.etc_spell_books_assistance_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="120"/>
         <set name="commissionItemType" val="SPELLBOOK"/>
         <set name="price" val="500"/>
@@ -750,7 +699,6 @@
         <!-- Spellbook needed to learn Shield. Used by Human Mystics, Elven Mystics and Dark Mystics. Required level: 7 -->
         <set name="icon" val="icon.etc_spell_books_assistance_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="120"/>
         <set name="price" val="500"/>
         <set name="commissionItemType" val="SPELLBOOK"/>
@@ -760,7 +708,6 @@
         <!-- Spellbook needed to learn Know Enemy. -->
         <set name="icon" val="icon.etc_spell_books_blue_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="120"/>
         <set name="commissionItemType" val="SPELLBOOK"/>
         <set name="price" val="500"/>
@@ -771,7 +718,6 @@
         <set name="default_action" val="SKILL_REDUCE"/>
         <set name="etcitem_type" val="POTION"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="5"/>
         <set name="price" val="90"/>
         <set name="reuse_delay" val="10000"/>
@@ -794,7 +740,6 @@
         <set name="default_action" val="SKILL_REDUCE"/>
         <set name="etcitem_type" val="POTION"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="5"/>
         <set name="price" val="330"/>
         <set name="reuse_delay" val="10000"/>
@@ -815,7 +760,6 @@
         <!-- Take the recommendation to Grand Master Roien. -->
         <set name="icon" val="icon.etc_letter_white_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -831,7 +775,6 @@
         <!-- Take the recommendation to Grand Magister Gallint. -->
         <set name="icon" val="icon.etc_letter_white_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -847,7 +790,6 @@
         <!-- Take the leaf of the Mother Tree to Nerupa. -->
         <set name="icon" val="icon.etc_leaf_green_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -863,7 +805,6 @@
         <!-- Blood that has to be taken to Dark Elven Chief Mitraell. -->
         <set name="icon" val="icon.etc_spirit_bullet_red_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -879,7 +820,6 @@
         <!-- Charm given by Hierarch Asterios. Go to the water source to seek those who pollute the waters of the Elven village. -->
         <set name="icon" val="icon.etc_jewel_green_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -895,7 +835,6 @@
         <!-- A charm given by Hierarch Asterios. Go to the water source and obtain 5 handfuls of ashes from the Plague Zombies. -->
         <set name="icon" val="icon.etc_jewel_green_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -913,7 +852,6 @@
         <set name="default_action" val="SKILL_REDUCE"/>
         <set name="etcitem_type" val="POTION"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="5"/>
         <set name="reuse_delay" val="10000"/>
         <set name="is_stackable" val="true"/>
@@ -930,7 +868,6 @@
         <!-- First half year financial summary of the Iron Gate Guild: balance sheet and profit and loss statement of the Dark Elf Village guild. -->
         <set name="icon" val="icon.etc_scroll_white_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -946,7 +883,6 @@
         <!-- A Giant Spider's Poison Sac of poisonous spider. Gather ten of these and take to Astaron. -->
         <set name="icon" val="icon.etc_pouch_brown_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -962,7 +898,6 @@
         <!-- The Wind Crystal that you got from Lirein, the Wind Spirit. Collect these crystals and take them to Rizraell. -->
         <set name="icon" val="icon.etc_crystal_white_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -978,7 +913,6 @@
         <!-- Receipt for a magical potion Darin received after paying Baulro. This must be handed to Baulro. -->
         <set name="icon" val="icon.etc_piece_of_paper_white_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -994,7 +928,6 @@
         <!-- Potion of courage that Baulro Has created for the shy Darin, but its effects are unknown. This must be delivered to Darin. -->
         <set name="icon" val="icon.etc_lesser_potion_blue_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -1010,7 +943,6 @@
         <!-- The first of three materials Tetrarch Talos asked you to collect. -->
         <set name="icon" val="icon.etc_eyeball_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -1026,7 +958,6 @@
         <!-- The second of three materials Tetrarch Talos asked you to collect. -->
         <set name="icon" val="icon.etc_totem_black_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -1042,7 +973,6 @@
         <!-- The third of three materials Tetrarch Talos asked you to collect. -->
         <set name="icon" val="icon.etc_lesser_potion_red_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -1058,7 +988,6 @@
         <!-- A badge indicating that the bearer is carrying out the orders of the lord. Keep this in your possession and hunt Orcs or werewolves. -->
         <set name="icon" val="icon.etc_jewel_gold_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -1074,7 +1003,6 @@
         <!-- Bone necklace that Orc fighters possess on their bodies for magic purposes. Take this to Captain Gilbert. -->
         <set name="icon" val="icon.accessary_necklace_of_anguish_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -1090,7 +1018,6 @@
         <!-- Fangs from a dead werewolf. Take this to Captain Gilbert. -->
         <set name="icon" val="icon.etc_claw_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -1106,7 +1033,6 @@
         <!-- The legs cut off from a giant spider. Collect 8 of these and take them to Alshupes. -->
         <set name="icon" val="icon.etc_horn_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -1122,7 +1048,6 @@
         <!-- Abyssal Celebrant Undrias' letter. Take this letter to Weapon Merchant Iria, Warehouse Keeper Dorankus, and Master Trudy. -->
         <set name="icon" val="icon.etc_scroll_gray_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -1138,7 +1063,6 @@
         <!-- Ceremonial dagger used during the mass of darkness. Take this to Abyssal Celebrant Undrias. -->
         <set name="icon" val="icon.weapon_mystic_knife_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -1154,7 +1078,6 @@
         <!-- Holy wine used in the mass of darkness. Take this to Abyssal Celebrant Undrias. -->
         <set name="icon" val="icon.etc_lesser_potion_purple_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -1170,7 +1093,6 @@
         <!-- Sacred book used in the mass of darkness. Take this to Abyssal Celebrant Undrias. -->
         <set name="icon" val="icon.etc_spell_books_red_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -1186,7 +1108,6 @@
         <!-- The letter that Arujien Has written in longing for Greenis. Show this to Gatekeeper Mirabel. -->
         <set name="icon" val="icon.etc_scroll_gray_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -1202,7 +1123,6 @@
         <!-- The letter that Arujien Has written in longing for Greenis. Show this to Trader Herbiel. -->
         <set name="icon" val="icon.etc_scroll_gray_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -1218,7 +1138,6 @@
         <!-- Arujien's love letter. Since you have shown this to Mirabel and Herbiel, you must go back to Arujien. -->
         <set name="icon" val="icon.etc_piece_of_paper_white_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -1234,7 +1153,6 @@
         <!-- Spellbook needed to learn Attack Aura. Used by Elven Fighters and Dark Fighters. Required level: 10 -->
         <set name="icon" val="icon.etc_spell_books_defighter_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="120"/>
         <set name="price" val="75"/>
         <set name="commissionItemType" val="SPELLBOOK"/>
@@ -1244,7 +1162,6 @@
         <!-- Spellbook needed to learn Elemental Heal. Used by Elven Fighters. Required level: 15 -->
         <set name="icon" val="icon.etc_spell_books_efighter_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="120"/>
         <set name="price" val="550"/>
         <set name="commissionItemType" val="SPELLBOOK"/>
@@ -1254,7 +1171,6 @@
         <!-- Spellbook needed to learn Drain Energy. Used by Knights and Dark Fighters. Required level: Dark Fighter - 13, Knight - 20 -->
         <set name="icon" val="icon.etc_spell_books_defighter_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="120"/>
         <set name="price" val="7461"/>
         <set name="commissionItemType" val="SPELLBOOK"/>
@@ -1264,7 +1180,6 @@
         <!-- Spellbook needed to learn Wind Walk. Used by Clerics, Elven Oracles and Shillien Oracles. Required level: 20 -->
         <set name="icon" val="icon.etc_spell_books_assistance_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="120"/>
         <set name="price" val="500"/>
         <set name="commissionItemType" val="SPELLBOOK"/>
@@ -1274,7 +1189,6 @@
         <!-- Spellbook needed to learn Wind Shackle. Used by Elven Mystics and Dark Mystics. Required level: 14 -->
         <set name="icon" val="icon.etc_spell_books_black_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="120"/>
         <set name="price" val="500"/>
         <set name="commissionItemType" val="SPELLBOOK"/>

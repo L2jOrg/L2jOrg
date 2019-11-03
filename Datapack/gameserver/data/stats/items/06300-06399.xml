@@ -10,7 +10,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="1720"/>
         <set name="crystal_type" val="C"/>
-        <set name="material" val="FINE_STEEL"/>
         <set name="weight" val="1400"/>
         <set name="price" val="4300000"/>
         <set name="change_weaponId" val="9281"/>
@@ -41,7 +40,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="1720"/>
         <set name="crystal_type" val="C"/>
-        <set name="material" val="FINE_STEEL"/>
         <set name="weight" val="1400"/>
         <set name="price" val="4300000"/>
         <set name="change_weaponId" val="9282"/>
@@ -72,7 +70,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="1720"/>
         <set name="crystal_type" val="C"/>
-        <set name="material" val="FINE_STEEL"/>
         <set name="weight" val="1400"/>
         <set name="price" val="4300000"/>
         <set name="change_weaponId" val="9283"/>
@@ -103,7 +100,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="1720"/>
         <set name="crystal_type" val="C"/>
-        <set name="material" val="FINE_STEEL"/>
         <set name="weight" val="920"/>
         <set name="price" val="4300000"/>
         <set name="soulshots" val="1"/>
@@ -134,7 +130,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="1720"/>
         <set name="crystal_type" val="C"/>
-        <set name="material" val="FINE_STEEL"/>
         <set name="weight" val="920"/>
         <set name="price" val="4300000"/>
         <set name="soulshots" val="1"/>
@@ -165,7 +160,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="1720"/>
         <set name="crystal_type" val="C"/>
-        <set name="material" val="FINE_STEEL"/>
         <set name="weight" val="920"/>
         <set name="price" val="4300000"/>
         <set name="soulshots" val="1"/>
@@ -196,7 +190,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="1720"/>
         <set name="crystal_type" val="C"/>
-        <set name="material" val="BLOOD_STEEL"/>
         <set name="weight" val="950"/>
         <set name="price" val="4300000"/>
         <set name="soulshots" val="1"/>
@@ -227,7 +220,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="1720"/>
         <set name="crystal_type" val="C"/>
-        <set name="material" val="BLOOD_STEEL"/>
         <set name="weight" val="950"/>
         <set name="price" val="4300000"/>
         <set name="soulshots" val="1"/>
@@ -258,7 +250,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="1720"/>
         <set name="crystal_type" val="C"/>
-        <set name="material" val="BLOOD_STEEL"/>
         <set name="weight" val="950"/>
         <set name="price" val="4300000"/>
         <set name="soulshots" val="1"/>
@@ -284,7 +275,6 @@
         <set name="icon" val="icon.etc_spellbook_red_i00"/>
         <set name="default_action" val="SHOW_HTML"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="20"/>
         <set name="price" val="1"/>
         <set name="is_dropable" val="false"/>
@@ -295,7 +285,6 @@
         <!-- Dark flames from Purgatory. The only way to melt true gold. -->
         <set name="icon" val="icon.etc_potion_red_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="50"/>
         <set name="price" val="500"/>
         <set name="is_stackable" val="true"/>
@@ -306,7 +295,6 @@
         <!-- Legendary elixir said to bestow ultimate wisdom. Take it to Magister Ladd. -->
         <set name="icon" val="icon.etc_lesser_potion_yellow_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="CRYSTAL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -322,7 +310,6 @@
         <!-- Essential ingredient of Mimir's Elixir. Take it to Magister Ladd. -->
         <set name="icon" val="icon.etc_broken_crystal_silver_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="price" val="500"/>
         <set name="is_stackable" val="true"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
@@ -332,7 +319,6 @@
         <!-- Essential ingredient of Mimir's Elixir. Take it to Magister Ladd. -->
         <set name="icon" val="icon.etc_broken_crystal_gold_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="CRYSTAL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -348,7 +334,6 @@
         <!-- Essential ingredient of Mimir's Elixir. Take it to Magister Joan. -->
         <set name="icon" val="icon.etc_bead_silver_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="CRYSTAL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -368,7 +353,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="107"/>
         <set name="crystal_type" val="A"/>
-        <set name="material" val="SILVER"/>
         <set name="weight" val="150"/>
         <set name="price" val="1340000"/>
         <set name="commissionItemType" val="NECKLACE"/>
@@ -385,7 +369,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="80"/>
         <set name="crystal_type" val="A"/>
-        <set name="material" val="SILVER"/>
         <set name="weight" val="150"/>
         <set name="price" val="1005000"/>
         <set name="commissionItemType" val="EARRING"/>
@@ -402,7 +385,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="54"/>
         <set name="crystal_type" val="A"/>
-        <set name="material" val="GOLD"/>
         <set name="weight" val="150"/>
         <set name="price" val="670000"/>
         <set name="commissionItemType" val="RING"/>
@@ -419,7 +401,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="160"/>
         <set name="crystal_type" val="A"/>
-        <set name="material" val="SILVER"/>
         <set name="weight" val="150"/>
         <set name="price" val="1998000"/>
         <set name="commissionItemType" val="NECKLACE"/>
@@ -436,7 +417,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="120"/>
         <set name="crystal_type" val="A"/>
-        <set name="material" val="SILVER"/>
         <set name="weight" val="150"/>
         <set name="price" val="1498000"/>
         <set name="enchant_enabled" val="1"/>
@@ -453,7 +433,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="80"/>
         <set name="crystal_type" val="A"/>
-        <set name="material" val="SILVER"/>
         <set name="weight" val="150"/>
         <set name="price" val="999000"/>
         <set name="commissionItemType" val="RING"/>
@@ -468,7 +447,6 @@
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="30"/>
         <set name="price" val="34800"/>
         <set name="recipe_id" val="617"/>
@@ -482,7 +460,6 @@
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="30"/>
         <set name="price" val="34800"/>
         <set name="recipe_id" val="618"/>
@@ -496,7 +473,6 @@
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="30"/>
         <set name="price" val="26200"/>
         <set name="recipe_id" val="613"/>
@@ -510,7 +486,6 @@
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="30"/>
         <set name="price" val="26200"/>
         <set name="recipe_id" val="614"/>
@@ -524,7 +499,6 @@
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="30"/>
         <set name="price" val="17420"/>
         <set name="recipe_id" val="621"/>
@@ -538,7 +512,6 @@
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="30"/>
         <set name="price" val="17420"/>
         <set name="recipe_id" val="622"/>
@@ -552,7 +525,6 @@
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="30"/>
         <set name="price" val="52000"/>
         <set name="recipe_id" val="619"/>
@@ -566,7 +538,6 @@
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="30"/>
         <set name="price" val="52000"/>
         <set name="recipe_id" val="620"/>
@@ -580,7 +551,6 @@
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="30"/>
         <set name="price" val="39000"/>
         <set name="recipe_id" val="615"/>
@@ -594,7 +564,6 @@
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="30"/>
         <set name="price" val="39000"/>
         <set name="recipe_id" val="616"/>
@@ -608,7 +577,6 @@
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="30"/>
         <set name="price" val="26000"/>
         <set name="recipe_id" val="623"/>
@@ -622,7 +590,6 @@
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="30"/>
         <set name="price" val="26000"/>
         <set name="recipe_id" val="624"/>
@@ -635,7 +602,6 @@
         <set name="icon" val="icon.etc_gem_blue_i00"/>
         <set name="etcitem_type" val="MATERIAL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="60"/>
         <set name="price" val="7231"/>
         <set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS"/>
@@ -646,7 +612,6 @@
         <set name="icon" val="icon.etc_gem_blue_i00"/>
         <set name="etcitem_type" val="MATERIAL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="60"/>
         <set name="price" val="8829"/>
         <set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS"/>
@@ -657,7 +622,6 @@
         <set name="icon" val="BranchSys2.icon.etc_sealed_phoenixbeads_i00"/>
         <set name="etcitem_type" val="MATERIAL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="60"/>
         <set name="price" val="9354"/>
         <set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS"/>
@@ -668,7 +632,6 @@
         <set name="icon" val="BranchSys2.icon.etc_sealed_majesticbeads_i00"/>
         <set name="etcitem_type" val="MATERIAL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="60"/>
         <set name="price" val="13643"/>
         <set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS"/>
@@ -679,7 +642,6 @@
         <set name="icon" val="icon.etc_gem_blue_i00"/>
         <set name="etcitem_type" val="MATERIAL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="60"/>
         <set name="price" val="5228"/>
         <set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS"/>
@@ -690,7 +652,6 @@
         <set name="icon" val="icon.etc_gem_blue_i00"/>
         <set name="etcitem_type" val="MATERIAL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="60"/>
         <set name="price" val="6143"/>
         <set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS"/>
@@ -706,7 +667,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="2452"/>
         <set name="crystal_type" val="C"/>
-        <set name="material" val="ORIHARUKON"/>
         <set name="weight" val="1380"/>
         <set name="price" val="6130000"/>
         <set name="change_weaponId" val="9297"/>
@@ -737,7 +697,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="2452"/>
         <set name="crystal_type" val="C"/>
-        <set name="material" val="ORIHARUKON"/>
         <set name="weight" val="1380"/>
         <set name="price" val="6130000"/>
         <set name="change_weaponId" val="9298"/>
@@ -768,7 +727,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="2452"/>
         <set name="crystal_type" val="C"/>
-        <set name="material" val="ORIHARUKON"/>
         <set name="weight" val="1380"/>
         <set name="price" val="6130000"/>
         <set name="change_weaponId" val="9299"/>
@@ -793,7 +751,6 @@
         <!-- Amulet required for the Pa'agrio's Honor spell. Used by Overlords. Required level: 56 -->
         <set name="icon" val="icon.etc_orcish_talisman_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="120"/>
         <set name="price" val="50000"/>
         <set name="commissionItemType" val="SPELLBOOK"/>
@@ -803,7 +760,6 @@
         <!-- The Amulet required for the Ritual of Life spell. Used by Overlords. Required level: 48 -->
         <set name="icon" val="icon.etc_orcish_talisman_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="120"/>
         <set name="price" val="50000"/>
         <set name="commissionItemType" val="SPELLBOOK"/>
@@ -813,7 +769,6 @@
         <!-- Spellbook needed to learn Prayer. Used by Bishops. Required level: 66 -->
         <set name="icon" val="icon.etc_spell_books_white_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="120"/>
         <set name="price" val="8700"/>
         <set name="commissionItemType" val="SPELLBOOK"/>
@@ -823,7 +778,6 @@
         <!-- Gemstone obtained from gremlins. Take it to a Newbie Helper. -->
         <set name="icon" val="icon.etc_jewel_blue_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
         <set name="is_stackable" val="true"/>
     </item>
@@ -837,7 +791,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="916"/>
         <set name="crystal_type" val="C"/>
-        <set name="material" val="FINE_STEEL"/>
         <set name="weight" val="1040"/>
         <set name="price" val="2290000"/>
         <set name="soulshots" val="1"/>
@@ -868,7 +821,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="916"/>
         <set name="crystal_type" val="C"/>
-        <set name="material" val="FINE_STEEL"/>
         <set name="weight" val="1040"/>
         <set name="price" val="2290000"/>
         <set name="soulshots" val="1"/>
@@ -899,7 +851,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="916"/>
         <set name="crystal_type" val="C"/>
-        <set name="material" val="CRYSTAL"/>
         <set name="weight" val="1040"/>
         <set name="price" val="2290000"/>
         <set name="soulshots" val="1"/>
@@ -930,7 +881,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="1746"/>
         <set name="crystal_type" val="B"/>
-        <set name="material" val="BLOOD_STEEL"/>
         <set name="weight" val="970"/>
         <set name="price" val="13100000"/>
         <set name="soulshots" val="1"/>
@@ -955,7 +905,6 @@
         <!-- Infernium ore once owned by the Iron Gate Guild. Take it to Warehouse Keeper Romp of Town of Aden to play bingo. -->
         <set name="icon" val="icon.etc_inf_ore_high_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="price" val="200"/>
         <set name="is_questitem" val="true"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
@@ -970,7 +919,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="1368"/>
         <set name="crystal_type" val="S"/>
-        <set name="material" val="ADAMANTAITE"/>
         <set name="weight" val="1300"/>
         <set name="price" val="42759400"/>
         <set name="change_weaponId" val="9364"/>
@@ -996,7 +944,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="1368"/>
         <set name="crystal_type" val="S"/>
-        <set name="material" val="ADAMANTAITE"/>
         <set name="weight" val="1570"/>
         <set name="price" val="42759400"/>
         <set name="soulshots" val="1"/>
@@ -1020,7 +967,6 @@
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="S"/>
-        <set name="material" val="ADAMANTAITE"/>
         <set name="weight" val="910"/>
         <set name="price" val="42759400"/>
         <set name="soulshots" val="1"/>
@@ -1049,7 +995,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="1368"/>
         <set name="crystal_type" val="S"/>
-        <set name="material" val="ADAMANTAITE"/>
         <set name="weight" val="950"/>
         <set name="price" val="42759400"/>
         <set name="soulshots" val="1"/>
@@ -1073,7 +1018,6 @@
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="S"/>
-        <set name="material" val="ADAMANTAITE"/>
         <set name="weight" val="1820"/>
         <set name="price" val="42759400"/>
         <set name="soulshots" val="1"/>
@@ -1099,7 +1043,6 @@
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="S"/>
-        <set name="material" val="ADAMANTAITE"/>
         <set name="weight" val="1800"/>
         <set name="price" val="42759400"/>
         <set name="soulshots" val="1"/>
@@ -1122,7 +1065,6 @@
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="S"/>
-        <set name="material" val="ADAMANTAITE"/>
         <set name="weight" val="1350"/>
         <set name="price" val="42759400"/>
         <set name="soulshots" val="1"/>
@@ -1145,7 +1087,6 @@
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="S"/>
-        <set name="material" val="ADAMANTAITE"/>
         <set name="weight" val="1380"/>
         <set name="price" val="42759400"/>
         <set name="soulshots" val="1"/>
@@ -1167,7 +1108,6 @@
         <set name="bodypart" val="chest"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="S"/>
-        <set name="material" val="SCALE_OF_DRAGON"/>
         <set name="weight" val="7620"/>
         <set name="price" val="12781000"/>
         <set name="enchant_enabled" val="1"/>
@@ -1182,7 +1122,6 @@
         <set name="bodypart" val="legs"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="S"/>
-        <set name="material" val="SCALE_OF_DRAGON"/>
         <set name="weight" val="3260"/>
         <set name="price" val="7988000"/>
         <set name="enchant_enabled" val="1"/>
@@ -1196,7 +1135,6 @@
         <set name="bodypart" val="gloves"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="S"/>
-        <set name="material" val="LEATHER"/>
         <set name="weight" val="540"/>
         <set name="price" val="3195000"/>
         <set name="enchant_enabled" val="1"/>
@@ -1210,7 +1148,6 @@
         <set name="bodypart" val="feet"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="S"/>
-        <set name="material" val="LEATHER"/>
         <set name="weight" val="1110"/>
         <set name="price" val="3195000"/>
         <set name="enchant_enabled" val="1"/>
@@ -1225,7 +1162,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="107"/>
         <set name="crystal_type" val="S"/>
-        <set name="material" val="BONE"/>
         <set name="weight" val="1170"/>
         <set name="price" val="3355000"/>
         <set name="commissionItemType" val="SHIELD"/>
@@ -1242,7 +1178,6 @@
         <set name="bodypart" val="head"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="S"/>
-        <set name="material" val="BONE"/>
         <set name="weight" val="550"/>
         <set name="price" val="4793000"/>
         <set name="enchant_enabled" val="1"/>
@@ -1258,7 +1193,6 @@
         <set name="bodypart" val="onepiece"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="S"/>
-        <set name="material" val="LEATHER"/>
         <set name="weight" val="4950"/>
         <set name="price" val="15577000"/>
         <set name="enchant_enabled" val="1"/>
@@ -1272,7 +1206,6 @@
         <set name="bodypart" val="gloves"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="S"/>
-        <set name="material" val="LEATHER"/>
         <set name="weight" val="540"/>
         <set name="price" val="3195000"/>
         <set name="enchant_enabled" val="1"/>
@@ -1286,7 +1219,6 @@
         <set name="bodypart" val="feet"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="S"/>
-        <set name="material" val="LEATHER"/>
         <set name="weight" val="1110"/>
         <set name="price" val="3195000"/>
         <set name="enchant_enabled" val="1"/>
@@ -1300,7 +1232,6 @@
         <set name="bodypart" val="head"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="S"/>
-        <set name="material" val="BONE"/>
         <set name="weight" val="550"/>
         <set name="price" val="4793000"/>
         <set name="enchant_enabled" val="1"/>
@@ -1316,7 +1247,6 @@
         <set name="bodypart" val="onepiece"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="S"/>
-        <set name="material" val="CLOTH"/>
         <set name="weight" val="2300"/>
         <set name="price" val="15577000"/>
         <set name="enchant_enabled" val="1"/>
@@ -1331,7 +1261,6 @@
         <set name="bodypart" val="gloves"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="S"/>
-        <set name="material" val="LEATHER"/>
         <set name="weight" val="540"/>
         <set name="price" val="3195000"/>
         <set name="enchant_enabled" val="1"/>
@@ -1345,7 +1274,6 @@
         <set name="bodypart" val="feet"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="S"/>
-        <set name="material" val="LEATHER"/>
         <set name="weight" val="1110"/>
         <set name="price" val="3195000"/>
         <set name="enchant_enabled" val="1"/>
@@ -1359,7 +1287,6 @@
         <set name="bodypart" val="head"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="S"/>
-        <set name="material" val="BONE"/>
         <set name="weight" val="550"/>
         <set name="price" val="4793000"/>
         <set name="enchant_enabled" val="1"/>
@@ -1371,7 +1298,6 @@
         <!-- This certificate allows the bearer to join the Lords of Dawn without belonging to a castle-owning clan. -->
         <set name="icon" val="icon.etc_permit_card_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
         <set name="is_stackable" val="true"/>
     </item>
@@ -1379,7 +1305,6 @@
         <!-- Autumn Harvest Event - double-click to make a Young Squash appear. -->
         <set name="icon" val="icon.etc_gourd_i00"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="is_stackable" val="true"/>
         <set name="is_oly_restricted" val="true"/>
         <set name="handler" val="ItemSkills"/>
@@ -1392,7 +1317,6 @@
         <!-- Autumn Harvest Event - double-click to make a Large Young Squash appear. -->
         <set name="icon" val="icon.etc_gourd_i01"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="is_stackable" val="true"/>
         <set name="is_oly_restricted" val="true"/>
         <set name="handler" val="ItemSkills"/>
@@ -1405,7 +1329,6 @@
         <!-- Autumn Harvest Event - used to exchange with Puss the Cat for squash seeds or for growing squashes. -->
         <set name="icon" val="icon.etc_nectar_i00"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="is_stackable" val="true"/>
         <set name="is_oly_restricted" val="true"/>
         <set name="handler" val="ItemSkills"/>
@@ -1417,14 +1340,12 @@
     <item id="6392" name="Event - Medal" type="EtcItem">
         <!-- L2 Medal Collection Event - If you take it to an Event Manager, he will trade it for a prize item of your choice. -->
         <set name="icon" val="icon.etc_event_medal_i00"/>
-        <set name="material" val="STEEL"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
         <set name="is_stackable" val="true"/>
     </item>
     <item id="6393" name="Event - Glittering Medal" type="EtcItem">
         <!-- L2 Medal Collection Event - If you take it to an Event Manager, he will trade it for a prize item of your choice. -->
         <set name="icon" val="icon.etc_event_glitter_medal_i00"/>
-        <set name="material" val="STEEL"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
         <set name="is_stackable" val="true"/>
     </item>
@@ -1433,7 +1354,6 @@
         <set name="icon" val="icon.etc_party_mask_i01"/>
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="hair"/>
-        <set name="material" val="WOOD"/>
         <set name="weight" val="10"/>
         <set name="enchant_enabled" val="7"/>
         <set name="commissionItemType" val="HAIR_ACCESSORY"/>
@@ -1444,7 +1364,6 @@
         <!-- Amulet required for the Chant of Predator spell. Used by Warcryers. Required level: 48 -->
         <set name="icon" val="icon.etc_orcish_talisman_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="120"/>
         <set name="price" val="4600"/>
         <set name="commissionItemType" val="SPELLBOOK"/>
@@ -1454,7 +1373,6 @@
         <!-- Amulet needed to learn the Chant of Eagle incantation. Used by Warcryers. Required level: 48 -->
         <set name="icon" val="icon.etc_orcish_talisman_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="120"/>
         <set name="price" val="4600"/>
         <set name="commissionItemType" val="SPELLBOOK"/>
@@ -1464,7 +1382,6 @@
         <!-- Amulet required for the Chant of Vampire spell. Used by Warcryers. Required level: 44 -->
         <set name="icon" val="icon.etc_orcish_talisman_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="120"/>
         <set name="price" val="100000"/>
         <set name="commissionItemType" val="SPELLBOOK"/>
@@ -1474,7 +1391,6 @@
         <!-- Spellbook needed to learn Body of Avatar. Used by Bishops. Required level: 48 -->
         <set name="icon" val="icon.etc_spell_books_white_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="120"/>
         <set name="price" val="100000"/>
         <set name="commissionItemType" val="SPELLBOOK"/>
@@ -1484,7 +1400,6 @@
         <!-- The crest indicating that its bearer's event collector is rabbit. Without this badge, one cannot prove one's grade. \0 -->
         <set name="icon" val="icon.etc_paper_black_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="CRYSTAL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>

@@ -4,7 +4,6 @@
         <!-- Take this parcel of woven beads to Warehouse Chief Yasheni in the Town of Schuttgart. -->
         <set name="icon" val="icon.accessary_mage_earing_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -19,7 +18,6 @@
     <item id="8544" name="Timora Orc's Head" type="EtcItem">
         <!-- Severed head of the cowardly Timora Orc who betrayed his own tribe and joined the Ragna Orcs. -->
         <set name="icon" val="icon.etc_skull_red_i00"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -34,7 +32,6 @@
     <item id="8545" name="Kasha Spider's Tooth" type="EtcItem">
         <!-- This crooked spider's tooth was pulled out by hand during close combat. -->
         <set name="icon" val="icon.etc_claw_i00"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -49,7 +46,6 @@
     <item id="8546" name="Horn of Baar Dre Vanul" type="EtcItem">
         <!-- This smooth, flawless horn comes from Baar Dre Vanul, who inhabits the Immortal Plateau's Southern Region. -->
         <set name="icon" val="icon.etc_horn_i00"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -67,7 +63,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="hairall"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="WOOD"/>
         <set name="enchant_enabled" val="7"/>
         <set name="commissionItemType" val="HAIR_ACCESSORY"/>
 
@@ -82,7 +77,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="hairall"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="WOOD"/>
         <set name="weight" val="10"/>
         <set name="enchant_enabled" val="7"/>
         <set name="commissionItemType" val="HAIR_ACCESSORY"/>
@@ -95,7 +89,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="hairall"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="WOOD"/>
         <set name="weight" val="10"/>
         <set name="enchant_enabled" val="7"/>
         <set name="commissionItemType" val="HAIR_ACCESSORY"/>
@@ -108,7 +101,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="hairall"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="WOOD"/>
         <set name="weight" val="10"/>
         <set name="enchant_enabled" val="7"/>
         <set name="commissionItemType" val="HAIR_ACCESSORY"/>
@@ -121,7 +113,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="hairall"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="WOOD"/>
         <set name="weight" val="10"/>
         <set name="price" val="2000000"/>
         <set name="enchant_enabled" val="7"/>
@@ -134,7 +125,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="hairall"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="WOOD"/>
         <set name="weight" val="10"/>
         <set name="enchant_enabled" val="7"/>
         <set name="commissionItemType" val="HAIR_ACCESSORY"/>
@@ -147,7 +137,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="hair"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="WOOD"/>
         <set name="weight" val="10"/>
         <set name="enchant_enabled" val="7"/>
         <set name="commissionItemType" val="HAIR_ACCESSORY"/>

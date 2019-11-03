@@ -7,7 +7,6 @@
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="weight" val="1600"/>
         <set name="price" val="768"/>
         <set name="soulshots" val="1"/>
@@ -28,7 +27,6 @@
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="FINE_STEEL"/>
         <set name="weight" val="1560"/>
         <set name="price" val="136000"/>
         <set name="soulshots" val="1"/>
@@ -51,7 +49,6 @@
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="weight" val="1590"/>
         <set name="price" val="12500"/>
         <set name="soulshots" val="1"/>
@@ -74,7 +71,6 @@
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="WOOD"/>
         <set name="weight" val="1870"/>
         <set name="price" val="768"/>
         <set name="soulshots" val="1"/>
@@ -98,7 +94,6 @@
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="weight" val="1880"/>
         <set name="price" val="12500"/>
         <set name="soulshots" val="1"/>
@@ -123,7 +118,6 @@
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="weight" val="1350"/>
         <set name="soulshots" val="1"/>
         <set name="spiritshots" val="1"/>
@@ -155,7 +149,6 @@
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="WOOD"/>
         <set name="weight" val="1330"/>
         <set name="price" val="768"/>
         <set name="soulshots" val="1"/>
@@ -180,7 +173,6 @@
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;46;120"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="WOOD"/>
         <set name="weight" val="1080"/>
         <set name="price" val="12500"/>
         <set name="soulshots" val="1"/>
@@ -205,7 +197,6 @@
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;46;120"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="WOOD"/>
         <set name="weight" val="1090"/>
         <set name="price" val="54100"/>
         <set name="soulshots" val="1"/>
@@ -231,7 +222,6 @@
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="weight" val="1160"/>
         <set name="soulshots" val="1"/>
         <set name="spiritshots" val="1"/>
@@ -262,7 +252,6 @@
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="BONE"/>
         <set name="weight" val="1150"/>
         <set name="price" val="768"/>
         <set name="soulshots" val="1"/>
@@ -286,7 +275,6 @@
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="BRONZE"/>
         <set name="weight" val="1140"/>
         <set name="price" val="12500"/>
         <set name="soulshots" val="1"/>
@@ -310,7 +298,6 @@
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;10;0"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="WOOD"/>
         <set name="weight" val="1950"/>
         <set name="price" val="768"/>
         <set name="soulshots" val="1"/>
@@ -336,7 +323,6 @@
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;10;0"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="WOOD"/>
         <set name="weight" val="1930"/>
         <set name="price" val="12500"/>
         <set name="soulshots" val="1"/>
@@ -362,7 +348,6 @@
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;66;120"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="weight" val="2140"/>
         <set name="price" val="136000"/>
         <set name="soulshots" val="1"/>
@@ -389,7 +374,6 @@
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;66;120"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="BRONZE"/>
         <set name="weight" val="2120"/>
         <set name="price" val="244000"/>
         <set name="soulshots" val="1"/>
@@ -416,7 +400,6 @@
         <set name="etcitem_type" val="ARROW"/>
         <set name="bodypart" val="lhand"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="WOOD"/>
         <set name="weight" val="6"/>
         <set name="price" val="2"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
@@ -427,7 +410,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="lhand"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LEATHER"/>
         <set name="weight" val="1430"/>
         <set name="commissionItemType" val="SHIELD"/>
 
@@ -443,7 +425,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="lhand"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="weight" val="1420"/>
         <set name="commissionItemType" val="SHIELD"/>
 
@@ -459,7 +440,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="lhand"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="WOOD"/>
         <set name="weight" val="1410"/>
         <set name="commissionItemType" val="SHIELD"/>
 
@@ -476,7 +456,6 @@
         <set name="armor_type" val="LIGHT"/>
         <set name="bodypart" val="chest"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="CLOTH"/>
         <set name="weight" val="4830"/>
         <set name="commissionItemType" val="ARMOR_TOP"/>
 
@@ -491,7 +470,6 @@
         <set name="armor_type" val="LIGHT"/>
         <set name="bodypart" val="chest"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LEATHER"/>
         <set name="weight" val="4830"/>
         <set name="commissionItemType" val="ARMOR_TOP"/>
 
@@ -506,7 +484,6 @@
         <set name="armor_type" val="LIGHT"/>
         <set name="bodypart" val="chest"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="WOOD"/>
         <set name="weight" val="4820"/>
         <set name="commissionItemType" val="ARMOR_TOP"/>
 
@@ -521,7 +498,6 @@
         <set name="armor_type" val="LIGHT"/>
         <set name="bodypart" val="chest"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="BONE"/>
         <set name="weight" val="4770"/>
         <set name="commissionItemType" val="ARMOR_TOP"/>
 
@@ -536,7 +512,6 @@
         <set name="armor_type" val="HEAVY"/>
         <set name="bodypart" val="chest"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="BONE"/>
         <set name="weight" val="8970"/>
         <set name="price" val="31800"/>
 
@@ -551,7 +526,6 @@
         <set name="armor_type" val="HEAVY"/>
         <set name="bodypart" val="chest"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="BRONZE"/>
         <set name="weight" val="8920"/>
         <set name="commissionItemType" val="ARMOR_TOP"/>
 
@@ -566,7 +540,6 @@
         <set name="armor_type" val="LIGHT"/>
         <set name="bodypart" val="chest"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LEATHER"/>
         <set name="weight" val="4720"/>
         <set name="commissionItemType" val="ARMOR_TOP"/>
 
@@ -581,7 +554,6 @@
         <set name="armor_type" val="LIGHT"/>
         <set name="bodypart" val="legs"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="CLOTH"/>
         <set name="weight" val="1740"/>
         <set name="commissionItemType" val="ARMOR_PANTS"/>
 
@@ -596,7 +568,6 @@
         <set name="armor_type" val="LIGHT"/>
         <set name="bodypart" val="legs"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LEATHER"/>
         <set name="weight" val="1730"/>
         <set name="commissionItemType" val="ARMOR_PANTS"/>
 
@@ -611,7 +582,6 @@
         <set name="armor_type" val="LIGHT"/>
         <set name="bodypart" val="legs"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LEATHER"/>
         <set name="weight" val="1700"/>
         <set name="commissionItemType" val="ARMOR_PANTS"/>
 
@@ -626,7 +596,6 @@
         <set name="armor_type" val="LIGHT"/>
         <set name="bodypart" val="legs"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="BONE"/>
         <set name="weight" val="1680"/>
         <set name="commissionItemType" val="ARMOR_PANTS"/>
 
@@ -641,7 +610,6 @@
         <set name="armor_type" val="HEAVY"/>
         <set name="bodypart" val="legs"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="BONE"/>
         <set name="weight" val="4020"/>
         <set name="commissionItemType" val="ARMOR_PANTS"/>
 
@@ -656,7 +624,6 @@
         <set name="armor_type" val="LIGHT"/>
         <set name="bodypart" val="legs"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LEATHER"/>
         <set name="weight" val="1610"/>
         <set name="commissionItemType" val="ARMOR_PANTS"/>
 
@@ -671,7 +638,6 @@
         <set name="armor_type" val="HEAVY"/>
         <set name="bodypart" val="legs"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="BRONZE"/>
         <set name="weight" val="3960"/>
         <set name="commissionItemType" val="ARMOR_PANTS"/>
 
@@ -685,7 +651,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="feet"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="CLOTH"/>
         <set name="weight" val="1320"/>
         <set name="commissionItemType" val="FEET"/>
 
@@ -699,7 +664,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="feet"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LEATHER"/>
         <set name="weight" val="1320"/>
         <set name="commissionItemType" val="FEET"/>
 
@@ -713,7 +677,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="feet"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LEATHER"/>
         <set name="weight" val="1320"/>
         <set name="commissionItemType" val="FEET"/>
 
@@ -727,7 +690,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="feet"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LEATHER"/>
         <set name="weight" val="1320"/>
         <set name="commissionItemType" val="FEET"/>
 
@@ -741,7 +703,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="feet"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="CLOTH"/>
         <set name="weight" val="1310"/>
         <set name="commissionItemType" val="FEET"/>
 
@@ -757,7 +718,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="38"/>
         <set name="crystal_type" val="D"/>
-        <set name="material" val="LEATHER"/>
         <set name="weight" val="1300"/>
         <set name="price" val="20900"/>
         <set name="commissionItemType" val="FEET"/>
@@ -772,7 +732,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="head"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="CLOTH"/>
         <set name="weight" val="660"/>
         <set name="price" val="55"/>
         <set name="commissionItemType" val="HELMET"/>
@@ -785,7 +744,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="head"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LEATHER"/>
         <set name="weight" val="660"/>
         <set name="commissionItemType" val="HELMET"/>
         <set name="price" val="911"/>
@@ -798,7 +756,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="head"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="WOOD"/>
         <set name="weight" val="660"/>
         <set name="commissionItemType" val="HELMET"/>
         <set name="price" val="3980"/>
@@ -811,7 +768,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="head"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LEATHER"/>
         <set name="weight" val="650"/>
         <set name="commissionItemType" val="HELMET"/>
         <set name="price" val="10200"/>
@@ -826,7 +782,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="56"/>
         <set name="crystal_type" val="D"/>
-        <set name="material" val="BONE"/>
         <set name="weight" val="640"/>
         <set name="price" val="31300"/>
         <set name="commissionItemType" val="HELMET"/>
@@ -842,7 +797,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="90"/>
         <set name="crystal_type" val="D"/>
-        <set name="material" val="BRONZE"/>
         <set name="weight" val="630"/>
         <set name="price" val="50000"/>
         <set name="enchant_enabled" val="1"/>
@@ -858,7 +812,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="138"/>
         <set name="crystal_type" val="D"/>
-        <set name="material" val="FINE_STEEL"/>
         <set name="weight" val="640"/>
         <set name="price" val="76200"/>
         <set name="commissionItemType" val="HELMET"/>
@@ -872,7 +825,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="gloves"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="CLOTH"/>
         <set name="weight" val="660"/>
         <set name="commissionItemType" val="GLOVES"/>
 
@@ -886,7 +838,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="gloves"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="CLOTH"/>
         <set name="weight" val="660"/>
         <set name="commissionItemType" val="GLOVES"/>
 
@@ -900,7 +851,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="gloves"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LEATHER"/>
         <set name="weight" val="650"/>
         <set name="commissionItemType" val="GLOVES"/>
 
@@ -914,7 +864,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="gloves"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LEATHER"/>
         <set name="weight" val="650"/>
         <set name="commissionItemType" val="GLOVES"/>
 
@@ -926,7 +875,6 @@
     <item id="57" name="Adena" type="EtcItem">
         <set name="icon" val="icon.etc_adena_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="GOLD"/>
         <set name="price" val="1"/>
         <set name="is_sellable" val="false"/>
         <set name="is_commissionable" val="false"/>
@@ -940,7 +888,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="332"/>
         <set name="crystal_type" val="D"/>
-        <set name="material" val="MITHRIL"/>
         <set name="weight" val="8670"/>
         <set name="price" val="183000"/>
         <set name="commissionItemType" val="ARMOR_TOP"/>
@@ -958,7 +905,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="230"/>
         <set name="crystal_type" val="D"/>
-        <set name="material" val="MITHRIL"/>
         <set name="weight" val="3830"/>
         <set name="price" val="127000"/>
         <set name="commissionItemType" val="ARMOR_PANTS"/>
@@ -977,7 +923,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="576"/>
         <set name="crystal_type" val="C"/>
-        <set name="material" val="FINE_STEEL"/>
         <set name="weight" val="10980"/>
         <set name="price" val="1440000"/>
         <set name="commissionItemType" val="FULL_BODY"/>
@@ -994,7 +939,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="177"/>
         <set name="crystal_type" val="D"/>
-        <set name="material" val="MITHRIL"/>
         <set name="weight" val="630"/>
         <set name="price" val="97800"/>
         <set name="commissionItemType" val="GLOVES"/>
@@ -1011,7 +955,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="50"/>
         <set name="crystal_type" val="C"/>
-        <set name="material" val="LEATHER"/>
         <set name="weight" val="1230"/>
         <set name="price" val="126000"/>
         <set name="enchant_enabled" val="1"/>
@@ -1028,7 +971,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="92"/>
         <set name="crystal_type" val="D"/>
-        <set name="material" val="CLOTH"/>
         <set name="weight" val="640"/>
         <set name="price" val="50800"/>
         <set name="commissionItemType" val="GLOVES"/>
@@ -1045,7 +987,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="98"/>
         <set name="crystal_type" val="C"/>
-        <set name="material" val="FINE_STEEL"/>
         <set name="weight" val="1220"/>
         <set name="price" val="245000"/>
         <set name="enchant_enabled" val="1"/>
@@ -1062,7 +1003,6 @@
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="weight" val="1570"/>
         <set name="price" val="54100"/>
         <set name="soulshots" val="1"/>
@@ -1085,7 +1025,6 @@
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="weight" val="1570"/>
         <set name="price" val="54100"/>
         <set name="soulshots" val="1"/>
@@ -1108,7 +1047,6 @@
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="BRONZE"/>
         <set name="weight" val="1530"/>
         <set name="price" val="244000"/>
         <set name="soulshots" val="1"/>
@@ -1133,7 +1071,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="1170"/>
         <set name="crystal_type" val="D"/>
-        <set name="material" val="FINE_STEEL"/>
         <set name="weight" val="1510"/>
         <set name="price" val="644000"/>
         <set name="change_weaponId" val="9213"/>
@@ -1160,7 +1097,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="3272"/>
         <set name="crystal_type" val="D"/>
-        <set name="material" val="FINE_STEEL"/>
         <set name="weight" val="2090"/>
         <set name="price" val="1800000"/>
         <set name="change_weaponId" val="9226"/>
@@ -1188,7 +1124,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="916"/>
         <set name="crystal_type" val="C"/>
-        <set name="material" val="BRONZE"/>
         <set name="weight" val="2010"/>
         <set name="price" val="2290000"/>
         <set name="change_weaponId" val="9232"/>
@@ -1216,7 +1151,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="916"/>
         <set name="crystal_type" val="C"/>
-        <set name="material" val="FINE_STEEL"/>
         <set name="weight" val="1430"/>
         <set name="price" val="2290000"/>
         <set name="change_weaponId" val="9228"/>
@@ -1244,7 +1178,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="1148"/>
         <set name="crystal_type" val="C"/>
-        <set name="material" val="FINE_STEEL"/>
         <set name="weight" val="1420"/>
         <set name="price" val="2870000"/>
         <set name="change_weaponId" val="9240"/>
@@ -1272,7 +1205,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="1148"/>
         <set name="crystal_type" val="C"/>
-        <set name="material" val="FINE_STEEL"/>
         <set name="weight" val="1420"/>
         <set name="price" val="2870000"/>
         <set name="change_weaponId" val="9244"/>
@@ -1300,7 +1232,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="1720"/>
         <set name="crystal_type" val="C"/>
-        <set name="material" val="ORIHARUKON"/>
         <set name="weight" val="1400"/>
         <set name="price" val="4300000"/>
         <set name="change_weaponId" val="9264"/>
@@ -1328,7 +1259,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="1720"/>
         <set name="crystal_type" val="C"/>
-        <set name="material" val="MITHRIL"/>
         <set name="weight" val="1400"/>
         <set name="price" val="4300000"/>
         <set name="change_weaponId" val="9268"/>
@@ -1356,7 +1286,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="1720"/>
         <set name="crystal_type" val="C"/>
-        <set name="material" val="FINE_STEEL"/>
         <set name="weight" val="1400"/>
         <set name="price" val="4300000"/>
         <set name="change_weaponId" val="9272"/>
@@ -1384,7 +1313,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="1157"/>
         <set name="crystal_type" val="B"/>
-        <set name="material" val="STEEL"/>
         <set name="weight" val="1930"/>
         <set name="price" val="8680000"/>
         <set name="change_weaponId" val="9308"/>
@@ -1412,7 +1340,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="1746"/>
         <set name="crystal_type" val="B"/>
-        <set name="material" val="DAMASCUS"/>
         <set name="weight" val="1350"/>
         <set name="price" val="13100000"/>
         <set name="change_weaponId" val="9316"/>
@@ -1440,7 +1367,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="1128"/>
         <set name="crystal_type" val="A"/>
-        <set name="material" val="ADAMANTAITE"/>
         <set name="weight" val="1330"/>
         <set name="price" val="14098000"/>
         <set name="change_weaponId" val="9328"/>
@@ -1468,7 +1394,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="1659"/>
         <set name="crystal_type" val="A"/>
-        <set name="material" val="BONE"/>
         <set name="weight" val="1840"/>
         <set name="price" val="20741000"/>
         <set name="change_weaponId" val="9344"/>
@@ -1495,7 +1420,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="1301"/>
         <set name="crystal_type" val="D"/>
-        <set name="material" val="BRONZE"/>
         <set name="weight" val="970"/>
         <set name="price" val="716000"/>
         <set name="soulshots" val="1"/>
@@ -1523,7 +1447,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="1720"/>
         <set name="crystal_type" val="C"/>
-        <set name="material" val="BLOOD_STEEL"/>
         <set name="weight" val="950"/>
         <set name="price" val="4300000"/>
         <set name="soulshots" val="1"/>
@@ -1550,7 +1473,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="1170"/>
         <set name="crystal_type" val="D"/>
-        <set name="material" val="BRONZE"/>
         <set name="weight" val="1780"/>
         <set name="price" val="644000"/>
         <set name="soulshots" val="1"/>
@@ -1575,7 +1497,6 @@
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="weight" val="1850"/>
         <set name="price" val="244000"/>
         <set name="soulshots" val="1"/>
@@ -1601,7 +1522,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="2545"/>
         <set name="crystal_type" val="D"/>
-        <set name="material" val="STEEL"/>
         <set name="weight" val="1720"/>
         <set name="price" val="1400000"/>
         <set name="soulshots" val="1"/>
@@ -1629,7 +1549,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="916"/>
         <set name="crystal_type" val="C"/>
-        <set name="material" val="FINE_STEEL"/>
         <set name="weight" val="1710"/>
         <set name="price" val="2290000"/>
         <set name="soulshots" val="1"/>
@@ -1656,7 +1575,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="2545"/>
         <set name="crystal_type" val="D"/>
-        <set name="material" val="WOOD"/>
         <set name="weight" val="1000"/>
         <set name="price" val="1400000"/>
         <set name="soulshots" val="1"/>
@@ -1685,7 +1603,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="1157"/>
         <set name="crystal_type" val="B"/>
-        <set name="material" val="FINE_STEEL"/>
         <set name="weight" val="1620"/>
         <set name="price" val="8680000"/>
         <set name="soulshots" val="1"/>
@@ -1713,7 +1630,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="1157"/>
         <set name="crystal_type" val="B"/>
-        <set name="material" val="WOOD"/>
         <set name="weight" val="960"/>
         <set name="price" val="8680000"/>
         <set name="soulshots" val="1"/>
@@ -1741,7 +1657,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="2545"/>
         <set name="crystal_type" val="D"/>
-        <set name="material" val="FINE_STEEL"/>
         <set name="weight" val="2060"/>
         <set name="price" val="1400000"/>
         <set name="soulshots" val="1"/>
@@ -1772,7 +1687,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="1148"/>
         <set name="crystal_type" val="C"/>
-        <set name="material" val="FINE_STEEL"/>
         <set name="weight" val="2020"/>
         <set name="price" val="2870000"/>
         <set name="soulshots" val="1"/>
@@ -1803,7 +1717,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="1720"/>
         <set name="crystal_type" val="C"/>
-        <set name="material" val="BRONZE"/>
         <set name="weight" val="2010"/>
         <set name="price" val="4300000"/>
         <set name="soulshots" val="1"/>
@@ -1834,7 +1747,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="916"/>
         <set name="crystal_type" val="C"/>
-        <set name="material" val="FINE_STEEL"/>
         <set name="weight" val="2040"/>
         <set name="price" val="2290000"/>
         <set name="soulshots" val="1"/>
@@ -1865,7 +1777,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="1746"/>
         <set name="crystal_type" val="B"/>
-        <set name="material" val="BLOOD_STEEL"/>
         <set name="weight" val="1920"/>
         <set name="price" val="13100000"/>
         <set name="soulshots" val="1"/>
@@ -1896,7 +1807,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="1128"/>
         <set name="crystal_type" val="A"/>
-        <set name="material" val="ORIHARUKON"/>
         <set name="weight" val="1900"/>
         <set name="price" val="14098000"/>
         <set name="soulshots" val="1"/>
@@ -1924,7 +1834,6 @@
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="650"/>
         <set name="price" val="12500"/>
         <set name="soulshots" val="1"/>

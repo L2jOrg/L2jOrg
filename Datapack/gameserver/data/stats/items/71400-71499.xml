@@ -6,7 +6,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="brooch_jewel"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="GOLD"/>
         <set name="weight" val="5"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -17,7 +16,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="brooch_jewel"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="GOLD"/>
         <set name="weight" val="5"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -28,7 +26,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="brooch_jewel"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="GOLD"/>
         <set name="weight" val="5"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -39,7 +36,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="brooch_jewel"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="GOLD"/>
         <set name="weight" val="5"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -50,7 +46,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="brooch_jewel"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="GOLD"/>
         <set name="weight" val="5"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -61,7 +56,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="brooch_jewel"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="GOLD"/>
         <set name="weight" val="5"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -72,7 +66,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="brooch_jewel"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="GOLD"/>
         <set name="weight" val="5"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -83,7 +76,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="brooch_jewel"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="GOLD"/>
         <set name="weight" val="5"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -94,7 +86,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="brooch_jewel"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="GOLD"/>
         <set name="weight" val="5"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -105,7 +96,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="brooch_jewel"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="GOLD"/>
         <set name="weight" val="5"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -116,7 +106,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="brooch_jewel"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="GOLD"/>
         <set name="weight" val="5"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -127,7 +116,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="brooch_jewel"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="GOLD"/>
         <set name="weight" val="5"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -138,7 +126,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="brooch_jewel"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="GOLD"/>
         <set name="weight" val="5"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -149,7 +136,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="underwear"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="SILVER"/>
         <set name="weight" val="10"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -157,7 +143,6 @@
     <item id="71414" name="Jewel Power" type="EtcItem">
         <!-- When combined with the jewel, you can obtain an upper level jewel. Cannot be dropped. -->
         <set name="icon" val="icon.bm_blessed_jewel"/>
-        <set name="material" val="PAPER"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
@@ -165,7 +150,6 @@
     <item id="71415" name="Jewel Power Fragment" type="EtcItem">
         <!-- Take it to Dimenstional Merchant to exchange for Jewel Power. Cannot be dropped. -->
         <set name="icon" val="BranchIcon.Icon.g_bm_jewel_energy_piece"/>
-        <set name="material" val="PAPER"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
@@ -175,7 +159,6 @@
         <set name="icon" val="icon.etc_box_of_adventure_1_i00"/>
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="100"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
@@ -190,7 +173,6 @@
         <set name="weapon_type" val="DUALDAGGER"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="BONE"/>
         <set name="weight" val="1000"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
@@ -211,7 +193,6 @@
         <set name="icon" val="icon.etc_box_of_adventure_1_i00"/>
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="100"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
@@ -226,7 +207,6 @@
         <set name="weapon_type" val="DUALDAGGER"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="BONE"/>
         <set name="weight" val="1000"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
@@ -247,7 +227,6 @@
         <set name="icon" val="icon.etc_box_of_adventure_1_i00"/>
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="100"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
@@ -260,7 +239,6 @@
         <set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00"/>
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_depositable" val="false"/>
@@ -270,7 +248,6 @@
     <item id="71422" name="Fishing XP Growth Amulet" additionalName="7-day" type="EtcItem">
         <!-- If stored in the inventory during fishing, for 7-day acquired XP/ SP +30%. If used with High-grade Fishing XP Growth Amulet only the item with higher grade will take effect. Cannot be exchanged, dropped or sold, shared within account. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.fishing_zone_ticket"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_depositable" val="false"/>
@@ -282,7 +259,6 @@
         <set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00"/>
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_depositable" val="false"/>
@@ -292,7 +268,6 @@
     <item id="71424" name="Fishing XP Growth Amulet" additionalName="30-day" type="EtcItem">
         <!-- If stored in the inventory during fishing, for 30-day acquired XP/ SP +30%. If used with High-grade Fishing XP Growth Amulet only the item with higher grade will take effect. Cannot be exchanged, dropped or sold, shared within account. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.fishing_zone_ticket"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_depositable" val="false"/>
@@ -304,7 +279,6 @@
         <set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00"/>
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_depositable" val="false"/>
@@ -316,7 +290,6 @@
         <set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00"/>
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_depositable" val="false"/>
@@ -326,7 +299,6 @@
     <item id="71427" name="High-grade Fishing XP Growth Amulet" additionalName="7-day" type="EtcItem">
         <!-- If stored in the inventory during fishing, acquired XP/ SP +50%. Cannot be exchanged, dropped or sold, shared within account. Can be stored in a private warehouse. Duration: 7-day. -->
         <set name="icon" val="icon.fishing_zone_ticket"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_depositable" val="false"/>
@@ -338,7 +310,6 @@
         <set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00"/>
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_depositable" val="false"/>
@@ -348,7 +319,6 @@
     <item id="71429" name="High-grade Fishing XP Growth Amulet" additionalName="30-day" type="EtcItem">
         <!-- If stored in the inventory during fishing, acquired XP/ SP +50%. Cannot be exchanged, dropped or sold, shared within account. Can be stored in a private warehouse. Duration: 30-day. -->
         <set name="icon" val="icon.fishing_zone_ticket"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_depositable" val="false"/>
@@ -360,7 +330,6 @@
         <set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00"/>
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_depositable" val="false"/>
@@ -372,7 +341,6 @@
         <set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00"/>
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_depositable" val="false"/>
@@ -384,7 +352,6 @@
         <set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00"/>
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_depositable" val="false"/>
@@ -396,7 +363,6 @@
         <set name="icon" val="icon.etc_pi_box_belief_pack"/>
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_depositable" val="false"/>
@@ -408,7 +374,6 @@
         <set name="icon" val="icon.etc_pi_box_love_pack"/>
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_depositable" val="false"/>
@@ -420,7 +385,6 @@
         <set name="icon" val="icon.etc_bm_jewelbox_emerald_i00"/>
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
@@ -429,7 +393,6 @@
         <!-- Double-click to obtain Vital Stone, Pearl, Diamond, Ruby, Sapphire, Jade, Garnet, Topaz, Aquamarine, Red/ Blue Cat's Eye, Emerald Chest (Lv. 1). Cannot be dropped. -->
         <set name="icon" val="BranchIcon.icon.bm_2018_jewelbox_random"/>
         <set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
-        <set name="material" val="PAPER"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
@@ -438,7 +401,6 @@
         <!-- Double-click to obtain one of the following jewels: Garnet, Jade, Ruby, Sapphire, Diamond, Pearl, Vital Stone. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.etc_bm_jewelbox_main_i00"/>
         <set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_depositable" val="false"/>
@@ -448,7 +410,6 @@
     <item id="71438" name="Jewel Coin" type="EtcItem">
         <!-- Can be changed through Collector Pona for Shining Jewel Box or Brouch. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
         <set name="icon" val="BranchIcon.Icon.etc_premium_coin_i00"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_depositable" val="false"/>
@@ -462,7 +423,6 @@
         <set name="armor_type" val="HEAVY"/>
         <set name="bodypart" val="alldress"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="CLOTH"/>
         <set name="weight" val="1000"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
@@ -477,7 +437,6 @@
         <set name="armor_type" val="HEAVY"/>
         <set name="bodypart" val="alldress"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="CLOTH"/>
         <set name="weight" val="1000"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
@@ -492,7 +451,6 @@
         <set name="armor_type" val="HEAVY"/>
         <set name="bodypart" val="alldress"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="CLOTH"/>
         <set name="weight" val="1000"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
@@ -507,7 +465,6 @@
         <set name="armor_type" val="HEAVY"/>
         <set name="bodypart" val="alldress"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="BRONZE"/>
         <set name="weight" val="1000"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
@@ -522,7 +479,6 @@
         <set name="armor_type" val="HEAVY"/>
         <set name="bodypart" val="alldress"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="BRONZE"/>
         <set name="weight" val="1000"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
@@ -537,7 +493,6 @@
         <set name="armor_type" val="HEAVY"/>
         <set name="bodypart" val="alldress"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="BRONZE"/>
         <set name="weight" val="1000"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
@@ -552,7 +507,6 @@
         <set name="armor_type" val="HEAVY"/>
         <set name="bodypart" val="alldress"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="CLOTH"/>
         <set name="weight" val="1000"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
@@ -567,7 +521,6 @@
         <set name="armor_type" val="HEAVY"/>
         <set name="bodypart" val="alldress"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="CLOTH"/>
         <set name="weight" val="1000"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
@@ -582,7 +535,6 @@
         <set name="armor_type" val="HEAVY"/>
         <set name="bodypart" val="alldress"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="CLOTH"/>
         <set name="weight" val="1000"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
@@ -597,7 +549,6 @@
         <set name="armor_type" val="HEAVY"/>
         <set name="bodypart" val="alldress"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="BRONZE"/>
         <set name="weight" val="1000"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
@@ -612,7 +563,6 @@
         <set name="armor_type" val="HEAVY"/>
         <set name="bodypart" val="alldress"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="BRONZE"/>
         <set name="weight" val="1000"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
@@ -627,7 +577,6 @@
         <set name="armor_type" val="HEAVY"/>
         <set name="bodypart" val="alldress"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="CLOTH"/>
         <set name="weight" val="1000"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
@@ -642,7 +591,6 @@
         <set name="armor_type" val="HEAVY"/>
         <set name="bodypart" val="alldress"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="BRONZE"/>
         <set name="weight" val="1000"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
@@ -657,7 +605,6 @@
         <set name="armor_type" val="HEAVY"/>
         <set name="bodypart" val="alldress"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="CLOTH"/>
         <set name="weight" val="1000"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
@@ -672,7 +619,6 @@
         <set name="armor_type" val="HEAVY"/>
         <set name="bodypart" val="alldress"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="BRONZE"/>
         <set name="weight" val="1000"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
@@ -687,7 +633,6 @@
         <set name="armor_type" val="HEAVY"/>
         <set name="bodypart" val="alldress"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LEATHER"/>
         <set name="weight" val="1000"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
@@ -702,7 +647,6 @@
         <set name="armor_type" val="HEAVY"/>
         <set name="bodypart" val="alldress"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="CLOTH"/>
         <set name="weight" val="1000"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
@@ -717,7 +661,6 @@
         <set name="armor_type" val="HEAVY"/>
         <set name="bodypart" val="alldress"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LEATHER"/>
         <set name="weight" val="1000"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
@@ -732,7 +675,6 @@
         <set name="armor_type" val="HEAVY"/>
         <set name="bodypart" val="alldress"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="BRONZE"/>
         <set name="weight" val="1000"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
@@ -747,7 +689,6 @@
         <set name="armor_type" val="HEAVY"/>
         <set name="bodypart" val="alldress"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="BRONZE"/>
         <set name="weight" val="1000"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
@@ -762,7 +703,6 @@
         <set name="armor_type" val="HEAVY"/>
         <set name="bodypart" val="alldress"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="BRONZE"/>
         <set name="weight" val="1000"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
@@ -777,7 +717,6 @@
         <set name="armor_type" val="HEAVY"/>
         <set name="bodypart" val="alldress"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="BRONZE"/>
         <set name="weight" val="1000"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
@@ -792,7 +731,6 @@
         <set name="armor_type" val="HEAVY"/>
         <set name="bodypart" val="alldress"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="BRONZE"/>
         <set name="weight" val="1000"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
@@ -807,7 +745,6 @@
         <set name="armor_type" val="HEAVY"/>
         <set name="bodypart" val="alldress"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="BRONZE"/>
         <set name="weight" val="1000"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
@@ -822,7 +759,6 @@
         <set name="armor_type" val="HEAVY"/>
         <set name="bodypart" val="alldress"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="CLOTH"/>
         <set name="weight" val="1000"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
@@ -837,7 +773,6 @@
         <set name="armor_type" val="HEAVY"/>
         <set name="bodypart" val="alldress"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="BRONZE"/>
         <set name="weight" val="1000"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
@@ -852,7 +787,6 @@
         <set name="armor_type" val="HEAVY"/>
         <set name="bodypart" val="alldress"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="BRONZE"/>
         <set name="weight" val="1000"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
@@ -867,7 +801,6 @@
         <set name="armor_type" val="HEAVY"/>
         <set name="bodypart" val="alldress"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="BRONZE"/>
         <set name="weight" val="1000"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
@@ -882,7 +815,6 @@
         <set name="armor_type" val="HEAVY"/>
         <set name="bodypart" val="alldress"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="BRONZE"/>
         <set name="weight" val="1000"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
@@ -897,7 +829,6 @@
         <set name="armor_type" val="HEAVY"/>
         <set name="bodypart" val="alldress"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="BRONZE"/>
         <set name="weight" val="1000"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
@@ -912,7 +843,6 @@
         <set name="armor_type" val="HEAVY"/>
         <set name="bodypart" val="alldress"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="BRONZE"/>
         <set name="weight" val="1000"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
@@ -927,7 +857,6 @@
         <set name="armor_type" val="HEAVY"/>
         <set name="bodypart" val="alldress"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="BRONZE"/>
         <set name="weight" val="1000"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
@@ -942,7 +871,6 @@
         <set name="armor_type" val="HEAVY"/>
         <set name="bodypart" val="alldress"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="BRONZE"/>
         <set name="weight" val="1000"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
@@ -957,7 +885,6 @@
         <set name="armor_type" val="HEAVY"/>
         <set name="bodypart" val="alldress"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="BRONZE"/>
         <set name="weight" val="1000"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
@@ -972,7 +899,6 @@
         <set name="armor_type" val="HEAVY"/>
         <set name="bodypart" val="alldress"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="BRONZE"/>
         <set name="weight" val="1000"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
@@ -987,7 +913,6 @@
         <set name="armor_type" val="HEAVY"/>
         <set name="bodypart" val="alldress"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="CLOTH"/>
         <set name="weight" val="1000"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
@@ -1002,7 +927,6 @@
         <set name="armor_type" val="HEAVY"/>
         <set name="bodypart" val="alldress"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="BRONZE"/>
         <set name="weight" val="1000"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
@@ -1017,7 +941,6 @@
         <set name="armor_type" val="HEAVY"/>
         <set name="bodypart" val="alldress"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="BRONZE"/>
         <set name="weight" val="1000"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
@@ -1032,7 +955,6 @@
         <set name="armor_type" val="HEAVY"/>
         <set name="bodypart" val="alldress"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="BRONZE"/>
         <set name="weight" val="1000"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
@@ -1044,7 +966,6 @@
         <!-- The book allows you to obtain Standard Santa Claus appearance. Cannot be dropped or sold in the grocery store. -->
         <set name="icon" val="BranchIcon.Icon.g_bm_costume_santa"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
@@ -1053,7 +974,6 @@
         <!-- The book allows you to obtain High-grade Santa Claus appearance. Cannot be dropped or sold in the grocery store. -->
         <set name="icon" val="BranchIcon.Icon.g_bm_costume_santa"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
@@ -1062,7 +982,6 @@
         <!-- The book allows you to obtain Rare Santa Claus appearance. Cannot be dropped or sold in the grocery store. -->
         <set name="icon" val="BranchIcon.Icon.g_bm_costume_santa"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
@@ -1071,7 +990,6 @@
         <!-- The book allows you to obtain Legendary Santa Claus appearance. Cannot be dropped or sold in the grocery store. -->
         <set name="icon" val="BranchIcon.Icon.g_bm_costume_santa"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
@@ -1080,7 +998,6 @@
         <!-- The book allows you to obtain Mythic Santa Claus appearance. Cannot be dropped or sold in the grocery store. -->
         <set name="icon" val="BranchIcon.Icon.g_bm_costume_santa"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
@@ -1089,7 +1006,6 @@
         <!-- The book allows you to obtain Standard School Uniform A appearance. Cannot be dropped or sold in the grocery store. -->
         <set name="icon" val="BranchSys3.icon1.Br_schoollook"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
@@ -1098,7 +1014,6 @@
         <!-- The book allows you to obtain High-grade School Uniform A appearance. Cannot be dropped or sold in the grocery store. -->
         <set name="icon" val="BranchSys3.icon1.Br_schoollook"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
@@ -1107,7 +1022,6 @@
         <!-- The book allows you to obtain Rare School Uniform A appearance. Cannot be dropped or sold in the grocery store. -->
         <set name="icon" val="BranchSys3.icon1.Br_schoollook"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
@@ -1116,7 +1030,6 @@
         <!-- The book allows you to obtain Legendary School Uniform A appearance. Cannot be dropped or sold in the grocery store. -->
         <set name="icon" val="BranchSys3.icon1.Br_schoollook"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
@@ -1125,7 +1038,6 @@
         <!-- The book allows you to obtain Mythic School Uniform A appearance. Cannot be dropped or sold in the grocery store. -->
         <set name="icon" val="BranchSys3.icon1.Br_schoollook"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
@@ -1134,7 +1046,6 @@
         <!-- The book allows you to obtain Standard Beach Swimsuit appearance. Cannot be dropped or sold in the grocery store. -->
         <set name="icon" val="BranchIcon.Icon.g_bm_costume_swimsuit_a"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
@@ -1143,7 +1054,6 @@
         <!-- The book allows you to obtain High-grade Beach Swimsuit appearance. Cannot be dropped or sold in the grocery store. -->
         <set name="icon" val="BranchIcon.Icon.g_bm_costume_swimsuit_a"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
@@ -1152,7 +1062,6 @@
         <!-- The book allows you to obtain Rare Beach Swimsuit appearance. Cannot be dropped or sold in the grocery store. -->
         <set name="icon" val="BranchIcon.Icon.g_bm_costume_swimsuit_a"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
@@ -1161,7 +1070,6 @@
         <!-- The book allows you to obtain Legendary Beach Swimsuit appearance. Cannot be dropped or sold in the grocery store. -->
         <set name="icon" val="BranchIcon.Icon.g_bm_costume_swimsuit_a"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
@@ -1170,7 +1078,6 @@
         <!-- The book allows you to obtain Mythic Beach Swimsuit appearance. Cannot be dropped or sold in the grocery store. -->
         <set name="icon" val="BranchIcon.Icon.g_bm_costume_swimsuit_a"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
@@ -1179,7 +1086,6 @@
         <!-- The book allows you to obtain Standard Teddy Bear appearance. Cannot be dropped or sold in the grocery store. -->
         <set name="icon" val="icon.gomdori_chest_change"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
@@ -1188,7 +1094,6 @@
         <!-- The book allows you to obtain High-grade Teddy Bear appearance. Cannot be dropped or sold in the grocery store. -->
         <set name="icon" val="icon.gomdori_chest_change"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
@@ -1197,7 +1102,6 @@
         <!-- The book allows you to obtain Rare Teddy Bear appearance. Cannot be dropped or sold in the grocery store. -->
         <set name="icon" val="icon.gomdori_chest_change"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
@@ -1206,7 +1110,6 @@
         <!-- The book allows you to obtain Legendary Teddy Bear appearance. Cannot be dropped or sold in the grocery store. -->
         <set name="icon" val="icon.gomdori_chest_change"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
@@ -1215,7 +1118,6 @@
         <!-- The book allows you to obtain Mythic Teddy Bear appearance. Cannot be dropped or sold in the grocery store. -->
         <set name="icon" val="icon.gomdori_chest_change"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
@@ -1224,7 +1126,6 @@
         <!-- The book allows you to obtain Standard Toy Cat appearance. Cannot be dropped or sold in the grocery store. -->
         <set name="icon" val="icon.sayha2017_cat"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
@@ -1233,7 +1134,6 @@
         <!-- The book allows you to obtain High-grade Toy Cat appearance. Cannot be dropped or sold in the grocery store. -->
         <set name="icon" val="icon.sayha2017_cat"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>

@@ -6,7 +6,6 @@
         <set name="weapon_type" val="DUAL"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="FINE_STEEL"/>
         <set name="soulshots" val="1"/>
         <set name="spiritshots" val="1"/>
         <stats>
@@ -21,7 +20,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="FINE_STEEL"/>
         <set name="weight" val="1560"/>
         <set name="soulshots" val="2"/>
         <set name="spiritshots" val="2"/>
@@ -37,7 +35,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="FINE_STEEL"/>
         <set name="weight" val="1560"/>
         <set name="soulshots" val="2"/>
         <set name="spiritshots" val="2"/>
@@ -54,7 +51,6 @@
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="30"/>
         <set name="price" val="8180"/>
         <set name="recipe_id" val="783"/>
@@ -68,7 +64,6 @@
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="30"/>
         <set name="price" val="73200"/>
         <set name="recipe_id" val="815"/>

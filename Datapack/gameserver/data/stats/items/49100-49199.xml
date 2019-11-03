@@ -4,7 +4,6 @@
         <!-- Magic stone, used to teleport the character to Floran. Cooldown: 60 minutes. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.etc_capture_stone_i00"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="120"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
@@ -15,7 +14,6 @@
         <!-- Magic stone, used to teleport the character to Giran. Cooldown: 60 minutes. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.etc_capture_stone_i00"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="120"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
@@ -26,7 +24,6 @@
         <!-- Magic stone, used to teleport the character to Oren. Cooldown: 60 minutes. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.etc_capture_stone_i00"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="120"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
@@ -37,7 +34,6 @@
         <!-- Magic stone, used to teleport the character to Ivory Tower. Cooldown: 60 minutes. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.etc_capture_stone_i00"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="120"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
@@ -48,7 +44,6 @@
         <!-- Magic stone, used to teleport the character to Hunter's Village. Cooldown: 60 minutes. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.etc_capture_stone_i00"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="120"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
@@ -59,7 +54,6 @@
         <!-- Magic stone, used to teleport the character to the Entrance to Cruma Tower. Cooldown: 60 minutes. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.etc_capture_stone_i00"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="120"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
@@ -70,7 +64,6 @@
         <!-- Magic stone, used to teleport the character to Dragon Valley. Cooldown: 60 minutes. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.etc_capture_stone_i00"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="120"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
@@ -81,7 +74,6 @@
         <!-- Magic stone, used to teleport the character to Dragon Valley Bridge. Cooldown: 60 minutes. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.etc_capture_stone_i00"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="120"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
@@ -92,21 +84,18 @@
         <!-- Double-click the chest to get one of the next items: Dye Potion Pack / Facelifting Potion Pack / Mystic Potion. -->
         <set name="icon" val="icon.etc_box_of_adventure_2_i00"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="is_stackable" val="true"/>
     </item>
     <item id="49109" name="Buff Scrolls Chest" type="EtcItem">
         <!-- Double-click the chest to get one of the next items: Scroll: Empower / Scroll: Might / Scroll: Defence. -->
         <set name="icon" val="icon.etc_box_of_adventure_3_i00"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="is_stackable" val="true"/>
     </item>
     <item id="49110" name="High-Quality Dye Chest" type="EtcItem">
         <!-- Double-click the chest to get one of the next items: Greater Dye of STR / Greater Dye of CON / Greater Dye of DEX / Greater Dye of INT / Greater Dye of WIT / Greater Dye of MEN. -->
         <set name="icon" val="icon.etc_box_of_adventure_4_i00"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="is_stackable" val="true"/>
         <set name="handler" val="ItemSkills"/>
         <set name="immediate_effect" val="true"/>
@@ -118,7 +107,6 @@
         <!-- Double-click the chest to get one of the next items: Dye of STR / Dye of CON / Dye of DEX / Dye of INT / Dye of WIT / Dye of MEN. -->
         <set name="icon" val="icon.etc_box_of_adventure_5_i00"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="is_stackable" val="true"/>
         <set name="handler" val="ItemSkills"/>
         <set name="immediate_effect" val="true"/>
@@ -130,49 +118,42 @@
         <!-- Double-click the chest to get one of the next items: Cursed Staff / Crystal Staff / Sage's Staff / Demon's Staff. -->
         <set name="icon" val="icon.etc_treasure_box_i02"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="is_stackable" val="true"/>
     </item>
     <item id="49113" name="Fist Weapon Chest" additionalName="Grade C" type="EtcItem">
         <!-- Double-click the chest to get one of the next items: Knuckle Duster / Chakram / Fisted Blade / Great Pata. -->
         <set name="icon" val="icon.etc_treasure_box_i03"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="is_stackable" val="true"/>
     </item>
     <item id="49114" name="Spear Chest" additionalName="Grade C" type="EtcItem">
         <!-- Double-click the chest to get one of the next items: Bec de Corbin / Orcish Glaive / Poleaxe / Orcish Poleaxe. -->
         <set name="icon" val="icon.etc_treasure_box_i04"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="is_stackable" val="true"/>
     </item>
     <item id="49115" name="Blunt Weapon Chest" additionalName="Grade C" type="EtcItem">
         <!-- Double-click the chest to get one of the next items: Dwarven War Hammer / Heavy Doom Hammer / War Axe / Yaksa Mace. -->
         <set name="icon" val="icon.etc_treasure_box_i05"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="is_stackable" val="true"/>
     </item>
     <item id="49116" name="Dagger Chest" additionalName="Grade C" type="EtcItem">
         <!-- Double-click the chest to get one of the next items: Stiletto / Cursed Dagger / Dark Screamer / Crystal Dagger. -->
         <set name="icon" val="icon.etc_treasure_box_i06"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="is_stackable" val="true"/>
     </item>
     <item id="49117" name="One-Handed Sword Chest" additionalName="Grade C" type="EtcItem">
         <!-- Double-click the chest to get one of the next items: Katana / StormBringer / Sword of Delusion / Samurai Long Sword. -->
         <set name="icon" val="icon.etc_treasure_box_i07"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="is_stackable" val="true"/>
     </item>
     <item id="49118" name="Bow Chest" additionalName="Grade C" type="EtcItem">
         <!-- Double-click the chest to get one of the next items: Elemental Bow / Crystallized Ice Bow / Akat Longbow / Eminence Bow. -->
         <set name="icon" val="icon.etc_treasure_box_i08"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="is_stackable" val="true"/>
     </item>
     <item id="49119" name="Halloween Suit (15-day)" type="Armor">
@@ -182,7 +163,6 @@
         <set name="armor_type" val="HEAVY"/>
         <set name="bodypart" val="alldress"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="CLOTH"/>
         <set name="weight" val="1000"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
@@ -195,7 +175,6 @@
         <set name="armor_type" val="HEAVY"/>
         <set name="bodypart" val="alldress"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="CLOTH"/>
         <set name="weight" val="1000"/>
         <set name="is_dropable" val="false"/>
     </item>
@@ -205,7 +184,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="hair"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="WOOD"/>
         <set name="weight" val="10"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
@@ -217,7 +195,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="rfinger;lfinger"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="GOLD"/>
         <set name="weight" val="150"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
@@ -232,7 +209,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="rfinger;lfinger"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="GOLD"/>
         <set name="weight" val="150"/>
         <stats>
             <stat type="mDef">20</stat>
@@ -244,7 +220,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="rear;lear"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="SILVER"/>
         <set name="weight" val="150"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
@@ -260,7 +235,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="rear;lear"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="SILVER"/>
         <set name="weight" val="150"/>
         <stats>
             <stat type="mDef">30</stat>
@@ -273,7 +247,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="neck"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="SILVER"/>
         <set name="weight" val="150"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
@@ -289,7 +262,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="neck"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="SILVER"/>
         <set name="weight" val="150"/>
         <stats>
             <stat type="mDef">40</stat>
@@ -300,7 +272,6 @@
         <!-- Reward for participation in the even. Double-click the chest to receive one of the following items: High-Quality Dye Chest, Dye Chest, Beauty Chest, Buff Scrolls Chest, Major Healing Potion. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. This item will be deleted after the event is over. -->
         <set name="icon" val="icon.new_user_box"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_depositable" val="false"/>
@@ -309,7 +280,6 @@
     <item id="49129" name="11th Anniversary Coin" type="EtcItem">
         <!-- Coin used to exchange special items during the 11th Sale. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. This item will be deleted after the event is over. -->
         <set name="icon" val="icon.etc_11th_token"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_destroyable" val="false"/>
@@ -321,7 +291,6 @@
         <!-- Double-click the item to summon Byo. Summoned Byo names a random number from 1 to 6. If your number is bigger than Byo's, you can receive the Adena. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. This item will be deleted after the event is over. -->
         <set name="icon" val="icon.etc_11th_event_solo"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_depositable" val="false"/>
@@ -331,7 +300,6 @@
         <!-- Double-click the item to choose a random number from 1 to 6. All characters who own a Cube can participate in this event. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. This item will be deleted after the event is over. -->
         <set name="icon" val="icon.etc_11th_event_group"/>
         <set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_destroyable" val="false"/>
@@ -340,7 +308,6 @@
     <item id="49132" name="Membership Card" additionalName="11th Sale" type="EtcItem">
         <!-- Membership Card given to VIP members of the 11th Sale. When in inventory, you can receive the 11th Anniversary buffs and coins from the 11th NPC. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. This item will be deleted after the event is over. -->
         <set name="icon" val="icon.ev_buff_11th"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_destroyable" val="false"/>
@@ -349,7 +316,6 @@
     <item id="49133" name="Venetian Fleece - Low Level" additionalName="15-day" type="EtcItem">
         <!-- A 15-day item. When in inventory, your XP and SP gain is increased by 22%. Can be used only by characters whose level is less than 40. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. This item will be removed after the event is over. -->
         <set name="icon" val="icon.skill19226"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_depositable" val="false"/>
@@ -362,7 +328,6 @@
         <set name="weapon_type" val="DUAL"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="FINE_STEEL"/>
         <set name="weight" val="2530"/>
         <set name="soulshots" val="1"/>
         <set name="spiritshots" val="1"/>
@@ -386,7 +351,6 @@
         <set name="weapon_type" val="DUAL"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="FINE_STEEL"/>
         <set name="weight" val="2530"/>
         <set name="soulshots" val="1"/>
         <set name="spiritshots" val="1"/>
@@ -402,7 +366,6 @@
     <item id="49136" name="Venetian Fleece - High Level" additionalName="15-day" type="EtcItem">
         <!-- 15-day item. When in inventory, your XP and SP gain is increased by 11%. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. This item will be deleted after the event is over. -->
         <set name="icon" val="icon.skill19226"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_depositable" val="false"/>
@@ -413,7 +376,6 @@
         <set name="icon" val="icon.etc_pi_box_belief_pack"/>
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_destroyable" val="false"/>
@@ -427,7 +389,6 @@
         <set name="icon" val="icon.etc_pi_box_love_pack"/>
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_destroyable" val="false"/>
@@ -441,7 +402,6 @@
         <set name="icon" val="icon.etc_pi_box_joy_pack"/>
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_destroyable" val="false"/>
@@ -458,7 +418,6 @@
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="C"/>
-        <set name="material" val="STEEL"/>
         <set name="weight" val="540"/>
         <set name="soulshots" val="1"/>
         <set name="spiritshots" val="1"/>
@@ -480,7 +439,6 @@
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="C"/>
-        <set name="material" val="STEEL"/>
         <set name="weight" val="540"/>
         <set name="soulshots" val="1"/>
         <set name="spiritshots" val="1"/>
@@ -502,7 +460,6 @@
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="C"/>
-        <set name="material" val="STEEL"/>
         <set name="weight" val="540"/>
         <set name="soulshots" val="1"/>
         <set name="spiritshots" val="1"/>
@@ -524,7 +481,6 @@
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="B"/>
-        <set name="material" val="FINE_STEEL"/>
         <set name="weight" val="1440"/>
         <set name="soulshots" val="1"/>
         <set name="spiritshots" val="1"/>
@@ -547,7 +503,6 @@
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="B"/>
-        <set name="material" val="FINE_STEEL"/>
         <set name="weight" val="1440"/>
         <set name="soulshots" val="1"/>
         <set name="spiritshots" val="1"/>
@@ -570,7 +525,6 @@
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="B"/>
-        <set name="material" val="FINE_STEEL"/>
         <set name="weight" val="1440"/>
         <set name="soulshots" val="1"/>
         <set name="spiritshots" val="1"/>
@@ -593,7 +547,6 @@
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="D"/>
-        <set name="material" val="FINE_STEEL"/>
         <set name="weight" val="1510"/>
         <set name="soulshots" val="1"/>
         <set name="spiritshots" val="1"/>
@@ -615,7 +568,6 @@
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="D"/>
-        <set name="material" val="FINE_STEEL"/>
         <set name="weight" val="1510"/>
         <set name="soulshots" val="1"/>
         <set name="spiritshots" val="1"/>
@@ -637,7 +589,6 @@
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="D"/>
-        <set name="material" val="FINE_STEEL"/>
         <set name="weight" val="1510"/>
         <set name="soulshots" val="1"/>
         <set name="spiritshots" val="1"/>
@@ -659,7 +610,6 @@
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="D"/>
-        <set name="material" val="STEEL"/>
         <set name="weight" val="1520"/>
         <set name="soulshots" val="1"/>
         <set name="spiritshots" val="1"/>
@@ -681,7 +631,6 @@
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="D"/>
-        <set name="material" val="STEEL"/>
         <set name="weight" val="1520"/>
         <set name="soulshots" val="1"/>
         <set name="spiritshots" val="1"/>
@@ -703,7 +652,6 @@
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="D"/>
-        <set name="material" val="STEEL"/>
         <set name="weight" val="1520"/>
         <set name="soulshots" val="1"/>
         <set name="spiritshots" val="1"/>
@@ -725,7 +673,6 @@
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="D"/>
-        <set name="material" val="BONE"/>
         <set name="weight" val="1510"/>
         <set name="soulshots" val="1"/>
         <set name="spiritshots" val="1"/>
@@ -747,7 +694,6 @@
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="D"/>
-        <set name="material" val="BONE"/>
         <set name="weight" val="1510"/>
         <set name="soulshots" val="1"/>
         <set name="spiritshots" val="1"/>
@@ -769,7 +715,6 @@
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="D"/>
-        <set name="material" val="BONE"/>
         <set name="weight" val="1510"/>
         <set name="soulshots" val="1"/>
         <set name="spiritshots" val="1"/>
@@ -791,7 +736,6 @@
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="D"/>
-        <set name="material" val="STEEL"/>
         <set name="weight" val="1500"/>
         <set name="soulshots" val="1"/>
         <set name="spiritshots" val="1"/>
@@ -813,7 +757,6 @@
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="D"/>
-        <set name="material" val="STEEL"/>
         <set name="weight" val="1500"/>
         <set name="soulshots" val="1"/>
         <set name="spiritshots" val="1"/>
@@ -835,7 +778,6 @@
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="D"/>
-        <set name="material" val="STEEL"/>
         <set name="weight" val="1500"/>
         <set name="soulshots" val="1"/>
         <set name="spiritshots" val="1"/>
@@ -857,7 +799,6 @@
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="D"/>
-        <set name="material" val="FINE_STEEL"/>
         <set name="weight" val="1490"/>
         <set name="soulshots" val="1"/>
         <set name="spiritshots" val="1"/>
@@ -879,7 +820,6 @@
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="D"/>
-        <set name="material" val="FINE_STEEL"/>
         <set name="weight" val="1490"/>
         <set name="soulshots" val="1"/>
         <set name="spiritshots" val="1"/>
@@ -901,7 +841,6 @@
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="D"/>
-        <set name="material" val="FINE_STEEL"/>
         <set name="weight" val="1490"/>
         <set name="soulshots" val="1"/>
         <set name="spiritshots" val="1"/>
@@ -923,7 +862,6 @@
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="D"/>
-        <set name="material" val="STEEL"/>
         <set name="weight" val="1500"/>
         <set name="soulshots" val="1"/>
         <set name="spiritshots" val="1"/>
@@ -945,7 +883,6 @@
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="D"/>
-        <set name="material" val="STEEL"/>
         <set name="weight" val="1500"/>
         <set name="soulshots" val="1"/>
         <set name="spiritshots" val="1"/>
@@ -967,7 +904,6 @@
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="D"/>
-        <set name="material" val="STEEL"/>
         <set name="weight" val="1500"/>
         <set name="soulshots" val="1"/>
         <set name="spiritshots" val="1"/>
@@ -989,7 +925,6 @@
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="D"/>
-        <set name="material" val="FINE_STEEL"/>
         <set name="weight" val="1450"/>
         <set name="soulshots" val="1"/>
         <set name="spiritshots" val="1"/>
@@ -1011,7 +946,6 @@
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="D"/>
-        <set name="material" val="FINE_STEEL"/>
         <set name="weight" val="1450"/>
         <set name="soulshots" val="1"/>
         <set name="spiritshots" val="1"/>
@@ -1033,7 +967,6 @@
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="D"/>
-        <set name="material" val="FINE_STEEL"/>
         <set name="weight" val="1450"/>
         <set name="soulshots" val="1"/>
         <set name="spiritshots" val="1"/>
@@ -1055,7 +988,6 @@
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="D"/>
-        <set name="material" val="MITHRIL"/>
         <set name="weight" val="1470"/>
         <set name="soulshots" val="1"/>
         <set name="spiritshots" val="1"/>
@@ -1077,7 +1009,6 @@
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="D"/>
-        <set name="material" val="MITHRIL"/>
         <set name="weight" val="1470"/>
         <set name="soulshots" val="1"/>
         <set name="spiritshots" val="1"/>
@@ -1099,7 +1030,6 @@
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="D"/>
-        <set name="material" val="MITHRIL"/>
         <set name="weight" val="1470"/>
         <set name="soulshots" val="1"/>
         <set name="spiritshots" val="1"/>
@@ -1121,7 +1051,6 @@
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="D"/>
-        <set name="material" val="FINE_STEEL"/>
         <set name="weight" val="1440"/>
         <set name="soulshots" val="1"/>
         <set name="spiritshots" val="1"/>
@@ -1143,7 +1072,6 @@
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="D"/>
-        <set name="material" val="FINE_STEEL"/>
         <set name="weight" val="1440"/>
         <set name="soulshots" val="1"/>
         <set name="spiritshots" val="1"/>
@@ -1165,7 +1093,6 @@
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="D"/>
-        <set name="material" val="FINE_STEEL"/>
         <set name="weight" val="1440"/>
         <set name="soulshots" val="1"/>
         <set name="spiritshots" val="1"/>
@@ -1187,7 +1114,6 @@
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="D"/>
-        <set name="material" val="BRONZE"/>
         <set name="weight" val="1780"/>
         <set name="soulshots" val="1"/>
         <set name="spiritshots" val="1"/>
@@ -1210,7 +1136,6 @@
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="D"/>
-        <set name="material" val="BRONZE"/>
         <set name="weight" val="1780"/>
         <set name="soulshots" val="1"/>
         <set name="spiritshots" val="1"/>
@@ -1233,7 +1158,6 @@
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="D"/>
-        <set name="material" val="BRONZE"/>
         <set name="weight" val="1780"/>
         <set name="soulshots" val="1"/>
         <set name="spiritshots" val="1"/>
@@ -1256,7 +1180,6 @@
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="D"/>
-        <set name="material" val="STEEL"/>
         <set name="weight" val="1720"/>
         <set name="soulshots" val="1"/>
         <set name="spiritshots" val="1"/>
@@ -1279,7 +1202,6 @@
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="D"/>
-        <set name="material" val="STEEL"/>
         <set name="weight" val="1720"/>
         <set name="soulshots" val="1"/>
         <set name="spiritshots" val="1"/>
@@ -1302,7 +1224,6 @@
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="D"/>
-        <set name="material" val="STEEL"/>
         <set name="weight" val="1720"/>
         <set name="soulshots" val="1"/>
         <set name="spiritshots" val="1"/>
@@ -1325,7 +1246,6 @@
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="D"/>
-        <set name="material" val="STEEL"/>
         <set name="weight" val="1820"/>
         <set name="soulshots" val="1"/>
         <set name="spiritshots" val="1"/>
@@ -1348,7 +1268,6 @@
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="D"/>
-        <set name="material" val="STEEL"/>
         <set name="weight" val="1820"/>
         <set name="soulshots" val="1"/>
         <set name="spiritshots" val="1"/>
@@ -1371,7 +1290,6 @@
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="D"/>
-        <set name="material" val="STEEL"/>
         <set name="weight" val="1820"/>
         <set name="soulshots" val="1"/>
         <set name="spiritshots" val="1"/>
@@ -1394,7 +1312,6 @@
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="D"/>
-        <set name="material" val="STEEL"/>
         <set name="weight" val="1750"/>
         <set name="soulshots" val="1"/>
         <set name="spiritshots" val="1"/>
@@ -1417,7 +1334,6 @@
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="D"/>
-        <set name="material" val="STEEL"/>
         <set name="weight" val="1750"/>
         <set name="soulshots" val="1"/>
         <set name="spiritshots" val="1"/>
@@ -1440,7 +1356,6 @@
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="D"/>
-        <set name="material" val="STEEL"/>
         <set name="weight" val="1750"/>
         <set name="soulshots" val="1"/>
         <set name="spiritshots" val="1"/>
@@ -1463,7 +1378,6 @@
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="D"/>
-        <set name="material" val="FINE_STEEL"/>
         <set name="weight" val="1730"/>
         <set name="soulshots" val="1"/>
         <set name="spiritshots" val="1"/>
@@ -1486,7 +1400,6 @@
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="D"/>
-        <set name="material" val="FINE_STEEL"/>
         <set name="weight" val="1730"/>
         <set name="soulshots" val="1"/>
         <set name="spiritshots" val="1"/>
@@ -1509,7 +1422,6 @@
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="D"/>
-        <set name="material" val="FINE_STEEL"/>
         <set name="weight" val="1730"/>
         <set name="soulshots" val="1"/>
         <set name="spiritshots" val="1"/>
@@ -1532,7 +1444,6 @@
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="D"/>
-        <set name="material" val="FINE_STEEL"/>
         <set name="weight" val="1720"/>
         <set name="soulshots" val="1"/>
         <set name="spiritshots" val="1"/>
@@ -1555,7 +1466,6 @@
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="D"/>
-        <set name="material" val="FINE_STEEL"/>
         <set name="weight" val="1720"/>
         <set name="soulshots" val="1"/>
         <set name="spiritshots" val="1"/>
@@ -1578,7 +1488,6 @@
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="D"/>
-        <set name="material" val="FINE_STEEL"/>
         <set name="weight" val="1720"/>
         <set name="soulshots" val="1"/>
         <set name="spiritshots" val="1"/>
@@ -1601,7 +1510,6 @@
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="D"/>
-        <set name="material" val="STEEL"/>
         <set name="weight" val="1800"/>
         <set name="soulshots" val="1"/>
         <set name="spiritshots" val="1"/>
@@ -1624,7 +1532,6 @@
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="D"/>
-        <set name="material" val="STEEL"/>
         <set name="weight" val="1800"/>
         <set name="soulshots" val="1"/>
         <set name="spiritshots" val="1"/>
@@ -1647,7 +1554,6 @@
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="D"/>
-        <set name="material" val="STEEL"/>
         <set name="weight" val="1800"/>
         <set name="soulshots" val="1"/>
         <set name="spiritshots" val="1"/>
@@ -1670,7 +1576,6 @@
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="D"/>
-        <set name="material" val="STEEL"/>
         <set name="weight" val="1810"/>
         <set name="soulshots" val="1"/>
         <set name="spiritshots" val="1"/>
@@ -1693,7 +1598,6 @@
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="D"/>
-        <set name="material" val="STEEL"/>
         <set name="weight" val="1810"/>
         <set name="soulshots" val="1"/>
         <set name="spiritshots" val="1"/>
@@ -1716,7 +1620,6 @@
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="D"/>
-        <set name="material" val="STEEL"/>
         <set name="weight" val="1810"/>
         <set name="soulshots" val="1"/>
         <set name="spiritshots" val="1"/>
@@ -1739,7 +1642,6 @@
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="D"/>
-        <set name="material" val="STEEL"/>
         <set name="weight" val="1790"/>
         <set name="soulshots" val="1"/>
         <set name="spiritshots" val="1"/>
@@ -1762,7 +1664,6 @@
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="D"/>
-        <set name="material" val="STEEL"/>
         <set name="weight" val="1790"/>
         <set name="soulshots" val="1"/>
         <set name="spiritshots" val="1"/>
@@ -1785,7 +1686,6 @@
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="D"/>
-        <set name="material" val="STEEL"/>
         <set name="weight" val="1790"/>
         <set name="soulshots" val="1"/>
         <set name="spiritshots" val="1"/>

@@ -4,7 +4,6 @@
         <!-- Magic scroll used to quickly teleport the character to the nearest town. -->
         <set name="icon" val="icon.etc_scroll_of_return_i01"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="120"/>
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
@@ -13,7 +12,6 @@
         <!-- Increases XP/SP gain + 10% for 20 minutes. The item cannot be dropped. -->
         <set name="icon" val="icon.ev_invasion_buff_box"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
@@ -31,7 +29,6 @@
         <!-- Magic scroll, that teleports one to Giran Harbor. -->
         <set name="icon" val="icon.etc_scroll_of_return_i05"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="30"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
@@ -54,7 +51,6 @@
         <!-- Magic scroll, that teleports one to Gludin Harbor. -->
         <set name="icon" val="icon.etc_scroll_of_return_i05"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="30"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
@@ -76,7 +72,6 @@
     <item id="49504" name="Report about Fish" type="EtcItem">
         <!-- Report of Analysis Result of local fish. Take it to water researcher Baikal. -->
         <set name="icon" val="icon.mercenary_certification_i00"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_depositable" val="false"/>
@@ -86,7 +81,6 @@
     <item id="49505" name="Sealed Bottle" type="EtcItem">
         <!-- A bottle filled with water polluting substance. Take it to Fisher Pierre. -->
         <set name="icon" val="icon.etc_hot_spring_glass_bottle_i00"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_depositable" val="false"/>
@@ -100,7 +94,6 @@
         <set name="weapon_type" val="FISHINGROD"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="BONE"/>
         <set name="weight" val="1000"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
@@ -121,7 +114,6 @@
         <set name="icon" val="icon.etc_box_of_adventure_1_i00"/>
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="100"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
@@ -139,7 +131,6 @@
         <set name="icon" val="icon.etc_huge_lure"/>
         <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_depositable" val="false"/>
@@ -153,7 +144,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="rfinger;lfinger"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="GOLD"/>
         <set name="weight" val="150"/>
         <set name="is_clan_depositable" val="false"/>
         <set name="is_private_storeable" val="true"/>
@@ -177,7 +167,6 @@
     <item id="49510" name="Pierre's letter" type="EtcItem">
         <!-- Urgent message from Fisherman Pierre. Take it to Ferma. -->
         <set name="icon" val="icon.etc_letter_envelope_i00"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_depositable" val="false"/>
@@ -188,7 +177,6 @@
         <!-- You can obtain Spellbook Box, Rare Accessory Pack (15-day), Fishing kit, High Rank Scroll of Escape (Event), Quick Healing Potion, Warrior's Major Healing Potion. Cannot be exchanged, dropped or sold in a private store. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.etc_treasure_box_i00"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_depositable" val="false"/>
@@ -199,7 +187,6 @@
     <item id="49512" name="Amulet: Prosperity" additionalName="14-day" type="EtcItem">
         <!-- A 14-day item. When in inventory, you get STR +1, DEX +1, CON + 1, INT +1, WIT +1, MEN +1. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. This item will be deleted after the event is over. -->
         <set name="icon" val="BranchSys3.lcon.g_rune_itemdrop_up"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_depositable" val="false"/>
@@ -218,7 +205,6 @@
         <set name="icon" val="icon.bm_special_pendant_abradant_box"/>
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
@@ -228,7 +214,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="underwear"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="SILVER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_depositable" val="false"/>
@@ -241,7 +226,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="underwear"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="SILVER"/>
         <set name="is_sellable" val="false"/>
     </item>
     <item id="49516" name="Agathion - Aries" type="Armor">
@@ -250,14 +234,12 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="underwear"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="SILVER"/>
         <set name="is_sellable" val="false"/>
     </item>
     <item id="49517" name="Pirate Trophy Chest" type="EtcItem">
         <!-- Double-click to get 2 Special Pirate Fruit. With a bit of luck you may receive Pirate King's Treasure Chest. -->
         <set name="icon" val="icon.bm_pirate_battle_box"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
@@ -265,7 +247,6 @@
         <!-- For 20 minutes, P./M. Atk. +7%, P./M. Def. +10%, Max. HP/CP/MP +15%, HP/MP Regeneration +20%. At a certain chance absorbs 3% of the damage inflicted on target as HP. Increases XP/SP gain by 5%. Cooldown is 1 minute. Buff remains after death. -->
         <set name="icon" val="icon.etc_codran_i09"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
         <set name="handler" val="ItemSkills"/>
@@ -279,7 +260,6 @@
         <!-- Double-click on the chest to get one of Pirates' treasures. -->
         <set name="icon" val="icon.bm_pirate_treasure_box"/>
         <set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
-        <set name="material" val="PAPER"/>
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
@@ -288,7 +268,6 @@
         <set name="icon" val="icon.bm_sheep_agathion_30d_box"/>
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
         <set name="time" val="86400"/>
@@ -299,7 +278,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="hairall"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="WOOD"/>
         <set name="is_sellable" val="false"/>
     </item>
     <item id="49522" name="Pirate King Hat" additionalName="Special Trait" type="Armor">
@@ -308,7 +286,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="hairall"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="WOOD"/>
         <set name="is_sellable" val="false"/>
     </item>
     <item id="49523" name="Circlet of Devil" additionalName="Special Trait" type="Armor">
@@ -317,14 +294,12 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="hairall"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="WOOD"/>
         <set name="is_sellable" val="false"/>
     </item>
     <item id="49524" name="Captain Pirate Hat Box" type="EtcItem">
         <!-- Double-click to get one of the following: Refined Romantic Chapeau, Pirate King Hat, Circlet of Devil. -->
         <set name="icon" val="icon.bm_pirate_king_box"/>
         <set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
-        <set name="material" val="PAPER"/>
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
@@ -332,7 +307,6 @@
         <!-- Double-click to receive one of the following items: Queen Ant's Ring (15-day), Orfen's Earring (15-day), Ring of Core (15-day). Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.ev_10th_present2"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_depositable" val="false"/>
@@ -347,7 +321,6 @@
         <!-- Magic scroll, used to resurrect a dead character, restoring 50% of XP. -->
         <set name="icon" val="icon.etc_scroll_of_resurrection_i01"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
@@ -356,7 +329,6 @@
         <set name="icon" val="icon.etc_pi_gift_box_i01"/>
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
@@ -364,7 +336,6 @@
         <!-- Instantly restores character's HP. Can't be used at full HP. -->
         <set name="icon" val="icon.etc_bm_hero_red_potion"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
@@ -375,7 +346,6 @@
         <set name="armor_type" val="HEAVY"/>
         <set name="bodypart" val="alldress"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="CLOTH"/>
         <set name="is_sellable" val="false"/>
     </item>
     <item id="49530" name="Blue Dynasty - Diadem" type="Armor">
@@ -384,7 +354,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="hairall"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="WOOD"/>
         <set name="is_sellable" val="false"/>
     </item>
     <item id="49531" name="Red Zubei - Heavy Armor" type="Armor">
@@ -394,7 +363,6 @@
         <set name="armor_type" val="HEAVY"/>
         <set name="bodypart" val="alldress"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="CLOTH"/>
         <set name="is_sellable" val="false"/>
     </item>
     <item id="49532" name="White Murderer Suit" type="Armor">
@@ -404,14 +372,12 @@
         <set name="armor_type" val="HEAVY"/>
         <set name="bodypart" val="alldress"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="CLOTH"/>
         <set name="is_sellable" val="false"/>
     </item>
     <item id="49533" name="Quick Hero Healing Potion" type="EtcItem">
         <!-- Magic potion that quickly restores HP. Instant cooldown. Cannot be used when HP is full. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.etc_potion_gold_i00"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="180"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
@@ -424,7 +390,6 @@
         <!-- 7-day item. Available at level 20 or higher. Double-click the Cube to receive Soulshot Ticket, Buff Scrolls Chest, Major Healing Potion, Warrior's Quick Healing Potion, Warrior's Quick Healing Potion, Angel Cat's Blessing, Improved Scroll of Resurrection, Parts of Enchantment Scrolls Chest, Fishing kit chest, My Teleport to the Base Package, Blade Spirit, Spellbook Box. (Can be used only once per day.) Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.special_cube_i00"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_destroyable" val="false"/>
@@ -437,7 +402,6 @@
         <set name="icon" val="icon.etc_elite_marguene_collection_box_i00"/>
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_depositable" val="false"/>
@@ -450,7 +414,6 @@
         <set name="icon" val="icon.etc_treasure_box_i04"/>
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_depositable" val="false"/>
@@ -461,7 +424,6 @@
         <!-- Magic Scroll. Teleports its owner to the Dragon Valley Bridge. -->
         <set name="icon" val="icon.etc_scroll_of_return_i05"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="30"/>
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
@@ -470,7 +432,6 @@
         <!-- Magic Scroll, that teleports one to Antharas' Lair. -->
         <set name="icon" val="icon.etc_scroll_of_return_i05"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="30"/>
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
@@ -479,7 +440,6 @@
         <!-- Magic Scroll, that teleports one to Cruma Tower. -->
         <set name="icon" val="icon.etc_scroll_of_return_i05"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="30"/>
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
@@ -488,7 +448,6 @@
         <!-- Magic Scroll, that teleports one to Orc Barracks. -->
         <set name="icon" val="icon.etc_scroll_of_return_i05"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="30"/>
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
@@ -497,7 +456,6 @@
         <!-- Double-click the chest to receive 1 of the Spellbooks, used after the 2nd Class Transfer. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.etc_treasure_box_i05"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_depositable" val="false"/>
@@ -513,7 +471,6 @@
         <set name="icon" val="icon.etc_scroll_of_resurrection_i01"/>
         <set name="default_action" val="SKILL_REDUCE"/>
         <set name="etcitem_type" val="SCROLL"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="120"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
@@ -531,7 +488,6 @@
     <item id="49543" name="Elemental Stone" type="EtcItem">
         <!-- A stone containing incredible power. -->
         <set name="icon" val="icon.etc_crystal_cave_crystal_i00"/>
-        <set name="material" val="PAPER"/>
         <set name="is_stackable" val="true"/>
     </item>
     <item id="49544" name="Warrior's Armor1" type="Armor">
@@ -541,7 +497,6 @@
         <set name="armor_type" val="HEAVY"/>
         <set name="bodypart" val="alldress"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="CLOTH"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_destroyable" val="false"/>
@@ -555,7 +510,6 @@
         <set name="armor_type" val="HEAVY"/>
         <set name="bodypart" val="alldress"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="CLOTH"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_destroyable" val="false"/>
@@ -569,7 +523,6 @@
         <set name="armor_type" val="HEAVY"/>
         <set name="bodypart" val="alldress"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="CLOTH"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_destroyable" val="false"/>
@@ -583,7 +536,6 @@
         <set name="armor_type" val="MAGIC"/>
         <set name="bodypart" val="alldress"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="CLOTH"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_destroyable" val="false"/>
@@ -597,7 +549,6 @@
         <set name="armor_type" val="MAGIC"/>
         <set name="bodypart" val="alldress"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="CLOTH"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_destroyable" val="false"/>
@@ -611,7 +562,6 @@
         <set name="armor_type" val="MAGIC"/>
         <set name="bodypart" val="alldress"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="CLOTH"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_destroyable" val="false"/>
@@ -622,7 +572,6 @@
         <!-- Magic Scroll, that teleports one to Enchanted Valley. -->
         <set name="icon" val="icon.etc_scroll_of_return_i05"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="30"/>
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
@@ -634,7 +583,6 @@
         <set name="armor_type" val="LIGHT"/>
         <set name="bodypart" val="alldress"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="CLOTH"/>
         <set name="is_sellable" val="false"/>
     </item>
     <item id="49552" name="Blue Dynasty - Magic Armor" type="Armor">
@@ -644,7 +592,6 @@
         <set name="armor_type" val="MAGIC"/>
         <set name="bodypart" val="alldress"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="CLOTH"/>
         <set name="is_sellable" val="false"/>
     </item>
     <item id="49553" name="Red Zubei - Light Armor" type="Armor">
@@ -654,7 +601,6 @@
         <set name="armor_type" val="LIGHT"/>
         <set name="bodypart" val="alldress"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="CLOTH"/>
         <set name="is_sellable" val="false"/>
     </item>
     <item id="49554" name="Red Zubei - Magic Armor" type="Armor">
@@ -664,13 +610,11 @@
         <set name="armor_type" val="MAGIC"/>
         <set name="bodypart" val="alldress"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="CLOTH"/>
         <set name="is_sellable" val="false"/>
     </item>
     <item id="49555" name="Mold" type="EtcItem">
         <!-- Goods delivered by Trader Damion in Gludio. Take them to Amora near Fellmere Lake. -->
         <set name="icon" val="icon.etc_mold_i00"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_depositable" val="false"/>
@@ -681,7 +625,6 @@
     <item id="49556" name="Amora's Receipt" type="EtcItem">
         <!-- A receipt received from Amora. Take it to Trader Damion in Gludio. -->
         <set name="icon" val="icon.etc_piece_of_paper_gray_i00"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_depositable" val="false"/>
@@ -692,7 +635,6 @@
     <item id="49557" name="Armor Trade Contract" type="EtcItem">
         <!-- A contract, found on Turek Orc Commander. There's a Dwarven seal on it. Take it to the Moon Knight Jones. -->
         <set name="icon" val="icon.etc_paper_black_i00"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_depositable" val="false"/>
@@ -703,7 +645,6 @@
     <item id="49558" name="Turek Orc Order" type="EtcItem">
         <!-- An order to attack, found on Turek Orc Commander. Take it to the Moon Knight Jones. -->
         <set name="icon" val="icon.etc_roll_of_paper_black_i00"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_depositable" val="false"/>
@@ -714,7 +655,6 @@
     <item id="49559" name="Rolento's Bag" type="EtcItem">
         <!-- This is the Equipment, which Trader Rolento has to deliver to Hierarch Ol Mahum. Take it to Hierarch Ol Mahum Gudzu. -->
         <set name="icon" val="icon.pouch_i01"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_depositable" val="false"/>
@@ -725,7 +665,6 @@
     <item id="49560" name="Iron Scale Guild Certificate" type="EtcItem">
         <!-- A certificate insuring your membership in the Iron Scale Guild -->
         <set name="icon" val="icon.etc_letter_white_i00"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_depositable" val="false"/>
@@ -735,7 +674,6 @@
     <item id="49561" name="Turek Orc Invader Head" type="EtcItem">
         <!-- Cut Turek Orc Invader Head. Collect 10 items and bring them to Hierarch Ol Mahum Gudzu. -->
         <set name="icon" val="icon.etc_skull_black_i00"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_depositable" val="false"/>
@@ -745,14 +683,12 @@
     <item id="49562" name="Spellbook: Spirit Sharing" type="EtcItem">
         <!-- Spellbook needed to learn Spirit Sharing. Used by Warlocks, Elemental Summoners and Phantom Summoners. Required level: 44 -->
         <set name="icon" val="icon.etc_spell_books_summon_i00"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="120"/>
         <set name="is_stackable" val="true"/>
     </item>
     <item id="49563" name="1,000,000,000 Adena" additionalName="Event" type="EtcItem">
         <!-- Aden look like adens, but they are rare and more valuable. The one who takes them to Misfety receives a gift and Buffs. Cannot be exchanged, dropped, sold to a private shop. Can be stored in a private warehouse. The item will be removed automatically for the maintenance on April 22, 2015. -->
         <set name="icon" val="icon.fairy_adena_joke"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_depositable" val="false"/>
@@ -762,7 +698,6 @@
     <item id="49564" name="10,000,000,000 Adena" additionalName="Event" type="EtcItem">
         <!-- Aden look like adens, but they are rare and more valuable. The one who takes them to Misfety receives a gift and Buffs. Cannot be exchanged, dropped, sold to a private shop. Can be stored in a private warehouse. The item will be removed automatically for the maintenance on April 22, 2015. -->
         <set name="icon" val="icon.fairy_adena_joke"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_depositable" val="false"/>
@@ -774,7 +709,6 @@
         <set name="icon" val="icon.etc_pi_box_joy_pack"/>
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_depositable" val="false"/>
@@ -786,7 +720,6 @@
         <!-- Roa's Gift. This is the gift she put her soul into. Double-click the chest to receive Ticket for Soulshot, Buff Scrolls Chest, Scroll of Escape Chest to the Base, Fishing kit, Feather of Blessing, or Spellbook Box. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. <Note>. Be careful before opening the items as their relocation is restricted. -->
         <set name="icon" val="icon.etc_ev_draco_gift_box"/>
         <set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_depositable" val="false"/>
@@ -796,7 +729,6 @@
     <item id="49567" name="Something Roa lost" additionalName="Event" type="EtcItem">
         <!-- Something Roa's Helper lost. Can be exchanged for a Roa's Gift through Roa NPC that appears at times. Exchange is available once a day. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. This item will be deleted after the event is over. -->
         <set name="icon" val="icon.event_july_seven_park_i00"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_destroyable" val="false"/>
@@ -807,28 +739,24 @@
     <item id="49568" name="Spellbook: Sonic Move" type="EtcItem">
         <!-- A book required to learn the spell of Sonic Move. Used by Gladiators. Required level: 56 -->
         <set name="icon" val="icon.etc_spell_books_blue_i00"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="120"/>
         <set name="is_stackable" val="true"/>
     </item>
     <item id="49569" name="Spellbook: Sand Bomb" type="EtcItem">
         <!-- Spellbook needed to learn Sand Bomb. Used by Treasure Hunters, Plains Walkers, and Abyss Walkers. Required level: 55 -->
         <set name="icon" val="icon.etc_spell_books_blue_i00"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="120"/>
         <set name="is_stackable" val="true"/>
     </item>
     <item id="49570" name="Spellbook: Mass Curse Gloom" type="EtcItem">
         <!-- Spellbook needed to learn Mass Curse Gloom. Used by Necromancers. Required level: 58 -->
         <set name="icon" val="icon.etc_spell_books_blue_i00"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="120"/>
         <set name="is_stackable" val="true"/>
     </item>
     <item id="49571" name="Spellbook: Clear Mind" type="EtcItem">
         <!-- Spellbook needed to learn the spell Clear Mind. Used by Spellsingers, Spellhowlers and Sorcerers. Required level: 40 -->
         <set name="icon" val="icon.etc_spell_books_blue_i00"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="120"/>
         <set name="is_stackable" val="true"/>
     </item>
@@ -840,7 +768,6 @@
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="C"/>
-        <set name="material" val="FINE_STEEL"/>
         <set name="weight" val="2340"/>
         <set name="soulshots" val="1"/>
         <set name="spiritshots" val="1"/>
@@ -864,7 +791,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="rfinger;lfinger"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="GOLD"/>
         <set name="weight" val="150"/>
         <set name="price" val="100000"/>
         <set name="enchant_enabled" val="1"/>
@@ -883,7 +809,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="rear;lear"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="GOLD"/>
         <set name="weight" val="150"/>
         <set name="price" val="100000"/>
         <set name="enchant_enabled" val="1"/>
@@ -902,7 +827,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="rfinger;lfinger"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="GOLD"/>
         <set name="weight" val="150"/>
         <set name="price" val="100000"/>
         <set name="enchant_enabled" val="1"/>
@@ -921,7 +845,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="rfinger;lfinger"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="GOLD"/>
         <set name="weight" val="150"/>
         <set name="price" val="100000"/>
         <set name="enchant_enabled" val="1"/>
@@ -940,7 +863,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="rear;lear"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="GOLD"/>
         <set name="weight" val="150"/>
         <set name="price" val="100000"/>
         <set name="enchant_enabled" val="1"/>
@@ -959,7 +881,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="rfinger;lfinger"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="GOLD"/>
         <set name="weight" val="150"/>
         <set name="price" val="100000"/>
         <set name="enchant_enabled" val="1"/>
@@ -979,7 +900,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="rfinger;lfinger"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="GOLD"/>
         <set name="weight" val="150"/>
         <set name="price" val="100000"/>
         <set name="enchant_enabled" val="1"/>
@@ -998,7 +918,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="rfinger;lfinger"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="GOLD"/>
         <set name="weight" val="150"/>
         <set name="price" val="100000"/>
         <set name="enchant_enabled" val="1"/>
@@ -1017,7 +936,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="rfinger;lfinger"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="GOLD"/>
         <set name="weight" val="150"/>
         <set name="price" val="100000"/>
         <set name="enchant_enabled" val="1"/>
@@ -1035,7 +953,6 @@
         <set name="icon" val="icon.etc_treasure_box_i08"/>
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="is_dropable" val="false"/>
         <set name="is_stackable" val="true"/>
         <set name="handler" val="ExtractableItems"/>
@@ -1050,7 +967,6 @@
         <!-- Double-click on the Golden Boot to get one of its treasures. Cannot be dropped. -->
         <set name="icon" val="icon.bm_gold_shose"/>
         <set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
-        <set name="material" val="PAPER"/>
         <set name="is_dropable" val="false"/>
         <set name="is_stackable" val="true"/>
         <set name="handler" val="ExtractableItems"/>
@@ -1062,7 +978,6 @@
         <!-- 7-day item. When in inventory, your XP and SP gain is increased by 50% for 1 hour. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.general_fuel_i00"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_depositable" val="false"/>
@@ -1080,7 +995,6 @@
         <set name="weapon_type" val="FISHINGROD"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="BONE"/>
         <set name="weight" val="1000"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
@@ -1103,7 +1017,6 @@
         <set name="weapon_type" val="FISHINGROD"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="BONE"/>
         <set name="weight" val="1000"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -1121,7 +1034,6 @@
         <set name="icon" val="icon.etc_bm_lure_box_i00"/>
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="100"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -1133,7 +1045,6 @@
         <set name="icon" val="icon.bm_gold_lure"/>
         <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
@@ -1143,7 +1054,6 @@
         <set name="icon" val="icon.etc_box_of_adventure_3_i00"/>
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
@@ -1155,7 +1065,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="rfinger;lfinger"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="GOLD"/>
         <set name="weight" val="150"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
@@ -1177,7 +1086,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="rear;lear"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="GOLD"/>
         <set name="weight" val="150"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
@@ -1199,7 +1107,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="rfinger;lfinger"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="GOLD"/>
         <set name="weight" val="150"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
@@ -1221,7 +1128,6 @@
         <set name="icon" val="icon.fish_huge_i15"/>
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_depositable" val="false"/>
@@ -1232,7 +1138,6 @@
         <!-- Scroll: 2000 SP. Cannot be dropped. -->
         <set name="icon" val="icon.etc_sp_scroll1_i00"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="is_dropable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
@@ -1240,7 +1145,6 @@
         <!-- Scroll: 10000 SP. Cannot be dropped. -->
         <set name="icon" val="icon.etc_sp_scroll2_i00"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="is_dropable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
@@ -1248,7 +1152,6 @@
         <!-- Double-click on the Golden Boot to get one of its treasures. Cannot be dropped. -->
         <set name="icon" val="icon.bm_gold_shose"/>
         <set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
-        <set name="material" val="PAPER"/>
         <set name="is_dropable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
@@ -1257,7 +1160,6 @@
         <set name="icon" val="icon.etc_talisman_i01"/>
         <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="GOLD"/>
         <set name="weight" val="120"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
@@ -1270,7 +1172,6 @@
         <set name="icon" val="icon.etc_talisman_i01"/>
         <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="GOLD"/>
         <set name="weight" val="120"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>

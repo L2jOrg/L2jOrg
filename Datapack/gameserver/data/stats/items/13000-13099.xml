@@ -4,7 +4,6 @@
         <!-- Doesn't exist in client. -->
         <set name="immediate_effect" val="true"/>
         <set name="ex_immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -19,7 +18,6 @@
         <!-- A dimensional item.  Increases the number of return points to save by 3. The maximum number is 18. -->
         <set name="icon" val="icon.bookmark_book_i00"/>
         <set name="default_action" val="CALL_SKILL"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="5"/>
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
@@ -36,7 +34,6 @@
         <!-- Dimensional Object. The item disappears after use. -->
         <set name="icon" val="icon.bookmark_scroll_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="5"/>
         <set name="is_sellable" val="false"/>
         <set name="is_clan_depositable" val="false"/>
@@ -51,7 +48,6 @@
         <set name="icon" val="icon.color_name_i00"/>
         <set name="default_action" val="NICK_COLOR"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="5"/>
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
@@ -67,7 +63,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="agathion"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="SILVER"/>
         <set name="weight" val="30"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>

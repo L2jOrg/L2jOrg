@@ -6,7 +6,6 @@
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="30"/>
         <set name="price" val="262000"/>
         <set name="recipe_id" val="458"/>
@@ -20,7 +19,6 @@
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="30"/>
         <set name="price" val="262000"/>
         <set name="recipe_id" val="460"/>
@@ -34,7 +32,6 @@
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="30"/>
         <set name="price" val="262000"/>
         <set name="recipe_id" val="462"/>
@@ -48,7 +45,6 @@
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="30"/>
         <set name="price" val="262000"/>
         <set name="recipe_id" val="464"/>
@@ -62,7 +58,6 @@
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="30"/>
         <set name="price" val="262000"/>
         <set name="recipe_id" val="466"/>
@@ -76,7 +71,6 @@
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="30"/>
         <set name="price" val="262000"/>
         <set name="recipe_id" val="468"/>
@@ -90,7 +84,6 @@
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="30"/>
         <set name="price" val="262000"/>
         <set name="recipe_id" val="470"/>
@@ -104,7 +97,6 @@
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="30"/>
         <set name="price" val="262000"/>
         <set name="recipe_id" val="472"/>
@@ -118,7 +110,6 @@
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="30"/>
         <set name="price" val="156600"/>
         <set name="recipe_id" val="138"/>
@@ -130,7 +121,6 @@
         <!-- Mark that is needed to participate in a clan hall war. Cannot be exchanged, dropped, sold, or stored in a warehouse. -->
         <set name="icon" val="icon.etc_trophy_i01"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -146,7 +136,6 @@
         <set name="icon" val="icon.etc_echo_crystal_i02"/>
         <set name="default_action" val="SKILL_REDUCE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="10"/>
         <set name="price" val="100"/>
         <set name="reuse_delay" val="3000"/>
@@ -161,7 +150,6 @@
         <!-- Accessory that Maestro Reorin created after receiving a request from a woman of unknown identity. -->
         <set name="icon" val="icon.etc_badge_gold_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_destroyable" val="false"/>
@@ -178,7 +166,6 @@
         <!-- Letter received from Guard Leikan. Take it to Piotur at the farm east of the Orc Barracks. -->
         <set name="icon" val="icon.etc_piece_of_paper_white_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="is_stackable" val="true"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
         <set name="is_questitem" val="true"/>
@@ -187,7 +174,6 @@
         <!-- Spellbook needed to learn Elemental Assault. Used by Sorcerers and Spellsingers. Required level: 72 -->
         <set name="icon" val="icon.etc_spell_books_element_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="120"/>
         <set name="price" val="7200"/>
         <set name="commissionItemType" val="SPELLBOOK"/>
@@ -197,7 +183,6 @@
         <!-- Spellbook needed to learn Elemental Symphony. Used by Spellsingers. Required level: 72 -->
         <set name="icon" val="icon.etc_spell_books_element_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="120"/>
         <set name="price" val="7200"/>
         <set name="commissionItemType" val="SPELLBOOK"/>
@@ -207,7 +192,6 @@
         <!-- Spellbook needed to learn Elemental Storm. Used by Spellhowlers. Required level: 72 -->
         <set name="icon" val="icon.etc_spell_books_element_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="120"/>
         <set name="price" val="7200"/>
         <set name="commissionItemType" val="SPELLBOOK"/>

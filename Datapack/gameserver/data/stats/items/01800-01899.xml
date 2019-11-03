@@ -6,7 +6,6 @@
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="30"/>
         <set name="price" val="636"/>
         <set name="recipe_id" val="16"/>
@@ -20,7 +19,6 @@
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="30"/>
         <set name="price" val="397"/>
         <set name="recipe_id" val="17"/>
@@ -34,7 +32,6 @@
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="30"/>
         <set name="price" val="93"/>
         <set name="recipe_id" val="18"/>
@@ -48,7 +45,6 @@
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="30"/>
         <set name="price" val="238"/>
         <set name="recipe_id" val="19"/>
@@ -62,7 +58,6 @@
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="30"/>
         <set name="price" val="5000"/>
         <set name="recipe_id" val="20"/>
@@ -76,7 +71,6 @@
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="30"/>
         <set name="price" val="60000"/>
         <set name="recipe_id" val="21"/>
@@ -90,7 +84,6 @@
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="30"/>
         <set name="price" val="100000"/>
         <set name="recipe_id" val="22"/>
@@ -104,7 +97,6 @@
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="30"/>
         <set name="price" val="150000"/>
         <set name="recipe_id" val="23"/>
@@ -118,7 +110,6 @@
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="30"/>
         <set name="price" val="450000"/>
         <set name="is_stackable" val="true"/>
@@ -131,7 +122,6 @@
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="30"/>
         <set name="price" val="380"/>
         <set name="recipe_id" val="25"/>
@@ -145,7 +135,6 @@
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="30"/>
         <set name="price" val="1000"/>
         <set name="recipe_id" val="26"/>
@@ -159,7 +148,6 @@
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="30"/>
         <set name="price" val="2800"/>
         <set name="recipe_id" val="27"/>
@@ -172,7 +160,6 @@
         <set name="icon" val="icon.etc_scroll_of_return_agit_i00"/>
         <set name="default_action" val="SKILL_REDUCE"/>
         <set name="etcitem_type" val="SCROLL"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="120"/>
         <set name="price" val="500"/>
         <set name="is_stackable" val="true"/>
@@ -191,7 +178,6 @@
         <set name="icon" val="icon.etc_scroll_of_return_castle_i00"/>
         <set name="default_action" val="SKILL_REDUCE"/>
         <set name="etcitem_type" val="SCROLL"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="120"/>
         <set name="price" val="500"/>
         <set name="is_stackable" val="true"/>
@@ -211,7 +197,6 @@
         <set name="default_action" val="SKILL_REDUCE"/>
         <set name="etcitem_type" val="POTION"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="20"/>
         <set name="price" val="75"/>
         <set name="reuse_delay" val="500"/>
@@ -230,7 +215,6 @@
         <set name="default_action" val="SKILL_REDUCE"/>
         <set name="etcitem_type" val="POTION"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="20"/>
         <set name="price" val="180"/>
         <set name="reuse_delay" val="500"/>
@@ -249,7 +233,6 @@
         <set name="default_action" val="SKILL_REDUCE"/>
         <set name="etcitem_type" val="POTION"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="20"/>
         <set name="price" val="75"/>
         <set name="reuse_delay" val="500"/>
@@ -268,7 +251,6 @@
         <set name="default_action" val="SKILL_REDUCE"/>
         <set name="etcitem_type" val="POTION"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="20"/>
         <set name="price" val="180"/>
         <set name="reuse_delay" val="500"/>
@@ -286,7 +268,6 @@
         <set name="icon" val="icon.etc_spirit_bullet_white_i00"/>
         <set name="default_action" val="SOULSHOT"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="3"/>
         <set name="price" val="7"/>
         <set name="is_stackable" val="true"/>
@@ -302,7 +283,6 @@
         <!-- Punish Kaboo Chief Uoph. He should be somewhere around the ruins over the hill, west of the Elven Village. -->
         <set name="icon" val="icon.etc_recipe_blue_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -318,7 +298,6 @@
         <!-- Punish Kaboo Chief Kracha. He should be somewhere around the Nine obelisk, southwest of the Elven Village. -->
         <set name="icon" val="icon.etc_recipe_blue_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -334,7 +313,6 @@
         <!-- Punish Kaboo Chief Batoh. He should be somewhere around the entrance of the underground fortress of the Elves. -->
         <set name="icon" val="icon.etc_recipe_blue_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -350,7 +328,6 @@
         <!-- Punish Kaboo Chief Tanukia. He should be somewhere around the open-air theatre ruins, southwest of the Elven Village. -->
         <set name="icon" val="icon.etc_recipe_blue_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -366,7 +343,6 @@
         <!-- Punish Kaboo Chief Turel. He should be somewhere around the seashore ruins, northwest of Lake Iris. -->
         <set name="icon" val="icon.etc_recipe_red_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -382,7 +358,6 @@
         <!-- Punish Kaboo Chief Roko. He should be somewhere around the seashore ruins, west of Lake Iris. -->
         <set name="icon" val="icon.etc_recipe_red_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -398,7 +373,6 @@
         <!-- Punish Kaboo Chief Kamut. He should be somewhere around the seashore ruins, south of Lake Iris. -->
         <set name="icon" val="icon.etc_recipe_red_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -414,7 +388,6 @@
         <!-- Punish Kaboo Chief Murtika. He should be somewhere around the seashore ruins, east of Lake Iris. -->
         <set name="icon" val="icon.etc_recipe_red_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -430,7 +403,6 @@
         <!-- Necklace taken by killing the chief of Kaboo orcs. Take this to Sentinel Kendell. -->
         <set name="icon" val="icon.accessary_necklace_of_black_ore_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -446,7 +418,6 @@
         <!-- Necklace taken by killing the chief of Kaboo orcs. Take this to Sentinel Kendell. -->
         <set name="icon" val="icon.accessary_necklace_of_black_ore_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -462,7 +433,6 @@
         <!-- Military identification necklace of Turek orc fighters. Collect these and take them to Piotur for a reward. -->
         <set name="icon" val="icon.etc_totem_necklace_black_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -478,7 +448,6 @@
         <!-- Military identification necklace of Turek orc officers. Collect these and take them to Piotur for a reward. -->
         <set name="icon" val="icon.etc_totem_necklace_green_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -494,7 +463,6 @@
         <!-- Relic of the Elmoreden Empire. Piece of a broken Clay Urn. -->
         <set name="icon" val="icon.etc_broken_crystal_white_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="10"/>
         <set name="price" val="200"/>
         <set name="is_questitem" val="true"/>
@@ -505,7 +473,6 @@
         <!-- Relic of the Elmoreden Empire. Part of a Brass Tiara. -->
         <set name="icon" val="icon.etc_broken_crystal_gold_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="10"/>
         <set name="price" val="240"/>
         <set name="is_questitem" val="true"/>
@@ -516,7 +483,6 @@
         <!-- Relic of the Elmoreden Empire. Part of a Bronze Mirror. -->
         <set name="icon" val="icon.etc_broken_crystal_silver_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="10"/>
         <set name="price" val="240"/>
         <set name="is_questitem" val="true"/>
@@ -527,7 +493,6 @@
         <!-- Relic of the Elmoreden Empire. Part of a Jade Necklace. -->
         <set name="icon" val="icon.etc_debris_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="10"/>
         <set name="price" val="280"/>
         <set name="is_questitem" val="true"/>
@@ -538,7 +503,6 @@
         <!-- Clay Urn of the Elmoreden Empire. Can be sold at a store. -->
         <set name="icon" val="icon.etc_oil_pot_white_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="10"/>
         <set name="price" val="1800"/>
         <set name="is_questitem" val="true"/>
@@ -549,7 +513,6 @@
         <!-- Relic of the Elmoreden Empire. Formal Brass Tiara. Can be sold at a store. -->
         <set name="icon" val="icon.etc_ancient_crown_i03"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="10"/>
         <set name="price" val="2100"/>
         <set name="is_questitem" val="true"/>
@@ -560,7 +523,6 @@
         <!-- Relic of the Elmoreden Empire. Bronze mirror. Can be sold at a store. -->
         <set name="icon" val="icon.etc_mirror_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="10"/>
         <set name="price" val="2100"/>
         <set name="is_questitem" val="true"/>
@@ -571,7 +533,6 @@
         <!-- Relic of the Elmoreden Empire. Jade necklace. Can be sold at a store. -->
         <set name="icon" val="icon.etc_leash_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="10"/>
         <set name="price" val="2550"/>
         <set name="is_questitem" val="true"/>
@@ -582,7 +543,6 @@
         <!-- Amulet required for the Chant of Life spell. Used by Orc Shamans. Required level: 20 -->
         <set name="icon" val="icon.etc_orcish_talisman_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="120"/>
         <set name="price" val="800"/>
         <set name="commissionItemType" val="SPELLBOOK"/>
@@ -592,7 +552,6 @@
         <!-- Fang taken by killing keltirs. Collect 4 and take them to any of the Masters. -->
         <set name="icon" val="icon.etc_claw_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -608,7 +567,6 @@
         <!-- Fang taken by killing keltirs. Collect 4 and take them to any of the Masters. -->
         <set name="icon" val="icon.etc_claw_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -624,7 +582,6 @@
         <!-- Fang taken by killing keltirs. Collect 4 and take them to any of the Masters. -->
         <set name="icon" val="icon.etc_claw_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -640,7 +597,6 @@
         <!-- Fang taken by killing keltirs. Collect 4 and take them to any of the Masters. -->
         <set name="icon" val="icon.etc_claw_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -656,7 +612,6 @@
         <!-- Fang taken by killing keltirs. Collect 4 and take them to any of the Masters. -->
         <set name="icon" val="icon.etc_claw_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -672,7 +627,6 @@
         <!-- Fang taken by killing keltirs. Collect 4 and take them to any of the Masters. -->
         <set name="icon" val="icon.etc_claw_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -688,7 +642,6 @@
         <!-- Ancient, obsolete map. Can be purchased at any shop. -->
         <set name="icon" val="icon.etc_letter_red_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="price" val="1000"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
         <set name="handler" val="Maps"/>
@@ -698,7 +651,6 @@
         <set name="icon" val="icon.etc_branch_gold_i00"/>
         <set name="etcitem_type" val="MATERIAL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="2"/>
         <set name="price" val="100"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
@@ -709,7 +661,6 @@
         <set name="icon" val="icon.etc_pouch_yellow_i00"/>
         <set name="etcitem_type" val="MATERIAL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="2"/>
         <set name="price" val="200"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
@@ -720,7 +671,6 @@
         <set name="icon" val="icon.etc_suede_i00"/>
         <set name="etcitem_type" val="MATERIAL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="2"/>
         <set name="price" val="300"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
@@ -731,7 +681,6 @@
         <set name="icon" val="icon.etc_leather_brown_i00"/>
         <set name="etcitem_type" val="MATERIAL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="2"/>
         <set name="price" val="150"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
@@ -742,7 +691,6 @@
         <set name="icon" val="icon.etc_skein_white_i00"/>
         <set name="etcitem_type" val="MATERIAL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="2"/>
         <set name="price" val="100"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
@@ -753,7 +701,6 @@
         <set name="icon" val="icon.etc_lump_gray_i00"/>
         <set name="etcitem_type" val="MATERIAL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="2"/>
         <set name="price" val="200"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
@@ -764,7 +711,6 @@
         <set name="icon" val="icon.etc_coal_i00"/>
         <set name="etcitem_type" val="MATERIAL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="2"/>
         <set name="price" val="200"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
@@ -775,7 +721,6 @@
         <set name="icon" val="icon.etc_charcoal_i00"/>
         <set name="etcitem_type" val="MATERIAL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="2"/>
         <set name="price" val="200"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
@@ -786,7 +731,6 @@
         <set name="icon" val="icon.etc_piece_bone_white_i00"/>
         <set name="etcitem_type" val="MATERIAL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="2"/>
         <set name="price" val="150"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
@@ -797,7 +741,6 @@
         <set name="icon" val="icon.etc_silver_i00"/>
         <set name="etcitem_type" val="MATERIAL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="2"/>
         <set name="price" val="500"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
@@ -808,7 +751,6 @@
         <set name="icon" val="icon.etc_oriharukon_ore_i00"/>
         <set name="etcitem_type" val="MATERIAL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="2"/>
         <set name="price" val="3000"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
@@ -819,7 +761,6 @@
         <set name="icon" val="icon.etc_crystal_ball_white_i00"/>
         <set name="etcitem_type" val="MATERIAL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="2"/>
         <set name="price" val="3000"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
@@ -830,7 +771,6 @@
         <set name="icon" val="icon.etc_mithril_ore_i00"/>
         <set name="etcitem_type" val="MATERIAL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="2"/>
         <set name="price" val="1000"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
@@ -841,7 +781,6 @@
         <set name="icon" val="icon.etc_adamantite_i00"/>
         <set name="etcitem_type" val="MATERIAL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="2"/>
         <set name="price" val="5000"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
@@ -852,7 +791,6 @@
         <set name="icon" val="icon.etc_braided_hemp_i00"/>
         <set name="etcitem_type" val="MATERIAL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="2"/>
         <set name="price" val="500"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
@@ -863,7 +801,6 @@
         <set name="icon" val="icon.etc_oil_pot_black_i00"/>
         <set name="etcitem_type" val="MATERIAL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="2"/>
         <set name="price" val="1200"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
@@ -874,7 +811,6 @@
         <set name="icon" val="icon.etc_lump_black_i00"/>
         <set name="etcitem_type" val="MATERIAL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="2"/>
         <set name="price" val="2000"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
@@ -885,7 +821,6 @@
         <set name="icon" val="icon.etc_powder_white_i00"/>
         <set name="etcitem_type" val="MATERIAL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="2"/>
         <set name="price" val="1500"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
@@ -896,7 +831,6 @@
         <set name="icon" val="icon.etc_leather_i00"/>
         <set name="etcitem_type" val="MATERIAL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="2"/>
         <set name="price" val="900"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
@@ -907,7 +841,6 @@
         <set name="icon" val="icon.etc_mold_i00"/>
         <set name="etcitem_type" val="MATERIAL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="2"/>
         <set name="price" val="4500"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
@@ -918,7 +851,6 @@
         <set name="icon" val="icon.etc_skein_gray_i00"/>
         <set name="etcitem_type" val="MATERIAL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="2"/>
         <set name="price" val="325"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
@@ -929,7 +861,6 @@
         <set name="icon" val="icon.etc_pouch_yellow_i00"/>
         <set name="etcitem_type" val="MATERIAL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="2"/>
         <set name="price" val="2400"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
@@ -940,7 +871,6 @@
         <set name="icon" val="icon.etc_silver_mold_i00"/>
         <set name="etcitem_type" val="MATERIAL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="2"/>
         <set name="price" val="13500"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
@@ -951,7 +881,6 @@
         <set name="icon" val="icon.etc_potion_clear_i00"/>
         <set name="etcitem_type" val="MATERIAL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="2"/>
         <set name="price" val="8100"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
@@ -962,7 +891,6 @@
         <set name="icon" val="icon.etc_synthetic_cokes_i00"/>
         <set name="etcitem_type" val="MATERIAL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="2"/>
         <set name="price" val="6600"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
@@ -973,7 +901,6 @@
         <set name="icon" val="icon.etc_compound_braid_i00"/>
         <set name="etcitem_type" val="MATERIAL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="2"/>
         <set name="price" val="3000"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
@@ -984,7 +911,6 @@
         <set name="icon" val="icon.etc_lump_white_i00"/>
         <set name="etcitem_type" val="MATERIAL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="2"/>
         <set name="price" val="13100"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
@@ -995,7 +921,6 @@
         <set name="icon" val="icon.etc_artisans_frame_i00"/>
         <set name="etcitem_type" val="MATERIAL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="2"/>
         <set name="price" val="95000"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
@@ -1006,7 +931,6 @@
         <set name="icon" val="icon.etc_blacksmiths_frame_i00"/>
         <set name="etcitem_type" val="MATERIAL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="2"/>
         <set name="price" val="64000"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
@@ -1017,7 +941,6 @@
         <set name="icon" val="icon.etc_oriharukon_i00"/>
         <set name="etcitem_type" val="MATERIAL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="2"/>
         <set name="price" val="24600"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
@@ -1028,7 +951,6 @@
         <set name="icon" val="icon.etc_crafted_leather_i00"/>
         <set name="etcitem_type" val="MATERIAL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="2"/>
         <set name="price" val="5700"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
@@ -1039,7 +961,6 @@
         <set name="icon" val="icon.etc_metallic_fiber_i00"/>
         <set name="etcitem_type" val="MATERIAL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="2"/>
         <set name="price" val="700"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
@@ -1050,7 +971,6 @@
         <set name="icon" val="icon.etc_jewel_box_i00"/>
         <set name="etcitem_type" val="MATERIAL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="60"/>
         <set name="price" val="472"/>
         <set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS"/>
@@ -1061,7 +981,6 @@
         <set name="icon" val="icon.etc_jewel_box_i00"/>
         <set name="etcitem_type" val="MATERIAL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="60"/>
         <set name="price" val="840"/>
         <set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS"/>
@@ -1072,7 +991,6 @@
         <set name="icon" val="icon.etc_gem_blue_i00"/>
         <set name="etcitem_type" val="MATERIAL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="60"/>
         <set name="price" val="1947"/>
         <set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS"/>
@@ -1083,7 +1001,6 @@
         <set name="icon" val="icon.etc_jewel_box_i00"/>
         <set name="etcitem_type" val="MATERIAL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="60"/>
         <set name="price" val="1280"/>
         <set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS"/>

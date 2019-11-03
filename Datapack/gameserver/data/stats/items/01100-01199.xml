@@ -7,7 +7,6 @@
         <set name="armor_type" val="MAGIC"/>
         <set name="bodypart" val="chest"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="CLOTH"/>
         <set name="weight" val="2120"/>
         <set name="commissionItemType" val="ARMOR_TOP"/>
 
@@ -23,7 +22,6 @@
         <set name="armor_type" val="MAGIC"/>
         <set name="bodypart" val="chest"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="CLOTH"/>
         <set name="weight" val="2090"/>
         <set name="commissionItemType" val="ARMOR_TOP"/>
 
@@ -40,7 +38,6 @@
         <set name="armor_type" val="MAGIC"/>
         <set name="bodypart" val="chest"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="CLOTH"/>
         <set name="weight" val="2080"/>
         <set name="commissionItemType" val="ARMOR_TOP"/>
 
@@ -57,7 +54,6 @@
         <set name="armor_type" val="MAGIC"/>
         <set name="bodypart" val="legs"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="CLOTH"/>
         <set name="weight" val="1060"/>
         <set name="commissionItemType" val="ARMOR_PANTS"/>
 
@@ -74,7 +70,6 @@
         <set name="armor_type" val="MAGIC"/>
         <set name="bodypart" val="legs"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="CLOTH"/>
         <set name="weight" val="1040"/>
         <set name="commissionItemType" val="ARMOR_PANTS"/>
 
@@ -91,7 +86,6 @@
         <set name="armor_type" val="MAGIC"/>
         <set name="bodypart" val="legs"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="CLOTH"/>
         <set name="weight" val="1030"/>
         <set name="commissionItemType" val="ARMOR_PANTS"/>
 
@@ -105,7 +99,6 @@
         <!-- First half year financial summary of the Iron Gate guild: balance sheet and profit and loss statement of the Gludio region guild. -->
         <set name="icon" val="icon.etc_scroll_gray_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -121,7 +114,6 @@
         <!-- Bone fragments of the undead skeletons. Collect ten of these and go back to Magister Harne. -->
         <set name="icon" val="icon.etc_piece_bone_white_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -136,7 +128,6 @@
     <item id="1112" name="Leaf of the Mother Tree" type="EtcItem">
         <set name="icon" val="icon.etc_leaf_green_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -151,7 +142,6 @@
     <item id="1113" name="Blood of Mitraell" type="EtcItem">
         <set name="icon" val="icon.item_canuse48"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -167,7 +157,6 @@
         <!-- Amulet possessed by Kaboo Orcs for magic purposes. Take it to Sentinel Rayen. -->
         <set name="icon" val="icon.etc_feather_gold_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -183,7 +172,6 @@
         <!-- Bone necklace possessed by Kaboo Orc fighters for magic purposes. Take it to Sentinel Rayen. -->
         <set name="icon" val="icon.accessary_necklace_of_anguish_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -199,7 +187,6 @@
         <!-- Amulet that the Balor Orcs possess for magical purposes. Take this to Sentry Kayleen. -->
         <set name="icon" val="icon.etc_feather_gold_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -215,7 +202,6 @@
         <!-- Bone necklace that the Balor Orc fighters carry for magical purposes. Take this to Sentry Kayleen. -->
         <set name="icon" val="icon.accessary_necklace_of_anguish_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -231,7 +217,6 @@
         <!-- Sac containing spore pollen. Give 10 spore sacs to Herbiel. -->
         <set name="icon" val="icon.etc_pouch_brown_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -248,7 +233,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="gloves"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LEATHER"/>
         <set name="weight" val="660"/>
         <set name="commissionItemType" val="GLOVES"/>
 
@@ -264,7 +248,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="64"/>
         <set name="crystal_type" val="C"/>
-        <set name="material" val="LEATHER"/>
         <set name="weight" val="1600"/>
         <set name="price" val="123900"/>
         <set name="commissionItemType" val="GLOVES"/>
@@ -279,7 +262,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="feet"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LEATHER"/>
         <set name="weight" val="1320"/>
         <set name="commissionItemType" val="FEET"/>
 
@@ -293,7 +275,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="feet"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LEATHER"/>
         <set name="weight" val="1320"/>
         <set name="commissionItemType" val="FEET"/>
 
@@ -309,7 +290,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="60"/>
         <set name="crystal_type" val="D"/>
-        <set name="material" val="LEATHER"/>
         <set name="weight" val="1300"/>
         <set name="price" val="33300"/>
         <set name="commissionItemType" val="FEET"/>
@@ -326,7 +306,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="135"/>
         <set name="crystal_type" val="D"/>
-        <set name="material" val="LEATHER"/>
         <set name="weight" val="1250"/>
         <set name="price" val="74700"/>
         <set name="commissionItemType" val="FEET"/>
@@ -343,7 +322,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="177"/>
         <set name="crystal_type" val="D"/>
-        <set name="material" val="LEATHER"/>
         <set name="weight" val="1240"/>
         <set name="price" val="97800"/>
         <set name="commissionItemType" val="FEET"/>
@@ -360,7 +338,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="64"/>
         <set name="crystal_type" val="C"/>
-        <set name="material" val="LEATHER"/>
         <set name="weight" val="1210"/>
         <set name="price" val="161000"/>
         <set name="commissionItemType" val="FEET"/>
@@ -377,7 +354,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="98"/>
         <set name="crystal_type" val="C"/>
-        <set name="material" val="LEATHER"/>
         <set name="weight" val="4000"/>
         <set name="price" val="245000"/>
         <set name="commissionItemType" val="FEET"/>
@@ -394,7 +370,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="143"/>
         <set name="crystal_type" val="C"/>
-        <set name="material" val="ADAMANTAITE"/>
         <set name="weight" val="4000"/>
         <set name="price" val="358000"/>
         <set name="commissionItemType" val="FEET"/>
@@ -409,7 +384,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="feet"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LEATHER"/>
         <set name="weight" val="1320"/>
         <set name="commissionItemType" val="FEET"/>
 
@@ -422,7 +396,6 @@
         <!-- Fever medicine concocted by Master Cobendell. -->
         <set name="icon" val="icon.etc_lesser_potion_green_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -438,7 +411,6 @@
         <!-- Fever medicine concocted by Master Cobendell. -->
         <set name="icon" val="icon.etc_lesser_potion_green_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -454,7 +426,6 @@
         <!-- Fever medicine concocted by Master Cobendell. -->
         <set name="icon" val="icon.etc_lesser_potion_green_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -470,7 +441,6 @@
         <!-- Fever medicine concocted by Master Cobendell. -->
         <set name="icon" val="icon.etc_lesser_potion_green_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -486,7 +456,6 @@
         <!-- Fever medicine concocted by Master Cobendell. -->
         <set name="icon" val="icon.etc_lesser_potion_green_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -502,7 +471,6 @@
         <!-- The wand where the spirit of mirrors is bound to. Trap all three spirits of mirrors into a the wand and take it to Grand Magister Gallint. -->
         <set name="icon" val="icon.weapon_club_i01"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -518,7 +486,6 @@
         <!-- The wand where the spirit of mirrors is bound to. Trap all three spirits of mirrors into a the wand and take it to Grand Magister Gallint. -->
         <set name="icon" val="icon.weapon_club_i01"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -534,7 +501,6 @@
         <!-- The wand where the spirit of mirrors is bound to. Trap all three spirits of mirrors into a the wand and take it to Grand Magister Gallint. -->
         <set name="icon" val="icon.weapon_club_i01"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -550,7 +516,6 @@
         <!-- Letter written by Master Auron. Take this to Trader Simplon in the Town of Gludio. -->
         <set name="icon" val="icon.etc_scroll_white_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -566,7 +531,6 @@
         <!-- A badge that shows that a player is a member of the Warrior Guild. Have it with you in Ruins of Agony when you hunt for Skeleton Trackers. -->
         <set name="icon" val="icon.etc_badge_gold_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -582,7 +546,6 @@
         <!-- Old bronze sword used by tracker skeletons. Collect ten and give them to Trader Simplon. -->
         <set name="icon" val="icon.weapon_broad_sword_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -598,7 +561,6 @@
         <!-- Old and rusted bronze sword given by Trader Simplon, who said it was a 'Sword of Trial'. Take this to Master Auron. -->
         <set name="icon" val="icon.weapon_broad_sword_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_dropable" val="false"/>
         <set name="is_stackable" val="true"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
@@ -612,7 +574,6 @@
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="weight" val="1400"/>
         <set name="soulshots" val="1"/>
         <set name="spiritshots" val="1"/>
@@ -638,7 +599,6 @@
         <!-- Letter written by Trader Simplon. Take this to Master Auron. -->
         <set name="icon" val="icon.etc_scroll_gray_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -654,7 +614,6 @@
         <!-- Leg cut from a dead Venomous Spider or an Arachnid Tracker. Collect twenty of these and take to Master Auron. -->
         <set name="icon" val="icon.etc_horn_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -670,7 +629,6 @@
         <!-- Take this medallion to the Grand Master of the Warrior's Guild to change your class to a Warrior. -->
         <set name="icon" val="icon.accessary_earing_of_protection_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_dropable" val="false"/>
         <set name="is_stackable" val="true"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
@@ -683,7 +641,6 @@
         <set name="armor_type" val="LIGHT"/>
         <set name="bodypart" val="chest"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="CLOTH"/>
         <set name="weight" val="3301"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
@@ -705,7 +662,6 @@
         <set name="armor_type" val="LIGHT"/>
         <set name="bodypart" val="legs"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="CLOTH"/>
         <set name="weight" val="1750"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
@@ -725,7 +681,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="head"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LEATHER"/>
         <set name="weight" val="640"/>
         <set name="commissionItemType" val="HELMET"/>
         <set name="price" val="18400"/>
@@ -740,7 +695,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="147"/>
         <set name="crystal_type" val="C"/>
-        <set name="material" val="STEEL"/>
         <set name="weight" val="600"/>
         <set name="price" val="368000"/>
         <set name="enchant_enabled" val="1"/>
@@ -753,7 +707,6 @@
         <!-- Spellbook needed to learn Wind Strike. -->
         <set name="icon" val="icon.etc_spell_books_blue_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="120"/>
         <set name="price" val="50"/>
         <set name="commissionItemType" val="SPELLBOOK"/>
@@ -763,7 +716,6 @@
         <!-- Spellbook needed to learn Self Heal. -->
         <set name="icon" val="icon.etc_spell_books_blue_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="120"/>
         <set name="price" val="50"/>
         <set name="commissionItemType" val="SPELLBOOK"/>
@@ -773,7 +725,6 @@
         <!-- Spellbook needed to learn Heal. Used by Human Mystics, Elven Mystics and Dark Mystics. Required level: 7 -->
         <set name="icon" val="icon.etc_spell_books_white_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="120"/>
         <set name="price" val="100"/>
         <set name="commissionItemType" val="SPELLBOOK"/>
@@ -783,7 +734,6 @@
         <!-- Letter from Sentry Jenna to Master Harant. -->
         <set name="icon" val="icon.etc_scroll_white_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -799,7 +749,6 @@
         <!-- Adamantite sword newly issued to sentries. -->
         <set name="icon" val="icon.weapon_bastard_sword_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -815,7 +764,6 @@
         <!-- Adamantite sword newly issued to sentries. -->
         <set name="icon" val="icon.weapon_bastard_sword_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -831,7 +779,6 @@
         <!-- Adamantite sword newly issued to sentries. -->
         <set name="icon" val="icon.weapon_bastard_sword_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -847,7 +794,6 @@
         <!-- Bronze sword used in the past by sentries. Recover this and take it to Sentry Jenna. -->
         <set name="icon" val="icon.weapon_crimson_sword_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -863,7 +809,6 @@
         <!-- Bone fragment obtained from the undead skeletons. Gather 10 bone fragments and 3 Elf skulls, and take them to Unoren. -->
         <set name="icon" val="icon.etc_piece_bone_red_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -879,7 +824,6 @@
         <!-- The skull of an undead Elf. Gather 10 bone fragments and 3 Elf skulls, and take them to Unoren. -->
         <set name="icon" val="icon.etc_skull_black_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -895,7 +839,6 @@
         <!-- Gather 13 Abyss Spirit Ore and take them to Sentry Nelsya. -->
         <set name="icon" val="icon.etc_bead_gold_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -911,7 +854,6 @@
         <!-- Take this sword to the Grand Master of the Fighter Guild to transfer your class to Knight. -->
         <set name="icon" val="icon.weapon_flamberge_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -927,7 +869,6 @@
         <!-- Gold coin engraved with the mark of the lord of Gludio. Gather three or more of these to end the Trial of the Esquire. -->
         <set name="icon" val="icon.etc_coins_silver_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -943,7 +884,6 @@
         <!-- Gold coin engraved with the mark of the lord of Gludio. Gather three or more of these to end the Trial of the Esquire. -->
         <set name="icon" val="icon.etc_coins_silver_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -959,7 +899,6 @@
         <!-- Gold coin engraved with the mark of the lord of Gludio. Gather three or more of these to end the Trial of the Esquire. -->
         <set name="icon" val="icon.etc_coins_silver_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -975,7 +914,6 @@
         <!-- Gold coin engraved with the mark of the lord of Gludio. Gather three or more of these to end the Trial of the Esquire. -->
         <set name="icon" val="icon.etc_coins_silver_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -991,7 +929,6 @@
         <!-- Gold coin engraved with the mark of the lord of Gludio. Gather three or more of these to end the Trial of the Esquire. -->
         <set name="icon" val="icon.etc_coins_silver_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -1007,7 +944,6 @@
         <!-- Gold coin engraved with the mark of the lord of Gludio. Gather three or more of these to end the Trial of the Esquire. -->
         <set name="icon" val="icon.etc_coins_silver_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -1023,7 +959,6 @@
         <!-- Crest that proves guard membership. As Captain Bathis requested, hunt Bugbear Raiders. -->
         <set name="icon" val="icon.etc_badge_silver_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -1039,7 +974,6 @@
         <!-- Necklace worn by Bugbears for incantation purposes. Collect ten of these and visit Captain Bathis. -->
         <set name="icon" val="icon.etc_totem_necklace_red_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -1055,7 +989,6 @@
         <!-- As High Priest Raymond requested, go to the Ruins of Despair, defeat the departed spirits of priests, and collect 12 Einhasad's Crucifixes. -->
         <set name="icon" val="icon.accessary_earing_of_holy_spirit_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -1071,7 +1004,6 @@
         <!-- Holy symbol of Einhasad, the goddess of light. Collect 12 of these and go to High Priest Raymond. -->
         <set name="icon" val="icon.accessary_necklace_of_knowledge_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -1087,7 +1019,6 @@
         <!-- Crest that distinguishes guard membership. As Captain Bezique requested, hunt giant spiders. -->
         <set name="icon" val="icon.etc_badge_silver_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -1103,7 +1034,6 @@
         <!-- Severed leg of a dead Venomous Spider. Collect twenty of these and go to Captain Bezique. -->
         <set name="icon" val="icon.etc_horn_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -1119,7 +1049,6 @@
         <!-- As High Priest Levian requested, kill Langk Lizardmen and collect the proof. -->
         <set name="icon" val="icon.accessary_earing_of_holy_spirit_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -1135,7 +1064,6 @@
         <!-- Small sculpture Langk Lizardmen carry with them. Collect twenty of these and take them to High Priestess Levian. -->
         <set name="icon" val="icon.etc_totem_green_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -1151,7 +1079,6 @@
         <!-- Crest that proves guard membership. As Captain Gilbert requested, hunt giant spiders. -->
         <set name="icon" val="icon.etc_badge_silver_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -1167,7 +1094,6 @@
         <!-- The husk of a giant spider that you peeled off. Collect twenty of these and take them to Captain Gilbert. -->
         <set name="icon" val="icon.etc_leather_gray_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -1183,7 +1109,6 @@
         <!-- As High Priest Biotin requested, hunt Silent Horrors in the Elven Ruins. -->
         <set name="icon" val="icon.accessary_earing_of_holy_spirit_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -1199,7 +1124,6 @@
         <!-- The skull of a long-dead Elf. Collect 10 and take them to High Priest Biotin. -->
         <set name="icon" val="icon.etc_skull_black_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -1215,7 +1139,6 @@
         <!-- Captain Bezique's letter to Neti. Find Neti in Gludin Village and give her the letter. -->
         <set name="icon" val="icon.etc_scroll_white_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -1235,7 +1158,6 @@
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;10;0"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="WOOD"/>
         <set name="weight" val="1850"/>
         <set name="soulshots" val="1"/>
         <set name="spiritshots" val="1"/>
@@ -1268,7 +1190,6 @@
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="weight" val="1000"/>
         <set name="soulshots" val="1"/>
         <set name="spiritshots" val="1"/>
@@ -1295,7 +1216,6 @@
         <!-- Undead bone pieces. Collect 10 and take them to Neti. -->
         <set name="icon" val="icon.etc_piece_bone_black_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -1311,7 +1231,6 @@
         <!-- Proof you received after passing Neti's test. You must take it to Captain Bezique. -->
         <set name="icon" val="icon.accessary_red_cresent_earing_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -1327,7 +1246,6 @@
         <!-- It is written that whoever does away with the Cat's Eye Bandits and recovers the stolen goods will be rewarded. -->
         <set name="icon" val="icon.etc_recipe_red_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -1343,7 +1261,6 @@
         <!-- Fair amount of jewelry the Cat's Eye Bandits stole. You must take them to Captain Bezique. -->
         <set name="icon" val="icon.etc_jewel_red_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -1359,7 +1276,6 @@
         <!-- Rare tome the Cat's Eye Bandits stole. You must take it to Captain Bezique. -->
         <set name="icon" val="icon.etc_spell_books_red_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -1375,7 +1291,6 @@
         <!-- Expensive necklace that the Cat's Eye Bandits stole. You must take it back to Captain Bezique. -->
         <set name="icon" val="icon.accessary_ring_of_grace_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -1391,7 +1306,6 @@
         <!-- Expensive necklace the Cat's Eye Bandits stole. You must take it to Captain Bezique. -->
         <set name="icon" val="icon.accessary_necklace_of_blessing_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -1407,7 +1321,6 @@
         <!-- Take this letter to the Grand Masters of the Warrior Guild to change your class to a Rogue. -->
         <set name="icon" val="icon.etc_letter_red_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -1423,7 +1336,6 @@
         <!-- Certificate of forbidden book collection given by Priest Zigaunt. Carry this around and collect all the forbidden books. -->
         <set name="icon" val="icon.etc_scroll_white_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -1439,7 +1351,6 @@
         <!-- Certificate that proves that you represent the religious body. This certificate is given by Priest Zigaunt. Take this to Lionel for covenant. -->
         <set name="icon" val="icon.etc_scroll_gray_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -1455,7 +1366,6 @@
         <!-- The last book of Lioniel. Hand this book to Grand Magister Gallint in the Einhovant School of Magic. -->
         <set name="icon" val="icon.etc_spell_books_blue_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -1471,7 +1381,6 @@
         <!-- Forbidden book Simplon sold to Vivyan. Collect five forbidden books and take them to Priest Zigaunt. -->
         <set name="icon" val="icon.etc_spell_books_blue_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -1487,7 +1396,6 @@
         <!-- The rest of Simplon's forbidden books. Collect 5 forbidden books and take them to Priest Zigaunt. -->
         <set name="icon" val="icon.etc_spell_books_blue_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -1503,7 +1411,6 @@
         <!-- Forbidden book Simplon sold to Praga. Collect 5 forbidden books and take them to Priest Zigaunt. -->
         <set name="icon" val="icon.etc_spell_books_blue_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -1519,7 +1426,6 @@
         <!-- Certificate that Gallint gives for safekeeping of forbidden books. Give to Lionel and receive covenant. -->
         <set name="icon" val="icon.etc_letter_white_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -1535,7 +1441,6 @@
         <!-- The pendant of his mother that Guard Praga lost in the ruins. Take this to Guard Praga and receive a forbidden book. -->
         <set name="icon" val="icon.accessary_blessed_earing_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -1551,7 +1456,6 @@
         <!-- Necklace chain where a pendant used to hang. Recover the pendant from the zombies in the Ruins of Agony to make it complete. -->
         <set name="icon" val="icon.accessary_blessed_necklace_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>

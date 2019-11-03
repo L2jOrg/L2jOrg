@@ -4,7 +4,6 @@
         <!-- High-quality coin collecting album made of leather. Cannot be exchanged, dropped, sold, or stored in a warehouse. -->
         <set name="icon" val="icon.etc_magic_book_black_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -20,7 +19,6 @@
         <!-- Blood that can be obtained by killing a Monster of Offering. The number of this item will determine your score. -->
         <set name="icon" val="icon.etc_dragon_blood_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="CRYSTAL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -36,7 +34,6 @@
         <!-- Scroll that contains ancient magic. Take it to Gatekeeper Ziggurat. -->
         <set name="icon" val="icon.etc_scroll_of_enchant_weapon_i01"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="CRYSTAL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -52,7 +49,6 @@
         <!-- Ancient urn that was found in the Tower of Insolence. Take it to Seer Reva of Town of Aden. -->
         <set name="icon" val="icon.etc_oil_pot_black_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="CRYSTAL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -69,7 +65,6 @@
         <set name="icon" val="icon.etc_piece_of_paper_white_i00"/>
         <set name="default_action" val="CAPSULE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="price" val="80"/>
         <set name="is_stackable" val="true"/>
         <set name="handler" val="ItemSkills"/>
@@ -82,7 +77,6 @@
         <!-- A Chapter of Great Magus Kranvel's Spellbook. Collect the Chapters on Fire, Water, Wind and Earth and take all of them to Elder Casian. -->
         <set name="icon" val="icon.etc_paper_red_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="price" val="80"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
         <set name="is_stackable" val="true"/>
@@ -91,7 +85,6 @@
         <!-- A Chapter of Great Magus Kranvel's Spellbook. Collect the Chapters on Fire, Water, Wind and Earth and take all of them to Elder Casian. -->
         <set name="icon" val="icon.etc_paper_blue_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="price" val="80"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
         <set name="is_stackable" val="true"/>
@@ -100,7 +93,6 @@
         <!-- A Chapter of Great Magus Kranvel's Spellbook. Collect the Chapters on Fire, Water, Wind and Earth and take all of them to Elder Casian. -->
         <set name="icon" val="icon.etc_paper_white_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="price" val="80"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
         <set name="is_stackable" val="true"/>
@@ -109,7 +101,6 @@
         <!-- A Chapter of Great Magus Kranvel's Spellbook. Collect the Chapters on Fire, Water, Wind and Earth and take all of them to Elder Casian. -->
         <set name="icon" val="icon.etc_paper_black_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="price" val="80"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
         <set name="is_stackable" val="true"/>
@@ -118,7 +109,6 @@
         <!-- Paper piece that has useless scribbles written on it. -->
         <set name="icon" val="icon.etc_piece_of_paper_black_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="price" val="80"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
         <set name="is_stackable" val="true"/>
@@ -127,7 +117,6 @@
         <!-- Part of the golem blueprints from the Lesser Giant era. The first page out of five pages. -->
         <set name="icon" val="icon.etc_paper_black_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
         <set name="is_stackable" val="true"/>
     </item>
@@ -135,7 +124,6 @@
         <!-- Part of the golem blueprints from the Lesser Giant era. The second page out of five pages. -->
         <set name="icon" val="icon.etc_paper_black_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
         <set name="is_stackable" val="true"/>
     </item>
@@ -143,7 +131,6 @@
         <!-- Part of the golem blueprints from the Lesser Giant era. The third page out of five pages. -->
         <set name="icon" val="icon.etc_paper_black_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
         <set name="is_stackable" val="true"/>
     </item>
@@ -151,7 +138,6 @@
         <!-- Part of the golem blueprints from the Lesser Giant era. The fourth page out of five pages. -->
         <set name="icon" val="icon.etc_paper_black_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
         <set name="is_stackable" val="true"/>
     </item>
@@ -159,7 +145,6 @@
         <!-- Part of the golem blueprints from the Lesser Giant era. The fifth page out of five pages. -->
         <set name="icon" val="icon.etc_paper_black_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
         <set name="is_stackable" val="true"/>
     </item>
@@ -167,7 +152,6 @@
         <!-- Book on the magic of the giants from the Lesser Giant era, 1st chapter. -->
         <set name="icon" val="icon.etc_paper_blue_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
         <set name="is_stackable" val="true"/>
     </item>
@@ -175,7 +159,6 @@
         <!-- Book on the magic of the giants from the Lesser Giant era, 2nd chapter. -->
         <set name="icon" val="icon.etc_paper_blue_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
         <set name="is_stackable" val="true"/>
     </item>
@@ -183,7 +166,6 @@
         <!-- Book on the magic of the giants from the Lesser Giant era, 3rd chapter. -->
         <set name="icon" val="icon.etc_paper_blue_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
         <set name="is_stackable" val="true"/>
     </item>
@@ -191,7 +173,6 @@
         <!-- Book on the magic of the giants from the Lesser Giant era, 4th chapter. -->
         <set name="icon" val="icon.etc_paper_blue_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
         <set name="is_stackable" val="true"/>
     </item>
@@ -199,7 +180,6 @@
         <!-- Book on the magic of the giants from the Lesser Giant era, 5th chapter. -->
         <set name="icon" val="icon.etc_paper_blue_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
         <set name="is_stackable" val="true"/>
     </item>
@@ -207,7 +187,6 @@
         <!-- Architectural handbook of the giants from the Lesser Giant era, 1st chapter. -->
         <set name="icon" val="icon.etc_paper_red_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
         <set name="is_stackable" val="true"/>
     </item>
@@ -215,7 +194,6 @@
         <!-- Architectural handbook of the giants from the Lesser Giant era, 2nd chapter. -->
         <set name="icon" val="icon.etc_paper_red_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
         <set name="is_stackable" val="true"/>
     </item>
@@ -223,7 +201,6 @@
         <!-- Architectural handbook of the giants from the Lesser Giant era, 3rd chapter. -->
         <set name="icon" val="icon.etc_paper_red_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
         <set name="is_stackable" val="true"/>
     </item>
@@ -231,7 +208,6 @@
         <!-- Architectural handbook of the giants from the Lesser Giant era, 4th chapter. -->
         <set name="icon" val="icon.etc_paper_red_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
         <set name="is_stackable" val="true"/>
     </item>
@@ -239,7 +215,6 @@
         <!-- Architectural handbook of the giants from the Lesser Giant era, 5th chapter. -->
         <set name="icon" val="icon.etc_paper_red_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
         <set name="is_stackable" val="true"/>
     </item>
@@ -247,7 +222,6 @@
         <!-- Medical book of the giants from the Lesser Giant era, 1st chapter. -->
         <set name="icon" val="icon.etc_paper_white_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
         <set name="is_stackable" val="true"/>
     </item>
@@ -255,7 +229,6 @@
         <!-- Medical book of the giants from the Lesser Giant era, 2nd chapter. -->
         <set name="icon" val="icon.etc_paper_white_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
         <set name="is_stackable" val="true"/>
     </item>
@@ -263,7 +236,6 @@
         <!-- Medical book of the giants from the Lesser Giant era, 3rd chapter. -->
         <set name="icon" val="icon.etc_paper_white_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
         <set name="is_stackable" val="true"/>
     </item>
@@ -271,7 +243,6 @@
         <!-- Medical book of the giants from the Lesser Giant era, 4th chapter. -->
         <set name="icon" val="icon.etc_paper_white_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
         <set name="is_stackable" val="true"/>
     </item>
@@ -279,7 +250,6 @@
         <!-- Medical book of the giants from the Lesser Giant era, 5th chapter. -->
         <set name="icon" val="icon.etc_paper_white_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
         <set name="is_stackable" val="true"/>
     </item>
@@ -287,7 +257,6 @@
         <!-- It seems like even the giants used to have a love life. -->
         <set name="icon" val="icon.etc_piece_of_report_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="price" val="200"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
         <set name="is_stackable" val="true"/>
@@ -296,7 +265,6 @@
         <!-- Crude picture drawn by a would-be painter giant. -->
         <set name="icon" val="icon.etc_painting_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="price" val="200"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
         <set name="is_stackable" val="true"/>
@@ -306,7 +274,6 @@
         <set name="icon" val="icon.etc_roll_of_paper_black_i00"/>
         <set name="default_action" val="CAPSULE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="is_stackable" val="true"/>
         <set name="handler" val="ItemSkills"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
@@ -318,7 +285,6 @@
         <!-- Part of the theory book that describes the science and technology of the Lesser Giant era. The 1st of five chapters. -->
         <set name="icon" val="icon.etc_spell_books_white_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
         <set name="is_stackable" val="true"/>
     </item>
@@ -326,7 +292,6 @@
         <!-- Part of the theory book that describes the science and technology of the Lesser Giant era. The 2nd of five chapters. -->
         <set name="icon" val="icon.etc_spell_books_white_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
         <set name="is_stackable" val="true"/>
     </item>
@@ -334,7 +299,6 @@
         <!-- Part of the theory book that describes the science and technology of the Lesser Giant era. The 3rd of five chapters. -->
         <set name="icon" val="icon.etc_spell_books_white_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
         <set name="is_stackable" val="true"/>
     </item>
@@ -342,7 +306,6 @@
         <!-- Part of the theory book that describes the science and technology of the Lesser Giant era. The 4th of five chapters. -->
         <set name="icon" val="icon.etc_spell_books_white_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
         <set name="is_stackable" val="true"/>
     </item>
@@ -350,7 +313,6 @@
         <!-- Part of the theory book that describes the science and technology of the Lesser Giant era. The 5th of five chapters. -->
         <set name="icon" val="icon.etc_spell_books_white_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
         <set name="is_stackable" val="true"/>
     </item>
@@ -358,7 +320,6 @@
         <!-- Part of the almanac that contains information about the culture of the Lesser Giant era. The 1st of five chapters. -->
         <set name="icon" val="icon.etc_spell_books_summon_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
         <set name="is_stackable" val="true"/>
     </item>
@@ -366,7 +327,6 @@
         <!-- Part of the almanac that contains information about the culture of the Lesser Giant era. The 2nd of five chapters. -->
         <set name="icon" val="icon.etc_spell_books_summon_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
         <set name="is_stackable" val="true"/>
     </item>
@@ -374,7 +334,6 @@
         <!-- Part of the almanac that contains information about the culture of the Lesser Giant era. The 3rd of five chapters. -->
         <set name="icon" val="icon.etc_spell_books_summon_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
         <set name="is_stackable" val="true"/>
     </item>
@@ -382,7 +341,6 @@
         <!-- Part of the almanac that contains information about the culture of the Lesser Giant era. The 4th of five chapters. -->
         <set name="icon" val="icon.etc_spell_books_summon_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
         <set name="is_stackable" val="true"/>
     </item>
@@ -390,7 +348,6 @@
         <!-- Part of the almanac that contains information about the culture of the Lesser Giant era. The 5th of five chapters. -->
         <set name="icon" val="icon.etc_spell_books_summon_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
         <set name="is_stackable" val="true"/>
     </item>
@@ -399,7 +356,6 @@
         <set name="icon" val="icon.etc_spell_books_black_i00"/>
         <set name="default_action" val="CAPSULE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="is_stackable" val="true"/>
         <set name="handler" val="ItemSkills"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
@@ -411,7 +367,6 @@
         <!-- Gift from Harlan as a token of gratitude. It is aged 15 years. Average quality wine. -->
         <set name="icon" val="icon.etc_luxury_wine_a_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="20"/>
         <set name="price" val="5900"/>
         <set name="is_questitem" val="true"/>
@@ -422,7 +377,6 @@
         <!-- Gift from Harlan as a token of gratitude. It is aged 30 years. High quality wine. -->
         <set name="icon" val="icon.etc_luxury_wine_b_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="20"/>
         <set name="price" val="7900"/>
         <set name="is_questitem" val="true"/>
@@ -433,7 +387,6 @@
         <!-- Gift from Harlan as a token of gratitude. It is aged 60 years. Excellent quality wine. -->
         <set name="icon" val="icon.etc_luxury_wine_c_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="20"/>
         <set name="price" val="30900"/>
         <set name="is_questitem" val="true"/>
@@ -444,7 +397,6 @@
         <!-- Secret recipe for making dessert by using ritron fruit as its ingredient. It can to sold at a store. -->
         <set name="icon" val="icon.etc_paper_white_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="10"/>
         <set name="is_questitem" val="true"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
@@ -454,7 +406,6 @@
         <!-- Delicious jelly made from ritron fruit. It can be sold at a store. -->
         <set name="icon" val="icon.etc_cobol_i04"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="10"/>
         <set name="is_questitem" val="true"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
@@ -464,7 +415,6 @@
         <!-- Royal-grade Coin -->
         <set name="icon" val="icon.etc_kyles_silver_basilisk_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="price" val="1000"/>
         <set name="is_questitem" val="true"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
@@ -474,7 +424,6 @@
         <!-- Royal-grade Coin -->
         <set name="icon" val="icon.etc_kyles_gold_golem_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="price" val="1000"/>
         <set name="is_questitem" val="true"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
@@ -484,7 +433,6 @@
         <!-- Royal-grade Coin -->
         <set name="icon" val="icon.etc_kyles_blood_dragon_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="price" val="1000"/>
         <set name="is_questitem" val="true"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
@@ -494,7 +442,6 @@
         <!-- Medal that is issued by the Iron Gate Guild to Warehouse Keepers according to their productivity. If you collect them, you can use them to play bingo. -->
         <set name="icon" val="icon.etc_irongate_medal_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="price" val="100"/>
         <set name="is_questitem" val="true"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
@@ -504,7 +451,6 @@
         <!-- Collection of jokes of Galfredo Romer, a Royal Clown. -->
         <set name="icon" val="icon.etc_piece_of_paper_black_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="price" val="400"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
         <set name="is_stackable" val="true"/>
@@ -513,7 +459,6 @@
         <!-- Ancient record regarding the Seven Seals. The first of seven chapters. -->
         <set name="icon" val="icon.etc_piece_of_paper_white_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="price" val="400"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
         <set name="is_stackable" val="true"/>
@@ -522,7 +467,6 @@
         <!-- Ancient record regarding the Seven Seals. The second of seven chapters. -->
         <set name="icon" val="icon.etc_piece_of_paper_white_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="price" val="400"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
         <set name="is_stackable" val="true"/>
@@ -531,7 +475,6 @@
         <!-- Ancient record regarding the Seven Seals. The third of seven chapters. -->
         <set name="icon" val="icon.etc_piece_of_paper_white_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="price" val="400"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
         <set name="is_stackable" val="true"/>
@@ -540,7 +483,6 @@
         <!-- Ancient record regarding the Seven Seals. The fourth of seven chapters. -->
         <set name="icon" val="icon.etc_piece_of_paper_white_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="price" val="400"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
         <set name="is_stackable" val="true"/>
@@ -549,7 +491,6 @@
         <!-- Ancient record regarding the Seven Seals. The fifth of seven chapters. -->
         <set name="icon" val="icon.etc_piece_of_paper_white_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="price" val="400"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
         <set name="is_stackable" val="true"/>
@@ -558,7 +499,6 @@
         <!-- Ancient record regarding the Seven Seals. The sixth of seven chapters. -->
         <set name="icon" val="icon.etc_piece_of_paper_white_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="price" val="400"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
         <set name="is_stackable" val="true"/>
@@ -567,7 +507,6 @@
         <!-- Ancient record regarding the Seven Seals. The seventh of seven chapters. -->
         <set name="icon" val="icon.etc_piece_of_paper_white_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="price" val="400"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
         <set name="is_stackable" val="true"/>
@@ -576,7 +515,6 @@
         <!-- Story of heroes written by ancient troubadours. The first of five chapters. -->
         <set name="icon" val="icon.etc_piece_of_paper_gray_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="price" val="400"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
         <set name="is_stackable" val="true"/>
@@ -585,7 +523,6 @@
         <!-- Story of heroes written by ancient troubadours. The second of five chapters. -->
         <set name="icon" val="icon.etc_piece_of_paper_gray_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="price" val="400"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
         <set name="is_stackable" val="true"/>
@@ -594,7 +531,6 @@
         <!-- Story of heroes written by ancient troubadours. The third of five chapters. -->
         <set name="icon" val="icon.etc_piece_of_paper_gray_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="price" val="400"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
         <set name="is_stackable" val="true"/>
@@ -603,7 +539,6 @@
         <!-- Story of heroes written by ancient troubadours. The fourth of five chapters. -->
         <set name="icon" val="icon.etc_piece_of_paper_gray_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="price" val="400"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
         <set name="is_stackable" val="true"/>
@@ -612,7 +547,6 @@
         <!-- Story of heroes written by ancient troubadours. The fifth of five chapters. -->
         <set name="icon" val="icon.etc_piece_of_paper_gray_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="price" val="400"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
         <set name="is_stackable" val="true"/>
@@ -621,7 +555,6 @@
         <!-- The genealogy of the Elmoreden royal family. The first of five chapters. -->
         <set name="icon" val="icon.etc_letter_red_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="price" val="400"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
         <set name="is_stackable" val="true"/>
@@ -630,7 +563,6 @@
         <!-- The genealogy of the Elmoreden royal family. The second of five chapters. -->
         <set name="icon" val="icon.etc_letter_red_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="price" val="400"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
         <set name="is_stackable" val="true"/>
@@ -639,7 +571,6 @@
         <!-- The genealogy of the Elmoreden royal family. The third of five chapters. -->
         <set name="icon" val="icon.etc_letter_red_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="price" val="400"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
         <set name="is_stackable" val="true"/>
@@ -648,7 +579,6 @@
         <!-- The genealogy of the Elmoreden royal family. The fourth of five chapters. -->
         <set name="icon" val="icon.etc_letter_red_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="price" val="400"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
         <set name="is_stackable" val="true"/>
@@ -657,7 +587,6 @@
         <!-- The genealogy of the Elmoreden royal family. The fifth of five chapters. -->
         <set name="icon" val="icon.etc_letter_red_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="price" val="400"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
         <set name="is_stackable" val="true"/>

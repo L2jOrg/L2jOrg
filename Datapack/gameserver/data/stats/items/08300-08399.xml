@@ -6,7 +6,6 @@
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="30"/>
         <set name="price" val="73200"/>
         <set name="recipe_id" val="814"/>
@@ -20,7 +19,6 @@
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="30"/>
         <set name="price" val="73200"/>
         <set name="recipe_id" val="805"/>
@@ -34,7 +32,6 @@
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="30"/>
         <set name="price" val="73200"/>
         <set name="recipe_id" val="804"/>
@@ -48,7 +45,6 @@
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="30"/>
         <set name="price" val="108000"/>
         <set name="recipe_id" val="807"/>
@@ -62,7 +58,6 @@
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="30"/>
         <set name="price" val="108000"/>
         <set name="recipe_id" val="806"/>
@@ -76,7 +71,6 @@
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="30"/>
         <set name="price" val="28000"/>
         <set name="recipe_id" val="788"/>
@@ -90,7 +84,6 @@
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="30"/>
         <set name="price" val="73200"/>
         <set name="recipe_id" val="813"/>
@@ -104,7 +97,6 @@
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="30"/>
         <set name="price" val="108000"/>
         <set name="recipe_id" val="809"/>
@@ -118,7 +110,6 @@
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="30"/>
         <set name="price" val="108000"/>
         <set name="recipe_id" val="808"/>
@@ -131,7 +122,6 @@
         <set name="icon" val="icon.etc_sword_body_i00"/>
         <set name="etcitem_type" val="MATERIAL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="60"/>
         <set name="price" val="11912"/>
         <set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS"/>
@@ -142,7 +132,6 @@
         <set name="icon" val="icon.etc_sword_body_i00"/>
         <set name="etcitem_type" val="MATERIAL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="60"/>
         <set name="price" val="11723"/>
         <set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS"/>
@@ -153,7 +142,6 @@
         <set name="icon" val="icon.etc_squares_gray_i00"/>
         <set name="etcitem_type" val="MATERIAL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="60"/>
         <set name="price" val="11877"/>
         <set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS"/>
@@ -164,7 +152,6 @@
         <set name="icon" val="icon.etc_squares_gray_i00"/>
         <set name="etcitem_type" val="MATERIAL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="60"/>
         <set name="price" val="14583"/>
         <set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS"/>
@@ -175,7 +162,6 @@
         <set name="icon" val="icon.etc_squares_gray_i00"/>
         <set name="etcitem_type" val="MATERIAL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="60"/>
         <set name="price" val="19757"/>
         <set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS"/>
@@ -186,7 +172,6 @@
         <set name="icon" val="icon.etc_squares_gray_i00"/>
         <set name="etcitem_type" val="MATERIAL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="60"/>
         <set name="price" val="11862"/>
         <set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS"/>
@@ -197,7 +182,6 @@
         <set name="icon" val="icon.etc_squares_gray_i00"/>
         <set name="etcitem_type" val="MATERIAL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="60"/>
         <set name="price" val="14586"/>
         <set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS"/>
@@ -211,7 +195,6 @@
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;44;120"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="FINE_STEEL"/>
         <set name="commissionItemType" val="DUALSWORD"/>
 
         <set name="is_dropable" val="false"/>
@@ -231,7 +214,6 @@
         <!-- Spellbook needed to learn Great Might. Used by Prophets. Required level: 58 -->
         <set name="icon" val="icon.etc_spell_books_assistance_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="120"/>
         <set name="price" val="100000"/>
         <set name="commissionItemType" val="SPELLBOOK"/>
@@ -241,7 +223,6 @@
         <!-- Spellbook needed to learn Greater Shield. Used by Prophets. Required level: 58 -->
         <set name="icon" val="icon.etc_spell_books_assistance_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="120"/>
         <set name="price" val="100000"/>
         <set name="commissionItemType" val="SPELLBOOK"/>
@@ -251,7 +232,6 @@
         <!-- Spellbook needed to learn Clarity. Used by Elven Elders. Required level: 58 -->
         <set name="icon" val="icon.etc_spell_books_assistance_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="120"/>
         <set name="price" val="100000"/>
         <set name="commissionItemType" val="SPELLBOOK"/>

@@ -10,7 +10,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="1746"/>
         <set name="crystal_type" val="B"/>
-        <set name="material" val="WOOD"/>
         <set name="weight" val="930"/>
         <set name="price" val="13100000"/>
         <set name="soulshots" val="1"/>
@@ -42,7 +41,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="1746"/>
         <set name="crystal_type" val="B"/>
-        <set name="material" val="WOOD"/>
         <set name="weight" val="930"/>
         <set name="price" val="13100000"/>
         <set name="soulshots" val="1"/>
@@ -74,7 +72,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="1746"/>
         <set name="crystal_type" val="B"/>
-        <set name="material" val="WOOD"/>
         <set name="weight" val="930"/>
         <set name="price" val="13100000"/>
         <set name="soulshots" val="1"/>
@@ -100,7 +97,6 @@
         <!-- Spellbook needed to learn Solar Spark. Used by Elven Wizards. Required level: 25 -->
         <set name="icon" val="icon.etc_spell_books_element_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="120"/>
         <set name="price" val="1250"/>
         <set name="commissionItemType" val="SPELLBOOK"/>
@@ -110,7 +106,6 @@
         <!-- Spellbook needed to learn Solar Flare. Used by Spellsingers. Required level: 40 -->
         <set name="icon" val="icon.etc_spell_books_element_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="120"/>
         <set name="price" val="3200"/>
         <set name="commissionItemType" val="SPELLBOOK"/>
@@ -120,7 +115,6 @@
         <!-- Spellbook needed to learn Shadow Spark. Used by Dark Wizards. Required level: 25 -->
         <set name="icon" val="icon.etc_spell_books_element_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="120"/>
         <set name="price" val="1250"/>
         <set name="commissionItemType" val="SPELLBOOK"/>
@@ -130,7 +124,6 @@
         <!-- Spellbook needed to learn Shadow Flare. Used by Spellhowlers. Required level: 40 -->
         <set name="icon" val="icon.etc_spell_books_element_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="120"/>
         <set name="price" val="3200"/>
         <set name="commissionItemType" val="SPELLBOOK"/>
@@ -140,7 +133,6 @@
         <!-- Spellbook needed to learn Vampiric Rage. Used by Shillien Oracles. Required level: 30 -->
         <set name="icon" val="icon.etc_spell_books_assistance_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="120"/>
         <set name="price" val="1800"/>
         <set name="commissionItemType" val="SPELLBOOK"/>
@@ -150,7 +142,6 @@
         <!-- Spellbook needed to learn Curse Disease. Used by Necromancers. Required level: 58 -->
         <set name="icon" val="icon.etc_spell_books_black_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="120"/>
         <set name="price" val="6750"/>
         <set name="commissionItemType" val="SPELLBOOK"/>
@@ -160,7 +151,6 @@
         <!-- Spellbook needed to learn Benediction. Used by Bishops. Required level: 66 -->
         <set name="icon" val="icon.etc_spell_books_white_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="120"/>
         <set name="price" val="200000"/>
         <set name="commissionItemType" val="SPELLBOOK"/>
@@ -170,7 +160,6 @@
         <!-- Spellbook needed to learn Word of Fear. Used by Prophets. Required level: 44 -->
         <set name="icon" val="icon.etc_spell_books_assistance_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="120"/>
         <set name="price" val="3850"/>
         <set name="commissionItemType" val="SPELLBOOK"/>
@@ -180,7 +169,6 @@
         <!-- Spellbook needed to learn Eva's Serenade. Used by Elven Elders. Required level: 44 -->
         <set name="icon" val="icon.etc_spell_books_assistance_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="120"/>
         <set name="price" val="3850"/>
         <set name="commissionItemType" val="SPELLBOOK"/>
@@ -190,7 +178,6 @@
         <!-- Blueprint needed to learn the Summon Wild Hog Cannon technique. Used by Warsmiths. Required level: 58 -->
         <set name="icon" val="icon.etc_plan_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="120"/>
         <set name="price" val="100000"/>
         <set name="commissionItemType" val="SPELLBOOK"/>
@@ -200,7 +187,6 @@
         <!-- Spellbook needed to learn Energy Bolt. Used by Human Wizards and Elven Wizards. Required level: 20 -->
         <set name="icon" val="icon.etc_spell_books_element_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="120"/>
         <set name="price" val="800"/>
         <set name="commissionItemType" val="SPELLBOOK"/>
@@ -210,7 +196,6 @@
         <!-- Spellbook needed to learn Aura Bolt. Used by Spellsingers and Sorcerers. Required level: 40 -->
         <set name="icon" val="icon.etc_spell_books_element_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="120"/>
         <set name="price" val="3200"/>
         <set name="commissionItemType" val="SPELLBOOK"/>
@@ -220,7 +205,6 @@
         <!-- Spellbook needed to learn Summon Kai the Cat. Used by Warlocks. Required level: 40 -->
         <set name="icon" val="icon.etc_spell_books_summon_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="120"/>
         <set name="price" val="3200"/>
         <set name="commissionItemType" val="SPELLBOOK"/>
@@ -230,7 +214,6 @@
         <!-- Spellbook needed to learn Summon Merrow the Unicorn. Used by Elemental Summoners. Required level: 40 -->
         <set name="icon" val="icon.etc_spell_books_summon_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="120"/>
         <set name="price" val="3200"/>
         <set name="commissionItemType" val="SPELLBOOK"/>
@@ -240,7 +223,6 @@
         <!-- Spellbook needed to learn Summon Soulless. Used by Phantom Summoners. Required level: 40 -->
         <set name="icon" val="icon.etc_spell_books_summon_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="120"/>
         <set name="price" val="3200"/>
         <set name="commissionItemType" val="SPELLBOOK"/>
@@ -250,7 +232,6 @@
         <!-- Blueprint for learning the Summon Big Boom technique. Used by Warsmiths. Required level: 58 -->
         <set name="icon" val="icon.etc_plan_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="120"/>
         <set name="price" val="6750"/>
         <set name="commissionItemType" val="SPELLBOOK"/>
@@ -260,7 +241,6 @@
         <!-- Spellbook needed to learn Summon Binding Cubic. Used by Warlocks. Required level: 40 -->
         <set name="icon" val="icon.etc_spell_books_summon_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="120"/>
         <set name="price" val="100000"/>
         <set name="commissionItemType" val="SPELLBOOK"/>
@@ -270,7 +250,6 @@
         <!-- Spellbook needed to learn Summon Aqua Cubic. Used by Elemental Summoners. Required level: 40 -->
         <set name="icon" val="icon.etc_spell_books_summon_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="120"/>
         <set name="price" val="100000"/>
         <set name="commissionItemType" val="SPELLBOOK"/>
@@ -280,7 +259,6 @@
         <!-- Spellbook needed to learn Summon Spark Cubic. Used by Phantom Summoners. Required level: 40 -->
         <set name="icon" val="icon.etc_spell_books_summon_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="120"/>
         <set name="price" val="100000"/>
         <set name="commissionItemType" val="SPELLBOOK"/>
@@ -290,7 +268,6 @@
         <!-- Amulet required for the Pa'agrio's Haste spell. Used by Overlords. Required level: 58 -->
         <set name="icon" val="icon.etc_orcish_talisman_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="120"/>
         <set name="price" val="6750"/>
         <set name="commissionItemType" val="SPELLBOOK"/>
@@ -300,7 +277,6 @@
         <!-- Amulet required for the Soul Guard spell. Used by Overlords. Required level: 44 -->
         <set name="icon" val="icon.etc_orcish_talisman_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="120"/>
         <set name="price" val="3850"/>
         <set name="commissionItemType" val="SPELLBOOK"/>
@@ -310,7 +286,6 @@
         <!-- Amulet required for the Chant of Revenge spell. Used by Warcryers. Required level: 62 -->
         <set name="icon" val="icon.etc_orcish_talisman_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="120"/>
         <set name="price" val="7700"/>
         <set name="commissionItemType" val="SPELLBOOK"/>
@@ -320,7 +295,6 @@
         <!-- Spellbook needed to learn Seed of Fire. Used by Sorcerers and Spellsingers. Required level: 66 -->
         <set name="icon" val="icon.etc_spell_books_assistance_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="120"/>
         <set name="price" val="7200"/>
         <set name="commissionItemType" val="SPELLBOOK"/>
@@ -330,7 +304,6 @@
         <!-- Spellbook needed to learn Seed of Water. Used by Spellsingers. Required level: 66 -->
         <set name="icon" val="icon.etc_spell_books_assistance_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="120"/>
         <set name="price" val="7200"/>
         <set name="commissionItemType" val="SPELLBOOK"/>
@@ -340,7 +313,6 @@
         <!-- Spellbook needed to learn Seed of Wind. Used by Spellhowler. Required level: 66 -->
         <set name="icon" val="icon.etc_spell_books_assistance_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="120"/>
         <set name="price" val="7200"/>
         <set name="commissionItemType" val="SPELLBOOK"/>
@@ -350,7 +322,6 @@
         <!-- Spellbook needed to learn Aura Symphony. Used by Sorcerers and Spellsingers. Required level: 68 -->
         <set name="icon" val="icon.etc_spell_books_element_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="120"/>
         <set name="price" val="7200"/>
         <set name="commissionItemType" val="SPELLBOOK"/>
@@ -360,7 +331,6 @@
         <!-- Spellbook needed to learn Inferno. Used by Sorcerers and Spellsingers. Required level: 70 -->
         <set name="icon" val="icon.etc_spell_books_element_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="120"/>
         <set name="price" val="7200"/>
         <set name="commissionItemType" val="SPELLBOOK"/>
@@ -370,7 +340,6 @@
         <!-- Spellbook needed to learn Blizzard. Used by Spellsingers. Required level: 70 -->
         <set name="icon" val="icon.etc_spell_books_element_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="120"/>
         <set name="price" val="7200"/>
         <set name="commissionItemType" val="SPELLBOOK"/>
@@ -380,7 +349,6 @@
         <!-- Spellbook needed to learn Demon Wind. Used by Spellhowlers. Required level: 70 -->
         <set name="icon" val="icon.etc_spell_books_element_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="120"/>
         <set name="price" val="7200"/>
         <set name="commissionItemType" val="SPELLBOOK"/>
@@ -390,7 +358,6 @@
         <!-- Spellbook needed to learn Elemental Symphony. Used by Spellsingers. -->
         <set name="icon" val="icon.etc_spell_books_element_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="120"/>
         <set name="price" val="7200"/>
         <set name="commissionItemType" val="SPELLBOOK"/>
@@ -402,7 +369,6 @@
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="30"/>
         <set name="price" val="10900"/>
         <set name="recipe_id" val="478"/>
@@ -416,7 +382,6 @@
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="30"/>
         <set name="price" val="12120"/>
         <set name="recipe_id" val="328"/>
@@ -430,7 +395,6 @@
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="30"/>
         <set name="price" val="8080"/>
         <set name="recipe_id" val="330"/>
@@ -444,7 +408,6 @@
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="30"/>
         <set name="price" val="16160"/>
         <set name="recipe_id" val="332"/>
@@ -458,7 +421,6 @@
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="30"/>
         <set name="price" val="41600"/>
         <set name="recipe_id" val="341"/>
@@ -472,7 +434,6 @@
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="30"/>
         <set name="price" val="26000"/>
         <set name="recipe_id" val="343"/>
@@ -486,7 +447,6 @@
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="30"/>
         <set name="price" val="10380"/>
         <set name="recipe_id" val="347"/>
@@ -500,7 +460,6 @@
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="30"/>
         <set name="price" val="10380"/>
         <set name="recipe_id" val="349"/>
@@ -514,7 +473,6 @@
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="30"/>
         <set name="price" val="41600"/>
         <set name="recipe_id" val="357"/>
@@ -528,7 +486,6 @@
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="30"/>
         <set name="price" val="26000"/>
         <set name="recipe_id" val="359"/>
@@ -542,7 +499,6 @@
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="30"/>
         <set name="price" val="31200"/>
         <set name="recipe_id" val="361"/>
@@ -556,7 +512,6 @@
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="30"/>
         <set name="price" val="19460"/>
         <set name="recipe_id" val="363"/>
@@ -570,7 +525,6 @@
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="30"/>
         <set name="price" val="45600"/>
         <set name="recipe_id" val="365"/>
@@ -584,7 +538,6 @@
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="30"/>
         <set name="price" val="31200"/>
         <set name="recipe_id" val="367"/>
@@ -598,7 +551,6 @@
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="30"/>
         <set name="price" val="19460"/>
         <set name="recipe_id" val="369"/>
@@ -612,7 +564,6 @@
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="30"/>
         <set name="price" val="45600"/>
         <set name="recipe_id" val="371"/>
@@ -626,7 +577,6 @@
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="30"/>
         <set name="price" val="15560"/>
         <set name="recipe_id" val="373"/>
@@ -640,7 +590,6 @@
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="30"/>
         <set name="price" val="10380"/>
         <set name="recipe_id" val="375"/>
@@ -654,7 +603,6 @@
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="30"/>
         <set name="price" val="10380"/>
         <set name="recipe_id" val="377"/>
@@ -668,7 +616,6 @@
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="30"/>
         <set name="price" val="10380"/>
         <set name="recipe_id" val="379"/>
@@ -682,7 +629,6 @@
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="30"/>
         <set name="price" val="10380"/>
         <set name="recipe_id" val="381"/>
@@ -696,7 +642,6 @@
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="30"/>
         <set name="price" val="10380"/>
         <set name="recipe_id" val="387"/>
@@ -710,7 +655,6 @@
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="30"/>
         <set name="price" val="10380"/>
         <set name="recipe_id" val="423"/>
@@ -724,7 +668,6 @@
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="30"/>
         <set name="price" val="10380"/>
         <set name="recipe_id" val="425"/>
@@ -738,7 +681,6 @@
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="30"/>
         <set name="price" val="10380"/>
         <set name="recipe_id" val="429"/>
@@ -752,7 +694,6 @@
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="30"/>
         <set name="price" val="10900"/>
         <set name="recipe_id" val="431"/>
@@ -766,7 +707,6 @@
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="30"/>
         <set name="price" val="15560"/>
         <set name="recipe_id" val="433"/>
@@ -780,7 +720,6 @@
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="30"/>
         <set name="price" val="173600"/>
         <set name="recipe_id" val="438"/>
@@ -794,7 +733,6 @@
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="30"/>
         <set name="price" val="173600"/>
         <set name="recipe_id" val="440"/>
@@ -808,7 +746,6 @@
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="30"/>
         <set name="price" val="173600"/>
         <set name="recipe_id" val="442"/>
@@ -822,7 +759,6 @@
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="30"/>
         <set name="price" val="173600"/>
         <set name="recipe_id" val="444"/>
@@ -836,7 +772,6 @@
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="30"/>
         <set name="price" val="173600"/>
         <set name="recipe_id" val="446"/>
@@ -850,7 +785,6 @@
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="30"/>
         <set name="price" val="173600"/>
         <set name="recipe_id" val="448"/>
@@ -864,7 +798,6 @@
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="30"/>
         <set name="price" val="173600"/>
         <set name="recipe_id" val="450"/>
@@ -878,7 +811,6 @@
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="30"/>
         <set name="price" val="173600"/>
         <set name="recipe_id" val="452"/>
@@ -892,7 +824,6 @@
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="30"/>
         <set name="price" val="173600"/>
         <set name="recipe_id" val="454"/>
@@ -906,7 +837,6 @@
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="30"/>
         <set name="price" val="173600"/>
         <set name="recipe_id" val="456"/>
@@ -920,7 +850,6 @@
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="30"/>
         <set name="price" val="18480"/>
         <set name="recipe_id" val="334"/>
@@ -934,7 +863,6 @@
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="30"/>
         <set name="price" val="12320"/>
         <set name="recipe_id" val="336"/>
@@ -948,7 +876,6 @@
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="30"/>
         <set name="price" val="24600"/>
         <set name="recipe_id" val="338"/>
@@ -962,7 +889,6 @@
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="30"/>
         <set name="price" val="16080"/>
         <set name="recipe_id" val="345"/>
@@ -976,7 +902,6 @@
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="30"/>
         <set name="price" val="16080"/>
         <set name="recipe_id" val="351"/>
@@ -990,7 +915,6 @@
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="30"/>
         <set name="price" val="16080"/>
         <set name="recipe_id" val="353"/>
@@ -1004,7 +928,6 @@
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="30"/>
         <set name="price" val="16080"/>
         <set name="recipe_id" val="355"/>
@@ -1018,7 +941,6 @@
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="30"/>
         <set name="price" val="16900"/>
         <set name="recipe_id" val="383"/>
@@ -1032,7 +954,6 @@
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="30"/>
         <set name="price" val="64400"/>
         <set name="recipe_id" val="385"/>
@@ -1046,7 +967,6 @@
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="30"/>
         <set name="price" val="40200"/>
         <set name="recipe_id" val="389"/>
@@ -1060,7 +980,6 @@
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="30"/>
         <set name="price" val="94200"/>
         <set name="recipe_id" val="391"/>
@@ -1074,7 +993,6 @@
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="30"/>
         <set name="price" val="70600"/>
         <set name="recipe_id" val="393"/>
@@ -1088,7 +1006,6 @@
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="30"/>
         <set name="price" val="70600"/>
         <set name="recipe_id" val="395"/>
@@ -1102,7 +1019,6 @@
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="30"/>
         <set name="price" val="48200"/>
         <set name="recipe_id" val="397"/>
@@ -1116,7 +1032,6 @@
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="30"/>
         <set name="price" val="48200"/>
         <set name="recipe_id" val="399"/>
@@ -1130,7 +1045,6 @@
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="30"/>
         <set name="price" val="30200"/>
         <set name="recipe_id" val="401"/>
@@ -1144,7 +1058,6 @@
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="30"/>
         <set name="price" val="30200"/>
         <set name="recipe_id" val="403"/>
@@ -1158,7 +1071,6 @@
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="30"/>
         <set name="price" val="24200"/>
         <set name="recipe_id" val="405"/>
@@ -1172,7 +1084,6 @@
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="30"/>
         <set name="price" val="24200"/>
         <set name="recipe_id" val="407"/>
@@ -1186,7 +1097,6 @@
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="30"/>
         <set name="price" val="16080"/>
         <set name="recipe_id" val="409"/>
@@ -1200,7 +1110,6 @@
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="30"/>
         <set name="price" val="16080"/>
         <set name="recipe_id" val="411"/>
@@ -1214,7 +1123,6 @@
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="30"/>
         <set name="price" val="16080"/>
         <set name="recipe_id" val="413"/>
@@ -1228,7 +1136,6 @@
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="30"/>
         <set name="price" val="16080"/>
         <set name="recipe_id" val="415"/>
@@ -1242,7 +1149,6 @@
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="30"/>
         <set name="price" val="16080"/>
         <set name="recipe_id" val="417"/>
@@ -1256,7 +1162,6 @@
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="30"/>
         <set name="price" val="16080"/>
         <set name="recipe_id" val="419"/>
@@ -1270,7 +1175,6 @@
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="30"/>
         <set name="price" val="16080"/>
         <set name="recipe_id" val="421"/>
@@ -1284,7 +1188,6 @@
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LIQUID"/>
         <set name="weight" val="30"/>
         <set name="price" val="16080"/>
         <set name="recipe_id" val="427"/>

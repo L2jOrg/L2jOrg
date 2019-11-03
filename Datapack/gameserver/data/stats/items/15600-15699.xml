@@ -7,7 +7,6 @@
         <set name="bodypart" val="feet" />
         <set name="immediate_effect" val="true" />
         <set name="crystal_type" val="D" />
-        <set name="material" val="LEATHER" />
         <set name="weight" val="1070" />
         <set name="price" val="20900" />
         <set name="enchant_enabled" val="1" />
@@ -19,7 +18,6 @@
         <!-- You acquire XP as a reward. -->
         <set name="icon" val="icon.etc_exp_point_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="CRYSTAL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_destroyable" val="false"/>
@@ -34,7 +32,6 @@
         <!-- You acquire SP as a reward. -->
         <set name="icon" val="icon.etc_sp_point_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="CRYSTAL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_destroyable" val="false"/>
@@ -49,7 +46,6 @@
 		<!-- Unknown Reward -->
         <set name="icon" val="icon.etc_question_mark_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="CRYSTAL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_destroyable" val="false"/>
@@ -64,7 +60,6 @@
         <!-- You acquire Vitality points as a reward. -->
         <set name="icon" val="icon.etc_vitality_point_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="CRYSTAL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_destroyable" val="false"/>
@@ -79,7 +74,6 @@
         <!-- You acquire clan points as a reward. -->
         <set name="icon" val="icon.etc_bloodpledge_point_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="CRYSTAL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_destroyable" val="false"/>
@@ -94,7 +88,6 @@
         <!-- Reward based on a game of chance. -->
         <set name="icon" val="icon.etc_quest_game_reward_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="CRYSTAL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_destroyable" val="false"/>
@@ -109,7 +102,6 @@
         <!-- Random reward given to player. -->
         <set name="icon" val="icon.etc_quest_random_reward_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="CRYSTAL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_destroyable" val="false"/>
@@ -124,7 +116,6 @@
         <!-- Reward is chosen based on your performance. -->
         <set name="icon" val="icon.etc_quest_account_reward_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="CRYSTAL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_destroyable" val="false"/>
@@ -139,7 +130,6 @@
         <!-- Little extra in addition to the current reward. -->
         <set name="icon" val="icon.etc_quest_add_reward_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="CRYSTAL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_destroyable" val="false"/>
@@ -154,7 +144,6 @@
         <!-- Subclass authority was obtained. -->
         <set name="icon" val="icon.etc_quest_subclass_reward_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="CRYSTAL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_destroyable" val="false"/>
@@ -169,7 +158,6 @@
         <!-- The PK Count is decreased. -->
         <set name="icon" val="icon.etc_quest_pkcount_reward_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="CRYSTAL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_destroyable" val="false"/>

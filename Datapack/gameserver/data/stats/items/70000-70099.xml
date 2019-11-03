@@ -4,7 +4,6 @@
         <!-- Double-click to receive one Rune - Lv. 1, which you can insert into your weapon. Cannot be sold in the grocery store. -->
         <set name="icon" val="BranchIcon.Icon.g_green_sealed_rune"/>
         <set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
-        <set name="material" val="PAPER"/>
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
         <set name="handler" val="ItemSkills"/>
@@ -16,7 +15,6 @@
         <!-- Double-click to receive one Rune - Lv. 2, which you can insert into your weapon. Cannot be sold in the grocery store. -->
         <set name="icon" val="BranchIcon.Icon.g_green_sealed_rune"/>
         <set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
-        <set name="material" val="PAPER"/>
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
         <set name="handler" val="ItemSkills"/>
@@ -28,7 +26,6 @@
         <!-- Double-click to receive one Rune - Lv. 3, which you can insert into your weapon. Cannot be sold in the grocery store. -->
         <set name="icon" val="BranchIcon.Icon.g_green_sealed_rune"/>
         <set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
-        <set name="material" val="PAPER"/>
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
         <set name="handler" val="ItemSkills"/>
@@ -40,7 +37,6 @@
         <!-- Double-click to receive one Rune - Lv. 4, which you can insert into your weapon. Cannot be sold in the grocery store. -->
         <set name="icon" val="BranchIcon.Icon.g_green_sealed_rune"/>
         <set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
-        <set name="material" val="PAPER"/>
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
         <set name="handler" val="ItemSkills"/>
@@ -52,7 +48,6 @@
         <!-- Double-click to receive one Rune - Lv. 5, which you can insert into your weapon. Cannot be sold in the grocery store. -->
         <set name="icon" val="BranchIcon.Icon.g_green_sealed_rune"/>
         <set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
-        <set name="material" val="PAPER"/>
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
         <set name="handler" val="ItemSkills"/>
@@ -64,7 +59,6 @@
         <!-- Double-click to receive one Rune - Lv. 6, which you can insert into your weapon. Cannot be sold in the grocery store. -->
         <set name="icon" val="BranchIcon.Icon.g_blue_sealed_rune"/>
         <set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
-        <set name="material" val="PAPER"/>
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
         <set name="handler" val="ItemSkills"/>
@@ -76,7 +70,6 @@
         <!-- Double-click to receive one Rune - Lv. 7, which you can insert into your weapon. Cannot be sold in the grocery store. -->
         <set name="icon" val="BranchIcon.Icon.g_blue_sealed_rune"/>
         <set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
-        <set name="material" val="PAPER"/>
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
         <set name="handler" val="ItemSkills"/>
@@ -88,7 +81,6 @@
         <!-- Double-click to receive one Rune - Lv. 8, which you can insert into your weapon. Cannot be sold in the grocery store. -->
         <set name="icon" val="BranchIcon.Icon.g_blue_sealed_rune"/>
         <set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
-        <set name="material" val="PAPER"/>
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
         <set name="handler" val="ItemSkills"/>
@@ -100,7 +92,6 @@
         <!-- Double-click to receive one Rune - Lv. 9, which you can insert into your weapon. Cannot be sold in the grocery store. -->
         <set name="icon" val="BranchIcon.Icon.g_blue_sealed_rune"/>
         <set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
-        <set name="material" val="PAPER"/>
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
         <set name="handler" val="ItemSkills"/>
@@ -112,7 +103,6 @@
         <!-- Double-click to receive one Rune - Lv. 10, which you can insert into your weapon. Cannot be sold in the grocery store. -->
         <set name="icon" val="BranchIcon.Icon.g_blue_sealed_rune"/>
         <set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
-        <set name="material" val="PAPER"/>
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
         <set name="handler" val="ItemSkills"/>
@@ -124,7 +114,6 @@
         <!-- Double-click to receive one Rune - Lv. 11, which you can insert into your weapon. Cannot be sold in the grocery store. -->
         <set name="icon" val="BranchIcon.Icon.g_red_sealed_rune_01"/>
         <set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
-        <set name="material" val="PAPER"/>
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
         <set name="handler" val="ItemSkills"/>
@@ -136,7 +125,6 @@
         <!-- Double-click to receive one Rune - Lv. 12, which you can insert into your weapon. Cannot be sold in the grocery store. -->
         <set name="icon" val="BranchIcon.Icon.g_red_sealed_rune_01"/>
         <set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
-        <set name="material" val="PAPER"/>
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
         <set name="handler" val="ItemSkills"/>
@@ -148,7 +136,6 @@
         <!-- Double-click to receive one Rune - Lv. 13, which you can insert into your weapon. Cannot be sold in the grocery store. -->
         <set name="icon" val="BranchIcon.Icon.g_red_sealed_rune_01"/>
         <set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
-        <set name="material" val="PAPER"/>
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
         <set name="handler" val="ItemSkills"/>
@@ -160,7 +147,6 @@
         <!-- Double-click to receive one Rune - Lv. 14, which you can insert into your weapon. Cannot be sold in the grocery store. -->
         <set name="icon" val="icon.bm_pirate_king_box"/>
         <set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
-        <set name="material" val="PAPER"/>
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
@@ -168,7 +154,6 @@
         <!-- Double-click to receive one Rune - Lv. 15, which you can insert into your weapon. Cannot be sold in the grocery store. -->
         <set name="icon" val="icon.bm_pirate_king_box"/>
         <set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
-        <set name="material" val="PAPER"/>
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
@@ -176,7 +161,6 @@
         <!-- Double-click to receive one Rune - Lv. 16, which you can insert into your weapon. Cannot be sold in the grocery store. -->
         <set name="icon" val="icon.bm_pirate_king_box"/>
         <set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
-        <set name="material" val="PAPER"/>
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
@@ -184,7 +168,6 @@
         <!-- Double-click to receive one Rune - Lv. 17, which you can insert into your weapon. Cannot be sold in the grocery store. -->
         <set name="icon" val="icon.bm_pirate_king_box"/>
         <set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
-        <set name="material" val="PAPER"/>
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
@@ -192,7 +175,6 @@
         <!-- Double-click to receive one Rune - Lv. 18, which you can insert into your weapon. Cannot be sold in the grocery store. -->
         <set name="icon" val="icon.bm_pirate_king_box"/>
         <set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
-        <set name="material" val="PAPER"/>
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
@@ -200,7 +182,6 @@
         <!-- Double-click to receive one Rune - Lv. 19, which you can insert into your weapon. Cannot be sold in the grocery store. -->
         <set name="icon" val="icon.bm_pirate_king_box"/>
         <set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
-        <set name="material" val="PAPER"/>
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
@@ -208,7 +189,6 @@
         <!-- Double-click to receive one Rune - Lv. 20, which you can insert into your weapon. Cannot be sold in the grocery store. -->
         <set name="icon" val="icon.bm_pirate_king_box"/>
         <set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
-        <set name="material" val="PAPER"/>
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
@@ -217,7 +197,6 @@
         <set name="icon" val="icon.etc_box_of_adventure_2_i00"/>
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="10"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
@@ -235,7 +214,6 @@
         <set name="icon" val="icon.etc_box_of_adventure_3_i00"/>
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="10"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
@@ -253,7 +231,6 @@
         <set name="icon" val="icon.etc_box_of_adventure_4_i00"/>
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="10"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
@@ -271,7 +248,6 @@
         <set name="icon" val="icon.etc_box_of_adventure_5_i00"/>
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="10"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
@@ -287,7 +263,6 @@
     <item id="70024" name="Daily Coin" type="EtcItem">
         <!-- Can be exchanged for useful items with High Priest or Elder in any town. Cannot be exchanged, dropped, or sold in a private store. -->
         <set name="icon" val="icon.ev_festival_goldcoin"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_depositable" val="false"/>
@@ -298,7 +273,6 @@
         <!-- A reward for your gaming as part of a clan. Contains one of many various clan rewards. Cannot be exchanged, dropped, or sold in a private store. -->
         <set name="icon" val="icon.etc_box_of_adventure_2_i00"/>
         <set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="10"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
@@ -314,7 +288,6 @@
         <!-- A reward for your gaming as part of a clan. Contains one of many various clan rewards. Cannot be exchanged, dropped, or sold in a private store. -->
         <set name="icon" val="icon.etc_box_of_adventure_3_i00"/>
         <set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="10"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
@@ -330,7 +303,6 @@
         <!-- A reward for your gaming as part of a clan. Contains one of many various clan rewards. Cannot be exchanged, dropped, or sold in a private store. -->
         <set name="icon" val="icon.etc_box_of_adventure_4_i00"/>
         <set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="10"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
@@ -346,7 +318,6 @@
         <!-- A reward for your gaming as part of a clan. Contains one of many various clan rewards. Cannot be exchanged, dropped, or sold in a private store. -->
         <set name="icon" val="icon.etc_box_of_adventure_5_i00"/>
         <set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="10"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
@@ -364,7 +335,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="underwear"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="GOLD"/>
         <set name="weight" val="150"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
@@ -381,7 +351,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="underwear"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="GOLD"/>
         <set name="weight" val="150"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
@@ -398,7 +367,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="underwear"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="GOLD"/>
         <set name="weight" val="150"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
@@ -415,7 +383,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="underwear"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="GOLD"/>
         <set name="weight" val="150"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
@@ -432,7 +399,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="underwear"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="GOLD"/>
         <set name="weight" val="150"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
@@ -449,7 +415,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="underwear"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="GOLD"/>
         <set name="weight" val="150"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
@@ -466,7 +431,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="underwear"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="GOLD"/>
         <set name="weight" val="150"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
@@ -483,7 +447,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="underwear"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="GOLD"/>
         <set name="weight" val="150"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
@@ -500,7 +463,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="underwear"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="GOLD"/>
         <set name="weight" val="150"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
@@ -517,7 +479,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="underwear"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="GOLD"/>
         <set name="weight" val="150"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
@@ -534,7 +495,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="underwear"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="GOLD"/>
         <set name="weight" val="150"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
@@ -549,7 +509,6 @@
         <!-- When used, provides STR +1 for 20 minutes. Cannot be dropped. -->
         <set name="icon" val="BranchIcon.Icon.roasted_mackerel_buff"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
@@ -567,7 +526,6 @@
         <!-- When used, provides INT +1 for 20 minutes. Cannot be dropped. -->
         <set name="icon" val="BranchIcon.Icon.roasted_mackerel_buff"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
@@ -585,7 +543,6 @@
         <!-- When used, provides CON +1 for 20 minutes. Cannot be dropped. -->
         <set name="icon" val="BranchIcon.Icon.roasted_mackerel_buff"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
@@ -603,7 +560,6 @@
         <!-- When used, provides DEX +1 for 20 minutes. Cannot be dropped. -->
         <set name="icon" val="BranchIcon.Icon.roasted_mackerel_buff"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
@@ -621,7 +577,6 @@
         <!-- When used, provides MEN +1 for 20 minutes. Cannot be dropped. -->
         <set name="icon" val="BranchIcon.Icon.roasted_mackerel_buff"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
@@ -639,7 +594,6 @@
         <!-- When used, provides WIT +1 for 20 minutes. Cannot be dropped. -->
         <set name="icon" val="BranchIcon.Icon.roasted_mackerel_buff"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
@@ -658,7 +612,6 @@
         <set name="icon" val="icon.etc_bait_i02"/>
         <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_depositable" val="false"/>
@@ -669,7 +622,6 @@
         <!-- Greatly increases Speed for a short period of time. -->
         <set name="icon" val="icon.etc_potion_green_i00"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="20"/>
         <set name="is_stackable" val="true"/>
     </item>
@@ -677,7 +629,6 @@
         <!-- A magical scroll that relocates you to the northern entrance to Mithril Mines. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.etc_scroll_of_return_i04"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="30"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
@@ -688,7 +639,6 @@
         <!-- A magical scroll that relocates you to the entrance to School of Dark Arts. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.etc_scroll_of_return_i04"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="30"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
@@ -699,7 +649,6 @@
         <!-- A magical scroll that relocates you to Orc Barracks. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.etc_scroll_of_return_i04"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="30"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
@@ -710,7 +659,6 @@
         <!-- A magical scroll that relocates you to the Ruins of Agony. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.etc_scroll_of_return_i04"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="30"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
@@ -721,7 +669,6 @@
         <!-- A magical scroll that relocates you to the Ruins of Despair. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.etc_scroll_of_return_i04"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="30"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
@@ -732,7 +679,6 @@
         <!-- A magical scroll that relocates you to the Abandoned Camp. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.etc_scroll_of_return_i04"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="30"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
@@ -743,7 +689,6 @@
         <!-- A magical scroll that relocates you to the western entrance to Ant Nest. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.etc_scroll_of_return_i04"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="30"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
@@ -754,7 +699,6 @@
         <!-- A magical scroll that relocates you to the Cruma Tower. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.etc_scroll_of_return_i04"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="30"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
@@ -765,7 +709,6 @@
         <!-- A magical scroll that relocates you to the northern part of Death Valley. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.etc_scroll_of_return_i04"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="30"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
@@ -776,7 +719,6 @@
         <!-- A magical scroll that relocates you to the crossroads at Dragon Valley. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.etc_scroll_of_return_i04"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="30"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
@@ -787,7 +729,6 @@
         <!-- A magical scroll that relocates you to the entrance to Antharas' Lair. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.etc_scroll_of_return_i04"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="30"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
@@ -798,7 +739,6 @@
         <!-- A magical scroll that relocates you to the Outlaw Forest. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.etc_scroll_of_return_i04"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="30"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
@@ -809,7 +749,6 @@
         <!-- A magical scroll that relocates you to the northern part of Alligator Island. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.etc_scroll_of_return_i04"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="30"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
@@ -820,7 +759,6 @@
         <!-- A magical scroll that relocates you to the entrance to Forgotten Temple. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.etc_scroll_of_return_i04"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="30"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
@@ -831,7 +769,6 @@
         <!-- A magical scroll that relocates you to the Hunting Zone. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.etc_scroll_of_return_i04"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="30"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
@@ -842,7 +779,6 @@
         <!-- A magical scroll that relocates you to the Hunting Zone. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.etc_scroll_of_return_i04"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="30"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
@@ -853,7 +789,6 @@
         <!-- A magical scroll that relocates you to the Hunting Zone. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.etc_scroll_of_return_i04"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="30"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
@@ -864,7 +799,6 @@
         <!-- A magical scroll that relocates you to the Hunting Zone. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.etc_scroll_of_return_i04"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="30"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
@@ -875,7 +809,6 @@
         <!-- A magical scroll that relocates you to the Hunting Zone. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.etc_scroll_of_return_i04"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="30"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
@@ -886,7 +819,6 @@
         <!-- A magical scroll that relocates you to the Hunting Zone. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.etc_scroll_of_return_i04"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="30"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
@@ -897,7 +829,6 @@
         <!-- Makes you invisible to monsters for 1 minute, decreasing your Speed by -40%. Monsters do not attack first. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.etc_aidcharm_cancel_valbreath_i00"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="30"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
@@ -909,7 +840,6 @@
         <!-- Inflicts physical damage by using the intense power of spirit. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a warehouse. Intended for Lv. 20 and higher. -->
         <set name="icon" val="icon.etc_scroll_white_i00"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
@@ -929,7 +859,6 @@
         <!-- Inflicts physical damage by using the intense power of spirit. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a warehouse. Intended for Lv. 20 and higher. -->
         <set name="icon" val="icon.etc_scroll_white_i00"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
@@ -949,7 +878,6 @@
         <!-- Inflicts physical damage by using the intense power of spirit. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a warehouse. Intended for Lv. 20 and higher. -->
         <set name="icon" val="icon.etc_scroll_white_i00"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
@@ -969,7 +897,6 @@
         <!-- Inflicts physical damage by using the intense power of spirit. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a warehouse. Intended for Lv. 20 and higher. -->
         <set name="icon" val="icon.etc_scroll_white_i00"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
@@ -989,7 +916,6 @@
         <!-- Inflicts physical damage by using the intense power of spirit. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a warehouse. Intended for Lv. 20 and higher. -->
         <set name="icon" val="icon.etc_scroll_white_i00"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
@@ -1009,7 +935,6 @@
         <!-- Inflicts physical damage by using the intense power of spirit. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a warehouse. Intended for Lv. 20 and higher. -->
         <set name="icon" val="icon.etc_scroll_white_i00"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
@@ -1029,7 +954,6 @@
         <!-- Inflicts magical damage by using the power of holy magic. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a warehouse. Intended for Lv. 20+. -->
         <set name="icon" val="icon.etc_scroll_white_i00"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
@@ -1049,7 +973,6 @@
         <!-- Inflicts magical damage by using the power of holy magic. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a warehouse. Intended for Lv. 20+. -->
         <set name="icon" val="icon.etc_scroll_white_i00"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
@@ -1069,7 +992,6 @@
         <!-- Inflicts magical damage by using the power of holy magic. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a warehouse. Intended for Lv. 20+. -->
         <set name="icon" val="icon.etc_scroll_white_i00"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
@@ -1089,7 +1011,6 @@
         <!-- Inflicts magical damage by using the power of holy magic. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a warehouse. Intended for Lv. 20+. -->
         <set name="icon" val="icon.etc_scroll_white_i00"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
@@ -1109,7 +1030,6 @@
         <!-- Inflicts magical damage by using the power of holy magic. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a warehouse. Intended for Lv. 20+. -->
         <set name="icon" val="icon.etc_scroll_white_i00"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
@@ -1129,7 +1049,6 @@
         <!-- Inflicts magical damage by using the power of holy magic. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a warehouse. Intended for Lv. 20+. -->
         <set name="icon" val="icon.etc_scroll_white_i00"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
@@ -1149,7 +1068,6 @@
         <!-- Inflicts physical damage by using the power of a devout heart. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a warehouse. Intended for Lv. 20+. -->
         <set name="icon" val="icon.etc_scroll_white_i00"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
@@ -1169,7 +1087,6 @@
         <!-- Inflicts physical damage by using the power of a devout heart. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a warehouse. Intended for Lv. 20+. -->
         <set name="icon" val="icon.etc_scroll_white_i00"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
@@ -1189,7 +1106,6 @@
         <!-- Inflicts physical damage by using the power of a devout heart. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a warehouse. Intended for Lv. 20+. -->
         <set name="icon" val="icon.etc_scroll_white_i00"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
@@ -1209,7 +1125,6 @@
         <!-- Inflicts physical damage by using the power of a devout heart. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a warehouse. Intended for Lv. 20+. -->
         <set name="icon" val="icon.etc_scroll_white_i00"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
@@ -1229,7 +1144,6 @@
         <!-- Inflicts physical damage by using the power of a devout heart. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a warehouse. Intended for Lv. 20+. -->
         <set name="icon" val="icon.etc_scroll_white_i00"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
@@ -1249,7 +1163,6 @@
         <!-- Inflicts physical damage by using the power of a devout heart. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a warehouse. Intended for Lv. 20+. -->
         <set name="icon" val="icon.etc_scroll_white_i00"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
@@ -1269,7 +1182,6 @@
         <!-- Inflicts magical damage to nearby enemies by entirely focusing on holy magic. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a warehouse. Intended for Lv. 20+. -->
         <set name="icon" val="icon.etc_scroll_white_i00"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
@@ -1289,7 +1201,6 @@
         <!-- Inflicts magical damage to nearby enemies by entirely focusing on holy magic. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a warehouse. Intended for Lv. 20+. -->
         <set name="icon" val="icon.etc_scroll_white_i00"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
@@ -1309,7 +1220,6 @@
         <!-- Inflicts magical damage to nearby enemies by entirely focusing on holy magic. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a warehouse. Intended for Lv. 20+. -->
         <set name="icon" val="icon.etc_scroll_white_i00"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
@@ -1329,7 +1239,6 @@
         <!-- Inflicts magical damage to nearby enemies by entirely focusing on holy magic. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a warehouse. Intended for Lv. 20+. -->
         <set name="icon" val="icon.etc_scroll_white_i00"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
@@ -1349,7 +1258,6 @@
         <!-- Inflicts magical damage to nearby enemies by entirely focusing on holy magic. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a warehouse. Intended for Lv. 20+. -->
         <set name="icon" val="icon.etc_scroll_white_i00"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
@@ -1369,7 +1277,6 @@
         <!-- Inflicts magical damage to nearby enemies by entirely focusing on holy magic. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a warehouse. Intended for Lv. 20+. -->
         <set name="icon" val="icon.etc_scroll_white_i00"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="PAPER"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
@@ -1390,7 +1297,6 @@
         <set name="icon" val="icon.etc_bait_i02"/>
         <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_depositable" val="false"/>
@@ -1402,7 +1308,6 @@
         <set name="icon" val="icon.skill70094"/>
         <set name="etcitem_type" val="ENCHT_ATTR_RUNE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="120"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
@@ -1425,7 +1330,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="head"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="WOOD"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_depositable" val="false"/>
@@ -1442,7 +1346,6 @@
         <set name="armor_type" val="LIGHT"/>
         <set name="bodypart" val="chest"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="WOOD"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_depositable" val="false"/>
@@ -1459,7 +1362,6 @@
         <set name="armor_type" val="LIGHT"/>
         <set name="bodypart" val="legs"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LEATHER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_depositable" val="false"/>
@@ -1475,7 +1377,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="head"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="LEATHER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_depositable" val="false"/>
@@ -1492,7 +1393,6 @@
         <set name="armor_type" val="MAGIC"/>
         <set name="bodypart" val="chest"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="CLOTH"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_depositable" val="false"/>

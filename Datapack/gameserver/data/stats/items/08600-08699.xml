@@ -11,7 +11,6 @@
         <!-- Restores forgotten abilities. The book was re-published after being translated into a the modern language. (Can only be used by characters level 52 or above.) -->
         <set name="icon" val="icon.etc_add_buffslot_i00"/>
         <set name="immediate_effect" val="false"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="120"/>
         <set name="commissionItemType" val="SPELLBOOK"/>
         <set name="default_action" val="SKILL_REDUCE"/>
@@ -25,7 +24,6 @@
         <!-- Restores forgotten abilities. This book was published by ancient scholars for research purposes. It contains more information than the modern language version. (Can only be used by characters level 61 or above.) -->
         <set name="icon" val="icon.etc_add_buffslot_i01"/>
         <set name="immediate_effect" val="false"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="120"/>
         <set name="is_stackable" val="true"/>
         <set name="default_action" val="SKILL_REDUCE"/>
@@ -39,7 +37,6 @@
         <!-- Restores forgotten abilities. This book is a hand-written copy of the original. It is almost the same as the original version. (Can only be used by characters level 76 or above.) -->
         <set name="icon" val="icon.etc_add_buffslot_i02"/>
         <set name="immediate_effect" val="false"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="120"/>
         <set name="commissionItemType" val="SPELLBOOK"/>
         <set name="default_action" val="SKILL_REDUCE"/>
@@ -53,7 +50,6 @@
         <!-- Awakens a forgotten ability. Those who lack the requisite knowledge cannot understand its contents. (Can only be used by characters level 76 or above.) -->
         <set name="icon" val="icon.etc_add_buffslot_i03"/>
         <set name="immediate_effect" val="false"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="120"/>
         <set name="commissionItemType" val="SPELLBOOK"/>
         <set name="default_action" val="SKILL_REDUCE"/>
@@ -73,7 +69,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="2157"/>
         <set name="crystal_type" val="A"/>
-        <set name="material" val="FINE_STEEL"/>
         <set name="weight" val="1300"/>
         <set name="price" val="26968400"/>
         <set name="change_weaponId" val="9352"/>
@@ -101,7 +96,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="2157"/>
         <set name="crystal_type" val="A"/>
-        <set name="material" val="BONE"/>
         <set name="weight" val="1820"/>
         <set name="price" val="26968400"/>
         <set name="change_weaponId" val="9356"/>
@@ -129,7 +123,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="2157"/>
         <set name="crystal_type" val="A"/>
-        <set name="material" val="ORIHARUKON"/>
         <set name="weight" val="1550"/>
         <set name="price" val="26968400"/>
         <set name="soulshots" val="1"/>
@@ -157,7 +150,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="2157"/>
         <set name="crystal_type" val="A"/>
-        <set name="material" val="FINE_STEEL"/>
         <set name="weight" val="1890"/>
         <set name="price" val="26968400"/>
         <set name="soulshots" val="1"/>
@@ -185,7 +177,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="2157"/>
         <set name="crystal_type" val="A"/>
-        <set name="material" val="ORIHARUKON"/>
         <set name="weight" val="930"/>
         <set name="price" val="26968400"/>
         <set name="soulshots" val="1"/>
@@ -212,7 +203,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="2157"/>
         <set name="crystal_type" val="A"/>
-        <set name="material" val="CHRYSOLITE"/>
         <set name="weight" val="1820"/>
         <set name="price" val="26968400"/>
         <set name="soulshots" val="1"/>
@@ -243,7 +233,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="2157"/>
         <set name="crystal_type" val="A"/>
-        <set name="material" val="ORIHARUKON"/>
         <set name="weight" val="1640"/>
         <set name="price" val="26968400"/>
         <set name="change_weaponId" val="9360"/>
@@ -274,7 +263,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="2157"/>
         <set name="crystal_type" val="A"/>
-        <set name="material" val="ADAMANTAITE"/>
         <set name="weight" val="1330"/>
         <set name="price" val="26968400"/>
         <set name="soulshots" val="1"/>
@@ -302,7 +290,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="2157"/>
         <set name="crystal_type" val="A"/>
-        <set name="material" val="ADAMANTAITE"/>
         <set name="weight" val="820"/>
         <set name="price" val="26968400"/>
         <set name="soulshots" val="1"/>
@@ -330,7 +317,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="2157"/>
         <set name="crystal_type" val="A"/>
-        <set name="material" val="FINE_STEEL"/>
         <set name="weight" val="1510"/>
         <set name="price" val="26968400"/>
         <set name="soulshots" val="1"/>
@@ -359,7 +345,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="2157"/>
         <set name="crystal_type" val="A"/>
-        <set name="material" val="WOOD"/>
         <set name="weight" val="880"/>
         <set name="price" val="26968400"/>
         <set name="soulshots" val="1"/>
@@ -384,7 +369,6 @@
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="30"/>
         <set name="price" val="706000"/>
         <set name="recipe_id" val="844"/>
@@ -398,7 +382,6 @@
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="30"/>
         <set name="price" val="706000"/>
         <set name="recipe_id" val="845"/>
@@ -412,7 +395,6 @@
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="30"/>
         <set name="price" val="706000"/>
         <set name="recipe_id" val="846"/>
@@ -426,7 +408,6 @@
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="30"/>
         <set name="price" val="706000"/>
         <set name="recipe_id" val="847"/>
@@ -440,7 +421,6 @@
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="30"/>
         <set name="price" val="706000"/>
         <set name="recipe_id" val="848"/>
@@ -454,7 +434,6 @@
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="30"/>
         <set name="price" val="706000"/>
         <set name="recipe_id" val="849"/>
@@ -468,7 +447,6 @@
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="30"/>
         <set name="price" val="706000"/>
         <set name="recipe_id" val="850"/>
@@ -482,7 +460,6 @@
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="30"/>
         <set name="price" val="706000"/>
         <set name="recipe_id" val="851"/>
@@ -496,7 +473,6 @@
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="30"/>
         <set name="price" val="706000"/>
         <set name="recipe_id" val="852"/>
@@ -510,7 +486,6 @@
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="30"/>
         <set name="price" val="706000"/>
         <set name="recipe_id" val="853"/>

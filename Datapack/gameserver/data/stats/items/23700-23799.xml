@@ -3,7 +3,6 @@
     <item id="23767" name="Tarot Cards" type="EtcItem">
         <!-- An item for a normal 'Game of Luck'. It can be bought in Lucky Shop for adens. -->
         <set name="icon" val="BranchSys3.icon1.g_luckygame_card_i00"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_depositable" val="false"/>
@@ -13,7 +12,6 @@
     <item id="23768" name="Luxury Tarot Cards" type="EtcItem">
         <!-- An item for a luxury 'Game of Luck'. It can be bought in Lucky Shop for a special coupon. -->
         <set name="icon" val="BranchSys3.icon1.g_luckygame_card_i01"/>
-        <set name="material" val="PAPER"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_depositable" val="false"/>

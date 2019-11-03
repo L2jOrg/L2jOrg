@@ -8,7 +8,6 @@
         <set name="damage_range" val="0;0;40;120"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="C"/>
-        <set name="material" val="ORIHARUKON"/>
         <set name="weight" val="1380"/>
         <set name="price" val="1226000"/>
         <set name="soulshots" val="1"/>
@@ -34,7 +33,6 @@
         <set name="damage_range" val="0;0;40;120"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="C"/>
-        <set name="material" val="ORIHARUKON"/>
         <set name="weight" val="1380"/>
         <set name="price" val="1226000"/>
         <set name="soulshots" val="1"/>
@@ -60,7 +58,6 @@
         <set name="damage_range" val="0;0;40;120"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="C"/>
-        <set name="material" val="ORIHARUKON"/>
         <set name="weight" val="1380"/>
         <set name="price" val="1226000"/>
         <set name="soulshots" val="1"/>
@@ -83,7 +80,6 @@
         <set name="icon" val="icon.etc_charm_of_luck_i00"/>
         <set name="default_action" val="SKILL_REDUCE"/>
         <set name="etcitem_type" val="SCROLL"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="10"/>
         <set name="price" val="330"/>
         <set name="reuse_delay" val="10000"/>
@@ -103,7 +99,6 @@
         <set name="icon" val="icon.etc_charm_of_luck_i00"/>
         <set name="default_action" val="SKILL_REDUCE"/>
         <set name="etcitem_type" val="SCROLL"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="10"/>
         <set name="price" val="660"/>
         <set name="reuse_delay" val="10000"/>
@@ -123,7 +118,6 @@
         <set name="icon" val="icon.etc_charm_of_luck_i00"/>
         <set name="default_action" val="SKILL_REDUCE"/>
         <set name="etcitem_type" val="SCROLL"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="10"/>
         <set name="price" val="1300"/>
         <set name="reuse_delay" val="10000"/>
@@ -144,7 +138,6 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="hair"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="WOOD"/>
         <set name="weight" val="10"/>
         <set name="price" val="1300"/>
         <set name="enchant_enabled" val="7"/>
@@ -155,7 +148,6 @@
         <!-- Spellbook needed to learn Aqua Splash. Used by Spellsingers. Required level: 58 -->
         <set name="icon" val="icon.etc_spell_books_element_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="120"/>
         <set name="price" val="6750"/>
         <set name="commissionItemType" val="SPELLBOOK"/>
@@ -165,7 +157,6 @@
         <!-- Spellbook needed to learn Rain of Fire. Used by Sorcerers and Spellsingers. Required level: 58 -->
         <set name="icon" val="icon.etc_spell_books_element_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="120"/>
         <set name="price" val="6750"/>
         <set name="commissionItemType" val="SPELLBOOK"/>
@@ -175,7 +166,6 @@
         <!-- Spellbook needed to learn Mass Slow. Used by Necromancers. Required level: 61 -->
         <set name="icon" val="icon.etc_spell_books_black_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="120"/>
         <set name="price" val="200000"/>
         <set name="commissionItemType" val="SPELLBOOK"/>
@@ -185,7 +175,6 @@
         <!-- Spellbook needed to learn Servitor Empowerment. Used by Warlocks, Elemental Summoners and Phantom Summoners. Required level: 52 -->
         <set name="icon" val="icon.etc_spell_books_summon_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="120"/>
         <set name="price" val="5400"/>
         <set name="commissionItemType" val="SPELLBOOK"/>
@@ -195,7 +184,6 @@
         <!-- Spellbook needed to learn Servitor Cure. Used by Warlocks, Elemental Summoners and Phantom Summoners. Required level: 40 -->
         <set name="icon" val="icon.etc_spell_books_summon_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="120"/>
         <set name="price" val="3200"/>
         <set name="commissionItemType" val="SPELLBOOK"/>
@@ -205,7 +193,6 @@
         <!-- Spellbook needed to learn Servitor Blessing. Used by Warlocks, Elemental Summoners and Phantom Summoners. Required level: 62 -->
         <set name="icon" val="icon.etc_spell_books_summon_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="120"/>
         <set name="price" val="7700"/>
         <set name="commissionItemType" val="SPELLBOOK"/>
@@ -215,7 +202,6 @@
         <!-- Spellbook needed to learn Wild. Used by Elven Elders and Shillien Elders. Required level: 62 -->
         <set name="icon" val="icon.etc_spell_books_assistance_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="120"/>
         <set name="price" val="200000"/>
         <set name="commissionItemType" val="SPELLBOOK"/>
@@ -225,7 +211,6 @@
         <!-- Spellbook needed to learn Advanced Block. Used by Elven Elders. Required level: 42 -->
         <set name="icon" val="icon.etc_spell_books_assistance_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="120"/>
         <set name="price" val="50000"/>
         <set name="commissionItemType" val="SPELLBOOK"/>
@@ -239,7 +224,6 @@
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;66;120"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_dropable" val="false"/>
         <set name="commissionItemType" val="SPEAR"/>
 
@@ -261,7 +245,6 @@
         <set name="icon" val="icon.etc_scroll_of_return_agit_i01"/>
         <set name="default_action" val="SKILL_REDUCE"/>
         <set name="etcitem_type" val="SCROLL"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="120"/>
         <set name="price" val="100000"/>
         <set name="is_stackable" val="true"/>
@@ -280,7 +263,6 @@
         <set name="icon" val="icon.etc_scroll_of_return_castle_i01"/>
         <set name="default_action" val="SKILL_REDUCE"/>
         <set name="etcitem_type" val="SCROLL"/>
-        <set name="material" val="PAPER"/>
         <set name="weight" val="120"/>
         <set name="price" val="80000"/>
         <set name="is_stackable" val="true"/>
@@ -298,7 +280,6 @@
         <!-- Lienrik's egg. It's the item that Pet Manager Rood of Heine asked you to find for him. -->
         <set name="icon" val="icon.etc_dragon_egg_i02"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="CRYSTAL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -314,7 +295,6 @@
         <!-- Lienrik's shiny red egg. Pet Manager Rood of Heine asked you to find it for him, but...? -->
         <set name="icon" val="icon.etc_dragon_egg_i01"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="CRYSTAL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -330,7 +310,6 @@
         <!-- In order to obtain the power of darkness, you will first need to secure this item. Take it to Trader Galman in Dragon Valley. -->
         <set name="icon" val="icon.etc_bead_silver_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="CRYSTAL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -346,7 +325,6 @@
         <!-- Sharp tooth of the Alligator. Take it to Morita on the shore of Alligator Island. -->
         <set name="icon" val="icon.etc_fang_red_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="CRYSTAL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -362,7 +340,6 @@
         <!-- Faded piece of paper. Possibly part of a map. -->
         <set name="icon" val="icon.etc_map_piece_ivory_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="CRYSTAL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -378,7 +355,6 @@
         <!-- Spore sample collected from a Spore Zombie from the Sea of Spores. It is used as research material by Magister Gauen of the Ivory Tower. -->
         <set name="icon" val="icon.etc_pouch_gray_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="CRYSTAL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -394,7 +370,6 @@
         <!-- Spore sample collected from a rotting tree from the Sea of Spores. It is used as research material by Magister Gauen of the Ivory Tower. -->
         <set name="icon" val="icon.etc_pouch_yellow_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="CRYSTAL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -410,7 +385,6 @@
         <!-- Jade crystal collected from the Enchanted Valley. Take it to Warehouse Freightman Silva of Hunter's Village. -->
         <set name="icon" val="icon.etc_gem_green_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="CRYSTAL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -426,7 +400,6 @@
         <!-- Snake scale from the bodies of Palibati and Trives. Take it to Priest Ruvard in Aden. -->
         <set name="icon" val="icon.etc_scale_of_medusa_blue_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="CRYSTAL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -442,7 +415,6 @@
         <!-- Remains of residents of Aden Castle who were killed during the Aden-Elmore war. Collect 60 of them and take them to High Priest Orven. -->
         <set name="icon" val="icon.etc_ashes_white_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="CRYSTAL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -458,7 +430,6 @@
         <!-- Document made from collected mysterious document pieces. Take it to Guard Coleman. -->
         <set name="icon" val="icon.etc_piece_of_paper_white_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="CRYSTAL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -474,7 +445,6 @@
         <!-- Piece of document that seems to contain some suspicious contents. If you collect 5 of them, you may be able to decipher the information the document conveys. -->
         <set name="icon" val="icon.etc_piece_of_report_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="CRYSTAL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -490,7 +460,6 @@
         <!-- Supply items of Taik Orcs. Take them to Priest Ruvard and he will reward you. -->
         <set name="icon" val="icon.etc_squares_wood_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="CRYSTAL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -506,7 +475,6 @@
         <!-- Treasure chest that was obtained by slaying Zaken's followers. Take it to Warehouse Keeper Randolf of Town of Giran. -->
         <set name="icon" val="icon.etc_jewel_box_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="CRYSTAL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -522,7 +490,6 @@
         <!-- Sairon's hair. Take it to Magister Dieter of Town of Giran. -->
         <set name="icon" val="icon.etc_pouch_gray_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="CRYSTAL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -538,7 +505,6 @@
         <!-- It is called a Lesser Giant's Lamp. It is not lit. -->
         <set name="icon" val="icon.etc_bead_gold_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="CRYSTAL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -554,7 +520,6 @@
         <!-- It is called a Lesser Giant's Lamp. It is burning dimly. -->
         <set name="icon" val="icon.etc_bead_silver_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="CRYSTAL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -570,7 +535,6 @@
         <!-- It is called a Lesser Giant's Lamp. It is lit. -->
         <set name="icon" val="icon.etc_bead_silver_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="CRYSTAL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -586,7 +550,6 @@
         <!-- It is called a Lesser Giant's Lamp. It is lit. -->
         <set name="icon" val="icon.etc_bead_silver_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="CRYSTAL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -602,7 +565,6 @@
         <!-- It is called a Lesser Giant's Lamp. It is shining brightly. -->
         <set name="icon" val="icon.etc_bead_white_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="CRYSTAL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -618,7 +580,6 @@
         <!-- Broken Lesser Giant's Lamp. Take it to Lorain. -->
         <set name="icon" val="icon.etc_broken_crystal_silver_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="CRYSTAL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -634,7 +595,6 @@
         <!-- Fang that was obtained from killing a blade stakato. Take it to Eva's Priestess Restina in Heine. -->
         <set name="icon" val="icon.etc_claw_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="CRYSTAL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -650,7 +610,6 @@
         <!-- Flare shard obtained from the Forgotten Temple. Take it to Magister Nell of Gludin Village. -->
         <set name="icon" val="icon.etc_echo_crystal_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="CRYSTAL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -666,7 +625,6 @@
         <!-- Water Crystal obtained from the Forgotten Temple. Take it to Magister Nell of Gludin Village. -->
         <set name="icon" val="icon.etc_echo_crystal_i01"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="CRYSTAL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -682,7 +640,6 @@
         <!-- Ingredient used by Orc Shamans during a ritual. Take it to Priest Vanutu. -->
         <set name="icon" val="icon.etc_fang_red_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="CRYSTAL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -698,7 +655,6 @@
         <!-- Ingredient used by Orc Shamans during a ritual. Take it to Priest Vanutu. -->
         <set name="icon" val="icon.etc_crystal_ball_green_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="CRYSTAL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -714,7 +670,6 @@
         <!-- Pebble that radiates a strange aura. It sends out a dim light. -->
         <set name="icon" val="icon.etc_dragon_egg_i02"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="CRYSTAL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -730,7 +685,6 @@
         <!-- Pebble that radiates a strange aura. It is shining brightly. -->
         <set name="icon" val="icon.etc_dragon_egg_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="CRYSTAL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -746,7 +700,6 @@
         <!-- Ingredient used by Orc Shamans during a ritual. Take it to Priest Vanutu. -->
         <set name="icon" val="icon.etc_horn_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="CRYSTAL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -762,7 +715,6 @@
         <!-- Ingredient used by Orc Shamans during a ritual. Take it to Priest Vanutu. -->
         <set name="icon" val="icon.etc_reagent_red_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="CRYSTAL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -778,7 +730,6 @@
         <!-- Book obtained from the Giant's Cave. Written in an ancient language, its contents cannot be deciphered. -->
         <set name="icon" val="icon.etc_spellbook_blue_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="CRYSTAL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -794,7 +745,6 @@
         <!-- Simple dictionary published by scholars of ancient times. By using this, you can interpret some of the texts of the Lesser Giants. -->
         <set name="icon" val="icon.etc_spellbook_gray_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="CRYSTAL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -810,7 +760,6 @@
         <!-- Dictionary published by scholars of ancient times. By using this, you can interpret the entire texts of the Lesser Giants. -->
         <set name="icon" val="icon.etc_spellbook_red_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="CRYSTAL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -826,7 +775,6 @@
         <!-- One of the ingredients used to make wine. Collect 80 of them and take them to Guard Harlan located in the Town of Dion. -->
         <set name="icon" val="icon.etc_herb_red_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="CRYSTAL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -842,7 +790,6 @@
         <!-- Magical stone used by Enku Orc Shamans when they cast ice magic. Collect 100 of these and take them to Guard Harlan located in the Town of Dion. -->
         <set name="icon" val="icon.etc_crystal_ball_blue_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="CRYSTAL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -858,7 +805,6 @@
         <!-- Fruit with a tough, hard outer skin and a fragrant smell. Collect 4 of these and take them to Magister Rollant in the Town of Dion. -->
         <set name="icon" val="icon.etc_cobol_i05"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="CRYSTAL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -874,7 +820,6 @@
         <!-- Flower that is said to bloom only under moonlight. Collect 20 of these and take them to Magister Rollant in the Town of Dion. -->
         <set name="icon" val="icon.etc_flower_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="CRYSTAL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -890,7 +835,6 @@
         <!-- The bodily fluids of a Leech that can be obtained from the Cruma Marshlands. Collect 10 of these and take them to Magister Rollant in the Town of Dion. -->
         <set name="icon" val="icon.etc_reagent_red_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="CRYSTAL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -906,7 +850,6 @@
         <!-- It's a coin collectors' dream! Take it to Head Blacksmith Vergara. -->
         <set name="icon" val="icon.etc_royal_membership_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="CRYSTAL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -922,7 +865,6 @@
         <!-- Coin owned by Sorcerer Kail who used to be an aid of Beleth. Take it to Warehouse Keeper Sorint. -->
         <set name="icon" val="icon.etc_magic_coin_blood_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="CRYSTAL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>

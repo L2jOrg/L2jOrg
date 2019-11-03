@@ -4,7 +4,6 @@
         <!-- The crest indicating that its bearer's event collector is hyena. Without this badge, one cannot prove one's grade. \0 -->
         <set name="icon" val="icon.etc_paper_red_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="CRYSTAL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -20,7 +19,6 @@
         <!-- The crest indicating that its bearer's event collector is fox. Without this badge, one cannot prove one's grade. \0 -->
         <set name="icon" val="icon.etc_paper_red_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="CRYSTAL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -36,7 +34,6 @@
         <!-- The crest indicating that its bearer's event collector is wolf. Without this badge, one cannot prove one's grade. \0 -->
         <set name="icon" val="icon.etc_paper_red_i00"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="CRYSTAL"/>
         <set name="is_tradable" val="false"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
@@ -52,7 +49,6 @@
         <!-- Starlight Festival Event - Gift from the sky. When it is thrown, it creates a small explosion. Can be used as an ingredient to make other types of fireworks. -->
         <set name="icon" val="icon.etc_fairy_fire_i00"/>
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="material" val="STEEL"/>
         <set name="is_stackable" val="true"/>
         <set name="is_oly_restricted" val="true"/>
         <set name="handler" val="ItemSkills"/>
@@ -64,14 +60,12 @@
     <item id="6404" name="Boomboom Powder" type="EtcItem">
         <!-- Starlight Festival Event - Black powder. Ingredient used to make larger fireworks. -->
         <set name="icon" val="icon.etc_powder_black_i00"/>
-        <set name="material" val="STEEL"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
         <set name="is_stackable" val="true"/>
     </item>
     <item id="6405" name="Magnesium" type="EtcItem">
         <!-- Starlight Festival Event - Chemical compound that generates a powerful flash when ignited. It is needed to make large fireworks. -->
         <set name="icon" val="icon.etc_broken_crystal_silver_i00"/>
-        <set name="material" val="STEEL"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
         <set name="is_stackable" val="true"/>
     </item>
@@ -80,7 +74,6 @@
         <set name="icon" val="icon.etc_small_ultra_bomb_i00"/>
         <set name="default_action" val="SKILL_REDUCE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_stackable" val="true"/>
         <set name="handler" val="ItemSkills"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
@@ -94,7 +87,6 @@
         <set name="icon" val="icon.etc_ultra_bomb_i00"/>
         <set name="default_action" val="SKILL_REDUCE"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="STEEL"/>
         <set name="is_stackable" val="true"/>
         <set name="handler" val="ItemSkills"/>
         <set name="is_coc_restricted" val="true"/>
@@ -110,7 +102,6 @@
         <set name="armor_type" val="HEAVY"/>
         <set name="bodypart" val="alldress"/>
         <set name="immediate_effect" val="true"/>
-        <set name="material" val="CLOTH"/>
         <set name="weight" val="1000"/>
         <set name="price" val="5000000"/>
 
