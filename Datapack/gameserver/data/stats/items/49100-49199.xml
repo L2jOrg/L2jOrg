@@ -114,43 +114,43 @@
             <skill id="32013" level="1"/>
         </skills>
     </item>
-    <item id="49112" name="Staff Chest" additionalName="Grade C" type="EtcItem">
+    <item id="49112" name="Staff Chest" type="EtcItem">
         <!-- Double-click the chest to get one of the next items: Cursed Staff / Crystal Staff / Sage's Staff / Demon's Staff. -->
         <set name="icon" val="icon.etc_treasure_box_i02"/>
         <set name="default_action" val="SKILL_REDUCE"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="49113" name="Fist Weapon Chest" additionalName="Grade C" type="EtcItem">
+    <item id="49113" name="Fist Weapon Chest" type="EtcItem">
         <!-- Double-click the chest to get one of the next items: Knuckle Duster / Chakram / Fisted Blade / Great Pata. -->
         <set name="icon" val="icon.etc_treasure_box_i03"/>
         <set name="default_action" val="SKILL_REDUCE"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="49114" name="Spear Chest" additionalName="Grade C" type="EtcItem">
+    <item id="49114" name="Spear Chest" type="EtcItem">
         <!-- Double-click the chest to get one of the next items: Bec de Corbin / Orcish Glaive / Poleaxe / Orcish Poleaxe. -->
         <set name="icon" val="icon.etc_treasure_box_i04"/>
         <set name="default_action" val="SKILL_REDUCE"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="49115" name="Blunt Weapon Chest" additionalName="Grade C" type="EtcItem">
+    <item id="49115" name="Blunt Weapon Chest" type="EtcItem">
         <!-- Double-click the chest to get one of the next items: Dwarven War Hammer / Heavy Doom Hammer / War Axe / Yaksa Mace. -->
         <set name="icon" val="icon.etc_treasure_box_i05"/>
         <set name="default_action" val="SKILL_REDUCE"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="49116" name="Dagger Chest" additionalName="Grade C" type="EtcItem">
+    <item id="49116" name="Dagger Chest" type="EtcItem">
         <!-- Double-click the chest to get one of the next items: Stiletto / Cursed Dagger / Dark Screamer / Crystal Dagger. -->
         <set name="icon" val="icon.etc_treasure_box_i06"/>
         <set name="default_action" val="SKILL_REDUCE"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="49117" name="One-Handed Sword Chest" additionalName="Grade C" type="EtcItem">
+    <item id="49117" name="One-Handed Sword Chest" type="EtcItem">
         <!-- Double-click the chest to get one of the next items: Katana / StormBringer / Sword of Delusion / Samurai Long Sword. -->
         <set name="icon" val="icon.etc_treasure_box_i07"/>
         <set name="default_action" val="SKILL_REDUCE"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="49118" name="Bow Chest" additionalName="Grade C" type="EtcItem">
+    <item id="49118" name="Bow Chest" type="EtcItem">
         <!-- Double-click the chest to get one of the next items: Elemental Bow / Crystallized Ice Bow / Akat Longbow / Eminence Bow. -->
         <set name="icon" val="icon.etc_treasure_box_i08"/>
         <set name="default_action" val="SKILL_REDUCE"/>
@@ -305,7 +305,7 @@
         <set name="is_destroyable" val="false"/>
         <set name="is_depositable" val="false"/>
     </item>
-    <item id="49132" name="Membership Card" additionalName="11th Sale" type="EtcItem">
+    <item id="49132" name="Membership Card" type="EtcItem">
         <!-- Membership Card given to VIP members of the 11th Sale. When in inventory, you can receive the 11th Anniversary buffs and coins from the 11th NPC. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. This item will be deleted after the event is over. -->
         <set name="icon" val="icon.ev_buff_11th"/>
         <set name="is_tradable" val="false"/>
@@ -313,7 +313,7 @@
         <set name="is_destroyable" val="false"/>
         <set name="is_depositable" val="false"/>
     </item>
-    <item id="49133" name="Venetian Fleece - Low Level" additionalName="15-day" type="EtcItem">
+    <item id="49133" name="Venetian Fleece - Low Level" type="EtcItem">
         <!-- A 15-day item. When in inventory, your XP and SP gain is increased by 22%. Can be used only by characters whose level is less than 40. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. This item will be removed after the event is over. -->
         <set name="icon" val="icon.skill19226"/>
         <set name="is_tradable" val="false"/>
@@ -363,7 +363,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="49136" name="Venetian Fleece - High Level" additionalName="15-day" type="EtcItem">
+    <item id="49136" name="Venetian Fleece - High Level" type="EtcItem">
         <!-- 15-day item. When in inventory, your XP and SP gain is increased by 11%. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. This item will be deleted after the event is over. -->
         <set name="icon" val="icon.skill19226"/>
         <set name="is_tradable" val="false"/>
@@ -410,7 +410,7 @@
         <set name="is_stackable" val="true"/>
         <set name="is_freightable" val="true"/>
     </item>
-    <item id="49140" name="Horn of Glory" additionalName="Empower" type="Weapon">
+    <item id="49140" name="Horn of Glory" type="Weapon">
         <!-- <Soul Crystal Enhancement>. M. Atk. + 46. -->
         <set name="icon" val="icon.weapon_horn_of_glory_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -431,7 +431,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="49141" name="Horn of Glory" additionalName="Acumen" type="Weapon">
+    <item id="49141" name="Horn of Glory" type="Weapon">
         <!-- <Soul Crystal Enhancement>. Increases Casting Spd. by 12%. -->
         <set name="icon" val="icon.weapon_horn_of_glory_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -452,7 +452,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="49142" name="Horn of Glory" additionalName="Magic Regeneration" type="Weapon">
+    <item id="49142" name="Horn of Glory" type="Weapon">
         <!-- <Soul Crystal Enhancement>. Increases MP Recovery Bonus by 16%. -->
         <set name="icon" val="icon.weapon_horn_of_glory_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -473,7 +473,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="49143" name="Pata" additionalName="Focus" type="Weapon">
+    <item id="49143" name="Pata" type="Weapon">
         <!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 32. -->
         <set name="icon" val="icon.weapon_chakram_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -495,7 +495,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="49144" name="Pata" additionalName="Haste" type="Weapon">
+    <item id="49144" name="Pata" type="Weapon">
         <!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 7%. -->
         <set name="icon" val="icon.weapon_chakram_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -517,7 +517,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="49145" name="Pata" additionalName="Critical Damage" type="Weapon">
+    <item id="49145" name="Pata" type="Weapon">
         <!-- <Soul Crystal Enhancement>. P. Atk. + 260 during a Critical Attack. -->
         <set name="icon" val="icon.weapon_chakram_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -539,7 +539,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="49146" name="Bastard Sword" additionalName="Focus" type="Weapon">
+    <item id="49146" name="Bastard Sword" type="Weapon">
         <!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 73. -->
         <set name="icon" val="icon.weapon_bastard_sword_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -560,7 +560,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="49147" name="Bastard Sword" additionalName="Haste" type="Weapon">
+    <item id="49147" name="Bastard Sword" type="Weapon">
         <!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 8%. -->
         <set name="icon" val="icon.weapon_bastard_sword_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -581,7 +581,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="49148" name="Bastard Sword" additionalName="Critical Damage" type="Weapon">
+    <item id="49148" name="Bastard Sword" type="Weapon">
         <!-- <Soul Crystal Enhancement>. P. Atk. + 136 during a Critical Attack. -->
         <set name="icon" val="icon.weapon_bastard_sword_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -602,7 +602,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="49149" name="Saber" additionalName="Focus" type="Weapon">
+    <item id="49149" name="Saber" type="Weapon">
         <!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 73. -->
         <set name="icon" val="icon.weapon_saber_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -623,7 +623,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="49150" name="Saber" additionalName="Haste" type="Weapon">
+    <item id="49150" name="Saber" type="Weapon">
         <!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 8%. -->
         <set name="icon" val="icon.weapon_saber_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -644,7 +644,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="49151" name="Saber" additionalName="Critical Damage" type="Weapon">
+    <item id="49151" name="Saber" type="Weapon">
         <!-- <Soul Crystal Enhancement>. P. Atk. + 136 during a Critical Attack. -->
         <set name="icon" val="icon.weapon_saber_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -665,7 +665,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="49152" name="Spinebone Sword" additionalName="Focus" type="Weapon">
+    <item id="49152" name="Spinebone Sword" type="Weapon">
         <!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 73. -->
         <set name="icon" val="icon.weapon_spinebone_sword_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -686,7 +686,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="49153" name="Spinebone Sword" additionalName="Haste" type="Weapon">
+    <item id="49153" name="Spinebone Sword" type="Weapon">
         <!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 8%. -->
         <set name="icon" val="icon.weapon_spinebone_sword_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -707,7 +707,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="49154" name="Spinebone Sword" additionalName="Critical Damage" type="Weapon">
+    <item id="49154" name="Spinebone Sword" type="Weapon">
         <!-- <Soul Crystal Enhancement>. P. Atk. + 136 during a Critical Attack. -->
         <set name="icon" val="icon.weapon_spinebone_sword_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -728,7 +728,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="49155" name="Artisan's Sword" additionalName="Focus" type="Weapon">
+    <item id="49155" name="Artisan's Sword" type="Weapon">
         <!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 73. -->
         <set name="icon" val="icon.weapon_artisans_sword_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -749,7 +749,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="49156" name="Artisan's Sword" additionalName="Haste" type="Weapon">
+    <item id="49156" name="Artisan's Sword" type="Weapon">
         <!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 8%. -->
         <set name="icon" val="icon.weapon_artisans_sword_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -770,7 +770,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="49157" name="Artisan's Sword" additionalName="Critical Damage" type="Weapon">
+    <item id="49157" name="Artisan's Sword" type="Weapon">
         <!-- <Soul Crystal Enhancement>. P. Atk. + 136 during a Critical Attack. -->
         <set name="icon" val="icon.weapon_artisans_sword_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -791,7 +791,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="49158" name="Crimson Sword" additionalName="Focus" type="Weapon">
+    <item id="49158" name="Crimson Sword" type="Weapon">
         <!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 73. -->
         <set name="icon" val="icon.weapon_crimson_sword_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -812,7 +812,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="49159" name="Crimson Sword" additionalName="Haste" type="Weapon">
+    <item id="49159" name="Crimson Sword" type="Weapon">
         <!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 8%. -->
         <set name="icon" val="icon.weapon_crimson_sword_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -833,7 +833,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="49160" name="Crimson Sword" additionalName="Critical Damage" type="Weapon">
+    <item id="49160" name="Crimson Sword" type="Weapon">
         <!-- <Soul Crystal Enhancement>. P. Atk. + 136 during a Critical Attack. -->
         <set name="icon" val="icon.weapon_crimson_sword_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -854,7 +854,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="49161" name="Knight's Sword" additionalName="Focus" type="Weapon">
+    <item id="49161" name="Knight's Sword" type="Weapon">
         <!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 73. -->
         <set name="icon" val="icon.weapon_knights_sword_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -875,7 +875,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="49162" name="Knight's Sword" additionalName="Haste" type="Weapon">
+    <item id="49162" name="Knight's Sword" type="Weapon">
         <!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 8%. -->
         <set name="icon" val="icon.weapon_knights_sword_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -896,7 +896,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="49163" name="Knight's Sword" additionalName="Critical Damage" type="Weapon">
+    <item id="49163" name="Knight's Sword" type="Weapon">
         <!-- <Soul Crystal Enhancement>. P. Atk. + 136 during a Critical Attack. -->
         <set name="icon" val="icon.weapon_knights_sword_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -917,7 +917,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="49164" name="Sword of Revolution" additionalName="Focus" type="Weapon">
+    <item id="49164" name="Sword of Revolution" type="Weapon">
         <!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 73. -->
         <set name="icon" val="icon.weapon_sword_of_revolution_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -938,7 +938,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="49165" name="Sword of Revolution" additionalName="Haste" type="Weapon">
+    <item id="49165" name="Sword of Revolution" type="Weapon">
         <!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 8%. -->
         <set name="icon" val="icon.weapon_sword_of_revolution_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -959,7 +959,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="49166" name="Sword of Revolution" additionalName="Critical Damage" type="Weapon">
+    <item id="49166" name="Sword of Revolution" type="Weapon">
         <!-- <Soul Crystal Enhancement>. P. Atk. + 136 during a Critical Attack. -->
         <set name="icon" val="icon.weapon_sword_of_revolution_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -980,7 +980,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="49167" name="Elven Sword" additionalName="Focus" type="Weapon">
+    <item id="49167" name="Elven Sword" type="Weapon">
         <!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 73. -->
         <set name="icon" val="icon.weapon_elven_sword_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -1001,7 +1001,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="49168" name="Elven Sword" additionalName="Haste" type="Weapon">
+    <item id="49168" name="Elven Sword" type="Weapon">
         <!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 8%. -->
         <set name="icon" val="icon.weapon_elven_sword_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -1022,7 +1022,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="49169" name="Elven Sword" additionalName="Critical Damage" type="Weapon">
+    <item id="49169" name="Elven Sword" type="Weapon">
         <!-- <Soul Crystal Enhancement>. P. Atk. + 136 during a Critical Attack. -->
         <set name="icon" val="icon.weapon_elven_sword_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -1043,7 +1043,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="49170" name="Elven Long Sword" additionalName="Focus" type="Weapon">
+    <item id="49170" name="Elven Long Sword" type="Weapon">
         <!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 73. -->
         <set name="icon" val="icon.weapon_elven_long_sword_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -1064,7 +1064,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="49171" name="Elven Long Sword" additionalName="Haste" type="Weapon">
+    <item id="49171" name="Elven Long Sword" type="Weapon">
         <!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 8%. -->
         <set name="icon" val="icon.weapon_elven_long_sword_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -1085,7 +1085,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="49172" name="Elven Long Sword" additionalName="Critical Damage" type="Weapon">
+    <item id="49172" name="Elven Long Sword" type="Weapon">
         <!-- <Soul Crystal Enhancement>. P. Atk. + 136 during a Critical Attack. -->
         <set name="icon" val="icon.weapon_elven_long_sword_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -1106,7 +1106,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="49173" name="Tomahawk" additionalName="Focus" type="Weapon">
+    <item id="49173" name="Tomahawk" type="Weapon">
         <!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 73. -->
         <set name="icon" val="icon.weapon_tomahawk_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -1128,7 +1128,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="49174" name="Tomahawk" additionalName="Haste" type="Weapon">
+    <item id="49174" name="Tomahawk" type="Weapon">
         <!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 8%. -->
         <set name="icon" val="icon.weapon_tomahawk_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -1150,7 +1150,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="49175" name="Tomahawk" additionalName="Critical Damage" type="Weapon">
+    <item id="49175" name="Tomahawk" type="Weapon">
         <!-- <Soul Crystal Enhancement>. P. Atk. + 136 during a Critical Attack. -->
         <set name="icon" val="icon.weapon_tomahawk_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -1172,7 +1172,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="49176" name="Morning Star" additionalName="Focus" type="Weapon">
+    <item id="49176" name="Morning Star" type="Weapon">
         <!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 73. -->
         <set name="icon" val="icon.weapon_morning_star_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -1194,7 +1194,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="49177" name="Morning Star" additionalName="Haste" type="Weapon">
+    <item id="49177" name="Morning Star" type="Weapon">
         <!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 8%. -->
         <set name="icon" val="icon.weapon_morning_star_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -1216,7 +1216,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="49178" name="Morning Star" additionalName="Critical Damage" type="Weapon">
+    <item id="49178" name="Morning Star" type="Weapon">
         <!-- <Soul Crystal Enhancement>. P. Atk. + 136 during a Critical Attack. -->
         <set name="icon" val="icon.weapon_morning_star_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -1238,7 +1238,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="49179" name="Hand Axe" additionalName="Focus" type="Weapon">
+    <item id="49179" name="Hand Axe" type="Weapon">
         <!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 73. -->
         <set name="icon" val="icon.weapon_hand_axe_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -1260,7 +1260,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="49180" name="Hand Axe" additionalName="Haste" type="Weapon">
+    <item id="49180" name="Hand Axe" type="Weapon">
         <!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 8%. -->
         <set name="icon" val="icon.weapon_hand_axe_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -1282,7 +1282,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="49181" name="Hand Axe" additionalName="Critical Damage" type="Weapon">
+    <item id="49181" name="Hand Axe" type="Weapon">
         <!-- <Soul Crystal Enhancement>. P. Atk. + 136 during a Critical Attack. -->
         <set name="icon" val="icon.weapon_hand_axe_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -1304,7 +1304,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="49182" name="Spiked Club" additionalName="Focus" type="Weapon">
+    <item id="49182" name="Spiked Club" type="Weapon">
         <!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 73. -->
         <set name="icon" val="icon.weapon_spike_club_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -1326,7 +1326,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="49183" name="Spiked Club" additionalName="Haste" type="Weapon">
+    <item id="49183" name="Spiked Club" type="Weapon">
         <!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 8%. -->
         <set name="icon" val="icon.weapon_spike_club_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -1348,7 +1348,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="49184" name="Spiked Club" additionalName="Critical Damage" type="Weapon">
+    <item id="49184" name="Spiked Club" type="Weapon">
         <!-- <Soul Crystal Enhancement>. P. Atk. + 136 during a Critical Attack. -->
         <set name="icon" val="icon.weapon_spike_club_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -1370,7 +1370,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="49185" name="Tarbar" additionalName="Focus" type="Weapon">
+    <item id="49185" name="Tarbar" type="Weapon">
         <!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 73. -->
         <set name="icon" val="icon.weapon_tarbar_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -1392,7 +1392,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="49186" name="Tarbar" additionalName="Haste" type="Weapon">
+    <item id="49186" name="Tarbar" type="Weapon">
         <!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 8%. -->
         <set name="icon" val="icon.weapon_tarbar_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -1414,7 +1414,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="49187" name="Tarbar" additionalName="Critical Damage" type="Weapon">
+    <item id="49187" name="Tarbar" type="Weapon">
         <!-- <Soul Crystal Enhancement>. P. Atk. + 136 during a Critical Attack. -->
         <set name="icon" val="icon.weapon_tarbar_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -1436,7 +1436,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="49188" name="Bonebreaker" additionalName="Focus" type="Weapon">
+    <item id="49188" name="Bonebreaker" type="Weapon">
         <!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 73. -->
         <set name="icon" val="icon.weapon_bonebreaker_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -1458,7 +1458,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="49189" name="Bonebreaker" additionalName="Haste" type="Weapon">
+    <item id="49189" name="Bonebreaker" type="Weapon">
         <!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 8%. -->
         <set name="icon" val="icon.weapon_bonebreaker_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -1480,7 +1480,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="49190" name="Bonebreaker" additionalName="Critical Damage" type="Weapon">
+    <item id="49190" name="Bonebreaker" type="Weapon">
         <!-- <Soul Crystal Enhancement>. P. Atk. + 136 during a Critical Attack. -->
         <set name="icon" val="icon.weapon_bonebreaker_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -1502,7 +1502,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="49191" name="Heavy Mace" additionalName="Focus" type="Weapon">
+    <item id="49191" name="Heavy Mace" type="Weapon">
         <!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 73. -->
         <set name="icon" val="icon.weapon_heavy_mace_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -1524,7 +1524,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="49192" name="Heavy Mace" additionalName="Haste" type="Weapon">
+    <item id="49192" name="Heavy Mace" type="Weapon">
         <!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 8%. -->
         <set name="icon" val="icon.weapon_heavy_mace_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -1546,7 +1546,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="49193" name="Heavy Mace" additionalName="Critical Damage" type="Weapon">
+    <item id="49193" name="Heavy Mace" type="Weapon">
         <!-- <Soul Crystal Enhancement>. P. Atk. + 136 during a Critical Attack. -->
         <set name="icon" val="icon.weapon_heavy_mace_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -1568,7 +1568,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="49194" name="Scalpel" additionalName="Focus" type="Weapon">
+    <item id="49194" name="Scalpel" type="Weapon">
         <!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 73. -->
         <set name="icon" val="icon.weapon_scalpel_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -1590,7 +1590,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="49195" name="Scalpel" additionalName="Haste" type="Weapon">
+    <item id="49195" name="Scalpel" type="Weapon">
         <!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 8%. -->
         <set name="icon" val="icon.weapon_scalpel_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -1612,7 +1612,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="49196" name="Scalpel" additionalName="Critical Damage" type="Weapon">
+    <item id="49196" name="Scalpel" type="Weapon">
         <!-- <Soul Crystal Enhancement>. P. Atk. + 136 during a Critical Attack. -->
         <set name="icon" val="icon.weapon_scalpel_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -1634,7 +1634,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="49197" name="Work Hammer" additionalName="Focus" type="Weapon">
+    <item id="49197" name="Work Hammer" type="Weapon">
         <!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 73. -->
         <set name="icon" val="icon.weapon_work_hammer_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -1656,7 +1656,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="49198" name="Work Hammer" additionalName="Haste" type="Weapon">
+    <item id="49198" name="Work Hammer" type="Weapon">
         <!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 8%. -->
         <set name="icon" val="icon.weapon_work_hammer_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -1678,7 +1678,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="49199" name="Work Hammer" additionalName="Critical Damage" type="Weapon">
+    <item id="49199" name="Work Hammer" type="Weapon">
         <!-- <Soul Crystal Enhancement>. P. Atk. + 136 during a Critical Attack. -->
         <set name="icon" val="icon.weapon_work_hammer_i01"/>
         <set name="default_action" val="EQUIP"/>

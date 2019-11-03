@@ -270,7 +270,6 @@
 			</xs:simpleType>
 		</xs:attribute>
 		<xs:attribute name="name" type="xs:normalizedString" use="required" />
-		<xs:attribute name="additionalName" type="xs:normalizedString" use="optional" />
 		<xs:attribute name="type" use="required">
 			<xs:simpleType>
 				<xs:restriction base="xs:token">

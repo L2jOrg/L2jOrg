@@ -99,7 +99,6 @@ public abstract class ItemTemplate extends ListenersContainer implements IIdenti
     private int _itemId;
     private int _displayId;
     private String _name;
-    private String _additionalName;
     private String _icon;
     private int _weight;
     private boolean _stackable;
@@ -155,7 +154,6 @@ public abstract class ItemTemplate extends ListenersContainer implements IIdenti
         _itemId = set.getInt("item_id");
         _displayId = set.getInt("displayId", _itemId);
         _name = set.getString("name");
-        _additionalName = set.getString("additionalName", null);
         _icon = set.getString("icon", null);
         _weight = set.getInt("weight", 0);
         _equipReuseDelay = set.getInt("equip_reuse_delay", 0) * 1000;
@@ -369,12 +367,6 @@ public abstract class ItemTemplate extends ListenersContainer implements IIdenti
         return _name;
     }
 
-    /**
-     * @return the item's additional name.
-     */
-    public String getAdditionalName() {
-        return _additionalName;
-    }
 
     public Collection<AttributeHolder> getAttributes() {
         return _elementals != null ? _elementals.values() : null;

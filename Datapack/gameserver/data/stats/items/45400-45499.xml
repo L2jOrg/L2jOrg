@@ -19,7 +19,7 @@
         <set name="weight" val="10"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="45492" name="Fishing Rod" additionalName="1-day" type="Weapon">
+    <item id="45492" name="Fishing Rod" type="Weapon">
         <!-- A Fishing Rod for one day. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. Float usage: 1 -->
         <set name="icon" val="icon.weapon_fishing_rod_i03"/>
         <set name="default_action" val="EQUIP"/>

@@ -166,7 +166,7 @@
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="91221" name="Enhanced Antharas' Earring" additionalName="30-day" type="Armor">
+    <item id="91221" name="Enhanced Antharas' Earring" type="Armor">
         <!-- A 30-day item. MP +34, CON +1, MEN +1, Bleed Resistance and Bleed Atk. Rate +30%, Stun Resistance and Stun Atk. Rate +20%, Mental Resistance and Atk. Rate +20%, Reflect Damage Resistance +15%, Healing Effects +15%, Skill MP Consumption -6%, Vampiric Rage effect +6%. The effect doesn't stack if two identical earrings are worn. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.accessory_earring_of_antaras_i02"/>
         <set name="default_action" val="EQUIP"/>
@@ -183,7 +183,7 @@
             <stat type="maxMp">40</stat>
         </stats>
     </item>
-    <item id="91222" name="Enhanced Antharas' Earring Pack" additionalName="30-day" type="EtcItem">
+    <item id="91222" name="Enhanced Antharas' Earring Pack" type="EtcItem">
         <!-- Double-click to obtain Enhanced Antharas' Earring (30-day). Cannot be dropped or sold. -->
         <set name="icon" val="icon.npoint_antaras_30day_box"/>
         <set name="default_action" val="PEEL"/>
@@ -193,7 +193,7 @@
         <set name="is_stackable" val="true"/>
         <set name="time" val="43200"/>
     </item>
-    <item id="91223" name="Aquamarine Lv. 5" additionalName="30-day" type="Armor">
+    <item id="91223" name="Aquamarine Lv. 5" type="Armor">
         <!-- A 30-day item. When using a skill after equipping, there is a chance of recovering 50 MP. Effect does not stack with additional jewels of the same type. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.etc_bm_jewel_aquamarine_i00"/>
         <set name="default_action" val="EQUIP"/>
@@ -206,7 +206,7 @@
         <set name="is_sellable" val="false"/>
         <set name="time" val="43200"/>
     </item>
-    <item id="91224" name="Sayha's Jewel Box" additionalName="30-day" type="EtcItem">
+    <item id="91224" name="Sayha's Jewel Box" type="EtcItem">
         <!-- Double-click to obtain the following items: Cat's Eye Lv. 5 (30-day), Aquamarine Lv. 5 (30-day). Cannot be dropped or sold. -->
         <set name="icon" val="icon.bm_sayhas_talisman_box"/>
         <set name="default_action" val="PEEL"/>
@@ -238,7 +238,7 @@
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="91228" name="Chronicle Cube" additionalName="30-day" type="EtcItem">
+    <item id="91228" name="Chronicle Cube" type="EtcItem">
         <!-- A 30-day item. Double-click to obtain 3 Shining Scrolls of Mood Melody. Additionally at random chance you can get Dandy's Home Run Ball, Rice Cake of Flaming Fighting Spirit (event), Savior Scroll: Enchant Weapon. Available only once a day. Cannot be exchanged, dropped, or sold in private store. Can be stored in a private warehouse. Will be deleted after event. -->
         <set name="icon" val="icon.ev_libra_cube"/>
         <set name="default_action" val="SKILL_REDUCE"/>
@@ -249,7 +249,7 @@
         <set name="is_sellable" val="false"/>
         <set name="time" val="43200"/>
     </item>
-    <item id="91229" name="Chronicle Cube" additionalName="90-day" type="EtcItem">
+    <item id="91229" name="Chronicle Cube" type="EtcItem">
         <!-- A 90-day item. Double-click to obtain 3 Shining Scrolls of Mood Melody. Additionally at random chance you can get Dandy's Home Run Ball, Rice Cake of Flaming Fighting Spirit (event), Savior Scroll: Enchant Weapon. Available only once a day. Cannot be exchanged, dropped, or sold in private store. Can be stored in a private warehouse. Will be deleted after event. -->
         <set name="icon" val="icon.ev_libra_cube"/>
         <set name="default_action" val="SKILL_REDUCE"/>
@@ -260,7 +260,7 @@
         <set name="is_sellable" val="false"/>
         <set name="time" val="129600"/>
     </item>
-    <item id="91230" name="Chronicle Mark" additionalName="30-day" type="EtcItem">
+    <item id="91230" name="Chronicle Mark" type="EtcItem">
         <!-- A 30-day item. When in inventory, CON, MEN, DEX, WIT, STR, INT +1, Atk. Spd./ Casting Spd. +5%. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. Will be deleted after the event. -->
         <set name="icon" val="icon.etc_scroll_of_memory_i00"/>
         <set name="is_tradable" val="false"/>
@@ -270,7 +270,7 @@
         <set name="is_sellable" val="false"/>
         <set name="time" val="43200"/>
     </item>
-    <item id="91231" name="Chronicle Mark" additionalName="90-day" type="EtcItem">
+    <item id="91231" name="Chronicle Mark" type="EtcItem">
         <!-- A 90-day item. When in inventory, CON, MEN, DEX, WIT, STR, INT +1, Atk. Spd./ Casting Spd. +5%. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. Will be deleted after the event. -->
         <set name="icon" val="icon.etc_scroll_of_memory_i00"/>
         <set name="is_tradable" val="false"/>
@@ -341,7 +341,7 @@
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="91240" name="Christmas Amulet" additionalName="15-day" type="EtcItem">
+    <item id="91240" name="Christmas Amulet" type="EtcItem">
         <!-- 15-day item. Acquired XP/ SP through hunting/ fishing +20%. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. This item will be deleted after the event is over. -->
         <set name="icon" val="BranchSys.icon.br_xmas_present_luck_i00"/>
         <set name="is_tradable" val="false"/>
@@ -350,7 +350,7 @@
         <set name="is_sellable" val="false"/>
         <set name="time" val="21600"/>
     </item>
-    <item id="91241" name="Christmas Amulet Box" additionalName="15-day" type="EtcItem">
+    <item id="91241" name="Christmas Amulet Box" type="EtcItem">
         <!-- Double-click to obtain Christmas Amulet (15 charges). Cannot be dropped. Will be deleted after event. -->
         <set name="icon" val="BranchSys.icon.br_fortuna_cube_s_i00"/>
         <set name="default_action" val="PEEL"/>
@@ -369,7 +369,7 @@
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="91243" name="Shining Savior's Earring" additionalName="Event" type="Armor">
+    <item id="91243" name="Shining Savior's Earring" type="Armor">
         <!-- Acquired XP/ SP +2%, Max MP +30, Max HP +50, Stun/ Mental Attacks Resistance +4%, when equipped. Vampiric Rage effect. The effect does not stack if two identical earrings are equipped. Cannot be exchanged, dropped, or sold in a private store. Will be deleted after event. -->
         <set name="icon" val="icon.r2_earring_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -781,19 +781,19 @@
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="91290" name="Scroll: Critical Creation" additionalName="Lv. 1" type="EtcItem">
+    <item id="91290" name="Scroll: Critical Creation" type="EtcItem">
         <!-- Scroll needed to learn the Critical Creation skill. Available to Master. Level required: 76. -->
         <set name="icon" val="icon.etc_magic_book_red_i00"/>
         <set name="weight" val="120"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="91291" name="Scroll: Critical Creation" additionalName="Lv. 2" type="EtcItem">
+    <item id="91291" name="Scroll: Critical Creation" type="EtcItem">
         <!-- Scroll needed to learn the Critical Creation Lv. 2 skill. Available to Master. Level required: 79. -->
         <set name="icon" val="icon.etc_magic_book_red_i00"/>
         <set name="weight" val="120"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="91292" name="Scroll: Master of Creation" additionalName="Lv. 1" type="EtcItem">
+    <item id="91292" name="Scroll: Master of Creation" type="EtcItem">
         <!-- Scroll needed to learn the Master of Creation skill. Available to Master. Level required: 78. -->
         <set name="icon" val="icon.etc_magic_book_red_i00"/>
         <set name="weight" val="120"/>

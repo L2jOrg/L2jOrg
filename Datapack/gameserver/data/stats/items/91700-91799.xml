@@ -63,7 +63,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="91707" name="Highest Quality Armor Set (C-grade) Chest +4" additionalName="Heavy Armor" type="EtcItem">
+	<item id="91707" name="Highest Quality Armor Set (C-grade) Chest +4" type="EtcItem">
 		<!-- Double-click to obtain Full Plate Helmet, Full Plate Armor, Full Plate Gauntlets and Full Plate Boots, all equipment enchanted to +4. -->
 		<set name="icon" val="icon.armor_t62_ul_i00" />
 		<set name="default_action" val="PEEL" />
@@ -72,7 +72,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="91708" name="Highest Quality Armor Set (C-grade) Chest +4" additionalName="Light Armor" type="EtcItem">
+	<item id="91708" name="Highest Quality Armor Set (C-grade) Chest +4" type="EtcItem">
 		<!-- Double-click to obtain Full Plate Helmet, Drake Leather Armor, Drake Leather Gloves and Drake Leather Boots, all equipment enchanted to +4. -->
 		<set name="icon" val="icon.armor_t45_ul_i00" />
 		<set name="default_action" val="PEEL" />
@@ -81,7 +81,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="91709" name="Highest Quality Armor Set (C-grade) Chest +4" additionalName="Robe" type="EtcItem">
+	<item id="91709" name="Highest Quality Armor Set (C-grade) Chest +4" type="EtcItem">
 		<!-- Double-click to obtain Full Plate Helmet, Karmian Tunic, Karmian Stockings, Karmian Gloves and Karmian Boots, all equipment enchanted to +4. -->
 		<set name="icon" val="icon.armor_t53_u_i00" />
 		<set name="default_action" val="PEEL" />
@@ -105,7 +105,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="91712" name="Sayha's Storm Lv. 3" additionalName="Event" type="EtcItem">
+	<item id="91712" name="Sayha's Storm Lv. 3" type="EtcItem">
 		<!-- Sayha's Grace points +100%, Acquired XP/ SP +200%. The effect remains after death. Duration: 20 min. Cooldown: 1 min. Available if Sayha's Grace point bar is filled by more than one unit. -->
 		<set name="icon" val="icon.bm_sayha_storm" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -199,7 +199,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="91723" name="Iron Bracelet" additionalName="15 days" type="Armor">
+	<item id="91723" name="Iron Bracelet" type="Armor">
 		<!-- Available for 15 days. Unlocks 1 talisman slot. -->
 		<set name="icon" val="icon.etc_rbracelet_c_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -211,7 +211,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="91724" name="Iron Bracelet Chest" additionalName="15 days" type="EtcItem">
+	<item id="91724" name="Iron Bracelet Chest" type="EtcItem">
 		<!-- Double-click to obtain Iron Bracelet (15-day). -->
 		<set name="icon" val="icon.etc_treasure_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -346,7 +346,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="91737" name="Brooch Lv. 1" additionalName="15 days" type="Armor">
+	<item id="91737" name="Brooch Lv. 1" type="Armor">
 		<!-- Available for 15 days. Opens up 2 jewel slots. -->
 		<set name="icon" val="icon.etc_bm_brooch_lavianrose_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -358,7 +358,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="91738" name="Brooch Chest Lv. 1" additionalName="15 days" type="EtcItem">
+	<item id="91738" name="Brooch Chest Lv. 1" type="EtcItem">
 		<!-- Double-click to obtain Brooch Lv. 1 (15-day). -->
 		<set name="icon" val="icon.etc_treasure_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -369,7 +369,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="91739" name="Exuberance Amulet" additionalName="30 days" type="EtcItem">
+	<item id="91739" name="Exuberance Amulet" type="EtcItem">
 		<!-- Available for 30 days. When in inventory, CON/ MEN/ DEX/ WIT/ STR/ INT +1, Acquired XP/ SP (hunting) +20%. -->
 		<set name="icon" val="icon.bm_sayha_rune" />
 		<set name="is_tradable" val="false" />
@@ -385,7 +385,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="91741" name="Einhasad's Protection" additionalName="Event" type="EtcItem">
+	<item id="91741" name="Einhasad's Protection" type="EtcItem">
 		<!-- Acquired XP/ SP +100% for 1 h. Cooldown: 1 min. The effect remains after death. -->
 		<set name="icon" val="icon.etc_dragons_blood_i03" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -544,7 +544,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="91758" name="Ruby Lv. 5" additionalName="3 days" type="Armor">
+	<item id="91758" name="Ruby Lv. 5" type="Armor">
 		<!-- Available for 3 days. Soulshot, Blessed Soulshot and Beast Soulshot damage +16%. The effect doesn't stack if two identical jewels are equipped, the higher-level jewel takes precedence. -->
 		<set name="icon" val="icon.etc_bm_jewel_ruby_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -556,7 +556,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="91759" name="Sapphire Lv. 5" additionalName="3 days" type="Armor">
+	<item id="91759" name="Sapphire Lv. 5" type="Armor">
 		<!-- Available for 3 days. Spiritshot, Blessed Spiritshot and Beast Spiritshot damage +16%. The effect doesn't stack if two identical jewels are equipped, the higher-level jewel takes precedence. -->
 		<set name="icon" val="icon.etc_bm_jewel_sapphire_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -568,7 +568,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="91760" name="Brooch Lv. 5" additionalName="30 days" type="Armor">
+	<item id="91760" name="Brooch Lv. 5" type="Armor">
 		<!-- Available for 30 days. Activates 6 jewel slots. Inventory Slots +15. -->
 		<set name="icon" val="icon.etc_bm_brooch_lavianrose_i06" />
 		<set name="default_action" val="EQUIP" />
@@ -659,7 +659,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="91769" name="Shining Savior's Earring" additionalName="1 day" type="Armor">
+	<item id="91769" name="Shining Savior's Earring" type="Armor">
 		<!-- Available for 1 day. Acquired XP/ SP +2%, Max HP +50, Max MP +30, Mental/ Stun Resistance +4%. Activates the Vampiric Rage effect. Effects of two identical earrings do not stack. -->
 		<set name="icon" val="icon.r2_earring_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -674,7 +674,7 @@
 			<stat type="mDef">78</stat>
 		</stats>
 	</item>
-	<item id="91770" name="Shining Savior's Earring" additionalName="30 days" type="Armor">
+	<item id="91770" name="Shining Savior's Earring" type="Armor">
 		<!-- Available for 30 day. Acquired XP/ SP +2%, Max HP +50, Max MP +30, Stun/ Mental Resistance +4%. Activates Vampiric Rage effect. The effect does not stack if two identical earrings are equipped. -->
 		<set name="icon" val="icon.r2_earring_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -689,7 +689,7 @@
 			<stat type="mDef">78</stat>
 		</stats>
 	</item>
-	<item id="91771" name="Doll of Border - Frintezza" additionalName="7 days" type="EtcItem">
+	<item id="91771" name="Doll of Border - Frintezza" type="EtcItem">
 		<!-- Available for 7 days. When in inventory, improves the character's parameters. <Frintezza Doll's Spell>. CON/ MEN/ WIT/ DEX/ STR/ INT +1, Stun/ Paralysis Atk. Rate +10%. -->
 		<set name="icon" val="icon.bm_doll_frintessa_30d" />
 		<set name="is_tradable" val="false" />
@@ -697,7 +697,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="91772" name="Scroll: PK" additionalName="Event" type="EtcItem">
+	<item id="91772" name="Scroll: PK" type="EtcItem">
 		<!-- Double-click to lower PK value by 1. Can only be used when the PK value is 1 or higher. -->
 		<set name="icon" val="icon.etc_ev_draco_pk_count_down" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -734,7 +734,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="91776" name="Sayha's Gust" additionalName="Event" type="EtcItem">
+	<item id="91776" name="Sayha's Gust" type="EtcItem">
 		<!-- Required level: 1-74. Sayha's Grace points +100%, Acquired XP/ SP +300%. The effect remains after death. Duration: 20 min. Cooldown: 1 min. Available if Sayha's Grace point bar is filled by more than one unit. -->
 		<set name="icon" val="icon.ev_magic_flame_game_wind2" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -744,7 +744,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="91777" name="Magic Fire" additionalName="Event" type="EtcItem">
+	<item id="91777" name="Magic Fire" type="EtcItem">
 		<!-- Required level: 1-74. For 1 h., magic lantern recharge rate +100%. Cooldown: 1 min. -->
 		<set name="icon" val="icon.bm_soul_of_shilen" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -754,7 +754,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="91778" name="Sayha's Storm Lv. 3" additionalName="1 hour" type="EtcItem">
+	<item id="91778" name="Sayha's Storm Lv. 3" type="EtcItem">
 		<!-- Sayha's Grace points +100%, Acquired XP/ SP +200%. The effect remains after death. Duration: 1 h. Cooldown: 1 min. Available if Sayha's Grace point bar is filled by more than one unit. -->
 		<set name="icon" val="icon.bm_sayha_storm" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -772,7 +772,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="91780" name="Dragon Scroll" additionalName="Event" type="EtcItem">
+	<item id="91780" name="Dragon Scroll" type="EtcItem">
 		<!-- For 20 min., P. Atk. +200, M. Atk. +350, P./ M. Critical Rate +30, Atk. Spd./ Casting Spd. +50, P./ M. Def. +200, Max HP/ MP/ CP +500. Cooldown: 1 min. The effect remains after death. -->
 		<set name="icon" val="icon.ev_charge_scroll" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -782,7 +782,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="91781" name="Sayha's Effect Scroll" additionalName="Event" type="EtcItem">
+	<item id="91781" name="Sayha's Effect Scroll" type="EtcItem">
 		<!-- For 20 min., grants the following effects: Sayha's Shield, Sayha's Magic Barrier, Sayha's Decrease Weight, Sayha's Clarity, Sayha's Berserker Spirit, Sayha's Wind Walk, Sayha's Might, Sayha's Focus, Sayha's Haste, Sayha's Death Whisper, Sayha's Empower, Sayha's Wild Magic, Sayha's Acumen, Sayha's Concentration, Sayha's Prophecy, Sayha's Recover HP, Sayha's Recover MP. Cooldown: 1 min. Can't be used when the Sayha's Recover MP effect is active. Note: The Sayha's Victory effect does not stack if the identical effect is active. -->
 		<set name="icon" val="icon.etc_ssq_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -904,7 +904,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="91793" name="Lakfi-Lakfi's Lucky Box" additionalName="Event" type="EtcItem">
+	<item id="91793" name="Lakfi-Lakfi's Lucky Box" type="EtcItem">
 		<!-- Golden Pig's chest filled with happiness for the new 2019 year. Double-click to obtain the Lakfi-Lakfi's Energy buff. No level requirements. Can be used once a day. -->
 		<set name="icon" val="BranchSys.icon.br_valentine_agathion_pack_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -914,7 +914,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="91794" name="Lakfi-Lakfi's Oink" additionalName="Event" type="EtcItem">
+	<item id="91794" name="Lakfi-Lakfi's Oink" type="EtcItem">
 		<!-- For 1 h., Atk. Spd./ Casting Spd. +100, Speed +20, Acquired XP/ SP +10%. The effect remains after death and logout. -->
 		<set name="icon" val="icon.accessory_pig_cap_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -924,7 +924,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="91795" name="Star Candy" additionalName="Event" type="EtcItem">
+	<item id="91795" name="Star Candy" type="EtcItem">
 		<!-- Sayha's Grace points +140,000. -->
 		<set name="icon" val="icon.etc_whiteday_candy_i04" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
@@ -934,7 +934,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="91796" name="Lucky Sack" additionalName="Event" type="EtcItem">
+	<item id="91796" name="Lucky Sack" type="EtcItem">
 		<!-- Lakfi-Lakfi's gift to celebrate the new year of Golden Pig. Double-click to obtain the Lakfi-Lakfi's Oink buff and an event reward. -->
 		<set name="icon" val="icon.christmas_card_box2" />
 		<set name="default_action" val="PEEL" />
@@ -945,7 +945,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="91797" name="Lucky Sack" additionalName="Event" type="EtcItem">
+	<item id="91797" name="Lucky Sack" type="EtcItem">
 		<!-- Lakfi-Lakfi's gift to celebrate the new year of Golden Pig. Double-click to obtain the Lakfi-Lakfi's Oink buff and an event reward. -->
 		<set name="icon" val="icon.christmas_card_box2" />
 		<set name="default_action" val="PEEL" />
@@ -956,7 +956,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="91798" name="Golden Lucky Sack" additionalName="Event" type="EtcItem">
+	<item id="91798" name="Golden Lucky Sack" type="EtcItem">
 		<!-- Lakfi-Lakfi's gift to celebrate the new year of Golden Pig. Double-click to obtain the Lakfi-Lakfi's Energy buff and an event reward. -->
 		<set name="icon" val="icon.christmas_card_box1" />
 		<set name="default_action" val="PEEL" />
@@ -967,7 +967,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="91799" name="Golden Lucky Sack" additionalName="Event" type="EtcItem">
+	<item id="91799" name="Golden Lucky Sack" type="EtcItem">
 		<!-- Lakfi-Lakfi's gift to celebrate the new year of Golden Pig. Double-click to obtain the Lakfi-Lakfi's Energy buff and an event reward. -->
 		<set name="icon" val="icon.christmas_card_box1" />
 		<set name="default_action" val="PEEL" />

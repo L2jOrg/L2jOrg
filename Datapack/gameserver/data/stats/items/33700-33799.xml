@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org ../../xsd/items.xsd">
-    <item id="33778" name="Soulshot (A-grade)" additionalName="Event" type="EtcItem">
+    <item id="33778" name="Soulshot (A-grade)" type="EtcItem">
         <set name="icon" val="icon.etc_spirit_bullet_silver_i00"/>
         <set name="default_action" val="SOULSHOT"/>
         <set name="immediate_effect" val="true"/>
@@ -11,7 +11,7 @@
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="33785" name="Spiritshot (A-grade)" additionalName="Event" type="EtcItem">
+    <item id="33785" name="Spiritshot (A-grade)" type="EtcItem">
         <set name="icon" val="icon.etc_spell_shot_silver_i00"/>
         <set name="default_action" val="SPIRITSHOT"/>
         <set name="immediate_effect" val="true"/>
@@ -22,7 +22,7 @@
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="33792" name="Blessed Spiritshot (A-grade)" additionalName="Event" type="EtcItem">
+    <item id="33792" name="Blessed Spiritshot (A-grade)" type="EtcItem">
         <set name="icon" val="icon.etc_spell_shot_silver_i01"/>
         <set name="default_action" val="SPIRITSHOT"/>
         <set name="immediate_effect" val="true"/>

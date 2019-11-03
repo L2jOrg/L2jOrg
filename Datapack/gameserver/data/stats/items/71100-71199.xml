@@ -20,7 +20,7 @@
             <stat type="randomDamage">1</stat>
         </stats>
     </item>
-    <item id="71101" name="XP and SP Rune - 50%" additionalName="1 hour" type="EtcItem">
+    <item id="71101" name="XP and SP Rune - 50%" type="EtcItem">
         <!-- 1-hour item. When in inventory, your Acquired XP/ SP is increased by 50%. Intended for Lv. 1 - 75 characters. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.skill19226"/>
         <set name="is_tradable" val="false"/>
@@ -39,7 +39,7 @@
         <set name="is_stackable" val="true"/>
         <set name="is_freightable" val="true"/>
     </item>
-    <item id="71103" name="XP and SP Rune - 50%" additionalName="5 hours" type="EtcItem">
+    <item id="71103" name="XP and SP Rune - 50%" type="EtcItem">
         <!-- 5-hour item?. When in inventory, your Acquired XP/ SP is increased by 50%. Intended for Lv. 1 - 75 characters. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.skill19226"/>
         <set name="is_tradable" val="false"/>
@@ -58,7 +58,7 @@
         <set name="is_stackable" val="true"/>
         <set name="is_freightable" val="true"/>
     </item>
-    <item id="71105" name="XP and SP Rune - 50%" additionalName="7-day" type="EtcItem">
+    <item id="71105" name="XP and SP Rune - 50%" type="EtcItem">
         <!-- 7-day item. When in inventory, your Acquired XP/ SP is increased by 50%. Intended for Lv. 1 - 75 characters. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.skill19226"/>
         <set name="is_tradable" val="false"/>
@@ -380,7 +380,7 @@
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="71137" name="Master's Fishing Potion" additionalName="1 h." type="EtcItem">
+    <item id="71137" name="Master's Fishing Potion" type="EtcItem">
         <!-- For 1 h., EXP/ SP bonus +100% when fishing succeeds. Applied to all bait. Can be stacked with Fishermen's Guild Support Certificate. -->
         <set name="icon" val="BranchIcon.etc_sign_agathion_feed_blue_i00"/>
         <set name="default_action" val="SKILL_REDUCE"/>
@@ -510,7 +510,7 @@
             <stat type="mDef">64</stat>
         </stats>
     </item>
-    <item id="71151" name="Agathion Bracelet - Lv. 3" additionalName="60 d." type="Armor">
+    <item id="71151" name="Agathion Bracelet - Lv. 3" type="Armor">
         <!-- When worn, 1 Agathion's main slot and 2 Agathion's side slot activated. STR/ INT/ CON/ MEN +1. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.lbracelet_agathion_charm"/>
         <set name="default_action" val="EQUIP"/>
@@ -795,7 +795,7 @@
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="71184" name="Agathion Meliodas" additionalName="Lv. 1" type="Armor">
+    <item id="71184" name="Agathion Meliodas" type="Armor">
         <!-- Activates the power of the Agathion Meliodas. Special abilities may be activated if the Agathion is summoned from the main slot. Can be enchanted up to +7 with the Seven Sins Agathion Growth Book. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. <Conditions for upgrade>. Enchant to +7 to upgrade to Agathion Meliodas Lv. 2. -->
         <set name="icon" val="BranchIcon.icon.g_bm_meliodas_agathion_charm_lv1_jp"/>
         <set name="default_action" val="EQUIP"/>
@@ -807,7 +807,7 @@
         <set name="is_depositable" val="false"/>
         <set name="is_sellable" val="false"/>
     </item>
-    <item id="71185" name="Agathion Elizabeth" additionalName="Lv. 1" type="Armor">
+    <item id="71185" name="Agathion Elizabeth" type="Armor">
         <!-- Activates the power of the Agathion Elizabeth. Special abilities may be activated if the Agathion is summoned from the main slot. Can be enchanted up to +7 with the Seven Sins Agathion Growth Book. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. <Conditions for upgrade>. Enchant to +7 to upgrade to Agathion Elizabeth Lv. 2. -->
         <set name="icon" val="BranchIcon.icon.g_bm_elizabeth_agathion_charm_lv1_jp"/>
         <set name="default_action" val="EQUIP"/>
@@ -819,7 +819,7 @@
         <set name="is_depositable" val="false"/>
         <set name="is_sellable" val="false"/>
     </item>
-    <item id="71186" name="Agathion Hawk" additionalName="Lv. 1" type="Armor">
+    <item id="71186" name="Agathion Hawk" type="Armor">
         <!-- Activates the power of the Agathion Hawk. Special abilities may be activated if the Agathion is summoned from the main slot. Can be enchanted up to +7 with the Seven Sins Agathion Growth Book. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. <Conditions for upgrade>. Enchant to +7 to upgrade to Agathion Hawk Lv. 2. -->
         <set name="icon" val="BranchIcon.icon.g_bm_hawk_agathion_charm_lv1_jp"/>
         <set name="default_action" val="EQUIP"/>
@@ -831,7 +831,7 @@
         <set name="is_depositable" val="false"/>
         <set name="is_sellable" val="false"/>
     </item>
-    <item id="71187" name="Agathion Ban" additionalName="Lv. 1" type="Armor">
+    <item id="71187" name="Agathion Ban" type="Armor">
         <!-- Activates the power of the Agathion Ban. Special abilities may be activated if the Agathion is summoned from the main slot. Can be enchanted up to +7 with the Seven Sins Agathion Growth Book. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. <Conditions for upgrade>. Enchant to +7 to upgrade to Agathion Ban Lv. 2. -->
         <set name="icon" val="BranchIcon.icon.g_bm_ban_agathion_charm_lv1_jp"/>
         <set name="default_action" val="EQUIP"/>
@@ -843,7 +843,7 @@
         <set name="is_depositable" val="false"/>
         <set name="is_sellable" val="false"/>
     </item>
-    <item id="71188" name="Agathion Diane" additionalName="Lv. 1" type="Armor">
+    <item id="71188" name="Agathion Diane" type="Armor">
         <!-- Activates the power of the Agathion Diane. Special abilities may be activated if the Agathion is summoned from the main slot. Can be enchanted up to +7 with the Seven Sins Agathion Growth Book. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. <Conditions for upgrade>. Enchant to +7 to upgrade to Agathion Diane Lv. 2. -->
         <set name="icon" val="BranchIcon.icon.g_bm_diane_agathion_charm_lv1_jp"/>
         <set name="default_action" val="EQUIP"/>
@@ -855,7 +855,7 @@
         <set name="is_depositable" val="false"/>
         <set name="is_sellable" val="false"/>
     </item>
-    <item id="71189" name="Agathion King" additionalName="Lv. 1" type="Armor">
+    <item id="71189" name="Agathion King" type="Armor">
         <!-- Activates the power of the Agathion King. Special abilities may be activated if the Agathion is summoned from the main slot. Can be enchanted up to +7 with the Seven Sins Agathion Growth Book. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. <Conditions for upgrade>. Enchant to +7 to upgrade to Agathion King Lv. 2. -->
         <set name="icon" val="BranchIcon.icon.g_bm_king_agathion_charm_lv1_jp"/>
         <set name="default_action" val="EQUIP"/>
@@ -867,7 +867,7 @@
         <set name="is_depositable" val="false"/>
         <set name="is_sellable" val="false"/>
     </item>
-    <item id="71190" name="Agathion Merlin" additionalName="Lv. 1" type="Armor">
+    <item id="71190" name="Agathion Merlin" type="Armor">
         <!-- Activates the power of the Agathion Merlin. Special abilities may be activated if the Agathion is summoned from the main slot. Can be enchanted up to +7 with the Seven Sins Agathion Growth Book. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. <Conditions for upgrade>. Enchant to +7 to upgrade to Agathion Merlin Lv. 2. -->
         <set name="icon" val="BranchIcon.icon.g_bm_merlin_agathion_charm_lv1_jp"/>
         <set name="default_action" val="EQUIP"/>
@@ -879,7 +879,7 @@
         <set name="is_depositable" val="false"/>
         <set name="is_sellable" val="false"/>
     </item>
-    <item id="71191" name="Agathion Gowther" additionalName="Lv. 1" type="Armor">
+    <item id="71191" name="Agathion Gowther" type="Armor">
         <!-- Activates the power of the Agathion Gowther. Special abilities may be activated if the Agathion is summoned from the main slot. Can be enchanted up to +7 with the Seven Sins Agathion Growth Book. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. <Conditions for upgrade>. Enchant to +7 to upgrade to Agathion Gowther Lv. 2. -->
         <set name="icon" val="BranchIcon.icon.g_bm_gowther_agathion_charm_lv1_jp"/>
         <set name="default_action" val="EQUIP"/>
@@ -891,7 +891,7 @@
         <set name="is_depositable" val="false"/>
         <set name="is_sellable" val="false"/>
     </item>
-    <item id="71192" name="Agathion Escanor" additionalName="Lv. 1" type="Armor">
+    <item id="71192" name="Agathion Escanor" type="Armor">
         <!-- Activates the power of the Agathion Escanor. Special abilities may be activated if the Agathion is summoned from the main slot. Can be enchanted up to +7 with the Seven Sins Agathion Growth Book. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. <Conditions for upgrade>. Enchant to +7 to upgrade to Agathion Escanor Lv. 2. -->
         <set name="icon" val="BranchIcon.icon.g_bm_escanor_agathion_charm_lv1_jp"/>
         <set name="default_action" val="EQUIP"/>
@@ -903,7 +903,7 @@
         <set name="is_depositable" val="false"/>
         <set name="is_sellable" val="false"/>
     </item>
-    <item id="71193" name="Agathion Meliodas" additionalName="Lv. 2" type="Armor">
+    <item id="71193" name="Agathion Meliodas" type="Armor">
         <!-- Activates the power of the Agathion Meliodas. Equipping it in the main slot summons the Agathion and activates both special and unique abilities. Equipping in the side slot only activates the unique abilities. Can be enchanted up to +7 with the Seven Sins Agathion Growth Book. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. <Conditions for upgrade>. Enchant to +7 to upgrade to Agathion Meliodas Lv. 3. -->
         <set name="icon" val="BranchIcon.icon.g_bm_meliodas_agathion_charm_lv1_jp"/>
         <set name="default_action" val="EQUIP"/>
@@ -915,7 +915,7 @@
         <set name="is_depositable" val="false"/>
         <set name="is_sellable" val="false"/>
     </item>
-    <item id="71194" name="Agathion Elizabeth" additionalName="Lv. 2" type="Armor">
+    <item id="71194" name="Agathion Elizabeth" type="Armor">
         <!-- Activates the power of the Agathion Elizabeth. Equipping it in the main slot summons the Agathion and activates both special and unique abilities. Equipping in the side slot only activates the unique abilities. Can be enchanted up to +7 with the Seven Sins Agathion Growth Book. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. <Conditions for upgrade>. Enchant to +7 to upgrade to Agathion Elizabeth Lv. 3. -->
         <set name="icon" val="BranchIcon.icon.g_bm_elizabeth_agathion_charm_lv1_jp"/>
         <set name="default_action" val="EQUIP"/>
@@ -927,7 +927,7 @@
         <set name="is_depositable" val="false"/>
         <set name="is_sellable" val="false"/>
     </item>
-    <item id="71195" name="Agathion Hawk" additionalName="Lv. 2" type="Armor">
+    <item id="71195" name="Agathion Hawk" type="Armor">
         <!-- Activates the power of the Agathion Hawk. Equipping it in the main slot summons the Agathion and activates both special and unique abilities. Equipping in the side slot only activates the unique abilities. Can be enchanted up to +7 with the Seven Sins Agathion Growth Book. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. <Conditions for upgrade>. Enchant to +7 to upgrade to Agathion Hawk Lv. 3. -->
         <set name="icon" val="BranchIcon.icon.g_bm_hawk_agathion_charm_lv1_jp"/>
         <set name="default_action" val="EQUIP"/>
@@ -939,7 +939,7 @@
         <set name="is_depositable" val="false"/>
         <set name="is_sellable" val="false"/>
     </item>
-    <item id="71196" name="Agathion Ban" additionalName="Lv. 2" type="Armor">
+    <item id="71196" name="Agathion Ban" type="Armor">
         <!-- Activates the power of the Agathion Ban. Equipping it in the main slot summons the Agathion and activates both special and unique abilities. Equipping in the side slot only activates the unique abilities. Can be enchanted up to +7 with the Seven Sins Agathion Growth Book. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. <Conditions for upgrade>. Enchant to +7 to upgrade to Agathion Ban Lv. 3. -->
         <set name="icon" val="BranchIcon.icon.g_bm_ban_agathion_charm_lv1_jp"/>
         <set name="default_action" val="EQUIP"/>
@@ -951,7 +951,7 @@
         <set name="is_depositable" val="false"/>
         <set name="is_sellable" val="false"/>
     </item>
-    <item id="71197" name="Agathion Diane" additionalName="Lv. 2" type="Armor">
+    <item id="71197" name="Agathion Diane" type="Armor">
         <!-- Activates the power of the Agathion Diane. Equipping it in the main slot summons the Agathion and activates both special and unique abilities. Equipping in the side slot only activates the unique abilities. Can be enchanted up to +7 with the Seven Sins Agathion Growth Book. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. <Conditions for upgrade>. Enchant to +7 to upgrade to Agathion Diane Lv. 3. -->
         <set name="icon" val="BranchIcon.icon.g_bm_diane_agathion_charm_lv1_jp"/>
         <set name="default_action" val="EQUIP"/>
@@ -963,7 +963,7 @@
         <set name="is_depositable" val="false"/>
         <set name="is_sellable" val="false"/>
     </item>
-    <item id="71198" name="Agathion King" additionalName="Lv. 2" type="Armor">
+    <item id="71198" name="Agathion King" type="Armor">
         <!-- Activates the power of the Agathion King. Equipping it in the main slot summons the Agathion and activates both special and unique abilities. Equipping in the side slot only activates the unique abilities. Can be enchanted up to +7 with the Seven Sins Agathion Growth Book. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. <Conditions for upgrade>. Enchant to +7 to upgrade to Agathion King Lv. 3. -->
         <set name="icon" val="BranchIcon.icon.g_bm_king_agathion_charm_lv1_jp"/>
         <set name="default_action" val="EQUIP"/>
@@ -975,7 +975,7 @@
         <set name="is_depositable" val="false"/>
         <set name="is_sellable" val="false"/>
     </item>
-    <item id="71199" name="Agathion Merlin" additionalName="Lv. 2" type="Armor">
+    <item id="71199" name="Agathion Merlin" type="Armor">
         <!-- Activates the power of the Agathion Merlin. Equipping it in the main slot summons the Agathion and activates both special and unique abilities. Equipping in the side slot only activates the unique abilities. Can be enchanted up to +7 with the Seven Sins Agathion Growth Book. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. <Conditions for upgrade>. Enchant to +7 to upgrade to Agathion Merlin Lv. 3. -->
         <set name="icon" val="BranchIcon.icon.g_bm_merlin_agathion_charm_lv1_jp"/>
         <set name="default_action" val="EQUIP"/>

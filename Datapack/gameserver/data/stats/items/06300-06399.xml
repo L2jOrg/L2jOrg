@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org ../../xsd/items.xsd">
-    <item id="6307" name="Ultimate Sword" additionalName="Focus" type="Weapon">
+    <item id="6307" name="Ultimate Sword" type="Weapon">
         <!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 65. -->
         <set name="icon" val="icon.weapon_sword_of_limit_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -30,7 +30,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="6308" name="Ultimate Sword" additionalName="Haste" type="Weapon">
+    <item id="6308" name="Ultimate Sword" type="Weapon">
         <!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 7%. -->
         <set name="icon" val="icon.weapon_sword_of_limit_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -60,7 +60,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="6309" name="Ultimate Sword" additionalName="Critical Damage" type="Weapon">
+    <item id="6309" name="Ultimate Sword" type="Weapon">
         <!-- <Soul Crystal Enhancement>. P. Atk. + 191 during a Critical Attack. -->
         <set name="icon" val="icon.weapon_sword_of_limit_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -90,7 +90,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="6310" name="Sword of Whispering Death" additionalName="Empower" type="Weapon">
+    <item id="6310" name="Sword of Whispering Death" type="Weapon">
         <!-- <Soul Crystal Enhancement>. M. Atk. + 46. -->
         <set name="icon" val="icon.weapon_deathbreath_sword_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -120,7 +120,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="6311" name="Sword of Whispering Death" additionalName="Acumen" type="Weapon">
+    <item id="6311" name="Sword of Whispering Death" type="Weapon">
         <!-- <Soul Crystal Enhancement>. Increases Casting Spd. by 12%. -->
         <set name="icon" val="icon.weapon_deathbreath_sword_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -150,7 +150,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="6312" name="Sword of Whispering Death" additionalName="Magic Regeneration" type="Weapon">
+    <item id="6312" name="Sword of Whispering Death" type="Weapon">
         <!-- <Soul Crystal Enhancement>. Increases MP Recovery Bonus by 16%. -->
         <set name="icon" val="icon.weapon_deathbreath_sword_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -180,7 +180,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="6313" name="Homunkulus' Sword" additionalName="Empower" type="Weapon">
+    <item id="6313" name="Homunkulus' Sword" type="Weapon">
         <!-- <Soul Crystal Enhancement>. M. Atk. + 46. -->
         <set name="icon" val="icon.weapon_homunkuluss_sword_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -210,7 +210,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="6314" name="Homunkulus' Sword" additionalName="Acumen" type="Weapon">
+    <item id="6314" name="Homunkulus' Sword" type="Weapon">
         <!-- <Soul Crystal Enhancement>. Increases Casting Spd. by 12%. -->
         <set name="icon" val="icon.weapon_homunkuluss_sword_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -240,7 +240,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="6315" name="Homunkulus' Sword" additionalName="Magic Regeneration" type="Weapon">
+    <item id="6315" name="Homunkulus' Sword" type="Weapon">
         <!-- <Soul Crystal Enhancement>. Increases MP Recovery Bonus by 16%. -->
         <set name="icon" val="icon.weapon_homunkuluss_sword_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -657,7 +657,7 @@
         <set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="6347" name="Berserker Blade" additionalName="Focus" type="Weapon">
+    <item id="6347" name="Berserker Blade" type="Weapon">
         <!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 32. -->
         <set name="icon" val="icon.weapon_berserker_blade_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -687,7 +687,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="6348" name="Berserker Blade" additionalName="Haste" type="Weapon">
+    <item id="6348" name="Berserker Blade" type="Weapon">
         <!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 8%. -->
         <set name="icon" val="icon.weapon_berserker_blade_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -717,7 +717,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="6349" name="Berserker Blade" additionalName="Critical Damage" type="Weapon">
+    <item id="6349" name="Berserker Blade" type="Weapon">
         <!-- <Soul Crystal Enhancement>. P. Atk. + 242 during a Critical Attack. -->
         <set name="icon" val="icon.weapon_berserker_blade_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -781,7 +781,7 @@
         <set name="commissionItemType" val="OTHER_ITEM"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="6356" name="Needle Wolverine" additionalName="Focus" type="Weapon">
+    <item id="6356" name="Needle Wolverine" type="Weapon">
         <!-- <Soul Crystal Characteristic>. P. Crit. Attack +70 -->
         <set name="icon" val="icon.weapon_needle_wolverine_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -811,7 +811,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="6357" name="Needle Wolverine" additionalName="Haste" type="Weapon">
+    <item id="6357" name="Needle Wolverine" type="Weapon">
         <!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by 5%. -->
         <set name="icon" val="icon.weapon_needle_wolverine_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -841,7 +841,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="6358" name="Needle Wolverine" additionalName="Mortal Strike" type="Weapon">
+    <item id="6358" name="Needle Wolverine" type="Weapon">
         <!-- <Soul Crystal Enhancement>\\Increases the chance of success of  performing the skills hitting vulnerable spots on enemy's body. -->
         <set name="icon" val="icon.weapon_needle_wolverine_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -871,7 +871,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="6359" name="Demon's Dagger" additionalName="Critical Damage" type="Weapon">
+    <item id="6359" name="Demon's Dagger" type="Weapon">
         <!-- <Soul Crystal Enhancement>. P. Atk. + 160 during a Critical Attack. -->
         <set name="icon" val="icon.weapon_demons_sword_i01"/>
         <set name="default_action" val="EQUIP"/>

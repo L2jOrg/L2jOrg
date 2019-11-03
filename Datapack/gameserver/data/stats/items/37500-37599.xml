@@ -62,7 +62,7 @@
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="37546" name="Rudolf's Gift 2015" additionalName="Lv. 1" type="EtcItem">
+    <item id="37546" name="Rudolf's Gift 2015" type="EtcItem">
         <!-- Santa's Reward. Inside there is Snowy Squash Nectar (10 pcs.). Will be removed after the event is over. -->
         <set name="icon" val="icon.etc_pi_gift_box_i04"/>
         <set name="default_action" val="PEEL"/>
@@ -70,7 +70,7 @@
         <set name="weight" val="10"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="37547" name="Rudolf's Gift 2015" additionalName="Lv. 2" type="EtcItem">
+    <item id="37547" name="Rudolf's Gift 2015" type="EtcItem">
         <!-- Santa's Reward. Inside there is Snowy Squash Nectar (15 pcs.). Will be removed after the event is over. -->
         <set name="icon" val="icon.etc_pi_gift_box_i04"/>
         <set name="default_action" val="PEEL"/>
@@ -78,7 +78,7 @@
         <set name="weight" val="10"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="37548" name="Rudolf's Gift 2015" additionalName="Lv. 3" type="EtcItem">
+    <item id="37548" name="Rudolf's Gift 2015" type="EtcItem">
         <!-- Santa's Reward. Inside there is Snowy Squash Nectar (25 pcs.). Will be removed after the event is over. -->
         <set name="icon" val="icon.etc_pi_gift_box_i04"/>
         <set name="default_action" val="PEEL"/>
@@ -86,7 +86,7 @@
         <set name="weight" val="10"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="37549" name="Rudolf's Gift 2015" additionalName="Lv. 4" type="EtcItem">
+    <item id="37549" name="Rudolf's Gift 2015" type="EtcItem">
         <!-- Santa's Reward. Inside there is Snowy Squash Nectar (60 pcs.). Will be removed after the event is over. -->
         <set name="icon" val="icon.etc_pi_gift_box_i04"/>
         <set name="default_action" val="PEEL"/>

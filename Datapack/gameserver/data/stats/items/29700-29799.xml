@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org ../../xsd/items.xsd">
-    <item id="29700" name="Minor Blessed Scroll of Resurrection" additionalName="Event" type="EtcItem">
+    <item id="29700" name="Minor Blessed Scroll of Resurrection" type="EtcItem">
         <!-- Magic Scroll resurrecting a character and restoring most part of XP. -->
         <set name="icon" val="icon.etc_scroll_of_resurrection_i01"/>
         <set name="default_action" val="SKILL_REDUCE"/>
@@ -8,7 +8,7 @@
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="29701" name="Rare Accessory Box" additionalName="for me" type="EtcItem">
+    <item id="29701" name="Rare Accessory Box" type="EtcItem">
         <!-- Double-click on the item to receive: Queen Ant's Ring (30-day), Orfen's Earring (30-day), Ring of Core (30-day). -->
         <set name="icon" val="icon.ev_10th_present2"/>
         <set name="default_action" val="SKILL_REDUCE"/>
@@ -44,7 +44,7 @@
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="29704" name="Fire Dragon Pendant" additionalName="Lvl 1" type="Armor">
+    <item id="29704" name="Fire Dragon Pendant" type="Armor">
         <!-- A pendant that contains the energy of Fire Dragon. With the help of Pendant Polish/Shiny Pendant Polish it can be enchanted up to +10. Dimensional Merchant can combine two semi-level pendants into one. That will add extra effects. Enchantment increases the number of effects. If an item already enchanted to +1 is unsuccessfully enchanted, it disappears. Be careful, as the number of pendants that can be combined in the inventory is reset. You cannot combine pendants if there is one enhanced pendant in your inventory. -->
         <set name="icon" val="BranchIcon.Icon.bm_pendant_pve"/>
         <set name="default_action" val="EQUIP"/>
@@ -69,7 +69,7 @@
             <stat type="pDef">28</stat>
         </stats>
     </item>
-    <item id="29705" name="Fire Dragon Pendant" additionalName="Lvl 2" type="Armor">
+    <item id="29705" name="Fire Dragon Pendant" type="Armor">
         <!-- A pendant that contains the energy of Fire Dragon. With the help of Pendant Polish/Shiny Pendant Polish it can be enchanted up to +10. Dimensional Merchant can combine two semi-level pendants into one. That will add extra effects. Enchantment increases the number of effects. If an item already enchanted to +1 is unsuccessfully enchanted, it disappears. Be careful, as the number of pendants that can be combined in the inventory is reset. You cannot combine pendants if there is one enhanced pendant in your inventory. -->
         <set name="icon" val="BranchIcon.Icon.bm_pendant_pve"/>
         <set name="default_action" val="EQUIP"/>
@@ -94,7 +94,7 @@
             <stat type="pDef">28</stat>
         </stats>
     </item>
-    <item id="29706" name="Fire Dragon Pendant" additionalName="Lvl 3" type="Armor">
+    <item id="29706" name="Fire Dragon Pendant" type="Armor">
         <!-- A pendant that contains the energy of Fire Dragon. With the help of Pendant Polish/Shiny Pendant Polish it can be enchanted up to +10. Dimensional Merchant can combine two semi-level pendants into one. That will add extra effects. Enchantment increases the number of effects. If an item already enchanted to +1 is unsuccessfully enchanted, it disappears. Be careful, as the number of pendants that can be combined in the inventory is reset. You cannot combine pendants if there is one enhanced pendant in your inventory. -->
         <set name="icon" val="BranchIcon.Icon.bm_pendant_pve"/>
         <set name="default_action" val="EQUIP"/>
@@ -119,7 +119,7 @@
             <stat type="pDef">28</stat>
         </stats>
     </item>
-    <item id="29707" name="Fire Dragon Pendant" additionalName="Lvl 4" type="Armor">
+    <item id="29707" name="Fire Dragon Pendant" type="Armor">
         <!-- A pendant that contains the energy of Land Dragon. With the help of Pendant Polish/Shiny Pendant Polish it can be enchanted up to +10. Dimensional Merchant can combine two semi-level pendants into one. That will add extra effects. Enchantment increases the number of effects. If an item already enchanted to +1 is unsuccessfully enchanted, it disappears. Cannot be exchanged or dropped. Can be stored in a warehouse. Be careful, as the number of pendants that can be combined in the inventory is reset. You cannot combine pendants if there is one enhanced pendant in your inventory. -->
         <set name="icon" val="BranchIcon.Icon.bm_pendant_pve"/>
         <set name="default_action" val="EQUIP"/>
@@ -147,7 +147,7 @@
             <stat type="pDef">28</stat>
         </stats>
     </item>
-    <item id="29708" name="Fire Dragon Pendant" additionalName="Lvl 5" type="Armor">
+    <item id="29708" name="Fire Dragon Pendant" type="Armor">
         <!-- A pendant that contains the energy of Land Dragon. With the help of Pendant Polish/Shiny Pendant Polish it can be enchanted up to +10. Dimensional Merchant can combine two semi-level pendants into one. That will add extra effects. Enchantment increases the number of effects. If an item already enchanted to +1 is unsuccessfully enchanted, it disappears. Cannot be exchanged or dropped. Can be stored in a warehouse. Be careful, as the number of pendants that can be combined in the inventory is reset. You cannot combine pendants if there is one enhanced pendant in your inventory. -->
         <set name="icon" val="BranchIcon.Icon.bm_pendant_pve"/>
         <set name="default_action" val="EQUIP"/>
@@ -175,7 +175,7 @@
             <stat type="pDef">28</stat>
         </stats>
     </item>
-    <item id="29709" name="Water Dragon Pendant" additionalName="Lvl 1" type="Armor">
+    <item id="29709" name="Water Dragon Pendant" type="Armor">
         <!-- A pendant that contains the energy of Water Dragon. With the help of Pendant Polish/Shiny Pendant Polish it can be enchanted up to +10. Dimensional Merchant can combine two semi-level pendants into one. That will add extra effects. Enchantment increases the number of effects. If an item already enchanted to +1 is unsuccessfully enchanted, it disappears. Be careful, as the number of pendants that can be combined in the inventory is reset. You cannot combine pendants if there is one enhanced pendant in your inventory. -->
         <set name="icon" val="BranchIcon.Icon.bm_pendant_pvp_blue"/>
         <set name="default_action" val="EQUIP"/>
@@ -200,7 +200,7 @@
             <stat type="pDef">28</stat>
         </stats>
     </item>
-    <item id="29710" name="Water Dragon Pendant" additionalName="Lvl 2" type="Armor">
+    <item id="29710" name="Water Dragon Pendant" type="Armor">
         <!-- A pendant that contains the energy of Water Dragon. With the help of Pendant Polish/Shiny Pendant Polish it can be enchanted up to +10. Dimensional Merchant can combine two semi-level pendants into one. That will add extra effects. Enchantment increases the number of effects. If an item already enchanted to +1 is unsuccessfully enchanted, it disappears. Be careful, as the number of pendants that can be combined in the inventory is reset. You cannot combine pendants if there is one enhanced pendant in your inventory. -->
         <set name="icon" val="BranchIcon.Icon.bm_pendant_pvp_blue"/>
         <set name="default_action" val="EQUIP"/>
@@ -225,7 +225,7 @@
             <stat type="pDef">28</stat>
         </stats>
     </item>
-    <item id="29711" name="Water Dragon Pendant" additionalName="Lvl 3" type="Armor">
+    <item id="29711" name="Water Dragon Pendant" type="Armor">
         <!-- A pendant that contains the energy of Water Dragon. With the help of Pendant Polish/Shiny Pendant Polish it can be enchanted up to +10. Dimensional Merchant can combine two semi-level pendants into one. That will add extra effects. Enchantment increases the number of effects. If an item already enchanted to +1 is unsuccessfully enchanted, it disappears. Be careful, as the number of pendants that can be combined in the inventory is reset. You cannot combine pendants if there is one enhanced pendant in your inventory. -->
         <set name="icon" val="BranchIcon.Icon.bm_pendant_pvp_blue"/>
         <set name="default_action" val="EQUIP"/>
@@ -250,7 +250,7 @@
             <stat type="pDef">28</stat>
         </stats>
     </item>
-    <item id="29712" name="Water Dragon Pendant" additionalName="Lvl 4" type="Armor">
+    <item id="29712" name="Water Dragon Pendant" type="Armor">
         <!-- A pendant that contains the energy of Water Dragon. With the help of Pendant Polish/Shiny Pendant Polish it can be enchanted up to +10. Dimensional Merchant can combine two semi-level pendants into one. That will add extra effects. Enchantment increases the number of effects. If an item already enchanted to +1 is unsuccessfully enchanted, it disappears. Cannot be exchanged or dropped. Can be stored in a warehouse. Be careful, as the number of pendants that can be combined in the inventory is reset. You cannot combine pendants if there is one enhanced pendant in your inventory. -->
         <set name="icon" val="BranchIcon.Icon.bm_pendant_pvp_blue"/>
         <set name="default_action" val="EQUIP"/>
@@ -278,7 +278,7 @@
             <stat type="pDef">28</stat>
         </stats>
     </item>
-    <item id="29713" name="Water Dragon Pendant" additionalName="Lvl 5" type="Armor">
+    <item id="29713" name="Water Dragon Pendant" type="Armor">
         <!-- A pendant that contains the energy of Water Dragon. With the help of Pendant Polish/Shiny Pendant Polish it can be enchanted up to +10. Dimensional Merchant can combine two semi-level pendants into one. That will add extra effects. Enchantment increases the number of effects. If an item already enchanted to +1 is unsuccessfully enchanted, it disappears. Cannot be exchanged or dropped. Can be stored in a warehouse. Be careful, as the number of pendants that can be combined in the inventory is reset. You cannot combine pendants if there is one enhanced pendant in your inventory. -->
         <set name="icon" val="BranchIcon.Icon.bm_pendant_pvp_blue"/>
         <set name="default_action" val="EQUIP"/>
@@ -306,7 +306,7 @@
             <stat type="pDef">28</stat>
         </stats>
     </item>
-    <item id="29714" name="Wind Dragon Pendant" additionalName="Lvl 1" type="Armor">
+    <item id="29714" name="Wind Dragon Pendant" type="Armor">
         <!-- A pendant that contains the energy of Wind Dragon. With the help of Pendant Polish/Shiny Pendant Polish it can be enchanted up to +10. Dimensional Merchant can combine two semi-level pendants into one. That will add extra effects. Enchantment increases the number of effects. If an item already enchanted to +1 is unsuccessfully enchanted, it disappears. Be careful, as the number of pendants that can be combined in the inventory is reset. You cannot combine pendants if there is one enhanced pendant in your inventory. -->
         <set name="icon" val="BranchIcon.Icon.bm_pendant_pve_white"/>
         <set name="default_action" val="EQUIP"/>
@@ -331,7 +331,7 @@
             <stat type="pDef">28</stat>
         </stats>
     </item>
-    <item id="29715" name="Wind Dragon Pendant" additionalName="Lvl 2" type="Armor">
+    <item id="29715" name="Wind Dragon Pendant" type="Armor">
         <!-- A pendant that contains the energy of Wind Dragon. With the help of Pendant Polish/Shiny Pendant Polish it can be enchanted up to +10. Dimensional Merchant can combine two semi-level pendants into one. That will add extra effects. Enchantment increases the number of effects. If an item already enchanted to +1 is unsuccessfully enchanted, it disappears. Be careful, as the number of pendants that can be combined in the inventory is reset. You cannot combine pendants if there is one enhanced pendant in your inventory. -->
         <set name="icon" val="BranchIcon.Icon.bm_pendant_pve_white"/>
         <set name="default_action" val="EQUIP"/>
@@ -356,7 +356,7 @@
             <stat type="pDef">28</stat>
         </stats>
     </item>
-    <item id="29716" name="Wind Dragon Pendant" additionalName="Lvl 3" type="Armor">
+    <item id="29716" name="Wind Dragon Pendant" type="Armor">
         <!-- A pendant that contains the energy of Wind Dragon. With the help of Pendant Polish/Shiny Pendant Polish it can be enchanted up to +10. Dimensional Merchant can combine two semi-level pendants into one. That will add extra effects. Enchantment increases the number of effects. If an item already enchanted to +1 is unsuccessfully enchanted, it disappears. Be careful, as the number of pendants that can be combined in the inventory is reset. You cannot combine pendants if there is one enhanced pendant in your inventory. -->
         <set name="icon" val="BranchIcon.Icon.bm_pendant_pve_white"/>
         <set name="default_action" val="EQUIP"/>
@@ -381,7 +381,7 @@
             <stat type="pDef">28</stat>
         </stats>
     </item>
-    <item id="29717" name="Wind Dragon Pendant" additionalName="Lvl 4" type="Armor">
+    <item id="29717" name="Wind Dragon Pendant" type="Armor">
         <!-- A pendant that contains the energy of Wind Dragon. With the help of Pendant Polish/Shiny Pendant Polish it can be enchanted up to +10. Dimensional Merchant can combine two semi-level pendants into one. That will add extra effects. Enchantment increases the number of effects. If an item already enchanted to +1 is unsuccessfully enchanted, it disappears. Cannot be exchanged or dropped. Can be stored in a warehouse. Be careful, as the number of pendants that can be combined in the inventory is reset. You cannot combine pendants if there is one enhanced pendant in your inventory. -->
         <set name="icon" val="BranchIcon.Icon.bm_pendant_pve_white"/>
         <set name="default_action" val="EQUIP"/>
@@ -409,7 +409,7 @@
             <stat type="pDef">28</stat>
         </stats>
     </item>
-    <item id="29718" name="Wind Dragon Pendant" additionalName="Lvl 5" type="Armor">
+    <item id="29718" name="Wind Dragon Pendant" type="Armor">
         <!-- A pendant that contains the energy of Wind Dragon. With the help of Pendant Polish/Shiny Pendant Polish it can be enchanted up to +10. Dimensional Merchant can combine two semi-level pendants into one. That will add extra effects. Enchantment increases the number of effects. If an item already enchanted to +1 is unsuccessfully enchanted, it disappears. Cannot be exchanged or dropped. Can be stored in a warehouse. Be careful, as the number of pendants that can be combined in the inventory is reset. You cannot combine pendants if there is one enhanced pendant in your inventory. -->
         <set name="icon" val="BranchIcon.Icon.bm_pendant_pve_white"/>
         <set name="default_action" val="EQUIP"/>
@@ -437,7 +437,7 @@
             <stat type="pDef">28</stat>
         </stats>
     </item>
-    <item id="29719" name="Land Dragon Pendant" additionalName="Lvl 1" type="Armor">
+    <item id="29719" name="Land Dragon Pendant" type="Armor">
         <!-- A pendant that contains the energy of Land Dragon. With the help of Pendant Polish/Shiny Pendant Polish it can be enchanted up to +10. Dimensional Merchant can combine two semi-level pendants into one. That will add extra effects. Enchantment increases the number of effects. If an item already enchanted to +1 is unsuccessfully enchanted, it disappears. Be careful, as the number of pendants that can be combined in the inventory is reset. You cannot combine pendants if there is one enhanced pendant in your inventory. -->
         <set name="icon" val="BranchIcon.Icon.bm_pendant_pvp"/>
         <set name="default_action" val="EQUIP"/>
@@ -462,7 +462,7 @@
             <stat type="pDef">28</stat>
         </stats>
     </item>
-    <item id="29720" name="Land Dragon Pendant" additionalName="Lvl 2" type="Armor">
+    <item id="29720" name="Land Dragon Pendant" type="Armor">
         <!-- A pendant that contains the energy of Land Dragon. With the help of Pendant Polish/Shiny Pendant Polish it can be enchanted up to +10. Dimensional Merchant can combine two semi-level pendants into one. That will add extra effects. Enchantment increases the number of effects. If an item already enchanted to +1 is unsuccessfully enchanted, it disappears. Be careful, as the number of pendants that can be combined in the inventory is reset. You cannot combine pendants if there is one enhanced pendant in your inventory. -->
         <set name="icon" val="BranchIcon.Icon.bm_pendant_pvp"/>
         <set name="default_action" val="EQUIP"/>
@@ -487,7 +487,7 @@
             <stat type="pDef">28</stat>
         </stats>
     </item>
-    <item id="29721" name="Land Dragon Pendant" additionalName="Lvl 3" type="Armor">
+    <item id="29721" name="Land Dragon Pendant" type="Armor">
         <!-- A pendant that contains the energy of Land Dragon. With the help of Pendant Polish/Shiny Pendant Polish it can be enchanted up to +10. Dimensional Merchant can combine two semi-level pendants into one. That will add extra effects. Enchantment increases the number of effects. If an item already enchanted to +1 is unsuccessfully enchanted, it disappears. Be careful, as the number of pendants that can be combined in the inventory is reset. You cannot combine pendants if there is one enhanced pendant in your inventory. -->
         <set name="icon" val="BranchIcon.Icon.bm_pendant_pvp"/>
         <set name="default_action" val="EQUIP"/>
@@ -512,7 +512,7 @@
             <stat type="pDef">28</stat>
         </stats>
     </item>
-    <item id="29722" name="Land Dragon Pendant" additionalName="Lvl 4" type="Armor">
+    <item id="29722" name="Land Dragon Pendant" type="Armor">
         <!-- A pendant that contains the energy of Land Dragon. With the help of Pendant Polish/Shiny Pendant Polish it can be enchanted up to +10. Dimensional Merchant can combine two semi-level pendants into one. That will add extra effects. Enchantment increases the number of effects. If an item already enchanted to +1 is unsuccessfully enchanted, it disappears. Cannot be exchanged or dropped. Can be stored in a warehouse. Be careful, as the number of pendants that can be combined in the inventory is reset. You cannot combine pendants if there is one enhanced pendant in your inventory. -->
         <set name="icon" val="BranchIcon.Icon.bm_pendant_pvp"/>
         <set name="default_action" val="EQUIP"/>
@@ -540,7 +540,7 @@
             <stat type="pDef">28</stat>
         </stats>
     </item>
-    <item id="29723" name="Land Dragon Pendant" additionalName="Lvl 5" type="Armor">
+    <item id="29723" name="Land Dragon Pendant" type="Armor">
         <!-- A pendant that contains the energy of Land Dragon. With the help of Pendant Polish/Shiny Pendant Polish it can be enchanted up to +10. Dimensional Merchant can combine two semi-level pendants into one. That will add extra effects. Enchantment increases the number of effects. If an item already enchanted to +1 is unsuccessfully enchanted, it disappears. Cannot be exchanged or dropped. Can be stored in a warehouse. Be careful, as the number of pendants that can be combined in the inventory is reset. You cannot combine pendants if there is one enhanced pendant in your inventory. -->
         <set name="icon" val="BranchIcon.Icon.bm_pendant_pvp"/>
         <set name="default_action" val="EQUIP"/>
@@ -678,7 +678,7 @@
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="29736" name="Diana's Earring" additionalName="Quest" type="EtcItem">
+    <item id="29736" name="Diana's Earring" type="EtcItem">
         <!-- Diana's onyx earring. Take it to Diana in the Talking Island Village. -->
         <set name="icon" val="icon.accessary_mage_earing_i00"/>
         <set name="is_tradable" val="false"/>
@@ -686,7 +686,7 @@
         <set name="is_depositable" val="false"/>
         <set name="is_sellable" val="false"/>
     </item>
-    <item id="29737" name="Dianna's Ring" additionalName="Quest" type="EtcItem">
+    <item id="29737" name="Dianna's Ring" type="EtcItem">
         <!-- Diana's sapphire ring. Take it to Diana in the Talking Island Village. -->
         <set name="icon" val="icon.accessary_ring_of_binding_i00"/>
         <set name="is_tradable" val="false"/>
@@ -694,7 +694,7 @@
         <set name="is_depositable" val="false"/>
         <set name="is_sellable" val="false"/>
     </item>
-    <item id="29738" name="Dianna's Necklace" additionalName="Quest" type="EtcItem">
+    <item id="29738" name="Dianna's Necklace" type="EtcItem">
         <!-- Diana's ruby necklace. Take it to Diana in the Talking Island Village. -->
         <set name="icon" val="icon.item_normal142"/>
         <set name="is_tradable" val="false"/>
@@ -702,7 +702,7 @@
         <set name="is_depositable" val="false"/>
         <set name="is_sellable" val="false"/>
     </item>
-    <item id="29739" name="Diana's Recommendation" additionalName="Event" type="EtcItem">
+    <item id="29739" name="Diana's Recommendation" type="EtcItem">
         <!-- Allows to take part int the  Mr. and Ms. Lineage2 contest. Save it until the very end of the contest. -->
         <set name="icon" val="icon.etc_letter_envelope_i00"/>
         <set name="is_tradable" val="false"/>
@@ -859,7 +859,7 @@
         <set name="is_dropable" val="false"/>
         <set name="is_depositable" val="false"/>
     </item>
-    <item id="29753" name="Blue Talisman - P. Crit." additionalName="1 hour" type="Armor">
+    <item id="29753" name="Blue Talisman - P. Crit." type="Armor">
         <!-- A 1-hour item. P. Critical Rate +10. Effects from two such Talismans do not stack. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.etc_talisman_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -875,7 +875,7 @@
             <skill id="3271" level="1"/>
         </skills>
     </item>
-    <item id="29754" name="Blue Talisman - P. Atk." additionalName="1 hour" type="Armor">
+    <item id="29754" name="Blue Talisman - P. Atk." type="Armor">
         <!-- A 1-hour item. P. Atk. +3%. Effects from two such Talismans do not stack. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.etc_talisman_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -891,7 +891,7 @@
             <skill id="3272" level="1"/>
         </skills>
     </item>
-    <item id="29755" name="Blue Talisman - P. Def." additionalName="1 hour" type="Armor">
+    <item id="29755" name="Blue Talisman - P. Def." type="Armor">
         <!-- A 1-hour item. P. Def. +3%. Effects from two such Talismans do not stack. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.etc_talisman_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -907,7 +907,7 @@
             <skill id="3273" level="1"/>
         </skills>
     </item>
-    <item id="29756" name="Blue Talisman - P. Skills Evasion" additionalName="1 hour" type="Armor">
+    <item id="29756" name="Blue Talisman - P. Skills Evasion" type="Armor">
         <!-- A 1-hour item. P. Skills Evasion +10%. Effects from two such Talismans do not stack. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.etc_talisman_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -923,7 +923,7 @@
             <skill id="3274" level="1"/>
         </skills>
     </item>
-    <item id="29757" name="Blue Talisman - M. Crit." additionalName="1 hour" type="Armor">
+    <item id="29757" name="Blue Talisman - M. Crit." type="Armor">
         <!-- A 1-hour item. M. Critical +10. Effects from two such Talismans do not stack. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.etc_talisman_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -939,7 +939,7 @@
             <skill id="3275" level="1"/>
         </skills>
     </item>
-    <item id="29758" name="Blue Talisman - M. Atk." additionalName="1 hour" type="Armor">
+    <item id="29758" name="Blue Talisman - M. Atk." type="Armor">
         <!-- A 1-hour item. M. Atk. +3%. Effects from two such Talismans do not stack. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.etc_talisman_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -955,7 +955,7 @@
             <skill id="3276" level="1"/>
         </skills>
     </item>
-    <item id="29759" name="Blue Talisman - M. Def." additionalName="1 hour" type="Armor">
+    <item id="29759" name="Blue Talisman - M. Def." type="Armor">
         <!-- A 1-hour item. M. Def. +3%. Effects from two such Talismans do not stack. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.etc_talisman_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -971,7 +971,7 @@
             <skill id="3277" level="1"/>
         </skills>
     </item>
-    <item id="29760" name="Blue Talisman - M. Skills Evasion" additionalName="1 hour" type="Armor">
+    <item id="29760" name="Blue Talisman - M. Skills Evasion" type="Armor">
         <!-- A 1-hour item. M. Skills Evasion +10%. Effects from two such Talismans do not stack. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.etc_talisman_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -987,7 +987,7 @@
             <skill id="3278" level="1"/>
         </skills>
     </item>
-    <item id="29761" name="Blue Talisman - Max. HP" additionalName="1 hour" type="Armor">
+    <item id="29761" name="Blue Talisman - Max. HP" type="Armor">
         <!-- A 1-hour item. Max. HP +3%. Effects from two such Talismans do not stack. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.etc_talisman_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -1003,7 +1003,7 @@
             <skill id="3279" level="1"/>
         </skills>
     </item>
-    <item id="29762" name="Blue Talisman - Max. MP" additionalName="1 hour" type="Armor">
+    <item id="29762" name="Blue Talisman - Max. MP" type="Armor">
         <!-- A 1-hour item. Max. MP +3%. Effects from two such Talismans do not stack. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.etc_talisman_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -1019,7 +1019,7 @@
             <skill id="3280" level="1"/>
         </skills>
     </item>
-    <item id="29763" name="Grey Talisman Box - Guard" additionalName="1 hour" type="Armor">
+    <item id="29763" name="Grey Talisman Box - Guard" type="Armor">
         <!-- A 1-hour item. Can protect from Debuffs 5 times for 10 sec. when used. Reuse Time is 5 minutes. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.etc_talisman_i07"/>
         <set name="default_action" val="EQUIP"/>
@@ -1035,7 +1035,7 @@
             <skill id="3281" level="1"/>
         </skills>
     </item>
-    <item id="29764" name="Grey Talisman - Denial" additionalName="1 hour" type="Armor">
+    <item id="29764" name="Grey Talisman - Denial" type="Armor">
         <!-- A 1-hour item. Removes a Debuff when used. Reuse Time is 5 minutes. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.etc_talisman_i07"/>
         <set name="default_action" val="EQUIP"/>
@@ -1051,7 +1051,7 @@
             <skill id="3282" level="1"/>
         </skills>
     </item>
-    <item id="29765" name="Grey Talisman - Benefaction" additionalName="1 hour" type="Armor">
+    <item id="29765" name="Grey Talisman - Benefaction" type="Armor">
         <!-- A 1-hour item. When used, P. Def. +1800 and M. Def. +1620, Buff-canceling Attack Resistance +80% for 10 seconds. Reuse Time is 15 minutes. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.etc_talisman_i07"/>
         <set name="default_action" val="EQUIP"/>
@@ -1067,7 +1067,7 @@
             <skill id="3283" level="1"/>
         </skills>
     </item>
-    <item id="29766" name="Grey Talisman - Blocking" additionalName="1 hour" type="Armor">
+    <item id="29766" name="Grey Talisman - Blocking" type="Armor">
         <!-- A 1-hour item. Restricts enemy's HP recovery up to 70% for 15 sec. when used. Reuse Time is 3 minutes. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.etc_talisman_i07"/>
         <set name="default_action" val="EQUIP"/>
@@ -1083,7 +1083,7 @@
             <skill id="3284" level="1"/>
         </skills>
     </item>
-    <item id="29767" name="Grey Talisman - Gravity" additionalName="1 hour" type="Armor">
+    <item id="29767" name="Grey Talisman - Gravity" type="Armor">
         <!-- A 1-hour item. Atk. Spd. and Casting Spd. -20% for 15 sec. when used. Reuse Time is 3 minutes. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.etc_talisman_i07"/>
         <set name="default_action" val="EQUIP"/>
@@ -1099,7 +1099,7 @@
             <skill id="3285" level="1"/>
         </skills>
     </item>
-    <item id="29768" name="Grey Talisman - Bond" additionalName="1 hour" type="Armor">
+    <item id="29768" name="Grey Talisman - Bond" type="Armor">
         <!-- A 1-hour item. Target's Speed -30% for 15 sec. when used. Reuse Time is 3 minutes. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.etc_talisman_i07"/>
         <set name="default_action" val="EQUIP"/>
@@ -1115,7 +1115,7 @@
             <skill id="3286" level="1"/>
         </skills>
     </item>
-    <item id="29769" name="White Talisman - P. Crit." additionalName="1 hour" type="Armor">
+    <item id="29769" name="White Talisman - P. Crit." type="Armor">
         <!-- A 1-hour item. P. Critical Rate +20. Effects from two such Talismans do not stack. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.etc_talisman_i00"/>
         <set name="default_action" val="EQUIP"/>
@@ -1131,7 +1131,7 @@
             <skill id="3271" level="1"/>
         </skills>
     </item>
-    <item id="29770" name="White Talisman - P. Atk." additionalName="1 hour" type="Armor">
+    <item id="29770" name="White Talisman - P. Atk." type="Armor">
         <!-- A 1-hour item. P. Atk. +4%. Effects from two such Talismans do not stack. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.etc_talisman_i00"/>
         <set name="default_action" val="EQUIP"/>
@@ -1147,7 +1147,7 @@
             <skill id="3272" level="1"/>
         </skills>
     </item>
-    <item id="29771" name="White Talisman - P. Def" additionalName="1 hour" type="Armor">
+    <item id="29771" name="White Talisman - P. Def" type="Armor">
         <!-- A 1-hour item. P. Def. +5%. Effects from two such Talismans do not stack. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.etc_talisman_i00"/>
         <set name="default_action" val="EQUIP"/>
@@ -1163,7 +1163,7 @@
             <skill id="3273" level="1"/>
         </skills>
     </item>
-    <item id="29772" name="White Talisman - P. Skills Evasion" additionalName="1 hour" type="Armor">
+    <item id="29772" name="White Talisman - P. Skills Evasion" type="Armor">
         <!-- A 1-hour item. P. Skills Evasion +15%. Effects from two such Talismans do not stack. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.etc_talisman_i00"/>
         <set name="default_action" val="EQUIP"/>
@@ -1179,7 +1179,7 @@
             <skill id="3274" level="1"/>
         </skills>
     </item>
-    <item id="29773" name="White Talisman - M. Crit." additionalName="1 hour" type="Armor">
+    <item id="29773" name="White Talisman - M. Crit." type="Armor">
         <!-- A 1-hour item. M. Critical +20. Effects from two such Talismans do not stack. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.etc_talisman_i00"/>
         <set name="default_action" val="EQUIP"/>
@@ -1195,7 +1195,7 @@
             <skill id="3275" level="1"/>
         </skills>
     </item>
-    <item id="29774" name="White Talisman - M. Atk." additionalName="1 hour" type="Armor">
+    <item id="29774" name="White Talisman - M. Atk." type="Armor">
         <!-- A 1-hour item. M. Atk. +4%. Effects from two such Talismans do not stack. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.etc_talisman_i00"/>
         <set name="default_action" val="EQUIP"/>
@@ -1211,7 +1211,7 @@
             <skill id="3276" level="1"/>
         </skills>
     </item>
-    <item id="29775" name="White Talisman - M. Def." additionalName="1 hour" type="Armor">
+    <item id="29775" name="White Talisman - M. Def." type="Armor">
         <!-- A 1-hour item. M. Def. +5%. Effects from two such Talismans do not stack. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.etc_talisman_i00"/>
         <set name="default_action" val="EQUIP"/>
@@ -1227,7 +1227,7 @@
             <skill id="3277" level="1"/>
         </skills>
     </item>
-    <item id="29776" name="White Talisman - M. Skills Evasion" additionalName="1 hour" type="Armor">
+    <item id="29776" name="White Talisman - M. Skills Evasion" type="Armor">
         <!-- A 1-hour item. M. Skills Evasion +15%. Effects from two such Talismans do not stack. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.etc_talisman_i00"/>
         <set name="default_action" val="EQUIP"/>
@@ -1243,7 +1243,7 @@
             <skill id="3278" level="1"/>
         </skills>
     </item>
-    <item id="29777" name="White Talisman - Max. HP" additionalName="1 hour" type="Armor">
+    <item id="29777" name="White Talisman - Max. HP" type="Armor">
         <!-- A 1-hour item. Max. HP +5%. Effects from two such Talismans do not stack. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.etc_talisman_i00"/>
         <set name="default_action" val="EQUIP"/>
@@ -1259,7 +1259,7 @@
             <skill id="3279" level="1"/>
         </skills>
     </item>
-    <item id="29778" name="White Talisman - Max. MP" additionalName="1 hour" type="Armor">
+    <item id="29778" name="White Talisman - Max. MP" type="Armor">
         <!-- A 1-hour item. Max. MP +5%. Effects from two such Talismans do not stack. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.etc_talisman_i00"/>
         <set name="default_action" val="EQUIP"/>
@@ -1275,7 +1275,7 @@
             <skill id="3280" level="1"/>
         </skills>
     </item>
-    <item id="29779" name="Yellow Talisman - Guard" additionalName="1 hour" type="Armor">
+    <item id="29779" name="Yellow Talisman - Guard" type="Armor">
         <!-- A 1-hour item. Can protect from Debuffs 5 times for 10 sec. when used. Reuse Time is 4 minutes. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.etc_talisman_i02"/>
         <set name="default_action" val="EQUIP"/>
@@ -1291,7 +1291,7 @@
             <skill id="3287" level="1"/>
         </skills>
     </item>
-    <item id="29780" name="Yellow Talisman - Denial" additionalName="1 hour" type="Armor">
+    <item id="29780" name="Yellow Talisman - Denial" type="Armor">
         <!-- A 1-hour item. Removes a Debuff when used. Reuse Time is 4 minutes. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.etc_talisman_i02"/>
         <set name="default_action" val="EQUIP"/>
@@ -1307,7 +1307,7 @@
             <skill id="3288" level="1"/>
         </skills>
     </item>
-    <item id="29781" name="Yellow Talisman - Benefaction" additionalName="1 hour" type="Armor">
+    <item id="29781" name="Yellow Talisman - Benefaction" type="Armor">
         <!-- A 1-hour item. P. Def. +3600 and M. Def. +3240 for 10 sec. when used. Buff-canceling Attack Resistance +80%. Reuse Time is 15 minutes. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.etc_talisman_i02"/>
         <set name="default_action" val="EQUIP"/>
@@ -1323,7 +1323,7 @@
             <skill id="3289" level="1"/>
         </skills>
     </item>
-    <item id="29782" name="Yellow Talisman - Blocking" additionalName="1 hour" type="Armor">
+    <item id="29782" name="Yellow Talisman - Blocking" type="Armor">
         <!-- A 1-hour item. Restricts enemy's HP recovery up to 70% for 15 sec. when used. Reuse Time is 2 minutes. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.etc_talisman_i02"/>
         <set name="default_action" val="EQUIP"/>
@@ -1339,7 +1339,7 @@
             <skill id="3290" level="1"/>
         </skills>
     </item>
-    <item id="29783" name="Yellow Talisman - Gravity" additionalName="1 hour" type="Armor">
+    <item id="29783" name="Yellow Talisman - Gravity" type="Armor">
         <!-- A 1-hour item. Atk. Spd. and Casting Spd. -20% for 15 sec. when used. Reuse Time is 2 minutes. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.etc_talisman_i02"/>
         <set name="default_action" val="EQUIP"/>
@@ -1355,7 +1355,7 @@
             <skill id="3291" level="1"/>
         </skills>
     </item>
-    <item id="29784" name="Yellow Talisman - Bond" additionalName="1 hour" type="Armor">
+    <item id="29784" name="Yellow Talisman - Bond" type="Armor">
         <!-- A 1-hour item. Target's Speed -30% for 15 sec. when used. Reuse Time is 2 minutes. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.etc_talisman_i02"/>
         <set name="default_action" val="EQUIP"/>
@@ -1371,7 +1371,7 @@
             <skill id="3292" level="1"/>
         </skills>
     </item>
-    <item id="29785" name="Blue Talisman Box - P. Crit." additionalName="1 hour" type="EtcItem">
+    <item id="29785" name="Blue Talisman Box - P. Crit." type="EtcItem">
         <!-- By double-clicking it, you will get Blue Talisman - P. Crit. (for 1 hour). <Note:>. For items obtained from a chest, there are restrictions regarding movement. -->
         <set name="icon" val="icon.etc_treasure_box_i01"/>
         <set name="default_action" val="PEEL"/>
@@ -1385,7 +1385,7 @@
             <item id="29753" min="1" max="1" chance="100"/>
         </capsuled_items>
     </item>
-    <item id="29786" name="Blue Talisman Box - P. Atk." additionalName="1 hour" type="EtcItem">
+    <item id="29786" name="Blue Talisman Box - P. Atk." type="EtcItem">
         <!-- By double-clicking it, you will get Blue Talisman - P. Atk. (for 1 hour). <Note:>. For items obtained from a chest, there are restrictions regarding movement. -->
         <set name="icon" val="icon.etc_treasure_box_i01"/>
         <set name="default_action" val="PEEL"/>
@@ -1399,7 +1399,7 @@
             <item id="29754" min="1" max="1" chance="100"/>
         </capsuled_items>
     </item>
-    <item id="29787" name="Blue Talisman Box - P. Def." additionalName="1 hour" type="EtcItem">
+    <item id="29787" name="Blue Talisman Box - P. Def." type="EtcItem">
         <!-- By double-clicking it, you will get Blue Talisman - P. Def. (for 1 hour). <Note:>. For items obtained from a chest, there are restrictions regarding movement. -->
         <set name="icon" val="icon.etc_treasure_box_i01"/>
         <set name="default_action" val="PEEL"/>
@@ -1413,7 +1413,7 @@
             <item id="29755" min="1" max="1" chance="100"/>
         </capsuled_items>
     </item>
-    <item id="29788" name="Blue Talisman Box - P. Skills Evasion" additionalName="1 hour" type="EtcItem">
+    <item id="29788" name="Blue Talisman Box - P. Skills Evasion" type="EtcItem">
         <!-- By double-clicking it, you will get Blue Talisman - P. Skills Evasion (for 1 hour). <Note:>. For items obtained from a chest, there are restrictions regarding movement. -->
         <set name="icon" val="icon.etc_treasure_box_i01"/>
         <set name="default_action" val="PEEL"/>
@@ -1427,7 +1427,7 @@
             <item id="29756" min="1" max="1" chance="100"/>
         </capsuled_items>
     </item>
-    <item id="29789" name="Blue Talisman Box - M. Crit." additionalName="1 hour" type="EtcItem">
+    <item id="29789" name="Blue Talisman Box - M. Crit." type="EtcItem">
         <!-- By double-clicking it, you will get Blue Talisman - M. Crit. (for 1 hour). <Note:>. For items obtained from a chest, there are restrictions regarding movement. -->
         <set name="icon" val="icon.etc_treasure_box_i01"/>
         <set name="default_action" val="PEEL"/>
@@ -1441,7 +1441,7 @@
             <item id="29757" min="1" max="1" chance="100"/>
         </capsuled_items>
     </item>
-    <item id="29790" name="Blue Talisman Box - M. Atk." additionalName="1 hour" type="EtcItem">
+    <item id="29790" name="Blue Talisman Box - M. Atk." type="EtcItem">
         <!-- By double-clicking it, you will get Blue Talisman - M. Atk. (for 1 hour). <Note:>. For items obtained from a chest, there are restrictions regarding movement. -->
         <set name="icon" val="icon.etc_treasure_box_i01"/>
         <set name="default_action" val="PEEL"/>
@@ -1455,7 +1455,7 @@
             <item id="29758" min="1" max="1" chance="100"/>
         </capsuled_items>
     </item>
-    <item id="29791" name="Blue Talisman Box - M. Def." additionalName="1 hour" type="EtcItem">
+    <item id="29791" name="Blue Talisman Box - M. Def." type="EtcItem">
         <!-- By double-clicking it, you will get Blue Talisman - M. Def. (for 1 hour). <Note:>. For items obtained from a chest, there are restrictions regarding movement. -->
         <set name="icon" val="icon.etc_treasure_box_i01"/>
         <set name="default_action" val="PEEL"/>
@@ -1469,7 +1469,7 @@
             <item id="29759" min="1" max="1" chance="100"/>
         </capsuled_items>
     </item>
-    <item id="29792" name="Blue Talisman Box - M. Skills Evasion" additionalName="1 hour" type="EtcItem">
+    <item id="29792" name="Blue Talisman Box - M. Skills Evasion" type="EtcItem">
         <!-- By double-clicking it, you will get Blue Talisman - M. Skills Evasion (for 1 hour). <Note:>. For items obtained from a chest, there are restrictions regarding movement. -->
         <set name="icon" val="icon.etc_treasure_box_i01"/>
         <set name="default_action" val="PEEL"/>
@@ -1483,7 +1483,7 @@
             <item id="29760" min="1" max="1" chance="100"/>
         </capsuled_items>
     </item>
-    <item id="29793" name="Blue Talisman Box - Max. HP" additionalName="1 hour" type="EtcItem">
+    <item id="29793" name="Blue Talisman Box - Max. HP" type="EtcItem">
         <!-- By double-clicking it, you will get Blue Talisman - Max. HP (for 1 hour). <Note:>. For items obtained from a chest, there are restrictions regarding movement. -->
         <set name="icon" val="icon.etc_treasure_box_i01"/>
         <set name="default_action" val="PEEL"/>
@@ -1497,7 +1497,7 @@
             <item id="29761" min="1" max="1" chance="100"/>
         </capsuled_items>
     </item>
-    <item id="29794" name="Blue Talisman Box - Max. MP" additionalName="1 hour" type="EtcItem">
+    <item id="29794" name="Blue Talisman Box - Max. MP" type="EtcItem">
         <!-- By double-clicking it, you will get Blue Talisman - Max. MP (for 1 hour). <Note:>. For items obtained from a chest, there are restrictions regarding movement. -->
         <set name="icon" val="icon.etc_treasure_box_i01"/>
         <set name="default_action" val="PEEL"/>
@@ -1511,7 +1511,7 @@
             <item id="29762" min="1" max="1" chance="100"/>
         </capsuled_items>
     </item>
-    <item id="29795" name="Grey Talisman Box - Guard" additionalName="1 hour" type="EtcItem">
+    <item id="29795" name="Grey Talisman Box - Guard" type="EtcItem">
         <!-- By double-clicking it, you will get Grey Talisman - Guard (for 1 hour). <Note:>. For items obtained from a chest, there are restrictions regarding movement. -->
         <set name="icon" val="icon.etc_treasure_box_i05"/>
         <set name="default_action" val="PEEL"/>
@@ -1525,7 +1525,7 @@
             <item id="29763" min="1" max="1" chance="100"/>
         </capsuled_items>
     </item>
-    <item id="29796" name="Grey Talisman Box - Denial" additionalName="1 hour" type="EtcItem">
+    <item id="29796" name="Grey Talisman Box - Denial" type="EtcItem">
         <!-- By double-clicking it, you will get Grey Talisman - Denial (for 1 hour). <Note:>. For items obtained from a chest, there are restrictions regarding movement. -->
         <set name="icon" val="icon.etc_treasure_box_i05"/>
         <set name="default_action" val="PEEL"/>
@@ -1539,7 +1539,7 @@
             <item id="29764" min="1" max="1" chance="100"/>
         </capsuled_items>
     </item>
-    <item id="29797" name="Grey Talisman Box - Benefaction" additionalName="1 hour" type="EtcItem">
+    <item id="29797" name="Grey Talisman Box - Benefaction" type="EtcItem">
         <!-- By double-clicking it, you will get Grey Talisman - Benefaction (for 1 hour). <Note:>. For items obtained from a chest, there are restrictions regarding movement. -->
         <set name="icon" val="icon.etc_treasure_box_i05"/>
         <set name="default_action" val="PEEL"/>
@@ -1553,7 +1553,7 @@
             <item id="29765" min="1" max="1" chance="100"/>
         </capsuled_items>
     </item>
-    <item id="29798" name="Grey Talisman Box - Blocking" additionalName="1 hour" type="EtcItem">
+    <item id="29798" name="Grey Talisman Box - Blocking" type="EtcItem">
         <!-- By double-clicking it, you will get Grey Talisman - Blocking (for 1 hour). <Note:>. For items obtained from a chest, there are restrictions regarding movement. -->
         <set name="icon" val="icon.etc_treasure_box_i05"/>
         <set name="default_action" val="PEEL"/>
@@ -1567,7 +1567,7 @@
             <item id="29766" min="1" max="1" chance="100"/>
         </capsuled_items>
     </item>
-    <item id="29799" name="Grey Talisman Box - Gravity" additionalName="1 hour" type="EtcItem">
+    <item id="29799" name="Grey Talisman Box - Gravity" type="EtcItem">
         <!-- By double-clicking it, you will get Grey Talisman - Gravity (for 1 hour). <Note:>. For items obtained from a chest, there are restrictions regarding movement. -->
         <set name="icon" val="icon.etc_treasure_box_i05"/>
         <set name="default_action" val="PEEL"/>

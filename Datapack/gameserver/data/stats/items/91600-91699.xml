@@ -16,7 +16,7 @@
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
     </item>
-    <item id="91602" name="Sealed Doll of Border - Frintezza" additionalName="30-day" type="EtcItem">
+    <item id="91602" name="Sealed Doll of Border - Frintezza" type="EtcItem">
         <!-- Double-click to obtain Doll of Border - Frintezza (30-day). Take it to Alchemist Veruti in Giran to upgrade to Lv. 1-2. Cannot be dropped. -->
         <set name="icon" val="icon.bm_doll_frintessa_30d"/>
         <set name="default_action" val="PEEL"/>
@@ -25,7 +25,7 @@
         <set name="is_stackable" val="true"/>
         <set name="time" val="43200"/>
     </item>
-    <item id="91603" name="Doll of Border - Frintezza" additionalName="30-day" type="EtcItem">
+    <item id="91603" name="Doll of Border - Frintezza" type="EtcItem">
         <!-- A 30-day item. When in inventory, improves the character's stats. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. This item will be deleted after the event is over. <Frintezza Doll Spell>. CON +1, MEN +1, WIT +1, DEX +1, STR +1, INT +1, Stun/ Paralysis Atk. Rate +10%. -->
         <set name="icon" val="icon.bm_doll_frintessa_30d"/>
         <set name="is_tradable" val="false"/>
@@ -34,18 +34,18 @@
         <set name="is_sellable" val="false"/>
         <set name="time" val="43200"/>
     </item>
-    <item id="91604" name="Frintezza Doll" additionalName="Lv. 1" type="EtcItem">
+    <item id="91604" name="Frintezza Doll" type="EtcItem">
         <!-- When in inventory, improves the character's stats. Take it to Alchemist Veruti in Giran to upgrade to Lv. 1-2. Cannot be dropped. <Frintezza Doll Spell Lv. 1>. CON +1, MEN +1, WIT +1, DEX +1, STR +1, INT +1, Stun/ Paralysis Atk. Rate +10%. -->
         <set name="icon" val="icon.bm_doll_frintessa_30d"/>
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
     </item>
-    <item id="91605" name="Frintezza Doll" additionalName="Lv. 2" type="EtcItem">
+    <item id="91605" name="Frintezza Doll" type="EtcItem">
         <!-- When in inventory, improves the character's stats. Cannot be dropped. <Frintezza Doll Spell Lv. 2>. CON +1, MEN +1, WIT +1, DEX +1, STR +1, INT +1, Stun/ Paralysis Atk. Rate +20%, Speed +5. -->
         <set name="icon" val="icon.bm_doll_frintessa_30d"/>
         <set name="is_dropable" val="false"/>
 	</item>
-	<item id="91606" name="High Quality Agathion Virgo" additionalName="Fire Dragon" type="Armor">
+	<item id="91606" name="High Quality Agathion Virgo" type="Armor">
 		<!-- Agathion Virgo that contains the Fire Dragon's spirit. Summons Agathion from the main slot. Activates Special Abilities. <Special Abilities>. Increases M. Def. and Mental Atk. Rate. Starting from +6, activates the dragon power. Can be exchanged to High Quality Agathion Virgo (Land Dragon) by Pona. -->
 		<set name="icon" val="icon.agathion_virgo_star_1" />
 		<set name="default_action" val="EQUIP" />
@@ -55,7 +55,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="91607" name="High Quality Agathion Capricorn" additionalName="Fire Dragon" type="Armor">
+	<item id="91607" name="High Quality Agathion Capricorn" type="Armor">
 		<!-- Agathion Capricorn that contains the Fire Dragon's spirit. Summons Agathion from the main slot. Activates Special Abilities. <Special Abilities>. Increases M. Critical Rate. Decreases cooldown for M. Skills and Dances/ Songs. Starting from +6, activates the dragon power. Can be exchanged to High Quality Agathion Capricorn (Land Dragon) by Pona. -->
 		<set name="icon" val="icon.agathion_capr_star_1" />
 		<set name="default_action" val="EQUIP" />
@@ -65,7 +65,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="91608" name="High Quality Agathion Libra" additionalName="Fire Dragon" type="Armor">
+	<item id="91608" name="High Quality Agathion Libra" type="Armor">
 		<!-- Agathion Libra that contains the Fire Dragon's spirit. Summons Agathion from the main slot. Activates Special Abilities. <Special Abilities>. Increases Casting Spd. Decreases MP Consumption for M. Skills and Dances/ Songs. Starting from +6, activates the dragon power. Can be exchanged to High Quality Agathion Libra (Land Dragon) by Pona. -->
 		<set name="icon" val="icon.agathion_lib_star_1" />
 		<set name="default_action" val="EQUIP" />
@@ -75,7 +75,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="91609" name="High Quality Agathion Taurus" additionalName="Fire Dragon" type="Armor">
+	<item id="91609" name="High Quality Agathion Taurus" type="Armor">
 		<!-- Agathion Taurus that contains the Fire Dragon's spirit. Summons Agathion from the main slot. Activates Special Abilities. <Special Abilities>. Increases P. Def. and Stun Atk. Rate. Starting from +6, activates the dragon power. Can be exchanged to High Quality Agathion Taurus (Land Dragon) by Pona. -->
 		<set name="icon" val="icon.agathion_tau_star_1" />
 		<set name="default_action" val="EQUIP" />
@@ -85,7 +85,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="91610" name="High Quality Agathion Leo" additionalName="Fire Dragon" type="Armor">
+	<item id="91610" name="High Quality Agathion Leo" type="Armor">
 		<!-- Agathion Leo that contains the Fire Dragon's spirit. Summons Agathion from the main slot. Activates Special Abilities. <Special Abilities>. Increases P. Atk. and Paralysis Atk. Rate. Starting from +6, activates the dragon power. Can be exchanged to High Quality Agathion Leo (Land Dragon) by Pona. -->
 		<set name="icon" val="icon.agathion_leo_star_1" />
 		<set name="default_action" val="EQUIP" />
@@ -95,7 +95,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="91611" name="High Quality Agathion Scorpio" additionalName="Fire Dragon" type="Armor">
+	<item id="91611" name="High Quality Agathion Scorpio" type="Armor">
 		<!-- Agathion Scorpio that contains the Fire Dragon's spirit. Summons Agathion from the main slot. Activates Special Abilities. <Special Abilities>. Increases P. Critical Rate. Decreases cooldown for P. Skills and Dances/ Songs. Starting from +6, activates the dragon power. Can be exchanged to High Quality Agathion Scorpio (Land Dragon) by Pona. -->
 		<set name="icon" val="icon.agathion_sco_star_1" />
 		<set name="default_action" val="EQUIP" />
@@ -105,7 +105,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="91612" name="High Quality Agathion Aquarius" additionalName="Fire Dragon" type="Armor">
+	<item id="91612" name="High Quality Agathion Aquarius" type="Armor">
 		<!-- Agathion Aquarius that contains the Fire Dragon's spirit. Summons Agathion from the main slot. Activates Special Abilities. <Special Abilities>. Increases M. Atk. and Hold/ Sleep Atk. Rate. Starting from +6, activates the dragon power. Can be exchanged to High Quality Agathion Aquarius (Land Dragon) by Pona. -->
 		<set name="icon" val="icon.agathion_aqu_star_1" />
 		<set name="default_action" val="EQUIP" />
@@ -115,7 +115,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="91613" name="High Quality Agathion Sagittarius" additionalName="Fire Dragon" type="Armor">
+	<item id="91613" name="High Quality Agathion Sagittarius" type="Armor">
 		<!-- Agathion Sagittarius that contains the Fire Dragon's spirit. Summons Agathion from the main slot. Activates Special Abilities. <Special Abilities>. Increases Atk. Spd. Decreases MP Consumption for P. Skills and Dances/ Songs. Starting from +6, activates the dragon power. Can be exchanged to High Quality Agathion Sagittarius (Land Dragon) by Pona. -->
 		<set name="icon" val="icon.agathion_sag_star_1" />
 		<set name="default_action" val="EQUIP" />
@@ -125,7 +125,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="91614" name="High Quality Agathion Virgo" additionalName="Land Dragon" type="Armor">
+	<item id="91614" name="High Quality Agathion Virgo" type="Armor">
 		<!-- Agathion Virgo that contains the Land Dragon's spirit. Summons Agathion from the main slot. Activates Special Abilities. <Special Abilities>. Increases M. Def. and Mental Atk. Rate. Starting from +6, activates the dragon power. Can be exchanged to High Quality Agathion Virgo (Fire Dragon) by Pona. -->
 		<set name="icon" val="icon.agathion_virgo_star_1" />
 		<set name="default_action" val="EQUIP" />
@@ -135,7 +135,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="91615" name="High Quality Agathion Capricorn" additionalName="Land Dragon" type="Armor">
+	<item id="91615" name="High Quality Agathion Capricorn" type="Armor">
 		<!-- Agathion Capricorn that contains the Land Dragon's spirit. Summons Agathion from the main slot. Activates Special Abilities. <Special Abilities>. Increases M. Critical Rate. Decreases cooldown for M. Skills and Dances/ Songs. Starting from +6, activates the dragon power. Can be exchanged to High Quality Agathion Capricorn (Fire Dragon) by Pona. -->
 		<set name="icon" val="icon.agathion_capr_star_1" />
 		<set name="default_action" val="EQUIP" />
@@ -145,7 +145,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="91616" name="High Quality Agathion Libra" additionalName="Land Dragon" type="Armor">
+	<item id="91616" name="High Quality Agathion Libra" type="Armor">
 		<!-- Agathion Libra that contains the Land Dragon's spirit. Summons Agathion from the main slot. Activates Special Abilities. <Special Abilities>. Increases Casting Spd. Decreases MP Consumption for M. Skills and Dances/ Songs. Starting from +6, activates the dragon power. Can be exchanged to High Quality Agathion Libra (Fire Dragon) by Pona. -->
 		<set name="icon" val="icon.agathion_lib_star_1" />
 		<set name="default_action" val="EQUIP" />
@@ -155,7 +155,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="91617" name="High Quality Agathion Taurus" additionalName="Land Dragon" type="Armor">
+	<item id="91617" name="High Quality Agathion Taurus" type="Armor">
 		<!-- Agathion Taurus that contains the Land Dragon's spirit. Summons Agathion from the main slot. Activates Special Abilities. <Special Abilities>. Increases P. Def. and Stun Atk. Rate. Starting from +6, activates the dragon power. Can be exchanged to High Quality Agathion Taurus (Fire Dragon) by Pona. -->
 		<set name="icon" val="icon.agathion_tau_star_1" />
 		<set name="default_action" val="EQUIP" />
@@ -165,7 +165,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="91618" name="High Quality Agathion Leo" additionalName="Land Dragon" type="Armor">
+	<item id="91618" name="High Quality Agathion Leo" type="Armor">
 		<!-- Agathion Leo that contains the Land Dragon's spirit. Summons Agathion from the main slot. Activates Special Abilities. <Special Abilities>. Increases P. Atk. and Paralysis Atk. Rate. Starting from +6, activates the dragon power. Can be exchanged to High Quality Agathion Leo (Fire Dragon) by Pona. -->
 		<set name="icon" val="icon.agathion_leo_star_1" />
 		<set name="default_action" val="EQUIP" />
@@ -175,7 +175,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="91619" name="High Quality Agathion Scorpio" additionalName="Land Dragon" type="Armor">
+	<item id="91619" name="High Quality Agathion Scorpio" type="Armor">
 		<!-- Agathion Scorpio that contains the Land Dragon's spirit. Summons Agathion from the main slot. Activates Special Abilities. <Special Abilities>. Increases P. Critical Rate. Decreases cooldown for P. Skills and Dances/ Songs. Starting from +6, activates the dragon power. Can be exchanged to High Quality Agathion Scorpio (Fire Dragon) by Pona. -->
 		<set name="icon" val="icon.agathion_sco_star_1" />
 		<set name="default_action" val="EQUIP" />
@@ -185,7 +185,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="91620" name="High Quality Agathion Aquarius" additionalName="Land Dragon" type="Armor">
+	<item id="91620" name="High Quality Agathion Aquarius" type="Armor">
 		<!-- Agathion Aquarius that contains the Land Dragon's spirit. Summons Agathion from the main slot. Activates Special Abilities. <Special Abilities>. Increases M. Atk. and Hold/ Sleep Atk. Rate. Starting from +6, activates the dragon power. Can be exchanged to High Quality Agathion Aquarius (Fire Dragon) by Pona. -->
 		<set name="icon" val="icon.agathion_aqu_star_1" />
 		<set name="default_action" val="EQUIP" />
@@ -195,7 +195,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="91621" name="High Quality Agathion Sagittarius" additionalName="Land Dragon" type="Armor">
+	<item id="91621" name="High Quality Agathion Sagittarius" type="Armor">
 		<!-- Agathion Sagittarius that contains the Land Dragon's spirit. Summons Agathion from the main slot. Activates Special Abilities. <Special Abilities>. Increases Atk. Spd. Decreases MP Consumption for M. Skills and Dances/ Songs. Starting from +6, activates the dragon power. Can be exchanged to High Quality Agathion Sagittarius (Fire Dragon) by Pona. -->
 		<set name="icon" val="icon.agathion_sag_star_1" />
 		<set name="default_action" val="EQUIP" />
@@ -338,7 +338,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="91639" name="Rare Accessory Pack Lv. 3" additionalName="30 days" type="EtcItem">
+	<item id="91639" name="Rare Accessory Pack Lv. 3" type="EtcItem">
 		<!-- Double-click to obtain one of the following items: Queen Ant's Ring Lv. 3 (30-day), Orfen's Earring Lv. 3 (30-day), Ring of Core Lv. 3 (30-day). -->
 		<set name="icon" val="icon.etc_box_of_adventure_3_i00" />
 		<set name="default_action" val="PEEL" />
@@ -360,7 +360,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="91641" name="Sayha's Blessing" additionalName="Event" type="EtcItem">
+	<item id="91641" name="Sayha's Blessing" type="EtcItem">
 		<!-- Sayha's Grace points +35,000. -->
 		<set name="icon" val="icon.etc_wind_potion_i00" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
@@ -540,7 +540,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="91660" name="Shining Scroll of Mood Melody" additionalName="1 hour" type="EtcItem">
+	<item id="91660" name="Shining Scroll of Mood Melody" type="EtcItem">
 		<!-- For 1 h., grants the following effects: Might, Shield, Haste, Empower, Acumen, Wind Walk, Vampiric Rage, Berserker Spirit, Focus, Death Whisper, Guidance, Clarity, Wild Magic, Concentration. The effect remains after death. <Note>. 1. Cannot be used together with Scroll of Mood Melody. 2. The effect of the last applied item will be active. -->
 		<set name="icon" val="icon.bm_magmeld" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -549,7 +549,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="time" val="60" />
 	</item>
-	<item id="91661" name="Shining Scroll of Mood Melody" additionalName="4 hours" type="EtcItem">
+	<item id="91661" name="Shining Scroll of Mood Melody" type="EtcItem">
 		<!-- For 4 h., grants the following effects: Might, Shield, Haste, Empower, Acumen, Wind Walk, Vampiric Rage, Berserker Spirit, Focus, Death Whisper, Guidance, Clarity, Wild Magic, Concentration. The effect remains after death. <Note>. 1. Cannot be used together with Scroll of Mood Melody. 2. The effect of the last applied item will be active. -->
 		<set name="icon" val="icon.bm_magmeld" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -558,7 +558,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="time" val="240" />
 	</item>
-	<item id="91662" name="Shining Scroll of Mood Melody" additionalName="8 hours" type="EtcItem">
+	<item id="91662" name="Shining Scroll of Mood Melody" type="EtcItem">
 		<!-- For 8 h., grants the following effects: Might, Shield, Haste, Empower, Acumen, Wind Walk, Vampiric Rage, Berserker Spirit, Focus, Death Whisper, Guidance, Clarity, Wild Magic, Concentration. The effect remains after death. <Note>. 1. Cannot be used together with Scroll of Mood Melody. 2. The effect of the last applied item will be active. -->
 		<set name="icon" val="icon.bm_magmeld" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -595,7 +595,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="91666" name="Sayha's Storm Lv. 1" additionalName="Event" type="EtcItem">
+	<item id="91666" name="Sayha's Storm Lv. 1" type="EtcItem">
 		<!-- Sayha's Grace points +100%, Acquired XP/ SP +100%. The effect remains after death. Duration: 20 min. Cooldown: 1 min. Available if Sayha's Grace point bar is filled by more than one unit. -->
 		<set name="icon" val="icon.bm_sayha_storm" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -605,7 +605,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="91667" name="White Sayha's Cloak +7" additionalName="30 days" type="Armor">
+	<item id="91667" name="White Sayha's Cloak +7" type="Armor">
 		<!-- Available for 30 days. Max HP/ MP +15%, Acquired XP/ SP +20%, P. Def. +8%, P./ M. Critical Damage +5%. -->
 		<set name="icon" val="icon.sayha2017_back_i03" />
 		<set name="default_action" val="EQUIP" />
@@ -617,7 +617,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="91668" name="Red Lantern" additionalName="1st place" type="EtcItem">
+	<item id="91668" name="Red Lantern" type="EtcItem">
 		<!-- <Reward for achieving the 1st place in the Magic Lantern event>. XP +100,000,000, SP +2,700,000. Can be exchanged by the Dimensional Merchant for the Red Lantern (transferable to other characters on the account). -->
 		<set name="icon" val="icon.r99_soul_stone_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -627,7 +627,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="91669" name="Purple Lantern" additionalName="2nd place" type="EtcItem">
+	<item id="91669" name="Purple Lantern" type="EtcItem">
 		<!-- <Reward for achieving the 2nd place in the Magic Lantern event>. XP +30,000,000, SP +810,000. Can be exchanged by the Dimensional Merchant for the Purple Lantern (transferable to other characters on the account). -->
 		<set name="icon" val="icon.r99_soul_stone_i05" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -637,7 +637,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="91670" name="Blue Lantern" additionalName="3rd place" type="EtcItem">
+	<item id="91670" name="Blue Lantern" type="EtcItem">
 		<!-- <Reward for achieving the 3rd place in the Magic Lantern event>. XP +10,000,000, SP +270,000. Can be exchanged by the Dimensional Merchant for the Blue Lantern (transferable to other characters on the account). -->
 		<set name="icon" val="icon.r99_soul_stone_i02" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -647,7 +647,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="91671" name="Green Lantern" additionalName="4th place" type="EtcItem">
+	<item id="91671" name="Green Lantern" type="EtcItem">
 		<!-- <Reward for achieving the 4th place in the Magic Lantern event>. XP +5,000,000, SP +135,000. Can be exchanged by the Dimensional Merchant for the Green Lantern (transferable to other characters on the account). -->
 		<set name="icon" val="icon.r99_soul_stone_i04" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -850,7 +850,7 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="91681" name="Spear Amulet" additionalName="30 days" type="EtcItem">
+	<item id="91681" name="Spear Amulet" type="EtcItem">
 		<!-- Available for 30 days. Contains the Reinforced Spear's power. <Active Skill> Reinforced Spear's Power: Double-click to obtain Glaive (D-grade) enchanted from +8 to +16. Requires 1 Weapon Ticket from the L-Coin Store. Can be used only once a day. -->
 		<set name="icon" val="icon.bm_freya_bloody_rune" />
 		<set name="is_tradable" val="false" />
@@ -858,7 +858,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="91682" name="Falchion Amulet" additionalName="30 days" type="EtcItem">
+	<item id="91682" name="Falchion Amulet" type="EtcItem">
 		<!-- Available for 30 days. Contains the Reinforced Falchion's power. <Active Skill> Reinforced Falchion's Power I: Double-click to obtain Elven Long Sword (D-grade) enchanted from +8 to +16. Requires 1 Weapon Ticket from the L-Coin Store. Reinforced Falchion's Power II: Double-click to obtain Bastard Sword*Crimson Sword (D-grade) enchanted from +8 to +16. Requires 1 Weapon Ticket from the L-Coin Store. Can be used only once a day. -->
 		<set name="icon" val="icon.bm_freya_bloody_rune" />
 		<set name="is_tradable" val="false" />
@@ -866,7 +866,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="91683" name="Iron Hammer Amulet" additionalName="30 days" type="EtcItem">
+	<item id="91683" name="Iron Hammer Amulet" type="EtcItem">
 		<!-- Available for 30 days. Contains the Reinforced Iron Hammer's power. <Active Skill> Reinforced Iron Hammer's Power: Double-click to obtain Bonebreaker (D-grade) enchanted from +8 to +16. Requires 1 Weapon Ticket from the L-Coin Store. Can be used only once a day. -->
 		<set name="icon" val="icon.bm_freya_bloody_rune" />
 		<set name="is_tradable" val="false" />
@@ -874,7 +874,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="91684" name="Voodoo Doll Amulet" additionalName="30 days" type="EtcItem">
+	<item id="91684" name="Voodoo Doll Amulet" type="EtcItem">
 		<!-- Available for 30 days. Contains the Reinforced Voodoo Doll's power. <Active Skill> Reinforced Voodoo Doll's Power: Double-click to obtain Staff of Life (D-grade) enchanted from +8 to +16. Requires 1 Weapon Ticket from the L-Coin Store. Can be used only once a day. -->
 		<set name="icon" val="icon.bm_freya_bloody_rune" />
 		<set name="is_tradable" val="false" />
@@ -882,7 +882,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="91685" name="Flanged Mace Amulet" additionalName="30 days" type="EtcItem">
+	<item id="91685" name="Flanged Mace Amulet" type="EtcItem">
 		<!-- Available for 30 days. Contains the Reinforced Flanged Mace's power. <Active Skill> Reinforced Flanged Mace's Power: Double-click to obtain Claymore (D-grade) enchanted from +8 to +16. Requires 1 Weapon Ticket from the L-Coin Store. Can be used only once a day. -->
 		<set name="icon" val="icon.bm_freya_bloody_rune" />
 		<set name="is_tradable" val="false" />
@@ -890,7 +890,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="91686" name="Sword Breaker Amulet" additionalName="30 days" type="EtcItem">
+	<item id="91686" name="Sword Breaker Amulet" type="EtcItem">
 		<!-- Available for 30 days. Contains the Reinforced Sword Breaker's power. <Active Skill> Reinforced Sword Breaker's Power: Double-click to obtain Mithril Dagger (D-grade) enchanted from +8 to +16. Requires 1 Weapon Ticket from the L-Coin Store. Can be used only once a day. -->
 		<set name="icon" val="icon.bm_freya_bloody_rune" />
 		<set name="is_tradable" val="false" />
@@ -898,7 +898,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="91687" name="Viper Fang Amulet" additionalName="30 days" type="EtcItem">
+	<item id="91687" name="Viper Fang Amulet" type="EtcItem">
 		<!-- Available for 30 days. Contains the Reinforced Viper Fang's power. <Active Skill> Reinforced Viper Fang's Power: Double-click to obtain Scallop Jamadhr (D-grade) enchanted from +8 to +16. Requires 1 Weapon Ticket from the L-Coin Store. Can be used only once a day. -->
 		<set name="icon" val="icon.bm_freya_bloody_rune" />
 		<set name="is_tradable" val="false" />
@@ -906,7 +906,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="91688" name="Compound Bow Amulet" additionalName="30 days" type="EtcItem">
+	<item id="91688" name="Compound Bow Amulet" type="EtcItem">
 		<!-- Available for 30 days. Contains the Reinforced Compound Bow's power. <Active Skill> Reinforced Compound Bow's Power: Double-click to obtain Light Bow (D-grade) enchanted from +8 to +16. Requires 1 Weapon Ticket from the L-Coin Store. Can be used only once a day. -->
 		<set name="icon" val="icon.bm_freya_bloody_rune" />
 		<set name="is_tradable" val="false" />
@@ -914,7 +914,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="91689" name="Improved Scroll of Escape" additionalName="Event" type="EtcItem">
+	<item id="91689" name="Improved Scroll of Escape" type="EtcItem">
 		<!-- Teleports to the nearest village. Its casting time is very short. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -924,7 +924,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="91690" name="Maliss' HP Recovery Potion" additionalName="Event" type="EtcItem">
+	<item id="91690" name="Maliss' HP Recovery Potion" type="EtcItem">
 		<!-- Instantly recovers 500 HP. The remaining points are used to recover CP. -->
 		<set name="icon" val="BranchSys.icon.br_vitality_potion_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -934,7 +934,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="91691" name="Maliss' MP Recovery Potion" additionalName="Event" type="EtcItem">
+	<item id="91691" name="Maliss' MP Recovery Potion" type="EtcItem">
 		<!-- Instantly recovers MP. -->
 		<set name="icon" val="icon.freya_potion" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -944,7 +944,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="91692" name="Blessing of Plenty - 100% (Event)" additionalName="3 days" type="EtcItem">
+	<item id="91692" name="Blessing of Plenty - 100% (Event)" type="EtcItem">
 		<!-- Available for 3 days. L-Coin drop rate +100%. -->
 		<set name="icon" val="icon.aden_bless_rune_i01" />
 		<set name="is_tradable" val="false" />
@@ -952,7 +952,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="91693" name="Blessing of Plenty - 100%" additionalName="1 day" type="EtcItem">
+	<item id="91693" name="Blessing of Plenty - 100%" type="EtcItem">
 		<!-- Available for 1 day. L-Coin drop rate +100%, Acquired XP/ SP +10%, Sayha's Grace Consumption -20%. -->
 		<set name="icon" val="icon.aden_bless_rune_i02" />
 		<set name="is_tradable" val="false" />
@@ -960,7 +960,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="91694" name="Blessing of Plenty - 100%" additionalName="30 days" type="EtcItem">
+	<item id="91694" name="Blessing of Plenty - 100%" type="EtcItem">
 		<!-- Available for 30 days. L-Coin drop rate +100%, Acquired XP/ SP +10%, Sayha's Grace Consumption -20%. -->
 		<set name="icon" val="icon.aden_bless_rune_i02" />
 		<set name="is_tradable" val="false" />

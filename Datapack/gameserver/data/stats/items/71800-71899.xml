@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org ../../xsd/items.xsd">
-	<item id="71800" name="Sealed Admiral's Estoc Pack" additionalName="7" type="EtcItem">
+	<item id="71800" name="Sealed Admiral's Estoc Pack" type="EtcItem">
 		<!-- Double-click to obtain Sealed Admiral's Estoc enchanted to +7. -->
 		<set name="icon" val="BranchIcon.Icon.etc_vip_present_i04" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
@@ -10,7 +10,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="71801" name="Sealed Saber Tooth Pack" additionalName="7" type="EtcItem">
+	<item id="71801" name="Sealed Saber Tooth Pack" type="EtcItem">
 		<!-- Double-click to obtain Sealed Saber Tooth enchanted to +7. -->
 		<set name="icon" val="BranchIcon.Icon.etc_vip_present_i04" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
@@ -20,7 +20,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="71802" name="Sealed Samurai Long Sword Pack" additionalName="10" type="EtcItem">
+	<item id="71802" name="Sealed Samurai Long Sword Pack" type="EtcItem">
 		<!-- Double-click to obtain Sealed Samurai Long Sword enchanted to +10. -->
 		<set name="icon" val="BranchIcon.Icon.etc_vip_present_i06" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
@@ -30,7 +30,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="71803" name="Sealed Mace of Underworld Pack" additionalName="10" type="EtcItem">
+	<item id="71803" name="Sealed Mace of Underworld Pack" type="EtcItem">
 		<!-- Double-click to obtain Sealed Mace of Underworld enchanted to +10. -->
 		<set name="icon" val="BranchIcon.Icon.etc_vip_present_i06" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
@@ -40,7 +40,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="71804" name="Sealed Demon's Staff Pack" additionalName="10" type="EtcItem">
+	<item id="71804" name="Sealed Demon's Staff Pack" type="EtcItem">
 		<!-- Double-click to obtain Sealed Demon's Staff enchanted to +10. -->
 		<set name="icon" val="BranchIcon.Icon.etc_vip_present_i06" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
@@ -50,7 +50,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="71805" name="Sealed Crystal Dagger Pack" additionalName="10" type="EtcItem">
+	<item id="71805" name="Sealed Crystal Dagger Pack" type="EtcItem">
 		<!-- Double-click to obtain Sealed Crystal Dagger enchanted to +10. -->
 		<set name="icon" val="BranchIcon.Icon.etc_vip_present_i06" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
@@ -60,7 +60,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="71806" name="Sealed Eminence Bow Pack" additionalName="10" type="EtcItem">
+	<item id="71806" name="Sealed Eminence Bow Pack" type="EtcItem">
 		<!-- Double-click to obtain Sealed Eminence Bow enchanted to +10. -->
 		<set name="icon" val="BranchIcon.Icon.etc_vip_present_i06" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
@@ -70,7 +70,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="71807" name="Sealed Orcish Poleaxe Pack" additionalName="10" type="EtcItem">
+	<item id="71807" name="Sealed Orcish Poleaxe Pack" type="EtcItem">
 		<!-- Double-click to obtain Sealed Orcish Poleaxe enchanted to +10. -->
 		<set name="icon" val="BranchIcon.Icon.etc_vip_present_i06" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
@@ -80,7 +80,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="71808" name="Sealed Katana*Katana Pack" additionalName="10" type="EtcItem">
+	<item id="71808" name="Sealed Katana*Katana Pack" type="EtcItem">
 		<!-- Double-click to obtain Sealed Katana*Katana enchanted to +10. -->
 		<set name="icon" val="BranchIcon.Icon.etc_vip_present_i06" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
@@ -90,7 +90,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="71809" name="Sealed Yaksa Mace Pack" additionalName="10" type="EtcItem">
+	<item id="71809" name="Sealed Yaksa Mace Pack" type="EtcItem">
 		<!-- Double-click to obtain Sealed Yaksa Mace enchanted to +10. -->
 		<set name="icon" val="BranchIcon.Icon.etc_vip_present_i06" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
@@ -100,7 +100,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="71810" name="Sealed Berserker Blade Pack" additionalName="10" type="EtcItem">
+	<item id="71810" name="Sealed Berserker Blade Pack" type="EtcItem">
 		<!-- Double-click to obtain Sealed Berserker Blade enchanted to +10. -->
 		<set name="icon" val="BranchIcon.Icon.etc_vip_present_i06" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
@@ -110,7 +110,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="71811" name="Sealed Great Pata Pack" additionalName="10" type="EtcItem">
+	<item id="71811" name="Sealed Great Pata Pack" type="EtcItem">
 		<!-- Double-click to obtain Sealed Great Pata enchanted to +10. -->
 		<set name="icon" val="BranchIcon.Icon.etc_vip_present_i06" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
@@ -120,7 +120,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="71812" name="Sealed Admiral's Estoc Pack" additionalName="10" type="EtcItem">
+	<item id="71812" name="Sealed Admiral's Estoc Pack" type="EtcItem">
 		<!-- Double-click to obtain Sealed Admiral's Estoc enchanted to +10. -->
 		<set name="icon" val="BranchIcon.Icon.etc_vip_present_i06" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
@@ -130,7 +130,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="71813" name="Sealed Saber Tooth Pack" additionalName="10" type="EtcItem">
+	<item id="71813" name="Sealed Saber Tooth Pack" type="EtcItem">
 		<!-- Double-click to obtain Sealed Saber Tooth enchanted to +10. -->
 		<set name="icon" val="BranchIcon.Icon.etc_vip_present_i06" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
@@ -180,7 +180,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="71818" name="Talisman of Border +1" additionalName="Event" type="Armor">
+	<item id="71818" name="Talisman of Border +1" type="Armor">
 		<!-- Can be enhanced up to Lv. 5 by combining it with the talisman of the same level by Veruti in Giran. With each level, new effects are added. Using an Enchant Scroll, you can make new, special effects appear. Effects do not stack if two identical Talismans are used. <Note>. When combining with other Talismans, their enchantment is reset -->
 		<set name="icon" val="icon.bm_magic_square_talisman" />
 		<set name="immediate_effect" val="true" />
@@ -195,7 +195,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="71820" name="Bracelet of Border Chest" additionalName="30 days" type="EtcItem">
+	<item id="71820" name="Bracelet of Border Chest" type="EtcItem">
 		<!-- Double-click to obtain Bracelet of Border (30-day). -->
 		<set name="icon" val="icon.etc_readybox_bronze" />
 		<set name="default_action" val="PEEL" />
@@ -206,7 +206,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="71821" name="XP Scroll Lv. 1" additionalName="Event" type="EtcItem">
+	<item id="71821" name="XP Scroll Lv. 1" type="EtcItem">
 		<!-- Recovers 20,000 XP. -->
 		<set name="icon" val="icon.bm_elmoaden_exp_scrl" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -216,7 +216,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="71822" name="XP Scroll Lv. 2" additionalName="Event" type="EtcItem">
+	<item id="71822" name="XP Scroll Lv. 2" type="EtcItem">
 		<!-- Recovers 4,000,000 XP. -->
 		<set name="icon" val="icon.bm_elmoaden_exp_scrl" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -226,7 +226,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="71823" name="XP Scroll Lv. 3" additionalName="Event" type="EtcItem">
+	<item id="71823" name="XP Scroll Lv. 3" type="EtcItem">
 		<!-- Recovers 100,000,000 XP. -->
 		<set name="icon" val="icon.bm_elmoaden_exp_scrl" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -236,7 +236,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="71824" name="XP Scroll Lv. 4" additionalName="Event" type="EtcItem">
+	<item id="71824" name="XP Scroll Lv. 4" type="EtcItem">
 		<!-- Recovers 200,000,000 XP. -->
 		<set name="icon" val="icon.bm_elmoaden_exp_scrl" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -246,7 +246,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="71825" name="XP Scroll Lv. 5" additionalName="Event" type="EtcItem">
+	<item id="71825" name="XP Scroll Lv. 5" type="EtcItem">
 		<!-- Recovers 200,005,000 XP. -->
 		<set name="icon" val="icon.bm_elmoaden_exp_scrl" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -256,7 +256,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="71826" name="XP Scroll Lv. 6" additionalName="Event" type="EtcItem">
+	<item id="71826" name="XP Scroll Lv. 6" type="EtcItem">
 		<!-- Recovers 400,000,000 XP. -->
 		<set name="icon" val="icon.bm_elmoaden_exp_scrl" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -341,7 +341,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="71836" name="?p?e" additionalName="30 days" type="Weapon">
+	<item id="71836" name="?p?e" type="Weapon">
 		<!-- Available for 30 days. -->
 		<set name="icon" val="icon.weapon_rapier_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -360,7 +360,7 @@
 			<stat type="randomDamage">20</stat>
 		</stats>
 	</item>
-	<item id="71837" name="Chevalier Rapier" additionalName="30 days" type="Weapon">
+	<item id="71837" name="Chevalier Rapier" type="Weapon">
 		<!-- Available for 30 days. -->
 		<set name="icon" val="icon.weapon_soldat_estoc_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -379,7 +379,7 @@
 			<stat type="randomDamage">20</stat>
 		</stats>
 	</item>
-	<item id="71838" name="Colichemarde" additionalName="15 days" type="Weapon">
+	<item id="71838" name="Colichemarde" type="Weapon">
 		<set name="icon" val="icon.weapon_colichemarde_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
@@ -397,7 +397,7 @@
 			<stat type="randomDamage">20</stat>
 		</stats>
 	</item>
-	<item id="71839" name="Field Sword" additionalName="30 days" type="Weapon">
+	<item id="71839" name="Field Sword" type="Weapon">
 		<!-- Available for 30 days. -->
 		<set name="icon" val="icon.weapon_tulwar_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -421,7 +421,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="71840" name="Schlager" additionalName="30 days" type="Weapon">
+	<item id="71840" name="Schlager" type="Weapon">
 		<!-- Available for 30 days. -->
 		<set name="icon" val="icon.weapon_schlaeger_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -445,7 +445,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="71841" name="Dismantler" additionalName="15 days" type="Weapon">
+	<item id="71841" name="Dismantler" type="Weapon">
 		<set name="icon" val="icon.weapon_dismantler_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALBLUNT" />

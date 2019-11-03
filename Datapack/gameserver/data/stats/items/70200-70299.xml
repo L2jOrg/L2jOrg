@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org ../../xsd/items.xsd">
-    <item id="70200" name="Earring of Chronicle Heir" additionalName="Lv. 9" type="Armor">
+    <item id="70200" name="Earring of Chronicle Heir" type="Armor">
         <!-- When equipped, increases MP recovery rate by 9%, Max. MP +9%. The effect does not stack if two identical earrings are equipped. Cannot be exchanged, dropped, destroyed, or sold in a private store. -->
         <set name="icon" val="icon.accessary_onyxbeastseye_earing_i00"/>
         <set name="default_action" val="EQUIP"/>
@@ -16,7 +16,7 @@
             <stat type="mDef">18</stat>
         </stats>
     </item>
-    <item id="70201" name="Earring of Chronicle Heir" additionalName="Lv. 10" type="Armor">
+    <item id="70201" name="Earring of Chronicle Heir" type="Armor">
         <!-- When equipped, increases MP recovery rate by 10%, Max. MP +10%. The effect does not stack if two identical earrings are equipped. Cannot be exchanged, dropped, destroyed, or sold in a private store. -->
         <set name="icon" val="icon.accessary_onyxbeastseye_earing_i00"/>
         <set name="default_action" val="EQUIP"/>
@@ -32,7 +32,7 @@
             <stat type="mDef">20</stat>
         </stats>
     </item>
-    <item id="70202" name="Refined Romantic Chapeau: Gold" additionalName="100-day" type="Armor">
+    <item id="70202" name="Refined Romantic Chapeau: Gold" type="Armor">
         <!-- Occupies 2 Hair Accessory slots. Cannot be exchanged, dropped, or sold. <Active Skills>. 1. Holiday Hat: resurrects dead characters using Spirit Ore. Bonus XP +100%. Reuse Time: 600 minutes. 2 Overwhelming Power of a Holiday Hat: increases XP and SP gain by 5% for 60 minutes. Reuse Time: 60 minutes. 3. Side Effect: makes character's head bigger for 10 minutes. Reuse Time: 30 minutes. -->
         <set name="icon" val="icon.bm_romantic_chaperon_gold"/>
         <set name="default_action" val="EQUIP"/>
@@ -46,7 +46,7 @@
         <set name="is_sellable" val="false"/>
         <set name="time" val="144000"/>
     </item>
-    <item id="70203" name="Refined Romantic Chapeau: Yellow" additionalName="33-day" type="Armor">
+    <item id="70203" name="Refined Romantic Chapeau: Yellow" type="Armor">
         <!-- Occupies 2 Hair Accessory slots. Cannot be exchanged, dropped, or sold. <Active Skills>. 1. Holiday Hat: resurrects dead characters using Spirit Ore. Bonus XP +100%. Reuse Time: 30 minutes. 2 Overwhelming Power of a Holiday Hat: increases XP and SP gain by 5% for 60 minutes. Reuse Time: 60 minutes. 3. Side Effect: makes character's head bigger for 10 minutes. Reuse Time: 30 minutes. -->
         <set name="icon" val="icon.bm_romantic_chaperon_yellow"/>
         <set name="default_action" val="EQUIP"/>
@@ -141,7 +141,7 @@
         <set name="is_stackable" val="true"/>
         <set name="is_freightable" val="true"/>
     </item>
-    <item id="70211" name="Wondrous Cubic" additionalName="General" type="EtcItem">
+    <item id="70211" name="Wondrous Cubic" type="EtcItem">
         <!-- A cubic which you can use for 30 days, once a day. Open it to obtain various items. -->
         <set name="icon" val="icon.etc_ore_cube_event_i00"/>
         <set name="default_action" val="SKILL_REDUCE"/>
@@ -150,7 +150,7 @@
         <set name="is_depositable" val="false"/>
         <set name="is_sellable" val="false"/>
     </item>
-    <item id="70212" name="Wondrous Cubic" additionalName="Enhanced" type="EtcItem">
+    <item id="70212" name="Wondrous Cubic" type="EtcItem">
         <!-- A cubic which you can use for 30 days, once a day. Open it to obtain various items. -->
         <set name="icon" val="icon.etc_ore_cube_event_i00"/>
         <set name="default_action" val="SKILL_REDUCE"/>
@@ -194,7 +194,7 @@
         <set name="is_stackable" val="true"/>
         <set name="is_freightable" val="true"/>
     </item>
-    <item id="70216" name="Chronicle Cube" additionalName="21-day" type="EtcItem">
+    <item id="70216" name="Chronicle Cube" type="EtcItem">
         <!-- A 21-item. Can be used once a day. Allows obtaining a vast variety of items. Cannot be exchanged, dropped or sold. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.etc_ore_cube_event_i00"/>
         <set name="default_action" val="SKILL_REDUCE"/>
@@ -224,7 +224,7 @@
             <skill id="55317" level="1"/>
         </skills>
     </item>
-    <item id="70219" name="Refined Rare Accessory Pack" additionalName="7-day" type="EtcItem">
+    <item id="70219" name="Refined Rare Accessory Pack" type="EtcItem">
         <!-- Double-click to receive one of the following items: Refined Queen Ant's Ring (7-day), Refined Orfen's Earring (7-day), or Refined Ring of Core (7-day). -->
         <set name="icon" val="icon.etc_box_of_adventure_3_i00"/>
         <set name="default_action" val="SKILL_REDUCE"/>
@@ -235,7 +235,7 @@
         <set name="is_stackable" val="true"/>
         <set name="time" val="10080"/>
     </item>
-    <item id="70220" name="Refined Queen Ant's Ring" additionalName="7-day" type="Armor">
+    <item id="70220" name="Refined Queen Ant's Ring" type="Armor">
         <!-- A 7-day item. MP +21, Poison Chance and Resistance +20%, P./M. Accuracy +3, P./M. Attack +7%, Crit. Attack Power +10%, M. Crit. Attack Power +5%. Effects do not stack if two identical rings are equipped. Cannot be enchanted. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.accessory_ring_of_queen_ant_i03"/>
         <set name="default_action" val="EQUIP"/>
@@ -256,7 +256,7 @@
             <stat type="maxMp">21</stat>
         </stats>
     </item>
-    <item id="70221" name="Refined Orfen's Earring" additionalName="7-day" type="Armor">
+    <item id="70221" name="Refined Orfen's Earring" type="Armor">
         <!-- A 7-day item. MP +31, Mental Resistance and Atk. Rate +15%, Hold Resistance and Atk. Rate +20%, Healing Power +6%, Skill MP Consumption -5%. Allows using the Steal MP skill. Effects do not stack if two identical earrings are equipped. Cannot be enchanted. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.accessory_earring_of_orfen_i03"/>
         <set name="default_action" val="EQUIP"/>
@@ -277,7 +277,7 @@
             <stat type="maxMp">31</stat>
         </stats>
     </item>
-    <item id="70222" name="Refined Ring of Core" additionalName="7-day" type="Armor">
+    <item id="70222" name="Refined Ring of Core" type="Armor">
         <!-- A 7-day item. MP +21, Mental Resistance and Atk. Rate +20%, P./M. Evasion +3, Received P./M. Damage -6%. Allows using a special skill to remove debuffs. Effects do not stack if two identical rings are equipped. Cannot be enchanted. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.accessory_ring_of_core_i03"/>
         <set name="default_action" val="EQUIP"/>
@@ -448,28 +448,28 @@
             <skill id="55331" level="1"/>
         </skills>
     </item>
-    <item id="70236" name="Scroll: 50 SP" additionalName="Event" type="EtcItem">
+    <item id="70236" name="Scroll: 50 SP" type="EtcItem">
         <!-- When used, adds 50 SP -->
         <set name="icon" val="icon.etc_sp_scroll1_i00"/>
         <set name="default_action" val="SKILL_REDUCE"/>
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="70237" name="Scroll: 100 SP" additionalName="Event" type="EtcItem">
+    <item id="70237" name="Scroll: 100 SP" type="EtcItem">
         <!-- When used, adds 100 SP -->
         <set name="icon" val="icon.etc_sp_scroll2_i00"/>
         <set name="default_action" val="SKILL_REDUCE"/>
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="70238" name="Scroll: 1,000 SP" additionalName="Event" type="EtcItem">
+    <item id="70238" name="Scroll: 1,000 SP" type="EtcItem">
         <!-- When used, adds 1,000 SP -->
         <set name="icon" val="icon.etc_sp_scroll3_i00"/>
         <set name="default_action" val="SKILL_REDUCE"/>
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="70239" name="Irene' Hourglass - 1 Hour" additionalName="1~19" type="EtcItem">
+    <item id="70239" name="Irene' Hourglass - 1 Hour" type="EtcItem">
         <!-- When used, provides 50% XP bonus for 1 hour. Intended for Lv. 1~19. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.etc_dragons_blood_i03"/>
         <set name="default_action" val="SKILL_REDUCE"/>
@@ -480,7 +480,7 @@
         <set name="is_stackable" val="true"/>
         <set name="is_freightable" val="true"/>
     </item>
-    <item id="70240" name="Irene' Hourglass - 2 Hours" additionalName="1~19" type="EtcItem">
+    <item id="70240" name="Irene' Hourglass - 2 Hours" type="EtcItem">
         <!-- When used, provides 50% XP bonus for 1 hour. Intended for Lv. 1~19. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.etc_dragons_blood_i03"/>
         <set name="default_action" val="SKILL_REDUCE"/>
@@ -491,7 +491,7 @@
         <set name="is_stackable" val="true"/>
         <set name="is_freightable" val="true"/>
     </item>
-    <item id="70241" name="Irene' Hourglass - 3 Hours" additionalName="1~19" type="EtcItem">
+    <item id="70241" name="Irene' Hourglass - 3 Hours" type="EtcItem">
         <!-- When used, provides 50% XP bonus for 1 hour. Intended for Lv. 1~19. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.etc_dragons_blood_i03"/>
         <set name="default_action" val="SKILL_REDUCE"/>
@@ -502,7 +502,7 @@
         <set name="is_stackable" val="true"/>
         <set name="is_freightable" val="true"/>
     </item>
-    <item id="70242" name="Irene' Hourglass - 1 Hour" additionalName="20~39" type="EtcItem">
+    <item id="70242" name="Irene' Hourglass - 1 Hour" type="EtcItem">
         <!-- When used, provides 50% XP bonus for 1 hour. Intended for Lv. 20~39. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.etc_dragons_blood_i03"/>
         <set name="default_action" val="SKILL_REDUCE"/>
@@ -513,7 +513,7 @@
         <set name="is_stackable" val="true"/>
         <set name="is_freightable" val="true"/>
     </item>
-    <item id="70243" name="Irene' Hourglass - 2 Hours" additionalName="20~39" type="EtcItem">
+    <item id="70243" name="Irene' Hourglass - 2 Hours" type="EtcItem">
         <!-- When used, provides 50% XP bonus for 1 hour. Intended for Lv. 20~39. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.etc_dragons_blood_i03"/>
         <set name="default_action" val="SKILL_REDUCE"/>
@@ -524,7 +524,7 @@
         <set name="is_stackable" val="true"/>
         <set name="is_freightable" val="true"/>
     </item>
-    <item id="70244" name="Irene' Hourglass - 3 Hours" additionalName="20~39" type="EtcItem">
+    <item id="70244" name="Irene' Hourglass - 3 Hours" type="EtcItem">
         <!-- When used, provides 50% XP bonus for 1 hour. Intended for Lv. 20~39. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.etc_dragons_blood_i03"/>
         <set name="default_action" val="SKILL_REDUCE"/>
@@ -535,7 +535,7 @@
         <set name="is_stackable" val="true"/>
         <set name="is_freightable" val="true"/>
     </item>
-    <item id="70245" name="Irene' Hourglass - 1 Hour" additionalName="40~51" type="EtcItem">
+    <item id="70245" name="Irene' Hourglass - 1 Hour" type="EtcItem">
         <!-- When used, provides 50% XP bonus for 1 hour. Intended for Lv. 40~51. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.etc_dragons_blood_i03"/>
         <set name="default_action" val="SKILL_REDUCE"/>
@@ -546,7 +546,7 @@
         <set name="is_stackable" val="true"/>
         <set name="is_freightable" val="true"/>
     </item>
-    <item id="70246" name="Irene' Hourglass - 2 Hours" additionalName="40~51" type="EtcItem">
+    <item id="70246" name="Irene' Hourglass - 2 Hours" type="EtcItem">
         <!-- When used, provides 50% XP bonus for 1 hour. Intended for Lv. 40~51. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.etc_dragons_blood_i03"/>
         <set name="default_action" val="SKILL_REDUCE"/>
@@ -557,7 +557,7 @@
         <set name="is_stackable" val="true"/>
         <set name="is_freightable" val="true"/>
     </item>
-    <item id="70247" name="Irene' Hourglass - 3 Hours" additionalName="40~51" type="EtcItem">
+    <item id="70247" name="Irene' Hourglass - 3 Hours" type="EtcItem">
         <!-- When used, provides 50% XP bonus for 1 hour. Intended for Lv. 40~51. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.etc_dragons_blood_i03"/>
         <set name="default_action" val="SKILL_REDUCE"/>
@@ -568,7 +568,7 @@
         <set name="is_stackable" val="true"/>
         <set name="is_freightable" val="true"/>
     </item>
-    <item id="70248" name="Irene' Hourglass - 1 Hour" additionalName="52~60" type="EtcItem">
+    <item id="70248" name="Irene' Hourglass - 1 Hour" type="EtcItem">
         <!-- When used, provides 50% XP bonus for 1 hour. Intended for Lv. 52~60. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.etc_dragons_blood_i03"/>
         <set name="default_action" val="SKILL_REDUCE"/>
@@ -579,7 +579,7 @@
         <set name="is_stackable" val="true"/>
         <set name="is_freightable" val="true"/>
     </item>
-    <item id="70249" name="Irene' Hourglass - 2 Hours" additionalName="52~60" type="EtcItem">
+    <item id="70249" name="Irene' Hourglass - 2 Hours" type="EtcItem">
         <!-- When used, provides 50% XP bonus for 1 hour. Intended for Lv. 52~60. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.etc_dragons_blood_i03"/>
         <set name="default_action" val="SKILL_REDUCE"/>
@@ -590,7 +590,7 @@
         <set name="is_stackable" val="true"/>
         <set name="is_freightable" val="true"/>
     </item>
-    <item id="70250" name="Irene' Hourglass - 3 Hours" additionalName="52~60" type="EtcItem">
+    <item id="70250" name="Irene' Hourglass - 3 Hours" type="EtcItem">
         <!-- When used, provides 50% XP bonus for 1 hour. Intended for Lv. 52~60. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.etc_dragons_blood_i03"/>
         <set name="default_action" val="SKILL_REDUCE"/>
@@ -601,7 +601,7 @@
         <set name="is_stackable" val="true"/>
         <set name="is_freightable" val="true"/>
     </item>
-    <item id="70251" name="Irene' Hourglass - 1 Hour" additionalName="61~75" type="EtcItem">
+    <item id="70251" name="Irene' Hourglass - 1 Hour" type="EtcItem">
         <!-- When used, provides 50% XP bonus for 1 hour. Intended for Lv. 61~75. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.etc_dragons_blood_i03"/>
         <set name="default_action" val="SKILL_REDUCE"/>
@@ -612,7 +612,7 @@
         <set name="is_stackable" val="true"/>
         <set name="is_freightable" val="true"/>
     </item>
-    <item id="70252" name="Irene' Hourglass - 2 Hours" additionalName="61~75" type="EtcItem">
+    <item id="70252" name="Irene' Hourglass - 2 Hours" type="EtcItem">
         <!-- When used, provides 50% XP bonus for 1 hour. Intended for Lv. 61~75. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.etc_dragons_blood_i03"/>
         <set name="default_action" val="SKILL_REDUCE"/>
@@ -623,7 +623,7 @@
         <set name="is_stackable" val="true"/>
         <set name="is_freightable" val="true"/>
     </item>
-    <item id="70253" name="Irene' Hourglass - 3 Hours" additionalName="61~75" type="EtcItem">
+    <item id="70253" name="Irene' Hourglass - 3 Hours" type="EtcItem">
         <!-- When used, provides 50% XP bonus for 1 hour. Intended for Lv. 61~75. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.etc_dragons_blood_i03"/>
         <set name="default_action" val="SKILL_REDUCE"/>
@@ -634,7 +634,7 @@
         <set name="is_stackable" val="true"/>
         <set name="is_freightable" val="true"/>
     </item>
-    <item id="70254" name="Irene' Hourglass - 1 Hour" additionalName="76~79" type="EtcItem">
+    <item id="70254" name="Irene' Hourglass - 1 Hour" type="EtcItem">
         <!-- When used, provides 50% XP bonus for 1 hour. Intended for Lv. 76~79. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.etc_dragons_blood_i03"/>
         <set name="default_action" val="SKILL_REDUCE"/>
@@ -645,7 +645,7 @@
         <set name="is_stackable" val="true"/>
         <set name="is_freightable" val="true"/>
     </item>
-    <item id="70255" name="Irene' Hourglass - 2 Hours" additionalName="76~79" type="EtcItem">
+    <item id="70255" name="Irene' Hourglass - 2 Hours" type="EtcItem">
         <!-- When used, provides 50% XP bonus for 1 hour. Intended for Lv. 76~79. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.etc_dragons_blood_i03"/>
         <set name="default_action" val="SKILL_REDUCE"/>
@@ -656,7 +656,7 @@
         <set name="is_stackable" val="true"/>
         <set name="is_freightable" val="true"/>
     </item>
-    <item id="70256" name="Irene' Hourglass - 3 Hours" additionalName="76~79" type="EtcItem">
+    <item id="70256" name="Irene' Hourglass - 3 Hours" type="EtcItem">
         <!-- When used, provides 50% XP bonus for 1 hour. Intended for Lv. 76~79. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.etc_dragons_blood_i03"/>
         <set name="default_action" val="SKILL_REDUCE"/>
@@ -667,7 +667,7 @@
         <set name="is_stackable" val="true"/>
         <set name="is_freightable" val="true"/>
     </item>
-    <item id="70257" name="Irene' Hourglass - 1 Hour" additionalName="80~85" type="EtcItem">
+    <item id="70257" name="Irene' Hourglass - 1 Hour" type="EtcItem">
         <!-- When used, provides 50% XP bonus for 1 hour. Intended for Lv. 80~85. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.etc_dragons_blood_i03"/>
         <set name="default_action" val="SKILL_REDUCE"/>
@@ -678,7 +678,7 @@
         <set name="is_stackable" val="true"/>
         <set name="is_freightable" val="true"/>
     </item>
-    <item id="70258" name="Irene' Hourglass - 2 Hours" additionalName="80~85" type="EtcItem">
+    <item id="70258" name="Irene' Hourglass - 2 Hours" type="EtcItem">
         <!-- When used, provides 50% XP bonus for 1 hour. Intended for Lv. 80~85. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.etc_dragons_blood_i03"/>
         <set name="default_action" val="SKILL_REDUCE"/>
@@ -689,7 +689,7 @@
         <set name="is_stackable" val="true"/>
         <set name="is_freightable" val="true"/>
     </item>
-    <item id="70259" name="Irene' Hourglass - 3 Hours" additionalName="80~85" type="EtcItem">
+    <item id="70259" name="Irene' Hourglass - 3 Hours" type="EtcItem">
         <!-- When used, provides 50% XP bonus for 1 hour. Intended for Lv. 80~85. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.etc_dragons_blood_i03"/>
         <set name="default_action" val="SKILL_REDUCE"/>
@@ -744,7 +744,7 @@
         <set name="is_stackable" val="true"/>
         <set name="is_freightable" val="true"/>
     </item>
-    <item id="70264" name="Irene's Song 100%" additionalName="1 hour" type="EtcItem">
+    <item id="70264" name="Irene's Song 100%" type="EtcItem">
         <!-- When in inventory, your XP and SP gain is increased by 100%. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. -->
         <set name="icon" val="br_cashtex.item.br_cash_rune_of_feather_i00"/>
         <set name="is_tradable" val="false"/>
@@ -753,7 +753,7 @@
         <set name="is_sellable" val="false"/>
         <set name="time" val="60"/>
     </item>
-    <item id="70265" name="Irene's Song 100%" additionalName="3 hours" type="EtcItem">
+    <item id="70265" name="Irene's Song 100%" type="EtcItem">
         <!-- When in inventory, your XP and SP gain is increased by 100%. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. -->
         <set name="icon" val="br_cashtex.item.br_cash_rune_of_feather_i00"/>
         <set name="is_tradable" val="false"/>
@@ -762,7 +762,7 @@
         <set name="is_sellable" val="false"/>
         <set name="time" val="180"/>
     </item>
-    <item id="70266" name="Irene's Song 100%" additionalName="5 hours" type="EtcItem">
+    <item id="70266" name="Irene's Song 100%" type="EtcItem">
         <!-- When in inventory, your XP and SP gain is increased by 100%. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. -->
         <set name="icon" val="br_cashtex.item.br_cash_rune_of_feather_i00"/>
         <set name="is_tradable" val="false"/>
@@ -771,7 +771,7 @@
         <set name="is_sellable" val="false"/>
         <set name="time" val="300"/>
     </item>
-    <item id="70267" name="Irene's Song 100%" additionalName="7-day" type="EtcItem">
+    <item id="70267" name="Irene's Song 100%" type="EtcItem">
         <!-- When in inventory, your XP and SP gain is increased by 100%. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. -->
         <set name="icon" val="br_cashtex.item.br_cash_rune_of_feather_i00"/>
         <set name="is_tradable" val="false"/>
@@ -828,7 +828,7 @@
         <set name="is_stackable" val="true"/>
         <set name="is_freightable" val="true"/>
     </item>
-    <item id="70272" name="Irene's Song 200%" additionalName="1 hour" type="EtcItem">
+    <item id="70272" name="Irene's Song 200%" type="EtcItem">
         <!-- When in inventory, your XP and SP gain is increased by 200%. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. -->
         <set name="icon" val="br_cashtex.item.br_cash_rune_of_feather_i00"/>
         <set name="is_tradable" val="false"/>
@@ -837,7 +837,7 @@
         <set name="is_sellable" val="false"/>
         <set name="time" val="60"/>
     </item>
-    <item id="70273" name="Irene's Song 200%" additionalName="3 hours" type="EtcItem">
+    <item id="70273" name="Irene's Song 200%" type="EtcItem">
         <!-- When in inventory, your XP and SP gain is increased by 200%. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. -->
         <set name="icon" val="br_cashtex.item.br_cash_rune_of_feather_i00"/>
         <set name="is_tradable" val="false"/>
@@ -846,7 +846,7 @@
         <set name="is_sellable" val="false"/>
         <set name="time" val="180"/>
     </item>
-    <item id="70274" name="Irene's Song 200%" additionalName="5 hours" type="EtcItem">
+    <item id="70274" name="Irene's Song 200%" type="EtcItem">
         <!-- When in inventory, your XP and SP gain is increased by 200%. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. -->
         <set name="icon" val="br_cashtex.item.br_cash_rune_of_feather_i00"/>
         <set name="is_tradable" val="false"/>
@@ -855,7 +855,7 @@
         <set name="is_sellable" val="false"/>
         <set name="time" val="300"/>
     </item>
-    <item id="70275" name="Irene's Song 200%" additionalName="7-day" type="EtcItem">
+    <item id="70275" name="Irene's Song 200%" type="EtcItem">
         <!-- When in inventory, your XP and SP gain is increased by 200%. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. -->
         <set name="icon" val="br_cashtex.item.br_cash_rune_of_feather_i00"/>
         <set name="is_tradable" val="false"/>
@@ -912,7 +912,7 @@
         <set name="is_stackable" val="true"/>
         <set name="is_freightable" val="true"/>
     </item>
-    <item id="70280" name="Clan Reputation Score - 10" additionalName="1-day" type="EtcItem">
+    <item id="70280" name="Clan Reputation Score - 10" type="EtcItem">
         <!-- Double-click to add 10 bonus points to your Clan Reputation. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.etc_bloodpledge_point_i00"/>
         <set name="default_action" val="SKILL_REDUCE"/>
@@ -927,7 +927,7 @@
             <skill id="55362" level="1"/> <!-- Clan Reputation Score - 10 -->
         </skills>
     </item>
-    <item id="70281" name="Clan Reputation Score - 50" additionalName="1-day" type="EtcItem">
+    <item id="70281" name="Clan Reputation Score - 50" type="EtcItem">
         <!-- Double-click to add 50 bonus points to your Clan Reputation. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.etc_bloodpledge_point_i00"/>
         <set name="default_action" val="SKILL_REDUCE"/>
@@ -942,7 +942,7 @@
             <skill id="55363" level="1"/> <!-- Clan Reputation Score - 50 -->
         </skills>
     </item>
-    <item id="70282" name="Clan Reputation Score - 150" additionalName="1-day" type="EtcItem">
+    <item id="70282" name="Clan Reputation Score - 150" type="EtcItem">
         <!-- Double-click to add 150 bonus points to your Clan Reputation. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.etc_bloodpledge_point_i00"/>
         <set name="default_action" val="SKILL_REDUCE"/>

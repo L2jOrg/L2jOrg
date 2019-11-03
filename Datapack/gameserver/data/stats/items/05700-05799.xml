@@ -89,7 +89,7 @@
         <set name="immediate_effect" val="true"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
     </item>
-    <item id="5710" name="Zubei's Gauntlets" additionalName="Heavy" type="Armor">
+    <item id="5710" name="Zubei's Gauntlets" type="Armor">
         <!-- Part of the heavy Zubei's set. -->
         <set name="icon" val="icon.armor_t64_g_i00"/>
         <set name="default_action" val="EQUIP"/>
@@ -106,7 +106,7 @@
             <stat type="pDef">41</stat>
         </stats>
     </item>
-    <item id="5711" name="Zubei's Gauntlets" additionalName="Light" type="Armor">
+    <item id="5711" name="Zubei's Gauntlets" type="Armor">
         <!-- Part of the light Zubei's set. -->
         <set name="icon" val="icon.armor_t65_g_i00"/>
         <set name="default_action" val="EQUIP"/>
@@ -123,7 +123,7 @@
             <stat type="pDef">41</stat>
         </stats>
     </item>
-    <item id="5712" name="Zubei's Gauntlets" additionalName="Robe" type="Armor">
+    <item id="5712" name="Zubei's Gauntlets" type="Armor">
         <!-- Part of the Zubei's robe set. -->
         <set name="icon" val="icon.armor_t56_g_i00"/>
         <set name="default_action" val="EQUIP"/>
@@ -140,7 +140,7 @@
             <stat type="pDef">41</stat>
         </stats>
     </item>
-    <item id="5714" name="Avadon Gloves" additionalName="Heavy" type="Armor">
+    <item id="5714" name="Avadon Gloves" type="Armor">
         <!-- Part of the heavy avadon set. -->
         <set name="icon" val="icon.armor_t66_g_i00"/>
         <set name="default_action" val="EQUIP"/>
@@ -157,7 +157,7 @@
             <stat type="pDef">41</stat>
         </stats>
     </item>
-    <item id="5715" name="Avadon Gloves" additionalName="Light" type="Armor">
+    <item id="5715" name="Avadon Gloves" type="Armor">
         <!-- Part of the light avadon set. -->
         <set name="icon" val="icon.armor_t67_g_i00"/>
         <set name="default_action" val="EQUIP"/>
@@ -174,7 +174,7 @@
             <stat type="pDef">41</stat>
         </stats>
     </item>
-    <item id="5716" name="Avadon Gloves" additionalName="Robe" type="Armor">
+    <item id="5716" name="Avadon Gloves" type="Armor">
         <!-- Part of the Avadon Robe set. -->
         <set name="icon" val="icon.armor_t59_g_i00"/>
         <set name="default_action" val="EQUIP"/>
@@ -191,7 +191,7 @@
             <stat type="pDef">41</stat>
         </stats>
     </item>
-    <item id="5718" name="Blue Wolf Gloves" additionalName="Heavy" type="Armor">
+    <item id="5718" name="Blue Wolf Gloves" type="Armor">
         <!-- Part of the heavy blue wolf set. -->
         <set name="icon" val="icon.armor_t68_g_i00"/>
         <set name="default_action" val="EQUIP"/>
@@ -208,7 +208,7 @@
             <stat type="pDef">44</stat>
         </stats>
     </item>
-    <item id="5719" name="Blue Wolf Gloves" additionalName="Light" type="Armor">
+    <item id="5719" name="Blue Wolf Gloves" type="Armor">
         <!-- Part of the light blue wolf set. -->
         <set name="icon" val="icon.armor_t69_g_i00"/>
         <set name="default_action" val="EQUIP"/>
@@ -225,7 +225,7 @@
             <stat type="pDef">44</stat>
         </stats>
     </item>
-    <item id="5720" name="Blue Wolf Gloves" additionalName="Robe" type="Armor">
+    <item id="5720" name="Blue Wolf Gloves" type="Armor">
         <!-- Part of the blue wolf robe set. -->
         <set name="icon" val="icon.armor_t70_g_i00"/>
         <set name="default_action" val="EQUIP"/>
@@ -242,7 +242,7 @@
             <stat type="pDef">44</stat>
         </stats>
     </item>
-    <item id="5722" name="Doom Gloves" additionalName="Heavy" type="Armor">
+    <item id="5722" name="Doom Gloves" type="Armor">
         <!-- Part of the heavy doom set. -->
         <set name="icon" val="icon.armor_t71_g_i00"/>
         <set name="default_action" val="EQUIP"/>
@@ -259,7 +259,7 @@
             <stat type="pDef">44</stat>
         </stats>
     </item>
-    <item id="5723" name="Doom Gloves" additionalName="Light" type="Armor">
+    <item id="5723" name="Doom Gloves" type="Armor">
         <!-- Part of the light doom set. -->
         <set name="icon" val="icon.armor_t72_g_i00"/>
         <set name="default_action" val="EQUIP"/>
@@ -276,7 +276,7 @@
             <stat type="pDef">44</stat>
         </stats>
     </item>
-    <item id="5724" name="Doom Gloves" additionalName="Robe" type="Armor">
+    <item id="5724" name="Doom Gloves" type="Armor">
         <!-- Part of the doom robe set. -->
         <set name="icon" val="icon.armor_t73_g_i00"/>
         <set name="default_action" val="EQUIP"/>
@@ -293,7 +293,7 @@
             <stat type="pDef">44</stat>
         </stats>
     </item>
-    <item id="5726" name="Zubei's Boots" additionalName="Heavy" type="Armor">
+    <item id="5726" name="Zubei's Boots" type="Armor">
         <!-- Part of the heavy Zubei's set. -->
         <set name="icon" val="icon.armor_t64_b_i00"/>
         <set name="default_action" val="EQUIP"/>
@@ -310,7 +310,7 @@
             <stat type="pDef">41</stat>
         </stats>
     </item>
-    <item id="5727" name="Zubei's Boots" additionalName="Light" type="Armor">
+    <item id="5727" name="Zubei's Boots" type="Armor">
         <!-- Part of the light Zubei's set. -->
         <set name="icon" val="icon.armor_t65_b_i00"/>
         <set name="default_action" val="EQUIP"/>
@@ -327,7 +327,7 @@
             <stat type="pDef">41</stat>
         </stats>
     </item>
-    <item id="5728" name="Zubei's Boots" additionalName="Robe" type="Armor">
+    <item id="5728" name="Zubei's Boots" type="Armor">
         <!-- Part of the Zubei's robe set. -->
         <set name="icon" val="icon.armor_t56_b_i00"/>
         <set name="default_action" val="EQUIP"/>
@@ -344,7 +344,7 @@
             <stat type="pDef">41</stat>
         </stats>
     </item>
-    <item id="5730" name="Avadon Boots" additionalName="Heavy" type="Armor">
+    <item id="5730" name="Avadon Boots" type="Armor">
         <!-- Part of the heavy avadon set. -->
         <set name="icon" val="icon.armor_t66_b_i00"/>
         <set name="default_action" val="EQUIP"/>
@@ -361,7 +361,7 @@
             <stat type="pDef">41</stat>
         </stats>
     </item>
-    <item id="5731" name="Avadon Boots" additionalName="Light" type="Armor">
+    <item id="5731" name="Avadon Boots" type="Armor">
         <!-- Part of the light avadon set. -->
         <set name="icon" val="icon.armor_t67_b_i00"/>
         <set name="default_action" val="EQUIP"/>
@@ -378,7 +378,7 @@
             <stat type="pDef">41</stat>
         </stats>
     </item>
-    <item id="5732" name="Avadon Boots" additionalName="Robe" type="Armor">
+    <item id="5732" name="Avadon Boots" type="Armor">
         <!-- Part of the Avadon Robe set. -->
         <set name="icon" val="icon.armor_t59_b_i00"/>
         <set name="default_action" val="EQUIP"/>
@@ -395,7 +395,7 @@
             <stat type="pDef">41</stat>
         </stats>
     </item>
-    <item id="5734" name="Blue Wolf Boots" additionalName="Heavy" type="Armor">
+    <item id="5734" name="Blue Wolf Boots" type="Armor">
         <!-- Part of the heavy blue wolf set. -->
         <set name="icon" val="icon.armor_t68_b_i00"/>
         <set name="default_action" val="EQUIP"/>
@@ -412,7 +412,7 @@
             <stat type="pDef">44</stat>
         </stats>
     </item>
-    <item id="5735" name="Blue Wolf Boots" additionalName="Light" type="Armor">
+    <item id="5735" name="Blue Wolf Boots" type="Armor">
         <!-- Part of the light blue wolf set. -->
         <set name="icon" val="icon.armor_t69_b_i00"/>
         <set name="default_action" val="EQUIP"/>
@@ -429,7 +429,7 @@
             <stat type="pDef">44</stat>
         </stats>
     </item>
-    <item id="5736" name="Blue Wolf Boots" additionalName="Robe" type="Armor">
+    <item id="5736" name="Blue Wolf Boots" type="Armor">
         <!-- Part of the blue wolf robe set. -->
         <set name="icon" val="icon.armor_t70_b_i00"/>
         <set name="default_action" val="EQUIP"/>
@@ -446,7 +446,7 @@
             <stat type="pDef">44</stat>
         </stats>
     </item>
-    <item id="5738" name="Doom Boots" additionalName="Heavy" type="Armor">
+    <item id="5738" name="Doom Boots" type="Armor">
         <!-- Part of the heavy doom set. -->
         <set name="icon" val="icon.armor_t71_b_i00"/>
         <set name="default_action" val="EQUIP"/>
@@ -463,7 +463,7 @@
             <stat type="pDef">44</stat>
         </stats>
     </item>
-    <item id="5739" name="Doom Boots" additionalName="Light" type="Armor">
+    <item id="5739" name="Doom Boots" type="Armor">
         <!-- Part of the light doom set. -->
         <set name="icon" val="icon.armor_t72_b_i00"/>
         <set name="default_action" val="EQUIP"/>
@@ -480,7 +480,7 @@
             <stat type="pDef">44</stat>
         </stats>
     </item>
-    <item id="5740" name="Doom Boots" additionalName="Robe" type="Armor">
+    <item id="5740" name="Doom Boots" type="Armor">
         <!-- Part of the doom robe set. -->
         <set name="icon" val="icon.armor_t73_b_i00"/>
         <set name="default_action" val="EQUIP"/>
@@ -497,7 +497,7 @@
             <stat type="pDef">44</stat>
         </stats>
     </item>
-    <item id="5765" name="Dark Crystal Gloves" additionalName="Heavy" type="Armor">
+    <item id="5765" name="Dark Crystal Gloves" type="Armor">
         <!-- Part of Dark Crystal Breastplate Heavy Armor. -->
         <set name="icon" val="icon.armor_t74_g_i00"/>
         <set name="default_action" val="EQUIP"/>
@@ -514,7 +514,7 @@
             <stat type="pDef">46</stat>
         </stats>
     </item>
-    <item id="5766" name="Dark Crystal Gloves" additionalName="Light" type="Armor">
+    <item id="5766" name="Dark Crystal Gloves" type="Armor">
         <!-- Part of Dark Crystal Light Armor. -->
         <set name="icon" val="icon.armor_t75_g_i00"/>
         <set name="default_action" val="EQUIP"/>
@@ -531,7 +531,7 @@
             <stat type="pDef">46</stat>
         </stats>
     </item>
-    <item id="5767" name="Dark Crystal Gloves" additionalName="Robe" type="Armor">
+    <item id="5767" name="Dark Crystal Gloves" type="Armor">
         <!-- Part of Dark Crystal Robe. -->
         <set name="icon" val="icon.armor_t76_g_i00"/>
         <set name="default_action" val="EQUIP"/>
@@ -548,7 +548,7 @@
             <stat type="pDef">46</stat>
         </stats>
     </item>
-    <item id="5768" name="Tallum Gloves" additionalName="Heavy" type="Armor">
+    <item id="5768" name="Tallum Gloves" type="Armor">
         <!-- Part of Tallum Heavy Armor. -->
         <set name="icon" val="icon.armor_t77_g_i00"/>
         <set name="default_action" val="EQUIP"/>
@@ -565,7 +565,7 @@
             <stat type="pDef">46</stat>
         </stats>
     </item>
-    <item id="5769" name="Tallum Gloves" additionalName="Light" type="Armor">
+    <item id="5769" name="Tallum Gloves" type="Armor">
         <!-- Part of Tallum Light Armor. -->
         <set name="icon" val="icon.armor_t78_g_i00"/>
         <set name="default_action" val="EQUIP"/>
@@ -582,7 +582,7 @@
             <stat type="pDef">46</stat>
         </stats>
     </item>
-    <item id="5770" name="Tallum Gloves" additionalName="Robe" type="Armor">
+    <item id="5770" name="Tallum Gloves" type="Armor">
         <!-- Part of Tallum Robe. -->
         <set name="icon" val="icon.armor_t79_g_i00"/>
         <set name="default_action" val="EQUIP"/>
@@ -599,7 +599,7 @@
             <stat type="pDef">46</stat>
         </stats>
     </item>
-    <item id="5771" name="Gauntlets of Nightmare" additionalName="Heavy" type="Armor">
+    <item id="5771" name="Gauntlets of Nightmare" type="Armor">
         <!-- Part of Heavy Armor of Nightmare. -->
         <set name="icon" val="icon.armor_t80_g_i00"/>
         <set name="default_action" val="EQUIP"/>
@@ -616,7 +616,7 @@
             <stat type="pDef">49</stat>
         </stats>
     </item>
-    <item id="5772" name="Gauntlets of Nightmare" additionalName="Light" type="Armor">
+    <item id="5772" name="Gauntlets of Nightmare" type="Armor">
         <!-- Part of Light Armor of Nightmare. -->
         <set name="icon" val="icon.armor_t81_g_i00"/>
         <set name="default_action" val="EQUIP"/>
@@ -633,7 +633,7 @@
             <stat type="pDef">49</stat>
         </stats>
     </item>
-    <item id="5773" name="Gauntlets of Nightmare" additionalName="Robe" type="Armor">
+    <item id="5773" name="Gauntlets of Nightmare" type="Armor">
         <!-- Part of Robe of Nightmare. -->
         <set name="icon" val="icon.armor_t82_g_i00"/>
         <set name="default_action" val="EQUIP"/>
@@ -650,7 +650,7 @@
             <stat type="pDef">49</stat>
         </stats>
     </item>
-    <item id="5774" name="Majestic Gauntlets" additionalName="Heavy" type="Armor">
+    <item id="5774" name="Majestic Gauntlets" type="Armor">
         <!-- Part of Majestic Heavy Armor. -->
         <set name="icon" val="icon.armor_t83_g_i00"/>
         <set name="default_action" val="EQUIP"/>
@@ -667,7 +667,7 @@
             <stat type="pDef">49</stat>
         </stats>
     </item>
-    <item id="5775" name="Majestic Gauntlets" additionalName="Light" type="Armor">
+    <item id="5775" name="Majestic Gauntlets" type="Armor">
         <!-- Part of Majestic Light Armor. -->
         <set name="icon" val="icon.armor_t84_g_i00"/>
         <set name="default_action" val="EQUIP"/>
@@ -684,7 +684,7 @@
             <stat type="pDef">49</stat>
         </stats>
     </item>
-    <item id="5776" name="Majestic Gauntlets" additionalName="Robe" type="Armor">
+    <item id="5776" name="Majestic Gauntlets" type="Armor">
         <!-- Part of Majestic Robe. -->
         <set name="icon" val="icon.armor_t85_g_i00"/>
         <set name="default_action" val="EQUIP"/>
@@ -701,7 +701,7 @@
             <stat type="pDef">49</stat>
         </stats>
     </item>
-    <item id="5777" name="Dark Crystal Boots" additionalName="Heavy" type="Armor">
+    <item id="5777" name="Dark Crystal Boots" type="Armor">
         <!-- Part of Dark Crystal Breastplate Heavy Armor. -->
         <set name="icon" val="icon.armor_t74_b_i00"/>
         <set name="default_action" val="EQUIP"/>
@@ -718,7 +718,7 @@
             <stat type="pDef">46</stat>
         </stats>
     </item>
-    <item id="5778" name="Dark Crystal Boots" additionalName="Light" type="Armor">
+    <item id="5778" name="Dark Crystal Boots" type="Armor">
         <!-- Part of Dark Crystal Light Armor. -->
         <set name="icon" val="icon.armor_t75_b_i00"/>
         <set name="default_action" val="EQUIP"/>
@@ -735,7 +735,7 @@
             <stat type="pDef">46</stat>
         </stats>
     </item>
-    <item id="5779" name="Dark Crystal Boots" additionalName="Robe" type="Armor">
+    <item id="5779" name="Dark Crystal Boots" type="Armor">
         <!-- Part of Dark Crystal Robe. -->
         <set name="icon" val="icon.armor_t76_b_i00"/>
         <set name="default_action" val="EQUIP"/>
@@ -752,7 +752,7 @@
             <stat type="pDef">46</stat>
         </stats>
     </item>
-    <item id="5780" name="Tallum Boots" additionalName="Heavy" type="Armor">
+    <item id="5780" name="Tallum Boots" type="Armor">
         <!-- Part of Tallum Heavy Armor. -->
         <set name="icon" val="icon.armor_t77_b_i00"/>
         <set name="default_action" val="EQUIP"/>
@@ -769,7 +769,7 @@
             <stat type="pDef">46</stat>
         </stats>
     </item>
-    <item id="5781" name="Tallum Boots" additionalName="Light" type="Armor">
+    <item id="5781" name="Tallum Boots" type="Armor">
         <!-- Part of Tallum Light Armor. -->
         <set name="icon" val="icon.armor_t78_b_i00"/>
         <set name="default_action" val="EQUIP"/>
@@ -786,7 +786,7 @@
             <stat type="pDef">46</stat>
         </stats>
     </item>
-    <item id="5782" name="Tallum Boots" additionalName="Robe" type="Armor">
+    <item id="5782" name="Tallum Boots" type="Armor">
         <!-- Part of Tallum Robe. -->
         <set name="icon" val="icon.armor_t79_b_i00"/>
         <set name="default_action" val="EQUIP"/>
@@ -803,7 +803,7 @@
             <stat type="pDef">46</stat>
         </stats>
     </item>
-    <item id="5783" name="Boots of Nightmare" additionalName="Heavy" type="Armor">
+    <item id="5783" name="Boots of Nightmare" type="Armor">
         <!-- Part of Heavy Armor of Nightmare. -->
         <set name="icon" val="icon.armor_t80_b_i00"/>
         <set name="default_action" val="EQUIP"/>
@@ -820,7 +820,7 @@
             <stat type="pDef">49</stat>
         </stats>
     </item>
-    <item id="5784" name="Boots of Nightmare" additionalName="Light" type="Armor">
+    <item id="5784" name="Boots of Nightmare" type="Armor">
         <!-- Part of Light Armor of Nightmare. -->
         <set name="icon" val="icon.armor_t81_b_i00"/>
         <set name="default_action" val="EQUIP"/>
@@ -837,7 +837,7 @@
             <stat type="pDef">49</stat>
         </stats>
     </item>
-    <item id="5785" name="Boots of Nightmare" additionalName="Robe" type="Armor">
+    <item id="5785" name="Boots of Nightmare" type="Armor">
         <!-- Part of Robe of Nightmare. -->
         <set name="icon" val="icon.armor_t82_b_i00"/>
         <set name="default_action" val="EQUIP"/>
@@ -854,7 +854,7 @@
             <stat type="pDef">49</stat>
         </stats>
     </item>
-    <item id="5786" name="Majestic Boots" additionalName="Heavy" type="Armor">
+    <item id="5786" name="Majestic Boots" type="Armor">
         <!-- Part of Majestic Heavy Armor. -->
         <set name="icon" val="icon.armor_t83_b_i00"/>
         <set name="default_action" val="EQUIP"/>
@@ -871,7 +871,7 @@
             <stat type="pDef">49</stat>
         </stats>
     </item>
-    <item id="5787" name="Majestic Boots" additionalName="Light" type="Armor">
+    <item id="5787" name="Majestic Boots" type="Armor">
         <!-- Part of Majestic Light Armor. -->
         <set name="icon" val="icon.armor_t84_b_i00"/>
         <set name="default_action" val="EQUIP"/>
@@ -888,7 +888,7 @@
             <stat type="pDef">49</stat>
         </stats>
     </item>
-    <item id="5788" name="Majestic Boots" additionalName="Robe" type="Armor">
+    <item id="5788" name="Majestic Boots" type="Armor">
         <!-- Part of Majestic Robe. -->
         <set name="icon" val="icon.armor_t85_b_i00"/>
         <set name="default_action" val="EQUIP"/>

@@ -272,7 +272,7 @@
         <set name="is_stackable" val="true"/>
         <set name="is_questitem" val="true"/>
     </item>
-    <item id="90226" name="Lv. 1 Brooch" additionalName="30 days" type="Armor">
+    <item id="90226" name="Lv. 1 Brooch" type="Armor">
         <!-- Lv. 1 Brooch. 30-day. Activates 2 jewel slots when equipped. Cannot be exchanged, dropped, or sold in private store. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.etc_bm_brooch_lavianrose_i00"/>
         <set name="default_action" val="EQUIP"/>
@@ -284,7 +284,7 @@
         <set name="is_depositable" val="false"/>
         <set name="is_sellable" val="false"/>
     </item>
-    <item id="90227" name="Lv. 5 Jade" additionalName="3-day" type="Armor">
+    <item id="90227" name="Lv. 5 Jade" type="Armor">
         <!-- Lv. 5 Jade. 3-day. Atk. Spd./Casting Spd. +10%, when equipped. Effect does not stack with additional jewels of the same type. Cannot be exchanged, dropped, or sold in private store. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.etc_bm_jewel_jade_i00"/>
         <set name="default_action" val="EQUIP"/>
@@ -507,7 +507,7 @@
         <set name="is_stackable" val="true"/>
         <set name="is_questitem" val="true"/>
     </item>
-    <item id="90248" name="Lv. 5 Vital Stone" additionalName="3-day" type="Armor">
+    <item id="90248" name="Lv. 5 Vital Stone" type="Armor">
         <!-- Lv. 5 Vital Stone. 3-day. Sayha Grace XP / SP + 15%, Sayha Grace Consumption -20%, while hunting. Effect does not stack with additional jewels of the same type. Cannot be exchanged, dropped, or sold in private store. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.etc_bm_jewel_vital"/>
         <set name="default_action" val="EQUIP"/>
@@ -771,7 +771,7 @@
         <set name="is_stackable" val="true"/>
         <set name="is_questitem" val="true"/>
     </item>
-    <item id="90273" name="Magical Potion of Leaping" additionalName="Lv. 4" type="EtcItem">
+    <item id="90273" name="Magical Potion of Leaping" type="EtcItem">
         <!-- Provides 37 million XP / 1.11 million SP. Intended for Lv. 45 and higher. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. Can be shared within account through Dimensional Merchant. The item will be removed after the event is over. -->
         <set name="icon" val="icon.etc_earth_potion_i00"/>
         <set name="default_action" val="SKILL_REDUCE"/>

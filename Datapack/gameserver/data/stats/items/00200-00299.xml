@@ -196,7 +196,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="207" name="Staff of Phantom" additionalName="Not Activated" type="Weapon">
+    <item id="207" name="Staff of Phantom" type="Weapon">
         <set name="icon" val="icon.weapon_apprentices_staff_i00"/>
         <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
@@ -223,7 +223,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="208" name="Staff of Seal" additionalName="Not Activated" type="Weapon">
+    <item id="208" name="Staff of Seal" type="Weapon">
         <set name="icon" val="icon.weapon_apprentices_staff_i00"/>
         <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
@@ -250,7 +250,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="209" name="Divine Staff" additionalName="Not Activated" type="Weapon">
+    <item id="209" name="Divine Staff" type="Weapon">
         <set name="icon" val="icon.weapon_apprentices_staff_i00"/>
         <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
@@ -305,7 +305,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="211" name="Staff of Nobility" additionalName="Not Activated" type="Weapon">
+    <item id="211" name="Staff of Nobility" type="Weapon">
         <set name="icon" val="icon.weapon_apprentices_staff_i00"/>
         <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>

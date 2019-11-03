@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org ../../xsd/items.xsd">
-    <item id="8102" name="Pa'agrian Sword" additionalName="Focus" type="Weapon">
+    <item id="8102" name="Pa'agrian Sword" type="Weapon">
         <!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 65. -->
         <set name="icon" val="icon.weapon_sword_of_paagrio_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -30,7 +30,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="8103" name="Pa'agrian Sword" additionalName="Haste" type="Weapon">
+    <item id="8103" name="Pa'agrian Sword" type="Weapon">
         <!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 8%. -->
         <set name="icon" val="icon.weapon_sword_of_paagrio_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -60,7 +60,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="8104" name="Pa'agrian Sword" additionalName="Critical Damage" type="Weapon">
+    <item id="8104" name="Pa'agrian Sword" type="Weapon">
         <!-- <Soul Crystal Enhancement>. P. Atk. + 223 during a Critical Attack. -->
         <set name="icon" val="icon.weapon_sword_of_paagrio_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -90,7 +90,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="8105" name="Sword of Sentinel" additionalName="Focus" type="Weapon">
+    <item id="8105" name="Sword of Sentinel" type="Weapon">
         <!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 58. -->
         <set name="icon" val="icon.weapon_guardians_sword_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -120,7 +120,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="8106" name="Sword of Sentinel" additionalName="Haste" type="Weapon">
+    <item id="8106" name="Sword of Sentinel" type="Weapon">
         <!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 7%. -->
         <set name="icon" val="icon.weapon_guardians_sword_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -150,7 +150,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="8107" name="Sword of Sentinel" additionalName="Critical Damage" type="Weapon">
+    <item id="8107" name="Sword of Sentinel" type="Weapon">
         <!-- <Soul Crystal Enhancement>. P. Atk. + 275 during a Critical Attack. -->
         <set name="icon" val="icon.weapon_guardians_sword_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -180,7 +180,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="8108" name="Infernal Master" additionalName="Focus" type="Weapon">
+    <item id="8108" name="Infernal Master" type="Weapon">
         <!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 54. -->
         <set name="icon" val="icon.weapon_inferno_master_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -210,7 +210,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="8109" name="Infernal Master" additionalName="Haste" type="Weapon">
+    <item id="8109" name="Infernal Master" type="Weapon">
         <!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 7%. -->
         <set name="icon" val="icon.weapon_inferno_master_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -236,7 +236,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="8110" name="Infernal Master" additionalName="Critical Damage" type="Weapon">
+    <item id="8110" name="Infernal Master" type="Weapon">
         <!-- <Soul Crystal Enhancement>. P. Atk. +288 during a Critical Attack. -->
         <set name="icon" val="icon.weapon_inferno_master_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -262,7 +262,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="8111" name="Mysterious Sword" additionalName="Empower" type="Weapon">
+    <item id="8111" name="Mysterious Sword" type="Weapon">
         <!-- <Soul Crystal Enhancement>. M. Atk. + 46. -->
         <set name="icon" val="icon.weapon_mystery_sword_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -292,7 +292,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="8112" name="Mysterious Sword" additionalName="Acumen" type="Weapon">
+    <item id="8112" name="Mysterious Sword" type="Weapon">
         <!-- <Soul Crystal Enhancement>. Increases Casting Spd. by 12%. -->
         <set name="icon" val="icon.weapon_mystery_sword_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -322,7 +322,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="8113" name="Mysterious Sword" additionalName="Magic Regeneration" type="Weapon">
+    <item id="8113" name="Mysterious Sword" type="Weapon">
         <!-- <Soul Crystal Enhancement>. Increases MP Recovery Bonus by 16%. -->
         <set name="icon" val="icon.weapon_mystery_sword_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -352,7 +352,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="8114" name="Ecliptic Sword" additionalName="Empower" type="Weapon">
+    <item id="8114" name="Ecliptic Sword" type="Weapon">
         <!-- <Soul Crystal Enhancement>. M. Atk. + 46. -->
         <set name="icon" val="icon.weapon_sword_of_eclipse_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -382,7 +382,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="8115" name="Ecliptic Sword" additionalName="Acumen" type="Weapon">
+    <item id="8115" name="Ecliptic Sword" type="Weapon">
         <!-- <Soul Crystal Enhancement>. Increases Casting Spd. by 12%. -->
         <set name="icon" val="icon.weapon_sword_of_eclipse_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -412,7 +412,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="8116" name="Ecliptic Sword" additionalName="Magic Regeneration" type="Weapon">
+    <item id="8116" name="Ecliptic Sword" type="Weapon">
         <!-- <Soul Crystal Enhancement>. Increases MP Recovery Bonus by 16%. -->
         <set name="icon" val="icon.weapon_sword_of_eclipse_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -442,7 +442,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="8117" name="Wizard's Tear" additionalName="Empower" type="Weapon">
+    <item id="8117" name="Wizard's Tear" type="Weapon">
         <!-- <Soul Crystal Enhancement>. M. Atk. + 100. -->
         <set name="icon" val="icon.weapon_tears_of_wizard_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -472,7 +472,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="8118" name="Wizard's Tear" additionalName="Acumen" type="Weapon">
+    <item id="8118" name="Wizard's Tear" type="Weapon">
         <!-- <Soul Crystal Enhancement>. Increases Casting Spd. by 12%. -->
         <set name="icon" val="icon.weapon_tears_of_wizard_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -502,7 +502,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="8119" name="Wizard's Tear" additionalName="Magic Regeneration" type="Weapon">
+    <item id="8119" name="Wizard's Tear" type="Weapon">
         <!-- <Soul Crystal Enhancement>. Increases MP Recovery Bonus by 14%. -->
         <set name="icon" val="icon.weapon_tears_of_wizard_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -532,7 +532,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="8120" name="Dwarven Hammer" additionalName="Focus" type="Weapon">
+    <item id="8120" name="Dwarven Hammer" type="Weapon">
         <!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 58. -->
         <set name="icon" val="icon.weapon_dwarven_hammer_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -562,7 +562,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="8121" name="Dwarven Hammer" additionalName="Haste" type="Weapon">
+    <item id="8121" name="Dwarven Hammer" type="Weapon">
         <!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 8%. -->
         <set name="icon" val="icon.weapon_dwarven_hammer_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -592,7 +592,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="8122" name="Dwarven Hammer" additionalName="Critical Damage" type="Weapon">
+    <item id="8122" name="Dwarven Hammer" type="Weapon">
         <!-- <Soul Crystal Enhancement>. P. Atk. + 242 during a Critical Attack. -->
         <set name="icon" val="icon.weapon_dwarven_hammer_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -622,7 +622,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="8123" name="Karik Horn" additionalName="Focus" type="Weapon">
+    <item id="8123" name="Karik Horn" type="Weapon">
         <!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 68. -->
         <set name="icon" val="icon.weapon_horn_of_karik_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -652,7 +652,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="8124" name="Karik Horn" additionalName="Haste" type="Weapon">
+    <item id="8124" name="Karik Horn" type="Weapon">
         <!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 8%. -->
         <set name="icon" val="icon.weapon_horn_of_karik_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -682,7 +682,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="8125" name="Karik Horn" additionalName="Critical Damage" type="Weapon">
+    <item id="8125" name="Karik Horn" type="Weapon">
         <!-- <Soul Crystal Enhancement>. P. Atk. + 223 during a Critical Attack. -->
         <set name="icon" val="icon.weapon_horn_of_karik_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -712,7 +712,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="8126" name="Destroyer Hammer" additionalName="Focus" type="Weapon">
+    <item id="8126" name="Destroyer Hammer" type="Weapon">
         <!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 54. -->
         <set name="icon" val="icon.weapon_hammer_of_destroyer_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -742,7 +742,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="8127" name="Destroyer Hammer" additionalName="Haste" type="Weapon">
+    <item id="8127" name="Destroyer Hammer" type="Weapon">
         <!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 7%. -->
         <set name="icon" val="icon.weapon_hammer_of_destroyer_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -772,7 +772,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="8128" name="Destroyer Hammer" additionalName="Critical Damage" type="Weapon">
+    <item id="8128" name="Destroyer Hammer" type="Weapon">
         <!-- <Soul Crystal Enhancement>. P. Atk. +288 during a Critical Attack. -->
         <set name="icon" val="icon.weapon_hammer_of_destroyer_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -801,7 +801,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="8129" name="Ice Storm Hammer" additionalName="Focus" type="Weapon">
+    <item id="8129" name="Ice Storm Hammer" type="Weapon">
         <!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 32. -->
         <set name="icon" val="icon.weapon_ice_storm_hammer_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -831,7 +831,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="8130" name="Ice Storm Hammer" additionalName="Haste" type="Weapon">
+    <item id="8130" name="Ice Storm Hammer" type="Weapon">
         <!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 7%. -->
         <set name="icon" val="icon.weapon_ice_storm_hammer_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -861,7 +861,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="8131" name="Ice Storm Hammer" additionalName="Critical Damage" type="Weapon">
+    <item id="8131" name="Ice Storm Hammer" type="Weapon">
         <!-- <Soul Crystal Enhancement>. P. Atk. + 260 during a Critical Attack. -->
         <set name="icon" val="icon.weapon_ice_storm_hammer_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -891,7 +891,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="8132" name="Star Buster" additionalName="Focus" type="Weapon">
+    <item id="8132" name="Star Buster" type="Weapon">
         <!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 58. -->
         <set name="icon" val="icon.weapon_star_buster_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -921,7 +921,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="8133" name="Star Buster" additionalName="Haste" type="Weapon">
+    <item id="8133" name="Star Buster" type="Weapon">
         <!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 7%. -->
         <set name="icon" val="icon.weapon_star_buster_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -951,7 +951,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="8134" name="Star Buster" additionalName="Critical Damage" type="Weapon">
+    <item id="8134" name="Star Buster" type="Weapon">
         <!-- <Soul Crystal Enhancement>. P. Atk. + 275 during a Critical Attack. -->
         <set name="icon" val="icon.weapon_star_buster_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -981,7 +981,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="8135" name="Doom Crusher" additionalName="Focus" type="Weapon">
+    <item id="8135" name="Doom Crusher" type="Weapon">
         <!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 54. -->
         <set name="icon" val="icon.weapon_doom_crusher_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -1011,7 +1011,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="8136" name="Doom Crusher" additionalName="Haste" type="Weapon">
+    <item id="8136" name="Doom Crusher" type="Weapon">
         <!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 7%. -->
         <set name="icon" val="icon.weapon_doom_crusher_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -1037,7 +1037,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="8137" name="Doom Crusher" additionalName="Critical Damage" type="Weapon">
+    <item id="8137" name="Doom Crusher" type="Weapon">
         <!-- <Soul Crystal Enhancement>. P. Atk. +297 during a Critical Attack. -->
         <set name="icon" val="icon.weapon_doom_crusher_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -1067,7 +1067,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="8138" name="Ecliptic Axe" additionalName="Empower" type="Weapon">
+    <item id="8138" name="Ecliptic Axe" type="Weapon">
         <!-- <Soul Crystal Enhancement>. M. Atk. + 46. -->
         <set name="icon" val="icon.weapon_eclipse_axe_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -1098,7 +1098,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="8139" name="Ecliptic Axe" additionalName="Acumen" type="Weapon">
+    <item id="8139" name="Ecliptic Axe" type="Weapon">
         <!-- <Soul Crystal Enhancement>. Increases Casting Spd. by 12%. -->
         <set name="icon" val="icon.weapon_eclipse_axe_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -1129,7 +1129,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="8140" name="Ecliptic Axe" additionalName="Magic Regeneration" type="Weapon">
+    <item id="8140" name="Ecliptic Axe" type="Weapon">
         <!-- <Soul Crystal Enhancement>. Increases MP Recovery Bonus by 16%. -->
         <set name="icon" val="icon.weapon_eclipse_axe_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -1160,7 +1160,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="8141" name="Spell Breaker" additionalName="Empower" type="Weapon">
+    <item id="8141" name="Spell Breaker" type="Weapon">
         <!-- <Soul Crystal Enhancement>. M. Atk. + 96. -->
         <set name="icon" val="icon.weapon_spell_breaker_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -1191,7 +1191,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="8142" name="Spell Breaker" additionalName="Acumen" type="Weapon">
+    <item id="8142" name="Spell Breaker" type="Weapon">
         <!-- <Soul Crystal Enhancement>. Increases Casting Spd. by 12%. -->
         <set name="icon" val="icon.weapon_spell_breaker_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -1222,7 +1222,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="8143" name="Spell Breaker" additionalName="Magic Regeneration" type="Weapon">
+    <item id="8143" name="Spell Breaker" type="Weapon">
         <!-- <Soul Crystal Enhancement>. Increases MP Recovery Bonus by 14%. -->
         <set name="icon" val="icon.weapon_spell_breaker_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -1253,7 +1253,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="8144" name="Kaim Vanul's Bones" additionalName="Empower" type="Weapon">
+    <item id="8144" name="Kaim Vanul's Bones" type="Weapon">
         <!-- <Soul Crystal Enhancement>. M. Atk. + 100. -->
         <set name="icon" val="icon.weapon_bone_of_kaim_vanul_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -1284,7 +1284,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="8145" name="Kaim Vanul's Bones" additionalName="Acumen" type="Weapon">
+    <item id="8145" name="Kaim Vanul's Bones" type="Weapon">
         <!-- <Soul Crystal Enhancement>. Increases Casting Spd. by 12%. -->
         <set name="icon" val="icon.weapon_bone_of_kaim_vanul_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -1315,7 +1315,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="8146" name="Kaim Vanul's Bones" additionalName="Magic Regeneration" type="Weapon">
+    <item id="8146" name="Kaim Vanul's Bones" type="Weapon">
         <!-- <Soul Crystal Enhancement>. Increases MP Recovery Bonus by 14%. -->
         <set name="icon" val="icon.weapon_bone_of_kaim_vanul_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -1346,7 +1346,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="8147" name="Spiritual Eye" additionalName="Empower" type="Weapon">
+    <item id="8147" name="Spiritual Eye" type="Weapon">
         <!-- <Soul Crystal Enhancement>. M. Atk. +144. -->
         <set name="icon" val="icon.weapon_eye_of_soul_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -1377,7 +1377,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="8148" name="Spiritual Eye" additionalName="Acumen" type="Weapon">
+    <item id="8148" name="Spiritual Eye" type="Weapon">
         <!-- <Soul Crystal Enhancement>. Increases Casting Spd. by 12%. -->
         <set name="icon" val="icon.weapon_eye_of_soul_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -1409,7 +1409,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="8149" name="Spiritual Eye" additionalName="Magic Regeneration" type="Weapon">
+    <item id="8149" name="Spiritual Eye" type="Weapon">
         <!-- <Soul Crystal Enhancement>. MP Recovery Bonus +12%. -->
         <set name="icon" val="icon.weapon_eye_of_soul_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -1440,7 +1440,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="8150" name="Flaming Dragon Skull" additionalName="Empower" type="Weapon">
+    <item id="8150" name="Flaming Dragon Skull" type="Weapon">
         <!-- <Soul Crystal Enhancement>. M. Atk. +151. -->
         <set name="icon" val="icon.weapon_dragon_flame_head_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -1471,7 +1471,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="8151" name="Flaming Dragon Skull" additionalName="Acumen" type="Weapon">
+    <item id="8151" name="Flaming Dragon Skull" type="Weapon">
         <!-- <Soul Crystal Enhancement>. Increases Casting Spd. by 12%. -->
         <set name="icon" val="icon.weapon_dragon_flame_head_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -1498,7 +1498,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="8152" name="Flaming Dragon Skull" additionalName="Magic Regeneration" type="Weapon">
+    <item id="8152" name="Flaming Dragon Skull" type="Weapon">
         <!-- <Soul Crystal Enhancement>. MP Recovery Bonus +12%. -->
         <set name="icon" val="icon.weapon_dragon_flame_head_i01"/>
         <set name="default_action" val="EQUIP"/>

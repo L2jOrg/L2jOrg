@@ -17,7 +17,7 @@
         <set name="is_freightable" val="true"/>
         <set name="handler" val="NicknameColor"/>
     </item>
-    <item id="13340" name="Agathion - Love (Event)" additionalName="7-day" type="Armor">
+    <item id="13340" name="Agathion - Love (Event)" type="Armor">
         <!-- A bracelet that can summon an Love Agathion. A 7-day item. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.etc_rbracelet_aga_agit_i00"/>
         <set name="default_action" val="EQUIP"/>

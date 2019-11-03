@@ -22,7 +22,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="21974" name="Mardil's Fan" additionalName="Empower" type="Weapon">
+    <item id="21974" name="Mardil's Fan" type="Weapon">
         <!-- <Soul Crystal Enhancement>. M. Atk. +151. -->
         <set name="icon" val="BranchSys2.icon.br_wp_wind_of_mardil_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -44,7 +44,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="21975" name="Mardil's Fan" additionalName="Acumen" type="Weapon">
+    <item id="21975" name="Mardil's Fan" type="Weapon">
         <!-- <Soul Crystal Enhancement>. Increases Casting Spd. by 12%. -->
         <set name="icon" val="BranchSys2.icon.br_wp_wind_of_mardil_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -66,7 +66,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="21976" name="Mardil's Fan" additionalName="Magic Regeneration" type="Weapon">
+    <item id="21976" name="Mardil's Fan" type="Weapon">
         <!-- <Soul Crystal Enhancement>. MP Recovery Bonus +12%. -->
         <set name="icon" val="BranchSys2.icon.br_wp_wind_of_mardil_i01"/>
         <set name="default_action" val="EQUIP"/>

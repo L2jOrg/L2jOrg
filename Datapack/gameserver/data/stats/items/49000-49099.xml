@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org ../../xsd/items.xsd">
-    <item id="49000" name="Agathion - Singer and Dancer" additionalName="30-day" type="Armor">
+    <item id="49000" name="Agathion - Singer and Dancer" type="Armor">
         <!-- Summons Singer and Dancer Agathion when equipped. 30-day. Cannot be exchanged, dropped, or sold. <Active Skill>. 1. Dance of Fury: increases Atk. Spd. by 5% for 20 minutes. 2. Dance of Concentration: increases Casting Spd. by 5% for 20 minutes. 3. Song of Wind: increases Speed by 20 for 5 minutes. Cooldown: 10 min. <Note>. Dance of Fury, Dance of Concentration, and Song of Wind do not stack. Duration: 30 days. -->
         <set name="icon" val="BranchSys2.icon.br_aga_singer_dancer_i00"/>
         <set name="default_action" val="EQUIP"/>
@@ -36,7 +36,7 @@
             <item id="49000" min="1" max="1" chance="100"/>
         </capsuled_items>
     </item>
-    <item id="49002" name="Agathion - Singer and Dancer" additionalName="90-day" type="Armor">
+    <item id="49002" name="Agathion - Singer and Dancer" type="Armor">
         <!-- Summons Singer and Dancer Agathion when equipped. 90-day. Cannot be exchanged, dropped, or sold. <Active Skill>. 1. Dance of Fury: increases Atk. Spd. by 5% for 20 minutes. 2. Dance of Concentration: increases Casting Spd. by 5% for 20 minutes. 3. Song of Wind: increases Speed by 20 for 5 minutes. Cooldown: 10 min. <Note>. Dance of Fury, Dance of Concentration, and Song of Wind do not stack. Duration: 90 days. -->
         <set name="icon" val="BranchSys2.icon.br_aga_singer_dancer_i00"/>
         <set name="default_action" val="EQUIP"/>
@@ -72,7 +72,7 @@
             <item id="49002" min="1" max="1" chance="100"/>
         </capsuled_items>
     </item>
-    <item id="49004" name="Ol Mahum Memo" additionalName="Event" type="EtcItem">
+    <item id="49004" name="Ol Mahum Memo" type="EtcItem">
         <!-- 10-year-old Memo from the Ol Mahum. Take 10 of these to the Turek Orc Elder for a Mahum Adena Bank. You can only get one, so the rest of the Memo is yours to do as you wish. Cannot be exchanged, dropped, or sold. Deleted after event. -->
         <set name="icon" val="icon.event_mahum_memo"/>
         <set name="is_tradable" val="false"/>
@@ -81,7 +81,7 @@
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="49005" name="Turek Orc Memo" additionalName="Event" type="EtcItem">
+    <item id="49005" name="Turek Orc Memo" type="EtcItem">
         <!-- 10-year-old Memo from the Turek Orcs. Take 10 of these to the Turek Orc Elder for an Orc Adena Bank. You can only get one, so the rest of the Memo is yours to do as you wish. Deleted after event. -->
         <set name="icon" val="icon.event_orc_memo"/>
         <set name="is_tradable" val="false"/>
@@ -90,7 +90,7 @@
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="49006" name="Ol Mahum Adena Bank" additionalName="15-day" type="EtcItem">
+    <item id="49006" name="Ol Mahum Adena Bank" type="EtcItem">
         <!-- Shake and pour. Sometimes you get items, and sometimes you get money! Once a day only. 15-day. Cannot be exchanged, dropped, or sold. -->
         <set name="icon" val="icon.event_mahum_coinbox"/>
         <set name="default_action" val="SKILL_REDUCE"/>
@@ -100,7 +100,7 @@
         <set name="is_sellable" val="false"/>
         <set name="time" val="21600"/>
     </item>
-    <item id="49007" name="Turek Orc Adena Bank" additionalName="30-day" type="EtcItem">
+    <item id="49007" name="Turek Orc Adena Bank" type="EtcItem">
         <!-- Shake and pour. Sometimes you get items, and sometimes you get money! Once a day only. 30-day. Cannot be exchanged, dropped, or sold. -->
         <set name="icon" val="icon.event_orc_coinbox"/>
         <set name="default_action" val="SKILL_REDUCE"/>
@@ -110,7 +110,7 @@
         <set name="is_sellable" val="false"/>
         <set name="time" val="43200"/>
     </item>
-    <item id="49008" name="Soulshot (No-grade)" additionalName="Event" type="EtcItem">
+    <item id="49008" name="Soulshot (No-grade)" type="EtcItem">
         <!-- Immediately deals considerable P. Damage. Used with a No-grade weapon. -->
         <set name="icon" val="icon.etc_soulshot_none_for_rookie_i00"/>
         <set name="default_action" val="SOULSHOT"/>
@@ -118,7 +118,7 @@
         <set name="weight" val="1"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="49009" name="Spiritshot (No-grade)" additionalName="Event" type="EtcItem">
+    <item id="49009" name="Spiritshot (No-grade)" type="EtcItem">
         <!-- Immediately deals considerable M. Damage. Used with a No-grade weapon. -->
         <set name="icon" val="icon.etc_spiritshot_none_for_rookie_i00"/>
         <set name="default_action" val="SPIRITSHOT"/>
@@ -126,7 +126,7 @@
         <set name="weight" val="1"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="49010" name="Soulshot (D-grade)" additionalName="Event" type="EtcItem">
+    <item id="49010" name="Soulshot (D-grade)" type="EtcItem">
         <!-- Immediately deals considerable P. Damage. Used with a D-grade weapon. -->
         <set name="icon" val="icon.etc_spirit_bullet_blue_i00"/>
         <set name="default_action" val="SOULSHOT"/>
@@ -135,7 +135,7 @@
         <set name="weight" val="2"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="49011" name="Spiritshot (D-grade)" additionalName="Event" type="EtcItem">
+    <item id="49011" name="Spiritshot (D-grade)" type="EtcItem">
         <!-- Immediately deals considerable M. Damage. Used with a D-grade weapon. -->
         <set name="icon" val="icon.etc_spell_shot_blue_i00"/>
         <set name="default_action" val="SPIRITSHOT"/>
@@ -144,98 +144,98 @@
         <set name="weight" val="4"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="49012" name="Healing Potion" additionalName="Event" type="EtcItem">
+    <item id="49012" name="Healing Potion" type="EtcItem">
         <!-- Magical potion that slowly restores HP. Lasts 15 sec. -->
         <set name="icon" val="icon.etc_lesser_potion_red_i00"/>
         <set name="default_action" val="SKILL_REDUCE"/>
         <set name="weight" val="5"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="49013" name="Major Healing Potion" additionalName="Event" type="EtcItem">
+    <item id="49013" name="Major Healing Potion" type="EtcItem">
         <!-- Magical potion that slowly restores HP. Lasts 15 sec. -->
         <set name="icon" val="icon.etc_potion_scarlet_i00"/>
         <set name="default_action" val="SKILL_REDUCE"/>
         <set name="weight" val="5"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="49014" name="Facelifting Potion - A" additionalName="Event" type="EtcItem">
+    <item id="49014" name="Facelifting Potion - A" type="EtcItem">
         <!-- Beauty potion that changes one's facial appearance to Type A. Both genders. The results may be viewed on the Character Creation Screen. -->
         <set name="icon" val="icon.etc_lesser_potion_purple_i00"/>
         <set name="default_action" val="SKILL_REDUCE"/>
         <set name="weight" val="50"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="49015" name="Facelifting Potion - B" additionalName="Event" type="EtcItem">
+    <item id="49015" name="Facelifting Potion - B" type="EtcItem">
         <!-- Beauty potion that changes one's facial appearance to Type B. Both genders. The results may be viewed on the Character Creation Screen. -->
         <set name="icon" val="icon.etc_lesser_potion_purple_i00"/>
         <set name="default_action" val="SKILL_REDUCE"/>
         <set name="weight" val="50"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="49016" name="Facelifting Potion - C" additionalName="Event" type="EtcItem">
+    <item id="49016" name="Facelifting Potion - C" type="EtcItem">
         <!-- Beauty potion that changes one's facial appearance to Type C. Both genders. The results may be viewed on the Character Creation Screen. -->
         <set name="icon" val="icon.etc_lesser_potion_purple_i00"/>
         <set name="default_action" val="SKILL_REDUCE"/>
         <set name="weight" val="50"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="49017" name="Dye Potion - A" additionalName="Event" type="EtcItem">
+    <item id="49017" name="Dye Potion - A" type="EtcItem">
         <!-- Beauty potion that changes one's hair color to Type A. Both genders. The results may be viewed on the Character Creation Screen. -->
         <set name="icon" val="icon.etc_lesser_potion_scarlet_i00"/>
         <set name="default_action" val="SKILL_REDUCE"/>
         <set name="weight" val="50"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="49018" name="Dye Potion - B" additionalName="Event" type="EtcItem">
+    <item id="49018" name="Dye Potion - B" type="EtcItem">
         <!-- Beauty potion that changes one's hair color to Type B. Both genders. The results may be viewed on the Character Creation Screen. -->
         <set name="icon" val="icon.etc_lesser_potion_scarlet_i00"/>
         <set name="default_action" val="SKILL_REDUCE"/>
         <set name="weight" val="50"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="49019" name="Dye Potion - C" additionalName="Event" type="EtcItem">
+    <item id="49019" name="Dye Potion - C" type="EtcItem">
         <!-- Beauty potion that changes one's hair color to Type C. Both genders. The results may be viewed on the Character Creation Screen. -->
         <set name="icon" val="icon.etc_lesser_potion_scarlet_i00"/>
         <set name="default_action" val="SKILL_REDUCE"/>
         <set name="weight" val="50"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="49020" name="Dye Potion - D" additionalName="Event" type="EtcItem">
+    <item id="49020" name="Dye Potion - D" type="EtcItem">
         <!-- Beauty potion that changes one's hair color to Type D. Both genders. The results may be viewed on the Character Creation Screen. -->
         <set name="icon" val="icon.etc_lesser_potion_scarlet_i00"/>
         <set name="default_action" val="SKILL_REDUCE"/>
         <set name="weight" val="50"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="49021" name="Facelifting Potion Pack" additionalName="Event" type="EtcItem">
+    <item id="49021" name="Facelifting Potion Pack" type="EtcItem">
         <!-- Wrapped Pack containing either Facelifting Potion A, B, or C. -->
         <set name="icon" val="icon.event_high_oriental_park_i00"/>
         <set name="default_action" val="CAPSULE"/>
         <set name="immediate_effect" val="true"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="49022" name="Dye Potion Pack" additionalName="Event" type="EtcItem">
+    <item id="49022" name="Dye Potion Pack" type="EtcItem">
         <!-- Wrapped Pack containing either Dye Potion A, B, C, or D. -->
         <set name="icon" val="icon.event_high_oriental_park_i00"/>
         <set name="default_action" val="CAPSULE"/>
         <set name="immediate_effect" val="true"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="49023" name="Scroll: Empower" additionalName="Event" type="EtcItem">
+    <item id="49023" name="Scroll: Empower" type="EtcItem">
         <!-- Double click for a buff that increases your magic. -->
         <set name="icon" val="icon.etc_scroll_white_i00"/>
         <set name="default_action" val="SKILL_REDUCE"/>
         <set name="weight" val="120"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="49024" name="Scroll: Might" additionalName="Event" type="EtcItem">
+    <item id="49024" name="Scroll: Might" type="EtcItem">
         <!-- Double click for a buff that increases your P. Atk. -->
         <set name="icon" val="icon.etc_scroll_white_i00"/>
         <set name="default_action" val="SKILL_REDUCE"/>
         <set name="weight" val="120"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="49025" name="Scroll: Shield" additionalName="Event" type="EtcItem">
+    <item id="49025" name="Scroll: Shield" type="EtcItem">
         <!-- Double click for a buff that increases your defenses. -->
         <set name="icon" val="icon.etc_scroll_white_i00"/>
         <set name="default_action" val="SKILL_REDUCE"/>
@@ -362,7 +362,7 @@
             <stat type="mDef">14</stat>
         </stats>
     </item>
-    <item id="49032" name="Eva's Mark" additionalName="30-day" type="Armor">
+    <item id="49032" name="Eva's Mark" type="Armor">
         <!-- Celebrate the launch of the classic server! Equip and use the skill created to teleport to the nearest town. Cooldown is 60 min. 30-day. Cannot be exchanged, dropped, or sold. -->
         <set name="icon" val="icon.bm_soaring_bird"/>
         <set name="default_action" val="EQUIP"/>
@@ -389,7 +389,7 @@
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="49034" name="Ol Mahum Adena Bank" additionalName="Event" type="EtcItem">
+    <item id="49034" name="Ol Mahum Adena Bank" type="EtcItem">
         <!-- Shake and pour. Sometimes you get items, and sometimes you get money! One use only. Cannot be exchanged, dropped, or sold. -->
         <set name="icon" val="icon.event_mahum_coinbox"/>
         <set name="default_action" val="SKILL_REDUCE"/>
@@ -398,7 +398,7 @@
         <set name="is_depositable" val="false"/>
         <set name="is_sellable" val="false"/>
     </item>
-    <item id="49035" name="Turek Orc Adena Bank" additionalName="Event" type="EtcItem">
+    <item id="49035" name="Turek Orc Adena Bank" type="EtcItem">
         <!-- Shake and pour. Sometimes you get items, and sometimes you get money! One use only. Cannot be exchanged, dropped, or sold. -->
         <set name="icon" val="icon.event_orc_coinbox"/>
         <set name="default_action" val="SKILL_REDUCE"/>
@@ -718,7 +718,7 @@
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="49055" name="Thunder Charge" additionalName="Event" type="EtcItem">
+    <item id="49055" name="Thunder Charge" type="EtcItem">
         <!-- When Spirit Thunder Rifle is charged with a Soulshot / Spiritshot / Blessed Spiritshot 3 Magic Bombs are produced. Can be created once per day using a Thunder Charge. Can be received again after 6:30 PM. Cannot be exchanged, dropped, or sold. The item disappears after the event is over. -->
         <set name="icon" val="icon.block_boom"/>
         <set name="is_tradable" val="false"/>
@@ -727,7 +727,7 @@
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="49056" name="Lucky Package: Soulshots (No-grade)" additionalName="Event" type="EtcItem">
+    <item id="49056" name="Lucky Package: Soulshots (No-grade)" type="EtcItem">
         <!-- Open the package to get from 100 to 10 000 Mysterious Soulshots (No-grade)   Cannot be exchanged, dropped, or sold. The item disappears after the event is over. -->
         <set name="icon" val="icon.etc_treasure_box_i00"/>
         <set name="default_action" val="CAPSULE"/>
@@ -739,7 +739,7 @@
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="49057" name="Lucky Package: Soulshots (D-grade)" additionalName="Event" type="EtcItem">
+    <item id="49057" name="Lucky Package: Soulshots (D-grade)" type="EtcItem">
         <!-- Open the package to get from 100 to 10 000 Mysterious Soulshots (D-grade). Cannot be exchanged, dropped, or sold. The item disappears after the event is over. -->
         <set name="icon" val="icon.etc_treasure_box_i01"/>
         <set name="default_action" val="CAPSULE"/>
@@ -751,7 +751,7 @@
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="49058" name="Lucky Package: Soulshots (C-grade)" additionalName="Event" type="EtcItem">
+    <item id="49058" name="Lucky Package: Soulshots (C-grade)" type="EtcItem">
         <!-- Open the package to get from 50 to 5000 Mysterious Soulshots (C-grade). Cannot be exchanged, dropped, or sold. The item disappears after the event is over. -->
         <set name="icon" val="icon.etc_treasure_box_i07"/>
         <set name="default_action" val="CAPSULE"/>
@@ -763,7 +763,7 @@
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="49059" name="Lucky Package: Spiritshots (No-grade)" additionalName="Event" type="EtcItem">
+    <item id="49059" name="Lucky Package: Spiritshots (No-grade)" type="EtcItem">
         <!-- Open the package to get from 50 to 1000 Mysterious Spiritshots (No-grade). Cannot be exchanged, dropped, or sold. The item disappears after the event is over. -->
         <set name="icon" val="icon.etc_treasure_box_i00"/>
         <set name="default_action" val="CAPSULE"/>
@@ -775,7 +775,7 @@
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="49060" name="Lucky Package: Spiritshots (D-grade)" additionalName="Event" type="EtcItem">
+    <item id="49060" name="Lucky Package: Spiritshots (D-grade)" type="EtcItem">
         <!-- Open the package to get from 80 to 3000 Mysterious Spiritshots (D-grade). Cannot be exchanged, dropped, or sold. The item disappears after the event is over. -->
         <set name="icon" val="icon.etc_treasure_box_i01"/>
         <set name="default_action" val="CAPSULE"/>
@@ -787,7 +787,7 @@
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="49061" name="Lucky Package: Spiritshots (C-grade)" additionalName="Event" type="EtcItem">
+    <item id="49061" name="Lucky Package: Spiritshots (C-grade)" type="EtcItem">
         <!-- Open the package to get from 30 to 1000 Mysterious Spiritshots (C-grade). Cannot be exchanged, dropped, or sold. The item disappears after the event is over. -->
         <set name="icon" val="icon.etc_treasure_box_i07"/>
         <set name="default_action" val="CAPSULE"/>
@@ -846,7 +846,7 @@
             <skill id="39031" level="1"/> <!-- Player Commendation - Spiritshot (C-grade) -->
         </skills>
     </item>
-    <item id="49065" name="Lucky Package: Blessed Spiritshots (No-grade)" additionalName="Event" type="EtcItem">
+    <item id="49065" name="Lucky Package: Blessed Spiritshots (No-grade)" type="EtcItem">
         <!-- Open the package to get from 100 to 10 000 Mysterious Blessed Spiritshots (No-grade). Cannot be exchanged, dropped, or sold. The item disappears after the event is over. -->
         <set name="icon" val="icon.etc_treasure_box_i00"/>
         <set name="default_action" val="CAPSULE"/>
@@ -858,7 +858,7 @@
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="49066" name="Lucky Package: Blessed Spiritshots (D-grade)" additionalName="Event" type="EtcItem">
+    <item id="49066" name="Lucky Package: Blessed Spiritshots (D-grade)" type="EtcItem">
         <!-- Open the package to get from 100 to 10 000 Mysterious Blessed Spiritshots (D-grade). Cannot be exchanged, dropped, or sold. The item disappears after the event is over. -->
         <set name="icon" val="icon.etc_treasure_box_i01"/>
         <set name="default_action" val="CAPSULE"/>
@@ -870,7 +870,7 @@
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="49067" name="Lucky Package: Blessed Spiritshots (C-grade)" additionalName="Event" type="EtcItem">
+    <item id="49067" name="Lucky Package: Blessed Spiritshots (C-grade)" type="EtcItem">
         <!-- Open the package to get from 50 to 5000 Mysterious Blessed Spiritshots (C-grade). Cannot be exchanged, dropped, or sold. The item disappears after the event is over. -->
         <set name="icon" val="icon.etc_treasure_box_i07"/>
         <set name="default_action" val="CAPSULE"/>
@@ -882,7 +882,7 @@
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="49068" name="Stone of Speed" additionalName="Event" type="EtcItem">
+    <item id="49068" name="Stone of Speed" type="EtcItem">
         <!-- Increases XP and SP gain by 10% for 20 minutes. Cooldown: 10 minutes. <Attention!> Stone of Speed will have no effect, if used throughout the duration time of Quick Step skill or Speed-increasing potion. -->
         <set name="icon" val="icon.stone_8_i00"/>
         <set name="default_action" val="SKILL_REDUCE"/>
@@ -892,7 +892,7 @@
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="49069" name="Spirit Thunder Chest: Soulshots (No-grade)" additionalName="Event" type="EtcItem">
+    <item id="49069" name="Spirit Thunder Chest: Soulshots (No-grade)" type="EtcItem">
         <!-- Open the chest to get 600 Mysterious Soulshots (No-grade) or Lucky Package: Soulshots (No-grade). Cannot be exchanged, dropped, or sold. The item disappears after the event is over. -->
         <set name="icon" val="icon.etc_pi_gift_box_i04"/>
         <set name="default_action" val="PEEL"/>
@@ -903,7 +903,7 @@
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="49070" name="Spirit Thunder Chest: Soulshots (D-grade)" additionalName="Event" type="EtcItem">
+    <item id="49070" name="Spirit Thunder Chest: Soulshots (D-grade)" type="EtcItem">
         <!-- Open the chest to get 1350 Mysterious Soulshots (D-grade) or Lucky Package: Soulshots (D-grade). Cannot be exchanged, dropped, or sold. The item disappears after the event is over. -->
         <set name="icon" val="icon.etc_pi_gift_box_i00"/>
         <set name="default_action" val="PEEL"/>
@@ -914,7 +914,7 @@
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="49071" name="Spirit Thunder Chest: Soulshots (C-grade)" additionalName="Event" type="EtcItem">
+    <item id="49071" name="Spirit Thunder Chest: Soulshots (C-grade)" type="EtcItem">
         <!-- Open the chest to get 900 Mysterious Soulshots (C-grade) or Lucky Package: Soulshots (C-grade). Cannot be exchanged, dropped, or sold. The item disappears after the event is over. -->
         <set name="icon" val="icon.etc_pi_gift_box_i01"/>
         <set name="default_action" val="PEEL"/>
@@ -925,7 +925,7 @@
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="49072" name="Spirit Thunder Chest: Spiritshots (No-grade)" additionalName="Event" type="EtcItem">
+    <item id="49072" name="Spirit Thunder Chest: Spiritshots (No-grade)" type="EtcItem">
         <!-- Open the chest to get 270 Mysterious Soulshots (No-grade) or Lucky Package: Spiritshots (No-grade). Cannot be exchanged, dropped, or sold. The item disappears after the event is over. -->
         <set name="icon" val="icon.etc_pi_gift_box_i04"/>
         <set name="default_action" val="PEEL"/>
@@ -936,7 +936,7 @@
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="49073" name="Spirit Thunder Chest: Spiritshots (D-grade)" additionalName="Event" type="EtcItem">
+    <item id="49073" name="Spirit Thunder Chest: Spiritshots (D-grade)" type="EtcItem">
         <!-- Open the chest to get 750 Mysterious Soulshots (D-grade) or Lucky Package: Spiritshots (D-grade). Cannot be exchanged, dropped, or sold. The item disappears after the event is over. -->
         <set name="icon" val="icon.etc_pi_gift_box_i00"/>
         <set name="default_action" val="PEEL"/>
@@ -947,7 +947,7 @@
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="49074" name="Spirit Thunder Chest: Spiritshots (C-grade)" additionalName="Event" type="EtcItem">
+    <item id="49074" name="Spirit Thunder Chest: Spiritshots (C-grade)" type="EtcItem">
         <!-- Open the chest to get 750 Mysterious Soulshots (C-grade) or Lucky Package: Spiritshots (C-grade). Cannot be exchanged, dropped, or sold. The item disappears after the event is over. -->
         <set name="icon" val="icon.etc_pi_gift_box_i01"/>
         <set name="default_action" val="PEEL"/>
@@ -958,7 +958,7 @@
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="49075" name="Spirit Thunder Chest: Blessed Spiritshots (No-grade)" additionalName="Event" type="EtcItem">
+    <item id="49075" name="Spirit Thunder Chest: Blessed Spiritshots (No-grade)" type="EtcItem">
         <!-- Open the chest to get 120 Mysterious Blessed Spiritshots (No-grade) or Lucky Package: Blessed Spiritshots (No-grade). Cannot be exchanged, dropped, or sold. The item disappears after the event is over. -->
         <set name="icon" val="icon.etc_pi_gift_box_i04"/>
         <set name="default_action" val="PEEL"/>
@@ -969,7 +969,7 @@
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="49076" name="Spirit Thunder Chest: Blessed Spiritshots (D-grade)" additionalName="Event" type="EtcItem">
+    <item id="49076" name="Spirit Thunder Chest: Blessed Spiritshots (D-grade)" type="EtcItem">
         <!-- Open the chest to get 300 Mysterious Blessed Spiritshots (D-grade) or Lucky Package: Blessed Spiritshots (D-grade). Cannot be exchanged, dropped, or sold. The item disappears after the event is over. -->
         <set name="icon" val="icon.etc_pi_gift_box_i00"/>
         <set name="default_action" val="PEEL"/>
@@ -980,7 +980,7 @@
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="49077" name="Spirit Thunder Chest: Blessed Spiritshots (C-grade)" additionalName="Event" type="EtcItem">
+    <item id="49077" name="Spirit Thunder Chest: Blessed Spiritshots (C-grade)" type="EtcItem">
         <!-- Open the chest to get 150 Mysterious Blessed Spiritshots (D-grade) or Lucky Package: Blessed Spiritshots (D-grade). Cannot be exchanged, dropped, or sold. The item disappears after the event is over. -->
         <set name="icon" val="icon.etc_pi_gift_box_i01"/>
         <set name="default_action" val="PEEL"/>
@@ -1074,7 +1074,7 @@
         <set name="default_action" val="SKILL_REDUCE"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="49086" name="Rice Cake of Fighting Spirit" additionalName="For XP" type="EtcItem">
+    <item id="49086" name="Rice Cake of Fighting Spirit" type="EtcItem">
         <!-- Increases XP and SP gain by 20% for 20 minutes. The effect remains after character's death. Cooldown: 10 minutes. <Attention> The effect changes to the effect of Rice Cake of Flaming Fighting Spirit, if it is used throughout the duration time of Rice Cake of Fighting Spirit (inc. the one for XP). -->
         <set name="icon" val="icon.bm_rice_cake_i00"/>
         <set name="default_action" val="SKILL_REDUCE"/>

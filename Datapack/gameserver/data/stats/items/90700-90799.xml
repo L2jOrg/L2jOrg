@@ -610,7 +610,7 @@
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="90767" name="Zaken's Earring" additionalName="7-day" type="Armor">
+    <item id="90767" name="Zaken's Earring" type="Armor">
         <!-- A 7-day item. MP +22, Bleed Resistance and Bleed Atk. Rate +10%, Stun Resistance and Stun Atk. Rate +5%, Mental Resistance and Atk. Rate +5% Healing Effects +4%, HP Recovery Bonus +10%, skill MP consumption -2%. The effect doesn't stack if two identical earrings are worn. Cannot be exchanged, dropped, or sold in private store. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.accessory_earring_of_zaken_i00"/>
         <set name="default_action" val="EQUIP"/>
@@ -695,7 +695,7 @@
         <set name="is_depositable" val="false"/>
         <set name="is_sellable" val="false"/>
     </item>
-    <item id="90774" name="Fire Dragon Pendant +3" additionalName="7-day" type="Armor">
+    <item id="90774" name="Fire Dragon Pendant +3" type="Armor">
         <!-- M. Def. +13. Cannot be exchanged, dropped or sold. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.bm_pendant_pve"/>
         <set name="default_action" val="EQUIP"/>
@@ -710,7 +710,7 @@
             <stat type="pDef">31</stat>
         </stats>
     </item>
-    <item id="90775" name="Talisman of Border - Lv. 3" additionalName="7-day" type="Armor">
+    <item id="90775" name="Talisman of Border - Lv. 3" type="Armor">
         <!-- A 7-day item. P./ M. Def. +17, P./ M. Skills Evasion +1, HP/ MP/ CP +80, Speed +3, P./ M. Atk. Spd. +15, Acquired XP/ SP +3%. Effects from two such talismans do not stack. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.bm_magic_square_talisman"/>
         <set name="default_action" val="EQUIP"/>
@@ -721,7 +721,7 @@
         <set name="is_sellable" val="false"/>
         <set name="time" val="10080"/>
     </item>
-    <item id="90776" name="Fire Dragon Pendant +4" additionalName="7-day" type="Armor">
+    <item id="90776" name="Fire Dragon Pendant +4" type="Armor">
         <!-- M. Def. +14. Increases Acquired XP/ SP by +2%. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.bm_pendant_pve"/>
         <set name="default_action" val="EQUIP"/>
@@ -736,7 +736,7 @@
             <stat type="pDef">34</stat>
         </stats>
     </item>
-    <item id="90777" name="Talisman of Border - Lv. 4" additionalName="7-day" type="Armor">
+    <item id="90777" name="Talisman of Border - Lv. 4" type="Armor">
         <!-- A 7-day item. P./ M. Def. +19, P./ M. Skills Evasion +1, HP/ MP/ CP +80, Speed +3, Atk. Spd./ Casting Spd. +17, Acquired XP/ SP +3%. Effects from two such talismans do not stack. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.bm_magic_square_talisman"/>
         <set name="default_action" val="EQUIP"/>
@@ -747,7 +747,7 @@
         <set name="is_sellable" val="false"/>
         <set name="time" val="10080"/>
     </item>
-    <item id="90778" name="Fire Dragon Pendant +5" additionalName="7-day" type="Armor">
+    <item id="90778" name="Fire Dragon Pendant +5" type="Armor">
         <!-- M. Def. +15, XP/SP gain +5%, P./ M. Atk. +10. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.bm_pendant_pve"/>
         <set name="default_action" val="EQUIP"/>
@@ -762,7 +762,7 @@
             <stat type="pDef">37</stat>
         </stats>
     </item>
-    <item id="90779" name="Talisman of Border - Lv. 5" additionalName="7-day" type="Armor">
+    <item id="90779" name="Talisman of Border - Lv. 5" type="Armor">
         <!-- A 7-day item. P./ M. Def. +22, P./ M. Skills Evasion +1, HP/ MP/ CP +120, Speed +5, Atk. Spd./ Casting Spd. +10, Acquired XP/ SP +4%. Effects from two such talismans do not stack. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.bm_magic_square_talisman"/>
         <set name="default_action" val="EQUIP"/>
@@ -773,7 +773,7 @@
         <set name="is_sellable" val="false"/>
         <set name="time" val="10080"/>
     </item>
-    <item id="90780" name="Fire Dragon Pendant +6" additionalName="7-day" type="Armor">
+    <item id="90780" name="Fire Dragon Pendant +6" type="Armor">
         <!-- M. Def. +16, XP/SP gain +10%, P./ M. Atk. +20. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.bm_pendant_pve"/>
         <set name="default_action" val="EQUIP"/>
@@ -788,7 +788,7 @@
             <stat type="pDef">40</stat>
         </stats>
     </item>
-    <item id="90781" name="Talisman of Border - Lv. 6" additionalName="7-day" type="Armor">
+    <item id="90781" name="Talisman of Border - Lv. 6" type="Armor">
         <!-- A 7-day item. P./ M. Def. +24, P./ M. Skills Evasion +2, HP/ MP/ CP +160, Speed +5, P./ M. Atk. Spd. +15, Acquired XP/ SP +4%. Allows using Border Purification (cancels Paralysis, Petrification, Poisoning, and Bleeding). Effects from two such talismans do not stack. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. The item will be removed after the event is over. -->
         <set name="icon" val="icon.bm_magic_square_talisman"/>
         <set name="default_action" val="EQUIP"/>
@@ -799,7 +799,7 @@
         <set name="is_sellable" val="false"/>
         <set name="time" val="10080"/>
     </item>
-    <item id="90782" name="Fire Dragon Pendant +7" additionalName="7-day" type="Armor">
+    <item id="90782" name="Fire Dragon Pendant +7" type="Armor">
         <!-- M. Def. +17, XP/SP gain +20%, P./ M. Atk. +30. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.bm_pendant_pve"/>
         <set name="default_action" val="EQUIP"/>
@@ -814,7 +814,7 @@
             <stat type="pDef">43</stat>
         </stats>
     </item>
-    <item id="90783" name="Talisman of Border - Lv. 7" additionalName="7-day" type="Armor">
+    <item id="90783" name="Talisman of Border - Lv. 7" type="Armor">
         <!-- A 7-day item. P./ M. Def. +29, P./ M. Skills Evasion +2, HP/ MP/ CP +160, Speed +7, P./ M. Atk. Spd. +15, Acquired XP/ SP +5%. Allows using Border Power - Lv. 1 (at a certain probability, increases attack abilities) and Border Purification (cancels Paralysis, Petrification, Poisoning, and Bleeding). Effects from two such talismans do not stack. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.bm_magic_square_talisman"/>
         <set name="default_action" val="EQUIP"/>
@@ -825,7 +825,7 @@
         <set name="is_sellable" val="false"/>
         <set name="time" val="10080"/>
     </item>
-    <item id="90784" name="Lv. 4 Vital Stone" additionalName="15-day" type="Armor">
+    <item id="90784" name="Lv. 4 Vital Stone" type="Armor">
         <!-- A 15-day item. Sayha Grace XP/SP +8%, Sayha Grace Consumption -10% while hunting. Effect does not stack with additional jewels of the same type. Cannot be exchanged, dropped, or sold in private store. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.etc_bm_jewel_vital"/>
         <set name="default_action" val="EQUIP"/>
@@ -838,7 +838,7 @@
         <set name="is_sellable" val="false"/>
         <set name="time" val="21600"/>
     </item>
-    <item id="90785" name="Diamond - Lv. 4" additionalName="15-day" type="Armor">
+    <item id="90785" name="Diamond - Lv. 4" type="Armor">
         <!-- 15-day item. P. Def. +81, Received P. Critical Damage -4%, when equipped. Effect does not stack with additional jewels of the same type. Cannot be exchanged, dropped, or sold in private store. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.etc_bm_jewel_diamond_i00"/>
         <set name="default_action" val="EQUIP"/>
@@ -851,7 +851,7 @@
         <set name="is_sellable" val="false"/>
         <set name="time" val="21600"/>
     </item>
-    <item id="90786" name="Pearl - Lv. 4" additionalName="15-day" type="Armor">
+    <item id="90786" name="Pearl - Lv. 4" type="Armor">
         <!-- 30-day item. M. Def. +46, Received M. Critical Damage -4%, when equipped. Effect does not stack with additional jewels of the same type. Cannot be exchanged, dropped, or sold in private store. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.etc_bm_jewel_pearl_i00"/>
         <set name="default_action" val="EQUIP"/>
@@ -864,7 +864,7 @@
         <set name="is_sellable" val="false"/>
         <set name="time" val="21600"/>
     </item>
-    <item id="90787" name="Lv. 4 Jade" additionalName="15-day" type="Armor">
+    <item id="90787" name="Lv. 4 Jade" type="Armor">
         <!-- 15-day item. Atk. Spd./ Casting Spd. +7%, when equipped. Effect does not stack with additional jewels of the same type. Cannot be exchanged, dropped, or sold in private store. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.etc_bm_jewel_jade_i00"/>
         <set name="default_action" val="EQUIP"/>
@@ -877,7 +877,7 @@
         <set name="is_sellable" val="false"/>
         <set name="time" val="21600"/>
     </item>
-    <item id="90788" name="Fire Dragon Belt" additionalName="7-day" type="Armor">
+    <item id="90788" name="Fire Dragon Belt" type="Armor">
         <!-- A 7-day item. STR +1, INT +1, HP Recovery Bonus +2.31, Max MP +1.54, CP Recovery +3.07, Max HP/ MP/ CP +10%, Inventory Slot +6, Weight Limit +7000, M. Critical Damage +4%, Healing Potions Effect +100. (Can be applied to Melissa's High Grade Recovery Potion, Melissa's Recovery Potion, Warrior's Quick Healing Potion). Cannot be exchanged, dropped, or sold in private store. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.bm_vallakas_belt"/>
         <set name="default_action" val="EQUIP"/>
@@ -893,7 +893,7 @@
             <stat type="pDef">14</stat>
         </stats>
     </item>
-    <item id="90789" name="Garnet - Lv. 4" additionalName="15-day" type="Armor">
+    <item id="90789" name="Garnet - Lv. 4" type="Armor">
         <!-- 15-day item. Stun/ Pulling/ Silence/ Petrification/ Fear Resistance +11%, when equipped. Effect does not stack with additional jewels of the same type. Cannot be exchanged, dropped, or sold in private store. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.etc_bm_jewel_garnet"/>
         <set name="default_action" val="EQUIP"/>
@@ -906,7 +906,7 @@
         <set name="is_sellable" val="false"/>
         <set name="time" val="21600"/>
     </item>
-    <item id="90790" name="Fire Dragon Pendant +8" additionalName="7-day" type="Armor">
+    <item id="90790" name="Fire Dragon Pendant +8" type="Armor">
         <!-- M. Def. +18, Acquired XP/ SP +25%, P./ M. Atk. +40, P./ M. Critical Damage +5%. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.bm_pendant_pve"/>
         <set name="default_action" val="EQUIP"/>
@@ -921,7 +921,7 @@
             <stat type="pDef">46</stat>
         </stats>
     </item>
-    <item id="90791" name="Talisman of Border - Lv. 8" additionalName="7-day" type="Armor">
+    <item id="90791" name="Talisman of Border - Lv. 8" type="Armor">
         <!-- A 7-day item. P./ M. Def. +34, P./ M. Skills Evasion +2, HP/ MP/ CP +200, Speed +7, P./ M. Atk. Spd. +15, Acquired XP/ SP +5%. Allows using Border Power - Lv. 2 (at a certain probability, increases attack abilities) and Border Purification (cancels Paralysis, Petrification, Poisoning, and Bleeding). Effects from two such talismans do not stack. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.bm_magic_square_talisman"/>
         <set name="default_action" val="EQUIP"/>
@@ -932,7 +932,7 @@
         <set name="is_sellable" val="false"/>
         <set name="time" val="10080"/>
     </item>
-    <item id="90792" name="Topaz - Lv. 4" additionalName="15-day" type="Armor">
+    <item id="90792" name="Topaz - Lv. 4" type="Armor">
         <!-- 15-day item. Disrupts the target's skill casting when used. Inflicts 1357 damage in PvP. Effect does not stack with additional jewels of the same type. Cannot be exchanged, dropped, or sold in private store. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.etc_bm_jewel_topaz_i00"/>
         <set name="default_action" val="EQUIP"/>
@@ -959,7 +959,7 @@
             <skill id="55715" level="1"/> <!-- Chef's Fish Stew Box -->
         </skills>
     </item>
-    <item id="90794" name="Shining Scroll of Mood Melody" additionalName="Event" type="EtcItem">
+    <item id="90794" name="Shining Scroll of Mood Melody" type="EtcItem">
         <!-- For 20 minutes activates the following effects: Might, Shield, Haste, Empower, Acumen, Wind Walk, Vampiric Rage, Berserker Spirit, Focus, Death Whisper, Guidance, Purity, Wild Magic, Concentration. Cannot be used together with Scroll of Mood Melody. Cannot be exchanged, dropped or sold. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.bm_magmeld"/>
         <set name="default_action" val="SKILL_REDUCE"/>
@@ -969,7 +969,7 @@
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="90795" name="Zaken's Earring Box" additionalName="7-day" type="EtcItem">
+    <item id="90795" name="Zaken's Earring Box" type="EtcItem">
         <!-- Double-click to obtain one Zaken's Earring (7-day). Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.bm_freya_gift_box"/>
         <set name="default_action" val="PEEL"/>
@@ -981,7 +981,7 @@
         <set name="is_stackable" val="true"/>
         <set name="time" val="10080"/>
     </item>
-    <item id="90796" name="Fire Dragon Pendant Chest +3" additionalName="7-day" type="EtcItem">
+    <item id="90796" name="Fire Dragon Pendant Chest +3" type="EtcItem">
         <!-- Double-click to obtain one Fire Dragon Pendant +3 (7-day). Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.bm_freya_gift_box"/>
         <set name="default_action" val="PEEL"/>
@@ -993,7 +993,7 @@
         <set name="is_stackable" val="true"/>
         <set name="time" val="10080"/>
     </item>
-    <item id="90797" name="Talisman of Border Pack +3" additionalName="7-day" type="EtcItem">
+    <item id="90797" name="Talisman of Border Pack +3" type="EtcItem">
         <!-- Double-click to obtain one Talisman of Border - Lv. 3 (7-day). Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.bm_freya_gift_box"/>
         <set name="default_action" val="PEEL"/>
@@ -1005,7 +1005,7 @@
         <set name="is_stackable" val="true"/>
         <set name="time" val="10080"/>
     </item>
-    <item id="90798" name="Fire Dragon Pendant Chest +4" additionalName="7-day" type="EtcItem">
+    <item id="90798" name="Fire Dragon Pendant Chest +4" type="EtcItem">
         <!-- Double-click to obtain one Fire Dragon Pendant +4 (7-day). Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.bm_freya_gift_box"/>
         <set name="default_action" val="PEEL"/>
@@ -1017,7 +1017,7 @@
         <set name="is_stackable" val="true"/>
         <set name="time" val="10080"/>
     </item>
-    <item id="90799" name="Talisman of Border Pack +4" additionalName="7-day" type="EtcItem">
+    <item id="90799" name="Talisman of Border Pack +4" type="EtcItem">
         <!-- Double-click to obtain one Talisman of Border - Lv. 4 (7-day). Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.bm_freya_gift_box"/>
         <set name="default_action" val="PEEL"/>

@@ -9,7 +9,7 @@
         <set name="is_depositable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="48401" name="Item Unseal Scroll" additionalName="15-minute" type="EtcItem">
+    <item id="48401" name="Item Unseal Scroll" type="EtcItem">
         <!-- Use to unseal a sealed item. -->
         <set name="icon" val="icon.scrl_item_unlock"/>
         <set name="is_tradable" val="false"/>
@@ -17,7 +17,7 @@
         <set name="is_depositable" val="false"/>
         <set name="is_sellable" val="false"/>
     </item>
-    <item id="48411" name="Item Unseal Scroll (15-min) Box" additionalName="15-minute" type="EtcItem">
+    <item id="48411" name="Item Unseal Scroll (15-min) Box" type="EtcItem">
         <!-- Double-click to obtain 10 Item Unseal Scrolls (15-min). -->
         <set name="icon" val="BranchSys3.g_ev_invite_fantasy_box"/>
         <set name="default_action" val="PEEL"/>

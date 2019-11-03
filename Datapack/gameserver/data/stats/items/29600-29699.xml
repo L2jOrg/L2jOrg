@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org ../../xsd/items.xsd">
-    <item id="29600" name="Hair Accessory for the Event" additionalName="30-day" type="Armor">
+    <item id="29600" name="Hair Accessory for the Event" type="Armor">
         <!-- Allows to use Wind Walk Lvl 1 skill. Duration: 10 min. Cooldown: 30 min. -->
         <set name="icon" val="icon.accessory_taiwan_i00"/>
         <set name="default_action" val="EQUIP"/>
@@ -181,7 +181,7 @@
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="29610" name="Katana" additionalName="30-day" type="Weapon">
+    <item id="29610" name="Katana" type="Weapon">
         <!-- A weapon for 30 days. Cannot be exchanged or dropped. -->
         <set name="icon" val="icon.weapon_katana_i00"/>
         <set name="default_action" val="EQUIP"/>
@@ -206,7 +206,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="29611" name="Stiletto" additionalName="30-day" type="Weapon">
+    <item id="29611" name="Stiletto" type="Weapon">
         <!-- A weapon for 30 days. Cannot be exchanged or dropped. -->
         <set name="icon" val="icon.weapon_stiletto_i00"/>
         <set name="default_action" val="EQUIP"/>
@@ -232,7 +232,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="29612" name="Dwarven War Hammer" additionalName="30-day" type="Weapon">
+    <item id="29612" name="Dwarven War Hammer" type="Weapon">
         <!-- A weapon for 30 days. Cannot be exchanged or dropped. -->
         <set name="icon" val="icon.weapon_dwarven_warhammer_i00"/>
         <set name="default_action" val="EQUIP"/>
@@ -258,7 +258,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="29613" name="Bec de Corbin" additionalName="30-day" type="Weapon">
+    <item id="29613" name="Bec de Corbin" type="Weapon">
         <!-- A weapon for 30 days. Cannot be exchanged or dropped. -->
         <set name="icon" val="icon.weapon_bech_de_corbin_i00"/>
         <set name="default_action" val="EQUIP"/>
@@ -287,7 +287,7 @@
             <stat type="pAtkRange">80</stat>
         </stats>
     </item>
-    <item id="29614" name="Elemental Bow" additionalName="30-day" type="Weapon">
+    <item id="29614" name="Elemental Bow" type="Weapon">
         <!-- A weapon for 30 days. Cannot be exchanged or dropped. -->
         <set name="icon" val="icon.weapon_elemental_bow_i00"/>
         <set name="default_action" val="EQUIP"/>
@@ -314,7 +314,7 @@
             <stat type="pAtkRange">500</stat>
         </stats>
     </item>
-    <item id="29615" name="Fist" additionalName="30-day" type="Weapon">
+    <item id="29615" name="Fist" type="Weapon">
         <!-- A weapon for 30 days. Cannot be exchanged or dropped. -->
         <set name="icon" val="icon.weapon_knuckle_dust_i00"/>
         <set name="default_action" val="EQUIP"/>
@@ -340,7 +340,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="29616" name="Soulfire Dirk" additionalName="30-day" type="Weapon">
+    <item id="29616" name="Soulfire Dirk" type="Weapon">
         <!-- A weapon for 30 days. Cannot be exchanged or dropped. -->
         <set name="icon" val="icon.weapon_dagger_of_magicflame_i00"/>
         <set name="default_action" val="EQUIP"/>
@@ -366,7 +366,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="29617" name="Horn of Glory" additionalName="30-day" type="Weapon">
+    <item id="29617" name="Horn of Glory" type="Weapon">
         <!-- A weapon for 30 days. Cannot be exchanged or dropped. -->
         <set name="icon" val="icon.weapon_horn_of_glory_i00"/>
         <set name="default_action" val="EQUIP"/>
@@ -391,7 +391,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="29618" name="Cursed Staff" additionalName="30-day" type="Weapon">
+    <item id="29618" name="Cursed Staff" type="Weapon">
         <!-- A weapon for 30 days. Cannot be exchanged or dropped. -->
         <set name="icon" val="icon.weapon_cursed_staff_i00"/>
         <set name="default_action" val="EQUIP"/>
@@ -418,7 +418,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="29619" name="Elven Sword*Elven Long Sword" additionalName="30-day" type="Weapon">
+    <item id="29619" name="Elven Sword*Elven Long Sword" type="Weapon">
         <!-- A weapon for 30 days. Cannot be exchanged or dropped. -->
         <set name="icon" val="icon.weapon_dual_sword_i00"/>
         <set name="default_action" val="EQUIP"/>
@@ -443,7 +443,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="29620" name="Saber*Elven Sword" additionalName="30-day" type="Weapon">
+    <item id="29620" name="Saber*Elven Sword" type="Weapon">
         <!-- A weapon for 30 days. Cannot be exchanged or dropped. -->
         <set name="icon" val="icon.weapon_dual_sword_i00"/>
         <set name="default_action" val="EQUIP"/>
@@ -468,7 +468,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="29621" name="Sword of Revolution" additionalName="30-day" type="Weapon">
+    <item id="29621" name="Sword of Revolution" type="Weapon">
         <!-- A weapon for 30 days. Cannot be exchanged or dropped. -->
         <set name="icon" val="icon.weapon_sword_of_revolution_i00"/>
         <set name="default_action" val="EQUIP"/>
@@ -493,7 +493,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="29622" name="Maingauche" additionalName="30-day" type="Weapon">
+    <item id="29622" name="Maingauche" type="Weapon">
         <!-- A weapon for 30 days. Cannot be exchanged or dropped. -->
         <set name="icon" val="icon.weapon_maingauche_i00"/>
         <set name="default_action" val="EQUIP"/>
@@ -519,7 +519,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="29623" name="Reinforced Longbow" additionalName="30-day" type="Weapon">
+    <item id="29623" name="Reinforced Longbow" type="Weapon">
         <!-- A weapon for 30 days. Cannot be exchanged or dropped. -->
         <set name="icon" val="icon.weapon_strengthening_long_bow_i00"/>
         <set name="default_action" val="EQUIP"/>
@@ -546,7 +546,7 @@
             <stat type="pAtkRange">500</stat>
         </stats>
     </item>
-    <item id="29624" name="Tarbar" additionalName="30-day" type="Weapon">
+    <item id="29624" name="Tarbar" type="Weapon">
         <!-- A weapon for 30 days. Cannot be exchanged or dropped. -->
         <set name="icon" val="icon.weapon_tarbar_i00"/>
         <set name="default_action" val="EQUIP"/>
@@ -572,7 +572,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="29625" name="Lesser Giant's Sword" additionalName="30-day" type="Weapon">
+    <item id="29625" name="Lesser Giant's Sword" type="Weapon">
         <!-- A weapon for 30 days. Cannot be exchanged or dropped. -->
         <set name="icon" val="icon.weapon_giants_sword_i00"/>
         <set name="default_action" val="EQUIP"/>
@@ -597,7 +597,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="29626" name="Lesser Giant's Hammer" additionalName="30-day" type="Weapon">
+    <item id="29626" name="Lesser Giant's Hammer" type="Weapon">
         <!-- A weapon for 30 days. Cannot be exchanged or dropped. -->
         <set name="icon" val="icon.weapon_giants_hammer_i00"/>
         <set name="default_action" val="EQUIP"/>
@@ -623,7 +623,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="29627" name="Winged Spear" additionalName="30-day" type="Weapon">
+    <item id="29627" name="Winged Spear" type="Weapon">
         <!-- A weapon for 30 days. Cannot be exchanged or dropped. -->
         <set name="icon" val="icon.weapon_winged_spear_i00"/>
         <set name="default_action" val="EQUIP"/>
@@ -652,7 +652,7 @@
             <stat type="pAtkRange">80</stat>
         </stats>
     </item>
-    <item id="29628" name="Bich'Hwa" additionalName="30-day" type="Weapon">
+    <item id="29628" name="Bich'Hwa" type="Weapon">
         <!-- A weapon for 30 days. Cannot be exchanged or dropped. -->
         <set name="icon" val="icon.weapon_bichhwa_i00"/>
         <set name="default_action" val="EQUIP"/>
@@ -678,7 +678,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="29629" name="Sword of Magic Fog" additionalName="30-day" type="Weapon">
+    <item id="29629" name="Sword of Magic Fog" type="Weapon">
         <!-- A weapon for 30 days. Cannot be exchanged or dropped. -->
         <set name="icon" val="icon.weapon_sword_of_magic_fog_i00"/>
         <set name="default_action" val="EQUIP"/>
@@ -704,7 +704,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="29630" name="Priest Mace" additionalName="30-day" type="Weapon">
+    <item id="29630" name="Priest Mace" type="Weapon">
         <!-- A weapon for 30 days. Cannot be exchanged or dropped. -->
         <set name="icon" val="icon.weapon_mace_of_priest_i00"/>
         <set name="default_action" val="EQUIP"/>
@@ -730,7 +730,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="29631" name="Goat Head Staff" additionalName="30-day" type="Weapon">
+    <item id="29631" name="Goat Head Staff" type="Weapon">
         <!-- A weapon for 30 days. Cannot be exchanged or dropped. -->
         <set name="icon" val="icon.weapon_goathead_staff_i00"/>
         <set name="default_action" val="EQUIP"/>
@@ -935,7 +935,7 @@
             <player level="40"/>
         </cond>
     </item>
-    <item id="29641" name="Mysterious No-grade Soulshot" additionalName="Not in Use" type="EtcItem">
+    <item id="29641" name="Mysterious No-grade Soulshot" type="EtcItem">
         <!-- A Soulshot temporarily increases attack power. Used with a No-grade weapon. -->
         <set name="icon" val="BranchIcon.Icon.g_etc_soulshot_i01"/>
         <set name="default_action" val="SOULSHOT"/>
@@ -946,7 +946,7 @@
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="29642" name="Mysterious Blessed No-grade Spiritshot" additionalName="Not in Use" type="EtcItem">
+    <item id="29642" name="Mysterious Blessed No-grade Spiritshot" type="EtcItem">
         <!-- A Spiritshot bestowed on a weapon increases its M. Atk. Used with a No-grade weapon. -->
         <set name="icon" val="BranchIcon.Icon.g_etc_spiritshot_i01"/>
         <set name="default_action" val="SPIRITSHOT"/>
@@ -957,7 +957,7 @@
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="29643" name="Mysterious Soulshot (D-grade)" additionalName="Not in Use" type="EtcItem">
+    <item id="29643" name="Mysterious Soulshot (D-grade)" type="EtcItem">
         <!-- The power of a higher-level spirit is bestowed upon a weapon, temporarily increasing power of attack. Used with a D-grade weapon. -->
         <set name="icon" val="br_cashtex.item.br_cash_soulshot_d_i00"/>
         <set name="default_action" val="SOULSHOT"/>
@@ -969,7 +969,7 @@
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="29644" name="Mysterious Blessed Spiritshot (D-grade)" additionalName="Not in Use" type="EtcItem">
+    <item id="29644" name="Mysterious Blessed Spiritshot (D-grade)" type="EtcItem">
         <!-- The power of a higher-level spirit is bestowed upon a weapon causing its M. Atk. to momentarily increase. Used with a D-grade weapon. -->
         <set name="icon" val="br_cashtex.item.br_cash_spiritshot_d_i00"/>
         <set name="default_action" val="SPIRITSHOT"/>
@@ -981,7 +981,7 @@
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="29645" name="Mysterious Soulshot (C-grade)" additionalName="Not in Use" type="EtcItem">
+    <item id="29645" name="Mysterious Soulshot (C-grade)" type="EtcItem">
         <!-- The power of a higher-level spirit is bestowed upon a weapon, temporarily increasing power of attack. Used with a C-grade weapon. -->
         <set name="icon" val="br_cashtex.item.br_cash_soulshot_c_i00"/>
         <set name="default_action" val="SOULSHOT"/>
@@ -993,7 +993,7 @@
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="29646" name="Mysterious Blessed Spiritshot (C-grade)" additionalName="Not in Use" type="EtcItem">
+    <item id="29646" name="Mysterious Blessed Spiritshot (C-grade)" type="EtcItem">
         <!-- The power of a higher-level spirit is bestowed upon a weapon causing its M. Atk. to momentarily increase. Used with a C-grade weapon. -->
         <set name="icon" val="br_cashtex.item.br_cash_spiritshot_c_i00"/>
         <set name="default_action" val="SPIRITSHOT"/>
@@ -1084,7 +1084,7 @@
             <skill id="55000" level="4"/> <!-- XP Rune I (100%) -->
         </skills>
     </item>
-    <item id="29651" name="Healing Potion" additionalName="Event" type="EtcItem">
+    <item id="29651" name="Healing Potion" type="EtcItem">
         <!-- Magic potion that slowly restores HP. Duration: 15 sec. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.etc_lesser_potion_red_i00"/>
         <set name="default_action" val="SKILL_REDUCE"/>
@@ -1102,7 +1102,7 @@
             <skill id="2031" level="1"/> <!-- Healing Potion -->
         </skills>
     </item>
-    <item id="29652" name="Major Healing Potion" additionalName="Event" type="EtcItem">
+    <item id="29652" name="Major Healing Potion" type="EtcItem">
         <!-- Magic potion that slowly restores HP. Duration: 15 sec. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.etc_lesser_potion_red_i00"/>
         <set name="default_action" val="SKILL_REDUCE"/>
@@ -1420,7 +1420,7 @@
             <player level="49"/>
         </cond>
     </item>
-    <item id="29667" name="Agathion - Griffin" additionalName="30-day" type="Armor">
+    <item id="29667" name="Agathion - Griffin" type="Armor">
         <!-- STR+ 1 / INT+ 1. Allows to summon a Griffin. -->
         <set name="icon" val="icon.etc_rbracelet_aga_agit_i00"/>
         <set name="default_action" val="EQUIP"/>
@@ -1811,7 +1811,7 @@
             <skill id="55074" level="1"/>
         </skills>
     </item>
-    <item id="29695" name="Quick Healing Potion" additionalName="Event" type="EtcItem">
+    <item id="29695" name="Quick Healing Potion" type="EtcItem">
         <!-- Magic potion that instantly restores small amount of HP. Instant cooldown. Cannot be used when HP is full. -->
         <set name="icon" val="icon.etc_potion_gold_i00"/>
         <set name="default_action" val="SKILL_REDUCE"/>
@@ -1824,7 +1824,7 @@
             <skill id="55083" level="1"/>
         </skills>
     </item>
-    <item id="29696" name="Major Quick Healing Potion" additionalName="Event" type="EtcItem">
+    <item id="29696" name="Major Quick Healing Potion" type="EtcItem">
         <!-- Magic potion that instantly restores HP. Instant effect with no cooldown. Cannot be used when HP is full. -->
         <set name="icon" val="icon.etc_potion_gold_i00"/>
         <set name="default_action" val="SKILL_REDUCE"/>
@@ -1837,7 +1837,7 @@
             <skill id="55084" level="1"/>
         </skills>
     </item>
-    <item id="29697" name="1st Class Buff Scroll" additionalName="Event" type="EtcItem">
+    <item id="29697" name="1st Class Buff Scroll" type="EtcItem">
         <!-- For 10 minutes gives Shield Lv.2, Might Lv.2, Concentration Lv.2, Acumen Lv.1, Wind Walk Lv.1, Focus Lv.1, Agility Lv.1, Empower Lv.1 Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
         <set name="icon" val="BranchIcon.Icon.etc_g_bm_buff_scroll_i00"/>
         <set name="default_action" val="SKILL_REDUCE"/>
@@ -1853,7 +1853,7 @@
             <skill id="55085" level="1"/>
         </skills>
     </item>
-    <item id="29698" name="2nd Class Buff Scroll" additionalName="Event" type="EtcItem">
+    <item id="29698" name="2nd Class Buff Scroll" type="EtcItem">
         <!-- Provides the following positive effects for 10 min: Shield (Lvl 3), Might (Lvl 3), Acumen (Lvl 2), Wind Walk (Lvl 2), Focus (Lvl 2), Regeneration (Lvl 1), Guidance (Lvl 1), Death Whisper (Lvl 1), Magic Barrier (Lvl 1), Blessed Body (Lvl 1), Blessed Soul (Lvl 1), Haste (Lvl 1), Agility (Lvl 2)? Empower (Lvl2). Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
         <set name="icon" val="BranchIcon.Icon.etc_g_bm_buff_scroll_i01"/>
         <set name="default_action" val="SKILL_REDUCE"/>
@@ -1869,7 +1869,7 @@
             <skill id="55086" level="2"/>
         </skills>
     </item>
-    <item id="29699" name="Minor Blessed Scroll of Escape" additionalName="Event" type="EtcItem">
+    <item id="29699" name="Minor Blessed Scroll of Escape" type="EtcItem">
         <!-- Magic Scroll that relocates you to the nearest village. Needs very little time to cast. -->
         <set name="icon" val="icon.etc_scroll_of_return_i01"/>
         <set name="default_action" val="SKILL_REDUCE"/>

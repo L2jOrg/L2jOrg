@@ -9,7 +9,7 @@
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="90401" name="Melodys Luck Cube" additionalName="30 days" type="EtcItem">
+    <item id="90401" name="Melodys Luck Cube" type="EtcItem">
         <!-- 30-day item. Double-click to obtain various rewards at random. (Can be used only once per day.) Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. For characters of level 20 or higher. -->
         <set name="icon" val="icon.etc_dkbrown_crystal_cube_pc_i00"/>
         <set name="default_action" val="SKILL_REDUCE"/>
@@ -18,7 +18,7 @@
         <set name="is_depositable" val="false"/>
         <set name="is_sellable" val="false"/>
     </item>
-    <item id="90402" name="Fire Dragon Pendant +6" additionalName="15-day" type="Armor">
+    <item id="90402" name="Fire Dragon Pendant +6" type="Armor">
         <!-- M. Def. +16, XP/SP gain +10%, P./ M. Atk. +20. Duration: 15-day. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.bm_pendant_pve"/>
         <set name="default_action" val="EQUIP"/>
@@ -45,7 +45,7 @@
         <set name="is_stackable" val="true"/>
         <set name="is_freightable" val="true"/>
     </item>
-    <item id="90404" name="My Teleport Book" additionalName="For XP" type="EtcItem">
+    <item id="90404" name="My Teleport Book" type="EtcItem">
         <!-- Increases the number of return points to save by 1. Maximum number - 18. Cannot be exchanged, dropped or sold. Can be stored in a private warehouse. Can be shared within account through Dimensional Merchant. -->
         <set name="icon" val="icon.bookmark_book_i00"/>
         <set name="default_action" val="CALL_SKILL"/>
@@ -57,7 +57,7 @@
         <set name="is_stackable" val="true"/>
         <set name="is_freightable" val="true"/>
     </item>
-    <item id="90405" name="My Teleport Scroll" additionalName="For XP" type="EtcItem">
+    <item id="90405" name="My Teleport Scroll" type="EtcItem">
         <!-- Item that is consumed when moving to the remembered location. Cannot be exchanged, dropped or sold. Can be stored in a private warehouse. Can be shared within account through Dimensional Merchant. -->
         <set name="icon" val="icon.bookmark_scroll_i00"/>
         <set name="weight" val="5"/>
@@ -80,7 +80,7 @@
         <set name="is_stackable" val="true"/>
         <set name="is_freightable" val="true"/>
     </item>
-    <item id="90407" name="Chef's Fish Stew - Victory" additionalName="Event" type="EtcItem">
+    <item id="90407" name="Chef's Fish Stew - Victory" type="EtcItem">
         <!-- For 10 min. activates Chant of Victory Lv. 1. Cannot be dropped. <Attention> Cannot be stacked with Prophecy-type buffs. Effect remains after death. -->
         <set name="icon" val="icon.fish_stew_residence_cha"/>
         <set name="default_action" val="SKILL_REDUCE"/>
@@ -99,7 +99,7 @@
             <skill id="39228" level="1"/> <!-- Chef's Fish Stew - Victory -->
         </skills>
     </item>
-    <item id="90408" name="Chef's Fish Stew - Fire" additionalName="Event" type="EtcItem">
+    <item id="90408" name="Chef's Fish Stew - Fire" type="EtcItem">
         <!-- For 10 min. activates Prophecy of Fire Lv. 1. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. Can be shared within account through Dimensional Merchant. <Attention> Cannot be stacked with Prophecy-type buffs. Effect remains after death. -->
         <set name="icon" val="icon.fish_stew_residence_cha"/>
         <set name="default_action" val="SKILL_REDUCE"/>
@@ -118,7 +118,7 @@
             <skill id="39229" level="1"/> <!-- Chef's Fish Stew - Fire -->
         </skills>
     </item>
-    <item id="90409" name="Chef's Fish Stew - Water" additionalName="Event" type="EtcItem">
+    <item id="90409" name="Chef's Fish Stew - Water" type="EtcItem">
         <!-- For 10 min. activates Prophecy of Water Lv. 1. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. Can be shared within account through Dimensional Merchant. <Attention> Cannot be stacked with Prophecy-type buffs. Effect remains after death. -->
         <set name="icon" val="icon.fish_stew_residence_cha"/>
         <set name="default_action" val="SKILL_REDUCE"/>
@@ -259,7 +259,7 @@
         <set name="is_stackable" val="true"/>
         <set name="is_freightable" val="true"/>
     </item>
-    <item id="90419" name="Warrior's Shining Dualsword" additionalName="30 days" type="Weapon">
+    <item id="90419" name="Warrior's Shining Dualsword" type="Weapon">
         <!-- 30-day item. Atk. Spd. +5%. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. Enchantment, soul storing and augmenting are impossible. -->
         <set name="icon" val="icon.weapon_dual_sword_i00"/>
         <set name="default_action" val="EQUIP"/>
@@ -284,7 +284,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="90420" name="Warrior's Shining Staff" additionalName="30 days" type="Weapon">
+    <item id="90420" name="Warrior's Shining Staff" type="Weapon">
         <!-- 30-day item. Casting Spd. +12%. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. Enchantment, soul storing and augmenting are impossible. -->
         <set name="icon" val="icon.weapon_sages_staff_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -311,7 +311,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="90421" name="Warrior's Shining Bow" additionalName="30 days" type="Weapon">
+    <item id="90421" name="Warrior's Shining Bow" type="Weapon">
         <!-- 30-day item. P. Critical +52. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. Enchantment, soul storing and augmenting are impossible. -->
         <set name="icon" val="icon.weapon_akat_long_bow_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -338,7 +338,7 @@
             <stat type="pAtkRange">500</stat>
         </stats>
     </item>
-    <item id="90422" name="Warrior's Shining Dagger" additionalName="30 days" type="Weapon">
+    <item id="90422" name="Warrior's Shining Dagger" type="Weapon">
         <!-- 30-day item. P. Critical +66. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. Enchantment, soul storing and augmenting are impossible. -->
         <set name="icon" val="icon.weapon_grace_dagger_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -364,7 +364,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="90423" name="Warrior's Shining Spear" additionalName="30 days" type="Weapon">
+    <item id="90423" name="Warrior's Shining Spear" type="Weapon">
         <!-- 30-day item. Stun Attack Success Rate +25%. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. Enchantment, soul storing and augmenting are impossible. -->
         <set name="icon" val="icon.weapon_poleaxe_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -393,7 +393,7 @@
             <stat type="pAtkRange">80</stat>
         </stats>
     </item>
-    <item id="90424" name="Warrior's Shining Helmet" additionalName="30 days" type="Armor">
+    <item id="90424" name="Warrior's Shining Helmet" type="Armor">
         <!-- 30-day item. Heavy. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. Cannot be enchanted. -->
         <set name="icon" val="icon.armor_leather_helmet_i00"/>
         <set name="default_action" val="EQUIP"/>
@@ -410,7 +410,7 @@
             <stat type="pDef">58</stat>
         </stats>
     </item>
-    <item id="90425" name="Warrior's Shining Armor" additionalName="30 days" type="Armor">
+    <item id="90425" name="Warrior's Shining Armor" type="Armor">
         <!-- 30-day item. Heavy. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. Cannot be enchanted. -->
         <set name="icon" val="icon.armor_t62_ul_i00"/>
         <set name="default_action" val="EQUIP"/>
@@ -428,7 +428,7 @@
             <stat type="pDef">239</stat>
         </stats>
     </item>
-    <item id="90426" name="Warrior's Shining Gauntlets" additionalName="30 days" type="Armor">
+    <item id="90426" name="Warrior's Shining Gauntlets" type="Armor">
         <!-- 30-day item. Heavy. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. Cannot be enchanted. -->
         <set name="icon" val="icon.armor_t62_g_i00"/>
         <set name="default_action" val="EQUIP"/>
@@ -445,7 +445,7 @@
             <stat type="pDef">39</stat>
         </stats>
     </item>
-    <item id="90427" name="Warrior's Shining Boots" additionalName="30 days" type="Armor">
+    <item id="90427" name="Warrior's Shining Boots" type="Armor">
         <!-- 30-day item. Heavy. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. Cannot be enchanted. -->
         <set name="icon" val="icon.armor_t62_b_i00"/>
         <set name="default_action" val="EQUIP"/>
@@ -462,7 +462,7 @@
             <stat type="pDef">39</stat>
         </stats>
     </item>
-    <item id="90428" name="Warrior's Shining Helmet" additionalName="30 days" type="Armor">
+    <item id="90428" name="Warrior's Shining Helmet" type="Armor">
         <!-- 30-day item. Light. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. Cannot be enchanted. -->
         <set name="icon" val="icon.armor_leather_helmet_i00"/>
         <set name="default_action" val="EQUIP"/>
@@ -479,7 +479,7 @@
             <stat type="pDef">47</stat>
         </stats>
     </item>
-    <item id="90429" name="Warrior's Shining Rags" additionalName="30 days" type="Armor">
+    <item id="90429" name="Warrior's Shining Rags" type="Armor">
         <!-- 30-day item. Light. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. Cannot be enchanted. -->
         <set name="icon" val="icon.armor_t45_ul_i00"/>
         <set name="default_action" val="EQUIP"/>
@@ -497,7 +497,7 @@
             <stat type="pDef">179</stat>
         </stats>
     </item>
-    <item id="90430" name="Warrior's Shining Gloves" additionalName="30 days" type="Armor">
+    <item id="90430" name="Warrior's Shining Gloves" type="Armor">
         <!-- 30-day item. Light. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. Cannot be enchanted. -->
         <set name="icon" val="icon.armor_t45_g_i00"/>
         <set name="default_action" val="EQUIP"/>
@@ -514,7 +514,7 @@
             <stat type="pDef">39</stat>
         </stats>
     </item>
-    <item id="90431" name="Warrior's Shining Shoes" additionalName="30 days" type="Armor">
+    <item id="90431" name="Warrior's Shining Shoes" type="Armor">
         <!-- 30-day item. Light. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. Cannot be enchanted. -->
         <set name="icon" val="icon.armor_t45_b_i00"/>
         <set name="default_action" val="EQUIP"/>
@@ -531,7 +531,7 @@
             <stat type="pDef">39</stat>
         </stats>
     </item>
-    <item id="90432" name="Warrior's Shining Circlet" additionalName="30 days" type="Armor">
+    <item id="90432" name="Warrior's Shining Circlet" type="Armor">
         <!-- 30-day item. Magical. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. Cannot be enchanted. -->
         <set name="icon" val="icon.armor_circlet_i00"/>
         <set name="default_action" val="EQUIP"/>
@@ -548,7 +548,7 @@
             <stat type="pDef">54</stat>
         </stats>
     </item>
-    <item id="90433" name="Warrior's Shining Tunic" additionalName="30 days" type="Armor">
+    <item id="90433" name="Warrior's Shining Tunic" type="Armor">
         <!-- 30-day item. Magical. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. Cannot be enchanted. -->
         <set name="icon" val="icon.armor_t57_u_i00"/>
         <set name="default_action" val="EQUIP"/>
@@ -567,7 +567,7 @@
             <stat type="maxMp">314</stat>
         </stats>
     </item>
-    <item id="90434" name="Warrior's Shining Stockings" additionalName="30 days" type="Armor">
+    <item id="90434" name="Warrior's Shining Stockings" type="Armor">
         <!-- 30-day item. Magical. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. Cannot be enchanted. -->
         <set name="icon" val="icon.armor_t57_l_i00"/>
         <set name="default_action" val="EQUIP"/>
@@ -586,7 +586,7 @@
             <stat type="maxMp">196</stat>
         </stats>
     </item>
-    <item id="90435" name="Warrior's Shining Gloves" additionalName="30 days" type="Armor">
+    <item id="90435" name="Warrior's Shining Gloves" type="Armor">
         <!-- 30-day item. Magical. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. Cannot be enchanted. -->
         <set name="icon" val="icon.armor_t57_g_i00"/>
         <set name="default_action" val="EQUIP"/>
@@ -603,7 +603,7 @@
             <stat type="pDef">39</stat>
         </stats>
     </item>
-    <item id="90436" name="Warrior's Shining Shoes" additionalName="30 days" type="Armor">
+    <item id="90436" name="Warrior's Shining Shoes" type="Armor">
         <!-- 30-day item. Magical. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. Cannot be enchanted. -->
         <set name="icon" val="icon.armor_t57_b_i00"/>
         <set name="default_action" val="EQUIP"/>
@@ -620,7 +620,7 @@
             <stat type="pDef">34</stat>
         </stats>
     </item>
-    <item id="90437" name="Aden Warrior Hat" additionalName="60-day" type="Armor">
+    <item id="90437" name="Aden Warrior Hat" type="Armor">
         <!-- Hat for a returned hero. A 60-day item. When equipped, increases P. Atk. and M. Atk. Occupies 2 Hair Accessory slots. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.bm_romantic_chaperon_yellow"/>
         <set name="default_action" val="EQUIP"/>
@@ -768,7 +768,7 @@
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="90455" name="Avadon Circlet" additionalName="Heavy" type="Armor">
+    <item id="90455" name="Avadon Circlet" type="Armor">
         <set name="icon" val="icon.armor_leather_helmet_i00"/>
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="head"/>
@@ -781,7 +781,7 @@
             <stat type="pDef">62</stat>
         </stats>
     </item>
-    <item id="90456" name="Avadon Circlet" additionalName="Light" type="Armor">
+    <item id="90456" name="Avadon Circlet" type="Armor">
         <set name="icon" val="icon.armor_leather_helmet_i00"/>
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="head"/>
@@ -794,7 +794,7 @@
             <stat type="pDef">62</stat>
         </stats>
     </item>
-    <item id="90457" name="Avadon Circlet" additionalName="Robe" type="Armor">
+    <item id="90457" name="Avadon Circlet" type="Armor">
         <set name="icon" val="icon.armor_leather_helmet_i00"/>
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="head"/>
@@ -807,7 +807,7 @@
             <stat type="pDef">62</stat>
         </stats>
     </item>
-    <item id="90458" name="Zubei's Helmet" additionalName="Heavy" type="Armor">
+    <item id="90458" name="Zubei's Helmet" type="Armor">
         <set name="icon" val="icon.armor_helmet_i00"/>
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="head"/>
@@ -820,7 +820,7 @@
             <stat type="pDef">62</stat>
         </stats>
     </item>
-    <item id="90459" name="Zubei's Helmet" additionalName="Light" type="Armor">
+    <item id="90459" name="Zubei's Helmet" type="Armor">
         <set name="icon" val="icon.armor_helmet_i00"/>
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="head"/>
@@ -833,7 +833,7 @@
             <stat type="pDef">62</stat>
         </stats>
     </item>
-    <item id="90460" name="Zubei's Helmet" additionalName="Robe" type="Armor">
+    <item id="90460" name="Zubei's Helmet" type="Armor">
         <set name="icon" val="icon.armor_helmet_i00"/>
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="head"/>
@@ -846,7 +846,7 @@
             <stat type="pDef">62</stat>
         </stats>
     </item>
-    <item id="90461" name="Blue Wolf Helmet" additionalName="Heavy" type="Armor">
+    <item id="90461" name="Blue Wolf Helmet" type="Armor">
         <set name="icon" val="icon.armor_leather_helmet_i00"/>
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="head"/>
@@ -859,7 +859,7 @@
             <stat type="pDef">66</stat>
         </stats>
     </item>
-    <item id="90462" name="Blue Wolf Helmet" additionalName="Light" type="Armor">
+    <item id="90462" name="Blue Wolf Helmet" type="Armor">
         <set name="icon" val="icon.armor_leather_helmet_i00"/>
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="head"/>
@@ -872,7 +872,7 @@
             <stat type="pDef">66</stat>
         </stats>
     </item>
-    <item id="90463" name="Blue Wolf Helmet" additionalName="Robe" type="Armor">
+    <item id="90463" name="Blue Wolf Helmet" type="Armor">
         <set name="icon" val="icon.armor_leather_helmet_i00"/>
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="head"/>
@@ -885,7 +885,7 @@
             <stat type="pDef">66</stat>
         </stats>
     </item>
-    <item id="90464" name="Doom Helmet" additionalName="Heavy" type="Armor">
+    <item id="90464" name="Doom Helmet" type="Armor">
         <set name="icon" val="icon.armor_leather_helmet_i00"/>
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="head"/>
@@ -898,7 +898,7 @@
             <stat type="pDef">66</stat>
         </stats>
     </item>
-    <item id="90465" name="Doom Helmet" additionalName="Light" type="Armor">
+    <item id="90465" name="Doom Helmet" type="Armor">
         <set name="icon" val="icon.armor_leather_helmet_i00"/>
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="head"/>
@@ -911,7 +911,7 @@
             <stat type="pDef">66</stat>
         </stats>
     </item>
-    <item id="90466" name="Doom Helmet" additionalName="Robe" type="Armor">
+    <item id="90466" name="Doom Helmet" type="Armor">
         <set name="icon" val="icon.armor_leather_helmet_i00"/>
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="head"/>
@@ -924,7 +924,7 @@
             <stat type="pDef">66</stat>
         </stats>
     </item>
-    <item id="90467" name="Tallum Helmet" additionalName="Heavy" type="Armor">
+    <item id="90467" name="Tallum Helmet" type="Armor">
         <set name="icon" val="icon.armor_helmet_i00"/>
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="head"/>
@@ -937,7 +937,7 @@
             <stat type="pDef">69</stat>
         </stats>
     </item>
-    <item id="90468" name="Tallum Helmet" additionalName="Light" type="Armor">
+    <item id="90468" name="Tallum Helmet" type="Armor">
         <set name="icon" val="icon.armor_helmet_i00"/>
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="head"/>
@@ -950,7 +950,7 @@
             <stat type="pDef">69</stat>
         </stats>
     </item>
-    <item id="90469" name="Tallum Helmet" additionalName="Robe" type="Armor">
+    <item id="90469" name="Tallum Helmet" type="Armor">
         <set name="icon" val="icon.armor_helmet_i00"/>
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="head"/>
@@ -963,7 +963,7 @@
             <stat type="pDef">69</stat>
         </stats>
     </item>
-    <item id="90470" name="Dark Crystal Helmet" additionalName="Heavy" type="Armor">
+    <item id="90470" name="Dark Crystal Helmet" type="Armor">
         <set name="icon" val="icon.armor_helmet_i00"/>
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="head"/>
@@ -976,7 +976,7 @@
             <stat type="pDef">69</stat>
         </stats>
     </item>
-    <item id="90471" name="Dark Crystal Helmet" additionalName="Light" type="Armor">
+    <item id="90471" name="Dark Crystal Helmet" type="Armor">
         <set name="icon" val="icon.armor_helmet_i00"/>
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="head"/>
@@ -989,7 +989,7 @@
             <stat type="pDef">69</stat>
         </stats>
     </item>
-    <item id="90472" name="Dark Crystal Helmet" additionalName="Robe" type="Armor">
+    <item id="90472" name="Dark Crystal Helmet" type="Armor">
         <set name="icon" val="icon.armor_helmet_i00"/>
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="head"/>
@@ -1002,7 +1002,7 @@
             <stat type="pDef">69</stat>
         </stats>
     </item>
-    <item id="90473" name="Helm of Nightmare" additionalName="Heavy" type="Armor">
+    <item id="90473" name="Helm of Nightmare" type="Armor">
         <set name="icon" val="icon.armor_leather_helmet_i00"/>
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="head"/>
@@ -1015,7 +1015,7 @@
             <stat type="pDef">73</stat>
         </stats>
     </item>
-    <item id="90474" name="Helm of Nightmare" additionalName="Light" type="Armor">
+    <item id="90474" name="Helm of Nightmare" type="Armor">
         <set name="icon" val="icon.armor_leather_helmet_i00"/>
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="head"/>
@@ -1028,7 +1028,7 @@
             <stat type="pDef">73</stat>
         </stats>
     </item>
-    <item id="90475" name="Helm of Nightmare" additionalName="Robe" type="Armor">
+    <item id="90475" name="Helm of Nightmare" type="Armor">
         <set name="icon" val="icon.armor_leather_helmet_i00"/>
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="head"/>
@@ -1041,7 +1041,7 @@
             <stat type="pDef">73</stat>
         </stats>
     </item>
-    <item id="90476" name="Majestic Circlet" additionalName="Heavy" type="Armor">
+    <item id="90476" name="Majestic Circlet" type="Armor">
         <set name="icon" val="icon.armor_leather_helmet_i00"/>
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="head"/>
@@ -1054,7 +1054,7 @@
             <stat type="pDef">73</stat>
         </stats>
     </item>
-    <item id="90477" name="Majestic Circlet" additionalName="Light" type="Armor">
+    <item id="90477" name="Majestic Circlet" type="Armor">
         <set name="icon" val="icon.armor_leather_helmet_i00"/>
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="head"/>
@@ -1067,7 +1067,7 @@
             <stat type="pDef">73</stat>
         </stats>
     </item>
-    <item id="90478" name="Majestic Circlet" additionalName="Robe" type="Armor">
+    <item id="90478" name="Majestic Circlet" type="Armor">
         <set name="icon" val="icon.armor_leather_helmet_i00"/>
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="head"/>
@@ -1080,7 +1080,7 @@
             <stat type="pDef">73</stat>
         </stats>
     </item>
-    <item id="90479" name="Shiny Jewelry Box" additionalName="Event" type="EtcItem">
+    <item id="90479" name="Shiny Jewelry Box" type="EtcItem">
         <!-- Double-click to obtain 1 Jewel (Lv.1). Cannot be exchanged, dropped, stored in private warehouse or sold. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.etc_bm_jewelbox_main_i00"/>
         <set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS"/>

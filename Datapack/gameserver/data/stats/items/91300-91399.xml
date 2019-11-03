@@ -28,7 +28,7 @@
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="91303" name="Brooch" additionalName="Lv. 4" type="Armor">
+    <item id="91303" name="Brooch" type="Armor">
         <!-- Activates 5 jewel slots when equipped. Inventory Slots +12. -->
         <set name="icon" val="icon.etc_bm_brooch_lavianrose_i05"/>
         <set name="default_action" val="EQUIP"/>
@@ -38,7 +38,7 @@
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
     </item>
-    <item id="91304" name="Brooch" additionalName="Lv. 5" type="Armor">
+    <item id="91304" name="Brooch" type="Armor">
         <!-- Activates 6 jewel slots when equipped. Inventory Slots +15. Cannot be dropped. -->
         <set name="icon" val="icon.etc_bm_brooch_lavianrose_i06"/>
         <set name="default_action" val="EQUIP"/>
@@ -48,7 +48,7 @@
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
     </item>
-    <item id="91305" name="Greater Topaz" additionalName="Lv. 1" type="Armor">
+    <item id="91305" name="Greater Topaz" type="Armor">
         <!-- When equipped, cancels casting of target. In PvP deals fixed damage 2500. Effect does not stack with additional jewels of the same type. When combined with the Jewel Power, you can obtain an upper level jewel. Cannot be dropped. -->
         <set name="icon" val="icon.bm_jewel_absdmg_high_lv1_lavianrose"/>
         <set name="default_action" val="EQUIP"/>
@@ -58,7 +58,7 @@
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
     </item>
-    <item id="91306" name="Greater Topaz" additionalName="Lv. 2" type="Armor">
+    <item id="91306" name="Greater Topaz" type="Armor">
         <!-- When equipped, cancels casting of target. In PvP deals fixed damage 2800. Effect does not stack with additional jewels of the same type. When combined with the Jewel Power, you can obtain an upper level jewel. If upgrade fails, you'll get a jewel Lv. 1. Cannot be dropped. -->
         <set name="icon" val="icon.bm_jewel_absdmg_high_lv1_lavianrose"/>
         <set name="default_action" val="EQUIP"/>
@@ -68,7 +68,7 @@
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
     </item>
-    <item id="91307" name="Greater Topaz" additionalName="Lv. 3" type="Armor">
+    <item id="91307" name="Greater Topaz" type="Armor">
         <!-- When equipped, cancels casting of target. In PvP deals fixed damage 3400. Effect does not stack with additional jewels of the same type. When combined with the Jewel Power, you can obtain an upper level jewel. If upgrade fails, you'll get a jewel Lv. 1. Cannot be dropped. -->
         <set name="icon" val="icon.bm_jewel_absdmg_high_lv1_lavianrose"/>
         <set name="default_action" val="EQUIP"/>
@@ -78,7 +78,7 @@
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
     </item>
-    <item id="91308" name="Greater Topaz" additionalName="Lv. 4" type="Armor">
+    <item id="91308" name="Greater Topaz" type="Armor">
         <!-- When equipped, cancels casting of target. In PvP deals fixed damage 4300. Effect does not stack with additional jewels of the same type. When combined with the Jewel Power, you can obtain an upper level jewel. If upgrade fails, you'll get a jewel Lv. 1. Cannot be dropped. -->
         <set name="icon" val="icon.bm_jewel_absdmg_high_lv1_lavianrose"/>
         <set name="default_action" val="EQUIP"/>
@@ -88,7 +88,7 @@
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
     </item>
-    <item id="91309" name="Greater Topaz" additionalName="Lv. 5" type="Armor">
+    <item id="91309" name="Greater Topaz" type="Armor">
         <!-- When equipped, cancels casting of target. In PvP deals fixed damage 6000. During skill using can cancels up to 3 debuffs. Effect does not stack with additional jewels of the same type. When combined with the Jewel Power, you can obtain an upper level jewel. Cannot be dropped. -->
         <set name="icon" val="icon.bm_jewel_absdmg_high_lv1_lavianrose"/>
         <set name="default_action" val="EQUIP"/>
@@ -98,7 +98,7 @@
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
     </item>
-    <item id="91310" name="Greater Garnet" additionalName="Lv. 1" type="Armor">
+    <item id="91310" name="Greater Garnet" type="Armor">
         <!-- When equipped, Stun/ Pull/ Silence/ Paralysis/ Fear Resistance +22%. For 16 sec. grants immunity to debuffs in case of using skill. Effect does not stack with additional jewels of the same type. When combined with the Jewel Power, you can obtain an upper level jewel. Cannot be dropped. -->
         <set name="icon" val="icon.bm_jewel_garnet_high_lv1_lavianrose"/>
         <set name="default_action" val="EQUIP"/>
@@ -108,7 +108,7 @@
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
     </item>
-    <item id="91311" name="Greater Garnet" additionalName="Lv. 2" type="Armor">
+    <item id="91311" name="Greater Garnet" type="Armor">
         <!-- When equipped, Stun/ Pull/ Silence/ Paralysis/ Fear Resistance +24%. For 17 sec. grants immunity to debuffs in case of using skill. Effect does not stack with additional jewels of the same type. When combined with the Jewel Power, you can obtain an upper level jewel. If upgrade fails, you'll get a jewel Lv. 1. Cannot be dropped. -->
         <set name="icon" val="icon.bm_jewel_garnet_high_lv1_lavianrose"/>
         <set name="default_action" val="EQUIP"/>
@@ -118,7 +118,7 @@
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
     </item>
-    <item id="91312" name="Greater Garnet" additionalName="Lv. 3" type="Armor">
+    <item id="91312" name="Greater Garnet" type="Armor">
         <!-- When equipped, Stun/ Pull/ Silence/ Paralysis/ Fear Resistance +26%. For 18 sec. grants immunity to debuffs in case of using skill. Effect does not stack with additional jewels of the same type. When combined with the Jewel Power, you can obtain an upper level jewel. If upgrade fails, you'll get a jewel Lv. 1. Cannot be dropped. -->
         <set name="icon" val="icon.bm_jewel_garnet_high_lv1_lavianrose"/>
         <set name="default_action" val="EQUIP"/>
@@ -128,7 +128,7 @@
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
     </item>
-    <item id="91313" name="Greater Garnet" additionalName="Lv. 4" type="Armor">
+    <item id="91313" name="Greater Garnet" type="Armor">
         <!-- When equipped, Stun/ Pull/ Silence/ Paralysis/ Fear Resistance +30%. For 20 sec. grants immunity to debuffs in case of using skill. Effect does not stack with additional jewels of the same type. When combined with the Jewel Power, you can obtain an upper level jewel. If upgrade fails, you'll get a jewel Lv. 1. Cannot be dropped. -->
         <set name="icon" val="icon.bm_jewel_garnet_high_lv1_lavianrose"/>
         <set name="default_action" val="EQUIP"/>
@@ -138,7 +138,7 @@
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
     </item>
-    <item id="91314" name="Greater Garnet" additionalName="Lv. 5" type="Armor">
+    <item id="91314" name="Greater Garnet" type="Armor">
         <!-- When equipped, Stun/ Pull/ Silence/ Paralysis/ Fear/ Resistance +40%, Sleep/ Poison Resistance +10%. For 25 sec. grants immunity to debuffs in case of using skill. Effect does not stack with additional jewels of the same type. When combined with the Jewel Power, you can obtain an upper level jewel. Cannot be dropped. -->
         <set name="icon" val="icon.bm_jewel_garnet_high_lv1_lavianrose"/>
         <set name="default_action" val="EQUIP"/>
@@ -148,7 +148,7 @@
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
     </item>
-    <item id="91315" name="Greater Jade" additionalName="Lv. 1" type="Armor">
+    <item id="91315" name="Greater Jade" type="Armor">
         <!-- When equipped, Atk. Spd./ Casting Spd. +15%, Speed +1%. Effect does not stack with additional jewels of the same type. When combined with the Jewel Power, you can obtain an upper level jewel. Cannot be dropped. -->
         <set name="icon" val="icon.bm_jewel_speedup_lv1_high"/>
         <set name="default_action" val="EQUIP"/>
@@ -158,7 +158,7 @@
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
     </item>
-    <item id="91316" name="Greater Jade" additionalName="Lv. 2" type="Armor">
+    <item id="91316" name="Greater Jade" type="Armor">
         <!-- When equipped, Atk. Spd./ Casting Spd. +16%, Speed +2%. Effect does not stack with additional jewels of the same type. When combined with the Jewel Power, you can obtain an upper level jewel. If upgrade fails, you'll get a jewel Lv. 1. Cannot be dropped. -->
         <set name="icon" val="icon.bm_jewel_speedup_lv1_high"/>
         <set name="default_action" val="EQUIP"/>
@@ -168,7 +168,7 @@
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
     </item>
-    <item id="91317" name="Greater Jade" additionalName="Lv. 3" type="Armor">
+    <item id="91317" name="Greater Jade" type="Armor">
         <!-- When equipped, Atk. Spd./ Casting Spd. +17%, Speed +3%. Effect does not stack with additional jewels of the same type. When combined with the Jewel Power, you can obtain an upper level jewel. If upgrade fails, you'll get a jewel Lv. 1. Cannot be dropped. -->
         <set name="icon" val="icon.bm_jewel_speedup_lv1_high"/>
         <set name="default_action" val="EQUIP"/>
@@ -178,7 +178,7 @@
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
     </item>
-    <item id="91318" name="Greater Jade" additionalName="Lv. 4" type="Armor">
+    <item id="91318" name="Greater Jade" type="Armor">
         <!-- When equipped, Atk. Spd./ Casting Spd. +18%, Speed +5%. Effect does not stack with additional jewels of the same type. When combined with the Jewel Power, you can obtain an upper level jewel. If upgrade fails, you'll get a jewel Lv. 1. Cannot be dropped. -->
         <set name="icon" val="icon.bm_jewel_speedup_lv1_high"/>
         <set name="default_action" val="EQUIP"/>
@@ -188,7 +188,7 @@
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
     </item>
-    <item id="91319" name="Greater Jade" additionalName="Lv. 5" type="Armor">
+    <item id="91319" name="Greater Jade" type="Armor">
         <!-- When equipped, Atk. Spd./ Casting Spd. +20%, Speed +7%, weapon attack Resistance +10%. Effect does not stack with additional jewels of the same type. Cannot be dropped. -->
         <set name="icon" val="icon.bm_jewel_speedup_lv1_high"/>
         <set name="default_action" val="EQUIP"/>
@@ -198,7 +198,7 @@
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
     </item>
-    <item id="91320" name="Greater Ruby" additionalName="Lv. 1" type="Armor">
+    <item id="91320" name="Greater Ruby" type="Armor">
         <!-- When equipped, Soulshot, Blessed Soulshot and Beast Soulshot damage +17%, P. Atk. +1%. Effect does not stack with additional jewels of the same type. When combined with the Jewel Power, you can obtain an upper level jewel. Cannot be dropped. -->
         <set name="icon" val="icon.bm_jewel_ssdmg_high_lv1_lavianrose"/>
         <set name="default_action" val="EQUIP"/>
@@ -208,7 +208,7 @@
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
     </item>
-    <item id="91321" name="Greater Ruby" additionalName="Lv. 2" type="Armor">
+    <item id="91321" name="Greater Ruby" type="Armor">
         <!-- When equipped, Soulshot, Blessed Soulshot and Beast Soulshot damage +18%, P. Atk. +2%. Effect does not stack with additional jewels of the same type. When combined with the Jewel Power, you can obtain an upper level jewel. If upgrade fails, you'll get a jewel Lv. 1. Cannot be dropped. -->
         <set name="icon" val="icon.bm_jewel_ssdmg_high_lv1_lavianrose"/>
         <set name="default_action" val="EQUIP"/>
@@ -218,7 +218,7 @@
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
     </item>
-    <item id="91322" name="Greater Ruby" additionalName="Lv. 3" type="Armor">
+    <item id="91322" name="Greater Ruby" type="Armor">
         <!-- When equipped, Soulshot, Blessed Soulshot and Beast Soulshot damage +19%, P. Atk. +3%. Effect does not stack with additional jewels of the same type. When combined with the Jewel Power, you can obtain an upper level jewel. If upgrade fails, you'll get a jewel Lv. 1. Cannot be dropped. -->
         <set name="icon" val="icon.bm_jewel_ssdmg_high_lv1_lavianrose"/>
         <set name="default_action" val="EQUIP"/>
@@ -228,7 +228,7 @@
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
     </item>
-    <item id="91323" name="Greater Ruby" additionalName="Lv. 4" type="Armor">
+    <item id="91323" name="Greater Ruby" type="Armor">
         <!-- When equipped, Soulshot, Blessed Soulshot and Beast Soulshot damage +20%, P. Atk. +5%. Effect does not stack with additional jewels of the same type. When combined with the Jewel Power, you can obtain an upper level jewel. If upgrade fails, you'll get a jewel Lv. 1. Cannot be dropped. -->
         <set name="icon" val="icon.bm_jewel_ssdmg_high_lv1_lavianrose"/>
         <set name="default_action" val="EQUIP"/>
@@ -238,7 +238,7 @@
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
     </item>
-    <item id="91324" name="Greater Ruby" additionalName="Lv. 5" type="Armor">
+    <item id="91324" name="Greater Ruby" type="Armor">
         <!-- When equipped, Soulshot, Blessed Soulshot and Beast Soulshot damage +20%, P. Atk. +7%, P. Critical Rate +5%. Effect does not stack with additional jewels of the same type. Cannot be dropped. -->
         <set name="icon" val="icon.bm_jewel_ssdmg_high_lv1_lavianrose"/>
         <set name="default_action" val="EQUIP"/>
@@ -248,7 +248,7 @@
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
     </item>
-    <item id="91325" name="Greater Sapphire" additionalName="Lv. 1" type="Armor">
+    <item id="91325" name="Greater Sapphire" type="Armor">
         <!-- When equipped, Spiritshot, Blessed Spiritshot and Beast Spiritshot damage +17%, M. Atk. +2%. Effect does not stack with additional jewels of the same type. When combined with the Jewel Power, you can obtain an upper level jewel. Cannot be dropped. -->
         <set name="icon" val="icon.bm_jewel_spsdmg_high_lv1_lavianrose"/>
         <set name="default_action" val="EQUIP"/>
@@ -258,7 +258,7 @@
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
     </item>
-    <item id="91326" name="Greater Sapphire" additionalName="Lv. 2" type="Armor">
+    <item id="91326" name="Greater Sapphire" type="Armor">
         <!-- When equipped, Spiritshot, Blessed Spiritshot and Beast Spiritshot damage +18%, M. Atk. +4%. Effect does not stack with additional jewels of the same type. When combined with the Jewel Power, you can obtain an upper level jewel. If upgrade fails, you'll get a jewel Lv. 1. Cannot be dropped. -->
         <set name="icon" val="icon.bm_jewel_spsdmg_high_lv1_lavianrose"/>
         <set name="default_action" val="EQUIP"/>
@@ -268,7 +268,7 @@
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
     </item>
-    <item id="91327" name="Greater Sapphire" additionalName="Lv. 3" type="Armor">
+    <item id="91327" name="Greater Sapphire" type="Armor">
         <!-- When equipped, Spiritshot, Blessed Spiritshot and Beast Spiritshot damage +19%, M. Atk. +6%. Effect does not stack with additional jewels of the same type. When combined with the Jewel Power, you can obtain an upper level jewel. If upgrade fails, you'll get a jewel Lv. 1. Cannot be dropped. -->
         <set name="icon" val="icon.bm_jewel_spsdmg_high_lv1_lavianrose"/>
         <set name="default_action" val="EQUIP"/>
@@ -278,7 +278,7 @@
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
     </item>
-    <item id="91328" name="Greater Sapphire" additionalName="Lv. 4" type="Armor">
+    <item id="91328" name="Greater Sapphire" type="Armor">
         <!-- When equipped, Spiritshot, Blessed Spiritshot and Beast Spiritshot damage +20%, M. Atk. +10%. Effect does not stack with additional jewels of the same type. When combined with the Jewel Power, you can obtain an upper level jewel. If upgrade fails, you'll get a jewel Lv. 1. Cannot be dropped. -->
         <set name="icon" val="icon.bm_jewel_spsdmg_high_lv1_lavianrose"/>
         <set name="default_action" val="EQUIP"/>
@@ -288,7 +288,7 @@
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
     </item>
-    <item id="91329" name="Greater Sapphire" additionalName="Lv. 5" type="Armor">
+    <item id="91329" name="Greater Sapphire" type="Armor">
         <!-- When equipped, Spiritshot, Blessed Spiritshot and Beast Spiritshot damage +20%, M. Atk. +14%, M. Critical Rate +10%. Effect does not stack with additional jewels of the same type. Cannot be dropped. -->
         <set name="icon" val="icon.bm_jewel_spsdmg_high_lv1_lavianrose"/>
         <set name="default_action" val="EQUIP"/>
@@ -298,7 +298,7 @@
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
     </item>
-    <item id="91330" name="Greater Diamond" additionalName="Lv. 1" type="Armor">
+    <item id="91330" name="Greater Diamond" type="Armor">
         <!-- When equipped, P. Def. +150, Received P. Critical Damage -11%. Effect does not stack with additional jewels of the same type. When combined with the Jewel Power, you can obtain an upper level jewel. Cannot be dropped. -->
         <set name="icon" val="icon.bm_jewel_phydef_high_lv1_lavianrose"/>
         <set name="default_action" val="EQUIP"/>
@@ -308,7 +308,7 @@
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
     </item>
-    <item id="91331" name="Greater Diamond" additionalName="Lv. 2" type="Armor">
+    <item id="91331" name="Greater Diamond" type="Armor">
         <!-- When equipped, P. Def. +180, Received P. Critical Damage -12%. Effect does not stack with additional jewels of the same type. When combined with the Jewel Power, you can obtain an upper level jewel. If upgrade fails, you'll get a jewel Lv. 1. Cannot be dropped. -->
         <set name="icon" val="icon.bm_jewel_phydef_high_lv1_lavianrose"/>
         <set name="default_action" val="EQUIP"/>
@@ -318,7 +318,7 @@
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
     </item>
-    <item id="91332" name="Greater Diamond" additionalName="Lv. 3" type="Armor">
+    <item id="91332" name="Greater Diamond" type="Armor">
         <!-- When equipped, P. Def. +220, Received P. Critical Damage -14%. Effect does not stack with additional jewels of the same type. When combined with the Jewel Power, you can obtain an upper level jewel. If upgrade fails, you'll get a jewel Lv. 1. Cannot be dropped. -->
         <set name="icon" val="icon.bm_jewel_phydef_high_lv1_lavianrose"/>
         <set name="default_action" val="EQUIP"/>
@@ -328,7 +328,7 @@
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
     </item>
-    <item id="91333" name="Greater Diamond" additionalName="Lv. 4" type="Armor">
+    <item id="91333" name="Greater Diamond" type="Armor">
         <!-- When equipped, P. Def. +280, Received P. Critical Damage -16%. Effect does not stack with additional jewels of the same type. When combined with the Jewel Power, you can obtain an upper level jewel. If upgrade fails, you'll get a jewel Lv. 1. Cannot be dropped. -->
         <set name="icon" val="icon.bm_jewel_phydef_high_lv1_lavianrose"/>
         <set name="default_action" val="EQUIP"/>
@@ -338,7 +338,7 @@
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
     </item>
-    <item id="91334" name="Greater Diamond" additionalName="Lv. 5" type="Armor">
+    <item id="91334" name="Greater Diamond" type="Armor">
         <!-- When equipped, P. Def. +400, Received P. Critical Damage -20%, chance of receiving P. Critical Attack -10%. Effect does not stack with additional jewels of the same type. Cannot be dropped. -->
         <set name="icon" val="icon.bm_jewel_phydef_high_lv1_lavianrose"/>
         <set name="default_action" val="EQUIP"/>
@@ -348,7 +348,7 @@
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
     </item>
-    <item id="91335" name="Greater Pearl" additionalName="Lv. 1" type="Armor">
+    <item id="91335" name="Greater Pearl" type="Armor">
         <!-- When equipped, M. Def. +85, Received M. Critical Damage -11%. Effect does not stack with additional jewels of the same type. When combined with the Jewel Power, you can obtain an upper level jewel. Cannot be dropped. -->
         <set name="icon" val="icon.bm_jewel_magdef_high_lv1_lavianrose"/>
         <set name="default_action" val="EQUIP"/>
@@ -358,7 +358,7 @@
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
     </item>
-    <item id="91336" name="Greater Pearl" additionalName="Lv. 2" type="Armor">
+    <item id="91336" name="Greater Pearl" type="Armor">
         <!-- When equipped, M. Def. +100, Received M. Critical Damage -12%. Effect does not stack with additional jewels of the same type. When combined with the Jewel Power, you can obtain an upper level jewel. If upgrade fails, you'll get a jewel Lv. 1. Cannot be dropped. -->
         <set name="icon" val="icon.bm_jewel_magdef_high_lv1_lavianrose"/>
         <set name="default_action" val="EQUIP"/>
@@ -368,7 +368,7 @@
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
     </item>
-    <item id="91337" name="Greater Pearl" additionalName="Lv. 3" type="Armor">
+    <item id="91337" name="Greater Pearl" type="Armor">
         <!-- When equipped, M. Def. +125, Received M. Critical Damage -14%. Effect does not stack with additional jewels of the same type. When combined with the Jewel Power, you can obtain an upper level jewel. If upgrade fails, you'll get a jewel Lv. 1. Cannot be dropped. -->
         <set name="icon" val="icon.bm_jewel_magdef_high_lv1_lavianrose"/>
         <set name="default_action" val="EQUIP"/>
@@ -378,7 +378,7 @@
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
     </item>
-    <item id="91338" name="Greater Pearl" additionalName="Lv. 4" type="Armor">
+    <item id="91338" name="Greater Pearl" type="Armor">
         <!-- When equipped, M. Def. +160, Received M. Critical Damage -16%. Effect does not stack with additional jewels of the same type. When combined with the Jewel Power, you can obtain an upper level jewel. If upgrade fails, you'll get a jewel Lv. 1. Cannot be dropped. -->
         <set name="icon" val="icon.bm_jewel_magdef_high_lv1_lavianrose"/>
         <set name="default_action" val="EQUIP"/>
@@ -388,7 +388,7 @@
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
     </item>
-    <item id="91339" name="Greater Pearl" additionalName="Lv. 5" type="Armor">
+    <item id="91339" name="Greater Pearl" type="Armor">
         <!-- When equipped, M. Def. +250, Received M. Critical Damage -20%, chance of receiving M. Critical Attack -10%. Effect does not stack with additional jewels of the same type. Cannot be dropped. -->
         <set name="icon" val="icon.bm_jewel_magdef_high_lv1_lavianrose"/>
         <set name="default_action" val="EQUIP"/>
@@ -398,7 +398,7 @@
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
     </item>
-    <item id="91340" name="Greater Vital Stone" additionalName="Lv. 1" type="Armor">
+    <item id="91340" name="Greater Vital Stone" type="Armor">
         <!-- When equipped, Acquired XP/ SP +17% during effect of Sayha Grace and while hunting, Sayha Grace Consumption -30%. Effect does not stack with additional jewels of the same type. When combined with the Jewel Power, you can obtain an upper level jewel. Cannot be dropped. -->
         <set name="icon" val="icon.bm_jewel_vital_high_lv1_lavianrose"/>
         <set name="default_action" val="EQUIP"/>
@@ -408,7 +408,7 @@
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
     </item>
-    <item id="91341" name="Greater Vital Stone" additionalName="Lv. 2" type="Armor">
+    <item id="91341" name="Greater Vital Stone" type="Armor">
         <!-- When equipped, Acquired XP/ SP +19% during effect of Sayha Grace and while hunting, Sayha Grace Consumption -32%. Effect does not stack with additional jewels of the same type. When combined with the Jewel Power, you can obtain an upper level jewel. If upgrade fails, you'll get a jewel Lv. 1. Cannot be dropped. -->
         <set name="icon" val="icon.bm_jewel_vital_high_lv1_lavianrose"/>
         <set name="default_action" val="EQUIP"/>
@@ -418,7 +418,7 @@
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
     </item>
-    <item id="91342" name="Greater Vital Stone" additionalName="Lv. 3" type="Armor">
+    <item id="91342" name="Greater Vital Stone" type="Armor">
         <!-- When equipped, Acquired XP/ SP +21% during effect of Sayha Grace and while hunting, Sayha Grace Consumption -32%. Effect does not stack with additional jewels of the same type. When combined with the Jewel Power, you can obtain an upper level jewel. If upgrade fails, you'll get a jewel Lv. 1. Cannot be dropped. -->
         <set name="icon" val="icon.bm_jewel_vital_high_lv1_lavianrose"/>
         <set name="default_action" val="EQUIP"/>
@@ -428,7 +428,7 @@
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
     </item>
-    <item id="91343" name="Greater Vital Stone" additionalName="Lv. 4" type="Armor">
+    <item id="91343" name="Greater Vital Stone" type="Armor">
         <!-- When equipped, Acquired XP/ SP +23% during effect of Sayha Grace and while hunting, Sayha Grace Consumption -32%. Effect does not stack with additional jewels of the same type. When combined with the Jewel Power, you can obtain an upper level jewel. If upgrade fails, you'll get a jewel Lv. 1. Cannot be dropped. -->
         <set name="icon" val="icon.bm_jewel_vital_high_lv1_lavianrose"/>
         <set name="default_action" val="EQUIP"/>
@@ -438,7 +438,7 @@
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
     </item>
-    <item id="91344" name="Greater Vital Stone" additionalName="Lv. 5" type="Armor">
+    <item id="91344" name="Greater Vital Stone" type="Armor">
         <!-- When equipped, Acquired XP/ SP +30% during effect of Sayha Grace and while hunting, Acquired XP +50% for elemental monsters, Sayha Grace Consumption -35%. Effect does not stack with additional jewels of the same type. When combined with the Jewel Power, you can obtain an upper level jewel. Cannot be dropped. -->
         <set name="icon" val="icon.bm_jewel_vital_high_lv1_lavianrose"/>
         <set name="default_action" val="EQUIP"/>
@@ -448,7 +448,7 @@
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
     </item>
-    <item id="91345" name="Greater Aquamarine" additionalName="Lv. 1" type="Armor">
+    <item id="91345" name="Greater Aquamarine" type="Armor">
         <!-- When equipped, Max. MP +2%, when using a skill there is a chance of recovering 60 MP. Effect does not stack with additional jewels of the same type. When combined with the Jewel Power, you can obtain an upper level jewel. Cannot be dropped. -->
         <set name="icon" val="icon.bm_jewel_castmpup_high_lv1_lavianrose"/>
         <set name="default_action" val="EQUIP"/>
@@ -458,7 +458,7 @@
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
     </item>
-    <item id="91346" name="Greater Aquamarine" additionalName="Lv. 2" type="Armor">
+    <item id="91346" name="Greater Aquamarine" type="Armor">
         <!-- When equipped, Max. MP +5%, when using a skill there is a chance of recovering +80 MP. Effect does not stack with additional jewels of the same type. When combined with the Jewel Power, you can obtain an upper level jewel. If upgrade fails, you'll get a jewel Lv. 1. Cannot be dropped. -->
         <set name="icon" val="icon.bm_jewel_castmpup_high_lv1_lavianrose"/>
         <set name="default_action" val="EQUIP"/>
@@ -468,7 +468,7 @@
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
     </item>
-    <item id="91347" name="Greater Aquamarine" additionalName="Lv. 3" type="Armor">
+    <item id="91347" name="Greater Aquamarine" type="Armor">
         <!-- When equipped, Max. MP +8%, when using a skill there is a chance of recovering +100 MP. Effect does not stack with additional jewels of the same type. When combined with the Jewel Power, you can obtain an upper level jewel. If upgrade fails, you'll get a jewel Lv. 1. Cannot be dropped. -->
         <set name="icon" val="icon.bm_jewel_castmpup_high_lv1_lavianrose"/>
         <set name="default_action" val="EQUIP"/>
@@ -478,7 +478,7 @@
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
     </item>
-    <item id="91348" name="Greater Aquamarine" additionalName="Lv. 4" type="Armor">
+    <item id="91348" name="Greater Aquamarine" type="Armor">
         <!-- When equipped, Max. MP +12%, when using a skill there is a chance of recovering +130 MP. Effect does not stack with additional jewels of the same type. When combined with the Jewel Power, you can obtain an upper level jewel. If upgrade fails, you'll get a jewel Lv. 1. Cannot be dropped. -->
         <set name="icon" val="icon.bm_jewel_castmpup_high_lv1_lavianrose"/>
         <set name="default_action" val="EQUIP"/>
@@ -488,7 +488,7 @@
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
     </item>
-    <item id="91349" name="Greater Aquamarine" additionalName="Lv. 5" type="Armor">
+    <item id="91349" name="Greater Aquamarine" type="Armor">
         <!-- When equipped, Max. MP +20%, when using a skill there is a chance of recovering +200 MP. When using main skills recovers 10% MP. Effect does not stack with additional jewels of the same type. When combined with the Jewel Power, you can obtain an upper level jewel. Cannot be dropped. -->
         <set name="icon" val="icon.bm_jewel_castmpup_high_lv1_lavianrose"/>
         <set name="default_action" val="EQUIP"/>
@@ -498,7 +498,7 @@
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
     </item>
-    <item id="91350" name="Greater Cat's Eye" additionalName="Lv. 1" type="Armor">
+    <item id="91350" name="Greater Cat's Eye" type="Armor">
         <!-- When equipped, P./ M. Critical Damage +16%, P./ M. Skill Power +1%. Effect does not stack with additional jewels of the same type. When combined with the Jewel Power, you can obtain an upper level jewel. Cannot be dropped. -->
         <set name="icon" val="icon.bm_jewel_red_catseye_high_lv1_lavianrose"/>
         <set name="default_action" val="EQUIP"/>
@@ -508,7 +508,7 @@
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
     </item>
-    <item id="91351" name="Greater Cat's Eye" additionalName="Lv. 2" type="Armor">
+    <item id="91351" name="Greater Cat's Eye" type="Armor">
         <!-- When equipped, P./ M. Critical Damage +17%, P./ M. Skill Power +2%. Effect does not stack with additional jewels of the same type. When combined with the Jewel Power, you can obtain an upper level jewel. If upgrade fails, you'll get a jewel Lv. 1. Cannot be dropped. -->
         <set name="icon" val="icon.bm_jewel_red_catseye_high_lv1_lavianrose"/>
         <set name="default_action" val="EQUIP"/>
@@ -518,7 +518,7 @@
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
     </item>
-    <item id="91352" name="Greater Cat's Eye" additionalName="Lv. 3" type="Armor">
+    <item id="91352" name="Greater Cat's Eye" type="Armor">
         <!-- When equipped, P./ M. Critical Damage +18%, P./ M. Skill Power +3%. Effect does not stack with additional jewels of the same type. When combined with the Jewel Power, you can obtain an upper level jewel. If upgrade fails, you'll get a jewel Lv. 1. Cannot be dropped. -->
         <set name="icon" val="icon.bm_jewel_red_catseye_high_lv1_lavianrose"/>
         <set name="default_action" val="EQUIP"/>
@@ -528,7 +528,7 @@
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
     </item>
-    <item id="91353" name="Greater Cat's Eye" additionalName="Lv. 4" type="Armor">
+    <item id="91353" name="Greater Cat's Eye" type="Armor">
         <!-- When equipped, P./ M. Critical Damage +19%, P./ M. Skill Power +5%. Effect does not stack with additional jewels of the same type. When combined with the Jewel Power, you can obtain an upper level jewel. If upgrade fails, you'll get a jewel Lv. 1. Cannot be dropped. -->
         <set name="icon" val="icon.bm_jewel_red_catseye_high_lv1_lavianrose"/>
         <set name="default_action" val="EQUIP"/>
@@ -538,7 +538,7 @@
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
     </item>
-    <item id="91354" name="Greater Cat's Eye" additionalName="Lv. 5" type="Armor">
+    <item id="91354" name="Greater Cat's Eye" type="Armor">
         <!-- When equipped, P./ M. Critical Damage +20%, P./ M. Skill Power +7%, Debuff Resistance +40%. Effect does not stack with additional jewels of the same type. Cannot be dropped. -->
         <set name="icon" val="icon.bm_jewel_red_catseye_high_lv1_lavianrose"/>
         <set name="default_action" val="EQUIP"/>
@@ -563,7 +563,7 @@
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="91357" name="Emerald" additionalName="Lv. 1" type="Armor">
+    <item id="91357" name="Emerald" type="Armor">
         <!-- When equipped, CON +1. Effect does not stack with additional jewels of the same type. Cannot be exchanged, dropped, or sold in private store. Can be stored in a private warehouse. Can be shared within account through Dimensional Merchant. -->
         <set name="icon" val="icon.etc_bm_jewel_emerald_i00"/>
         <set name="default_action" val="EQUIP"/>
@@ -575,7 +575,7 @@
         <set name="is_depositable" val="false"/>
         <set name="is_sellable" val="false"/>
     </item>
-    <item id="91358" name="Emerald" additionalName="Lv. 2" type="Armor">
+    <item id="91358" name="Emerald" type="Armor">
         <!-- When equipped, CON, MEN +1. Effect does not stack with additional jewels of the same type. Cannot be exchanged, dropped, or sold in private store. Can be stored in a private warehouse. Can be shared within account through Dimensional Merchant. -->
         <set name="icon" val="icon.etc_bm_jewel_emerald_i00"/>
         <set name="default_action" val="EQUIP"/>
@@ -587,7 +587,7 @@
         <set name="is_depositable" val="false"/>
         <set name="is_sellable" val="false"/>
     </item>
-    <item id="91359" name="Emerald" additionalName="Lv. 3" type="Armor">
+    <item id="91359" name="Emerald" type="Armor">
         <!-- When equipped, CON, MEN, DEX +1. Effect does not stack with additional jewels of the same type. Cannot be exchanged, dropped, or sold in private store. Can be stored in a private warehouse. Can be shared within account through Dimensional Merchant. -->
         <set name="icon" val="icon.etc_bm_jewel_emerald_i00"/>
         <set name="default_action" val="EQUIP"/>
@@ -599,7 +599,7 @@
         <set name="is_depositable" val="false"/>
         <set name="is_sellable" val="false"/>
     </item>
-    <item id="91360" name="Emerald" additionalName="Lv. 4" type="Armor">
+    <item id="91360" name="Emerald" type="Armor">
         <!-- When equipped, CON, MEN, DEX, WIT +1. Effect does not stack with additional jewels of the same type. Cannot be exchanged, dropped, or sold in private store. Can be stored in a private warehouse. Can be shared within account through Dimensional Merchant. -->
         <set name="icon" val="icon.etc_bm_jewel_emerald_i00"/>
         <set name="default_action" val="EQUIP"/>
@@ -611,7 +611,7 @@
         <set name="is_depositable" val="false"/>
         <set name="is_sellable" val="false"/>
     </item>
-    <item id="91361" name="Emerald" additionalName="Lv. 5" type="Armor">
+    <item id="91361" name="Emerald" type="Armor">
         <!-- When equipped, CON, MEN, DEX, WIT, INT +1. Effect does not stack with additional jewels of the same type. When combined with the Jewel Power, you can obtain an upper level jewel. Cannot be exchanged, dropped, or sold in private store. Can be stored in a private warehouse. Can be shared within account through Dimensional Merchant. -->
         <set name="icon" val="icon.etc_bm_jewel_emerald_i00"/>
         <set name="default_action" val="EQUIP"/>
@@ -623,7 +623,7 @@
         <set name="is_depositable" val="false"/>
         <set name="is_sellable" val="false"/>
     </item>
-    <item id="91362" name="Greater Emerald" additionalName="Lv. 1" type="Armor">
+    <item id="91362" name="Greater Emerald" type="Armor">
         <!-- When equipped, CON +2, MEN, DEX, WIT, STR, INT +1, Damage Reflection Resistance +2%. Effect does not stack with additional jewels of the same type. When combined with the Jewel Power, you can obtain an upper level jewel. Cannot be dropped. -->
         <set name="icon" val="icon.bm_jewel_allstat_high_lv1_lavianrose"/>
         <set name="default_action" val="EQUIP"/>
@@ -633,7 +633,7 @@
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
     </item>
-    <item id="91363" name="Greater Emerald" additionalName="Lv. 2" type="Armor">
+    <item id="91363" name="Greater Emerald" type="Armor">
         <!-- When equipped, CON, MEN +2, DEX, WIT, STR, INT +1, Damage Reflection Resistance +4%. Effect does not stack with additional jewels of the same type. When combined with the Jewel Power, you can obtain an upper level jewel. If upgrade fails, you'll get a jewel Lv. 1. Cannot be dropped. -->
         <set name="icon" val="icon.bm_jewel_allstat_high_lv1_lavianrose"/>
         <set name="default_action" val="EQUIP"/>
@@ -643,7 +643,7 @@
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
     </item>
-    <item id="91364" name="Greater Emerald" additionalName="Lv. 3" type="Armor">
+    <item id="91364" name="Greater Emerald" type="Armor">
         <!-- When equipped, CON, MEN, DEX +2, WIT, STR, INT +1, Damage Reflection Resistance +6%. Effect does not stack with additional jewels of the same type. When combined with the Jewel Power, you can obtain an upper level jewel. If upgrade fails, you'll get a jewel Lv. 1. Cannot be dropped. -->
         <set name="icon" val="icon.bm_jewel_allstat_high_lv1_lavianrose"/>
         <set name="default_action" val="EQUIP"/>
@@ -653,7 +653,7 @@
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
     </item>
-    <item id="91365" name="Greater Emerald" additionalName="Lv. 4" type="Armor">
+    <item id="91365" name="Greater Emerald" type="Armor">
         <!-- When equipped, CON, MEN, DEX, WIT +2, STR, INT +1, Damage Reflection Resistance +10%. Effect does not stack with additional jewels of the same type. When combined with the Jewel Power, you can obtain an upper level jewel. If upgrade fails, you'll get a jewel Lv. 1. Cannot be dropped. -->
         <set name="icon" val="icon.bm_jewel_allstat_high_lv1_lavianrose"/>
         <set name="default_action" val="EQUIP"/>
@@ -663,7 +663,7 @@
         <set name="is_dropable" val="false"/>
         <set name="is_sellable" val="false"/>
     </item>
-    <item id="91366" name="Greater Emerald" additionalName="Lv. 5" type="Armor">
+    <item id="91366" name="Greater Emerald" type="Armor">
         <!-- When equipped, CON, MEN, DEX, WIT, STR, INT +2, Damage Reflection Resistance +20%. Effect does not stack with additional jewels of the same type. Cannot be dropped. -->
         <set name="icon" val="icon.bm_jewel_allstat_high_lv1_lavianrose"/>
         <set name="default_action" val="EQUIP"/>
@@ -745,7 +745,7 @@
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="91375" name="Skilled Fisherman's Rune - Professional" additionalName="7-day" type="EtcItem">
+    <item id="91375" name="Skilled Fisherman's Rune - Professional" type="EtcItem">
         <!-- A 7-day item. For Lv. 76 and below characters. When in inventory, Acquired XP/ SP +300% while fishing. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.fishing_zone_ticket_1"/>
         <set name="is_tradable" val="false"/>
@@ -754,7 +754,7 @@
         <set name="is_sellable" val="false"/>
         <set name="time" val="10080"/>
     </item>
-    <item id="91376" name="Skilled Fisherman's Rune - Master" additionalName="7-day" type="EtcItem">
+    <item id="91376" name="Skilled Fisherman's Rune - Master" type="EtcItem">
         <!-- A 7-day item. For characters of Lv. from 76 to 80 inclusive. When in inventory, Acquired XP/ SP +300% while fishing. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.fishing_zone_ticket_1"/>
         <set name="is_tradable" val="false"/>
@@ -763,7 +763,7 @@
         <set name="is_sellable" val="false"/>
         <set name="time" val="10080"/>
     </item>
-    <item id="91377" name="Skilled Fisherman's Rune - Expert" additionalName="7-day" type="EtcItem">
+    <item id="91377" name="Skilled Fisherman's Rune - Expert" type="EtcItem">
         <!-- A 8-day item. For Lv. 81 and above characters. When in inventory, Acquired XP/ SP +300% while fishing. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.fishing_zone_ticket_1"/>
         <set name="is_tradable" val="false"/>
@@ -880,7 +880,7 @@
         <set name="is_destroyable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="91390" name="Topaz Lv. 5" additionalName="15-day" type="Armor">
+    <item id="91390" name="Topaz Lv. 5" type="Armor">
         <!-- 15-day item. When equipped, disrupts the target's skill casting when used. Inflicts 2375 damage in PvP. Effect does not stack with additional jewels of the same type. Cannot be exchanged, dropped, or sold in private store. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.etc_bm_jewel_topaz_i00"/>
         <set name="default_action" val="EQUIP"/>

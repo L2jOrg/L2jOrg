@@ -125,7 +125,7 @@
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="70615" name="Mount - Gold Maned Lion" additionalName="7-day" type="Armor">
+    <item id="70615" name="Mount - Gold Maned Lion" type="Armor">
         <!-- Allows to mount a Golden Lion. Cannot be exchanged, dropped or sold, shared within account. Can store in a warehouse. Duration: 7 days. -->
         <set name="icon" val="icon.pi_high_agathion_bracelet_i00"/>
         <set name="default_action" val="EQUIP"/>
@@ -138,7 +138,7 @@
         <set name="is_sellable" val="false"/>
         <set name="time" val="10080"/>
     </item>
-    <item id="70616" name="Mount - Princess Ant" additionalName="7-day" type="Armor">
+    <item id="70616" name="Mount - Princess Ant" type="Armor">
         <!-- Allows to mount Princess Ant. Cannot be exchanged, dropped or sold, shared within account. Can store in a warehouse. Duration: 7 days. -->
         <set name="icon" val="icon.pi_high_agathion_bracelet_i00"/>
         <set name="default_action" val="EQUIP"/>
@@ -211,7 +211,7 @@
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="70623" name="Lucky Charm" additionalName="1-day" type="EtcItem">
+    <item id="70623" name="Lucky Charm" type="EtcItem">
         <!-- Character doesn't lose items if dies from ordinary monster and has Lucky Charm in his inventory. Cannot be exchanged, dropped or sold, shared within account. Can store in a warehouse. Duration: 1 day. -->
         <set name="icon" val="BranchSys.icon.br_four_leaf_clover_i00"/>
         <set name="is_tradable" val="false"/>
@@ -231,7 +231,7 @@
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="70625" name="XP Growth Amulet" additionalName="1-day" type="EtcItem">
+    <item id="70625" name="XP Growth Amulet" type="EtcItem">
         <!-- If stored in the inventory, acquired XP/ SP +40%. If used with High-grade XP Growth Amulet only the item with higher grade will take effect. Cannot be exchanged, dropped or sold, shared within account. Can store in a warehouse. Duration: 1 day. -->
         <set name="icon" val="icon.skill19226"/>
         <set name="is_tradable" val="false"/>
@@ -240,7 +240,7 @@
         <set name="is_sellable" val="false"/>
         <set name="time" val="1440"/>
     </item>
-    <item id="70626" name="High-grade XP Growth Amulet" additionalName="1-day" type="EtcItem">
+    <item id="70626" name="High-grade XP Growth Amulet" type="EtcItem">
         <!-- If stored in the inventory, acquired XP/ SP +60%. Cannot be exchanged, dropped or sold, shared within account. Can store in a warehouse. Duration: 1 day. -->
         <set name="icon" val="icon.skill19226"/>
         <set name="is_tradable" val="false"/>
@@ -268,7 +268,7 @@
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="70629" name="Fishing XP Growth Amulet" additionalName="1-day" type="EtcItem">
+    <item id="70629" name="Fishing XP Growth Amulet" type="EtcItem">
         <!-- If stored in the inventory during fishing, for 1 day acquired XP/ SP +30%. If used with High-grade Fishing XP Growth Amulet only the item with higher grade will take effect. Cannot be exchanged, dropped or sold, shared within account. Can store in a warehouse. -->
         <set name="icon" val="icon.fishing_zone_ticket"/>
         <set name="is_tradable" val="false"/>
@@ -277,7 +277,7 @@
         <set name="is_sellable" val="false"/>
         <set name="time" val="1440"/>
     </item>
-    <item id="70630" name="High-grade Fishing XP Growth Amulet" additionalName="1-day" type="EtcItem">
+    <item id="70630" name="High-grade Fishing XP Growth Amulet" type="EtcItem">
         <!-- If stored in the inventory during fishing, acquired XP/ SP +50%. Cannot be exchanged, dropped or sold, shared within account. Can store in a warehouse. Duration: 1 day. -->
         <set name="icon" val="icon.fishing_zone_ticket"/>
         <set name="is_tradable" val="false"/>
@@ -326,7 +326,7 @@
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="70636" name="Party Buff Scroll - Lv. 1" additionalName="Event" type="EtcItem">
+    <item id="70636" name="Party Buff Scroll - Lv. 1" type="EtcItem">
         <!-- For 20 min., character's and nearby party members' P. / M. Atk. +3%. -->
         <set name="icon" val="icon.etc_trans_4f_s_b_01"/>
         <set name="default_action" val="SKILL_REDUCE"/>
@@ -337,7 +337,7 @@
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="70637" name="Party Buff Scroll - Lv. 2" additionalName="Event" type="EtcItem">
+    <item id="70637" name="Party Buff Scroll - Lv. 2" type="EtcItem">
         <!-- For 20 min., character's and nearby party members' P. / M. Atk. / Atk. Spd. / Casting Spd. +5%. -->
         <set name="icon" val="icon.etc_trans_4f_s_b_01"/>
         <set name="default_action" val="SKILL_REDUCE"/>
@@ -348,7 +348,7 @@
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="70638" name="Special Warrior's Fruit" additionalName="Event" type="EtcItem">
+    <item id="70638" name="Special Warrior's Fruit" type="EtcItem">
         <!-- For 20 min., P. / M. Atk. +8%, P. / M. Def. +15%, HP/MP/CP +18%, HP/MP Recovery +24%. Recovers as HP 3% of the physical damage inflicted on the enemy with a certain probability. Cannot be stacked with Special Pirate Fruit. Cannot be exchanged, dropped or sold, shared within account. Can store in a warehouse. -->
         <set name="icon" val="icon.etc_cobol_i01"/>
         <set name="default_action" val="SKILL_REDUCE"/>
@@ -359,7 +359,7 @@
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="70639" name="Warrior's XP/SP Scroll" additionalName="Event" type="EtcItem">
+    <item id="70639" name="Warrior's XP/SP Scroll" type="EtcItem">
         <!-- For 20 min. XP / SP +50%. Cannot be stacked with other XP / SP scrolls. Cannot be exchanged, dropped or sold, shared within account. Can store in a warehouse. -->
         <set name="icon" val="icon.exp_bottle_scroll"/>
         <set name="default_action" val="SKILL_REDUCE"/>
@@ -370,7 +370,7 @@
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="70640" name="Warrior's Recovery Potion" additionalName="Event" type="EtcItem">
+    <item id="70640" name="Warrior's Recovery Potion" type="EtcItem">
         <!-- Immediately restores 200 HP. Cannot be used, when HP is full. Cannot be exchanged, dropped or sold, shared within account. Can store in a warehouse. -->
         <set name="icon" val="icon.etc_potion_scarlet_i00"/>
         <set name="default_action" val="SKILL_REDUCE"/>
@@ -381,7 +381,7 @@
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="70641" name="Warrior's Major Recovery Potion" additionalName="Event" type="EtcItem">
+    <item id="70641" name="Warrior's Major Recovery Potion" type="EtcItem">
         <!-- Immediately restores 500 HP. Cannot be used, when HP is full. Cannot be exchanged, dropped or sold, shared within account. Can store in a warehouse. -->
         <set name="icon" val="icon.etc_potion_red_i00"/>
         <set name="default_action" val="SKILL_REDUCE"/>
@@ -392,7 +392,7 @@
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="70642" name="Hero's MP Recovery Potion" additionalName="Event" type="EtcItem">
+    <item id="70642" name="Hero's MP Recovery Potion" type="EtcItem">
         <!-- Immediately restores 60 MP. Cannot be exchanged, dropped or sold, shared within account. Can store in a warehouse. -->
         <set name="icon" val="icon.etc_potion_blue_i00"/>
         <set name="default_action" val="SKILL_REDUCE"/>
@@ -410,7 +410,7 @@
             <skill id="39258" level="1"/> <!-- Warrior MP Recovery Potion -->
         </skills>
     </item>
-    <item id="70643" name="Golden Mermaid's Scale" additionalName="7-day" type="EtcItem">
+    <item id="70643" name="Golden Mermaid's Scale" type="EtcItem">
         <!-- For 3 hours, during fishing XP / SP +10%. Cannot be exchanged, dropped or sold, shared within account. Can store in a warehouse. Duration: 7 days. -->
         <set name="icon" val="icon.etc_oren_fish_scale_i00"/>
         <set name="default_action" val="SKILL_REDUCE"/>
@@ -421,7 +421,7 @@
         <set name="is_sellable" val="false"/>
         <set name="time" val="10080"/>
     </item>
-    <item id="70644" name="Growth Amulet" additionalName="3-day" type="EtcItem">
+    <item id="70644" name="Growth Amulet" type="EtcItem">
         <!-- If stored in the inventory, acquired XP/ SP +40%. Cannot be exchanged, dropped or sold, shared within account. Can store in a warehouse. Duration: 3 days. -->
         <set name="icon" val="BranchSys3.lcon.g_rune_itemdrop_up"/>
         <set name="weight" val="50"/>
@@ -431,7 +431,7 @@
         <set name="is_sellable" val="false"/>
         <set name="time" val="4320"/>
     </item>
-    <item id="70645" name="Warrior's Shining Dualsword" additionalName="30 days" type="Weapon">
+    <item id="70645" name="Warrior's Shining Dualsword" type="Weapon">
         <!-- Atk. Spd. +5%. Cannot be exchanged, dropped or sold, enchanted shared within account. Can store in a warehouse. Duration: 30 days. -->
         <set name="icon" val="icon.weapon_dual_sword_i00"/>
         <set name="default_action" val="EQUIP"/>
@@ -456,7 +456,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="70646" name="Warrior's Shining Staff" additionalName="30 days" type="Weapon">
+    <item id="70646" name="Warrior's Shining Staff" type="Weapon">
         <!-- Casting Spd. +12%. Cannot be exchanged, dropped or sold, enchanted shared within account. Can store in a warehouse. Duration: 30 days. -->
         <set name="icon" val="icon.weapon_sages_staff_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -483,7 +483,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="70647" name="Warrior's Shining Bow" additionalName="30 days" type="Weapon">
+    <item id="70647" name="Warrior's Shining Bow" type="Weapon">
         <!-- P. Critical Rate +52. Cannot be exchanged, dropped or sold, enchanted shared within account. Can store in a warehouse. Duration: 30 days. -->
         <set name="icon" val="icon.weapon_akat_long_bow_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -510,7 +510,7 @@
             <stat type="pAtkRange">500</stat>
         </stats>
     </item>
-    <item id="70648" name="Warrior's Shining Dagger" additionalName="30 days" type="Weapon">
+    <item id="70648" name="Warrior's Shining Dagger" type="Weapon">
         <!-- P. Critical Rate +66. Cannot be exchanged, dropped or sold, enchanted shared within account. Can store in a warehouse. Duration: 30 days. -->
         <set name="icon" val="icon.weapon_grace_dagger_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -536,7 +536,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="70649" name="Warrior's Shining Spear" additionalName="30 days" type="Weapon">
+    <item id="70649" name="Warrior's Shining Spear" type="Weapon">
         <!-- Has a 25% chance of casting Stun on the target during a Critical Attack. Cannot be exchanged, dropped or sold, enchanted shared within account. Can store in a warehouse. Duration: 30 days. -->
         <set name="icon" val="icon.weapon_poleaxe_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -565,7 +565,7 @@
             <stat type="pAtkRange">80</stat>
         </stats>
     </item>
-    <item id="70650" name="Warrior's Shining Helmet" additionalName="30 days" type="Armor">
+    <item id="70650" name="Warrior's Shining Helmet" type="Armor">
         <!-- Heavy Armor. Cannot be exchanged, dropped or sold, enchanted shared within account. Can store in a warehouse. Duration: 30 days. -->
         <set name="icon" val="icon.armor_leather_helmet_i00"/>
         <set name="default_action" val="EQUIP"/>
@@ -582,7 +582,7 @@
             <stat type="pDef">58</stat>
         </stats>
     </item>
-    <item id="70651" name="Warrior's Shining Armor" additionalName="30 days" type="Armor">
+    <item id="70651" name="Warrior's Shining Armor" type="Armor">
         <!-- Heavy Armor. Cannot be exchanged, dropped or sold, enchanted shared within account. Can store in a warehouse. Duration: 30 days. -->
         <set name="icon" val="icon.armor_t62_ul_i00"/>
         <set name="default_action" val="EQUIP"/>
@@ -600,7 +600,7 @@
             <stat type="pDef">239</stat>
         </stats>
     </item>
-    <item id="70652" name="Warrior's Shining Gauntlets" additionalName="30 days" type="Armor">
+    <item id="70652" name="Warrior's Shining Gauntlets" type="Armor">
         <!-- Heavy Armor. Cannot be exchanged, dropped or sold, enchanted shared within account. Can store in a warehouse. Duration: 30 days. -->
         <set name="icon" val="icon.armor_t62_g_i00"/>
         <set name="default_action" val="EQUIP"/>
@@ -617,7 +617,7 @@
             <stat type="pDef">39</stat>
         </stats>
     </item>
-    <item id="70653" name="Warrior's Shining Boots" additionalName="30 days" type="Armor">
+    <item id="70653" name="Warrior's Shining Boots" type="Armor">
         <!-- Heavy Armor. Cannot be exchanged, dropped or sold, enchanted shared within account. Can store in a warehouse. Duration: 30 days. -->
         <set name="icon" val="icon.armor_t62_b_i00"/>
         <set name="default_action" val="EQUIP"/>
@@ -634,7 +634,7 @@
             <stat type="pDef">39</stat>
         </stats>
     </item>
-    <item id="70654" name="Warrior's Shining Helmet" additionalName="30 days" type="Armor">
+    <item id="70654" name="Warrior's Shining Helmet" type="Armor">
         <!-- Light Armor. Cannot be exchanged, dropped or sold, enchanted shared within account. Can store in a warehouse. Duration: 30 days. -->
         <set name="icon" val="icon.armor_leather_helmet_i00"/>
         <set name="default_action" val="EQUIP"/>
@@ -651,7 +651,7 @@
             <stat type="pDef">47</stat>
         </stats>
     </item>
-    <item id="70655" name="Warrior's Shining Rags" additionalName="30 days" type="Armor">
+    <item id="70655" name="Warrior's Shining Rags" type="Armor">
         <!-- Light Armor. Cannot be exchanged, dropped or sold, enchanted shared within account. Can store in a warehouse. Duration: 30 days. -->
         <set name="icon" val="icon.armor_t45_ul_i00"/>
         <set name="default_action" val="EQUIP"/>
@@ -669,7 +669,7 @@
             <stat type="pDef">179</stat>
         </stats>
     </item>
-    <item id="70656" name="Warrior's Shining Gloves" additionalName="30 days" type="Armor">
+    <item id="70656" name="Warrior's Shining Gloves" type="Armor">
         <!-- Light Armor. Cannot be exchanged, dropped or sold, enchanted shared within account. Can store in a warehouse. Duration: 30 days. -->
         <set name="icon" val="icon.armor_t45_g_i00"/>
         <set name="default_action" val="EQUIP"/>
@@ -686,7 +686,7 @@
             <stat type="pDef">39</stat>
         </stats>
     </item>
-    <item id="70657" name="Warrior's Shining Shoes" additionalName="30 days" type="Armor">
+    <item id="70657" name="Warrior's Shining Shoes" type="Armor">
         <!-- Light Armor. Cannot be exchanged, dropped or sold, enchanted shared within account. Can store in a warehouse. Duration: 30 days. -->
         <set name="icon" val="icon.armor_t45_b_i00"/>
         <set name="default_action" val="EQUIP"/>
@@ -703,7 +703,7 @@
             <stat type="pDef">39</stat>
         </stats>
     </item>
-    <item id="70658" name="Warrior's Shining Circlet" additionalName="30 days" type="Armor">
+    <item id="70658" name="Warrior's Shining Circlet" type="Armor">
         <!-- Robe. Cannot be exchanged, dropped or sold, enchanted shared within account. Can store in a warehouse. Duration: 30 days. -->
         <set name="icon" val="icon.armor_circlet_i00"/>
         <set name="default_action" val="EQUIP"/>
@@ -720,7 +720,7 @@
             <stat type="pDef">54</stat>
         </stats>
     </item>
-    <item id="70659" name="Warrior's Shining Tunic" additionalName="30 days" type="Armor">
+    <item id="70659" name="Warrior's Shining Tunic" type="Armor">
         <!-- Robe. Cannot be exchanged, dropped or sold, enchanted shared within account. Can store in a warehouse. Duration: 30 days. -->
         <set name="icon" val="icon.armor_t57_u_i00"/>
         <set name="default_action" val="EQUIP"/>
@@ -739,7 +739,7 @@
             <stat type="maxMp">314</stat>
         </stats>
     </item>
-    <item id="70660" name="Warrior's Shining Stockings" additionalName="30 days" type="Armor">
+    <item id="70660" name="Warrior's Shining Stockings" type="Armor">
         <!-- Robe. Cannot be exchanged, dropped or sold, enchanted shared within account. Can store in a warehouse. Duration: 30 days. -->
         <set name="icon" val="icon.armor_t57_l_i00"/>
         <set name="default_action" val="EQUIP"/>
@@ -758,7 +758,7 @@
             <stat type="maxMp">196</stat>
         </stats>
     </item>
-    <item id="70661" name="Warrior's Shining Gloves" additionalName="30 days" type="Armor">
+    <item id="70661" name="Warrior's Shining Gloves" type="Armor">
         <!-- Robe. Cannot be exchanged, dropped or sold, enchanted shared within account. Can store in a warehouse. Duration: 30 days. -->
         <set name="icon" val="icon.armor_t57_g_i00"/>
         <set name="default_action" val="EQUIP"/>
@@ -775,7 +775,7 @@
             <stat type="pDef">39</stat>
         </stats>
     </item>
-    <item id="70662" name="Warrior's Shining Shoes" additionalName="30 days" type="Armor">
+    <item id="70662" name="Warrior's Shining Shoes" type="Armor">
         <!-- Robe. Cannot be exchanged, dropped or sold, enchanted shared within account. Can store in a warehouse. Duration: 30 days. -->
         <set name="icon" val="icon.armor_t57_b_i00"/>
         <set name="default_action" val="EQUIP"/>
@@ -792,7 +792,7 @@
             <stat type="pDef">34</stat>
         </stats>
     </item>
-    <item id="70663" name="Party Support Cube - Lv. 1" additionalName="7-day" type="EtcItem">
+    <item id="70663" name="Party Support Cube - Lv. 1" type="EtcItem">
         <!-- Double-click to get one of the following: from 1 to 3 Party Buff Scrolls - Lv. 1. <Note:>. Support Cube can be used only once a day. A new day starts every day at 18:30. Cannot be stacked with other Support Cube. Cannot be exchanged, dropped or sold, enchanted shared within account. Can store in a warehouse. Duration: 7 days. -->
         <set name="icon" val="icon.etc_clear_crystal_cube_pc_i00"/>
         <set name="default_action" val="SKILL_REDUCE"/>
@@ -803,7 +803,7 @@
         <set name="is_sellable" val="false"/>
         <set name="time" val="10080"/>
     </item>
-    <item id="70664" name="Soulshot Support Cube" additionalName="7-day" type="EtcItem">
+    <item id="70664" name="Soulshot Support Cube" type="EtcItem">
         <!-- Double-click to get one of the following: from 150 to 1500 Mysterious Soulshots (C-grade). <Note:>. Support Cube can be used only once a day. A new day starts every day at 18:30. Cannot be stacked with other Support Cube. Cannot be exchanged, dropped or sold, enchanted shared within account. Can store in a warehouse. Duration: 7 days. -->
         <set name="icon" val="icon.etc_violet_crystal_cube_pc_i00"/>
         <set name="default_action" val="SKILL_REDUCE"/>
@@ -814,7 +814,7 @@
         <set name="is_sellable" val="false"/>
         <set name="time" val="10080"/>
     </item>
-    <item id="70665" name="Spiritshot Support Cube" additionalName="7-day" type="EtcItem">
+    <item id="70665" name="Spiritshot Support Cube" type="EtcItem">
         <!-- Double-click to get one of the following: from 100 to 1000 Mysterious Spiritshots (C-grade). <Note:>. Support Cube can be used only once a day. A new day starts every day at 18:30. Cannot be stacked with other Support Cube. Cannot be exchanged, dropped or sold, enchanted shared within account. Can store in a warehouse. Duration: 7 days. -->
         <set name="icon" val="icon.etc_pink_crystal_cube_pc_i00"/>
         <set name="default_action" val="SKILL_REDUCE"/>
@@ -825,7 +825,7 @@
         <set name="is_sellable" val="false"/>
         <set name="time" val="10080"/>
     </item>
-    <item id="70666" name="Buff Support Cube" additionalName="7-day" type="EtcItem">
+    <item id="70666" name="Buff Support Cube" type="EtcItem">
         <!-- Double-click to get one of the following: from 1 to 3 Special Warrior's Fruits or XP/SP Warrior's Scroll. <Note:>. Support Cube can be used only once a day. A new day starts every day at 18:30. Cannot be stacked with other Support Cube. Cannot be exchanged, dropped or sold, enchanted shared within account. Can store in a warehouse. Duration: 7 days. -->
         <set name="icon" val="icon.etc_dkbrown_crystal_cube_pc_i00"/>
         <set name="default_action" val="SKILL_REDUCE"/>
@@ -836,7 +836,7 @@
         <set name="is_sellable" val="false"/>
         <set name="time" val="10080"/>
     </item>
-    <item id="70667" name="Potion Support Cube - Lv. 1" additionalName="7-day" type="EtcItem">
+    <item id="70667" name="Potion Support Cube - Lv. 1" type="EtcItem">
         <!-- Double-click to get one of the following: from 3 to 10 Warrior's Recovery Potions or from 3 to 5 Warrior's MP Recovery Potions. <Note:>. Support Cube can be used only once a day. A new day starts every day at 18:30. Cannot be stacked with other Support Cube. Cannot be exchanged, dropped or sold, enchanted shared within account. Can store in a warehouse. Duration: 7 days. -->
         <set name="icon" val="icon.etc_black_crystal_cube_pc_i00"/>
         <set name="default_action" val="SKILL_REDUCE"/>
@@ -847,7 +847,7 @@
         <set name="is_sellable" val="false"/>
         <set name="time" val="10080"/>
     </item>
-    <item id="70668" name="Blessed Support Cube" additionalName="7-day" type="EtcItem">
+    <item id="70668" name="Blessed Support Cube" type="EtcItem">
         <!-- Double-click to get one of the following: 3 Blessed Scrolls of Escape / 2 Blessed Scrolls of Resurrection / Feather of Blessing. <Note:>. Support Cube can be used only once a day. A new day starts every day at 18:30. Cannot be stacked with other Support Cube. Cannot be exchanged, dropped or sold, enchanted shared within account. Can store in a warehouse. Duration: 7 days. -->
         <set name="icon" val="icon.etc_golden_ore_cube_pc_i00"/>
         <set name="default_action" val="SKILL_REDUCE"/>
@@ -858,7 +858,7 @@
         <set name="is_sellable" val="false"/>
         <set name="time" val="10080"/>
     </item>
-    <item id="70669" name="Party Support Cube - Lv. 2" additionalName="7-day" type="EtcItem">
+    <item id="70669" name="Party Support Cube - Lv. 2" type="EtcItem">
         <!-- Double-click to get from 1 to 5 Support Cubes - Lv. 2. <Note:>. Support Cube can be used only once a day. A new day starts every day at 18:30. Cannot be stacked with other Support Cube. Cannot be exchanged, dropped or sold, enchanted shared within account. Can store in a warehouse. Duration: 7 days. -->
         <set name="icon" val="icon.etc_silver_ore_cube_pc_i00"/>
         <set name="default_action" val="SKILL_REDUCE"/>
@@ -869,7 +869,7 @@
         <set name="is_sellable" val="false"/>
         <set name="time" val="10080"/>
     </item>
-    <item id="70670" name="Fishing Support Cube" additionalName="7-day" type="EtcItem">
+    <item id="70670" name="Fishing Support Cube" type="EtcItem">
         <!-- Double-click to get Elite Fishing Rod of Golden Mermaid (1-day) and one of the following: Golden Mermaid's Scale (7-day) / 20 Fishing Shots / 20 Normal Baits. <Note:>. Support Cube can be used only once a day. A new day starts every day at 18:30. Cannot be stacked with other Support Cube. Cannot be exchanged, dropped or sold, enchanted shared within account. Can store in a warehouse. Duration: 7 days. -->
         <set name="icon" val="icon.etc_cupreous_ore_cube_pc_i00"/>
         <set name="default_action" val="SKILL_REDUCE"/>
@@ -880,7 +880,7 @@
         <set name="is_sellable" val="false"/>
         <set name="time" val="10080"/>
     </item>
-    <item id="70671" name="Potion Support Cube - Lv. 2" additionalName="7-day" type="EtcItem">
+    <item id="70671" name="Potion Support Cube - Lv. 2" type="EtcItem">
         <!-- Double-click to get one of the following: 5 Warrior's Major Recovery Potions / from 5 to 10 Warrior's Recovery Potions / from 3 to 5 Warrior's MP Recovery Potions. <Note:>. Support Cube can be used only once a day. A new day starts every day at 18:30. Cannot be stacked with other Support Cube. Cannot be exchanged, dropped or sold, enchanted shared within account. Can store in a warehouse. Duration: 7 days. -->
         <set name="icon" val="icon.etc_earthen_ore_cube_pc_i00"/>
         <set name="default_action" val="SKILL_REDUCE"/>
@@ -891,7 +891,7 @@
         <set name="is_sellable" val="false"/>
         <set name="time" val="10080"/>
     </item>
-    <item id="70672" name="Progression Support Cube" additionalName="7-day" type="EtcItem">
+    <item id="70672" name="Progression Support Cube" type="EtcItem">
         <!-- Double-click to get one of the following: 1 or 2 Golden Necklaces of Mermaid (7-day). <Note:>. Support Cube can be used only once a day. A new day starts every day at 18:30. Cannot be stacked with other Support Cube. Cannot be exchanged, dropped or sold, enchanted shared within account. Can store in a warehouse. Duration: 7 days. -->
         <set name="icon" val="icon.etc_crystal_cube_event_i00"/>
         <set name="default_action" val="SKILL_REDUCE"/>
@@ -902,7 +902,7 @@
         <set name="is_sellable" val="false"/>
         <set name="time" val="10080"/>
     </item>
-    <item id="70673" name="Warrior's Bracelet" additionalName="30 days" type="Armor">
+    <item id="70673" name="Warrior's Bracelet" type="Armor">
         <!-- Special Bracelet for Returning Heroes. Activates 4 Talisman slots. HP/MP/CP +5%. Cannot be exchanged, dropped or sold, shared within account. Can store in a warehouse. -->
         <set name="icon" val="icon.dimension_bracelet_i05"/>
         <set name="default_action" val="EQUIP"/>
@@ -914,7 +914,7 @@
         <set name="is_depositable" val="false"/>
         <set name="is_sellable" val="false"/>
     </item>
-    <item id="70674" name="Returning Hero's Talisman" additionalName="30 days" type="Armor">
+    <item id="70674" name="Returning Hero's Talisman" type="Armor">
         <!-- Special Talisman for Returning Heroes. P. Def. +22, M. Def. +11, P. / M. Evasion +1, Max. HP/MP/CP +80, Atk./Casting Spd. +9, Speed +4. Cannot be exchanged, dropped or sold, shared within account. -->
         <set name="icon" val="icon.npoint_talisman_stat"/>
         <set name="default_action" val="EQUIP"/>
@@ -925,7 +925,7 @@
         <set name="is_depositable" val="false"/>
         <set name="is_sellable" val="false"/>
     </item>
-    <item id="70675" name="Returning Hero's Reward - Heavy Armor" additionalName="Event" type="EtcItem">
+    <item id="70675" name="Returning Hero's Reward - Heavy Armor" type="EtcItem">
         <!-- Double-click to acquire Warrior's Shining Heavy Armor Set (30-day) / Warrior's Shining Weapon Set (30-day) / Expertise Rune (C-grade) and Returning Hero's Reward - Lv. 30, Party Support Cube - Lv. 1 (7-day). Cannot be exchanged, dropped or sold, shared within account. Can store in a warehouse. -->
         <set name="icon" val="icon.event_six_party_box_i00"/>
         <set name="default_action" val="PEEL"/>
@@ -936,7 +936,7 @@
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="70676" name="Returning Hero's Reward - Light Armor" additionalName="Event" type="EtcItem">
+    <item id="70676" name="Returning Hero's Reward - Light Armor" type="EtcItem">
         <!-- Double-click to acquire Warrior's Shining Light Armor Set (30-day) / Warrior's Shining Weapon Set (30-day) / Expertise Rune (C-grade) and Returning Hero's Reward - Lv. 30, Party Support Cube - Lv. 1 (7-day). Cannot be exchanged, dropped or sold, shared within account. Can store in a warehouse. -->
         <set name="icon" val="icon.event_six_party_box_i00"/>
         <set name="default_action" val="PEEL"/>
@@ -947,7 +947,7 @@
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="70677" name="Returning Hero's Reward - Robe" additionalName="Event" type="EtcItem">
+    <item id="70677" name="Returning Hero's Reward - Robe" type="EtcItem">
         <!-- Double-click to acquire Warrior's Shining Robe Set (30-day) / Warrior's Shining Weapon Set (30-day) / Expertise Rune (C-grade) and Returning Hero's Reward - Lv. 30, Party Support Cube - Lv. 1 (7-day). Cannot be exchanged, dropped or sold, shared within account. Can store in a warehouse. -->
         <set name="icon" val="icon.event_six_party_box_i00"/>
         <set name="default_action" val="PEEL"/>
@@ -958,7 +958,7 @@
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="70678" name="Expertise Rune (C-grade)" additionalName="30 days" type="EtcItem">
+    <item id="70678" name="Expertise Rune (C-grade)" type="EtcItem">
         <!-- When possessed, gives Expertise C Skill. Cannot be exchanged, dropped or sold, shared within account. Can store in a warehouse. Duration: 30 days. -->
         <set name="icon" val="br_cashtex.item.br_cash_rune_of_feather_i00"/>
         <set name="is_tradable" val="false"/>
@@ -966,7 +966,7 @@
         <set name="is_depositable" val="false"/>
         <set name="is_sellable" val="false"/>
     </item>
-    <item id="70679" name="Returning Hero's Reward - Lv. 30" additionalName="Event" type="EtcItem">
+    <item id="70679" name="Returning Hero's Reward - Lv. 30" type="EtcItem">
         <!-- Double-click to acquire: 1 Growth Amulet (3-day), 1 Returning Hero's Reward - Lv. 40, 1 Soulshot Support Cube (7-day), 1 Spiritshot Support Cube (7-day). Can be used by characters with lvl 30 and above. Cannot be exchanged, dropped or sold, shared within account. Can store in a warehouse. -->
         <set name="icon" val="icon.npoint_earring_of_lind_30day_box"/>
         <set name="default_action" val="PEEL"/>
@@ -977,7 +977,7 @@
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="70680" name="Returning Hero's Reward - Lv. 40" additionalName="Event" type="EtcItem">
+    <item id="70680" name="Returning Hero's Reward - Lv. 40" type="EtcItem">
         <!-- Double-click to acquire: 1 Cadmus Transformation Bracelet - Prophet (7-day), 1 Returning Hero's Reward - Lv. 45, 1 Soulshot Support Cube (7-day). Can be used by characters with lvl 40 and above. Cannot be exchanged, dropped or sold, shared within account. Can store in a warehouse. -->
         <set name="icon" val="icon.npoint_antaras_30day_box"/>
         <set name="default_action" val="PEEL"/>
@@ -988,7 +988,7 @@
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="70681" name="Returning Hero's Reward - Lv. 45" additionalName="Event" type="EtcItem">
+    <item id="70681" name="Returning Hero's Reward - Lv. 45" type="EtcItem">
         <!-- Double-click to acquire: 1 Growth Amulet (3-day), 1 Returning Hero's Reward - Lv. 50, 1 Potion Support Cube - Lv. 1 (7-day). Can be used by characters with lvl 45 and above. Cannot be exchanged, dropped or sold, shared within account. Can store in a warehouse. -->
         <set name="icon" val="icon.npoint_valakas_30day_box"/>
         <set name="default_action" val="PEEL"/>
@@ -999,7 +999,7 @@
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="70682" name="Returning Hero's Reward - Lv. 50" additionalName="Event" type="EtcItem">
+    <item id="70682" name="Returning Hero's Reward - Lv. 50" type="EtcItem">
         <!-- Double-click to acquire: 1 Refined Ring of Core / Orfen /Princess Ant's Ring (7-day), 1 Returning Hero's Reward - Lv. 54, 1 Blessed Support Cube (7-day). Can be used by characters with lvl 50 and above. Cannot be exchanged, dropped or sold, shared within account. Can store in a warehouse. -->
         <set name="icon" val="icon.npoint_tauti_30day_box"/>
         <set name="default_action" val="PEEL"/>
@@ -1010,7 +1010,7 @@
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="70683" name="Returning Hero's Reward - Lv. 54" additionalName="Event" type="EtcItem">
+    <item id="70683" name="Returning Hero's Reward - Lv. 54" type="EtcItem">
         <!-- Double-click to acquire: 5 Golden Necklaces of Mermaid (7-day), 10 Rice Cakes of Flaming Fighting Spirit (event) and Returning Hero's Reward - Lv. 56, Party Support Cube - Lv. 2. Can be used by characters with lvl 54 and above. Cannot be exchanged, dropped or sold, shared within account. Can store in a warehouse. -->
         <set name="icon" val="icon.npoint_earthworm_30day_box"/>
         <set name="default_action" val="PEEL"/>
@@ -1021,7 +1021,7 @@
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="70684" name="Returning Hero's Reward - Lv. 56" additionalName="Event" type="EtcItem">
+    <item id="70684" name="Returning Hero's Reward - Lv. 56" type="EtcItem">
         <!-- Double-click to acquire: 1 Growth Amulet (3-day), 1 Returning Hero's Reward - Lv. 58, 1 Fishing Support Cube (7-day). Can be used by characters with lvl 56 and above. Cannot be exchanged, dropped or sold, shared within account. Can store in a warehouse. -->
         <set name="icon" val="icon.etc_pi_box_love_pack"/>
         <set name="default_action" val="PEEL"/>
@@ -1032,7 +1032,7 @@
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="70685" name="Returning Hero's Reward - Lv. 58" additionalName="Event" type="EtcItem">
+    <item id="70685" name="Returning Hero's Reward - Lv. 58" type="EtcItem">
         <!-- Double-click to acquire: 1 Cadmus Transformation Bracelet - Prophet (7-day), 1 Returning Hero's Reward - Lv. 60, 1 Potion Support Cube - Lv. 2 (7-day). Can be used by characters with lvl 58 and above. Cannot be exchanged, dropped or sold, shared within account. Can store in a warehouse. -->
         <set name="icon" val="icon.etc_pi_box_wish_pack"/>
         <set name="default_action" val="PEEL"/>
@@ -1043,7 +1043,7 @@
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="70686" name="Returning Hero's Reward - Lv. 60" additionalName="Event" type="EtcItem">
+    <item id="70686" name="Returning Hero's Reward - Lv. 60" type="EtcItem">
         <!-- Double-click to acquire: 1 Agathion - Aries (60-day), 1 Warrior's Bracelet (30-day), 1 Returning Hero's Talisman (30-day), 1 Progression Support Cube (7-day). Can be used by characters with lvl 56 and above. Cannot be exchanged, dropped or sold, shared within account. Can store in a warehouse. -->
         <set name="icon" val="icon.etc_pi_box_joy_pack"/>
         <set name="default_action" val="PEEL"/>

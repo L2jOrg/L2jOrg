@@ -52,7 +52,7 @@
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="70306" name="Blessed Mysterious Soulshot (No-grade)" additionalName="Event" type="EtcItem">
+    <item id="70306" name="Blessed Mysterious Soulshot (No-grade)" type="EtcItem">
         <!-- The power of a Soulshot is bestowed upon a weapon, temporarily increasing the power of attack. For No-grade weapons. -->
         <set name="icon" val="icon.etc_bless_spirit_bullet_white_i00"/>
         <set name="default_action" val="SOULSHOT"/>
@@ -69,7 +69,7 @@
             <skill id="55384" level="1"/> <!-- Player Commendation - Blessed Soulshot (No-grade) -->
         </skills>
     </item>
-    <item id="70307" name="Mysterious Blessed Soulshot (D-grade)" additionalName="Event" type="EtcItem">
+    <item id="70307" name="Mysterious Blessed Soulshot (D-grade)" type="EtcItem">
         <!-- The power of a Soulshot is bestowed upon a weapon, temporarily increasing the power of attack. For D-grade weapons. -->
         <set name="icon" val="icon.etc_bless_spirit_bullet_blue_i00"/>
         <set name="default_action" val="SOULSHOT"/>
@@ -87,7 +87,7 @@
             <skill id="55385" level="1"/> <!-- Player Commendation - Blessed Soulshot (D-grade) -->
         </skills>
     </item>
-    <item id="70308" name="Mysterious Blessed Soulshot (C-grade)" additionalName="Event" type="EtcItem">
+    <item id="70308" name="Mysterious Blessed Soulshot (C-grade)" type="EtcItem">
         <!-- The power of a Soulshot is bestowed upon a weapon, temporarily increasing the power of attack. For C-grade weapons. -->
         <set name="icon" val="icon.etc_bless_spirit_bullet_green_i00"/>
         <set name="default_action" val="SOULSHOT"/>
@@ -105,7 +105,7 @@
             <skill id="55386" level="1"/> <!-- Player Commendation - Blessed Soulshot (C-grade) -->
         </skills>
     </item>
-    <item id="70309" name="Mysterious Blessed Soulshot (B-grade)" additionalName="Event" type="EtcItem">
+    <item id="70309" name="Mysterious Blessed Soulshot (B-grade)" type="EtcItem">
         <!-- The power of a Soulshot is bestowed upon a weapon, temporarily increasing the power of attack. For B-grade weapons. -->
         <set name="icon" val="icon.etc_bless_spirit_bullet_red_i00"/>
         <set name="default_action" val="SOULSHOT"/>
@@ -123,7 +123,7 @@
             <skill id="55387" level="1"/> <!-- Player Commendation - Blessed Soulshot (B-grade) -->
         </skills>
     </item>
-    <item id="70310" name="Mysterious Blessed Soulshot (A-grade)" additionalName="Event" type="EtcItem">
+    <item id="70310" name="Mysterious Blessed Soulshot (A-grade)" type="EtcItem">
         <!-- The power of a Soulshot is bestowed upon a weapon, temporarily increasing the power of attack. For A-grade weapons. -->
         <set name="icon" val="icon.etc_bless_spirit_bullet_silver_i00"/>
         <set name="default_action" val="SOULSHOT"/>
@@ -149,7 +149,7 @@
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="70312" name="Tryout Event Coin" additionalName="Event" type="EtcItem">
+    <item id="70312" name="Tryout Event Coin" type="EtcItem">
         <!-- A coin, commemorating Olympiad Opening. Is given to those warriors who takes part in the Tryout. You can exchange it for a Special Potion through NPC Riana. Cannot be exchanged, dropped, used in a private store, sold or share within account. This item will be deleted after the event is over. -->
         <set name="icon" val="icon.etc_ev_kalie_token"/>
         <set name="is_tradable" val="false"/>
@@ -158,7 +158,7 @@
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="70313" name="Olympiad Warrior's Potion - STR" additionalName="Event" type="EtcItem">
+    <item id="70313" name="Olympiad Warrior's Potion - STR" type="EtcItem">
         <!-- Available only for those warriors, who take part in the Tryout. For 20 minutes, STR + 4. Cannot be stacked with other potions or with Roast Blue Mackerel. Cannot be exchanged, dropped, used in a private store, sold or share within account. This item will be deleted after the event is over. -->
         <set name="icon" val="icon.etc_lesser_potion_red_i00"/>
         <set name="default_action" val="SKILL_REDUCE"/>
@@ -168,7 +168,7 @@
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="70314" name="Olympiad Warrior's Potion - INT" additionalName="Event" type="EtcItem">
+    <item id="70314" name="Olympiad Warrior's Potion - INT" type="EtcItem">
         <!-- Available only for those warriors, who take part in the Tryout. For 20 minutes, INT + 4. Cannot be stacked with other potions or with Roast Blue Mackerel. Cannot be exchanged, dropped, used in a private store, sold or share within account. This item will be deleted after the event is over. -->
         <set name="icon" val="icon.etc_lesser_potion_scarlet_i00"/>
         <set name="default_action" val="SKILL_REDUCE"/>
@@ -178,7 +178,7 @@
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="70315" name="Olympiad Warrior's Potion - CON" additionalName="Event" type="EtcItem">
+    <item id="70315" name="Olympiad Warrior's Potion - CON" type="EtcItem">
         <!-- Available only for those warriors, who take part in the Tryout. For 20 minutes, CON + 4. Cannot be stacked with other potions or with Roast Blue Mackerel. Cannot be exchanged, dropped, used in a private store, sold or share within account. This item will be deleted after the event is over. -->
         <set name="icon" val="icon.etc_lesser_potion_yellow_i00"/>
         <set name="default_action" val="SKILL_REDUCE"/>
@@ -188,7 +188,7 @@
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="70316" name="Olympiad Warrior's Potion - DEX" additionalName="Event" type="EtcItem">
+    <item id="70316" name="Olympiad Warrior's Potion - DEX" type="EtcItem">
         <!-- Available only for those warriors, who take part in the Tryout. For 20 minutes, DEX + 4. Cannot be stacked with other potions or with Roast Blue Mackerel. Cannot be exchanged, dropped, used in a private store, sold or share within account. This item will be deleted after the event is over. -->
         <set name="icon" val="icon.etc_lesser_potion_green_i00"/>
         <set name="default_action" val="SKILL_REDUCE"/>
@@ -198,7 +198,7 @@
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="70317" name="Olympiad Warrior's Potion - MEN" additionalName="Event" type="EtcItem">
+    <item id="70317" name="Olympiad Warrior's Potion - MEN" type="EtcItem">
         <!-- Available only for those warriors, who take part in the Tryout. For 20 minutes, MEN + 4. Cannot be stacked with other potions or with Roast Blue Mackerel. Cannot be exchanged, dropped, used in a private store, sold or share within account. This item will be deleted after the event is over. -->
         <set name="icon" val="icon.etc_lesser_potion_blue_i00"/>
         <set name="default_action" val="SKILL_REDUCE"/>
@@ -208,7 +208,7 @@
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="70318" name="Olympiad Warrior's Potion - WIT" additionalName="Event" type="EtcItem">
+    <item id="70318" name="Olympiad Warrior's Potion - WIT" type="EtcItem">
         <!-- Available only for those warriors, who take part in the Tryout. For 20 minutes, WIT + 4. Cannot be stacked with other potions or with Roast Blue Mackerel. Cannot be exchanged, dropped, used in a private store, sold or share within account. This item will be deleted after the event is over. -->
         <set name="icon" val="icon.etc_lesser_potion_purple_i00"/>
         <set name="default_action" val="SKILL_REDUCE"/>
@@ -218,7 +218,7 @@
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="70319" name="Enhanced Olympiad Warrior's Potion - STR" additionalName="Event" type="EtcItem">
+    <item id="70319" name="Enhanced Olympiad Warrior's Potion - STR" type="EtcItem">
         <!-- Available only for those warriors, who take part in the Tryout. For 20 minutes, STR + 7. Cannot be stacked with other potions or with Roast Blue Mackerel. Cannot be exchanged, dropped, used in a private store, sold or share within account. This item will be deleted after the event is over. -->
         <set name="icon" val="icon.etc_fruit_juice_glass_bottle_i10"/>
         <set name="default_action" val="SKILL_REDUCE"/>
@@ -228,7 +228,7 @@
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="70320" name="Enhanced Olympiad Warrior's Potion - INT" additionalName="Event" type="EtcItem">
+    <item id="70320" name="Enhanced Olympiad Warrior's Potion - INT" type="EtcItem">
         <!-- Available only for those warriors, who take part in the Tryout. For 20 minutes, INT + 7. Cannot be stacked with other potions or with Roast Blue Mackerel. Cannot be exchanged, dropped, used in a private store, sold or share within account. This item will be deleted after the event is over. -->
         <set name="icon" val="icon.etc_fruit_juice_glass_bottle_i11"/>
         <set name="default_action" val="SKILL_REDUCE"/>
@@ -238,7 +238,7 @@
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="70321" name="Enhanced Olympiad Warrior's Potion - CON" additionalName="Event" type="EtcItem">
+    <item id="70321" name="Enhanced Olympiad Warrior's Potion - CON" type="EtcItem">
         <!-- Available only for those warriors, who take part in the Tryout. For 20 minutes, CON + 7. Cannot be stacked with other potions or with Roast Blue Mackerel. Cannot be exchanged, dropped, used in a private store, sold or share within account. This item will be deleted after the event is over. -->
         <set name="icon" val="icon.etc_fruit_juice_glass_bottle_i07"/>
         <set name="default_action" val="SKILL_REDUCE"/>
@@ -248,7 +248,7 @@
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="70322" name="Enhanced Olympiad Warrior's Potion - DEX" additionalName="Event" type="EtcItem">
+    <item id="70322" name="Enhanced Olympiad Warrior's Potion - DEX" type="EtcItem">
         <!-- Available only for those warriors, who take part in the Tryout. For 20 minutes, DEX + 7. Cannot be stacked with other potions or with Roast Blue Mackerel. Cannot be exchanged, dropped, used in a private store, sold or share within account. This item will be deleted after the event is over. -->
         <set name="icon" val="icon.etc_fruit_juice_glass_bottle_i03"/>
         <set name="default_action" val="SKILL_REDUCE"/>
@@ -258,7 +258,7 @@
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="70323" name="Enhanced Olympiad Warrior's Potion - MEN" additionalName="Event" type="EtcItem">
+    <item id="70323" name="Enhanced Olympiad Warrior's Potion - MEN" type="EtcItem">
         <!-- Available only for those warriors, who take part in the Tryout. For 20 minutes, MEN + 7. Cannot be stacked with other potions or with Roast Blue Mackerel. Cannot be exchanged, dropped, used in a private store, sold or share within account. This item will be deleted after the event is over. -->
         <set name="icon" val="icon.etc_fruit_juice_glass_bottle_i05"/>
         <set name="default_action" val="SKILL_REDUCE"/>
@@ -268,7 +268,7 @@
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="70324" name="Enhanced Olympiad Warrior's Potion - WIT" additionalName="Event" type="EtcItem">
+    <item id="70324" name="Enhanced Olympiad Warrior's Potion - WIT" type="EtcItem">
         <!-- Available only for those warriors, who take part in the Tryout. For 20 minutes, WIT + 7. Cannot be stacked with other potions or with Roast Blue Mackerel. Cannot be exchanged, dropped, used in a private store, sold or share within account. This item will be deleted after the event is over. -->
         <set name="icon" val="icon.etc_fruit_juice_glass_bottle_i04"/>
         <set name="default_action" val="SKILL_REDUCE"/>
@@ -278,7 +278,7 @@
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="70325" name="Commemorative Olympiad XP/SP Scroll" additionalName="Event" type="EtcItem">
+    <item id="70325" name="Commemorative Olympiad XP/SP Scroll" type="EtcItem">
         <!-- For 20 minutes., obtained XP/SP + 50%. Cannot be stacked with other XP/SP Scroll. Cannot be exchanged, dropped, used in a private store, sold or share within account. This item will be deleted after the event is over. -->
         <set name="icon" val="icon.exp_bottle_scroll"/>
         <set name="default_action" val="SKILL_REDUCE"/>
@@ -294,7 +294,7 @@
             <skill id="55397" level="3"/> <!-- XP/SP Scroll lvl 1 (50%) -->
         </skills>
     </item>
-    <item id="70326" name="Olympiad Warrior's Special Fruit" additionalName="Event" type="EtcItem">
+    <item id="70326" name="Olympiad Warrior's Special Fruit" type="EtcItem">
         <!-- For 20 minutes., obtained XP/SP + 10%, P. / M. Atk. +10%, P. / M. Def. +5%, Max. HP/MP/CP + 15%, HP / MP Recovery +20%, PvE damage + 10%. With a certain chance, converts 3% of damage dealt into HP. Can be used with Special Pirate Fruit. Cannot be exchanged, dropped, used in a private store, sold or share within account. This item will be deleted after the event is over. -->
         <set name="icon" val="icon.etc_cobol_i04"/>
         <set name="default_action" val="SKILL_REDUCE"/>
@@ -304,7 +304,7 @@
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="70327" name="Olympiad Commemorative Amulet - 100%" additionalName="3 hours" type="EtcItem">
+    <item id="70327" name="Olympiad Commemorative Amulet - 100%" type="EtcItem">
         <!-- When in inventory XP/SP gain +100%. Cannot be exchanged, dropped, used in a private store, sold or share within account. This item will be deleted after the event is over. -->
         <set name="icon" val="icon.skill19226"/>
         <set name="is_tradable" val="false"/>
@@ -313,7 +313,7 @@
         <set name="is_sellable" val="false"/>
         <set name="time" val="180"/>
     </item>
-    <item id="70328" name="Olympiad Warrior's SP Scroll" additionalName="Event" type="EtcItem">
+    <item id="70328" name="Olympiad Warrior's SP Scroll" type="EtcItem">
         <!-- Restores 500 000 SP. Cannot be exchanged, dropped, used in a private store, sold or share within account. This item will be deleted after the event is over. -->
         <set name="icon" val="icon.etc_sp_scroll3_i00"/>
         <set name="default_action" val="SKILL_REDUCE"/>
@@ -323,7 +323,7 @@
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="70329" name="Tryout Glorious Cloak" additionalName="30 days" type="Armor">
+    <item id="70329" name="Tryout Glorious Cloak" type="Armor">
         <!-- Tryout Warrior's Cloak. P. / M. Def. +3%, Speed + 10. Cannot be exchanged, dropped, used in a private store, sold or share within account. -->
         <set name="icon" val="icon.vesper_cloack_i00"/>
         <set name="default_action" val="EQUIP"/>
@@ -335,7 +335,7 @@
         <set name="is_depositable" val="false"/>
         <set name="is_sellable" val="false"/>
     </item>
-    <item id="70330" name="Commemorative Olympiad Bracelet" additionalName="Event" type="Armor">
+    <item id="70330" name="Commemorative Olympiad Bracelet" type="Armor">
         <!-- Bracelet, given to those warriors who have showen the best results during the Tryout. Activates 2 Talisman slots, Max. HP/MP/CP + 3%. Cannot be exchanged, dropped, used in a private store, sold or share within account. -->
         <set name="icon" val="icon.dimension_bracelet_i05"/>
         <set name="default_action" val="EQUIP"/>
@@ -347,7 +347,7 @@
         <set name="is_depositable" val="false"/>
         <set name="is_sellable" val="false"/>
     </item>
-    <item id="70331" name="Olympiad Warrior's Talisman" additionalName="30 days" type="Armor">
+    <item id="70331" name="Olympiad Warrior's Talisman" type="Armor">
         <!-- Talisman, given to those warriors who have showen the best results during the Tryout. P. / M. Skill Critical Damage +7%. Cannot be exchanged, dropped, used in a private store, sold or share within account. -->
         <set name="icon" val="icon.npoint_talisman_stat"/>
         <set name="default_action" val="EQUIP"/>
@@ -358,7 +358,7 @@
         <set name="is_depositable" val="false"/>
         <set name="is_sellable" val="false"/>
     </item>
-    <item id="70332" name="Olympiad Warrior's Belt" additionalName="Event" type="Armor">
+    <item id="70332" name="Olympiad Warrior's Belt" type="Armor">
         <!-- Belt, given to those warriors who have showen the best results during the Tryout. P. Def. +15, weight limit + 2000. Cannot be exchanged, dropped, used in a private store, sold or share within account. -->
         <set name="icon" val="icon.belt_i03"/>
         <set name="default_action" val="EQUIP"/>
@@ -374,7 +374,7 @@
             <stat type="pDef">10</stat>
         </stats>
     </item>
-    <item id="70333" name="Agathion - Cheerleader Mae" additionalName="30 days" type="Armor">
+    <item id="70333" name="Agathion - Cheerleader Mae" type="Armor">
         <!-- Bracelet that summons Agathion - Cheerleader Mae. Cannot be exchanged, dropped, used in a private store, sold or share within account. <Agathion's Effect>. 1. Cheerleader Mae's Support: P. / M. Atk. +5%, Atk. Spd./Casting Spd. +5%, Skill MP Consumption -10%, P. / M. Critical Damage + 3%. -->
         <set name="icon" val="BranchSys.icon.br_aga_local2009_g_i00"/>
         <set name="default_action" val="EQUIP"/>
@@ -392,7 +392,7 @@
             <skill id="3267" level="1" type="ON_UNEQUIP"/> <!-- Seal Agathion -->
         </skills>
     </item>
-    <item id="70334" name="Cadmus Transformation Bracelet Pack (1 day)" additionalName="Prophet" type="EtcItem">
+    <item id="70334" name="Cadmus Transformation Bracelet Pack (1 day)" type="EtcItem">
         <!-- Double-click to receive Cadmus Transformation Bracelet Pack - Prophet (1 day). Cannot be exchanged, dropped, used in a private store, sold or share within account. This item will be deleted after the event is over. -->
         <set name="icon" val="icon.etc_pi_box_love_pack"/>
         <set name="default_action" val="PEEL"/>
@@ -403,7 +403,7 @@
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="70335" name="Cadmus Transformation Bracelet Pack (1 day)" additionalName="Shillien Elder" type="EtcItem">
+    <item id="70335" name="Cadmus Transformation Bracelet Pack (1 day)" type="EtcItem">
         <!-- Double-click to receive Cadmus Transformation Bracelet Pack - Shillien Elder (1 day). Cannot be exchanged, dropped, used in a private store, sold or share within account. This item will be deleted after the event is over. -->
         <set name="icon" val="icon.etc_pi_box_wish_pack"/>
         <set name="default_action" val="PEEL"/>
@@ -414,7 +414,7 @@
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="70336" name="Cadmus Transformation Bracelet Pack (1 day)" additionalName="Elven Elder" type="EtcItem">
+    <item id="70336" name="Cadmus Transformation Bracelet Pack (1 day)" type="EtcItem">
         <!-- Double-click to receive Cadmus Transformation Bracelet Pack - Elven Elder (1 day). Cannot be exchanged, dropped, used in a private store, sold or share within account. This item will be deleted after the event is over. -->
         <set name="icon" val="icon.ev_10th_present2"/>
         <set name="default_action" val="PEEL"/>
@@ -425,7 +425,7 @@
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="70337" name="Cadmus Transformation Bracelet Pack (7 days)" additionalName="Prophet" type="EtcItem">
+    <item id="70337" name="Cadmus Transformation Bracelet Pack (7 days)" type="EtcItem">
         <!-- Double-click to receive Cadmus Transformation Bracelet Pack - Prophet (7 days). Cannot be exchanged, dropped, used in a private store, sold or share within account. This item will be deleted after the event is over. -->
         <set name="icon" val="icon.etc_pi_box_love_pack"/>
         <set name="default_action" val="PEEL"/>
@@ -436,7 +436,7 @@
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="70338" name="Cadmus Transformation Bracelet Pack (7 days)" additionalName="Shillien Elder" type="EtcItem">
+    <item id="70338" name="Cadmus Transformation Bracelet Pack (7 days)" type="EtcItem">
         <!-- Double-click to receive Cadmus Transformation Bracelet Pack - Shillien Elder (7 days). Cannot be exchanged, dropped, used in a private store, sold or share within account. This item will be deleted after the event is over. -->
         <set name="icon" val="icon.etc_pi_box_wish_pack"/>
         <set name="default_action" val="PEEL"/>
@@ -447,7 +447,7 @@
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="70339" name="Cadmus Transformation Bracelet Pack (7 days)" additionalName="Elven Elder" type="EtcItem">
+    <item id="70339" name="Cadmus Transformation Bracelet Pack (7 days)" type="EtcItem">
         <!-- Double-click to receive Cadmus Transformation Bracelet Pack - Elven Elder (7 days). Cannot be exchanged, dropped, used in a private store, sold or share within account. This item will be deleted after the event is over. -->
         <set name="icon" val="icon.ev_10th_present2"/>
         <set name="default_action" val="PEEL"/>
@@ -458,7 +458,7 @@
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="70340" name="Cadmus Transformation Bracelet Pack (30 days)" additionalName="Prophet" type="EtcItem">
+    <item id="70340" name="Cadmus Transformation Bracelet Pack (30 days)" type="EtcItem">
         <!-- Double-click to receive Cadmus Transformation Bracelet Pack - Prophet (30 days). Cannot be exchanged, dropped, used in a private store, sold or share within account. This item will be deleted after the event is over. -->
         <set name="icon" val="icon.etc_pi_box_love_pack"/>
         <set name="default_action" val="PEEL"/>
@@ -469,7 +469,7 @@
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="70341" name="Cadmus Transformation Bracelet Pack (30 days)" additionalName="Shillien Elder" type="EtcItem">
+    <item id="70341" name="Cadmus Transformation Bracelet Pack (30 days)" type="EtcItem">
         <!-- Double-click to receive Cadmus Transformation Bracelet Pack - Shillien Elder (30 days). Cannot be exchanged, dropped, used in a private store, sold or share within account. This item will be deleted after the event is over. -->
         <set name="icon" val="icon.etc_pi_box_wish_pack"/>
         <set name="default_action" val="PEEL"/>
@@ -480,7 +480,7 @@
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="70342" name="Cadmus Transformation Bracelet Pack (30 days)" additionalName="Elven Elder" type="EtcItem">
+    <item id="70342" name="Cadmus Transformation Bracelet Pack (30 days)" type="EtcItem">
         <!-- Double-click to receive Cadmus Transformation Bracelet Pack - Elven Elder (30 days). Cannot be exchanged, dropped, used in a private store, sold or share within account. This item will be deleted after the event is over. -->
         <set name="icon" val="icon.ev_10th_present2"/>
         <set name="default_action" val="PEEL"/>
@@ -491,7 +491,7 @@
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="70343" name="Expertise Rune (A-grade)" additionalName="1-day" type="EtcItem">
+    <item id="70343" name="Expertise Rune (A-grade)" type="EtcItem">
         <!-- 1-day. When possessed, gives Expertise A Skill. -->
         <set name="icon" val="br_cashtex.item.br_cash_rune_of_feather_i00"/>
         <set name="is_tradable" val="false"/>
@@ -500,7 +500,7 @@
         <set name="is_sellable" val="false"/>
         <set name="time" val="1440"/>
     </item>
-    <item id="70344" name="A-grade Expertise Rune Pack" additionalName="1-day" type="EtcItem">
+    <item id="70344" name="A-grade Expertise Rune Pack" type="EtcItem">
         <!-- Wrapped Pack containing Expertise Rune (A-grade) (1-day). -->
         <set name="icon" val="icon.etc_equip_item_box_i00"/>
         <set name="default_action" val="PEEL"/>
@@ -510,7 +510,7 @@
         <set name="is_stackable" val="true"/>
         <set name="time" val="1440"/>
     </item>
-    <item id="70345" name="Expertise Rune (A-grade)" additionalName="3-day" type="EtcItem">
+    <item id="70345" name="Expertise Rune (A-grade)" type="EtcItem">
         <!-- 3-day. When possessed, gives Expertise A Skill. -->
         <set name="icon" val="br_cashtex.item.br_cash_rune_of_feather_i00"/>
         <set name="is_tradable" val="false"/>
@@ -519,7 +519,7 @@
         <set name="is_sellable" val="false"/>
         <set name="time" val="4320"/>
     </item>
-    <item id="70346" name="A-grade Expertise Rune Pack" additionalName="3-day" type="EtcItem">
+    <item id="70346" name="A-grade Expertise Rune Pack" type="EtcItem">
         <!-- Wrapped Pack containing Expertise Rune (A-grade) (3-day). -->
         <set name="icon" val="icon.etc_equip_item_box_i00"/>
         <set name="default_action" val="PEEL"/>
@@ -529,7 +529,7 @@
         <set name="is_stackable" val="true"/>
         <set name="time" val="4320"/>
     </item>
-    <item id="70347" name="Expertise Rune (A-grade)" additionalName="10-day" type="EtcItem">
+    <item id="70347" name="Expertise Rune (A-grade)" type="EtcItem">
         <!-- 10-day. When possessed, gives Expertise A Skill. -->
         <set name="icon" val="br_cashtex.item.br_cash_rune_of_feather_i00"/>
         <set name="is_tradable" val="false"/>
@@ -538,7 +538,7 @@
         <set name="is_sellable" val="false"/>
         <set name="time" val="14400"/>
     </item>
-    <item id="70348" name="A-grade Expertise Rune Pack" additionalName="10-day" type="EtcItem">
+    <item id="70348" name="A-grade Expertise Rune Pack" type="EtcItem">
         <!-- Wrapped Pack containing Expertise Rune (A-grade) (10-day). -->
         <set name="icon" val="icon.etc_equip_item_box_i00"/>
         <set name="default_action" val="PEEL"/>
@@ -548,21 +548,21 @@
         <set name="is_stackable" val="true"/>
         <set name="time" val="14400"/>
     </item>
-    <item id="70349" name="Kusto's Support Box: Enhance Weapon" additionalName="A-grade" type="EtcItem">
+    <item id="70349" name="Kusto's Support Box: Enhance Weapon" type="EtcItem">
         <!-- Double-click to get one of the following: Enchant / Improved / Solid / Blessed Scroll: Enchant Weapon (A-grade). -->
         <set name="icon" val="icon.etc_bm_jewelbox_main_i00"/>
         <set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="70350" name="Kusto's Support Box: Enhance Weapon" additionalName="B-grade" type="EtcItem">
+    <item id="70350" name="Kusto's Support Box: Enhance Weapon" type="EtcItem">
         <!-- Double-click to get one of the following: Enchant / Improved / Solid / Blessed Scroll: Enchant Weapon (B-grade). -->
         <set name="icon" val="icon.etc_bm_jewelbox_main_i00"/>
         <set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="70351" name="Kusto's Support Box: Enhance Weapon" additionalName="C-grade" type="EtcItem">
+    <item id="70351" name="Kusto's Support Box: Enhance Weapon" type="EtcItem">
         <!-- Double-click to get one of the following: Enchant / Improved / Solid / Blessed Scroll: Enchant Weapon (C-grade). -->
         <set name="icon" val="icon.etc_bm_jewelbox_main_i00"/>
         <set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
@@ -597,7 +597,7 @@
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="70356" name="Scroll: Enchant Armor (A-grade)" additionalName="Event" type="EtcItem">
+    <item id="70356" name="Scroll: Enchant Armor (A-grade)" type="EtcItem">
         <!-- P. Def. + 1 for A-grade armor and accessories. Starting from + 4, P. Def. + 3. Can be safely enchanted up to + 3. For one-piece armor, it can safely be enchanted up to + 4. Cannot be exchanged, dropped, used in a private store, sold or share within account. Can store in private warehouse. -->
         <set name="icon" val="icon.etc_scroll_of_enchant_armor_i04"/>
         <set name="default_action" val="SKILL_REDUCE"/>

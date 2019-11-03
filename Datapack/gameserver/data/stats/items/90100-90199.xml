@@ -192,7 +192,7 @@
         <set name="weight" val="120"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="90132" name="Monster Arena Belt" additionalName="7-day" type="Armor">
+    <item id="90132" name="Monster Arena Belt" type="Armor">
         <!-- CON +1, MEN +1, HP Recovery +2.31, MP Recovery +1.54, CP Recovery +3.07, Max. HP/ MP/ CP +10%, Received damage -3%. Duration: 7-day. Cannot be exchanged, dropped or sold in a private store. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.belt_of_tiat"/>
         <set name="default_action" val="EQUIP"/>
@@ -271,7 +271,7 @@
         <set name="is_stackable" val="true"/>
         <set name="is_freightable" val="true"/>
     </item>
-    <item id="90140" name="Cadmus Transformation Bracelet - Prophet" additionalName="7-day" type="Armor">
+    <item id="90140" name="Cadmus Transformation Bracelet - Prophet" type="Armor">
         <!-- A 7-day item. Transforms you into Prophet Cadmus. Can be used once a day. After the transformation, you can use the following skills for 4 hours: Might, Shield, Wind Walk, Return, Focus, Death Whisper, Guidance, Haste, Acumen, and Heal. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.pi_high_agathion_bracelet_i00"/>
         <set name="default_action" val="EQUIP"/>
@@ -283,7 +283,7 @@
         <set name="is_sellable" val="false"/>
         <set name="time" val="10080"/>
     </item>
-    <item id="90141" name="Cadmus Transformation Bracelet - Shillien Elder" additionalName="7-day" type="Armor">
+    <item id="90141" name="Cadmus Transformation Bracelet - Shillien Elder" type="Armor">
         <!-- A 7-day item. Transforms you into Shillien Elder Cadmus. Can be used once a day. After the transformation, you can use the following skills for 4 hours: Might, Shield, Wind Walk, Return, Vampiric Rage, Empower, Death Whisper, Guidance, and Heal. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.pi_high_agathion_bracelet_i00"/>
         <set name="default_action" val="EQUIP"/>
@@ -295,7 +295,7 @@
         <set name="is_sellable" val="false"/>
         <set name="time" val="10080"/>
     </item>
-    <item id="90142" name="Cadmus Transformation Bracelet - Elven Elder" additionalName="7-day" type="Armor">
+    <item id="90142" name="Cadmus Transformation Bracelet - Elven Elder" type="Armor">
         <!-- A 7-day item. Transforms you into Elven Elder Cadmus. Can be used once a day. After the transformation, you can use the following skills for 4 hours: Might, Shield, Wind Walk, Return, Clarity, Agility, Decrease Weight, Regeneration, and Greater Heal. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.pi_high_agathion_bracelet_i00"/>
         <set name="default_action" val="EQUIP"/>
@@ -337,7 +337,7 @@
             <stat type="mDef">32</stat>
         </stats>
     </item>
-    <item id="90146" name="Savior’s Cube" additionalName="30-day" type="EtcItem">
+    <item id="90146" name="Savior’s Cube" type="EtcItem">
         <!-- A 30-day item. Double-click to obtain one Enchant Savior? Weapon Scroll and one Savior' Growth Scroll (can be used only once a day). Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. The item will be removed after the event is over. -->
         <set name="icon" val="icon.crystal_cube_event_i00"/>
         <set name="default_action" val="SKILL_REDUCE"/>
@@ -380,7 +380,7 @@
         <set name="is_stackable" val="true"/>
         <set name="is_freightable" val="true"/>
     </item>
-    <item id="90150" name="Savior’s Dualsword" additionalName="30-day" type="Weapon">
+    <item id="90150" name="Savior’s Dualsword" type="Weapon">
         <!-- A 30-day item. <Soul Crystal Enhancement>. Atk. Spd. +5%. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.weapon_dual_sword_i00"/>
         <set name="default_action" val="EQUIP"/>
@@ -406,7 +406,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="90151" name="Savior’s Staff" additionalName="30-day" type="Weapon">
+    <item id="90151" name="Savior’s Staff" type="Weapon">
         <!-- A 30-day item. <Soul Crystal Enhancement>. Casting Spd. +12%. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.weapon_crystal_staff_i00"/>
         <set name="default_action" val="EQUIP"/>
@@ -434,7 +434,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="90152" name="Savior’s Bow" additionalName="30-day" type="Weapon">
+    <item id="90152" name="Savior’s Bow" type="Weapon">
         <!-- A 30-day item. <Soul Crystal Enhancement>. P. Crit. Rate. +52. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.weapon_crystallized_ice_bow_i00"/>
         <set name="default_action" val="EQUIP"/>
@@ -462,7 +462,7 @@
             <stat type="pAtkRange">500</stat>
         </stats>
     </item>
-    <item id="90153" name="Savior’s Dagger" additionalName="30-day" type="Weapon">
+    <item id="90153" name="Savior’s Dagger" type="Weapon">
         <!-- A 30-day item. <Soul Crystal Enhancement>. P. Crit. Rate. +66. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.weapon_dark_screamer_i00"/>
         <set name="default_action" val="EQUIP"/>
@@ -489,7 +489,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="90154" name="Savior's Spear" additionalName="30-day" type="Weapon">
+    <item id="90154" name="Savior's Spear" type="Weapon">
         <!-- A 30-day item. <Soul Crystal Enhancement>. 25% chance to stun the target by Crit. Atk. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.weapon_scorpion_i00"/>
         <set name="default_action" val="EQUIP"/>
@@ -530,7 +530,7 @@
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="90156" name="Talisman of Border - Lv. 6" additionalName="30-day" type="Armor">
+    <item id="90156" name="Talisman of Border - Lv. 6" type="Armor">
         <!-- A 30-day item. P./ M. Def. +24, P./ M. Skills Evasion +2, HP/ MP/ CP +160, Speed +5, P./ M. Atk. Spd. +15, Acquired XP/ SP +4%. Allows using Border Purification (cancels Paralysis, Petrification, Poisoning, and Bleeding). Effects from two such talismans do not stack. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. The item will be removed after the event is over. -->
         <set name="icon" val="icon.bm_magic_square_talisman"/>
         <set name="default_action" val="EQUIP"/>
@@ -541,7 +541,7 @@
         <set name="is_sellable" val="false"/>
         <set name="time" val="43200"/>
     </item>
-    <item id="90157" name="Warrior’s Talisman - Attack" additionalName="7-day" type="Armor">
+    <item id="90157" name="Warrior’s Talisman - Attack" type="Armor">
         <!-- PvE Damage +3%, P./ M. Critical Damage +20, P./ M. Skill Power +2%, P./ M. Accuracy +1. Duration: 7-day. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.r90_sp_talisman_dr_mp_active"/>
         <set name="default_action" val="EQUIP"/>
@@ -557,7 +557,7 @@
             <skill id="35036" level="1"/> <!-- Warrior s Talisman - Attack -->
         </skills>
     </item>
-    <item id="90158" name="Fire Dragon Pendant +6" additionalName="30-day" type="Armor">
+    <item id="90158" name="Fire Dragon Pendant +6" type="Armor">
         <!-- M. Def. +16, XP/SP gain +10%, P./ M. Atk. +20. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.bm_pendant_pve"/>
         <set name="default_action" val="EQUIP"/>
@@ -595,7 +595,7 @@
             <skill id="35045" level="1"/> <!-- Talisman of Battle - Liberate -->
         </skills>
     </item>
-    <item id="90160" name="Warrior’s Talisman - Defense" additionalName="7-day" type="Armor">
+    <item id="90160" name="Warrior’s Talisman - Defense" type="Armor">
         <!-- Received PvE damage -3%, M. Damage Resistance +2%, P./ M. Skill Evasion +4%, Debuff Resistance +3%, Pull Resistance +10%. Duration: 7-day. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.r99_talisman_pd_up_passive"/>
         <set name="default_action" val="EQUIP"/>
@@ -611,7 +611,7 @@
             <skill id="35037" level="1"/> <!-- Warrior s Talisman - Defense -->
         </skills>
     </item>
-    <item id="90161" name="Chest of Glory" additionalName="7-day" type="EtcItem">
+    <item id="90161" name="Chest of Glory" type="EtcItem">
         <!-- Double-click to obtain one Monster Arena Belt (7-day). <Note> After you open the chest, you cannot move the item. -->
         <set name="icon" val="icon.etc_readybox_gold"/>
         <set name="default_action" val="PEEL"/>
@@ -620,7 +620,7 @@
         <set name="is_stackable" val="true"/>
         <set name="time" val="10080"/>
     </item>
-    <item id="90162" name="Warrior’s Talisman Pack - Attack" additionalName="7-day" type="EtcItem">
+    <item id="90162" name="Warrior’s Talisman Pack - Attack" type="EtcItem">
         <!-- Double-click to obtain one Warrior? Talisman - Attack (7-day). Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.new_user_box"/>
         <set name="default_action" val="PEEL"/>
@@ -636,7 +636,7 @@
             <item id="90157" min="1" max="1" chance="100"/> <!-- Warrior? Talisman - Attack - 7-day -->
         </capsuled_items>
     </item>
-    <item id="90163" name="Warrior’s Talisman Pack - Defense" additionalName="7-day" type="EtcItem">
+    <item id="90163" name="Warrior’s Talisman Pack - Defense" type="EtcItem">
         <!-- Double-click to obtain one Warrior? Talisman - Defense (7-day). Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.new_user_box"/>
         <set name="default_action" val="PEEL"/>
@@ -893,13 +893,13 @@
         <set name="is_stackable" val="true"/>
         <set name="is_freightable" val="true"/>
     </item>
-    <item id="90189" name="Blue Spinel" additionalName="Event" type="EtcItem">
+    <item id="90189" name="Blue Spinel" type="EtcItem">
         <!-- A reward item. You can receive it for helping Grocer Pink and use it to exchange for rare items with Pink. -->
         <set name="icon" val="icon.ensoul_big_m"/>
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="90190" name="Dandy Pendant" additionalName="7-day" type="Armor">
+    <item id="90190" name="Dandy Pendant" type="Armor">
         <!-- M. Def. +20, Acquired XP/ SP +30%, P./ M. Atk. +50, P./ M. Critical Damage +5%. Allows using the Blessing of Fire Dragon skill. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.bm_pendant_pve"/>
         <set name="default_action" val="EQUIP"/>
@@ -914,7 +914,7 @@
             <stat type="pDef">49</stat>
         </stats>
     </item>
-    <item id="90191" name="Dandy Shining Pendant" additionalName="7-day" type="Armor">
+    <item id="90191" name="Dandy Shining Pendant" type="Armor">
         <!-- M. Def. +21, Acquired XP/ SP +30%, P./ M. Atk. +60, P./ M. Critical Damage +5%. Allows using the Blessing of Fire Dragon and Fire Dragon Protection skills. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.bm_pendant_pve"/>
         <set name="default_action" val="EQUIP"/>
@@ -969,7 +969,7 @@
         <set name="is_stackable" val="true"/>
         <set name="is_freightable" val="true"/>
     </item>
-    <item id="90196" name="Dandy Pendant" additionalName="2 hours" type="Armor">
+    <item id="90196" name="Dandy Pendant" type="Armor">
         <!-- M. Def. +20, Acquired XP/ SP +30%, P./ M. Atk. +50, P./ M. Critical Damage +5%. Allows using the Blessing of Fire Dragon skill. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.bm_pendant_pve"/>
         <set name="default_action" val="EQUIP"/>
@@ -984,7 +984,7 @@
             <stat type="pDef">49</stat>
         </stats>
     </item>
-    <item id="90197" name="Dandy Shining Pendant" additionalName="2 hours" type="Armor">
+    <item id="90197" name="Dandy Shining Pendant" type="Armor">
         <!-- M. Def. +21, Acquired XP/ SP +30%, P./ M. Atk. +60, P./ M. Critical Damage +5%. Allows using the Blessing of Fire Dragon and Fire Dragon Protection skills. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.bm_pendant_pve"/>
         <set name="default_action" val="EQUIP"/>

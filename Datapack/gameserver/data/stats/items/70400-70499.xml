@@ -501,7 +501,7 @@
         <set name="is_sellable" val="false"/>
         <set name="is_freightable" val="true"/>
     </item>
-    <item id="70426" name="Energy of Protection" additionalName="Event" type="EtcItem">
+    <item id="70426" name="Energy of Protection" type="EtcItem">
         <!-- For 20 min. Max HP / MP +5%, XP / SP +30%. Provides Mental Attack/Paralysis Resistance. <Attention> Cannot be stacked with Life Control Tower's and  Angel Cat's Blessing. -->
         <set name="icon" val="icon.general_energy_condense_i01"/>
         <set name="default_action" val="SKILL_REDUCE"/>

@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org ../../xsd/items.xsd">
-    <item id="37662" name="Refined Romantic Chapeau: Gold" additionalName="100-day" type="Armor">
+    <item id="37662" name="Refined Romantic Chapeau: Gold" type="Armor">
         <!-- Occupies 2 Hair Accessory slots. Cannot be exchanged, dropped, or sold. <Active Skills>. 1. Holiday Hat: resurrects dead characters using Spirit Ore. Bonus XP +50%. Cooldown: 30 minutes. 2 Overwhelming Power of a Holiday Hat: increases XP and SP gain by 5% for 20 minutes. Cooldown: 60 minutes. 3. Side Effect: makes character's head bigger for 10 minutes. Cooldown: 30 minutes. -->
         <set name="icon" val="icon.bm_romantic_chaperon_gold"/>
         <set name="default_action" val="EQUIP"/>
@@ -13,7 +13,7 @@
         <set name="is_private_storeable" val="false"/>
         <set name="weight" val="10"/>
     </item>
-    <item id="37665" name="Refined Romantic Chapeau: Yellow" additionalName="33-day" type="Armor">
+    <item id="37665" name="Refined Romantic Chapeau: Yellow" type="Armor">
         <!-- Occupies 2 Hair Accessory slots. Cannot be exchanged, dropped, or sold. <Active Skills>. 1. Holiday Hat: resurrects dead characters using Spirit Ore. Bonus XP +50%. Cooldown: 30 minutes. 2 Overwhelming Power of a Holiday Hat: increases XP and SP gain by 5% for 20 minutes. Cooldown: 60 minutes. 3. Side Effect: makes character's head bigger for 10 minutes. Cooldown: 30 minutes. -->
         <set name="icon" val="icon.bm_romantic_chaperon_yellow"/>
         <set name="default_action" val="EQUIP"/>

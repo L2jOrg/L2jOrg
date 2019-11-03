@@ -51,7 +51,7 @@
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="91106" name="Wind Cube of Abundance" additionalName="30-day" type="EtcItem">
+    <item id="91106" name="Wind Cube of Abundance" type="EtcItem">
         <!-- A 30-day item. Double-click to obtain Dandy's Home Run Ball, Rice Cake of Flaming Fighting Spirit (event), Savior Scroll: Enchant Weapon. Available only once a day. Cannot be exchanged, dropped, or sold in private store. Can be stored in a private warehouse. Will be deleted after event. -->
         <set name="icon" val="icon.sa_cube"/>
         <set name="default_action" val="SKILL_REDUCE"/>
@@ -62,7 +62,7 @@
         <set name="is_sellable" val="false"/>
         <set name="time" val="43200"/>
     </item>
-    <item id="91107" name="Wind Cube of Abundance" additionalName="90-day" type="EtcItem">
+    <item id="91107" name="Wind Cube of Abundance" type="EtcItem">
         <!-- A 90-day item. Double-click to obtain Dandy's Home Run Ball, Rice Cake of Flaming Fighting Spirit (event), Savior Scroll: Enchant Weapon. Available only once a day. Cannot be exchanged, dropped, or sold in private store. Can be stored in a private warehouse. Will be deleted after event. -->
         <set name="icon" val="icon.sa_cube"/>
         <set name="default_action" val="SKILL_REDUCE"/>
@@ -73,7 +73,7 @@
         <set name="is_sellable" val="false"/>
         <set name="time" val="129600"/>
     </item>
-    <item id="91108" name="Amulet of Winds" additionalName="90-day" type="EtcItem">
+    <item id="91108" name="Amulet of Winds" type="EtcItem">
         <!-- A 30-day item. When in inventory, CON, MEN, DEX, WIT, STR, INT +1. Acquired XP/ SP through hunting +20%, Acquired XP/ SP through fishing +50%. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.bm_sayha_rune"/>
         <set name="is_tradable" val="false"/>
@@ -98,7 +98,7 @@
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="91111" name="Agathion Pisces" additionalName="30-day" type="Armor">
+    <item id="91111" name="Agathion Pisces" type="Armor">
         <!-- A 30-day item. Equipping it in the Bracelet's main slot summons the Agathion Pisces and activates the Special Ability option. Cannot be exchanged, dropped or sold. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.pis_agathion_i00"/>
         <set name="default_action" val="EQUIP"/>
@@ -111,7 +111,7 @@
         <set name="is_sellable" val="false"/>
         <set name="time" val="43200"/>
     </item>
-    <item id="91112" name="Agathion Cancer" additionalName="30-day" type="Armor">
+    <item id="91112" name="Agathion Cancer" type="Armor">
         <!-- A 30-day item. Equipping it in the Bracelet's main slot summons the Agathion Cancer and activates the Special Ability option. Cannot be exchanged, dropped or sold. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.can_agathion_i00"/>
         <set name="default_action" val="EQUIP"/>
@@ -145,7 +145,7 @@
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="91116" name="Nebula’s Old Necklace" additionalName="Lv4" type="Armor">
+    <item id="91116" name="Nebula’s Old Necklace" type="Armor">
         <!-- MP +42, Water Attack Defense +80, Acquired Attribute XP +15%. Cannot be enchanted using enchanting items. -->
         <set name="icon" val="icon.elemental_necklace_water_i00"/>
         <set name="is_dropable" val="false"/>
@@ -187,7 +187,7 @@
             <stat type="maxMp">50</stat>
         </stats>
     </item>
-    <item id="91118" name="Ignis’ Old Necklace" additionalName="Lv4" type="Armor">
+    <item id="91118" name="Ignis’ Old Necklace" type="Armor">
         <!-- MP +42, Fire Attack Defense +80, Acquired Attribute XP +15%. Cannot be enchanted using enchanting items. -->
         <set name="icon" val="icon.elemental_necklace_fire_i00"/>
         <set name="is_dropable" val="false"/>
@@ -229,7 +229,7 @@
             <stat type="maxMp">50</stat>
         </stats>
     </item>
-    <item id="91120" name="Procella’s Old Necklace" additionalName="Lv4" type="Armor">
+    <item id="91120" name="Procella’s Old Necklace" type="Armor">
         <!-- MP +42, Wind Attack Defense +80, Acquired Attribute XP +15%. Cannot be enchanted using enchanting items. -->
         <set name="icon" val="icon.elemental_necklace_wind_i00"/>
         <set name="is_dropable" val="false"/>
@@ -272,7 +272,7 @@
             <stat type="maxMp">50</stat>
         </stats>
     </item>
-    <item id="91122" name="Petram’s Old Necklace" additionalName="Lv4" type="Armor">
+    <item id="91122" name="Petram’s Old Necklace" type="Armor">
         <!-- MP +42, Earth Attack Defense +80, Acquired Attribute XP +15%. Cannot be enchanted using enchanting items. -->
         <set name="icon" val="icon.elemental_necklace_earth_i00"/>
         <set name="is_dropable" val="false"/>
@@ -652,7 +652,7 @@
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="91157" name="Maphr Potion" additionalName="Event" type="EtcItem">
+    <item id="91157" name="Maphr Potion" type="EtcItem">
         <!-- For 10 min. the enchant success rate is increased. Cannot be exchanged, dropped or sold in a private store. Can be stored in a private warehouse. <Attention>. Cannot be used to enchant pendants, Agathions, hair accessories, rare accessories, Spirit's Neclaces. Will be deleted after event. -->
         <set name="icon" val="icon.etc_instant_lucky_potion_i00"/>
         <set name="default_action" val="SKILL_REDUCE"/>
@@ -698,7 +698,7 @@
             <skill id="55886" level="1"/> <!-- Agathion Bracelet Resistance Increase -->
         </skills>
     </item>
-    <item id="91162" name="Golden Cheer Stamen" additionalName="Event" type="Weapon">
+    <item id="91162" name="Golden Cheer Stamen" type="Weapon">
         <!-- An item commemorating the game's 14th anniversary. Helps materializing your dreams. Allows using the Firecracker skill. Cannot be exchanged, dropped, sold, destroyed. Can be transferred between characters on one account and stored in a private warehouse. -->
         <set name="icon" val="icon.ev_14th_weapon"/>
         <set name="default_action" val="EQUIP"/>
@@ -973,7 +973,7 @@
             <skill id="51133" level="1"/> <!-- Earth Attribute Attack Potion -->
         </skills>
     </item>
-    <item id="91193" name="Amulet of Winds" additionalName="30-day" type="EtcItem">
+    <item id="91193" name="Amulet of Winds" type="EtcItem">
         <!-- A 30-day item. When in inventory, CON, MEN, DEX, WIT, STR, INT +1. Acquired XP/ SP through hunting +20%, Acquired XP/ SP through fishing +50%. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.bm_sayha_rune"/>
         <set name="is_tradable" val="false"/>
@@ -983,7 +983,7 @@
         <set name="is_sellable" val="false"/>
         <set name="time" val="43200"/>
     </item>
-    <item id="91194" name="Talisman of Authority Lv. 5" additionalName="30-day" type="Armor">
+    <item id="91194" name="Talisman of Authority Lv. 5" type="Armor">
         <!-- A 30-day item. P./ M. Def. +24, HP +12%, MP +8%, P./ M. Atk. +5%. Effects from two such talismans do not stack. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.sayhas_talisman_g_lv5"/>
         <set name="default_action" val="EQUIP"/>
@@ -995,7 +995,7 @@
         <set name="is_sellable" val="false"/>
         <set name="time" val="43200"/>
     </item>
-    <item id="91195" name="Bracelet of Border" additionalName="30-day" type="Armor">
+    <item id="91195" name="Bracelet of Border" type="Armor">
         <!-- A 30-day item. When equipped, opens up 4 Talisman slots. HP/ MP Recovery +7%, P. Accuracy +1, M. Accuracy +1, Weight Limit +7,000. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.dimension_bracelet_i05"/>
         <set name="default_action" val="EQUIP"/>
@@ -1008,7 +1008,7 @@
         <set name="is_sellable" val="false"/>
         <set name="time" val="43200"/>
     </item>
-    <item id="91196" name="Cat's Eye Lv. 5" additionalName="30-day" type="Armor">
+    <item id="91196" name="Cat's Eye Lv. 5" type="Armor">
         <!-- A 30-day item. P./ M. Critical Damage +15%. Effect does not stack with additional jewels of the same type. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.bm_jewel_red_catseye"/>
         <set name="default_action" val="EQUIP"/>

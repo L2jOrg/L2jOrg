@@ -750,7 +750,7 @@
             <skill id="2167" level="3"/> <!-- SP Scroll -->
         </skills>
     </item>
-    <item id="5596" name="Dasparion's Staff" additionalName="Empower" type="Weapon">
+    <item id="5596" name="Dasparion's Staff" type="Weapon">
         <!-- <Soul Crystal Enhancement>. M. Atk. +144. -->
         <set name="icon" val="icon.weapon_dasparions_staff_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -781,7 +781,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="5597" name="Dasparion's Staff" additionalName="Acumen" type="Weapon">
+    <item id="5597" name="Dasparion's Staff" type="Weapon">
         <!-- <Soul Crystal Enhancement>. Increases Casting Spd. by 12%. -->
         <set name="icon" val="icon.weapon_dasparions_staff_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -812,7 +812,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="5598" name="Dasparion's Staff" additionalName="Magic Regeneration" type="Weapon">
+    <item id="5598" name="Dasparion's Staff" type="Weapon">
         <!-- <Soul Crystal Enhancement>. Increases MP Recovery Bonus by 12%. -->
         <set name="icon" val="icon.weapon_dasparions_staff_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -843,7 +843,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="5599" name="Meteor Shower" additionalName="Focus" type="Weapon">
+    <item id="5599" name="Meteor Shower" type="Weapon">
         <!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 54. -->
         <set name="icon" val="icon.weapon_meteor_shower_i01"/>
         <set name="default_action" val="EQUIP"/>

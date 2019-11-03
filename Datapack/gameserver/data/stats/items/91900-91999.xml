@@ -102,7 +102,7 @@
 			<stat type="randomDamage">20</stat>
 		</stats>
 	</item>
-	<item id="91906" name="Energy Rune" additionalName="30 days" type="EtcItem">
+	<item id="91906" name="Energy Rune" type="EtcItem">
 		<!-- Available for 30 days. When in inventory, recovers Sayha's Grace points. -->
 		<set name="icon" val="icon.bm_freya_rune" />
 		<set name="is_tradable" val="false" />
@@ -110,7 +110,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="91907" name="+10 High Quality Agathion Box" additionalName="Event" type="EtcItem">
+	<item id="91907" name="+10 High Quality Agathion Box" type="EtcItem">
 		<!-- Double-click to obtain a random +10 High Quality Agathion. -->
 		<set name="icon" val="icon.npoint_earthworm_30day_box" />
 		<set name="default_action" val="PEEL" />
@@ -119,7 +119,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="91908" name="+12 Weapon Pack (S-grade)" additionalName="Event" type="EtcItem">
+	<item id="91908" name="+12 Weapon Pack (S-grade)" type="EtcItem">
 		<!-- Double-click to obtain a +12 S-grade weapon. -->
 		<set name="icon" val="icon.npoint_earthworm_30day_box" />
 		<set name="default_action" val="PEEL" />
@@ -139,7 +139,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="91910" name="Sayha's Blessing" additionalName="Event" type="EtcItem">
+	<item id="91910" name="Sayha's Blessing" type="EtcItem">
 		<!-- Sayha's Grace points +35,000. Reqiured level: 1-75. -->
 		<set name="icon" val="icon.etc_wind_potion_i00" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
@@ -149,7 +149,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="91911" name="Sayha's Effect Scroll" additionalName="Event" type="EtcItem">
+	<item id="91911" name="Sayha's Effect Scroll" type="EtcItem">
 		<!-- For 20 min., grants the following effects: Sayha's Shield, Sayha's Magic Barrier, Sayha�s Decrease Weight, Sayha's Clarity, Sayha's Berserker Spirit, Sayha's Wind Walk, Sayha's Might, Sayha's Focus, Sayha's Haste, Sayha's Death Whisper, Sayha's Empower, Sayha's Wild Magic, Sayha's Acumen, Sayha's Concentration, Sayha's Victory, Sayha's Recover HP, Sayha's Recover MP. Cooldown: 1 min. Can't be used when the Sayha's Recover MP effect is active. Note: The Sayha's Victory effect does not stack if the identical effect is active. -->
 		<set name="icon" val="icon.etc_ssq_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -307,7 +307,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="91926" name="+3 Dragon Belt Chest" additionalName="Event" type="EtcItem">
+	<item id="91926" name="+3 Dragon Belt Chest" type="EtcItem">
 		<!-- Double-click to obtain Dragon Belt +3. -->
 		<set name="icon" val="icon.etc_readybox_bronze" />
 		<set name="default_action" val="PEEL" />
@@ -799,7 +799,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="91971" name="Star Candy" additionalName="Event" type="EtcItem">
+	<item id="91971" name="Star Candy" type="EtcItem">
 		<!-- Sayha's Grace points +10,000. -->
 		<set name="icon" val="BranchSys.icon.br_valentine_agathion_pack_i00" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
@@ -817,7 +817,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="91973" name="Special Dragon's Miracle Potion" additionalName="Event" type="EtcItem">
+	<item id="91973" name="Special Dragon's Miracle Potion" type="EtcItem">
 		<!-- For 20 min., Acquired XP/ SP +50%, P. Atk. +250, M. Atk. +380, P. Def. +320, M. Def. +450, P./ M. Critical Rate +30, P./ M. Critical Damage +10%, Atk. Spd./ Casting Spd. +50, Max HP/ CP +2500, Max MP +1500, HP/ MP Recovery Bonus +10, Sayha's Grace Consumption -20%. Has a certain chance to absorb 5% of the inflicted damage as HP. <Note> If used when the Dragon's Miracle Potion effect is active, the buff will be replaced. -->
 		<set name="icon" val="icon.bm_dragon_posion" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -827,7 +827,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="91974" name="HP Potion" additionalName="Event" type="EtcItem">
+	<item id="91974" name="HP Potion" type="EtcItem">
 		<!-- Instantly recovers 50 HP. The remaining points are used to recover CP. -->
 		<set name="icon" val="icon.etc_lesser_potion_red_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -839,7 +839,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="91975" name="Sayha's Victory" additionalName="Event" type="EtcItem">
+	<item id="91975" name="Sayha's Victory" type="EtcItem">
 		<!-- For 20 min., Max HP/ MP/ CP +300, P./ M. Atk. +200, Atk. Spd./ Casting Spd. +60, P./ M. Critical Rate +20, P./ M. Critical Damage +10%. -->
 		<set name="icon" val="icon.etc_ssq_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -908,7 +908,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="91983" name="Primeval Isle's Prolongating Stone" additionalName="Event" type="EtcItem">
+	<item id="91983" name="Primeval Isle's Prolongating Stone" type="EtcItem">
 		<!-- Prolongs your Primeval Isle's raid for 60 min. -->
 		<set name="icon" val="icon.timezone_refill_1" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
@@ -919,7 +919,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="91984" name="Ancient Pirates' Tomb's Prolongating Stone" additionalName="Event" type="EtcItem">
+	<item id="91984" name="Ancient Pirates' Tomb's Prolongating Stone" type="EtcItem">
 		<!-- Prolongs your Ancient Pirates' Tomb's raid for 60 min. -->
 		<set name="icon" val="icon.timezone_refill_2" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
@@ -930,7 +930,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="91985" name="Heavenly Rift's Prolongating Stone" additionalName="Event" type="EtcItem">
+	<item id="91985" name="Heavenly Rift's Prolongating Stone" type="EtcItem">
 		<!-- Prolongs your Heavenly Rift's raid for 60 min. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i03" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
@@ -961,7 +961,7 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="91987" name="+8 Blue Wolf Heavy Armor Set" additionalName="Event" type="EtcItem">
+	<item id="91987" name="+8 Blue Wolf Heavy Armor Set" type="EtcItem">
 		<!-- Double-click to obtain +8 Blue Wolf heavy armor set (breastplate, gaiters, helmet, gloves, boots). -->
 		<set name="icon" val="icon.armor_t68_u_i00" />
 		<set name="default_action" val="PEEL" />
@@ -972,7 +972,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="91988" name="+8 Blue Wolf Light Armor Set" additionalName="Event" type="EtcItem">
+	<item id="91988" name="+8 Blue Wolf Light Armor Set" type="EtcItem">
 		<!-- Double-click to obtain +8 Blue Wolf light armor set (leather armor, helmet, gloves, boots). -->
 		<set name="icon" val="icon.armor_t69_ul_i00" />
 		<set name="default_action" val="PEEL" />
@@ -983,7 +983,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="91989" name="+8 Blue Wolf Robe Set" additionalName="Event" type="EtcItem">
+	<item id="91989" name="+8 Blue Wolf Robe Set" type="EtcItem">
 		<!-- Double-click to obtain +8 Blue Wolf robe set (tunic, stockings, helmet, gloves, boots). -->
 		<set name="icon" val="icon.armor_t70_u_i00" />
 		<set name="default_action" val="PEEL" />
@@ -994,7 +994,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="91990" name="+8 Doom Heavy Armor Set" additionalName="Event" type="EtcItem">
+	<item id="91990" name="+8 Doom Heavy Armor Set" type="EtcItem">
 		<!-- Double-click to obtain +8 Doom heavy armor set (plate armor, helmet, gloves, boots). -->
 		<set name="icon" val="icon.armor_t71_ul_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1005,7 +1005,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="91991" name="+8 Doom Light Armor Set" additionalName="Event" type="EtcItem">
+	<item id="91991" name="+8 Doom Light Armor Set" type="EtcItem">
 		<!-- Double-click to obtain +8 Doom light armor set (leather armor, helmet, gloves, boots). -->
 		<set name="icon" val="icon.armor_t72_ul_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1016,7 +1016,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="91992" name="+8 Doom Robe Set" additionalName="Event" type="EtcItem">
+	<item id="91992" name="+8 Doom Robe Set" type="EtcItem">
 		<!-- Double-click to obtain +8 Doom robe set (tunic, stockings, helmet, gloves, boots). -->
 		<set name="icon" val="icon.armor_t73_u_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1027,7 +1027,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="91993" name="+8 Avadon Robe Set" additionalName="Event" type="EtcItem">
+	<item id="91993" name="+8 Avadon Robe Set" type="EtcItem">
 		<!-- Double-click to obtain +8 Avadon heavy armor set (breastplate, gaiters, circlet, gloves, boots). -->
 		<set name="icon" val="icon.armor_t59_ul_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1038,7 +1038,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="91994" name="+8 Plated Leather Armor Set" additionalName="Event" type="EtcItem">
+	<item id="91994" name="+8 Plated Leather Armor Set" type="EtcItem">
 		<!-- Double-click to obtain +8 Plated Leather armor set (armor, gaiters, boots). -->
 		<set name="icon" val="icon.armor_t47_u_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1060,7 +1060,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="91996" name="Scroll of Escape Pack: Tower of Insolence" additionalName="Floors 1-7" type="EtcItem">
+	<item id="91996" name="Scroll of Escape Pack: Tower of Insolence" type="EtcItem">
 		<!-- Double-click to obtain Scroll of Escape: Tower of Insolence (1-7th Floors). -->
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1071,7 +1071,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="91997" name="Primeval Isle's Prolongating Stone Pack" additionalName="L-Coin" type="EtcItem">
+	<item id="91997" name="Primeval Isle's Prolongating Stone Pack" type="EtcItem">
 		<!-- Double-click to obtain Primeval Isle's Prolongating Stone. -->
 		<set name="icon" val="icon.timezone_refill_1" />
 		<set name="default_action" val="PEEL" />
@@ -1082,7 +1082,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="91998" name="Primeval Isle's Prolongating Stone Pack" additionalName="Adena" type="EtcItem">
+	<item id="91998" name="Primeval Isle's Prolongating Stone Pack" type="EtcItem">
 		<!-- Double-click to obtain Primeval Isle's Prolongating Stone. -->
 		<set name="icon" val="icon.timezone_refill_1" />
 		<set name="default_action" val="PEEL" />

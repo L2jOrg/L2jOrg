@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org ../../xsd/items.xsd">
-    <item id="7701" name="Stick of Faith" additionalName="Empower" type="Weapon">
+    <item id="7701" name="Stick of Faith" type="Weapon">
         <!-- <Soul Crystal Enhancement>. M. Atk. + 46. -->
         <set name="icon" val="icon.weapon_stick_of_faith_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -31,7 +31,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="7702" name="Stick of Faith" additionalName="Acumen" type="Weapon">
+    <item id="7702" name="Stick of Faith" type="Weapon">
         <!-- <Soul Crystal Enhancement>. Increases Casting Spd. by 12%. -->
         <set name="icon" val="icon.weapon_stick_of_faith_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -62,7 +62,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="7703" name="Stick of Faith" additionalName="Magic Regeneration" type="Weapon">
+    <item id="7703" name="Stick of Faith" type="Weapon">
         <!-- <Soul Crystal Enhancement>. Increases MP Recovery Bonus by 16%. -->
         <set name="icon" val="icon.weapon_stick_of_faith_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -93,7 +93,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="7704" name="Stick of Eternity" additionalName="Empower" type="Weapon">
+    <item id="7704" name="Stick of Eternity" type="Weapon">
         <!-- <Soul Crystal Enhancement>. M. Atk. + 46. -->
         <set name="icon" val="icon.weapon_stick_of_eternity_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -124,7 +124,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="7705" name="Stick of Eternity" additionalName="Acumen" type="Weapon">
+    <item id="7705" name="Stick of Eternity" type="Weapon">
         <!-- <Soul Crystal Enhancement>. Increases Casting Spd. by 12%. -->
         <set name="icon" val="icon.weapon_stick_of_eternity_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -155,7 +155,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="7706" name="Stick of Eternity" additionalName="Magic Regeneration" type="Weapon">
+    <item id="7706" name="Stick of Eternity" type="Weapon">
         <!-- <Soul Crystal Enhancement>. Increases MP Recovery Bonus by 16%. -->
         <set name="icon" val="icon.weapon_stick_of_eternity_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -186,7 +186,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="7707" name="Nirvana Axe" additionalName="Empower" type="Weapon">
+    <item id="7707" name="Nirvana Axe" type="Weapon">
         <!-- <Soul Crystal Enhancement>. M. Atk. + 46. -->
         <set name="icon" val="icon.weapon_nirvana_axe_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -217,7 +217,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="7708" name="Nirvana Axe" additionalName="Acumen" type="Weapon">
+    <item id="7708" name="Nirvana Axe" type="Weapon">
         <!-- <Soul Crystal Enhancement>. Increases Casting Spd. by 12%. -->
         <set name="icon" val="icon.weapon_nirvana_axe_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -248,7 +248,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="7709" name="Nirvana Axe" additionalName="Magic Regeneration" type="Weapon">
+    <item id="7709" name="Nirvana Axe" type="Weapon">
         <!-- <Soul Crystal Enhancement>. Increases MP Recovery Bonus by 16%. -->
         <set name="icon" val="icon.weapon_nirvana_axe_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -279,7 +279,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="7710" name="Club of Nature" additionalName="Empower" type="Weapon">
+    <item id="7710" name="Club of Nature" type="Weapon">
         <!-- <Soul Crystal Enhancement>. M. Atk. + 46. -->
         <set name="icon" val="icon.weapon_club_of_nature_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -310,7 +310,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="7711" name="Club of Nature" additionalName="Acumen" type="Weapon">
+    <item id="7711" name="Club of Nature" type="Weapon">
         <!-- <Soul Crystal Enhancement>. Increases Casting Spd. by 12%. -->
         <set name="icon" val="icon.weapon_club_of_nature_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -341,7 +341,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="7712" name="Club of Nature" additionalName="Magic Regeneration" type="Weapon">
+    <item id="7712" name="Club of Nature" type="Weapon">
         <!-- <Soul Crystal Enhancement>. Increases MP Recovery Bonus by 16%. -->
         <set name="icon" val="icon.weapon_club_of_nature_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -372,7 +372,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="7713" name="Mace of Underworld" additionalName="Empower" type="Weapon">
+    <item id="7713" name="Mace of Underworld" type="Weapon">
         <!-- <Soul Crystal Enhancement>. M. Atk. + 46. -->
         <set name="icon" val="icon.weapon_mace_of_underworld_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -403,7 +403,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="7714" name="Mace of Underworld" additionalName="Acumen" type="Weapon">
+    <item id="7714" name="Mace of Underworld" type="Weapon">
         <!-- <Soul Crystal Enhancement>. Increases Casting Spd. by 12%. -->
         <set name="icon" val="icon.weapon_mace_of_underworld_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -434,7 +434,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="7715" name="Mace of Underworld" additionalName="Magic Regeneration" type="Weapon">
+    <item id="7715" name="Mace of Underworld" type="Weapon">
         <!-- <Soul Crystal Enhancement>. Increases MP Recovery Bonus by 16%. -->
         <set name="icon" val="icon.weapon_mace_of_underworld_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -465,7 +465,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="7716" name="Inferno Staff" additionalName="Empower" type="Weapon">
+    <item id="7716" name="Inferno Staff" type="Weapon">
         <!-- <Soul Crystal Enhancement>. M. Atk. + 50. -->
         <set name="icon" val="icon.weapon_inferno_staff_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -496,7 +496,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="7717" name="Inferno Staff" additionalName="Acumen" type="Weapon">
+    <item id="7717" name="Inferno Staff" type="Weapon">
         <!-- <Soul Crystal Enhancement>. Increases Casting Spd. by 12%. -->
         <set name="icon" val="icon.weapon_inferno_staff_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -527,7 +527,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="7718" name="Inferno Staff" additionalName="Magic Regeneration" type="Weapon">
+    <item id="7718" name="Inferno Staff" type="Weapon">
         <!-- <Soul Crystal Enhancement>. Increases MP Recovery Bonus by 16%. -->
         <set name="icon" val="icon.weapon_inferno_staff_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -558,7 +558,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="7719" name="Poleaxe" additionalName="Focus" type="Weapon">
+    <item id="7719" name="Poleaxe" type="Weapon">
         <!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 65. -->
         <set name="icon" val="icon.weapon_poleaxe_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -589,7 +589,7 @@
             <stat type="pAtkRange">80</stat>
         </stats>
     </item>
-    <item id="7720" name="Poleaxe" additionalName="Haste" type="Weapon">
+    <item id="7720" name="Poleaxe" type="Weapon">
         <!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 8%. -->
         <set name="icon" val="icon.weapon_poleaxe_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -620,7 +620,7 @@
             <stat type="pAtkRange">80</stat>
         </stats>
     </item>
-    <item id="7721" name="Poleaxe" additionalName="Critical Stun" type="Weapon">
+    <item id="7721" name="Poleaxe" type="Weapon">
         <!-- <Soul Crystal Enhancement>. Has about a 25% chance of casting Stun on the target during a Critical Attack. -->
         <set name="icon" val="icon.weapon_poleaxe_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -650,7 +650,7 @@
             <stat type="pAtkRange">80</stat>
         </stats>
     </item>
-    <item id="7722" name="Sword of Valhalla" additionalName="Empower" type="Weapon">
+    <item id="7722" name="Sword of Valhalla" type="Weapon">
         <!-- <Soul Crystal Enhancement>. M. Atk. + 96. -->
         <set name="icon" val="icon.weapon_sword_of_valhalla_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -680,7 +680,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="7723" name="Sword of Valhalla" additionalName="Acumen" type="Weapon">
+    <item id="7723" name="Sword of Valhalla" type="Weapon">
         <!-- <Soul Crystal Enhancement>. Increases Casting Spd. by 12%. -->
         <set name="icon" val="icon.weapon_sword_of_valhalla_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -710,7 +710,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="7724" name="Sword of Valhalla" additionalName="Magic Regeneration" type="Weapon">
+    <item id="7724" name="Sword of Valhalla" type="Weapon">
         <!-- <Soul Crystal Enhancement>. Increases MP Recovery Bonus by 14%. -->
         <set name="icon" val="icon.weapon_sword_of_valhalla_i01"/>
         <set name="default_action" val="EQUIP"/>

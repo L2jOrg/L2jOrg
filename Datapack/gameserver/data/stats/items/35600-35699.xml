@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org ../../xsd/items.xsd">
-    <item id="35669" name="Angel Cat's Blessing" additionalName="30-day" type="EtcItem">
+    <item id="35669" name="Angel Cat's Blessing" type="EtcItem">
         <!-- Increases Max. HP / MP by 5%, XP and SP gain by 20%. This effect remains after character's death. Cannot be exchanged, dropped, or sold. Duration: 60 minutes. -->
         <set name="icon" val="icon.skilltransform4"/>
         <set name="is_clan_depositable" val="false"/>

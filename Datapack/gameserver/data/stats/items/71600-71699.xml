@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org ../../xsd/items.xsd">
-    <item id="71600" name="Transformation Sealbook: Pirate" additionalName="Rare" type="EtcItem">
+    <item id="71600" name="Transformation Sealbook: Pirate" type="EtcItem">
         <!-- The book allows you to obtain Rare Pirate appearance. Cannot be dropped or sold in the grocery store. -->
         <set name="icon" val="icon.bm2018_pirate_i01"/>
         <set name="default_action" val="SKILL_REDUCE"/>
@@ -8,7 +8,7 @@
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="71601" name="Transformation Sealbook: Pirate" additionalName="Legendary" type="EtcItem">
+    <item id="71601" name="Transformation Sealbook: Pirate" type="EtcItem">
         <!-- The book allows you to obtain Legendary Pirate appearance. Cannot be dropped or sold in the grocery store. -->
         <set name="icon" val="icon.bm2018_pirate_i01"/>
         <set name="default_action" val="SKILL_REDUCE"/>
@@ -16,7 +16,7 @@
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="71602" name="Transformation Sealbook: Pirate" additionalName="Mythic" type="EtcItem">
+    <item id="71602" name="Transformation Sealbook: Pirate" type="EtcItem">
         <!-- The book allows you to obtain Mythic Pirate appearance. Cannot be dropped or sold in the grocery store. -->
         <set name="icon" val="icon.bm2018_pirate_i01"/>
         <set name="default_action" val="SKILL_REDUCE"/>
@@ -24,7 +24,7 @@
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="71603" name="Transformation Sealbook: Red Noblesse" additionalName="Standard" type="EtcItem">
+    <item id="71603" name="Transformation Sealbook: Red Noblesse" type="EtcItem">
         <!-- The book allows you to obtain Standard Red Noblesse appearance. Cannot be dropped or sold in the grocery store. -->
         <set name="icon" val="icon.bm2018_rednoblesse_i01"/>
         <set name="default_action" val="SKILL_REDUCE"/>
@@ -32,7 +32,7 @@
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="71604" name="Transformation Sealbook: Red Noblesse" additionalName="High-grade" type="EtcItem">
+    <item id="71604" name="Transformation Sealbook: Red Noblesse" type="EtcItem">
         <!-- The book allows you to obtain High-grade Red Noblesse appearance. Cannot be dropped or sold in the grocery store. -->
         <set name="icon" val="icon.bm2018_rednoblesse_i01"/>
         <set name="default_action" val="SKILL_REDUCE"/>
@@ -40,7 +40,7 @@
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="71605" name="Transformation Sealbook: Red Noblesse" additionalName="Rare" type="EtcItem">
+    <item id="71605" name="Transformation Sealbook: Red Noblesse" type="EtcItem">
         <!-- The book allows you to obtain Rare Red Noblesse appearance. Cannot be dropped or sold in the grocery store. -->
         <set name="icon" val="icon.bm2018_rednoblesse_i01"/>
         <set name="default_action" val="SKILL_REDUCE"/>
@@ -48,7 +48,7 @@
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="71606" name="Transformation Sealbook: Red Noblesse" additionalName="Legendary" type="EtcItem">
+    <item id="71606" name="Transformation Sealbook: Red Noblesse" type="EtcItem">
         <!-- The book allows you to obtain Legendary Red Noblesse appearance. Cannot be dropped or sold in the grocery store. -->
         <set name="icon" val="icon.bm2018_rednoblesse_i01"/>
         <set name="default_action" val="SKILL_REDUCE"/>
@@ -56,7 +56,7 @@
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="71607" name="Transformation Sealbook: Red Noblesse" additionalName="Mythic" type="EtcItem">
+    <item id="71607" name="Transformation Sealbook: Red Noblesse" type="EtcItem">
         <!-- The book allows you to obtain Mythic Red Noblesse appearance. Cannot be dropped or sold in the grocery store. -->
         <set name="icon" val="icon.bm2018_rednoblesse_i01"/>
         <set name="default_action" val="SKILL_REDUCE"/>
@@ -64,7 +64,7 @@
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="71608" name="Transformation Sealbook: Barbarian Wolf" additionalName="Standard" type="EtcItem">
+    <item id="71608" name="Transformation Sealbook: Barbarian Wolf" type="EtcItem">
         <!-- The book allows you to obtain Standard Barbarian Wolf appearance. Cannot be dropped or sold in the grocery store. -->
         <set name="icon" val="icon.barbarian_chest_change_0"/>
         <set name="default_action" val="SKILL_REDUCE"/>
@@ -72,7 +72,7 @@
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="71609" name="Transformation Sealbook: Barbarian Wolf" additionalName="High-grade" type="EtcItem">
+    <item id="71609" name="Transformation Sealbook: Barbarian Wolf" type="EtcItem">
         <!-- The book allows you to obtain High-grade Barbarian Wolf appearance. Cannot be dropped or sold in the grocery store. -->
         <set name="icon" val="icon.barbarian_chest_change_0"/>
         <set name="default_action" val="SKILL_REDUCE"/>
@@ -80,7 +80,7 @@
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="71610" name="Transformation Sealbook: Barbarian Wolf" additionalName="Rare" type="EtcItem">
+    <item id="71610" name="Transformation Sealbook: Barbarian Wolf" type="EtcItem">
         <!-- The book allows you to obtain Rare Barbarian Wolf appearance. Cannot be dropped or sold in the grocery store. -->
         <set name="icon" val="icon.barbarian_chest_change_0"/>
         <set name="default_action" val="SKILL_REDUCE"/>
@@ -88,7 +88,7 @@
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="71611" name="Transformation Sealbook: Barbarian Wolf" additionalName="Legendary" type="EtcItem">
+    <item id="71611" name="Transformation Sealbook: Barbarian Wolf" type="EtcItem">
         <!-- The book allows you to obtain Legendary Barbarian Wolf appearance. Cannot be dropped or sold in the grocery store. -->
         <set name="icon" val="icon.barbarian_chest_change_0"/>
         <set name="default_action" val="SKILL_REDUCE"/>
@@ -96,7 +96,7 @@
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="71612" name="Transformation Sealbook: Barbarian Wolf" additionalName="Mythic" type="EtcItem">
+    <item id="71612" name="Transformation Sealbook: Barbarian Wolf" type="EtcItem">
         <!-- The book allows you to obtain Mythic Barbarian Wolf appearance. Cannot be dropped or sold in the grocery store. -->
         <set name="icon" val="icon.barbarian_chest_change_0"/>
         <set name="default_action" val="SKILL_REDUCE"/>
@@ -104,7 +104,7 @@
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="71613" name="Transformation Sealbook: Valkyrie" additionalName="Standard" type="EtcItem">
+    <item id="71613" name="Transformation Sealbook: Valkyrie" type="EtcItem">
         <!-- The book allows you to obtain Standard Valkyrie appearance. Cannot be dropped or sold in the grocery store. -->
         <set name="icon" val="icon.valkyrie_chest_change_0"/>
         <set name="default_action" val="SKILL_REDUCE"/>
@@ -112,7 +112,7 @@
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="71614" name="Transformation Sealbook: Valkyrie" additionalName="High-grade" type="EtcItem">
+    <item id="71614" name="Transformation Sealbook: Valkyrie" type="EtcItem">
         <!-- The book allows you to obtain High-grade Valkyrie appearance. Cannot be dropped or sold in the grocery store. -->
         <set name="icon" val="icon.valkyrie_chest_change_0"/>
         <set name="default_action" val="SKILL_REDUCE"/>
@@ -120,7 +120,7 @@
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="71615" name="Transformation Sealbook: Valkyrie" additionalName="Rare" type="EtcItem">
+    <item id="71615" name="Transformation Sealbook: Valkyrie" type="EtcItem">
         <!-- The book allows you to obtain Rare Valkyrie appearance. Cannot be dropped or sold in the grocery store. -->
         <set name="icon" val="icon.valkyrie_chest_change_0"/>
         <set name="default_action" val="SKILL_REDUCE"/>
@@ -128,7 +128,7 @@
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="71616" name="Transformation Sealbook: Valkyrie" additionalName="Legendary" type="EtcItem">
+    <item id="71616" name="Transformation Sealbook: Valkyrie" type="EtcItem">
         <!-- The book allows you to obtain Legendary Valkyrie appearance. Cannot be dropped or sold in the grocery store. -->
         <set name="icon" val="icon.valkyrie_chest_change_0"/>
         <set name="default_action" val="SKILL_REDUCE"/>
@@ -136,7 +136,7 @@
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="71617" name="Transformation Sealbook: Valkyrie" additionalName="Mythic" type="EtcItem">
+    <item id="71617" name="Transformation Sealbook: Valkyrie" type="EtcItem">
         <!-- The book allows you to obtain Mythic Valkyrie appearance. Cannot be dropped or sold in the grocery store. -->
         <set name="icon" val="icon.valkyrie_chest_change_0"/>
         <set name="default_action" val="SKILL_REDUCE"/>
@@ -144,7 +144,7 @@
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="71618" name="Transformation Sealbook: Kelbim" additionalName="Standard" type="EtcItem">
+    <item id="71618" name="Transformation Sealbook: Kelbim" type="EtcItem">
         <!-- The book allows you to obtain Standard Kelbim appearance. Cannot be dropped or sold in the grocery store. -->
         <set name="icon" val="BranchIcon.Icon.g_bm_costume_kelbim"/>
         <set name="default_action" val="SKILL_REDUCE"/>
@@ -152,7 +152,7 @@
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="71619" name="Transformation Sealbook: Kelbim" additionalName="High-grade" type="EtcItem">
+    <item id="71619" name="Transformation Sealbook: Kelbim" type="EtcItem">
         <!-- The book allows you to obtain High-grade Kelbim appearance. Cannot be dropped or sold in the grocery store. -->
         <set name="icon" val="BranchIcon.Icon.g_bm_costume_kelbim"/>
         <set name="default_action" val="SKILL_REDUCE"/>
@@ -160,7 +160,7 @@
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="71620" name="Transformation Sealbook: Kelbim" additionalName="Rare" type="EtcItem">
+    <item id="71620" name="Transformation Sealbook: Kelbim" type="EtcItem">
         <!-- The book allows you to obtain Rare Kelbim appearance. Cannot be dropped or sold in the grocery store. -->
         <set name="icon" val="BranchIcon.Icon.g_bm_costume_kelbim"/>
         <set name="default_action" val="SKILL_REDUCE"/>
@@ -168,7 +168,7 @@
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="71621" name="Transformation Sealbook: Kelbim" additionalName="Legendary" type="EtcItem">
+    <item id="71621" name="Transformation Sealbook: Kelbim" type="EtcItem">
         <!-- The book allows you to obtain Legendary Kelbim appearance. Cannot be dropped or sold in the grocery store. -->
         <set name="icon" val="BranchIcon.Icon.g_bm_costume_kelbim"/>
         <set name="default_action" val="SKILL_REDUCE"/>
@@ -176,7 +176,7 @@
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="71622" name="Transformation Sealbook: Kelbim" additionalName="Mythic" type="EtcItem">
+    <item id="71622" name="Transformation Sealbook: Kelbim" type="EtcItem">
         <!-- The book allows you to obtain Mythic Kelbim appearance. Cannot be dropped or sold in the grocery store. -->
         <set name="icon" val="BranchIcon.Icon.g_bm_costume_kelbim"/>
         <set name="default_action" val="SKILL_REDUCE"/>
@@ -184,7 +184,7 @@
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="71623" name="Transformation Sealbook: Ninja" additionalName="Standard" type="EtcItem">
+    <item id="71623" name="Transformation Sealbook: Ninja" type="EtcItem">
         <!-- The book allows you to obtain Standard Ninja appearance. Cannot be dropped or sold in the grocery store. -->
         <set name="icon" val="icon.bm2018_ninja_i01"/>
         <set name="default_action" val="SKILL_REDUCE"/>
@@ -192,7 +192,7 @@
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="71624" name="Transformation Sealbook: Ninja" additionalName="High-grade" type="EtcItem">
+    <item id="71624" name="Transformation Sealbook: Ninja" type="EtcItem">
         <!-- The book allows you to obtain High-grade Ninja appearance. Cannot be dropped or sold in the grocery store. -->
         <set name="icon" val="icon.bm2018_ninja_i01"/>
         <set name="default_action" val="SKILL_REDUCE"/>
@@ -200,7 +200,7 @@
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="71625" name="Transformation Sealbook: Ninja" additionalName="Rare" type="EtcItem">
+    <item id="71625" name="Transformation Sealbook: Ninja" type="EtcItem">
         <!-- The book allows you to obtain Rare Ninja appearance. Cannot be dropped or sold in the grocery store. -->
         <set name="icon" val="icon.bm2018_ninja_i01"/>
         <set name="default_action" val="SKILL_REDUCE"/>
@@ -208,7 +208,7 @@
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="71626" name="Transformation Sealbook: Ninja" additionalName="Legendary" type="EtcItem">
+    <item id="71626" name="Transformation Sealbook: Ninja" type="EtcItem">
         <!-- The book allows you to obtain Legendary Ninja appearance. Cannot be dropped or sold in the grocery store. -->
         <set name="icon" val="icon.bm2018_ninja_i01"/>
         <set name="default_action" val="SKILL_REDUCE"/>
@@ -216,7 +216,7 @@
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="71627" name="Transformation Sealbook: Ninja" additionalName="Mythic" type="EtcItem">
+    <item id="71627" name="Transformation Sealbook: Ninja" type="EtcItem">
         <!-- The book allows you to obtain Mythic Ninja appearance. Cannot be dropped or sold in the grocery store. -->
         <set name="icon" val="icon.bm2018_ninja_i01"/>
         <set name="default_action" val="SKILL_REDUCE"/>
@@ -224,7 +224,7 @@
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="71628" name="Transformation Sealbook: High Priest" additionalName="Standard" type="EtcItem">
+    <item id="71628" name="Transformation Sealbook: High Priest" type="EtcItem">
         <!-- The book allows you to obtain Standard High Priest appearance. Cannot be dropped or sold in the grocery store. -->
         <set name="icon" val="icon.bm2018_healer_i01"/>
         <set name="default_action" val="SKILL_REDUCE"/>
@@ -232,7 +232,7 @@
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="71629" name="Transformation Sealbook: High Priest" additionalName="High-grade" type="EtcItem">
+    <item id="71629" name="Transformation Sealbook: High Priest" type="EtcItem">
         <!-- The book allows you to obtain High-grade High Priest appearance. Cannot be dropped or sold in the grocery store. -->
         <set name="icon" val="icon.bm2018_healer_i01"/>
         <set name="default_action" val="SKILL_REDUCE"/>
@@ -240,7 +240,7 @@
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="71630" name="Transformation Sealbook: High Priest" additionalName="Rare" type="EtcItem">
+    <item id="71630" name="Transformation Sealbook: High Priest" type="EtcItem">
         <!-- The book allows you to obtain Rare High Priest appearance. Cannot be dropped or sold in the grocery store. -->
         <set name="icon" val="icon.bm2018_healer_i01"/>
         <set name="default_action" val="SKILL_REDUCE"/>
@@ -248,7 +248,7 @@
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="71631" name="Transformation Sealbook: High Priest" additionalName="Legendary" type="EtcItem">
+    <item id="71631" name="Transformation Sealbook: High Priest" type="EtcItem">
         <!-- The book allows you to obtain Legendary High Priest appearance. Cannot be dropped or sold in the grocery store. -->
         <set name="icon" val="icon.bm2018_healer_i01"/>
         <set name="default_action" val="SKILL_REDUCE"/>
@@ -256,7 +256,7 @@
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="71632" name="Transformation Sealbook: High Priest" additionalName="Mythic" type="EtcItem">
+    <item id="71632" name="Transformation Sealbook: High Priest" type="EtcItem">
         <!-- The book allows you to obtain Mythic High Priest appearance. Cannot be dropped or sold in the grocery store. -->
         <set name="icon" val="icon.bm2018_healer_i01"/>
         <set name="default_action" val="SKILL_REDUCE"/>
@@ -264,7 +264,7 @@
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="71633" name="Transformation Sealbook: White Noblesse" additionalName="Standard" type="EtcItem">
+    <item id="71633" name="Transformation Sealbook: White Noblesse" type="EtcItem">
         <!-- The book allows you to obtain Standard White Noblesse appearance. Cannot be dropped or sold in the grocery store. -->
         <set name="icon" val="icon.bm2018_whitenoblesse_i01"/>
         <set name="default_action" val="SKILL_REDUCE"/>
@@ -272,7 +272,7 @@
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="71634" name="Transformation Sealbook: White Noblesse" additionalName="High-grade" type="EtcItem">
+    <item id="71634" name="Transformation Sealbook: White Noblesse" type="EtcItem">
         <!-- The book allows you to obtain High-grade White Noblesse appearance. Cannot be dropped or sold in the grocery store. -->
         <set name="icon" val="icon.bm2018_whitenoblesse_i01"/>
         <set name="default_action" val="SKILL_REDUCE"/>
@@ -280,7 +280,7 @@
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="71635" name="Transformation Sealbook: White Noblesse" additionalName="Rare" type="EtcItem">
+    <item id="71635" name="Transformation Sealbook: White Noblesse" type="EtcItem">
         <!-- The book allows you to obtain Rare White Noblesse appearance. Cannot be dropped or sold in the grocery store. -->
         <set name="icon" val="icon.bm2018_whitenoblesse_i01"/>
         <set name="default_action" val="SKILL_REDUCE"/>
@@ -288,7 +288,7 @@
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="71636" name="Transformation Sealbook: White Noblesse" additionalName="Legendary" type="EtcItem">
+    <item id="71636" name="Transformation Sealbook: White Noblesse" type="EtcItem">
         <!-- The book allows you to obtain Legendary White Noblesse appearance. Cannot be dropped or sold in the grocery store. -->
         <set name="icon" val="icon.bm2018_whitenoblesse_i01"/>
         <set name="default_action" val="SKILL_REDUCE"/>
@@ -296,7 +296,7 @@
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="71637" name="Transformation Sealbook: White Noblesse" additionalName="Mythic" type="EtcItem">
+    <item id="71637" name="Transformation Sealbook: White Noblesse" type="EtcItem">
         <!-- The book allows you to obtain Mythic White Noblesse appearance. Cannot be dropped or sold in the grocery store. -->
         <set name="icon" val="icon.bm2018_whitenoblesse_i01"/>
         <set name="default_action" val="SKILL_REDUCE"/>
@@ -304,7 +304,7 @@
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="71638" name="Transformation Sealbook: Purple Cowboy" additionalName="Standard" type="EtcItem">
+    <item id="71638" name="Transformation Sealbook: Purple Cowboy" type="EtcItem">
         <!-- The book allows you to obtain Standard Purple Cowboy appearance. Cannot be dropped or sold in the grocery store. -->
         <set name="icon" val="icon.bm2018_cowboy_i01"/>
         <set name="default_action" val="SKILL_REDUCE"/>
@@ -312,7 +312,7 @@
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="71639" name="Transformation Sealbook: Purple Cowboy" additionalName="High-grade" type="EtcItem">
+    <item id="71639" name="Transformation Sealbook: Purple Cowboy" type="EtcItem">
         <!-- The book allows you to obtain High-grade Purple Cowboy appearance. Cannot be dropped or sold in the grocery store. -->
         <set name="icon" val="icon.bm2018_cowboy_i01"/>
         <set name="default_action" val="SKILL_REDUCE"/>
@@ -320,7 +320,7 @@
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="71640" name="Transformation Sealbook: Purple Cowboy" additionalName="Rare" type="EtcItem">
+    <item id="71640" name="Transformation Sealbook: Purple Cowboy" type="EtcItem">
         <!-- The book allows you to obtain Rare Purple Cowboy appearance. Cannot be dropped or sold in the grocery store. -->
         <set name="icon" val="icon.bm2018_cowboy_i01"/>
         <set name="default_action" val="SKILL_REDUCE"/>
@@ -328,7 +328,7 @@
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="71641" name="Transformation Sealbook: Purple Cowboy" additionalName="Legendary" type="EtcItem">
+    <item id="71641" name="Transformation Sealbook: Purple Cowboy" type="EtcItem">
         <!-- The book allows you to obtain Legendary Purple Cowboy appearance. Cannot be dropped or sold in the grocery store. -->
         <set name="icon" val="icon.bm2018_cowboy_i01"/>
         <set name="default_action" val="SKILL_REDUCE"/>
@@ -336,7 +336,7 @@
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="71642" name="Transformation Sealbook: Purple Cowboy" additionalName="Mythic" type="EtcItem">
+    <item id="71642" name="Transformation Sealbook: Purple Cowboy" type="EtcItem">
         <!-- The book allows you to obtain Mythic Purple Cowboy appearance. Cannot be dropped or sold in the grocery store. -->
         <set name="icon" val="icon.bm2018_cowboy_i01"/>
         <set name="default_action" val="SKILL_REDUCE"/>
@@ -344,7 +344,7 @@
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="71643" name="Transformation Sealbook: Blue Musketeer" additionalName="Standard" type="EtcItem">
+    <item id="71643" name="Transformation Sealbook: Blue Musketeer" type="EtcItem">
         <!-- The book allows you to obtain Standard Blue Musketeer appearance. Cannot be dropped or sold in the grocery store. -->
         <set name="icon" val="icon.bm2018_bluemusketeer_i01"/>
         <set name="default_action" val="SKILL_REDUCE"/>
@@ -352,7 +352,7 @@
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="71644" name="Transformation Sealbook: Blue Musketeer" additionalName="High-grade" type="EtcItem">
+    <item id="71644" name="Transformation Sealbook: Blue Musketeer" type="EtcItem">
         <!-- The book allows you to obtain High-grade Blue Musketeer appearance. Cannot be dropped or sold in the grocery store. -->
         <set name="icon" val="icon.bm2018_bluemusketeer_i01"/>
         <set name="default_action" val="SKILL_REDUCE"/>
@@ -360,7 +360,7 @@
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="71645" name="Transformation Sealbook: Blue Musketeer" additionalName="Rare" type="EtcItem">
+    <item id="71645" name="Transformation Sealbook: Blue Musketeer" type="EtcItem">
         <!-- The book allows you to obtain Rare Blue Musketeer appearance. Cannot be dropped or sold in the grocery store. -->
         <set name="icon" val="icon.bm2018_bluemusketeer_i01"/>
         <set name="default_action" val="SKILL_REDUCE"/>
@@ -368,7 +368,7 @@
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="71646" name="Transformation Sealbook: Blue Musketeer" additionalName="Legendary" type="EtcItem">
+    <item id="71646" name="Transformation Sealbook: Blue Musketeer" type="EtcItem">
         <!-- The book allows you to obtain Legendary Blue Musketeer appearance. Cannot be dropped or sold in the grocery store. -->
         <set name="icon" val="icon.bm2018_bluemusketeer_i01"/>
         <set name="default_action" val="SKILL_REDUCE"/>
@@ -376,7 +376,7 @@
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="71647" name="Transformation Sealbook: Blue Musketeer" additionalName="Mythic" type="EtcItem">
+    <item id="71647" name="Transformation Sealbook: Blue Musketeer" type="EtcItem">
         <!-- The book allows you to obtain Mythic Blue Musketeer appearance. Cannot be dropped or sold in the grocery store. -->
         <set name="icon" val="icon.bm2018_bluemusketeer_i01"/>
         <set name="default_action" val="SKILL_REDUCE"/>
@@ -384,7 +384,7 @@
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="71648" name="Transformation Sealbook: Zaken" additionalName="Standard" type="EtcItem">
+    <item id="71648" name="Transformation Sealbook: Zaken" type="EtcItem">
         <!-- The book allows you to obtain Standard Zaken appearance. Cannot be dropped or sold in the grocery store. -->
         <set name="icon" val="BranchIcon.Icon.g_bm_costume_zaken"/>
         <set name="default_action" val="SKILL_REDUCE"/>
@@ -392,7 +392,7 @@
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="71649" name="Transformation Sealbook: Zaken" additionalName="High-grade" type="EtcItem">
+    <item id="71649" name="Transformation Sealbook: Zaken" type="EtcItem">
         <!-- The book allows you to obtain High-grade Zaken appearance. Cannot be dropped or sold in the grocery store. -->
         <set name="icon" val="BranchIcon.Icon.g_bm_costume_zaken"/>
         <set name="default_action" val="SKILL_REDUCE"/>
@@ -400,7 +400,7 @@
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="71650" name="Transformation Sealbook: Zaken" additionalName="Rare" type="EtcItem">
+    <item id="71650" name="Transformation Sealbook: Zaken" type="EtcItem">
         <!-- The book allows you to obtain Rare Zaken appearance. Cannot be dropped or sold in the grocery store. -->
         <set name="icon" val="BranchIcon.Icon.g_bm_costume_zaken"/>
         <set name="default_action" val="SKILL_REDUCE"/>
@@ -408,7 +408,7 @@
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="71651" name="Transformation Sealbook: Zaken" additionalName="Legendary" type="EtcItem">
+    <item id="71651" name="Transformation Sealbook: Zaken" type="EtcItem">
         <!-- The book allows you to obtain Legendary Zaken appearance. Cannot be dropped or sold in the grocery store. -->
         <set name="icon" val="BranchIcon.Icon.g_bm_costume_zaken"/>
         <set name="default_action" val="SKILL_REDUCE"/>
@@ -416,7 +416,7 @@
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="71652" name="Transformation Sealbook: Zaken" additionalName="Mythic" type="EtcItem">
+    <item id="71652" name="Transformation Sealbook: Zaken" type="EtcItem">
         <!-- The book allows you to obtain Mythic Zaken appearance. Cannot be dropped or sold in the grocery store. -->
         <set name="icon" val="BranchIcon.Icon.g_bm_costume_zaken"/>
         <set name="default_action" val="SKILL_REDUCE"/>
@@ -424,7 +424,7 @@
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="71653" name="Transformation Sealbook: Dragon Berserker" additionalName="Standard" type="EtcItem">
+    <item id="71653" name="Transformation Sealbook: Dragon Berserker" type="EtcItem">
         <!-- The book allows you to obtain Standard Dragon Berserker appearance. Cannot be dropped or sold in the grocery store. -->
         <set name="icon" val="icon.bm2018_dragon_i01"/>
         <set name="default_action" val="SKILL_REDUCE"/>
@@ -432,7 +432,7 @@
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="71654" name="Transformation Sealbook: Dragon Berserker" additionalName="High-grade" type="EtcItem">
+    <item id="71654" name="Transformation Sealbook: Dragon Berserker" type="EtcItem">
         <!-- The book allows you to obtain High-grade Dragon Berserker appearance. Cannot be dropped or sold in the grocery store. -->
         <set name="icon" val="icon.bm2018_dragon_i01"/>
         <set name="default_action" val="SKILL_REDUCE"/>
@@ -440,7 +440,7 @@
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="71655" name="Transformation Sealbook: Dragon Berserker" additionalName="Rare" type="EtcItem">
+    <item id="71655" name="Transformation Sealbook: Dragon Berserker" type="EtcItem">
         <!-- The book allows you to obtain Rare Dragon Berserker appearance. Cannot be dropped or sold in the grocery store. -->
         <set name="icon" val="icon.bm2018_dragon_i01"/>
         <set name="default_action" val="SKILL_REDUCE"/>
@@ -448,7 +448,7 @@
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="71656" name="Transformation Sealbook: Dragon Berserker" additionalName="Legendary" type="EtcItem">
+    <item id="71656" name="Transformation Sealbook: Dragon Berserker" type="EtcItem">
         <!-- The book allows you to obtain Legendary Dragon Berserker appearance. Cannot be dropped or sold in the grocery store. -->
         <set name="icon" val="icon.bm2018_dragon_i01"/>
         <set name="default_action" val="SKILL_REDUCE"/>
@@ -456,7 +456,7 @@
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="71657" name="Transformation Sealbook: Dragon Berserker" additionalName="Mythic" type="EtcItem">
+    <item id="71657" name="Transformation Sealbook: Dragon Berserker" type="EtcItem">
         <!-- The book allows you to obtain Mythic Dragon Berserker appearance. Cannot be dropped or sold in the grocery store. -->
         <set name="icon" val="icon.bm2018_dragon_i01"/>
         <set name="default_action" val="SKILL_REDUCE"/>
@@ -464,7 +464,7 @@
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="71658" name="Transformation Sealbook: Anakim" additionalName="Standard" type="EtcItem">
+    <item id="71658" name="Transformation Sealbook: Anakim" type="EtcItem">
         <!-- The book allows you to obtain Standard Anakim appearance. Cannot be dropped or sold in the grocery store. -->
         <set name="icon" val="BranchIcon.Icon.g_bm_costume_anakim"/>
         <set name="default_action" val="SKILL_REDUCE"/>
@@ -472,7 +472,7 @@
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="71659" name="Transformation Sealbook: Anakim" additionalName="High-grade" type="EtcItem">
+    <item id="71659" name="Transformation Sealbook: Anakim" type="EtcItem">
         <!-- The book allows you to obtain High-grade Anakim appearance. Cannot be dropped or sold in the grocery store. -->
         <set name="icon" val="BranchIcon.Icon.g_bm_costume_anakim"/>
         <set name="default_action" val="SKILL_REDUCE"/>
@@ -480,7 +480,7 @@
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="71660" name="Transformation Sealbook: Anakim" additionalName="Rare" type="EtcItem">
+    <item id="71660" name="Transformation Sealbook: Anakim" type="EtcItem">
         <!-- The book allows you to obtain Rare Anakim appearance. Cannot be dropped or sold in the grocery store. -->
         <set name="icon" val="BranchIcon.Icon.g_bm_costume_anakim"/>
         <set name="default_action" val="SKILL_REDUCE"/>
@@ -488,7 +488,7 @@
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="71661" name="Transformation Sealbook: Anakim" additionalName="Legendary" type="EtcItem">
+    <item id="71661" name="Transformation Sealbook: Anakim" type="EtcItem">
         <!-- The book allows you to obtain Legendary Anakim appearance. Cannot be dropped or sold in the grocery store. -->
         <set name="icon" val="BranchIcon.Icon.g_bm_costume_anakim"/>
         <set name="default_action" val="SKILL_REDUCE"/>
@@ -496,7 +496,7 @@
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="71662" name="Transformation Sealbook: Anakim" additionalName="Mythic" type="EtcItem">
+    <item id="71662" name="Transformation Sealbook: Anakim" type="EtcItem">
         <!-- The book allows you to obtain Mythic Anakim appearance. Cannot be dropped or sold in the grocery store. -->
         <set name="icon" val="BranchIcon.Icon.g_bm_costume_anakim"/>
         <set name="default_action" val="SKILL_REDUCE"/>
@@ -504,7 +504,7 @@
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="71663" name="Transformation Sealbook: Lilith" additionalName="Standard" type="EtcItem">
+    <item id="71663" name="Transformation Sealbook: Lilith" type="EtcItem">
         <!-- The book allows you to obtain Standard Lilith appearance. Cannot be dropped or sold in the grocery store. -->
         <set name="icon" val="BranchIcon.Icon.g_bm_costume_lilith"/>
         <set name="default_action" val="SKILL_REDUCE"/>
@@ -512,7 +512,7 @@
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="71664" name="Transformation Sealbook: Lilith" additionalName="High-grade" type="EtcItem">
+    <item id="71664" name="Transformation Sealbook: Lilith" type="EtcItem">
         <!-- The book allows you to obtain High-grade Lilith appearance. Cannot be dropped or sold in the grocery store. -->
         <set name="icon" val="BranchIcon.Icon.g_bm_costume_lilith"/>
         <set name="default_action" val="SKILL_REDUCE"/>
@@ -520,7 +520,7 @@
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="71665" name="Transformation Sealbook: Lilith" additionalName="Rare" type="EtcItem">
+    <item id="71665" name="Transformation Sealbook: Lilith" type="EtcItem">
         <!-- The book allows you to obtain Rare Lilith appearance. Cannot be dropped or sold in the grocery store. -->
         <set name="icon" val="BranchIcon.Icon.g_bm_costume_lilith"/>
         <set name="default_action" val="SKILL_REDUCE"/>
@@ -528,7 +528,7 @@
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="71666" name="Transformation Sealbook: Lilith" additionalName="Legendary" type="EtcItem">
+    <item id="71666" name="Transformation Sealbook: Lilith" type="EtcItem">
         <!-- The book allows you to obtain Legendary Lilith appearance. Cannot be dropped or sold in the grocery store. -->
         <set name="icon" val="BranchIcon.Icon.g_bm_costume_lilith"/>
         <set name="default_action" val="SKILL_REDUCE"/>
@@ -536,7 +536,7 @@
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="71667" name="Transformation Sealbook: Lilith" additionalName="Mythic" type="EtcItem">
+    <item id="71667" name="Transformation Sealbook: Lilith" type="EtcItem">
         <!-- The book allows you to obtain Mythic Lilith appearance. Cannot be dropped or sold in the grocery store. -->
         <set name="icon" val="BranchIcon.Icon.g_bm_costume_lilith"/>
         <set name="default_action" val="SKILL_REDUCE"/>
@@ -544,7 +544,7 @@
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="71668" name="Transformation Sealbook: Freya" additionalName="Standard" type="EtcItem">
+    <item id="71668" name="Transformation Sealbook: Freya" type="EtcItem">
         <!-- The book allows you to obtain Standard Freya appearance. Cannot be dropped or sold in the grocery store. -->
         <set name="icon" val="BranchIcon.Icon.g_bm_costume_freya"/>
         <set name="default_action" val="SKILL_REDUCE"/>
@@ -552,7 +552,7 @@
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="71669" name="Transformation Sealbook: Freya" additionalName="High-grade" type="EtcItem">
+    <item id="71669" name="Transformation Sealbook: Freya" type="EtcItem">
         <!-- The book allows you to obtain High-grade Freya appearance. Cannot be dropped or sold in the grocery store. -->
         <set name="icon" val="BranchIcon.Icon.g_bm_costume_freya"/>
         <set name="default_action" val="SKILL_REDUCE"/>
@@ -560,7 +560,7 @@
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="71670" name="Transformation Sealbook: Freya" additionalName="Rare" type="EtcItem">
+    <item id="71670" name="Transformation Sealbook: Freya" type="EtcItem">
         <!-- The book allows you to obtain Rare Freya appearance. Cannot be dropped or sold in the grocery store. -->
         <set name="icon" val="BranchIcon.Icon.g_bm_costume_freya"/>
         <set name="default_action" val="SKILL_REDUCE"/>
@@ -568,7 +568,7 @@
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="71671" name="Transformation Sealbook: Freya" additionalName="Legendary" type="EtcItem">
+    <item id="71671" name="Transformation Sealbook: Freya" type="EtcItem">
         <!-- The book allows you to obtain Legendary Freya appearance. Cannot be dropped or sold in the grocery store. -->
         <set name="icon" val="BranchIcon.Icon.g_bm_costume_freya"/>
         <set name="default_action" val="SKILL_REDUCE"/>
@@ -576,7 +576,7 @@
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="71672" name="Transformation Sealbook: Freya" additionalName="Mythic" type="EtcItem">
+    <item id="71672" name="Transformation Sealbook: Freya" type="EtcItem">
         <!-- The book allows you to obtain Mythic Freya appearance. Cannot be dropped or sold in the grocery store. -->
         <set name="icon" val="BranchIcon.Icon.g_bm_costume_freya"/>
         <set name="default_action" val="SKILL_REDUCE"/>
@@ -600,7 +600,7 @@
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="71675" name="Transformation Sealbook: Standard/ High-grade/ Rare Appearance" additionalName="Not Available" type="EtcItem">
+    <item id="71675" name="Transformation Sealbook: Standard/ High-grade/ Rare Appearance" type="EtcItem">
         <!-- Double-click to obtain one random Standard/ High-grade/ Rare appearance. Cannot be dropped or sold. -->
         <set name="icon" val="BranchIcon.Icon.g_bm_costume_book_i01"/>
         <set name="default_action" val="SKILL_REDUCE"/>
@@ -624,7 +624,7 @@
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="71678" name="Transformation Sealbook: Legendary/ Mythic Appearance" additionalName="Not Available" type="EtcItem">
+    <item id="71678" name="Transformation Sealbook: Legendary/ Mythic Appearance" type="EtcItem">
         <!-- Double-click to obtain one random Legendary/ Mythic appearance. Cannot be dropped or sold. -->
         <set name="icon" val="BranchIcon.Icon.g_bm_costume_book_i02"/>
         <set name="default_action" val="SKILL_REDUCE"/>
@@ -695,7 +695,7 @@
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="71687" name="Transformation Sealbook: Random Appearance" additionalName="Not Available" type="EtcItem">
+    <item id="71687" name="Transformation Sealbook: Random Appearance" type="EtcItem">
         <!-- Double-click to obtain one random Standard/ High-grade/ Rare/ Legendary appearance. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. -->
         <set name="icon" val="BranchIcon.Icon.g_bm_costume_book_i00_1"/>
         <set name="default_action" val="SKILL_REDUCE"/>
@@ -715,7 +715,7 @@
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="71689" name="Transformation Sealbook: Standard/ High-grade/ Rare Appearance" additionalName="Not Available" type="EtcItem">
+    <item id="71689" name="Transformation Sealbook: Standard/ High-grade/ Rare Appearance" type="EtcItem">
         <!-- Double-click to obtain one random Standard/ High-grade/ Rare appearance. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. -->
         <set name="icon" val="BranchIcon.Icon.g_bm_costume_book_i01_3"/>
         <set name="default_action" val="SKILL_REDUCE"/>
@@ -725,7 +725,7 @@
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="71690" name="Transformation Sealbook: Part-time Seller" additionalName="Kat the Cat" type="EtcItem">
+    <item id="71690" name="Transformation Sealbook: Part-time Seller" type="EtcItem">
         <!-- Sealbook for learning the skill of transforming yourself into Kat the Cat. Cannot be exchanged, dropped, destroyed, or sold in a private store. Can be stored in a private warehouse. Can be shared within account through Dimensional Merchant. -->
         <set name="icon" val="icon.etc_transform_warrior_i00"/>
         <set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
@@ -735,7 +735,7 @@
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="71691" name="Dragon Pendant - Attack" additionalName="Lv. 1" type="Armor">
+    <item id="71691" name="Dragon Pendant - Attack" type="Armor">
         <!-- A pendant that contains the energy of dragon. With the help of Dragon Varnish it can be enchanted up to +5. Enchantment activates special effects. Head Blacksmith Ferris can upgrade +5 pendant to Lv. 2. Cannot be dropped. Required materials: 12 mln Adena. -->
         <set name="icon" val="icon.bm_pendant_dragon_i00"/>
         <set name="default_action" val="EQUIP"/>
@@ -747,7 +747,7 @@
             <stat type="pDef">20</stat>
         </stats>
     </item>
-    <item id="71692" name="Dragon Pendant - Attack" additionalName="Lv. 2" type="Armor">
+    <item id="71692" name="Dragon Pendant - Attack" type="Armor">
         <!-- A pendant that contains the energy of dragon. With the help of Dragon Varnish it can be enchanted up to +5. Enchantment activates special effects. Head Blacksmith Ferris can upgrade +5 pendant to Lv. 3. Cannot be dropped. Required materials: Dragon Essense (3 pcs.), 16 mln Adena. -->
         <set name="icon" val="icon.bm_pendant_dragon_i00"/>
         <set name="default_action" val="EQUIP"/>
@@ -759,7 +759,7 @@
             <stat type="pDef">35</stat>
         </stats>
     </item>
-    <item id="71693" name="Dragon Pendant - Attack" additionalName="Lv. 3" type="Armor">
+    <item id="71693" name="Dragon Pendant - Attack" type="Armor">
         <!-- A pendant that contains the energy of dragon. With the help of Dragon Varnish it can be enchanted up to +5. Enchantment activates special effects. Head Blacksmith Ferris can upgrade +5 pendant to Lv. 4. Cannot be dropped. Required materials: Dragon Essense (20 pcs.), 50 mln Adena. -->
         <set name="icon" val="icon.bm_pendant_dragon_i00"/>
         <set name="default_action" val="EQUIP"/>
@@ -771,7 +771,7 @@
             <stat type="pDef">57</stat>
         </stats>
     </item>
-    <item id="71694" name="Dragon Pendant - Attack" additionalName="Lv. 4" type="Armor">
+    <item id="71694" name="Dragon Pendant - Attack" type="Armor">
         <!-- A pendant that contains the energy of dragon. With the help of Dragon Varnish it can be enchanted up to +5. Enchantment activates special effects. Cannoit be dropped. -->
         <set name="icon" val="icon.bm_pendant_dragon_i00"/>
         <set name="default_action" val="EQUIP"/>
@@ -783,7 +783,7 @@
             <stat type="pDef">70</stat>
         </stats>
     </item>
-    <item id="71695" name="Dragon Pendant - Magic Power" additionalName="Lv. 1" type="Armor">
+    <item id="71695" name="Dragon Pendant - Magic Power" type="Armor">
         <!-- A pendant that contains the magic energy of dragon. With the help of Dragon Varnish it can be enchanted up to +5. Enchantment activates special effects. Head Blacksmith Ferris can upgrade +5 pendant to Lv. 2. Cannot be dropped. Required materials: 12 mln Adena. -->
         <set name="icon" val="BranchIcon.icon.g_bm_pendant_dragon_m"/>
         <set name="default_action" val="EQUIP"/>
@@ -795,7 +795,7 @@
             <stat type="pDef">20</stat>
         </stats>
     </item>
-    <item id="71696" name="Dragon Pendant - Magic Power" additionalName="Lv. 2" type="Armor">
+    <item id="71696" name="Dragon Pendant - Magic Power" type="Armor">
         <!-- A pendant that contains the magic energy of dragon. With the help of Dragon Varnish it can be enchanted up to +5. Enchantment activates special effects. Head Blacksmith Ferris can upgrade +5 pendant to Lv. 3. Cannot be dropped. Required materials: Dragon Essense (3 pcs.), 16 mln Adena. -->
         <set name="icon" val="BranchIcon.icon.g_bm_pendant_dragon_m"/>
         <set name="default_action" val="EQUIP"/>
@@ -807,7 +807,7 @@
             <stat type="pDef">35</stat>
         </stats>
     </item>
-    <item id="71697" name="Dragon Pendant - Magic Power" additionalName="Lv. 3" type="Armor">
+    <item id="71697" name="Dragon Pendant - Magic Power" type="Armor">
         <!-- A pendant that contains the magic  energy of dragon. With the help of Dragon Varnish it can be enchanted up to +5. Enchantment activates special effects. Head Blacksmith Ferris can upgrade +5 pendant to Lv. 4. Cannot be dropped. Required materials: Dragon Essense (20 pcs.), 50 mln Adena. -->
         <set name="icon" val="BranchIcon.icon.g_bm_pendant_dragon_m"/>
         <set name="default_action" val="EQUIP"/>
@@ -819,7 +819,7 @@
             <stat type="pDef">57</stat>
         </stats>
     </item>
-    <item id="71698" name="Dragon Pendant - Magic Power" additionalName="Lv. 4" type="Armor">
+    <item id="71698" name="Dragon Pendant - Magic Power" type="Armor">
         <!-- A pendant that contains the magic energy of dragon. With the help of Dragon Varnish it can be enchanted up to +5. Enchantment activates special effects. Cannoit be dropped. -->
         <set name="icon" val="BranchIcon.icon.g_bm_pendant_dragon_m"/>
         <set name="default_action" val="EQUIP"/>

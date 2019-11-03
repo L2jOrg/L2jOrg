@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org ../../xsd/items.xsd">
-    <item id="21468" name="Sheep Hat" additionalName="14-day" type="Armor">
+    <item id="21468" name="Sheep Hat" type="Armor">
         <!-- A hat in the shape of a sheep. Can be used for up to 14 days. Occupies 2 hair accessory slots. Allows to use Sheep's Blessing and Sheep's Resurrection when equipped. Cannot be exchanged, dropped or sold. Can store in private warehouse. <Attention>. In case the character dies or has no extra space in the inventory at the moment of receiving of the item, the item cannot be obtained. -->
         <set name="icon" val="icon.accessory_sheep_cap_white_i00"/>
         <set name="default_action" val="EQUIP"/>

@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org ../../xsd/items.xsd">
-    <item id="4800" name="Fist" additionalName="Critical Damage" type="Weapon">
+    <item id="4800" name="Fist" type="Weapon">
         <!-- <Soul Crystal Enhancement>. P. Atk. + 203 during a Critical Attack. -->
         <set name="icon" val="icon.weapon_knuckle_dust_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -30,7 +30,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="4801" name="Arthro Nail" additionalName="Focus" type="Weapon">
+    <item id="4801" name="Arthro Nail" type="Weapon">
         <!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 32. -->
         <set name="icon" val="icon.weapon_arthro_nail_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -60,7 +60,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="4802" name="Arthro Nail" additionalName="Haste" type="Weapon">
+    <item id="4802" name="Arthro Nail" type="Weapon">
         <!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 7%. -->
         <set name="icon" val="icon.weapon_arthro_nail_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -90,7 +90,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="4803" name="Arthro Nail" additionalName="Critical Damage" type="Weapon">
+    <item id="4803" name="Arthro Nail" type="Weapon">
         <!-- <Soul Crystal Enhancement>. P. Atk. + 260 during a Critical Attack. -->
         <set name="icon" val="icon.weapon_arthro_nail_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -120,7 +120,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="4804" name="Bellion Cestus" additionalName="Focus" type="Weapon">
+    <item id="4804" name="Bellion Cestus" type="Weapon">
         <!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 58. -->
         <set name="icon" val="icon.weapon_bellion_cestus_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -150,7 +150,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="4805" name="Bellion Cestus" additionalName="Haste" type="Weapon">
+    <item id="4805" name="Bellion Cestus" type="Weapon">
         <!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 7%. -->
         <set name="icon" val="icon.weapon_bellion_cestus_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -180,7 +180,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="4806" name="Bellion Cestus" additionalName="Critical Damage" type="Weapon">
+    <item id="4806" name="Bellion Cestus" type="Weapon">
         <!-- <Soul Crystal Enhancement>. P. Atk. + 275 during a Critical Attack. -->
         <set name="icon" val="icon.weapon_bellion_cestus_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -210,7 +210,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="4810" name="Crystallized Ice Bow" additionalName="Focus" type="Weapon">
+    <item id="4810" name="Crystallized Ice Bow" type="Weapon">
         <!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 56. -->
         <set name="icon" val="icon.weapon_crystallized_ice_bow_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -243,7 +243,7 @@
             <stat type="pAtkRange">500</stat>
         </stats>
     </item>
-    <item id="4811" name="Crystallized Ice Bow" additionalName="Haste" type="Weapon">
+    <item id="4811" name="Crystallized Ice Bow" type="Weapon">
         <!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 8%. -->
         <set name="icon" val="icon.weapon_crystallized_ice_bow_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -276,7 +276,7 @@
             <stat type="pAtkRange">500</stat>
         </stats>
     </item>
-    <item id="4812" name="Crystallized Ice Bow" additionalName="Critical Damage" type="Weapon">
+    <item id="4812" name="Crystallized Ice Bow" type="Weapon">
         <!-- <Soul Crystal Enhancement>. P. Atk. + 86 during a Critical Attack. -->
         <set name="icon" val="icon.weapon_crystallized_ice_bow_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -306,7 +306,7 @@
             <stat type="pAtkRange">500</stat>
         </stats>
     </item>
-    <item id="4813" name="Elemental Bow" additionalName="Focus" type="Weapon">
+    <item id="4813" name="Elemental Bow" type="Weapon">
         <!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 52. -->
         <set name="icon" val="icon.weapon_elemental_bow_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -339,7 +339,7 @@
             <stat type="pAtkRange">500</stat>
         </stats>
     </item>
-    <item id="4814" name="Elemental Bow" additionalName="Haste" type="Weapon">
+    <item id="4814" name="Elemental Bow" type="Weapon">
         <!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 8%. -->
         <set name="icon" val="icon.weapon_elemental_bow_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -370,7 +370,7 @@
             <stat type="pAtkRange">500</stat>
         </stats>
     </item>
-    <item id="4815" name="Elemental Bow" additionalName="Critical Damage" type="Weapon">
+    <item id="4815" name="Elemental Bow" type="Weapon">
         <!-- <Soul Crystal Enhancement>. P. Atk. + 86 during a Critical Attack. -->
         <set name="icon" val="icon.weapon_elemental_bow_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -400,7 +400,7 @@
             <stat type="pAtkRange">500</stat>
         </stats>
     </item>
-    <item id="4816" name="Noble Elven Bow" additionalName="Focus" type="Weapon">
+    <item id="4816" name="Noble Elven Bow" type="Weapon">
         <!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 52. -->
         <set name="icon" val="icon.weapon_noble_elven_bow_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -433,7 +433,7 @@
             <stat type="pAtkRange">500</stat>
         </stats>
     </item>
-    <item id="4817" name="Noble Elven Bow" additionalName="Haste" type="Weapon">
+    <item id="4817" name="Noble Elven Bow" type="Weapon">
         <!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 8%. -->
         <set name="icon" val="icon.weapon_noble_elven_bow_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -464,7 +464,7 @@
             <stat type="pAtkRange">500</stat>
         </stats>
     </item>
-    <item id="4818" name="Noble Elven Bow" additionalName="Critical Damage" type="Weapon">
+    <item id="4818" name="Noble Elven Bow" type="Weapon">
         <!-- <Soul Crystal Enhancement>. P. Atk. + 86 during a Critical Attack. -->
         <set name="icon" val="icon.weapon_noble_elven_bow_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -495,7 +495,7 @@
             <stat type="pAtkRange">500</stat>
         </stats>
     </item>
-    <item id="4819" name="Akat Longbow" additionalName="Focus" type="Weapon">
+    <item id="4819" name="Akat Longbow" type="Weapon">
         <!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 52. -->
         <set name="icon" val="icon.weapon_akat_long_bow_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -528,7 +528,7 @@
             <stat type="pAtkRange">500</stat>
         </stats>
     </item>
-    <item id="4820" name="Akat Longbow" additionalName="Haste" type="Weapon">
+    <item id="4820" name="Akat Longbow" type="Weapon">
         <!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 8%. -->
         <set name="icon" val="icon.weapon_akat_long_bow_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -561,7 +561,7 @@
             <stat type="pAtkRange">500</stat>
         </stats>
     </item>
-    <item id="4821" name="Akat Longbow" additionalName="Critical Damage" type="Weapon">
+    <item id="4821" name="Akat Longbow" type="Weapon">
         <!-- <Soul Crystal Enhancement>. P. Atk. + 92 during a Critical Attack. -->
         <set name="icon" val="icon.weapon_akat_long_bow_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -592,7 +592,7 @@
             <stat type="pAtkRange">500</stat>
         </stats>
     </item>
-    <item id="4822" name="Eminence Bow" additionalName="Focus" type="Weapon">
+    <item id="4822" name="Eminence Bow" type="Weapon">
         <!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 48. -->
         <set name="icon" val="icon.weapon_eminence_bow_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -625,7 +625,7 @@
             <stat type="pAtkRange">500</stat>
         </stats>
     </item>
-    <item id="4823" name="Eminence Bow" additionalName="Haste" type="Weapon">
+    <item id="4823" name="Eminence Bow" type="Weapon">
         <!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 8%. -->
         <set name="icon" val="icon.weapon_eminence_bow_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -656,7 +656,7 @@
             <stat type="pAtkRange">500</stat>
         </stats>
     </item>
-    <item id="4824" name="Eminence Bow" additionalName="Critical Damage" type="Weapon">
+    <item id="4824" name="Eminence Bow" type="Weapon">
         <!-- <Soul Crystal Enhancement>. P. Atk. + 99 during a Critical Attack. -->
         <set name="icon" val="icon.weapon_eminence_bow_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -687,7 +687,7 @@
             <stat type="pAtkRange">500</stat>
         </stats>
     </item>
-    <item id="4825" name="Dark Elven Longbow" additionalName="Focus" type="Weapon">
+    <item id="4825" name="Dark Elven Longbow" type="Weapon">
         <!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 44. -->
         <set name="icon" val="icon.weapon_dark_elven_long_bow_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -720,7 +720,7 @@
             <stat type="pAtkRange">500</stat>
         </stats>
     </item>
-    <item id="4826" name="Dark Elven Longbow" additionalName="Haste" type="Weapon">
+    <item id="4826" name="Dark Elven Longbow" type="Weapon">
         <!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 7%. -->
         <set name="icon" val="icon.weapon_dark_elven_long_bow_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -753,7 +753,7 @@
             <stat type="pAtkRange">500</stat>
         </stats>
     </item>
-    <item id="4827" name="Dark Elven Longbow" additionalName="Critical Damage" type="Weapon">
+    <item id="4827" name="Dark Elven Longbow" type="Weapon">
         <!-- <Soul Crystal Enhancement>. P. Atk. + 139 during a Critical Attack. -->
         <set name="icon" val="icon.weapon_dark_elven_long_bow_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -784,7 +784,7 @@
             <stat type="pAtkRange">500</stat>
         </stats>
     </item>
-    <item id="4828" name="Bow of Peril" additionalName="Focus" type="Weapon">
+    <item id="4828" name="Bow of Peril" type="Weapon">
         <!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 40. -->
         <set name="icon" val="icon.weapon_hazard_bow_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -817,7 +817,7 @@
             <stat type="pAtkRange">500</stat>
         </stats>
     </item>
-    <item id="4829" name="Bow of Peril" additionalName="Haste" type="Weapon">
+    <item id="4829" name="Bow of Peril" type="Weapon">
         <!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 7%. -->
         <set name="icon" val="icon.weapon_hazard_bow_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -847,7 +847,7 @@
             <stat type="pAtkRange">500</stat>
         </stats>
     </item>
-    <item id="4830" name="Bow of Peril" additionalName="Critical Damage" type="Weapon">
+    <item id="4830" name="Bow of Peril" type="Weapon">
         <!-- <Soul Crystal Enhancement>. P. Atk. + 148 during a Critical Attack. -->
         <set name="icon" val="icon.weapon_hazard_bow_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -878,7 +878,7 @@
             <stat type="pAtkRange">500</stat>
         </stats>
     </item>
-    <item id="4834" name="Scythe" additionalName="Focus" type="Weapon">
+    <item id="4834" name="Scythe" type="Weapon">
         <!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 71. -->
         <set name="icon" val="icon.weapon_scythe_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -908,7 +908,7 @@
             <stat type="pAtkRange">80</stat>
         </stats>
     </item>
-    <item id="4835" name="Scythe" additionalName="Haste" type="Weapon">
+    <item id="4835" name="Scythe" type="Weapon">
         <!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 8%. -->
         <set name="icon" val="icon.weapon_scythe_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -939,7 +939,7 @@
             <stat type="pAtkRange">80</stat>
         </stats>
     </item>
-    <item id="4836" name="Scythe" additionalName="Critical Stun" type="Weapon">
+    <item id="4836" name="Scythe" type="Weapon">
         <!-- <Soul Crystal Enhancement>. Has about a 34% chance of casting Stun on the target during a Critical Attack. -->
         <set name="icon" val="icon.weapon_scythe_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -970,7 +970,7 @@
             <stat type="pAtkRange">80</stat>
         </stats>
     </item>
-    <item id="4837" name="Orcish Glaive" additionalName="Focus" type="Weapon">
+    <item id="4837" name="Orcish Glaive" type="Weapon">
         <!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 71. -->
         <set name="icon" val="icon.weapon_orcish_glaive_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -1000,7 +1000,7 @@
             <stat type="pAtkRange">80</stat>
         </stats>
     </item>
-    <item id="4838" name="Orcish Glaive" additionalName="Haste" type="Weapon">
+    <item id="4838" name="Orcish Glaive" type="Weapon">
         <!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 8%. -->
         <set name="icon" val="icon.weapon_orcish_glaive_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -1031,7 +1031,7 @@
             <stat type="pAtkRange">80</stat>
         </stats>
     </item>
-    <item id="4839" name="Orcish Glaive" additionalName="Critical Stun" type="Weapon">
+    <item id="4839" name="Orcish Glaive" type="Weapon">
         <!-- <Soul Crystal Enhancement>. Has about a 34% chance of casting Stun on the target during a Critical Attack. -->
         <set name="icon" val="icon.weapon_orcish_glaive_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -1062,7 +1062,7 @@
             <stat type="pAtkRange">80</stat>
         </stats>
     </item>
-    <item id="4840" name="Body Slasher" additionalName="Focus" type="Weapon">
+    <item id="4840" name="Body Slasher" type="Weapon">
         <!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 71. -->
         <set name="icon" val="icon.weapon_body_slasher_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -1093,7 +1093,7 @@
             <stat type="pAtkRange">80</stat>
         </stats>
     </item>
-    <item id="4841" name="Body Slasher" additionalName="Haste" type="Weapon">
+    <item id="4841" name="Body Slasher" type="Weapon">
         <!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 8%. -->
         <set name="icon" val="icon.weapon_body_slasher_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -1124,7 +1124,7 @@
             <stat type="pAtkRange">80</stat>
         </stats>
     </item>
-    <item id="4842" name="Body Slasher" additionalName="Critical Stun" type="Weapon">
+    <item id="4842" name="Body Slasher" type="Weapon">
         <!-- <Soul Crystal Enhancement>. Has about a 34% chance of casting Stun on the target during a Critical Attack. -->
         <set name="icon" val="icon.weapon_body_slasher_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -1154,7 +1154,7 @@
             <stat type="pAtkRange">80</stat>
         </stats>
     </item>
-    <item id="4843" name="Bec de Corbin" additionalName="Focus" type="Weapon">
+    <item id="4843" name="Bec de Corbin" type="Weapon">
         <!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 71. -->
         <set name="icon" val="icon.weapon_bech_de_corbin_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -1185,7 +1185,7 @@
             <stat type="pAtkRange">80</stat>
         </stats>
     </item>
-    <item id="4844" name="Bec de Corbin" additionalName="Haste" type="Weapon">
+    <item id="4844" name="Bec de Corbin" type="Weapon">
         <!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 8%. -->
         <set name="icon" val="icon.weapon_bech_de_corbin_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -1216,7 +1216,7 @@
             <stat type="pAtkRange">80</stat>
         </stats>
     </item>
-    <item id="4845" name="Bec de Corbin" additionalName="Critical Stun" type="Weapon">
+    <item id="4845" name="Bec de Corbin" type="Weapon">
         <!-- <Soul Crystal Enhancement>. Has about a 32% chance of casting Stun on the target during a Critical Attack. -->
         <set name="icon" val="icon.weapon_bech_de_corbin_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -1247,7 +1247,7 @@
             <stat type="pAtkRange">80</stat>
         </stats>
     </item>
-    <item id="4846" name="scorpion" additionalName="Focus" type="Weapon">
+    <item id="4846" name="scorpion" type="Weapon">
         <!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 65. -->
         <set name="icon" val="icon.weapon_scorpion_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -1277,7 +1277,7 @@
             <stat type="pAtkRange">80</stat>
         </stats>
     </item>
-    <item id="4847" name="scorpion" additionalName="Haste" type="Weapon">
+    <item id="4847" name="scorpion" type="Weapon">
         <!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 8%. -->
         <set name="icon" val="icon.weapon_scorpion_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -1308,7 +1308,7 @@
             <stat type="pAtkRange">80</stat>
         </stats>
     </item>
-    <item id="4848" name="scorpion" additionalName="Critical Stun" type="Weapon">
+    <item id="4848" name="scorpion" type="Weapon">
         <!-- <Soul Crystal Enhancement>. Has about a 31% chance of casting Stun on the target during a Critical Attack. -->
         <set name="icon" val="icon.weapon_scorpion_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -1339,7 +1339,7 @@
             <stat type="pAtkRange">80</stat>
         </stats>
     </item>
-    <item id="4849" name="Widow Maker" additionalName="Focus" type="Weapon">
+    <item id="4849" name="Widow Maker" type="Weapon">
         <!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 65. -->
         <set name="icon" val="icon.weapon_widow_maker_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -1370,7 +1370,7 @@
             <stat type="pAtkRange">80</stat>
         </stats>
     </item>
-    <item id="4850" name="Widow Maker" additionalName="Haste" type="Weapon">
+    <item id="4850" name="Widow Maker" type="Weapon">
         <!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 8%. -->
         <set name="icon" val="icon.weapon_widow_maker_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -1401,7 +1401,7 @@
             <stat type="pAtkRange">80</stat>
         </stats>
     </item>
-    <item id="4851" name="Widow Maker" additionalName="Critical Stun" type="Weapon">
+    <item id="4851" name="Widow Maker" type="Weapon">
         <!-- <Soul Crystal Enhancement>. Has about a 31% chance of casting Stun on the target during a Critical Attack. -->
         <set name="icon" val="icon.weapon_widow_maker_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -1431,7 +1431,7 @@
             <stat type="pAtkRange">80</stat>
         </stats>
     </item>
-    <item id="4852" name="Orcish Poleaxe" additionalName="Focus" type="Weapon">
+    <item id="4852" name="Orcish Poleaxe" type="Weapon">
         <!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 32. -->
         <set name="icon" val="icon.weapon_orcish_poleaxe_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -1462,7 +1462,7 @@
             <stat type="pAtkRange">80</stat>
         </stats>
     </item>
-    <item id="4853" name="Orcish Poleaxe" additionalName="Haste" type="Weapon">
+    <item id="4853" name="Orcish Poleaxe" type="Weapon">
         <!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 8%. -->
         <set name="icon" val="icon.weapon_orcish_poleaxe_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -1493,7 +1493,7 @@
             <stat type="pAtkRange">80</stat>
         </stats>
     </item>
-    <item id="4854" name="Orcish Poleaxe" additionalName="Critical Stun" type="Weapon">
+    <item id="4854" name="Orcish Poleaxe" type="Weapon">
         <!-- <Soul Crystal Enhancement>. Has about a 29% chance of casting Stun on the target during a Critical Attack. -->
         <set name="icon" val="icon.weapon_orcish_poleaxe_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -1523,7 +1523,7 @@
             <stat type="pAtkRange">80</stat>
         </stats>
     </item>
-    <item id="4855" name="Great Axe" additionalName="Focus" type="Weapon">
+    <item id="4855" name="Great Axe" type="Weapon">
         <!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 58. -->
         <set name="icon" val="icon.weapon_great_axe_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -1553,7 +1553,7 @@
             <stat type="pAtkRange">80</stat>
         </stats>
     </item>
-    <item id="4856" name="Great Axe" additionalName="Haste" type="Weapon">
+    <item id="4856" name="Great Axe" type="Weapon">
         <!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 7%. -->
         <set name="icon" val="icon.weapon_great_axe_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -1584,7 +1584,7 @@
             <stat type="pAtkRange">80</stat>
         </stats>
     </item>
-    <item id="4857" name="Great Axe" additionalName="Critical Stun" type="Weapon">
+    <item id="4857" name="Great Axe" type="Weapon">
         <!-- <Soul Crystal Enhancement>. Has about a 27% chance of casting Stun on the target during a Critical Attack. -->
         <set name="icon" val="icon.weapon_great_axe_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -1615,7 +1615,7 @@
             <stat type="pAtkRange">80</stat>
         </stats>
     </item>
-    <item id="4858" name="Lance" additionalName="Focus" type="Weapon">
+    <item id="4858" name="Lance" type="Weapon">
         <!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 58. -->
         <set name="icon" val="icon.weapon_lancia_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -1645,7 +1645,7 @@
             <stat type="pAtkRange">80</stat>
         </stats>
     </item>
-    <item id="4859" name="Lance" additionalName="Haste" type="Weapon">
+    <item id="4859" name="Lance" type="Weapon">
         <!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 7%. -->
         <set name="icon" val="icon.weapon_lancia_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -1676,7 +1676,7 @@
             <stat type="pAtkRange">80</stat>
         </stats>
     </item>
-    <item id="4860" name="Lance" additionalName="Critical Stun" type="Weapon">
+    <item id="4860" name="Lance" type="Weapon">
         <!-- <Soul Crystal Enhancement>. Has about a 25% chance of casting Stun on the target during a Critical Attack. -->
         <set name="icon" val="icon.weapon_lancia_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -1707,7 +1707,7 @@
             <stat type="pAtkRange">80</stat>
         </stats>
     </item>
-    <item id="4864" name="Heavy Doom Hammer" additionalName="Empower" type="Weapon">
+    <item id="4864" name="Heavy Doom Hammer" type="Weapon">
         <!-- <Soul Crystal Enhancement>. M. Atk. + 50. -->
         <set name="icon" val="icon.weapon_heavy_doom_hammer_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -1738,7 +1738,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="4865" name="Heavy Doom Hammer" additionalName="Acumen" type="Weapon">
+    <item id="4865" name="Heavy Doom Hammer" type="Weapon">
         <!-- <Soul Crystal Enhancement>. Increases Casting Spd. by 12%. -->
         <set name="icon" val="icon.weapon_heavy_doom_hammer_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -1769,7 +1769,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="4866" name="Heavy Doom Hammer" additionalName="Magic Regeneration" type="Weapon">
+    <item id="4866" name="Heavy Doom Hammer" type="Weapon">
         <!-- <Soul Crystal Enhancement>. Increases MP Recovery Bonus by 16%. -->
         <set name="icon" val="icon.weapon_heavy_doom_hammer_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -1800,7 +1800,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="4867" name="Crystal Staff" additionalName="Empower" type="Weapon">
+    <item id="4867" name="Crystal Staff" type="Weapon">
         <!-- <Soul Crystal Enhancement>. M. Atk. + 50. -->
         <set name="icon" val="icon.weapon_crystal_staff_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -1831,7 +1831,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="4868" name="Crystal Staff" additionalName="Acumen" type="Weapon">
+    <item id="4868" name="Crystal Staff" type="Weapon">
         <!-- <Soul Crystal Enhancement>. Increases Casting Spd. by 12%. -->
         <set name="icon" val="icon.weapon_crystal_staff_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -1862,7 +1862,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="4869" name="Crystal Staff" additionalName="Magic Regeneration" type="Weapon">
+    <item id="4869" name="Crystal Staff" type="Weapon">
         <!-- <Soul Crystal Enhancement>. Increases MP Recovery Bonus by 16%. -->
         <set name="icon" val="icon.weapon_crystal_staff_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -1893,7 +1893,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="4870" name="Heavy Doom Axe" additionalName="Empower" type="Weapon">
+    <item id="4870" name="Heavy Doom Axe" type="Weapon">
         <!-- <Soul Crystal Enhancement>. M. Atk. + 50. -->
         <set name="icon" val="icon.weapon_heavy_doom_axe_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -1924,7 +1924,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="4871" name="Heavy Doom Axe" additionalName="Acumen" type="Weapon">
+    <item id="4871" name="Heavy Doom Axe" type="Weapon">
         <!-- <Soul Crystal Enhancement>. Increases Casting Spd. by 12%. -->
         <set name="icon" val="icon.weapon_heavy_doom_axe_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -1955,7 +1955,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="4872" name="Heavy Doom Axe" additionalName="Magic Regeneration" type="Weapon">
+    <item id="4872" name="Heavy Doom Axe" type="Weapon">
         <!-- <Soul Crystal Enhancement>. Increases MP Recovery Bonus by 16%. -->
         <set name="icon" val="icon.weapon_heavy_doom_axe_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -1986,7 +1986,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="4873" name="Cursed Staff" additionalName="Empower" type="Weapon">
+    <item id="4873" name="Cursed Staff" type="Weapon">
         <!-- <Soul Crystal Enhancement>. M. Atk. + 50. -->
         <set name="icon" val="icon.weapon_cursed_staff_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -2017,7 +2017,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="4874" name="Cursed Staff" additionalName="Acumen" type="Weapon">
+    <item id="4874" name="Cursed Staff" type="Weapon">
         <!-- <Soul Crystal Enhancement>. Increases Casting Spd. by 12%. -->
         <set name="icon" val="icon.weapon_cursed_staff_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -2048,7 +2048,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="4875" name="Cursed Staff" additionalName="Magic Regeneration" type="Weapon">
+    <item id="4875" name="Cursed Staff" type="Weapon">
         <!-- <Soul Crystal Enhancement>. Increases MP Recovery Bonus by 16%. -->
         <set name="icon" val="icon.weapon_cursed_staff_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -2079,7 +2079,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="4876" name="Paradia Staff" additionalName="Empower" type="Weapon">
+    <item id="4876" name="Paradia Staff" type="Weapon">
         <!-- <Soul Crystal Enhancement>. M. Atk. + 50. -->
         <set name="icon" val="icon.weapon_paradia_staff_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -2110,7 +2110,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="4877" name="Paradia Staff" additionalName="Acumen" type="Weapon">
+    <item id="4877" name="Paradia Staff" type="Weapon">
         <!-- <Soul Crystal Enhancement>. Increases Casting Spd. by 12%. -->
         <set name="icon" val="icon.weapon_paradia_staff_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -2141,7 +2141,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="4878" name="Paradia Staff" additionalName="Magic Regeneration" type="Weapon">
+    <item id="4878" name="Paradia Staff" type="Weapon">
         <!-- <Soul Crystal Enhancement>. Increases MP Recovery Bonus by 16%. -->
         <set name="icon" val="icon.weapon_paradia_staff_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -2172,7 +2172,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="4879" name="Pa'agrio Hammer" additionalName="Empower" type="Weapon">
+    <item id="4879" name="Pa'agrio Hammer" type="Weapon">
         <!-- <Soul Crystal Enhancement>. M. Atk. + 50. -->
         <set name="icon" val="icon.weapon_paagrio_hammer_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -2203,7 +2203,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="4880" name="Pa'agrio Hammer" additionalName="Acumen" type="Weapon">
+    <item id="4880" name="Pa'agrio Hammer" type="Weapon">
         <!-- <Soul Crystal Enhancement>. Increases Casting Spd. by 12%. -->
         <set name="icon" val="icon.weapon_paagrio_hammer_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -2234,7 +2234,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="4881" name="Pa'agrio Hammer" additionalName="Magic Regeneration" type="Weapon">
+    <item id="4881" name="Pa'agrio Hammer" type="Weapon">
         <!-- <Soul Crystal Enhancement>. Increases MP Recovery Bonus by 16%. -->
         <set name="icon" val="icon.weapon_paagrio_hammer_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -2265,7 +2265,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="4882" name="Sage's Staff" additionalName="Empower" type="Weapon">
+    <item id="4882" name="Sage's Staff" type="Weapon">
         <!-- <Soul Crystal Enhancement>. M. Atk. + 50. -->
         <set name="icon" val="icon.weapon_sages_staff_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -2296,7 +2296,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="4883" name="Sage's Staff" additionalName="Acumen" type="Weapon">
+    <item id="4883" name="Sage's Staff" type="Weapon">
         <!-- <Soul Crystal Enhancement>. Increases Casting Spd. by 12%. -->
         <set name="icon" val="icon.weapon_sages_staff_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -2327,7 +2327,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="4884" name="Sage's Staff" additionalName="Magic Regeneration" type="Weapon">
+    <item id="4884" name="Sage's Staff" type="Weapon">
         <!-- <Soul Crystal Enhancement>. Increases MP Recovery Bonus by 16%. -->
         <set name="icon" val="icon.weapon_sages_staff_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -2358,7 +2358,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="4885" name="Pa'agrio Axe" additionalName="Empower" type="Weapon">
+    <item id="4885" name="Pa'agrio Axe" type="Weapon">
         <!-- <Soul Crystal Enhancement>. M. Atk. + 50. -->
         <set name="icon" val="icon.weapon_paagrio_axe_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -2389,7 +2389,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="4886" name="Pa'agrio Axe" additionalName="Acumen" type="Weapon">
+    <item id="4886" name="Pa'agrio Axe" type="Weapon">
         <!-- <Soul Crystal Enhancement>. Increases Casting Spd. by 12%. -->
         <set name="icon" val="icon.weapon_paagrio_axe_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -2420,7 +2420,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="4887" name="Pa'agrio Axe" additionalName="Magic Regeneration" type="Weapon">
+    <item id="4887" name="Pa'agrio Axe" type="Weapon">
         <!-- <Soul Crystal Enhancement>. Increases MP Recovery Bonus by 16%. -->
         <set name="icon" val="icon.weapon_paagrio_axe_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -2451,7 +2451,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="4888" name="Deadman's Staff" additionalName="Empower" type="Weapon">
+    <item id="4888" name="Deadman's Staff" type="Weapon">
         <!-- <Soul Crystal Enhancement>. M. Atk. + 50. -->
         <set name="icon" val="icon.weapon_deadmans_staff_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -2482,7 +2482,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="4889" name="Deadman's Staff" additionalName="Acumen" type="Weapon">
+    <item id="4889" name="Deadman's Staff" type="Weapon">
         <!-- <Soul Crystal Enhancement>. Increases Casting Spd. by 12%. -->
         <set name="icon" val="icon.weapon_deadmans_staff_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -2513,7 +2513,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="4890" name="Deadman's Staff" additionalName="Magic Regeneration" type="Weapon">
+    <item id="4890" name="Deadman's Staff" type="Weapon">
         <!-- <Soul Crystal Enhancement>. Increases MP Recovery Bonus by 16%. -->
         <set name="icon" val="icon.weapon_deadmans_staff_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -2544,7 +2544,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="4891" name="Ghoul's Staff" additionalName="Empower" type="Weapon">
+    <item id="4891" name="Ghoul's Staff" type="Weapon">
         <!-- <Soul Crystal Enhancement>. M. Atk. + 50. -->
         <set name="icon" val="icon.weapon_ghouls_staff_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -2575,7 +2575,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="4892" name="Ghoul's Staff" additionalName="Acumen" type="Weapon">
+    <item id="4892" name="Ghoul's Staff" type="Weapon">
         <!-- <Soul Crystal Enhancement>. Increases Casting Spd. by 12%. -->
         <set name="icon" val="icon.weapon_ghouls_staff_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -2606,7 +2606,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="4893" name="Ghoul's Staff" additionalName="Magic Regeneration" type="Weapon">
+    <item id="4893" name="Ghoul's Staff" type="Weapon">
         <!-- <Soul Crystal Enhancement>. Increases MP Recovery Bonus by 16%. -->
         <set name="icon" val="icon.weapon_ghouls_staff_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -2637,7 +2637,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="4894" name="Demon's Staff" additionalName="Empower" type="Weapon">
+    <item id="4894" name="Demon's Staff" type="Weapon">
         <!-- <Soul Crystal Enhancement>. M. Atk. + 50. -->
         <set name="icon" val="icon.weapon_demons_staff_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -2668,7 +2668,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="4895" name="Demon's Staff" additionalName="Acumen" type="Weapon">
+    <item id="4895" name="Demon's Staff" type="Weapon">
         <!-- <Soul Crystal Enhancement>. Increases Casting Spd. by 12%. -->
         <set name="icon" val="icon.weapon_demons_staff_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -2699,7 +2699,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="4896" name="Demon's Staff" additionalName="Magic Regeneration" type="Weapon">
+    <item id="4896" name="Demon's Staff" type="Weapon">
         <!-- <Soul Crystal Enhancement>. Increases MP Recovery Bonus by 16%. -->
         <set name="icon" val="icon.weapon_demons_staff_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -2730,7 +2730,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="4897" name="Spirit's Staff" additionalName="Empower" type="Weapon">
+    <item id="4897" name="Spirit's Staff" type="Weapon">
         <!-- <Soul Crystal Enhancement>. M. Atk. + 96. -->
         <set name="icon" val="icon.weapon_sprites_staff_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -2761,7 +2761,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="4898" name="Spirit's Staff" additionalName="Acumen" type="Weapon">
+    <item id="4898" name="Spirit's Staff" type="Weapon">
         <!-- <Soul Crystal Enhancement>. Increases Casting Spd. by 12%. -->
         <set name="icon" val="icon.weapon_sprites_staff_i01"/>
         <set name="default_action" val="EQUIP"/>
@@ -2792,7 +2792,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </item>
-    <item id="4899" name="Spirit's Staff" additionalName="Magic Regeneration" type="Weapon">
+    <item id="4899" name="Spirit's Staff" type="Weapon">
         <!-- <Soul Crystal Enhancement>. Increases MP Recovery Bonus by 14%. -->
         <set name="icon" val="icon.weapon_sprites_staff_i01"/>
         <set name="default_action" val="EQUIP"/>

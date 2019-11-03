@@ -133,7 +133,7 @@
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="71011" name="Halloween Candy" additionalName="Event" type="EtcItem">
+    <item id="71011" name="Halloween Candy" type="EtcItem">
         <!-- Sweet candy from the Halloween Gift. Take it to Rico to exchange for a cosmetic item in the style of Halloween. Will be deleted after the event. -->
         <set name="icon" val="BranchSys.br_hallowinday_candy_i00"/>
         <set name="weight" val="120"/>
@@ -172,7 +172,7 @@
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="71015" name="Agathion Bracelet - Lv. 1 Box" additionalName="7-day" type="EtcItem">
+    <item id="71015" name="Agathion Bracelet - Lv. 1 Box" type="EtcItem">
         <!-- Double-click to obtain Agathion Bracelet - Lv. 1 (7-day). Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.etc_pi_gift_box_i00"/>
         <set name="default_action" val="PEEL"/>
@@ -185,7 +185,7 @@
         <set name="is_stackable" val="true"/>
         <set name="time" val="10080"/>
     </item>
-    <item id="71016" name="Returning Hero's Reward" additionalName="Event" type="EtcItem">
+    <item id="71016" name="Returning Hero's Reward" type="EtcItem">
         <!-- Double-click to obtain Hero's Heavy Armor/Light Armor/Robe Set Box (30-day)/ Hero's Shining Weapon Set (30-day)/ Expertise Rune (C-grade)/ Party Support Cube - Lv. 1, Returning Hero's Gift - Lv. 30 and Temporary Hero Weapon Ticket - Lv. 54. Cannot be exchanged, dropped or sold. Can be stored in a private warehouse. -->
         <set name="icon" val="BranchSys.icon.br_gold_box_i00"/>
         <set name="default_action" val="PEEL"/>
@@ -197,7 +197,7 @@
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="71017" name="Hero's Heavy Armor Set Box" additionalName="Event" type="EtcItem">
+    <item id="71017" name="Hero's Heavy Armor Set Box" type="EtcItem">
         <!-- You can obtain Hero's Shining Heavy Armor Set (30-day). Cannot be exchanged, dropped or sold. Can be stored in a private warehouse. -->
         <set name="icon" val="BranchSys.icon.br_gold_box_i00"/>
         <set name="default_action" val="PEEL"/>
@@ -209,7 +209,7 @@
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="71018" name="Hero's Light Armor Set Box" additionalName="Event" type="EtcItem">
+    <item id="71018" name="Hero's Light Armor Set Box" type="EtcItem">
         <!-- You can obtain Hero's Shining Light Armor Set (30-day). Cannot be exchanged, dropped or sold. Can be stored in a private warehouse. -->
         <set name="icon" val="BranchSys.icon.br_gold_box_i00"/>
         <set name="default_action" val="PEEL"/>
@@ -221,7 +221,7 @@
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="71019" name="Hero's Robe Set Box" additionalName="Event" type="EtcItem">
+    <item id="71019" name="Hero's Robe Set Box" type="EtcItem">
         <!-- You can obtain Hero's Shining Robe Set (30-day). Cannot be exchanged, dropped or sold. Can be stored in a private warehouse. -->
         <set name="icon" val="BranchSys.icon.br_gold_box_i00"/>
         <set name="default_action" val="PEEL"/>
@@ -233,7 +233,7 @@
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="71020" name="Newbie Gift" additionalName="Event" type="EtcItem">
+    <item id="71020" name="Newbie Gift" type="EtcItem">
         <!-- Double-click to obtain the following items: Hero's Shining Heavy Armor/Light Armor/Robe Set Boxes (30-day)/ Hero's Shining Dual Sword/Staff/Bow/Dagger/Spear (30-day)/ Expertise Rune (C-grade) (30-day), Newbie Gift - Lv. 10, Transformation Support Cube (7-day) and Temporary Hero's Weapon Coupon - Lv. 54. Cannot be exchanged, dropped, sold or shared within account. Can be stored in a private warehouse. -->
         <set name="icon" val="BranchSys.icon.br_gold_box_i00"/>
         <set name="default_action" val="PEEL"/>
@@ -364,7 +364,7 @@
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="71036" name="Christmas Talisman: P. Skill Critical Damage" additionalName="1-hour" type="Armor">
+    <item id="71036" name="Christmas Talisman: P. Skill Critical Damage" type="Armor">
         <!-- Event item. P. Skill Critical Damage +2% when equipped. Effect does not stack with additional Talismans of the same type. -->
         <set name="icon" val="icon.etc_xmas_talisman_i00"/>
         <set name="default_action" val="EQUIP"/>
@@ -378,7 +378,7 @@
         <set name="is_depositable" val="false"/>
         <set name="is_sellable" val="false"/>
     </item>
-    <item id="71037" name="Christmas Talisman: M. Skill Critical Damage" additionalName="1-hour" type="Armor">
+    <item id="71037" name="Christmas Talisman: M. Skill Critical Damage" type="Armor">
         <!-- Event item. M. Skill Critical Damage +2% when equipped. Effect does not stack with additional Talismans of the same type. -->
         <set name="icon" val="icon.etc_xmas_talisman_i00"/>
         <set name="default_action" val="EQUIP"/>
@@ -390,7 +390,7 @@
         <set name="is_depositable" val="false"/>
         <set name="is_sellable" val="false"/>
     </item>
-    <item id="71038" name="Christmas Talisman: Ultimate Defense" additionalName="1-hour" type="Armor">
+    <item id="71038" name="Christmas Talisman: Ultimate Defense" type="Armor">
         <!-- Event item. For 15 sec., P. Def. +1800 and M. Def. +1620. Cooldown is 10 min. Effect does not stack with additional Talismans of the same type. -->
         <set name="icon" val="icon.etc_xmas_talisman_i00"/>
         <set name="default_action" val="EQUIP"/>
@@ -404,7 +404,7 @@
         <set name="is_depositable" val="false"/>
         <set name="is_sellable" val="false"/>
     </item>
-    <item id="71039" name="Christmas Talisman: Debuff Resistance" additionalName="1-hour" type="Armor">
+    <item id="71039" name="Christmas Talisman: Debuff Resistance" type="Armor">
         <!-- Event item. For 15 sec., defends against debuffs 5 times. Cooldown is 10 min. Effect does not stack with additional Talismans of the same type. -->
         <set name="icon" val="icon.etc_xmas_talisman_i00"/>
         <set name="default_action" val="EQUIP"/>
@@ -418,7 +418,7 @@
         <set name="is_depositable" val="false"/>
         <set name="is_sellable" val="false"/>
     </item>
-    <item id="71040" name="Christmas Talisman: P. Atk." additionalName="1-hour" type="Armor">
+    <item id="71040" name="Christmas Talisman: P. Atk." type="Armor">
         <!-- Event item. P. Atk. +5% when equipped. Effect does not stack with additional Talismans of the same type. -->
         <set name="icon" val="icon.etc_xmas_talisman_i00"/>
         <set name="default_action" val="EQUIP"/>
@@ -432,7 +432,7 @@
         <set name="is_depositable" val="false"/>
         <set name="is_sellable" val="false"/>
     </item>
-    <item id="71041" name="Christmas Talisman: M. Atk." additionalName="1-hour" type="Armor">
+    <item id="71041" name="Christmas Talisman: M. Atk." type="Armor">
         <!-- Event item. M. Atk. +5% when equipped. Effect does not stack with additional Talismans of the same type. -->
         <set name="icon" val="icon.etc_xmas_talisman_i00"/>
         <set name="default_action" val="EQUIP"/>
@@ -446,7 +446,7 @@
         <set name="is_depositable" val="false"/>
         <set name="is_sellable" val="false"/>
     </item>
-    <item id="71042" name="Christmas Talisman: P. Def." additionalName="1-hour" type="Armor">
+    <item id="71042" name="Christmas Talisman: P. Def." type="Armor">
         <!-- Event item. P. Def. +6% when equipped. Effect does not stack with additional Talismans of the same type. -->
         <set name="icon" val="icon.etc_xmas_talisman_i00"/>
         <set name="default_action" val="EQUIP"/>
@@ -460,7 +460,7 @@
         <set name="is_depositable" val="false"/>
         <set name="is_sellable" val="false"/>
     </item>
-    <item id="71043" name="Christmas Talisman: M. Def." additionalName="1-hour" type="Armor">
+    <item id="71043" name="Christmas Talisman: M. Def." type="Armor">
         <!-- Event item. M. Def. +6% when equipped. Effect does not stack with additional Talismans of the same type. -->
         <set name="icon" val="icon.etc_xmas_talisman_i00"/>
         <set name="default_action" val="EQUIP"/>
@@ -474,7 +474,7 @@
         <set name="is_depositable" val="false"/>
         <set name="is_sellable" val="false"/>
     </item>
-    <item id="71044" name="Christmas Talisman Pack" additionalName="P. Skill Critical Damage" type="EtcItem">
+    <item id="71044" name="Christmas Talisman Pack" type="EtcItem">
         <!-- Double-click to obtain a Christmas Talisman: P. Skill Critical Damage (1-hour). Will be deleted after the event. -->
         <set name="icon" val="icon.etc_box_of_adventure_4_i00"/>
         <set name="default_action" val="PEEL"/>
@@ -483,7 +483,7 @@
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="71045" name="Christmas Talisman Pack" additionalName="M. Skill Critical Damage" type="EtcItem">
+    <item id="71045" name="Christmas Talisman Pack" type="EtcItem">
         <!-- Double-click to obtain a Christmas Talisman: M. Skill Critical Damage (1-hour). Will be deleted after the event. -->
         <set name="icon" val="icon.etc_box_of_adventure_4_i00"/>
         <set name="default_action" val="PEEL"/>
@@ -492,7 +492,7 @@
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="71046" name="Christmas Talisman Pack" additionalName="Ultimate Defense" type="EtcItem">
+    <item id="71046" name="Christmas Talisman Pack" type="EtcItem">
         <!-- Double-click to obtain a Christmas Talisman: Ultimate Defense (1-hour). Will be deleted after the event. -->
         <set name="icon" val="icon.etc_box_of_adventure_4_i00"/>
         <set name="default_action" val="PEEL"/>
@@ -501,7 +501,7 @@
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="71047" name="Christmas Talisman Pack" additionalName="Debuff Resistance" type="EtcItem">
+    <item id="71047" name="Christmas Talisman Pack" type="EtcItem">
         <!-- Double-click to obtain a Christmas Talisman: Debuff Resistance (1-hour). Will be deleted after the event. -->
         <set name="icon" val="icon.etc_box_of_adventure_4_i00"/>
         <set name="default_action" val="PEEL"/>
@@ -510,7 +510,7 @@
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="71048" name="Christmas Talisman Pack" additionalName="P. Atk." type="EtcItem">
+    <item id="71048" name="Christmas Talisman Pack" type="EtcItem">
         <!-- Double-click to obtain a Christmas Talisman: P. Atk. (1-hour). Will be deleted after the event. -->
         <set name="icon" val="icon.etc_box_of_adventure_4_i00"/>
         <set name="default_action" val="PEEL"/>
@@ -519,7 +519,7 @@
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="71049" name="Christmas Talisman Pack" additionalName="M. Atk." type="EtcItem">
+    <item id="71049" name="Christmas Talisman Pack" type="EtcItem">
         <!-- Double-click to obtain a Christmas Talisman: M. Atk. (1-hour). Will be deleted after the event. -->
         <set name="icon" val="icon.etc_box_of_adventure_4_i00"/>
         <set name="default_action" val="PEEL"/>
@@ -528,7 +528,7 @@
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="71050" name="Christmas Talisman Pack" additionalName="P. Def." type="EtcItem">
+    <item id="71050" name="Christmas Talisman Pack" type="EtcItem">
         <!-- Double-click to obtain a Christmas Talisman: P. Def. (1-hour). Will be deleted after the event. -->
         <set name="icon" val="icon.etc_box_of_adventure_4_i00"/>
         <set name="default_action" val="PEEL"/>
@@ -537,7 +537,7 @@
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="71051" name="Christmas Talisman Pack" additionalName="M. Def." type="EtcItem">
+    <item id="71051" name="Christmas Talisman Pack" type="EtcItem">
         <!-- Double-click to obtain a Christmas Talisman: M. Def. (1-hour). Will be deleted after the event. -->
         <set name="icon" val="icon.etc_box_of_adventure_4_i00"/>
         <set name="default_action" val="PEEL"/>
@@ -546,7 +546,7 @@
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="71052" name="Transformation Sealbook: Part-time Seller" additionalName="One-eyed ParaPara Cat" type="EtcItem">
+    <item id="71052" name="Transformation Sealbook: Part-time Seller" type="EtcItem">
         <!-- Sealbook for learning the skill of transforming yourself into an One-eyed ParaPara Cat. -->
         <set name="icon" val="icon.etc_transform_warrior_i00"/>
         <set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
@@ -554,7 +554,7 @@
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="71053" name="Transformation Sealbook: Part-time Seller" additionalName="Smiling ParaPara Cat" type="EtcItem">
+    <item id="71053" name="Transformation Sealbook: Part-time Seller" type="EtcItem">
         <!-- Sealbook for learning the skill of transforming yourself into a Smiling ParaPara Cat. -->
         <set name="icon" val="icon.etc_transform_warrior_i00"/>
         <set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
@@ -562,7 +562,7 @@
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="71054" name="Transformation Sealbook: Part-time Seller" additionalName="Charming ParaPara Cat" type="EtcItem">
+    <item id="71054" name="Transformation Sealbook: Part-time Seller" type="EtcItem">
         <!-- Sealbook for learning the skill of transforming yourself into a Charming ParaPara Cat. -->
         <set name="icon" val="icon.etc_transform_warrior_i00"/>
         <set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
@@ -570,7 +570,7 @@
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="71055" name="Transformation Sealbook: Part-time Seller" additionalName="Ferocious ParaPara Cat" type="EtcItem">
+    <item id="71055" name="Transformation Sealbook: Part-time Seller" type="EtcItem">
         <!-- Sealbook for learning the skill of transforming yourself into a Ferocious ParaPara Cat. -->
         <set name="icon" val="icon.etc_transform_warrior_i00"/>
         <set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
@@ -578,7 +578,7 @@
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="71056" name="Transformation Sealbook: Part-time Seller" additionalName="Merchant ParaPara Cat" type="EtcItem">
+    <item id="71056" name="Transformation Sealbook: Part-time Seller" type="EtcItem">
         <!-- Sealbook for learning the skill of transforming yourself into a Merchant ParaPara Cat. -->
         <set name="icon" val="icon.etc_transform_warrior_i00"/>
         <set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
@@ -649,7 +649,7 @@
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="71063" name="Agathion Rudolph" additionalName="7-day" type="Armor">
+    <item id="71063" name="Agathion Rudolph" type="Armor">
         <!-- A 7-days item. Equipping it in the Bracelet's main slot summons the Agathion Rudolph. Cannot be exchanged, dropped or sold. Can be stored in a private warehouse. <Special Ability>. - Rudolph's Blessing. - Rudolph's Blessed Resurrection. - Rudolph's Power. - Agathion Teleport (Aden/ Giran/ Dion/ Gludio) -->
         <set name="icon" val="BranchSys2.icon.event_lbracelet_rudolph"/>
         <set name="default_action" val="EQUIP"/>
@@ -664,7 +664,7 @@
         <set name="is_sellable" val="false"/>
         <set name="time" val="10080"/>
     </item>
-    <item id="71064" name="Agathion Rudolph" additionalName="30-day" type="Armor">
+    <item id="71064" name="Agathion Rudolph" type="Armor">
         <!-- A 30-days item. Equipping it in the Bracelet's main slot summons the Agathion Rudolph. Cannot be exchanged, dropped or sold. Can be stored in a private warehouse. <Special Ability>. - Rudolph's Blessing. - Rudolph's Blessed Resurrection. - Rudolph's Power. - Agathion Teleport (Aden/ Giran/ Dion/ Gludio) -->
         <set name="icon" val="BranchSys2.icon.event_lbracelet_rudolph"/>
         <set name="default_action" val="EQUIP"/>

@@ -897,7 +897,7 @@
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="70764" name="Scroll: Enchant Weapon (A-grade)" additionalName="Event" type="EtcItem">
+    <item id="70764" name="Scroll: Enchant Weapon (A-grade)" type="EtcItem">
         <!-- When enchanted, P. Atk. + 4 for A-grade one-handed swords, one-handed blunts, daggers, spears, and other weapons. P. Atk. + 5 for two-handed swords, two-handed blunts, dualswords, and two-handed fist weapons. P. Atk. + 8 for bows. M. Atk. + 3 for all weapons. Starting at + 4, P. Atk. / M. Atk. bonus double. Enchanting is safe up to + 3. Cannot be exchanged, dropped or sold in a private store. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.etc_scroll_of_enchant_weapon_i04"/>
         <set name="default_action" val="SKILL_REDUCE"/>
@@ -907,7 +907,7 @@
         <set name="is_depositable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="70765" name="Shining Pendant Polish" additionalName="Event" type="EtcItem">
+    <item id="70765" name="Shining Pendant Polish" type="EtcItem">
         <!-- Shiny Polish, enhancing pendants characteristics. Can be used on a pendant enchanted up to +8. If an enchantment is failed, the pendent doesn't disappear and has the previous level of enchantment. Cannot be exchanged, dropped or sold in a private store. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.bm_pendant_varnish_premium"/>
         <set name="default_action" val="SKILL_REDUCE"/>
@@ -917,7 +917,7 @@
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="70766" name="Improved Scroll: Enchant Weapon (A-grade)" additionalName="Event" type="EtcItem">
+    <item id="70766" name="Improved Scroll: Enchant Weapon (A-grade)" type="EtcItem">
         <!-- When enchanted, P. Atk. + 4 for A-grade one-handed swords, one-handed blunts, daggers, spears, and other weapons. P. Atk. + 5 for two-handed swords, two-handed blunts, dualswords, and two-handed fist weapons. P. Atk. + 8 for bows. M. Atk. + 3 for all weapons. Starting at + 4, P. Atk. / M. Atk. bonus double. Enchanting is safe up to + 3. Cannot be exchanged, dropped or sold in a private store. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.etc_blessed_scrl_of_ench_wp_a_i04"/>
         <set name="default_action" val="SKILL_REDUCE"/>
@@ -928,7 +928,7 @@
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="70767" name="Special Dragon's Fruit" additionalName="3 hours" type="EtcItem">
+    <item id="70767" name="Special Dragon's Fruit" type="EtcItem">
         <!-- For 20 minutes, P./M. Atk. +12%, P./M. Def. +15%, Max. HP/CP/MP +25%, HP/MP Recovery Bonus +30%. P./M. Critical Rate +10, P./M. Critical Damage +5%.Vampiric Rage Effect +5%. XP and SP gained through hunting +10%. Cooldown is 1 minute. Buff remains after death. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.bm_dragon_fruit"/>
         <set name="default_action" val="SKILL_REDUCE"/>
@@ -938,7 +938,7 @@
         <set name="is_sellable" val="false"/>
         <set name="time" val="180"/>
     </item>
-    <item id="70768" name="Vital Stone - Lv. 4" additionalName="7-day" type="Armor">
+    <item id="70768" name="Vital Stone - Lv. 4" type="Armor">
         <!-- XP/SP +8%, and allows to use Lv. 2 Vital Wind skill, while hunting. Effect does not stack with additional jewels of the same type. Cannot be exchanged, dropped, or sold in private store. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.etc_bm_jewel_vital"/>
         <set name="default_action" val="EQUIP"/>
@@ -951,7 +951,7 @@
         <set name="is_sellable" val="false"/>
         <set name="time" val="10080"/>
     </item>
-    <item id="70769" name="Ruby - Lv. 4" additionalName="7-day" type="Armor">
+    <item id="70769" name="Ruby - Lv. 4" type="Armor">
         <!-- When equipped, increases Soulshot, Blessed Soulshot and Beast Soulshot damage +8%. Effect does not stack with additional jewels of the same type. Cannot be exchanged, dropped, or sold in private store. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.etc_bm_jewel_ruby_i00"/>
         <set name="default_action" val="EQUIP"/>
@@ -964,7 +964,7 @@
         <set name="is_sellable" val="false"/>
         <set name="time" val="10080"/>
     </item>
-    <item id="70770" name="Sapphire - Lv. 4" additionalName="7-day" type="Armor">
+    <item id="70770" name="Sapphire - Lv. 4" type="Armor">
         <!-- When equipped, increases Spiritshot, Blessed Spiritshot and Beast Spiritshot damage +8%. Effect does not stack with additional jewels of the same type. Cannot be exchanged, dropped, or sold in private store. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.etc_bm_jewel_sapphire_i00"/>
         <set name="default_action" val="EQUIP"/>
@@ -977,7 +977,7 @@
         <set name="is_sellable" val="false"/>
         <set name="time" val="10080"/>
     </item>
-    <item id="70771" name="Fire Dragon Pendant - Lv. 4" additionalName="7-day" type="Armor">
+    <item id="70771" name="Fire Dragon Pendant - Lv. 4" type="Armor">
         <!-- A Pendant that carries sealed energy of a Fire Dragon. Its effect is the same as from the enchanted to +10 Fire Dragon Pendant - Lv. 5. Cannot be exchanged, dropped or sold. Can be stored in a private warehouse. -->
         <set name="icon" val="BranchIcon.Icon.bm_pendant_pve"/>
         <set name="default_action" val="EQUIP"/>
@@ -992,7 +992,7 @@
             <stat type="pDef">28</stat>
         </stats>
     </item>
-    <item id="70772" name="Water Dragon Pendant - Lv. 4" additionalName="7-day" type="Armor">
+    <item id="70772" name="Water Dragon Pendant - Lv. 4" type="Armor">
         <!-- A Pendant that carries sealed energy of a Water Dragon. Its effect is the same as from the enchanted to +10 Water Dragon Pendant - Lv. 5. Cannot be exchanged, dropped or sold. Can be stored in a private warehouse. -->
         <set name="icon" val="BranchIcon.Icon.bm_pendant_pvp_blue"/>
         <set name="default_action" val="EQUIP"/>
@@ -1007,7 +1007,7 @@
             <stat type="pDef">28</stat>
         </stats>
     </item>
-    <item id="70773" name="Refined Zaken's Earring" additionalName="15-day" type="Armor">
+    <item id="70773" name="Refined Zaken's Earring" type="Armor">
         <!-- MP +34, Bleed Resistance and Bleed Atk. Rate +20%, Stun Resistance and Stun Atk. Rate +15%, Mental Resistance and Atk. Rate +15% Healing Power +10%, HP Recovery Bonus +20%. Vampiric Rage Effect +8%. The effect doesn't stack if two identical earrings are worn. Cannot be exchanged, dropped, or sold in private store. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.accessory_earring_of_zaken_i00"/>
         <set name="default_action" val="EQUIP"/>
@@ -1027,7 +1027,7 @@
             <stat type="maxMp">34</stat>
         </stats>
     </item>
-    <item id="70774" name="Refined Baium's Ring" additionalName="15-day" type="Armor">
+    <item id="70774" name="Refined Baium's Ring" type="Armor">
         <!-- MP +21, Stun Resistance and Stun Atk. Rate +20%, Bleed Resistance and Bleed Atk. Rate +15%, Atk. Spd./Casting Spd. +4%, Skill Power +6%, P. Critical Damage +15%, M. Critical Damage +10%. The effect does not stack if two identical rings are equipped. Cannot be exchanged, dropped, or sold in private store. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.accessory_ring_of_baium_i03"/>
         <set name="default_action" val="EQUIP"/>
@@ -1047,7 +1047,7 @@
             <stat type="maxMp">21</stat>
         </stats>
     </item>
-    <item id="70775" name="Refined Queen Ant's Ring" additionalName="15-day" type="Armor">
+    <item id="70775" name="Refined Queen Ant's Ring" type="Armor">
         <!-- A 7-day item. MP +21, Poison Resistance and Atk. Rate +20%, P./M. Accuracy +3, P./M. Atk. +7%, P. Critical Damage +10%, M. Critical Damage +5%. The effect doesn't stack if two identical rings are worn. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.accessory_ring_of_queen_ant_i03"/>
         <set name="default_action" val="EQUIP"/>
@@ -1067,7 +1067,7 @@
             <stat type="maxMp">21</stat>
         </stats>
     </item>
-    <item id="70776" name="Refined Ring of Core" additionalName="15-day" type="Armor">
+    <item id="70776" name="Refined Ring of Core" type="Armor">
         <!-- When equipped, grants MP + +21, Mental Atk. Resistance/Chance +20%, P. / M. Evasion +3, decreases received damage by -6%. The effect does not stack, if two identical rings are equipped. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.accessory_ring_of_core_i03"/>
         <set name="default_action" val="EQUIP"/>
@@ -1088,7 +1088,7 @@
             <stat type="maxMp">21</stat>
         </stats>
     </item>
-    <item id="70777" name="Refined Orfen's Earring" additionalName="15-day" type="Armor">
+    <item id="70777" name="Refined Orfen's Earring" type="Armor">
         <!-- MP +31, Mental Attack Resistance/Chance +15%, Shackle Chance/Resistance +20%, Healing Effects +6%, MP cost for abilities -5%. Has a chance to transfer 3% of Damage dealt to the enemy into MP. The effect doesn't stack if two identical earrings are worn. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.accessory_earring_of_orfen_i03"/>
         <set name="default_action" val="EQUIP"/>
@@ -1169,7 +1169,7 @@
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="70785" name="Gift of the Brave Chicken - Heavy Armor" additionalName="Event" type="EtcItem">
+    <item id="70785" name="Gift of the Brave Chicken - Heavy Armor" type="EtcItem">
         <!-- Double-click to acquire Warrior's Shining Heavy Armor Set (30-day) / Warrior's Shining Weapon Set (30-day) / Expertise Rune (C-grade) (30-day), Gift for the Brave Chicken - Lv. 10, Transformation Support Cube (7-day). Cannot be exchanged, dropped or sold. Can be stored in a private warehouse. -->
         <set name="icon" val="BranchSys.icon.br_gold_box_i00"/>
         <set name="default_action" val="PEEL"/>
@@ -1180,7 +1180,7 @@
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="70786" name="Gift of the Brave Chicken - Light Armor" additionalName="Event" type="EtcItem">
+    <item id="70786" name="Gift of the Brave Chicken - Light Armor" type="EtcItem">
         <!-- Double-click to acquire Warrior's Shining Light Armor Set (30-day) / Warrior's Shining Weapon Set (30-day) / Expertise Rune (C-grade) (30-day), Gift for the Brave Chicken - Lv. 10, Transformation Support Cube (7-day). Cannot be exchanged, dropped or sold. Can be stored in a private warehouse. -->
         <set name="icon" val="BranchSys.icon.br_gold_box_i00"/>
         <set name="default_action" val="PEEL"/>
@@ -1191,7 +1191,7 @@
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="70787" name="Gift of the Brave Chicken - Magic Armor" additionalName="Event" type="EtcItem">
+    <item id="70787" name="Gift of the Brave Chicken - Magic Armor" type="EtcItem">
         <!-- Double-click to acquire Warrior's Shining Magic Armor Set (30-day) / Warrior's Shining Weapon Set (30-day) / Expertise Rune (C-grade) (30-day), Gift for the Brave Chicken - Lv. 10, Transformation Support Cube (7-day). Cannot be exchanged, dropped or sold. Can be stored in a private warehouse. -->
         <set name="icon" val="BranchSys.icon.br_gold_box_i00"/>
         <set name="default_action" val="PEEL"/>
@@ -1202,7 +1202,7 @@
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="70788" name="Gift of the Brave Chicken - Lv. 10" additionalName="Event" type="EtcItem">
+    <item id="70788" name="Gift of the Brave Chicken - Lv. 10" type="EtcItem">
         <!-- Double-click to acquire the following items: Chicken Amulet (5-day), Gift for the Brave Chicken - Lv. 20, Soulshot Support Cube (7-day), Spiritshot Support Cube (7-day). Can be used by characters of lvl 10 and above. Cannot be exchanged, dropped or sold. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.etc_pi_box_belief_pack"/>
         <set name="default_action" val="PEEL"/>
@@ -1213,7 +1213,7 @@
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="70789" name="Gift of the Brave Chicken - Lv. 20" additionalName="Event" type="EtcItem">
+    <item id="70789" name="Gift of the Brave Chicken - Lv. 20" type="EtcItem">
         <!-- Double-click to acquire the following items: Cadmus Transformation Bracelet - Prophet (30-day), Gift for the Brave Chicken - Lv. 30, Buff Support Cube (7-day). Can be used by characters of Lv. 20 and above. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.npoint_valakas_30day_box"/>
         <set name="default_action" val="PEEL"/>
@@ -1224,7 +1224,7 @@
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="70790" name="Gift of the Brave Chicken - Lv. 30" additionalName="Event" type="EtcItem">
+    <item id="70790" name="Gift of the Brave Chicken - Lv. 30" type="EtcItem">
         <!-- Double-click to acquire the following items: Rare Queen Ant's Ring / Orfen / Core (15-day), Gift for the Brave Chicken - Lv. 40, Potion Support Cube - Lv. 1 (7-day). Can be used by characters of lvl 30 and above. Cannot be exchanged, dropped or sold. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.npoint_earring_of_lind_30day_box"/>
         <set name="default_action" val="PEEL"/>
@@ -1235,7 +1235,7 @@
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="70791" name="Gift of the Brave Chicken - Lv. 40" additionalName="Event" type="EtcItem">
+    <item id="70791" name="Gift of the Brave Chicken - Lv. 40" type="EtcItem">
         <!-- Double-click to acquire the following items: Growth Amulet (3-day), Gift for the Brave Chicken - Lv. 50, Party Support Cube - Lv. 1 (7-day). Can be used by characters of lvl 40 and above. Cannot be exchanged, dropped or sold. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.npoint_antaras_30day_box"/>
         <set name="default_action" val="PEEL"/>
@@ -1246,7 +1246,7 @@
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="70792" name="Gift of the Brave Chicken - Lv. 50" additionalName="Event" type="EtcItem">
+    <item id="70792" name="Gift of the Brave Chicken - Lv. 50" type="EtcItem">
         <!-- Double-click to acquire the following items: 3 Golden Necklaces of Mermaid (7-day), 10 Rice Cake of Flaming Fighting Spirit (Event), Gift for the Brave Chicken - Lv. 54, Blessed Support Cube (7-day). Can be used by characters of lvl 50 and above. Cannot be exchanged, dropped or sold. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.npoint_tauti_30day_box"/>
         <set name="default_action" val="PEEL"/>
@@ -1257,7 +1257,7 @@
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="70793" name="Gift of the Brave Chicken - Lv. 54" additionalName="Event" type="EtcItem">
+    <item id="70793" name="Gift of the Brave Chicken - Lv. 54" type="EtcItem">
         <!-- Double-click to acquire the following items: Refined Rare Queen Ant's Ring / Orfen / Core (7-day), Gift for the Brave Chicken - Lv. 56, Party Support Cube - Lv. 2 (7-day). Can be used by characters of lvl 54 and above. Cannot be exchanged, dropped or sold. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.npoint_earthworm_30day_box"/>
         <set name="default_action" val="PEEL"/>
@@ -1268,7 +1268,7 @@
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="70794" name="Gift of the Brave Chicken - Lv. 56" additionalName="Event" type="EtcItem">
+    <item id="70794" name="Gift of the Brave Chicken - Lv. 56" type="EtcItem">
         <!-- Double-click to acquire the following items: Growth Amulet (3-day), Gift for the Brave Chicken - Lv. 56, Fishing Support Cube (7-day). Can be used by characters of lvl 56 and above. Cannot be exchanged, dropped or sold. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.etc_pi_box_love_pack"/>
         <set name="default_action" val="PEEL"/>
@@ -1279,7 +1279,7 @@
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="70795" name="Gift of the Brave Chicken - Lv. 58" additionalName="Event" type="EtcItem">
+    <item id="70795" name="Gift of the Brave Chicken - Lv. 58" type="EtcItem">
         <!-- Double-click to acquire the following items: Cadmus Transformation Bracelet - Prophet (30-day), Gift for the Brave Chicken - Lv. 60, Potion Support Cube - Lv. 2 (7-day). Can be used by characters of lvl 58 and above. Cannot be exchanged, dropped or sold. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.etc_pi_box_wish_pack"/>
         <set name="default_action" val="PEEL"/>
@@ -1290,7 +1290,7 @@
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="70796" name="Gift of the Brave Chicken - Lv. 60" additionalName="Event" type="EtcItem">
+    <item id="70796" name="Gift of the Brave Chicken - Lv. 60" type="EtcItem">
         <!-- Double-click to acquire the following items: Agathion - Cheerleader Meruril (30-day), Warrior's Bracelet (30-day), Talisman of the Brave Chicken (30-day), Progression Support Cube (7-day). Can be used by characters of lvl 60 and above. Cannot be exchanged, dropped or sold. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.etc_pi_box_joy_pack"/>
         <set name="default_action" val="PEEL"/>
@@ -1301,7 +1301,7 @@
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="70797" name="Talisman of the Brave Chicken" additionalName="30 days" type="Armor">
+    <item id="70797" name="Talisman of the Brave Chicken" type="Armor">
         <!-- P. Def. +18, M. Def. +9, P. / M. Evasion +1, Max HP/MP/CP +50, Atk. / Casting Speed +6, Speed +4. Cannot be exchanged, dropped or sold. Can be stored in a private warehouse. -->
         <set name="icon" val="icon.npoint_talisman_stat"/>
         <set name="default_action" val="EQUIP"/>
@@ -1312,7 +1312,7 @@
         <set name="is_depositable" val="false"/>
         <set name="is_sellable" val="false"/>
     </item>
-    <item id="70798" name="Transformation Scroll: Pirate" additionalName="Event" type="EtcItem">
+    <item id="70798" name="Transformation Scroll: Pirate" type="EtcItem">
         <!-- Makes you armor look like Pirate one. P. / M. Atk. +2%, P. / M. Def. +2%, Atk. Spd. +2%, Max. HP/MP +3%, Speed +3, P. / M. Accuracy +1, M. Critical Rate +1. Duration: 60 minutes. -->
         <set name="icon" val="icon.etc_charm_of_courage_i03"/>
         <set name="default_action" val="SKILL_REDUCE"/>
@@ -1322,7 +1322,7 @@
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="70799" name="Transformation Scroll: Dark Assassin" additionalName="Event" type="EtcItem">
+    <item id="70799" name="Transformation Scroll: Dark Assassin" type="EtcItem">
         <!-- Makes you armor look like a Dark Assassin one. P. / M. Atk. +2%, P. / M. Def. +2%, Atk. Spd. +3%, Max. HP/MP +5%, Speed +4, P. / M. Accuracy +1, M. Critical Rate +10. Duration: 60 minutes. -->
         <set name="icon" val="icon.etc_charm_of_courage_i05"/>
         <set name="default_action" val="SKILL_REDUCE"/>

@@ -61,7 +61,7 @@
             <skill id="39147" level="1"/> <!-- Talisman of Darkness Box -->
         </skills>
     </item>
-    <item id="49707" name="Talisman of Darkness - P. Atk." additionalName="1 hour" type="Armor">
+    <item id="49707" name="Talisman of Darkness - P. Atk." type="Armor">
         <!-- P. Atk. +5%. Effects from two such Talismans do not stack. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. Duration: 1 hour. -->
         <set name="icon" val="icon.etc_wise_man_stone_i04"/>
         <set name="default_action" val="EQUIP"/>
@@ -77,7 +77,7 @@
             <skill id="3272" level="3"/>
         </skills>
     </item>
-    <item id="49708" name="Talisman of Darkness - M. Atk." additionalName="1 hour" type="Armor">
+    <item id="49708" name="Talisman of Darkness - M. Atk." type="Armor">
         <!-- M. Atk. +5%. Effects from two such Talismans do not stack. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. Duration: 1 hour. -->
         <set name="icon" val="icon.etc_wise_man_stone_i04"/>
         <set name="default_action" val="EQUIP"/>
@@ -93,7 +93,7 @@
             <skill id="3276" level="3"/>
         </skills>
     </item>
-    <item id="49709" name="Talisman of Darkness - P. Def." additionalName="1 hour" type="Armor">
+    <item id="49709" name="Talisman of Darkness - P. Def." type="Armor">
         <!-- P. Def. +6%. Effects from two such Talismans do not stack. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. Duration: 1 hour. -->
         <set name="icon" val="icon.etc_wise_man_stone_i04"/>
         <set name="default_action" val="EQUIP"/>
@@ -109,7 +109,7 @@
             <skill id="3273" level="3"/>
         </skills>
     </item>
-    <item id="49710" name="Talisman of Darkness - M. Def." additionalName="1 hour" type="Armor">
+    <item id="49710" name="Talisman of Darkness - M. Def." type="Armor">
         <!-- M. Def. +6%. Effects from two such Talismans do not stack. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. Duration: 1 hour. -->
         <set name="icon" val="icon.etc_wise_man_stone_i04"/>
         <set name="default_action" val="EQUIP"/>
@@ -125,7 +125,7 @@
             <skill id="3277" level="3"/>
         </skills>
     </item>
-    <item id="49711" name="Talisman of Darkness - P. Skills Evasion" additionalName="1 hour" type="Armor">
+    <item id="49711" name="Talisman of Darkness - P. Skills Evasion" type="Armor">
         <!-- P. Skills Evasion +18%. Effects from two such Talismans do not stack. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. Duration: 1 hour. -->
         <set name="icon" val="icon.etc_wise_man_stone_i04"/>
         <set name="default_action" val="EQUIP"/>
@@ -141,7 +141,7 @@
             <skill id="3274" level="3"/>
         </skills>
     </item>
-    <item id="49712" name="Talisman of Darkness - M. Skills Evasion" additionalName="1 hour" type="Armor">
+    <item id="49712" name="Talisman of Darkness - M. Skills Evasion" type="Armor">
         <!-- M. Skills Evasion +18%. Effects from two such Talismans do not stack. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. Duration: 1 hour. -->
         <set name="icon" val="icon.etc_wise_man_stone_i04"/>
         <set name="default_action" val="EQUIP"/>
@@ -157,7 +157,7 @@
             <skill id="3278" level="3"/>
         </skills>
     </item>
-    <item id="49713" name="Talisman of Darkness - HP" additionalName="1 hour" type="Armor">
+    <item id="49713" name="Talisman of Darkness - HP" type="Armor">
         <!-- Max. HP +7%. Effects from two such Talismans do not stack. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. Duration: 1 hour. -->
         <set name="icon" val="icon.etc_wise_man_stone_i04"/>
         <set name="default_action" val="EQUIP"/>
@@ -173,7 +173,7 @@
             <skill id="3279" level="3"/>
         </skills>
     </item>
-    <item id="49714" name="Talisman of Darkness - MP" additionalName="1 hour" type="Armor">
+    <item id="49714" name="Talisman of Darkness - MP" type="Armor">
         <!-- Max. MP +7%. Effects from two such Talismans do not stack. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. Duration: 1 hour. -->
         <set name="icon" val="icon.etc_wise_man_stone_i04"/>
         <set name="default_action" val="EQUIP"/>
@@ -189,7 +189,7 @@
             <skill id="3280" level="3"/>
         </skills>
     </item>
-    <item id="49715" name="Talisman of Darkness - Healing Power" additionalName="1 hour" type="Armor">
+    <item id="49715" name="Talisman of Darkness - Healing Power" type="Armor">
         <!-- Healing Power +4%. Effects from two such Talismans do not stack. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. Duration: 1 hour. -->
         <set name="icon" val="icon.etc_wise_man_stone_i04"/>
         <set name="default_action" val="EQUIP"/>
@@ -205,7 +205,7 @@
             <skill id="3293" level="1"/>
         </skills>
     </item>
-    <item id="49716" name="Talisman of Darkness - Power of Healing Magic" additionalName="1 hour" type="Armor">
+    <item id="49716" name="Talisman of Darkness - Power of Healing Magic" type="Armor">
         <!-- Power of Healing Magic +43. Effects from two such Talismans do not stack. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. Duration: 1 hour. -->
         <set name="icon" val="icon.etc_wise_man_stone_i04"/>
         <set name="default_action" val="EQUIP"/>
@@ -221,7 +221,7 @@
             <skill id="3294" level="1"/>
         </skills>
     </item>
-    <item id="49717" name="Talisman of Darkness Box - P. Atk." additionalName="1 hour" type="EtcItem">
+    <item id="49717" name="Talisman of Darkness Box - P. Atk." type="EtcItem">
         <!-- By double-clicking it, you will get Talisman of Darkness - P. Atk. (for 1 hour). Cannot be dropped. <Note>. For items obtained from a box, there are restrictions regarding movement. -->
         <set name="icon" val="icon.etc_exchange_box_i00"/>
         <set name="default_action" val="PEEL"/>
@@ -235,7 +235,7 @@
             <item id="49707" min="1" max="1" chance="100"/>
         </capsuled_items>
     </item>
-    <item id="49718" name="Talisman of Darkness Box - M. Atk." additionalName="1 hour" type="EtcItem">
+    <item id="49718" name="Talisman of Darkness Box - M. Atk." type="EtcItem">
         <!-- By double-clicking it, you will get Talisman of Darkness - M. Atk. (for 1 hour). Cannot be dropped. <Note>. For items obtained from a box, there are restrictions regarding movement. -->
         <set name="icon" val="icon.etc_exchange_box_i00"/>
         <set name="default_action" val="PEEL"/>
@@ -249,7 +249,7 @@
             <item id="49708" min="1" max="1" chance="100"/>
         </capsuled_items>
     </item>
-    <item id="49719" name="Talisman of Darkness Box - P. Def." additionalName="1 hour" type="EtcItem">
+    <item id="49719" name="Talisman of Darkness Box - P. Def." type="EtcItem">
         <!-- By double-clicking it, you will get Talisman of Darkness - P. Def. (for 1 hour). Cannot be dropped. <Note>. For items obtained from a box, there are restrictions regarding movement. -->
         <set name="icon" val="icon.etc_exchange_box_i00"/>
         <set name="default_action" val="PEEL"/>
@@ -263,7 +263,7 @@
             <item id="49709" min="1" max="1" chance="100"/>
         </capsuled_items>
     </item>
-    <item id="49720" name="Talisman of Darkness Box - M. Def." additionalName="1 hour" type="EtcItem">
+    <item id="49720" name="Talisman of Darkness Box - M. Def." type="EtcItem">
         <!-- By double-clicking it, you will get Talisman of Darkness - M. Def. (for 1 hour). Cannot be dropped. <Note>. For items obtained from a box, there are restrictions regarding movement. -->
         <set name="icon" val="icon.etc_exchange_box_i00"/>
         <set name="default_action" val="PEEL"/>
@@ -277,7 +277,7 @@
             <item id="49710" min="1" max="1" chance="100"/>
         </capsuled_items>
     </item>
-    <item id="49721" name="Talisman of Darkness Box - P. Skills Evasion" additionalName="1 hour" type="EtcItem">
+    <item id="49721" name="Talisman of Darkness Box - P. Skills Evasion" type="EtcItem">
         <!-- By double-clicking it, you will get Talisman of Darkness - P. Skills Evasion (for 1 hour). Cannot be dropped. <Note>. For items obtained from a box, there are restrictions regarding movement. -->
         <set name="icon" val="icon.etc_exchange_box_i00"/>
         <set name="default_action" val="PEEL"/>
@@ -291,7 +291,7 @@
             <item id="49711" min="1" max="1" chance="100"/>
         </capsuled_items>
     </item>
-    <item id="49722" name="Talisman of Darkness Box - M. Skills Evasion" additionalName="1 hour" type="EtcItem">
+    <item id="49722" name="Talisman of Darkness Box - M. Skills Evasion" type="EtcItem">
         <!-- By double-clicking it, you will get Talisman of Darkness - M. Skills Evasion (for 1 hour). Cannot be dropped. <Note>. For items obtained from a box, there are restrictions regarding movement. -->
         <set name="icon" val="icon.etc_exchange_box_i00"/>
         <set name="default_action" val="PEEL"/>
@@ -305,7 +305,7 @@
             <item id="49712" min="1" max="1" chance="100"/>
         </capsuled_items>
     </item>
-    <item id="49723" name="Talisman of Darkness Box - HP" additionalName="1 hour" type="EtcItem">
+    <item id="49723" name="Talisman of Darkness Box - HP" type="EtcItem">
         <!-- By double-clicking it, you will get Talisman of Darkness - HP (for 1 hour). Cannot be dropped. <Note>. For items obtained from a box, there are restrictions regarding movement. -->
         <set name="icon" val="icon.etc_exchange_box_i00"/>
         <set name="default_action" val="PEEL"/>
@@ -319,7 +319,7 @@
             <item id="49713" min="1" max="1" chance="100"/>
         </capsuled_items>
     </item>
-    <item id="49724" name="Talisman of Darkness Box - MP" additionalName="1 hour" type="EtcItem">
+    <item id="49724" name="Talisman of Darkness Box - MP" type="EtcItem">
         <!-- By double-clicking it, you will get Talisman of Darkness - MP (for 1 hour). Cannot be dropped. <Note>. For items obtained from a box, there are restrictions regarding movement. -->
         <set name="icon" val="icon.etc_exchange_box_i00"/>
         <set name="default_action" val="PEEL"/>
@@ -333,7 +333,7 @@
             <item id="49714" min="1" max="1" chance="100"/>
         </capsuled_items>
     </item>
-    <item id="49725" name="Talisman of Darkness Box - Healing Power" additionalName="1 hour" type="EtcItem">
+    <item id="49725" name="Talisman of Darkness Box - Healing Power" type="EtcItem">
         <!-- By double-clicking it, you will get Talisman of Darkness - Healing Power (for 1 hour). Cannot be dropped. <Note>. For items obtained from a box, there are restrictions regarding movement. -->
         <set name="icon" val="icon.etc_exchange_box_i00"/>
         <set name="default_action" val="PEEL"/>
@@ -347,7 +347,7 @@
             <item id="49715" min="1" max="1" chance="100"/>
         </capsuled_items>
     </item>
-    <item id="49726" name="Talisman of Darkness Box - Power of Healing Magic" additionalName="1 hour" type="EtcItem">
+    <item id="49726" name="Talisman of Darkness Box - Power of Healing Magic" type="EtcItem">
         <!-- By double-clicking it, you will get Talisman of Darkness - Power of Healing Magic (for 1 hour). Cannot be dropped. <Note>. For items obtained from a box, there are restrictions regarding movement. -->
         <set name="icon" val="icon.etc_exchange_box_i00"/>
         <set name="default_action" val="PEEL"/>
@@ -951,13 +951,13 @@
             <skill id="39163" level="1"/> <!-- Special Pirate Fruit -->
         </skills>
     </item>
-    <item id="49775" name="Red Spinel" additionalName="Event" type="EtcItem">
+    <item id="49775" name="Red Spinel" type="EtcItem">
         <!-- A reward item. You can receive it for helping Grocer Pink and use it to exchange for rare items with Pink. -->
         <set name="icon" val="icon.ensoul_big_pp"/>
         <set name="is_sellable" val="false"/>
         <set name="is_stackable" val="true"/>
     </item>
-    <item id="49776" name="Green Spinel" additionalName="Event" type="EtcItem">
+    <item id="49776" name="Green Spinel" type="EtcItem">
         <!-- A reward item. You can receive it for helping Grocer Pink and use it to exchange for rare items with Pink. -->
         <set name="icon" val="icon.ensoul_big_ep"/>
         <set name="is_sellable" val="false"/>
@@ -1110,7 +1110,7 @@
             <skill id="39175" level="1"/> <!-- +16 Enchanted Weapon Supply Box (C-grade) -->
         </skills>
     </item>
-    <item id="49791" name="Cadmus Transformation Bracelet - Prophet" additionalName="1-day" type="Armor">
+    <item id="49791" name="Cadmus Transformation Bracelet - Prophet" type="Armor">
         <!-- Transforms you into Prophet Cadmus. Can be used once a day. After the transformation, you can use the following skills for 4 hours: Might, Shield, Wind Walk, Return, Focus, Death Whisper, Guidance, Haste, Acumen, and Heal. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. A 1-day item. -->
         <set name="icon" val="icon.pi_high_agathion_bracelet_i00"/>
         <set name="default_action" val="EQUIP"/>
@@ -1122,7 +1122,7 @@
         <set name="is_sellable" val="false"/>
         <set name="time" val="1440"/>
     </item>
-    <item id="49792" name="Cadmus Transformation Bracelet - Shillien Elder" additionalName="1-day" type="Armor">
+    <item id="49792" name="Cadmus Transformation Bracelet - Shillien Elder" type="Armor">
         <!-- Transforms you into Shillien Elder Cadmus. Can be used once a day. After the transformation, you can use the following skills for 4 hours: Might, Shield, Wind Walk, Return, Vampiric Rage, Empower, Death Whisper, Guidance, and Heal. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. A 1-day item. -->
         <set name="icon" val="icon.pi_high_agathion_bracelet_i00"/>
         <set name="default_action" val="EQUIP"/>
@@ -1134,7 +1134,7 @@
         <set name="is_sellable" val="false"/>
         <set name="time" val="1440"/>
     </item>
-    <item id="49793" name="Cadmus Transformation Bracelet - Elven Elder" additionalName="1-day" type="Armor">
+    <item id="49793" name="Cadmus Transformation Bracelet - Elven Elder" type="Armor">
         <!-- Transforms you into Elven Elder Cadmus. Can be used once a day. After the transformation, you can use the following skills for 4 hours: Might, Shield, Wind Walk, Return, Clarity, Agility, Decrease Weight, Regeneration, and Greater Heal. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. Duration: 1 day. -->
         <set name="icon" val="icon.pi_high_agathion_bracelet_i00"/>
         <set name="default_action" val="EQUIP"/>
@@ -1146,7 +1146,7 @@
         <set name="is_sellable" val="false"/>
         <set name="time" val="1440"/>
     </item>
-    <item id="49794" name="Cadmus Transformation Bracelet - Prophet" additionalName="30-day" type="Armor">
+    <item id="49794" name="Cadmus Transformation Bracelet - Prophet" type="Armor">
         <!-- Transforms you into Prophet Cadmus. Can be used once a day. After the transformation, you can use the following skills for 4 hours: Might, Shield, Wind Walk, Return, Focus, Death Whisper, Guidance, Haste, Acumen, and Heal. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. Duration: 30 days. -->
         <set name="icon" val="icon.pi_high_agathion_bracelet_i00"/>
         <set name="default_action" val="EQUIP"/>
@@ -1158,7 +1158,7 @@
         <set name="is_sellable" val="false"/>
         <set name="time" val="43200"/>
     </item>
-    <item id="49795" name="Cadmus Transformation Bracelet - Shillien Elder" additionalName="30-day" type="Armor">
+    <item id="49795" name="Cadmus Transformation Bracelet - Shillien Elder" type="Armor">
         <!-- Transforms you into Shillien Elder Cadmus. Can be used once a day. After the transformation, you can use the following skills for 4 hours: Might, Shield, Wind Walk, Return, Vampiric Rage, Empower, Death Whisper, Guidance, and Heal. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. Duration: 30 days. -->
         <set name="icon" val="icon.pi_high_agathion_bracelet_i00"/>
         <set name="default_action" val="EQUIP"/>
@@ -1170,7 +1170,7 @@
         <set name="is_sellable" val="false"/>
         <set name="time" val="43200"/>
     </item>
-    <item id="49796" name="Cadmus Transformation Bracelet - Elven Elder" additionalName="30-day" type="Armor">
+    <item id="49796" name="Cadmus Transformation Bracelet - Elven Elder" type="Armor">
         <!-- Transforms you into Elven Elder Cadmus. Can be used once a day. After the transformation, you can use the following skills for 4 hours: Might, Shield, Wind Walk, Return, Clarity, Agility, Decrease Weight, Regeneration, and Greater Heal. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. Duration: 30 days. -->
         <set name="icon" val="icon.pi_high_agathion_bracelet_i00"/>
         <set name="default_action" val="EQUIP"/>
@@ -1182,7 +1182,7 @@
         <set name="is_sellable" val="false"/>
         <set name="time" val="43200"/>
     </item>
-    <item id="49797" name="Gift of Sated Cadmus" additionalName="Event" type="EtcItem">
+    <item id="49797" name="Gift of Sated Cadmus" type="EtcItem">
         <!-- XP gain +37 million, SP gain +1.1 million (standard for Lv. 50 characters) Intended for Lv. 45 and higher. Cannot be exchanged, dropped, or sold in a private store. Can be transferred between characters on the same account using Dimensional Merchant. Can be stored in a private warehouse. The item will be removed after the event is over. -->
         <set name="icon" val="icon.etc_ev_draco_gift_box"/>
         <set name="default_action" val="SKILL_REDUCE"/>
@@ -1193,7 +1193,7 @@
         <set name="is_stackable" val="true"/>
         <set name="is_freightable" val="true"/>
     </item>
-    <item id="49798" name="Cheer Stamen" additionalName="Event" type="Weapon">
+    <item id="49798" name="Cheer Stamen" type="Weapon">
         <!-- An item commemorating the game's 12th anniversary. Helps materializing your dreams. Allows using the Firecracker and Fan Strike skills. Can be transferred between characters on one account and stored in a private warehouse. -->
         <set name="icon" val="icon.ev_12th_weapon"/>
         <set name="default_action" val="EQUIP"/>
