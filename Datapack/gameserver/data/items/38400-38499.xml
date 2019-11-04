@@ -8,8 +8,7 @@
         <set name="weight" val="1720"/>
         <set name="soulshots" val="1"/>
         <set name="spiritshots" val="1"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
+        <restriction dropable="false" sellable="false"/>
         <stats>
             <stat type="pAtk">79</stat>
             <stat type="mAtk">47</stat>
@@ -29,10 +28,7 @@
         <set name="crystal_type" val="D"/>
         <set name="soulshots" val="1"/>
         <set name="spiritshots" val="1"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction dropable="false" depositable="false" sellable="false" freightable="true"/>
         <stats>
             <stat type="pAtk">125</stat>
             <stat type="mAtk">186</stat>
@@ -52,10 +48,7 @@
         <set name="soulshots" val="6"/>
         <set name="spiritshots" val="3"/>
         <set name="mp_consume" val="2"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction dropable="false" depositable="false" sellable="false" freightable="true"/>
         <stats>
             <stat type="pAtk">92</stat>
             <stat type="mAtk">54</stat>
@@ -74,10 +67,7 @@
         <set name="crystal_type" val="D"/>
         <set name="soulshots" val="3"/>
         <set name="spiritshots" val="3"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction dropable="false" depositable="false" sellable="false" freightable="true"/>
         <stats>
             <stat type="pAtk">92</stat>
             <stat type="mAtk">54</stat>
@@ -96,10 +86,7 @@
         <set name="crystal_type" val="D"/>
         <set name="soulshots" val="3"/>
         <set name="spiritshots" val="3"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction dropable="false" depositable="false" sellable="false" freightable="true"/>
         <stats>
             <stat type="pAtk">92</stat>
             <stat type="mAtk">54</stat>
@@ -118,10 +105,7 @@
         <set name="crystal_type" val="D"/>
         <set name="soulshots" val="3"/>
         <set name="spiritshots" val="3"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction dropable="false" depositable="false" sellable="false" freightable="true"/>
         <stats>
             <stat type="pAtk">92</stat>
             <stat type="mAtk">54</stat>
@@ -141,10 +125,7 @@
         <set name="soulshots" val="6"/>
         <set name="spiritshots" val="3"/>
         <set name="mp_consume" val="2"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction dropable="false" depositable="false" sellable="false" freightable="true"/>
         <stats>
             <stat type="pAtk">92</stat>
             <stat type="mAtk">54</stat>
@@ -163,10 +144,7 @@
         <set name="crystal_type" val="D"/>
         <set name="soulshots" val="3"/>
         <set name="spiritshots" val="3"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction dropable="false" depositable="false" sellable="false" freightable="true"/>
         <stats>
             <stat type="pAtk">92</stat>
             <stat type="mAtk">54</stat>
@@ -182,10 +160,7 @@
         <set name="bodypart" val="lhand"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="D"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction dropable="false" depositable="false" sellable="false" freightable="true"/>
         <stats>
             <stat type="pAtk">92</stat>
             <stat type="mAtk">54</stat>
@@ -204,10 +179,7 @@
         <set name="crystal_type" val="D"/>
         <set name="soulshots" val="1"/>
         <set name="spiritshots" val="1"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction dropable="false" depositable="false" sellable="false" freightable="true"/>
         <stats>
             <stat type="pAtk">125</stat>
             <stat type="mAtk">186</stat>
@@ -226,10 +198,7 @@
         <set name="crystal_type" val="D"/>
         <set name="soulshots" val="3"/>
         <set name="spiritshots" val="3"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction dropable="false" depositable="false" sellable="false" freightable="true"/>
         <skills>
             <skill id="3599" level="1"/> <!-- Polearm Multi-attack -->
         </skills>
@@ -248,10 +217,7 @@
         <set name="bodypart" val="lhand"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="D"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction dropable="false" depositable="false" sellable="false" freightable="true"/>
         <stats>
             <stat type="pDef">25</stat>
             <stat type="pAtkRange">40</stat>
@@ -263,10 +229,7 @@
         <set name="bodypart" val="lhand"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="D"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction dropable="false" depositable="false" sellable="false" freightable="true"/>
         <stats>
             <stat type="pDef">25</stat>
             <stat type="pAtkRange">40</stat>
@@ -281,11 +244,8 @@
         <set name="crystal_type" val="D"/>
         <set name="soulshots" val="3"/>
         <set name="spiritshots" val="3"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
         <set name="is_magic_weapon" val="true"/>
-        <set name="is_freightable" val="true"/>
+        <restriction dropable="false" depositable="false" sellable="false" freightable="true"/>
         <skills>
             <skill id="3599" level="1"/> <!-- Polearm Multi-attack -->
         </skills>
@@ -307,10 +267,7 @@
         <set name="crystal_type" val="D"/>
         <set name="soulshots" val="3"/>
         <set name="spiritshots" val="3"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction dropable="false" depositable="false" sellable="false" freightable="true"/>
         <stats>
             <stat type="pAtk">92</stat>
             <stat type="mAtk">54</stat>
@@ -326,10 +283,7 @@
         <set name="bodypart" val="lhand"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="D"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction dropable="false" depositable="false" sellable="false" freightable="true"/>
         <stats>
             <stat type="pDef">25</stat>
             <stat type="pAtkRange">40</stat>
@@ -344,10 +298,7 @@
         <set name="crystal_type" val="D"/>
         <set name="soulshots" val="1"/>
         <set name="spiritshots" val="1"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction dropable="false" depositable="false" sellable="false" freightable="true"/>
         <stats>
             <stat type="pAtk">125</stat>
             <stat type="mAtk">186</stat>
@@ -366,10 +317,7 @@
         <set name="crystal_type" val="D"/>
         <set name="soulshots" val="3"/>
         <set name="spiritshots" val="3"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction dropable="false" depositable="false" sellable="false" freightable="true"/>
         <stats>
             <stat type="pAtk">92</stat>
             <stat type="mAtk">54</stat>
@@ -388,10 +336,7 @@
         <set name="crystal_type" val="D"/>
         <set name="soulshots" val="3"/>
         <set name="spiritshots" val="3"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction dropable="false" depositable="false" sellable="false" freightable="true"/>
         <skills>
             <skill id="3599" level="1"/> <!-- Polearm Multi-attack -->
         </skills>
@@ -413,10 +358,7 @@
         <set name="crystal_type" val="D"/>
         <set name="soulshots" val="1"/>
         <set name="spiritshots" val="1"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction dropable="false" depositable="false" sellable="false" freightable="true"/>
         <stats>
             <stat type="pAtk">107</stat>
             <stat type="mAtk">181</stat>

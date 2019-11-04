@@ -111,16 +111,9 @@
         <set name="weight" val="1350"/>
         <set name="soulshots" val="1"/>
         <set name="spiritshots" val="1"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="commissionItemType" val="ONE_HAND_MAGIC_BLUNT_WEAPON"/>
         <set name="is_magic_weapon" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" clan-depositable="false" mailable="false" commissionable="false"/>
         <stats>
             <stat type="pAtk">5</stat>
             <stat type="mAtk">7</stat>
@@ -207,15 +200,8 @@
         <set name="weight" val="1160"/>
         <set name="soulshots" val="1"/>
         <set name="spiritshots" val="1"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="commissionItemType" val="DAGGER"/>
-        <set name="is_sellable" val="false"/>
+        <restriction sellable="false" tradable="false" dropable="false" depositable="false" clan-depositable="false" mailable="false" commissionable="false"/>
         <stats>
             <stat type="pAtk">5</stat>
             <stat type="mAtk">5</stat>
@@ -362,7 +348,7 @@
             <stat type="pAtkRange">80</stat>
         </stats>
     </weapon>
-    <item id="17" name="Wooden Arrow"  icon="icon.etc_wooden_quiver_i00">
+    <item id="17" name="Wooden Arrow" icon="icon.etc_wooden_quiver_i00">
         <!-- An arrow made of wood. It is an arrow used for a No-grade bow. -->
         <set name="default_action" val="EQUIP"/>
         <set name="etcitem_type" val="ARROW"/>
@@ -371,7 +357,7 @@
         <set name="weight" val="6"/>
         <set name="price" val="2"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
-        <set name="is_stackable" val="true"/>
+        <restriction stackable="true"/>
     </item>
     <armor id="18" name="Leather Shield" icon="icon.shield_leather_shield_i00">
         <set name="default_action" val="EQUIP"/>
@@ -779,12 +765,10 @@
             <stat type="pDef">17</stat>
         </stats>
     </armor>
-    <item id="57" name="Adena"  icon="icon.etc_adena_i00">
+    <item id="57" name="Adena" icon="icon.etc_adena_i00">
         <set name="immediate_effect" val="true"/>
         <set name="price" val="1"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction sellable="false" commissionable="false" stackable="true"/>
     </item>
     <armor id="58" name="Mithril Breastplate" icon="icon.armor_t19_u_i00">
         <set name="default_action" val="EQUIP"/>

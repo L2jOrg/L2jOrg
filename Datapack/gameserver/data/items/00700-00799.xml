@@ -1,102 +1,46 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
-    <item id="701" name="Fungus Juice"  icon="icon.item_canuse28">
+    <item id="701" name="Fungus Juice" icon="icon.item_canuse28">
         <!-- The juice of a fungus. -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="702" name="Wolf Pelt"  icon="icon.etc_leather_brown_i00">
+    <item id="702" name="Wolf Pelt" icon="icon.etc_leather_brown_i00">
         <!-- Gather forty wolf pelts and take them to Trader Lector of the weapons and armor shop. -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="703" name="Giant Spider's Poison Sac"  icon="icon.etc_pouch_gray_i00">
+    <item id="703" name="Giant Spider's Poison Sac" icon="icon.etc_pouch_gray_i00">
         <!-- Giant Spider's Poison Sacs obtained from the dead giant spider. Take this to Priest Yohanes. -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="704" name="Fever Medicine"  icon="icon.etc_lesser_potion_purple_i00">
+    <item id="704" name="Fever Medicine" icon="icon.etc_lesser_potion_purple_i00">
         <!-- Medicine concocted by Priest Yohanes for the students who are ill with fever. Take this to Elias. -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="706" name="Basilisk's Claw"  icon="icon.item_normal141">
+    <item id="706" name="Basilisk's Claw" icon="icon.item_normal141">
         <!-- Basilisk's claw. -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="707" name="Spore Sac"  icon="icon.etc_pouch_yellow_i00">
+    <item id="707" name="Spore Sac" icon="icon.etc_pouch_yellow_i00">
         <!-- Sac obtained from the spore fungus. Gather 10 of these and take them to Trader Vollodos. -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="708" name="Sylph Headband"  icon="icon.item_system03">
+    <item id="708" name="Sylph Headband" icon="icon.item_system03">
         <!-- A Sylph Headband -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
     <armor id="709" name="Leather Shirt" icon="icon.armor_leather_shirt_i00">
         <!-- Cannot be exchanged, dropped, sold, or stored in a private warehouse. -->
@@ -104,14 +48,7 @@
         <set name="bodypart" val="chest"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="400"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
-        <set name="is_sellable" val="false"/>
+        <restriction tradable="false" dropable="false" depositable="false" clan-depositable="false" mailable="false" commissionable="false" sellable="false"/>
         <stats>
             <stat type="mDef">50</stat>
             <stat type="pDef">75</stat>
@@ -123,14 +60,7 @@
         <set name="bodypart" val="chest"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="400"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
-        <set name="is_sellable" val="false"/>
+        <restriction tradable="false" dropable="false" depositable="false" clan-depositable="false" mailable="false" commissionable="false" sellable="false"/>
         <stats>
             <stat type="mDef">52</stat>
             <stat type="pDef">77</stat>
@@ -142,14 +72,7 @@
         <set name="bodypart" val="chest"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="800"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
-        <set name="is_sellable" val="false"/>
+        <restriction tradable="false" dropable="false" depositable="false" clan-depositable="false" mailable="false" commissionable="false" sellable="false"/>
         <stats>
             <stat type="mDef">54</stat>
             <stat type="pDef">79</stat>
@@ -161,14 +84,7 @@
         <set name="bodypart" val="chest"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="1200"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
-        <set name="is_sellable" val="false"/>
+        <restriction tradable="false" dropable="false" depositable="false" clan-depositable="false" mailable="false" commissionable="false" sellable="false"/>
         <stats>
             <stat type="mDef">56</stat>
             <stat type="pDef">81</stat>
@@ -180,14 +96,7 @@
         <set name="bodypart" val="legs"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="250"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
-        <set name="is_sellable" val="false"/>
+        <restriction tradable="false" dropable="false" depositable="false" clan-depositable="false" mailable="false" commissionable="false" sellable="false"/>
         <stats>
             <stat type="mDef">30</stat>
             <stat type="pDef">45</stat>
@@ -199,14 +108,7 @@
         <set name="bodypart" val="legs"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="300"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
-        <set name="is_sellable" val="false"/>
+        <restriction tradable="false" dropable="false" depositable="false" clan-depositable="false" mailable="false" commissionable="false" sellable="false"/>
         <stats>
             <stat type="mDef">32</stat>
             <stat type="pDef">47</stat>
@@ -218,14 +120,7 @@
         <set name="bodypart" val="legs"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="500"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
-        <set name="is_sellable" val="false"/>
+        <restriction tradable="false" dropable="false" depositable="false" clan-depositable="false" mailable="false" commissionable="false" sellable="false"/>
         <stats>
             <stat type="mDef">34</stat>
             <stat type="pDef">49</stat>
@@ -237,14 +132,7 @@
         <set name="bodypart" val="legs"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="800"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
-        <set name="is_sellable" val="false"/>
+        <restriction tradable="false" dropable="false" depositable="false" clan-depositable="false" mailable="false" commissionable="false" sellable="false"/>
         <stats>
             <stat type="mDef">36</stat>
             <stat type="pDef">51</stat>
@@ -256,14 +144,7 @@
         <set name="bodypart" val="gloves"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="100"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
-        <set name="is_sellable" val="false"/>
+        <restriction tradable="false" dropable="false" depositable="false" clan-depositable="false" mailable="false" commissionable="false" sellable="false"/>
         <stats>
             <stat type="mDef">20</stat>
             <stat type="pDef">30</stat>
@@ -275,14 +156,7 @@
         <set name="bodypart" val="gloves"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="150"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
-        <set name="is_sellable" val="false"/>
+        <restriction tradable="false" dropable="false" depositable="false" clan-depositable="false" mailable="false" commissionable="false" sellable="false"/>
         <stats>
             <stat type="mDef">22</stat>
             <stat type="pDef">32</stat>
@@ -294,14 +168,7 @@
         <set name="bodypart" val="gloves"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="150"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
-        <set name="is_sellable" val="false"/>
+        <restriction tradable="false" dropable="false" depositable="false" clan-depositable="false" mailable="false" commissionable="false" sellable="false"/>
         <stats>
             <stat type="mDef">24</stat>
             <stat type="pDef">34</stat>
@@ -313,14 +180,7 @@
         <set name="bodypart" val="gloves"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="200"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
-        <set name="is_sellable" val="false"/>
+        <restriction tradable="false" dropable="false" depositable="false" clan-depositable="false" mailable="false" commissionable="false" sellable="false"/>
         <stats>
             <stat type="mDef">26</stat>
             <stat type="pDef">36</stat>
@@ -332,14 +192,7 @@
         <set name="bodypart" val="feet"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="150"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
-        <set name="is_sellable" val="false"/>
+        <restriction tradable="false" dropable="false" depositable="false" clan-depositable="false" mailable="false" commissionable="false" sellable="false"/>
         <stats>
             <stat type="mDef">20</stat>
             <stat type="pDef">30</stat>
@@ -351,14 +204,7 @@
         <set name="bodypart" val="feet"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="150"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
-        <set name="is_sellable" val="false"/>
+        <restriction tradable="false" dropable="false" depositable="false" clan-depositable="false" mailable="false" commissionable="false" sellable="false"/>
         <stats>
             <stat type="mDef">22</stat>
             <stat type="pDef">32</stat>
@@ -370,14 +216,7 @@
         <set name="bodypart" val="feet"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="200"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
-        <set name="is_sellable" val="false"/>
+        <restriction tradable="false" dropable="false" depositable="false" clan-depositable="false" mailable="false" commissionable="false" sellable="false"/>
         <stats>
             <stat type="mDef">24</stat>
             <stat type="pDef">34</stat>
@@ -389,50 +228,41 @@
         <set name="bodypart" val="feet"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="250"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
-        <set name="is_sellable" val="false"/>
+        <restriction tradable="false" dropable="false" depositable="false" clan-depositable="false" mailable="false" commissionable="false" sellable="false"/>
         <stats>
             <stat type="mDef">26</stat>
             <stat type="pDef">36</stat>
         </stats>
     </armor>
-    <item id="729" name="Scroll: Enchant Weapon (A-grade)"  icon="icon.etc_scroll_of_enchant_weapon_i04">
+    <item id="729" name="Scroll: Enchant Weapon (A-grade)" icon="icon.etc_scroll_of_enchant_weapon_i04">
         <!-- When enchanted, P. Atk. +4 for A-grade one-handed swords, one-handed blunts, daggers, spears, and other weapons. P. Atk. +5 for two-handed swords, two-handed blunts, dualswords, and two-handed fist weapons. P. Atk. +8 for bows. M. Atk. +3 for all weapons. Starting at +4, P. Atk. / M. Atk. bonus double. Safe Enchant: +3. -->
         <set name="default_action" val="SKILL_REDUCE"/>
         <set name="etcitem_type" val="ENCHT_WP"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="120"/>
         <set name="price" val="1800000"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_oly_restricted" val="true"/>
         <set name="handler" val="EnchantScrolls"/>
         <set name="commissionItemType" val="SCROLL_ENCHANT_WEAPON"/>
+        <restriction stackable="true" olympiad-restricted="true"/>
         <skills>
             <skill id="2006" level="1"/> <!-- Scroll: Enchant Weapon (A-grade) -->
         </skills>
     </item>
-    <item id="730" name="Scroll: Enchant Armor (A-grade)"  icon="icon.etc_scroll_of_enchant_armor_i04">
+    <item id="730" name="Scroll: Enchant Armor (A-grade)" icon="icon.etc_scroll_of_enchant_armor_i04">
         <!-- P. Def. +1 for A-grade armor and accessories. Starting from +4, P. Def. +3. Can be safely enchanted up to +3. For one-piece armor, it can be safely enchanted up to +4. -->
         <set name="default_action" val="SKILL_REDUCE"/>
         <set name="etcitem_type" val="ENCHT_AM"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="120"/>
         <set name="price" val="240000"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_oly_restricted" val="true"/>
         <set name="handler" val="EnchantScrolls"/>
         <set name="commissionItemType" val="SCROLL_ENCHANT_ARMOR"/>
+        <restriction stackable="true" olympiad-restricted="true"/>
         <skills>
             <skill id="2007" level="1"/> <!-- Scroll: Enchant Armor (A-grade) -->
         </skills>
     </item>
-    <item id="734" name="Wind Walk Potion"  icon="icon.etc_potion_green_i00">
+    <item id="734" name="Wind Walk Potion" icon="icon.etc_potion_green_i00">
         <!-- Magical potion that increases movement Speed. -->
         <set name="default_action" val="SKILL_REDUCE"/>
         <set name="etcitem_type" val="POTION"/>
@@ -440,11 +270,10 @@
         <set name="weight" val="20"/>
         <set name="price" val="1200"/>
         <set name="reuse_delay" val="500"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_oly_restricted" val="true"/>
         <set name="handler" val="ItemSkills"/>
         <set name="commissionItemType" val="POTION"/>
         <set name="for_npc" val="true"/>
+        <restriction stackable="true" olympiad-restricted="true"/>
         <cond addName="1" msgId="113">
             <player flyMounted="false"/>
         </cond>
@@ -452,7 +281,7 @@
             <skill id="2011" level="1"/> <!-- Wind Walk Potion -->
         </skills>
     </item>
-    <item id="735" name="Haste Potion"  icon="icon.etc_reagent_green_i00">
+    <item id="735" name="Haste Potion" icon="icon.etc_reagent_green_i00">
         <!-- Magical potion that increases Atk. Spd. -->
         <set name="default_action" val="SKILL_REDUCE"/>
         <set name="etcitem_type" val="POTION"/>
@@ -460,11 +289,10 @@
         <set name="weight" val="20"/>
         <set name="price" val="2400"/>
         <set name="reuse_delay" val="500"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_oly_restricted" val="true"/>
         <set name="handler" val="ItemSkills"/>
         <set name="commissionItemType" val="POTION"/>
         <set name="for_npc" val="true"/>
+        <restriction stackable="true" olympiad-restricted="true"/>
         <cond addName="1" msgId="113">
             <player flyMounted="false"/>
         </cond>
@@ -472,30 +300,28 @@
             <skill id="2012" level="1"/> <!-- Haste Potion -->
         </skills>
     </item>
-    <item id="736" name="Scroll of Escape"  icon="icon.etc_scroll_of_return_i00">
+    <item id="736" name="Scroll of Escape" icon="icon.etc_scroll_of_return_i00">
         <!-- Magical scroll that relocates you to the nearest village. -->
         <set name="default_action" val="SKILL_REDUCE"/>
         <set name="etcitem_type" val="SCROLL"/>
         <set name="weight" val="120"/>
         <set name="price" val="400"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_oly_restricted" val="true"/>
         <set name="handler" val="ItemSkills"/>
         <set name="commissionItemType" val="SCROLL_OTHER"/>
+        <restriction stackable="true" olympiad-restricted="true"/>
         <skills>
             <skill id="2013" level="1"/> <!-- Scroll of Escape -->
         </skills>
     </item>
-    <item id="737" name="Scroll of Resurrection"  icon="icon.etc_scroll_of_resurrection_i00">
+    <item id="737" name="Scroll of Resurrection" icon="icon.etc_scroll_of_resurrection_i00">
         <!-- Magical scroll that resurrects a dead character. -->
         <set name="default_action" val="SKILL_REDUCE"/>
         <set name="etcitem_type" val="SCROLL"/>
         <set name="weight" val="120"/>
         <set name="price" val="2000"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_oly_restricted" val="true"/>
         <set name="handler" val="ItemSkills"/>
         <set name="commissionItemType" val="SCROLL_OTHER"/>
+        <restriction stackable="true" olympiad-restricted="true"/>
         <skills>
             <skill id="2014" level="1"/> <!-- Scroll of Resurrection -->
         </skills>
@@ -521,61 +347,29 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </weapon>
-    <item id="739" name="Broken Sword Handle"  icon="icon.weapon_small_sword_i00">
+    <item id="739" name="Broken Sword Handle" icon="icon.weapon_small_sword_i00">
         <!-- The handle part of the sword of solidarity. Take this to Blacksmith Altran. -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="740" name="Broken Blade Bottom"  icon="icon.weapon_great_sword_i00">
+    <item id="740" name="Broken Blade Bottom" icon="icon.weapon_great_sword_i00">
         <!-- Take this, and the upper part of the blade to Blacksmith Altran. -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="741" name="Broken Blade Top"  icon="icon.etc_sword_body_i00">
+    <item id="741" name="Broken Blade Top" icon="icon.etc_sword_body_i00">
         <!-- Take this, and the lower part of the blade to Blacksmith Altran. -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="742" name="Altran's Note"  icon="icon.etc_piece_of_paper_white_i00">
+    <item id="742" name="Altran's Note" icon="icon.etc_piece_of_paper_white_i00">
         <!-- Letter requesting the handle of the sword from Roien. Take this to Grand Master Roien of Sedrick's Training Hall. -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
     <weapon id="743" name="Sword of Sentinel" icon="icon.weapon_broad_sword_i00">
         <!-- Steel blade issued to those fighters that have been acknowledged as protectors of the woods. -->
@@ -621,32 +415,16 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </weapon>
-    <item id="745" name="Cobendell's Medicine"  icon="icon.item_normal40">
+    <item id="745" name="Cobendell's Medicine" icon="icon.item_normal40">
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="746" name="Alberius' List"  icon="icon.etc_piece_of_paper_white_i00">
+    <item id="746" name="Alberius' List" icon="icon.etc_piece_of_paper_white_i00">
         <!-- Deliver the medicine to Sentinel Berros, Sentinel Veltress, Sentinel Rayen, and Sentinel Gartrandell. -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
     <weapon id="747" name="Wand of Adept" icon="icon.weapon_apprentices_wand_i00">
         <!-- The wand presented to those who have finished their studies at the school of magic. -->
@@ -681,15 +459,8 @@
         <set name="weight" val="1350"/>
         <set name="soulshots" val="1"/>
         <set name="spiritshots" val="1"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_magic_weapon" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" clan-depositable="false" mailable="false" commissionable="false"/>
         <stats>
             <stat type="pAtk">10</stat>
             <stat type="mAtk">11</stat>
@@ -700,58 +471,26 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </weapon>
-    <item id="750" name="Kinship Crystal"  icon="icon.item_normal45">
+    <item id="750" name="Kinship Crystal" icon="icon.item_normal45">
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="751" name="Cracked Kinship Crystal"  icon="icon.item_canuse07">
+    <item id="751" name="Cracked Kinship Crystal" icon="icon.item_canuse07">
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="752" name="Orc Amulet"  icon="icon.etc_feather_gold_i00">
+    <item id="752" name="Orc Amulet" icon="icon.etc_feather_gold_i00">
         <!-- Amulet that the Orcs carry for magical purposes. Take this to Captain Gilbert. -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="753" name="Silverleaf Brooch"  icon="icon.item_normal12">
+    <item id="753" name="Silverleaf Brooch" icon="icon.item_normal12">
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
     <weapon id="754" name="Red Sunset Staff" icon="icon.weapon_cedar_staff_i00">
         <!-- Staff used by warriors belonging to the Red Sunset clan. -->
@@ -776,18 +515,10 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </weapon>
-    <item id="796" name="Roien's Letter"  icon="icon.etc_scroll_white_i00">
+    <item id="796" name="Roien's Letter" icon="icon.etc_scroll_white_i00">
         <!-- Letter on which Roien summarized the historical information related to the sword of solidarity. Take this to Blacksmith Altran. -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
 </list>

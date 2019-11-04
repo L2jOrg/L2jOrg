@@ -6,12 +6,8 @@
         <set name="bodypart" val="hairall"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="10"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_destroyable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
         <set name="time" val="20160"/>
+        <restriction tradable="false" dropable="false" destroyable="false" depositable="false" sellable="false"/>
     </armor>
     <armor id="21469" name="Sheep Hat" icon="icon.accessory_sheep_cap_white_i00">
         <!-- A hat in the shape of a sheep takes two slots for headpieces. Cannot be exchanged, dropped or sold. Can be stored in a private warehouse. -->
@@ -19,10 +15,6 @@
         <set name="bodypart" val="hairall"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="10"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false" freightable="true"/>
     </armor>
 </list>

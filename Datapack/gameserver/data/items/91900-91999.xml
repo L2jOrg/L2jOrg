@@ -1,1005 +1,755 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
-	<weapon id="91900" name="Colichemarde" icon="icon.weapon_colichemarde_i00">
-		<set name="default_action" val="EQUIP" />
-		<set name="immediate_effect" val="true" />
-		<set name="crystal_type" val="B" />
-		<set name="weight" val="1300" />
-		<set name="price" val="13100000" />
-		<set name="enchant_enabled" val="1" />
-		<stats>
-			<stat type="pAtk">185</stat>
-			<stat type="mAtk">135</stat>
-			<stat type="rCrit">10</stat>
-			<stat type="accCombat">8</stat>
-			<stat type="pAtkSpd">406</stat>
-			<stat type="randomDamage">20</stat>
-		</stats>
-	</weapon>
-	<weapon id="91901" name="Military Fleuret" icon="icon.weapon_assult_fleuret_i00">
-		<set name="default_action" val="EQUIP" />
-		<set name="immediate_effect" val="true" />
-		<set name="crystal_type" val="B" />
-		<set name="weight" val="1300" />
-		<set name="price" val="8680000" />
-		<set name="enchant_enabled" val="1" />
-		<stats>
-			<stat type="pAtk">167</stat>
-			<stat type="mAtk">124</stat>
-			<stat type="rCrit">10</stat>
-			<stat type="accCombat">8</stat>
-			<stat type="pAtkSpd">406</stat>
-			<stat type="randomDamage">20</stat>
-		</stats>
-	</weapon>
-	<weapon id="91902" name="?clair Bijou" icon="icon.weapon_greed_stinger_i00">
-		<set name="default_action" val="EQUIP" />
-		<set name="immediate_effect" val="true" />
-		<set name="crystal_type" val="A" />
-		<set name="weight" val="1300" />
-		<set name="price" val="26968400" />
-		<set name="enchant_enabled" val="1" />
-		<stats>
-			<stat type="pAtk">239</stat>
-			<stat type="mAtk">165</stat>
-			<stat type="rCrit">10</stat>
-			<stat type="accCombat">8</stat>
-			<stat type="pAtkSpd">406</stat>
-			<stat type="randomDamage">20</stat>
-		</stats>
-	</weapon>
-	<weapon id="91903" name="Lacerator" icon="icon.weapon_greed_stinger_i00">
-		<set name="default_action" val="EQUIP" />
-		<set name="immediate_effect" val="true" />
-		<set name="crystal_type" val="A" />
-		<set name="weight" val="1300" />
-		<set name="price" val="20741000" />
-		<set name="enchant_enabled" val="1" />
-		<stats>
-			<stat type="pAtk">221</stat>
-			<stat type="mAtk">156</stat>
-			<stat type="rCrit">10</stat>
-			<stat type="accCombat">8</stat>
-			<stat type="pAtkSpd">406</stat>
-			<stat type="randomDamage">20</stat>
-		</stats>
-	</weapon>
-	<weapon id="91904" name="White Lightning" icon="icon.weapon_lightning_blaze_i00">
-		<set name="default_action" val="EQUIP" />
-		<set name="immediate_effect" val="true" />
-		<set name="crystal_type" val="A" />
-		<set name="weight" val="1300" />
-		<set name="price" val="14098000" />
-		<set name="enchant_enabled" val="1" />
-		<stats>
-			<stat type="pAtk">203</stat>
-			<stat type="mAtk">129</stat>
-			<stat type="rCrit">10</stat>
-			<stat type="accCombat">8</stat>
-			<stat type="pAtkSpd">406</stat>
-			<stat type="randomDamage">20</stat>
-		</stats>
-	</weapon>
-	<weapon id="91905" name="Laevateinn" icon="icon.weapon_leavatein_i00">
-		<set name="default_action" val="EQUIP" />
-		<set name="immediate_effect" val="true" />
-		<set name="crystal_type" val="S" />
-		<set name="weight" val="1300" />
-		<set name="price" val="42759400" />
-		<set name="enchant_enabled" val="1" />
-		<stats>
-			<stat type="pAtk">267</stat>
-			<stat type="mAtk">182</stat>
-			<stat type="rCrit">10</stat>
-			<stat type="accCombat">8</stat>
-			<stat type="pAtkSpd">406</stat>
-			<stat type="randomDamage">20</stat>
-		</stats>
-	</weapon>
-	<item id="91906" name="Energy Rune"  icon="icon.bm_freya_rune">
-		<!-- Available for 30 days. When in inventory, recovers Sayha's Grace points. -->
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
-		<set name="is_sellable" val="false" />
-	</item>
-	<item id="91907" name="+10 High Quality Agathion Box"  icon="icon.npoint_earthworm_30day_box">
-		<!-- Double-click to obtain a random +10 High Quality Agathion. -->
-		<set name="default_action" val="PEEL" />
-		<set name="immediate_effect" val="true" />
-		<set name="is_dropable" val="false" />
-		<set name="is_sellable" val="false" />
-		<set name="is_stackable" val="true" />
-	</item>
-	<item id="91908" name="+12 Weapon Pack (S-grade)"  icon="icon.npoint_earthworm_30day_box">
-		<!-- Double-click to obtain a +12 S-grade weapon. -->
-		<set name="default_action" val="PEEL" />
-		<set name="immediate_effect" val="true" />
-		<set name="is_dropable" val="false" />
-		<set name="is_sellable" val="false" />
-		<set name="is_stackable" val="true" />
-	</item>
-	<item id="91909" name="Wind Treasure Chest"  icon="icon.sayha2017_box_i01">
-		<!-- Double-click to obtain a +16 Weapon Pack (B-grade), a Spirit Evolution Stone, a Weapon/ Armor Pack (B/ C-grade), Dragon Scroll or another rare item. -->
-		<set name="default_action" val="PEEL" />
-		<set name="immediate_effect" val="true" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
-		<set name="is_sellable" val="false" />
-		<set name="is_stackable" val="true" />
-	</item>
-	<item id="91910" name="Sayha's Blessing"  icon="icon.etc_wind_potion_i00">
-		<!-- Sayha's Grace points +35,000. Reqiured level: 1-75. -->
-		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
-		<set name="is_sellable" val="false" />
-		<set name="is_stackable" val="true" />
-	</item>
-	<item id="91911" name="Sayha's Effect Scroll"  icon="icon.etc_ssq_i00">
-		<!-- For 20 min., grants the following effects: Sayha's Shield, Sayha's Magic Barrier, Sayha�s Decrease Weight, Sayha's Clarity, Sayha's Berserker Spirit, Sayha's Wind Walk, Sayha's Might, Sayha's Focus, Sayha's Haste, Sayha's Death Whisper, Sayha's Empower, Sayha's Wild Magic, Sayha's Acumen, Sayha's Concentration, Sayha's Victory, Sayha's Recover HP, Sayha's Recover MP. Cooldown: 1 min. Can't be used when the Sayha's Recover MP effect is active. Note: The Sayha's Victory effect does not stack if the identical effect is active. -->
-		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
-		<set name="is_sellable" val="false" />
-		<set name="is_stackable" val="true" />
-	</item>
-	<item id="91912" name="HP Potion"  icon="icon.etc_lesser_potion_red_i00">
-		<!-- Instantly recovers 50 HP. The remaining points are used to recover CP. -->
-		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="immediate_effect" val="true"/>
-		<set name="etcitem_type" val="POTION"/>
-		<set name="commissionItemType" val="POTION"/>
-		<set name="handler" val="ItemSkills"/>
-		<set name="weight" val="1" />
-		<set name="price" val="30" />
-		<set name="is_sellable" val="false" />
-		<set name="is_stackable" val="true" />
-		<skills>
-			<skill id="50151" level="1"/> <!-- HP Potion -->
-		</skills>
-	</item>
-	<item id="91913" name="Aden Spellbook Chest"  icon="icon.bm_freya_sirr_box">
-		<!-- Double-click to obtain a spellbook for learning skills (for all races, except Orcs). <Spellbook List>. Spellbook: Empower, Spellbook: Focus, Spellbook: Wild Magic, Spellbook: Haste, Spellbook: Acumen, Spellbook: Death Whisper, Spellbook: Clarity, Spellbook: Berserker Spirit. -->
-		<set name="default_action" val="PEEL" />
-		<set name="immediate_effect" val="true" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
-		<set name="is_sellable" val="false" />
-		<set name="is_stackable" val="true" />
-	</item>
-	<item id="91914" name="Aden Amulet Chest"  icon="icon.bm_freya_2016_gift_box">
-		<!-- Double-click to obtain an amulet for learning Orc skills. <Amulet List>. Amulet: Chant of Focus, Amulet: Chant of Wild Magic, Amulet: Chant of Empower, Amulet: Chant of Acumen, Amulet: Chant of Haste, Amulet: Chant of Clarity, Amulet: Chant of Death Whisper, Amulet: Chant of Berserker Spirit. -->
-		<set name="default_action" val="PEEL" />
-		<set name="immediate_effect" val="true" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
-		<set name="is_sellable" val="false" />
-		<set name="is_stackable" val="true" />
-	</item>
-	<weapon id="91915" name="Enhanced Ancient Warrior's Sword" icon="icon.weapon_tulwar_i00">
-		<!-- Cannot be enchanted/ augmented, runes cannot be inserted. -->
-		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="DUALBLUNT" />
-		<set name="bodypart" val="lrhand" />
-		<set name="immediate_effect" val="true" />
-		<set name="weight" val="1530" />
-		<set name="soulshots" val="1" />
-		<set name="spiritshots" val="1" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
-		<stats>
-			<stat type="pAtk">35</stat>
-			<stat type="mAtk">21</stat>
-			<stat type="rCrit">10</stat>
-			<stat type="accCombat">5</stat>
-			<stat type="pAtkSpd">379</stat>
-			<stat type="randomDamage">10</stat>
-			<stat type="pAtkRange">40</stat>
-		</stats>
-	</weapon>
-	<weapon id="91916" name="Enhanced Warrior's Rapier" icon="icon.weapon_sealed_rapier_i00">
-		<!-- Cannot be enchanted/ augmented, runes cannot be inserted. -->
-		<set name="default_action" val="EQUIP" />
-		<set name="immediate_effect" val="true" />
-		<set name="weight" val="1300" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
-		<stats>
-			<stat type="pAtk">30</stat>
-			<stat type="mAtk">26</stat>
-			<stat type="rCrit">10</stat>
-			<stat type="accCombat">8</stat>
-			<stat type="pAtkSpd">406</stat>
-			<stat type="randomDamage">40</stat>
-		</stats>
-	</weapon>
-	<item id="91917" name="Scroll of Escape: Effective Training"  icon="icon.etc_scroll_of_return_i04">
-		<!-- Teleports to Reahen in the Kamael Village. -->
-		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
-		<set name="is_stackable" val="true" />
-	</item>
-	<item id="91918" name="Scroll of Escape: Captain Bathis"  icon="icon.etc_scroll_of_return_i04">
-		<!-- Teleports to Captain Bathis in Giran Castle. -->
-		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
-		<set name="is_stackable" val="true" />
-	</item>
-	<item id="91919" name="Scroll of Escape: Captain Bathis"  icon="icon.etc_scroll_of_return_i04">
-		<!-- Teleports to Captain Bathis in Giran Castle. -->
-		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
-		<set name="is_stackable" val="true" />
-	</item>
-	<item id="91920" name="Scroll: Magic Break"  icon="icon.etc_magic_book_black_i00">
-		<!-- Scroll needed to learn Magic Break. -->
-		<set name="weight" val="120" />
-		<set name="is_sellable" val="false" />
-		<set name="is_stackable" val="true" />
-	</item>
-	<item id="91921" name="Scroll: Disarm"  icon="icon.etc_magic_book_black_i00">
-		<!-- Scroll needed to learn Disarm. -->
-		<set name="weight" val="120" />
-		<set name="is_sellable" val="false" />
-		<set name="is_stackable" val="true" />
-	</item>
-	<item id="91922" name="Scroll: Lightning Barrier"  icon="icon.etc_magic_book_black_i00">
-		<!-- Scroll needed to learn Lightning Barrier. -->
-		<set name="weight" val="120" />
-		<set name="is_sellable" val="false" />
-		<set name="is_stackable" val="true" />
-	</item>
-	<item id="91923" name="Scroll: Lightning"  icon="icon.etc_magic_book_black_i00">
-		<!-- Scroll needed to learn Lightning. -->
-		<set name="weight" val="120" />
-		<set name="is_sellable" val="false" />
-		<set name="is_stackable" val="true" />
-	</item>
-	<item id="91924" name="Scroll: Mental Panic"  icon="icon.etc_magic_book_black_i00">
-		<!-- Scroll needed to learn Mental Panic. -->
-		<set name="weight" val="120" />
-		<set name="is_sellable" val="false" />
-		<set name="is_stackable" val="true" />
-	</item>
-	<item id="91925" name="Scroll: Soul Stigma"  icon="icon.etc_magic_book_black_i00">
-		<!-- Scroll needed to learn Soul Stigma. -->
-		<set name="weight" val="120" />
-		<set name="is_sellable" val="false" />
-		<set name="is_stackable" val="true" />
-	</item>
-	<item id="91926" name="+3 Dragon Belt Chest"  icon="icon.etc_readybox_bronze">
-		<!-- Double-click to obtain Dragon Belt +3. -->
-		<set name="default_action" val="PEEL" />
-		<set name="immediate_effect" val="true" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
-		<set name="is_sellable" val="false" />
-		<set name="is_stackable" val="true" />
-	</item>
-	<item id="91927" name="Soulshot"  icon="icon.etc_spirit_bullet_gold_i00">
-		<!-- Increases weapon's physical power. -->
-		<set name="etcitem_type" val="SOULSHOT"/>
-		<set name="commissionItemType" val="SOULSHOT"/>
-		<set name="handler" val="SoulShots"/>
-		<set name="default_action" val="SOULSHOT" />
-		<set name="immediate_effect" val="true" />
-		<set name="price" val="20" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
-		<set name="is_sellable" val="false" />
-		<set name="is_stackable" val="true" />
-		<skills>
-			<skill id="2154" level="1"/> <!-- TODO find the correct skill Soulshot (S-grade) -->
-		</skills>
-	</item>
-	<item id="91928" name="Spiritshot"  icon="icon.etc_spell_shot_gold_i00">
-		<!-- Increases weapon's magic power. -->
-		<set name="commissionItemType" val="SPIRITSHOT"/>
-		<set name="etcitem_type" val="SOULSHOT"/>
-		<set name="handler" val="SpiritShot"/>
-		<set name="default_action" val="SPIRITSHOT" />
-		<set name="immediate_effect" val="true" />
-		<set name="price" val="30" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
-		<set name="is_sellable" val="false" />
-		<set name="is_stackable" val="true" />
-		<skills>
-			<skill id="2159" level="1"/> <!-- TODO find correct skill Spiritshot (S-grade) -->
-		</skills>
-	</item>
-	<item id="91929" name="Blessed Soulshot"  icon="icon.etc_spirit_bullet_gold_i00">
-		<!-- Increases weapon's physical power. -->
-		<set name="etcitem_type" val="SOULSHOT"/>
-		<set name="commissionItemType" val="SOULSHOT"/>
-		<set name="handler" val="BlessedSoulShots"/>
-		<set name="default_action" val="SOULSHOT" />
-		<set name="immediate_effect" val="true" />
-		<set name="price" val="20" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
-		<set name="is_sellable" val="false" />
-		<set name="is_stackable" val="true" />
-		<skills>
-			<skill id="8920" level="1"/> <!-- TODO find correct skill blessed soulshot (S-grade) -->
-		</skills>
-	</item>
-	<item id="91930" name="Blessed Spiritshot"  icon="icon.etc_spell_shot_gold_i01">
-		<!-- Increases weapon's magic power. -->
-		<set name="default_action" val="SPIRITSHOT" />
-		<set name="handler" val="BlessedSpiritShot"/>
-		<set name="etcitem_type" val="SOULSHOT"/>
-		<set name="commissionItemType" val="SPIRITSHOT"/>
-		<set name="immediate_effect" val="true" />
-		<set name="price" val="75" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
-		<set name="is_sellable" val="false" />
-		<set name="is_stackable" val="true" />
-		<skills>
-			<skill id="2164" level="1"/> <!-- TODO find correct skill Blessed Spiritshot (S-grade) -->
-		</skills>
-	</item>
-	<item id="91931" name="Adventurer's Mark Lv. 5"  icon="icon.etc_crest_blue_i00">
-		<!-- Received after completing the Adventurer's Journey mission. When in inventory, HP/ MP Recovery Bonus +25%. Double-click to see the list of hunting zones for each character level. -->
-		<set name="default_action" val="SHOW_HTML" />
-		<set name="immediate_effect" val="true" />
-		<set name="weight" val="10" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
-	</item>
-	<armor id="91932" name="Adventurer's Brooch" icon="icon.etc_bm_brooch_lavianrose_i00">
-		<!-- Activates 1 jewel slot. -->
-		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="underwear" />
-		<set name="immediate_effect" val="true" />
-		<set name="weight" val="10" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
-		<set name="is_sellable" val="false" />
-	</armor>
-	<armor id="91933" name="Adventurer's Agathion Bracelet" icon="icon.agathion_magmeld_teleport">
-		<!-- Activates 1 Agathion slot. -->
-		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="lbracelet" />
-		<set name="immediate_effect" val="true" />
-		<set name="weight" val="100" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
-		<set name="is_sellable" val="false" />
-	</armor>
-	<armor id="91934" name="Adventurer's Bracelet" icon="icon.etc_rbracelet_c_i00">
-		<!-- When equipped, opens up 1 Talisman slot. -->
-		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="rbracelet" />
-		<set name="immediate_effect" val="true" />
-		<set name="weight" val="150" />
-		<set name="price" val="1080000" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
-		<set name="is_sellable" val="false" />
-	</armor>
-	<armor id="91935" name="Adventurer's Agathion Griffin" icon="icon.griffin_vehicle">
-		<!-- Can be used to obtain the power of Agathion Griffin. Summons Agathion from the main slot. Activates Special Abilities. <Special Abilities>. P. Def. increased. <Unique Abilities>. P. Def. +5. -->
-		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="gloves" />
-		<set name="immediate_effect" val="true" />
-		<set name="weight" val="5" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
-		<set name="is_sellable" val="false" />
-	</armor>
-	<armor id="91936" name="Jewel of Adventurer Fragment" icon="icon.etc_crystal_piece_i00">
-		<!-- Fragment of an unknown jewel. Max HP +5. The effect doesn't stack if two identical jewels are equipped, the higher-level jewel takes precedence. -->
-		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="brooch_jewel" />
-		<set name="immediate_effect" val="true" />
-		<set name="weight" val="5" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
-		<set name="is_sellable" val="false" />
-	</armor>
-	<armor id="91937" name="Adventurer's Talisman" icon="icon.etc_talisman_i07">
-		<!-- M. Def. +5. The effect doesn't stack if two identical talismans are equipped. -->
-		<set name="default_action" val="EQUIP" />
-		<set name="immediate_effect" val="true" />
-		<set name="weight" val="120" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
-		<set name="is_sellable" val="false" />
-	</armor>
-	<item id="91938" name="Primeval Isle's Prolongating Stone"  icon="icon.timezone_refill_1">
-		<!-- Prolongs your Primeval Isle's raid for 60 min. -->
-		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
-		<set name="weight" val="5" />
-		<set name="is_sellable" val="false" />
-		<set name="is_stackable" val="true" />
-	</item>
-	<item id="91939" name="Ancient Pirates' Tomb's Prolongating Stone"  icon="icon.timezone_refill_2">
-		<!-- Prolongs your Ancient Pirates' Tomb's raid for 60 min. -->
-		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
-		<set name="weight" val="5" />
-		<set name="is_sellable" val="false" />
-		<set name="is_stackable" val="true" />
-	</item>
-	<item id="91940" name="Heavenly Rift's Prolongating Stone"  icon="icon.etc_scroll_of_return_i03">
-		<!-- Prolongs your Heavenly Rift's raid for 60 min. -->
-		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
-		<set name="weight" val="5" />
-		<set name="is_sellable" val="false" />
-		<set name="is_stackable" val="true" />
-	</item>
-	<item id="91941" name="Blessing Chest"  icon="icon.event_six_party_box_i00">
-		<!-- Double-click to obtain Sayha's Blessing. There is a small chance to obtain an additional item. -->
-		<set name="default_action" val="PEEL" />
-		<set name="immediate_effect" val="true" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
-		<set name="is_sellable" val="false" />
-		<set name="is_stackable" val="true" />
-	</item>
-	<item id="91942" name="Crystal of Light"  icon="icon.high_energy_condense_i00">
-		<!-- Mysterious crystal that contains the light energy. Needed to learn Collect Light Souls Lv. 2. -->
-		<set name="weight" val="120" />
-		<set name="is_sellable" val="false" />
-		<set name="is_stackable" val="true" />
-	</item>
-	<item id="91943" name="Crystal of Shadows"  icon="icon.high_energy_condense_i01">
-		<!-- Mysterious crystal that contains the shadow energy. Needed to learn Collect Shadow Souls Lv. 2. -->
-		<set name="weight" val="120" />
-		<set name="is_sellable" val="false" />
-		<set name="is_stackable" val="true" />
-	</item>
-	<item id="91944" name="Book of Light"  icon="icon.giant_book_i02">
-		<!-- Mysterious book that contains the light energy. Needed to learn Light Master Lv. 2. -->
-		<set name="weight" val="120" />
-		<set name="is_sellable" val="false" />
-		<set name="is_stackable" val="true" />
-	</item>
-	<item id="91945" name="Book of Darkness"  icon="icon.giant_book_i00">
-		<!-- Mysterious book that contains the shadow energy. Needed to learn Shadow Master Lv. 2. -->
-		<set name="weight" val="120" />
-		<set name="is_sellable" val="false" />
-		<set name="is_stackable" val="true" />
-	</item>
-	<item id="91946" name="Spellbook: Mount Griffin"  icon="icon.etc_spellbook_red_i00">
-		<!-- Spellbook needed to learn Mount Griffin. Required level: 76 (after the 3rd class change). -->
-		<set name="weight" val="120" />
-		<set name="is_sellable" val="false" />
-		<set name="is_stackable" val="true" />
-	</item>
-	<item id="91947" name="Admiral's Estoc +7"  icon="icon.weapon_rapier_i00">
-		<!-- Double-click to obtain Admiral's Estoc enchanted to +7. -->
-		<set name="default_action" val="PEEL" />
-		<set name="immediate_effect" val="true" />
-		<set name="is_dropable" val="false" />
-		<set name="is_sellable" val="false" />
-		<set name="is_stackable" val="true" />
-	</item>
-	<item id="91948" name="Saber Tooth +7"  icon="icon.weapon_invincible_blade_i00">
-		<!-- Double-click to obtain Saber Tooth +7. -->
-		<set name="default_action" val="PEEL" />
-		<set name="immediate_effect" val="true" />
-		<set name="is_dropable" val="false" />
-		<set name="is_sellable" val="false" />
-		<set name="is_stackable" val="true" />
-	</item>
-	<weapon id="91949" name="Novice Warrior's Rapier" icon="icon.weapon_sealed_rapier_i00">
-		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="RAPIER" />
-		<set name="bodypart" val="rhand" />
-		<set name="immediate_effect" val="true" />
-		<set name="weight" val="1300" />
-		<set name="soulshots" val="1" />
-		<set name="spiritshots" val="1" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
-		<stats>
-			<stat type="pAtk">6</stat>
-			<stat type="mAtk">5</stat>
-			<stat type="rCrit">10</stat>
-			<stat type="accCombat">8</stat>
-			<stat type="pAtkSpd">406</stat>
-			<stat type="randomDamage">20</stat>
-		</stats>
-	</weapon>
-	<weapon id="91950" name="Novice Warrior's Ancient Sword" icon="icon.weapon_tulwar_i00">
-		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="ANCIENTSWORD" />
-		<set name="bodypart" val="lrhand" />
-		<set name="immediate_effect" val="true" />
-		<set name="weight" val="1530" />
-		<set name="soulshots" val="1" />
-		<set name="spiritshots" val="1" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
-		<stats>
-			<stat type="pAtk">11</stat>
-			<stat type="mAtk">5</stat>
-			<stat type="rCrit">10</stat>
-			<stat type="accCombat">5</stat>
-			<stat type="pAtkSpd">379</stat>
-			<stat type="randomDamage">15</stat>
-			<stat type="pAtkRange">40</stat>
-		</stats>
-	</weapon>
-	<item id="91951" name="Scroll: Enchant Talisman of Baium"  icon="icon.etc_charm_of_courage_i05">
-		<!-- Required to enchant Talisman of Baium. The maximum enchant level is +10. In case of failure the item disappears. -->
-		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="is_sellable" val="false" />
-		<set name="is_stackable" val="true" />
-	</item>
-	<armor id="91952" name="Ring of Insolence" icon="icon.ring_of_oman">
-		<!-- Increases Sleep Resistance. The effect doesn't stack if two identical items are equipped. -->
-		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="rfinger;lfinger" />
-		<set name="immediate_effect" val="true" />
-		<set name="weight" val="150" />
-		<set name="price" val="616000" />
-		<stats>
-			<stat type="mDef">40</stat>
-		</stats>
-	</armor>
-	<armor id="91953" name="Dragon Valley's Earring" icon="icon.accessary_catseye_earing_i00">
-		<!-- Increases Stun Resistance. The effect doesn't stack if two identical items are equipped. -->
-		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="rear;lear" />
-		<set name="immediate_effect" val="true" />
-		<set name="weight" val="150" />
-		<set name="price" val="924000" />
-		<stats>
-			<stat type="mDef">60</stat>
-		</stats>
-	</armor>
-	<item id="91954" name="Scroll of Escape: Tower of Insolence (1st Floor)"  icon="icon.etc_scroll_of_return_i04">
-		<!-- Teleports to the 1st floor of the Tower of Insolence. -->
-		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="weight" val="5" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
-		<set name="is_stackable" val="true" />
-	</item>
-	<item id="91955" name="Scroll of Escape: Tower of Insolence (2nd Floor)"  icon="icon.etc_scroll_of_return_i04">
-		<!-- Teleports to the 2nd floor of the Tower of Insolence. -->
-		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="weight" val="5" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
-		<set name="is_stackable" val="true" />
-	</item>
-	<item id="91956" name="Scroll of Escape: Tower of Insolence (3rd Floor)"  icon="icon.etc_scroll_of_return_i04">
-		<!-- Teleports to the 3rd floor of the Tower of Insolence. -->
-		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="weight" val="5" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
-		<set name="is_stackable" val="true" />
-	</item>
-	<item id="91957" name="Scroll of Escape: Tower of Insolence (4th Floor)"  icon="icon.etc_scroll_of_return_i04">
-		<!-- Teleports to the 4th floor of the Tower of Insolence. -->
-		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="weight" val="5" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
-		<set name="is_stackable" val="true" />
-	</item>
-	<item id="91958" name="Scroll of Escape: Tower of Insolence (5th Floor)"  icon="icon.etc_scroll_of_return_i04">
-		<!-- Teleports to the 5th floor of the Tower of Insolence. -->
-		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="weight" val="5" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
-		<set name="is_stackable" val="true" />
-	</item>
-	<item id="91959" name="Scroll of Escape: Tower of Insolence (6th Floor)"  icon="icon.etc_scroll_of_return_i04">
-		<!-- Teleports to the 6th floor of the Tower of Insolence. -->
-		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="weight" val="5" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
-		<set name="is_stackable" val="true" />
-	</item>
-	<item id="91960" name="Scroll of Escape: Tower of Insolence (7th Floor)"  icon="icon.etc_scroll_of_return_i04">
-		<!-- Teleports to the 7th floor of the Tower of Insolence. -->
-		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="weight" val="5" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
-		<set name="is_stackable" val="true" />
-	</item>
-	<item id="91961" name="Scroll of Escape: Tower of Insolence (8th Floor)"  icon="icon.etc_scroll_of_return_i04">
-		<!-- Teleports to the 8th floor of the Tower of Insolence. -->
-		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="weight" val="5" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
-		<set name="is_stackable" val="true" />
-	</item>
-	<item id="91962" name="Scroll of Escape: Tower of Insolence (9th Floor)"  icon="icon.etc_scroll_of_return_i04">
-		<!-- Teleports to the 9th floor of the Tower of Insolence. -->
-		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="weight" val="5" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
-		<set name="is_stackable" val="true" />
-	</item>
-	<item id="91963" name="Scroll of Escape: Tower of Insolence (10th Floor)"  icon="icon.etc_scroll_of_return_i04">
-		<!-- Teleports to the 10th floor of the Tower of Insolence. -->
-		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="weight" val="5" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
-		<set name="is_stackable" val="true" />
-	</item>
-	<item id="91964" name="Scroll of Escape: Tower of Insolence (11th Floor)"  icon="icon.etc_scroll_of_return_i04">
-		<!-- Teleports to the 11th floor of the Tower of Insolence. -->
-		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="weight" val="5" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
-		<set name="is_stackable" val="true" />
-	</item>
-	<item id="91965" name="Scroll of Escape: Tower of Insolence (12th Floor)"  icon="icon.etc_scroll_of_return_i04">
-		<!-- Teleports to the 12th floor of the Tower of Insolence. -->
-		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="weight" val="5" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
-		<set name="is_stackable" val="true" />
-	</item>
-	<item id="91966" name="Scroll: Enchant Ring of Insolence"  icon="icon.etc_penalty_recovery_i00">
-		<!-- Required to enchant Ring of Insolence. The maximum enchant level is +10. -->
-		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="is_sellable" val="false" />
-		<set name="is_stackable" val="true" />
-	</item>
-	<item id="91967" name="Scroll: Enchant Dragon Valley's Earring"  icon="icon.etc_penalty_recovery_i02">
-		<!-- Required to enchant Dragon Valley's Earring. The maximum enchant level is +10. -->
-		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="is_sellable" val="false" />
-		<set name="is_stackable" val="true" />
-	</item>
-	<item id="91968" name="Enhanced Warrior's Rapier Chest"  icon="icon.weapon_sealed_rapier_i00">
-		<!-- Double-click to obtain Warrior's Rapier +16. -->
-		<set name="default_action" val="PEEL" />
-		<set name="immediate_effect" val="true" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
-		<set name="is_sellable" val="false" />
-		<set name="is_stackable" val="true" />
-	</item>
-	<item id="91969" name="Enhanced Ancient Warrior's Sword Chest"  icon="icon.weapon_tulwar_i00">
-		<!-- Double-click to obtain Ancient Warrior's Sword +16. -->
-		<set name="default_action" val="PEEL" />
-		<set name="immediate_effect" val="true" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
-		<set name="is_sellable" val="false" />
-		<set name="is_stackable" val="true" />
-	</item>
-	<item id="91970" name="Ecliptic Axe +7"  icon="icon.weapon_eclipse_axe_i00">
-		<!-- Double-click to obtain Ecliptic Axe +7. -->
-		<set name="default_action" val="PEEL" />
-		<set name="immediate_effect" val="true" />
-		<set name="is_dropable" val="false" />
-		<set name="is_sellable" val="false" />
-		<set name="is_stackable" val="true" />
-	</item>
-	<item id="91971" name="Star Candy"  icon="BranchSys.icon.br_valentine_agathion_pack_i00">
-		<!-- Sayha's Grace points +10,000. -->
-		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
-		<set name="is_sellable" val="false" />
-		<set name="is_stackable" val="true" />
-	</item>
-	<item id="91972" name="Heavenly Rift Ticket"  icon="icon.etc_ticket_red_i00">
-		<!-- Coupon for entering the Heavenly Rift from the Dimensional Vortex on the 1st floor of the Tower of Insolence. -->
-		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="weight" val="5" />
-		<set name="is_sellable" val="false" />
-		<set name="is_stackable" val="true" />
-	</item>
-	<item id="91973" name="Special Dragon's Miracle Potion"  icon="icon.bm_dragon_posion">
-		<!-- For 20 min., Acquired XP/ SP +50%, P. Atk. +250, M. Atk. +380, P. Def. +320, M. Def. +450, P./ M. Critical Rate +30, P./ M. Critical Damage +10%, Atk. Spd./ Casting Spd. +50, Max HP/ CP +2500, Max MP +1500, HP/ MP Recovery Bonus +10, Sayha's Grace Consumption -20%. Has a certain chance to absorb 5% of the inflicted damage as HP. <Note> If used when the Dragon's Miracle Potion effect is active, the buff will be replaced. -->
-		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
-		<set name="is_sellable" val="false" />
-		<set name="is_stackable" val="true" />
-	</item>
-	<item id="91974" name="HP Potion"  icon="icon.etc_lesser_potion_red_i00">
-		<!-- Instantly recovers 50 HP. The remaining points are used to recover CP. -->
-		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="weight" val="1" />
-		<set name="price" val="30" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
-		<set name="is_sellable" val="false" />
-		<set name="is_stackable" val="true" />
-	</item>
-	<item id="91975" name="Sayha's Victory"  icon="icon.etc_ssq_i00">
-		<!-- For 20 min., Max HP/ MP/ CP +300, P./ M. Atk. +200, Atk. Spd./ Casting Spd. +60, P./ M. Critical Rate +20, P./ M. Critical Damage +10%. -->
-		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
-		<set name="is_sellable" val="false" />
-		<set name="is_stackable" val="true" />
-	</item>
-	<item id="91976" name="Unidentified Rock"  icon="icon.destiny_stone">
-		<!-- Mysterious stone. Double-click to obtain one of the following items: Spirit Ore, Heavenly Rift Ticket, HP Potion, Wind Spirit Evolution Stone, Tower of Insolence Scroll: Paralysis Resistance. -->
-		<set name="default_action" val="PEEL" />
-		<set name="immediate_effect" val="true" />
-		<set name="price" val="10000" />
-		<set name="is_dropable" val="false" />
-		<set name="is_stackable" val="true" />
-	</item>
-	<item id="91977" name="Tower of Insolence Scroll: Paralysis Resistance"  icon="icon.scroll_of_verification_i08">
-		<!-- Increases Paralysis Resistance for 20 min. -->
-		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="is_dropable" val="false" />
-		<set name="is_sellable" val="false" />
-		<set name="is_stackable" val="true" />
-	</item>
-	<item id="91978" name="Dragon Valley Scroll: Mental Resistance"  icon="icon.scroll_of_verification_i08">
-		<!-- Increases Mental Resistance for 20 min. -->
-		<set name="default_action" val="SKILL_REDUCE" />
-		<set name="is_dropable" val="false" />
-		<set name="is_sellable" val="false" />
-		<set name="is_stackable" val="true" />
-	</item>
-	<item id="91979" name="Giants' Sign Chest"  icon="icon.bm_sheep_agathion_30d_box">
-		<!-- Double-click to obtain one of the following items: Giants' Coin Pouch, a rare accessory Lv. 3, Venir's Talisman Lv. 24, Special Sayha's Cloak +10, Scroll: Dragon Berserker, Feather of Blessing, or other rare items. -->
-		<set name="default_action" val="PEEL" />
-		<set name="immediate_effect" val="true" />
-		<set name="is_dropable" val="false" />
-		<set name="is_sellable" val="false" />
-		<set name="is_stackable" val="true" />
-	</item>
-	<item id="91980" name="Giants' Coin Pouch"  icon="icon.pouch_i01">
-		<!-- Double-click to obtain random amount of adena. -->
-		<set name="default_action" val="PEEL" />
-		<set name="immediate_effect" val="true" />
-		<set name="is_dropable" val="false" />
-		<set name="is_sellable" val="false" />
-		<set name="is_stackable" val="true" />
-	</item>
-	<item id="91981" name="Giants' Coin"  icon="icon.etc_magic_coin_gold_i01">
-		<!-- Coin used by ancient Giants. Can be exchanged for various items by the Dimensional Merchant. -->
-		<set name="is_dropable" val="false" />
-		<set name="is_sellable" val="false" />
-		<set name="is_stackable" val="true" />
-	</item>
-	<item id="91982" name="+10 Special White Sayha's Cloak Chest"  icon="icon.bm_nebit_box">
-		<!-- Double-click to obtain Special White Sayha's Cloak +10. -->
-		<set name="default_action" val="PEEL" />
-		<set name="immediate_effect" val="true" />
-		<set name="is_dropable" val="false" />
-		<set name="is_sellable" val="false" />
-		<set name="is_stackable" val="true" />
-	</item>
-	<item id="91983" name="Primeval Isle's Prolongating Stone"  icon="icon.timezone_refill_1">
-		<!-- Prolongs your Primeval Isle's raid for 60 min. -->
-		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
-		<set name="weight" val="5" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
-		<set name="is_sellable" val="false" />
-		<set name="is_stackable" val="true" />
-	</item>
-	<item id="91984" name="Ancient Pirates' Tomb's Prolongating Stone"  icon="icon.timezone_refill_2">
-		<!-- Prolongs your Ancient Pirates' Tomb's raid for 60 min. -->
-		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
-		<set name="weight" val="5" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
-		<set name="is_sellable" val="false" />
-		<set name="is_stackable" val="true" />
-	</item>
-	<item id="91985" name="Heavenly Rift's Prolongating Stone"  icon="icon.etc_scroll_of_return_i03">
-		<!-- Prolongs your Heavenly Rift's raid for 60 min. -->
-		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
-		<set name="weight" val="5" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
-		<set name="is_sellable" val="false" />
-		<set name="is_stackable" val="true" />
-	</item>
-	<weapon id="91986" name="Monster Only (Grail Apostle Spear)" icon="icon.weapon_monster_i00">
-		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="ETC" />
-		<set name="bodypart" val="lrhand" />
-		<set name="immediate_effect" val="true" />
-		<set name="weight" val="2140" />
-		<set name="price" val="136000" />
-		<set name="soulshots" val="1" />
-		<set name="spiritshots" val="1" />
-		<stats>
-			<stat type="pAtk">24</stat>
-			<stat type="mAtk">17</stat>
-			<stat type="rCrit">8</stat>
-			<stat type="accCombat">-3.75</stat>
-			<stat type="pAtkSpd">325</stat>
-			<stat type="randomDamage">10</stat>
-			<stat type="pAtkRange">80</stat>
-		</stats>
-	</weapon>
-	<item id="91987" name="+8 Blue Wolf Heavy Armor Set"  icon="icon.armor_t68_u_i00">
-		<!-- Double-click to obtain +8 Blue Wolf heavy armor set (breastplate, gaiters, helmet, gloves, boots). -->
-		<set name="default_action" val="PEEL" />
-		<set name="immediate_effect" val="true" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
-		<set name="is_sellable" val="false" />
-		<set name="is_stackable" val="true" />
-	</item>
-	<item id="91988" name="+8 Blue Wolf Light Armor Set"  icon="icon.armor_t69_ul_i00">
-		<!-- Double-click to obtain +8 Blue Wolf light armor set (leather armor, helmet, gloves, boots). -->
-		<set name="default_action" val="PEEL" />
-		<set name="immediate_effect" val="true" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
-		<set name="is_sellable" val="false" />
-		<set name="is_stackable" val="true" />
-	</item>
-	<item id="91989" name="+8 Blue Wolf Robe Set"  icon="icon.armor_t70_u_i00">
-		<!-- Double-click to obtain +8 Blue Wolf robe set (tunic, stockings, helmet, gloves, boots). -->
-		<set name="default_action" val="PEEL" />
-		<set name="immediate_effect" val="true" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
-		<set name="is_sellable" val="false" />
-		<set name="is_stackable" val="true" />
-	</item>
-	<item id="91990" name="+8 Doom Heavy Armor Set"  icon="icon.armor_t71_ul_i00">
-		<!-- Double-click to obtain +8 Doom heavy armor set (plate armor, helmet, gloves, boots). -->
-		<set name="default_action" val="PEEL" />
-		<set name="immediate_effect" val="true" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
-		<set name="is_sellable" val="false" />
-		<set name="is_stackable" val="true" />
-	</item>
-	<item id="91991" name="+8 Doom Light Armor Set"  icon="icon.armor_t72_ul_i00">
-		<!-- Double-click to obtain +8 Doom light armor set (leather armor, helmet, gloves, boots). -->
-		<set name="default_action" val="PEEL" />
-		<set name="immediate_effect" val="true" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
-		<set name="is_sellable" val="false" />
-		<set name="is_stackable" val="true" />
-	</item>
-	<item id="91992" name="+8 Doom Robe Set"  icon="icon.armor_t73_u_i00">
-		<!-- Double-click to obtain +8 Doom robe set (tunic, stockings, helmet, gloves, boots). -->
-		<set name="default_action" val="PEEL" />
-		<set name="immediate_effect" val="true" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
-		<set name="is_sellable" val="false" />
-		<set name="is_stackable" val="true" />
-	</item>
-	<item id="91993" name="+8 Avadon Robe Set"  icon="icon.armor_t59_ul_i00">
-		<!-- Double-click to obtain +8 Avadon heavy armor set (breastplate, gaiters, circlet, gloves, boots). -->
-		<set name="default_action" val="PEEL" />
-		<set name="immediate_effect" val="true" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
-		<set name="is_sellable" val="false" />
-		<set name="is_stackable" val="true" />
-	</item>
-	<item id="91994" name="+8 Plated Leather Armor Set"  icon="icon.armor_t47_u_i00">
-		<!-- Double-click to obtain +8 Plated Leather armor set (armor, gaiters, boots). -->
-		<set name="default_action" val="PEEL" />
-		<set name="immediate_effect" val="true" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
-		<set name="is_sellable" val="false" />
-		<set name="is_stackable" val="true" />
-	</item>
-	<item id="91995" name="Luxury Box (A-grade)"  icon="icon.bm_sayha_gold_present">
-		<!-- Double-click to obtain Sayha's Blessing (3 pcs.). There is a small chance to obtain an additional item. -->
-		<set name="default_action" val="PEEL" />
-		<set name="immediate_effect" val="true" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
-		<set name="is_sellable" val="false" />
-		<set name="is_stackable" val="true" />
-	</item>
-	<item id="91996" name="Scroll of Escape Pack: Tower of Insolence"  icon="icon.etc_exchange_box_i00">
-		<!-- Double-click to obtain Scroll of Escape: Tower of Insolence (1-7th Floors). -->
-		<set name="default_action" val="PEEL" />
-		<set name="immediate_effect" val="true" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
-		<set name="is_sellable" val="false" />
-		<set name="is_stackable" val="true" />
-	</item>
-	<item id="91997" name="Primeval Isle's Prolongating Stone Pack"  icon="icon.timezone_refill_1">
-		<!-- Double-click to obtain Primeval Isle's Prolongating Stone. -->
-		<set name="default_action" val="PEEL" />
-		<set name="immediate_effect" val="true" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
-		<set name="is_sellable" val="false" />
-		<set name="is_stackable" val="true" />
-	</item>
-	<item id="91998" name="Primeval Isle's Prolongating Stone Pack"  icon="icon.timezone_refill_1">
-		<!-- Double-click to obtain Primeval Isle's Prolongating Stone. -->
-		<set name="default_action" val="PEEL" />
-		<set name="immediate_effect" val="true" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
-		<set name="is_sellable" val="false" />
-		<set name="is_stackable" val="true" />
-	</item>
-	<item id="91999" name="Water Spirit Jewel Shard"  icon="icon.elemental_water_stone_i00">
-		<!-- Rough Jewel with the power of Wind Attribute. Use it to acquire 9300 Water Attribute XP points. -->
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
-		<set name="is_sellable" val="false" />
-		<set name="is_stackable" val="true" />
-	</item>
+    <weapon id="91900" name="Colichemarde" icon="icon.weapon_colichemarde_i00">
+        <set name="default_action" val="EQUIP"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="crystal_type" val="B"/>
+        <set name="weight" val="1300"/>
+        <set name="price" val="13100000"/>
+        <set name="enchant_enabled" val="1"/>
+        <stats>
+            <stat type="pAtk">185</stat>
+            <stat type="mAtk">135</stat>
+            <stat type="rCrit">10</stat>
+            <stat type="accCombat">8</stat>
+            <stat type="pAtkSpd">406</stat>
+            <stat type="randomDamage">20</stat>
+        </stats>
+    </weapon>
+    <weapon id="91901" name="Military Fleuret" icon="icon.weapon_assult_fleuret_i00">
+        <set name="default_action" val="EQUIP"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="crystal_type" val="B"/>
+        <set name="weight" val="1300"/>
+        <set name="price" val="8680000"/>
+        <set name="enchant_enabled" val="1"/>
+        <stats>
+            <stat type="pAtk">167</stat>
+            <stat type="mAtk">124</stat>
+            <stat type="rCrit">10</stat>
+            <stat type="accCombat">8</stat>
+            <stat type="pAtkSpd">406</stat>
+            <stat type="randomDamage">20</stat>
+        </stats>
+    </weapon>
+    <weapon id="91902" name="?clair Bijou" icon="icon.weapon_greed_stinger_i00">
+        <set name="default_action" val="EQUIP"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="crystal_type" val="A"/>
+        <set name="weight" val="1300"/>
+        <set name="price" val="26968400"/>
+        <set name="enchant_enabled" val="1"/>
+        <stats>
+            <stat type="pAtk">239</stat>
+            <stat type="mAtk">165</stat>
+            <stat type="rCrit">10</stat>
+            <stat type="accCombat">8</stat>
+            <stat type="pAtkSpd">406</stat>
+            <stat type="randomDamage">20</stat>
+        </stats>
+    </weapon>
+    <weapon id="91903" name="Lacerator" icon="icon.weapon_greed_stinger_i00">
+        <set name="default_action" val="EQUIP"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="crystal_type" val="A"/>
+        <set name="weight" val="1300"/>
+        <set name="price" val="20741000"/>
+        <set name="enchant_enabled" val="1"/>
+        <stats>
+            <stat type="pAtk">221</stat>
+            <stat type="mAtk">156</stat>
+            <stat type="rCrit">10</stat>
+            <stat type="accCombat">8</stat>
+            <stat type="pAtkSpd">406</stat>
+            <stat type="randomDamage">20</stat>
+        </stats>
+    </weapon>
+    <weapon id="91904" name="White Lightning" icon="icon.weapon_lightning_blaze_i00">
+        <set name="default_action" val="EQUIP"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="crystal_type" val="A"/>
+        <set name="weight" val="1300"/>
+        <set name="price" val="14098000"/>
+        <set name="enchant_enabled" val="1"/>
+        <stats>
+            <stat type="pAtk">203</stat>
+            <stat type="mAtk">129</stat>
+            <stat type="rCrit">10</stat>
+            <stat type="accCombat">8</stat>
+            <stat type="pAtkSpd">406</stat>
+            <stat type="randomDamage">20</stat>
+        </stats>
+    </weapon>
+    <weapon id="91905" name="Laevateinn" icon="icon.weapon_leavatein_i00">
+        <set name="default_action" val="EQUIP"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="crystal_type" val="S"/>
+        <set name="weight" val="1300"/>
+        <set name="price" val="42759400"/>
+        <set name="enchant_enabled" val="1"/>
+        <stats>
+            <stat type="pAtk">267</stat>
+            <stat type="mAtk">182</stat>
+            <stat type="rCrit">10</stat>
+            <stat type="accCombat">8</stat>
+            <stat type="pAtkSpd">406</stat>
+            <stat type="randomDamage">20</stat>
+        </stats>
+    </weapon>
+    <item id="91906" name="Energy Rune" icon="icon.bm_freya_rune">
+        <!-- Available for 30 days. When in inventory, recovers Sayha's Grace points. -->
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
+    </item>
+    <item id="91907" name="+10 High Quality Agathion Box" icon="icon.npoint_earthworm_30day_box">
+        <!-- Double-click to obtain a random +10 High Quality Agathion. -->
+        <set name="default_action" val="PEEL"/>
+        <set name="immediate_effect" val="true"/>
+        <restriction dropable="false" sellable="false" stackable="true"/>
+    </item>
+    <item id="91908" name="+12 Weapon Pack (S-grade)" icon="icon.npoint_earthworm_30day_box">
+        <!-- Double-click to obtain a +12 S-grade weapon. -->
+        <set name="default_action" val="PEEL"/>
+        <set name="immediate_effect" val="true"/>
+        <restriction dropable="false" sellable="false" stackable="true"/>
+    </item>
+    <item id="91909" name="Wind Treasure Chest" icon="icon.sayha2017_box_i01">
+        <!-- Double-click to obtain a +16 Weapon Pack (B-grade), a Spirit Evolution Stone, a Weapon/ Armor Pack (B/ C-grade), Dragon Scroll or another rare item. -->
+        <set name="default_action" val="PEEL"/>
+        <set name="immediate_effect" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
+    </item>
+    <item id="91910" name="Sayha's Blessing" icon="icon.etc_wind_potion_i00">
+        <!-- Sayha's Grace points +35,000. Reqiured level: 1-75. -->
+        <set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
+    </item>
+    <item id="91911" name="Sayha's Effect Scroll" icon="icon.etc_ssq_i00">
+        <!-- For 20 min., grants the following effects: Sayha's Shield, Sayha's Magic Barrier, Sayha�s Decrease Weight, Sayha's Clarity, Sayha's Berserker Spirit, Sayha's Wind Walk, Sayha's Might, Sayha's Focus, Sayha's Haste, Sayha's Death Whisper, Sayha's Empower, Sayha's Wild Magic, Sayha's Acumen, Sayha's Concentration, Sayha's Victory, Sayha's Recover HP, Sayha's Recover MP. Cooldown: 1 min. Can't be used when the Sayha's Recover MP effect is active. Note: The Sayha's Victory effect does not stack if the identical effect is active. -->
+        <set name="default_action" val="SKILL_REDUCE"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
+    </item>
+    <item id="91912" name="HP Potion" icon="icon.etc_lesser_potion_red_i00">
+        <!-- Instantly recovers 50 HP. The remaining points are used to recover CP. -->
+        <set name="default_action" val="SKILL_REDUCE"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="etcitem_type" val="POTION"/>
+        <set name="commissionItemType" val="POTION"/>
+        <set name="handler" val="ItemSkills"/>
+        <set name="weight" val="1"/>
+        <set name="price" val="30"/>
+        <restriction sellable="false" stackable="true"/>
+        <skills>
+            <skill id="50151" level="1"/> <!-- HP Potion -->
+        </skills>
+    </item>
+    <item id="91913" name="Aden Spellbook Chest" icon="icon.bm_freya_sirr_box">
+        <!-- Double-click to obtain a spellbook for learning skills (for all races, except Orcs). <Spellbook List>. Spellbook: Empower, Spellbook: Focus, Spellbook: Wild Magic, Spellbook: Haste, Spellbook: Acumen, Spellbook: Death Whisper, Spellbook: Clarity, Spellbook: Berserker Spirit. -->
+        <set name="default_action" val="PEEL"/>
+        <set name="immediate_effect" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
+    </item>
+    <item id="91914" name="Aden Amulet Chest" icon="icon.bm_freya_2016_gift_box">
+        <!-- Double-click to obtain an amulet for learning Orc skills. <Amulet List>. Amulet: Chant of Focus, Amulet: Chant of Wild Magic, Amulet: Chant of Empower, Amulet: Chant of Acumen, Amulet: Chant of Haste, Amulet: Chant of Clarity, Amulet: Chant of Death Whisper, Amulet: Chant of Berserker Spirit. -->
+        <set name="default_action" val="PEEL"/>
+        <set name="immediate_effect" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
+    </item>
+    <weapon id="91915" name="Enhanced Ancient Warrior's Sword" icon="icon.weapon_tulwar_i00">
+        <!-- Cannot be enchanted/ augmented, runes cannot be inserted. -->
+        <set name="default_action" val="EQUIP"/>
+        <set name="weapon_type" val="DUALBLUNT"/>
+        <set name="bodypart" val="lrhand"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="weight" val="1530"/>
+        <set name="soulshots" val="1"/>
+        <set name="spiritshots" val="1"/>
+        <restriction tradable="false" dropable="false" depositable="false"/>
+        <stats>
+            <stat type="pAtk">35</stat>
+            <stat type="mAtk">21</stat>
+            <stat type="rCrit">10</stat>
+            <stat type="accCombat">5</stat>
+            <stat type="pAtkSpd">379</stat>
+            <stat type="randomDamage">10</stat>
+            <stat type="pAtkRange">40</stat>
+        </stats>
+    </weapon>
+    <weapon id="91916" name="Enhanced Warrior's Rapier" icon="icon.weapon_sealed_rapier_i00">
+        <!-- Cannot be enchanted/ augmented, runes cannot be inserted. -->
+        <set name="default_action" val="EQUIP"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="weight" val="1300"/>
+        <restriction tradable="false" dropable="false" depositable="false"/>
+        <stats>
+            <stat type="pAtk">30</stat>
+            <stat type="mAtk">26</stat>
+            <stat type="rCrit">10</stat>
+            <stat type="accCombat">8</stat>
+            <stat type="pAtkSpd">406</stat>
+            <stat type="randomDamage">40</stat>
+        </stats>
+    </weapon>
+    <item id="91917" name="Scroll of Escape: Effective Training" icon="icon.etc_scroll_of_return_i04">
+        <!-- Teleports to Reahen in the Kamael Village. -->
+        <set name="default_action" val="SKILL_REDUCE"/>
+        <restriction tradable="false" dropable="false" depositable="false" stackable="true"/>
+    </item>
+    <item id="91918" name="Scroll of Escape: Captain Bathis" icon="icon.etc_scroll_of_return_i04">
+        <!-- Teleports to Captain Bathis in Giran Castle. -->
+        <set name="default_action" val="SKILL_REDUCE"/>
+        <restriction tradable="false" dropable="false" depositable="false" stackable="true"/>
+    </item>
+    <item id="91919" name="Scroll of Escape: Captain Bathis" icon="icon.etc_scroll_of_return_i04">
+        <!-- Teleports to Captain Bathis in Giran Castle. -->
+        <set name="default_action" val="SKILL_REDUCE"/>
+        <restriction tradable="false" dropable="false" depositable="false" stackable="true"/>
+    </item>
+    <item id="91920" name="Scroll: Magic Break" icon="icon.etc_magic_book_black_i00">
+        <!-- Scroll needed to learn Magic Break. -->
+        <set name="weight" val="120"/>
+        <restriction sellable="false" stackable="true"/>
+    </item>
+    <item id="91921" name="Scroll: Disarm" icon="icon.etc_magic_book_black_i00">
+        <!-- Scroll needed to learn Disarm. -->
+        <set name="weight" val="120"/>
+        <restriction sellable="false" stackable="true"/>
+    </item>
+    <item id="91922" name="Scroll: Lightning Barrier" icon="icon.etc_magic_book_black_i00">
+        <!-- Scroll needed to learn Lightning Barrier. -->
+        <set name="weight" val="120"/>
+        <restriction sellable="false" stackable="true"/>
+    </item>
+    <item id="91923" name="Scroll: Lightning" icon="icon.etc_magic_book_black_i00">
+        <!-- Scroll needed to learn Lightning. -->
+        <set name="weight" val="120"/>
+        <restriction sellable="false" stackable="true"/>
+    </item>
+    <item id="91924" name="Scroll: Mental Panic" icon="icon.etc_magic_book_black_i00">
+        <!-- Scroll needed to learn Mental Panic. -->
+        <set name="weight" val="120"/>
+        <restriction sellable="false" stackable="true"/>
+    </item>
+    <item id="91925" name="Scroll: Soul Stigma" icon="icon.etc_magic_book_black_i00">
+        <!-- Scroll needed to learn Soul Stigma. -->
+        <set name="weight" val="120"/>
+        <restriction sellable="false" stackable="true"/>
+    </item>
+    <item id="91926" name="+3 Dragon Belt Chest" icon="icon.etc_readybox_bronze">
+        <!-- Double-click to obtain Dragon Belt +3. -->
+        <set name="default_action" val="PEEL"/>
+        <set name="immediate_effect" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
+    </item>
+    <item id="91927" name="Soulshot" icon="icon.etc_spirit_bullet_gold_i00">
+        <!-- Increases weapon's physical power. -->
+        <set name="etcitem_type" val="SOULSHOT"/>
+        <set name="commissionItemType" val="SOULSHOT"/>
+        <set name="handler" val="SoulShots"/>
+        <set name="default_action" val="SOULSHOT"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="price" val="20"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
+        <skills>
+            <skill id="2154" level="1"/> <!-- TODO find the correct skill Soulshot (S-grade) -->
+        </skills>
+    </item>
+    <item id="91928" name="Spiritshot" icon="icon.etc_spell_shot_gold_i00">
+        <!-- Increases weapon's magic power. -->
+        <set name="commissionItemType" val="SPIRITSHOT"/>
+        <set name="etcitem_type" val="SOULSHOT"/>
+        <set name="handler" val="SpiritShot"/>
+        <set name="default_action" val="SPIRITSHOT"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="price" val="30"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
+        <skills>
+            <skill id="2159" level="1"/> <!-- TODO find correct skill Spiritshot (S-grade) -->
+        </skills>
+    </item>
+    <item id="91929" name="Blessed Soulshot" icon="icon.etc_spirit_bullet_gold_i00">
+        <!-- Increases weapon's physical power. -->
+        <set name="etcitem_type" val="SOULSHOT"/>
+        <set name="commissionItemType" val="SOULSHOT"/>
+        <set name="handler" val="BlessedSoulShots"/>
+        <set name="default_action" val="SOULSHOT"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="price" val="20"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
+        <skills>
+            <skill id="8920" level="1"/> <!-- TODO find correct skill blessed soulshot (S-grade) -->
+        </skills>
+    </item>
+    <item id="91930" name="Blessed Spiritshot" icon="icon.etc_spell_shot_gold_i01">
+        <!-- Increases weapon's magic power. -->
+        <set name="default_action" val="SPIRITSHOT"/>
+        <set name="handler" val="BlessedSpiritShot"/>
+        <set name="etcitem_type" val="SOULSHOT"/>
+        <set name="commissionItemType" val="SPIRITSHOT"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="price" val="75"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
+        <skills>
+            <skill id="2164" level="1"/> <!-- TODO find correct skill Blessed Spiritshot (S-grade) -->
+        </skills>
+    </item>
+    <item id="91931" name="Adventurer's Mark Lv. 5" icon="icon.etc_crest_blue_i00">
+        <!-- Received after completing the Adventurer's Journey mission. When in inventory, HP/ MP Recovery Bonus +25%. Double-click to see the list of hunting zones for each character level. -->
+        <set name="default_action" val="SHOW_HTML"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="weight" val="10"/>
+        <restriction tradable="false" dropable="false" depositable="false"/>
+    </item>
+    <armor id="91932" name="Adventurer's Brooch" icon="icon.etc_bm_brooch_lavianrose_i00">
+        <!-- Activates 1 jewel slot. -->
+        <set name="default_action" val="EQUIP"/>
+        <set name="bodypart" val="underwear"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="weight" val="10"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
+    </armor>
+    <armor id="91933" name="Adventurer's Agathion Bracelet" icon="icon.agathion_magmeld_teleport">
+        <!-- Activates 1 Agathion slot. -->
+        <set name="default_action" val="EQUIP"/>
+        <set name="bodypart" val="lbracelet"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="weight" val="100"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
+    </armor>
+    <armor id="91934" name="Adventurer's Bracelet" icon="icon.etc_rbracelet_c_i00">
+        <!-- When equipped, opens up 1 Talisman slot. -->
+        <set name="default_action" val="EQUIP"/>
+        <set name="bodypart" val="rbracelet"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="weight" val="150"/>
+        <set name="price" val="1080000"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
+    </armor>
+    <armor id="91935" name="Adventurer's Agathion Griffin" icon="icon.griffin_vehicle">
+        <!-- Can be used to obtain the power of Agathion Griffin. Summons Agathion from the main slot. Activates Special Abilities. <Special Abilities>. P. Def. increased. <Unique Abilities>. P. Def. +5. -->
+        <set name="default_action" val="EQUIP"/>
+        <set name="bodypart" val="gloves"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="weight" val="5"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
+    </armor>
+    <armor id="91936" name="Jewel of Adventurer Fragment" icon="icon.etc_crystal_piece_i00">
+        <!-- Fragment of an unknown jewel. Max HP +5. The effect doesn't stack if two identical jewels are equipped, the higher-level jewel takes precedence. -->
+        <set name="default_action" val="EQUIP"/>
+        <set name="bodypart" val="brooch_jewel"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="weight" val="5"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
+    </armor>
+    <armor id="91937" name="Adventurer's Talisman" icon="icon.etc_talisman_i07">
+        <!-- M. Def. +5. The effect doesn't stack if two identical talismans are equipped. -->
+        <set name="default_action" val="EQUIP"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="weight" val="120"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
+    </armor>
+    <item id="91938" name="Primeval Isle's Prolongating Stone" icon="icon.timezone_refill_1">
+        <!-- Prolongs your Primeval Isle's raid for 60 min. -->
+        <set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
+        <set name="weight" val="5"/>
+        <restriction sellable="false" stackable="true"/>
+    </item>
+    <item id="91939" name="Ancient Pirates' Tomb's Prolongating Stone" icon="icon.timezone_refill_2">
+        <!-- Prolongs your Ancient Pirates' Tomb's raid for 60 min. -->
+        <set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
+        <set name="weight" val="5"/>
+        <restriction sellable="false" stackable="true"/>
+    </item>
+    <item id="91940" name="Heavenly Rift's Prolongating Stone" icon="icon.etc_scroll_of_return_i03">
+        <!-- Prolongs your Heavenly Rift's raid for 60 min. -->
+        <set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
+        <set name="weight" val="5"/>
+        <restriction sellable="false" stackable="true"/>
+    </item>
+    <item id="91941" name="Blessing Chest" icon="icon.event_six_party_box_i00">
+        <!-- Double-click to obtain Sayha's Blessing. There is a small chance to obtain an additional item. -->
+        <set name="default_action" val="PEEL"/>
+        <set name="immediate_effect" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
+    </item>
+    <item id="91942" name="Crystal of Light" icon="icon.high_energy_condense_i00">
+        <!-- Mysterious crystal that contains the light energy. Needed to learn Collect Light Souls Lv. 2. -->
+        <set name="weight" val="120"/>
+        <restriction sellable="false" stackable="true"/>
+    </item>
+    <item id="91943" name="Crystal of Shadows" icon="icon.high_energy_condense_i01">
+        <!-- Mysterious crystal that contains the shadow energy. Needed to learn Collect Shadow Souls Lv. 2. -->
+        <set name="weight" val="120"/>
+        <restriction sellable="false" stackable="true"/>
+    </item>
+    <item id="91944" name="Book of Light" icon="icon.giant_book_i02">
+        <!-- Mysterious book that contains the light energy. Needed to learn Light Master Lv. 2. -->
+        <set name="weight" val="120"/>
+        <restriction sellable="false" stackable="true"/>
+    </item>
+    <item id="91945" name="Book of Darkness" icon="icon.giant_book_i00">
+        <!-- Mysterious book that contains the shadow energy. Needed to learn Shadow Master Lv. 2. -->
+        <set name="weight" val="120"/>
+        <restriction sellable="false" stackable="true"/>
+    </item>
+    <item id="91946" name="Spellbook: Mount Griffin" icon="icon.etc_spellbook_red_i00">
+        <!-- Spellbook needed to learn Mount Griffin. Required level: 76 (after the 3rd class change). -->
+        <set name="weight" val="120"/>
+        <restriction sellable="false" stackable="true"/>
+    </item>
+    <item id="91947" name="Admiral's Estoc +7" icon="icon.weapon_rapier_i00">
+        <!-- Double-click to obtain Admiral's Estoc enchanted to +7. -->
+        <set name="default_action" val="PEEL"/>
+        <set name="immediate_effect" val="true"/>
+        <restriction dropable="false" sellable="false" stackable="true"/>
+    </item>
+    <item id="91948" name="Saber Tooth +7" icon="icon.weapon_invincible_blade_i00">
+        <!-- Double-click to obtain Saber Tooth +7. -->
+        <set name="default_action" val="PEEL"/>
+        <set name="immediate_effect" val="true"/>
+        <restriction dropable="false" sellable="false" stackable="true"/>
+    </item>
+    <weapon id="91949" name="Novice Warrior's Rapier" icon="icon.weapon_sealed_rapier_i00">
+        <set name="default_action" val="EQUIP"/>
+        <set name="weapon_type" val="RAPIER"/>
+        <set name="bodypart" val="rhand"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="weight" val="1300"/>
+        <set name="soulshots" val="1"/>
+        <set name="spiritshots" val="1"/>
+        <restriction tradable="false" dropable="false" depositable="false"/>
+        <stats>
+            <stat type="pAtk">6</stat>
+            <stat type="mAtk">5</stat>
+            <stat type="rCrit">10</stat>
+            <stat type="accCombat">8</stat>
+            <stat type="pAtkSpd">406</stat>
+            <stat type="randomDamage">20</stat>
+        </stats>
+    </weapon>
+    <weapon id="91950" name="Novice Warrior's Ancient Sword" icon="icon.weapon_tulwar_i00">
+        <set name="default_action" val="EQUIP"/>
+        <set name="weapon_type" val="ANCIENTSWORD"/>
+        <set name="bodypart" val="lrhand"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="weight" val="1530"/>
+        <set name="soulshots" val="1"/>
+        <set name="spiritshots" val="1"/>
+        <restriction tradable="false" dropable="false" depositable="false"/>
+        <stats>
+            <stat type="pAtk">11</stat>
+            <stat type="mAtk">5</stat>
+            <stat type="rCrit">10</stat>
+            <stat type="accCombat">5</stat>
+            <stat type="pAtkSpd">379</stat>
+            <stat type="randomDamage">15</stat>
+            <stat type="pAtkRange">40</stat>
+        </stats>
+    </weapon>
+    <item id="91951" name="Scroll: Enchant Talisman of Baium" icon="icon.etc_charm_of_courage_i05">
+        <!-- Required to enchant Talisman of Baium. The maximum enchant level is +10. In case of failure the item disappears. -->
+        <set name="default_action" val="SKILL_REDUCE"/>
+        <restriction sellable="false" stackable="true"/>
+    </item>
+    <armor id="91952" name="Ring of Insolence" icon="icon.ring_of_oman">
+        <!-- Increases Sleep Resistance. The effect doesn't stack if two identical items are equipped. -->
+        <set name="default_action" val="EQUIP"/>
+        <set name="bodypart" val="rfinger;lfinger"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="weight" val="150"/>
+        <set name="price" val="616000"/>
+        <stats>
+            <stat type="mDef">40</stat>
+        </stats>
+    </armor>
+    <armor id="91953" name="Dragon Valley's Earring" icon="icon.accessary_catseye_earing_i00">
+        <!-- Increases Stun Resistance. The effect doesn't stack if two identical items are equipped. -->
+        <set name="default_action" val="EQUIP"/>
+        <set name="bodypart" val="rear;lear"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="weight" val="150"/>
+        <set name="price" val="924000"/>
+        <stats>
+            <stat type="mDef">60</stat>
+        </stats>
+    </armor>
+    <item id="91954" name="Scroll of Escape: Tower of Insolence (1st Floor)" icon="icon.etc_scroll_of_return_i04">
+        <!-- Teleports to the 1st floor of the Tower of Insolence. -->
+        <set name="default_action" val="SKILL_REDUCE"/>
+        <set name="weight" val="5"/>
+        <restriction tradable="false" dropable="false" depositable="false" stackable="true"/>
+    </item>
+    <item id="91955" name="Scroll of Escape: Tower of Insolence (2nd Floor)" icon="icon.etc_scroll_of_return_i04">
+        <!-- Teleports to the 2nd floor of the Tower of Insolence. -->
+        <set name="default_action" val="SKILL_REDUCE"/>
+        <set name="weight" val="5"/>
+        <restriction tradable="false" dropable="false" depositable="false" stackable="true"/>
+    </item>
+    <item id="91956" name="Scroll of Escape: Tower of Insolence (3rd Floor)" icon="icon.etc_scroll_of_return_i04">
+        <!-- Teleports to the 3rd floor of the Tower of Insolence. -->
+        <set name="default_action" val="SKILL_REDUCE"/>
+        <set name="weight" val="5"/>
+        <restriction tradable="false" dropable="false" depositable="false" stackable="true"/>
+    </item>
+    <item id="91957" name="Scroll of Escape: Tower of Insolence (4th Floor)" icon="icon.etc_scroll_of_return_i04">
+        <!-- Teleports to the 4th floor of the Tower of Insolence. -->
+        <set name="default_action" val="SKILL_REDUCE"/>
+        <set name="weight" val="5"/>
+        <restriction tradable="false" dropable="false" depositable="false" stackable="true"/>
+    </item>
+    <item id="91958" name="Scroll of Escape: Tower of Insolence (5th Floor)" icon="icon.etc_scroll_of_return_i04">
+        <!-- Teleports to the 5th floor of the Tower of Insolence. -->
+        <set name="default_action" val="SKILL_REDUCE"/>
+        <set name="weight" val="5"/>
+        <restriction tradable="false" dropable="false" depositable="false" stackable="true"/>
+    </item>
+    <item id="91959" name="Scroll of Escape: Tower of Insolence (6th Floor)" icon="icon.etc_scroll_of_return_i04">
+        <!-- Teleports to the 6th floor of the Tower of Insolence. -->
+        <set name="default_action" val="SKILL_REDUCE"/>
+        <set name="weight" val="5"/>
+        <restriction tradable="false" dropable="false" depositable="false" stackable="true"/>
+    </item>
+    <item id="91960" name="Scroll of Escape: Tower of Insolence (7th Floor)" icon="icon.etc_scroll_of_return_i04">
+        <!-- Teleports to the 7th floor of the Tower of Insolence. -->
+        <set name="default_action" val="SKILL_REDUCE"/>
+        <set name="weight" val="5"/>
+        <restriction tradable="false" dropable="false" depositable="false" stackable="true"/>
+    </item>
+    <item id="91961" name="Scroll of Escape: Tower of Insolence (8th Floor)" icon="icon.etc_scroll_of_return_i04">
+        <!-- Teleports to the 8th floor of the Tower of Insolence. -->
+        <set name="default_action" val="SKILL_REDUCE"/>
+        <set name="weight" val="5"/>
+        <restriction tradable="false" dropable="false" depositable="false" stackable="true"/>
+    </item>
+    <item id="91962" name="Scroll of Escape: Tower of Insolence (9th Floor)" icon="icon.etc_scroll_of_return_i04">
+        <!-- Teleports to the 9th floor of the Tower of Insolence. -->
+        <set name="default_action" val="SKILL_REDUCE"/>
+        <set name="weight" val="5"/>
+        <restriction tradable="false" dropable="false" depositable="false" stackable="true"/>
+    </item>
+    <item id="91963" name="Scroll of Escape: Tower of Insolence (10th Floor)" icon="icon.etc_scroll_of_return_i04">
+        <!-- Teleports to the 10th floor of the Tower of Insolence. -->
+        <set name="default_action" val="SKILL_REDUCE"/>
+        <set name="weight" val="5"/>
+        <restriction tradable="false" dropable="false" depositable="false" stackable="true"/>
+    </item>
+    <item id="91964" name="Scroll of Escape: Tower of Insolence (11th Floor)" icon="icon.etc_scroll_of_return_i04">
+        <!-- Teleports to the 11th floor of the Tower of Insolence. -->
+        <set name="default_action" val="SKILL_REDUCE"/>
+        <set name="weight" val="5"/>
+        <restriction tradable="false" dropable="false" depositable="false" stackable="true"/>
+    </item>
+    <item id="91965" name="Scroll of Escape: Tower of Insolence (12th Floor)" icon="icon.etc_scroll_of_return_i04">
+        <!-- Teleports to the 12th floor of the Tower of Insolence. -->
+        <set name="default_action" val="SKILL_REDUCE"/>
+        <set name="weight" val="5"/>
+        <restriction tradable="false" dropable="false" depositable="false" stackable="true"/>
+    </item>
+    <item id="91966" name="Scroll: Enchant Ring of Insolence" icon="icon.etc_penalty_recovery_i00">
+        <!-- Required to enchant Ring of Insolence. The maximum enchant level is +10. -->
+        <set name="default_action" val="SKILL_REDUCE"/>
+        <restriction sellable="false" stackable="true"/>
+    </item>
+    <item id="91967" name="Scroll: Enchant Dragon Valley's Earring" icon="icon.etc_penalty_recovery_i02">
+        <!-- Required to enchant Dragon Valley's Earring. The maximum enchant level is +10. -->
+        <set name="default_action" val="SKILL_REDUCE"/>
+        <restriction sellable="false" stackable="true"/>
+    </item>
+    <item id="91968" name="Enhanced Warrior's Rapier Chest" icon="icon.weapon_sealed_rapier_i00">
+        <!-- Double-click to obtain Warrior's Rapier +16. -->
+        <set name="default_action" val="PEEL"/>
+        <set name="immediate_effect" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
+    </item>
+    <item id="91969" name="Enhanced Ancient Warrior's Sword Chest" icon="icon.weapon_tulwar_i00">
+        <!-- Double-click to obtain Ancient Warrior's Sword +16. -->
+        <set name="default_action" val="PEEL"/>
+        <set name="immediate_effect" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
+    </item>
+    <item id="91970" name="Ecliptic Axe +7" icon="icon.weapon_eclipse_axe_i00">
+        <!-- Double-click to obtain Ecliptic Axe +7. -->
+        <set name="default_action" val="PEEL"/>
+        <set name="immediate_effect" val="true"/>
+        <restriction dropable="false" sellable="false" stackable="true"/>
+    </item>
+    <item id="91971" name="Star Candy" icon="BranchSys.icon.br_valentine_agathion_pack_i00">
+        <!-- Sayha's Grace points +10,000. -->
+        <set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
+    </item>
+    <item id="91972" name="Heavenly Rift Ticket" icon="icon.etc_ticket_red_i00">
+        <!-- Coupon for entering the Heavenly Rift from the Dimensional Vortex on the 1st floor of the Tower of Insolence. -->
+        <set name="default_action" val="SKILL_REDUCE"/>
+        <set name="weight" val="5"/>
+        <restriction sellable="false" stackable="true"/>
+    </item>
+    <item id="91973" name="Special Dragon's Miracle Potion" icon="icon.bm_dragon_posion">
+        <!-- For 20 min., Acquired XP/ SP +50%, P. Atk. +250, M. Atk. +380, P. Def. +320, M. Def. +450, P./ M. Critical Rate +30, P./ M. Critical Damage +10%, Atk. Spd./ Casting Spd. +50, Max HP/ CP +2500, Max MP +1500, HP/ MP Recovery Bonus +10, Sayha's Grace Consumption -20%. Has a certain chance to absorb 5% of the inflicted damage as HP. <Note> If used when the Dragon's Miracle Potion effect is active, the buff will be replaced. -->
+        <set name="default_action" val="SKILL_REDUCE"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
+    </item>
+    <item id="91974" name="HP Potion" icon="icon.etc_lesser_potion_red_i00">
+        <!-- Instantly recovers 50 HP. The remaining points are used to recover CP. -->
+        <set name="default_action" val="SKILL_REDUCE"/>
+        <set name="weight" val="1"/>
+        <set name="price" val="30"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
+    </item>
+    <item id="91975" name="Sayha's Victory" icon="icon.etc_ssq_i00">
+        <!-- For 20 min., Max HP/ MP/ CP +300, P./ M. Atk. +200, Atk. Spd./ Casting Spd. +60, P./ M. Critical Rate +20, P./ M. Critical Damage +10%. -->
+        <set name="default_action" val="SKILL_REDUCE"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
+    </item>
+    <item id="91976" name="Unidentified Rock" icon="icon.destiny_stone">
+        <!-- Mysterious stone. Double-click to obtain one of the following items: Spirit Ore, Heavenly Rift Ticket, HP Potion, Wind Spirit Evolution Stone, Tower of Insolence Scroll: Paralysis Resistance. -->
+        <set name="default_action" val="PEEL"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="price" val="10000"/>
+        <restriction dropable="false" stackable="true"/>
+    </item>
+    <item id="91977" name="Tower of Insolence Scroll: Paralysis Resistance" icon="icon.scroll_of_verification_i08">
+        <!-- Increases Paralysis Resistance for 20 min. -->
+        <set name="default_action" val="SKILL_REDUCE"/>
+        <restriction dropable="false" sellable="false" stackable="true"/>
+    </item>
+    <item id="91978" name="Dragon Valley Scroll: Mental Resistance" icon="icon.scroll_of_verification_i08">
+        <!-- Increases Mental Resistance for 20 min. -->
+        <set name="default_action" val="SKILL_REDUCE"/>
+        <restriction dropable="false" sellable="false" stackable="true"/>
+    </item>
+    <item id="91979" name="Giants' Sign Chest" icon="icon.bm_sheep_agathion_30d_box">
+        <!-- Double-click to obtain one of the following items: Giants' Coin Pouch, a rare accessory Lv. 3, Venir's Talisman Lv. 24, Special Sayha's Cloak +10, Scroll: Dragon Berserker, Feather of Blessing, or other rare items. -->
+        <set name="default_action" val="PEEL"/>
+        <set name="immediate_effect" val="true"/>
+        <restriction dropable="false" sellable="false" stackable="true"/>
+    </item>
+    <item id="91980" name="Giants' Coin Pouch" icon="icon.pouch_i01">
+        <!-- Double-click to obtain random amount of adena. -->
+        <set name="default_action" val="PEEL"/>
+        <set name="immediate_effect" val="true"/>
+        <restriction dropable="false" sellable="false" stackable="true"/>
+    </item>
+    <item id="91981" name="Giants' Coin" icon="icon.etc_magic_coin_gold_i01">
+        <!-- Coin used by ancient Giants. Can be exchanged for various items by the Dimensional Merchant. -->
+        <restriction dropable="false" sellable="false" stackable="true"/>
+    </item>
+    <item id="91982" name="+10 Special White Sayha's Cloak Chest" icon="icon.bm_nebit_box">
+        <!-- Double-click to obtain Special White Sayha's Cloak +10. -->
+        <set name="default_action" val="PEEL"/>
+        <set name="immediate_effect" val="true"/>
+        <restriction dropable="false" sellable="false" stackable="true"/>
+    </item>
+    <item id="91983" name="Primeval Isle's Prolongating Stone" icon="icon.timezone_refill_1">
+        <!-- Prolongs your Primeval Isle's raid for 60 min. -->
+        <set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
+        <set name="weight" val="5"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
+    </item>
+    <item id="91984" name="Ancient Pirates' Tomb's Prolongating Stone" icon="icon.timezone_refill_2">
+        <!-- Prolongs your Ancient Pirates' Tomb's raid for 60 min. -->
+        <set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
+        <set name="weight" val="5"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
+    </item>
+    <item id="91985" name="Heavenly Rift's Prolongating Stone" icon="icon.etc_scroll_of_return_i03">
+        <!-- Prolongs your Heavenly Rift's raid for 60 min. -->
+        <set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
+        <set name="weight" val="5"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
+    </item>
+    <weapon id="91986" name="Monster Only (Grail Apostle Spear)" icon="icon.weapon_monster_i00">
+        <set name="default_action" val="EQUIP"/>
+        <set name="weapon_type" val="ETC"/>
+        <set name="bodypart" val="lrhand"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="weight" val="2140"/>
+        <set name="price" val="136000"/>
+        <set name="soulshots" val="1"/>
+        <set name="spiritshots" val="1"/>
+        <stats>
+            <stat type="pAtk">24</stat>
+            <stat type="mAtk">17</stat>
+            <stat type="rCrit">8</stat>
+            <stat type="accCombat">-3.75</stat>
+            <stat type="pAtkSpd">325</stat>
+            <stat type="randomDamage">10</stat>
+            <stat type="pAtkRange">80</stat>
+        </stats>
+    </weapon>
+    <item id="91987" name="+8 Blue Wolf Heavy Armor Set" icon="icon.armor_t68_u_i00">
+        <!-- Double-click to obtain +8 Blue Wolf heavy armor set (breastplate, gaiters, helmet, gloves, boots). -->
+        <set name="default_action" val="PEEL"/>
+        <set name="immediate_effect" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
+    </item>
+    <item id="91988" name="+8 Blue Wolf Light Armor Set" icon="icon.armor_t69_ul_i00">
+        <!-- Double-click to obtain +8 Blue Wolf light armor set (leather armor, helmet, gloves, boots). -->
+        <set name="default_action" val="PEEL"/>
+        <set name="immediate_effect" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
+    </item>
+    <item id="91989" name="+8 Blue Wolf Robe Set" icon="icon.armor_t70_u_i00">
+        <!-- Double-click to obtain +8 Blue Wolf robe set (tunic, stockings, helmet, gloves, boots). -->
+        <set name="default_action" val="PEEL"/>
+        <set name="immediate_effect" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
+    </item>
+    <item id="91990" name="+8 Doom Heavy Armor Set" icon="icon.armor_t71_ul_i00">
+        <!-- Double-click to obtain +8 Doom heavy armor set (plate armor, helmet, gloves, boots). -->
+        <set name="default_action" val="PEEL"/>
+        <set name="immediate_effect" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
+    </item>
+    <item id="91991" name="+8 Doom Light Armor Set" icon="icon.armor_t72_ul_i00">
+        <!-- Double-click to obtain +8 Doom light armor set (leather armor, helmet, gloves, boots). -->
+        <set name="default_action" val="PEEL"/>
+        <set name="immediate_effect" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
+    </item>
+    <item id="91992" name="+8 Doom Robe Set" icon="icon.armor_t73_u_i00">
+        <!-- Double-click to obtain +8 Doom robe set (tunic, stockings, helmet, gloves, boots). -->
+        <set name="default_action" val="PEEL"/>
+        <set name="immediate_effect" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
+    </item>
+    <item id="91993" name="+8 Avadon Robe Set" icon="icon.armor_t59_ul_i00">
+        <!-- Double-click to obtain +8 Avadon heavy armor set (breastplate, gaiters, circlet, gloves, boots). -->
+        <set name="default_action" val="PEEL"/>
+        <set name="immediate_effect" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
+    </item>
+    <item id="91994" name="+8 Plated Leather Armor Set" icon="icon.armor_t47_u_i00">
+        <!-- Double-click to obtain +8 Plated Leather armor set (armor, gaiters, boots). -->
+        <set name="default_action" val="PEEL"/>
+        <set name="immediate_effect" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
+    </item>
+    <item id="91995" name="Luxury Box (A-grade)" icon="icon.bm_sayha_gold_present">
+        <!-- Double-click to obtain Sayha's Blessing (3 pcs.). There is a small chance to obtain an additional item. -->
+        <set name="default_action" val="PEEL"/>
+        <set name="immediate_effect" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
+    </item>
+    <item id="91996" name="Scroll of Escape Pack: Tower of Insolence" icon="icon.etc_exchange_box_i00">
+        <!-- Double-click to obtain Scroll of Escape: Tower of Insolence (1-7th Floors). -->
+        <set name="default_action" val="PEEL"/>
+        <set name="immediate_effect" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
+    </item>
+    <item id="91997" name="Primeval Isle's Prolongating Stone Pack" icon="icon.timezone_refill_1">
+        <!-- Double-click to obtain Primeval Isle's Prolongating Stone. -->
+        <set name="default_action" val="PEEL"/>
+        <set name="immediate_effect" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
+    </item>
+    <item id="91998" name="Primeval Isle's Prolongating Stone Pack" icon="icon.timezone_refill_1">
+        <!-- Double-click to obtain Primeval Isle's Prolongating Stone. -->
+        <set name="default_action" val="PEEL"/>
+        <set name="immediate_effect" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
+    </item>
+    <item id="91999" name="Water Spirit Jewel Shard" icon="icon.elemental_water_stone_i00">
+        <!-- Rough Jewel with the power of Wind Attribute. Use it to acquire 9300 Water Attribute XP points. -->
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
+    </item>
 </list>

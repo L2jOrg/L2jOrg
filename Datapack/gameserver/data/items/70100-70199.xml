@@ -6,49 +6,34 @@
         <set name="armor_type" val="MAGIC"/>
         <set name="bodypart" val="legs"/>
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
         <set name="time" val="10080"/>
+        <restriction tradable="false" dropable="false" clan-depositable="false" sellable="false"/>
         <stats>
             <stat type="pDef">19</stat>
             <stat type="maxMp">42</stat>
         </stats>
     </armor>
     <armor id="70101" name="Refined Romantic Chapeau: Gold" icon="icon.bm_romantic_chaperon_gold">
-		<!-- A 7-day item. Requires 2 hair accessory slots. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. <Active Skills>. 1. Holiday Hat: resurrects a dead target and restores 50% XP. Consumes 1 Spirit Ore(s). Reuse Time: 30 min. 2 Overwhelming Power of a Holiday Hat: increases Acquired XP/ SP by 5% for 20 minutes. Reuse Time: 60 min. 3. Side Effect: makes character's head bigger for 10 minutes. Reuse Time: 30 min. -->
+        <!-- A 7-day item. Requires 2 hair accessory slots. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. <Active Skills>. 1. Holiday Hat: resurrects a dead target and restores 50% XP. Consumes 1 Spirit Ore(s). Reuse Time: 30 min. 2 Overwhelming Power of a Holiday Hat: increases Acquired XP/ SP by 5% for 20 minutes. Reuse Time: 60 min. 3. Side Effect: makes character's head bigger for 10 minutes. Reuse Time: 30 min. -->
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="hairall"/>
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_private_storeable" val="true"/>
-        <set name="is_sellable" val="false"/>
         <set name="time" val="10080"/>
+        <restriction tradable="false" dropable="false" clan-depositable="false" sellable="false"/>
         <skills>
             <skill id="39043" level="1"/>    <!-- 	Side Effect	-->
             <skill id="39044" level="1"/>    <!-- 	Ability of Resurrection	-->
             <skill id="39045" level="1"/>    <!-- 	Holiday Hat	-->
         </skills>
     </armor>
-    <item id="70102" name="Adventurer’s Potion - Atk. Spd."  icon="icon.etc_reagent_green_i00">
+    <item id="70102" name="Adventurer’s Potion - Atk. Spd." icon="icon.etc_reagent_green_i00">
         <!-- Increases Atk. Spd. for 20 minutes. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
         <set name="default_action" val="SKILL_REDUCE"/>
         <set name="etcitem_type" val="POTION"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="5"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_private_storeable" val="true"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_oly_restricted" val="true"/>
-        <set name="handler" val="ItemSkills"/>
-        <set name="commissionItemType" val="POTION"/>
         <set name="for_npc" val="true"/>
+        <restriction tradable="false" dropable="false" clan-depositable="false" sellable="false" stackable="true" olympiad-restricted="true"/>
         <cond addName="1" msgId="113">
             <player flyMounted="false"/>
         </cond>
@@ -56,22 +41,15 @@
             <skill id="55235" level="1"/>    <!-- 	Adventurer Potion Atk. Spd. lvl 1	-->
         </skills>
     </item>
-    <item id="70103" name="Adventurer’s Potion - Casting Spd."  icon="icon.etc_potion_of_acumen2_i00">
+    <item id="70103" name="Adventurer’s Potion - Casting Spd." icon="icon.etc_potion_of_acumen2_i00">
         <!-- Increases Casting Spd. for 20 minutes. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
         <set name="default_action" val="SKILL_REDUCE"/>
         <set name="etcitem_type" val="POTION"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="5"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_oly_restricted" val="true"/>
         <set name="handler" val="ItemSkills"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_private_storeable" val="true"/>
-        <set name="is_sellable" val="false"/>
-        <set name="commissionItemType" val="POTION"/>
         <set name="for_npc" val="true"/>
+        <restriction stackable="true" olympiad-restricted="true" tradable="false" dropable="false" clan-depositable="false" sellable="false"/>
         <cond addName="1" msgId="113">
             <player flyMounted="false"/>
         </cond>
@@ -79,86 +57,54 @@
             <skill id="55236" level="1"/>    <!-- 	Adventurer Potion Casting Speed lvl 1	-->
         </skills>
     </item>
-    <item id="70104" name="Scroll: Vampiric Rage"  icon="icon.etc_scroll_white_i00">
+    <item id="70104" name="Scroll: Vampiric Rage" icon="icon.etc_scroll_white_i00">
         <!-- Recovers 6% HP from the received physical damage for 20 minutes. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
         <set name="default_action" val="SKILL_REDUCE"/>
         <set name="etcitem_type" val="SCROLL"/>
         <set name="weight" val="5"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_private_storeable" val="true"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="handler" val="ItemSkills"/>
         <set name="commissionItemType" val="SCROLL_OTHER"/>
+        <restriction tradable="false" dropable="false" clan-depositable="false" sellable="false" stackable="true"/>
         <skills>
             <skill id="55237" level="1"/> <!-- Vampiric Rage	-->
         </skills>
     </item>
-    <item id="70105" name="Scroll of Mana"  icon="icon.etc_scroll_white_i00">
+    <item id="70105" name="Scroll of Mana" icon="icon.etc_scroll_white_i00">
         <!-- Increases MP Recovery Rate for 20 minutes. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
         <set name="default_action" val="SKILL_REDUCE"/>
         <set name="etcitem_type" val="SCROLL"/>
         <set name="weight" val="5"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_private_storeable" val="true"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="handler" val="ItemSkills"/>
         <set name="commissionItemType" val="SCROLL_OTHER"/>
+        <restriction tradable="false" dropable="false" clan-depositable="false" sellable="false" stackable="true"/>
         <skills>
             <skill id="55241" level="1"/> <!-- Mana Regeneration	-->
         </skills>
     </item>
-    <item id="70106" name="Rune of Boost"  icon="BranchSys3.lcon.g_rune_itemdrop_up">
+    <item id="70106" name="Rune of Boost" icon="BranchSys3.lcon.g_rune_itemdrop_up">
         <!-- A 7-day item. When in inventory, STR +1, INT +1, CON +1, MEN +1, DEX +1, WIT +1. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_private_storeable" val="true"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="etcitem_type" val="ENCHT_ATTR_RUNE"/>
-        <set name="time" val="10080"/>
         <set name="handler" val="ItemSkills"/>
+        <restriction tradable="false" dropable="false" clan-depositable="false" sellable="false" commissionable="false"/>
         <skills>
             <skill id="55246" level="1"/> <!-- Rune of Boost	-->
         </skills>
     </item>
-    <item id="70107" name="Scroll: Berserker Spirit"  icon="icon.etc_scroll_white_i00">
+    <item id="70107" name="Scroll: Berserker Spirit" icon="icon.etc_scroll_white_i00">
         <!-- When used, P. Def. -5%, M. Def. -10%, Evasion -2 -->
         <set name="default_action" val="SKILL_REDUCE"/>
         <set name="etcitem_type" val="SCROLL"/>
         <set name="weight" val="5"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_private_storeable" val="true"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="handler" val="ItemSkills"/>
-        <set name="etcitem_type" val="SCROLL"/>
         <set name="commissionItemType" val="SCROLL_OTHER"/>
+        <restriction tradable="false" dropable="false" clan-depositable="false" sellable="false" stackable="true"/>
         <skills>
             <skill id="55242" level="1"/> <!-- Scroll: Berserker Spirit	-->
         </skills>
     </item>
     <armor id="70108" name="Fire Dragon Pendant - Lv. 3" icon="BranchIcon.Icon.bm_pendant_pve">
-		<!-- A 7-day item. Provides the effect of Fire Dragon Pendant enchanted to Lv. +3. Further enchanting or combining is not possible. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
+        <!-- A 7-day item. Provides the effect of Fire Dragon Pendant enchanted to Lv. +3. Further enchanting or combining is not possible. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="underwear"/>
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_private_storeable" val="true"/>
-        <set name="is_sellable" val="false"/>
-        <set name="handler" val="ItemSkills"/>
         <set name="time" val="10080"/>
+        <restriction tradable="false" dropable="false" clan-depositable="false" sellable="false"/>
         <skills>
             <skill id="55094" level="1"/> <!-- Fire Dragon Pendant - Lv. 3	-->
         </skills>
@@ -167,60 +113,33 @@
         </stats>
     </armor>
     <armor id="70109" name="Water Dragon Pendant - Lv. 3" icon="BranchIcon.Icon.bm_pendant_pvp_blue">
-		<!-- A 7-day item. Provides the effect of Water Dragon Pendant enchanted to Lv. +3. Further enchanting or combining is not possible. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
+        <!-- A 7-day item. Provides the effect of Water Dragon Pendant enchanted to Lv. +3. Further enchanting or combining is not possible. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="underwear"/>
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_private_storeable" val="true"/>
-        <set name="is_sellable" val="false"/>
-        <set name="handler" val="ItemSkills"/>
         <set name="time" val="10080"/>
+        <restriction tradable="false" dropable="false" clan-depositable="false" sellable="false"/>
         <skills>
-			<skill id="55104" level="1" /> <!-- Water Dragon Pendant Basic Effect Lv. 3	-->
+            <skill id="55104" level="1"/> <!-- Water Dragon Pendant Basic Effect Lv. 3	-->
         </skills>
         <stats>
             <stat type="pDef">28</stat>
         </stats>
     </armor>
-    <item id="70110" name="Scroll: Dance of the Warrior"  icon="BranchIcon.Icon.etc_g_bm_dance_scroll_i00">
+    <item id="70110" name="Scroll: Dance of the Warrior" icon="BranchIcon.Icon.etc_g_bm_dance_scroll_i00">
         <!-- Provides Dance of the Warrior effect for 10 minutes. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
         <set name="weight" val="5"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_private_storeable" val="true"/>
-        <set name="is_oly_restricted" val="true"/>
-        <set name="commissionItemType" val="SCROLL_OTHER"/>
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="etcitem_type" val="SCROLL"/>
-        <set name="handler" val="ItemSkills"/>
         <set name="immediate_effect" val="true"/>
-        <set name="is_stackable" val="true"/>
+        <restriction clan-depositable="false" mailable="false" tradable="false" dropable="false" sellable="false" olympiad-restricted="true" stackable="true"/>
         <skills>
             <skill id="271" level="1"/> <!-- Dance of Warrior -->
         </skills>
     </item>
-    <item id="70111" name="Scroll: Dance of the Mystic"  icon="BranchIcon.Icon.etc_g_bm_dance_scroll_i00">
+    <item id="70111" name="Scroll: Dance of the Mystic" icon="BranchIcon.Icon.etc_g_bm_dance_scroll_i00">
         <!-- Provides Dance of the Mystic effect for 10 minutes. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
         <set name="weight" val="5"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_private_storeable" val="true"/>
-        <set name="is_oly_restricted" val="true"/>
-        <set name="commissionItemType" val="SCROLL_OTHER"/>
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="etcitem_type" val="SCROLL"/>
-        <set name="handler" val="ItemSkills"/>
         <set name="immediate_effect" val="true"/>
-        <set name="is_stackable" val="true"/>
+        <restriction clan-depositable="false" mailable="false" tradable="false" dropable="false" sellable="false" olympiad-restricted="true" stackable="true"/>
         <skills>
             <skill id="273" level="1"/> <!-- Dance of Warrior -->
         </skills>
@@ -231,18 +150,8 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="hairall"/>
         <set name="immediate_effect" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_private_storeable" val="true"/>
-        <set name="commissionItemType" val="false"/>
-        <set name="handler" val="ItemSkills"/>
-        <set name="enchant_enabled" val="7"/>
-        <set name="commissionItemType" val="HAIR_ACCESSORY"/>
         <set name="time" val="10080"/>
-        <set name="is_stackable" val="true"/>
+        <restriction clan-depositable="false" mailable="false" tradable="false" dropable="false" sellable="false" stackable="true"/>
         <skills>
             <skill id="35011" level="1"/> <!-- Refined Romantic Chapeau lvl 1 - Teleport lv1 -->
             <skill id="55047" level="1"/> <!-- Refined Romantic Chapeau lvl 1 - Blessed Body lv1 -->
@@ -250,15 +159,13 @@
             <skill id="55247" level="1"/> <!-- Refined Romantic Chapeau lvl 1 - P. Atk - M. Atk -->
         </skills>
     </armor>
-    <item id="70113" name="Scroll of Escape: Town of Aden"  icon="icon.etc_scroll_of_return_i04">
+    <item id="70113" name="Scroll of Escape: Town of Aden" icon="icon.etc_scroll_of_return_i04">
         <!-- A magical scroll that relocates you to the Town of Aden. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
         <set name="default_action" val="SKILL_REDUCE"/>
         <set name="weight" val="30"/>
         <set name="price" val="35000"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_oly_restricted" val="true"/>
-        <set name="handler" val="ItemSkills"/>
         <set name="commissionItemType" val="SCROLL_OTHER"/>
+        <restriction stackable="true" olympiad-restricted="true"/>
         <cond addName="1" msgId="113">
             <player flyMounted="false"/>
         </cond>
@@ -267,19 +174,11 @@
         </skills>
     </item>
     <armor id="70114" name="Agathion - Singer and Dancer" icon="BranchSys2.icon.br_aga_singer_dancer_i00">
-		<!-- A 7-day item. Summons Agathion Singer & Dancer when equipped. Cannot be exchanged, dropped, or sold. <Active Skills>. 1. Dance of Fury: increases Atk. Spd. by 5% for 20 minutes. 2. Dance of Concentration: increases Casting Spd. by 5% for 20 minutes. 3. Song of Wind: increases Speed by 20 for 5 minutes. Reuse Time: 10 min. <Note>. Dance of Fury, Dance of Concentration, and Song of Wind effects do not stack. Only one effect can be applied at a time. -->
+        <!-- A 7-day item. Summons Agathion Singer & Dancer when equipped. Cannot be exchanged, dropped, or sold. <Active Skills>. 1. Dance of Fury: increases Atk. Spd. by 5% for 20 minutes. 2. Dance of Concentration: increases Casting Spd. by 5% for 20 minutes. 3. Song of Wind: increases Speed by 20 for 5 minutes. Reuse Time: 10 min. <Note>. Dance of Fury, Dance of Concentration, and Song of Wind effects do not stack. Only one effect can be applied at a time. -->
         <set name="default_action" val="EQUIP"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="bodypart" val="lbracelet"/>
-        <set name="is_oly_restricted" val="true"/>
-        <set name="immediate_effect" val="true"/>
         <set name="time" val="10800"/>
+        <restriction clan-depositable="false" mailable="false" tradable="false" dropable="false" sellable="false" commissionable="false" olympiad-restricted="true"/>
         <skills>
             <skill id="21233" level="1"/> <!-- Release Agathion's Seal - Singer and Dancer -->
             <skill id="23234" level="1"/> <!-- Singer and Dancer Agathion Cute Trick -->
@@ -289,10 +188,9 @@
             <skill id="39018" level="1"/> <!-- Seal Agathion -->
         </skills>
     </armor>
-    <item id="70115" name="Fishing Coin"  icon="icon.fairy_adena_joke">
+    <item id="70115" name="Fishing Coin" icon="icon.fairy_adena_joke">
         <!-- The coin you found in the whale caught using Golden Bait. Can be exchanged for various items in the Fishermen's Guild. -->
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction sellable="false" stackable="true"/>
     </item>
     <weapon id="70116" name="Mermaid's Elite Golden Fishing Rod" icon="icon.bm_gold_fishing_pole">
         <!-- A 1-day item. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a warehouse. Bobber usage: 1. When used, XP and SP Bonus +50% from fishing, enables teleporting to Giran/Gludin Harbor. Reuse Time: 1 min. -->
@@ -301,11 +199,8 @@
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="1000"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
         <set name="time" val="1440"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
         <stats>
             <stat type="pAtk">1</stat>
             <stat type="mAtk">1</stat>
@@ -316,16 +211,13 @@
         </stats>
     </weapon>
     <weapon id="70117" name="Mermaid's Elite Golden Fishing Rod" icon="icon.bm_gold_fishing_pole">
-		<!-- A 3-day item. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a warehouse. Bobber usage: 1. When used, Acquired XP/ SP +50% from fishing, enables teleporting to Giran/Gludin Harbor. Reuse Time: 1 min. -->
+        <!-- A 3-day item. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a warehouse. Bobber usage: 1. When used, Acquired XP/ SP +50% from fishing, enables teleporting to Giran/Gludin Harbor. Reuse Time: 1 min. -->
         <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="FISHINGROD"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="1000"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
         <stats>
             <stat type="pAtk">1</stat>
             <stat type="mAtk">1</stat>
@@ -336,17 +228,14 @@
         </stats>
     </weapon>
     <weapon id="70118" name="Mermaid's Elite Golden Fishing Rod" icon="icon.bm_gold_fishing_pole">
-		<!-- A 7-day item. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a warehouse. Bobber usage: 1. When used, Acquired XP/ SP +50% from fishing, enables teleporting to Giran/Gludin Harbor. Reuse Time: 1 min. -->
+        <!-- A 7-day item. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a warehouse. Bobber usage: 1. When used, Acquired XP/ SP +50% from fishing, enables teleporting to Giran/Gludin Harbor. Reuse Time: 1 min. -->
         <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="FISHINGROD"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="1000"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
         <set name="time" val="10080"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
         <stats>
             <stat type="pAtk">1</stat>
             <stat type="mAtk">1</stat>
@@ -363,11 +252,8 @@
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="1000"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
         <set name="time" val="43200"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
         <stats>
             <stat type="pAtk">1</stat>
             <stat type="mAtk">1</stat>
@@ -378,14 +264,13 @@
         </stats>
     </weapon>
     <weapon id="70120" name="Mermaid's Elite Golden Fishing Rod" icon="icon.bm_gold_fishing_pole">
-		<!-- Cannot be dropped. Can be stored in a warehouse. Bobber usage: 1. When used, Acquired XP/ SP +50% from fishing, enables teleporting to Giran/Gludin Harbor. Reuse Time: 1 min. -->
+        <!-- Cannot be dropped. Can be stored in a warehouse. Bobber usage: 1. When used, Acquired XP/ SP +50% from fishing, enables teleporting to Giran/Gludin Harbor. Reuse Time: 1 min. -->
         <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="FISHINGROD"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="1000"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
+        <restriction dropable="false" sellable="false"/>
         <stats>
             <stat type="pAtk">1</stat>
             <stat type="mAtk">1</stat>
@@ -395,318 +280,278 @@
             <stat type="pAtkRange">80</stat>
         </stats>
     </weapon>
-    <item id="70121" name="Full Plate Armor Crafting Pack"  icon="icon.etc_pi_gift_box_i00">
+    <item id="70121" name="Full Plate Armor Crafting Pack" icon="icon.etc_pi_gift_box_i00">
         <!-- Double-click to obtain all the ingredients necessary for making Full Plate Armor. -->
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="100"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction sellable="false" stackable="true"/>
     </item>
-    <item id="70122" name="Full Plate Helmet Crafting Pack"  icon="icon.etc_pi_gift_box_i00">
+    <item id="70122" name="Full Plate Helmet Crafting Pack" icon="icon.etc_pi_gift_box_i00">
         <!-- Double-click to obtain all the ingredients necessary for making Full Plate Helmet. -->
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="100"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction sellable="false" stackable="true"/>
     </item>
-    <item id="70123" name="Full Plate Shield Crafting Pack"  icon="icon.etc_pi_gift_box_i00">
+    <item id="70123" name="Full Plate Shield Crafting Pack" icon="icon.etc_pi_gift_box_i00">
         <!-- Double-click to obtain all the ingredients necessary for making Full Plate Shield. -->
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="100"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction sellable="false" stackable="true"/>
     </item>
-    <item id="70124" name="Drake Leather Armor Crafting Pack"  icon="icon.etc_pi_gift_box_i00">
+    <item id="70124" name="Drake Leather Armor Crafting Pack" icon="icon.etc_pi_gift_box_i00">
         <!-- Double-click to obtain all the ingredients necessary for making Drake Leather Armor. -->
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="100"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction sellable="false" stackable="true"/>
     </item>
-    <item id="70125" name="Drake Leather Boots Crafting Pack"  icon="icon.etc_pi_gift_box_i00">
+    <item id="70125" name="Drake Leather Boots Crafting Pack" icon="icon.etc_pi_gift_box_i00">
         <!-- Double-click to obtain all the ingredients necessary for making Drake Leather Boots. -->
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="100"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction sellable="false" stackable="true"/>
     </item>
-    <item id="70126" name="Divine Tunic Crafting Pack"  icon="icon.etc_pi_gift_box_i00">
+    <item id="70126" name="Divine Tunic Crafting Pack" icon="icon.etc_pi_gift_box_i00">
         <!-- Double-click to obtain all the ingredients necessary for making Divine Tunic. -->
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="100"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction sellable="false" stackable="true"/>
     </item>
-    <item id="70127" name="Divine Stockings Crafting Pack"  icon="icon.etc_pi_gift_box_i00">
+    <item id="70127" name="Divine Stockings Crafting Pack" icon="icon.etc_pi_gift_box_i00">
         <!-- Double-click to obtain all the ingredients necessary for making Divine Stockings. -->
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="100"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction sellable="false" stackable="true"/>
     </item>
-    <item id="70128" name="Divine Gloves Crafting Pack"  icon="icon.etc_pi_gift_box_i00">
+    <item id="70128" name="Divine Gloves Crafting Pack" icon="icon.etc_pi_gift_box_i00">
         <!-- Double-click to obtain all the ingredients necessary for making Divine Gloves. -->
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="100"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction sellable="false" stackable="true"/>
     </item>
-    <item id="70129" name="Doom Shield Crafting Pack"  icon="icon.etc_pi_gift_box_i00">
+    <item id="70129" name="Doom Shield Crafting Pack" icon="icon.etc_pi_gift_box_i00">
         <!-- Double-click to obtain all the ingredients necessary for making Doom Shield. -->
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="100"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction sellable="false" stackable="true"/>
     </item>
-    <item id="70130" name="Doom Plate Armor Crafting Pack"  icon="icon.etc_pi_gift_box_i00">
+    <item id="70130" name="Doom Plate Armor Crafting Pack" icon="icon.etc_pi_gift_box_i00">
         <!-- Double-click to obtain all the ingredients necessary for making Doom Plate Armor. -->
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="100"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction sellable="false" stackable="true"/>
     </item>
-    <item id="70131" name="Doom Helmet Crafting Pack"  icon="icon.etc_pi_gift_box_i00">
+    <item id="70131" name="Doom Helmet Crafting Pack" icon="icon.etc_pi_gift_box_i00">
         <!-- Double-click to obtain all the ingredients necessary for making Doom Helmet. -->
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="100"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction sellable="false" stackable="true"/>
     </item>
-    <item id="70132" name="Doom Gloves Crafting Pack"  icon="icon.etc_pi_gift_box_i00">
+    <item id="70132" name="Doom Gloves Crafting Pack" icon="icon.etc_pi_gift_box_i00">
         <!-- Double-click to obtain all the ingredients necessary for making Doom Gloves. -->
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="100"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction sellable="false" stackable="true"/>
     </item>
-    <item id="70133" name="Doom Boots Crafting Pack"  icon="icon.etc_pi_gift_box_i00">
+    <item id="70133" name="Doom Boots Crafting Pack" icon="icon.etc_pi_gift_box_i00">
         <!-- Double-click to obtain all the ingredients necessary for making Doom Boots. -->
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="100"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction sellable="false" stackable="true"/>
     </item>
-    <item id="70134" name="Blue Wolf Breastplate Crafting Pack"  icon="icon.etc_pi_gift_box_i00">
+    <item id="70134" name="Blue Wolf Breastplate Crafting Pack" icon="icon.etc_pi_gift_box_i00">
         <!-- Double-click to obtain all the ingredients necessary for making Blue Wolf Breastplate. -->
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="100"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction sellable="false" stackable="true"/>
     </item>
-    <item id="70135" name="Blue Wolf Gaiters Crafting Pack"  icon="icon.etc_pi_gift_box_i00">
+    <item id="70135" name="Blue Wolf Gaiters Crafting Pack" icon="icon.etc_pi_gift_box_i00">
         <!-- Double-click to obtain all the ingredients necessary for making Blue Wolf Gaiters. -->
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="100"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction sellable="false" stackable="true"/>
     </item>
-    <item id="70136" name="Blue Wolf Helmet Crafting Pack"  icon="icon.etc_pi_gift_box_i00">
+    <item id="70136" name="Blue Wolf Helmet Crafting Pack" icon="icon.etc_pi_gift_box_i00">
         <!-- Double-click to obtain all the ingredients necessary for making Blue Wolf Helmet. -->
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="100"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction sellable="false" stackable="true"/>
     </item>
-    <item id="70137" name="Blue Wolf Gloves Crafting Pack"  icon="icon.etc_pi_gift_box_i00">
+    <item id="70137" name="Blue Wolf Gloves Crafting Pack" icon="icon.etc_pi_gift_box_i00">
         <!-- Double-click to obtain all the ingredients necessary for making Blue Wolf Gloves. -->
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="100"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction sellable="false" stackable="true"/>
     </item>
-    <item id="70138" name="Blue Wolf Boots Crafting Pack"  icon="icon.etc_pi_gift_box_i00">
+    <item id="70138" name="Blue Wolf Boots Crafting Pack" icon="icon.etc_pi_gift_box_i00">
         <!-- Double-click to obtain all the ingredients necessary for making Blue Wolf Boots. -->
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="100"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction sellable="false" stackable="true"/>
     </item>
-    <item id="70139" name="Doom Leather Armor Crafting Pack"  icon="icon.etc_pi_gift_box_i00">
+    <item id="70139" name="Doom Leather Armor Crafting Pack" icon="icon.etc_pi_gift_box_i00">
         <!-- Double-click to obtain all the ingredients necessary for making Doom Leather Armor. -->
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="100"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction sellable="false" stackable="true"/>
     </item>
-    <item id="70140" name="Avadon Robe Crafting Pack"  icon="icon.etc_pi_gift_box_i00">
+    <item id="70140" name="Avadon Robe Crafting Pack" icon="icon.etc_pi_gift_box_i00">
         <!-- Double-click to obtain all the ingredients necessary for making Avadon Robe. -->
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="100"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction sellable="false" stackable="true"/>
     </item>
-    <item id="70141" name="Avadon Circlet Crafting Pack"  icon="icon.etc_pi_gift_box_i00">
+    <item id="70141" name="Avadon Circlet Crafting Pack" icon="icon.etc_pi_gift_box_i00">
         <!-- Double-click to obtain all the ingredients necessary for making Avadon Circlet. -->
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="100"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction sellable="false" stackable="true"/>
     </item>
-    <item id="70142" name="Avadon Gloves Crafting Pack"  icon="icon.etc_pi_gift_box_i00">
+    <item id="70142" name="Avadon Gloves Crafting Pack" icon="icon.etc_pi_gift_box_i00">
         <!-- Double-click to obtain all the ingredients necessary for making Full Plate Armor. -->
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="100"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction sellable="false" stackable="true"/>
     </item>
-    <item id="70143" name="Avadon Boots Crafting Pack"  icon="icon.etc_pi_gift_box_i00">
+    <item id="70143" name="Avadon Boots Crafting Pack" icon="icon.etc_pi_gift_box_i00">
         <!-- Double-click to obtain all the ingredients necessary for making Avadon Boots. -->
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="100"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction sellable="false" stackable="true"/>
     </item>
-    <item id="70144" name="Blue Wolf Tunic Crafting Pack"  icon="icon.etc_pi_gift_box_i00">
+    <item id="70144" name="Blue Wolf Tunic Crafting Pack" icon="icon.etc_pi_gift_box_i00">
         <!-- Double-click to obtain all the ingredients necessary for making Blue Wolf Tunic. -->
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="100"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction sellable="false" stackable="true"/>
     </item>
-    <item id="70145" name="Blue Wolf Stockings Crafting Pack"  icon="icon.etc_pi_gift_box_i00">
+    <item id="70145" name="Blue Wolf Stockings Crafting Pack" icon="icon.etc_pi_gift_box_i00">
         <!-- Double-click to obtain all the ingredients necessary for making Blue Wolf Stockings. -->
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="100"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction sellable="false" stackable="true"/>
     </item>
-    <item id="70146" name="Black Ore Necklace Crafting Pack"  icon="icon.etc_pi_gift_box_i00">
+    <item id="70146" name="Black Ore Necklace Crafting Pack" icon="icon.etc_pi_gift_box_i00">
         <!-- Double-click to obtain all the ingredients necessary for making Black Ore Necklace. -->
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="100"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction sellable="false" stackable="true"/>
     </item>
-    <item id="70147" name="Black Ore Ring Crafting Pack"  icon="icon.etc_pi_gift_box_i00">
+    <item id="70147" name="Black Ore Ring Crafting Pack" icon="icon.etc_pi_gift_box_i00">
         <!-- Double-click to obtain all the ingredients necessary for making Black Ore Ring. -->
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="100"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction sellable="false" stackable="true"/>
     </item>
-    <item id="70148" name="Black Ore Earring Crafting Pack"  icon="icon.etc_pi_gift_box_i00">
+    <item id="70148" name="Black Ore Earring Crafting Pack" icon="icon.etc_pi_gift_box_i00">
         <!-- Double-click to obtain all the ingredients necessary for making Black Ore Earring. -->
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="100"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction sellable="false" stackable="true"/>
     </item>
-    <item id="70149" name="Brigandine Crafting Pack"  icon="icon.etc_pi_gift_box_i00">
+    <item id="70149" name="Brigandine Crafting Pack" icon="icon.etc_pi_gift_box_i00">
         <!-- Double-click to obtain all the ingredients necessary for making Brigandine. -->
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="100"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction sellable="false" stackable="true"/>
     </item>
-    <item id="70150" name="Brigandine Gaiters Crafting Pack"  icon="icon.etc_pi_gift_box_i00">
+    <item id="70150" name="Brigandine Gaiters Crafting Pack" icon="icon.etc_pi_gift_box_i00">
         <!-- Double-click to obtain all the ingredients necessary for making Brigandine Gaiters. -->
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="100"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction sellable="false" stackable="true"/>
     </item>
-    <item id="70151" name="Brigandine Helmet Crafting Pack"  icon="icon.etc_pi_gift_box_i00">
+    <item id="70151" name="Brigandine Helmet Crafting Pack" icon="icon.etc_pi_gift_box_i00">
         <!-- Double-click to obtain all the ingredients necessary for making Brigandine Helmet. -->
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="100"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction sellable="false" stackable="true"/>
     </item>
-    <item id="70152" name="Brigandine Shield Crafting Pack"  icon="icon.etc_pi_gift_box_i00">
+    <item id="70152" name="Brigandine Shield Crafting Pack" icon="icon.etc_pi_gift_box_i00">
         <!-- Double-click to obtain all the ingredients necessary for making Brigandine Shield. -->
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="100"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction sellable="false" stackable="true"/>
     </item>
-    <item id="70153" name="Manticore Skin Shirt Crafting Pack"  icon="icon.etc_pi_gift_box_i00">
+    <item id="70153" name="Manticore Skin Shirt Crafting Pack" icon="icon.etc_pi_gift_box_i00">
         <!-- Double-click to obtain all the ingredients necessary for making Manticore Skin Shirt. -->
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="100"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction sellable="false" stackable="true"/>
     </item>
-    <item id="70154" name="Manticore Skin Gaiters Crafting Pack"  icon="icon.etc_pi_gift_box_i00">
+    <item id="70154" name="Manticore Skin Gaiters Crafting Pack" icon="icon.etc_pi_gift_box_i00">
         <!-- Double-click to obtain all the ingredients necessary for making Manticore Skin Gaiters. -->
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="100"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction sellable="false" stackable="true"/>
     </item>
-    <item id="70155" name="Manticore Skin Boots Crafting Pack"  icon="icon.etc_pi_gift_box_i00">
+    <item id="70155" name="Manticore Skin Boots Crafting Pack" icon="icon.etc_pi_gift_box_i00">
         <!-- Double-click to obtain all the ingredients necessary for making Manticore Skin Boots. -->
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="100"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction sellable="false" stackable="true"/>
     </item>
-    <item id="70156" name="Mithril Tunic Crafting Pack"  icon="icon.etc_pi_gift_box_i00">
+    <item id="70156" name="Mithril Tunic Crafting Pack" icon="icon.etc_pi_gift_box_i00">
         <!-- Double-click to obtain all the ingredients necessary for making Mithril Tunic. -->
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="100"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction sellable="false" stackable="true"/>
     </item>
-    <item id="70157" name="Mithril Stockings Crafting Pack"  icon="icon.etc_pi_gift_box_i00">
+    <item id="70157" name="Mithril Stockings Crafting Pack" icon="icon.etc_pi_gift_box_i00">
         <!-- Double-click to obtain all the ingredients necessary for making Mithril Stockings. -->
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="100"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction sellable="false" stackable="true"/>
     </item>
-    <item id="70158" name="Elven Mithril Gloves Crafting Pack"  icon="icon.etc_pi_gift_box_i00">
+    <item id="70158" name="Elven Mithril Gloves Crafting Pack" icon="icon.etc_pi_gift_box_i00">
         <!-- Double-click to obtain all the ingredients necessary for making Elven Mithril Gloves. -->
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="100"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction sellable="false" stackable="true"/>
     </item>
-    <item id="70159" name="Mana Recovery Potion"  icon="icon.etc_potion_blue_i00">
+    <item id="70159" name="Mana Recovery Potion" icon="icon.etc_potion_blue_i00">
         <!-- Instantly recovers MP without a continuous effect. Cannot be used when MP is full. -->
         <set name="default_action" val="SKILL_REDUCE"/>
         <set name="weight" val="5"/>
-        <set name="is_stackable" val="true"/>
-        <set name="immediate_effect" val="true"/>
-        <set name="handler" val="ItemSkills"/>
         <set name="commissionItemType" val="POTION"/>
+        <restriction stackable="true"/>
         <cond addName="1" msgId="113">
             <player flyMounted="false"/>
         </cond>
@@ -714,234 +559,164 @@
             <skill id="26030" level="1"/> <!-- Mana Potion -->
         </skills>
     </item>
-    <item id="70160" name="1st Anniversary Coin"  icon="icon.etc_11th_token">
-		<!-- A coin commemorating the 1st anniversary. Maybe, if you collect many of such coins, something good will happen?Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. Can be shared within account through Dimensional Merchant. -->
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+    <item id="70160" name="1st Anniversary Coin" icon="icon.etc_11th_token">
+        <!-- A coin commemorating the 1st anniversary. Maybe, if you collect many of such coins, something good will happen?Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. Can be shared within account through Dimensional Merchant. -->
+        <restriction sellable="false" stackable="true"/>
     </item>
-    <item id="70161" name="My Teleport Pack"  icon="icon.etc_pi_gift_box_i01">
-		<!-- Double-click to obtain 1 My Teleport Book, 3 My Teleports, or 10 My Teleport Scrolls. -->
+    <item id="70161" name="My Teleport Pack" icon="icon.etc_pi_gift_box_i01">
+        <!-- Double-click to obtain 1 My Teleport Book, 3 My Teleports, or 10 My Teleport Scrolls. -->
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction sellable="false" stackable="true"/>
     </item>
-    <item id="70162" name="Valakas Treasure Chest"  icon="icon.bm_sheep_agathion_30d_box">
-		<!-- Double-click the chest to get one of the treasures, gathered by Fire Dragon Valakas. -->
+    <item id="70162" name="Valakas Treasure Chest" icon="icon.bm_sheep_agathion_30d_box">
+        <!-- Double-click the chest to get one of the treasures, gathered by Fire Dragon Valakas. -->
         <set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction sellable="false" stackable="true"/>
     </item>
-    <item id="70163" name="Energy of Development"  icon="BranchIcon.Icon.etc_g_bonus_herb_i00">
+    <item id="70163" name="Energy of Development" icon="BranchIcon.Icon.etc_g_bonus_herb_i00">
         <!-- XP/SP gain +5% for 10 minutes. -->
         <set name="immediate_effect" val="true"/>
         <set name="ex_immediate_effect" val="true"/>
         <set name="handler" val="ItemSkills"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="commissionItemType" val="OTHER_ITEM"/>
         <set name="for_npc" val="true"/>
+        <restriction depositable="false" clan-depositable="false" mailable="false"/>
         <skills>
             <skill id="55273" level="1"/> <!-- Energy of Development -->
         </skills>
     </item>
-    <item id="70164" name="Powerful Energy of Development"  icon="BranchIcon.Icon.etc_g_bonus_herb_i00">
+    <item id="70164" name="Powerful Energy of Development" icon="BranchIcon.Icon.etc_g_bonus_herb_i00">
         <!-- XP/SP gain +7% for 10 minutes. -->
         <set name="immediate_effect" val="true"/>
         <set name="ex_immediate_effect" val="true"/>
         <set name="handler" val="ItemSkills"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="commissionItemType" val="OTHER_ITEM"/>
         <set name="for_npc" val="true"/>
+        <restriction depositable="false" clan-depositable="false" mailable="false"/>
         <skills>
             <skill id="55273" level="2"/> <!-- Energy of Development -->
         </skills>
     </item>
-    <item id="70165" name="Great Energy of Development"  icon="BranchIcon.Icon.etc_g_bonus_herb_i00">
+    <item id="70165" name="Great Energy of Development" icon="BranchIcon.Icon.etc_g_bonus_herb_i00">
         <!-- XP/SP gain +10% for 10 minutes. -->
         <set name="immediate_effect" val="true"/>
         <set name="ex_immediate_effect" val="true"/>
         <set name="handler" val="ItemSkills"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="commissionItemType" val="OTHER_ITEM"/>
         <set name="for_npc" val="true"/>
+        <restriction depositable="false" clan-depositable="false" mailable="false"/>
         <skills>
             <skill id="55273" level="3"/> <!-- Energy of Development -->
         </skills>
     </item>
-    <item id="70166" name="Energy of Speed"  icon="BranchIcon.Icon.etc_g_bonus_herb_i01">
+    <item id="70166" name="Energy of Speed" icon="BranchIcon.Icon.etc_g_bonus_herb_i01">
         <!-- Speed +2 for 10 minutes. -->
         <set name="immediate_effect" val="true"/>
         <set name="ex_immediate_effect" val="true"/>
         <set name="handler" val="ItemSkills"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="commissionItemType" val="OTHER_ITEM"/>
         <set name="for_npc" val="true"/>
+        <restriction depositable="false" clan-depositable="false" mailable="false"/>
         <skills>
             <skill id="55274" level="1"/> <!-- Energy of Speed -->
         </skills>
     </item>
-    <item id="70167" name="Powerful Energy of Speed"  icon="BranchIcon.Icon.etc_g_bonus_herb_i01">
+    <item id="70167" name="Powerful Energy of Speed" icon="BranchIcon.Icon.etc_g_bonus_herb_i01">
         <!-- Speed +3 for 10 minutes. -->
         <set name="immediate_effect" val="true"/>
         <set name="ex_immediate_effect" val="true"/>
         <set name="handler" val="ItemSkills"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="commissionItemType" val="OTHER_ITEM"/>
         <set name="for_npc" val="true"/>
+        <restriction depositable="false" clan-depositable="false" mailable="false"/>
         <skills>
             <skill id="55274" level="2"/> <!-- Energy of Speed -->
         </skills>
     </item>
-    <item id="70168" name="Great Energy of Speed"  icon="BranchIcon.Icon.etc_g_bonus_herb_i01">
+    <item id="70168" name="Great Energy of Speed" icon="BranchIcon.Icon.etc_g_bonus_herb_i01">
         <!-- Speed +5 for 10 minutes. -->
         <set name="immediate_effect" val="true"/>
         <set name="ex_immediate_effect" val="true"/>
         <set name="handler" val="ItemSkills"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="commissionItemType" val="OTHER_ITEM"/>
         <set name="for_npc" val="true"/>
+        <restriction depositable="false" clan-depositable="false" mailable="false"/>
         <skills>
             <skill id="55274" level="3"/> <!-- Energy of Speed -->
         </skills>
     </item>
-    <item id="70169" name="Energy of Accuracy"  icon="BranchIcon.Icon.etc_g_bonus_herb_i02">
+    <item id="70169" name="Energy of Accuracy" icon="BranchIcon.Icon.etc_g_bonus_herb_i02">
         <!-- P. Accuracy +1 for 10 minutes. -->
         <set name="immediate_effect" val="true"/>
         <set name="ex_immediate_effect" val="true"/>
         <set name="handler" val="ItemSkills"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="commissionItemType" val="OTHER_ITEM"/>
         <set name="for_npc" val="true"/>
+        <restriction depositable="false" clan-depositable="false" mailable="false"/>
         <skills>
             <skill id="55275" level="1"/> <!-- Energy of Accuracy -->
         </skills>
     </item>
-    <item id="70170" name="Powerful Energy of Accuracy"  icon="BranchIcon.Icon.etc_g_bonus_herb_i02">
+    <item id="70170" name="Powerful Energy of Accuracy" icon="BranchIcon.Icon.etc_g_bonus_herb_i02">
         <!-- P. Accuracy +2 for 10 minutes. -->
         <set name="immediate_effect" val="true"/>
         <set name="ex_immediate_effect" val="true"/>
         <set name="handler" val="ItemSkills"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="commissionItemType" val="OTHER_ITEM"/>
         <set name="for_npc" val="true"/>
+        <restriction depositable="false" clan-depositable="false" mailable="false"/>
         <skills>
             <skill id="55275" level="2"/> <!-- Energy of Accuracy -->
         </skills>
     </item>
-    <item id="70171" name="Great Energy of Accuracy"  icon="BranchIcon.Icon.etc_g_bonus_herb_i02">
+    <item id="70171" name="Great Energy of Accuracy" icon="BranchIcon.Icon.etc_g_bonus_herb_i02">
         <!-- P. Accuracy +4 for 10 minutes. -->
         <set name="immediate_effect" val="true"/>
         <set name="ex_immediate_effect" val="true"/>
         <set name="handler" val="ItemSkills"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="commissionItemType" val="OTHER_ITEM"/>
         <set name="for_npc" val="true"/>
+        <restriction depositable="false" clan-depositable="false" mailable="false"/>
         <skills>
             <skill id="55275" level="3"/> <!-- Energy of Accuracy -->
         </skills>
     </item>
-    <item id="70172" name="Coin of Tears"  icon="BranchIcon.Icon.vip_silver_coin">
+    <item id="70172" name="Coin of Tears" icon="BranchIcon.Icon.vip_silver_coin">
         <!-- A coin saturated with grief. You can find it in the Ruins of Agony once in a while. -->
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
     </item>
-    <item id="70173" name="Decayed Coin"  icon="BranchIcon.Icon.vip_silver_coin">
+    <item id="70173" name="Decayed Coin" icon="BranchIcon.Icon.vip_silver_coin">
         <!-- A coin which decayed over time. You can find it in the Ruins of Agony once in a while. -->
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
     </item>
-    <item id="70174" name="Shabby Coin"  icon="BranchIcon.Icon.vip_silver_coin">
+    <item id="70174" name="Shabby Coin" icon="BranchIcon.Icon.vip_silver_coin">
         <!-- A coin worn off due to frequent use. It was lying in the Abandoned Camp. -->
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
     </item>
-    <item id="70175" name="Crude Coin"  icon="BranchIcon.Icon.vip_silver_coin">
+    <item id="70175" name="Crude Coin" icon="BranchIcon.Icon.vip_silver_coin">
         <!-- This coin was hastily crafted by an amateurish Orc. You can find it in Orc Barracks once in a while/ -->
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
     </item>
-    <item id="70176" name="Old Coin"  icon="BranchIcon.Icon.vip_silver_coin">
+    <item id="70176" name="Old Coin" icon="BranchIcon.Icon.vip_silver_coin">
         <!-- A very old coin. Someone dropped it Cruma Tower long ago. -->
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
     </item>
-    <item id="70177" name="Box of Tears"  icon="icon.bm_sheep_agathion_30d_box">
+    <item id="70177" name="Box of Tears" icon="icon.bm_sheep_agathion_30d_box">
         <!-- A box saturated with grief. You can find it in the Ruins of Agony once in a while. -->
         <set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
     </item>
-    <item id="70178" name="Decayed Box"  icon="icon.bm_sheep_agathion_30d_box">
+    <item id="70178" name="Decayed Box" icon="icon.bm_sheep_agathion_30d_box">
         <!-- A box which decayed over time. You can find it in the Ruins of Agony once in a while. -->
         <set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
     </item>
-    <item id="70179" name="Shabby Box"  icon="icon.bm_sheep_agathion_30d_box">
+    <item id="70179" name="Shabby Box" icon="icon.bm_sheep_agathion_30d_box">
         <!-- A box from the Abandoned Camp, shabby and very old. -->
         <set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
     </item>
-    <item id="70180" name="Crude Box"  icon="icon.bm_sheep_agathion_30d_box">
+    <item id="70180" name="Crude Box" icon="icon.bm_sheep_agathion_30d_box">
         <!-- This box was hastily crafted by an amateurish Orc. You can find it in Orc Barracks once in a while. -->
         <set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
     </item>
-    <item id="70181" name="Old Box"  icon="icon.bm_sheep_agathion_30d_box">
+    <item id="70181" name="Old Box" icon="icon.bm_sheep_agathion_30d_box">
         <!-- A very old box. Someone dropped it Cruma Tower long ago. -->
         <set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
     </item>
     <armor id="70182" name="Devi’s Ring (15-day)" icon="icon.ev_11th_rare_acc_ring">
         <!-- A 15-day item. When equipped, increases Max HP by 20, M. Atk. by 3, P. Atk. by 5. The effect does not stack if two identical rings are equipped. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
@@ -949,78 +724,61 @@
         <set name="bodypart" val="rfinger;lfinger"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="150"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="true"/>
-        <set name="is_sellable" val="false"/>
-        <set name="time" val="21600"/>
         <set name="useSkillDisTime" val="1"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
         <skills>
-			<skill id="55290" level="1" /> <!-- Devi s Ring -->
+            <skill id="55290" level="1"/> <!-- Devi s Ring -->
         </skills>
         <stats>
             <stat type="mDef">20</stat>
         </stats>
     </armor>
     <armor id="70183" name="Devi’s Ring" icon="icon.ev_11th_rare_acc_ring">
-		<!-- When equipped, increases HP by 20, M. Atk. by 3, P. Atk. by 5. The effect does not stack, if two identical rings are equipped. -->
+        <!-- When equipped, increases HP by 20, M. Atk. by 3, P. Atk. by 5. The effect does not stack, if two identical rings are equipped. -->
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="rfinger;lfinger"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="150"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
         <stats>
             <stat type="mDef">20</stat>
         </stats>
     </armor>
     <armor id="70184" name="Devi’s Earring (15-day)" icon="icon.ev_11th_rare_acc_earing">
-		<!-- 15-day item. When equipped, increases MP recovery rate by 0.2, Healing received by 2%. The effect does not stack, if two identical earrings are equipped. MP +10. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
+        <!-- 15-day item. When equipped, increases MP recovery rate by 0.2, Healing received by 2%. The effect does not stack, if two identical earrings are equipped. MP +10. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="rear;lear"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="150"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
         <set name="time" val="21600"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
         <stats>
             <stat type="mDef">30</stat>
             <stat type="maxMp">10</stat>
         </stats>
     </armor>
     <armor id="70185" name="Devi’s Earring" icon="icon.ev_11th_rare_acc_earing">
-		<!-- When equipped, increases MP recovery rate by +0.2, Healing received by 2%. The effect does not stack, if two identical earrings are equipped. Additionally increases MP by 10. -->
+        <!-- When equipped, increases MP recovery rate by +0.2, Healing received by 2%. The effect does not stack, if two identical earrings are equipped. Additionally increases MP by 10. -->
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="rear;lear"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="150"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="true"/>
-        <set name="is_sellable" val="false"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
         <stats>
             <stat type="mDef">30</stat>
             <stat type="maxMp">10</stat>
         </stats>
     </armor>
     <armor id="70186" name="Devi’s Necklace (15-day)" icon="icon.ev_11th_rare_acc_necklace">
-		<!-- 15-day item. When equipped, increases MP by 20, M. Def. by 3, P. Def. by 5. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
+        <!-- 15-day item. When equipped, increases MP by 20, M. Def. by 3, P. Def. by 5. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="neck"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="150"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="time" val="21600"/>
         <set name="useSkillDisTime" val="1"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
         <skills>
-			<skill id="55294" level="1" /> <!-- Devi s Necklace -->
+            <skill id="55294" level="1"/> <!-- Devi s Necklace -->
         </skills>
         <stats>
             <stat type="mDef">40</stat>
@@ -1028,22 +786,19 @@
         </stats>
     </armor>
     <armor id="70187" name="Devi’s Necklace" icon="icon.ev_11th_rare_acc_necklace">
-		<!-- When equipped, increases MP by 20, M. Def. by 3, P. Def. by 5. -->
+        <!-- When equipped, increases MP by 20, M. Def. by 3, P. Def. by 5. -->
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="neck"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="150"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
         <stats>
             <stat type="mDef">40</stat>
             <stat type="maxMp">20</stat>
         </stats>
     </armor>
     <weapon id="70188" name="1 Weapon Slot" icon="icon.weapon_mace_of_judgment_i00">
-		<!-- Test Item -->
+        <!-- Test Item -->
         <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="rhand"/>
@@ -1064,7 +819,7 @@
         </stats>
     </weapon>
     <weapon id="70189" name="2 Weapon Slots" icon="icon.weapon_mace_of_judgment_i00">
-		<!-- Test Item -->
+        <!-- Test Item -->
         <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="rhand"/>
@@ -1085,7 +840,7 @@
         </stats>
     </weapon>
     <weapon id="70190" name="3 Weapon Slots" icon="icon.weapon_mace_of_judgment_i00">
-		<!-- Test Item -->
+        <!-- Test Item -->
         <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="rhand"/>
@@ -1106,7 +861,7 @@
         </stats>
     </weapon>
     <weapon id="70191" name="4 Weapon Slots" icon="icon.weapon_mace_of_judgment_i00">
-		<!-- Test Item -->
+        <!-- Test Item -->
         <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="rhand"/>
@@ -1127,46 +882,34 @@
         </stats>
     </weapon>
     <armor id="70192" name="Earring of Chronicle Heir" icon="icon.accessary_onyxbeastseye_earing_i00">
-		<!-- When equipped, increases MP recovery rate by 1%, Max. MP +1%. The effect does not stack if two identical earrings are equipped. Cannot be exchanged, dropped, destroyed, or sold in a private store. Can be shared within account through Dimensional Merchant. -->
+        <!-- When equipped, increases MP recovery rate by 1%, Max. MP +1%. The effect does not stack if two identical earrings are equipped. Cannot be exchanged, dropped, destroyed, or sold in a private store. Can be shared within account through Dimensional Merchant. -->
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="rear;lear"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="150"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_destroyable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" destroyable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="mDef">2</stat>
         </stats>
     </armor>
     <armor id="70193" name="Earring of Chronicle Heir" icon="icon.accessary_onyxbeastseye_earing_i00">
-		<!-- When equipped, increases MP recovery rate by 2%, Max. MP +2%. The effect does not stack if two identical earrings are equipped. Cannot be exchanged, dropped, destroyed, or sold in a private store. Can be shared within account through Dimensional Merchant. -->
+        <!-- When equipped, increases MP recovery rate by 2%, Max. MP +2%. The effect does not stack if two identical earrings are equipped. Cannot be exchanged, dropped, destroyed, or sold in a private store. Can be shared within account through Dimensional Merchant. -->
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="rear;lear"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="150"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_destroyable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" destroyable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="mDef">4</stat>
         </stats>
     </armor>
     <armor id="70194" name="Earring of Chronicle Heir" icon="icon.accessary_onyxbeastseye_earing_i00">
-		<!-- When equipped, increases MP recovery rate by 3%, Max. MP +3%. The effect does not stack if two identical earrings are equipped. Cannot be exchanged, dropped, destroyed, or sold in a private store. Can be shared within account through Dimensional Merchant. -->
+        <!-- When equipped, increases MP recovery rate by 3%, Max. MP +3%. The effect does not stack if two identical earrings are equipped. Cannot be exchanged, dropped, destroyed, or sold in a private store. Can be shared within account through Dimensional Merchant. -->
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="rear;lear"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="150"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_destroyable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" destroyable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="mDef">6</stat>
         </stats>
@@ -1177,71 +920,51 @@
         <set name="bodypart" val="rear;lear"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="150"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_destroyable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" destroyable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="mDef">8</stat>
         </stats>
     </armor>
     <armor id="70196" name="Earring of Chronicle Heir" icon="icon.accessary_onyxbeastseye_earing_i00">
-		<!-- When equipped, increases MP recovery rate by 5%, Max. MP +5%. The effect does not stack if two identical earrings are equipped. Cannot be exchanged, dropped, destroyed, or sold in a private store. Can be shared within account through Dimensional Merchant. -->
+        <!-- When equipped, increases MP recovery rate by 5%, Max. MP +5%. The effect does not stack if two identical earrings are equipped. Cannot be exchanged, dropped, destroyed, or sold in a private store. Can be shared within account through Dimensional Merchant. -->
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="rear;lear"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="150"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_destroyable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" destroyable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="mDef">10</stat>
         </stats>
     </armor>
     <armor id="70197" name="Earring of Chronicle Heir" icon="icon.accessary_onyxbeastseye_earing_i00">
-		<!-- When equipped, increases MP recovery rate by 6%, Max. MP +6%. The effect does not stack if two identical earrings are equipped. Cannot be exchanged, dropped, destroyed, or sold in a private store. Can be shared within account through Dimensional Merchant. -->
+        <!-- When equipped, increases MP recovery rate by 6%, Max. MP +6%. The effect does not stack if two identical earrings are equipped. Cannot be exchanged, dropped, destroyed, or sold in a private store. Can be shared within account through Dimensional Merchant. -->
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="rear;lear"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="150"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_destroyable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" destroyable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="mDef">12</stat>
         </stats>
     </armor>
     <armor id="70198" name="Earring of Chronicle Heir" icon="icon.accessary_onyxbeastseye_earing_i00">
-		<!-- When equipped, increases MP recovery rate by 7%, Max. MP +7%. The effect does not stack if two identical earrings are equipped. Cannot be exchanged, dropped, destroyed, or sold in a private store. Can be shared within account through Dimensional Merchant. -->
+        <!-- When equipped, increases MP recovery rate by 7%, Max. MP +7%. The effect does not stack if two identical earrings are equipped. Cannot be exchanged, dropped, destroyed, or sold in a private store. Can be shared within account through Dimensional Merchant. -->
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="rear;lear"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="150"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_destroyable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" destroyable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="mDef">14</stat>
         </stats>
     </armor>
     <armor id="70199" name="Earring of Chronicle Heir" icon="icon.accessary_onyxbeastseye_earing_i00">
-		<!-- When equipped, increases MP recovery rate by 8%, Max. MP +8%. The effect does not stack if two identical earrings are equipped. Cannot be exchanged, dropped, destroyed, or sold in a private store. Can be shared within account through Dimensional Merchant. -->
+        <!-- When equipped, increases MP recovery rate by 8%, Max. MP +8%. The effect does not stack if two identical earrings are equipped. Cannot be exchanged, dropped, destroyed, or sold in a private store. Can be shared within account through Dimensional Merchant. -->
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="rear;lear"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="150"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_destroyable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" destroyable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="mDef">16</stat>
         </stats>

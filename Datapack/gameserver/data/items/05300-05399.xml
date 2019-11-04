@@ -272,7 +272,7 @@
             <stat type="maxMp">718</stat>
         </stats>
     </armor>
-    <item id="5332" name="Recipe: Sealed Dark Crystal Leather Armor (60%)"  icon="icon.etc_recipe_violet_i00">
+    <item id="5332" name="Recipe: Sealed Dark Crystal Leather Armor (60%)" icon="icon.etc_recipe_violet_i00">
         <!-- For Dwarves only. Recipe for Sealed Dark Crystal Leather Armor. Requires Create Item - Skill Lv. 7. The success rate is 60%. -->
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
@@ -280,14 +280,13 @@
         <set name="weight" val="30"/>
         <set name="price" val="69400"/>
         <set name="recipe_id" val="513"/>
-        <set name="is_stackable" val="true"/>
-        <set name="commissionItemType" val="RECIPE"/>
         <set name="handler" val="Recipes"/>
+        <restriction stackable="true"/>
         <stats>
             <stat type="pDef">49</stat>
         </stats>
     </item>
-    <item id="5333" name="Recipe: Sealed Dark Crystal Leather Armor (100%)"  icon="icon.etc_recipe_violet_i00">
+    <item id="5333" name="Recipe: Sealed Dark Crystal Leather Armor (100%)" icon="icon.etc_recipe_violet_i00">
         <!-- For Dwarves only. Recipe for Sealed Dark Crystal Leather Armor. Requires Create Item - Skill Lv. 7. The success rate is 100%. -->
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
@@ -295,14 +294,13 @@
         <set name="weight" val="30"/>
         <set name="price" val="69400"/>
         <set name="recipe_id" val="514"/>
-        <set name="is_stackable" val="true"/>
-        <set name="commissionItemType" val="RECIPE"/>
         <set name="handler" val="Recipes"/>
+        <restriction stackable="true"/>
         <stats>
             <stat type="pDef">49</stat>
         </stats>
     </item>
-    <item id="5334" name="Recipe: Sealed Tallum Leather Armor (60%)"  icon="icon.etc_recipe_violet_i00">
+    <item id="5334" name="Recipe: Sealed Tallum Leather Armor (60%)" icon="icon.etc_recipe_violet_i00">
         <!-- For Dwarves only. Recipe for Sealed Tallum Leather Armor. Requires Create Item - Skill Lv. 7. The success rate is 60%. -->
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
@@ -310,14 +308,13 @@
         <set name="weight" val="30"/>
         <set name="price" val="101600"/>
         <set name="recipe_id" val="515"/>
-        <set name="is_stackable" val="true"/>
-        <set name="commissionItemType" val="RECIPE"/>
         <set name="handler" val="Recipes"/>
+        <restriction stackable="true"/>
         <stats>
             <stat type="pDef">49</stat>
         </stats>
     </item>
-    <item id="5335" name="Recipe: Sealed Tallum Leather Armor (100%)"  icon="icon.etc_recipe_violet_i00">
+    <item id="5335" name="Recipe: Sealed Tallum Leather Armor (100%)" icon="icon.etc_recipe_violet_i00">
         <!-- For Dwarves only. Recipe for Sealed Tallum Leather Armor. Requires Create Item - Skill Lv. 7. The success rate is 100%. -->
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
@@ -325,14 +322,13 @@
         <set name="weight" val="30"/>
         <set name="price" val="101600"/>
         <set name="recipe_id" val="516"/>
-        <set name="is_stackable" val="true"/>
-        <set name="commissionItemType" val="RECIPE"/>
         <set name="handler" val="Recipes"/>
+        <restriction stackable="true"/>
         <stats>
             <stat type="pDef">49</stat>
         </stats>
     </item>
-    <item id="5336" name="Recipe: Sealed Leather Armor of Nightmare (60%)"  icon="icon.etc_recipe_violet_i00">
+    <item id="5336" name="Recipe: Sealed Leather Armor of Nightmare (60%)" icon="icon.etc_recipe_violet_i00">
         <!-- For Dwarves only. Recipe for Sealed Leather Armor of Nightmare. Requires Create Item - Skill Lv. 8. The success rate is 60%. -->
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
@@ -340,14 +336,13 @@
         <set name="weight" val="30"/>
         <set name="price" val="154600"/>
         <set name="recipe_id" val="517"/>
-        <set name="is_stackable" val="true"/>
-        <set name="commissionItemType" val="RECIPE"/>
         <set name="handler" val="Recipes"/>
+        <restriction stackable="true"/>
         <stats>
             <stat type="pDef">49</stat>
         </stats>
     </item>
-    <item id="5337" name="Recipe: Sealed Leather Armor of Nightmare (100%)"  icon="icon.etc_recipe_violet_i00">
+    <item id="5337" name="Recipe: Sealed Leather Armor of Nightmare (100%)" icon="icon.etc_recipe_violet_i00">
         <!-- For Dwarves only. Recipe for Sealed Leather Armor of Nightmare. Requires Create Item - Skill Lv. 8. The success rate is 100%. -->
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
@@ -355,14 +350,13 @@
         <set name="weight" val="30"/>
         <set name="price" val="154600"/>
         <set name="recipe_id" val="518"/>
-        <set name="is_stackable" val="true"/>
-        <set name="commissionItemType" val="RECIPE"/>
         <set name="handler" val="Recipes"/>
+        <restriction stackable="true"/>
         <stats>
             <stat type="pDef">49</stat>
         </stats>
     </item>
-    <item id="5338" name="Recipe: Sealed Majestic Leather Armor (60%)"  icon="icon.etc_recipe_violet_i00">
+    <item id="5338" name="Recipe: Sealed Majestic Leather Armor (60%)" icon="icon.etc_recipe_violet_i00">
         <!-- For Dwarves only. Recipe for Sealed Majestic Leather Armor. Requires Create Item - Skill Lv. 8. The success rate is 60%. -->
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
@@ -370,14 +364,13 @@
         <set name="weight" val="30"/>
         <set name="price" val="154600"/>
         <set name="recipe_id" val="519"/>
-        <set name="is_stackable" val="true"/>
-        <set name="commissionItemType" val="RECIPE"/>
         <set name="handler" val="Recipes"/>
+        <restriction stackable="true"/>
         <stats>
             <stat type="pDef">49</stat>
         </stats>
     </item>
-    <item id="5339" name="Recipe: Sealed Majestic Leather Armor (100%)"  icon="icon.etc_recipe_violet_i00">
+    <item id="5339" name="Recipe: Sealed Majestic Leather Armor (100%)" icon="icon.etc_recipe_violet_i00">
         <!-- For Dwarves only. Recipe for Sealed Majestic Leather Armor. Requires Create Item - Skill Lv. 8. The success rate is 100%. -->
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
@@ -385,14 +378,13 @@
         <set name="weight" val="30"/>
         <set name="price" val="154600"/>
         <set name="recipe_id" val="520"/>
-        <set name="is_stackable" val="true"/>
-        <set name="commissionItemType" val="RECIPE"/>
         <set name="handler" val="Recipes"/>
+        <restriction stackable="true"/>
         <stats>
             <stat type="pDef">49</stat>
         </stats>
     </item>
-    <item id="5340" name="Recipe: Sealed Dark Crystal Leggings (60%)"  icon="icon.etc_recipe_violet_i00">
+    <item id="5340" name="Recipe: Sealed Dark Crystal Leggings (60%)" icon="icon.etc_recipe_violet_i00">
         <!-- For Dwarves only. Recipe for Sealed Dark Crystal Leggings. Requires Create Item - Skill Lv. 7. The success rate is 60%. -->
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
@@ -400,14 +392,13 @@
         <set name="weight" val="30"/>
         <set name="price" val="43400"/>
         <set name="recipe_id" val="521"/>
-        <set name="is_stackable" val="true"/>
-        <set name="commissionItemType" val="RECIPE"/>
         <set name="handler" val="Recipes"/>
+        <restriction stackable="true"/>
         <stats>
             <stat type="pDef">49</stat>
         </stats>
     </item>
-    <item id="5341" name="Recipe: Sealed Dark Crystal Leggings (100%)"  icon="icon.etc_recipe_violet_i00">
+    <item id="5341" name="Recipe: Sealed Dark Crystal Leggings (100%)" icon="icon.etc_recipe_violet_i00">
         <!-- For Dwarves only. Recipe for Sealed Dark Crystal Leggings. Requires Create Item - Skill Lv. 7. The success rate is 100%. -->
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
@@ -415,38 +406,35 @@
         <set name="weight" val="30"/>
         <set name="price" val="43400"/>
         <set name="recipe_id" val="522"/>
-        <set name="is_stackable" val="true"/>
-        <set name="commissionItemType" val="RECIPE"/>
         <set name="handler" val="Recipes"/>
+        <restriction stackable="true"/>
         <stats>
             <stat type="pDef">49</stat>
         </stats>
     </item>
-    <item id="5342" name="Echo Crystal - Sad Song"  icon="icon.etc_echo_crystal_i03">
+    <item id="5342" name="Echo Crystal - Sad Song" icon="icon.etc_echo_crystal_i03">
         <set name="default_action" val="SKILL_REDUCE"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="10"/>
         <set name="reuse_delay" val="44000"/>
-        <set name="is_stackable" val="true"/>
-        <set name="handler" val="ItemSkills"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
+        <restriction stackable="true"/>
         <skills>
             <skill id="2584" level="1"/> <!-- Item - Special Sound Crystal -->
         </skills>
     </item>
-    <item id="5343" name="Echo Crystal - Holy Song"  icon="icon.etc_echo_crystal_i04">
+    <item id="5343" name="Echo Crystal - Holy Song" icon="icon.etc_echo_crystal_i04">
         <set name="default_action" val="SKILL_REDUCE"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="10"/>
         <set name="reuse_delay" val="44000"/>
-        <set name="is_stackable" val="true"/>
-        <set name="handler" val="ItemSkills"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
+        <restriction stackable="true"/>
         <skills>
             <skill id="2585" level="1"/> <!-- Item - Special Sound Crystal -->
         </skills>
     </item>
-    <item id="5346" name="Recipe: Sealed Tallum Tunic (60%)"  icon="icon.etc_recipe_violet_i00">
+    <item id="5346" name="Recipe: Sealed Tallum Tunic (60%)" icon="icon.etc_recipe_violet_i00">
         <!-- Recipe: Sealed Tallum Tunic (60%) -->
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
@@ -454,14 +442,13 @@
         <set name="weight" val="30"/>
         <set name="price" val="69400"/>
         <set name="recipe_id" val="523"/>
-        <set name="is_stackable" val="true"/>
-        <set name="commissionItemType" val="RECIPE"/>
         <set name="handler" val="Recipes"/>
+        <restriction stackable="true"/>
         <stats>
             <stat type="pDef">49</stat>
         </stats>
     </item>
-    <item id="5347" name="Recipe: Sealed Tallum Tunic (100%)"  icon="icon.etc_recipe_violet_i00">
+    <item id="5347" name="Recipe: Sealed Tallum Tunic (100%)" icon="icon.etc_recipe_violet_i00">
         <!-- Recipe: Sealed Tallum Tunic (100%) -->
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
@@ -469,14 +456,13 @@
         <set name="weight" val="30"/>
         <set name="price" val="69400"/>
         <set name="recipe_id" val="524"/>
-        <set name="is_stackable" val="true"/>
-        <set name="commissionItemType" val="RECIPE"/>
         <set name="handler" val="Recipes"/>
+        <restriction stackable="true"/>
         <stats>
             <stat type="pDef">49</stat>
         </stats>
     </item>
-    <item id="5348" name="Recipe: Sealed Dark Crystal Robe (60%)"  icon="icon.etc_recipe_violet_i00">
+    <item id="5348" name="Recipe: Sealed Dark Crystal Robe (60%)" icon="icon.etc_recipe_violet_i00">
         <!-- Recipe: Sealed Dark Crystal Robe (60%) -->
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
@@ -484,14 +470,13 @@
         <set name="weight" val="30"/>
         <set name="price" val="101600"/>
         <set name="recipe_id" val="525"/>
-        <set name="is_stackable" val="true"/>
-        <set name="commissionItemType" val="RECIPE"/>
         <set name="handler" val="Recipes"/>
+        <restriction stackable="true"/>
         <stats>
             <stat type="pDef">49</stat>
         </stats>
     </item>
-    <item id="5349" name="Recipe: Sealed Dark Crystal Robe (100%)"  icon="icon.etc_recipe_violet_i00">
+    <item id="5349" name="Recipe: Sealed Dark Crystal Robe (100%)" icon="icon.etc_recipe_violet_i00">
         <!-- Recipe: Sealed Dark Crystal Robe (100%) -->
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
@@ -499,14 +484,13 @@
         <set name="weight" val="30"/>
         <set name="price" val="101600"/>
         <set name="recipe_id" val="526"/>
-        <set name="is_stackable" val="true"/>
-        <set name="commissionItemType" val="RECIPE"/>
         <set name="handler" val="Recipes"/>
+        <restriction stackable="true"/>
         <stats>
             <stat type="pDef">49</stat>
         </stats>
     </item>
-    <item id="5350" name="Recipe: Sealed Robe of Nightmare (60%)"  icon="icon.etc_recipe_violet_i00">
+    <item id="5350" name="Recipe: Sealed Robe of Nightmare (60%)" icon="icon.etc_recipe_violet_i00">
         <!-- Recipe: Sealed Robe of Nightmare (60%) -->
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
@@ -514,14 +498,13 @@
         <set name="weight" val="30"/>
         <set name="price" val="154600"/>
         <set name="recipe_id" val="527"/>
-        <set name="is_stackable" val="true"/>
-        <set name="commissionItemType" val="RECIPE"/>
         <set name="handler" val="Recipes"/>
+        <restriction stackable="true"/>
         <stats>
             <stat type="pDef">49</stat>
         </stats>
     </item>
-    <item id="5351" name="Recipe: Sealed Robe of Nightmare (100%)"  icon="icon.etc_recipe_violet_i00">
+    <item id="5351" name="Recipe: Sealed Robe of Nightmare (100%)" icon="icon.etc_recipe_violet_i00">
         <!-- Recipe: Sealed Robe of Nightmare (100%) -->
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
@@ -529,14 +512,13 @@
         <set name="weight" val="30"/>
         <set name="price" val="154600"/>
         <set name="recipe_id" val="528"/>
-        <set name="is_stackable" val="true"/>
-        <set name="commissionItemType" val="RECIPE"/>
         <set name="handler" val="Recipes"/>
+        <restriction stackable="true"/>
         <stats>
             <stat type="pDef">49</stat>
         </stats>
     </item>
-    <item id="5352" name="Recipe: Sealed Majestic Robe (60%)"  icon="icon.etc_recipe_violet_i00">
+    <item id="5352" name="Recipe: Sealed Majestic Robe (60%)" icon="icon.etc_recipe_violet_i00">
         <!-- Recipe: Sealed Majestic Robe (60%) -->
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
@@ -544,14 +526,13 @@
         <set name="weight" val="30"/>
         <set name="price" val="154600"/>
         <set name="recipe_id" val="529"/>
-        <set name="is_stackable" val="true"/>
-        <set name="commissionItemType" val="RECIPE"/>
         <set name="handler" val="Recipes"/>
+        <restriction stackable="true"/>
         <stats>
             <stat type="pDef">49</stat>
         </stats>
     </item>
-    <item id="5353" name="Recipe: Sealed Majestic Robe (100%)"  icon="icon.etc_recipe_violet_i00">
+    <item id="5353" name="Recipe: Sealed Majestic Robe (100%)" icon="icon.etc_recipe_violet_i00">
         <!-- Recipe: Sealed Majestic Robe (100%) -->
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
@@ -559,14 +540,13 @@
         <set name="weight" val="30"/>
         <set name="price" val="154600"/>
         <set name="recipe_id" val="530"/>
-        <set name="is_stackable" val="true"/>
-        <set name="commissionItemType" val="RECIPE"/>
         <set name="handler" val="Recipes"/>
+        <restriction stackable="true"/>
         <stats>
             <stat type="pDef">49</stat>
         </stats>
     </item>
-    <item id="5354" name="Recipe: Sealed Tallum Stockings (60%)"  icon="icon.etc_recipe_violet_i00">
+    <item id="5354" name="Recipe: Sealed Tallum Stockings (60%)" icon="icon.etc_recipe_violet_i00">
         <!-- Recipe: Sealed Tallum Stockings (60%) -->
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
@@ -574,14 +554,13 @@
         <set name="weight" val="30"/>
         <set name="price" val="43400"/>
         <set name="recipe_id" val="531"/>
-        <set name="is_stackable" val="true"/>
-        <set name="commissionItemType" val="RECIPE"/>
         <set name="handler" val="Recipes"/>
+        <restriction stackable="true"/>
         <stats>
             <stat type="pDef">49</stat>
         </stats>
     </item>
-    <item id="5355" name="Recipe: Sealed Tallum Stockings (100%)"  icon="icon.etc_recipe_violet_i00">
+    <item id="5355" name="Recipe: Sealed Tallum Stockings (100%)" icon="icon.etc_recipe_violet_i00">
         <!-- Recipe: Sealed Tallum Stockings (100%) -->
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
@@ -589,14 +568,13 @@
         <set name="weight" val="30"/>
         <set name="price" val="43400"/>
         <set name="recipe_id" val="532"/>
-        <set name="is_stackable" val="true"/>
-        <set name="commissionItemType" val="RECIPE"/>
         <set name="handler" val="Recipes"/>
+        <restriction stackable="true"/>
         <stats>
             <stat type="pDef">49</stat>
         </stats>
     </item>
-    <item id="5364" name="Recipe: Sealed Dark Crystal Shield (60%)"  icon="icon.etc_recipe_violet_i00">
+    <item id="5364" name="Recipe: Sealed Dark Crystal Shield (60%)" icon="icon.etc_recipe_violet_i00">
         <!-- For Dwarves only. Recipe for Sealed Dark Crystal Shield. Requires Create Item - Skill Lv. 7. The success rate is 60%. -->
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
@@ -604,14 +582,13 @@
         <set name="weight" val="30"/>
         <set name="price" val="24400"/>
         <set name="recipe_id" val="533"/>
-        <set name="is_stackable" val="true"/>
-        <set name="commissionItemType" val="RECIPE"/>
         <set name="handler" val="Recipes"/>
+        <restriction stackable="true"/>
         <stats>
             <stat type="pDef">49</stat>
         </stats>
     </item>
-    <item id="5365" name="Recipe: Sealed Dark Crystal Shield (100%)"  icon="icon.etc_recipe_violet_i00">
+    <item id="5365" name="Recipe: Sealed Dark Crystal Shield (100%)" icon="icon.etc_recipe_violet_i00">
         <!-- For Dwarves only. Recipe for Sealed Dark Crystal Shield. Requires Create Item - Skill Lv. 7. The success rate is 100%. -->
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
@@ -619,14 +596,13 @@
         <set name="weight" val="30"/>
         <set name="price" val="24400"/>
         <set name="recipe_id" val="534"/>
-        <set name="is_stackable" val="true"/>
-        <set name="commissionItemType" val="RECIPE"/>
         <set name="handler" val="Recipes"/>
+        <restriction stackable="true"/>
         <stats>
             <stat type="pDef">49</stat>
         </stats>
     </item>
-    <item id="5366" name="Recipe: Sealed Shield of Nightmare (60%)"  icon="icon.etc_recipe_violet_i00">
+    <item id="5366" name="Recipe: Sealed Shield of Nightmare (60%)" icon="icon.etc_recipe_violet_i00">
         <!-- For Dwarves only. Recipe for Sealed Shield of Nightmare. Requires Create Item - Skill Lv. 8. The success rate is 60%. -->
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
@@ -634,14 +610,13 @@
         <set name="weight" val="30"/>
         <set name="price" val="37000"/>
         <set name="recipe_id" val="535"/>
-        <set name="is_stackable" val="true"/>
-        <set name="commissionItemType" val="RECIPE"/>
         <set name="handler" val="Recipes"/>
+        <restriction stackable="true"/>
         <stats>
             <stat type="pDef">49</stat>
         </stats>
     </item>
-    <item id="5367" name="Recipe: Sealed Shield of Nightmare (100%)"  icon="icon.etc_recipe_violet_i00">
+    <item id="5367" name="Recipe: Sealed Shield of Nightmare (100%)" icon="icon.etc_recipe_violet_i00">
         <!-- For Dwarves only. Recipe for Sealed Shield of Nightmare. Requires Create Item - Skill Lv. 8. The success rate is 100%. -->
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
@@ -649,14 +624,13 @@
         <set name="weight" val="30"/>
         <set name="price" val="37000"/>
         <set name="recipe_id" val="536"/>
-        <set name="is_stackable" val="true"/>
-        <set name="commissionItemType" val="RECIPE"/>
         <set name="handler" val="Recipes"/>
+        <restriction stackable="true"/>
         <stats>
             <stat type="pDef">49</stat>
         </stats>
     </item>
-    <item id="5368" name="Recipe: Sealed Dark Crystal Boots (60%)"  icon="icon.etc_recipe_violet_i00">
+    <item id="5368" name="Recipe: Sealed Dark Crystal Boots (60%)" icon="icon.etc_recipe_violet_i00">
         <!-- For Dwarves only. Recipe for Sealed Dark Crystal Boots. Requires Create Item - Skill Lv. 7. The success rate is 60%. -->
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
@@ -664,14 +638,13 @@
         <set name="weight" val="30"/>
         <set name="price" val="23200"/>
         <set name="recipe_id" val="537"/>
-        <set name="is_stackable" val="true"/>
-        <set name="commissionItemType" val="RECIPE"/>
         <set name="handler" val="Recipes"/>
+        <restriction stackable="true"/>
         <stats>
             <stat type="pDef">49</stat>
         </stats>
     </item>
-    <item id="5369" name="Recipe: Sealed Dark Crystal Boots (100%)"  icon="icon.etc_recipe_violet_i00">
+    <item id="5369" name="Recipe: Sealed Dark Crystal Boots (100%)" icon="icon.etc_recipe_violet_i00">
         <!-- For Dwarves only. Recipe for Sealed Dark Crystal Boots. Requires Create Item - Skill Lv. 7. The success rate is 100%. -->
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
@@ -679,14 +652,13 @@
         <set name="weight" val="30"/>
         <set name="price" val="23200"/>
         <set name="recipe_id" val="538"/>
-        <set name="is_stackable" val="true"/>
-        <set name="commissionItemType" val="RECIPE"/>
         <set name="handler" val="Recipes"/>
+        <restriction stackable="true"/>
         <stats>
             <stat type="pDef">49</stat>
         </stats>
     </item>
-    <item id="5370" name="Recipe: Sealed Tallum Boots (60%)"  icon="icon.etc_recipe_violet_i00">
+    <item id="5370" name="Recipe: Sealed Tallum Boots (60%)" icon="icon.etc_recipe_violet_i00">
         <!-- For Dwarves only. Recipe for Sealed Tallum Boots. Requires Create Item - Skill Lv. 7. The success rate is 60%. -->
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
@@ -694,14 +666,13 @@
         <set name="weight" val="30"/>
         <set name="price" val="23200"/>
         <set name="recipe_id" val="539"/>
-        <set name="is_stackable" val="true"/>
-        <set name="commissionItemType" val="RECIPE"/>
         <set name="handler" val="Recipes"/>
+        <restriction stackable="true"/>
         <stats>
             <stat type="pDef">49</stat>
         </stats>
     </item>
-    <item id="5371" name="Recipe: Sealed Tallum Boots (100%)"  icon="icon.etc_recipe_violet_i00">
+    <item id="5371" name="Recipe: Sealed Tallum Boots (100%)" icon="icon.etc_recipe_violet_i00">
         <!-- For Dwarves only. Recipe for Sealed Tallum Boots. Requires Create Item - Skill Lv. 7. The success rate is 100%. -->
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
@@ -709,14 +680,13 @@
         <set name="weight" val="30"/>
         <set name="price" val="23200"/>
         <set name="recipe_id" val="540"/>
-        <set name="is_stackable" val="true"/>
-        <set name="commissionItemType" val="RECIPE"/>
         <set name="handler" val="Recipes"/>
+        <restriction stackable="true"/>
         <stats>
             <stat type="pDef">49</stat>
         </stats>
     </item>
-    <item id="5380" name="Recipe: Sealed Boots of Nightmare (60%)"  icon="icon.etc_recipe_violet_i00">
+    <item id="5380" name="Recipe: Sealed Boots of Nightmare (60%)" icon="icon.etc_recipe_violet_i00">
         <!-- For Dwarves only. Recipe for Sealed Boots of Nightmare. Requires Create Item - Skill Lv. 8. The success rate is 60%. -->
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
@@ -724,14 +694,13 @@
         <set name="weight" val="30"/>
         <set name="price" val="35200"/>
         <set name="recipe_id" val="541"/>
-        <set name="is_stackable" val="true"/>
-        <set name="commissionItemType" val="RECIPE"/>
         <set name="handler" val="Recipes"/>
+        <restriction stackable="true"/>
         <stats>
             <stat type="pDef">49</stat>
         </stats>
     </item>
-    <item id="5381" name="Recipe: Sealed Boots of Nightmare (100%)"  icon="icon.etc_recipe_violet_i00">
+    <item id="5381" name="Recipe: Sealed Boots of Nightmare (100%)" icon="icon.etc_recipe_violet_i00">
         <!-- For Dwarves only. Recipe for Sealed Boots of Nightmare. Requires Create Item - Skill Lv. 8. The success rate is 100%. -->
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
@@ -739,14 +708,13 @@
         <set name="weight" val="30"/>
         <set name="price" val="35200"/>
         <set name="recipe_id" val="542"/>
-        <set name="is_stackable" val="true"/>
-        <set name="commissionItemType" val="RECIPE"/>
         <set name="handler" val="Recipes"/>
+        <restriction stackable="true"/>
         <stats>
             <stat type="pDef">49</stat>
         </stats>
     </item>
-    <item id="5382" name="Recipe: Sealed Majestic Boots (60%)"  icon="icon.etc_recipe_violet_i00">
+    <item id="5382" name="Recipe: Sealed Majestic Boots (60%)" icon="icon.etc_recipe_violet_i00">
         <!-- For Dwarves only. Recipe for Sealed Majestic Boots. Requires Create Item - Skill Lv. 8. The success rate is 60%. -->
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
@@ -754,14 +722,13 @@
         <set name="weight" val="30"/>
         <set name="price" val="35200"/>
         <set name="recipe_id" val="543"/>
-        <set name="is_stackable" val="true"/>
-        <set name="commissionItemType" val="RECIPE"/>
         <set name="handler" val="Recipes"/>
+        <restriction stackable="true"/>
         <stats>
             <stat type="pDef">49</stat>
         </stats>
     </item>
-    <item id="5383" name="Recipe: Sealed Majestic Boots (100%)"  icon="icon.etc_recipe_violet_i00">
+    <item id="5383" name="Recipe: Sealed Majestic Boots (100%)" icon="icon.etc_recipe_violet_i00">
         <!-- For Dwarves only. Recipe for Sealed Majestic Boots. Requires Create Item - Skill Lv. 8. The success rate is 100%. -->
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
@@ -769,14 +736,13 @@
         <set name="weight" val="30"/>
         <set name="price" val="35200"/>
         <set name="recipe_id" val="544"/>
-        <set name="is_stackable" val="true"/>
-        <set name="commissionItemType" val="RECIPE"/>
         <set name="handler" val="Recipes"/>
+        <restriction stackable="true"/>
         <stats>
             <stat type="pDef">49</stat>
         </stats>
     </item>
-    <item id="5392" name="Recipe: Sealed Dark Crystal Gloves (60%)"  icon="icon.etc_recipe_violet_i00">
+    <item id="5392" name="Recipe: Sealed Dark Crystal Gloves (60%)" icon="icon.etc_recipe_violet_i00">
         <!-- For Dwarves only. Recipe for Sealed Dark Crystal Gloves. Requires Create Item - Skill Lv. 7. The success rate is 60%. -->
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
@@ -784,14 +750,13 @@
         <set name="weight" val="30"/>
         <set name="price" val="23200"/>
         <set name="recipe_id" val="545"/>
-        <set name="is_stackable" val="true"/>
-        <set name="commissionItemType" val="RECIPE"/>
         <set name="handler" val="Recipes"/>
+        <restriction stackable="true"/>
         <stats>
             <stat type="pDef">49</stat>
         </stats>
     </item>
-    <item id="5393" name="Recipe: Sealed Dark Crystal Gloves (100%)"  icon="icon.etc_recipe_violet_i00">
+    <item id="5393" name="Recipe: Sealed Dark Crystal Gloves (100%)" icon="icon.etc_recipe_violet_i00">
         <!-- For Dwarves only. Recipe for Sealed Dark Crystal Gloves. Requires Create Item - Skill Lv. 7. The success rate is 100%. -->
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
@@ -799,14 +764,13 @@
         <set name="weight" val="30"/>
         <set name="price" val="23200"/>
         <set name="recipe_id" val="546"/>
-        <set name="is_stackable" val="true"/>
-        <set name="commissionItemType" val="RECIPE"/>
         <set name="handler" val="Recipes"/>
+        <restriction stackable="true"/>
         <stats>
             <stat type="pDef">49</stat>
         </stats>
     </item>
-    <item id="5394" name="Recipe: Sealed Tallum Gloves (60%)"  icon="icon.etc_recipe_violet_i00">
+    <item id="5394" name="Recipe: Sealed Tallum Gloves (60%)" icon="icon.etc_recipe_violet_i00">
         <!-- For Dwarves only. Recipe for Sealed Tallum Gloves. Requires Create Item - Skill Lv. 7. The success rate is 60%. -->
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
@@ -814,14 +778,13 @@
         <set name="weight" val="30"/>
         <set name="price" val="23200"/>
         <set name="recipe_id" val="547"/>
-        <set name="is_stackable" val="true"/>
-        <set name="commissionItemType" val="RECIPE"/>
         <set name="handler" val="Recipes"/>
+        <restriction stackable="true"/>
         <stats>
             <stat type="pDef">49</stat>
         </stats>
     </item>
-    <item id="5395" name="Recipe: Sealed Tallum Gloves (100%)"  icon="icon.etc_recipe_violet_i00">
+    <item id="5395" name="Recipe: Sealed Tallum Gloves (100%)" icon="icon.etc_recipe_violet_i00">
         <!-- For Dwarves only. Recipe for Sealed Tallum Gloves. Requires Create Item - Skill Lv. 7. The success rate is 100%. -->
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
@@ -829,9 +792,8 @@
         <set name="weight" val="30"/>
         <set name="price" val="23200"/>
         <set name="recipe_id" val="548"/>
-        <set name="is_stackable" val="true"/>
-        <set name="commissionItemType" val="RECIPE"/>
         <set name="handler" val="Recipes"/>
+        <restriction stackable="true"/>
         <stats>
             <stat type="pDef">49</stat>
         </stats>

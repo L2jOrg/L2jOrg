@@ -5,7 +5,7 @@
         <set name="bodypart" val="rfinger;lfinger"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="150"/>
-        <set name="is_sellable" val="false"/>
+        <restriction sellable="false"/>
     </armor>
     <armor id="48766" name="Panda Outfit" icon="icon.sayha2017_panda">
         <set name="default_action" val="EQUIP"/>
@@ -13,6 +13,6 @@
         <set name="bodypart" val="alldress"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="1000"/>
-        <set name="is_sellable" val="false"/>
+        <restriction sellable="false"/>
     </armor>
 </list>

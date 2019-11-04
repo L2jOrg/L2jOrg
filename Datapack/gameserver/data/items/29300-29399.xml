@@ -8,10 +8,7 @@
         <set name="weight" val="1010"/>
         <set name="soulshots" val="5"/>
         <set name="spiritshots" val="5"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pAtk">90</stat>
             <stat type="mAtk">79</stat>
@@ -30,10 +27,7 @@
         <set name="weight" val="2100"/>
         <set name="soulshots" val="5"/>
         <set name="spiritshots" val="5"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pAtk">96</stat>
             <stat type="mAtk">47</stat>
@@ -52,10 +46,7 @@
         <set name="weight" val="2140"/>
         <set name="soulshots" val="2"/>
         <set name="spiritshots" val="2"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <skills>
             <skill id="3599" level="1"/> <!-- Polearm Multi-attack -->
         </skills>
@@ -77,10 +68,7 @@
         <set name="weight" val="2120"/>
         <set name="soulshots" val="2"/>
         <set name="spiritshots" val="2"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <skills>
             <skill id="3599" level="1"/> <!-- Polearm Multi-attack -->
         </skills>
@@ -102,10 +90,7 @@
         <set name="weight" val="2060"/>
         <set name="soulshots" val="5"/>
         <set name="spiritshots" val="5"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <skills>
             <skill id="3599" level="1"/> <!-- Polearm Multi-attack -->
         </skills>
@@ -127,10 +112,7 @@
         <set name="weight" val="2100"/>
         <set name="soulshots" val="3"/>
         <set name="spiritshots" val="3"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <skills>
             <skill id="3599" level="1"/> <!-- Polearm Multi-attack -->
         </skills>
@@ -152,10 +134,7 @@
         <set name="weight" val="2090"/>
         <set name="soulshots" val="3"/>
         <set name="spiritshots" val="3"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <skills>
             <skill id="3599" level="1"/> <!-- Polearm Multi-attack -->
         </skills>
@@ -177,10 +156,7 @@
         <set name="weight" val="2080"/>
         <set name="soulshots" val="3"/>
         <set name="spiritshots" val="3"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <skills>
             <skill id="3599" level="1"/> <!-- Polearm Multi-attack -->
         </skills>
@@ -202,10 +178,7 @@
         <set name="weight" val="2050"/>
         <set name="soulshots" val="5"/>
         <set name="spiritshots" val="5"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <skills>
             <skill id="3599" level="1"/> <!-- Polearm Multi-attack -->
         </skills>
@@ -227,10 +200,7 @@
         <set name="weight" val="2090"/>
         <set name="soulshots" val="3"/>
         <set name="spiritshots" val="3"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <skills>
             <skill id="3599" level="1"/> <!-- Polearm Multi-attack -->
         </skills>
@@ -252,10 +222,7 @@
         <set name="weight" val="2070"/>
         <set name="soulshots" val="3"/>
         <set name="spiritshots" val="3"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <skills>
             <skill id="3599" level="1"/> <!-- Polearm Multi-attack -->
         </skills>
@@ -277,10 +244,7 @@
         <set name="weight" val="2050"/>
         <set name="soulshots" val="5"/>
         <set name="spiritshots" val="5"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <skills>
             <skill id="3599" level="1"/> <!-- Polearm Multi-attack -->
         </skills>
@@ -303,10 +267,7 @@
         <set name="soulshots" val="2"/>
         <set name="spiritshots" val="2"/>
         <set name="mp_consume" val="1"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pAtk">16</stat>
             <stat type="mAtk">6</stat>
@@ -326,10 +287,7 @@
         <set name="soulshots" val="2"/>
         <set name="spiritshots" val="2"/>
         <set name="mp_consume" val="1"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pAtk">23</stat>
             <stat type="mAtk">9</stat>
@@ -349,10 +307,7 @@
         <set name="soulshots" val="5"/>
         <set name="spiritshots" val="2"/>
         <set name="mp_consume" val="1"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pAtk">34</stat>
             <stat type="mAtk">12</stat>
@@ -372,10 +327,7 @@
         <set name="soulshots" val="6"/>
         <set name="spiritshots" val="2"/>
         <set name="mp_consume" val="1"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pAtk">49</stat>
             <stat type="mAtk">17</stat>
@@ -395,10 +347,7 @@
         <set name="soulshots" val="6"/>
         <set name="spiritshots" val="2"/>
         <set name="mp_consume" val="1"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pAtk">64</stat>
             <stat type="mAtk">21</stat>
@@ -418,10 +367,7 @@
         <set name="soulshots" val="7"/>
         <set name="spiritshots" val="3"/>
         <set name="mp_consume" val="2"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pAtk">82</stat>
             <stat type="mAtk">26</stat>
@@ -441,10 +387,7 @@
         <set name="soulshots" val="7"/>
         <set name="spiritshots" val="3"/>
         <set name="mp_consume" val="2"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pAtk">114</stat>
             <stat type="mAtk">35</stat>
@@ -464,10 +407,7 @@
         <set name="soulshots" val="7"/>
         <set name="spiritshots" val="3"/>
         <set name="mp_consume" val="2"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pAtk">105</stat>
             <stat type="mAtk">32</stat>
@@ -487,10 +427,7 @@
         <set name="soulshots" val="7"/>
         <set name="spiritshots" val="3"/>
         <set name="mp_consume" val="2"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pAtk">105</stat>
             <stat type="mAtk">32</stat>
@@ -510,10 +447,7 @@
         <set name="soulshots" val="11"/>
         <set name="spiritshots" val="3"/>
         <set name="mp_consume" val="2"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pAtk">132</stat>
             <stat type="mAtk">39</stat>
@@ -533,10 +467,7 @@
         <set name="soulshots" val="16"/>
         <set name="spiritshots" val="5"/>
         <set name="mp_consume" val="2"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pAtk">179</stat>
             <stat type="mAtk">51</stat>
@@ -556,10 +487,7 @@
         <set name="soulshots" val="16"/>
         <set name="spiritshots" val="5"/>
         <set name="mp_consume" val="2"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pAtk">191</stat>
             <stat type="mAtk">54</stat>
@@ -578,10 +506,7 @@
         <set name="weight" val="1590"/>
         <set name="soulshots" val="2"/>
         <set name="spiritshots" val="2"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pAtk">10</stat>
             <stat type="mAtk">6</stat>
@@ -600,10 +525,7 @@
         <set name="weight" val="1580"/>
         <set name="soulshots" val="2"/>
         <set name="spiritshots" val="2"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pAtk">13</stat>
             <stat type="mAtk">9</stat>
@@ -622,10 +544,7 @@
         <set name="weight" val="1560"/>
         <set name="soulshots" val="2"/>
         <set name="spiritshots" val="2"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pAtk">21</stat>
             <stat type="mAtk">12</stat>
@@ -644,10 +563,7 @@
         <set name="weight" val="1570"/>
         <set name="soulshots" val="2"/>
         <set name="spiritshots" val="2"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pAtk">29</stat>
             <stat type="mAtk">17</stat>
@@ -666,10 +582,7 @@
         <set name="weight" val="1560"/>
         <set name="soulshots" val="2"/>
         <set name="spiritshots" val="2"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pAtk">38</stat>
             <stat type="mAtk">21</stat>
@@ -688,10 +601,7 @@
         <set name="weight" val="1400"/>
         <set name="soulshots" val="2"/>
         <set name="spiritshots" val="2"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pAtk">16</stat>
             <stat type="mAtk">10</stat>
@@ -710,10 +620,7 @@
         <set name="weight" val="1540"/>
         <set name="soulshots" val="3"/>
         <set name="spiritshots" val="3"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pAtk">49</stat>
             <stat type="mAtk">26</stat>
@@ -732,10 +639,7 @@
         <set name="weight" val="1550"/>
         <set name="soulshots" val="3"/>
         <set name="spiritshots" val="3"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pAtk">62</stat>
             <stat type="mAtk">32</stat>
@@ -754,10 +658,7 @@
         <set name="weight" val="1540"/>
         <set name="soulshots" val="3"/>
         <set name="spiritshots" val="3"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pAtk">78</stat>
             <stat type="mAtk">39</stat>
@@ -776,10 +677,7 @@
         <set name="weight" val="1510"/>
         <set name="soulshots" val="5"/>
         <set name="spiritshots" val="5"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pAtk">96</stat>
             <stat type="mAtk">47</stat>
@@ -798,10 +696,7 @@
         <set name="weight" val="1520"/>
         <set name="soulshots" val="5"/>
         <set name="spiritshots" val="5"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pAtk">112</stat>
             <stat type="mAtk">54</stat>
@@ -818,10 +713,7 @@
         <set name="bodypart" val="chest"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="8920"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pDef">68</stat>
         </stats>
@@ -832,10 +724,7 @@
         <set name="bodypart" val="chest"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="8970"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pDef">62</stat>
         </stats>
@@ -846,10 +735,7 @@
         <set name="bodypart" val="legs"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="3960"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pDef">43</stat>
         </stats>
@@ -860,10 +746,7 @@
         <set name="bodypart" val="legs"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="4020"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pDef">39</stat>
         </stats>
@@ -874,10 +757,7 @@
         <set name="bodypart" val="chest"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="8620"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pDef">95</stat>
         </stats>
@@ -888,10 +768,7 @@
         <set name="bodypart" val="chest"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="8540"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pDef">95</stat>
         </stats>
@@ -902,10 +779,7 @@
         <set name="bodypart" val="chest"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="8420"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pDef">97</stat>
         </stats>
@@ -916,10 +790,7 @@
         <set name="bodypart" val="chest"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="8320"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pDef">103</stat>
         </stats>
@@ -930,10 +801,7 @@
         <set name="bodypart" val="chest"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="8220"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pDef">111</stat>
         </stats>
@@ -944,10 +812,7 @@
         <set name="bodypart" val="chest"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="8670"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pDef">95</stat>
         </stats>
@@ -958,10 +823,7 @@
         <set name="bodypart" val="chest"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="8720"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pDef">87</stat>
         </stats>
@@ -972,10 +834,7 @@
         <set name="bodypart" val="chest"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="8820"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pDef">77</stat>
         </stats>
@@ -986,10 +845,7 @@
         <set name="bodypart" val="legs"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="3770"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pDef">70</stat>
         </stats>
@@ -1000,10 +856,7 @@
         <set name="bodypart" val="legs"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="3820"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pDef">64</stat>
         </stats>
@@ -1014,10 +867,7 @@
         <set name="bodypart" val="legs"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="3870"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pDef">64</stat>
         </stats>
@@ -1028,10 +878,7 @@
         <set name="bodypart" val="legs"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="3840"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pDef">61</stat>
         </stats>
@@ -1042,10 +889,7 @@
         <set name="bodypart" val="legs"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="3770"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pDef">61</stat>
         </stats>
@@ -1056,10 +900,7 @@
         <set name="bodypart" val="legs"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="3830"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pDef">61</stat>
         </stats>
@@ -1070,10 +911,7 @@
         <set name="bodypart" val="legs"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="3820"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pDef">48</stat>
         </stats>
@@ -1084,10 +922,7 @@
         <set name="bodypart" val="legs"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="3860"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pDef">54</stat>
         </stats>
@@ -1098,10 +933,7 @@
         <set name="bodypart" val="chest"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="4720"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pDef">53</stat>
         </stats>
@@ -1112,10 +944,7 @@
         <set name="bodypart" val="chest"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="4770"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pDef">50</stat>
         </stats>
@@ -1126,10 +955,7 @@
         <set name="bodypart" val="chest"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="4770"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pDef">50</stat>
         </stats>
@@ -1140,10 +966,7 @@
         <set name="bodypart" val="chest"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="4820"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pDef">47</stat>
         </stats>
@@ -1154,10 +977,7 @@
         <set name="bodypart" val="chest"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="4830"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pDef">43</stat>
         </stats>
@@ -1168,10 +988,7 @@
         <set name="bodypart" val="chest"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="4830"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pDef">36</stat>
         </stats>
@@ -1182,10 +999,7 @@
         <set name="bodypart" val="legs"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="1610"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pDef">33</stat>
         </stats>
@@ -1196,10 +1010,7 @@
         <set name="bodypart" val="legs"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="1630"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pDef">32</stat>
         </stats>
@@ -1210,10 +1021,7 @@
         <set name="bodypart" val="legs"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="1680"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pDef">32</stat>
         </stats>
@@ -1224,10 +1032,7 @@
         <set name="bodypart" val="legs"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="1670"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pDef">29</stat>
         </stats>
@@ -1238,10 +1043,7 @@
         <set name="bodypart" val="legs"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="1740"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pDef">22</stat>
         </stats>
@@ -1252,10 +1054,7 @@
         <set name="bodypart" val="legs"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="1730"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pDef">27</stat>
         </stats>
@@ -1266,10 +1065,7 @@
         <set name="bodypart" val="legs"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="1700"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pDef">29</stat>
         </stats>
@@ -1280,10 +1076,7 @@
         <set name="bodypart" val="chest"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="4700"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pDef">58</stat>
         </stats>
@@ -1294,10 +1087,7 @@
         <set name="bodypart" val="chest"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="4580"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pDef">65</stat>
         </stats>
@@ -1308,10 +1098,7 @@
         <set name="bodypart" val="chest"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="4570"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pDef">73</stat>
         </stats>
@@ -1322,10 +1109,7 @@
         <set name="bodypart" val="chest"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="4570"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pDef">73</stat>
         </stats>
@@ -1336,10 +1120,7 @@
         <set name="bodypart" val="chest"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="4520"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pDef">77</stat>
         </stats>
@@ -1350,10 +1131,7 @@
         <set name="bodypart" val="legs"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="1600"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pDef">36</stat>
         </stats>
@@ -1364,10 +1142,7 @@
         <set name="bodypart" val="legs"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="1570"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pDef">41</stat>
         </stats>
@@ -1378,10 +1153,7 @@
         <set name="bodypart" val="legs"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="1580"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pDef">46</stat>
         </stats>
@@ -1392,10 +1164,7 @@
         <set name="bodypart" val="legs"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="1570"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pDef">46</stat>
         </stats>
@@ -1406,10 +1175,7 @@
         <set name="bodypart" val="legs"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="1550"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pDef">48</stat>
         </stats>
@@ -1421,10 +1187,7 @@
         <set name="bodypart" val="onepiece"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="6100"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pDef">136</stat>
         </stats>
@@ -1435,10 +1198,7 @@
         <set name="bodypart" val="chest"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="2090"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pDef">30</stat>
             <stat type="maxMp">67</stat>
@@ -1451,10 +1211,7 @@
         <set name="bodypart" val="chest"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="2080"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pDef">34</stat>
             <stat type="maxMp">86</stat>
@@ -1466,10 +1223,7 @@
         <set name="bodypart" val="chest"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="2110"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pDef">25</stat>
             <stat type="maxMp">52</stat>
@@ -1482,10 +1236,7 @@
         <set name="bodypart" val="chest"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="2120"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pDef">21</stat>
             <stat type="maxMp">38</stat>
@@ -1497,10 +1248,7 @@
         <set name="bodypart" val="chest"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="2150"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pDef">18</stat>
             <stat type="maxMp">24</stat>
@@ -1512,10 +1260,7 @@
         <set name="bodypart" val="chest"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="2140"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pDef">21</stat>
             <stat type="maxMp">38</stat>
@@ -1528,10 +1273,7 @@
         <set name="bodypart" val="legs"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="1060"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pDef">13</stat>
             <stat type="maxMp">23</stat>
@@ -1544,10 +1286,7 @@
         <set name="bodypart" val="legs"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="1040"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pDef">19</stat>
             <stat type="maxMp">42</stat>
@@ -1560,10 +1299,7 @@
         <set name="bodypart" val="legs"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="1030"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pDef">21</stat>
             <stat type="maxMp">54</stat>
@@ -1575,10 +1311,7 @@
         <set name="bodypart" val="legs"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="1080"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pDef">11</stat>
             <stat type="maxMp">15</stat>
@@ -1590,10 +1323,7 @@
         <set name="bodypart" val="legs"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="1070"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pDef">13</stat>
             <stat type="maxMp">23</stat>
@@ -1605,10 +1335,7 @@
         <set name="bodypart" val="legs"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="1020"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pDef">16</stat>
             <stat type="maxMp">33</stat>
@@ -1620,10 +1347,7 @@
         <set name="bodypart" val="chest"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="720"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pDef">54</stat>
             <stat type="maxMp">169</stat>
@@ -1635,10 +1359,7 @@
         <set name="bodypart" val="chest"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="2090"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pDef">39</stat>
             <stat type="maxMp">106</stat>
@@ -1650,10 +1371,7 @@
         <set name="bodypart" val="chest"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="2080"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pDef">43</stat>
             <stat type="maxMp">126</stat>
@@ -1665,10 +1383,7 @@
         <set name="bodypart" val="chest"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="2040"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pDef">43</stat>
             <stat type="maxMp">126</stat>
@@ -1680,10 +1395,7 @@
         <set name="bodypart" val="chest"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="2030"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pDef">43</stat>
             <stat type="maxMp">126</stat>
@@ -1695,10 +1407,7 @@
         <set name="bodypart" val="chest"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="2020"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pDef">49</stat>
             <stat type="maxMp">147</stat>
@@ -1710,10 +1419,7 @@
         <set name="bodypart" val="chest"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="2010"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pDef">52</stat>
             <stat type="maxMp">169</stat>
@@ -1725,10 +1431,7 @@
         <set name="bodypart" val="legs"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="2400"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pDef">34</stat>
             <stat type="maxMp">105</stat>
@@ -1740,10 +1443,7 @@
         <set name="bodypart" val="legs"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="1020"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pDef">24</stat>
             <stat type="maxMp">66</stat>

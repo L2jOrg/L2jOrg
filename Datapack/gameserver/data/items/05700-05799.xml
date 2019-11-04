@@ -1,17 +1,14 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
-    <item id="5703" name="Lucky Charm (No-grade)" >
+    <item id="5703" name="Lucky Charm (No-grade)" icon="icon.etc_charm_of_luck_i00">
         <!-- Bestows blessing on its owner such that when the owner dies during a boss/raid war, his/her abilities will not be diminished. This item can only be used on self by a character whose level is 19 or below. -->
-        <set name="icon" val="icon.etc_charm_of_luck_i00"/>
         <set name="default_action" val="SKILL_REDUCE"/>
         <set name="etcitem_type" val="SCROLL"/>
         <set name="weight" val="10"/>
         <set name="price" val="100"/>
         <set name="reuse_delay" val="10000"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_oly_restricted" val="true"/>
-        <set name="handler" val="ItemSkills"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
+        <restriction stackable="true" olympiad-restricted="true"/>
         <skills>
             <skill id="2168" level="1"/> <!-- Lucky Charm -->
         </skills>
@@ -70,17 +67,15 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </weapon>
-    <item id="5707" name="Record of Seven Signs" >
+    <item id="5707" name="Record of Seven Signs" icon="icon.etc_ssq_scroll_i00">
         <!-- Item used for studying the current situation of the Seven Signs system. -->
-        <set name="icon" val="icon.etc_ssq_scroll_i00"/>
         <set name="default_action" val="SHOW_SSQ_STATUS"/>
         <set name="immediate_effect" val="true"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
         <set name="price" val="500"/>
     </item>
-    <item id="5708" name="Lord's Certificate of Approval" >
+    <item id="5708" name="Lord's Certificate of Approval" icon="icon.etc_permit_card_i00">
         <!-- When one possesses this item, although one does not belong to a castle owning clan, one can join the Lords of Dawn. -->
-        <set name="icon" val="icon.etc_permit_card_i00"/>
         <set name="etcitem_type" val="TICKET_OF_LORD"/>
         <set name="immediate_effect" val="true"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
@@ -805,44 +800,26 @@
             <stat type="pDef">49</stat>
         </stats>
     </armor>
-    <item id="5789" name="Soulshot (No-grade) (Novice)" >
+    <item id="5789" name="Soulshot (No-grade) (Novice)" icon="icon.etc_soulshot_none_for_rookie_i00">
         <!-- A Soulshot (No-grade) for use by newbies. Cannot be exchanged, dropped, sold, or stored in a warehouse. -->
-        <set name="icon" val="icon.etc_soulshot_none_for_rookie_i00"/>
         <set name="default_action" val="SOULSHOT"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="1"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
         <set name="handler" val="SoulShots"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
         <set name="etcitem_type" val="SOULSHOT"/>
-        <set name="is_private_storeable" val="false"/>
+        <restriction tradable="false" dropable="false" sellable="false" stackable="true" depositable="false" clan-depositable="false" mailable="false" commissionable="false"/>
         <skills>
             <skill id="2039" level="1"/> <!-- Soulshot (No-grade) -->
         </skills>
     </item>
-    <item id="5790" name="Spiritshot (No-grade) (Novice)" >
+    <item id="5790" name="Spiritshot (No-grade) (Novice)" icon="icon.etc_spiritshot_none_for_rookie_i00">
         <!-- A Spiritshot (No-grade) for use by newbies. Cannot be exchanged, dropped, sold, or stored in a warehouse. -->
-        <set name="icon" val="icon.etc_spiritshot_none_for_rookie_i00"/>
         <set name="default_action" val="SPIRITSHOT"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="1"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
         <set name="handler" val="SpiritShot"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
         <set name="etcitem_type" val="SOULSHOT"/>
-        <set name="is_private_storeable" val="false"/>
+        <restriction tradable="false" dropable="false" sellable="false" stackable="true" depositable="false" clan-depositable="false" mailable="false" commissionable="false"/>
         <skills>
             <skill id="2047" level="1"/> <!-- Spiritshot (No-grade) -->
         </skills>

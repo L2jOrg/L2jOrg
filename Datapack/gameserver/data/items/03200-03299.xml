@@ -1,1403 +1,603 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
-    <item id="3200" name="Black Willow Leaf"  icon="icon.etc_leaf_gold_i00">
+    <item id="3200" name="Black Willow Leaf" icon="icon.etc_leaf_gold_i00">
         <!-- Leaf obtained by slaying the black willow lurker. Take this to the Blight Treant. -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="3201" name="Blight Treant Sap"  icon="icon.etc_reagent_gold_i00">
+    <item id="3201" name="Blight Treant Sap" icon="icon.etc_reagent_gold_i00">
         <!-- The sap of a blight treant. Take this to Arkenia. -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="3202" name="Arkenia's Letter"  icon="icon.etc_letter_red_i00">
+    <item id="3202" name="Arkenia's Letter" icon="icon.etc_letter_red_i00">
         <!-- Letter written by Arkenia. It states that the Initiation Ceremony of the Shillien Circle is complete. Take it to Hierarch Thifiell. -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="3203" name="Mark of Glory"  icon="icon.etc_badge_gold_i00">
+    <item id="3203" name="Mark of Glory" icon="icon.etc_badge_gold_i00">
         <!-- Mark given to those who have passed the Testimony of Glory. Item for class transfer. -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="3204" name="Vokian's Order"  icon="icon.etc_scroll_gray_i00">
+    <item id="3204" name="Vokian's Order" icon="icon.etc_scroll_gray_i00">
         <!-- Collect and return with 10 Manashen Shards, 10 Tyrant's Talonss and 10 Guardian Basilisk Fangs. -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="3205" name="Manashen Shard"  icon="icon.etc_broken_crystal_silver_i00">
+    <item id="3205" name="Manashen Shard" icon="icon.etc_broken_crystal_silver_i00">
         <!-- Shard of the broken manashen. Collect 10 and take them back to Prefect Vokian. -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="3206" name="Tyrant's Talons"  icon="icon.etc_claw_i00">
+    <item id="3206" name="Tyrant's Talons" icon="icon.etc_claw_i00">
         <!-- The talons plucked from a slain Tyrant. Collect 10 and take them back to Prefect Vokian. -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="3207" name="Guardian Basilisk Fang"  icon="icon.etc_fang_red_i00">
+    <item id="3207" name="Guardian Basilisk Fang" icon="icon.etc_fang_red_i00">
         <!-- The fangs of a slain Guardian Basilisk. Collect 10 and take them back to Prefect Vokian. -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="3208" name="Vokian's Order"  icon="icon.etc_scroll_white_i00">
+    <item id="3208" name="Vokian's Order" icon="icon.etc_scroll_white_i00">
         <!-- Prefect Vokian's orders. The instructions are to go and seek out the Gandi Chief Chianta in the Town of Dion. -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="3209" name="Necklace of Authority"  icon="icon.accessary_necklace_of_binding_i00">
+    <item id="3209" name="Necklace of Authority" icon="icon.accessary_necklace_of_binding_i00">
         <!-- Symbol given to those representing Pa'agrio Lord Kakai. -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="3210" name="Chianta's 1st Order"  icon="icon.etc_letter_red_i00">
+    <item id="3210" name="Chianta's 1st Order" icon="icon.etc_letter_red_i00">
         <!-- Orders of Gandi Chief Chianta. The instructions are to go and recover the flame scepter from the lower orc tribes. -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="3211" name="Scepter of Breka"  icon="icon.weapon_buzdygan_i01">
+    <item id="3211" name="Scepter of Breka" icon="icon.weapon_buzdygan_i01">
         <!-- Scepter of flame which can be obtained from a Breka orc chief. Take it along with 4 other tribes' scepters and go see Gandi Chief Chianta. -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="3212" name="Scepter of Enku"  icon="icon.weapon_buzdygan_i01">
+    <item id="3212" name="Scepter of Enku" icon="icon.weapon_buzdygan_i01">
         <!-- The flame scepter received from the Enku orc chief. Take this, along with the remaining 4 scepters, to Gandi Chief Chianta. -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="3213" name="Scepter of Vuku"  icon="icon.weapon_buzdygan_i01">
+    <item id="3213" name="Scepter of Vuku" icon="icon.weapon_buzdygan_i01">
         <!-- The flame scepter received from the Vuku orc chief. Take this, along with the remaining 4 scepters, to Gandi Chief Chianta. -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="3214" name="Scepter of Turek"  icon="icon.weapon_buzdygan_i01">
+    <item id="3214" name="Scepter of Turek" icon="icon.weapon_buzdygan_i01">
         <!-- The flame scepter received from the Turek orc chief. Take this, along with the remaining 4 scepters, to Gandi Chief Chianta. -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="3215" name="Scepter of Tunath"  icon="icon.weapon_buzdygan_i01">
+    <item id="3215" name="Scepter of Tunath" icon="icon.weapon_buzdygan_i01">
         <!-- The flame scepter received from the Lennunt orc chief. Take this, along with the remaining 4 scepters, to Gandi Chief Chianta. -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="3216" name="Chianta's 1st Order"  icon="icon.etc_letter_blue_i00">
+    <item id="3216" name="Chianta's 1st Order" icon="icon.etc_letter_blue_i00">
         <!-- Gandi Chief Chianta's orders. The instructions are to come back for further orders after reaching level 38. -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="3217" name="Chianta's 1st Order"  icon="icon.etc_letter_white_i00">
+    <item id="3217" name="Chianta's 1st Order" icon="icon.etc_letter_white_i00">
         <!-- Gandi Chief Chianta's orders. The instructions are to bring back 20 each of Timak and Tamlin Orc heads. -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="3218" name="Tamlin Orc Head"  icon="icon.etc_skull_red_i00">
+    <item id="3218" name="Tamlin Orc Head" icon="icon.etc_skull_red_i00">
         <!-- The head of a Tamlin Orc cut off after being slain. Collect 20 of these and take them to Gandi Chief Chianta. -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="3219" name="Timak Orc Head"  icon="icon.etc_skull_black_i00">
+    <item id="3219" name="Timak Orc Head" icon="icon.etc_skull_black_i00">
         <!-- The head of a Timak orc, cut off after being slain. Collect 20 of these and take them to Gandi Chief Chianta. -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="3220" name="Scepter Box"  icon="icon.etc_jewel_box_i00">
+    <item id="3220" name="Scepter Box" icon="icon.etc_jewel_box_i00">
         <!-- Box containing the 5 flame scepters recovered from the lesser orc tribes. Take this to Seer Tanapi of the Orc Village. -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="3221" name="Pashika's Head"  icon="icon.etc_skull_black_i00">
+    <item id="3221" name="Pashika's Head" icon="icon.etc_skull_black_i00">
         <!-- Kill Pashika, son of Voltar, cut his head off and show it to Breka Chief Voltar. -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="3222" name="Vultus' Head"  icon="icon.etc_skull_white_i00">
+    <item id="3222" name="Vultus' Head" icon="icon.etc_skull_white_i00">
         <!-- Kill Vultus, son of Voltar, cut his head off and show it to Breka Chief Voltar. -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="3223" name="Gloves of Voltar"  icon="icon.armor_short_leather_gloves_i00">
+    <item id="3223" name="Gloves of Voltar" icon="icon.armor_short_leather_gloves_i00">
         <!-- Gloves that was thrown out by Breka Chief Voltar. Slay Pashika and Vultus, sons of Voltar. -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="3224" name="Enku Overlord Head"  icon="icon.etc_skull_red_i00">
+    <item id="3224" name="Enku Overlord Head" icon="icon.etc_skull_red_i00">
         <!-- The head of an Enku overlord, cut off after being slain. Show this to Enku Chief Kepra. -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="3225" name="Gloves of Kepra"  icon="icon.armor_short_leather_gloves_i00">
+    <item id="3225" name="Gloves of Kepra" icon="icon.armor_short_leather_gloves_i00">
         <!-- The glove thrown down by Enku Chief Kepra. Go and slay the Enku overlords. -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="3226" name="Makum Bugbear Head"  icon="icon.etc_skull_black_i00">
+    <item id="3226" name="Makum Bugbear Head" icon="icon.etc_skull_black_i00">
         <!-- The head of a Makum bugbear warrior, cut off after being slain. Show this to Turek Chief Burai. -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="3227" name="Gloves of Burai"  icon="icon.armor_short_leather_gloves_i00">
+    <item id="3227" name="Gloves of Burai" icon="icon.armor_short_leather_gloves_i00">
         <!-- The glove thrown down by Turek Chief Burai. Go and slay the Makum bugbear warriors. -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="3228" name="Manakia's Letter"  icon="icon.etc_recipe_red_i00">
+    <item id="3228" name="Manakia's Letter" icon="icon.etc_recipe_red_i00">
         <!-- Letter of Priest Manakia. Take it to Breka orc chief. -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="3229" name="Manakia's Letter"  icon="icon.etc_recipe_red_i00">
+    <item id="3229" name="Manakia's Letter" icon="icon.etc_recipe_red_i00">
         <!-- Priest Manakia's letter. Take this and go to the Enku Orc Chief. -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="3230" name="Kasman's Letter"  icon="icon.etc_recipe_blue_i00">
+    <item id="3230" name="Kasman's Letter" icon="icon.etc_recipe_blue_i00">
         <!-- Prefect Kasman's letter. Take this and go to the Vuku Orc Chief. -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="3231" name="Kasman's Letter"  icon="icon.etc_recipe_blue_i00">
+    <item id="3231" name="Kasman's Letter" icon="icon.etc_recipe_blue_i00">
         <!-- Prefect Kasman's letter. Take this and go to the Turek Orc Chief. -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="3232" name="Kasman's Letter"  icon="icon.etc_recipe_blue_i00">
+    <item id="3232" name="Kasman's Letter" icon="icon.etc_recipe_blue_i00">
         <!-- Prefect Kasman's letter. Take this and go to the Lennunt Orc Chief. -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="3233" name="Driko's Contract"  icon="icon.etc_letter_white_i00">
+    <item id="3233" name="Driko's Contract" icon="icon.etc_letter_white_i00">
         <!-- Vuku Chief Driko's contract. The contract contains instructions to hunt the Marsh Stakato Drones in the Cruma Marshlands. -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="3234" name="Marsh Stakato Drone Husk"  icon="icon.etc_parasite_i00">
+    <item id="3234" name="Marsh Stakato Drone Husk" icon="icon.etc_parasite_i00">
         <!-- The husks of a Marsh Stakato Drone. Collect 30 of these and take them to Vuku Chief Driko. -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="3235" name="Tanapi's Order"  icon="icon.etc_piece_of_paper_gray_i00">
+    <item id="3235" name="Tanapi's Order" icon="icon.etc_piece_of_paper_gray_i00">
         <!-- Seer Tanapi's orders. Hunt the Ragna Orc Chief and seers and recover the scepter of Tantosc. -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="3236" name="Scepter of Tantos"  icon="icon.weapon_buzdygan_i01">
+    <item id="3236" name="Scepter of Tantos" icon="icon.weapon_buzdygan_i01">
         <!-- The flame scepter of the now-perished Tantos tribe. Take this to Seer Tanapi. -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="3237" name="Ritual Box"  icon="icon.etc_jewel_box_i00">
+    <item id="3237" name="Ritual Box" icon="icon.etc_jewel_box_i00">
         <!-- Box containing the scepters recovered from the Orcs of the Tantos tribe. Take this to Pa'agrio Lord Kakai. -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="3238" name="Mark of Prosperity"  icon="icon.etc_coins_gold_i00">
+    <item id="3238" name="Mark of Prosperity" icon="icon.etc_coins_gold_i00">
         <!-- Mark given to those who have passed the Testimony of Prosperity. Class transfer related item. -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="3239" name="Ring of Trials I"  icon="icon.accessary_ring_of_assistance_i00">
+    <item id="3239" name="Ring of Trials I" icon="icon.accessary_ring_of_assistance_i00">
         <!-- Ring given to those Dwarves attempting the Testimony of Prosperity. Find the 4 proofs of prosperity. -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="3240" name="Ring of Trials II"  icon="icon.accessary_aquastone_ring_i00">
+    <item id="3240" name="Ring of Trials II" icon="icon.accessary_aquastone_ring_i00">
         <!-- Ring given to those Dwarves attempting the Testimony of Prosperity. Find Maphr's tablet, which contains the ultimate secrets of geometry. -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="3241" name="Old Account Book"  icon="icon.etc_spellbook_gray_i00">
+    <item id="3241" name="Old Account Book" icon="icon.etc_spellbook_gray_i00">
         <!-- Iron Gate Lockirin's account book. The proof of wealth. Take this to Warehouse Keeper Parman of Town of Giran. -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="3242" name="Blessed Seed"  icon="icon.etc_fruit_yellow_i00">
+    <item id="3242" name="Blessed Seed" icon="icon.etc_fruit_yellow_i00">
         <!-- Seed containing the blessings of Maphr. The proof of fertile lands. Take this to Warehouse Keeper Parman of Town of Giran. -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="3243" name="Emily's Recipe"  icon="icon.etc_piece_of_paper_white_i00">
+    <item id="3243" name="Emily's Recipe" icon="icon.etc_piece_of_paper_white_i00">
         <!-- Recipe good for childbirth and childbirth recovery. The proof of fertility. Take this to Warehouse Keeper Parman of Town of Giran. -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="3244" name="Lilith's Elven Wafer"  icon="icon.etc_lump_white_i00">
+    <item id="3244" name="Lilith's Elven Wafer" icon="icon.etc_lump_white_i00">
         <!-- Food regarded as the secret to the Elves' longevity. The proof of health. Take this to Warehouse Keeper Parman of Town of Giran. -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="3245" name="Maphr Tablet Fragment"  icon="icon.etc_plate_blue_i00">
+    <item id="3245" name="Maphr Tablet Fragment" icon="icon.etc_plate_blue_i00">
         <!-- Fragment of Maphr's tablet, which contains the ultimate secrets of geometry. Take this to Warehouse Keeper Parman of Town of Giran. -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="3246" name="Collection License"  icon="icon.etc_letter_white_i00">
+    <item id="3246" name="Collection License" icon="icon.etc_letter_white_i00">
         <!-- License that allows the bearer to collect guild contributions. Seek out those who still owe contributions and collect the funds from them. -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="3247" name="Lockirin's Notice I"  icon="icon.etc_recipe_blue_i00">
+    <item id="3247" name="Lockirin's Notice I" icon="icon.etc_recipe_blue_i00">
         <!-- Notice that guild contributions are due. Take this to Golden Wheel's Spiron. -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="3248" name="Lockirin's Notice II"  icon="icon.etc_recipe_blue_i00">
+    <item id="3248" name="Lockirin's Notice II" icon="icon.etc_recipe_blue_i00">
         <!-- Notice that guild contributions are due. Take this to Silver Scale's Balanki. -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="3249" name="Lockirin's Notice III"  icon="icon.etc_recipe_blue_i00">
+    <item id="3249" name="Lockirin's Notice III" icon="icon.etc_recipe_blue_i00">
         <!-- Notice that guild contributions are due. Take this to Bronze Key's Keef. -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="3250" name="Lockirin's Notice IV"  icon="icon.etc_recipe_blue_i00">
+    <item id="3250" name="Lockirin's Notice IV" icon="icon.etc_recipe_blue_i00">
         <!-- Notice that guild contributions are due. Take this to Filaur of the Grey Pillar. -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="3251" name="Lockirin's Notice V"  icon="icon.etc_recipe_blue_i00">
+    <item id="3251" name="Lockirin's Notice V" icon="icon.etc_recipe_blue_i00">
         <!-- Notice that guild contributions are due. Take this to Black Anvil's Arin. -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="3252" name="Contribution of Shari"  icon="icon.etc_pouch_yellow_i00">
+    <item id="3252" name="Contribution of Shari" icon="icon.etc_pouch_yellow_i00">
         <!-- Armor Merchant Shari's guild contribution. Take this to Golden Wheel's Spiron. -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="3253" name="Contribution of Mion"  icon="icon.etc_pouch_yellow_i00">
+    <item id="3253" name="Contribution of Mion" icon="icon.etc_pouch_yellow_i00">
         <!-- Grocer Mion's guild contribution. Take this to Silver Scale's Balanki. -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="3254" name="Contribution of Maryse"  icon="icon.etc_pouch_yellow_i00">
+    <item id="3254" name="Contribution of Maryse" icon="icon.etc_pouch_yellow_i00">
         <!-- Maryse Redbonnet's guild contribution. Take this to Silver Scale's Balanki. -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="3255" name="Maryse's Request"  icon="icon.etc_piece_of_paper_gray_i00">
+    <item id="3255" name="Maryse's Request" icon="icon.etc_piece_of_paper_gray_i00">
         <!-- Note containing Maryse Redbonnet's request that you bring back 10 leather hides for use in crafting items. -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="3256" name="Contribution of Toma"  icon="icon.etc_pouch_yellow_i00">
+    <item id="3256" name="Contribution of Toma" icon="icon.etc_pouch_yellow_i00">
         <!-- Master Toma's guild contribution. Take this to Black Anvil's Arin. -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="3257" name="Receipt of Bolter"  icon="icon.etc_ticket_blue_i00">
+    <item id="3257" name="Receipt of Bolter" icon="icon.etc_ticket_blue_i00">
         <!-- Miner Bolter's contribution receipt. Take this to Filaur of the Gray Pillar Guild. -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="3258" name="Receipt of Contribution I"  icon="icon.etc_ticket_red_i00">
+    <item id="3258" name="Receipt of Contribution I" icon="icon.etc_ticket_red_i00">
         <!-- The contribution receipt received from Golden Wheel's Spiron. Collect 5 receipts and take them to Lockirin of the Iron Gate. -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="3259" name="Receipt of Contribution II"  icon="icon.etc_ticket_red_i00">
+    <item id="3259" name="Receipt of Contribution II" icon="icon.etc_ticket_red_i00">
         <!-- The contribution receipt received from Silver Scale's Balanki. Collect 5 receipts and take them to Lockirin of the Iron Gate. -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="3260" name="Receipt of Contribution III"  icon="icon.etc_ticket_red_i00">
+    <item id="3260" name="Receipt of Contribution III" icon="icon.etc_ticket_red_i00">
         <!-- The contribution receipt received from Bronze Key's Keef. Collect 5 receipts and take them to Lockirin of the Iron Gate. -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="3261" name="Receipt of Contribution IV"  icon="icon.etc_ticket_red_i00">
+    <item id="3261" name="Receipt of Contribution IV" icon="icon.etc_ticket_red_i00">
         <!-- Contribution receipt received from Filaur of the Grey Pillar. Collect 5 receipts and take them to Lockirin of the Iron Gate. -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="3262" name="Receipt of Contribution V"  icon="icon.etc_ticket_red_i00">
+    <item id="3262" name="Receipt of Contribution V" icon="icon.etc_ticket_red_i00">
         <!-- The contribution receipt received from Black Anvil's Arin. Collect 5 receipts and take them to Lockirin of the Iron Gate. -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="3263" name="Procuration of Torocco"  icon="icon.etc_letter_blue_i00">
+    <item id="3263" name="Procuration of Torocco" icon="icon.etc_letter_blue_i00">
         <!-- The bearer of this procuration hereby agrees to make contributions on behalf of Torocco. Take this to Bronze Key's Keef. -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="3264" name="Bright's List"  icon="icon.etc_piece_of_paper_white_i00">
+    <item id="3264" name="Bright's List" icon="icon.etc_piece_of_paper_white_i00">
         <!-- List of ingredients that Guard Bright Has written. 20 mandragora petals, 10 bunches of crimson moss\0 -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="3265" name="Mandragora Petal"  icon="icon.etc_herb_red_i00">
+    <item id="3265" name="Mandragora Petal" icon="icon.etc_herb_red_i00">
         <!-- The petals of a mandragora flower. Collect 20 of these and take them to Guard Bright. -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="3266" name="Crimson Moss"  icon="icon.etc_powder_red_i00">
+    <item id="3266" name="Crimson Moss" icon="icon.etc_powder_red_i00">
         <!-- Crimson Moss obtained from giant red ants. Collect 10 of these and take them to Guard Bright. -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="3267" name="Mandragora Bouquet"  icon="icon.etc_branch_gold_i00">
+    <item id="3267" name="Mandragora Bouquet" icon="icon.etc_branch_gold_i00">
         <!-- Flower bouquet made of mandragora petals and crimson moss. Take this to Emily in the Town of Dion. -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="3268" name="Parman's Instructions"  icon="icon.etc_scroll_gray_i00">
+    <item id="3268" name="Parman's Instructions" icon="icon.etc_scroll_gray_i00">
         <!-- Note containing Warehouse Keeper Parman's instructions. The instructions are to come back after reaching level 38. -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="3269" name="Parman's Letter"  icon="icon.etc_piece_of_paper_white_i00">
+    <item id="3269" name="Parman's Letter" icon="icon.etc_piece_of_paper_white_i00">
         <!-- Warehouse Keeper Parman's letter. Take this to Maestro Nikola of the Cruma Tower. -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="3270" name="Clay Dough"  icon="icon.etc_powder_black_i00">
+    <item id="3270" name="Clay Dough" icon="icon.etc_powder_black_i00">
         <!-- Piece of clay that Maestro Nikola Has given. Use this to make a copy of the keyhole from the Lesser Giant's box. -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="3271" name="Pattern of Keyhole"  icon="icon.etc_plate_black_i00">
+    <item id="3271" name="Pattern of Keyhole" icon="icon.etc_plate_black_i00">
         <!-- The keyhole pattern made from clay dough. Take this to Maestro Nikola. -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="3272" name="Nikola's List"  icon="icon.etc_piece_of_paper_gray_i00">
+    <item id="3272" name="Nikola's List" icon="icon.etc_piece_of_paper_gray_i00">
         <!-- 20 Stakato Shells, 10 Toad Lord Sacs, 10 Spider Thorns and 10 D-grade Crystals. -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="3273" name="Stakato Shell"  icon="icon.etc_parasite_i00">
+    <item id="3273" name="Stakato Shell" icon="icon.etc_parasite_i00">
         <!-- The shell of a Marsh Stakato. Key ingredient in making the Lesser Giant's key. -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="3274" name="Toad Lord Sac"  icon="icon.etc_poison_pouch_i00">
+    <item id="3274" name="Toad Lord Sac" icon="icon.etc_poison_pouch_i00">
         <!-- The Giant Spider's Poison Sac removed from the neck of a toad lord. Key ingredient in making the Lesser Giant's Key. -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="3275" name="Marsh Spider's Thorn"  icon="icon.etc_horn_i00">
+    <item id="3275" name="Marsh Spider's Thorn" icon="icon.etc_horn_i00">
         <!-- Thorn removed from the shell of a Marsh Spider. Key ingredient in making the Lesser Giant's Key. -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="3276" name="Mark of Champion"  icon="icon.etc_jewel_gold_i00">
+    <item id="3276" name="Mark of Champion" icon="icon.etc_jewel_gold_i00">
         <!-- Mark given to those who have passed the Test of the Champion. Item for class transfer. -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="3277" name="Ascalon's 1st Letter"  icon="icon.etc_scroll_gray_i00">
+    <item id="3277" name="Ascalon's 1st Letter" icon="icon.etc_scroll_gray_i00">
         <!-- Veteran Ascalon's letter. Take this to Mason in the Town of Dion. -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="3278" name="Mason's Letter"  icon="icon.etc_piece_of_paper_gray_i00">
+    <item id="3278" name="Mason's Letter" icon="icon.etc_piece_of_paper_gray_i00">
         <!-- Letter from Mason to Veteran Ascalon of Town of Giran. -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="3279" name="Iron Rose Ring"  icon="icon.accessary_magic_ring_i00">
+    <item id="3279" name="Iron Rose Ring" icon="icon.accessary_magic_ring_i00">
         <!-- Ring given by Mason. The ring is engraved with the symbol of the iron rose. Complete the revenge in place of Mason. -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="3280" name="Ascalon's 1st Letter"  icon="icon.etc_scroll_gray_i00">
+    <item id="3280" name="Ascalon's 1st Letter" icon="icon.etc_scroll_gray_i00">
         <!-- Veteran Ascalon's letter. Take this to Dye Merchant Groot of Town of Giran. -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="3281" name="White Rose Insignia"  icon="icon.shield_knight_shield_i01">
+    <item id="3281" name="White Rose Insignia" icon="icon.shield_knight_shield_i01">
         <!-- Insignia given by Dye Merchant Groot. It was formerly worn by the medics of the iron rose. Aid Dye Merchant Groot in his material gathering. -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="3282" name="Groot's Letter"  icon="icon.etc_piece_of_paper_gray_i00">
+    <item id="3282" name="Groot's Letter" icon="icon.etc_piece_of_paper_gray_i00">
         <!-- Letter from Trader Groot to Veteran Ascalon in Town of Giran. -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="3283" name="Ascalon's 1st Letter"  icon="icon.etc_scroll_gray_i00">
+    <item id="3283" name="Ascalon's 1st Letter" icon="icon.etc_scroll_gray_i00">
         <!-- Veteran Ascalon's letter. Take this to Captain Mouen of the Town of Oren. -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="3284" name="Mouen's 1st Order"  icon="icon.etc_scroll_white_i00">
+    <item id="3284" name="Mouen's 1st Order" icon="icon.etc_scroll_white_i00">
         <!-- Bring 10 heads of Road Scavengers or Road Collectors. -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="3285" name="Mouen's 1st Order"  icon="icon.etc_scroll_white_i00">
+    <item id="3285" name="Mouen's 1st Order" icon="icon.etc_scroll_white_i00">
         <!-- Destroy the Leto Lizardmen and bring back 10 of their fangs. -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="3286" name="Mouen's Letter"  icon="icon.etc_piece_of_paper_black_i00">
+    <item id="3286" name="Mouen's Letter" icon="icon.etc_piece_of_paper_black_i00">
         <!-- Letter from Captain Mouen to Veteran Ascalon of Town of Giran. -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="3287" name="Harpy's Egg"  icon="icon.etc_bead_white_i00">
+    <item id="3287" name="Harpy's Egg" icon="icon.etc_bead_white_i00">
         <!-- Egg obtained after slaying a Harpy. Collect 30 of these and take them to Dye Merchant Groot of Town of Giran. -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="3288" name="Medusa's Venom"  icon="icon.etc_reagent_green_i00">
+    <item id="3288" name="Medusa's Venom" icon="icon.etc_reagent_green_i00">
         <!-- The venom obtained after slaying a Medusa. Collect 30 of these and take them to Dye Merchant Groot of Town of Giran. -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="3289" name="Windsus Bile"  icon="icon.etc_potion_scarlet_i00">
+    <item id="3289" name="Windsus Bile" icon="icon.etc_potion_scarlet_i00">
         <!-- The bile obtained after slaying a Windsus. Collect 30 of these and take them to Dye Merchant Groot of Town of Giran. -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="3290" name="Bloody Axe Head"  icon="icon.etc_skull_red_i00">
+    <item id="3290" name="Bloody Axe Head" icon="icon.etc_skull_red_i00">
         <!-- The head of a Bloody Axe's Escort. Collect 10 of these and return to Mason in the Town of Dion. -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="3291" name="Road Ratman Head"  icon="icon.etc_skull_black_i00">
+    <item id="3291" name="Road Ratman Head" icon="icon.etc_skull_black_i00">
         <!-- The severed head of a Road Scavenger or Road Collector. Collect 10 of them and take them to Captain Mouen. -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="3292" name="Leto Lizardman Fang"  icon="icon.etc_fang_gray_i00">
+    <item id="3292" name="Leto Lizardman Fang" icon="icon.etc_fang_gray_i00">
         <!-- Fang from a slain Leto Lizardman. Collect 10 of these and take them to Captain Mouen. -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="3293" name="Mark of Sagittarius"  icon="icon.weapon_wooden_arrow_i01">
+    <item id="3293" name="Mark of Sagittarius" icon="icon.weapon_wooden_arrow_i01">
         <!-- Mark given to those who have passed the Test of the Sagittarius. Class transfer related item. -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="3294" name="Bernard's Introduction"  icon="icon.etc_letter_white_i00">
+    <item id="3294" name="Bernard's Introduction" icon="icon.etc_letter_white_i00">
         <!-- Take this letter and go to Sagittarius Hamil of the Village of Floran. -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="3295" name="Hamil's 1st Letter"  icon="icon.etc_piece_of_paper_white_i00">
+    <item id="3295" name="Hamil's 1st Letter" icon="icon.etc_piece_of_paper_white_i00">
         <!-- Take this letter and meet with Sir Aron Tanford of the Southern Wastelands. -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="3296" name="Hamil's 1st Letter"  icon="icon.etc_piece_of_paper_white_i00">
+    <item id="3296" name="Hamil's 1st Letter" icon="icon.etc_piece_of_paper_white_i00">
         <!-- Take this letter and go to Prefect Vokian of Town of Giran. -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="3297" name="Hamil's 1st Letter"  icon="icon.etc_piece_of_paper_white_i00">
+    <item id="3297" name="Hamil's 1st Letter" icon="icon.etc_piece_of_paper_white_i00">
         <!-- Take this letter and go to Gauen of the Ivory Tower. -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="3298" name="Hunter's 1st Rune"  icon="icon.etc_mold_i00">
+    <item id="3298" name="Hunter's 1st Rune" icon="icon.etc_mold_i00">
         <!-- Stone engraved with a hunter's rune. Collect 10 of these and take them to Hamil of the Village of Floran. -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="3299" name="Hunter's 2nd Rune"  icon="icon.etc_mold_i00">
+    <item id="3299" name="Hunter's 2nd Rune" icon="icon.etc_mold_i00">
         <!-- Rune obtained from Breka Orc Overlords or Shamans. Collect 10 of these and take them, along with the snake talisman, to Prefect Vokian. -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
 </list>

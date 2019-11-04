@@ -6,30 +6,16 @@
         <set name="bodypart" val="hairall"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="10"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="time" val="20160"/>
+        <restriction tradable="false" dropable="false" sellable="false" clan-depositable="false" mailable="false" commissionable="false"/>
     </armor>
-    <item id="20901" name="Santa's Gift" >
+    <item id="20901" name="Santa's Gift" icon="icon.etc_pi_gift_box_i00">
         <!-- Hat provided together with Santa's Red Nose. -->
-        <set name="icon" val="icon.etc_pi_gift_box_i00"/>
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="100"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
         <set name="handler" val="ExtractableItems"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
+        <restriction tradable="false" dropable="false" sellable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
         <capsuled_items>
             <item id="20900" min="1" max="1" chance="100"/> <!-- Santa Hat - 14-day -->
             <item id="14611" min="1" max="1" chance="100"/> <!-- Santa's Red Nose -->

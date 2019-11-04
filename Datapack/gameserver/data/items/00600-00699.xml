@@ -313,184 +313,89 @@
             <stat type="sDef">216</stat>
         </stats>
     </armor>
-    <item id="686" name="Chair"  icon="icon.etc_branch_blue_i00">
+    <item id="686" name="Chair" icon="icon.etc_branch_blue_i00">
         <!-- Chair -->
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="100"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
         <set name="price" val="1000"/>
     </item>
-    <item id="687" name="Darin's Letter"  icon="icon.etc_scroll_gray_i00">
+    <item id="687" name="Darin's Letter" icon="icon.etc_scroll_gray_i00">
         <!-- The love letter that Darin has written to Roxxy. Darin Has asked you to deliver this letter to Gatekeeper Roxxy. -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="688" name="Roxxy's Kerchief"  icon="icon.etc_piece_of_cloth_white_i00">
+    <item id="688" name="Roxxy's Kerchief" icon="icon.etc_piece_of_cloth_white_i00">
         <!-- Roxxy's handkerchief. This is the reply that Roxxy has given to Darin's letter, and must be delivered to Darin. -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="689" name="Poetry Book"  icon="icon.etc_spell_books_red_i00">
+    <item id="689" name="Poetry Book" icon="icon.etc_spell_books_red_i00">
         <!-- Poetry book treasured by Arujien. The book contains poems that he Has written. Take this to Greenis. -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="690" name="Lyrics Book"  icon="icon.item_normal06">
+    <item id="690" name="Lyrics Book" icon="icon.item_normal06">
         <!-- The lyrics book of Herbien -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="691" name="Romance Novel"  icon="icon.item_normal07">
+    <item id="691" name="Romance Novel" icon="icon.item_normal07">
         <!-- Romance novel -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="692" name="Arujien's Letter"  icon="icon.item_canuse37">
+    <item id="692" name="Arujien's Letter" icon="icon.item_canuse37">
         <!-- Arujien's letter -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="693" name="Greenis' Letter"  icon="icon.etc_letter_white_i00">
+    <item id="693" name="Greenis' Letter" icon="icon.etc_letter_white_i00">
         <!-- Greenis' letter, refusing Arujien's love. Take this to Arujien. -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="694" name="Ingredient List"  icon="icon.item_normal37">
+    <item id="694" name="Ingredient List" icon="icon.item_normal37">
         <!-- List of ingredients: 3 omen Animal Bloods, 2 mana seeker husks, 2 gargoyle horns -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="695" name="Onyx Beast's Blood"  icon="icon.item_canuse48">
+    <item id="695" name="Onyx Beast's Blood" icon="icon.item_canuse48">
         <!-- The blood of an Onyx Beast. -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="696" name="Mana Seeker's Husk"  icon="icon.item_normal30">
+    <item id="696" name="Mana Seeker's Husk" icon="icon.item_normal30">
         <!-- The husk of a mana seeker. -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="697" name="Gargoyle's Horn"  icon="icon.item_normal24">
+    <item id="697" name="Gargoyle's Horn" icon="icon.item_normal24">
         <!-- The horn of a gargoyle. -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="698" name="Gilbert's List"  icon="icon.item_normal37">
+    <item id="698" name="Gilbert's List" icon="icon.item_normal37">
         <!-- List of things to eliminate: orcs, hobgoblins, walking fungus -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="699" name="Orc's Nose"  icon="icon.item_canuse05">
+    <item id="699" name="Orc's Nose" icon="icon.item_canuse05">
         <!-- Orc's Nose -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
 </list>

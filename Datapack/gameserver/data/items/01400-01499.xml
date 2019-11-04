@@ -1,757 +1,457 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
-    <item id="1400" name="Spellbook: Surrender to Fire"  icon="icon.etc_spell_books_element_i00">
+    <item id="1400" name="Spellbook: Surrender to Fire" icon="icon.etc_spell_books_element_i00">
         <!-- Spellbook needed to learn Surrender to Fire. Used by Human Wizards. Required level: 25 -->
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="120"/>
         <set name="price" val="1250"/>
         <set name="commissionItemType" val="SPELLBOOK"/>
-        <set name="is_stackable" val="true"/>
+        <restriction stackable="true"/>
     </item>
-    <item id="1401" name="Spellbook: Acumen"  icon="icon.etc_spell_books_assistance_i00">
+    <item id="1401" name="Spellbook: Acumen" icon="icon.etc_spell_books_assistance_i00">
         <!-- Spellbook needed to learn Acumen. Used by Clerics. Required level: 20 -->
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="120"/>
         <set name="price" val="7461"/>
         <set name="commissionItemType" val="SPELLBOOK"/>
-        <set name="is_stackable" val="true"/>
+        <restriction stackable="true"/>
     </item>
-    <item id="1402" name="Spellbook: Agility"  icon="icon.etc_spell_books_assistance_i00">
+    <item id="1402" name="Spellbook: Agility" icon="icon.etc_spell_books_assistance_i00">
         <!-- Spellbook needed to learn Agility. Used by Elven Oracles. Required level: 25 -->
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="120"/>
         <set name="price" val="1250"/>
         <set name="commissionItemType" val="SPELLBOOK"/>
-        <set name="is_stackable" val="true"/>
+        <restriction stackable="true"/>
     </item>
-    <item id="1403" name="Spellbook: Summon Kat the Cat"  icon="icon.etc_spell_books_summon_i00">
+    <item id="1403" name="Spellbook: Summon Kat the Cat" icon="icon.etc_spell_books_summon_i00">
         <!-- Spellbook needed to learn Summon Kat the Cat. Used by Human Wizards. Required level: 20 -->
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="120"/>
         <set name="price" val="800"/>
         <set name="commissionItemType" val="SPELLBOOK"/>
-        <set name="is_stackable" val="true"/>
+        <restriction stackable="true"/>
     </item>
-    <item id="1404" name="Spellbook: Servitor Recharge"  icon="icon.etc_spell_books_summon_i00">
+    <item id="1404" name="Spellbook: Servitor Recharge" icon="icon.etc_spell_books_summon_i00">
         <!-- Spellbook needed to learn Servitor Recharge. Used by Human Wizards, Elven Wizards, and Dark Wizards. Required level: 25 -->
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="120"/>
         <set name="price" val="1250"/>
         <set name="commissionItemType" val="SPELLBOOK"/>
-        <set name="is_stackable" val="true"/>
+        <restriction stackable="true"/>
     </item>
-    <item id="1405" name="Spellbook: Servitor Heal"  icon="icon.etc_spell_books_summon_i00">
+    <item id="1405" name="Spellbook: Servitor Heal" icon="icon.etc_spell_books_summon_i00">
         <!-- Spellbook needed to learn Servitor Heal. Used by Human Wizards, Elven Wizards, and Dark Wizards. Required level: 20 -->
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="120"/>
         <set name="price" val="800"/>
         <set name="commissionItemType" val="SPELLBOOK"/>
-        <set name="is_stackable" val="true"/>
+        <restriction stackable="true"/>
     </item>
-    <item id="1406" name="Spellbook: Servitor Wind Walk"  icon="icon.etc_spell_books_summon_i00">
+    <item id="1406" name="Spellbook: Servitor Wind Walk" icon="icon.etc_spell_books_summon_i00">
         <!-- Spellbook needed to learn Servitor Wind Walk. Used by Human Wizards. Required level: 35 -->
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="120"/>
         <set name="price" val="2450"/>
         <set name="commissionItemType" val="SPELLBOOK"/>
-        <set name="is_stackable" val="true"/>
+        <restriction stackable="true"/>
     </item>
-    <item id="1407" name="Spellbook: Servitor Magic Boost"  icon="icon.etc_spell_books_summon_i00">
+    <item id="1407" name="Spellbook: Servitor Magic Boost" icon="icon.etc_spell_books_summon_i00">
         <!-- Spellbook needed to learn Servitor Magic Boost. Used by Elven Wizards. Required level: 35 -->
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="120"/>
         <set name="price" val="2450"/>
         <set name="commissionItemType" val="SPELLBOOK"/>
-        <set name="is_stackable" val="true"/>
+        <restriction stackable="true"/>
     </item>
-    <item id="1408" name="Spellbook: Mighty Servitor"  icon="icon.etc_spell_books_summon_i00">
+    <item id="1408" name="Spellbook: Mighty Servitor" icon="icon.etc_spell_books_summon_i00">
         <!-- Spellbook needed to learn Mighty Servitor. Used by Dark Wizards. Required level: 35 -->
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="120"/>
         <set name="price" val="2450"/>
         <set name="commissionItemType" val="SPELLBOOK"/>
-        <set name="is_stackable" val="true"/>
+        <restriction stackable="true"/>
     </item>
-    <item id="1409" name="Spellbook: Slow"  icon="icon.etc_spell_books_black_i00">
+    <item id="1409" name="Spellbook: Slow" icon="icon.etc_spell_books_black_i00">
         <!-- Spellbook needed to learn Slow. Used by Human Wizards and Dark Wizards. Required level: 35 -->
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="120"/>
         <set name="price" val="43681"/>
         <set name="commissionItemType" val="SPELLBOOK"/>
-        <set name="is_stackable" val="true"/>
+        <restriction stackable="true"/>
     </item>
-    <item id="1410" name="Spellbook: Poisonous Cloud"  icon="icon.etc_spell_books_black_i00">
+    <item id="1410" name="Spellbook: Poisonous Cloud" icon="icon.etc_spell_books_black_i00">
         <!-- Spellbook needed to learn Poisonous Cloud. Used by Human Wizards and Dark Wizards. Required level: 25 -->
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="120"/>
         <set name="price" val="1250"/>
         <set name="commissionItemType" val="SPELLBOOK"/>
-        <set name="is_stackable" val="true"/>
+        <restriction stackable="true"/>
     </item>
-    <item id="1411" name="Spellbook: Aura Burn"  icon="icon.etc_spell_books_element_i00">
+    <item id="1411" name="Spellbook: Aura Burn" icon="icon.etc_spell_books_element_i00">
         <!-- Spellbook needed to learn Aura Burn. Used by Wizards, Elven Wizards and Dark Wizards. Required level: 20 -->
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="120"/>
         <set name="price" val="800"/>
         <set name="commissionItemType" val="SPELLBOOK"/>
-        <set name="is_stackable" val="true"/>
+        <restriction stackable="true"/>
     </item>
-    <item id="1412" name="Spellbook: Water Resistance"  icon="icon.etc_spell_books_assistance_i00">
+    <item id="1412" name="Spellbook: Water Resistance" icon="icon.etc_spell_books_assistance_i00">
         <!-- Spellbook needed to learn Water Resistance. Used by Elven Wizards and Prophets. Required level: Elven Wizard - 25, Prophet - 58 -->
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="120"/>
         <set name="price" val="2450"/>
         <set name="commissionItemType" val="SPELLBOOK"/>
-        <set name="is_stackable" val="true"/>
+        <restriction stackable="true"/>
     </item>
-    <item id="1413" name="Spellbook: Wind Resistance"  icon="icon.etc_spell_books_assistance_i00">
+    <item id="1413" name="Spellbook: Wind Resistance" icon="icon.etc_spell_books_assistance_i00">
         <!-- Spellbook needed to learn Wind Resistance. Used by Shillien Oracles and Prophets. Required level: Shillien Oracle - 35, Prophet - 58 -->
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="120"/>
         <set name="price" val="2450"/>
         <set name="commissionItemType" val="SPELLBOOK"/>
-        <set name="is_stackable" val="true"/>
+        <restriction stackable="true"/>
     </item>
-    <item id="1414" name="Spellbook: Fire Resistance"  icon="icon.etc_spell_books_assistance_i00">
+    <item id="1414" name="Spellbook: Fire Resistance" icon="icon.etc_spell_books_assistance_i00">
         <!-- Spellbook needed to learn Fire Resistance. Used by Clerics. Required level: 30 -->
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="120"/>
         <set name="price" val="1800"/>
         <set name="commissionItemType" val="SPELLBOOK"/>
-        <set name="is_stackable" val="true"/>
+        <restriction stackable="true"/>
     </item>
-    <item id="1415" name="Spellbook: Dryad Root"  icon="icon.etc_spell_books_assistance_i00">
+    <item id="1415" name="Spellbook: Dryad Root" icon="icon.etc_spell_books_assistance_i00">
         <!-- Spellbook needed to learn Dryard Root. Used by Clerics, Oracles and Shillien Oracles. Required level: 23 -->
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="120"/>
         <set name="price" val="10603"/>
         <set name="commissionItemType" val="SPELLBOOK"/>
-        <set name="is_stackable" val="true"/>
+        <restriction stackable="true"/>
     </item>
-    <item id="1416" name="Spellbook: Curse Chaos"  icon="icon.etc_spell_books_black_i00">
+    <item id="1416" name="Spellbook: Curse Chaos" icon="icon.etc_spell_books_black_i00">
         <!-- Spellbook needed to learn Curse Chaos. Used by Human Wizards and Dark Wizards. Required level: 35 -->
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="120"/>
         <set name="price" val="43681"/>
         <set name="commissionItemType" val="SPELLBOOK"/>
-        <set name="is_stackable" val="true"/>
+        <restriction stackable="true"/>
     </item>
-    <item id="1417" name="Spellbook: Surrender to Earth"  icon="icon.etc_spell_books_element_i00">
+    <item id="1417" name="Spellbook: Surrender to Earth" icon="icon.etc_spell_books_element_i00">
         <!-- Spellbook needed to learn Surrender to Earth. Used by Elven Wizards. Required level: 35 -->
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="120"/>
         <set name="price" val="1250"/>
         <set name="commissionItemType" val="SPELLBOOK"/>
-        <set name="is_stackable" val="true"/>
+        <restriction stackable="true"/>
     </item>
-    <item id="1418" name="Spellbook: Surrender to Poison"  icon="icon.etc_spell_books_black_i00">
+    <item id="1418" name="Spellbook: Surrender to Poison" icon="icon.etc_spell_books_black_i00">
         <!-- Spellbook needed to learn Surrender to Poison. Used by Dark Wizards. Required level: 25 -->
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="120"/>
         <set name="price" val="1250"/>
         <set name="commissionItemType" val="SPELLBOOK"/>
-        <set name="is_stackable" val="true"/>
+        <restriction stackable="true"/>
     </item>
-    <item id="1419" name="Proof of Blood"  icon="icon.etc_broken_crystal_red_i00">
+    <item id="1419" name="Proof of Blood" icon="icon.etc_broken_crystal_red_i00">
         <!-- Item needed to upgrade a clan to level 5. -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_stackable" val="true"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
+        <restriction stackable="true"/>
     </item>
-    <item id="1420" name="Ingredient List"  icon="icon.etc_piece_of_paper_white_i00">
+    <item id="1420" name="Ingredient List" icon="icon.etc_piece_of_paper_white_i00">
         <!-- List of cooking ingredients from Jonas. Mandragora essence. Honey. Dionian potato. Marsh moss. Floating eye meat. -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="1421" name="Sonia's Botany Book"  icon="icon.etc_spell_books_blue_i00">
+    <item id="1421" name="Sonia's Botany Book" icon="icon.etc_spell_books_blue_i00">
         <!-- Picture that shows what a mandragora looks like. You need this to get mandragora roots. -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="1422" name="Red Mandragora Root"  icon="icon.etc_pouch_yellow_i00">
+    <item id="1422" name="Red Mandragora Root" icon="icon.etc_pouch_yellow_i00">
         <!-- Red mandragora root. Collect these to take them to Trader Sonia. -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="1423" name="White Mandragora Root"  icon="icon.etc_pouch_gray_i00">
+    <item id="1423" name="White Mandragora Root" icon="icon.etc_pouch_gray_i00">
         <!-- Rare white mandragora root. Collect these to take them to Trader Sonia. -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="1424" name="Red Mandragora Sap"  icon="icon.etc_potion_red_i00">
+    <item id="1424" name="Red Mandragora Sap" icon="icon.etc_potion_red_i00">
         <!-- Red mandragora sap. One of the five ingredients needed for Jonas' cooking. -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="1425" name="White Mandragora Sap"  icon="icon.etc_potion_clear_i00">
+    <item id="1425" name="White Mandragora Sap" icon="icon.etc_potion_clear_i00">
         <!-- Transparent mandragora sap. One of the ingredients needed for Jonas' cooking. -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="1426" name="Jacob's Insect Book"  icon="icon.etc_spell_books_red_i00">
+    <item id="1426" name="Jacob's Insect Book" icon="icon.etc_spell_books_red_i00">
         <!-- Diagram that depicts the drawing of a bee. You must possess this in order to obtain nectar and royal jelly from the bloody bee or the Weird Wasp. -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="1427" name="Nectar"  icon="icon.etc_reagent_gold_i00">
+    <item id="1427" name="Nectar" icon="icon.etc_reagent_gold_i00">
         <!-- Honey water taken from a giant bee. Collect 20 of these to take them to Guard Jacob. -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="1428" name="Royal Jelly"  icon="icon.etc_reagent_white_i00">
+    <item id="1428" name="Royal Jelly" icon="icon.etc_reagent_white_i00">
         <!-- Rare ingredient that can be taken only from newborn working bees. Collect these and take them to Guard Jacob. -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="1429" name="Honey"  icon="icon.etc_potion_yellow_i00">
+    <item id="1429" name="Honey" icon="icon.etc_potion_yellow_i00">
         <!-- Honey made from the nectar you collected from bees. One of the five ingredients needed for Jonas' cooking. -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="1430" name="Golden Honey"  icon="icon.etc_potion_gold_i00">
+    <item id="1430" name="Golden Honey" icon="icon.etc_potion_gold_i00">
         <!-- Golden honey made from the nectar and the royal jelly you collected from bees. One of the five ingredients needed for Jonas' cooking. -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="1431" name="Pano's Contract"  icon="icon.etc_letter_blue_i00">
+    <item id="1431" name="Pano's Contract" icon="icon.etc_letter_blue_i00">
         <!-- Contract Grocer Pano gave you. It says, if you kill Hobgoblins and bring 30 pieces of proof, he will give you potatoes as a reward. -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="1432" name="Hobgoblin Amulet"  icon="icon.etc_feather_black_i00">
+    <item id="1432" name="Hobgoblin Amulet" icon="icon.etc_feather_black_i00">
         <!-- Amulet made of a feather that Hobgoblins carry on themselves. Collect 30 of these and take them to Grocer Pano. -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="1433" name="Dionian Potato"  icon="icon.etc_pouch_brown_i00">
+    <item id="1433" name="Dionian Potato" icon="icon.etc_pouch_brown_i00">
         <!-- The highest-quality potatoes grown in the rich soil of southern Dion. One of the five ingredients needed for Jonas' cooking. -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="1434" name="Glyvka's Botany Book"  icon="icon.etc_spell_books_blue_i00">
+    <item id="1434" name="Glyvka's Botany Book" icon="icon.etc_spell_books_blue_i00">
         <!-- Picture that explains how to collect moss. You need this to collect marsh moss from grey ants or crimson ants. -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="1435" name="Green Marsh Moss"  icon="icon.etc_branch_green_i00">
+    <item id="1435" name="Green Marsh Moss" icon="icon.etc_branch_green_i00">
         <!-- Green marsh moss is sometimes used in cooking. Collect this and take it to Priestess Glyvka. -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="1436" name="Brown Marsh Moss"  icon="icon.etc_branch_gold_i00">
+    <item id="1436" name="Brown Marsh Moss" icon="icon.etc_branch_gold_i00">
         <!-- Rare brown marsh moss. Its flavors are superior to the green ones. Collect this and take it to Priestess Glyvka. -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="1437" name="Green Moss Bundle"  icon="icon.etc_bark_green_i00">
+    <item id="1437" name="Green Moss Bundle" icon="icon.etc_bark_green_i00">
         <!-- Bundle of well-cared-for moss, collected from a marshy place for cooking. One of the five ingredients needed for Jonas' cooking. -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="1438" name="Brown Moss Bundle"  icon="icon.etc_bark_gold_i00">
+    <item id="1438" name="Brown Moss Bundle" icon="icon.etc_bark_gold_i00">
         <!-- Bundle of well-cared-for moss, collected from a marshy place for cooking. One of the five ingredients needed for Jonas' cooking. -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="1439" name="Rollant's Creature Book"  icon="icon.etc_spell_books_red_i00">
+    <item id="1439" name="Rollant's Creature Book" icon="icon.etc_spell_books_red_i00">
         <!-- Picture that shows what a monster eye looks like. You need this to collect the right monster eye searcher or the monster eye gazer. -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="1440" name="Body of Monster Eye"  icon="icon.etc_leather_brown_i00">
+    <item id="1440" name="Body of Monster Eye" icon="icon.etc_leather_brown_i00">
         <!-- Severed Deadman's Flesh body of monster eye. Take this to Magister Rollant. -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="1441" name="Monster Eye's Meat"  icon="icon.etc_pouch_yellow_i00">
+    <item id="1441" name="Monster Eye's Meat" icon="icon.etc_pouch_yellow_i00">
         <!-- The meat of monster eye, ready to cook. One of the five ingredients needed for Jonas' cooking. -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="1442" name="Jonas' 1st Steak Dish"  icon="icon.etc_jewel_box_i00">
+    <item id="1442" name="Jonas' 1st Steak Dish" icon="icon.etc_jewel_box_i00">
         <!-- Plate that contains Jonas' monster eye steak. Take this to Magister Mirien. -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="1443" name="Jonas' 1st Steak Dish"  icon="icon.etc_jewel_box_i00">
+    <item id="1443" name="Jonas' 1st Steak Dish" icon="icon.etc_jewel_box_i00">
         <!-- Plate that contains Jonas' monster eye steak. Take this to Magister Mirien. -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="1444" name="Jonas' 1st Steak Dish"  icon="icon.etc_jewel_box_i00">
+    <item id="1444" name="Jonas' 1st Steak Dish" icon="icon.etc_jewel_box_i00">
         <!-- Plate that contains Jonas' monster eye steak. Take this to Magister Mirien. -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="1445" name="Jonas' 1st Steak Dish"  icon="icon.etc_jewel_box_i00">
+    <item id="1445" name="Jonas' 1st Steak Dish" icon="icon.etc_jewel_box_i00">
         <!-- Plate that contains Jonas' monster eye steak. Take this to Magister Mirien. -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="1446" name="Jonas' 1st Steak Dish"  icon="icon.etc_jewel_box_i00">
+    <item id="1446" name="Jonas' 1st Steak Dish" icon="icon.etc_jewel_box_i00">
         <!-- Plate that contains Jonas' monster eye steak. Take this to Magister Mirien. -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="1447" name="Mirien's Review"  icon="icon.etc_letter_red_i00">
+    <item id="1447" name="Mirien's Review" icon="icon.etc_letter_red_i00">
         <!-- Letter from Magister Mirien about the taste of Jonas' dish. Take this to Jonas. -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="1452" name="Harpy's Feather"  icon="icon.etc_feather_white_i00">
+    <item id="1452" name="Harpy's Feather" icon="icon.etc_feather_white_i00">
         <!-- Feather taken from a harpy. Collect these and take them to Guard Belton. -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="1453" name="Medusa's Venom"  icon="icon.etc_potion_green_i00">
+    <item id="1453" name="Medusa's Venom" icon="icon.etc_potion_green_i00">
         <!-- Poison extracted from the snake hair of a medusa. Collect these and take them to Guard Belton. -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="1454" name="Wyrm's Tooth"  icon="icon.etc_claw_i00">
+    <item id="1454" name="Wyrm's Tooth" icon="icon.etc_claw_i00">
         <!-- Sharp fang of a Wyrm. Collect these and take them to Guard Belton. -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="1455" name="Jonas' Salad Recipe"  icon="icon.item_canuse39">
+    <item id="1455" name="Jonas' Salad Recipe" icon="icon.item_canuse39">
         <!-- Jonas' recipe for making marsh moss salad. -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="1456" name="Jonas' Sauce Recipe"  icon="icon.item_canuse39">
+    <item id="1456" name="Jonas' Sauce Recipe" icon="icon.item_canuse39">
         <!-- Jonas' recipe for making mandragora sauce. -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="1457" name="Jonas' Steak Recipe"  icon="icon.item_canuse39">
+    <item id="1457" name="Jonas' Steak Recipe" icon="icon.item_canuse39">
         <!-- Jonas' recipe for making monster eye meat steak. -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="1458" name="Crystal (D-grade)"  icon="icon.etc_crystal_blue_i00">
+    <item id="1458" name="Crystal (D-grade)" icon="icon.etc_crystal_blue_i00">
         <!-- Crystal of D-grade. -->
         <set name="immediate_effect" val="true"/>
         <set name="price" val="650"/>
-        <set name="is_stackable" val="true"/>
-        <set name="crystal_type" val="D"/>
-        <set name="enchant_enabled" val="1"/>
         <set name="commissionItemType" val="CRYSTAL"/>
+        <restriction stackable="true"/>
     </item>
-    <item id="1459" name="Crystal (C-grade)"  icon="icon.etc_crystal_green_i00">
+    <item id="1459" name="Crystal (C-grade)" icon="icon.etc_crystal_green_i00">
         <!-- Crystal of C-grade. -->
         <set name="immediate_effect" val="true"/>
         <set name="price" val="3000"/>
-        <set name="is_stackable" val="true"/>
-        <set name="crystal_type" val="C"/>
-        <set name="enchant_enabled" val="1"/>
         <set name="commissionItemType" val="CRYSTAL"/>
+        <restriction stackable="true"/>
     </item>
-    <item id="1460" name="Crystal (B-grade)"  icon="icon.etc_crystal_red_i00">
+    <item id="1460" name="Crystal (B-grade)" icon="icon.etc_crystal_red_i00">
         <!-- Crystal of B-grade. -->
         <set name="immediate_effect" val="true"/>
         <set name="price" val="9000"/>
-        <set name="is_stackable" val="true"/>
-        <set name="crystal_type" val="B"/>
-        <set name="enchant_enabled" val="1"/>
         <set name="commissionItemType" val="CRYSTAL"/>
+        <restriction stackable="true"/>
     </item>
-    <item id="1461" name="Crystal (A-grade)"  icon="icon.etc_crystal_silver_i00">
+    <item id="1461" name="Crystal (A-grade)" icon="icon.etc_crystal_silver_i00">
         <!-- Crystal of A-grade. -->
         <set name="immediate_effect" val="true"/>
         <set name="price" val="12500"/>
-        <set name="is_stackable" val="true"/>
-        <set name="crystal_type" val="A"/>
-        <set name="enchant_enabled" val="1"/>
         <set name="commissionItemType" val="CRYSTAL"/>
+        <restriction stackable="true"/>
     </item>
-    <item id="1462" name="Crystal (S-grade)"  icon="icon.etc_crystal_gold_i00">
+    <item id="1462" name="Crystal (S-grade)" icon="icon.etc_crystal_gold_i00">
         <!-- Crystal of S-grade. -->
         <set name="crystal_type" val="S"/>
         <set name="price" val="15000"/>
-        <set name="is_stackable" val="true"/>
+        <restriction stackable="true"/>
     </item>
-    <item id="1463" name="Soulshot (D-grade)"  icon="icon.etc_spirit_bullet_blue_i00">
+    <item id="1463" name="Soulshot (D-grade)" icon="icon.etc_spirit_bullet_blue_i00">
         <!-- The power of a higher-level spirit is bestowed upon a weapon, temporarily increasing power of attack. Used with a D-grade weapon. -->
         <set name="default_action" val="SOULSHOT"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="2"/>
         <set name="price" val="10"/>
-        <set name="is_stackable" val="true"/>
-        <set name="handler" val="SoulShots"/>
-        <set name="crystal_type" val="D"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="etcitem_type" val="SOULSHOT"/>
         <set name="commissionItemType" val="SOULSHOT"/>
+        <restriction stackable="true"/>
         <skills>
             <skill id="2150" level="1"/> <!-- Soulshot (D-grade) -->
         </skills>
     </item>
-    <item id="1464" name="Soulshot (C-grade)"  icon="icon.etc_spirit_bullet_green_i00">
+    <item id="1464" name="Soulshot (C-grade)" icon="icon.etc_spirit_bullet_green_i00">
         <!-- The power of a higher-level spirit is bestowed upon a weapon, temporarily increasing power of attack. Used with a C-grade weapon. -->
         <set name="default_action" val="SOULSHOT"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="2"/>
         <set name="price" val="15"/>
-        <set name="is_stackable" val="true"/>
-        <set name="handler" val="SoulShots"/>
-        <set name="crystal_type" val="C"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="etcitem_type" val="SOULSHOT"/>
         <set name="commissionItemType" val="SOULSHOT"/>
+        <restriction stackable="true"/>
         <skills>
             <skill id="2151" level="1"/> <!-- Soulshot (C-grade) -->
         </skills>
     </item>
-    <item id="1465" name="Soulshot (B-grade)"  icon="icon.etc_spirit_bullet_red_i00">
+    <item id="1465" name="Soulshot (B-grade)" icon="icon.etc_spirit_bullet_red_i00">
         <!-- The power of a higher-level spirit is bestowed upon a weapon, temporarily increasing power of attack. Used with a B-grade weapon. -->
         <set name="default_action" val="SOULSHOT"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="1"/>
         <set name="price" val="50"/>
-        <set name="is_stackable" val="true"/>
-        <set name="handler" val="SoulShots"/>
-        <set name="crystal_type" val="B"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="etcitem_type" val="SOULSHOT"/>
         <set name="commissionItemType" val="SOULSHOT"/>
+        <restriction stackable="true"/>
         <skills>
             <skill id="2152" level="1"/> <!-- Soulshot (B-grade) -->
         </skills>
     </item>
-    <item id="1466" name="Soulshot (A-grade)"  icon="icon.etc_spirit_bullet_silver_i00">
+    <item id="1466" name="Soulshot (A-grade)" icon="icon.etc_spirit_bullet_silver_i00">
         <!-- The power of a Soulshot is bestowed upon a weapon, temporarily increasing the power of attack. Used with A-grade weapons. -->
         <set name="default_action" val="SOULSHOT"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="1"/>
         <set name="price" val="80"/>
-        <set name="is_stackable" val="true"/>
-        <set name="handler" val="SoulShots"/>
-        <set name="crystal_type" val="A"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="etcitem_type" val="SOULSHOT"/>
         <set name="commissionItemType" val="SOULSHOT"/>
+        <restriction stackable="true"/>
         <skills>
             <skill id="2153" level="1"/> <!-- Soulshot (A-grade) -->
         </skills>
     </item>
-    <item id="1467" name="Soulshot (S-grade)"  icon="icon.etc_spirit_bullet_gold_i00">
+    <item id="1467" name="Soulshot (S-grade)" icon="icon.etc_spirit_bullet_gold_i00">
         <!-- The power of Soulshot is bestowed upon a weapon, temporarily increasing the power of attack. Used with S-grade weapons. -->
         <set name="default_action" val="SOULSHOT"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="1"/>
         <set name="price" val="100"/>
-        <set name="is_stackable" val="true"/>
-        <set name="handler" val="SoulShots"/>
-        <set name="crystal_type" val="S"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="etcitem_type" val="SOULSHOT"/>
         <set name="commissionItemType" val="SOULSHOT"/>
+        <restriction stackable="true"/>
         <skills>
             <skill id="2154" level="1"/> <!-- Soulshot (S-grade) -->
         </skills>
@@ -807,382 +507,166 @@
             <stat type="pAtkRange">80</stat>
         </stats>
     </weapon>
-    <item id="1473" name="Kasha Wolf Fang"  icon="icon.etc_claw_i00">
+    <item id="1473" name="Kasha Wolf Fang" icon="icon.etc_claw_i00">
         <!-- Fang that is obtained by killing a kasha wolf. Collect fifty and take these to Praetorian Rukain. -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="1474" name="Grave Robber's Head"  icon="icon.etc_skull_black_i00">
+    <item id="1474" name="Grave Robber's Head" icon="icon.etc_skull_black_i00">
         <!-- The head of goblin robbers, who damaged the graves of Orc ancestors. Collect 50 to take to Seer Livina. -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="1475" name="Black Soulstone"  icon="icon.etc_bead_gold_i00">
+    <item id="1475" name="Black Soulstone" icon="icon.etc_bead_gold_i00">
         <!-- Black soulstone pulled out of the heart of a Rakeclaw Imp. Collect these to take to Atuba Chief Varkees. -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="1476" name="Red Soulstone"  icon="icon.etc_crystal_ball_red_i00">
+    <item id="1476" name="Red Soulstone" icon="icon.etc_crystal_ball_red_i00">
         <!-- Red soulstone pulled out of the heart of a Rakeclaw Imp. Collect these to take to Atuba Chief Varkees. -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="1477" name="Maraku Werewolf Head"  icon="icon.etc_skull_red_i00">
+    <item id="1477" name="Maraku Werewolf Head" icon="icon.etc_skull_red_i00">
         <!-- The head of a Maraku werewolf that has been cut off after they were defeated. Collect 40 of these and take them to Prefect Brukurse. -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="1478" name="Blackwing Bat Fang"  icon="icon.etc_horn_i00">
+    <item id="1478" name="Blackwing Bat Fang" icon="icon.etc_horn_i00">
         <!-- Fang of a Blackwing Bat. Collect 70 of these and take them to Neruga Chief Tantus. -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="1479" name="Varangka's Parasite"  icon="icon.etc_totem_black_i00">
+    <item id="1479" name="Varangka's Parasite" icon="icon.etc_totem_black_i00">
         <!-- Evil parasite that can summon Varangka's Tracker. -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="1480" name="Kasha's Parasitic Spirit"  icon="icon.etc_totem_black_i00">
+    <item id="1480" name="Kasha's Parasitic Spirit" icon="icon.etc_totem_black_i00">
         <!-- Parasite-type evil spirit that comes out of the grey bear polluted by kasha's evil spirit. This is the key calling forth the kasha totem spirit. -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="1481" name="Kasha's Crystal"  icon="icon.etc_crystal_green_i00">
+    <item id="1481" name="Kasha's Crystal" icon="icon.etc_crystal_green_i00">
         <!-- Crystal obtained by killing the grey bear totem polluted by kasha's evil spirit. Take this to Seer Tanapi. -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="1482" name="Black Wolf Pelt"  icon="icon.etc_leather_gray_i00">
+    <item id="1482" name="Black Wolf Pelt" icon="icon.etc_leather_gray_i00">
         <!-- Pelt of a black wolf. Collect 40 to take to Maryse Redbonnet. -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="1483" name="Goblin Necklace"  icon="icon.etc_totem_necklace_black_i00">
+    <item id="1483" name="Goblin Necklace" icon="icon.etc_totem_necklace_black_i00">
         <!-- Necklace obtained by killing a low-level goblin. Collect these and take them to Golden Wheel's Spiron. -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="1484" name="Goblin Pendant"  icon="icon.etc_totem_necklace_red_i00">
+    <item id="1484" name="Goblin Pendant" icon="icon.etc_totem_necklace_red_i00">
         <!-- Necklace obtained by killing a high-level goblin. Collect these and take them to Golden Wheel's Spiron. -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="1485" name="Goblin Lord Pendant"  icon="icon.etc_totem_necklace_green_i00">
+    <item id="1485" name="Goblin Lord Pendant" icon="icon.etc_totem_necklace_green_i00">
         <!-- Necklace obtained by killing the goblin lord. Collect these and take them to Golden Wheel's Spiron. -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="1486" name="Suspicious Memo"  icon="icon.etc_piece_of_paper_gray_i00">
+    <item id="1486" name="Suspicious Memo" icon="icon.etc_piece_of_paper_gray_i00">
         <!-- Suspicious memo obtained by killing a goblin brigand leader. Take this to Golden Wheel's Spiron. -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="1487" name="Suspicious Contract"  icon="icon.etc_letter_white_i00">
+    <item id="1487" name="Suspicious Contract" icon="icon.etc_letter_white_i00">
         <!-- Suspicious contract completed by collecting suspicious memos. This contract reveals that the Silver Scale Guild requested the brigands to attack the freight wagons. -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="1488" name="Chrysolite Ore"  icon="icon.etc_plate_blue_i00">
+    <item id="1488" name="Chrysolite Ore" icon="icon.etc_plate_blue_i00">
         <!-- Chrysolite Ore received from defeating Utuku Orcs. Collect these and take them to Filaur of the Grey Pillar. -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="1489" name="Torn Map Piece"  icon="icon.etc_piece_of_paper_black_i00">
+    <item id="1489" name="Torn Map Piece" icon="icon.etc_piece_of_paper_black_i00">
         <!-- Part of the map that reveals the hidden vein of Chrysolite. Collect 4 of these pieces to complete the map. -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="1490" name="Hidden Ore Map"  icon="icon.etc_recipe_blue_i00">
+    <item id="1490" name="Hidden Ore Map" icon="icon.etc_recipe_blue_i00">
         <!-- Map that reveals a hidden vein of Chrysolite. Take this to Filaur of the Grey Pillar. -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="1491" name="Bat Fang"  icon="icon.etc_claw_i00">
+    <item id="1491" name="Bat Fang" icon="icon.etc_claw_i00">
         <!-- Fang taken by killing a blade bat or a barb bat. Collect 100 and take them to Bronze Key's Keef -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="1492" name="Floating Stone"  icon="icon.etc_crystal_ball_blue_i00">
+    <item id="1492" name="Floating Stone" icon="icon.etc_crystal_ball_blue_i00">
         <!-- Stone that floats on water. Obtain it from a magical weaver. Collect 50 and take them to Black Anvil's Arin. -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="1493" name="Tarantula's Spider Silk"  icon="icon.etc_skein_white_i00">
+    <item id="1493" name="Tarantula's Spider Silk" icon="icon.etc_skein_white_i00">
         <!-- The spider silk that makes when making their nests. Collect these and take them to Trader Mion. -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="1494" name="Tarantula Spinnerette"  icon="icon.etc_pouch_gray_i00">
+    <item id="1494" name="Tarantula Spinnerette" icon="icon.etc_pouch_gray_i00">
         <!-- Pocket shaped organ that makes spider silk. Take this to Defender Nathan. -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="1495" name="Giant Spider's Skin"  icon="icon.etc_leather_gray_i00">
+    <item id="1495" name="Giant Spider's Skin" icon="icon.etc_leather_gray_i00">
         <!-- The husk of a giant spider that you peel off. Collect them and take them to Edmond. -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="1496" name="Mark of Flame"  icon="icon.etc_scroll_of_enchant_weapon_i01">
+    <item id="1496" name="Mark of Flame" icon="icon.etc_scroll_of_enchant_weapon_i01">
         <!-- This mark represents the qualification of Orc fighters. Take this and go to the Flame Guardian Vulkus. -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="1497" name="Necklace of Flame"  icon="icon.item_normal142">
+    <item id="1497" name="Necklace of Flame" icon="icon.item_normal142">
         <!-- The Necklace of Flame given to you by Vulkus. Hand this to Pa'agrio Lord Kakai, king of the Orcs. -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="1498" name="Mining License"  icon="icon.etc_letter_blue_i00">
+    <item id="1498" name="Mining License" icon="icon.etc_letter_blue_i00">
         <!-- License given to Dwarves to allow them to mine. Take this and go to Foreman Laferon. -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="1499" name="Laferon's Recommendation"  icon="icon.item_canuse15">
+    <item id="1499" name="Laferon's Recommendation" icon="icon.item_canuse15">
         <!-- The recommendation of Foreman Laferon. Take this and go to First Elder Lockirin. -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
 </list>

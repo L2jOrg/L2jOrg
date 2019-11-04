@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
-    <item id="8700" name="Recipe: Tiphon's Spear (60%)"  icon="icon.etc_recipe_violet_i00">
+    <item id="8700" name="Recipe: Tiphon's Spear (60%)" icon="icon.etc_recipe_violet_i00">
         <!-- For Dwarves only. Recipe for Tiphon's Spear. Requires Create Item - Skill Lv. 8. The success rate is 60%. -->
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
@@ -8,11 +8,10 @@
         <set name="weight" val="30"/>
         <set name="price" val="706000"/>
         <set name="recipe_id" val="854"/>
-        <set name="is_stackable" val="true"/>
-        <set name="commissionItemType" val="RECIPE"/>
         <set name="handler" val="Recipes"/>
+        <restriction stackable="true"/>
     </item>
-    <item id="8701" name="Recipe: Tiphon's Spear (100%)"  icon="icon.etc_recipe_violet_i00">
+    <item id="8701" name="Recipe: Tiphon's Spear (100%)" icon="icon.etc_recipe_violet_i00">
         <!-- For Dwarves only. Recipe for Tiphon's Spear. Requires Create Item - Skill Lv. 8. The success rate is 100%. -->
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
@@ -20,11 +19,10 @@
         <set name="weight" val="30"/>
         <set name="price" val="706000"/>
         <set name="recipe_id" val="855"/>
-        <set name="is_stackable" val="true"/>
-        <set name="commissionItemType" val="RECIPE"/>
         <set name="handler" val="Recipes"/>
+        <restriction stackable="true"/>
     </item>
-    <item id="8702" name="Recipe: Shyeed's Bow (60%)"  icon="icon.etc_recipe_violet_i00">
+    <item id="8702" name="Recipe: Shyeed's Bow (60%)" icon="icon.etc_recipe_violet_i00">
         <!-- For Dwarves only. Recipe for Shyeed's Bow. Requires Create Item - Skill Lv. 8. The success rate is 60%. -->
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
@@ -32,11 +30,10 @@
         <set name="weight" val="30"/>
         <set name="price" val="706000"/>
         <set name="recipe_id" val="856"/>
-        <set name="is_stackable" val="true"/>
-        <set name="commissionItemType" val="RECIPE"/>
         <set name="handler" val="Recipes"/>
+        <restriction stackable="true"/>
     </item>
-    <item id="8703" name="Recipe: Shyeed's Bow (100%)"  icon="icon.etc_recipe_violet_i00">
+    <item id="8703" name="Recipe: Shyeed's Bow (100%)" icon="icon.etc_recipe_violet_i00">
         <!-- For Dwarves only. Recipe for Shyeed's Bow. Requires Create Item - Skill Lv. 8. The success rate is 100%. -->
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
@@ -44,11 +41,10 @@
         <set name="weight" val="30"/>
         <set name="price" val="706000"/>
         <set name="recipe_id" val="857"/>
-        <set name="is_stackable" val="true"/>
-        <set name="commissionItemType" val="RECIPE"/>
         <set name="handler" val="Recipes"/>
+        <restriction stackable="true"/>
     </item>
-    <item id="8704" name="Recipe: Sobekk's Hurricane (60%)"  icon="icon.etc_recipe_violet_i00">
+    <item id="8704" name="Recipe: Sobekk's Hurricane (60%)" icon="icon.etc_recipe_violet_i00">
         <!-- For Dwarves only. Recipe for Sobekk's Hurricane. Requires Create Item - Skill Lv. 8. The success rate is 60%. -->
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
@@ -56,11 +52,10 @@
         <set name="weight" val="30"/>
         <set name="price" val="706000"/>
         <set name="recipe_id" val="858"/>
-        <set name="is_stackable" val="true"/>
-        <set name="commissionItemType" val="RECIPE"/>
         <set name="handler" val="Recipes"/>
+        <restriction stackable="true"/>
     </item>
-    <item id="8705" name="Recipe: Sobekk's Hurricane (100%)"  icon="icon.etc_recipe_violet_i00">
+    <item id="8705" name="Recipe: Sobekk's Hurricane (100%)" icon="icon.etc_recipe_violet_i00">
         <!-- For Dwarves only. Recipe for Sobekk's Hurricane. Requires Create Item - Skill Lv. 8. The success rate is 100%. -->
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
@@ -68,11 +63,10 @@
         <set name="weight" val="30"/>
         <set name="price" val="706000"/>
         <set name="recipe_id" val="859"/>
-        <set name="is_stackable" val="true"/>
-        <set name="commissionItemType" val="RECIPE"/>
         <set name="handler" val="Recipes"/>
+        <restriction stackable="true"/>
     </item>
-    <item id="8706" name="Recipe: Themis' Tongue (60%)"  icon="icon.etc_recipe_violet_i00">
+    <item id="8706" name="Recipe: Themis' Tongue (60%)" icon="icon.etc_recipe_violet_i00">
         <!-- For Dwarves only. Recipe for Themis' Tongue. Requires Create Item - Skill Lv. 8. The success rate is 60%. -->
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
@@ -80,11 +74,10 @@
         <set name="weight" val="30"/>
         <set name="price" val="706000"/>
         <set name="recipe_id" val="860"/>
-        <set name="is_stackable" val="true"/>
-        <set name="commissionItemType" val="RECIPE"/>
         <set name="handler" val="Recipes"/>
+        <restriction stackable="true"/>
     </item>
-    <item id="8707" name="Recipe: Themis' Tongue (100%)"  icon="icon.etc_recipe_violet_i00">
+    <item id="8707" name="Recipe: Themis' Tongue (100%)" icon="icon.etc_recipe_violet_i00">
         <!-- For Dwarves only. Recipe for Themis' Tongue. Requires Create Item - Skill Lv. 8. The success rate is 100%. -->
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
@@ -92,11 +85,10 @@
         <set name="weight" val="30"/>
         <set name="price" val="706000"/>
         <set name="recipe_id" val="861"/>
-        <set name="is_stackable" val="true"/>
-        <set name="commissionItemType" val="RECIPE"/>
         <set name="handler" val="Recipes"/>
+        <restriction stackable="true"/>
     </item>
-    <item id="8708" name="Recipe: Cabrio's Hand (60%)"  icon="icon.etc_recipe_violet_i00">
+    <item id="8708" name="Recipe: Cabrio's Hand (60%)" icon="icon.etc_recipe_violet_i00">
         <!-- For Dwarves only. Recipe for Cabrio's Hand. Requires Create Item - Skill Lv. 8. The success rate is 60%. -->
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
@@ -104,11 +96,10 @@
         <set name="weight" val="30"/>
         <set name="price" val="706000"/>
         <set name="recipe_id" val="862"/>
-        <set name="is_stackable" val="true"/>
-        <set name="commissionItemType" val="RECIPE"/>
         <set name="handler" val="Recipes"/>
+        <restriction stackable="true"/>
     </item>
-    <item id="8709" name="Recipe: Cabrio's Hand (100%)"  icon="icon.etc_recipe_violet_i00">
+    <item id="8709" name="Recipe: Cabrio's Hand (100%)" icon="icon.etc_recipe_violet_i00">
         <!-- For Dwarves only. Recipe for Cabrio's Hand. Requires Create Item - Skill Lv. 8. The success rate is 100%. -->
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
@@ -116,11 +107,10 @@
         <set name="weight" val="30"/>
         <set name="price" val="706000"/>
         <set name="recipe_id" val="863"/>
-        <set name="is_stackable" val="true"/>
-        <set name="commissionItemType" val="RECIPE"/>
         <set name="handler" val="Recipes"/>
+        <restriction stackable="true"/>
     </item>
-    <item id="8710" name="Recipe: Daimon Crystal (60%)"  icon="icon.etc_recipe_violet_i00">
+    <item id="8710" name="Recipe: Daimon Crystal (60%)" icon="icon.etc_recipe_violet_i00">
         <!-- For Dwarves only. Recipe for Daimon Crystal. Requires Create Item - Skill Lv. 8. The success rate is 60%. -->
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
@@ -128,11 +118,10 @@
         <set name="weight" val="30"/>
         <set name="price" val="706000"/>
         <set name="recipe_id" val="864"/>
-        <set name="is_stackable" val="true"/>
-        <set name="commissionItemType" val="RECIPE"/>
         <set name="handler" val="Recipes"/>
+        <restriction stackable="true"/>
     </item>
-    <item id="8711" name="Recipe: Daimon Crystal (100%)"  icon="icon.etc_recipe_violet_i00">
+    <item id="8711" name="Recipe: Daimon Crystal (100%)" icon="icon.etc_recipe_violet_i00">
         <!-- For Dwarves only. Recipe for Daimon Crystal. Requires Create Item - Skill Lv. 8. The success rate is 100%. -->
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
@@ -140,115 +129,114 @@
         <set name="weight" val="30"/>
         <set name="price" val="706000"/>
         <set name="recipe_id" val="865"/>
-        <set name="is_stackable" val="true"/>
-        <set name="commissionItemType" val="RECIPE"/>
         <set name="handler" val="Recipes"/>
+        <restriction stackable="true"/>
     </item>
-    <item id="8712" name="Sirra's Blade Edge"  icon="icon.etc_sword_body_i00">
+    <item id="8712" name="Sirra's Blade Edge" icon="icon.etc_sword_body_i00">
         <!-- An ingredient that Dwarves use to make Sirra's Blade. Can be sold. -->
         <set name="etcitem_type" val="MATERIAL"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="60"/>
         <set name="price" val="82400"/>
         <set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS"/>
-        <set name="is_stackable" val="true"/>
+        <restriction stackable="true"/>
     </item>
-    <item id="8713" name="Sword of Ipos Blade"  icon="icon.etc_sword_body_i00">
+    <item id="8713" name="Sword of Ipos Blade" icon="icon.etc_sword_body_i00">
         <!-- Key material that Dwarves use to make Sword of Ipos. Can be sold. -->
         <set name="etcitem_type" val="MATERIAL"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="60"/>
         <set name="price" val="82400"/>
         <set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS"/>
-        <set name="is_stackable" val="true"/>
+        <restriction stackable="true"/>
     </item>
-    <item id="8714" name="Barakiel's Axe Piece"  icon="icon.etc_bark_gold_i00">
+    <item id="8714" name="Barakiel's Axe Piece" icon="icon.etc_bark_gold_i00">
         <!-- An ingredient that Dwarves use to make Barakiel's Axe. Can be sold. -->
         <set name="etcitem_type" val="MATERIAL"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="60"/>
         <set name="price" val="82400"/>
         <set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS"/>
-        <set name="is_stackable" val="true"/>
+        <restriction stackable="true"/>
     </item>
-    <item id="8715" name="Behemoth' Tuning Fork Piece"  icon="icon.etc_bark_gold_i00">
+    <item id="8715" name="Behemoth' Tuning Fork Piece" icon="icon.etc_bark_gold_i00">
         <!-- An ingredient that Dwarves use to make Behemoth' Tuning Fork. Can be sold. -->
         <set name="etcitem_type" val="MATERIAL"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="60"/>
         <set name="price" val="82400"/>
         <set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS"/>
-        <set name="is_stackable" val="true"/>
+        <restriction stackable="true"/>
     </item>
-    <item id="8716" name="Naga Storm Piece"  icon="icon.etc_bark_gold_i00">
+    <item id="8716" name="Naga Storm Piece" icon="icon.etc_bark_gold_i00">
         <!-- An ingredient that Dwarves use to make Naga Storm. Can be sold. -->
         <set name="etcitem_type" val="MATERIAL"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="60"/>
         <set name="price" val="82400"/>
         <set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS"/>
-        <set name="is_stackable" val="true"/>
+        <restriction stackable="true"/>
     </item>
-    <item id="8717" name="Tiphon's Spear Edge"  icon="icon.etc_sword_body_i00">
+    <item id="8717" name="Tiphon's Spear Edge" icon="icon.etc_sword_body_i00">
         <!-- Key material that Dwarves use to make Tiphon's Spear. Can be sold. -->
         <set name="etcitem_type" val="MATERIAL"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="60"/>
         <set name="price" val="82400"/>
         <set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS"/>
-        <set name="is_stackable" val="true"/>
+        <restriction stackable="true"/>
     </item>
-    <item id="8718" name="Shyeed's Bow Shaft"  icon="icon.etc_branch_gold_i00">
+    <item id="8718" name="Shyeed's Bow Shaft" icon="icon.etc_branch_gold_i00">
         <!-- An ingredient that Dwarves use to make Shyeed's Bow. Can be sold. -->
         <set name="etcitem_type" val="MATERIAL"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="60"/>
         <set name="price" val="82400"/>
         <set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS"/>
-        <set name="is_stackable" val="true"/>
+        <restriction stackable="true"/>
     </item>
-    <item id="8719" name="Sobekk's Hurricane Edge"  icon="icon.etc_sword_body_i00">
+    <item id="8719" name="Sobekk's Hurricane Edge" icon="icon.etc_sword_body_i00">
         <!-- An ingredient that Dwarves use to make Sobekk's Hurricane. Can be sold. -->
         <set name="etcitem_type" val="MATERIAL"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="60"/>
         <set name="price" val="82400"/>
         <set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS"/>
-        <set name="is_stackable" val="true"/>
+        <restriction stackable="true"/>
     </item>
-    <item id="8720" name="Themis' Tongue Piece"  icon="icon.etc_bark_gold_i00">
+    <item id="8720" name="Themis' Tongue Piece" icon="icon.etc_bark_gold_i00">
         <!-- An ingredient that Dwarves use to make Themis' Tongue. Can be sold. -->
         <set name="etcitem_type" val="MATERIAL"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="60"/>
         <set name="price" val="82400"/>
         <set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS"/>
-        <set name="is_stackable" val="true"/>
+        <restriction stackable="true"/>
     </item>
-    <item id="8721" name="Cabrio's Hand Head"  icon="icon.etc_squares_gray_i00">
+    <item id="8721" name="Cabrio's Hand Head" icon="icon.etc_squares_gray_i00">
         <!-- An ingredient that Dwarves use to make Cabrio's Hand. Can be sold. -->
         <set name="etcitem_type" val="MATERIAL"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="60"/>
         <set name="price" val="82400"/>
         <set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS"/>
-        <set name="is_stackable" val="true"/>
+        <restriction stackable="true"/>
     </item>
-    <item id="8722" name="Daimon Crystal Fragment"  icon="icon.etc_bark_gold_i00">
+    <item id="8722" name="Daimon Crystal Fragment" icon="icon.etc_bark_gold_i00">
         <!-- An ingredient that Dwarves use to make Daimon Crystal. Can be sold. -->
         <set name="etcitem_type" val="MATERIAL"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="60"/>
         <set name="price" val="82400"/>
         <set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS"/>
-        <set name="is_stackable" val="true"/>
+        <restriction stackable="true"/>
     </item>
-    <item id="8765" name="Red Gem"  icon="icon.ets_red_abead_i00">
+    <item id="8765" name="Red Gem" icon="icon.ets_red_abead_i00">
         <!-- Red gems which Warehouse Chief Klump collects in Aden. Bring 100 or more gems to him, and he will play a card game with you. -->
         <set name="immediate_effect" val="true"/>
         <set name="is_questitem" val="true"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
-        <set name="is_stackable" val="true"/>
+        <restriction stackable="true"/>
     </item>
     <weapon id="8788" name="Sirra's Blade" icon="icon.weapon_sirr_blade_i01">
         <!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 52. -->

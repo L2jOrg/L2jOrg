@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
-    <item id="2300" name="Recipe: Scythe"  icon="icon.etc_recipe_yellow_i00">
+    <item id="2300" name="Recipe: Scythe" icon="icon.etc_recipe_yellow_i00">
         <!-- For Dwarves only. Recipe for a Scythe. Requires Create Item - Skill Lv. 4. The success rate is 100%. -->
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
@@ -8,11 +8,10 @@
         <set name="weight" val="30"/>
         <set name="price" val="45800"/>
         <set name="recipe_id" val="193"/>
-        <set name="is_stackable" val="true"/>
-        <set name="commissionItemType" val="RECIPE"/>
         <set name="handler" val="Recipes"/>
+        <restriction stackable="true"/>
     </item>
-    <item id="2301" name="Recipe: Battle Axe"  icon="icon.etc_recipe_yellow_i00">
+    <item id="2301" name="Recipe: Battle Axe" icon="icon.etc_recipe_yellow_i00">
         <!-- For Dwarves only. Recipe for a Battle Axe. Requires Create Item - Skill Lv. 4. The success rate is 100%. -->
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
@@ -20,11 +19,10 @@
         <set name="weight" val="30"/>
         <set name="price" val="45800"/>
         <set name="recipe_id" val="194"/>
-        <set name="is_stackable" val="true"/>
-        <set name="commissionItemType" val="RECIPE"/>
         <set name="handler" val="Recipes"/>
+        <restriction stackable="true"/>
     </item>
-    <item id="2302" name="Recipe: Silver Axe"  icon="icon.etc_recipe_yellow_i00">
+    <item id="2302" name="Recipe: Silver Axe" icon="icon.etc_recipe_yellow_i00">
         <!-- For Dwarves only. Recipe for a War Pick. Requires Create Item - Skill Lv. 4. The success rate is 100%. -->
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
@@ -32,11 +30,10 @@
         <set name="weight" val="30"/>
         <set name="price" val="45800"/>
         <set name="recipe_id" val="195"/>
-        <set name="is_stackable" val="true"/>
-        <set name="commissionItemType" val="RECIPE"/>
         <set name="handler" val="Recipes"/>
+        <restriction stackable="true"/>
     </item>
-    <item id="2303" name="Recipe: Skull Graver"  icon="icon.etc_recipe_yellow_i00">
+    <item id="2303" name="Recipe: Skull Graver" icon="icon.etc_recipe_yellow_i00">
         <!-- For Dwarves only. Recipe for a Skull Graver. Requires Create Item - Skill Lv. 4. The success rate is 100%. -->
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
@@ -44,11 +41,10 @@
         <set name="weight" val="30"/>
         <set name="price" val="45800"/>
         <set name="recipe_id" val="196"/>
-        <set name="is_stackable" val="true"/>
-        <set name="commissionItemType" val="RECIPE"/>
         <set name="handler" val="Recipes"/>
+        <restriction stackable="true"/>
     </item>
-    <item id="2304" name="Recipe: Heavy Doom Hammer"  icon="icon.etc_recipe_yellow_i00">
+    <item id="2304" name="Recipe: Heavy Doom Hammer" icon="icon.etc_recipe_yellow_i00">
         <!-- For Dwarves only. Recipe for a Heavy Doom Hammer. Requires Create Item - Skill Lv. 4. The success rate is 100%. -->
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
@@ -56,11 +52,10 @@
         <set name="weight" val="30"/>
         <set name="price" val="45800"/>
         <set name="recipe_id" val="197"/>
-        <set name="is_stackable" val="true"/>
-        <set name="commissionItemType" val="RECIPE"/>
         <set name="handler" val="Recipes"/>
+        <restriction stackable="true"/>
     </item>
-    <item id="2305" name="Recipe: Crystal Staff"  icon="icon.etc_recipe_yellow_i00">
+    <item id="2305" name="Recipe: Crystal Staff" icon="icon.etc_recipe_yellow_i00">
         <!-- For Dwarves only. Recipe for a Crystal Staff. Requires Create Item - Skill Lv. 4 The success rate is 100%. -->
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
@@ -68,11 +63,10 @@
         <set name="weight" val="30"/>
         <set name="price" val="45800"/>
         <set name="recipe_id" val="198"/>
-        <set name="is_stackable" val="true"/>
-        <set name="commissionItemType" val="RECIPE"/>
         <set name="handler" val="Recipes"/>
+        <restriction stackable="true"/>
     </item>
-    <item id="2306" name="Recipe: Stick of Faith"  icon="icon.etc_recipe_yellow_i00">
+    <item id="2306" name="Recipe: Stick of Faith" icon="icon.etc_recipe_yellow_i00">
         <!-- For Dwarves only. Recipe for a Stick of Faith. Requires Create Item - Skill Lv. 4. The success rate is 100%. -->
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
@@ -80,11 +74,10 @@
         <set name="weight" val="30"/>
         <set name="price" val="45800"/>
         <set name="recipe_id" val="199"/>
-        <set name="is_stackable" val="true"/>
-        <set name="commissionItemType" val="RECIPE"/>
         <set name="handler" val="Recipes"/>
+        <restriction stackable="true"/>
     </item>
-    <item id="2307" name="Recipe: Heavy Doom Axe"  icon="icon.etc_recipe_yellow_i00">
+    <item id="2307" name="Recipe: Heavy Doom Axe" icon="icon.etc_recipe_yellow_i00">
         <!-- For Dwarves only. Recipe for a Heavy Doom Axe. Requires Create Item - Skill Lv. 4. The success rate is 100%. -->
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
@@ -92,11 +85,10 @@
         <set name="weight" val="30"/>
         <set name="price" val="45800"/>
         <set name="recipe_id" val="200"/>
-        <set name="is_stackable" val="true"/>
-        <set name="commissionItemType" val="RECIPE"/>
         <set name="handler" val="Recipes"/>
+        <restriction stackable="true"/>
     </item>
-    <item id="2308" name="Recipe: Cursed Dagger"  icon="icon.etc_recipe_yellow_i00">
+    <item id="2308" name="Recipe: Cursed Dagger" icon="icon.etc_recipe_yellow_i00">
         <!-- For Dwarves only. Recipe for the Cursed Dagger. Requires Create Item - Skill Lv. 4. The success rate is 100%. -->
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
@@ -104,11 +96,10 @@
         <set name="weight" val="30"/>
         <set name="price" val="45800"/>
         <set name="recipe_id" val="201"/>
-        <set name="is_stackable" val="true"/>
-        <set name="commissionItemType" val="RECIPE"/>
         <set name="handler" val="Recipes"/>
+        <restriction stackable="true"/>
     </item>
-    <item id="2309" name="Recipe: Needle Wolverine"  icon="icon.etc_recipe_yellow_i00">
+    <item id="2309" name="Recipe: Needle Wolverine" icon="icon.etc_recipe_yellow_i00">
         <!-- For Dwarves only. Recipe for a Wolverine Needle. Requires Create Item - Skill Lv. 4. The success rate is 100%. -->
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
@@ -116,11 +107,10 @@
         <set name="weight" val="30"/>
         <set name="price" val="45800"/>
         <set name="recipe_id" val="202"/>
-        <set name="is_stackable" val="true"/>
-        <set name="commissionItemType" val="RECIPE"/>
         <set name="handler" val="Recipes"/>
+        <restriction stackable="true"/>
     </item>
-    <item id="2310" name="Recipe: Dark Elven Dagger"  icon="icon.etc_recipe_yellow_i00">
+    <item id="2310" name="Recipe: Dark Elven Dagger" icon="icon.etc_recipe_yellow_i00">
         <!-- For Dwarves only. Recipe for a Dark Elven Dagger. Requires Create Item - Skill Lv. 4 The success rate is 100%. -->
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
@@ -128,11 +118,10 @@
         <set name="weight" val="30"/>
         <set name="price" val="45800"/>
         <set name="recipe_id" val="203"/>
-        <set name="is_stackable" val="true"/>
-        <set name="commissionItemType" val="RECIPE"/>
         <set name="handler" val="Recipes"/>
+        <restriction stackable="true"/>
     </item>
-    <item id="2311" name="Recipe: Chakram"  icon="icon.etc_recipe_yellow_i00">
+    <item id="2311" name="Recipe: Chakram" icon="icon.etc_recipe_yellow_i00">
         <!-- For Dwarves only. Recipe for the Chakram. Requires Create Item - Skill Lv. 4. The success rate is 100%. -->
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
@@ -140,11 +129,10 @@
         <set name="weight" val="30"/>
         <set name="price" val="45800"/>
         <set name="recipe_id" val="204"/>
-        <set name="is_stackable" val="true"/>
-        <set name="commissionItemType" val="RECIPE"/>
         <set name="handler" val="Recipes"/>
+        <restriction stackable="true"/>
     </item>
-    <item id="2312" name="Recipe: Crystallized Ice Bow"  icon="icon.etc_recipe_yellow_i00">
+    <item id="2312" name="Recipe: Crystallized Ice Bow" icon="icon.etc_recipe_yellow_i00">
         <!-- For Dwarves only. Recipe for a Crystallized Ice Bow. Requires Create Item - Skill Lv. 4. The success rate is 100%. -->
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
@@ -152,11 +140,10 @@
         <set name="weight" val="30"/>
         <set name="price" val="45800"/>
         <set name="recipe_id" val="205"/>
-        <set name="is_stackable" val="true"/>
-        <set name="commissionItemType" val="RECIPE"/>
         <set name="handler" val="Recipes"/>
+        <restriction stackable="true"/>
     </item>
-    <item id="2313" name="Recipe: Orcish Glaive"  icon="icon.etc_recipe_yellow_i00">
+    <item id="2313" name="Recipe: Orcish Glaive" icon="icon.etc_recipe_yellow_i00">
         <!-- For Dwarves only. Recipe for an Orcish Glaive. Requires Create Item - Skill Lv. 4 The success rate is 100%. -->
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
@@ -164,11 +151,10 @@
         <set name="weight" val="30"/>
         <set name="price" val="45800"/>
         <set name="recipe_id" val="206"/>
-        <set name="is_stackable" val="true"/>
-        <set name="commissionItemType" val="RECIPE"/>
         <set name="handler" val="Recipes"/>
+        <restriction stackable="true"/>
     </item>
-    <item id="2314" name="Recipe: Body Slasher"  icon="icon.etc_recipe_yellow_i00">
+    <item id="2314" name="Recipe: Body Slasher" icon="icon.etc_recipe_yellow_i00">
         <!-- For Dwarves only. Recipe for a Body Slasher. Requires Create Item - Skill Lv. 4. The success rate is 100%. -->
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
@@ -176,11 +162,10 @@
         <set name="weight" val="30"/>
         <set name="price" val="45800"/>
         <set name="recipe_id" val="207"/>
-        <set name="is_stackable" val="true"/>
-        <set name="commissionItemType" val="RECIPE"/>
         <set name="handler" val="Recipes"/>
+        <restriction stackable="true"/>
     </item>
-    <item id="2315" name="Recipe: Shamshir"  icon="icon.etc_recipe_yellow_i00">
+    <item id="2315" name="Recipe: Shamshir" icon="icon.etc_recipe_yellow_i00">
         <!-- For Dwarves only. Recipe for the Shamshir. Requires Create Item - Skill Lv. 5. The success rate is 100%. -->
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
@@ -188,11 +173,10 @@
         <set name="weight" val="30"/>
         <set name="price" val="57400"/>
         <set name="recipe_id" val="208"/>
-        <set name="is_stackable" val="true"/>
-        <set name="commissionItemType" val="RECIPE"/>
         <set name="handler" val="Recipes"/>
+        <restriction stackable="true"/>
     </item>
-    <item id="2316" name="Recipe: Katana"  icon="icon.etc_recipe_yellow_i00">
+    <item id="2316" name="Recipe: Katana" icon="icon.etc_recipe_yellow_i00">
         <!-- For Dwarves only. Recipe for the Kanata. Requires Create Item - Skill Lv. 5. The success rate is 100%. -->
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
@@ -200,11 +184,10 @@
         <set name="weight" val="30"/>
         <set name="price" val="57400"/>
         <set name="recipe_id" val="209"/>
-        <set name="is_stackable" val="true"/>
-        <set name="commissionItemType" val="RECIPE"/>
         <set name="handler" val="Recipes"/>
+        <restriction stackable="true"/>
     </item>
-    <item id="2317" name="Recipe: Bec de Corbin"  icon="icon.etc_recipe_yellow_i00">
+    <item id="2317" name="Recipe: Bec de Corbin" icon="icon.etc_recipe_yellow_i00">
         <!-- For Dwarves only. Recipe for the Bec de Corbin. Requires Create Item - Skill Lv. 5. The success rate is 100%. -->
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
@@ -212,11 +195,10 @@
         <set name="weight" val="30"/>
         <set name="price" val="57400"/>
         <set name="recipe_id" val="210"/>
-        <set name="is_stackable" val="true"/>
-        <set name="commissionItemType" val="RECIPE"/>
         <set name="handler" val="Recipes"/>
+        <restriction stackable="true"/>
     </item>
-    <item id="2318" name="Recipe: Spirit Sword"  icon="icon.etc_recipe_yellow_i00">
+    <item id="2318" name="Recipe: Spirit Sword" icon="icon.etc_recipe_yellow_i00">
         <!-- For Dwarves only. Recipe for a spirit's sword. Requires Create Item - Skill Lv. 5. The success rate is 100%. -->
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
@@ -224,11 +206,10 @@
         <set name="weight" val="30"/>
         <set name="price" val="57400"/>
         <set name="recipe_id" val="211"/>
-        <set name="is_stackable" val="true"/>
-        <set name="commissionItemType" val="RECIPE"/>
         <set name="handler" val="Recipes"/>
+        <restriction stackable="true"/>
     </item>
-    <item id="2319" name="Recipe: Raid Sword"  icon="icon.etc_recipe_yellow_i00">
+    <item id="2319" name="Recipe: Raid Sword" icon="icon.etc_recipe_yellow_i00">
         <!-- For Dwarves only. Recipe for a Raid Sword. Requires Create Item - Skill Lv. 5. The success rate is 100%. -->
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
@@ -236,11 +217,10 @@
         <set name="weight" val="30"/>
         <set name="price" val="57400"/>
         <set name="recipe_id" val="212"/>
-        <set name="is_stackable" val="true"/>
-        <set name="commissionItemType" val="RECIPE"/>
         <set name="handler" val="Recipes"/>
+        <restriction stackable="true"/>
     </item>
-    <item id="2320" name="Recipe: Cursed Staff"  icon="icon.etc_recipe_yellow_i00">
+    <item id="2320" name="Recipe: Cursed Staff" icon="icon.etc_recipe_yellow_i00">
         <!-- For Dwarves only. Recipe for the Cursed Staff. Requires Create Item - Skill Lv. 5. The success rate is 100%. -->
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
@@ -248,11 +228,10 @@
         <set name="weight" val="30"/>
         <set name="price" val="57400"/>
         <set name="recipe_id" val="213"/>
-        <set name="is_stackable" val="true"/>
-        <set name="commissionItemType" val="RECIPE"/>
         <set name="handler" val="Recipes"/>
+        <restriction stackable="true"/>
     </item>
-    <item id="2321" name="Recipe: Stiletto"  icon="icon.etc_recipe_yellow_i00">
+    <item id="2321" name="Recipe: Stiletto" icon="icon.etc_recipe_yellow_i00">
         <!-- For Dwarves only. Recipe for a Stiletto. Requires Create Item - Skill Lv. 5. The success rate is 100%. -->
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
@@ -260,11 +239,10 @@
         <set name="weight" val="30"/>
         <set name="price" val="57400"/>
         <set name="recipe_id" val="214"/>
-        <set name="is_stackable" val="true"/>
-        <set name="commissionItemType" val="RECIPE"/>
         <set name="handler" val="Recipes"/>
+        <restriction stackable="true"/>
     </item>
-    <item id="2322" name="Recipe: Soulfire Dirk"  icon="icon.etc_recipe_yellow_i00">
+    <item id="2322" name="Recipe: Soulfire Dirk" icon="icon.etc_recipe_yellow_i00">
         <!-- For Dwarves only. Recipe for a Soulfire Dirk. Requires Create Item - Skill Lv. 5. The success rate is 100%. -->
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
@@ -272,11 +250,10 @@
         <set name="weight" val="30"/>
         <set name="price" val="57400"/>
         <set name="recipe_id" val="215"/>
-        <set name="is_stackable" val="true"/>
-        <set name="commissionItemType" val="RECIPE"/>
         <set name="handler" val="Recipes"/>
+        <restriction stackable="true"/>
     </item>
-    <item id="2323" name="Recipe: Elemental Bow"  icon="icon.etc_recipe_yellow_i00">
+    <item id="2323" name="Recipe: Elemental Bow" icon="icon.etc_recipe_yellow_i00">
         <!-- For Dwarves only. Recipe for an Elemental Bow. Requires Create Item - Skill Lv. 5. The success rate is 100%. -->
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
@@ -284,11 +261,10 @@
         <set name="weight" val="30"/>
         <set name="price" val="57400"/>
         <set name="recipe_id" val="216"/>
-        <set name="is_stackable" val="true"/>
-        <set name="commissionItemType" val="RECIPE"/>
         <set name="handler" val="Recipes"/>
+        <restriction stackable="true"/>
     </item>
-    <item id="2324" name="Recipe: Noble Elven Bow"  icon="icon.etc_recipe_yellow_i00">
+    <item id="2324" name="Recipe: Noble Elven Bow" icon="icon.etc_recipe_yellow_i00">
         <!-- For Dwarves only. Recipe for a noble Elven Bow. Requires Create Item - Skill Lv. 5. The success rate is 100%. -->
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
@@ -296,11 +272,10 @@
         <set name="weight" val="30"/>
         <set name="price" val="57400"/>
         <set name="recipe_id" val="217"/>
-        <set name="is_stackable" val="true"/>
-        <set name="commissionItemType" val="RECIPE"/>
         <set name="handler" val="Recipes"/>
+        <restriction stackable="true"/>
     </item>
-    <item id="2326" name="Recipe: Horn of Glory"  icon="icon.etc_recipe_yellow_i00">
+    <item id="2326" name="Recipe: Horn of Glory" icon="icon.etc_recipe_yellow_i00">
         <!-- For Dwarves only. Recipe for a Horn of Glory. Requires Create Item - Skill Lv. 5. The success rate is 100%. -->
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
@@ -308,11 +283,10 @@
         <set name="weight" val="30"/>
         <set name="price" val="57400"/>
         <set name="recipe_id" val="219"/>
-        <set name="is_stackable" val="true"/>
-        <set name="commissionItemType" val="RECIPE"/>
         <set name="handler" val="Recipes"/>
+        <restriction stackable="true"/>
     </item>
-    <item id="2327" name="Recipe: Caliburs"  icon="icon.etc_recipe_yellow_i00">
+    <item id="2327" name="Recipe: Caliburs" icon="icon.etc_recipe_yellow_i00">
         <!-- For Dwarves only. Recipe for the Caliburs. Requires Create Item - Skill Lv. 5. The success rate is 100%. -->
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
@@ -320,11 +294,10 @@
         <set name="weight" val="30"/>
         <set name="price" val="86000"/>
         <set name="recipe_id" val="220"/>
-        <set name="is_stackable" val="true"/>
-        <set name="commissionItemType" val="RECIPE"/>
         <set name="handler" val="Recipes"/>
+        <restriction stackable="true"/>
     </item>
-    <item id="2328" name="Recipe: Sword of Delusion"  icon="icon.etc_recipe_yellow_i00">
+    <item id="2328" name="Recipe: Sword of Delusion" icon="icon.etc_recipe_yellow_i00">
         <!-- For Dwarves only. Recipe for a Sword of Delusion. Requires Create Item - Skill Lv. 5. The success rate is 100%. -->
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
@@ -332,11 +305,10 @@
         <set name="weight" val="30"/>
         <set name="price" val="86000"/>
         <set name="recipe_id" val="221"/>
-        <set name="is_stackable" val="true"/>
-        <set name="commissionItemType" val="RECIPE"/>
         <set name="handler" val="Recipes"/>
+        <restriction stackable="true"/>
     </item>
-    <item id="2329" name="Recipe: Tsurugi"  icon="icon.etc_recipe_yellow_i00">
+    <item id="2329" name="Recipe: Tsurugi" icon="icon.etc_recipe_yellow_i00">
         <!-- For Dwarves only. Recipe for the Tsurugi. Requires Create Item - Skill Lv. 5. The success rate is 100%. -->
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
@@ -344,11 +316,10 @@
         <set name="weight" val="30"/>
         <set name="price" val="86000"/>
         <set name="recipe_id" val="222"/>
-        <set name="is_stackable" val="true"/>
-        <set name="commissionItemType" val="RECIPE"/>
         <set name="handler" val="Recipes"/>
+        <restriction stackable="true"/>
     </item>
-    <item id="2330" name="Recipe: Homunkulus' Sword"  icon="icon.etc_recipe_yellow_i00">
+    <item id="2330" name="Recipe: Homunkulus' Sword" icon="icon.etc_recipe_yellow_i00">
         <!-- For Dwarves only. Recipe for the Homunkulus' Sword. Requires Create Item - Skill Lv. 5. The success rate is 100%. -->
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
@@ -356,11 +327,10 @@
         <set name="weight" val="30"/>
         <set name="price" val="86000"/>
         <set name="recipe_id" val="223"/>
-        <set name="is_stackable" val="true"/>
-        <set name="commissionItemType" val="RECIPE"/>
         <set name="handler" val="Recipes"/>
+        <restriction stackable="true"/>
     </item>
-    <item id="2331" name="Recipe: Poleaxe"  icon="icon.etc_recipe_yellow_i00">
+    <item id="2331" name="Recipe: Poleaxe" icon="icon.etc_recipe_yellow_i00">
         <!-- For Dwarves only. Recipe for a Poleaxe. Requires Create Item - Skill Lv. 5. The success rate is 100%. -->
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
@@ -368,11 +338,10 @@
         <set name="weight" val="30"/>
         <set name="price" val="86000"/>
         <set name="recipe_id" val="224"/>
-        <set name="is_stackable" val="true"/>
-        <set name="commissionItemType" val="RECIPE"/>
         <set name="handler" val="Recipes"/>
+        <restriction stackable="true"/>
     </item>
-    <item id="2332" name="Recipe: Ultimate Sword"  icon="icon.etc_recipe_yellow_i00">
+    <item id="2332" name="Recipe: Ultimate Sword" icon="icon.etc_recipe_yellow_i00">
         <!-- For Dwarves only. Recipe for a Ultimate Sword. Requires Create Item - Skill Lv. 5. The success rate is 100%. -->
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
@@ -380,11 +349,10 @@
         <set name="weight" val="30"/>
         <set name="price" val="86000"/>
         <set name="recipe_id" val="225"/>
-        <set name="is_stackable" val="true"/>
-        <set name="commissionItemType" val="RECIPE"/>
         <set name="handler" val="Recipes"/>
+        <restriction stackable="true"/>
     </item>
-    <item id="2333" name="Recipe: Sword of Nightmare"  icon="icon.etc_recipe_yellow_i00">
+    <item id="2333" name="Recipe: Sword of Nightmare" icon="icon.etc_recipe_yellow_i00">
         <!-- For Dwarves only. Recipe for a Sword of Nightmare. Requires Create Item - Skill Lv. 5. The success rate is 100%. -->
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
@@ -392,11 +360,10 @@
         <set name="weight" val="30"/>
         <set name="price" val="86000"/>
         <set name="recipe_id" val="226"/>
-        <set name="is_stackable" val="true"/>
-        <set name="commissionItemType" val="RECIPE"/>
         <set name="handler" val="Recipes"/>
+        <restriction stackable="true"/>
     </item>
-    <item id="2334" name="Recipe: Sword of Whispering Death"  icon="icon.etc_recipe_yellow_i00">
+    <item id="2334" name="Recipe: Sword of Whispering Death" icon="icon.etc_recipe_yellow_i00">
         <!-- For Dwarves only. Recipe for the Sword of Whispering Death. Requires Create Item - Skill Lv. 5. The success rate is 100%. -->
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
@@ -404,11 +371,10 @@
         <set name="weight" val="30"/>
         <set name="price" val="86000"/>
         <set name="recipe_id" val="227"/>
-        <set name="is_stackable" val="true"/>
-        <set name="commissionItemType" val="RECIPE"/>
         <set name="handler" val="Recipes"/>
+        <restriction stackable="true"/>
     </item>
-    <item id="2335" name="Recipe: War Axe"  icon="icon.etc_recipe_yellow_i00">
+    <item id="2335" name="Recipe: War Axe" icon="icon.etc_recipe_yellow_i00">
         <!-- For Dwarves only. Recipe for a War Axe. Requires Create Item - Skill Lv. 5. The success rate is 100%. -->
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
@@ -416,11 +382,10 @@
         <set name="weight" val="30"/>
         <set name="price" val="86000"/>
         <set name="recipe_id" val="228"/>
-        <set name="is_stackable" val="true"/>
-        <set name="commissionItemType" val="RECIPE"/>
         <set name="handler" val="Recipes"/>
+        <restriction stackable="true"/>
     </item>
-    <item id="2336" name="Recipe: Nirvana Axe"  icon="icon.etc_recipe_yellow_i00">
+    <item id="2336" name="Recipe: Nirvana Axe" icon="icon.etc_recipe_yellow_i00">
         <!-- For Dwarves only. Recipe for a Nirvana Axe. Requires Create Item - Skill Lv. 5. The success rate is 100%. -->
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
@@ -428,11 +393,10 @@
         <set name="weight" val="30"/>
         <set name="price" val="86000"/>
         <set name="recipe_id" val="229"/>
-        <set name="is_stackable" val="true"/>
-        <set name="commissionItemType" val="RECIPE"/>
         <set name="handler" val="Recipes"/>
+        <restriction stackable="true"/>
     </item>
-    <item id="2337" name="Recipe: Stick of Eternity"  icon="icon.etc_recipe_yellow_i00">
+    <item id="2337" name="Recipe: Stick of Eternity" icon="icon.etc_recipe_yellow_i00">
         <!-- For Dwarves only. Recipe for a Stick of Eternity. Requires Create Item - Skill Lv. 5. The success rate is 100%. -->
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
@@ -440,11 +404,10 @@
         <set name="weight" val="30"/>
         <set name="price" val="86000"/>
         <set name="recipe_id" val="230"/>
-        <set name="is_stackable" val="true"/>
-        <set name="commissionItemType" val="RECIPE"/>
         <set name="handler" val="Recipes"/>
+        <restriction stackable="true"/>
     </item>
-    <item id="2338" name="Recipe: Paradia Staff"  icon="icon.etc_recipe_yellow_i00">
+    <item id="2338" name="Recipe: Paradia Staff" icon="icon.etc_recipe_yellow_i00">
         <!-- For Dwarves only. Recipe for a Paradia Staff. Requires Create Item - Skill Lv. 5. The success rate is 100%. -->
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
@@ -452,11 +415,10 @@
         <set name="weight" val="30"/>
         <set name="price" val="86000"/>
         <set name="recipe_id" val="231"/>
-        <set name="is_stackable" val="true"/>
-        <set name="commissionItemType" val="RECIPE"/>
         <set name="handler" val="Recipes"/>
+        <restriction stackable="true"/>
     </item>
-    <item id="2339" name="Recipe: Inferno Staff"  icon="icon.etc_recipe_yellow_i00">
+    <item id="2339" name="Recipe: Inferno Staff" icon="icon.etc_recipe_yellow_i00">
         <!-- For Dwarves only. Recipe for an Inferno Staff. Requires Create Item - Skill Lv. 5. The success rate is 100%. -->
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
@@ -464,11 +426,10 @@
         <set name="weight" val="30"/>
         <set name="price" val="86000"/>
         <set name="recipe_id" val="232"/>
-        <set name="is_stackable" val="true"/>
-        <set name="commissionItemType" val="RECIPE"/>
         <set name="handler" val="Recipes"/>
+        <restriction stackable="true"/>
     </item>
-    <item id="2340" name="Recipe: Pa'agrio Hammer"  icon="icon.etc_recipe_yellow_i00">
+    <item id="2340" name="Recipe: Pa'agrio Hammer" icon="icon.etc_recipe_yellow_i00">
         <!-- For Dwarves only. Recipe for a Pa'agrio Hammer. Requires Create Item - Skill Lv. 5. The success rate is 100%. -->
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
@@ -476,11 +437,10 @@
         <set name="weight" val="30"/>
         <set name="price" val="86000"/>
         <set name="recipe_id" val="233"/>
-        <set name="is_stackable" val="true"/>
-        <set name="commissionItemType" val="RECIPE"/>
         <set name="handler" val="Recipes"/>
+        <restriction stackable="true"/>
     </item>
-    <item id="2341" name="Recipe: Sage's Staff"  icon="icon.etc_recipe_yellow_i00">
+    <item id="2341" name="Recipe: Sage's Staff" icon="icon.etc_recipe_yellow_i00">
         <!-- For Dwarves only. Recipe for a Sage's Staff. Requires Create Item - Skill Lv. 5. The success rate is 100%. -->
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
@@ -488,11 +448,10 @@
         <set name="weight" val="30"/>
         <set name="price" val="86000"/>
         <set name="recipe_id" val="234"/>
-        <set name="is_stackable" val="true"/>
-        <set name="commissionItemType" val="RECIPE"/>
         <set name="handler" val="Recipes"/>
+        <restriction stackable="true"/>
     </item>
-    <item id="2342" name="Recipe: Club of Nature"  icon="icon.etc_recipe_yellow_i00">
+    <item id="2342" name="Recipe: Club of Nature" icon="icon.etc_recipe_yellow_i00">
         <!-- For Dwarves only. Recipe for a Club of Nature. Requires Create Item - Skill Lv. 5. The success rate is 100%. -->
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
@@ -500,11 +459,10 @@
         <set name="weight" val="30"/>
         <set name="price" val="86000"/>
         <set name="recipe_id" val="235"/>
-        <set name="is_stackable" val="true"/>
-        <set name="commissionItemType" val="RECIPE"/>
         <set name="handler" val="Recipes"/>
+        <restriction stackable="true"/>
     </item>
-    <item id="2343" name="Recipe: Mace of Underworld"  icon="icon.etc_recipe_yellow_i00">
+    <item id="2343" name="Recipe: Mace of Underworld" icon="icon.etc_recipe_yellow_i00">
         <!-- For Dwarves only. Recipe for a Mace of Underworld. Requires Create Item - Skill Lv. 5. The success rate is 100%. -->
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
@@ -512,11 +470,10 @@
         <set name="weight" val="30"/>
         <set name="price" val="86000"/>
         <set name="recipe_id" val="236"/>
-        <set name="is_stackable" val="true"/>
-        <set name="commissionItemType" val="RECIPE"/>
         <set name="handler" val="Recipes"/>
+        <restriction stackable="true"/>
     </item>
-    <item id="2344" name="Recipe: Grace Dagger"  icon="icon.etc_recipe_yellow_i00">
+    <item id="2344" name="Recipe: Grace Dagger" icon="icon.etc_recipe_yellow_i00">
         <!-- For Dwarves only. Recipe for a Grace Dagger. Requires Create Item - Skill Lv. 5. The success rate is 100%. -->
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
@@ -524,11 +481,10 @@
         <set name="weight" val="30"/>
         <set name="price" val="86000"/>
         <set name="recipe_id" val="237"/>
-        <set name="is_stackable" val="true"/>
-        <set name="commissionItemType" val="RECIPE"/>
         <set name="handler" val="Recipes"/>
+        <restriction stackable="true"/>
     </item>
-    <item id="2345" name="Recipe: Dark Screamer"  icon="icon.etc_recipe_yellow_i00">
+    <item id="2345" name="Recipe: Dark Screamer" icon="icon.etc_recipe_yellow_i00">
         <!-- For Dwarves only. Recipe for a Dark Screamer. Requires Create Item - Skill Lv. 5. The success rate is 100%. -->
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
@@ -536,11 +492,10 @@
         <set name="weight" val="30"/>
         <set name="price" val="86000"/>
         <set name="recipe_id" val="238"/>
-        <set name="is_stackable" val="true"/>
-        <set name="commissionItemType" val="RECIPE"/>
         <set name="handler" val="Recipes"/>
+        <restriction stackable="true"/>
     </item>
-    <item id="2346" name="Recipe: Fisted Blade"  icon="icon.etc_recipe_yellow_i00">
+    <item id="2346" name="Recipe: Fisted Blade" icon="icon.etc_recipe_yellow_i00">
         <!-- For Dwarves only. Recipe for a Fisted Blade. Requires Create Item - Skill Lv. 5. The success rate is 100%. -->
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
@@ -548,11 +503,10 @@
         <set name="weight" val="30"/>
         <set name="price" val="86000"/>
         <set name="recipe_id" val="239"/>
-        <set name="is_stackable" val="true"/>
-        <set name="commissionItemType" val="RECIPE"/>
         <set name="handler" val="Recipes"/>
+        <restriction stackable="true"/>
     </item>
-    <item id="2347" name="Recipe: Akat Longbow"  icon="icon.etc_recipe_yellow_i00">
+    <item id="2347" name="Recipe: Akat Longbow" icon="icon.etc_recipe_yellow_i00">
         <!-- For Dwarves only. Recipe for the Akat Longbow. Requires Create Item - Skill Lv. 5. The success rate is 100%. -->
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
@@ -560,11 +514,10 @@
         <set name="weight" val="30"/>
         <set name="price" val="86000"/>
         <set name="recipe_id" val="240"/>
-        <set name="is_stackable" val="true"/>
-        <set name="commissionItemType" val="RECIPE"/>
         <set name="handler" val="Recipes"/>
+        <restriction stackable="true"/>
     </item>
-    <item id="2350" name="Recipe: Pa'agrio Axe"  icon="icon.etc_recipe_yellow_i00">
+    <item id="2350" name="Recipe: Pa'agrio Axe" icon="icon.etc_recipe_yellow_i00">
         <!-- For Dwarves only. Recipe for a Pa'agrio Axe. Requires Create Item - Skill Lv. 5. The success rate is 100%. -->
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
@@ -572,11 +525,10 @@
         <set name="weight" val="30"/>
         <set name="price" val="95600"/>
         <set name="recipe_id" val="243"/>
-        <set name="is_stackable" val="true"/>
-        <set name="commissionItemType" val="RECIPE"/>
         <set name="handler" val="Recipes"/>
+        <restriction stackable="true"/>
     </item>
-    <item id="2351" name="Recipe: Scorpion"  icon="icon.etc_recipe_yellow_i00">
+    <item id="2351" name="Recipe: Scorpion" icon="icon.etc_recipe_yellow_i00">
         <!-- For Dwarves only. Recipe for a Scorpion. Requires Create Item - Skill Lv. 5. The success rate is 100%. -->
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
@@ -584,11 +536,10 @@
         <set name="weight" val="30"/>
         <set name="price" val="95600"/>
         <set name="recipe_id" val="244"/>
-        <set name="is_stackable" val="true"/>
-        <set name="commissionItemType" val="RECIPE"/>
         <set name="handler" val="Recipes"/>
+        <restriction stackable="true"/>
     </item>
-    <item id="2352" name="Recipe: Widow Maker"  icon="icon.etc_recipe_yellow_i00">
+    <item id="2352" name="Recipe: Widow Maker" icon="icon.etc_recipe_yellow_i00">
         <!-- For Dwarves only. Recipe for a Widow Maker. Requires Create Item - Skill Lv. 5. The success rate is 100%. -->
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
@@ -596,11 +547,10 @@
         <set name="weight" val="30"/>
         <set name="price" val="95600"/>
         <set name="recipe_id" val="245"/>
-        <set name="is_stackable" val="true"/>
-        <set name="commissionItemType" val="RECIPE"/>
         <set name="handler" val="Recipes"/>
+        <restriction stackable="true"/>
     </item>
-    <item id="2353" name="Recipe: Samurai Long Sword"  icon="icon.etc_recipe_yellow_i00">
+    <item id="2353" name="Recipe: Samurai Long Sword" icon="icon.etc_recipe_yellow_i00">
         <!-- For Dwarves only. Recipe for the Samurai Long Sword. Requires Create Item - Skill Lv. 6. The success rate is 100%. -->
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
@@ -608,11 +558,10 @@
         <set name="weight" val="30"/>
         <set name="price" val="122600"/>
         <set name="recipe_id" val="246"/>
-        <set name="is_stackable" val="true"/>
-        <set name="commissionItemType" val="RECIPE"/>
         <set name="handler" val="Recipes"/>
+        <restriction stackable="true"/>
     </item>
-    <item id="2354" name="Recipe: Deadman's Staff"  icon="icon.etc_recipe_yellow_i00">
+    <item id="2354" name="Recipe: Deadman's Staff" icon="icon.etc_recipe_yellow_i00">
         <!-- For Dwarves only. Recipe for the Deadman's Staff. Requires Create Item - Skill Lv. 6. The success rate is 100%. -->
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
@@ -620,11 +569,10 @@
         <set name="weight" val="30"/>
         <set name="price" val="122600"/>
         <set name="recipe_id" val="247"/>
-        <set name="is_stackable" val="true"/>
-        <set name="commissionItemType" val="RECIPE"/>
         <set name="handler" val="Recipes"/>
+        <restriction stackable="true"/>
     </item>
-    <item id="2355" name="Recipe: Ghoul's Staff"  icon="icon.etc_recipe_yellow_i00">
+    <item id="2355" name="Recipe: Ghoul's Staff" icon="icon.etc_recipe_yellow_i00">
         <!-- For Dwarves only. Recipe for the Ghoul's Staff. Requires Create Item - Skill Lv. 6. The success rate is 100%. -->
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
@@ -632,11 +580,10 @@
         <set name="weight" val="30"/>
         <set name="price" val="122600"/>
         <set name="recipe_id" val="248"/>
-        <set name="is_stackable" val="true"/>
-        <set name="commissionItemType" val="RECIPE"/>
         <set name="handler" val="Recipes"/>
+        <restriction stackable="true"/>
     </item>
-    <item id="2356" name="Recipe: Demon's Staff"  icon="icon.etc_recipe_yellow_i00">
+    <item id="2356" name="Recipe: Demon's Staff" icon="icon.etc_recipe_yellow_i00">
         <!-- For Dwarves only. Recipe for a Demon's Staff. Requires Create Item - Skill Lv. 6. The success rate is 100%. -->
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
@@ -644,11 +591,10 @@
         <set name="weight" val="30"/>
         <set name="price" val="122600"/>
         <set name="recipe_id" val="249"/>
-        <set name="is_stackable" val="true"/>
-        <set name="commissionItemType" val="RECIPE"/>
         <set name="handler" val="Recipes"/>
+        <restriction stackable="true"/>
     </item>
-    <item id="2357" name="Recipe: Crystal Dagger"  icon="icon.etc_recipe_yellow_i00">
+    <item id="2357" name="Recipe: Crystal Dagger" icon="icon.etc_recipe_yellow_i00">
         <!-- For Dwarves only. Recipe for a Crystal Dagger. Requires Create Item - Skill Lv. 6. The success rate is 100%. -->
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
@@ -656,11 +602,10 @@
         <set name="weight" val="30"/>
         <set name="price" val="122600"/>
         <set name="recipe_id" val="250"/>
-        <set name="is_stackable" val="true"/>
-        <set name="commissionItemType" val="RECIPE"/>
         <set name="handler" val="Recipes"/>
+        <restriction stackable="true"/>
     </item>
-    <item id="2358" name="Recipe: Great Pata"  icon="icon.etc_recipe_yellow_i00">
+    <item id="2358" name="Recipe: Great Pata" icon="icon.etc_recipe_yellow_i00">
         <!-- For Dwarves only. Recipe for a Great Pata. Requires Create Item - Skill Lv. 6. The success rate is 100%. -->
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
@@ -668,11 +613,10 @@
         <set name="weight" val="30"/>
         <set name="price" val="122600"/>
         <set name="recipe_id" val="251"/>
-        <set name="is_stackable" val="true"/>
-        <set name="commissionItemType" val="RECIPE"/>
         <set name="handler" val="Recipes"/>
+        <restriction stackable="true"/>
     </item>
-    <item id="2359" name="Recipe: Eminence Bow"  icon="icon.etc_recipe_yellow_i00">
+    <item id="2359" name="Recipe: Eminence Bow" icon="icon.etc_recipe_yellow_i00">
         <!-- For Dwarves only. Recipe for an Eminence Bow. Requires Create Item - Skill Lv. 6. The success rate is 100%. -->
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
@@ -680,11 +624,10 @@
         <set name="weight" val="30"/>
         <set name="price" val="122600"/>
         <set name="recipe_id" val="252"/>
-        <set name="is_stackable" val="true"/>
-        <set name="commissionItemType" val="RECIPE"/>
         <set name="handler" val="Recipes"/>
+        <restriction stackable="true"/>
     </item>
-    <item id="2360" name="Recipe: Orcish Poleaxe"  icon="icon.etc_recipe_yellow_i00">
+    <item id="2360" name="Recipe: Orcish Poleaxe" icon="icon.etc_recipe_yellow_i00">
         <!-- For Dwarves only. Recipe for an Orcish Poleaxe. Requires Create Item - Skill Lv. 6. The success rate is 100%. -->
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
@@ -692,9 +635,8 @@
         <set name="weight" val="30"/>
         <set name="price" val="122600"/>
         <set name="recipe_id" val="253"/>
-        <set name="is_stackable" val="true"/>
-        <set name="commissionItemType" val="RECIPE"/>
         <set name="handler" val="Recipes"/>
+        <restriction stackable="true"/>
     </item>
     <weapon id="2368" name="Training Gloves" icon="icon.weapon_training_gloves_i00">
         <!-- Cannot be exchanged, dropped, sold, or stored in a private warehouse. -->
@@ -706,14 +648,7 @@
         <set name="weight" val="1580"/>
         <set name="soulshots" val="1"/>
         <set name="spiritshots" val="1"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
-        <set name="is_sellable" val="false"/>
+        <restriction tradable="false" dropable="false" depositable="false" clan-depositable="false" mailable="false" commissionable="false" sellable="false"/>
         <stats>
             <stat type="pAtk">7</stat>
             <stat type="mAtk">5</stat>
@@ -734,14 +669,7 @@
         <set name="weight" val="1600"/>
         <set name="soulshots" val="1"/>
         <set name="spiritshots" val="1"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
-        <set name="is_sellable" val="false"/>
+        <restriction tradable="false" dropable="false" depositable="false" clan-depositable="false" mailable="false" commissionable="false" sellable="false"/>
         <stats>
             <stat type="pAtk">6</stat>
             <stat type="mAtk">5</stat>
@@ -761,14 +689,7 @@
         <set name="weight" val="1910"/>
         <set name="soulshots" val="1"/>
         <set name="spiritshots" val="1"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
-        <set name="is_sellable" val="false"/>
+        <restriction tradable="false" dropable="false" depositable="false" clan-depositable="false" mailable="false" commissionable="false" sellable="false"/>
         <stats>
             <stat type="pAtk">6</stat>
             <stat type="mAtk">5</stat>

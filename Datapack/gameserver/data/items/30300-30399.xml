@@ -5,14 +5,8 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="back"/>
         <set name="immediate_effect" val="true"/>
-        <set name="is_oly_restricted" val="true"/>
         <set name="weight" val="220"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
+        <restriction olympiad-restricted="true" commissionable="false" tradable="false" dropable="false" depositable="false" sellable="false"/>
         <skills>
             <skill id="13136" level="1"/> <!-- Hero's Cloak -->
         </skills>
@@ -22,13 +16,7 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="back"/>
         <set name="immediate_effect" val="true"/>
-        <set name="is_oly_restricted" val="true"/>
         <set name="weight" val="220"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
+        <restriction olympiad-restricted="true" commissionable="false" tradable="false" dropable="false" depositable="false" sellable="false"/>
     </armor>
 </list>

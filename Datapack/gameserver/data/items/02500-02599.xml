@@ -142,104 +142,82 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </weapon>
-    <item id="2508" name="Cursed Bone"  icon="icon.etc_piece_bone_red_i00">
+    <item id="2508" name="Cursed Bone" icon="icon.etc_piece_bone_red_i00">
         <set name="etcitem_type" val="MATERIAL"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="3"/>
         <set name="price" val="240"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
-        <set name="is_stackable" val="true"/>
+        <restriction stackable="true"/>
     </item>
-    <item id="2509" name="Spiritshot (No-grade)"  icon="icon.etc_spell_shot_white_i00">
+    <item id="2509" name="Spiritshot (No-grade)" icon="icon.etc_spell_shot_white_i00">
         <!-- A Spiritshot bestowed on a weapon increases its M. Atk. Used with a No-grade weapon. -->
         <set name="default_action" val="SPIRITSHOT"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="4"/>
         <set name="price" val="15"/>
-        <set name="is_stackable" val="true"/>
-        <set name="handler" val="SpiritShot"/>
-        <set name="commissionItemType" val="SPIRITSHOT"/>
         <set name="etcitem_type" val="SOULSHOT"/>
+        <restriction stackable="true"/>
         <skills>
             <skill id="2047" level="1"/> <!-- Spiritshot (No-grade) -->
         </skills>
     </item>
-    <item id="2510" name="Spiritshot (D-grade)"  icon="icon.etc_spell_shot_blue_i00">
+    <item id="2510" name="Spiritshot (D-grade)" icon="icon.etc_spell_shot_blue_i00">
         <!-- The power of a higher-level spirit is bestowed upon a weapon causing its M. Atk. to momentarily increase. Used with a D-grade weapon. -->
         <set name="default_action" val="SPIRITSHOT"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="4"/>
         <set name="price" val="18"/>
-        <set name="is_stackable" val="true"/>
-        <set name="handler" val="SpiritShot"/>
-        <set name="crystal_type" val="D"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="commissionItemType" val="SPIRITSHOT"/>
         <set name="etcitem_type" val="SOULSHOT"/>
+        <restriction stackable="true"/>
         <skills>
             <skill id="2155" level="1"/> <!-- Spiritshot (D-grade) -->
         </skills>
     </item>
-    <item id="2511" name="Spiritshot (C-grade)"  icon="icon.etc_spell_shot_green_i00">
+    <item id="2511" name="Spiritshot (C-grade)" icon="icon.etc_spell_shot_green_i00">
         <!-- The power of a higher-level spirit is bestowed upon a weapon causing its M. Atk. to momentarily increase. Used with a C-grade weapon. -->
         <set name="default_action" val="SPIRITSHOT"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="2"/>
         <set name="price" val="35"/>
-        <set name="is_stackable" val="true"/>
-        <set name="handler" val="SpiritShot"/>
-        <set name="crystal_type" val="C"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="commissionItemType" val="SPIRITSHOT"/>
         <set name="etcitem_type" val="SOULSHOT"/>
+        <restriction stackable="true"/>
         <skills>
             <skill id="2156" level="1"/> <!-- Spiritshot (C-grade) -->
         </skills>
     </item>
-    <item id="2512" name="Spiritshot (B-grade)"  icon="icon.etc_spell_shot_red_i00">
+    <item id="2512" name="Spiritshot (B-grade)" icon="icon.etc_spell_shot_red_i00">
         <!-- The power of a higher-level spirit is bestowed upon a weapon causing its M. Atk. to momentarily increase. Used with a B-grade weapon. -->
         <set name="default_action" val="SPIRITSHOT"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="2"/>
         <set name="price" val="100"/>
-        <set name="is_stackable" val="true"/>
-        <set name="handler" val="SpiritShot"/>
-        <set name="crystal_type" val="B"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="commissionItemType" val="SPIRITSHOT"/>
         <set name="etcitem_type" val="SOULSHOT"/>
+        <restriction stackable="true"/>
         <skills>
             <skill id="2157" level="1"/> <!-- Spiritshot (B-grade) -->
         </skills>
     </item>
-    <item id="2513" name="Spiritshot (A-grade)"  icon="icon.etc_spell_shot_silver_i00">
+    <item id="2513" name="Spiritshot (A-grade)" icon="icon.etc_spell_shot_silver_i00">
         <!-- The power of a Spiritshot is bestowed upon a weapon, temporarily increasing the power of magic attack. Used with A-grade weapons. -->
         <set name="default_action" val="SPIRITSHOT"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="1"/>
         <set name="price" val="120"/>
-        <set name="is_stackable" val="true"/>
-        <set name="handler" val="SpiritShot"/>
-        <set name="crystal_type" val="A"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="commissionItemType" val="SPIRITSHOT"/>
         <set name="etcitem_type" val="SOULSHOT"/>
+        <restriction stackable="true"/>
         <skills>
             <skill id="2158" level="1"/> <!-- Spiritshot (A-grade) -->
         </skills>
     </item>
-    <item id="2514" name="Spiritshot (S-grade)"  icon="icon.etc_spell_shot_gold_i00">
+    <item id="2514" name="Spiritshot (S-grade)" icon="icon.etc_spell_shot_gold_i00">
         <!-- The power of Spiritshot is bestowed upon a weapon, temporarily increasing its magical power. Used with S-grade weapons. -->
         <set name="default_action" val="SPIRITSHOT"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="1"/>
         <set name="price" val="150"/>
-        <set name="is_stackable" val="true"/>
-        <set name="handler" val="SpiritShot"/>
-        <set name="crystal_type" val="S"/>
-        <set name="enchant_enabled" val="1"/>
-        <set name="commissionItemType" val="SPIRITSHOT"/>
         <set name="etcitem_type" val="SOULSHOT"/>
+        <restriction stackable="true"/>
         <skills>
             <skill id="2159" level="1"/> <!-- Spiritshot (S-grade) -->
         </skills>

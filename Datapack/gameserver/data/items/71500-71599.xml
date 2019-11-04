@@ -1,703 +1,503 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
-    <item id="71500" name="Transformation Sealbook: Toy Cat"  icon="icon.sayha2017_cat">
+    <item id="71500" name="Transformation Sealbook: Toy Cat" icon="icon.sayha2017_cat">
         <!-- The book allows you to obtain Rare Toy Cat appearance. Cannot be dropped or sold in the grocery store. -->
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction dropable="false" sellable="false" stackable="true"/>
     </item>
-    <item id="71501" name="Transformation Sealbook: Toy Cat"  icon="icon.sayha2017_cat">
+    <item id="71501" name="Transformation Sealbook: Toy Cat" icon="icon.sayha2017_cat">
         <!-- The book allows you to obtain Legendary Toy Cat appearance. Cannot be dropped or sold in the grocery store. -->
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction dropable="false" sellable="false" stackable="true"/>
     </item>
-    <item id="71502" name="Transformation Sealbook: Toy Cat"  icon="icon.sayha2017_cat">
+    <item id="71502" name="Transformation Sealbook: Toy Cat" icon="icon.sayha2017_cat">
         <!-- The book allows you to obtain Mythic Toy Cat appearance. Cannot be dropped or sold in the grocery store. -->
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction dropable="false" sellable="false" stackable="true"/>
     </item>
-    <item id="71503" name="Transformation Sealbook: Toy Panda"  icon="icon.sayha2017_panda">
+    <item id="71503" name="Transformation Sealbook: Toy Panda" icon="icon.sayha2017_panda">
         <!-- The book allows you to obtain Standard Toy Panda appearance. Cannot be dropped or sold in the grocery store. -->
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction dropable="false" sellable="false" stackable="true"/>
     </item>
-    <item id="71504" name="Transformation Sealbook: Toy Panda"  icon="icon.sayha2017_panda">
+    <item id="71504" name="Transformation Sealbook: Toy Panda" icon="icon.sayha2017_panda">
         <!-- The book allows you to obtain High-grade Toy Panda appearance. Cannot be dropped or sold in the grocery store. -->
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction dropable="false" sellable="false" stackable="true"/>
     </item>
-    <item id="71505" name="Transformation Sealbook: Toy Panda"  icon="icon.sayha2017_panda">
+    <item id="71505" name="Transformation Sealbook: Toy Panda" icon="icon.sayha2017_panda">
         <!-- The book allows you to obtain Rare Toy Panda appearance. Cannot be dropped or sold in the grocery store. -->
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction dropable="false" sellable="false" stackable="true"/>
     </item>
-    <item id="71506" name="Transformation Sealbook: Toy Panda"  icon="icon.sayha2017_panda">
+    <item id="71506" name="Transformation Sealbook: Toy Panda" icon="icon.sayha2017_panda">
         <!-- The book allows you to obtain Legendary Toy Panda appearance. Cannot be dropped or sold in the grocery store. -->
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction dropable="false" sellable="false" stackable="true"/>
     </item>
-    <item id="71507" name="Transformation Sealbook: Toy Panda"  icon="icon.sayha2017_panda">
+    <item id="71507" name="Transformation Sealbook: Toy Panda" icon="icon.sayha2017_panda">
         <!-- The book allows you to obtain Mythic Toy Panda appearance. Cannot be dropped or sold in the grocery store. -->
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction dropable="false" sellable="false" stackable="true"/>
     </item>
-    <item id="71508" name="Transformation Sealbook: Baseball Uniform"  icon="BranchIcon.Icon.g_bm_costume_baseball">
+    <item id="71508" name="Transformation Sealbook: Baseball Uniform" icon="BranchIcon.Icon.g_bm_costume_baseball">
         <!-- The book allows you to obtain Standard Baseball Uniform appearance. Cannot be dropped or sold in the grocery store. -->
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction dropable="false" sellable="false" stackable="true"/>
     </item>
-    <item id="71509" name="Transformation Sealbook: Baseball Uniform"  icon="BranchIcon.Icon.g_bm_costume_baseball">
+    <item id="71509" name="Transformation Sealbook: Baseball Uniform" icon="BranchIcon.Icon.g_bm_costume_baseball">
         <!-- The book allows you to obtain High-grade Baseball Uniform appearance. Cannot be dropped or sold in the grocery store. -->
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction dropable="false" sellable="false" stackable="true"/>
     </item>
-    <item id="71510" name="Transformation Sealbook: Baseball Uniform"  icon="BranchIcon.Icon.g_bm_costume_baseball">
+    <item id="71510" name="Transformation Sealbook: Baseball Uniform" icon="BranchIcon.Icon.g_bm_costume_baseball">
         <!-- The book allows you to obtain Rare Baseball Uniform appearance. Cannot be dropped or sold in the grocery store. -->
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction dropable="false" sellable="false" stackable="true"/>
     </item>
-    <item id="71511" name="Transformation Sealbook: Baseball Uniform"  icon="BranchIcon.Icon.g_bm_costume_baseball">
+    <item id="71511" name="Transformation Sealbook: Baseball Uniform" icon="BranchIcon.Icon.g_bm_costume_baseball">
         <!-- The book allows you to obtain Legendary Baseball Uniform appearance. Cannot be dropped or sold in the grocery store. -->
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction dropable="false" sellable="false" stackable="true"/>
     </item>
-    <item id="71512" name="Transformation Sealbook: Baseball Uniform"  icon="BranchIcon.Icon.g_bm_costume_baseball">
+    <item id="71512" name="Transformation Sealbook: Baseball Uniform" icon="BranchIcon.Icon.g_bm_costume_baseball">
         <!-- The book allows you to obtain Mythic Baseball Uniform appearance. Cannot be dropped or sold in the grocery store. -->
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction dropable="false" sellable="false" stackable="true"/>
     </item>
-    <item id="71513" name="Transformation Sealbook: Seductive Swimsuit"  icon="BranchSys3.icon1.g_co_swimsuit_event_03">
+    <item id="71513" name="Transformation Sealbook: Seductive Swimsuit" icon="BranchSys3.icon1.g_co_swimsuit_event_03">
         <!-- The book allows you to obtain Standard Seductive Swimsuit appearance. Cannot be dropped or sold in the grocery store. -->
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction dropable="false" sellable="false" stackable="true"/>
     </item>
-    <item id="71514" name="Transformation Sealbook: Seductive Swimsuit"  icon="BranchSys3.icon1.g_co_swimsuit_event_03">
+    <item id="71514" name="Transformation Sealbook: Seductive Swimsuit" icon="BranchSys3.icon1.g_co_swimsuit_event_03">
         <!-- The book allows you to obtain High-grade Seductive Swimsuit appearance. Cannot be dropped or sold in the grocery store. -->
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction dropable="false" sellable="false" stackable="true"/>
     </item>
-    <item id="71515" name="Transformation Sealbook: Seductive Swimsuit"  icon="BranchSys3.icon1.g_co_swimsuit_event_03">
+    <item id="71515" name="Transformation Sealbook: Seductive Swimsuit" icon="BranchSys3.icon1.g_co_swimsuit_event_03">
         <!-- The book allows you to obtain Rare Seductive Swimsuit appearance. Cannot be dropped or sold in the grocery store. -->
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction dropable="false" sellable="false" stackable="true"/>
     </item>
-    <item id="71516" name="Transformation Sealbook: Seductive Swimsuit"  icon="BranchSys3.icon1.g_co_swimsuit_event_03">
+    <item id="71516" name="Transformation Sealbook: Seductive Swimsuit" icon="BranchSys3.icon1.g_co_swimsuit_event_03">
         <!-- The book allows you to obtain Legendary Seductive Swimsuit appearance. Cannot be dropped or sold in the grocery store. -->
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction dropable="false" sellable="false" stackable="true"/>
     </item>
-    <item id="71517" name="Transformation Sealbook: Seductive Swimsuit"  icon="BranchSys3.icon1.g_co_swimsuit_event_03">
+    <item id="71517" name="Transformation Sealbook: Seductive Swimsuit" icon="BranchSys3.icon1.g_co_swimsuit_event_03">
         <!-- The book allows you to obtain Mythic Seductive Swimsuit appearance. Cannot be dropped or sold in the grocery store. -->
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction dropable="false" sellable="false" stackable="true"/>
     </item>
-    <item id="71518" name="Transformation Sealbook: School Uniform B"  icon="BranchIcon.Icon.g_bm_costume_schoollook_b">
+    <item id="71518" name="Transformation Sealbook: School Uniform B" icon="BranchIcon.Icon.g_bm_costume_schoollook_b">
         <!-- The book allows you to obtain Standard School Uniform B appearance. Cannot be dropped or sold in the grocery store. -->
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction dropable="false" sellable="false" stackable="true"/>
     </item>
-    <item id="71519" name="Transformation Sealbook: School Uniform B"  icon="BranchIcon.Icon.g_bm_costume_schoollook_b">
+    <item id="71519" name="Transformation Sealbook: School Uniform B" icon="BranchIcon.Icon.g_bm_costume_schoollook_b">
         <!-- The book allows you to obtain High-grade School Uniform B appearance. Cannot be dropped or sold in the grocery store. -->
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction dropable="false" sellable="false" stackable="true"/>
     </item>
-    <item id="71520" name="Transformation Sealbook: School Uniform B"  icon="BranchIcon.Icon.g_bm_costume_schoollook_b">
+    <item id="71520" name="Transformation Sealbook: School Uniform B" icon="BranchIcon.Icon.g_bm_costume_schoollook_b">
         <!-- The book allows you to obtain Rare School Uniform B appearance. Cannot be dropped or sold in the grocery store. -->
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction dropable="false" sellable="false" stackable="true"/>
     </item>
-    <item id="71521" name="Transformation Sealbook: School Uniform B"  icon="BranchIcon.Icon.g_bm_costume_schoollook_b">
+    <item id="71521" name="Transformation Sealbook: School Uniform B" icon="BranchIcon.Icon.g_bm_costume_schoollook_b">
         <!-- The book allows you to obtain Legendary School Uniform B appearance. Cannot be dropped or sold in the grocery store. -->
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction dropable="false" sellable="false" stackable="true"/>
     </item>
-    <item id="71522" name="Transformation Sealbook: School Uniform B"  icon="BranchIcon.Icon.g_bm_costume_schoollook_b">
+    <item id="71522" name="Transformation Sealbook: School Uniform B" icon="BranchIcon.Icon.g_bm_costume_schoollook_b">
         <!-- The book allows you to obtain Mythic Seductive Swimsuit appearance. Cannot be dropped or sold in the grocery store. -->
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction dropable="false" sellable="false" stackable="true"/>
     </item>
-    <item id="71523" name="Transformation Sealbook: Hanbok"  icon="BranchIcon.Icon.g_bm_costume_korea_traditional">
+    <item id="71523" name="Transformation Sealbook: Hanbok" icon="BranchIcon.Icon.g_bm_costume_korea_traditional">
         <!-- The book allows you to obtain Standard Hanbok appearance. Cannot be dropped or sold in the grocery store. -->
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction dropable="false" sellable="false" stackable="true"/>
     </item>
-    <item id="71524" name="Transformation Sealbook: Hanbok"  icon="BranchIcon.Icon.g_bm_costume_korea_traditional">
+    <item id="71524" name="Transformation Sealbook: Hanbok" icon="BranchIcon.Icon.g_bm_costume_korea_traditional">
         <!-- The book allows you to obtain High-grade Hanbok appearance. Cannot be dropped or sold in the grocery store. -->
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction dropable="false" sellable="false" stackable="true"/>
     </item>
-    <item id="71525" name="Transformation Sealbook: Hanbok"  icon="BranchIcon.Icon.g_bm_costume_korea_traditional">
+    <item id="71525" name="Transformation Sealbook: Hanbok" icon="BranchIcon.Icon.g_bm_costume_korea_traditional">
         <!-- The book allows you to obtain Rare Hanbok appearance. Cannot be dropped or sold in the grocery store. -->
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction dropable="false" sellable="false" stackable="true"/>
     </item>
-    <item id="71526" name="Transformation Sealbook: Hanbok"  icon="BranchIcon.Icon.g_bm_costume_korea_traditional">
+    <item id="71526" name="Transformation Sealbook: Hanbok" icon="BranchIcon.Icon.g_bm_costume_korea_traditional">
         <!-- The book allows you to obtain Legendary Hanbok appearance. Cannot be dropped or sold in the grocery store. -->
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction dropable="false" sellable="false" stackable="true"/>
     </item>
-    <item id="71527" name="Transformation Sealbook: Hanbok"  icon="BranchIcon.Icon.g_bm_costume_korea_traditional">
+    <item id="71527" name="Transformation Sealbook: Hanbok" icon="BranchIcon.Icon.g_bm_costume_korea_traditional">
         <!-- The book allows you to obtain Mythic Hanbok appearance. Cannot be dropped or sold in the grocery store. -->
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction dropable="false" sellable="false" stackable="true"/>
     </item>
-    <item id="71528" name="Transformation Sealbook: Metal Suit"  icon="BranchSys3.icon1.g_co_sf_u">
+    <item id="71528" name="Transformation Sealbook: Metal Suit" icon="BranchSys3.icon1.g_co_sf_u">
         <!-- The book allows you to obtain Standard Metal Suit appearance. Cannot be dropped or sold in the grocery store. -->
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction dropable="false" sellable="false" stackable="true"/>
     </item>
-    <item id="71529" name="Transformation Sealbook: Metal Suit"  icon="BranchSys3.icon1.g_co_sf_u">
+    <item id="71529" name="Transformation Sealbook: Metal Suit" icon="BranchSys3.icon1.g_co_sf_u">
         <!-- The book allows you to obtain High-grade Metal Suit appearance. Cannot be dropped or sold in the grocery store. -->
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction dropable="false" sellable="false" stackable="true"/>
     </item>
-    <item id="71530" name="Transformation Sealbook: Metal Suit"  icon="BranchSys3.icon1.g_co_sf_u">
+    <item id="71530" name="Transformation Sealbook: Metal Suit" icon="BranchSys3.icon1.g_co_sf_u">
         <!-- The book allows you to obtain Rare Metal Suit appearance. Cannot be dropped or sold in the grocery store. -->
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction dropable="false" sellable="false" stackable="true"/>
     </item>
-    <item id="71531" name="Transformation Sealbook: Metal Suit"  icon="BranchSys3.icon1.g_co_sf_u">
+    <item id="71531" name="Transformation Sealbook: Metal Suit" icon="BranchSys3.icon1.g_co_sf_u">
         <!-- The book allows you to obtain Legendary Metal Suit appearance. Cannot be dropped or sold in the grocery store. -->
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction dropable="false" sellable="false" stackable="true"/>
     </item>
-    <item id="71532" name="Transformation Sealbook: Metal Suit"  icon="BranchSys3.icon1.g_co_sf_u">
+    <item id="71532" name="Transformation Sealbook: Metal Suit" icon="BranchSys3.icon1.g_co_sf_u">
         <!-- The book allows you to obtain Mythic Metal Suit appearance. Cannot be dropped or sold in the grocery store. -->
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction dropable="false" sellable="false" stackable="true"/>
     </item>
-    <item id="71533" name="Transformation Sealbook: Samurai"  icon="BranchSys3.iconArmar.g_co_japan_general_i00">
+    <item id="71533" name="Transformation Sealbook: Samurai" icon="BranchSys3.iconArmar.g_co_japan_general_i00">
         <!-- The book allows you to obtain Standard Samurai appearance. Cannot be dropped or sold in the grocery store. -->
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction dropable="false" sellable="false" stackable="true"/>
     </item>
-    <item id="71534" name="Transformation Sealbook: Samurai"  icon="BranchSys3.iconArmar.g_co_japan_general_i00">
+    <item id="71534" name="Transformation Sealbook: Samurai" icon="BranchSys3.iconArmar.g_co_japan_general_i00">
         <!-- The book allows you to obtain High-grade Samurai appearance. Cannot be dropped or sold in the grocery store. -->
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction dropable="false" sellable="false" stackable="true"/>
     </item>
-    <item id="71535" name="Transformation Sealbook: Samurai"  icon="BranchSys3.iconArmar.g_co_japan_general_i00">
+    <item id="71535" name="Transformation Sealbook: Samurai" icon="BranchSys3.iconArmar.g_co_japan_general_i00">
         <!-- The book allows you to obtain Rare Samurai appearance. Cannot be dropped or sold in the grocery store. -->
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction dropable="false" sellable="false" stackable="true"/>
     </item>
-    <item id="71536" name="Transformation Sealbook: Samurai"  icon="BranchSys3.iconArmar.g_co_japan_general_i00">
+    <item id="71536" name="Transformation Sealbook: Samurai" icon="BranchSys3.iconArmar.g_co_japan_general_i00">
         <!-- The book allows you to obtain Legendary Samurai appearance. Cannot be dropped or sold in the grocery store. -->
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction dropable="false" sellable="false" stackable="true"/>
     </item>
-    <item id="71537" name="Transformation Sealbook: Samurai"  icon="BranchSys3.iconArmar.g_co_japan_general_i00">
+    <item id="71537" name="Transformation Sealbook: Samurai" icon="BranchSys3.iconArmar.g_co_japan_general_i00">
         <!-- The book allows you to obtain Mythic Samurai appearance. Cannot be dropped or sold in the grocery store. -->
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction dropable="false" sellable="false" stackable="true"/>
     </item>
-    <item id="71538" name="Transformation Sealbook: Green Archer"  icon="BranchIcon.Icon.g_bm_costume_archer_green">
+    <item id="71538" name="Transformation Sealbook: Green Archer" icon="BranchIcon.Icon.g_bm_costume_archer_green">
         <!-- The book allows you to obtain Standard Green Archer appearance. Cannot be dropped or sold in the grocery store. -->
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction dropable="false" sellable="false" stackable="true"/>
     </item>
-    <item id="71539" name="Transformation Sealbook: Green Archer"  icon="BranchIcon.Icon.g_bm_costume_archer_green">
+    <item id="71539" name="Transformation Sealbook: Green Archer" icon="BranchIcon.Icon.g_bm_costume_archer_green">
         <!-- The book allows you to obtain High-grade Green Archer appearance. Cannot be dropped or sold in the grocery store. -->
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction dropable="false" sellable="false" stackable="true"/>
     </item>
-    <item id="71540" name="Transformation Sealbook: Green Archer"  icon="BranchIcon.Icon.g_bm_costume_archer_green">
+    <item id="71540" name="Transformation Sealbook: Green Archer" icon="BranchIcon.Icon.g_bm_costume_archer_green">
         <!-- The book allows you to obtain Rare Green Archer appearance. Cannot be dropped or sold in the grocery store. -->
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction dropable="false" sellable="false" stackable="true"/>
     </item>
-    <item id="71541" name="Transformation Sealbook: Green Archer"  icon="BranchIcon.Icon.g_bm_costume_archer_green">
+    <item id="71541" name="Transformation Sealbook: Green Archer" icon="BranchIcon.Icon.g_bm_costume_archer_green">
         <!-- The book allows you to obtain Legendary Green Archer appearance. Cannot be dropped or sold in the grocery store. -->
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction dropable="false" sellable="false" stackable="true"/>
     </item>
-    <item id="71542" name="Transformation Sealbook: Green Archer"  icon="BranchIcon.Icon.g_bm_costume_archer_green">
+    <item id="71542" name="Transformation Sealbook: Green Archer" icon="BranchIcon.Icon.g_bm_costume_archer_green">
         <!-- The book allows you to obtain Mythic Green Archer appearance. Cannot be dropped or sold in the grocery store. -->
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction dropable="false" sellable="false" stackable="true"/>
     </item>
-    <item id="71543" name="Transformation Sealbook: Formal Wear"  icon="BranchIcon.Icon.g_bm_costume_wedding">
+    <item id="71543" name="Transformation Sealbook: Formal Wear" icon="BranchIcon.Icon.g_bm_costume_wedding">
         <!-- The book allows you to obtain Standard Formal Wear appearance. Cannot be dropped or sold in the grocery store. -->
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction dropable="false" sellable="false" stackable="true"/>
     </item>
-    <item id="71544" name="Transformation Sealbook: Formal Wear"  icon="BranchIcon.Icon.g_bm_costume_wedding">
+    <item id="71544" name="Transformation Sealbook: Formal Wear" icon="BranchIcon.Icon.g_bm_costume_wedding">
         <!-- The book allows you to obtain High-grade Formal Wear appearance. Cannot be dropped or sold in the grocery store. -->
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction dropable="false" sellable="false" stackable="true"/>
     </item>
-    <item id="71545" name="Transformation Sealbook: Formal Wear"  icon="BranchIcon.Icon.g_bm_costume_wedding">
+    <item id="71545" name="Transformation Sealbook: Formal Wear" icon="BranchIcon.Icon.g_bm_costume_wedding">
         <!-- The book allows you to obtain Rare Formal Wear appearance. Cannot be dropped or sold in the grocery store. -->
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction dropable="false" sellable="false" stackable="true"/>
     </item>
-    <item id="71546" name="Transformation Sealbook: Formal Wear"  icon="BranchIcon.Icon.g_bm_costume_wedding">
+    <item id="71546" name="Transformation Sealbook: Formal Wear" icon="BranchIcon.Icon.g_bm_costume_wedding">
         <!-- The book allows you to obtain Legendary Formal Wear appearance. Cannot be dropped or sold in the grocery store. -->
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction dropable="false" sellable="false" stackable="true"/>
     </item>
-    <item id="71547" name="Transformation Sealbook: Formal Wear"  icon="BranchIcon.Icon.g_bm_costume_wedding">
+    <item id="71547" name="Transformation Sealbook: Formal Wear" icon="BranchIcon.Icon.g_bm_costume_wedding">
         <!-- The book allows you to obtain Mythic Formal Wear appearance. Cannot be dropped or sold in the grocery store. -->
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction dropable="false" sellable="false" stackable="true"/>
     </item>
-    <item id="71548" name="Transformation Sealbook: Zaken"  icon="icon.cat_the_cat_change_0">
+    <item id="71548" name="Transformation Sealbook: Zaken" icon="icon.cat_the_cat_change_0">
         <!-- The book allows you to obtain Standard Zaken appearance. Cannot be dropped or sold in the grocery store. -->
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction dropable="false" sellable="false" stackable="true"/>
     </item>
-    <item id="71549" name="Transformation Sealbook: Zaken"  icon="icon.cat_the_cat_change_0">
+    <item id="71549" name="Transformation Sealbook: Zaken" icon="icon.cat_the_cat_change_0">
         <!-- The book allows you to obtain High-grade Zaken appearance. Cannot be dropped or sold in the grocery store. -->
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction dropable="false" sellable="false" stackable="true"/>
     </item>
-    <item id="71550" name="Transformation Sealbook: Zaken"  icon="icon.cat_the_cat_change_0">
+    <item id="71550" name="Transformation Sealbook: Zaken" icon="icon.cat_the_cat_change_0">
         <!-- The book allows you to obtain Rare Zaken appearance. Cannot be dropped or sold in the grocery store. -->
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction dropable="false" sellable="false" stackable="true"/>
     </item>
-    <item id="71551" name="Transformation Sealbook: Zaken"  icon="icon.cat_the_cat_change_0">
+    <item id="71551" name="Transformation Sealbook: Zaken" icon="icon.cat_the_cat_change_0">
         <!-- The book allows you to obtain Legendary Zaken appearance. Cannot be dropped or sold in the grocery store. -->
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction dropable="false" sellable="false" stackable="true"/>
     </item>
-    <item id="71552" name="Transformation Sealbook: Zaken"  icon="icon.cat_the_cat_change_0">
+    <item id="71552" name="Transformation Sealbook: Zaken" icon="icon.cat_the_cat_change_0">
         <!-- The book allows you to obtain Mythic Zaken appearance. Cannot be dropped or sold in the grocery store. -->
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction dropable="false" sellable="false" stackable="true"/>
     </item>
-    <item id="71553" name="Transformation Sealbook: Halloween"  icon="BranchIcon.Icon.g_bm_costume_holloween">
+    <item id="71553" name="Transformation Sealbook: Halloween" icon="BranchIcon.Icon.g_bm_costume_holloween">
         <!-- The book allows you to obtain Standard Halloween appearance. Cannot be dropped or sold in the grocery store. -->
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction dropable="false" sellable="false" stackable="true"/>
     </item>
-    <item id="71554" name="Transformation Sealbook: Halloween"  icon="BranchIcon.Icon.g_bm_costume_holloween">
+    <item id="71554" name="Transformation Sealbook: Halloween" icon="BranchIcon.Icon.g_bm_costume_holloween">
         <!-- The book allows you to obtain High-grade Halloween appearance. Cannot be dropped or sold in the grocery store. -->
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction dropable="false" sellable="false" stackable="true"/>
     </item>
-    <item id="71555" name="Transformation Sealbook: Halloween"  icon="BranchIcon.Icon.g_bm_costume_holloween">
+    <item id="71555" name="Transformation Sealbook: Halloween" icon="BranchIcon.Icon.g_bm_costume_holloween">
         <!-- The book allows you to obtain Rare Halloween appearance. Cannot be dropped or sold in the grocery store. -->
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction dropable="false" sellable="false" stackable="true"/>
     </item>
-    <item id="71556" name="Transformation Sealbook: Halloween"  icon="BranchIcon.Icon.g_bm_costume_holloween">
+    <item id="71556" name="Transformation Sealbook: Halloween" icon="BranchIcon.Icon.g_bm_costume_holloween">
         <!-- The book allows you to obtain Legendary Halloween appearance. Cannot be dropped or sold in the grocery store. -->
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction dropable="false" sellable="false" stackable="true"/>
     </item>
-    <item id="71557" name="Transformation Sealbook: Halloween"  icon="BranchIcon.Icon.g_bm_costume_holloween">
+    <item id="71557" name="Transformation Sealbook: Halloween" icon="BranchIcon.Icon.g_bm_costume_holloween">
         <!-- The book allows you to obtain Mythic Halloween appearance. Cannot be dropped or sold in the grocery store. -->
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction dropable="false" sellable="false" stackable="true"/>
     </item>
-    <item id="71558" name="Transformation Sealbook: Alluring Swimsuit"  icon="BranchSys3.icon1.g_co_swimsuit_event_02">
+    <item id="71558" name="Transformation Sealbook: Alluring Swimsuit" icon="BranchSys3.icon1.g_co_swimsuit_event_02">
         <!-- The book allows you to obtain Standard Alluring Swimsuit appearance. Cannot be dropped or sold in the grocery store. -->
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction dropable="false" sellable="false" stackable="true"/>
     </item>
-    <item id="71559" name="Transformation Sealbook: Alluring Swimsuit"  icon="BranchSys3.icon1.g_co_swimsuit_event_02">
+    <item id="71559" name="Transformation Sealbook: Alluring Swimsuit" icon="BranchSys3.icon1.g_co_swimsuit_event_02">
         <!-- The book allows you to obtain High-grade Alluring Swimsuit appearance. Cannot be dropped or sold in the grocery store. -->
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction dropable="false" sellable="false" stackable="true"/>
     </item>
-    <item id="71560" name="Transformation Sealbook: Alluring Swimsuit"  icon="BranchSys3.icon1.g_co_swimsuit_event_02">
+    <item id="71560" name="Transformation Sealbook: Alluring Swimsuit" icon="BranchSys3.icon1.g_co_swimsuit_event_02">
         <!-- The book allows you to obtain Rare Alluring Swimsuit appearance. Cannot be dropped or sold in the grocery store. -->
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction dropable="false" sellable="false" stackable="true"/>
     </item>
-    <item id="71561" name="Transformation Sealbook: Alluring Swimsuit"  icon="BranchSys3.icon1.g_co_swimsuit_event_02">
+    <item id="71561" name="Transformation Sealbook: Alluring Swimsuit" icon="BranchSys3.icon1.g_co_swimsuit_event_02">
         <!-- The book allows you to obtain Legendary Alluring Swimsuit appearance. Cannot be dropped or sold in the grocery store. -->
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction dropable="false" sellable="false" stackable="true"/>
     </item>
-    <item id="71562" name="Transformation Sealbook: Alluring Swimsuit"  icon="BranchSys3.icon1.g_co_swimsuit_event_02">
+    <item id="71562" name="Transformation Sealbook: Alluring Swimsuit" icon="BranchSys3.icon1.g_co_swimsuit_event_02">
         <!-- The book allows you to obtain Mythic Alluring Swimsuit appearance. Cannot be dropped or sold in the grocery store. -->
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction dropable="false" sellable="false" stackable="true"/>
     </item>
-    <item id="71563" name="Transformation Sealbook: Vampire"  icon="BranchSys3.iconArmar.g_co_vampiric_u_i00">
+    <item id="71563" name="Transformation Sealbook: Vampire" icon="BranchSys3.iconArmar.g_co_vampiric_u_i00">
         <!-- The book allows you to obtain Standard Vampire appearance. Cannot be dropped or sold in the grocery store. -->
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction dropable="false" sellable="false" stackable="true"/>
     </item>
-    <item id="71564" name="Transformation Sealbook: Vampire"  icon="BranchSys3.iconArmar.g_co_vampiric_u_i00">
+    <item id="71564" name="Transformation Sealbook: Vampire" icon="BranchSys3.iconArmar.g_co_vampiric_u_i00">
         <!-- The book allows you to obtain High-grade Vampire appearance. Cannot be dropped or sold in the grocery store. -->
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction dropable="false" sellable="false" stackable="true"/>
     </item>
-    <item id="71565" name="Transformation Sealbook: Vampire"  icon="BranchSys3.iconArmar.g_co_vampiric_u_i00">
+    <item id="71565" name="Transformation Sealbook: Vampire" icon="BranchSys3.iconArmar.g_co_vampiric_u_i00">
         <!-- The book allows you to obtain Rare Vampire appearance. Cannot be dropped or sold in the grocery store. -->
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction dropable="false" sellable="false" stackable="true"/>
     </item>
-    <item id="71566" name="Transformation Sealbook: Vampire"  icon="BranchSys3.iconArmar.g_co_vampiric_u_i00">
+    <item id="71566" name="Transformation Sealbook: Vampire" icon="BranchSys3.iconArmar.g_co_vampiric_u_i00">
         <!-- The book allows you to obtain Legendary Vampire appearance. Cannot be dropped or sold in the grocery store. -->
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction dropable="false" sellable="false" stackable="true"/>
     </item>
-    <item id="71567" name="Transformation Sealbook: Vampire"  icon="BranchSys3.iconArmar.g_co_vampiric_u_i00">
+    <item id="71567" name="Transformation Sealbook: Vampire" icon="BranchSys3.iconArmar.g_co_vampiric_u_i00">
         <!-- The book allows you to obtain Mythic Vampire appearance. Cannot be dropped or sold in the grocery store. -->
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction dropable="false" sellable="false" stackable="true"/>
     </item>
-    <item id="71568" name="Transformation Sealbook: Dark Knight"  icon="icon.dark_kninght">
+    <item id="71568" name="Transformation Sealbook: Dark Knight" icon="icon.dark_kninght">
         <!-- The book allows you to obtain Standard Dark Knight appearance. Cannot be dropped or sold in the grocery store. -->
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction dropable="false" sellable="false" stackable="true"/>
     </item>
-    <item id="71569" name="Transformation Sealbook: Dark Knight"  icon="icon.dark_kninght">
+    <item id="71569" name="Transformation Sealbook: Dark Knight" icon="icon.dark_kninght">
         <!-- The book allows you to obtain High-grade Dark Knight appearance. Cannot be dropped or sold in the grocery store. -->
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction dropable="false" sellable="false" stackable="true"/>
     </item>
-    <item id="71570" name="Transformation Sealbook: Dark Knight"  icon="icon.dark_kninght">
+    <item id="71570" name="Transformation Sealbook: Dark Knight" icon="icon.dark_kninght">
         <!-- The book allows you to obtain Rare Dark Knight appearance. Cannot be dropped or sold in the grocery store. -->
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction dropable="false" sellable="false" stackable="true"/>
     </item>
-    <item id="71571" name="Transformation Sealbook: Dark Knight"  icon="icon.dark_kninght">
+    <item id="71571" name="Transformation Sealbook: Dark Knight" icon="icon.dark_kninght">
         <!-- The book allows you to obtain Legendary Dark Knight appearance. Cannot be dropped or sold in the grocery store. -->
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction dropable="false" sellable="false" stackable="true"/>
     </item>
-    <item id="71572" name="Transformation Sealbook: Dark Knight"  icon="icon.dark_kninght">
+    <item id="71572" name="Transformation Sealbook: Dark Knight" icon="icon.dark_kninght">
         <!-- The book allows you to obtain Mythic Dark Knight appearance. Cannot be dropped or sold in the grocery store. -->
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction dropable="false" sellable="false" stackable="true"/>
     </item>
-    <item id="71573" name="Transformation Sealbook: Chevalier"  icon="icon.chevalier_chest_change">
+    <item id="71573" name="Transformation Sealbook: Chevalier" icon="icon.chevalier_chest_change">
         <!-- The book allows you to obtain Standard Chevalier appearance. Cannot be dropped or sold in the grocery store. -->
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction dropable="false" sellable="false" stackable="true"/>
     </item>
-    <item id="71574" name="Transformation Sealbook: Chevalier"  icon="icon.chevalier_chest_change">
+    <item id="71574" name="Transformation Sealbook: Chevalier" icon="icon.chevalier_chest_change">
         <!-- The book allows you to obtain High-grade Chevalier appearance. Cannot be dropped or sold in the grocery store. -->
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction dropable="false" sellable="false" stackable="true"/>
     </item>
-    <item id="71575" name="Transformation Sealbook: Chevalier"  icon="icon.chevalier_chest_change">
+    <item id="71575" name="Transformation Sealbook: Chevalier" icon="icon.chevalier_chest_change">
         <!-- The book allows you to obtain Rare Chevalier appearance. Cannot be dropped or sold in the grocery store. -->
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction dropable="false" sellable="false" stackable="true"/>
     </item>
-    <item id="71576" name="Transformation Sealbook: Chevalier"  icon="icon.chevalier_chest_change">
+    <item id="71576" name="Transformation Sealbook: Chevalier" icon="icon.chevalier_chest_change">
         <!-- The book allows you to obtain Legendary Chevalier appearance. Cannot be dropped or sold in the grocery store. -->
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction dropable="false" sellable="false" stackable="true"/>
     </item>
-    <item id="71577" name="Transformation Sealbook: Chevalier"  icon="icon.chevalier_chest_change">
+    <item id="71577" name="Transformation Sealbook: Chevalier" icon="icon.chevalier_chest_change">
         <!-- The book allows you to obtain Mythic Chevalier appearance. Cannot be dropped or sold in the grocery store. -->
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction dropable="false" sellable="false" stackable="true"/>
     </item>
-    <item id="71578" name="Transformation Sealbook: Red Archer"  icon="BranchIcon.Icon.g_bm_costume_archer_red">
+    <item id="71578" name="Transformation Sealbook: Red Archer" icon="BranchIcon.Icon.g_bm_costume_archer_red">
         <!-- The book allows you to obtain Standard Red Archer appearance. Cannot be dropped or sold in the grocery store. -->
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction dropable="false" sellable="false" stackable="true"/>
     </item>
-    <item id="71579" name="Transformation Sealbook: Red Archer"  icon="BranchIcon.Icon.g_bm_costume_archer_red">
+    <item id="71579" name="Transformation Sealbook: Red Archer" icon="BranchIcon.Icon.g_bm_costume_archer_red">
         <!-- The book allows you to obtain High-grade Red Archer appearance. Cannot be dropped or sold in the grocery store. -->
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction dropable="false" sellable="false" stackable="true"/>
     </item>
-    <item id="71580" name="Transformation Sealbook: Red Archer"  icon="BranchIcon.Icon.g_bm_costume_archer_red">
+    <item id="71580" name="Transformation Sealbook: Red Archer" icon="BranchIcon.Icon.g_bm_costume_archer_red">
         <!-- The book allows you to obtain Rare Red Archer appearance. Cannot be dropped or sold in the grocery store. -->
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction dropable="false" sellable="false" stackable="true"/>
     </item>
-    <item id="71581" name="Transformation Sealbook: Red Archer"  icon="BranchIcon.Icon.g_bm_costume_archer_red">
+    <item id="71581" name="Transformation Sealbook: Red Archer" icon="BranchIcon.Icon.g_bm_costume_archer_red">
         <!-- The book allows you to obtain Legendary Red Archer appearance. Cannot be dropped or sold in the grocery store. -->
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction dropable="false" sellable="false" stackable="true"/>
     </item>
-    <item id="71582" name="Transformation Sealbook: Red Archer"  icon="BranchIcon.Icon.g_bm_costume_archer_red">
+    <item id="71582" name="Transformation Sealbook: Red Archer" icon="BranchIcon.Icon.g_bm_costume_archer_red">
         <!-- The book allows you to obtain Mythic Red Archer appearance. Cannot be dropped or sold in the grocery store. -->
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction dropable="false" sellable="false" stackable="true"/>
     </item>
-    <item id="71583" name="Transformation Sealbook: Blue Pirate"  icon="BranchIcon.Icon.g_bm_costume_pirate_blue">
+    <item id="71583" name="Transformation Sealbook: Blue Pirate" icon="BranchIcon.Icon.g_bm_costume_pirate_blue">
         <!-- The book allows you to obtain Standard Blue Pirate appearance. Cannot be dropped or sold in the grocery store. -->
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction dropable="false" sellable="false" stackable="true"/>
     </item>
-    <item id="71584" name="Transformation Sealbook: Blue Pirate"  icon="BranchIcon.Icon.g_bm_costume_pirate_blue">
+    <item id="71584" name="Transformation Sealbook: Blue Pirate" icon="BranchIcon.Icon.g_bm_costume_pirate_blue">
         <!-- The book allows you to obtain High-grade Blue Pirate appearance. Cannot be dropped or sold in the grocery store. -->
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction dropable="false" sellable="false" stackable="true"/>
     </item>
-    <item id="71585" name="Transformation Sealbook: Blue Pirate"  icon="BranchIcon.Icon.g_bm_costume_pirate_blue">
+    <item id="71585" name="Transformation Sealbook: Blue Pirate" icon="BranchIcon.Icon.g_bm_costume_pirate_blue">
         <!-- The book allows you to obtain Rare Blue Pirate appearance. Cannot be dropped or sold in the grocery store. -->
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction dropable="false" sellable="false" stackable="true"/>
     </item>
-    <item id="71586" name="Transformation Sealbook: Blue Pirate"  icon="BranchIcon.Icon.g_bm_costume_pirate_blue">
+    <item id="71586" name="Transformation Sealbook: Blue Pirate" icon="BranchIcon.Icon.g_bm_costume_pirate_blue">
         <!-- The book allows you to obtain Legendary Blue Pirate appearance. Cannot be dropped or sold in the grocery store. -->
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction dropable="false" sellable="false" stackable="true"/>
     </item>
-    <item id="71587" name="Transformation Sealbook: Blue Pirate"  icon="BranchIcon.Icon.g_bm_costume_pirate_blue">
+    <item id="71587" name="Transformation Sealbook: Blue Pirate" icon="BranchIcon.Icon.g_bm_costume_pirate_blue">
         <!-- The book allows you to obtain Mythic Blue Pirate appearance. Cannot be dropped or sold in the grocery store. -->
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction dropable="false" sellable="false" stackable="true"/>
     </item>
-    <item id="71588" name="Transformation Sealbook: Dark Red Wizard"  icon="BranchIcon.Icon.g_bm_costume_wizard_wine">
+    <item id="71588" name="Transformation Sealbook: Dark Red Wizard" icon="BranchIcon.Icon.g_bm_costume_wizard_wine">
         <!-- The book allows you to obtain Standard Dark Red Wizard appearance. Cannot be dropped or sold in the grocery store. -->
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction dropable="false" sellable="false" stackable="true"/>
     </item>
-    <item id="71589" name="Transformation Sealbook: Dark Red Wizard"  icon="BranchIcon.Icon.g_bm_costume_wizard_wine">
+    <item id="71589" name="Transformation Sealbook: Dark Red Wizard" icon="BranchIcon.Icon.g_bm_costume_wizard_wine">
         <!-- The book allows you to obtain High-grade Dark Red Wizard appearance. Cannot be dropped or sold in the grocery store. -->
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction dropable="false" sellable="false" stackable="true"/>
     </item>
-    <item id="71590" name="Transformation Sealbook: Dark Red Wizard"  icon="BranchIcon.Icon.g_bm_costume_wizard_wine">
+    <item id="71590" name="Transformation Sealbook: Dark Red Wizard" icon="BranchIcon.Icon.g_bm_costume_wizard_wine">
         <!-- The book allows you to obtain Rare Dark Red Wizard appearance. Cannot be dropped or sold in the grocery store. -->
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction dropable="false" sellable="false" stackable="true"/>
     </item>
-    <item id="71591" name="Transformation Sealbook: Dark Red Wizard"  icon="BranchIcon.Icon.g_bm_costume_wizard_wine">
+    <item id="71591" name="Transformation Sealbook: Dark Red Wizard" icon="BranchIcon.Icon.g_bm_costume_wizard_wine">
         <!-- The book allows you to obtain Legendary Dark Red Wizard appearance. Cannot be dropped or sold in the grocery store. -->
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction dropable="false" sellable="false" stackable="true"/>
     </item>
-    <item id="71592" name="Transformation Sealbook: Dark Red Wizard"  icon="BranchIcon.Icon.g_bm_costume_wizard_wine">
+    <item id="71592" name="Transformation Sealbook: Dark Red Wizard" icon="BranchIcon.Icon.g_bm_costume_wizard_wine">
         <!-- The book allows you to obtain Mythic Dark Red Wizard appearance. Cannot be dropped or sold in the grocery store. -->
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction dropable="false" sellable="false" stackable="true"/>
     </item>
-    <item id="71593" name="Transformation Sealbook: Mystic"  icon="BranchIcon.Icon.g_bm_costume_magician">
+    <item id="71593" name="Transformation Sealbook: Mystic" icon="BranchIcon.Icon.g_bm_costume_magician">
         <!-- The book allows you to obtain Standard Mystic appearance. Cannot be dropped or sold in the grocery store. -->
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction dropable="false" sellable="false" stackable="true"/>
     </item>
-    <item id="71594" name="Transformation Sealbook: Mystic"  icon="BranchIcon.Icon.g_bm_costume_magician">
+    <item id="71594" name="Transformation Sealbook: Mystic" icon="BranchIcon.Icon.g_bm_costume_magician">
         <!-- The book allows you to obtain High-grade Mystic appearance. Cannot be dropped or sold in the grocery store. -->
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction dropable="false" sellable="false" stackable="true"/>
     </item>
-    <item id="71595" name="Transformation Sealbook: Mystic"  icon="BranchIcon.Icon.g_bm_costume_magician">
+    <item id="71595" name="Transformation Sealbook: Mystic" icon="BranchIcon.Icon.g_bm_costume_magician">
         <!-- The book allows you to obtain Rare Mystic appearance. Cannot be dropped or sold in the grocery store. -->
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction dropable="false" sellable="false" stackable="true"/>
     </item>
-    <item id="71596" name="Transformation Sealbook: Mystic"  icon="BranchIcon.Icon.g_bm_costume_magician">
+    <item id="71596" name="Transformation Sealbook: Mystic" icon="BranchIcon.Icon.g_bm_costume_magician">
         <!-- The book allows you to obtain Legendary Mystic appearance. Cannot be dropped or sold in the grocery store. -->
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction dropable="false" sellable="false" stackable="true"/>
     </item>
-    <item id="71597" name="Transformation Sealbook: Mystic"  icon="BranchIcon.Icon.g_bm_costume_magician">
+    <item id="71597" name="Transformation Sealbook: Mystic" icon="BranchIcon.Icon.g_bm_costume_magician">
         <!-- The book allows you to obtain Mythic Mystic appearance. Cannot be dropped or sold in the grocery store. -->
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction dropable="false" sellable="false" stackable="true"/>
     </item>
-    <item id="71598" name="Transformation Sealbook: Pirate"  icon="icon.bm2018_pirate_i01">
+    <item id="71598" name="Transformation Sealbook: Pirate" icon="icon.bm2018_pirate_i01">
         <!-- The book allows you to obtain Standard Pirate appearance. Cannot be dropped or sold in the grocery store. -->
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction dropable="false" sellable="false" stackable="true"/>
     </item>
-    <item id="71599" name="Transformation Sealbook: Pirate"  icon="icon.bm2018_pirate_i01">
+    <item id="71599" name="Transformation Sealbook: Pirate" icon="icon.bm2018_pirate_i01">
         <!-- The book allows you to obtain High-grade Pirate appearance. Cannot be dropped or sold in the grocery store. -->
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction dropable="false" sellable="false" stackable="true"/>
     </item>
 </list>

@@ -1,55 +1,53 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
-    <item id="8615" name="Summoning Crystal"  icon="icon.etc_recall_crystal_i00">
+    <item id="8615" name="Summoning Crystal" icon="icon.etc_recall_crystal_i00">
         <!-- Crystal imbued with mystical power. Used for teleportation magic. -->
         <set name="weight" val="10"/>
         <set name="price" val="35000"/>
-        <set name="is_stackable" val="true"/>
+        <restriction stackable="true"/>
     </item>
-    <item id="8618" name="Ancient Book: Divine Inspiration (Modern Language Version)"  icon="icon.etc_add_buffslot_i00">
+    <item id="8618" name="Ancient Book: Divine Inspiration (Modern Language Version)" icon="icon.etc_add_buffslot_i00">
         <!-- Restores forgotten abilities. The book was re-published after being translated into a the modern language. (Can only be used by characters level 52 or above.) -->
         <set name="immediate_effect" val="false"/>
         <set name="weight" val="120"/>
         <set name="commissionItemType" val="SPELLBOOK"/>
         <set name="default_action" val="SKILL_REDUCE"/>
         <set name="handler" val="ItemSkills"/>
-        <set name="is_stackable" val="true"/>
+        <restriction stackable="true"/>
         <skills>
             <skill id="1405" level="1"/> <!-- Divine Inspiration -->
         </skills>
     </item>
-    <item id="8619" name="Ancient Book: Divine Inspiration (Original Language Version)"  icon="icon.etc_add_buffslot_i01">
+    <item id="8619" name="Ancient Book: Divine Inspiration (Original Language Version)" icon="icon.etc_add_buffslot_i01">
         <!-- Restores forgotten abilities. This book was published by ancient scholars for research purposes. It contains more information than the modern language version. (Can only be used by characters level 61 or above.) -->
         <set name="immediate_effect" val="false"/>
         <set name="weight" val="120"/>
-        <set name="is_stackable" val="true"/>
-        <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="handler" val="ItemSkills"/>
         <set name="commissionItemType" val="SPELLBOOK"/>
+        <restriction stackable="true"/>
         <skills>
             <skill id="1405" level="2"/> <!-- Divine Inspiration -->
         </skills>
     </item>
-    <item id="8620" name="Ancient Book: Divine Inspiration (Manuscript)"  icon="icon.etc_add_buffslot_i02">
+    <item id="8620" name="Ancient Book: Divine Inspiration (Manuscript)" icon="icon.etc_add_buffslot_i02">
         <!-- Restores forgotten abilities. This book is a hand-written copy of the original. It is almost the same as the original version. (Can only be used by characters level 76 or above.) -->
         <set name="immediate_effect" val="false"/>
         <set name="weight" val="120"/>
         <set name="commissionItemType" val="SPELLBOOK"/>
         <set name="default_action" val="SKILL_REDUCE"/>
         <set name="handler" val="ItemSkills"/>
-        <set name="is_stackable" val="true"/>
+        <restriction stackable="true"/>
         <skills>
             <skill id="1405" level="3"/> <!-- Divine Inspiration -->
         </skills>
     </item>
-    <item id="8621" name="Ancient Book: Divine Inspiration (Original Version)"  icon="icon.etc_add_buffslot_i03">
+    <item id="8621" name="Ancient Book: Divine Inspiration (Original Version)" icon="icon.etc_add_buffslot_i03">
         <!-- Awakens a forgotten ability. Those who lack the requisite knowledge cannot understand its contents. (Can only be used by characters level 76 or above.) -->
         <set name="immediate_effect" val="false"/>
         <set name="weight" val="120"/>
         <set name="commissionItemType" val="SPELLBOOK"/>
         <set name="default_action" val="SKILL_REDUCE"/>
         <set name="handler" val="ItemSkills"/>
-        <set name="is_stackable" val="true"/>
+        <restriction stackable="true"/>
         <skills>
             <skill id="1405" level="4"/> <!-- Divine Inspiration -->
         </skills>
@@ -337,7 +335,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </weapon>
-    <item id="8690" name="Recipe: Sirra's Blade (60%)"  icon="icon.etc_recipe_violet_i00">
+    <item id="8690" name="Recipe: Sirra's Blade (60%)" icon="icon.etc_recipe_violet_i00">
         <!-- For Dwarves only. Recipe for Sirra's Blade. Requires Create Item - Skill Lv. 8. The success rate is 60%. -->
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
@@ -345,11 +343,10 @@
         <set name="weight" val="30"/>
         <set name="price" val="706000"/>
         <set name="recipe_id" val="844"/>
-        <set name="is_stackable" val="true"/>
-        <set name="commissionItemType" val="RECIPE"/>
         <set name="handler" val="Recipes"/>
+        <restriction stackable="true"/>
     </item>
-    <item id="8691" name="Recipe: Sirra's Blade (100%)"  icon="icon.etc_recipe_violet_i00">
+    <item id="8691" name="Recipe: Sirra's Blade (100%)" icon="icon.etc_recipe_violet_i00">
         <!-- For Dwarves only. Recipe for Sirra's Blade. Requires Create Item - Skill Lv. 8. The success rate is 100%. -->
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
@@ -357,11 +354,10 @@
         <set name="weight" val="30"/>
         <set name="price" val="706000"/>
         <set name="recipe_id" val="845"/>
-        <set name="is_stackable" val="true"/>
-        <set name="commissionItemType" val="RECIPE"/>
         <set name="handler" val="Recipes"/>
+        <restriction stackable="true"/>
     </item>
-    <item id="8692" name="Recipe: Sword of Ipos (60%)"  icon="icon.etc_recipe_violet_i00">
+    <item id="8692" name="Recipe: Sword of Ipos (60%)" icon="icon.etc_recipe_violet_i00">
         <!-- For Dwarves only. Recipe for Sword of Ipos. Requires Create Item - Skill Lv. 8. The success rate is 60%. -->
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
@@ -369,11 +365,10 @@
         <set name="weight" val="30"/>
         <set name="price" val="706000"/>
         <set name="recipe_id" val="846"/>
-        <set name="is_stackable" val="true"/>
-        <set name="commissionItemType" val="RECIPE"/>
         <set name="handler" val="Recipes"/>
+        <restriction stackable="true"/>
     </item>
-    <item id="8693" name="Recipe: Sword of Ipos (100%)"  icon="icon.etc_recipe_violet_i00">
+    <item id="8693" name="Recipe: Sword of Ipos (100%)" icon="icon.etc_recipe_violet_i00">
         <!-- For Dwarves only. Recipe for Sword of Ipos. Requires Create Item - Skill Lv. 8. The success rate is 100%. -->
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
@@ -381,11 +376,10 @@
         <set name="weight" val="30"/>
         <set name="price" val="706000"/>
         <set name="recipe_id" val="847"/>
-        <set name="is_stackable" val="true"/>
-        <set name="commissionItemType" val="RECIPE"/>
         <set name="handler" val="Recipes"/>
+        <restriction stackable="true"/>
     </item>
-    <item id="8694" name="Recipe: Barakiel's Axe (60%)"  icon="icon.etc_recipe_violet_i00">
+    <item id="8694" name="Recipe: Barakiel's Axe (60%)" icon="icon.etc_recipe_violet_i00">
         <!-- For Dwarves only. Recipe for Barakiel's Axe. Requires Create Item - Skill Lv. 8. The success rate is 60%. -->
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
@@ -393,11 +387,10 @@
         <set name="weight" val="30"/>
         <set name="price" val="706000"/>
         <set name="recipe_id" val="848"/>
-        <set name="is_stackable" val="true"/>
-        <set name="commissionItemType" val="RECIPE"/>
         <set name="handler" val="Recipes"/>
+        <restriction stackable="true"/>
     </item>
-    <item id="8695" name="Recipe: Barakiel's Axe (100%)"  icon="icon.etc_recipe_violet_i00">
+    <item id="8695" name="Recipe: Barakiel's Axe (100%)" icon="icon.etc_recipe_violet_i00">
         <!-- For Dwarves only. Recipe for Barakiel's Axe. Requires Create Item - Skill Lv. 8. The success rate is 100%. -->
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
@@ -405,11 +398,10 @@
         <set name="weight" val="30"/>
         <set name="price" val="706000"/>
         <set name="recipe_id" val="849"/>
-        <set name="is_stackable" val="true"/>
-        <set name="commissionItemType" val="RECIPE"/>
         <set name="handler" val="Recipes"/>
+        <restriction stackable="true"/>
     </item>
-    <item id="8696" name="Recipe: Behemoth' Tuning Fork (60%)"  icon="icon.etc_recipe_violet_i00">
+    <item id="8696" name="Recipe: Behemoth' Tuning Fork (60%)" icon="icon.etc_recipe_violet_i00">
         <!-- For Dwarves only. Recipe for Behemoth' Tuning Fork. Requires Create Item - Skill Lv. 8. The success rate is 60%. -->
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
@@ -417,11 +409,10 @@
         <set name="weight" val="30"/>
         <set name="price" val="706000"/>
         <set name="recipe_id" val="850"/>
-        <set name="is_stackable" val="true"/>
-        <set name="commissionItemType" val="RECIPE"/>
         <set name="handler" val="Recipes"/>
+        <restriction stackable="true"/>
     </item>
-    <item id="8697" name="Recipe: Behemoth' Tuning Fork (100%)"  icon="icon.etc_recipe_violet_i00">
+    <item id="8697" name="Recipe: Behemoth' Tuning Fork (100%)" icon="icon.etc_recipe_violet_i00">
         <!-- For Dwarves only. Recipe for Behemoth' Tuning Fork. Requires Create Item - Skill Lv. 8. The success rate is 100%. -->
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
@@ -429,11 +420,10 @@
         <set name="weight" val="30"/>
         <set name="price" val="706000"/>
         <set name="recipe_id" val="851"/>
-        <set name="is_stackable" val="true"/>
-        <set name="commissionItemType" val="RECIPE"/>
         <set name="handler" val="Recipes"/>
+        <restriction stackable="true"/>
     </item>
-    <item id="8698" name="Recipe: Naga Storm (60%)"  icon="icon.etc_recipe_violet_i00">
+    <item id="8698" name="Recipe: Naga Storm (60%)" icon="icon.etc_recipe_violet_i00">
         <!-- For Dwarves only. Recipe for Naga Storm. Requires Create Item - Skill Lv. 8. The success rate is 60%. -->
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
@@ -441,11 +431,10 @@
         <set name="weight" val="30"/>
         <set name="price" val="706000"/>
         <set name="recipe_id" val="852"/>
-        <set name="is_stackable" val="true"/>
-        <set name="commissionItemType" val="RECIPE"/>
         <set name="handler" val="Recipes"/>
+        <restriction stackable="true"/>
     </item>
-    <item id="8699" name="Recipe: Naga Storm (100%)"  icon="icon.etc_recipe_violet_i00">
+    <item id="8699" name="Recipe: Naga Storm (100%)" icon="icon.etc_recipe_violet_i00">
         <!-- For Dwarves only. Recipe for Naga Storm. Requires Create Item - Skill Lv. 8. The success rate is 100%. -->
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
@@ -453,8 +442,7 @@
         <set name="weight" val="30"/>
         <set name="price" val="706000"/>
         <set name="recipe_id" val="853"/>
-        <set name="is_stackable" val="true"/>
-        <set name="commissionItemType" val="RECIPE"/>
         <set name="handler" val="Recipes"/>
+        <restriction stackable="true"/>
     </item>
 </list>

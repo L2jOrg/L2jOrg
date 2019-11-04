@@ -1,421 +1,293 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
-    <item id="29100" name="Premium Dye of INT (INT + 2 WIT - 2)"  icon="icon.etc_int_hena_i02">
+    <item id="29100" name="Premium Dye of INT (INT + 2 WIT - 2)" icon="icon.etc_int_hena_i02">
         <!-- Greater Dye of INT. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after 1st class transfer. -->
         <set name="weight" val="30"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction sellable="false" stackable="true"/>
     </item>
-    <item id="29101" name="Premium Dye of MEN (MEN + 2 INT - 2)"  icon="icon.etc_men_hena_i02">
+    <item id="29101" name="Premium Dye of MEN (MEN + 2 INT - 2)" icon="icon.etc_men_hena_i02">
         <!-- Greater Dye of MEN. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after 1st class transfer. -->
         <set name="weight" val="30"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction sellable="false" stackable="true"/>
     </item>
-    <item id="29102" name="Premium Dye of MEN (MEN + 2 WIT - 2)"  icon="icon.etc_men_hena_i02">
+    <item id="29102" name="Premium Dye of MEN (MEN + 2 WIT - 2)" icon="icon.etc_men_hena_i02">
         <!-- Greater Dye of MEN. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after 1st class transfer. -->
         <set name="weight" val="30"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction sellable="false" stackable="true"/>
     </item>
-    <item id="29103" name="Premium Dye of WIT (WIT + 2 INT - 2)"  icon="icon.etc_wit_hena_i02">
+    <item id="29103" name="Premium Dye of WIT (WIT + 2 INT - 2)" icon="icon.etc_wit_hena_i02">
         <!-- Greater Dye of WIT. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after 1st class transfer. -->
         <set name="weight" val="30"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction sellable="false" stackable="true"/>
     </item>
-    <item id="29104" name="Premium Dye of WIT (WIT + 2 MEN - 2)"  icon="icon.etc_wit_hena_i02">
+    <item id="29104" name="Premium Dye of WIT (WIT + 2 MEN - 2)" icon="icon.etc_wit_hena_i02">
         <!-- Greater Dye of WIT. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after 1st class transfer. -->
         <set name="weight" val="30"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction sellable="false" stackable="true"/>
     </item>
-    <item id="29105" name="Premium Dye of STR (STR + 3 CON - 3)"  icon="icon.etc_str_hena_i02">
+    <item id="29105" name="Premium Dye of STR (STR + 3 CON - 3)" icon="icon.etc_str_hena_i02">
         <!-- Greater Dye of STR. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after 1st class transfer. -->
         <set name="weight" val="30"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction sellable="false" stackable="true"/>
     </item>
-    <item id="29106" name="Premium Dye of STR (STR + 3 DEX - 3)"  icon="icon.etc_str_hena_i02">
+    <item id="29106" name="Premium Dye of STR (STR + 3 DEX - 3)" icon="icon.etc_str_hena_i02">
         <!-- Greater Dye of STR. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after 1st class transfer. -->
         <set name="weight" val="30"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction sellable="false" stackable="true"/>
     </item>
-    <item id="29107" name="Premium Dye of CON (CON+ 3 STR - 3)"  icon="icon.etc_con_hena_i02">
+    <item id="29107" name="Premium Dye of CON (CON+ 3 STR - 3)" icon="icon.etc_con_hena_i02">
         <!-- Greater Dye of CON. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after 1st class transfer. -->
         <set name="weight" val="30"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction sellable="false" stackable="true"/>
     </item>
-    <item id="29108" name="Premium Dye of CON (CON + 3 DEX - 3)"  icon="icon.etc_con_hena_i02">
+    <item id="29108" name="Premium Dye of CON (CON + 3 DEX - 3)" icon="icon.etc_con_hena_i02">
         <!-- Greater Dye of CON. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after 1st class transfer. -->
         <set name="weight" val="30"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction sellable="false" stackable="true"/>
     </item>
-    <item id="29109" name="Premium Dye of DEX (DEX + 3 STR - 3)"  icon="icon.etc_dex_hena_i02">
+    <item id="29109" name="Premium Dye of DEX (DEX + 3 STR - 3)" icon="icon.etc_dex_hena_i02">
         <!-- Greater Dye of DEX. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after 1st class transfer. -->
         <set name="weight" val="30"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction sellable="false" stackable="true"/>
     </item>
-    <item id="29110" name="Premium Dye of DEX (DEX + 3 CON - 3)"  icon="icon.etc_dex_hena_i02">
+    <item id="29110" name="Premium Dye of DEX (DEX + 3 CON - 3)" icon="icon.etc_dex_hena_i02">
         <!-- Greater Dye of DEX. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after 1st class transfer. -->
         <set name="weight" val="30"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction sellable="false" stackable="true"/>
     </item>
-    <item id="29111" name="Premium Dye of INT (INT + 3 MEN - 3)"  icon="icon.etc_int_hena_i02">
+    <item id="29111" name="Premium Dye of INT (INT + 3 MEN - 3)" icon="icon.etc_int_hena_i02">
         <!-- Greater Dye of INT. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after 1st class transfer. -->
         <set name="weight" val="30"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction sellable="false" stackable="true"/>
     </item>
-    <item id="29112" name="Premium Dye of INT (INT+ 3 WIT - 3)"  icon="icon.etc_int_hena_i02">
+    <item id="29112" name="Premium Dye of INT (INT+ 3 WIT - 3)" icon="icon.etc_int_hena_i02">
         <!-- Greater Dye of INT. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after 1st class transfer. -->
         <set name="weight" val="30"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction sellable="false" stackable="true"/>
     </item>
-    <item id="29113" name="Premium Dye of MEN (MEN + 3 INT - 3)"  icon="icon.etc_men_hena_i02">
+    <item id="29113" name="Premium Dye of MEN (MEN + 3 INT - 3)" icon="icon.etc_men_hena_i02">
         <!-- Greater Dye of MEN. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after 1st class transfer. -->
         <set name="weight" val="30"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction sellable="false" stackable="true"/>
     </item>
-    <item id="29114" name="Premium Dye of MEN (MEN + 3 WIT - 3)"  icon="icon.etc_men_hena_i02">
+    <item id="29114" name="Premium Dye of MEN (MEN + 3 WIT - 3)" icon="icon.etc_men_hena_i02">
         <!-- Greater Dye of MEN. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after 1st class transfer. -->
         <set name="weight" val="30"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction sellable="false" stackable="true"/>
     </item>
-    <item id="29115" name="Premium Dye of WIT (WIT + 3 INT - 3)"  icon="icon.etc_wit_hena_i02">
+    <item id="29115" name="Premium Dye of WIT (WIT + 3 INT - 3)" icon="icon.etc_wit_hena_i02">
         <!-- Greater Dye of WIT. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after 1st class transfer. -->
         <set name="weight" val="30"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction sellable="false" stackable="true"/>
     </item>
-    <item id="29116" name="Premium Dye of WIT (WIT + 3 MEN - 3)"  icon="icon.etc_wit_hena_i02">
+    <item id="29116" name="Premium Dye of WIT (WIT + 3 MEN - 3)" icon="icon.etc_wit_hena_i02">
         <!-- Greater Dye of WIT. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after 1st class transfer. -->
         <set name="weight" val="30"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction sellable="false" stackable="true"/>
     </item>
-    <item id="29117" name="Premium Greater Dye of STR (STR + 4 CON - 3)"  icon="icon.etc_str_hena_i02">
+    <item id="29117" name="Premium Greater Dye of STR (STR + 4 CON - 3)" icon="icon.etc_str_hena_i02">
         <!-- Greater Dye of STR. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after 1st class transfer. -->
         <set name="weight" val="30"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction sellable="false" stackable="true"/>
     </item>
-    <item id="29118" name="Premium Greater Dye of STR (STR + 4 DEX - 3)"  icon="icon.etc_str_hena_i02">
+    <item id="29118" name="Premium Greater Dye of STR (STR + 4 DEX - 3)" icon="icon.etc_str_hena_i02">
         <!-- Greater Dye of STR. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after 1st class transfer. -->
         <set name="weight" val="30"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction sellable="false" stackable="true"/>
     </item>
-    <item id="29119" name="Premium Greater Dye of CON (CON + 4 STR - 3)"  icon="icon.etc_con_hena_i02">
+    <item id="29119" name="Premium Greater Dye of CON (CON + 4 STR - 3)" icon="icon.etc_con_hena_i02">
         <!-- Greater Dye of CON. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after 1st class transfer. -->
         <set name="weight" val="30"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction sellable="false" stackable="true"/>
     </item>
-    <item id="29120" name="Premium Greater Dye of CON (CON + 4 DEX - 3)"  icon="icon.etc_con_hena_i02">
+    <item id="29120" name="Premium Greater Dye of CON (CON + 4 DEX - 3)" icon="icon.etc_con_hena_i02">
         <!-- Greater Dye of CON. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after 1st class transfer. -->
         <set name="weight" val="30"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction sellable="false" stackable="true"/>
     </item>
-    <item id="29121" name="Premium Greater Dye of DEX (DEX + 4 STR - 3)"  icon="icon.etc_dex_hena_i02">
+    <item id="29121" name="Premium Greater Dye of DEX (DEX + 4 STR - 3)" icon="icon.etc_dex_hena_i02">
         <!-- Greater Dye of DEX. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after 1st class transfer. -->
         <set name="weight" val="30"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction sellable="false" stackable="true"/>
     </item>
-    <item id="29122" name="Premium Greater Dye of DEX (DEX + 4 CON - 3)"  icon="icon.etc_dex_hena_i02">
+    <item id="29122" name="Premium Greater Dye of DEX (DEX + 4 CON - 3)" icon="icon.etc_dex_hena_i02">
         <!-- Greater Dye of DEX. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after 1st class transfer. -->
         <set name="weight" val="30"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction sellable="false" stackable="true"/>
     </item>
-    <item id="29123" name="Premium Greater Dye of INT (INT + 4 MEN - 3)"  icon="icon.etc_int_hena_i02">
+    <item id="29123" name="Premium Greater Dye of INT (INT + 4 MEN - 3)" icon="icon.etc_int_hena_i02">
         <!-- Greater Dye of INT. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after 1st class transfer. -->
         <set name="weight" val="30"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction sellable="false" stackable="true"/>
     </item>
-    <item id="29124" name="Premium Greater Dye of INT (INT + 4 WIT - 3)"  icon="icon.etc_int_hena_i02">
+    <item id="29124" name="Premium Greater Dye of INT (INT + 4 WIT - 3)" icon="icon.etc_int_hena_i02">
         <!-- Greater Dye of INT. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after 1st class transfer. -->
         <set name="weight" val="30"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction sellable="false" stackable="true"/>
     </item>
-    <item id="29125" name="Premium Greater Dye of MEN (MEN + 4 INT - 3)"  icon="icon.etc_men_hena_i02">
+    <item id="29125" name="Premium Greater Dye of MEN (MEN + 4 INT - 3)" icon="icon.etc_men_hena_i02">
         <!-- Greater Dye of MEN. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after 1st class transfer. -->
         <set name="weight" val="30"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction sellable="false" stackable="true"/>
     </item>
-    <item id="29126" name="Premium Greater Dye of MEN (MEN + 4 WIT - 3)"  icon="icon.etc_men_hena_i02">
+    <item id="29126" name="Premium Greater Dye of MEN (MEN + 4 WIT - 3)" icon="icon.etc_men_hena_i02">
         <!-- Greater Dye of MEN. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after 1st class transfer. -->
         <set name="weight" val="30"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction sellable="false" stackable="true"/>
     </item>
-    <item id="29127" name="Premium Greater Dye of WIT (WIT + 4 INT - 3)"  icon="icon.etc_wit_hena_i02">
+    <item id="29127" name="Premium Greater Dye of WIT (WIT + 4 INT - 3)" icon="icon.etc_wit_hena_i02">
         <!-- Greater Dye of WIT. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after 1st class transfer. -->
         <set name="weight" val="30"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction sellable="false" stackable="true"/>
     </item>
-    <item id="29128" name="Premium Greater Dye of WIT (WIT + 4 MEN - 3)"  icon="icon.etc_wit_hena_i02">
+    <item id="29128" name="Premium Greater Dye of WIT (WIT + 4 MEN - 3)" icon="icon.etc_wit_hena_i02">
         <!-- Greater Dye of WIT. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after 1st class transfer. -->
         <set name="weight" val="30"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction sellable="false" stackable="true"/>
     </item>
-    <item id="29129" name="Newbie Kit"  icon="icon.etc_pi_gift_box_i00">
+    <item id="29129" name="Newbie Kit" icon="icon.etc_pi_gift_box_i00">
         <!-- Double-click the package to receive the present. Available since level 10. -->
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="100"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true" freightable="true"/>
     </item>
-    <item id="29130" name="Newbie Kit"  icon="icon.etc_pi_gift_box_i00">
+    <item id="29130" name="Newbie Kit" icon="icon.etc_pi_gift_box_i00">
         <!-- Double-click the package to receive the present. Available since level 15. -->
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="100"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true" freightable="true"/>
     </item>
-    <item id="29131" name="Newbie Kit"  icon="icon.etc_pi_gift_box_i00">
+    <item id="29131" name="Newbie Kit" icon="icon.etc_pi_gift_box_i00">
         <!-- Double-click the package to receive the present. Available since level 17. -->
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="100"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true" freightable="true"/>
     </item>
-    <item id="29132" name="Newbie Kit"  icon="icon.etc_pi_gift_box_i00">
+    <item id="29132" name="Newbie Kit" icon="icon.etc_pi_gift_box_i00">
         <!-- Double-click the package to receive the present. Available since level 21. -->
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="100"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true" freightable="true"/>
     </item>
-    <item id="29133" name="Newbie Kit"  icon="icon.etc_pi_gift_box_i00">
+    <item id="29133" name="Newbie Kit" icon="icon.etc_pi_gift_box_i00">
         <!-- Double-click the package to receive the present. Available since level 23. -->
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="100"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true" freightable="true"/>
     </item>
-    <item id="29134" name="Newbie Kit"  icon="icon.etc_pi_gift_box_i00">
+    <item id="29134" name="Newbie Kit" icon="icon.etc_pi_gift_box_i00">
         <!-- Double-click the package to receive the present. Available since level 24. -->
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="100"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true" freightable="true"/>
     </item>
-    <item id="29135" name="Traveller's Package"  icon="icon.etc_pi_gift_box_i00">
+    <item id="29135" name="Traveller's Package" icon="icon.etc_pi_gift_box_i00">
         <!-- Double-click the package to receive the present. Available since level 20. -->
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="100"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true" freightable="true"/>
     </item>
-    <item id="29136" name="Traveller's Package"  icon="icon.etc_pi_gift_box_i00">
+    <item id="29136" name="Traveller's Package" icon="icon.etc_pi_gift_box_i00">
         <!-- Double-click the package to receive the present. Available since level 23. -->
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="100"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true" freightable="true"/>
     </item>
-    <item id="29137" name="Traveller's Package"  icon="icon.etc_pi_gift_box_i00">
+    <item id="29137" name="Traveller's Package" icon="icon.etc_pi_gift_box_i00">
         <!-- Double-click the package to receive the present. Available since level 26. -->
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="100"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true" freightable="true"/>
     </item>
-    <item id="29138" name="Traveller's Package"  icon="icon.etc_pi_gift_box_i00">
+    <item id="29138" name="Traveller's Package" icon="icon.etc_pi_gift_box_i00">
         <!-- Double-click the package to receive the present. Available since level 29. -->
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="100"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true" freightable="true"/>
     </item>
-    <item id="29139" name="Traveller's Package"  icon="icon.etc_pi_gift_box_i00">
+    <item id="29139" name="Traveller's Package" icon="icon.etc_pi_gift_box_i00">
         <!-- Double-click the package to receive the present. Available since level 10. -->
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="100"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true" freightable="true"/>
     </item>
-    <item id="29140" name="Traveller's Package"  icon="icon.etc_pi_gift_box_i00">
+    <item id="29140" name="Traveller's Package" icon="icon.etc_pi_gift_box_i00">
         <!-- Double-click the package to receive the present. Available since level 32. -->
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="100"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true" freightable="true"/>
     </item>
-    <item id="29141" name="Master's Package"  icon="icon.etc_pi_gift_box_i00">
+    <item id="29141" name="Master's Package" icon="icon.etc_pi_gift_box_i00">
         <!-- Double-click the package to receive the present. Available since level 30. -->
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="100"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true" freightable="true"/>
     </item>
-    <item id="29142" name="Master's Package"  icon="icon.etc_pi_gift_box_i00">
+    <item id="29142" name="Master's Package" icon="icon.etc_pi_gift_box_i00">
         <!-- Double-click the package to receive the present. Available since level 33. -->
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="100"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true" freightable="true"/>
     </item>
-    <item id="29143" name="Master's Package"  icon="icon.etc_pi_gift_box_i00">
+    <item id="29143" name="Master's Package" icon="icon.etc_pi_gift_box_i00">
         <!-- Double-click the package to receive the present. Available since level 10. -->
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="100"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true" freightable="true"/>
     </item>
-    <item id="29144" name="Master's Package"  icon="icon.etc_pi_gift_box_i00">
+    <item id="29144" name="Master's Package" icon="icon.etc_pi_gift_box_i00">
         <!-- Double-click the package to receive the present. Available since level 35. -->
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="100"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true" freightable="true"/>
     </item>
-    <item id="29145" name="Master's Package"  icon="icon.etc_pi_gift_box_i00">
+    <item id="29145" name="Master's Package" icon="icon.etc_pi_gift_box_i00">
         <!-- Double-click the package to receive the present. Available since level 37. -->
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="100"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true" freightable="true"/>
     </item>
-    <item id="29146" name="Master's Package"  icon="icon.etc_pi_gift_box_i00">
+    <item id="29146" name="Master's Package" icon="icon.etc_pi_gift_box_i00">
         <!-- Double-click the package to receive the present. Available since level 38. -->
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="100"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true" freightable="true"/>
     </item>
-    <item id="29147" name="Master's Package"  icon="icon.etc_pi_gift_box_i00">
+    <item id="29147" name="Master's Package" icon="icon.etc_pi_gift_box_i00">
         <!-- Double-click the package to receive the present. Available since level 39. -->
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="100"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true" freightable="true"/>
     </item>
-    <item id="29148" name="Feather of Blessing"  icon="icon.blessed_feather_i00">
+    <item id="29148" name="Feather of Blessing" icon="icon.blessed_feather_i00">
         <!-- Dimensional item.  Blessed feather that allows to resurrect right in the place of death. -->
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction sellable="false" stackable="true"/>
     </item>
-    <item id="29149" name="Teleport: Talking Island Village"  icon="icon.etc_scroll_of_return_i04">
+    <item id="29149" name="Teleport: Talking Island Village" icon="icon.etc_scroll_of_return_i04">
         <!-- Magic scroll that allows you to teleport to Talking Island Village. -->
         <set name="default_action" val="SKILL_REDUCE"/>
         <set name="weight" val="5"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_oly_restricted" val="true"/>
-        <set name="handler" val="ItemSkills"/>
         <set name="commissionItemType" val="SCROLL_OTHER"/>
+        <restriction sellable="false" stackable="true" olympiad-restricted="true"/>
         <cond addName="1" msgId="113">
             <player flyMounted="false"/>
         </cond>
@@ -423,15 +295,12 @@
             <skill id="32031" level="1"/> <!-- Scroll of Escape: Talking Island Village -->
         </skills>
     </item>
-    <item id="29150" name="Teleport: Elven Village"  icon="icon.etc_scroll_of_return_i04">
+    <item id="29150" name="Teleport: Elven Village" icon="icon.etc_scroll_of_return_i04">
         <!-- Magic scroll that allows you to teleport to Elven Village. -->
         <set name="default_action" val="SKILL_REDUCE"/>
         <set name="weight" val="5"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_oly_restricted" val="true"/>
-        <set name="handler" val="ItemSkills"/>
         <set name="commissionItemType" val="SCROLL_OTHER"/>
+        <restriction sellable="false" stackable="true" olympiad-restricted="true"/>
         <cond addName="1" msgId="113">
             <player flyMounted="false"/>
         </cond>
@@ -439,15 +308,12 @@
             <skill id="32032" level="1"/> <!-- Scroll of Escape: Elven Village -->
         </skills>
     </item>
-    <item id="29151" name="Teleport: Dark Elf Village"  icon="icon.etc_scroll_of_return_i04">
+    <item id="29151" name="Teleport: Dark Elf Village" icon="icon.etc_scroll_of_return_i04">
         <!-- Magic scroll that allows you to teleport to Dark Elf Village. -->
         <set name="default_action" val="SKILL_REDUCE"/>
         <set name="weight" val="5"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_oly_restricted" val="true"/>
-        <set name="handler" val="ItemSkills"/>
         <set name="commissionItemType" val="SCROLL_OTHER"/>
+        <restriction sellable="false" stackable="true" olympiad-restricted="true"/>
         <cond addName="1" msgId="113">
             <player flyMounted="false"/>
         </cond>
@@ -455,15 +321,12 @@
             <skill id="32033" level="1"/> <!-- Scroll of Escape: Dark Elven Village -->
         </skills>
     </item>
-    <item id="29152" name="Teleport: Orc Village"  icon="icon.etc_scroll_of_return_i04">
+    <item id="29152" name="Teleport: Orc Village" icon="icon.etc_scroll_of_return_i04">
         <!-- Magic scroll that allows you to teleport to Orc Village. -->
         <set name="default_action" val="SKILL_REDUCE"/>
         <set name="weight" val="5"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_oly_restricted" val="true"/>
-        <set name="handler" val="ItemSkills"/>
         <set name="commissionItemType" val="SCROLL_OTHER"/>
+        <restriction sellable="false" stackable="true" olympiad-restricted="true"/>
         <cond addName="1" msgId="113">
             <player flyMounted="false"/>
         </cond>
@@ -471,15 +334,12 @@
             <skill id="32034" level="1"/> <!-- Scroll of Escape: Orc Village -->
         </skills>
     </item>
-    <item id="29153" name="Teleport: Dwarven Village"  icon="icon.etc_scroll_of_return_i04">
+    <item id="29153" name="Teleport: Dwarven Village" icon="icon.etc_scroll_of_return_i04">
         <!-- Magic scroll that allows you to teleport to Dwarven Village. -->
         <set name="default_action" val="SKILL_REDUCE"/>
         <set name="weight" val="5"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_oly_restricted" val="true"/>
-        <set name="handler" val="ItemSkills"/>
         <set name="commissionItemType" val="SCROLL_OTHER"/>
+        <restriction sellable="false" stackable="true" olympiad-restricted="true"/>
         <cond addName="1" msgId="113">
             <player flyMounted="false"/>
         </cond>
@@ -487,15 +347,12 @@
             <skill id="32035" level="1"/> <!-- Scroll of Escape: Dwarven Village -->
         </skills>
     </item>
-    <item id="29154" name="Teleport: Gludin"  icon="icon.etc_scroll_of_return_i04">
+    <item id="29154" name="Teleport: Gludin" icon="icon.etc_scroll_of_return_i04">
         <!-- Magic scroll that allows you to teleport to Gludin. -->
         <set name="default_action" val="SKILL_REDUCE"/>
         <set name="weight" val="5"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_oly_restricted" val="true"/>
-        <set name="handler" val="ItemSkills"/>
         <set name="commissionItemType" val="SCROLL_OTHER"/>
+        <restriction sellable="false" stackable="true" olympiad-restricted="true"/>
         <cond addName="1" msgId="113">
             <player flyMounted="false"/>
         </cond>
@@ -503,15 +360,12 @@
             <skill id="32036" level="1"/> <!-- Scroll of Escape: Gludin Village -->
         </skills>
     </item>
-    <item id="29155" name="Teleport: Gludio"  icon="icon.etc_scroll_of_return_i04">
+    <item id="29155" name="Teleport: Gludio" icon="icon.etc_scroll_of_return_i04">
         <!-- Magic scroll that allows you to teleport to Gludio. -->
         <set name="default_action" val="SKILL_REDUCE"/>
         <set name="weight" val="5"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_oly_restricted" val="true"/>
-        <set name="handler" val="ItemSkills"/>
         <set name="commissionItemType" val="SCROLL_OTHER"/>
+        <restriction sellable="false" stackable="true" olympiad-restricted="true"/>
         <cond addName="1" msgId="113">
             <player flyMounted="false"/>
         </cond>
@@ -527,10 +381,7 @@
         <set name="weight" val="1150"/>
         <set name="soulshots" val="2"/>
         <set name="spiritshots" val="2"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pAtk">7</stat>
             <stat type="mAtk">6</stat>
@@ -549,10 +400,7 @@
         <set name="weight" val="1140"/>
         <set name="soulshots" val="2"/>
         <set name="spiritshots" val="2"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pAtk">10</stat>
             <stat type="mAtk">9</stat>
@@ -571,10 +419,7 @@
         <set name="weight" val="1130"/>
         <set name="soulshots" val="2"/>
         <set name="spiritshots" val="2"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pAtk">10</stat>
             <stat type="mAtk">9</stat>
@@ -593,10 +438,7 @@
         <set name="weight" val="1130"/>
         <set name="soulshots" val="2"/>
         <set name="spiritshots" val="2"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pAtk">15</stat>
             <stat type="mAtk">12</stat>
@@ -615,10 +457,7 @@
         <set name="weight" val="1120"/>
         <set name="soulshots" val="2"/>
         <set name="spiritshots" val="2"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pAtk">21</stat>
             <stat type="mAtk">17</stat>
@@ -637,10 +476,7 @@
         <set name="weight" val="1120"/>
         <set name="soulshots" val="2"/>
         <set name="spiritshots" val="2"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pAtk">21</stat>
             <stat type="mAtk">17</stat>
@@ -659,10 +495,7 @@
         <set name="weight" val="1110"/>
         <set name="soulshots" val="2"/>
         <set name="spiritshots" val="2"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pAtk">27</stat>
             <stat type="mAtk">21</stat>
@@ -681,10 +514,7 @@
         <set name="weight" val="1100"/>
         <set name="soulshots" val="2"/>
         <set name="spiritshots" val="2"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pAtk">16</stat>
             <stat type="mAtk">13</stat>
@@ -704,10 +534,7 @@
         <set name="weight" val="1130"/>
         <set name="soulshots" val="2"/>
         <set name="spiritshots" val="2"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pAtk">11</stat>
             <stat type="mAtk">10</stat>
@@ -726,10 +553,7 @@
         <set name="weight" val="1050"/>
         <set name="soulshots" val="2"/>
         <set name="spiritshots" val="2"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pAtk">11</stat>
             <stat type="mAtk">10</stat>
@@ -748,10 +572,7 @@
         <set name="weight" val="1100"/>
         <set name="soulshots" val="2"/>
         <set name="spiritshots" val="2"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pAtk">11</stat>
             <stat type="mAtk">10</stat>
@@ -770,10 +591,7 @@
         <set name="weight" val="1100"/>
         <set name="soulshots" val="3"/>
         <set name="spiritshots" val="3"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pAtk">35</stat>
             <stat type="mAtk">26</stat>
@@ -792,10 +610,7 @@
         <set name="weight" val="1100"/>
         <set name="soulshots" val="3"/>
         <set name="spiritshots" val="3"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pAtk">35</stat>
             <stat type="mAtk">26</stat>
@@ -814,10 +629,7 @@
         <set name="weight" val="1090"/>
         <set name="soulshots" val="3"/>
         <set name="spiritshots" val="3"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pAtk">45</stat>
             <stat type="mAtk">32</stat>
@@ -836,10 +648,7 @@
         <set name="weight" val="1080"/>
         <set name="soulshots" val="3"/>
         <set name="spiritshots" val="3"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pAtk">56</stat>
             <stat type="mAtk">39</stat>
@@ -858,10 +667,7 @@
         <set name="weight" val="1070"/>
         <set name="soulshots" val="5"/>
         <set name="spiritshots" val="5"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pAtk">69</stat>
             <stat type="mAtk">47</stat>
@@ -880,10 +686,7 @@
         <set name="weight" val="1060"/>
         <set name="soulshots" val="5"/>
         <set name="spiritshots" val="5"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pAtk">80</stat>
             <stat type="mAtk">54</stat>
@@ -902,10 +705,7 @@
         <set name="weight" val="750"/>
         <set name="soulshots" val="3"/>
         <set name="spiritshots" val="3"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pAtk">45</stat>
             <stat type="mAtk">52</stat>
@@ -924,10 +724,7 @@
         <set name="weight" val="760"/>
         <set name="soulshots" val="3"/>
         <set name="spiritshots" val="3"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pAtk">45</stat>
             <stat type="mAtk">52</stat>
@@ -946,10 +743,7 @@
         <set name="weight" val="750"/>
         <set name="soulshots" val="3"/>
         <set name="spiritshots" val="3"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pAtk">45</stat>
             <stat type="mAtk">52</stat>
@@ -968,10 +762,7 @@
         <set name="weight" val="750"/>
         <set name="soulshots" val="3"/>
         <set name="spiritshots" val="3"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pAtk">45</stat>
             <stat type="mAtk">52</stat>
@@ -991,10 +782,7 @@
         <set name="weight" val="1070"/>
         <set name="soulshots" val="5"/>
         <set name="spiritshots" val="5"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pAtk">62</stat>
             <stat type="mAtk">42</stat>
@@ -1013,10 +801,7 @@
         <set name="weight" val="1600"/>
         <set name="soulshots" val="2"/>
         <set name="spiritshots" val="2"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pAtk">8</stat>
             <stat type="mAtk">6</stat>
@@ -1034,10 +819,7 @@
         <set name="weight" val="1560"/>
         <set name="soulshots" val="2"/>
         <set name="spiritshots" val="2"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pAtk">24</stat>
             <stat type="mAtk">17</stat>
@@ -1055,10 +837,7 @@
         <set name="weight" val="1590"/>
         <set name="soulshots" val="2"/>
         <set name="spiritshots" val="2"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pAtk">11</stat>
             <stat type="mAtk">9</stat>
@@ -1076,10 +855,7 @@
         <set name="weight" val="1570"/>
         <set name="soulshots" val="2"/>
         <set name="spiritshots" val="2"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pAtk">17</stat>
             <stat type="mAtk">12</stat>
@@ -1097,10 +873,7 @@
         <set name="weight" val="1570"/>
         <set name="soulshots" val="2"/>
         <set name="spiritshots" val="2"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pAtk">17</stat>
             <stat type="mAtk">12</stat>
@@ -1118,10 +891,7 @@
         <set name="weight" val="1530"/>
         <set name="soulshots" val="2"/>
         <set name="spiritshots" val="2"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pAtk">31</stat>
             <stat type="mAtk">21</stat>
@@ -1139,11 +909,8 @@
         <set name="weight" val="650"/>
         <set name="soulshots" val="2"/>
         <set name="spiritshots" val="2"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
         <set name="is_magic_weapon" val="true"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pAtk">9</stat>
             <stat type="mAtk">12</stat>
@@ -1161,10 +928,7 @@
         <set name="weight" val="630"/>
         <set name="soulshots" val="2"/>
         <set name="spiritshots" val="2"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pAtk">25</stat>
             <stat type="mAtk">28</stat>
@@ -1182,10 +946,7 @@
         <set name="weight" val="1550"/>
         <set name="soulshots" val="2"/>
         <set name="spiritshots" val="2"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pAtk">24</stat>
             <stat type="mAtk">17</stat>
@@ -1203,10 +964,7 @@
         <set name="weight" val="1540"/>
         <set name="soulshots" val="2"/>
         <set name="spiritshots" val="2"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pAtk">24</stat>
             <stat type="mAtk">17</stat>
@@ -1224,10 +982,7 @@
         <set name="weight" val="1570"/>
         <set name="soulshots" val="2"/>
         <set name="spiritshots" val="2"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pAtk">17</stat>
             <stat type="mAtk">12</stat>
@@ -1245,10 +1000,7 @@
         <set name="weight" val="660"/>
         <set name="soulshots" val="2"/>
         <set name="spiritshots" val="2"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pAtk">6</stat>
             <stat type="mAtk">8</stat>
@@ -1266,10 +1018,7 @@
         <set name="weight" val="630"/>
         <set name="soulshots" val="2"/>
         <set name="spiritshots" val="2"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pAtk">19</stat>
             <stat type="mAtk">22</stat>
@@ -1287,10 +1036,7 @@
         <set name="weight" val="610"/>
         <set name="soulshots" val="2"/>
         <set name="spiritshots" val="2"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pAtk">19</stat>
             <stat type="mAtk">22</stat>
@@ -1308,10 +1054,7 @@
         <set name="weight" val="620"/>
         <set name="soulshots" val="2"/>
         <set name="spiritshots" val="2"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pAtk">25</stat>
             <stat type="mAtk">28</stat>
@@ -1330,10 +1073,7 @@
         <set name="weight" val="1300"/>
         <set name="soulshots" val="2"/>
         <set name="spiritshots" val="2"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pAtk">12</stat>
             <stat type="mAtk">9</stat>
@@ -1352,10 +1092,7 @@
         <set name="weight" val="1300"/>
         <set name="soulshots" val="2"/>
         <set name="spiritshots" val="2"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pAtk">14</stat>
             <stat type="mAtk">11</stat>
@@ -1374,10 +1111,7 @@
         <set name="weight" val="1450"/>
         <set name="soulshots" val="2"/>
         <set name="spiritshots" val="2"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pAtk">14</stat>
             <stat type="mAtk">11</stat>
@@ -1396,10 +1130,7 @@
         <set name="weight" val="1450"/>
         <set name="soulshots" val="2"/>
         <set name="spiritshots" val="2"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pAtk">13</stat>
             <stat type="mAtk">10</stat>
@@ -1417,10 +1148,7 @@
         <set name="weight" val="1510"/>
         <set name="soulshots" val="3"/>
         <set name="spiritshots" val="3"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pAtk">51</stat>
             <stat type="mAtk">32</stat>
@@ -1438,11 +1166,8 @@
         <set name="weight" val="970"/>
         <set name="soulshots" val="3"/>
         <set name="spiritshots" val="3"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
         <set name="is_magic_weapon" val="true"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pAtk">43</stat>
             <stat type="mAtk">45</stat>
@@ -1460,10 +1185,7 @@
         <set name="weight" val="610"/>
         <set name="soulshots" val="3"/>
         <set name="spiritshots" val="3"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pAtk">32</stat>
             <stat type="mAtk">35</stat>

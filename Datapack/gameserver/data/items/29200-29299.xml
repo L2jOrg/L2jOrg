@@ -8,10 +8,7 @@
         <set name="weight" val="1520"/>
         <set name="soulshots" val="3"/>
         <set name="spiritshots" val="3"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pAtk">40</stat>
             <stat type="mAtk">26</stat>
@@ -29,10 +26,7 @@
         <set name="weight" val="1510"/>
         <set name="soulshots" val="3"/>
         <set name="spiritshots" val="3"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pAtk">51</stat>
             <stat type="mAtk">32</stat>
@@ -50,10 +44,7 @@
         <set name="weight" val="1500"/>
         <set name="soulshots" val="3"/>
         <set name="spiritshots" val="3"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pAtk">51</stat>
             <stat type="mAtk">32</stat>
@@ -71,10 +62,7 @@
         <set name="weight" val="1490"/>
         <set name="soulshots" val="3"/>
         <set name="spiritshots" val="3"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pAtk">64</stat>
             <stat type="mAtk">39</stat>
@@ -92,10 +80,7 @@
         <set name="weight" val="1500"/>
         <set name="soulshots" val="3"/>
         <set name="spiritshots" val="3"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pAtk">51</stat>
             <stat type="mAtk">32</stat>
@@ -113,10 +98,7 @@
         <set name="weight" val="1450"/>
         <set name="soulshots" val="5"/>
         <set name="spiritshots" val="5"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pAtk">79</stat>
             <stat type="mAtk">47</stat>
@@ -134,10 +116,7 @@
         <set name="weight" val="1470"/>
         <set name="soulshots" val="3"/>
         <set name="spiritshots" val="3"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pAtk">64</stat>
             <stat type="mAtk">39</stat>
@@ -155,10 +134,7 @@
         <set name="weight" val="980"/>
         <set name="soulshots" val="3"/>
         <set name="spiritshots" val="3"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pAtk">43</stat>
             <stat type="mAtk">45</stat>
@@ -176,10 +152,7 @@
         <set name="weight" val="970"/>
         <set name="soulshots" val="3"/>
         <set name="spiritshots" val="3"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pAtk">43</stat>
             <stat type="mAtk">45</stat>
@@ -197,10 +170,7 @@
         <set name="weight" val="620"/>
         <set name="soulshots" val="3"/>
         <set name="spiritshots" val="3"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pAtk">32</stat>
             <stat type="mAtk">35</stat>
@@ -218,10 +188,7 @@
         <set name="weight" val="610"/>
         <set name="soulshots" val="3"/>
         <set name="spiritshots" val="3"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pAtk">32</stat>
             <stat type="mAtk">35</stat>
@@ -239,10 +206,7 @@
         <set name="weight" val="600"/>
         <set name="soulshots" val="3"/>
         <set name="spiritshots" val="3"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pAtk">32</stat>
             <stat type="mAtk">35</stat>
@@ -260,10 +224,7 @@
         <set name="weight" val="570"/>
         <set name="soulshots" val="3"/>
         <set name="spiritshots" val="3"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pAtk">41</stat>
             <stat type="mAtk">43</stat>
@@ -281,10 +242,7 @@
         <set name="weight" val="580"/>
         <set name="soulshots" val="3"/>
         <set name="spiritshots" val="3"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pAtk">51</stat>
             <stat type="mAtk">52</stat>
@@ -302,10 +260,7 @@
         <set name="weight" val="570"/>
         <set name="soulshots" val="3"/>
         <set name="spiritshots" val="3"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pAtk">51</stat>
             <stat type="mAtk">52</stat>
@@ -323,10 +278,7 @@
         <set name="weight" val="540"/>
         <set name="soulshots" val="5"/>
         <set name="spiritshots" val="5"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pAtk">63</stat>
             <stat type="mAtk">63</stat>
@@ -344,10 +296,7 @@
         <set name="weight" val="1600"/>
         <set name="soulshots" val="5"/>
         <set name="spiritshots" val="5"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pAtk">63</stat>
             <stat type="mAtk">63</stat>
@@ -365,10 +314,7 @@
         <set name="weight" val="1600"/>
         <set name="soulshots" val="5"/>
         <set name="spiritshots" val="5"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pAtk">67</stat>
             <stat type="mAtk">66</stat>
@@ -386,10 +332,7 @@
         <set name="weight" val="1600"/>
         <set name="soulshots" val="5"/>
         <set name="spiritshots" val="5"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pAtk">67</stat>
             <stat type="mAtk">66</stat>
@@ -407,11 +350,8 @@
         <set name="weight" val="1600"/>
         <set name="soulshots" val="5"/>
         <set name="spiritshots" val="5"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
         <set name="is_magic_weapon" val="true"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pAtk">74</stat>
             <stat type="mAtk">72</stat>
@@ -429,10 +369,7 @@
         <set name="weight" val="1600"/>
         <set name="soulshots" val="5"/>
         <set name="spiritshots" val="5"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pAtk">74</stat>
             <stat type="mAtk">72</stat>
@@ -450,10 +387,7 @@
         <set name="weight" val="1440"/>
         <set name="soulshots" val="5"/>
         <set name="spiritshots" val="5"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pAtk">92</stat>
             <stat type="mAtk">54</stat>
@@ -471,10 +405,7 @@
         <set name="weight" val="1520"/>
         <set name="soulshots" val="3"/>
         <set name="spiritshots" val="3"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pAtk">32</stat>
             <stat type="mAtk">35</stat>
@@ -492,11 +423,8 @@
         <set name="weight" val="1450"/>
         <set name="soulshots" val="5"/>
         <set name="spiritshots" val="5"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
         <set name="is_magic_weapon" val="true"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pAtk">63</stat>
             <stat type="mAtk">63</stat>
@@ -515,10 +443,7 @@
         <set name="weight" val="1300"/>
         <set name="soulshots" val="2"/>
         <set name="spiritshots" val="2"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pAtk">16</stat>
             <stat type="mAtk">10</stat>
@@ -537,10 +462,7 @@
         <set name="weight" val="2250"/>
         <set name="soulshots" val="2"/>
         <set name="spiritshots" val="2"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pAtk">21</stat>
             <stat type="mAtk">12</stat>
@@ -558,10 +480,7 @@
         <set name="weight" val="1530"/>
         <set name="soulshots" val="2"/>
         <set name="spiritshots" val="2"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pAtk">38</stat>
             <stat type="mAtk">21</stat>
@@ -579,10 +498,7 @@
         <set name="weight" val="2090"/>
         <set name="soulshots" val="5"/>
         <set name="spiritshots" val="5"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pAtk">112</stat>
             <stat type="mAtk">54</stat>
@@ -600,10 +516,7 @@
         <set name="weight" val="2180"/>
         <set name="soulshots" val="3"/>
         <set name="spiritshots" val="3"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pAtk">78</stat>
             <stat type="mAtk">39</stat>
@@ -621,10 +534,7 @@
         <set name="weight" val="1520"/>
         <set name="soulshots" val="3"/>
         <set name="spiritshots" val="3"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pAtk">49</stat>
             <stat type="mAtk">26</stat>
@@ -642,10 +552,7 @@
         <set name="weight" val="2100"/>
         <set name="soulshots" val="3"/>
         <set name="spiritshots" val="3"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pAtk">49</stat>
             <stat type="mAtk">26</stat>
@@ -663,10 +570,7 @@
         <set name="weight" val="2020"/>
         <set name="soulshots" val="5"/>
         <set name="spiritshots" val="5"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pAtk">96</stat>
             <stat type="mAtk">47</stat>
@@ -684,10 +588,7 @@
         <set name="weight" val="2530"/>
         <set name="soulshots" val="3"/>
         <set name="spiritshots" val="3"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pAtk">73</stat>
             <stat type="mAtk">37</stat>
@@ -705,10 +606,7 @@
         <set name="weight" val="2520"/>
         <set name="soulshots" val="5"/>
         <set name="spiritshots" val="5"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pAtk">83</stat>
             <stat type="mAtk">41</stat>
@@ -726,10 +624,7 @@
         <set name="weight" val="2530"/>
         <set name="soulshots" val="5"/>
         <set name="spiritshots" val="5"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pAtk">83</stat>
             <stat type="mAtk">41</stat>
@@ -747,10 +642,7 @@
         <set name="weight" val="2520"/>
         <set name="soulshots" val="5"/>
         <set name="spiritshots" val="5"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pAtk">83</stat>
             <stat type="mAtk">41</stat>
@@ -768,10 +660,7 @@
         <set name="weight" val="2510"/>
         <set name="soulshots" val="5"/>
         <set name="spiritshots" val="5"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pAtk">83</stat>
             <stat type="mAtk">41</stat>
@@ -789,10 +678,7 @@
         <set name="weight" val="2530"/>
         <set name="soulshots" val="5"/>
         <set name="spiritshots" val="5"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pAtk">96</stat>
             <stat type="mAtk">47</stat>
@@ -810,10 +696,7 @@
         <set name="weight" val="2510"/>
         <set name="soulshots" val="5"/>
         <set name="spiritshots" val="5"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pAtk">96</stat>
             <stat type="mAtk">47</stat>
@@ -831,10 +714,7 @@
         <set name="weight" val="2470"/>
         <set name="soulshots" val="5"/>
         <set name="spiritshots" val="5"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pAtk">96</stat>
             <stat type="mAtk">47</stat>
@@ -852,10 +732,7 @@
         <set name="weight" val="2470"/>
         <set name="soulshots" val="5"/>
         <set name="spiritshots" val="5"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pAtk">96</stat>
             <stat type="mAtk">47</stat>
@@ -873,10 +750,7 @@
         <set name="weight" val="2480"/>
         <set name="soulshots" val="5"/>
         <set name="spiritshots" val="5"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pAtk">96</stat>
             <stat type="mAtk">47</stat>
@@ -894,10 +768,7 @@
         <set name="weight" val="2500"/>
         <set name="soulshots" val="5"/>
         <set name="spiritshots" val="5"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pAtk">96</stat>
             <stat type="mAtk">47</stat>
@@ -915,10 +786,7 @@
         <set name="weight" val="2470"/>
         <set name="soulshots" val="5"/>
         <set name="spiritshots" val="5"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pAtk">107</stat>
             <stat type="mAtk">51</stat>
@@ -936,10 +804,7 @@
         <set name="weight" val="2460"/>
         <set name="soulshots" val="5"/>
         <set name="spiritshots" val="5"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pAtk">107</stat>
             <stat type="mAtk">51</stat>
@@ -957,10 +822,7 @@
         <set name="weight" val="2520"/>
         <set name="soulshots" val="5"/>
         <set name="spiritshots" val="5"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pAtk">96</stat>
             <stat type="mAtk">47</stat>
@@ -978,10 +840,7 @@
         <set name="weight" val="2460"/>
         <set name="soulshots" val="5"/>
         <set name="spiritshots" val="5"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pAtk">96</stat>
             <stat type="mAtk">47</stat>
@@ -999,10 +858,7 @@
         <set name="weight" val="2470"/>
         <set name="soulshots" val="5"/>
         <set name="spiritshots" val="5"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pAtk">96</stat>
             <stat type="mAtk">47</stat>
@@ -1020,10 +876,7 @@
         <set name="weight" val="2520"/>
         <set name="soulshots" val="5"/>
         <set name="spiritshots" val="5"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pAtk">107</stat>
             <stat type="mAtk">51</stat>
@@ -1041,10 +894,7 @@
         <set name="weight" val="2460"/>
         <set name="soulshots" val="5"/>
         <set name="spiritshots" val="5"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pAtk">107</stat>
             <stat type="mAtk">51</stat>
@@ -1062,10 +912,7 @@
         <set name="weight" val="2480"/>
         <set name="soulshots" val="5"/>
         <set name="spiritshots" val="5"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pAtk">96</stat>
             <stat type="mAtk">47</stat>
@@ -1083,10 +930,7 @@
         <set name="weight" val="2470"/>
         <set name="soulshots" val="5"/>
         <set name="spiritshots" val="5"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pAtk">96</stat>
             <stat type="mAtk">47</stat>
@@ -1104,10 +948,7 @@
         <set name="weight" val="2450"/>
         <set name="soulshots" val="5"/>
         <set name="spiritshots" val="5"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pAtk">107</stat>
             <stat type="mAtk">51</stat>
@@ -1125,10 +966,7 @@
         <set name="weight" val="2470"/>
         <set name="soulshots" val="5"/>
         <set name="spiritshots" val="5"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pAtk">107</stat>
             <stat type="mAtk">51</stat>
@@ -1146,10 +984,7 @@
         <set name="weight" val="2460"/>
         <set name="soulshots" val="5"/>
         <set name="spiritshots" val="5"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pAtk">96</stat>
             <stat type="mAtk">47</stat>
@@ -1167,10 +1002,7 @@
         <set name="weight" val="2460"/>
         <set name="soulshots" val="5"/>
         <set name="spiritshots" val="5"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pAtk">107</stat>
             <stat type="mAtk">51</stat>
@@ -1188,10 +1020,7 @@
         <set name="weight" val="2450"/>
         <set name="soulshots" val="5"/>
         <set name="spiritshots" val="5"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pAtk">107</stat>
             <stat type="mAtk">51</stat>
@@ -1209,10 +1038,7 @@
         <set name="weight" val="1870"/>
         <set name="soulshots" val="2"/>
         <set name="spiritshots" val="2"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pAtk">8</stat>
             <stat type="mAtk">6</stat>
@@ -1231,10 +1057,7 @@
         <set name="weight" val="1880"/>
         <set name="soulshots" val="2"/>
         <set name="spiritshots" val="2"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pAtk">11</stat>
             <stat type="mAtk">9</stat>
@@ -1253,10 +1076,7 @@
         <set name="weight" val="1330"/>
         <set name="soulshots" val="2"/>
         <set name="spiritshots" val="2"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pAtk">6</stat>
             <stat type="mAtk">8</stat>
@@ -1275,10 +1095,7 @@
         <set name="weight" val="1850"/>
         <set name="soulshots" val="2"/>
         <set name="spiritshots" val="2"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pAtk">31</stat>
             <stat type="mAtk">21</stat>
@@ -1297,10 +1114,7 @@
         <set name="weight" val="1890"/>
         <set name="soulshots" val="2"/>
         <set name="spiritshots" val="2"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pAtk">10</stat>
             <stat type="mAtk">8</stat>
@@ -1319,10 +1133,7 @@
         <set name="weight" val="1850"/>
         <set name="soulshots" val="2"/>
         <set name="spiritshots" val="2"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pAtk">12</stat>
             <stat type="mAtk">9</stat>
@@ -1341,10 +1152,7 @@
         <set name="weight" val="1860"/>
         <set name="soulshots" val="2"/>
         <set name="spiritshots" val="2"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pAtk">17</stat>
             <stat type="mAtk">12</stat>
@@ -1363,10 +1171,7 @@
         <set name="weight" val="1800"/>
         <set name="soulshots" val="2"/>
         <set name="spiritshots" val="2"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pAtk">31</stat>
             <stat type="mAtk">21</stat>
@@ -1386,11 +1191,8 @@
         <set name="weight" val="1300"/>
         <set name="soulshots" val="2"/>
         <set name="spiritshots" val="2"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
         <set name="is_magic_weapon" val="true"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pAtk">11</stat>
             <stat type="mAtk">13</stat>
@@ -1410,10 +1212,7 @@
         <set name="weight" val="1860"/>
         <set name="soulshots" val="2"/>
         <set name="spiritshots" val="2"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pAtk">13</stat>
             <stat type="mAtk">10</stat>
@@ -1432,10 +1231,7 @@
         <set name="weight" val="1850"/>
         <set name="soulshots" val="2"/>
         <set name="spiritshots" val="2"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pAtk">24</stat>
             <stat type="mAtk">17</stat>
@@ -1454,10 +1250,7 @@
         <set name="weight" val="1780"/>
         <set name="soulshots" val="3"/>
         <set name="spiritshots" val="3"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pAtk">51</stat>
             <stat type="mAtk">32</stat>
@@ -1476,10 +1269,7 @@
         <set name="weight" val="1720"/>
         <set name="soulshots" val="5"/>
         <set name="spiritshots" val="5"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pAtk">79</stat>
             <stat type="mAtk">47</stat>
@@ -1498,10 +1288,7 @@
         <set name="weight" val="1820"/>
         <set name="soulshots" val="3"/>
         <set name="spiritshots" val="3"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pAtk">40</stat>
             <stat type="mAtk">26</stat>
@@ -1520,10 +1307,7 @@
         <set name="weight" val="1750"/>
         <set name="soulshots" val="3"/>
         <set name="spiritshots" val="3"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pAtk">64</stat>
             <stat type="mAtk">39</stat>
@@ -1542,10 +1326,7 @@
         <set name="weight" val="1730"/>
         <set name="soulshots" val="5"/>
         <set name="spiritshots" val="5"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pAtk">79</stat>
             <stat type="mAtk">47</stat>
@@ -1564,10 +1345,7 @@
         <set name="weight" val="1720"/>
         <set name="soulshots" val="5"/>
         <set name="spiritshots" val="5"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pAtk">92</stat>
             <stat type="mAtk">54</stat>
@@ -1586,10 +1364,7 @@
         <set name="weight" val="1800"/>
         <set name="soulshots" val="3"/>
         <set name="spiritshots" val="3"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pAtk">40</stat>
             <stat type="mAtk">26</stat>
@@ -1608,10 +1383,7 @@
         <set name="weight" val="1810"/>
         <set name="soulshots" val="3"/>
         <set name="spiritshots" val="3"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pAtk">40</stat>
             <stat type="mAtk">26</stat>
@@ -1630,10 +1402,7 @@
         <set name="weight" val="1790"/>
         <set name="soulshots" val="3"/>
         <set name="spiritshots" val="3"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pAtk">40</stat>
             <stat type="mAtk">26</stat>
@@ -1652,10 +1421,7 @@
         <set name="weight" val="1740"/>
         <set name="soulshots" val="5"/>
         <set name="spiritshots" val="5"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pAtk">79</stat>
             <stat type="mAtk">47</stat>
@@ -1674,10 +1440,7 @@
         <set name="weight" val="1730"/>
         <set name="soulshots" val="5"/>
         <set name="spiritshots" val="5"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pAtk">79</stat>
             <stat type="mAtk">47</stat>
@@ -1696,10 +1459,7 @@
         <set name="weight" val="1300"/>
         <set name="soulshots" val="3"/>
         <set name="spiritshots" val="3"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pAtk">41</stat>
             <stat type="mAtk">43</stat>
@@ -1718,10 +1478,7 @@
         <set name="weight" val="1280"/>
         <set name="soulshots" val="3"/>
         <set name="spiritshots" val="3"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pAtk">41</stat>
             <stat type="mAtk">43</stat>
@@ -1740,10 +1497,7 @@
         <set name="weight" val="1250"/>
         <set name="soulshots" val="3"/>
         <set name="spiritshots" val="3"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pAtk">41</stat>
             <stat type="mAtk">43</stat>
@@ -1762,10 +1516,7 @@
         <set name="weight" val="1200"/>
         <set name="soulshots" val="3"/>
         <set name="spiritshots" val="3"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pAtk">41</stat>
             <stat type="mAtk">43</stat>
@@ -1784,11 +1535,8 @@
         <set name="weight" val="1180"/>
         <set name="soulshots" val="5"/>
         <set name="spiritshots" val="5"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
         <set name="is_magic_weapon" val="true"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pAtk">74</stat>
             <stat type="mAtk">72</stat>
@@ -1807,10 +1555,7 @@
         <set name="weight" val="1720"/>
         <set name="soulshots" val="5"/>
         <set name="spiritshots" val="5"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pAtk">63</stat>
             <stat type="mAtk">63</stat>
@@ -1829,11 +1574,8 @@
         <set name="weight" val="1080"/>
         <set name="soulshots" val="2"/>
         <set name="spiritshots" val="2"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
         <set name="is_magic_weapon" val="true"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pAtk">11</stat>
             <stat type="mAtk">13</stat>
@@ -1852,11 +1594,8 @@
         <set name="weight" val="1090"/>
         <set name="soulshots" val="2"/>
         <set name="spiritshots" val="2"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
         <set name="is_magic_weapon" val="true"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pAtk">16</stat>
             <stat type="mAtk">18</stat>
@@ -1875,11 +1614,8 @@
         <set name="weight" val="1070"/>
         <set name="soulshots" val="2"/>
         <set name="spiritshots" val="2"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
         <set name="is_magic_weapon" val="true"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pAtk">23</stat>
             <stat type="mAtk">24</stat>
@@ -1898,11 +1634,8 @@
         <set name="weight" val="1050"/>
         <set name="soulshots" val="2"/>
         <set name="spiritshots" val="2"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
         <set name="is_magic_weapon" val="true"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pAtk">30</stat>
             <stat type="mAtk">31</stat>
@@ -1922,11 +1655,8 @@
         <set name="weight" val="1800"/>
         <set name="soulshots" val="2"/>
         <set name="spiritshots" val="2"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
         <set name="is_magic_weapon" val="true"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pAtk">13</stat>
             <stat type="mAtk">15</stat>
@@ -1946,11 +1676,8 @@
         <set name="weight" val="1700"/>
         <set name="soulshots" val="2"/>
         <set name="spiritshots" val="2"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
         <set name="is_magic_weapon" val="true"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pAtk">13</stat>
             <stat type="mAtk">14</stat>
@@ -1969,11 +1696,8 @@
         <set name="weight" val="1050"/>
         <set name="soulshots" val="2"/>
         <set name="spiritshots" val="2"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
         <set name="is_magic_weapon" val="true"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pAtk">13</stat>
             <stat type="mAtk">13</stat>
@@ -1992,11 +1716,8 @@
         <set name="weight" val="1000"/>
         <set name="soulshots" val="5"/>
         <set name="spiritshots" val="5"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
         <set name="is_magic_weapon" val="true"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pAtk">77</stat>
             <stat type="mAtk">69</stat>
@@ -2015,11 +1736,8 @@
         <set name="weight" val="1060"/>
         <set name="soulshots" val="3"/>
         <set name="spiritshots" val="3"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
         <set name="is_magic_weapon" val="true"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pAtk">39</stat>
             <stat type="mAtk">39</stat>
@@ -2038,11 +1756,8 @@
         <set name="weight" val="1040"/>
         <set name="soulshots" val="3"/>
         <set name="spiritshots" val="3"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
         <set name="is_magic_weapon" val="true"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pAtk">50</stat>
             <stat type="mAtk">47</stat>
@@ -2061,11 +1776,8 @@
         <set name="weight" val="1030"/>
         <set name="soulshots" val="3"/>
         <set name="spiritshots" val="3"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
         <set name="is_magic_weapon" val="true"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pAtk">50</stat>
             <stat type="mAtk">47</stat>
@@ -2084,11 +1796,8 @@
         <set name="weight" val="1040"/>
         <set name="soulshots" val="3"/>
         <set name="spiritshots" val="3"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
         <set name="is_magic_weapon" val="true"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pAtk">50</stat>
             <stat type="mAtk">47</stat>
@@ -2107,11 +1816,8 @@
         <set name="weight" val="1020"/>
         <set name="soulshots" val="3"/>
         <set name="spiritshots" val="3"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
         <set name="is_magic_weapon" val="true"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pAtk">62</stat>
             <stat type="mAtk">57</stat>
@@ -2130,10 +1836,7 @@
         <set name="weight" val="1010"/>
         <set name="soulshots" val="5"/>
         <set name="spiritshots" val="5"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pAtk">90</stat>
             <stat type="mAtk">79</stat>
@@ -2152,11 +1855,8 @@
         <set name="weight" val="1000"/>
         <set name="soulshots" val="5"/>
         <set name="spiritshots" val="5"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
         <set name="is_magic_weapon" val="true"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
         <stats>
             <stat type="pAtk">90</stat>
             <stat type="mAtk">79</stat>

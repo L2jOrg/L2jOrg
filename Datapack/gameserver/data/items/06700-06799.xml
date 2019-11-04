@@ -1,94 +1,94 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
-    <item id="6700" name="Sealed Tateossian Necklace Chain"  icon="icon.etc_jewel_box_i00">
+    <item id="6700" name="Sealed Tateossian Necklace Chain" icon="icon.etc_jewel_box_i00">
         <!-- Main ingredient required for a Dwarf to make a Sealed Tateossian Necklace. Can be sold at ordinary shops. -->
         <set name="weight" val="60"/>
         <set name="price" val="16706"/>
-        <set name="is_stackable" val="true"/>
+        <restriction stackable="true"/>
     </item>
-    <item id="6701" name="Sealed Imperial Crusader Breastplate Part"  icon="icon.etc_plate_silver_i00">
+    <item id="6701" name="Sealed Imperial Crusader Breastplate Part" icon="icon.etc_plate_silver_i00">
         <!-- Main ingredient required for a Dwarf to make a Sealed Imperial Crusader Breastplate. Can be sold at ordinary shops. -->
         <set name="weight" val="60"/>
         <set name="price" val="37565"/>
-        <set name="is_stackable" val="true"/>
+        <restriction stackable="true"/>
     </item>
-    <item id="6702" name="Sealed Imperial Crusader Gaiter Pattern"  icon="icon.etc_pouch_brown_i00">
+    <item id="6702" name="Sealed Imperial Crusader Gaiter Pattern" icon="icon.etc_pouch_brown_i00">
         <!-- Main ingredient required for a Dwarf to make Sealed Imperial Crusader Gaiters. Can be sold at ordinary shops. -->
         <set name="weight" val="60"/>
         <set name="price" val="29182"/>
-        <set name="is_stackable" val="true"/>
+        <restriction stackable="true"/>
     </item>
-    <item id="6703" name="Sealed Imperial Crusader Gauntlets Design"  icon="icon.etc_pouch_brown_i00">
+    <item id="6703" name="Sealed Imperial Crusader Gauntlets Design" icon="icon.etc_pouch_brown_i00">
         <!-- Main ingredient required for a Dwarf to make Sealed Imperial Crusader Gauntlets. Can be sold at ordinary shops. -->
         <set name="weight" val="60"/>
         <set name="price" val="14047"/>
-        <set name="is_stackable" val="true"/>
+        <restriction stackable="true"/>
     </item>
-    <item id="6704" name="Sealed Imperial Crusader Boots Design"  icon="icon.etc_pouch_brown_i00">
+    <item id="6704" name="Sealed Imperial Crusader Boots Design" icon="icon.etc_pouch_brown_i00">
         <!-- Main ingredient required for a Dwarf to make Sealed Imperial Crusader Boots. Can be sold at ordinary shops. -->
         <set name="weight" val="60"/>
         <set name="price" val="14047"/>
-        <set name="is_stackable" val="true"/>
+        <restriction stackable="true"/>
     </item>
-    <item id="6705" name="Sealed Imperial Crusader Shield Fragment"  icon="icon.etc_plate_silver_i00">
+    <item id="6705" name="Sealed Imperial Crusader Shield Fragment" icon="icon.etc_plate_silver_i00">
         <!-- Main ingredient required for a Dwarf to make Sealed Imperial Crusader Shield. Can be sold at ordinary shops. -->
         <set name="weight" val="60"/>
         <set name="price" val="14341"/>
-        <set name="is_stackable" val="true"/>
+        <restriction stackable="true"/>
     </item>
-    <item id="6706" name="Sealed Imperial Crusader Helmet Pattern"  icon="icon.etc_pouch_brown_i00">
+    <item id="6706" name="Sealed Imperial Crusader Helmet Pattern" icon="icon.etc_pouch_brown_i00">
         <!-- Main ingredient required for a Dwarf to make a Sealed Imperial Crusader Helmet. Can be sold at ordinary shops. -->
         <set name="weight" val="60"/>
         <set name="price" val="12329"/>
-        <set name="is_stackable" val="true"/>
+        <restriction stackable="true"/>
     </item>
-    <item id="6707" name="Sealed Draconic Leather Armor Part"  icon="icon.etc_leather_gray_i00">
+    <item id="6707" name="Sealed Draconic Leather Armor Part" icon="icon.etc_leather_gray_i00">
         <!-- Main ingredient required for a Dwarf to make Sealed Draconic Leather Armor. Can be sold at ordinary shops. -->
         <set name="weight" val="60"/>
         <set name="price" val="40365"/>
-        <set name="is_stackable" val="true"/>
+        <restriction stackable="true"/>
     </item>
-    <item id="6708" name="Sealed Draconic Leather Glove Fabric"  icon="icon.etc_leather_gray_i00">
+    <item id="6708" name="Sealed Draconic Leather Glove Fabric" icon="icon.etc_leather_gray_i00">
         <!-- Main ingredient required for a Dwarf to make Sealed Draconic Leather Gloves. Can be sold at ordinary shops. -->
         <set name="weight" val="60"/>
         <set name="price" val="14047"/>
-        <set name="is_stackable" val="true"/>
+        <restriction stackable="true"/>
     </item>
-    <item id="6709" name="Sealed Draconic Leather Boots Design"  icon="icon.etc_pouch_brown_i00">
+    <item id="6709" name="Sealed Draconic Leather Boots Design" icon="icon.etc_pouch_brown_i00">
         <!-- Main ingredient required for a Dwarf to make Sealed Draconic Leather Boots. Can be sold at ordinary shops. -->
         <set name="weight" val="60"/>
         <set name="price" val="14047"/>
-        <set name="is_stackable" val="true"/>
+        <restriction stackable="true"/>
     </item>
-    <item id="6710" name="Sealed Draconic Leather Helmet Pattern"  icon="icon.etc_pouch_brown_i00">
+    <item id="6710" name="Sealed Draconic Leather Helmet Pattern" icon="icon.etc_pouch_brown_i00">
         <!-- Main ingredient required for a Dwarf to make Sealed Draconic Leather Helmet. Can be sold at ordinary shops. -->
         <set name="weight" val="60"/>
         <set name="price" val="12329"/>
-        <set name="is_stackable" val="true"/>
+        <restriction stackable="true"/>
     </item>
-    <item id="6711" name="Sealed Major Arcana Robe Part"  icon="icon.etc_plate_silver_i00">
+    <item id="6711" name="Sealed Major Arcana Robe Part" icon="icon.etc_plate_silver_i00">
         <!-- Main ingredient required for a Dwarf to make a Sealed Major Arcana Robe. Can be sold at ordinary shops. -->
         <set name="weight" val="60"/>
         <set name="price" val="40365"/>
-        <set name="is_stackable" val="true"/>
+        <restriction stackable="true"/>
     </item>
-    <item id="6712" name="Sealed Major Arcana Gloves fabric"  icon="icon.etc_leather_gray_i00">
+    <item id="6712" name="Sealed Major Arcana Gloves fabric" icon="icon.etc_leather_gray_i00">
         <!-- Main ingredient required for a Dwarf to make Sealed Major Arcana Gloves. Can be sold at ordinary shops. -->
         <set name="weight" val="60"/>
         <set name="price" val="14047"/>
-        <set name="is_stackable" val="true"/>
+        <restriction stackable="true"/>
     </item>
-    <item id="6713" name="Sealed Major Arcana Boots Design"  icon="icon.etc_pouch_brown_i00">
+    <item id="6713" name="Sealed Major Arcana Boots Design" icon="icon.etc_pouch_brown_i00">
         <!-- Main ingredient required for a Dwarf to make Sealed Major Arcana Boots. Can be sold at ordinary shops. -->
         <set name="weight" val="60"/>
         <set name="price" val="14047"/>
-        <set name="is_stackable" val="true"/>
+        <restriction stackable="true"/>
     </item>
-    <item id="6714" name="Sealed Major Arcana Circlet Pattern"  icon="icon.etc_pouch_brown_i00">
+    <item id="6714" name="Sealed Major Arcana Circlet Pattern" icon="icon.etc_pouch_brown_i00">
         <!-- Main ingredient required for a Dwarf to make a Sealed Major Arcana Circlet. Can be sold at ordinary shops. -->
         <set name="weight" val="60"/>
         <set name="price" val="12329"/>
-        <set name="is_stackable" val="true"/>
+        <restriction stackable="true"/>
     </item>
     <weapon id="6715" name="Monster Only (Silenos Archer)" icon="icon.weapon_monster_i00">
         <set name="default_action" val="EQUIP"/>
@@ -117,10 +117,7 @@
         <set name="price" val="2500"/>
         <set name="soulshots" val="1"/>
         <set name="spiritshots" val="1"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_destroyable" val="false"/>
-        <set name="is_depositable" val="false"/>
+        <restriction tradable="false" dropable="false" destroyable="false" depositable="false"/>
         <stats>
             <stat type="pAtk">11</stat>
             <stat type="mAtk">12</stat>

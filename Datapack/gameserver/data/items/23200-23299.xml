@@ -6,7 +6,6 @@
         <set name="armor_type" val="HEAVY"/>
         <set name="bodypart" val="alldress"/>
         <set name="immediate_effect" val="true"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
+        <restriction dropable="false" sellable="false"/>
     </armor>
 </list>

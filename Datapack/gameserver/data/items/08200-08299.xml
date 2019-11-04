@@ -42,7 +42,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </weapon>
-    <item id="8294" name="Recipe: Steel Sword"  icon="icon.etc_recipe_blue_i00">
+    <item id="8294" name="Recipe: Steel Sword" icon="icon.etc_recipe_blue_i00">
         <!-- This formula for manufacturing a Steel Sword can only be used by Dwarves and Requires Create Item - Skill Lv. 2. The success rate is 100%. -->
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
@@ -50,11 +50,10 @@
         <set name="weight" val="30"/>
         <set name="price" val="8180"/>
         <set name="recipe_id" val="783"/>
-        <set name="is_stackable" val="true"/>
-        <set name="commissionItemType" val="RECIPE"/>
         <set name="handler" val="Recipes"/>
+        <restriction stackable="true"/>
     </item>
-    <item id="8299" name="Recipe: Infernal Master (100%)"  icon="icon.etc_recipe_violet_i00">
+    <item id="8299" name="Recipe: Infernal Master (100%)" icon="icon.etc_recipe_violet_i00">
         <!-- This formula for manufacturing an Infernal Master can only be used by Dwarves and Requires Create Item - Skill Lv. 7. The success rate is 100%. -->
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
@@ -62,8 +61,7 @@
         <set name="weight" val="30"/>
         <set name="price" val="73200"/>
         <set name="recipe_id" val="815"/>
-        <set name="is_stackable" val="true"/>
-        <set name="commissionItemType" val="RECIPE"/>
         <set name="handler" val="Recipes"/>
+        <restriction stackable="true"/>
     </item>
 </list>

@@ -1050,7 +1050,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </weapon>
-    <weapon id="245" name="Dark Fighter Fist">
+    <weapon id="245" name="Dark Fighter Fist" icon="">
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -1065,7 +1065,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </weapon>
-    <weapon id="246" name="Human Fighter Fist">
+    <weapon id="246" name="Human Fighter Fist" icon="">
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -1080,7 +1080,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </weapon>
-    <weapon id="247" name="Dwarven Fighter Fist">
+    <weapon id="247" name="Dwarven Fighter Fist" icon="">
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -1095,7 +1095,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </weapon>
-    <weapon id="248" name="Orc Fighter Fist">
+    <weapon id="248" name="Orc Fighter Fist" icon="">
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -1110,7 +1110,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </weapon>
-    <weapon id="249" name="Elven Mystic Fist">
+    <weapon id="249" name="Elven Mystic Fist" icon="">
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -1125,7 +1125,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </weapon>
-    <weapon id="250" name="Dark Mystic Fist">
+    <weapon id="250" name="Dark Mystic Fist" icon="">
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -1140,7 +1140,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </weapon>
-    <weapon id="251" name="Human Mystic Fist">
+    <weapon id="251" name="Human Mystic Fist" icon="">
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -1155,7 +1155,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </weapon>
-    <weapon id="252" name="Orc Shaman Fist">
+    <weapon id="252" name="Orc Shaman Fist" icon="">
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -1169,7 +1169,7 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </weapon>
-    <weapon id="253" name="Spiked Gloves">
+    <weapon id="253" name="Spiked Gloves" icon="">
         <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DUALFIST"/>
         <set name="bodypart" val="lrhand"/>

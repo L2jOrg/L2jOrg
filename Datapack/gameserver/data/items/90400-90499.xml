@@ -1,244 +1,146 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
-    <item id="90400" name="Lv. 5 Vital Stone Jewelry Box"  icon="icon.etc_bm_jewelbox_vital_i00">
+    <item id="90400" name="Lv. 5 Vital Stone Jewelry Box" icon="icon.etc_bm_jewelbox_vital_i00">
         <!-- Double-click to obtain Lv. 5 Vital Stone. Cannot be dropped. -->
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction dropable="false" sellable="false" stackable="true"/>
     </item>
-    <item id="90401" name="Melodys Luck Cube"  icon="icon.etc_dkbrown_crystal_cube_pc_i00">
+    <item id="90401" name="Melodys Luck Cube" icon="icon.etc_dkbrown_crystal_cube_pc_i00">
         <!-- 30-day item. Double-click to obtain various rewards at random. (Can be used only once per day.) Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. For characters of level 20 or higher. -->
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
     </item>
     <armor id="90402" name="Fire Dragon Pendant +6" icon="icon.bm_pendant_pve">
         <!-- M. Def. +16, XP/SP gain +10%, P./ M. Atk. +20. Duration: 15-day. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="underwear"/>
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
         <set name="time" val="21600"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
         <stats>
             <stat type="pDef">40</stat>
         </stats>
     </armor>
-    <item id="90403" name="Melodys Teleport Pouch"  icon="icon.bookmark_scroll_i00">
+    <item id="90403" name="Melodys Teleport Pouch" icon="icon.bookmark_scroll_i00">
         <!-- Double-click to obtain 1 My Teleport Book or 10 My Teleport Scrolls. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. Can be shared within account through Dimensional Merchant. -->
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true" freightable="true"/>
     </item>
-    <item id="90404" name="My Teleport Book"  icon="icon.bookmark_book_i00">
+    <item id="90404" name="My Teleport Book" icon="icon.bookmark_book_i00">
         <!-- Increases the number of return points to save by 1. Maximum number - 18. Cannot be exchanged, dropped or sold. Can be stored in a private warehouse. Can be shared within account through Dimensional Merchant. -->
         <set name="default_action" val="CALL_SKILL"/>
         <set name="weight" val="5"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true" freightable="true"/>
     </item>
-    <item id="90405" name="My Teleport Scroll"  icon="icon.bookmark_scroll_i00">
+    <item id="90405" name="My Teleport Scroll" icon="icon.bookmark_scroll_i00">
         <!-- Item that is consumed when moving to the remembered location. Cannot be exchanged, dropped or sold. Can be stored in a private warehouse. Can be shared within account through Dimensional Merchant. -->
         <set name="weight" val="5"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true" freightable="true"/>
     </item>
-    <item id="90406" name="Melodys Fish Stew Pouch"  icon="icon.fish_stew_residence_cha">
+    <item id="90406" name="Melodys Fish Stew Pouch" icon="icon.fish_stew_residence_cha">
         <!-- Double-click to obtain the following items: Chef's Fish Stew (Victory/Fire/Water/Wind), 2 Special Pirate Fruits, 2 Scrolls of Mood Melody. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. Can be shared within account through Dimensional Merchant. -->
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true" freightable="true"/>
     </item>
-    <item id="90407" name="Chef's Fish Stew - Victory"  icon="icon.fish_stew_residence_cha">
+    <item id="90407" name="Chef's Fish Stew - Victory" icon="icon.fish_stew_residence_cha">
         <!-- For 10 min. activates Chant of Victory Lv. 1. Cannot be dropped. <Attention> Cannot be stacked with Prophecy-type buffs. Effect remains after death. -->
         <set name="default_action" val="SKILL_REDUCE"/>
         <set name="etcitem_type" val="SCROLL"/>
         <set name="weight" val="5"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_oly_restricted" val="true"/>
-        <set name="is_freightable" val="true"/>
-        <set name="handler" val="ItemSkills"/>
         <set name="commissionItemType" val="SCROLL_OTHER"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true" olympiad-restricted="true" freightable="true"/>
         <skills>
             <skill id="39228" level="1"/> <!-- Chef's Fish Stew - Victory -->
         </skills>
     </item>
-    <item id="90408" name="Chef's Fish Stew - Fire"  icon="icon.fish_stew_residence_cha">
+    <item id="90408" name="Chef's Fish Stew - Fire" icon="icon.fish_stew_residence_cha">
         <!-- For 10 min. activates Prophecy of Fire Lv. 1. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. Can be shared within account through Dimensional Merchant. <Attention> Cannot be stacked with Prophecy-type buffs. Effect remains after death. -->
         <set name="default_action" val="SKILL_REDUCE"/>
         <set name="etcitem_type" val="SCROLL"/>
         <set name="weight" val="5"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_oly_restricted" val="true"/>
-        <set name="is_freightable" val="true"/>
-        <set name="handler" val="ItemSkills"/>
         <set name="commissionItemType" val="SCROLL_OTHER"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true" olympiad-restricted="true" freightable="true"/>
         <skills>
             <skill id="39229" level="1"/> <!-- Chef's Fish Stew - Fire -->
         </skills>
     </item>
-    <item id="90409" name="Chef's Fish Stew - Water"  icon="icon.fish_stew_residence_cha">
+    <item id="90409" name="Chef's Fish Stew - Water" icon="icon.fish_stew_residence_cha">
         <!-- For 10 min. activates Prophecy of Water Lv. 1. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. Can be shared within account through Dimensional Merchant. <Attention> Cannot be stacked with Prophecy-type buffs. Effect remains after death. -->
         <set name="default_action" val="SKILL_REDUCE"/>
         <set name="etcitem_type" val="SCROLL"/>
         <set name="weight" val="5"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_oly_restricted" val="true"/>
-        <set name="is_freightable" val="true"/>
-        <set name="handler" val="ItemSkills"/>
         <set name="commissionItemType" val="SCROLL_OTHER"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true" olympiad-restricted="true" freightable="true"/>
         <skills>
             <skill id="39230" level="1"/> <!-- Chef's Fish Stew - Water -->
         </skills>
     </item>
-    <item id="90410" name="Chef's Fish Stew - Wind"  icon="icon.fish_stew_residence_cha">
+    <item id="90410" name="Chef's Fish Stew - Wind" icon="icon.fish_stew_residence_cha">
         <!-- For 10 min. activates Prophecy of Wind Lv. 1. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. Can be shared within account through Dimensional Merchant. <Attention> Cannot be stacked with Prophecy-type buffs. Effect remains after death. -->
         <set name="default_action" val="SKILL_REDUCE"/>
         <set name="etcitem_type" val="SCROLL"/>
         <set name="weight" val="5"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_oly_restricted" val="true"/>
-        <set name="is_freightable" val="true"/>
-        <set name="handler" val="ItemSkills"/>
         <set name="commissionItemType" val="SCROLL_OTHER"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true" olympiad-restricted="true" freightable="true"/>
         <skills>
             <skill id="39231" level="1"/> <!-- Chef's Fish Stew - Wind -->
         </skills>
     </item>
-    <item id="90411" name="Melodys Scroll Pouch"  icon="icon.etc_scroll_of_resurrection_i01">
+    <item id="90411" name="Melodys Scroll Pouch" icon="icon.etc_scroll_of_resurrection_i01">
         <!-- Double-click to obtain 3 Improved Scrolls of Escape, Improved Scroll of Resurrection, 2 Scrolls of Mood Melody. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. Can be shared within account through Dimensional Merchant. -->
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true" freightable="true"/>
     </item>
-    <item id="90412" name="Melodys Enhance Pouch"  icon="icon.etc_mineral_general_i01">
+    <item id="90412" name="Melodys Enhance Pouch" icon="icon.etc_mineral_general_i01">
         <!-- Double-click to obtain 2 Blade Spirits, Common Life Stone, 2 Scrolls of Mood Melody. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. Can be shared within account through Dimensional Merchant. -->
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true" freightable="true"/>
     </item>
-    <item id="90413" name="Melodys Rice Cake Pouch"  icon="icon.bm_rice_cake_i00">
+    <item id="90413" name="Melodys Rice Cake Pouch" icon="icon.bm_rice_cake_i00">
         <!-- Double-click to obtain 2 Rice Cakes of Fighting Spirit, Angel Cat's Blessing, 2 Scrolls of Mood Melody. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. Can be shared within account through Dimensional Merchant. -->
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true" freightable="true"/>
     </item>
-    <item id="90414" name="Melodys Potion Pouch"  icon="icon.five_vairy_potion">
+    <item id="90414" name="Melodys Potion Pouch" icon="icon.five_vairy_potion">
         <!-- Double-click to obtain 30 Major Warrior Healing Potions, 30 Warrior MP Recovery Potion, 2 Scrolls of Mood Melody. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. Can be shared within account through Dimensional Merchant. -->
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true" freightable="true"/>
     </item>
-    <item id="90415" name="Warrior MP Recovery Potion"  icon="icon.etc_lesser_potion_blue_i00">
+    <item id="90415" name="Warrior MP Recovery Potion" icon="icon.etc_lesser_potion_blue_i00">
         <!-- Magical MP-recovering potion. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. Can be shared within account through Dimensional Merchant. -->
         <set name="default_action" val="SKILL_REDUCE"/>
         <set name="etcitem_type" val="POTION"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="5"/>
-        <set name="is_oly_restricted" val="true"/>
-        <set name="is_freightable" val="true"/>
-        <set name="handler" val="ItemSkills"/>
         <set name="commissionItemType" val="POTION"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction olympiad-restricted="true" freightable="true" tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
         <skills>
             <skill id="39258" level="1"/> <!-- Major Warrior Healing Potion -->
         </skills>
     </item>
-    <item id="90416" name="Melodys Growth Pouch"  icon="icon.ev_charge_box">
+    <item id="90416" name="Melodys Growth Pouch" icon="icon.ev_charge_box">
         <!-- Double-click to obtain Hero's Dual Swords (15-day) Fishing Rod (10-day), 2160 Normal Baits, 2160 Fishing Shots, 3 Teleports: Giran Harbor, 20 Soulshot Tickets. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. Can be shared within account through Dimensional Merchant. -->
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true" freightable="true"/>
     </item>
-    <item id="90417" name="Melodys Fishing Pouch"  icon="icon.fishing_zone_ticket">
+    <item id="90417" name="Melodys Fishing Pouch" icon="icon.fishing_zone_ticket">
         <!-- Double-click to obtain 2160 Silver Baits, Golden Mermaid's Tears (7-day), Savior's Experience Box. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. Can be shared within account through Dimensional Merchant. -->
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true" freightable="true"/>
     </item>
-    <item id="90418" name="Savior's Experience Box"  icon="icon.etc_ev_kalie_treasure_box">
+    <item id="90418" name="Savior's Experience Box" icon="icon.etc_ev_kalie_treasure_box">
         <!-- Double-click to obtain one of the following items: Low-grade/Mid-grade/High-grade/Top-grade XP Scroll. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. Can be shared within account through Dimensional Merchant. -->
         <set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true" freightable="true"/>
     </item>
     <weapon id="90419" name="Warrior's Shining Dualsword" icon="icon.weapon_dual_sword_i00">
         <!-- 30-day item. Atk. Spd. +5%. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. Enchantment, soul storing and augmenting are impossible. -->
@@ -251,10 +153,7 @@
         <set name="soulshots" val="1"/>
         <set name="spiritshots" val="1"/>
         <set name="enchant_enabled" val="1"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
         <stats>
             <stat type="pAtk">200</stat>
             <stat type="mAtk">93</stat>
@@ -275,11 +174,8 @@
         <set name="soulshots" val="1"/>
         <set name="spiritshots" val="1"/>
         <set name="enchant_enabled" val="1"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
         <set name="is_magic_weapon" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
         <stats>
             <stat type="pAtk">160</stat>
             <stat type="mAtk">126</stat>
@@ -302,10 +198,7 @@
         <set name="spiritshots" val="1"/>
         <set name="mp_consume" val="3"/>
         <set name="enchant_enabled" val="1"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
         <stats>
             <stat type="pAtk">348</stat>
             <stat type="mAtk">99</stat>
@@ -327,10 +220,7 @@
         <set name="soulshots" val="1"/>
         <set name="spiritshots" val="1"/>
         <set name="enchant_enabled" val="1"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
         <stats>
             <stat type="pAtk">142</stat>
             <stat type="mAtk">91</stat>
@@ -352,10 +242,7 @@
         <set name="soulshots" val="1"/>
         <set name="spiritshots" val="1"/>
         <set name="enchant_enabled" val="1"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
         <skills>
             <skill id="3599" level="1"/> <!-- Polearm Multi-attack -->
         </skills>
@@ -377,10 +264,7 @@
         <set name="crystal_type" val="C"/>
         <set name="weight" val="600"/>
         <set name="enchant_enabled" val="1"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
         <stats>
             <stat type="pDef">58</stat>
         </stats>
@@ -394,10 +278,7 @@
         <set name="crystal_type" val="C"/>
         <set name="weight" val="10480"/>
         <set name="enchant_enabled" val="1"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
         <stats>
             <stat type="pDef">239</stat>
         </stats>
@@ -410,10 +291,7 @@
         <set name="crystal_type" val="C"/>
         <set name="weight" val="600"/>
         <set name="enchant_enabled" val="1"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
         <stats>
             <stat type="pDef">39</stat>
         </stats>
@@ -426,10 +304,7 @@
         <set name="crystal_type" val="C"/>
         <set name="weight" val="1200"/>
         <set name="enchant_enabled" val="1"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
         <stats>
             <stat type="pDef">39</stat>
         </stats>
@@ -442,10 +317,7 @@
         <set name="crystal_type" val="C"/>
         <set name="weight" val="620"/>
         <set name="enchant_enabled" val="1"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
         <stats>
             <stat type="pDef">47</stat>
         </stats>
@@ -459,10 +331,7 @@
         <set name="crystal_type" val="C"/>
         <set name="weight" val="5800"/>
         <set name="enchant_enabled" val="1"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
         <stats>
             <stat type="pDef">179</stat>
         </stats>
@@ -475,10 +344,7 @@
         <set name="crystal_type" val="C"/>
         <set name="weight" val="600"/>
         <set name="enchant_enabled" val="1"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
         <stats>
             <stat type="pDef">39</stat>
         </stats>
@@ -491,10 +357,7 @@
         <set name="crystal_type" val="C"/>
         <set name="weight" val="1210"/>
         <set name="enchant_enabled" val="1"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
         <stats>
             <stat type="pDef">39</stat>
         </stats>
@@ -507,10 +370,7 @@
         <set name="crystal_type" val="C"/>
         <set name="weight" val="600"/>
         <set name="enchant_enabled" val="1"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
         <stats>
             <stat type="pDef">54</stat>
         </stats>
@@ -524,10 +384,7 @@
         <set name="crystal_type" val="C"/>
         <set name="weight" val="1980"/>
         <set name="enchant_enabled" val="1"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
         <stats>
             <stat type="pDef">74</stat>
             <stat type="maxMp">314</stat>
@@ -542,10 +399,7 @@
         <set name="crystal_type" val="C"/>
         <set name="weight" val="960"/>
         <set name="enchant_enabled" val="1"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
         <stats>
             <stat type="pDef">46</stat>
             <stat type="maxMp">196</stat>
@@ -559,10 +413,7 @@
         <set name="crystal_type" val="C"/>
         <set name="weight" val="610"/>
         <set name="enchant_enabled" val="1"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
         <stats>
             <stat type="pDef">39</stat>
         </stats>
@@ -575,10 +426,7 @@
         <set name="crystal_type" val="C"/>
         <set name="weight" val="1210"/>
         <set name="enchant_enabled" val="1"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
         <stats>
             <stat type="pDef">34</stat>
         </stats>
@@ -589,129 +437,93 @@
         <set name="bodypart" val="hairall"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="10"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_destroyable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
         <set name="time" val="86400"/>
+        <restriction tradable="false" dropable="false" destroyable="false" depositable="false" sellable="false"/>
     </armor>
-    <item id="90438" name="Fish Stew: Might Lv. 2"  icon="icon.fish_stew_buff">
+    <item id="90438" name="Fish Stew: Might Lv. 2" icon="icon.fish_stew_buff">
         <!-- For 20 min. P. Atk. +12%. Cannot be dropped. -->
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction dropable="false" sellable="false" stackable="true"/>
     </item>
-    <item id="90439" name="Fish Stew: Might Lv. 3"  icon="icon.fish_stew_buff">
+    <item id="90439" name="Fish Stew: Might Lv. 3" icon="icon.fish_stew_buff">
         <!-- For 20 min. P. Atk. +15%. Cannot be dropped. -->
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction dropable="false" sellable="false" stackable="true"/>
     </item>
-    <item id="90440" name="Fish Stew: Shield Lv. 2"  icon="icon.fish_stew_buff">
+    <item id="90440" name="Fish Stew: Shield Lv. 2" icon="icon.fish_stew_buff">
         <!-- For 20 min. P. Def. +12%. Cannot be dropped. -->
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction dropable="false" sellable="false" stackable="true"/>
     </item>
-    <item id="90441" name="Fish Stew: Shield Lv. 3"  icon="icon.fish_stew_buff">
+    <item id="90441" name="Fish Stew: Shield Lv. 3" icon="icon.fish_stew_buff">
         <!-- For 20 min. P. Def. +15%. Cannot be dropped. -->
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction dropable="false" sellable="false" stackable="true"/>
     </item>
-    <item id="90442" name="Fish Stew: Empower Lv. 2"  icon="icon.fish_stew_buff">
+    <item id="90442" name="Fish Stew: Empower Lv. 2" icon="icon.fish_stew_buff">
         <!-- For 20 min. M. Atk. +65%. Cannot be dropped. -->
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction dropable="false" sellable="false" stackable="true"/>
     </item>
-    <item id="90443" name="Fish Stew: Empower Lv. 3"  icon="icon.fish_stew_buff">
+    <item id="90443" name="Fish Stew: Empower Lv. 3" icon="icon.fish_stew_buff">
         <!-- For 20 min. M. Atk. +75%. Cannot be dropped. -->
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction dropable="false" sellable="false" stackable="true"/>
     </item>
-    <item id="90444" name="Fish Stew: Magic Barrier Lv. 2"  icon="icon.fish_stew_buff">
+    <item id="90444" name="Fish Stew: Magic Barrier Lv. 2" icon="icon.fish_stew_buff">
         <!-- For 20 min. M. Def. +30%. Cannot be dropped. -->
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction dropable="false" sellable="false" stackable="true"/>
     </item>
-    <item id="90445" name="Fish Stew: Vampiric Rage Lv. 2"  icon="icon.fish_stew_buff">
+    <item id="90445" name="Fish Stew: Vampiric Rage Lv. 2" icon="icon.fish_stew_buff">
         <!-- For 20 min. recovers as HP 7% of the physical damage inflicted on the enemy with a certain probability. Cannot be dropped. -->
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction dropable="false" sellable="false" stackable="true"/>
     </item>
-    <item id="90446" name="Fish Stew: Vampiric Rage Lv. 3"  icon="icon.fish_stew_buff">
+    <item id="90446" name="Fish Stew: Vampiric Rage Lv. 3" icon="icon.fish_stew_buff">
         <!-- For 20 min. recovers as HP 8% of the physical damage inflicted on the enemy with a certain probability. Cannot be dropped. -->
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction dropable="false" sellable="false" stackable="true"/>
     </item>
-    <item id="90447" name="Fish Stew: Greater Might Lv. 1"  icon="icon.fish_stew_buff">
+    <item id="90447" name="Fish Stew: Greater Might Lv. 1" icon="icon.fish_stew_buff">
         <!-- For 20 min. P. Atk. +4%. Cannot be dropped. -->
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction dropable="false" sellable="false" stackable="true"/>
     </item>
-    <item id="90448" name="Fish Stew: Greater Shield Lv. 1"  icon="icon.fish_stew_buff">
+    <item id="90448" name="Fish Stew: Greater Shield Lv. 1" icon="icon.fish_stew_buff">
         <!-- For 20 min. P. Def. +5%. Cannot be dropped. -->
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction dropable="false" sellable="false" stackable="true"/>
     </item>
-    <item id="90449" name="Fish Stew: Wild Magic Lv. 1"  icon="icon.fish_stew_buff">
+    <item id="90449" name="Fish Stew: Wild Magic Lv. 1" icon="icon.fish_stew_buff">
         <!-- For 20 min. M. Critical Rate +10. Cannot be dropped. -->
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction dropable="false" sellable="false" stackable="true"/>
     </item>
-    <item id="90450" name="Fish Stew: Berserker Spirit Lv. 1"  icon="icon.fish_stew_buff">
+    <item id="90450" name="Fish Stew: Berserker Spirit Lv. 1" icon="icon.fish_stew_buff">
         <!-- For 20 min. P. Def. -5%, M. Def. -10%, P. Evasion -2 -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_destroyable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction destroyable="false" stackable="true"/>
     </item>
-    <item id="90451" name="Fish Stew: Berserker Spirit Lv. 2"  icon="icon.fish_stew_buff">
+    <item id="90451" name="Fish Stew: Berserker Spirit Lv. 2" icon="icon.fish_stew_buff">
         <!-- For 20 min. P. Def. -8%, M. Def. -16%, P. Evasion -4 -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_destroyable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction destroyable="false" stackable="true"/>
     </item>
-    <item id="90452" name="Fish Stew: Decrease Weight Lv. 1"  icon="icon.fish_stew_buff">
+    <item id="90452" name="Fish Stew: Decrease Weight Lv. 1" icon="icon.fish_stew_buff">
         <!-- For 20 min. Weight limit +3000. Cannot be dropped. -->
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction dropable="false" sellable="false" stackable="true"/>
     </item>
-    <item id="90453" name="Fish Stew: Decrease Weight Lv. 2"  icon="icon.fish_stew_buff">
+    <item id="90453" name="Fish Stew: Decrease Weight Lv. 2" icon="icon.fish_stew_buff">
         <!-- For 20 min. Weight limit +6000. Cannot be dropped. -->
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction dropable="false" sellable="false" stackable="true"/>
     </item>
-    <item id="90454" name="Fish Stew: Decrease Weight Lv. 3"  icon="icon.fish_stew_buff">
+    <item id="90454" name="Fish Stew: Decrease Weight Lv. 3" icon="icon.fish_stew_buff">
         <!-- For 20 min. Weight limit +9000. Cannot be dropped. -->
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction dropable="false" sellable="false" stackable="true"/>
     </item>
     <armor id="90455" name="Avadon Circlet" icon="icon.armor_leather_helmet_i00">
         <set name="default_action" val="EQUIP"/>
@@ -1001,112 +813,76 @@
             <stat type="pDef">73</stat>
         </stats>
     </armor>
-    <item id="90479" name="Shiny Jewelry Box"  icon="icon.etc_bm_jewelbox_main_i00">
+    <item id="90479" name="Shiny Jewelry Box" icon="icon.etc_bm_jewelbox_main_i00">
         <!-- Double-click to obtain 1 Jewel (Lv.1). Cannot be exchanged, dropped, stored in private warehouse or sold. Can be stored in a private warehouse. -->
         <set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
     </item>
-    <item id="90480" name="Lucky Enchant Stone: Save Armor (D-grade)"  icon="icon.ench_am_stone_i03">
+    <item id="90480" name="Lucky Enchant Stone: Save Armor (D-grade)" icon="icon.ench_am_stone_i03">
         <!-- Enchant success rate +10% for armor (D-grade) when using a standard scroll. Only for items enchanted between +3 and +8. For one-piece armor, enchant must be between +4 and +8. If enchanting fails, the item will not be crystallized but the enchant value will be reset to 0. Cannot be dropped. -->
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction dropable="false" sellable="false" stackable="true"/>
     </item>
-    <item id="90481" name="Lucky Enchant Stone: Save Armor (C-grade)"  icon="icon.ench_am_stone_i03">
+    <item id="90481" name="Lucky Enchant Stone: Save Armor (C-grade)" icon="icon.ench_am_stone_i03">
         <!-- Enchant success rate +10% for armor (C-grade) when using a standard scroll. Only for items enchanted between +3 and +8. For one-piece armor, enchant must be between +4 and +8. If enchanting fails, the item will not be crystallized but the enchant value will be reset to 0. Cannot be dropped. -->
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction dropable="false" sellable="false" stackable="true"/>
     </item>
-    <item id="90482" name="Lucky Enchant Stone: Save Armor (B-grade)"  icon="icon.ench_am_stone_i03">
+    <item id="90482" name="Lucky Enchant Stone: Save Armor (B-grade)" icon="icon.ench_am_stone_i03">
         <!-- Enchant success rate +10% for armor (B-grade) when using a standard scroll. Only for items enchanted between +3 and +8. For one-piece armor, enchant must be between +4 and +8. If enchanting fails, the item will not be crystallized but the enchant value will be reset to 0. Cannot be dropped. -->
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction dropable="false" sellable="false" stackable="true"/>
     </item>
-    <item id="90483" name="Lucky Enchant Stone: Save Armor (A-grade)"  icon="icon.ench_am_stone_i03">
+    <item id="90483" name="Lucky Enchant Stone: Save Armor (A-grade)" icon="icon.ench_am_stone_i03">
         <!-- Enchant success rate +10% for armor (A-grade) when using a standard scroll. Only for items enchanted between +3 and +8. For one-piece armor, enchant must be between +4 and +8. If enchanting fails, the item will not be crystallized but the enchant value will be reset to 0. Cannot be dropped. -->
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction dropable="false" sellable="false" stackable="true"/>
     </item>
-    <item id="90484" name="Lucky Enchant Stone: Protect Armor (D-grade)"  icon="icon.ench_am_stone_i01">
+    <item id="90484" name="Lucky Enchant Stone: Protect Armor (D-grade)" icon="icon.ench_am_stone_i01">
         <!-- Enchant success rate +10% for armor (D-grade) when using a standard scroll. Only for items enchanted between +3 and +8. For one-piece armor, enchant must be between +4 and +8. If enchanting fails, the item will not be crystallized but the enchant value will be reset to 1. Cannot be dropped. -->
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction dropable="false" sellable="false" stackable="true"/>
     </item>
-    <item id="90485" name="Lucky Enchant Stone: Protect Armor (C-grade)"  icon="icon.ench_am_stone_i01">
+    <item id="90485" name="Lucky Enchant Stone: Protect Armor (C-grade)" icon="icon.ench_am_stone_i01">
         <!-- Enchant success rate +10% for armor (C-grade) when using a standard scroll. Only for items enchanted between +3 and +8. For one-piece armor, enchant must be between +4 and +8. If enchanting fails, the item will not be crystallized but the enchant value will be reset to 1. Cannot be dropped. -->
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction dropable="false" sellable="false" stackable="true"/>
     </item>
-    <item id="90486" name="Lucky Enchant Stone: Protect Armor (B-grade)"  icon="icon.ench_am_stone_i01">
+    <item id="90486" name="Lucky Enchant Stone: Protect Armor (B-grade)" icon="icon.ench_am_stone_i01">
         <!-- Enchant success rate +10% for armor (B-grade) when using a standard scroll. Only for items enchanted between +3 and +8. For one-piece armor, enchant must be between +4 and +8. If enchanting fails, the item will not be crystallized but the enchant value will be reset to 1. Cannot be dropped. -->
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction dropable="false" sellable="false" stackable="true"/>
     </item>
-    <item id="90487" name="Lucky Enchant Stone: Protect Armor (A-grade)"  icon="icon.ench_am_stone_i01">
+    <item id="90487" name="Lucky Enchant Stone: Protect Armor (A-grade)" icon="icon.ench_am_stone_i01">
         <!-- Enchant success rate +10% for armor (A-grade) when using a standard scroll. Only for items enchanted between +3 and +8. For one-piece armor, enchant must be between +4 and +8. If enchanting fails, the item will not be crystallized but the enchant value will be reset to 1. Cannot be dropped. -->
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction dropable="false" sellable="false" stackable="true"/>
     </item>
-    <item id="90488" name="Lucky Enchant Stone: Armor (D-grade)"  icon="icon.ench_am_stone_i00">
+    <item id="90488" name="Lucky Enchant Stone: Armor (D-grade)" icon="icon.ench_am_stone_i00">
         <!-- Enchant success rate +10% for armor (D-grade) when using a standard scroll. Only for items enchanted between +3 and +8. For one-piece armor, enchant must be between +4 and +8. Cannot be dropped. -->
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction dropable="false" sellable="false" stackable="true"/>
     </item>
-    <item id="90489" name="Lucky Enchant Stone: Armor (C-grade)"  icon="icon.ench_am_stone_i00">
+    <item id="90489" name="Lucky Enchant Stone: Armor (C-grade)" icon="icon.ench_am_stone_i00">
         <!-- Enchant success rate +10% for armor (C-grade) when using a standard scroll. Only for items enchanted between +3 and +8. For one-piece armor, enchant must be between +4 and +8. Cannot be dropped. -->
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction dropable="false" sellable="false" stackable="true"/>
     </item>
-    <item id="90490" name="Lucky Enchant Stone: Armor (B-grade)"  icon="icon.ench_am_stone_i00">
+    <item id="90490" name="Lucky Enchant Stone: Armor (B-grade)" icon="icon.ench_am_stone_i00">
         <!-- Enchant success rate +10% for armor (B-grade) when using a standard scroll. Only for items enchanted between +3 and +8. For one-piece armor, enchant must be between +4 and +8. Cannot be dropped. -->
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction dropable="false" sellable="false" stackable="true"/>
     </item>
-    <item id="90491" name="Lucky Enchant Stone: Armor (A-grade)"  icon="icon.ench_am_stone_i00">
+    <item id="90491" name="Lucky Enchant Stone: Armor (A-grade)" icon="icon.ench_am_stone_i00">
         <!-- Enchant success rate +10% for armor (A-grade) when using a standard scroll. Only for items enchanted between +3 and +8. For one-piece armor, enchant must be between +4 and +8. Cannot be dropped. -->
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction dropable="false" sellable="false" stackable="true"/>
     </item>
-    <item id="90492" name="Giant's Lucky Enchant Stone (A-grade)"  icon="icon.giant_ench_armor_stone_r_i02">
+    <item id="90492" name="Giant's Lucky Enchant Stone (A-grade)" icon="icon.giant_ench_armor_stone_r_i02">
         <!-- Enchant success rate +10% for armor (A-grade) when using an improved scroll. Only for items enchanted between +3 and +8. For one-piece armor, enchant must be between +4 and +8. Cannot be dropped. -->
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction dropable="false" sellable="false" stackable="true"/>
     </item>
-    <item id="90493" name="Blessed Lucky Enchant Stone (A-grade)"  icon="icon.giant_ench_armor_stone_r_i02">
+    <item id="90493" name="Blessed Lucky Enchant Stone (A-grade)" icon="icon.giant_ench_armor_stone_r_i02">
         <!-- Enchant success rate +10% for armor (A-grade) when using a blessed scroll. Only for items enchanted between +3 and +8. For one-piece armor, enchant must be between +4 and +8. Cannot be dropped. -->
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction dropable="false" sellable="false" stackable="true"/>
     </item>
-    <item id="90494" name="Eva's Scroll: Enchant Hair Accessory"  icon="icon.scroll_of_unidentify_am_d">
+    <item id="90494" name="Eva's Scroll: Enchant Hair Accessory" icon="icon.scroll_of_unidentify_am_d">
         <!-- Hair Accessory M. Def. +2. Starting from +5, an additional effect is activated and HP/ MP/ CP are increased. Can be safely enchanted up to +3. Cannot be dropped. Cannot be dropped. -->
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction dropable="false" sellable="false" stackable="true"/>
     </item>
-    <item id="90495" name="Scroll of Mood Melody"  icon="icon.bm_magmeld">
+    <item id="90495" name="Scroll of Mood Melody" icon="icon.bm_magmeld">
         <!-- For 20 minutes, grants the following effects: Might, Shield, Focus, Haste, Acumen, Empower, Wind Walk, Death Whisper, and Vampiric Rage. Will not be deleted upon death. Cannot be dropped. -->
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction dropable="false" sellable="false" stackable="true"/>
     </item>
     <armor id="90496" name="Land Dragon Belt" icon="icon.bm_antaras_belt">
         <!-- CON +1, MEN +1, HP Recovery Bonus +2.31, Max MP +1.54, CP Recovery +3.07, Max HP/ MP/ CP +15%, Inventory Slots +6, Weight Gauge +7000, Healing Potions Effect +100 (Can be applied to Melissa's High Grade Recovery Potion, Melissa's Recovery Potion, Warrior's Quick Healing Potion), Incoming damage -6%. Cannot be dropped. -->
@@ -1114,11 +890,10 @@
         <set name="armor_type" val="LIGHT"/>
         <set name="bodypart" val="waist"/>
         <set name="immediate_effect" val="true"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-		<skills>
-			<skill id="35046" level="1" /> <!-- Land Dragon Belt -->
-		</skills>
+        <restriction dropable="false" sellable="false"/>
+        <skills>
+            <skill id="35046" level="1"/> <!-- Land Dragon Belt -->
+        </skills>
         <stats>
             <stat type="pDef">14</stat>
         </stats>
@@ -1129,27 +904,22 @@
         <set name="armor_type" val="LIGHT"/>
         <set name="bodypart" val="waist"/>
         <set name="immediate_effect" val="true"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-		<skills>
-			<skill id="35047" level="1" /> <!-- Fire Dragon Belt -->
-		</skills>
+        <restriction dropable="false" sellable="false"/>
+        <skills>
+            <skill id="35047" level="1"/> <!-- Fire Dragon Belt -->
+        </skills>
         <stats>
             <stat type="pDef">14</stat>
         </stats>
     </armor>
-    <item id="90498" name="Mysterious Jewelry Box"  icon="icon.bm_special_jewelbox_lv5">
+    <item id="90498" name="Mysterious Jewelry Box" icon="icon.bm_special_jewelbox_lv5">
         <!-- Double-click to obtain Shiny Jewelry Box level 5. Cannot be dropped. -->
         <set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction dropable="false" sellable="false" stackable="true"/>
     </item>
-    <item id="90499" name="Special Dragon's Fruit"  icon="icon.bm_dragon_fruit">
+    <item id="90499" name="Special Dragon's Fruit" icon="icon.bm_dragon_fruit">
         <!-- For 20 minutes, P./ M. Atk. +12%, P./ M. Def. +12%, Max. HP/ CP/ MP +15%, HP/ MP Recovery Bonus +25%, P./ M. Critical Rate +10, P./ M. Critical Damage +5%, HP/ MP Recovery +30%. At a certain chance absorbs 5% of the damage inflicted on target as HP. Acquired XP/ SPed through hunting +10%. Cooldown is 1 minute. Buff remains after death. Cannot be dropped. -->
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction dropable="false" sellable="false" stackable="true"/>
     </item>
 </list>

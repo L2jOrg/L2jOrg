@@ -6,7 +6,7 @@
         <set name="armor_type" val="HEAVY"/>
         <set name="bodypart" val="alldress"/>
         <set name="immediate_effect" val="true"/>
-        <set name="is_sellable" val="false"/>
+        <restriction sellable="false"/>
         <stats>
             <stat type="pDef">400</stat>
         </stats>
@@ -17,7 +17,7 @@
         <set name="armor_type" val="HEAVY"/>
         <set name="bodypart" val="alldress"/>
         <set name="immediate_effect" val="true"/>
-        <set name="is_sellable" val="false"/>
+        <restriction sellable="false"/>
         <stats>
             <stat type="pDef">400</stat>
         </stats>
@@ -28,7 +28,7 @@
         <set name="armor_type" val="HEAVY"/>
         <set name="bodypart" val="alldress"/>
         <set name="immediate_effect" val="true"/>
-        <set name="is_sellable" val="false"/>
+        <restriction sellable="false"/>
         <stats>
             <stat type="pDef">400</stat>
         </stats>
@@ -38,11 +38,7 @@
         <set name="armor_type" val="HEAVY"/>
         <set name="bodypart" val="alldress"/>
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_destroyable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
+        <restriction tradable="false" dropable="false" destroyable="false" depositable="false" sellable="false"/>
     </armor>
     <armor id="47232" name="Purple Cowboy Outfit" icon="icon.bm2018_cowboy_i01">
         <!-- Purple cowboy outfit. -->
@@ -50,7 +46,7 @@
         <set name="armor_type" val="HEAVY"/>
         <set name="bodypart" val="alldress"/>
         <set name="immediate_effect" val="true"/>
-        <set name="is_sellable" val="false"/>
+        <restriction sellable="false"/>
         <stats>
             <stat type="pDef">400</stat>
         </stats>

@@ -6,10 +6,7 @@
         <set name="bodypart" val="hairall"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="10"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
     </armor>
     <weapon id="26256" name="Halloween Shaper" icon="icon.ev_wp_halloween">
         <!-- Halloween weapon. -->
@@ -18,10 +15,7 @@
         <set name="immediate_effect" val="true"/>
         <set name="soulshots" val="1"/>
         <set name="spiritshots" val="1"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
         <stats>
             <stat type="pAtk">685</stat>
             <stat type="mAtk">414</stat>
@@ -38,10 +32,7 @@
         <set name="immediate_effect" val="true"/>
         <set name="soulshots" val="1"/>
         <set name="spiritshots" val="1"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
         <stats>
             <stat type="pAtk">752</stat>
             <stat type="mAtk">414</stat>
@@ -59,10 +50,7 @@
         <set name="immediate_effect" val="true"/>
         <set name="soulshots" val="1"/>
         <set name="spiritshots" val="1"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
         <stats>
             <stat type="pAtk">916</stat>
             <stat type="mAtk">414</stat>
@@ -79,10 +67,7 @@
         <set name="immediate_effect" val="true"/>
         <set name="soulshots" val="1"/>
         <set name="spiritshots" val="1"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
         <stats>
             <stat type="pAtk">752</stat>
             <stat type="mAtk">414</stat>
@@ -101,10 +86,7 @@
         <set name="immediate_effect" val="true"/>
         <set name="soulshots" val="1"/>
         <set name="spiritshots" val="1"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
         <stats>
             <stat type="pAtk">916</stat>
             <stat type="mAtk">414</stat>
@@ -123,10 +105,7 @@
         <set name="immediate_effect" val="true"/>
         <set name="soulshots" val="1"/>
         <set name="spiritshots" val="1"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
         <skills>
             <skill id="3599" level="1"/> <!-- Polearm Multi-attack -->
         </skills>
@@ -148,10 +127,7 @@
         <set name="immediate_effect" val="true"/>
         <set name="soulshots" val="1"/>
         <set name="spiritshots" val="1"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
         <stats>
             <stat type="pAtk">1481</stat>
             <stat type="mAtk">414</stat>
@@ -170,10 +146,7 @@
         <set name="immediate_effect" val="true"/>
         <set name="soulshots" val="1"/>
         <set name="spiritshots" val="1"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
         <stats>
             <stat type="pAtk">1333</stat>
             <stat type="mAtk">414</stat>
@@ -191,10 +164,7 @@
         <set name="immediate_effect" val="true"/>
         <set name="soulshots" val="1"/>
         <set name="spiritshots" val="1"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
         <stats>
             <stat type="pAtk">602</stat>
             <stat type="mAtk">486</stat>
@@ -211,10 +181,7 @@
         <set name="immediate_effect" val="true"/>
         <set name="soulshots" val="1"/>
         <set name="spiritshots" val="1"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
         <stats>
             <stat type="pAtk">602</stat>
             <stat type="mAtk">486</stat>
@@ -233,10 +200,7 @@
         <set name="immediate_effect" val="true"/>
         <set name="soulshots" val="1"/>
         <set name="spiritshots" val="1"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
         <stats>
             <stat type="pAtk">733</stat>
             <stat type="mAtk">535</stat>
@@ -255,10 +219,7 @@
         <set name="immediate_effect" val="true"/>
         <set name="soulshots" val="1"/>
         <set name="spiritshots" val="1"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
         <stats>
             <stat type="pAtk">916</stat>
             <stat type="mAtk">414</stat>
@@ -276,10 +237,7 @@
         <set name="immediate_effect" val="true"/>
         <set name="soulshots" val="1"/>
         <set name="spiritshots" val="1"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
         <stats>
             <stat type="pAtk">752</stat>
             <stat type="mAtk">414</stat>
@@ -298,10 +256,7 @@
         <set name="immediate_effect" val="true"/>
         <set name="soulshots" val="1"/>
         <set name="spiritshots" val="1"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
         <stats>
             <stat type="pAtk">916</stat>
             <stat type="mAtk">414</stat>
@@ -317,9 +272,7 @@
         <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="1"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
+        <restriction tradable="false" dropable="false" depositable="false"/>
         <stats>
             <stat type="rEvas">-8</stat>
             <stat type="rShld">20</stat>
@@ -333,9 +286,7 @@
         <set name="bodypart" val="hairall"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="10"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
+        <restriction tradable="false" dropable="false" depositable="false"/>
         <stats>
             <stat type="pDef">150</stat>
         </stats>

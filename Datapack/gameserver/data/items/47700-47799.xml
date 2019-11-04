@@ -9,10 +9,7 @@
         <set name="crystal_type" val="D"/>
         <set name="soulshots" val="3"/>
         <set name="spiritshots" val="3"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction dropable="false" depositable="false" sellable="false" freightable="true"/>
         <stats>
             <stat type="pAtk">92</stat>
             <stat type="mAtk">54</stat>

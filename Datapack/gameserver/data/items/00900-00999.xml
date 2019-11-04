@@ -345,107 +345,45 @@
             <stat type="mDef">68</stat>
         </stats>
     </armor>
-    <item id="937" name="Directions to Ruins"  icon="icon.etc_piece_of_paper_gray_i00">
+    <item id="937" name="Directions to Ruins" icon="icon.etc_piece_of_paper_gray_i00">
         <!-- Follow the northwestern path from the village, and head west when you meet the Obelisk of Victory. The entrance to the ruins lies at the slope of the mountain. -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="938" name="Deck"  icon="icon.etc_spell_books_red_i00">
+    <item id="938" name="Deck" icon="icon.etc_spell_books_red_i00">
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
-        <set name="is_sellable" val="false"/>
+        <restriction tradable="false" depositable="false" clan-depositable="false" mailable="false" commissionable="false" sellable="false"/>
     </item>
-    <item id="939" name="Gara's Quest Item #11"  icon="icon.item_normal52">
+    <item id="939" name="Gara's Quest Item #11" icon="icon.item_normal52">
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="940" name="Gara's Quest Item #12"  icon="icon.item_normal52">
+    <item id="940" name="Gara's Quest Item #12" icon="icon.item_normal52">
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="941" name="Gara's Mark of Bravery"  icon="icon.item_normal52">
+    <item id="941" name="Gara's Mark of Bravery" icon="icon.item_normal52">
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="942" name="Gara's Mark of Justice"  icon="icon.item_normal52">
+    <item id="942" name="Gara's Mark of Justice" icon="icon.item_normal52">
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="943" name="Gara's Mark of Despair"  icon="icon.item_normal52">
+    <item id="943" name="Gara's Mark of Despair" icon="icon.item_normal52">
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="944" name="Deathknight Skull"  icon="icon.armor_head15">
+    <item id="944" name="Deathknight Skull" icon="icon.armor_head15">
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
     <armor id="945" name="Skeleton Buckler" icon="icon.shield_skeleton_buckler_i00">
         <!-- Small wooden shield that perpetrators of mages use. -->
@@ -482,293 +420,181 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </weapon>
-    <item id="947" name="Scroll: Enchant Weapon (B-grade)"  icon="icon.etc_scroll_of_enchant_weapon_i03">
+    <item id="947" name="Scroll: Enchant Weapon (B-grade)" icon="icon.etc_scroll_of_enchant_weapon_i03">
         <!-- When enchanted, P. Atk. + 4 for B-grade one-handed swords, one-handed blunts, daggers, spears, and other weapons. P. Atk. + 5 for two-handed swords, two-handed blunts, dualswords, and two-handed fist weapons. P. Atk. + 8 for bows. M. Atk. + 3 for all weapons. Starting at + 4, P. Atk. / M. Atk. bonus double. Enchanting is safe up to + 3. -->
         <set name="default_action" val="SKILL_REDUCE"/>
         <set name="etcitem_type" val="ENCHT_WP"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="120"/>
         <set name="price" val="500000"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_oly_restricted" val="true"/>
-        <set name="handler" val="EnchantScrolls"/>
         <set name="commissionItemType" val="SCROLL_ENCHANT_WEAPON"/>
+        <restriction stackable="true" olympiad-restricted="true"/>
         <skills>
             <skill id="2015" level="1"/> <!-- Scroll: Enchant Weapon (B-grade) -->
         </skills>
     </item>
-    <item id="948" name="Scroll: Enchant Armor (B-grade)"  icon="icon.etc_scroll_of_enchant_armor_i03">
+    <item id="948" name="Scroll: Enchant Armor (B-grade)" icon="icon.etc_scroll_of_enchant_armor_i03">
         <!-- P. Def. + 1 for B-grade armor and accessories. Starting from + 4, P. Def. + 3. Can be safely enchanted up to + 3. For one-piece armor, it can safely be enchanted up to + 4. HP gradually increases with each enchant level starting from + 4. -->
         <set name="default_action" val="SKILL_REDUCE"/>
         <set name="etcitem_type" val="ENCHT_AM"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="120"/>
         <set name="price" val="80000"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_oly_restricted" val="true"/>
-        <set name="handler" val="EnchantScrolls"/>
         <set name="commissionItemType" val="SCROLL_ENCHANT_ARMOR"/>
+        <restriction stackable="true" olympiad-restricted="true"/>
         <skills>
             <skill id="2016" level="1"/> <!-- Scroll: Enchant Armor (B-grade) -->
         </skills>
     </item>
-    <item id="951" name="Scroll: Enchant Weapon (C-grade)"  icon="icon.etc_scroll_of_enchant_weapon_i02">
+    <item id="951" name="Scroll: Enchant Weapon (C-grade)" icon="icon.etc_scroll_of_enchant_weapon_i02">
         <!-- When enchanted, P. Atk. +4 for C-grade one-handed swords, one-handed blunts, daggers, spears, and other weapons. P. Atk. +5 for two-handed swords, two-handed blunts, dualswords, and two-handed fist weapons. P. Atk. +8 for bows. M. Atk. +3 for all weapons. Starting at +4, P. Atk. / M. Atk. bonus double. -->
         <set name="default_action" val="SKILL_REDUCE"/>
         <set name="etcitem_type" val="ENCHT_WP"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="120"/>
         <set name="price" val="110000"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_oly_restricted" val="true"/>
-        <set name="handler" val="EnchantScrolls"/>
         <set name="commissionItemType" val="SCROLL_ENCHANT_WEAPON"/>
+        <restriction stackable="true" olympiad-restricted="true"/>
         <skills>
             <skill id="2017" level="1"/> <!-- Scroll: Enchant Weapon (C-grade) -->
         </skills>
     </item>
-    <item id="952" name="Scroll: Enchant Armor (C-grade)"  icon="icon.etc_scroll_of_enchant_armor_i02">
+    <item id="952" name="Scroll: Enchant Armor (C-grade)" icon="icon.etc_scroll_of_enchant_armor_i02">
         <!-- P. Def. + 1 for C-grade armor and accessories. Increases by 3 starting from + 4. It can safely be enchanted up to + 3. For one-piece armor, it can safely be enchanted up to + 4. HP gradually increases with each enchant level starting from + 4. -->
         <set name="default_action" val="SKILL_REDUCE"/>
         <set name="etcitem_type" val="ENCHT_AM"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="120"/>
         <set name="price" val="15000"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_oly_restricted" val="true"/>
-        <set name="handler" val="EnchantScrolls"/>
         <set name="commissionItemType" val="SCROLL_ENCHANT_ARMOR"/>
+        <restriction stackable="true" olympiad-restricted="true"/>
         <skills>
             <skill id="2018" level="1"/> <!-- Scroll: Enchant Armor (C-grade) -->
         </skills>
     </item>
-    <item id="955" name="Scroll: Enchant Weapon (D-grade)"  icon="icon.etc_scroll_of_enchant_weapon_i01">
+    <item id="955" name="Scroll: Enchant Weapon (D-grade)" icon="icon.etc_scroll_of_enchant_weapon_i01">
         <!-- When enchanted, P. Atk. +4 for D-grade one-handed swords, one-handed blunts, daggers, spears, and other weapons. P. Atk. +5 for two-handed swords, two-handed blunts, dualswords, and two-handed fist weapons. P. Atk. +8 for bows. M. Atk. +3 for all weapons. Starting at +4, P. Atk. / M. Atk. bonus double. -->
         <set name="default_action" val="SKILL_REDUCE"/>
         <set name="etcitem_type" val="ENCHT_WP"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="120"/>
         <set name="price" val="50000"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_oly_restricted" val="true"/>
-        <set name="handler" val="EnchantScrolls"/>
         <set name="commissionItemType" val="SCROLL_ENCHANT_WEAPON"/>
+        <restriction stackable="true" olympiad-restricted="true"/>
         <skills>
             <skill id="2019" level="1"/> <!-- Scroll: Enchant Weapon (D-grade) -->
         </skills>
     </item>
-    <item id="956" name="Scroll: Enchant Armor (D-grade)"  icon="icon.etc_scroll_of_enchant_armor_i01">
+    <item id="956" name="Scroll: Enchant Armor (D-grade)" icon="icon.etc_scroll_of_enchant_armor_i01">
         <!-- P. Def. + 1 for D-grade armor and accessories. Increases by 3 starting from + 4. It can safely be enchanted up to + 3. For one-piece armor, it can safely be enchanted up to + 4. HP gradually increases with each enchant level starting from + 4. -->
         <set name="default_action" val="SKILL_REDUCE"/>
         <set name="etcitem_type" val="ENCHT_AM"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="120"/>
         <set name="price" val="6000"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_oly_restricted" val="true"/>
-        <set name="handler" val="EnchantScrolls"/>
         <set name="commissionItemType" val="SCROLL_ENCHANT_ARMOR"/>
+        <restriction stackable="true" olympiad-restricted="true"/>
         <skills>
             <skill id="2020" level="1"/> <!-- Scroll: Enchant Armor (D-grade) -->
         </skills>
     </item>
-    <item id="959" name="Scroll: Enchant Weapon (S-grade)"  icon="icon.etc_scroll_of_enchant_weapon_i05">
+    <item id="959" name="Scroll: Enchant Weapon (S-grade)" icon="icon.etc_scroll_of_enchant_weapon_i05">
         <!-- When enchanted, P. Atk. +5 for S-grade one-handed swords, one-handed blunts, daggers, spears, and other weapons. P. Atk. +6 for two-handed swords, two-handed blunts, dual swords, and two-handed fist weapons. P. Atk. +10 for bows. M. Atk. +4 for all weapons. Starting at +4, P. Atk./ M. Atk. bonus is doubled. -->
         <set name="default_action" val="SKILL_REDUCE"/>
         <set name="etcitem_type" val="ENCHT_WP"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="120"/>
         <set name="price" val="5000000"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_oly_restricted" val="true"/>
-        <set name="handler" val="EnchantScrolls"/>
         <set name="commissionItemType" val="SCROLL_ENCHANT_WEAPON"/>
+        <restriction stackable="true" olympiad-restricted="true"/>
         <skills>
             <skill id="2021" level="1"/> <!-- Scroll: Enchant Weapon (S-grade) -->
         </skills>
     </item>
-    <item id="960" name="Scroll: Enchant Armor (S-grade)"  icon="icon.etc_scroll_of_enchant_armor_i05">
+    <item id="960" name="Scroll: Enchant Armor (S-grade)" icon="icon.etc_scroll_of_enchant_armor_i05">
         <!-- P. Def. +2 for S-grade armor and accessories. Starting from +4, P. Def. +8. Ordinary armor can be safely enchanted up to +3. One-piece armor can be safely enchanted up to +4. After +4 increases HP. -->
         <set name="default_action" val="SKILL_REDUCE"/>
         <set name="etcitem_type" val="ENCHT_AM"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="120"/>
         <set name="price" val="500000"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_oly_restricted" val="true"/>
-        <set name="handler" val="EnchantScrolls"/>
         <set name="commissionItemType" val="SCROLL_ENCHANT_ARMOR"/>
+        <restriction stackable="true" olympiad-restricted="true"/>
         <skills>
             <skill id="2022" level="1"/> <!-- Scroll: Enchant Armor (S-grade) -->
         </skills>
     </item>
-    <item id="963" name="Orc Arrowhead"  icon="icon.weapon_winged_spear_i00">
+    <item id="963" name="Orc Arrowhead" icon="icon.weapon_winged_spear_i00">
         <!-- Arrowhead that Turath orc marksmen use on Talking Island. Collect these and take to Master Minia. -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="964" name="Alberius' Letter"  icon="icon.etc_scroll_white_i00">
+    <item id="964" name="Alberius' Letter" icon="icon.etc_scroll_white_i00">
         <!-- Letter from Alberius. Take this to Master Cobendell. -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="965" name="Evergreen Amulet"  icon="icon.accessary_near_forest_necklace_i00">
+    <item id="965" name="Evergreen Amulet" icon="icon.accessary_near_forest_necklace_i00">
         <!-- Necklace set with a green Elemental stone. You must possess this to slay the dryad and obtain the dryad's tears. -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="966" name="Dryad's Tears"  icon="icon.etc_crystal_ball_green_i00">
+    <item id="966" name="Dryad's Tears" icon="icon.etc_crystal_ball_green_i00">
         <!-- Jewel that contains the essence of a dryad's soul. Gather ten of these and take them to Master Cobendell. -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="967" name="Cobendell's Medicine"  icon="icon.item_canuse24">
+    <item id="967" name="Cobendell's Medicine" icon="icon.item_canuse24">
         <!-- Cobendell's medicine -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="968" name="Karrod's Letter"  icon="icon.etc_scroll_gray_i00">
+    <item id="968" name="Karrod's Letter" icon="icon.etc_scroll_gray_i00">
         <!-- Letter written by Blacksmith Karrod. Take this to the Abyssal Celebrant Cecktinon in the Shilen Temple. -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="969" name="Cecktinon's First Voucher"  icon="icon.etc_letter_red_i00">
+    <item id="969" name="Cecktinon's First Voucher" icon="icon.etc_letter_red_i00">
         <!-- Introduction letter from the Abyssal Celebrant Cecktinon. Take this and seek Magister Harne in the village. -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="970" name="Cecktinon's Second Voucher"  icon="icon.etc_letter_red_i00">
+    <item id="970" name="Cecktinon's Second Voucher" icon="icon.etc_letter_red_i00">
         <!-- Introduction letter from the Abyssal Celebrant Cecktinon. Go to the School of Dark Arts, hunt skeletons, and gather 10 bone fragments. -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="971" name="Soul Catcher"  icon="icon.weapon_voodoo_doll_i00">
+    <item id="971" name="Soul Catcher" icon="icon.weapon_voodoo_doll_i00">
         <!-- Item used during the exorcism ritual to call upon a spirit of the dead. Take this to the Abyssal Celebrant Cecktinon. -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="972" name="Preserving Oil"  icon="icon.etc_potion_clear_i00">
+    <item id="972" name="Preserving Oil" icon="icon.etc_potion_clear_i00">
         <!-- Oil that prevents the rotting of corpses. Take this and go hunt zombies in the Marshlands. -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="973" name="Zombie Head"  icon="icon.etc_skull_black_i00">
+    <item id="973" name="Zombie Head" icon="icon.etc_skull_black_i00">
         <!-- The head of tree Elf zombies that have been cut after they are defeated. Take this to the abyssal celebrant Cecktinon. -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="974" name="Steelbender Head"  icon="icon.etc_skull_red_i00">
+    <item id="974" name="Steelbender Head" icon="icon.etc_skull_red_i00">
         <!-- Please, I beg of you! Don't take me to that nasty-tempered blacksmith! -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
     <weapon id="975" name="Blood Saber" icon="icon.weapon_broad_sword_i00">
         <!-- An Oriharukon sword crafted in the Abella style of the east. -->
@@ -791,61 +617,29 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </weapon>
-    <item id="976" name="1st Badge of Sentinel"  icon="icon.item_system03">
+    <item id="976" name="1st Badge of Sentinel" icon="icon.item_system03">
         <!-- A badge that certifies that its bearer is an Elven Sentinel. Destroy an orc Tanuki skullcrusher and report to Sentinel Kendell. -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="977" name="1st Badge of Sentinel"  icon="icon.item_system03">
+    <item id="977" name="1st Badge of Sentinel" icon="icon.item_system03">
         <!-- A badge that certifies that its bearer is an Elven Sentinel. Destroy an orc Bhato bloodspear and report to Sentinel Kendell. -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="978" name="Skullcrusher Amulet"  icon="icon.item_normal145">
+    <item id="978" name="Skullcrusher Amulet" icon="icon.item_normal145">
         <!-- The amulet that represents the Skullcrusher Orc tribe. Take this to Sentinel Kendell. -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="979" name="Bloodspear Amulet"  icon="icon.item_normal89">
+    <item id="979" name="Bloodspear Amulet" icon="icon.item_normal89">
         <!-- The amulet that represents the Bloodspear Orc tribe. Take this to Sentinel Kendell. -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
     <weapon id="981" name="Red Sunset Sword" icon="icon.weapon_brandish_i00">
         <!-- Sword used by warriors belonging to the Red Sunset clan. -->
@@ -868,103 +662,47 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </weapon>
-    <item id="982" name="Esrandell's Letter"  icon="icon.item_normal20">
+    <item id="982" name="Esrandell's Letter" icon="icon.item_normal20">
         <!-- Esrandell's introduction -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="983" name="Kendell's Letter"  icon="icon.item_normal20">
+    <item id="983" name="Kendell's Letter" icon="icon.item_normal20">
         <!-- Kendell's letter -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="984" name="1st Onyx Talisman"  icon="icon.accessary_sages_necklace_i00">
+    <item id="984" name="1st Onyx Talisman" icon="icon.accessary_sages_necklace_i00">
         <!-- Necklace crafted of onyx. Take this to Abyssal Celebrant Kartia. -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="985" name="1st Onyx Talisman"  icon="icon.accessary_sages_necklace_i00">
+    <item id="985" name="1st Onyx Talisman" icon="icon.accessary_sages_necklace_i00">
         <!-- Necklace crafted of onyx. Recover the original scrolls from the blackskull Orcs and bring them to Abyssal Celebrant Kartia. -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="986" name="Ancient Scroll"  icon="icon.etc_scroll_gray_i00">
+    <item id="986" name="Ancient Scroll" icon="icon.etc_scroll_gray_i00">
         <!-- Ancient scroll called Kaysha's Revelation. Take it along with the clay tablet to Abyssal Celebrant Kartia. -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="987" name="Ancient Clay Tablet"  icon="icon.etc_plate_glay_i00">
+    <item id="987" name="Ancient Clay Tablet" icon="icon.etc_plate_glay_i00">
         <!-- Ancient clay tablet engraved with text. Take it along with the ancient scroll to Abyssal Celebrant Kartia. -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="988" name="Kartia's Translation"  icon="icon.etc_piece_of_paper_gray_i00">
+    <item id="988" name="Kartia's Translation" icon="icon.etc_piece_of_paper_gray_i00">
         <!-- Kartia's translation of Kaysha's Revelations. Take it to Hierarch Thifiell. -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
     <weapon id="989" name="Eldritch Dagger" icon="icon.weapon_knife_i00">
         <!-- Steel dagger engraved with the runes of Shilen and Gran Kain. -->

@@ -1,298 +1,196 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
-    <item id="70300" name="Enchant Scroll of Forbidden Limit"  icon="icon.etc_aidcharm_cancel_deathfire_i00">
+    <item id="70300" name="Enchant Scroll of Forbidden Limit" icon="icon.etc_aidcharm_cancel_deathfire_i00">
         <!-- An Enchant Scroll enhancing the properties of Talisman of Border. Can be applied to Talisman enchanted up to +8. In case of a failed enchantment, the item does not disappear and the enchantment level is not reset. -->
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction sellable="false" stackable="true"/>
     </item>
-    <item id="70301" name="Forbidden Limit Chest"  icon="icon.bm_special_pendant_abradant_box">
+    <item id="70301" name="Forbidden Limit Chest" icon="icon.bm_special_pendant_abradant_box">
         <!-- A Chest containing the power of Forbidden Limit. Double-click to receive 1 Talisman of Border - Lv. 1 and 10 Enchant Scrolls. -->
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction sellable="false" stackable="true"/>
     </item>
-    <item id="70302" name="Blessed Enchant Scroll of Border"  icon="icon.etc_doom_capture">
+    <item id="70302" name="Blessed Enchant Scroll of Border" icon="icon.etc_doom_capture">
         <!-- An Enchant Scroll enhancing the properties of Talisman of Border. The maximum level of enchantment is +10. In case of a failed enchantment, the item does not disappear and the enchantment level is reset. -->
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction sellable="false" stackable="true"/>
     </item>
-    <item id="70303" name="Monkey Bait"  icon="icon.etc_gludio_fish_lure_i00">
+    <item id="70303" name="Monkey Bait" icon="icon.etc_gludio_fish_lure_i00">
         <!-- Fishing bait enabling to catch a Tuna. Cannot be exchanged, dropped, sold in a private store. Can be stored in a private warehouse. Can be transferred between characters on one account using Dimensional Merchant. The item will be removed after the event is over. -->
         <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true" freightable="true"/>
     </item>
-    <item id="70304" name="Tuna"  icon="icon.fish_huge_i12">
+    <item id="70304" name="Tuna" icon="icon.fish_huge_i12">
         <!-- To exchange Tuna for the special items, bring it to Chef Monkey in town. Cannot be dropped. The item will be removed after the event is over. -->
-        <set name="is_dropable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction dropable="false" stackable="true"/>
     </item>
-    <item id="70305" name="Chef Monkey’s Gift"  icon="icon.bm_sayha_gold_present">
+    <item id="70305" name="Chef Monkey’s Gift" icon="icon.bm_sayha_gold_present">
         <!-- A special gift for PA owners from Chef Monkey. Double-click to get Monkey Bait (60 pcs.) and Tuna (10 pcs.). Cannot be exchanged, dropped, or sold. The item will be removed after the event is over. -->
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="10"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
     </item>
-    <item id="70306" name="Blessed Mysterious Soulshot (No-grade)"  icon="icon.etc_bless_spirit_bullet_white_i00">
+    <item id="70306" name="Blessed Mysterious Soulshot (No-grade)" icon="icon.etc_bless_spirit_bullet_white_i00">
         <!-- The power of a Soulshot is bestowed upon a weapon, temporarily increasing the power of attack. For No-grade weapons. -->
         <set name="default_action" val="SOULSHOT"/>
         <set name="immediate_effect" val="true"/>
         <set name="commissionItemType" val="SOULSHOT"/>
         <set name="etcitem_type" val="SOULSHOT"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
         <set name="handler" val="BlessedSoulShots"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
         <skills>
             <skill id="55384" level="1"/> <!-- Player Commendation - Blessed Soulshot (No-grade) -->
         </skills>
     </item>
-    <item id="70307" name="Mysterious Blessed Soulshot (D-grade)"  icon="icon.etc_bless_spirit_bullet_blue_i00">
+    <item id="70307" name="Mysterious Blessed Soulshot (D-grade)" icon="icon.etc_bless_spirit_bullet_blue_i00">
         <!-- The power of a Soulshot is bestowed upon a weapon, temporarily increasing the power of attack. For D-grade weapons. -->
         <set name="default_action" val="SOULSHOT"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="D"/>
         <set name="commissionItemType" val="SOULSHOT"/>
         <set name="etcitem_type" val="SOULSHOT"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
         <set name="handler" val="BlessedSoulShots"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
         <skills>
             <skill id="55385" level="1"/> <!-- Player Commendation - Blessed Soulshot (D-grade) -->
         </skills>
     </item>
-    <item id="70308" name="Mysterious Blessed Soulshot (C-grade)"  icon="icon.etc_bless_spirit_bullet_green_i00">
+    <item id="70308" name="Mysterious Blessed Soulshot (C-grade)" icon="icon.etc_bless_spirit_bullet_green_i00">
         <!-- The power of a Soulshot is bestowed upon a weapon, temporarily increasing the power of attack. For C-grade weapons. -->
         <set name="default_action" val="SOULSHOT"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="C"/>
         <set name="commissionItemType" val="SOULSHOT"/>
         <set name="etcitem_type" val="SOULSHOT"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
         <set name="handler" val="BlessedSoulShots"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
         <skills>
             <skill id="55386" level="1"/> <!-- Player Commendation - Blessed Soulshot (C-grade) -->
         </skills>
     </item>
-    <item id="70309" name="Mysterious Blessed Soulshot (B-grade)"  icon="icon.etc_bless_spirit_bullet_red_i00">
+    <item id="70309" name="Mysterious Blessed Soulshot (B-grade)" icon="icon.etc_bless_spirit_bullet_red_i00">
         <!-- The power of a Soulshot is bestowed upon a weapon, temporarily increasing the power of attack. For B-grade weapons. -->
         <set name="default_action" val="SOULSHOT"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="B"/>
         <set name="commissionItemType" val="SOULSHOT"/>
         <set name="etcitem_type" val="SOULSHOT"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
         <set name="handler" val="BlessedSoulShots"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
         <skills>
             <skill id="55387" level="1"/> <!-- Player Commendation - Blessed Soulshot (B-grade) -->
         </skills>
     </item>
-    <item id="70310" name="Mysterious Blessed Soulshot (A-grade)"  icon="icon.etc_bless_spirit_bullet_silver_i00">
+    <item id="70310" name="Mysterious Blessed Soulshot (A-grade)" icon="icon.etc_bless_spirit_bullet_silver_i00">
         <!-- The power of a Soulshot is bestowed upon a weapon, temporarily increasing the power of attack. For A-grade weapons. -->
         <set name="default_action" val="SOULSHOT"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="A"/>
         <set name="commissionItemType" val="SOULSHOT"/>
         <set name="etcitem_type" val="SOULSHOT"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
         <set name="handler" val="BlessedSoulShots"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
         <skills>
             <skill id="55388" level="1"/> <!-- Player Commendation - Blessed Soulshot (A-grade) -->
         </skills>
     </item>
-    <item id="70311" name="Forbidden Limit Scroll Box"  icon="icon.bm_pirate_king_box">
+    <item id="70311" name="Forbidden Limit Scroll Box" icon="icon.bm_pirate_king_box">
         <!-- Double-click to receive 300 Enchant Scrolls of Border and 1 Scroll of Forbidden Limit. -->
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction sellable="false" stackable="true"/>
     </item>
-    <item id="70312" name="Tryout Event Coin"  icon="icon.etc_ev_kalie_token">
+    <item id="70312" name="Tryout Event Coin" icon="icon.etc_ev_kalie_token">
         <!-- A coin, commemorating Olympiad Opening. Is given to those warriors who takes part in the Tryout. You can exchange it for a Special Potion through NPC Riana. Cannot be exchanged, dropped, used in a private store, sold or share within account. This item will be deleted after the event is over. -->
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
     </item>
-    <item id="70313" name="Olympiad Warrior's Potion - STR"  icon="icon.etc_lesser_potion_red_i00">
+    <item id="70313" name="Olympiad Warrior's Potion - STR" icon="icon.etc_lesser_potion_red_i00">
         <!-- Available only for those warriors, who take part in the Tryout. For 20 minutes, STR + 4. Cannot be stacked with other potions or with Roast Blue Mackerel. Cannot be exchanged, dropped, used in a private store, sold or share within account. This item will be deleted after the event is over. -->
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
     </item>
-    <item id="70314" name="Olympiad Warrior's Potion - INT"  icon="icon.etc_lesser_potion_scarlet_i00">
+    <item id="70314" name="Olympiad Warrior's Potion - INT" icon="icon.etc_lesser_potion_scarlet_i00">
         <!-- Available only for those warriors, who take part in the Tryout. For 20 minutes, INT + 4. Cannot be stacked with other potions or with Roast Blue Mackerel. Cannot be exchanged, dropped, used in a private store, sold or share within account. This item will be deleted after the event is over. -->
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
     </item>
-    <item id="70315" name="Olympiad Warrior's Potion - CON"  icon="icon.etc_lesser_potion_yellow_i00">
+    <item id="70315" name="Olympiad Warrior's Potion - CON" icon="icon.etc_lesser_potion_yellow_i00">
         <!-- Available only for those warriors, who take part in the Tryout. For 20 minutes, CON + 4. Cannot be stacked with other potions or with Roast Blue Mackerel. Cannot be exchanged, dropped, used in a private store, sold or share within account. This item will be deleted after the event is over. -->
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
     </item>
-    <item id="70316" name="Olympiad Warrior's Potion - DEX"  icon="icon.etc_lesser_potion_green_i00">
+    <item id="70316" name="Olympiad Warrior's Potion - DEX" icon="icon.etc_lesser_potion_green_i00">
         <!-- Available only for those warriors, who take part in the Tryout. For 20 minutes, DEX + 4. Cannot be stacked with other potions or with Roast Blue Mackerel. Cannot be exchanged, dropped, used in a private store, sold or share within account. This item will be deleted after the event is over. -->
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
     </item>
-    <item id="70317" name="Olympiad Warrior's Potion - MEN"  icon="icon.etc_lesser_potion_blue_i00">
+    <item id="70317" name="Olympiad Warrior's Potion - MEN" icon="icon.etc_lesser_potion_blue_i00">
         <!-- Available only for those warriors, who take part in the Tryout. For 20 minutes, MEN + 4. Cannot be stacked with other potions or with Roast Blue Mackerel. Cannot be exchanged, dropped, used in a private store, sold or share within account. This item will be deleted after the event is over. -->
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
     </item>
-    <item id="70318" name="Olympiad Warrior's Potion - WIT"  icon="icon.etc_lesser_potion_purple_i00">
+    <item id="70318" name="Olympiad Warrior's Potion - WIT" icon="icon.etc_lesser_potion_purple_i00">
         <!-- Available only for those warriors, who take part in the Tryout. For 20 minutes, WIT + 4. Cannot be stacked with other potions or with Roast Blue Mackerel. Cannot be exchanged, dropped, used in a private store, sold or share within account. This item will be deleted after the event is over. -->
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
     </item>
-    <item id="70319" name="Enhanced Olympiad Warrior's Potion - STR"  icon="icon.etc_fruit_juice_glass_bottle_i10">
+    <item id="70319" name="Enhanced Olympiad Warrior's Potion - STR" icon="icon.etc_fruit_juice_glass_bottle_i10">
         <!-- Available only for those warriors, who take part in the Tryout. For 20 minutes, STR + 7. Cannot be stacked with other potions or with Roast Blue Mackerel. Cannot be exchanged, dropped, used in a private store, sold or share within account. This item will be deleted after the event is over. -->
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
     </item>
-    <item id="70320" name="Enhanced Olympiad Warrior's Potion - INT"  icon="icon.etc_fruit_juice_glass_bottle_i11">
+    <item id="70320" name="Enhanced Olympiad Warrior's Potion - INT" icon="icon.etc_fruit_juice_glass_bottle_i11">
         <!-- Available only for those warriors, who take part in the Tryout. For 20 minutes, INT + 7. Cannot be stacked with other potions or with Roast Blue Mackerel. Cannot be exchanged, dropped, used in a private store, sold or share within account. This item will be deleted after the event is over. -->
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
     </item>
-    <item id="70321" name="Enhanced Olympiad Warrior's Potion - CON"  icon="icon.etc_fruit_juice_glass_bottle_i07">
+    <item id="70321" name="Enhanced Olympiad Warrior's Potion - CON" icon="icon.etc_fruit_juice_glass_bottle_i07">
         <!-- Available only for those warriors, who take part in the Tryout. For 20 minutes, CON + 7. Cannot be stacked with other potions or with Roast Blue Mackerel. Cannot be exchanged, dropped, used in a private store, sold or share within account. This item will be deleted after the event is over. -->
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
     </item>
-    <item id="70322" name="Enhanced Olympiad Warrior's Potion - DEX"  icon="icon.etc_fruit_juice_glass_bottle_i03">
+    <item id="70322" name="Enhanced Olympiad Warrior's Potion - DEX" icon="icon.etc_fruit_juice_glass_bottle_i03">
         <!-- Available only for those warriors, who take part in the Tryout. For 20 minutes, DEX + 7. Cannot be stacked with other potions or with Roast Blue Mackerel. Cannot be exchanged, dropped, used in a private store, sold or share within account. This item will be deleted after the event is over. -->
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
     </item>
-    <item id="70323" name="Enhanced Olympiad Warrior's Potion - MEN"  icon="icon.etc_fruit_juice_glass_bottle_i05">
+    <item id="70323" name="Enhanced Olympiad Warrior's Potion - MEN" icon="icon.etc_fruit_juice_glass_bottle_i05">
         <!-- Available only for those warriors, who take part in the Tryout. For 20 minutes, MEN + 7. Cannot be stacked with other potions or with Roast Blue Mackerel. Cannot be exchanged, dropped, used in a private store, sold or share within account. This item will be deleted after the event is over. -->
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
     </item>
-    <item id="70324" name="Enhanced Olympiad Warrior's Potion - WIT"  icon="icon.etc_fruit_juice_glass_bottle_i04">
+    <item id="70324" name="Enhanced Olympiad Warrior's Potion - WIT" icon="icon.etc_fruit_juice_glass_bottle_i04">
         <!-- Available only for those warriors, who take part in the Tryout. For 20 minutes, WIT + 7. Cannot be stacked with other potions or with Roast Blue Mackerel. Cannot be exchanged, dropped, used in a private store, sold or share within account. This item will be deleted after the event is over. -->
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
     </item>
-    <item id="70325" name="Commemorative Olympiad XP/SP Scroll"  icon="icon.exp_bottle_scroll">
+    <item id="70325" name="Commemorative Olympiad XP/SP Scroll" icon="icon.exp_bottle_scroll">
         <!-- For 20 minutes., obtained XP/SP + 50%. Cannot be stacked with other XP/SP Scroll. Cannot be exchanged, dropped, used in a private store, sold or share within account. This item will be deleted after the event is over. -->
         <set name="default_action" val="SKILL_REDUCE"/>
         <set name="weight" val="5"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="immediate_effect" val="true"/>
         <set name="handler" val="ItemSkills"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
         <skills>
             <skill id="55397" level="3"/> <!-- XP/SP Scroll lvl 1 (50%) -->
         </skills>
     </item>
-    <item id="70326" name="Olympiad Warrior's Special Fruit"  icon="icon.etc_cobol_i04">
+    <item id="70326" name="Olympiad Warrior's Special Fruit" icon="icon.etc_cobol_i04">
         <!-- For 20 minutes., obtained XP/SP + 10%, P. / M. Atk. +10%, P. / M. Def. +5%, Max. HP/MP/CP + 15%, HP / MP Recovery +20%, PvE damage + 10%. With a certain chance, converts 3% of damage dealt into HP. Can be used with Special Pirate Fruit. Cannot be exchanged, dropped, used in a private store, sold or share within account. This item will be deleted after the event is over. -->
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
     </item>
-    <item id="70327" name="Olympiad Commemorative Amulet - 100%"  icon="icon.skill19226">
+    <item id="70327" name="Olympiad Commemorative Amulet - 100%" icon="icon.skill19226">
         <!-- When in inventory XP/SP gain +100%. Cannot be exchanged, dropped, used in a private store, sold or share within account. This item will be deleted after the event is over. -->
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
         <set name="time" val="180"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
     </item>
-    <item id="70328" name="Olympiad Warrior's SP Scroll"  icon="icon.etc_sp_scroll3_i00">
+    <item id="70328" name="Olympiad Warrior's SP Scroll" icon="icon.etc_sp_scroll3_i00">
         <!-- Restores 500 000 SP. Cannot be exchanged, dropped, used in a private store, sold or share within account. This item will be deleted after the event is over. -->
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
     </item>
     <armor id="70329" name="Tryout Glorious Cloak" icon="icon.vesper_cloack_i00">
         <!-- Tryout Warrior's Cloak. P. / M. Def. +3%, Speed + 10. Cannot be exchanged, dropped, used in a private store, sold or share within account. -->
@@ -300,10 +198,7 @@
         <set name="bodypart" val="back"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="100"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
     </armor>
     <armor id="70330" name="Commemorative Olympiad Bracelet" icon="icon.dimension_bracelet_i05">
         <!-- Bracelet, given to those warriors who have showen the best results during the Tryout. Activates 2 Talisman slots, Max. HP/MP/CP + 3%. Cannot be exchanged, dropped, used in a private store, sold or share within account. -->
@@ -311,20 +206,14 @@
         <set name="bodypart" val="underwear"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="150"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
     </armor>
     <armor id="70331" name="Olympiad Warrior's Talisman" icon="icon.npoint_talisman_stat">
         <!-- Talisman, given to those warriors who have showen the best results during the Tryout. P. / M. Skill Critical Damage +7%. Cannot be exchanged, dropped, used in a private store, sold or share within account. -->
         <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="120"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
     </armor>
     <armor id="70332" name="Olympiad Warrior's Belt" icon="icon.belt_i03">
         <!-- Belt, given to those warriors who have showen the best results during the Tryout. P. Def. +15, weight limit + 2000. Cannot be exchanged, dropped, used in a private store, sold or share within account. -->
@@ -333,10 +222,7 @@
         <set name="bodypart" val="waist"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="500"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
         <stats>
             <stat type="pDef">10</stat>
         </stats>
@@ -347,10 +233,7 @@
         <set name="bodypart" val="agathion"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="150"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
         <skills>
             <skill id="55403" level="1"/> <!-- Summon Agathion - Cheerleader Mae -->
             <skill id="55404" level="1"/> <!-- Agathion Cute Trick - Cheerleader Mae -->
@@ -358,504 +241,377 @@
             <skill id="3267" level="1" type="ON_UNEQUIP"/> <!-- Seal Agathion -->
         </skills>
     </armor>
-    <item id="70334" name="Cadmus Transformation Bracelet Pack (1 day)"  icon="icon.etc_pi_box_love_pack">
+    <item id="70334" name="Cadmus Transformation Bracelet Pack (1 day)" icon="icon.etc_pi_box_love_pack">
         <!-- Double-click to receive Cadmus Transformation Bracelet Pack - Prophet (1 day). Cannot be exchanged, dropped, used in a private store, sold or share within account. This item will be deleted after the event is over. -->
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
     </item>
-    <item id="70335" name="Cadmus Transformation Bracelet Pack (1 day)"  icon="icon.etc_pi_box_wish_pack">
+    <item id="70335" name="Cadmus Transformation Bracelet Pack (1 day)" icon="icon.etc_pi_box_wish_pack">
         <!-- Double-click to receive Cadmus Transformation Bracelet Pack - Shillien Elder (1 day). Cannot be exchanged, dropped, used in a private store, sold or share within account. This item will be deleted after the event is over. -->
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
     </item>
-    <item id="70336" name="Cadmus Transformation Bracelet Pack (1 day)"  icon="icon.ev_10th_present2">
+    <item id="70336" name="Cadmus Transformation Bracelet Pack (1 day)" icon="icon.ev_10th_present2">
         <!-- Double-click to receive Cadmus Transformation Bracelet Pack - Elven Elder (1 day). Cannot be exchanged, dropped, used in a private store, sold or share within account. This item will be deleted after the event is over. -->
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
     </item>
-    <item id="70337" name="Cadmus Transformation Bracelet Pack (7 days)"  icon="icon.etc_pi_box_love_pack">
+    <item id="70337" name="Cadmus Transformation Bracelet Pack (7 days)" icon="icon.etc_pi_box_love_pack">
         <!-- Double-click to receive Cadmus Transformation Bracelet Pack - Prophet (7 days). Cannot be exchanged, dropped, used in a private store, sold or share within account. This item will be deleted after the event is over. -->
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
     </item>
-    <item id="70338" name="Cadmus Transformation Bracelet Pack (7 days)"  icon="icon.etc_pi_box_wish_pack">
+    <item id="70338" name="Cadmus Transformation Bracelet Pack (7 days)" icon="icon.etc_pi_box_wish_pack">
         <!-- Double-click to receive Cadmus Transformation Bracelet Pack - Shillien Elder (7 days). Cannot be exchanged, dropped, used in a private store, sold or share within account. This item will be deleted after the event is over. -->
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
     </item>
-    <item id="70339" name="Cadmus Transformation Bracelet Pack (7 days)"  icon="icon.ev_10th_present2">
+    <item id="70339" name="Cadmus Transformation Bracelet Pack (7 days)" icon="icon.ev_10th_present2">
         <!-- Double-click to receive Cadmus Transformation Bracelet Pack - Elven Elder (7 days). Cannot be exchanged, dropped, used in a private store, sold or share within account. This item will be deleted after the event is over. -->
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
     </item>
-    <item id="70340" name="Cadmus Transformation Bracelet Pack (30 days)"  icon="icon.etc_pi_box_love_pack">
+    <item id="70340" name="Cadmus Transformation Bracelet Pack (30 days)" icon="icon.etc_pi_box_love_pack">
         <!-- Double-click to receive Cadmus Transformation Bracelet Pack - Prophet (30 days). Cannot be exchanged, dropped, used in a private store, sold or share within account. This item will be deleted after the event is over. -->
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
     </item>
-    <item id="70341" name="Cadmus Transformation Bracelet Pack (30 days)"  icon="icon.etc_pi_box_wish_pack">
+    <item id="70341" name="Cadmus Transformation Bracelet Pack (30 days)" icon="icon.etc_pi_box_wish_pack">
         <!-- Double-click to receive Cadmus Transformation Bracelet Pack - Shillien Elder (30 days). Cannot be exchanged, dropped, used in a private store, sold or share within account. This item will be deleted after the event is over. -->
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
     </item>
-    <item id="70342" name="Cadmus Transformation Bracelet Pack (30 days)"  icon="icon.ev_10th_present2">
+    <item id="70342" name="Cadmus Transformation Bracelet Pack (30 days)" icon="icon.ev_10th_present2">
         <!-- Double-click to receive Cadmus Transformation Bracelet Pack - Elven Elder (30 days). Cannot be exchanged, dropped, used in a private store, sold or share within account. This item will be deleted after the event is over. -->
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
     </item>
-    <item id="70343" name="Expertise Rune (A-grade)"  icon="br_cashtex.item.br_cash_rune_of_feather_i00">
+    <item id="70343" name="Expertise Rune (A-grade)" icon="br_cashtex.item.br_cash_rune_of_feather_i00">
         <!-- 1-day. When possessed, gives Expertise A Skill. -->
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
         <set name="time" val="1440"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
     </item>
-    <item id="70344" name="A-grade Expertise Rune Pack"  icon="icon.etc_equip_item_box_i00">
+    <item id="70344" name="A-grade Expertise Rune Pack" icon="icon.etc_equip_item_box_i00">
         <!-- Wrapped Pack containing Expertise Rune (A-grade) (1-day). -->
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="10"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
         <set name="time" val="1440"/>
+        <restriction sellable="false" stackable="true"/>
     </item>
-    <item id="70345" name="Expertise Rune (A-grade)"  icon="br_cashtex.item.br_cash_rune_of_feather_i00">
+    <item id="70345" name="Expertise Rune (A-grade)" icon="br_cashtex.item.br_cash_rune_of_feather_i00">
         <!-- 3-day. When possessed, gives Expertise A Skill. -->
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
         <set name="time" val="4320"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
     </item>
-    <item id="70346" name="A-grade Expertise Rune Pack"  icon="icon.etc_equip_item_box_i00">
+    <item id="70346" name="A-grade Expertise Rune Pack" icon="icon.etc_equip_item_box_i00">
         <!-- Wrapped Pack containing Expertise Rune (A-grade) (3-day). -->
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="10"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
         <set name="time" val="4320"/>
+        <restriction sellable="false" stackable="true"/>
     </item>
-    <item id="70347" name="Expertise Rune (A-grade)"  icon="br_cashtex.item.br_cash_rune_of_feather_i00">
+    <item id="70347" name="Expertise Rune (A-grade)" icon="br_cashtex.item.br_cash_rune_of_feather_i00">
         <!-- 10-day. When possessed, gives Expertise A Skill. -->
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
         <set name="time" val="14400"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
     </item>
-    <item id="70348" name="A-grade Expertise Rune Pack"  icon="icon.etc_equip_item_box_i00">
+    <item id="70348" name="A-grade Expertise Rune Pack" icon="icon.etc_equip_item_box_i00">
         <!-- Wrapped Pack containing Expertise Rune (A-grade) (10-day). -->
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="10"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
         <set name="time" val="14400"/>
+        <restriction sellable="false" stackable="true"/>
     </item>
-    <item id="70349" name="Kusto's Support Box: Enhance Weapon"  icon="icon.etc_bm_jewelbox_main_i00">
+    <item id="70349" name="Kusto's Support Box: Enhance Weapon" icon="icon.etc_bm_jewelbox_main_i00">
         <!-- Double-click to get one of the following: Enchant / Improved / Solid / Blessed Scroll: Enchant Weapon (A-grade). -->
         <set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction sellable="false" stackable="true"/>
     </item>
-    <item id="70350" name="Kusto's Support Box: Enhance Weapon"  icon="icon.etc_bm_jewelbox_main_i00">
+    <item id="70350" name="Kusto's Support Box: Enhance Weapon" icon="icon.etc_bm_jewelbox_main_i00">
         <!-- Double-click to get one of the following: Enchant / Improved / Solid / Blessed Scroll: Enchant Weapon (B-grade). -->
         <set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction sellable="false" stackable="true"/>
     </item>
-    <item id="70351" name="Kusto's Support Box: Enhance Weapon"  icon="icon.etc_bm_jewelbox_main_i00">
+    <item id="70351" name="Kusto's Support Box: Enhance Weapon" icon="icon.etc_bm_jewelbox_main_i00">
         <!-- Double-click to get one of the following: Enchant / Improved / Solid / Blessed Scroll: Enchant Weapon (C-grade). -->
         <set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction sellable="false" stackable="true"/>
     </item>
-    <item id="70352" name="Kusto's Special Alloy"  icon="icon.etc_adamantium_i00">
+    <item id="70352" name="Kusto's Special Alloy" icon="icon.etc_adamantium_i00">
         <!-- Special material, invented by Kusto to produce weapons. It can be used as the material to produce A-grade weapon or to break the seal with the help of Kusto. -->
         <set name="etcitem_type" val="MATERIAL"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction sellable="false" stackable="true"/>
     </item>
-    <item id="70353" name="Transformation Scroll: Pirate"  icon="icon.etc_charm_of_courage_i03">
+    <item id="70353" name="Transformation Scroll: Pirate" icon="icon.etc_charm_of_courage_i03">
         <!-- Transformation into a Pirate. Fighting characteristics are improved. Remains even after death. -->
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction sellable="false" stackable="true"/>
     </item>
-    <item id="70354" name="Transformation Scroll: Dark Assassin"  icon="icon.etc_charm_of_courage_i05">
+    <item id="70354" name="Transformation Scroll: Dark Assassin" icon="icon.etc_charm_of_courage_i05">
         <!-- Transforms you into Dark Assassin for 30 min. Remains even after death. -->
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction sellable="false" stackable="true"/>
     </item>
-    <item id="70355" name="Transformation Scroll: White Assassin"  icon="icon.etc_charm_of_courage_i00">
+    <item id="70355" name="Transformation Scroll: White Assassin" icon="icon.etc_charm_of_courage_i00">
         <!-- Transforms you into White Assassin for 30 min. Remains even after death. -->
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction sellable="false" stackable="true"/>
     </item>
-    <item id="70356" name="Scroll: Enchant Armor (A-grade)"  icon="icon.etc_scroll_of_enchant_armor_i04">
+    <item id="70356" name="Scroll: Enchant Armor (A-grade)" icon="icon.etc_scroll_of_enchant_armor_i04">
         <!-- P. Def. + 1 for A-grade armor and accessories. Starting from + 4, P. Def. + 3. Can be safely enchanted up to + 3. For one-piece armor, it can safely be enchanted up to + 4. Cannot be exchanged, dropped, used in a private store, sold or share within account. Can store in private warehouse. -->
         <set name="default_action" val="SKILL_REDUCE"/>
         <set name="weight" val="120"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
     </item>
     <armor id="70357" name="Straw Hat" icon="icon.accessory_straw_hat_i00">
         <!-- Straw Hat. Uses 2 hair accessory slots. Cannot be exchanged, dropped, or sold. Can store in private warehouse -->
         <set name="bodypart" val="hairall"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="10"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_destroyable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction dropable="false" destroyable="false" freightable="true"/>
     </armor>
     <armor id="70358" name="First Mate Hat" icon="icon.Accessary_middle_ages_i01">
         <!-- First Mate Hat. Uses 2 hair accessory slots. Cannot be exchanged, dropped, or sold. Can store in private warehouse -->
         <set name="bodypart" val="hairall"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="10"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_destroyable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction dropable="false" destroyable="false" freightable="true"/>
     </armor>
     <armor id="70359" name="Warrior's Helmet" icon="BranchSys2.icon.br_close_helmet_i00">
         <!-- Helmet of a brave ancient warrior. Uses 2 hair accessory slots. Cannot be exchanged, dropped, or sold. Can store in private warehouse -->
         <set name="bodypart" val="hairall"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="10"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_destroyable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction dropable="false" destroyable="false" freightable="true"/>
     </armor>
     <armor id="70360" name="Chapeau" icon="icon.accessory_archer_hat_i00">
         <!-- Wide-brimmed hat with a feather. Uses 2 accessory slots. Cannot be exchanged, dropped, or sold. Can store in private warehouse -->
         <set name="bodypart" val="hairall"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="10"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_destroyable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction dropable="false" destroyable="false" freightable="true"/>
     </armor>
     <armor id="70361" name="Red Horn of Victory" icon="icon.accessory_hair_cornu_i00">
         <!-- Red Horn of Victory Hair accessory. Uses 1 accessory slot. Cannot be exchanged, dropped, or sold. Can store in private warehouse -->
         <set name="bodypart" val="hair2"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="10"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_destroyable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction dropable="false" destroyable="false" freightable="true"/>
     </armor>
     <armor id="70362" name="Refined Black Skeleton Circlet" icon="icon.accessory_animal_skeleton_circlet_i00">
         <!-- Uses 2 hair accessory slots.Refined Black Skeleton Circlet. Cannot be exchanged, dropped, or sold. Can store in private warehouse -->
         <set name="bodypart" val="hairall"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="10"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_destroyable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction dropable="false" destroyable="false" freightable="true"/>
     </armor>
     <armor id="70363" name="Refined Orange Skeleton Circlet" icon="icon.accessory_animal_feather_skeleton_circlet_i00">
         <!-- Refined Orange Skeleton Circlet. Uses 2 hair accessory slots. Cannot be exchanged, dropped, or sold. Can store in private warehouse -->
         <set name="bodypart" val="hairall"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="10"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_destroyable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction dropable="false" destroyable="false" freightable="true"/>
     </armor>
     <armor id="70364" name="Refined Green Skeleton Circlet" icon="icon.accessory_animal_warrior_skeleton_circlet_i00">
         <!-- Refined Green Skeleton Circlet. Uses 2 hair accessory slots. Cannot be exchanged, dropped, or sold. Can store in private warehouse -->
         <set name="bodypart" val="hairall"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="10"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_destroyable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction dropable="false" destroyable="false" freightable="true"/>
     </armor>
     <armor id="70365" name="Refined Brown Skeleton Circlet" icon="icon.accessory_animal_rage_skeleton_circlet_i00">
         <!-- Refined Brown Skeleton Circlet. Uses 2 hair accessory slots. Cannot be exchanged, dropped, or sold. Can store in private warehouse -->
         <set name="bodypart" val="hairall"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="10"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_destroyable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction dropable="false" destroyable="false" freightable="true"/>
     </armor>
     <armor id="70366" name="Gold Skeleton Circlet" icon="icon.accessory_golden_skeleton_circlet_i00">
         <!-- Gold skull circlet. Uses 2 hair accessory slots. Cannot be exchanged, dropped, or sold. Can store in private warehouse -->
         <set name="bodypart" val="hairall"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="10"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_destroyable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction dropable="false" destroyable="false" freightable="true"/>
     </armor>
     <armor id="70367" name="Silver Skeleton Circlet" icon="icon.accessory_golden_skeleton_circlet_i02">
         <!-- Silver skull circlet. Uses 2 hair accessory slots. Cannot be exchanged, dropped, or sold. Can store in private warehouse -->
         <set name="bodypart" val="hairall"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="10"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_destroyable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction dropable="false" destroyable="false" freightable="true"/>
     </armor>
     <armor id="70368" name="Red Skeleton Circlet" icon="icon.accessory_golden_skeleton_circlet_i01">
         <!-- Red skull circlet. Uses 2 hair accessory slots. Cannot be exchanged, dropped, or sold. Can store in private warehouse -->
         <set name="bodypart" val="hairall"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="10"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_destroyable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction dropable="false" destroyable="false" freightable="true"/>
     </armor>
     <armor id="70369" name="Black Skeleton Circlet" icon="icon.accessory_golden_skeleton_circlet_i03">
         <!-- Black skull circlet. Uses 2 hair accessory slots. Cannot be exchanged, dropped, or sold. Can store in private warehouse -->
         <set name="bodypart" val="hairall"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="10"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_destroyable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction dropable="false" destroyable="false" freightable="true"/>
     </armor>
     <armor id="70370" name="Chick Gold Horn Cap" icon="icon.accessory_horn01_hat_i00">
         <!-- Chick Gold Horn Cap. Uses 2 hair accessory slots. Cannot be exchanged, dropped, or sold. Can store in private warehouse -->
         <set name="bodypart" val="hairall"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="10"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_destroyable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction dropable="false" destroyable="false" freightable="true"/>
     </armor>
     <armor id="70371" name="Chick Silver Horn Cap" icon="icon.accessory_horn01_hat_i01">
         <!-- Chick Silver Horn Cap. Uses 2 hair accessory slots. Cannot be exchanged, dropped, or sold. Can store in private warehouse -->
         <set name="bodypart" val="hairall"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="10"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_destroyable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction dropable="false" destroyable="false" freightable="true"/>
     </armor>
     <armor id="70372" name="Refined Brown Turban" icon="icon.accessory_turban_yellow_hat_i00">
         <!-- Refined Brown Turban. Uses 2 hair accessory slots. Cannot be exchanged, dropped, or sold. Can store in private warehouse -->
         <set name="bodypart" val="hairall"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="10"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_destroyable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction dropable="false" destroyable="false" freightable="true"/>
     </armor>
     <armor id="70373" name="Refined Yellow Turban" icon="icon.accessory_turban_yellow_hat_i01">
         <!-- Refined Yellow Turban. Uses 2 hair accessory slots. Cannot be exchanged, dropped, or sold. Can store in private warehouse -->
         <set name="bodypart" val="hairall"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="10"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_destroyable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction dropable="false" destroyable="false" freightable="true"/>
     </armor>
     <armor id="70374" name="Mining Hat" icon="icon.accessory_mining_cap_i00">
         <!-- Hat used during mining. Uses 2 hair accessory slots. Cannot be exchanged, dropped, or sold. Can store in private warehouse -->
         <set name="bodypart" val="hairall"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="10"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_destroyable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction dropable="false" destroyable="false" freightable="true"/>
     </armor>
     <armor id="70375" name="Enhanced Mining Hat" icon="icon.accessory_advence_mining_cap_i00">
         <!-- Hat used during mining. Uses 2 hair accessory slots. Cannot be exchanged, dropped, or sold. Can store in private warehouse -->
         <set name="bodypart" val="hairall"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="10"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_destroyable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction dropable="false" destroyable="false" freightable="true"/>
     </armor>
     <armor id="70376" name="Search Hat" icon="icon.accessory_mine_search_cap_i00">
         <!-- Hat used when searching for minerals. Uses 2 hair accessory slots. Cannot be exchanged, dropped, or sold. Can store in private warehouse -->
         <set name="bodypart" val="hairall"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="10"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_destroyable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction dropable="false" destroyable="false" freightable="true"/>
     </armor>
     <armor id="70377" name="Enhanced Search Hat" icon="icon.accessory_advence_mine_search_cap_i00">
         <!-- Hat used when searching for minerals. Uses 2 hair accessory slots. Cannot be exchanged, dropped, or sold. Can store in private warehouse -->
         <set name="bodypart" val="hairall"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="10"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_destroyable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction dropable="false" destroyable="false" freightable="true"/>
     </armor>
     <armor id="70378" name="Circlet of Flames" icon="icon.accessory_flame_circlet_i00">
         <!-- Circlet that has the power of Flame. Uses 2 hair accessory slots. Cannot be exchanged, dropped, or sold. Can store in private warehouse -->
         <set name="bodypart" val="hairall"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="10"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_destroyable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction dropable="false" destroyable="false" freightable="true"/>
     </armor>
     <armor id="70379" name="Circlet of Ice" icon="icon.accessory_ice_circlet_i00">
         <!-- Circlet that has the power of Freeze. Uses 2 hair accessory slots. Cannot be exchanged, dropped, or sold. Can store in private warehouse -->
         <set name="bodypart" val="hairall"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="10"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_destroyable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction dropable="false" destroyable="false" freightable="true"/>
     </armor>
     <armor id="70380" name="Circlet of Storm" icon="icon.accessory_storm_circlet_i00">
         <!-- Circlet that has the power of Storm. Uses 2 hair accessory slots. Cannot be exchanged, dropped, or sold. Can store in private warehouse -->
         <set name="bodypart" val="hairall"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="10"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_destroyable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction dropable="false" destroyable="false" freightable="true"/>
     </armor>
     <armor id="70381" name="Circlet of Earthquake" icon="icon.accessory_earthquake_circlet_i00">
         <!-- Circlet that has the power of Severe Earthquake. Uses 2 hair accessory slots. Cannot be exchanged, dropped, or sold. Can store in private warehouse -->
         <set name="bodypart" val="hairall"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="10"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_destroyable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction dropable="false" destroyable="false" freightable="true"/>
     </armor>
     <armor id="70382" name="Circlet of Darkness" icon="icon.accessory_darkness_circlet_i00">
         <!-- Circlet that has the power of Darkness. Uses 2 hair accessory slots. Cannot be exchanged, dropped, or sold. Can store in private warehouse -->
         <set name="bodypart" val="hairall"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="10"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_destroyable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction dropable="false" destroyable="false" freightable="true"/>
     </armor>
     <armor id="70383" name="Circlet of Splendor" icon="icon.accessory_shining_circlet_i00">
         <!-- Circlet that has the power of Splendor. Uses 2 hair accessory slots. Cannot be exchanged, dropped, or sold. Can store in private warehouse -->
         <set name="bodypart" val="hairall"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="10"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_destroyable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction dropable="false" destroyable="false" freightable="true"/>
     </armor>
     <armor id="70384" name="Refined Carnival Circlet" icon="icon.accessory_carnival_circlet_i00">
         <!-- Refined Carnival Circlet. Uses 2 hair accessory slots. Cannot be exchanged, dropped, or sold. Can store in private warehouse -->
         <set name="bodypart" val="hairall"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="10"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_destroyable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction dropable="false" destroyable="false" freightable="true"/>
     </armor>
     <armor id="70385" name="Refined Devil Horn" icon="icon.accessory_devil_horn_i00">
         <!-- Refined Devil Horn. Uses 2 hair accessory slots. Cannot be exchanged, dropped, or sold. Can store in private warehouse -->
         <set name="bodypart" val="hairall"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="10"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_destroyable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction dropable="false" destroyable="false" freightable="true"/>
     </armor>
     <armor id="70386" name="Refined Carnival Circlet" icon="icon.accessory_carnival_circlet2_i00">
         <!-- Refined Carnival Circlet. Uses 2 hair accessory slots. Cannot be exchanged, dropped, or sold. Can store in private warehouse -->
         <set name="bodypart" val="hairall"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="10"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_destroyable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction dropable="false" destroyable="false" freightable="true"/>
     </armor>
     <armor id="70387" name="Demon Circlet" icon="icon.Accessary_demon_circlet_i00">
         <!-- Hair accessory possessed of dark energy. It uses 2 hair accessory slots. Cannot be exchanged, dropped, or sold. Can store in private warehouse -->
         <set name="bodypart" val="hairall"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="10"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_destroyable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction dropable="false" destroyable="false" freightable="true"/>
     </armor>
     <armor id="70388" name="Medieval Party Mask" icon="icon.accessory_middle_age_party_mask_i00">
         <!-- Medieval-style party mask. Uses 2 hair accessory slots. Cannot be exchanged, dropped, or sold. Can store in private warehouse -->
         <set name="bodypart" val="hairall"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="10"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_destroyable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction dropable="false" destroyable="false" freightable="true"/>
     </armor>
     <armor id="70389" name="Black Half Mask" icon="icon.Accessary_black_half_mask_i00">
         <!-- Black-colored half mask. Uses 1 hair accessory slot. Cannot be exchanged, dropped, or sold. Can store in private warehouse -->
         <set name="bodypart" val="hair"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="10"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_destroyable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction dropable="false" destroyable="false" freightable="true"/>
     </armor>
     <armor id="70390" name="Eva's Mark" icon="icon.accessory_soaring_bird_i00">
         <!-- Eva's Mark. Uses 1 hair accessory slot. Cannot be exchanged, dropped, or sold. Can store in private warehouse -->
         <set name="bodypart" val="hair"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="10"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_destroyable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction dropable="false" destroyable="false" freightable="true"/>
         <skills>
             <skill id="39025" level="1"/> <!-- Adventurer's Scroll of Escape -->
         </skills>
@@ -865,80 +621,62 @@
         <set name="bodypart" val="hairall"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="10"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_destroyable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction dropable="false" destroyable="false" freightable="true"/>
     </armor>
     <armor id="70392" name="Black Phantom Mask" icon="icon.accessory_high_phantom_mask_i00">
         <!-- A Phantom Mask hair accessory accented with black and gold metals. Uses 2 hair accessory slots. Cannot be exchanged, dropped, or sold. Can store in private warehouse -->
         <set name="bodypart" val="hairall"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="10"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_destroyable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction dropable="false" destroyable="false" freightable="true"/>
     </armor>
     <armor id="70393" name="Black Feather Mask" icon="icon.accessary_black_feather_mask_i00">
         <!-- Hair accessory containing dark feather. It uses 2 hair accessory slots. Cannot be exchanged, dropped, or sold. Can store in private warehouse -->
         <set name="bodypart" val="hairall"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="10"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_destroyable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction dropable="false" destroyable="false" freightable="true"/>
     </armor>
     <armor id="70394" name="Goblin Circlet" icon="icon.accessory_taiwan_i00">
         <!-- Gold colored, Goblin shaped hair accessory. Uses 1 hair accessory slot. Cannot be exchanged, dropped, or sold. Can store in private warehouse -->
         <set name="bodypart" val="hair"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="10"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_destroyable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction dropable="false" destroyable="false" freightable="true"/>
     </armor>
     <armor id="70395" name="Gold-rimmed Glasses" icon="BranchSys2.icon.br_gold_eyeglass_i00">
         <!-- Expensive-looking gold-rimmed glasses. Uses 1 hair accessory slots. Cannot be exchanged, dropped, or sold. Can store in private warehouse -->
         <set name="bodypart" val="hair"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="10"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_destroyable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction dropable="false" destroyable="false" freightable="true"/>
     </armor>
     <armor id="70396" name="Refined Romantic Chapeau: Blue" icon="icon.bm_romantic_chaperon_blue">
         <!-- Refined blue romantic chapeau. Uses 2 hair accessory slots. Cannot be exchanged, dropped, or sold. Can store in private warehouse -->
         <set name="bodypart" val="hairall"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="10"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_destroyable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction dropable="false" destroyable="false" freightable="true"/>
     </armor>
     <armor id="70397" name="Refined Romantic Chapeau: Gold" icon="icon.bm_romantic_chaperon_gold">
         <!-- Refined  gold romantic chapeau. Uses 2 hair accessory slots. Cannot be exchanged, dropped, or sold. Can store in private warehouse -->
         <set name="bodypart" val="hairall"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="10"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_destroyable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction dropable="false" destroyable="false" freightable="true"/>
     </armor>
     <armor id="70398" name="Refined Romantic Chapeau: Green" icon="icon.bm_romantic_chaperon_green">
         <!-- Refined green romantic chapeau. Uses 2 hair accessory slots. Cannot be exchanged, dropped, or sold. Can store in private warehouse -->
         <set name="bodypart" val="hairall"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="10"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_destroyable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction dropable="false" destroyable="false" freightable="true"/>
     </armor>
     <armor id="70399" name="Refined Romantic Chapeau: Red" icon="icon.bm_romantic_chaperon_red">
         <!-- Refined red romantic chapeau. Uses 2 hair accessory slots. Cannot be exchanged, dropped, or sold. Can store in private warehouse -->
         <set name="bodypart" val="hairall"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="10"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_destroyable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction dropable="false" destroyable="false" freightable="true"/>
     </armor>
 </list>

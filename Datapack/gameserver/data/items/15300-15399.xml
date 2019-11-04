@@ -9,11 +9,7 @@
         <set name="weight" val="2080"/>
         <set name="soulshots" val="1"/>
         <set name="spiritshots" val="1"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_destroyable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
+        <restriction tradable="false" dropable="false" destroyable="false" depositable="false" sellable="false"/>
         <stats>
             <stat type="pAtk">282</stat>
             <stat type="mAtk">114</stat>
@@ -32,11 +28,7 @@
         <set name="weight" val="1950"/>
         <set name="soulshots" val="3"/>
         <set name="spiritshots" val="3"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_destroyable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
+        <restriction tradable="false" dropable="false" destroyable="false" depositable="false" sellable="false"/>
         <skills>
             <skill id="3599" level="1"/> <!-- Polearm Multi-attack -->
         </skills>
@@ -60,11 +52,7 @@
         <set name="soulshots" val="6"/>
         <set name="spiritshots" val="2"/>
         <set name="mp_consume" val="4"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_destroyable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
+        <restriction tradable="false" dropable="false" destroyable="false" depositable="false" sellable="false"/>
         <stats>
             <stat type="pAtk">114</stat>
             <stat type="mAtk">35</stat>
@@ -84,11 +72,7 @@
         <set name="weight" val="1013"/>
         <set name="soulshots" val="1"/>
         <set name="spiritshots" val="1"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_destroyable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
+        <restriction tradable="false" dropable="false" destroyable="false" depositable="false" sellable="false"/>
         <stats>
             <stat type="pAtk">376</stat>
             <stat type="mAtk">119</stat>
@@ -108,11 +92,7 @@
         <set name="weight" val="1850"/>
         <set name="soulshots" val="4"/>
         <set name="spiritshots" val="2"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_destroyable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
+        <restriction tradable="false" dropable="false" destroyable="false" depositable="false" sellable="false"/>
         <stats>
             <stat type="pAtk">64</stat>
             <stat type="mAtk">32</stat>
@@ -132,11 +112,7 @@
         <set name="weight" val="1520"/>
         <set name="soulshots" val="2"/>
         <set name="spiritshots" val="2"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_destroyable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
+        <restriction tradable="false" dropable="false" destroyable="false" depositable="false" sellable="false"/>
         <stats>
             <stat type="pAtk">36</stat>
             <stat type="mAtk">26</stat>
@@ -156,11 +132,7 @@
         <set name="weight" val="2150"/>
         <set name="soulshots" val="1"/>
         <set name="spiritshots" val="1"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_destroyable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
+        <restriction tradable="false" dropable="false" destroyable="false" depositable="false" sellable="false"/>
         <stats>
             <stat type="pAtk">304</stat>
             <stat type="mAtk">157</stat>
@@ -171,44 +143,32 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </weapon>
-    <item id="15366" name="Watermelon seed"  icon="icon.event_honey_watermelon_seed_i00">
+    <item id="15366" name="Watermelon seed" icon="icon.event_honey_watermelon_seed_i00">
         <!-- Giant Watermelon Event: double-click summons a Young Watermelon. -->
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_oly_restricted" val="true"/>
-        <set name="handler" val="ItemSkills"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
+        <restriction stackable="true" olympiad-restricted="true"/>
         <skills>
             <skill id="9029" level="1"/> <!-- Watermelon Seed -->
         </skills>
     </item>
-    <item id="15367" name="Honey Watermelon Seed"  icon="icon.event_watermelon_seed_i00">
+    <item id="15367" name="Honey Watermelon Seed" icon="icon.event_watermelon_seed_i00">
         <!-- Giant Watermelon Event: double-click summons a Young Honey Watermelon. -->
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_oly_restricted" val="true"/>
-        <set name="handler" val="ItemSkills"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
+        <restriction stackable="true" olympiad-restricted="true"/>
         <skills>
             <skill id="9030" level="1"/> <!-- Honey Watermelon Seed -->
         </skills>
     </item>
-    <item id="15368" name="Copied Watermelon Seed"  icon="icon.event_honey_watermelon_seed_i00">
+    <item id="15368" name="Copied Watermelon Seed" icon="icon.event_honey_watermelon_seed_i00">
         <!-- Giant Watermelon Event: double-click summons a Young Watermelon. -->
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
     </item>
-    <item id="15369" name="Copied Honey Watermelon Seed"  icon="icon.event_watermelon_seed_i00">
+    <item id="15369" name="Copied Honey Watermelon Seed" icon="icon.event_watermelon_seed_i00">
         <!-- Giant Watermelon Event: double-click summons a Young Honey Watermelon. -->
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
     </item>
 </list>

@@ -5,725 +5,560 @@
         <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="120"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
         <set name="time" val="60"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
     </armor>
     <armor id="49601" name="Blue Talisman - P. Skills Evasion" icon="icon.etc_talisman_i01">
         <!-- A 1-hour item. P. Skills Evasion +10%. Effects from two such talismans do not stack. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
         <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="120"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
         <set name="time" val="60"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
     </armor>
     <armor id="49602" name="Blue Talisman - M. Crit." icon="icon.etc_talisman_i01">
         <!-- A 1-hour item. M. Critical +10. Effects from two such talismans do not stack. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
         <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="120"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
         <set name="time" val="60"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
     </armor>
     <armor id="49603" name="Blue Talisman - M. Atk." icon="icon.etc_talisman_i01">
         <!-- A 1-hour item. M. Atk. +3%. Effects from two such talismans do not stack. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
         <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="120"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
         <set name="time" val="60"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
     </armor>
     <armor id="49604" name="Blue Talisman - M. Def." icon="icon.etc_talisman_i01">
         <!-- A 1-hour item. M. Def. +3%. Effects from two such talismans do not stack. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
         <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="120"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
         <set name="time" val="60"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
     </armor>
     <armor id="49605" name="Blue Talisman - M. Skills Evasion" icon="icon.etc_talisman_i01">
         <!-- A 1-hour item. M. Skills Evasion +10%. Effects from two such talismans do not stack. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
         <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="120"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
         <set name="time" val="60"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
     </armor>
     <armor id="49606" name="Blue Talisman - Max. HP" icon="icon.etc_talisman_i01">
         <!-- A 1-hour item. Max. HP +3%. Effects from two such talismans do not stack. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
         <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="120"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
         <set name="time" val="60"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
     </armor>
     <armor id="49607" name="Blue Talisman - Max. MP" icon="icon.etc_talisman_i01">
         <!-- A 1-hour item. Max. MP +3%. Effects from two such talismans do not stack. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
         <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="120"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
         <set name="time" val="60"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
     </armor>
     <armor id="49608" name="Grey Talisman - Guard" icon="icon.etc_talisman_i07">
         <!-- A 1-hour item. Can protect from Debuffs 5 times for 10 sec. when used. Reuse Time is 5 minutes. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
         <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="120"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
         <set name="time" val="60"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
     </armor>
     <armor id="49609" name="Grey Talisman - Denial" icon="icon.etc_talisman_i07">
         <!-- A 1-hour item. Removes a Debuff when used. Reuse Time is 5 minutes. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
         <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="120"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
         <set name="time" val="60"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
     </armor>
     <armor id="49610" name="Grey Talisman - Benefaction" icon="icon.etc_talisman_i07">
         <!-- A 1-hour item. When used, P. Def. +1800 and M. Def. +1620, Buff-canceling Attack Resistance +80% for 10 seconds. Reuse Time is 15 minutes. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
         <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="120"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
         <set name="time" val="60"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
     </armor>
     <armor id="49611" name="Grey Talisman - Blocking" icon="icon.etc_talisman_i07">
         <!-- A 1-hour item. Restricts enemy's HP recovery up to 70% for 15 sec. when used. Reuse Time is 3 minutes. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
         <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="120"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
         <set name="time" val="60"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
     </armor>
     <armor id="49612" name="Grey Talisman - Gravity" icon="icon.etc_talisman_i07">
         <!-- A 1-hour item. Atk. Spd. and Casting Spd. -20% for 15 sec. when used. Reuse Time is 3 minutes. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
         <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="120"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
         <set name="time" val="60"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
     </armor>
     <armor id="49613" name="Grey Talisman - Bond" icon="icon.etc_talisman_i07">
         <!-- A 1-hour item. Target's Speed -30% for 15 sec. when used. Reuse Time is 3 minutes. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
         <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="120"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
         <set name="time" val="60"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
     </armor>
     <armor id="49614" name="White Talisman - P. Crit." icon="icon.etc_talisman_i00">
         <!-- A 1-hour item. P. Critical Rate +20. Effects from two such talismans do not stack. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
         <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="120"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
         <set name="time" val="60"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
     </armor>
     <armor id="49615" name="White Talisman - P. Atk." icon="icon.etc_talisman_i00">
         <!-- A 1-hour item. P. Atk. +4%. Effects from two such talismans do not stack. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
         <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="120"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
         <set name="time" val="60"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
     </armor>
     <armor id="49616" name="White Talisman - P. Def" icon="icon.etc_talisman_i00">
         <!-- A 1-hour item. P. Def. +5%. Effects from two such talismans do not stack. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
         <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="120"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
         <set name="time" val="60"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
     </armor>
     <armor id="49617" name="White Talisman - P. Skills Evasion" icon="icon.etc_talisman_i00">
         <!-- A 1-hour item. P. Skills Evasion +15%. Effects from two such talismans do not stack. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
         <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="120"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
         <set name="time" val="60"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
     </armor>
     <armor id="49618" name="White Talisman - M. Crit." icon="icon.etc_talisman_i00">
         <!-- A 1-hour item. M. Critical +20. Effects from two such talismans do not stack. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
         <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="120"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
         <set name="time" val="60"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
     </armor>
     <armor id="49619" name="White Talisman - M. Atk." icon="icon.etc_talisman_i00">
         <!-- A 1-hour item. M. Atk. +4%. Effects from two such talismans do not stack. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
         <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="120"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
         <set name="time" val="60"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
     </armor>
     <armor id="49620" name="White Talisman - M. Def." icon="icon.etc_talisman_i00">
         <!-- A 1-hour item. M. Def. +5%. Effects from two such talismans do not stack. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
         <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="120"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
         <set name="time" val="60"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
     </armor>
     <armor id="49621" name="White Talisman - M. Skills Evasion" icon="icon.etc_talisman_i00">
         <!-- A 1-hour item. M. Skills Evasion +15%. Effects from two such talismans do not stack. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
         <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="120"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
         <set name="time" val="60"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
     </armor>
     <armor id="49622" name="White Talisman - Max. HP" icon="icon.etc_talisman_i00">
         <!-- A 1-hour item. Max. HP +5%. Effects from two such talismans do not stack. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
         <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="120"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
         <set name="time" val="60"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
     </armor>
     <armor id="49623" name="White Talisman - Max. MP" icon="icon.etc_talisman_i00">
         <!-- A 1-hour item. Max. MP +5%. Effects from two such talismans do not stack. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
         <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="120"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
         <set name="time" val="60"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
     </armor>
     <armor id="49624" name="Yellow Talisman - Guard" icon="icon.etc_talisman_i02">
         <!-- A 1-hour item. Can protect from Debuffs 5 times for 10 sec. when used. Reuse Time is 4 minutes. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
         <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="120"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
         <set name="time" val="60"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
     </armor>
     <armor id="49625" name="Yellow Talisman - Denial" icon="icon.etc_talisman_i02">
         <!-- A 1-hour item. Removes a Debuff when used. Reuse Time is 4 minutes. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
         <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="120"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
         <set name="time" val="60"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
     </armor>
     <armor id="49626" name="Yellow Talisman - Benefaction" icon="icon.etc_talisman_i02">
         <!-- A 1-hour item. P. Def. +3600 and M. Def. +3240 for 10 sec. when used. Buff-canceling Attack Resistance +80%. Reuse Time is 15 minutes. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
         <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="120"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
         <set name="time" val="60"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
     </armor>
     <armor id="49627" name="Yellow Talisman - Blocking" icon="icon.etc_talisman_i02">
         <!-- A 1-hour item. Restricts enemy's HP recovery up to 70% for 15 sec. when used. Reuse Time is 2 minutes. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
         <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="120"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
         <set name="time" val="60"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
     </armor>
     <armor id="49628" name="Yellow Talisman - Gravity" icon="icon.etc_talisman_i02">
         <!-- A 1-hour item. Atk. Spd. and Casting Spd. -20% for 15 sec. when used. Reuse Time is 2 minutes. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
         <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="120"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
         <set name="time" val="60"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
     </armor>
     <armor id="49629" name="Yellow Talisman - Bond" icon="icon.etc_talisman_i02">
         <!-- A 1-hour item. Target's Speed -30% for 15 sec. when used. Reuse Time is 2 minutes. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
         <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="120"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
         <set name="time" val="60"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
     </armor>
-    <item id="49630" name="Blue Talisman Box - P. Crit."  icon="icon.etc_treasure_box_i01">
+    <item id="49630" name="Blue Talisman Box - P. Crit." icon="icon.etc_treasure_box_i01">
         <!-- By double-clicking it, you will get Blue Talisman - P. Crit. (for 1 hour). <Note:>. For items obtained from a chest, there are restrictions regarding movement. -->
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
         <set name="time" val="60"/>
+        <restriction dropable="false" sellable="false" stackable="true"/>
     </item>
-    <item id="49631" name="Blue Talisman Box - P. Atk."  icon="icon.etc_treasure_box_i01">
+    <item id="49631" name="Blue Talisman Box - P. Atk." icon="icon.etc_treasure_box_i01">
         <!-- By double-clicking it, you will get Blue Talisman - P. Atk. (for 1 hour). <Note:>. For items obtained from a chest, there are restrictions regarding movement. -->
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
         <set name="time" val="60"/>
+        <restriction dropable="false" sellable="false" stackable="true"/>
     </item>
-    <item id="49632" name="Blue Talisman Box - P. Def."  icon="icon.etc_treasure_box_i01">
+    <item id="49632" name="Blue Talisman Box - P. Def." icon="icon.etc_treasure_box_i01">
         <!-- By double-clicking it, you will get Blue Talisman - P. Def. (for 1 hour). <Note:>. For items obtained from a chest, there are restrictions regarding movement. -->
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
         <set name="time" val="60"/>
+        <restriction dropable="false" sellable="false" stackable="true"/>
     </item>
-    <item id="49633" name="Blue Talisman Box - P. Skills Evasion"  icon="icon.etc_treasure_box_i01">
+    <item id="49633" name="Blue Talisman Box - P. Skills Evasion" icon="icon.etc_treasure_box_i01">
         <!-- By double-clicking it, you will get Blue Talisman - P. Skills Evasion (for 1 hour). <Note:>. For items obtained from a chest, there are restrictions regarding movement. -->
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
         <set name="time" val="60"/>
+        <restriction dropable="false" sellable="false" stackable="true"/>
     </item>
-    <item id="49634" name="Blue Talisman Box - M. Crit."  icon="icon.etc_treasure_box_i01">
+    <item id="49634" name="Blue Talisman Box - M. Crit." icon="icon.etc_treasure_box_i01">
         <!-- By double-clicking it, you will get Blue Talisman - M. Crit. (for 1 hour). <Note:>. For items obtained from a chest, there are restrictions regarding movement. -->
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
         <set name="time" val="60"/>
+        <restriction dropable="false" sellable="false" stackable="true"/>
     </item>
-    <item id="49635" name="Blue Talisman Box - M. Atk."  icon="icon.etc_treasure_box_i01">
+    <item id="49635" name="Blue Talisman Box - M. Atk." icon="icon.etc_treasure_box_i01">
         <!-- By double-clicking it, you will get Blue Talisman - M. Atk. (for 1 hour). <Note:>. For items obtained from a chest, there are restrictions regarding movement. -->
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
         <set name="time" val="60"/>
+        <restriction dropable="false" sellable="false" stackable="true"/>
     </item>
-    <item id="49636" name="Blue Talisman Box - M. Def."  icon="icon.etc_treasure_box_i01">
+    <item id="49636" name="Blue Talisman Box - M. Def." icon="icon.etc_treasure_box_i01">
         <!-- By double-clicking it, you will get Blue Talisman - M. Def. (for 1 hour). <Note:>. For items obtained from a chest, there are restrictions regarding movement. -->
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
         <set name="time" val="60"/>
+        <restriction dropable="false" sellable="false" stackable="true"/>
     </item>
-    <item id="49637" name="Blue Talisman Box - M. Skills Evasion"  icon="icon.etc_treasure_box_i01">
+    <item id="49637" name="Blue Talisman Box - M. Skills Evasion" icon="icon.etc_treasure_box_i01">
         <!-- By double-clicking it, you will get Blue Talisman - M. Skills Evasion (for 1 hour). <Note:>. For items obtained from a chest, there are restrictions regarding movement. -->
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
         <set name="time" val="60"/>
+        <restriction dropable="false" sellable="false" stackable="true"/>
     </item>
-    <item id="49638" name="Blue Talisman Box - Max. HP"  icon="icon.etc_treasure_box_i01">
+    <item id="49638" name="Blue Talisman Box - Max. HP" icon="icon.etc_treasure_box_i01">
         <!-- By double-clicking it, you will get Blue Talisman - Max. HP (for 1 hour). <Note:>. For items obtained from a chest, there are restrictions regarding movement. -->
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
         <set name="time" val="60"/>
+        <restriction dropable="false" sellable="false" stackable="true"/>
     </item>
-    <item id="49639" name="Blue Talisman Box - Max. MP"  icon="icon.etc_treasure_box_i01">
+    <item id="49639" name="Blue Talisman Box - Max. MP" icon="icon.etc_treasure_box_i01">
         <!-- By double-clicking it, you will get Blue Talisman - Max. MP (for 1 hour). <Note:>. For items obtained from a chest, there are restrictions regarding movement. -->
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
         <set name="time" val="60"/>
+        <restriction dropable="false" sellable="false" stackable="true"/>
     </item>
-    <item id="49640" name="Grey Talisman Box - Guard"  icon="icon.etc_treasure_box_i05">
+    <item id="49640" name="Grey Talisman Box - Guard" icon="icon.etc_treasure_box_i05">
         <!-- By double-clicking it, you will get Grey Talisman - Guard (for 1 hour). <Note:>. For items obtained from a chest, there are restrictions regarding movement. -->
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
         <set name="time" val="60"/>
+        <restriction dropable="false" sellable="false" stackable="true"/>
     </item>
-    <item id="49641" name="Grey Talisman Box - Denial"  icon="icon.etc_treasure_box_i05">
+    <item id="49641" name="Grey Talisman Box - Denial" icon="icon.etc_treasure_box_i05">
         <!-- By double-clicking it, you will get Grey Talisman - Denial (for 1 hour). <Note:>. For items obtained from a chest, there are restrictions regarding movement. -->
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
         <set name="time" val="60"/>
+        <restriction dropable="false" sellable="false" stackable="true"/>
     </item>
-    <item id="49642" name="Grey Talisman Box - Benefaction"  icon="icon.etc_treasure_box_i05">
+    <item id="49642" name="Grey Talisman Box - Benefaction" icon="icon.etc_treasure_box_i05">
         <!-- By double-clicking it, you will get Grey Talisman - Benefaction (for 1 hour). <Note:>. For items obtained from a chest, there are restrictions regarding movement. -->
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
         <set name="time" val="60"/>
+        <restriction dropable="false" sellable="false" stackable="true"/>
     </item>
-    <item id="49643" name="Grey Talisman Box - Blocking"  icon="icon.etc_treasure_box_i05">
+    <item id="49643" name="Grey Talisman Box - Blocking" icon="icon.etc_treasure_box_i05">
         <!-- By double-clicking it, you will get Grey Talisman - Blocking (for 1 hour). <Note:>. For items obtained from a chest, there are restrictions regarding movement. -->
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
         <set name="time" val="60"/>
+        <restriction dropable="false" sellable="false" stackable="true"/>
     </item>
-    <item id="49644" name="Grey Talisman Box - Gravity"  icon="icon.etc_treasure_box_i05">
+    <item id="49644" name="Grey Talisman Box - Gravity" icon="icon.etc_treasure_box_i05">
         <!-- By double-clicking it, you will get Grey Talisman - Gravity (for 1 hour). <Note:>. For items obtained from a chest, there are restrictions regarding movement. -->
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
         <set name="time" val="60"/>
+        <restriction dropable="false" sellable="false" stackable="true"/>
     </item>
-    <item id="49645" name="Grey Talisman Box - Bond"  icon="icon.etc_treasure_box_i05">
+    <item id="49645" name="Grey Talisman Box - Bond" icon="icon.etc_treasure_box_i05">
         <!-- By double-clicking it, you will get Grey Talisman - Bond (for 1 hour). <Note:>. For items obtained from a chest, there are restrictions regarding movement. -->
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
         <set name="time" val="60"/>
+        <restriction dropable="false" sellable="false" stackable="true"/>
     </item>
-    <item id="49646" name="White Talisman Box - P. Crit."  icon="icon.etc_treasure_box_i00">
+    <item id="49646" name="White Talisman Box - P. Crit." icon="icon.etc_treasure_box_i00">
         <!-- By double-clicking it, you will get White Talisman - P. Crit. (for 1 hour). <Note:>. For items obtained from a chest, there are restrictions regarding movement. -->
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
         <set name="time" val="60"/>
+        <restriction dropable="false" sellable="false" stackable="true"/>
     </item>
-    <item id="49647" name="White Talisman Box - P. Atk."  icon="icon.etc_treasure_box_i00">
+    <item id="49647" name="White Talisman Box - P. Atk." icon="icon.etc_treasure_box_i00">
         <!-- By double-clicking it, you will get White Talisman - P. Atk. (for 1 hour). <Note:>. For items obtained from a chest, there are restrictions regarding movement. -->
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
         <set name="time" val="60"/>
+        <restriction dropable="false" sellable="false" stackable="true"/>
     </item>
-    <item id="49648" name="White Talisman Box - P. Def."  icon="icon.etc_treasure_box_i00">
+    <item id="49648" name="White Talisman Box - P. Def." icon="icon.etc_treasure_box_i00">
         <!-- By double-clicking it, you will get White Talisman - P. Def. (for 1 hour). <Note:>. For items obtained from a chest, there are restrictions regarding movement. -->
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
         <set name="time" val="60"/>
+        <restriction dropable="false" sellable="false" stackable="true"/>
     </item>
-    <item id="49649" name="White Talisman Box - P. Skills Evasion"  icon="icon.etc_treasure_box_i00">
+    <item id="49649" name="White Talisman Box - P. Skills Evasion" icon="icon.etc_treasure_box_i00">
         <!-- By double-clicking it, you will get White Talisman - P. Skills Evasion (for 1 hour). <Note:>. For items obtained from a chest, there are restrictions regarding movement. -->
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
         <set name="time" val="60"/>
+        <restriction dropable="false" sellable="false" stackable="true"/>
     </item>
-    <item id="49650" name="White Talisman Box - M. Crit."  icon="icon.etc_treasure_box_i00">
+    <item id="49650" name="White Talisman Box - M. Crit." icon="icon.etc_treasure_box_i00">
         <!-- By double-clicking it, you will get White Talisman - M. Crit. (for 1 hour). <Note:>. For items obtained from a chest, there are restrictions regarding movement. -->
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
         <set name="time" val="60"/>
+        <restriction dropable="false" sellable="false" stackable="true"/>
     </item>
-    <item id="49651" name="White Talisman Box - M. Atk."  icon="icon.etc_treasure_box_i00">
+    <item id="49651" name="White Talisman Box - M. Atk." icon="icon.etc_treasure_box_i00">
         <!-- By double-clicking it, you will get White Talisman - M. Atk. (for 1 hour). <Note:>. For items obtained from a chest, there are restrictions regarding movement. -->
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
         <set name="time" val="60"/>
+        <restriction dropable="false" sellable="false" stackable="true"/>
     </item>
-    <item id="49652" name="White Talisman Box - M. Def."  icon="icon.etc_treasure_box_i00">
+    <item id="49652" name="White Talisman Box - M. Def." icon="icon.etc_treasure_box_i00">
         <!-- By double-clicking it, you will get White Talisman - M. Def. (for 1 hour). <Note:>. For items obtained from a chest, there are restrictions regarding movement. -->
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
         <set name="time" val="60"/>
+        <restriction dropable="false" sellable="false" stackable="true"/>
     </item>
-    <item id="49653" name="White Talisman Box - M. Skills Evasion"  icon="icon.etc_treasure_box_i00">
+    <item id="49653" name="White Talisman Box - M. Skills Evasion" icon="icon.etc_treasure_box_i00">
         <!-- By double-clicking it, you will get White Talisman - M. Skills Evasion (for 1 hour). <Note:>. For items obtained from a chest, there are restrictions regarding movement. -->
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
         <set name="time" val="60"/>
+        <restriction dropable="false" sellable="false" stackable="true"/>
     </item>
-    <item id="49654" name="White Talisman Box - Max. HP"  icon="icon.etc_treasure_box_i00">
+    <item id="49654" name="White Talisman Box - Max. HP" icon="icon.etc_treasure_box_i00">
         <!-- By double-clicking it, you will get White Talisman - Max. HP (for 1 hour). <Note:>. For items obtained from a chest, there are restrictions regarding movement. -->
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
         <set name="time" val="60"/>
+        <restriction dropable="false" sellable="false" stackable="true"/>
     </item>
-    <item id="49655" name="White Talisman Box - Max. MP"  icon="icon.etc_treasure_box_i00">
+    <item id="49655" name="White Talisman Box - Max. MP" icon="icon.etc_treasure_box_i00">
         <!-- By double-clicking it, you will get White Talisman - Max. HP (for 1 hour). <Note:>. For items obtained from a chest, there are restrictions regarding movement. -->
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
         <set name="time" val="60"/>
+        <restriction dropable="false" sellable="false" stackable="true"/>
     </item>
-    <item id="49656" name="Yellow Talisman Box - Guard"  icon="icon.etc_treasure_box_i02">
+    <item id="49656" name="Yellow Talisman Box - Guard" icon="icon.etc_treasure_box_i02">
         <!-- By double-clicking it, you will get Yellow Talisman - Guard (for 1 hour). <Note:>. For items obtained from a chest, there are restrictions regarding movement. -->
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
         <set name="time" val="60"/>
+        <restriction dropable="false" sellable="false" stackable="true"/>
     </item>
-    <item id="49657" name="Yellow Talisman Box - Denial"  icon="icon.etc_treasure_box_i02">
+    <item id="49657" name="Yellow Talisman Box - Denial" icon="icon.etc_treasure_box_i02">
         <!-- By double-clicking it, you will get Yellow Talisman - Denial (for 1 hour). <Note:>. For items obtained from a chest, there are restrictions regarding movement. -->
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
         <set name="time" val="60"/>
+        <restriction dropable="false" sellable="false" stackable="true"/>
     </item>
-    <item id="49658" name="Yellow Talisman Box - Benefaction"  icon="icon.etc_treasure_box_i02">
+    <item id="49658" name="Yellow Talisman Box - Benefaction" icon="icon.etc_treasure_box_i02">
         <!-- By double-clicking it, you will get Yellow Talisman - Benefaction (for 1 hour). <Note:>. For items obtained from a chest, there are restrictions regarding movement. -->
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
         <set name="time" val="60"/>
+        <restriction dropable="false" sellable="false" stackable="true"/>
     </item>
-    <item id="49659" name="Yellow Talisman Box - Blocking"  icon="icon.etc_treasure_box_i02">
+    <item id="49659" name="Yellow Talisman Box - Blocking" icon="icon.etc_treasure_box_i02">
         <!-- By double-clicking it, you will get Yellow Talisman - Blocking (for 1 hour). <Note:>. For items obtained from a chest, there are restrictions regarding movement. -->
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
         <set name="time" val="60"/>
+        <restriction dropable="false" sellable="false" stackable="true"/>
     </item>
-    <item id="49660" name="Yellow Talisman Box - Gravity"  icon="icon.etc_treasure_box_i02">
+    <item id="49660" name="Yellow Talisman Box - Gravity" icon="icon.etc_treasure_box_i02">
         <!-- By double-clicking it, you will get Yellow Talisman - Gravity (for 1 hour). <Note:>. For items obtained from a chest, there are restrictions regarding movement. -->
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
         <set name="time" val="60"/>
+        <restriction dropable="false" sellable="false" stackable="true"/>
     </item>
-    <item id="49661" name="Yellow Talisman Box - Bond"  icon="icon.etc_treasure_box_i02">
+    <item id="49661" name="Yellow Talisman Box - Bond" icon="icon.etc_treasure_box_i02">
         <!-- By double-clicking it, you will get Yellow Talisman - Bond (for 1 hour). <Note:>. For items obtained from a chest, there are restrictions regarding movement. -->
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
         <set name="time" val="60"/>
+        <restriction dropable="false" sellable="false" stackable="true"/>
     </item>
-    <item id="49662" name="Stylish Color Title"  icon="icon.color_name_i00">
+    <item id="49662" name="Stylish Color Title" icon="icon.color_name_i00">
         <!-- A dimensional item. An item which can be used to change the color of a character's title. Upon leaving a clan, the color title disappears, just as the regular one does (for everyone except Noblesse) -->
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="5"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_destroyable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction dropable="false" destroyable="false" stackable="true"/>
     </item>
-    <item id="49663" name="Melissa’s Recovery Potion"  icon="BranchSys.icon.br_vitality_potion_i01">
+    <item id="49663" name="Melissa’s Recovery Potion" icon="BranchSys.icon.br_vitality_potion_i01">
         <!-- Instant HP recovery. Provides HP +500 and uses the remaining points to recover CP. -->
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction sellable="false" stackable="true"/>
     </item>
-    <item id="49664" name="Weapon Supply Box (B-grade)"  icon="icon.etc_equip_item_box_i02">
+    <item id="49664" name="Weapon Supply Box (B-grade)" icon="icon.etc_equip_item_box_i02">
         <!-- Double-click to receive one of B-grade Weapons. -->
         <set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
-        <set name="is_stackable" val="true"/>
         <set name="handler" val="ItemSkills"/>
+        <restriction stackable="true"/>
         <skills>
             <skill id="39125" level="1"/> <!--Weapon Supply Box (B-grade)-->
         </skills>
     </item>
-    <item id="49665" name="Armor Supply Box (B-grade)"  icon="icon.etc_equip_item_box_i01">
+    <item id="49665" name="Armor Supply Box (B-grade)" icon="icon.etc_equip_item_box_i01">
         <!-- Double-click to receive one of B-grade Armor. -->
         <set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
-        <set name="is_stackable" val="true"/>
         <set name="handler" val="ItemSkills"/>
+        <restriction stackable="true"/>
         <skills>
             <skill id="39127" level="1"/> <!--Armor Supply Box (B-grade)-->
         </skills>
     </item>
-    <item id="49666" name="Ornament Supply Box (B-grade)"  icon="icon.etc_box_of_adventure_2_i00">
+    <item id="49666" name="Ornament Supply Box (B-grade)" icon="icon.etc_box_of_adventure_2_i00">
         <!-- Double-click to receive one of B-grade Accessories. -->
         <set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
-        <set name="is_stackable" val="true"/>
         <set name="handler" val="ItemSkills"/>
+        <restriction stackable="true"/>
         <skills>
             <skill id="39129" level="1"/> <!--Ornament Supply Box (B-grade)-->
         </skills>
     </item>
-    <item id="49667" name="Weapon Supply Box (C-grade)"  icon="icon.etc_equip_item_box_i00">
+    <item id="49667" name="Weapon Supply Box (C-grade)" icon="icon.etc_equip_item_box_i00">
         <!-- Double-click to receive one of C-grade Weapons. -->
         <set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
-        <set name="is_stackable" val="true"/>
         <set name="handler" val="ItemSkills"/>
+        <restriction stackable="true"/>
         <skills>
             <skill id="39124" level="1"/> <!--Weapon Supply Box (B-grade)-->
         </skills>
     </item>
-    <item id="49668" name="Armor Supply Box (C-grade)"  icon="icon.etc_equip_item_box_i03">
+    <item id="49668" name="Armor Supply Box (C-grade)" icon="icon.etc_equip_item_box_i03">
         <!-- Double-click to receive one of C-grade Armor. -->
         <set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
-        <set name="is_stackable" val="true"/>
         <set name="handler" val="ItemSkills"/>
+        <restriction stackable="true"/>
         <skills>
             <skill id="39126" level="1"/> <!--Armor Supply Box (B-grade)-->
         </skills>
     </item>
-    <item id="49669" name="Ornament Supply Box (C-grade)"  icon="icon.etc_box_of_adventure_5_i00">
+    <item id="49669" name="Ornament Supply Box (C-grade)" icon="icon.etc_box_of_adventure_5_i00">
         <!-- Double-click to receive one of C-grade Accessories. -->
         <set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
-        <set name="is_stackable" val="true"/>
         <set name="handler" val="ItemSkills"/>
+        <restriction stackable="true"/>
         <skills>
             <skill id="39128" level="1"/> <!--Ornament Supply Box (B-grade)-->
         </skills>
     </item>
-    <item id="49670" name="Weapon Ingredient Box (B-grade)"  icon="icon.etc_treasure_box_i04">
+    <item id="49670" name="Weapon Ingredient Box (B-grade)" icon="icon.etc_treasure_box_i04">
         <!-- Double-click to receive one of B-grade Weapon Ingredients. -->
         <set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
-        <set name="is_stackable" val="true"/>
+        <restriction stackable="true"/>
     </item>
-    <item id="49671" name="Armor/Ornament Ingredient Box (B-grade)"  icon="icon.event_hero_treasure_box_i00">
+    <item id="49671" name="Armor/Ornament Ingredient Box (B-grade)" icon="icon.event_hero_treasure_box_i00">
         <!-- Double-click to receive one of B-grade Weapon Armor/Ornament Ingredients. -->
         <set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
-        <set name="is_stackable" val="true"/>
+        <restriction stackable="true"/>
     </item>
-    <item id="49672" name="Weapons Ingredient Box (C-grade)"  icon="icon.etc_treasure_box_i06">
+    <item id="49672" name="Weapons Ingredient Box (C-grade)" icon="icon.etc_treasure_box_i06">
         <!-- Double-click to receive one of C-grade Weapon Ingredients. -->
         <set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
-        <set name="is_stackable" val="true"/>
+        <restriction stackable="true"/>
     </item>
-    <item id="49673" name="Armor/Ornament Ingredient Box (C-grade)"  icon="icon.event_hero_treasure_box_i00">
+    <item id="49673" name="Armor/Ornament Ingredient Box (C-grade)" icon="icon.event_hero_treasure_box_i00">
         <!-- Double-click to receive one of C-grade Weapon Armor/Ornament Ingredients. -->
         <set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
-        <set name="is_stackable" val="true"/>
+        <restriction stackable="true"/>
     </item>
-    <item id="49674" name="Rice Cake of Flaming Fighting Spirit"  icon="icon.bm_rice_cake_i01">
+    <item id="49674" name="Rice Cake of Flaming Fighting Spirit" icon="icon.bm_rice_cake_i01">
         <!-- Increases XP and SP gain by 30% for 20 minutes. The effect remains after character's death. Reuse Time: 10 minutes. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. <Note> The effect does not change if Rice Cake of Fighting Spirit is used throughout the duration time of Rice Cake of Flaming Fighting Spirit. -->
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" stackable="true"/>
     </item>
-    <item id="49675" name="Hero Cube Box"  icon="icon.etc_pi_gift_box_i03">
+    <item id="49675" name="Hero Cube Box" icon="icon.etc_pi_gift_box_i03">
         <!-- Double-click to receive Hero Cube (7-day). Cannot be exchanged, dropped, destroyed, or sold in a private store. Can be stored in a private warehouse or transferred to another character on the same account using Dimensional Merchant. <Note>. Even if you have several of these Cubes, you can only use one. -->
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true" freightable="true"/>
     </item>
     <armor id="49676" name="Talisman of Insolence I" icon="icon.tallisman_oman_i02">
         <!-- P. Atk. +14, M. Atk. +22. Blacksmith Baggins in Giran can help with enhancing the level of this Talisman. Effects from two such Talismans do not stack. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
@@ -731,10 +566,7 @@
         <set name="bodypart" val="talisman"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="120"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
         <skills>
             <skill id="35017" level="1"/> <!-- Talisman - Insolence I -->
         </skills>
@@ -745,10 +577,7 @@
         <set name="bodypart" val="talisman"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="120"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
         <skills>
             <skill id="35017" level="2"/> <!-- Talisman - Insolence II -->
         </skills>
@@ -759,10 +588,7 @@
         <set name="bodypart" val="talisman"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="120"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
         <skills>
             <skill id="35017" level="3"/> <!-- Talisman - Insolence III -->
         </skills>
@@ -773,10 +599,7 @@
         <set name="bodypart" val="talisman"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="120"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
         <skills>
             <skill id="35017" level="4"/> <!-- Talisman - Insolence IV -->
         </skills>
@@ -787,10 +610,7 @@
         <set name="bodypart" val="talisman"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="120"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
         <skills>
             <skill id="35017" level="5"/> <!-- Equip Talisman - Insolence V -->
         </skills>
@@ -801,8 +621,7 @@
         <set name="bodypart" val="talisman"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="120"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_commissionable" val="false"/>
+        <restriction sellable="false" commissionable="false"/>
         <cond msgId="113">
             <player level="60"/>
         </cond>
@@ -812,9 +631,9 @@
             <skill id="35017" level="6"/> <!-- Equip Talisman - Insolence VI -->
         </skills>
     </armor>
-    <item id="49682" name="Baium’s Soul"  icon="icon.high_energy_condense_i00">
+    <item id="49682" name="Baium’s Soul" icon="icon.high_energy_condense_i00">
         <!-- Blacksmith Baggins in Giran will trade Baium's Soul and Talisman of Insolence VI for Talisman of Baium. -->
-        <set name="is_stackable" val="true"/>
+        <restriction stackable="true"/>
     </item>
     <armor id="49683" name="Talisman of Baium" icon="icon.tallisman_baium">
         <!-- P. Atk. +135, M. Atk. +218, Magic Attack Resistance +10%, Skill Power +5%, all kinds of Weapon Resistance +5%, CON +1, MEN +1, STR +1, INT +1, DEX +1, WIT +1. P. / M. Critical Rate +20. MP Consumption for skill use -5%. Skill Reuse Time -3%. Available only for Lv. 60 and higher. Effects from two such Talismans do not stack. -->
@@ -822,7 +641,7 @@
         <set name="bodypart" val="talisman"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="120"/>
-        <set name="is_sellable" val="false"/>
+        <restriction sellable="false"/>
         <cond msgId="113">
             <player level="60"/>
         </cond>
@@ -832,66 +651,52 @@
             <skill id="35017" level="7"/> <!-- Equip Talisman - Baium -->
         </skills>
     </armor>
-    <item id="49684" name="Talisman Crystal"  icon="icon.low_energy_condense_i03">
+    <item id="49684" name="Talisman Crystal" icon="icon.low_energy_condense_i03">
         <!-- Required to create the Talisman of Insolence. If you take the Crystal along with an Elemental Stone / Energy of Insolence to Baggins in Giran, you will receive the Talisman of Insolence. -->
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction sellable="false" stackable="true"/>
     </item>
-    <item id="49685" name="Energy of Insolence"  icon="icon.ensoul_sommon">
+    <item id="49685" name="Energy of Insolence" icon="icon.ensoul_sommon">
         <!-- Required to create the Talisman of Insolence. If you take the Crystal along with an Elemental Stone / Talisman Crystal to Baggins in Giran, you will receive the Talisman of Insolence. -->
-        <set name="is_stackable" val="true"/>
+        <restriction stackable="true"/>
     </item>
     <armor id="49686" name="Refined Silver Chapeau" icon="BranchSys2.icon2.pi_silverchaperon">
         <!-- STR +1, INT +1, allows using the Refined Silver Chapeau skill: Teleport (Reuse Time: 2 hours). Occupies 2 Hair Accessory slots. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. (30-day) -->
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="hairall"/>
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
         <set name="time" val="43200"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
     </armor>
     <armor id="49687" name="Refined Silver Chapeau" icon="BranchSys2.icon2.pi_silverchaperon">
         <!-- STR +1, INT +1, allows using the Refined Silver Chapeau skill: Teleport (Reuse Time: 2 hours). Occupies 2 Hair Accessory slots. -->
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="hairall"/>
         <set name="immediate_effect" val="true"/>
-        <set name="is_sellable" val="false"/>
+        <restriction sellable="false"/>
     </armor>
-    <item id="49688" name="Refined Silver Chapeau Box"  icon="icon.etc_treasure_box_i00">
+    <item id="49688" name="Refined Silver Chapeau Box" icon="icon.etc_treasure_box_i00">
         <!-- Double-click to get Refined Silver Chapeau (30-day). -->
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
         <set name="time" val="43200"/>
+        <restriction sellable="false" stackable="true"/>
     </item>
-    <item id="49689" name="Chapeau Box"  icon="icon.etc_treasure_box_i05">
+    <item id="49689" name="Chapeau Box" icon="icon.etc_treasure_box_i05">
         <!-- Double-click the box to get one of the following items: Refined Silver Chapeau (30-day) / Refined Silver Chapeau / Refined Romantic Chapeau. -->
         <set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction sellable="false" stackable="true"/>
     </item>
-    <item id="49690" name="Blue Dynasty Transformation Potion"  icon="icon.general_stone_i01">
+    <item id="49690" name="Blue Dynasty Transformation Potion" icon="icon.general_stone_i01">
         <!-- Makes you armor look like it is of Blue Dynasty for one hour. Cannot be exchanged, dropped, destroyed, or sold in a private store. Can be stored in a private warehouse. This item will be deleted after the event is over. -->
         <set name="default_action" val="SKILL_REDUCE"/>
         <set name="weight" val="5"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
     </item>
-    <item id="49691" name="Red Zubei Transformation Potion"  icon="icon.general_stone_i00">
+    <item id="49691" name="Red Zubei Transformation Potion" icon="icon.general_stone_i00">
         <!-- Makes you armor look like it is of Red Zubei for one hour. Cannot be exchanged, dropped, destroyed, or sold in a private store. Can be stored in a private warehouse. This item will be deleted after the event is over. -->
         <set name="default_action" val="SKILL_REDUCE"/>
         <set name="weight" val="5"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
     </item>
     <weapon id="49692" name="Samurai Black Long Sword" icon="icon.weapon_dual_sword_i00">
         <!-- Cannot be enchanted or endued with special characteristics. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. Duration is 15 days. The item will be removed after the event is over. -->
@@ -902,11 +707,8 @@
         <set name="weight" val="2340"/>
         <set name="soulshots" val="1"/>
         <set name="spiritshots" val="1"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
         <set name="time" val="21600"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
         <stats>
             <stat type="pAtk">155</stat>
             <stat type="mAtk">70</stat>
@@ -916,78 +718,41 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </weapon>
-    <item id="49693" name="Magical Potion of Leaping"  icon="icon.etc_holy_potion_i00">
+    <item id="49693" name="Magical Potion of Leaping" icon="icon.etc_holy_potion_i00">
         <!-- Provides 1.2 million XP / 40 thousand SP. Intended for Lv. 20 and higher. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. Can be transferred between characters on the same account. The item will be removed after the event is over. -->
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true" freightable="true"/>
     </item>
-    <item id="49694" name="Magical Potion of Leaping"  icon="icon.etc_wind_potion_i00">
+    <item id="49694" name="Magical Potion of Leaping" icon="icon.etc_wind_potion_i00">
         <!-- Provides 7.8 million XP / 240 thousand SP. Intended for Lv. 20 and higher. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. Can be transferred between characters on the same account. The item will be removed after the event is over. -->
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true" freightable="true"/>
     </item>
-    <item id="49695" name="Magical Potion of Leaping"  icon="icon.etc_water_potion_i00">
+    <item id="49695" name="Magical Potion of Leaping" icon="icon.etc_water_potion_i00">
         <!-- Provides 34.2 million XP / 1.04 million SP. Intended for Lv. 20 and higher. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. Can be transferred between characters on the same account. The item will be removed after the event is over. -->
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true" freightable="true"/>
     </item>
-    <item id="49696" name="Gift from a Returned Friend"  icon="BranchSys.icon.br_lucky_bag_i00">
+    <item id="49696" name="Gift from a Returned Friend" icon="BranchSys.icon.br_lucky_bag_i00">
         <!-- Provides 37 million XP / 1.11 million SP. Intended for Lv. 20 and higher. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. Can be transferred to between characters on the same account. The item will be removed after the event is over. -->
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true" freightable="true"/>
     </item>
-    <item id="49697" name="Special Pirate Fruit"  icon="icon.etc_codran_i09">
+    <item id="49697" name="Special Pirate Fruit" icon="icon.etc_codran_i09">
         <!-- For 20 minutes, P./M. Atk. +7%, P./M. Def. +10%, Max. HP/CP/MP +15%, HP/MP Regeneration +20%. At a certain chance absorbs 3% of the damage inflicted on target as HP. Increases XP/SP gain by 5%. Cooldown is 1 minute. Buff remains after death. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a warehouse and transferred between characters on the same account. -->
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_freightable" val="true"/>
-        <set name="handler" val="ItemSkills"/>
-        <set name="immediate_effect" val="true"/>
         <set name="reuse_delay" val="60000"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true" freightable="true"/>
         <skills>
             <skill id="55160" level="1"/> <!-- Special Pirate Fruit -->
         </skills>
     </item>
-    <item id="49698" name="Class Transfer Coupon"  icon="icon.return_user_item">
+    <item id="49698" name="Class Transfer Coupon" icon="icon.return_user_item">
         <!-- Take it to Luck Cat to receive the 2nd Class. Intended for Lv. 49 and higher. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. Can be transferred between characters on the same account. The item will be removed after the event is over. -->
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true" freightable="true"/>
     </item>
-    <item id="49699" name="Master’s Book Skill"  icon="icon.q10338_book_of_hades">
+    <item id="49699" name="Master’s Book Skill" icon="icon.q10338_book_of_hades">
         <!-- Take it to Luck Cat to receive all the skills corresponding to your level or class. Intended for Lv. 45-50. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. Can be transferred between characters on the same account. The item will be removed after the event is over. -->
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true" freightable="true"/>
     </item>
 </list>

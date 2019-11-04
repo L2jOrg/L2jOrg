@@ -1,8 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
-    <item id="9636" name="Mithril Bolt" >
+    <item id="9636" name="Mithril Bolt" icon="icon.etc_mithril_bolt_i00">
         <!-- A steel bolt coated by mithril. For A-grade crossbows. -->
-        <set name="icon" val="icon.etc_mithril_bolt_i00"/>
         <set name="default_action" val="EQUIP"/>
         <set name="etcitem_type" val="BOLT"/>
         <set name="bodypart" val="lhand"/>
@@ -12,6 +11,6 @@
         <set name="crystal_type" val="A"/>
         <set name="enchant_enabled" val="1"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
-        <set name="is_stackable" val="true"/>
+        <restriction stackable="true"/>
     </item>
 </list>

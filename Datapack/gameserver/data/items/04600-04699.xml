@@ -1,661 +1,597 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
-    <item id="4600" name="Greater Dye of WIT (Wit + 2 Men - 2)"  icon="icon.etc_wit_hena_i02">
+    <item id="4600" name="Greater Dye of WIT (Wit + 2 Men - 2)" icon="icon.etc_wit_hena_i02">
         <!-- Greater Dye of WIT. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after 2nd class transfer. All classes. -->
         <set name="etcitem_type" val="DYE"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="150"/>
         <set name="price" val="60000"/>
         <set name="commissionItemType" val="DYES"/>
-        <set name="is_stackable" val="true"/>
+        <restriction stackable="true"/>
     </item>
-    <item id="4601" name="Greater Dye of STR (STR + 3 CON - 3)"  icon="icon.etc_str_hena_i02">
+    <item id="4601" name="Greater Dye of STR (STR + 3 CON - 3)" icon="icon.etc_str_hena_i02">
         <!-- Greater Dye of STR. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after 2nd class transfer. All classes. -->
         <set name="etcitem_type" val="DYE"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="150"/>
         <set name="price" val="90000"/>
         <set name="commissionItemType" val="DYES"/>
-        <set name="is_stackable" val="true"/>
+        <restriction stackable="true"/>
     </item>
-    <item id="4602" name="Greater Dye of STR (STR + 3 DEX - 3)"  icon="icon.etc_str_hena_i02">
+    <item id="4602" name="Greater Dye of STR (STR + 3 DEX - 3)" icon="icon.etc_str_hena_i02">
         <!-- Greater Dye of STR. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after 2nd class transfer. All classes. -->
         <set name="etcitem_type" val="DYE"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="150"/>
         <set name="price" val="90000"/>
         <set name="commissionItemType" val="DYES"/>
-        <set name="is_stackable" val="true"/>
+        <restriction stackable="true"/>
     </item>
-    <item id="4603" name="Greater Dye of CON (Con + 3 Str - 3)"  icon="icon.etc_con_hena_i02">
+    <item id="4603" name="Greater Dye of CON (Con + 3 Str - 3)" icon="icon.etc_con_hena_i02">
         <!-- Greater Dye of CON. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after 2nd class transfer. All classes. -->
         <set name="etcitem_type" val="DYE"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="150"/>
         <set name="price" val="90000"/>
         <set name="commissionItemType" val="DYES"/>
-        <set name="is_stackable" val="true"/>
+        <restriction stackable="true"/>
     </item>
-    <item id="4604" name="Greater Dye of CON (Con + 3 DEX - 3)"  icon="icon.etc_con_hena_i02">
+    <item id="4604" name="Greater Dye of CON (Con + 3 DEX - 3)" icon="icon.etc_con_hena_i02">
         <!-- Greater Dye of CON. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after 2nd class transfer. All classes. -->
         <set name="etcitem_type" val="DYE"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="150"/>
         <set name="price" val="90000"/>
-        <set name="is_stackable" val="true"/>
         <set name="commissionItemType" val="DYES"/>
+        <restriction stackable="true"/>
     </item>
-    <item id="4605" name="Greater Dye of DEX (Dex + 3 Str - 3)"  icon="icon.etc_dex_hena_i02">
+    <item id="4605" name="Greater Dye of DEX (Dex + 3 Str - 3)" icon="icon.etc_dex_hena_i02">
         <!-- Greater Dye of DEX. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after 2nd class transfer. All classes. -->
         <set name="etcitem_type" val="DYE"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="150"/>
         <set name="price" val="90000"/>
         <set name="commissionItemType" val="DYES"/>
-        <set name="is_stackable" val="true"/>
+        <restriction stackable="true"/>
     </item>
-    <item id="4606" name="Greater Dye of DEX (Dex + 3 CON - 3)"  icon="icon.etc_dex_hena_i02">
+    <item id="4606" name="Greater Dye of DEX (Dex + 3 CON - 3)" icon="icon.etc_dex_hena_i02">
         <!-- Greater Dye of DEX. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after 2nd class transfer. All classes. -->
         <set name="etcitem_type" val="DYE"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="150"/>
         <set name="price" val="90000"/>
         <set name="commissionItemType" val="DYES"/>
-        <set name="is_stackable" val="true"/>
+        <restriction stackable="true"/>
     </item>
-    <item id="4607" name="Greater Dye of INT (Int + 3 Men - 3)"  icon="icon.etc_int_hena_i02">
+    <item id="4607" name="Greater Dye of INT (Int + 3 Men - 3)" icon="icon.etc_int_hena_i02">
         <!-- Greater Dye of INT. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used by Wizards after 2nd Class Transfer. -->
         <set name="etcitem_type" val="DYE"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="150"/>
         <set name="price" val="90000"/>
         <set name="commissionItemType" val="DYES"/>
-        <set name="is_stackable" val="true"/>
+        <restriction stackable="true"/>
     </item>
-    <item id="4608" name="Greater Dye of INT (Int + 3 Wit - 3)"  icon="icon.etc_int_hena_i02">
+    <item id="4608" name="Greater Dye of INT (Int + 3 Wit - 3)" icon="icon.etc_int_hena_i02">
         <!-- Greater Dye of INT. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used by Warriors and Wizards after 2nd Class Transfer. -->
         <set name="etcitem_type" val="DYE"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="150"/>
         <set name="price" val="90000"/>
         <set name="commissionItemType" val="DYES"/>
-        <set name="is_stackable" val="true"/>
+        <restriction stackable="true"/>
     </item>
-    <item id="4609" name="Greater Dye of MEN (Men + 3 Int - 3)"  icon="icon.etc_men_hena_i02">
+    <item id="4609" name="Greater Dye of MEN (Men + 3 Int - 3)" icon="icon.etc_men_hena_i02">
         <!-- Greater Dye of MEN. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used by Wizards after 2nd Class Transfer. -->
         <set name="etcitem_type" val="DYE"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="150"/>
         <set name="price" val="90000"/>
         <set name="commissionItemType" val="DYES"/>
-        <set name="is_stackable" val="true"/>
+        <restriction stackable="true"/>
     </item>
-    <item id="4610" name="Greater Dye of MEN (Men + 3 Wit - 3)"  icon="icon.etc_men_hena_i02">
+    <item id="4610" name="Greater Dye of MEN (Men + 3 Wit - 3)" icon="icon.etc_men_hena_i02">
         <!-- Greater Dye of MEN. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used by Wizards and Healers after 2nd Class Transfer. -->
         <set name="etcitem_type" val="DYE"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="150"/>
         <set name="price" val="90000"/>
         <set name="commissionItemType" val="DYES"/>
-        <set name="is_stackable" val="true"/>
+        <restriction stackable="true"/>
     </item>
-    <item id="4611" name="Greater Dye of WIT (Wit + 3 Int - 3)"  icon="icon.etc_wit_hena_i02">
+    <item id="4611" name="Greater Dye of WIT (Wit + 3 Int - 3)" icon="icon.etc_wit_hena_i02">
         <!-- Greater Dye of WIT. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used by Warriors and Wizards after 2nd Class Transfer. -->
         <set name="etcitem_type" val="DYE"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="150"/>
         <set name="price" val="90000"/>
         <set name="commissionItemType" val="DYES"/>
-        <set name="is_stackable" val="true"/>
+        <restriction stackable="true"/>
     </item>
-    <item id="4612" name="Greater Dye of WIT (Wit + 3 Men - 3)"  icon="icon.etc_wit_hena_i02">
+    <item id="4612" name="Greater Dye of WIT (Wit + 3 Men - 3)" icon="icon.etc_wit_hena_i02">
         <!-- Greater Dye of WIT. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after 2nd class transfer. All classes. -->
         <set name="etcitem_type" val="DYE"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="150"/>
         <set name="price" val="90000"/>
-        <set name="is_stackable" val="true"/>
         <set name="commissionItemType" val="DYES"/>
+        <restriction stackable="true"/>
     </item>
-    <item id="4613" name="Greater Dye of STR (STR + 4 CON - 4)"  icon="icon.etc_str_hena_i02">
+    <item id="4613" name="Greater Dye of STR (STR + 4 CON - 4)" icon="icon.etc_str_hena_i02">
         <!-- Greater Dye of STR. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after 2nd class transfer. All classes. -->
         <set name="etcitem_type" val="DYE"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="150"/>
         <set name="price" val="145000"/>
         <set name="commissionItemType" val="DYES"/>
-        <set name="is_stackable" val="true"/>
+        <restriction stackable="true"/>
     </item>
-    <item id="4614" name="Greater Dye of STR (STR + 4 DEX - 4)"  icon="icon.etc_str_hena_i02">
+    <item id="4614" name="Greater Dye of STR (STR + 4 DEX - 4)" icon="icon.etc_str_hena_i02">
         <!-- Greater Dye of STR. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after 2nd class transfer. All classes. -->
         <set name="etcitem_type" val="DYE"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="150"/>
         <set name="price" val="145000"/>
         <set name="commissionItemType" val="DYES"/>
-        <set name="is_stackable" val="true"/>
+        <restriction stackable="true"/>
     </item>
-    <item id="4615" name="Greater Dye of CON (Con + 4 Str - 4)"  icon="icon.etc_con_hena_i02">
+    <item id="4615" name="Greater Dye of CON (Con + 4 Str - 4)" icon="icon.etc_con_hena_i02">
         <!-- Greater Dye of CON. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after 2nd class transfer. All classes. -->
         <set name="etcitem_type" val="DYE"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="150"/>
         <set name="price" val="145000"/>
         <set name="commissionItemType" val="DYES"/>
-        <set name="is_stackable" val="true"/>
+        <restriction stackable="true"/>
     </item>
-    <item id="4616" name="Greater Dye of CON (Con + 4 DEX - 4)"  icon="icon.etc_con_hena_i02">
+    <item id="4616" name="Greater Dye of CON (Con + 4 DEX - 4)" icon="icon.etc_con_hena_i02">
         <!-- Greater Dye of CON. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after 2nd class transfer. All classes. -->
         <set name="etcitem_type" val="DYE"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="150"/>
         <set name="price" val="145000"/>
         <set name="commissionItemType" val="DYES"/>
-        <set name="is_stackable" val="true"/>
+        <restriction stackable="true"/>
     </item>
-    <item id="4617" name="Greater Dye of DEX (Dex + 4 Str - 4)"  icon="icon.etc_dex_hena_i02">
+    <item id="4617" name="Greater Dye of DEX (Dex + 4 Str - 4)" icon="icon.etc_dex_hena_i02">
         <!-- Greater Dye of DEX. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after 2nd class transfer. All classes. -->
         <set name="etcitem_type" val="DYE"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="150"/>
         <set name="price" val="145000"/>
         <set name="commissionItemType" val="DYES"/>
-        <set name="is_stackable" val="true"/>
+        <restriction stackable="true"/>
     </item>
-    <item id="4618" name="Greater Dye of DEX (Dex + 4 CON - 4)"  icon="icon.etc_dex_hena_i02">
+    <item id="4618" name="Greater Dye of DEX (Dex + 4 CON - 4)" icon="icon.etc_dex_hena_i02">
         <!-- Greater Dye of DEX. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after 2nd class transfer. All classes. -->
         <set name="etcitem_type" val="DYE"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="150"/>
         <set name="price" val="145000"/>
         <set name="commissionItemType" val="DYES"/>
-        <set name="is_stackable" val="true"/>
+        <restriction stackable="true"/>
     </item>
-    <item id="4619" name="Greater Dye of INT (Int + 4 Men - 4)"  icon="icon.etc_int_hena_i02">
+    <item id="4619" name="Greater Dye of INT (Int + 4 Men - 4)" icon="icon.etc_int_hena_i02">
         <!-- Greater Dye of INT. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used by Wizards after 2nd Class Transfer. -->
         <set name="etcitem_type" val="DYE"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="150"/>
         <set name="price" val="145000"/>
         <set name="commissionItemType" val="DYES"/>
-        <set name="is_stackable" val="true"/>
+        <restriction stackable="true"/>
     </item>
-    <item id="4620" name="Greater Dye of INT (Int + 4 Wit - 4)"  icon="icon.etc_int_hena_i02">
+    <item id="4620" name="Greater Dye of INT (Int + 4 Wit - 4)" icon="icon.etc_int_hena_i02">
         <!-- Greater Dye of INT. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used by Warriors and Wizards after 2nd Class Transfer. -->
         <set name="etcitem_type" val="DYE"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="150"/>
         <set name="price" val="145000"/>
         <set name="commissionItemType" val="DYES"/>
-        <set name="is_stackable" val="true"/>
+        <restriction stackable="true"/>
     </item>
-    <item id="4621" name="Greater Dye of MEN (Men + 4 Int - 4)"  icon="icon.etc_men_hena_i02">
+    <item id="4621" name="Greater Dye of MEN (Men + 4 Int - 4)" icon="icon.etc_men_hena_i02">
         <!-- Greater Dye of MEN. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used by Wizards after 2nd Class Transfer. -->
         <set name="etcitem_type" val="DYE"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="150"/>
         <set name="price" val="145000"/>
         <set name="commissionItemType" val="DYES"/>
-        <set name="is_stackable" val="true"/>
+        <restriction stackable="true"/>
     </item>
-    <item id="4622" name="Greater Dye of MEN (Men + 4 Wit - 4)"  icon="icon.etc_men_hena_i02">
+    <item id="4622" name="Greater Dye of MEN (Men + 4 Wit - 4)" icon="icon.etc_men_hena_i02">
         <!-- Greater Dye of MEN. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used by Wizards and Healers after 2nd Class Transfer. -->
         <set name="etcitem_type" val="DYE"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="150"/>
         <set name="price" val="145000"/>
-        <set name="is_stackable" val="true"/>
         <set name="commissionItemType" val="DYES"/>
+        <restriction stackable="true"/>
     </item>
-    <item id="4623" name="Greater Dye of WIT (Wit + 4 Int - 4)"  icon="icon.etc_wit_hena_i02">
+    <item id="4623" name="Greater Dye of WIT (Wit + 4 Int - 4)" icon="icon.etc_wit_hena_i02">
         <!-- Greater Dye of WIT. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used by Warriors and Wizards after 2nd Class Transfer. -->
         <set name="etcitem_type" val="DYE"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="150"/>
         <set name="price" val="145000"/>
         <set name="commissionItemType" val="DYES"/>
-        <set name="is_stackable" val="true"/>
+        <restriction stackable="true"/>
     </item>
-    <item id="4624" name="Greater Dye of WIT (Wit + 4 Men - 4)"  icon="icon.etc_wit_hena_i02">
+    <item id="4624" name="Greater Dye of WIT (Wit + 4 Men - 4)" icon="icon.etc_wit_hena_i02">
         <!-- Greater Dye of WIT. Take 10 units of this magical dye to the symbol maker in town and you will receive a symbol that boosts your abilities. Can be used after 2nd class transfer. All classes. -->
         <set name="etcitem_type" val="DYE"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="150"/>
         <set name="price" val="145000"/>
         <set name="commissionItemType" val="DYES"/>
-        <set name="is_stackable" val="true"/>
+        <restriction stackable="true"/>
     </item>
-    <item id="4625" name="Dice (Heart)"  icon="icon.etc_dice_a_i00">
+    <item id="4625" name="Dice (Heart)" icon="icon.etc_dice_a_i00">
         <!-- Simple game of chance! Roll 'em! Cannot be dropped. -->
         <set name="default_action" val="DICE"/>
         <set name="immediate_effect" val="true"/>
         <set name="price" val="500"/>
         <set name="reuse_delay" val="5000"/>
-        <set name="is_dropable" val="false"/>
-        <set name="commissionItemType" val="OTHER_ITEM"/>
         <set name="handler" val="RollingDice"/>
+        <restriction dropable="false"/>
     </item>
-    <item id="4626" name="Dice (Spade)"  icon="icon.etc_dice_b_i00">
+    <item id="4626" name="Dice (Spade)" icon="icon.etc_dice_b_i00">
         <!-- Simple game of chance! Roll 'em! Cannot be dropped. -->
         <set name="default_action" val="DICE"/>
         <set name="immediate_effect" val="true"/>
         <set name="price" val="500"/>
         <set name="reuse_delay" val="5000"/>
-        <set name="is_dropable" val="false"/>
-        <set name="commissionItemType" val="OTHER_ITEM"/>
         <set name="handler" val="RollingDice"/>
+        <restriction dropable="false"/>
     </item>
-    <item id="4627" name="Dice (Clover)"  icon="icon.etc_dice_c_i00">
+    <item id="4627" name="Dice (Clover)" icon="icon.etc_dice_c_i00">
         <!-- Simple game of chance! Roll 'em! Cannot be dropped. -->
         <set name="default_action" val="DICE"/>
         <set name="immediate_effect" val="true"/>
         <set name="price" val="500"/>
         <set name="reuse_delay" val="5000"/>
-        <set name="is_dropable" val="false"/>
-        <set name="commissionItemType" val="OTHER_ITEM"/>
         <set name="handler" val="RollingDice"/>
+        <restriction dropable="false"/>
     </item>
-    <item id="4628" name="Dice (Diamond)"  icon="icon.etc_dice_d_i00">
+    <item id="4628" name="Dice (Diamond)" icon="icon.etc_dice_d_i00">
         <!-- Simple game of chance! Roll 'em! Cannot be dropped. -->
         <set name="default_action" val="DICE"/>
         <set name="immediate_effect" val="true"/>
         <set name="price" val="500"/>
         <set name="reuse_delay" val="5000"/>
-        <set name="is_dropable" val="false"/>
-        <set name="commissionItemType" val="OTHER_ITEM"/>
         <set name="handler" val="RollingDice"/>
+        <restriction dropable="false"/>
     </item>
-    <item id="4630" name="Red Soul Crystal - Stage 1"  icon="icon.etc_soul_stone_i00">
+    <item id="4630" name="Red Soul Crystal - Stage 1" icon="icon.etc_soul_stone_i00">
         <!-- Red crystal containing the light of absorbed souls. stage 1. Once saturated, it bestows special abilities to a weapon. -->
         <set name="default_action" val="SKILL_REDUCE"/>
         <set name="etcitem_type" val="SCROLL"/>
         <set name="weight" val="20"/>
-        <set name="is_oly_restricted" val="true"/>
-        <set name="handler" val="ItemSkills"/>
-        <set name="commissionItemType" val="SOUL_CRYSTAL"/>
         <set name="is_questitem" val="true"/>
+        <restriction olympiad-restricted="true"/>
         <skills>
             <skill id="2096" level="1"/> <!-- Soul Crystal -->
         </skills>
     </item>
-    <item id="4631" name="Red Soul Crystal - Stage 2"  icon="icon.etc_soul_stone_i00">
+    <item id="4631" name="Red Soul Crystal - Stage 2" icon="icon.etc_soul_stone_i00">
         <!-- Red crystal containing the light of absorbed souls. stage 2. Once saturated, it bestows special abilities to a weapon. -->
         <set name="default_action" val="SKILL_REDUCE"/>
         <set name="etcitem_type" val="SCROLL"/>
         <set name="weight" val="20"/>
-        <set name="is_oly_restricted" val="true"/>
-        <set name="handler" val="ItemSkills"/>
-        <set name="commissionItemType" val="SOUL_CRYSTAL"/>
         <set name="is_questitem" val="true"/>
+        <restriction olympiad-restricted="true"/>
         <skills>
             <skill id="2096" level="1"/> <!-- Soul Crystal -->
         </skills>
     </item>
-    <item id="4632" name="Red Soul Crystal - Stage 3"  icon="icon.etc_soul_stone_i00">
+    <item id="4632" name="Red Soul Crystal - Stage 3" icon="icon.etc_soul_stone_i00">
         <!-- Red crystal containing the light of absorbed souls. stage 3. Once saturated, it bestows special abilities to a weapon. -->
         <set name="default_action" val="SKILL_REDUCE"/>
         <set name="etcitem_type" val="SCROLL"/>
         <set name="weight" val="20"/>
-        <set name="is_oly_restricted" val="true"/>
-        <set name="handler" val="ItemSkills"/>
-        <set name="commissionItemType" val="SOUL_CRYSTAL"/>
         <set name="is_questitem" val="true"/>
+        <restriction olympiad-restricted="true"/>
         <skills>
             <skill id="2096" level="1"/> <!-- Soul Crystal -->
         </skills>
     </item>
-    <item id="4633" name="Red Soul Crystal - Stage 4"  icon="icon.etc_soul_stone_i00">
+    <item id="4633" name="Red Soul Crystal - Stage 4" icon="icon.etc_soul_stone_i00">
         <!-- Red crystal containing the light of absorbed souls. stage 4. Once saturated, it bestows special abilities to a weapon. -->
         <set name="default_action" val="SKILL_REDUCE"/>
         <set name="etcitem_type" val="SCROLL"/>
         <set name="weight" val="20"/>
-        <set name="is_oly_restricted" val="true"/>
-        <set name="handler" val="ItemSkills"/>
-        <set name="commissionItemType" val="SOUL_CRYSTAL"/>
         <set name="is_questitem" val="true"/>
+        <restriction olympiad-restricted="true"/>
         <skills>
             <skill id="2096" level="1"/> <!-- Soul Crystal -->
         </skills>
     </item>
-    <item id="4634" name="Red Soul Crystal - Stage 5"  icon="icon.etc_soul_stone_i00">
+    <item id="4634" name="Red Soul Crystal - Stage 5" icon="icon.etc_soul_stone_i00">
         <!-- Red crystal containing the light of absorbed souls. stage 5. Once saturated, it bestows special abilities to a weapon. -->
         <set name="default_action" val="SKILL_REDUCE"/>
         <set name="etcitem_type" val="SCROLL"/>
         <set name="weight" val="20"/>
-        <set name="is_oly_restricted" val="true"/>
-        <set name="handler" val="ItemSkills"/>
-        <set name="commissionItemType" val="SOUL_CRYSTAL"/>
         <set name="is_questitem" val="true"/>
+        <restriction olympiad-restricted="true"/>
         <skills>
             <skill id="2096" level="1"/> <!-- Soul Crystal -->
         </skills>
     </item>
-    <item id="4635" name="Red Soul Crystal - Stage 6"  icon="icon.etc_soul_stone_i00">
+    <item id="4635" name="Red Soul Crystal - Stage 6" icon="icon.etc_soul_stone_i00">
         <!-- Red crystal containing the light of absorbed souls. stage 6. Once saturated, it bestows special abilities to a weapon. -->
         <set name="default_action" val="SKILL_REDUCE"/>
         <set name="etcitem_type" val="SCROLL"/>
         <set name="weight" val="20"/>
-        <set name="is_oly_restricted" val="true"/>
-        <set name="handler" val="ItemSkills"/>
-        <set name="commissionItemType" val="SOUL_CRYSTAL"/>
         <set name="is_questitem" val="true"/>
+        <restriction olympiad-restricted="true"/>
         <skills>
             <skill id="2096" level="1"/> <!-- Soul Crystal -->
         </skills>
     </item>
-    <item id="4636" name="Red Soul Crystal - Stage 7"  icon="icon.etc_soul_stone_i00">
+    <item id="4636" name="Red Soul Crystal - Stage 7" icon="icon.etc_soul_stone_i00">
         <!-- Red crystal containing the light of absorbed souls. stage 7. Once saturated, it bestows special abilities to a weapon. -->
         <set name="default_action" val="SKILL_REDUCE"/>
         <set name="etcitem_type" val="SCROLL"/>
         <set name="weight" val="20"/>
-        <set name="is_oly_restricted" val="true"/>
-        <set name="handler" val="ItemSkills"/>
-        <set name="commissionItemType" val="SOUL_CRYSTAL"/>
         <set name="is_questitem" val="true"/>
+        <restriction olympiad-restricted="true"/>
         <skills>
             <skill id="2096" level="1"/> <!-- Soul Crystal -->
         </skills>
     </item>
-    <item id="4637" name="Red Soul Crystal - Stage 8"  icon="icon.etc_soul_stone_i00">
+    <item id="4637" name="Red Soul Crystal - Stage 8" icon="icon.etc_soul_stone_i00">
         <!-- Red crystal containing the light of absorbed souls. stage 8. Once saturated, it bestows special abilities to a weapon. -->
         <set name="default_action" val="SKILL_REDUCE"/>
         <set name="etcitem_type" val="SCROLL"/>
         <set name="weight" val="20"/>
-        <set name="is_oly_restricted" val="true"/>
-        <set name="handler" val="ItemSkills"/>
-        <set name="commissionItemType" val="SOUL_CRYSTAL"/>
         <set name="is_questitem" val="true"/>
+        <restriction olympiad-restricted="true"/>
         <skills>
             <skill id="2096" level="1"/> <!-- Soul Crystal -->
         </skills>
     </item>
-    <item id="4638" name="Red Soul Crystal - Stage 9"  icon="icon.etc_soul_stone_i00">
+    <item id="4638" name="Red Soul Crystal - Stage 9" icon="icon.etc_soul_stone_i00">
         <!-- Red crystal containing the light of absorbed souls. stage 9. Once saturated, it bestows special abilities to a weapon. -->
         <set name="default_action" val="SKILL_REDUCE"/>
         <set name="etcitem_type" val="SCROLL"/>
         <set name="weight" val="20"/>
-        <set name="is_oly_restricted" val="true"/>
-        <set name="handler" val="ItemSkills"/>
-        <set name="commissionItemType" val="SOUL_CRYSTAL"/>
         <set name="is_questitem" val="true"/>
+        <restriction olympiad-restricted="true"/>
         <skills>
             <skill id="2096" level="1"/> <!-- Soul Crystal -->
         </skills>
     </item>
-    <item id="4639" name="Red Soul Crystal - Stage 10"  icon="icon.etc_soul_stone_i00">
+    <item id="4639" name="Red Soul Crystal - Stage 10" icon="icon.etc_soul_stone_i00">
         <!-- Red crystal containing the light of absorbed souls. stage 10. Once saturated, it bestows special abilities to a weapon. -->
         <set name="default_action" val="SKILL_REDUCE"/>
         <set name="etcitem_type" val="SCROLL"/>
         <set name="weight" val="20"/>
-        <set name="is_oly_restricted" val="true"/>
-        <set name="handler" val="ItemSkills"/>
-        <set name="commissionItemType" val="SOUL_CRYSTAL"/>
         <set name="is_questitem" val="true"/>
+        <restriction olympiad-restricted="true"/>
         <skills>
             <skill id="2096" level="1"/> <!-- Soul Crystal -->
         </skills>
     </item>
-    <item id="4641" name="Green Soul Crystal - Stage 1"  icon="icon.etc_soul_stone_i02">
+    <item id="4641" name="Green Soul Crystal - Stage 1" icon="icon.etc_soul_stone_i02">
         <!-- Green crystal containing the light of absorbed souls. stage 1. Once saturated, it bestows special abilities to a weapon. -->
         <set name="default_action" val="SKILL_REDUCE"/>
         <set name="etcitem_type" val="SCROLL"/>
         <set name="weight" val="20"/>
-        <set name="is_oly_restricted" val="true"/>
-        <set name="handler" val="ItemSkills"/>
-        <set name="commissionItemType" val="SOUL_CRYSTAL"/>
         <set name="is_questitem" val="true"/>
+        <restriction olympiad-restricted="true"/>
         <skills>
             <skill id="2096" level="1"/> <!-- Soul Crystal -->
         </skills>
     </item>
-    <item id="4642" name="Green Soul Crystal - Stage 2"  icon="icon.etc_soul_stone_i02">
+    <item id="4642" name="Green Soul Crystal - Stage 2" icon="icon.etc_soul_stone_i02">
         <!-- Green crystal containing the light of absorbed souls. stage 2. Once saturated, it bestows special abilities to a weapon. -->
         <set name="default_action" val="SKILL_REDUCE"/>
         <set name="etcitem_type" val="SCROLL"/>
         <set name="weight" val="20"/>
-        <set name="is_oly_restricted" val="true"/>
-        <set name="handler" val="ItemSkills"/>
-        <set name="commissionItemType" val="SOUL_CRYSTAL"/>
         <set name="is_questitem" val="true"/>
+        <restriction olympiad-restricted="true"/>
         <skills>
             <skill id="2096" level="1"/> <!-- Soul Crystal -->
         </skills>
     </item>
-    <item id="4643" name="Green Soul Crystal - Stage 3"  icon="icon.etc_soul_stone_i02">
+    <item id="4643" name="Green Soul Crystal - Stage 3" icon="icon.etc_soul_stone_i02">
         <!-- Green crystal containing the light of absorbed souls. stage 3. Once saturated, it bestows special abilities to a weapon. -->
         <set name="default_action" val="SKILL_REDUCE"/>
         <set name="etcitem_type" val="SCROLL"/>
         <set name="weight" val="20"/>
-        <set name="is_oly_restricted" val="true"/>
-        <set name="handler" val="ItemSkills"/>
-        <set name="commissionItemType" val="SOUL_CRYSTAL"/>
         <set name="is_questitem" val="true"/>
+        <restriction olympiad-restricted="true"/>
         <skills>
             <skill id="2096" level="1"/> <!-- Soul Crystal -->
         </skills>
     </item>
-    <item id="4644" name="Green Soul Crystal - Stage 4"  icon="icon.etc_soul_stone_i02">
+    <item id="4644" name="Green Soul Crystal - Stage 4" icon="icon.etc_soul_stone_i02">
         <!-- Green crystal containing the light of absorbed souls. stage 4. Once saturated, it bestows special abilities to a weapon. -->
         <set name="default_action" val="SKILL_REDUCE"/>
         <set name="etcitem_type" val="SCROLL"/>
         <set name="weight" val="20"/>
-        <set name="is_oly_restricted" val="true"/>
-        <set name="handler" val="ItemSkills"/>
-        <set name="commissionItemType" val="SOUL_CRYSTAL"/>
         <set name="is_questitem" val="true"/>
+        <restriction olympiad-restricted="true"/>
         <skills>
             <skill id="2096" level="1"/> <!-- Soul Crystal -->
         </skills>
     </item>
-    <item id="4645" name="Green Soul Crystal - Stage 5"  icon="icon.etc_soul_stone_i02">
+    <item id="4645" name="Green Soul Crystal - Stage 5" icon="icon.etc_soul_stone_i02">
         <!-- Green crystal containing the light of absorbed souls. stage 5. Once saturated, it bestows special abilities to a weapon. -->
         <set name="default_action" val="SKILL_REDUCE"/>
         <set name="etcitem_type" val="SCROLL"/>
         <set name="weight" val="20"/>
-        <set name="is_oly_restricted" val="true"/>
-        <set name="handler" val="ItemSkills"/>
-        <set name="commissionItemType" val="SOUL_CRYSTAL"/>
         <set name="is_questitem" val="true"/>
+        <restriction olympiad-restricted="true"/>
         <skills>
             <skill id="2096" level="1"/> <!-- Soul Crystal -->
         </skills>
     </item>
-    <item id="4646" name="Green Soul Crystal - Stage 6"  icon="icon.etc_soul_stone_i02">
+    <item id="4646" name="Green Soul Crystal - Stage 6" icon="icon.etc_soul_stone_i02">
         <!-- Green crystal containing the light of absorbed souls. stage 6. Once saturated, it bestows special abilities to a weapon. -->
         <set name="default_action" val="SKILL_REDUCE"/>
         <set name="etcitem_type" val="SCROLL"/>
         <set name="weight" val="20"/>
-        <set name="is_oly_restricted" val="true"/>
-        <set name="handler" val="ItemSkills"/>
-        <set name="commissionItemType" val="SOUL_CRYSTAL"/>
         <set name="is_questitem" val="true"/>
+        <restriction olympiad-restricted="true"/>
         <skills>
             <skill id="2096" level="1"/> <!-- Soul Crystal -->
         </skills>
     </item>
-    <item id="4647" name="Green Soul Crystal - Stage 7"  icon="icon.etc_soul_stone_i02">
+    <item id="4647" name="Green Soul Crystal - Stage 7" icon="icon.etc_soul_stone_i02">
         <!-- Green crystal containing the light of absorbed souls. stage 7. Once saturated, it bestows special abilities to a weapon. -->
         <set name="default_action" val="SKILL_REDUCE"/>
         <set name="etcitem_type" val="SCROLL"/>
         <set name="weight" val="20"/>
-        <set name="is_oly_restricted" val="true"/>
-        <set name="handler" val="ItemSkills"/>
-        <set name="commissionItemType" val="SOUL_CRYSTAL"/>
         <set name="is_questitem" val="true"/>
+        <restriction olympiad-restricted="true"/>
         <skills>
             <skill id="2096" level="1"/> <!-- Soul Crystal -->
         </skills>
     </item>
-    <item id="4648" name="Green Soul Crystal - Stage 8"  icon="icon.etc_soul_stone_i02">
+    <item id="4648" name="Green Soul Crystal - Stage 8" icon="icon.etc_soul_stone_i02">
         <!-- Green crystal containing the light of absorbed souls. stage 8. Once saturated, it bestows special abilities to a weapon. -->
         <set name="default_action" val="SKILL_REDUCE"/>
         <set name="etcitem_type" val="SCROLL"/>
         <set name="weight" val="20"/>
-        <set name="is_oly_restricted" val="true"/>
-        <set name="handler" val="ItemSkills"/>
-        <set name="commissionItemType" val="SOUL_CRYSTAL"/>
         <set name="is_questitem" val="true"/>
+        <restriction olympiad-restricted="true"/>
         <skills>
             <skill id="2096" level="1"/> <!-- Soul Crystal -->
         </skills>
     </item>
-    <item id="4649" name="Green Soul Crystal - Stage 9"  icon="icon.etc_soul_stone_i02">
+    <item id="4649" name="Green Soul Crystal - Stage 9" icon="icon.etc_soul_stone_i02">
         <!-- Green crystal containing the light of absorbed souls. stage 9. Once saturated, it bestows special abilities to a weapon. -->
         <set name="default_action" val="SKILL_REDUCE"/>
         <set name="etcitem_type" val="SCROLL"/>
         <set name="weight" val="20"/>
-        <set name="is_oly_restricted" val="true"/>
-        <set name="handler" val="ItemSkills"/>
-        <set name="commissionItemType" val="SOUL_CRYSTAL"/>
         <set name="is_questitem" val="true"/>
+        <restriction olympiad-restricted="true"/>
         <skills>
             <skill id="2096" level="1"/> <!-- Soul Crystal -->
         </skills>
     </item>
-    <item id="4650" name="Green Soul Crystal - Stage 10"  icon="icon.etc_soul_stone_i02">
+    <item id="4650" name="Green Soul Crystal - Stage 10" icon="icon.etc_soul_stone_i02">
         <!-- Green crystal containing the light of absorbed souls. stage 10. Once saturated, it bestows special abilities to a weapon. -->
         <set name="default_action" val="SKILL_REDUCE"/>
         <set name="etcitem_type" val="SCROLL"/>
         <set name="weight" val="20"/>
-        <set name="is_oly_restricted" val="true"/>
-        <set name="handler" val="ItemSkills"/>
-        <set name="commissionItemType" val="SOUL_CRYSTAL"/>
         <set name="is_questitem" val="true"/>
+        <restriction olympiad-restricted="true"/>
         <skills>
             <skill id="2096" level="1"/> <!-- Soul Crystal -->
         </skills>
     </item>
-    <item id="4652" name="Blue Soul Crystal - Stage 1"  icon="icon.etc_soul_stone_i01">
+    <item id="4652" name="Blue Soul Crystal - Stage 1" icon="icon.etc_soul_stone_i01">
         <!-- Blue crystal containing the light of absorbed souls. stage 1. Once saturated, it bestows special abilities to a weapon. -->
         <set name="default_action" val="SKILL_REDUCE"/>
         <set name="etcitem_type" val="SCROLL"/>
         <set name="weight" val="20"/>
-        <set name="is_oly_restricted" val="true"/>
-        <set name="handler" val="ItemSkills"/>
-        <set name="commissionItemType" val="SOUL_CRYSTAL"/>
         <set name="is_questitem" val="true"/>
+        <restriction olympiad-restricted="true"/>
         <skills>
             <skill id="2096" level="1"/> <!-- Soul Crystal -->
         </skills>
     </item>
-    <item id="4653" name="Blue Soul Crystal - Stage 2"  icon="icon.etc_soul_stone_i01">
+    <item id="4653" name="Blue Soul Crystal - Stage 2" icon="icon.etc_soul_stone_i01">
         <!-- Blue crystal containing the light of absorbed souls. stage 2. Once saturated, it bestows special abilities to a weapon. -->
         <set name="default_action" val="SKILL_REDUCE"/>
         <set name="etcitem_type" val="SCROLL"/>
         <set name="weight" val="20"/>
-        <set name="is_oly_restricted" val="true"/>
-        <set name="handler" val="ItemSkills"/>
-        <set name="commissionItemType" val="SOUL_CRYSTAL"/>
         <set name="is_questitem" val="true"/>
+        <restriction olympiad-restricted="true"/>
         <skills>
             <skill id="2096" level="1"/> <!-- Soul Crystal -->
         </skills>
     </item>
-    <item id="4654" name="Blue Soul Crystal - Stage 3"  icon="icon.etc_soul_stone_i01">
+    <item id="4654" name="Blue Soul Crystal - Stage 3" icon="icon.etc_soul_stone_i01">
         <!-- Blue crystal containing the light of absorbed souls. stage 3. Once saturated, it bestows special abilities to a weapon. -->
         <set name="default_action" val="SKILL_REDUCE"/>
         <set name="etcitem_type" val="SCROLL"/>
         <set name="weight" val="20"/>
-        <set name="is_oly_restricted" val="true"/>
-        <set name="handler" val="ItemSkills"/>
-        <set name="commissionItemType" val="SOUL_CRYSTAL"/>
         <set name="is_questitem" val="true"/>
+        <restriction olympiad-restricted="true"/>
         <skills>
             <skill id="2096" level="1"/> <!-- Soul Crystal -->
         </skills>
     </item>
-    <item id="4655" name="Blue Soul Crystal - Stage 4"  icon="icon.etc_soul_stone_i01">
+    <item id="4655" name="Blue Soul Crystal - Stage 4" icon="icon.etc_soul_stone_i01">
         <!-- Blue crystal containing the light of absorbed souls. stage 4. Once saturated, it bestows special abilities to a weapon. -->
         <set name="default_action" val="SKILL_REDUCE"/>
         <set name="etcitem_type" val="SCROLL"/>
         <set name="weight" val="20"/>
-        <set name="is_oly_restricted" val="true"/>
-        <set name="handler" val="ItemSkills"/>
-        <set name="commissionItemType" val="SOUL_CRYSTAL"/>
         <set name="is_questitem" val="true"/>
+        <restriction olympiad-restricted="true"/>
         <skills>
             <skill id="2096" level="1"/> <!-- Soul Crystal -->
         </skills>
     </item>
-    <item id="4656" name="Blue Soul Crystal - Stage 5"  icon="icon.etc_soul_stone_i01">
+    <item id="4656" name="Blue Soul Crystal - Stage 5" icon="icon.etc_soul_stone_i01">
         <!-- Blue crystal containing the light of absorbed souls. stage 5. Once saturated, it bestows special abilities to a weapon. -->
         <set name="default_action" val="SKILL_REDUCE"/>
         <set name="etcitem_type" val="SCROLL"/>
         <set name="weight" val="20"/>
-        <set name="is_oly_restricted" val="true"/>
-        <set name="handler" val="ItemSkills"/>
-        <set name="commissionItemType" val="SOUL_CRYSTAL"/>
         <set name="is_questitem" val="true"/>
+        <restriction olympiad-restricted="true"/>
         <skills>
             <skill id="2096" level="1"/> <!-- Soul Crystal -->
         </skills>
     </item>
-    <item id="4657" name="Blue Soul Crystal - Stage 6"  icon="icon.etc_soul_stone_i01">
+    <item id="4657" name="Blue Soul Crystal - Stage 6" icon="icon.etc_soul_stone_i01">
         <!-- Blue crystal containing the light of absorbed souls. stage 6. Once saturated, it bestows special abilities to a weapon. -->
         <set name="default_action" val="SKILL_REDUCE"/>
         <set name="etcitem_type" val="SCROLL"/>
         <set name="weight" val="20"/>
-        <set name="is_oly_restricted" val="true"/>
-        <set name="handler" val="ItemSkills"/>
-        <set name="commissionItemType" val="SOUL_CRYSTAL"/>
         <set name="is_questitem" val="true"/>
+        <restriction olympiad-restricted="true"/>
         <skills>
             <skill id="2096" level="1"/> <!-- Soul Crystal -->
         </skills>
     </item>
-    <item id="4658" name="Blue Soul Crystal - Stage 7"  icon="icon.etc_soul_stone_i01">
+    <item id="4658" name="Blue Soul Crystal - Stage 7" icon="icon.etc_soul_stone_i01">
         <!-- Blue crystal containing the light of absorbed souls. stage 7. Once saturated, it bestows special abilities to a weapon. -->
         <set name="default_action" val="SKILL_REDUCE"/>
         <set name="etcitem_type" val="SCROLL"/>
         <set name="weight" val="20"/>
-        <set name="is_oly_restricted" val="true"/>
-        <set name="handler" val="ItemSkills"/>
-        <set name="commissionItemType" val="SOUL_CRYSTAL"/>
         <set name="is_questitem" val="true"/>
+        <restriction olympiad-restricted="true"/>
         <skills>
             <skill id="2096" level="1"/> <!-- Soul Crystal -->
         </skills>
     </item>
-    <item id="4659" name="Blue Soul Crystal - Stage 8"  icon="icon.etc_soul_stone_i01">
+    <item id="4659" name="Blue Soul Crystal - Stage 8" icon="icon.etc_soul_stone_i01">
         <!-- Blue crystal containing the light of absorbed souls. stage 8. Once saturated, it bestows special abilities to a weapon. -->
         <set name="default_action" val="SKILL_REDUCE"/>
         <set name="etcitem_type" val="SCROLL"/>
         <set name="weight" val="20"/>
-        <set name="is_oly_restricted" val="true"/>
-        <set name="handler" val="ItemSkills"/>
-        <set name="commissionItemType" val="SOUL_CRYSTAL"/>
         <set name="is_questitem" val="true"/>
+        <restriction olympiad-restricted="true"/>
         <skills>
             <skill id="2096" level="1"/> <!-- Soul Crystal -->
         </skills>
     </item>
-    <item id="4660" name="Blue Soul Crystal - Stage 9"  icon="icon.etc_soul_stone_i01">
+    <item id="4660" name="Blue Soul Crystal - Stage 9" icon="icon.etc_soul_stone_i01">
         <!-- Blue crystal containing the light of absorbed souls. stage 9. Once saturated, it bestows special abilities to a weapon. -->
         <set name="default_action" val="SKILL_REDUCE"/>
         <set name="etcitem_type" val="SCROLL"/>
         <set name="weight" val="20"/>
-        <set name="is_oly_restricted" val="true"/>
-        <set name="handler" val="ItemSkills"/>
-        <set name="commissionItemType" val="SOUL_CRYSTAL"/>
         <set name="is_questitem" val="true"/>
+        <restriction olympiad-restricted="true"/>
         <skills>
             <skill id="2096" level="1"/> <!-- Soul Crystal -->
         </skills>
     </item>
-    <item id="4661" name="Blue Soul Crystal - Stage 10"  icon="icon.etc_soul_stone_i01">
+    <item id="4661" name="Blue Soul Crystal - Stage 10" icon="icon.etc_soul_stone_i01">
         <!-- Blue crystal containing the light of absorbed souls. stage 10. Once saturated, it bestows special abilities to a weapon. -->
         <set name="default_action" val="SKILL_REDUCE"/>
         <set name="etcitem_type" val="SCROLL"/>
         <set name="weight" val="20"/>
-        <set name="is_oly_restricted" val="true"/>
-        <set name="handler" val="ItemSkills"/>
-        <set name="commissionItemType" val="SOUL_CRYSTAL"/>
         <set name="is_questitem" val="true"/>
+        <restriction olympiad-restricted="true"/>
         <skills>
             <skill id="2096" level="1"/> <!-- Soul Crystal -->
         </skills>
     </item>
-    <item id="4662" name="Broken Red Soul Crystal"  icon="icon.etc_soul_stone_i01">
+    <item id="4662" name="Broken Red Soul Crystal" icon="icon.etc_soul_stone_i01">
         <!-- Red-colored crystal that absorbs souls. Internal imbalance between absorbed souls has rendered it useless. -->
         <set name="default_action" val="SKILL_REDUCE"/>
         <set name="etcitem_type" val="SCROLL"/>
@@ -663,9 +599,9 @@
         <set name="is_questitem" val="true"/>
         <set name="commissionItemType" val="SOUL_CRYSTAL"/>
         <set name="handler" val="ItemSkills"/>
-        <set name="is_oly_restricted" val="true"/>
+        <restriction olympiad-restricted="true"/>
     </item>
-    <item id="4663" name="Broken Green Soul Crystal"  icon="icon.etc_soul_stone_i01">
+    <item id="4663" name="Broken Green Soul Crystal" icon="icon.etc_soul_stone_i01">
         <!-- Green-colored crystal that absorbs souls. Internal imbalance between absorbed souls has rendered it useless. -->
         <set name="default_action" val="SKILL_REDUCE"/>
         <set name="etcitem_type" val="SCROLL"/>
@@ -673,9 +609,9 @@
         <set name="is_questitem" val="true"/>
         <set name="commissionItemType" val="SOUL_CRYSTAL"/>
         <set name="handler" val="ItemSkills"/>
-        <set name="is_oly_restricted" val="true"/>
+        <restriction olympiad-restricted="true"/>
     </item>
-    <item id="4664" name="Broken Blue Soul Crystal"  icon="icon.etc_soul_stone_i01">
+    <item id="4664" name="Broken Blue Soul Crystal" icon="icon.etc_soul_stone_i01">
         <!-- Blue-colored crystal that absorbs souls. Internal imbalance between absorbed souls has rendered it useless. -->
         <set name="default_action" val="SKILL_REDUCE"/>
         <set name="etcitem_type" val="SCROLL"/>
@@ -683,7 +619,7 @@
         <set name="is_questitem" val="true"/>
         <set name="commissionItemType" val="SOUL_CRYSTAL"/>
         <set name="handler" val="ItemSkills"/>
-        <set name="is_oly_restricted" val="true"/>
+        <restriction olympiad-restricted="true"/>
     </item>
     <weapon id="4665" name="Pipette Knife" icon="icon.etc_soul_stone_i01">
         <!-- Instrument used to collect the blood of living creatures. Use it to cut Baium and obtain a blood sample. -->
@@ -695,15 +631,7 @@
         <set name="weight" val="20"/>
         <set name="soulshots" val="1"/>
         <set name="spiritshots" val="1"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_destroyable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
-        <set name="is_depositable" val="false"/>
+        <restriction tradable="false" dropable="false" destroyable="false" sellable="false" clan-depositable="false" mailable="false" commissionable="false" depositable="false"/>
         <stats>
             <stat type="pAtk">10</stat>
             <stat type="mAtk">9</stat>
@@ -714,158 +642,70 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </weapon>
-    <item id="4666" name="Reiria's Soul Orb"  icon="icon.etc_soul_stone_i01">
+    <item id="4666" name="Reiria's Soul Orb" icon="icon.etc_soul_stone_i01">
         <!-- Sphere containing Reiria's Soul. Take it to Maestro Reorin. -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="4667" name="Kernon's Infernium Scepter"  icon="icon.etc_soul_stone_i01">
+    <item id="4667" name="Kernon's Infernium Scepter" icon="icon.etc_soul_stone_i01">
         <!-- Scepter made of infernium that was recovered from the demon Kernon. Take it to Maestro Reorin. -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="4668" name="Golkonda's Infernium Scepter"  icon="icon.etc_soul_stone_i01">
+    <item id="4668" name="Golkonda's Infernium Scepter" icon="icon.etc_soul_stone_i01">
         <!-- Scepter made of infernium that was recovered from Golkonda, the Longhorn General. Take it to Maestro Reorin. -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="4669" name="Hallate's Infernium Scepter"  icon="icon.etc_soul_stone_i01">
+    <item id="4669" name="Hallate's Infernium Scepter" icon="icon.etc_soul_stone_i01">
         <!-- Scepter made of infernium that was recovered from the Death Lord Hallate. Take it to Maestro Reorin. -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="4670" name="Maestro Reorin's Hammer"  icon="icon.etc_soul_stone_i01">
+    <item id="4670" name="Maestro Reorin's Hammer" icon="icon.etc_soul_stone_i01">
         <!-- Hammer used by a blacksmith. It is made by processing an adamantite nugget of high purity. Take it to Maestro Reorin. -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="4671" name="Maestro Reorin's Mold"  icon="icon.etc_soul_stone_i01">
+    <item id="4671" name="Maestro Reorin's Mold" icon="icon.etc_soul_stone_i01">
         <!-- Mold used by Dwarven Artisans to manufacture top grade equipment. Take it to Maestro Reorin. -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="4672" name="Infernium Varnish"  icon="icon.etc_soul_stone_i01">
+    <item id="4672" name="Infernium Varnish" icon="icon.etc_soul_stone_i01">
         <!-- Varnish used when manufacturing an infernium weapon. Take it to Maestro Reorin. -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="4673" name="Red Pipette Knife"  icon="icon.etc_soul_stone_i01">
+    <item id="4673" name="Red Pipette Knife" icon="icon.etc_soul_stone_i01">
         <!-- Pipette knife that holds Baium's blood. Bring it to Magister Casper at Hardin's Academy. -->
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="4674" name="Medal of Glory"  icon="icon.etc_magic_coin_gold_i00">
+    <item id="4674" name="Medal of Glory" icon="icon.etc_magic_coin_gold_i00">
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="4675" name="Medal of Friendship"  icon="icon.etc_magic_coin_silver_i00">
+    <item id="4675" name="Medal of Friendship" icon="icon.etc_magic_coin_silver_i00">
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="4676" name="Medal of Victory"  icon="icon.etc_magic_coin_blood_i00">
+    <item id="4676" name="Medal of Victory" icon="icon.etc_magic_coin_blood_i00">
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="is_questitem" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
-    <item id="4677" name="Potion of Critical Escape"  icon="icon.etc_potion_red_i00">
+    <item id="4677" name="Potion of Critical Escape" icon="icon.etc_potion_red_i00">
         <!-- Misdirects enemy attack, inhibits Speed of user. -->
         <set name="default_action" val="SKILL_REDUCE"/>
         <set name="etcitem_type" val="POTION"/>
@@ -873,11 +713,8 @@
         <set name="weight" val="120"/>
         <set name="price" val="120"/>
         <set name="reuse_delay" val="500"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_oly_restricted" val="true"/>
-        <set name="handler" val="ItemSkills"/>
-        <set name="commissionItemType" val="POTION"/>
         <set name="for_npc" val="true"/>
+        <restriction stackable="true" olympiad-restricted="true"/>
         <cond addName="1" msgId="113">
             <player flyMounted="false"/>
         </cond>
@@ -885,7 +722,7 @@
             <skill id="2074" level="1"/> <!-- Potion of Critical Escape -->
         </skills>
     </item>
-    <item id="4678" name="Scroll: Decrease Hate"  icon="icon.etc_scroll_white_i00">
+    <item id="4678" name="Scroll: Decrease Hate" icon="icon.etc_scroll_white_i00">
         <!-- Decreases one's level of Aggression. -->
         <set name="default_action" val="SKILL_REDUCE"/>
         <set name="etcitem_type" val="POTION"/>
@@ -893,11 +730,8 @@
         <set name="weight" val="180"/>
         <set name="price" val="5000"/>
         <set name="reuse_delay" val="10000"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_oly_restricted" val="true"/>
-        <set name="handler" val="ItemSkills"/>
-        <set name="commissionItemType" val="SCROLL_OTHER"/>
         <set name="for_npc" val="true"/>
+        <restriction stackable="true" olympiad-restricted="true"/>
         <cond addName="1" msgId="113">
             <player flyMounted="false"/>
         </cond>
@@ -905,7 +739,7 @@
             <skill id="2075" level="1"/> <!-- Scroll: Decrease Hate -->
         </skills>
     </item>
-    <item id="4679" name="Eva's Blessing"  icon="icon.etc_bless_of_eva_i00">
+    <item id="4679" name="Eva's Blessing" icon="icon.etc_bless_of_eva_i00">
         <!-- Allows one to breathe under water for extended periods. -->
         <set name="default_action" val="SKILL_REDUCE"/>
         <set name="etcitem_type" val="POTION"/>
@@ -913,11 +747,8 @@
         <set name="weight" val="180"/>
         <set name="price" val="500"/>
         <set name="reuse_delay" val="500"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_oly_restricted" val="true"/>
-        <set name="handler" val="ItemSkills"/>
-        <set name="commissionItemType" val="SCROLL_OTHER"/>
         <set name="for_npc" val="true"/>
+        <restriction stackable="true" olympiad-restricted="true"/>
         <cond addName="1" msgId="113">
             <player flyMounted="false"/>
         </cond>
@@ -925,7 +756,7 @@
             <skill id="2076" level="1"/> <!-- Eva's Blessing -->
         </skills>
     </item>
-    <item id="4680" name="Potion of Critical Escape"  icon="icon.etc_potion_blue_i00">
+    <item id="4680" name="Potion of Critical Escape" icon="icon.etc_potion_blue_i00">
         <!-- Reduces P. Def. and reflects damage back upon enemy. -->
         <set name="default_action" val="SKILL_REDUCE"/>
         <set name="etcitem_type" val="POTION"/>
@@ -933,11 +764,8 @@
         <set name="weight" val="180"/>
         <set name="price" val="150"/>
         <set name="reuse_delay" val="500"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_oly_restricted" val="true"/>
-        <set name="handler" val="ItemSkills"/>
-        <set name="commissionItemType" val="POTION"/>
         <set name="for_npc" val="true"/>
+        <restriction stackable="true" olympiad-restricted="true"/>
         <cond addName="1" msgId="113">
             <player flyMounted="false"/>
         </cond>

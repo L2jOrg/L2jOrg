@@ -8,12 +8,8 @@
         <set name="immediate_effect" val="true"/>
         <set name="soulshots" val="1"/>
         <set name="spiritshots" val="1"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
         <set name="is_magic_weapon" val="true"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false" freightable="true"/>
         <stats>
             <stat type="pAtk">1</stat>
             <stat type="mAtk">1</stat>
@@ -24,15 +20,15 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </weapon>
-    <item id="47928" name="Magic Woodpile"  icon="icon.ev_firewood_seed_solo">
+    <item id="47928" name="Magic Woodpile" icon="icon.ev_firewood_seed_solo">
         <!-- Double-click to use a magic woodpile for one player. If you have the Magic Fan equipped, you can use the skills Breeze and Gust to set fire to the woodpile. Will be deleted after the event. -->
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="is_stackable" val="true"/>
+        <restriction stackable="true"/>
     </item>
-    <item id="47929" name="Large Magic Woodpile"  icon="icon.ev_firewood_seed_party">
+    <item id="47929" name="Large Magic Woodpile" icon="icon.ev_firewood_seed_party">
         <!-- Double-click to use a magic woodpile for party use. If you have the Magic Fan equipped, you can use the skills Breeze and Gust to set fire to the woodpile. Will be deleted after the event. -->
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="is_stackable" val="true"/>
+        <restriction stackable="true"/>
     </item>
     <weapon id="47945" name="Magic Fan - Yellow" icon="icon.ev_kr_13th_present_yellow">
         <!-- Within the swift breezes you can feel a magic energy. This magic fan is given out to commemorate the 13th anniversary of Lineage 2. -->
@@ -42,12 +38,8 @@
         <set name="immediate_effect" val="true"/>
         <set name="soulshots" val="1"/>
         <set name="spiritshots" val="1"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
         <set name="is_magic_weapon" val="true"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false" freightable="true"/>
         <stats>
             <stat type="pAtk">1</stat>
             <stat type="mAtk">1</stat>

@@ -5,11 +5,7 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="back"/>
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
         <cond addName="1" msgId="113">
             <player chaotic="false"/>
         </cond>
@@ -22,11 +18,7 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="back"/>
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
         <cond addName="1" msgId="113">
             <player chaotic="false"/>
         </cond>
@@ -34,8 +26,8 @@
             <skill id="19040" level="1"/>    <!--Cloak of Darkness-->
         </skills>
     </armor>
-    <item id="34956" name="Letter M"  icon="icon.etc_alphabet_m_i00">
+    <item id="34956" name="Letter M" icon="icon.etc_alphabet_m_i00">
         <!-- Combine with other letters to create a special word and bring it to the Letter Collector to receive a great gift! -->
-        <set name="is_stackable" val="true"/>
+        <restriction stackable="true"/>
     </item>
 </list>

@@ -1,12 +1,11 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
-    <item id="5126" name="Dual Weapon Crafting Stamp" >
+    <item id="5126" name="Dual Weapon Crafting Stamp" icon="icon.etc_letter_blue_i00">
         <!-- Essential component for making dualswords of B-grade and higher. -->
-        <set name="icon" val="icon.etc_letter_blue_i00"/>
         <set name="weight" val="20"/>
         <set name="price" val="10000"/>
-        <set name="is_stackable" val="true"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
+        <restriction stackable="true"/>
     </item>
     <weapon id="5127" name="Dailaon Knife" icon="icon.weapon_monster_i00">
         <set name="default_action" val="EQUIP"/>
@@ -163,7 +162,7 @@
         <set name="damage_range" val="0;0;40;120"/>
         <set name="immediate_effect" val="true"/>
         <set name="commissionItemType" val="FIST_WEAPON"/>
-        <set name="is_dropable" val="false"/>
+        <restriction dropable="false"/>
         <stats>
             <stat type="pAtk">1</stat>
             <stat type="mAtk">1</stat>
@@ -174,9 +173,8 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </weapon>
-    <item id="5134" name="Soulshot Compressed Package (No-grade)" >
+    <item id="5134" name="Soulshot Compressed Package (No-grade)" icon="icon.etc_pouch_yellow_i00">
         <!-- 300 compressed soulshots. No-grade. -->
-        <set name="icon" val="icon.etc_pouch_yellow_i00"/>
         <set name="default_action" val="CAPSULE"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="600"/>
@@ -187,9 +185,8 @@
             <skill id="2078" level="1"/> <!-- Soulshot Compressed Package (No-grade) -->
         </skills>
     </item>
-    <item id="5135" name="Soulshot Compressed Package (D-grade)" >
+    <item id="5135" name="Soulshot Compressed Package (D-grade)" icon="icon.etc_pouch_yellow_i00">
         <!-- 300 compressed soulshots. D-grade. -->
-        <set name="icon" val="icon.etc_pouch_yellow_i00"/>
         <set name="default_action" val="CAPSULE"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="450"/>
@@ -200,9 +197,8 @@
             <skill id="2079" level="1"/> <!-- Soulshot Compressed Package (D-grade) -->
         </skills>
     </item>
-    <item id="5136" name="Soulshot Compressed Package (C-grade)" >
+    <item id="5136" name="Soulshot Compressed Package (C-grade)" icon="icon.etc_pouch_yellow_i00">
         <!-- 300 compressed soulshots. C-grade. -->
-        <set name="icon" val="icon.etc_pouch_yellow_i00"/>
         <set name="default_action" val="CAPSULE"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="450"/>
@@ -213,9 +209,8 @@
             <skill id="2080" level="1"/> <!-- Soulshot Compressed Package (C-grade) -->
         </skills>
     </item>
-    <item id="5137" name="Soulshot Compressed Package (B-grade)" >
+    <item id="5137" name="Soulshot Compressed Package (B-grade)" icon="icon.etc_pouch_yellow_i00">
         <!-- 300 compressed soulshots. B-grade. -->
-        <set name="icon" val="icon.etc_pouch_yellow_i00"/>
         <set name="default_action" val="CAPSULE"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="200"/>
@@ -226,9 +221,9 @@
             <skill id="2081" level="1"/> <!-- Soulshot Compressed Package (B-grade) -->
         </skills>
     </item>
-    <item id="5138" name="Soulshot Compressed Package (A-grade)" >
+    <item id="5138" name="Soulshot Compressed Package (A-grade)" icon="icon.etc_pouch_yellow_i00">
         <!-- 300 compressed Soulshots. A-grade. -->
-        <set name="icon" val="icon.etc_pouch_yellow_i00"/>
+
         <set name="default_action" val="CAPSULE"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="200"/>
@@ -239,9 +234,8 @@
             <skill id="2082" level="1"/> <!-- Soulshot Compressed Package (A-grade) -->
         </skills>
     </item>
-    <item id="5140" name="Spiritshot Compressed Package (No-grade)" >
+    <item id="5140" name="Spiritshot Compressed Package (No-grade)" icon="icon.etc_pouch_yellow_i00">
         <!-- 300 compressed spiritshots. No-grade. -->
-        <set name="icon" val="icon.etc_pouch_yellow_i00"/>
         <set name="default_action" val="CAPSULE"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="750"/>
@@ -252,9 +246,9 @@
             <skill id="2084" level="1"/> <!-- Spiritshot Compressed Package (No-grade) -->
         </skills>
     </item>
-    <item id="5141" name="Spiritshot Compressed Package (D-grade)" >
+    <item id="5141" name="Spiritshot Compressed Package (D-grade)" icon="icon.etc_pouch_yellow_i00">
         <!-- 300 compressed spiritshots. D-grade. -->
-        <set name="icon" val="icon.etc_pouch_yellow_i00"/>
+
         <set name="default_action" val="CAPSULE"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="750"/>
@@ -265,9 +259,8 @@
             <skill id="2085" level="1"/> <!-- Spiritshot Compressed Package (D-grade) -->
         </skills>
     </item>
-    <item id="5142" name="Spiritshot Compressed Package (C-grade)" >
+    <item id="5142" name="Spiritshot Compressed Package (C-grade)" icon="icon.etc_pouch_yellow_i00">
         <!-- 300 compressed spiritshots. C-grade. -->
-        <set name="icon" val="icon.etc_pouch_yellow_i00"/>
         <set name="default_action" val="CAPSULE"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="450"/>
@@ -278,9 +271,9 @@
             <skill id="2086" level="1"/> <!-- Spiritshot Compressed Package (C-grade) -->
         </skills>
     </item>
-    <item id="5143" name="Spiritshot Compressed Package (B-grade)" >
+    <item id="5143" name="Spiritshot Compressed Package (B-grade)" icon="icon.etc_pouch_yellow_i00">
         <!-- 300 compressed spiritshots. B-grade. -->
-        <set name="icon" val="icon.etc_pouch_yellow_i00"/>
+
         <set name="default_action" val="CAPSULE"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="450"/>
@@ -291,9 +284,8 @@
             <skill id="2087" level="1"/> <!-- Spiritshot Compressed Package (B-grade) -->
         </skills>
     </item>
-    <item id="5144" name="Spiritshot Compressed Package (A-grade)" >
+    <item id="5144" name="Spiritshot Compressed Package (A-grade)" icon="icon.etc_pouch_yellow_i00">
         <!-- 300 compressed spiritshots. A-grade. -->
-        <set name="icon" val="icon.etc_pouch_yellow_i00"/>
         <set name="default_action" val="CAPSULE"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="200"/>
@@ -304,9 +296,9 @@
             <skill id="2088" level="1"/> <!-- Spiritshot Compressed Package (A-grade) -->
         </skills>
     </item>
-    <item id="5146" name="Blessed Spiritshot Compressed Package (No-grade)" >
+    <item id="5146" name="Blessed Spiritshot Compressed Package (No-grade)" icon="icon.etc_pouch_yellow_i00">
         <!-- 300 compressed blessed spiritshots. No-grade. -->
-        <set name="icon" val="icon.etc_pouch_yellow_i00"/>
+
         <set name="default_action" val="CAPSULE"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="750"/>
@@ -317,9 +309,8 @@
             <skill id="2090" level="1"/> <!-- Blessed Spiritshot Compressed Package (No-grade) -->
         </skills>
     </item>
-    <item id="5147" name="Blessed Spiritshot Compressed Package (D-grade)" >
+    <item id="5147" name="Blessed Spiritshot Compressed Package (D-grade)" icon="icon.etc_pouch_yellow_i00">
         <!-- 300 compressed blessed spiritshots. D-grade. -->
-        <set name="icon" val="icon.etc_pouch_yellow_i00"/>
         <set name="default_action" val="CAPSULE"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="750"/>
@@ -330,9 +321,9 @@
             <skill id="2091" level="1"/> <!-- Blessed Spiritshot Compressed Package (D-grade) -->
         </skills>
     </item>
-    <item id="5148" name="Blessed Spiritshot Compressed Package (C-grade)" >
+    <item id="5148" name="Blessed Spiritshot Compressed Package (C-grade)" icon="icon.etc_pouch_yellow_i00">
         <!-- 300 compressed blessed spiritshots. C-grade. -->
-        <set name="icon" val="icon.etc_pouch_yellow_i00"/>
+
         <set name="default_action" val="CAPSULE"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="450"/>
@@ -343,9 +334,8 @@
             <skill id="2092" level="1"/> <!-- Blessed Spiritshot Compressed Package (C-grade) -->
         </skills>
     </item>
-    <item id="5149" name="Blessed Spiritshot Compressed Package (B-grade)" >
+    <item id="5149" name="Blessed Spiritshot Compressed Package (B-grade)" icon="icon.etc_pouch_yellow_i00">
         <!-- 300 compressed blessed spiritshots. B-grade. -->
-        <set name="icon" val="icon.etc_pouch_yellow_i00"/>
         <set name="default_action" val="CAPSULE"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="450"/>
@@ -356,9 +346,9 @@
             <skill id="2093" level="1"/> <!-- Blessed Spiritshot Compressed Package (B-grade) -->
         </skills>
     </item>
-    <item id="5150" name="Blessed Spiritshot Compressed Package (A-grade)" >
+    <item id="5150" name="Blessed Spiritshot Compressed Package (A-grade)" icon="icon.etc_pouch_yellow_i00">
         <!-- 300 compressed blessed spiritshots. A-grade. -->
-        <set name="icon" val="icon.etc_pouch_yellow_i00"/>
+
         <set name="default_action" val="CAPSULE"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="200"/>
@@ -369,253 +359,224 @@
             <skill id="2094" level="1"/> <!-- Blessed Spiritshot Compressed Package (A-grade) -->
         </skills>
     </item>
-    <item id="5152" name="Magic Compressor" >
+    <item id="5152" name="Magic Compressor" icon="icon.etc_jewel_box_i00">
         <!-- Magic tool needed to compress soulshots, spiritshots etc. -->
-        <set name="icon" val="icon.etc_jewel_box_i00"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="10"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
         <set name="price" val="100"/>
     </item>
-    <item id="5153" name="Recipe: Soulshot Compressed Package (D-grade)" >
+    <item id="5153" name="Recipe: Soulshot Compressed Package (D-grade)" icon="icon.etc_recipe_blue_i00">
         <!-- For Dwarves only. Recipe for the Soulshot Compressed Package (D-grade). Requires Create Item - Skill Lv. 2. The success rate is 100%. -->
-        <set name="icon" val="icon.etc_recipe_blue_i00"/>
+
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="30"/>
         <set name="price" val="5000"/>
         <set name="recipe_id" val="480"/>
-        <set name="is_stackable" val="true"/>
-        <set name="commissionItemType" val="RECIPE"/>
         <set name="handler" val="Recipes"/>
+        <restriction stackable="true"/>
     </item>
-    <item id="5154" name="Recipe: Soulshot Compressed Package (C-grade)" >
+    <item id="5154" name="Recipe: Soulshot Compressed Package (C-grade)" icon="icon.etc_recipe_yellow_i00">
         <!-- For Dwarves only. Recipe for the Soulshot Compressed Package (C-grade). Requires Create Item - Skill Lv. 4. The success rate is 100%. -->
-        <set name="icon" val="icon.etc_recipe_yellow_i00"/>
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="30"/>
         <set name="price" val="60000"/>
         <set name="recipe_id" val="481"/>
-        <set name="is_stackable" val="true"/>
-        <set name="commissionItemType" val="RECIPE"/>
         <set name="handler" val="Recipes"/>
+        <restriction stackable="true"/>
     </item>
-    <item id="5155" name="Recipe: Soulshot Compressed Package (B-grade)" >
+    <item id="5155" name="Recipe: Soulshot Compressed Package (B-grade)" icon="icon.etc_recipe_red_i00">
         <!-- For Dwarves only. Recipe for the Soulshot Compressed Package (B-grade). Requires Create Item - Skill Lv. 6. The success rate is 100%. -->
-        <set name="icon" val="icon.etc_recipe_red_i00"/>
+
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="30"/>
         <set name="price" val="100000"/>
         <set name="recipe_id" val="482"/>
-        <set name="is_stackable" val="true"/>
-        <set name="commissionItemType" val="RECIPE"/>
         <set name="handler" val="Recipes"/>
+        <restriction stackable="true"/>
     </item>
-    <item id="5156" name="Recipe: Soulshot Compressed Package (A-grade)" >
+    <item id="5156" name="Recipe: Soulshot Compressed Package (A-grade)" icon="icon.etc_recipe_violet_i00">
         <!-- For Dwarves only. Recipe for Soulshot Compressed Package (A-grade). Requires Create Item - Skill Lv. 7. The success rate is 100%. -->
-        <set name="icon" val="icon.etc_recipe_violet_i00"/>
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="30"/>
         <set name="price" val="150000"/>
         <set name="recipe_id" val="483"/>
-        <set name="is_stackable" val="true"/>
-        <set name="commissionItemType" val="RECIPE"/>
         <set name="handler" val="Recipes"/>
+        <restriction stackable="true"/>
     </item>
-    <item id="5158" name="Recipe: Spiritshot Compressed Package (D-grade)" >
+    <item id="5158" name="Recipe: Spiritshot Compressed Package (D-grade)" icon="icon.etc_recipe_blue_i00">
         <!-- For Dwarves only. Recipe for the Spiritshot Compressed Package (D-grade). Requires Create Item - Skill Lv. 2. The success rate is 100%. -->
-        <set name="icon" val="icon.etc_recipe_blue_i00"/>
+
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="30"/>
         <set name="price" val="5000"/>
         <set name="recipe_id" val="485"/>
-        <set name="is_stackable" val="true"/>
-        <set name="commissionItemType" val="RECIPE"/>
         <set name="handler" val="Recipes"/>
+        <restriction stackable="true"/>
     </item>
-    <item id="5159" name="Recipe: Spiritshot Compressed Package (C-grade)" >
+    <item id="5159" name="Recipe: Spiritshot Compressed Package (C-grade)" icon="icon.etc_recipe_yellow_i00">
         <!-- For Dwarves only. Recipe for the Spiritshot Compressed Package (C-grade). Requires Create Item - Skill Lv. 4. The success rate is 100%. -->
-        <set name="icon" val="icon.etc_recipe_yellow_i00"/>
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="30"/>
         <set name="price" val="60000"/>
         <set name="recipe_id" val="486"/>
-        <set name="is_stackable" val="true"/>
-        <set name="commissionItemType" val="RECIPE"/>
         <set name="handler" val="Recipes"/>
+        <restriction stackable="true"/>
     </item>
-    <item id="5160" name="Recipe: Spiritshot Compressed Package (B-grade)" >
+    <item id="5160" name="Recipe: Spiritshot Compressed Package (B-grade)" icon="icon.etc_recipe_red_i00">
         <!-- For Dwarves only. Recipe for the Spiritshot Compressed Package (B-grade). Requires Create Item - Skill Lv. 6. The success rate is 100%. -->
-        <set name="icon" val="icon.etc_recipe_red_i00"/>
+
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="30"/>
         <set name="price" val="100000"/>
         <set name="recipe_id" val="487"/>
-        <set name="is_stackable" val="true"/>
-        <set name="commissionItemType" val="RECIPE"/>
         <set name="handler" val="Recipes"/>
+        <restriction stackable="true"/>
     </item>
-    <item id="5161" name="Recipe: Spiritshot Compressed Package (A-grade)" >
+    <item id="5161" name="Recipe: Spiritshot Compressed Package (A-grade)" icon="icon.etc_recipe_violet_i00">
         <!-- For Dwarves only. Recipe for Spiritshot Compressed Package (A-grade). Requires Create Item - Skill Lv. 7. The success rate is 100%. -->
-        <set name="icon" val="icon.etc_recipe_violet_i00"/>
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="30"/>
         <set name="price" val="150000"/>
         <set name="recipe_id" val="488"/>
-        <set name="is_stackable" val="true"/>
-        <set name="commissionItemType" val="RECIPE"/>
         <set name="handler" val="Recipes"/>
+        <restriction stackable="true"/>
     </item>
-    <item id="5163" name="Recipe: Blessed Spiritshot Compressed Package (D-grade)" >
+    <item id="5163" name="Recipe: Blessed Spiritshot Compressed Package (D-grade)" icon="icon.etc_recipe_blue_i00">
         <!-- For Dwarves only. Recipe for the Blessed Spiritshot Compressed Package (D-grade). Requires Create Item - Skill Lv. 2. The success rate is 100%. -->
-        <set name="icon" val="icon.etc_recipe_blue_i00"/>
+
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="30"/>
         <set name="price" val="5000"/>
         <set name="recipe_id" val="490"/>
-        <set name="is_stackable" val="true"/>
-        <set name="commissionItemType" val="RECIPE"/>
         <set name="handler" val="Recipes"/>
+        <restriction stackable="true"/>
     </item>
-    <item id="5164" name="Recipe: Blessed Spiritshot Compressed Package (C-grade)" >
+    <item id="5164" name="Recipe: Blessed Spiritshot Compressed Package (C-grade)" icon="icon.etc_recipe_yellow_i00">
         <!-- For Dwarves only. Recipe for the Blessed Spiritshot Compressed Package (C-grade). Requires Create Item - Skill Lv. 4. The success rate is 100%. -->
-        <set name="icon" val="icon.etc_recipe_yellow_i00"/>
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="30"/>
         <set name="price" val="60000"/>
         <set name="recipe_id" val="491"/>
-        <set name="is_stackable" val="true"/>
-        <set name="commissionItemType" val="RECIPE"/>
         <set name="handler" val="Recipes"/>
+        <restriction stackable="true"/>
     </item>
-    <item id="5165" name="Recipe: Blessed Spiritshot Compressed Package (B-grade)" >
+    <item id="5165" name="Recipe: Blessed Spiritshot Compressed Package (B-grade)" icon="icon.etc_recipe_red_i00">
         <!-- For Dwarves only. Recipe for the Blessed Spiritshot Compressed Package (B-grade). Requires Create Item - Skill Lv. 6. The success rate is 100%. -->
-        <set name="icon" val="icon.etc_recipe_red_i00"/>
+
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="30"/>
         <set name="price" val="100000"/>
         <set name="recipe_id" val="492"/>
-        <set name="is_stackable" val="true"/>
-        <set name="commissionItemType" val="RECIPE"/>
         <set name="handler" val="Recipes"/>
+        <restriction stackable="true"/>
     </item>
-    <item id="5166" name="Recipe: Blessed Spiritshot Compressed Package (A-grade)" >
+    <item id="5166" name="Recipe: Blessed Spiritshot Compressed Package (A-grade)" icon="icon.etc_recipe_violet_i00">
         <!-- For Dwarves only. Recipe for Blessed Spiritshot Compressed Package (A-grade). Requires Create Item - Skill Lv. 7. The success rate is 100%. -->
-        <set name="icon" val="icon.etc_recipe_violet_i00"/>
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="30"/>
         <set name="price" val="150000"/>
         <set name="recipe_id" val="493"/>
-        <set name="is_stackable" val="true"/>
-        <set name="commissionItemType" val="RECIPE"/>
         <set name="handler" val="Recipes"/>
+        <restriction stackable="true"/>
     </item>
-    <item id="5192" name="Magic Rope (D-grade)" >
+    <item id="5192" name="Magic Rope (D-grade)" icon="icon.etc_braided_hemp_i00">
         <!-- Rope that has magical power. It is made by weaving strips of lizard leather together. Using this rope to tie an item will reduce its weight so that it will be easier to carry. -->
-        <set name="icon" val="icon.etc_braided_hemp_i00"/>
+
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="2"/>
         <set name="price" val="100"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
-        <set name="is_stackable" val="true"/>
+        <restriction stackable="true"/>
     </item>
-    <item id="5193" name="Magic Rope (C-grade)" >
+    <item id="5193" name="Magic Rope (C-grade)" icon="icon.etc_braided_hemp_i00">
         <!-- Rope that has magical power. It is made by weaving strips of lizard leather together. Using this rope to tie an item will reduce its weight so that it will be easier to carry. -->
-        <set name="icon" val="icon.etc_braided_hemp_i00"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="2"/>
         <set name="price" val="150"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
-        <set name="is_stackable" val="true"/>
+        <restriction stackable="true"/>
     </item>
-    <item id="5194" name="Magic Rope (B-grade)" >
+    <item id="5194" name="Magic Rope (B-grade)" icon="icon.etc_braided_hemp_i00">
         <!-- Rope that has magical power. It is made by weaving strips of lizard leather together. Using this rope to tie an item will reduce its weight so that it will be easier to carry. -->
-        <set name="icon" val="icon.etc_braided_hemp_i00"/>
+
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="2"/>
         <set name="price" val="250"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
-        <set name="is_stackable" val="true"/>
+        <restriction stackable="true"/>
     </item>
-    <item id="5195" name="Magic Rope (A-grade)" >
+    <item id="5195" name="Magic Rope (A-grade)" icon="icon.etc_braided_hemp_i00">
         <!-- Rope that has magical power. It is made by weaving strips of lizard leather together. Using this rope to tie an item will reduce its weight so that it will be easier to carry. -->
-        <set name="icon" val="icon.etc_braided_hemp_i00"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="2"/>
         <set name="price" val="400"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
-        <set name="is_stackable" val="true"/>
+        <restriction stackable="true"/>
     </item>
-    <item id="5196" name="Magic Rope (S-grade)" >
+    <item id="5196" name="Magic Rope (S-grade)" icon="icon.etc_braided_hemp_i00">
         <!-- Rope that has magical power. It is made by weaving strips of lizard leather together. Using this rope to tie an item will reduce its weight so that it will be easier to carry. -->
-        <set name="icon" val="icon.etc_braided_hemp_i00"/>
+
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="2"/>
         <set name="price" val="400"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
-        <set name="is_stackable" val="true"/>
+        <restriction stackable="true"/>
     </item>
-    <item id="5197" name="Chest Key - Grade 8" >
+    <item id="5197" name="Chest Key - Grade 8" icon="icon.etc_key_i00">
         <!-- Opens a level 1 treasure chest with a success rate of 60%. When opening a higher level treasure chest, the success rate will decrease. -->
-        <set name="icon" val="icon.etc_key_i00"/>
         <set name="default_action" val="SKILL_REDUCE"/>
         <set name="weight" val="10"/>
         <set name="price" val="70"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_oly_restricted" val="true"/>
-        <set name="handler" val="ItemSkills"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
+        <restriction stackable="true" olympiad-restricted="true"/>
         <skills>
             <skill id="2065" level="1"/> <!-- Box Key -->
         </skills>
     </item>
-    <item id="5198" name="Chest Key - Grade 7" >
+    <item id="5198" name="Chest Key - Grade 7" icon="icon.etc_key_i00">
         <!-- Opens a level 10 treasure chest with a success rate of 60%. When opening a higher level treasure chest, the success rate will decrease. -->
-        <set name="icon" val="icon.etc_key_i00"/>
+
         <set name="default_action" val="SKILL_REDUCE"/>
         <set name="weight" val="10"/>
         <set name="price" val="760"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_oly_restricted" val="true"/>
-        <set name="handler" val="ItemSkills"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
+        <restriction stackable="true" olympiad-restricted="true"/>
         <skills>
             <skill id="2065" level="2"/> <!-- Box Key -->
         </skills>
     </item>
-    <item id="5199" name="Chest Key - Grade 6" >
+    <item id="5199" name="Chest Key - Grade 6" icon="icon.etc_key_i00">
         <!-- Opens a level 20 treasure chest with a success rate of 60%. When opening a higher level treasure chest, the success rate will decrease. -->
-        <set name="icon" val="icon.etc_key_i00"/>
         <set name="default_action" val="SKILL_REDUCE"/>
         <set name="weight" val="10"/>
         <set name="price" val="1200"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_oly_restricted" val="true"/>
-        <set name="handler" val="ItemSkills"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
+        <restriction stackable="true" olympiad-restricted="true"/>
         <skills>
             <skill id="2065" level="3"/> <!-- Box Key -->
         </skills>

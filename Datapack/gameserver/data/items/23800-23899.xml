@@ -5,13 +5,13 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="hairall"/>
         <set name="immediate_effect" val="true"/>
-        <set name="is_sellable" val="false"/>
+        <restriction sellable="false"/>
     </armor>
     <armor id="23879" name="Samurai Outfit" icon="BranchSys3.iconArmar.g_co_japan_general_i00">
         <!-- Samurai's Outfit. -->
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="alldress"/>
         <set name="immediate_effect" val="true"/>
-        <set name="is_sellable" val="false"/>
+        <restriction sellable="false"/>
     </armor>
 </list>

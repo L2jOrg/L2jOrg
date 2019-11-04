@@ -1,141 +1,115 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
-    <item id="49100" name="Teleport: Floran"  icon="icon.etc_capture_stone_i00">
+    <item id="49100" name="Teleport: Floran" icon="icon.etc_capture_stone_i00">
         <!-- Magic stone, used to teleport the character to Floran. Cooldown: 60 minutes. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
         <set name="default_action" val="SKILL_REDUCE"/>
         <set name="weight" val="120"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
     </item>
-    <item id="49101" name="Teleport: Giran"  icon="icon.etc_capture_stone_i00">
+    <item id="49101" name="Teleport: Giran" icon="icon.etc_capture_stone_i00">
         <!-- Magic stone, used to teleport the character to Giran. Cooldown: 60 minutes. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
         <set name="default_action" val="SKILL_REDUCE"/>
         <set name="weight" val="120"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
     </item>
-    <item id="49102" name="Teleport: Oren"  icon="icon.etc_capture_stone_i00">
+    <item id="49102" name="Teleport: Oren" icon="icon.etc_capture_stone_i00">
         <!-- Magic stone, used to teleport the character to Oren. Cooldown: 60 minutes. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
         <set name="default_action" val="SKILL_REDUCE"/>
         <set name="weight" val="120"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
     </item>
-    <item id="49103" name="Teleport: Ivory Tower"  icon="icon.etc_capture_stone_i00">
+    <item id="49103" name="Teleport: Ivory Tower" icon="icon.etc_capture_stone_i00">
         <!-- Magic stone, used to teleport the character to Ivory Tower. Cooldown: 60 minutes. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
         <set name="default_action" val="SKILL_REDUCE"/>
         <set name="weight" val="120"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
     </item>
-    <item id="49104" name="Teleport: Hunter's Village"  icon="icon.etc_capture_stone_i00">
+    <item id="49104" name="Teleport: Hunter's Village" icon="icon.etc_capture_stone_i00">
         <!-- Magic stone, used to teleport the character to Hunter's Village. Cooldown: 60 minutes. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
         <set name="default_action" val="SKILL_REDUCE"/>
         <set name="weight" val="120"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
     </item>
-    <item id="49105" name="Teleport: Entrance to Cruma Tower"  icon="icon.etc_capture_stone_i00">
+    <item id="49105" name="Teleport: Entrance to Cruma Tower" icon="icon.etc_capture_stone_i00">
         <!-- Magic stone, used to teleport the character to the Entrance to Cruma Tower. Cooldown: 60 minutes. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
         <set name="default_action" val="SKILL_REDUCE"/>
         <set name="weight" val="120"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
     </item>
-    <item id="49106" name="Teleport: Entrance to Dragon Valley"  icon="icon.etc_capture_stone_i00">
+    <item id="49106" name="Teleport: Entrance to Dragon Valley" icon="icon.etc_capture_stone_i00">
         <!-- Magic stone, used to teleport the character to Dragon Valley. Cooldown: 60 minutes. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
         <set name="default_action" val="SKILL_REDUCE"/>
         <set name="weight" val="120"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
     </item>
-    <item id="49107" name="Teleport: Dragon Valley Bridge"  icon="icon.etc_capture_stone_i00">
+    <item id="49107" name="Teleport: Dragon Valley Bridge" icon="icon.etc_capture_stone_i00">
         <!-- Magic stone, used to teleport the character to Dragon Valley Bridge. Cooldown: 60 minutes. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
         <set name="default_action" val="SKILL_REDUCE"/>
         <set name="weight" val="120"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" freightable="true"/>
     </item>
-    <item id="49108" name="Beauty Chest"  icon="icon.etc_box_of_adventure_2_i00">
+    <item id="49108" name="Beauty Chest" icon="icon.etc_box_of_adventure_2_i00">
         <!-- Double-click the chest to get one of the next items: Dye Potion Pack / Facelifting Potion Pack / Mystic Potion. -->
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="is_stackable" val="true"/>
+        <restriction stackable="true"/>
     </item>
-    <item id="49109" name="Buff Scrolls Chest"  icon="icon.etc_box_of_adventure_3_i00">
+    <item id="49109" name="Buff Scrolls Chest" icon="icon.etc_box_of_adventure_3_i00">
         <!-- Double-click the chest to get one of the next items: Scroll: Empower / Scroll: Might / Scroll: Defence. -->
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="is_stackable" val="true"/>
+        <restriction stackable="true"/>
     </item>
-    <item id="49110" name="High-Quality Dye Chest"  icon="icon.etc_box_of_adventure_4_i00">
+    <item id="49110" name="High-Quality Dye Chest" icon="icon.etc_box_of_adventure_4_i00">
         <!-- Double-click the chest to get one of the next items: Greater Dye of STR / Greater Dye of CON / Greater Dye of DEX / Greater Dye of INT / Greater Dye of WIT / Greater Dye of MEN. -->
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="is_stackable" val="true"/>
-        <set name="handler" val="ItemSkills"/>
         <set name="immediate_effect" val="true"/>
+        <restriction stackable="true"/>
         <skills>
             <skill id="32012" level="1"/>
         </skills>
     </item>
-    <item id="49111" name="Dye Chest"  icon="icon.etc_box_of_adventure_5_i00">
+    <item id="49111" name="Dye Chest" icon="icon.etc_box_of_adventure_5_i00">
         <!-- Double-click the chest to get one of the next items: Dye of STR / Dye of CON / Dye of DEX / Dye of INT / Dye of WIT / Dye of MEN. -->
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="is_stackable" val="true"/>
-        <set name="handler" val="ItemSkills"/>
         <set name="immediate_effect" val="true"/>
+        <restriction stackable="true"/>
         <skills>
             <skill id="32013" level="1"/>
         </skills>
     </item>
-    <item id="49112" name="Staff Chest"  icon="icon.etc_treasure_box_i02">
+    <item id="49112" name="Staff Chest" icon="icon.etc_treasure_box_i02">
         <!-- Double-click the chest to get one of the next items: Cursed Staff / Crystal Staff / Sage's Staff / Demon's Staff. -->
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="is_stackable" val="true"/>
+        <restriction stackable="true"/>
     </item>
-    <item id="49113" name="Fist Weapon Chest"  icon="icon.etc_treasure_box_i03">
+    <item id="49113" name="Fist Weapon Chest" icon="icon.etc_treasure_box_i03">
         <!-- Double-click the chest to get one of the next items: Knuckle Duster / Chakram / Fisted Blade / Great Pata. -->
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="is_stackable" val="true"/>
+        <restriction stackable="true"/>
     </item>
-    <item id="49114" name="Spear Chest"  icon="icon.etc_treasure_box_i04">
+    <item id="49114" name="Spear Chest" icon="icon.etc_treasure_box_i04">
         <!-- Double-click the chest to get one of the next items: Bec de Corbin / Orcish Glaive / Poleaxe / Orcish Poleaxe. -->
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="is_stackable" val="true"/>
+        <restriction stackable="true"/>
     </item>
-    <item id="49115" name="Blunt Weapon Chest"  icon="icon.etc_treasure_box_i05">
+    <item id="49115" name="Blunt Weapon Chest" icon="icon.etc_treasure_box_i05">
         <!-- Double-click the chest to get one of the next items: Dwarven War Hammer / Heavy Doom Hammer / War Axe / Yaksa Mace. -->
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="is_stackable" val="true"/>
+        <restriction stackable="true"/>
     </item>
-    <item id="49116" name="Dagger Chest"  icon="icon.etc_treasure_box_i06">
+    <item id="49116" name="Dagger Chest" icon="icon.etc_treasure_box_i06">
         <!-- Double-click the chest to get one of the next items: Stiletto / Cursed Dagger / Dark Screamer / Crystal Dagger. -->
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="is_stackable" val="true"/>
+        <restriction stackable="true"/>
     </item>
-    <item id="49117" name="One-Handed Sword Chest"  icon="icon.etc_treasure_box_i07">
+    <item id="49117" name="One-Handed Sword Chest" icon="icon.etc_treasure_box_i07">
         <!-- Double-click the chest to get one of the next items: Katana / StormBringer / Sword of Delusion / Samurai Long Sword. -->
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="is_stackable" val="true"/>
+        <restriction stackable="true"/>
     </item>
-    <item id="49118" name="Bow Chest"  icon="icon.etc_treasure_box_i08">
+    <item id="49118" name="Bow Chest" icon="icon.etc_treasure_box_i08">
         <!-- Double-click the chest to get one of the next items: Elemental Bow / Crystallized Ice Bow / Akat Longbow / Eminence Bow. -->
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="is_stackable" val="true"/>
+        <restriction stackable="true"/>
     </item>
     <armor id="49119" name="Halloween Suit (15-day)" icon="icon.ev_wp_halloween">
         <!-- 15-day item. If equipped, cannot wear armor. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. Weapons and Magic Equipment will not be removed. Hair Accessory will not be removed, but will not display. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
@@ -144,9 +118,7 @@
         <set name="bodypart" val="alldress"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="1000"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
+        <restriction tradable="false" dropable="false" depositable="false"/>
     </armor>
     <armor id="49120" name="Halloween Suit" icon="icon.ev_wp_halloween">
         <!-- If equipped, cannot wear armor. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. Weapons and Magic Equipment will not be removed. Hair Accessory will not be removed, but will not display. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
@@ -155,7 +127,7 @@
         <set name="bodypart" val="alldress"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="1000"/>
-        <set name="is_dropable" val="false"/>
+        <restriction dropable="false"/>
     </armor>
     <armor id="49121" name="Party Mask" icon="icon.etc_party_mask_i00">
         <!-- 15-day item. Fashionable accessory which can make the wearer especially elegant. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
@@ -163,9 +135,7 @@
         <set name="bodypart" val="hair"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="10"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
+        <restriction tradable="false" dropable="false" depositable="false"/>
     </armor>
     <armor id="49122" name="Ring of Macken (15-day)" icon="icon.ev_11th_rare_acc_ring">
         <!-- 15-day item. When equipped, increases HP by 20, M. Atk. by 3, P. Atk. by 5. The effect does not stack, if two identical rings are equipped. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
@@ -173,9 +143,7 @@
         <set name="bodypart" val="rfinger;lfinger"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="150"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
+        <restriction tradable="false" dropable="false" depositable="false"/>
         <stats>
             <stat type="mDef">20</stat>
         </stats>
@@ -196,9 +164,7 @@
         <set name="bodypart" val="rear;lear"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="150"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
+        <restriction tradable="false" dropable="false" depositable="false"/>
         <stats>
             <stat type="mDef">30</stat>
             <stat type="maxMp">10</stat>
@@ -221,9 +187,7 @@
         <set name="bodypart" val="neck"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="150"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
+        <restriction tradable="false" dropable="false" depositable="false"/>
         <stats>
             <stat type="mDef">40</stat>
             <stat type="maxMp">20</stat>
@@ -240,52 +204,33 @@
             <stat type="maxMp">20</stat>
         </stats>
     </armor>
-    <item id="49128" name="Souvenir Box"  icon="icon.new_user_box">
+    <item id="49128" name="Souvenir Box" icon="icon.new_user_box">
         <!-- Reward for participation in the even. Double-click the chest to receive one of the following items: High-Quality Dye Chest, Dye Chest, Beauty Chest, Buff Scrolls Chest, Major Healing Potion. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. This item will be deleted after the event is over. -->
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" stackable="true"/>
     </item>
-    <item id="49129" name="11th Anniversary Coin"  icon="icon.etc_11th_token">
+    <item id="49129" name="11th Anniversary Coin" icon="icon.etc_11th_token">
         <!-- Coin used to exchange special items during the 11th Sale. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. This item will be deleted after the event is over. -->
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_destroyable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" destroyable="false" depositable="false" stackable="true" freightable="true"/>
     </item>
-    <item id="49130" name="Summon Scroll: Byo"  icon="icon.etc_11th_event_solo">
+    <item id="49130" name="Summon Scroll: Byo" icon="icon.etc_11th_event_solo">
         <!-- Double-click the item to summon Byo. Summoned Byo names a random number from 1 to 6. If your number is bigger than Byo's, you can receive the Adena. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. This item will be deleted after the event is over. -->
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" stackable="true"/>
     </item>
-    <item id="49131" name="Magic Number Cube"  icon="icon.etc_11th_event_group">
+    <item id="49131" name="Magic Number Cube" icon="icon.etc_11th_event_group">
         <!-- Double-click the item to choose a random number from 1 to 6. All characters who own a Cube can participate in this event. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. This item will be deleted after the event is over. -->
         <set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_destroyable" val="false"/>
-        <set name="is_depositable" val="false"/>
+        <restriction tradable="false" dropable="false" destroyable="false" depositable="false"/>
     </item>
-    <item id="49132" name="Membership Card"  icon="icon.ev_buff_11th">
+    <item id="49132" name="Membership Card" icon="icon.ev_buff_11th">
         <!-- Membership Card given to VIP members of the 11th Sale. When in inventory, you can receive the 11th Anniversary buffs and coins from the 11th NPC. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. This item will be deleted after the event is over. -->
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_destroyable" val="false"/>
-        <set name="is_depositable" val="false"/>
+        <restriction tradable="false" dropable="false" destroyable="false" depositable="false"/>
     </item>
-    <item id="49133" name="Venetian Fleece - Low Level"  icon="icon.skill19226">
+    <item id="49133" name="Venetian Fleece - Low Level" icon="icon.skill19226">
         <!-- A 15-day item. When in inventory, your XP and SP gain is increased by 22%. Can be used only by characters whose level is less than 40. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. This item will be removed after the event is over. -->
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
         <set name="time" val="21600"/>
+        <restriction tradable="false" dropable="false" depositable="false"/>
     </item>
     <weapon id="49134" name="Dual Candle Sword (15-day)" icon="icon.ev_11th_candle">
         <!-- 15-day item. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. -->
@@ -296,10 +241,7 @@
         <set name="weight" val="2530"/>
         <set name="soulshots" val="1"/>
         <set name="spiritshots" val="1"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_destroyable" val="false"/>
-        <set name="is_depositable" val="false"/>
+        <restriction tradable="false" dropable="false" destroyable="false" depositable="false"/>
         <stats>
             <stat type="pAtk">73</stat>
             <stat type="mAtk">37</stat>
@@ -327,48 +269,28 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </weapon>
-    <item id="49136" name="Venetian Fleece - High Level"  icon="icon.skill19226">
+    <item id="49136" name="Venetian Fleece - High Level" icon="icon.skill19226">
         <!-- 15-day item. When in inventory, your XP and SP gain is increased by 11%. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. This item will be deleted after the event is over. -->
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
         <set name="time" val="21600"/>
+        <restriction tradable="false" dropable="false" depositable="false"/>
     </item>
-    <item id="49137" name="Venetian Fleece Chest (Low Level)"  icon="icon.etc_pi_box_belief_pack">
+    <item id="49137" name="Venetian Fleece Chest (Low Level)" icon="icon.etc_pi_box_belief_pack">
         <!-- Double-click the chest to receive 1 15-day Venetian Fleece (Low Level). The Fleece can be used only by characters whose level is less than 40. Cannot be exchanged, dropped, destroyed, or sold in a private store. Can be stored in a private warehouse. This item will be removed after the event is over. -->
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_destroyable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" destroyable="false" depositable="false" sellable="false" stackable="true" freightable="true"/>
     </item>
-    <item id="49138" name="Venetian Fleece Chest (High Level)"  icon="icon.etc_pi_box_love_pack">
+    <item id="49138" name="Venetian Fleece Chest (High Level)" icon="icon.etc_pi_box_love_pack">
         <!-- Double-click the chest to receive 15-day Venetian Fleece Chest (High Level, 1 pc.). Cannot be exchanged, dropped, destroyed, or sold in a private store. Can be stored in a private warehouse. This item will be deleted after the event is over. -->
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_destroyable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" destroyable="false" depositable="false" sellable="false" stackable="true" freightable="true"/>
     </item>
-    <item id="49139" name="Dual Sword Gift Chest"  icon="icon.etc_pi_box_joy_pack">
+    <item id="49139" name="Dual Sword Gift Chest" icon="icon.etc_pi_box_joy_pack">
         <!-- Double-click the chest to receive 15-day Dual Candle Sword.  Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. This item will be deleted after the event is over. -->
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_destroyable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" destroyable="false" depositable="false" sellable="false" stackable="true" freightable="true"/>
     </item>
     <weapon id="49140" name="Horn of Glory" icon="icon.weapon_horn_of_glory_i01">
         <!-- <Soul Crystal Enhancement>. M. Atk. + 46. -->

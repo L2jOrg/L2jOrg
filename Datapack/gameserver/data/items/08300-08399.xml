@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
-    <item id="8300" name="Recipe: Infernal Master (60%)"  icon="icon.etc_recipe_violet_i00">
+    <item id="8300" name="Recipe: Infernal Master (60%)" icon="icon.etc_recipe_violet_i00">
         <!-- This formula for manufacturing an Infernal Master can only be used by Dwarves and Requires Create Item - Skill Lv. 7. The success rate is 60%. -->
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
@@ -8,11 +8,10 @@
         <set name="weight" val="30"/>
         <set name="price" val="73200"/>
         <set name="recipe_id" val="814"/>
-        <set name="is_stackable" val="true"/>
-        <set name="commissionItemType" val="RECIPE"/>
         <set name="handler" val="Recipes"/>
+        <restriction stackable="true"/>
     </item>
-    <item id="8313" name="Recipe: Spiritual Eye (100%)"  icon="icon.etc_recipe_violet_i00">
+    <item id="8313" name="Recipe: Spiritual Eye (100%)" icon="icon.etc_recipe_violet_i00">
         <!-- This formula for manufacturing a Spiritual Eye can only be used by Dwarves and Requires Create Item - Skill Lv. 7. The success rate is 100%. -->
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
@@ -20,11 +19,10 @@
         <set name="weight" val="30"/>
         <set name="price" val="73200"/>
         <set name="recipe_id" val="805"/>
-        <set name="is_stackable" val="true"/>
-        <set name="commissionItemType" val="RECIPE"/>
         <set name="handler" val="Recipes"/>
+        <restriction stackable="true"/>
     </item>
-    <item id="8314" name="Recipe: Spiritual Eye (60%)"  icon="icon.etc_recipe_violet_i00">
+    <item id="8314" name="Recipe: Spiritual Eye (60%)" icon="icon.etc_recipe_violet_i00">
         <!-- This formula for manufacturing a Spiritual Eye can only be used by Dwarves and Requires Create Item - Skill Lv. 7. The success rate is 60%. -->
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
@@ -32,11 +30,10 @@
         <set name="weight" val="30"/>
         <set name="price" val="73200"/>
         <set name="recipe_id" val="804"/>
-        <set name="is_stackable" val="true"/>
-        <set name="commissionItemType" val="RECIPE"/>
         <set name="handler" val="Recipes"/>
+        <restriction stackable="true"/>
     </item>
-    <item id="8315" name="Recipe: Flaming Dragon Skull (100%)"  icon="icon.etc_recipe_violet_i00">
+    <item id="8315" name="Recipe: Flaming Dragon Skull (100%)" icon="icon.etc_recipe_violet_i00">
         <!-- This formula for manufacturing a Flaming Dragon Skull can only be used by Dwarves and Requires Create Item - Skill Lv. 8. The success rate is 100%. -->
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
@@ -44,11 +41,10 @@
         <set name="weight" val="30"/>
         <set name="price" val="108000"/>
         <set name="recipe_id" val="807"/>
-        <set name="is_stackable" val="true"/>
-        <set name="commissionItemType" val="RECIPE"/>
         <set name="handler" val="Recipes"/>
+        <restriction stackable="true"/>
     </item>
-    <item id="8316" name="Recipe: Flaming Dragon Skull (60%)"  icon="icon.etc_recipe_violet_i00">
+    <item id="8316" name="Recipe: Flaming Dragon Skull (60%)" icon="icon.etc_recipe_violet_i00">
         <!-- This formula for manufacturing a Flaming Dragon Skull can only be used by Dwarves and Requires Create Item - Skill Lv. 8. The success rate is 60%. -->
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
@@ -56,11 +52,10 @@
         <set name="weight" val="30"/>
         <set name="price" val="108000"/>
         <set name="recipe_id" val="806"/>
-        <set name="is_stackable" val="true"/>
-        <set name="commissionItemType" val="RECIPE"/>
         <set name="handler" val="Recipes"/>
+        <restriction stackable="true"/>
     </item>
-    <item id="8317" name="Recipe: Lesser Giant's Hammer"  icon="icon.etc_recipe_blue_i00">
+    <item id="8317" name="Recipe: Lesser Giant's Hammer" icon="icon.etc_recipe_blue_i00">
         <!-- This formula for manufacturing a Lesser Giant's Hammer can only be used by Dwarves and Requires Create Item - Skill Lv. 3. The success rate is 100%. -->
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
@@ -68,11 +63,10 @@
         <set name="weight" val="30"/>
         <set name="price" val="28000"/>
         <set name="recipe_id" val="788"/>
-        <set name="is_stackable" val="true"/>
-        <set name="commissionItemType" val="RECIPE"/>
         <set name="handler" val="Recipes"/>
+        <restriction stackable="true"/>
     </item>
-    <item id="8320" name="Recipe: Destroyer Hammer (100%)"  icon="icon.etc_recipe_violet_i00">
+    <item id="8320" name="Recipe: Destroyer Hammer (100%)" icon="icon.etc_recipe_violet_i00">
         <!-- This formula for manufacturing a Destroyer Hammer can only be used by Dwarves and Requires Create Item - Skill Lv. 7. The success rate is 100%. -->
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
@@ -80,11 +74,10 @@
         <set name="weight" val="30"/>
         <set name="price" val="73200"/>
         <set name="recipe_id" val="813"/>
-        <set name="is_stackable" val="true"/>
-        <set name="commissionItemType" val="RECIPE"/>
         <set name="handler" val="Recipes"/>
+        <restriction stackable="true"/>
     </item>
-    <item id="8325" name="Recipe: Doom Crusher (100%)"  icon="icon.etc_recipe_violet_i00">
+    <item id="8325" name="Recipe: Doom Crusher (100%)" icon="icon.etc_recipe_violet_i00">
         <!-- This formula for manufacturing a Doom Crusher can only be used by Dwarves and Requires Create Room Item Information - Skill Lv. 8. The success rate is 100%. -->
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
@@ -92,11 +85,10 @@
         <set name="weight" val="30"/>
         <set name="price" val="108000"/>
         <set name="recipe_id" val="809"/>
-        <set name="is_stackable" val="true"/>
-        <set name="commissionItemType" val="RECIPE"/>
         <set name="handler" val="Recipes"/>
+        <restriction stackable="true"/>
     </item>
-    <item id="8326" name="Recipe: Doom Crusher (60%)"  icon="icon.etc_recipe_violet_i00">
+    <item id="8326" name="Recipe: Doom Crusher (60%)" icon="icon.etc_recipe_violet_i00">
         <!-- This formula for manufacturing a Doom Crusher can only be used by Dwarves and Requires Create Room Item Information - Skill Lv. 8. The success rate is 60%. -->
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
@@ -104,72 +96,71 @@
         <set name="weight" val="30"/>
         <set name="price" val="108000"/>
         <set name="recipe_id" val="808"/>
-        <set name="is_stackable" val="true"/>
-        <set name="commissionItemType" val="RECIPE"/>
         <set name="handler" val="Recipes"/>
+        <restriction stackable="true"/>
     </item>
-    <item id="8327" name="Steel Sword Blade"  icon="icon.etc_sword_body_i00">
+    <item id="8327" name="Steel Sword Blade" icon="icon.etc_sword_body_i00">
         <!-- Vital material used by Dwarves to make Steel Sword. Can be sold. -->
         <set name="etcitem_type" val="MATERIAL"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="60"/>
         <set name="price" val="11912"/>
         <set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS"/>
-        <set name="is_stackable" val="true"/>
+        <restriction stackable="true"/>
     </item>
-    <item id="8331" name="Infernal Master Blade"  icon="icon.etc_sword_body_i00">
+    <item id="8331" name="Infernal Master Blade" icon="icon.etc_sword_body_i00">
         <!-- Key material that Dwarves use to make an Infernal Master. Can be sold. -->
         <set name="etcitem_type" val="MATERIAL"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="60"/>
         <set name="price" val="11723"/>
         <set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS"/>
-        <set name="is_stackable" val="true"/>
+        <restriction stackable="true"/>
     </item>
-    <item id="8341" name="Spiritual Eye Piece"  icon="icon.etc_squares_gray_i00">
+    <item id="8341" name="Spiritual Eye Piece" icon="icon.etc_squares_gray_i00">
         <!-- Key material that Dwarves use to make a Spiritual Eye. Can be sold. -->
         <set name="etcitem_type" val="MATERIAL"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="60"/>
         <set name="price" val="11877"/>
         <set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS"/>
-        <set name="is_stackable" val="true"/>
+        <restriction stackable="true"/>
     </item>
-    <item id="8342" name="Flaming Dragon Skull Piece"  icon="icon.etc_squares_gray_i00">
+    <item id="8342" name="Flaming Dragon Skull Piece" icon="icon.etc_squares_gray_i00">
         <!-- Key material that Dwarves use to make a Flaming Dragon Skull. Can be sold. -->
         <set name="etcitem_type" val="MATERIAL"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="60"/>
         <set name="price" val="14583"/>
         <set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS"/>
-        <set name="is_stackable" val="true"/>
+        <restriction stackable="true"/>
     </item>
-    <item id="8343" name="Lesser Giant's Hammer Piece"  icon="icon.etc_squares_gray_i00">
+    <item id="8343" name="Lesser Giant's Hammer Piece" icon="icon.etc_squares_gray_i00">
         <!-- Vital material used by Dwarves to make Lesser Giant's Hammer. Can be sold. -->
         <set name="etcitem_type" val="MATERIAL"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="60"/>
         <set name="price" val="19757"/>
         <set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS"/>
-        <set name="is_stackable" val="true"/>
+        <restriction stackable="true"/>
     </item>
-    <item id="8346" name="Destroyer Hammer Piece"  icon="icon.etc_squares_gray_i00">
+    <item id="8346" name="Destroyer Hammer Piece" icon="icon.etc_squares_gray_i00">
         <!-- Key material that Dwarves use to make a Destroyer Hammer. Can be sold. -->
         <set name="etcitem_type" val="MATERIAL"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="60"/>
         <set name="price" val="11862"/>
         <set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS"/>
-        <set name="is_stackable" val="true"/>
+        <restriction stackable="true"/>
     </item>
-    <item id="8349" name="Doom Crusher Head"  icon="icon.etc_squares_gray_i00">
+    <item id="8349" name="Doom Crusher Head" icon="icon.etc_squares_gray_i00">
         <!-- Key material that Dwarves use to make a Doom Crusher. Can be sold. -->
         <set name="etcitem_type" val="MATERIAL"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="60"/>
         <set name="price" val="14586"/>
         <set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS"/>
-        <set name="is_stackable" val="true"/>
+        <restriction stackable="true"/>
     </item>
     <weapon id="8350" name="Souvenir Maracas" icon="icon.weapon_chrono_maracas_i00">
         <!-- Chronicle IV Souvenir! Cannot be dropped. -->
@@ -179,7 +170,7 @@
         <set name="damage_range" val="0;0;44;120"/>
         <set name="immediate_effect" val="true"/>
         <set name="commissionItemType" val="DUALSWORD"/>
-        <set name="is_dropable" val="false"/>
+        <restriction dropable="false"/>
         <skills>
             <skill id="3045" level="14" type="ON_ENCHANT" type_value="4"/> <!-- Special Ability: Haste -->
         </skills>
@@ -192,28 +183,28 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </weapon>
-    <item id="8388" name="Spellbook: Greater Might"  icon="icon.etc_spell_books_assistance_i00">
+    <item id="8388" name="Spellbook: Greater Might" icon="icon.etc_spell_books_assistance_i00">
         <!-- Spellbook needed to learn Great Might. Used by Prophets. Required level: 58 -->
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="120"/>
         <set name="price" val="100000"/>
         <set name="commissionItemType" val="SPELLBOOK"/>
-        <set name="is_stackable" val="true"/>
+        <restriction stackable="true"/>
     </item>
-    <item id="8389" name="Spellbook: Greater Shield"  icon="icon.etc_spell_books_assistance_i00">
+    <item id="8389" name="Spellbook: Greater Shield" icon="icon.etc_spell_books_assistance_i00">
         <!-- Spellbook needed to learn Greater Shield. Used by Prophets. Required level: 58 -->
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="120"/>
         <set name="price" val="100000"/>
         <set name="commissionItemType" val="SPELLBOOK"/>
-        <set name="is_stackable" val="true"/>
+        <restriction stackable="true"/>
     </item>
-    <item id="8397" name="Spellbook: Clarity"  icon="icon.etc_spell_books_assistance_i00">
+    <item id="8397" name="Spellbook: Clarity" icon="icon.etc_spell_books_assistance_i00">
         <!-- Spellbook needed to learn Clarity. Used by Elven Elders. Required level: 58 -->
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="120"/>
         <set name="price" val="100000"/>
         <set name="commissionItemType" val="SPELLBOOK"/>
-        <set name="is_stackable" val="true"/>
+        <restriction stackable="true"/>
     </item>
 </list>

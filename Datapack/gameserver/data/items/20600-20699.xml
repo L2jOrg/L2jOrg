@@ -6,16 +6,8 @@
         <set name="bodypart" val="agathion"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="150"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
         <set name="is_premium" val="true"/>
-        <set name="is_oly_restricted" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" sellable="false" olympiad-restricted="true" clan-depositable="false" mailable="false" commissionable="false" freightable="true"/>
         <skills>
             <skill id="21109" level="1"/> <!-- Release Agathion's Seal - Uthanka -->
             <skill id="23087" level="1"/> <!-- Uthanka Agathion Cute Trick -->
@@ -28,16 +20,9 @@
         <set name="bodypart" val="hairall"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="10"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
         <set name="is_premium" val="true"/>
-        <set name="is_oly_restricted" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="enchant_enabled" val="7"/>
-        <set name="is_mailable" val="false"/>
+        <restriction tradable="false" dropable="false" sellable="false" olympiad-restricted="true" clan-depositable="false" commissionable="false" mailable="false"/>
     </armor>
     <armor id="20678" name="Gatekeeper Hat" icon="BranchSys.icon.br_gatekeeper_of_hat_i00">
         <!-- Occupies 2 Hair Accessory slots. -->
@@ -45,15 +30,8 @@
         <set name="bodypart" val="hairall"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="10"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
         <set name="is_premium" val="true"/>
-        <set name="is_oly_restricted" val="true"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
         <set name="enchant_enabled" val="7"/>
-        <set name="is_mailable" val="false"/>
+        <restriction tradable="false" dropable="false" sellable="false" olympiad-restricted="true" clan-depositable="false" commissionable="false" mailable="false"/>
     </armor>
 </list>

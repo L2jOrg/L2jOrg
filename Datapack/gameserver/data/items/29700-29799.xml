@@ -1,53 +1,39 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
-    <item id="29700" name="Minor Blessed Scroll of Resurrection"  icon="icon.etc_scroll_of_resurrection_i01">
+    <item id="29700" name="Minor Blessed Scroll of Resurrection" icon="icon.etc_scroll_of_resurrection_i01">
         <!-- Magic Scroll resurrecting a character and restoring most part of XP. -->
         <set name="default_action" val="SKILL_REDUCE"/>
         <set name="weight" val="5"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction sellable="false" stackable="true"/>
     </item>
-    <item id="29701" name="Rare Accessory Box"  icon="icon.ev_10th_present2">
+    <item id="29701" name="Rare Accessory Box" icon="icon.ev_10th_present2">
         <!-- Double-click on the item to receive: Queen Ant's Ring (30-day), Orfen's Earring (30-day), Ring of Core (30-day). -->
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
         <set name="handler" val="ItemSkills"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
         <skills>
             <skill id="55043" level="1"/>    <!--Rare Accessory Pack-->
         </skills>
     </item>
-    <item id="29702" name="Chant of Vampire Chest"  icon="icon.etc_pi_gift_box_i00">
+    <item id="29702" name="Chant of Vampire Chest" icon="icon.etc_pi_gift_box_i00">
         <!-- Double-click on the Chest to obtain an Amulet: Chant of Vampire. -->
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
     </item>
-    <item id="29703" name="Body of Avatar Chest"  icon="icon.etc_pi_gift_box_i00">
+    <item id="29703" name="Body of Avatar Chest" icon="icon.etc_pi_gift_box_i00">
         <!-- Double-click on the Chest to obtain a Spellbook: Body of Avatar. -->
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
     </item>
     <armor id="29704" name="Fire Dragon Pendant" icon="BranchIcon.Icon.bm_pendant_pve">
         <!-- A pendant that contains the energy of Fire Dragon. With the help of Pendant Polish/Shiny Pendant Polish it can be enchanted up to +10. Dimensional Merchant can combine two semi-level pendants into one. That will add extra effects. Enchantment increases the number of effects. If an item already enchanted to +1 is unsuccessfully enchanted, it disappears. Be careful, as the number of pendants that can be combined in the inventory is reset. You cannot combine pendants if there is one enhanced pendant in your inventory. -->
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="underwear"/>
         <set name="immediate_effect" val="true"/>
-        <set name="is_sellable" val="false"/>
-        <set name="enchant_enabled" val="10"/>
         <set name="weight" val="-30"/>
+        <restriction sellable="false"/>
         <skills>
             <skill id="55091" level="1" type="ON_ENCHANT" type_value="1"/> <!-- Fire Dragon Pendant Enchant Effect -->
             <skill id="55091" level="2" type="ON_ENCHANT" type_value="2"/> <!-- Fire Dragon Pendant Enchant Effect -->
@@ -69,9 +55,8 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="underwear"/>
         <set name="immediate_effect" val="true"/>
-        <set name="is_sellable" val="false"/>
-        <set name="enchant_enabled" val="10"/>
         <set name="weight" val="-30"/>
+        <restriction sellable="false"/>
         <skills>
             <skill id="55093" level="1" type="ON_ENCHANT" type_value="1"/> <!-- Fire Dragon Pendant Enchant Effect -->
             <skill id="55093" level="2" type="ON_ENCHANT" type_value="2"/> <!-- Fire Dragon Pendant Enchant Effect -->
@@ -93,9 +78,8 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="underwear"/>
         <set name="immediate_effect" val="true"/>
-        <set name="is_sellable" val="false"/>
-        <set name="enchant_enabled" val="10"/>
         <set name="weight" val="-30"/>
+        <restriction sellable="false"/>
         <skills>
             <skill id="55095" level="1" type="ON_ENCHANT" type_value="1"/> <!-- Fire Dragon Pendant Enchant Effect -->
             <skill id="55095" level="2" type="ON_ENCHANT" type_value="2"/> <!-- Fire Dragon Pendant Enchant Effect -->
@@ -117,12 +101,8 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="underwear"/>
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="enchant_enabled" val="10"/>
         <set name="weight" val="-30"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
         <skills>
             <skill id="55097" level="1" type="ON_ENCHANT" type_value="1"/> <!-- Fire Dragon Pendant Enchant Effect -->
             <skill id="55097" level="2" type="ON_ENCHANT" type_value="2"/> <!-- Fire Dragon Pendant Enchant Effect -->
@@ -144,12 +124,8 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="underwear"/>
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="enchant_enabled" val="10"/>
         <set name="weight" val="-30"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
         <skills>
             <skill id="55099" level="1" type="ON_ENCHANT" type_value="1"/> <!-- Fire Dragon Pendant Enchant Effect -->
             <skill id="55099" level="2" type="ON_ENCHANT" type_value="2"/> <!-- Fire Dragon Pendant Enchant Effect -->
@@ -171,9 +147,8 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="underwear"/>
         <set name="immediate_effect" val="true"/>
-        <set name="is_sellable" val="false"/>
-        <set name="enchant_enabled" val="10"/>
         <set name="weight" val="-30"/>
+        <restriction sellable="false"/>
         <skills>
             <skill id="55101" level="1" type="ON_ENCHANT" type_value="1"/> <!-- Fire Dragon Pendant Enchant Effect -->
             <skill id="55101" level="2" type="ON_ENCHANT" type_value="2"/> <!-- Fire Dragon Pendant Enchant Effect -->
@@ -195,9 +170,8 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="underwear"/>
         <set name="immediate_effect" val="true"/>
-        <set name="is_sellable" val="false"/>
-        <set name="enchant_enabled" val="10"/>
         <set name="weight" val="-30"/>
+        <restriction sellable="false"/>
         <skills>
             <skill id="55103" level="1" type="ON_ENCHANT" type_value="1"/> <!-- Fire Dragon Pendant Enchant Effect -->
             <skill id="55103" level="2" type="ON_ENCHANT" type_value="2"/> <!-- Fire Dragon Pendant Enchant Effect -->
@@ -219,9 +193,8 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="underwear"/>
         <set name="immediate_effect" val="true"/>
-        <set name="is_sellable" val="false"/>
-        <set name="enchant_enabled" val="10"/>
         <set name="weight" val="-30"/>
+        <restriction sellable="false"/>
         <skills>
             <skill id="55105" level="1" type="ON_ENCHANT" type_value="1"/> <!-- Fire Dragon Pendant Enchant Effect -->
             <skill id="55105" level="2" type="ON_ENCHANT" type_value="2"/> <!-- Fire Dragon Pendant Enchant Effect -->
@@ -243,12 +216,8 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="underwear"/>
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="enchant_enabled" val="10"/>
         <set name="weight" val="-30"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
         <skills>
             <skill id="55107" level="1" type="ON_ENCHANT" type_value="1"/> <!-- Fire Dragon Pendant Enchant Effect -->
             <skill id="55107" level="2" type="ON_ENCHANT" type_value="2"/> <!-- Fire Dragon Pendant Enchant Effect -->
@@ -270,12 +239,8 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="underwear"/>
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="enchant_enabled" val="10"/>
         <set name="weight" val="-30"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
         <skills>
             <skill id="55109" level="1" type="ON_ENCHANT" type_value="1"/> <!-- Fire Dragon Pendant Enchant Effect -->
             <skill id="55109" level="2" type="ON_ENCHANT" type_value="2"/> <!-- Fire Dragon Pendant Enchant Effect -->
@@ -297,9 +262,8 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="underwear"/>
         <set name="immediate_effect" val="true"/>
-        <set name="is_sellable" val="false"/>
-        <set name="enchant_enabled" val="10"/>
         <set name="weight" val="-30"/>
+        <restriction sellable="false"/>
         <skills>
             <skill id="55111" level="1" type="ON_ENCHANT" type_value="1"/> <!-- Fire Dragon Pendant Enchant Effect -->
             <skill id="55111" level="2" type="ON_ENCHANT" type_value="2"/> <!-- Fire Dragon Pendant Enchant Effect -->
@@ -321,9 +285,8 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="underwear"/>
         <set name="immediate_effect" val="true"/>
-        <set name="is_sellable" val="false"/>
-        <set name="enchant_enabled" val="10"/>
         <set name="weight" val="-30"/>
+        <restriction sellable="false"/>
         <skills>
             <skill id="55113" level="1" type="ON_ENCHANT" type_value="1"/> <!-- Fire Dragon Pendant Enchant Effect -->
             <skill id="55113" level="2" type="ON_ENCHANT" type_value="2"/> <!-- Fire Dragon Pendant Enchant Effect -->
@@ -345,9 +308,8 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="underwear"/>
         <set name="immediate_effect" val="true"/>
-        <set name="is_sellable" val="false"/>
-        <set name="enchant_enabled" val="10"/>
         <set name="weight" val="-30"/>
+        <restriction sellable="false"/>
         <skills>
             <skill id="55115" level="1" type="ON_ENCHANT" type_value="1"/> <!-- Fire Dragon Pendant Enchant Effect -->
             <skill id="55115" level="2" type="ON_ENCHANT" type_value="2"/> <!-- Fire Dragon Pendant Enchant Effect -->
@@ -369,12 +331,8 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="underwear"/>
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="enchant_enabled" val="10"/>
         <set name="weight" val="-30"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
         <skills>
             <skill id="55117" level="1" type="ON_ENCHANT" type_value="1"/> <!-- Fire Dragon Pendant Enchant Effect -->
             <skill id="55117" level="2" type="ON_ENCHANT" type_value="2"/> <!-- Fire Dragon Pendant Enchant Effect -->
@@ -396,12 +354,8 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="underwear"/>
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="enchant_enabled" val="10"/>
         <set name="weight" val="-30"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
         <skills>
             <skill id="55119" level="1" type="ON_ENCHANT" type_value="1"/> <!-- Fire Dragon Pendant Enchant Effect -->
             <skill id="55119" level="2" type="ON_ENCHANT" type_value="2"/> <!-- Fire Dragon Pendant Enchant Effect -->
@@ -423,9 +377,8 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="underwear"/>
         <set name="immediate_effect" val="true"/>
-        <set name="is_sellable" val="false"/>
-        <set name="enchant_enabled" val="10"/>
         <set name="weight" val="-30"/>
+        <restriction sellable="false"/>
         <skills>
             <skill id="55122" level="1" type="ON_ENCHANT" type_value="1"/> <!-- Fire Dragon Pendant Enchant Effect -->
             <skill id="55122" level="2" type="ON_ENCHANT" type_value="2"/> <!-- Fire Dragon Pendant Enchant Effect -->
@@ -447,9 +400,8 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="underwear"/>
         <set name="immediate_effect" val="true"/>
-        <set name="is_sellable" val="false"/>
-        <set name="enchant_enabled" val="10"/>
         <set name="weight" val="-30"/>
+        <restriction sellable="false"/>
         <skills>
             <skill id="55124" level="1" type="ON_ENCHANT" type_value="1"/> <!-- Fire Dragon Pendant Enchant Effect -->
             <skill id="55124" level="2" type="ON_ENCHANT" type_value="2"/> <!-- Fire Dragon Pendant Enchant Effect -->
@@ -471,9 +423,8 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="underwear"/>
         <set name="immediate_effect" val="true"/>
-        <set name="is_sellable" val="false"/>
-        <set name="enchant_enabled" val="10"/>
         <set name="weight" val="-30"/>
+        <restriction sellable="false"/>
         <skills>
             <skill id="55126" level="1" type="ON_ENCHANT" type_value="1"/> <!-- Fire Dragon Pendant Enchant Effect -->
             <skill id="55126" level="2" type="ON_ENCHANT" type_value="2"/> <!-- Fire Dragon Pendant Enchant Effect -->
@@ -495,12 +446,8 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="underwear"/>
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="enchant_enabled" val="10"/>
         <set name="weight" val="-30"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
         <skills>
             <skill id="55128" level="1" type="ON_ENCHANT" type_value="1"/> <!-- Fire Dragon Pendant Enchant Effect -->
             <skill id="55128" level="2" type="ON_ENCHANT" type_value="2"/> <!-- Fire Dragon Pendant Enchant Effect -->
@@ -522,12 +469,8 @@
         <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="underwear"/>
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="enchant_enabled" val="10"/>
         <set name="weight" val="-30"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
         <skills>
             <skill id="55130" level="1" type="ON_ENCHANT" type_value="1"/> <!-- Fire Dragon Pendant Enchant Effect -->
             <skill id="55130" level="2" type="ON_ENCHANT" type_value="2"/> <!-- Fire Dragon Pendant Enchant Effect -->
@@ -544,253 +487,203 @@
             <stat type="pDef">28</stat>
         </stats>
     </armor>
-    <item id="29724" name="Fire Dragon Pendant Chest"  icon="BranchIcon.Icon.bm_special_pendant_abradant_box">
+    <item id="29724" name="Fire Dragon Pendant Chest" icon="BranchIcon.Icon.bm_special_pendant_abradant_box">
         <!-- Double-click on the Chest to obtain 1 Fire Dragon Pendant Lvl 1 and Pendant Polish (10 pcs). -->
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
         <set name="handler" val="ExtractableItems"/>
+        <restriction sellable="false" stackable="true"/>
         <capsuled_items>
-            <item id="29704" min="1" max="1" chance="100"/> <!-- Fire Dragon Pendant - Lv. 1 -- icon="BranchIcon.Icon.bm_special_pendant_abradant_box">
+            <item id="29704" min="1" max="1" chance="100"/> <!-- Fire Dragon Pendant - Lv. 1 -->
             <item id="49469" min="10" max="10" chance="100"/> <!-- Pendant Polish -->
         </capsuled_items>
     </item>
-    <item id="29725" name="Water Dragon Pendant Chest" >
+    <item id="29725" name="Water Dragon Pendant Chest" icon="BranchIcon.Icon.bm_special_pendant_abradant_box">
         <!-- Double-click on the Chest to obtain 1 Water Dragon Pendant Lvl 1 and Pendant Polish (10 pcs). -->
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction sellable="false" stackable="true"/>
     </item>
-    <item id="29726" name="Wind Dragon Pendant Chest"  icon="BranchIcon.Icon.bm_special_pendant_abradant_box">
+    <item id="29726" name="Wind Dragon Pendant Chest" icon="BranchIcon.Icon.bm_special_pendant_abradant_box">
         <!-- Double-click on the Chest to obtain 1 Wind Dragon Pendant Lvl 1 and Pendant Polish (10 pcs). -->
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction sellable="false" stackable="true"/>
     </item>
-    <item id="29727" name="Land Dragon Pendant Chest"  icon="BranchIcon.Icon.bm_special_pendant_abradant_box">
+    <item id="29727" name="Land Dragon Pendant Chest" icon="BranchIcon.Icon.bm_special_pendant_abradant_box">
         <!-- Double-click on the Chest to obtain 1 Land Dragon Pendant Lvl 1 and Pendant Polish (10 pcs). -->
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction sellable="false" stackable="true"/>
     </item>
-    <item id="29728" name="Special Fire Dragon Pendant Chest"  icon="BranchIcon.Icon.bm_special_pendant_abradant_box">
+    <item id="29728" name="Special Fire Dragon Pendant Chest" icon="BranchIcon.Icon.bm_special_pendant_abradant_box">
         <!-- Double-click on the Chest to obtain Fire Dragon Pendant Chest (10 pcs). -->
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
         <set name="handler" val="ExtractableItems"/>
+        <restriction sellable="false" stackable="true"/>
         <capsuled_items>
-            <item id="29724" min="10" max="10" chance="100"/ icon="BranchIcon.Icon.bm_special_pendant_abradant_box">
+            <item id="29724" min="10" max="10" chance="100"/>
         </capsuled_items>
     </item>
-    <item id="29729" name="Special Water Dragon Pendant Chest" >
+    <item id="29729" name="Special Water Dragon Pendant Chest" icon="BranchIcon.Icon.bm_special_pendant_abradant_box">
         <!-- Double-click on the Chest to obtain Water Dragon Pendant Chest (10 pcs). -->
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction sellable="false" stackable="true"/>
     </item>
-    <item id="29730" name="Special Wind Dragon Pendant Chest"  icon="BranchIcon.Icon.bm_special_pendant_abradant_box">
+    <item id="29730" name="Special Wind Dragon Pendant Chest" icon="BranchIcon.Icon.bm_special_pendant_abradant_box">
         <!-- Double-click on the Chest to obtain 1 Wind Dragon Pendant Chest (10 pcs). -->
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction sellable="false" stackable="true"/>
     </item>
-    <item id="29731" name="Special Land Dragon Pendant Chest"  icon="BranchIcon.Icon.bm_special_pendant_abradant_box">
+    <item id="29731" name="Special Land Dragon Pendant Chest" icon="BranchIcon.Icon.bm_special_pendant_abradant_box">
         <!-- Double-click on the Chest to obtain 1 Land Dragon Pendant Chest (10 pcs). -->
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction sellable="false" stackable="true"/>
     </item>
-    <item id="29732" name="Package: Shiny Pendant Polish for Fire Dragon Pendant"  icon="BranchIcon.Icon.bm_special_pendant_abradant_box">
+    <item id="29732" name="Package: Shiny Pendant Polish for Fire Dragon Pendant" icon="BranchIcon.Icon.bm_special_pendant_abradant_box">
         <!-- Double-click on the Chest to obtain 1 Fire Dragon Pendant Chest (30 pcs) and 1 Shiny Pendant Polish. -->
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
         <set name="handler" val="ExtractableItems"/>
+        <restriction sellable="false" stackable="true"/>
         <capsuled_items>
-            <item id="29724" min="30" max="30" chance="100"/ icon="BranchIcon.Icon.bm_special_pendant_abradant_box">
+            <item id="29724" min="30" max="30" chance="100"/>
             <item id="90138" min="1" max="1" chance="100"/>
         </capsuled_items>
     </item>
-    <item id="29733" name="Package: Shiny Pendant Polish for Water Dragon Pendant" >
+    <item id="29733" name="Package: Shiny Pendant Polish for Water Dragon Pendant" icon="BranchIcon.Icon.bm_special_pendant_abradant_box">
         <!-- Double-click on the Chest to obtain 1 Water Dragon Pendant Chest (30 pcs) and 1 Shiny Pendant Polish. -->
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction sellable="false" stackable="true"/>
     </item>
-    <item id="29734" name="Package: Shiny Pendant Polish for Wind Dragon Pendant"  icon="BranchIcon.Icon.bm_special_pendant_abradant_box">
+    <item id="29734" name="Package: Shiny Pendant Polish for Wind Dragon Pendant" icon="BranchIcon.Icon.bm_special_pendant_abradant_box">
         <!-- Double-click on the Chest to obtain 1 Wind Dragon Pendant Chest (30 pcs) and 1 Shiny Pendant Polish. -->
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction sellable="false" stackable="true"/>
     </item>
-    <item id="29735" name="Package: Shiny Pendant Polish for Land Dragon Pendant"  icon="BranchIcon.Icon.bm_special_pendant_abradant_box">
+    <item id="29735" name="Package: Shiny Pendant Polish for Land Dragon Pendant" icon="BranchIcon.Icon.bm_special_pendant_abradant_box">
         <!-- Double-click on the Chest to obtain 1 Land Dragon Pendant Chest (30 pcs) and 1 Shiny Pendant Polish. -->
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction sellable="false" stackable="true"/>
     </item>
-    <item id="29736" name="Diana's Earring"  icon="icon.accessary_mage_earing_i00">
+    <item id="29736" name="Diana's Earring" icon="icon.accessary_mage_earing_i00">
         <!-- Diana's onyx earring. Take it to Diana in the Talking Island Village. -->
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
     </item>
-    <item id="29737" name="Dianna's Ring"  icon="icon.accessary_ring_of_binding_i00">
+    <item id="29737" name="Dianna's Ring" icon="icon.accessary_ring_of_binding_i00">
         <!-- Diana's sapphire ring. Take it to Diana in the Talking Island Village. -->
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
     </item>
-    <item id="29738" name="Dianna's Necklace"  icon="icon.item_normal142">
+    <item id="29738" name="Dianna's Necklace" icon="icon.item_normal142">
         <!-- Diana's ruby necklace. Take it to Diana in the Talking Island Village. -->
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
     </item>
-    <item id="29739" name="Diana's Recommendation"  icon="icon.etc_letter_envelope_i00">
+    <item id="29739" name="Diana's Recommendation" icon="icon.etc_letter_envelope_i00">
         <!-- Allows to take part int the  Mr. and Ms. Lineage2 contest. Save it until the very end of the contest. -->
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
     </item>
-    <item id="29740" name="Scroll: Enchant Weapon (B-grade)"  icon="br_cashtex.item.br_cash_scrl_of_ench_wp_b_i00">
+    <item id="29740" name="Scroll: Enchant Weapon (B-grade)" icon="br_cashtex.item.br_cash_scrl_of_ench_wp_b_i00">
         <!-- When enchanted, P. Atk. + 4 for B-grade one-handed swords, one-handed blunts, daggers, spears, and other weapons. P. Atk. + 5 for two-handed swords, two-handed blunts, dualswords, and two-handed fist weapons. P. Atk. + 8 for bows. M. Atk. + 3 for all weapons. Starting at + 4, P. Atk. / M. Atk. bonus double. Enchanting is safe up to + 3. -->
         <set name="default_action" val="SKILL_REDUCE"/>
         <set name="weight" val="120"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction sellable="false" stackable="true"/>
     </item>
-    <item id="29741" name="Scroll: Enchant Armor (B-grade)"  icon="br_cashtex.item.br_cash_scrl_of_ench_am_b_i00">
+    <item id="29741" name="Scroll: Enchant Armor (B-grade)" icon="br_cashtex.item.br_cash_scrl_of_ench_am_b_i00">
         <!-- P. Def. + 1 for B-grade armor and accessories. Starting from + 4, P. Def. + 3. Can be safely enchanted up to + 3. For one-piece armor, it can safely be enchanted up to + 4. HP gradually increases with each enchant level starting from + 4. -->
         <set name="default_action" val="SKILL_REDUCE"/>
         <set name="weight" val="120"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction sellable="false" stackable="true"/>
     </item>
-    <item id="29742" name="Blessed Scroll: Enchant Weapon (B-grade)"  icon="icon.etc_blessed_scrl_of_ench_wp_b_i03">
+    <item id="29742" name="Blessed Scroll: Enchant Weapon (B-grade)" icon="icon.etc_blessed_scrl_of_ench_wp_b_i03">
         <!-- When enchanted, P. Atk. + 4 for B-grade one-handed swords, one-handed blunts, daggers, spears, and other weapons. P. Atk. + 5 for two-handed swords, two-handed blunts, dualswords, and two-handed fist weapons. P. Atk. + 8 for bows. M. Atk. + 3 for all weapons. Starting at + 4, P. Atk. / M. Atk. bonus double. If enchanted up to +4 and higher, doubles the additional P/M. Atk bonuses. If enchantment is failed, the item is not broken into crystals, but loses all enchantments. -->
         <set name="default_action" val="SKILL_REDUCE"/>
         <set name="weight" val="120"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction sellable="false" stackable="true"/>
     </item>
-    <item id="29743" name="Blessed Scroll: Enchant Armor (B-grade)"  icon="icon.etc_blessed_scrl_of_ench_am_b_i03">
+    <item id="29743" name="Blessed Scroll: Enchant Armor (B-grade)" icon="icon.etc_blessed_scrl_of_ench_am_b_i03">
         <!-- P. Def. + 1 for B-grade armor and accessories. Starting from + 4, P. Def. + 3. Can be safely enchanted up to + 3. For one-piece armor, it can safely be enchanted up to + 4. HP gradually increases with each enchant level starting from + 4. If enchanting fails, the item will not be crystallized but the enchant value will be reset to 0. -->
         <set name="default_action" val="SKILL_REDUCE"/>
         <set name="weight" val="120"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction sellable="false" stackable="true"/>
     </item>
-    <item id="29744" name="Shaft with Antharas treasures"  icon="BranchIcon.Icon.g_bm_antaras_pocket_i00">
+    <item id="29744" name="Shaft with Antharas treasures" icon="BranchIcon.Icon.g_bm_antaras_pocket_i00">
         <!-- Double-click on the item to get one of Antharas' treasures. -->
         <set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction sellable="false" stackable="true"/>
     </item>
-    <item id="29745" name="Premium Coin"  icon="BranchIcon.Icon.g_bm_premium_coin_i00">
+    <item id="29745" name="Premium Coin" icon="BranchIcon.Icon.g_bm_premium_coin_i00">
         <!-- This coin is given as a bonus when buying items during an event. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_freightable" val="true"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true" freightable="true"/>
     </item>
-    <item id="29746" name="Mysterious Soulshot (B-grade)"  icon="icon.bm_spirit_bullet_red">
+    <item id="29746" name="Mysterious Soulshot (B-grade)" icon="icon.bm_spirit_bullet_red">
         <!-- The power of a higher-level spirit is bestowed upon a weapon, temporarily increasing power of attack. Used with a B-grade weapon. -->
         <set name="default_action" val="SOULSHOT"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="B"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
         <set name="handler" val="SoulShots"/>
+        <restriction sellable="false" stackable="true"/>
         <skills>
             <skill id="55139" level="1"/> <!-- Player Commendation - Soulshot (B-grade) -->
         </skills>
     </item>
-    <item id="29747" name="Mysterious Blessed Spiritshot (B-grade)"  icon="icon.bm_spell_shot_red">
+    <item id="29747" name="Mysterious Blessed Spiritshot (B-grade)" icon="icon.bm_spell_shot_red">
         <!-- The power of a higher-level spirit is bestowed upon a weapon causing its M. Atk. to momentarily increase. Used with a B-grade weapon. -->
         <set name="default_action" val="SPIRITSHOT"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="B"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
         <set name="handler" val="BlessedSpiritShot"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
+        <restriction sellable="false" stackable="true"/>
         <skills>
             <skill id="55140" level="1"/> <!-- Player Commendation - Blessed Spiritshot (B-grade) -->
         </skills>
     </item>
-    <item id="29748" name="Package: Mysterious Soulshot (C-grade, 100 pcs.)"  icon="br_cashtex.item.br_cash_pack_of_soulshot_b_i00">
+    <item id="29748" name="Package: Mysterious Soulshot (C-grade, 100 pcs.)" icon="br_cashtex.item.br_cash_pack_of_soulshot_b_i00">
         <!-- Double-click on the item to receive 100 Mysterious Soulshots (B-grade). -->
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
         <set name="handler" val="ExtractableItems"/>
+        <restriction sellable="false" stackable="true"/>
         <capsuled_items>
-            <item id="29746" min="100" max="100" chance="100"/ icon="br_cashtex.item.br_cash_large_pack_of_blessed_spiritshot_b_i00">
+            <item id="29746" min="100" max="100" chance="100"/>
         </capsuled_items>
     </item>
-    <item id="29749" name="Package: Mysterious Blessed Spiritshot (D-grade, 100 pcs)" >
+    <item id="29749" name="Package: Mysterious Blessed Spiritshot (D-grade, 100 pcs)" icon="br_cashtex.item.br_cash_large_pack_of_blessed_spiritshot_b_i00">
         <!-- Double-click on the item to receive 100 Mysterious Blessed Spiritshot (B-grade). -->
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
         <set name="handler" val="ExtractableItems"/>
+        <restriction sellable="false" stackable="true"/>
         <capsuled_items>
-            <item id="29747" min="100" max="100" chance="100"/ icon="icon.etc_pi_gift_box_i00">
+            <item id="29747" min="100" max="100" chance="100"/>
         </capsuled_items>
     </item>
-    <item id="29750" name="Sniper's Mysterious Package (B-grade)" >
+    <item id="29750" name="Sniper's Mysterious Package (B-grade)"  icon="icon.etc_pi_gift_box_i00">
         <!-- Double-click the item to receive Mysterious Soulshot (B-grade, 3000 pcs.), Scroll of Experience / SP - Normal (30%, 12 pcs.), 2nd Class Transfer Effect Scroll (12 pcs.) Cannot be exchanged, dropped, or sold. -->
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_freightable" val="true"/>
         <set name="handler" val="ExtractableItems"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true" freightable="true"/>
         <capsuled_items>
-            <item id="29746" min="3000" max="3000" chance="100"/ icon="icon.etc_pi_gift_box_i00">
+            <item id="29746" min="3000" max="3000" chance="100"/>
             <item id="29648" min="12" max="12" chance="100"/>
             <item id="29012" min="15" max="15" chance="100"/>
         </capsuled_items>
     </item>
-    <item id="29751" name="Mystic's Mysterious Package (B-grade)" >
+    <item id="29751" name="Mystic's Mysterious Package (B-grade)" icon="icon.etc_pi_gift_box_i00">
         <!-- Double-click the item to receive Mysterious Spiritshot (B-grade, 1000 pcs.), Scroll of Experience / SP - Normal (30%, 12 pcs.), 2nd Class Transfer Effect Scroll (12 pcs.) Cannot be exchanged, dropped, or sold in a private store. -->
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="is_freightable" val="true"/>
         <set name="handler" val="ExtractableItems"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true" freightable="true"/>
         <capsuled_items>
-            <item id="29747" min="1000" max="1000" chance="100"/ icon="icon.etc_treasure_box_i01">
+            <item id="29747" min="1000" max="1000" chance="100"/>
             <item id="29648" min="12" max="12" chance="100"/>
             <item id="29012" min="15" max="15" chance="100"/>
         </capsuled_items>
@@ -802,21 +695,15 @@
         <set name="bodypart" val="alldress"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="1000"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
+        <restriction tradable="false" dropable="false" depositable="false"/>
     </armor>
     <armor id="29753" name="Blue Talisman - P. Crit." icon="icon.etc_talisman_i01">
         <!-- A 1-hour item. P. Critical Rate +10. Effects from two such Talismans do not stack. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
         <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="120"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="time" val="60"/>
         <set name="bodypart" val="talisman"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
         <skills>
             <skill id="3271" level="1"/>
         </skills>
@@ -826,12 +713,8 @@
         <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="120"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="time" val="60"/>
         <set name="bodypart" val="talisman"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
         <skills>
             <skill id="3272" level="1"/>
         </skills>
@@ -841,12 +724,8 @@
         <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="120"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="time" val="60"/>
         <set name="bodypart" val="talisman"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
         <skills>
             <skill id="3273" level="1"/>
         </skills>
@@ -856,12 +735,8 @@
         <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="120"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="time" val="60"/>
         <set name="bodypart" val="talisman"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
         <skills>
             <skill id="3274" level="1"/>
         </skills>
@@ -871,12 +746,8 @@
         <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="120"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="time" val="60"/>
         <set name="bodypart" val="talisman"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
         <skills>
             <skill id="3275" level="1"/>
         </skills>
@@ -886,12 +757,8 @@
         <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="120"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="time" val="60"/>
         <set name="bodypart" val="talisman"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
         <skills>
             <skill id="3276" level="1"/>
         </skills>
@@ -901,12 +768,8 @@
         <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="120"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="time" val="60"/>
         <set name="bodypart" val="talisman"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
         <skills>
             <skill id="3277" level="1"/>
         </skills>
@@ -916,12 +779,8 @@
         <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="120"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="time" val="60"/>
         <set name="bodypart" val="talisman"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
         <skills>
             <skill id="3278" level="1"/>
         </skills>
@@ -931,12 +790,8 @@
         <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="120"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="time" val="60"/>
         <set name="bodypart" val="talisman"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
         <skills>
             <skill id="3279" level="1"/>
         </skills>
@@ -946,12 +801,8 @@
         <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="120"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="time" val="60"/>
         <set name="bodypart" val="talisman"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
         <skills>
             <skill id="3280" level="1"/>
         </skills>
@@ -961,12 +812,8 @@
         <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="120"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="time" val="60"/>
         <set name="bodypart" val="talisman"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
         <skills>
             <skill id="3281" level="1"/>
         </skills>
@@ -976,12 +823,8 @@
         <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="120"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="time" val="60"/>
         <set name="bodypart" val="talisman"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
         <skills>
             <skill id="3282" level="1"/>
         </skills>
@@ -991,12 +834,8 @@
         <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="120"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="time" val="60"/>
         <set name="bodypart" val="talisman"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
         <skills>
             <skill id="3283" level="1"/>
         </skills>
@@ -1006,12 +845,8 @@
         <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="120"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="time" val="60"/>
         <set name="bodypart" val="talisman"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
         <skills>
             <skill id="3284" level="1"/>
         </skills>
@@ -1021,12 +856,8 @@
         <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="120"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="time" val="60"/>
         <set name="bodypart" val="talisman"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
         <skills>
             <skill id="3285" level="1"/>
         </skills>
@@ -1036,12 +867,8 @@
         <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="120"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="time" val="60"/>
         <set name="bodypart" val="talisman"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
         <skills>
             <skill id="3286" level="1"/>
         </skills>
@@ -1051,12 +878,8 @@
         <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="120"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="time" val="60"/>
         <set name="bodypart" val="talisman"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
         <skills>
             <skill id="3271" level="1"/>
         </skills>
@@ -1066,12 +889,8 @@
         <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="120"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="time" val="60"/>
         <set name="bodypart" val="talisman"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
         <skills>
             <skill id="3272" level="1"/>
         </skills>
@@ -1081,12 +900,8 @@
         <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="120"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="time" val="60"/>
         <set name="bodypart" val="talisman"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
         <skills>
             <skill id="3273" level="1"/>
         </skills>
@@ -1096,12 +911,8 @@
         <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="120"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="time" val="60"/>
         <set name="bodypart" val="talisman"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
         <skills>
             <skill id="3274" level="1"/>
         </skills>
@@ -1111,12 +922,8 @@
         <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="120"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="time" val="60"/>
         <set name="bodypart" val="talisman"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
         <skills>
             <skill id="3275" level="1"/>
         </skills>
@@ -1126,12 +933,8 @@
         <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="120"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="time" val="60"/>
         <set name="bodypart" val="talisman"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
         <skills>
             <skill id="3276" level="1"/>
         </skills>
@@ -1141,12 +944,8 @@
         <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="120"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="time" val="60"/>
         <set name="bodypart" val="talisman"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
         <skills>
             <skill id="3277" level="1"/>
         </skills>
@@ -1156,12 +955,8 @@
         <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="120"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="time" val="60"/>
         <set name="bodypart" val="talisman"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
         <skills>
             <skill id="3278" level="1"/>
         </skills>
@@ -1171,12 +966,8 @@
         <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="120"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="time" val="60"/>
         <set name="bodypart" val="talisman"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
         <skills>
             <skill id="3279" level="1"/>
         </skills>
@@ -1186,12 +977,8 @@
         <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="120"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="time" val="60"/>
         <set name="bodypart" val="talisman"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
         <skills>
             <skill id="3280" level="1"/>
         </skills>
@@ -1201,12 +988,8 @@
         <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="120"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="time" val="60"/>
         <set name="bodypart" val="talisman"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
         <skills>
             <skill id="3287" level="1"/>
         </skills>
@@ -1216,12 +999,8 @@
         <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="120"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="time" val="60"/>
         <set name="bodypart" val="talisman"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
         <skills>
             <skill id="3288" level="1"/>
         </skills>
@@ -1231,12 +1010,8 @@
         <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="120"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="time" val="60"/>
         <set name="bodypart" val="talisman"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
         <skills>
             <skill id="3289" level="1"/>
         </skills>
@@ -1246,12 +1021,8 @@
         <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="120"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="time" val="60"/>
         <set name="bodypart" val="talisman"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
         <skills>
             <skill id="3290" level="1"/>
         </skills>
@@ -1261,12 +1032,8 @@
         <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="120"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="time" val="60"/>
         <set name="bodypart" val="talisman"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
         <skills>
             <skill id="3291" level="1"/>
         </skills>
@@ -1276,207 +1043,158 @@
         <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="120"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="time" val="60"/>
         <set name="bodypart" val="talisman"/>
+        <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
         <skills>
             <skill id="3292" level="1"/>
         </skills>
     </armor>
-    <item id="29785" name="Blue Talisman Box - P. Crit." >
+    <item id="29785" name="Blue Talisman Box - P. Crit." icon="icon.etc_treasure_box_i01">
         <!-- By double-clicking it, you will get Blue Talisman - P. Crit. (for 1 hour). <Note:>. For items obtained from a chest, there are restrictions regarding movement. -->
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="time" val="60"/>
         <set name="handler" val="ExtractableItems"/>
+        <restriction dropable="false" sellable="false" stackable="true"/>
         <capsuled_items>
-            <item id="29753" min="1" max="1" chance="100"/ icon="icon.etc_treasure_box_i01">
+            <item id="29753" min="1" max="1" chance="100"/>
         </capsuled_items>
     </item>
-    <item id="29786" name="Blue Talisman Box - P. Atk." >
+    <item id="29786" name="Blue Talisman Box - P. Atk." icon="icon.etc_treasure_box_i01">
         <!-- By double-clicking it, you will get Blue Talisman - P. Atk. (for 1 hour). <Note:>. For items obtained from a chest, there are restrictions regarding movement. -->
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="time" val="60"/>
         <set name="handler" val="ExtractableItems"/>
+        <restriction dropable="false" sellable="false" stackable="true"/>
         <capsuled_items>
-            <item id="29754" min="1" max="1" chance="100"/ icon="icon.etc_treasure_box_i01">
+            <item id="29754" min="1" max="1" chance="100"/>
         </capsuled_items>
     </item>
-    <item id="29787" name="Blue Talisman Box - P. Def." >
+    <item id="29787" name="Blue Talisman Box - P. Def." icon="icon.etc_treasure_box_i01">
         <!-- By double-clicking it, you will get Blue Talisman - P. Def. (for 1 hour). <Note:>. For items obtained from a chest, there are restrictions regarding movement. -->
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="time" val="60"/>
         <set name="handler" val="ExtractableItems"/>
+        <restriction dropable="false" sellable="false" stackable="true"/>
         <capsuled_items>
-            <item id="29755" min="1" max="1" chance="100"/ icon="icon.etc_treasure_box_i01">
+            <item id="29755" min="1" max="1" chance="100"/>
         </capsuled_items>
     </item>
-    <item id="29788" name="Blue Talisman Box - P. Skills Evasion" >
+    <item id="29788" name="Blue Talisman Box - P. Skills Evasion" icon="icon.etc_treasure_box_i01">
         <!-- By double-clicking it, you will get Blue Talisman - P. Skills Evasion (for 1 hour). <Note:>. For items obtained from a chest, there are restrictions regarding movement. -->
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="time" val="60"/>
         <set name="handler" val="ExtractableItems"/>
+        <restriction dropable="false" sellable="false" stackable="true"/>
         <capsuled_items>
-            <item id="29756" min="1" max="1" chance="100"/ icon="icon.etc_treasure_box_i01">
+            <item id="29756" min="1" max="1" chance="100"/>
         </capsuled_items>
     </item>
-    <item id="29789" name="Blue Talisman Box - M. Crit." >
+    <item id="29789" name="Blue Talisman Box - M. Crit." icon="icon.etc_treasure_box_i01">
         <!-- By double-clicking it, you will get Blue Talisman - M. Crit. (for 1 hour). <Note:>. For items obtained from a chest, there are restrictions regarding movement. -->
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="time" val="60"/>
         <set name="handler" val="ExtractableItems"/>
+        <restriction dropable="false" sellable="false" stackable="true"/>
         <capsuled_items>
-            <item id="29757" min="1" max="1" chance="100"/ icon="icon.etc_treasure_box_i01">
+            <item id="29757" min="1" max="1" chance="100"/>
         </capsuled_items>
     </item>
-    <item id="29790" name="Blue Talisman Box - M. Atk." >
+    <item id="29790" name="Blue Talisman Box - M. Atk." icon="icon.etc_treasure_box_i01">
         <!-- By double-clicking it, you will get Blue Talisman - M. Atk. (for 1 hour). <Note:>. For items obtained from a chest, there are restrictions regarding movement. -->
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="time" val="60"/>
         <set name="handler" val="ExtractableItems"/>
+        <restriction dropable="false" sellable="false" stackable="true"/>
         <capsuled_items>
-            <item id="29758" min="1" max="1" chance="100"/ icon="icon.etc_treasure_box_i01">
+            <item id="29758" min="1" max="1" chance="100"/>
         </capsuled_items>
     </item>
-    <item id="29791" name="Blue Talisman Box - M. Def." >
+    <item id="29791" name="Blue Talisman Box - M. Def." icon="icon.etc_treasure_box_i01">
         <!-- By double-clicking it, you will get Blue Talisman - M. Def. (for 1 hour). <Note:>. For items obtained from a chest, there are restrictions regarding movement. -->
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="time" val="60"/>
         <set name="handler" val="ExtractableItems"/>
+        <restriction dropable="false" sellable="false" stackable="true"/>
         <capsuled_items>
-            <item id="29759" min="1" max="1" chance="100"/ icon="icon.etc_treasure_box_i01">
+            <item id="29759" min="1" max="1" chance="100"/>
         </capsuled_items>
     </item>
-    <item id="29792" name="Blue Talisman Box - M. Skills Evasion" >
+    <item id="29792" name="Blue Talisman Box - M. Skills Evasion" icon="icon.etc_treasure_box_i01">
         <!-- By double-clicking it, you will get Blue Talisman - M. Skills Evasion (for 1 hour). <Note:>. For items obtained from a chest, there are restrictions regarding movement. -->
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="time" val="60"/>
         <set name="handler" val="ExtractableItems"/>
+        <restriction dropable="false" sellable="false" stackable="true"/>
         <capsuled_items>
-            <item id="29760" min="1" max="1" chance="100"/ icon="icon.etc_treasure_box_i01">
+            <item id="29760" min="1" max="1" chance="100"/>
         </capsuled_items>
     </item>
-    <item id="29793" name="Blue Talisman Box - Max. HP" >
+    <item id="29793" name="Blue Talisman Box - Max. HP" icon="icon.etc_treasure_box_i01">
         <!-- By double-clicking it, you will get Blue Talisman - Max. HP (for 1 hour). <Note:>. For items obtained from a chest, there are restrictions regarding movement. -->
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="time" val="60"/>
         <set name="handler" val="ExtractableItems"/>
+        <restriction dropable="false" sellable="false" stackable="true"/>
         <capsuled_items>
-            <item id="29761" min="1" max="1" chance="100"/ icon="icon.etc_treasure_box_i01">
+            <item id="29761" min="1" max="1" chance="100"/>
         </capsuled_items>
     </item>
-    <item id="29794" name="Blue Talisman Box - Max. MP" >
+    <item id="29794" name="Blue Talisman Box - Max. MP" icon="icon.etc_treasure_box_i01">
         <!-- By double-clicking it, you will get Blue Talisman - Max. MP (for 1 hour). <Note:>. For items obtained from a chest, there are restrictions regarding movement. -->
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="time" val="60"/>
         <set name="handler" val="ExtractableItems"/>
+        <restriction dropable="false" sellable="false" stackable="true"/>
         <capsuled_items>
-            <item id="29762" min="1" max="1" chance="100"/ icon="icon.etc_treasure_box_i05">
+            <item id="29762" min="1" max="1" chance="100"/>
         </capsuled_items>
     </item>
-    <item id="29795" name="Grey Talisman Box - Guard" >
+    <item id="29795" name="Grey Talisman Box - Guard" icon="icon.etc_treasure_box_i05">
         <!-- By double-clicking it, you will get Grey Talisman - Guard (for 1 hour). <Note:>. For items obtained from a chest, there are restrictions regarding movement. -->
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="time" val="60"/>
         <set name="handler" val="ExtractableItems"/>
+        <restriction dropable="false" sellable="false" stackable="true"/>
         <capsuled_items>
-            <item id="29763" min="1" max="1" chance="100"/ icon="icon.etc_treasure_box_i05">
+            <item id="29763" min="1" max="1" chance="100"/>
         </capsuled_items>
     </item>
-    <item id="29796" name="Grey Talisman Box - Denial" >
+    <item id="29796" name="Grey Talisman Box - Denial" icon="icon.etc_treasure_box_i05">
         <!-- By double-clicking it, you will get Grey Talisman - Denial (for 1 hour). <Note:>. For items obtained from a chest, there are restrictions regarding movement. -->
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="time" val="60"/>
         <set name="handler" val="ExtractableItems"/>
+        <restriction dropable="false" sellable="false" stackable="true"/>
         <capsuled_items>
-            <item id="29764" min="1" max="1" chance="100"/ icon="icon.etc_treasure_box_i05">
+            <item id="29764" min="1" max="1" chance="100"/>
         </capsuled_items>
     </item>
-    <item id="29797" name="Grey Talisman Box - Benefaction" >
+    <item id="29797" name="Grey Talisman Box - Benefaction" icon="icon.etc_treasure_box_i05">
         <!-- By double-clicking it, you will get Grey Talisman - Benefaction (for 1 hour). <Note:>. For items obtained from a chest, there are restrictions regarding movement. -->
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="time" val="60"/>
         <set name="handler" val="ExtractableItems"/>
+        <restriction dropable="false" sellable="false" stackable="true"/>
         <capsuled_items>
-            <item id="29765" min="1" max="1" chance="100"/ icon="icon.etc_treasure_box_i05">
+            <item id="29765" min="1" max="1" chance="100"/>
         </capsuled_items>
     </item>
-    <item id="29798" name="Grey Talisman Box - Blocking" >
+    <item id="29798" name="Grey Talisman Box - Blocking" icon="icon.etc_treasure_box_i05">
         <!-- By double-clicking it, you will get Grey Talisman - Blocking (for 1 hour). <Note:>. For items obtained from a chest, there are restrictions regarding movement. -->
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="time" val="60"/>
         <set name="handler" val="ExtractableItems"/>
+        <restriction dropable="false" sellable="false" stackable="true"/>
         <capsuled_items>
-            <item id="29766" min="1" max="1" chance="100"/ icon="icon.etc_treasure_box_i05">
+            <item id="29766" min="1" max="1" chance="100"/>
         </capsuled_items>
     </item>
-    <item id="29799" name="Grey Talisman Box - Gravity" >
+    <item id="29799" name="Grey Talisman Box - Gravity" icon="icon.etc_treasure_box_i05">
         <!-- By double-clicking it, you will get Grey Talisman - Gravity (for 1 hour). <Note:>. For items obtained from a chest, there are restrictions regarding movement. -->
         <set name="default_action" val="PEEL"/>
         <set name="immediate_effect" val="true"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
-        <set name="time" val="60"/>
         <set name="handler" val="ExtractableItems"/>
+        <restriction dropable="false" sellable="false" stackable="true"/>
         <capsuled_items>
             <item id="29767" min="1" max="1" chance="100"/>
         </capsuled_items>

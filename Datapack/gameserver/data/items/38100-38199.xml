@@ -1,13 +1,12 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
-    <item id="38154" name="Fishing Shot"  icon="icon.etc_spirit_bullet_fish_i05">
+    <item id="38154" name="Fishing Shot" icon="icon.etc_spirit_bullet_fish_i05">
         <!-- Soulshot for a fishing rod. Doubles the fishing success rate. Cannot be sold. -->
         <set name="default_action" val="FISHINGSHOT"/>
         <set name="immediate_effect" val="true"/>
         <set name="price" val="28"/>
-        <set name="is_sellable" val="false"/>
-        <set name="is_stackable" val="true"/>
         <set name="handler" val="FishShots"/>
+        <restriction sellable="false" stackable="true"/>
         <skills>
             <skill id="17386" level="1"/> <!-- Fishing Shot -->
         </skills>

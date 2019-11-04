@@ -581,15 +581,15 @@
             <stat type="pAtkRange">40</stat>
         </stats>
     </weapon>
-    <item id="8868" name="Ziggo's Jewel"  icon="icon.etc_jewel_red_i00">
+    <item id="8868" name="Ziggo's Jewel" icon="icon.etc_jewel_red_i00">
         <!-- A gem shining brightly. Looks like you could get a lot of money for it in a store. -->
         <set name="immediate_effect" val="true"/>
         <set name="price" val="200000000"/>
         <set name="is_questitem" val="true"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
-        <set name="is_stackable" val="true"/>
+        <restriction stackable="true"/>
     </item>
-    <item id="8871" name="Strategy Guide"  icon="icon.etc_paper_black_i00">
+    <item id="8871" name="Strategy Guide" icon="icon.etc_paper_black_i00">
         <!-- This book contains information about the methods and strategies used to lead a Command Channel. Use it to create a Command Channel. Lv. 20 or above. -->
         <set name="default_action" val="CREATE_MPCC"/>
         <set name="immediate_effect" val="true"/>
@@ -600,28 +600,28 @@
             <player level="20"/>
         </cond>
     </item>
-    <item id="8872" name="Flash Gunpowder"  icon="icon.etc_powder_gray_i00">
+    <item id="8872" name="Flash Gunpowder" icon="icon.etc_powder_gray_i00">
         <!-- This specially processed gunpowder doesn't create smoke. It is consumed while using the swoop cannon skill. -->
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="20"/>
         <set name="price" val="1500"/>
         <set name="commissionItemType" val="OTHER_ITEM"/>
-        <set name="is_stackable" val="true"/>
+        <restriction stackable="true"/>
     </item>
-    <item id="8890" name="Spellbook: Summon Attractive Cubic"  icon="icon.etc_spell_books_summon_i00">
+    <item id="8890" name="Spellbook: Summon Attractive Cubic" icon="icon.etc_spell_books_summon_i00">
         <!-- Spellbook needed to learn Summon Attractive Cubic. Used by a Temple Knight. Required level: 62 -->
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="120"/>
         <set name="price" val="200000"/>
         <set name="commissionItemType" val="SPELLBOOK"/>
-        <set name="is_stackable" val="true"/>
+        <restriction stackable="true"/>
     </item>
-    <item id="8891" name="Spellbook: Aura Flash"  icon="icon.etc_spell_books_element_i00">
+    <item id="8891" name="Spellbook: Aura Flash" icon="icon.etc_spell_books_element_i00">
         <!-- Spellbook needed to learn Aura Flash. Used by a Sorcerer, Spellsinger, and Spellhowler. Required level: 58 -->
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="120"/>
         <set name="price" val="100000"/>
         <set name="commissionItemType" val="SPELLBOOK"/>
-        <set name="is_stackable" val="true"/>
+        <restriction stackable="true"/>
     </item>
 </list>

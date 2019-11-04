@@ -170,14 +170,7 @@
         <set name="bodypart" val="chest"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="2150"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
-        <set name="is_sellable" val="false"/>
+        <restriction tradable="false" dropable="false" depositable="false" clan-depositable="false" mailable="false" commissionable="false" sellable="false"/>
         <stats>
             <stat type="pDef">17</stat>
             <stat type="maxMp">19</stat>
@@ -421,14 +414,7 @@
         <set name="bodypart" val="legs"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="1100"/>
-        <set name="is_tradable" val="false"/>
-        <set name="is_dropable" val="false"/>
-        <set name="is_depositable" val="false"/>
-        <set name="is_clan_depositable" val="false"/>
-        <set name="is_mailable" val="false"/>
-        <set name="is_commissionable" val="false"/>
-        <set name="is_private_storeable" val="false"/>
-        <set name="is_sellable" val="false"/>
+        <restriction tradable="false" dropable="false" depositable="false" clan-depositable="false" mailable="false" commissionable="false" sellable="false"/>
         <stats>
             <stat type="pDef">10</stat>
             <stat type="maxMp">10</stat>
