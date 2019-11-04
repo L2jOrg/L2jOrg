@@ -10,6 +10,8 @@ import org.l2j.gameserver.engine.items.DocumentEngine;
 import org.l2j.gameserver.enums.ItemLocation;
 import org.l2j.gameserver.idfactory.IdFactory;
 import org.l2j.gameserver.settings.GeneralSettings;
+import org.l2j.gameserver.settings.ServerSettings;
+import org.l2j.gameserver.util.GameXmlReader;
 import org.l2j.gameserver.world.World;
 import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.Attackable;
@@ -23,21 +25,28 @@ import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.util.GMAudit;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.w3c.dom.Document;
+import org.w3c.dom.Node;
 
+import java.io.File;
+import java.nio.file.Path;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.ScheduledFuture;
 
+import static java.util.Objects.nonNull;
 import static org.l2j.commons.configuration.Configurator.getSettings;
 
 /**
  * This class serves as a container for all item templates in the game.
  */
-public final class ItemTable {
+public final class ItemTable extends GameXmlReader {
     private static Logger LOGGER = LoggerFactory.getLogger(ItemTable.class);
     private static Logger LOGGER_ITEMS = LoggerFactory.getLogger("item");
+
+    private final IntMap<ItemTemplate> items = new HashIntMap<>(12160);
 
     public static final Map<String, Long> SLOTS = new HashMap<>();
 
@@ -92,7 +101,14 @@ public final class ItemTable {
     private ItemTable() {
     }
 
-    private void load() {
+    @Override
+    protected Path getSchemaFilePath() {
+        return getSettings(ServerSettings.class).dataPackDirectory().resolve("data/items/items.xsd");
+    }
+
+    public void load() {
+        items.clear();
+        parseDatapackDirectory("data/items", true);
         int highest = 0;
         armors.clear();
         etcItems.clear();
@@ -114,6 +130,29 @@ public final class ItemTable {
         LOGGER.info("Loaded {} Armor Items", armors.size() );
         LOGGER.info("Loaded {} Weapon Items", weapons.size());
         LOGGER.info("Loaded {} Items in total.", etcItems.size() + armors.size() + weapons.size());
+    }
+
+    @Override
+    protected void parseDocument(Document doc, File f) {
+        forEach(doc, "list", list -> forEach(list, node -> {
+            switch (node.getNodeName()) {
+                case "item" -> parseItem(node);
+                case "armor" -> parseArmor(node);
+                case "weapon" -> parseWeapon(node);
+            }
+        }));
+    }
+
+    private void parseWeapon(Node weaponNode) {
+
+    }
+
+    private void parseArmor(Node armorNode) {
+
+    }
+
+    private void parseItem(Node itemNode) {
+
     }
 
     /**

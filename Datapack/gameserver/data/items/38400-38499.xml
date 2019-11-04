@@ -1,0 +1,430 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
+    <weapon id="38421" name="Blue Mackerel: One-handed Blunt Weapon" icon="icon.wp_fishing1">
+        <set name="default_action" val="EQUIP"/>
+        <set name="weapon_type" val="BLUNT"/>
+        <set name="bodypart" val="rhand"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="weight" val="1720"/>
+        <set name="soulshots" val="1"/>
+        <set name="spiritshots" val="1"/>
+        <set name="is_dropable" val="false"/>
+        <set name="is_sellable" val="false"/>
+        <stats>
+            <stat type="pAtk">79</stat>
+            <stat type="mAtk">47</stat>
+            <stat type="rCrit">6</stat>
+            <stat type="accCombat">8</stat>
+            <stat type="pAtkSpd">379</stat>
+            <stat type="randomDamage">20</stat>
+            <stat type="pAtkRange">40</stat>
+        </stats>
+    </weapon>
+    <weapon id="38425" name="Monster Only: Amden Blunt Weapon" icon="BranchSys3.Icon.g_beam_dualblunt">
+        <!-- Monster weapon. -->
+        <set name="default_action" val="EQUIP"/>
+        <set name="weapon_type" val="BLUNT"/>
+        <set name="bodypart" val="rhand"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="crystal_type" val="D"/>
+        <set name="soulshots" val="1"/>
+        <set name="spiritshots" val="1"/>
+        <set name="is_dropable" val="false"/>
+        <set name="is_depositable" val="false"/>
+        <set name="is_sellable" val="false"/>
+        <set name="is_freightable" val="true"/>
+        <stats>
+            <stat type="pAtk">125</stat>
+            <stat type="mAtk">186</stat>
+            <stat type="rCrit">8</stat>
+            <stat type="pAtkSpd">325</stat>
+            <stat type="randomDamage">20</stat>
+            <stat type="pAtkRange">40</stat>
+        </stats>
+    </weapon>
+    <weapon id="38426" name="Monster Only: Amden Bow" icon="icon.pailaka_invader_bow_wp_i00">
+        <!-- Monster weapon. Bow -->
+        <set name="default_action" val="EQUIP"/>
+        <set name="weapon_type" val="DAGGER"/>
+        <set name="bodypart" val="rhand"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="crystal_type" val="D"/>
+        <set name="soulshots" val="6"/>
+        <set name="spiritshots" val="3"/>
+        <set name="mp_consume" val="2"/>
+        <set name="is_dropable" val="false"/>
+        <set name="is_depositable" val="false"/>
+        <set name="is_sellable" val="false"/>
+        <set name="is_freightable" val="true"/>
+        <stats>
+            <stat type="pAtk">92</stat>
+            <stat type="mAtk">54</stat>
+            <stat type="rCrit">8</stat>
+            <stat type="pAtkSpd">379</stat>
+            <stat type="randomDamage">5</stat>
+            <stat type="pAtkRange">40</stat>
+        </stats>
+    </weapon>
+    <weapon id="38427" name="Monster Only: Centaur Weapon" icon="icon.Summon_orc_1hs_wp_i00">
+        <!-- Monster weapon. One-handed Sword -->
+        <set name="default_action" val="EQUIP"/>
+        <set name="weapon_type" val="SWORD"/>
+        <set name="bodypart" val="rhand"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="crystal_type" val="D"/>
+        <set name="soulshots" val="3"/>
+        <set name="spiritshots" val="3"/>
+        <set name="is_dropable" val="false"/>
+        <set name="is_depositable" val="false"/>
+        <set name="is_sellable" val="false"/>
+        <set name="is_freightable" val="true"/>
+        <stats>
+            <stat type="pAtk">92</stat>
+            <stat type="mAtk">54</stat>
+            <stat type="rCrit">8</stat>
+            <stat type="pAtkSpd">379</stat>
+            <stat type="randomDamage">10</stat>
+            <stat type="pAtkRange">40</stat>
+        </stats>
+    </weapon>
+    <weapon id="38428" name="Monster Only: Minotaur Dagger" icon="icon.Deathslayer_a_wp_i00">
+        <!-- Monster weapon. Dagger -->
+        <set name="default_action" val="EQUIP"/>
+        <set name="weapon_type" val="DAGGER"/>
+        <set name="bodypart" val="rhand"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="crystal_type" val="D"/>
+        <set name="soulshots" val="3"/>
+        <set name="spiritshots" val="3"/>
+        <set name="is_dropable" val="false"/>
+        <set name="is_depositable" val="false"/>
+        <set name="is_sellable" val="false"/>
+        <set name="is_freightable" val="true"/>
+        <stats>
+            <stat type="pAtk">92</stat>
+            <stat type="mAtk">54</stat>
+            <stat type="rCrit">8</stat>
+            <stat type="pAtkSpd">379</stat>
+            <stat type="randomDamage">5</stat>
+            <stat type="pAtkRange">40</stat>
+        </stats>
+    </weapon>
+    <weapon id="38429" name="Monster Only: Tiger Sword" icon="icon.Summon_orc_1hs_wp_i00">
+        <!-- Monster weapon. One-handed Sword. -->
+        <set name="default_action" val="EQUIP"/>
+        <set name="weapon_type" val="SWORD"/>
+        <set name="bodypart" val="rhand"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="crystal_type" val="D"/>
+        <set name="soulshots" val="3"/>
+        <set name="spiritshots" val="3"/>
+        <set name="is_dropable" val="false"/>
+        <set name="is_depositable" val="false"/>
+        <set name="is_sellable" val="false"/>
+        <set name="is_freightable" val="true"/>
+        <stats>
+            <stat type="pAtk">92</stat>
+            <stat type="mAtk">54</stat>
+            <stat type="rCrit">8</stat>
+            <stat type="pAtkSpd">379</stat>
+            <stat type="randomDamage">10</stat>
+            <stat type="pAtkRange">40</stat>
+        </stats>
+    </weapon>
+    <weapon id="38430" name="Monster Only: Tiger Bow" icon="icon.pailaka_invader_bow_wp_i00">
+        <!-- Monster weapon. Bow -->
+        <set name="default_action" val="EQUIP"/>
+        <set name="weapon_type" val="BOW"/>
+        <set name="bodypart" val="rhand"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="crystal_type" val="D"/>
+        <set name="soulshots" val="6"/>
+        <set name="spiritshots" val="3"/>
+        <set name="mp_consume" val="2"/>
+        <set name="is_dropable" val="false"/>
+        <set name="is_depositable" val="false"/>
+        <set name="is_sellable" val="false"/>
+        <set name="is_freightable" val="true"/>
+        <stats>
+            <stat type="pAtk">92</stat>
+            <stat type="mAtk">54</stat>
+            <stat type="rCrit">8</stat>
+            <stat type="pAtkSpd">379</stat>
+            <stat type="randomDamage">5</stat>
+            <stat type="pAtkRange">500</stat>
+        </stats>
+    </weapon>
+    <weapon id="38431" name="Monster Only: Tiger Dagger" icon="icon.Deathslayer_a_wp_i00">
+        <!-- Monster weapon. Dual Dagger -->
+        <set name="default_action" val="EQUIP"/>
+        <set name="weapon_type" val="DUALDAGGER"/>
+        <set name="bodypart" val="lrhand"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="crystal_type" val="D"/>
+        <set name="soulshots" val="3"/>
+        <set name="spiritshots" val="3"/>
+        <set name="is_dropable" val="false"/>
+        <set name="is_depositable" val="false"/>
+        <set name="is_sellable" val="false"/>
+        <set name="is_freightable" val="true"/>
+        <stats>
+            <stat type="pAtk">92</stat>
+            <stat type="mAtk">54</stat>
+            <stat type="rCrit">8</stat>
+            <stat type="pAtkSpd">379</stat>
+            <stat type="randomDamage">5</stat>
+            <stat type="pAtkRange">40</stat>
+        </stats>
+    </weapon>
+    <weapon id="38432" name="Monster Only: Tiger Jewel" icon="icon.Summon_orc_1hs_wp_i00">
+        <!-- Monster weapon. One-handed Sword -->
+        <set name="default_action" val="EQUIP"/>
+        <set name="bodypart" val="lhand"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="crystal_type" val="D"/>
+        <set name="is_dropable" val="false"/>
+        <set name="is_depositable" val="false"/>
+        <set name="is_sellable" val="false"/>
+        <set name="is_freightable" val="true"/>
+        <stats>
+            <stat type="pAtk">92</stat>
+            <stat type="mAtk">54</stat>
+            <stat type="rCrit">8</stat>
+            <stat type="pAtkSpd">379</stat>
+            <stat type="randomDamage">10</stat>
+            <stat type="pAtkRange">40</stat>
+        </stats>
+    </weapon>
+    <weapon id="38433" name="Monster Only: Tiger Blunt Weapon" icon="BranchSys3.Icon.g_beam_dualblunt">
+        <!-- Monster weapon. -->
+        <set name="default_action" val="EQUIP"/>
+        <set name="weapon_type" val="BLUNT"/>
+        <set name="bodypart" val="lrhand"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="crystal_type" val="D"/>
+        <set name="soulshots" val="1"/>
+        <set name="spiritshots" val="1"/>
+        <set name="is_dropable" val="false"/>
+        <set name="is_depositable" val="false"/>
+        <set name="is_sellable" val="false"/>
+        <set name="is_freightable" val="true"/>
+        <stats>
+            <stat type="pAtk">125</stat>
+            <stat type="mAtk">186</stat>
+            <stat type="rCrit">8</stat>
+            <stat type="pAtkSpd">325</stat>
+            <stat type="randomDamage">20</stat>
+            <stat type="pAtkRange">40</stat>
+        </stats>
+    </weapon>
+    <weapon id="38434" name="Monster Only: Tiger Polearm" icon="icon.Summon_orc_pole_wp_i00">
+        <!-- Monster weapon. Spear. -->
+        <set name="default_action" val="EQUIP"/>
+        <set name="weapon_type" val="POLE"/>
+        <set name="bodypart" val="lrhand"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="crystal_type" val="D"/>
+        <set name="soulshots" val="3"/>
+        <set name="spiritshots" val="3"/>
+        <set name="is_dropable" val="false"/>
+        <set name="is_depositable" val="false"/>
+        <set name="is_sellable" val="false"/>
+        <set name="is_freightable" val="true"/>
+        <skills>
+            <skill id="3599" level="1"/> <!-- Polearm Multi-attack -->
+        </skills>
+        <stats>
+            <stat type="pAtk">92</stat>
+            <stat type="mAtk">54</stat>
+            <stat type="rCrit">8</stat>
+            <stat type="pAtkSpd">379</stat>
+            <stat type="randomDamage">10</stat>
+            <stat type="pAtkRange">80</stat>
+        </stats>
+    </weapon>
+    <weapon id="38435" name="Monster Only: Tiger Shield" icon="icon.Summon_orc_shield_i00">
+        <!-- Monster weapon. Shield -->
+        <set name="default_action" val="EQUIP"/>
+        <set name="bodypart" val="lhand"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="crystal_type" val="D"/>
+        <set name="is_dropable" val="false"/>
+        <set name="is_depositable" val="false"/>
+        <set name="is_sellable" val="false"/>
+        <set name="is_freightable" val="true"/>
+        <stats>
+            <stat type="pDef">25</stat>
+            <stat type="pAtkRange">40</stat>
+        </stats>
+    </weapon>
+    <armor id="38436" name="Monster Only: Tiger Sigil" icon="icon.Summon_orc_shield_i00">
+        <!-- Monster weapon. Shield -->
+        <set name="default_action" val="EQUIP"/>
+        <set name="bodypart" val="lhand"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="crystal_type" val="D"/>
+        <set name="is_dropable" val="false"/>
+        <set name="is_depositable" val="false"/>
+        <set name="is_sellable" val="false"/>
+        <set name="is_freightable" val="true"/>
+        <stats>
+            <stat type="pDef">25</stat>
+            <stat type="pAtkRange">40</stat>
+        </stats>
+    </armor>
+    <weapon id="38437" name="Monster Only: Tiger Staff" icon="icon.Summon_orc_pole_wp_i00">
+        <!-- Monster weapon. Spear. -->
+        <set name="default_action" val="EQUIP"/>
+        <set name="weapon_type" val="POLE"/>
+        <set name="bodypart" val="lrhand"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="crystal_type" val="D"/>
+        <set name="soulshots" val="3"/>
+        <set name="spiritshots" val="3"/>
+        <set name="is_dropable" val="false"/>
+        <set name="is_depositable" val="false"/>
+        <set name="is_sellable" val="false"/>
+        <set name="is_magic_weapon" val="true"/>
+        <set name="is_freightable" val="true"/>
+        <skills>
+            <skill id="3599" level="1"/> <!-- Polearm Multi-attack -->
+        </skills>
+        <stats>
+            <stat type="pAtk">92</stat>
+            <stat type="mAtk">54</stat>
+            <stat type="rCrit">8</stat>
+            <stat type="pAtkSpd">379</stat>
+            <stat type="randomDamage">10</stat>
+            <stat type="pAtkRange">80</stat>
+        </stats>
+    </weapon>
+    <weapon id="38443" name="Monster Only: Centaur Axe" icon="icon.Summon_orc_1hs_wp_i00">
+        <!-- Monster weapon. One-handed Sword -->
+        <set name="default_action" val="EQUIP"/>
+        <set name="weapon_type" val="SWORD"/>
+        <set name="bodypart" val="rhand"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="crystal_type" val="D"/>
+        <set name="soulshots" val="3"/>
+        <set name="spiritshots" val="3"/>
+        <set name="is_dropable" val="false"/>
+        <set name="is_depositable" val="false"/>
+        <set name="is_sellable" val="false"/>
+        <set name="is_freightable" val="true"/>
+        <stats>
+            <stat type="pAtk">92</stat>
+            <stat type="mAtk">54</stat>
+            <stat type="rCrit">8</stat>
+            <stat type="pAtkSpd">379</stat>
+            <stat type="randomDamage">10</stat>
+            <stat type="pAtkRange">40</stat>
+        </stats>
+    </weapon>
+    <weapon id="38444" name="Monster Only: Centaur Shield" icon="icon.Summon_orc_shield_i00">
+        <!-- Monster weapon. Shield -->
+        <set name="default_action" val="EQUIP"/>
+        <set name="bodypart" val="lhand"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="crystal_type" val="D"/>
+        <set name="is_dropable" val="false"/>
+        <set name="is_depositable" val="false"/>
+        <set name="is_sellable" val="false"/>
+        <set name="is_freightable" val="true"/>
+        <stats>
+            <stat type="pDef">25</stat>
+            <stat type="pAtkRange">40</stat>
+        </stats>
+    </weapon>
+    <weapon id="38445" name="Monster Only: One-handed Blunt Weapon" icon="BranchSys3.Icon.g_beam_dualblunt">
+        <!-- Monster weapon. One-handed Blunt weapon -->
+        <set name="default_action" val="EQUIP"/>
+        <set name="weapon_type" val="BLUNT"/>
+        <set name="bodypart" val="rhand"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="crystal_type" val="D"/>
+        <set name="soulshots" val="1"/>
+        <set name="spiritshots" val="1"/>
+        <set name="is_dropable" val="false"/>
+        <set name="is_depositable" val="false"/>
+        <set name="is_sellable" val="false"/>
+        <set name="is_freightable" val="true"/>
+        <stats>
+            <stat type="pAtk">125</stat>
+            <stat type="mAtk">186</stat>
+            <stat type="rCrit">8</stat>
+            <stat type="pAtkSpd">325</stat>
+            <stat type="randomDamage">20</stat>
+            <stat type="pAtkRange">40</stat>
+        </stats>
+    </weapon>
+    <weapon id="38446" name="Monster Only: Centaur Throwing Blade" icon="icon.Deathslayer_a_wp_i00">
+        <!-- Monster weapon. Dagger -->
+        <set name="default_action" val="EQUIP"/>
+        <set name="weapon_type" val="DAGGER"/>
+        <set name="bodypart" val="rhand"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="crystal_type" val="D"/>
+        <set name="soulshots" val="3"/>
+        <set name="spiritshots" val="3"/>
+        <set name="is_dropable" val="false"/>
+        <set name="is_depositable" val="false"/>
+        <set name="is_sellable" val="false"/>
+        <set name="is_freightable" val="true"/>
+        <stats>
+            <stat type="pAtk">92</stat>
+            <stat type="mAtk">54</stat>
+            <stat type="rCrit">8</stat>
+            <stat type="pAtkSpd">379</stat>
+            <stat type="randomDamage">5</stat>
+            <stat type="pAtkRange">40</stat>
+        </stats>
+    </weapon>
+    <weapon id="38447" name="Monster Only: Miniotaur Polearm" icon="icon.Summon_orc_pole_wp_i00">
+        <!-- Monster weapon. Spear. -->
+        <set name="default_action" val="EQUIP"/>
+        <set name="weapon_type" val="POLE"/>
+        <set name="bodypart" val="lrhand"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="crystal_type" val="D"/>
+        <set name="soulshots" val="3"/>
+        <set name="spiritshots" val="3"/>
+        <set name="is_dropable" val="false"/>
+        <set name="is_depositable" val="false"/>
+        <set name="is_sellable" val="false"/>
+        <set name="is_freightable" val="true"/>
+        <skills>
+            <skill id="3599" level="1"/> <!-- Polearm Multi-attack -->
+        </skills>
+        <stats>
+            <stat type="pAtk">92</stat>
+            <stat type="mAtk">54</stat>
+            <stat type="rCrit">8</stat>
+            <stat type="pAtkSpd">379</stat>
+            <stat type="randomDamage">10</stat>
+            <stat type="pAtkRange">80</stat>
+        </stats>
+    </weapon>
+    <weapon id="38448" name="Monster Only: Minotaur Two-handed Axe" icon="BranchSys3.Icon.g_beam_dualdagger">
+        <!-- Monster weapon. Two-handed Blunt weapon. -->
+        <set name="default_action" val="EQUIP"/>
+        <set name="weapon_type" val="BLUNT"/>
+        <set name="bodypart" val="lrhand"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="crystal_type" val="D"/>
+        <set name="soulshots" val="1"/>
+        <set name="spiritshots" val="1"/>
+        <set name="is_dropable" val="false"/>
+        <set name="is_depositable" val="false"/>
+        <set name="is_sellable" val="false"/>
+        <set name="is_freightable" val="true"/>
+        <stats>
+            <stat type="pAtk">107</stat>
+            <stat type="mAtk">181</stat>
+            <stat type="rCrit">12</stat>
+            <stat type="accCombat">-3.75</stat>
+            <stat type="pAtkSpd">433</stat>
+            <stat type="randomDamage">10</stat>
+            <stat type="pAtkRange">40</stat>
+        </stats>
+    </weapon>
+</list>

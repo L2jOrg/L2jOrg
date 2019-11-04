@@ -1,0 +1,549 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
+    <item id="6002" name="Ancient Porcelain"  icon="icon.etc_oil_pot_white_i00">
+        <!-- Porcelain from the era of an ancient empire found in the Tower of Insolence. It Has not been evaluated by antique experts yet. -->
+        <set name="immediate_effect" val="true"/>
+        <set name="weight" val="10"/>
+        <set name="price" val="8000"/>
+        <set name="is_questitem" val="true"/>
+        <set name="commissionItemType" val="OTHER_ITEM"/>
+        <set name="is_stackable" val="true"/>
+    </item>
+    <item id="6003" name="Ancient Porcelain: Excellent"  icon="icon.etc_oil_pot_white_i00">
+        <!-- Porcelain from the era of an ancient empire. Judged to be of the highest grade excellent porcelain.\0 -->
+        <set name="immediate_effect" val="true"/>
+        <set name="weight" val="10"/>
+        <set name="price" val="80000"/>
+        <set name="is_questitem" val="true"/>
+        <set name="commissionItemType" val="OTHER_ITEM"/>
+        <set name="is_stackable" val="true"/>
+    </item>
+    <item id="6004" name="Ancient Porcelain: High Quality"  icon="icon.etc_oil_pot_white_i00">
+        <!-- Porcelain from the era of an ancient empire. Judged to be of high grade porcelain.\0 -->
+        <set name="immediate_effect" val="true"/>
+        <set name="weight" val="10"/>
+        <set name="price" val="16000"/>
+        <set name="is_questitem" val="true"/>
+        <set name="commissionItemType" val="OTHER_ITEM"/>
+        <set name="is_stackable" val="true"/>
+    </item>
+    <item id="6005" name="Ancient Porcelain: Low Quality"  icon="icon.etc_oil_pot_white_i00">
+        <!-- Porcelain from the era of an ancient empire. Judged to be of low grade porcelain.\0 -->
+        <set name="immediate_effect" val="true"/>
+        <set name="weight" val="10"/>
+        <set name="price" val="4000"/>
+        <set name="is_questitem" val="true"/>
+        <set name="commissionItemType" val="OTHER_ITEM"/>
+        <set name="is_stackable" val="true"/>
+    </item>
+    <item id="6006" name="Ancient Porcelain: Lowest Quality"  icon="icon.etc_oil_pot_white_i00">
+        <!-- Porcelain from the era of an ancient empire. Judged to be of the lowest grade porcelain.\0 -->
+        <set name="immediate_effect" val="true"/>
+        <set name="weight" val="10"/>
+        <set name="price" val="2640"/>
+        <set name="is_questitem" val="true"/>
+        <set name="commissionItemType" val="OTHER_ITEM"/>
+        <set name="is_stackable" val="true"/>
+    </item>
+    <item id="6035" name="Magic Haste Potion"  icon="icon.etc_potion_of_acumen2_i00">
+        <!-- Casting Spd. is raised. -->
+        <set name="default_action" val="SKILL_REDUCE"/>
+        <set name="etcitem_type" val="POTION"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="weight" val="20"/>
+        <set name="price" val="2400"/>
+        <set name="reuse_delay" val="500"/>
+        <set name="is_stackable" val="true"/>
+        <set name="is_oly_restricted" val="true"/>
+        <set name="handler" val="ItemSkills"/>
+        <set name="commissionItemType" val="POTION"/>
+        <set name="for_npc" val="true"/>
+        <skills>
+            <skill id="2169" level="1"/> <!-- Magic Haste Potion -->
+        </skills>
+    </item>
+    <item id="6036" name="Greater Magic Haste Potion"  icon="icon.etc_potion_of_acumen3_i00">
+        <!-- Greatly increases Casting Spd. for 5 minutes. -->
+        <set name="default_action" val="SKILL_REDUCE"/>
+        <set name="etcitem_type" val="POTION"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="weight" val="20"/>
+        <set name="price" val="3400"/>
+        <set name="reuse_delay" val="500"/>
+        <set name="is_stackable" val="true"/>
+        <set name="is_oly_restricted" val="true"/>
+        <set name="handler" val="ItemSkills"/>
+        <set name="commissionItemType" val="POTION"/>
+        <set name="for_npc" val="true"/>
+        <cond addName="1" msgId="113">
+            <player flyMounted="false"/>
+        </cond>
+        <skills>
+            <skill id="2169" level="2"/> <!-- Greater Magic Haste Potion -->
+        </skills>
+    </item>
+    <item id="6037" name="Scroll: Cancel Sleep"  icon="icon.etc_piece_of_paper_white_i00">
+        <!-- If you use it on the target who is asleep, the target will wake up. -->
+        <set name="default_action" val="SKILL_REDUCE"/>
+        <set name="etcitem_type" val="SCROLL"/>
+        <set name="weight" val="5"/>
+        <set name="price" val="100"/>
+        <set name="is_stackable" val="true"/>
+        <set name="is_oly_restricted" val="true"/>
+        <set name="handler" val="ItemSkills"/>
+        <set name="commissionItemType" val="SCROLL_OTHER"/>
+        <skills>
+            <skill id="2170" level="1"/> <!-- Scroll: Cancel Sleep -->
+        </skills>
+    </item>
+    <item id="6038" name="Greater Mercenary Posting Ticket (Sword/Stationary)"  icon="icon.mticket_sword_fix_i00">
+        <!-- Cannot be used. Can be sold at an NPC's store. -->
+        <set name="etcitem_type" val="CASTLE_GUARD"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="price" val="60000"/>
+        <set name="is_stackable" val="true"/>
+        <set name="commissionItemType" val="OTHER_ITEM"/>
+        <set name="handler" val="MercTicket"/>
+    </item>
+    <item id="6039" name="Greater Mercenary Posting Ticket (Spear/Stationary)"  icon="icon.mticket_pole_fix_i00">
+        <!-- Cannot be used. Can be sold at an NPC's store. -->
+        <set name="etcitem_type" val="CASTLE_GUARD"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="price" val="80000"/>
+        <set name="is_stackable" val="true"/>
+        <set name="commissionItemType" val="OTHER_ITEM"/>
+        <set name="handler" val="MercTicket"/>
+    </item>
+    <item id="6040" name="Greater Mercenary Posting Ticket (Bow/Stationary)"  icon="icon.mticket_bow_fix_i00">
+        <!-- Cannot be used. Can be sold at an NPC's store. -->
+        <set name="etcitem_type" val="CASTLE_GUARD"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="price" val="100000"/>
+        <set name="is_stackable" val="true"/>
+        <set name="commissionItemType" val="OTHER_ITEM"/>
+        <set name="handler" val="MercTicket"/>
+    </item>
+    <item id="6041" name="Greater Mercenary Posting Ticket (Cleric/Stationary)"  icon="icon.mticket_cleric_fix_i00">
+        <!-- Cannot be used. Can be sold at an NPC's store. -->
+        <set name="etcitem_type" val="CASTLE_GUARD"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="price" val="200000"/>
+        <set name="is_stackable" val="true"/>
+        <set name="commissionItemType" val="OTHER_ITEM"/>
+        <set name="handler" val="MercTicket"/>
+    </item>
+    <item id="6042" name="Greater Mercenary Posting Ticket (Wizard/Stationary)"  icon="icon.mticket_wizard_fix_i00">
+        <!-- Cannot be used. Can be sold at an NPC's store. -->
+        <set name="etcitem_type" val="CASTLE_GUARD"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="price" val="200000"/>
+        <set name="is_stackable" val="true"/>
+        <set name="commissionItemType" val="OTHER_ITEM"/>
+        <set name="handler" val="MercTicket"/>
+    </item>
+    <item id="6043" name="Greater Mercenary Posting Ticket (Sword/Mobile)"  icon="icon.mticket_sword_move_i00">
+        <!-- Cannot be used. Can be sold at an NPC's store. -->
+        <set name="etcitem_type" val="CASTLE_GUARD"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="price" val="60000"/>
+        <set name="is_stackable" val="true"/>
+        <set name="commissionItemType" val="OTHER_ITEM"/>
+        <set name="handler" val="MercTicket"/>
+    </item>
+    <item id="6044" name="Greater Mercenary Posting Ticket (Spear/Mobile)"  icon="icon.mticket_pole_move_i00">
+        <!-- Cannot be used. Can be sold at an NPC's store. -->
+        <set name="etcitem_type" val="CASTLE_GUARD"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="price" val="80000"/>
+        <set name="is_stackable" val="true"/>
+        <set name="commissionItemType" val="OTHER_ITEM"/>
+        <set name="handler" val="MercTicket"/>
+    </item>
+    <item id="6045" name="Greater Mercenary Posting Ticket (Bow/Mobile)"  icon="icon.mticket_bow_move_i00">
+        <!-- Cannot be used. Can be sold at an NPC's store. -->
+        <set name="etcitem_type" val="CASTLE_GUARD"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="price" val="100000"/>
+        <set name="is_stackable" val="true"/>
+        <set name="commissionItemType" val="OTHER_ITEM"/>
+        <set name="handler" val="MercTicket"/>
+    </item>
+    <item id="6046" name="Greater Mercenary Posting Ticket (Cleric/Mobile)"  icon="icon.mticket_cleric_move_i00">
+        <!-- Cannot be used. Can be sold at an NPC's store. -->
+        <set name="etcitem_type" val="CASTLE_GUARD"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="price" val="200000"/>
+        <set name="is_stackable" val="true"/>
+        <set name="commissionItemType" val="OTHER_ITEM"/>
+        <set name="handler" val="MercTicket"/>
+    </item>
+    <item id="6047" name="Greater Mercenary Posting Ticket (Wizard/Mobile)"  icon="icon.mticket_wizard_move_i00">
+        <!-- Cannot be used. Can be sold at an NPC's store. -->
+        <set name="etcitem_type" val="CASTLE_GUARD"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="price" val="200000"/>
+        <set name="is_stackable" val="true"/>
+        <set name="commissionItemType" val="OTHER_ITEM"/>
+        <set name="handler" val="MercTicket"/>
+    </item>
+    <item id="6051" name="Greater Mercenary Posting Ticket (Sword/Stationary)"  icon="icon.mticket_sword_fix_i00">
+        <!-- Dion/Sword/Stationary. -->
+        <set name="etcitem_type" val="CASTLE_GUARD"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="price" val="60000"/>
+        <set name="is_stackable" val="true"/>
+        <set name="commissionItemType" val="OTHER_ITEM"/>
+        <set name="handler" val="MercTicket"/>
+    </item>
+    <item id="6052" name="Greater Mercenary Posting Ticket (Spear/Stationary)"  icon="icon.mticket_pole_fix_i00">
+        <!-- Dion/Spear/Stationary. -->
+        <set name="etcitem_type" val="CASTLE_GUARD"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="price" val="80000"/>
+        <set name="is_stackable" val="true"/>
+        <set name="commissionItemType" val="OTHER_ITEM"/>
+        <set name="handler" val="MercTicket"/>
+    </item>
+    <item id="6053" name="Greater Mercenary Posting Ticket (Bow/Stationary)"  icon="icon.mticket_bow_fix_i00">
+        <!-- Dion/Bow/Stationary. -->
+        <set name="etcitem_type" val="CASTLE_GUARD"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="price" val="100000"/>
+        <set name="is_stackable" val="true"/>
+        <set name="commissionItemType" val="OTHER_ITEM"/>
+        <set name="handler" val="MercTicket"/>
+    </item>
+    <item id="6054" name="Greater Mercenary Posting Ticket (Cleric/Stationary)"  icon="icon.mticket_cleric_fix_i00">
+        <!-- Dion/Cleric/Stationary. -->
+        <set name="etcitem_type" val="CASTLE_GUARD"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="price" val="200000"/>
+        <set name="is_stackable" val="true"/>
+        <set name="commissionItemType" val="OTHER_ITEM"/>
+        <set name="handler" val="MercTicket"/>
+    </item>
+    <item id="6055" name="Greater Mercenary Posting Ticket (Wizard/Stationary)"  icon="icon.mticket_wizard_fix_i00">
+        <!-- Dion/Wizard/Stationary. -->
+        <set name="etcitem_type" val="CASTLE_GUARD"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="price" val="200000"/>
+        <set name="is_stackable" val="true"/>
+        <set name="commissionItemType" val="OTHER_ITEM"/>
+        <set name="handler" val="MercTicket"/>
+    </item>
+    <item id="6056" name="Greater Mercenary Posting Ticket (Sword/Mobile)"  icon="icon.mticket_sword_move_i00">
+        <!-- Dion/Sword/Mobile. -->
+        <set name="etcitem_type" val="CASTLE_GUARD"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="price" val="60000"/>
+        <set name="is_stackable" val="true"/>
+        <set name="commissionItemType" val="OTHER_ITEM"/>
+        <set name="handler" val="MercTicket"/>
+    </item>
+    <item id="6057" name="Greater Mercenary Posting Ticket (Spear/Mobile)"  icon="icon.mticket_pole_move_i00">
+        <!-- Dion/Spear/Mobile. -->
+        <set name="etcitem_type" val="CASTLE_GUARD"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="price" val="80000"/>
+        <set name="is_stackable" val="true"/>
+        <set name="commissionItemType" val="OTHER_ITEM"/>
+        <set name="handler" val="MercTicket"/>
+    </item>
+    <item id="6058" name="Greater Mercenary Posting Ticket (Bow/Mobile)"  icon="icon.mticket_bow_move_i00">
+        <!-- Dion/Bow/Mobile. -->
+        <set name="etcitem_type" val="CASTLE_GUARD"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="price" val="100000"/>
+        <set name="is_stackable" val="true"/>
+        <set name="commissionItemType" val="OTHER_ITEM"/>
+        <set name="handler" val="MercTicket"/>
+    </item>
+    <item id="6059" name="Greater Mercenary Posting Ticket (Cleric/Mobile)"  icon="icon.mticket_cleric_move_i00">
+        <!-- Dion/Cleric/Mobile. -->
+        <set name="etcitem_type" val="CASTLE_GUARD"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="price" val="200000"/>
+        <set name="is_stackable" val="true"/>
+        <set name="commissionItemType" val="OTHER_ITEM"/>
+        <set name="handler" val="MercTicket"/>
+    </item>
+    <item id="6060" name="Greater Mercenary Posting Ticket (Wizard/Mobile)"  icon="icon.mticket_wizard_move_i00">
+        <!-- Dion/Wizard/Mobile. -->
+        <set name="etcitem_type" val="CASTLE_GUARD"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="price" val="200000"/>
+        <set name="is_stackable" val="true"/>
+        <set name="commissionItemType" val="OTHER_ITEM"/>
+        <set name="handler" val="MercTicket"/>
+    </item>
+    <item id="6064" name="Greater Mercenary Posting Ticket (Sword/Stationary)"  icon="icon.mticket_sword_fix_i00">
+        <!-- Giran/Sword/Stationary. -->
+        <set name="etcitem_type" val="CASTLE_GUARD"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="price" val="60000"/>
+        <set name="is_stackable" val="true"/>
+        <set name="commissionItemType" val="OTHER_ITEM"/>
+        <set name="handler" val="MercTicket"/>
+    </item>
+    <item id="6065" name="Greater Mercenary Posting Ticket (Spear/Stationary)"  icon="icon.mticket_pole_fix_i00">
+        <!-- Giran/Spear/Stationary. -->
+        <set name="etcitem_type" val="CASTLE_GUARD"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="price" val="80000"/>
+        <set name="is_stackable" val="true"/>
+        <set name="commissionItemType" val="OTHER_ITEM"/>
+        <set name="handler" val="MercTicket"/>
+    </item>
+    <item id="6066" name="Greater Mercenary Posting Ticket (Bow/Stationary)"  icon="icon.mticket_bow_fix_i00">
+        <!-- Giran/Bow/Stationary. -->
+        <set name="etcitem_type" val="CASTLE_GUARD"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="price" val="100000"/>
+        <set name="is_stackable" val="true"/>
+        <set name="commissionItemType" val="OTHER_ITEM"/>
+        <set name="handler" val="MercTicket"/>
+    </item>
+    <item id="6067" name="Greater Mercenary Posting Ticket (Cleric/Stationary)"  icon="icon.mticket_cleric_fix_i00">
+        <!-- Giran/Cleric/Stationary. -->
+        <set name="etcitem_type" val="CASTLE_GUARD"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="price" val="200000"/>
+        <set name="is_stackable" val="true"/>
+        <set name="commissionItemType" val="OTHER_ITEM"/>
+        <set name="handler" val="MercTicket"/>
+    </item>
+    <item id="6068" name="Greater Mercenary Posting Ticket (Wizard/Stationary)"  icon="icon.mticket_wizard_fix_i00">
+        <!-- Giran/Wizard/Stationary. -->
+        <set name="etcitem_type" val="CASTLE_GUARD"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="price" val="200000"/>
+        <set name="is_stackable" val="true"/>
+        <set name="commissionItemType" val="OTHER_ITEM"/>
+        <set name="handler" val="MercTicket"/>
+    </item>
+    <item id="6069" name="Greater Mercenary Posting Ticket (Sword/Mobile)"  icon="icon.mticket_sword_move_i00">
+        <!-- Giran/Sword/Mobile. -->
+        <set name="etcitem_type" val="CASTLE_GUARD"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="price" val="60000"/>
+        <set name="is_stackable" val="true"/>
+        <set name="commissionItemType" val="OTHER_ITEM"/>
+        <set name="handler" val="MercTicket"/>
+    </item>
+    <item id="6070" name="Greater Mercenary Posting Ticket (Spear/Mobile)"  icon="icon.mticket_pole_move_i00">
+        <!-- Giran/Spear/Mobile. -->
+        <set name="etcitem_type" val="CASTLE_GUARD"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="price" val="80000"/>
+        <set name="is_stackable" val="true"/>
+        <set name="commissionItemType" val="OTHER_ITEM"/>
+        <set name="handler" val="MercTicket"/>
+    </item>
+    <item id="6071" name="Greater Mercenary Posting Ticket (Bow/Mobile)"  icon="icon.mticket_bow_move_i00">
+        <!-- Giran/Bow/Mobile. -->
+        <set name="etcitem_type" val="CASTLE_GUARD"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="price" val="100000"/>
+        <set name="is_stackable" val="true"/>
+        <set name="commissionItemType" val="OTHER_ITEM"/>
+        <set name="handler" val="MercTicket"/>
+    </item>
+    <item id="6072" name="Greater Mercenary Posting Ticket (Cleric/Mobile)"  icon="icon.mticket_cleric_move_i00">
+        <!-- Giran/Cleric/Mobile. -->
+        <set name="etcitem_type" val="CASTLE_GUARD"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="price" val="200000"/>
+        <set name="is_stackable" val="true"/>
+        <set name="commissionItemType" val="OTHER_ITEM"/>
+        <set name="handler" val="MercTicket"/>
+    </item>
+    <item id="6073" name="Greater Mercenary Posting Ticket (Wizard/Mobile)"  icon="icon.mticket_wizard_move_i00">
+        <!-- Giran/Wizard/Mobile. -->
+        <set name="etcitem_type" val="CASTLE_GUARD"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="price" val="200000"/>
+        <set name="is_stackable" val="true"/>
+        <set name="commissionItemType" val="OTHER_ITEM"/>
+        <set name="handler" val="MercTicket"/>
+    </item>
+    <item id="6077" name="Greater Mercenary Posting Ticket (Sword/Stationary)"  icon="icon.mticket_sword_fix_i00">
+        <!-- Oren/Sword/Stationary. -->
+        <set name="etcitem_type" val="CASTLE_GUARD"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="price" val="60000"/>
+        <set name="is_stackable" val="true"/>
+        <set name="commissionItemType" val="OTHER_ITEM"/>
+        <set name="handler" val="MercTicket"/>
+    </item>
+    <item id="6078" name="Greater Mercenary Posting Ticket (Spear/Stationary)"  icon="icon.mticket_pole_fix_i00">
+        <!-- Oren/Spear/Stationary. -->
+        <set name="etcitem_type" val="CASTLE_GUARD"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="price" val="80000"/>
+        <set name="is_stackable" val="true"/>
+        <set name="commissionItemType" val="OTHER_ITEM"/>
+        <set name="handler" val="MercTicket"/>
+    </item>
+    <item id="6079" name="Greater Mercenary Posting Ticket (Bow/Stationary)"  icon="icon.mticket_bow_fix_i00">
+        <!-- Oren/Bow/Stationary. -->
+        <set name="etcitem_type" val="CASTLE_GUARD"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="price" val="100000"/>
+        <set name="is_stackable" val="true"/>
+        <set name="commissionItemType" val="OTHER_ITEM"/>
+        <set name="handler" val="MercTicket"/>
+    </item>
+    <item id="6080" name="Greater Mercenary Posting Ticket (Cleric/Stationary)"  icon="icon.mticket_cleric_fix_i00">
+        <!-- Oren/Cleric/Stationary. -->
+        <set name="etcitem_type" val="CASTLE_GUARD"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="price" val="200000"/>
+        <set name="is_stackable" val="true"/>
+        <set name="commissionItemType" val="OTHER_ITEM"/>
+        <set name="handler" val="MercTicket"/>
+    </item>
+    <item id="6081" name="Greater Mercenary Posting Ticket (Wizard/Stationary)"  icon="icon.mticket_wizard_fix_i00">
+        <!-- Oren/Wizard/Stationary. -->
+        <set name="etcitem_type" val="CASTLE_GUARD"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="price" val="200000"/>
+        <set name="is_stackable" val="true"/>
+        <set name="commissionItemType" val="OTHER_ITEM"/>
+        <set name="handler" val="MercTicket"/>
+    </item>
+    <item id="6082" name="Greater Mercenary Posting Ticket (Sword/Mobile)"  icon="icon.mticket_sword_move_i00">
+        <!-- Oren/Sword/Mobile. -->
+        <set name="etcitem_type" val="CASTLE_GUARD"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="price" val="60000"/>
+        <set name="is_stackable" val="true"/>
+        <set name="commissionItemType" val="OTHER_ITEM"/>
+        <set name="handler" val="MercTicket"/>
+    </item>
+    <item id="6083" name="Greater Mercenary Posting Ticket (Spear/Mobile)"  icon="icon.mticket_pole_move_i00">
+        <!-- Oren/Spear/Mobile. -->
+        <set name="etcitem_type" val="CASTLE_GUARD"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="price" val="80000"/>
+        <set name="is_stackable" val="true"/>
+        <set name="commissionItemType" val="OTHER_ITEM"/>
+        <set name="handler" val="MercTicket"/>
+    </item>
+    <item id="6084" name="Greater Mercenary Posting Ticket (Bow/Mobile)"  icon="icon.mticket_bow_move_i00">
+        <!-- Oren/Bow/Mobile. -->
+        <set name="etcitem_type" val="CASTLE_GUARD"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="price" val="100000"/>
+        <set name="is_stackable" val="true"/>
+        <set name="commissionItemType" val="OTHER_ITEM"/>
+        <set name="handler" val="MercTicket"/>
+    </item>
+    <item id="6085" name="Greater Mercenary Posting Ticket (Cleric/Mobile)"  icon="icon.mticket_cleric_move_i00">
+        <!-- Oren/Cleric/Mobile. -->
+        <set name="etcitem_type" val="CASTLE_GUARD"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="price" val="200000"/>
+        <set name="is_stackable" val="true"/>
+        <set name="commissionItemType" val="OTHER_ITEM"/>
+        <set name="handler" val="MercTicket"/>
+    </item>
+    <item id="6086" name="Greater Mercenary Posting Ticket (Wizard/Mobile)"  icon="icon.mticket_wizard_move_i00">
+        <!-- Oren/Wizard/Mobile. -->
+        <set name="etcitem_type" val="CASTLE_GUARD"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="price" val="200000"/>
+        <set name="is_stackable" val="true"/>
+        <set name="commissionItemType" val="OTHER_ITEM"/>
+        <set name="handler" val="MercTicket"/>
+    </item>
+    <item id="6090" name="Greater Mercenary Posting Ticket (Sword/Stationary)"  icon="icon.mticket_sword_fix_i00">
+        <!-- Aden/Sword/Stationary. -->
+        <set name="etcitem_type" val="CASTLE_GUARD"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="price" val="60000"/>
+        <set name="is_stackable" val="true"/>
+        <set name="commissionItemType" val="OTHER_ITEM"/>
+        <set name="handler" val="MercTicket"/>
+    </item>
+    <item id="6091" name="Greater Mercenary Posting Ticket (Spear/Stationary)"  icon="icon.mticket_pole_fix_i00">
+        <!-- Aden/Spear/Stationary. -->
+        <set name="etcitem_type" val="CASTLE_GUARD"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="price" val="80000"/>
+        <set name="is_stackable" val="true"/>
+        <set name="commissionItemType" val="OTHER_ITEM"/>
+        <set name="handler" val="MercTicket"/>
+    </item>
+    <item id="6092" name="Greater Mercenary Posting Ticket (Bow/Stationary)"  icon="icon.mticket_bow_fix_i00">
+        <!-- Aden/Bow/Stationary. -->
+        <set name="etcitem_type" val="CASTLE_GUARD"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="price" val="100000"/>
+        <set name="is_stackable" val="true"/>
+        <set name="commissionItemType" val="OTHER_ITEM"/>
+        <set name="handler" val="MercTicket"/>
+    </item>
+    <item id="6093" name="Greater Mercenary Posting Ticket (Cleric/Stationary)"  icon="icon.mticket_cleric_fix_i00">
+        <!-- Aden/Cleric/Stationary. -->
+        <set name="etcitem_type" val="CASTLE_GUARD"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="price" val="200000"/>
+        <set name="is_stackable" val="true"/>
+        <set name="commissionItemType" val="OTHER_ITEM"/>
+        <set name="handler" val="MercTicket"/>
+    </item>
+    <item id="6094" name="Greater Mercenary Posting Ticket (Wizard/Stationary)"  icon="icon.mticket_wizard_fix_i00">
+        <!-- Aden/Wizard/Stationary. -->
+        <set name="etcitem_type" val="CASTLE_GUARD"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="price" val="200000"/>
+        <set name="is_stackable" val="true"/>
+        <set name="commissionItemType" val="OTHER_ITEM"/>
+        <set name="handler" val="MercTicket"/>
+    </item>
+    <item id="6095" name="Greater Mercenary Posting Ticket (Sword/Mobile)"  icon="icon.mticket_sword_move_i00">
+        <!-- Aden/Sword/Mobile. -->
+        <set name="etcitem_type" val="CASTLE_GUARD"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="price" val="60000"/>
+        <set name="is_stackable" val="true"/>
+        <set name="commissionItemType" val="OTHER_ITEM"/>
+        <set name="handler" val="MercTicket"/>
+    </item>
+    <item id="6096" name="Greater Mercenary Posting Ticket (Spear/Mobile)"  icon="icon.mticket_pole_move_i00">
+        <!-- Aden/Spear/Mobile. -->
+        <set name="etcitem_type" val="CASTLE_GUARD"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="price" val="80000"/>
+        <set name="is_stackable" val="true"/>
+        <set name="commissionItemType" val="OTHER_ITEM"/>
+        <set name="handler" val="MercTicket"/>
+    </item>
+    <item id="6097" name="Greater Mercenary Posting Ticket (Bow/Mobile)"  icon="icon.mticket_bow_move_i00">
+        <!-- Aden/Bow/Mobile. -->
+        <set name="etcitem_type" val="CASTLE_GUARD"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="price" val="100000"/>
+        <set name="is_stackable" val="true"/>
+        <set name="commissionItemType" val="OTHER_ITEM"/>
+        <set name="handler" val="MercTicket"/>
+    </item>
+    <item id="6098" name="Greater Mercenary Posting Ticket (Cleric/Mobile)"  icon="icon.mticket_cleric_move_i00">
+        <!-- Aden/Cleric/Mobile. -->
+        <set name="etcitem_type" val="CASTLE_GUARD"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="price" val="200000"/>
+        <set name="is_stackable" val="true"/>
+        <set name="commissionItemType" val="OTHER_ITEM"/>
+        <set name="handler" val="MercTicket"/>
+    </item>
+    <item id="6099" name="Greater Mercenary Posting Ticket (Wizard/Mobile)"  icon="icon.mticket_wizard_move_i00">
+        <!-- Aden/Wizard/Mobile. -->
+        <set name="etcitem_type" val="CASTLE_GUARD"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="price" val="200000"/>
+        <set name="is_stackable" val="true"/>
+        <set name="commissionItemType" val="OTHER_ITEM"/>
+        <set name="handler" val="MercTicket"/>
+    </item>
+</list>

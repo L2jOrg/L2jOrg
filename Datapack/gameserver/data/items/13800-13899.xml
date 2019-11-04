@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
+    <armor id="13894" name="Rag Belt" icon="icon.armor_belt_i00">
+        <!-- Bestows one of the special functions after using a C-grade Clasp or Pouch. -->
+        <set name="default_action" val="EQUIP"/>
+        <set name="armor_type" val="LIGHT"/>
+        <set name="bodypart" val="waist"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="crystal_type" val="C"/>
+        <set name="weight" val="500"/>
+        <set name="price" val="45100"/>
+        <set name="enchant_enabled" val="1"/>
+        <stats>
+            <stat type="pDef">10</stat>
+        </stats>
+    </armor>
+    <armor id="13895" name="Leather Belt" icon="icon.armor_belt_i01">
+        <!-- Bestows one of the special functions after using a B-grade Clasp or Pouch. -->
+        <set name="default_action" val="EQUIP"/>
+        <set name="armor_type" val="LIGHT"/>
+        <set name="bodypart" val="waist"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="crystal_type" val="B"/>
+        <set name="weight" val="480"/>
+        <set name="price" val="165000"/>
+        <set name="enchant_enabled" val="1"/>
+        <stats>
+            <stat type="pDef">11</stat>
+        </stats>
+    </armor>
+    <armor id="13896" name="Iron Belt" icon="icon.armor_belt_i02">
+        <!-- Bestows one of the special functions after using an A-grade Clasp, Pouch, Magical Clasp, or Magic Ornament. -->
+        <set name="default_action" val="EQUIP"/>
+        <set name="armor_type" val="LIGHT"/>
+        <set name="bodypart" val="waist"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="crystal_type" val="A"/>
+        <set name="weight" val="460"/>
+        <set name="price" val="371300"/>
+        <set name="enchant_enabled" val="1"/>
+        <stats>
+            <stat type="pDef">12</stat>
+        </stats>
+    </armor>
+    <armor id="13897" name="Mithril Belt" icon="icon.armor_belt_i03">
+        <!-- Bestows one of the special functions after using an S-grade Clasp, Pouch, Magical Clasp, or Magic Ornament. -->
+        <set name="default_action" val="EQUIP"/>
+        <set name="armor_type" val="LIGHT"/>
+        <set name="bodypart" val="waist"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="crystal_type" val="S"/>
+        <set name="weight" val="440"/>
+        <set name="price" val="1917000"/>
+        <set name="enchant_enabled" val="1"/>
+        <stats>
+            <stat type="pDef">14</stat>
+        </stats>
+    </armor>
+</list>

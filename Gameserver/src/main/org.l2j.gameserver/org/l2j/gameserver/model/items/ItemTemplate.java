@@ -164,7 +164,6 @@ public abstract class ItemTemplate extends ListenersContainer implements IIdenti
         _referencePrice = set.getInt("price", 0);
         _crystalType = set.getEnum("crystal_type", CrystalType.class, CrystalType.NONE);
         _crystalCount = set.getInt("crystal_count", 0);
-
         _stackable = set.getBoolean("is_stackable", false);
         _sellable = set.getBoolean("is_sellable", true);
         _dropable = set.getBoolean("is_dropable", true);

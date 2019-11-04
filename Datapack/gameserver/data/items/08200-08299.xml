@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
+    <weapon id="8203" name="Monster Only (Venom Sword)" icon="icon.weapon_monster_i00">
+        <set name="default_action" val="EQUIP"/>
+        <set name="weapon_type" val="DUAL"/>
+        <set name="bodypart" val="lrhand"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="soulshots" val="1"/>
+        <set name="spiritshots" val="1"/>
+        <stats>
+            <stat type="rCrit">8</stat>
+            <stat type="pAtkSpd">325</stat>
+            <stat type="randomDamage">10</stat>
+            <stat type="pAtkRange">40</stat>
+        </stats>
+    </weapon>
+    <weapon id="8204" name="Monster Only (Follower of Frintezza Calibur)" icon="icon.weapon_monster_i00">
+        <set name="default_action" val="EQUIP"/>
+        <set name="weapon_type" val="SWORD"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="weight" val="1560"/>
+        <set name="soulshots" val="2"/>
+        <set name="spiritshots" val="2"/>
+        <stats>
+            <stat type="rCrit">8</stat>
+            <stat type="pAtkSpd">379</stat>
+            <stat type="randomDamage">10</stat>
+            <stat type="pAtkRange">40</stat>
+        </stats>
+    </weapon>
+    <weapon id="8222" name="Monster Only (Follower of Frintezza Tran Calibur)" icon="icon.weapon_monster_i00">
+        <set name="default_action" val="EQUIP"/>
+        <set name="weapon_type" val="SWORD"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="weight" val="1560"/>
+        <set name="soulshots" val="2"/>
+        <set name="spiritshots" val="2"/>
+        <stats>
+            <stat type="rCrit">8</stat>
+            <stat type="pAtkSpd">379</stat>
+            <stat type="randomDamage">10</stat>
+            <stat type="pAtkRange">40</stat>
+        </stats>
+    </weapon>
+    <item id="8294" name="Recipe: Steel Sword"  icon="icon.etc_recipe_blue_i00">
+        <!-- This formula for manufacturing a Steel Sword can only be used by Dwarves and Requires Create Item - Skill Lv. 2. The success rate is 100%. -->
+        <set name="default_action" val="RECIPE"/>
+        <set name="etcitem_type" val="RECIPE"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="weight" val="30"/>
+        <set name="price" val="8180"/>
+        <set name="recipe_id" val="783"/>
+        <set name="is_stackable" val="true"/>
+        <set name="commissionItemType" val="RECIPE"/>
+        <set name="handler" val="Recipes"/>
+    </item>
+    <item id="8299" name="Recipe: Infernal Master (100%)"  icon="icon.etc_recipe_violet_i00">
+        <!-- This formula for manufacturing an Infernal Master can only be used by Dwarves and Requires Create Item - Skill Lv. 7. The success rate is 100%. -->
+        <set name="default_action" val="RECIPE"/>
+        <set name="etcitem_type" val="RECIPE"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="weight" val="30"/>
+        <set name="price" val="73200"/>
+        <set name="recipe_id" val="815"/>
+        <set name="is_stackable" val="true"/>
+        <set name="commissionItemType" val="RECIPE"/>
+        <set name="handler" val="Recipes"/>
+    </item>
+</list>

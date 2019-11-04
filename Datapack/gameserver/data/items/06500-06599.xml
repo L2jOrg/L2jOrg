@@ -1,0 +1,198 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
+    <item id="6569" name="Blessed Scroll: Enchant Weapon (A-grade)"  icon="icon.etc_blessed_scrl_of_ench_wp_a_i04">
+        <!-- When enchanted, P. Atk. +4 for A-grade one-handed swords, one-handed blunts, daggers, spears, and other weapons. P. Atk. +5 for two-handed swords, two-handed blunts, dualswords, and two-handed fist weapons. P. Atk. +8 for bows. M. Atk. +3 for all weapons. Starting at +4, P. Atk. / M. Atk. bonus double. Safe Enchant: +3. -->
+        <set name="default_action" val="SKILL_REDUCE"/>
+        <set name="etcitem_type" val="BLESS_ENCHT_WP"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="weight" val="120"/>
+        <set name="price" val="15000000"/>
+        <set name="is_stackable" val="true"/>
+        <set name="is_oly_restricted" val="true"/>
+        <set name="handler" val="EnchantScrolls"/>
+        <set name="commissionItemType" val="SCROLL_ENCHANT_WEAPON"/>
+        <skills>
+            <skill id="2027" level="1"/> <!-- Blessed Scroll: Enchant Weapon (A-grade) -->
+        </skills>
+    </item>
+    <item id="6570" name="Blessed Scroll: Enchant Armor (A-grade)"  icon="icon.etc_blessed_scrl_of_ench_am_a_i04">
+        <!-- P. Def. +1 for A-grade armor and accessories. Increases by 3 starting from +4. For one-piece armor, it can safely be enchanted up to +4. HP gradually increases with each enchant level starting from +4. If enchanting fails, the item will not be crystallized but the enchant value will be reset to 0. -->
+        <set name="default_action" val="SKILL_REDUCE"/>
+        <set name="etcitem_type" val="BLESS_ENCHT_AM"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="weight" val="120"/>
+        <set name="price" val="1800000"/>
+        <set name="is_stackable" val="true"/>
+        <set name="is_oly_restricted" val="true"/>
+        <set name="handler" val="EnchantScrolls"/>
+        <set name="commissionItemType" val="SCROLL_ENCHANT_ARMOR"/>
+        <skills>
+            <skill id="2209" level="1"/> <!-- Blessed Scroll: Enchant Armor (A-grade) -->
+        </skills>
+    </item>
+    <item id="6571" name="Blessed Scroll: Enchant Weapon (B-grade)"  icon="icon.etc_blessed_scrl_of_ench_wp_b_i03">
+        <!-- When enchanted, P. Atk. + 4 for B-grade one-handed swords, one-handed blunts, daggers, spears, and other weapons. P. Atk. + 5 for two-handed swords, two-handed blunts, dualswords, and two-handed fist weapons. P. Atk. + 8 for bows. M. Atk. + 3 for all weapons. Starting at + 4, P. Atk. / M. Atk. bonus double. Enchanting is safe up to + 3. If enchanting fails, the item will not be crystallized but the enchant value will be reset to 0. -->
+        <set name="default_action" val="SKILL_REDUCE"/>
+        <set name="etcitem_type" val="BLESS_ENCHT_WP"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="weight" val="120"/>
+        <set name="price" val="7000000"/>
+        <set name="is_stackable" val="true"/>
+        <set name="is_oly_restricted" val="true"/>
+        <set name="handler" val="EnchantScrolls"/>
+        <set name="commissionItemType" val="SCROLL_ENCHANT_WEAPON"/>
+        <skills>
+            <skill id="2028" level="1"/> <!-- Blessed Scroll: Enchant Weapon (B-grade) -->
+        </skills>
+    </item>
+    <item id="6572" name="Blessed Scroll: Enchant Armor (B-grade)"  icon="icon.etc_blessed_scrl_of_ench_am_b_i03">
+        <!-- P. Def. + 1 for B-grade armor and accessories. Starting from + 4, P. Def. + 3. Can be safely enchanted up to + 3. For one-piece armor, it can safely be enchanted up to + 4. HP gradually increases with each enchant level starting from + 4. If enchanting fails, the item will not be crystallized but the enchant value will be reset to 0. -->
+        <set name="default_action" val="SKILL_REDUCE"/>
+        <set name="etcitem_type" val="BLESS_ENCHT_AM"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="weight" val="120"/>
+        <set name="price" val="750000"/>
+        <set name="is_stackable" val="true"/>
+        <set name="is_oly_restricted" val="true"/>
+        <set name="handler" val="EnchantScrolls"/>
+        <set name="commissionItemType" val="SCROLL_ENCHANT_ARMOR"/>
+        <skills>
+            <skill id="2210" level="1"/> <!-- Blessed Scroll: Enchant Armor (B-grade) -->
+        </skills>
+    </item>
+    <item id="6573" name="Blessed Scroll: Enchant Weapon (C-grade)"  icon="icon.etc_blessed_scrl_of_ench_wp_c_i02">
+        <!-- When enchanted, P. Atk. +4 for C-grade one-handed swords, one-handed blunts, daggers, spears, and other weapons. P. Atk. +5 for two-handed swords, two-handed blunts, dualswords, and two-handed fist weapons. P. Atk. +8 for bows. M. Atk. +3 for all weapons. Starting at +4, P. Atk. / M. Atk. bonus double. If enchanting fails, the item will not be crystallized, but the enchant value will be reset to 0. -->
+        <set name="default_action" val="SKILL_REDUCE"/>
+        <set name="etcitem_type" val="BLESS_ENCHT_WP"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="weight" val="120"/>
+        <set name="price" val="3000000"/>
+        <set name="is_stackable" val="true"/>
+        <set name="is_oly_restricted" val="true"/>
+        <set name="handler" val="EnchantScrolls"/>
+        <set name="commissionItemType" val="SCROLL_ENCHANT_WEAPON"/>
+        <skills>
+            <skill id="2029" level="1"/> <!-- Blessed Scroll: Enchant Weapon (C-grade) -->
+        </skills>
+    </item>
+    <item id="6574" name="Blessed Scroll: Enchant Armor (C-grade)"  icon="icon.etc_blessed_scrl_of_ench_am_c_i02">
+        <!-- P. Def. + 1 for C-grade armor and accessories. Increases by 3 starting from + 4. It can safely be enchanted up to + 3. For one-piece armor, it can safely be enchanted up to + 4. HP gradually increases with each enchant level starting from + 4. If enchanting fails, the item will not be crystallized but the enchant value will be reset to 0. -->
+        <set name="default_action" val="SKILL_REDUCE"/>
+        <set name="etcitem_type" val="BLESS_ENCHT_AM"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="weight" val="120"/>
+        <set name="price" val="350000"/>
+        <set name="is_stackable" val="true"/>
+        <set name="is_oly_restricted" val="true"/>
+        <set name="handler" val="EnchantScrolls"/>
+        <set name="commissionItemType" val="SCROLL_ENCHANT_ARMOR"/>
+        <skills>
+            <skill id="2211" level="1"/> <!-- Blessed Scroll: Enchant Armor (C-grade) -->
+        </skills>
+    </item>
+    <item id="6575" name="Blessed Scroll: Enchant Weapon (D-grade)"  icon="icon.etc_blessed_scrl_of_ench_wp_d_i01">
+        <!-- When enchanted, P. Atk. +4 for D-grade one-handed swords, one-handed blunts, daggers, spears, and other weapons. P. Atk. +5 for two-handed swords, two-handed blunts, dualswords, and two-handed fist weapons. P. Atk. +8 for bows. M. Atk. +3 for all weapons. Starting at +4, P. Atk. / M. Atk. bonus double. If enchanting fails, the item will not be crystallized, but the enchant value will be reset to 0. -->
+        <set name="default_action" val="SKILL_REDUCE"/>
+        <set name="etcitem_type" val="BLESS_ENCHT_WP"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="weight" val="120"/>
+        <set name="price" val="900000"/>
+        <set name="is_stackable" val="true"/>
+        <set name="is_oly_restricted" val="true"/>
+        <set name="handler" val="EnchantScrolls"/>
+        <set name="commissionItemType" val="SCROLL_ENCHANT_WEAPON"/>
+        <skills>
+            <skill id="2030" level="1"/> <!-- Blessed Scroll: Enchant Weapon (D-grade) -->
+        </skills>
+    </item>
+    <item id="6576" name="Blessed Scroll: Enchant Armor (D-grade)"  icon="icon.etc_blessed_scrl_of_ench_am_d_i01">
+        <!-- P. Def. + 1 for D-grade armor and accessories. Increases by 3 starting from + 4. It can safely be enchanted up to + 3. For one-piece armor, it can safely be enchanted up to + 4. HP gradually increases with each enchant level starting from + 4. If enchanting fails, the item will not be crystallized but the enchant value will be reset to 0. -->
+        <set name="default_action" val="SKILL_REDUCE"/>
+        <set name="etcitem_type" val="BLESS_ENCHT_AM"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="weight" val="120"/>
+        <set name="price" val="100000"/>
+        <set name="is_stackable" val="true"/>
+        <set name="is_oly_restricted" val="true"/>
+        <set name="handler" val="EnchantScrolls"/>
+        <set name="commissionItemType" val="SCROLL_ENCHANT_ARMOR"/>
+        <skills>
+            <skill id="2212" level="1"/> <!-- Blessed Scroll: Enchant Armor (D-grade) -->
+        </skills>
+    </item>
+    <item id="6577" name="Blessed Scroll: Enchant Weapon (S-grade)"  icon="icon.etc_blessed_scrl_of_ench_wp_s_i05">
+        <!-- When enchanted, P. Atk. +5 for S-grade one-handed swords, one-handed blunts, daggers, spears, and other weapons. P. Atk. +6 for two-handed swords, two-handed blunts, dual swords, and two-handed fist weapons. P. Atk. +10 for bows. M. Atk. +4 for all weapons. Starting at +4, P. Atk./ M. Atk. bonus is doubled. If enchanting fails, the item will not be crystallized, but the enchant value will be reset to 0. -->
+        <set name="default_action" val="SKILL_REDUCE"/>
+        <set name="etcitem_type" val="BLESS_ENCHT_WP"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="weight" val="120"/>
+        <set name="price" val="30000000"/>
+        <set name="is_stackable" val="true"/>
+        <set name="is_oly_restricted" val="true"/>
+        <set name="handler" val="EnchantScrolls"/>
+        <set name="commissionItemType" val="SCROLL_ENCHANT_WEAPON"/>
+        <skills>
+            <skill id="51291" level="1"/> <!-- Blessed Scroll: Enchant Weapon (S-grade) -->
+        </skills>
+    </item>
+    <item id="6578" name="Blessed Scroll: Enchant Armor (S-grade)"  icon="icon.etc_blessed_scrl_of_ench_am_s_i05">
+        <!-- When enchanted, P. Def. +2 for S-grade armor and accessories. Starting at +4, P. Def. +8. Enchanting is safe up to +3, but one-piece body armor can be safely enchanted up to +4. If enchanting fails, the item will not be crystallized but the enchant value will be reset to 0. Starting at +4 HP bonus is granted depending on the enchantment value. -->
+        <set name="default_action" val="SKILL_REDUCE"/>
+        <set name="weight" val="120"/>
+        <set name="price" val="4500000"/>
+        <set name="is_stackable" val="true"/>
+        <set name="etcitem_type" val="BLESS_ENCHT_AM"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="is_oly_restricted" val="true"/>
+        <set name="handler" val="EnchantScrolls"/>
+        <set name="commissionItemType" val="SCROLL_ENCHANT_ARMOR"/>
+        <skills>
+            <skill id="51292" level="1"/> <!-- Blessed Scroll: Enchant Armor (S-grade) -->
+        </skills>
+    </item>
+    <weapon id="6579" name="Arcana Mace" icon="icon.weapon_arcana_mace_i00">
+        <set name="default_action" val="EQUIP"/>
+        <set name="weapon_type" val="BLUNT"/>
+        <set name="bodypart" val="rhand"/>
+        <set name="damage_range" val="0;0;40;120"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="crystal_count" val="1368"/>
+        <set name="crystal_type" val="S"/>
+        <set name="weight" val="1300"/>
+        <set name="price" val="42759400"/>
+        <set name="soulshots" val="1"/>
+        <set name="spiritshots" val="1"/>
+        <set name="enchant_enabled" val="1"/>
+        <set name="is_magic_weapon" val="true"/>
+        <set name="commissionItemType" val="ONE_HAND_MAGIC_BLUNT_WEAPON"/>
+        <stats>
+            <stat type="pAtk">225</stat>
+            <stat type="mAtk">175</stat>
+            <stat type="rCrit">6</stat>
+            <stat type="accCombat">8</stat>
+            <stat type="pAtkSpd">379</stat>
+            <stat type="randomDamage">20</stat>
+            <stat type="pAtkRange">40</stat>
+        </stats>
+    </weapon>
+    <weapon id="6580" name="Tallum Blade*Dark Legion's Edge" icon="icon.weapon_dual_sword_i00">
+        <set name="default_action" val="EQUIP"/>
+        <set name="weapon_type" val="ANCIENTSWORD"/>
+        <set name="bodypart" val="lrhand"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="crystal_type" val="S"/>
+        <set name="weight" val="2080"/>
+        <set name="price" val="42759400"/>
+        <set name="soulshots" val="1"/>
+        <set name="spiritshots" val="1"/>
+        <set name="enchant_enabled" val="1"/>
+        <stats>
+            <stat type="pAtk">342</stat>
+            <stat type="mAtk">132</stat>
+            <stat type="rCrit">8</stat>
+            <stat type="pAtkSpd">325</stat>
+            <stat type="randomDamage">10</stat>
+            <stat type="pAtkRange">40</stat>
+        </stats>
+    </weapon>
+</list>

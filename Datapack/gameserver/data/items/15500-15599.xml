@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
+	<armor id="15592" name="Vorpal Breastplate" icon="icon.armor_t94_u_i03">
+		<!-- Appearance for Kamael Male -->
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="LIGHT" />
+		<set name="bodypart" val="chest" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="7520" />
+		<set name="price" val="7960" />
+		<stats>
+			<stat type="pDef">47</stat>
+		</stats>
+	</armor>
+	<armor id="15595" name="Vorpal Gaiters" icon="icon.armor_t94_l_i03">
+		<!-- Appearance for Kamael Male -->
+		<set name="default_action" val="EQUIP" />
+		<set name="armor_type" val="LIGHT" />
+		<set name="bodypart" val="legs" />
+		<set name="immediate_effect" val="true" />
+		<set name="weight" val="3170" />
+		<set name="price" val="12700" />
+		<stats>
+			<stat type="pDef">32</stat>
+		</stats>
+	</armor>
+	<armor id="15598" name="Vorpal Gauntlets" icon="icon.armor_t94_g_i03">
+		<!-- Appearance for Kamael Male -->
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
+		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="D" />
+		<set name="weight" val="510" />
+		<set name="price" val="33300" />
+		<set name="enchant_enabled" val="1" />
+		<stats>
+			<stat type="pDef">22</stat>
+		</stats>
+	</armor>
+</list>

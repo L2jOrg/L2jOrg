@@ -1,0 +1,1357 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
+    <armor id="29400" name="Elven Stockings" icon="icon.armor_t11_l_i00">
+        <set name="default_action" val="EQUIP"/>
+        <set name="armor_type" val="MAGIC"/>
+        <set name="bodypart" val="legs"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="weight" val="1010"/>
+        <set name="is_tradable" val="false"/>
+        <set name="is_dropable" val="false"/>
+        <set name="is_depositable" val="false"/>
+        <set name="is_freightable" val="true"/>
+        <stats>
+            <stat type="pDef">27</stat>
+            <stat type="maxMp">79</stat>
+        </stats>
+    </armor>
+    <armor id="29401" name="Dark Stockings" icon="icon.armor_t16_l_i00">
+        <set name="default_action" val="EQUIP"/>
+        <set name="armor_type" val="MAGIC"/>
+        <set name="bodypart" val="legs"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="weight" val="1000"/>
+        <set name="is_tradable" val="false"/>
+        <set name="is_dropable" val="false"/>
+        <set name="is_depositable" val="false"/>
+        <set name="is_freightable" val="true"/>
+        <stats>
+            <stat type="pDef">27</stat>
+            <stat type="maxMp">79</stat>
+        </stats>
+    </armor>
+    <armor id="29402" name="Wizard Stockings" icon="icon.armor_t17_l_i00">
+        <set name="default_action" val="EQUIP"/>
+        <set name="armor_type" val="MAGIC"/>
+        <set name="bodypart" val="legs"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="weight" val="990"/>
+        <set name="is_tradable" val="false"/>
+        <set name="is_dropable" val="false"/>
+        <set name="is_depositable" val="false"/>
+        <set name="is_freightable" val="true"/>
+        <stats>
+            <stat type="pDef">27</stat>
+            <stat type="maxMp">79</stat>
+        </stats>
+    </armor>
+    <armor id="29403" name="Stockings of Knowledge" icon="icon.armor_t41_l_i00">
+        <set name="default_action" val="EQUIP"/>
+        <set name="armor_type" val="MAGIC"/>
+        <set name="bodypart" val="legs"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="weight" val="1000"/>
+        <set name="is_tradable" val="false"/>
+        <set name="is_dropable" val="false"/>
+        <set name="is_depositable" val="false"/>
+        <set name="is_freightable" val="true"/>
+        <stats>
+            <stat type="pDef">30</stat>
+            <stat type="maxMp">92</stat>
+        </stats>
+    </armor>
+    <armor id="29404" name="Mithril Stockings" icon="icon.armor_t51_l_i00">
+        <set name="default_action" val="EQUIP"/>
+        <set name="armor_type" val="MAGIC"/>
+        <set name="bodypart" val="legs"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="weight" val="980"/>
+        <set name="is_tradable" val="false"/>
+        <set name="is_dropable" val="false"/>
+        <set name="is_depositable" val="false"/>
+        <set name="is_freightable" val="true"/>
+        <stats>
+            <stat type="pDef">32</stat>
+            <stat type="maxMp">105</stat>
+        </stats>
+    </armor>
+    <armor id="29405" name="Sage's Rags" icon="icon.armor_t44_ul_i00">
+        <!-- One-piece upper and lower body armor. Additional lower body armor cannot be worn while wearing this. -->
+        <set name="default_action" val="EQUIP"/>
+        <set name="armor_type" val="MAGIC"/>
+        <set name="bodypart" val="onepiece"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="weight" val="2580"/>
+        <set name="is_tradable" val="false"/>
+        <set name="is_dropable" val="false"/>
+        <set name="is_depositable" val="false"/>
+        <set name="is_freightable" val="true"/>
+        <stats>
+            <stat type="pDef">90</stat>
+            <stat type="maxMp">320</stat>
+        </stats>
+    </armor>
+    <armor id="29406" name="Short Gloves" icon="icon.armor_t02_g_i00">
+        <set name="default_action" val="EQUIP"/>
+        <set name="bodypart" val="gloves"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="weight" val="660"/>
+        <set name="is_tradable" val="false"/>
+        <set name="is_dropable" val="false"/>
+        <set name="is_depositable" val="false"/>
+        <set name="is_freightable" val="true"/>
+        <stats>
+            <stat type="pDef">9</stat>
+        </stats>
+    </armor>
+    <armor id="29407" name="Gloves" icon="icon.armor_t06_g_i00">
+        <set name="default_action" val="EQUIP"/>
+        <set name="bodypart" val="gloves"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="weight" val="660"/>
+        <set name="is_tradable" val="false"/>
+        <set name="is_dropable" val="false"/>
+        <set name="is_depositable" val="false"/>
+        <set name="is_freightable" val="true"/>
+        <stats>
+            <stat type="pDef">13</stat>
+        </stats>
+    </armor>
+    <armor id="29408" name="Leather Gloves" icon="icon.armor_t32_g_i00">
+        <set name="default_action" val="EQUIP"/>
+        <set name="bodypart" val="gloves"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="weight" val="650"/>
+        <set name="is_tradable" val="false"/>
+        <set name="is_dropable" val="false"/>
+        <set name="is_depositable" val="false"/>
+        <set name="is_freightable" val="true"/>
+        <stats>
+            <stat type="pDef">15</stat>
+        </stats>
+    </armor>
+    <armor id="29409" name="Bracer" icon="icon.armor_t30_g_i00">
+        <set name="default_action" val="EQUIP"/>
+        <set name="bodypart" val="gloves"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="weight" val="650"/>
+        <set name="is_tradable" val="false"/>
+        <set name="is_dropable" val="false"/>
+        <set name="is_depositable" val="false"/>
+        <set name="is_freightable" val="true"/>
+        <stats>
+            <stat type="pDef">17</stat>
+        </stats>
+    </armor>
+    <armor id="29410" name="Short Leather Gloves" icon="icon.armor_t04_g_i00">
+        <set name="default_action" val="EQUIP"/>
+        <set name="bodypart" val="gloves"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="weight" val="660"/>
+        <set name="is_tradable" val="false"/>
+        <set name="is_dropable" val="false"/>
+        <set name="is_depositable" val="false"/>
+        <set name="is_freightable" val="true"/>
+        <stats>
+            <stat type="pDef">11</stat>
+        </stats>
+    </armor>
+    <armor id="29411" name="Sage's Worn Gloves" icon="icon.armor_t44_g_i00">
+        <set name="default_action" val="EQUIP"/>
+        <set name="bodypart" val="gloves"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="weight" val="630"/>
+        <set name="is_tradable" val="false"/>
+        <set name="is_dropable" val="false"/>
+        <set name="is_depositable" val="false"/>
+        <set name="is_freightable" val="true"/>
+        <stats>
+            <stat type="pDef">29</stat>
+        </stats>
+    </armor>
+    <armor id="29412" name="Ogre Power Gauntlets" icon="icon.armor_t45_g_i00">
+        <set name="default_action" val="EQUIP"/>
+        <set name="bodypart" val="gloves"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="weight" val="620"/>
+        <set name="is_tradable" val="false"/>
+        <set name="is_dropable" val="false"/>
+        <set name="is_depositable" val="false"/>
+        <set name="is_freightable" val="true"/>
+        <stats>
+            <stat type="pDef">29</stat>
+        </stats>
+    </armor>
+    <armor id="29413" name="Mithril Gloves" icon="icon.armor_t46_g_i00">
+        <set name="default_action" val="EQUIP"/>
+        <set name="bodypart" val="gloves"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="weight" val="630"/>
+        <set name="is_tradable" val="false"/>
+        <set name="is_dropable" val="false"/>
+        <set name="is_depositable" val="false"/>
+        <set name="is_freightable" val="true"/>
+        <stats>
+            <stat type="pDef">29</stat>
+        </stats>
+    </armor>
+    <armor id="29414" name="Elven Mithril Gloves" icon="icon.armor_t51_g_i00">
+        <set name="default_action" val="EQUIP"/>
+        <set name="bodypart" val="gloves"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="weight" val="640"/>
+        <set name="is_tradable" val="false"/>
+        <set name="is_dropable" val="false"/>
+        <set name="is_depositable" val="false"/>
+        <set name="is_freightable" val="true"/>
+        <stats>
+            <stat type="pDef">27</stat>
+        </stats>
+    </armor>
+    <armor id="29415" name="Brigandine Gauntlets" icon="icon.armor_t43_g_i00">
+        <set name="default_action" val="EQUIP"/>
+        <set name="bodypart" val="gloves"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="weight" val="630"/>
+        <set name="is_tradable" val="false"/>
+        <set name="is_dropable" val="false"/>
+        <set name="is_depositable" val="false"/>
+        <set name="is_freightable" val="true"/>
+        <stats>
+            <stat type="pDef">27</stat>
+        </stats>
+    </armor>
+    <armor id="29416" name="Manticore Skin Gloves" icon="icon.armor_t42_g_i00">
+        <set name="default_action" val="EQUIP"/>
+        <set name="bodypart" val="gloves"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="weight" val="630"/>
+        <set name="is_tradable" val="false"/>
+        <set name="is_dropable" val="false"/>
+        <set name="is_depositable" val="false"/>
+        <set name="is_freightable" val="true"/>
+        <stats>
+            <stat type="pDef">27</stat>
+        </stats>
+    </armor>
+    <armor id="29417" name="Rip Gauntlets" icon="icon.armor_t40_g_i00">
+        <set name="default_action" val="EQUIP"/>
+        <set name="bodypart" val="gloves"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="weight" val="630"/>
+        <set name="is_tradable" val="false"/>
+        <set name="is_dropable" val="false"/>
+        <set name="is_depositable" val="false"/>
+        <set name="is_freightable" val="true"/>
+        <stats>
+            <stat type="pDef">27</stat>
+        </stats>
+    </armor>
+    <armor id="29418" name="Reinforced Leather Gloves" icon="icon.armor_t13_g_i00">
+        <set name="default_action" val="EQUIP"/>
+        <set name="bodypart" val="gloves"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="weight" val="640"/>
+        <set name="is_tradable" val="false"/>
+        <set name="is_dropable" val="false"/>
+        <set name="is_depositable" val="false"/>
+        <set name="is_freightable" val="true"/>
+        <stats>
+            <stat type="pDef">24</stat>
+        </stats>
+    </armor>
+    <armor id="29419" name="Gloves of Knowledge" icon="icon.armor_t41_g_i00">
+        <set name="default_action" val="EQUIP"/>
+        <set name="bodypart" val="gloves"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="weight" val="640"/>
+        <set name="is_tradable" val="false"/>
+        <set name="is_dropable" val="false"/>
+        <set name="is_depositable" val="false"/>
+        <set name="is_freightable" val="true"/>
+        <stats>
+            <stat type="pDef">24</stat>
+        </stats>
+    </armor>
+    <armor id="29420" name="Gauntlets" icon="icon.armor_t10_g_i00">
+        <set name="default_action" val="EQUIP"/>
+        <set name="bodypart" val="gloves"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="weight" val="640"/>
+        <set name="is_tradable" val="false"/>
+        <set name="is_dropable" val="false"/>
+        <set name="is_depositable" val="false"/>
+        <set name="is_freightable" val="true"/>
+        <stats>
+            <stat type="pDef">24</stat>
+        </stats>
+    </armor>
+    <armor id="29421" name="Leather Gauntlets" icon="icon.armor_t18_g_i00">
+        <set name="default_action" val="EQUIP"/>
+        <set name="bodypart" val="gloves"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="weight" val="640"/>
+        <set name="is_tradable" val="false"/>
+        <set name="is_dropable" val="false"/>
+        <set name="is_depositable" val="false"/>
+        <set name="is_freightable" val="true"/>
+        <stats>
+            <stat type="pDef">22</stat>
+        </stats>
+    </armor>
+    <armor id="29422" name="Quality Leather Gloves" icon="icon.armor_t09_g_i00">
+        <set name="default_action" val="EQUIP"/>
+        <set name="bodypart" val="gloves"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="weight" val="650"/>
+        <set name="is_tradable" val="false"/>
+        <set name="is_dropable" val="false"/>
+        <set name="is_depositable" val="false"/>
+        <set name="is_freightable" val="true"/>
+        <stats>
+            <stat type="pDef">19</stat>
+        </stats>
+    </armor>
+    <armor id="29423" name="Leather Sandals" icon="icon.armor_t03_b_i00">
+        <set name="default_action" val="EQUIP"/>
+        <set name="bodypart" val="feet"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="weight" val="1320"/>
+        <set name="is_tradable" val="false"/>
+        <set name="is_dropable" val="false"/>
+        <set name="is_depositable" val="false"/>
+        <set name="is_freightable" val="true"/>
+        <stats>
+            <stat type="pDef">9</stat>
+        </stats>
+    </armor>
+    <armor id="29424" name="Leather Shoes" icon="icon.armor_t05_b_i00">
+        <set name="default_action" val="EQUIP"/>
+        <set name="bodypart" val="feet"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="weight" val="1320"/>
+        <set name="is_tradable" val="false"/>
+        <set name="is_dropable" val="false"/>
+        <set name="is_depositable" val="false"/>
+        <set name="is_freightable" val="true"/>
+        <stats>
+            <stat type="pDef">13</stat>
+        </stats>
+    </armor>
+    <armor id="29425" name="Low Boots" icon="icon.armor_t32_b_i00">
+        <set name="default_action" val="EQUIP"/>
+        <set name="bodypart" val="feet"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="weight" val="1320"/>
+        <set name="is_tradable" val="false"/>
+        <set name="is_dropable" val="false"/>
+        <set name="is_depositable" val="false"/>
+        <set name="is_freightable" val="true"/>
+        <stats>
+            <stat type="pDef">15</stat>
+        </stats>
+    </armor>
+    <armor id="29426" name="Boots" icon="icon.armor_t30_b_i00">
+        <set name="default_action" val="EQUIP"/>
+        <set name="bodypart" val="feet"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="weight" val="1310"/>
+        <set name="is_tradable" val="false"/>
+        <set name="is_dropable" val="false"/>
+        <set name="is_depositable" val="false"/>
+        <set name="is_freightable" val="true"/>
+        <stats>
+            <stat type="pDef">17</stat>
+        </stats>
+    </armor>
+    <armor id="29427" name="Crude Leather Shoes" icon="icon.armor_t04_b_i00">
+        <set name="default_action" val="EQUIP"/>
+        <set name="bodypart" val="feet"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="weight" val="1320"/>
+        <set name="is_tradable" val="false"/>
+        <set name="is_dropable" val="false"/>
+        <set name="is_depositable" val="false"/>
+        <set name="is_freightable" val="true"/>
+        <stats>
+            <stat type="pDef">11</stat>
+        </stats>
+    </armor>
+    <armor id="29428" name="Cotton Shoes" icon="icon.armor_t50_b_i00">
+        <set name="default_action" val="EQUIP"/>
+        <set name="bodypart" val="feet"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="weight" val="1320"/>
+        <set name="is_tradable" val="false"/>
+        <set name="is_dropable" val="false"/>
+        <set name="is_depositable" val="false"/>
+        <set name="is_freightable" val="true"/>
+        <stats>
+            <stat type="pDef">11</stat>
+        </stats>
+    </armor>
+    <armor id="29429" name="Cloth Shoes" icon="icon.armor_t02_b_i00">
+        <set name="default_action" val="EQUIP"/>
+        <set name="bodypart" val="feet"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="weight" val="1320"/>
+        <set name="is_tradable" val="false"/>
+        <set name="is_dropable" val="false"/>
+        <set name="is_depositable" val="false"/>
+        <set name="is_freightable" val="true"/>
+        <stats>
+            <stat type="pDef">9</stat>
+        </stats>
+    </armor>
+    <armor id="29430" name="Apprentice's Shoes" icon="icon.armor_t01_b_i00">
+        <set name="default_action" val="EQUIP"/>
+        <set name="bodypart" val="feet"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="weight" val="1320"/>
+        <set name="is_tradable" val="false"/>
+        <set name="is_dropable" val="false"/>
+        <set name="is_depositable" val="false"/>
+        <set name="is_freightable" val="true"/>
+        <stats>
+            <stat type="pDef">8</stat>
+        </stats>
+    </armor>
+    <armor id="29431" name="Salamander Skin Boots" icon="icon.armor_t45_b_i00">
+        <set name="default_action" val="EQUIP"/>
+        <set name="bodypart" val="feet"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="weight" val="1230"/>
+        <set name="is_tradable" val="false"/>
+        <set name="is_dropable" val="false"/>
+        <set name="is_depositable" val="false"/>
+        <set name="is_freightable" val="true"/>
+        <stats>
+            <stat type="pDef">29</stat>
+        </stats>
+    </armor>
+    <armor id="29432" name="Plate Boots" icon="icon.armor_t46_b_i00">
+        <set name="default_action" val="EQUIP"/>
+        <set name="bodypart" val="feet"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="weight" val="1240"/>
+        <set name="is_tradable" val="false"/>
+        <set name="is_dropable" val="false"/>
+        <set name="is_depositable" val="false"/>
+        <set name="is_freightable" val="true"/>
+        <stats>
+            <stat type="pDef">29</stat>
+        </stats>
+    </armor>
+    <armor id="29433" name="Assault Boots" icon="icon.armor_t44_b_i00">
+        <set name="default_action" val="EQUIP"/>
+        <set name="bodypart" val="feet"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="weight" val="1240"/>
+        <set name="is_tradable" val="false"/>
+        <set name="is_dropable" val="false"/>
+        <set name="is_depositable" val="false"/>
+        <set name="is_freightable" val="true"/>
+        <stats>
+            <stat type="pDef">29</stat>
+        </stats>
+    </armor>
+    <armor id="29434" name="Manticore Skin Boots" icon="icon.armor_t42_b_i00">
+        <set name="default_action" val="EQUIP"/>
+        <set name="bodypart" val="feet"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="weight" val="1260"/>
+        <set name="is_tradable" val="false"/>
+        <set name="is_dropable" val="false"/>
+        <set name="is_depositable" val="false"/>
+        <set name="is_freightable" val="true"/>
+        <stats>
+            <stat type="pDef">27</stat>
+        </stats>
+    </armor>
+    <armor id="29435" name="Brigandine Boots" icon="icon.armor_t43_b_i00">
+        <set name="default_action" val="EQUIP"/>
+        <set name="bodypart" val="feet"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="weight" val="1250"/>
+        <set name="is_tradable" val="false"/>
+        <set name="is_dropable" val="false"/>
+        <set name="is_depositable" val="false"/>
+        <set name="is_freightable" val="true"/>
+        <stats>
+            <stat type="pDef">27</stat>
+        </stats>
+    </armor>
+    <armor id="29436" name="Elven Mithril Boots" icon="icon.armor_t51_b_i00">
+        <set name="default_action" val="EQUIP"/>
+        <set name="bodypart" val="feet"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="weight" val="1250"/>
+        <set name="is_tradable" val="false"/>
+        <set name="is_dropable" val="false"/>
+        <set name="is_depositable" val="false"/>
+        <set name="is_freightable" val="true"/>
+        <stats>
+            <stat type="pDef">27</stat>
+        </stats>
+    </armor>
+    <armor id="29437" name="Boots of Strength" icon="icon.armor_t40_b_i00">
+        <set name="default_action" val="EQUIP"/>
+        <set name="bodypart" val="feet"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="weight" val="1250"/>
+        <set name="is_tradable" val="false"/>
+        <set name="is_dropable" val="false"/>
+        <set name="is_depositable" val="false"/>
+        <set name="is_freightable" val="true"/>
+        <stats>
+            <stat type="pDef">27</stat>
+        </stats>
+    </armor>
+    <armor id="29438" name="Boots of Knowledge" icon="icon.armor_t41_b_i00">
+        <set name="default_action" val="EQUIP"/>
+        <set name="bodypart" val="feet"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="weight" val="1270"/>
+        <set name="is_tradable" val="false"/>
+        <set name="is_dropable" val="false"/>
+        <set name="is_depositable" val="false"/>
+        <set name="is_freightable" val="true"/>
+        <stats>
+            <stat type="pDef">24</stat>
+        </stats>
+    </armor>
+    <armor id="29439" name="Reinforced Leather Boots" icon="icon.armor_t13_b_i00">
+        <set name="default_action" val="EQUIP"/>
+        <set name="bodypart" val="feet"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="weight" val="1280"/>
+        <set name="is_tradable" val="false"/>
+        <set name="is_dropable" val="false"/>
+        <set name="is_depositable" val="false"/>
+        <set name="is_freightable" val="true"/>
+        <stats>
+            <stat type="pDef">24</stat>
+        </stats>
+    </armor>
+    <armor id="29440" name="Iron Boots" icon="icon.armor_t10_b_i00">
+        <set name="default_action" val="EQUIP"/>
+        <set name="bodypart" val="feet"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="weight" val="1280"/>
+        <set name="is_tradable" val="false"/>
+        <set name="is_dropable" val="false"/>
+        <set name="is_depositable" val="false"/>
+        <set name="is_freightable" val="true"/>
+        <stats>
+            <stat type="pDef">24</stat>
+        </stats>
+    </armor>
+    <armor id="29441" name="Blue Buckskin Boots" icon="icon.armor_t18_b_i00">
+        <set name="default_action" val="EQUIP"/>
+        <set name="bodypart" val="feet"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="weight" val="1300"/>
+        <set name="is_tradable" val="false"/>
+        <set name="is_dropable" val="false"/>
+        <set name="is_depositable" val="false"/>
+        <set name="is_freightable" val="true"/>
+        <stats>
+            <stat type="pDef">22</stat>
+        </stats>
+    </armor>
+    <armor id="29442" name="Leather Boots" icon="icon.armor_t09_b_i00">
+        <set name="default_action" val="EQUIP"/>
+        <set name="bodypart" val="feet"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="weight" val="1300"/>
+        <set name="is_tradable" val="false"/>
+        <set name="is_dropable" val="false"/>
+        <set name="is_depositable" val="false"/>
+        <set name="is_freightable" val="true"/>
+        <stats>
+            <stat type="pDef">19</stat>
+        </stats>
+    </armor>
+    <armor id="29443" name="Durable Leather Helmet" icon="icon.armor_leather_helmet_i00">
+        <set name="default_action" val="EQUIP"/>
+        <set name="bodypart" val="head"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="weight" val="640"/>
+        <set name="is_tradable" val="false"/>
+        <set name="is_dropable" val="false"/>
+        <set name="is_depositable" val="false"/>
+        <set name="is_freightable" val="true"/>
+        <stats>
+            <stat type="pDef">26</stat>
+        </stats>
+    </armor>
+    <armor id="29444" name="Cloth Cap" icon="icon.armor_cloth_helmet_i00">
+        <set name="default_action" val="EQUIP"/>
+        <set name="bodypart" val="head"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="weight" val="660"/>
+        <set name="is_tradable" val="false"/>
+        <set name="is_dropable" val="false"/>
+        <set name="is_depositable" val="false"/>
+        <set name="is_freightable" val="true"/>
+        <stats>
+            <stat type="pDef">13</stat>
+        </stats>
+    </armor>
+    <armor id="29445" name="Leather Cap" icon="icon.armor_leather_helmet_i00">
+        <set name="default_action" val="EQUIP"/>
+        <set name="bodypart" val="head"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="weight" val="660"/>
+        <set name="is_tradable" val="false"/>
+        <set name="is_dropable" val="false"/>
+        <set name="is_depositable" val="false"/>
+        <set name="is_freightable" val="true"/>
+        <stats>
+            <stat type="pDef">16</stat>
+        </stats>
+    </armor>
+    <armor id="29446" name="Wooden Helmet" icon="icon.armor_leather_helmet_i00">
+        <set name="default_action" val="EQUIP"/>
+        <set name="bodypart" val="head"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="weight" val="660"/>
+        <set name="is_tradable" val="false"/>
+        <set name="is_dropable" val="false"/>
+        <set name="is_depositable" val="false"/>
+        <set name="is_freightable" val="true"/>
+        <stats>
+            <stat type="pDef">19</stat>
+        </stats>
+    </armor>
+    <armor id="29447" name="Leather Helmet" icon="icon.armor_leather_helmet_i00">
+        <set name="default_action" val="EQUIP"/>
+        <set name="bodypart" val="head"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="weight" val="650"/>
+        <set name="is_tradable" val="false"/>
+        <set name="is_dropable" val="false"/>
+        <set name="is_depositable" val="false"/>
+        <set name="is_freightable" val="true"/>
+        <stats>
+            <stat type="pDef">23</stat>
+        </stats>
+    </armor>
+    <armor id="29448" name="Plate Helmet" icon="icon.armor_leather_helmet_i00">
+        <set name="default_action" val="EQUIP"/>
+        <set name="bodypart" val="head"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="weight" val="630"/>
+        <set name="is_tradable" val="false"/>
+        <set name="is_dropable" val="false"/>
+        <set name="is_depositable" val="false"/>
+        <set name="is_freightable" val="true"/>
+        <stats>
+            <stat type="pDef">44</stat>
+        </stats>
+    </armor>
+    <armor id="29449" name="Brigandine Helmet" icon="icon.armor_leather_helmet_i00">
+        <set name="default_action" val="EQUIP"/>
+        <set name="bodypart" val="head"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="weight" val="630"/>
+        <set name="is_tradable" val="false"/>
+        <set name="is_dropable" val="false"/>
+        <set name="is_depositable" val="false"/>
+        <set name="is_freightable" val="true"/>
+        <stats>
+            <stat type="pDef">41</stat>
+        </stats>
+    </armor>
+    <armor id="29450" name="Headgear" icon="icon.armor_helmet_i00">
+        <set name="default_action" val="EQUIP"/>
+        <set name="bodypart" val="head"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="weight" val="640"/>
+        <set name="is_tradable" val="false"/>
+        <set name="is_dropable" val="false"/>
+        <set name="is_depositable" val="false"/>
+        <set name="is_freightable" val="true"/>
+        <stats>
+            <stat type="pDef">37</stat>
+        </stats>
+    </armor>
+    <armor id="29451" name="Bone Helmet" icon="icon.armor_leather_helmet_i00">
+        <set name="default_action" val="EQUIP"/>
+        <set name="bodypart" val="head"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="weight" val="640"/>
+        <set name="is_tradable" val="false"/>
+        <set name="is_dropable" val="false"/>
+        <set name="is_depositable" val="false"/>
+        <set name="is_freightable" val="true"/>
+        <stats>
+            <stat type="pDef">29</stat>
+        </stats>
+    </armor>
+    <armor id="29452" name="Bronze Helmet" icon="icon.armor_helmet_i00">
+        <set name="default_action" val="EQUIP"/>
+        <set name="bodypart" val="head"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="weight" val="630"/>
+        <set name="is_tradable" val="false"/>
+        <set name="is_dropable" val="false"/>
+        <set name="is_depositable" val="false"/>
+        <set name="is_freightable" val="true"/>
+        <stats>
+            <stat type="pDef">33</stat>
+        </stats>
+    </armor>
+    <armor id="29453" name="Bone Shield" icon="icon.shield_bone_shield_i00">
+        <set name="default_action" val="EQUIP"/>
+        <set name="bodypart" val="lhand"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="weight" val="1380"/>
+        <set name="is_tradable" val="false"/>
+        <set name="is_dropable" val="false"/>
+        <set name="is_depositable" val="false"/>
+        <set name="is_freightable" val="true"/>
+        <stats>
+            <stat type="rEvas">-8</stat>
+            <stat type="rShld">20</stat>
+            <stat type="sDef">90</stat>
+        </stats>
+    </armor>
+    <armor id="29454" name="Round Shield" icon="icon.shield_round_shield_i00">
+        <set name="default_action" val="EQUIP"/>
+        <set name="bodypart" val="lhand"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="weight" val="1390"/>
+        <set name="is_tradable" val="false"/>
+        <set name="is_dropable" val="false"/>
+        <set name="is_depositable" val="false"/>
+        <set name="is_freightable" val="true"/>
+        <stats>
+            <stat type="rEvas">-8</stat>
+            <stat type="rShld">20</stat>
+            <stat type="sDef">79</stat>
+        </stats>
+    </armor>
+    <armor id="29455" name="Skeleton Buckler" icon="icon.shield_skeleton_buckler_i00">
+        <!-- Small wooden shield that perpetrators of mages use. -->
+        <set name="default_action" val="EQUIP"/>
+        <set name="bodypart" val="lhand"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="weight" val="1400"/>
+        <set name="is_tradable" val="false"/>
+        <set name="is_dropable" val="false"/>
+        <set name="is_depositable" val="false"/>
+        <set name="is_freightable" val="true"/>
+        <stats>
+            <stat type="rEvas">-8</stat>
+            <stat type="rShld">20</stat>
+            <stat type="sDef">69</stat>
+        </stats>
+    </armor>
+    <armor id="29456" name="Shield (Novice)" icon="icon.shield_small_shield_i00">
+        <!-- Novice Shield. -->
+        <set name="default_action" val="EQUIP"/>
+        <set name="bodypart" val="lhand"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="weight" val="1410"/>
+        <set name="is_tradable" val="false"/>
+        <set name="is_dropable" val="false"/>
+        <set name="is_depositable" val="false"/>
+        <set name="is_freightable" val="true"/>
+        <stats>
+            <stat type="rEvas">-8</stat>
+            <stat type="rShld">20</stat>
+            <stat type="sDef">68</stat>
+        </stats>
+    </armor>
+    <armor id="29457" name="Buckler" icon="icon.shield_buckler_i00">
+        <set name="default_action" val="EQUIP"/>
+        <set name="bodypart" val="lhand"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="weight" val="1410"/>
+        <set name="is_tradable" val="false"/>
+        <set name="is_dropable" val="false"/>
+        <set name="is_depositable" val="false"/>
+        <set name="is_freightable" val="true"/>
+        <stats>
+            <stat type="rEvas">-8</stat>
+            <stat type="rShld">20</stat>
+            <stat type="sDef">67</stat>
+        </stats>
+    </armor>
+    <armor id="29458" name="Leather Shield" icon="icon.shield_leather_shield_i00">
+        <set name="default_action" val="EQUIP"/>
+        <set name="bodypart" val="lhand"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="weight" val="1430"/>
+        <set name="is_tradable" val="false"/>
+        <set name="is_dropable" val="false"/>
+        <set name="is_depositable" val="false"/>
+        <set name="is_freightable" val="true"/>
+        <stats>
+            <stat type="rEvas">-8</stat>
+            <stat type="rShld">20</stat>
+            <stat type="sDef">47</stat>
+        </stats>
+    </armor>
+    <armor id="29459" name="Small Shield" icon="icon.shield_small_shield_i00">
+        <set name="default_action" val="EQUIP"/>
+        <set name="bodypart" val="lhand"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="weight" val="1420"/>
+        <set name="is_tradable" val="false"/>
+        <set name="is_dropable" val="false"/>
+        <set name="is_depositable" val="false"/>
+        <set name="is_freightable" val="true"/>
+        <stats>
+            <stat type="rEvas">-8</stat>
+            <stat type="rShld">20</stat>
+            <stat type="sDef">56</stat>
+        </stats>
+    </armor>
+    <armor id="29460" name="Plate Shield" icon="icon.shield_plate_shield_i00">
+        <set name="default_action" val="EQUIP"/>
+        <set name="bodypart" val="lhand"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="weight" val="1310"/>
+        <set name="is_tradable" val="false"/>
+        <set name="is_dropable" val="false"/>
+        <set name="is_depositable" val="false"/>
+        <set name="is_freightable" val="true"/>
+        <stats>
+            <stat type="rEvas">-8</stat>
+            <stat type="rShld">20</stat>
+            <stat type="sDef">154</stat>
+        </stats>
+    </armor>
+    <armor id="29461" name="Square Shield" icon="icon.shield_square_shield_i00">
+        <set name="default_action" val="EQUIP"/>
+        <set name="bodypart" val="lhand"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="weight" val="1310"/>
+        <set name="is_tradable" val="false"/>
+        <set name="is_dropable" val="false"/>
+        <set name="is_depositable" val="false"/>
+        <set name="is_freightable" val="true"/>
+        <stats>
+            <stat type="rEvas">-8</stat>
+            <stat type="rShld">20</stat>
+            <stat type="sDef">154</stat>
+        </stats>
+    </armor>
+    <armor id="29462" name="Brigandine Shield" icon="icon.shield_brigandine_shield_i00">
+        <set name="default_action" val="EQUIP"/>
+        <set name="bodypart" val="lhand"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="weight" val="1320"/>
+        <set name="is_tradable" val="false"/>
+        <set name="is_dropable" val="false"/>
+        <set name="is_depositable" val="false"/>
+        <set name="is_freightable" val="true"/>
+        <stats>
+            <stat type="rEvas">-8</stat>
+            <stat type="rShld">20</stat>
+            <stat type="sDef">142</stat>
+        </stats>
+    </armor>
+    <armor id="29463" name="Kite Shield" icon="icon.shield_kite_shield_i00">
+        <set name="default_action" val="EQUIP"/>
+        <set name="bodypart" val="lhand"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="weight" val="1320"/>
+        <set name="is_tradable" val="false"/>
+        <set name="is_dropable" val="false"/>
+        <set name="is_depositable" val="false"/>
+        <set name="is_freightable" val="true"/>
+        <stats>
+            <stat type="rEvas">-8</stat>
+            <stat type="rShld">20</stat>
+            <stat type="sDef">142</stat>
+        </stats>
+    </armor>
+    <armor id="29464" name="Bronze Shield" icon="icon.shield_bronze_shield_i00">
+        <set name="default_action" val="EQUIP"/>
+        <set name="bodypart" val="lhand"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="weight" val="1370"/>
+        <set name="is_tradable" val="false"/>
+        <set name="is_dropable" val="false"/>
+        <set name="is_depositable" val="false"/>
+        <set name="is_freightable" val="true"/>
+        <stats>
+            <stat type="rEvas">-8</stat>
+            <stat type="rShld">20</stat>
+            <stat type="sDef">101</stat>
+        </stats>
+    </armor>
+    <armor id="29465" name="Aspis" icon="icon.shield_aspis_i00">
+        <set name="default_action" val="EQUIP"/>
+        <set name="bodypart" val="lhand"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="weight" val="1350"/>
+        <set name="is_tradable" val="false"/>
+        <set name="is_dropable" val="false"/>
+        <set name="is_depositable" val="false"/>
+        <set name="is_freightable" val="true"/>
+        <stats>
+            <stat type="rEvas">-8</stat>
+            <stat type="rShld">20</stat>
+            <stat type="sDef">114</stat>
+        </stats>
+    </armor>
+    <armor id="29466" name="Hoplon" icon="icon.shield_hoplon_i00">
+        <set name="default_action" val="EQUIP"/>
+        <set name="bodypart" val="lhand"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="weight" val="1340"/>
+        <set name="is_tradable" val="false"/>
+        <set name="is_dropable" val="false"/>
+        <set name="is_depositable" val="false"/>
+        <set name="is_freightable" val="true"/>
+        <stats>
+            <stat type="rEvas">-8</stat>
+            <stat type="rShld">20</stat>
+            <stat type="sDef">128</stat>
+        </stats>
+    </armor>
+    <armor id="29467" name="Blue Diamond Necklace" icon="icon.accessary_blue_diamond_necklace_i00">
+        <set name="default_action" val="EQUIP"/>
+        <set name="bodypart" val="neck"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="weight" val="150"/>
+        <set name="is_tradable" val="false"/>
+        <set name="is_dropable" val="false"/>
+        <set name="is_depositable" val="false"/>
+        <set name="is_freightable" val="true"/>
+        <stats>
+            <stat type="mDef">28</stat>
+        </stats>
+    </armor>
+    <armor id="29468" name="Necklace of Wisdom" icon="icon.accessary_necklace_of_wisdom_i00">
+        <set name="default_action" val="EQUIP"/>
+        <set name="bodypart" val="neck"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="weight" val="150"/>
+        <set name="is_tradable" val="false"/>
+        <set name="is_dropable" val="false"/>
+        <set name="is_depositable" val="false"/>
+        <set name="is_freightable" val="true"/>
+        <stats>
+            <stat type="mDef">25</stat>
+        </stats>
+    </armor>
+    <armor id="29469" name="Necklace of Valor" icon="icon.accessary_necklace_of_valor_i00">
+        <!-- Necklace that is given to young Orcs who have proven their valor. -->
+        <set name="default_action" val="EQUIP"/>
+        <set name="bodypart" val="neck"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="weight" val="150"/>
+        <set name="is_tradable" val="false"/>
+        <set name="is_dropable" val="false"/>
+        <set name="is_depositable" val="false"/>
+        <set name="is_freightable" val="true"/>
+        <stats>
+            <stat type="mDef">21</stat>
+        </stats>
+    </armor>
+    <armor id="29470" name="Necklace of Anguish" icon="icon.accessary_necklace_of_anguish_i00">
+        <!-- Silver necklace engraved with rune characters of anguish. -->
+        <set name="default_action" val="EQUIP"/>
+        <set name="bodypart" val="neck"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="weight" val="150"/>
+        <set name="is_tradable" val="false"/>
+        <set name="is_dropable" val="false"/>
+        <set name="is_depositable" val="false"/>
+        <set name="is_freightable" val="true"/>
+        <stats>
+            <stat type="mDef">21</stat>
+        </stats>
+    </armor>
+    <armor id="29471" name="Necklace (Novice)" icon="icon.accessary_necklace_of_knowledge_i00">
+        <!-- Novice Necklace. -->
+        <set name="default_action" val="EQUIP"/>
+        <set name="bodypart" val="neck"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="weight" val="150"/>
+        <set name="is_tradable" val="false"/>
+        <set name="is_dropable" val="false"/>
+        <set name="is_depositable" val="false"/>
+        <set name="is_freightable" val="true"/>
+        <stats>
+            <stat type="mDef">18</stat>
+        </stats>
+    </armor>
+    <armor id="29472" name="Necklace of Knowledge" icon="icon.accessary_necklace_of_knowledge_i00">
+        <!-- Silver necklace engraved with rune characters of knowledge. -->
+        <set name="default_action" val="EQUIP"/>
+        <set name="bodypart" val="neck"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="weight" val="150"/>
+        <set name="is_tradable" val="false"/>
+        <set name="is_dropable" val="false"/>
+        <set name="is_depositable" val="false"/>
+        <set name="is_freightable" val="true"/>
+        <stats>
+            <stat type="mDef">18</stat>
+        </stats>
+    </armor>
+    <armor id="29473" name="Necklace of Courage" icon="icon.accessary_necklace_of_courage_i00">
+        <!-- Necklace that is given to young Orcs who have proven their courage. -->
+        <set name="default_action" val="EQUIP"/>
+        <set name="bodypart" val="neck"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="weight" val="150"/>
+        <set name="is_tradable" val="false"/>
+        <set name="is_dropable" val="false"/>
+        <set name="is_depositable" val="false"/>
+        <set name="is_freightable" val="true"/>
+        <stats>
+            <stat type="mDef">15</stat>
+        </stats>
+    </armor>
+    <armor id="29474" name="Magic Necklace" icon="icon.accessary_necklace_of_magic_i00">
+        <set name="default_action" val="EQUIP"/>
+        <set name="bodypart" val="neck"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="weight" val="150"/>
+        <set name="is_tradable" val="false"/>
+        <set name="is_dropable" val="false"/>
+        <set name="is_depositable" val="false"/>
+        <set name="is_freightable" val="true"/>
+        <stats>
+            <stat type="mDef">15</stat>
+        </stats>
+    </armor>
+    <armor id="29475" name="Dark Necklace" icon="icon.accessary_necklace_of_darkness_i00">
+        <set name="default_action" val="EQUIP"/>
+        <set name="bodypart" val="neck"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="weight" val="150"/>
+        <set name="is_tradable" val="false"/>
+        <set name="is_dropable" val="false"/>
+        <set name="is_depositable" val="false"/>
+        <set name="is_freightable" val="true"/>
+        <stats>
+            <stat type="mDef">48</stat>
+        </stats>
+    </armor>
+    <armor id="29476" name="Necklace of Devotion" icon="icon.accessary_necklace_of_devotion_i00">
+        <set name="default_action" val="EQUIP"/>
+        <set name="bodypart" val="neck"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="weight" val="150"/>
+        <set name="is_tradable" val="false"/>
+        <set name="is_dropable" val="false"/>
+        <set name="is_depositable" val="false"/>
+        <set name="is_freightable" val="true"/>
+        <stats>
+            <stat type="mDef">32</stat>
+        </stats>
+    </armor>
+    <armor id="29477" name="Magic Necklace" icon="icon.accessary_enchanted_necklace_i00">
+        <set name="default_action" val="EQUIP"/>
+        <set name="bodypart" val="neck"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="weight" val="150"/>
+        <set name="is_tradable" val="false"/>
+        <set name="is_dropable" val="false"/>
+        <set name="is_depositable" val="false"/>
+        <set name="is_freightable" val="true"/>
+        <stats>
+            <stat type="mDef">36</stat>
+        </stats>
+    </armor>
+    <armor id="29478" name="Near Forest Necklace" icon="icon.accessary_near_forest_necklace_i00">
+        <set name="default_action" val="EQUIP"/>
+        <set name="bodypart" val="neck"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="weight" val="150"/>
+        <set name="is_tradable" val="false"/>
+        <set name="is_dropable" val="false"/>
+        <set name="is_depositable" val="false"/>
+        <set name="is_freightable" val="true"/>
+        <stats>
+            <stat type="mDef">40</stat>
+        </stats>
+    </armor>
+    <armor id="29479" name="Elven Necklace" icon="icon.accessary_elven_necklace_i00">
+        <set name="default_action" val="EQUIP"/>
+        <set name="bodypart" val="neck"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="weight" val="150"/>
+        <set name="is_tradable" val="false"/>
+        <set name="is_dropable" val="false"/>
+        <set name="is_depositable" val="false"/>
+        <set name="is_freightable" val="true"/>
+        <stats>
+            <stat type="mDef">45</stat>
+        </stats>
+    </armor>
+    <armor id="29480" name="Cat's Eye" icon="icon.accessary_catseye_earing_i00">
+        <set name="default_action" val="EQUIP"/>
+        <set name="bodypart" val="rear;lear"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="weight" val="150"/>
+        <set name="is_tradable" val="false"/>
+        <set name="is_dropable" val="false"/>
+        <set name="is_depositable" val="false"/>
+        <set name="is_freightable" val="true"/>
+        <stats>
+            <stat type="mDef">19</stat>
+        </stats>
+    </armor>
+    <armor id="29481" name="Coral Earring" icon="icon.accessary_coral_earing_i00">
+        <set name="default_action" val="EQUIP"/>
+        <set name="bodypart" val="rear;lear"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="weight" val="150"/>
+        <set name="is_tradable" val="false"/>
+        <set name="is_dropable" val="false"/>
+        <set name="is_depositable" val="false"/>
+        <set name="is_freightable" val="true"/>
+        <stats>
+            <stat type="mDef">21</stat>
+        </stats>
+    </armor>
+    <armor id="29482" name="Apprentice's Earring" icon="icon.accessary_apprentices_earing_i00">
+        <set name="default_action" val="EQUIP"/>
+        <set name="bodypart" val="rear;lear"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="weight" val="150"/>
+        <set name="is_tradable" val="false"/>
+        <set name="is_dropable" val="false"/>
+        <set name="is_depositable" val="false"/>
+        <set name="is_freightable" val="true"/>
+        <stats>
+            <stat type="mDef">11</stat>
+        </stats>
+    </armor>
+    <armor id="29483" name="Mage Earring" icon="icon.accessary_mage_earing_i00">
+        <set name="default_action" val="EQUIP"/>
+        <set name="bodypart" val="rear;lear"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="weight" val="150"/>
+        <set name="is_tradable" val="false"/>
+        <set name="is_dropable" val="false"/>
+        <set name="is_depositable" val="false"/>
+        <set name="is_freightable" val="true"/>
+        <stats>
+            <stat type="mDef">13</stat>
+        </stats>
+    </armor>
+    <armor id="29484" name="Earring of Strength" icon="icon.accessary_earing_of_strength_i00">
+        <set name="default_action" val="EQUIP"/>
+        <set name="bodypart" val="rear;lear"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="weight" val="150"/>
+        <set name="is_tradable" val="false"/>
+        <set name="is_dropable" val="false"/>
+        <set name="is_depositable" val="false"/>
+        <set name="is_freightable" val="true"/>
+        <stats>
+            <stat type="mDef">16</stat>
+        </stats>
+    </armor>
+    <armor id="29485" name="Earring of Wisdom" icon="icon.accessary_earing_of_wisdom_i00">
+        <set name="default_action" val="EQUIP"/>
+        <set name="bodypart" val="rear;lear"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="weight" val="150"/>
+        <set name="is_tradable" val="false"/>
+        <set name="is_dropable" val="false"/>
+        <set name="is_depositable" val="false"/>
+        <set name="is_freightable" val="true"/>
+        <stats>
+            <stat type="mDef">16</stat>
+        </stats>
+    </armor>
+    <armor id="29486" name="Earring (Novice)" icon="icon.accessary_mage_earing_i00">
+        <!-- Novice Earring. -->
+        <set name="default_action" val="EQUIP"/>
+        <set name="bodypart" val="rear;lear"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="weight" val="150"/>
+        <set name="is_tradable" val="false"/>
+        <set name="is_dropable" val="false"/>
+        <set name="is_depositable" val="false"/>
+        <set name="is_freightable" val="true"/>
+        <stats>
+            <stat type="mDef">13</stat>
+        </stats>
+    </armor>
+    <armor id="29487" name="Onyx Beast's Eye Earring" icon="icon.accessary_onyxbeastseye_earing_i00">
+        <set name="default_action" val="EQUIP"/>
+        <set name="bodypart" val="rear;lear"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="weight" val="150"/>
+        <set name="is_tradable" val="false"/>
+        <set name="is_dropable" val="false"/>
+        <set name="is_depositable" val="false"/>
+        <set name="is_freightable" val="true"/>
+        <stats>
+            <stat type="mDef">36</stat>
+        </stats>
+    </armor>
+    <armor id="29488" name="Red Crescent" icon="icon.accessary_red_cresent_earing_i00">
+        <set name="default_action" val="EQUIP"/>
+        <set name="bodypart" val="rear;lear"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="weight" val="150"/>
+        <set name="is_tradable" val="false"/>
+        <set name="is_dropable" val="false"/>
+        <set name="is_depositable" val="false"/>
+        <set name="is_freightable" val="true"/>
+        <stats>
+            <stat type="mDef">24</stat>
+        </stats>
+    </armor>
+    <armor id="29489" name="Earring of Magic" icon="icon.accessary_enchanted_earing_i00">
+        <set name="default_action" val="EQUIP"/>
+        <set name="bodypart" val="rear;lear"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="weight" val="150"/>
+        <set name="is_tradable" val="false"/>
+        <set name="is_dropable" val="false"/>
+        <set name="is_depositable" val="false"/>
+        <set name="is_freightable" val="true"/>
+        <stats>
+            <stat type="mDef">27</stat>
+        </stats>
+    </armor>
+    <armor id="29490" name="Tiger's Eye" icon="icon.accessary_tigerseye_earing_i00">
+        <set name="default_action" val="EQUIP"/>
+        <set name="bodypart" val="rear;lear"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="weight" val="150"/>
+        <set name="is_tradable" val="false"/>
+        <set name="is_dropable" val="false"/>
+        <set name="is_depositable" val="false"/>
+        <set name="is_freightable" val="true"/>
+        <stats>
+            <stat type="mDef">30</stat>
+        </stats>
+    </armor>
+    <armor id="29491" name="Elven Earring" icon="icon.accessary_elven_earing_i00">
+        <set name="default_action" val="EQUIP"/>
+        <set name="bodypart" val="rear;lear"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="weight" val="150"/>
+        <set name="is_tradable" val="false"/>
+        <set name="is_dropable" val="false"/>
+        <set name="is_depositable" val="false"/>
+        <set name="is_freightable" val="true"/>
+        <stats>
+            <stat type="mDef">34</stat>
+        </stats>
+    </armor>
+    <armor id="29492" name="Ring of Wisdom" icon="icon.accessary_ring_of_wisdom_i00">
+        <set name="default_action" val="EQUIP"/>
+        <set name="bodypart" val="rfinger;lfinger"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="weight" val="150"/>
+        <set name="is_tradable" val="false"/>
+        <set name="is_dropable" val="false"/>
+        <set name="is_depositable" val="false"/>
+        <set name="is_freightable" val="true"/>
+        <stats>
+            <stat type="mDef">12</stat>
+        </stats>
+    </armor>
+    <armor id="29493" name="Blue Coral Ring" icon="icon.accessary_blue_coral_ring_i00">
+        <set name="default_action" val="EQUIP"/>
+        <set name="bodypart" val="rfinger;lfinger"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="weight" val="150"/>
+        <set name="is_tradable" val="false"/>
+        <set name="is_dropable" val="false"/>
+        <set name="is_depositable" val="false"/>
+        <set name="is_freightable" val="true"/>
+        <stats>
+            <stat type="mDef">14</stat>
+        </stats>
+    </armor>
+    <armor id="29494" name="Ring of Raccoon" icon="icon.accessary_ring_of_raccoon_i00">
+        <!-- Ring given to apprentices of the Bronze Key Guild. -->
+        <set name="default_action" val="EQUIP"/>
+        <set name="bodypart" val="rfinger;lfinger"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="weight" val="150"/>
+        <set name="is_tradable" val="false"/>
+        <set name="is_dropable" val="false"/>
+        <set name="is_depositable" val="false"/>
+        <set name="is_freightable" val="true"/>
+        <stats>
+            <stat type="mDef">11</stat>
+        </stats>
+    </armor>
+    <armor id="29495" name="Ring of Firefly" icon="icon.accessary_ring_of_firefly_i00">
+        <!-- Ring given to apprentices of the Black Anvil Guild. -->
+        <set name="default_action" val="EQUIP"/>
+        <set name="bodypart" val="rfinger;lfinger"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="weight" val="150"/>
+        <set name="is_tradable" val="false"/>
+        <set name="is_dropable" val="false"/>
+        <set name="is_depositable" val="false"/>
+        <set name="is_freightable" val="true"/>
+        <stats>
+            <stat type="mDef">11</stat>
+        </stats>
+    </armor>
+    <armor id="29496" name="Ring of Anguish" icon="icon.accessary_ring_of_anguish_i00">
+        <!-- Gold ring with engraved rune characters of anguish. -->
+        <set name="default_action" val="EQUIP"/>
+        <set name="bodypart" val="rfinger;lfinger"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="weight" val="150"/>
+        <set name="is_tradable" val="false"/>
+        <set name="is_dropable" val="false"/>
+        <set name="is_depositable" val="false"/>
+        <set name="is_freightable" val="true"/>
+        <stats>
+            <stat type="mDef">11</stat>
+        </stats>
+    </armor>
+    <armor id="29497" name="Ring (Novice)" icon="icon.accessary_ring_of_knowledge_i00">
+        <!-- Novice Ring. -->
+        <set name="default_action" val="EQUIP"/>
+        <set name="bodypart" val="rfinger;lfinger"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="weight" val="150"/>
+        <set name="is_tradable" val="false"/>
+        <set name="is_dropable" val="false"/>
+        <set name="is_depositable" val="false"/>
+        <set name="is_freightable" val="true"/>
+        <stats>
+            <stat type="mDef">10</stat>
+        </stats>
+    </armor>
+    <armor id="29498" name="Ring of Knowledge" icon="icon.accessary_ring_of_knowledge_i00">
+        <!-- Gold ring with delicately engraved rune characters of knowledge. -->
+        <set name="default_action" val="EQUIP"/>
+        <set name="bodypart" val="rfinger;lfinger"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="weight" val="150"/>
+        <set name="is_tradable" val="false"/>
+        <set name="is_dropable" val="false"/>
+        <set name="is_depositable" val="false"/>
+        <set name="is_freightable" val="true"/>
+        <stats>
+            <stat type="mDef">9</stat>
+        </stats>
+    </armor>
+    <armor id="29499" name="Magic Ring" icon="icon.accessary_magic_ring_i00">
+        <set name="default_action" val="EQUIP"/>
+        <set name="bodypart" val="rfinger;lfinger"/>
+        <set name="immediate_effect" val="true"/>
+        <set name="weight" val="150"/>
+        <set name="is_tradable" val="false"/>
+        <set name="is_dropable" val="false"/>
+        <set name="is_depositable" val="false"/>
+        <set name="is_freightable" val="true"/>
+        <stats>
+            <stat type="mDef">7</stat>
+        </stats>
+    </armor>
+</list>

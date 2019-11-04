@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
+    <item id="47579" name="Christmas Party Herb"  icon="BranchSys.icon.br_xmas_present_i00">
+        <!-- XP and SP gain by 10%, P./M. Atk. +15%, P./M. Def. +15%, P./M. Atk. Spd. +10%, Speed +10. Duration: 2 minutes. The effect is removed if the game is reloaded. -->
+        <set name="is_tradable" val="false"/>
+        <set name="is_destroyable" val="false"/>
+        <set name="is_depositable" val="false"/>
+        <set name="is_sellable" val="false"/>
+    </item>
+</list>
