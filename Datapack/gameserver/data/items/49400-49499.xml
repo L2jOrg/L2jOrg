@@ -2,7 +2,6 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
     <weapon id="49400" name="Conjuror's Staff" icon="icon.weapon_conjure_staff_i01">
         <!-- <Soul Crystal Enhancement>. Increases MP Recovery Bonus by 20%. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
@@ -24,7 +23,6 @@
     </weapon>
     <weapon id="49401" name="Staff of Mana" icon="icon.weapon_staff_of_mana_i01">
         <!-- <Soul Crystal Enhancement>. M. Atk. + 20. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
@@ -46,7 +44,6 @@
     </weapon>
     <weapon id="49402" name="Staff of Mana" icon="icon.weapon_staff_of_mana_i01">
         <!-- <Soul Crystal Enhancement>. Increases Casting Spd. by 6%. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
@@ -68,7 +65,6 @@
     </weapon>
     <weapon id="49403" name="Staff of Mana" icon="icon.weapon_staff_of_mana_i01">
         <!-- <Soul Crystal Enhancement>. Increases MP Recovery Bonus by 20%. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
@@ -90,7 +86,6 @@
     </weapon>
     <weapon id="49404" name="Staff of Magic" icon="icon.weapon_staff_of_magicpower_i01">
         <!-- <Soul Crystal Enhancement>. M. Atk. + 20. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
@@ -112,7 +107,6 @@
     </weapon>
     <weapon id="49405" name="Staff of Magic" icon="icon.weapon_staff_of_magicpower_i01">
         <!-- <Soul Crystal Enhancement>. Increases Casting Spd. by 6%. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
@@ -134,7 +128,6 @@
     </weapon>
     <weapon id="49406" name="Staff of Magic" icon="icon.weapon_staff_of_magicpower_i01">
         <!-- <Soul Crystal Enhancement>. Increases MP Recovery Bonus by 20%. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
@@ -156,7 +149,6 @@
     </weapon>
     <weapon id="49407" name="Atuba Hammer" icon="icon.weapon_atuba_hammer_i01">
         <!-- <Soul Crystal Enhancement>. M. Atk. + 20. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
@@ -177,7 +169,6 @@
     </weapon>
     <weapon id="49408" name="Atuba Hammer" icon="icon.weapon_atuba_hammer_i01">
         <!-- <Soul Crystal Enhancement>. Increases Casting Spd. by 6%. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
@@ -198,7 +189,6 @@
     </weapon>
     <weapon id="49409" name="Atuba Hammer" icon="icon.weapon_atuba_hammer_i01">
         <!-- <Soul Crystal Enhancement>. Increases MP Recovery Bonus by 20%. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
@@ -219,7 +209,6 @@
     </weapon>
     <weapon id="49410" name="Ghost Staff" icon="icon.weapon_ghost_staff_i01">
         <!-- <Soul Crystal Enhancement>. M. Atk. + 20. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
@@ -241,7 +230,6 @@
     </weapon>
     <weapon id="49411" name="Ghost Staff" icon="icon.weapon_ghost_staff_i01">
         <!-- <Soul Crystal Enhancement>. Increases Casting Spd. by 6%. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
@@ -263,7 +251,6 @@
     </weapon>
     <weapon id="49412" name="Ghost Staff" icon="icon.weapon_ghost_staff_i01">
         <!-- <Soul Crystal Enhancement>. Increases MP Recovery Bonus by 20%. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
@@ -285,7 +272,6 @@
     </weapon>
     <weapon id="49413" name="Atuba Mace" icon="icon.weapon_atuba_mace_i01">
         <!-- <Soul Crystal Enhancement>. M. Atk. + 20. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
@@ -306,7 +292,6 @@
     </weapon>
     <weapon id="49414" name="Atuba Mace" icon="icon.weapon_atuba_mace_i01">
         <!-- <Soul Crystal Enhancement>. Increases Casting Spd. by 6%. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
@@ -327,7 +312,6 @@
     </weapon>
     <weapon id="49415" name="Atuba Mace" icon="icon.weapon_atuba_mace_i01">
         <!-- <Soul Crystal Enhancement>. Increases MP Recovery Bonus by 20%. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
@@ -451,7 +435,6 @@
     </item>
     <weapon id="49436" name="Blue Mackerel: One-handed Sword" icon="icon.wp_fishing1">
         <!-- 7-day item. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
@@ -471,7 +454,6 @@
     </weapon>
     <weapon id="49437" name="Trumpetfish: Dagger" icon="icon.wp_fishing2">
         <!-- 7-day item. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DAGGER"/>
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
@@ -492,7 +474,6 @@
     </weapon>
     <weapon id="49438" name="Shark: Two-handed Sword" icon="icon.wp_fishing3">
         <!-- 7-day item. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
@@ -512,7 +493,6 @@
     </weapon>
     <weapon id="49439" name="Squid: Spear" icon="icon.wp_fishing4">
         <!-- 7-day item. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="POLE"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
@@ -536,7 +516,6 @@
     </weapon>
     <weapon id="49440" name="Sea Horse: Two-handed Magic Blunt Weapon" icon="icon.wp_fishing5">
         <!-- 7-day item. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
@@ -557,7 +536,6 @@
     </weapon>
     <weapon id="49441" name="Lobster: Fist Weapon" icon="icon.wp_fishing6">
         <!-- 7-day item. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DUALFIST"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
@@ -578,7 +556,6 @@
     </weapon>
     <weapon id="49442" name="Giant Crab: Bow" icon="icon.wp_fishing7">
         <!-- 7-day item. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BOW"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
@@ -600,7 +577,6 @@
     </weapon>
     <armor id="49443" name="Turtle: Shield" icon="icon.wp_fishing10">
         <!-- 7-day item. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="lhand"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="1320"/>
@@ -614,7 +590,6 @@
     </armor>
     <weapon id="49444" name="Blue Mackerel: Dualsword" icon="icon.wp_fishing11">
         <!-- 7-day item. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DUAL"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
@@ -634,7 +609,6 @@
     </weapon>
     <weapon id="49445" name="Blue Mackerel: One-handed Blunt Weapon" icon="icon.wp_fishing1">
         <!-- 7-day item. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
@@ -726,7 +700,6 @@
     </item>
     <armor id="49458" name="Agathion - Pisces" icon="icon.agathion_magmeld_teleport">
         <!-- Bracelet that can be used to summon Agathion - Pisces. 15-day item. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. <Active Skill>. Agathion Teleport: grants the ability to teleport to Gludio / Dion / Giran / Oren. (Cooldown: 60 minutes) -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="agathion"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="150"/>
@@ -743,7 +716,6 @@
     </armor>
     <armor id="49459" name="Agathion - Cancer" icon="icon.agathion_magmeld_teleport">
         <!-- Bracelet that can be used to summon Agathion - Cancer. 15-day item. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. <Active Skill>. Agathion Teleport: grants the ability to teleport to Gludio / Dion / Giran / Oren. (Cooldown: 60 minutes) -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="lbracelet"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="150"/>
@@ -809,7 +781,6 @@
         </skills>
     </item>
     <weapon id="49465" name="Fishing Rod" icon="icon.weapon_fishing_rod_i03">
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="FISHINGROD"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
@@ -837,7 +808,6 @@
     </item>
     <armor id="49467" name="Fire Dragon Pendant" icon="icon.bm_pendant_pve">
         <!-- Pendant holding the sealed power of Fire Dragon. Can be enchanted up to +10 using Pendant Polish / Shining Pendant Polish. Starting from +4 adds passive skills, when enchanted to +9 grants special skills. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="underwear"/>
         <set name="immediate_effect" val="true"/>
         <set name="enchant_enabled" val="10"/>
@@ -848,7 +818,6 @@
     </armor>
     <armor id="49468" name="Land Dragon Pendant" icon="icon.bm_pendant_pvp">
         <!-- Pendant holding the sealed power of Land Dragon. Can be enchanted up to +10 using Pendant Polish / Shining Pendant Polish. Starting from +4 adds passive skills, when enchanted to +9 grants special skills. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="underwear"/>
         <set name="immediate_effect" val="true"/>
         <set name="enchant_enabled" val="10"/>
@@ -904,7 +873,6 @@
     </item>
     <armor id="49477" name="Queen Ant's Ring" icon="icon.accessory_ring_of_queen_ant_i00">
         <!-- 15-day item. MP +9, Poison Resistance/Poison Attack Rate +10%, P./M. Accuracy +1, P./M. Atk. +4%. The effect doesn't stack if two identical rings are worn. Cannot be enchanted. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="rfinger;lfinger"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="150"/>
@@ -1000,7 +968,6 @@
     </item>
     <armor id="49493" name="Orfen's Earring" icon="icon.accessory_earring_of_orfen_i00">
         <!-- 15-day item. MP +19, Mental Resistance and Atk. Rate +5%, Hold Resistance and Atk. Rate +10%, Healing Power +2%, Skill MP Consumption -2%. The effect doesn't stack if two identical earrings are worn. Cannot be enchanted. Cannot be exchanged, dropped or sold. Can be stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="rear;lear"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="150"/>
@@ -1021,7 +988,6 @@
         <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
     </item>
     <weapon id="49495" name="Hero's Dual Swords" icon="icon.weapon_r_dualsword_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DUAL"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>

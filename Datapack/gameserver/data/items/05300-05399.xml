@@ -2,7 +2,6 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
     <armor id="5301" name="Sealed Tallum Leather Armor" icon="icon.armor_t78_ul_i02">
         <!-- Sealed Tallum Leather Armor. The seal can be removed by a blacksmith in any village. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="LIGHT"/>
         <set name="bodypart" val="onepiece"/>
         <set name="immediate_effect" val="true"/>
@@ -18,7 +17,6 @@
     </armor>
     <armor id="5304" name="Sealed Tallum Tunic" icon="icon.armor_t79_u_i02">
         <!-- Sealed Tallum Tunic. The seal can be removed by a blacksmith in any village. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="MAGIC"/>
         <set name="bodypart" val="chest"/>
         <set name="immediate_effect" val="true"/>
@@ -35,7 +33,6 @@
     </armor>
     <armor id="5305" name="Sealed Tallum Stockings" icon="icon.armor_t79_l_i02">
         <!-- Sealed Tallum Stockings. The seal can be removed by a blacksmith in any village. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="MAGIC"/>
         <set name="bodypart" val="legs"/>
         <set name="immediate_effect" val="true"/>
@@ -52,7 +49,6 @@
     </armor>
     <armor id="5308" name="Sealed Dark Crystal Robe" icon="icon.armor_t76_ul_i02">
         <!-- Sealed Dark Crystal Robe. The seal can be removed by a blacksmith in any village. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="MAGIC"/>
         <set name="bodypart" val="onepiece"/>
         <set name="immediate_effect" val="true"/>
@@ -69,7 +65,6 @@
     </armor>
     <armor id="5311" name="Sealed Armor of Nightmare" icon="icon.armor_t80_ul_i02">
         <!-- Sealed Armor of Nightmare. The seal can be removed by a blacksmith in any village. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="HEAVY"/>
         <set name="bodypart" val="onepiece"/>
         <set name="immediate_effect" val="true"/>
@@ -85,7 +80,6 @@
     </armor>
     <armor id="5312" name="Sealed Helm of Nightmare" icon="icon.armor_leather_helmet_i02">
         <!-- Sealed Helm of Nightmare. The seal can be removed by a blacksmith in any village. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="head"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="163"/>
@@ -100,7 +94,6 @@
     </armor>
     <armor id="5313" name="Sealed Gauntlets of Nightmare" icon="icon.armor_t80_g_i02">
         <!-- Sealed Gauntlets of Nightmare. The seal can be removed by a blacksmith in any village. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="gloves"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="108"/>
@@ -115,7 +108,6 @@
     </armor>
     <armor id="5314" name="Sealed Boots of Nightmare" icon="icon.armor_t80_b_i02">
         <!-- Sealed Boots of Nightmare. The seal can be removed by a blacksmith in any village. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="feet"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="108"/>
@@ -130,7 +122,6 @@
     </armor>
     <armor id="5315" name="Sealed Shield of Nightmare" icon="icon.shield_shield_of_nightmare_i02">
         <!-- Sealed Shield of Nightmare. The seal can be removed by a blacksmith in any village. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="lhand"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="114"/>
@@ -147,7 +138,6 @@
     </armor>
     <armor id="5316" name="Sealed Majestic Plate Armor" icon="icon.armor_t83_ul_i02">
         <!-- Sealed Majestic Plate Armor. The seal can be removed by a blacksmith in any village. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="HEAVY"/>
         <set name="bodypart" val="onepiece"/>
         <set name="immediate_effect" val="true"/>
@@ -163,7 +153,6 @@
     </armor>
     <armor id="5317" name="Sealed Majestic Circlet" icon="icon.armor_leather_helmet_i02">
         <!-- Sealed Majestic Circlet. The seal can be removed by a blacksmith in any village. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="head"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="163"/>
@@ -178,7 +167,6 @@
     </armor>
     <armor id="5318" name="Sealed Majestic Gauntlets" icon="icon.armor_t83_g_i02">
         <!-- Sealed Majestic Gauntlets. The seal can be removed by a blacksmith in any village. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="gloves"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="108"/>
@@ -193,7 +181,6 @@
     </armor>
     <armor id="5319" name="Sealed Majestic Boots" icon="icon.armor_t83_b_i02">
         <!-- Sealed Majestic Boots. The seal can be removed by a blacksmith in any village. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="feet"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="108"/>
@@ -208,7 +195,6 @@
     </armor>
     <armor id="5320" name="Sealed Leather Armor of Nightmare" icon="icon.armor_t81_ul_i02">
         <!-- Sealed Leather Armor of Nightmare. The seal can be removed by a blacksmith in any village. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="LIGHT"/>
         <set name="bodypart" val="onepiece"/>
         <set name="immediate_effect" val="true"/>
@@ -224,7 +210,6 @@
     </armor>
     <armor id="5323" name="Sealed Majestic Leather Armor" icon="icon.armor_t84_ul_i02">
         <!-- Sealed Majestic Leather Armor. The seal can be removed by a blacksmith in any village. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="LIGHT"/>
         <set name="bodypart" val="onepiece"/>
         <set name="immediate_effect" val="true"/>
@@ -240,7 +225,6 @@
     </armor>
     <armor id="5326" name="Sealed Robe of Nightmare" icon="icon.armor_t82_ul_i02">
         <!-- Sealed Robe of Nightmare. The seal can be removed by a blacksmith in any village. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="MAGIC"/>
         <set name="bodypart" val="onepiece"/>
         <set name="immediate_effect" val="true"/>
@@ -257,7 +241,6 @@
     </armor>
     <armor id="5329" name="Sealed Majestic Robe" icon="icon.armor_t85_ul_i02">
         <!-- Sealed Majestic Robe. The seal can be removed by a blacksmith in any village. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="MAGIC"/>
         <set name="bodypart" val="onepiece"/>
         <set name="immediate_effect" val="true"/>

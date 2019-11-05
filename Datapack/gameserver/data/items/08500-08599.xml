@@ -23,7 +23,6 @@
     </item>
     <armor id="8559" name="Coronet" icon="icon.accessory_flower_cap_i00">
         <!-- Hair accessory worn by a bride at her wedding ceremony. Female only. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="hairall"/>
         <set name="immediate_effect" val="true"/>
         <set name="enchant_enabled" val="7"/>
@@ -35,7 +34,6 @@
     </armor>
     <armor id="8560" name="Teddy Bear Hat" icon="icon.accessory_bear_cap_i00">
         <!-- Fun, bear-shaped hair accessory. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="hairall"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="10"/>
@@ -45,7 +43,6 @@
     </armor>
     <armor id="8561" name="Piggy Hat" icon="icon.accessory_pig_cap_i00">
         <!-- Fun, pig-shaped hair accessory. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="hairall"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="10"/>
@@ -55,7 +52,6 @@
     </armor>
     <armor id="8562" name="Jester Hat" icon="icon.accessory_jester_cap_i00">
         <!-- Festive Jester Hat with a split top. Occupies 2 Hair Accessory slots. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="hairall"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="10"/>
@@ -65,7 +61,6 @@
     </armor>
     <armor id="8563" name="Wizard Hat" icon="icon.accessory_magic_cap_i00">
         <!-- A Wizard Hat with a wide brim and bent tip. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="hairall"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="10"/>
@@ -75,7 +70,6 @@
     </armor>
     <armor id="8564" name="Dapper Cap" icon="icon.accessory_dandy_cap_i00">
         <!-- Stylish Cap with a visor. Occupies 2 Hair Accessory slots. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="hairall"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="10"/>
@@ -85,7 +79,6 @@
     </armor>
     <armor id="8569" name="Half Face Mask" icon="icon.accessory_half_face_i00">
         <!-- An accessory covering half of the wearer's face. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="hair"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="10"/>

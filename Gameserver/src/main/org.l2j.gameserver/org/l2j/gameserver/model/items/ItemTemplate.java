@@ -32,6 +32,7 @@ import java.util.function.Consumer;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
+import static java.util.Objects.nonNull;
 import static org.l2j.gameserver.util.GameUtils.*;
 
 /**
@@ -601,7 +602,7 @@ public abstract class ItemTemplate extends ListenersContainer implements IIdenti
      * @return {@code List} of {@link ItemSkillHolder} if item has skills, {@code null} otherwise
      */
     public final List<ItemSkillHolder> getSkills(ItemSkillType type) {
-        return _skills != null ? _skills.stream().filter(sk -> sk.getType() == type).collect(Collectors.toList()) : null;
+        return nonNull(_skills) ? _skills.stream().filter(sk -> sk.getType() == type).collect(Collectors.toList()) : Collections.emptyList();
     }
 
     /**

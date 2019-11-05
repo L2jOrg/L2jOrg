@@ -52,21 +52,18 @@
     </item>
     <armor id="91210" name="Black Sayha's Cloak" icon="icon.sayha2017_back_i01">
         <!-- Cloak filled with Sayha's power. With the help of Sayha's Cloak Enchantment Scroll can be enchanted. Depending on the enchantment value, activates various abilities. Cannot be dropped or sold. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="220"/>
         <restriction dropable="false" sellable="false"/>
     </armor>
     <armor id="91211" name="White Sayha's Cloak" icon="icon.sayha2017_back_i03">
         <!-- Cloak filled with Sayha's power. With the help of Sayha's Cloak Enchantment Scroll can be enchanted. Depending on the enchantment value, activates various abilities. Cannot be dropped or sold. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="220"/>
         <restriction dropable="false" sellable="false"/>
     </armor>
     <armor id="91212" name="Red Sayha's Cloak" icon="icon.sayha2017_back_i02">
         <!-- Cloak filled with Sayha's power. With the help of Sayha's Cloak Enchantment Scroll can be enchanted. Depending on the enchantment value, activates various abilities. Cannot be dropped or sold. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="220"/>
         <restriction dropable="false" sellable="false"/>
@@ -114,7 +111,6 @@
     </item>
     <armor id="91221" name="Enhanced Antharas' Earring" icon="icon.accessory_earring_of_antaras_i02">
         <!-- A 30-day item. MP +34, CON +1, MEN +1, Bleed Resistance and Bleed Atk. Rate +30%, Stun Resistance and Stun Atk. Rate +20%, Mental Resistance and Atk. Rate +20%, Reflect Damage Resistance +15%, Healing Effects +15%, Skill MP Consumption -6%, Vampiric Rage effect +6%. The effect doesn't stack if two identical earrings are worn. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="rear;lear"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="150"/>
@@ -134,7 +130,6 @@
     </item>
     <armor id="91223" name="Aquamarine Lv. 5" icon="icon.etc_bm_jewel_aquamarine_i00">
         <!-- A 30-day item. When using a skill after equipping, there is a chance of recovering 50 MP. Effect does not stack with additional jewels of the same type. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="brooch_jewel"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="5"/>
@@ -240,7 +235,6 @@
     </item>
     <armor id="91243" name="Shining Savior's Earring" icon="icon.r2_earring_i01">
         <!-- Acquired XP/ SP +2%, Max MP +30, Max HP +50, Stun/ Mental Attacks Resistance +4%, when equipped. Vampiric Rage effect. The effect does not stack if two identical earrings are equipped. Cannot be exchanged, dropped, or sold in a private store. Will be deleted after event. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="rear;lear"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="150"/>
@@ -251,7 +245,6 @@
     </armor>
     <armor id="91244" name="Dragon Pendant Lv. 1" icon="icon.bm_pendant_dragon_i00">
         <!-- A pendant that contains the energy of dragon. With the help of Dragon Varnish it can be enchanted up to +5. Enchantment increases the number of effects. Head Blacksmith Ferris can upgrade +5 pendant to Lv. 2. Cannot be dropped. Required materials: 200 Crystal (C-grade) , 2,000,000 adena. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="underwear"/>
         <set name="immediate_effect" val="true"/>
         <restriction dropable="false" sellable="false"/>
@@ -261,7 +254,6 @@
     </armor>
     <armor id="91245" name="Dragon Pendant Lv. 2" icon="icon.bm_pendant_dragon_i00">
         <!-- A pendant that contains the energy of dragon. With the help of Dragon Varnish it can be enchanted up to +5. Enchantment increases the number of effects. Head Blacksmith Ferris can upgrade +5 pendant to Lv. 3. Cannot be dropped. Required materials: 1500 Crystal (B-grade), 10,000,000 adena. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="underwear"/>
         <set name="immediate_effect" val="true"/>
         <restriction dropable="false" sellable="false"/>
@@ -271,7 +263,6 @@
     </armor>
     <armor id="91246" name="Dragon Pendant Lv. 3" icon="icon.bm_pendant_dragon_i00">
         <!-- A pendant that contains the energy of dragon. With the help of Dragon Varnish it can be enchanted up to +5. Enchantment increases the number of effects. Head Blacksmith Ferris can upgrade +5 pendant to Lv. 4. Cannot be dropped. Required materials: 5000 Crystal (B-grade), 50,000,000 adena. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="underwear"/>
         <set name="immediate_effect" val="true"/>
         <restriction dropable="false" sellable="false"/>
@@ -281,7 +272,6 @@
     </armor>
     <armor id="91247" name="Dragon Pendant Lv. 4" icon="icon.bm_pendant_dragon_i00">
         <!-- A pendant that contains the energy of dragon. With the help of Dragon Varnish it can be enchanted up to +5. Enchantment increases the number of effects. Head Blacksmith Ferris can upgrade +5 pendant to Blessed Dragon Pendant. Cannot be dropped. Required materials: Blessed Land Dragon Pendant or Blessed Fire Dragon Pendant. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="underwear"/>
         <set name="immediate_effect" val="true"/>
         <restriction dropable="false" sellable="false"/>
@@ -291,7 +281,6 @@
     </armor>
     <armor id="91248" name="Blessed Dragon Pendant" icon="icon.bm_pendant_dragon_i01">
         <!-- A pendant that contains the energy of dragon. P. Def. +50, Acquired XP/ SP +30%, Atk. Spd./ Casting Spd.+10%, P./ M. Critical Damage +15%, P./ M. Atk. +20%, Damage Reflect Resistance +20%, Received P./ M. Damage -30%. Activates Dragon Invocation, Dragon Barrier, Dragon Evasion. Cannot be enchanted or dropped. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="underwear"/>
         <set name="immediate_effect" val="true"/>
         <restriction dropable="false" sellable="false"/>
@@ -365,7 +354,6 @@
     </item>
     <armor id="91261" name="Dragon Berserker Outfit" icon="icon.bm2018_dragon_i01">
         <!-- Dragon berserker outfit. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="HEAVY"/>
         <set name="bodypart" val="alldress"/>
         <set name="immediate_effect" val="true"/>

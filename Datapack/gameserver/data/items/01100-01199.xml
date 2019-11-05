@@ -2,7 +2,6 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
     <armor id="1100" name="Cotton Tunic" icon="icon.armor_t50_u_i00">
         <!-- Tunic made of tough cotton. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="MAGIC"/>
         <set name="bodypart" val="chest"/>
         <set name="immediate_effect" val="true"/>
@@ -15,7 +14,6 @@
         </stats>
     </armor>
     <armor id="1101" name="Tunic of Devotion" icon="icon.armor_t55_u_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="MAGIC"/>
         <set name="bodypart" val="chest"/>
         <set name="immediate_effect" val="true"/>
@@ -29,7 +27,6 @@
     </armor>
     <armor id="1102" name="Tunic of Magic" icon="icon.armor_t58_u_i00">
         <!-- Tunic, comfortably designed for mages. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="MAGIC"/>
         <set name="bodypart" val="chest"/>
         <set name="immediate_effect" val="true"/>
@@ -43,7 +40,6 @@
     </armor>
     <armor id="1103" name="Cotton Stockings" icon="icon.armor_t50_l_i00">
         <!-- Pair of pants made of tough cotton. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="MAGIC"/>
         <set name="bodypart" val="legs"/>
         <set name="immediate_effect" val="true"/>
@@ -57,7 +53,6 @@
     </armor>
     <armor id="1104" name="Stockings of Devotion" icon="icon.armor_t55_l_i00">
         <!-- Part of the devotion set. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="MAGIC"/>
         <set name="bodypart" val="legs"/>
         <set name="immediate_effect" val="true"/>
@@ -71,7 +66,6 @@
     </armor>
     <armor id="1105" name="Stockings of Magic" icon="icon.armor_t58_l_i00">
         <!-- Pair of pants, comfortably designed for mages. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="MAGIC"/>
         <set name="bodypart" val="legs"/>
         <set name="immediate_effect" val="true"/>
@@ -136,7 +130,6 @@
         <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
     <armor id="1119" name="Short Leather Gloves" icon="icon.armor_t04_g_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="gloves"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="660"/>
@@ -147,7 +140,6 @@
         </stats>
     </armor>
     <armor id="1120" name="Pa'agrio Hand" icon="icon.armor_short_leather_gloves_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="gloves"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="64"/>
@@ -161,7 +153,6 @@
         </stats>
     </armor>
     <armor id="1121" name="Apprentice's Shoes" icon="icon.armor_t01_b_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="feet"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="1320"/>
@@ -172,7 +163,6 @@
         </stats>
     </armor>
     <armor id="1122" name="Cotton Shoes" icon="icon.armor_t50_b_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="feet"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="1320"/>
@@ -183,7 +173,6 @@
         </stats>
     </armor>
     <armor id="1123" name="Blue Buckskin Boots" icon="icon.armor_t18_b_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="feet"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="60"/>
@@ -197,7 +186,6 @@
         </stats>
     </armor>
     <armor id="1124" name="Boots of Strength" icon="icon.armor_t40_b_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="feet"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="135"/>
@@ -211,7 +199,6 @@
         </stats>
     </armor>
     <armor id="1125" name="Assault Boots" icon="icon.armor_t44_b_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="feet"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="177"/>
@@ -225,7 +212,6 @@
         </stats>
     </armor>
     <armor id="1126" name="Crimson Boots" icon="icon.armor_t57_b_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="feet"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="64"/>
@@ -239,7 +225,6 @@
         </stats>
     </armor>
     <armor id="1127" name="Forgotten Boots" icon="icon.armor_iron_boots_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="feet"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="98"/>
@@ -253,7 +238,6 @@
         </stats>
     </armor>
     <armor id="1128" name="Adamantite Boots" icon="icon.armor_iron_boots_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="feet"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="143"/>
@@ -267,7 +251,6 @@
         </stats>
     </armor>
     <armor id="1129" name="Crude Leather Shoes" icon="icon.armor_t04_b_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="feet"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="1320"/>
@@ -351,7 +334,6 @@
     </item>
     <weapon id="1142" name="Rusted Bronze Sword" icon="icon.weapon_broad_sword_i00">
         <!-- An old and rusty bronze sword called the 'Sword of Trial'. Use it to kill Giant Venomous Spiders and Arachnid Trackers. Cannot be exchanged, dropped, sold, or stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -390,7 +372,6 @@
     </item>
     <armor id="1146" name="Squire's Shirt" icon="icon.armor_t01_u_i00">
         <!-- Cannot be exchanged, dropped, sold, or stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="LIGHT"/>
         <set name="bodypart" val="chest"/>
         <set name="immediate_effect" val="true"/>
@@ -402,7 +383,6 @@
     </armor>
     <armor id="1147" name="Squire's Pants" icon="icon.armor_t01_l_i00">
         <!-- Cannot be exchanged, dropped, sold, or stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="LIGHT"/>
         <set name="bodypart" val="legs"/>
         <set name="immediate_effect" val="true"/>
@@ -413,7 +393,6 @@
         </stats>
     </armor>
     <armor id="1148" name="Durable Leather Helmet" icon="icon.armor_leather_helmet_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="head"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="640"/>
@@ -424,7 +403,6 @@
         </stats>
     </armor>
     <armor id="1149" name="Shining Circlet" icon="icon.armor_circlet_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="head"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="147"/>
@@ -631,7 +609,6 @@
     </item>
     <weapon id="1181" name="Neti's Bow" icon="icon.weapon_bow_i00">
         <!-- Favorite bow used by Neti, who was once a Treasure Hunter. Use it when hunting the Skeletons and Spartoi of the Ruins of Agony to gather bone pieces. Cannot be exchanged, dropped, sold, or stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BOW"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;10;0"/>
@@ -654,7 +631,6 @@
     </weapon>
     <weapon id="1182" name="Neti's Dagger" icon="icon.weapon_knife_i00">
         <!-- Neti used this dagger when she was a Treasure Hunter. Use it when hunting the Skeletons and Spartoi of the Ruins of Agony to gather bone pieces. Cannot be exchanged, dropped, sold, or stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DAGGER"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>

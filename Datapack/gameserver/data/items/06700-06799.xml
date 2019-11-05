@@ -91,7 +91,6 @@
         <restriction stackable="true"/>
     </item>
     <weapon id="6715" name="Monster Only (Silenos Archer)" icon="icon.weapon_monster_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="RAPIER"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
@@ -110,7 +109,6 @@
         </stats>
     </weapon>
     <weapon id="6716" name="Monster Only (Silenos Shaman)" icon="icon.weapon_monster_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
@@ -129,7 +127,6 @@
         </stats>
     </weapon>
     <weapon id="6717" name="Monster Only (Einhasad Warrior)" icon="icon.weapon_monster_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="1560"/>
@@ -145,7 +142,6 @@
         </stats>
     </weapon>
     <weapon id="6718" name="Monster Only (Einhasad Shaman)" icon="icon.weapon_monster_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="POLE"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
@@ -166,7 +162,6 @@
         </stats>
     </weapon>
     <weapon id="6719" name="Monster Only (Ketra Orc Chieftain)" icon="icon.weapon_monster_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;46;120"/>
@@ -190,7 +185,6 @@
         </stats>
     </weapon>
     <weapon id="6720" name="Monster Only (Halisha's Shadow)" icon="icon.weapon_monster_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="RAPIER"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
@@ -209,7 +203,6 @@
         </stats>
     </weapon>
     <armor id="6721" name="Monster Only (Shield of Imperial Warlord Zombie)" icon="icon.weapon_monster_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="1430"/>
         <stats>
@@ -219,7 +212,6 @@
         </stats>
     </armor>
     <weapon id="6722" name="Monster Only (Ahrimanes)" icon="icon.weapon_monster_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="ANCIENTSWORD"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
@@ -237,7 +229,6 @@
         </stats>
     </weapon>
     <weapon id="6723" name="Monster Only (Vampire Warrior)" icon="icon.weapon_monster_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
@@ -256,7 +247,6 @@
     </weapon>
     <armor id="6724" name="Sealed Tateossian Earring" icon="icon.accessory_tateossian_earring_i02">
         <!-- The seal can be removed by a blacksmith in any village. Once the seal is removed, M. Def. +13 and MP +31. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="rear;lear"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="157"/>
@@ -270,7 +260,6 @@
     </armor>
     <armor id="6725" name="Sealed Tateossian Ring" icon="icon.accessory_tateossian_ring_i02">
         <!-- The seal can be removed by a blacksmith in any village. Once the seal is removed, M. Def. +13 and MP +21. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="rfinger;lfinger"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="105"/>
@@ -284,7 +273,6 @@
     </armor>
     <armor id="6726" name="Sealed Tateossian Necklace" icon="icon.accessory_tateossian_necklace_i02">
         <!-- The seal can be removed by a blacksmith in any village. Once the seal is removed, M. Def. +29 and MP +42. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="neck"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="209"/>

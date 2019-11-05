@@ -2,7 +2,6 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
     <weapon id="49300" name="Steel Sword" icon="icon.weapon_iron_sword_i01">
         <!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by 9%. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
@@ -22,7 +21,6 @@
     </weapon>
     <weapon id="49301" name="Steel Sword" icon="icon.weapon_iron_sword_i01">
         <!-- <Soul Crystal Enhancement>. P. Atk. + 183 during a Critical Attack. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
@@ -42,7 +40,6 @@
     </weapon>
     <weapon id="49302" name="Lesser Giant's Sword" icon="icon.weapon_giants_sword_i01">
         <!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 75. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
@@ -62,7 +59,6 @@
     </weapon>
     <weapon id="49303" name="Lesser Giant's Sword" icon="icon.weapon_giants_sword_i01">
         <!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by 9%. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
@@ -82,7 +78,6 @@
     </weapon>
     <weapon id="49304" name="Lesser Giant's Sword" icon="icon.weapon_giants_sword_i01">
         <!-- <Soul Crystal Enhancement>. P. Atk. + 183 during a Critical Attack. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
@@ -102,7 +97,6 @@
     </weapon>
     <weapon id="49305" name="Dagger of Mana" icon="icon.weapon_dagger_of_mana_i01">
         <!-- <Soul Crystal Enhancement>. M. Atk. + 20. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DAGGER"/>
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
@@ -123,7 +117,6 @@
     </weapon>
     <weapon id="49306" name="Dagger of Mana" icon="icon.weapon_dagger_of_mana_i01">
         <!-- <Soul Crystal Enhancement>. Increases Casting Spd. by 6%. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DAGGER"/>
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
@@ -144,7 +137,6 @@
     </weapon>
     <weapon id="49307" name="Dagger of Mana" icon="icon.weapon_dagger_of_mana_i01">
         <!-- <Soul Crystal Enhancement>. Increases MP Recovery Bonus by 20%. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DAGGER"/>
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
@@ -165,7 +157,6 @@
     </weapon>
     <weapon id="49308" name="Mystic Knife" icon="icon.weapon_mystic_knife_i01">
         <!-- <Soul Crystal Enhancement>. M. Atk. + 20. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DAGGER"/>
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
@@ -186,7 +177,6 @@
     </weapon>
     <weapon id="49309" name="Mystic Knife" icon="icon.weapon_mystic_knife_i01">
         <!-- <Soul Crystal Enhancement>. Increases Casting Spd. by 6%. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DAGGER"/>
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
@@ -207,7 +197,6 @@
     </weapon>
     <weapon id="49310" name="Mystic Knife" icon="icon.weapon_mystic_knife_i01">
         <!-- <Soul Crystal Enhancement>. Increases MP Recovery Bonus by 20%. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DAGGER"/>
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
@@ -228,7 +217,6 @@
     </weapon>
     <weapon id="49311" name="Conjurer's Knife" icon="icon.weapon_conjure_knife_i01">
         <!-- <Soul Crystal Enhancement>. M. Atk. + 20. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DAGGER"/>
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
@@ -249,7 +237,6 @@
     </weapon>
     <weapon id="49312" name="Conjurer's Knife" icon="icon.weapon_conjure_knife_i01">
         <!-- <Soul Crystal Enhancement>. Increases Casting Spd. by 6%. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DAGGER"/>
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
@@ -270,7 +257,6 @@
     </weapon>
     <weapon id="49313" name="Conjurer's Knife" icon="icon.weapon_conjure_knife_i01">
         <!-- <Soul Crystal Enhancement>. Increases MP Recovery Bonus by 20%. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DAGGER"/>
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
@@ -291,7 +277,6 @@
     </weapon>
     <weapon id="49314" name="Shilen Knife" icon="icon.weapon_knife_o'_silenus_i01">
         <!-- <Soul Crystal Enhancement>. M. Atk. + 20. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DAGGER"/>
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
@@ -312,7 +297,6 @@
     </weapon>
     <weapon id="49315" name="Shilen Knife" icon="icon.weapon_knife_o'_silenus_i01">
         <!-- <Soul Crystal Enhancement>. Increases Casting Spd. by 6%. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DAGGER"/>
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
@@ -333,7 +317,6 @@
     </weapon>
     <weapon id="49316" name="Shilen Knife" icon="icon.weapon_knife_o'_silenus_i01">
         <!-- <Soul Crystal Enhancement>. Increases MP Recovery Bonus by 20%. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DAGGER"/>
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
@@ -354,7 +337,6 @@
     </weapon>
     <weapon id="49317" name="Sword of Magic" icon="icon.weapon_sword_of_magic_i01">
         <!-- <Soul Crystal Enhancement>. M. Atk. + 20. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
@@ -375,7 +357,6 @@
     </weapon>
     <weapon id="49318" name="Sword of Magic" icon="icon.weapon_sword_of_magic_i01">
         <!-- <Soul Crystal Enhancement>. Increases Casting Spd. by 6%. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
@@ -396,7 +377,6 @@
     </weapon>
     <weapon id="49319" name="Sword of Magic" icon="icon.weapon_sword_of_magic_i01">
         <!-- <Soul Crystal Enhancement>. Increases MP Recovery Bonus by 20%. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
@@ -417,7 +397,6 @@
     </weapon>
     <weapon id="49320" name="Scroll of Wisdom" icon="icon.weapon_scroll_of_wisdom_i01">
         <!-- <Soul Crystal Enhancement>. M. Atk. + 20. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
@@ -437,7 +416,6 @@
     </weapon>
     <weapon id="49321" name="Scroll of Wisdom" icon="icon.weapon_scroll_of_wisdom_i01">
         <!-- <Soul Crystal Enhancement>. Increases Casting Spd. by 6%. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
@@ -457,7 +435,6 @@
     </weapon>
     <weapon id="49322" name="Scroll of Wisdom" icon="icon.weapon_scroll_of_wisdom_i01">
         <!-- <Soul Crystal Enhancement>. Increases MP Recovery Bonus by 20%. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
@@ -477,7 +454,6 @@
     </weapon>
     <weapon id="49323" name="Sword of Mystic" icon="icon.weapon_sword_of_mystic_i01">
         <!-- <Soul Crystal Enhancement>. M. Atk. + 20. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
@@ -497,7 +473,6 @@
     </weapon>
     <weapon id="49324" name="Sword of Mystic" icon="icon.weapon_sword_of_mystic_i01">
         <!-- <Soul Crystal Enhancement>. Increases Casting Spd. by 6%. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
@@ -517,7 +492,6 @@
     </weapon>
     <weapon id="49325" name="Sword of Mystic" icon="icon.weapon_sword_of_mystic_i01">
         <!-- <Soul Crystal Enhancement>. Increases MP Recovery Bonus by 20%. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
@@ -537,7 +511,6 @@
     </weapon>
     <weapon id="49326" name="Sword of Occult" icon="icon.weapon_sword_of_occult_i01">
         <!-- <Soul Crystal Enhancement>. M. Atk. + 20. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
@@ -557,7 +530,6 @@
     </weapon>
     <weapon id="49327" name="Sword of Occult" icon="icon.weapon_sword_of_occult_i01">
         <!-- <Soul Crystal Enhancement>. Increases Casting Spd. by 6%. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
@@ -577,7 +549,6 @@
     </weapon>
     <weapon id="49328" name="Sword of Occult" icon="icon.weapon_sword_of_occult_i01">
         <!-- <Soul Crystal Enhancement>. Increases MP Recovery Bonus by 20%. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
@@ -597,7 +568,6 @@
     </weapon>
     <weapon id="49329" name="Branch of Life" icon="icon.weapon_branch_of_life_i01">
         <!-- <Soul Crystal Enhancement>. M. Atk. + 20. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
@@ -617,7 +587,6 @@
     </weapon>
     <weapon id="49330" name="Branch of Life" icon="icon.weapon_branch_of_life_i01">
         <!-- <Soul Crystal Enhancement>. Increases Casting Spd. by 6%. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
@@ -637,7 +606,6 @@
     </weapon>
     <weapon id="49331" name="Branch of Life" icon="icon.weapon_branch_of_life_i01">
         <!-- <Soul Crystal Enhancement>. Increases MP Recovery Bonus by 20%. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
@@ -657,7 +625,6 @@
     </weapon>
     <weapon id="49332" name="Temptation of Abyss" icon="icon.weapon_temptation_of_abyss_i01">
         <!-- <Soul Crystal Enhancement>. M. Atk. + 20. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
@@ -677,7 +644,6 @@
     </weapon>
     <weapon id="49333" name="Temptation of Abyss" icon="icon.weapon_temptation_of_abyss_i01">
         <!-- <Soul Crystal Enhancement>. Increases Casting Spd. by 6%. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
@@ -697,7 +663,6 @@
     </weapon>
     <weapon id="49334" name="Temptation of Abyss" icon="icon.weapon_temptation_of_abyss_i01">
         <!-- <Soul Crystal Enhancement>. Increases MP Recovery Bonus by 20%. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
@@ -717,7 +682,6 @@
     </weapon>
     <weapon id="49335" name="Proof of Revenge" icon="icon.weapon_proof_of_revenge_i01">
         <!-- <Soul Crystal Enhancement>. M. Atk. + 20. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
@@ -737,7 +701,6 @@
     </weapon>
     <weapon id="49336" name="Proof of Revenge" icon="icon.weapon_proof_of_revenge_i01">
         <!-- <Soul Crystal Enhancement>. Increases Casting Spd. by 6%. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
@@ -757,7 +720,6 @@
     </weapon>
     <weapon id="49337" name="Proof of Revenge" icon="icon.weapon_proof_of_revenge_i01">
         <!-- <Soul Crystal Enhancement>. Increases MP Recovery Bonus by 20%. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
@@ -777,7 +739,6 @@
     </weapon>
     <weapon id="49338" name="Divine Tome" icon="icon.weapon_divine_tome_i01">
         <!-- <Soul Crystal Enhancement>. M. Atk. + 20. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
@@ -797,7 +758,6 @@
     </weapon>
     <weapon id="49339" name="Divine Tome" icon="icon.weapon_divine_tome_i01">
         <!-- <Soul Crystal Enhancement>. Increases Casting Spd. by 6%. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
@@ -817,7 +777,6 @@
     </weapon>
     <weapon id="49340" name="Divine Tome" icon="icon.weapon_divine_tome_i01">
         <!-- <Soul Crystal Enhancement>. Increases MP Recovery Bonus by 20%. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
@@ -837,7 +796,6 @@
     </weapon>
     <weapon id="49341" name="Sage's Blood" icon="icon.weapon_blood_of_saints_i01">
         <!-- <Soul Crystal Enhancement>. M. Atk. + 20. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
@@ -857,7 +815,6 @@
     </weapon>
     <weapon id="49342" name="Sage's Blood" icon="icon.weapon_blood_of_saints_i01">
         <!-- <Soul Crystal Enhancement>. Increases Casting Spd. by 6%. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
@@ -877,7 +834,6 @@
     </weapon>
     <weapon id="49343" name="Sage's Blood" icon="icon.weapon_blood_of_saints_i01">
         <!-- <Soul Crystal Enhancement>. Increases MP Recovery Bonus by 20%. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
@@ -897,7 +853,6 @@
     </weapon>
     <weapon id="49344" name="Tome of Blood" icon="icon.weapon_tome_of_blood_i01">
         <!-- <Soul Crystal Enhancement>. M. Atk. + 20. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
@@ -917,7 +872,6 @@
     </weapon>
     <weapon id="49345" name="Tome of Blood" icon="icon.weapon_tome_of_blood_i01">
         <!-- <Soul Crystal Enhancement>. Increases Casting Spd. by 6%. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
@@ -937,7 +891,6 @@
     </weapon>
     <weapon id="49346" name="Tome of Blood" icon="icon.weapon_tome_of_blood_i01">
         <!-- <Soul Crystal Enhancement>. Increases MP Recovery Bonus by 20%. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
@@ -957,7 +910,6 @@
     </weapon>
     <weapon id="49347" name="Crucifix of Blood" icon="icon.weapon_crucifix_of_blood_i01">
         <!-- <Soul Crystal Enhancement>. M. Atk. + 20. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
@@ -977,7 +929,6 @@
     </weapon>
     <weapon id="49348" name="Crucifix of Blood" icon="icon.weapon_crucifix_of_blood_i01">
         <!-- <Soul Crystal Enhancement>. Increases Casting Spd. by 6%. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
@@ -997,7 +948,6 @@
     </weapon>
     <weapon id="49349" name="Crucifix of Blood" icon="icon.weapon_crucifix_of_blood_i01">
         <!-- <Soul Crystal Enhancement>. Increases MP Recovery Bonus by 20%. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
@@ -1017,7 +967,6 @@
     </weapon>
     <weapon id="49350" name="Eye of Infinity" icon="icon.weapon_apprentices_spellbook_i01">
         <!-- <Soul Crystal Enhancement>. M. Atk. + 20. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
@@ -1037,7 +986,6 @@
     </weapon>
     <weapon id="49351" name="Eye of Infinity" icon="icon.weapon_apprentices_spellbook_i01">
         <!-- <Soul Crystal Enhancement>. Increases Casting Spd. by 6%. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
@@ -1057,7 +1005,6 @@
     </weapon>
     <weapon id="49352" name="Eye of Infinity" icon="icon.weapon_apprentices_spellbook_i01">
         <!-- <Soul Crystal Enhancement>. Increases MP Recovery Bonus by 20%. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
@@ -1077,7 +1024,6 @@
     </weapon>
     <weapon id="49353" name="Blue Crystal Skull" icon="icon.weapon_apprentices_spellbook_i01">
         <!-- <Soul Crystal Enhancement>. M. Atk. + 20. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
@@ -1097,7 +1043,6 @@
     </weapon>
     <weapon id="49354" name="Blue Crystal Skull" icon="icon.weapon_apprentices_spellbook_i01">
         <!-- <Soul Crystal Enhancement>. Increases Casting Spd. by 6%. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
@@ -1117,7 +1062,6 @@
     </weapon>
     <weapon id="49355" name="Blue Crystal Skull" icon="icon.weapon_apprentices_spellbook_i01">
         <!-- <Soul Crystal Enhancement>. Increases MP Recovery Bonus by 20%. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
@@ -1137,7 +1081,6 @@
     </weapon>
     <weapon id="49356" name="Demon's Fangs" icon="icon.weapon_demon_fangs_i01">
         <!-- <Soul Crystal Enhancement>. M. Atk. + 20. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
@@ -1157,7 +1100,6 @@
     </weapon>
     <weapon id="49357" name="Demon's Fangs" icon="icon.weapon_demon_fangs_i01">
         <!-- <Soul Crystal Enhancement>. Increases Casting Spd. by 6%. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
@@ -1177,7 +1119,6 @@
     </weapon>
     <weapon id="49358" name="Demon's Fangs" icon="icon.weapon_demon_fangs_i01">
         <!-- <Soul Crystal Enhancement>. Increases MP Recovery Bonus by 20%. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
@@ -1197,7 +1138,6 @@
     </weapon>
     <weapon id="49359" name="Vajra Wand" icon="icon.weapon_apprentices_spellbook_i01">
         <!-- <Soul Crystal Enhancement>. M. Atk. + 20. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
@@ -1218,7 +1158,6 @@
     </weapon>
     <weapon id="49360" name="Vajra Wand" icon="icon.weapon_apprentices_spellbook_i01">
         <!-- <Soul Crystal Enhancement>. Increases Casting Spd. by 6%. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
@@ -1239,7 +1178,6 @@
     </weapon>
     <weapon id="49361" name="Vajra Wand" icon="icon.weapon_apprentices_spellbook_i01">
         <!-- <Soul Crystal Enhancement>. Increases MP Recovery Bonus by 20%. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
@@ -1260,7 +1198,6 @@
     </weapon>
     <weapon id="49362" name="Ancient Reagent" icon="icon.weapon_apprentices_spellbook_i01">
         <!-- <Soul Crystal Enhancement>. M. Atk. + 20. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
@@ -1280,7 +1217,6 @@
     </weapon>
     <weapon id="49363" name="Ancient Reagent" icon="icon.weapon_apprentices_spellbook_i01">
         <!-- <Soul Crystal Enhancement>. Increases Casting Spd. by 6%. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
@@ -1300,7 +1236,6 @@
     </weapon>
     <weapon id="49364" name="Ancient Reagent" icon="icon.weapon_apprentices_spellbook_i01">
         <!-- <Soul Crystal Enhancement>. Increases MP Recovery Bonus by 20%. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
@@ -1320,7 +1255,6 @@
     </weapon>
     <weapon id="49365" name="Priest Sword" icon="icon.weapon_sword_of_priest_i01">
         <!-- <Soul Crystal Enhancement>. M. Atk. + 20. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
@@ -1340,7 +1274,6 @@
     </weapon>
     <weapon id="49366" name="Priest Sword" icon="icon.weapon_sword_of_priest_i01">
         <!-- <Soul Crystal Enhancement>. Increases Casting Spd. by 6%. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
@@ -1360,7 +1293,6 @@
     </weapon>
     <weapon id="49367" name="Priest Sword" icon="icon.weapon_sword_of_priest_i01">
         <!-- <Soul Crystal Enhancement>. Increases MP Recovery Bonus by 20%. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
@@ -1380,7 +1312,6 @@
     </weapon>
     <weapon id="49368" name="Sword of Magic Fog" icon="icon.weapon_sword_of_magic_fog_i01">
         <!-- <Soul Crystal Enhancement>. M. Atk. + 20. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
@@ -1401,7 +1332,6 @@
     </weapon>
     <weapon id="49369" name="Sword of Magic Fog" icon="icon.weapon_sword_of_magic_fog_i01">
         <!-- <Soul Crystal Enhancement>. Increases Casting Spd. by 6%. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
@@ -1422,7 +1352,6 @@
     </weapon>
     <weapon id="49370" name="Sword of Magic Fog" icon="icon.weapon_sword_of_magic_fog_i01">
         <!-- <Soul Crystal Enhancement>. Increases MP Recovery Bonus by 20%. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
@@ -1443,7 +1372,6 @@
     </weapon>
     <weapon id="49371" name="Mace of Prayer" icon="icon.weapon_mace_of_prayer_i01">
         <!-- <Soul Crystal Enhancement>. M. Atk. + 20. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
@@ -1464,7 +1392,6 @@
     </weapon>
     <weapon id="49372" name="Mace of Prayer" icon="icon.weapon_mace_of_prayer_i01">
         <!-- <Soul Crystal Enhancement>. Increases Casting Spd. by 6%. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
@@ -1485,7 +1412,6 @@
     </weapon>
     <weapon id="49373" name="Mace of Prayer" icon="icon.weapon_mace_of_prayer_i01">
         <!-- <Soul Crystal Enhancement>. Increases MP Recovery Bonus by 20%. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
@@ -1506,7 +1432,6 @@
     </weapon>
     <weapon id="49374" name="Mace of Judgment" icon="icon.weapon_mace_of_judgment_i01">
         <!-- <Soul Crystal Enhancement>. M. Atk. + 20. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
@@ -1527,7 +1452,6 @@
     </weapon>
     <weapon id="49375" name="Mace of Judgment" icon="icon.weapon_mace_of_judgment_i01">
         <!-- <Soul Crystal Enhancement>. Increases Casting Spd. by 6%. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
@@ -1548,7 +1472,6 @@
     </weapon>
     <weapon id="49376" name="Mace of Judgment" icon="icon.weapon_mace_of_judgment_i01">
         <!-- <Soul Crystal Enhancement>. Increases MP Recovery Bonus by 20%. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
@@ -1569,7 +1492,6 @@
     </weapon>
     <weapon id="49377" name="Mace of Miracle" icon="icon.weapon_mace_of_miracle_i01">
         <!-- <Soul Crystal Enhancement>. M. Atk. + 20. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
@@ -1590,7 +1512,6 @@
     </weapon>
     <weapon id="49378" name="Mace of Miracle" icon="icon.weapon_mace_of_miracle_i01">
         <!-- <Soul Crystal Enhancement>. Increases Casting Spd. by 6%. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
@@ -1611,7 +1532,6 @@
     </weapon>
     <weapon id="49379" name="Mace of Miracle" icon="icon.weapon_mace_of_miracle_i01">
         <!-- <Soul Crystal Enhancement>. Increases MP Recovery Bonus by 20%. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
@@ -1632,7 +1552,6 @@
     </weapon>
     <weapon id="49380" name="Doom Hammer" icon="icon.weapon_doom_hammer_i01">
         <!-- <Soul Crystal Enhancement>. M. Atk. + 20. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
@@ -1653,7 +1572,6 @@
     </weapon>
     <weapon id="49381" name="Doom Hammer" icon="icon.weapon_doom_hammer_i01">
         <!-- <Soul Crystal Enhancement>. Increases Casting Spd. by 6%. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
@@ -1674,7 +1592,6 @@
     </weapon>
     <weapon id="49382" name="Doom Hammer" icon="icon.weapon_doom_hammer_i01">
         <!-- <Soul Crystal Enhancement>. Increases MP Recovery Bonus by 20%. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
@@ -1695,7 +1612,6 @@
     </weapon>
     <weapon id="49383" name="Staff of Life" icon="icon.weapon_life_stick_i01">
         <!-- <Soul Crystal Enhancement>. M. Atk. + 20. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
@@ -1717,7 +1633,6 @@
     </weapon>
     <weapon id="49384" name="Staff of Life" icon="icon.weapon_life_stick_i01">
         <!-- <Soul Crystal Enhancement>. Increases Casting Spd. by 6%. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
@@ -1739,7 +1654,6 @@
     </weapon>
     <weapon id="49385" name="Staff of Life" icon="icon.weapon_life_stick_i01">
         <!-- <Soul Crystal Enhancement>. Increases MP Recovery Bonus by 20%. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
@@ -1761,7 +1675,6 @@
     </weapon>
     <weapon id="49386" name="Priest Mace" icon="icon.weapon_mace_of_priest_i01">
         <!-- <Soul Crystal Enhancement>. M. Atk. + 20. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
@@ -1782,7 +1695,6 @@
     </weapon>
     <weapon id="49387" name="Priest Mace" icon="icon.weapon_mace_of_priest_i01">
         <!-- <Soul Crystal Enhancement>. Increases Casting Spd. by 6%. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
@@ -1803,7 +1715,6 @@
     </weapon>
     <weapon id="49388" name="Priest Mace" icon="icon.weapon_mace_of_priest_i01">
         <!-- <Soul Crystal Enhancement>. Increases MP Recovery Bonus by 20%. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
@@ -1824,7 +1735,6 @@
     </weapon>
     <weapon id="49389" name="Goat Head Staff" icon="icon.weapon_goathead_staff_i01">
         <!-- <Soul Crystal Enhancement>. M. Atk. + 20. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
@@ -1846,7 +1756,6 @@
     </weapon>
     <weapon id="49390" name="Goat Head Staff" icon="icon.weapon_goathead_staff_i01">
         <!-- <Soul Crystal Enhancement>. Increases Casting Spd. by 6%. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
@@ -1868,7 +1777,6 @@
     </weapon>
     <weapon id="49391" name="Goat Head Staff" icon="icon.weapon_goathead_staff_i01">
         <!-- <Soul Crystal Enhancement>. Increases MP Recovery Bonus by 20%. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
@@ -1890,7 +1798,6 @@
     </weapon>
     <weapon id="49392" name="Bone Staff" icon="icon.weapon_apprentices_staff_i01">
         <!-- <Soul Crystal Enhancement>. M. Atk. + 20. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
@@ -1912,7 +1819,6 @@
     </weapon>
     <weapon id="49393" name="Bone Staff" icon="icon.weapon_apprentices_staff_i01">
         <!-- <Soul Crystal Enhancement>. Increases Casting Spd. by 6%. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
@@ -1934,7 +1840,6 @@
     </weapon>
     <weapon id="49394" name="Bone Staff" icon="icon.weapon_apprentices_staff_i01">
         <!-- <Soul Crystal Enhancement>. Increases MP Recovery Bonus by 20%. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
@@ -1956,7 +1861,6 @@
     </weapon>
     <weapon id="49395" name="Mystic Staff" icon="icon.weapon_mystic_staff_i01">
         <!-- <Soul Crystal Enhancement>. M. Atk. + 20. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
@@ -1978,7 +1882,6 @@
     </weapon>
     <weapon id="49396" name="Mystic Staff" icon="icon.weapon_mystic_staff_i01">
         <!-- <Soul Crystal Enhancement>. Increases Casting Spd. by 6%. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
@@ -2000,7 +1903,6 @@
     </weapon>
     <weapon id="49397" name="Mystic Staff" icon="icon.weapon_mystic_staff_i01">
         <!-- <Soul Crystal Enhancement>. Increases MP Recovery Bonus by 20%. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
@@ -2022,7 +1924,6 @@
     </weapon>
     <weapon id="49398" name="Conjuror's Staff" icon="icon.weapon_conjure_staff_i01">
         <!-- <Soul Crystal Enhancement>. M. Atk. + 20. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
@@ -2044,7 +1945,6 @@
     </weapon>
     <weapon id="49399" name="Conjuror's Staff" icon="icon.weapon_conjure_staff_i01">
         <!-- <Soul Crystal Enhancement>. Increases Casting Spd. by 6%. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>

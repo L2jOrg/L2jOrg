@@ -44,7 +44,6 @@
     </item>
     <armor id="709" name="Leather Shirt" icon="icon.armor_leather_shirt_i00">
         <!-- Cannot be exchanged, dropped, sold, or stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="chest"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="400"/>
@@ -56,7 +55,6 @@
     </armor>
     <armor id="710" name="Durable Leather Shirt" icon="icon.armor_leather_shirt_i00">
         <!-- Cannot be exchanged, dropped, sold, or stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="chest"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="400"/>
@@ -68,7 +66,6 @@
     </armor>
     <armor id="711" name="Piece Bone Breastplate" icon="icon.armor_mithril_banded_mail_i00">
         <!-- Cannot be exchanged, dropped, sold, or stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="chest"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="800"/>
@@ -80,7 +77,6 @@
     </armor>
     <armor id="712" name="Half Plate Armor" icon="icon.armor_dwarven_scale_mail_i00">
         <!-- Cannot be exchanged, dropped, sold, or stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="chest"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="1200"/>
@@ -92,7 +88,6 @@
     </armor>
     <armor id="713" name="Leather Pants" icon="icon.armor_squires_pants_i00">
         <!-- Cannot be exchanged, dropped, sold, or stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="legs"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="250"/>
@@ -104,7 +99,6 @@
     </armor>
     <armor id="714" name="Durable Leather Pants" icon="icon.armor_leather_pants_i00">
         <!-- Cannot be exchanged, dropped, sold, or stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="legs"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="300"/>
@@ -116,7 +110,6 @@
     </armor>
     <armor id="715" name="Piece Bone Gaiters" icon="icon.armor_mithril_banded_gaiters_i00">
         <!-- Cannot be exchanged, dropped, sold, or stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="legs"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="500"/>
@@ -128,7 +121,6 @@
     </armor>
     <armor id="716" name="Plate Gaiters" icon="icon.armor_dwarven_scale_mail_i00">
         <!-- Cannot be exchanged, dropped, sold, or stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="legs"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="800"/>
@@ -140,7 +132,6 @@
     </armor>
     <armor id="717" name="Leather Gloves" icon="icon.armor_gauntlet_i00">
         <!-- Cannot be exchanged, dropped, sold, or stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="gloves"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="100"/>
@@ -152,7 +143,6 @@
     </armor>
     <armor id="718" name="Durable Leather Gloves" icon="icon.armor_gauntlet_i00">
         <!-- Cannot be exchanged, dropped, sold, or stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="gloves"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="150"/>
@@ -164,7 +154,6 @@
     </armor>
     <armor id="719" name="Quality Leather Gloves" icon="icon.armor_gauntlet_i00">
         <!-- Cannot be exchanged, dropped, sold, or stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="gloves"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="150"/>
@@ -176,7 +165,6 @@
     </armor>
     <armor id="720" name="Reinforced Gloves" icon="icon.armor_gauntlet_i00">
         <!-- Cannot be exchanged, dropped, sold, or stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="gloves"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="200"/>
@@ -188,7 +176,6 @@
     </armor>
     <armor id="721" name="Leather Boots" icon="icon.armor_iron_boots_i00">
         <!-- Cannot be exchanged, dropped, sold, or stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="feet"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="150"/>
@@ -200,7 +187,6 @@
     </armor>
     <armor id="722" name="Durable Leather Boots" icon="icon.armor_iron_boots_i00">
         <!-- Cannot be exchanged, dropped, sold, or stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="feet"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="150"/>
@@ -212,7 +198,6 @@
     </armor>
     <armor id="723" name="Quality Leather Boots" icon="icon.armor_feet99">
         <!-- Cannot be exchanged, dropped, sold, or stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="feet"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="200"/>
@@ -224,7 +209,6 @@
     </armor>
     <armor id="724" name="Reinforced Boots" icon="icon.armor_iron_boots_i00">
         <!-- Cannot be exchanged, dropped, sold, or stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="feet"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="250"/>
@@ -328,7 +312,6 @@
     </item>
     <weapon id="738" name="Sword of Solidarity" icon="icon.weapon_long_sword_i00">
         <!-- Bronze sword crafted long ago in memory of the union between the Humans and the Elves. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -373,7 +356,6 @@
     </item>
     <weapon id="743" name="Sword of Sentinel" icon="icon.weapon_broad_sword_i00">
         <!-- Steel blade issued to those fighters that have been acknowledged as protectors of the woods. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -394,7 +376,6 @@
     </weapon>
     <weapon id="744" name="Staff of Sentinel" icon="icon.weapon_cedar_staff_i00">
         <!-- Staff issued to those magicians that have been acknowledged as protectors of the woods. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;46;120"/>
@@ -428,7 +409,6 @@
     </item>
     <weapon id="747" name="Wand of Adept" icon="icon.weapon_apprentices_wand_i00">
         <!-- The wand presented to those who have finished their studies at the school of magic. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -451,7 +431,6 @@
     </weapon>
     <weapon id="748" name="Gallint's Oak Wand" icon="icon.weapon_club_i00">
         <!-- Oak wand enchanted by Gallint's spell. This will capture and seal the spirit of mirrors, if used physically. Cannot be exchanged, dropped, sold, or stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;46;120"/>
@@ -494,7 +473,6 @@
     </item>
     <weapon id="754" name="Red Sunset Staff" icon="icon.weapon_cedar_staff_i00">
         <!-- Staff used by warriors belonging to the Red Sunset clan. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;46;120"/>

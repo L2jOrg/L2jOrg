@@ -246,7 +246,6 @@
     </item>
     <armor id="70029" name="Yellow Talisman - P. Atk." icon="icon.etc_talisman_i02">
         <!-- A Shadow Item that increases P. Atk. Effects do not stack when a Talisman of a similar type is used. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="underwear"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="150"/>
@@ -258,7 +257,6 @@
     </armor>
     <armor id="70030" name="Yellow Talisman - Atk. Spd." icon="icon.etc_talisman_i02">
         <!-- A Shadow Item that increases Atk. Spd. Effects do not stack when a Talisman of a similar type is used. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="underwear"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="150"/>
@@ -270,7 +268,6 @@
     </armor>
     <armor id="70031" name="Yellow Talisman - M. Def." icon="icon.etc_talisman_i02">
         <!-- A Shadow Item that increases M. Def. Effects do not stack when a Talisman of a similar type is used. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="underwear"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="150"/>
@@ -282,7 +279,6 @@
     </armor>
     <armor id="70032" name="Yellow Talisman - M. Atk." icon="icon.etc_talisman_i02">
         <!-- A Shadow Item that increases M. Atk. Effects do not stack when a Talisman of a similar type is used. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="underwear"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="150"/>
@@ -294,7 +290,6 @@
     </armor>
     <armor id="70033" name="Yellow Talisman - Casting Spd." icon="icon.etc_talisman_i02">
         <!-- A Shadow Item that increases Casting Spd. Effects do not stack when a Talisman of a similar type is used. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="underwear"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="150"/>
@@ -306,7 +301,6 @@
     </armor>
     <armor id="70034" name="Yellow Talisman - Accuracy" icon="icon.etc_talisman_i02">
         <!-- A Shadow Item that increases Accuracy. Effects do not stack when a Talisman of a similar type is used. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="underwear"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="150"/>
@@ -318,7 +312,6 @@
     </armor>
     <armor id="70035" name="Yellow Talisman - P. Def." icon="icon.etc_talisman_i02">
         <!-- A Shadow Item that increases P. Def. Effects do not stack when a Talisman of a similar type is used. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="underwear"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="150"/>
@@ -330,7 +323,6 @@
     </armor>
     <armor id="70036" name="Yellow Talisman - Speed" icon="icon.etc_talisman_i02">
         <!-- A Shadow Item that increases Speed. Effects do not stack when a Talisman of a similar type is used. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="underwear"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="150"/>
@@ -342,7 +334,6 @@
     </armor>
     <armor id="70037" name="Yellow Talisman - Evasion" icon="icon.etc_talisman_i02">
         <!-- A Shadow Item that increases Evasion. Effects do not stack when a Talisman of a similar type is used. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="underwear"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="150"/>
@@ -354,7 +345,6 @@
     </armor>
     <armor id="70038" name="Yellow Talisman - Healing Power" icon="icon.etc_talisman_i02">
         <!-- A Shadow Item that increases HP. Effects do not stack when a Talisman of a similar type is used. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="underwear"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="150"/>
@@ -366,7 +356,6 @@
     </armor>
     <armor id="70039" name="Blue Talisman - Invisibility" icon="icon.etc_talisman_i01">
         <!-- A Shadow Item that makes the character invisible to monsters. Effects do not stack when a Talisman of a similar type is used. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="underwear"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="150"/>
@@ -438,7 +427,6 @@
     </item>
     <item id="70046" name="High Quality Bait" icon="icon.etc_bait_i02">
         <!-- Intended for VIP, used in fishing. Increases the chance to get Golden Treasure Chest. Cannot be sold to NPC. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
         <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
     </item>
@@ -888,7 +876,6 @@
     </item>
     <item id="70093" name="Highest Quality Bait" icon="icon.etc_bait_i02">
         <!-- Intended for VIP and used in fishing. In comparison with High Quality Bait, provides more XP in case of a catch. Cannot be sold to NPC. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
         <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
     </item>
@@ -906,7 +893,6 @@
     </item>
     <armor id="70095" name="Wooden Helmet" icon="icon.armor_leather_helmet_i00">
         <!-- A 7-day item. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="head"/>
         <set name="immediate_effect" val="true"/>
         <set name="time" val="10080"/>
@@ -917,7 +903,6 @@
     </armor>
     <armor id="70096" name="Wooden Breastplate" icon="icon.armor_t06_u_i00">
         <!-- A 7-day item. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="LIGHT"/>
         <set name="bodypart" val="chest"/>
         <set name="immediate_effect" val="true"/>
@@ -929,7 +914,6 @@
     </armor>
     <armor id="70097" name="Wooden Gaiters" icon="icon.armor_t06_l_i00">
         <!-- A 7-day item. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="LIGHT"/>
         <set name="bodypart" val="legs"/>
         <set name="immediate_effect" val="true"/>
@@ -941,7 +925,6 @@
     </armor>
     <armor id="70098" name="Leather Helmet" icon="icon.armor_leather_helmet_i00">
         <!-- A 7-day item. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="head"/>
         <set name="immediate_effect" val="true"/>
         <set name="time" val="10080"/>
@@ -952,7 +935,6 @@
     </armor>
     <armor id="70099" name="Tunic of Devotion" icon="icon.armor_t55_u_i00">
         <!-- A 7-day item. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="MAGIC"/>
         <set name="bodypart" val="chest"/>
         <set name="immediate_effect" val="true"/>

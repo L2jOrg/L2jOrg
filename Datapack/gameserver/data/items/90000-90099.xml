@@ -107,7 +107,6 @@
     </item>
     <armor id="90021" name="Warrior’s Talisman - Attack" icon="icon.r90_sp_talisman_dr_mp_active">
         <!-- PvE Damage +3%, P./ M. Critical Damage +20, P./ M. Skill Power +2%, P./ M. Accuracy +1. Duration: 30-day. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="120"/>
         <set name="time" val="43200"/>
@@ -115,7 +114,6 @@
     </armor>
     <armor id="90022" name="Warrior’s Talisman - Defense" icon="icon.r99_talisman_pd_up_passive">
         <!-- Received PvE damage -3%, M. Damage Resistance +2%, P./ M. Skill Evasion +4%, Debuff Resistance +3%, Pull Resistance +10%. Duration: 30-day. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="120"/>
         <set name="time" val="43200"/>
@@ -123,7 +121,6 @@
     </armor>
     <armor id="90023" name="Belt" icon="icon.belt_i00">
         <!-- Inventory Slots +2/ Weight Limit +1,000. Use a Magic Rune Clip to upgrade it to Rag Belt. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="LIGHT"/>
         <set name="bodypart" val="waist"/>
         <set name="immediate_effect" val="true"/>
@@ -138,7 +135,6 @@
     </armor>
     <armor id="90024" name="Rag Belt" icon="icon.belt_i01">
         <!-- Inventory Slots +2/ Weight Limit +2,000/ HP Recovery +1.24/ MP Recovery +0.83/ CP Recovery +1.66. Use a mid-grade Magic Rune Clip to upgrade it to Leather Belt. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="LIGHT"/>
         <set name="bodypart" val="waist"/>
         <set name="immediate_effect" val="true"/>
@@ -153,7 +149,6 @@
     </armor>
     <armor id="90025" name="Leather Belt" icon="icon.belt_i02">
         <!-- Inventory Slots +3/ Weight Limit +3,000/ HP Recovery +1.47/ MP Recovery +0.98/ CP Recovery +1.96/ Max. HP/ MP/ CP +100. Use a high-grade Magic Rune Clip to upgrade it to Iron Belt. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="LIGHT"/>
         <set name="bodypart" val="waist"/>
         <set name="immediate_effect" val="true"/>
@@ -168,7 +163,6 @@
     </armor>
     <armor id="90026" name="Iron Belt" icon="icon.belt_i03">
         <!-- Inventory Slots +4/ Weight Limit +4,000/ HP Recovery +1.70/ MP Recovery +1.13/ CP Recovery +2.26/ Max. HP/ MP/ CP +150. Use a top-grade Magic Rune Clip to upgrade it to Mithril Belt. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="LIGHT"/>
         <set name="bodypart" val="waist"/>
         <set name="immediate_effect" val="true"/>
@@ -183,7 +177,6 @@
     </armor>
     <armor id="90027" name="Mithril Belt" icon="icon.belt_i04">
         <!-- Inventory Slots +5/ Weight Limit +5,000/ HP Recovery +1.92/ MP Recovery +1.28/ CP Recovery +2.56/ Max. HP/ MP/ CP +200. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="LIGHT"/>
         <set name="bodypart" val="waist"/>
         <set name="immediate_effect" val="true"/>
@@ -245,7 +238,6 @@
     </item>
     <armor id="90036" name="Hero’s Talisman - Attack" icon="icon.r90_sp_talisman_dr_hp_active">
         <!-- PvP Damage +3%, P./ M. Critical Damage +20, Skill Power +2%, P./ M. Accuracy +1. Duration: 30-day. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="talisman"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="120"/>
@@ -257,7 +249,6 @@
     </armor>
     <armor id="90037" name="Hero’s Talisman - Defense" icon="icon.r95_talisman_ca_down_active">
         <!-- Received PvP damage +3%, M. Damage Resistance +2%, P./ M. Skill Evasion +4%, Debuff Resistance +3%. Duration: 30-day. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="talisman"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="120"/>

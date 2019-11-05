@@ -2,7 +2,6 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
     <armor id="91800" name="Queen Ant's Ring Lv. 4" icon="icon.accessory_ring_of_queen_ant_i04">
         <!-- Available for 15 days. Max MP +30, Poison Resistance/ Atk. Rate +30%, P./ M. Accuracy +5, P. Atk. +10%, M. Atk. +15%, P. Critical Damage +15%, M. Critical Damage +10%. The effect doesn't stack if two identical rings are equipped. Cannot be enchanted. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="rfinger;lfinger"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="150"/>
@@ -14,7 +13,6 @@
     </armor>
     <armor id="91801" name="Orfen's Earring Lv. 4" icon="icon.accessory_earring_of_orfen_i04">
         <!-- Available for 15 days. Max MP +40, Mental Resistance/ Atk. Rate +20%, Hold Resistance/ Atk. Rate +30%, Received Healing +12%, Skill MP Consumption -10%. Has a chance of absorbing 10% of the inflicted damage as MP. The effect doesn't stack if two identical earrings are equipped. Cannot be enchanted. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="rear;lear"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="150"/>
@@ -26,7 +24,6 @@
     </armor>
     <armor id="91802" name="Ring of Core Lv. 4" icon="icon.accessory_ring_of_core_i04">
         <!-- MP +30, Mental Resistance and Atk. Rate +30%, P./ M. Evasion +5, Received P./ M. Damage -10%, Sleep Resistance +20%. Enables to use a special ability to remove debuffs. The effect doesn't stack if two identical rings are worn. Cannot be enchanted. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="rfinger;lfinger"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="150"/>
@@ -44,7 +41,6 @@
     </item>
     <armor id="91804" name="Baium's Ring Lv. 1" icon="icon.accessory_ring_of_baium_i00">
         <!-- Available for 15 days. Max MP +15, Stun Resistance/ Atk. Rate +10%, Bleed Resistance/ Atk. Rate +5%, P./ M. Accuracy +2, Atk. Spd./ Casting Spd. +3%, P./ M. Skill Power +3%. The effect does not stack if two identical rings are equipped. Cannot be enchanted. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="rfinger;lfinger"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="150"/>
@@ -56,7 +52,6 @@
     </armor>
     <armor id="91805" name="Zaken's Earring Lv. 1" icon="icon.accessory_earring_of_zaken_i00">
         <!-- Available for 15 days. Max MP +22, Bleed Resistance/ Atk. Rate +10%, Stun Resistance/ Atk. Rate +5%, Mental Resistance/ Atk. Rate +5%, Received Healing +4%, HP Recovery Bonus +10%, Skill MP Consumption -2%. The effect doesn't stack if two identical earrings are equipped. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="rear;lear"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="150"/>
@@ -98,7 +93,6 @@
     </item>
     <armor id="91811" name="Agathion Capricorn +3" icon="icon.agathion_capr_star_1">
         <!-- Available for 3 days. Can be used to obtain the power of Agathion Capricorn. Summons Agathion from the main slot. Activates Special Abilities. <Special Abilities>. M. Critical Rate increased. Starting from +6, cooldown for M. Skills and songs/ dances decreased. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="gloves"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="5"/>
@@ -106,7 +100,6 @@
     </armor>
     <armor id="91812" name="Agathion Libra +3" icon="icon.agathion_lib_star_1">
         <!-- Available for 3 days. Can be used to obtain the power of Agathion Libra. Summons Agathion from the main slot. Activates Special Abilities. <Special Abilities>. Casting Spd. increased. Starting from +6, MP Consumption for M. Skills and songs/ dances decreased. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="gloves"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="5"/>
@@ -114,7 +107,6 @@
     </armor>
     <armor id="91813" name="Agathion Leo +3" icon="icon.agathion_leo_star_1">
         <!-- Available for 3 days. Can be used to obtain the power of Agathion Leo. Summons Agathion from the main slot. Activates Special Abilities. <Special Abilities>. P. Atk. increased. Starting from +6, bonus to paralyzing attacks. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="gloves"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="5"/>
@@ -122,7 +114,6 @@
     </armor>
     <armor id="91814" name="Agathion Scorpio +3" icon="icon.agathion_sco_star_1">
         <!-- Available for 3 days. Can be used to obtain the power of Agathion Scorpio. Summons Agathion from the main slot. Activates Special Abilities. <Special Abilities>. P. Critical Rate increased. Starting from +6, cooldown for P. Skills and songs/ dances decreased. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="gloves"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="5"/>
@@ -130,7 +121,6 @@
     </armor>
     <armor id="91815" name="Agathion Aquarius +3" icon="icon.agathion_aqu_star_1">
         <!-- Available for 3 days. Can be used to obtain the power of Agathion Aquarius. Summons Agathion from the main slot. Activates Special Abilities. <Special Abilities>. M. Atk. increased. Starting from +6, bonus to hold/ sleep attacks. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="gloves"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="5"/>
@@ -138,7 +128,6 @@
     </armor>
     <armor id="91816" name="Agathion Sagittarius +3" icon="icon.agathion_sag_star_1">
         <!-- Available for 3 days. Can be used to obtain the power of Agathion Sagittarius. Summons Agathion from the main slot. Activates Special Abilities. <Special Abilities>. Atk. Spd. increased. Starting from +6, MP Consumption for P. Skills and songs/ dances decreased. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="gloves"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="5"/>
@@ -418,7 +407,6 @@
     </item>
     <armor id="91862" name="Dragon Belt" icon="icon.r2_belt_i01">
         <!-- A belt imbued with the dragon's power. Can be enchanted up to +10. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="LIGHT"/>
         <set name="bodypart" val="waist"/>
         <set name="immediate_effect" val="true"/>
@@ -445,7 +433,6 @@
     </item>
     <weapon id="91866" name="Caliburs (PA Event)" icon="icon.weapon_plenitas_i00">
         <!-- Use a PA Event Enchant Scroll to try your luck and reach the maximum enchant level. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="100"/>
@@ -509,7 +496,6 @@
     </item>
     <armor id="91875" name="Shadow Kamael Transformation" icon="icon.gomdori_chest_change">
         <!-- When equipped, it is impossible to wear armor. Hats, weapons and accessories are not removed. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="HEAVY"/>
         <set name="bodypart" val="alldress"/>
         <set name="immediate_effect" val="true"/>
@@ -517,14 +503,12 @@
     </armor>
     <armor id="91876" name="Light Kamael Transformation" icon="icon.gomdori_chest_change">
         <!-- When equipped, it is impossible to wear armor. Hats, weapons and accessories are not removed. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="HEAVY"/>
         <set name="bodypart" val="alldress"/>
         <set name="immediate_effect" val="true"/>
         <restriction sellable="false"/>
     </armor>
     <weapon id="91877" name="Ancient Warrior's Sword" icon="icon.weapon_tulwar_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DUALBLUNT"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
@@ -543,7 +527,6 @@
         </stats>
     </weapon>
     <weapon id="91878" name="Katzbalger" icon="icon.weapon_tulwar_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DUALBLUNT"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
@@ -564,7 +547,6 @@
         </stats>
     </weapon>
     <weapon id="91879" name="Field Sword" icon="icon.weapon_tulwar_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DUALBLUNT"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
@@ -585,7 +567,6 @@
         </stats>
     </weapon>
     <weapon id="91880" name="Military Talwar" icon="icon.weapon_tulwar_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DUALBLUNT"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
@@ -606,7 +587,6 @@
         </stats>
     </weapon>
     <weapon id="91881" name="Talwar" icon="icon.weapon_tulwar_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DUALBLUNT"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
@@ -627,7 +607,6 @@
         </stats>
     </weapon>
     <weapon id="91882" name="Saber Tooth" icon="icon.weapon_invincible_blade_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DUALBLUNT"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
@@ -648,7 +627,6 @@
         </stats>
     </weapon>
     <weapon id="91883" name="Immortal Edge" icon="icon.weapon_invincible_blade_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DUALBLUNT"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
@@ -669,7 +647,6 @@
         </stats>
     </weapon>
     <weapon id="91884" name="Schlager" icon="icon.weapon_schlaeger_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DUALBLUNT"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
@@ -690,7 +667,6 @@
         </stats>
     </weapon>
     <weapon id="91885" name="Dismantler" icon="icon.weapon_dismantler_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DUALBLUNT"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
@@ -711,7 +687,6 @@
         </stats>
     </weapon>
     <weapon id="91886" name="Innominate Victory" icon="icon.weapon_nameless_victory_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DUALBLUNT"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
@@ -732,7 +707,6 @@
         </stats>
     </weapon>
     <weapon id="91887" name="Durendal" icon="icon.weapon_death_bringer_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DUALBLUNT"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
@@ -753,7 +727,6 @@
         </stats>
     </weapon>
     <weapon id="91888" name="Undertaker" icon="icon.weapon_death_bringer_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DUALBLUNT"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
@@ -774,7 +747,6 @@
         </stats>
     </weapon>
     <weapon id="91889" name="Divine Pain" icon="icon.weapon_pain_of_godness_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DUALBLUNT"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
@@ -795,7 +767,6 @@
         </stats>
     </weapon>
     <weapon id="91890" name="Gram" icon="icon.weapon_gram_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DUALBLUNT"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
@@ -816,7 +787,6 @@
         </stats>
     </weapon>
     <weapon id="91891" name="Warrior's Rapier" icon="icon.weapon_sealed_rapier_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="1300"/>
         <set name="price" val="244000"/>
@@ -830,7 +800,6 @@
         </stats>
     </weapon>
     <weapon id="91892" name="Grand ?p?e" icon="icon.weapon_rapier_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="D"/>
         <set name="weight" val="1300"/>
@@ -846,7 +815,6 @@
         </stats>
     </weapon>
     <weapon id="91893" name="?p?e" icon="icon.weapon_rapier_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="D"/>
         <set name="weight" val="1300"/>
@@ -862,7 +830,6 @@
         </stats>
     </weapon>
     <weapon id="91894" name="Estoc" icon="icon.weapon_rapier_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="D"/>
         <set name="weight" val="1300"/>
@@ -878,7 +845,6 @@
         </stats>
     </weapon>
     <weapon id="91895" name="Fleuret" icon="icon.weapon_rapier_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="D"/>
         <set name="weight" val="1300"/>
@@ -894,7 +860,6 @@
         </stats>
     </weapon>
     <weapon id="91896" name="Admiral's Estoc" icon="icon.weapon_blink_slasher_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="C"/>
         <set name="weight" val="1300"/>
@@ -910,7 +875,6 @@
         </stats>
     </weapon>
     <weapon id="91897" name="Blinzlasher" icon="icon.weapon_blink_slasher_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="C"/>
         <set name="weight" val="1300"/>
@@ -926,7 +890,6 @@
         </stats>
     </weapon>
     <weapon id="91898" name="Chevalier Rapier" icon="icon.weapon_soldat_estoc_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="C"/>
         <set name="weight" val="1300"/>
@@ -942,7 +905,6 @@
         </stats>
     </weapon>
     <weapon id="91899" name="Soldat Estoc" icon="icon.weapon_soldat_estoc_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="C"/>
         <set name="weight" val="1300"/>

@@ -7,7 +7,6 @@
     </item>
     <armor id="10250" name="Adventurer Hat - Event" icon="icon.accessory_explorer_hat_i00">
         <!-- Adventurer's Hat. Occupies 2 Hair Accessory slots. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="hairall"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="10"/>

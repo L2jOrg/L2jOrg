@@ -198,7 +198,6 @@
     </item>
     <weapon id="5233" name="Keshanberk*Keshanberk" icon="icon.weapon_dual_sword_i00">
         <!-- When enchanted, P. Atk. of dualswords, two-handed swords, blunt and fist weapons increases more significantly than that of one-handed swords. 1 ordinary Soul Crystal and 1 Special Soul Crystal can be applied. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DUAL"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;44;120"/>
@@ -788,7 +787,6 @@
         </skills>
     </item>
     <weapon id="5284" name="Zweinhander" icon="icon.weapon_zweihander_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;44;120"/>
@@ -808,7 +806,6 @@
         </stats>
     </weapon>
     <weapon id="5285" name="Heavy Sword" icon="icon.weapon_heavy_sword_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;44;120"/>
@@ -833,7 +830,6 @@
     </weapon>
     <weapon id="5286" name="Berserker Blade" icon="icon.weapon_berserker_blade_i00">
         <!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;44;120"/>
@@ -858,7 +854,6 @@
     </weapon>
     <armor id="5287" name="Sealed Dark Crystal breastplate" icon="icon.armor_t74_u_i02">
         <!-- Sealed Dark Crystal breastplate. The seal can be removed by a blacksmith in any village. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="HEAVY"/>
         <set name="bodypart" val="chest"/>
         <set name="immediate_effect" val="true"/>
@@ -874,7 +869,6 @@
     </armor>
     <armor id="5288" name="Sealed Dark Crystal Gaiters" icon="icon.armor_t74_l_i02">
         <!-- Sealed Dark Crystal Gaiters. The seal can be removed by a blacksmith in any village. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="HEAVY"/>
         <set name="bodypart" val="legs"/>
         <set name="immediate_effect" val="true"/>
@@ -890,7 +884,6 @@
     </armor>
     <armor id="5289" name="Sealed Dark Crystal Helmet" icon="icon.armor_helmet_i02">
         <!-- Sealed Dark Crystal Helmet. The seal can be removed by a blacksmith in any village. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="head"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="107"/>
@@ -905,7 +898,6 @@
     </armor>
     <armor id="5290" name="Sealed Dark Crystal Gloves" icon="icon.armor_t74_g_i02">
         <!-- Sealed Dark Crystal Gloves. The seal can be removed by a blacksmith in any village. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="gloves"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="71"/>
@@ -920,7 +912,6 @@
     </armor>
     <armor id="5291" name="Sealed Dark Crystal Boots" icon="icon.armor_t74_b_i02">
         <!-- Sealed Dark Crystal Boots. The seal can be removed by a blacksmith in any village. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="feet"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="71"/>
@@ -935,7 +926,6 @@
     </armor>
     <armor id="5292" name="Sealed Dark Crystal Shield" icon="icon.shield_dark_crystal_shield_i02">
         <!-- Sealed Dark Crystal Shield. The seal can be removed by a blacksmith in any village. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="lhand"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="75"/>
@@ -952,7 +942,6 @@
     </armor>
     <armor id="5293" name="Sealed Tallum Plate Armor" icon="icon.armor_t77_ul_i02">
         <!-- Sealed Tallum Plate Armor. The seal can be removed by a blacksmith in any village. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="HEAVY"/>
         <set name="bodypart" val="onepiece"/>
         <set name="immediate_effect" val="true"/>
@@ -968,7 +957,6 @@
     </armor>
     <armor id="5294" name="Sealed Tallum Helmet" icon="icon.armor_helmet_i02">
         <!-- Sealed Tallum Helmet. The seal can be removed by a blacksmith in any village. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="head"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="107"/>
@@ -983,7 +971,6 @@
     </armor>
     <armor id="5295" name="Sealed Tallum Gloves" icon="icon.armor_t77_g_i02">
         <!-- Sealed Tallum Gloves. The seal can be removed by a blacksmith in any village. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="gloves"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="71"/>
@@ -998,7 +985,6 @@
     </armor>
     <armor id="5296" name="Sealed Tallum Boots" icon="icon.armor_t77_b_i02">
         <!-- Sealed Tallum Boots. The seal can be removed by a blacksmith in any village. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="feet"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="71"/>
@@ -1013,7 +999,6 @@
     </armor>
     <armor id="5297" name="Sealed Dark Crystal Leather Armor" icon="icon.armor_t75_u_i02">
         <!-- Sealed Dark Crystal Leather Armor. The seal can be removed by a blacksmith in any village. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="LIGHT"/>
         <set name="bodypart" val="chest"/>
         <set name="immediate_effect" val="true"/>
@@ -1029,7 +1014,6 @@
     </armor>
     <armor id="5298" name="Sealed Dark Crystal Leggings" icon="icon.armor_t75_l_i02">
         <!-- Sealed Dark Crystal Leggings. The seal can be removed by a blacksmith in any village. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="LIGHT"/>
         <set name="bodypart" val="legs"/>
         <set name="immediate_effect" val="true"/>

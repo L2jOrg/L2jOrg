@@ -374,7 +374,6 @@
         </skills>
     </item>
     <weapon id="29156" name="Bone Dagger" icon="icon.weapon_bone_dagger_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DAGGER"/>
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
@@ -393,7 +392,6 @@
         </stats>
     </weapon>
     <weapon id="29157" name="Knife" icon="icon.weapon_knife_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DAGGER"/>
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
@@ -412,7 +410,6 @@
         </stats>
     </weapon>
     <weapon id="29158" name="Doom Dagger" icon="icon.weapon_doomed_dagger_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DAGGER"/>
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
@@ -431,7 +428,6 @@
         </stats>
     </weapon>
     <weapon id="29159" name="Dirk" icon="icon.weapon_dirk_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DAGGER"/>
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
@@ -450,7 +446,6 @@
         </stats>
     </weapon>
     <weapon id="29160" name="Shining Knife" icon="icon.weapon_shining_knife_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DAGGER"/>
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
@@ -469,7 +464,6 @@
         </stats>
     </weapon>
     <weapon id="29161" name="Throwing Knife" icon="icon.weapon_throw_knife_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DAGGER"/>
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
@@ -488,7 +482,6 @@
         </stats>
     </weapon>
     <weapon id="29162" name="Sword Breaker" icon="icon.weapon_sword_breaker_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DAGGER"/>
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
@@ -507,7 +500,6 @@
         </stats>
     </weapon>
     <weapon id="29163" name="Skeleton Dagger" icon="icon.weapon_dagger_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DAGGER"/>
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
@@ -527,7 +519,6 @@
     </weapon>
     <weapon id="29164" name="Eldritch Dagger" icon="icon.weapon_knife_i00">
         <!-- Steel dagger engraved with the runes of Shilen and Gran Kain. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DAGGER"/>
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
@@ -546,7 +537,6 @@
         </stats>
     </weapon>
     <weapon id="29165" name="Dagger of Adept" icon="icon.weapon_doomed_dagger_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DAGGER"/>
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
@@ -565,7 +555,6 @@
         </stats>
     </weapon>
     <weapon id="29166" name="Red Sunset Dagger" icon="icon.weapon_doomed_dagger_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DAGGER"/>
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
@@ -584,7 +573,6 @@
         </stats>
     </weapon>
     <weapon id="29167" name="Crafted Dagger" icon="icon.weapon_handiwork_dagger_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DAGGER"/>
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
@@ -603,7 +591,6 @@
         </stats>
     </weapon>
     <weapon id="29168" name="Assassin Knife" icon="icon.weapon_assassin_knife_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DAGGER"/>
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
@@ -622,7 +609,6 @@
         </stats>
     </weapon>
     <weapon id="29169" name="Poniard Dagger" icon="icon.weapon_dirk_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DAGGER"/>
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
@@ -641,7 +627,6 @@
         </stats>
     </weapon>
     <weapon id="29170" name="Kukuri" icon="icon.weapon_kukuri_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DAGGER"/>
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
@@ -660,7 +645,6 @@
         </stats>
     </weapon>
     <weapon id="29171" name="Maingauche" icon="icon.weapon_maingauche_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DAGGER"/>
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
@@ -679,7 +663,6 @@
         </stats>
     </weapon>
     <weapon id="29172" name="Mithril Dagger" icon="icon.weapon_mithril_dagger_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DAGGER"/>
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
@@ -698,7 +681,6 @@
         </stats>
     </weapon>
     <weapon id="29173" name="Dagger of Mana" icon="icon.weapon_dagger_of_mana_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DAGGER"/>
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
@@ -717,7 +699,6 @@
         </stats>
     </weapon>
     <weapon id="29174" name="Mystic Knife" icon="icon.weapon_mystic_knife_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DAGGER"/>
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
@@ -736,7 +717,6 @@
         </stats>
     </weapon>
     <weapon id="29175" name="Conjurer's Knife" icon="icon.weapon_conjure_knife_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DAGGER"/>
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
@@ -755,7 +735,6 @@
         </stats>
     </weapon>
     <weapon id="29176" name="Shilen Knife" icon="icon.weapon_knife_o'_silenus_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DAGGER"/>
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
@@ -775,7 +754,6 @@
     </weapon>
     <weapon id="29177" name="Cursed Maingauche" icon="icon.t00">
         <!-- Cursed Maingauche. P. Atk. is low, but it can inflict Bleeding after Critical Attack with a certain probability. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DAGGER"/>
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
@@ -794,7 +772,6 @@
         </stats>
     </weapon>
     <weapon id="29178" name="Short Sword" icon="icon.weapon_small_sword_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
@@ -812,7 +789,6 @@
         </stats>
     </weapon>
     <weapon id="29179" name="Long Sword" icon="icon.weapon_long_sword_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
@@ -830,7 +806,6 @@
         </stats>
     </weapon>
     <weapon id="29180" name="Broadsword" icon="icon.weapon_broad_sword_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
@@ -848,7 +823,6 @@
         </stats>
     </weapon>
     <weapon id="29181" name="Gladius" icon="icon.weapon_gladius_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
@@ -866,7 +840,6 @@
         </stats>
     </weapon>
     <weapon id="29182" name="Orcish Sword" icon="icon.weapon_orcish_sword_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
@@ -884,7 +857,6 @@
         </stats>
     </weapon>
     <weapon id="29183" name="Falchion" icon="icon.weapon_falchion_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
@@ -902,7 +874,6 @@
         </stats>
     </weapon>
     <weapon id="29184" name="Apprentice's Spellbook" icon="icon.weapon_apprentices_spellbook_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
@@ -921,7 +892,6 @@
         </stats>
     </weapon>
     <weapon id="29185" name="Voodoo Doll" icon="icon.weapon_voodoo_doll_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
@@ -939,7 +909,6 @@
         </stats>
     </weapon>
     <weapon id="29186" name="Sword of Reflection" icon="icon.weapon_sword_of_watershadow_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
@@ -957,7 +926,6 @@
         </stats>
     </weapon>
     <weapon id="29187" name="Sword of Watershadow" icon="icon.weapon_sword_of_watershadow_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
@@ -975,7 +943,6 @@
         </stats>
     </weapon>
     <weapon id="29188" name="Handmade Sword" icon="icon.weapon_handmade_sword_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
@@ -993,7 +960,6 @@
         </stats>
     </weapon>
     <weapon id="29189" name="Buffalo's Horn" icon="icon.weapon_buffalo_horn_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
@@ -1011,7 +977,6 @@
         </stats>
     </weapon>
     <weapon id="29190" name="Tears of Eva" icon="icon.weapon_tears_of_eva_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
@@ -1029,7 +994,6 @@
         </stats>
     </weapon>
     <weapon id="29191" name="Relic of the Saints" icon="icon.weapon_apprentices_spellbook_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
@@ -1047,7 +1011,6 @@
         </stats>
     </weapon>
     <weapon id="29192" name="Crucifix of Blessing" icon="icon.weapon_crucifix_of_blessing_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
@@ -1066,7 +1029,6 @@
     </weapon>
     <weapon id="29193" name="Sword of Solidarity" icon="icon.weapon_long_sword_i00">
         <!-- Bronze sword crafted long ago in memory of the union between the Humans and the Elves. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
@@ -1085,7 +1047,6 @@
     </weapon>
     <weapon id="29194" name="Sword of Sentinel" icon="icon.weapon_broad_sword_i00">
         <!-- Steel blade issued to those fighters that have been acknowledged as protectors of the woods. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
@@ -1104,7 +1065,6 @@
     </weapon>
     <weapon id="29195" name="Blood Saber" icon="icon.weapon_broad_sword_i00">
         <!-- An Oriharukon sword crafted in the Abella style of the east. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
@@ -1123,7 +1083,6 @@
     </weapon>
     <weapon id="29196" name="Butcher's Sword" icon="icon.weapon_orcish_sword_i00">
         <!-- Sword granted to young Orc Fighters who distinguished themselves at war. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
@@ -1141,7 +1100,6 @@
         </stats>
     </weapon>
     <weapon id="29197" name="Bastard Sword" icon="icon.weapon_bastard_sword_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
@@ -1159,7 +1117,6 @@
         </stats>
     </weapon>
     <weapon id="29198" name="Sword of Magic" icon="icon.weapon_sword_of_magic_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
@@ -1178,7 +1135,6 @@
         </stats>
     </weapon>
     <weapon id="29199" name="Scroll of Wisdom" icon="icon.weapon_scroll_of_wisdom_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>

@@ -15,7 +15,6 @@
     </item>
     <armor id="49703" name="Bracelet of Border" icon="icon.dimension_bracelet_i05">
         <!-- When equipped, opens up 4 Talisman slots. HP/MP Recovery +7%, Accuracy +1, M. Accuracy +1, Weight Limit +7,000. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse and transferred between characters on the same account. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="underwear"/>
         <set name="immediate_effect" val="true"/>
         <restriction tradable="false" dropable="false" depositable="false" sellable="false" freightable="true"/>
@@ -40,7 +39,6 @@
     </item>
     <armor id="49707" name="Talisman of Darkness - P. Atk." icon="icon.etc_wise_man_stone_i04">
         <!-- P. Atk. +5%. Effects from two such Talismans do not stack. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. Duration: 1 hour. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="120"/>
         <set name="bodypart" val="talisman"/>
@@ -51,7 +49,6 @@
     </armor>
     <armor id="49708" name="Talisman of Darkness - M. Atk." icon="icon.etc_wise_man_stone_i04">
         <!-- M. Atk. +5%. Effects from two such Talismans do not stack. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. Duration: 1 hour. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="120"/>
         <set name="bodypart" val="talisman"/>
@@ -62,7 +59,6 @@
     </armor>
     <armor id="49709" name="Talisman of Darkness - P. Def." icon="icon.etc_wise_man_stone_i04">
         <!-- P. Def. +6%. Effects from two such Talismans do not stack. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. Duration: 1 hour. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="120"/>
         <set name="bodypart" val="talisman"/>
@@ -73,7 +69,6 @@
     </armor>
     <armor id="49710" name="Talisman of Darkness - M. Def." icon="icon.etc_wise_man_stone_i04">
         <!-- M. Def. +6%. Effects from two such Talismans do not stack. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. Duration: 1 hour. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="120"/>
         <set name="bodypart" val="talisman"/>
@@ -84,7 +79,6 @@
     </armor>
     <armor id="49711" name="Talisman of Darkness - P. Skills Evasion" icon="icon.etc_wise_man_stone_i04">
         <!-- P. Skills Evasion +18%. Effects from two such Talismans do not stack. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. Duration: 1 hour. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="120"/>
         <set name="bodypart" val="talisman"/>
@@ -95,7 +89,6 @@
     </armor>
     <armor id="49712" name="Talisman of Darkness - M. Skills Evasion" icon="icon.etc_wise_man_stone_i04">
         <!-- M. Skills Evasion +18%. Effects from two such Talismans do not stack. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. Duration: 1 hour. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="120"/>
         <set name="bodypart" val="talisman"/>
@@ -106,7 +99,6 @@
     </armor>
     <armor id="49713" name="Talisman of Darkness - HP" icon="icon.etc_wise_man_stone_i04">
         <!-- Max. HP +7%. Effects from two such Talismans do not stack. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. Duration: 1 hour. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="120"/>
         <set name="bodypart" val="talisman"/>
@@ -117,7 +109,6 @@
     </armor>
     <armor id="49714" name="Talisman of Darkness - MP" icon="icon.etc_wise_man_stone_i04">
         <!-- Max. MP +7%. Effects from two such Talismans do not stack. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. Duration: 1 hour. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="120"/>
         <set name="bodypart" val="talisman"/>
@@ -128,7 +119,6 @@
     </armor>
     <armor id="49715" name="Talisman of Darkness - Healing Power" icon="icon.etc_wise_man_stone_i04">
         <!-- Healing Power +4%. Effects from two such Talismans do not stack. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. Duration: 1 hour. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="120"/>
         <set name="bodypart" val="talisman"/>
@@ -139,7 +129,6 @@
     </armor>
     <armor id="49716" name="Talisman of Darkness - Power of Healing Magic" icon="icon.etc_wise_man_stone_i04">
         <!-- Power of Healing Magic +43. Effects from two such Talismans do not stack. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. Duration: 1 hour. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="120"/>
         <set name="bodypart" val="talisman"/>
@@ -250,7 +239,6 @@
     </item>
     <armor id="49727" name="Limited Talisman of Border - Lv. 1" icon="icon.bm_magic_square_talisman">
         <!-- P./M. Def. +12. Possesses limited power of Border, cannot be enchanted. Effects from two such Talismans do not stack. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
         <set name="bodypart" val="talisman"/>
         <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
@@ -260,7 +248,6 @@
     </armor>
     <armor id="49728" name="Talisman of Border - Lv. 2" icon="icon.bm_magic_square_talisman">
         <!-- P./M. Def. +14, P./M. Skills Evasion +1. Take it to Baggins in Giran to increase its level. Effects from two such Talismans do not stack. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
         <set name="bodypart" val="talisman"/>
         <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
@@ -270,7 +257,6 @@
     </armor>
     <armor id="49729" name="Talisman of Border - Lv. 3" icon="icon.bm_magic_square_talisman">
         <!-- P./M. Def. +17, P./M. Skills Evasion +1, HP/MP/CP +80, Speed +3, XP and SP gain +3%. Take it to Baggins in Giran to increase its level. Effects from two such Talismans do not stack. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
         <set name="bodypart" val="talisman"/>
         <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
@@ -280,7 +266,6 @@
     </armor>
     <armor id="49730" name="Talisman of Border - Lv. 4" icon="icon.bm_magic_square_talisman">
         <!-- P./M. Def. +19, P./M. Skills Evasion +1, HP/MP/CP +80, Speed +3, P./M. Atk. Spd. +7, XP and SP gain +3%. Take it to Baggins in Giran to increase its level. Effects from two such Talismans do not stack. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
         <set name="bodypart" val="talisman"/>
         <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
@@ -290,7 +275,6 @@
     </armor>
     <armor id="49731" name="Talisman of Border - Lv. 5" icon="icon.bm_magic_square_talisman">
         <!-- P./M. Def. +22, P./M. Skills Evasion +1, HP/MP/CP +120, Speed +5, P./M. Atk. Spd. +10, XP and SP gain +4%. Take it to Baggins in Giran to increase its level. Effects from two such Talismans do not stack. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
         <set name="bodypart" val="talisman"/>
         <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
@@ -300,7 +284,6 @@
     </armor>
     <armor id="49732" name="Talisman of Border - Lv. 6" icon="icon.bm_magic_square_talisman">
         <!-- P./M. Def. +24, P./M. Skills Evasion +2, HP/MP/CP +160, Speed +5, P./M. Atk. Spd. +15, XP and SP gain +4%. Allows using Border Purification (cancels Paralysis, Petrification, Poisoning, and Bleeding). Take it to Baggins in Giran to increase its level. Effects from two such Talismans do not stack. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
         <set name="bodypart" val="talisman"/>
         <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
@@ -311,7 +294,6 @@
     </armor>
     <armor id="49733" name="Talisman of Border - Lv. 7" icon="icon.bm_magic_square_talisman">
         <!-- P./M. Def. +29, P./M. Skills Evasion +2, HP/MP/CP +160, Speed +7, P./M. Atk. Spd. +15, XP and SP gain +5%. Allows using Border Power - Lv. 1 (at a certain probability, increases attack abilities) and Border Purification (cancels Paralysis, Petrification, Poisoning, and Bleeding). Take it to Baggins in Giran to increase its level. Effects from two such Talismans do not stack. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. Can be transferred between characters on one account using Dimensional Merchant. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
         <set name="bodypart" val="talisman"/>
         <restriction tradable="false" dropable="false" depositable="false" sellable="false" freightable="true"/>
@@ -322,7 +304,6 @@
     </armor>
     <armor id="49734" name="Talisman of Border - Lv. 8" icon="icon.bm_magic_square_talisman">
         <!-- P./M. Def. +34, P./M. Skills Evasion +2, HP/MP/CP +200, Speed +7, P./M. Atk. Spd. +15, XP and SP gain +5%. Allows using Border Power - Lv. 2 (at a certain probability, increases attack abilities) and Border Purification (cancels Paralysis, Petrification, Poisoning, and Bleeding). Take it to Baggins in Giran to increase its level. Effects from two such Talismans do not stack. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. Can be transferred between characters on one account using Dimensional Merchant. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
         <set name="bodypart" val="talisman"/>
         <restriction tradable="false" dropable="false" depositable="false" sellable="false" freightable="true"/>
@@ -333,7 +314,6 @@
     </armor>
     <armor id="49735" name="Talisman of Border - Lv. 9" icon="icon.bm_magic_square_talisman">
         <!-- P./M. Def. +38, P./M. Skills Evasion +2, HP/MP/CP +240, Speed +8, P./M. Atk. Spd. +15, XP and SP gain +5%, Reflect Damage +4%. Allows using Border Power - Lv. 2 (at a certain probability, increases attack abilities) and Border Purification (cancels Paralysis, Petrification, Poisoning, and Bleeding). Take it to Baggins in Giran to increase its level. Effects from two such Talismans do not stack. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. Can be transferred between characters on one account using Dimensional Merchant. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
         <set name="bodypart" val="talisman"/>
         <restriction tradable="false" dropable="false" depositable="false" sellable="false" freightable="true"/>
@@ -344,7 +324,6 @@
     </armor>
     <armor id="49736" name="Talisman of Border - Lv. 10" icon="icon.bm_magic_square_talisman">
         <!-- P./M. Def. +43, P./M. Skills Evasion +2, HP/MP/CP +280, Speed +8, P./M. Atk. Spd. +20, XP and SP gain +5%, Reflect Damage +6%. Allows using Border Power - Lv. 3 (at a certain probability, increases attack abilities) and Border Purification (cancels Paralysis, Petrification, Poisoning, and Bleeding). Take it to Baggins in Giran to increase its level. Effects from two such Talismans do not stack. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. Can be transferred between characters on one account using Dimensional Merchant. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
         <set name="bodypart" val="talisman"/>
         <restriction tradable="false" dropable="false" depositable="false" sellable="false" freightable="true"/>
@@ -355,7 +334,6 @@
     </armor>
     <armor id="49737" name="Blessed Talisman of Border" icon="icon.bm_blessed_magic_square_talisman">
         <!-- P./M. Def. +48, P./M. Skills Evasion +2, HP/MP/CP +320, Speed +8, P./M. Atk. Spd. +30, XP and SP gain +5%, Reflect Damage +8%. Allows using Border Power - Lv. 4 (at a certain probability, increases attack abilities) and Border Purification (cancels Paralysis, Petrification, Poisoning, and Bleeding). Take it to Baggins in Giran to increase its grade. Effects from two such Talismans do not stack. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. Can be transferred between characters on one account using Dimensional Merchant. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
         <set name="bodypart" val="talisman"/>
         <restriction tradable="false" dropable="false" depositable="false" sellable="false" freightable="true"/>
@@ -783,7 +761,6 @@
     </item>
     <armor id="49791" name="Cadmus Transformation Bracelet - Prophet" icon="icon.pi_high_agathion_bracelet_i00">
         <!-- Transforms you into Prophet Cadmus. Can be used once a day. After the transformation, you can use the following skills for 4 hours: Might, Shield, Wind Walk, Return, Focus, Death Whisper, Guidance, Haste, Acumen, and Heal. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. A 1-day item. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="underwear"/>
         <set name="immediate_effect" val="true"/>
         <set name="time" val="1440"/>
@@ -791,7 +768,6 @@
     </armor>
     <armor id="49792" name="Cadmus Transformation Bracelet - Shillien Elder" icon="icon.pi_high_agathion_bracelet_i00">
         <!-- Transforms you into Shillien Elder Cadmus. Can be used once a day. After the transformation, you can use the following skills for 4 hours: Might, Shield, Wind Walk, Return, Vampiric Rage, Empower, Death Whisper, Guidance, and Heal. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. A 1-day item. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="underwear"/>
         <set name="immediate_effect" val="true"/>
         <set name="time" val="1440"/>
@@ -799,7 +775,6 @@
     </armor>
     <armor id="49793" name="Cadmus Transformation Bracelet - Elven Elder" icon="icon.pi_high_agathion_bracelet_i00">
         <!-- Transforms you into Elven Elder Cadmus. Can be used once a day. After the transformation, you can use the following skills for 4 hours: Might, Shield, Wind Walk, Return, Clarity, Agility, Decrease Weight, Regeneration, and Greater Heal. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. Duration: 1 day. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="underwear"/>
         <set name="immediate_effect" val="true"/>
         <set name="time" val="1440"/>
@@ -807,7 +782,6 @@
     </armor>
     <armor id="49794" name="Cadmus Transformation Bracelet - Prophet" icon="icon.pi_high_agathion_bracelet_i00">
         <!-- Transforms you into Prophet Cadmus. Can be used once a day. After the transformation, you can use the following skills for 4 hours: Might, Shield, Wind Walk, Return, Focus, Death Whisper, Guidance, Haste, Acumen, and Heal. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. Duration: 30 days. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="underwear"/>
         <set name="immediate_effect" val="true"/>
         <set name="time" val="43200"/>
@@ -815,7 +789,6 @@
     </armor>
     <armor id="49795" name="Cadmus Transformation Bracelet - Shillien Elder" icon="icon.pi_high_agathion_bracelet_i00">
         <!-- Transforms you into Shillien Elder Cadmus. Can be used once a day. After the transformation, you can use the following skills for 4 hours: Might, Shield, Wind Walk, Return, Vampiric Rage, Empower, Death Whisper, Guidance, and Heal. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. Duration: 30 days. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="underwear"/>
         <set name="immediate_effect" val="true"/>
         <set name="time" val="43200"/>
@@ -823,7 +796,6 @@
     </armor>
     <armor id="49796" name="Cadmus Transformation Bracelet - Elven Elder" icon="icon.pi_high_agathion_bracelet_i00">
         <!-- Transforms you into Elven Elder Cadmus. Can be used once a day. After the transformation, you can use the following skills for 4 hours: Might, Shield, Wind Walk, Return, Clarity, Agility, Decrease Weight, Regeneration, and Greater Heal. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. Duration: 30 days. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="underwear"/>
         <set name="immediate_effect" val="true"/>
         <set name="time" val="43200"/>
@@ -836,7 +808,6 @@
     </item>
     <weapon id="49798" name="Cheer Stamen" icon="icon.ev_12th_weapon">
         <!-- An item commemorating the game's 12th anniversary. Helps materializing your dreams. Allows using the Firecracker and Fan Strike skills. Can be transferred between characters on one account and stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DUAL"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>

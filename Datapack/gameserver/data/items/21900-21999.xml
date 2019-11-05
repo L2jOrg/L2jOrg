@@ -2,7 +2,6 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
     <weapon id="21973" name="Mardil's Fan" icon="BranchSys2.icon.br_wp_wind_of_mardil_i00">
         <!-- This magical Mardil's Fan gives a special power to its owner. 1 ordinary Soul Crystal and 1 Special Soul Crystal can be applied. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
@@ -23,7 +22,6 @@
     </weapon>
     <weapon id="21974" name="Mardil's Fan" icon="BranchSys2.icon.br_wp_wind_of_mardil_i01">
         <!-- <Soul Crystal Enhancement>. M. Atk. +151. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
@@ -44,7 +42,6 @@
     </weapon>
     <weapon id="21975" name="Mardil's Fan" icon="BranchSys2.icon.br_wp_wind_of_mardil_i01">
         <!-- <Soul Crystal Enhancement>. Increases Casting Spd. by 12%. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
@@ -65,7 +62,6 @@
     </weapon>
     <weapon id="21976" name="Mardil's Fan" icon="BranchSys2.icon.br_wp_wind_of_mardil_i01">
         <!-- <Soul Crystal Enhancement>. MP Recovery Bonus +12%. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>

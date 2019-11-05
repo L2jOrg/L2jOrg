@@ -1,7 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
     <armor id="600" name="Sealed Avadon Boots" icon="icon.armor_t66_b_i02">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="feet"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="69"/>
@@ -15,7 +14,6 @@
         </stats>
     </armor>
     <armor id="601" name="Sealed Doom Boots" icon="icon.armor_t71_b_i02">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="feet"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="107"/>
@@ -29,7 +27,6 @@
         </stats>
     </armor>
     <armor id="603" name="Divine Boots" icon="icon.armor_t67_b_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="feet"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="143"/>
@@ -43,7 +40,6 @@
         </stats>
     </armor>
     <armor id="604" name="Quality Leather Gloves" icon="icon.armor_t09_g_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="gloves"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="38"/>
@@ -57,7 +53,6 @@
         </stats>
     </armor>
     <armor id="605" name="Leather Gauntlets" icon="icon.armor_t18_g_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="gloves"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="60"/>
@@ -71,7 +66,6 @@
         </stats>
     </armor>
     <armor id="606" name="Rip Gauntlets" icon="icon.armor_t40_g_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="gloves"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="135"/>
@@ -85,7 +79,6 @@
         </stats>
     </armor>
     <armor id="607" name="Ogre Power Gauntlets" icon="icon.armor_t45_g_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="gloves"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="177"/>
@@ -99,7 +92,6 @@
         </stats>
     </armor>
     <armor id="608" name="Mithril Gauntlets" icon="icon.armor_t61_g_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="gloves"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="98"/>
@@ -113,7 +105,6 @@
         </stats>
     </armor>
     <armor id="609" name="Gauntlets of Ghost" icon="icon.armor_gauntlet_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="gloves"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="143"/>
@@ -127,7 +118,6 @@
         </stats>
     </armor>
     <armor id="612" name="Sealed Zubei's Gauntlets" icon="icon.armor_t64_g_i02">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="gloves"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="69"/>
@@ -141,7 +131,6 @@
         </stats>
     </armor>
     <armor id="625" name="Bone Shield" icon="icon.shield_bone_shield_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="lhand"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="1380"/>
@@ -154,7 +143,6 @@
         </stats>
     </armor>
     <armor id="626" name="Bronze Shield" icon="icon.shield_bronze_shield_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="lhand"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="39"/>
@@ -170,7 +158,6 @@
         </stats>
     </armor>
     <armor id="627" name="Aspis" icon="icon.shield_aspis_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="lhand"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="63"/>
@@ -186,7 +173,6 @@
         </stats>
     </armor>
     <armor id="628" name="Hoplon" icon="icon.shield_hoplon_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="lhand"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="96"/>
@@ -202,7 +188,6 @@
         </stats>
     </armor>
     <armor id="629" name="Kite Shield" icon="icon.shield_kite_shield_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="lhand"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="142"/>
@@ -218,7 +203,6 @@
         </stats>
     </armor>
     <armor id="630" name="Square Shield" icon="icon.shield_square_shield_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="lhand"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="187"/>
@@ -234,7 +218,6 @@
         </stats>
     </armor>
     <armor id="631" name="Eldarake" icon="icon.shield_eldarake_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="lhand"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="53"/>
@@ -250,7 +233,6 @@
         </stats>
     </armor>
     <armor id="632" name="Knight's Shield" icon="icon.shield_knight_shield_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="lhand"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="67"/>
@@ -266,7 +248,6 @@
         </stats>
     </armor>
     <armor id="633" name="Zubei's Shield" icon="icon.shield_shrnoens_shield_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="lhand"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="72"/>
@@ -282,7 +263,6 @@
         </stats>
     </armor>
     <armor id="641" name="Dark Crystal Shield" icon="icon.shield_dark_crystal_shield_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="lhand"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="75"/>
@@ -298,7 +278,6 @@
         </stats>
     </armor>
     <armor id="673" name="Avadon Shield" icon="icon.shield_avadon_shield_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="lhand"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="72"/>

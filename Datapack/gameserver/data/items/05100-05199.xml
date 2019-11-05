@@ -8,7 +8,6 @@
         <restriction stackable="true"/>
     </item>
     <weapon id="5127" name="Dailaon Knife" icon="icon.weapon_monster_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DAGGER"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -32,7 +31,6 @@
         </stats>
     </weapon>
     <weapon id="5128" name="Crokian Blade" icon="icon.weapon_monster_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DAGGER"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;300;120"/>
@@ -57,7 +55,6 @@
         </stats>
     </weapon>
     <weapon id="5129" name="Doll Knife" icon="icon.weapon_monster_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DUAL"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;44;120"/>
@@ -80,7 +77,6 @@
         </stats>
     </weapon>
     <weapon id="5130" name="Nos Sword" icon="icon.weapon_monster_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DAGGER"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;300;120"/>
@@ -105,7 +101,6 @@
         </stats>
     </weapon>
     <weapon id="5131" name="Monster Only (Parhit Staff)" icon="icon.weapon_monster_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DAGGER"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;300;120"/>
@@ -130,7 +125,6 @@
         </stats>
     </weapon>
     <weapon id="5132" name="Monster Only (Lesser Giant)" icon="icon.weapon_monster_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DAGGER"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;300;120"/>
@@ -156,7 +150,6 @@
     </weapon>
     <weapon id="5133" name="Chrono Unitus" icon="icon.weapon_chrono_tambourine_i00">
         <!-- Chronicle II Souvenir! Cannot be dropped. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DUALFIST"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -223,7 +216,6 @@
     </item>
     <item id="5138" name="Soulshot Compressed Package (A-grade)" icon="icon.etc_pouch_yellow_i00">
         <!-- 300 compressed Soulshots. A-grade. -->
-
         <set name="default_action" val="CAPSULE"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="200"/>
@@ -248,7 +240,6 @@
     </item>
     <item id="5141" name="Spiritshot Compressed Package (D-grade)" icon="icon.etc_pouch_yellow_i00">
         <!-- 300 compressed spiritshots. D-grade. -->
-
         <set name="default_action" val="CAPSULE"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="750"/>
@@ -273,7 +264,6 @@
     </item>
     <item id="5143" name="Spiritshot Compressed Package (B-grade)" icon="icon.etc_pouch_yellow_i00">
         <!-- 300 compressed spiritshots. B-grade. -->
-
         <set name="default_action" val="CAPSULE"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="450"/>
@@ -298,7 +288,6 @@
     </item>
     <item id="5146" name="Blessed Spiritshot Compressed Package (No-grade)" icon="icon.etc_pouch_yellow_i00">
         <!-- 300 compressed blessed spiritshots. No-grade. -->
-
         <set name="default_action" val="CAPSULE"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="750"/>
@@ -323,7 +312,6 @@
     </item>
     <item id="5148" name="Blessed Spiritshot Compressed Package (C-grade)" icon="icon.etc_pouch_yellow_i00">
         <!-- 300 compressed blessed spiritshots. C-grade. -->
-
         <set name="default_action" val="CAPSULE"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="450"/>
@@ -348,7 +336,6 @@
     </item>
     <item id="5150" name="Blessed Spiritshot Compressed Package (A-grade)" icon="icon.etc_pouch_yellow_i00">
         <!-- 300 compressed blessed spiritshots. A-grade. -->
-
         <set name="default_action" val="CAPSULE"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="200"/>
@@ -368,7 +355,6 @@
     </item>
     <item id="5153" name="Recipe: Soulshot Compressed Package (D-grade)" icon="icon.etc_recipe_blue_i00">
         <!-- For Dwarves only. Recipe for the Soulshot Compressed Package (D-grade). Requires Create Item - Skill Lv. 2. The success rate is 100%. -->
-
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
         <set name="immediate_effect" val="true"/>
@@ -391,7 +377,6 @@
     </item>
     <item id="5155" name="Recipe: Soulshot Compressed Package (B-grade)" icon="icon.etc_recipe_red_i00">
         <!-- For Dwarves only. Recipe for the Soulshot Compressed Package (B-grade). Requires Create Item - Skill Lv. 6. The success rate is 100%. -->
-
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
         <set name="immediate_effect" val="true"/>
@@ -414,7 +399,6 @@
     </item>
     <item id="5158" name="Recipe: Spiritshot Compressed Package (D-grade)" icon="icon.etc_recipe_blue_i00">
         <!-- For Dwarves only. Recipe for the Spiritshot Compressed Package (D-grade). Requires Create Item - Skill Lv. 2. The success rate is 100%. -->
-
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
         <set name="immediate_effect" val="true"/>
@@ -437,7 +421,6 @@
     </item>
     <item id="5160" name="Recipe: Spiritshot Compressed Package (B-grade)" icon="icon.etc_recipe_red_i00">
         <!-- For Dwarves only. Recipe for the Spiritshot Compressed Package (B-grade). Requires Create Item - Skill Lv. 6. The success rate is 100%. -->
-
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
         <set name="immediate_effect" val="true"/>
@@ -460,7 +443,6 @@
     </item>
     <item id="5163" name="Recipe: Blessed Spiritshot Compressed Package (D-grade)" icon="icon.etc_recipe_blue_i00">
         <!-- For Dwarves only. Recipe for the Blessed Spiritshot Compressed Package (D-grade). Requires Create Item - Skill Lv. 2. The success rate is 100%. -->
-
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
         <set name="immediate_effect" val="true"/>
@@ -483,7 +465,6 @@
     </item>
     <item id="5165" name="Recipe: Blessed Spiritshot Compressed Package (B-grade)" icon="icon.etc_recipe_red_i00">
         <!-- For Dwarves only. Recipe for the Blessed Spiritshot Compressed Package (B-grade). Requires Create Item - Skill Lv. 6. The success rate is 100%. -->
-
         <set name="default_action" val="RECIPE"/>
         <set name="etcitem_type" val="RECIPE"/>
         <set name="immediate_effect" val="true"/>
@@ -506,7 +487,6 @@
     </item>
     <item id="5192" name="Magic Rope (D-grade)" icon="icon.etc_braided_hemp_i00">
         <!-- Rope that has magical power. It is made by weaving strips of lizard leather together. Using this rope to tie an item will reduce its weight so that it will be easier to carry. -->
-
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="2"/>
         <set name="price" val="100"/>
@@ -523,7 +503,6 @@
     </item>
     <item id="5194" name="Magic Rope (B-grade)" icon="icon.etc_braided_hemp_i00">
         <!-- Rope that has magical power. It is made by weaving strips of lizard leather together. Using this rope to tie an item will reduce its weight so that it will be easier to carry. -->
-
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="2"/>
         <set name="price" val="250"/>
@@ -540,7 +519,6 @@
     </item>
     <item id="5196" name="Magic Rope (S-grade)" icon="icon.etc_braided_hemp_i00">
         <!-- Rope that has magical power. It is made by weaving strips of lizard leather together. Using this rope to tie an item will reduce its weight so that it will be easier to carry. -->
-
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="2"/>
         <set name="price" val="400"/>
@@ -560,7 +538,6 @@
     </item>
     <item id="5198" name="Chest Key - Grade 7" icon="icon.etc_key_i00">
         <!-- Opens a level 10 treasure chest with a success rate of 60%. When opening a higher level treasure chest, the success rate will decrease. -->
-
         <set name="default_action" val="SKILL_REDUCE"/>
         <set name="weight" val="10"/>
         <set name="price" val="760"/>

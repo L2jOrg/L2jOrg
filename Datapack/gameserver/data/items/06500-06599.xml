@@ -130,7 +130,6 @@
         </skills>
     </item>
     <weapon id="6579" name="Arcana Mace" icon="icon.weapon_arcana_mace_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -155,7 +154,6 @@
         </stats>
     </weapon>
     <weapon id="6580" name="Tallum Blade*Dark Legion's Edge" icon="icon.weapon_dual_sword_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="ANCIENTSWORD"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>

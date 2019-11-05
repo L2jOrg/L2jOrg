@@ -2,7 +2,6 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
     <weapon id="8938" name="Tallum Blade*Damascus" icon="icon.weapon_dual_sword_i00">
         <!-- When enchanted, P. Atk. of dualswords, two-handed swords, blunt and fist weapons increases more significantly than that of one-handed swords. 1 ordinary Soul Crystal and 1 Special Soul Crystal can be applied. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DUAL"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;44;120"/>

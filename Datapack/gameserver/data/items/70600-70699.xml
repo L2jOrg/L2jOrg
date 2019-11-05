@@ -97,7 +97,6 @@
     </item>
     <armor id="70615" name="Mount - Gold Maned Lion" icon="icon.pi_high_agathion_bracelet_i00">
         <!-- Allows to mount a Golden Lion. Cannot be exchanged, dropped or sold, shared within account. Can store in a warehouse. Duration: 7 days. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="lbracelet"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="30"/>
@@ -106,7 +105,6 @@
     </armor>
     <armor id="70616" name="Mount - Princess Ant" icon="icon.pi_high_agathion_bracelet_i00">
         <!-- Allows to mount Princess Ant. Cannot be exchanged, dropped or sold, shared within account. Can store in a warehouse. Duration: 7 days. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="lbracelet"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="30"/>
@@ -281,7 +279,6 @@
     </item>
     <weapon id="70645" name="Warrior's Shining Dualsword" icon="icon.weapon_dual_sword_i00">
         <!-- Atk. Spd. +5%. Cannot be exchanged, dropped or sold, enchanted shared within account. Can store in a warehouse. Duration: 30 days. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DUAL"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
@@ -302,7 +299,6 @@
     </weapon>
     <weapon id="70646" name="Warrior's Shining Staff" icon="icon.weapon_sages_staff_i01">
         <!-- Casting Spd. +12%. Cannot be exchanged, dropped or sold, enchanted shared within account. Can store in a warehouse. Duration: 30 days. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
@@ -325,7 +321,6 @@
     </weapon>
     <weapon id="70647" name="Warrior's Shining Bow" icon="icon.weapon_akat_long_bow_i01">
         <!-- P. Critical Rate +52. Cannot be exchanged, dropped or sold, enchanted shared within account. Can store in a warehouse. Duration: 30 days. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BOW"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
@@ -348,7 +343,6 @@
     </weapon>
     <weapon id="70648" name="Warrior's Shining Dagger" icon="icon.weapon_grace_dagger_i01">
         <!-- P. Critical Rate +66. Cannot be exchanged, dropped or sold, enchanted shared within account. Can store in a warehouse. Duration: 30 days. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DAGGER"/>
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
@@ -370,7 +364,6 @@
     </weapon>
     <weapon id="70649" name="Warrior's Shining Spear" icon="icon.weapon_poleaxe_i01">
         <!-- Has a 25% chance of casting Stun on the target during a Critical Attack. Cannot be exchanged, dropped or sold, enchanted shared within account. Can store in a warehouse. Duration: 30 days. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="POLE"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
@@ -395,7 +388,6 @@
     </weapon>
     <armor id="70650" name="Warrior's Shining Helmet" icon="icon.armor_leather_helmet_i00">
         <!-- Heavy Armor. Cannot be exchanged, dropped or sold, enchanted shared within account. Can store in a warehouse. Duration: 30 days. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="head"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="C"/>
@@ -408,7 +400,6 @@
     </armor>
     <armor id="70651" name="Warrior's Shining Armor" icon="icon.armor_t62_ul_i00">
         <!-- Heavy Armor. Cannot be exchanged, dropped or sold, enchanted shared within account. Can store in a warehouse. Duration: 30 days. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="HEAVY"/>
         <set name="bodypart" val="onepiece"/>
         <set name="immediate_effect" val="true"/>
@@ -422,7 +413,6 @@
     </armor>
     <armor id="70652" name="Warrior's Shining Gauntlets" icon="icon.armor_t62_g_i00">
         <!-- Heavy Armor. Cannot be exchanged, dropped or sold, enchanted shared within account. Can store in a warehouse. Duration: 30 days. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="gloves"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="C"/>
@@ -435,7 +425,6 @@
     </armor>
     <armor id="70653" name="Warrior's Shining Boots" icon="icon.armor_t62_b_i00">
         <!-- Heavy Armor. Cannot be exchanged, dropped or sold, enchanted shared within account. Can store in a warehouse. Duration: 30 days. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="feet"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="C"/>
@@ -448,7 +437,6 @@
     </armor>
     <armor id="70654" name="Warrior's Shining Helmet" icon="icon.armor_leather_helmet_i00">
         <!-- Light Armor. Cannot be exchanged, dropped or sold, enchanted shared within account. Can store in a warehouse. Duration: 30 days. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="head"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="C"/>
@@ -461,7 +449,6 @@
     </armor>
     <armor id="70655" name="Warrior's Shining Rags" icon="icon.armor_t45_ul_i00">
         <!-- Light Armor. Cannot be exchanged, dropped or sold, enchanted shared within account. Can store in a warehouse. Duration: 30 days. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="LIGHT"/>
         <set name="bodypart" val="onepiece"/>
         <set name="immediate_effect" val="true"/>
@@ -475,7 +462,6 @@
     </armor>
     <armor id="70656" name="Warrior's Shining Gloves" icon="icon.armor_t45_g_i00">
         <!-- Light Armor. Cannot be exchanged, dropped or sold, enchanted shared within account. Can store in a warehouse. Duration: 30 days. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="gloves"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="C"/>
@@ -488,7 +474,6 @@
     </armor>
     <armor id="70657" name="Warrior's Shining Shoes" icon="icon.armor_t45_b_i00">
         <!-- Light Armor. Cannot be exchanged, dropped or sold, enchanted shared within account. Can store in a warehouse. Duration: 30 days. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="feet"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="C"/>
@@ -501,7 +486,6 @@
     </armor>
     <armor id="70658" name="Warrior's Shining Circlet" icon="icon.armor_circlet_i00">
         <!-- Robe. Cannot be exchanged, dropped or sold, enchanted shared within account. Can store in a warehouse. Duration: 30 days. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="head"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="C"/>
@@ -514,7 +498,6 @@
     </armor>
     <armor id="70659" name="Warrior's Shining Tunic" icon="icon.armor_t57_u_i00">
         <!-- Robe. Cannot be exchanged, dropped or sold, enchanted shared within account. Can store in a warehouse. Duration: 30 days. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="MAGIC"/>
         <set name="bodypart" val="chest"/>
         <set name="immediate_effect" val="true"/>
@@ -529,7 +512,6 @@
     </armor>
     <armor id="70660" name="Warrior's Shining Stockings" icon="icon.armor_t57_l_i00">
         <!-- Robe. Cannot be exchanged, dropped or sold, enchanted shared within account. Can store in a warehouse. Duration: 30 days. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="MAGIC"/>
         <set name="bodypart" val="legs"/>
         <set name="immediate_effect" val="true"/>
@@ -544,7 +526,6 @@
     </armor>
     <armor id="70661" name="Warrior's Shining Gloves" icon="icon.armor_t57_g_i00">
         <!-- Robe. Cannot be exchanged, dropped or sold, enchanted shared within account. Can store in a warehouse. Duration: 30 days. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="gloves"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="C"/>
@@ -557,7 +538,6 @@
     </armor>
     <armor id="70662" name="Warrior's Shining Shoes" icon="icon.armor_t57_b_i00">
         <!-- Robe. Cannot be exchanged, dropped or sold, enchanted shared within account. Can store in a warehouse. Duration: 30 days. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="feet"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="C"/>
@@ -630,7 +610,6 @@
     </item>
     <armor id="70673" name="Warrior's Bracelet" icon="icon.dimension_bracelet_i05">
         <!-- Special Bracelet for Returning Heroes. Activates 4 Talisman slots. HP/MP/CP +5%. Cannot be exchanged, dropped or sold, shared within account. Can store in a warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="underwear"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="150"/>
@@ -638,7 +617,6 @@
     </armor>
     <armor id="70674" name="Returning Hero's Talisman" icon="icon.npoint_talisman_stat">
         <!-- Special Talisman for Returning Heroes. P. Def. +22, M. Def. +11, P. / M. Evasion +1, Max. HP/MP/CP +80, Atk./Casting Spd. +9, Speed +4. Cannot be exchanged, dropped or sold, shared within account. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="120"/>
         <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
@@ -715,7 +693,6 @@
     </item>
     <armor id="70687" name="Artisan's Goggles (STR+1 INT+1)" icon="icon.accessory_dwarf_goggle_i00">
         <!-- Large goggles that protect the eyes. STR+1, INT+1. Occupies 2 Hair Accessory slots. Cannot be dropped or sold in a store. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="hairall"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="10"/>
@@ -727,7 +704,6 @@
     </armor>
     <armor id="70688" name="Artisan's Goggles (DEX+1 WIT+1)" icon="icon.accessory_dwarf_goggle_i00">
         <!-- Large goggles that protect the eyes. DEX+1, WIT+1. Occupies 2 Hair Accessory slots. Cannot be dropped or sold in a store. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="hairall"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="10"/>
@@ -739,7 +715,6 @@
     </armor>
     <armor id="70689" name="Artisan's Goggles (CON+1 MEN+1)" icon="icon.accessory_dwarf_goggle_i00">
         <!-- Large goggles that protect the eyes. CON+1, MEN+1. Occupies 2 Hair Accessory slots. Cannot be dropped or sold in a store. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="hairall"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="10"/>
@@ -751,7 +726,6 @@
     </armor>
     <armor id="70690" name="Uniform Hat (STR+1 INT+1)" icon="BranchSys.icon.br_Uniform_Hat_i00">
         <!-- Stylish uniform hat. STR+1, INT+1. Occupies 2 Hair Accessory slots. Cannot be dropped or sold in a store. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="hairall"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="10"/>
@@ -763,7 +737,6 @@
     </armor>
     <armor id="70691" name="Uniform Hat (DEX+1 WIT+1)" icon="BranchSys.icon.br_Uniform_Hat_i00">
         <!-- Stylish uniform hat. DEX+1, WIT+1. Occupies 2 Hair Accessory slots. Cannot be dropped or sold in a store. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="hairall"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="10"/>
@@ -775,7 +748,6 @@
     </armor>
     <armor id="70692" name="Uniform Hat (CON+1 MEN+1)" icon="BranchSys.icon.br_Uniform_Hat_i00">
         <!-- Stylish uniform hat. CON+1, MEN+1. Occupies 2 Hair Accessory slots. Cannot be dropped or sold in a store. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="hairall"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="10"/>
@@ -787,7 +759,6 @@
     </armor>
     <armor id="70693" name="Assassin's Bamboo Hat (STR+1 INT+1)" icon="BranchSys.icon.br_Bamboo_Hat_i00">
         <!-- Wide-brimmed hat fashioned out of bamboo. STR+1, INT+1. Occupies 2 Hair Accessory slots. Cannot be dropped or sold in a store. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="hairall"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="10"/>
@@ -799,7 +770,6 @@
     </armor>
     <armor id="70694" name="Assassin's Bamboo Hat (DEX+1 WIT+1)" icon="BranchSys.icon.br_Bamboo_Hat_i00">
         <!-- Wide-brimmed hat fashioned out of bamboo. DEX+1, WIT+1. Occupies 2 Hair Accessory slots. Cannot be dropped or sold in a store. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="hairall"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="10"/>
@@ -811,7 +781,6 @@
     </armor>
     <armor id="70695" name="Assassin's Bamboo Hat (CON+1 MEN+1)" icon="BranchSys.icon.br_Bamboo_Hat_i00">
         <!-- Wide-brimmed hat fashioned out of bamboo. CON+1, MEN+1. Occupies 2 Hair Accessory slots. Cannot be dropped or sold in a store. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="hairall"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="10"/>
@@ -823,7 +792,6 @@
     </armor>
     <armor id="70696" name="Valkyrie Hat (STR+1 INT+1)" icon="BranchSys.icon.br_valkyrie_cap_i00">
         <!-- The hat with Valkyrie's power in it.STR+1, INT+1. Occupies 2 Hair Accessory slots. Cannot be dropped or sold in a store. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="hairall"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="10"/>
@@ -835,7 +803,6 @@
     </armor>
     <armor id="70697" name="Valkyrie Hat (DEX+1 WIT+1)" icon="BranchSys.icon.br_valkyrie_cap_i00">
         <!-- The hat with Valkyrie's power in it.DEX+1, WIT+1. Occupies 2 Hair Accessory slots. Cannot be dropped or sold in a store. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="hairall"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="10"/>
@@ -847,7 +814,6 @@
     </armor>
     <armor id="70698" name="Valkyrie Hat (CON+1 MEN+1)" icon="BranchSys.icon.br_valkyrie_cap_i00">
         <!-- The hat with Valkyrie's power in it.CON+1, MEN+1. Occupies 2 Hair Accessory slots. Cannot be dropped or sold in a store. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="hairall"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="10"/>
@@ -859,7 +825,6 @@
     </armor>
     <armor id="70699" name="Gatekeeper Hat (STR+1 INT+1)" icon="BranchSys.icon.br_gatekeeper_of_hat_i00">
         <!-- Gatekeeper Hat. STR+1, INT+1. Occupies 2 Hair Accessory slots. Cannot be dropped or sold in a store. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="hairall"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="10"/>

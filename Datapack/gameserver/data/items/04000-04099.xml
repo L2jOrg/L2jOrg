@@ -217,7 +217,6 @@
         <restriction stackable="true"/>
     </item>
     <weapon id="4027" name="Bouquet" icon="icon.etc_plan_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -233,7 +232,6 @@
         </stats>
     </weapon>
     <weapon id="4028" name="Giant Cannon" icon="icon.weapon_monster_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DAGGER"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>

@@ -164,7 +164,6 @@
     </item>
     <weapon id="8350" name="Souvenir Maracas" icon="icon.weapon_chrono_maracas_i00">
         <!-- Chronicle IV Souvenir! Cannot be dropped. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DUAL"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;44;120"/>

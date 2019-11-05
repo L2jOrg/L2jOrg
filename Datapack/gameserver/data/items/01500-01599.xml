@@ -56,7 +56,6 @@
     </item>
     <armor id="1506" name="Necklace of Courage" icon="icon.accessary_necklace_of_courage_i00">
         <!-- Necklace that is given to young Orcs who have proven their courage. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="neck"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="150"/>
@@ -68,7 +67,6 @@
     </armor>
     <armor id="1507" name="Necklace of Valor" icon="icon.accessary_necklace_of_valor_i00">
         <!-- Necklace that is given to young Orcs who have proven their valor. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="neck"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="150"/>
@@ -80,7 +78,6 @@
     </armor>
     <armor id="1508" name="Ring of Raccoon" icon="icon.accessary_ring_of_raccoon_i00">
         <!-- Ring given to apprentices of the Bronze Key Guild. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="rfinger;lfinger"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="150"/>
@@ -92,7 +89,6 @@
     </armor>
     <armor id="1509" name="Ring of Firefly" icon="icon.accessary_ring_of_firefly_i00">
         <!-- Ring given to apprentices of the Black Anvil Guild. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="rfinger;lfinger"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="150"/>
@@ -104,7 +100,6 @@
     </armor>
     <weapon id="1510" name="Butcher's Sword" icon="icon.weapon_orcish_sword_i00">
         <!-- Sword granted to young Orc Fighters who distinguished themselves at war. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -125,7 +120,6 @@
     </weapon>
     <weapon id="1511" name="Silversmith Hammer" icon="icon.weapon_iron_hammer_i00">
         <!-- Hammer silversmiths of the ancient Elmoreden used. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>

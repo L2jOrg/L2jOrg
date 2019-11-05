@@ -80,7 +80,6 @@
     </item>
     <weapon id="1213" name="Guard's Bow" icon="icon.weapon_bow_i00">
         <!-- Bow given by Guard Moretti. May be efficiently used for some purpose. Cannot be exchanged, dropped, sold, or stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BOW"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;10;0"/>
@@ -591,7 +590,6 @@
     </item>
     <weapon id="1295" name="Long Sword" icon="icon.weapon_long_sword_i00">
         <!-- Temporary item for Kamex -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -611,7 +609,6 @@
     </weapon>
     <weapon id="1296" name="Gladius" icon="icon.weapon_gladius_i00">
         <!-- Temporary item for Kamex -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -631,7 +628,6 @@
     </weapon>
     <weapon id="1297" name="Bastard Sword" icon="icon.weapon_bastard_sword_i00">
         <!-- Temporary item for Kamex -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;42;120"/>
@@ -651,7 +647,6 @@
     </weapon>
     <weapon id="1298" name="Caliburs" icon="icon.weapon_caliburs_i00">
         <!-- Temporary item for Kamex -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -671,7 +666,6 @@
     </weapon>
     <weapon id="1299" name="Great Sword" icon="icon.weapon_2hs03">
         <!-- Temporary item for Kamex -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DUAL"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;44;120"/>

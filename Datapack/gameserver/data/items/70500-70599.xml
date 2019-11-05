@@ -168,7 +168,6 @@
     </item>
     <armor id="70539" name="Refined Carnival Circlet - 14-day" icon="icon.accessory_carnival_circlet_i00">
         <!-- 14-day. Occupies 2 Hair Accessory slots. Cannot be exchanged, dropped, sold or shared within account. Can be stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="hairall"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="10"/>
@@ -176,7 +175,6 @@
     </armor>
     <armor id="70540" name="Refined Carnival Circlet - 14-day" icon="icon.accessory_carnival_circlet2_i00">
         <!-- 14-day. Occupies 2 Hair Accessory slots. Cannot be exchanged, dropped, sold or shared within account. Can be stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="hairall"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="10"/>
@@ -184,7 +182,6 @@
     </armor>
     <armor id="70541" name="Chick Gold Horn Cap - 14-day" icon="icon.accessory_horn01_hat_i00">
         <!-- 14-day. Occupies 2 Hair Accessory slots. Cannot be exchanged, dropped, sold or shared within account. Can be stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="hairall"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="10"/>
@@ -192,7 +189,6 @@
     </armor>
     <armor id="70542" name="Chick Silver Horn Cap - 14-day" icon="icon.accessory_horn01_hat_i01">
         <!-- 14-day. Occupies 2 Hair Accessory slots. Cannot be exchanged, dropped, sold or shared within account. Can be stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="hairall"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="10"/>
@@ -247,7 +243,6 @@
     </item>
     <armor id="70552" name="Mount - Elk" icon="BranchIcon.icon.tf_elk_i00">
         <!-- Can mount an Elk when equipped. Cannot be exchanged, dropped or sold in a store, shared within account. Can store in a warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="lbracelet"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="100"/>
@@ -255,7 +250,6 @@
     </armor>
     <armor id="70553" name="Mount - Elk" icon="BranchIcon.icon.tf_elk_i00">
         <!-- Can mount an Elk when equipped. Cannot be exchanged, dropped or sold in a store, shared within account. Can store in a warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="lbracelet"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="100"/>
@@ -264,7 +258,6 @@
     </armor>
     <armor id="70554" name="Mount - Elk" icon="BranchIcon.icon.tf_elk_i00">
         <!-- Can mount an Elk when equipped. Cannot be exchanged, dropped or sold in a store, shared within account. Can store in a warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="lbracelet"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="100"/>
@@ -272,7 +265,6 @@
     </armor>
     <armor id="70555" name="Mount - Elk" icon="BranchIcon.icon.tf_elk_i00">
         <!-- Can mount an Elk when equipped. Cannot be exchanged, dropped or sold in a store, shared within account. Can store in a warehouse. <Active Skill>. 1. Elk Blessing: For 1 hour XP / SP +30% (Cooldown: 12 hours). 2. Elk Invisibility: for 1 minute makes a character invisible and invincible to enemy attacks. Speed -40%. Disappears if your character attacks (Cooldown: 10 minutes). -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="lbracelet"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="100"/>
@@ -302,7 +294,6 @@
     </item>
     <armor id="70559" name="Agathion - Minion Eye" icon="icon.etc_rbracelet_aga_agit_i00">
         <!-- Summons Agathion - Minion Eye. Can mount an Elk when equipped. Cannot be exchanged, dropped or sold in a store, shared within account. Can store in a warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="lbracelet"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="100"/>
@@ -310,7 +301,6 @@
     </armor>
     <armor id="70560" name="Agathion - Minion Eye" icon="icon.etc_rbracelet_aga_agit_i00">
         <!-- Summons Agathion - Minion Eye. CON / MEN +1, Weight Gauge +5000, Max. HP/MP/CP +100, when used. MP Consumption for skill use -3%. Cannot be exchanged, dropped or sold in a store, shared within account. Can be stored in a private warehouse. <Active Skill>. 1. Minion Eye's Blessed Resurrection: Resurrects a corpse and fully restores his lost XP. Consumes 2 Spirit Ore. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="lbracelet"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="100"/>
@@ -325,7 +315,6 @@
     </armor>
     <armor id="70561" name="Agathion - Minion Eye" icon="icon.etc_rbracelet_aga_agit_i00">
         <!-- Summons Agathion - Minion Eye. CON / MEN +1, Weight Gauge +5000, Max. HP/MP/CP +100, when used. MP Consumption for skill use -3%. Cannot be exchanged, dropped or sold in a store, shared within account. Can be stored in a private warehouse. <Active Skill>. 1. Minion Eye's Blessed Resurrection: Resurrects a corpse and fully restores his lost XP. Consumes 2 Spirit Ore. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="lbracelet"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="100"/>
@@ -333,7 +322,6 @@
     </armor>
     <armor id="70562" name="Agathion - Matryoshka" icon="icon.etc_rbracelet_aga_agit_i00">
         <!-- Summons Agathion - Matryoshka. Cannot be exchanged, dropped or sold in a store, shared within account. Can store in a warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="lbracelet"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="100"/>
@@ -341,7 +329,6 @@
     </armor>
     <armor id="70563" name="Agathion - Matryoshka" icon="icon.etc_rbracelet_aga_agit_i00">
         <!-- Summons Agathion - Matryoshka. Cannot be exchanged, dropped or sold in a store, shared within account. Can store in a warehouse. <Active Skill>. 1. Matryoshka's Gift: allows to receive 1 Strawberry Juice / Mango Juice / Cherry Juice (Cooldown: 12 hours). 2. Matryoshka's Blessing: for 20 min XP / SP +30% (Cooldown: 2 hours). 3. Agathion Teleport: grants the ability to teleport to Aden / Giran / Dion / Gludio (Cooldown: 1 hour). -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="lbracelet"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="100"/>
@@ -350,7 +337,6 @@
     </armor>
     <armor id="70564" name="Agathion - Matryoshka" icon="icon.etc_rbracelet_aga_agit_i00">
         <!-- Summons Agathion - Matryoshka. Cannot be exchanged, dropped or sold in a store, shared within account. Can store in a warehouse. <Active Skill>. 1. Matryoshka's Gift: allows to receive 1 Strawberry Juice / Mango Juice / Cherry Juice (Cooldown: 12 hours). 2. Matryoshka's Blessing: for 20 min XP / SP +30% (Cooldown: 2 hours). 3. Agathion Teleport: grants the ability to teleport to Aden / Giran / Dion / Gludio (Cooldown: 1 hour). -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="lbracelet"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="100"/>
@@ -358,7 +344,6 @@
     </armor>
     <armor id="70565" name="Agathion - Babayaga" icon="BranchIcon.icon.br_babayaga_i00">
         <!-- Summons Agathion - Babayaga. Cannot be exchanged, dropped or sold in a store, shared within account. Can store in a warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="lbracelet"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="100"/>
@@ -366,7 +351,6 @@
     </armor>
     <armor id="70566" name="Agathion - Babayaga" icon="BranchIcon.icon.br_babayaga_i00">
         <!-- Summons Agathion - Babayaga. Damage dealt in PvE +3% received PvE damage -3%. Cannot be exchanged, dropped or sold in a store, shared within account. Can store in a warehouse. <Active Skill>. 1. Agathion Teleport: grants the ability to teleport to Aden / Giran / Dion / Gludio (Cooldown: 30 minutes). 2. Babayaga's Serenade: Soothes surrounding enemies, eliminating their desire to attack (Cooldown: 20 minutes). -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="lbracelet"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="100"/>
@@ -375,7 +359,6 @@
     </armor>
     <armor id="70567" name="Agathion - Babayaga" icon="BranchIcon.icon.br_babayaga_i00">
         <!-- Summons Agathion - Babayaga. Damage dealt in PvE +3% received PvE damage -3%. Cannot be exchanged, dropped or sold in a store, shared within account. Can store in a warehouse. <Active Skill>. 1. Agathion Teleport: grants the ability to teleport to Aden / Giran / Dion / Gludio (Cooldown: 30 minutes). 2. Babayaga's Serenade: Soothes surrounding enemies, eliminating their desire to attack (Cooldown: 20 minutes). -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="lbracelet"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="100"/>
@@ -439,7 +422,6 @@
         <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
     </item>
     <weapon id="70577" name="Damascus" icon="icon.weapon_sword_of_damascus_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
@@ -460,7 +442,6 @@
         </stats>
     </weapon>
     <weapon id="70578" name="Lance" icon="icon.weapon_lancia_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="POLE"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
@@ -486,7 +467,6 @@
         </stats>
     </weapon>
     <weapon id="70579" name="Deadman's Glory" icon="icon.weapon_deadmans_glory_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
@@ -509,7 +489,6 @@
         </stats>
     </weapon>
     <weapon id="70580" name="Art of Battle Axe" icon="icon.weapon_art_of_battle_axe_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
@@ -532,7 +511,6 @@
         </stats>
     </weapon>
     <weapon id="70581" name="Staff of Evil Spirits" icon="icon.weapon_staff_of_evil_sprit_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
@@ -555,7 +533,6 @@
         </stats>
     </weapon>
     <weapon id="70582" name="Demon's Dagger" icon="icon.weapon_demons_sword_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DAGGER"/>
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
@@ -578,7 +555,6 @@
         </stats>
     </weapon>
     <weapon id="70583" name="Bellion Cestus" icon="icon.weapon_bellion_cestus_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DUALFIST"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
@@ -601,7 +577,6 @@
         </stats>
     </weapon>
     <weapon id="70584" name="Bow of Peril" icon="icon.weapon_hazard_bow_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BOW"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
@@ -626,7 +601,6 @@
     </weapon>
     <weapon id="70585" name="Samurai Long Sword*Samurai Long Sword" icon="icon.weapon_dual_sword_i00">
         <!-- As with two-handed swords/blunts and fist weapons, dualswords have a greater increase in P. Atk. when enchanted than one-handed swords. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DUAL"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
@@ -648,7 +622,6 @@
         </stats>
     </weapon>
     <weapon id="70586" name="Guardian's Sword" icon="icon.weapon_guardians_sword_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>

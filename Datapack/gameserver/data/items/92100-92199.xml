@@ -2,7 +2,6 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
     <armor id="92100" name="Moonstone" icon="icon.etc_bm_jewel_moonstone_i00">
         <!-- While Sayha's Grace is active, Acquired XP/ SP +15%, Sayha's Grace Consumption -30%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="brooch_jewel"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="5"/>
@@ -10,7 +9,6 @@
     </armor>
     <armor id="92101" name="Moonstone" icon="icon.etc_bm_jewel_moonstone_i00">
         <!-- While Sayha's Grace is active, Acquired XP/ SP +17%, Sayha's Grace Consumption -30%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="brooch_jewel"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="5"/>
@@ -18,7 +16,6 @@
     </armor>
     <armor id="92102" name="Moonstone" icon="icon.etc_bm_jewel_moonstone_i00">
         <!-- While Sayha's Grace is active, Acquired XP/ SP +19%, Sayha's Grace Consumption -30%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="brooch_jewel"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="5"/>
@@ -26,7 +23,6 @@
     </armor>
     <armor id="92103" name="Moonstone" icon="icon.etc_bm_jewel_moonstone_i00">
         <!-- While Sayha's Grace is active, Acquired XP/ SP +21%, Sayha's Grace Consumption -30%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="brooch_jewel"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="5"/>
@@ -34,7 +30,6 @@
     </armor>
     <armor id="92104" name="Moonstone" icon="icon.etc_bm_jewel_moonstone_i00">
         <!-- While Sayha's Grace is active, Acquired XP/ SP +23%, Sayha's Grace Consumption -30%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="brooch_jewel"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="5"/>
@@ -42,7 +37,6 @@
     </armor>
     <armor id="92105" name="Moonstone" icon="icon.etc_bm_jewel_moonstone_i00">
         <!-- While Sayha's Grace is active, Acquired XP/ SP +25%, Sayha's Grace Consumption -30%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="brooch_jewel"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="5"/>

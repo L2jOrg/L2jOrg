@@ -2,7 +2,6 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
     <armor id="47826" name="Hanbok" icon="icon.ev_kr_traditional_dress">
         <!-- Items to make a Hanbok Outfit. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="HEAVY"/>
         <set name="bodypart" val="alldress"/>
         <set name="immediate_effect" val="true"/>

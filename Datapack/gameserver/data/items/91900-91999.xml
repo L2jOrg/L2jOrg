@@ -1,7 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
     <weapon id="91900" name="Colichemarde" icon="icon.weapon_colichemarde_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="B"/>
         <set name="weight" val="1300"/>
@@ -17,7 +16,6 @@
         </stats>
     </weapon>
     <weapon id="91901" name="Military Fleuret" icon="icon.weapon_assult_fleuret_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="B"/>
         <set name="weight" val="1300"/>
@@ -33,7 +31,6 @@
         </stats>
     </weapon>
     <weapon id="91902" name="?clair Bijou" icon="icon.weapon_greed_stinger_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="A"/>
         <set name="weight" val="1300"/>
@@ -49,7 +46,6 @@
         </stats>
     </weapon>
     <weapon id="91903" name="Lacerator" icon="icon.weapon_greed_stinger_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="A"/>
         <set name="weight" val="1300"/>
@@ -65,7 +61,6 @@
         </stats>
     </weapon>
     <weapon id="91904" name="White Lightning" icon="icon.weapon_lightning_blaze_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="A"/>
         <set name="weight" val="1300"/>
@@ -81,7 +76,6 @@
         </stats>
     </weapon>
     <weapon id="91905" name="Laevateinn" icon="icon.weapon_leavatein_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="S"/>
         <set name="weight" val="1300"/>
@@ -156,7 +150,6 @@
     </item>
     <weapon id="91915" name="Enhanced Ancient Warrior's Sword" icon="icon.weapon_tulwar_i00">
         <!-- Cannot be enchanted/ augmented, runes cannot be inserted. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DUALBLUNT"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
@@ -176,7 +169,6 @@
     </weapon>
     <weapon id="91916" name="Enhanced Warrior's Rapier" icon="icon.weapon_sealed_rapier_i00">
         <!-- Cannot be enchanted/ augmented, runes cannot be inserted. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="1300"/>
         <restriction tradable="false" dropable="false" depositable="false"/>
@@ -301,7 +293,6 @@
     </item>
     <armor id="91932" name="Adventurer's Brooch" icon="icon.etc_bm_brooch_lavianrose_i00">
         <!-- Activates 1 jewel slot. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="underwear"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="10"/>
@@ -309,7 +300,6 @@
     </armor>
     <armor id="91933" name="Adventurer's Agathion Bracelet" icon="icon.agathion_magmeld_teleport">
         <!-- Activates 1 Agathion slot. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="lbracelet"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="100"/>
@@ -317,7 +307,6 @@
     </armor>
     <armor id="91934" name="Adventurer's Bracelet" icon="icon.etc_rbracelet_c_i00">
         <!-- When equipped, opens up 1 Talisman slot. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="rbracelet"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="150"/>
@@ -326,7 +315,6 @@
     </armor>
     <armor id="91935" name="Adventurer's Agathion Griffin" icon="icon.griffin_vehicle">
         <!-- Can be used to obtain the power of Agathion Griffin. Summons Agathion from the main slot. Activates Special Abilities. <Special Abilities>. P. Def. increased. <Unique Abilities>. P. Def. +5. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="gloves"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="5"/>
@@ -334,7 +322,6 @@
     </armor>
     <armor id="91936" name="Jewel of Adventurer Fragment" icon="icon.etc_crystal_piece_i00">
         <!-- Fragment of an unknown jewel. Max HP +5. The effect doesn't stack if two identical jewels are equipped, the higher-level jewel takes precedence. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="brooch_jewel"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="5"/>
@@ -342,7 +329,6 @@
     </armor>
     <armor id="91937" name="Adventurer's Talisman" icon="icon.etc_talisman_i07">
         <!-- M. Def. +5. The effect doesn't stack if two identical talismans are equipped. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="120"/>
         <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
@@ -409,7 +395,6 @@
         <restriction dropable="false" sellable="false" stackable="true"/>
     </item>
     <weapon id="91949" name="Novice Warrior's Rapier" icon="icon.weapon_sealed_rapier_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="RAPIER"/>
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
@@ -427,7 +412,6 @@
         </stats>
     </weapon>
     <weapon id="91950" name="Novice Warrior's Ancient Sword" icon="icon.weapon_tulwar_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="ANCIENTSWORD"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
@@ -452,7 +436,6 @@
     </item>
     <armor id="91952" name="Ring of Insolence" icon="icon.ring_of_oman">
         <!-- Increases Sleep Resistance. The effect doesn't stack if two identical items are equipped. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="rfinger;lfinger"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="150"/>
@@ -463,7 +446,6 @@
     </armor>
     <armor id="91953" name="Dragon Valley's Earring" icon="icon.accessary_catseye_earing_i00">
         <!-- Increases Stun Resistance. The effect doesn't stack if two identical items are equipped. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="rear;lear"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="150"/>
@@ -658,7 +640,6 @@
         <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true"/>
     </item>
     <weapon id="91986" name="Monster Only (Grail Apostle Spear)" icon="icon.weapon_monster_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="ETC"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>

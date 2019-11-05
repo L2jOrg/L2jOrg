@@ -187,7 +187,6 @@
     </item>
     <weapon id="71836" name="?p?e" icon="icon.weapon_rapier_i00">
         <!-- Available for 30 days. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="D"/>
         <set name="weight" val="1300"/>
@@ -203,7 +202,6 @@
     </weapon>
     <weapon id="71837" name="Chevalier Rapier" icon="icon.weapon_soldat_estoc_i00">
         <!-- Available for 30 days. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="C"/>
         <set name="weight" val="1300"/>
@@ -218,7 +216,6 @@
         </stats>
     </weapon>
     <weapon id="71838" name="Colichemarde" icon="icon.weapon_colichemarde_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="B"/>
         <set name="weight" val="1300"/>
@@ -234,7 +231,6 @@
     </weapon>
     <weapon id="71839" name="Field Sword" icon="icon.weapon_tulwar_i00">
         <!-- Available for 30 days. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DUALBLUNT"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
@@ -255,7 +251,6 @@
     </weapon>
     <weapon id="71840" name="Schlager" icon="icon.weapon_schlaeger_i00">
         <!-- Available for 30 days. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DUALBLUNT"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
@@ -275,7 +270,6 @@
         </stats>
     </weapon>
     <weapon id="71841" name="Dismantler" icon="icon.weapon_dismantler_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DUALBLUNT"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>

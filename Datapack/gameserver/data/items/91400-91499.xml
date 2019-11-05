@@ -76,7 +76,6 @@
     </item>
     <armor id="91414" name="Dragon Pendant Lv. 2 +5" icon="icon.bm_pendant_dragon_i00">
         <!-- A 30-day item. M. Def. +25, Received Damage -15%, Atk. Spd./ Casting Spd. +3%, P./ M. Critical Damage +5%, Acquired XP/ Sp +20%. annot be exchanged, dropped, or sold. Can be stored in private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="underwear"/>
         <set name="immediate_effect" val="true"/>
         <set name="time" val="43200"/>
@@ -87,7 +86,6 @@
     </armor>
     <armor id="91415" name="Bracelet of Authority" icon="icon.ertheia_bracelet_i01">
         <!-- A 30-day item. When equipped, opens up 5 Talisman slots. HP/ MP Recovery Bonus +15%, P. / M. Accuracy +2, weight limit +10000. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="underwear"/>
         <set name="immediate_effect" val="true"/>
         <set name="time" val="43200"/>
@@ -95,14 +93,12 @@
     </armor>
     <armor id="91416" name="Talisman of Border Lv. 8" icon="icon.bm_magic_square_talisman">
         <!-- A 30-day item. P./ M. Def. +34, P./ M. Evasion +2, HP/ MP/ CP +200, Speed +7, Atk. Spd./ Casting Spd. +15, Acquired XP/ SP +5%. Allows using Border Power - Lv. 2 (at a certain probability, increases attack abilities) and Border Purification (cancels Paralysis, Petrification, Poisoning, and Bleeding). Effects from two such talismans do not stack. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
         <set name="time" val="43200"/>
         <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
     </armor>
     <armor id="91417" name="Brooch Lv. 4" icon="icon.etc_bm_brooch_lavianrose_i05">
         <!-- A 30-day item. When equipped, activates 5 jewel slots. Inventory Slots +12. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="underwear"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="10"/>
@@ -111,7 +107,6 @@
     </armor>
     <armor id="91418" name="Ruby Lv. 5" icon="icon.etc_bm_jewel_ruby_i00">
         <!-- A 30-day item. When equipped, Soulshot, Blessed Soulshot and Beast Soulshot damage +16%. Effect does not stack with additional jewels of the same type. Cannot be exchanged, dropped, or sold in private store. Can be stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="brooch_jewel"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="5"/>
@@ -120,7 +115,6 @@
     </armor>
     <armor id="91419" name="Sapphire Lv. 5" icon="icon.etc_bm_jewel_sapphire_i00">
         <!-- A 30-day item. When equipped, Spiritshot, Blessed Spiritshot and Beast Spiritshot damage +16%. Effect does not stack with additional jewels of the same type. Cannot be exchanged, dropped, or sold in private store. Can be stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="brooch_jewel"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="5"/>
@@ -129,7 +123,6 @@
     </armor>
     <armor id="91420" name="Diamond Lv. 5" icon="icon.etc_bm_jewel_diamond_i00">
         <!-- A 30-day item. When equipped, P. Def. +130, Received P. Critical Damage -10%. Effect does not stack with additional jewels of the same type. Cannot be exchanged, dropped, or sold in private store. Can be stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="brooch_jewel"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="5"/>
@@ -138,7 +131,6 @@
     </armor>
     <armor id="91421" name="Pearl Lv. 5" icon="icon.etc_bm_jewel_pearl_i00">
         <!-- A 30-day item. When equipped, M. Def. +74, Received M. Critical Damage -10%. Effect does not stack with additional jewels of the same type. Cannot be exchanged, dropped, or sold in private store. Can be stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="brooch_jewel"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="5"/>
@@ -159,7 +151,6 @@
     </item>
     <armor id="91425" name="Greater Vital Stone Lv. 5" icon="icon.bm_jewel_vital_high_lv1_lavianrose">
         <!-- A 30-day item. When equipped, during effect of Sayha Grace and while hunting Acquired XP/ SP +30%, Attribute XP Bonus +30%, Sayha Grace Consumption -35%. Effect does not stack with additional jewels of the same type. Cannot be exchanged, dropped, or sold in private store. Can be stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="brooch_jewel"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="5"/>
@@ -168,7 +159,6 @@
     </armor>
     <armor id="91426" name="Greater Aquamarine Lv. 5" icon="icon.bm_jewel_castmpup_high_lv1_lavianrose">
         <!-- A 30-day item. When equipped, Max MP. +20%, when using a skill there is a chance of recovering +200 MP. When using main skills instantly recovers 10% MP. Effect does not stack with additional jewels of the same type. When combined with the Jewel Power, you can obtain an upper level jewel. Cannot be dropped. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="brooch_jewel"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="5"/>
@@ -177,7 +167,6 @@
     </armor>
     <armor id="91427" name="Greater Diamond Lv. 5" icon="icon.bm_jewel_phydef_high_lv1_lavianrose">
         <!-- A 30-day item. When equipped, P. Def. +400, Received P. Critical Damage -20%, chance of receiving P. Critical Attack -10%. Effect does not stack with additional jewels of the same type. Cannot be exchanged, dropped, or sold in private store. Can be stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="brooch_jewel"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="5"/>
@@ -186,7 +175,6 @@
     </armor>
     <armor id="91428" name="Greater Pearl Lv. 5" icon="icon.bm_jewel_magdef_high_lv1_lavianrose">
         <!-- A 30-day item. When equipped, M. Def. +250, Received M. Critical Damage -20%, chance of receiving P. Critical Attack -10%. Effect does not stack with additional jewels of the same type. Cannot be exchanged, dropped, or sold in private store. Can be stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="brooch_jewel"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="5"/>
@@ -195,7 +183,6 @@
     </armor>
     <armor id="91429" name="Greater Topaz Lv. 5" icon="icon.bm_jewel_absdmg_high_lv1_lavianrose">
         <!-- A 30-day item. When equipped, cancels casting of target. In PvP deals fixed damage 6000. During skill using can cancels up to 3 debuffs. Effect does not stack with additional jewels of the same type. Cannot be exchanged, dropped, or sold in private store. Can be stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="brooch_jewel"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="5"/>
@@ -204,7 +191,6 @@
     </armor>
     <armor id="91430" name="Greater Garnet Lv. 5" icon="icon.bm_jewel_garnet_high_lv1_lavianrose">
         <!-- A 30-day item. When equipped, Stun/ Pull/ Silence/ Paralysis/ Fear Resistance +40%. For 25 sec. grants immunity to debuffs in case of using skill. Effect does not stack with additional jewels of the same type. Cannot be exchanged, dropped, or sold in private store. Can be stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="brooch_jewel"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="5"/>
@@ -213,7 +199,6 @@
     </armor>
     <armor id="91431" name="Greater Ruby Lv. 5" icon="icon.bm_jewel_ssdmg_high_lv1_lavianrose">
         <!-- A 30-day item. When equipped, Soulshot, Blessed Soulshot and Beast Soulshot damage +20%, P. Atk. +7%, P. Critical Rate +5%. Effect does not stack with additional jewels of the same type. Cannot be exchanged, dropped, or sold in private store. Can be stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="brooch_jewel"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="5"/>
@@ -222,7 +207,6 @@
     </armor>
     <armor id="91432" name="Greater Sapphire Lv. 5" icon="icon.bm_jewel_spsdmg_high_lv1_lavianrose">
         <!-- A 30-day item. When equipped, Spiritshot, Blessed Spiritshot and Beast Spiritshot damage +16%, M. Atk. +14%, M. Critical Rate +10%. Effect does not stack with additional jewels of the same type. Cannot be exchanged, dropped, or sold in private store. Can be stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="brooch_jewel"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="5"/>
@@ -231,7 +215,6 @@
     </armor>
     <armor id="91433" name="Greater Jade Lv. 5" icon="icon.bm_jewel_speedup_lv1_high">
         <!-- A 30-day item. When equipped, Atk. Spd./ Casting Spd. +20%, Speed +7%, weapon attack Resistance +10%. Effect does not stack with additional jewels of the same type. Cannot be exchanged, dropped, or sold in private store. Can be stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="brooch_jewel"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="5"/>
@@ -240,7 +223,6 @@
     </armor>
     <armor id="91434" name="Greater Cat's Eye Lv. 5" icon="icon.bm_jewel_red_catseye_high_lv1_lavianrose">
         <!-- A 30-day item. When equipped, P./ M. Critical Damage +20%, P./ M. Skill Power +7%, Debuff Resistance +40%. Effect does not stack with additional jewels of the same type. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="brooch_jewel"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="5"/>
@@ -249,7 +231,6 @@
     </armor>
     <armor id="91435" name="Greater Emerald Lv. 5" icon="icon.bm_jewel_allstat_high_lv1_lavianrose">
         <!-- A 30-day item. When equipped, CON, MEN, DEX, WIT, STR, INT +2, Damage Reflection Resistance +20%. Effect does not stack with additional jewels of the same type. Cannot be exchanged, dropped, or sold in private store. Can be stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="brooch_jewel"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="5"/>
@@ -258,7 +239,6 @@
     </armor>
     <armor id="91436" name="Blessed Dragon Pendant" icon="icon.bm_pendant_dragon_i01">
         <!-- A 30-day item. A pendant that contains the energy of dragon. P. Def. +50, Acquired XP/ SP +30%, Atk. Spd./ Casting Spd.+10%, P./ M. Critical Damage +15%, P./ M. Atk. +20%, Damage Reflect Resistance +20%, Received P./ M. Damage -30%. Activates Dragon Invocation, Dragon Barrier, Dragon Evasion. Cannot be exchanged, dropped, or sold in private store. Can be stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="underwear"/>
         <set name="immediate_effect" val="true"/>
         <set name="time" val="43200"/>
@@ -269,7 +249,6 @@
     </armor>
     <armor id="91437" name="White Sayha's Cloak +10" icon="icon.sayha2017_back_i03">
         <!-- A 30-day item. Max. HP/ MP +10%, Acquired XP/ SP +10%, P./ M. Critical Damage +15%, M. Def. +6%, received Critical Damage -10%. Allows using Sayha's Blink skill. Cannot be exchanged, dropped, or sold in private store. Can be stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="back"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="220"/>
@@ -408,28 +387,24 @@
     </item>
     <armor id="91458" name="Red Mask of Victory" icon="icon.accessory_worldcup_mask_i00">
         <!-- This mask brings victory. Cannot be exchanged, dropped or sold in a private store. Can be stored in a private warehouse. The item will be deleted after the event is over. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="hair"/>
         <set name="immediate_effect" val="true"/>
         <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
     </armor>
     <armor id="91459" name="Mark of Cheers" icon="BranchSys2.icon.br_worldcup_face_deco_i00">
         <!-- This mark speaks of the support to the favorite team in the World Cup. Cannot be exchanged, dropped or sold in a private store. Can be stored in a private warehouse. The item will be deleted after the event is over. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="hair"/>
         <set name="immediate_effect" val="true"/>
         <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
     </armor>
     <armor id="91460" name="Soccer Ball Afro Hair - Red" icon="BranchSys2.icon.br_worldcup_hair_i02">
         <!-- Afro hair that has been dyed like a red soccer ball. Cannot be exchanged, dropped or sold in a private store. Can be stored in a private warehouse. The item will be deleted after the event is over. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="hairall"/>
         <set name="immediate_effect" val="true"/>
         <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
     </armor>
     <weapon id="91461" name="Balloon Stick of Cheers - Red" icon="BranchSys2.icon.br_worldcup_stick_i00">
         <!-- Balloon stick for fans to support their teams. Cannot be exchanged, dropped or sold in a private store. Can be stored in a private warehouse. The item will be deleted after the event is over. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="POLE"/>
         <set name="immediate_effect" val="true"/>
         <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>

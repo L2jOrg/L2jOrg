@@ -2,7 +2,6 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
     <armor id="49000" name="Agathion - Singer and Dancer" icon="BranchSys2.icon.br_aga_singer_dancer_i00">
         <!-- Summons Singer and Dancer Agathion when equipped. 30-day. Cannot be exchanged, dropped, or sold. <Active Skill>. 1. Dance of Fury: increases Atk. Spd. by 5% for 20 minutes. 2. Dance of Concentration: increases Casting Spd. by 5% for 20 minutes. 3. Song of Wind: increases Speed by 20 for 5 minutes. Cooldown: 10 min. <Note>. Dance of Fury, Dance of Concentration, and Song of Wind do not stack. Duration: 30 days. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="agathion"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="150"/>
@@ -29,7 +28,6 @@
     </item>
     <armor id="49002" name="Agathion - Singer and Dancer" icon="BranchSys2.icon.br_aga_singer_dancer_i00">
         <!-- Summons Singer and Dancer Agathion when equipped. 90-day. Cannot be exchanged, dropped, or sold. <Active Skill>. 1. Dance of Fury: increases Atk. Spd. by 5% for 20 minutes. 2. Dance of Concentration: increases Casting Spd. by 5% for 20 minutes. 3. Song of Wind: increases Speed by 20 for 5 minutes. Cooldown: 10 min. <Note>. Dance of Fury, Dance of Concentration, and Song of Wind do not stack. Duration: 90 days. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="lbracelet"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="150"/>
@@ -270,7 +268,6 @@
     </item>
     <armor id="49031" name="Ring of Heir" icon="icon.event_classic_ring">
         <!-- HP Recovery Bonus + 5%, P./M. Accuracy + 1, Weight Limit + 5000. Effect does not stack. Cannot be exchanged, dropped, or sold. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="rfinger;lfinger"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="150"/>
@@ -285,7 +282,6 @@
     </armor>
     <armor id="49032" name="Eva's Mark" icon="icon.bm_soaring_bird">
         <!-- Celebrate the launch of the classic server! Equip and use the skill created to teleport to the nearest town. Cooldown is 60 min. 30-day. Cannot be exchanged, dropped, or sold. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="hair"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="10"/>
@@ -335,7 +331,6 @@
     </item>
     <armor id="49039" name="Necklace (Novice)" icon="icon.accessary_necklace_of_knowledge_i00">
         <!-- Novice Necklace. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="neck"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="150"/>
@@ -345,7 +340,6 @@
     </armor>
     <armor id="49040" name="Earring (Novice)" icon="icon.accessary_mage_earing_i00">
         <!-- Novice Earring. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="rear;lear"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="150"/>
@@ -355,7 +349,6 @@
     </armor>
     <armor id="49041" name="Ring (Novice)" icon="icon.accessary_ring_of_knowledge_i00">
         <!-- Novice Ring. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="rfinger;lfinger"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="150"/>
@@ -365,7 +358,6 @@
     </armor>
     <armor id="49042" name="Shield (Novice)" icon="icon.shield_small_shield_i00">
         <!-- Novice Shield. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="lhand"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="1410"/>
@@ -377,7 +369,6 @@
     </armor>
     <weapon id="49043" name="Sword of Solidarity (Novice)" icon="icon.weapon_long_sword_i00">
         <!-- A mithril sword forged long ago to commemorate the alliance between Elves and Humans. Novice only. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
@@ -395,7 +386,6 @@
     </weapon>
     <weapon id="49044" name="Wand of Adept (Novice)" icon="icon.weapon_apprentices_wand_i00">
         <!-- The wand presented to those who have finished their studies at the school of magic. Novice only. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
@@ -415,7 +405,6 @@
     </weapon>
     <weapon id="49045" name="Red Sunset Staff (Novice)" icon="icon.weapon_cedar_staff_i00">
         <!-- A staff used by warriors belonging to the Red Sunset clan.  Novice only. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
@@ -435,7 +424,6 @@
     </weapon>
     <weapon id="49046" name="Red Sunset Sword (Novice)" icon="icon.weapon_brandish_i00">
         <!-- A sword used by warriors belonging to the Red Sunset clan. Novice only. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
@@ -453,7 +441,6 @@
     </weapon>
     <weapon id="49047" name="Sword of Sentinel (Novice)" icon="icon.weapon_broad_sword_i00">
         <!-- A steel blade issued to those fighters that have been acknowledged as protectors of the woods. Novice only. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
@@ -471,7 +458,6 @@
     </weapon>
     <weapon id="49048" name="Staff of Sentinel (Novice)" icon="icon.weapon_cedar_staff_i00">
         <!-- Staff issued to those magicians that have been acknowledged as protectors of the woods. Novice only. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
@@ -491,7 +477,6 @@
     </weapon>
     <weapon id="49049" name="Eldritch Dagger (Novice)" icon="icon.weapon_knife_i00">
         <!-- A steel dagger engraved with the runes of Shilen and Gran Kain. Novice only. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DAGGER"/>
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
@@ -510,7 +495,6 @@
     </weapon>
     <weapon id="49050" name="Blood Saber (Novice)" icon="icon.weapon_broad_sword_i00">
         <!-- An Oriharukon sword crafted in the Abella style of the east. Novice only. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
@@ -528,7 +512,6 @@
     </weapon>
     <weapon id="49051" name="Club (Novice)" icon="icon.weapon_club_i00">
         <!-- Club for Novices. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
@@ -547,7 +530,6 @@
     </weapon>
     <weapon id="49052" name="Butcher's Sword (Novice)" icon="icon.weapon_orcish_sword_i00">
         <!-- Sword granted to young Orc Fighters who distinguished themselves at war. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
@@ -565,7 +547,6 @@
     </weapon>
     <weapon id="49053" name="Silversmith Hammer (Novice)" icon="icon.weapon_iron_hammer_i00">
         <!-- A hammer silversmiths of the ancient Elmoreden used. Novice only. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
@@ -781,7 +762,6 @@
     </item>
     <weapon id="49083" name="Commander's Dagger" icon="icon.weapon_shining_knife_i00">
         <!-- Dagger, which is both a weapon and a symbol of power. This dagger is made by a bladesmith with the purest heart, and has the power to lead a force of 100 000 warriors. When equipped, allows to use the Power of Commander. Can be bought from Aden merchants. <Active Skills> 1. Power of Commander: deals 50 points of damage in PvP. Cooldown: 1 minute. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DAGGER"/>
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>

@@ -7,7 +7,6 @@
     </item>
     <armor id="20792" name="Flavorful Cheese Hat" icon="BranchSys.icon.br_bigrat_cap_i00">
         <!-- A hat shaped like a mouth-watering piece of cheese. On closer examination, you can see an orange mouse on top of it. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="hairall"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="10"/>
@@ -15,7 +14,6 @@
     </armor>
     <armor id="20793" name="Sweet Cheese Hat" icon="BranchSys.icon.br_goldrat_cap_i00">
         <!-- A hat shaped like a mouth-watering piece of cheese. On closer examination, you can see a purple mouse on top of it. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="hairall"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="10"/>

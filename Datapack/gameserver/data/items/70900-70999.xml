@@ -2,7 +2,6 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
     <armor id="70900" name="Stylish Straw Hat" icon="BranchSys3.icon.g_straw_hat">
         <!-- A straw hat. Uses 2 hair accessory slots. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="hairall"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="10"/>
@@ -10,7 +9,6 @@
     </armor>
     <armor id="70901" name="Crown" icon="BranchSys.icon.br_comfortspirit_hat_a_i00">
         <!-- Dignified crown. Uses 2 hair accessory slots. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="hairall"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="10"/>
@@ -18,7 +16,6 @@
     </armor>
     <armor id="70902" name="Party Mask" icon="icon.etc_party_mask_i00">
         <!-- A fashion item used to display a unique appearance. Uses 1 hair accessory slot. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="hair"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="10"/>
@@ -26,7 +23,6 @@
     </armor>
     <armor id="70903" name="Red Zubei - Heavy Armor" icon="icon.armor_t2000_ul_i00">
         <!-- Full Heavy Armor of Red Zubei. It has no restrictions as to class, but for some races and classes heavy, light and magic armor look the same. Previous armor is taken off and becomes unavailable when it's equipped. Headpieces, weapon and magic armor are not removed. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="HEAVY"/>
         <set name="bodypart" val="alldress"/>
         <set name="immediate_effect" val="true"/>
@@ -34,7 +30,6 @@
     </armor>
     <armor id="70904" name="Red Zubei - Light Armor" icon="icon.armor_t2000_ul_i00">
         <!-- Full Light Armor of Red Zubei It has no restrictions as to class, but for some races and classes heavy, light and magic armor look the same. Previous armor is taken off and becomes unavailable when it's equipped. Headpieces, weapon and magic armor are not removed. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="LIGHT"/>
         <set name="bodypart" val="alldress"/>
         <set name="immediate_effect" val="true"/>
@@ -42,7 +37,6 @@
     </armor>
     <armor id="70905" name="Red Zubei - Robe" icon="icon.armor_t2000_ul_i00">
         <!-- Full Light Armor of Red Zubei. It has no restrictions as to class, but for some races and classes heavy, light and magic armor look the same. Previous armor is taken off and becomes unavailable when it's equipped. Headpieces, weapon and magic armor are not removed. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="MAGIC"/>
         <set name="bodypart" val="alldress"/>
         <set name="immediate_effect" val="true"/>
@@ -83,7 +77,6 @@
     </item>
     <armor id="70913" name="Fire Dragon Pendant - Lv. 5" icon="BranchIcon.Icon.bm_pendant_pve">
         <!-- A Pendant that carries sealed energy of a Fire Dragon. Its effect is the same as from the enchanted to +5 Fire Dragon Pendant - Lv. 5. Cannot be exchanged, dropped or sold. Can be stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="chest"/>
         <set name="immediate_effect" val="true"/>
         <set name="time" val="10080"/>
@@ -94,7 +87,6 @@
     </armor>
     <armor id="70914" name="Water Dragon Pendant - Lv. 5" icon="BranchIcon.Icon.bm_pendant_pvp_blue">
         <!-- A Pendant that carries sealed energy of a Water Dragon. Its effect is the same as from the enchanted to +5 Water Dragon Pendant - Lv. 5. Cannot be exchanged, dropped or sold. Can be stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="chest"/>
         <set name="immediate_effect" val="true"/>
         <set name="time" val="10080"/>
@@ -165,7 +157,6 @@
     </item>
     <armor id="70922" name="Bracelet of Duty - Lv. 6" icon="BranchIcon.Icon.g_pledge_bracelet_05">
         <!-- Opens up four Talisman slots. STR +1, INT +1, DEX +1, WIT +1, CON +1, MEN +1. Cannot be exchanged, dropped, destroyed, or sold. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="rbracelet"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="5"/>
@@ -177,7 +168,6 @@
     </armor>
     <armor id="70923" name="Agathion Bracelet - Lv. 1" icon="icon.lbracelet_agathion_charm">
         <!-- 1-day item. When equipped, 1 Agathion's main slot and 1 Agathion's side slot activated. Cannot be exchanged, dropped or sold in private store. Can be stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="lbracelet"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="5"/>
@@ -189,7 +179,6 @@
     </armor>
     <armor id="70924" name="Agathion Bracelet - Lv. 1" icon="icon.lbracelet_agathion_charm">
         <!-- 7-day item. When equipped, 1 Agathion's main slot and 1 Agathion's side slot activated. Cannot be exchanged, dropped or sold in private store. Can be stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="lbracelet"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="5"/>
@@ -201,7 +190,6 @@
     </armor>
     <armor id="70925" name="Agathion Bracelet - Lv. 1" icon="icon.lbracelet_agathion_charm">
         <!-- 15-day item. When equipped, 1 Agathion's main slot and 1 Agathion's side slot activated. Cannot be exchanged, dropped or sold in private store. Can be stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="lbracelet"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="5"/>
@@ -213,7 +201,6 @@
     </armor>
     <armor id="70926" name="Agathion Bracelet - Lv. 1" icon="icon.lbracelet_agathion_charm">
         <!-- 30-day item. When equipped, 1 Agathion's main slot and 1 Agathion's side slot activated. Cannot be exchanged, dropped or sold in private store. Can be stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="lbracelet"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="5"/>
@@ -225,7 +212,6 @@
     </armor>
     <armor id="70927" name="Agathion Bracelet - Lv. 1" icon="icon.lbracelet_agathion_charm">
         <!-- 60-day item. When equipped, 1 Agathion's main slot and 1 Agathion's side slot activated. Cannot be exchanged, dropped or sold in private store. Can be stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="lbracelet"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="5"/>
@@ -237,7 +223,6 @@
     </armor>
     <armor id="70928" name="Agathion Bracelet - Lv. 1" icon="icon.etc_bm_jewel_garnet">
         <!-- 90-day item. When equipped, 1 Agathion's main slot and 1 Agathion's side slot activated. Cannot be exchanged, dropped or sold in private store. Can be stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="lbracelet"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="5"/>
@@ -249,7 +234,6 @@
     </armor>
     <armor id="70929" name="Agathion Bracelet - Lv. 1" icon="icon.etc_bm_jewel_garnet">
         <!-- When equipped, 1 Agathion's main slot and 1 Agathion's side slot activated. Cannot be dropped. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="lbracelet"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="5"/>
@@ -260,7 +244,6 @@
     </armor>
     <armor id="70930" name="Agathion Bracelet - Lv. 2" icon="icon.lbracelet_agathion_charm">
         <!-- When equipped, 1 Agathion's main slot and 2 Agathion's side slots activated. Cannot be dropped. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="lbracelet"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="5"/>
@@ -271,7 +254,6 @@
     </armor>
     <armor id="70931" name="Agathion Bracelet - Lv. 3" icon="icon.lbracelet_agathion_charm">
         <!-- When equipped, 1 Agathion's main slot and 2 Agathion's side slots activated. STR/ INT/ CON/ MEN +1. Cannot be dropped. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="lbracelet"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="5"/>
@@ -283,7 +265,6 @@
     </armor>
     <armor id="70932" name="Agathion Bracelet - Lv. 4" icon="icon.lbracelet_agathion_charm">
         <!-- When equipped, 1 Agathion's main slot and 3 Agathion's side slots activated. STR/ INT/ CON/ MEN +1. Resistance to Mental Attacks/ Stun/ Sleep/ Paralysis +5%. Cannot be dropped. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="lbracelet"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="5"/>
@@ -296,7 +277,6 @@
     </armor>
     <armor id="70933" name="Agathion - Love (Event)" icon="icon.etc_rbracelet_aga_agit_i00">
         <!-- 7-day item. Equipping it in the main slot summons the Agathion. Cannot be exchanged, dropped or sold. Can be stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="agathion"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="5"/>
@@ -305,7 +285,6 @@
     </armor>
     <armor id="70934" name="Agathion: Nevit's Herald Kanna" icon="icon.pi_high_agathion_bracelet_i00">
         <!-- Equipping it in the main slot summons the Agathion Nevit's Herald Kanna. Cannot be exchanged, dropped or sold. Can be stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="agathion"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="5"/>
@@ -313,7 +292,6 @@
     </armor>
     <armor id="70935" name="Agathion: Uthanka" icon="BranchSys.icon.br_aga_uthanka_i00">
         <!-- Equipping it in the main slot summons the Agathion Uthanka. Cannot be exchanged, dropped or sold. Can be stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="agathion"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="5"/>
@@ -321,7 +299,6 @@
     </armor>
     <armor id="70960" name="Agathion: Singer and Dancer" icon="BranchSys2.icon.br_aga_singer_dancer_i00">
         <!-- Equipping it in the main slot summons the Agathion Singer and Dancer. Cannot be exchanged, dropped or sold. Can be stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="agathion"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="5"/>
@@ -337,7 +314,6 @@
     </armor>
     <armor id="70961" name="Agathion: Singer and Dancer" icon="BranchSys2.icon.br_aga_singer_dancer_i00">
         <!-- 7-day item. Equipping it in the main slot summons the Agathion Singer and Dancer and activates the Special Ability option. Cannot be exchanged, dropped or sold. Can be stored in a private warehouse. <Special Ability>. 1. Dance of Fury: increases Atk. Spd. by 5% for 20 minutes. 2. Dance of Concentration: increases Casting Spd. by 5% for 20 minutes. 3. Song of Wind: increases Speed by 20 for 5 minutes. Cooldown: 10 min. <Note>. Dance of Fury, Dance of Concentration, and Song of Wind do not stack. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="agathion"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="5"/>
@@ -346,7 +322,6 @@
     </armor>
     <armor id="70962" name="Agathion: Singer and Dancer" icon="BranchSys2.icon.br_aga_singer_dancer_i00">
         <!-- 30-day item. Equipping it in the main slot summons the Agathion Singer and Dancer and activates the Special Ability option. Cannot be exchanged, dropped or sold. Can be stored in a private warehouse. <Special Ability>. 1. Dance of Fury: increases Atk. Spd. by 5% for 20 minutes. 2. Dance of Concentration: increases Casting Spd. by 5% for 20 minutes. 3. Song of Wind: increases Speed by 20 for 5 minutes. Cooldown: 10 min. <Note>. Dance of Fury, Dance of Concentration, and Song of Wind do not stack. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="agathion"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="5"/>
@@ -355,7 +330,6 @@
     </armor>
     <armor id="70963" name="Agathion: Singer and Dancer" icon="BranchSys2.icon.br_aga_singer_dancer_i00">
         <!-- 90-day item. Equipping it in the main slot summons the Agathion Singer and Dancer and activates the Special Ability option. Cannot be exchanged, dropped or sold. Can be stored in a private warehouse. <Special Ability>. 1. Dance of Fury: increases Atk. Spd. by 5% for 20 minutes. 2. Dance of Concentration: increases Casting Spd. by 5% for 20 minutes. 3. Song of Wind: increases Speed by 20 for 5 minutes. Cooldown: 10 min. <Note>. Dance of Fury, Dance of Concentration, and Song of Wind do not stack. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="agathion"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="5"/>
@@ -364,7 +338,6 @@
     </armor>
     <armor id="70964" name="Agathion: Griffin" icon="icon.etc_rbracelet_aga_agit_i00">
         <!-- Equipping it in the main slot summons the Agathion Griffin and activates the Special Ability option. Cannot be exchanged, dropped or sold. Can be stored in a private warehouse. <Special Ability>.  - STR/ INT +1. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="agathion"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="5"/>
@@ -373,7 +346,6 @@
     </armor>
     <armor id="70965" name="Agathion: Cheerleader Mae" icon="BranchSys.icon.br_aga_local2009_g_i00">
         <!-- Equipping it in the main slot summons the Agathion Cheerleader Mae and activates the Special Ability option. Cannot be exchanged, dropped or sold. Can be stored in a private warehouse. <Special Ability>. Cheerleader Mae's Support : P./ M. Atk. +5%, Atk. Spd./Casting Spd. +5%, Skill MP Consumption -10%, P./ M. Critical Damage +3%. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="agathion"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="5"/>
@@ -382,7 +354,6 @@
     </armor>
     <armor id="70966" name="Agathion: One-eyed Bat Drove" icon="BranchSys.icon.br_aga_bat_i00">
         <!-- Equipping it in the main slot summons the Agathion One-eyed Bat Drove. Cannot be exchanged, dropped or sold. Can be shared within account. Can be stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="agathion"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="5"/>
@@ -390,7 +361,6 @@
     </armor>
     <armor id="70967" name="Agathion: Zaken's Spirit Swords" icon="BranchSys2.Icon.br_aga_zaken_i00">
         <!-- Equipping it in the main slot summons the Agathion Zaken's Spirit Swords. Cannot be exchanged, dropped or sold. Can be shared within account. Can be stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="agathion"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="5"/>
@@ -398,7 +368,6 @@
     </armor>
     <armor id="70968" name="Agathion: Pegasus" icon="BranchSys.icon.br_aga_pegasus_i00">
         <!-- Equipping it in the main slot summons the Agathion Pegasus. Cannot be exchanged, dropped or sold. Can be shared within account. Can be stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="agathion"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="5"/>
@@ -406,7 +375,6 @@
     </armor>
     <armor id="70969" name="Agathion: Guangong" icon="BranchSys.icon.br_aga_warriorgod_i00">
         <!-- Equipping it in the main slot summons the Agathion Guangong. Cannot be exchanged, dropped or sold. Can be shared within account. Can be stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="agathion"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="5"/>
@@ -414,7 +382,6 @@
     </armor>
     <armor id="70970" name="Agathion: God of Fortune" icon="BranchSys.icon.br_aga_wealth_god_i00">
         <!-- Equipping it in the main slot summons the Agathion God of Fortune. Cannot be exchanged, dropped or sold. Can be shared within account. Can be stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="agathion"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="5"/>
@@ -422,7 +389,6 @@
     </armor>
     <armor id="70971" name="Agathion: Phoenix" icon="BranchSys2.icon.br_aga_china_phoenix_i00">
         <!-- Equipping it in the main slot summons the Agathion Phoenix. Cannot be exchanged, dropped or sold. Can be shared within account. Can be stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="agathion"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="5"/>
@@ -430,7 +396,6 @@
     </armor>
     <armor id="70972" name="Agathion: Saerom" icon="icon.pi_high_agathion_bracelet_i00">
         <!-- Equipping it in the main slot summons the Agathion Saerom. Cannot be exchanged, dropped or sold. Can be shared within account. Can be stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="agathion"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="5"/>
@@ -438,7 +403,6 @@
     </armor>
     <armor id="70973" name="Agathion: Gwanseum Nyang" icon="BranchSys.icon.br_aga_mercygod_i00">
         <!-- Equipping it in the main slot summons the Agathion Gwanseum Nyang. Cannot be exchanged, dropped or sold. Can be shared within account. Can be stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="agathion"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="5"/>
@@ -446,7 +410,6 @@
     </armor>
     <armor id="70974" name="Agathion: Blue Opera" icon="BranchSys.icon.br_aga_blue_pekingopera_i00">
         <!-- Equipping it in the main slot summons the Agathion Blue Opera. Cannot be exchanged, dropped or sold. Can be shared within account. Can be stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="agathion"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="5"/>
@@ -454,7 +417,6 @@
     </armor>
     <armor id="70975" name="Agathion: Red Opera" icon="BranchSys.icon.br_aga_pekingopera_i00">
         <!-- Equipping it in the main slot summons the Agathion Red Opera. Cannot be exchanged, dropped or sold. Can be shared within account. Can be stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="agathion"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="5"/>
@@ -462,7 +424,6 @@
     </armor>
     <armor id="70976" name="Agathion: Miss Chipao" icon="BranchSys.icon.br_aga_chinesedress_i00">
         <!-- Equipping it in the main slot summons the Agathion Miss Chipao. Cannot be exchanged, dropped or sold. Can be shared within account. Can be stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="agathion"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="5"/>
@@ -470,7 +431,6 @@
     </armor>
     <armor id="70977" name="Agathion: Flower Fairy Spirit" icon="BranchSys2.icon.br_aga_flower_i00">
         <!-- Equipping it in the main slot summons the Agathion Flower Fairy Spirit. Cannot be exchanged, dropped or sold. Can be shared within account. Can be stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="agathion"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="5"/>
@@ -478,7 +438,6 @@
     </armor>
     <armor id="70978" name="Agathion: Iken" icon="BranchSys.icon.br_aga_local2009_b_i00">
         <!-- Equipping it in the main slot summons the Agathion Iken. Cannot be exchanged, dropped or sold. Can be shared within account. Can be stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="agathion"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="5"/>
@@ -486,7 +445,6 @@
     </armor>
     <armor id="70979" name="Agathion: Lanya" icon="BranchSys.icon.br_aga_local2009_a_i00">
         <!-- Equipping it in the main slot summons the Agathion Lanya. Cannot be exchanged, dropped or sold. Can be shared within account. Can be stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="agathion"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="5"/>
@@ -494,7 +452,6 @@
     </armor>
     <armor id="70980" name="Agathion: Gnosian" icon="BranchSys.icon.br_aga_local2009_f_i00">
         <!-- Equipping it in the main slot summons the Agathion Gnosian. Cannot be exchanged, dropped or sold. Can be shared within account. Can be stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="agathion"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="5"/>
@@ -502,7 +459,6 @@
     </armor>
     <armor id="70981" name="Agathion: Cheerleader Orodriel" icon="BranchSys.icon.br_aga_local2009_e_i00">
         <!-- Equipping it in the main slot summons the Agathion Cheerleader Orodriel. Cannot be exchanged, dropped or sold. Can be shared within account. Can be stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="agathion"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="5"/>
@@ -510,7 +466,6 @@
     </armor>
     <armor id="70982" name="Agathion: Lakinos" icon="BranchSys.icon.br_aga_local2009_d_i00">
         <!-- Equipping it in the main slot summons the Agathion Lakinos. Cannot be exchanged, dropped or sold. Can be shared within account. Can be stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="agathion"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="5"/>
@@ -518,7 +473,6 @@
     </armor>
     <armor id="70983" name="Agathion: Mortia" icon="BranchSys.icon.br_aga_local2009_c_i00">
         <!-- Equipping it in the main slot summons the Agathion Mortia. Cannot be exchanged, dropped or sold. Can be shared within account. Can be stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="agathion"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="5"/>
@@ -526,7 +480,6 @@
     </armor>
     <armor id="70984" name="Agathion: Heintz" icon="BranchSys.icon.br_aga_local2009_h_i00">
         <!-- Equipping it in the main slot summons the Agathion Heintz. Cannot be exchanged, dropped or sold. Can be shared within account. Can be stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="agathion"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="5"/>
@@ -534,7 +487,6 @@
     </armor>
     <armor id="70985" name="Agathion: Meruril" icon="BranchSys.icon.br_aga_local2009_g_i00">
         <!-- Equipping it in the main slot summons the Agathion Meruril. Cannot be exchanged, dropped or sold. Can be shared within account. Can be stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="agathion"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="5"/>
@@ -542,14 +494,12 @@
     </armor>
     <armor id="70986" name="Agathion: Taman Zu Rapatui" icon="BranchSys.icon.br_aga_local2009_i_i00">
         <!-- Equipping it in the main slot summons the Agathion Taman Zu Rapatui. Cannot be exchanged, dropped or sold. Can be shared within account. Can be stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="agathion"/>
         <set name="immediate_effect" val="true"/>
         <restriction tradable="false" dropable="false" depositable="false" sellable="false" freightable="true"/>
     </armor>
     <armor id="70987" name="Agathion: Kaurin" icon="BranchSys.icon.br_aga_local2009_j_i00">
         <!-- Equipping it in the main slot summons the Agathion Kaurin. Cannot be exchanged, dropped or sold. Can be shared within account. Can be stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="agathion"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="C"/>
@@ -559,7 +509,6 @@
     </armor>
     <armor id="70988" name="Agathion: Ahertbein" icon="BranchSys.icon.br_aga_local2009_l_i00">
         <!-- Equipping it in the main slot summons the Agathion Ahertbein. Cannot be exchanged, dropped or sold. Can be shared within account. Can be stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="HEAVY"/>
         <set name="bodypart" val="agathion"/>
         <set name="immediate_effect" val="true"/>
@@ -570,7 +519,6 @@
     </armor>
     <armor id="70989" name="Agathion: Naonin" icon="BranchSys.icon.br_aga_local2009_k_i00">
         <!-- Equipping it in the main slot summons the Agathion Naonin. Cannot be exchanged, dropped or sold. Can be shared within account. Can be stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="agathion"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="C"/>
@@ -580,7 +528,6 @@
     </armor>
     <armor id="70990" name="Agathion: Minion Eye" icon="icon.etc_rbracelet_aga_agit_i00">
         <!-- Equipping it in the main slot summons the Agathion Minion Eye. Cannot be exchanged, dropped, sold or shared within account. Can be stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="agathion"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="C"/>
@@ -590,7 +537,6 @@
     </armor>
     <armor id="70991" name="Agathion: Minion Eye" icon="icon.etc_rbracelet_aga_agit_i00">
         <!-- 7-day item. Equipping it in the main slot summons the Agathion Minion Eye and activates the Special Ability option. Cannot be exchanged, dropped, sold or shared within account. Can be stored in a private warehouse. <Special Ability>.  - Monster Eye Corage Lv 1.  - Monster Eye Blessed Resurrection Lv 1 -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="agathion"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="C"/>
@@ -601,7 +547,6 @@
     </armor>
     <armor id="70992" name="Agathion: Minion Eye" icon="icon.etc_rbracelet_aga_agit_i00">
         <!-- 30-day item. Equipping it in the main slot summons the Agathion Minion Eye and activates the Special Ability option. Cannot be exchanged, dropped, sold or shared within account. Can be stored in a private warehouse. <Special Ability>.  - Monster Eye Courage Lv 1.  - Monster Eye Blessed Resurrection Lv 1 -->
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="LIGHT"/>
         <set name="bodypart" val="agathion"/>
         <set name="immediate_effect" val="true"/>
@@ -613,7 +558,6 @@
     </armor>
     <armor id="70993" name="Agathion: Matryoshka" icon="icon.etc_rbracelet_aga_agit_i00">
         <!-- Equipping it in the main slot summons the Agathion Matryoshka. Cannot be exchanged, dropped, sold or shared within account. Can be stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="agathion"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="C"/>
@@ -623,7 +567,6 @@
     </armor>
     <armor id="70994" name="Agathion: Matryoshka" icon="icon.etc_rbracelet_aga_agit_i00">
         <!-- 7-day item. Equipping it in the main slot summons the Agathion Matryoshka and activates the Special Ability option. Cannot be exchanged, dropped, sold or shared within account. Can be stored in a private warehouse. <Special Ability>.  - Matryoshka's Blessing Lv 1.  - Matryoshka's Gift Lv 1.  - Agathion Teleport (Aden/ Giran/ Dion/ Gludio) -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="agathion"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="C"/>
@@ -634,7 +577,6 @@
     </armor>
     <armor id="70995" name="Agathion: Matryoshka" icon="icon.etc_rbracelet_aga_agit_i00">
         <!-- 30-day item. Equipping it in the main slot summons the Agathion Matryoshka and activates the Special Ability option. Cannot be exchanged, dropped, sold or shared within account. Can be stored in a private warehouse. <Special Ability>.  - Matryoshka's Blessing Lv 1.  - Matryoshka's Gift Lv 1.  - Agathion Teleport (Aden/ Giran/ Dion/ Gludio) -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="agathion"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="C"/>
@@ -645,7 +587,6 @@
     </armor>
     <armor id="70996" name="Agathion: Babayaga" icon="BranchIcon.icon.br_babayaga_i00">
         <!-- Equipping it in the main slot summons the Agathion Babayaga. Cannot be exchanged, dropped, sold or shared within account. Can be stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="agathion"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="C"/>
@@ -655,7 +596,6 @@
     </armor>
     <armor id="70997" name="Agathion: Babayaga" icon="BranchIcon.icon.br_babayaga_i00">
         <!-- 7-day item. Equipping it in the main slot summons the Agathion Babayaga and activates the Special Ability option. Cannot be exchanged, dropped, sold or shared within account. Can be stored in a private warehouse. <Special Ability>.  - Babayaga's Courage Lv 1.  - Babayaga's Serenade Lv 1.  - Agathion Teleport (Aden/ Giran/ Dion/ Gludio) -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="agathion"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="960"/>
@@ -665,7 +605,6 @@
     </armor>
     <armor id="70998" name="Agathion: Babayaga" icon="BranchIcon.icon.br_babayaga_i00">
         <!-- 30-day item. Equipping it in the main slot summons the Agathion Babayaga and activates the Special Ability option. Cannot be exchanged, dropped, sold or shared within account. Can be stored in a private warehouse. <Special Ability>.  - Babayaga's Courage Lv 1.  - Babayaga's Serenade Lv 1.  - Agathion Teleport (Aden/ Giran/ Dion/ Gludio) -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="agathion"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="C"/>

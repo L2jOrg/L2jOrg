@@ -122,7 +122,6 @@
     </item>
     <armor id="90818" name="Refined Zaken's Earring" icon="icon.accessory_earring_of_zaken_i00">
         <!-- A 7-day item. MP +34, Bleed Resistance and Bleed Atk. Rate +20%, Stun Resistance and Stun Atk. Rate +15%, Mental Resistance and Atk. Rate +15% Healing Power +10%, HP Recovery Bonus +20%. Vampiric Rage Effect +8%, skill MP consumption -2%. The effect doesn't stack if two identical earrings are worn. Cannot be exchanged, dropped, or sold in private store. Can be stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="rear;lear"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="150"/>
@@ -135,7 +134,6 @@
     </armor>
     <armor id="90819" name="Refined Zaken's Earring" icon="icon.accessory_earring_of_zaken_i00">
         <!-- A 15-day item. MP +34, Bleed Resistance and Bleed Atk. Rate +20%, Stun Resistance and Stun Atk. Rate +15%, Mental Resistance and Atk. Rate +15% Healing Power +10%, HP Recovery Bonus +20%. Vampiric Rage Effect +8%, skill MP consumption -4%. The effect doesn't stack if two identical earrings are worn. Cannot be exchanged, dropped, or sold in private store. Can be stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="rear;lear"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="150"/>
@@ -151,7 +149,6 @@
     </armor>
     <armor id="90820" name="Refined Zaken's Earring" icon="icon.accessory_earring_of_zaken_i00">
         <!-- A 30-day item. MP +34, Bleed Resistance and Bleed Atk. Rate +20%, Stun Resistance and Stun Atk. Rate +15%, Mental Resistance and Atk. Rate +15% Healing Power +10%, HP Recovery Bonus +20%. Vampiric Rage Effect +8%, skill MP consumption -4%. The effect doesn't stack if two identical earrings are worn. Cannot be exchanged, dropped, or sold in private store. Can be stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="rear;lear"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="150"/>
@@ -224,7 +221,6 @@
     </item>
     <armor id="90833" name="Agathion - Joy" icon="icon.etc_rbracelet_aga_agit_i00">
         <!-- A 7-day item. Enables to summon Agathion of Joy when equipped. <Skill used>. 1. Agathion's Escape: Allows to relocate to Giran, Gludio, Dion, Oren, Hunters Village. (Cooldown: 1 min). <Item Skill>. 1. Search for Evidence: Speed +66 for 15 sec.. <Item Skill>. 2. Hidden Search: monsters don't attack first. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="agathion"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="30"/>
@@ -256,7 +252,6 @@
     </item>
     <armor id="90837" name="White Uniform Hat (STR+1 INT+1)" icon="BranchSys2.icon.br_navy_cap_i00">
         <!-- White uniform hat that makes you feel the energy of a man of the sea. STR+1, INT+1. Occupies 2 Hair Accessory slots. Cannot be dropped or sold in a store. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="hairall"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="10"/>
@@ -264,7 +259,6 @@
     </armor>
     <armor id="90838" name="White Uniform Hat (DEX+1 WIT+1)" icon="BranchSys2.icon.br_navy_cap_i00">
         <!-- White uniform hat that makes you feel the energy of a man of the sea. DEX+1, WIT+1. Occupies 2 Hair Accessory slots. Cannot be dropped or sold in a store. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="hairall"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="10"/>
@@ -272,7 +266,6 @@
     </armor>
     <armor id="90839" name="White Uniform Hat (CON+1 MEN+1)" icon="BranchSys2.icon.br_navy_cap_i00">
         <!-- White uniform hat that makes you feel the energy of a man of the sea. CON+1, MEN+1. Occupies 2 Hair Accessory slots. Cannot be dropped or sold in a store. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="hairall"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="10"/>
@@ -280,7 +273,6 @@
     </armor>
     <armor id="90840" name="Napoleon Hat (STR+1 INT+1)" icon="BranchSys.icon.br_napoleonic_cap_i00">
         <!-- A Napoleon Hat bursting with enough energy to conquer the world. STR+1, INT+1. Cannot be dropped or sold in a store. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="hairall"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="10"/>
@@ -288,7 +280,6 @@
     </armor>
     <armor id="90841" name="Napoleon Hat (DEX+1 WIT+1)" icon="BranchSys.icon.br_napoleonic_cap_i00">
         <!-- A Napoleon Hat bursting with enough energy to conquer the world. DEX+1, WIT+1. Cannot be dropped or sold in a store. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="hairall"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="10"/>
@@ -296,7 +287,6 @@
     </armor>
     <armor id="90842" name="Napoleon Hat (CON+1 MEN+1)" icon="BranchSys.icon.br_napoleonic_cap_i00">
         <!-- A Napoleon Hat bursting with enough energy to conquer the world. CON+1, MEN+1. Cannot be dropped or sold in a store. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="hairall"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="10"/>
@@ -304,7 +294,6 @@
     </armor>
     <armor id="90843" name="Ninja Hair Accessory (STR+1 INT+1)" icon="BranchSys3.icon1.g_co_ninja_hair">
         <!-- Ninja Hair Accessory. Mask form. STR+1, INT+1. Occupies 2 Hair Accessory slots. Cannot be dropped or sold in a store. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="hairall"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="10"/>
@@ -312,7 +301,6 @@
     </armor>
     <armor id="90844" name="Ninja Hair Accessory (DEX+1 WIT+1)" icon="BranchSys3.icon1.g_co_ninja_hair">
         <!-- Ninja Hair Accessory. Mask form. DEX+1, WIT+1. Occupies 2 Hair Accessory slots. Cannot be dropped or sold in a store. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="hairall"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="10"/>
@@ -320,7 +308,6 @@
     </armor>
     <armor id="90845" name="Ninja Hair Accessory (CON+1 MEN+1)" icon="BranchSys3.icon1.g_co_ninja_hair">
         <!-- Ninja Hair Accessory. Mask form. CON+1, MEN+1. Occupies 2 Hair Accessory slots. Cannot be dropped or sold in a store. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="hairall"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="10"/>
@@ -328,7 +315,6 @@
     </armor>
     <armor id="90846" name="Warrior's Helmet (STR+1 INT+1)" icon="BranchSys2.icon.br_close_helmet_i00">
         <!-- Helmet of a brave ancient warrior. STR+1, INT+1. Occupies 2 Hair Accessory slots. Cannot be dropped or sold in a store. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="hairall"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="10"/>
@@ -336,7 +322,6 @@
     </armor>
     <armor id="90847" name="Warrior's Helmet (DEX+1 WIT+1)" icon="BranchSys2.icon.br_close_helmet_i00">
         <!-- Helmet of a brave ancient warrior. DEX+1, WIT+1. Occupies 2 Hair Accessory slots. Cannot be dropped or sold in a store. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="hairall"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="10"/>
@@ -344,7 +329,6 @@
     </armor>
     <armor id="90848" name="Warrior's Helmet (CON+1 MEN+1)" icon="BranchSys2.icon.br_close_helmet_i00">
         <!-- Helmet of a brave ancient warrior. CON+1, MEN+1. Occupies 2 Hair Accessory slots. Cannot be dropped or sold in a store. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="hairall"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="10"/>
@@ -352,7 +336,6 @@
     </armor>
     <armor id="90849" name="First Mate Hat (STR+1 INT+1)" icon="icon.Accessary_middle_ages_i01">
         <!-- First Mate Hat. STR+1, INT+1. Occupies 2 Hair Accessory slots. Cannot be dropped or sold in a store. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="hairall"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="10"/>
@@ -360,7 +343,6 @@
     </armor>
     <armor id="90850" name="First Mate Hat (DEX+1 WIT+1)" icon="icon.Accessary_middle_ages_i01">
         <!-- First Mate Hat. DEX+1, WIT+1. Occupies 2 Hair Accessory slots. Cannot be dropped or sold in a store. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="hairall"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="10"/>
@@ -368,7 +350,6 @@
     </armor>
     <armor id="90851" name="First Mate Hat (CON+1 MEN+1)" icon="icon.Accessary_middle_ages_i01">
         <!-- First Mate Hat. CON+1, MEN+1. Occupies 2 Hair Accessory slots. Cannot be dropped or sold in a store. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="hairall"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="10"/>
@@ -376,7 +357,6 @@
     </armor>
     <armor id="90852" name="Artisan's Goggles (STR+1 INT+1)" icon="icon.accessory_dwarf_goggle_i00">
         <!-- Large goggles that protect the eyes. STR+1, INT+1. Occupies 2 Hair Accessory slots. Cannot be dropped or sold in a store. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="hairall"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="10"/>
@@ -384,7 +364,6 @@
     </armor>
     <armor id="90853" name="Artisan's Goggles (DEX+1 WIT+1)" icon="icon.accessory_dwarf_goggle_i00">
         <!-- Large goggles that protect the eyes. DEX+1, WIT+1. Occupies 2 Hair Accessory slots. Cannot be dropped or sold in a store. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="hairall"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="10"/>
@@ -392,7 +371,6 @@
     </armor>
     <armor id="90854" name="Artisan's Goggles (CON+1 MEN+1)" icon="icon.accessory_dwarf_goggle_i00">
         <!-- Large goggles that protect the eyes. CON+1, MEN+1. Occupies 2 Hair Accessory slots. Cannot be dropped or sold in a store. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="hairall"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="10"/>
@@ -423,7 +401,6 @@
     </item>
     <armor id="90860" name="Lucky Hat" icon="icon.Accessary_middle_ages_i00">
         <!-- A 30-day item. Leather hat. Allows to use Blessing of Luck skill. Occupies 2 Hair Accessory slots. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. The item will be removed after the event is over. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="hairall"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="10"/>
@@ -432,7 +409,6 @@
     </armor>
     <armor id="90861" name="Valakas' Belt" icon="icon.bm_vallakas_belt">
         <!-- A 30-day item. STR +1, INT +1, HP Recovery Bonus +2.31/ MP Recovery Bonus +1.54/ CP Recovery Bonus +3.07/ Max HP/ MP/ CP +10%, Inventory Slot +6, Weight Limit +7000, P./ M. Critical Damage +4%, Healing Potions Effect +100 (Can be applied to Melissa's High Grade Recovery Potion, Melissa's Recovery Potion, Quick Hero Healing Potion). Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="10"/>
         <set name="time" val="43200"/>
@@ -443,7 +419,6 @@
     </armor>
     <armor id="90862" name="Brooch Lv. 2" icon="icon.etc_bm_brooch_lavianrose_i01">
         <!-- A 30-day item. Occupies 3 Hair Accessory slots. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="brooch"/>
         <set name="immediate_effect" val="true"/>
         <set name="time" val="43200"/>
@@ -451,7 +426,6 @@
     </armor>
     <armor id="90863" name="Diamond Lv. 3" icon="icon.etc_bm_jewel_diamond_i00">
         <!-- A 30-day item. ???. ???. +50. Effect does not stack with additional jewels of the same type. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="LIGHT"/>
         <set name="bodypart" val="alldress"/>
         <set name="immediate_effect" val="true"/>
@@ -460,7 +434,6 @@
     </armor>
     <armor id="90864" name="Pearl Lv. 3" icon="icon.etc_bm_jewel_pearl_i00">
         <!-- A 30-day item. ???. ???. +28. Effect does not stack with additional jewels of the same type. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="MAGIC"/>
         <set name="bodypart" val="alldress"/>
         <set name="immediate_effect" val="true"/>
@@ -469,7 +442,6 @@
     </armor>
     <armor id="90865" name="Jade Lv. 3" icon="icon.etc_bm_jewel_jade_i00">
         <!-- A 30-day item. Casting Spd./ Atk. Spd. +4%. Effect does not stack with additional jewels of the same type. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="hair2"/>
         <set name="immediate_effect" val="true"/>
         <set name="time" val="43200"/>
@@ -481,7 +453,6 @@
     </item>
     <weapon id="90867" name="Savior's Dual Sword" icon="icon.weapon_dual_sword_i00">
         <!-- A 120-day item. <Soul Crystal Enhancement>. Atk. Spd. +5%. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DUAL"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
@@ -502,7 +473,6 @@
     </weapon>
     <weapon id="90868" name="Savior's Staff" icon="icon.weapon_crystal_staff_i00">
         <!-- A 120-day item. <Soul Crystal Enhancement>. Casting Spd. +12%. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
@@ -525,7 +495,6 @@
     </weapon>
     <weapon id="90869" name="Savior's Bow" icon="icon.weapon_crystallized_ice_bow_i00">
         <!-- A 120-day item. <Soul Crystal Enhancement>. P. Critical Damage +52. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BOW"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
@@ -548,7 +517,6 @@
     </weapon>
     <weapon id="90870" name="Savior's Dagger" icon="icon.weapon_dark_screamer_i00">
         <!-- A 120-day item. <Soul Crystal Enhancement>. P. Critical Damage +66. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DAGGER"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="C"/>
@@ -568,7 +536,6 @@
     </weapon>
     <weapon id="90871" name="Savior's Spear" icon="icon.weapon_scorpion_i00">
         <!-- A 120-day item. <Soul Crystal Enhancement>. Has about a 25% chance to stun the target during a Critical Attack. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="POLE"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
@@ -648,7 +615,6 @@
     </item>
     <armor id="90883" name="Talisman of Border - Lv. 10" icon="icon.bm_magic_square_talisman">
         <!-- A 7-day item. P./ M. Def. +43, P./ M. Skills Evasion +2, HP/ MP/ CP +280, Speed +8, P./ M. Atk. Spd. +20, Acquired XP/ SP +5%, Reflect Damage +6%. Allows using Border Power - Lv. 3 (at a certain probability, increases attack abilities) and Border Purification (cancels Paralysis, Petrification, Poisoning, and Bleeding). Take it to Baggins in Giran to increase its level. Effects from two such talismans do not stack. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. Can be shared within account through Dimensional Merchant. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="hair2"/>
         <set name="immediate_effect" val="true"/>
         <set name="time" val="10080"/>
@@ -656,7 +622,6 @@
     </armor>
     <armor id="90884" name="Talisman of Border - Lv. 10" icon="icon.bm_magic_square_talisman">
         <!-- A 1-day item. P./ M. Def. +43, P./ M. Skills Evasion +2, HP/ MP/ CP +280, Speed +8, P./ M. Atk. Spd. +20, Acquired XP/ SP +5%, Reflect Damage +6%. Allows using Border Power - Lv. 3 (at a certain probability, increases attack abilities) and Border Purification (cancels Paralysis, Petrification, Poisoning, and Bleeding). Take it to Baggins in Giran to increase its level. Effects from two such talismans do not stack. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. Can be shared within account through Dimensional Merchant. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="alldress"/>
         <set name="immediate_effect" val="true"/>
         <set name="time" val="1440"/>
@@ -664,7 +629,6 @@
     </armor>
     <armor id="90885" name="Agathion Bracelet - Singer and Dancer" icon="BranchSys2.icon.br_aga_singer_dancer_i00">
         <!-- A 30-day item. When worn, 2 Agathion slots are activated. <Active Skill>. 1. Dance of Fury: Atk. Spd. +5% for 20 minutes. 2. Dance of Concentration: Casting Spd. +5% for 20 minutes. 3. Song of Wind: Speed +20 for 5 minutes. Cooldown: 10 min. <Note>. Dance of Fury, Dance of Concentration, and Song of Wind do not stack. Duration: 30-day. Cannot be exchanged, dropped or sold. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
         <set name="bodypart" val="lbracelet"/>
         <set name="time" val="43200"/>
@@ -681,7 +645,6 @@
     </armor>
     <armor id="90886" name="Agathion Bracelet - Singer and Dancer" icon="BranchSys2.icon.br_aga_singer_dancer_i00">
         <!-- A 90-day item. When worn, 2 Agathion slots are activated. <Active Skill>. 1. Dance of Fury: Atk. Spd. +5% for 20 minutes. 2. Dance of Concentration: Casting Spd. +5% for 20 minutes. 3. Song of Wind: Speed +20 for 5 minutes. Cooldown: 10 min. <Note>. Dance of Fury, Dance of Concentration, and Song of Wind do not stack. Duration: 30-day. Cannot be exchanged, dropped or sold. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="HEAVY"/>
         <set name="bodypart" val="lbracelet"/>
         <set name="immediate_effect" val="true"/>
@@ -699,7 +662,6 @@
     </armor>
     <armor id="90887" name="Agathion Bracelet - Lv. 3" icon="icon.high_agathion_bracelet_i00">
         <!-- A 90-day item. When worn, 3 Agathion slots are activated., STR/ INT/ CON/ MEN +1. Cannot be exchanged, dropped or sold. Can be stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="HEAVY"/>
         <set name="bodypart" val="lbracelet"/>
         <set name="immediate_effect" val="true"/>
@@ -712,7 +674,6 @@
     </armor>
     <armor id="90888" name="Agathion Bracelet - Lv. 1" icon="icon.agathion_magmeld_teleport">
         <!-- When worn, 2 Agathion slots are activated. Cannot be dropped. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="lbracelet"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="10"/>
@@ -723,7 +684,6 @@
     </armor>
     <armor id="90889" name="Agathion Bracelet - Lv. 2" icon="icon.bracelet_tersi_agathion">
         <!-- When worn, 3 Agathion slots are activated. Cannot be dropped. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="lbracelet"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="10"/>
@@ -734,7 +694,6 @@
     </armor>
     <armor id="90890" name="Agathion Bracelet - Lv. 3" icon="icon.high_agathion_bracelet_i00">
         <!-- When worn, 3 Agathion slots are activated. STR/ INT/ CON/ MEN +1. Cannot be dropped. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="lbracelet"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="150"/>
@@ -746,7 +705,6 @@
     </armor>
     <armor id="90891" name="Agathion Bracelet - Lv. 4" icon="icon.high_agathion_bracelet_i01">
         <!-- When worn, 4 Agathion slots are activated. STR/ INT/ CON/ MEN +1. Mental/ stun/ sleep/ paralyse attacks resistance +5%. Cannot be dropped. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="lbracelet"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="150"/>
@@ -759,7 +717,6 @@
     </armor>
     <armor id="90892" name="Agathion Bracelet - Joy" icon="icon.pi_high_agathion_bracelet_i00">
         <!-- When worn, 2 Agathion slots are activated.. <Item Skill>. 1. Evidence Chase: for 15 min. Speed +66. <Item Skill>. 2. Hidden Search: monsters don't attack first. Cannot be exchanged, dropped or sold. Can be stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="lbracelet"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="150"/>
@@ -772,7 +729,6 @@
     </armor>
     <armor id="90893" name="Agathion Bracelet - Joy" icon="icon.pi_high_agathion_bracelet_i00">
         <!-- A 7-day item. When worn, 2 Agathion slots are activated.. <Item Skill>. 1. Evidence Chase: for 15 min. Speed +66. <Item Skill>. 2. Hidden Search: monsters don't attack first. Cannot be exchanged, dropped or sold. Can be stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="lbracelet"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="150"/>
@@ -786,7 +742,6 @@
     </armor>
     <armor id="90894" name="Agathion Aries" icon="icon.sheep_agathion_i00">
         <!-- A 60-day item. Equipping it in the main slot summons the Agathion Aries and activates the Special Ability option. Cannot be exchanged, dropped or sold. Can be stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="150"/>
         <set name="time" val="86400"/>
@@ -794,21 +749,18 @@
     </armor>
     <armor id="90895" name="Agathion Aries" icon="icon.sheep_agathion_i00">
         <!-- Equipping it in the Bracelet's main slot summons the Agathion Aries and activates the Special Ability option. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="150"/>
         <restriction dropable="false" sellable="false"/>
     </armor>
     <armor id="90896" name="Agathion Joy" icon="icon.pleasure_agathion_i00">
         <!-- Equipping it in the Bracelet's main slot summons the Agathion Joy and activates the Special Ability option. Cannot be exchanged, dropped or sold. Can be stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="150"/>
         <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
     </armor>
     <armor id="90897" name="Agathion Joy" icon="icon.pleasure_agathion_i00">
         <!-- A 7-day item. Equipping it in the Bracelet's main slot summons the Agathion Joy and activates the Special Ability option. Cannot be exchanged, dropped or sold. Can be stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="150"/>
         <set name="time" val="10080"/>
@@ -816,7 +768,6 @@
     </armor>
     <item id="90898" name="Agathion's Soul" icon="icon.etc_raid_e_i00">
         <!-- Agathion enchancement material. If you take this item along with an Agathion Bracelet - Lv. 2 to Blacksmith Baggins in Giran, you can enchance Agathion Bracelet. Cannot be dropped. -->
-
         <restriction dropable="false" stackable="true"/>
     </item>
     <item id="90899" name="Blessed Agathion's Soul" icon="icon.etc_raid_e_i01">

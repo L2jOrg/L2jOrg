@@ -2,7 +2,6 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
     <weapon id="6307" name="Ultimate Sword" icon="icon.weapon_sword_of_limit_i01">
         <!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 65. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -30,7 +29,6 @@
     </weapon>
     <weapon id="6308" name="Ultimate Sword" icon="icon.weapon_sword_of_limit_i01">
         <!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 7%. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -58,7 +56,6 @@
     </weapon>
     <weapon id="6309" name="Ultimate Sword" icon="icon.weapon_sword_of_limit_i01">
         <!-- <Soul Crystal Enhancement>. P. Atk. + 191 during a Critical Attack. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -86,7 +83,6 @@
     </weapon>
     <weapon id="6310" name="Sword of Whispering Death" icon="icon.weapon_deathbreath_sword_i01">
         <!-- <Soul Crystal Enhancement>. M. Atk. + 46. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -114,7 +110,6 @@
     </weapon>
     <weapon id="6311" name="Sword of Whispering Death" icon="icon.weapon_deathbreath_sword_i01">
         <!-- <Soul Crystal Enhancement>. Increases Casting Spd. by 12%. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -142,7 +137,6 @@
     </weapon>
     <weapon id="6312" name="Sword of Whispering Death" icon="icon.weapon_deathbreath_sword_i01">
         <!-- <Soul Crystal Enhancement>. Increases MP Recovery Bonus by 16%. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -170,7 +164,6 @@
     </weapon>
     <weapon id="6313" name="Homunkulus' Sword" icon="icon.weapon_homunkuluss_sword_i01">
         <!-- <Soul Crystal Enhancement>. M. Atk. + 46. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -198,7 +191,6 @@
     </weapon>
     <weapon id="6314" name="Homunkulus' Sword" icon="icon.weapon_homunkuluss_sword_i01">
         <!-- <Soul Crystal Enhancement>. Increases Casting Spd. by 12%. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -226,7 +218,6 @@
     </weapon>
     <weapon id="6315" name="Homunkulus' Sword" icon="icon.weapon_homunkuluss_sword_i01">
         <!-- <Soul Crystal Enhancement>. Increases MP Recovery Bonus by 16%. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -296,7 +287,6 @@
     </item>
     <armor id="6323" name="Sealed Phoenix Necklace" icon="icon.accessary_phoenixs_necklace_i02">
         <!-- The seal can be removed by a blacksmith in Aden. Once removed, M. Def. increases by 4 and the amount of MP grows by 26. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="neck"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="107"/>
@@ -311,7 +301,6 @@
     </armor>
     <armor id="6324" name="Sealed Phoenix Earring" icon="icon.accessary_phoenixs_earing_i02">
         <!-- The seal can be removed by a blacksmith in Aden. Once removed, M. Def. increases by 3 and the amount of MP grows by 20. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="rear;lear"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="80"/>
@@ -326,7 +315,6 @@
     </armor>
     <armor id="6325" name="Sealed Phoenix Ring" icon="icon.accessary_phoenixs_ring_i02">
         <!-- The seal can be removed by a blacksmith in Aden. Once removed, M. Def. increases by 2 and the amount of MP grows by 13. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="rfinger;lfinger"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="54"/>
@@ -341,7 +329,6 @@
     </armor>
     <armor id="6326" name="Sealed Majestic Necklace" icon="icon.accessary_inferno_necklace_i02">
         <!-- The seal can be removed by a blacksmith in Aden. Once removed, M. Def. increases by 5 and the amount of MP grows by 33. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="neck"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="160"/>
@@ -356,7 +343,6 @@
     </armor>
     <armor id="6327" name="Sealed Majestic Earring" icon="icon.accessary_inferno_earing_i02">
         <!-- The seal can be removed by a blacksmith in Aden. Once removed, M. Def. increases by 3 and the amount of MP grows by 25. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="rear;lear"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="120"/>
@@ -371,7 +357,6 @@
     </armor>
     <armor id="6328" name="Sealed Majestic Ring" icon="icon.accessary_inferno_ring_i02">
         <!-- The seal can be removed by a blacksmith in Aden. Once removed, M. Def. increases by 2 and the amount of MP grows by 17. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="rfinger;lfinger"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="80"/>
@@ -572,7 +557,6 @@
     </item>
     <weapon id="6347" name="Berserker Blade" icon="icon.weapon_berserker_blade_i01">
         <!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 32. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;44;120"/>
@@ -600,7 +584,6 @@
     </weapon>
     <weapon id="6348" name="Berserker Blade" icon="icon.weapon_berserker_blade_i01">
         <!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 8%. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;44;120"/>
@@ -628,7 +611,6 @@
     </weapon>
     <weapon id="6349" name="Berserker Blade" icon="icon.weapon_berserker_blade_i01">
         <!-- <Soul Crystal Enhancement>. P. Atk. + 242 during a Critical Attack. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;44;120"/>
@@ -686,7 +668,6 @@
     </item>
     <weapon id="6356" name="Needle Wolverine" icon="icon.weapon_needle_wolverine_i01">
         <!-- <Soul Crystal Characteristic>. P. Crit. Attack +70 -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DAGGER"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -714,7 +695,6 @@
     </weapon>
     <weapon id="6357" name="Needle Wolverine" icon="icon.weapon_needle_wolverine_i01">
         <!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by 5%. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DAGGER"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -742,7 +722,6 @@
     </weapon>
     <weapon id="6358" name="Needle Wolverine" icon="icon.weapon_needle_wolverine_i01">
         <!-- <Soul Crystal Enhancement>\\Increases the chance of success of  performing the skills hitting vulnerable spots on enemy's body. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DAGGER"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -770,7 +749,6 @@
     </weapon>
     <weapon id="6359" name="Demon's Dagger" icon="icon.weapon_demons_sword_i01">
         <!-- <Soul Crystal Enhancement>. P. Atk. + 160 during a Critical Attack. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DAGGER"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -805,7 +783,6 @@
         <restriction stackable="true"/>
     </item>
     <weapon id="6364" name="Forgotten Blade" icon="icon.weapon_forgotten_blade_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -829,7 +806,6 @@
         </stats>
     </weapon>
     <weapon id="6365" name="Basalt Battlehammer" icon="icon.weapon_basalt_battlehammer_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -853,7 +829,6 @@
         </stats>
     </weapon>
     <weapon id="6366" name="Imperial Staff" icon="icon.weapon_imperial_staff_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="POLE"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
@@ -878,7 +853,6 @@
         </stats>
     </weapon>
     <weapon id="6367" name="Angel Slayer" icon="icon.weapon_angel_slayer_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DAGGER"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -902,7 +876,6 @@
         </stats>
     </weapon>
     <weapon id="6369" name="Dragon Hunter Axe" icon="icon.weapon_dragon_hunter_axe_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="POLE"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
@@ -926,7 +899,6 @@
         </stats>
     </weapon>
     <weapon id="6370" name="Saint Spear" icon="icon.weapon_saint_spear_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="ETC"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
@@ -947,7 +919,6 @@
         </stats>
     </weapon>
     <weapon id="6371" name="Demon Splinter" icon="icon.weapon_demon_splinter_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="FISHINGROD"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
@@ -968,7 +939,6 @@
         </stats>
     </weapon>
     <weapon id="6372" name="Heaven's Divider" icon="icon.weapon_heavens_divider_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
@@ -988,7 +958,6 @@
         </stats>
     </weapon>
     <armor id="6373" name="Imperial Crusader Breastplate" icon="icon.armor_t88_u_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="HEAVY"/>
         <set name="bodypart" val="chest"/>
         <set name="immediate_effect" val="true"/>
@@ -1001,7 +970,6 @@
         </stats>
     </armor>
     <armor id="6374" name="Imperial Crusader Gaiters" icon="icon.armor_t88_l_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="HEAVY"/>
         <set name="bodypart" val="legs"/>
         <set name="immediate_effect" val="true"/>
@@ -1014,7 +982,6 @@
         </stats>
     </armor>
     <armor id="6375" name="Imperial Crusader Gauntlets" icon="icon.armor_t88_g_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="gloves"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="S"/>
@@ -1026,7 +993,6 @@
         </stats>
     </armor>
     <armor id="6376" name="Imperial Crusader Boots" icon="icon.armor_t88_b_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="feet"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="S"/>
@@ -1038,7 +1004,6 @@
         </stats>
     </armor>
     <armor id="6377" name="Imperial Crusader Shield" icon="icon.shield_imperial_crusader_shield_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="lhand"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="107"/>
@@ -1054,7 +1019,6 @@
         </stats>
     </armor>
     <armor id="6378" name="Imperial Crusader Helmet" icon="icon.armor_helmet_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="head"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="S"/>
@@ -1067,7 +1031,6 @@
     </armor>
     <armor id="6379" name="Draconic Leather Armor" icon="icon.armor_t89_ul_i00">
         <!-- Full body armor. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="LIGHT"/>
         <set name="bodypart" val="onepiece"/>
         <set name="immediate_effect" val="true"/>
@@ -1080,7 +1043,6 @@
         </stats>
     </armor>
     <armor id="6380" name="Draconic Leather Gloves" icon="icon.armor_t89_g_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="gloves"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="S"/>
@@ -1092,7 +1054,6 @@
         </stats>
     </armor>
     <armor id="6381" name="Draconic Leather Boots" icon="icon.armor_t89_b_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="feet"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="S"/>
@@ -1104,7 +1065,6 @@
         </stats>
     </armor>
     <armor id="6382" name="Draconic Leather Helmet" icon="icon.armor_leather_helmet_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="head"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="S"/>
@@ -1117,7 +1077,6 @@
     </armor>
     <armor id="6383" name="Major Arcana Robe" icon="icon.armor_t90_ul_i00">
         <!-- Full body armor. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="MAGIC"/>
         <set name="bodypart" val="onepiece"/>
         <set name="immediate_effect" val="true"/>
@@ -1131,7 +1090,6 @@
         </stats>
     </armor>
     <armor id="6384" name="Major Arcana Gloves" icon="icon.armor_t90_g_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="gloves"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="S"/>
@@ -1143,7 +1101,6 @@
         </stats>
     </armor>
     <armor id="6385" name="Major Arcana Boots" icon="icon.armor_t90_b_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="feet"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="S"/>
@@ -1155,7 +1112,6 @@
         </stats>
     </armor>
     <armor id="6386" name="Major Arcana Circlet" icon="icon.armor_circlet_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="head"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="S"/>
@@ -1211,7 +1167,6 @@
     </item>
     <armor id="6394" name="Red Party Mask" icon="icon.etc_party_mask_i01">
         <!-- Fashion item used to display a unique appearance. Cannot be exchanged, dropped, sold, or stored in a warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="hair"/>
         <set name="weight" val="10"/>
         <set name="enchant_enabled" val="7"/>

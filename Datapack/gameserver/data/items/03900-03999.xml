@@ -153,7 +153,6 @@
         </skills>
     </item>
     <weapon id="3937" name="Monster Only (Lesser Giant)" icon="icon.weapon_monster_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="POLE"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;66;120"/>
@@ -181,7 +180,6 @@
         </stats>
     </weapon>
     <weapon id="3938" name="Monster Only (Lesser Giant Wizard's Weapon)" icon="icon.weapon_monster_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="POLE"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;66;120"/>
@@ -209,7 +207,6 @@
         </stats>
     </weapon>
     <weapon id="3939" name="Monster Only (Bensh)" icon="icon.weapon_monster_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="POLE"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;66;120"/>

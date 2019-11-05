@@ -8,7 +8,6 @@
     </item>
     <armor id="21716" name="Zaken's Cloak" icon="BranchSys2.Icon.br_zaken_cloak_i00">
         <!-- Zaken's Cloak that makes you feel Zaken's sorrow. Increases Max HP by 5%. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="back"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="220"/>
@@ -17,7 +16,6 @@
     </armor>
     <weapon id="21754" name="Server Master Magic Pencil" icon="BranchSys2.icon.g_pencil_of_servermaster">
         <!-- Magic on the tip of a pencil. A special item for the Head of the server. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="POLE"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
@@ -40,7 +38,6 @@
     </weapon>
     <armor id="21755" name="The Best Graduate's Cope" icon="BranchSys2.icon.g_graduation_cap_gold">
         <!-- A Cope with Golden Tassel symbolizing wisdom. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="hairall"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="10"/>

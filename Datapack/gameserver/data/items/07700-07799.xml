@@ -2,7 +2,6 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
     <weapon id="7701" name="Stick of Faith" icon="icon.weapon_stick_of_faith_i01">
         <!-- <Soul Crystal Enhancement>. M. Atk. + 46. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -31,7 +30,6 @@
     </weapon>
     <weapon id="7702" name="Stick of Faith" icon="icon.weapon_stick_of_faith_i01">
         <!-- <Soul Crystal Enhancement>. Increases Casting Spd. by 12%. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -60,7 +58,6 @@
     </weapon>
     <weapon id="7703" name="Stick of Faith" icon="icon.weapon_stick_of_faith_i01">
         <!-- <Soul Crystal Enhancement>. Increases MP Recovery Bonus by 16%. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -89,7 +86,6 @@
     </weapon>
     <weapon id="7704" name="Stick of Eternity" icon="icon.weapon_stick_of_eternity_i01">
         <!-- <Soul Crystal Enhancement>. M. Atk. + 46. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -118,7 +114,6 @@
     </weapon>
     <weapon id="7705" name="Stick of Eternity" icon="icon.weapon_stick_of_eternity_i01">
         <!-- <Soul Crystal Enhancement>. Increases Casting Spd. by 12%. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -147,7 +142,6 @@
     </weapon>
     <weapon id="7706" name="Stick of Eternity" icon="icon.weapon_stick_of_eternity_i01">
         <!-- <Soul Crystal Enhancement>. Increases MP Recovery Bonus by 16%. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -176,7 +170,6 @@
     </weapon>
     <weapon id="7707" name="Nirvana Axe" icon="icon.weapon_nirvana_axe_i01">
         <!-- <Soul Crystal Enhancement>. M. Atk. + 46. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -205,7 +198,6 @@
     </weapon>
     <weapon id="7708" name="Nirvana Axe" icon="icon.weapon_nirvana_axe_i01">
         <!-- <Soul Crystal Enhancement>. Increases Casting Spd. by 12%. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -234,7 +226,6 @@
     </weapon>
     <weapon id="7709" name="Nirvana Axe" icon="icon.weapon_nirvana_axe_i01">
         <!-- <Soul Crystal Enhancement>. Increases MP Recovery Bonus by 16%. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -263,7 +254,6 @@
     </weapon>
     <weapon id="7710" name="Club of Nature" icon="icon.weapon_club_of_nature_i01">
         <!-- <Soul Crystal Enhancement>. M. Atk. + 46. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -292,7 +282,6 @@
     </weapon>
     <weapon id="7711" name="Club of Nature" icon="icon.weapon_club_of_nature_i01">
         <!-- <Soul Crystal Enhancement>. Increases Casting Spd. by 12%. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -321,7 +310,6 @@
     </weapon>
     <weapon id="7712" name="Club of Nature" icon="icon.weapon_club_of_nature_i01">
         <!-- <Soul Crystal Enhancement>. Increases MP Recovery Bonus by 16%. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -350,7 +338,6 @@
     </weapon>
     <weapon id="7713" name="Mace of Underworld" icon="icon.weapon_mace_of_underworld_i01">
         <!-- <Soul Crystal Enhancement>. M. Atk. + 46. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -379,7 +366,6 @@
     </weapon>
     <weapon id="7714" name="Mace of Underworld" icon="icon.weapon_mace_of_underworld_i01">
         <!-- <Soul Crystal Enhancement>. Increases Casting Spd. by 12%. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -408,7 +394,6 @@
     </weapon>
     <weapon id="7715" name="Mace of Underworld" icon="icon.weapon_mace_of_underworld_i01">
         <!-- <Soul Crystal Enhancement>. Increases MP Recovery Bonus by 16%. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -437,7 +422,6 @@
     </weapon>
     <weapon id="7716" name="Inferno Staff" icon="icon.weapon_inferno_staff_i01">
         <!-- <Soul Crystal Enhancement>. M. Atk. + 50. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;46;120"/>
@@ -466,7 +450,6 @@
     </weapon>
     <weapon id="7717" name="Inferno Staff" icon="icon.weapon_inferno_staff_i01">
         <!-- <Soul Crystal Enhancement>. Increases Casting Spd. by 12%. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;46;120"/>
@@ -495,7 +478,6 @@
     </weapon>
     <weapon id="7718" name="Inferno Staff" icon="icon.weapon_inferno_staff_i01">
         <!-- <Soul Crystal Enhancement>. Increases MP Recovery Bonus by 16%. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;46;120"/>
@@ -524,7 +506,6 @@
     </weapon>
     <weapon id="7719" name="Poleaxe" icon="icon.weapon_poleaxe_i01">
         <!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 65. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="POLE"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;66;120"/>
@@ -553,7 +534,6 @@
     </weapon>
     <weapon id="7720" name="Poleaxe" icon="icon.weapon_poleaxe_i01">
         <!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 8%. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="POLE"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;80;120"/>
@@ -582,7 +562,6 @@
     </weapon>
     <weapon id="7721" name="Poleaxe" icon="icon.weapon_poleaxe_i01">
         <!-- <Soul Crystal Enhancement>. Has about a 25% chance of casting Stun on the target during a Critical Attack. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="POLE"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;66;180"/>
@@ -610,7 +589,6 @@
     </weapon>
     <weapon id="7722" name="Sword of Valhalla" icon="icon.weapon_sword_of_valhalla_i01">
         <!-- <Soul Crystal Enhancement>. M. Atk. + 96. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -638,7 +616,6 @@
     </weapon>
     <weapon id="7723" name="Sword of Valhalla" icon="icon.weapon_sword_of_valhalla_i01">
         <!-- <Soul Crystal Enhancement>. Increases Casting Spd. by 12%. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -666,7 +643,6 @@
     </weapon>
     <weapon id="7724" name="Sword of Valhalla" icon="icon.weapon_sword_of_valhalla_i01">
         <!-- <Soul Crystal Enhancement>. Increases MP Recovery Bonus by 14%. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>

@@ -457,7 +457,6 @@
         </skills>
     </item>
     <weapon id="1471" name="Silenos Blowgun" icon="icon.weapon_monster_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DAGGER"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;300;120"/>
@@ -481,7 +480,6 @@
         </stats>
     </weapon>
     <weapon id="1472" name="Dreadbane" icon="icon.weapon_monster_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="POLE"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;66;120"/>

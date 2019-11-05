@@ -100,7 +100,6 @@
     </item>
     <armor id="92018" name="Talisman of Eva" icon="icon.giant_item_equip">
         <!-- Contains the energy of Eva. Can be enchanted up to +10 with a Scroll: Enchant Talisman of Eva. Activates special effects depending on the enchant value. The enchanting is safe up to +1. Effects of two identical talismans do not stack. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="120"/>
         <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
@@ -181,14 +180,12 @@
     </item>
     <armor id="92031" name="Talisman Bracelet Lv. 5" icon="icon.dimension_bracelet_i04">
         <!-- Activates 5 talisman slots. <Attributes>. HP/ MP Recovery Rate +10%, P./ M. Accuracy +1, Weight Limit +7000. Can be combined with a Talisman Bracelet of the same level. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="rbracelet"/>
         <set name="immediate_effect" val="true"/>
         <restriction dropable="false" sellable="false"/>
     </armor>
     <armor id="92032" name="Talisman Bracelet Lv. 6" icon="icon.dimension_bracelet_i05">
         <!-- Activates 6 talisman slots. <Attributes>. HP/ MP Recovery Rate +15%, P./ M. Accuracy +2, Weight Limit +7000. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="rbracelet"/>
         <set name="immediate_effect" val="true"/>
         <restriction dropable="false" sellable="false"/>
@@ -212,7 +209,6 @@
     </item>
     <armor id="92036" name="Amber" icon="icon.etc_bm_jewel_amber_i00">
         <!-- Interrupts the target's skill casting. Inflicts 475 PvP damage. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="brooch_jewel"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="5"/>
@@ -220,7 +216,6 @@
     </armor>
     <armor id="92037" name="Amber" icon="icon.etc_bm_jewel_amber_i00">
         <!-- Disrupts the target's skill casting. Inflicts 633 PvP damage. The effect doesn't stack if two identical jewels are equipped. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="brooch_jewel"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="5"/>
@@ -228,7 +223,6 @@
     </armor>
     <armor id="92038" name="Amber" icon="icon.etc_bm_jewel_amber_i00">
         <!-- Disrupts the target's skill casting. Inflicts 950 PvP damage. The effect doesn't stack if two identical jewels are equipped. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="brooch_jewel"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="5"/>
@@ -236,7 +230,6 @@
     </armor>
     <armor id="92039" name="Amber" icon="icon.etc_bm_jewel_amber_i00">
         <!-- Interrupts the target's skill casting. Inflicts 1357 PvP damage. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="brooch_jewel"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="5"/>
@@ -244,7 +237,6 @@
     </armor>
     <armor id="92040" name="Amber" icon="icon.etc_bm_jewel_amber_i00">
         <!-- Disrupts the target's skill casting. Inflicts 2375 PvP damage. The effect doesn't stack if two identical jewels are equipped. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="brooch_jewel"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="5"/>
@@ -252,7 +244,6 @@
     </armor>
     <armor id="92041" name="Amber" icon="icon.etc_bm_jewel_amber_i00">
         <!-- Interrupts the target's skill casting. Inflicts 2500 PvP damage. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="brooch_jewel"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="5"/>
@@ -260,7 +251,6 @@
     </armor>
     <armor id="92042" name="Amber" icon="icon.etc_bm_jewel_amber_i00">
         <!-- Interrupts the target's skill casting. Inflicts 2750 PvP damage. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="brooch_jewel"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="5"/>
@@ -268,7 +258,6 @@
     </armor>
     <armor id="92043" name="Amber" icon="icon.etc_bm_jewel_amber_i00">
         <!-- Interrupts the target's skill casting. Inflicts 3000 PvP damage. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="brooch_jewel"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="5"/>
@@ -276,7 +265,6 @@
     </armor>
     <armor id="92044" name="Amber" icon="icon.etc_bm_jewel_amber_i00">
         <!-- Interrupts the target's skill casting. Inflicts 3250 PvP damage. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="brooch_jewel"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="5"/>
@@ -284,7 +272,6 @@
     </armor>
     <armor id="92045" name="Amber" icon="icon.etc_bm_jewel_amber_i00">
         <!-- Interrupts the target's skill casting. Inflicts 3500 PvP damage. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="brooch_jewel"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="5"/>
@@ -292,7 +279,6 @@
     </armor>
     <armor id="92046" name="Opal" icon="icon.etc_bm_jewel_opal_i00">
         <!-- Stun/ Pull/ Silence/ Paralysis/ Fear Resistance +3%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="brooch_jewel"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="5"/>
@@ -300,7 +286,6 @@
     </armor>
     <armor id="92047" name="Opal" icon="icon.etc_bm_jewel_opal_i00">
         <!-- Pull/ Silence/ Paralysis/ Fear/ Stun Resistance +5%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="brooch_jewel"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="5"/>
@@ -308,7 +293,6 @@
     </armor>
     <armor id="92048" name="Opal" icon="icon.etc_bm_jewel_opal_i00">
         <!-- Stun/ Pull/ Silence/ Paralysis/ Fear Resistance +8%. The effect doesn't stack if two identical jewels are equipped. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="brooch_jewel"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="5"/>
@@ -316,7 +300,6 @@
     </armor>
     <armor id="92049" name="Opal" icon="icon.etc_bm_jewel_opal_i00">
         <!-- Stun/ Pull/ Silence/ Paralysis/ Fear Resistance +11%. Allows use of a skill that grants invulnerability to debuffs for 5 sec. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="brooch_jewel"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="5"/>
@@ -324,7 +307,6 @@
     </armor>
     <armor id="92050" name="Opal" icon="icon.etc_bm_jewel_opal_i00">
         <!-- Stun/ Pull/ Silence/ Paralysis/ Fear Resistance +20%. Grants invulnerability for debuffs for 15 sec. when casting skills. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="brooch_jewel"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="5"/>
@@ -332,7 +314,6 @@
     </armor>
     <armor id="92051" name="Opal" icon="icon.etc_bm_jewel_opal_i00">
         <!-- Stun/ Pull/ Silence/ Paralysis/ Fear Resistance +22%. Grants invulnerability for debuffs for 16 sec. when casting skills. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="brooch_jewel"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="5"/>
@@ -340,7 +321,6 @@
     </armor>
     <armor id="92052" name="Opal" icon="icon.etc_bm_jewel_opal_i00">
         <!-- Stun/ Pull/ Silence/ Paralysis/ Fear Resistance +24%. Grants invulnerability for debuffs for 17 sec. when casting skills. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="brooch_jewel"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="5"/>
@@ -348,7 +328,6 @@
     </armor>
     <armor id="92053" name="Opal" icon="icon.etc_bm_jewel_opal_i00">
         <!-- Stun/ Pull/ Silence/ Paralysis/ Fear Resistance +26%. Grants invulnerability for debuffs for 18 sec. when casting skills. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="brooch_jewel"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="5"/>
@@ -356,7 +335,6 @@
     </armor>
     <armor id="92054" name="Opal" icon="icon.etc_bm_jewel_opal_i00">
         <!-- Stun/ Pull/ Silence/ Paralysis/ Fear Resistance +28%. Grants invulnerability for debuffs for 20 sec. when casting skills. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="brooch_jewel"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="5"/>
@@ -364,7 +342,6 @@
     </armor>
     <armor id="92055" name="Opal" icon="icon.etc_bm_jewel_opal_i00">
         <!-- Stun/ Pull/ Silence/ Paralysis/ Fear Resistance +30%. Grants invulnerability for debuffs for 25 sec. when casting skills. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="brooch_jewel"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="5"/>
@@ -372,7 +349,6 @@
     </armor>
     <armor id="92056" name="Coral" icon="icon.etc_bm_jewel_coral_i00">
         <!-- Atk. Spd./ Casting Spd. +1%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="brooch_jewel"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="5"/>
@@ -380,7 +356,6 @@
     </armor>
     <armor id="92057" name="Coral" icon="icon.etc_bm_jewel_coral_i00">
         <!-- Atk. Spd./ Casting Spd. +2%. The effect doesn't stack if two identical jewels are equipped, the higher-level jewel takes precedence. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="brooch_jewel"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="5"/>
@@ -388,7 +363,6 @@
     </armor>
     <armor id="92058" name="Coral" icon="icon.etc_bm_jewel_coral_i00">
         <!-- Atk. Spd./ Casting Spd. +4%. The effect doesn't stack if two identical jewels are equipped, the higher-level jewel takes precedence. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="brooch_jewel"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="5"/>
@@ -396,7 +370,6 @@
     </armor>
     <armor id="92059" name="Coral" icon="icon.etc_bm_jewel_coral_i00">
         <!-- Atk. Spd./ Casting Spd. +7%. The effect doesn't stack if two identical jewels are equipped, the higher-level jewel takes precedence. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="brooch_jewel"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="5"/>
@@ -404,7 +377,6 @@
     </armor>
     <armor id="92060" name="Coral" icon="icon.etc_bm_jewel_coral_i00">
         <!-- Atk. Spd./ Casting Spd. +14%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="brooch_jewel"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="5"/>
@@ -412,7 +384,6 @@
     </armor>
     <armor id="92061" name="Coral" icon="icon.etc_bm_jewel_coral_i00">
         <!-- Atk. Spd./ Casting Spd. +15%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="brooch_jewel"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="5"/>
@@ -420,7 +391,6 @@
     </armor>
     <armor id="92062" name="Coral" icon="icon.etc_bm_jewel_coral_i00">
         <!-- Atk. Spd./ Casting Spd. +16%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="brooch_jewel"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="5"/>
@@ -428,7 +398,6 @@
     </armor>
     <armor id="92063" name="Coral" icon="icon.etc_bm_jewel_coral_i00">
         <!-- Atk. Spd./ Casting Spd. +17%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="brooch_jewel"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="5"/>
@@ -436,7 +405,6 @@
     </armor>
     <armor id="92064" name="Coral" icon="icon.etc_bm_jewel_coral_i00">
         <!-- Atk. Spd./ Casting Spd. +18%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="brooch_jewel"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="5"/>
@@ -444,7 +412,6 @@
     </armor>
     <armor id="92065" name="Coral" icon="icon.etc_bm_jewel_coral_i00">
         <!-- Atk. Spd./ Casting Spd. +20%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="brooch_jewel"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="5"/>
@@ -452,7 +419,6 @@
     </armor>
     <armor id="92066" name="Onyx" icon="icon.etc_bm_jewel_tanzanite">
         <!-- Soulshot/ Blessed Soulshot/ Beast Soulshot/ Spiritshot/ Blessed Spiritshot/ Beast Spiritshot damage +2%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="brooch_jewel"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="5"/>
@@ -460,7 +426,6 @@
     </armor>
     <armor id="92067" name="Onyx" icon="icon.etc_bm_jewel_tanzanite">
         <!-- Soulshot/ Blessed Soulshot/ Beast Soulshot/ Spiritshot/ Blessed Spiritshot/ Beast Spiritshot damage +3%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="brooch_jewel"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="5"/>
@@ -468,7 +433,6 @@
     </armor>
     <armor id="92068" name="Onyx" icon="icon.etc_bm_jewel_tanzanite">
         <!-- Soulshot/ Blessed Soulshot/ Beast Soulshot/ Spiritshot/ Blessed Spiritshot/ Beast Spiritshot damage +5%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="brooch_jewel"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="5"/>
@@ -476,7 +440,6 @@
     </armor>
     <armor id="92069" name="Onyx" icon="icon.etc_bm_jewel_tanzanite">
         <!-- Soulshot/ Blessed Soulshot/ Beast Soulshot/ Spiritshot/ Blessed Spiritshot/ Beast Spiritshot damage +8%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="brooch_jewel"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="5"/>
@@ -484,7 +447,6 @@
     </armor>
     <armor id="92070" name="Onyx" icon="icon.etc_bm_jewel_tanzanite">
         <!-- Soulshot/ Blessed Soulshot/ Beast Soulshot/ Spiritshot/ Blessed Spiritshot/ Beast Spiritshot damage +16%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="brooch_jewel"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="5"/>
@@ -492,7 +454,6 @@
     </armor>
     <armor id="92071" name="Onyx" icon="icon.etc_bm_jewel_tanzanite">
         <!-- Soulshot/ Blessed Soulshot/ Beast Soulshot/ Spiritshot/ Blessed Spiritshot/ Beast Spiritshot damage +17%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="brooch_jewel"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="5"/>
@@ -500,7 +461,6 @@
     </armor>
     <armor id="92072" name="Onyx" icon="icon.etc_bm_jewel_tanzanite">
         <!-- Soulshot/ Blessed Soulshot/ Beast Soulshot/ Spiritshot/ Blessed Spiritshot/ Beast Spiritshot damage +18%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="brooch_jewel"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="5"/>
@@ -508,7 +468,6 @@
     </armor>
     <armor id="92073" name="Onyx" icon="icon.etc_bm_jewel_tanzanite">
         <!-- Soulshot/ Blessed Soulshot/ Beast Soulshot/ Spiritshot/ Blessed Spiritshot/ Beast Spiritshot damage +19%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="brooch_jewel"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="5"/>
@@ -516,7 +475,6 @@
     </armor>
     <armor id="92074" name="Onyx" icon="icon.etc_bm_jewel_tanzanite">
         <!-- Soulshot/ Blessed Soulshot/ Beast Soulshot/ Spiritshot/ Blessed Spiritshot/ Beast Spiritshot damage +20%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="brooch_jewel"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="5"/>
@@ -524,7 +482,6 @@
     </armor>
     <armor id="92075" name="Onyx" icon="icon.etc_bm_jewel_tanzanite">
         <!-- Soulshot/ Blessed Soulshot/ Beast Soulshot/ Spiritshot/ Blessed Spiritshot/ Beast Spiritshot damage +21%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="brooch_jewel"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="5"/>
@@ -532,7 +489,6 @@
     </armor>
     <armor id="92076" name="Spinel" icon="icon.etc_bm_jewel_garnet_i00">
         <!-- P. Def. +20, M. Def. +10, CON +1. With a certain chance, MP +12 when using skills. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="brooch_jewel"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="5"/>
@@ -540,7 +496,6 @@
     </armor>
     <armor id="92077" name="Spinel" icon="icon.etc_bm_jewel_garnet_i00">
         <!-- P. Def. +30, M. Def. +20, CON/ MEN +1. With a certain chance, MP +16 when using skills. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="brooch_jewel"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="5"/>
@@ -548,7 +503,6 @@
     </armor>
     <armor id="92078" name="Spinel" icon="icon.etc_bm_jewel_garnet_i00">
         <!-- P. Def. +60, M. Def. +30, CON/ MEN/ DEX +1. With a certain chance, MP +20 when using skills. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="brooch_jewel"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="5"/>
@@ -556,7 +510,6 @@
     </armor>
     <armor id="92079" name="Spinel" icon="icon.etc_bm_jewel_garnet_i00">
         <!-- P. Def. +100, M. Def. +60, CON/ MEN/ DEX/ WIT +1, Received P./ M. Critical Damage -4%. With a certain chance, MP +30 when using skills. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="brooch_jewel"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="5"/>
@@ -564,7 +517,6 @@
     </armor>
     <armor id="92080" name="Spinel" icon="icon.etc_bm_jewel_garnet_i00">
         <!-- P. Def. +150, M. Def. +80, CON/ MEN/ DEX/ WIT/ STR/ INT +1, Received P./ M. Critical Damage -10%. With a certain chance, MP +50 when using skills. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="brooch_jewel"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="5"/>
@@ -572,7 +524,6 @@
     </armor>
     <armor id="92081" name="Spinel" icon="icon.etc_bm_jewel_garnet_i00">
         <!-- P. Def. +170, M. Def. +100, CON +2, MEN/ DEX/ WIT/ STR/ INT +1, Received P./ M. Critical Damage -11%. With a certain chance, MP +60 when using skills. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="brooch_jewel"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="5"/>
@@ -580,7 +531,6 @@
     </armor>
     <armor id="92082" name="Spinel" icon="icon.etc_bm_jewel_garnet_i00">
         <!-- P. Def. +200, M. Def. +120, CON/ MEN +2, DEX/ WIT/ STR/ INT +1, Received P./ M. Critical Damage -12%. With a certain chance, MP +70 when using skills. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="brooch_jewel"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="5"/>
@@ -588,7 +538,6 @@
     </armor>
     <armor id="92083" name="Spinel" icon="icon.etc_bm_jewel_garnet_i00">
         <!-- P. Def. +220, M. Def. +140, CON/ MEN/ DEX +2, WIT/ STR/ INT +1, Received P./ M. Critical Damage -14%. With a certain chance, MP +80 when using skills. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="brooch_jewel"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="5"/>
@@ -596,7 +545,6 @@
     </armor>
     <armor id="92084" name="Spinel" icon="icon.etc_bm_jewel_garnet_i00">
         <!-- P. Def. +250, M. Def. +160, CON/ MEN/ DEX/ WIT +2, STR/ INT +1, Received P./ M. Critical Damage -16%. With a certain chance, MP +90 when using skills. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="brooch_jewel"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="5"/>
@@ -604,7 +552,6 @@
     </armor>
     <armor id="92085" name="Spinel" icon="icon.etc_bm_jewel_garnet_i00">
         <!-- P. Def. +300, M. Def. +200, CON/ MEN/ DEX/ WIT/ STR/ INT +2, Received P./ M. Critical Damage -20%. With a certain chance, MP +100 when using skills. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="brooch_jewel"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="5"/>
@@ -612,7 +559,6 @@
     </armor>
     <armor id="92086" name="Zircon" icon="icon.etc_bm_jewel_onyx_i00">
         <!-- P./ M. Critical Damage +2%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="brooch_jewel"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="5"/>
@@ -620,7 +566,6 @@
     </armor>
     <armor id="92087" name="Zircon" icon="icon.etc_bm_jewel_onyx_i00">
         <!-- P./ M. Critical Damage +4%. The effect doesn't stack if two identical jewels are equipped. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="brooch_jewel"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="5"/>
@@ -628,7 +573,6 @@
     </armor>
     <armor id="92088" name="Zircon" icon="icon.etc_bm_jewel_onyx_i00">
         <!-- P./ M. Critical Damage +6%. The effect doesn't stack if two identical jewels are equipped. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="brooch_jewel"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="5"/>
@@ -636,7 +580,6 @@
     </armor>
     <armor id="92089" name="Zircon" icon="icon.etc_bm_jewel_onyx_i00">
         <!-- P./ M. Critical Damage +8%. The effect doesn't stack if two identical jewels are equipped, the higher-level jewel takes precedence. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="brooch_jewel"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="5"/>
@@ -644,7 +587,6 @@
     </armor>
     <armor id="92090" name="Zircon" icon="icon.etc_bm_jewel_onyx_i00">
         <!-- P./ M. Critical Damage +15%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="brooch_jewel"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="5"/>
@@ -652,7 +594,6 @@
     </armor>
     <armor id="92091" name="Zircon" icon="icon.etc_bm_jewel_onyx_i00">
         <!-- When equipped, P./ M. Critical Damage +16%. The effect doesn't stack if two identical jewels are equipped, the higher-level jewel takes precedence. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="brooch_jewel"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="5"/>
@@ -660,7 +601,6 @@
     </armor>
     <armor id="92092" name="Zircon" icon="icon.etc_bm_jewel_onyx_i00">
         <!-- When equipped, P./ M. Critical Damage +17%. The effect doesn't stack if two identical jewels are equipped, the higher-level jewel takes precedence. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="brooch_jewel"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="5"/>
@@ -668,7 +608,6 @@
     </armor>
     <armor id="92093" name="Zircon" icon="icon.etc_bm_jewel_onyx_i00">
         <!-- When equipped, P./ M. Critical Damage +18%. The effect doesn't stack if two identical jewels are equipped, the higher-level jewel takes precedence. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="brooch_jewel"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="5"/>
@@ -676,7 +615,6 @@
     </armor>
     <armor id="92094" name="Zircon" icon="icon.etc_bm_jewel_onyx_i00">
         <!-- When equipped, P./ M. Critical Damage +19%. The effect doesn't stack if two identical jewels are equipped, the higher-level jewel takes precedence. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="brooch_jewel"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="5"/>
@@ -684,7 +622,6 @@
     </armor>
     <armor id="92095" name="Zircon" icon="icon.etc_bm_jewel_onyx_i00">
         <!-- When equipped, P./ M. Critical Damage +20%. The effect doesn't stack if two identical jewels are equipped, the higher-level jewel takes precedence. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="brooch_jewel"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="5"/>
@@ -692,7 +629,6 @@
     </armor>
     <armor id="92096" name="Moonstone" icon="icon.etc_bm_jewel_moonstone_i00">
         <!-- When Sayha's Grace is active, Acquired XP/ SP +3%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="brooch_jewel"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="5"/>
@@ -700,7 +636,6 @@
     </armor>
     <armor id="92097" name="Moonstone" icon="icon.etc_bm_jewel_moonstone_i00">
         <!-- When Sayha's Grace is active, Acquired XP/ SP +4%. The effect doesn't stack if two identical jewels are equipped. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="brooch_jewel"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="5"/>
@@ -708,7 +643,6 @@
     </armor>
     <armor id="92098" name="Moonstone" icon="icon.etc_bm_jewel_moonstone_i00">
         <!-- When Sayha's Grace is active, Acquired XP/ SP +6%. The effect doesn't stack if two identical jewels are equipped. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="brooch_jewel"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="5"/>
@@ -716,7 +650,6 @@
     </armor>
     <armor id="92099" name="Moonstone" icon="icon.etc_bm_jewel_moonstone_i00">
         <!-- While Sayha's Grace is active, Acquired XP/ SP +8%, Sayha's Grace Consumption -10%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="brooch_jewel"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="5"/>

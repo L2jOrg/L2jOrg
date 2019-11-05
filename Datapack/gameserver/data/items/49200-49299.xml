@@ -2,7 +2,6 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
     <weapon id="49200" name="Skull Breaker" icon="icon.weapon_skull_breaker_i01">
         <!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 73. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
@@ -23,7 +22,6 @@
     </weapon>
     <weapon id="49201" name="Skull Breaker" icon="icon.weapon_skull_breaker_i01">
         <!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 8%. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
@@ -44,7 +42,6 @@
     </weapon>
     <weapon id="49202" name="Skull Breaker" icon="icon.weapon_skull_breaker_i01">
         <!-- <Soul Crystal Enhancement>. P. Atk. + 136 during a Critical Attack. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
@@ -65,7 +62,6 @@
     </weapon>
     <weapon id="49203" name="Heavy Bone Club" icon="icon.weapon_heavy_bone_club_i01">
         <!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 73. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
@@ -86,7 +82,6 @@
     </weapon>
     <weapon id="49204" name="Heavy Bone Club" icon="icon.weapon_heavy_bone_club_i01">
         <!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 8%. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
@@ -107,7 +102,6 @@
     </weapon>
     <weapon id="49205" name="Heavy Bone Club" icon="icon.weapon_heavy_bone_club_i01">
         <!-- <Soul Crystal Enhancement>. P. Atk. + 136 during a Critical Attack. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
@@ -128,7 +122,6 @@
     </weapon>
     <weapon id="49206" name="Crafted Dagger" icon="icon.weapon_handiwork_dagger_i01">
         <!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 73. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DAGGER"/>
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
@@ -149,7 +142,6 @@
     </weapon>
     <weapon id="49207" name="Crafted Dagger" icon="icon.weapon_handiwork_dagger_i01">
         <!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by 5%. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DAGGER"/>
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
@@ -170,7 +162,6 @@
     </weapon>
     <weapon id="49208" name="Crafted Dagger" icon="icon.weapon_handiwork_dagger_i01">
         <!-- <Soul Crystal Enhancement>\\Increases the chance of success of  performing the skills hitting vulnerable spots on enemy's body. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DAGGER"/>
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
@@ -191,7 +182,6 @@
     </weapon>
     <weapon id="49209" name="Assassin Knife" icon="icon.weapon_assassin_knife_i01">
         <!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 73. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DAGGER"/>
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
@@ -212,7 +202,6 @@
     </weapon>
     <weapon id="49210" name="Assassin Knife" icon="icon.weapon_assassin_knife_i01">
         <!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by 5%. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DAGGER"/>
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
@@ -233,7 +222,6 @@
     </weapon>
     <weapon id="49211" name="Assassin Knife" icon="icon.weapon_assassin_knife_i01">
         <!-- <Soul Crystal Enhancement>\\Increases the chance of success of  performing the skills hitting vulnerable spots on enemy's body. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DAGGER"/>
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
@@ -254,7 +242,6 @@
     </weapon>
     <weapon id="49212" name="Poniard Dagger" icon="icon.weapon_dirk_i01">
         <!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 73. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DAGGER"/>
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
@@ -275,7 +262,6 @@
     </weapon>
     <weapon id="49213" name="Poniard Dagger" icon="icon.weapon_dirk_i01">
         <!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by 5%. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DAGGER"/>
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
@@ -296,7 +282,6 @@
     </weapon>
     <weapon id="49214" name="Poniard Dagger" icon="icon.weapon_dirk_i01">
         <!-- <Soul Crystal Enhancement>\\Increases the chance of success of  performing the skills hitting vulnerable spots on enemy's body. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DAGGER"/>
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
@@ -317,7 +302,6 @@
     </weapon>
     <weapon id="49215" name="Kukuri" icon="icon.weapon_kukuri_i01">
         <!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 73. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DAGGER"/>
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
@@ -338,7 +322,6 @@
     </weapon>
     <weapon id="49216" name="Kukuri" icon="icon.weapon_kukuri_i01">
         <!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by 5%. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DAGGER"/>
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
@@ -359,7 +342,6 @@
     </weapon>
     <weapon id="49217" name="Kukuri" icon="icon.weapon_kukuri_i01">
         <!-- <Soul Crystal Enhancement>\\Increases the chance of success of  performing the skills hitting vulnerable spots on enemy's body. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DAGGER"/>
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
@@ -380,7 +362,6 @@
     </weapon>
     <weapon id="49218" name="Maingauche" icon="icon.weapon_maingauche_i01">
         <!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 73. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DAGGER"/>
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
@@ -401,7 +382,6 @@
     </weapon>
     <weapon id="49219" name="Maingauche" icon="icon.weapon_maingauche_i01">
         <!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by 5%. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DAGGER"/>
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
@@ -422,7 +402,6 @@
     </weapon>
     <weapon id="49220" name="Maingauche" icon="icon.weapon_maingauche_i01">
         <!-- <Soul Crystal Enhancement>\\Increases the chance of success of  performing the skills hitting vulnerable spots on enemy's body. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DAGGER"/>
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
@@ -443,7 +422,6 @@
     </weapon>
     <weapon id="49221" name="Mithril Dagger" icon="icon.weapon_mithril_dagger_i01">
         <!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 73. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DAGGER"/>
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
@@ -464,7 +442,6 @@
     </weapon>
     <weapon id="49222" name="Mithril Dagger" icon="icon.weapon_mithril_dagger_i01">
         <!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by 5%. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DAGGER"/>
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
@@ -485,7 +462,6 @@
     </weapon>
     <weapon id="49223" name="Mithril Dagger" icon="icon.weapon_mithril_dagger_i01">
         <!-- <Soul Crystal Enhancement>\\Increases the chance of success of  performing the skills hitting vulnerable spots on enemy's body. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DAGGER"/>
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
@@ -506,7 +482,6 @@
     </weapon>
     <weapon id="49224" name="Cursed Maingauche" icon="icon.t01">
         <!-- Can inflict Bleeding after Critical Attack with a certain probability. <Soul Crystal Enhancement>. Increases P. Crit. Rate by 73. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DAGGER"/>
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
@@ -527,7 +502,6 @@
     </weapon>
     <weapon id="49225" name="Cursed Maingauche" icon="icon.t01">
         <!-- Can inflict Bleeding after Critical Attack with a certain probability. <Soul Crystal Enhancement>. Increases Atk. Spd. by 5%. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DAGGER"/>
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
@@ -548,7 +522,6 @@
     </weapon>
     <weapon id="49226" name="Cursed Maingauche" icon="icon.t01">
         <!-- Can inflict Bleeding after Critical Attack with a certain probability. <Soul Crystal Enhancement>\\Increases the chance of success of  performing the skills hitting vulnerable spots on enemy's body. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DAGGER"/>
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
@@ -569,7 +542,6 @@
     </weapon>
     <weapon id="49227" name="Lesser Giant's Hammer" icon="icon.weapon_giants_hammer_i01">
         <!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 73. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
@@ -590,7 +562,6 @@
     </weapon>
     <weapon id="49228" name="Lesser Giant's Hammer" icon="icon.weapon_giants_hammer_i01">
         <!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by 9%. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
@@ -611,7 +582,6 @@
     </weapon>
     <weapon id="49229" name="Lesser Giant's Hammer" icon="icon.weapon_giants_hammer_i01">
         <!-- <Soul Crystal Enhancement>. P. Atk. + 183 during a Critical Attack. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
@@ -632,7 +602,6 @@
     </weapon>
     <weapon id="49230" name="Reinforced Bow" icon="icon.weapon_strengthening_bow_i01">
         <!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 60. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BOW"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
@@ -654,7 +623,6 @@
     </weapon>
     <weapon id="49231" name="Reinforced Bow" icon="icon.weapon_strengthening_bow_i01">
         <!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by 9%. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BOW"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
@@ -676,7 +644,6 @@
     </weapon>
     <weapon id="49232" name="Reinforced Bow" icon="icon.weapon_strengthening_bow_i01">
         <!-- <Soul Crystal Enhancement>. P. Atk. + 80 during a Critical Attack. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BOW"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
@@ -698,7 +665,6 @@
     </weapon>
     <weapon id="49233" name="Longbow" icon="icon.weapon_long_bow_i01">
         <!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 60. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BOW"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
@@ -720,7 +686,6 @@
     </weapon>
     <weapon id="49234" name="Longbow" icon="icon.weapon_long_bow_i01">
         <!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by 9%. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BOW"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
@@ -742,7 +707,6 @@
     </weapon>
     <weapon id="49235" name="Longbow" icon="icon.weapon_long_bow_i01">
         <!-- <Soul Crystal Enhancement>. P. Atk. + 80 during a Critical Attack. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BOW"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
@@ -764,7 +728,6 @@
     </weapon>
     <weapon id="49236" name="Elven Bow" icon="icon.weapon_elven_bow_i01">
         <!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 60. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BOW"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
@@ -786,7 +749,6 @@
     </weapon>
     <weapon id="49237" name="Elven Bow" icon="icon.weapon_elven_bow_i01">
         <!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by 9%. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BOW"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
@@ -808,7 +770,6 @@
     </weapon>
     <weapon id="49238" name="Elven Bow" icon="icon.weapon_elven_bow_i01">
         <!-- <Soul Crystal Enhancement>. P. Atk. + 80 during a Critical Attack. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BOW"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
@@ -830,7 +791,6 @@
     </weapon>
     <weapon id="49239" name="Dark Elven Bow" icon="icon.weapon_dark_elven_bow_i01">
         <!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 60. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BOW"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
@@ -852,7 +812,6 @@
     </weapon>
     <weapon id="49240" name="Dark Elven Bow" icon="icon.weapon_dark_elven_bow_i01">
         <!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by 9%. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BOW"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
@@ -874,7 +833,6 @@
     </weapon>
     <weapon id="49241" name="Dark Elven Bow" icon="icon.weapon_dark_elven_bow_i01">
         <!-- <Soul Crystal Enhancement>. P. Atk. + 80 during a Critical Attack. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BOW"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
@@ -896,7 +854,6 @@
     </weapon>
     <weapon id="49242" name="Gastraphetes" icon="icon.weapon_gastraphetes_i01">
         <!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 60. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BOW"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
@@ -918,7 +875,6 @@
     </weapon>
     <weapon id="49243" name="Gastraphetes" icon="icon.weapon_gastraphetes_i01">
         <!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by 9%. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BOW"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
@@ -940,7 +896,6 @@
     </weapon>
     <weapon id="49244" name="Gastraphetes" icon="icon.weapon_gastraphetes_i01">
         <!-- <Soul Crystal Enhancement>. P. Atk. + 80 during a Critical Attack. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BOW"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
@@ -962,7 +917,6 @@
     </weapon>
     <weapon id="49245" name="Reinforced Longbow" icon="icon.weapon_strengthening_long_bow_i01">
         <!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 60. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BOW"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
@@ -984,7 +938,6 @@
     </weapon>
     <weapon id="49246" name="Reinforced Longbow" icon="icon.weapon_strengthening_long_bow_i01">
         <!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by 9%. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BOW"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
@@ -1006,7 +959,6 @@
     </weapon>
     <weapon id="49247" name="Reinforced Longbow" icon="icon.weapon_strengthening_long_bow_i01">
         <!-- <Soul Crystal Enhancement>. P. Atk. + 80 during a Critical Attack. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BOW"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
@@ -1028,7 +980,6 @@
     </weapon>
     <weapon id="49248" name="Light Crossbow" icon="icon.weapon_cyclone_bow_i01">
         <!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 60. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BOW"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
@@ -1050,7 +1001,6 @@
     </weapon>
     <weapon id="49249" name="Light Crossbow" icon="icon.weapon_cyclone_bow_i01">
         <!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by 9%. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BOW"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
@@ -1072,7 +1022,6 @@
     </weapon>
     <weapon id="49250" name="Light Crossbow" icon="icon.weapon_cyclone_bow_i01">
         <!-- <Soul Crystal Enhancement>. P. Atk. + 80 during a Critical Attack. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BOW"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
@@ -1094,7 +1043,6 @@
     </weapon>
     <weapon id="49251" name="Bagh-Nakh" icon="icon.weapon_baghnakh_i01">
         <!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 73. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DUALFIST"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
@@ -1115,7 +1063,6 @@
     </weapon>
     <weapon id="49252" name="Bagh-Nakh" icon="icon.weapon_baghnakh_i01">
         <!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by 9%. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DUALFIST"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
@@ -1136,7 +1083,6 @@
     </weapon>
     <weapon id="49253" name="Bagh-Nakh" icon="icon.weapon_baghnakh_i01">
         <!-- <Soul Crystal Enhancement>. P. Atk. + 183 during a Critical Attack. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DUALFIST"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
@@ -1157,7 +1103,6 @@
     </weapon>
     <weapon id="49254" name="Single-Edged Jamadhr" icon="icon.weapon_single-edged_jamadhr_i01">
         <!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 73. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DUALFIST"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
@@ -1178,7 +1123,6 @@
     </weapon>
     <weapon id="49255" name="Single-Edged Jamadhr" icon="icon.weapon_single-edged_jamadhr_i01">
         <!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by 9%. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DUALFIST"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
@@ -1199,7 +1143,6 @@
     </weapon>
     <weapon id="49256" name="Single-Edged Jamadhr" icon="icon.weapon_single-edged_jamadhr_i01">
         <!-- <Soul Crystal Enhancement>. P. Atk. + 183 during a Critical Attack. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DUALFIST"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
@@ -1220,7 +1163,6 @@
     </weapon>
     <weapon id="49257" name="Triple-Edged Jamadhr" icon="icon.weapon_triple-edged_jamadhr_i01">
         <!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 73. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DUALFIST"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
@@ -1241,7 +1183,6 @@
     </weapon>
     <weapon id="49258" name="Triple-Edged Jamadhr" icon="icon.weapon_triple-edged_jamadhr_i01">
         <!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by 9%. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DUALFIST"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
@@ -1262,7 +1203,6 @@
     </weapon>
     <weapon id="49259" name="Triple-Edged Jamadhr" icon="icon.weapon_triple-edged_jamadhr_i01">
         <!-- <Soul Crystal Enhancement>. P. Atk. + 183 during a Critical Attack. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DUALFIST"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
@@ -1283,7 +1223,6 @@
     </weapon>
     <weapon id="49260" name="Bich'Hwa" icon="icon.weapon_bichhwa_i01">
         <!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 73. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DUALFIST"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
@@ -1304,7 +1243,6 @@
     </weapon>
     <weapon id="49261" name="Bich'Hwa" icon="icon.weapon_bichhwa_i01">
         <!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by 9%. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DUALFIST"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
@@ -1325,7 +1263,6 @@
     </weapon>
     <weapon id="49262" name="Bich'Hwa" icon="icon.weapon_bichhwa_i01">
         <!-- <Soul Crystal Enhancement>. P. Atk. + 183 during a Critical Attack. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DUALFIST"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
@@ -1346,7 +1283,6 @@
     </weapon>
     <weapon id="49263" name="Scallop Jamadhr" icon="icon.weapon_scallop_jamadhr_i01">
         <!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 73. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DUALFIST"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
@@ -1367,7 +1303,6 @@
     </weapon>
     <weapon id="49264" name="Scallop Jamadhr" icon="icon.weapon_scallop_jamadhr_i01">
         <!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by 9%. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DUALFIST"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
@@ -1388,7 +1323,6 @@
     </weapon>
     <weapon id="49265" name="Scallop Jamadhr" icon="icon.weapon_scallop_jamadhr_i01">
         <!-- <Soul Crystal Enhancement>. P. Atk. + 183 during a Critical Attack. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DUALFIST"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
@@ -1409,7 +1343,6 @@
     </weapon>
     <weapon id="49266" name="Winged Spear" icon="icon.weapon_winged_spear_i01">
         <!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 75. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="POLE"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
@@ -1433,7 +1366,6 @@
     </weapon>
     <weapon id="49267" name="Winged Spear" icon="icon.weapon_winged_spear_i01">
         <!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by 9%. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="POLE"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
@@ -1457,7 +1389,6 @@
     </weapon>
     <weapon id="49268" name="Winged Spear" icon="icon.weapon_winged_spear_i01">
         <!-- <Soul Crystal Enhancement>. P. Atk. + 136 during a Critical Attack. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="POLE"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
@@ -1481,7 +1412,6 @@
     </weapon>
     <weapon id="49269" name="Trident" icon="icon.weapon_trident_i01">
         <!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 75. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="POLE"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
@@ -1505,7 +1435,6 @@
     </weapon>
     <weapon id="49270" name="Trident" icon="icon.weapon_trident_i01">
         <!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by 9%. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="POLE"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
@@ -1529,7 +1458,6 @@
     </weapon>
     <weapon id="49271" name="Trident" icon="icon.weapon_trident_i01">
         <!-- <Soul Crystal Enhancement>. P. Atk. + 136 during a Critical Attack. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="POLE"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
@@ -1553,7 +1481,6 @@
     </weapon>
     <weapon id="49272" name="Pike" icon="icon.weapon_pike_i01">
         <!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 75. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="POLE"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
@@ -1577,7 +1504,6 @@
     </weapon>
     <weapon id="49273" name="Pike" icon="icon.weapon_pike_i01">
         <!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by 9%. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="POLE"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
@@ -1601,7 +1527,6 @@
     </weapon>
     <weapon id="49274" name="Pike" icon="icon.weapon_pike_i01">
         <!-- <Soul Crystal Enhancement>. P. Atk. + 136 during a Critical Attack. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="POLE"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
@@ -1625,7 +1550,6 @@
     </weapon>
     <weapon id="49275" name="War Hammer" icon="icon.weapon_war_hammer_i01">
         <!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 75. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="POLE"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
@@ -1649,7 +1573,6 @@
     </weapon>
     <weapon id="49276" name="War Hammer" icon="icon.weapon_war_hammer_i01">
         <!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by 9%. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="POLE"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
@@ -1673,7 +1596,6 @@
     </weapon>
     <weapon id="49277" name="War Hammer" icon="icon.weapon_war_hammer_i01">
         <!-- <Soul Crystal Enhancement>. P. Atk. + 136 during a Critical Attack. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="POLE"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
@@ -1697,7 +1619,6 @@
     </weapon>
     <weapon id="49278" name="War Pick" icon="icon.weapon_hammer_in_flames_i01">
         <!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 75. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="POLE"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
@@ -1721,7 +1642,6 @@
     </weapon>
     <weapon id="49279" name="War Pick" icon="icon.weapon_hammer_in_flames_i01">
         <!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by 9%. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="POLE"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
@@ -1745,7 +1665,6 @@
     </weapon>
     <weapon id="49280" name="War Pick" icon="icon.weapon_hammer_in_flames_i01">
         <!-- <Soul Crystal Enhancement>. P. Atk. + 136 during a Critical Attack. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="POLE"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
@@ -1769,7 +1688,6 @@
     </weapon>
     <weapon id="49281" name="Dwarven Trident" icon="icon.weapon_dwarven_trident_i01">
         <!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 75. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="POLE"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
@@ -1793,7 +1711,6 @@
     </weapon>
     <weapon id="49282" name="Dwarven Trident" icon="icon.weapon_dwarven_trident_i01">
         <!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by 9%. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="POLE"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
@@ -1817,7 +1734,6 @@
     </weapon>
     <weapon id="49283" name="Dwarven Trident" icon="icon.weapon_dwarven_trident_i01">
         <!-- <Soul Crystal Enhancement>. P. Atk. + 136 during a Critical Attack. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="POLE"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
@@ -1841,7 +1757,6 @@
     </weapon>
     <weapon id="49284" name="Dwarven Pike" icon="icon.weapon_dwarven_pike_i01">
         <!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 75. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="POLE"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
@@ -1865,7 +1780,6 @@
     </weapon>
     <weapon id="49285" name="Dwarven Pike" icon="icon.weapon_dwarven_pike_i01">
         <!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by 9%. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="POLE"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
@@ -1889,7 +1803,6 @@
     </weapon>
     <weapon id="49286" name="Dwarven Pike" icon="icon.weapon_dwarven_pike_i01">
         <!-- <Soul Crystal Enhancement>. P. Atk. + 136 during a Critical Attack. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="POLE"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
@@ -1913,7 +1826,6 @@
     </weapon>
     <weapon id="49287" name="Glaive" icon="icon.weapon_glaive_i01">
         <!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 75. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="POLE"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
@@ -1937,7 +1849,6 @@
     </weapon>
     <weapon id="49288" name="Glaive" icon="icon.weapon_glaive_i01">
         <!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by 9%. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="POLE"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
@@ -1961,7 +1872,6 @@
     </weapon>
     <weapon id="49289" name="Glaive" icon="icon.weapon_glaive_i01">
         <!-- <Soul Crystal Enhancement>. P. Atk. + 136 during a Critical Attack. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="POLE"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
@@ -1985,7 +1895,6 @@
     </weapon>
     <weapon id="49290" name="Claymore" icon="icon.weapon_claymore_i01">
         <!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 75. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
@@ -2005,7 +1914,6 @@
     </weapon>
     <weapon id="49291" name="Claymore" icon="icon.weapon_claymore_i01">
         <!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by 9%. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
@@ -2025,7 +1933,6 @@
     </weapon>
     <weapon id="49292" name="Claymore" icon="icon.weapon_claymore_i01">
         <!-- <Soul Crystal Enhancement>. P. Atk. + 183 during a Critical Attack. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
@@ -2045,7 +1952,6 @@
     </weapon>
     <weapon id="49293" name="Two-handed Sword" icon="icon.weapon_two_handed_sword_i01">
         <!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 75. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
@@ -2065,7 +1971,6 @@
     </weapon>
     <weapon id="49294" name="Two-handed Sword" icon="icon.weapon_two_handed_sword_i01">
         <!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by 9%. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
@@ -2085,7 +1990,6 @@
     </weapon>
     <weapon id="49295" name="Two-handed Sword" icon="icon.weapon_two_handed_sword_i01">
         <!-- <Soul Crystal Enhancement>. P. Atk. + 183 during a Critical Attack. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
@@ -2105,7 +2009,6 @@
     </weapon>
     <weapon id="49296" name="Heavy Sword" icon="icon.weapon_heavy_sword_i01">
         <!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 75. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
@@ -2125,7 +2028,6 @@
     </weapon>
     <weapon id="49297" name="Heavy Sword" icon="icon.weapon_heavy_sword_i01">
         <!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by 9%. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
@@ -2145,7 +2047,6 @@
     </weapon>
     <weapon id="49298" name="Heavy Sword" icon="icon.weapon_heavy_sword_i01">
         <!-- <Soul Crystal Enhancement>. P. Atk. + 183 during a Critical Attack. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
@@ -2165,7 +2066,6 @@
     </weapon>
     <weapon id="49299" name="Steel Sword" icon="icon.weapon_iron_sword_i01">
         <!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 75. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>

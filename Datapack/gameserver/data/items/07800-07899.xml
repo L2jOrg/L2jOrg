@@ -2,7 +2,6 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
     <weapon id="7810" name="Soulfire Dirk" icon="icon.weapon_dagger_of_magicflame_i01">
         <!-- <Soul Crystal Enhancement>. M. Atk. + 46. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DAGGER"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -31,7 +30,6 @@
     </weapon>
     <weapon id="7811" name="Soulfire Dirk" icon="icon.weapon_dagger_of_magicflame_i01">
         <!-- <Soul Crystal Enhancement>. Increases Casting Spd. by 12%. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DAGGER"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -60,7 +58,6 @@
     </weapon>
     <weapon id="7812" name="Soulfire Dirk" icon="icon.weapon_dagger_of_magicflame_i01">
         <!-- <Soul Crystal Enhancement>. Increases MP Recovery Bonus by 16%. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DAGGER"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -89,7 +86,6 @@
     </weapon>
     <weapon id="7813" name="Twilight Knife" icon="icon.weapon_hell_knife_i01">
         <!-- <Soul Crystal Enhancement>. M. Atk. + 96. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DAGGER"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -118,7 +114,6 @@
     </weapon>
     <weapon id="7814" name="Twilight Knife" icon="icon.weapon_hell_knife_i01">
         <!-- <Soul Crystal Enhancement>. Increases Casting Spd. by 12%. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DAGGER"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -147,7 +142,6 @@
     </weapon>
     <weapon id="7815" name="Twilight Knife" icon="icon.weapon_hell_knife_i01">
         <!-- <Soul Crystal Enhancement>. Increases MP Recovery Bonus by 14%. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DAGGER"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -176,7 +170,6 @@
     </weapon>
     <armor id="7850" name="Moon Helmet" icon="icon.armor_helmet_i00">
         <!-- Cannot be exchanged, dropped or sold. Can be stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="head"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="1157"/>
@@ -192,7 +185,6 @@
     </armor>
     <armor id="7851" name="Moon Armor" icon="icon.armor_t1001_ul_i00">
         <!-- Full Armor. Cannot be exchanged, dropped or sold. Can be stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="HEAVY"/>
         <set name="bodypart" val="onepiece"/>
         <set name="immediate_effect" val="true"/>
@@ -209,7 +201,6 @@
     </armor>
     <armor id="7852" name="Moon Gauntlets" icon="icon.armor_t1001_g_i00">
         <!-- Cannot be exchanged, dropped or sold. Can be stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="gloves"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="1157"/>
@@ -225,7 +216,6 @@
     </armor>
     <armor id="7853" name="Moon Boots" icon="icon.armor_t1001_b_i00">
         <!-- Cannot be exchanged, dropped or sold. Can be stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="feet"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="1157"/>
@@ -241,7 +231,6 @@
     </armor>
     <armor id="7854" name="Moon Shell" icon="icon.armor_t1002_ul_i00">
         <!-- Full Armor. Cannot be exchanged, dropped or sold. Can be stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="LIGHT"/>
         <set name="bodypart" val="onepiece"/>
         <set name="immediate_effect" val="true"/>
@@ -258,7 +247,6 @@
     </armor>
     <armor id="7855" name="Moon Leather Gloves" icon="icon.armor_t1002_g_i00">
         <!-- Cannot be exchanged, dropped or sold. Can be stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="gloves"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="1157"/>
@@ -274,7 +262,6 @@
     </armor>
     <armor id="7856" name="Moon Shoes" icon="icon.armor_t1002_b_i00">
         <!-- Cannot be exchanged, dropped or sold. Can be stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="feet"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="1157"/>
@@ -290,7 +277,6 @@
     </armor>
     <armor id="7857" name="Moon Cape" icon="icon.armor_t1003_ul_i00">
         <!-- Full Armor. Cannot be exchanged, dropped or sold. Can be stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="MAGIC"/>
         <set name="bodypart" val="onepiece"/>
         <set name="immediate_effect" val="true"/>
@@ -308,7 +294,6 @@
     </armor>
     <armor id="7858" name="Moon Silk Gloves" icon="icon.armor_t1003_g_i00">
         <!-- Cannot be exchanged, dropped or sold. Can be stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="gloves"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="1157"/>
@@ -324,7 +309,6 @@
     </armor>
     <armor id="7859" name="Moon Sandals" icon="icon.armor_t1003_b_i00">
         <!-- Cannot be exchanged, dropped or sold. Can be stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="feet"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="1157"/>
@@ -339,7 +323,6 @@
         </stats>
     </armor>
     <weapon id="7880" name="Steel Sword" icon="icon.weapon_iron_sword_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;44;120"/>
@@ -363,7 +346,6 @@
         </stats>
     </weapon>
     <weapon id="7881" name="Lesser Giant's Sword" icon="icon.weapon_giants_sword_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;44;120"/>
@@ -388,7 +370,6 @@
     </weapon>
     <weapon id="7882" name="Pa'agrian Sword" icon="icon.weapon_sword_of_paagrio_i00">
         <!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;44;120"/>
@@ -413,7 +394,6 @@
     </weapon>
     <weapon id="7883" name="Sword of Sentinel" icon="icon.weapon_guardians_sword_i00">
         <!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;44;120"/>
@@ -438,7 +418,6 @@
     </weapon>
     <weapon id="7884" name="Infernal Master" icon="icon.weapon_inferno_master_i00">
         <!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;46;120"/>
@@ -462,7 +441,6 @@
         </stats>
     </weapon>
     <weapon id="7885" name="Priest Sword" icon="icon.weapon_sword_of_priest_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -486,7 +464,6 @@
         </stats>
     </weapon>
     <weapon id="7886" name="Sword of Magic Fog" icon="icon.weapon_sword_of_magic_fog_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -511,7 +488,6 @@
     </weapon>
     <weapon id="7887" name="Mysterious Sword" icon="icon.weapon_mystery_sword_i00">
         <!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -536,7 +512,6 @@
     </weapon>
     <weapon id="7888" name="Ecliptic Sword" icon="icon.weapon_sword_of_eclipse_i00">
         <!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -561,7 +536,6 @@
     </weapon>
     <weapon id="7889" name="Wizard's Tear" icon="icon.weapon_tears_of_wizard_i00">
         <!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -585,7 +559,6 @@
         </stats>
     </weapon>
     <weapon id="7890" name="Priest Mace" icon="icon.weapon_mace_of_priest_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -611,7 +584,6 @@
     </weapon>
     <weapon id="7891" name="Ecliptic Axe" icon="icon.weapon_eclipse_axe_i00">
         <!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -637,7 +609,6 @@
     </weapon>
     <weapon id="7892" name="Spell Breaker" icon="icon.weapon_spell_breaker_i00">
         <!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -663,7 +634,6 @@
     </weapon>
     <weapon id="7893" name="Kaim Vanul's Bones" icon="icon.weapon_bone_of_kaim_vanul_i00">
         <!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -689,7 +659,6 @@
     </weapon>
     <weapon id="7894" name="Spiritual Eye" icon="icon.weapon_eye_of_soul_i00">
         <!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -715,7 +684,6 @@
     </weapon>
     <weapon id="7895" name="Flaming Dragon Skull" icon="icon.weapon_dragon_flame_head_i00">
         <!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -740,7 +708,6 @@
         </stats>
     </weapon>
     <weapon id="7896" name="Lesser Giant's Hammer" icon="icon.weapon_giants_hammer_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;44;120"/>
@@ -765,7 +732,6 @@
     </weapon>
     <weapon id="7897" name="Dwarven Hammer" icon="icon.weapon_dwarven_hammer_i00">
         <!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;44;120"/>
@@ -790,7 +756,6 @@
     </weapon>
     <weapon id="7898" name="Karik Horn" icon="icon.weapon_horn_of_karik_i00">
         <!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;44;120"/>
@@ -815,7 +780,6 @@
     </weapon>
     <weapon id="7899" name="Destroyer Hammer" icon="icon.weapon_hammer_of_destroyer_i00">
         <!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;44;120"/>

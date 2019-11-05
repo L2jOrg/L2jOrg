@@ -64,7 +64,11 @@
 
     <xs:complexType name="Item">
         <xs:complexContent>
-            <xs:extension base="AbstractItem"/>
+            <xs:extension base="AbstractItem">
+                <xs:sequence>
+                    <xs:element name="action"
+                </xs:sequence>
+            </xs:extension>
         </xs:complexContent>
     </xs:complexType>
 

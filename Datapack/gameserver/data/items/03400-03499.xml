@@ -447,7 +447,6 @@
     </item>
     <weapon id="3471" name="Cybellin's Dagger" icon="icon.weapon_doomed_dagger_i00">
         <!-- Dagger used in ceremony to raise the purity of blood crystal. Cannot be exchanged, dropped, sold, destroyed, or stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DAGGER"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>

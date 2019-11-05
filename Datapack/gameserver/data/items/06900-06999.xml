@@ -11,13 +11,11 @@
         <restriction stackable="true"/>
     </item>
     <weapon id="6917" name="Monster Only (Poisonous Dart)" icon="icon.weapon_monster_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
         <set name="price" val="2"/>
         <restriction tradable="false" dropable="false" destroyable="false" depositable="false"/>
     </weapon>
     <armor id="6918" name="Monster Only (Silence Shield)" icon="icon.weapon_monster_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
         <set name="price" val="2580"/>
         <restriction tradable="false" dropable="false" destroyable="false" depositable="false"/>
@@ -28,7 +26,6 @@
         </stats>
     </armor>
     <armor id="6919" name="Monster Only (Ketra Orc Shield)" icon="icon.weapon_monster_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
         <set name="price" val="15680"/>
         <restriction tradable="false" dropable="false" destroyable="false" depositable="false"/>

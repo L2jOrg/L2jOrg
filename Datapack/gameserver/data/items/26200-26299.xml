@@ -2,7 +2,6 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
     <armor id="26254" name="Halloween Outfit" icon="icon.ev_wp_halloween">
         <!-- Halloween outfit. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="hairall"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="10"/>
@@ -10,7 +9,6 @@
     </armor>
     <weapon id="26256" name="Halloween Shaper" icon="icon.ev_wp_halloween">
         <!-- Halloween weapon. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DAGGER"/>
         <set name="immediate_effect" val="true"/>
         <set name="soulshots" val="1"/>
@@ -27,7 +25,6 @@
     </weapon>
     <weapon id="26257" name="Halloween Cutter" icon="icon.ev_wp_halloween">
         <!-- Halloween weapon. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="immediate_effect" val="true"/>
         <set name="soulshots" val="1"/>
@@ -44,7 +41,6 @@
     </weapon>
     <weapon id="26258" name="Halloween Slasher" icon="icon.ev_wp_halloween">
         <!-- Halloween weapon. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
@@ -62,7 +58,6 @@
     </weapon>
     <weapon id="26259" name="Halloween Avenger" icon="icon.ev_wp_halloween">
         <!-- Halloween weapon. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="immediate_effect" val="true"/>
         <set name="soulshots" val="1"/>
@@ -80,7 +75,6 @@
     </weapon>
     <weapon id="26260" name="Halloween Fighter" icon="icon.ev_wp_halloween">
         <!-- Halloween weapon. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DUALFIST"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
@@ -99,7 +93,6 @@
     </weapon>
     <weapon id="26261" name="Halloween Stormer" icon="icon.ev_wp_halloween">
         <!-- Halloween weapon. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="POLE"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
@@ -121,7 +114,6 @@
     </weapon>
     <weapon id="26262" name="Halloween Thrower" icon="icon.ev_wp_halloween">
         <!-- Halloween weapon. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BOW"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
@@ -140,7 +132,6 @@
     </weapon>
     <weapon id="26263" name="Halloween Shooter" icon="icon.ev_wp_halloween">
         <!-- Halloween weapon. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="TWOHANDCROSSBOW"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
@@ -159,7 +150,6 @@
     </weapon>
     <weapon id="26264" name="Halloween Buster" icon="icon.ev_wp_halloween">
         <!-- Halloween weapon. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="immediate_effect" val="true"/>
         <set name="soulshots" val="1"/>
@@ -176,7 +166,6 @@
     </weapon>
     <weapon id="26265" name="Halloween Caster" icon="icon.ev_wp_halloween">
         <!-- Halloween weapon. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="immediate_effect" val="true"/>
         <set name="soulshots" val="1"/>
@@ -194,7 +183,6 @@
     </weapon>
     <weapon id="26266" name="Halloween Retributer" icon="icon.ev_wp_halloween">
         <!-- Halloween weapon. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
@@ -213,7 +201,6 @@
     </weapon>
     <weapon id="26267" name="Halloween Dual Sword" icon="icon.ev_wp_halloween">
         <!-- Halloween weapon. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DUAL"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
@@ -231,7 +218,6 @@
     </weapon>
     <weapon id="26268" name="Halloween Dual Dagger" icon="icon.ev_wp_halloween">
         <!-- Halloween weapon. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DUALDAGGER"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
@@ -250,7 +236,6 @@
     </weapon>
     <weapon id="26269" name="Halloween Dual Blunt Weapon" icon="icon.ev_wp_halloween">
         <!-- Halloween weapon. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DUALBLUNT"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
@@ -269,7 +254,6 @@
     </weapon>
     <armor id="26270" name="Halloween Shield" icon="icon.ev_wp_halloween">
         <!-- Halloween shield. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="1"/>
         <restriction tradable="false" dropable="false" depositable="false"/>
@@ -281,7 +265,6 @@
     </armor>
     <armor id="26271" name="Halloween Sigil" icon="icon.ev_wp_halloween">
         <!-- Halloween sigil. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="SIGIL"/>
         <set name="bodypart" val="hairall"/>
         <set name="immediate_effect" val="true"/>

@@ -1,7 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
     <weapon id="5800" name="Nephilim Lord" icon="icon.weapon_monster_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -24,7 +23,6 @@
         </stats>
     </weapon>
     <weapon id="5801" name="Dusk" icon="icon.weapon_monster_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -47,7 +45,6 @@
         </stats>
     </weapon>
     <weapon id="5802" name="Dawn" icon="icon.weapon_monster_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="lhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -119,7 +116,6 @@
     </item>
     <armor id="5808" name="Party Mask" icon="icon.etc_party_mask_i00">
         <!-- A fashion item used to display a unique appearance. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="hair"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="10"/>
@@ -193,7 +189,6 @@
     </item>
     <weapon id="5817" name="Chrono Campana" icon="icon.weapon_chrono_campana_i00">
         <!-- Chronicle III Souvenir! Cannot be dropped. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="POLE"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;66;120"/>

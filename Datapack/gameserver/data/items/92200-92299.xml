@@ -284,7 +284,6 @@
     </item>
     <armor id="92247" name="Amber Lv. 4" icon="icon.etc_bm_jewel_amber_i00">
         <!-- Available for 3 days. Interrupts the target's skill casting. Inflicts 1357 PvP damage. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="brooch_jewel"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="5"/>
@@ -292,7 +291,6 @@
     </armor>
     <armor id="92248" name="Opal Lv. 4" icon="icon.etc_bm_jewel_opal_i00">
         <!-- Available for 3 days. Stun/ Pull/ Silence/ Paralysis/ Fear Resistance +11%. Allows use of a skill that grants invulnerability to debuffs for 5 sec. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="brooch_jewel"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="5"/>
@@ -300,7 +298,6 @@
     </armor>
     <armor id="92249" name="Coral Lv. 4" icon="icon.etc_bm_jewel_coral_i00">
         <!-- Available for 3 days. Atk. Spd./ Casting Spd. +7%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="brooch_jewel"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="5"/>
@@ -308,7 +305,6 @@
     </armor>
     <armor id="92250" name="Onyx Lv. 4" icon="icon.etc_bm_jewel_tanzanite">
         <!-- Available for 3 days. Soulshot/ Blessed Soulshot/ Beast Soulshot/ Spiritshot/ Blessed Spiritshot/ Beast Spiritshot damage +8%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="brooch_jewel"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="5"/>
@@ -316,7 +312,6 @@
     </armor>
     <armor id="92251" name="Spinel Lv. 4" icon="icon.etc_bm_jewel_garnet_i00">
         <!-- Available for 3 days. P. Def. +100, M. Def. +60, CON/ MEN/ DEX/ WIT +1, Received P./ M. Critical Damage -4%. With a certain chance, MP +30 when using skills. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="brooch_jewel"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="5"/>
@@ -324,7 +319,6 @@
     </armor>
     <armor id="92252" name="Zircon Lv. 4" icon="icon.etc_bm_jewel_onyx_i00">
         <!-- Available for 3 days. P./ M. Critical Damage +8%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="brooch_jewel"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="5"/>
@@ -332,7 +326,6 @@
     </armor>
     <armor id="92253" name="Moonstone Lv. 4" icon="icon.etc_bm_jewel_moonstone_i00">
         <!-- Available for 3 days. When Sayha's Grace is active, Acquired XP/ SP +8%, Sayha's Grace Consumption -10%. Effects of two identical jewels do not stack, the higher-level jewel takes precedence. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="brooch_jewel"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="5"/>
@@ -346,7 +339,6 @@
     </item>
     <armor id="92255" name="Dark Crystal Breastplate" icon="icon.armor_t74_u_i00">
         <!-- <Options>. Weight Limit +1500. M. Def. +15. CON +1. Paralysis Resistance +50%. Enchantment options become available when enchantment value of +5 and higher is obtained. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="HEAVY"/>
         <set name="bodypart" val="chest"/>
         <set name="immediate_effect" val="true"/>
@@ -359,7 +351,6 @@
     </armor>
     <armor id="92256" name="Armor of Nightmare" icon="icon.armor_t80_ul_i00">
         <!-- <Options>. Full Body. Weight Limit +2500. M. Def. +25. CON +2. Max HP +200. Sleep Resistance +70%. Hold Resistance +70%. Enchantment options become available when enchantment value of +5 and higher is obtained. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="HEAVY"/>
         <set name="bodypart" val="onepiece"/>
         <set name="immediate_effect" val="true"/>
@@ -372,7 +363,6 @@
     </armor>
     <armor id="92257" name="Dark Crystal Gaiters" icon="icon.armor_t74_l_i00">
         <!-- <Options>. Weight Limit +1000. M. Def. +10. CON +1. Max HP +200. Enchantment options become available when enchantment value of +5 and higher is obtained. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="HEAVY"/>
         <set name="bodypart" val="legs"/>
         <set name="immediate_effect" val="true"/>
@@ -384,7 +374,6 @@
         </stats>
     </armor>
     <armor id="92258" name="Dark Crystal Helmet" icon="icon.armor_helmet_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="head"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="A"/>
@@ -395,7 +384,6 @@
         </stats>
     </armor>
     <armor id="92259" name="Tallum Helmet" icon="icon.armor_helmet_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="head"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="A"/>
@@ -406,7 +394,6 @@
         </stats>
     </armor>
     <armor id="92260" name="Dark Crystal Shield" icon="icon.shield_dark_crystal_shield_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="A"/>
         <set name="weight" val="1190"/>
@@ -419,7 +406,6 @@
     </armor>
     <armor id="92261" name="Tallum Plate Armor" icon="icon.armor_t77_ul_i00">
         <!-- Full Body. <Options>. Weight Limit +2500. M. Def. +25. CON +2. Max HP +200. Mental Resistance +50%. Enchantment options become available when enchantment value of +5 and higher is obtained. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="HEAVY"/>
         <set name="bodypart" val="onepiece"/>
         <set name="immediate_effect" val="true"/>
@@ -432,7 +418,6 @@
     </armor>
     <armor id="92262" name="Majestic Plate Armor" icon="icon.armor_t83_ul_i00">
         <!-- Full Body. <Options>. Weight Limit +2500. M. Def. +25. CON +2. Max HP +200. Stun Resistance +50%. Enchantment options become available when enchantment value of +5 and higher is obtained. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="HEAVY"/>
         <set name="bodypart" val="onepiece"/>
         <set name="immediate_effect" val="true"/>
@@ -445,7 +430,6 @@
     </armor>
     <armor id="92263" name="Dark Crystal Leather Armor" icon="icon.armor_t75_u_i00">
         <!-- <Options>. Weight Limit +1500. M. Def. +15. DEX +1. Paralysis Resistance +50%. Enchantment options become available when enchantment value of +5 and higher is obtained. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="LIGHT"/>
         <set name="bodypart" val="chest"/>
         <set name="immediate_effect" val="true"/>
@@ -458,7 +442,6 @@
     </armor>
     <armor id="92264" name="Dark Crystal Leggings" icon="icon.armor_t75_l_i00">
         <!-- <Options>. Weight Limit +1000. M. Def. +10. DEX +1. Max HP +80. Enchantment options become available when enchantment value of +5 and higher is obtained. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="LIGHT"/>
         <set name="bodypart" val="legs"/>
         <set name="immediate_effect" val="true"/>
@@ -471,7 +454,6 @@
     </armor>
     <armor id="92265" name="Tallum Leather Armor" icon="icon.armor_t78_ul_i00">
         <!-- Full Body. <Options>. Weight Limit +2500. M. Def. +25. MEN +2. Max HP +150. Max MP +80. Mental Resistance +50%. Enchantment options become available when enchantment value of +5 and higher is obtained. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="LIGHT"/>
         <set name="bodypart" val="onepiece"/>
         <set name="immediate_effect" val="true"/>
@@ -484,7 +466,6 @@
     </armor>
     <armor id="92266" name="Leather Armor of Nightmare" icon="icon.armor_t81_ul_i00">
         <!-- Full Body. <Options>. Weight Limit +2500. M. Def. +25. MEN +2. Max HP +150. Max MP +80. Sleep Resistance +70%. Hold Resistance +70%. Enchantment options become available when enchantment value of +5 and higher is obtained. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="LIGHT"/>
         <set name="bodypart" val="onepiece"/>
         <set name="immediate_effect" val="true"/>
@@ -497,7 +478,6 @@
     </armor>
     <armor id="92267" name="Majestic Leather Armor" icon="icon.armor_t84_ul_i00">
         <!-- Full Body. <Options>. Weight Limit +2500. M. Def. +25. DEX +2. Max HP +150. Max MP +80. Stun Resistance +50%. Enchantment options become available when enchantment value of +5 and higher is obtained. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="LIGHT"/>
         <set name="bodypart" val="onepiece"/>
         <set name="immediate_effect" val="true"/>
@@ -510,7 +490,6 @@
     </armor>
     <armor id="92268" name="Tallum Tunic" icon="icon.armor_t79_u_i00">
         <!-- <Options>. Weight Limit +1500. M. Def. +15. WIT +1. Mental Resistance +50%. Enchantment options become available when enchantment value of +5 and higher is obtained. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="MAGIC"/>
         <set name="bodypart" val="chest"/>
         <set name="immediate_effect" val="true"/>
@@ -524,7 +503,6 @@
     </armor>
     <armor id="92269" name="Tallum Stockings" icon="icon.armor_t79_l_i00">
         <!-- <Options>. Weight Limit +1000. M. Def. +10. WIT +1. Max HP +100. Max MP +120. Enchantment options become available when enchantment value of +5 and higher is obtained. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="MAGIC"/>
         <set name="bodypart" val="legs"/>
         <set name="immediate_effect" val="true"/>
@@ -538,7 +516,6 @@
     </armor>
     <armor id="92270" name="Dark Crystal Robe" icon="icon.armor_t76_ul_i00">
         <!-- Full Body. <Options>. Weight Limit +2500. M. Def. +25. WIT +2. Max HP +100. Max MP +120. Paralysis Resistance +50%. Enchantment options become available when enchantment value of +5 and higher is obtained. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="MAGIC"/>
         <set name="bodypart" val="onepiece"/>
         <set name="immediate_effect" val="true"/>
@@ -552,7 +529,6 @@
     </armor>
     <armor id="92271" name="Robe of Nightmare" icon="icon.armor_t82_ul_i00">
         <!-- Full Body. <Options>. Weight Limit +2500. M. Def. +25. WIT +2. Max HP +100. Max MP +120. Sleep Resistance +70%. Hold Resistance +70%. Enchantment options become available when enchantment value of +5 and higher is obtained. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="MAGIC"/>
         <set name="bodypart" val="onepiece"/>
         <set name="immediate_effect" val="true"/>
@@ -566,7 +542,6 @@
     </armor>
     <armor id="92272" name="Majestic Robe" icon="icon.armor_t85_ul_i00">
         <!-- Full Body. <Options>. Weight Limit +2500. M. Def. +25. WIT +2. Max HP +100. Max MP +120. Stun Resistance +50%. Enchantment options become available when enchantment value of +5 and higher is obtained. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="MAGIC"/>
         <set name="bodypart" val="onepiece"/>
         <set name="immediate_effect" val="true"/>
@@ -579,7 +554,6 @@
         </stats>
     </armor>
     <armor id="92273" name="Helm of Nightmare" icon="icon.armor_leather_helmet_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="head"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="A"/>
@@ -590,7 +564,6 @@
         </stats>
     </armor>
     <armor id="92274" name="Majestic Circlet" icon="icon.armor_leather_helmet_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="head"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="A"/>
@@ -601,7 +574,6 @@
         </stats>
     </armor>
     <armor id="92275" name="Dark Crystal Gloves" icon="icon.armor_t15_g_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="gloves"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="A"/>
@@ -612,7 +584,6 @@
         </stats>
     </armor>
     <armor id="92276" name="Shield of Nightmare" icon="icon.shield_shield_of_nightmare_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="A"/>
         <set name="weight" val="1180"/>
@@ -625,7 +596,6 @@
     </armor>
     <armor id="92277" name="Dark Crystal Gloves" icon="icon.armor_t74_g_i00">
         <!-- <Options>. Weight Limit +1000. M. Def. +10. STR +1. Max HP +50. Atk. Spd. +10%. Enchantment options become available when enchantment value of +5 and higher is obtained. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="gloves"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="A"/>
@@ -637,7 +607,6 @@
     </armor>
     <armor id="92278" name="Dark Crystal Gloves" icon="icon.armor_t75_g_i00">
         <!-- <Options>. Weight Limit +1000. M. Def. +10. STR +1. Max HP +50. Atk. Spd. +10%. Enchantment options become available when enchantment value of +5 and higher is obtained. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="gloves"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="A"/>
@@ -649,7 +618,6 @@
     </armor>
     <armor id="92279" name="Dark Crystal Gloves" icon="icon.armor_t76_g_i00">
         <!-- <Options>. Weight Limit +1000. M. Def. +10. INT +1. Max HP +50. Casting Spd. +15%. Enchantment options become available when enchantment value of +5 and higher is obtained. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="gloves"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="A"/>
@@ -661,7 +629,6 @@
     </armor>
     <armor id="92280" name="Tallum Gloves" icon="icon.armor_t77_g_i00">
         <!-- <Options>. Weight Limit +1000. M. Def. +10. STR +1. Max HP +50. Atk. Spd. +10%. Enchantment options become available when enchantment value of +5 and higher is obtained. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="gloves"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="A"/>
@@ -673,7 +640,6 @@
     </armor>
     <armor id="92281" name="Tallum Gloves" icon="icon.armor_t78_g_i00">
         <!-- <Options>. Weight Limit +1000. M. Def. +10. INT +1. Max HP +50. Casting Spd. +15%. Enchantment options become available when enchantment value of +5 and higher is obtained. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="gloves"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="A"/>
@@ -685,7 +651,6 @@
     </armor>
     <armor id="92282" name="Tallum Gloves" icon="icon.armor_t79_g_i00">
         <!-- <Options>. Weight Limit +1000. M. Def. +10. INT +1. Max HP +50. Casting Spd. +15%. Enchantment options become available when enchantment value of +5 and higher is obtained. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="gloves"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="A"/>
@@ -697,7 +662,6 @@
     </armor>
     <armor id="92283" name="Gauntlets of Nightmare" icon="icon.armor_t80_g_i00">
         <!-- <Options>. Weight Limit +1000. M. Def. +10. STR +1. Max HP +50. Atk. Spd. +10%. Enchantment options become available when enchantment value of +5 and higher is obtained. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="gloves"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="A"/>
@@ -709,7 +673,6 @@
     </armor>
     <armor id="92284" name="Gauntlets of Nightmare" icon="icon.armor_t81_g_i00">
         <!-- <Options>. Weight Limit +1000. M. Def. +10. INT +1. Max HP +50. Casting Spd. +15%. Enchantment options become available when enchantment value of +5 and higher is obtained. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="gloves"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="A"/>
@@ -721,7 +684,6 @@
     </armor>
     <armor id="92285" name="Gauntlets of Nightmare" icon="icon.armor_t82_g_i00">
         <!-- <Options>. Weight Limit +1000. M. Def. +10. INT +1. Max HP +50. Casting Spd. +15%. Enchantment options become available when enchantment value of +5 and higher is obtained. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="gloves"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="A"/>
@@ -733,7 +695,6 @@
     </armor>
     <armor id="92286" name="Majestic Gauntlets" icon="icon.armor_t83_g_i00">
         <!-- <Options>. Weight Limit +1000. M. Def. +10. STR +1. Max HP +50. Atk. Spd. +10%. Enchantment options become available when enchantment value of +5 and higher is obtained. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="gloves"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="A"/>
@@ -745,7 +706,6 @@
     </armor>
     <armor id="92287" name="Majestic Gauntlets" icon="icon.armor_t84_g_i00">
         <!-- <Options>. Weight Limit +1000. M. Def. +10. STR +1. Max HP +50. Atk. Spd. +10%. Enchantment options become available when enchantment value of +5 and higher is obtained. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="gloves"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="A"/>
@@ -757,7 +717,6 @@
     </armor>
     <armor id="92288" name="Majestic Gauntlets" icon="icon.armor_t85_g_i00">
         <!-- <Options>. Weight Limit +1000. M. Def. +10. INT +1. Max HP +50. Casting Spd. +15%. Enchantment options become available when enchantment value of +5 and higher is obtained. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="gloves"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="A"/>
@@ -769,7 +728,6 @@
     </armor>
     <armor id="92289" name="Dark Crystal Boots" icon="icon.armor_t74_b_i00">
         <!-- <Options>. Weight Limit +1000. M. Def. +10. STR +1. Max HP +50. P. Atk. +8%. Enchantment options become available when enchantment value of +5 and higher is obtained. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="feet"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="A"/>
@@ -781,7 +739,6 @@
     </armor>
     <armor id="92290" name="Dark Crystal Boots" icon="icon.armor_t75_b_i00">
         <!-- <Options>. Weight Limit +1000. M. Def. +10. STR +1. Max HP +50. P. Atk. +8%. Enchantment options become available when enchantment value of +5 and higher is obtained. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="feet"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="A"/>
@@ -793,7 +750,6 @@
     </armor>
     <armor id="92291" name="Dark Crystal Boots" icon="icon.armor_t76_b_i00">
         <!-- <Options>. Weight Limit +1000. M. Def. +10. INT +1. Max HP +50. M. Atk. +8%. Enchantment options become available when enchantment value of +5 and higher is obtained. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="feet"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="A"/>
@@ -805,7 +761,6 @@
     </armor>
     <armor id="92292" name="Tallum Boots" icon="icon.armor_t77_b_i00">
         <!-- <Options>. Weight Limit +1000. M. Def. +10. STR +1. Max HP +50. P. Atk. +8%. Enchantment options become available when enchantment value of +5 and higher is obtained. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="feet"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="A"/>
@@ -817,7 +772,6 @@
     </armor>
     <armor id="92293" name="Tallum Boots" icon="icon.armor_t78_b_i00">
         <!-- <Options>. Weight Limit +1000. M. Def. +10. INT +1. Max HP +50. M. Atk. +8%. Enchantment options become available when enchantment value of +5 and higher is obtained. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="feet"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="A"/>
@@ -829,7 +783,6 @@
     </armor>
     <armor id="92294" name="Tallum Boots" icon="icon.armor_t79_b_i00">
         <!-- <Options>. Weight Limit +1000. M. Def. +10. INT +1. Max HP +50. M. Atk. +8%. Enchantment options become available when enchantment value of +5 and higher is obtained. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="feet"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="A"/>
@@ -841,7 +794,6 @@
     </armor>
     <armor id="92295" name="Boots of Nightmare" icon="icon.armor_t80_b_i00">
         <!-- <Options>. Weight Limit +1000. M. Def. +10. STR +1. Max HP +50. P. Atk. +8%. Enchantment options become available when enchantment value of +5 and higher is obtained. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="feet"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="A"/>
@@ -853,7 +805,6 @@
     </armor>
     <armor id="92296" name="Boots of Nightmare" icon="icon.armor_t81_b_i00">
         <!-- <Options>. Weight Limit +1000. M. Def. +10. INT +1. Max HP +50. M. Atk. +8%. Enchantment options become available when enchantment value of +5 and higher is obtained. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="feet"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="A"/>
@@ -865,7 +816,6 @@
     </armor>
     <armor id="92297" name="Boots of Nightmare" icon="icon.armor_t82_b_i00">
         <!-- <Options>. Weight Limit +1000. M. Def. +10. INT +1. Max HP +50. M. Atk. +8%. Enchantment options become available when enchantment value of +5 and higher is obtained. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="feet"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="A"/>
@@ -877,7 +827,6 @@
     </armor>
     <armor id="92298" name="Majestic Boots" icon="icon.armor_t83_b_i00">
         <!-- <Options>. Weight Limit +1000. M. Def. +10. STR +1. Max HP +50. P. Atk. +8%. Enchantment options become available when enchantment value of +5 and higher is obtained. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="feet"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="A"/>
@@ -889,7 +838,6 @@
     </armor>
     <armor id="92299" name="Majestic Boots" icon="icon.armor_t84_b_i00">
         <!-- <Options>. Weight Limit +1000. M. Def. +10. STR +1. Max HP +50. P. Atk. +8%. Enchantment options become available when enchantment value of +5 and higher is obtained. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="feet"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="A"/>

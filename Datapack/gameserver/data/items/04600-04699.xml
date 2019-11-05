@@ -623,7 +623,6 @@
     </item>
     <weapon id="4665" name="Pipette Knife" icon="icon.etc_soul_stone_i01">
         <!-- Instrument used to collect the blood of living creatures. Use it to cut Baium and obtain a blood sample. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DAGGER"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -775,7 +774,6 @@
     </item>
     <weapon id="4681" name="StormBringer" icon="icon.weapon_stormbringer_i01">
         <!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 71. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -804,7 +802,6 @@
     </weapon>
     <weapon id="4682" name="StormBringer" icon="icon.weapon_stormbringer_i01">
         <!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 7%. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -832,7 +829,6 @@
     </weapon>
     <weapon id="4683" name="StormBringer" icon="icon.weapon_stormbringer_i01">
         <!-- <Soul Crystal Enhancement>. P. Atk. + 157 during a Critical Attack. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -860,7 +856,6 @@
     </weapon>
     <weapon id="4684" name="Shamshir" icon="icon.weapon_shamshir_i01">
         <!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 68. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -888,7 +883,6 @@
     </weapon>
     <weapon id="4685" name="Shamshir" icon="icon.weapon_shamshir_i01">
         <!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 7%. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -916,7 +910,6 @@
     </weapon>
     <weapon id="4686" name="Shamshir" icon="icon.weapon_shamshir_i01">
         <!-- <Soul Crystal Enhancement>. P. Atk. + 174 during a Critical Attack. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -944,7 +937,6 @@
     </weapon>
     <weapon id="4687" name="Katana" icon="icon.weapon_katana_i01">
         <!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 68. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -972,7 +964,6 @@
     </weapon>
     <weapon id="4688" name="Katana" icon="icon.weapon_katana_i01">
         <!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 7%. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -1000,7 +991,6 @@
     </weapon>
     <weapon id="4689" name="Katana" icon="icon.weapon_katana_i01">
         <!-- <Soul Crystal Enhancement>. P. Atk. + 174 during a Critical Attack. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -1028,7 +1018,6 @@
     </weapon>
     <weapon id="4690" name="Spirit Sword" icon="icon.weapon_spirits_sword_i01">
         <!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 68. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -1056,7 +1045,6 @@
     </weapon>
     <weapon id="4691" name="Spirit Sword" icon="icon.weapon_spirits_sword_i01">
         <!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 7%. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -1084,7 +1072,6 @@
     </weapon>
     <weapon id="4692" name="Spirit Sword" icon="icon.weapon_spirits_sword_i01">
         <!-- <Soul Crystal Enhancement>. P. Atk. + 174 during a Critical Attack. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -1112,7 +1099,6 @@
     </weapon>
     <weapon id="4693" name="Raid Sword" icon="icon.weapon_raid_sword_i01">
         <!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 68. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -1140,7 +1126,6 @@
     </weapon>
     <weapon id="4694" name="Raid Sword" icon="icon.weapon_raid_sword_i01">
         <!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 7%. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -1168,7 +1153,6 @@
     </weapon>
     <weapon id="4695" name="Raid Sword" icon="icon.weapon_raid_sword_i01">
         <!-- <Soul Crystal Enhancement>. P. Atk. + 174 during a Critical Attack. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -1196,7 +1180,6 @@
     </weapon>
     <weapon id="4696" name="Caliburs" icon="icon.weapon_caliburs_i01">
         <!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 65. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -1224,7 +1207,6 @@
     </weapon>
     <weapon id="4697" name="Caliburs" icon="icon.weapon_caliburs_i01">
         <!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 7%. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -1252,7 +1234,6 @@
     </weapon>
     <weapon id="4698" name="Caliburs" icon="icon.weapon_caliburs_i01">
         <!-- <Soul Crystal Enhancement>. P. Atk. + 191 during a Critical Attack. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -1280,7 +1261,6 @@
     </weapon>
     <weapon id="4699" name="Sword of Delusion" icon="icon.weapon_sword_of_delusion_i01">
         <!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 65. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>

@@ -2,7 +2,6 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
     <armor id="34925" name="Cloak of Light" icon="icon.amor_goodness_cloak">
         <!-- Max. HP/MP/CP +5%, P. Def. +3%, M. Def. +5%, any Weapon Resistance +3%, P./M. Critical Rate +10, Reflect Damage +3%. Cannot be exchanged, dropped, or sold. Can be stored in private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="back"/>
         <set name="immediate_effect" val="true"/>
         <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
@@ -15,7 +14,6 @@
     </armor>
     <armor id="34926" name="Cloak of Darkness" icon="icon.amor_evilness_cloak">
         <!-- Max. HP/MP/CP +5%, P. Def. +3%, M. Def. +5%, any Weapon Resistance +3%, P./M. Critical Rate +10, Reflect Damage +3%. Cannot be exchanged, dropped, or sold. Can be stored in private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="back"/>
         <set name="immediate_effect" val="true"/>
         <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>

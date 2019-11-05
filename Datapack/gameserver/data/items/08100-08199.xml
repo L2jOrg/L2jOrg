@@ -2,7 +2,6 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
     <weapon id="8102" name="Pa'agrian Sword" icon="icon.weapon_sword_of_paagrio_i01">
         <!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 65. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;44;120"/>
@@ -30,7 +29,6 @@
     </weapon>
     <weapon id="8103" name="Pa'agrian Sword" icon="icon.weapon_sword_of_paagrio_i01">
         <!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 8%. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;44;120"/>
@@ -58,7 +56,6 @@
     </weapon>
     <weapon id="8104" name="Pa'agrian Sword" icon="icon.weapon_sword_of_paagrio_i01">
         <!-- <Soul Crystal Enhancement>. P. Atk. + 223 during a Critical Attack. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;44;120"/>
@@ -86,7 +83,6 @@
     </weapon>
     <weapon id="8105" name="Sword of Sentinel" icon="icon.weapon_guardians_sword_i01">
         <!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 58. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;44;120"/>
@@ -114,7 +110,6 @@
     </weapon>
     <weapon id="8106" name="Sword of Sentinel" icon="icon.weapon_guardians_sword_i01">
         <!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 7%. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;44;120"/>
@@ -142,7 +137,6 @@
     </weapon>
     <weapon id="8107" name="Sword of Sentinel" icon="icon.weapon_guardians_sword_i01">
         <!-- <Soul Crystal Enhancement>. P. Atk. + 275 during a Critical Attack. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;44;120"/>
@@ -170,7 +164,6 @@
     </weapon>
     <weapon id="8108" name="Infernal Master" icon="icon.weapon_inferno_master_i01">
         <!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 54. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;46;120"/>
@@ -198,7 +191,6 @@
     </weapon>
     <weapon id="8109" name="Infernal Master" icon="icon.weapon_inferno_master_i01">
         <!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 7%. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;46;120"/>
@@ -223,7 +215,6 @@
     </weapon>
     <weapon id="8110" name="Infernal Master" icon="icon.weapon_inferno_master_i01">
         <!-- <Soul Crystal Enhancement>. P. Atk. +288 during a Critical Attack. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;46;120"/>
@@ -248,7 +239,6 @@
     </weapon>
     <weapon id="8111" name="Mysterious Sword" icon="icon.weapon_mystery_sword_i01">
         <!-- <Soul Crystal Enhancement>. M. Atk. + 46. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -276,7 +266,6 @@
     </weapon>
     <weapon id="8112" name="Mysterious Sword" icon="icon.weapon_mystery_sword_i01">
         <!-- <Soul Crystal Enhancement>. Increases Casting Spd. by 12%. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -304,7 +293,6 @@
     </weapon>
     <weapon id="8113" name="Mysterious Sword" icon="icon.weapon_mystery_sword_i01">
         <!-- <Soul Crystal Enhancement>. Increases MP Recovery Bonus by 16%. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -332,7 +320,6 @@
     </weapon>
     <weapon id="8114" name="Ecliptic Sword" icon="icon.weapon_sword_of_eclipse_i01">
         <!-- <Soul Crystal Enhancement>. M. Atk. + 46. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -360,7 +347,6 @@
     </weapon>
     <weapon id="8115" name="Ecliptic Sword" icon="icon.weapon_sword_of_eclipse_i01">
         <!-- <Soul Crystal Enhancement>. Increases Casting Spd. by 12%. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -388,7 +374,6 @@
     </weapon>
     <weapon id="8116" name="Ecliptic Sword" icon="icon.weapon_sword_of_eclipse_i01">
         <!-- <Soul Crystal Enhancement>. Increases MP Recovery Bonus by 16%. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -416,7 +401,6 @@
     </weapon>
     <weapon id="8117" name="Wizard's Tear" icon="icon.weapon_tears_of_wizard_i01">
         <!-- <Soul Crystal Enhancement>. M. Atk. + 100. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -444,7 +428,6 @@
     </weapon>
     <weapon id="8118" name="Wizard's Tear" icon="icon.weapon_tears_of_wizard_i01">
         <!-- <Soul Crystal Enhancement>. Increases Casting Spd. by 12%. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -472,7 +455,6 @@
     </weapon>
     <weapon id="8119" name="Wizard's Tear" icon="icon.weapon_tears_of_wizard_i01">
         <!-- <Soul Crystal Enhancement>. Increases MP Recovery Bonus by 14%. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -500,7 +482,6 @@
     </weapon>
     <weapon id="8120" name="Dwarven Hammer" icon="icon.weapon_dwarven_hammer_i01">
         <!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 58. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;44;120"/>
@@ -528,7 +509,6 @@
     </weapon>
     <weapon id="8121" name="Dwarven Hammer" icon="icon.weapon_dwarven_hammer_i01">
         <!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 8%. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;44;120"/>
@@ -556,7 +536,6 @@
     </weapon>
     <weapon id="8122" name="Dwarven Hammer" icon="icon.weapon_dwarven_hammer_i01">
         <!-- <Soul Crystal Enhancement>. P. Atk. + 242 during a Critical Attack. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;44;120"/>
@@ -584,7 +563,6 @@
     </weapon>
     <weapon id="8123" name="Karik Horn" icon="icon.weapon_horn_of_karik_i01">
         <!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 68. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;44;120"/>
@@ -612,7 +590,6 @@
     </weapon>
     <weapon id="8124" name="Karik Horn" icon="icon.weapon_horn_of_karik_i01">
         <!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 8%. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;44;120"/>
@@ -640,7 +617,6 @@
     </weapon>
     <weapon id="8125" name="Karik Horn" icon="icon.weapon_horn_of_karik_i01">
         <!-- <Soul Crystal Enhancement>. P. Atk. + 223 during a Critical Attack. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;44;120"/>
@@ -668,7 +644,6 @@
     </weapon>
     <weapon id="8126" name="Destroyer Hammer" icon="icon.weapon_hammer_of_destroyer_i01">
         <!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 54. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;44;120"/>
@@ -696,7 +671,6 @@
     </weapon>
     <weapon id="8127" name="Destroyer Hammer" icon="icon.weapon_hammer_of_destroyer_i01">
         <!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 7%. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;44;120"/>
@@ -724,7 +698,6 @@
     </weapon>
     <weapon id="8128" name="Destroyer Hammer" icon="icon.weapon_hammer_of_destroyer_i01">
         <!-- <Soul Crystal Enhancement>. P. Atk. +288 during a Critical Attack. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;44;120"/>
@@ -752,7 +725,6 @@
     </weapon>
     <weapon id="8129" name="Ice Storm Hammer" icon="icon.weapon_ice_storm_hammer_i01">
         <!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 32. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;44;120"/>
@@ -780,7 +752,6 @@
     </weapon>
     <weapon id="8130" name="Ice Storm Hammer" icon="icon.weapon_ice_storm_hammer_i01">
         <!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 7%. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;44;120"/>
@@ -808,7 +779,6 @@
     </weapon>
     <weapon id="8131" name="Ice Storm Hammer" icon="icon.weapon_ice_storm_hammer_i01">
         <!-- <Soul Crystal Enhancement>. P. Atk. + 260 during a Critical Attack. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;44;120"/>
@@ -836,7 +806,6 @@
     </weapon>
     <weapon id="8132" name="Star Buster" icon="icon.weapon_star_buster_i01">
         <!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 58. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;44;120"/>
@@ -864,7 +833,6 @@
     </weapon>
     <weapon id="8133" name="Star Buster" icon="icon.weapon_star_buster_i01">
         <!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 7%. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;44;120"/>
@@ -892,7 +860,6 @@
     </weapon>
     <weapon id="8134" name="Star Buster" icon="icon.weapon_star_buster_i01">
         <!-- <Soul Crystal Enhancement>. P. Atk. + 275 during a Critical Attack. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;44;120"/>
@@ -920,7 +887,6 @@
     </weapon>
     <weapon id="8135" name="Doom Crusher" icon="icon.weapon_doom_crusher_i01">
         <!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 54. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;44;120"/>
@@ -948,7 +914,6 @@
     </weapon>
     <weapon id="8136" name="Doom Crusher" icon="icon.weapon_doom_crusher_i01">
         <!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 7%. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;44;120"/>
@@ -973,7 +938,6 @@
     </weapon>
     <weapon id="8137" name="Doom Crusher" icon="icon.weapon_doom_crusher_i01">
         <!-- <Soul Crystal Enhancement>. P. Atk. +297 during a Critical Attack. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;44;120"/>
@@ -1001,7 +965,6 @@
     </weapon>
     <weapon id="8138" name="Ecliptic Axe" icon="icon.weapon_eclipse_axe_i01">
         <!-- <Soul Crystal Enhancement>. M. Atk. + 46. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -1030,7 +993,6 @@
     </weapon>
     <weapon id="8139" name="Ecliptic Axe" icon="icon.weapon_eclipse_axe_i01">
         <!-- <Soul Crystal Enhancement>. Increases Casting Spd. by 12%. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -1059,7 +1021,6 @@
     </weapon>
     <weapon id="8140" name="Ecliptic Axe" icon="icon.weapon_eclipse_axe_i01">
         <!-- <Soul Crystal Enhancement>. Increases MP Recovery Bonus by 16%. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -1088,7 +1049,6 @@
     </weapon>
     <weapon id="8141" name="Spell Breaker" icon="icon.weapon_spell_breaker_i01">
         <!-- <Soul Crystal Enhancement>. M. Atk. + 96. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -1117,7 +1077,6 @@
     </weapon>
     <weapon id="8142" name="Spell Breaker" icon="icon.weapon_spell_breaker_i01">
         <!-- <Soul Crystal Enhancement>. Increases Casting Spd. by 12%. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -1146,7 +1105,6 @@
     </weapon>
     <weapon id="8143" name="Spell Breaker" icon="icon.weapon_spell_breaker_i01">
         <!-- <Soul Crystal Enhancement>. Increases MP Recovery Bonus by 14%. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -1175,7 +1133,6 @@
     </weapon>
     <weapon id="8144" name="Kaim Vanul's Bones" icon="icon.weapon_bone_of_kaim_vanul_i01">
         <!-- <Soul Crystal Enhancement>. M. Atk. + 100. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -1204,7 +1161,6 @@
     </weapon>
     <weapon id="8145" name="Kaim Vanul's Bones" icon="icon.weapon_bone_of_kaim_vanul_i01">
         <!-- <Soul Crystal Enhancement>. Increases Casting Spd. by 12%. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -1233,7 +1189,6 @@
     </weapon>
     <weapon id="8146" name="Kaim Vanul's Bones" icon="icon.weapon_bone_of_kaim_vanul_i01">
         <!-- <Soul Crystal Enhancement>. Increases MP Recovery Bonus by 14%. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -1262,7 +1217,6 @@
     </weapon>
     <weapon id="8147" name="Spiritual Eye" icon="icon.weapon_eye_of_soul_i01">
         <!-- <Soul Crystal Enhancement>. M. Atk. +144. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -1291,7 +1245,6 @@
     </weapon>
     <weapon id="8148" name="Spiritual Eye" icon="icon.weapon_eye_of_soul_i01">
         <!-- <Soul Crystal Enhancement>. Increases Casting Spd. by 12%. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -1321,7 +1274,6 @@
     </weapon>
     <weapon id="8149" name="Spiritual Eye" icon="icon.weapon_eye_of_soul_i01">
         <!-- <Soul Crystal Enhancement>. MP Recovery Bonus +12%. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -1350,7 +1302,6 @@
     </weapon>
     <weapon id="8150" name="Flaming Dragon Skull" icon="icon.weapon_dragon_flame_head_i01">
         <!-- <Soul Crystal Enhancement>. M. Atk. +151. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -1379,7 +1330,6 @@
     </weapon>
     <weapon id="8151" name="Flaming Dragon Skull" icon="icon.weapon_dragon_flame_head_i01">
         <!-- <Soul Crystal Enhancement>. Increases Casting Spd. by 12%. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -1405,7 +1355,6 @@
     </weapon>
     <weapon id="8152" name="Flaming Dragon Skull" icon="icon.weapon_dragon_flame_head_i01">
         <!-- <Soul Crystal Enhancement>. MP Recovery Bonus +12%. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -1434,7 +1383,6 @@
     </weapon>
     <armor id="8185" name="Chapeau" icon="icon.accessory_archer_hat_i00">
         <!-- Broadbrim Feathered Hat. Occupies 2 Hair Accessory slots. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="hairall"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="10"/>
@@ -1444,7 +1392,6 @@
     </armor>
     <armor id="8186" name="Artisan's Goggles" icon="icon.accessory_dwarf_goggle_i00">
         <!-- Large goggles used to protect eyes. Occupies 2 Hair Accessory slots. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="hairall"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="10"/>
@@ -1454,7 +1401,6 @@
     </armor>
     <armor id="8187" name="Red Horn of Victory" icon="icon.accessory_hair_cornu_i00">
         <!-- Hair Accessory for the Halloween Event -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="hair2"/>
         <set name="immediate_effect" val="true"/>
         <set name="enchant_enabled" val="7"/>
@@ -1463,7 +1409,6 @@
     </armor>
     <armor id="8188" name="Little Angel Wings" icon="icon.accessory_hair_ring_i00">
         <!-- A hair accessory shaped as a little white wing. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="hair2"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="10"/>
@@ -1473,7 +1418,6 @@
     </armor>
     <armor id="8189" name="Fairy Antennae" icon="icon.accessory_hair_feeler_i00">
         <!-- A lovely hair accessory shaped as antennae with starlets. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="hair2"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="10"/>

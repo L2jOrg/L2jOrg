@@ -8,7 +8,6 @@
     </item>
     <armor id="49801" name="Dandy Pendant" icon="icon.bm_pendant_pve">
         <!-- M. Def. +20, XP and SP gain +30%, P./M. Atk. +50, P./M. Critical Damage +5%. Allows using the Blessing of Fire Dragon skill. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="chest"/>
         <set name="immediate_effect" val="true"/>
         <set name="time" val="120"/>
@@ -19,7 +18,6 @@
     </armor>
     <armor id="49802" name="Dandy Shining Pendant" icon="icon.bm_pendant_pve">
         <!-- M. Def. +21, XP and SP gain +30%, P./M. Atk. +60, P./M. Critical Damage +5%. Allows using the Blessing of Fire Dragon and Fire Dragon's Protection skills. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="chest"/>
         <set name="immediate_effect" val="true"/>
         <set name="time" val="120"/>
@@ -30,7 +28,6 @@
     </armor>
     <armor id="49803" name="Dandy’s Uniform" icon="icon.london_olympic_bikini">
         <!-- Makes your armor look like Dandy's Uniform. Allows using the Excellent Hit and Excellent Serve skills. When equipped, the armor you previously wore becomes unavailable. However, hair accessories, weapons, and magical armor are not taken off. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="HEAVY"/>
         <set name="bodypart" val="alldress"/>
         <set name="immediate_effect" val="true"/>

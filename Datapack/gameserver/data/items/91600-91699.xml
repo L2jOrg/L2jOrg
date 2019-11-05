@@ -2,13 +2,11 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
     <armor id="91600" name="Dimensional Talisman Lv. 9" icon="icon.bm_dimension_tallisman">
         <!-- When equipped, P./ M. Def. +90, P./ M. Evasion +4, Max. HP/ MP/ CP +1600, Speed +9, Atk. Spd. +50, Casting Spd. +80, Acquired XP/ SP +20%. Activates Dimensional Border Power (at a certain probability, increases attack abilities) Lv. 8, Dimensional Guard Lv. 9 (reduced chance of being hit by a quick stab attack for a certain amount of time, reduced Received P./ M. Critical Damage, increased M. Damage Resistance) skill can be used. Take it to Alchemist Veruti in Giran for upgrade. Dimensional powers cancel the power of Talisman of Border. Effect does not stack with the Talisman of Border. Cannot be dropped. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
         <restriction dropable="false" sellable="false"/>
     </armor>
     <armor id="91601" name="Dimensional Talisman Lv. 10" icon="icon.bm_dimension_tallisman">
         <!-- When equipped, P./ M. Def. +100, P./ M. Evasion +5, Max. HP/ MP/ CP +2000, Speed +10, Atk. Spd. +50, Casting Spd. +100, Acquired XP/ SP +30%. Activates Dimensional Border Power (at a certain probability, increases attack abilities) Lv. 9, Dimensional Guard Lv. 10 (reduced chance of being hit by a quick stab attack for a certain amount of time, reduced Received P./ M. Critical Damage, increased M. Damage Resistance) skill can be used, Dimensional Barrier (for 15 sec. protection from 10 enemy attacks) can be used. Effect does not stack with the Talisman of Border. Cannot be dropped. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
         <restriction dropable="false" sellable="false"/>
     </armor>
@@ -34,7 +32,6 @@
     </item>
     <armor id="91606" name="High Quality Agathion Virgo" icon="icon.agathion_virgo_star_1">
         <!-- Agathion Virgo that contains the Fire Dragon's spirit. Summons Agathion from the main slot. Activates Special Abilities. <Special Abilities>. Increases M. Def. and Mental Atk. Rate. Starting from +6, activates the dragon power. Can be exchanged to High Quality Agathion Virgo (Land Dragon) by Pona. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="gloves"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="5"/>
@@ -42,7 +39,6 @@
     </armor>
     <armor id="91607" name="High Quality Agathion Capricorn" icon="icon.agathion_capr_star_1">
         <!-- Agathion Capricorn that contains the Fire Dragon's spirit. Summons Agathion from the main slot. Activates Special Abilities. <Special Abilities>. Increases M. Critical Rate. Decreases cooldown for M. Skills and Dances/ Songs. Starting from +6, activates the dragon power. Can be exchanged to High Quality Agathion Capricorn (Land Dragon) by Pona. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="gloves"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="5"/>
@@ -50,7 +46,6 @@
     </armor>
     <armor id="91608" name="High Quality Agathion Libra" icon="icon.agathion_lib_star_1">
         <!-- Agathion Libra that contains the Fire Dragon's spirit. Summons Agathion from the main slot. Activates Special Abilities. <Special Abilities>. Increases Casting Spd. Decreases MP Consumption for M. Skills and Dances/ Songs. Starting from +6, activates the dragon power. Can be exchanged to High Quality Agathion Libra (Land Dragon) by Pona. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="gloves"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="5"/>
@@ -58,7 +53,6 @@
     </armor>
     <armor id="91609" name="High Quality Agathion Taurus" icon="icon.agathion_tau_star_1">
         <!-- Agathion Taurus that contains the Fire Dragon's spirit. Summons Agathion from the main slot. Activates Special Abilities. <Special Abilities>. Increases P. Def. and Stun Atk. Rate. Starting from +6, activates the dragon power. Can be exchanged to High Quality Agathion Taurus (Land Dragon) by Pona. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="gloves"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="5"/>
@@ -66,7 +60,6 @@
     </armor>
     <armor id="91610" name="High Quality Agathion Leo" icon="icon.agathion_leo_star_1">
         <!-- Agathion Leo that contains the Fire Dragon's spirit. Summons Agathion from the main slot. Activates Special Abilities. <Special Abilities>. Increases P. Atk. and Paralysis Atk. Rate. Starting from +6, activates the dragon power. Can be exchanged to High Quality Agathion Leo (Land Dragon) by Pona. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="gloves"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="5"/>
@@ -74,7 +67,6 @@
     </armor>
     <armor id="91611" name="High Quality Agathion Scorpio" icon="icon.agathion_sco_star_1">
         <!-- Agathion Scorpio that contains the Fire Dragon's spirit. Summons Agathion from the main slot. Activates Special Abilities. <Special Abilities>. Increases P. Critical Rate. Decreases cooldown for P. Skills and Dances/ Songs. Starting from +6, activates the dragon power. Can be exchanged to High Quality Agathion Scorpio (Land Dragon) by Pona. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="gloves"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="5"/>
@@ -82,7 +74,6 @@
     </armor>
     <armor id="91612" name="High Quality Agathion Aquarius" icon="icon.agathion_aqu_star_1">
         <!-- Agathion Aquarius that contains the Fire Dragon's spirit. Summons Agathion from the main slot. Activates Special Abilities. <Special Abilities>. Increases M. Atk. and Hold/ Sleep Atk. Rate. Starting from +6, activates the dragon power. Can be exchanged to High Quality Agathion Aquarius (Land Dragon) by Pona. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="gloves"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="5"/>
@@ -90,7 +81,6 @@
     </armor>
     <armor id="91613" name="High Quality Agathion Sagittarius" icon="icon.agathion_sag_star_1">
         <!-- Agathion Sagittarius that contains the Fire Dragon's spirit. Summons Agathion from the main slot. Activates Special Abilities. <Special Abilities>. Increases Atk. Spd. Decreases MP Consumption for P. Skills and Dances/ Songs. Starting from +6, activates the dragon power. Can be exchanged to High Quality Agathion Sagittarius (Land Dragon) by Pona. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="gloves"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="5"/>
@@ -98,7 +88,6 @@
     </armor>
     <armor id="91614" name="High Quality Agathion Virgo" icon="icon.agathion_virgo_star_1">
         <!-- Agathion Virgo that contains the Land Dragon's spirit. Summons Agathion from the main slot. Activates Special Abilities. <Special Abilities>. Increases M. Def. and Mental Atk. Rate. Starting from +6, activates the dragon power. Can be exchanged to High Quality Agathion Virgo (Fire Dragon) by Pona. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="gloves"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="5"/>
@@ -106,7 +95,6 @@
     </armor>
     <armor id="91615" name="High Quality Agathion Capricorn" icon="icon.agathion_capr_star_1">
         <!-- Agathion Capricorn that contains the Land Dragon's spirit. Summons Agathion from the main slot. Activates Special Abilities. <Special Abilities>. Increases M. Critical Rate. Decreases cooldown for M. Skills and Dances/ Songs. Starting from +6, activates the dragon power. Can be exchanged to High Quality Agathion Capricorn (Fire Dragon) by Pona. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="gloves"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="5"/>
@@ -114,7 +102,6 @@
     </armor>
     <armor id="91616" name="High Quality Agathion Libra" icon="icon.agathion_lib_star_1">
         <!-- Agathion Libra that contains the Land Dragon's spirit. Summons Agathion from the main slot. Activates Special Abilities. <Special Abilities>. Increases Casting Spd. Decreases MP Consumption for M. Skills and Dances/ Songs. Starting from +6, activates the dragon power. Can be exchanged to High Quality Agathion Libra (Fire Dragon) by Pona. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="gloves"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="5"/>
@@ -122,7 +109,6 @@
     </armor>
     <armor id="91617" name="High Quality Agathion Taurus" icon="icon.agathion_tau_star_1">
         <!-- Agathion Taurus that contains the Land Dragon's spirit. Summons Agathion from the main slot. Activates Special Abilities. <Special Abilities>. Increases P. Def. and Stun Atk. Rate. Starting from +6, activates the dragon power. Can be exchanged to High Quality Agathion Taurus (Fire Dragon) by Pona. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="gloves"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="5"/>
@@ -130,7 +116,6 @@
     </armor>
     <armor id="91618" name="High Quality Agathion Leo" icon="icon.agathion_leo_star_1">
         <!-- Agathion Leo that contains the Land Dragon's spirit. Summons Agathion from the main slot. Activates Special Abilities. <Special Abilities>. Increases P. Atk. and Paralysis Atk. Rate. Starting from +6, activates the dragon power. Can be exchanged to High Quality Agathion Leo (Fire Dragon) by Pona. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="gloves"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="5"/>
@@ -138,7 +123,6 @@
     </armor>
     <armor id="91619" name="High Quality Agathion Scorpio" icon="icon.agathion_sco_star_1">
         <!-- Agathion Scorpio that contains the Land Dragon's spirit. Summons Agathion from the main slot. Activates Special Abilities. <Special Abilities>. Increases P. Critical Rate. Decreases cooldown for P. Skills and Dances/ Songs. Starting from +6, activates the dragon power. Can be exchanged to High Quality Agathion Scorpio (Fire Dragon) by Pona. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="gloves"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="5"/>
@@ -146,7 +130,6 @@
     </armor>
     <armor id="91620" name="High Quality Agathion Aquarius" icon="icon.agathion_aqu_star_1">
         <!-- Agathion Aquarius that contains the Land Dragon's spirit. Summons Agathion from the main slot. Activates Special Abilities. <Special Abilities>. Increases M. Atk. and Hold/ Sleep Atk. Rate. Starting from +6, activates the dragon power. Can be exchanged to High Quality Agathion Aquarius (Fire Dragon) by Pona. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="gloves"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="5"/>
@@ -154,7 +137,6 @@
     </armor>
     <armor id="91621" name="High Quality Agathion Sagittarius" icon="icon.agathion_sag_star_1">
         <!-- Agathion Sagittarius that contains the Land Dragon's spirit. Summons Agathion from the main slot. Activates Special Abilities. <Special Abilities>. Increases Atk. Spd. Decreases MP Consumption for M. Skills and Dances/ Songs. Starting from +6, activates the dragon power. Can be exchanged to High Quality Agathion Sagittarius (Fire Dragon) by Pona. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="gloves"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="5"/>
@@ -162,7 +144,6 @@
     </armor>
     <armor id="91622" name="High Quality Agathion Gemini" icon="icon.agathion_gem_star_1">
         <!-- Agathion Gemini that contains the dragon's spirit. Summons Agathion from the main slot. Activates Special Abilities. <Special Abilities>. Increases the Sayha's Grace effect and Max HP/ MP. Starting from +6, increases Max CP. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="gloves"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="5"/>
@@ -236,7 +217,6 @@
     </item>
     <armor id="91637" name="15th Anniversary Talisman" icon="icon.ev_L2_soul_ore">
         <!-- Acquired XP/ SP (hunting) +15%. Allows use of the transformation skill. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
         <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
     </armor>
@@ -253,7 +233,6 @@
     </item>
     <armor id="91640" name="Refined Romantic Chapeau: Gold" icon="icon.bm_romantic_chaperon_gold">
         <!-- Uses 2 hair accessory slots. <Active Skills>. 1. Refined Romantic Gold Chapeau Teleport: Teleports to the nearest village. Cooldown: 20 min. 2. Mysterious Aura: Enlarges the user's head for 10 min. Cooldown: 20 min. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="hairall"/>
         <set name="immediate_effect" val="true"/>
         <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
@@ -401,7 +380,6 @@
     </item>
     <armor id="91667" name="White Sayha's Cloak +7" icon="icon.sayha2017_back_i03">
         <!-- Available for 30 days. Max HP/ MP +15%, Acquired XP/ SP +20%, P. Def. +8%, P./ M. Critical Damage +5%. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="back"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="220"/>
@@ -435,7 +413,6 @@
     </item>
     <weapon id="91673" name="Reinforced Spear" icon="icon.weapon_long_spear_i00">
         <!-- Cannot be enchanted/ augmented, runes cannot be inserted. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="ETC"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
@@ -455,7 +432,6 @@
     </weapon>
     <weapon id="91674" name="Reinforced Falchion" icon="icon.weapon_falchion_i00">
         <!-- Cannot be enchanted/ augmented, runes cannot be inserted. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="1530"/>
@@ -473,7 +449,6 @@
     </weapon>
     <weapon id="91675" name="Reinforced Iron Hammer" icon="icon.weapon_iron_hammer_i00">
         <!-- Cannot be enchanted/ augmented, runes cannot be inserted. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="POLE"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="1850"/>
@@ -494,7 +469,6 @@
     </weapon>
     <weapon id="91676" name="Reinforced Voodoo Doll" icon="icon.weapon_voodoo_doll_i00">
         <!-- Cannot be enchanted/ augmented, runes cannot be inserted. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DAGGER"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="630"/>
@@ -511,7 +485,6 @@
     </weapon>
     <weapon id="91677" name="Reinforced Flanged Mace" icon="icon.weapon_buzdygan_i00">
         <!-- Cannot be enchanted/ augmented, runes cannot be inserted. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="POLE"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="1800"/>
@@ -532,7 +505,6 @@
     </weapon>
     <weapon id="91678" name="Reinforced Sword Breaker" icon="icon.weapon_sword_breaker_i00">
         <!-- Cannot be enchanted/ augmented, runes cannot be inserted. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DUAL"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="1110"/>
@@ -551,7 +523,6 @@
     </weapon>
     <weapon id="91679" name="Reinforced Viper Fang" icon="icon.weapon_vipers_canine_i00">
         <!-- Cannot be enchanted/ augmented, runes cannot be inserted. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="FISHINGROD"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
@@ -571,7 +542,6 @@
     </weapon>
     <weapon id="91680" name="Reinforced Compound Bow" icon="icon.weapon_composition_bow_i00">
         <!-- Cannot be enchanted/ augmented, runes cannot be inserted. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="RAPIER"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>

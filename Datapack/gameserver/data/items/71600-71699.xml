@@ -454,7 +454,6 @@
     </item>
     <armor id="71691" name="Dragon Pendant - Attack" icon="icon.bm_pendant_dragon_i00">
         <!-- A pendant that contains the energy of dragon. With the help of Dragon Varnish it can be enchanted up to +5. Enchantment activates special effects. Head Blacksmith Ferris can upgrade +5 pendant to Lv. 2. Cannot be dropped. Required materials: 12 mln Adena. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="underwear"/>
         <set name="immediate_effect" val="true"/>
         <restriction dropable="false" sellable="false"/>
@@ -464,7 +463,6 @@
     </armor>
     <armor id="71692" name="Dragon Pendant - Attack" icon="icon.bm_pendant_dragon_i00">
         <!-- A pendant that contains the energy of dragon. With the help of Dragon Varnish it can be enchanted up to +5. Enchantment activates special effects. Head Blacksmith Ferris can upgrade +5 pendant to Lv. 3. Cannot be dropped. Required materials: Dragon Essense (3 pcs.), 16 mln Adena. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="underwear"/>
         <set name="immediate_effect" val="true"/>
         <restriction dropable="false" sellable="false"/>
@@ -474,7 +472,6 @@
     </armor>
     <armor id="71693" name="Dragon Pendant - Attack" icon="icon.bm_pendant_dragon_i00">
         <!-- A pendant that contains the energy of dragon. With the help of Dragon Varnish it can be enchanted up to +5. Enchantment activates special effects. Head Blacksmith Ferris can upgrade +5 pendant to Lv. 4. Cannot be dropped. Required materials: Dragon Essense (20 pcs.), 50 mln Adena. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="underwear"/>
         <set name="immediate_effect" val="true"/>
         <restriction dropable="false" sellable="false"/>
@@ -484,7 +481,6 @@
     </armor>
     <armor id="71694" name="Dragon Pendant - Attack" icon="icon.bm_pendant_dragon_i00">
         <!-- A pendant that contains the energy of dragon. With the help of Dragon Varnish it can be enchanted up to +5. Enchantment activates special effects. Cannoit be dropped. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="underwear"/>
         <set name="immediate_effect" val="true"/>
         <restriction dropable="false" sellable="false"/>
@@ -494,7 +490,6 @@
     </armor>
     <armor id="71695" name="Dragon Pendant - Magic Power" icon="BranchIcon.icon.g_bm_pendant_dragon_m">
         <!-- A pendant that contains the magic energy of dragon. With the help of Dragon Varnish it can be enchanted up to +5. Enchantment activates special effects. Head Blacksmith Ferris can upgrade +5 pendant to Lv. 2. Cannot be dropped. Required materials: 12 mln Adena. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="underwear"/>
         <set name="immediate_effect" val="true"/>
         <restriction dropable="false" sellable="false"/>
@@ -504,7 +499,6 @@
     </armor>
     <armor id="71696" name="Dragon Pendant - Magic Power" icon="BranchIcon.icon.g_bm_pendant_dragon_m">
         <!-- A pendant that contains the magic energy of dragon. With the help of Dragon Varnish it can be enchanted up to +5. Enchantment activates special effects. Head Blacksmith Ferris can upgrade +5 pendant to Lv. 3. Cannot be dropped. Required materials: Dragon Essense (3 pcs.), 16 mln Adena. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="underwear"/>
         <set name="immediate_effect" val="true"/>
         <restriction dropable="false" sellable="false"/>
@@ -514,7 +508,6 @@
     </armor>
     <armor id="71697" name="Dragon Pendant - Magic Power" icon="BranchIcon.icon.g_bm_pendant_dragon_m">
         <!-- A pendant that contains the magic  energy of dragon. With the help of Dragon Varnish it can be enchanted up to +5. Enchantment activates special effects. Head Blacksmith Ferris can upgrade +5 pendant to Lv. 4. Cannot be dropped. Required materials: Dragon Essense (20 pcs.), 50 mln Adena. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="underwear"/>
         <set name="immediate_effect" val="true"/>
         <restriction dropable="false" sellable="false"/>
@@ -524,7 +517,6 @@
     </armor>
     <armor id="71698" name="Dragon Pendant - Magic Power" icon="BranchIcon.icon.g_bm_pendant_dragon_m">
         <!-- A pendant that contains the magic energy of dragon. With the help of Dragon Varnish it can be enchanted up to +5. Enchantment activates special effects. Cannoit be dropped. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="underwear"/>
         <set name="immediate_effect" val="true"/>
         <restriction dropable="false" sellable="false"/>

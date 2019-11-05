@@ -469,7 +469,6 @@
         <restriction stackable="true"/>
     </item>
     <armor id="5576" name="Sound Test Boots" icon="icon.armor_t30_b_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="feet"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="50"/>
@@ -560,7 +559,6 @@
     </item>
     <armor id="5590" name="Squeaking Shoes" icon="icon.armor_t02_b_i00">
         <!-- Makes a unique sound when walking in them. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="feet"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="50"/>
@@ -635,7 +633,6 @@
     </item>
     <weapon id="5596" name="Dasparion's Staff" icon="icon.weapon_dasparions_staff_i01">
         <!-- <Soul Crystal Enhancement>. M. Atk. +144. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;46;120"/>
@@ -664,7 +661,6 @@
     </weapon>
     <weapon id="5597" name="Dasparion's Staff" icon="icon.weapon_dasparions_staff_i01">
         <!-- <Soul Crystal Enhancement>. Increases Casting Spd. by 12%. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;46;120"/>
@@ -693,7 +689,6 @@
     </weapon>
     <weapon id="5598" name="Dasparion's Staff" icon="icon.weapon_dasparions_staff_i01">
         <!-- <Soul Crystal Enhancement>. Increases MP Recovery Bonus by 12%. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;46;120"/>
@@ -722,7 +717,6 @@
     </weapon>
     <weapon id="5599" name="Meteor Shower" icon="icon.weapon_meteor_shower_i01">
         <!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 54. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>

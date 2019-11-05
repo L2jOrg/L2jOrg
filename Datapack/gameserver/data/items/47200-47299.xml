@@ -2,7 +2,6 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
     <armor id="47226" name="Blood Noblesse Outfit" icon="icon.bm2018_rednoblesse_i01">
         <!-- Red noblesse outfit. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="HEAVY"/>
         <set name="bodypart" val="alldress"/>
         <set name="immediate_effect" val="true"/>
@@ -13,7 +12,6 @@
     </armor>
     <armor id="47227" name="White Noblesse Outfit" icon="icon.bm2018_whitenoblesse_i01">
         <!-- White noblesse outfit. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="HEAVY"/>
         <set name="bodypart" val="alldress"/>
         <set name="immediate_effect" val="true"/>
@@ -24,7 +22,6 @@
     </armor>
     <armor id="47230" name="Blue Musketeer Garment" icon="icon.bm2018_bluemusketeer_i01">
         <!-- Blue musketeer garment. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="HEAVY"/>
         <set name="bodypart" val="alldress"/>
         <set name="immediate_effect" val="true"/>
@@ -34,7 +31,6 @@
         </stats>
     </armor>
     <armor id="47231" name="Red Musketeer Garment" icon="icon.inquisitor_red">
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="HEAVY"/>
         <set name="bodypart" val="alldress"/>
         <set name="immediate_effect" val="true"/>
@@ -42,7 +38,6 @@
     </armor>
     <armor id="47232" name="Purple Cowboy Outfit" icon="icon.bm2018_cowboy_i01">
         <!-- Purple cowboy outfit. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="HEAVY"/>
         <set name="bodypart" val="alldress"/>
         <set name="immediate_effect" val="true"/>

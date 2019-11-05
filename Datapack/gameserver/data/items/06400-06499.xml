@@ -60,7 +60,6 @@
     </item>
     <armor id="6408" name="Formal Wear" icon="icon.armor_t2000_ul_i00">
         <!-- Tuxedo for male characters, and a wedding dress for female characters. Equipping this disables armor. Hair accessories, weapons, and magic armor remain equipped. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="HEAVY"/>
         <set name="bodypart" val="alldress"/>
         <set name="immediate_effect" val="true"/>

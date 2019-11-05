@@ -6,7 +6,6 @@
     </item>
     <armor id="71701" name="Fire Dragon Pendant Lv. 1" icon="BranchIcon.Icon.bm_pendant_pve">
         <!-- A pendant that contains the energy of Fire Dragon. Can be enchanted up to +10 with Pendant Polish/ Shining Pendant Polish. Two pendants of the same level can be combined by the Dimensional Merchant to add new effects. The number of effects is increased by the enchanting. Enchanting is safe up to +1, after that in case of failure, the item disappears. <Note!>. After combining the pendant's enchant value is reset. Enhanced pendants can't be used for combining. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="chest"/>
         <set name="immediate_effect" val="true"/>
         <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
@@ -16,7 +15,6 @@
     </armor>
     <armor id="71702" name="Water Dragon Pendant Lv. 1" icon="BranchIcon.Icon.bm_pendant_pvp_blue">
         <!-- A pendant that contains the Water Dragon's energy. Can be enchanted up to +10 with Pendant Polish/ Shining Pendant Polish. Two pendants of the same level can be combined by the Dimensional Merchant to add new effects. The number of effects is increased by the enchanting. Enchanting is safe up to +1, after that in case of failure, the item disappears. <Note!>. After combining the pendant's enchant value is reset. Enhanced pendants can't be used for combining. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="chest"/>
         <set name="immediate_effect" val="true"/>
         <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
@@ -26,7 +24,6 @@
     </armor>
     <armor id="71703" name="Wind Dragon Pendant Lv. 1" icon="BranchIcon.Icon.bm_pendant_pve_white">
         <!-- A pendant that contains the Wind Dragon's energy. Can be enchanted up to +10 with Pendant Polish/ Shining Pendant Polish. Two pendants of the same level can be combined by the Dimensional Merchant to add new effects. The number of effects is increased by the enchanting. Enchanting is safe up to +1, after that in case of failure, the item disappears. <Note>. After combining the pendant's enchant value is reset. Enhanced pendants can't be used for combining. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="chest"/>
         <set name="immediate_effect" val="true"/>
         <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
@@ -36,7 +33,6 @@
     </armor>
     <armor id="71704" name="Land Dragon Pendant Lv. 1" icon="BranchIcon.Icon.bm_pendant_pvp">
         <!-- A pendant that contains the Land Dragon's energy. Can be enchanted up to +10 with Pendant Polish/ Shining Pendant Polish. Two pendants of the same level can be combined by the Dimensional Merchant to add new effects. The number of effects is increased by the enchanting. Enchanting is safe up to +1, after that in case of failure, the item disappears. <Note>. After combining the pendant's enchant value is reset. Enhanced pendants can't be used for combining. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="chest"/>
         <set name="immediate_effect" val="true"/>
         <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
@@ -46,7 +42,6 @@
     </armor>
     <armor id="71705" name="Shadow Master" icon="BranchIcon.Icon.g_bm_costume_thief">
         <!-- Appearance for the transformation system. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="HEAVY"/>
         <set name="bodypart" val="alldress"/>
         <set name="immediate_effect" val="true"/>
@@ -55,7 +50,6 @@
     </armor>
     <armor id="71706" name="Admiral" icon="BranchIcon.Icon.g_bm_costume_navy">
         <!-- Appearance for the transformation system. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="HEAVY"/>
         <set name="bodypart" val="alldress"/>
         <set name="immediate_effect" val="true"/>
@@ -64,7 +58,6 @@
     </armor>
     <armor id="71707" name="Skull" icon="BranchIcon.Icon.g_bm_costume_skeleton">
         <!-- Appearance for the transformation system. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="HEAVY"/>
         <set name="bodypart" val="alldress"/>
         <set name="immediate_effect" val="true"/>
@@ -73,7 +66,6 @@
     </armor>
     <armor id="71708" name="Alice" icon="BranchIcon.Icon.g_bm_costume_alice">
         <!-- Appearance for the transformation system. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="HEAVY"/>
         <set name="bodypart" val="alldress"/>
         <set name="immediate_effect" val="true"/>
@@ -82,7 +74,6 @@
     </armor>
     <armor id="71709" name="Demon" icon="BranchIcon.Icon.g_bm_costume_devil">
         <!-- Appearance for the transformation system. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="HEAVY"/>
         <set name="bodypart" val="alldress"/>
         <set name="immediate_effect" val="true"/>
@@ -91,7 +82,6 @@
     </armor>
     <armor id="71710" name="Steampunk" icon="BranchIcon.Icon.g_bm_costume_steampunk">
         <!-- Appearance for the transformation system. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="HEAVY"/>
         <set name="bodypart" val="alldress"/>
         <set name="immediate_effect" val="true"/>
@@ -100,7 +90,6 @@
     </armor>
     <armor id="71711" name="Nymph" icon="BranchIcon.Icon.g_bm_costume_nymph">
         <!-- Appearance for the transformation system. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="HEAVY"/>
         <set name="bodypart" val="alldress"/>
         <set name="immediate_effect" val="true"/>
@@ -109,7 +98,6 @@
     </armor>
     <armor id="71712" name="Maid" icon="BranchIcon.Icon.g_bm_costume_maid">
         <!-- Appearance for the transformation system. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="HEAVY"/>
         <set name="bodypart" val="alldress"/>
         <set name="immediate_effect" val="true"/>
@@ -260,61 +248,51 @@
     </item>
     <armor id="71742" name="Dimensional Talisman Lv. 1" icon="icon.bm_dimension_tallisman">
         <!-- P./ M. Def. +25, P./ M. Evasion. +1, Max HP/ MP/ CP +150, Speed +5, Atk. Spd./ Casting Spd. +10, Acquired XP/ SP +5%. Activates Dimensional Border Power Lv. 1 (increases attack power with a certain chance). Can be upgraded by Alchemist Veruti in Giran. The effect doesn't stack with that of Talisman of Border, the Dimensional Talisman effect takes precedence. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
         <restriction dropable="false" sellable="false"/>
     </armor>
     <armor id="71743" name="Dimensional Talisman Lv. 2" icon="icon.bm_dimension_tallisman">
         <!-- P./ M. Def. +30, P./ M. Evasion. +2, Max HP/ MP/ CP +200, Speed +7, Atk. Spd./ Casting Spd. +15, Acquired XP/ SP +7%. Activates Dimensional Border Power Lv. 1 (increases attack power with a certain chance). Allows use of Dimensional Guard Lv. 2 (temporarily increases Vital Point Attack Resistance). Can be upgraded by Alchemist Veruti in Giran. The effect doesn't stack with that of Talisman of Border, the Dimensional Talisman effect takes precedence. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
         <restriction dropable="false" sellable="false"/>
     </armor>
     <armor id="71744" name="Dimensional Talisman Lv. 3" icon="icon.bm_dimension_tallisman">
         <!-- P./ M. Def. +35, P./ M. Evasion. +2, Max HP/ MP/ CP +250, Speed +7, Atk. Spd./ Casting Spd. +15, Acquired XP/ SP +10%. Activates Dimensional Border Power Lv. 2 (increases attack power with a certain chance). Allows use of Dimensional Guard Lv. 3 (temporarily increases Vital Point Attack Resistance). Can be upgraded by Alchemist Veruti in Giran. The effect doesn't stack with that of Talisman of Border, the Dimensional Talisman effect takes precedence. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
         <restriction dropable="false" sellable="false"/>
     </armor>
     <armor id="71745" name="Dimensional Talisman Lv. 4" icon="icon.bm_dimension_tallisman">
         <!-- P./ M. Def. +40, P./ M. Evasion. +2, Max HP/ MP/ CP +300, Speed +7, Atk. Spd./ Casting Spd. +15, Acquired XP/ SP +12%. Activates Dimensional Border Power Lv. 3 (increases attack power with a certain chance). Allows use of Dimensional Guard Lv. 4 (temporarily increases Vital Point Attack Resistance). Can be upgraded by Alchemist Veruti in Giran. The effect doesn't stack with that of Talisman of Border, the Dimensional Talisman effect takes precedence. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
         <restriction dropable="false" sellable="false"/>
     </armor>
     <armor id="71746" name="Dimensional Talisman Lv. 5" icon="icon.bm_dimension_tallisman">
         <!-- P./ M. Def. +45, P./ M. Evasion. +3, Max HP/ MP/ CP +400, Speed +8, Atk. Spd./ Casting Spd. +20, Acquired XP/ SP +15%. Activates Dimensional Border Power Lv. 4 (increases attack power with a certain chance). Allows use of Dimensional Guard Lv. 5 (temporarily increases Vital Point Attack Resistance and decreases Received P./ M. Critical Damage). Can be upgraded by Alchemist Veruti in Giran. The effect doesn't stack with that of Talisman of Border, the Dimensional Talisman effect takes precedence. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
         <restriction dropable="false" sellable="false"/>
     </armor>
     <armor id="71747" name="Dimensional Talisman Lv. 6" icon="icon.bm_dimension_tallisman">
         <!-- P./ M. Def. +50, P./ M. Evasion. +3, Max HP/ MP/ CP +500, Speed +8, Atk. Spd./ Casting Spd. +30, Acquired XP/ SP +17%. Activates Dimensional Border Power Lv. 5 (increases attack power with a certain chance). Allows use of Dimensional Guard Lv. 6 (temporarily increases Vital Point Attack Resistance and decreases Received P./ M. Critical Damage). Can be upgraded by Alchemist Veruti in Giran. The effect doesn't stack with that of Talisman of Border, the Dimensional Talisman effect takes precedence. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
         <restriction dropable="false" sellable="false"/>
     </armor>
     <armor id="71748" name="Dimensional Talisman Lv. 7" icon="icon.bm_dimension_tallisman">
         <!-- P./ M. Def. +70, P./ M. Evasion. +4, Max HP/ MP/ CP +1000, Speed +9, Atk. Spd. +40, Casting Spd. +50, Acquired XP/ SP +20%. Activates Dimensional Border Power Lv. 6 (increases attack power with a certain chance). Allows use of Dimensional Guard Lv. 7 (temporarily increases Vital Point Attack Resistance and decreases Received P./ M. Critical Damage). Can be upgraded by Alchemist Veruti in Giran. The effect doesn't stack with that of Talisman of Border, the Dimensional Talisman effect takes precedence. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
         <restriction dropable="false" sellable="false"/>
     </armor>
     <armor id="71749" name="Dimensional Talisman Lv. 8" icon="icon.bm_dimension_tallisman">
         <!-- P./ M. Def. +80, P./ M. Evasion. +4, Max HP/ MP/ CP +1300, Speed +9, Atk. Spd. +40, Casting Spd. +65, Acquired XP/ SP +25%. Activates Dimensional Border Power Lv. 7 (increases attack power with a certain chance). Allows use of Dimensional Guard Lv. 8 (temporarily increases Vital Point Attack Resistance and M. Damage Resistance, decreases Received P./ M. Critical Damage). Can be upgraded by Alchemist Veruti in Giran. The effect doesn't stack with that of Talisman of Border, the Dimensional Talisman effect takes precedence. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
         <restriction dropable="false" sellable="false"/>
     </armor>
     <armor id="71750" name="Dimensional Talisman Lv. 9" icon="icon.bm_dimension_tallisman">
         <!-- P./ M. Def. +90, P./ M. Evasion. +4, Max HP/ MP/ CP +1600, Speed +9, Atk. Spd. +50, Casting Spd. +80, Acquired XP/ SP +30%. Activates Dimensional Border Power Lv. 8 (increases attack power with a certain chance). Allows use of Dimensional Guard Lv. 9 (temporarily increases Vital Point Attack Resistance and M. Damage Resistance, decreases Received P./ M. Critical Damage). Can be upgraded by Alchemist Veruti in Giran. The effect doesn't stack with that of Talisman of Border, the Dimensional Talisman effect takes precedence. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
         <restriction dropable="false" sellable="false"/>
     </armor>
     <armor id="71751" name="Dimensional Talisman Lv. 10" icon="icon.bm_dimension_tallisman">
         <!-- P./ M. Def. +100, P./ M. Evasion. +5, Max HP/ MP/ CP +2000, Speed +10, Atk. Spd. +50, Casting Spd. +100, Acquired XP/ SP +40%. Activates Dimensional Border Power Lv. 9 (increases attack power with a certain chance). Allows use of Dimensional Guard Lv. 10 (temporarily increases Vital Point Attack Resistance and M. Damage Resistance, decreases Received P./ M. Critical Damage). Allows use of Dimensional Barrier (for 15 sec. defends from 10 attacks). The effect doesn't stack with that of Talisman of Border, the Dimensional Talisman effect takes precedence. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
         <restriction dropable="false" sellable="false"/>
     </armor>
@@ -335,7 +313,6 @@
     </item>
     <weapon id="71755" name="Samurai Long Sword" icon="icon.weapon_samurai_old_longsword_i00">
         <!-- Special weapon created to celebrate the opening of the Essence server. Cannot be enchanted. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="C"/>
@@ -354,7 +331,6 @@
     </weapon>
     <weapon id="71756" name="Mace of Underworld" icon="icon.weapon_mace_of_underworld_i00">
         <!-- Special weapon created to celebrate the opening of the Essence server. Cannot be enchanted. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BOW"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="C"/>
@@ -374,7 +350,6 @@
     </weapon>
     <weapon id="71757" name="Demon's Staff" icon="icon.weapon_demons_staff_i00">
         <!-- Special weapon created to celebrate the opening of the Essence server. Cannot be enchanted. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="ETC"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
@@ -396,7 +371,6 @@
     </weapon>
     <weapon id="71758" name="Crystal Dagger" icon="icon.weapon_crystal_dagger_i00">
         <!-- Special weapon created to celebrate the opening of the Essence server. Cannot be enchanted. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DUAL"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="C"/>
@@ -416,7 +390,6 @@
     </weapon>
     <weapon id="71759" name="Eminence Bow" icon="icon.weapon_eminence_bow_i00">
         <!-- Special weapon created to celebrate the opening of the Essence server. Cannot be enchanted. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="RAPIER"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
@@ -438,7 +411,6 @@
     </weapon>
     <weapon id="71760" name="Orcish Poleaxe" icon="icon.weapon_orcish_poleaxe_i00">
         <!-- Special weapon created to celebrate the opening of the Essence server. Cannot be enchanted. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="ETC"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
@@ -459,7 +431,6 @@
     </weapon>
     <weapon id="71761" name="Katana*Katana" icon="icon.weapon_dual_sword_i00">
         <!-- Special weapon created to celebrate the opening of the Essence server. Cannot be enchanted. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="ANCIENTSWORD"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
@@ -479,7 +450,6 @@
     </weapon>
     <weapon id="71762" name="Yaksa Mace" icon="icon.weapon_yaksa_mace_i00">
         <!-- Special weapon created to celebrate the opening of the Essence server. Cannot be enchanted. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="POLE"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="C"/>
@@ -501,7 +471,6 @@
     </weapon>
     <weapon id="71763" name="Berserker Blade" icon="icon.weapon_berserker_blade_i00">
         <!-- Special weapon created to celebrate the opening of the Essence server. Cannot be enchanted. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
@@ -521,7 +490,6 @@
     </weapon>
     <weapon id="71764" name="Great Pata" icon="icon.weapon_great_pata_i00">
         <!-- Special weapon created to celebrate the opening of the Essence server. Cannot be enchanted. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="FISHINGROD"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
@@ -542,7 +510,6 @@
     </weapon>
     <weapon id="71765" name="Admiral's Estoc" icon="icon.weapon_blink_slasher_i00">
         <!-- Special weapon created to celebrate the opening of the Essence server. Cannot be enchanted. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="C"/>
         <set name="weight" val="1300"/>
@@ -558,7 +525,6 @@
     </weapon>
     <weapon id="71766" name="Saber Tooth" icon="icon.weapon_invincible_blade_i00">
         <!-- Special weapon created to celebrate the opening of the Essence server. Cannot be enchanted. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DUALBLUNT"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
@@ -579,7 +545,6 @@
     </weapon>
     <weapon id="71767" name="Samurai Black Long Sword" icon="icon.weapon_dual_sword_i00">
         <!-- Available for 30 days. Cannot be enchanted or endued with special characteristics. Cannot be exchanged, dropped, destroyed or sold in private store. Can be stored in private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="ANCIENTSWORD"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>

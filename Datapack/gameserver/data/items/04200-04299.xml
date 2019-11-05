@@ -18,7 +18,6 @@
     </item>
     <weapon id="4202" name="Chrono Cithara" icon="icon.weapon_chrono_cithara_i00">
         <!-- Chronicle I Souvenir! Cannot be dropped. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -149,7 +148,6 @@
     </item>
     <weapon id="4219" name="Dream Sword" icon="icon.weapon_knights_sword_i00">
         <!-- Cannot be exchanged, dropped, destroyed, sold, or stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -169,7 +167,6 @@
     </weapon>
     <weapon id="4220" name="Dream Knife" icon="icon.weapon_assassin_knife_i00">
         <!-- Cannot be exchanged, dropped, destroyed, sold, or stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DAGGER"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -190,7 +187,6 @@
     </weapon>
     <weapon id="4221" name="Ubiquitous Axe" icon="icon.weapon_tomahawk_i00">
         <!-- Cannot be exchanged, dropped, destroyed, sold, or stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -211,7 +207,6 @@
     </weapon>
     <armor id="4222" name="Dream Shield" icon="icon.shield_hoplon_i00">
         <!-- Cannot be exchanged, dropped, destroyed, sold, or stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="lhand"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="1380"/>
@@ -224,7 +219,6 @@
     </armor>
     <armor id="4223" name="Ubiquitous Shield" icon="icon.shield_dwarven_chain_shield_i00">
         <!-- Cannot be exchanged, dropped, destroyed, sold, or stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="lhand"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="1380"/>
@@ -237,7 +231,6 @@
     </armor>
     <armor id="4224" name="Dream Armor" icon="icon.armor_blast_plate_i00">
         <!-- Cannot be exchanged, dropped, destroyed, sold, or stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="HEAVY"/>
         <set name="bodypart" val="chest"/>
         <set name="immediate_effect" val="true"/>
@@ -249,7 +242,6 @@
     </armor>
     <armor id="4225" name="Dream Stockings" icon="icon.armor_mithril_gaiters_i00">
         <!-- Cannot be exchanged, dropped, destroyed, sold, or stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="HEAVY"/>
         <set name="bodypart" val="legs"/>
         <set name="immediate_effect" val="true"/>
@@ -261,7 +253,6 @@
     </armor>
     <armor id="4226" name="Dream Gloves" icon="icon.armor_gauntlet_i00">
         <!-- Cannot be exchanged, dropped, destroyed, sold, or stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="gloves"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="650"/>
@@ -272,7 +263,6 @@
     </armor>
     <armor id="4227" name="Dream Boots" icon="icon.armor_chain_boots_i00">
         <!-- Cannot be exchanged, dropped, destroyed, sold, or stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="feet"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="1310"/>
@@ -283,7 +273,6 @@
     </armor>
     <armor id="4228" name="Ubiquitous Armor" icon="icon.armor_compound_scale_mail_i00">
         <!-- Cannot be exchanged, dropped, destroyed, sold, or stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="HEAVY"/>
         <set name="bodypart" val="chest"/>
         <set name="immediate_effect" val="true"/>
@@ -295,7 +284,6 @@
     </armor>
     <armor id="4229" name="Ubiquitous Stockings" icon="icon.armor_compound_scale_gaiters_i00">
         <!-- Cannot be exchanged, dropped, destroyed, sold, or stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="HEAVY"/>
         <set name="bodypart" val="legs"/>
         <set name="immediate_effect" val="true"/>
@@ -307,7 +295,6 @@
     </armor>
     <armor id="4230" name="Ubiquitous Gloves" icon="icon.armor_manticor_skin_gloves_i00">
         <!-- Cannot be exchanged, dropped, destroyed, sold, or stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="gloves"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="650"/>
@@ -318,7 +305,6 @@
     </armor>
     <armor id="4231" name="Ubiquitous Boots" icon="icon.armor_iron_boots_i00">
         <!-- Cannot be exchanged, dropped, destroyed, sold, or stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="feet"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="1310"/>
@@ -338,7 +324,6 @@
     </item>
     <weapon id="4233" name="Fist" icon="icon.weapon_knuckle_dust_i00">
         <!-- When enchanted, P. Atk. of a dualsword increases more significantly than that of one-handed or fist weapon. Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DUALFIST"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;32;120"/>

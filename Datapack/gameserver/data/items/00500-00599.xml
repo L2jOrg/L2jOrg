@@ -1,7 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
     <armor id="500" name="Great Helmet" icon="icon.armor_helmet_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="head"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="96"/>
@@ -15,7 +14,6 @@
         </stats>
     </armor>
     <armor id="503" name="Zubei's Helmet" icon="icon.armor_helmet_i02">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="head"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="96"/>
@@ -29,7 +27,6 @@
         </stats>
     </armor>
     <armor id="512" name="Dark Crystal Helmet" icon="icon.armor_helmet_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="head"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="96"/>
@@ -43,7 +40,6 @@
         </stats>
     </armor>
     <armor id="517" name="Compound Helmet" icon="icon.armor_leather_helmet_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="head"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="147"/>
@@ -57,7 +53,6 @@
         </stats>
     </armor>
     <armor id="547" name="Tallum Helmet" icon="icon.armor_helmet_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="head"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="147"/>
@@ -71,7 +66,6 @@
         </stats>
     </armor>
     <armor id="553" name="Iron Boots" icon="icon.armor_t10_b_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="feet"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="92"/>
@@ -85,7 +79,6 @@
         </stats>
     </armor>
     <armor id="554" name="Sealed Zubei's Boots" icon="icon.armor_t64_b_i02">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="feet"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="69"/>
@@ -99,7 +92,6 @@
         </stats>
     </armor>
     <armor id="563" name="Dark Crystal Boots" icon="icon.armor_t15_b_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="feet"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="69"/>
@@ -113,7 +105,6 @@
         </stats>
     </armor>
     <armor id="572" name="Boots of Silence" icon="icon.armor_t65_b_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="feet"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="69"/>
@@ -127,7 +118,6 @@
         </stats>
     </armor>
     <armor id="582" name="Paradia Boots" icon="icon.armor_t68_b_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="feet"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="107"/>
@@ -141,7 +131,6 @@
         </stats>
     </armor>
     <armor id="583" name="Majestic Boots" icon="icon.armor_t45_b_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="feet"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="107"/>
@@ -155,7 +144,6 @@
         </stats>
     </armor>
     <armor id="588" name="Elemental Boots" icon="icon.armor_t71_b_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="feet"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="107"/>
@@ -169,7 +157,6 @@
         </stats>
     </armor>
     <armor id="590" name="Boots of Grace" icon="icon.armor_t71_b_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="feet"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="107"/>
@@ -183,7 +170,6 @@
         </stats>
     </armor>
     <armor id="595" name="Boots of Blessing" icon="icon.armor_t56_b_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="feet"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="69"/>
@@ -197,7 +183,6 @@
         </stats>
     </armor>
     <armor id="598" name="Tallum Boots" icon="icon.armor_t45_b_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="feet"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="69"/>

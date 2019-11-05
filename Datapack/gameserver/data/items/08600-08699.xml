@@ -54,7 +54,6 @@
     </item>
     <weapon id="8678" name="Sirra's Blade" icon="icon.weapon_sirr_blade_i00">
         <!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -79,7 +78,6 @@
     </weapon>
     <weapon id="8679" name="Sword of Ipos" icon="icon.weapon_sword_of_ipos_i00">
         <!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;46;120"/>
@@ -104,7 +102,6 @@
     </weapon>
     <weapon id="8680" name="Barakiel's Axe" icon="icon.weapon_barakiel_axe_i00">
         <!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -129,7 +126,6 @@
     </weapon>
     <weapon id="8681" name="Behemoth' Tuning Fork" icon="icon.weapon_tuning_fork_of_behemoth_i00">
         <!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;44;120"/>
@@ -154,7 +150,6 @@
     </weapon>
     <weapon id="8682" name="Naga Storm" icon="icon.weapon_naga_storm_i00">
         <!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DAGGER"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -179,7 +174,6 @@
     </weapon>
     <weapon id="8683" name="Tiphon's Spear" icon="icon.weapon_tiphon_spear_i00">
         <!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="POLE"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;66;120"/>
@@ -207,7 +201,6 @@
     </weapon>
     <weapon id="8684" name="Shyeed's Bow" icon="icon.weapon_shyid_bow_i00">
         <!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BOW"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;10;0"/>
@@ -235,7 +228,6 @@
     </weapon>
     <weapon id="8685" name="Sobekk's Hurricane" icon="icon.weapon_sobekk_hurricane_i00">
         <!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DUALFIST"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;32;120"/>
@@ -260,7 +252,6 @@
     </weapon>
     <weapon id="8686" name="Themis' Tongue" icon="icon.weapon_tongue_of_themis_i00">
         <!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -285,7 +276,6 @@
     </weapon>
     <weapon id="8687" name="Cabrio's Hand" icon="icon.weapon_hand_of_cabrio_i00">
         <!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -311,7 +301,6 @@
     </weapon>
     <weapon id="8688" name="Daimon Crystal" icon="icon.weapon_crystal_of_deamon_i00">
         <!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;40;120"/>

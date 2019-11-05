@@ -10,7 +10,6 @@
     </item>
     <armor id="13340" name="Agathion - Love (Event)" icon="icon.etc_rbracelet_aga_agit_i00">
         <!-- A bracelet that can summon an Love Agathion. A 7-day item. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="lbracelet"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="30"/>

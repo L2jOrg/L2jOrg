@@ -2,7 +2,6 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
     <armor id="9589" name="Iron Bracelet" icon="icon.etc_rbracelet_c_i00">
         <!-- When equipped, opens up 1 Talisman slot. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="rbracelet"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="72"/>
@@ -16,7 +15,6 @@
     </armor>
     <armor id="9590" name="Bronze Bracelet" icon="icon.etc_rbracelet_b_i01">
         <!-- When equipped, opens up 2 Talisman slots. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="rbracelet"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="53"/>
@@ -30,7 +28,6 @@
     </armor>
     <armor id="9591" name="Steel Bracelet" icon="icon.etc_rbracelet_a_i02">
         <!-- When equipped, opens up 3 Talisman slots. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="rbracelet"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="61"/>

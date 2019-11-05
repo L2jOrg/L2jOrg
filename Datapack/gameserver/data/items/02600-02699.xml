@@ -2,7 +2,6 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
     <weapon id="2600" name="Raid Sword*Caliburs" icon="icon.weapon_dual_sword_i00">
         <!-- When enchanted, P. Atk. of a dual swords, two-handed swords, blunt and fist weapons increases more significantly than that of one-handed swords. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DUAL"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;44;120"/>
@@ -29,7 +28,6 @@
     </weapon>
     <weapon id="2601" name="Raid Sword*Ultimate Sword" icon="icon.weapon_dual_sword_i00">
         <!-- When enchanted, P. Atk. of a dual swords, two-handed swords, blunt and fist weapons increases more significantly than that of one-handed swords. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DUAL"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;44;120"/>
@@ -56,7 +54,6 @@
     </weapon>
     <weapon id="2602" name="Raid Sword*Sword of Delusion" icon="icon.weapon_dual_sword_i00">
         <!-- When enchanted, P. Atk. of a dual swords, two-handed swords, blunt and fist weapons increases more significantly than that of one-handed swords. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DUAL"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;44;120"/>
@@ -83,7 +80,6 @@
     </weapon>
     <weapon id="2603" name="Raid Sword*Sword of Nightmare" icon="icon.weapon_dual_sword_i00">
         <!-- When enchanted, P. Atk. of a dual swords, two-handed swords, blunt and fist weapons increases more significantly than that of one-handed swords. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DUAL"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;44;120"/>
@@ -110,7 +106,6 @@
     </weapon>
     <weapon id="2604" name="Raid Sword*Tsurugi" icon="icon.weapon_dual_sword_i00">
         <!-- When enchanted, P. Atk. of a dual swords, two-handed swords, blunt and fist weapons increases more significantly than that of one-handed swords. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DUAL"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;44;120"/>
@@ -137,7 +132,6 @@
     </weapon>
     <weapon id="2605" name="Raid Sword*Samurai Long Sword" icon="icon.weapon_dual_sword_i00">
         <!-- When enchanted, P. Atk. of a dual swords, two-handed swords, blunt and fist weapons increases more significantly than that of one-handed swords. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DUAL"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;44;120"/>
@@ -164,7 +158,6 @@
     </weapon>
     <weapon id="2606" name="Caliburs*Caliburs" icon="icon.weapon_dual_sword_i00">
         <!-- When enchanted, P. Atk. of a dual swords, two-handed swords, blunt and fist weapons increases more significantly than that of one-handed swords. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DUAL"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;44;120"/>
@@ -191,7 +184,6 @@
     </weapon>
     <weapon id="2607" name="Caliburs*Ultimate Sword" icon="icon.weapon_dual_sword_i00">
         <!-- When enchanted, P. Atk. of a dual swords, two-handed swords, blunt and fist weapons increases more significantly than that of one-handed swords. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DUAL"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;44;120"/>
@@ -218,7 +210,6 @@
     </weapon>
     <weapon id="2608" name="Caliburs*Sword of Delusion" icon="icon.weapon_dual_sword_i00">
         <!-- When enchanted, P. Atk. of a dual swords, two-handed swords, blunt and fist weapons increases more significantly than that of one-handed swords. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DUAL"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;44;120"/>
@@ -245,7 +236,6 @@
     </weapon>
     <weapon id="2609" name="Caliburs*Sword of Nightmare" icon="icon.weapon_dual_sword_i00">
         <!-- When enchanted, P. Atk. of a dual swords, two-handed swords, blunt and fist weapons increases more significantly than that of one-handed swords. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DUAL"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;44;120"/>
@@ -272,7 +262,6 @@
     </weapon>
     <weapon id="2610" name="Caliburs*Tsurugi" icon="icon.weapon_dual_sword_i00">
         <!-- When enchanted, P. Atk. of a dual swords, two-handed swords, blunt and fist weapons increases more significantly than that of one-handed swords. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DUAL"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;44;120"/>
@@ -299,7 +288,6 @@
     </weapon>
     <weapon id="2611" name="Caliburs*Samurai Long Sword" icon="icon.weapon_dual_sword_i00">
         <!-- When enchanted, P. Atk. of a dual swords, two-handed swords, blunt and fist weapons increases more significantly than that of one-handed swords. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DUAL"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;44;120"/>
@@ -326,7 +314,6 @@
     </weapon>
     <weapon id="2612" name="Ultimate Sword*Ultimate Sword" icon="icon.weapon_dual_sword_i00">
         <!-- When enchanted, P. Atk. of a dual swords, two-handed swords, blunt and fist weapons increases more significantly than that of one-handed swords. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DUAL"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;44;120"/>
@@ -353,7 +340,6 @@
     </weapon>
     <weapon id="2613" name="Ultimate Sword*Sword of Delusion" icon="icon.weapon_dual_sword_i00">
         <!-- When enchanted, P. Atk. of a dual swords, two-handed swords, blunt and fist weapons increases more significantly than that of one-handed swords. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DUAL"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;44;120"/>
@@ -380,7 +366,6 @@
     </weapon>
     <weapon id="2614" name="Ultimate Sword*Sword of Nightmare" icon="icon.weapon_dual_sword_i00">
         <!-- When enchanted, P. Atk. of a dual swords, two-handed swords, blunt and fist weapons increases more significantly than that of one-handed swords. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DUAL"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;44;120"/>
@@ -407,7 +392,6 @@
     </weapon>
     <weapon id="2615" name="Ultimate Sword*Tsurugi" icon="icon.weapon_dual_sword_i00">
         <!-- When enchanted, P. Atk. of a dual swords, two-handed swords, blunt and fist weapons increases more significantly than that of one-handed swords. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DUAL"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;44;120"/>
@@ -434,7 +418,6 @@
     </weapon>
     <weapon id="2616" name="Ultimate Sword*Samurai Long Sword" icon="icon.weapon_dual_sword_i00">
         <!-- When enchanted, P. Atk. of a dual swords, two-handed swords, blunt and fist weapons increases more significantly than that of one-handed swords. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DUAL"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;44;120"/>
@@ -461,7 +444,6 @@
     </weapon>
     <weapon id="2617" name="Sword of Delusion*Sword of Delusion" icon="icon.weapon_dual_sword_i00">
         <!-- When enchanted, P. Atk. of a dual swords, two-handed swords, blunt and fist weapons increases more significantly than that of one-handed swords. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DUAL"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;44;120"/>
@@ -488,7 +470,6 @@
     </weapon>
     <weapon id="2618" name="Sword of Delusion*Sword of Nightmare" icon="icon.weapon_dual_sword_i00">
         <!-- When enchanted, P. Atk. of a dual swords, two-handed swords, blunt and fist weapons increases more significantly than that of one-handed swords. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DUAL"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;44;120"/>
@@ -515,7 +496,6 @@
     </weapon>
     <weapon id="2619" name="Sword of Delusion*Tsurugi" icon="icon.weapon_dual_sword_i00">
         <!-- When enchanted, P. Atk. of a dual swords, two-handed swords, blunt and fist weapons increases more significantly than that of one-handed swords. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DUAL"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;44;120"/>
@@ -542,7 +522,6 @@
     </weapon>
     <weapon id="2620" name="Sword of Delusion*Samurai Long Sword" icon="icon.weapon_dual_sword_i00">
         <!-- When enchanted, P. Atk. of a dual swords, two-handed swords, blunt and fist weapons increases more significantly than that of one-handed swords. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DUAL"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;44;120"/>
@@ -569,7 +548,6 @@
     </weapon>
     <weapon id="2621" name="Sword of Nightmare*Sword of Nightmare" icon="icon.weapon_dual_sword_i00">
         <!-- When enchanted, P. Atk. of a dual swords, two-handed swords, blunt and fist weapons increases more significantly than that of one-handed swords. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DUAL"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;44;120"/>
@@ -596,7 +574,6 @@
     </weapon>
     <weapon id="2622" name="Sword of Nightmare*Tsurugi" icon="icon.weapon_dual_sword_i00">
         <!-- When enchanted, P. Atk. of a dual swords, two-handed swords, blunt and fist weapons increases more significantly than that of one-handed swords. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DUAL"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;44;120"/>
@@ -623,7 +600,6 @@
     </weapon>
     <weapon id="2623" name="Sword of Nightmare*Samurai Long Sword" icon="icon.weapon_dual_sword_i00">
         <!-- When enchanted, P. Atk. of a dual swords, two-handed swords, blunt and fist weapons increases more significantly than that of one-handed swords. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DUAL"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;44;120"/>
@@ -650,7 +626,6 @@
     </weapon>
     <weapon id="2624" name="Tsurugi*Tsurugi" icon="icon.weapon_dual_sword_i00">
         <!-- When enchanted, P. Atk. of a dual swords, two-handed swords, blunt and fist weapons increases more significantly than that of one-handed swords. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DUAL"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;44;120"/>
@@ -677,7 +652,6 @@
     </weapon>
     <weapon id="2625" name="Tsurugi*Samurai Long Sword" icon="icon.weapon_dual_sword_i00">
         <!-- When enchanted, P. Atk. of a dual swords, two-handed swords, blunt and fist weapons increases more significantly than that of one-handed swords. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DUAL"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;44;120"/>
@@ -704,7 +678,6 @@
     </weapon>
     <weapon id="2626" name="Samurai Long Sword*Samurai Long Sword" icon="icon.weapon_dual_sword_i00">
         <!-- When enchanted, P. Atk. of a dual swords, two-handed swords, blunt and fist weapons increases more significantly than that of one-handed swords. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DUAL"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;44;120"/>

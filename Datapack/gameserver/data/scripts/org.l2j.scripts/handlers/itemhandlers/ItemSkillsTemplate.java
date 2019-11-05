@@ -6,7 +6,6 @@ import org.l2j.gameserver.handler.IItemHandler;
 import org.l2j.gameserver.model.actor.Playable;
 import org.l2j.gameserver.model.effects.EffectType;
 import org.l2j.gameserver.model.holders.ItemSkillHolder;
-import org.l2j.gameserver.model.holders.SkillHolder;
 import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.model.skills.SkillCaster;
@@ -15,6 +14,9 @@ import org.l2j.gameserver.network.serverpackets.SystemMessage;
 
 import java.util.List;
 
+import static java.util.Objects.isNull;
+import static java.util.Objects.nonNull;
+import static org.l2j.commons.util.Util.isNullOrEmpty;
 import static org.l2j.gameserver.util.GameUtils.isPet;
 import static org.l2j.gameserver.util.GameUtils.isPlayer;
 
@@ -22,115 +24,98 @@ import static org.l2j.gameserver.util.GameUtils.isPlayer;
  * Template for item skills handler.
  * @author Zoey76
  */
-public class ItemSkillsTemplate implements IItemHandler
-{
+public class ItemSkillsTemplate implements IItemHandler {
+
     @Override
-    public boolean useItem(Playable playable, Item item, boolean forceUse)
-    {
-        if (!isPlayer(playable) && !isPet(playable))
-        {
+    public boolean useItem(Playable playable, Item item, boolean forceUse) {
+
+        if (!isPlayer(playable) && !isPet(playable)) {
             return false;
         }
 
         // Pets can use items only when they are tradable.
-        if (isPet(playable) && !item.isTradeable())
-        {
+        if (isPet(playable) && !item.isTradeable()) {
             playable.sendPacket(SystemMessageId.YOUR_PET_CANNOT_CARRY_THIS_ITEM);
             return false;
         }
 
         // Verify that item is not under reuse.
-        if (!checkReuse(playable, null, item))
-        {
+        if (!checkReuse(playable, null, item)) {
             return false;
         }
 
         final List<ItemSkillHolder> skills = item.getItem().getSkills(ItemSkillType.NORMAL);
-        if (skills == null)
-        {
-            LOGGER.info("Item " + item + " does not have registered any skill for handler.");
+        if(isNullOrEmpty(skills)) {
+            LOGGER.info("Item {} does not have registered any skill for handler.", item);
             return false;
         }
 
         boolean hasConsumeSkill = false;
         boolean successfulUse = false;
 
-        for (SkillHolder skillInfo : skills)
-        {
-            if (skillInfo == null)
-            {
+        for (var skillInfo : skills) {
+
+            if (isNull(skillInfo)) {
                 continue;
             }
 
-            final Skill itemSkill = skillInfo.getSkill();
+            var itemSkill = skillInfo.getSkill();
 
-            if (itemSkill != null)
-            {
-                if (itemSkill.hasEffectType(EffectType.EXTRACT_ITEM) && (playable.getActingPlayer() != null) && !playable.getActingPlayer().isInventoryUnder80(false))
-                {
-                    playable.getActingPlayer().sendPacket(SystemMessageId.UNABLE_TO_PROCESS_THIS_REQUEST_UNTIL_YOUR_INVENTORY_S_WEIGHT_AND_SLOT_COUNT_ARE_LESS_THAN_80_PERCENT_OF_CAPACITY);
+            if (nonNull(itemSkill)) {
+
+                var player  = playable.getActingPlayer();
+
+                if (itemSkill.hasEffectType(EffectType.EXTRACT_ITEM) && nonNull(player) && !playable.getActingPlayer().isInventoryUnder80(false)) {
+                    player.sendPacket(SystemMessageId.UNABLE_TO_PROCESS_THIS_REQUEST_UNTIL_YOUR_INVENTORY_S_WEIGHT_AND_SLOT_COUNT_ARE_LESS_THAN_80_PERCENT_OF_CAPACITY);
                     return false;
                 }
 
-                if (itemSkill.getItemConsumeId() > 0)
-                {
+                if (itemSkill.getItemConsumeId() > 0) {
                     hasConsumeSkill = true;
                 }
 
-                if (!itemSkill.hasEffectType(EffectType.SUMMON_PET) && !itemSkill.checkCondition(playable, playable.getTarget()))
-                {
+                if (!itemSkill.hasEffectType(EffectType.SUMMON_PET) && !itemSkill.checkCondition(playable, playable.getTarget())) {
                     continue;
                 }
 
-                if (playable.isSkillDisabled(itemSkill))
-                {
+                if (playable.isSkillDisabled(itemSkill)) {
                     continue;
                 }
 
                 // Verify that skill is not under reuse.
-                if (!checkReuse(playable, itemSkill, item))
-                {
+                if (!checkReuse(playable, itemSkill, item)) {
                     continue;
                 }
 
-                if (!item.isPotion() && !item.isElixir() && !item.isScroll() && playable.isCastingNow())
-                {
+                if (!item.isPotion() && !item.isElixir() && !item.isScroll() && playable.isCastingNow()) {
                     continue;
                 }
 
                 // Send message to the master.
-                if (isPet(playable))
-                {
+                if (isPet(playable)) {
                     final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOUR_PET_USES_S1);
                     sm.addSkillName(itemSkill);
                     playable.sendPacket(sm);
                 }
 
-                if (isPlayer(playable) && itemSkill.hasEffectType(EffectType.SUMMON_PET))
-                {
+                if (isPlayer(playable) && itemSkill.hasEffectType(EffectType.SUMMON_PET)) {
                     playable.doCast(itemSkill);
                     successfulUse = true;
                 }
-                else if (itemSkill.isWithoutAction() || item.getItem().hasImmediateEffect() || item.getItem().hasExImmediateEffect())
-                {
+                else if (itemSkill.isWithoutAction() || item.getItem().hasImmediateEffect() || item.getItem().hasExImmediateEffect()) {
                     SkillCaster.triggerCast(playable, null, itemSkill, item, false);
                     successfulUse = true;
                 }
-                else
-                {
+                else {
                     playable.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
-                    if (playable.useMagic(itemSkill, item, forceUse, false))
-                    {
+                    if (playable.useMagic(itemSkill, item, forceUse, false)) {
                         successfulUse = true;
-                    }
-                    else
-                    {
+                    } else {
                         continue;
                     }
                 }
 
-                if (itemSkill.getReuseDelay() > 0)
-                {
+                if (itemSkill.getReuseDelay() > 0) {
                     playable.addTimeStamp(itemSkill, itemSkill.getReuseDelay());
                 }
             }

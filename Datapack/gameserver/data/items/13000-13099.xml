@@ -33,7 +33,6 @@
     </item>
     <armor id="13025" name="Agathion - Joy" icon="icon.etc_rbracelet_aga_agit_i00">
         <!-- Enables to summon Agathion of Joy when equipped. <Skill used>. 1. Agathion's Escape: Allows to relocate to Giran, Gludio, Dion, Oren, Hunters Village. (Cooldown: 1 min). <Item Skill>. 1. Search for Evidence: Speed +66 for 15 sec. <Item Skill>. 2. Hidden Search: monsters don't attack first. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="agathion"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="30"/>

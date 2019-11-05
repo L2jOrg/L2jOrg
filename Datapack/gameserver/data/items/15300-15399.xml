@@ -1,7 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
     <weapon id="15300" name="Transparent Dual (NPC)" icon="icon.weapon_dual_sword_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DUAL"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
@@ -20,7 +19,6 @@
         </stats>
     </weapon>
     <weapon id="15301" name="Transparent Pole (NPC)" icon="icon.weapon_long_spear_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="POLE"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
@@ -43,7 +41,6 @@
         </stats>
     </weapon>
     <weapon id="15302" name="Transparent Bow (NPC)" icon="icon.weapon_long_bow_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BOW"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
@@ -64,7 +61,6 @@
         </stats>
     </weapon>
     <weapon id="15303" name="Transparent Claw (NPC)" icon="icon.weapon_foxs_nail_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DUALFIST"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
@@ -84,7 +80,6 @@
         </stats>
     </weapon>
     <weapon id="15304" name="Transparent Crossbow (NPC)" icon="icon.weapon_hunting_gun_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="CROSSBOW"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
@@ -104,7 +99,6 @@
         </stats>
     </weapon>
     <weapon id="15305" name="Transparent Rapier (NPC)" icon="icon.weapon_rapier_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="RAPIER"/>
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
@@ -124,7 +118,6 @@
         </stats>
     </weapon>
     <weapon id="15306" name="Transparent Dual Dagger (NPC)" icon="icon.dual_dagger_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DUALDAGGER"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>

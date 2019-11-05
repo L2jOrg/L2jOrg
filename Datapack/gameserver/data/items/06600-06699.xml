@@ -2,7 +2,6 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
     <weapon id="6611" name="Infinity Sword" icon="icon.weapon_the_sword_of_hero_i00">
         <!-- Divine hero's weapon. Gives a character special abilities, allows to use Infinity Power. Inflicts additional damage during PvP. The item cannot be transferred to another server. Special Ability: Infinity Sword. Max HP +20%, Max MP +15%, Max CP +30%, P. Atk. +10%, Atk. Speed +5%, when equipped. Infinity Power - Reflect: for 5 min. damage received +8%. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -31,7 +30,6 @@
     </weapon>
     <weapon id="6612" name="Infinity Slasher" icon="icon.weapon_the_two_handed_sword_of_hero_i00">
         <!-- Divine hero's weapon. Gives a character special abilities, allows to use Infinity Power. Inflicts additional damage during PvP. The item cannot be transferred to another server. Special Ability: Infinity Slasher. Max HP +20%, Max MP +15%, Max CP +30%, P. Atk. +10%, P. Critical Damage +10%, when equipped. Infinity Power - Protection: for 2 min. makes you immune to debuffs 5 times. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;44;120"/>
@@ -60,7 +58,6 @@
     </weapon>
     <weapon id="6613" name="Infinity Axe" icon="icon.weapon_the_axe_of_hero_i00">
         <!-- Divine hero's weapon. Gives a character special abilities, allows to use Infinity Power. Inflicts additional damage during PvP. The item cannot be transferred to another server. Special Ability: Infinity Axe. Max HP +20%, Max MP +15%, Max CP +30%, P. Atk. +10%, Atk. Speed +5%, when equipped. Infinity Power - Tenacity: for 2 min. returns 10% of the received damage back to the enemy. Recovers ??. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -90,7 +87,6 @@
     </weapon>
     <weapon id="6614" name="Infinity Rod" icon="icon.weapon_the_mace_of_hero_i00">
         <!-- Divine hero's weapon. Gives a character special abilities, allows to use Infinity Power. Inflicts additional damage during PvP. The item cannot be transferred to another server. Special Ability: Infinity Rod. Max HP +10%, Max MP +25%, Max CP +30%, M. Critical Rate +20, Casting Spd. +5%, when equipped. Infinity Power - Mana Limit: for 30 sec. magic skills don't consume MP. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -120,7 +116,6 @@
     </weapon>
     <weapon id="6616" name="Infinity Scepter" icon="icon.weapon_the_staff_of_hero_i00">
         <!-- Divine hero's weapon. Gives a character special abilities, allows to use Infinity Power. Inflicts additional damage during PvP. The item cannot be transferred to another server. Special Ability: Infinity Scepter. Max HP +10%, Max MP +25%, Max CP +30%, M. Atk. +10%, P. Critical Damage +10%, when equipped. Infinity Power - Vampiric Mana: for 5 min. recovers MP, equal to the certain percent of inflicted damage with a certain probability. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;44;120"/>
@@ -150,7 +145,6 @@
     </weapon>
     <weapon id="6617" name="Infinity Dagger" icon="icon.weapon_the_dagger_of_hero_i00">
         <!-- Divine hero's weapon. Gives a character special abilities, allows to use Infinity Power. Inflicts additional damage during PvP. The item cannot be transferred to another server. Special Ability: Infinity Dagger. Max HP +15%, Max MP +25%, Max CP +30%, M. Critical Rate +20, P. Critical Damage +20%, when equipped. Infinity Power - Immortal: for 5 min. increases the chance of deadly attack. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DAGGER"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -180,7 +174,6 @@
     </weapon>
     <weapon id="6618" name="Infinity Fighter" icon="icon.weapon_the_fist_of_hero_i00">
         <!-- Divine hero's weapon. Gives a character special abilities, allows to use Infinity Power. Inflicts additional damage during PvP. The item cannot be transferred to another server. Special Ability: Infinity Fighter. Max HP +20%, Max MP +15%, Max CP +30%, P. Critical Rate +20, Atk. Spd. +5%, when equipped. Infinity Power - Protection: for 2 min. makes you immune to debuffs 5 times. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DUALFIST"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;32;120"/>
@@ -210,7 +203,6 @@
     </weapon>
     <weapon id="6619" name="Infinity Bow" icon="icon.weapon_the_bow_of_hero_i00">
         <!-- Divine hero's weapon. Gives a character special abilities, allows to use Infinity Power. Inflicts additional damage during PvP. The item cannot be transferred to another server. Special Ability: Infinity Bow. Max HP +15%, Max MP +25%, Max CP +30%, MP Consumption -5%, Atk. Spd. +10%, when equipped. Infinity Power - Archery: for 5 min. increases Speed and the bow's range. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BOW"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;10;0"/>
@@ -242,7 +234,6 @@
     </weapon>
     <weapon id="6620" name="Infinity Dualsword" icon="icon.weapon_the_dualsword_of_hero_i00">
         <!-- Divine hero's weapon. Gives a character special abilities, allows to use Infinity Power. Inflicts additional damage during PvP. The item cannot be transferred to another server. Special Ability: Infinity Dualsword. Max HP +20%, Max MP +15%, Max CP +30%, P. Atk. +5%, P. Critical Damage +5%, Atk. Spd. +5%, when equipped. Infinity Power - Refresh: for 5 min. decreases cooldown by 10%. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DUAL"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;44;120"/>
@@ -271,7 +262,6 @@
     </weapon>
     <weapon id="6621" name="Infinity Spear" icon="icon.weapon_the_pole_of_hero_i00">
         <!-- Divine hero's weapon. Gives a character special abilities, allows to use Infinity Power. Inflicts additional damage during PvP. The item cannot be transferred to another server. Special Ability: Infinity Spear. Max HP +20%, Max MP +15%, Max CP +30%, P. Atk. +10%, P. Critical Damage +10%, when equipped. Infinity Power - Tenacity: for 2 min. returns 10% of the received damage back to the enemy. Recovers ??. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="POLE"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;66;120"/>
@@ -337,7 +327,6 @@
     </item>
     <armor id="6660" name="Queen Ant's Ring" icon="icon.accessory_ring_of_queen_ant_i00">
         <!-- MP +9, Poison Resistance and Atk. Rate +10%, P. /M. Accuracy +1, P. /M. Atk. +4%. The effect doesn't stack if two identical rings are worn. Cannot be enchanted. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="rfinger;lfinger"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="150"/>
@@ -354,7 +343,6 @@
     </armor>
     <armor id="6661" name="Orfen's Earring" icon="icon.accessory_earring_of_orfen_i00">
         <!-- MP +19, Mental Resistance and Atk. Rate +5%, Hold Resistance and Atk. Rate +10%, Healing Power +2%, Skill MP Consumption -2%. The effect doesn't stack if two identical earrings are worn. Cannot be enchanted. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="rear;lear"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="150"/>
@@ -371,7 +359,6 @@
     </armor>
     <armor id="6662" name="Ring of Core" icon="icon.accessory_ring_of_core_i00">
         <!-- MP +9, Mental Resistance and Atk. Rate +10%, P. / M. Evasion +1, Received Damage -2%. The effect doesn't stack if two identical rings are worn. Cannot be enchanted. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="rfinger;lfinger"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="150"/>
@@ -388,7 +375,6 @@
     </armor>
     <armor id="6674" name="Sealed Imperial Crusader Breastplate" icon="icon.armor_t88_u_i02">
         <!-- The seal can be removed by a blacksmith in any village. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="HEAVY"/>
         <set name="bodypart" val="chest"/>
         <set name="immediate_effect" val="true"/>
@@ -402,7 +388,6 @@
     </armor>
     <armor id="6675" name="Sealed Imperial Crusader Gaiters" icon="icon.armor_t88_l_i02">
         <!-- The seal can be removed by a blacksmith in any village. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="HEAVY"/>
         <set name="bodypart" val="legs"/>
         <set name="immediate_effect" val="true"/>
@@ -416,7 +401,6 @@
     </armor>
     <armor id="6676" name="Sealed Imperial Crusader Gauntlets" icon="icon.armor_t88_g_i02">
         <!-- The seal can be removed by a blacksmith in any village. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="gloves"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="S"/>
@@ -429,7 +413,6 @@
     </armor>
     <armor id="6677" name="Sealed Imperial Crusader Boots" icon="icon.armor_t88_b_i02">
         <!-- The seal can be removed by a blacksmith in any village. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="feet"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="S"/>
@@ -442,7 +425,6 @@
     </armor>
     <armor id="6678" name="Sealed Imperial Crusader Shield" icon="icon.shield_imperial_crusader_shield_i02">
         <!-- The seal can be removed by a blacksmith in any village. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="S"/>
         <set name="weight" val="1170"/>
@@ -456,7 +438,6 @@
     </armor>
     <armor id="6679" name="Sealed Imperial Crusader Helmet" icon="icon.armor_helmet_i02">
         <!-- The seal can be removed by a blacksmith in any village. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="head"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="S"/>
@@ -469,7 +450,6 @@
     </armor>
     <armor id="6680" name="Sealed Draconic Leather Armor" icon="icon.armor_t89_ul_i02">
         <!-- The seal can be removed by a blacksmith in any village. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="LIGHT"/>
         <set name="bodypart" val="onepiece"/>
         <set name="immediate_effect" val="true"/>
@@ -483,7 +463,6 @@
     </armor>
     <armor id="6681" name="Sealed Draconic Leather Gloves" icon="icon.armor_t89_g_i02">
         <!-- The seal can be removed by a blacksmith in any village. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="gloves"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="S"/>
@@ -496,7 +475,6 @@
     </armor>
     <armor id="6682" name="Sealed Draconic Leather Boots" icon="icon.armor_t89_b_i02">
         <!-- The seal can be removed by a blacksmith in any village. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="feet"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="S"/>
@@ -509,7 +487,6 @@
     </armor>
     <armor id="6683" name="Sealed Draconic Leather Helmet" icon="icon.armor_leather_helmet_i02">
         <!-- The seal can be removed by a blacksmith in any village. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="head"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="S"/>
@@ -522,7 +499,6 @@
     </armor>
     <armor id="6684" name="Sealed Major Arcana Robe" icon="icon.armor_t90_ul_i02">
         <!-- The seal can be removed by a blacksmith in any village. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="MAGIC"/>
         <set name="bodypart" val="onepiece"/>
         <set name="immediate_effect" val="true"/>
@@ -537,7 +513,6 @@
     </armor>
     <armor id="6685" name="Sealed Major Arcana Gloves" icon="icon.armor_t90_g_i02">
         <!-- The seal can be removed by a blacksmith in any village. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="gloves"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="S"/>
@@ -550,7 +525,6 @@
     </armor>
     <armor id="6686" name="Sealed Major Arcana Boots" icon="icon.armor_t90_b_i02">
         <!-- The seal can be removed by a blacksmith in any village. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="feet"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="S"/>
@@ -563,7 +537,6 @@
     </armor>
     <armor id="6687" name="Sealed Major Arcana Circlet" icon="icon.armor_circlet_i02">
         <!-- The seal can be removed by a blacksmith in any village. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="head"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="S"/>

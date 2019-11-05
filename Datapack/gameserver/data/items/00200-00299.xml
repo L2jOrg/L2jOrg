@@ -2,7 +2,6 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
     <weapon id="200" name="Sage's Staff" icon="icon.weapon_sages_staff_i00">
         <!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;46;120"/>
@@ -28,7 +27,6 @@
     </weapon>
     <weapon id="201" name="Club of Nature" icon="icon.weapon_club_of_nature_i00">
         <!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -54,7 +52,6 @@
     </weapon>
     <weapon id="202" name="Mace of Underworld" icon="icon.weapon_mace_of_underworld_i00">
         <!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -80,7 +77,6 @@
     </weapon>
     <weapon id="203" name="Pa'agrio Axe" icon="icon.weapon_paagrio_axe_i00">
         <!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;46;120"/>
@@ -106,7 +102,6 @@
     </weapon>
     <weapon id="204" name="Deadman's Staff" icon="icon.weapon_deadmans_staff_i00">
         <!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;46;120"/>
@@ -132,7 +127,6 @@
     </weapon>
     <weapon id="205" name="Ghoul's Staff" icon="icon.weapon_ghouls_staff_i00">
         <!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;46;120"/>
@@ -158,7 +152,6 @@
     </weapon>
     <weapon id="206" name="Demon's Staff" icon="icon.weapon_demons_staff_i00">
         <!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;46;120"/>
@@ -183,7 +176,6 @@
         </stats>
     </weapon>
     <weapon id="207" name="Staff of Phantom" icon="icon.weapon_apprentices_staff_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;46;120"/>
@@ -208,7 +200,6 @@
         </stats>
     </weapon>
     <weapon id="208" name="Staff of Seal" icon="icon.weapon_apprentices_staff_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;46;120"/>
@@ -233,7 +224,6 @@
         </stats>
     </weapon>
     <weapon id="209" name="Divine Staff" icon="icon.weapon_apprentices_staff_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;46;120"/>
@@ -259,7 +249,6 @@
     </weapon>
     <weapon id="210" name="Staff of Evil Spirits" icon="icon.weapon_staff_of_evil_sprit_i00">
         <!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;46;120"/>
@@ -284,7 +273,6 @@
         </stats>
     </weapon>
     <weapon id="211" name="Staff of Nobility" icon="icon.weapon_apprentices_staff_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;46;120"/>
@@ -310,7 +298,6 @@
     </weapon>
     <weapon id="212" name="Dasparion's Staff" icon="icon.weapon_dasparions_staff_i00">
         <!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;46;120"/>
@@ -336,7 +323,6 @@
     </weapon>
     <weapon id="213" name="Branch of the Mother Tree" icon="icon.weapon_worldtrees_branch_i00">
         <!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -361,7 +347,6 @@
         </stats>
     </weapon>
     <weapon id="215" name="Doom Dagger" icon="icon.weapon_doomed_dagger_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DAGGER"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -382,7 +367,6 @@
         </stats>
     </weapon>
     <weapon id="216" name="Dirk" icon="icon.weapon_dirk_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DAGGER"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -403,7 +387,6 @@
         </stats>
     </weapon>
     <weapon id="217" name="Shining Knife" icon="icon.weapon_shining_knife_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DAGGER"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -424,7 +407,6 @@
         </stats>
     </weapon>
     <weapon id="218" name="Throwing Knife" icon="icon.weapon_throw_knife_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DAGGER"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -445,7 +427,6 @@
         </stats>
     </weapon>
     <weapon id="219" name="Sword Breaker" icon="icon.weapon_sword_breaker_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DAGGER"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -466,7 +447,6 @@
         </stats>
     </weapon>
     <weapon id="220" name="Crafted Dagger" icon="icon.weapon_handiwork_dagger_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DAGGER"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -490,7 +470,6 @@
         </stats>
     </weapon>
     <weapon id="221" name="Assassin Knife" icon="icon.weapon_assassin_knife_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DAGGER"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -514,7 +493,6 @@
         </stats>
     </weapon>
     <weapon id="222" name="Poniard Dagger" icon="icon.weapon_dirk_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DAGGER"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -538,7 +516,6 @@
         </stats>
     </weapon>
     <weapon id="223" name="Kukuri" icon="icon.weapon_kukuri_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DAGGER"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -562,7 +539,6 @@
         </stats>
     </weapon>
     <weapon id="224" name="Maingauche" icon="icon.weapon_maingauche_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DAGGER"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -586,7 +562,6 @@
         </stats>
     </weapon>
     <weapon id="225" name="Mithril Dagger" icon="icon.weapon_mithril_dagger_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DAGGER"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -611,7 +586,6 @@
     </weapon>
     <weapon id="226" name="Cursed Dagger" icon="icon.weapon_cursed_dagger_i00">
         <!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DAGGER"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -636,7 +610,6 @@
     </weapon>
     <weapon id="227" name="Stiletto" icon="icon.weapon_stiletto_i00">
         <!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DAGGER"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -661,7 +634,6 @@
     </weapon>
     <weapon id="228" name="Crystal Dagger" icon="icon.weapon_crystal_dagger_i00">
         <!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DAGGER"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -686,7 +658,6 @@
     </weapon>
     <weapon id="229" name="Kris" icon="icon.weapon_kris_i00">
         <!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DAGGER"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -710,7 +681,6 @@
         </stats>
     </weapon>
     <weapon id="230" name="Needle Wolverine" icon="icon.weapon_needle_wolverine_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DAGGER"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -735,7 +705,6 @@
     </weapon>
     <weapon id="231" name="Grace Dagger" icon="icon.weapon_grace_dagger_i00">
         <!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DAGGER"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -760,7 +729,6 @@
     </weapon>
     <weapon id="232" name="Dark Elven Dagger" icon="icon.weapon_darkelven_dagger_i00">
         <!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DAGGER"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -785,7 +753,6 @@
     </weapon>
     <weapon id="233" name="Dark Screamer" icon="icon.weapon_dark_screamer_i00">
         <!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DAGGER"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -810,7 +777,6 @@
     </weapon>
     <weapon id="234" name="Demon's Dagger" icon="icon.weapon_demons_sword_i00">
         <!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DAGGER"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -835,7 +801,6 @@
     </weapon>
     <weapon id="235" name="Bloody Orchid" icon="icon.weapon_bloody_orchid_i00">
         <!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DAGGER"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -860,7 +825,6 @@
     </weapon>
     <weapon id="236" name="Soul Separator" icon="icon.weapon_soul_separator_i00">
         <!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DAGGER"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -884,7 +848,6 @@
         </stats>
     </weapon>
     <weapon id="238" name="Dagger of Mana" icon="icon.weapon_dagger_of_mana_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DAGGER"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -909,7 +872,6 @@
         </stats>
     </weapon>
     <weapon id="239" name="Mystic Knife" icon="icon.weapon_mystic_knife_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DAGGER"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -934,7 +896,6 @@
         </stats>
     </weapon>
     <weapon id="240" name="Conjurer's Knife" icon="icon.weapon_conjure_knife_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DAGGER"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -959,7 +920,6 @@
         </stats>
     </weapon>
     <weapon id="241" name="Shilen Knife" icon="icon.weapon_knife_o'_silenus_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DAGGER"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -985,7 +945,6 @@
     </weapon>
     <weapon id="242" name="Soulfire Dirk" icon="icon.weapon_dagger_of_magicflame_i00">
         <!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DAGGER"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -1011,7 +970,6 @@
     </weapon>
     <weapon id="243" name="Twilight Knife" icon="icon.weapon_hell_knife_i00">
         <!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DAGGER"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -1036,7 +994,6 @@
         </stats>
     </weapon>
     <weapon id="244" name="Elven Fighter Fist" icon="icon.weapon_spike_glove_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
         <set name="immediate_effect" val="true"/>
@@ -1051,7 +1008,6 @@
         </stats>
     </weapon>
     <weapon id="245" name="Dark Fighter Fist" icon="">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
         <set name="immediate_effect" val="true"/>
@@ -1066,7 +1022,6 @@
         </stats>
     </weapon>
     <weapon id="246" name="Human Fighter Fist" icon="">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
         <set name="immediate_effect" val="true"/>
@@ -1081,7 +1036,6 @@
         </stats>
     </weapon>
     <weapon id="247" name="Dwarven Fighter Fist" icon="">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
         <set name="immediate_effect" val="true"/>
@@ -1096,7 +1050,6 @@
         </stats>
     </weapon>
     <weapon id="248" name="Orc Fighter Fist" icon="">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
         <set name="immediate_effect" val="true"/>
@@ -1111,7 +1064,6 @@
         </stats>
     </weapon>
     <weapon id="249" name="Elven Mystic Fist" icon="">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
         <set name="immediate_effect" val="true"/>
@@ -1126,7 +1078,6 @@
         </stats>
     </weapon>
     <weapon id="250" name="Dark Mystic Fist" icon="">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
         <set name="immediate_effect" val="true"/>
@@ -1141,7 +1092,6 @@
         </stats>
     </weapon>
     <weapon id="251" name="Human Mystic Fist" icon="">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
         <set name="immediate_effect" val="true"/>
@@ -1156,7 +1106,6 @@
         </stats>
     </weapon>
     <weapon id="252" name="Orc Shaman Fist" icon="">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
         <set name="immediate_effect" val="true"/>
@@ -1170,7 +1119,6 @@
         </stats>
     </weapon>
     <weapon id="253" name="Spiked Gloves" icon="">
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DUALFIST"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;32;120"/>
@@ -1191,7 +1139,6 @@
         </stats>
     </weapon>
     <weapon id="254" name="Iron Gloves" icon="icon.weapon_iron_glove_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DUALFIST"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;32;120"/>
@@ -1212,7 +1159,6 @@
         </stats>
     </weapon>
     <weapon id="255" name="Fox Claw Gloves" icon="icon.weapon_foxs_nail_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DUALFIST"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;32;120"/>
@@ -1233,7 +1179,6 @@
         </stats>
     </weapon>
     <weapon id="256" name="Cestus" icon="icon.weapon_vipers_canine_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DUALFIST"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;32;120"/>
@@ -1254,7 +1199,6 @@
         </stats>
     </weapon>
     <weapon id="257" name="Viper Fang" icon="icon.weapon_vipers_canine_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DUALFIST"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;32;120"/>
@@ -1275,7 +1219,6 @@
         </stats>
     </weapon>
     <weapon id="258" name="Bagh-Nakh" icon="icon.weapon_baghnakh_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DUALFIST"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;32;120"/>
@@ -1299,7 +1242,6 @@
         </stats>
     </weapon>
     <weapon id="259" name="Single-Edged Jamadhr" icon="icon.weapon_single-edged_jamadhr_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DUALFIST"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;32;120"/>
@@ -1323,7 +1265,6 @@
         </stats>
     </weapon>
     <weapon id="260" name="Triple-Edged Jamadhr" icon="icon.weapon_triple-edged_jamadhr_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DUALFIST"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;32;120"/>
@@ -1347,7 +1288,6 @@
         </stats>
     </weapon>
     <weapon id="261" name="Bich'Hwa" icon="icon.weapon_bichhwa_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DUALFIST"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;32;120"/>
@@ -1371,7 +1311,6 @@
         </stats>
     </weapon>
     <weapon id="262" name="Scallop Jamadhr" icon="icon.weapon_scallop_jamadhr_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DUALFIST"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;32;120"/>
@@ -1396,7 +1335,6 @@
     </weapon>
     <weapon id="263" name="Chakram" icon="icon.weapon_chakram_i00">
         <!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DUALFIST"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;32;120"/>
@@ -1420,7 +1358,6 @@
         </stats>
     </weapon>
     <weapon id="264" name="Pata" icon="icon.weapon_chakram_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DUALFIST"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;42;90"/>
@@ -1445,7 +1382,6 @@
     </weapon>
     <weapon id="265" name="Fisted Blade" icon="icon.weapon_fist_blade_i00">
         <!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DUALFIST"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;40;90"/>
@@ -1470,7 +1406,6 @@
     </weapon>
     <weapon id="266" name="Great Pata" icon="icon.weapon_great_pata_i00">
         <!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DUALFIST"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;46;90"/>
@@ -1495,7 +1430,6 @@
     </weapon>
     <weapon id="267" name="Arthro Nail" icon="icon.weapon_arthro_nail_i00">
         <!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DUALFIST"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;52;90"/>
@@ -1520,7 +1454,6 @@
     </weapon>
     <weapon id="268" name="Bellion Cestus" icon="icon.weapon_bellion_cestus_i00">
         <!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DUALFIST"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;32;120"/>
@@ -1545,7 +1478,6 @@
     </weapon>
     <weapon id="269" name="Blood Tornado" icon="icon.weapon_blood_tornado_i00">
         <!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DUALFIST"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;32;120"/>
@@ -1570,7 +1502,6 @@
     </weapon>
     <weapon id="270" name="Dragon Grinder" icon="icon.weapon_dragon_grinder_i00">
         <!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DUALFIST"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;32;120"/>
@@ -1594,7 +1525,6 @@
         </stats>
     </weapon>
     <weapon id="271" name="Hunting Bow" icon="icon.weapon_hunting_bow_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BOW"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;10;0"/>
@@ -1617,7 +1547,6 @@
         </stats>
     </weapon>
     <weapon id="272" name="Forest Bow" icon="icon.weapon_short_bow_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BOW"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;10;0"/>
@@ -1640,7 +1569,6 @@
         </stats>
     </weapon>
     <weapon id="273" name="Compound Bow" icon="icon.weapon_composition_bow_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BOW"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;10;0"/>
@@ -1663,7 +1591,6 @@
         </stats>
     </weapon>
     <weapon id="274" name="Reinforced Bow" icon="icon.weapon_strengthening_bow_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BOW"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;10;0"/>
@@ -1690,7 +1617,6 @@
         </stats>
     </weapon>
     <weapon id="275" name="Longbow" icon="icon.weapon_long_bow_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BOW"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;10;0"/>
@@ -1717,7 +1643,6 @@
         </stats>
     </weapon>
     <weapon id="276" name="Elven Bow" icon="icon.weapon_elven_bow_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BOW"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;10;0"/>
@@ -1744,7 +1669,6 @@
         </stats>
     </weapon>
     <weapon id="277" name="Dark Elven Bow" icon="icon.weapon_dark_elven_bow_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BOW"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;10;0"/>
@@ -1771,7 +1695,6 @@
         </stats>
     </weapon>
     <weapon id="278" name="Gastraphetes" icon="icon.weapon_gastraphetes_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BOW"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;10;0"/>
@@ -1798,7 +1721,6 @@
         </stats>
     </weapon>
     <weapon id="279" name="Reinforced Longbow" icon="icon.weapon_strengthening_long_bow_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BOW"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;10;0"/>
@@ -1825,7 +1747,6 @@
         </stats>
     </weapon>
     <weapon id="280" name="Light Crossbow" icon="icon.weapon_cyclone_bow_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BOW"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;10;0"/>
@@ -1853,7 +1774,6 @@
     </weapon>
     <weapon id="281" name="Crystallized Ice Bow" icon="icon.weapon_crystallized_ice_bow_i00">
         <!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BOW"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;10;0"/>
@@ -1881,7 +1801,6 @@
     </weapon>
     <weapon id="282" name="Elemental Bow" icon="icon.weapon_elemental_bow_i00">
         <!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BOW"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;10;0"/>
@@ -1909,7 +1828,6 @@
     </weapon>
     <weapon id="283" name="Akat Longbow" icon="icon.weapon_akat_long_bow_i00">
         <!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BOW"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;10;0"/>
@@ -1937,7 +1855,6 @@
     </weapon>
     <weapon id="284" name="Dark Elven Longbow" icon="icon.weapon_dark_elven_long_bow_i00">
         <!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BOW"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;10;0"/>
@@ -1965,7 +1882,6 @@
     </weapon>
     <weapon id="285" name="Noble Elven Bow" icon="icon.weapon_noble_elven_bow_i00">
         <!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BOW"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;10;0"/>
@@ -1993,7 +1909,6 @@
     </weapon>
     <weapon id="286" name="Eminence Bow" icon="icon.weapon_eminence_bow_i00">
         <!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BOW"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;10;0"/>
@@ -2021,7 +1936,6 @@
     </weapon>
     <weapon id="287" name="Bow of Peril" icon="icon.weapon_hazard_bow_i00">
         <!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BOW"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;10;0"/>
@@ -2049,7 +1963,6 @@
     </weapon>
     <weapon id="288" name="Carnage Bow" icon="icon.weapon_carnium_bow_i00">
         <!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BOW"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;10;0"/>
@@ -2077,7 +1990,6 @@
     </weapon>
     <weapon id="289" name="Soul Bow" icon="icon.weapon_soul_bow_i00">
         <!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BOW"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;10;0"/>
@@ -2104,7 +2016,6 @@
         </stats>
     </weapon>
     <weapon id="291" name="Trident" icon="icon.weapon_trident_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="POLE"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;66;120"/>
@@ -2131,7 +2042,6 @@
         </stats>
     </weapon>
     <weapon id="292" name="Pike" icon="icon.weapon_pike_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="POLE"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;66;120"/>
@@ -2158,7 +2068,6 @@
         </stats>
     </weapon>
     <weapon id="293" name="War Hammer" icon="icon.weapon_war_hammer_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="POLE"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;66;120"/>
@@ -2185,7 +2094,6 @@
         </stats>
     </weapon>
     <weapon id="294" name="War Pick" icon="icon.weapon_hammer_in_flames_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="POLE"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;66;120"/>
@@ -2212,7 +2120,6 @@
         </stats>
     </weapon>
     <weapon id="295" name="Dwarven Trident" icon="icon.weapon_dwarven_trident_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="POLE"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;66;120"/>
@@ -2239,7 +2146,6 @@
         </stats>
     </weapon>
     <weapon id="296" name="Dwarven Pike" icon="icon.weapon_dwarven_pike_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="POLE"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;66;120"/>
@@ -2266,7 +2172,6 @@
         </stats>
     </weapon>
     <weapon id="297" name="Glaive" icon="icon.weapon_glaive_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="POLE"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;66;120"/>
@@ -2294,7 +2199,6 @@
     </weapon>
     <weapon id="298" name="Orcish Glaive" icon="icon.weapon_orcish_glaive_i00">
         <!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="POLE"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;66;120"/>
@@ -2322,7 +2226,6 @@
     </weapon>
     <weapon id="299" name="Orcish Poleaxe" icon="icon.weapon_orcish_poleaxe_i00">
         <!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="POLE"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;66;120"/>

@@ -1,7 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
     <armor id="2400" name="Tallum Tunic" icon="icon.armor_t79_u_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="MAGIC"/>
         <set name="bodypart" val="chest"/>
         <set name="immediate_effect" val="true"/>
@@ -17,7 +16,6 @@
         </stats>
     </armor>
     <armor id="2401" name="Mithril Stockings" icon="icon.armor_elven_hose_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="MAGIC"/>
         <set name="bodypart" val="legs"/>
         <set name="immediate_effect" val="true"/>
@@ -33,7 +31,6 @@
         </stats>
     </armor>
     <armor id="2402" name="Stockings of Zubei" icon="icon.armor_t56_l_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="MAGIC"/>
         <set name="bodypart" val="legs"/>
         <set name="immediate_effect" val="true"/>
@@ -49,7 +46,6 @@
         </stats>
     </armor>
     <armor id="2403" name="Blue Wolf Stockings" icon="icon.armor_t70_l_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="MAGIC"/>
         <set name="bodypart" val="legs"/>
         <set name="immediate_effect" val="true"/>
@@ -65,7 +61,6 @@
         </stats>
     </armor>
     <armor id="2404" name="Stockings of Doom" icon="icon.armor_t73_l_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="MAGIC"/>
         <set name="bodypart" val="legs"/>
         <set name="immediate_effect" val="true"/>
@@ -81,7 +76,6 @@
         </stats>
     </armor>
     <armor id="2405" name="Tallum Stockings" icon="icon.armor_t79_l_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="MAGIC"/>
         <set name="bodypart" val="legs"/>
         <set name="immediate_effect" val="true"/>
@@ -98,7 +92,6 @@
     </armor>
     <armor id="2406" name="Avadon Robe" icon="icon.armor_t59_ul_i00">
         <!-- Full body armor. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="MAGIC"/>
         <set name="bodypart" val="onepiece"/>
         <set name="immediate_effect" val="true"/>
@@ -115,7 +108,6 @@
     </armor>
     <armor id="2407" name="Dark Crystal Robe" icon="icon.armor_t76_ul_i00">
         <!-- Full body armor. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="MAGIC"/>
         <set name="bodypart" val="onepiece"/>
         <set name="immediate_effect" val="true"/>
@@ -132,7 +124,6 @@
     </armor>
     <armor id="2408" name="Robe of Nightmare" icon="icon.armor_t82_ul_i00">
         <!-- Full body armor. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="MAGIC"/>
         <set name="bodypart" val="onepiece"/>
         <set name="immediate_effect" val="true"/>
@@ -149,7 +140,6 @@
     </armor>
     <armor id="2409" name="Majestic Robe" icon="icon.armor_t85_ul_i00">
         <!-- Full body armor. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="MAGIC"/>
         <set name="bodypart" val="onepiece"/>
         <set name="immediate_effect" val="true"/>
@@ -165,7 +155,6 @@
         </stats>
     </armor>
     <armor id="2411" name="Brigandine Helmet" icon="icon.armor_leather_helmet_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="head"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="203"/>
@@ -179,7 +168,6 @@
         </stats>
     </armor>
     <armor id="2412" name="Plate Helmet" icon="icon.armor_leather_helmet_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="head"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="267"/>
@@ -193,7 +181,6 @@
         </stats>
     </armor>
     <armor id="2413" name="Chain Hood" icon="icon.armor_leather_helmet_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="head"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="75"/>
@@ -207,7 +194,6 @@
         </stats>
     </armor>
     <armor id="2414" name="Full Plate Helmet" icon="icon.armor_leather_helmet_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="head"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="214"/>
@@ -221,7 +207,6 @@
         </stats>
     </armor>
     <armor id="2415" name="Avadon Circlet" icon="icon.armor_leather_helmet_i02">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="head"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="214"/>
@@ -235,7 +220,6 @@
         </stats>
     </armor>
     <armor id="2416" name="Blue Wolf Helmet" icon="icon.armor_leather_helmet_i02">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="head"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="214"/>
@@ -249,7 +233,6 @@
         </stats>
     </armor>
     <armor id="2417" name="Doom Helmet" icon="icon.armor_leather_helmet_i02">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="head"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="214"/>
@@ -263,7 +246,6 @@
         </stats>
     </armor>
     <armor id="2418" name="Helm of Nightmare" icon="icon.armor_leather_helmet_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="head"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="214"/>
@@ -277,7 +259,6 @@
         </stats>
     </armor>
     <armor id="2419" name="Majestic Circlet" icon="icon.armor_leather_helmet_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="head"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="163"/>
@@ -291,7 +272,6 @@
         </stats>
     </armor>
     <armor id="2422" name="Reinforced Leather Boots" icon="icon.armor_t13_b_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="feet"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="92"/>
@@ -305,7 +285,6 @@
         </stats>
     </armor>
     <armor id="2423" name="Boots of Knowledge" icon="icon.armor_t41_b_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="feet"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="92"/>
@@ -319,7 +298,6 @@
         </stats>
     </armor>
     <armor id="2424" name="Manticore Skin Boots" icon="icon.armor_t42_b_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="feet"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="135"/>
@@ -333,7 +311,6 @@
         </stats>
     </armor>
     <armor id="2425" name="Brigandine Boots" icon="icon.armor_t43_b_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="feet"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="135"/>
@@ -347,7 +324,6 @@
         </stats>
     </armor>
     <armor id="2426" name="Elven Mithril Boots" icon="icon.armor_t51_b_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="feet"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="135"/>
@@ -361,7 +337,6 @@
         </stats>
     </armor>
     <armor id="2427" name="Salamander Skin Boots" icon="icon.armor_t45_b_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="feet"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="177"/>
@@ -375,7 +350,6 @@
         </stats>
     </armor>
     <armor id="2428" name="Plate Boots" icon="icon.armor_t46_b_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="feet"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="177"/>
@@ -389,7 +363,6 @@
         </stats>
     </armor>
     <armor id="2429" name="Chain Boots" icon="icon.armor_t48_b_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="feet"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="50"/>
@@ -403,7 +376,6 @@
         </stats>
     </armor>
     <armor id="2430" name="Karmian Boots" icon="icon.armor_t53_b_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="feet"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="50"/>
@@ -417,7 +389,6 @@
         </stats>
     </armor>
     <armor id="2431" name="Plated Leather Boots" icon="icon.armor_t47_b_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="feet"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="50"/>
@@ -431,7 +402,6 @@
         </stats>
     </armor>
     <armor id="2432" name="Dwarven Chain Boots" icon="icon.armor_t60_b_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="feet"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="50"/>
@@ -445,7 +415,6 @@
         </stats>
     </armor>
     <armor id="2433" name="Boots of Seal" icon="icon.armor_t44_b_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="feet"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="50"/>
@@ -459,7 +428,6 @@
         </stats>
     </armor>
     <armor id="2434" name="Rind Leather Boots" icon="icon.armor_t49_b_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="feet"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="64"/>
@@ -473,7 +441,6 @@
         </stats>
     </armor>
     <armor id="2435" name="Demon's Boots" icon="icon.armor_t54_b_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="feet"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="98"/>
@@ -487,7 +454,6 @@
         </stats>
     </armor>
     <armor id="2436" name="Theca Leather Boots" icon="icon.armor_t63_b_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="feet"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="110"/>
@@ -501,7 +467,6 @@
         </stats>
     </armor>
     <armor id="2437" name="Drake Leather Boots" icon="icon.armor_t45_b_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="feet"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="143"/>
@@ -515,7 +480,6 @@
         </stats>
     </armor>
     <armor id="2438" name="Full Plate Boots" icon="icon.armor_t62_b_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="feet"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="143"/>
@@ -529,7 +493,6 @@
         </stats>
     </armor>
     <armor id="2439" name="Sealed Blue Wolf Boots" icon="icon.armor_t68_b_i02">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="feet"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="107"/>
@@ -543,7 +506,6 @@
         </stats>
     </armor>
     <armor id="2440" name="Boots of Nightmare" icon="icon.armor_t45_b_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="feet"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="107"/>
@@ -557,7 +519,6 @@
         </stats>
     </armor>
     <armor id="2446" name="Reinforced Leather Gloves" icon="icon.armor_t13_g_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="gloves"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="92"/>
@@ -571,7 +532,6 @@
         </stats>
     </armor>
     <armor id="2447" name="Gloves of Knowledge" icon="icon.armor_t41_g_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="gloves"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="92"/>
@@ -585,7 +545,6 @@
         </stats>
     </armor>
     <armor id="2448" name="Manticore Skin Gloves" icon="icon.armor_t42_g_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="gloves"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="135"/>
@@ -599,7 +558,6 @@
         </stats>
     </armor>
     <armor id="2449" name="Brigandine Gauntlets" icon="icon.armor_t43_g_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="gloves"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="135"/>
@@ -613,7 +571,6 @@
         </stats>
     </armor>
     <armor id="2450" name="Elven Mithril Gloves" icon="icon.armor_t51_g_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="gloves"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="135"/>
@@ -627,7 +584,6 @@
         </stats>
     </armor>
     <armor id="2451" name="Sage's Worn Gloves" icon="icon.armor_t44_g_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="gloves"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="177"/>
@@ -641,7 +597,6 @@
         </stats>
     </armor>
     <armor id="2452" name="Reinforced Mithril Gloves" icon="icon.armor_t47_g_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="gloves"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="50"/>
@@ -655,7 +610,6 @@
         </stats>
     </armor>
     <armor id="2453" name="Chain Gloves" icon="icon.armor_t48_g_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="gloves"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="50"/>
@@ -669,7 +623,6 @@
         </stats>
     </armor>
     <armor id="2454" name="Karmian Gloves" icon="icon.armor_t53_g_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="gloves"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="50"/>
@@ -683,7 +636,6 @@
         </stats>
     </armor>
     <armor id="2455" name="Plated Leather Gloves" icon="icon.armor_t47_g_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="gloves"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="59"/>
@@ -697,7 +649,6 @@
         </stats>
     </armor>
     <armor id="2456" name="Dwarven Chain Gloves" icon="icon.armor_t60_g_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="gloves"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="64"/>
@@ -711,7 +662,6 @@
         </stats>
     </armor>
     <armor id="2457" name="Gloves of Seal" icon="icon.armor_t44_g_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="gloves"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="64"/>
@@ -725,7 +675,6 @@
         </stats>
     </armor>
     <armor id="2458" name="Rind Leather Gloves" icon="icon.armor_t49_g_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="gloves"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="64"/>
@@ -739,7 +688,6 @@
         </stats>
     </armor>
     <armor id="2459" name="Demon's Gloves" icon="icon.armor_t54_g_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="gloves"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="98"/>
@@ -753,7 +701,6 @@
         </stats>
     </armor>
     <armor id="2460" name="Theca Leather Gloves" icon="icon.armor_t63_g_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="gloves"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="110"/>
@@ -767,7 +714,6 @@
         </stats>
     </armor>
     <armor id="2461" name="Drake Leather Gloves" icon="icon.armor_t45_g_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="gloves"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="143"/>
@@ -781,7 +727,6 @@
         </stats>
     </armor>
     <armor id="2462" name="Full Plate Gauntlets" icon="icon.armor_t62_g_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="gloves"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="143"/>
@@ -795,7 +740,6 @@
         </stats>
     </armor>
     <armor id="2463" name="Divine Gloves" icon="icon.armor_t57_g_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="gloves"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="143"/>
@@ -809,7 +753,6 @@
         </stats>
     </armor>
     <armor id="2464" name="Sealed Avadon Gloves" icon="icon.armor_t66_g_i02">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="gloves"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="69"/>
@@ -823,7 +766,6 @@
         </stats>
     </armor>
     <armor id="2465" name="Chain Gloves of Silence" icon="icon.armor_t65_g_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="gloves"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="69"/>
@@ -837,7 +779,6 @@
         </stats>
     </armor>
     <armor id="2466" name="Guardian's Gloves" icon="icon.armor_t67_g_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="gloves"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="69"/>
@@ -851,7 +792,6 @@
         </stats>
     </armor>
     <armor id="2468" name="Blessed Gloves" icon="icon.armor_t67_g_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="gloves"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="143"/>
@@ -865,7 +805,6 @@
         </stats>
     </armor>
     <armor id="2472" name="Dark Crystal Gloves" icon="icon.armor_t15_g_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="gloves"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="71"/>
@@ -879,7 +818,6 @@
         </stats>
     </armor>
     <armor id="2475" name="Sealed Doom Gloves" icon="icon.armor_t71_g_i02">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="gloves"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="107"/>
@@ -893,7 +831,6 @@
         </stats>
     </armor>
     <armor id="2478" name="Tallum Gloves" icon="icon.armor_t77_g_i02">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="gloves"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="107"/>
@@ -907,7 +844,6 @@
         </stats>
     </armor>
     <armor id="2479" name="Gauntlets of Nightmare" icon="icon.armor_t45_g_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="gloves"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="107"/>
@@ -921,7 +857,6 @@
         </stats>
     </armor>
     <armor id="2480" name="Elemental Gloves" icon="icon.armor_t71_g_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="gloves"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="107"/>
@@ -935,7 +870,6 @@
         </stats>
     </armor>
     <armor id="2481" name="Gloves of Grace" icon="icon.armor_t71_g_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="gloves"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="107"/>
@@ -949,7 +883,6 @@
         </stats>
     </armor>
     <armor id="2482" name="Majestic Gauntlets" icon="icon.armor_t15_g_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="gloves"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="107"/>
@@ -963,7 +896,6 @@
         </stats>
     </armor>
     <armor id="2485" name="Implosion Gauntlets" icon="icon.armor_t68_g_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="gloves"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="107"/>
@@ -977,7 +909,6 @@
         </stats>
     </armor>
     <armor id="2486" name="Paradia Gloves" icon="icon.armor_t68_g_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="gloves"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="107"/>
@@ -991,7 +922,6 @@
         </stats>
     </armor>
     <armor id="2487" name="Sealed Blue Wolf Gloves" icon="icon.armor_t68_g_i02">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="gloves"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="107"/>
@@ -1005,7 +935,6 @@
         </stats>
     </armor>
     <armor id="2493" name="Brigandine Shield" icon="icon.shield_brigandine_shield_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="lhand"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="142"/>
@@ -1021,7 +950,6 @@
         </stats>
     </armor>
     <armor id="2494" name="Plate Shield" icon="icon.shield_plate_shield_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="lhand"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="187"/>
@@ -1037,7 +965,6 @@
         </stats>
     </armor>
     <armor id="2495" name="Chain Shield" icon="icon.shield_chain_shield_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="lhand"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="53"/>
@@ -1053,7 +980,6 @@
         </stats>
     </armor>
     <armor id="2496" name="Dwarven Chain Shield" icon="icon.shield_dwarven_chain_shield_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="lhand"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="62"/>
@@ -1069,7 +995,6 @@
         </stats>
     </armor>
     <armor id="2497" name="Full Plate Shield" icon="icon.shield_full_plate_shield_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="lhand"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="150"/>
@@ -1085,7 +1010,6 @@
         </stats>
     </armor>
     <armor id="2498" name="Shield of Nightmare" icon="icon.shield_shield_of_nightmare_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="lhand"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="114"/>
@@ -1101,7 +1025,6 @@
         </stats>
     </armor>
     <weapon id="2499" name="Elven Long Sword" icon="icon.weapon_elven_long_sword_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>

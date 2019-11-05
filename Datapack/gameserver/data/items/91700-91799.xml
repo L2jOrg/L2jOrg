@@ -109,7 +109,6 @@
     </item>
     <armor id="91719" name="Special Black Sayha's Cloak" icon="icon.bm_2018_sayha_cloak_back_i02">
         <!-- A cloak filled with Sayha's energy. Can be upgraded only with Scrolls: Enchant Special Sayha's Cloak. Activates special effects depending on the enchant level. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="back"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="220"/>
@@ -117,7 +116,6 @@
     </armor>
     <armor id="91720" name="Special White Sayha's Cloak" icon="icon.bm_2018_sayha_cloak_back_i01">
         <!-- A cloak filled with Sayha's energy. Can be upgraded only with Scrolls: Enchant Special Sayha's Cloak. Activates special effects depending on the enchant level. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="back"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="220"/>
@@ -125,7 +123,6 @@
     </armor>
     <armor id="91721" name="Special Red Sayha's Cloak" icon="icon.bm_2018_sayha_cloak_back_i03">
         <!-- A cloak filled with Sayha's energy. Can be upgraded only with Scrolls: Enchant Special Sayha's Cloak. Activates special effects depending on the enchant level. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="back"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="220"/>
@@ -138,7 +135,6 @@
     </item>
     <armor id="91723" name="Iron Bracelet" icon="icon.etc_rbracelet_c_i00">
         <!-- Available for 15 days. Unlocks 1 talisman slot. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="rbracelet"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="150"/>
@@ -220,7 +216,6 @@
     </item>
     <armor id="91737" name="Brooch Lv. 1" icon="icon.etc_bm_brooch_lavianrose_i00">
         <!-- Available for 15 days. Opens up 2 jewel slots. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="underwear"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="10"/>
@@ -266,14 +261,12 @@
     </item>
     <armor id="91745" name="Talisman of Aden" icon="icon.bm_ensoul_stone_pvp">
         <!-- Contains the energy of Aden's royal family. Can be enchanted up to +10 with a Scroll: Enchant Talisman of Aden. Activates special effects depending on the enchant value. The enchanting is safe up to +1. Effects of two identical talismans do not stack. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="120"/>
         <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
     </armor>
     <armor id="91746" name="Rudolph Costume" icon="icon.gomdori_chest_change">
         <!-- When equipped, it is impossible to wear armor. Hats, weapons and accessories are not removed. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="HEAVY"/>
         <set name="bodypart" val="alldress"/>
         <set name="immediate_effect" val="true"/>
@@ -345,7 +338,6 @@
     </item>
     <armor id="91758" name="Ruby Lv. 5" icon="icon.etc_bm_jewel_ruby_i00">
         <!-- Available for 3 days. Soulshot, Blessed Soulshot and Beast Soulshot damage +16%. The effect doesn't stack if two identical jewels are equipped, the higher-level jewel takes precedence. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="brooch_jewel"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="5"/>
@@ -353,7 +345,6 @@
     </armor>
     <armor id="91759" name="Sapphire Lv. 5" icon="icon.etc_bm_jewel_sapphire_i00">
         <!-- Available for 3 days. Spiritshot, Blessed Spiritshot and Beast Spiritshot damage +16%. The effect doesn't stack if two identical jewels are equipped, the higher-level jewel takes precedence. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="brooch_jewel"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="5"/>
@@ -361,7 +352,6 @@
     </armor>
     <armor id="91760" name="Brooch Lv. 5" icon="icon.etc_bm_brooch_lavianrose_i06">
         <!-- Available for 30 days. Activates 6 jewel slots. Inventory Slots +15. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="underwear"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="10"/>
@@ -415,7 +405,6 @@
     </item>
     <armor id="91769" name="Shining Savior's Earring" icon="icon.r2_earring_i01">
         <!-- Available for 1 day. Acquired XP/ SP +2%, Max HP +50, Max MP +30, Mental/ Stun Resistance +4%. Activates the Vampiric Rage effect. Effects of two identical earrings do not stack. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="rear;lear"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="150"/>
@@ -426,7 +415,6 @@
     </armor>
     <armor id="91770" name="Shining Savior's Earring" icon="icon.r2_earring_i01">
         <!-- Available for 30 day. Acquired XP/ SP +2%, Max HP +50, Max MP +30, Stun/ Mental Resistance +4%. Activates Vampiric Rage effect. The effect does not stack if two identical earrings are equipped. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="rear;lear"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="150"/>
@@ -531,7 +519,6 @@
     </item>
     <armor id="91788" name="Dragon Belt" icon="icon.r2_belt_i01">
         <!-- Belt imbued with the dragon's power. Can be enchanted up to +10 with Dragon Belt's Decorations. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="LIGHT"/>
         <set name="bodypart" val="waist"/>
         <set name="immediate_effect" val="true"/>
@@ -553,13 +540,11 @@
     </item>
     <armor id="91791" name="Venir's Talisman Lv. 25" icon="icon.etc_all_stat_talisman_i02">
         <!-- CON/ MEN/ DEX/ WIT/ STR/ INT +6, P./ M. Skill Cooldown -7%. With a certain chance absorbs 16% of the inflicted damage as HP and 8% as MP. Can be upgraded if combined with the identical talisman. The effect doesn't stack if two identical talismans are equipped. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
         <restriction dropable="false" sellable="false"/>
     </armor>
     <armor id="91792" name="Venir's Talisman Lv. 26" icon="icon.etc_all_stat_talisman_i02">
         <!-- CON/ MEN/ DEX/ WIT/ STR/ INT +8, P./ M. Skill Cooldown -7%. With a certain chance absorbs 16% of the inflicted damage as HP and 8% as MP. The effect doesn't stack if two identical talismans are equipped. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
         <restriction dropable="false" sellable="false"/>
     </armor>

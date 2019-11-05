@@ -304,7 +304,6 @@
     </item>
     <armor id="29033" name="Adventurer Hat - Event" icon="icon.accessory_explorer_hat_i00">
         <!-- 1st month Hair Accessory. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="hairall"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="10"/>
@@ -312,7 +311,6 @@
     </armor>
     <armor id="29034" name="Adventurer Hat - Event" icon="icon.accessory_explorer_hat_i00">
         <!-- 2nd month Hair Accessory. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="hairall"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="10"/>
@@ -320,7 +318,6 @@
     </armor>
     <armor id="29035" name="Adventurer Hat - Event" icon="icon.accessory_explorer_hat_i00">
         <!-- 3rd month Hair Accessory. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="hairall"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="10"/>
@@ -328,7 +325,6 @@
     </armor>
     <armor id="29036" name="Refined Romantic Chapeau: Red" icon="icon.bm_romantic_chaperon_red">
         <!-- Refined Romantic Chapeau: Red. Occupies 2 Hair Accessory slots. Cannot be exchanged, dropped, or sold. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="hairall"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="10"/>
@@ -336,7 +332,6 @@
     </armor>
     <armor id="29037" name="Refined Angel Ring" icon="icon.accessory_angel_ring_i00">
         <!-- Refined Angel Ring. Occupies 2 Hair Accessory slots. Cannot be exchanged, dropped, or sold. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="hairall"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="10"/>
@@ -344,7 +339,6 @@
     </armor>
     <armor id="29038" name="Refined Wizard Hat" icon="icon.accessory_magician_cap2_i00">
         <!-- Mystery Mage Hat. Occupies 2 Hair Accessory slots. Cannot be exchanged, dropped, or sold. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="hairall"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="10"/>
@@ -352,7 +346,6 @@
     </armor>
     <armor id="29039" name="Laborer Hat" icon="BranchSys.icon.br_people_cap_i00">
         <!-- Laborer's Hat. Cannot be exchanged, dropped, or sold. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="hair"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="10"/>
@@ -360,14 +353,12 @@
     </armor>
     <armor id="29040" name="Top Hat" icon="icon.accessory_magicial_cap_i00">
         <!-- A top hat which belonged to a mysterious magician. Occupies 2 Hair Accessory slots. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="hairall"/>
         <set name="immediate_effect" val="true"/>
         <restriction tradable="false" dropable="false" depositable="false" sellable="false" freightable="true"/>
     </armor>
     <armor id="29041" name="Vigilante Hat" icon="icon.icon.zorocap">
         <!-- Vigilante Hat. Cannot be exchanged, dropped, or sold. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="hairall"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="10"/>
@@ -375,7 +366,6 @@
     </armor>
     <armor id="29042" name="Adventurer Hat - Event" icon="icon.accessory_explorer_hat_i00">
         <!-- 10th month Hair Accessory. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="hairall"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="10"/>
@@ -383,7 +373,6 @@
     </armor>
     <armor id="29043" name="Adventurer Hat - Event" icon="icon.accessory_explorer_hat_i00">
         <!-- 11th month Hair Accessory. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="hairall"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="10"/>
@@ -391,7 +380,6 @@
     </armor>
     <armor id="29044" name="Adventurer Hat - Event" icon="icon.accessory_explorer_hat_i00">
         <!-- 12th month Hair Accessory. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="hairall"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="10"/>
@@ -399,7 +387,6 @@
     </armor>
     <armor id="29045" name="Adventurer Hat - Event" icon="icon.accessory_explorer_hat_i00">
         <!-- 1st month Hair Accessory. 30-day item. Allows to use special skill. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="hairall"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="10"/>
@@ -407,7 +394,6 @@
     </armor>
     <armor id="29046" name="Adventurer Hat - Event" icon="icon.accessory_explorer_hat_i00">
         <!-- 2nd month Hair Accessory. 30-day item. Allows to use special skill. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="hairall"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="10"/>
@@ -415,7 +401,6 @@
     </armor>
     <armor id="29047" name="Adventurer Hat - Event" icon="icon.accessory_explorer_hat_i00">
         <!-- 3rd month Hair Accessory. 30-day item. Allows to use special skill. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="hairall"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="10"/>
@@ -423,7 +408,6 @@
     </armor>
     <armor id="29048" name="Refined Romantic Chapeau: Red" icon="icon.bm_romantic_chaperon_red">
         <!-- Refined Romantic Chapeau: Red. Occupies 2 Hair Accessory slots. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="hairall"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="10"/>
@@ -431,7 +415,6 @@
     </armor>
     <armor id="29049" name="Refined Angel Ring" icon="icon.accessory_angel_ring_i00">
         <!-- Refined Angel Ring. Occupies 2 Hair Accessory slots. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="hairall"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="10"/>
@@ -439,7 +422,6 @@
     </armor>
     <armor id="29050" name="Adventurer Hat - Event" icon="icon.accessory_explorer_hat_i00">
         <!-- 6th month Hair Accessory. 30-day item. Allows to use special skill. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="hairall"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="10"/>
@@ -447,7 +429,6 @@
     </armor>
     <armor id="29051" name="Adventurer Hat - Event" icon="icon.accessory_explorer_hat_i00">
         <!-- 7th month Hair Accessory. 30-day item. Allows to use special skill. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="hairall"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="10"/>
@@ -455,7 +436,6 @@
     </armor>
     <armor id="29052" name="Adventurer Hat - Event" icon="icon.accessory_explorer_hat_i00">
         <!-- 8th month Hair Accessory. 30-day item. Allows to use special skill. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="hairall"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="10"/>
@@ -463,7 +443,6 @@
     </armor>
     <armor id="29053" name="Adventurer Hat - Event" icon="icon.accessory_explorer_hat_i00">
         <!-- 9th month Hair Accessory. 30-day item. Allows to use special skill. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="hairall"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="10"/>
@@ -471,7 +450,6 @@
     </armor>
     <armor id="29054" name="Adventurer Hat - Event" icon="icon.accessory_explorer_hat_i00">
         <!-- 10th month Hair Accessory. 30-day item. Allows to use special skill. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="hairall"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="10"/>
@@ -479,7 +457,6 @@
     </armor>
     <armor id="29055" name="Adventurer Hat - Event" icon="icon.accessory_explorer_hat_i00">
         <!-- 11th month Hair Accessory. 30-day item. Allows to use special skill. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="hairall"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="10"/>
@@ -487,7 +464,6 @@
     </armor>
     <armor id="29056" name="Adventurer Hat - Event" icon="icon.accessory_explorer_hat_i00">
         <!-- 12th month Hair Accessory. 30-day item. Allows to use special skill. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="hairall"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="10"/>
@@ -495,7 +471,6 @@
     </armor>
     <armor id="29057" name="Agathion - Virgo" icon="BranchIcon.Icon.accessary_sign_agathion_april_aug_i00">
         <!-- Summons Virgo. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="underwear"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="150"/>
@@ -503,7 +478,6 @@
     </armor>
     <armor id="29058" name="Agathion - Virgo" icon="BranchIcon.Icon.accessary_sign_agathion_april_aug_i00">
         <!-- Summons Virgo. 30-day item. Allows to use special skill. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="underwear"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="150"/>
@@ -511,7 +485,6 @@
     </armor>
     <armor id="29059" name="Agathion - Capricorn" icon="BranchIcon.Icon.accessary_lbracelet_sign_agathion_dec_i00">
         <!-- Summons Capricorn. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="underwear"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="150"/>
@@ -519,7 +492,6 @@
     </armor>
     <armor id="29060" name="Agathion - Capricorn" icon="BranchIcon.Icon.accessary_lbracelet_sign_agathion_dec_i00">
         <!-- Summons Capricorn. 30-day item. Allows to use special skill. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="underwear"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="150"/>
@@ -527,7 +499,6 @@
     </armor>
     <armor id="29061" name="Agathion - Libra" icon="BranchIcon.Icon.accessary_sign_agathion_april_sep_i00">
         <!-- Summons Libra. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="underwear"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="150"/>
@@ -535,7 +506,6 @@
     </armor>
     <armor id="29062" name="Agathion - Libra" icon="BranchIcon.Icon.accessary_sign_agathion_april_sep_i00">
         <!-- Summons Libra. 30-day item. Allows to use special skill. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="underwear"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="150"/>
@@ -543,7 +513,6 @@
     </armor>
     <armor id="29063" name="Agathion - Aries" icon="BranchIcon.Icon.accessory_lbracelet_march_i00">
         <!-- Summons Aries. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="underwear"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="150"/>
@@ -551,7 +520,6 @@
     </armor>
     <armor id="29064" name="Agathion - Aries" icon="BranchIcon.Icon.accessory_lbracelet_march_i00">
         <!-- Summons Aries. 30-day item. Allows to use special skill. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="underwear"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="150"/>
@@ -559,7 +527,6 @@
     </armor>
     <armor id="29065" name="Agathion - Taurus" icon="BranchIcon.Icon.accessary_lbracelet_sign_agathion_april_i00">
         <!-- Summons Taurus. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="underwear"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="150"/>
@@ -567,7 +534,6 @@
     </armor>
     <armor id="29066" name="Agathion - Taurus" icon="BranchIcon.Icon.accessary_lbracelet_sign_agathion_april_i00">
         <!-- Summons Taurus. 30-day item. Allows to use special skill. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="underwear"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="150"/>
@@ -575,7 +541,6 @@
     </armor>
     <armor id="29067" name="Agathion - Leo" icon="BranchIcon.Icon.accessary_lbracelet_sign_agathion_july_i00">
         <!-- Summons Leo. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="underwear"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="150"/>
@@ -583,7 +548,6 @@
     </armor>
     <armor id="29068" name="Agathion - Leo" icon="BranchIcon.Icon.accessary_lbracelet_sign_agathion_july_i00">
         <!-- Summons Leo. 30-day item. Allows to use special skill. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="underwear"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="150"/>
@@ -591,7 +555,6 @@
     </armor>
     <armor id="29069" name="Agathion - Gemini" icon="BranchIcon.Icon.accessary_lbracelet_sign_agathion_may_i00">
         <!-- Summons Gemini. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="underwear"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="150"/>
@@ -599,7 +562,6 @@
     </armor>
     <armor id="29070" name="Agathion - Gemini" icon="BranchIcon.Icon.accessary_lbracelet_sign_agathion_may_i00">
         <!-- Summons Gemini. 30-day item. Allows to use special skill. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="underwear"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="150"/>
@@ -607,7 +569,6 @@
     </armor>
     <armor id="29071" name="Agathion - Scorpio" icon="BranchIcon.Icon.accessary_lbracelet_sign_agathion_oct_i00">
         <!-- Summons Scorpio. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="underwear"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="150"/>
@@ -615,7 +576,6 @@
     </armor>
     <armor id="29072" name="Agathion - Scorpio" icon="BranchIcon.Icon.accessary_lbracelet_sign_agathion_oct_i00">
         <!-- Summons Scorpio. 30-day item. Allows to use special skill. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="underwear"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="150"/>
@@ -623,7 +583,6 @@
     </armor>
     <armor id="29073" name="Agathion - Aquarius" icon="BranchIcon.Icon.accessary_lbracelet_sign_agathion_jan_i00">
         <!-- Summons Aquarius. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="underwear"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="150"/>
@@ -631,7 +590,6 @@
     </armor>
     <armor id="29074" name="Agathion - Aquarius" icon="BranchIcon.Icon.accessary_lbracelet_sign_agathion_jan_i00">
         <!-- Summons Aquarius. 30-day item. Allows to use special skill. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="underwear"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="150"/>
@@ -639,7 +597,6 @@
     </armor>
     <armor id="29075" name="Agathion - Pisces" icon="BranchIcon.Icon.accessary_lbracelet_sign_agathion_feb_i00">
         <!-- Summons Pisces. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="underwear"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="150"/>
@@ -647,7 +604,6 @@
     </armor>
     <armor id="29076" name="Agathion - Pisces" icon="BranchIcon.Icon.accessary_lbracelet_sign_agathion_feb_i00">
         <!-- Summons Pisces. 30-day item. Allows to use special skill. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="underwear"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="150"/>
@@ -655,7 +611,6 @@
     </armor>
     <armor id="29077" name="Agathion - Sagittarius" icon="BranchIcon.Icon.accessary_lbracelet_sign_agathion_nov_i00">
         <!-- Summons Sagittarius. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="underwear"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="150"/>
@@ -663,7 +618,6 @@
     </armor>
     <armor id="29078" name="Agathion - Sagittarius" icon="BranchIcon.Icon.accessary_lbracelet_sign_agathion_nov_i00">
         <!-- Summons Sagittarius. 30-day item. Allows to use special skill. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="underwear"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="150"/>
@@ -671,7 +625,6 @@
     </armor>
     <armor id="29079" name="Agathion - Cancer" icon="BranchIcon.Icon.accessary_lbracelet_sign_agathion_june_i00">
         <!-- Summons Cancer. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="underwear"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="150"/>
@@ -679,7 +632,6 @@
     </armor>
     <armor id="29080" name="Agathion - Cancer" icon="BranchIcon.Icon.accessary_lbracelet_sign_agathion_june_i00">
         <!-- Summons Cancer. 30-day item. Allows to use special skill. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="underwear"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="150"/>

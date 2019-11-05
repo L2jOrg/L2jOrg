@@ -1,7 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
     <armor id="29500" name="Ring of Magic" icon="icon.accessary_enchanted_ring_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="rfinger;lfinger"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="150"/>
@@ -11,7 +10,6 @@
         </stats>
     </armor>
     <armor id="29501" name="Black Pearl Ring" icon="icon.accessary_black_pearl_ring_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="rfinger;lfinger"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="150"/>
@@ -21,7 +19,6 @@
         </stats>
     </armor>
     <armor id="29502" name="Elven Ring" icon="icon.accessary_elven_ring_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="rfinger;lfinger"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="150"/>
@@ -31,7 +28,6 @@
         </stats>
     </armor>
     <armor id="29503" name="Mithril Ring" icon="icon.accessary_mithril_ring_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="rfinger;lfinger"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="150"/>
@@ -41,7 +37,6 @@
         </stats>
     </armor>
     <armor id="29504" name="Ring of Devotion" icon="icon.accessary_ring_of_devotion_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="rfinger;lfinger"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="150"/>
@@ -276,7 +271,6 @@
     </item>
     <weapon id="29527" name="Saber*Elven Sword" icon="icon.weapon_dual_sword_i00">
         <!-- 30-day item. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DUAL"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
@@ -458,7 +452,6 @@
     </item>
     <armor id="29544" name="Expensive Ring of Chronicle Heir" icon="icon.event_classic_ring">
         <!-- HP + 10%, HP Recovery Bonus + 10%, Atk. Spd. and Casting Spd. Boost, P./M. Accuracy + 1, Weight Limit + 5000. Effect does not stack. Cannot be exchanged, dropped, or sold. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="rfinger;lfinger"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="150"/>
@@ -669,7 +662,6 @@
     </item>
     <armor id="29575" name="Queen Ant's Ring" icon="icon.accessory_ring_of_queen_ant_i00">
         <!-- 30-day item. When equipped, grants MP + 9, Poison Resistance/Poison Attack Rate +10%, P. / M. Accuracy +1, P. / M. Attack +4%. The effect does not stack, if two identical rings are equipped. Cannot be enchanted. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="rfinger;lfinger"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="150"/>
@@ -685,7 +677,6 @@
     </armor>
     <armor id="29576" name="Orfen's Earring" icon="icon.accessory_earring_of_orfen_i00">
         <!-- 30-day item. When equipped, increases MP by 19, Mental Atk. / Hold Atk. Resistance by 10%, received heal amount by -2%, decreases MP consumption for skill use by 2%. The effect does not stack, if two identical earrings are equipped. Cannot be enchanted. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="rear;lear"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="150"/>
@@ -701,7 +692,6 @@
     </armor>
     <armor id="29577" name="Ring of Core" icon="icon.accessory_ring_of_core_i00">
         <!-- 30-day item. When equipped, increases MP by 9, Mental Atk. Resistance by 10%, P. / M. Evasion by 1, decreases received damage by -2%. The effect does not stack, if two identical rings are equipped. Cannot be enchanted. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="rfinger;lfinger"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="150"/>
@@ -726,7 +716,6 @@
     </item>
     <armor id="29579" name="Eva's Mark" icon="icon.bm_soaring_bird">
         <!-- L2 Classic opening event item. Celebrate the launch of the classic server! Equip and use the skill created to teleport to the nearest town. Cooldown is 60 min. 30-day. Cannot be exchanged, dropped, or sold. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="hair"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="10"/>
@@ -778,7 +767,6 @@
     </item>
     <armor id="29585" name="Refined Romantic Chapeau" icon="icon.accessory_archer_hat2_i00">
         <!-- Refined Romantic Chapeau (30-day). Allows to use Blessed Body and Wind Walk. Occupies 2 Hair Accessory slots. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="hairall"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="10"/>
@@ -797,7 +785,6 @@
     </item>
     <armor id="29587" name="Agathion - Singer and Dancer" icon="BranchSys2.icon.br_aga_singer_dancer_i00">
         <!-- Bracelet, summoning happy dancing and singing Agathion. Cannot be exchanged, dropped, stored in private warehouse, or sold. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="lbracelet"/>
         <set name="immediate_effect" val="true"/>
         <restriction clan-depositable="false" mailable="false" tradable="false" dropable="false" sellable="false" commissionable="false" olympiad-restricted="true"/>
@@ -826,7 +813,6 @@
     </item>
     <weapon id="29590" name="Samurai Black Long Sword" icon="icon.weapon_dual_sword_i00">
         <!-- Cannot be enchanted or endued with special characteristics. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DUAL"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
@@ -846,7 +832,6 @@
     </weapon>
     <weapon id="29591" name="Samurai Black Long Sword" icon="icon.weapon_dual_sword_i00">
         <!-- Cannot be enchanted for additional characteristics. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DUAL"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
@@ -880,7 +865,6 @@
     </item>
     <armor id="29594" name="Expensive Ring of Chronicle Heir" icon="icon.event_classic_ring">
         <!-- HP + 10%, HP Recovery Bonus + 10%, Atk. Spd. and Casting Spd. Boost, P./M. Accuracy + 1, Weight Limit + 5000. Effect does not stack. Cannot be exchanged, dropped, or sold. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="rfinger;lfinger"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="150"/>
@@ -891,7 +875,6 @@
     </armor>
     <armor id="29595" name="Expensive Ring of Chronicle Heir" icon="icon.event_classic_ring">
         <!-- HP + 10%, HP Recovery Bonus + 10%, Atk. Spd. and Casting Spd. Boost, P./M. Accuracy + 1, Weight Limit + 5000. Effect does not stack. Cannot be exchanged, dropped, or sold. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="rfinger;lfinger"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="150"/>
@@ -903,7 +886,6 @@
     </armor>
     <armor id="29596" name="Expensive Ring of Chronicle Heir" icon="icon.event_classic_ring">
         <!-- HP + 10%, HP Recovery Bonus + 10%, Atk. Spd. and Casting Spd. Boost, P./M. Accuracy + 1, Weight Limit + 5000. Effect does not stack. Cannot be exchanged, dropped, or sold. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="rfinger;lfinger"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="150"/>
@@ -915,7 +897,6 @@
     </armor>
     <armor id="29597" name="Expensive Ring of Chronicle Heir" icon="icon.event_classic_ring">
         <!-- HP + 10%, HP Recovery Bonus + 10%, Atk. Spd. and Casting Spd. Boost, P./M. Accuracy + 1, Weight Limit + 5000. Effect does not stack. Cannot be exchanged, dropped, or sold. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="rfinger;lfinger"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="150"/>

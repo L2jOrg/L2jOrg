@@ -2,7 +2,6 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
     <armor id="17270" name="Agathion Bracelet Agathion - Nevit's Herald Kanna" icon="icon.pi_high_agathion_bracelet_i00">
         <!-- A bracelet summoning Agathion, Nevit's Herald Kanna. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="lbracelet"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="150"/>

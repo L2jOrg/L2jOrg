@@ -54,7 +54,6 @@
     </item>
     <weapon id="49506" name="Fishing Rod" icon="icon.weapon_fishing_rod_i03">
         <!-- A Fishing Rod for 10 days. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. Float usage: 1 -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="FISHINGROD"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
@@ -83,13 +82,11 @@
     </item>
     <item id="49508" name="Normal Bait" icon="icon.etc_huge_lure">
         <!-- Fishing bait enables to fish. Cannot be exchanged, dropped, sold, or stored in private warehouse. Can be stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
         <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true" freightable="true"/>
     </item>
     <armor id="49509" name="Ring of Core" icon="icon.accessory_ring_of_core_i00">
         <!-- 15-day item. MP +9, Mental Resistance and Atk. Rate +10%, P./M. Evasion +1, Received Damage -2%. The effect doesn't stack if two identical rings are worn. Cannot be enchanted. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="rfinger;lfinger"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="150"/>
@@ -129,7 +126,6 @@
     </item>
     <armor id="49514" name="Agathion - Aries" icon="icon.agathion_magmeld_teleport">
         <!-- 60-day item. Bracelet that can be used to summon Agathion - Aries. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. <Active Skill>. Agathion Teleport: grants the ability to teleport to Gludio / Dion / Giran / Oren. (Cooldown: 30 minutes). <Item Skill>. 1. Aries Power: increases STR / INT / CON / MEN by 1. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="underwear"/>
         <set name="immediate_effect" val="true"/>
         <set name="time" val="86400"/>
@@ -137,14 +133,12 @@
     </armor>
     <armor id="49515" name="Agathion - Aries" icon="icon.agathion_magmeld_teleport">
         <!-- Bracelet that can be used to summon Agathion - Aries. <Active Skill>. Agathion Teleport: grants the ability to teleport to Gludio / Dion / Giran / Oren. (Cooldown: 30 minutes). <Item Skill>. 1. Aries Power: increases STR / INT / CON / MEN by 1. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="underwear"/>
         <set name="immediate_effect" val="true"/>
         <restriction sellable="false"/>
     </armor>
     <armor id="49516" name="Agathion - Aries" icon="icon.agathion_magmeld_teleport">
         <!-- Bracelet that can be used to summon Agathion - Aries. <Active Skill>. Agathion Teleport: grants the ability to teleport to Gludio / Dion / Giran / Oren. (Cooldown: 30 minutes). <Item Skill>. 1. Aries Power: increases STR / INT / CON / MEN by 5. <Item Skill>. 1. Aries Power: increases STR / INT / CON / MEN by 1. 2.Aries Blessing: increases Resistance to mental attacks/stun/sleep/collapse +5%. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="underwear"/>
         <set name="immediate_effect" val="true"/>
         <restriction sellable="false"/>
@@ -177,21 +171,18 @@
     </item>
     <armor id="49521" name="Refined Romantic Chapeau" icon="icon.accessory_archer_hat2_i00">
         <!-- Refined Romantic Chapeau Grants STR +1, INT +1 when equipped. Enables to use Refined Romantic Chapeau Skill: Teleport (Cooldown: 2 hours). Occupies two slots for headpieces. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="hairall"/>
         <set name="immediate_effect" val="true"/>
         <restriction sellable="false"/>
     </armor>
     <armor id="49522" name="Pirate King Hat" icon="BranchSys2.icon.zaken_hair_accessary">
         <!-- Pirate Captain Hat. Grants STR +1, INT +1 when equipped. Enables to use Pirate Captain Hat Skill: Teleport (Cooldown: 2 hours). Occupies two slots for headpieces. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="hairall"/>
         <set name="immediate_effect" val="true"/>
         <restriction sellable="false"/>
     </armor>
     <armor id="49523" name="Circlet of Devil" icon="icon.Accessary_demon_circlet_i00">
         <!-- Circlet of Devil. When equipped: STR +1, INT +1. Enables to use Circlet of Devil Skill: Teleport (Cooldown: 2 hours). Occupies two slots for headpieces. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="hairall"/>
         <set name="immediate_effect" val="true"/>
         <restriction sellable="false"/>
@@ -228,7 +219,6 @@
     </item>
     <armor id="49529" name="Blue Dynasty - Heavy Armor" icon="icon.armor_t2000_ul_i00">
         <!-- An item intended for L2 Assist Application. Full Heavy Armor of Blue Dynasty It has no restrictions as to class, but for some races and classes heavy, light and magic armor look the same. Previous armor is taken off and becomes unavailable when it's equipped. Headpieces, weapon and magic armor are not removed. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="HEAVY"/>
         <set name="bodypart" val="alldress"/>
         <set name="immediate_effect" val="true"/>
@@ -236,14 +226,12 @@
     </armor>
     <armor id="49530" name="Blue Dynasty - Diadem" icon="icon.Accessary_angel_circlet_i00">
         <!-- An item intended for an L2 Assist Application. Blue Dynasty Diadem. Takes to slots for headpieces. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="hairall"/>
         <set name="immediate_effect" val="true"/>
         <restriction sellable="false"/>
     </armor>
     <armor id="49531" name="Red Zubei - Heavy Armor" icon="icon.armor_t2000_ul_i00">
         <!-- An item intended for L2 Assist Application. Full Heavy Armor of Red Zubei. It has no restrictions as to class, but for some races and classes heavy, light and magic armor look the same. Previous armor is taken off and becomes unavailable when it's equipped. Headpieces, weapon and magic armor are not removed. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="HEAVY"/>
         <set name="bodypart" val="alldress"/>
         <set name="immediate_effect" val="true"/>
@@ -251,7 +239,6 @@
     </armor>
     <armor id="49532" name="White Murderer Suit" icon="icon.dark_assassin">
         <!-- An item intended for L2 Assist Application. Full Suit of Red Zubei. Previous armor is taken off and becomes unavailable when it's equipped. Headpieces, weapon and magic armor are not removed. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="HEAVY"/>
         <set name="bodypart" val="alldress"/>
         <set name="immediate_effect" val="true"/>
@@ -331,7 +318,6 @@
     </item>
     <armor id="49544" name="Warrior's Armor1" icon="BranchSys3.iconArmor.g_co_captain_i00">
         <!-- You look as if you were in warrior's armor. Lvl 45 -->
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="HEAVY"/>
         <set name="bodypart" val="alldress"/>
         <set name="immediate_effect" val="true"/>
@@ -339,7 +325,6 @@
     </armor>
     <armor id="49545" name="Warrior's Armor2" icon="icon.dark_assassin">
         <!-- You look as if you were in warrior's armor. Lvl 55 -->
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="HEAVY"/>
         <set name="bodypart" val="alldress"/>
         <set name="immediate_effect" val="true"/>
@@ -347,7 +332,6 @@
     </armor>
     <armor id="49546" name="Warrior's Armor3" icon="icon.dark_kninght">
         <!-- You look as if you were in warrior's armor. Lvl 65 -->
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="HEAVY"/>
         <set name="bodypart" val="alldress"/>
         <set name="immediate_effect" val="true"/>
@@ -355,7 +339,6 @@
     </armor>
     <armor id="49547" name="Mage's Armor1" icon="icon.dark_assassin">
         <!-- You look as if you were in wizard's armor. Lvl 45 -->
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="MAGIC"/>
         <set name="bodypart" val="alldress"/>
         <set name="immediate_effect" val="true"/>
@@ -363,7 +346,6 @@
     </armor>
     <armor id="49548" name="Mage's Armor2" icon="icon.dark_assassin">
         <!-- You look as if you were in wizard's armor. Lvl 55 -->
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="MAGIC"/>
         <set name="bodypart" val="alldress"/>
         <set name="immediate_effect" val="true"/>
@@ -371,7 +353,6 @@
     </armor>
     <armor id="49549" name="Mage's Armor3" icon="icon.ev_wp_halloween">
         <!-- You look as if you were in wizard's armor. Lvl 65 -->
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="MAGIC"/>
         <set name="bodypart" val="alldress"/>
         <set name="immediate_effect" val="true"/>
@@ -385,7 +366,6 @@
     </item>
     <armor id="49551" name="Blue Dynasty - Light Armor" icon="icon.armor_t2000_ul_i00">
         <!-- An item intended for L2 Assist Application. Full Light Armor of Blue Dynasty. It has no restrictions as to class, but for some races and classes heavy, light and magic armor look the same. Previous armor is taken off and becomes unavailable when it's equipped. Headpieces, weapon and magic armor are not removed. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="LIGHT"/>
         <set name="bodypart" val="alldress"/>
         <set name="immediate_effect" val="true"/>
@@ -393,7 +373,6 @@
     </armor>
     <armor id="49552" name="Blue Dynasty - Magic Armor" icon="icon.armor_t2000_ul_i00">
         <!-- An item intended for L2 Assist Application. Full Magic Armor of Blue Dynasty. It has no restrictions as to class, but for some races and classes heavy, light and magic armor look the same. Previous armor is taken off and becomes unavailable when it's equipped. Headpieces, weapon and magic armor are not removed. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="MAGIC"/>
         <set name="bodypart" val="alldress"/>
         <set name="immediate_effect" val="true"/>
@@ -401,7 +380,6 @@
     </armor>
     <armor id="49553" name="Red Zubei - Light Armor" icon="icon.armor_t2000_ul_i00">
         <!-- An item intended for L2 Assist Application. Full Light Armor of Blue Dynasty It has no restrictions as to class, but for some races and classes heavy, light and magic armor look the same. Previous armor is taken off and becomes unavailable when it's equipped. Headpieces, weapon and magic armor are not removed. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="LIGHT"/>
         <set name="bodypart" val="alldress"/>
         <set name="immediate_effect" val="true"/>
@@ -409,7 +387,6 @@
     </armor>
     <armor id="49554" name="Red Zubei - Magic Armor" icon="icon.armor_t2000_ul_i00">
         <!-- An item intended for L2 Assist Application. Full Light Armor of Red Zubei. It has no restrictions as to class, but for some races and classes heavy, light and magic armor look the same. Previous armor is taken off and becomes unavailable when it's equipped. Headpieces, weapon and magic armor are not removed. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="MAGIC"/>
         <set name="bodypart" val="alldress"/>
         <set name="immediate_effect" val="true"/>
@@ -498,7 +475,6 @@
     </item>
     <weapon id="49573" name="Samurai Black Long Sword*Samurai Black Long Sword" icon="icon.weapon_dual_sword_i00">
         <!-- 30-day item. Cannot be enchanted or endued with special characteristics. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DUAL"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
@@ -519,7 +495,6 @@
     </weapon>
     <armor id="49574" name="Enhanced Queen Ant's Ring" icon="icon.accessory_ring_of_queen_ant_i02">
         <!-- MP +15, Poison Resistance and Atk. Rate +15%, P. /M. Accuracy +2, P. /M. Atk. +6%. The effect doesn't stack if two identical rings are worn. Cannot be enchanted. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="rfinger;lfinger"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="150"/>
@@ -536,7 +511,6 @@
     </armor>
     <armor id="49575" name="Enhanced Orfen's Earring" icon="icon.accessory_earring_of_orfen_i02">
         <!-- MP +25, Mental Resistance and Atk. Rate +10%, Hold Resistance and Atk. Rate +15%, Healing Power +4%, Skill MP Consumption -3%. The effect doesn't stack if two identical earrings are worn. Cannot be enchanted. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="rear;lear"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="150"/>
@@ -553,7 +527,6 @@
     </armor>
     <armor id="49576" name="Enhanced Ring of Core" icon="icon.accessory_ring_of_core_i02">
         <!-- MP +15, Mental Resistance and Atk. Rate +15%, P. / M. Evasion +2, Received Damage -4%. The effect doesn't stack if two identical rings are worn. Cannot be enchanted. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="rfinger;lfinger"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="150"/>
@@ -570,7 +543,6 @@
     </armor>
     <armor id="49577" name="Refined Queen Ant's Ring" icon="icon.accessory_ring_of_queen_ant_i03">
         <!-- MP +21, Poison Resistance and Atk. Rate +20%, P. / M. Accuracy +3, P. / M. Atk. +7%, P. Critical Damage +10%, M. Critical Damage +10%. The effect doesn't stack if two identical rings are worn. Cannot be enchanted. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="rfinger;lfinger"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="150"/>
@@ -587,7 +559,6 @@
     </armor>
     <armor id="49578" name="Refined Orfen's Earring" icon="icon.accessory_earring_of_orfen_i03">
         <!-- MP +31, Mental Resistance and Atk. Rate +15%, Hold Resistance and Atk. Rate +20%, Healing Power +6%, Skill MP Consumption -5%. Has a chance of absorbing 3% of damage inflicted on the enemy as MP. The effect doesn't stack if two identical earrings are worn. Cannot be enchanted. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="rear;lear"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="150"/>
@@ -604,7 +575,6 @@
     </armor>
     <armor id="49579" name="Refined Ring of Core" icon="icon.accessory_ring_of_core_i03">
         <!-- MP +21, Mental Resistance and Atk. Rate + 20%, P. / M. Evasion +3, Received Damage -6%. Enables to use a special ability to remove debuffs. The effect doesn't stack if two identical rings are worn. Cannot be enchanted. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="rfinger;lfinger"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="150"/>
@@ -622,7 +592,6 @@
     </armor>
     <armor id="49580" name="Baium's Ring" icon="icon.accessory_ring_of_baium_i00">
         <!-- MP +9, Stun Resistance and Stun Atk. Rate +10%, Bleed Resistance and Bleed Atk. Rate +5%, Atk. Spd./Casting Spd. +2%, Skill Power +2%. The effect does not stack if two identical rings are equipped. Cannot be enchanted. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="rfinger;lfinger"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="150"/>
@@ -639,7 +608,6 @@
     </armor>
     <armor id="49581" name="Reinforced Baium's Ring" icon="icon.accessory_ring_of_baium_i02">
         <!-- MP +15, Stun Resistance and Stun Atk. Rate +15%, Bleed Resistance and Bleed Atk. Rate +10%, Atk. Spd./Casting Spd. +3%, Skill Power +4%. The effect does not stack if two identical rings are equipped. Cannot be enchanted. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="rfinger;lfinger"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="150"/>
@@ -656,7 +624,6 @@
     </armor>
     <armor id="49582" name="Refined Baium's Ring" icon="icon.accessory_ring_of_baium_i03">
         <!-- MP +21, Stun Resistance and Stun Atk. Rate +20%, Bleed Resistance and Bleed Atk. Rate +15%, Atk. Spd./Casting Spd. +4%, Skill Power +6%, P. Critical Damage +15%, M. Critical Damage +10%. The effect does not stack if two identical rings are equipped. Cannot be enchanted. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="rfinger;lfinger"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="150"/>
@@ -704,7 +671,6 @@
     </item>
     <weapon id="49586" name="Mermaid's Golden Fishing Rod" icon="icon.bm_gold_fishing_pole">
         <!-- 30-day item. Mermaid's Golden Fishing Rod. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. Bobber usage: 1. Enables to teleport to Giran/Gludin. Cooldown: 1 min. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="FISHINGROD"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
@@ -722,7 +688,6 @@
     </weapon>
     <weapon id="49587" name="Mermaid's Golden Fishing Rod" icon="icon.bm_gold_fishing_pole">
         <!-- Mermaid's Golden Fishing Rod. Bobber usage: 1. Enables to teleport to Giran/Gludin. Cooldown: 1 min. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="FISHINGROD"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
@@ -747,7 +712,6 @@
     </item>
     <item id="49589" name="Golden Bait" icon="icon.bm_gold_lure">
         <!-- Fishing Bait. Can be used for fishing Whales. Cannot be dropped. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
         <restriction dropable="false" sellable="false" stackable="true"/>
     </item>
@@ -760,7 +724,6 @@
     </item>
     <armor id="49591" name="Refined Queen Ant's Ring" icon="icon.accessory_ring_of_queen_ant_i03">
         <!-- 30-day item. MP +21, Poison Chance and Resistance +20%, P/M Accuracy +3, P/M Attack +7%, Crit. Attack Power +10%, M. Crit. Attack Power +5%. The effect doesn't stack if two identical rings are worn. Cannot be enchanted. Cannot be enchanted. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="rfinger;lfinger"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="150"/>
@@ -776,7 +739,6 @@
     </armor>
     <armor id="49592" name="Refined Orfen's Earring" icon="icon.accessory_earring_of_orfen_i03">
         <!-- 30-day item. MP +31, Mental Attack Resistance/Chance +15%, Shackle Chance/Resistance +20%, Healing Effects +6%, MP cost for abilities -5%. Has a chance to transfer 3% of Damage dealt to the enemy into MP. The effect doesn't stack if two identical earrings are worn. Cannot be enchanted. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="rear;lear"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="150"/>
@@ -792,7 +754,6 @@
     </armor>
     <armor id="49593" name="Refined Ring of Core" icon="icon.accessory_ring_of_core_i03">
         <!-- 30-day item. When equipped, grants MP + 21, Mental Atk. Resistance/Chance +20%, P. / M. Evasion +3, decreases received damage by -6%. The effect does not stack, if two identical rings are equipped. Cannot be enchanted. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="rfinger;lfinger"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="150"/>
@@ -830,7 +791,6 @@
     </item>
     <armor id="49598" name="Blue Talisman - P. Crit." icon="icon.etc_talisman_i01">
         <!-- A 1-hour item. P. Critical Rate +10. Effects from two such talismans do not stack. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="120"/>
         <set name="time" val="60"/>
@@ -838,7 +798,6 @@
     </armor>
     <armor id="49599" name="Blue Talisman - P. Crit." icon="icon.etc_talisman_i01">
         <!-- A 1-hour item. P. Atk. +3%. Effects from two such talismans do not stack. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="120"/>
         <set name="time" val="60"/>

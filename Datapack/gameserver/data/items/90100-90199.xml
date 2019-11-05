@@ -162,7 +162,6 @@
     </item>
     <armor id="90132" name="Monster Arena Belt" icon="icon.belt_of_tiat">
         <!-- CON +1, MEN +1, HP Recovery +2.31, MP Recovery +1.54, CP Recovery +3.07, Max. HP/ MP/ CP +10%, Received damage -3%. Duration: 7-day. Cannot be exchanged, dropped or sold in a private store. Can be stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="LIGHT"/>
         <set name="bodypart" val="waist"/>
         <set name="immediate_effect" val="true"/>
@@ -209,13 +208,11 @@
     </item>
     <item id="90139" name="Silver Bait" icon="icon.bm_silver_lure">
         <!-- A fishing bait enabling to catch a Whale. At a low probability, you may get Golden Mermaid's Tears. Cannot be exchanged, dropped, sold in a private store. Can be stored in a private warehouse. Can be shared within account through Dimensional Merchant. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
         <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true" freightable="true"/>
     </item>
     <armor id="90140" name="Cadmus Transformation Bracelet - Prophet" icon="icon.pi_high_agathion_bracelet_i00">
         <!-- A 7-day item. Transforms you into Prophet Cadmus. Can be used once a day. After the transformation, you can use the following skills for 4 hours: Might, Shield, Wind Walk, Return, Focus, Death Whisper, Guidance, Haste, Acumen, and Heal. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="underwear"/>
         <set name="immediate_effect" val="true"/>
         <set name="time" val="10080"/>
@@ -223,7 +220,6 @@
     </armor>
     <armor id="90141" name="Cadmus Transformation Bracelet - Shillien Elder" icon="icon.pi_high_agathion_bracelet_i00">
         <!-- A 7-day item. Transforms you into Shillien Elder Cadmus. Can be used once a day. After the transformation, you can use the following skills for 4 hours: Might, Shield, Wind Walk, Return, Vampiric Rage, Empower, Death Whisper, Guidance, and Heal. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="underwear"/>
         <set name="immediate_effect" val="true"/>
         <set name="time" val="10080"/>
@@ -231,7 +227,6 @@
     </armor>
     <armor id="90142" name="Cadmus Transformation Bracelet - Elven Elder" icon="icon.pi_high_agathion_bracelet_i00">
         <!-- A 7-day item. Transforms you into Elven Elder Cadmus. Can be used once a day. After the transformation, you can use the following skills for 4 hours: Might, Shield, Wind Walk, Return, Clarity, Agility, Decrease Weight, Regeneration, and Greater Heal. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="underwear"/>
         <set name="immediate_effect" val="true"/>
         <set name="time" val="10080"/>
@@ -249,7 +244,6 @@
     </item>
     <armor id="90145" name="Ring of Savior" icon="icon.event_classic_ring">
         <!-- Stun Resistance +5%, HP Recovery +1.8 and MP Recovery +1.1.when running. Effects do not stack if two identical rings are equipped. Cannot be enchanted. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="rfinger;lfinger"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="150"/>
@@ -281,7 +275,6 @@
     </item>
     <weapon id="90150" name="Savior’s Dualsword" icon="icon.weapon_dual_sword_i00">
         <!-- A 30-day item. <Soul Crystal Enhancement>. Atk. Spd. +5%. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DUAL"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
@@ -303,7 +296,6 @@
     </weapon>
     <weapon id="90151" name="Savior’s Staff" icon="icon.weapon_crystal_staff_i00">
         <!-- A 30-day item. <Soul Crystal Enhancement>. Casting Spd. +12%. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
@@ -326,7 +318,6 @@
     </weapon>
     <weapon id="90152" name="Savior’s Bow" icon="icon.weapon_crystallized_ice_bow_i00">
         <!-- A 30-day item. <Soul Crystal Enhancement>. P. Crit. Rate. +52. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BOW"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
@@ -350,7 +341,6 @@
     </weapon>
     <weapon id="90153" name="Savior’s Dagger" icon="icon.weapon_dark_screamer_i00">
         <!-- A 30-day item. <Soul Crystal Enhancement>. P. Crit. Rate. +66. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DAGGER"/>
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
@@ -373,7 +363,6 @@
     </weapon>
     <weapon id="90154" name="Savior's Spear" icon="icon.weapon_scorpion_i00">
         <!-- A 30-day item. <Soul Crystal Enhancement>. 25% chance to stun the target by Crit. Atk. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="POLE"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
@@ -405,14 +394,12 @@
     </item>
     <armor id="90156" name="Talisman of Border - Lv. 6" icon="icon.bm_magic_square_talisman">
         <!-- A 30-day item. P./ M. Def. +24, P./ M. Skills Evasion +2, HP/ MP/ CP +160, Speed +5, P./ M. Atk. Spd. +15, Acquired XP/ SP +4%. Allows using Border Purification (cancels Paralysis, Petrification, Poisoning, and Bleeding). Effects from two such talismans do not stack. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. The item will be removed after the event is over. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
         <set name="time" val="43200"/>
         <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
     </armor>
     <armor id="90157" name="Warrior’s Talisman - Attack" icon="icon.r90_sp_talisman_dr_mp_active">
         <!-- PvE Damage +3%, P./ M. Critical Damage +20, P./ M. Skill Power +2%, P./ M. Accuracy +1. Duration: 7-day. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="120"/>
         <set name="bodypart" val="talisman"/>
@@ -423,7 +410,6 @@
     </armor>
     <armor id="90158" name="Fire Dragon Pendant +6" icon="icon.bm_pendant_pve">
         <!-- M. Def. +16, XP/SP gain +10%, P./ M. Atk. +20. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="underwear"/>
         <set name="immediate_effect" val="true"/>
         <set name="time" val="43200"/>
@@ -437,7 +423,6 @@
     </armor>
     <armor id="90159" name="Talisman of Battle - Liberate" icon="icon.etc_talisman_i03">
         <!-- Clears all abnormal states and debuffs. Reuse Time: 10 minutes. Cannot be exchanged, dropped or sold in a private store. Can be stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="talisman"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="120"/>
@@ -452,7 +437,6 @@
     </armor>
     <armor id="90160" name="Warrior’s Talisman - Defense" icon="icon.r99_talisman_pd_up_passive">
         <!-- Received PvE damage -3%, M. Damage Resistance +2%, P./ M. Skill Evasion +4%, Debuff Resistance +3%, Pull Resistance +10%. Duration: 7-day. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="120"/>
         <set name="bodypart" val="talisman"/>
@@ -549,7 +533,6 @@
     <item id="90171" name="Monkey Bait" icon="icon.etc_gludio_fish_lure_i00">
         <!-- Fishing Time: 20 seconds. Fishing Standby Time: 10 seconds. Fish bait bought from Chef Monkey. Fish using this bait to catch Tuna. Cannot be exchanged, dropped, sold in a private store. Can be stored in a private warehouse. Can be shared within account through Dimensional Merchant. Deleted after event. -->
         <set name="bodypart" val="lhand"/>
-        <set name="default_action" val="EQUIP"/>
         <set name="etcitem_type" val="LURE"/>
         <set name="immediate_effect" val="true"/>
         <restriction tradable="false" dropable="false" depositable="false" sellable="false" stackable="true" freightable="true"/>
@@ -611,7 +594,6 @@
     </item>
     <item id="90182" name="Shining Golden Bait" icon="icon.bm_gold_lure">
         <!-- Fishing Bait. Can be used for fishing a Glowing Whale with a low probability of getting a Shiny Coin. Cannot be dropped. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
         <restriction dropable="false" stackable="true"/>
     </item>
@@ -651,7 +633,6 @@
     </item>
     <armor id="90190" name="Dandy Pendant" icon="icon.bm_pendant_pve">
         <!-- M. Def. +20, Acquired XP/ SP +30%, P./ M. Atk. +50, P./ M. Critical Damage +5%. Allows using the Blessing of Fire Dragon skill. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="underwear"/>
         <set name="immediate_effect" val="true"/>
         <set name="time" val="10080"/>
@@ -662,7 +643,6 @@
     </armor>
     <armor id="90191" name="Dandy Shining Pendant" icon="icon.bm_pendant_pve">
         <!-- M. Def. +21, Acquired XP/ SP +30%, P./ M. Atk. +60, P./ M. Critical Damage +5%. Allows using the Blessing of Fire Dragon and Fire Dragon Protection skills. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="underwear"/>
         <set name="immediate_effect" val="true"/>
         <set name="time" val="10080"/>
@@ -693,7 +673,6 @@
     </item>
     <armor id="90196" name="Dandy Pendant" icon="icon.bm_pendant_pve">
         <!-- M. Def. +20, Acquired XP/ SP +30%, P./ M. Atk. +50, P./ M. Critical Damage +5%. Allows using the Blessing of Fire Dragon skill. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="underwear"/>
         <set name="immediate_effect" val="true"/>
         <set name="time" val="120"/>
@@ -704,7 +683,6 @@
     </armor>
     <armor id="90197" name="Dandy Shining Pendant" icon="icon.bm_pendant_pve">
         <!-- M. Def. +21, Acquired XP/ SP +30%, P./ M. Atk. +60, P./ M. Critical Damage +5%. Allows using the Blessing of Fire Dragon and Fire Dragon Protection skills. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="underwear"/>
         <set name="immediate_effect" val="true"/>
         <set name="time" val="120"/>

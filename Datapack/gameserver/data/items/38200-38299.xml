@@ -1,7 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
     <weapon id="38211" name="Blue Mackerel: One-handed Sword" icon="icon.wp_fishing1">
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
@@ -19,7 +18,6 @@
         </stats>
     </weapon>
     <weapon id="38212" name="Trumpetfish: Dagger" icon="icon.wp_fishing2">
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DAGGER"/>
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
@@ -38,7 +36,6 @@
         </stats>
     </weapon>
     <weapon id="38213" name="Shark: Two-handed Sword" icon="icon.wp_fishing3">
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
@@ -56,7 +53,6 @@
         </stats>
     </weapon>
     <weapon id="38214" name="Squid: Spear" icon="icon.wp_fishing4">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="2060"/>
@@ -77,7 +73,6 @@
         </stats>
     </weapon>
     <weapon id="38215" name="Sea Horse: Two-handed Magic Blunt Weapon" icon="icon.wp_fishing5">
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
@@ -97,7 +92,6 @@
         </stats>
     </weapon>
     <weapon id="38216" name="Lobster: Fist Weapon" icon="icon.wp_fishing6">
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DUALFIST"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
@@ -116,7 +110,6 @@
         </stats>
     </weapon>
     <weapon id="38217" name="Giant Crab: Bow" icon="icon.wp_fishing7">
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BOW"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
@@ -136,7 +129,6 @@
         </stats>
     </weapon>
     <armor id="38220" name="Turtle: Shield" icon="icon.wp_fishing10">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="lhand"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="1320"/>
@@ -148,7 +140,6 @@
         </stats>
     </armor>
     <weapon id="38221" name="Blue Mackerel: Dualsword" icon="icon.wp_fishing11">
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DUAL"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>

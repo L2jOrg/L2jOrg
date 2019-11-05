@@ -1,7 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
     <weapon id="1" name="Short Sword" icon="icon.weapon_small_sword_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -20,7 +19,6 @@
         </stats>
     </weapon>
     <weapon id="2" name="Long Sword" icon="icon.weapon_long_sword_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -40,7 +38,6 @@
         </stats>
     </weapon>
     <weapon id="3" name="Broadsword" icon="icon.weapon_broad_sword_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -60,7 +57,6 @@
         </stats>
     </weapon>
     <weapon id="4" name="Club" icon="icon.weapon_club_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -81,7 +77,6 @@
         </stats>
     </weapon>
     <weapon id="5" name="Mace" icon="icon.weapon_mace_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -103,7 +98,6 @@
     </weapon>
     <weapon id="6" name="Apprentice's Wand" icon="icon.weapon_apprentices_wand_i00">
         <!-- Cannot be exchanged, dropped, sold, or stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -125,7 +119,6 @@
         </stats>
     </weapon>
     <weapon id="7" name="Apprentice's Rod" icon="icon.weapon_apprentices_rod_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -147,7 +140,6 @@
         </stats>
     </weapon>
     <weapon id="8" name="Willow Staff" icon="icon.weapon_willow_staff_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;46;120"/>
@@ -169,7 +161,6 @@
         </stats>
     </weapon>
     <weapon id="9" name="Cedar Staff" icon="icon.weapon_cedar_staff_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;46;120"/>
@@ -192,7 +183,6 @@
     </weapon>
     <weapon id="10" name="Dagger" icon="icon.weapon_dagger_i00">
         <!-- Cannot be exchanged, dropped, sold, or stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DAGGER"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -213,7 +203,6 @@
         </stats>
     </weapon>
     <weapon id="11" name="Bone Dagger" icon="icon.weapon_bone_dagger_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DAGGER"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -234,7 +223,6 @@
         </stats>
     </weapon>
     <weapon id="12" name="Knife" icon="icon.weapon_knife_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DAGGER"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -255,7 +243,6 @@
         </stats>
     </weapon>
     <weapon id="13" name="Short Bow" icon="icon.weapon_short_bow_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BOW"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;10;0"/>
@@ -278,7 +265,6 @@
         </stats>
     </weapon>
     <weapon id="14" name="Bow" icon="icon.weapon_bow_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BOW"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;10;0"/>
@@ -301,7 +287,6 @@
         </stats>
     </weapon>
     <weapon id="15" name="Short Spear" icon="icon.weapon_short_spear_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="POLE"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;66;120"/>
@@ -325,7 +310,6 @@
         </stats>
     </weapon>
     <weapon id="16" name="Great Spear" icon="icon.weapon_long_spear_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="POLE"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;66;120"/>
@@ -350,7 +334,6 @@
     </weapon>
     <item id="17" name="Wooden Arrow" icon="icon.etc_wooden_quiver_i00">
         <!-- An arrow made of wood. It is an arrow used for a No-grade bow. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="etcitem_type" val="ARROW"/>
         <set name="bodypart" val="lhand"/>
         <set name="immediate_effect" val="true"/>
@@ -360,7 +343,6 @@
         <restriction stackable="true"/>
     </item>
     <armor id="18" name="Leather Shield" icon="icon.shield_leather_shield_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="lhand"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="1430"/>
@@ -373,7 +355,6 @@
         </stats>
     </armor>
     <armor id="19" name="Small Shield" icon="icon.shield_small_shield_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="lhand"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="1420"/>
@@ -386,7 +367,6 @@
         </stats>
     </armor>
     <armor id="20" name="Buckler" icon="icon.shield_buckler_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="lhand"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="1410"/>
@@ -399,7 +379,6 @@
         </stats>
     </armor>
     <armor id="21" name="Shirt" icon="icon.armor_t02_u_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="LIGHT"/>
         <set name="bodypart" val="chest"/>
         <set name="immediate_effect" val="true"/>
@@ -411,7 +390,6 @@
         </stats>
     </armor>
     <armor id="22" name="Leather Shirt" icon="icon.armor_t04_u_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="LIGHT"/>
         <set name="bodypart" val="chest"/>
         <set name="immediate_effect" val="true"/>
@@ -423,7 +401,6 @@
         </stats>
     </armor>
     <armor id="23" name="Wooden Breastplate" icon="icon.armor_t06_u_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="LIGHT"/>
         <set name="bodypart" val="chest"/>
         <set name="immediate_effect" val="true"/>
@@ -435,7 +412,6 @@
         </stats>
     </armor>
     <armor id="24" name="Bone Breastplate" icon="icon.armor_t32_u_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="LIGHT"/>
         <set name="bodypart" val="chest"/>
         <set name="immediate_effect" val="true"/>
@@ -447,7 +423,6 @@
         </stats>
     </armor>
     <armor id="25" name="Piece Bone Breastplate" icon="icon.armor_t33_u_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="HEAVY"/>
         <set name="bodypart" val="chest"/>
         <set name="immediate_effect" val="true"/>
@@ -459,7 +434,6 @@
         </stats>
     </armor>
     <armor id="26" name="Bronze Breastplate" icon="icon.armor_t34_u_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="HEAVY"/>
         <set name="bodypart" val="chest"/>
         <set name="immediate_effect" val="true"/>
@@ -471,7 +445,6 @@
         </stats>
     </armor>
     <armor id="27" name="Durable Leather Shirt" icon="icon.armor_t30_u_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="LIGHT"/>
         <set name="bodypart" val="chest"/>
         <set name="immediate_effect" val="true"/>
@@ -483,7 +456,6 @@
         </stats>
     </armor>
     <armor id="28" name="Pants" icon="icon.armor_t02_l_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="LIGHT"/>
         <set name="bodypart" val="legs"/>
         <set name="immediate_effect" val="true"/>
@@ -495,7 +467,6 @@
         </stats>
     </armor>
     <armor id="29" name="Leather Pants" icon="icon.armor_t04_l_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="LIGHT"/>
         <set name="bodypart" val="legs"/>
         <set name="immediate_effect" val="true"/>
@@ -507,7 +478,6 @@
         </stats>
     </armor>
     <armor id="30" name="Durable Leather Pants" icon="icon.armor_t06_l_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="LIGHT"/>
         <set name="bodypart" val="legs"/>
         <set name="immediate_effect" val="true"/>
@@ -519,7 +489,6 @@
         </stats>
     </armor>
     <armor id="31" name="Bone Gaiters" icon="icon.armor_t32_l_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="LIGHT"/>
         <set name="bodypart" val="legs"/>
         <set name="immediate_effect" val="true"/>
@@ -531,7 +500,6 @@
         </stats>
     </armor>
     <armor id="32" name="Piece Bone Gaiters" icon="icon.armor_t33_l_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="HEAVY"/>
         <set name="bodypart" val="legs"/>
         <set name="immediate_effect" val="true"/>
@@ -543,7 +511,6 @@
         </stats>
     </armor>
     <armor id="33" name="Durable Leather Gaiters" icon="icon.armor_t30_l_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="LIGHT"/>
         <set name="bodypart" val="legs"/>
         <set name="immediate_effect" val="true"/>
@@ -555,7 +522,6 @@
         </stats>
     </armor>
     <armor id="34" name="Bronze Gaiters" icon="icon.armor_t34_l_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="HEAVY"/>
         <set name="bodypart" val="legs"/>
         <set name="immediate_effect" val="true"/>
@@ -567,7 +533,6 @@
         </stats>
     </armor>
     <armor id="35" name="Cloth Shoes" icon="icon.armor_t02_b_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="feet"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="1320"/>
@@ -578,7 +543,6 @@
         </stats>
     </armor>
     <armor id="36" name="Leather Sandals" icon="icon.armor_t03_b_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="feet"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="1320"/>
@@ -589,7 +553,6 @@
         </stats>
     </armor>
     <armor id="37" name="Leather Shoes" icon="icon.armor_t05_b_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="feet"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="1320"/>
@@ -600,7 +563,6 @@
         </stats>
     </armor>
     <armor id="38" name="Low Boots" icon="icon.armor_t32_b_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="feet"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="1320"/>
@@ -611,7 +573,6 @@
         </stats>
     </armor>
     <armor id="39" name="Boots" icon="icon.armor_t30_b_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="feet"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="1310"/>
@@ -622,7 +583,6 @@
         </stats>
     </armor>
     <armor id="40" name="Leather Boots" icon="icon.armor_t09_b_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="feet"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="38"/>
@@ -636,7 +596,6 @@
         </stats>
     </armor>
     <armor id="41" name="Cloth Cap" icon="icon.armor_cloth_helmet_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="head"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="660"/>
@@ -647,7 +606,6 @@
         </stats>
     </armor>
     <armor id="42" name="Leather Cap" icon="icon.armor_leather_helmet_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="head"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="660"/>
@@ -658,7 +616,6 @@
         </stats>
     </armor>
     <armor id="43" name="Wooden Helmet" icon="icon.armor_leather_helmet_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="head"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="660"/>
@@ -669,7 +626,6 @@
         </stats>
     </armor>
     <armor id="44" name="Leather Helmet" icon="icon.armor_leather_helmet_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="head"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="650"/>
@@ -680,7 +636,6 @@
         </stats>
     </armor>
     <armor id="45" name="Bone Helmet" icon="icon.armor_leather_helmet_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="head"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="56"/>
@@ -694,7 +649,6 @@
         </stats>
     </armor>
     <armor id="46" name="Bronze Helmet" icon="icon.armor_helmet_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="head"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="90"/>
@@ -708,7 +662,6 @@
         </stats>
     </armor>
     <armor id="47" name="Headgear" icon="icon.armor_helmet_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="head"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="138"/>
@@ -722,7 +675,6 @@
         </stats>
     </armor>
     <armor id="48" name="Short Gloves" icon="icon.armor_t02_g_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="gloves"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="660"/>
@@ -733,7 +685,6 @@
         </stats>
     </armor>
     <armor id="49" name="Gloves" icon="icon.armor_t06_g_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="gloves"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="660"/>
@@ -744,7 +695,6 @@
         </stats>
     </armor>
     <armor id="50" name="Leather Gloves" icon="icon.armor_t32_g_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="gloves"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="650"/>
@@ -755,7 +705,6 @@
         </stats>
     </armor>
     <armor id="51" name="Bracer" icon="icon.armor_t30_g_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="gloves"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="650"/>
@@ -771,7 +720,6 @@
         <restriction sellable="false" commissionable="false" stackable="true"/>
     </item>
     <armor id="58" name="Mithril Breastplate" icon="icon.armor_t19_u_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="HEAVY"/>
         <set name="bodypart" val="chest"/>
         <set name="immediate_effect" val="true"/>
@@ -786,7 +734,6 @@
         </stats>
     </armor>
     <armor id="59" name="Mithril Gaiters" icon="icon.armor_t19_l_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="HEAVY"/>
         <set name="bodypart" val="legs"/>
         <set name="immediate_effect" val="true"/>
@@ -802,7 +749,6 @@
     </armor>
     <armor id="60" name="Compound Armor" icon="icon.armor_t61_ul_i00">
         <!-- Full body armor. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="HEAVY"/>
         <set name="bodypart" val="onepiece"/>
         <set name="immediate_effect" val="true"/>
@@ -817,7 +763,6 @@
         </stats>
     </armor>
     <armor id="61" name="Mithril Gloves" icon="icon.armor_t46_g_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="gloves"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="177"/>
@@ -831,7 +776,6 @@
         </stats>
     </armor>
     <armor id="62" name="Reinforced Mithril Boots" icon="icon.armor_t47_b_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="feet"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="50"/>
@@ -845,7 +789,6 @@
         </stats>
     </armor>
     <armor id="63" name="Gauntlets" icon="icon.armor_t10_g_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="gloves"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="92"/>
@@ -859,7 +802,6 @@
         </stats>
     </armor>
     <armor id="64" name="Compound Boots" icon="icon.armor_t61_b_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="feet"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="98"/>
@@ -873,7 +815,6 @@
         </stats>
     </armor>
     <weapon id="66" name="Gladius" icon="icon.weapon_gladius_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -893,7 +834,6 @@
         </stats>
     </weapon>
     <weapon id="67" name="Orcish Sword" icon="icon.weapon_orcish_sword_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -913,7 +853,6 @@
         </stats>
     </weapon>
     <weapon id="68" name="Falchion" icon="icon.weapon_falchion_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -933,7 +872,6 @@
         </stats>
     </weapon>
     <weapon id="69" name="Bastard Sword" icon="icon.weapon_bastard_sword_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;42;120"/>
@@ -957,7 +895,6 @@
         </stats>
     </weapon>
     <weapon id="70" name="Claymore" icon="icon.weapon_claymore_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;44;120"/>
@@ -982,7 +919,6 @@
     </weapon>
     <weapon id="71" name="Flamberge" icon="icon.weapon_flamberge_i00">
         <!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;44;120"/>
@@ -1007,7 +943,6 @@
     </weapon>
     <weapon id="72" name="StormBringer" icon="icon.weapon_stormbringer_i00">
         <!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -1032,7 +967,6 @@
     </weapon>
     <weapon id="73" name="Shamshir" icon="icon.weapon_shamshir_i00">
         <!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -1057,7 +991,6 @@
     </weapon>
     <weapon id="74" name="Katana" icon="icon.weapon_katana_i00">
         <!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -1082,7 +1015,6 @@
     </weapon>
     <weapon id="75" name="Caliburs" icon="icon.weapon_caliburs_i00">
         <!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -1107,7 +1039,6 @@
     </weapon>
     <weapon id="76" name="Sword of Delusion" icon="icon.weapon_sword_of_delusion_i00">
         <!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -1132,7 +1063,6 @@
     </weapon>
     <weapon id="77" name="Tsurugi" icon="icon.weapon_tsurugi_i00">
         <!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -1157,7 +1087,6 @@
     </weapon>
     <weapon id="78" name="Great Sword" icon="icon.weapon_great_sword_i00">
         <!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;44;120"/>
@@ -1182,7 +1111,6 @@
     </weapon>
     <weapon id="79" name="Damascus Sword" icon="icon.weapon_sword_of_damascus_i00">
         <!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -1207,7 +1135,6 @@
     </weapon>
     <weapon id="80" name="Tallum Blade" icon="icon.weapon_tallum_blade_i00">
         <!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -1232,7 +1159,6 @@
     </weapon>
     <weapon id="81" name="Dragon Slayer" icon="icon.weapon_dragon_slayer_i00">
         <!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;46;120"/>
@@ -1256,7 +1182,6 @@
         </stats>
     </weapon>
     <weapon id="83" name="Sword of Magic" icon="icon.weapon_sword_of_magic_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -1281,7 +1206,6 @@
     </weapon>
     <weapon id="84" name="Homunkulus' Sword" icon="icon.weapon_homunkuluss_sword_i00">
         <!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -1305,7 +1229,6 @@
         </stats>
     </weapon>
     <weapon id="86" name="Tomahawk" icon="icon.weapon_tomahawk_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -1329,7 +1252,6 @@
         </stats>
     </weapon>
     <weapon id="87" name="Iron Hammer" icon="icon.weapon_iron_hammer_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -1350,7 +1272,6 @@
         </stats>
     </weapon>
     <weapon id="88" name="Morning Star" icon="icon.weapon_morning_star_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -1375,7 +1296,6 @@
     </weapon>
     <weapon id="89" name="Big Hammer" icon="icon.weapon_big_hammer_i00">
         <!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -1399,7 +1319,6 @@
         </stats>
     </weapon>
     <weapon id="90" name="Goat Head Staff" icon="icon.weapon_goathead_staff_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;46;120"/>
@@ -1425,7 +1344,6 @@
     </weapon>
     <weapon id="91" name="Heavy War Axe" icon="icon.weapon_heavy_war_axe_i00">
         <!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -1450,7 +1368,6 @@
     </weapon>
     <weapon id="92" name="Spirit's Staff" icon="icon.weapon_sprites_staff_i00">
         <!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;46;120"/>
@@ -1475,7 +1392,6 @@
         </stats>
     </weapon>
     <weapon id="93" name="Winged Spear" icon="icon.weapon_winged_spear_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="POLE"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;66;120"/>
@@ -1503,7 +1419,6 @@
     </weapon>
     <weapon id="94" name="Bec de Corbin" icon="icon.weapon_bech_de_corbin_i00">
         <!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="POLE"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;66;120"/>
@@ -1531,7 +1446,6 @@
     </weapon>
     <weapon id="95" name="Poleaxe" icon="icon.weapon_poleaxe_i00">
         <!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="POLE"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;66;120"/>
@@ -1559,7 +1473,6 @@
     </weapon>
     <weapon id="96" name="Scythe" icon="icon.weapon_scythe_i00">
         <!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="POLE"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;66;120"/>
@@ -1587,7 +1500,6 @@
     </weapon>
     <weapon id="97" name="Lance" icon="icon.weapon_lancia_i00">
         <!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="POLE"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;66;120"/>
@@ -1615,7 +1527,6 @@
     </weapon>
     <weapon id="98" name="Halberd" icon="icon.weapon_halbard_i00">
         <!-- Can bestow 1 regular Soul Crystal and 1 Special Soul Crystal. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="POLE"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;66;120"/>
@@ -1642,7 +1553,6 @@
         </stats>
     </weapon>
     <weapon id="99" name="Apprentice's Spellbook" icon="icon.weapon_apprentices_spellbook_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>

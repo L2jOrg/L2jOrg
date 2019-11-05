@@ -288,36 +288,36 @@ open module org.l2j.scripts {
             handlers.communityboard.MemoBoard;
 
     provides org.l2j.gameserver.handler.IItemHandler
-        with handlers.itemhandlers.ItemSkillsTemplate,
-            handlers.itemhandlers.ItemSkills,
-            handlers.itemhandlers.BeastSoulShot,
-            handlers.itemhandlers.BeastSpiritShot,
-            handlers.itemhandlers.BlessedSoulShots,
-            handlers.itemhandlers.BlessedSpiritShot,
-            handlers.itemhandlers.Book,
-            handlers.itemhandlers.Bypass,
-            handlers.itemhandlers.Calculator,
-            handlers.itemhandlers.ChangeAttributeCrystal,
-            handlers.itemhandlers.CharmOfCourage,
-            handlers.itemhandlers.Elixir,
-            handlers.itemhandlers.EnchantAttribute,
-            handlers.itemhandlers.EnchantScrolls,
-            handlers.itemhandlers.EventItem,
-            handlers.itemhandlers.ExtractableItems,
-            handlers.itemhandlers.FatedSupportBox,
-            handlers.itemhandlers.FishShots,
-            handlers.itemhandlers.Harvester,
-            handlers.itemhandlers.Maps,
-            handlers.itemhandlers.MercTicket,
-            handlers.itemhandlers.NicknameColor,
-            handlers.itemhandlers.PetFood,
-            handlers.itemhandlers.Recipes,
-            handlers.itemhandlers.RollingDice,
-            handlers.itemhandlers.Seed,
-            handlers.itemhandlers.SoulShots,
-            handlers.itemhandlers.SpecialXMas,
-            handlers.itemhandlers.SpiritShot,
-            handlers.itemhandlers.SummonItems;
+        with handlers.itemhandlers.ItemSkillsTemplate, // skills
+            handlers.itemhandlers.ItemSkills, // skills
+            handlers.itemhandlers.BeastSoulShot, // skills | not used ?
+            handlers.itemhandlers.BeastSpiritShot, //skills | not used ?
+            handlers.itemhandlers.BlessedSoulShots, // skills
+            handlers.itemhandlers.BlessedSpiritShot, // skills
+            handlers.itemhandlers.Book,  // none | not used ?
+            handlers.itemhandlers.Bypass, //none | not used ?
+            handlers.itemhandlers.Calculator, // none
+            handlers.itemhandlers.ChangeAttributeCrystal, // none | not used ?
+            handlers.itemhandlers.CharmOfCourage, // none | not used ?
+            handlers.itemhandlers.Elixir, // skills | not used ?
+            handlers.itemhandlers.EnchantAttribute, // none | not used?
+            handlers.itemhandlers.EnchantScrolls, // none
+            handlers.itemhandlers.EventItem, // skills | not used?
+            handlers.itemhandlers.ExtractableItems, // capsuled_items, extract_max, extract_min
+            handlers.itemhandlers.FatedSupportBox, // none | not used ?
+            handlers.itemhandlers.FishShots, // skills
+            handlers.itemhandlers.Harvester, // skills | not used ?
+            handlers.itemhandlers.Maps, // none
+            handlers.itemhandlers.MercTicket, // none
+            handlers.itemhandlers.NicknameColor, // none
+            handlers.itemhandlers.PetFood, // skills |  not used ?
+            handlers.itemhandlers.Recipes, // none
+            handlers.itemhandlers.RollingDice, // none
+            handlers.itemhandlers.Seed, // skills | not used ?
+            handlers.itemhandlers.SoulShots, // skills
+            handlers.itemhandlers.SpecialXMas, // none | not used?
+            handlers.itemhandlers.SpiritShot, // skills
+            handlers.itemhandlers.SummonItems; // not used ?
 
     provides org.l2j.gameserver.handler.IPunishmentHandler
         with handlers.punishmenthandlers.BanHandler,

@@ -285,7 +285,6 @@
     </item>
     <weapon id="3026" name="Talin's Spear" icon="icon.weapon_short_spear_i00">
         <!-- Use this spear to deliver the final blow to Eva's unicorn. Cannot be exchanged, dropped, sold, or stored in a warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="POLE"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;66;120"/>
@@ -309,7 +308,6 @@
     </weapon>
     <weapon id="3027" name="Old Knight Sword" icon="icon.weapon_brandish_i00">
         <!-- Use this sword to deliver the final blow to the spirit of Sir Herod. Cannot be exchanged, dropped, sold, or stored in a warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;44;120"/>
@@ -329,7 +327,6 @@
     </weapon>
     <weapon id="3028" name="Crescent Moon Bow" icon="icon.weapon_short_bow_i00">
         <!-- Use this bow to deliver the final blow to Commander Kadesh. Cannot be exchanged, dropped, sold, or stored in a warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BOW"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;10;0"/>
@@ -352,7 +349,6 @@
     </weapon>
     <weapon id="3029" name="Sword of Seal" icon="icon.weapon_gladius_i00">
         <!-- Use this sword to deliver the final blow to Zeruel. Cannot be exchanged, dropped, sold, or stored in a warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>

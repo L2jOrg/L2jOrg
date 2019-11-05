@@ -1,7 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
     <armor id="400" name="Theca Leather Armor" icon="icon.armor_t63_u_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="LIGHT"/>
         <set name="bodypart" val="chest"/>
         <set name="immediate_effect" val="true"/>
@@ -17,7 +16,6 @@
     </armor>
     <armor id="401" name="Drake Leather Armor" icon="icon.armor_t45_ul_i00">
         <!-- Full body armor. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="LIGHT"/>
         <set name="bodypart" val="onepiece"/>
         <set name="immediate_effect" val="true"/>
@@ -32,7 +30,6 @@
         </stats>
     </armor>
     <armor id="412" name="Cotton Pants" icon="icon.armor_t07_l_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="LIGHT"/>
         <set name="bodypart" val="legs"/>
         <set name="immediate_effect" val="true"/>
@@ -44,7 +41,6 @@
         </stats>
     </armor>
     <armor id="413" name="Puma Skin Gaiters" icon="icon.armor_t09_l_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="LIGHT"/>
         <set name="bodypart" val="legs"/>
         <set name="immediate_effect" val="true"/>
@@ -59,7 +55,6 @@
         </stats>
     </armor>
     <armor id="414" name="Lion Skin Gaiters" icon="icon.armor_t18_l_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="LIGHT"/>
         <set name="bodypart" val="legs"/>
         <set name="immediate_effect" val="true"/>
@@ -74,7 +69,6 @@
         </stats>
     </armor>
     <armor id="415" name="Mithril Banded Gaiters" icon="icon.armor_t10_l_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="LIGHT"/>
         <set name="bodypart" val="legs"/>
         <set name="immediate_effect" val="true"/>
@@ -89,7 +83,6 @@
         </stats>
     </armor>
     <armor id="416" name="Reinforced Leather Gaiters" icon="icon.armor_t13_l_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="LIGHT"/>
         <set name="bodypart" val="legs"/>
         <set name="immediate_effect" val="true"/>
@@ -104,7 +97,6 @@
         </stats>
     </armor>
     <armor id="417" name="Manticore Skin Gaiters" icon="icon.armor_t42_l_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="LIGHT"/>
         <set name="bodypart" val="legs"/>
         <set name="immediate_effect" val="true"/>
@@ -119,7 +111,6 @@
         </stats>
     </armor>
     <armor id="418" name="Plated Leather Gaiters" icon="icon.armor_t47_l_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="LIGHT"/>
         <set name="bodypart" val="legs"/>
         <set name="immediate_effect" val="true"/>
@@ -134,7 +125,6 @@
         </stats>
     </armor>
     <armor id="419" name="Rind Leather Gaiters" icon="icon.armor_t49_l_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="LIGHT"/>
         <set name="bodypart" val="legs"/>
         <set name="immediate_effect" val="true"/>
@@ -149,7 +139,6 @@
         </stats>
     </armor>
     <armor id="420" name="Theca Leather Gaiters" icon="icon.armor_t63_l_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="LIGHT"/>
         <set name="bodypart" val="legs"/>
         <set name="immediate_effect" val="true"/>
@@ -165,7 +154,6 @@
     </armor>
     <armor id="425" name="Apprentice's Tunic" icon="icon.armor_t01_u_i00">
         <!-- Cannot be exchanged, dropped, sold, or stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="MAGIC"/>
         <set name="bodypart" val="chest"/>
         <set name="immediate_effect" val="true"/>
@@ -177,7 +165,6 @@
         </stats>
     </armor>
     <armor id="426" name="Tunic" icon="icon.armor_t03_u_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="MAGIC"/>
         <set name="bodypart" val="chest"/>
         <set name="immediate_effect" val="true"/>
@@ -190,7 +177,6 @@
         </stats>
     </armor>
     <armor id="428" name="Feriotic Tunic" icon="icon.armor_t52_u_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="MAGIC"/>
         <set name="bodypart" val="chest"/>
         <set name="immediate_effect" val="true"/>
@@ -203,7 +189,6 @@
         </stats>
     </armor>
     <armor id="429" name="Leather Tunic" icon="icon.armor_t05_u_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="MAGIC"/>
         <set name="bodypart" val="chest"/>
         <set name="immediate_effect" val="true"/>
@@ -217,7 +202,6 @@
     </armor>
     <armor id="431" name="Robe of Magic" icon="icon.armor_cotton_robe_i02">
         <!-- One-piece upper and lower body armor. Additional lower body armor cannot be worn while wearing this. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="MAGIC"/>
         <set name="bodypart" val="onepiece"/>
         <set name="immediate_effect" val="true"/>
@@ -230,7 +214,6 @@
         </stats>
     </armor>
     <armor id="432" name="Cursed Tunic" icon="icon.armor_t14_u_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="MAGIC"/>
         <set name="bodypart" val="chest"/>
         <set name="immediate_effect" val="true"/>
@@ -246,7 +229,6 @@
         </stats>
     </armor>
     <armor id="433" name="Elven Tunic" icon="icon.armor_t11_u_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="MAGIC"/>
         <set name="bodypart" val="chest"/>
         <set name="immediate_effect" val="true"/>
@@ -262,7 +244,6 @@
         </stats>
     </armor>
     <armor id="434" name="White Tunic" icon="icon.armor_t16_u_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="MAGIC"/>
         <set name="bodypart" val="chest"/>
         <set name="immediate_effect" val="true"/>
@@ -278,7 +259,6 @@
         </stats>
     </armor>
     <armor id="435" name="Wizard Tunic" icon="icon.armor_t17_u_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="MAGIC"/>
         <set name="bodypart" val="chest"/>
         <set name="immediate_effect" val="true"/>
@@ -294,7 +274,6 @@
         </stats>
     </armor>
     <armor id="436" name="Tunic of Knowledge" icon="icon.armor_t41_u_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="MAGIC"/>
         <set name="bodypart" val="chest"/>
         <set name="immediate_effect" val="true"/>
@@ -310,7 +289,6 @@
         </stats>
     </armor>
     <armor id="437" name="Mithril Tunic" icon="icon.armor_t51_u_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="MAGIC"/>
         <set name="bodypart" val="chest"/>
         <set name="immediate_effect" val="true"/>
@@ -327,7 +305,6 @@
     </armor>
     <armor id="438" name="Sage's Rags" icon="icon.armor_t44_ul_i00">
         <!-- One-piece upper and lower body armor. Additional lower body armor cannot be worn while wearing this. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="MAGIC"/>
         <set name="bodypart" val="onepiece"/>
         <set name="immediate_effect" val="true"/>
@@ -343,7 +320,6 @@
         </stats>
     </armor>
     <armor id="439" name="Karmian Tunic" icon="icon.armor_t53_u_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="MAGIC"/>
         <set name="bodypart" val="chest"/>
         <set name="immediate_effect" val="true"/>
@@ -360,7 +336,6 @@
     </armor>
     <armor id="440" name="Robe of Seal" icon="icon.armor_t44_ul_i00">
         <!-- One-piece upper and lower body armor. Additional lower body armor cannot be worn while wearing this. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="MAGIC"/>
         <set name="bodypart" val="onepiece"/>
         <set name="immediate_effect" val="true"/>
@@ -376,7 +351,6 @@
         </stats>
     </armor>
     <armor id="441" name="Demon's Tunic" icon="icon.armor_t54_u_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="MAGIC"/>
         <set name="bodypart" val="chest"/>
         <set name="immediate_effect" val="true"/>
@@ -392,7 +366,6 @@
         </stats>
     </armor>
     <armor id="442" name="Divine Tunic" icon="icon.armor_t57_u_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="MAGIC"/>
         <set name="bodypart" val="chest"/>
         <set name="immediate_effect" val="true"/>
@@ -409,7 +382,6 @@
     </armor>
     <armor id="461" name="Apprentice's Stockings" icon="icon.armor_t01_l_i00">
         <!-- Cannot be exchanged, dropped, sold, or stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="MAGIC"/>
         <set name="bodypart" val="legs"/>
         <set name="immediate_effect" val="true"/>
@@ -421,7 +393,6 @@
         </stats>
     </armor>
     <armor id="462" name="Stockings" icon="icon.armor_t03_l_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="MAGIC"/>
         <set name="bodypart" val="legs"/>
         <set name="immediate_effect" val="true"/>
@@ -434,7 +405,6 @@
         </stats>
     </armor>
     <armor id="463" name="Feriotic Stockings" icon="icon.armor_t52_l_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="MAGIC"/>
         <set name="bodypart" val="legs"/>
         <set name="immediate_effect" val="true"/>
@@ -447,7 +417,6 @@
         </stats>
     </armor>
     <armor id="464" name="Leather Stockings" icon="icon.armor_t05_l_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="MAGIC"/>
         <set name="bodypart" val="legs"/>
         <set name="immediate_effect" val="true"/>
@@ -460,7 +429,6 @@
         </stats>
     </armor>
     <armor id="465" name="Cursed Stockings" icon="icon.armor_t14_l_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="MAGIC"/>
         <set name="bodypart" val="legs"/>
         <set name="immediate_effect" val="true"/>
@@ -476,7 +444,6 @@
         </stats>
     </armor>
     <armor id="466" name="Elven Stockings" icon="icon.armor_t11_l_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="MAGIC"/>
         <set name="bodypart" val="legs"/>
         <set name="immediate_effect" val="true"/>
@@ -492,7 +459,6 @@
         </stats>
     </armor>
     <armor id="467" name="Dark Stockings" icon="icon.armor_t16_l_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="MAGIC"/>
         <set name="bodypart" val="legs"/>
         <set name="immediate_effect" val="true"/>
@@ -508,7 +474,6 @@
         </stats>
     </armor>
     <armor id="468" name="Wizard Stockings" icon="icon.armor_t17_l_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="MAGIC"/>
         <set name="bodypart" val="legs"/>
         <set name="immediate_effect" val="true"/>
@@ -524,7 +489,6 @@
         </stats>
     </armor>
     <armor id="469" name="Stockings of Knowledge" icon="icon.armor_t41_l_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="MAGIC"/>
         <set name="bodypart" val="legs"/>
         <set name="immediate_effect" val="true"/>
@@ -540,7 +504,6 @@
         </stats>
     </armor>
     <armor id="470" name="Mithril Stockings" icon="icon.armor_t51_l_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="MAGIC"/>
         <set name="bodypart" val="legs"/>
         <set name="immediate_effect" val="true"/>
@@ -556,7 +519,6 @@
         </stats>
     </armor>
     <armor id="471" name="Karmian Stockings" icon="icon.armor_t53_l_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="MAGIC"/>
         <set name="bodypart" val="legs"/>
         <set name="immediate_effect" val="true"/>
@@ -572,7 +534,6 @@
         </stats>
     </armor>
     <armor id="472" name="Demon's Stockings" icon="icon.armor_t54_l_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="MAGIC"/>
         <set name="bodypart" val="legs"/>
         <set name="immediate_effect" val="true"/>
@@ -588,7 +549,6 @@
         </stats>
     </armor>
     <armor id="473" name="Divine Stockings" icon="icon.armor_t57_l_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="MAGIC"/>
         <set name="bodypart" val="legs"/>
         <set name="immediate_effect" val="true"/>
@@ -604,7 +564,6 @@
         </stats>
     </armor>
     <armor id="497" name="Chain Helmet" icon="icon.armor_helmet_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="head"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="59"/>
@@ -618,7 +577,6 @@
         </stats>
     </armor>
     <armor id="498" name="Steel Plate Helmet" icon="icon.armor_helmet_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="head"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="82"/>
@@ -632,7 +590,6 @@
         </stats>
     </armor>
     <armor id="499" name="Mithril Helmet" icon="icon.armor_circlet_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="head"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="214"/>

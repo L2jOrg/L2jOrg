@@ -240,7 +240,6 @@
     </item>
     <weapon id="8788" name="Sirra's Blade" icon="icon.weapon_sirr_blade_i01">
         <!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 52. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -268,7 +267,6 @@
     </weapon>
     <weapon id="8789" name="Sirra's Blade" icon="icon.weapon_sirr_blade_i01">
         <!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 6%. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -296,7 +294,6 @@
     </weapon>
     <weapon id="8790" name="Sirra's Blade" icon="icon.weapon_sirr_blade_i01">
         <!-- <Soul Crystal Enhancement>. P. Atk. +255 during a Critical Attack. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -324,7 +321,6 @@
     </weapon>
     <weapon id="8791" name="Sword of Ipos" icon="icon.weapon_sword_of_ipos_i01">
         <!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 54. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;46;120"/>
@@ -349,7 +345,6 @@
     </weapon>
     <weapon id="8792" name="Sword of Ipos" icon="icon.weapon_sword_of_ipos_i01">
         <!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 7%. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;46;120"/>
@@ -377,7 +372,6 @@
     </weapon>
     <weapon id="8793" name="Sword of Ipos" icon="icon.weapon_sword_of_ipos_i01">
         <!-- <Soul Crystal Enhancement>. P. Atk. +302 during a Critical Attack. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;46;120"/>
@@ -405,7 +399,6 @@
     </weapon>
     <weapon id="8794" name="Barakiel's Axe" icon="icon.weapon_barakiel_axe_i01">
         <!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 54. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -433,7 +426,6 @@
     </weapon>
     <weapon id="8795" name="Barakiel's Axe" icon="icon.weapon_barakiel_axe_i01">
         <!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 6%. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -461,7 +453,6 @@
     </weapon>
     <weapon id="8796" name="Barakiel's Axe" icon="icon.weapon_barakiel_axe_i01">
         <!-- <Soul Crystal Enhancement>. P. Atk. +255 during a Critical Attack. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -486,7 +477,6 @@
     </weapon>
     <weapon id="8797" name="Behemoth' Tuning Fork" icon="icon.weapon_tuning_fork_of_behemoth_i01">
         <!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 54. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;44;120"/>
@@ -511,7 +501,6 @@
     </weapon>
     <weapon id="8798" name="Behemoth' Tuning Fork" icon="icon.weapon_tuning_fork_of_behemoth_i01">
         <!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 7%. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;44;120"/>
@@ -539,7 +528,6 @@
     </weapon>
     <weapon id="8799" name="Behemoth' Tuning Fork" icon="icon.weapon_tuning_fork_of_behemoth_i01">
         <!-- <Soul Crystal Enhancement>. P. Atk. +302 during a Critical Attack. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;44;120"/>

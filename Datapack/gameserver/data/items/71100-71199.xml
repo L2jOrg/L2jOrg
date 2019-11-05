@@ -2,7 +2,6 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
     <weapon id="71100" name="Wedding Bouquet" icon="BranchSys2.icon.br_wedding_bouquet_i00">
         <!-- A Wedding Bouquet composed of lovely flowers, intended for female characters only. Cannot be exchanged, dropped, sold. Can be stored in private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="ETC"/>
         <set name="immediate_effect" val="true"/>
         <set name="soulshots" val="1"/>
@@ -75,7 +74,6 @@
     </item>
     <armor id="71111" name="Ruthless Tribe Mask" icon="BranchSys.icon.br_mask_i00">
         <!-- A mask which formerly belonged to Looters. Occupies 1 Hair Accessory slot. Cannot be exchanged, dropped, sold. Can be stored in private warehouse or shared within account. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="brooch_jewel"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="5"/>
@@ -83,7 +81,6 @@
     </armor>
     <armor id="71112" name="Artisan's Goggles" icon="icon.accessory_dwarf_goggle_i00">
         <!-- Large goggles used to protect eyes. Occupies 2 Hair Accessory slots. Cannot be exchanged, dropped, sold. Can be stored in private warehouse or shared within account.. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="HEAVY"/>
         <set name="bodypart" val="alldress"/>
         <set name="immediate_effect" val="true"/>
@@ -92,7 +89,6 @@
     </armor>
     <armor id="71113" name="Fairy Antennae" icon="icon.accessory_hair_feeler_i00">
         <!-- A lovely hair accessory shaped as antennae with starlets. Occupies 1 Hair Accessory slot. Cannot be exchanged, dropped, sold. Can be stored in private warehouse or shared within account. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="rear;lear"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="150"/>
@@ -103,7 +99,6 @@
     </armor>
     <armor id="71114" name="Assassin's Bamboo Hat" icon="BranchSys.icon.br_Bamboo_Hat_i00">
         <!-- A hat made from bulrush. Occupies 2 Hair Accessory slots. Cannot be exchanged, dropped, sold. Can be stored in private warehouse or shared within account. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="rear;lear"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="150"/>
@@ -114,7 +109,6 @@
     </armor>
     <armor id="71115" name="Little Angel Wings" icon="icon.accessory_hair_ring_i00">
         <!-- A hair accessory shaped as a little white wing. Occupies 1 Hair Accessory slot. Cannot be exchanged, dropped or sold. Can be stored in a private warehouse or shared within account. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="rear;lear"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="150"/>
@@ -125,7 +119,6 @@
     </armor>
     <armor id="71116" name="Black Gem Mask" icon="BranchSys.icon.br_black_gem_mask_i00">
         <!-- A luxurious black colored accessory. Occupies 1 Hair Accessory slot. Cannot be exchanged, dropped or sold. Can be stored in a private warehouse or shared within account. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="rear;lear"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="150"/>
@@ -136,7 +129,6 @@
     </armor>
     <armor id="71117" name="Circlet of Eva" icon="BranchSys.icon.br_circlet_of_eva_i00">
         <!-- A crown containing mysterious power. Occupies 2 Hair Accessory slots. Cannot be exchanged, dropped or sold. Can be stored in a private warehouse or shared within account. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="hairall"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="10"/>
@@ -144,7 +136,6 @@
     </armor>
     <armor id="71118" name="Outlaw Eyepatch" icon="icon.accessory_outlaw_eyepatch_i00">
         <!-- A purple colored accessory that will certainly adorn its owner. Occupies 1 Hair Accessory slot. Cannot be exchanged, dropped or sold. Can be stored in a private warehouse or shared within account. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="hairall"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="10"/>
@@ -152,7 +143,6 @@
     </armor>
     <armor id="71119" name="Monocle" icon="icon.accessory_glasses_i00">
         <!-- An accessory for those who like to stand out from the crowd. Occupies 1 Hair Accessory slot. Cannot be exchanged, dropped or sold. Can be stored in a private warehouse or shared within account. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="hairall"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="10"/>
@@ -164,7 +154,6 @@
     </item>
     <armor id="71121" name="Agathion - Bugbear" icon="BranchSys.icon.br_aga_bugbear_i00">
         <!-- Equipping it in the main slot summons the Agathion. Cannot be exchanged, dropped or sold. Can be stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="hairall"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="10"/>
@@ -172,7 +161,6 @@
     </armor>
     <armor id="71122" name="Agathion - Dryad" icon="BranchSys.icon.br_aga_dryad_i00">
         <!-- Equipping it in the main slot summons the Agathion. Cannot be exchanged, dropped or sold. Can be stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="hairall"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="10"/>
@@ -180,7 +168,6 @@
     </armor>
     <armor id="71123" name="Agathion - Griffin" icon="BranchIcon.icon.Item_g_rbracelet_griffin">
         <!-- Equipping it in the main slot summons the Agathion. Cannot be exchanged, dropped or sold. Can be stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="underwear"/>
         <set name="immediate_effect" val="true"/>
         <restriction tradable="false" dropable="false" depositable="false" sellable="false" freightable="true"/>
@@ -226,7 +213,6 @@
     </item>
     <armor id="71133" name="Mermaid Agathion" icon="icon.agathion_base">
         <!-- Enables to summon Agathion Mermaid when equipped. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
         <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
     </armor>
@@ -271,13 +257,11 @@
     </item>
     <armor id="71143" name="Cloak of Light for the Chosen" icon="icon.amor_goodness_cloak">
         <!-- Cloak of Light for those who have proven themselves as testers in Lineage II. P. Def. +100, M. Def. +80, and STR/ MEN/ DEX/ WIT/ INT/ CON +2. Damage received during PvP decreases by 5%. Can use Blessed Escape. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
         <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
     </armor>
     <armor id="71144" name="Cloak of Darkness for the Chosen" icon="icon.amor_evilness_cloak">
         <!-- Cloak of Darkness for those who have proven themselves as testers in Lineage II. P. Def. +100, M. Def. +80, and STR/ MEN/ DEX/ WIT/ INT/ CON +2. Damage received during PvP decreases by 5%. Can use Blessed Escape. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
         <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
     </armor>
@@ -301,7 +285,6 @@
     </item>
     <armor id="71148" name="Reinforced Castle Ring (10-day)" icon="icon.ev_11th_rare_acc_ring">
         <!-- 10-day item. When equipped, Max HP +25, M. Atk. +3%, P. Atk. +3%. The effect does not stack, if two identical rings are equipped. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="rfinger;lfinger"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="150"/>
@@ -312,7 +295,6 @@
     </armor>
     <armor id="71149" name="Reinforced Castle Earring (10-day)" icon="icon.ev_11th_rare_acc_earing">
         <!-- 10-day item. When equipped, Max MP +15, MP recovery rate +0.2, Healing Power +2%, Skil lMP Consumption -1%. The effect does not stack, if two identical earrings are equipped. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="rear;lear"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="150"/>
@@ -323,7 +305,6 @@
     </armor>
     <armor id="71150" name="Reinforced Castle Necklace (10-day)" icon="icon.ev_11th_rare_acc_necklace">
         <!-- 10-day item. When equipped, Max MP +25, M. Def. +3, P. Def. +5, Mental Attack and Resistance +3%, Skill MP Consumption -1%. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="neck"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="150"/>
@@ -334,7 +315,6 @@
     </armor>
     <armor id="71151" name="Agathion Bracelet - Lv. 3" icon="icon.lbracelet_agathion_charm">
         <!-- When worn, 1 Agathion's main slot and 2 Agathion's side slot activated. STR/ INT/ CON/ MEN +1. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="lbracelet"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="100"/>
@@ -346,7 +326,6 @@
     </armor>
     <armor id="71152" name="Agathion Bracelet - Lv. 5" icon="icon.lbracelet_agathion_charm">
         <!-- When worn,1 Agathion's main slot and 4 Agathion's side slot activated. STR/ INT/ CON/ MEN/ DEX/ WIT +1. Mental/ stun/ sleep/ paralyse attacks resistance +8%. Cannot be dropped. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="lbracelet"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="100"/>
@@ -379,7 +358,6 @@
     </item>
     <armor id="71157" name="Agathion Ball Trapping Gnosian" icon="BranchSys2.icon.br_aga_kball_male_i00">
         <!-- Equipping it in the main slot summons Agathion Ball Trapping Gnosian. He wears a red uniform. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="lbracelet"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="150"/>
@@ -387,7 +365,6 @@
     </armor>
     <armor id="71158" name="Agathion Ball Trapping Orodriel" icon="BranchSys2.icon.br_aga_kball_female_i00">
         <!-- Equipping it in the main slot summons Agathion Ball Trapping Orodriel. He wears a red uniform. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="lbracelet"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="150"/>
@@ -395,7 +372,6 @@
     </armor>
     <armor id="71159" name="Agathion Penalty Kick" icon="BranchSys2.icon.br_aga_kball_kick_i00">
         <!-- Equipping it in the main slot summons Gnosian or Orodriel to make a penalty kick. They wear a red uniform. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="lbracelet"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="150"/>
@@ -505,7 +481,6 @@
     </item>
     <armor id="71184" name="Agathion Meliodas" icon="BranchIcon.icon.g_bm_meliodas_agathion_charm_lv1_jp">
         <!-- Activates the power of the Agathion Meliodas. Special abilities may be activated if the Agathion is summoned from the main slot. Can be enchanted up to +7 with the Seven Sins Agathion Growth Book. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. <Conditions for upgrade>. Enchant to +7 to upgrade to Agathion Meliodas Lv. 2. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="gloves"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="5"/>
@@ -513,7 +488,6 @@
     </armor>
     <armor id="71185" name="Agathion Elizabeth" icon="BranchIcon.icon.g_bm_elizabeth_agathion_charm_lv1_jp">
         <!-- Activates the power of the Agathion Elizabeth. Special abilities may be activated if the Agathion is summoned from the main slot. Can be enchanted up to +7 with the Seven Sins Agathion Growth Book. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. <Conditions for upgrade>. Enchant to +7 to upgrade to Agathion Elizabeth Lv. 2. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="gloves"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="5"/>
@@ -521,7 +495,6 @@
     </armor>
     <armor id="71186" name="Agathion Hawk" icon="BranchIcon.icon.g_bm_hawk_agathion_charm_lv1_jp">
         <!-- Activates the power of the Agathion Hawk. Special abilities may be activated if the Agathion is summoned from the main slot. Can be enchanted up to +7 with the Seven Sins Agathion Growth Book. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. <Conditions for upgrade>. Enchant to +7 to upgrade to Agathion Hawk Lv. 2. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="gloves"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="5"/>
@@ -529,7 +502,6 @@
     </armor>
     <armor id="71187" name="Agathion Ban" icon="BranchIcon.icon.g_bm_ban_agathion_charm_lv1_jp">
         <!-- Activates the power of the Agathion Ban. Special abilities may be activated if the Agathion is summoned from the main slot. Can be enchanted up to +7 with the Seven Sins Agathion Growth Book. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. <Conditions for upgrade>. Enchant to +7 to upgrade to Agathion Ban Lv. 2. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="gloves"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="5"/>
@@ -537,7 +509,6 @@
     </armor>
     <armor id="71188" name="Agathion Diane" icon="BranchIcon.icon.g_bm_diane_agathion_charm_lv1_jp">
         <!-- Activates the power of the Agathion Diane. Special abilities may be activated if the Agathion is summoned from the main slot. Can be enchanted up to +7 with the Seven Sins Agathion Growth Book. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. <Conditions for upgrade>. Enchant to +7 to upgrade to Agathion Diane Lv. 2. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="gloves"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="5"/>
@@ -545,7 +516,6 @@
     </armor>
     <armor id="71189" name="Agathion King" icon="BranchIcon.icon.g_bm_king_agathion_charm_lv1_jp">
         <!-- Activates the power of the Agathion King. Special abilities may be activated if the Agathion is summoned from the main slot. Can be enchanted up to +7 with the Seven Sins Agathion Growth Book. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. <Conditions for upgrade>. Enchant to +7 to upgrade to Agathion King Lv. 2. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="gloves"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="5"/>
@@ -553,7 +523,6 @@
     </armor>
     <armor id="71190" name="Agathion Merlin" icon="BranchIcon.icon.g_bm_merlin_agathion_charm_lv1_jp">
         <!-- Activates the power of the Agathion Merlin. Special abilities may be activated if the Agathion is summoned from the main slot. Can be enchanted up to +7 with the Seven Sins Agathion Growth Book. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. <Conditions for upgrade>. Enchant to +7 to upgrade to Agathion Merlin Lv. 2. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="gloves"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="5"/>
@@ -561,7 +530,6 @@
     </armor>
     <armor id="71191" name="Agathion Gowther" icon="BranchIcon.icon.g_bm_gowther_agathion_charm_lv1_jp">
         <!-- Activates the power of the Agathion Gowther. Special abilities may be activated if the Agathion is summoned from the main slot. Can be enchanted up to +7 with the Seven Sins Agathion Growth Book. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. <Conditions for upgrade>. Enchant to +7 to upgrade to Agathion Gowther Lv. 2. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="gloves"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="5"/>
@@ -569,7 +537,6 @@
     </armor>
     <armor id="71192" name="Agathion Escanor" icon="BranchIcon.icon.g_bm_escanor_agathion_charm_lv1_jp">
         <!-- Activates the power of the Agathion Escanor. Special abilities may be activated if the Agathion is summoned from the main slot. Can be enchanted up to +7 with the Seven Sins Agathion Growth Book. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. <Conditions for upgrade>. Enchant to +7 to upgrade to Agathion Escanor Lv. 2. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="gloves"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="5"/>
@@ -577,7 +544,6 @@
     </armor>
     <armor id="71193" name="Agathion Meliodas" icon="BranchIcon.icon.g_bm_meliodas_agathion_charm_lv1_jp">
         <!-- Activates the power of the Agathion Meliodas. Equipping it in the main slot summons the Agathion and activates both special and unique abilities. Equipping in the side slot only activates the unique abilities. Can be enchanted up to +7 with the Seven Sins Agathion Growth Book. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. <Conditions for upgrade>. Enchant to +7 to upgrade to Agathion Meliodas Lv. 3. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="gloves"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="5"/>
@@ -585,7 +551,6 @@
     </armor>
     <armor id="71194" name="Agathion Elizabeth" icon="BranchIcon.icon.g_bm_elizabeth_agathion_charm_lv1_jp">
         <!-- Activates the power of the Agathion Elizabeth. Equipping it in the main slot summons the Agathion and activates both special and unique abilities. Equipping in the side slot only activates the unique abilities. Can be enchanted up to +7 with the Seven Sins Agathion Growth Book. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. <Conditions for upgrade>. Enchant to +7 to upgrade to Agathion Elizabeth Lv. 3. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="gloves"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="5"/>
@@ -593,7 +558,6 @@
     </armor>
     <armor id="71195" name="Agathion Hawk" icon="BranchIcon.icon.g_bm_hawk_agathion_charm_lv1_jp">
         <!-- Activates the power of the Agathion Hawk. Equipping it in the main slot summons the Agathion and activates both special and unique abilities. Equipping in the side slot only activates the unique abilities. Can be enchanted up to +7 with the Seven Sins Agathion Growth Book. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. <Conditions for upgrade>. Enchant to +7 to upgrade to Agathion Hawk Lv. 3. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="gloves"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="5"/>
@@ -601,7 +565,6 @@
     </armor>
     <armor id="71196" name="Agathion Ban" icon="BranchIcon.icon.g_bm_ban_agathion_charm_lv1_jp">
         <!-- Activates the power of the Agathion Ban. Equipping it in the main slot summons the Agathion and activates both special and unique abilities. Equipping in the side slot only activates the unique abilities. Can be enchanted up to +7 with the Seven Sins Agathion Growth Book. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. <Conditions for upgrade>. Enchant to +7 to upgrade to Agathion Ban Lv. 3. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="gloves"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="5"/>
@@ -609,7 +572,6 @@
     </armor>
     <armor id="71197" name="Agathion Diane" icon="BranchIcon.icon.g_bm_diane_agathion_charm_lv1_jp">
         <!-- Activates the power of the Agathion Diane. Equipping it in the main slot summons the Agathion and activates both special and unique abilities. Equipping in the side slot only activates the unique abilities. Can be enchanted up to +7 with the Seven Sins Agathion Growth Book. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. <Conditions for upgrade>. Enchant to +7 to upgrade to Agathion Diane Lv. 3. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="gloves"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="5"/>
@@ -617,7 +579,6 @@
     </armor>
     <armor id="71198" name="Agathion King" icon="BranchIcon.icon.g_bm_king_agathion_charm_lv1_jp">
         <!-- Activates the power of the Agathion King. Equipping it in the main slot summons the Agathion and activates both special and unique abilities. Equipping in the side slot only activates the unique abilities. Can be enchanted up to +7 with the Seven Sins Agathion Growth Book. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. <Conditions for upgrade>. Enchant to +7 to upgrade to Agathion King Lv. 3. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="gloves"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="5"/>
@@ -625,7 +586,6 @@
     </armor>
     <armor id="71199" name="Agathion Merlin" icon="BranchIcon.icon.g_bm_merlin_agathion_charm_lv1_jp">
         <!-- Activates the power of the Agathion Merlin. Equipping it in the main slot summons the Agathion and activates both special and unique abilities. Equipping in the side slot only activates the unique abilities. Can be enchanted up to +7 with the Seven Sins Agathion Growth Book. Cannot be exchanged, dropped, destroyed, or sold. Can be stored in a private warehouse. <Conditions for upgrade>. Enchant to +7 to upgrade to Agathion Merlin Lv. 3. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="gloves"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="5"/>

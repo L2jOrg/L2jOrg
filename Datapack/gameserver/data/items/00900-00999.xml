@@ -1,7 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
     <armor id="900" name="Ring of Grace" icon="icon.accessary_ring_of_grace_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="rfinger;lfinger"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="B"/>
@@ -13,7 +12,6 @@
         </stats>
     </armor>
     <armor id="901" name="Ring of Holy Spirit" icon="icon.accessary_ring_of_holy_spirit_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="rfinger;lfinger"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="9"/>
@@ -28,7 +26,6 @@
     </armor>
     <armor id="902" name="Phoenix Ring" icon="icon.accessary_phoenixs_ring_i00">
         <!-- Phoenix Ring. Provides additional MP +13. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="rfinger;lfinger"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="54"/>
@@ -43,7 +40,6 @@
         </stats>
     </armor>
     <armor id="905" name="Ring of Blessing" icon="icon.accessary_ring_of_blessing_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="rfinger;lfinger"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="54"/>
@@ -58,7 +54,6 @@
     </armor>
     <armor id="906" name="Necklace of Knowledge" icon="icon.accessary_necklace_of_knowledge_i00">
         <!-- Silver necklace engraved with rune characters of knowledge. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="neck"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="150"/>
@@ -70,7 +65,6 @@
     </armor>
     <armor id="907" name="Necklace of Anguish" icon="icon.accessary_necklace_of_anguish_i00">
         <!-- Silver necklace engraved with rune characters of anguish. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="neck"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="150"/>
@@ -81,7 +75,6 @@
         </stats>
     </armor>
     <armor id="908" name="Necklace of Wisdom" icon="icon.accessary_necklace_of_wisdom_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="neck"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="150"/>
@@ -92,7 +85,6 @@
         </stats>
     </armor>
     <armor id="909" name="Blue Diamond Necklace" icon="icon.accessary_blue_diamond_necklace_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="neck"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="150"/>
@@ -103,7 +95,6 @@
         </stats>
     </armor>
     <armor id="910" name="Necklace of Devotion" icon="icon.accessary_necklace_of_devotion_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="neck"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="65"/>
@@ -117,7 +108,6 @@
         </stats>
     </armor>
     <armor id="911" name="Magic Necklace" icon="icon.accessary_enchanted_necklace_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="neck"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="103"/>
@@ -131,7 +121,6 @@
         </stats>
     </armor>
     <armor id="912" name="Near Forest Necklace" icon="icon.accessary_near_forest_necklace_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="neck"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="155"/>
@@ -145,7 +134,6 @@
         </stats>
     </armor>
     <armor id="913" name="Elven Necklace" icon="icon.accessary_elven_necklace_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="neck"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="227"/>
@@ -159,7 +147,6 @@
         </stats>
     </armor>
     <armor id="914" name="Dark Necklace" icon="icon.accessary_necklace_of_darkness_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="neck"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="294"/>
@@ -173,7 +160,6 @@
         </stats>
     </armor>
     <armor id="915" name="Aquastone Necklace" icon="icon.accessary_aquastone_necklace_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="neck"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="82"/>
@@ -187,7 +173,6 @@
         </stats>
     </armor>
     <armor id="916" name="Necklace of Protection" icon="icon.accessary_necklace_of_protection_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="neck"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="104"/>
@@ -201,7 +186,6 @@
         </stats>
     </armor>
     <armor id="917" name="Necklace of Mermaid" icon="icon.accessary_necklace_of_mermaid_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="neck"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="157"/>
@@ -215,7 +199,6 @@
         </stats>
     </armor>
     <armor id="918" name="Adamantite Necklace" icon="icon.accessary_adamantite_necklace_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="neck"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="107"/>
@@ -229,7 +212,6 @@
         </stats>
     </armor>
     <armor id="919" name="Blessed Necklace" icon="icon.accessary_blessed_necklace_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="neck"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="226"/>
@@ -244,7 +226,6 @@
     </armor>
     <armor id="920" name="Tateossian Necklace" icon="icon.accessory_tateossian_necklace_i00">
         <!-- When equipped, MP +42. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="neck"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="209"/>
@@ -258,7 +239,6 @@
         </stats>
     </armor>
     <armor id="922" name="Sage's Necklace" icon="icon.accessary_sages_necklace_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="neck"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="226"/>
@@ -273,7 +253,6 @@
     </armor>
     <armor id="924" name="Majestic Necklace" icon="icon.accessary_inferno_necklace_i00">
         <!-- Majestic Necklace. Provides additional MP +33. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="neck"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="226"/>
@@ -288,7 +267,6 @@
         </stats>
     </armor>
     <armor id="926" name="Black Ore Necklace" icon="icon.accessary_necklace_of_black_ore_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="neck"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="164"/>
@@ -302,7 +280,6 @@
         </stats>
     </armor>
     <armor id="931" name="Necklace of Grace" icon="icon.accessary_necklace_of_grace_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="neck"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="164"/>
@@ -317,7 +294,6 @@
     </armor>
     <armor id="933" name="Phoenix Necklace" icon="icon.accessary_phoenixs_necklace_i00">
         <!-- Phoenix Necklace. Provides additional MP +26. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="neck"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="164"/>
@@ -332,7 +308,6 @@
         </stats>
     </armor>
     <armor id="936" name="Necklace of Blessing" icon="icon.accessary_necklace_of_blessing_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="neck"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="164"/>
@@ -387,7 +362,6 @@
     </item>
     <armor id="945" name="Skeleton Buckler" icon="icon.shield_skeleton_buckler_i00">
         <!-- Small wooden shield that perpetrators of mages use. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="lhand"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="1400"/>
@@ -400,7 +374,6 @@
         </stats>
     </armor>
     <weapon id="946" name="Skeleton Dagger" icon="icon.weapon_dagger_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DAGGER"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -598,7 +571,6 @@
     </item>
     <weapon id="975" name="Blood Saber" icon="icon.weapon_broad_sword_i00">
         <!-- An Oriharukon sword crafted in the Abella style of the east. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -643,7 +615,6 @@
     </item>
     <weapon id="981" name="Red Sunset Sword" icon="icon.weapon_brandish_i00">
         <!-- Sword used by warriors belonging to the Red Sunset clan. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -706,7 +677,6 @@
     </item>
     <weapon id="989" name="Eldritch Dagger" icon="icon.weapon_knife_i00">
         <!-- Steel dagger engraved with the runes of Shilen and Gran Kain. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DAGGER"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -727,7 +697,6 @@
         </stats>
     </weapon>
     <armor id="990" name="Fist000" icon="icon.item_canuse27">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="gloves"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="60"/>
@@ -738,7 +707,6 @@
         </stats>
     </armor>
     <armor id="991" name="Fist001" icon="icon.item_normal26">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="gloves"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="60"/>
@@ -749,7 +717,6 @@
         </stats>
     </armor>
     <armor id="992" name="Fist002" icon="icon.armor_head15">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="gloves"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="60"/>
@@ -760,7 +727,6 @@
         </stats>
     </armor>
     <armor id="993" name="Fist003" icon="icon.armor_head15">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="gloves"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="60"/>
@@ -771,7 +737,6 @@
         </stats>
     </armor>
     <armor id="994" name="Fist004" icon="icon.item_normal46">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="gloves"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="60"/>
@@ -782,7 +747,6 @@
         </stats>
     </armor>
     <armor id="995" name="Fist005" icon="icon.item_normal20">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="gloves"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="60"/>
@@ -793,7 +757,6 @@
         </stats>
     </armor>
     <armor id="996" name="Fist006" icon="icon.weapon_ss08">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="gloves"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="60"/>
@@ -804,7 +767,6 @@
         </stats>
     </armor>
     <armor id="997" name="Fist007" icon="icon.item_normal50">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="gloves"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="60"/>
@@ -815,7 +777,6 @@
         </stats>
     </armor>
     <armor id="998" name="Fist008" icon="icon.item_normal07">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="gloves"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="60"/>
@@ -826,7 +787,6 @@
         </stats>
     </armor>
     <armor id="999" name="Fist009" icon="icon.item_normal07">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="gloves"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="60"/>

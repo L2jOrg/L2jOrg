@@ -2,7 +2,6 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
     <weapon id="4700" name="Sword of Delusion" icon="icon.weapon_sword_of_delusion_i01">
         <!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 7%. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -30,7 +29,6 @@
     </weapon>
     <weapon id="4701" name="Sword of Delusion" icon="icon.weapon_sword_of_delusion_i01">
         <!-- <Soul Crystal Enhancement>. P. Atk. + 191 during a Critical Attack. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -58,7 +56,6 @@
     </weapon>
     <weapon id="4702" name="Tsurugi" icon="icon.weapon_tsurugi_i01">
         <!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 65. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -86,7 +83,6 @@
     </weapon>
     <weapon id="4703" name="Tsurugi" icon="icon.weapon_tsurugi_i01">
         <!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 7%. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -114,7 +110,6 @@
     </weapon>
     <weapon id="4704" name="Tsurugi" icon="icon.weapon_tsurugi_i01">
         <!-- <Soul Crystal Enhancement>. P. Atk. + 191 during a Critical Attack. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -142,7 +137,6 @@
     </weapon>
     <weapon id="4705" name="Sword of Nightmare" icon="icon.weapon_sword_of_nightmare_i01">
         <!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 65. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -170,7 +164,6 @@
     </weapon>
     <weapon id="4706" name="Sword of Nightmare" icon="icon.weapon_sword_of_nightmare_i01">
         <!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 7%. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -198,7 +191,6 @@
     </weapon>
     <weapon id="4707" name="Sword of Nightmare" icon="icon.weapon_sword_of_nightmare_i01">
         <!-- <Soul Crystal Enhancement>. P. Atk. + 191 during a Critical Attack. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -226,7 +218,6 @@
     </weapon>
     <weapon id="4708" name="Samurai Long Sword" icon="icon.weapon_samurai_old_longsword_i01">
         <!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 32. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -254,7 +245,6 @@
     </weapon>
     <weapon id="4709" name="Samurai Long Sword" icon="icon.weapon_samurai_old_longsword_i01">
         <!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 7%. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -282,7 +272,6 @@
     </weapon>
     <weapon id="4710" name="Samurai Long Sword" icon="icon.weapon_samurai_old_longsword_i01">
         <!-- <Soul Crystal Enhancement>. P. Atk. + 208 during a Critical Attack. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -310,7 +299,6 @@
     </weapon>
     <weapon id="4711" name="Flamberge" icon="icon.weapon_flamberge_i01">
         <!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 71. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;44;120"/>
@@ -338,7 +326,6 @@
     </weapon>
     <weapon id="4712" name="Flamberge" icon="icon.weapon_flamberge_i01">
         <!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 8%. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;44;120"/>
@@ -366,7 +353,6 @@
     </weapon>
     <weapon id="4713" name="Flamberge" icon="icon.weapon_flamberge_i01">
         <!-- <Soul Crystal Enhancement>. P. Atk. + 203 during a Critical Attack. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;44;120"/>
@@ -394,7 +380,6 @@
     </weapon>
     <weapon id="4714" name="Keshanberk" icon="icon.weapon_kshanberk_i01">
         <!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 58. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -422,7 +407,6 @@
     </weapon>
     <weapon id="4715" name="Keshanberk" icon="icon.weapon_kshanberk_i01">
         <!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 6%. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -450,7 +434,6 @@
     </weapon>
     <weapon id="4716" name="Keshanberk" icon="icon.weapon_kshanberk_i01">
         <!-- <Soul Crystal Enhancement>. P. Atk. + 223 during a Critical Attack. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -478,7 +461,6 @@
     </weapon>
     <weapon id="4717" name="Damascus Sword" icon="icon.weapon_sword_of_damascus_i01">
         <!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 54. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -506,7 +488,6 @@
     </weapon>
     <weapon id="4718" name="Damascus Sword" icon="icon.weapon_sword_of_damascus_i01">
         <!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 6%. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -534,7 +515,6 @@
     </weapon>
     <weapon id="4719" name="Damascus Sword" icon="icon.weapon_sword_of_damascus_i01">
         <!-- <Soul Crystal Enhancement>. P. Atk. + 236 during a Critical Attack. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -562,7 +542,6 @@
     </weapon>
     <weapon id="4723" name="Great Sword" icon="icon.weapon_great_sword_i01">
         <!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 58. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;44;120"/>
@@ -590,7 +569,6 @@
     </weapon>
     <weapon id="4724" name="Great Sword" icon="icon.weapon_great_sword_i01">
         <!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 7%. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;44;120"/>
@@ -618,7 +596,6 @@
     </weapon>
     <weapon id="4725" name="Great Sword" icon="icon.weapon_great_sword_i01">
         <!-- <Soul Crystal Enhancement>. P. Atk. + 260 during a Critical Attack. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;44;120"/>
@@ -646,7 +623,6 @@
     </weapon>
     <weapon id="4726" name="Big Hammer" icon="icon.weapon_big_hammer_i01">
         <!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 71. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -674,7 +650,6 @@
     </weapon>
     <weapon id="4727" name="Big Hammer" icon="icon.weapon_big_hammer_i01">
         <!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 7%. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -702,7 +677,6 @@
     </weapon>
     <weapon id="4728" name="Big Hammer" icon="icon.weapon_big_hammer_i01">
         <!-- <Soul Crystal Enhancement>. P. Atk. + 157 during a Critical Attack. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -730,7 +704,6 @@
     </weapon>
     <weapon id="4729" name="Battle Axe" icon="icon.weapon_battle_axe_i01">
         <!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 71. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -758,7 +731,6 @@
     </weapon>
     <weapon id="4730" name="Battle Axe" icon="icon.weapon_battle_axe_i01">
         <!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 7%. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -786,7 +758,6 @@
     </weapon>
     <weapon id="4731" name="Battle Axe" icon="icon.weapon_battle_axe_i01">
         <!-- <Soul Crystal Enhancement>. P. Atk. + 157 during a Critical Attack. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -814,7 +785,6 @@
     </weapon>
     <weapon id="4732" name="Silver Axe" icon="icon.weapon_war_pick_i01">
         <!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 71. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -842,7 +812,6 @@
     </weapon>
     <weapon id="4733" name="Silver Axe" icon="icon.weapon_war_pick_i01">
         <!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 7%. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -870,7 +839,6 @@
     </weapon>
     <weapon id="4734" name="Silver Axe" icon="icon.weapon_war_pick_i01">
         <!-- <Soul Crystal Enhancement>. P. Atk. + 157 during a Critical Attack. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -898,7 +866,6 @@
     </weapon>
     <weapon id="4735" name="Skull Graver" icon="icon.weapon_skull_graver_i01">
         <!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 71. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -926,7 +893,6 @@
     </weapon>
     <weapon id="4736" name="Skull Graver" icon="icon.weapon_skull_graver_i01">
         <!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 7%. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -954,7 +920,6 @@
     </weapon>
     <weapon id="4737" name="Skull Graver" icon="icon.weapon_skull_graver_i01">
         <!-- <Soul Crystal Enhancement>. P. Atk. + 157 during a Critical Attack. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -982,7 +947,6 @@
     </weapon>
     <weapon id="4738" name="Dwarven War Hammer" icon="icon.weapon_dwarven_warhammer_i01">
         <!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 71. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -1010,7 +974,6 @@
     </weapon>
     <weapon id="4739" name="Dwarven War Hammer" icon="icon.weapon_dwarven_warhammer_i01">
         <!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 7%. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -1038,7 +1001,6 @@
     </weapon>
     <weapon id="4740" name="Dwarven War Hammer" icon="icon.weapon_dwarven_warhammer_i01">
         <!-- <Soul Crystal Enhancement>. P. Atk. + 174 during a Critical Attack. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -1066,7 +1028,6 @@
     </weapon>
     <weapon id="4741" name="War Axe" icon="icon.weapon_war_axe_i01">
         <!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 68. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -1094,7 +1055,6 @@
     </weapon>
     <weapon id="4742" name="War Axe" icon="icon.weapon_war_axe_i01">
         <!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 7%. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -1122,7 +1082,6 @@
     </weapon>
     <weapon id="4743" name="War Axe" icon="icon.weapon_war_axe_i01">
         <!-- <Soul Crystal Enhancement>. P. Atk. + 191 during a Critical Attack. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -1150,7 +1109,6 @@
     </weapon>
     <weapon id="4744" name="Yaksa Mace" icon="icon.weapon_yaksa_mace_i01">
         <!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 68. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -1178,7 +1136,6 @@
     </weapon>
     <weapon id="4745" name="Yaksa Mace" icon="icon.weapon_yaksa_mace_i01">
         <!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 7%. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -1206,7 +1163,6 @@
     </weapon>
     <weapon id="4746" name="Yaksa Mace" icon="icon.weapon_yaksa_mace_i01">
         <!-- <Soul Crystal Enhancement>. P. Atk. + 208 during a Critical Attack. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -1234,7 +1190,6 @@
     </weapon>
     <weapon id="4747" name="Heavy War Axe" icon="icon.weapon_heavy_war_axe_i01">
         <!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 32. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -1262,7 +1217,6 @@
     </weapon>
     <weapon id="4748" name="Heavy War Axe" icon="icon.weapon_heavy_war_axe_i01">
         <!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 6%. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -1290,7 +1244,6 @@
     </weapon>
     <weapon id="4749" name="Heavy War Axe" icon="icon.weapon_heavy_war_axe_i01">
         <!-- <Soul Crystal Enhancement>. P. Atk. + 223 during a Critical Attack. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -1318,7 +1271,6 @@
     </weapon>
     <weapon id="4750" name="Deadman's Glory" icon="icon.weapon_deadmans_glory_i01">
         <!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 58. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -1346,7 +1298,6 @@
     </weapon>
     <weapon id="4751" name="Deadman's Glory" icon="icon.weapon_deadmans_glory_i01">
         <!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 6%. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -1374,7 +1325,6 @@
     </weapon>
     <weapon id="4752" name="Deadman's Glory" icon="icon.weapon_deadmans_glory_i01">
         <!-- <Soul Crystal Enhancement>. P. Atk. + 236 during a Critical Attack. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -1402,7 +1352,6 @@
     </weapon>
     <weapon id="4753" name="Art of Battle Axe" icon="icon.weapon_art_of_battle_axe_i01">
         <!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 58. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -1430,7 +1379,6 @@
     </weapon>
     <weapon id="4754" name="Art of Battle Axe" icon="icon.weapon_art_of_battle_axe_i01">
         <!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 6%. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -1458,7 +1406,6 @@
     </weapon>
     <weapon id="4755" name="Art of Battle Axe" icon="icon.weapon_art_of_battle_axe_i01">
         <!-- <Soul Crystal Enhancement>. P. Atk. + 236 during a Critical Attack. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -1486,7 +1433,6 @@
     </weapon>
     <weapon id="4759" name="Cursed Dagger" icon="icon.weapon_cursed_dagger_i01">
         <!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 70. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DAGGER"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -1514,7 +1460,6 @@
     </weapon>
     <weapon id="4760" name="Cursed Dagger" icon="icon.weapon_cursed_dagger_i01">
         <!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by 5%. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DAGGER"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -1542,7 +1487,6 @@
     </weapon>
     <weapon id="4761" name="Cursed Dagger" icon="icon.weapon_cursed_dagger_i01">
         <!-- <Soul Crystal Enhancement>\\Increases the chance of success of  performing the skills hitting vulnerable spots on enemy's body. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DAGGER"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -1570,7 +1514,6 @@
     </weapon>
     <weapon id="4762" name="Dark Elven Dagger" icon="icon.weapon_darkelven_dagger_i01">
         <!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 70. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DAGGER"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -1598,7 +1541,6 @@
     </weapon>
     <weapon id="4763" name="Dark Elven Dagger" icon="icon.weapon_darkelven_dagger_i01">
         <!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by 5%. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DAGGER"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -1626,7 +1568,6 @@
     </weapon>
     <weapon id="4764" name="Dark Elven Dagger" icon="icon.weapon_darkelven_dagger_i01">
         <!-- <Soul Crystal Enhancement>\\Increases the chance of success of  performing the skills hitting vulnerable spots on enemy's body. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DAGGER"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -1654,7 +1595,6 @@
     </weapon>
     <weapon id="4765" name="Stiletto" icon="icon.weapon_stiletto_i01">
         <!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 70. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DAGGER"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -1682,7 +1622,6 @@
     </weapon>
     <weapon id="4766" name="Stiletto" icon="icon.weapon_stiletto_i01">
         <!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by 5%. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DAGGER"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -1710,7 +1649,6 @@
     </weapon>
     <weapon id="4767" name="Stiletto" icon="icon.weapon_stiletto_i01">
         <!-- <Soul Crystal Enhancement>\\Increases the chance of success of  performing the skills hitting vulnerable spots on enemy's body. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DAGGER"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -1738,7 +1676,6 @@
     </weapon>
     <weapon id="4768" name="Grace Dagger" icon="icon.weapon_grace_dagger_i01">
         <!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 66. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DAGGER"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -1766,7 +1703,6 @@
     </weapon>
     <weapon id="4769" name="Grace Dagger" icon="icon.weapon_grace_dagger_i01">
         <!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by 5%. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DAGGER"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -1794,7 +1730,6 @@
     </weapon>
     <weapon id="4770" name="Grace Dagger" icon="icon.weapon_grace_dagger_i01">
         <!-- <Soul Crystal Enhancement>\\Increases the chance of success of  performing the skills hitting vulnerable spots on enemy's body. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DAGGER"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -1822,7 +1757,6 @@
     </weapon>
     <weapon id="4771" name="Dark Screamer" icon="icon.weapon_dark_screamer_i01">
         <!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 66. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DAGGER"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -1850,7 +1784,6 @@
     </weapon>
     <weapon id="4772" name="Dark Screamer" icon="icon.weapon_dark_screamer_i01">
         <!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by 5%. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DAGGER"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -1878,7 +1811,6 @@
     </weapon>
     <weapon id="4773" name="Dark Screamer" icon="icon.weapon_dark_screamer_i01">
         <!-- <Soul Crystal Enhancement>\\Increases the chance of success of  performing the skills hitting vulnerable spots on enemy's body. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DAGGER"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -1906,7 +1838,6 @@
     </weapon>
     <weapon id="4774" name="Crystal Dagger" icon="icon.weapon_crystal_dagger_i01">
         <!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 66. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DAGGER"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -1934,7 +1865,6 @@
     </weapon>
     <weapon id="4775" name="Crystal Dagger" icon="icon.weapon_crystal_dagger_i01">
         <!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by 5%. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DAGGER"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -1962,7 +1892,6 @@
     </weapon>
     <weapon id="4776" name="Crystal Dagger" icon="icon.weapon_crystal_dagger_i01">
         <!-- <Soul Crystal Enhancement>\\Increases the chance of success of  performing the skills hitting vulnerable spots on enemy's body. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DAGGER"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -1990,7 +1919,6 @@
     </weapon>
     <weapon id="4777" name="Kris" icon="icon.weapon_kris_i01">
         <!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 61. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DAGGER"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -2018,7 +1946,6 @@
     </weapon>
     <weapon id="4778" name="Kris" icon="icon.weapon_kris_i01">
         <!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by 5%. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DAGGER"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -2046,7 +1973,6 @@
     </weapon>
     <weapon id="4779" name="Kris" icon="icon.weapon_kris_i01">
         <!-- <Soul Crystal Enhancement>\\Increases the chance of success of  performing the skills hitting vulnerable spots on enemy's body. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DAGGER"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -2074,7 +2000,6 @@
     </weapon>
     <weapon id="4780" name="Demon's Dagger" icon="icon.weapon_demons_sword_i01">
         <!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 61. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DAGGER"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -2102,7 +2027,6 @@
     </weapon>
     <weapon id="4781" name="Demon's Dagger" icon="icon.weapon_demons_sword_i01">
         <!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by 5%. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DAGGER"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -2130,7 +2054,6 @@
     </weapon>
     <weapon id="4782" name="Demon's Dagger" icon="icon.weapon_demons_sword_i01">
         <!-- <Soul Crystal Enhancement>\\Increases the chance of success of  performing the skills hitting vulnerable spots on enemy's body. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DAGGER"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -2158,7 +2081,6 @@
     </weapon>
     <weapon id="4789" name="Chakram" icon="icon.weapon_chakram_i01">
         <!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 71. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DUALFIST"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;32;120"/>
@@ -2186,7 +2108,6 @@
     </weapon>
     <weapon id="4790" name="Chakram" icon="icon.weapon_chakram_i01">
         <!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 8%. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DUALFIST"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;32;120"/>
@@ -2214,7 +2135,6 @@
     </weapon>
     <weapon id="4791" name="Chakram" icon="icon.weapon_chakram_i01">
         <!-- <Soul Crystal Enhancement>. P. Atk. + 203 during a Critical Attack. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DUALFIST"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;32;120"/>
@@ -2242,7 +2162,6 @@
     </weapon>
     <weapon id="4792" name="Fisted Blade" icon="icon.weapon_fist_blade_i01">
         <!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 68. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DUALFIST"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;40;90"/>
@@ -2270,7 +2189,6 @@
     </weapon>
     <weapon id="4793" name="Fisted Blade" icon="icon.weapon_fist_blade_i01">
         <!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 8%. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DUALFIST"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;40;90"/>
@@ -2298,7 +2216,6 @@
     </weapon>
     <weapon id="4794" name="Fisted Blade" icon="icon.weapon_fist_blade_i01">
         <!-- <Soul Crystal Enhancement>. P. Atk. + 223 during a Critical Attack. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DUALFIST"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;40;90"/>
@@ -2326,7 +2243,6 @@
     </weapon>
     <weapon id="4795" name="Great Pata" icon="icon.weapon_great_pata_i01">
         <!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 68. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DUALFIST"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;46;90"/>
@@ -2354,7 +2270,6 @@
     </weapon>
     <weapon id="4796" name="Great Pata" icon="icon.weapon_great_pata_i01">
         <!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 8%. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DUALFIST"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;46;90"/>
@@ -2382,7 +2297,6 @@
     </weapon>
     <weapon id="4797" name="Great Pata" icon="icon.weapon_great_pata_i01">
         <!-- <Soul Crystal Enhancement>. P. Atk. + 242 during a Critical Attack. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DUALFIST"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;46;90"/>
@@ -2410,7 +2324,6 @@
     </weapon>
     <weapon id="4798" name="Fist" icon="icon.weapon_knuckle_dust_i01">
         <!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 71. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DUALFIST"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;32;120"/>
@@ -2438,7 +2351,6 @@
     </weapon>
     <weapon id="4799" name="Fist" icon="icon.weapon_knuckle_dust_i01">
         <!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 8%. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DUALFIST"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;32;120"/>

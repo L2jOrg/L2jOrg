@@ -2,7 +2,6 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
     <armor id="71400" name="Greater Red Cat's Eye" icon="icon.bm_jewel_red_catseye_high_lv1_lavianrose">
         <!-- When equipped, P. Critical Damage +18%, P. Skill Power +3%. Effect does not stack with additional jewels of the same type. When combined with the Jewel Power, you can obtain an upper level jewel. If upgrade fails, you'll get a jewel Lv. 1. Cannot be dropped. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="brooch_jewel"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="5"/>
@@ -10,7 +9,6 @@
     </armor>
     <armor id="71401" name="Greater Red Cat's Eye" icon="icon.bm_jewel_red_catseye_high_lv1_lavianrose">
         <!-- When equipped, P. Critical Damage +19%, P. Skill Power +5%. Effect does not stack with additional jewels of the same type. When combined with the Jewel Power, you can obtain an upper level jewel. If upgrade fails, you'll get a jewel Lv. 1. Cannot be dropped. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="brooch_jewel"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="5"/>
@@ -18,7 +16,6 @@
     </armor>
     <armor id="71402" name="Greater Red Cat's Eye" icon="icon.bm_jewel_red_catseye_high_lv1_lavianrose">
         <!-- When equipped, P. Critical Damage +20%, P. Skill Power +7%, Debuff Resistance +20%. Effect does not stack with additional jewels of the same type. Cannot be dropped. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="brooch_jewel"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="5"/>
@@ -26,7 +23,6 @@
     </armor>
     <armor id="71403" name="Greater Blue Cat's Eye" icon="icon.bm_jewel_blue_catseye_high_lv1_lavianrose">
         <!-- When equipped, M. Critical Damage +16%, M. Skill Power +1%. Effect does not stack with additional jewels of the same type. When combined with the Jewel Power, you can obtain an upper level jewel. Cannot be dropped. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="brooch_jewel"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="5"/>
@@ -34,7 +30,6 @@
     </armor>
     <armor id="71404" name="Greater Blue Cat's Eye" icon="icon.bm_jewel_blue_catseye_high_lv1_lavianrose">
         <!-- When equipped, M. Critical Damage +17%, M. Skill Power +2%. Effect does not stack with additional jewels of the same type. When combined with the Jewel Power, you can obtain an upper level jewel. If upgrade fails, you'll get a jewel Lv. 1. Cannot be dropped. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="brooch_jewel"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="5"/>
@@ -42,7 +37,6 @@
     </armor>
     <armor id="71405" name="Greater Blue Cat's Eye" icon="icon.bm_jewel_blue_catseye_high_lv1_lavianrose">
         <!-- When equipped, M. Critical Damage +18%, M. Skill Power +3%. Effect does not stack with additional jewels of the same type. When combined with the Jewel Power, you can obtain an upper level jewel. If upgrade fails, you'll get a jewel Lv. 1. Cannot be dropped. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="brooch_jewel"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="5"/>
@@ -50,7 +44,6 @@
     </armor>
     <armor id="71406" name="Greater Blue Cat's Eye" icon="icon.bm_jewel_blue_catseye_high_lv1_lavianrose">
         <!-- When equipped, M. Critical Damage +19%, M. Skill Power +5%. Effect does not stack with additional jewels of the same type. When combined with the Jewel Power, you can obtain an upper level jewel. If upgrade fails, you'll get a jewel Lv. 1. Cannot be dropped. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="brooch_jewel"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="5"/>
@@ -58,7 +51,6 @@
     </armor>
     <armor id="71407" name="Greater Blue Cat's Eye" icon="icon.bm_jewel_blue_catseye_high_lv1_lavianrose">
         <!-- When equipped, M. Critical Damage +20%, M. Skill Power +7%, Debuff Resistance +20%. Effect does not stack with additional jewels of the same type. Cannot be dropped. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="brooch_jewel"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="5"/>
@@ -66,7 +58,6 @@
     </armor>
     <armor id="71408" name="Greater Emerald" icon="icon.bm_jewel_allstat_high_lv1_lavianrose">
         <!-- When equipped, CON +2, MEN, DEX, WIT, STR, INT +1, Damage Reflection Resistance +2%. Effect does not stack with additional jewels of the same type. When combined with the Jewel Power, you can obtain an upper level jewel. Cannot be dropped. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="brooch_jewel"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="5"/>
@@ -74,7 +65,6 @@
     </armor>
     <armor id="71409" name="Greater Emerald" icon="icon.bm_jewel_allstat_high_lv1_lavianrose">
         <!-- When equipped, CON, MEN +2, DEX, WIT, STR, INT +1, Damage Reflection Resistance +4%. Effect does not stack with additional jewels of the same type. When combined with the Jewel Power, you can obtain an upper level jewel. If upgrade fails, you'll get a jewel Lv. 1. Cannot be dropped. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="brooch_jewel"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="5"/>
@@ -82,7 +72,6 @@
     </armor>
     <armor id="71410" name="Greater Emerald" icon="icon.bm_jewel_allstat_high_lv1_lavianrose">
         <!-- When equipped, CON, MEN, DEX +2, WIT, STR, INT +1, Damage Reflection Resistance +6%. Effect does not stack with additional jewels of the same type. When combined with the Jewel Power, you can obtain an upper level jewel. If upgrade fails, you'll get a jewel Lv. 1. Cannot be dropped. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="brooch_jewel"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="5"/>
@@ -90,7 +79,6 @@
     </armor>
     <armor id="71411" name="Greater Emerald" icon="icon.bm_jewel_allstat_high_lv1_lavianrose">
         <!-- When equipped, CON, MEN, DEX, WIT +2, STR, INT +1, Damage Reflection Resistance +10%. Effect does not stack with additional jewels of the same type. When combined with the Jewel Power, you can obtain an upper level jewel. If upgrade fails, you'll get a jewel Lv. 1. Cannot be dropped. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="brooch_jewel"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="5"/>
@@ -98,7 +86,6 @@
     </armor>
     <armor id="71412" name="Greater Emerald" icon="icon.bm_jewel_allstat_high_lv1_lavianrose">
         <!-- When equipped, CON, MEN, DEX, WIT, STR, INT +2, Damage Reflection Resistance +20%. Effect does not stack with additional jewels of the same type. Cannot be dropped. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="brooch_jewel"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="5"/>
@@ -106,7 +93,6 @@
     </armor>
     <armor id="71413" name="Brooch" icon="icon.etc_bm_brooch_lavianrose_i04">
         <!-- Activates 6 jewel slots when equipped. Inventory Slots +15. Cannot be dropped. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="underwear"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="10"/>
@@ -129,7 +115,6 @@
     </item>
     <weapon id="71417" name="Fishing Rod" icon="icon.weapon_fishing_rod_i03">
         <!-- A Fishing Rod for 7 days. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. Consumes 1 Fishing Shot. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DUALDAGGER"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
@@ -154,7 +139,6 @@
     </item>
     <weapon id="71419" name="Fishing Rod" icon="icon.weapon_fishing_rod_i03">
         <!-- A Fishing Rod for 30 days. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. Consumes 1 Fishing Shot. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DUALDAGGER"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
@@ -279,7 +263,6 @@
     </item>
     <armor id="71439" name="Santa Claus" icon="BranchIcon.Icon.g_bm_costume_santa">
         <!-- Appearance for the transformation system. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="HEAVY"/>
         <set name="bodypart" val="alldress"/>
         <set name="immediate_effect" val="true"/>
@@ -288,7 +271,6 @@
     </armor>
     <armor id="71440" name="School Uniform A" icon="BranchSys3.icon1.Br_schoollook">
         <!-- Appearance for the transformation system. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="HEAVY"/>
         <set name="bodypart" val="alldress"/>
         <set name="immediate_effect" val="true"/>
@@ -297,7 +279,6 @@
     </armor>
     <armor id="71441" name="Beach Swimsuit" icon="BranchIcon.Icon.g_bm_costume_swimsuit_a">
         <!-- Appearance for the transformation system. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="HEAVY"/>
         <set name="bodypart" val="alldress"/>
         <set name="immediate_effect" val="true"/>
@@ -306,7 +287,6 @@
     </armor>
     <armor id="71442" name="Teddy Bear" icon="icon.gomdori_chest_change">
         <!-- Appearance for the transformation system. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="HEAVY"/>
         <set name="bodypart" val="alldress"/>
         <set name="immediate_effect" val="true"/>
@@ -315,7 +295,6 @@
     </armor>
     <armor id="71443" name="Toy Cat" icon="icon.sayha2017_cat">
         <!-- Appearance for the transformation system. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="HEAVY"/>
         <set name="bodypart" val="alldress"/>
         <set name="immediate_effect" val="true"/>
@@ -324,7 +303,6 @@
     </armor>
     <armor id="71444" name="Toy Panda" icon="icon.sayha2017_panda">
         <!-- Appearance for the transformation system. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="HEAVY"/>
         <set name="bodypart" val="alldress"/>
         <set name="immediate_effect" val="true"/>
@@ -333,7 +311,6 @@
     </armor>
     <armor id="71445" name="Baseball Uniform" icon="BranchIcon.Icon.g_bm_costume_baseball">
         <!-- Appearance for the transformation system. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="HEAVY"/>
         <set name="bodypart" val="alldress"/>
         <set name="immediate_effect" val="true"/>
@@ -342,7 +319,6 @@
     </armor>
     <armor id="71446" name="Seductive Swimsuit" icon="BranchSys3.icon1.g_co_swimsuit_event_03">
         <!-- Appearance for the transformation system. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="HEAVY"/>
         <set name="bodypart" val="alldress"/>
         <set name="immediate_effect" val="true"/>
@@ -351,7 +327,6 @@
     </armor>
     <armor id="71447" name="School Uniform B" icon="BranchIcon.Icon.g_bm_costume_schoollook_b">
         <!-- Appearance for the transformation system. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="HEAVY"/>
         <set name="bodypart" val="alldress"/>
         <set name="immediate_effect" val="true"/>
@@ -360,7 +335,6 @@
     </armor>
     <armor id="71448" name="Hanbok" icon="BranchIcon.Icon.g_bm_costume_korea_traditional">
         <!-- Appearance for the transformation system. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="HEAVY"/>
         <set name="bodypart" val="alldress"/>
         <set name="immediate_effect" val="true"/>
@@ -369,7 +343,6 @@
     </armor>
     <armor id="71449" name="Metal Suit" icon="BranchSys3.icon1.g_co_sf_u">
         <!-- Appearance for the transformation system. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="HEAVY"/>
         <set name="bodypart" val="alldress"/>
         <set name="immediate_effect" val="true"/>
@@ -378,7 +351,6 @@
     </armor>
     <armor id="71450" name="Samurai" icon="BranchSys3.iconArmar.g_co_japan_general_i00">
         <!-- Appearance for the transformation system. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="HEAVY"/>
         <set name="bodypart" val="alldress"/>
         <set name="immediate_effect" val="true"/>
@@ -387,7 +359,6 @@
     </armor>
     <armor id="71451" name="Green Archer" icon="BranchIcon.Icon.g_bm_costume_archer_green">
         <!-- Appearance for the transformation system. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="HEAVY"/>
         <set name="bodypart" val="alldress"/>
         <set name="immediate_effect" val="true"/>
@@ -396,7 +367,6 @@
     </armor>
     <armor id="71452" name="Formal Wear" icon="BranchIcon.Icon.g_bm_costume_wedding">
         <!-- Appearance for the transformation system. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="HEAVY"/>
         <set name="bodypart" val="alldress"/>
         <set name="immediate_effect" val="true"/>
@@ -405,7 +375,6 @@
     </armor>
     <armor id="71453" name="Kat the Cat" icon="icon.cat_the_cat_change_0">
         <!-- Appearance for the transformation system. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="HEAVY"/>
         <set name="bodypart" val="alldress"/>
         <set name="immediate_effect" val="true"/>
@@ -414,7 +383,6 @@
     </armor>
     <armor id="71454" name="Halloween" icon="BranchIcon.Icon.g_bm_costume_holloween">
         <!-- Appearance for the transformation system. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="HEAVY"/>
         <set name="bodypart" val="alldress"/>
         <set name="immediate_effect" val="true"/>
@@ -423,7 +391,6 @@
     </armor>
     <armor id="71455" name="Alluring Swimsuit" icon="BranchSys3.icon1.g_co_swimsuit_event_02">
         <!-- Appearance for the transformation system. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="HEAVY"/>
         <set name="bodypart" val="alldress"/>
         <set name="immediate_effect" val="true"/>
@@ -432,7 +399,6 @@
     </armor>
     <armor id="71456" name="Vampire" icon="BranchSys3.iconArmar.g_co_vampiric_u_i00">
         <!-- Appearance for the transformation system. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="HEAVY"/>
         <set name="bodypart" val="alldress"/>
         <set name="immediate_effect" val="true"/>
@@ -441,7 +407,6 @@
     </armor>
     <armor id="71457" name="Dark Knight" icon="icon.dark_kninght">
         <!-- Appearance for the transformation system. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="HEAVY"/>
         <set name="bodypart" val="alldress"/>
         <set name="immediate_effect" val="true"/>
@@ -450,7 +415,6 @@
     </armor>
     <armor id="71458" name="Chevalier" icon="icon.chevalier_chest_change">
         <!-- Appearance for the transformation system. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="HEAVY"/>
         <set name="bodypart" val="alldress"/>
         <set name="immediate_effect" val="true"/>
@@ -459,7 +423,6 @@
     </armor>
     <armor id="71459" name="Red Archer" icon="BranchIcon.Icon.g_bm_costume_archer_red">
         <!-- Appearance for the transformation system. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="HEAVY"/>
         <set name="bodypart" val="alldress"/>
         <set name="immediate_effect" val="true"/>
@@ -468,7 +431,6 @@
     </armor>
     <armor id="71460" name="Blue Pirate" icon="BranchIcon.Icon.g_bm_costume_pirate_blue">
         <!-- Appearance for the transformation system. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="HEAVY"/>
         <set name="bodypart" val="alldress"/>
         <set name="immediate_effect" val="true"/>
@@ -477,7 +439,6 @@
     </armor>
     <armor id="71461" name="Dark Red Wizard" icon="BranchIcon.Icon.g_bm_costume_wizard_wine">
         <!-- Appearance for the transformation system. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="HEAVY"/>
         <set name="bodypart" val="alldress"/>
         <set name="immediate_effect" val="true"/>
@@ -486,7 +447,6 @@
     </armor>
     <armor id="71462" name="Mystic" icon="BranchIcon.Icon.g_bm_costume_magician">
         <!-- Appearance for the transformation system. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="HEAVY"/>
         <set name="bodypart" val="alldress"/>
         <set name="immediate_effect" val="true"/>
@@ -495,7 +455,6 @@
     </armor>
     <armor id="71463" name="Pirate" icon="icon.bm2018_pirate_i01">
         <!-- Appearance for the transformation system. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="HEAVY"/>
         <set name="bodypart" val="alldress"/>
         <set name="immediate_effect" val="true"/>
@@ -504,7 +463,6 @@
     </armor>
     <armor id="71464" name="Red Noblesse" icon="icon.bm2018_rednoblesse_i01">
         <!-- Appearance for the transformation system. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="HEAVY"/>
         <set name="bodypart" val="alldress"/>
         <set name="immediate_effect" val="true"/>
@@ -513,7 +471,6 @@
     </armor>
     <armor id="71465" name="Barbarian Wolf" icon="icon.barbarian_chest_change_0">
         <!-- Appearance for the transformation system. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="HEAVY"/>
         <set name="bodypart" val="alldress"/>
         <set name="immediate_effect" val="true"/>
@@ -522,7 +479,6 @@
     </armor>
     <armor id="71466" name="Valkyrie" icon="icon.valkyrie_chest_change_0">
         <!-- Appearance for the transformation system. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="HEAVY"/>
         <set name="bodypart" val="alldress"/>
         <set name="immediate_effect" val="true"/>
@@ -531,7 +487,6 @@
     </armor>
     <armor id="71467" name="Kelbim" icon="BranchIcon.Icon.g_bm_costume_kelbim">
         <!-- Appearance for the transformation system. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="HEAVY"/>
         <set name="bodypart" val="alldress"/>
         <set name="immediate_effect" val="true"/>
@@ -540,7 +495,6 @@
     </armor>
     <armor id="71468" name="Ninja" icon="icon.bm2018_ninja_i01">
         <!-- Appearance for the transformation system. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="HEAVY"/>
         <set name="bodypart" val="alldress"/>
         <set name="immediate_effect" val="true"/>
@@ -549,7 +503,6 @@
     </armor>
     <armor id="71469" name="High Priest" icon="icon.bm2018_healer_i01">
         <!-- Appearance for the transformation system. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="HEAVY"/>
         <set name="bodypart" val="alldress"/>
         <set name="immediate_effect" val="true"/>
@@ -558,7 +511,6 @@
     </armor>
     <armor id="71470" name="White Noblesse" icon="icon.bm2018_whitenoblesse_i01">
         <!-- Appearance for the transformation system. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="HEAVY"/>
         <set name="bodypart" val="alldress"/>
         <set name="immediate_effect" val="true"/>
@@ -567,7 +519,6 @@
     </armor>
     <armor id="71471" name="Purple Cowboy" icon="icon.bm2018_cowboy_i01">
         <!-- Appearance for the transformation system. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="HEAVY"/>
         <set name="bodypart" val="alldress"/>
         <set name="immediate_effect" val="true"/>
@@ -576,7 +527,6 @@
     </armor>
     <armor id="71472" name="Blue Musketeer" icon="icon.bm2018_bluemusketeer_i01">
         <!-- Appearance for the transformation system. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="HEAVY"/>
         <set name="bodypart" val="alldress"/>
         <set name="immediate_effect" val="true"/>
@@ -585,7 +535,6 @@
     </armor>
     <armor id="71473" name="zaken" icon="BranchIcon.Icon.g_bm_costume_zaken">
         <!-- Appearance for the transformation system. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="HEAVY"/>
         <set name="bodypart" val="alldress"/>
         <set name="immediate_effect" val="true"/>
@@ -594,7 +543,6 @@
     </armor>
     <armor id="71474" name="Dragon Berserker" icon="icon.bm2018_dragon_i01">
         <!-- Appearance for the transformation system. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="HEAVY"/>
         <set name="bodypart" val="alldress"/>
         <set name="immediate_effect" val="true"/>
@@ -603,7 +551,6 @@
     </armor>
     <armor id="71475" name="anakim" icon="BranchIcon.Icon.g_bm_costume_anakim">
         <!-- Appearance for the transformation system. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="HEAVY"/>
         <set name="bodypart" val="alldress"/>
         <set name="immediate_effect" val="true"/>
@@ -612,7 +559,6 @@
     </armor>
     <armor id="71476" name="lilith" icon="BranchIcon.Icon.g_bm_costume_lilith">
         <!-- Appearance for the transformation system. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="HEAVY"/>
         <set name="bodypart" val="alldress"/>
         <set name="immediate_effect" val="true"/>
@@ -621,7 +567,6 @@
     </armor>
     <armor id="71477" name="Freya" icon="BranchIcon.Icon.g_bm_costume_freya">
         <!-- Appearance for the transformation system. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="HEAVY"/>
         <set name="bodypart" val="alldress"/>
         <set name="immediate_effect" val="true"/>

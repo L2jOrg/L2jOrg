@@ -2,7 +2,6 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
     <weapon id="47927" name="Magic Fan - Blue" icon="icon.ev_kr_13th_present_blue">
         <!-- Within the swift breezes you can feel a magic energy. This magic fan is given out to commemorate the 13th anniversary of Lineage 2. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>
@@ -32,7 +31,6 @@
     </item>
     <weapon id="47945" name="Magic Fan - Yellow" icon="icon.ev_kr_13th_present_yellow">
         <!-- Within the swift breezes you can feel a magic energy. This magic fan is given out to commemorate the 13th anniversary of Lineage 2. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="rhand"/>
         <set name="immediate_effect" val="true"/>

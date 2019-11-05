@@ -15,7 +15,6 @@
     </item>
     <weapon id="5705" name="Keshanberk*Damascus" icon="icon.weapon_dual_sword_i00">
         <!-- When enchanted, P. Atk. of dualswords, two-handed swords, blunt and fist weapons increases more significantly than that of one-handed swords. 1 ordinary Soul Crystal and 1 Special Soul Crystal can be applied. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DUAL"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;44;120"/>
@@ -42,7 +41,6 @@
     </weapon>
     <weapon id="5706" name="Damascus*Damascus" icon="icon.weapon_dual_sword_i00">
         <!-- When enchanted, P. Atk. of dualswords, two-handed swords, blunt and fist weapons increases more significantly than that of one-handed swords. 1 ordinary Soul Crystal and 1 Special Soul Crystal can be applied. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DUAL"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;44;120"/>
@@ -82,7 +80,6 @@
     </item>
     <armor id="5710" name="Zubei's Gauntlets" icon="icon.armor_t64_g_i00">
         <!-- Part of the heavy Zubei's set. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="gloves"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="1659"/>
@@ -97,7 +94,6 @@
     </armor>
     <armor id="5711" name="Zubei's Gauntlets" icon="icon.armor_t65_g_i00">
         <!-- Part of the light Zubei's set. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="gloves"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="1659"/>
@@ -112,7 +108,6 @@
     </armor>
     <armor id="5712" name="Zubei's Gauntlets" icon="icon.armor_t56_g_i00">
         <!-- Part of the Zubei's robe set. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="gloves"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="1659"/>
@@ -127,7 +122,6 @@
     </armor>
     <armor id="5714" name="Avadon Gloves" icon="icon.armor_t66_g_i00">
         <!-- Part of the heavy avadon set. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="gloves"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="1659"/>
@@ -142,7 +136,6 @@
     </armor>
     <armor id="5715" name="Avadon Gloves" icon="icon.armor_t67_g_i00">
         <!-- Part of the light avadon set. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="gloves"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="1659"/>
@@ -157,7 +150,6 @@
     </armor>
     <armor id="5716" name="Avadon Gloves" icon="icon.armor_t59_g_i00">
         <!-- Part of the Avadon Robe set. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="gloves"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="1659"/>
@@ -172,7 +164,6 @@
     </armor>
     <armor id="5718" name="Blue Wolf Gloves" icon="icon.armor_t68_g_i00">
         <!-- Part of the heavy blue wolf set. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="gloves"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="1659"/>
@@ -187,7 +178,6 @@
     </armor>
     <armor id="5719" name="Blue Wolf Gloves" icon="icon.armor_t69_g_i00">
         <!-- Part of the light blue wolf set. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="gloves"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="1659"/>
@@ -202,7 +192,6 @@
     </armor>
     <armor id="5720" name="Blue Wolf Gloves" icon="icon.armor_t70_g_i00">
         <!-- Part of the blue wolf robe set. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="gloves"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="1659"/>
@@ -217,7 +206,6 @@
     </armor>
     <armor id="5722" name="Doom Gloves" icon="icon.armor_t71_g_i00">
         <!-- Part of the heavy doom set. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="gloves"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="1659"/>
@@ -232,7 +220,6 @@
     </armor>
     <armor id="5723" name="Doom Gloves" icon="icon.armor_t72_g_i00">
         <!-- Part of the light doom set. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="gloves"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="1659"/>
@@ -247,7 +234,6 @@
     </armor>
     <armor id="5724" name="Doom Gloves" icon="icon.armor_t73_g_i00">
         <!-- Part of the doom robe set. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="gloves"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="1659"/>
@@ -262,7 +248,6 @@
     </armor>
     <armor id="5726" name="Zubei's Boots" icon="icon.armor_t64_b_i00">
         <!-- Part of the heavy Zubei's set. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="feet"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="1659"/>
@@ -277,7 +262,6 @@
     </armor>
     <armor id="5727" name="Zubei's Boots" icon="icon.armor_t65_b_i00">
         <!-- Part of the light Zubei's set. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="feet"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="1659"/>
@@ -292,7 +276,6 @@
     </armor>
     <armor id="5728" name="Zubei's Boots" icon="icon.armor_t56_b_i00">
         <!-- Part of the Zubei's robe set. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="feet"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="1659"/>
@@ -307,7 +290,6 @@
     </armor>
     <armor id="5730" name="Avadon Boots" icon="icon.armor_t66_b_i00">
         <!-- Part of the heavy avadon set. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="feet"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="1659"/>
@@ -322,7 +304,6 @@
     </armor>
     <armor id="5731" name="Avadon Boots" icon="icon.armor_t67_b_i00">
         <!-- Part of the light avadon set. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="feet"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="1659"/>
@@ -337,7 +318,6 @@
     </armor>
     <armor id="5732" name="Avadon Boots" icon="icon.armor_t59_b_i00">
         <!-- Part of the Avadon Robe set. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="feet"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="1659"/>
@@ -352,7 +332,6 @@
     </armor>
     <armor id="5734" name="Blue Wolf Boots" icon="icon.armor_t68_b_i00">
         <!-- Part of the heavy blue wolf set. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="feet"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="1659"/>
@@ -367,7 +346,6 @@
     </armor>
     <armor id="5735" name="Blue Wolf Boots" icon="icon.armor_t69_b_i00">
         <!-- Part of the light blue wolf set. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="feet"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="1659"/>
@@ -382,7 +360,6 @@
     </armor>
     <armor id="5736" name="Blue Wolf Boots" icon="icon.armor_t70_b_i00">
         <!-- Part of the blue wolf robe set. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="feet"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="1659"/>
@@ -397,7 +374,6 @@
     </armor>
     <armor id="5738" name="Doom Boots" icon="icon.armor_t71_b_i00">
         <!-- Part of the heavy doom set. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="feet"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="1659"/>
@@ -412,7 +388,6 @@
     </armor>
     <armor id="5739" name="Doom Boots" icon="icon.armor_t72_b_i00">
         <!-- Part of the light doom set. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="feet"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="1659"/>
@@ -427,7 +402,6 @@
     </armor>
     <armor id="5740" name="Doom Boots" icon="icon.armor_t73_b_i00">
         <!-- Part of the doom robe set. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="feet"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="1659"/>
@@ -442,7 +416,6 @@
     </armor>
     <armor id="5765" name="Dark Crystal Gloves" icon="icon.armor_t74_g_i00">
         <!-- Part of Dark Crystal Breastplate Heavy Armor. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="gloves"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="71"/>
@@ -457,7 +430,6 @@
     </armor>
     <armor id="5766" name="Dark Crystal Gloves" icon="icon.armor_t75_g_i00">
         <!-- Part of Dark Crystal Light Armor. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="gloves"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="71"/>
@@ -472,7 +444,6 @@
     </armor>
     <armor id="5767" name="Dark Crystal Gloves" icon="icon.armor_t76_g_i00">
         <!-- Part of Dark Crystal Robe. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="gloves"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="71"/>
@@ -487,7 +458,6 @@
     </armor>
     <armor id="5768" name="Tallum Gloves" icon="icon.armor_t77_g_i00">
         <!-- Part of Tallum Heavy Armor. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="gloves"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="71"/>
@@ -502,7 +472,6 @@
     </armor>
     <armor id="5769" name="Tallum Gloves" icon="icon.armor_t78_g_i00">
         <!-- Part of Tallum Light Armor. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="gloves"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="71"/>
@@ -517,7 +486,6 @@
     </armor>
     <armor id="5770" name="Tallum Gloves" icon="icon.armor_t79_g_i00">
         <!-- Part of Tallum Robe. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="gloves"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="71"/>
@@ -532,7 +500,6 @@
     </armor>
     <armor id="5771" name="Gauntlets of Nightmare" icon="icon.armor_t80_g_i00">
         <!-- Part of Heavy Armor of Nightmare. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="gloves"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="71"/>
@@ -547,7 +514,6 @@
     </armor>
     <armor id="5772" name="Gauntlets of Nightmare" icon="icon.armor_t81_g_i00">
         <!-- Part of Light Armor of Nightmare. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="gloves"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="71"/>
@@ -562,7 +528,6 @@
     </armor>
     <armor id="5773" name="Gauntlets of Nightmare" icon="icon.armor_t82_g_i00">
         <!-- Part of Robe of Nightmare. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="gloves"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="71"/>
@@ -577,7 +542,6 @@
     </armor>
     <armor id="5774" name="Majestic Gauntlets" icon="icon.armor_t83_g_i00">
         <!-- Part of Majestic Heavy Armor. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="gloves"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="71"/>
@@ -592,7 +556,6 @@
     </armor>
     <armor id="5775" name="Majestic Gauntlets" icon="icon.armor_t84_g_i00">
         <!-- Part of Majestic Light Armor. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="gloves"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="71"/>
@@ -607,7 +570,6 @@
     </armor>
     <armor id="5776" name="Majestic Gauntlets" icon="icon.armor_t85_g_i00">
         <!-- Part of Majestic Robe. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="gloves"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="71"/>
@@ -622,7 +584,6 @@
     </armor>
     <armor id="5777" name="Dark Crystal Boots" icon="icon.armor_t74_b_i00">
         <!-- Part of Dark Crystal Breastplate Heavy Armor. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="feet"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="71"/>
@@ -637,7 +598,6 @@
     </armor>
     <armor id="5778" name="Dark Crystal Boots" icon="icon.armor_t75_b_i00">
         <!-- Part of Dark Crystal Light Armor. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="feet"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="71"/>
@@ -652,7 +612,6 @@
     </armor>
     <armor id="5779" name="Dark Crystal Boots" icon="icon.armor_t76_b_i00">
         <!-- Part of Dark Crystal Robe. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="feet"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="71"/>
@@ -667,7 +626,6 @@
     </armor>
     <armor id="5780" name="Tallum Boots" icon="icon.armor_t77_b_i00">
         <!-- Part of Tallum Heavy Armor. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="feet"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="71"/>
@@ -682,7 +640,6 @@
     </armor>
     <armor id="5781" name="Tallum Boots" icon="icon.armor_t78_b_i00">
         <!-- Part of Tallum Light Armor. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="feet"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="71"/>
@@ -697,7 +654,6 @@
     </armor>
     <armor id="5782" name="Tallum Boots" icon="icon.armor_t79_b_i00">
         <!-- Part of Tallum Robe. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="feet"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="71"/>
@@ -712,7 +668,6 @@
     </armor>
     <armor id="5783" name="Boots of Nightmare" icon="icon.armor_t80_b_i00">
         <!-- Part of Heavy Armor of Nightmare. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="feet"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="71"/>
@@ -727,7 +682,6 @@
     </armor>
     <armor id="5784" name="Boots of Nightmare" icon="icon.armor_t81_b_i00">
         <!-- Part of Light Armor of Nightmare. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="feet"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="71"/>
@@ -742,7 +696,6 @@
     </armor>
     <armor id="5785" name="Boots of Nightmare" icon="icon.armor_t82_b_i00">
         <!-- Part of Robe of Nightmare. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="feet"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="71"/>
@@ -757,7 +710,6 @@
     </armor>
     <armor id="5786" name="Majestic Boots" icon="icon.armor_t83_b_i00">
         <!-- Part of Majestic Heavy Armor. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="feet"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="71"/>
@@ -772,7 +724,6 @@
     </armor>
     <armor id="5787" name="Majestic Boots" icon="icon.armor_t84_b_i00">
         <!-- Part of Majestic Light Armor. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="feet"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="71"/>
@@ -787,7 +738,6 @@
     </armor>
     <armor id="5788" name="Majestic Boots" icon="icon.armor_t85_b_i00">
         <!-- Part of Majestic Robe. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="feet"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="71"/>
@@ -825,7 +775,6 @@
         </skills>
     </item>
     <weapon id="5791" name="Tomb Guard A" icon="icon.weapon_monster_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;44;120"/>
@@ -848,7 +797,6 @@
         </stats>
     </weapon>
     <weapon id="5792" name="Tomb Guard B" icon="icon.weapon_monster_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;44;120"/>
@@ -871,7 +819,6 @@
         </stats>
     </weapon>
     <weapon id="5793" name="Tomb Savant A" icon="icon.weapon_monster_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -894,7 +841,6 @@
         </stats>
     </weapon>
     <weapon id="5794" name="Tomb Savant B" icon="icon.weapon_monster_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -917,7 +863,6 @@
         </stats>
     </weapon>
     <weapon id="5795" name="Tomb Guard A" icon="icon.weapon_monster_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;44;120"/>
@@ -940,7 +885,6 @@
         </stats>
     </weapon>
     <weapon id="5796" name="Tomb Guard B" icon="icon.weapon_monster_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;44;120"/>
@@ -963,7 +907,6 @@
         </stats>
     </weapon>
     <weapon id="5797" name="Tomb Savant A" icon="icon.weapon_monster_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -986,7 +929,6 @@
         </stats>
     </weapon>
     <weapon id="5798" name="Tomb Savant B" icon="icon.weapon_monster_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -1009,7 +951,6 @@
         </stats>
     </weapon>
     <armor id="5799" name="Nephilim Lord" icon="icon.weapon_monster_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="lhand"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_type" val="D"/>

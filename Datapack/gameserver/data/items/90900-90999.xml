@@ -6,7 +6,6 @@
     </item>
     <armor id="90901" name="Agathion Bracelet - Lv. 1" icon="icon.agathion_magmeld_teleport">
         <!-- A 15-day item. When worn, 2 Agathion slots are activated. Cannot be exchanged, dropped or sold. Can be stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="lbracelet"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="10"/>
@@ -18,7 +17,6 @@
     </armor>
     <armor id="90902" name="Agathion Pisces" icon="icon.pis_agathion_i00">
         <!-- A 15-day item. Equipping it in the Bracelet's main slot summons the Agathion Pisces and activates the Special Ability option. Cannot be exchanged, dropped or sold. Can be stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="agathion"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="220"/>
@@ -27,7 +25,6 @@
     </armor>
     <armor id="90903" name="Agathion Cancer" icon="icon.can_agathion_i00">
         <!-- A 15-day item. Equipping it in the Bracelet's main slot summons the Agathion Cancer and activates the Special Ability option. Cannot be exchanged, dropped or sold. Can be stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="agathion"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="150"/>
@@ -71,7 +68,6 @@
     </item>
     <armor id="90909" name="Agathion Rudolph" icon="BranchSys2.icon.event_lbracelet_rudolph">
         <!-- A 2-hours item. Equipping it in the Bracelet's main slot summons the Agathion Rudolph. Casting Spd./ Atk. Spd. +5%, during the hunt XP/SP gain +10%. Cannot be exchanged, dropped or sold. Can be stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="agathion"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="5"/>
@@ -140,7 +136,6 @@
     </item>
     <armor id="90920" name="Jade Lv. 5" icon="icon.etc_bm_jewel_jade_i00">
         <!-- A 7-day item. Atk. Spd./ Casting Spd. +10%, when equipped. Effect does not stack with additional jewels of the same type. Cannot be exchanged, dropped, or sold in private store. Can be stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="gloves"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="5"/>
@@ -149,7 +144,6 @@
     </armor>
     <armor id="90921" name="Vital Stone Lv. 5" icon="icon.etc_bm_jewel_vital">
         <!-- A 7-day item. Sayha Grace XP/ SP +15%, Sayha Grace Consumption -30%, while hunting. Effect does not stack with additional jewels of the same type. Cannot be exchanged, dropped, or sold in private store. Can be stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="underwear"/>
         <set name="immediate_effect" val="true"/>
         <set name="time" val="10080"/>
@@ -166,37 +160,31 @@
     </item>
     <armor id="90924" name="Aquamarine" icon="icon.etc_bm_jewel_aquamarine_i00">
         <!-- When using a skill after equipping, there is a chance of recovering 12 MP. Effect does not stack with additional jewels of the same type. Cannot be exchanged, dropped, or sold in private store. Can be stored in a private warehouse. Can be shared within account through Dimensional Merchant. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
         <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
     </armor>
     <armor id="90925" name="Aquamarine" icon="icon.etc_bm_jewel_aquamarine_i00">
         <!-- When using a skill after equipping, there is a chance of recovering 16 MP. Effect does not stack with additional jewels of the same type. Cannot be exchanged, dropped, or sold in private store. Can be stored in a private warehouse. Can be shared within account through Dimensional Merchant. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
         <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
     </armor>
     <armor id="90926" name="Aquamarine" icon="icon.etc_bm_jewel_aquamarine_i00">
         <!-- When using a skill after equipping, there is a chance of recovering 20 MP. Effect does not stack with additional jewels of the same type. Cannot be exchanged, dropped, or sold in private store. Can be stored in a private warehouse. Can be shared within account through Dimensional Merchant. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
         <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
     </armor>
     <armor id="90927" name="Aquamarine" icon="icon.etc_bm_jewel_aquamarine_i00">
         <!-- When using a skill after equipping, there is a chance of recovering 30 MP. Effect does not stack with additional jewels of the same type. Cannot be exchanged, dropped, or sold in private store. Can be stored in a private warehouse. Can be shared within account through Dimensional Merchant. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
         <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
     </armor>
     <armor id="90928" name="Aquamarine" icon="icon.etc_bm_jewel_aquamarine_i00">
         <!-- When using a skill after equipping, there is a chance of recovering 50 MP. Effect does not stack with additional jewels of the same type. Cannot be exchanged, dropped, or sold in private store. Can be stored in a private warehouse. Can be shared within account through Dimensional Merchant. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
         <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
     </armor>
     <armor id="90929" name="Cat's Eye" icon="icon.bm_jewel_red_catseye">
         <!-- P./ M. Critical Damage +2%. Effect does not stack with additional jewels of the same type. Cannot be exchanged, dropped, or sold in private store. Can be stored in a private warehouse. Can be shared within account through Dimensional Merchant. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="brooch_jewel"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="5"/>
@@ -204,7 +192,6 @@
     </armor>
     <armor id="90930" name="Cat's Eye" icon="icon.bm_jewel_red_catseye">
         <!-- P./ M. Critical Damage +4%. Effect does not stack with additional jewels of the same type. Cannot be exchanged, dropped, or sold in private store. Can be stored in a private warehouse. Can be shared within account through Dimensional Merchant. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="brooch_jewel"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="5"/>
@@ -212,7 +199,6 @@
     </armor>
     <armor id="90931" name="Cat's Eye" icon="icon.bm_jewel_red_catseye">
         <!-- P./ M. Critical Damage +6%. Effect does not stack with additional jewels of the same type. Cannot be exchanged, dropped, or sold in private store. Can be stored in a private warehouse. Can be shared within account through Dimensional Merchant. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="brooch_jewel"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="5"/>
@@ -220,7 +206,6 @@
     </armor>
     <armor id="90932" name="Cat's Eye" icon="icon.bm_jewel_red_catseye">
         <!-- P./ M. Critical Damage +8%. Effect does not stack with additional jewels of the same type. Cannot be exchanged, dropped, or sold in private store. Can be stored in a private warehouse. Can be shared within account through Dimensional Merchant. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="brooch_jewel"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="5"/>
@@ -228,7 +213,6 @@
     </armor>
     <armor id="90933" name="Cat's Eye" icon="icon.bm_jewel_red_catseye">
         <!-- P./ M. Critical Damage +15%. Effect does not stack with additional jewels of the same type. Cannot be exchanged, dropped, or sold in private store. Can be stored in a private warehouse. Can be shared within account through Dimensional Merchant. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="brooch_jewel"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="5"/>
@@ -236,7 +220,6 @@
     </armor>
     <armor id="90934" name="Brooch" icon="icon.etc_bm_brooch_lavianrose_i03">
         <!-- Activates 4 jewel slots when equipped. Inventory Slot +12. Cannot be dropped. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="brooch"/>
         <set name="immediate_effect" val="true"/>
         <restriction dropable="false" sellable="false"/>
@@ -322,7 +305,6 @@
     </item>
     <armor id="90950" name="Refined Baium's Ring" icon="icon.accessory_ring_of_baium_i03">
         <!-- A 30-day item. MP +27, Stun Resistance and Stun Atk. Rate +20%, Bleed Resistance and Bleed Atk. Rate +15%, P./ M. Accuracy +4, Atk. Spd./ Casting Spd. +5%, P. Critical Damage +15%, M. Critical Damage +10%, P./ M. Skill Power +10%. The effect does not stack if two identical rings are equipped. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
         <set name="time" val="43200"/>
         <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
@@ -362,7 +344,6 @@
     </item>
     <weapon id="90957" name="Blue Mackerel Chest: Dual Sword (Event)" icon="icon.wp_fishing11">
         <!-- Open the chest to receive 1 Blue Mackerel: Dual Sword. This is grear reward! The item will be removed after the event is over. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DUAL"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
@@ -404,7 +385,6 @@
     </item>
     <weapon id="90962" name="Chronicle Pencil" icon="BranchSys2.icon.g_pencil_of_servermaster">
         <!-- Pencil for the 1000th day after Lineage 2 Classic version start. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="POLE"/>
         <set name="bodypart" val="lrhand"/>
         <set name="immediate_effect" val="true"/>
@@ -460,7 +440,6 @@
     </item>
     <armor id="90969" name="Blessed Fire Dragon Pendant" icon="icon.bm_pendant_pve">
         <!-- P./ M. Def. +24, Acquired XP/ SP +30%, P./ M. Atk. +80, P./ M. Critical Damage +10%, Reflect Damage Resistance +10%, when equipped. Allows using the Blessing of Fire Dragon and Fire Dragon Protection skills. Can be stored in a private warehouse. Can be shared within account through Dimensional Merchant. Cannot be dropped. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
         <restriction dropable="false" sellable="false" freightable="true"/>
         <stats>
@@ -469,7 +448,6 @@
     </armor>
     <armor id="90970" name="Blessed Land Dragon Pendant" icon="icon.bm_pendant_pvp">
         <!-- P./ M. Def. +24, HP +600, MP +300, CP +600, Speed +7, Received Damage -20%, Reflect Damage Resistance +10%, when equipped. Allows using the Land Dragon Breath and Land Dragon Protection skills. Can be shared within account through Dimensional Merchant. Cannot be dropped. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
         <restriction dropable="false" sellable="false" freightable="true"/>
         <stats>
@@ -492,7 +470,6 @@
     </item>
     <armor id="90973" name="Zaken's Cloak" icon="BranchSys2.Icon.br_zaken_cloak_i00">
         <!-- Zaken's Cloak that makes you feel Zaken's sorrow. Increases Max HP by 5%. Cannot be exchanged, dropped, or sold. Can be stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
         <set name="time" val="43200"/>
         <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
@@ -535,7 +512,6 @@
     </item>
     <armor id="90980" name="Pearl Lv. 4" icon="icon.etc_bm_jewel_pearl_i00">
         <!-- A 30-day item. P. Def. +46, M. Critical Damage Received -4%, when equipped. Effect does not stack with additional jewels of the same type. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="rfinger;lfinger"/>
         <set name="immediate_effect" val="true"/>
         <set name="time" val="43200"/>
@@ -543,7 +519,6 @@
     </armor>
     <armor id="90981" name="Diamond Lv. 4" icon="icon.etc_bm_jewel_diamond_i00">
         <!-- A 30-day item. P. Def. +81, P. Critical Damage Received -4%, when equipped. Effect does not stack with additional jewels of the same type. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="HEAVY"/>
         <set name="bodypart" val="alldress"/>
         <set name="immediate_effect" val="true"/>
@@ -553,7 +528,6 @@
     </armor>
     <armor id="90982" name="Jade Lv. 4" icon="icon.etc_bm_jewel_jade_i00">
         <!-- A 30-day item. Atk. Spd./ Casting Spd. +7%, when equipped. Effect does not stack with additional jewels of the same type. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="hairall"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="10"/>
@@ -562,7 +536,6 @@
     </armor>
     <armor id="90983" name="Garnet Lv. 4" icon="icon.etc_bm_jewel_garnet">
         <!-- A 30-day item. Stun/ Pull/ Silence/ Paralysis/ Fear Resistance +11%, when equipped. When using a skill, character becomes invulnerable to debuff for 5 seconds. Effect does not stack with additional jewels of the same type. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="10"/>
         <set name="time" val="43200"/>
@@ -570,7 +543,6 @@
     </armor>
     <armor id="90984" name="Vital Stone Lv. 4" icon="icon.etc_bm_jewel_vital">
         <!-- A 30-day item. Sayha Grace XP/ SP +8%, Sayha Grace Consumption -10%, while hunting. Effect does not stack with additional jewels of the same type. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="hairall"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="10"/>
@@ -579,7 +551,6 @@
     </armor>
     <armor id="90985" name="Land Dragon's Belt" icon="icon.bm_antaras_belt">
         <!-- A 30-day item. CON +1, MEN +1, HP Recovery Bonus +2.31, Max MP +1.54, CP Recovery +3.07, Max HP/ MP/ CP +15%, Inventory Slots +6, Weight Limit +7000, Healing Potions Effect +100, Received Damage -6%. (Can be applied to Melissa's High Grade Recovery Potion, Melissa's Recovery Potion, Warrior's Quick Healing Potion). Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="10"/>
         <set name="time" val="43200"/>
@@ -596,7 +567,6 @@
     </item>
     <armor id="90987" name="Savior's Earring" icon="icon.r2_earring_i00">
         <!-- Acquired XP/ SP +2%, Max MP +20, when equipped. The effect does not stack if two identical earrings are equipped. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. Can be shared within account through Dimensional Merchant.The item will be removed after the event is over. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="hairall"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="10"/>
@@ -607,7 +577,6 @@
     </armor>
     <armor id="90988" name="Shining Savior's Earring" icon="icon.r2_earring_i01">
         <!-- Acquired XP/ SP +2%, Max MP +30, Max HP +50, Stun/ Mental Attacks Resistance +4%, when equipped. Vampiric Rage effect. The effect does not stack if two identical earrings are equipped. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="10"/>
         <restriction sellable="false"/>
@@ -627,7 +596,6 @@
     </item>
     <armor id="90991" name="Lucky Hat" icon="icon.Accessary_middle_ages_i00">
         <!-- A 30-day item. Leather hat. Allows to use Blessing of Luck skill. Occupies 2 Hair Accessory slots. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a private warehouse. The item will be removed after the event is over. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="10"/>
         <set name="time" val="43200"/>
@@ -635,7 +603,6 @@
     </armor>
     <armor id="90992" name="Antharas' Earring" icon="icon.accessory_earring_of_antaras_i00">
         <!-- MP +9, Bleed Resistance/Atk. Rate +10%, Stun Resistance/Atk. Rate +5%, Mental Attack Resistance/Atk. Rate +5%, Healing Power +6%, Skill MP Consumption -3%, Vampiric Rage effect +2%. The effect does not stack if two identical earrings are equipped. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="rear;lear"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="10"/>
@@ -648,7 +615,6 @@
     </armor>
     <armor id="90993" name="Damaged Antharas' Earring" icon="icon.accessory_earring_of_antaras_i00">
         <!-- Severly Damaged Antharas' Earring. With the help of Balthus Knights' Varnish, Balthus Knights' Matte Varnish, Balthus Knights' Shining Varnish it can be enchanted up to +10. Starting from +4 adds passive skills. Damaged Antharas' Earring +10 can be exchanged for Antharas' Earring. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="10"/>
         <restriction sellable="false"/>
@@ -658,7 +624,6 @@
     </armor>
     <armor id="90994" name="Damaged Baium's Ring" icon="icon.accessory_ring_of_baium_i00">
         <!-- Severly Damaged Baium's Ring. With the help of Balthus Knights' Varnish, Balthus Knights' Matte Varnish, Balthus Knights' Shining Varnish it can be enchanted up to +10. Starting from +4 adds passive skills. Damaged Baium's Ring +10 can be exchanged for Baium's Ring. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="10"/>
         <restriction sellable="false"/>

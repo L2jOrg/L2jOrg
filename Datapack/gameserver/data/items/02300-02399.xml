@@ -640,7 +640,6 @@
     </item>
     <weapon id="2368" name="Training Gloves" icon="icon.weapon_training_gloves_i00">
         <!-- Cannot be exchanged, dropped, sold, or stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DUALFIST"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;32;120"/>
@@ -661,7 +660,6 @@
     </weapon>
     <weapon id="2369" name="Squire's Sword" icon="icon.weapon_squires_sword_i00">
         <!-- Cannot be exchanged, dropped, sold, or stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -681,7 +679,6 @@
     </weapon>
     <weapon id="2370" name="Guild Member's Club" icon="icon.weapon_club_i00">
         <!-- Cannot be exchanged, dropped, sold, or stored in a private warehouse. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -701,7 +698,6 @@
         </stats>
     </weapon>
     <weapon id="2371" name="Fist of Butcher" icon="icon.weapon_iron_glove_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DUALFIST"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;32;120"/>
@@ -722,7 +718,6 @@
         </stats>
     </weapon>
     <weapon id="2372" name="Dagger of Adept" icon="icon.weapon_doomed_dagger_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DAGGER"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -743,7 +738,6 @@
         </stats>
     </weapon>
     <weapon id="2373" name="Eldritch Staff" icon="icon.weapon_apprentices_staff_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;46;120"/>
@@ -765,7 +759,6 @@
         </stats>
     </weapon>
     <weapon id="2374" name="Red Sunset Dagger" icon="icon.weapon_doomed_dagger_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DAGGER"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -786,7 +779,6 @@
         </stats>
     </weapon>
     <armor id="2376" name="Avadon Breastplate" icon="icon.armor_t66_u_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="HEAVY"/>
         <set name="bodypart" val="chest"/>
         <set name="immediate_effect" val="true"/>
@@ -801,7 +793,6 @@
         </stats>
     </armor>
     <armor id="2377" name="Mithril Scale Gaiters" icon="icon.armor_t40_l_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="HEAVY"/>
         <set name="bodypart" val="legs"/>
         <set name="immediate_effect" val="true"/>
@@ -816,7 +807,6 @@
         </stats>
     </armor>
     <armor id="2378" name="Brigandine Gaiters" icon="icon.armor_t43_l_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="HEAVY"/>
         <set name="bodypart" val="legs"/>
         <set name="immediate_effect" val="true"/>
@@ -831,7 +821,6 @@
         </stats>
     </armor>
     <armor id="2379" name="Avadon Gaiters" icon="icon.armor_t66_l_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="HEAVY"/>
         <set name="bodypart" val="legs"/>
         <set name="immediate_effect" val="true"/>
@@ -846,7 +835,6 @@
         </stats>
     </armor>
     <armor id="2380" name="Blue Wolf Gaiters" icon="icon.armor_t68_l_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="HEAVY"/>
         <set name="bodypart" val="legs"/>
         <set name="immediate_effect" val="true"/>
@@ -862,7 +850,6 @@
     </armor>
     <armor id="2381" name="Doom Plate Armor" icon="icon.armor_t71_ul_i00">
         <!-- Full body armor. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="HEAVY"/>
         <set name="bodypart" val="onepiece"/>
         <set name="immediate_effect" val="true"/>
@@ -878,7 +865,6 @@
     </armor>
     <armor id="2382" name="Tallum Plate Armor" icon="icon.armor_t77_ul_i00">
         <!-- Full body armor. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="HEAVY"/>
         <set name="bodypart" val="onepiece"/>
         <set name="immediate_effect" val="true"/>
@@ -894,7 +880,6 @@
     </armor>
     <armor id="2383" name="Majestic Plate Armor" icon="icon.armor_t83_ul_i00">
         <!-- Full body armor. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="HEAVY"/>
         <set name="bodypart" val="onepiece"/>
         <set name="immediate_effect" val="true"/>
@@ -909,7 +894,6 @@
         </stats>
     </armor>
     <armor id="2384" name="Zubei's Leather Shirt" icon="icon.armor_t65_u_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="LIGHT"/>
         <set name="bodypart" val="chest"/>
         <set name="immediate_effect" val="true"/>
@@ -924,7 +908,6 @@
         </stats>
     </armor>
     <armor id="2385" name="Dark Crystal Leather Armor" icon="icon.armor_t75_u_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="LIGHT"/>
         <set name="bodypart" val="chest"/>
         <set name="immediate_effect" val="true"/>
@@ -939,7 +922,6 @@
         </stats>
     </armor>
     <armor id="2386" name="Wooden Gaiters" icon="icon.armor_t06_l_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="LIGHT"/>
         <set name="bodypart" val="legs"/>
         <set name="immediate_effect" val="true"/>
@@ -951,7 +933,6 @@
         </stats>
     </armor>
     <armor id="2387" name="Reinforced Mithril Gaiters" icon="icon.armor_t47_l_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="LIGHT"/>
         <set name="bodypart" val="legs"/>
         <set name="immediate_effect" val="true"/>
@@ -966,7 +947,6 @@
         </stats>
     </armor>
     <armor id="2388" name="Zubei's Leather Gaiters" icon="icon.armor_t65_l_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="LIGHT"/>
         <set name="bodypart" val="legs"/>
         <set name="immediate_effect" val="true"/>
@@ -981,7 +961,6 @@
         </stats>
     </armor>
     <armor id="2389" name="Dark Crystal Leggings" icon="icon.armor_t75_l_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="LIGHT"/>
         <set name="bodypart" val="legs"/>
         <set name="immediate_effect" val="true"/>
@@ -997,7 +976,6 @@
     </armor>
     <armor id="2390" name="Avadon Leather Armor" icon="icon.armor_t67_ul_i00">
         <!-- Full body armor. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="LIGHT"/>
         <set name="bodypart" val="onepiece"/>
         <set name="immediate_effect" val="true"/>
@@ -1013,7 +991,6 @@
     </armor>
     <armor id="2391" name="Blue Wolf Leather Armor" icon="icon.armor_t69_ul_i00">
         <!-- Full body armor. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="LIGHT"/>
         <set name="bodypart" val="onepiece"/>
         <set name="immediate_effect" val="true"/>
@@ -1029,7 +1006,6 @@
     </armor>
     <armor id="2392" name="Leather Armor of Doom" icon="icon.armor_t72_ul_i00">
         <!-- Full body armor. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="LIGHT"/>
         <set name="bodypart" val="onepiece"/>
         <set name="immediate_effect" val="true"/>
@@ -1045,7 +1021,6 @@
     </armor>
     <armor id="2393" name="Tallum Leather Armor" icon="icon.armor_t78_ul_i00">
         <!-- Full body armor. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="LIGHT"/>
         <set name="bodypart" val="onepiece"/>
         <set name="immediate_effect" val="true"/>
@@ -1061,7 +1036,6 @@
     </armor>
     <armor id="2394" name="Leather Armor of Nightmare" icon="icon.armor_t81_ul_i00">
         <!-- Full body armor. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="LIGHT"/>
         <set name="bodypart" val="onepiece"/>
         <set name="immediate_effect" val="true"/>
@@ -1077,7 +1051,6 @@
     </armor>
     <armor id="2395" name="Majestic Leather Armor" icon="icon.armor_t84_ul_i00">
         <!-- Full body armor. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="LIGHT"/>
         <set name="bodypart" val="onepiece"/>
         <set name="immediate_effect" val="true"/>
@@ -1092,7 +1065,6 @@
         </stats>
     </armor>
     <armor id="2396" name="Elven Mithril Tunic" icon="icon.armor_elven_tunic_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="MAGIC"/>
         <set name="bodypart" val="chest"/>
         <set name="immediate_effect" val="true"/>
@@ -1108,7 +1080,6 @@
         </stats>
     </armor>
     <armor id="2397" name="Tunic of Zubei" icon="icon.armor_t56_u_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="MAGIC"/>
         <set name="bodypart" val="chest"/>
         <set name="immediate_effect" val="true"/>
@@ -1124,7 +1095,6 @@
         </stats>
     </armor>
     <armor id="2398" name="Blue Wolf Tunic" icon="icon.armor_t70_u_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="MAGIC"/>
         <set name="bodypart" val="chest"/>
         <set name="immediate_effect" val="true"/>
@@ -1140,7 +1110,6 @@
         </stats>
     </armor>
     <armor id="2399" name="Tunic of Doom" icon="icon.armor_t73_u_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="armor_type" val="MAGIC"/>
         <set name="bodypart" val="chest"/>
         <set name="immediate_effect" val="true"/>

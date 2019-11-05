@@ -2,7 +2,6 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://l2j.org" xsi:schemaLocation="http://l2j.org items.xsd">
     <weapon id="8800" name="Naga Storm" icon="icon.weapon_naga_storm_i01">
         <!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 58. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DAGGER"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -27,7 +26,6 @@
     </weapon>
     <weapon id="8801" name="Naga Storm" icon="icon.weapon_naga_storm_i01">
         <!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by 5%. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DAGGER"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -52,7 +50,6 @@
     </weapon>
     <weapon id="8802" name="Naga Storm" icon="icon.weapon_naga_storm_i01">
         <!-- <Soul Crystal Enhancement>. Increases the probability of a deadly attack. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DAGGER"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -77,7 +74,6 @@
     </weapon>
     <weapon id="8803" name="Tiphon's Spear" icon="icon.weapon_tiphon_spear_i01">
         <!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 54. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="POLE"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;66;120"/>
@@ -105,7 +101,6 @@
     </weapon>
     <weapon id="8804" name="Tiphon's Spear" icon="icon.weapon_tiphon_spear_i01">
         <!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 7%. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="POLE"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;80;120"/>
@@ -131,7 +126,6 @@
     </weapon>
     <weapon id="8805" name="Tiphon's Spear" icon="icon.weapon_tiphon_spear_i01">
         <!-- <Soul Crystal Enhancement>. 24% chance of casting Stun upon the target during a Critical Attack. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="POLE"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;66;180"/>
@@ -156,7 +150,6 @@
     </weapon>
     <weapon id="8806" name="Shyeed's Bow" icon="icon.weapon_shyid_bow_i01">
         <!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 40. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BOW"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;10;0"/>
@@ -185,7 +178,6 @@
     </weapon>
     <weapon id="8807" name="Shyeed's Bow" icon="icon.weapon_shyid_bow_i01">
         <!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 7%. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BOW"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;10;0"/>
@@ -213,7 +205,6 @@
     </weapon>
     <weapon id="8808" name="Shyeed's Bow" icon="icon.weapon_shyid_bow_i01">
         <!-- <Soul Crystal Enhancement>. P. Atk. +198 during a Critical Attack. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BOW"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;10;0"/>
@@ -241,7 +232,6 @@
     </weapon>
     <weapon id="8809" name="Sobekk's Hurricane" icon="icon.weapon_sobekk_hurricane_i01">
         <!-- <Soul Crystal Enhancement>. Increases P. Crit. Rate by 54. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DUALFIST"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;32;120"/>
@@ -269,7 +259,6 @@
     </weapon>
     <weapon id="8810" name="Sobekk's Hurricane" icon="icon.weapon_sobekk_hurricane_i01">
         <!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 7%. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DUALFIST"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;32;120"/>
@@ -297,7 +286,6 @@
     </weapon>
     <weapon id="8811" name="Sobekk's Hurricane" icon="icon.weapon_sobekk_hurricane_i01">
         <!-- <Soul Crystal Enhancement>. P. Atk. +302 during a Critical Attack. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="DUALFIST"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;32;120"/>
@@ -325,7 +313,6 @@
     </weapon>
     <weapon id="8812" name="Themis' Tongue" icon="icon.weapon_tongue_of_themis_i01">
         <!-- <Soul Crystal Enhancement>. M. Atk. +159. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -353,7 +340,6 @@
     </weapon>
     <weapon id="8813" name="Themis' Tongue" icon="icon.weapon_tongue_of_themis_i01">
         <!-- <Soul Crystal Enhancement>. Increases Casting Spd. by 12%. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -381,7 +367,6 @@
     </weapon>
     <weapon id="8814" name="Themis' Tongue" icon="icon.weapon_tongue_of_themis_i01">
         <!-- <Soul Crystal Enhancement>. MP Recovery Bonus +12%. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="SWORD"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -409,7 +394,6 @@
     </weapon>
     <weapon id="8815" name="Cabrio's Hand" icon="icon.weapon_hand_of_cabrio_i01">
         <!-- <Soul Crystal Enhancement>. M. Atk. +159. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -438,7 +422,6 @@
     </weapon>
     <weapon id="8816" name="Cabrio's Hand" icon="icon.weapon_hand_of_cabrio_i01">
         <!-- <Soul Crystal Enhancement>. Increases Casting Spd. by 12%. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -467,7 +450,6 @@
     </weapon>
     <weapon id="8817" name="Cabrio's Hand" icon="icon.weapon_hand_of_cabrio_i01">
         <!-- <Soul Crystal Enhancement>. MP Recovery Bonus +12%. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="rhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -496,7 +478,6 @@
     </weapon>
     <weapon id="8818" name="Daimon Crystal" icon="icon.weapon_crystal_of_deamon_i01">
         <!-- <Soul Crystal Enhancement>. M. Atk. +159. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -525,7 +506,6 @@
     </weapon>
     <weapon id="8819" name="Daimon Crystal" icon="icon.weapon_crystal_of_deamon_i01">
         <!-- <Soul Crystal Enhancement>. Increases Casting Spd. by 12%. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;40;120"/>
@@ -554,7 +534,6 @@
     </weapon>
     <weapon id="8820" name="Daimon Crystal" icon="icon.weapon_crystal_of_deamon_i01">
         <!-- <Soul Crystal Enhancement>. MP Recovery Bonus +12%. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="weapon_type" val="BLUNT"/>
         <set name="bodypart" val="lrhand"/>
         <set name="damage_range" val="0;0;40;120"/>

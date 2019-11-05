@@ -12,7 +12,6 @@
         <restriction tradable="false" dropable="false" sellable="false" depositable="false" stackable="true" clan-depositable="false" mailable="false" commissionable="false"/>
     </item>
     <armor id="845" name="Cat's Eye" icon="icon.accessary_catseye_earing_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="rear;lear"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="150"/>
@@ -23,7 +22,6 @@
         </stats>
     </armor>
     <armor id="846" name="Coral Earring" icon="icon.accessary_coral_earing_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="rear;lear"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="150"/>
@@ -34,7 +32,6 @@
         </stats>
     </armor>
     <armor id="847" name="Red Crescent" icon="icon.accessary_red_cresent_earing_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="rear;lear"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="48"/>
@@ -48,7 +45,6 @@
         </stats>
     </armor>
     <armor id="848" name="Earring of Magic" icon="icon.accessary_enchanted_earing_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="rear;lear"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="77"/>
@@ -62,7 +58,6 @@
         </stats>
     </armor>
     <armor id="849" name="Tiger's Eye" icon="icon.accessary_tigerseye_earing_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="rear;lear"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="116"/>
@@ -76,7 +71,6 @@
         </stats>
     </armor>
     <armor id="850" name="Elven Earring" icon="icon.accessary_elven_earing_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="rear;lear"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="169"/>
@@ -90,7 +84,6 @@
         </stats>
     </armor>
     <armor id="851" name="Onyx Beast's Eye Earring" icon="icon.accessary_onyxbeastseye_earing_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="rear;lear"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="220"/>
@@ -104,7 +97,6 @@
         </stats>
     </armor>
     <armor id="852" name="Moonstone Earring" icon="icon.accessary_moonstone_earing_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="rear;lear"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="62"/>
@@ -118,7 +110,6 @@
         </stats>
     </armor>
     <armor id="853" name="Earring of Protection" icon="icon.accessary_earing_of_protection_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="rear;lear"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="78"/>
@@ -132,7 +123,6 @@
         </stats>
     </armor>
     <armor id="854" name="Earring of Seal" icon="icon.accessary_earing_of_binding_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="rear;lear"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="118"/>
@@ -146,7 +136,6 @@
         </stats>
     </armor>
     <armor id="855" name="Nassen's Earring" icon="icon.accessary_nassens_earing_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="rear;lear"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="169"/>
@@ -160,7 +149,6 @@
         </stats>
     </armor>
     <armor id="856" name="Adamantite Earring" icon="icon.accessary_adamantite_earing_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="rear;lear"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="80"/>
@@ -174,7 +162,6 @@
         </stats>
     </armor>
     <armor id="857" name="Holy Earring" icon="icon.accessary_blessed_earing_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="rear;lear"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="169"/>
@@ -189,7 +176,6 @@
     </armor>
     <armor id="858" name="Tateossian Earring" icon="icon.accessory_tateossian_earring_i00">
         <!-- When equipped, MP +31. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="rear;lear"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="157"/>
@@ -203,7 +189,6 @@
         </stats>
     </armor>
     <armor id="859" name="Earring of Mana" icon="icon.accessary_earing_of_mana_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="rear;lear"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="169"/>
@@ -217,7 +202,6 @@
         </stats>
     </armor>
     <armor id="860" name="Sage's Earring" icon="icon.accessary_sages_earing_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="rear;lear"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="169"/>
@@ -232,7 +216,6 @@
     </armor>
     <armor id="862" name="Majestic Earring" icon="icon.accessary_inferno_earing_i00">
         <!-- Majestic Earring. Provides additional MP +25. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="rear;lear"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="120"/>
@@ -247,7 +230,6 @@
         </stats>
     </armor>
     <armor id="864" name="Black Ore Earring" icon="icon.accessary_earing_of_black_ore_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="rear;lear"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="123"/>
@@ -261,7 +243,6 @@
         </stats>
     </armor>
     <armor id="869" name="Earring of Grace" icon="icon.accessary_earing_of_grace_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="rear;lear"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="123"/>
@@ -276,7 +257,6 @@
     </armor>
     <armor id="871" name="Phoenix Earring" icon="icon.accessary_phoenixs_earing_i00">
         <!-- Phoenix Earring. MP +20. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="rear;lear"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="80"/>
@@ -291,7 +271,6 @@
         </stats>
     </armor>
     <armor id="874" name="Earring of Blessing" icon="icon.accessary_earing_of_blessing_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="rear;lear"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="80"/>
@@ -306,7 +285,6 @@
     </armor>
     <armor id="875" name="Ring of Knowledge" icon="icon.accessary_ring_of_knowledge_i00">
         <!-- Gold ring with delicately engraved rune characters of knowledge. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="rfinger;lfinger"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="150"/>
@@ -318,7 +296,6 @@
     </armor>
     <armor id="876" name="Ring of Anguish" icon="icon.accessary_ring_of_anguish_i00">
         <!-- Gold ring with engraved rune characters of anguish. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="rfinger;lfinger"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="150"/>
@@ -329,7 +306,6 @@
         </stats>
     </armor>
     <armor id="877" name="Ring of Wisdom" icon="icon.accessary_ring_of_wisdom_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="rfinger;lfinger"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="150"/>
@@ -340,7 +316,6 @@
         </stats>
     </armor>
     <armor id="878" name="Blue Coral Ring" icon="icon.accessary_blue_coral_ring_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="rfinger;lfinger"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="150"/>
@@ -351,7 +326,6 @@
         </stats>
     </armor>
     <armor id="879" name="Ring of Magic" icon="icon.accessary_enchanted_ring_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="rfinger;lfinger"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="51"/>
@@ -365,7 +339,6 @@
         </stats>
     </armor>
     <armor id="880" name="Black Pearl Ring" icon="icon.accessary_black_pearl_ring_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="rfinger;lfinger"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="77"/>
@@ -379,7 +352,6 @@
         </stats>
     </armor>
     <armor id="881" name="Elven Ring" icon="icon.accessary_elven_ring_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="rfinger;lfinger"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="113"/>
@@ -393,7 +365,6 @@
         </stats>
     </armor>
     <armor id="882" name="Mithril Ring" icon="icon.accessary_mithril_ring_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="rfinger;lfinger"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="146"/>
@@ -407,7 +378,6 @@
         </stats>
     </armor>
     <armor id="883" name="Aquastone Ring" icon="icon.accessary_aquastone_ring_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="rfinger;lfinger"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="41"/>
@@ -421,7 +391,6 @@
         </stats>
     </armor>
     <armor id="884" name="Ring of Protection" icon="icon.accessary_ring_of_protection_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="rfinger;lfinger"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="52"/>
@@ -435,7 +404,6 @@
         </stats>
     </armor>
     <armor id="885" name="Ring of Ages" icon="icon.accessary_ring_of_ages_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="rfinger;lfinger"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="78"/>
@@ -449,7 +417,6 @@
         </stats>
     </armor>
     <armor id="886" name="Ring of Seal" icon="icon.accessary_ring_of_binding_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="rfinger;lfinger"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="112"/>
@@ -463,7 +430,6 @@
         </stats>
     </armor>
     <armor id="887" name="Adamantite Ring" icon="icon.accessary_adamantite_ring_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="rfinger;lfinger"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="53"/>
@@ -477,7 +443,6 @@
         </stats>
     </armor>
     <armor id="888" name="Blessed Ring" icon="icon.accessary_blessed_ring_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="rfinger;lfinger"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="112"/>
@@ -492,7 +457,6 @@
     </armor>
     <armor id="889" name="Tateossian Ring" icon="icon.accessory_tateossian_ring_i00">
         <!-- When equipped, MP +21. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="rfinger;lfinger"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="105"/>
@@ -506,7 +470,6 @@
         </stats>
     </armor>
     <armor id="890" name="Ring of Devotion" icon="icon.accessary_ring_of_devotion_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="rfinger;lfinger"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="32"/>
@@ -520,7 +483,6 @@
         </stats>
     </armor>
     <armor id="891" name="Sage's Ring" icon="icon.accessary_sages_ring_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="rfinger;lfinger"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="32"/>
@@ -535,7 +497,6 @@
     </armor>
     <armor id="893" name="Majestic Ring" icon="icon.accessary_inferno_ring_i00">
         <!-- Majestic Ring. Provides additional MP +17. -->
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="rfinger;lfinger"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="80"/>
@@ -550,7 +511,6 @@
         </stats>
     </armor>
     <armor id="895" name="Black Ore Ring" icon="icon.accessary_ring_of_black_ore_i00">
-        <set name="default_action" val="EQUIP"/>
         <set name="bodypart" val="rfinger;lfinger"/>
         <set name="immediate_effect" val="true"/>
         <set name="crystal_count" val="82"/>
