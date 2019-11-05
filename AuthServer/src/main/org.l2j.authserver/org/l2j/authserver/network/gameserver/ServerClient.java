@@ -64,7 +64,6 @@ public final class ServerClient extends Client<Connection<ServerClient>> {
         return gameServerInfo;
     }
 
-
     @Override
     public boolean decrypt(byte[] data, int offset, int size) {
         /*boolean decrypted;
@@ -83,14 +82,19 @@ public final class ServerClient extends Client<Connection<ServerClient>> {
     }
 
     @Override
-    public int encrypt(byte[] data, int offset, int size) {
+    public int encryptedSize(int dataSize) {
+        return dataSize;
+    }
+
+    @Override
+    public byte[] encrypt(byte[] data, int offset, int size) {
         /*try {
             return  crypt.encrypt(data, offset, size);
         } catch (IOException e) {
             LOGGER.error(e.getLocalizedMessage(), e);
             return -1;
         }*/
-        return size;
+        return data;
     }
 
 	public void sendPacket(GameServerWritablePacket lsp) {

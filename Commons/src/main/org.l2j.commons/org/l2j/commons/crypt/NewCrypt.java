@@ -208,8 +208,7 @@ public class NewCrypt
 		int count = size / 8;
 		byte[] result = new byte[size];
 		
-		for (int i = 0; i < count; i++)
-		{
+		for (int i = 0; i < count; i++) {
 			_crypt.processBlock(raw, offset + (i * 8), result, i * 8);
 		}
 		// TODO can the crypt and decrypt go direct to the array

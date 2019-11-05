@@ -15,8 +15,13 @@ public class AuthServerClient extends Client<Connection<AuthServerClient>> {
     }
 
     @Override
-    public int encrypt(byte[] data, int offset, int size) {
-        return size;
+    public int encryptedSize(int dataSize) {
+        return dataSize;
+    }
+
+    @Override
+    public byte[] encrypt(byte[] data, int offset, int size) {
+        return data;
     }
 
     @Override

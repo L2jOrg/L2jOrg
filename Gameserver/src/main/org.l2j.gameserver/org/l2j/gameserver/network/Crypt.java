@@ -24,11 +24,11 @@ public class Crypt {
         System.arraycopy(key, 0, outKey, 0, 16);
     }
 
-    public void encrypt(final byte[] data, final int offset, final int size) {
+    public byte[] encrypt(final byte[] data, final int offset, final int size) {
         if(!_isEnabled) {
             _isEnabled = true;
             onPacketSent(data);
-            return;
+            return data;
         }
 
         onPacketSent(data);
@@ -41,6 +41,7 @@ public class Crypt {
         }
 
         shiftKey(outKey, size);
+        return data;
     }
 
     public boolean decrypt(byte[] data, int offset, int size) {

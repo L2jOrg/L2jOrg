@@ -8,10 +8,9 @@ import java.io.IOException;
 /**
  * @author KenM
  */
-public class AuthCrypt
-{
-	private static final byte[] STATIC_BLOWFISH_KEY =
-	{
+public class AuthCrypt {
+
+	private static final byte[] STATIC_BLOWFISH_KEY = {
 		(byte) 0x6b,
 		(byte) 0x60,
 		(byte) 0xcb,
@@ -44,33 +43,31 @@ public class AuthCrypt
 		_crypt.decrypt(raw, offset, size);
 		return NewCrypt.verifyChecksum(raw, offset, size);
 	}
-	
-	public int encrypt(byte[] raw, final int offset, int size) throws IOException
-	{
-        // reserve checksum
-        size += 4;
-		if (_static)
-		{
 
-			// reserve for XOR "key"
-			size += 4;
-			
-			// padding
-			size += 8 - (size % 8);
-			size  += 8;
-			NewCrypt.encXORPass(raw, offset, size, Rnd.nextInt());
-			_staticCrypt.crypt(raw, offset, size);
-			
+	public int encryptedSize(int dataSize) {
+		if(_static) {
+			dataSize += 8;
+			dataSize += 8 - (dataSize % 8);
+			dataSize += 8;
+		} else {
+			dataSize += 4;
+			dataSize += 8 - (dataSize % 8);
+			dataSize += 8;
+		}
+		return dataSize;
+
+	}
+	
+	public byte[] encrypt(byte[] raw, final int offset, int size) throws IOException {
+        var encryptedSize = encryptedSize(size);
+		if (_static) {
+			NewCrypt.encXORPass(raw, offset, encryptedSize, Rnd.nextInt());
+			_staticCrypt.crypt(raw, offset, encryptedSize);
 			_static = false;
+		} else {
+			NewCrypt.appendChecksum(raw, offset, encryptedSize);
+			_crypt.crypt(raw, offset, encryptedSize);
 		}
-		else
-		{
-			// padding
-			size += 8 - (size % 8);
-			size += 8;
-			NewCrypt.appendChecksum(raw, offset, size);
-			_crypt.crypt(raw, offset, size);
-		}
-		return size;
+		return raw;
 	}
 }
