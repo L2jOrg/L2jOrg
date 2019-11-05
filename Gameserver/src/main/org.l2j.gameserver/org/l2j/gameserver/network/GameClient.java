@@ -200,9 +200,12 @@ public final class GameClient extends Client<io.github.joealisson.mmocore.Connec
     }
 
     @Override
-    public int encrypt(byte[] data, int offset, int size) {
-        crypt.encrypt(data, offset, size);
-        return size;
+    public int encryptedSize(int dataSize) {
+        return dataSize;
+    }
+    @Override
+    public byte[] encrypt(byte[] data, int offset, int size) {
+        return crypt.encrypt(data, offset, size);
     }
 
     @Override

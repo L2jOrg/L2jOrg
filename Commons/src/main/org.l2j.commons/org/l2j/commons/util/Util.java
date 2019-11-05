@@ -17,6 +17,7 @@ public class Util {
     public static final String STRING_EMPTY = "";
     public static final String SPACE = " ";
     public static final int[] INT_ARRAY_EMPTY = new int[0];
+    public static final byte[] BYTE_ARRAY_EMPTY = new byte[0];
     public static final String[] STRING_ARRAY_EMPTY = new String[0];
 
     public static boolean isNullOrEmpty(final CharSequence value) {

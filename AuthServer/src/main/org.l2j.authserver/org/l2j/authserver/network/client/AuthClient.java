@@ -14,6 +14,7 @@ import org.l2j.authserver.network.client.packet.auth2client.PlayFail;
 import org.l2j.authserver.network.client.packet.auth2client.PlayFail.PlayFailReason;
 import io.github.joealisson.mmocore.Client;
 import io.github.joealisson.mmocore.Connection;
+import org.l2j.commons.util.Util;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -54,6 +55,7 @@ public final class AuthClient extends Client<Connection<AuthClient>> {
 		AuthController.getInstance().registerClient(this);
 	}
 
+
     @Override
     public boolean decrypt(byte[] data, int offset, int size) {
         boolean decrypted;
@@ -74,15 +76,18 @@ public final class AuthClient extends Client<Connection<AuthClient>> {
     }
 
     @Override
-    public int encrypt(byte[] data, int offset, int size) {
-        int encryptedSize = -1;
+    public int encryptedSize(int dataSize) {
+        return _authCrypt.encryptedSize(dataSize);
+    }
+
+    @Override
+    public byte[] encrypt(byte[] data, int offset, int size) {
 	    try {
-	       encryptedSize = _authCrypt.encrypt(data, offset, size);
+	       return _authCrypt.encrypt(data, offset, size);
         } catch (IOException e) {
 	        LOGGER.error(e.getLocalizedMessage(), e);
-	        return encryptedSize;
+	        return Util.BYTE_ARRAY_EMPTY;
         }
-        return encryptedSize;
     }
 
 	public void sendPacket(AuthServerPacket lsp) {
