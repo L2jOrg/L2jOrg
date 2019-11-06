@@ -1,6 +1,5 @@
 package org.l2j.gameserver.network.clientpackets;
 
-import org.l2j.gameserver.model.PcCondOverride;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.items.EtcItem;
 import org.l2j.gameserver.model.items.ItemTemplate;
@@ -60,11 +59,6 @@ public class RequestUnEquipItem extends ClientPacket {
         }
 
         if (!activeChar.getInventory().canManipulateWithItemId(item.getId())) {
-            client.sendPacket(SystemMessageId.THAT_ITEM_CANNOT_BE_TAKEN_OFF);
-            return;
-        }
-
-        if (item.isWeapon() && item.getWeaponItem().isForceEquip() && !activeChar.canOverrideCond(PcCondOverride.ITEM_CONDITIONS)) {
             client.sendPacket(SystemMessageId.THAT_ITEM_CANNOT_BE_TAKEN_OFF);
             return;
         }

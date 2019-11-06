@@ -40,7 +40,7 @@ public class Recipes implements IItemHandler
 		
 		if (activeChar.hasRecipeList(rp.getId()))
 		{
-			activeChar.sendPacket(SystemMessageId.THAT_RECIPE_IS_ALREADY_REGISTERED);
+//			activeChar.sendPacket(SystemMessageId.THAT_RECIPE_IS_ALREADY_REGISTERED);
 			return false;
 		}
 		

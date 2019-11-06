@@ -36,7 +36,6 @@ public final class Weapon extends ItemTemplate {
     private int _reducedMpConsume;
     private int _reducedMpConsumeChance;
 
-    private boolean _isForceEquip;
     private boolean _isAttackWeapon;
     private boolean _useWeaponSkillsOnly;
 
@@ -77,7 +76,6 @@ public final class Weapon extends ItemTemplate {
         _reducedMpConsume = (reduced_mpconsume.length == 2) ? Integer.parseInt(reduced_mpconsume[1]) : 0;
 
         _changeWeaponId = set.getInt("change_weaponId", 0);
-        _isForceEquip = set.getBoolean("isForceEquip", false);
         _isAttackWeapon = set.getBoolean("isAttackWeapon", true);
         _useWeaponSkillsOnly = set.getBoolean("useWeaponSkillsOnly", false);
     }
@@ -168,13 +166,6 @@ public final class Weapon extends ItemTemplate {
      */
     public int getChangeWeaponId() {
         return _changeWeaponId;
-    }
-
-    /**
-     * @return {@code true} if the weapon is force equip, {@code false} otherwise.
-     */
-    public boolean isForceEquip() {
-        return _isForceEquip;
     }
 
     /**

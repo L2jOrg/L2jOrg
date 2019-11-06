@@ -5063,11 +5063,6 @@ public final class Player extends Playable {
             return false;
         }
 
-        // Don't allow disarming if the weapon is force equip.
-        if (wpn.getWeaponItem().isForceEquip()) {
-            return false;
-        }
-
         final Item[] unequiped = _inventory.unEquipItemInBodySlotAndRecord(wpn.getItem().getBodyPart());
         final InventoryUpdate iu = new InventoryUpdate();
         for (Item itm : unequiped) {
