@@ -6,7 +6,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="10"/>
         <set name="price" val="500000"/>
-        <set name="equip_condition" val="{{ec_castle;1};{ec_castle_num;{2}}}"/>
         <restriction tradable="false" dropable="false" sellable="false" clan-depositable="false" mailable="false"/>
         <cond msgId="1518">
             <and>
@@ -25,7 +24,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="10"/>
         <set name="price" val="500000"/>
-        <set name="equip_condition" val="{{ec_castle;1};{ec_castle_num;{4}}}"/>
         <restriction tradable="false" dropable="false" sellable="false" clan-depositable="false" mailable="false"/>
         <cond msgId="1518">
             <and>
@@ -44,7 +42,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="10"/>
         <set name="price" val="500000"/>
-        <set name="equip_condition" val="{{ec_castle;1};{ec_castle_num;{1}}}"/>
         <restriction tradable="false" dropable="false" sellable="false" clan-depositable="false" mailable="false"/>
         <cond msgId="1518">
             <and>
@@ -63,7 +60,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="10"/>
         <set name="price" val="500000"/>
-        <set name="equip_condition" val="{{ec_castle;1};{ec_castle_num;{3}}}"/>
         <restriction tradable="false" dropable="false" sellable="false" clan-depositable="false" mailable="false"/>
         <cond msgId="1518">
             <and>
@@ -82,7 +78,6 @@
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="10"/>
         <set name="price" val="500000"/>
-        <set name="equip_condition" val="{{ec_castle;1};{ec_castle_num;{5}}}"/>
         <restriction tradable="false" dropable="false" sellable="false" clan-depositable="false" mailable="false"/>
         <cond msgId="1518">
             <and>
@@ -100,7 +95,6 @@
         <set name="bodypart" val="hair"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="10"/>
-        <set name="equip_condition" val="{{ec_castle;1};{ec_clan_leader;1}}"/>
         <restriction tradable="false" dropable="false" sellable="false" clan-depositable="false" mailable="false"/>
         <cond msgId="1518">
             <and>
