@@ -127,7 +127,6 @@ public abstract class ItemTemplate extends ListenersContainer implements IIdenti
     private boolean _pvpItem;
     private boolean _immediate_effect;
     private boolean _ex_immediate_effect;
-    private int _defaultEnchantLevel;
     private ActionType _defaultAction;
     private Map<AttributeType, AttributeHolder> _elementals = null;
     private List<ItemSkillHolder> _skills;
@@ -183,7 +182,6 @@ public abstract class ItemTemplate extends ListenersContainer implements IIdenti
 
         _defaultAction = set.getEnum("default_action", ActionType.class, ActionType.NONE);
         _useSkillDisTime = set.getInt("useSkillDisTime", 0);
-        _defaultEnchantLevel = set.getInt("enchanted", 0);
         _reuseDelay = set.getInt("reuse_delay", 0);
         _sharedReuseGroup = set.getInt("shared_reuse_group", 0);
         _commissionItemType = set.getEnum("commissionItemType", CommissionItemType.class, CommissionItemType.OTHER_ITEM);
@@ -770,10 +768,6 @@ public abstract class ItemTemplate extends ListenersContainer implements IIdenti
      */
     public String getIcon() {
         return _icon;
-    }
-
-    public int getDefaultEnchantLevel() {
-        return _defaultEnchantLevel;
     }
 
     public boolean isPetItem() {
