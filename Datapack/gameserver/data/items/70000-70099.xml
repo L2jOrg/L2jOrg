@@ -368,7 +368,6 @@
     <item id="70040" name="Roast Blue Mackerel - STR" icon="BranchIcon.Icon.roasted_mackerel_buff">
         <!-- When used, provides STR +1 for 20 minutes. Cannot be dropped. -->
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="is_premium" val="true"/>
         <set name="handler" val="ItemSkills"/>
         <restriction dropable="false" sellable="false" stackable="true" mailable="false" commissionable="false" olympiad-restricted="true"/>
         <skills>
@@ -378,7 +377,6 @@
     <item id="70041" name="Roast Blue Mackerel - INT" icon="BranchIcon.Icon.roasted_mackerel_buff">
         <!-- When used, provides INT +1 for 20 minutes. Cannot be dropped. -->
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="is_premium" val="true"/>
         <set name="handler" val="ItemSkills"/>
         <restriction dropable="false" sellable="false" stackable="true" mailable="false" commissionable="false" olympiad-restricted="true"/>
         <skills>
@@ -388,7 +386,6 @@
     <item id="70042" name="Roast Blue Mackerel - CON" icon="BranchIcon.Icon.roasted_mackerel_buff">
         <!-- When used, provides CON +1 for 20 minutes. Cannot be dropped. -->
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="is_premium" val="true"/>
         <set name="handler" val="ItemSkills"/>
         <restriction dropable="false" sellable="false" stackable="true" mailable="false" commissionable="false" olympiad-restricted="true"/>
         <skills>
@@ -398,7 +395,6 @@
     <item id="70043" name="Roast Blue Mackerel - DEX" icon="BranchIcon.Icon.roasted_mackerel_buff">
         <!-- When used, provides DEX +1 for 20 minutes. Cannot be dropped. -->
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="is_premium" val="true"/>
         <set name="handler" val="ItemSkills"/>
         <restriction dropable="false" sellable="false" stackable="true" mailable="false" commissionable="false" olympiad-restricted="true"/>
         <skills>
@@ -408,7 +404,6 @@
     <item id="70044" name="Roast Blue Mackerel - MEN" icon="BranchIcon.Icon.roasted_mackerel_buff">
         <!-- When used, provides MEN +1 for 20 minutes. Cannot be dropped. -->
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="is_premium" val="true"/>
         <set name="handler" val="ItemSkills"/>
         <restriction dropable="false" sellable="false" stackable="true" mailable="false" commissionable="false" olympiad-restricted="true"/>
         <skills>
@@ -418,7 +413,6 @@
     <item id="70045" name="Roast Blue Mackerel - WIT" icon="BranchIcon.Icon.roasted_mackerel_buff">
         <!-- When used, provides WIT +1 for 20 minutes. Cannot be dropped. -->
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="is_premium" val="true"/>
         <set name="handler" val="ItemSkills"/>
         <restriction dropable="false" sellable="false" stackable="true" mailable="false" commissionable="false" olympiad-restricted="true"/>
         <skills>
@@ -565,7 +559,6 @@
     <item id="70069" name="Scroll: Intense Slasher - Lv. 1" icon="icon.etc_scroll_white_i00">
         <!-- Inflicts physical damage by using the intense power of spirit. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a warehouse. Intended for Lv. 20 and higher. -->
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="is_premium" val="true"/>
         <set name="handler" val="ItemSkills"/>
         <restriction dropable="false" sellable="false" stackable="true" mailable="false" commissionable="false" olympiad-restricted="true"/>
         <cond msgId="113">
@@ -578,7 +571,6 @@
     <item id="70070" name="Scroll: Intense Slasher - Lv. 2" icon="icon.etc_scroll_white_i00">
         <!-- Inflicts physical damage by using the intense power of spirit. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a warehouse. Intended for Lv. 20 and higher. -->
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="is_premium" val="true"/>
         <set name="handler" val="ItemSkills"/>
         <restriction dropable="false" sellable="false" stackable="true" mailable="false" commissionable="false" olympiad-restricted="true"/>
         <cond msgId="113">
@@ -591,7 +583,6 @@
     <item id="70071" name="Scroll: Intense Slasher - Lv. 3" icon="icon.etc_scroll_white_i00">
         <!-- Inflicts physical damage by using the intense power of spirit. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a warehouse. Intended for Lv. 20 and higher. -->
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="is_premium" val="true"/>
         <set name="handler" val="ItemSkills"/>
         <restriction dropable="false" sellable="false" stackable="true" mailable="false" commissionable="false" olympiad-restricted="true"/>
         <cond msgId="113">
@@ -604,7 +595,6 @@
     <item id="70072" name="Scroll: Intense Slasher - Lv. 4" icon="icon.etc_scroll_white_i00">
         <!-- Inflicts physical damage by using the intense power of spirit. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a warehouse. Intended for Lv. 20 and higher. -->
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="is_premium" val="true"/>
         <set name="handler" val="ItemSkills"/>
         <restriction dropable="false" sellable="false" stackable="true" mailable="false" commissionable="false" olympiad-restricted="true"/>
         <cond msgId="113">
@@ -617,7 +607,6 @@
     <item id="70073" name="Scroll: Intense Slasher - Lv. 5" icon="icon.etc_scroll_white_i00">
         <!-- Inflicts physical damage by using the intense power of spirit. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a warehouse. Intended for Lv. 20 and higher. -->
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="is_premium" val="true"/>
         <set name="handler" val="ItemSkills"/>
         <restriction dropable="false" sellable="false" stackable="true" mailable="false" commissionable="false" olympiad-restricted="true"/>
         <cond msgId="113">
@@ -630,7 +619,6 @@
     <item id="70074" name="Scroll: Intense Slasher - Lv. 6" icon="icon.etc_scroll_white_i00">
         <!-- Inflicts physical damage by using the intense power of spirit. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a warehouse. Intended for Lv. 20 and higher. -->
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="is_premium" val="true"/>
         <set name="handler" val="ItemSkills"/>
         <restriction dropable="false" sellable="false" stackable="true" mailable="false" commissionable="false" olympiad-restricted="true"/>
         <cond msgId="113">
@@ -643,7 +631,6 @@
     <item id="70075" name="Purity Blast Scroll - Lv. 1" icon="icon.etc_scroll_white_i00">
         <!-- Inflicts magical damage by using the power of holy magic. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a warehouse. Intended for Lv. 20+. -->
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="is_premium" val="true"/>
         <set name="handler" val="ItemSkills"/>
         <restriction dropable="false" sellable="false" stackable="true" mailable="false" commissionable="false" olympiad-restricted="true"/>
         <cond msgId="113">
@@ -656,7 +643,6 @@
     <item id="70076" name="Purity Blast Scroll - Lv. 2" icon="icon.etc_scroll_white_i00">
         <!-- Inflicts magical damage by using the power of holy magic. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a warehouse. Intended for Lv. 20+. -->
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="is_premium" val="true"/>
         <set name="handler" val="ItemSkills"/>
         <restriction dropable="false" sellable="false" stackable="true" mailable="false" commissionable="false" olympiad-restricted="true"/>
         <cond msgId="113">
@@ -669,7 +655,6 @@
     <item id="70077" name="Purity Blast Scroll - Lv. 3" icon="icon.etc_scroll_white_i00">
         <!-- Inflicts magical damage by using the power of holy magic. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a warehouse. Intended for Lv. 20+. -->
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="is_premium" val="true"/>
         <set name="handler" val="ItemSkills"/>
         <restriction dropable="false" sellable="false" stackable="true" mailable="false" commissionable="false" olympiad-restricted="true"/>
         <cond msgId="113">
@@ -682,7 +667,6 @@
     <item id="70078" name="Purity Blast Scroll - Lv. 4" icon="icon.etc_scroll_white_i00">
         <!-- Inflicts magical damage by using the power of holy magic. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a warehouse. Intended for Lv. 20+. -->
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="is_premium" val="true"/>
         <set name="handler" val="ItemSkills"/>
         <restriction dropable="false" sellable="false" stackable="true" mailable="false" commissionable="false" olympiad-restricted="true"/>
         <cond msgId="113">
@@ -695,7 +679,6 @@
     <item id="70079" name="Purity Blast Scroll - Lv. 5" icon="icon.etc_scroll_white_i00">
         <!-- Inflicts magical damage by using the power of holy magic. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a warehouse. Intended for Lv. 20+. -->
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="is_premium" val="true"/>
         <set name="handler" val="ItemSkills"/>
         <restriction dropable="false" sellable="false" stackable="true" mailable="false" commissionable="false" olympiad-restricted="true"/>
         <cond msgId="113">
@@ -708,7 +691,6 @@
     <item id="70080" name="Purity Blast Scroll - Lv. 6" icon="icon.etc_scroll_white_i00">
         <!-- Inflicts magical damage by using the power of holy magic. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a warehouse. Intended for Lv. 20+. -->
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="is_premium" val="true"/>
         <set name="handler" val="ItemSkills"/>
         <restriction dropable="false" sellable="false" stackable="true" mailable="false" commissionable="false" olympiad-restricted="true"/>
         <cond msgId="113">
@@ -721,7 +703,6 @@
     <item id="70081" name="Grey Explosion Scroll - Lv. 1" icon="icon.etc_scroll_white_i00">
         <!-- Inflicts physical damage by using the power of a devout heart. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a warehouse. Intended for Lv. 20+. -->
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="is_premium" val="true"/>
         <set name="handler" val="ItemSkills"/>
         <restriction dropable="false" sellable="false" stackable="true" mailable="false" commissionable="false" olympiad-restricted="true"/>
         <cond msgId="113">
@@ -734,7 +715,6 @@
     <item id="70082" name="Grey Explosion Scroll - Lv. 2" icon="icon.etc_scroll_white_i00">
         <!-- Inflicts physical damage by using the power of a devout heart. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a warehouse. Intended for Lv. 20+. -->
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="is_premium" val="true"/>
         <set name="handler" val="ItemSkills"/>
         <restriction dropable="false" sellable="false" stackable="true" mailable="false" commissionable="false" olympiad-restricted="true"/>
         <cond msgId="113">
@@ -747,7 +727,6 @@
     <item id="70083" name="Grey Explosion Scroll - Lv. 3" icon="icon.etc_scroll_white_i00">
         <!-- Inflicts physical damage by using the power of a devout heart. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a warehouse. Intended for Lv. 20+. -->
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="is_premium" val="true"/>
         <set name="handler" val="ItemSkills"/>
         <restriction dropable="false" sellable="false" stackable="true" mailable="false" commissionable="false" olympiad-restricted="true"/>
         <cond msgId="113">
@@ -760,7 +739,6 @@
     <item id="70084" name="Grey Explosion Scroll - Lv. 4" icon="icon.etc_scroll_white_i00">
         <!-- Inflicts physical damage by using the power of a devout heart. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a warehouse. Intended for Lv. 20+. -->
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="is_premium" val="true"/>
         <set name="handler" val="ItemSkills"/>
         <restriction dropable="false" sellable="false" stackable="true" mailable="false" commissionable="false" olympiad-restricted="true"/>
         <cond msgId="113">
@@ -773,7 +751,6 @@
     <item id="70085" name="Grey Explosion Scroll - Lv. 5" icon="icon.etc_scroll_white_i00">
         <!-- Inflicts physical damage by using the power of a devout heart. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a warehouse. Intended for Lv. 20+. -->
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="is_premium" val="true"/>
         <set name="handler" val="ItemSkills"/>
         <restriction dropable="false" sellable="false" stackable="true" mailable="false" commissionable="false" olympiad-restricted="true"/>
         <cond msgId="113">
@@ -786,7 +763,6 @@
     <item id="70086" name="Grey Explosion Scroll - Lv. 6" icon="icon.etc_scroll_white_i00">
         <!-- Inflicts physical damage by using the power of a devout heart. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a warehouse. Intended for Lv. 20+. -->
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="is_premium" val="true"/>
         <set name="handler" val="ItemSkills"/>
         <restriction dropable="false" sellable="false" stackable="true" mailable="false" commissionable="false" olympiad-restricted="true"/>
         <cond msgId="113">
@@ -799,7 +775,6 @@
     <item id="70087" name="Platonic Tempest Scroll - Lv. 1" icon="icon.etc_scroll_white_i00">
         <!-- Inflicts magical damage to nearby enemies by entirely focusing on holy magic. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a warehouse. Intended for Lv. 20+. -->
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="is_premium" val="true"/>
         <set name="handler" val="ItemSkills"/>
         <restriction dropable="false" sellable="false" stackable="true" mailable="false" commissionable="false" olympiad-restricted="true"/>
         <cond msgId="113">
@@ -812,7 +787,6 @@
     <item id="70088" name="Platonic Tempest Scroll - Lv. 2" icon="icon.etc_scroll_white_i00">
         <!-- Inflicts magical damage to nearby enemies by entirely focusing on holy magic. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a warehouse. Intended for Lv. 20+. -->
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="is_premium" val="true"/>
         <set name="handler" val="ItemSkills"/>
         <restriction dropable="false" sellable="false" stackable="true" mailable="false" commissionable="false" olympiad-restricted="true"/>
         <cond msgId="113">
@@ -825,7 +799,6 @@
     <item id="70089" name="Platonic Tempest Scroll - Lv. 3" icon="icon.etc_scroll_white_i00">
         <!-- Inflicts magical damage to nearby enemies by entirely focusing on holy magic. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a warehouse. Intended for Lv. 20+. -->
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="is_premium" val="true"/>
         <set name="handler" val="ItemSkills"/>
         <restriction dropable="false" sellable="false" stackable="true" mailable="false" commissionable="false" olympiad-restricted="true"/>
         <cond msgId="113">
@@ -838,7 +811,6 @@
     <item id="70090" name="Platonic Tempest Scroll - Lv. 4" icon="icon.etc_scroll_white_i00">
         <!-- Inflicts magical damage to nearby enemies by entirely focusing on holy magic. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a warehouse. Intended for Lv. 20+. -->
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="is_premium" val="true"/>
         <set name="handler" val="ItemSkills"/>
         <restriction dropable="false" sellable="false" stackable="true" mailable="false" commissionable="false" olympiad-restricted="true"/>
         <cond msgId="113">
@@ -851,7 +823,6 @@
     <item id="70091" name="Platonic Tempest Scroll - Lv. 5" icon="icon.etc_scroll_white_i00">
         <!-- Inflicts magical damage to nearby enemies by entirely focusing on holy magic. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a warehouse. Intended for Lv. 20+. -->
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="is_premium" val="true"/>
         <set name="handler" val="ItemSkills"/>
         <restriction dropable="false" sellable="false" stackable="true" mailable="false" commissionable="false" olympiad-restricted="true"/>
         <cond msgId="113">
@@ -864,7 +835,6 @@
     <item id="70092" name="Platonic Tempest Scroll - Lv. 6" icon="icon.etc_scroll_white_i00">
         <!-- Inflicts magical damage to nearby enemies by entirely focusing on holy magic. Cannot be exchanged, dropped, or sold in a private store. Can be stored in a warehouse. Intended for Lv. 20+. -->
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="is_premium" val="true"/>
         <set name="handler" val="ItemSkills"/>
         <restriction dropable="false" sellable="false" stackable="true" mailable="false" commissionable="false" olympiad-restricted="true"/>
         <cond msgId="113">

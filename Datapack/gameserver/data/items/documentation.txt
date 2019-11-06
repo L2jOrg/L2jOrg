@@ -48,10 +48,6 @@
 	
 	random_damage        : renamed from (rnd_dam)
 		Default value    : 0 - not present in xml
-
-	is_premium
-		Possible values  : 1/0  (true/false)
-		Default value    : 0 - not present in xml
 		
 	crystal_type
 		Possible values  : d, s84, c, b, a, s, s80

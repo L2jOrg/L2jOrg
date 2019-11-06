@@ -733,7 +733,6 @@
     <item id="49460" name="Fish Stew: Might" icon="icon.fish_stew_buff">
         <!-- Increases P. Atk. by 8% for 20 minutes. The item cannot be dropped. -->
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="is_premium" val="true"/>
         <set name="for_npc" val="true"/>
         <restriction dropable="false" sellable="false" stackable="true" mailable="false" commissionable="false" olympiad-restricted="true"/>
         <skills>
@@ -743,7 +742,6 @@
     <item id="49461" name="Fish Stew: Shield" icon="icon.fish_stew_buff">
         <!-- Increases P. Def. by 8% for 20 minutes. The item cannot be dropped. -->
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="is_premium" val="true"/>
         <set name="for_npc" val="true"/>
         <restriction dropable="false" sellable="false" stackable="true" mailable="false" commissionable="false" olympiad-restricted="true"/>
         <skills>
@@ -753,7 +751,6 @@
     <item id="49462" name="Fish Stew: Magic Barrier" icon="icon.fish_stew_buff">
         <!-- Increases M. Def. by 23% for 20 minutes. The item cannot be dropped. -->
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="is_premium" val="true"/>
         <set name="for_npc" val="true"/>
         <restriction dropable="false" sellable="false" stackable="true" mailable="false" commissionable="false" olympiad-restricted="true"/>
         <skills>
@@ -763,7 +760,6 @@
     <item id="49463" name="Fish Stew: Vampiric Rage" icon="icon.fish_stew_buff">
         <!-- Restores 6% from received physical damage for 20 minutes. The item cannot be dropped. -->
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="is_premium" val="true"/>
         <set name="for_npc" val="true"/>
         <restriction dropable="false" sellable="false" stackable="true" mailable="false" commissionable="false" olympiad-restricted="true"/>
         <skills>
@@ -773,7 +769,6 @@
     <item id="49464" name="Fish Stew: Empower" icon="icon.fish_stew_buff">
         <!-- Increases M. Atk. by 55% for 20 minutes. The item cannot be dropped. -->
         <set name="default_action" val="SKILL_REDUCE"/>
-        <set name="is_premium" val="true"/>
         <set name="for_npc" val="true"/>
         <restriction dropable="false" sellable="false" stackable="true" mailable="false" commissionable="false" olympiad-restricted="true"/>
         <skills>

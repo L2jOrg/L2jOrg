@@ -5,7 +5,6 @@
         <set name="bodypart" val="agathion"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="150"/>
-        <set name="is_premium" val="true"/>
         <restriction tradable="false" dropable="false" sellable="false" olympiad-restricted="true" clan-depositable="false" mailable="false" commissionable="false" freightable="true"/>
         <skills>
             <skill id="21109" level="1"/> <!-- Release Agathion's Seal - Uthanka -->
@@ -18,7 +17,6 @@
         <set name="bodypart" val="hairall"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="10"/>
-        <set name="is_premium" val="true"/>
         <set name="enchant_enabled" val="7"/>
         <restriction tradable="false" dropable="false" sellable="false" olympiad-restricted="true" clan-depositable="false" commissionable="false" mailable="false"/>
     </armor>
@@ -27,7 +25,6 @@
         <set name="bodypart" val="hairall"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="10"/>
-        <set name="is_premium" val="true"/>
         <set name="enchant_enabled" val="7"/>
         <restriction tradable="false" dropable="false" sellable="false" olympiad-restricted="true" clan-depositable="false" commissionable="false" mailable="false"/>
     </armor>
