@@ -712,7 +712,6 @@
         <set name="bodypart" val="rfinger;lfinger"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="150"/>
-        <set name="useSkillDisTime" val="1"/>
         <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
         <skills>
             <skill id="55290" level="1"/> <!-- Devi s Ring -->
@@ -759,7 +758,6 @@
         <set name="bodypart" val="neck"/>
         <set name="immediate_effect" val="true"/>
         <set name="weight" val="150"/>
-        <set name="useSkillDisTime" val="1"/>
         <restriction tradable="false" dropable="false" depositable="false" sellable="false"/>
         <skills>
             <skill id="55294" level="1"/> <!-- Devi s Necklace -->

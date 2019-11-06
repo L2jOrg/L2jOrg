@@ -1433,10 +1433,6 @@ public final class Item extends WorldObject {
         return _item.isFreightable();
     }
 
-    public int useSkillDisTime() {
-        return _item.useSkillDisTime();
-    }
-
     public int getOlyEnchantLevel() {
         final Player player = getActingPlayer();
         int enchant = _enchantLevel;

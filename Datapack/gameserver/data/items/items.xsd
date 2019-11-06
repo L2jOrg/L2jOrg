@@ -23,7 +23,6 @@
         <xs:sequence>
             <xs:element name="set" maxOccurs="unbounded" minOccurs="0" type="setType"/>
             <xs:element name="restriction" type="Restriction" minOccurs="0"/>
-            <xs:element name="unequip_skills" minOccurs="0" type="skillsType"/>
             <xs:element name="capsuled_items" minOccurs="0" type="capsuledItemsType"/>
             <xs:element name="cond" maxOccurs="2" minOccurs="0" type="condType"/>
             <xs:element name="skills" minOccurs="0" type="skillsType"/>
@@ -151,16 +150,9 @@
                     <xs:enumeration value="is_questitem"/>
                     <xs:enumeration value="is_infinite"/>
                     <xs:enumeration value="isAttackWeapon"/>
-                    <xs:enumeration value="item_skill"/>
                     <xs:enumeration value="allow_self_resurrection"/>
                     <xs:enumeration value="mp_consume"/>
-                    <xs:enumeration value="oncrit_chance"/>
-                    <xs:enumeration value="oncrit_skill"/>
-                    <xs:enumeration value="onmagic_chance"/>
-                    <xs:enumeration value="onmagic_skill"/>
                     <xs:enumeration value="price"/>
-                    <xs:enumeration value="random_damage"/>
-                    <xs:enumeration value="recipe_id"/>
                     <xs:enumeration value="reduced_mp_consume"/>
                     <xs:enumeration value="reduced_soulshot"/>
                     <xs:enumeration value="reuse_delay"/>
@@ -168,9 +160,6 @@
                     <xs:enumeration value="soulshots"/>
                     <xs:enumeration value="spiritshots"/>
                     <xs:enumeration value="time"/>
-                    <xs:enumeration value="unequip_skill"/>
-                    <xs:enumeration value="use_condition"/>
-                    <xs:enumeration value="useSkillDisTime"/>
                     <xs:enumeration value="useWeaponSkillsOnly"/>
                     <xs:enumeration value="weapon_type"/>
                     <xs:enumeration value="weight"/>
