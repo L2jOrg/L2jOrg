@@ -1429,13 +1429,6 @@ public final class Item extends WorldObject {
         return _item.isQuestItem();
     }
 
-    public boolean isElementable() {
-        if ((_loc == ItemLocation.INVENTORY) || (_loc == ItemLocation.PAPERDOLL)) {
-            return _item.isElementable();
-        }
-        return false;
-    }
-
     public boolean isFreightable() {
         return _item.isFreightable();
     }

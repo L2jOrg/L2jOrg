@@ -40,9 +40,6 @@
 	delay_share_group
 		Default value    : -1 - not present in xml
 	
-	recipe_id
-		Default value    : 0 - not present in xml
-	
 	duration
 		Default value    : -1 - not present in xml
 		
@@ -50,9 +47,6 @@
 	    Default value    : -1 - not present in xml
 	
 	random_damage        : renamed from (rnd_dam)
-		Default value    : 0 - not present in xml
-	
-	attack_range
 		Default value    : 0 - not present in xml
 
 	is_premium
@@ -75,9 +69,7 @@
 		                   2 - PcCafe items
 		                   3 - Weaver's Multi-colored Clothes
 		                   4 - Vitality Belt's
-	element_enabled
-		Possible values  : 0, 1 (true/false)
-		
+
 	unequip_skill
 		Possible values  : skillid-skilllevel  eg. 3267-1
 		Informations     : skill triggered on unequip item (need core support)

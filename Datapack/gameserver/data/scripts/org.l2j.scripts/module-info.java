@@ -300,7 +300,6 @@ open module org.l2j.scripts {
             handlers.itemhandlers.ChangeAttributeCrystal, // none | not used ?
             handlers.itemhandlers.CharmOfCourage, // none | not used ?
             handlers.itemhandlers.Elixir, // skills | not used ?
-            handlers.itemhandlers.EnchantAttribute, // none | not used?
             handlers.itemhandlers.EnchantScrolls, // none
             handlers.itemhandlers.EventItem, // skills | not used?
             handlers.itemhandlers.ExtractableItems, // capsuled_items, extract_max, extract_min

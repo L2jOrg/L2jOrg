@@ -116,7 +116,6 @@ public abstract class ItemTemplate extends ListenersContainer implements IIdenti
     private boolean _tradeable;
     private boolean _depositable;
     private int _enchantable;
-    private boolean _elementable;
     private boolean _questItem;
     private boolean _freightable;
     private boolean _allow_self_resurrection;
@@ -170,7 +169,6 @@ public abstract class ItemTemplate extends ListenersContainer implements IIdenti
         _destroyable = set.getBoolean("is_destroyable", true);
         _tradeable = set.getBoolean("is_tradable", true);
         _depositable = set.getBoolean("is_depositable", true);
-        _elementable = set.getBoolean("element_enabled", false);
         _enchantable = set.getInt("enchant_enabled", 0);
         _questItem = set.getBoolean("is_questitem", false);
         _freightable = set.getBoolean("is_freightable", false);
@@ -463,13 +461,6 @@ public abstract class ItemTemplate extends ListenersContainer implements IIdenti
      */
     public final int isEnchantable() {
         return Arrays.binarySearch(Config.ENCHANT_BLACKLIST, _itemId) < 0 ? _enchantable : 0;
-    }
-
-    /**
-     * @return {@code true} if the item can be elemented, {@code false} otherwise.
-     */
-    public final boolean isElementable() {
-        return _elementable;
     }
 
     /**
