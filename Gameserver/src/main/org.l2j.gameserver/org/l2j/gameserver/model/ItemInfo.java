@@ -61,10 +61,7 @@ public class ItemInfo {
      * The action to do clientside (1=ADD, 2=MODIFY, 3=REMOVE)
      */
     private int _change;
-    /**
-     * The mana of this item
-     */
-    private int _mana;
+
     private int _time;
     private boolean _available = true;
     private int _location;
@@ -120,8 +117,6 @@ public class ItemInfo {
             }
         }
 
-        // Get shadow item mana
-        _mana = item.getMana();
         _time = item.isTimeLimitedItem() ? (int) (item.getRemainingTime() / 1000) : -9999;
         _available = item.isAvailable();
         _location = item.getLocationSlot();
@@ -173,8 +168,6 @@ public class ItemInfo {
         // Get the action to do clientside
         _change = 0;
 
-        // Get shadow item mana
-        _mana = -1;
         _time = -9999;
 
         _location = item.getLocationSlot();
@@ -220,8 +213,6 @@ public class ItemInfo {
         // Get the action to do clientside
         _change = 0;
 
-        // Get shadow item mana
-        _mana = -1;
         _time = -9999;
 
         _location = 0;
@@ -256,9 +247,6 @@ public class ItemInfo {
 
         // Verify if the Item is equipped
         _equipped = 0;
-
-        // Get shadow item mana
-        _mana = item.getMana();
         _time = item.getTime();
         _location = item.getLocationSlot();
 
@@ -310,10 +298,6 @@ public class ItemInfo {
 
     public int getChange() {
         return _change;
-    }
-
-    public int getMana() {
-        return _mana;
     }
 
     public int getTime() {

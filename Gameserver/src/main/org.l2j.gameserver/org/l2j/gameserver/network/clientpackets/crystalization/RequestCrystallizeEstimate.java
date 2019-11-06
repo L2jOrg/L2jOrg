@@ -65,7 +65,7 @@ public class RequestCrystallizeEstimate extends ClientPacket {
         }
 
         final Item item = activeChar.getInventory().getItemByObjectId(_objectId);
-        if ((item == null) || item.isShadowItem() || item.isTimeLimitedItem() || item.isHeroItem()) {
+        if ((item == null) || item.isTimeLimitedItem() || item.isHeroItem()) {
             client.sendPacket(ActionFailed.STATIC_PACKET);
             return;
         }

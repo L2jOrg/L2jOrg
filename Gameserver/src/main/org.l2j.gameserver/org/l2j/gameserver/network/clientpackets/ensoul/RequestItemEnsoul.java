@@ -91,9 +91,6 @@ public class RequestItemEnsoul extends ClientPacket {
         } else if (item.isCommonItem()) {
             LOGGER.warn("Player: " + player + " attempting to ensoul common item: " + item + "!");
             return;
-        } else if (item.isShadowItem()) {
-            LOGGER.warn("Player: " + player + " attempting to ensoul shadow item: " + item + "!");
-            return;
         } else if (item.isHeroItem()) {
             LOGGER.warn("Player: " + player + " attempting to ensoul hero item: " + item + "!");
             return;

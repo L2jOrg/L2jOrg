@@ -309,9 +309,6 @@ public class EnterWorld extends ClientPacket {
             if (item.isTimeLimitedItem()) {
                 item.scheduleLifeTimeTask();
             }
-            if (item.isShadowItem() && item.isEquipped()) {
-                item.decreaseMana(false);
-            }
         }
 
         for (Item whItem : player.getWarehouse().getItems()) {

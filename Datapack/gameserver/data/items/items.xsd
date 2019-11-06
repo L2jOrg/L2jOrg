@@ -129,7 +129,6 @@
             <xs:simpleType>
                 <xs:restriction base="xs:token">
                     <xs:enumeration value="armor_type"/>
-                    <xs:enumeration value="attack_range"/>
                     <xs:enumeration value="auto_destroy_time"/>
                     <xs:enumeration value="blessed"/>
                     <xs:enumeration value="bodypart"/>
@@ -139,7 +138,6 @@
                     <xs:enumeration value="crystal_type"/>
                     <xs:enumeration value="damage_range"/>
                     <xs:enumeration value="default_action"/>
-                    <xs:enumeration value="duration"/>
                     <xs:enumeration value="element_enabled"/>
                     <xs:enumeration value="enchant_enabled"/>
                     <xs:enumeration value="enchant4_skill"/>

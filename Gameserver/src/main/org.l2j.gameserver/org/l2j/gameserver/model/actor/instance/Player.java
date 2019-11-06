@@ -2026,9 +2026,6 @@ public final class Player extends Playable {
                 }
                 sendPacket(sm);
 
-                // Consume mana - will start a task if required; returns if item is not a shadow item
-                item.decreaseMana(false);
-
                 if ((item.getItem().getBodyPart() & ItemTemplate.SLOT_MULTI_ALLWEAPON) != 0) {
                     rechargeShots(true, true, false);
                 }
@@ -4375,8 +4372,7 @@ public final class Player extends Playable {
 
                 for (Item itemDrop : _inventory.getItems()) {
                     // Don't drop
-                    if (itemDrop.isShadowItem() || // Dont drop Shadow Items
-                            itemDrop.isTimeLimitedItem() || // Dont drop Time Limited Items
+                    if (itemDrop.isTimeLimitedItem() || // Dont drop Time Limited Items
                             !itemDrop.isDropable() || (itemDrop.getId() == CommonItem.ADENA) || // Adena
                             (itemDrop.getItem().getType2() == ItemTemplate.TYPE2_QUEST) || // Quest Items
                             ((_pet != null) && (_pet.getControlObjectId() == itemDrop.getId())) || // Control Item of active pet

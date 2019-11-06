@@ -105,7 +105,6 @@ public abstract class ItemTemplate extends ListenersContainer implements IIdenti
     private boolean _stackable;
     private CrystalType _crystalType;
     private int _equipReuseDelay;
-    private int _duration;
     private long _time;
     private int _autoDestroyTime;
     private long _bodyPart;
@@ -158,7 +157,7 @@ public abstract class ItemTemplate extends ListenersContainer implements IIdenti
         _icon = set.getString("icon", null);
         _weight = set.getInt("weight", 0);
         _equipReuseDelay = set.getInt("equip_reuse_delay", 0) * 1000;
-        _duration = set.getInt("duration", -1);
+
         _time = set.getInt("time", -1);
         _autoDestroyTime = set.getInt("auto_destroy_time", -1) * 1000;
         _bodyPart = ItemTable.SLOTS.get(set.getString("bodypart", "none"));
@@ -218,14 +217,6 @@ public abstract class ItemTemplate extends ListenersContainer implements IIdenti
         return _equipReuseDelay;
     }
 
-    /**
-     * Returns the duration of the item
-     *
-     * @return int
-     */
-    public final int getDuration() {
-        return _duration;
-    }
 
     /**
      * Returns the time of the item

@@ -1,19 +1,21 @@
 package org.l2j.gameserver.model.skills;
 
+import org.l2j.commons.threading.ThreadPool;
 import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.Config;
-import org.l2j.commons.threading.ThreadPool;
 import org.l2j.gameserver.ai.CtrlEvent;
 import org.l2j.gameserver.ai.CtrlIntention;
 import org.l2j.gameserver.data.xml.ActionManager;
-import org.l2j.gameserver.datatables.ItemTable;
+import org.l2j.gameserver.engine.geo.GeoEngine;
 import org.l2j.gameserver.enums.ItemSkillType;
 import org.l2j.gameserver.enums.NextActionType;
 import org.l2j.gameserver.enums.StatusUpdateType;
-import org.l2j.gameserver.engine.geo.GeoEngine;
-import org.l2j.gameserver.model.*;
-import org.l2j.gameserver.model.actor.Creature;
+import org.l2j.gameserver.model.Clan;
+import org.l2j.gameserver.model.Location;
+import org.l2j.gameserver.model.PcCondOverride;
+import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.Attackable;
+import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.Summon;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -25,7 +27,6 @@ import org.l2j.gameserver.model.events.impl.character.npc.OnNpcSkillSee;
 import org.l2j.gameserver.model.events.returns.TerminateReturn;
 import org.l2j.gameserver.model.holders.ItemSkillHolder;
 import org.l2j.gameserver.model.holders.SkillUseHolder;
-import org.l2j.gameserver.model.items.ItemTemplate;
 import org.l2j.gameserver.model.items.Weapon;
 import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.items.type.ActionType;
@@ -527,14 +528,6 @@ public class SkillCaster implements Runnable {
         // Stop movement when casting. Except instant cast.
         if (!instantCast) {
             caster.getAI().clientStopMoving(null);
-        }
-
-        // Reduce talisman mana on skill use
-        if ((_skill.getReferenceItemId() > 0) && (ItemTable.getInstance().getTemplate(_skill.getReferenceItemId()).getBodyPart() == ItemTemplate.SLOT_TALISMAN)) {
-            final Item talisman = caster.getInventory().getItems(i -> i.getId() == _skill.getReferenceItemId(), Item::isEquipped).stream().findAny().orElse(null);
-            if (talisman != null) {
-                talisman.decreaseMana(false, talisman.useSkillDisTime());
-            }
         }
 
         if (target != caster) {

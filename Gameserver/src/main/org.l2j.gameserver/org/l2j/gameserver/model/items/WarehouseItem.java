@@ -32,7 +32,7 @@ public class WarehouseItem {
     private final VariationInstance _augmentation;
     private final int _customType1;
     private final int _customType2;
-    private final int _mana;
+
     private final int[] _elemDefAttr =
             {
                     0,
@@ -61,7 +61,6 @@ public class WarehouseItem {
         _customType2 = item.getCustomType2();
         _grade = item.getItem().getCrystalType();
         _augmentation = item.getAugmentation();
-        _mana = item.getMana();
         _time = item.isTimeLimitedItem() ? (int) (item.getRemainingTime() / 1000) : -1;
 
         _elemAtkType = item.getAttackAttributeType().getClientId();
@@ -206,10 +205,6 @@ public class WarehouseItem {
 
     public final int getCustomType2() {
         return _customType2;
-    }
-
-    public final int getMana() {
-        return _mana;
     }
 
     public byte getAttackElementType() {

@@ -85,7 +85,7 @@ public final class RequestCrystallizeItem extends ClientPacket {
         }
 
         final Item itemToRemove = activeChar.getInventory().getItemByObjectId(_objectId);
-        if ((itemToRemove == null) || itemToRemove.isShadowItem() || itemToRemove.isTimeLimitedItem()) {
+        if ((itemToRemove == null) || itemToRemove.isTimeLimitedItem()) {
             client.sendPacket(ActionFailed.STATIC_PACKET);
             return;
         }

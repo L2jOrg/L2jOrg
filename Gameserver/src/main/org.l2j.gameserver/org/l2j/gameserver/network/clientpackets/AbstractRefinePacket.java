@@ -103,9 +103,6 @@ public abstract class AbstractRefinePacket extends ClientPacket {
         if (item.isHeroItem()) {
             return false;
         }
-        if (item.isShadowItem()) {
-            return false;
-        }
         if (item.isCommonItem()) {
             return false;
         }

@@ -133,11 +133,7 @@ public final class Item extends WorldObject {
      * Augmented Item
      */
     private VariationInstance _augmentation = null;
-    /**
-     * Shadow item
-     */
-    private int _mana = -1;
-    private boolean _consumingMana = false;
+
     //@formatter:on
     /**
      * Custom item types (used loto, race tickets)
@@ -173,7 +169,6 @@ public final class Item extends WorldObject {
         _type1 = 0;
         _type2 = 0;
         _dropTime = 0;
-        _mana = _item.getDuration();
         _time = _item.getTime() == -1 ? -1 : System.currentTimeMillis() + (_item.getTime() * 60 * 1000);
         scheduleLifeTimeTask();
     }
@@ -194,7 +189,6 @@ public final class Item extends WorldObject {
         }
         super.setName(_item.getName());
         _loc = ItemLocation.VOID;
-        _mana = _item.getDuration();
         _time = _item.getTime() == -1 ? -1 : System.currentTimeMillis() + (_item.getTime() * 60 * 1000);
         scheduleLifeTimeTask();
     }
@@ -212,7 +206,6 @@ public final class Item extends WorldObject {
         _enchantLevel = rs.getInt("enchant_level");
         _type1 = rs.getInt("custom_type1");
         _type2 = rs.getInt("custom_type2");
-        _mana = rs.getInt("mana_left");
         _time = rs.getLong("time");
         _existsInDb = true;
         _storedInDb = true;
@@ -738,9 +731,7 @@ public final class Item extends WorldObject {
         }
         if (!isPrivateWareHouse) {
             // augmented not tradeable
-            if (!isTradeable() || isShadowItem()) {
-                return false;
-            }
+            return isTradeable();
         }
 
         return true;
@@ -1094,131 +1085,6 @@ public final class Item extends WorldObject {
     }
 
     /**
-     * Returns true if this item is a shadow item Shadow items have a limited life-time
-     *
-     * @return
-     */
-    public boolean isShadowItem() {
-        return (_mana >= 0);
-    }
-
-    /**
-     * Returns the remaining mana of this shadow item
-     *
-     * @return lifeTime
-     */
-    public int getMana() {
-        return _mana;
-    }
-
-    /**
-     * Decreases the mana of this shadow item, sends a inventory update schedules a new consumption task if non is running optionally one could force a new task
-     *
-     * @param resetConsumingMana if true forces a new consumption task if item is equipped
-     */
-    public void decreaseMana(boolean resetConsumingMana) {
-        decreaseMana(resetConsumingMana, 1);
-    }
-
-    /**
-     * Decreases the mana of this shadow item, sends a inventory update schedules a new consumption task if non is running optionally one could force a new task
-     *
-     * @param resetConsumingMana if forces a new consumption task if item is equipped
-     * @param count              how much mana decrease
-     */
-    public void decreaseMana(boolean resetConsumingMana, int count) {
-        if (!isShadowItem()) {
-            return;
-        }
-
-        if ((_mana - count) >= 0) {
-            _mana -= count;
-        } else {
-            _mana = 0;
-        }
-
-        if (_storedInDb) {
-            _storedInDb = false;
-        }
-        if (resetConsumingMana) {
-            _consumingMana = false;
-        }
-
-        final Player player = getActingPlayer();
-        if (player != null) {
-            SystemMessage sm;
-            switch (_mana) {
-                case 10: {
-                    sm = SystemMessage.getSystemMessage(SystemMessageId.S1_S_REMAINING_MANA_IS_NOW_10);
-                    sm.addItemName(_item);
-                    player.sendPacket(sm);
-                    break;
-                }
-                case 5: {
-                    sm = SystemMessage.getSystemMessage(SystemMessageId.S1_S_REMAINING_MANA_IS_NOW_5);
-                    sm.addItemName(_item);
-                    player.sendPacket(sm);
-                    break;
-                }
-                case 1: {
-                    sm = SystemMessage.getSystemMessage(SystemMessageId.S1_S_REMAINING_MANA_IS_NOW_1_IT_WILL_DISAPPEAR_SOON);
-                    sm.addItemName(_item);
-                    player.sendPacket(sm);
-                    break;
-                }
-            }
-
-            if (_mana == 0) // The life time has expired
-            {
-                sm = SystemMessage.getSystemMessage(SystemMessageId.S1_S_REMAINING_MANA_IS_NOW_0_AND_THE_ITEM_HAS_DISAPPEARED);
-                sm.addItemName(_item);
-                player.sendPacket(sm);
-
-                // unequip
-                if (isEquipped()) {
-                    final Item[] unequiped = player.getInventory().unEquipItemInSlotAndRecord(getLocationSlot());
-                    final InventoryUpdate iu = new InventoryUpdate();
-                    for (Item item : unequiped) {
-                        iu.addModifiedItem(item);
-                    }
-                    player.sendInventoryUpdate(iu);
-                    player.broadcastUserInfo();
-                }
-
-                if (_loc != ItemLocation.WAREHOUSE) {
-                    // destroy
-                    player.getInventory().destroyItem("Item", this, player, null);
-
-                    // send update
-                    final InventoryUpdate iu = new InventoryUpdate();
-                    iu.addRemovedItem(this);
-                    player.sendInventoryUpdate(iu);
-                } else {
-                    player.getWarehouse().destroyItem("Item", this, player, null);
-                }
-            } else {
-                // Reschedule if still equipped
-                if (!_consumingMana && isEquipped()) {
-                    scheduleConsumeManaTask();
-                }
-                if (_loc != ItemLocation.WAREHOUSE) {
-                    final InventoryUpdate iu = new InventoryUpdate();
-                    iu.addModifiedItem(this);
-                    player.sendInventoryUpdate(iu);
-                }
-            }
-        }
-    }
-
-    public void scheduleConsumeManaTask() {
-        if (_consumingMana) {
-            return;
-        }
-        _consumingMana = true;
-        ThreadPool.schedule(new ScheduleConsumeManaTask(this), MANA_CONSUMPTION_RATE);
-    }
-
-    /**
      * Returns false cause item can't be attacked
      *
      * @return boolean false
@@ -1278,7 +1144,7 @@ public final class Item extends WorldObject {
         }
 
         try (Connection con = DatabaseFactory.getInstance().getConnection();
-             PreparedStatement ps = con.prepareStatement("UPDATE items SET owner_id=?,count=?,loc=?,loc_data=?,enchant_level=?,custom_type1=?,custom_type2=?,mana_left=?,time=? WHERE object_id = ?")) {
+             PreparedStatement ps = con.prepareStatement("UPDATE items SET owner_id=?,count=?,loc=?,loc_data=?,enchant_level=?,custom_type1=?,custom_type2=?,time=? WHERE object_id = ?")) {
             ps.setInt(1, _ownerId);
             ps.setLong(2, _count);
             ps.setString(3, _loc.name());
@@ -1286,9 +1152,8 @@ public final class Item extends WorldObject {
             ps.setInt(5, _enchantLevel);
             ps.setInt(6, _type1);
             ps.setInt(7, _type2);
-            ps.setInt(8, _mana);
-            ps.setLong(9, _time);
-            ps.setInt(10, getObjectId());
+            ps.setLong(8, _time);
+            ps.setInt(9, getObjectId());
             ps.executeUpdate();
             _existsInDb = true;
             _storedInDb = true;
@@ -1316,7 +1181,7 @@ public final class Item extends WorldObject {
         }
 
         try (Connection con = DatabaseFactory.getInstance().getConnection();
-             PreparedStatement ps = con.prepareStatement("INSERT INTO items (owner_id,item_id,count,loc,loc_data,enchant_level,object_id,custom_type1,custom_type2,mana_left,time) VALUES (?,?,?,?,?,?,?,?,?,?,?)")) {
+             PreparedStatement ps = con.prepareStatement("INSERT INTO items (owner_id,item_id,count,loc,loc_data,enchant_level,object_id,custom_type1,custom_type2,time) VALUES (?,?,?,?,?,?,?,?,?,?)")) {
             ps.setInt(1, _ownerId);
             ps.setInt(2, _itemId);
             ps.setLong(3, _count);
@@ -1326,8 +1191,7 @@ public final class Item extends WorldObject {
             ps.setInt(7, getObjectId());
             ps.setInt(8, _type1);
             ps.setInt(9, _type2);
-            ps.setInt(10, _mana);
-            ps.setLong(11, _time);
+            ps.setLong(10, _time);
 
             ps.executeUpdate();
             _existsInDb = true;
@@ -1895,30 +1759,6 @@ public final class Item extends WorldObject {
         if ((_lifeTimeTask != null) && !_lifeTimeTask.isDone()) {
             _lifeTimeTask.cancel(false);
             _lifeTimeTask = null;
-        }
-    }
-
-    /**
-     * Used to decrease mana (mana means life time for shadow items)
-     */
-    public static class ScheduleConsumeManaTask implements Runnable {
-        private static final Logger LOGGER = LoggerFactory.getLogger(ScheduleConsumeManaTask.class);
-        private final Item _shadowItem;
-
-        public ScheduleConsumeManaTask(Item item) {
-            _shadowItem = item;
-        }
-
-        @Override
-        public void run() {
-            try {
-                // decrease mana
-                if (_shadowItem != null) {
-                    _shadowItem.decreaseMana(true);
-                }
-            } catch (Exception e) {
-                LOGGER.error("", e);
-            }
         }
     }
 

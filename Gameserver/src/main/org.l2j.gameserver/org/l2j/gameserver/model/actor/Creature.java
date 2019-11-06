@@ -800,7 +800,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 
             // BOW and CROSSBOW checks
             if (weaponItem != null) {
-                if (!weaponItem.isAttackWeapon() && !isGM()) {
+                if (!weaponItem.isAttackWeapon()) {
                     if (weaponItem.getItemType() == WeaponType.FISHINGROD) {
                         sendPacket(SystemMessageId.YOU_LOOK_ODDLY_AT_THE_FISHING_POLE_IN_DISBELIEF_AND_REALIZE_THAT_YOU_CAN_T_ATTACK_ANYTHING_WITH_THIS);
                     } else {
