@@ -1,6 +1,10 @@
 package org.l2j.commons.xml;
 
+import io.github.joealisson.primitive.ArrayIntList;
+import io.github.joealisson.primitive.Containers;
+import io.github.joealisson.primitive.IntList;
 import org.l2j.commons.util.FilterUtil;
+import org.l2j.commons.util.Util;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
@@ -618,6 +622,20 @@ public abstract class XmlReader
             map.put(att.getNodeName(), att.getNodeValue());
         }
         return map;
+    }
+
+    protected IntList parseIntList(Node node) {
+        if(nonNull(node)) {
+            var values = node.getNodeValue().split("[,;]");
+            var list = new ArrayIntList(values.length);
+            for (String val :  values) {
+                if(Util.isInteger(val)) {
+                    list.add(Integer.parseInt(val));
+                }
+            }
+            return list;
+        }
+        return Containers.emptyList();
     }
 
     /**

@@ -15,7 +15,6 @@ import org.l2j.gameserver.model.actor.Attackable;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.EventMonster;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.base.PlayerState;
 import org.l2j.gameserver.model.conditions.*;
 import org.l2j.gameserver.model.events.EventDispatcher;
 import org.l2j.gameserver.model.events.impl.item.OnItemCreate;
@@ -196,26 +195,50 @@ public final class ItemTable extends GameXmlReader {
     private void parseItemCondition(Weapon weapon, Node node) {
         Condition condition = null;
         for(var n = node.getFirstChild(); nonNull(n); n = n.getNextSibling()) {
-            switch (n.getNodeName()) {
-                case "player" -> parsePlayerCondition(condition, n);
-            }
+
+            var temp = switch (n.getNodeName()) {
+                case "player" -> parsePlayerCondition(n);
+                default -> condition;
+            };
+
+            condition = and(condition, temp);
         }
 
+        if(nonNull(condition)) {
+            var attr = node.getAttributes();
+            var msg = parseString(attr, "msg");
+            var msgId = parseInteger(attr, "msg-id");
+            if(nonNull(msg)) {
+                condition.setMessage(msg);
+            } else if(nonNull(msgId)) {
+                condition.setMessageId(msgId);
+                if(parseBoolean(attr, "add-name")) {
+                    condition.addName();
+                }
+            }
+            weapon.attachCondition(condition);
+        }
     }
 
-    private void parsePlayerCondition(Condition condition, Node playerNode) {
+    private Condition parsePlayerCondition(Node playerNode) {
         var attrs = playerNode.getAttributes();
         Condition playerCondition = null;
         for (var i = 0; i < attrs.getLength(); i++) {
             var attr =  attrs.item(i);
             playerCondition = switch (attr.getNodeName()) {
                 case "level-min" -> and(playerCondition, new ConditionPlayerMinLevel(parseInt(attr)));
-                case "chaotic" ->  and(playerCondition, new ConditionPlayerState(PlayerState.CHAOTIC, parseBoolean(attr)));
-                case "hero" -> and(playerCondition, new ConditionPlayerIsHero(parseBoolean(attr)));
+                case "level-max" -> and(playerCondition, new ConditionPlayerMaxLevel(parseInt(attr)));
+                case "chaotic" ->  and(playerCondition, ConditionPlayerChaotic.of(parseBoolean(attr)));
+                case "hero" -> and(playerCondition, ConditionPlayerIsHero.of(parseBoolean(attr)));
+                case "pledge-class" -> and(playerCondition, new ConditionPlayerPledgeClass(parseInt(attr)));
+                case "castle" -> and(playerCondition, new ConditionPlayerHasCastle(parseInt(attr)));
+                case "sex" -> and(playerCondition, ConditionPlayerSex.of(parseInt(attr)));
+                case "flying" -> and(playerCondition, ConditionPlayerFlyMounted.of(parseBoolean(attr)));
+                case "zone" -> and(playerCondition, new ConditionPlayerInsideZoneId(parseIntList(attr)));
                 default -> playerCondition;
             };
-
         }
+        return playerCondition;
     }
 
     private Condition and(Condition c, Condition c2) {

@@ -1,5 +1,7 @@
 package org.l2j.gameserver.engine.items;
 
+import io.github.joealisson.primitive.ArrayIntList;
+import io.github.joealisson.primitive.IntList;
 import org.l2j.gameserver.datatables.ItemTable;
 import org.l2j.gameserver.enums.CastleSide;
 import org.l2j.gameserver.enums.CategoryType;
@@ -235,16 +237,6 @@ public abstract class DocumentBase extends GameXmlReader {
                     cond = joinAnd(cond, new ConditionPlayerMinLevel(lvl));
                     break;
                 }
-                case "levelrange": {
-                    final String[] range = getValue(a.getNodeValue(), template).split(";");
-                    if (range.length == 2) {
-                        final int[] lvlRange = new int[2];
-                        lvlRange[0] = Integer.decode(getValue(a.getNodeValue(), template).split(";")[0]);
-                        lvlRange[1] = Integer.decode(getValue(a.getNodeValue(), template).split(";")[1]);
-                        cond = joinAnd(cond, new ConditionPlayerLevelRange(lvlRange));
-                    }
-                    break;
-                }
                 case "resting": {
                     final boolean val = Boolean.parseBoolean(a.getNodeValue());
                     cond = joinAnd(cond, new ConditionPlayerState(PlayerState.RESTING, val));
@@ -292,7 +284,7 @@ public abstract class DocumentBase extends GameXmlReader {
                 }
                 case "ishero": {
                     final boolean val = Boolean.parseBoolean(a.getNodeValue());
-                    cond = joinAnd(cond, new ConditionPlayerIsHero(val));
+                    cond = joinAnd(cond, ConditionPlayerIsHero.of(val));
                     break;
                 }
                 case "ispvpflagged": {
@@ -392,12 +384,12 @@ public abstract class DocumentBase extends GameXmlReader {
                 }
                 case "sex": {
                     final int sex = Integer.decode(getValue(a.getNodeValue(), null));
-                    cond = joinAnd(cond, new ConditionPlayerSex(sex));
+                    cond = joinAnd(cond, ConditionPlayerSex.of(sex));
                     break;
                 }
                 case "flymounted": {
                     final boolean val = Boolean.parseBoolean(a.getNodeValue());
-                    cond = joinAnd(cond, new ConditionPlayerFlyMounted(val));
+                    cond = joinAnd(cond, ConditionPlayerFlyMounted.of(val));
                     break;
                 }
                 case "vehiclemounted": {
@@ -593,7 +585,7 @@ public abstract class DocumentBase extends GameXmlReader {
                 }
                 case "insidezoneid": {
                     final StringTokenizer st = new StringTokenizer(a.getNodeValue(), ",");
-                    final List<Integer> array = new ArrayList<>(st.countTokens());
+                    final IntList array = new ArrayIntList(st.countTokens());
                     while (st.hasMoreTokens()) {
                         final String item = st.nextToken().trim();
                         array.add(Integer.decode(getValue(item, template)));
