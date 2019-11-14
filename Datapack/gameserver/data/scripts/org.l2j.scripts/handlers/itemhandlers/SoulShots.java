@@ -16,7 +16,7 @@ public class SoulShots extends AbstractShot {
 
     @Override
     protected boolean canUse(Player player, Weapon weapon, int itemId) {
-        if (isNull(player.getActiveWeaponInstance()) || weapon.getSoulShotCount() == 0) {
+        if (isNull(player.getActiveWeaponInstance()) || weapon.getSoulShot() == 0) {
             if (!player.getAutoSoulShot().contains(itemId)) {
                 player.sendPacket(SystemMessageId.CANNOT_USE_SOULSHOTS);
             }
@@ -35,7 +35,7 @@ public class SoulShots extends AbstractShot {
         if (Rnd.chance(weapon.getReducedSoulShotChance())) {
             return weapon.getReducedSoulShot();
         }
-        return weapon.getSoulShotCount();
+        return weapon.getSoulShot();
     }
 
     @Override

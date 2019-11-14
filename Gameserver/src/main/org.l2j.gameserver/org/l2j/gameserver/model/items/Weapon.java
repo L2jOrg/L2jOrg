@@ -23,9 +23,9 @@ import static org.l2j.gameserver.util.GameUtils.isPlayer;
 public final class Weapon extends ItemTemplate implements EquipableItem{
     private WeaponType type;
     private boolean magic;
-    private int _soulShotCount;
+    private int soulShot;
     private int _spiritShotCount;
-    private int _mpConsume;
+    private int manaConsume;
     private int _baseAttackRadius;
     private int _baseAttackAngle;
     private int _changeWeaponId;
@@ -60,9 +60,9 @@ public final class Weapon extends ItemTemplate implements EquipableItem{
         _type1 = ItemTemplate.TYPE1_WEAPON_RING_EARRING_NECKLACE;
         _type2 = ItemTemplate.TYPE2_WEAPON;
         magic = set.getBoolean("is_magic_weapon", false);
-        _soulShotCount = set.getInt("soulshots", 0);
+        soulShot = set.getInt("soulshots", 0);
         _spiritShotCount = set.getInt("spiritshots", 0);
-        _mpConsume = set.getInt("mp_consume", 0);
+        manaConsume = set.getInt("mp_consume", 0);
         final String[] damageRange = set.getString("damage_range", "").split(";"); // 0?;0?;fan sector;base attack angle
         if ((damageRange.length > 1) && Util.isInteger(damageRange[2]) && Util.isInteger(damageRange[3])) {
             _baseAttackRadius = Integer.parseInt(damageRange[2]);
@@ -112,8 +112,8 @@ public final class Weapon extends ItemTemplate implements EquipableItem{
     /**
      * @return the quantity of SoulShot used.
      */
-    public int getSoulShotCount() {
-        return _soulShotCount;
+    public int getSoulShot() {
+        return soulShot;
     }
 
     /**
@@ -141,7 +141,7 @@ public final class Weapon extends ItemTemplate implements EquipableItem{
      * @return the MP consumption with the weapon.
      */
     public int getMpConsume() {
-        return _mpConsume;
+        return manaConsume;
     }
 
     public int getBaseAttackRadius() {
@@ -250,5 +250,17 @@ public final class Weapon extends ItemTemplate implements EquipableItem{
 
     public void setMagic(boolean magic) {
         this.magic = magic;
+    }
+
+    public void setSoulshots(int soulshots) {
+        this.soulShot = soulshots;
+    }
+
+    public void setSpiritshots(int spiritshots) {
+        this._spiritShotCount = spiritshots;
+    }
+
+    public void setManaConsume(int mana) {
+        this.manaConsume = mana;
     }
 }
