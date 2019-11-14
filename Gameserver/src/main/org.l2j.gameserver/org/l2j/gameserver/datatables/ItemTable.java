@@ -8,6 +8,7 @@ import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.xml.impl.EnchantItemHPBonusData;
 import org.l2j.gameserver.engine.items.DocumentEngine;
 import org.l2j.gameserver.enums.ItemLocation;
+import org.l2j.gameserver.enums.ItemSkillType;
 import org.l2j.gameserver.idfactory.IdFactory;
 import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.Attackable;
@@ -16,9 +17,12 @@ import org.l2j.gameserver.model.actor.instance.EventMonster;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.events.EventDispatcher;
 import org.l2j.gameserver.model.events.impl.item.OnItemCreate;
+import org.l2j.gameserver.model.holders.ItemSkillHolder;
 import org.l2j.gameserver.model.items.*;
 import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.items.type.WeaponType;
+import org.l2j.gameserver.model.stats.Stats;
+import org.l2j.gameserver.model.stats.functions.FuncTemplate;
 import org.l2j.gameserver.settings.GeneralSettings;
 import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.util.GMAudit;
@@ -148,7 +152,61 @@ public final class ItemTable extends GameXmlReader {
     private void parseWeapon(Node weaponNode) {
         var attrs = weaponNode.getAttributes();
         var weapon = new Weapon(parseInt(attrs, "id"), parseString(attrs, "name"), parseEnum(attrs, WeaponType.class, "type"));
+
         weapon.setBodyPart(parseEnum(attrs, BodyPart.class, "body-part"));
+        weapon.setIcon(parseString(attrs, "icon"));
+        weapon.setDisplayId(parseInt(attrs, "display-id"));
+        weapon.setMagic(parseBoolean(attrs, "magic"));
+
+        forEach(weaponNode,node ->{
+            switch (node.getNodeName()) {
+                case "attributes" -> parseWeaponAttributes(weapon, node);
+                case "damage" -> parseWeaponDamage(weapon, node);
+                case "consume" -> parseWeaponConsume(weapon, node);
+                case "restriction" -> parseItemRestriction(weapon, node);
+                case "conditions" -> parseItemCondition(weapon, node);
+                case "stats" -> parseItemStats(weapon, node);
+                case "skills"-> parseItemSkills(weapon, node);
+            }
+        } );
+    }
+
+    private void parseItemSkills(Weapon weapon, Node node) {
+        forEach(node, "skill", skillNode -> {
+            var attr = skillNode.getAttributes();
+            var type = parseEnum(attr, ItemSkillType.class, "type");
+            weapon.addSkill(new ItemSkillHolder(parseInt(attr, "id"), parseInt(attr, "level"), type, parseInt(attr, "chance"), parseInt(attr, "type-value")));
+        });
+
+    }
+
+    private void parseItemStats(Weapon weapon, Node node) {
+        forEach(node, "stat", statNode -> {
+            var attr = statNode.getAttributes();
+            var type = Stats.valueOfXml(parseString(attr, "type"));
+            var value = parseDouble(attr, "value");
+            weapon.addFunctionTemplate(new FuncTemplate(null, null, "add", 0x00, type, value));
+        });
+    }
+
+    private void parseItemCondition(Weapon weapon, Node node) {
+
+    }
+
+    private void parseItemRestriction(Weapon weapon, Node node) {
+
+    }
+
+    private void parseWeaponConsume(Weapon weapon, Node node) {
+
+    }
+
+    private void parseWeaponDamage(Weapon weapon, Node node) {
+
+    }
+
+    private void parseWeaponAttributes(Weapon weapon, Node node) {
+
     }
 
     private void parseArmor(Node armorNode) {

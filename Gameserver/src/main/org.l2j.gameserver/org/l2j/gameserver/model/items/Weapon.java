@@ -22,7 +22,7 @@ import static org.l2j.gameserver.util.GameUtils.isPlayer;
  */
 public final class Weapon extends ItemTemplate implements EquipableItem{
     private WeaponType type;
-    private boolean _isMagicWeapon;
+    private boolean magic;
     private int _soulShotCount;
     private int _spiritShotCount;
     private int _mpConsume;
@@ -59,7 +59,7 @@ public final class Weapon extends ItemTemplate implements EquipableItem{
         type = WeaponType.valueOf(set.getString("weapon_type", "none").toUpperCase());
         _type1 = ItemTemplate.TYPE1_WEAPON_RING_EARRING_NECKLACE;
         _type2 = ItemTemplate.TYPE2_WEAPON;
-        _isMagicWeapon = set.getBoolean("is_magic_weapon", false);
+        magic = set.getBoolean("is_magic_weapon", false);
         _soulShotCount = set.getInt("soulshots", 0);
         _spiritShotCount = set.getInt("spiritshots", 0);
         _mpConsume = set.getInt("mp_consume", 0);
@@ -106,7 +106,7 @@ public final class Weapon extends ItemTemplate implements EquipableItem{
      */
     @Override
     public boolean isMagicWeapon() {
-        return _isMagicWeapon;
+        return magic;
     }
 
     /**
@@ -246,5 +246,9 @@ public final class Weapon extends ItemTemplate implements EquipableItem{
 
     public void setBodyPart(BodyPart bodyPart) {
         this.bodyPart = bodyPart;
+    }
+
+    public void setMagic(boolean magic) {
+        this.magic = magic;
     }
 }

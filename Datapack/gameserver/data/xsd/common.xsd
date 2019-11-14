@@ -125,4 +125,12 @@
         </xs:restriction>
     </xs:simpleType>
 
+    <xs:simpleType name="WeaponBodyPart">
+        <xs:restriction base="xs:token">
+            <xs:enumeration value="RIGHT_HAND"/>
+            <xs:enumeration value="LEFT_HAND"/>
+            <xs:enumeration value="TWO_HAND"/>
+        </xs:restriction>
+    </xs:simpleType>
+
 </xs:schema>

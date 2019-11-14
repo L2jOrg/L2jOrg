@@ -21,7 +21,7 @@
 
     <xs:complexType name="AbstractItem" abstract="true">
         <xs:sequence>
-            <xs:element name="set" maxOccurs="unbounded" minOccurs="0" type="setType"/>
+            <xs:element name="attributes" type="Attributes" minOccurs="0"/>
             <xs:element name="restriction" type="Restriction" minOccurs="0"/>
             <xs:element name="capsuled_items" minOccurs="0" type="capsuledItemsType"/>
             <xs:element name="cond" maxOccurs="2" minOccurs="0" type="condType"/>
@@ -32,6 +32,12 @@
         <xs:attribute name="name" type="xs:normalizedString" use="required"/>
         <xs:attribute name="icon" type="xs:token"/>
         <xs:attribute name="display-id" type="xs:int" default="0"/>
+    </xs:complexType>
+
+    <xs:complexType name="Attributes">
+        <xs:attribute name="weight" type="xs:int" default="0"/>
+        <xs:attribute name="price" type="xs:int" default="0"/>
+        <xs:attribute name="commission-type" type="CommissionType" default="OTHER_ITEM"/>
     </xs:complexType>
 
     <xs:complexType name="Restriction">
@@ -53,6 +59,7 @@
         <xs:complexContent>
             <xs:extension base="AbstractItem">
                 <xs:attribute name="type" type="WeaponType"/>
+                <xs:attribute name="body-part" type="WeaponBodyPart"/>
             </xs:extension>
         </xs:complexContent>
     </xs:complexType>
@@ -94,7 +101,7 @@
     <xs:complexType name="skillType">
         <xs:attribute name="id" type="xs:positiveInteger" use="required"/>
         <xs:attribute name="level" type="xs:positiveInteger" use="required"/>
-        <xs:attribute name="type">
+        <xs:attribute name="type" default="NORMAL">
             <xs:simpleType>
                 <xs:restriction base="xs:token">
                     <xs:enumeration value="NORMAL"/>
@@ -106,8 +113,8 @@
                 </xs:restriction>
             </xs:simpleType>
         </xs:attribute>
-        <xs:attribute name="type_chance" type="xs:positiveInteger"/>
-        <xs:attribute name="type_value" type="xs:positiveInteger"/>
+        <xs:attribute name="chance" type="xs:positiveInteger" default="100"/>
+        <xs:attribute name="type-value" type="xs:positiveInteger" default="0"/>
     </xs:complexType>
 
     <xs:complexType name="capsuledItemType">
@@ -287,4 +294,68 @@
         <xs:attribute type="xs:string" name="name" use="optional"/>
         <xs:attribute type="xs:byte" name="val" use="optional"/>
     </xs:complexType>
+
+    <xs:simpleType name="CommissionType">
+        <xs:restriction base="xs:token">
+            <xs:enumeration value="ONE_HAND_SWORD"/>
+            <xs:enumeration value="ONE_HAND_MAGIC_SWORD"/>
+            <xs:enumeration value="DAGGER"/>
+            <xs:enumeration value="RAPIER"/>
+            <xs:enumeration value="TWO_HAND_SWORD"/>
+            <xs:enumeration value="ANCIENT_SWORD"/>
+            <xs:enumeration value="DUALSWORD"/>
+            <xs:enumeration value="DUAL_DAGGER"/>
+            <xs:enumeration value="BLUNT_WEAPON"/>
+            <xs:enumeration value="ONE_HAND_MAGIC_BLUNT_WEAPON"/>
+            <xs:enumeration value="TWO_HAND_BLUNT_WEAPON"/>
+            <xs:enumeration value="TWO_HAND_MAGIC_BLUNT_WEAPON"/>
+            <xs:enumeration value="DUAL_BLUNT_WEAPON"/>
+            <xs:enumeration value="BOW"/>
+            <xs:enumeration value="CROSSBOW"/>
+            <xs:enumeration value="FIST_WEAPON"/>
+            <xs:enumeration value="SPEAR"/>
+            <xs:enumeration value="OTHER_WEAPON"/>
+            <xs:enumeration value="HELMET"/>
+            <xs:enumeration value="ARMOR_TOP"/>
+            <xs:enumeration value="ARMOR_PANTS"/>
+            <xs:enumeration value="FULL_BODY"/>
+            <xs:enumeration value="GLOVES"/>
+            <xs:enumeration value="FEET"/>
+            <xs:enumeration value="SHIELD"/>
+            <xs:enumeration value="SIGIL"/>
+            <xs:enumeration value="UNDERWEAR"/>
+            <xs:enumeration value="CLOAK"/>
+            <xs:enumeration value="RING"/>
+            <xs:enumeration value="EARRING"/>
+            <xs:enumeration value="NECKLACE"/>
+            <xs:enumeration value="BELT"/>
+            <xs:enumeration value="BRACELET"/>
+            <xs:enumeration value="HAIR_ACCESSORY"/>
+            <xs:enumeration value="POTION"/>
+            <xs:enumeration value="SCROLL_ENCHANT_WEAPON"/>
+            <xs:enumeration value="SCROLL_ENCHANT_ARMOR"/>
+            <xs:enumeration value="SCROLL_OTHER"/>
+            <xs:enumeration value="SOULSHOT"/>
+            <xs:enumeration value="SPIRITSHOT"/>
+            <xs:enumeration value="PET_EQUIPMENT"/>
+            <xs:enumeration value="PET_SUPPLIES"/>
+            <xs:enumeration value="CRYSTAL"/>
+            <xs:enumeration value="RECIPE"/>
+            <xs:enumeration value="MAJOR_CRAFTING_INGREDIENTS"/>
+            <xs:enumeration value="LIFE_STONE"/>
+            <xs:enumeration value="SOUL_CRYSTAL"/>
+            <xs:enumeration value="ATTRIBUTE_STONE"/>
+            <xs:enumeration value="WEAPON_ENCHANT_STONE"/>
+            <xs:enumeration value="ARMOR_ENCHANT_STONE"/>
+            <xs:enumeration value="SPELLBOOK"/>
+            <xs:enumeration value="GEMSTONE"/>
+            <xs:enumeration value="POUCH"/>
+            <xs:enumeration value="PIN"/>
+            <xs:enumeration value="MAGIC_RUNE_CLIP"/>
+            <xs:enumeration value="MAGIC_ORNAMENT"/>
+            <xs:enumeration value="DYES"/>
+            <xs:enumeration value="OTHER_ITEM"/>
+        </xs:restriction>
+    </xs:simpleType>
+
 </xs:schema>

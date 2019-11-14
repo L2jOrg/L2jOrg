@@ -100,9 +100,9 @@ public abstract class ItemTemplate extends ListenersContainer implements IIdenti
     protected List<FuncTemplate> _funcTemplates;
     protected List<Condition> _preConditions;
     private int id;
-    private int _displayId;
+    private int displayId;
     private String name;
-    private String _icon;
+    private String icon;
     private int _weight;
     private boolean _stackable;
     private CrystalType _crystalType;
@@ -157,9 +157,9 @@ public abstract class ItemTemplate extends ListenersContainer implements IIdenti
 
     public void set(StatsSet set) {
         id = set.getInt("item_id");
-        _displayId = set.getInt("displayId", id);
+        displayId = set.getInt("displayId", id);
         name = set.getString("name");
-        _icon = set.getString("icon", null);
+        icon = set.getString("icon", null);
         _weight = set.getInt("weight", 0);
         _equipReuseDelay = set.getInt("equip_reuse_delay", 0) * 1000;
 
@@ -251,7 +251,7 @@ public abstract class ItemTemplate extends ListenersContainer implements IIdenti
      * @return int
      */
     public final int getDisplayId() {
-        return _displayId;
+        return displayId;
     }
 
     public abstract int getItemMask();
@@ -768,7 +768,7 @@ public abstract class ItemTemplate extends ListenersContainer implements IIdenti
      * @return the icon link in client files
      */
     public String getIcon() {
-        return _icon;
+        return icon;
     }
 
     public boolean isPetItem() {
@@ -789,5 +789,13 @@ public abstract class ItemTemplate extends ListenersContainer implements IIdenti
             }
         }
         return defaultValue;
+    }
+
+    public void setIcon(String icon) {
+        this.icon = icon;
+    }
+
+    public void setDisplayId(int displayId) {
+        this.displayId = displayId;
     }
 }
