@@ -264,7 +264,15 @@ public final class ItemTable extends GameXmlReader {
     }
 
     private void parseItemRestriction(Weapon weapon, Node node) {
-
+        var attr = node.getAttributes();
+        weapon.setFreightable(parseBoolean(attr, "freightable"));
+        weapon.setOlympiadRestricted(parseBoolean(attr, "olympiad-restricted"));
+        weapon.setCocRestricted(parseBoolean(attr, "coc-restricted"));
+        weapon.setStackable(parseBoolean(attr, "stackable"));
+        weapon.setDestroyable(parseBoolean(attr, "destroyable"));
+        weapon.setTradable(parseBoolean(attr, "tradable"));
+        weapon.setDropable(parseBoolean(attr, "dropable"));
+        weapon.setSellable(parseBoolean(attr, "sellable"));
     }
 
     private void parseWeaponConsume(Weapon weapon, Node node) {

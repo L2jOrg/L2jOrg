@@ -104,24 +104,24 @@ public abstract class ItemTemplate extends ListenersContainer implements IIdenti
     private String name;
     private String icon;
     private int _weight;
-    private boolean _stackable;
+    private boolean stackable;
     private CrystalType _crystalType;
     private int _equipReuseDelay;
     private long _time;
     private int _autoDestroyTime;
     private int _referencePrice;
     private int _crystalCount;
-    private boolean _sellable;
-    private boolean _dropable;
-    private boolean _destroyable;
-    private boolean _tradeable;
+    private boolean sellable;
+    private boolean dropable;
+    private boolean destroyable;
+    private boolean tradable;
     private boolean _depositable;
     private int _enchantable;
     private boolean _questItem;
-    private boolean _freightable;
+    private boolean freightable;
     private boolean _allow_self_resurrection;
-    private boolean _is_oly_restricted;
-    private boolean _is_coc_restricted;
+    private boolean olympiadRestricted;
+    private boolean cocRestricted;
     private boolean _for_npc;
     private boolean _common;
     private boolean _heroItem;
@@ -169,18 +169,18 @@ public abstract class ItemTemplate extends ListenersContainer implements IIdenti
         _referencePrice = set.getInt("price", 0);
         _crystalType = set.getEnum("crystal_type", CrystalType.class, CrystalType.NONE);
         _crystalCount = set.getInt("crystal_count", 0);
-        _stackable = set.getBoolean("is_stackable", false);
-        _sellable = set.getBoolean("is_sellable", true);
-        _dropable = set.getBoolean("is_dropable", true);
-        _destroyable = set.getBoolean("is_destroyable", true);
-        _tradeable = set.getBoolean("is_tradable", true);
+        stackable = set.getBoolean("is_stackable", false);
+        sellable = set.getBoolean("is_sellable", true);
+        dropable = set.getBoolean("is_dropable", true);
+        destroyable = set.getBoolean("is_destroyable", true);
+        tradable = set.getBoolean("is_tradable", true);
         _depositable = set.getBoolean("is_depositable", true);
         _enchantable = set.getInt("enchant_enabled", 0);
         _questItem = set.getBoolean("is_questitem", false);
-        _freightable = set.getBoolean("is_freightable", false);
+        freightable = set.getBoolean("is_freightable", false);
         _allow_self_resurrection = set.getBoolean("allow_self_resurrection", false);
-        _is_oly_restricted = set.getBoolean("is_oly_restricted", false);
-        _is_coc_restricted = set.getBoolean("is_coc_restricted", false);
+        olympiadRestricted = set.getBoolean("is_oly_restricted", false);
+        cocRestricted = set.getBoolean("is_coc_restricted", false);
         _for_npc = set.getBoolean("for_npc", false);
         _isBlessed = set.getBoolean("blessed", false);
 
@@ -405,7 +405,7 @@ public abstract class ItemTemplate extends ListenersContainer implements IIdenti
      * @return {@code true} if the item is stackable, {@code false} otherwise.
      */
     public final boolean isStackable() {
-        return _stackable;
+        return stackable;
     }
 
     /**
@@ -426,28 +426,28 @@ public abstract class ItemTemplate extends ListenersContainer implements IIdenti
      * @return {@code true} if the item can be sold, {@code false} otherwise.
      */
     public final boolean isSellable() {
-        return _sellable;
+        return sellable;
     }
 
     /**
      * @return {@code true} if the item can be dropped, {@code false} otherwise.
      */
     public final boolean isDropable() {
-        return _dropable;
+        return dropable;
     }
 
     /**
      * @return {@code true} if the item can be destroyed, {@code false} otherwise.
      */
     public final boolean isDestroyable() {
-        return _destroyable;
+        return destroyable;
     }
 
     /**
      * @return {@code true} if the item can be traded, {@code false} otherwise.
      */
     public final boolean isTradeable() {
-        return _tradeable;
+        return tradable;
     }
 
     /**
@@ -624,7 +624,7 @@ public abstract class ItemTemplate extends ListenersContainer implements IIdenti
             return false;
         }
 
-        if (_is_coc_restricted && (isPlayer(activeChar) && (activeChar.getActingPlayer().isOnEvent(CeremonyOfChaosEvent.class)))) {
+        if (cocRestricted && (isPlayer(activeChar) && (activeChar.getActingPlayer().isOnEvent(CeremonyOfChaosEvent.class)))) {
             activeChar.sendPacket(SystemMessageId.YOU_CANNOT_USE_THIS_ITEM_IN_THE_TOURNAMENT);
             return false;
         }
@@ -673,7 +673,7 @@ public abstract class ItemTemplate extends ListenersContainer implements IIdenti
     }
 
     public boolean isFreightable() {
-        return _freightable;
+        return freightable;
     }
 
     public boolean isAllowSelfResurrection() {
@@ -681,14 +681,14 @@ public abstract class ItemTemplate extends ListenersContainer implements IIdenti
     }
 
     public boolean isOlyRestrictedItem() {
-        return _is_oly_restricted || Config.LIST_OLY_RESTRICTED_ITEMS.contains(id);
+        return olympiadRestricted || Config.LIST_OLY_RESTRICTED_ITEMS.contains(id);
     }
 
     /**
      * @return {@code true} if item cannot be used in Ceremony of Chaos games.
      */
     public boolean isCocRestrictedItem() {
-        return _is_coc_restricted;
+        return cocRestricted;
     }
 
     public boolean isForNpc() {
@@ -797,5 +797,37 @@ public abstract class ItemTemplate extends ListenersContainer implements IIdenti
 
     public void setDisplayId(int displayId) {
         this.displayId = displayId;
+    }
+
+    public void setFreightable(boolean freightable) {
+        this.freightable = freightable;
+    }
+
+    public void setOlympiadRestricted(boolean olympiadRestricted) {
+        this.olympiadRestricted = olympiadRestricted;
+    }
+
+    public void setCocRestricted(Boolean cocRestricted) {
+        this.cocRestricted = cocRestricted;
+    }
+
+    public void setStackable(boolean stackable) {
+        this.stackable = stackable;
+    }
+
+    public void setDestroyable(boolean destroyable) {
+        this.destroyable = destroyable;
+    }
+
+    public void setTradable(boolean tradable) {
+        this.tradable = tradable;
+    }
+
+    public void setDropable(boolean dropable) {
+        this.dropable = dropable;
+    }
+
+    public void setSellable(boolean sellable) {
+        this.sellable = sellable;
     }
 }
