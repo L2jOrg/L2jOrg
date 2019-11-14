@@ -24,10 +24,10 @@ public final class Weapon extends ItemTemplate implements EquipableItem{
     private WeaponType type;
     private boolean magic;
     private int soulShot;
-    private int _spiritShotCount;
+    private int spiritShot;
     private int manaConsume;
-    private int _baseAttackRadius;
-    private int _baseAttackAngle;
+    private int damageRadius;
+    private int attackangle;
     private int _changeWeaponId;
 
     private int _reducedSoulshot;
@@ -61,15 +61,15 @@ public final class Weapon extends ItemTemplate implements EquipableItem{
         _type2 = ItemTemplate.TYPE2_WEAPON;
         magic = set.getBoolean("is_magic_weapon", false);
         soulShot = set.getInt("soulshots", 0);
-        _spiritShotCount = set.getInt("spiritshots", 0);
+        spiritShot = set.getInt("spiritshots", 0);
         manaConsume = set.getInt("mp_consume", 0);
         final String[] damageRange = set.getString("damage_range", "").split(";"); // 0?;0?;fan sector;base attack angle
         if ((damageRange.length > 1) && Util.isInteger(damageRange[2]) && Util.isInteger(damageRange[3])) {
-            _baseAttackRadius = Integer.parseInt(damageRange[2]);
-            _baseAttackAngle = 360 - Integer.parseInt(damageRange[3]);
+            damageRadius = Integer.parseInt(damageRange[2]);
+            attackangle = 360 - Integer.parseInt(damageRange[3]);
         } else {
-            _baseAttackRadius = 40;
-            _baseAttackAngle = 240; // 360 - 120
+            damageRadius = 40;
+            attackangle = 240; // 360 - 120
         }
 
         final String[] reduced_soulshots = set.getString("reduced_soulshot", "").split(",");
@@ -120,7 +120,7 @@ public final class Weapon extends ItemTemplate implements EquipableItem{
      * @return the quantity of SpiritShot used.
      */
     public int getSpiritShotCount() {
-        return _spiritShotCount;
+        return spiritShot;
     }
 
     /**
@@ -145,11 +145,11 @@ public final class Weapon extends ItemTemplate implements EquipableItem{
     }
 
     public int getBaseAttackRadius() {
-        return _baseAttackRadius;
+        return damageRadius;
     }
 
     public int getBaseAttackAngle() {
-        return _baseAttackAngle;
+        return attackangle;
     }
 
     /**
@@ -257,10 +257,18 @@ public final class Weapon extends ItemTemplate implements EquipableItem{
     }
 
     public void setSpiritshots(int spiritshots) {
-        this._spiritShotCount = spiritshots;
+        this.spiritShot = spiritshots;
     }
 
     public void setManaConsume(int mana) {
         this.manaConsume = mana;
+    }
+
+    public void setDamageRadius(int radius) {
+        this.damageRadius = radius;
+    }
+
+    public void setDamageAngle(int angle) {
+        this.attackangle = angle;
     }
 }

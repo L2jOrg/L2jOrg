@@ -283,7 +283,9 @@ public final class ItemTable extends GameXmlReader {
     }
 
     private void parseWeaponDamage(Weapon weapon, Node node) {
-
+        var attr = node.getAttributes();
+        weapon.setDamageRadius(parseInt(attr, "radius"));
+        weapon.setDamageAngle(parseInt(attr, "angle"));
     }
 
     private void parseWeaponAttributes(Weapon weapon, Node node) {
