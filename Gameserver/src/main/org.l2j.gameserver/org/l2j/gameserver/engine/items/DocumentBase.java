@@ -232,7 +232,7 @@ public abstract class DocumentBase extends GameXmlReader {
                 }
                 case "level": {
                     final int lvl = Integer.decode(getValue(a.getNodeValue(), template));
-                    cond = joinAnd(cond, new ConditionPlayerLevel(lvl));
+                    cond = joinAnd(cond, new ConditionPlayerMinLevel(lvl));
                     break;
                 }
                 case "levelrange": {

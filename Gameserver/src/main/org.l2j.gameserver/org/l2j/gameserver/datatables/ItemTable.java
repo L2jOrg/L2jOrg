@@ -15,6 +15,8 @@ import org.l2j.gameserver.model.actor.Attackable;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.EventMonster;
 import org.l2j.gameserver.model.actor.instance.Player;
+import org.l2j.gameserver.model.base.PlayerState;
+import org.l2j.gameserver.model.conditions.*;
 import org.l2j.gameserver.model.events.EventDispatcher;
 import org.l2j.gameserver.model.events.impl.item.OnItemCreate;
 import org.l2j.gameserver.model.holders.ItemSkillHolder;
@@ -41,6 +43,8 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.ScheduledFuture;
 
+import static java.util.Objects.isNull;
+import static java.util.Objects.nonNull;
 import static org.l2j.commons.configuration.Configurator.getSettings;
 
 /**
@@ -190,7 +194,50 @@ public final class ItemTable extends GameXmlReader {
     }
 
     private void parseItemCondition(Weapon weapon, Node node) {
+        Condition condition = null;
+        for(var n = node.getFirstChild(); nonNull(n); n = n.getNextSibling()) {
+            switch (n.getNodeName()) {
+                case "player" -> parsePlayerCondition(condition, n);
+            }
+        }
 
+    }
+
+    private void parsePlayerCondition(Condition condition, Node playerNode) {
+        var attrs = playerNode.getAttributes();
+        Condition playerCondition = null;
+        for (var i = 0; i < attrs.getLength(); i++) {
+            var attr =  attrs.item(i);
+            playerCondition = switch (attr.getNodeName()) {
+                case "level-min" -> and(playerCondition, new ConditionPlayerMinLevel(parseInt(attr)));
+                case "chaotic" ->  and(playerCondition, new ConditionPlayerState(PlayerState.CHAOTIC, parseBoolean(attr)));
+                case "hero" -> and(playerCondition, new ConditionPlayerIsHero(parseBoolean(attr)));
+                default -> playerCondition;
+            };
+
+        }
+    }
+
+    private Condition and(Condition c, Condition c2) {
+        if(isNull(c)) {
+            return c2;
+        }
+
+        if(isNull(c2)) {
+            return c;
+        }
+
+        if(c instanceof ConditionLogicAnd) {
+            ((ConditionLogicAnd) c).add(c2);
+            return c;
+        }
+
+        if(c2 instanceof ConditionLogicAnd) {
+            ((ConditionLogicAnd) c2).add(c);
+            return c2;
+        }
+
+        return new ConditionLogicAnd(c, c2);
     }
 
     private void parseItemRestriction(Weapon weapon, Node node) {

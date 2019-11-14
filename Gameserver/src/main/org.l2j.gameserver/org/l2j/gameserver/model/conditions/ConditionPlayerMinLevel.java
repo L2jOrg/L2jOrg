@@ -5,24 +5,24 @@ import org.l2j.gameserver.model.items.ItemTemplate;
 import org.l2j.gameserver.model.skills.Skill;
 
 /**
- * The Class ConditionLogicNot.
+ * The Class ConditionPlayerMinLevel.
  *
  * @author mkizub
  */
-public class ConditionLogicNot extends Condition {
-    private final Condition _condition;
+public class ConditionPlayerMinLevel extends Condition {
+    private final int _level;
 
     /**
-     * Instantiates a new condition logic not.
+     * Instantiates a new condition player level.
      *
-     * @param condition the condition
+     * @param level the level
      */
-    public ConditionLogicNot(Condition condition) {
-        _condition = condition;
+    public ConditionPlayerMinLevel(int level) {
+        _level = level;
     }
 
     @Override
     public boolean testImpl(Creature effector, Creature effected, Skill skill, ItemTemplate item) {
-        return !_condition.test(effector, effected, skill, item);
+        return effector.getLevel() >= _level;
     }
 }

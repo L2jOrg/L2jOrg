@@ -10,12 +10,10 @@ import org.l2j.gameserver.model.skills.Skill;
  *
  * @author mkizub
  */
-public abstract class Condition implements ConditionListener {
-    private ConditionListener _listener;
+public abstract class Condition  {
     private String _msg;
     private int _msgId;
     private boolean _addName = false;
-    private boolean _result;
 
     /**
      * Gets the message.
@@ -69,24 +67,6 @@ public abstract class Condition implements ConditionListener {
         return _addName;
     }
 
-    /**
-     * Gets the listener.
-     *
-     * @return the listener
-     */
-    final ConditionListener getListener() {
-        return _listener;
-    }
-
-    /**
-     * Sets the listener.
-     *
-     * @param listener the new listener
-     */
-    void setListener(ConditionListener listener) {
-        _listener = listener;
-        notifyChanged();
-    }
 
     public final boolean test(Creature caster, Creature target, Skill skill) {
         return test(caster, target, skill, null);
@@ -101,12 +81,7 @@ public abstract class Condition implements ConditionListener {
     }
 
     public final boolean test(Creature caster, Creature target, Skill skill, ItemTemplate item) {
-        final boolean res = testImpl(caster, target, skill, item);
-        if ((_listener != null) && (res != _result)) {
-            _result = res;
-            notifyChanged();
-        }
-        return res;
+        return testImpl(caster, target, skill, item);
     }
 
     /**
@@ -119,11 +94,4 @@ public abstract class Condition implements ConditionListener {
      * @return {@code true} if successful, {@code false} otherwise
      */
     public abstract boolean testImpl(Creature effector, Creature effected, Skill skill, ItemTemplate item);
-
-    @Override
-    public void notifyChanged() {
-        if (_listener != null) {
-            _listener.notifyChanged();
-        }
-    }
 }
