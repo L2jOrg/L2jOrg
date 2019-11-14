@@ -53,7 +53,7 @@ public class FishShots implements IItemHandler
 		final Item weaponInst = activeChar.getActiveWeaponInstance();
 		final Weapon weaponItem = activeChar.getActiveWeaponItem();
 		
-		if ((weaponInst == null) || (weaponItem.getItemType() != WeaponType.FISHINGROD))
+		if ((weaponInst == null) || (weaponItem.getItemType() != WeaponType.FISHING_ROD))
 		{
 			return false;
 		}
@@ -64,7 +64,7 @@ public class FishShots implements IItemHandler
 		}
 		
 		final long count = item.getCount();
-		final boolean gradeCheck = item.isEtcItem() && (item.getEtcItem().getDefaultAction() == ActionType.FISHINGSHOT) && (weaponInst.getItem().getCrystalType() == item.getItem().getCrystalType());
+		final boolean gradeCheck = item.isEtcItem() && (item.getEtcItem().getDefaultAction() == ActionType.FISHINGSHOT) && (weaponInst.getTemplate().getCrystalType() == item.getTemplate().getCrystalType());
 		
 		if (!gradeCheck)
 		{
@@ -82,7 +82,7 @@ public class FishShots implements IItemHandler
 		final WorldObject oldTarget = activeChar.getTarget();
 		activeChar.setTarget(activeChar);
 		
-		final List<ItemSkillHolder> skills = item.getItem().getSkills(ItemSkillType.NORMAL);
+		final List<ItemSkillHolder> skills = item.getTemplate().getSkills(ItemSkillType.NORMAL);
 		
 		if (skills == null)
 		{

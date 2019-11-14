@@ -90,7 +90,7 @@ public final class RequestCrystallizeItem extends ClientPacket {
             return;
         }
 
-        if (!itemToRemove.getItem().isCrystallizable() || (itemToRemove.getItem().getCrystalCount() <= 0) || (itemToRemove.getItem().getCrystalType() == CrystalType.NONE)) {
+        if (!itemToRemove.getTemplate().isCrystallizable() || (itemToRemove.getTemplate().getCrystalCount() <= 0) || (itemToRemove.getTemplate().getCrystalType() == CrystalType.NONE)) {
             client.sendPacket(SystemMessageId.THIS_ITEM_CANNOT_BE_CRYSTALLIZED);
             return;
         }
@@ -103,7 +103,7 @@ public final class RequestCrystallizeItem extends ClientPacket {
         // Check if the char can crystallize items and return if false;
         boolean canCrystallize = true;
 
-        switch (itemToRemove.getItem().getCrystalType()) {
+        switch (itemToRemove.getTemplate().getCrystalType()) {
             case D: {
                 if (skillLevel < 1) {
                     canCrystallize = false;

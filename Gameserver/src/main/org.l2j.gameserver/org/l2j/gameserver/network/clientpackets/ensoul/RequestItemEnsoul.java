@@ -130,18 +130,18 @@ public class RequestItemEnsoul extends ClientPacket {
             ItemHolder fee;
             if (itemOption.getType() == 1) {
                 // Normal Soul Crystal
-                fee = EnsoulData.getInstance().getEnsoulFee(item.getItem().getCrystalType(), position);
+                fee = EnsoulData.getInstance().getEnsoulFee(item.getTemplate().getCrystalType(), position);
                 if ((itemOption.getPosition() == 1) || (itemOption.getPosition() == 2)) {
                     if (item.getSpecialAbility(position) != null) {
-                        fee = EnsoulData.getInstance().getResoulFee(item.getItem().getCrystalType(), position);
+                        fee = EnsoulData.getInstance().getResoulFee(item.getTemplate().getCrystalType(), position);
                     }
                 }
             } else if (itemOption.getType() == 2) {
                 // Mystic Soul Crystal
-                fee = EnsoulData.getInstance().getEnsoulFee(item.getItem().getCrystalType(), position);
+                fee = EnsoulData.getInstance().getEnsoulFee(item.getTemplate().getCrystalType(), position);
                 if (itemOption.getPosition() == 1) {
                     if (item.getAdditionalSpecialAbility(position) != null) {
-                        fee = EnsoulData.getInstance().getResoulFee(item.getItem().getCrystalType(), position);
+                        fee = EnsoulData.getInstance().getResoulFee(item.getTemplate().getCrystalType(), position);
                     }
                 }
             } else {

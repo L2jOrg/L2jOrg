@@ -52,7 +52,7 @@ public class ChangeAttributeCrystal implements IItemHandler {
 		final List<ItemInfo> itemList = new ArrayList<>();
 		for (Item i : player.getInventory().getItems())
 		{
-			if (i.isWeapon() && i.hasAttributes() && (i.getItem().getItemGrade() == ITEM_GRADES.get(item.getId())))
+			if (i.isWeapon() && i.hasAttributes() && (i.getTemplate().getItemGrade() == ITEM_GRADES.get(item.getId())))
 			{
 				itemList.add(new ItemInfo(i));
 			}

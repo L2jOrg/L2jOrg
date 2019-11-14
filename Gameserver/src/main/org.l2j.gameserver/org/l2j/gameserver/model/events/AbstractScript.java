@@ -860,7 +860,7 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 
         // Destroy the quantity of items wanted
         if (item.isEquipped()) {
-            final Item[] unequiped = player.getInventory().unEquipItemInBodySlotAndRecord(item.getItem().getBodyPart());
+            final Item[] unequiped = player.getInventory().unEquipItemInBodySlotAndRecord(item.getTemplate().getBodyPart().getId());
             final InventoryUpdate iu = new InventoryUpdate();
             for (Item itm : unequiped) {
                 iu.addModifiedItem(itm);

@@ -2,9 +2,9 @@ package org.l2j.gameserver.model.stats.finalizers;
 
 import org.l2j.gameserver.data.xml.impl.EnchantItemHPBonusData;
 import org.l2j.gameserver.model.actor.Creature;
-import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.actor.instance.Pet;
-import org.l2j.gameserver.model.items.ItemTemplate;
+import org.l2j.gameserver.model.actor.instance.Player;
+import org.l2j.gameserver.model.items.BodyPart;
 import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.stats.BaseStats;
 import org.l2j.gameserver.model.stats.IStatsFunction;
@@ -36,8 +36,8 @@ public class MaxHpFinalizer implements IStatsFunction {
                 for (Item item : player.getInventory().getPaperdollItems(Item::isEnchanted)) {
                     if (item.isArmor())
                     {
-                        final long bodyPart = item.getItem().getBodyPart();
-                        if ((bodyPart != ItemTemplate.SLOT_NECK) && (bodyPart != ItemTemplate.SLOT_LR_EAR) && (bodyPart != ItemTemplate.SLOT_LR_FINGER))
+                        var bodyPart = item.getTemplate().getBodyPart();
+                        if ((bodyPart != BodyPart.NECK) && (bodyPart != BodyPart.EAR) && (bodyPart != BodyPart.FINGER))
                         {
                             baseValue += EnchantItemHPBonusData.getInstance().getHPBonus(item);
                         }

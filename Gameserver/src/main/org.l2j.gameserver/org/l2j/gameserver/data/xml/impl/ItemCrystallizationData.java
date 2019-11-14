@@ -168,14 +168,14 @@ public final class ItemCrystallizationData extends GameXmlReader {
         final CrystallizationDataHolder data = getCrystallizationData(item.getId());
         if (data != null) {
             // If there are no crystals on the template, add such.
-            if (data.getItems().stream().noneMatch(i -> i.getId() == item.getItem().getCrystalItemId())) {
-                result.add(new ItemChanceHolder(item.getItem().getCrystalItemId(), 100, item.getCrystalCount()));
+            if (data.getItems().stream().noneMatch(i -> i.getId() == item.getTemplate().getCrystalItemId())) {
+                result.add(new ItemChanceHolder(item.getTemplate().getCrystalItemId(), 100, item.getCrystalCount()));
             }
 
             result.addAll(data.getItems());
         } else {
             // Add basic crystal reward.
-            result.add(new ItemChanceHolder(item.getItem().getCrystalItemId(), 100, item.getCrystalCount()));
+            result.add(new ItemChanceHolder(item.getTemplate().getCrystalItemId(), 100, item.getCrystalCount()));
         }
 
         return result;

@@ -43,6 +43,7 @@ import org.l2j.gameserver.model.interfaces.IDeletable;
 import org.l2j.gameserver.model.interfaces.ILocational;
 import org.l2j.gameserver.model.interfaces.ISkillsHolder;
 import org.l2j.gameserver.model.itemcontainer.Inventory;
+import org.l2j.gameserver.model.items.BodyPart;
 import org.l2j.gameserver.model.items.ItemTemplate;
 import org.l2j.gameserver.model.items.Weapon;
 import org.l2j.gameserver.model.items.instance.Item;
@@ -801,7 +802,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
             // BOW and CROSSBOW checks
             if (weaponItem != null) {
                 if (!weaponItem.isAttackWeapon()) {
-                    if (weaponItem.getItemType() == WeaponType.FISHINGROD) {
+                    if (weaponItem.getItemType() == WeaponType.FISHING_ROD) {
                         sendPacket(SystemMessageId.YOU_LOOK_ODDLY_AT_THE_FISHING_POLE_IN_DISBELIEF_AND_REALIZE_THAT_YOU_CAN_T_ATTACK_ANYTHING_WITH_THIS);
                     } else {
                         sendPacket(SystemMessageId.THAT_WEAPON_CANNOT_PERFORM_ANY_ATTACKS);
@@ -869,7 +870,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
             }
 
             final WeaponType attackType = getAttackType();
-            final boolean isTwoHanded = (weaponItem != null) && (weaponItem.getBodyPart() == ItemTemplate.SLOT_LR_HAND);
+            final boolean isTwoHanded = (weaponItem != null) && (weaponItem.getBodyPart() == BodyPart.TWO_HAND);
             final int timeAtk = Formulas.calculateTimeBetweenAttacks(_stat.getPAtkSpd());
             final int timeToHit = Formulas.calculateTimeToHit(timeAtk, weaponType, isTwoHanded, false);
             _attackEndTime = System.nanoTime() + (TimeUnit.MILLISECONDS.toNanos(timeAtk));
@@ -889,7 +890,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
             boolean crossbow = false;
             switch (attackType) {
                 case CROSSBOW:
-                case TWOHANDCROSSBOW: {
+                case TWO_HAND_CROSSBOW: {
                     crossbow = true;
                 }
                 case BOW: {
@@ -914,16 +915,10 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
                     _hitTask = ThreadPool.schedule(() -> onHitTimeNotDual(weaponItem, attack, timeToHit, timeAtk), timeToHit);
                     break;
                 }
-                case FIST: {
-                    if (!GameUtils.isPlayer(this)) {
-                        _hitTask = ThreadPool.schedule(() -> onHitTimeNotDual(weaponItem, attack, timeToHit, timeAtk), timeToHit);
-                        break;
-                    }
-                }
                 case DUAL:
-                case DUALFIST:
-                case DUALBLUNT:
-                case DUALDAGGER: {
+                case FIST:
+                case DUAL_BLUNT:
+                case DUAL_DAGGER: {
                     final int timeToHit2 = Formulas.calculateTimeToHit(timeAtk, weaponType, isTwoHanded, true) - timeToHit;
                     _hitTask = ThreadPool.schedule(() -> onFirstHitTimeForDual(weaponItem, attack, timeToHit, timeAtk, timeToHit2), timeToHit);
                     break;
@@ -952,7 +947,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
     }
 
     private Attack generateAttackTargetData(Creature target, Weapon weapon, WeaponType weaponType) {
-        final boolean isDual = (WeaponType.DUAL == weaponType) || (WeaponType.DUALBLUNT == weaponType) || (WeaponType.DUALDAGGER == weaponType) || (WeaponType.DUALFIST == weaponType);
+        final boolean isDual = (WeaponType.DUAL == weaponType) || (WeaponType.DUAL_BLUNT == weaponType) || (WeaponType.DUAL_DAGGER == weaponType) || (WeaponType.FIST == weaponType);
         final Attack attack = new Attack(this, target);
         boolean shotConsumed = false;
 

@@ -29,8 +29,8 @@ import org.l2j.gameserver.model.actor.stat.PetStat;
 import org.l2j.gameserver.model.actor.templates.NpcTemplate;
 import org.l2j.gameserver.model.itemcontainer.Inventory;
 import org.l2j.gameserver.model.itemcontainer.PetInventory;
+import org.l2j.gameserver.model.items.BodyPart;
 import org.l2j.gameserver.model.items.CommonItem;
-import org.l2j.gameserver.model.items.ItemTemplate;
 import org.l2j.gameserver.model.items.Weapon;
 import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.skills.AbnormalType;
@@ -241,7 +241,7 @@ public class Pet extends Summon {
     @Override
     public Item getActiveWeaponInstance() {
         if (_inventory != null) {
-            return _inventory.getItems(item -> (item.getItemLocation() == ItemLocation.PET_EQUIP) && (item.getItem().getBodyPart() == ItemTemplate.SLOT_R_HAND)).stream().findAny().orElse(null);
+            return _inventory.getItems(item -> (item.getItemLocation() == ItemLocation.PET_EQUIP) && (item.getTemplate().getBodyPart() == BodyPart.RIGHT_HAND)).stream().findAny().orElse(null);
         }
         return null;
     }
@@ -256,7 +256,7 @@ public class Pet extends Summon {
             return null;
         }
 
-        return (Weapon) weapon.getItem();
+        return (Weapon) weapon.getTemplate();
     }
 
     @Override
@@ -442,7 +442,7 @@ public class Pet extends Summon {
         }
 
         // Herbs
-        if (target.getItem().hasExImmediateEffect()) {
+        if (target.getTemplate().hasExImmediateEffect()) {
             final IItemHandler handler = ItemHandler.getInstance().getHandler(target.getEtcItem());
             if (handler == null) {
                 LOGGER.warn("No item handler registered for item ID: " + target.getId() + ".");

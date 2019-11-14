@@ -121,7 +121,7 @@ public final class RequestDestroyItem extends ClientPacket {
             count = itemToRemove.getCount();
         }
 
-        if (itemToRemove.getItem().isPetItem()) {
+        if (itemToRemove.getTemplate().isPetItem()) {
             final Summon pet = activeChar.getPet();
             if ((pet != null) && (pet.getControlObjectId() == _objectId)) {
                 pet.unSummon(activeChar);

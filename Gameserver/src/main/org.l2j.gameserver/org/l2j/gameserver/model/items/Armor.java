@@ -23,12 +23,12 @@ public final class Armor extends ItemTemplate {
         super.set(set);
         _type = set.getEnum("armor_type", ArmorType.class, ArmorType.NONE);
 
-        final long _bodyPart = getBodyPart();
+        final long _bodyPart = getBodyPart().getId();
         if ((_bodyPart == SLOT_NECK) || ((_bodyPart & SLOT_L_EAR) != 0) || ((_bodyPart & SLOT_L_FINGER) != 0) || ((_bodyPart & SLOT_R_BRACELET) != 0) || ((_bodyPart & SLOT_L_BRACELET) != 0) || ((_bodyPart & SLOT_ARTIFACT_BOOK) != 0)) {
             _type1 = TYPE1_WEAPON_RING_EARRING_NECKLACE;
             _type2 = TYPE2_ACCESSORY;
         } else {
-            if ((_type == ArmorType.NONE) && (getBodyPart() == SLOT_L_HAND)) {
+            if ((_type == ArmorType.NONE) && (getBodyPart() == BodyPart.LEFT_HAND)) {
                 _type = ArmorType.SHIELD;
             }
             _type1 = TYPE1_SHIELD_ARMOR;

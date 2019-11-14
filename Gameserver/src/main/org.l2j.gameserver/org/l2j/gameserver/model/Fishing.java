@@ -155,7 +155,7 @@ public class Fishing {
         }
 
         final Item rod = _player.getActiveWeaponInstance();
-        if ((rod == null) || (rod.getItemType() != WeaponType.FISHINGROD)) {
+        if ((rod == null) || (rod.getItemType() != WeaponType.FISHING_ROD)) {
             _player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_A_FISHING_POLE_EQUIPPED);
             _player.sendPacket(ActionFailed.STATIC_PACKET);
             stopFishing(FishingEndType.ERROR);

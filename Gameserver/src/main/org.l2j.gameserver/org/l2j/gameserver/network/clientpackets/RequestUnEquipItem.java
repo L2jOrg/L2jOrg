@@ -1,6 +1,7 @@
 package org.l2j.gameserver.network.clientpackets;
 
 import org.l2j.gameserver.model.actor.instance.Player;
+import org.l2j.gameserver.model.items.BodyPart;
 import org.l2j.gameserver.model.items.EtcItem;
 import org.l2j.gameserver.model.items.ItemTemplate;
 import org.l2j.gameserver.model.items.instance.Item;
@@ -12,16 +13,17 @@ import java.util.Arrays;
 
 /**
  * @author Zoey76
+ * @author JoeAlisson
  */
 public class RequestUnEquipItem extends ClientPacket {
-    private int _slot;
+    private int slot;
 
     /**
      * Packet type id 0x16 format: cd
      */
     @Override
     public void readImpl() {
-        _slot = readInt();
+        slot = readInt();
     }
 
     @Override
@@ -31,7 +33,7 @@ public class RequestUnEquipItem extends ClientPacket {
             return;
         }
 
-        final Item item = activeChar.getInventory().getPaperdollItemByL2ItemId(_slot);
+        final Item item = activeChar.getInventory().getItemByBodyPart(BodyPart.fromSlot(slot));
         // Wear-items are not to be unequipped.
         if (item == null) {
             return;
@@ -44,12 +46,12 @@ public class RequestUnEquipItem extends ClientPacket {
         }
 
         // Arrows and bolts.
-        if ((_slot == ItemTemplate.SLOT_L_HAND) && (item.getItem() instanceof EtcItem)) {
+        if ((slot == ItemTemplate.SLOT_L_HAND) && (item.getTemplate() instanceof EtcItem)) {
             return;
         }
 
         // Prevent of unequipping a cursed weapon.
-        if ((_slot == ItemTemplate.SLOT_LR_HAND) && (activeChar.isCursedWeaponEquipped() || activeChar.isCombatFlagEquipped())) {
+        if ((slot == ItemTemplate.SLOT_LR_HAND) && (activeChar.isCursedWeaponEquipped() || activeChar.isCombatFlagEquipped())) {
             return;
         }
 
@@ -63,7 +65,7 @@ public class RequestUnEquipItem extends ClientPacket {
             return;
         }
 
-        final Item[] unequipped = activeChar.getInventory().unEquipItemInBodySlotAndRecord(_slot);
+        final Item[] unequipped = activeChar.getInventory().unEquipItemInBodySlotAndRecord(slot);
         activeChar.broadcastUserInfo();
 
         // This can be 0 if the user pressed the right mouse button twice very fast.

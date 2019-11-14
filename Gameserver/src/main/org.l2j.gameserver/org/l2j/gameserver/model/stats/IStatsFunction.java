@@ -6,6 +6,7 @@ import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Pet;
 import org.l2j.gameserver.model.actor.transform.TransformType;
 import org.l2j.gameserver.model.itemcontainer.Inventory;
+import org.l2j.gameserver.model.items.BodyPart;
 import org.l2j.gameserver.model.items.ItemTemplate;
 import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.items.type.WeaponType;
@@ -36,7 +37,7 @@ public interface IStatsFunction {
      * @return
      */
     static double calcEnchantMatkBonus(Item item, double blessedBonus, int enchant) {
-        switch (item.getItem().getCrystalType()) {
+        switch (item.getTemplate().getCrystalType()) {
             case S: {
                 // M. Atk. increases by 4 for all weapons.
                 // Starting at +4, M. Atk. bonus double.
@@ -64,9 +65,9 @@ public interface IStatsFunction {
      * @return
      */
     static double calcEnchantedPAtkBonus(Item item, double blessedBonus, int enchant) {
-        switch (item.getItem().getCrystalType()) {
+        switch (item.getTemplate().getCrystalType()) {
             case S: {
-                if (item.getWeaponItem().getBodyPart() == ItemTemplate.SLOT_LR_HAND && (item.getWeaponItem().getItemType() != WeaponType.POLE)) {
+                if (item.getWeaponItem().getBodyPart() == BodyPart.TWO_HAND && (item.getWeaponItem().getItemType() != WeaponType.SPEAR)) {
                     if (item.getWeaponItem().getItemType().isRanged()) {
                         // P. Atk. increases by 10 for bows.
                         // Starting at +4, P. Atk. bonus double.
@@ -81,7 +82,7 @@ public interface IStatsFunction {
                 return (5 * enchant) + (10 * Math.max(0, enchant - 3));
             }
             case A: {
-                if (item.getWeaponItem().getBodyPart() == ItemTemplate.SLOT_LR_HAND && (item.getWeaponItem().getItemType() != WeaponType.POLE)) {
+                if (item.getWeaponItem().getBodyPart() == BodyPart.TWO_HAND && (item.getWeaponItem().getItemType() != WeaponType.SPEAR)) {
                     if (item.getWeaponItem().getItemType().isRanged()) {
                         // P. Atk. increases by 8 for bows.
                         // Starting at +4, P. Atk. bonus double.
@@ -97,7 +98,7 @@ public interface IStatsFunction {
             }
             case B:
             case C: {
-                if (item.getWeaponItem().getBodyPart() == ItemTemplate.SLOT_LR_HAND && (item.getWeaponItem().getItemType() != WeaponType.POLE)) {
+                if (item.getWeaponItem().getBodyPart() == BodyPart.TWO_HAND && (item.getWeaponItem().getItemType() != WeaponType.SPEAR)) {
                     if (item.getWeaponItem().getItemType().isRanged()) {
                         // P. Atk. increases by 6 for bows.
                         // Starting at +4, P. Atk. bonus double.
@@ -130,13 +131,13 @@ public interface IStatsFunction {
         }
     }
 
-    default double calcEnchantBodyPart(Creature creature, int... slots) {
+    default double calcEnchantBodyPart(Creature creature, BodyPart... parts) {
         double value = 0;
-        for (int slot : slots) {
-            final Item item = creature.getInventory().getPaperdollItemByL2ItemId(slot);
+        for (var part : parts) {
+            final Item item = creature.getInventory().getItemByBodyPart(part);
             // TODO Confirm if the bonus is applied for any Grade
             if ((item != null) && (item.getEnchantLevel() >= 4)) {
-                value += calcEnchantBodyPartBonus(item.getEnchantLevel(), item.getItem().isBlessed());
+                value += calcEnchantBodyPartBonus(item.getEnchantLevel(), item.getTemplate().isBlessed());
             }
         }
         return value;
@@ -153,10 +154,10 @@ public interface IStatsFunction {
             final Pet pet = (Pet) creature;
             final Item weapon = pet.getActiveWeaponInstance();
             final double baseVal = stat == Stats.PHYSICAL_ATTACK ? pet.getPetLevelData().getPetPAtk() : stat == Stats.MAGIC_ATTACK ? pet.getPetLevelData().getPetMAtk() : baseTemplateValue;
-            baseValue = baseVal + (weapon != null ? weapon.getItem().getStats(stat, baseVal) : 0);
+            baseValue = baseVal + (weapon != null ? weapon.getTemplate().getStats(stat, baseVal) : 0);
         } else if (isPlayer(creature) && (!creature.isTransformed() || (creature.getTransformation().get().getType() == TransformType.COMBAT) || (creature.getTransformation().get().getType() == TransformType.MODE_CHANGE))) {
             final Item weapon = creature.getActiveWeaponInstance();
-            baseValue = (weapon != null ? weapon.getItem().getStats(stat, baseTemplateValue) : baseTemplateValue);
+            baseValue = (weapon != null ? weapon.getTemplate().getStats(stat, baseTemplateValue) : baseTemplateValue);
         }
 
         return baseValue;
@@ -170,7 +171,7 @@ public interface IStatsFunction {
             final Inventory inv = creature.getInventory();
             if (inv != null) {
                 for (Item item : inv.getPaperdollItems(Item::isEquipped)) {
-                    baseValue += item.getItem().getStats(stat, 0);
+                    baseValue += item.getTemplate().getStats(stat, 0);
                 }
             }
         }
@@ -185,11 +186,11 @@ public interface IStatsFunction {
 
         double value = 0;
         for (Item equippedItem : creature.getInventory().getPaperdollItems(Item::isEquipped, Item::isEnchanted)) {
-            final ItemTemplate item = equippedItem.getItem();
-            final long bodypart = item.getBodyPart();
-            if ((bodypart == ItemTemplate.SLOT_HAIR) || //
-                    (bodypart == ItemTemplate.SLOT_HAIR2) || //
-                    (bodypart == ItemTemplate.SLOT_HAIRALL)) {
+            final ItemTemplate item = equippedItem.getTemplate();
+            var bodypart = item.getBodyPart();
+            if ((bodypart == BodyPart.HAIR) || //
+                    (bodypart == BodyPart.HAIR2) || //
+                    (bodypart == BodyPart.HAIR_ALL)) {
                 // TODO: Item after enchant shows pDef, but scroll says mDef increase.
                 if ((stat != Stats.PHYSICAL_DEFENCE) && (stat != Stats.MAGICAL_DEFENCE)) {
                     continue;

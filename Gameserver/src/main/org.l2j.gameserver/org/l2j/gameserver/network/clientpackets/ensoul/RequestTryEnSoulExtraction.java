@@ -75,7 +75,7 @@ public class RequestTryEnSoulExtraction extends ClientPacket {
             return;
         }
 
-        final Collection<ItemHolder> removalFee = EnsoulData.getInstance().getRemovalFee(item.getItem().getCrystalType());
+        final Collection<ItemHolder> removalFee = EnsoulData.getInstance().getRemovalFee(item.getTemplate().getCrystalType());
         if (removalFee.isEmpty()) {
             return;
         }

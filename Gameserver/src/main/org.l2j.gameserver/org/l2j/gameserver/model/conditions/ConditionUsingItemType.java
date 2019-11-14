@@ -18,6 +18,7 @@ package org.l2j.gameserver.model.conditions;
 
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.itemcontainer.Inventory;
+import org.l2j.gameserver.model.items.BodyPart;
 import org.l2j.gameserver.model.items.ItemTemplate;
 import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.items.type.ArmorType;
@@ -58,7 +59,7 @@ public final class ConditionUsingItemType extends Condition {
             if (chest == null) {
                 return (ArmorType.NONE.mask() & _mask) == ArmorType.NONE.mask();
             }
-            final int chestMask = chest.getItem().getItemMask();
+            final int chestMask = chest.getTemplate().getItemMask();
 
             // If chest armor is different from the condition one return false
             if ((_mask & chestMask) == 0) {
@@ -66,10 +67,9 @@ public final class ConditionUsingItemType extends Condition {
             }
 
             // So from here, chest armor matches conditions
-
-            final long chestBodyPart = chest.getItem().getBodyPart();
+            var chestBodyPart = chest.getTemplate().getBodyPart();
             // return True if chest armor is a Full Armor
-            if (chestBodyPart == ItemTemplate.SLOT_FULL_ARMOR) {
+            if (chestBodyPart == BodyPart.FULL_ARMOR) {
                 return true;
             }
             // check legs armor
@@ -77,7 +77,7 @@ public final class ConditionUsingItemType extends Condition {
             if (legs == null) {
                 return (ArmorType.NONE.mask() & _mask) == ArmorType.NONE.mask();
             }
-            final int legMask = legs.getItem().getItemMask();
+            final int legMask = legs.getTemplate().getItemMask();
             // return true if legs armor matches too
             return (_mask & legMask) != 0;
         }

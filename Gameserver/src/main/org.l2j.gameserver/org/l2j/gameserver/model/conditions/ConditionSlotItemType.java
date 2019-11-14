@@ -52,6 +52,6 @@ public final class ConditionSlotItemType extends ConditionInventory {
         if (itemSlot == null) {
             return false;
         }
-        return (itemSlot.getItem().getItemMask() & _mask) != 0;
+        return (itemSlot.getTemplate().getItemMask() & _mask) != 0;
     }
 }

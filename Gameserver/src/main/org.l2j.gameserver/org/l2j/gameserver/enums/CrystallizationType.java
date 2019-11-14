@@ -17,6 +17,7 @@
 package org.l2j.gameserver.enums;
 
 import org.l2j.gameserver.model.items.Armor;
+import org.l2j.gameserver.model.items.BodyPart;
 import org.l2j.gameserver.model.items.ItemTemplate;
 import org.l2j.gameserver.model.items.Weapon;
 
@@ -36,16 +37,16 @@ public enum CrystallizationType {
         if (item instanceof Armor) {
             return ARMOR;
         }
-        if ((item.getBodyPart() == ItemTemplate.SLOT_R_EAR) //
-                || (item.getBodyPart() == ItemTemplate.SLOT_L_EAR) //
-                || (item.getBodyPart() == ItemTemplate.SLOT_R_FINGER) //
-                || (item.getBodyPart() == ItemTemplate.SLOT_L_FINGER) //
-                || (item.getBodyPart() == ItemTemplate.SLOT_NECK) //
-                || (item.getBodyPart() == ItemTemplate.SLOT_HAIR) //
-                || (item.getBodyPart() == ItemTemplate.SLOT_HAIR2) //
-                || (item.getBodyPart() == ItemTemplate.SLOT_HAIRALL) //
-                || (item.getBodyPart() == ItemTemplate.SLOT_ARTIFACT_BOOK) //
-                || (item.getBodyPart() == ItemTemplate.SLOT_ARTIFACT)) {
+        if ((item.getBodyPart() == BodyPart.RIGHT_EAR) //
+                || (item.getBodyPart() == BodyPart.LEFT_EAR) //
+                || (item.getBodyPart() == BodyPart.RIGHT_FINGER) //
+                || (item.getBodyPart() == BodyPart.LEFT_FINGER) //
+                || (item.getBodyPart() == BodyPart.NECK) //
+                || (item.getBodyPart() == BodyPart.HAIR) //
+                || (item.getBodyPart() == BodyPart.HAIR2) //
+                || (item.getBodyPart() == BodyPart.HAIR_ALL) //
+                || (item.getBodyPart() == BodyPart.ARTIFACT_BOOK) //
+                || (item.getBodyPart() == BodyPart.ARTIFACT)) {
             return ACCESORY;
         }
 

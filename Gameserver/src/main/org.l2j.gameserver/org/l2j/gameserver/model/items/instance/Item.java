@@ -266,7 +266,7 @@ public final class Item extends WorldObject {
 
         if (GameUtils.isPlayer(character)){
             // Notify to scripts
-            EventDispatcher.getInstance().notifyEventAsync(new OnPlayerItemPickup(character.getActingPlayer(), this), getItem());
+            EventDispatcher.getInstance().notifyEventAsync(new OnPlayerItemPickup(character.getActingPlayer(), this), getTemplate());
         }
     }
 
@@ -495,7 +495,7 @@ public final class Item extends WorldObject {
      * @return boolean
      */
     public boolean isEquipable() {
-        return _item.getBodyPart() != ItemTemplate.SLOT_NONE;
+        return _item.getBodyPart() != BodyPart.NONE;
     }
 
     /**
@@ -521,7 +521,7 @@ public final class Item extends WorldObject {
      *
      * @return ItemTemplate
      */
-    public ItemTemplate getItem() {
+    public ItemTemplate getTemplate() {
         return _item;
     }
 
@@ -853,7 +853,7 @@ public final class Item extends WorldObject {
         if (updateDatabase) {
             updateItemOptions();
         }
-        EventDispatcher.getInstance().notifyEventAsync(new OnPlayerAugment(getActingPlayer(), this, augmentation, true), getItem());
+        EventDispatcher.getInstance().notifyEventAsync(new OnPlayerAugment(getActingPlayer(), this, augmentation, true), getTemplate());
         return true;
     }
 
@@ -878,7 +878,7 @@ public final class Item extends WorldObject {
         }
 
         // Notify to scripts.
-        EventDispatcher.getInstance().notifyEventAsync(new OnPlayerAugment(getActingPlayer(), this, augment, false), getItem());
+        EventDispatcher.getInstance().notifyEventAsync(new OnPlayerAugment(getActingPlayer(), this, augment, false), getTemplate());
     }
 
     public void restoreAttributes() {
@@ -1131,7 +1131,7 @@ public final class Item extends WorldObject {
         ThreadPool.execute(new ItemDropTask(this, dropper, x, y, z));
         if (GameUtils.isPlayer(dropper)) {
             // Notify to scripts
-            EventDispatcher.getInstance().notifyEventAsync(new OnPlayerItemDrop(dropper.getActingPlayer(), this, new Location(x, y, z)), getItem());
+            EventDispatcher.getInstance().notifyEventAsync(new OnPlayerItemDrop(dropper.getActingPlayer(), this, new Location(x, y, z)), getTemplate());
         }
     }
 
@@ -1509,9 +1509,9 @@ public final class Item extends WorldObject {
             }
 
             if (event != null) {
-                EventDispatcher.getInstance().notifyEventAsync(new OnItemBypassEvent(this, activeChar, event), getItem());
+                EventDispatcher.getInstance().notifyEventAsync(new OnItemBypassEvent(this, activeChar, event), getTemplate());
             } else {
-                EventDispatcher.getInstance().notifyEventAsync(new OnItemTalk(this, activeChar), getItem());
+                EventDispatcher.getInstance().notifyEventAsync(new OnItemTalk(this, activeChar), getTemplate());
             }
         }
     }

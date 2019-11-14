@@ -18,7 +18,7 @@ package org.l2j.gameserver.model.stats.finalizers;
 
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.model.actor.Creature;
-import org.l2j.gameserver.model.items.ItemTemplate;
+import org.l2j.gameserver.model.items.BodyPart;
 import org.l2j.gameserver.model.stats.BaseStats;
 import org.l2j.gameserver.model.stats.IStatsFunction;
 import org.l2j.gameserver.model.stats.Stats;
@@ -40,7 +40,7 @@ public class PAttackFinalizer implements IStatsFunction {
 
         if (isPlayer(creature)) {
             // Enchanted chest bonus
-            baseValue += calcEnchantBodyPart(creature, ItemTemplate.SLOT_CHEST, ItemTemplate.SLOT_FULL_ARMOR);
+            baseValue += calcEnchantBodyPart(creature, BodyPart.CHEST, BodyPart.FULL_ARMOR);
         }
 
         if (Config.CHAMPION_ENABLE && creature.isChampion()) {

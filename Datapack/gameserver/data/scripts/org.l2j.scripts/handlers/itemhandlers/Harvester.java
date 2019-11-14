@@ -35,7 +35,7 @@ public final class Harvester implements IItemHandler
 			return false;
 		}
 		
-		final List<ItemSkillHolder> skills = item.getItem().getSkills(ItemSkillType.NORMAL);
+		final List<ItemSkillHolder> skills = item.getTemplate().getSkills(ItemSkillType.NORMAL);
 		if (skills == null)
 		{
 			LOGGER.warn(": is missing skills!");

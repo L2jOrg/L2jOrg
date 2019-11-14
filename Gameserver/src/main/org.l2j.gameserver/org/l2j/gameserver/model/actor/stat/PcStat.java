@@ -87,8 +87,8 @@ public class PcStat extends PlayableStat {
             if (activeChar.isFishing()) {
                 // rod fishing skills
                 final Item rod = activeChar.getActiveWeaponInstance();
-                if ((rod != null) && (rod.getItemType() == WeaponType.FISHINGROD) && (rod.getItem().getAllSkills() != null)) {
-                    for (ItemSkillHolder s : rod.getItem().getAllSkills()) {
+                if ((rod != null) && (rod.getItemType() == WeaponType.FISHING_ROD) && (rod.getTemplate().getAllSkills() != null)) {
+                    for (ItemSkillHolder s : rod.getTemplate().getAllSkills()) {
                         if (s.getSkill().getId() == FANCY_FISHING_ROD_SKILL) {
                             bonusExp *= 1.5;
                             bonusSp *= 1.5;

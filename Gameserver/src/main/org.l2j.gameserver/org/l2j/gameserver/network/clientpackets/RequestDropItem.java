@@ -113,12 +113,12 @@ public final class RequestDropItem extends ClientPacket {
         }
 
         // Cannot discard item that the skill is consuming.
-        if (activeChar.isCastingNow(s -> (s.getSkill().getItemConsumeId() == item.getId()) && (item.getItem().getDefaultAction() == ActionType.SKILL_REDUCE_ON_SKILL_SUCCESS))) {
+        if (activeChar.isCastingNow(s -> (s.getSkill().getItemConsumeId() == item.getId()) && (item.getTemplate().getDefaultAction() == ActionType.SKILL_REDUCE_ON_SKILL_SUCCESS))) {
             activeChar.sendPacket(SystemMessageId.THIS_ITEM_CANNOT_BE_DESTROYED);
             return;
         }
 
-        if ((ItemTemplate.TYPE2_QUEST == item.getItem().getType2()) && !activeChar.canOverrideCond(PcCondOverride.DROP_ALL_ITEMS)) {
+        if ((ItemTemplate.TYPE2_QUEST == item.getTemplate().getType2()) && !activeChar.canOverrideCond(PcCondOverride.DROP_ALL_ITEMS)) {
             activeChar.sendPacket(SystemMessageId.THAT_ITEM_CANNOT_BE_DISCARDED_OR_EXCHANGED);
             return;
         }

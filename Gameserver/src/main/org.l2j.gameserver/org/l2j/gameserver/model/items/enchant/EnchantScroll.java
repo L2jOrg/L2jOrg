@@ -125,7 +125,7 @@ public final class EnchantScroll extends AbstractEnchantItem {
             return -1;
         }
 
-        final EnchantItemGroup group = EnchantItemGroupsData.getInstance().getItemGroup(enchantItem.getItem(), _scrollGroupId);
+        final EnchantItemGroup group = EnchantItemGroupsData.getInstance().getItemGroup(enchantItem.getTemplate(), _scrollGroupId);
         if (group == null) {
             LOGGER.warn(": Couldn't find enchant item group for scroll: " + getId() + " requested by: " + player);
             return -1;

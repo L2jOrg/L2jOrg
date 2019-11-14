@@ -108,7 +108,7 @@ public class SiegeGuards extends AbstractNpcAI
     public String onSpawn(Npc npc)
     {
         npc.setRandomWalking(false);
-        if ((npc.getTemplate().getBaseAttackType() != WeaponType.SWORD) && (npc.getTemplate().getBaseAttackType() != WeaponType.POLE))
+        if ((npc.getTemplate().getBaseAttackType() != WeaponType.SWORD) && (npc.getTemplate().getBaseAttackType() != WeaponType.SPEAR))
         {
             npc.setIsImmobilized(true);
         }

@@ -102,7 +102,7 @@ public final class SendWareHouseWithDrawList extends ClientPacket {
                 return;
             }
 
-            weight += i.getCount() * item.getItem().getWeight();
+            weight += i.getCount() * item.getTemplate().getWeight();
             if (!item.isStackable()) {
                 slots += i.getCount();
             } else if (player.getInventory().getItemByItemId(item.getId()) == null) {

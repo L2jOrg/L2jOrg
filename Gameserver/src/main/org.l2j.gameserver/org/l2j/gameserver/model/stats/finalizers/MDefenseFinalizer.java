@@ -41,7 +41,7 @@ public class MDefenseFinalizer implements IStatsFunction {
         final Inventory inv = creature.getInventory();
         if (inv != null) {
             for (Item item : inv.getPaperdollItems(Item::isEquipped)) {
-                baseValue += item.getItem().getStats(stat, 0);
+                baseValue += item.getTemplate().getStats(stat, 0);
             }
         }
 

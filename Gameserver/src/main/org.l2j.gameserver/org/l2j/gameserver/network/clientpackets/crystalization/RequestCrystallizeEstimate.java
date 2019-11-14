@@ -70,9 +70,9 @@ public class RequestCrystallizeEstimate extends ClientPacket {
             return;
         }
 
-        if (!item.getItem().isCrystallizable() || (item.getItem().getCrystalCount() <= 0) || (item.getItem().getCrystalType() == CrystalType.NONE)) {
+        if (!item.getTemplate().isCrystallizable() || (item.getTemplate().getCrystalCount() <= 0) || (item.getTemplate().getCrystalType() == CrystalType.NONE)) {
             client.sendPacket(ActionFailed.STATIC_PACKET);
-            LOGGER.warn("{} tried to crystallize {}", activeChar, item.getItem());
+            LOGGER.warn("{} tried to crystallize {}", activeChar, item.getTemplate());
             return;
         }
 
@@ -88,7 +88,7 @@ public class RequestCrystallizeEstimate extends ClientPacket {
         // Check if the char can crystallize items and return if false;
         boolean canCrystallize = true;
 
-        switch (item.getItem().getCrystalType()) {
+        switch (item.getTemplate().getCrystalType()) {
             case D: {
                 if (skillLevel < 1) {
                     canCrystallize = false;

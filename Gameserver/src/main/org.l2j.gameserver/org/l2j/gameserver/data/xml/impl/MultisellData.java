@@ -25,6 +25,7 @@ import java.nio.file.Path;
 import java.util.*;
 
 import static org.l2j.commons.configuration.Configurator.getSettings;
+import static org.l2j.gameserver.model.items.BodyPart.FULL_ARMOR;
 
 public final class MultisellData extends GameXmlReader {
     public static final int PAGE_SIZE = 40;
@@ -104,7 +105,7 @@ public final class MultisellData extends GameXmlReader {
                                     if(GameUtils.isWeapon(item)) {
                                         enchantmentLevel = (byte) Math.min(enchantmentLevel, item.isMagicWeapon() ? magicWeaponGroupMax : weaponGroupMax);
                                     } else if(GameUtils.isArmor(item)) {
-                                        enchantmentLevel = (byte) Math.min(enchantmentLevel, item.getBodyPart() == ItemTemplate.SLOT_FULL_ARMOR ? fullArmorGroupMax : armorGroupMax);
+                                        enchantmentLevel = (byte) Math.min(enchantmentLevel, item.getBodyPart() == FULL_ARMOR ? fullArmorGroupMax : armorGroupMax);
                                     }
 
                                 }

@@ -32,7 +32,7 @@ public class PrivateStoreManageListBuy extends AbstractItemPacket {
             writeInt(_itemList.size());
             for (Item item : _itemList) {
                 writeItem(item);
-                writeLong(item.getItem().getReferencePrice() * 2);
+                writeLong(item.getTemplate().getReferencePrice() * 2);
             }
         } else {
             writeInt(_objId);
@@ -40,7 +40,7 @@ public class PrivateStoreManageListBuy extends AbstractItemPacket {
             writeInt(0x00);
             for (Item item : _itemList) {
                 writeItem(item);
-                writeLong(item.getItem().getReferencePrice() * 2);
+                writeLong(item.getTemplate().getReferencePrice() * 2);
             }
             writeInt(0x00);
             for (TradeItem item2 : _buyList) {

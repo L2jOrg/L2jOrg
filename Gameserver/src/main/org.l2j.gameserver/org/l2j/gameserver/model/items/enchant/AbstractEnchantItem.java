@@ -105,11 +105,11 @@ public abstract class AbstractEnchantItem {
             return false;
         } else if (itemToEnchant.isEnchantable() == 0) {
             return false;
-        } else if (!isValidItemType(itemToEnchant.getItem().getType2())) {
+        } else if (!isValidItemType(itemToEnchant.getTemplate().getType2())) {
             return false;
         } else if ((_maxEnchantLevel != 0) && (itemToEnchant.getEnchantLevel() >= _maxEnchantLevel)) {
             return false;
-        } else if (_grade != itemToEnchant.getItem().getCrystalType()) {
+        } else if (_grade != itemToEnchant.getTemplate().getCrystalType()) {
             return false;
         }
         return true;

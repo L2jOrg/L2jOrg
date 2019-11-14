@@ -20,8 +20,8 @@ import static org.l2j.gameserver.util.GameUtils.isPlayer;
 /**
  * This class is dedicated to the management of weapons.
  */
-public final class Weapon extends ItemTemplate {
-    private WeaponType _type;
+public final class Weapon extends ItemTemplate implements EquipableItem{
+    private WeaponType type;
     private boolean _isMagicWeapon;
     private int _soulShotCount;
     private int _spiritShotCount;
@@ -48,10 +48,15 @@ public final class Weapon extends ItemTemplate {
         super(set);
     }
 
+    public Weapon(int id, String name, WeaponType type) {
+        super(id, name);
+        this.type = type;
+    }
+
     @Override
     public void set(StatsSet set) {
         super.set(set);
-        _type = WeaponType.valueOf(set.getString("weapon_type", "none").toUpperCase());
+        type = WeaponType.valueOf(set.getString("weapon_type", "none").toUpperCase());
         _type1 = ItemTemplate.TYPE1_WEAPON_RING_EARRING_NECKLACE;
         _type2 = ItemTemplate.TYPE2_WEAPON;
         _isMagicWeapon = set.getBoolean("is_magic_weapon", false);
@@ -85,7 +90,7 @@ public final class Weapon extends ItemTemplate {
      */
     @Override
     public WeaponType getItemType() {
-        return _type;
+        return type;
     }
 
     /**
@@ -93,7 +98,7 @@ public final class Weapon extends ItemTemplate {
      */
     @Override
     public int getItemMask() {
-        return _type.mask();
+        return type.mask();
     }
 
     /**
@@ -237,5 +242,9 @@ public final class Weapon extends ItemTemplate {
                 }
             }
         });
+    }
+
+    public void setBodyPart(BodyPart bodyPart) {
+        this.bodyPart = bodyPart;
     }
 }

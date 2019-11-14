@@ -30,7 +30,7 @@ public abstract class AbstractShot implements IItemHandler {
 
         var player = playable.getActingPlayer();
         var  weaponItem = player.getActiveWeaponItem();
-        var skills = item.getItem().getSkills(ItemSkillType.NORMAL);
+        var skills = item.getTemplate().getSkills(ItemSkillType.NORMAL);
 
         if (isNullOrEmpty(skills)) {
             LOGGER.warn("item {} is missing skills!", item);

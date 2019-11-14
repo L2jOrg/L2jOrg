@@ -18,7 +18,7 @@ package org.l2j.gameserver.model.stats.finalizers;
 
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.model.actor.Creature;
-import org.l2j.gameserver.model.items.ItemTemplate;
+import org.l2j.gameserver.model.items.BodyPart;
 import org.l2j.gameserver.model.stats.IStatsFunction;
 import org.l2j.gameserver.model.stats.Stats;
 
@@ -60,7 +60,7 @@ public class PEvasionRateFinalizer implements IStatsFunction {
             }
 
             // Enchanted helm bonus
-            baseValue += calcEnchantBodyPart(creature, ItemTemplate.SLOT_HEAD);
+            baseValue += calcEnchantBodyPart(creature, BodyPart.HEAD);
         } else {
             // [Square(DEX)] * 5 + lvl;
             baseValue += (Math.sqrt(creature.getDEX()) * 5) + level;

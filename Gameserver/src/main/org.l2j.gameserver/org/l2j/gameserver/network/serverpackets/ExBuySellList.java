@@ -44,7 +44,7 @@ public class ExBuySellList extends AbstractItemPacket {
             writeShort((short) _sellList.size());
             for (Item item : _sellList) {
                 writeItem(item);
-                writeLong((long) ((item.getItem().getReferencePrice() / 2) * _castleTaxRate));
+                writeLong((long) ((item.getTemplate().getReferencePrice() / 2) * _castleTaxRate));
             }
         } else {
             writeShort((short) 0x00);
@@ -56,7 +56,7 @@ public class ExBuySellList extends AbstractItemPacket {
             for (Item item : _refundList) {
                 writeItem(item);
                 writeInt(i++);
-                writeLong((item.getItem().getReferencePrice() / 2) * item.getCount());
+                writeLong((item.getTemplate().getReferencePrice() / 2) * item.getCount());
             }
         } else {
             writeShort((short) 0x00);

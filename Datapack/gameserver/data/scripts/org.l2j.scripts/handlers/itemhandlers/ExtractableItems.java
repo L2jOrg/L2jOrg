@@ -36,7 +36,7 @@ public class ExtractableItems implements IItemHandler
 		}
 		
 		final Player activeChar = playable.getActingPlayer();
-		final EtcItem etcitem = (EtcItem) item.getItem();
+		final EtcItem etcitem = (EtcItem) item.getTemplate();
 		final List<ExtractableProduct> exitems = etcitem.getExtractableItems();
 		if (exitems == null)
 		{
@@ -84,7 +84,7 @@ public class ExtractableItems implements IItemHandler
 						boolean alreadyExtracted = false;
 						for (Item i : extractedItems.keySet())
 						{
-							if (i.getItem().getId() == expi.getId())
+							if (i.getTemplate().getId() == expi.getId())
 							{
 								alreadyExtracted = true;
 								break;

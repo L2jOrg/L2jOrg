@@ -12,11 +12,10 @@ import org.l2j.gameserver.handler.IItemHandler;
 import org.l2j.gameserver.handler.ItemHandler;
 import org.l2j.gameserver.instancemanager.FortSiegeManager;
 import org.l2j.gameserver.model.WorldObject;
-import org.l2j.gameserver.world.World;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.effects.EffectType;
 import org.l2j.gameserver.model.holders.ItemSkillHolder;
-import org.l2j.gameserver.model.items.ItemTemplate;
+import org.l2j.gameserver.model.items.BodyPart;
 import org.l2j.gameserver.model.items.EtcItem;
 import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.items.type.ActionType;
@@ -24,6 +23,7 @@ import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.ActionFailed;
 import org.l2j.gameserver.network.serverpackets.ExUseSharedGroupItem;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
+import org.l2j.gameserver.world.World;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -80,7 +80,7 @@ public final class UseItem extends ClientPacket {
             return;
         }
 
-        if (item.isQuestItem() && (item.getItem().getDefaultAction() != ActionType.NONE)) {
+        if (item.isQuestItem() && (item.getTemplate().getDefaultAction() != ActionType.NONE)) {
             player.sendPacket(SystemMessageId.YOU_CANNOT_USE_QUEST_ITEMS);
             return;
         }
@@ -98,7 +98,7 @@ public final class UseItem extends ClientPacket {
             return;
         }
 
-        if (!item.isEquipped() && !item.getItem().checkCondition(player, player, true)) {
+        if (!item.isEquipped() && !item.getTemplate().checkCondition(player, player, true)) {
             return;
         }
 
@@ -110,7 +110,7 @@ public final class UseItem extends ClientPacket {
         }
 
         if (!Config.ALT_GAME_KARMA_PLAYER_CAN_TELEPORT && (player.getReputation() < 0)) {
-            final List<ItemSkillHolder> skills = item.getItem().getSkills(ItemSkillType.NORMAL);
+            final List<ItemSkillHolder> skills = item.getTemplate().getSkills(ItemSkillType.NORMAL);
             if ((skills != null) && skills.stream().anyMatch(holder -> holder.getSkill().hasEffectType(EffectType.TELEPORT))) {
                 return;
             }
@@ -151,13 +151,13 @@ public final class UseItem extends ClientPacket {
                 return;
             }
 
-            if (player.getInventory().isItemSlotBlocked(item.getItem().getBodyPart())) {
+            if (player.getInventory().isItemSlotBlocked(item.getTemplate().getBodyPart().getId())) {
                 player.sendPacket(SystemMessageId.YOU_DO_NOT_MEET_THE_REQUIRED_CONDITION_TO_EQUIP_THAT_ITEM);
                 return;
             }
             // Prevent players to equip weapon while wearing combat flag
             // Don't allow weapon/shield equipment if a cursed weapon is equipped.
-            if ((item.getItem().getBodyPart() == ItemTemplate.SLOT_LR_HAND) || (item.getItem().getBodyPart() == ItemTemplate.SLOT_L_HAND) || (item.getItem().getBodyPart() == ItemTemplate.SLOT_R_HAND)) {
+            if ((item.getTemplate().getBodyPart() == BodyPart.TWO_HAND) || (item.getTemplate().getBodyPart() == BodyPart.LEFT_HAND) || (item.getTemplate().getBodyPart() == BodyPart.RIGHT_HAND)) {
                 if ((player.getActiveWeaponItem() != null) && (player.getActiveWeaponItem().getId() == 9819)) {
                     player.sendPacket(SystemMessageId.YOU_DO_NOT_MEET_THE_REQUIRED_CONDITION_TO_EQUIP_THAT_ITEM);
                     return;
@@ -169,24 +169,24 @@ public final class UseItem extends ClientPacket {
                 if (player.isCursedWeaponEquipped()) {
                     return;
                 }
-            } else if (item.getItem().getBodyPart() == ItemTemplate.SLOT_TALISMAN) {
+            } else if (item.getTemplate().getBodyPart() == BodyPart.TALISMAN) {
                 if (!item.isEquipped() && (player.getInventory().getTalismanSlots() == 0)) {
                     player.sendPacket(SystemMessageId.YOU_DO_NOT_MEET_THE_REQUIRED_CONDITION_TO_EQUIP_THAT_ITEM);
                     return;
                 }
-            } else if (item.getItem().getBodyPart() == ItemTemplate.SLOT_BROOCH_JEWEL) {
+            } else if (item.getTemplate().getBodyPart() == BodyPart.BROOCH_JEWEL) {
                 if (!item.isEquipped() && (player.getInventory().getBroochJewelSlots() == 0)) {
                     final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_CANNOT_EQUIP_S1_WITHOUT_EQUIPPING_A_BROOCH);
                     sm.addItemName(item);
                     player.sendPacket(sm);
                     return;
                 }
-            } else if (item.getItem().getBodyPart() == ItemTemplate.SLOT_AGATHION) {
+            } else if (item.getTemplate().getBodyPart() == BodyPart.AGATHION) {
                 if (!item.isEquipped() && (player.getInventory().getAgathionSlots() == 0)) {
                     player.sendPacket(SystemMessageId.YOU_DO_NOT_MEET_THE_REQUIRED_CONDITION_TO_EQUIP_THAT_ITEM);
                     return;
                 }
-            } else if (item.getItem().getBodyPart() == ItemTemplate.SLOT_ARTIFACT) {
+            } else if (item.getTemplate().getBodyPart() == BodyPart.ARTIFACT) {
                 if (!item.isEquipped() && (player.getInventory().getArtifactSlots() == 0)) {
                     final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.NO_ARTIFACT_BOOK_EQUIPPED_YOU_CANNOT_EQUIP_S1);
                     sm.addItemName(item);

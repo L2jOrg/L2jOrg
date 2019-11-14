@@ -185,10 +185,10 @@ public class AdminElement implements IAdminCommandHandler
 			player.sendInventoryUpdate(iu);
 			
 			// informations
-			BuilderUtil.sendSysMessage(activeChar, "Changed elemental power of " + player.getName() + "'s " + itemInstance.getItem().getName() + " from " + old + " to " + current + ".");
+			BuilderUtil.sendSysMessage(activeChar, "Changed elemental power of " + player.getName() + "'s " + itemInstance.getTemplate().getName() + " from " + old + " to " + current + ".");
 			if (player != activeChar)
 			{
-				player.sendMessage(activeChar.getName() + " has changed the elemental power of your " + itemInstance.getItem().getName() + " from " + old + " to " + current + ".");
+				player.sendMessage(activeChar.getName() + " has changed the elemental power of your " + itemInstance.getTemplate().getName() + " from " + old + " to " + current + ".");
 			}
 		}
 	}

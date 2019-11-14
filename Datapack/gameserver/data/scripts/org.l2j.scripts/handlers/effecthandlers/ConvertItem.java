@@ -1,19 +1,3 @@
-/*
- * This file is part of the L2J Mobius project.
- * 
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- * 
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
- * General Public License for more details.
- * 
- * You should have received a copy of the GNU General Public License
- * along with this program. If not, see <http://www.gnu.org/licenses/>.
- */
 package handlers.effecthandlers;
 
 import org.l2j.gameserver.model.StatsSet;
@@ -28,17 +12,18 @@ import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.InventoryUpdate;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
+import org.l2j.gameserver.util.GameUtils;
 
+import static java.util.Objects.isNull;
 import static org.l2j.gameserver.util.GameUtils.isPlayer;
 
 /**
  * Convert Item effect implementation.
  * @author Zoey76
  */
-public final class ConvertItem extends AbstractEffect
-{
-	public ConvertItem(StatsSet params)
-	{
+public final class ConvertItem extends AbstractEffect {
+
+	public ConvertItem(StatsSet params) {
 	}
 	
 	@Override
@@ -48,45 +33,40 @@ public final class ConvertItem extends AbstractEffect
 	}
 	
 	@Override
-	public void instant(Creature effector, Creature effected, Skill skill, Item item)
-	{
-		if (effected.isAlikeDead() || !isPlayer(effected))
-		{
+	public void instant(Creature effector, Creature effected, Skill skill, Item item) {
+
+		if (effected.isAlikeDead() || !isPlayer(effected)) {
 			return;
 		}
 		
 		final Player player = effected.getActingPlayer();
-		if (player.hasItemRequest())
-		{
+
+		if (player.hasItemRequest()) {
 			return;
 		}
 		
 		final Weapon weaponItem = player.getActiveWeaponItem();
-		if (weaponItem == null)
-		{
+		if (isNull(weaponItem)) {
 			return;
 		}
 		
 		Item wpn = player.getInventory().getPaperdollItem(Inventory.PAPERDOLL_RHAND);
-		if (wpn == null)
-		{
+		if (isNull(wpn)) {
 			wpn = player.getInventory().getPaperdollItem(Inventory.PAPERDOLL_LHAND);
 		}
 		
-		if ((wpn == null) || wpn.isAugmented() || (weaponItem.getChangeWeaponId() == 0))
-		{
+		if (!GameUtils.isWeapon(wpn) || wpn.isAugmented() || weaponItem.getChangeWeaponId() == 0) {
 			return;
 		}
 		
 		final int newItemId = weaponItem.getChangeWeaponId();
-		if (newItemId == -1)
-		{
+		if (newItemId == -1) {
 			return;
 		}
 		
 		final int enchantLevel = wpn.getEnchantLevel();
 		final AttributeHolder elementals = wpn.getAttributes() == null ? null : wpn.getAttackAttribute();
-		final Item[] unequiped = player.getInventory().unEquipItemInBodySlotAndRecord(wpn.getItem().getBodyPart());
+		final Item[] unequiped = player.getInventory().unEquipItemInBodySlotAndRecord(wpn.getTemplate().getBodyPart().getId());
 		final InventoryUpdate iu = new InventoryUpdate();
 		for (Item unequippedItem : unequiped)
 		{
@@ -101,7 +81,7 @@ public final class ConvertItem extends AbstractEffect
 		byte count = 0;
 		for (Item unequippedItem : unequiped)
 		{
-			if (!(unequippedItem.getItem() instanceof Weapon))
+			if (!(unequippedItem.getTemplate() instanceof Weapon))
 			{
 				count++;
 				continue;

@@ -54,7 +54,7 @@ public abstract class AbstractBeastShot implements IItemHandler {
             return false;
         }
 
-        var skills = item.getItem().getSkills(ItemSkillType.NORMAL);
+        var skills = item.getTemplate().getSkills(ItemSkillType.NORMAL);
         if (isNullOrEmpty(skills)) {
             LOGGER.warn("item {} is missing skills!", item);
             return false;

@@ -3,16 +3,12 @@ package org.l2j.gameserver.datatables;
 import io.github.joealisson.primitive.HashIntMap;
 import io.github.joealisson.primitive.IntMap;
 import org.l2j.commons.database.DatabaseFactory;
-import org.l2j.gameserver.Config;
 import org.l2j.commons.threading.ThreadPool;
+import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.xml.impl.EnchantItemHPBonusData;
 import org.l2j.gameserver.engine.items.DocumentEngine;
 import org.l2j.gameserver.enums.ItemLocation;
 import org.l2j.gameserver.idfactory.IdFactory;
-import org.l2j.gameserver.settings.GeneralSettings;
-import org.l2j.gameserver.settings.ServerSettings;
-import org.l2j.gameserver.util.GameXmlReader;
-import org.l2j.gameserver.world.World;
 import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.Attackable;
 import org.l2j.gameserver.model.actor.Creature;
@@ -22,7 +18,12 @@ import org.l2j.gameserver.model.events.EventDispatcher;
 import org.l2j.gameserver.model.events.impl.item.OnItemCreate;
 import org.l2j.gameserver.model.items.*;
 import org.l2j.gameserver.model.items.instance.Item;
+import org.l2j.gameserver.model.items.type.WeaponType;
+import org.l2j.gameserver.settings.GeneralSettings;
+import org.l2j.gameserver.settings.ServerSettings;
 import org.l2j.gameserver.util.GMAudit;
+import org.l2j.gameserver.util.GameXmlReader;
+import org.l2j.gameserver.world.World;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.w3c.dom.Document;
@@ -36,7 +37,6 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.ScheduledFuture;
 
-import static java.util.Objects.nonNull;
 import static org.l2j.commons.configuration.Configurator.getSettings;
 
 /**
@@ -48,6 +48,7 @@ public final class ItemTable extends GameXmlReader {
 
     private final IntMap<ItemTemplate> items = new HashIntMap<>(12160);
 
+    @Deprecated
     public static final Map<String, Long> SLOTS = new HashMap<>();
 
     static {
@@ -96,6 +97,7 @@ public final class ItemTable extends GameXmlReader {
     private final IntMap<EtcItem> etcItems = new HashIntMap<>();
     private final IntMap<Armor> armors = new HashIntMap<>();
     private final IntMap<Weapon> weapons = new HashIntMap<>();
+
     private ItemTemplate[] allTemplates;
 
     private ItemTable() {
@@ -144,7 +146,9 @@ public final class ItemTable extends GameXmlReader {
     }
 
     private void parseWeapon(Node weaponNode) {
-
+        var attrs = weaponNode.getAttributes();
+        var weapon = new Weapon(parseInt(attrs, "id"), parseString(attrs, "name"), parseEnum(attrs, WeaponType.class, "type"));
+        weapon.setBodyPart(parseEnum(attrs, BodyPart.class, "body-part"));
     }
 
     private void parseArmor(Node armorNode) {
@@ -244,14 +248,14 @@ public final class ItemTable extends GameXmlReader {
                     LOGGER_ITEMS.info("CREATE:" + process //
                             + ", item " + item.getObjectId() //
                             + ":+" + item.getEnchantLevel() //
-                            + " " + item.getItem().getName() //
+                            + " " + item.getTemplate().getName() //
                             + "(" + item.getCount() //
                             + "), " + actor
                             + ", " + reference);
                 } else {
                     LOGGER_ITEMS.info("CREATE:" + process //
                             + ", item " + item.getObjectId() //
-                            + ":" + item.getItem().getName() //
+                            + ":" + item.getTemplate().getName() //
                             + "(" + item.getCount() //
                             + "), " + actor //
                             + ", " + reference); //
@@ -280,7 +284,7 @@ public final class ItemTable extends GameXmlReader {
         }
 
         // Notify to scripts
-        EventDispatcher.getInstance().notifyEventAsync(new OnItemCreate(process, item, actor, reference), item.getItem());
+        EventDispatcher.getInstance().notifyEventAsync(new OnItemCreate(process, item, actor, reference), item.getTemplate());
         return item;
     }
 
@@ -319,7 +323,7 @@ public final class ItemTable extends GameXmlReader {
                         LOGGER_ITEMS.info("DELETE:" + String.valueOf(process) // in case of null
                                 + ", item " + item.getObjectId() //
                                 + ":+" + item.getEnchantLevel() //
-                                + " " + item.getItem().getName() //
+                                + " " + item.getTemplate().getName() //
                                 + "(" + item.getCount() //
                                 + "), PrevCount(" + old //
                                 + "), " + String.valueOf(actor) // in case of null
@@ -327,7 +331,7 @@ public final class ItemTable extends GameXmlReader {
                     } else {
                         LOGGER_ITEMS.info("DELETE:" + String.valueOf(process) // in case of null
                                 + ", item " + item.getObjectId() //
-                                + ":" + item.getItem().getName() //
+                                + ":" + item.getTemplate().getName() //
                                 + "(" + item.getCount() //
                                 + "), PrevCount(" + old //
                                 + "), " + String.valueOf(actor) // in case of null
@@ -357,7 +361,7 @@ public final class ItemTable extends GameXmlReader {
             }
 
             // if it's a pet control item, delete the pet as well
-            if (item.getItem().isPetItem()) {
+            if (item.getTemplate().isPetItem()) {
                 try (Connection con = DatabaseFactory.getInstance().getConnection();
                      PreparedStatement statement = con.prepareStatement("DELETE FROM pets WHERE item_obj_id=?")) {
                     // Delete the pet in db

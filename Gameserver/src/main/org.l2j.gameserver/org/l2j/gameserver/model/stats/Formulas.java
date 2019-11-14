@@ -1283,13 +1283,13 @@ public final class Formulas {
         switch (attackType) {
             case BOW:
             case CROSSBOW:
-            case TWOHANDCROSSBOW: {
+            case TWO_HAND_CROSSBOW: {
                 return (int) (totalAttackTime * 0.95);
             }
-            case DUALBLUNT:
-            case DUALDAGGER:
+            case DUAL_BLUNT:
+            case DUAL_DAGGER:
             case DUAL:
-            case DUALFIST: {
+            case FIST: {
                 if (secondHit) {
                     return (int) (totalAttackTime * 0.6);
                 }

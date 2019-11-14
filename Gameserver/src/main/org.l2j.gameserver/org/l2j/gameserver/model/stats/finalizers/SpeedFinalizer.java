@@ -18,14 +18,14 @@ package org.l2j.gameserver.model.stats.finalizers;
 
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.xml.impl.PetDataTable;
-import org.l2j.gameserver.world.zone.ZoneManager;
 import org.l2j.gameserver.model.PetLevelData;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Player;
-import org.l2j.gameserver.model.items.ItemTemplate;
+import org.l2j.gameserver.model.items.BodyPart;
 import org.l2j.gameserver.model.stats.BaseStats;
 import org.l2j.gameserver.model.stats.IStatsFunction;
 import org.l2j.gameserver.model.stats.Stats;
+import org.l2j.gameserver.world.zone.ZoneManager;
 import org.l2j.gameserver.world.zone.ZoneType;
 import org.l2j.gameserver.world.zone.type.SwampZone;
 
@@ -45,7 +45,7 @@ public class SpeedFinalizer implements IStatsFunction {
         double baseValue = getBaseSpeed(creature, stat);
         if (isPlayer(creature)) {
             // Enchanted feet bonus
-            baseValue += calcEnchantBodyPart(creature, ItemTemplate.SLOT_FEET);
+            baseValue += calcEnchantBodyPart(creature, BodyPart.FEET);
         }
 
         final byte speedStat = (byte) creature.getStat().getAdd(Stats.STAT_BONUS_SPEED, -1);

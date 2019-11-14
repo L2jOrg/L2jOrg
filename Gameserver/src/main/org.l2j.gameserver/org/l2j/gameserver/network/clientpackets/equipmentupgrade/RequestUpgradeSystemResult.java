@@ -61,7 +61,7 @@ public class RequestUpgradeSystemResult extends ClientPacket
             return;
         }
 
-        if ((existingItem.getItem().getId() != upgradeHolder.getRequiredItemId()) || (existingItem.getEnchantLevel() != upgradeHolder.getRequiredItemEnchant()))
+        if ((existingItem.getTemplate().getId() != upgradeHolder.getRequiredItemId()) || (existingItem.getEnchantLevel() != upgradeHolder.getRequiredItemEnchant()))
         {
             player.sendPacket(new ExUpgradeSystemResult(0, 0));
             return;

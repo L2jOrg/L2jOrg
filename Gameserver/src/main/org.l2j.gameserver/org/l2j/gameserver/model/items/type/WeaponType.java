@@ -6,28 +6,30 @@ import org.l2j.gameserver.model.stats.TraitType;
  * Weapon Type enumerated.
  *
  * @author mkizub
+ * @author JoeAlisson
  */
 public enum WeaponType implements ItemType {
-    NONE(TraitType.NONE),
+    NONE(TraitType.NONE), // TODO should be Shield
     SWORD(TraitType.SWORD),
+    TWO_HAND_SWORD(TraitType.TWO_HAND_SWORD),
+    MAGIC_SWORD(TraitType.MAGIC_SWORD),
     BLUNT(TraitType.BLUNT),
+    HAMMER(TraitType.HAMMER),
+    ROD(TraitType.ROD),
+    STAFF(TraitType.STAFF),
     DAGGER(TraitType.DAGGER),
-    POLE(TraitType.POLE),
-    DUALFIST(TraitType.DUALFIST),
+    SPEAR(TraitType.SPEAR),
+    FIST(TraitType.FIST),
     BOW(TraitType.BOW),
     ETC(TraitType.ETC),
     DUAL(TraitType.DUAL),
-    TWO_HANDED_SWORD(TraitType.TWO_HANDED_SWORD),
-    FIST(TraitType.FIST), // 0 items with that type
-    FISHINGROD(TraitType.NONE),
+    FISHING_ROD(TraitType.NONE),
     RAPIER(TraitType.RAPIER),
     CROSSBOW(TraitType.CROSSBOW),
-    ANCIENTSWORD(TraitType.ANCIENTSWORD),
-    FLAG(TraitType.NONE), // 0 items with that type
-    DUALDAGGER(TraitType.DUALDAGGER),
-    OWNTHING(TraitType.NONE), // 0 items with that type
-    TWOHANDCROSSBOW(TraitType.TWOHANDCROSSBOW),
-    DUALBLUNT(TraitType.DUALBLUNT);
+    ANCIENT_SWORD(TraitType.ANCIENT_SWORD),
+    DUAL_DAGGER(TraitType.DUAL_DAGGER),
+    TWO_HAND_CROSSBOW(TraitType.TWO_HAND_CROSSBOW),
+    DUAL_BLUNT(TraitType.DUAL_BLUNT);
 
     private final int _mask;
     private final TraitType _traitType;
@@ -58,14 +60,14 @@ public enum WeaponType implements ItemType {
     }
 
     public boolean isRanged() {
-        return (this == BOW) || (this == CROSSBOW) || (this == TWOHANDCROSSBOW);
+        return (this == BOW) || (this == CROSSBOW) || (this == TWO_HAND_CROSSBOW);
     }
 
     public boolean isCrossbow() {
-        return (this == CROSSBOW) || (this == TWOHANDCROSSBOW);
+        return (this == CROSSBOW) || (this == TWO_HAND_CROSSBOW);
     }
 
     public boolean isDual() {
-        return (this == DUALFIST) || (this == DUAL) || (this == DUALDAGGER) || (this == DUALBLUNT);
+        return (this == FIST) || (this == DUAL) || (this == DUAL_DAGGER) || (this == DUAL_BLUNT);
     }
 }

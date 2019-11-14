@@ -372,7 +372,7 @@ public class MultiSellChoose extends ClientPacket {
                     final Item addedItem = inventory.addItem("Multisell", product.getId(), totalCount, player, npc, false);
 
                     // Check if the newly given item should be enchanted.
-                    if (itemEnchantmentProcessed && list.isMaintainEnchantment() && (itemEnchantment != null) && addedItem.isEquipable() && addedItem.getItem().getClass().equals(itemEnchantment.getItem().getClass())) {
+                    if (itemEnchantmentProcessed && list.isMaintainEnchantment() && (itemEnchantment != null) && addedItem.isEquipable() && addedItem.getTemplate().getClass().equals(itemEnchantment.getItem().getClass())) {
                         addedItem.setEnchantLevel(itemEnchantment.getEnchantLevel());
                         addedItem.setAugmentation(itemEnchantment.getAugmentation(), false);
                         if (addedItem.isWeapon())

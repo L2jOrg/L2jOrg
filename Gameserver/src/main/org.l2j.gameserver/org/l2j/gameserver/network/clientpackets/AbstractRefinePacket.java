@@ -127,7 +127,7 @@ public abstract class AbstractRefinePacket extends ClientPacket {
             }
         }
 
-        if (!(item.getItem() instanceof Weapon) && !(item.getItem() instanceof Armor)) {
+        if (!(item.getTemplate() instanceof Weapon) && !(item.getTemplate() instanceof Armor)) {
             return false; // neither weapon nor armor ?
         }
 

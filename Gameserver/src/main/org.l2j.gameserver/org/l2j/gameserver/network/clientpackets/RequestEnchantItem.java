@@ -143,7 +143,7 @@ public final class RequestEnchantItem extends ClientPacket {
                     break;
                 }
                 case SUCCESS: {
-                    final ItemTemplate it = item.getItem();
+                    final ItemTemplate it = item.getTemplate();
                     // Increase enchant level only if scroll's base template has chance, some armors can success over +20 but they shouldn't have increased.
                     if (scrollTemplate.getChance(activeChar, item) > 0) {
                         if (scrollTemplate.isGiant()) {
@@ -270,8 +270,8 @@ public final class RequestEnchantItem extends ClientPacket {
                             }
                         } else {
                             // enchant failed, destroy item
-                            final int crystalId = item.getItem().getCrystalItemId();
-                            int count = item.getCrystalCount() - ((item.getItem().getCrystalCount() + 1) / 2);
+                            final int crystalId = item.getTemplate().getCrystalItemId();
+                            int count = item.getCrystalCount() - ((item.getTemplate().getCrystalCount() + 1) / 2);
                             if (count < 1) {
                                 count = 1;
                             }

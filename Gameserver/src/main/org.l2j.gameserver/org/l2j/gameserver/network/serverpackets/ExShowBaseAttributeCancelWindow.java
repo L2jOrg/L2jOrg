@@ -34,7 +34,7 @@ public class ExShowBaseAttributeCancelWindow extends ServerPacket {
      * @return
      */
     private long getPrice(Item item) {
-        switch (item.getItem().getCrystalType()) {
+        switch (item.getTemplate().getCrystalType()) {
             case S: {
                 if (item.isWeapon()) {
                     _price = 50000;

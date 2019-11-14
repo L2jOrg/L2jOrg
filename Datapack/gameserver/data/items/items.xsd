@@ -51,7 +51,9 @@
 
     <xs:complexType name="Weapon">
         <xs:complexContent>
-            <xs:extension base="AbstractItem"/>
+            <xs:extension base="AbstractItem">
+                <xs:attribute name="type" type="WeaponType"/>
+            </xs:extension>
         </xs:complexContent>
     </xs:complexType>
 

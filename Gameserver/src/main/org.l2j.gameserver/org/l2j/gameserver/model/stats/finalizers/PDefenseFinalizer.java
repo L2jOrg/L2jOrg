@@ -21,7 +21,7 @@ import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Pet;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.itemcontainer.Inventory;
-import org.l2j.gameserver.model.items.ItemTemplate;
+import org.l2j.gameserver.model.items.BodyPart;
 import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.stats.IStatsFunction;
 import org.l2j.gameserver.model.stats.Stats;
@@ -60,14 +60,14 @@ public class PDefenseFinalizer implements IStatsFunction {
         final Inventory inv = creature.getInventory();
         if (inv != null) {
             for (Item item : inv.getPaperdollItems()) {
-                baseValue += item.getItem().getStats(stat, 0);
+                baseValue += item.getTemplate().getStats(stat, 0);
             }
 
             if (isPlayer(creature)) {
                 final Player player = creature.getActingPlayer();
                 for (int slot : SLOTS) {
                     if (!inv.isPaperdollSlotEmpty(slot) || //
-                            ((slot == Inventory.PAPERDOLL_LEGS) && !inv.isPaperdollSlotEmpty(Inventory.PAPERDOLL_CHEST) && (inv.getPaperdollItem(Inventory.PAPERDOLL_CHEST).getItem().getBodyPart() == ItemTemplate.SLOT_FULL_ARMOR))) {
+                            ((slot == Inventory.PAPERDOLL_LEGS) && !inv.isPaperdollSlotEmpty(Inventory.PAPERDOLL_CHEST) && (inv.getPaperdollItem(Inventory.PAPERDOLL_CHEST).getTemplate().getBodyPart() == BodyPart.FULL_ARMOR))) {
                         final int defaultStatValue = player.getTemplate().getBaseDefBySlot(slot);
                         baseValue -= creature.getTransformation().map(transform -> transform.getBaseDefBySlot(player, slot)).orElse(defaultStatValue);
                     }

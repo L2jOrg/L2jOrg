@@ -99,4 +99,30 @@
         </xs:restriction>
     </xs:simpleType>
 
+    <xs:simpleType name="WeaponType">
+        <xs:restriction base="xs:token">
+            <xs:enumeration value="NONE"/>
+            <xs:enumeration value="SWORD"/>
+            <xs:enumeration value="TWO_HAND_SWORD"/>
+            <xs:enumeration value="MAGIC_SWORD"/>
+            <xs:enumeration value="BLUNT"/>
+            <xs:enumeration value="HAMMER"/>
+            <xs:enumeration value="ROD"/>
+            <xs:enumeration value="STAFF"/>
+            <xs:enumeration value="DAGGER"/>
+            <xs:enumeration value="SPEAR"/>
+            <xs:enumeration value="FIST"/>
+            <xs:enumeration value="BOW"/>
+            <xs:enumeration value="ETC"/>
+            <xs:enumeration value="DUAL"/>
+            <xs:enumeration value="FISHING_ROD"/>
+            <xs:enumeration value="RAPIER"/>
+            <xs:enumeration value="CROSSBOW"/>
+            <xs:enumeration value="ANCIENT_SWORD"/>
+            <xs:enumeration value="DUAL_DAGGER"/>
+            <xs:enumeration value="TWO_HAND_CROSSBOW"/>
+            <xs:enumeration value="DUAL_BLUNT"/>
+        </xs:restriction>
+    </xs:simpleType>
+
 </xs:schema>

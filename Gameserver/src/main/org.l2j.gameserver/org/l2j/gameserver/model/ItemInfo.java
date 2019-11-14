@@ -83,7 +83,7 @@ public class ItemInfo {
         _objectId = item.getObjectId();
 
         // Get the ItemTemplate of the Item
-        _item = item.getItem();
+        _item = item.getTemplate();
 
         // Get the enchant level of the Item
         _enchantLevel = item.getEnchantLevel();

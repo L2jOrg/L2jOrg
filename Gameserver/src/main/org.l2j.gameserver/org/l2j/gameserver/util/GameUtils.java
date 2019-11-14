@@ -513,6 +513,10 @@ public final class GameUtils {
         return object instanceof Item;
     }
 
+    public static boolean isWeapon(Item item) {
+        return nonNull(item) && isWeapon(item.getTemplate());
+    }
+
     public static boolean isWeapon(ItemTemplate item) {
         return item instanceof Weapon;
     }

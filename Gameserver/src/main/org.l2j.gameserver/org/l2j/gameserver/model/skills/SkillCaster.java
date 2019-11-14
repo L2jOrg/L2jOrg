@@ -579,7 +579,7 @@ public class SkillCaster implements Runnable {
         if ((_skill.getItemConsumeId() > 0) && (_skill.getItemConsumeCount() > 0) && (caster.getInventory() != null)) {
             // Get the Item consumed by the spell.
             final Item requiredItem = caster.getInventory().getItemByItemId(_skill.getItemConsumeId());
-            if (_skill.isBad() || (requiredItem.getItem().getDefaultAction() == ActionType.NONE)) // Non reagent items are removed at finishSkill or item handler.
+            if (_skill.isBad() || (requiredItem.getTemplate().getDefaultAction() == ActionType.NONE)) // Non reagent items are removed at finishSkill or item handler.
             {
                 caster.destroyItem(_skill.toString(), requiredItem.getObjectId(), _skill.getItemConsumeCount(), caster, false);
             }
@@ -715,7 +715,7 @@ public class SkillCaster implements Runnable {
         }
 
         // Consume skill reduced item on success.
-        if ((_item != null) && (_item.getItem().getDefaultAction() == ActionType.SKILL_REDUCE_ON_SKILL_SUCCESS) && (_skill.getItemConsumeId() > 0) && (_skill.getItemConsumeCount() > 0)) {
+        if ((_item != null) && (_item.getTemplate().getDefaultAction() == ActionType.SKILL_REDUCE_ON_SKILL_SUCCESS) && (_skill.getItemConsumeId() > 0) && (_skill.getItemConsumeCount() > 0)) {
             if (!caster.destroyItem(_skill.toString(), _item.getObjectId(), _skill.getItemConsumeCount(), target, true)) {
                 return false;
             }

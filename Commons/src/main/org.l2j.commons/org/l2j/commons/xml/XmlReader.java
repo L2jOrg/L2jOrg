@@ -290,9 +290,18 @@ public abstract class XmlReader
      * @param defaultValue the default value
      * @return if the node is not null, the value of the parsed node, otherwise the default value
      */
-    protected int parseInt(Node node, Integer defaultValue)
+    protected int parseInt(Node node, int defaultValue)
     {
         return node != null ? Integer.decode(node.getNodeValue()) : defaultValue;
+    }
+
+    /**
+     * parse the node value as int.
+     *
+     * @return -1 if node is null or the node name not exists.
+     */
+    protected int parseInt(NamedNodeMap node, String name) {
+        return nonNull(node) ? parseInt(node.getNamedItem(name), -1) : -1;
     }
 
     /**

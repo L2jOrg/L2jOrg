@@ -33,11 +33,11 @@ public class SellListProcure extends ServerPacket {
         writeShort((short) _sellList.size()); // list size
 
         for (Item item : _sellList.keySet()) {
-            writeShort((short) item.getItem().getType1());
+            writeShort((short) item.getTemplate().getType1());
             writeInt(item.getObjectId());
             writeInt(item.getDisplayId());
             writeLong(_sellList.get(item)); // count
-            writeShort((short) item.getItem().getType2());
+            writeShort((short) item.getTemplate().getType2());
             writeShort((short) 0); // unknown
             writeLong(0); // price, u shouldnt get any adena for crops, only raw materials
         }

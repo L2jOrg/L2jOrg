@@ -377,7 +377,7 @@ public class PcInventory extends Inventory {
                 }
 
                 // Notify to scripts
-                EventDispatcher.getInstance().notifyEventAsync(new OnPlayerItemAdd(actor, item), actor, item.getItem());
+                EventDispatcher.getInstance().notifyEventAsync(new OnPlayerItemAdd(actor, item), actor, item.getTemplate());
             }
         }
 
@@ -435,7 +435,7 @@ public class PcInventory extends Inventory {
             }
 
             // Notify to scripts
-            EventDispatcher.getInstance().notifyEventAsync(new OnPlayerItemAdd(actor, item), actor, item.getItem());
+            EventDispatcher.getInstance().notifyEventAsync(new OnPlayerItemAdd(actor, item), actor, item.getTemplate());
         }
         return item;
     }
@@ -464,7 +464,7 @@ public class PcInventory extends Inventory {
         }
 
         // Notify to scripts
-        EventDispatcher.getInstance().notifyEventAsync(new OnPlayerItemTransfer(actor, item, target), item.getItem());
+        EventDispatcher.getInstance().notifyEventAsync(new OnPlayerItemTransfer(actor, item, target), item.getTemplate());
         return item;
     }
 
@@ -515,7 +515,7 @@ public class PcInventory extends Inventory {
 
         // Notify to scripts
         if (item != null) {
-            EventDispatcher.getInstance().notifyEventAsync(new OnPlayerItemDestroy(actor, item), item.getItem());
+            EventDispatcher.getInstance().notifyEventAsync(new OnPlayerItemDestroy(actor, item), item.getTemplate());
         }
         return item;
     }
@@ -581,7 +581,7 @@ public class PcInventory extends Inventory {
 
         // Notify to scripts
         if (item != null) {
-            EventDispatcher.getInstance().notifyEventAsync(new OnPlayerItemDrop(actor, item, item.getLocation()), item.getItem());
+            EventDispatcher.getInstance().notifyEventAsync(new OnPlayerItemDrop(actor, item, item.getLocation()), item.getTemplate());
         }
         return item;
     }
@@ -610,7 +610,7 @@ public class PcInventory extends Inventory {
 
         // Notify to scripts
         if (item != null) {
-            EventDispatcher.getInstance().notifyEventAsync(new OnPlayerItemDrop(actor, item, item.getLocation()), item.getItem());
+            EventDispatcher.getInstance().notifyEventAsync(new OnPlayerItemDrop(actor, item, item.getLocation()), item.getTemplate());
         }
         return item;
     }
@@ -698,7 +698,7 @@ public class PcInventory extends Inventory {
      */
     public boolean validateCapacity(Item item) {
         int slots = 0;
-        if (!item.isStackable() || ((getInventoryItemCount(item.getId(), -1) <= 0) && !item.getItem().hasExImmediateEffect())) {
+        if (!item.isStackable() || ((getInventoryItemCount(item.getId(), -1) <= 0) && !item.getTemplate().hasExImmediateEffect())) {
             slots++;
         }
         return validateCapacity(slots, item.isQuestItem());

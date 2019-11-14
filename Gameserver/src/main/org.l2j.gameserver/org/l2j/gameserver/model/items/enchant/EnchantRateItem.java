@@ -56,7 +56,7 @@ public final class EnchantRateItem {
     public boolean validate(ItemTemplate item) {
         if ((_itemId != 0) && (_itemId != item.getId())) {
             return false;
-        } else if ((_slot != 0) && ((item.getBodyPart() & _slot) == 0)) {
+        } else if ((_slot != 0) && ((item.getBodyPart().getId() & _slot) == 0)) {
             return false;
         } else if ((_isMagicWeapon != null) && (item.isMagicWeapon() != _isMagicWeapon)) {
             return false;

@@ -1,14 +1,13 @@
 package org.l2j.gameserver.model.items;
 
 import org.l2j.gameserver.Config;
-import org.l2j.gameserver.datatables.ItemTable;
 import org.l2j.gameserver.enums.AttributeType;
 import org.l2j.gameserver.enums.ItemGrade;
 import org.l2j.gameserver.enums.ItemSkillType;
 import org.l2j.gameserver.model.ExtractableProduct;
-import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.PcCondOverride;
 import org.l2j.gameserver.model.StatsSet;
+import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.ceremonyofchaos.CeremonyOfChaosEvent;
 import org.l2j.gameserver.model.commission.CommissionItemType;
@@ -17,7 +16,10 @@ import org.l2j.gameserver.model.events.ListenersContainer;
 import org.l2j.gameserver.model.holders.ItemSkillHolder;
 import org.l2j.gameserver.model.interfaces.IIdentifiable;
 import org.l2j.gameserver.model.items.enchant.attribute.AttributeHolder;
-import org.l2j.gameserver.model.items.type.*;
+import org.l2j.gameserver.model.items.type.ActionType;
+import org.l2j.gameserver.model.items.type.CrystalType;
+import org.l2j.gameserver.model.items.type.EtcItemType;
+import org.l2j.gameserver.model.items.type.ItemType;
 import org.l2j.gameserver.model.stats.Stats;
 import org.l2j.gameserver.model.stats.functions.FuncAdd;
 import org.l2j.gameserver.model.stats.functions.FuncSet;
@@ -97,9 +99,9 @@ public abstract class ItemTemplate extends ListenersContainer implements IIdenti
     protected int _type2; // different lists for armor, weapon, etc
     protected List<FuncTemplate> _funcTemplates;
     protected List<Condition> _preConditions;
-    private int _itemId;
+    private int id;
     private int _displayId;
-    private String _name;
+    private String name;
     private String _icon;
     private int _weight;
     private boolean _stackable;
@@ -107,7 +109,6 @@ public abstract class ItemTemplate extends ListenersContainer implements IIdenti
     private int _equipReuseDelay;
     private long _time;
     private int _autoDestroyTime;
-    private long _bodyPart;
     private int _referencePrice;
     private int _crystalCount;
     private boolean _sellable;
@@ -137,6 +138,8 @@ public abstract class ItemTemplate extends ListenersContainer implements IIdenti
     private CommissionItemType _commissionItemType;
     private boolean _isBlessed;
 
+    protected BodyPart bodyPart; // TODO should be on Weapon and Armor
+
     /**
      * Constructor of the ItemTemplate that fill class variables.<BR>
      * <BR>
@@ -147,17 +150,22 @@ public abstract class ItemTemplate extends ListenersContainer implements IIdenti
         set(set);
     }
 
+    public ItemTemplate(int id, String name) {
+        this.id = id;
+        this.name = name;
+    }
+
     public void set(StatsSet set) {
-        _itemId = set.getInt("item_id");
-        _displayId = set.getInt("displayId", _itemId);
-        _name = set.getString("name");
+        id = set.getInt("item_id");
+        _displayId = set.getInt("displayId", id);
+        name = set.getString("name");
         _icon = set.getString("icon", null);
         _weight = set.getInt("weight", 0);
         _equipReuseDelay = set.getInt("equip_reuse_delay", 0) * 1000;
 
         _time = set.getInt("time", -1);
         _autoDestroyTime = set.getInt("auto_destroy_time", -1) * 1000;
-        _bodyPart = ItemTable.SLOTS.get(set.getString("bodypart", "none"));
+        bodyPart = set.getEnum("bodypart", BodyPart.class, BodyPart.NONE);
         _referencePrice = set.getInt("price", 0);
         _crystalType = set.getEnum("crystal_type", CrystalType.class, CrystalType.NONE);
         _crystalCount = set.getInt("crystal_count", 0);
@@ -182,9 +190,9 @@ public abstract class ItemTemplate extends ListenersContainer implements IIdenti
         _reuseDelay = set.getInt("reuse_delay", 0);
         _sharedReuseGroup = set.getInt("shared_reuse_group", 0);
         _commissionItemType = set.getEnum("commissionItemType", CommissionItemType.class, CommissionItemType.OTHER_ITEM);
-        _common = ((_itemId >= 11605) && (_itemId <= 12361));
-        _heroItem = ((_itemId >= 6611) && (_itemId <= 6621)) || ((_itemId >= 9388) && (_itemId <= 9390)) || (_itemId == 6842);
-        _pvpItem = ((_itemId >= 10667) && (_itemId <= 10835)) || ((_itemId >= 12852) && (_itemId <= 12977)) || ((_itemId >= 14363) && (_itemId <= 14525)) || (_itemId == 14528) || (_itemId == 14529) || (_itemId == 14558) || ((_itemId >= 15913) && (_itemId <= 16024)) || ((_itemId >= 16134) && (_itemId <= 16147)) || (_itemId == 16149) || (_itemId == 16151) || (_itemId == 16153) || (_itemId == 16155) || (_itemId == 16157) || (_itemId == 16159) || ((_itemId >= 16168) && (_itemId <= 16176)) || ((_itemId >= 16179) && (_itemId <= 16220));
+        _common = ((id >= 11605) && (id <= 12361));
+        _heroItem = ((id >= 6611) && (id <= 6621)) || ((id >= 9388) && (id <= 9390)) || (id == 6842);
+        _pvpItem = ((id >= 10667) && (id <= 10835)) || ((id >= 12852) && (id <= 12977)) || ((id >= 14363) && (id <= 14525)) || (id == 14528) || (id == 14529) || (id == 14558) || ((id >= 15913) && (id <= 16024)) || ((id >= 16134) && (id <= 16147)) || (id == 16149) || (id == 16151) || (id == 16153) || (id == 16155) || (id == 16157) || (id == 16159) || ((id >= 16168) && (id <= 16176)) || ((id >= 16179) && (id <= 16220));
     }
 
     /**
@@ -234,7 +242,7 @@ public abstract class ItemTemplate extends ListenersContainer implements IIdenti
      */
     @Override
     public final int getId() {
-        return _itemId;
+        return id;
     }
 
     /**
@@ -348,7 +356,7 @@ public abstract class ItemTemplate extends ListenersContainer implements IIdenti
      * @return the name of the item.
      */
     public final String getName() {
-        return _name;
+        return name;
     }
 
 
@@ -382,8 +390,8 @@ public abstract class ItemTemplate extends ListenersContainer implements IIdenti
     /**
      * @return the part of the body used with the item.
      */
-    public final long getBodyPart() {
-        return _bodyPart;
+    public final BodyPart getBodyPart() {
+        return bodyPart;
     }
 
     /**
@@ -404,7 +412,7 @@ public abstract class ItemTemplate extends ListenersContainer implements IIdenti
      * @return {@code true} if the item can be equipped, {@code false} otherwise.
      */
     public boolean isEquipable() {
-        return (_bodyPart != 0) && !(getItemType() instanceof EtcItemType);
+        return (bodyPart != BodyPart.NONE) && !(getItemType() instanceof EtcItemType);
     }
 
     /**
@@ -455,7 +463,7 @@ public abstract class ItemTemplate extends ListenersContainer implements IIdenti
      * @return {@code true} if the item can be enchanted, {@code false} otherwise.
      */
     public final int isEnchantable() {
-        return Arrays.binarySearch(Config.ENCHANT_BLACKLIST, _itemId) < 0 ? _enchantable : 0;
+        return Arrays.binarySearch(Config.ENCHANT_BLACKLIST, id) < 0 ? _enchantable : 0;
     }
 
     /**
@@ -645,7 +653,7 @@ public abstract class ItemTemplate extends ListenersContainer implements IIdenti
                     } else if (msgId != 0) {
                         final SystemMessage sm = SystemMessage.getSystemMessage(msgId);
                         if (preCondition.isAddName()) {
-                            sm.addItemName(_itemId);
+                            sm.addItemName(id);
                         }
                         activeChar.sendPacket(sm);
                     }
@@ -673,7 +681,7 @@ public abstract class ItemTemplate extends ListenersContainer implements IIdenti
     }
 
     public boolean isOlyRestrictedItem() {
-        return _is_oly_restricted || Config.LIST_OLY_RESTRICTED_ITEMS.contains(_itemId);
+        return _is_oly_restricted || Config.LIST_OLY_RESTRICTED_ITEMS.contains(id);
     }
 
     /**
@@ -702,7 +710,7 @@ public abstract class ItemTemplate extends ListenersContainer implements IIdenti
      */
     @Override
     public String toString() {
-        return _name + "(" + _itemId + ")";
+        return name + "(" + id + ")";
     }
 
     /**

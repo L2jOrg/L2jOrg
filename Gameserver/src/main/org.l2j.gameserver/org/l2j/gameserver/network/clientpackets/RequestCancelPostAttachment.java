@@ -101,7 +101,7 @@ public final class RequestCancelPostAttachment extends ClientPacket {
                 return;
             }
 
-            weight += item.getCount() * item.getItem().getWeight();
+            weight += item.getCount() * item.getTemplate().getWeight();
             if (!item.isStackable()) {
                 slots += item.getCount();
             } else if (activeChar.getInventory().getItemByItemId(item.getId()) == null) {

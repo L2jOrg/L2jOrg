@@ -1,26 +1,10 @@
-/*
- * This file is part of the L2J Mobius project.
- * 
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- * 
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
- * General Public License for more details.
- * 
- * You should have received a copy of the GNU General Public License
- * along with this program. If not, see <http://www.gnu.org/licenses/>.
- */
 package handlers.skillconditionhandlers;
 
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.itemcontainer.Inventory;
-import org.l2j.gameserver.model.items.ItemTemplate;
+import org.l2j.gameserver.model.items.BodyPart;
 import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.items.type.ArmorType;
 import org.l2j.gameserver.model.skills.ISkillCondition;
@@ -65,7 +49,7 @@ public class EquipArmorSkillCondition implements ISkillCondition
 		{
 			return false;
 		}
-		final int chestMask = chest.getItem().getItemMask();
+		final int chestMask = chest.getTemplate().getItemMask();
 		
 		// If chest armor is different from the condition one return false
 		if ((_armorTypesMask & chestMask) == 0)
@@ -75,9 +59,9 @@ public class EquipArmorSkillCondition implements ISkillCondition
 		
 		// So from here, chest armor matches conditions
 		
-		final long chestBodyPart = chest.getItem().getBodyPart();
+		var chestBodyPart = chest.getTemplate().getBodyPart();
 		// return True if chest armor is a Full Armor
-		if (chestBodyPart == ItemTemplate.SLOT_FULL_ARMOR)
+		if (chestBodyPart == BodyPart.FULL_ARMOR)
 		{
 			return true;
 		}
@@ -87,7 +71,7 @@ public class EquipArmorSkillCondition implements ISkillCondition
 		{
 			return false;
 		}
-		final int legMask = legs.getItem().getItemMask();
+		final int legMask = legs.getTemplate().getItemMask();
 		// return true if legs armor matches too
 		return (_armorTypesMask & legMask) != 0;
 	}
