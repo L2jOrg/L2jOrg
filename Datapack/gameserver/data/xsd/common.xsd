@@ -125,11 +125,145 @@
         </xs:restriction>
     </xs:simpleType>
 
+    <xs:simpleType name="EtcItemType">
+        <xs:restriction base="xs:token">
+            <xs:enumeration value="NONE"/>
+            <xs:enumeration value="SCROLL"/>
+            <xs:enumeration value="ARROW"/>
+            <xs:enumeration value="POTION"/>
+            <xs:enumeration value="SPELLBOOK"/>
+            <xs:enumeration value="RECIPE"/>
+            <xs:enumeration value="MATERIAL"/>
+            <xs:enumeration value="PET_COLLAR"/>
+            <xs:enumeration value="CASTLE_GUARD"/>
+            <xs:enumeration value="DYE"/>
+            <xs:enumeration value="SEED"/>
+            <xs:enumeration value="SEED2"/>
+            <xs:enumeration value="HARVEST"/>
+            <xs:enumeration value="LOTTO"/>
+            <xs:enumeration value="RACE_TICKET"/>
+            <xs:enumeration value="TICKET_OF_LORD"/>
+            <xs:enumeration value="LURE"/>
+            <xs:enumeration value="CROP"/>
+            <xs:enumeration value="MATURECROP"/>
+            <xs:enumeration value="ENCHT_WP"/>
+            <xs:enumeration value="ENCHT_AM"/>
+            <xs:enumeration value="GIANT_ENCHT_WP"/>
+            <xs:enumeration value="GIANT_ENCHT_AM"/>
+            <xs:enumeration value="BLESS_ENCHT_WP"/>
+            <xs:enumeration value="BLESS_ENCHT_AM"/>
+            <xs:enumeration value="COUPON"/>
+            <xs:enumeration value="ELIXIR"/>
+            <xs:enumeration value="ENCHT_ATTR"/>
+            <xs:enumeration value="ENCHT_ATTR_CURSED"/>
+            <xs:enumeration value="BOLT"/>
+            <xs:enumeration value="ENCHT_ATTR_INC_PROP_ENCHT_WP"/>
+            <xs:enumeration value="ENCHT_ATTR_INC_PROP_ENCHT_AM"/>
+            <xs:enumeration value="BLESSED_ENCHT_ATTR_INC_PROP_ENCHT_WP"/>
+            <xs:enumeration value="BLESSED_ENCHT_ATTR_INC_PROP_ENCHT_AM"/>
+            <xs:enumeration value="BLESSED_GIANT_ENCHT_ATTR_INC_PROP_ENCHT_WP"/>
+            <xs:enumeration value="BLESSED_GIANT_ENCHT_ATTR_INC_PROP_ENCHT_AM"/>
+            <xs:enumeration value="GIANT_ENCHT_ATTR_INC_PROP_ENCHT_WP"/>
+            <xs:enumeration value="GIANT_ENCHT_ATTR_INC_PROP_ENCHT_AM"/>
+            <xs:enumeration value="ENCHT_ATTR_CRYSTAL_ENCHANT_AM"/>
+            <xs:enumeration value="ENCHT_ATTR_CRYSTAL_ENCHANT_WP"/>
+            <xs:enumeration value="ENCHT_ATTR_ANCIENT_CRYSTAL_ENCHANT_AM"/>
+            <xs:enumeration value="ENCHT_ATTR_ANCIENT_CRYSTAL_ENCHANT_WP"/>
+            <xs:enumeration value="ENCHT_ATTR_RUNE"/>
+            <xs:enumeration value="ENCHT_ATTRT_RUNE_SELECT"/>
+            <xs:enumeration value="TELEPORTBOOKMARK"/>
+            <xs:enumeration value="CHANGE_ATTR"/>
+            <xs:enumeration value="SOULSHOT"/>
+            <xs:enumeration value="SHAPE_SHIFTING_WP"/>
+            <xs:enumeration value="BLESS_SHAPE_SHIFTING_WP"/>
+            <xs:enumeration value="// EIT_RESTORE_SHAPE_SHIFTING_WP"/>
+            <xs:enumeration value="SHAPE_SHIFTING_WP_FIXED"/>
+            <xs:enumeration value="SHAPE_SHIFTING_AM"/>
+            <xs:enumeration value="BLESS_SHAPE_SHIFTING_AM"/>
+            <xs:enumeration value="SHAPE_SHIFTING_AM_FIXED"/>
+            <xs:enumeration value="SHAPE_SHIFTING_HAIRACC"/>
+            <xs:enumeration value="BLESS_SHAPE_SHIFTING_HAIRACC"/>
+            <xs:enumeration value="SHAPE_SHIFTING_HAIRACC_FIXED"/>
+            <xs:enumeration value="RESTORE_SHAPE_SHIFTING_WP"/>
+            <xs:enumeration value="RESTORE_SHAPE_SHIFTING_AM"/>
+            <xs:enumeration value="RESTORE_SHAPE_SHIFTING_HAIRACC"/>
+            <xs:enumeration value="RESTORE_SHAPE_SHIFTING_ALLITEM"/>
+            <xs:enumeration value="BLESS_INC_PROP_ENCHT_WP"/>
+            <xs:enumeration value="BLESS_INC_PROP_ENCHT_AM"/>
+            <xs:enumeration value="CARD_EVENT"/>
+            <xs:enumeration value="SHAPE_SHIFTING_ALLITEM_FIXED"/>
+            <xs:enumeration value="MULTI_ENCHT_WP"/>
+            <xs:enumeration value="MULTI_ENCHT_AM"/>
+            <xs:enumeration value="MULTI_INC_PROB_ENCHT_WP"/>
+            <xs:enumeration value="MULTI_INC_PROB_ENCHT_AM"/>
+            <xs:enumeration value="SOUL_CRYSTAL"/>
+            <xs:enumeration value="ENSOUL_STONE"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="ArmorType">
+        <xs:restriction base="xs:token">
+            <xs:enumeration value="NONE"/>
+            <xs:enumeration value="LIGHT"/>
+            <xs:enumeration value="HEAVY"/>
+            <xs:enumeration value="MAGIC"/>
+            <xs:enumeration value="SIGIL"/>
+            <xs:enumeration value="SHIELD"/>
+        </xs:restriction>
+    </xs:simpleType>
+
     <xs:simpleType name="WeaponBodyPart">
         <xs:restriction base="xs:token">
             <xs:enumeration value="RIGHT_HAND"/>
             <xs:enumeration value="LEFT_HAND"/>
             <xs:enumeration value="TWO_HAND"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="ArmorBodyPart">
+        <xs:restriction base="xs:token">
+            <xs:enumeration value="GREAT_WOLF"/>
+            <xs:enumeration value="BABY_PET"/>
+            <xs:enumeration value="STRIDER"/>
+            <xs:enumeration value="HATCHLING"/>
+            <xs:enumeration value="WOLF"/>
+            <xs:enumeration value="NONE"/>
+            <xs:enumeration value="UNDERWEAR"/>
+            <xs:enumeration value="EAR"/>
+            <xs:enumeration value="NECK"/>
+            <xs:enumeration value="FINGER"/>
+            <xs:enumeration value="HEAD"/>
+            <xs:enumeration value="LEFT_HAND"/>
+            <xs:enumeration value="GLOVES"/>
+            <xs:enumeration value="CHEST"/>
+            <xs:enumeration value="LEGS"/>
+            <xs:enumeration value="FEET"/>
+            <xs:enumeration value="BACK"/>
+            <xs:enumeration value="FULL_ARMOR"/>
+            <xs:enumeration value="HAIR"/>
+            <xs:enumeration value="ALL_DRESS"/>
+            <xs:enumeration value="HAIR2"/>
+            <xs:enumeration value="HAIR_ALL"/>
+            <xs:enumeration value="RIGHT_BRACELET"/>
+            <xs:enumeration value="LEFT_BRACELET"/>
+            <xs:enumeration value="TALISMAN"/>
+            <xs:enumeration value="BELT"/>
+            <xs:enumeration value="BROOCH"/>
+            <xs:enumeration value="BROOCH_JEWEL"/>
+            <xs:enumeration value="AGATHION"/>
+            <xs:enumeration value="ARTIFACT_BOOK"/>
+            <xs:enumeration value="ARTIFACT"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="ItemGrade">
+        <xs:restriction base="xs:token">
+            <xs:enumeration value="NONE"/>
+            <xs:enumeration value="D"/>
+            <xs:enumeration value="C"/>
+            <xs:enumeration value="B"/>
+            <xs:enumeration value="A"/>
+            <xs:enumeration value="S"/>
         </xs:restriction>
     </xs:simpleType>
 

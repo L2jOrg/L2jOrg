@@ -6,7 +6,7 @@
 
     <xs:include schemaLocation="../xsd/common.xsd"/>
 
-    <xs:element name="itemGroup" type="AbstractItem"/>
+    <xs:element name="itemGroup" type="AbstractItem" abstract="true" />
     <xs:element name="weapon" type="Weapon" substitutionGroup="itemGroup"/>
     <xs:element name="armor" type="Armor" substitutionGroup="itemGroup"/>
     <xs:element name="item" type="Item" substitutionGroup="itemGroup"/>
@@ -21,12 +21,9 @@
 
     <xs:complexType name="AbstractItem" abstract="true">
         <xs:sequence>
-            <xs:element name="attributes" type="Attributes" minOccurs="0"/>
-            <xs:element name="restriction" type="Restriction" minOccurs="0"/>
-            <xs:element name="capsuled_items" minOccurs="0" type="capsuledItemsType"/>
-            <xs:element name="cond" maxOccurs="2" minOccurs="0" type="condType"/>
-            <xs:element name="skills" minOccurs="0" type="skillsType"/>
-            <xs:element name="stats" maxOccurs="1" minOccurs="0" type="forType"/>
+            <xs:element name="restriction" type="Restriction"/>
+            <xs:element name="condition" minOccurs="0" type="condType"/>
+            <xs:element name="skills" minOccurs="0" type="SkillsType"/>
         </xs:sequence>
         <xs:attribute name="id" use="required" type="xs:positiveInteger"/>
         <xs:attribute name="name" type="xs:normalizedString" use="required"/>
@@ -34,10 +31,37 @@
         <xs:attribute name="display-id" type="xs:int" default="0"/>
     </xs:complexType>
 
-    <xs:complexType name="Attributes">
+    <xs:complexType name="Attributes" abstract="true">
         <xs:attribute name="weight" type="xs:int" default="0"/>
         <xs:attribute name="price" type="xs:int" default="0"/>
         <xs:attribute name="commission-type" type="CommissionType" default="OTHER_ITEM"/>
+        <xs:attribute name="reuse-delay" type="xs:long" />
+    </xs:complexType>
+
+    <xs:complexType name="WeaponAttributes">
+        <xs:complexContent>
+            <xs:extension base="Attributes">
+                <xs:attribute name="enchant-enabled" type="xs:boolean" default="true"/>
+                <xs:attribute name="commission-type" type="CommissionType" default="OTHER_WEAPON"/>
+                <xs:attribute name="change-weapon" type="xs:int" default="0"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="ItemAttributes">
+        <xs:complexContent>
+            <xs:extension base="Attributes">
+                <xs:attribute name="immediate-effect" type="xs:boolean" default="false"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="ArmorAttributes">
+        <xs:complexContent>
+            <xs:extension base="Attributes">
+                <xs:attribute name="enchant-enabled" type="xs:boolean" default="true"/>
+            </xs:extension>
+        </xs:complexContent>
     </xs:complexType>
 
     <xs:complexType name="Restriction">
@@ -58,37 +82,71 @@
     <xs:complexType name="Weapon">
         <xs:complexContent>
             <xs:extension base="AbstractItem">
-                <xs:attribute name="type" type="WeaponType"/>
+                <xs:sequence>
+                    <xs:element name="attributes" type="WeaponAttributes"/>
+                    <xs:element name="crystal" type="ItemCrystal"/>
+                    <xs:element name="damage" type="WeaponDamage"/>
+                    <xs:element name="consume" type="WeaponConsume"/>
+                    <xs:element name="stats" minOccurs="0" type="ItemStats"/>
+                </xs:sequence>
+                <xs:attribute name="type" type="WeaponType" use="required"/>
                 <xs:attribute name="body-part" type="WeaponBodyPart"/>
+                <xs:attribute name="is-magic" type="xs:boolean" default="false"/>
             </xs:extension>
         </xs:complexContent>
     </xs:complexType>
 
+    <xs:complexType name="WeaponConsume">
+        <xs:attribute name="soulshots" type="xs:int" default="1"/>
+        <xs:attribute name="spiritshots" type="xs:int" default="1"/>
+        <xs:attribute name="mana" type="xs:int" default="0"/>
+    </xs:complexType>
+
+    <xs:complexType name="WeaponDamage">
+        <xs:attribute name="radius" type="xs:int"/>
+        <xs:attribute name="angle" type="xs:int"/>
+    </xs:complexType>
+
     <xs:complexType name="Armor">
         <xs:complexContent>
-            <xs:extension base="AbstractItem"/>
+            <xs:extension base="AbstractItem">
+                <xs:sequence>
+                    <xs:element name="attributes" type="ArmorAttributes"/>
+                    <xs:element name="crystal" type="ItemCrystal"/>
+                    <xs:element name="stats" minOccurs="0" type="ItemStats"/>
+                </xs:sequence>
+                <xs:attribute name="type" type="ArmorType" use="required"/>
+                <xs:attribute name="body-part" type="ArmorBodyPart" use="required"/>
+            </xs:extension>
         </xs:complexContent>
+    </xs:complexType>
+
+    <xs:complexType name="ItemCrystal">
+        <xs:attribute name="type" type="ItemGrade" default="NONE"/>
+        <xs:attribute name="count" type="xs:int" default="0"/>
     </xs:complexType>
 
     <xs:complexType name="Item">
         <xs:complexContent>
             <xs:extension base="AbstractItem">
                 <xs:sequence>
-                    <xs:element name="action"
+                    <xs:element name="attributes" type="ItemAttributes"/>
+                    <xs:element name="action"/>
                 </xs:sequence>
+                <xs:attribute name="type" type="EtcItemType" use="required"/>
             </xs:extension>
         </xs:complexContent>
     </xs:complexType>
 
-    <xs:complexType name="skillsType">
+    <xs:complexType name="SkillsType">
         <xs:sequence>
-            <xs:element name="skill" type="skillType" maxOccurs="unbounded"/>
+            <xs:element name="skill" type="SkillType" maxOccurs="unbounded"/>
         </xs:sequence>
     </xs:complexType>
 
     <xs:complexType name="unequipSkillsType">
         <xs:sequence>
-            <xs:element name="skill" type="skillType" maxOccurs="unbounded"/>
+            <xs:element name="skill" type="SkillType" maxOccurs="unbounded"/>
         </xs:sequence>
     </xs:complexType>
 
@@ -98,7 +156,7 @@
         </xs:sequence>
     </xs:complexType>
 
-    <xs:complexType name="skillType">
+    <xs:complexType name="SkillType">
         <xs:attribute name="id" type="xs:positiveInteger" use="required"/>
         <xs:attribute name="level" type="xs:positiveInteger" use="required"/>
         <xs:attribute name="type" default="NORMAL">
@@ -114,7 +172,7 @@
             </xs:simpleType>
         </xs:attribute>
         <xs:attribute name="chance" type="xs:positiveInteger" default="100"/>
-        <xs:attribute name="type-value" type="xs:positiveInteger" default="0"/>
+        <xs:attribute name="value" type="xs:positiveInteger" default="0"/>
     </xs:complexType>
 
     <xs:complexType name="capsuledItemType">
@@ -278,21 +336,17 @@
         <xs:attribute type="xs:byte" name="addName" use="optional"/>
         <xs:attribute type="xs:string" name="msg" use="optional"/>
     </xs:complexType>
-    <xs:complexType name="forType" mixed="true">
-        <xs:choice maxOccurs="unbounded" minOccurs="0">
-            <xs:element name="stat" maxOccurs="unbounded" minOccurs="0">
-                <xs:complexType>
-                    <xs:simpleContent>
-                        <xs:extension base="xs:string">
-                            <xs:attribute type="Stat" name="type" use="required"/>
-                        </xs:extension>
-                    </xs:simpleContent>
-                </xs:complexType>
-            </xs:element>
-            <xs:element name="enchant" maxOccurs="2" minOccurs="0" type="enchantType"/>
-        </xs:choice>
-        <xs:attribute type="xs:string" name="name" use="optional"/>
-        <xs:attribute type="xs:byte" name="val" use="optional"/>
+
+
+    <xs:complexType name="ItemStats">
+        <xs:sequence>
+            <xs:element name="stat" type="ItemStat" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="ItemStat">
+        <xs:attribute name="type" type="Stat"/>
+        <xs:attribute name="value" type="xs:float"/>
     </xs:complexType>
 
     <xs:simpleType name="CommissionType">
