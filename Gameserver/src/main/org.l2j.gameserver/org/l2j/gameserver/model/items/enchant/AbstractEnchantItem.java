@@ -103,7 +103,7 @@ public abstract class AbstractEnchantItem {
     public boolean isValid(Item itemToEnchant, EnchantSupportItem supportItem) {
         if (itemToEnchant == null) {
             return false;
-        } else if (itemToEnchant.isEnchantable() == 0) {
+        } else if (!itemToEnchant.isEnchantable()) {
             return false;
         } else if (!isValidItemType(itemToEnchant.getTemplate().getType2())) {
             return false;

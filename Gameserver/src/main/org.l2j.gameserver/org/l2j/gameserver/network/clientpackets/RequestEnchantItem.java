@@ -127,7 +127,7 @@ public final class RequestEnchantItem extends ClientPacket {
         final InventoryUpdate iu = new InventoryUpdate();
         synchronized (item) {
             // last validation check
-            if ((item.getOwnerId() != activeChar.getObjectId()) || (item.isEnchantable() == 0)) {
+            if ((item.getOwnerId() != activeChar.getObjectId()) || (!item.isEnchantable())) {
                 client.sendPacket(SystemMessageId.INAPPROPRIATE_ENCHANT_CONDITIONS);
                 activeChar.removeRequest(request.getClass());
                 client.sendPacket(new EnchantResult(EnchantResult.ERROR, 0, 0));

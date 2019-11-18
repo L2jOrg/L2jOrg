@@ -319,6 +319,19 @@ public abstract class XmlReader
     }
 
     /**
+     * parse the node value as long.
+     *
+     * @return -1 if node is null or the node name not exists.
+     */
+    protected long parselong(NamedNodeMap node, String name) {
+        return nonNull(node) ? parselong(node.getNamedItem(name), -1L) : -1L;
+    }
+
+    protected long parselong(Node node, long defaultValue) {
+        return  nonNull(node ) ? Long.decode(node.getNodeValue())  : defaultValue;
+    }
+
+    /**
      * Parses an integer value.
      * @param node the node to parse
      * @param defaultValue the default value

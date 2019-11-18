@@ -10,17 +10,22 @@ import org.l2j.gameserver.engine.items.DocumentEngine;
 import org.l2j.gameserver.enums.ItemLocation;
 import org.l2j.gameserver.enums.ItemSkillType;
 import org.l2j.gameserver.idfactory.IdFactory;
+import org.l2j.gameserver.model.ExtractableProduct;
 import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.Attackable;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.EventMonster;
 import org.l2j.gameserver.model.actor.instance.Player;
+import org.l2j.gameserver.model.commission.CommissionItemType;
 import org.l2j.gameserver.model.conditions.*;
 import org.l2j.gameserver.model.events.EventDispatcher;
 import org.l2j.gameserver.model.events.impl.item.OnItemCreate;
 import org.l2j.gameserver.model.holders.ItemSkillHolder;
 import org.l2j.gameserver.model.items.*;
 import org.l2j.gameserver.model.items.instance.Item;
+import org.l2j.gameserver.model.items.type.ArmorType;
+import org.l2j.gameserver.model.items.type.CrystalType;
+import org.l2j.gameserver.model.items.type.EtcItemType;
 import org.l2j.gameserver.model.items.type.WeaponType;
 import org.l2j.gameserver.model.stats.Stats;
 import org.l2j.gameserver.model.stats.functions.FuncTemplate;
@@ -164,6 +169,7 @@ public final class ItemTable extends GameXmlReader {
         forEach(weaponNode,node ->{
             switch (node.getNodeName()) {
                 case "attributes" -> parseWeaponAttributes(weapon, node);
+                case "crystal" -> parseCrystalType(weapon, node);
                 case "damage" -> parseWeaponDamage(weapon, node);
                 case "consume" -> parseWeaponConsume(weapon, node);
                 case "restriction" -> parseItemRestriction(weapon, node);
@@ -172,27 +178,35 @@ public final class ItemTable extends GameXmlReader {
                 case "skills"-> parseItemSkills(weapon, node);
             }
         } );
+
+        items.put(weapon.getId(), weapon);
     }
 
-    private void parseItemSkills(Weapon weapon, Node node) {
+    private void parseCrystalType(EquipableItem weapon, Node node) {
+        var attr = node.getAttributes();
+        weapon.setCrystalType(parseEnum(attr, CrystalType.class, "type", CrystalType.NONE));
+        weapon.setCrystalCount(parseInt(attr, "count"));
+    }
+
+    private void parseItemSkills(ItemTemplate item, Node node) {
         forEach(node, "skill", skillNode -> {
             var attr = skillNode.getAttributes();
             var type = parseEnum(attr, ItemSkillType.class, "type");
-            weapon.addSkill(new ItemSkillHolder(parseInt(attr, "id"), parseInt(attr, "level"), type, parseInt(attr, "chance"), parseInt(attr, "type-value")));
+            item.addSkill(new ItemSkillHolder(parseInt(attr, "id"), parseInt(attr, "level"), type, parseInt(attr, "chance"), parseInt(attr, "type-value")));
         });
 
     }
 
-    private void parseItemStats(Weapon weapon, Node node) {
+    private void parseItemStats(ItemTemplate item, Node node) {
         forEach(node, "stat", statNode -> {
             var attr = statNode.getAttributes();
             var type = Stats.valueOfXml(parseString(attr, "type"));
             var value = parseDouble(attr, "value");
-            weapon.addFunctionTemplate(new FuncTemplate(null, null, "add", 0x00, type, value));
+            item.addFunctionTemplate(new FuncTemplate(null, null, "add", 0x00, type, value));
         });
     }
 
-    private void parseItemCondition(Weapon weapon, Node node) {
+    private void parseItemCondition(ItemTemplate item, Node node) {
         Condition condition = null;
         for(var n = node.getFirstChild(); nonNull(n); n = n.getNextSibling()) {
 
@@ -216,7 +230,7 @@ public final class ItemTable extends GameXmlReader {
                     condition.addName();
                 }
             }
-            weapon.attachCondition(condition);
+            item.attachCondition(condition);
         }
     }
 
@@ -263,16 +277,16 @@ public final class ItemTable extends GameXmlReader {
         return new ConditionLogicAnd(c, c2);
     }
 
-    private void parseItemRestriction(Weapon weapon, Node node) {
+    private void parseItemRestriction(ItemTemplate item, Node node) {
         var attr = node.getAttributes();
-        weapon.setFreightable(parseBoolean(attr, "freightable"));
-        weapon.setOlympiadRestricted(parseBoolean(attr, "olympiad-restricted"));
-        weapon.setCocRestricted(parseBoolean(attr, "coc-restricted"));
-        weapon.setStackable(parseBoolean(attr, "stackable"));
-        weapon.setDestroyable(parseBoolean(attr, "destroyable"));
-        weapon.setTradable(parseBoolean(attr, "tradable"));
-        weapon.setDropable(parseBoolean(attr, "dropable"));
-        weapon.setSellable(parseBoolean(attr, "sellable"));
+        item.setFreightable(parseBoolean(attr, "freightable"));
+        item.setOlympiadRestricted(parseBoolean(attr, "olympiad-restricted"));
+        item.setCocRestricted(parseBoolean(attr, "coc-restricted"));
+        item.setStackable(parseBoolean(attr, "stackable"));
+        item.setDestroyable(parseBoolean(attr, "destroyable"));
+        item.setTradable(parseBoolean(attr, "tradable"));
+        item.setDropable(parseBoolean(attr, "dropable"));
+        item.setSellable(parseBoolean(attr, "sellable"));
     }
 
     private void parseWeaponConsume(Weapon weapon, Node node) {
@@ -289,15 +303,110 @@ public final class ItemTable extends GameXmlReader {
     }
 
     private void parseWeaponAttributes(Weapon weapon, Node node) {
-
+        var attr = node.getAttributes();
+        weapon.setWeight(parseInt(attr, "weight"));
+        weapon.setPrice(parseInt(attr, "price"));
+        weapon.setCommissionType(parseEnum(attr, CommissionItemType.class, "commission-type", CommissionItemType.OTHER_WEAPON));
+        weapon.setReuseDelay(parseInt(attr, "reuse-delay"));
+        weapon.setReuseGroup(parseInt(attr, "reuse-group"));
+        weapon.setDuration(parselong(attr, "duration"));
+        weapon.setForNpc(parseBoolean(attr, "for-npc"));
+        weapon.setEnchantable(parseBoolean(attr, "enchant-enabled"));
+        weapon.setChangeWeapon(parseInt(attr, "change-weapon"));
+        weapon.setCanAttack(parseBoolean(attr, "can-attack"));
+        weapon.setRestrictSkills(parseBoolean(attr, "restrict-skills"));
+        weapon.setEquipReuseDelay(parseInt(attr, "equip-reuse-delay"));
     }
 
     private void parseArmor(Node armorNode) {
+        var attrs = armorNode.getAttributes();
+        var armor = new Armor(parseInt(attrs, "id"), parseString(attrs, "name"), parseEnum(attrs, ArmorType.class, "type"));
 
+        armor.setBodyPart(parseEnum(attrs, BodyPart.class, "body-part"));
+        armor.setIcon(parseString(attrs, "icon"));
+        armor.setDisplayId(parseInt(attrs, "display-id"));
+
+        forEach(armorNode,node ->{
+            switch (node.getNodeName()) {
+                case "attributes" -> parseArmorAttributes(armor, node);
+                case "crystal" -> parseCrystalType(armor, node);
+                case "restriction" -> parseItemRestriction(armor, node);
+                case "conditions" -> parseItemCondition(armor, node);
+                case "stats" -> parseItemStats(armor, node);
+                case "skills"-> parseItemSkills(armor, node);
+            }
+        } );
+
+        items.put(armor.getId(), armor);
+    }
+
+    private void parseArmorAttributes(Armor armor, Node node) {
+        var attr = node.getAttributes();
+        armor.setWeight(parseInt(attr, "weight"));
+        armor.setPrice(parseInt(attr, "price"));
+        armor.setCommissionType(parseEnum(attr, CommissionItemType.class, "commission-type", CommissionItemType.OTHER_ITEM));
+        armor.setReuseDelay(parseInt(attr, "reuse-delay"));
+        armor.setReuseGroup(parseInt(attr, "reuse-group"));
+        armor.setDuration(parselong(attr, "duration"));
+        armor.setForNpc(parseBoolean(attr, "for-npc"));
+        armor.setEnchantable(parseBoolean(attr, "enchant-enabled"));
+        armor.setEquipReuseDelay(parseInt(attr, "equip-reuse-delay"));
     }
 
     private void parseItem(Node itemNode) {
+        var attrs = itemNode.getAttributes();
+        var item = new EtcItem(parseInt(attrs, "id"), parseString(attrs, "name"), parseEnum(attrs, EtcItemType.class, "type", EtcItemType.NONE));
+        item.setIcon(parseString(attrs, "icon"));
 
+        forEach(itemNode,node ->{
+            switch (node.getNodeName()) {
+                case "attributes" -> parseItemAttributes(item, node);
+                case "restriction" -> parseItemRestriction(item, node);
+                case "action" -> parseItemAction(item, node);
+                case "skill-reducer" -> parseSkillReducer(item, node);
+                case "extract" -> parseItemExtract(item, node);
+                case "conditions" -> parseItemCondition(item, node);
+            }
+        } );
+
+        items.put(item.getId(), item);
+    }
+
+    private void parseItemExtract(EtcItem item, Node node) {
+        item.setHandler("ExtractableItems");
+        forEach(node, "item", itemNode -> {
+            var attr = itemNode.getAttributes();
+            item.addCapsuledItem(new ExtractableProduct(parseInt(attr, "id"), parseInt(attr, "min-count"), parseInt(attr, "min-count"),
+                    parseDouble(attr, "chance"), parseInt(attr, "min-enchant"), parseInt(attr, "max-enchant")));
+        });
+    }
+
+    private void parseSkillReducer(EtcItem item, Node node) {
+        var attr = node.getAttributes();
+        item.setHandler(parseString(attr, "type"));
+        parseItemSkills(item, node);
+
+    }
+
+    private void parseItemAction(EtcItem item, Node node) {
+        var attr = node.getAttributes();
+        item.setHandler(parseString(attr, "handler"));
+    }
+
+    private void parseItemAttributes(EtcItem item, Node node) {
+        var attr = node.getAttributes();
+        item.setWeight(parseInt(attr, "weight"));
+        item.setPrice(parseInt(attr, "price"));
+        item.setCommissionType(parseEnum(attr, CommissionItemType.class, "commission-type", CommissionItemType.OTHER_ITEM));
+        item.setReuseDelay(parseInt(attr, "reuse-delay"));
+        item.setReuseGroup(parseInt(attr, "reuse-group"));
+        item.setDuration(parselong(attr, "duration"));
+        item.setForNpc(parseBoolean(attr, "for-npc"));
+        item.setImmediateEffect(parseBoolean(attr, "immediate-effect"));
+        item.setExImmediateEffect(parseBoolean(attr, "ex-immediate-effect"));
+        item.setQuestItem(parseBoolean(attr,"quest-item"));
+        item.setInfinite(parseBoolean(attr, "infinite"));
+        item.setSelfResurrection(parseBoolean(attr, "self-resurrection"));
     }
 
     /**

@@ -11,12 +11,12 @@ import java.util.List;
  * This class is dedicated to the management of EtcItem.
  */
 public final class EtcItem extends ItemTemplate {
-    private String _handler;
-    private EtcItemType _type;
+    private String handler;
+    private EtcItemType type;
     private List<ExtractableProduct> _extractableItems;
     private int _extractableCountMin;
     private int _extractableCountMax;
-    private boolean _isInfinite;
+    private boolean isInfinite;
 
     /**
      * Constructor for EtcItem.
@@ -27,10 +27,15 @@ public final class EtcItem extends ItemTemplate {
         super(set);
     }
 
+    public EtcItem(int id, String name, EtcItemType type) {
+        super(id, name);
+        this.type = type;
+    }
+
     @Override
     public void set(StatsSet set) {
         super.set(set);
-        _type = set.getEnum("etcitem_type", EtcItemType.class, EtcItemType.NONE);
+        type = set.getEnum("etcitem_type", EtcItemType.class, EtcItemType.NONE);
         _type1 = ItemTemplate.TYPE1_ITEM_QUESTITEM_ADENA;
 
         if (isQuestItem()) {
@@ -42,7 +47,7 @@ public final class EtcItem extends ItemTemplate {
             };
         }
 
-        _handler = set.getString("handler", null); // ! null !
+        handler = set.getString("handler", null); // ! null !
 
         _extractableCountMin = set.getInt("extractableCountMin", 0);
         _extractableCountMax = set.getInt("extractableCountMax", 0);
@@ -50,7 +55,7 @@ public final class EtcItem extends ItemTemplate {
             LOGGER.warn("Item " + this + " extractableCountMin is bigger than extractableCountMax!");
         }
 
-        _isInfinite = set.getBoolean("is_infinite", false);
+        isInfinite = set.getBoolean("is_infinite", false);
     }
 
     /**
@@ -58,7 +63,7 @@ public final class EtcItem extends ItemTemplate {
      */
     @Override
     public EtcItemType getItemType() {
-        return _type;
+        return type;
     }
 
     /**
@@ -66,14 +71,14 @@ public final class EtcItem extends ItemTemplate {
      */
     @Override
     public int getItemMask() {
-        return _type.mask();
+        return type.mask();
     }
 
     /**
      * @return the handler name, null if no handler for item.
      */
     public String getHandlerName() {
-        return _handler;
+        return handler;
     }
 
     /**
@@ -101,7 +106,7 @@ public final class EtcItem extends ItemTemplate {
      * @return true if item is infinite
      */
     public boolean isInfinite() {
-        return _isInfinite;
+        return isInfinite;
     }
 
     /**
@@ -113,5 +118,29 @@ public final class EtcItem extends ItemTemplate {
             _extractableItems = new ArrayList<>();
         }
         _extractableItems.add(extractableProduct);
+    }
+
+    public void setImmediateEffect(boolean immediateEffect) {
+        this.immediateEffect = immediateEffect;
+    }
+
+    public void setExImmediateEffect(boolean exImmediateEffect) {
+        this.exImmediateEffect = exImmediateEffect;
+    }
+
+    public void setQuestItem(boolean questItem) {
+        this.questItem = questItem;
+    }
+
+    public void setInfinite(boolean infinite) {
+        this.isInfinite = infinite;
+    }
+
+    public void setSelfResurrection(boolean selfResurrection) {
+        allowSelfResurrection = selfResurrection;
+    }
+
+    public void setHandler(String handler) {
+        this.handler = handler;
     }
 }

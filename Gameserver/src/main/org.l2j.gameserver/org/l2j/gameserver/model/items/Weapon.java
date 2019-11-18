@@ -4,6 +4,7 @@ import org.l2j.commons.util.Rnd;
 import org.l2j.commons.util.Util;
 import org.l2j.gameserver.enums.ItemSkillType;
 import org.l2j.gameserver.model.StatsSet;
+import org.l2j.gameserver.model.items.type.CrystalType;
 import org.l2j.gameserver.world.World;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.Npc;
@@ -20,7 +21,7 @@ import static org.l2j.gameserver.util.GameUtils.isPlayer;
 /**
  * This class is dedicated to the management of weapons.
  */
-public final class Weapon extends ItemTemplate implements EquipableItem{
+public final class Weapon extends ItemTemplate implements EquipableItem {
     private WeaponType type;
     private boolean magic;
     private int soulShot;
@@ -28,7 +29,7 @@ public final class Weapon extends ItemTemplate implements EquipableItem{
     private int manaConsume;
     private int damageRadius;
     private int attackangle;
-    private int _changeWeaponId;
+    private int changeWeapon;
 
     private int _reducedSoulshot;
     private int _reducedSoulshotChance;
@@ -36,8 +37,8 @@ public final class Weapon extends ItemTemplate implements EquipableItem{
     private int _reducedMpConsume;
     private int _reducedMpConsumeChance;
 
-    private boolean _isAttackWeapon;
-    private boolean _useWeaponSkillsOnly;
+    private boolean isAttackWeapon;
+    private boolean useWeaponSkillsOnly;
 
     /**
      * Constructor for Weapon.
@@ -80,9 +81,9 @@ public final class Weapon extends ItemTemplate implements EquipableItem{
         _reducedMpConsumeChance = (reduced_mpconsume.length == 2) ? Integer.parseInt(reduced_mpconsume[0]) : 0;
         _reducedMpConsume = (reduced_mpconsume.length == 2) ? Integer.parseInt(reduced_mpconsume[1]) : 0;
 
-        _changeWeaponId = set.getInt("change_weaponId", 0);
-        _isAttackWeapon = set.getBoolean("isAttackWeapon", true);
-        _useWeaponSkillsOnly = set.getBoolean("useWeaponSkillsOnly", false);
+        changeWeapon = set.getInt("change_weaponId", 0);
+        isAttackWeapon = set.getBoolean("isAttackWeapon", true);
+        useWeaponSkillsOnly = set.getBoolean("useWeaponSkillsOnly", false);
     }
 
     /**
@@ -170,21 +171,21 @@ public final class Weapon extends ItemTemplate implements EquipableItem{
      * @return the Id in which weapon this weapon can be changed.
      */
     public int getChangeWeaponId() {
-        return _changeWeaponId;
+        return changeWeapon;
     }
 
     /**
      * @return {@code true} if the weapon is attack weapon, {@code false} otherwise.
      */
     public boolean isAttackWeapon() {
-        return _isAttackWeapon;
+        return isAttackWeapon;
     }
 
     /**
      * @return {@code true} if the weapon is skills only, {@code false} otherwise.
      */
     public boolean useWeaponSkillsOnly() {
-        return _useWeaponSkillsOnly;
+        return useWeaponSkillsOnly;
     }
 
     /**
@@ -270,5 +271,33 @@ public final class Weapon extends ItemTemplate implements EquipableItem{
 
     public void setDamageAngle(int angle) {
         this.attackangle = angle;
+    }
+
+    public void setEnchantable(Boolean enchantable) {
+        this.enchantable = enchantable;
+    }
+
+    public void setChangeWeapon(int changeWeapon) {
+        this.changeWeapon = changeWeapon;
+    }
+
+    public void setCanAttack(Boolean canAttack) {
+        isAttackWeapon = canAttack;
+    }
+
+    public void setRestrictSkills(Boolean restrictSkills) {
+        useWeaponSkillsOnly = restrictSkills;
+    }
+
+    public void setEquipReuseDelay(int equipReuseDelay) {
+        this.equipReuseDelay = equipReuseDelay;
+    }
+
+    public void setCrystalType(CrystalType crystalType) {
+        this.crystalType = crystalType;
+    }
+
+    public void setCrystalCount(int count) {
+        this.crystalCount = count;
     }
 }

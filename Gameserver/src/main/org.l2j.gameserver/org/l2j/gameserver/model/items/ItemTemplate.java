@@ -103,39 +103,39 @@ public abstract class ItemTemplate extends ListenersContainer implements IIdenti
     private int displayId;
     private String name;
     private String icon;
-    private int _weight;
+    private int weight;
     private boolean stackable;
-    private CrystalType _crystalType;
-    private int _equipReuseDelay;
-    private long _time;
+    protected CrystalType crystalType;
+    protected int equipReuseDelay;
+    private long time;
     private int _autoDestroyTime;
-    private int _referencePrice;
-    private int _crystalCount;
+    private int price;
+    protected int crystalCount;
     private boolean sellable;
     private boolean dropable;
     private boolean destroyable;
     private boolean tradable;
     private boolean _depositable;
-    private int _enchantable;
-    private boolean _questItem;
+    protected boolean enchantable;
+    protected boolean questItem;
     private boolean freightable;
-    private boolean _allow_self_resurrection;
+    protected boolean allowSelfResurrection;
     private boolean olympiadRestricted;
     private boolean cocRestricted;
-    private boolean _for_npc;
+    private boolean forNpc;
     private boolean _common;
     private boolean _heroItem;
     private boolean _pvpItem;
-    private boolean _immediate_effect;
-    private boolean _ex_immediate_effect;
+    protected boolean immediateEffect;
+    protected boolean exImmediateEffect;
     private ActionType _defaultAction;
     private Map<AttributeType, AttributeHolder> _elementals = null;
     private List<ItemSkillHolder> _skills;
 
-    private int _reuseDelay;
-    private int _sharedReuseGroup;
+    private int reuseDelay;
+    private int reuseGroup;
 
-    private CommissionItemType _commissionItemType;
+    private CommissionItemType commissionType;
     private boolean _isBlessed;
 
     protected BodyPart bodyPart; // TODO should be on Weapon and Armor
@@ -160,36 +160,36 @@ public abstract class ItemTemplate extends ListenersContainer implements IIdenti
         displayId = set.getInt("displayId", id);
         name = set.getString("name");
         icon = set.getString("icon", null);
-        _weight = set.getInt("weight", 0);
-        _equipReuseDelay = set.getInt("equip_reuse_delay", 0) * 1000;
+        weight = set.getInt("weight", 0);
+        equipReuseDelay = set.getInt("equip_reuse_delay", 0) * 1000;
 
-        _time = set.getInt("time", -1);
+        time = set.getInt("time", -1);
         _autoDestroyTime = set.getInt("auto_destroy_time", -1) * 1000;
         bodyPart = set.getEnum("bodypart", BodyPart.class, BodyPart.NONE);
-        _referencePrice = set.getInt("price", 0);
-        _crystalType = set.getEnum("crystal_type", CrystalType.class, CrystalType.NONE);
-        _crystalCount = set.getInt("crystal_count", 0);
+        price = set.getInt("price", 0);
+        crystalType = set.getEnum("crystal_type", CrystalType.class, CrystalType.NONE);
+        crystalCount = set.getInt("crystal_count", 0);
         stackable = set.getBoolean("is_stackable", false);
         sellable = set.getBoolean("is_sellable", true);
         dropable = set.getBoolean("is_dropable", true);
         destroyable = set.getBoolean("is_destroyable", true);
         tradable = set.getBoolean("is_tradable", true);
         _depositable = set.getBoolean("is_depositable", true);
-        _enchantable = set.getInt("enchant_enabled", 0);
-        _questItem = set.getBoolean("is_questitem", false);
+        enchantable = set.getBoolean("enchant_enabled", false);
+        questItem = set.getBoolean("is_questitem", false);
         freightable = set.getBoolean("is_freightable", false);
-        _allow_self_resurrection = set.getBoolean("allow_self_resurrection", false);
+        allowSelfResurrection = set.getBoolean("allow_self_resurrection", false);
         olympiadRestricted = set.getBoolean("is_oly_restricted", false);
         cocRestricted = set.getBoolean("is_coc_restricted", false);
-        _for_npc = set.getBoolean("for_npc", false);
+        forNpc = set.getBoolean("for_npc", false);
         _isBlessed = set.getBoolean("blessed", false);
 
-        _immediate_effect = set.getBoolean("immediate_effect", false);
-        _ex_immediate_effect = set.getBoolean("ex_immediate_effect", false);
+        immediateEffect = set.getBoolean("immediate_effect", false);
+        exImmediateEffect = set.getBoolean("ex_immediate_effect", false);
         _defaultAction = set.getEnum("default_action", ActionType.class, ActionType.NONE);
-        _reuseDelay = set.getInt("reuse_delay", 0);
-        _sharedReuseGroup = set.getInt("shared_reuse_group", 0);
-        _commissionItemType = set.getEnum("commissionItemType", CommissionItemType.class, CommissionItemType.OTHER_ITEM);
+        reuseDelay = set.getInt("reuse_delay", 0);
+        reuseGroup = set.getInt("shared_reuse_group", 0);
+        commissionType = set.getEnum("commissionItemType", CommissionItemType.class, CommissionItemType.OTHER_ITEM);
         _common = ((id >= 11605) && (id <= 12361));
         _heroItem = ((id >= 6611) && (id <= 6621)) || ((id >= 9388) && (id <= 9390)) || (id == 6842);
         _pvpItem = ((id >= 10667) && (id <= 10835)) || ((id >= 12852) && (id <= 12977)) || ((id >= 14363) && (id <= 14525)) || (id == 14528) || (id == 14529) || (id == 14558) || ((id >= 15913) && (id <= 16024)) || ((id >= 16134) && (id <= 16147)) || (id == 16149) || (id == 16151) || (id == 16153) || (id == 16155) || (id == 16157) || (id == 16159) || ((id >= 16168) && (id <= 16176)) || ((id >= 16179) && (id <= 16220));
@@ -215,7 +215,7 @@ public abstract class ItemTemplate extends ListenersContainer implements IIdenti
      * @return the _equipReuseDelay
      */
     public int getEquipReuseDelay() {
-        return _equipReuseDelay;
+        return equipReuseDelay;
     }
 
 
@@ -225,7 +225,7 @@ public abstract class ItemTemplate extends ListenersContainer implements IIdenti
      * @return long
      */
     public final long getTime() {
-        return _time;
+        return time;
     }
 
     /**
@@ -272,7 +272,7 @@ public abstract class ItemTemplate extends ListenersContainer implements IIdenti
      * @return int
      */
     public final int getWeight() {
-        return _weight;
+        return weight;
     }
 
     /**
@@ -281,14 +281,14 @@ public abstract class ItemTemplate extends ListenersContainer implements IIdenti
      * @return boolean
      */
     public final boolean isCrystallizable() {
-        return (_crystalType != CrystalType.NONE) && (_crystalCount > 0);
+        return (crystalType != CrystalType.NONE) && (crystalCount > 0);
     }
 
     /**
      * @return return General item grade (No S80, S84, R95, R99)
      */
     public ItemGrade getItemGrade() {
-        return ItemGrade.valueOf(_crystalType);
+        return ItemGrade.valueOf(crystalType);
     }
 
     /**
@@ -297,7 +297,7 @@ public abstract class ItemTemplate extends ListenersContainer implements IIdenti
      * @return CrystalType
      */
     public final CrystalType getCrystalType() {
-        return _crystalType;
+        return crystalType;
     }
 
     /**
@@ -306,14 +306,14 @@ public abstract class ItemTemplate extends ListenersContainer implements IIdenti
      * @return int
      */
     public final int getCrystalItemId() {
-        return _crystalType.getCrystalId();
+        return crystalType.getCrystalId();
     }
 
     /**
      * @return the quantity of crystals for crystallization.
      */
     public final int getCrystalCount() {
-        return _crystalCount;
+        return crystalCount;
     }
 
     /**
@@ -325,30 +325,30 @@ public abstract class ItemTemplate extends ListenersContainer implements IIdenti
             switch (_type2) {
                 case TYPE2_SHIELD_ARMOR:
                 case TYPE2_ACCESSORY: {
-                    return _crystalCount + (_crystalType.getCrystalEnchantBonusArmor() * ((3 * enchantLevel) - 6));
+                    return crystalCount + (crystalType.getCrystalEnchantBonusArmor() * ((3 * enchantLevel) - 6));
                 }
                 case TYPE2_WEAPON: {
-                    return _crystalCount + (_crystalType.getCrystalEnchantBonusWeapon() * ((2 * enchantLevel) - 3));
+                    return crystalCount + (crystalType.getCrystalEnchantBonusWeapon() * ((2 * enchantLevel) - 3));
                 }
                 default: {
-                    return _crystalCount;
+                    return crystalCount;
                 }
             }
         } else if (enchantLevel > 0) {
             switch (_type2) {
                 case TYPE2_SHIELD_ARMOR:
                 case TYPE2_ACCESSORY: {
-                    return _crystalCount + (_crystalType.getCrystalEnchantBonusArmor() * enchantLevel);
+                    return crystalCount + (crystalType.getCrystalEnchantBonusArmor() * enchantLevel);
                 }
                 case TYPE2_WEAPON: {
-                    return _crystalCount + (_crystalType.getCrystalEnchantBonusWeapon() * enchantLevel);
+                    return crystalCount + (crystalType.getCrystalEnchantBonusWeapon() * enchantLevel);
                 }
                 default: {
-                    return _crystalCount;
+                    return crystalCount;
                 }
             }
         } else {
-            return _crystalCount;
+            return crystalCount;
         }
     }
 
@@ -419,7 +419,7 @@ public abstract class ItemTemplate extends ListenersContainer implements IIdenti
      * @return the price of reference of the item.
      */
     public final int getReferencePrice() {
-        return _referencePrice;
+        return price;
     }
 
     /**
@@ -462,8 +462,8 @@ public abstract class ItemTemplate extends ListenersContainer implements IIdenti
      *
      * @return {@code true} if the item can be enchanted, {@code false} otherwise.
      */
-    public final int isEnchantable() {
-        return Arrays.binarySearch(Config.ENCHANT_BLACKLIST, id) < 0 ? _enchantable : 0;
+    public final boolean isEnchantable() {
+        return Arrays.binarySearch(Config.ENCHANT_BLACKLIST, id) < 0 && enchantable;
     }
 
     /**
@@ -669,7 +669,7 @@ public abstract class ItemTemplate extends ListenersContainer implements IIdenti
     }
 
     public boolean isQuestItem() {
-        return _questItem;
+        return questItem;
     }
 
     public boolean isFreightable() {
@@ -677,7 +677,7 @@ public abstract class ItemTemplate extends ListenersContainer implements IIdenti
     }
 
     public boolean isAllowSelfResurrection() {
-        return _allow_self_resurrection;
+        return allowSelfResurrection;
     }
 
     public boolean isOlyRestrictedItem() {
@@ -692,7 +692,7 @@ public abstract class ItemTemplate extends ListenersContainer implements IIdenti
     }
 
     public boolean isForNpc() {
-        return _for_npc;
+        return forNpc;
     }
 
 
@@ -720,7 +720,7 @@ public abstract class ItemTemplate extends ListenersContainer implements IIdenti
      * @return {@code true} if the item applies effects immediately, {@code false} otherwise
      */
     public boolean hasExImmediateEffect() {
-        return _ex_immediate_effect;
+        return exImmediateEffect;
     }
 
     /**
@@ -729,7 +729,7 @@ public abstract class ItemTemplate extends ListenersContainer implements IIdenti
      * @return {@code true} if the item applies effects immediately, {@code false} otherwise
      */
     public boolean hasImmediateEffect() {
-        return _immediate_effect;
+        return immediateEffect;
     }
 
     /**
@@ -745,7 +745,7 @@ public abstract class ItemTemplate extends ListenersContainer implements IIdenti
      * @return the reuse delay time
      */
     public int getReuseDelay() {
-        return _reuseDelay;
+        return reuseDelay;
     }
 
     /**
@@ -755,11 +755,11 @@ public abstract class ItemTemplate extends ListenersContainer implements IIdenti
      * @return the shared reuse group
      */
     public int getSharedReuseGroup() {
-        return _sharedReuseGroup;
+        return reuseGroup;
     }
 
     public CommissionItemType getCommissionItemType() {
-        return _commissionItemType;
+        return commissionType;
     }
 
     /**
@@ -829,5 +829,33 @@ public abstract class ItemTemplate extends ListenersContainer implements IIdenti
 
     public void setSellable(boolean sellable) {
         this.sellable = sellable;
+    }
+
+    public void setWeight(int weight) {
+        this.weight = weight;
+    }
+
+    public void setPrice(int price) {
+        this.price = price;
+    }
+
+    public void setCommissionType(CommissionItemType commissionType) {
+        this.commissionType = commissionType;
+    }
+
+    public void setReuseDelay(int reuseDelay) {
+        this.reuseDelay = reuseDelay;
+    }
+
+    public void setReuseGroup(int reuseGroup) {
+        this.reuseGroup = reuseGroup;
+    }
+
+    public void setDuration(long duration) {
+        this.time = duration;
+    }
+
+    public void setForNpc(Boolean forNpc) {
+        this.forNpc = forNpc;
     }
 }

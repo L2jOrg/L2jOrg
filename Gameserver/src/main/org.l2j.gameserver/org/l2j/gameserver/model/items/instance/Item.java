@@ -482,11 +482,11 @@ public final class Item extends WorldObject {
      *
      * @return boolean
      */
-    public int isEnchantable() {
+    public boolean isEnchantable() {
         if ((_loc == ItemLocation.INVENTORY) || (_loc == ItemLocation.PAPERDOLL)) {
             return _item.isEnchantable();
         }
-        return 0;
+        return false;
     }
 
     /**
