@@ -11,7 +11,7 @@ import org.l2j.gameserver.model.skills.Skill;
  */
 public class ConditionLogicAnd extends Condition {
     private static Condition[] _emptyConditions = new Condition[0];
-    public Condition[] conditions = _emptyConditions;
+    private Condition[] conditions = _emptyConditions;
 
     public ConditionLogicAnd(Condition... conditions) {
         this.conditions = conditions;

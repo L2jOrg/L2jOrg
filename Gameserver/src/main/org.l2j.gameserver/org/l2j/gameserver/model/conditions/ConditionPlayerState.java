@@ -28,8 +28,8 @@ import org.l2j.gameserver.model.skills.Skill;
  * @author mkizub
  */
 public class ConditionPlayerState extends Condition {
-    public final PlayerState _check;
-    public final boolean _required;
+    private final PlayerState _check;
+    private final boolean _required;
 
     /**
      * Instantiates a new condition player state.
