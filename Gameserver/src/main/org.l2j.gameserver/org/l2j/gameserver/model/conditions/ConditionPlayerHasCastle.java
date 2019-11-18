@@ -27,7 +27,7 @@ import org.l2j.gameserver.model.skills.Skill;
  * @author MrPoke
  */
 public final class ConditionPlayerHasCastle extends Condition {
-    private final int _castle;
+    public final int _castle;
 
     /**
      * Instantiates a new condition player has castle.

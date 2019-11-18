@@ -27,7 +27,7 @@ import org.l2j.gameserver.model.skills.Skill;
  */
 public final class ConditionPlayerPledgeClass extends Condition {
 
-    private final int _pledgeClass;
+    public final int _pledgeClass;
 
     /**
      * Instantiates a new condition player pledge class.

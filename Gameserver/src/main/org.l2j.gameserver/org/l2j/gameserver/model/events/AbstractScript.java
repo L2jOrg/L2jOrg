@@ -552,8 +552,8 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
                             count *= Config.RATE_QUEST_REWARD_POTION;
                             break;
                         }
-                        case ENCHT_WP:
-                        case ENCHT_AM:
+                        case ENCHANT_WEAPON:
+                        case ENCHANT_ARMOR:
                         case SCROLL: {
                             count *= Config.RATE_QUEST_REWARD_SCROLL;
                             break;

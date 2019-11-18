@@ -13,7 +13,7 @@
             <PatternLayout pattern="${pattern}"  />
             <Policies>
                 <TimeBasedTriggeringPolicy interval="1"/>
-                <SizeBasedTriggeringPolicy size="50 MB"/>
+                <SizeBasedTriggeringPolicy size="100 MB"/>
             </Policies>
             <DefaultRolloverStrategy max="5" fileIndex="min"/>
             <ThresholdFilter level="info"/>
@@ -23,7 +23,7 @@
             <PatternLayout pattern="${pattern}" />
             <Policies>
                 <TimeBasedTriggeringPolicy interval="1"/>
-                <SizeBasedTriggeringPolicy size="50 MB"/>
+                <SizeBasedTriggeringPolicy size="100 MB"/>
             </Policies>
             <DefaultRolloverStrategy max="5" fileIndex="min"/>
             <ThresholdFilter level="debug"/>

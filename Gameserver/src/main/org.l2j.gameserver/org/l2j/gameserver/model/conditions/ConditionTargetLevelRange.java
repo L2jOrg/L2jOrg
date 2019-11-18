@@ -24,7 +24,7 @@ import org.l2j.gameserver.model.skills.Skill;
  * @author UnAfraid
  */
 public class ConditionTargetLevelRange extends Condition {
-    private final int[] _levels;
+    public final int[] _levels;
 
     /**
      * Instantiates a new condition target levels range.

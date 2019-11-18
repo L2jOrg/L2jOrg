@@ -102,6 +102,7 @@
     <xs:simpleType name="WeaponType">
         <xs:restriction base="xs:token">
             <xs:enumeration value="NONE"/>
+            <xs:enumeration value="SHIELD"/>
             <xs:enumeration value="SWORD"/>
             <xs:enumeration value="TWO_HAND_SWORD"/>
             <xs:enumeration value="MAGIC_SWORD"/>
@@ -146,10 +147,10 @@
             <xs:enumeration value="LURE"/>
             <xs:enumeration value="CROP"/>
             <xs:enumeration value="MATURECROP"/>
-            <xs:enumeration value="ENCHT_WP"/>
-            <xs:enumeration value="ENCHT_AM"/>
-            <xs:enumeration value="GIANT_ENCHT_WP"/>
-            <xs:enumeration value="GIANT_ENCHT_AM"/>
+            <xs:enumeration value="ENCHANT_WEAPON"/>
+            <xs:enumeration value="ENCHANT_ARMOR"/>
+            <xs:enumeration value="BLESSED_ENCHANT_WEAPON"/>
+            <xs:enumeration value="BLESSED_ENCHANT_ARMOR"/>
             <xs:enumeration value="BLESS_ENCHT_WP"/>
             <xs:enumeration value="BLESS_ENCHT_AM"/>
             <xs:enumeration value="COUPON"/>
@@ -161,8 +162,9 @@
             <xs:enumeration value="ENCHT_ATTR_INC_PROP_ENCHT_AM"/>
             <xs:enumeration value="BLESSED_ENCHT_ATTR_INC_PROP_ENCHT_WP"/>
             <xs:enumeration value="BLESSED_ENCHT_ATTR_INC_PROP_ENCHT_AM"/>
-            <xs:enumeration value="BLESSED_GIANT_ENCHT_ATTR_INC_PROP_ENCHT_WP"/>
-            <xs:enumeration value="BLESSED_GIANT_ENCHT_ATTR_INC_PROP_ENCHT_AM"/>
+            <xs:enumeration value="SOLID_ENCHANT_ARMOR"/>
+            <xs:enumeration value="SOLID_ENCHANT_WEAPON"/>
+            <xs:enumeration value="RUNE"/>
             <xs:enumeration value="GIANT_ENCHT_ATTR_INC_PROP_ENCHT_WP"/>
             <xs:enumeration value="GIANT_ENCHT_ATTR_INC_PROP_ENCHT_AM"/>
             <xs:enumeration value="ENCHT_ATTR_CRYSTAL_ENCHANT_AM"/>
@@ -171,7 +173,7 @@
             <xs:enumeration value="ENCHT_ATTR_ANCIENT_CRYSTAL_ENCHANT_WP"/>
             <xs:enumeration value="ENCHT_ATTR_RUNE"/>
             <xs:enumeration value="ENCHT_ATTRT_RUNE_SELECT"/>
-            <xs:enumeration value="TELEPORTBOOKMARK"/>
+            <xs:enumeration value="TELEPORT_BOOKMARK"/>
             <xs:enumeration value="CHANGE_ATTR"/>
             <xs:enumeration value="SOULSHOT"/>
             <xs:enumeration value="SHAPE_SHIFTING_WP"/>
@@ -197,7 +199,27 @@
             <xs:enumeration value="MULTI_INC_PROB_ENCHT_WP"/>
             <xs:enumeration value="MULTI_INC_PROB_ENCHT_AM"/>
             <xs:enumeration value="SOUL_CRYSTAL"/>
+            <xs:enumeration value="CARD"/>
+            <xs:enumeration value="AGATHION_ENCHANT"/>
+            <xs:enumeration value="SEVEN_SINS_AGATHION_ENCHANT"/>
+            <xs:enumeration value="IMPROVED_ENCHANT_WEAPON"/>
+            <xs:enumeration value="IMPROVED_ENCHANT_ARMOR"/>
+            <xs:enumeration value="SIGEL RUNE"/>
+            <xs:enumeration value="COLOR_CHANGE"/>
+            <xs:enumeration value="COLOR_TITLE_CHANGE"/>
             <xs:enumeration value="ENSOUL_STONE"/>
+            <xs:enumeration value="SEAL_SCROLL"/>
+            <xs:enumeration value="UNSEAL_SCROLL"/>
+            <xs:enumeration value="TRANSFORMATION_BOOK"/>
+            <xs:enumeration value="TRANSFORMATION_BOOK_BOX_RANDOM"/>
+            <xs:enumeration value="TRANSFORMATION_BOOK_BOX_RANDOM_RARE"/>
+            <xs:enumeration value="TRANSFORMATION_BOOK_BOX_STANDARD"/>
+            <xs:enumeration value="TRANSFORMATION_BOOK_BOX_HIGH_GRADE"/>
+            <xs:enumeration value="TRANSFORMATION_BOOK_BOX_RARE"/>
+            <xs:enumeration value="TRANSFORMATION_BOOK_BOX_LEGENDARY"/>
+            <xs:enumeration value="LUCKY_ENCHANT"/>
+            <xs:enumeration value="GIANT_ENCHANT"/>
+            <xs:enumeration value="BLESSED_LUCKY_ENCHANT"/>
         </xs:restriction>
     </xs:simpleType>
 
