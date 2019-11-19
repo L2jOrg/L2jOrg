@@ -185,7 +185,7 @@
         <conditions>
             <condition name="EquipWeapon">
                 <weaponType>
-                    <item>POLE</item>
+                    <item>SPEAR</item>
                 </weaponType>
             </condition>
             <condition name="OpCheckCastRange">
@@ -373,7 +373,7 @@
                 <weaponType>
                     <item>SWORD</item>
                     <item>BLUNT</item>
-                    <item>TWO_HANDED_SWORD</item>
+                    <item>TWO_HAND_SWORD</item>
                 </weaponType>
             </condition>
         </conditions>
@@ -823,10 +823,10 @@
             <condition name="EquipWeapon">
                 <weaponType>
                     <item>BLUNT</item>
-                    <item>DUALBLUNT</item>
+                    <item>DUAL_BLUNT</item>
                     <item>SWORD</item>
-                    <item>TWO_HANDED_SWORD</item>
-                    <item>POLE</item>
+                    <item>TWO_HAND_SWORD</item>
+                    <item>SPEAR</item>
                 </weaponType>
             </condition>
         </conditions>
@@ -892,9 +892,9 @@
                 </amount>
                 <mode>PER</mode>
                 <weaponType>
-                    <item>POLE</item>
+                    <item>SPEAR</item>
                     <item>BLUNT</item>
-                    <item>DUALBLUNT</item>
+                    <item>DUAL_BLUNT</item>
                 </weaponType>
             </effect>
             <effect name="TriggerSkillByDamage">
@@ -1287,7 +1287,7 @@
         <conditions>
             <condition name="EquipWeapon">
                 <weaponType>
-                    <item>POLE</item>
+                    <item>SPEAR</item>
                 </weaponType>
             </condition>
         </conditions>
@@ -1321,7 +1321,7 @@
         <conditions>
             <condition name="EquipWeapon">
                 <weaponType>
-                    <item>POLE</item>
+                    <item>SPEAR</item>
                 </weaponType>
             </condition>
         </conditions>

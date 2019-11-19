@@ -1,7 +1,7 @@
 package org.l2j.gameserver.network.clientpackets;
 
 import org.l2j.gameserver.Config;
-import org.l2j.gameserver.datatables.ItemTable;
+import org.l2j.gameserver.engine.items.ItemEngine;
 import org.l2j.gameserver.enums.ItemLocation;
 import org.l2j.gameserver.enums.PrivateStoreType;
 import org.l2j.gameserver.instancemanager.MailManager;
@@ -188,7 +188,7 @@ public final class RequestPostAttachment extends ClientPacket {
                 sm.addString(activeChar.getName());
                 sender.sendPacket(sm);
             } else {
-                final Item paidAdena = ItemTable.getInstance().createItem("PayMail", CommonItem.ADENA, adena, activeChar, null);
+                final Item paidAdena = ItemEngine.getInstance().createItem("PayMail", CommonItem.ADENA, adena, activeChar, null);
                 paidAdena.setOwnerId(msg.getSenderId());
                 paidAdena.setItemLocation(ItemLocation.INVENTORY);
                 paidAdena.updateDatabase(true);

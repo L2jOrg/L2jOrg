@@ -3,7 +3,7 @@ package org.l2j.gameserver.network.clientpackets.luckygame;
 import org.l2j.commons.util.CommonUtil;
 import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.data.xml.impl.LuckyGameData;
-import org.l2j.gameserver.datatables.ItemTable;
+import org.l2j.gameserver.engine.items.ItemEngine;
 import org.l2j.gameserver.enums.LuckyGameItemType;
 import org.l2j.gameserver.enums.LuckyGameResultType;
 import org.l2j.gameserver.enums.LuckyGameType;
@@ -97,7 +97,7 @@ public class RequestLuckyGamePlay extends ClientPacket {
             }
         }
 
-        final int totalWeight = rewards.values().stream().mapToInt(list -> list.stream().mapToInt(item -> ItemTable.getInstance().getTemplate(item.getId()).getWeight()).sum()).sum();
+        final int totalWeight = rewards.values().stream().mapToInt(list -> list.stream().mapToInt(item -> ItemEngine.getInstance().getTemplate(item.getId()).getWeight()).sum()).sum();
 
         // Check inventory capacity
         if ((rewards.size() > 0) && (!player.getInventory().validateCapacity(rewards.size()) || !player.getInventory().validateWeight(totalWeight))) {

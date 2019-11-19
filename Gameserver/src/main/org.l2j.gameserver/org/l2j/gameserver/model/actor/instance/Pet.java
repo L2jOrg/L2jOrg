@@ -11,7 +11,7 @@ import org.l2j.gameserver.data.sql.impl.SummonEffectsTable.SummonEffect;
 import org.l2j.gameserver.data.xml.impl.ExperienceData;
 import org.l2j.gameserver.data.xml.impl.PetDataTable;
 import org.l2j.gameserver.data.xml.impl.SkillData;
-import org.l2j.gameserver.datatables.ItemTable;
+import org.l2j.gameserver.engine.items.ItemEngine;
 import org.l2j.gameserver.enums.InstanceType;
 import org.l2j.gameserver.enums.ItemLocation;
 import org.l2j.gameserver.enums.PartyDistributionType;
@@ -450,7 +450,7 @@ public class Pet extends Summon {
                 handler.useItem(this, target, false);
             }
 
-            ItemTable.getInstance().destroyItem("Consume", target, getOwner(), null);
+            ItemEngine.getInstance().destroyItem("Consume", target, getOwner(), null);
             broadcastStatusUpdate();
         } else {
             if (target.getId() == CommonItem.ADENA) {

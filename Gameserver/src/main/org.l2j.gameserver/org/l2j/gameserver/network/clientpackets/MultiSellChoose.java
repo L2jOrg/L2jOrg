@@ -3,7 +3,7 @@ package org.l2j.gameserver.network.clientpackets;
 import org.l2j.commons.util.CommonUtil;
 import org.l2j.gameserver.data.xml.impl.EnsoulData;
 import org.l2j.gameserver.data.xml.impl.MultisellData;
-import org.l2j.gameserver.datatables.ItemTable;
+import org.l2j.gameserver.engine.items.ItemEngine;
 import org.l2j.gameserver.enums.AttributeType;
 import org.l2j.gameserver.enums.SpecialItemType;
 import org.l2j.gameserver.model.Clan;
@@ -182,7 +182,7 @@ public class MultiSellChoose extends ClientPacket {
                     continue;
                 }
 
-                final ItemTemplate template = ItemTable.getInstance().getTemplate(product.getId());
+                final ItemTemplate template = ItemEngine.getInstance().getTemplate(product.getId());
                 if (template == null) {
                     player.setMultiSell(null);
                     return;
@@ -239,7 +239,7 @@ public class MultiSellChoose extends ClientPacket {
 
                     if (found < ingredient.getCount()) {
                         final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_NEED_A_N_S1);
-                        sm.addString("+" + ingredient.getEnchantmentLevel() + " " + ItemTable.getInstance().getTemplate(ingredient.getId()).getName());
+                        sm.addString("+" + ingredient.getEnchantmentLevel() + " " + ItemEngine.getInstance().getTemplate(ingredient.getId()).getName());
                         player.sendPacket(sm);
                         return;
                     }

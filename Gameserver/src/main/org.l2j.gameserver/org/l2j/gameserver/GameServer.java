@@ -12,7 +12,7 @@ import org.l2j.gameserver.data.database.dao.CharacterDAO;
 import org.l2j.gameserver.data.sql.impl.*;
 import org.l2j.gameserver.data.xml.*;
 import org.l2j.gameserver.data.xml.impl.*;
-import org.l2j.gameserver.datatables.ItemTable;
+import org.l2j.gameserver.engine.items.ItemEngine;
 import org.l2j.gameserver.datatables.ReportTable;
 import org.l2j.gameserver.datatables.SchemeBufferTable;
 import org.l2j.gameserver.engine.elemental.ElementalSpiritEngine;
@@ -98,7 +98,7 @@ public class GameServer {
 
         printSection("Items");
         ConditionHandler.getInstance().executeScript();
-        ItemTable.init();
+        ItemEngine.init();
         EnchantItemGroupsData.getInstance();
         EnchantItemData.getInstance();
         EnchantItemOptionsData.getInstance();

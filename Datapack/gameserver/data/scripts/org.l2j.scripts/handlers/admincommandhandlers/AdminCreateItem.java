@@ -16,7 +16,7 @@
  */
 package handlers.admincommandhandlers;
 
-import org.l2j.gameserver.datatables.ItemTable;
+import org.l2j.gameserver.engine.items.ItemEngine;
 import org.l2j.gameserver.handler.IAdminCommandHandler;
 import org.l2j.gameserver.handler.IItemHandler;
 import org.l2j.gameserver.handler.ItemHandler;
@@ -180,7 +180,7 @@ public class AdminCreateItem implements IAdminCommandHandler
 				numval = 1;
 			}
 			int counter = 0;
-			final ItemTemplate template = ItemTable.getInstance().getTemplate(idval);
+			final ItemTemplate template = ItemEngine.getInstance().getTemplate(idval);
 			if (template == null)
 			{
 				BuilderUtil.sendSysMessage(activeChar, "This item doesn't exist.");
@@ -294,7 +294,7 @@ public class AdminCreateItem implements IAdminCommandHandler
 	
 	private void createItem(Player activeChar, Player target, int id, long num)
 	{
-		final ItemTemplate template = ItemTable.getInstance().getTemplate(id);
+		final ItemTemplate template = ItemEngine.getInstance().getTemplate(id);
 		if (template == null)
 		{
 			BuilderUtil.sendSysMessage(activeChar, "This item doesn't exist.");

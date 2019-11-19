@@ -1,86 +1,59 @@
-/*
- * This file is part of the L2J Mobius project.
- * 
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 3 of the License, or
- * (at your option) any later version.
- * 
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
- * General Public License for more details.
- * 
- * You should have received a copy of the GNU General Public License
- * along with this program. If not, see <http://www.gnu.org/licenses/>.
- */
 package handlers.effecthandlers;
 
-import org.l2j.gameserver.datatables.ItemTable;
+import io.github.joealisson.primitive.CHashIntIntMap;
+import io.github.joealisson.primitive.IntIntMap;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.effects.AbstractEffect;
-import org.l2j.gameserver.model.items.ItemTemplate;
+import org.l2j.gameserver.model.items.BodyPart;
 import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.skills.Skill;
 import org.l2j.gameserver.network.SystemMessageId;
 import org.l2j.gameserver.network.serverpackets.InventoryUpdate;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
 
-import java.util.Map;
-import java.util.concurrent.ConcurrentHashMap;
-
 import static org.l2j.gameserver.util.GameUtils.isPlayer;
 
 /**
  * Disarm by inventory slot effect implementation. At end of effect, it re-equips that item.
  * @author Nik
+ * @author JoeAlisson
  */
-public final class Disarmor extends AbstractEffect
-{
-	private final Map<Integer, Integer> _unequippedItems; // PlayerObjId, ItemObjId
-	private final long _slot;
+public final class Disarmor extends AbstractEffect {
+	private final IntIntMap unequippedItems = new CHashIntIntMap(); // PlayerObjId, ItemObjId
+	private final BodyPart bodyPart;
 	
-	public Disarmor(StatsSet params)
-	{
-		_unequippedItems = new ConcurrentHashMap<>();
-		
-		final String slot = params.getString("slot", "chest");
-		_slot = ItemTable.SLOTS.getOrDefault(slot, (long) ItemTemplate.SLOT_NONE);
-		if (_slot == ItemTemplate.SLOT_NONE)
-		{
-			LOGGER.error("Unknown bodypart slot for effect: " + slot);
+	public Disarmor(StatsSet params) {
+		bodyPart = params.getEnum("slot", BodyPart.class, BodyPart.CHEST);
+		if (bodyPart == BodyPart.NONE) {
+			LOGGER.error("Unknown bodypart slot for effect: {}", bodyPart);
 		}
 	}
 	
 	@Override
-	public boolean canStart(Creature effector, Creature effected, Skill skill)
-	{
-		return (_slot != ItemTemplate.SLOT_NONE) && isPlayer(effected);
+	public boolean canStart(Creature effector, Creature effected, Skill skill) {
+		return (bodyPart != BodyPart.NONE) && isPlayer(effected);
 	}
 	
 	@Override
-	public void continuousInstant(Creature effector, Creature effected, Skill skill, Item item)
-	{
-		if (!isPlayer(effected))
-		{
+	public void continuousInstant(Creature effector, Creature effected, Skill skill, Item item) {
+		if (!isPlayer(effected)) {
 			return;
 		}
 		
 		final Player player = effected.getActingPlayer();
-		final Item[] unequiped = player.getInventory().unEquipItemInBodySlotAndRecord(_slot);
-		if (unequiped.length > 0)
-		{
+		final Item[] unequiped = player.getInventory().unEquipItemInBodySlotAndRecord(bodyPart.getId());
+
+		if (unequiped.length > 0) {
 			final InventoryUpdate iu = new InventoryUpdate();
-			for (Item itm : unequiped)
-			{
+			for (Item itm : unequiped) {
 				iu.addModifiedItem(itm);
 			}
 			player.sendInventoryUpdate(iu);
 			player.broadcastUserInfo();
 			
-			SystemMessage sm = null;
+			SystemMessage sm;
 			if (unequiped[0].getEnchantLevel() > 0)
 			{
 				sm = SystemMessage.getSystemMessage(SystemMessageId.THE_EQUIPMENT_S1_S2_HAS_BEEN_REMOVED);
@@ -93,8 +66,8 @@ public final class Disarmor extends AbstractEffect
 				sm.addItemName(unequiped[0]);
 			}
 			player.sendPacket(sm);
-			effected.getInventory().blockItemSlot(_slot);
-			_unequippedItems.put(effected.getObjectId(), unequiped[0].getObjectId());
+			effected.getInventory().blockItemSlot(bodyPart.getId());
+			unequippedItems.put(effected.getObjectId(), unequiped[0].getObjectId());
 		}
 	}
 	
@@ -106,11 +79,11 @@ public final class Disarmor extends AbstractEffect
 			return;
 		}
 		
-		final Integer disarmedObjId = _unequippedItems.remove(effected.getObjectId());
-		if ((disarmedObjId != null) && (disarmedObjId > 0))
+		int disarmedObjId = unequippedItems.remove(effected.getObjectId());
+		if (disarmedObjId > 0)
 		{
 			final Player player = effected.getActingPlayer();
-			player.getInventory().unblockItemSlot(_slot);
+			player.getInventory().unblockItemSlot(bodyPart.getId());
 			
 			final Item item = player.getInventory().getItemByObjectId(disarmedObjId);
 			if (item != null)
@@ -120,7 +93,7 @@ public final class Disarmor extends AbstractEffect
 				iu.addModifiedItem(item);
 				player.sendInventoryUpdate(iu);
 				
-				SystemMessage sm = null;
+				SystemMessage sm;
 				if (item.isEquipped())
 				{
 					if (item.getEnchantLevel() > 0)

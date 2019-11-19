@@ -27,7 +27,7 @@
                 </xs:sequence>
                 <xs:attribute name="type" type="WeaponType" use="required"/>
                 <xs:attribute name="body-part" type="WeaponBodyPart"/>
-                <xs:attribute name="is-magic" type="xs:boolean" default="false"/>
+                <xs:attribute name="magic" type="xs:boolean" default="false"/>
             </xs:extension>
         </xs:complexContent>
     </xs:complexType>
@@ -38,6 +38,8 @@
                 <xs:attribute name="enchant-enabled" type="xs:boolean" default="true"/>
                 <xs:attribute name="commission-type" type="CommissionType" default="OTHER_WEAPON"/>
                 <xs:attribute name="change-weapon" type="xs:int" default="0"/>
+                <xs:attribute name="can-attack" type="xs:boolean" default="true"/>
+                <xs:attribute name="restrict-skills" type="xs:boolean" default="false"/>
             </xs:extension>
         </xs:complexContent>
     </xs:complexType>
@@ -72,6 +74,7 @@
         <xs:complexContent>
             <xs:extension base="Attributes">
                 <xs:attribute name="enchant-enabled" type="xs:boolean" default="true"/>
+                <xs:attribute name="commission-type" type="CommissionType" default="OTHER_ITEM"/>
             </xs:extension>
         </xs:complexContent>
     </xs:complexType>
@@ -100,6 +103,7 @@
                 <xs:attribute name="quest-item" type="xs:boolean" default="false"/>
                 <xs:attribute name="self-resurrection" type="xs:boolean" default="false"/>
                 <xs:attribute name="infinite" type="xs:boolean" default="false"/>
+                <xs:attribute name="commission-type" type="CommissionType" default="OTHER_ITEM"/>
             </xs:extension>
         </xs:complexContent>
     </xs:complexType>
@@ -134,7 +138,6 @@
         <xs:attribute name="weight" type="xs:int" default="0"/>
         <xs:attribute name="price" type="xs:int" default="0"/>
         <xs:attribute name="duration" type="xs:long" default="-1"/>
-        <xs:attribute name="commission-type" type="CommissionType" default="OTHER_ITEM"/>
         <xs:attribute name="reuse-delay" type="xs:long" />
         <xs:attribute name="for-npc" type="xs:boolean" default="false"/>
     </xs:complexType>
@@ -160,7 +163,7 @@
 
     <xs:complexType name="ItemAction">
         <xs:attribute name="handler">
-            <simpleType>
+            <xs:simpleType>
                 <xs:restriction base="xs:token">
                     <xs:enumeration value="BeastSoulShot"/>
                     <xs:enumeration value="BeastSpiritShot"/>
@@ -188,7 +191,7 @@
                     <xs:enumeration value="SpiritShot"/>
                     <xs:enumeration value="SummonItems"/>
                 </xs:restriction>
-            </simpleType>
+            </xs:simpleType>
         </xs:attribute>
     </xs:complexType>
 
@@ -225,9 +228,9 @@
 
     <xs:complexType name="ExtractableItem">
         <xs:attribute name="id" type="xs:positiveInteger"/>
-        <xs:attribute name="min-count" type="xs:positiveInteger"/>
-        <xs:attribute name="max-count" type="xs:positiveInteger"/>
-        <xs:attribute name="chance" type="xs:double"/>
+        <xs:attribute name="min-count" type="xs:positiveInteger" default="1"/>
+        <xs:attribute name="max-count" type="xs:positiveInteger" default="1"/>
+        <xs:attribute name="chance" type="xs:positiveInteger" default="100"/>
         <xs:attribute name="min-enchant" type="xs:nonNegativeInteger" default="0"/>
         <xs:attribute name="max-enchant" type="xs:nonNegativeInteger" default="0"/>
     </xs:complexType>

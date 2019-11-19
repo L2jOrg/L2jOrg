@@ -2,6 +2,7 @@ package org.l2j.gameserver.model.items;
 
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.items.type.ArmorType;
+import org.l2j.gameserver.model.items.type.CrystalType;
 
 /**
  * This class is dedicated to the management of armors.
@@ -59,6 +60,16 @@ public final class Armor extends ItemTemplate implements EquipableItem {
 
     public void setBodyPart(BodyPart bodyPart) {
         this.bodyPart = bodyPart;
+    }
+
+    @Override
+    public void setCrystalType(CrystalType type) {
+        this.crystalType = type;
+    }
+
+    @Override
+    public void setCrystalCount(int count) {
+        this.crystalCount = count;
     }
 
     public void setEnchantable(Boolean enchantable) {

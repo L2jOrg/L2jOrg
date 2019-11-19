@@ -280,7 +280,7 @@
             <condition name="EquipWeapon">
                 <weaponType>
                     <item>DUAL</item>
-                    <item>DUALBLUNT</item>
+                    <item>DUAL_BLUNT</item>
                 </weaponType>
             </condition>
         </conditions>
@@ -340,7 +340,7 @@
             <condition name="EquipWeapon">
                 <weaponType>
                     <item>DUAL</item>
-                    <item>DUALBLUNT</item>
+                    <item>DUAL_BLUNT</item>
                 </weaponType>
             </condition>
         </conditions>
@@ -374,7 +374,7 @@
             <condition name="EquipWeapon">
                 <weaponType>
                     <item>DUAL</item>
-                    <item>DUALBLUNT</item>
+                    <item>DUAL_BLUNT</item>
                 </weaponType>
             </condition>
         </conditions>
@@ -417,7 +417,7 @@
             <condition name="EquipWeapon">
                 <weaponType>
                     <item>DUAL</item>
-                    <item>DUALBLUNT</item>
+                    <item>DUAL_BLUNT</item>
                 </weaponType>
             </condition>
         </conditions>
@@ -911,7 +911,7 @@
                 </amount>
                 <mode>DIFF</mode>
                 <weaponType>
-                    <item>POLE</item>
+                    <item>SPEAR</item>
                 </weaponType>
             </effect>
             <effect name="CriticalDamage">
@@ -925,7 +925,7 @@
                 </amount>
                 <mode>PER</mode>
                 <weaponType>
-                    <item>POLE</item>
+                    <item>SPEAR</item>
                 </weaponType>
             </effect>
         </effects>
@@ -1045,7 +1045,7 @@
         <conditions>
             <condition name="EquipWeapon">
                 <weaponType>
-                    <item>POLE</item>
+                    <item>SPEAR</item>
                 </weaponType>
             </condition>
         </conditions>
@@ -1128,7 +1128,7 @@
             <condition name="EquipWeapon">
                 <weaponType>
                     <item>DAGGER</item>
-                    <item>DUALDAGGER</item>
+                    <item>DUAL_DAGGER</item>
                 </weaponType>
             </condition>
         </conditions>
@@ -1844,9 +1844,9 @@
             <condition name="EquipWeapon">
                 <weaponType>
                     <item>SWORD</item>
-                    <item>POLE</item>
+                    <item>SPEAR</item>
                     <item>BLUNT</item>
-                    <item>DUALFIST</item>
+                    <item>FIST</item>
                     <item>DUAL</item>
                 </weaponType>
             </condition>
@@ -1915,8 +1915,8 @@
                 <weaponType>
                     <item>SWORD</item>
                     <item>BLUNT</item>
-                    <item>DUALFIST</item>
-                    <item>POLE</item>
+                    <item>FIST</item>
+                    <item>SPEAR</item>
                     <item>DUAL</item>
                 </weaponType>
             </condition>
@@ -2006,7 +2006,7 @@
         <conditions>
             <condition name="EquipWeapon">
                 <weaponType>
-                    <item>POLE</item>
+                    <item>SPEAR</item>
                 </weaponType>
             </condition>
         </conditions>
@@ -2561,7 +2561,7 @@
             <condition name="EquipWeapon">
                 <weaponType>
                     <item>DAGGER</item>
-                    <item>DUALDAGGER</item>
+                    <item>DUAL_DAGGER</item>
                 </weaponType>
             </condition>
         </conditions>
@@ -2673,7 +2673,7 @@
         <conditions>
             <condition name="EquipWeapon">
                 <weaponType>
-                    <item>POLE</item>
+                    <item>SPEAR</item>
                 </weaponType>
             </condition>
         </conditions>

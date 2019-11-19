@@ -1,7 +1,7 @@
 package org.l2j.gameserver.model.teleporter;
 
 import org.l2j.gameserver.Config;
-import org.l2j.gameserver.datatables.ItemTable;
+import org.l2j.gameserver.engine.items.ItemEngine;
 import org.l2j.gameserver.enums.SpecialItemType;
 import org.l2j.gameserver.enums.TeleportType;
 import org.l2j.gameserver.instancemanager.CastleManager;
@@ -243,7 +243,7 @@ public final class TeleportHolder {
                 return ANCIENT_ADENA_STRING_ID;
             }
         }
-        final ItemTemplate item = ItemTable.getInstance().getTemplate(itemId);
+        final ItemTemplate item = ItemEngine.getInstance().getTemplate(itemId);
         if (item != null) {
             return item.getName();
         }

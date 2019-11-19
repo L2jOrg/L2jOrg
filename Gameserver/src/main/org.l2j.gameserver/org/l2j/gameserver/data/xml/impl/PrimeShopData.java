@@ -3,7 +3,7 @@ package org.l2j.gameserver.data.xml.impl;
 import io.github.joealisson.primitive.IntMap;
 import io.github.joealisson.primitive.HashIntMap;
 import org.l2j.gameserver.data.database.dao.PrimeShopDAO;
-import org.l2j.gameserver.datatables.ItemTable;
+import org.l2j.gameserver.engine.items.ItemEngine;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.items.ItemTemplate;
 import org.l2j.gameserver.model.primeshop.PrimeShopItem;
@@ -66,7 +66,7 @@ public class PrimeShopData extends GameXmlReader {
                 final int itemId = parseInteger(attrs, "id");
                 final int count = parseInteger(attrs, "count");
 
-                final ItemTemplate item = ItemTable.getInstance().getTemplate(itemId);
+                final ItemTemplate item = ItemEngine.getInstance().getTemplate(itemId);
                 if (isNull(item)) {
                     LOGGER.error("Item template does not exists for itemId: {} in product id {}", itemId, productNode.getAttributes().getNamedItem("id"));
                     return;

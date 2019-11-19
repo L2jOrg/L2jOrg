@@ -10,7 +10,7 @@ import org.l2j.gameserver.ai.CtrlIntention;
 import org.l2j.gameserver.data.xml.impl.ExtendDropData;
 import org.l2j.gameserver.datatables.EventDroplist;
 import org.l2j.gameserver.datatables.EventDroplist.DateDrop;
-import org.l2j.gameserver.datatables.ItemTable;
+import org.l2j.gameserver.engine.items.ItemEngine;
 import org.l2j.gameserver.engine.elemental.api.ElementalType;
 import org.l2j.gameserver.enums.ChatType;
 import org.l2j.gameserver.enums.DropType;
@@ -849,7 +849,7 @@ public class Attackable extends Npc {
         final Collection<ItemHolder> deathItems = npcTemplate.calculateDrops(DropType.DROP, this, player);
         if (deathItems != null) {
             for (ItemHolder drop : deathItems) {
-                final ItemTemplate item = ItemTable.getInstance().getTemplate(drop.getId());
+                final ItemTemplate item = ItemEngine.getInstance().getTemplate(drop.getId());
                 // Check if the autoLoot mode is active
                 if (Config.AUTO_LOOT_ITEM_IDS.contains(item.getId()) || isFlying() || (!item.hasExImmediateEffect() && ((!_isRaid && Config.AUTO_LOOT) || (_isRaid && Config.AUTO_LOOT_RAIDS))) || (item.hasExImmediateEffect() && Config.AUTO_LOOT_HERBS)) {
                     player.doAutoLoot(this, drop); // Give the item(s) to the Player that has killed the Attackable
@@ -957,7 +957,7 @@ public class Attackable extends Npc {
         final List<ItemTemplate> lootItems = new LinkedList<>();
         if (sweepItems != null) {
             for (ItemHolder item : sweepItems) {
-                lootItems.add(ItemTable.getInstance().getTemplate(item.getId()));
+                lootItems.add(ItemEngine.getInstance().getTemplate(item.getId()));
             }
         }
         return lootItems;

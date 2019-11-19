@@ -3,7 +3,7 @@ package handlers.bypasshandlers;
 import org.l2j.commons.util.CommonUtil;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.cache.HtmCache;
-import org.l2j.gameserver.datatables.ItemTable;
+import org.l2j.gameserver.engine.items.ItemEngine;
 import org.l2j.gameserver.enums.AttributeType;
 import org.l2j.gameserver.enums.DropType;
 import org.l2j.gameserver.handler.IBypassHandler;
@@ -399,7 +399,7 @@ public class NpcViewMod implements IBypassHandler
 
             int height = 64;
             final DropHolder dropItem = dropList.get(i);
-            final ItemTemplate item = ItemTable.getInstance().getTemplate(dropItem.getItemId());
+            final ItemTemplate item = ItemEngine.getInstance().getTemplate(dropItem.getItemId());
 
             // real time server rate calculations
             double rateChance = 1;

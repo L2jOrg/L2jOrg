@@ -1,7 +1,7 @@
 package org.l2j.gameserver.model.items.enchant;
 
 import org.l2j.commons.util.CommonUtil;
-import org.l2j.gameserver.datatables.ItemTable;
+import org.l2j.gameserver.engine.items.ItemEngine;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.items.ItemTemplate;
 import org.l2j.gameserver.model.items.instance.Item;
@@ -73,7 +73,7 @@ public abstract class AbstractEnchantItem {
      * @return {@link ItemTemplate} current item/scroll
      */
     public final ItemTemplate getItem() {
-        return ItemTable.getInstance().getTemplate(_id);
+        return ItemEngine.getInstance().getTemplate(_id);
     }
 
     /**

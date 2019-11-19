@@ -953,7 +953,7 @@
 																	</xs:sequence>
 																</xs:complexType>
 															</xs:element>
-															<xs:element name="POLE">
+															<xs:element name="SPEAR">
 																<xs:complexType mixed="true">
 																	<xs:sequence minOccurs="0">
 																		<xs:element maxOccurs="unbounded" name="value">
@@ -1222,7 +1222,7 @@
 																	</xs:sequence>
 																</xs:complexType>
 															</xs:element>
-															<xs:element name="TWOHANDCROSSBOW">
+															<xs:element name="TWO_HAND_CROSSBOW">
 																<xs:complexType>
 																	<xs:sequence>
 																		<xs:element maxOccurs="unbounded" name="value">
@@ -1282,7 +1282,7 @@
 																	</xs:sequence>
 																</xs:complexType>
 															</xs:element>
-															<xs:element name="ANCIENTSWORD">
+															<xs:element name="ANCIENT_SWORD">
 																<xs:complexType mixed="true">
 																	<xs:sequence minOccurs="0">
 																		<xs:element maxOccurs="unbounded" name="value">
@@ -1297,7 +1297,7 @@
 																	</xs:sequence>
 																</xs:complexType>
 															</xs:element>
-															<xs:element name="DUALDAGGER">
+															<xs:element name="DUAL_DAGGER">
 																<xs:complexType mixed="true">
 																	<xs:sequence minOccurs="0">
 																		<xs:element maxOccurs="unbounded" name="value">

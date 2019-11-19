@@ -2,7 +2,7 @@ package org.l2j.gameserver.data.xml.impl;
 
 import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.gameserver.Config;
-import org.l2j.gameserver.datatables.ItemTable;
+import org.l2j.gameserver.engine.items.ItemEngine;
 import org.l2j.gameserver.model.buylist.Product;
 import org.l2j.gameserver.model.buylist.ProductList;
 import org.l2j.gameserver.model.items.ItemTemplate;
@@ -94,7 +94,7 @@ public final class BuyListData extends GameXmlReader {
                             final NamedNodeMap attrs = node.getAttributes();
 
                             final int itemId = parseInteger(attrs, "id");
-                            final ItemTemplate item = ItemTable.getInstance().getTemplate(itemId);
+                            final ItemTemplate item = ItemEngine.getInstance().getTemplate(itemId);
                             if (item != null) {
                                 final long price = parseLong(attrs, "price", -1L);
                                 final long restockDelay = parseLong(attrs, "restock_delay", -1L);

@@ -4,7 +4,7 @@ import ai.AbstractNpcAI;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.xml.CategoryManager;
 import org.l2j.gameserver.data.xml.impl.ClassListData;
-import org.l2j.gameserver.datatables.ItemTable;
+import org.l2j.gameserver.engine.items.ItemEngine;
 import org.l2j.gameserver.enums.CategoryType;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -729,7 +729,7 @@ public final class ClassMaster extends AbstractNpcAI
 			{
 				option.getItemsRequired().forEach(ih ->
 				{
-					sb.append("<tr><td><font color=\"LEVEL\">" + ih.getCount() + "</font></td><td>" + ItemTable.getInstance().getTemplate(ih.getId()).getName() + "</td><td width=30></td></tr>");
+					sb.append("<tr><td><font color=\"LEVEL\">" + ih.getCount() + "</font></td><td>" + ItemEngine.getInstance().getTemplate(ih.getId()).getName() + "</td><td width=30></td></tr>");
 				});
 			}
 			sb.append("<tr><td>Rewards:</td></tr>");
@@ -754,7 +754,7 @@ public final class ClassMaster extends AbstractNpcAI
 			{
 				option.getItemsRewarded().forEach(ih ->
 				{
-					sb.append("<tr><td><font color=\"LEVEL\">" + ih.getCount() + "</font></td><td>" + ItemTable.getInstance().getTemplate(ih.getId()).getName() + "</td><td width=30></td></tr>");
+					sb.append("<tr><td><font color=\"LEVEL\">" + ih.getCount() + "</font></td><td>" + ItemEngine.getInstance().getTemplate(ih.getId()).getName() + "</td><td width=30></td></tr>");
 				});
 				
 				if (option.isRewardNoblesse())

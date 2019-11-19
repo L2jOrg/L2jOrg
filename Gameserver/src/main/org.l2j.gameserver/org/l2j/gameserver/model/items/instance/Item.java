@@ -6,7 +6,7 @@ import org.l2j.commons.threading.ThreadPool;
 import org.l2j.gameserver.data.xml.impl.EnchantItemOptionsData;
 import org.l2j.gameserver.data.xml.impl.EnsoulData;
 import org.l2j.gameserver.data.xml.impl.OptionData;
-import org.l2j.gameserver.datatables.ItemTable;
+import org.l2j.gameserver.engine.items.ItemEngine;
 import org.l2j.gameserver.enums.AttributeType;
 import org.l2j.gameserver.enums.InstanceType;
 import org.l2j.gameserver.enums.ItemLocation;
@@ -160,7 +160,7 @@ public final class Item extends WorldObject {
         super(objectId);
         setInstanceType(InstanceType.L2ItemInstance);
         _itemId = itemId;
-        _item = ItemTable.getInstance().getTemplate(itemId);
+        _item = ItemEngine.getInstance().getTemplate(itemId);
         if ((_itemId == 0) || (_item == null)) {
             throw new IllegalArgumentException();
         }
@@ -198,7 +198,7 @@ public final class Item extends WorldObject {
      * @throws SQLException
      */
     public Item(ResultSet rs) throws SQLException {
-        this(rs.getInt("object_id"), ItemTable.getInstance().getTemplate(rs.getInt("item_id")));
+        this(rs.getInt("object_id"), ItemEngine.getInstance().getTemplate(rs.getInt("item_id")));
         _count = rs.getLong("count");
         _ownerId = rs.getInt("owner_id");
         _loc = ItemLocation.valueOf(rs.getString("loc"));

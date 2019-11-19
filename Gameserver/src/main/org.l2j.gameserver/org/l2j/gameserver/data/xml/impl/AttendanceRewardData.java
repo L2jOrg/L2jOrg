@@ -1,7 +1,7 @@
 package org.l2j.gameserver.data.xml.impl;
 
 import org.l2j.gameserver.Config;
-import org.l2j.gameserver.datatables.ItemTable;
+import org.l2j.gameserver.engine.items.ItemEngine;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.holders.ItemHolder;
 import org.l2j.gameserver.settings.ServerSettings;
@@ -54,7 +54,7 @@ public class AttendanceRewardData extends GameXmlReader {
             final StatsSet set = new StatsSet(parseAttributes(rewardNode));
             final int itemId = set.getInt("id");
             final int itemCount = set.getInt("count");
-            if (ItemTable.getInstance().getTemplate(itemId) == null) {
+            if (ItemEngine.getInstance().getTemplate(itemId) == null) {
                 LOGGER.info(getClass().getSimpleName() + ": Item with id " + itemId + " does not exist.");
             } else {
                 _rewards.add(new ItemHolder(itemId, itemCount));

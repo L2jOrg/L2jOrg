@@ -17,7 +17,7 @@
 package custom.SellBuff;
 
 import org.l2j.gameserver.Config;
-import org.l2j.gameserver.datatables.ItemTable;
+import org.l2j.gameserver.engine.items.ItemEngine;
 import org.l2j.gameserver.handler.BypassHandler;
 import org.l2j.gameserver.handler.IBypassHandler;
 import org.l2j.gameserver.handler.IVoicedCommandHandler;
@@ -413,7 +413,7 @@ public class SellBuff implements IVoicedCommandHandler, IBypassHandler
 						}
 						else
 						{
-							final ItemTemplate item = ItemTable.getInstance().getTemplate(Config.SELLBUFF_PAYMENT_ID);
+							final ItemTemplate item = ItemEngine.getInstance().getTemplate(Config.SELLBUFF_PAYMENT_ID);
 							if (item != null)
 							{
 								activeChar.sendMessage("Not enough " + item.getName() + "!");

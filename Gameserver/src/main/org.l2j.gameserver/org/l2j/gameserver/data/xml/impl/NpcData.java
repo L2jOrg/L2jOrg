@@ -2,7 +2,7 @@ package org.l2j.gameserver.data.xml.impl;
 
 import org.l2j.commons.util.CommonUtil;
 import org.l2j.gameserver.Config;
-import org.l2j.gameserver.datatables.ItemTable;
+import org.l2j.gameserver.engine.items.ItemEngine;
 import org.l2j.gameserver.engine.elemental.api.ElementalType;
 import org.l2j.gameserver.enums.AISkillScope;
 import org.l2j.gameserver.enums.DropType;
@@ -371,7 +371,7 @@ public class NpcData extends GameXmlReader {
                                                 if ("item".equals(drop_node.getNodeName().toLowerCase())) {
                                                     final double chance = parseDouble(drop_attrs, "chance");
                                                     final DropHolder dropItem = new DropHolder(dropType, parseInteger(drop_attrs, "id"), parseLong(drop_attrs, "min"), parseLong(drop_attrs, "max"), dropType == DropType.LUCKY ? chance / 100 : chance);
-                                                    if (ItemTable.getInstance().getTemplate(parseInteger(drop_attrs, "id")) == null) {
+                                                    if (ItemEngine.getInstance().getTemplate(parseInteger(drop_attrs, "id")) == null) {
                                                         LOGGER.warn("DropListItem: Could not find item with id " + parseInteger(drop_attrs, "id") + ".");
                                                     } else {
                                                         dropLists.add(dropItem);

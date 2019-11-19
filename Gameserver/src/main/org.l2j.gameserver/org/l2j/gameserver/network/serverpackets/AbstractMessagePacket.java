@@ -1,6 +1,6 @@
 package org.l2j.gameserver.network.serverpackets;
 
-import org.l2j.gameserver.datatables.ItemTable;
+import org.l2j.gameserver.engine.items.ItemEngine;
 import org.l2j.gameserver.model.actor.Npc;
 import org.l2j.gameserver.model.actor.Summon;
 import org.l2j.gameserver.model.actor.instance.Player;
@@ -170,7 +170,7 @@ public abstract class AbstractMessagePacket<T extends AbstractMessagePacket<?>> 
     }
 
     public final T addItemName(int id) {
-        final ItemTemplate item = ItemTable.getInstance().getTemplate(id);
+        final ItemTemplate item = ItemEngine.getInstance().getTemplate(id);
         if (item.getDisplayId() != id) {
             return addString(item.getName());
         }

@@ -671,10 +671,10 @@
                 <BLUNT>25</BLUNT>
                 <FIST>25</FIST>
                 <DUALFIST>25</DUALFIST>
-                <POLE>25</POLE>
+                <SPEAR>25</SPEAR>
                 <DUAL>25</DUAL>
                 <DAGGER>25</DAGGER>
-                <DUALDAGGER>25</DUALDAGGER>
+                <DUAL_DAGGER>25</DUAL_DAGGER>
             </effect>
             <effect name="PhysicalDefence">
                 <amount>15</amount>
@@ -1258,11 +1258,11 @@
                 <BLUNT>-30</BLUNT>
                 <SWORD>-30</SWORD>
                 <DUAL>-30</DUAL>
-                <ANCIENTSWORD>-30</ANCIENTSWORD>
+                <ANCIENT_SWORD>-30</ANCIENT_SWORD>
                 <DAGGER>-30</DAGGER>
                 <RAPIER>-30</RAPIER>
                 <DUALFIST>-30</DUALFIST>
-                <DUALDAGGER>-30</DUALDAGGER>
+                <DUAL_DAGGER>-30</DUAL_DAGGER>
             </effect>
         </effects>
     </skill>

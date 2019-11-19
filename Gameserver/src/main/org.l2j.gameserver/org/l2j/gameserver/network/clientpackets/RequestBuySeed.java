@@ -1,7 +1,7 @@
 package org.l2j.gameserver.network.clientpackets;
 
 import org.l2j.gameserver.Config;
-import org.l2j.gameserver.datatables.ItemTable;
+import org.l2j.gameserver.engine.items.ItemEngine;
 import org.l2j.gameserver.instancemanager.CastleManager;
 import org.l2j.gameserver.instancemanager.CastleManorManager;
 import org.l2j.gameserver.model.SeedProduction;
@@ -104,7 +104,7 @@ public class RequestBuySeed extends ClientPacket {
             }
 
             // Calculate weight
-            final ItemTemplate template = ItemTable.getInstance().getTemplate(ih.getId());
+            final ItemTemplate template = ItemEngine.getInstance().getTemplate(ih.getId());
             totalWeight += ih.getCount() * template.getWeight();
 
             // Calculate slots

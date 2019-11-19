@@ -30,7 +30,7 @@ import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.cache.HtmCache;
 import org.l2j.gameserver.data.xml.impl.NpcData;
 import org.l2j.gameserver.data.xml.impl.SpawnsData;
-import org.l2j.gameserver.datatables.ItemTable;
+import org.l2j.gameserver.engine.items.ItemEngine;
 import org.l2j.gameserver.enums.DropType;
 import org.l2j.gameserver.handler.CommunityBoardHandler;
 import org.l2j.gameserver.handler.IParseBoardHandler;
@@ -188,7 +188,7 @@ public class DropSearchBoard implements IParseBoardHandler
 					}
 					else
 					{
-						final ItemTemplate item = ItemTable.getInstance().getTemplate(cbDropHolder.itemId);
+						final ItemTemplate item = ItemEngine.getInstance().getTemplate(cbDropHolder.itemId);
 						
 						if (Config.RATE_DROP_CHANCE_BY_ID.get(cbDropHolder.itemId) != null)
 						{
@@ -286,7 +286,7 @@ public class DropSearchBoard implements IParseBoardHandler
 		int limit = 0;
 		Set<Integer> existInDropData = DROP_INDEX_CACHE.keySet();
 		List<ItemTemplate> items = new ArrayList<>();
-		for (ItemTemplate item : ItemTable.getInstance().getAllItems())
+		for (ItemTemplate item : ItemEngine.getInstance().getAllItems())
 		{
 			if (item == null)
 			{

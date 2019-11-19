@@ -16,7 +16,7 @@
  */
 package org.l2j.gameserver.model.primeshop;
 
-import org.l2j.gameserver.datatables.ItemTable;
+import org.l2j.gameserver.engine.items.ItemEngine;
 
 import java.util.List;
 
@@ -74,7 +74,7 @@ public class PrimeShopProduct {
     }
 
     public long getCount() {
-        return items.stream().mapToLong(item -> ItemTable.getInstance().getTemplate(item.getId()).isStackable() ? 1 : item.getCount()).sum();
+        return items.stream().mapToLong(item -> ItemEngine.getInstance().getTemplate(item.getId()).isStackable() ? 1 : item.getCount()).sum();
     }
 
     public int getWeight() {

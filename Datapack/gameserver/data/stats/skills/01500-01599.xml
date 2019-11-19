@@ -657,7 +657,7 @@
                     <value level="6">40</value>
                     <value level="7">45</value>
                 </BOW>
-                <TWOHANDCROSSBOW>
+                <TWO_HAND_CROSSBOW>
                     <value level="1">10</value>
                     <value level="2">15</value>
                     <value level="3">20</value>
@@ -665,7 +665,7 @@
                     <value level="5">35</value>
                     <value level="6">40</value>
                     <value level="7">45</value>
-                </TWOHANDCROSSBOW>
+                </TWO_HAND_CROSSBOW>
                 <CROSSBOW>
                     <value level="1">10</value>
                     <value level="2">15</value>
@@ -2668,7 +2668,7 @@
                     <value level="10">-53</value>
                     <value level="11">-54</value>
                 </DUALFIST>
-                <ANCIENTSWORD>
+                <ANCIENT_SWORD>
                     <value level="1">-16</value>
                     <value level="2">-24</value>
                     <value level="3">-32</value>
@@ -2680,8 +2680,8 @@
                     <value level="9">-52</value>
                     <value level="10">-53</value>
                     <value level="11">-54</value>
-                </ANCIENTSWORD>
-                <DUALDAGGER>
+                </ANCIENT_SWORD>
+                <DUAL_DAGGER>
                     <value level="1">-16</value>
                     <value level="2">-24</value>
                     <value level="3">-32</value>
@@ -2693,7 +2693,7 @@
                     <value level="9">-52</value>
                     <value level="10">-53</value>
                     <value level="11">-54</value>
-                </DUALDAGGER>
+                </DUAL_DAGGER>
                 <BLUNT>
                     <value level="1">-16</value>
                     <value level="2">-24</value>
@@ -2707,7 +2707,7 @@
                     <value level="10">-53</value>
                     <value level="11">-54</value>
                 </BLUNT>
-                <POLE>
+                <SPEAR>
                     <value level="1">-16</value>
                     <value level="2">-24</value>
                     <value level="3">-32</value>
@@ -2719,7 +2719,7 @@
                     <value level="9">-52</value>
                     <value level="10">-53</value>
                     <value level="11">-54</value>
-                </POLE>
+                </SPEAR>
                 <DUAL>
                     <value level="1">-16</value>
                     <value level="2">-24</value>
@@ -3673,7 +3673,7 @@
                 <mode>DIFF</mode>
                 <weaponType>
                     <item>DAGGER</item>
-                    <item>DUALDAGGER</item>
+                    <item>DUAL_DAGGER</item>
                 </weaponType>
             </effect>
             <effect name="CriticalRate">
@@ -3685,7 +3685,7 @@
                 <mode>PER</mode>
                 <weaponType>
                     <item>DAGGER</item>
-                    <item>DUALDAGGER</item>
+                    <item>DUAL_DAGGER</item>
                 </weaponType>
             </effect>
         </effects>
@@ -3711,7 +3711,7 @@
         <conditions>
             <condition name="EquipWeapon">
                 <weaponType>
-                    <item>DUALDAGGER</item>
+                    <item>DUAL_DAGGER</item>
                 </weaponType>
             </condition>
         </conditions>
@@ -4290,7 +4290,7 @@
             <condition name="EquipWeapon">
                 <weaponType>
                     <item>DUAL</item>
-                    <item>DUALBLUNT</item>
+                    <item>DUAL_BLUNT</item>
                 </weaponType>
             </condition>
         </conditions>
@@ -4370,7 +4370,7 @@
             <condition name="EquipWeapon">
                 <weaponType>
                     <item>DUAL</item>
-                    <item>DUALBLUNT</item>
+                    <item>DUAL_BLUNT</item>
                 </weaponType>
             </condition>
         </conditions>
@@ -4450,7 +4450,7 @@
             <condition name="EquipWeapon">
                 <weaponType>
                     <item>DUAL</item>
-                    <item>DUALBLUNT</item>
+                    <item>DUAL_BLUNT</item>
                 </weaponType>
             </condition>
         </conditions>
@@ -4530,7 +4530,7 @@
             <condition name="EquipWeapon">
                 <weaponType>
                     <item>DUAL</item>
-                    <item>DUALBLUNT</item>
+                    <item>DUAL_BLUNT</item>
                 </weaponType>
             </condition>
         </conditions>
@@ -4610,7 +4610,7 @@
             <condition name="EquipWeapon">
                 <weaponType>
                     <item>DUAL</item>
-                    <item>DUALBLUNT</item>
+                    <item>DUAL_BLUNT</item>
                 </weaponType>
             </condition>
         </conditions>
@@ -4688,7 +4688,7 @@
             <condition name="EquipWeapon">
                 <weaponType>
                     <item>DUAL</item>
-                    <item>DUALBLUNT</item>
+                    <item>DUAL_BLUNT</item>
                 </weaponType>
             </condition>
         </conditions>
@@ -4822,7 +4822,7 @@
             <condition name="EquipWeapon">
                 <weaponType>
                     <item>DUAL</item>
-                    <item>DUALBLUNT</item>
+                    <item>DUAL_BLUNT</item>
                 </weaponType>
             </condition>
         </conditions>

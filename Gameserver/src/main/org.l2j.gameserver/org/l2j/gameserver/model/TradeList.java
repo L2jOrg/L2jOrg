@@ -1,7 +1,7 @@
 package org.l2j.gameserver.model;
 
 import org.l2j.gameserver.Config;
-import org.l2j.gameserver.datatables.ItemTable;
+import org.l2j.gameserver.engine.items.ItemEngine;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.itemcontainer.Inventory;
 import org.l2j.gameserver.model.itemcontainer.PcInventory;
@@ -214,7 +214,7 @@ public class TradeList {
             return null;
         }
 
-        final ItemTemplate item = ItemTable.getInstance().getTemplate(itemId);
+        final ItemTemplate item = ItemEngine.getInstance().getTemplate(itemId);
         if (item == null) {
             LOGGER.warn(_owner.getName() + ": Attempt to add invalid item to TradeList!");
             return null;
@@ -448,7 +448,7 @@ public class TradeList {
             if (item == null) {
                 continue;
             }
-            final ItemTemplate template = ItemTable.getInstance().getTemplate(item.getItem().getId());
+            final ItemTemplate template = ItemEngine.getInstance().getTemplate(item.getItem().getId());
             if (template == null) {
                 continue;
             }
@@ -472,7 +472,7 @@ public class TradeList {
             if (item == null) {
                 continue;
             }
-            final ItemTemplate template = ItemTable.getInstance().getTemplate(item.getItem().getId());
+            final ItemTemplate template = ItemEngine.getInstance().getTemplate(item.getItem().getId());
             if (template == null) {
                 continue;
             }
@@ -601,7 +601,7 @@ public class TradeList {
                 return 2;
             }
 
-            final ItemTemplate template = ItemTable.getInstance().getTemplate(item.getItemId());
+            final ItemTemplate template = ItemEngine.getInstance().getTemplate(item.getItemId());
             if (template == null) {
                 continue;
             }

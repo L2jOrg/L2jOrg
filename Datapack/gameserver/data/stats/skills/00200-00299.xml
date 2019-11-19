@@ -518,7 +518,7 @@
                 <chance>33</chance>
                 <targetType>SELF</targetType>
                 <isCritical>true</isCritical>
-                <allowWeapons>DAGGER,DUALDAGGER</allowWeapons>
+                <allowWeapons>DAGGER,DUAL_DAGGER</allowWeapons>
                 <skillId>5603</skillId> <!-- Dagger Mastery -->
                 <skillLevel>1</skillLevel>
             </effect>
@@ -587,7 +587,7 @@
                 <mode>DIFF</mode>
                 <weaponType>
                     <item>DAGGER</item>
-                    <item>DUALDAGGER</item>
+                    <item>DUAL_DAGGER</item>
                 </weaponType>
             </effect>
         </effects>
@@ -723,7 +723,7 @@
                 </amount>
                 <mode>DIFF</mode>
                 <weaponType>
-                    <item>DUALFIST</item>
+                    <item>FIST</item>
                 </weaponType>
             </effect>
         </effects>
@@ -972,7 +972,7 @@
                 </amount>
                 <mode>DIFF</mode>
                 <weaponType>
-                    <item>POLE</item>
+                    <item>SPEAR</item>
                 </weaponType>
             </effect>
             <effect name="HitNumber">
@@ -1039,7 +1039,7 @@
                 </amount>
                 <mode>DIFF</mode>
                 <weaponType>
-                    <item>POLE</item>
+                    <item>SPEAR</item>
                 </weaponType>
             </effect>
         </effects>
@@ -1467,8 +1467,8 @@
                     <item>SWORD</item>
                     <item>DAGGER</item>
                     <item>DUAL</item>
-                    <item>DUALBLUNT</item>
-                    <item>DUALDAGGER</item>
+                    <item>DUAL_BLUNT</item>
+                    <item>DUAL_DAGGER</item>
                 </weaponType>
             </condition>
         </conditions>
@@ -3181,7 +3181,7 @@
         <conditions>
             <condition name="EquipWeapon">
                 <weaponType>
-                    <item>POLE</item>
+                    <item>SPEAR</item>
                 </weaponType>
             </condition>
         </conditions>
@@ -4897,7 +4897,7 @@
                 <weaponType>
                     <item>SWORD</item>
                     <item>BLUNT</item>
-                    <item>POLE</item>
+                    <item>SPEAR</item>
                     <item>DUAL</item>
                 </weaponType>
             </condition>
@@ -5071,7 +5071,7 @@
             <condition name="EquipWeapon">
                 <weaponType>
                     <item>DUAL</item>
-                    <item>DUALBLUNT</item>
+                    <item>DUAL_BLUNT</item>
                 </weaponType>
             </condition>
         </conditions>
@@ -5455,7 +5455,7 @@
             <condition name="EquipWeapon">
                 <weaponType>
                     <item>DAGGER</item>
-                    <item>DUALDAGGER</item>
+                    <item>DUAL_DAGGER</item>
                 </weaponType>
             </condition>
         </conditions>
@@ -5823,7 +5823,7 @@
             <condition name="EquipWeapon">
                 <weaponType>
                     <item>DUAL</item>
-                    <item>DUALBLUNT</item>
+                    <item>DUAL_BLUNT</item>
                 </weaponType>
             </condition>
         </conditions>
@@ -5860,7 +5860,7 @@
             <condition name="EquipWeapon">
                 <weaponType>
                     <item>DUAL</item>
-                    <item>DUALBLUNT</item>
+                    <item>DUAL_BLUNT</item>
                 </weaponType>
             </condition>
         </conditions>
@@ -5903,7 +5903,7 @@
             <condition name="EquipWeapon">
                 <weaponType>
                     <item>DUAL</item>
-                    <item>DUALBLUNT</item>
+                    <item>DUAL_BLUNT</item>
                 </weaponType>
             </condition>
         </conditions>
@@ -5949,7 +5949,7 @@
             <condition name="EquipWeapon">
                 <weaponType>
                     <item>DUAL</item>
-                    <item>DUALBLUNT</item>
+                    <item>DUAL_BLUNT</item>
                 </weaponType>
             </condition>
         </conditions>
@@ -5998,7 +5998,7 @@
             <condition name="EquipWeapon">
                 <weaponType>
                     <item>DUAL</item>
-                    <item>DUALBLUNT</item>
+                    <item>DUAL_BLUNT</item>
                 </weaponType>
             </condition>
         </conditions>
@@ -6047,7 +6047,7 @@
             <condition name="EquipWeapon">
                 <weaponType>
                     <item>DUAL</item>
-                    <item>DUALBLUNT</item>
+                    <item>DUAL_BLUNT</item>
                 </weaponType>
             </condition>
         </conditions>
@@ -6092,7 +6092,7 @@
             <condition name="EquipWeapon">
                 <weaponType>
                     <item>DUAL</item>
-                    <item>DUALBLUNT</item>
+                    <item>DUAL_BLUNT</item>
                 </weaponType>
             </condition>
         </conditions>
@@ -6433,7 +6433,7 @@
         <conditions>
             <condition name="EquipWeapon">
                 <weaponType>
-                    <item>DUALFIST</item>
+                    <item>FIST</item>
                 </weaponType>
             </condition>
         </conditions>
@@ -6751,7 +6751,7 @@
         <conditions>
             <condition name="EquipWeapon">
                 <weaponType>
-                    <item>DUALFIST</item>
+                    <item>FIST</item>
                 </weaponType>
             </condition>
         </conditions>
@@ -6830,7 +6830,7 @@
         <conditions>
             <condition name="EquipWeapon">
                 <weaponType>
-                    <item>DUALFIST</item>
+                    <item>FIST</item>
                 </weaponType>
             </condition>
         </conditions>
@@ -6843,14 +6843,14 @@
                 <amount>20</amount>
                 <mode>PER</mode>
                 <weaponType>
-                    <item>DUALFIST</item>
+                    <item>FIST</item>
                 </weaponType>
             </effect>
             <effect name="Accuracy">
                 <amount>6</amount>
                 <mode>DIFF</mode>
                 <weaponType>
-                    <item>DUALFIST</item>
+                    <item>FIST</item>
                 </weaponType>
             </effect>
         </effects>
@@ -7120,7 +7120,7 @@
         <conditions>
             <condition name="EquipWeapon">
                 <weaponType>
-                    <item>DUALFIST</item>
+                    <item>FIST</item>
                 </weaponType>
             </condition>
         </conditions>
@@ -7330,7 +7330,7 @@
         <affectObject>NOT_FRIEND</affectObject>
         <effects>
             <effect name="DefenceTrait">
-                <POLE>
+                <SPEAR>
                     <value level="1">-10</value>
                     <value level="2">-11</value>
                     <value level="3">-12</value>
@@ -7342,7 +7342,7 @@
                     <value level="9">-18</value>
                     <value level="10">-19</value>
                     <value level="11">-20</value>
-                </POLE>
+                </SPEAR>
             </effect>
         </effects>
     </skill>
@@ -7694,7 +7694,7 @@
         <conditions>
             <condition name="EquipWeapon">
                 <weaponType>
-                    <item>DUALFIST</item>
+                    <item>FIST</item>
                 </weaponType>
             </condition>
         </conditions>
@@ -7703,7 +7703,7 @@
                 <amount>6</amount>
                 <mode>DIFF</mode>
                 <weaponType>
-                    <item>DUALFIST</item>
+                    <item>FIST</item>
                 </weaponType>
             </effect>
             <effect name="PAtk" fromLevel="6" toLevel="9">
@@ -7963,7 +7963,7 @@
         <conditions>
             <condition name="EquipWeapon">
                 <weaponType>
-                    <item>DUALFIST</item>
+                    <item>FIST</item>
                 </weaponType>
             </condition>
         </conditions>
@@ -7976,21 +7976,21 @@
                 <amount>30</amount>
                 <mode>PER</mode>
                 <weaponType>
-                    <item>DUALFIST</item>
+                    <item>FIST</item>
                 </weaponType>
             </effect>
             <effect name="Accuracy">
                 <amount>6</amount>
                 <mode>DIFF</mode>
                 <weaponType>
-                    <item>DUALFIST</item>
+                    <item>FIST</item>
                 </weaponType>
             </effect>
             <effect name="PhysicalEvasion">
                 <amount>6</amount>
                 <mode>DIFF</mode>
                 <weaponType>
-                    <item>DUALFIST</item>
+                    <item>FIST</item>
                 </weaponType>
             </effect>
         </effects>

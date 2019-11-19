@@ -1,6 +1,6 @@
 package org.l2j.gameserver.data.xml.impl;
 
-import org.l2j.gameserver.datatables.ItemTable;
+import org.l2j.gameserver.engine.items.ItemEngine;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.holders.EquipmentUpgradeHolder;
 import org.l2j.gameserver.model.holders.ItemHolder;
@@ -63,7 +63,7 @@ public class EquipmentUpgradeData extends GameXmlReader
                 {
                     final String[] matValues = mat.split(",");
                     final int matItemId = Integer.parseInt(matValues[0]);
-                    if (ItemTable.getInstance().getTemplate(matItemId) == null)
+                    if (ItemEngine.getInstance().getTemplate(matItemId) == null)
                     {
                         LOGGER.info(getClass().getSimpleName() + ": Material item with id " + matItemId + " does not exist.");
                     }
@@ -77,7 +77,7 @@ public class EquipmentUpgradeData extends GameXmlReader
             final String[] resultItem = set.getString("result").split(",");
             final int resultItemId = Integer.parseInt(resultItem[0]);
             final int resultItemEnchant = Integer.parseInt(resultItem[1]);
-            if (ItemTable.getInstance().getTemplate(requiredItemId) == null)
+            if (ItemEngine.getInstance().getTemplate(requiredItemId) == null)
             {
                 LOGGER.info(getClass().getSimpleName() + ": Required item with id " + requiredItemId + " does not exist.");
             }

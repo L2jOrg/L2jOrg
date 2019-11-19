@@ -6,7 +6,7 @@ import org.l2j.gameserver.Config;
 import org.l2j.gameserver.ItemsAutoDestroy;
 import org.l2j.gameserver.cache.HtmCache;
 import org.l2j.gameserver.data.xml.impl.ClanHallData;
-import org.l2j.gameserver.datatables.ItemTable;
+import org.l2j.gameserver.engine.items.ItemEngine;
 import org.l2j.gameserver.engine.elemental.api.ElementalType;
 import org.l2j.gameserver.enums.*;
 import org.l2j.gameserver.handler.BypassHandler;
@@ -1210,12 +1210,12 @@ public class Npc extends Creature {
             final int newY = (getY() + Rnd.get((RANDOM_ITEM_DROP_LIMIT * 2) + 1)) - RANDOM_ITEM_DROP_LIMIT;
             final int newZ = getZ() + 20;
 
-            if (ItemTable.getInstance().getTemplate(itemId) == null) {
+            if (ItemEngine.getInstance().getTemplate(itemId) == null) {
                 LOGGER.error("Item doesn't exist so cannot be dropped. Item ID: " + itemId + " Quest: " + getName());
                 return null;
             }
 
-            item = ItemTable.getInstance().createItem("Loot", itemId, itemCount, character, this);
+            item = ItemEngine.getInstance().createItem("Loot", itemId, itemCount, character, this);
             if (item == null) {
                 return null;
             }

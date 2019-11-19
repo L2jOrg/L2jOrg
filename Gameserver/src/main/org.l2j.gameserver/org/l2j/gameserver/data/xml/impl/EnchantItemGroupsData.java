@@ -1,7 +1,7 @@
 package org.l2j.gameserver.data.xml.impl;
 
 import org.l2j.commons.util.Util;
-import org.l2j.gameserver.datatables.ItemTable;
+import org.l2j.gameserver.engine.items.ItemEngine;
 import org.l2j.gameserver.model.holders.RangeChanceHolder;
 import org.l2j.gameserver.model.items.ItemTemplate;
 import org.l2j.gameserver.model.items.enchant.EnchantItemGroup;
@@ -90,7 +90,7 @@ public final class EnchantItemGroupsData extends GameXmlReader {
                                     if ("item".equals(z.getNodeName())) {
                                         final NamedNodeMap attrs = z.getAttributes();
                                         if (attrs.getNamedItem("slot") != null) {
-                                            rateGroup.addSlot(ItemTable.SLOTS.get(parseString(attrs, "slot")));
+                                            rateGroup.addSlot(ItemEngine.SLOTS.get(parseString(attrs, "slot")));
                                         }
                                         if (attrs.getNamedItem("magicWeapon") != null) {
                                             rateGroup.setMagicWeapon(parseBoolean(attrs, "magicWeapon"));

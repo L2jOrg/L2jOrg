@@ -822,7 +822,7 @@
         <equipment rhand="16"/> <!-- Great Spear -->
         <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
             <vitals hp="214" hpRegen="2.5" mp="132" mpRegen="1.2"/>
-            <attack physical="27.546981" magical="17.10092" random="30" critical="4" accuracy="0" attackSpeed="216" type="POLE" range="80" distance="80" width="120"/>
+            <attack physical="27.546981" magical="17.10092" random="30" critical="4" accuracy="0" attackSpeed="216" type="SPEAR" range="80" distance="80" width="120"/>
             <defence physical="62.43143636" magical="50.25308"/>
             <speed>
                 <walk ground="52"/>
@@ -900,7 +900,7 @@
         <equipment rhand="291"/> <!-- Trident -->
         <stats str="40" int="21" dex="30" wit="20" con="43" men="10">
             <vitals hp="185" hpRegen="2.5" mp="116" mpRegen="1.2"/>
-            <attack physical="23.20703" magical="14.40672" random="30" critical="4" accuracy="0" attackSpeed="216" type="POLE" range="80" distance="80" width="120"/>
+            <attack physical="23.20703" magical="14.40672" random="30" critical="4" accuracy="0" attackSpeed="216" type="SPEAR" range="80" distance="80" width="120"/>
             <defence physical="58.22456364" magical="46.86683"/>
             <speed>
                 <walk ground="43"/>

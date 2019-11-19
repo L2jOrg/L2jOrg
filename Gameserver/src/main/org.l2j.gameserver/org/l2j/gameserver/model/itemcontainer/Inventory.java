@@ -4,7 +4,7 @@ import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.commons.util.CommonUtil;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.xml.impl.ArmorSetsData;
-import org.l2j.gameserver.datatables.ItemTable;
+import org.l2j.gameserver.engine.items.ItemEngine;
 import org.l2j.gameserver.enums.ItemLocation;
 import org.l2j.gameserver.enums.ItemSkillType;
 import org.l2j.gameserver.enums.PrivateStoreType;
@@ -212,7 +212,7 @@ public abstract class Inventory extends ItemContainer {
                 item.setLastChange(Item.MODIFIED);
                 item.updateDatabase();
 
-                item = ItemTable.getInstance().createItem(process, item.getId(), count, actor, reference);
+                item = ItemEngine.getInstance().createItem(process, item.getId(), count, actor, reference);
                 item.updateDatabase();
                 refreshWeight();
                 return item;
@@ -556,6 +556,8 @@ public abstract class Inventory extends ItemContainer {
      *
      * @param slot : int designating the slot of the paperdoll
      * @return Item[] : list of changes
+     *
+     * TODO use bodyPart instead of slot
      */
     public Item[] unEquipItemInBodySlotAndRecord(long slot) {
         final ChangeRecorder recorder = newRecorder();

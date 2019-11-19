@@ -204,7 +204,7 @@
             <xs:enumeration value="SEVEN_SINS_AGATHION_ENCHANT"/>
             <xs:enumeration value="IMPROVED_ENCHANT_WEAPON"/>
             <xs:enumeration value="IMPROVED_ENCHANT_ARMOR"/>
-            <xs:enumeration value="SIGEL RUNE"/>
+            <xs:enumeration value="SIGEL_RUNE"/>
             <xs:enumeration value="COLOR_CHANGE"/>
             <xs:enumeration value="COLOR_TITLE_CHANGE"/>
             <xs:enumeration value="ENSOUL_STONE"/>
@@ -220,6 +220,7 @@
             <xs:enumeration value="LUCKY_ENCHANT"/>
             <xs:enumeration value="GIANT_ENCHANT"/>
             <xs:enumeration value="BLESSED_LUCKY_ENCHANT"/>
+            <xs:enumeration value="QUALITY_AGATHION_ENCHANT"/>
         </xs:restriction>
     </xs:simpleType>
 

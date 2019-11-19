@@ -1,7 +1,7 @@
 package org.l2j.gameserver.network.serverpackets;
 
 import org.l2j.gameserver.data.xml.impl.MultisellData;
-import org.l2j.gameserver.datatables.ItemTable;
+import org.l2j.gameserver.engine.items.ItemEngine;
 import org.l2j.gameserver.model.ItemInfo;
 import org.l2j.gameserver.model.holders.ItemChanceHolder;
 import org.l2j.gameserver.model.holders.MultisellEntryHolder;
@@ -60,7 +60,7 @@ public final class MultiSellList extends AbstractItemPacket {
             writeShort((short) entry.getIngredients().size());
 
             for (ItemChanceHolder product : entry.getProducts()) {
-                final ItemTemplate template = ItemTable.getInstance().getTemplate(product.getId());
+                final ItemTemplate template = ItemEngine.getInstance().getTemplate(product.getId());
                 final ItemInfo displayItemEnchantment = (_list.isMaintainEnchantment() && (itemEnchantment != null) && (template != null) && template.getClass().equals(itemEnchantment.getItem().getClass())) ? itemEnchantment : null;
 
                 writeInt(product.getId());
@@ -80,7 +80,7 @@ public final class MultiSellList extends AbstractItemPacket {
             }
 
             for (ItemChanceHolder ingredient : entry.getIngredients()) {
-                final ItemTemplate template = ItemTable.getInstance().getTemplate(ingredient.getId());
+                final ItemTemplate template = ItemEngine.getInstance().getTemplate(ingredient.getId());
                 final ItemInfo displayItemEnchantment = ((itemEnchantment != null) && (itemEnchantment.getItem().getId() == ingredient.getId())) ? itemEnchantment : null;
 
                 writeInt(ingredient.getId());

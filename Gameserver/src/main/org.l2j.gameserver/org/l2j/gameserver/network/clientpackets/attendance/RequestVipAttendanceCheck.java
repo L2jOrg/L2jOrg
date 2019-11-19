@@ -2,7 +2,7 @@ package org.l2j.gameserver.network.clientpackets.attendance;
 
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.xml.impl.AttendanceRewardData;
-import org.l2j.gameserver.datatables.ItemTable;
+import org.l2j.gameserver.engine.items.ItemEngine;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.holders.AttendanceInfoHolder;
 import org.l2j.gameserver.model.holders.ItemHolder;
@@ -48,7 +48,7 @@ public class RequestVipAttendanceCheck extends ClientPacket {
         final boolean isRewardAvailable = attendanceInfo.isRewardAvailable();
         final int rewardIndex = attendanceInfo.getRewardIndex();
         final ItemHolder reward = AttendanceRewardData.getInstance().getRewards().get(rewardIndex);
-        final ItemTemplate itemTemplate = ItemTable.getInstance().getTemplate(reward.getId());
+        final ItemTemplate itemTemplate = ItemEngine.getInstance().getTemplate(reward.getId());
 
         // Weight check.
         final long weight = itemTemplate.getWeight() * reward.getCount();

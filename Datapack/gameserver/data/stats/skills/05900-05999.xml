@@ -1485,7 +1485,7 @@
         <conditions>
             <condition name="EquipWeapon">
                 <weaponType>
-                    <item>DUALFIST</item>
+                    <item>FIST</item>
                 </weaponType>
             </condition>
         </conditions>
@@ -1866,12 +1866,12 @@
                 <weaponType>
                     <item>SWORD</item>
                     <item>DAGGER</item>
-                    <item>DUALDAGGER</item>
-                    <item>POLE</item>
+                    <item>DUAL_DAGGER</item>
+                    <item>SPEAR</item>
                     <item>RAPIER</item>
-                    <item>ANCIENTSWORD</item>
+                    <item>ANCIENT_SWORD</item>
                     <item>DUAL</item>
-                    <item>DUALFIST</item>
+                    <item>FIST</item>
                     <item>BLUNT</item>
                     <item>BOW</item>
                     <item>CROSSBOW</item>
@@ -1891,12 +1891,12 @@
                 <weaponType>
                     <item>SWORD</item>
                     <item>DAGGER</item>
-                    <item>DUALDAGGER</item>
-                    <item>POLE</item>
+                    <item>DUAL_DAGGER</item>
+                    <item>SPEAR</item>
                     <item>RAPIER</item>
-                    <item>ANCIENTSWORD</item>
+                    <item>ANCIENT_SWORD</item>
                     <item>DUAL</item>
-                    <item>DUALFIST</item>
+                    <item>FIST</item>
                 </weaponType>
             </effect>
         </effects>

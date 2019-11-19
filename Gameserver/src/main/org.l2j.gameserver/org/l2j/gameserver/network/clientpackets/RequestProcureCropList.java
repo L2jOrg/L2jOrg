@@ -1,7 +1,7 @@
 package org.l2j.gameserver.network.clientpackets;
 
 import org.l2j.gameserver.Config;
-import org.l2j.gameserver.datatables.ItemTable;
+import org.l2j.gameserver.engine.items.ItemEngine;
 import org.l2j.gameserver.instancemanager.CastleManorManager;
 import org.l2j.gameserver.model.CropProcure;
 import org.l2j.gameserver.model.actor.Npc;
@@ -91,7 +91,7 @@ public class RequestProcureCropList extends ClientPacket {
                 return;
             }
 
-            final ItemTemplate template = ItemTable.getInstance().getTemplate(i.getRewardId());
+            final ItemTemplate template = ItemEngine.getInstance().getTemplate(i.getRewardId());
             weight += (i.getCount() * template.getWeight());
 
             if (!template.isStackable()) {
@@ -115,7 +115,7 @@ public class RequestProcureCropList extends ClientPacket {
 
         // Proceed the purchase
         for (CropHolder i : _items) {
-            final long rewardPrice = ItemTable.getInstance().getTemplate(i.getRewardId()).getReferencePrice();
+            final long rewardPrice = ItemEngine.getInstance().getTemplate(i.getRewardId()).getReferencePrice();
             if (rewardPrice == 0) {
                 continue;
             }

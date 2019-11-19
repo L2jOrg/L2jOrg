@@ -1253,7 +1253,7 @@
                     <value level="37">0</value>
                     <value level="38">15</value>
                 </SLEEP>
-                <DUALDAGGER>
+                <DUAL_DAGGER>
                     <value level="1">0</value>
                     <value level="2">0</value>
                     <value level="3">0</value>
@@ -1292,7 +1292,7 @@
                     <value level="36">15</value>
                     <value level="37">0</value>
                     <value level="38">0</value>
-                </DUALDAGGER>
+                </DUAL_DAGGER>
                 <POISON>
                     <value level="1">0</value>
                     <value level="2">0</value>
@@ -1982,13 +1982,13 @@
         <magicCriticalRate>-5</magicCriticalRate>
         <effects>
             <effect name="DefenceTrait">
-                <POLE>
+                <SPEAR>
                     <value level="1">60</value>
                     <value level="2">70</value>
                     <value level="3">80</value>
                     <value level="4">90</value>
                     <value level="5">100</value>
-                </POLE>
+                </SPEAR>
             </effect>
         </effects>
     </skill>
@@ -2043,13 +2043,13 @@
                     <value level="4">90</value>
                     <value level="5">100</value>
                 </DAGGER>
-                <DUALDAGGER>
+                <DUAL_DAGGER>
                     <value level="1">60</value>
                     <value level="2">70</value>
                     <value level="3">80</value>
                     <value level="4">90</value>
                     <value level="5">100</value>
-                </DUALDAGGER>
+                </DUAL_DAGGER>
                 <RAPIER>
                     <value level="1">60</value>
                     <value level="2">70</value>
@@ -2219,13 +2219,13 @@
         <magicCriticalRate>-5</magicCriticalRate>
         <effects>
             <effect name="DefenceTrait">
-                <POLE>
+                <SPEAR>
                     <value level="1">-11</value>
                     <value level="2">-25</value>
                     <value level="3">-43</value>
                     <value level="4">-67</value>
                     <value level="5">-100</value>
-                </POLE>
+                </SPEAR>
             </effect>
         </effects>
     </skill>
@@ -2280,13 +2280,13 @@
                     <value level="4">-67</value>
                     <value level="5">-100</value>
                 </DAGGER>
-                <DUALDAGGER>
+                <DUAL_DAGGER>
                     <value level="1">-11</value>
                     <value level="2">-25</value>
                     <value level="3">-43</value>
                     <value level="4">-67</value>
                     <value level="5">-100</value>
-                </DUALDAGGER>
+                </DUAL_DAGGER>
                 <RAPIER>
                     <value level="1">-11</value>
                     <value level="2">-25</value>
@@ -2312,13 +2312,13 @@
                     <value level="4">-67</value>
                     <value level="5">-100</value>
                 </DAGGER>
-                <DUALDAGGER>
+                <DUAL_DAGGER>
                     <value level="1">-11</value>
                     <value level="2">-25</value>
                     <value level="3">-43</value>
                     <value level="4">-67</value>
                     <value level="5">-100</value>
-                </DUALDAGGER>
+                </DUAL_DAGGER>
                 <RAPIER>
                     <value level="1">-11</value>
                     <value level="2">-25</value>

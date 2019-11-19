@@ -2,7 +2,7 @@ package org.l2j.gameserver.data.xml.impl;
 
 import org.l2j.commons.util.filter.NumericNameFilter;
 import org.l2j.gameserver.Config;
-import org.l2j.gameserver.datatables.ItemTable;
+import org.l2j.gameserver.engine.items.ItemEngine;
 import org.l2j.gameserver.enums.SpecialItemType;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.Npc;
@@ -100,7 +100,7 @@ public final class MultisellData extends GameXmlReader {
 
                                 if (enchantmentLevel > 0) {
 
-                                    final ItemTemplate item = ItemTable.getInstance().getTemplate(id);
+                                    final ItemTemplate item = ItemEngine.getInstance().getTemplate(id);
 
                                     if(GameUtils.isWeapon(item)) {
                                         enchantmentLevel = (byte) Math.min(enchantmentLevel, item.isMagicWeapon() ? magicWeaponGroupMax : weaponGroupMax);
@@ -224,7 +224,7 @@ public final class MultisellData extends GameXmlReader {
             return true;
         }
 
-        final ItemTemplate template = ItemTable.getInstance().getTemplate(holder.getId());
+        final ItemTemplate template = ItemEngine.getInstance().getTemplate(holder.getId());
         return (template != null) && (template.isStackable() ? (holder.getCount() >= 1) : (holder.getCount() == 1));
     }
 

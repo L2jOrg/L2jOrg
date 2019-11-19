@@ -2,7 +2,7 @@ package handlers.itemhandlers;
 
 import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.Config;
-import org.l2j.gameserver.datatables.ItemTable;
+import org.l2j.gameserver.engine.items.ItemEngine;
 import org.l2j.gameserver.handler.IItemHandler;
 import org.l2j.gameserver.model.ExtractableProduct;
 import org.l2j.gameserver.model.actor.Playable;
@@ -95,7 +95,7 @@ public class ExtractableItems implements IItemHandler
 							continue;
 						}
 						
-						if (ItemTable.getInstance().getTemplate(expi.getId()).isStackable() || (createItemAmount == 1))
+						if (ItemEngine.getInstance().getTemplate(expi.getId()).isStackable() || (createItemAmount == 1))
 						{
 							final Item newItem = activeChar.addItem("Extract", expi.getId(), createItemAmount, activeChar, false);
 							if (expi.getMaxEnchant() > 0)
@@ -143,7 +143,7 @@ public class ExtractableItems implements IItemHandler
 						continue;
 					}
 					
-					if (ItemTable.getInstance().getTemplate(expi.getId()).isStackable() || (createItemAmount == 1))
+					if (ItemEngine.getInstance().getTemplate(expi.getId()).isStackable() || (createItemAmount == 1))
 					{
 						final Item newItem = activeChar.addItem("Extract", expi.getId(), createItemAmount, activeChar, false);
 						if (expi.getMaxEnchant() > 0)

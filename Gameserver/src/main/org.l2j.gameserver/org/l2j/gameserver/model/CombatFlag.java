@@ -1,7 +1,7 @@
 package org.l2j.gameserver.model;
 
 import org.l2j.gameserver.Config;
-import org.l2j.gameserver.datatables.ItemTable;
+import org.l2j.gameserver.engine.items.ItemEngine;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.network.SystemMessageId;
@@ -26,7 +26,7 @@ public class CombatFlag {
 
     public synchronized void spawnMe() {
         // Init the dropped Item and add it in the world as a visible object at the position where mob was last
-        _itemInstance = ItemTable.getInstance().createItem("Combat", _itemId, 1, null, null);
+        _itemInstance = ItemEngine.getInstance().createItem("Combat", _itemId, 1, null, null);
         _itemInstance.dropMe(null, _location.getX(), _location.getY(), _location.getZ());
     }
 

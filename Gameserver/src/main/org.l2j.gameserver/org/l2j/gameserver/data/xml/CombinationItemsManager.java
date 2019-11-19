@@ -1,6 +1,6 @@
 package org.l2j.gameserver.data.xml;
 
-import org.l2j.gameserver.datatables.ItemTable;
+import org.l2j.gameserver.engine.items.ItemEngine;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.items.combination.CombinationItem;
 import org.l2j.gameserver.model.items.combination.CombinationItemReward;
@@ -53,7 +53,7 @@ public class CombinationItemsManager extends GameXmlReader {
                 final CombinationItemType type = parseEnum(attrs, CombinationItemType.class, "type");
 
                 item.addReward(new CombinationItemReward(id, count, type));
-                if (ItemTable.getInstance().getTemplate(id) == null) {
+                if (ItemEngine.getInstance().getTemplate(id) == null) {
                     LOGGER.info("Could not find item with id {}", id);
                 }
             });

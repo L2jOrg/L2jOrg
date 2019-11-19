@@ -3,7 +3,7 @@ package org.l2j.gameserver.model.actor.templates;
 import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.xml.impl.NpcData;
-import org.l2j.gameserver.datatables.ItemTable;
+import org.l2j.gameserver.engine.items.ItemEngine;
 import org.l2j.gameserver.engine.elemental.api.ElementalType;
 import org.l2j.gameserver.engine.vip.VipEngine;
 import org.l2j.gameserver.enums.*;
@@ -709,7 +709,7 @@ public final class NpcTemplate extends CreatureTemplate implements IIdentifiable
             case DROP:
             case LUCKY: {
                 final int itemId = dropItem.getItemId();
-                final ItemTemplate item = ItemTable.getInstance().getTemplate(itemId);
+                final ItemTemplate item = ItemEngine.getInstance().getTemplate(itemId);
                 final boolean champion = victim.isChampion();
 
                 // chance

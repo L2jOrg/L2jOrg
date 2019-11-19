@@ -1,6 +1,6 @@
 package org.l2j.gameserver.data.xml.impl;
 
-import org.l2j.gameserver.datatables.ItemTable;
+import org.l2j.gameserver.engine.items.ItemEngine;
 import org.l2j.gameserver.enums.CrystallizationType;
 import org.l2j.gameserver.model.holders.CrystallizationDataHolder;
 import org.l2j.gameserver.model.holders.ItemChanceHolder;
@@ -133,7 +133,7 @@ public final class ItemCrystallizationData extends GameXmlReader {
     private void generateCrystallizationData() {
         final int previousCount = _items.size();
 
-        for (ItemTemplate item : ItemTable.getInstance().getAllItems()) {
+        for (ItemTemplate item : ItemEngine.getInstance().getAllItems()) {
             // Check if the data has not been generated.
             if (((item instanceof Weapon) || (item instanceof Armor)) && item.isCrystallizable() && !_items.containsKey(item.getId())) {
                 final List<ItemChanceHolder> holder = _crystallizationTemplates.get(item.getCrystalType()).get((item instanceof Weapon) ? CrystallizationType.WEAPON : CrystallizationType.ARMOR);

@@ -3,7 +3,7 @@ package org.l2j.gameserver.model.itemcontainer;
 import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.world.WorldTimeController;
-import org.l2j.gameserver.datatables.ItemTable;
+import org.l2j.gameserver.engine.items.ItemEngine;
 import org.l2j.gameserver.enums.ItemLocation;
 import org.l2j.gameserver.world.World;
 import org.l2j.gameserver.model.actor.Creature;
@@ -177,7 +177,7 @@ public abstract class ItemContainer {
             olditem.setLastChange(Item.MODIFIED);
 
             // And destroys the item
-            ItemTable.getInstance().destroyItem(process, item, actor, reference);
+            ItemEngine.getInstance().destroyItem(process, item, actor, reference);
             item.updateDatabase();
             item = olditem;
 
@@ -241,13 +241,13 @@ public abstract class ItemContainer {
         // If item hasn't be found in inventory, create new one
         else {
             for (int i = 0; i < count; i++) {
-                final ItemTemplate template = ItemTable.getInstance().getTemplate(itemId);
+                final ItemTemplate template = ItemEngine.getInstance().getTemplate(itemId);
                 if (template == null) {
                     LOGGER.warn((actor != null ? "[" + actor.getName() + "] " : "") + "Invalid ItemId requested: ", itemId);
                     return null;
                 }
 
-                item = ItemTable.getInstance().createItem(process, itemId, template.isStackable() ? count : 1, actor, reference);
+                item = ItemEngine.getInstance().createItem(process, itemId, template.isStackable() ? count : 1, actor, reference);
                 item.setOwnerId(getOwnerId());
                 item.setItemLocation(getBaseLocation());
                 item.setLastChange(Item.ADDED);
@@ -314,7 +314,7 @@ public abstract class ItemContainer {
                 // Otherwise destroy old item
                 {
                     removeItem(sourceitem);
-                    ItemTable.getInstance().destroyItem(process, sourceitem, actor, reference);
+                    ItemEngine.getInstance().destroyItem(process, sourceitem, actor, reference);
                 }
 
                 if (targetitem != null) // If possible, only update counts
@@ -371,7 +371,7 @@ public abstract class ItemContainer {
             } else {
                 item.changeCount(process, -count, actor, reference);
                 item.updateDatabase(true);
-                item = ItemTable.getInstance().createItem(process, item.getId(), count, actor, reference);
+                item = ItemEngine.getInstance().createItem(process, item.getId(), count, actor, reference);
                 item.setOwnerId(getOwnerId());
             }
             item.setItemLocation(newLocation);
@@ -449,7 +449,7 @@ public abstract class ItemContainer {
                     return null;
                 }
 
-                ItemTable.getInstance().destroyItem(process, item, actor, reference);
+                ItemEngine.getInstance().destroyItem(process, item, actor, reference);
 
                 item.updateDatabase();
                 refreshWeight();
@@ -625,7 +625,7 @@ public abstract class ItemContainer {
      * @return {@code true} if the item doesn't exists or it validates its slot count
      */
     public boolean validateCapacityByItemId(int itemId, long count) {
-        final ItemTemplate template = ItemTable.getInstance().getTemplate(itemId);
+        final ItemTemplate template = ItemEngine.getInstance().getTemplate(itemId);
         return (template == null) || (template.isStackable() ? validateCapacity(1) : validateCapacity(count));
     }
 
@@ -635,7 +635,7 @@ public abstract class ItemContainer {
      * @return {@code true} if the item doesn't exists or it validates its weight
      */
     public boolean validateWeightByItemId(int itemId, long count) {
-        final ItemTemplate template = ItemTable.getInstance().getTemplate(itemId);
+        final ItemTemplate template = ItemEngine.getInstance().getTemplate(itemId);
         return (template == null) || validateWeight(template.getWeight() * count);
     }
 }

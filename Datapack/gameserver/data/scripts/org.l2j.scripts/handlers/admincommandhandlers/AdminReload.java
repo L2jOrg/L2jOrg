@@ -5,7 +5,7 @@ import org.l2j.gameserver.cache.HtmCache;
 import org.l2j.gameserver.data.sql.impl.CrestTable;
 import org.l2j.gameserver.data.xml.DoorDataManager;
 import org.l2j.gameserver.data.xml.impl.*;
-import org.l2j.gameserver.datatables.ItemTable;
+import org.l2j.gameserver.engine.items.ItemEngine;
 import org.l2j.gameserver.handler.IAdminCommandHandler;
 import org.l2j.gameserver.instancemanager.CursedWeaponsManager;
 import org.l2j.gameserver.instancemanager.QuestManager;
@@ -145,7 +145,7 @@ public class AdminReload implements IAdminCommandHandler
 				}
 				case "item":
 				{
-					ItemTable.getInstance().reload();
+					ItemEngine.getInstance().reload();
 					AdminData.getInstance().broadcastMessageToGMs(activeChar.getName() + ": Reloaded Items.");
 					break;
 				}

@@ -6,7 +6,7 @@ import org.l2j.gameserver.data.xml.DoorDataManager;
 import org.l2j.gameserver.world.WorldTimeController;
 import org.l2j.gameserver.ai.CtrlIntention;
 import org.l2j.gameserver.data.xml.impl.NpcData;
-import org.l2j.gameserver.datatables.ItemTable;
+import org.l2j.gameserver.engine.items.ItemEngine;
 import org.l2j.gameserver.enums.AttributeType;
 import org.l2j.gameserver.enums.Movie;
 import org.l2j.gameserver.enums.QuestSound;
@@ -537,7 +537,7 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
             return;
         }
 
-        final ItemTemplate item = ItemTable.getInstance().getTemplate(itemId);
+        final ItemTemplate item = ItemEngine.getInstance().getTemplate(itemId);
         if (item == null) {
             return;
         }
@@ -2586,7 +2586,7 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
                 break;
             }
             case ITEM: {
-                final ItemTemplate template = ItemTable.getInstance().getTemplate(id);
+                final ItemTemplate template = ItemEngine.getInstance().getTemplate(id);
                 if (template != null) {
                     listeners.add(template.addListener(action.apply(template)));
                 }

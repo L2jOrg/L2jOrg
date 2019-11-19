@@ -2,8 +2,8 @@ package org.l2j.gameserver.model.itemcontainer;
 
 import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.gameserver.Config;
+import org.l2j.gameserver.engine.items.ItemEngine;
 import org.l2j.gameserver.world.WorldTimeController;
-import org.l2j.gameserver.datatables.ItemTable;
 import org.l2j.gameserver.enums.InventoryBlockType;
 import org.l2j.gameserver.enums.ItemLocation;
 import org.l2j.gameserver.model.TradeItem;
@@ -716,7 +716,7 @@ public class PcInventory extends Inventory {
         if ((invItem == null) || !invItem.isStackable()) {
             slots++;
         }
-        return validateCapacity(slots, ItemTable.getInstance().getTemplate(itemId).isQuestItem());
+        return validateCapacity(slots, ItemEngine.getInstance().getTemplate(itemId).isQuestItem());
     }
 
     @Override

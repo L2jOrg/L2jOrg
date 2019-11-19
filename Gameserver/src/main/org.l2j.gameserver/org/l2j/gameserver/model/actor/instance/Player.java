@@ -20,13 +20,13 @@ import org.l2j.gameserver.data.database.dao.CharacterDAO;
 import org.l2j.gameserver.data.database.dao.ElementalSpiritDAO;
 import org.l2j.gameserver.data.database.data.CharacterData;
 import org.l2j.gameserver.data.database.data.ElementalSpiritData;
+import org.l2j.gameserver.engine.items.ItemEngine;
 import org.l2j.gameserver.engine.elemental.api.ElementalSpirit;
 import org.l2j.gameserver.engine.elemental.api.ElementalType;
 import org.l2j.gameserver.data.sql.impl.CharSummonTable;
 import org.l2j.gameserver.data.sql.impl.ClanTable;
 import org.l2j.gameserver.data.sql.impl.PlayerNameTable;
 import org.l2j.gameserver.data.xml.impl.*;
-import org.l2j.gameserver.datatables.ItemTable;
 import org.l2j.gameserver.enums.*;
 import org.l2j.gameserver.engine.geo.GeoEngine;
 import org.l2j.gameserver.handler.IItemHandler;
@@ -2232,39 +2232,39 @@ public final class Player extends Playable {
         Weapon weaponItem = null;
         if ((classId >= 0x00) && (classId <= 0x09)) {
             // human fighter fists
-            final ItemTemplate temp = ItemTable.getInstance().getTemplate(246);
+            final ItemTemplate temp = ItemEngine.getInstance().getTemplate(246);
             weaponItem = (Weapon) temp;
         } else if ((classId >= 0x0a) && (classId <= 0x11)) {
             // human mage fists
-            final ItemTemplate temp = ItemTable.getInstance().getTemplate(251);
+            final ItemTemplate temp = ItemEngine.getInstance().getTemplate(251);
             weaponItem = (Weapon) temp;
         } else if ((classId >= 0x12) && (classId <= 0x18)) {
             // elven fighter fists
-            final ItemTemplate temp = ItemTable.getInstance().getTemplate(244);
+            final ItemTemplate temp = ItemEngine.getInstance().getTemplate(244);
             weaponItem = (Weapon) temp;
         } else if ((classId >= 0x19) && (classId <= 0x1e)) {
             // elven mage fists
-            final ItemTemplate temp = ItemTable.getInstance().getTemplate(249);
+            final ItemTemplate temp = ItemEngine.getInstance().getTemplate(249);
             weaponItem = (Weapon) temp;
         } else if ((classId >= 0x1f) && (classId <= 0x25)) {
             // dark elven fighter fists
-            final ItemTemplate temp = ItemTable.getInstance().getTemplate(245);
+            final ItemTemplate temp = ItemEngine.getInstance().getTemplate(245);
             weaponItem = (Weapon) temp;
         } else if ((classId >= 0x26) && (classId <= 0x2b)) {
             // dark elven mage fists
-            final ItemTemplate temp = ItemTable.getInstance().getTemplate(250);
+            final ItemTemplate temp = ItemEngine.getInstance().getTemplate(250);
             weaponItem = (Weapon) temp;
         } else if ((classId >= 0x2c) && (classId <= 0x30)) {
             // orc fighter fists
-            final ItemTemplate temp = ItemTable.getInstance().getTemplate(248);
+            final ItemTemplate temp = ItemEngine.getInstance().getTemplate(248);
             weaponItem = (Weapon) temp;
         } else if ((classId >= 0x31) && (classId <= 0x34)) {
             // orc mage fists
-            final ItemTemplate temp = ItemTable.getInstance().getTemplate(252);
+            final ItemTemplate temp = ItemEngine.getInstance().getTemplate(252);
             weaponItem = (Weapon) temp;
         } else if ((classId >= 0x35) && (classId <= 0x39)) {
             // dwarven fists
-            final ItemTemplate temp = ItemTable.getInstance().getTemplate(247);
+            final ItemTemplate temp = ItemEngine.getInstance().getTemplate(247);
             weaponItem = (Weapon) temp;
         }
 
@@ -2908,7 +2908,7 @@ public final class Player extends Playable {
      */
     public Item addItem(String process, int itemId, long count, WorldObject reference, boolean sendMessage) {
         if (count > 0) {
-            final ItemTemplate item = ItemTable.getInstance().getTemplate(itemId);
+            final ItemTemplate item = ItemEngine.getInstance().getTemplate(itemId);
             if (item == null) {
                 LOGGER.error("Item doesn't exist so cannot be added. Item ID: " + itemId);
                 return null;
@@ -3763,7 +3763,7 @@ public final class Player extends Playable {
      * @param itemCount the item count
      */
     public void doAutoLoot(Attackable target, int itemId, long itemCount) {
-        if (isInParty() && !ItemTable.getInstance().getTemplate(itemId).hasExImmediateEffect()) {
+        if (isInParty() && !ItemEngine.getInstance().getTemplate(itemId).hasExImmediateEffect()) {
             _party.distributeItem(this, itemId, itemCount, false, target);
         } else if (itemId == CommonItem.ADENA) {
             addAdena("Loot", itemCount, target, true);
@@ -3892,7 +3892,7 @@ public final class Player extends Playable {
             } else {
                 handler.useItem(this, target, false);
             }
-            ItemTable.getInstance().destroyItem("Consume", target, this, null);
+            ItemEngine.getInstance().destroyItem("Consume", target, this, null);
         }
         // Cursed Weapons are not distributed
         else if (CursedWeaponsManager.getInstance().isCursed(target.getId())) {
@@ -3921,7 +3921,7 @@ public final class Player extends Playable {
                 _party.distributeItem(this, target);
             } else if ((target.getId() == CommonItem.ADENA) && (_inventory.getAdenaInstance() != null)) {
                 addAdena("Pickup", target.getCount(), null, true);
-                ItemTable.getInstance().destroyItem("Pickup", target, this, null);
+                ItemEngine.getInstance().destroyItem("Pickup", target, this, null);
             } else {
                 addItem("Pickup", target, null, true);
                 // Auto-Equip arrows/bolts if player has a bow/crossbow and player picks up arrows/bolts.
@@ -7212,7 +7212,7 @@ public final class Player extends Playable {
      */
     public void disableAutoShotByCrystalType(int crystalType) {
         for (int itemId : _activeSoulShots) {
-            if (ItemTable.getInstance().getTemplate(itemId).getCrystalType().getId() == crystalType) {
+            if (ItemEngine.getInstance().getTemplate(itemId).getCrystalType().getId() == crystalType) {
                 disableAutoShot(itemId);
             }
         }

@@ -1,4 +1,4 @@
-package org.l2j.gameserver.datatables;
+package org.l2j.gameserver.engine.items;
 
 import io.github.joealisson.primitive.HashIntMap;
 import io.github.joealisson.primitive.IntMap;
@@ -6,7 +6,6 @@ import org.l2j.commons.database.DatabaseFactory;
 import org.l2j.commons.threading.ThreadPool;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.xml.impl.EnchantItemHPBonusData;
-import org.l2j.gameserver.engine.items.DocumentEngine;
 import org.l2j.gameserver.enums.ItemLocation;
 import org.l2j.gameserver.enums.ItemSkillType;
 import org.l2j.gameserver.idfactory.IdFactory;
@@ -43,19 +42,22 @@ import java.io.File;
 import java.nio.file.Path;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.ScheduledFuture;
 
-import static java.util.Objects.isNull;
-import static java.util.Objects.nonNull;
+import static java.util.Objects.*;
 import static org.l2j.commons.configuration.Configurator.getSettings;
+import static org.l2j.gameserver.util.GameUtils.isGM;
 
 /**
  * This class serves as a container for all item templates in the game.
+ *
+ * @author JoeAlisson
  */
-public final class ItemTable extends GameXmlReader {
-    private static Logger LOGGER = LoggerFactory.getLogger(ItemTable.class);
+public final class ItemEngine extends GameXmlReader {
+    private static Logger LOGGER = LoggerFactory.getLogger(ItemEngine.class);
     private static Logger LOGGER_ITEMS = LoggerFactory.getLogger("item");
 
     private final IntMap<ItemTemplate> items = new HashIntMap<>(12160);
@@ -106,13 +108,7 @@ public final class ItemTable extends GameXmlReader {
         SLOTS.put("waist", (long) ItemTemplate.SLOT_BELT);
     }
 
-    private final IntMap<EtcItem> etcItems = new HashIntMap<>();
-    private final IntMap<Armor> armors = new HashIntMap<>();
-    private final IntMap<Weapon> weapons = new HashIntMap<>();
-
-    private ItemTemplate[] allTemplates;
-
-    private ItemTable() {
+    private ItemEngine() {
     }
 
     @Override
@@ -123,27 +119,7 @@ public final class ItemTable extends GameXmlReader {
     public void load() {
         items.clear();
         parseDatapackDirectory("data/items", true);
-        int highest = 0;
-        armors.clear();
-        etcItems.clear();
-        weapons.clear();
-        for (ItemTemplate item : DocumentEngine.getInstance().loadItems()) {
-            if (highest < item.getId()) {
-                highest = item.getId();
-            }
-            if (item instanceof EtcItem) {
-                etcItems.put(item.getId(), (EtcItem) item);
-            } else if (item instanceof Armor) {
-                armors.put(item.getId(), (Armor) item);
-            } else {
-                weapons.put(item.getId(), (Weapon) item);
-            }
-        }
-        buildFastLookupTable(highest);
-        LOGGER.info("Loaded {} Etc Items", etcItems.size());
-        LOGGER.info("Loaded {} Armor Items", armors.size() );
-        LOGGER.info("Loaded {} Weapon Items", weapons.size());
-        LOGGER.info("Loaded {} Items in total.", etcItems.size() + armors.size() + weapons.size());
+        LOGGER.info("Loaded {} Items", items.size());
     }
 
     @Override
@@ -304,13 +280,7 @@ public final class ItemTable extends GameXmlReader {
 
     private void parseWeaponAttributes(Weapon weapon, Node node) {
         var attr = node.getAttributes();
-        weapon.setWeight(parseInt(attr, "weight"));
-        weapon.setPrice(parseInt(attr, "price"));
-        weapon.setCommissionType(parseEnum(attr, CommissionItemType.class, "commission-type", CommissionItemType.OTHER_WEAPON));
-        weapon.setReuseDelay(parseInt(attr, "reuse-delay"));
-        weapon.setReuseGroup(parseInt(attr, "reuse-group"));
-        weapon.setDuration(parselong(attr, "duration"));
-        weapon.setForNpc(parseBoolean(attr, "for-npc"));
+        parseCommonAttributes(weapon, node);
         weapon.setEnchantable(parseBoolean(attr, "enchant-enabled"));
         weapon.setChangeWeapon(parseInt(attr, "change-weapon"));
         weapon.setCanAttack(parseBoolean(attr, "can-attack"));
@@ -341,14 +311,8 @@ public final class ItemTable extends GameXmlReader {
     }
 
     private void parseArmorAttributes(Armor armor, Node node) {
+        parseCommonAttributes(armor, node);
         var attr = node.getAttributes();
-        armor.setWeight(parseInt(attr, "weight"));
-        armor.setPrice(parseInt(attr, "price"));
-        armor.setCommissionType(parseEnum(attr, CommissionItemType.class, "commission-type", CommissionItemType.OTHER_ITEM));
-        armor.setReuseDelay(parseInt(attr, "reuse-delay"));
-        armor.setReuseGroup(parseInt(attr, "reuse-group"));
-        armor.setDuration(parselong(attr, "duration"));
-        armor.setForNpc(parseBoolean(attr, "for-npc"));
         armor.setEnchantable(parseBoolean(attr, "enchant-enabled"));
         armor.setEquipReuseDelay(parseInt(attr, "equip-reuse-delay"));
     }
@@ -358,7 +322,7 @@ public final class ItemTable extends GameXmlReader {
         var item = new EtcItem(parseInt(attrs, "id"), parseString(attrs, "name"), parseEnum(attrs, EtcItemType.class, "type", EtcItemType.NONE));
         item.setIcon(parseString(attrs, "icon"));
 
-        forEach(itemNode,node ->{
+        forEach(itemNode, node ->{
             switch (node.getNodeName()) {
                 case "attributes" -> parseItemAttributes(item, node);
                 case "restriction" -> parseItemRestriction(item, node);
@@ -394,6 +358,16 @@ public final class ItemTable extends GameXmlReader {
     }
 
     private void parseItemAttributes(EtcItem item, Node node) {
+        parseCommonAttributes(item, node);
+        var attr = node.getAttributes();
+        item.setImmediateEffect(parseBoolean(attr, "immediate-effect"));
+        item.setExImmediateEffect(parseBoolean(attr, "ex-immediate-effect"));
+        item.setQuestItem(parseBoolean(attr,"quest-item"));
+        item.setInfinite(parseBoolean(attr, "infinite"));
+        item.setSelfResurrection(parseBoolean(attr, "self-resurrection"));
+    }
+
+    private void parseCommonAttributes(ItemTemplate item, Node node) {
         var attr = node.getAttributes();
         item.setWeight(parseInt(attr, "weight"));
         item.setPrice(parseInt(attr, "price"));
@@ -402,37 +376,6 @@ public final class ItemTable extends GameXmlReader {
         item.setReuseGroup(parseInt(attr, "reuse-group"));
         item.setDuration(parselong(attr, "duration"));
         item.setForNpc(parseBoolean(attr, "for-npc"));
-        item.setImmediateEffect(parseBoolean(attr, "immediate-effect"));
-        item.setExImmediateEffect(parseBoolean(attr, "ex-immediate-effect"));
-        item.setQuestItem(parseBoolean(attr,"quest-item"));
-        item.setInfinite(parseBoolean(attr, "infinite"));
-        item.setSelfResurrection(parseBoolean(attr, "self-resurrection"));
-    }
-
-    /**
-     * Builds a variable in which all items are putting in in function of their ID.
-     *
-     * @param size
-     */
-    private void buildFastLookupTable(int size) {
-        // Create a FastLookUp Table called _allTemplates of size : value of the highest item ID
-        LOGGER.info("Highest item id used: {}", size);
-        allTemplates = new ItemTemplate[size + 1];
-
-        // Insert armor item in Fast Look Up Table
-        for (Armor item : armors.values()) {
-            allTemplates[item.getId()] = item;
-        }
-
-        // Insert weapon item in Fast Look Up Table
-        for (Weapon item : weapons.values()) {
-            allTemplates[item.getId()] = item;
-        }
-
-        // Insert etcItem item in Fast Look Up Table
-        for (EtcItem item : etcItems.values()) {
-            allTemplates[item.getId()] = item;
-        }
     }
 
     /**
@@ -442,11 +385,7 @@ public final class ItemTable extends GameXmlReader {
      * @return ItemTemplate
      */
     public ItemTemplate getTemplate(int id) {
-        if ((id >= allTemplates.length) || (id < 0)) {
-            return null;
-        }
-
-        return allTemplates[id];
+        return items.get(id);
     }
 
     /**
@@ -463,9 +402,12 @@ public final class ItemTable extends GameXmlReader {
      * @return Item corresponding to the new item
      */
     public Item createItem(String process, int itemId, long count, Creature actor, Object reference) {
-        // Create and Init the Item corresponding to the Item Identifier
-        final Item item = new Item(IdFactory.getInstance().getNextId(), itemId);
+        var template = items.get(itemId);
+        requireNonNull(template, "The itemId should be a existent template id");
 
+        final Item item = new Item(IdFactory.getInstance().getNextId(), template);
+
+        // TODO Extract this block
         if (process.equalsIgnoreCase("loot") && !Config.AUTO_LOOT_ITEM_IDS.contains(itemId)) {
             ScheduledFuture<?> itemLootShedule;
             if ((reference instanceof Attackable) && ((Attackable) reference).isRaid()) // loot privilege for raids
@@ -484,62 +426,38 @@ public final class ItemTable extends GameXmlReader {
             }
         }
 
-        // Add the Item object to _allObjects of L2world
         World.getInstance().addObject(item);
 
-        // Set Item parameters
         if (item.isStackable() && (count > 1)) {
             item.setCount(count);
         }
 
         if (Config.LOG_ITEMS && !process.equals("Reset")) {
             if (!Config.LOG_ITEMS_SMALL_LOG || item.isEquipable() || item.getId() == CommonItem.ADENA) {
-                if (item.getEnchantLevel() > 0) {
-                    LOGGER_ITEMS.info("CREATE:" + process //
-                            + ", item " + item.getObjectId() //
-                            + ":+" + item.getEnchantLevel() //
-                            + " " + item.getTemplate().getName() //
-                            + "(" + item.getCount() //
-                            + "), " + actor
-                            + ", " + reference);
-                } else {
-                    LOGGER_ITEMS.info("CREATE:" + process //
-                            + ", item " + item.getObjectId() //
-                            + ":" + item.getTemplate().getName() //
-                            + "(" + item.getCount() //
-                            + "), " + actor //
-                            + ", " + reference); //
-                }
+                LOGGER_ITEMS.info("CREATE: {}, item {}:+{} {} ({}), Previous count{}, {}", process, item.getObjectId(), item.getEnchantLevel(), item.getTemplate().getName(), item.getCount(), actor, reference);
             }
         }
 
-        if ((actor != null) && actor.isGM()) {
-            String referenceName = "no-reference";
-            if (reference instanceof WorldObject) {
-                referenceName = (((WorldObject) reference).getName() != null ? ((WorldObject) reference).getName() : "no-name");
-            } else if (reference instanceof String) {
-                referenceName = (String) reference;
-            }
-            final String targetName = (actor.getTarget() != null ? actor.getTarget().getName() : "no-target");
-            if (getSettings(GeneralSettings.class).auditGM()) {
-                GMAudit.auditGMAction(actor.getName() + " [" + actor.getObjectId() + "]" //
-                        , String.valueOf(process) // in case of null
-                                + "(id: " + itemId //
-                                + " count: " + count //
-                                + " name: " + item.getItemName() //
-                                + " objId: " + item.getObjectId() + ")" //
-                        , targetName //
-                        , "WorldObject referencing this action is: " + referenceName);
-            }
-        }
+        auditGM(process, itemId, count, actor, reference, item);
 
-        // Notify to scripts
         EventDispatcher.getInstance().notifyEventAsync(new OnItemCreate(process, item, actor, reference), item.getTemplate());
         return item;
     }
 
-    public Item createItem(String process, int itemId, int count, Player actor) {
-        return createItem(process, itemId, count, actor, null);
+    private void auditGM(String process, int itemId, long count, Creature actor, Object reference, Item item) {
+        if (isGM(actor) && getSettings(GeneralSettings.class).auditGM()) {
+
+            String referenceName = "no-reference";
+            if (reference instanceof WorldObject) {
+                referenceName = requireNonNullElse(((WorldObject) reference).getName(), "no-name");
+            } else if (reference instanceof String) {
+                referenceName = reference.toString();
+            }
+
+            final String targetName = (actor.getTarget() != null ? actor.getTarget().getName() : "no-target");
+                GMAudit.auditGMAction(actor.toString(), String.format("%s (id: %d count: %d name: %s objectId: %d)", process, itemId, count, item.getName(), item.getObjectId()), targetName,
+                        "WorldObject referencing this action is: " + referenceName);
+        }
     }
 
     /**
@@ -569,48 +487,13 @@ public final class ItemTable extends GameXmlReader {
 
             if (Config.LOG_ITEMS) {
                 if (!Config.LOG_ITEMS_SMALL_LOG || item.isEquipable() || item.getId() == CommonItem.ADENA) {
-                    if (item.getEnchantLevel() > 0) {
-                        LOGGER_ITEMS.info("DELETE:" + String.valueOf(process) // in case of null
-                                + ", item " + item.getObjectId() //
-                                + ":+" + item.getEnchantLevel() //
-                                + " " + item.getTemplate().getName() //
-                                + "(" + item.getCount() //
-                                + "), PrevCount(" + old //
-                                + "), " + String.valueOf(actor) // in case of null
-                                + ", " + String.valueOf(reference)); // in case of null
-                    } else {
-                        LOGGER_ITEMS.info("DELETE:" + String.valueOf(process) // in case of null
-                                + ", item " + item.getObjectId() //
-                                + ":" + item.getTemplate().getName() //
-                                + "(" + item.getCount() //
-                                + "), PrevCount(" + old //
-                                + "), " + String.valueOf(actor) // in case of null
-                                + ", " + String.valueOf(reference)); // in case of null
-                    }
+                    LOGGER_ITEMS.info("DELETE: {}, item {}:+{} {} ({}), Previous Count ({}), {}, {}", process, item.getObjectId(), item.getEnchantLevel(), item.getTemplate().getName(), item.getCount(),old ,actor, reference);
                 }
             }
 
-            if ((actor != null) && actor.isGM()) {
-                String referenceName = "no-reference";
-                if (reference instanceof WorldObject) {
-                    referenceName = (((WorldObject) reference).getName() != null ? ((WorldObject) reference).getName() : "no-name");
-                } else if (reference instanceof String) {
-                    referenceName = (String) reference;
-                }
-                final String targetName = (actor.getTarget() != null ? actor.getTarget().getName() : "no-target");
-                if (getSettings(GeneralSettings.class).auditGM()) {
-                    GMAudit.auditGMAction(actor.getName() + " [" + actor.getObjectId() + "]" //
-                            , String.valueOf(process) // in case of null
-                                    + "(id: " + item.getId() //
-                                    + " count: " + item.getCount() //
-                                    + " itemObjId: " //
-                                    + item.getObjectId() + ")" //
-                            , targetName //
-                            , "WorldObject referencing this action is: " + referenceName);
-                }
-            }
+            auditGM(process, item.getId(), item.getCount(), actor, reference, item);
 
-            // if it's a pet control item, delete the pet as well
+            // if it's a pet control item, delete the pet as well TODO remove connection direct access
             if (item.getTemplate().isPetItem()) {
                 try (Connection con = DatabaseFactory.getInstance().getConnection();
                      PreparedStatement statement = con.prepareStatement("DELETE FROM pets WHERE item_obj_id=?")) {
@@ -629,14 +512,14 @@ public final class ItemTable extends GameXmlReader {
         EnchantItemHPBonusData.getInstance().load();
     }
 
-    public ItemTemplate[] getAllItems() {
-        return allTemplates;
+    public Collection<ItemTemplate> getAllItems() {
+        return items.values();
     }
 
-    protected static class ResetOwner implements Runnable {
+    private static class ResetOwner implements Runnable {
 
         Item _item;
-        public ResetOwner(Item item) {
+        private ResetOwner(Item item) {
             _item = item;
         }
 
@@ -652,11 +535,11 @@ public final class ItemTable extends GameXmlReader {
         getInstance().load();
     }
 
-    public static ItemTable getInstance() {
+    public static ItemEngine getInstance() {
         return Singleton.INSTANCE;
     }
 
     private static class Singleton {
-        private static final ItemTable INSTANCE = new ItemTable();
+        private static final ItemEngine INSTANCE = new ItemEngine();
     }
 }

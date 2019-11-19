@@ -17,7 +17,7 @@
 package org.l2j.gameserver.model.actor.instance;
 
 import org.l2j.commons.util.Rnd;
-import org.l2j.gameserver.datatables.ItemTable;
+import org.l2j.gameserver.engine.items.ItemEngine;
 import org.l2j.gameserver.model.ArenaParticipantsHolder;
 import org.l2j.gameserver.model.actor.Creature;
 import org.l2j.gameserver.model.actor.templates.NpcTemplate;
@@ -134,7 +134,7 @@ public class Block extends Monster {
     }
 
     private void dropItem(int id, BlockCheckerEngine eng, Player player) {
-        final Item drop = ItemTable.getInstance().createItem("Loot", id, 1, player, this);
+        final Item drop = ItemEngine.getInstance().createItem("Loot", id, 1, player, this);
         final int x = getX() + Rnd.get(50);
         final int y = getY() + Rnd.get(50);
         final int z = getZ();

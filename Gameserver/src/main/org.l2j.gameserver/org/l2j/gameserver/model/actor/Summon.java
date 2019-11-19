@@ -7,7 +7,7 @@ import org.l2j.gameserver.ai.CtrlIntention;
 import org.l2j.gameserver.ai.SummonAI;
 import org.l2j.gameserver.data.sql.impl.CharSummonTable;
 import org.l2j.gameserver.data.xml.impl.ExperienceData;
-import org.l2j.gameserver.datatables.ItemTable;
+import org.l2j.gameserver.engine.items.ItemEngine;
 import org.l2j.gameserver.enums.InstanceType;
 import org.l2j.gameserver.enums.NpcInfoType;
 import org.l2j.gameserver.enums.Race;
@@ -367,7 +367,7 @@ public abstract class Summon extends Playable {
             setTarget(null);
             if (owner != null) {
                 for (int itemId : owner.getAutoSoulShot()) {
-                    final String handler = ((EtcItem) ItemTable.getInstance().getTemplate(itemId)).getHandlerName();
+                    final String handler = ((EtcItem) ItemEngine.getInstance().getTemplate(itemId)).getHandlerName();
                     if ((handler != null) && handler.contains("Beast")) {
                         owner.disableAutoShot(itemId);
                     }

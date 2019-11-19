@@ -397,6 +397,8 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
     }
 
     /**
+     * TODO pull up to Player
+     *
      * This will return true if the player is GM,<br>
      * but if the player is not GM it will return false.
      *

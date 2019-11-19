@@ -78,7 +78,7 @@
                 <weaponType>
                     <item>BLUNT</item>
                     <item>SWORD</item>
-                    <item>POLE</item>
+                    <item>SPEAR</item>
                     <item>DUAL</item>
                 </weaponType>
             </condition>
@@ -890,7 +890,7 @@
         <conditions>
             <condition name="EquipWeapon">
                 <weaponType>
-                    <item>DUALFIST</item>
+                    <item>FIST</item>
                 </weaponType>
             </condition>
         </conditions>
@@ -899,7 +899,7 @@
                 <amount>20</amount>
                 <mode>PER</mode>
                 <weaponType>
-                    <item>DUALFIST</item>
+                    <item>FIST</item>
                 </weaponType>
             </effect>
             <effect name="MagicalDefence">
@@ -914,7 +914,7 @@
                 <amount>20</amount>
                 <mode>PER</mode>
                 <weaponType>
-                    <item>DUALFIST</item>
+                    <item>FIST</item>
                 </weaponType>
             </effect>
         </effects>
@@ -1418,7 +1418,7 @@
         <conditions>
             <condition name="EquipWeapon">
                 <weaponType>
-                    <item>DUALFIST</item>
+                    <item>FIST</item>
                 </weaponType>
             </condition>
         </conditions>
@@ -3142,14 +3142,14 @@
                 <amount>10</amount>
                 <mode>PER</mode>
                 <weaponType>
-                    <item>POLE</item>
+                    <item>SPEAR</item>
                 </weaponType>
             </effect>
             <effect name="Accuracy">
                 <amount>8</amount>
                 <mode>DIFF</mode>
                 <weaponType>
-                    <item>POLE</item>
+                    <item>SPEAR</item>
                 </weaponType>
             </effect>
             <effect name="PAtk" fromLevel="6" toLevel="9">

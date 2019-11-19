@@ -5,7 +5,7 @@ import org.l2j.commons.util.CommonUtil;
 import org.l2j.commons.util.Rnd;
 import org.l2j.gameserver.Config;
 import org.l2j.gameserver.cache.HtmCache;
-import org.l2j.gameserver.datatables.ItemTable;
+import org.l2j.gameserver.engine.items.ItemEngine;
 import org.l2j.gameserver.enums.CategoryType;
 import org.l2j.gameserver.enums.QuestType;
 import org.l2j.gameserver.enums.Race;
@@ -2459,7 +2459,7 @@ public class Quest extends AbstractScript implements IIdentifiable {
      */
     public void registerQuestItems(int... items) {
         for (int id : items) {
-            if ((id != 0) && (ItemTable.getInstance().getTemplate(id) == null)) {
+            if ((id != 0) && (ItemEngine.getInstance().getTemplate(id) == null)) {
                 LOGGER.error("Found registerQuestItems for non existing item: {}!", id);
             }
         }

@@ -18,7 +18,7 @@ package events.SquashEvent;
 
 import events.ScriptEvent;
 import org.l2j.commons.util.Rnd;
-import org.l2j.gameserver.datatables.ItemTable;
+import org.l2j.gameserver.engine.items.ItemEngine;
 import org.l2j.gameserver.enums.ChatType;
 import org.l2j.gameserver.model.WorldObject;
 import org.l2j.gameserver.model.actor.Npc;
@@ -585,7 +585,7 @@ public class SquashEvent extends LongTimeEvent implements ScriptEvent
 				}
 				if (Rnd.get(100) < drop[2])
 				{
-					if (ItemTable.getInstance().getTemplate(drop[1]).getCrystalType() != CrystalType.NONE)
+					if (ItemEngine.getInstance().getTemplate(drop[1]).getCrystalType() != CrystalType.NONE)
 					{
 						((Monster) mob).dropItem(player, drop[1], 1);
 						break;

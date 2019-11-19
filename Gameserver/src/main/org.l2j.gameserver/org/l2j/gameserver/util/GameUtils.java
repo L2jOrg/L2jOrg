@@ -476,13 +476,17 @@ public final class GameUtils {
         return object instanceof Playable;
     }
 
-    public static boolean isWalker(WorldObject creature) {
-        if(isMonster(creature)) {
-            Monster monster = (Monster) creature;
+    public static boolean isGM(Creature creature) {
+        return nonNull(creature) && creature.isGM();
+    }
+
+    public static boolean isWalker(WorldObject object) {
+        if(isMonster(object)) {
+            Monster monster = (Monster) object;
             Monster leader;
             return nonNull(leader = monster.getLeader()) ? isWalker(leader) : WalkingManager.getInstance().isRegistered(monster);
         }
-        return isNpc(creature) &&  WalkingManager.getInstance().isRegistered((Npc) creature);
+        return isNpc(object) &&  WalkingManager.getInstance().isRegistered((Npc) object);
     }
 
     public static boolean isSummon(WorldObject object) {

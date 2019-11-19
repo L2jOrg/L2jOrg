@@ -1,6 +1,6 @@
 package org.l2j.gameserver.data.xml.impl;
 
-import org.l2j.gameserver.datatables.ItemTable;
+import org.l2j.gameserver.engine.items.ItemEngine;
 import org.l2j.gameserver.model.VariationInstance;
 import org.l2j.gameserver.model.items.instance.Item;
 import org.l2j.gameserver.model.options.*;
@@ -52,7 +52,7 @@ public class VariationData extends GameXmlReader {
                 forEach(variationsNode, "variation", variationNode ->
                 {
                     final int mineralId = parseInteger(variationNode.getAttributes(), "mineralId");
-                    if (ItemTable.getInstance().getTemplate(mineralId) == null) {
+                    if (ItemEngine.getInstance().getTemplate(mineralId) == null) {
                         LOGGER.warn("Mineral with item id {}  was not found.", mineralId);
                     }
                     final Variation variation = new Variation(mineralId);
@@ -114,7 +114,7 @@ public class VariationData extends GameXmlReader {
                     forEach(variationNode, "item", itemNode ->
                     {
                         final int itemId = parseInteger(itemNode.getAttributes(), "id");
-                        if (ItemTable.getInstance().getTemplate(itemId) == null) {
+                        if (ItemEngine.getInstance().getTemplate(itemId) == null) {
                             LOGGER.warn(": Item with id " + itemId + " was not found.");
                         }
                         items.add(itemId);
@@ -133,7 +133,7 @@ public class VariationData extends GameXmlReader {
                     final int itemId = parseInteger(feeNode.getAttributes(), "itemId");
                     final int itemCount = parseInteger(feeNode.getAttributes(), "itemCount");
                     final int cancelFee = parseInteger(feeNode.getAttributes(), "cancelFee");
-                    if (ItemTable.getInstance().getTemplate(itemId) == null) {
+                    if (ItemEngine.getInstance().getTemplate(itemId) == null) {
                         LOGGER.warn(": Item with id " + itemId + " was not found.");
                     }
 

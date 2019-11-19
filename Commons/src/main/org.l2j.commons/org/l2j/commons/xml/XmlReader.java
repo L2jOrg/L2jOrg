@@ -129,7 +129,7 @@ public abstract class XmlReader
     {
         if (!dir.exists())
         {
-            LOGGER.warn("Folder " + dir.getAbsolutePath() + " doesn't exist!");
+            LOGGER.warn("Folder {} doesn't exist!", dir.getAbsolutePath());
             return false;
         }
 
