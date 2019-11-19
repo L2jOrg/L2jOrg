@@ -7,7 +7,7 @@ import org.l2j.gameserver.ItemsAutoDestroy;
 import org.l2j.gameserver.cache.HtmCache;
 import org.l2j.gameserver.data.xml.impl.ClanHallData;
 import org.l2j.gameserver.engine.items.ItemEngine;
-import org.l2j.gameserver.engine.elemental.api.ElementalType;
+import org.l2j.gameserver.api.elemental.ElementalType;
 import org.l2j.gameserver.enums.*;
 import org.l2j.gameserver.handler.BypassHandler;
 import org.l2j.gameserver.handler.IBypassHandler;

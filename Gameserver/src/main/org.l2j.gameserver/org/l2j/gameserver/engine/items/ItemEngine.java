@@ -8,6 +8,7 @@ import org.l2j.gameserver.Config;
 import org.l2j.gameserver.data.xml.impl.EnchantItemHPBonusData;
 import org.l2j.gameserver.enums.ItemLocation;
 import org.l2j.gameserver.enums.ItemSkillType;
+import org.l2j.gameserver.handler.ConditionHandler;
 import org.l2j.gameserver.idfactory.IdFactory;
 import org.l2j.gameserver.model.ExtractableProduct;
 import org.l2j.gameserver.model.WorldObject;
@@ -43,8 +44,6 @@ import java.nio.file.Path;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.util.Collection;
-import java.util.HashMap;
-import java.util.Map;
 import java.util.concurrent.ScheduledFuture;
 
 import static java.util.Objects.*;
@@ -61,52 +60,6 @@ public final class ItemEngine extends GameXmlReader {
     private static Logger LOGGER_ITEMS = LoggerFactory.getLogger("item");
 
     private final IntMap<ItemTemplate> items = new HashIntMap<>(12160);
-
-    @Deprecated
-    public static final Map<String, Long> SLOTS = new HashMap<>();
-
-    static {
-        SLOTS.put("shirt", (long) ItemTemplate.SLOT_UNDERWEAR);
-        SLOTS.put("lbracelet", (long) ItemTemplate.SLOT_L_BRACELET);
-        SLOTS.put("rbracelet", (long) ItemTemplate.SLOT_R_BRACELET);
-        SLOTS.put("talisman", (long) ItemTemplate.SLOT_TALISMAN);
-        SLOTS.put("chest", (long) ItemTemplate.SLOT_CHEST);
-        SLOTS.put("fullarmor", (long) ItemTemplate.SLOT_FULL_ARMOR);
-        SLOTS.put("head", (long) ItemTemplate.SLOT_HEAD);
-        SLOTS.put("hair", (long) ItemTemplate.SLOT_HAIR);
-        SLOTS.put("hairall", (long) ItemTemplate.SLOT_HAIRALL);
-        SLOTS.put("underwear", (long) ItemTemplate.SLOT_UNDERWEAR);
-        SLOTS.put("back", (long) ItemTemplate.SLOT_BACK);
-        SLOTS.put("neck", (long) ItemTemplate.SLOT_NECK);
-        SLOTS.put("legs", (long) ItemTemplate.SLOT_LEGS);
-        SLOTS.put("feet", (long) ItemTemplate.SLOT_FEET);
-        SLOTS.put("gloves", (long) ItemTemplate.SLOT_GLOVES);
-        SLOTS.put("chest,legs", (long) ItemTemplate.SLOT_CHEST | ItemTemplate.SLOT_LEGS);
-        SLOTS.put("belt", (long) ItemTemplate.SLOT_BELT);
-        SLOTS.put("rhand", (long) ItemTemplate.SLOT_R_HAND);
-        SLOTS.put("lhand", (long) ItemTemplate.SLOT_L_HAND);
-        SLOTS.put("lrhand", (long) ItemTemplate.SLOT_LR_HAND);
-        SLOTS.put("rear;lear", (long) ItemTemplate.SLOT_R_EAR | ItemTemplate.SLOT_L_EAR);
-        SLOTS.put("rfinger;lfinger", (long) ItemTemplate.SLOT_R_FINGER | ItemTemplate.SLOT_L_FINGER);
-        SLOTS.put("wolf", (long) ItemTemplate.SLOT_WOLF);
-        SLOTS.put("greatwolf", (long) ItemTemplate.SLOT_GREATWOLF);
-        SLOTS.put("hatchling", (long) ItemTemplate.SLOT_HATCHLING);
-        SLOTS.put("strider", (long) ItemTemplate.SLOT_STRIDER);
-        SLOTS.put("babypet", (long) ItemTemplate.SLOT_BABYPET);
-        SLOTS.put("brooch", (long) ItemTemplate.SLOT_BROOCH);
-        SLOTS.put("brooch_jewel", (long) ItemTemplate.SLOT_BROOCH_JEWEL);
-        SLOTS.put("agathion", ItemTemplate.SLOT_AGATHION);
-        SLOTS.put("artifactbook", ItemTemplate.SLOT_ARTIFACT_BOOK);
-        SLOTS.put("artifact", ItemTemplate.SLOT_ARTIFACT);
-        SLOTS.put("none", (long) ItemTemplate.SLOT_NONE);
-
-        // retail compatibility
-        SLOTS.put("onepiece", (long) ItemTemplate.SLOT_FULL_ARMOR);
-        SLOTS.put("hair2", (long) ItemTemplate.SLOT_HAIR2);
-        SLOTS.put("dhair", (long) ItemTemplate.SLOT_HAIRALL);
-        SLOTS.put("alldress", (long) ItemTemplate.SLOT_ALLDRESS);
-        SLOTS.put("waist", (long) ItemTemplate.SLOT_BELT);
-    }
 
     private ItemEngine() {
     }
@@ -532,7 +485,9 @@ public final class ItemEngine extends GameXmlReader {
     }
 
     public static void init() {
+        ConditionHandler.getInstance().executeScript();
         getInstance().load();
+        EnchantItemGroupsData.init();
     }
 
     public static ItemEngine getInstance() {

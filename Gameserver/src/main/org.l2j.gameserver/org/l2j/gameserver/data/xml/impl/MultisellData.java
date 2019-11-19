@@ -2,6 +2,7 @@ package org.l2j.gameserver.data.xml.impl;
 
 import org.l2j.commons.util.filter.NumericNameFilter;
 import org.l2j.gameserver.Config;
+import org.l2j.gameserver.engine.items.EnchantItemGroupsData;
 import org.l2j.gameserver.engine.items.ItemEngine;
 import org.l2j.gameserver.enums.SpecialItemType;
 import org.l2j.gameserver.model.StatsSet;

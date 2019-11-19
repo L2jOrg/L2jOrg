@@ -235,6 +235,45 @@
         </xs:restriction>
     </xs:simpleType>
 
+    <xs:simpleType name="BodyPart">
+        <xs:restriction base="xs:token">
+            <xs:enumeration value="RIGHT_HAND"/>
+            <xs:enumeration value="LEFT_HAND"/>
+            <xs:enumeration value="TWO_HAND"/>
+            <xs:enumeration value="GREAT_WOLF"/>
+            <xs:enumeration value="BABY_PET"/>
+            <xs:enumeration value="STRIDER"/>
+            <xs:enumeration value="HATCHLING"/>
+            <xs:enumeration value="WOLF"/>
+            <xs:enumeration value="NONE"/>
+            <xs:enumeration value="UNDERWEAR"/>
+            <xs:enumeration value="EAR"/>
+            <xs:enumeration value="NECK"/>
+            <xs:enumeration value="FINGER"/>
+            <xs:enumeration value="HEAD"/>
+            <xs:enumeration value="LEFT_HAND"/>
+            <xs:enumeration value="GLOVES"/>
+            <xs:enumeration value="CHEST"/>
+            <xs:enumeration value="LEGS"/>
+            <xs:enumeration value="FEET"/>
+            <xs:enumeration value="BACK"/>
+            <xs:enumeration value="FULL_ARMOR"/>
+            <xs:enumeration value="HAIR"/>
+            <xs:enumeration value="ALL_DRESS"/>
+            <xs:enumeration value="HAIR2"/>
+            <xs:enumeration value="HAIR_ALL"/>
+            <xs:enumeration value="RIGHT_BRACELET"/>
+            <xs:enumeration value="LEFT_BRACELET"/>
+            <xs:enumeration value="TALISMAN"/>
+            <xs:enumeration value="BELT"/>
+            <xs:enumeration value="BROOCH"/>
+            <xs:enumeration value="BROOCH_JEWEL"/>
+            <xs:enumeration value="AGATHION"/>
+            <xs:enumeration value="ARTIFACT_BOOK"/>
+            <xs:enumeration value="ARTIFACT"/>
+        </xs:restriction>
+    </xs:simpleType>
+
     <xs:simpleType name="WeaponBodyPart">
         <xs:restriction base="xs:token">
             <xs:enumeration value="RIGHT_HAND"/>

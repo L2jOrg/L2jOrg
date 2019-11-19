@@ -1,6 +1,6 @@
 package org.l2j.gameserver.network.serverpackets.elementalspirits;
 
-import org.l2j.gameserver.engine.elemental.api.ElementalType;
+import org.l2j.gameserver.api.elemental.ElementalType;
 import org.l2j.gameserver.model.holders.ItemHolder;
 import org.l2j.gameserver.network.GameClient;
 import org.l2j.gameserver.network.serverpackets.ServerPacket;

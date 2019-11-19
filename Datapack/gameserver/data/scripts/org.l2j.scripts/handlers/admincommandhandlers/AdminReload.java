@@ -5,6 +5,7 @@ import org.l2j.gameserver.cache.HtmCache;
 import org.l2j.gameserver.data.sql.impl.CrestTable;
 import org.l2j.gameserver.data.xml.DoorDataManager;
 import org.l2j.gameserver.data.xml.impl.*;
+import org.l2j.gameserver.engine.items.EnchantItemGroupsData;
 import org.l2j.gameserver.engine.items.ItemEngine;
 import org.l2j.gameserver.handler.IAdminCommandHandler;
 import org.l2j.gameserver.instancemanager.CursedWeaponsManager;

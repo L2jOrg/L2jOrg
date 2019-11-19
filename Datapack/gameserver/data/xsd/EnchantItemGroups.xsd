@@ -1,43 +1,64 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+		   targetNamespace="http://l2j.org"
+		   xmlns="http://l2j.org"
+		   elementFormDefault="qualified">
+
+	<xs:include schemaLocation="common.xsd"/>
+
 	<xs:element name="list">
 		<xs:complexType>
 			<xs:sequence>
-				<xs:element name="enchantRateGroup" maxOccurs="unbounded">
-					<xs:complexType>
-						<xs:sequence>
-							<xs:element name="current" maxOccurs="unbounded" minOccurs="0">
-								<xs:complexType>
-									<xs:attribute type="xs:string" name="enchant" use="optional" />
-									<xs:attribute type="xs:float" name="chance" use="optional" />
-								</xs:complexType>
-							</xs:element>
-						</xs:sequence>
-						<xs:attribute type="xs:string" name="name" use="optional" />
-					</xs:complexType>
-				</xs:element>
-				<xs:element name="enchantScrollGroup" maxOccurs="unbounded">
-					<xs:complexType>
-						<xs:sequence>
-							<xs:element name="enchantRate" maxOccurs="unbounded" minOccurs="0">
-								<xs:complexType>
-									<xs:sequence>
-										<xs:element name="item" maxOccurs="unbounded" minOccurs="0">
-											<xs:complexType>
-												<xs:attribute type="xs:string" name="slot" use="optional" />
-												<xs:attribute type="xs:boolean" name="magicWeapon" use="optional" />
-												<xs:attribute type="xs:int" name="itemId" use="optional" />
-											</xs:complexType>
-										</xs:element>
-									</xs:sequence>
-									<xs:attribute type="xs:string" name="group" use="required" />
-								</xs:complexType>
-							</xs:element>
-						</xs:sequence>
-						<xs:attribute type="xs:byte" name="id" />
-					</xs:complexType>
-				</xs:element>
+				<xs:element name="enchantRateGroup" type="EnchantRateGroup" maxOccurs="unbounded"/>
+				<xs:element name="enchantScrollGroup" type="EnchantScrollGroup" maxOccurs="unbounded"/>
 			</xs:sequence>
 		</xs:complexType>
 	</xs:element>
+
+	<xs:complexType name="Enchant">
+		<xs:attribute name="from" default="0">
+			<xs:simpleType>
+				<xs:restriction base="xs:int">
+					<xs:minInclusive value="0"/>
+					<xs:maxInclusive value="65535"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name="until" default="65535">
+			<xs:simpleType>
+				<xs:restriction base="xs:int">
+					<xs:maxInclusive value="65535"/>
+					<xs:minInclusive value="1"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name="chance" type="xs:float" use="required"/>
+	</xs:complexType>
+
+	<xs:complexType name="EnchantRateGroup">
+		<xs:sequence>
+			<xs:element name="enchant" type="Enchant" maxOccurs="unbounded"/>
+		</xs:sequence>
+		<xs:attribute type="xs:string" name="name"/>
+	</xs:complexType>
+
+	<xs:complexType name="EnchantScrollGroup">
+		<xs:sequence>
+			<xs:element name="enchantRate" maxOccurs="unbounded" minOccurs="0">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="item" maxOccurs="unbounded" minOccurs="0">
+							<xs:complexType>
+								<xs:attribute type="BodyPart" name="slot"/>
+								<xs:attribute type="xs:boolean" name="magicWeapon"/>
+								<xs:attribute type="xs:int" name="itemId"/>
+							</xs:complexType>
+						</xs:element>
+					</xs:sequence>
+					<xs:attribute type="xs:string" name="group" use="required" />
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+		<xs:attribute type="xs:byte" name="id" />
+	</xs:complexType>
 </xs:schema>

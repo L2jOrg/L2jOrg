@@ -1,6 +1,6 @@
 package handlers.mission;
 
-import org.l2j.gameserver.engine.elemental.api.ElementalType;
+import org.l2j.gameserver.api.elemental.ElementalType;
 import org.l2j.gameserver.handler.AbstractMissionHandler;
 import org.l2j.gameserver.engine.mission.MissionDataHolder;
 import org.l2j.gameserver.engine.mission.MissionStatus;

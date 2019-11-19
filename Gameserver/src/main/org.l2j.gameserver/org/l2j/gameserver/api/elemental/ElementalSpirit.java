@@ -1,4 +1,4 @@
-package org.l2j.gameserver.engine.elemental.api;
+package org.l2j.gameserver.api.elemental;
 
 import org.l2j.gameserver.data.database.dao.ElementalSpiritDAO;
 import org.l2j.gameserver.data.database.data.ElementalSpiritData;

@@ -1,6 +1,6 @@
 package org.l2j.gameserver.network.serverpackets.elementalspirits;
 
-import org.l2j.gameserver.engine.elemental.api.ElementalSpirit;
+import org.l2j.gameserver.api.elemental.ElementalSpirit;
 import org.l2j.gameserver.network.serverpackets.ServerPacket;
 
 abstract class AbstractElementalSpiritPacket extends ServerPacket {

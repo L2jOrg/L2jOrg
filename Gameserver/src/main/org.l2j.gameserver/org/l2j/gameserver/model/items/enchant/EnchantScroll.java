@@ -17,7 +17,7 @@
 package org.l2j.gameserver.model.items.enchant;
 
 import org.l2j.commons.util.Rnd;
-import org.l2j.gameserver.data.xml.impl.EnchantItemGroupsData;
+import org.l2j.gameserver.engine.items.EnchantItemGroupsData;
 import org.l2j.gameserver.model.StatsSet;
 import org.l2j.gameserver.model.actor.instance.Player;
 import org.l2j.gameserver.model.items.instance.Item;

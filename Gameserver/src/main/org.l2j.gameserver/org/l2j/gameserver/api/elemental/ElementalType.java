@@ -1,4 +1,4 @@
-package org.l2j.gameserver.engine.elemental.api;
+package org.l2j.gameserver.api.elemental;
 
 import org.l2j.gameserver.model.stats.Stats;
 

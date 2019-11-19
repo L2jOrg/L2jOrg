@@ -105,7 +105,6 @@ module org.l2j.gameserver {
     exports org.l2j.gameserver.data.database.announce;
     exports org.l2j.gameserver.data.xml.model;
     exports org.l2j.gameserver.engine.mission;
-    exports org.l2j.gameserver.engine.elemental.api;
     exports org.l2j.gameserver.model.events.impl.character;
     exports org.l2j.gameserver.engine.items;
 

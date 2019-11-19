@@ -12,14 +12,13 @@ import org.l2j.gameserver.data.database.dao.CharacterDAO;
 import org.l2j.gameserver.data.sql.impl.*;
 import org.l2j.gameserver.data.xml.*;
 import org.l2j.gameserver.data.xml.impl.*;
-import org.l2j.gameserver.engine.items.ItemEngine;
 import org.l2j.gameserver.datatables.ReportTable;
 import org.l2j.gameserver.datatables.SchemeBufferTable;
 import org.l2j.gameserver.engine.elemental.ElementalSpiritEngine;
+import org.l2j.gameserver.engine.items.ItemEngine;
 import org.l2j.gameserver.engine.mission.MissionEngine;
 import org.l2j.gameserver.engine.scripting.ScriptEngineManager;
 import org.l2j.gameserver.engine.vip.VipEngine;
-import org.l2j.gameserver.handler.ConditionHandler;
 import org.l2j.gameserver.handler.EffectHandler;
 import org.l2j.gameserver.handler.SkillConditionHandler;
 import org.l2j.gameserver.idfactory.IdFactory;
@@ -97,9 +96,7 @@ public class GameServer {
         PetSkillData.getInstance();
 
         printSection("Items");
-        ConditionHandler.getInstance().executeScript();
         ItemEngine.init();
-        EnchantItemGroupsData.getInstance();
         EnchantItemData.getInstance();
         EnchantItemOptionsData.getInstance();
         ItemCrystallizationData.getInstance();

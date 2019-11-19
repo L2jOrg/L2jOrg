@@ -1,7 +1,7 @@
 package org.l2j.gameserver.network.clientpackets.elementalspirits;
 
 import org.l2j.gameserver.engine.elemental.ElementalSpiritEngine;
-import org.l2j.gameserver.engine.elemental.api.ElementalType;
+import org.l2j.gameserver.api.elemental.ElementalType;
 import org.l2j.gameserver.network.clientpackets.ClientPacket;
 import org.l2j.gameserver.network.serverpackets.SystemMessage;
 import org.l2j.gameserver.network.serverpackets.elementalspirits.ElementalSpiritSetTalent;
